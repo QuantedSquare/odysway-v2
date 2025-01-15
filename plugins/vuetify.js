@@ -14,9 +14,6 @@ export default defineNuxtPlugin((app) => {
       themes: {
         odysway: {
           dark: false,
-          variables: {
-            'body-font-family': 'Arial',
-          },
           colors: {
             primary: '#2e8b57', // odysway green
             secondary: '#bc5948', // odysway red
