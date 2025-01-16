@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/eslint',
+    '@nuxthq/studio',
     '@nuxt/fonts',
     '@nuxt/content',
     (_options, nuxt) => {
