@@ -6,4 +6,9 @@ export default defineNuxtSchema({
     title: 'Theme',
     description: 'theme du site',
   }),
+  test: field({
+    type: 'string',
+    title: 'TEST',
+    description: 'TEST',
+  }),
 })
