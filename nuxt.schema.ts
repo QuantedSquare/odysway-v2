@@ -1,30 +1,9 @@
 import { field, group } from '@nuxthq/studio/theme'
 
 export default defineNuxtSchema({
-  appConfig: {
-    parent: group({
-      title: 'Parent title',
-      description: 'Parent description.',
-      fields: {
-        leaf: field({
-          type: 'string',
-          title: 'Field title',
-          description: 'Field Description',
-          icon: 'i-icon-to-display',
-          default: 'default value',
-        }),
-      },
-    }),
-  },
-  voyages: group({
-    title: 'Voyages',
-    description: 'Liste des voyages',
-    fields: {
-      title: field({
-        type: 'string',
-        title: 'Titre',
-        description: 'Titre du voyage',
-      }),
-    },
+  theme: field({
+    type: 'string',
+    title: 'Theme',
+    description: 'theme du site',
   }),
 })
