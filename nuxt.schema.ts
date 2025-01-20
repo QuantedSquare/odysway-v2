@@ -11,11 +11,6 @@ export default defineNuxtSchema({
           title: 'Test',
           description: 'Test de field',
         }),
-        arr: field({
-          type: 'array',
-          title: 'Array',
-          description: 'Test array',
-        }),
       },
     }),
   },

@@ -8,5 +8,10 @@
         <v-btn-secondary>Secondary Btn</v-btn-secondary>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col cols="3">
+        <VoyageCard />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
