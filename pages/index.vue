@@ -9,7 +9,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="3">
+      <v-col cols="12">
         <VoyageCard />
       </v-col>
     </v-row>
