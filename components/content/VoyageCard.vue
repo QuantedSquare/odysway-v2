@@ -69,7 +69,7 @@
                   <NuxtLink
                     v-bind="props"
                     :to="`/destinations/${voyage.country}`"
-                    :class="isHovering ? 'text-decoration-underline ' : 'text-decoration-none '"
+                    :class="isHovering ? 'text-decoration-underline text-primary' : 'text-decoration-none '"
                   >
                     <span class="text-primary">
                       {{ voyage.country }}
