@@ -94,7 +94,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   voyage: {
     type: Object,
     required: true,
