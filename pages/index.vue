@@ -10,8 +10,18 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <VoyageCard />
+        <ContentRenderer
+          v-if="page"
+          :value="page"
+        />
       </v-col>
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+const route = useRoute()
+const { data: page } = await useAsyncData(route.path, () => {
+  return queryCollection('content').path('/').first()
+})
+</script>

@@ -2,6 +2,10 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
+    content: defineCollection({
+      type: 'page',
+      source: '**/*.md',
+    }),
     voyages: defineCollection({
       type: 'data',
       source: 'voyages/**.json',
@@ -12,7 +16,6 @@ export default defineContentConfig({
         startingPrice: z.number(),
         rating: z.number(),
         comments: z.number(),
-        categories: z.array(),
       }),
     }),
   },

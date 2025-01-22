@@ -13,7 +13,7 @@ export default withNuxt(
       'no-unreachable': 'error',
       'valid-typeof': 'error',
       'camelcase': 'error',
-      'arrow-body-style': ['error', 'as-needed'],
+      // 'arrow-body-style': ['error', 'as-needed'],
       'dot-notation': 'error',
       'eqeqeq': 'error',
       'func-style': ['error', 'declaration'],
