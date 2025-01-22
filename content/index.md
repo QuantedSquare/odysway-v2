@@ -1,4 +1,1 @@
 # Root
-
-::voyage-card
-::
