@@ -1,5 +1,7 @@
 {
   "slug": "japon-fleurs",
+  "country": "Japon",
+  "imgSrc" : "https://cdn.vuetifyjs.com/docs/images/cards/purple-flowers.jpg",
   "title": "Voyage au japon",
   "duration": "14 jours / 13 nuits",
   "startingPrice": 2000,
