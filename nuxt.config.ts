@@ -2,11 +2,6 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
-  build: {
-    transpile: ['vuetify'],
-  },
   modules: [
     '@nuxt/eslint',
     '@nuxthq/studio',
@@ -19,6 +14,11 @@ export default defineNuxtConfig({
       })
     },
   ],
+  devtools: { enabled: true },
+  build: {
+    transpile: ['vuetify'],
+  },
+  compatibilityDate: '2024-11-01',
   vite: {
     vue: {
       template: {
