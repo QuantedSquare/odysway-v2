@@ -4,7 +4,6 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxthq/studio',
     '@nuxt/fonts',
     '@nuxt/content',
     (_options, nuxt) => {
@@ -15,6 +14,11 @@ export default defineNuxtConfig({
     },
   ],
   devtools: { enabled: true },
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+    },
+  },
   build: {
     transpile: ['vuetify'],
   },
