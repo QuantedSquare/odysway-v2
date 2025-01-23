@@ -4,7 +4,7 @@
       <v-col cols="10">
         <SectionTitle :section-title="sectionFrance" />
         <v-row justify="center">
-          <VoyagesCadList />
+          <VoyagesCardList />
         </v-row>
       </v-col>
     </v-row>

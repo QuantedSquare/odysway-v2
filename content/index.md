@@ -1,6 +1,2 @@
-# Root
-
-Test test
-
-::test-card
+::VoyagesCardList
 ::

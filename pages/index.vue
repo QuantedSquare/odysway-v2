@@ -10,20 +10,21 @@
         </v-col>
       </v-row>
     </v-container>
-    <!-- <v-row>
-      <v-col cols="12">
-        <ContentRenderer
-          v-if="page"
-          :value="page"
-        />
-      </v-col>
-    </v-row> -->
     <HeroSection />
     <v-container>
       <HeadlinesList class="my-6" />
       <SectionTitle :section-title="sectionCategories" />
       <CategCarouselHome />
       <NosVoyages />
+
+      <v-row>
+        <v-col cols="12">
+          <ContentRenderer
+            v-if="page"
+            :value="page"
+          />
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
