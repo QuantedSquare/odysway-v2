@@ -18,10 +18,19 @@
         />
       </v-col>
     </v-row> -->
-    <div
-      class="bg-cream"
-    >
+    <div class="bg-cream">
       <HeroSection />
+    </div>
+    <div>
+      <v-row justify="center">
+        <v-col cols="10">
+          <SectionTitle :section-title="sectionCategories" />
+        </v-col>
+      </v-row>
+      <CategCarouselHome />
+    </div>
+    <div id="nos-voyages">
+      <NosVoyages />
     </div>
   </div>
 </template>
@@ -31,4 +40,5 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
+const sectionCategories = 'Nos thématiques préférées'
 </script>

@@ -11,6 +11,7 @@
       <v-img
         height="220"
         :src="voyage.imgSrc"
+        :alt="`Image principale du voyage ${voyage.title}`"
         rounded="lg"
         cover
       >
@@ -56,16 +57,18 @@
       </v-img>
       <v-hover>
         <template #default="{ isHovering, props }">
-          <v-card-text class="font-weight-bold pa-2">
-            <NuxtLink
+          <v-card-text class="font-weight-bold pa-2 d-flex align-center">
+            <v-btn
+              variant="plain"
               v-bind="props"
               :to="`/destinations/${voyage.country}`"
               :class="isHovering ? 'text-decoration-underline text-primary' : 'text-decoration-none '"
+              class="pa-0"
             >
               <span class="text-primary">
                 {{ voyage.country }}
               </span>
-            </NuxtLink>
+            </v-btn>
             <span class="text-secondary"> - {{ voyage.duration }}</span>
           </v-card-text>
         </template>

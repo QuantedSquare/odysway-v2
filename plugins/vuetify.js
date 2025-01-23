@@ -6,6 +6,7 @@ import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 
 import { VBtn } from 'vuetify/components/VBtn'
+import { VCol } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -25,6 +26,7 @@ export default defineNuxtPlugin((app) => {
     aliases: {
       VBtnPrimary: VBtn,
       VBtnSecondary: VBtn,
+      VColSectionTitle: VCol,
     },
     defaults: {
       VBtnPrimary: {
@@ -34,6 +36,10 @@ export default defineNuxtPlugin((app) => {
       VBtnSecondary: {
         variant: 'text',
         color: 'primary',
+      },
+      VColSectionTitle: {
+        cols: '9',
+        py: '12',
       },
     },
   })
