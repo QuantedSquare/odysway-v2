@@ -14,12 +14,16 @@ export default defineNuxtConfig({
     },
   ],
   components: [
-    { path: '~/components/content', pathPrefix: false },
+    // { path: '~/components/content', pathPrefix: false },
   ],
   devtools: { enabled: true },
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
+    },
+    database: {
+      type: 'postgres',
+      url: process.env.POSTGRES_URL,
     },
   },
   build: {
