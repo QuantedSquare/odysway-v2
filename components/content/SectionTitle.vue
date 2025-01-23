@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <VColSectionTitle class="py-12">
+    <VColSectionTitle>
       <h2 class="font-weight-black">
         {{ sectionTitle }}
       </h2>

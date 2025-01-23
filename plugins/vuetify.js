@@ -39,7 +39,7 @@ export default defineNuxtPlugin((app) => {
       },
       VColSectionTitle: {
         cols: '9',
-        py: '12',
+        class: 'py-12',
       },
     },
   })

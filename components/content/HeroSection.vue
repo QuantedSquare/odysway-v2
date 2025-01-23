@@ -1,18 +1,11 @@
 <template>
-  <div class="d-flex flex-column">
-    <v-row no-gutters>
-      <v-col>
-        <v-img
-          :src="heroContent.imgSrc"
-          cover
-          height="100vh"
-        >
-          <span class="position-absolute font-weight-bold text-h3 text-white ">{{ heroContent.text }}</span>
-        </v-img>
-      </v-col>
-    </v-row>
-    <HeadlinesList />
-  </div>
+  <v-img
+    :src="heroContent.imgSrc"
+    cover
+    height="100vh"
+  >
+    <span class="position-absolute font-weight-bold text-h3 text-white ">{{ heroContent.text }}</span>
+  </v-img>
 </template>
 
 <script setup>

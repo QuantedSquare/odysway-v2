@@ -18,20 +18,13 @@
         />
       </v-col>
     </v-row> -->
-    <div class="bg-cream">
-      <HeroSection />
-    </div>
-    <div>
-      <v-row justify="center">
-        <v-col cols="10">
-          <SectionTitle :section-title="sectionCategories" />
-        </v-col>
-      </v-row>
+    <HeroSection />
+    <v-container>
+      <HeadlinesList class="my-6" />
+      <SectionTitle :section-title="sectionCategories" />
       <CategCarouselHome />
-    </div>
-    <div id="nos-voyages">
       <NosVoyages />
-    </div>
+    </v-container>
   </div>
 </template>
 

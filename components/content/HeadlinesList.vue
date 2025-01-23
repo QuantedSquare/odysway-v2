@@ -1,25 +1,23 @@
 <template>
-  <v-container class="pa-10">
-    <v-row
-      justify="center"
-      class="my-6"
+  <v-row
+    justify="center"
+  >
+    <v-col
+      v-for="headline in headlines"
+      :key="headline.heading"
+      cols="10"
+      :md="headlines.length + 1"
     >
-      <v-col
-        v-for="headline in headlines"
-        :key="headline.heading"
-        cols="10"
-        :md="headlines.length + 1"
-      >
-        <div>
-          <h5 class="my-6 pb-6 text-h5 font-weight-black">
-            {{ headline.title }}
-          </h5>
-          <p class="text-body-1">
-            {{ headline.text }}
-          </p>
-        </div>
+      <div>
+        <h5 class="my-6 pb-6 text-h5 font-weight-black">
+          {{ headline.title }}
+        </h5>
+        <p class="text-body-1">
+          {{ headline.text }}
+        </p>
+      </div>
 
-        <!-- <v-card variant="text">
+      <!-- <v-card variant="text">
           <v-card-item>
             <v-card-title class="my-6 pb-6 text-no-wrap">
               {{ headline.title }}
@@ -29,9 +27,8 @@
             </v-card-text>
           </v-card-item>
         </v-card> -->
-      </v-col>
-    </v-row>
-  </v-container>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup>
