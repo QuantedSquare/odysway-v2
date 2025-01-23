@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   ],
   components: [
-    // { path: '~/components/content', pathPrefix: false },
+    { path: '~/components/content', pathPrefix: false },
   ],
   devtools: { enabled: true },
   content: {
