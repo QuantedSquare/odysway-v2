@@ -26,8 +26,10 @@ const props = defineProps({
 })
 
 const { data: voyages } = await useAsyncData('voyages', () => {
-  return queryCollection('voyages').where('slug', 'IN', props.voyagesSlugs)
+  return queryCollection('voyages').where('slug', 'IN', props.voyagesSlugs).all()
 })
+
+console.log('voyages', voyages.value)
 
 // const voyages = [
 //   {

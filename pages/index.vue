@@ -15,7 +15,7 @@
       <HeadlinesList class="my-6" />
       <SectionTitle :section-title="sectionCategories" />
       <CategCarouselHome />
-      <NosVoyages />
+      <!-- <NosVoyages /> -->
 
       <v-row>
         <v-col cols="12">
@@ -34,5 +34,8 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
+
+console.log('page', page)
+
 const sectionCategories = 'Nos thématiques préférées'
 </script>
