@@ -103,10 +103,14 @@
 
 <script setup>
 defineProps({
-  voyage: {
-    type: Object,
+  voyageSlug: {
+    type: String,
     required: true,
   },
+})
+
+const { data: voyage } = await useAsyncData('voyages', () => {
+  return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
 </script>
 
