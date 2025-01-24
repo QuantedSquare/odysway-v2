@@ -1,2 +1,4 @@
-::voyages-card-list{:voyages-slugs='["chine"]'}
+::voyages-card-list
+  :::voyage-card
+  :::
 ::
