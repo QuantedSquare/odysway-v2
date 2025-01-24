@@ -29,6 +29,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+  routeRules: {
+    '/': { prerender: true },
+  },
   compatibilityDate: '2024-11-01',
   vite: {
     vue: {
