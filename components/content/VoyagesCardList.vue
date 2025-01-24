@@ -4,33 +4,12 @@
       dense
       justify="center"
     >
-      <v-col
-        v-for="voyage, index in voyages"
-        :key="index"
-        cols="10"
-        sm="6"
-        md="4"
-      >
-        <VoyageCard :voyage="voyage" />
-      </v-col>
+      <slot />
     </v-row>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps({
-  voyagesSlugs: {
-    type: Array,
-    required: true,
-  },
-})
-
-const { data: voyages } = await useAsyncData('voyages', () => {
-  return queryCollection('voyages').where('slug', 'IN', props.voyagesSlugs).all()
-})
-
-console.log('voyages', voyages.value)
-
 // const voyages = [
 //   {
 //     slug: 'japon-fleurs',
