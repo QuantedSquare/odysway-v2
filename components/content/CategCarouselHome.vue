@@ -44,5 +44,4 @@ const categories = {
     },
   ],
 }
-console.log('categories', categories)
 </script>

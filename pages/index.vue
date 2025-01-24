@@ -35,7 +35,5 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
 
-console.log('page', page)
-
 const sectionCategories = 'Nos thématiques préférées'
 </script>

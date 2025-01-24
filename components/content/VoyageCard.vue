@@ -102,7 +102,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   voyageSlug: {
     type: String,
     required: true,
