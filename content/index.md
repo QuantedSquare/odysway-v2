@@ -1,10 +1,10 @@
 ::voyages-card-list
-  :::voyage-card{voyage="chine"}
+  :::voyage-card{voyage-slug="chine"}
   :::
 
-  :::voyage-card{voyage="japon-fleurs"}
+  :::voyage-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::voyage-card{voyage="chine"}
+  :::voyage-card{voyage-slug="chine"}
   :::
 ::
