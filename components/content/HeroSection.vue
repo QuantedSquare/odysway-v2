@@ -11,7 +11,7 @@
 <script setup>
 const heroContent
   = {
-    imgSrc: 'https://media.istockphoto.com/id/1199079041/fr/photo/luge-de-chien-de-husky-en-laponie-finlande.jpg?s=1024x1024&w=is&k=20&c=2SGbd1yNgEONdG68o5KwiDIsdfHO_SlMfUmNpShmeoc=',
+    imgSrc: '/images/IMG_20250101_161727_049.jpg',
     text: 'Banner text',
   }
 </script>
