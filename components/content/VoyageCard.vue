@@ -1,6 +1,7 @@
 <template>
   <v-col
     v-if="voyage && voyageSlug"
+    :key="voyageSlug"
     cols="12"
     md="4"
   >
@@ -113,6 +114,7 @@ const props = defineProps({
 const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
+console.log('image ', voyage.value.imgSrc)
 </script>
 
 <style scoped>

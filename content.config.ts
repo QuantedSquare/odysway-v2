@@ -42,6 +42,7 @@ export default defineContentConfig({
         startingPrice: z.number(),
         rating: z.number(),
         comments: z.number(),
+        imgSrc: z.string(),
       }),
     }),
   },

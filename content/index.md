@@ -10,7 +10,10 @@
 
   :::headline-column{headline-slug="headline-third"}
   :::
+::
 
+::section-title
+Nos thématiques préférées 🫶
 ::
 
 ::categ-carousel-home
@@ -27,10 +30,11 @@
   :::
 
   :::categorie-card{categorie-slug="sentiers-aventures"}
-  :::
-
 ::
 
+::section-title
+Nos séjours en France 🚞
+::
 ::voyages-card-list
   :::voyage-card{voyage-slug="chine"}
   :::
@@ -40,5 +44,4 @@
 
   :::voyage-card{voyage-slug="japon"}
   :::
-  
 ::
