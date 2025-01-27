@@ -7,11 +7,11 @@
       <v-col
         v-if="showArrows"
         cols="auto"
+        :class="$vuetify.display.smAndDown ? 'd-none' : ''"
       >
         <v-icon
           icon="mdi-chevron-left"
           size="large"
-          class="hidden-xs hidden-sm"
           @click="scrollCategories(-800)"
         />
       </v-col>
@@ -26,11 +26,11 @@
       <v-col
         v-if="showArrows"
         cols="auto"
+        :class="$vuetify.display.smAndDown ? 'd-none' : ''"
       >
         <v-icon
           icon="mdi-chevron-right"
           size="large"
-          class="hidden-xs hidden-sm"
           @click="scrollCategories(800)"
         />
       </v-col>

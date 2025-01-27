@@ -1,19 +1,19 @@
 <template>
   <v-col
-    v-if="voyage && voyageSlug"
-    :key="voyageSlug"
     cols="12"
     sm="6"
-    md="4"
+    md="3"
   >
-    <NuxtLink
-      :to="`/destinations/${voyage.slug}`"
-      class="text-decoration-none"
+    <v-card
+      class="mx-auto"
+      max-width="400"
+      elevation="0"
     >
-      <v-card
-        class="mx-auto"
-        max-width="400"
-        elevation="0"
+      <NuxtLink
+        v-if="voyage && voyageSlug"
+        :key="voyageSlug"
+        :to="`/destinations/${voyage.slug}`"
+        class="text-decoration-none"
       >
         <v-img
           height="220"
@@ -97,10 +97,11 @@
             :model-value="voyage.rating"
             readonly
             color="orange-lighten-1"
-          />({{ voyage.comments }})
+          />({{
+            voyage.comments }})
         </v-card-text>
-      </v-card>
-    </NuxtLink>
+      </NuxtLink>
+    </v-card>
   </v-col>
 </template>
 
