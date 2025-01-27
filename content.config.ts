@@ -43,6 +43,7 @@ export default defineContentConfig({
         rating: z.number(),
         comments: z.number(),
         imgSrc: z.string(),
+        country: z.string(),
       }),
     }),
   },
