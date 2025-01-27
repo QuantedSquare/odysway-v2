@@ -1,12 +1,12 @@
 <template>
   <v-col
     cols="10"
-    md="3"
+    md="4"
   >
-    <h5 class="my-6 pb-6 text-h5 font-weight-black">
+    <h5 class="my-6 pb-6 text-h5 font-weight-black text-textColor">
       {{ headline?.title || 'Loading ... ' }}
     </h5>
-    <p class="text-body-1">
+    <p class="text-body-1 text-textColor">
       {{ headline?.text || 'Loading ... ' }}
     </p>
   </v-col>

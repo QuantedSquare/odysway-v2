@@ -1,15 +1,16 @@
 <template>
-  <v-row justify="center">
-    <v-col
-      cols="10"
-      md="8"
-      class="d-flex overflow-auto"
-    >
-      <NuxtLink
-        class="mr-4"
+  <v-container>
+    <v-row justify="center">
+      <v-col
+        cols="10"
+        md="8"
       >
-        <slot />
-      </NuxtLink>
-    </v-col>
-  </v-row>
+        <NuxtLink
+          class="mr-4"
+        >
+          <slot />
+        </NuxtLink>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>

@@ -18,7 +18,8 @@ export default defineNuxtPlugin((app) => {
           colors: {
             primary: '#2e8b57', // odysway green
             secondary: '#bc5948', // odysway red
-            cream: '#F4F2EB',
+            cream: '#F4F2EB', // banner bg
+            textColor: '#3e3e3e',
           },
         },
       },
