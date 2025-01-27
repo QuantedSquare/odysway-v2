@@ -1,6 +1,5 @@
 <template>
-  <v-container class="pt-16">
-    <!-- Nos thématiques préférées 🫶 -->
+  <v-container>
     <v-row
       justify="center"
       align="center"
@@ -18,7 +17,7 @@
       </v-col>
       <v-col
         ref="categList"
-        cols="11"
+        cols="12"
         sm="10"
         class="d-flex overflow-auto hidden-scroll"
       >

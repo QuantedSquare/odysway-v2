@@ -14,6 +14,7 @@
 
 ::section-title
 Nos thématiques préférées 🫶
+
 ::
 
 ::categ-carousel-home
@@ -34,6 +35,7 @@ Nos thématiques préférées 🫶
 
 ::section-title
 Nos séjours en France 🚞
+
 ::
 ::voyages-card-list
   :::voyage-card{voyage-slug="chine"}
