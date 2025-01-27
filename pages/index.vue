@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container>
+    <v-container height="56px">
       <v-row>
         <v-col cols="auto">
           <v-btn-primary>Primary Btn</v-btn-primary>
@@ -10,22 +10,12 @@
         </v-col>
       </v-row>
     </v-container>
-    <HeroSection />
-    <v-container>
-      <HeadlinesList class="my-6" />
-      <SectionTitle :section-title="sectionCategories" />
-      <CategCarouselHome />
-      <!-- <NosVoyages /> -->
-
-      <v-row>
-        <v-col cols="12">
-          <ContentRenderer
-            v-if="page"
-            :value="page"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
+    <div>
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
+    </div>
   </div>
 </template>
 
@@ -34,6 +24,4 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
-
-const sectionCategories = 'Nos thématiques préférées'
 </script>

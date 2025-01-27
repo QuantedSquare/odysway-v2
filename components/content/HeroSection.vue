@@ -1,26 +1,55 @@
 <template>
   <v-img
-    :src="heroContent.imgSrc"
+    :src="banner?.image"
     cover
-    height="100vh"
+    class="top-homepage-container "
   >
-    <span class="position-absolute font-weight-bold text-h3 text-white ">{{ heroContent.text }}</span>
+    <span class="absolute-position shadow">
+      Le partage <br> au coer du voyage
+    </span>
   </v-img>
 </template>
 
 <script setup>
-const heroContent
-  = {
-    imgSrc: '/images/IMG_20250101_161727_049.jpg',
-    text: 'Banner text',
-  }
+const { data: banner } = await useAsyncData('banner', () => {
+  return queryCollection('banner').first()
+})
 </script>
 
 <style scoped>
-.position-absolute {
+.top-homepage-container {
+  height: 100vh;
+}
+.absolute-position {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   left: 10%;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+  font-size: 5rem;
+  color: white;
+}
+
+.shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  .absolute-position {
+    font-size: 3rem;
+    top: 30%;
+    left: 5%;
+  }
+
+  .top-homepage-container {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .absolute-position {
+    font-size: 2rem;
+    left: 2%;
+  }
 }
 </style>

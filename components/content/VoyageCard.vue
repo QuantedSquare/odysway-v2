@@ -1,5 +1,6 @@
 <template>
   <v-col
+    v-if="voyage && voyageSlug"
     cols="12"
     md="4"
   >
@@ -24,9 +25,9 @@
               location="bottom"
               text="Test tooltip"
             >
-              <template #activator="{ props }">
+              <template #activator="{ on }">
                 <v-btn
-                  v-bind="props"
+                  v-bind="on"
                   size="x-small"
                   icon
                   color="rgba(0, 0, 0, 0.39)"
@@ -42,12 +43,12 @@
               location="bottom"
               text="Test tooltip"
             >
-              <template #activator="{ props }">
+              <template #activator="{ on }">
                 <v-btn
                   size="x-small"
                   icon
                   color="rgba(0, 0, 0, 0.39)"
-                  v-bind="props"
+                  v-bind="on"
                 >
                   <v-img
                     src="../../public/icons/child.svg"
@@ -60,11 +61,11 @@
           </div>
         </v-img>
         <v-hover>
-          <template #default="{ isHovering, props }">
+          <template #default="{ isHovering, on }">
             <v-card-text class="font-weight-bold pa-2 d-flex align-center">
               <v-btn
                 variant="plain"
-                v-bind="props"
+                v-bind="on"
                 :to="`/destinations/${voyage.country}`"
                 :class="isHovering ? 'text-decoration-underline text-primary' : 'text-decoration-none '"
                 class="pa-0"
@@ -109,7 +110,7 @@ const props = defineProps({
   },
 })
 
-const { data: voyage } = await useAsyncData('voyages', () => {
+const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
 </script>
