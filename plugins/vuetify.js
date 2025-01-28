@@ -29,7 +29,7 @@ export default defineNuxtPlugin((app) => {
     },
     defaults: {
       VBtnPrimary: {
-        color: 'secondary',
+        color: 'primary',
         rounded: 'xl',
       },
       VBtnSecondary: {

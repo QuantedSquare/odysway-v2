@@ -1,19 +1,19 @@
 <template>
   <v-col
+    v-if="voyage"
     cols="12"
     sm="6"
     md="4"
   >
     <v-card
-      class="mx-auto"
       max-width="400"
       elevation="0"
+      class="py-0"
     >
       <NuxtLink
-        v-if="voyage && voyageSlug"
-        :key="voyageSlug"
-        :to="`/destinations/${voyage.slug}`"
-        class="text-decoration-none"
+        :key="`Voyage ${voyage.slug}`"
+        :to="`/voyages/${voyage.slug}`"
+        class="text-decoration-none position-relative"
       >
         <v-img
           height="220"
@@ -21,15 +21,16 @@
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="lg"
           cover
-        >
-          <div class="d-flex justify-end ga-1 mt-4 mr-1">
+        />
+        <client-only>
+          <div class="d-flex justify-end ga-1 mt-4 mr-1 position-absolute top-0 right-0">
             <v-tooltip
               location="bottom"
               text="Test tooltip"
             >
-              <template #activator="{ on }">
+              <template #activator="{ props }">
                 <v-btn
-                  v-bind="on"
+                  v-bind="props"
                   size="x-small"
                   icon
                   color="rgba(0, 0, 0, 0.39)"
@@ -45,12 +46,12 @@
               location="bottom"
               text="Test tooltip"
             >
-              <template #activator="{ on }">
+              <template #activator="{ props }">
                 <v-btn
                   size="x-small"
                   icon
                   color="rgba(0, 0, 0, 0.39)"
-                  v-bind="on"
+                  v-bind="props"
                 >
                   <v-img
                     src="/icons/child.svg"
@@ -61,25 +62,23 @@
               </template>
             </v-tooltip>
           </div>
-        </v-img>
-        <v-hover>
-          <template #default="{ isHovering, on }">
-            <v-card-text class="font-weight-bold pa-2 d-flex align-center">
-              <v-btn
-                variant="plain"
-                v-bind="on"
-                :to="`/destinations/${voyage.country}`"
-                :class="isHovering ? 'text-decoration-underline text-primary' : 'text-decoration-none '"
-                class="pa-0"
-              >
-                <span class="text-primary">
-                  {{ voyage.country }}
-                </span>
-              </v-btn>
-              <span class="text-secondary"> - {{ voyage.duration }}</span>
-            </v-card-text>
-          </template>
-        </v-hover>
+        </client-only>
+      </NuxtLink>
+      <NuxtLink
+        :to="`/destinations/${voyage.country}`"
+        class="text-decoration-none"
+      >
+        <v-card-text class="font-weight-bold pa-2 d-flex align-center">
+          <span>
+            <span class="text-primary hover-underline">{{ voyage.country }} </span><span class="text-secondary"> - {{
+              voyage.duration }}</span>
+          </span>
+        </v-card-text>
+      </NuxtLink>
+      <NuxtLink
+        :to="`/voyages/${voyage.slug}`"
+        class="text-decoration-none"
+      >
         <v-card-title class="text-body-1 font-weight-bold pa-2 text-textColor">
           {{ voyage.title }}
         </v-card-title>
@@ -87,19 +86,22 @@
           <span class="text-grey-darken-2 "> A partir de </span>
           <span class="font-weight-bold text-textColor">{{ voyage.startingPrice }}€</span>
         </v-card-text>
-        <v-card-text
+        <div
+          v-if="voyage.comments > 0"
           class="d-flex align-center px-2 text-textColor"
-          :class="voyage?.comments > 0 ? '' : 'd-none'"
         >
-          <v-rating
-            half-increments
-            :size="24"
-            :model-value="voyage?.rating || 0"
-            readonly
-            color="orange-lighten-1"
-          />({{
-            voyage?.comments || 0 }})
-        </v-card-text>
+          <client-only>
+            <v-rating
+              :key="`rating-${voyage.slug}`"
+              half-increments
+              :size="24"
+              :model-value="voyage.rating"
+              readonly
+              color="orange-lighten-1"
+            />
+            <span>({{ voyage.comments }})</span>
+          </client-only>
+        </div>
       </NuxtLink>
     </v-card>
   </v-col>
@@ -119,6 +121,9 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
 </script>
 
 <style scoped>
+.hover-underline:hover{
+  text-decoration: underline;
+}
 .svg-child-icon {
     width: 1rem;
     height: 1rem;

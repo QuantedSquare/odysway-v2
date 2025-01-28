@@ -12,7 +12,7 @@ Le partage <br> cœur du voyage
   #text
   Des voyages conçus avec soin et passion pour vous faire découvrir l’intimité d’une région ou d'un pays, au- delà des clichés, de la manière la plus durable possible.
   :::
-
+  
   :::headline-column
   #title
   Des départs en [petits groupes]{style="color:#bc5948;"} ou [privatifs]{style="color:#bc5948;"}
@@ -67,7 +67,7 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
 ::section-title
-Nos départs en petits groupes [garantis]{style="color: #2e8b57;"} ✔
+Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"} 
 ::
 
 ::voyages-card-list
@@ -109,4 +109,4 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 
   :::voyage-card{voyage-slug="japon"}
   :::
-::
+:: 

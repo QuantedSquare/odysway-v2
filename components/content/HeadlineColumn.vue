@@ -10,7 +10,10 @@
       />
     </h2>
     <p class="text-body-1 text-textColor">
-      <slot name="text" />
+      <slot
+        name="text"
+        mdc-unwrap="p"
+      />
     </p>
   </v-col>
 </template>
