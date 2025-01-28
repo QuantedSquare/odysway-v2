@@ -1,10 +1,14 @@
 ::hero-section
+---
+image: /images/AdobeStock_124472096.jpeg
+---
 #title
 Le partage <br> cœur du voyage
 
 #banner-image
 ![chiens de traineaux](/images/AdobeStock_124472096.jpeg)
 ::
+
 
 ::headlines-list
   :::headline-column{headline-slug="headline-first"}

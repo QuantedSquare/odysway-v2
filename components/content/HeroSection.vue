@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="banner?.image"
+    :src="image"
     cover
     class="top-homepage-container "
   >
@@ -11,16 +11,14 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   image: {
     type: String,
     required: true,
+    default: '/images/Laponie-(1).webp',
   },
 })
-
-const { data: banner } = await useAsyncData('banner', () => {
-  return queryCollection('banner').first()
-})
+console.log(props.image)
 </script>
 
 <style scoped>
