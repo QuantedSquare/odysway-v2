@@ -1,7 +1,5 @@
-::hero-section
----
-image: /images/AdobeStock_124472096.jpeg
----
+::hero-section{image="/images/AdobeStock_124472096.jpeg"}
+
 #title
 Le partage <br> cœur du voyage
 ::
@@ -19,7 +17,7 @@ Le partage <br> cœur du voyage
 ::
 
 ::section-title
-Nos thématiques préférées 🫶
+Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
 ::categ-carousel-home
@@ -40,7 +38,7 @@ Nos thématiques préférées 🫶
 ::
 
 ::section-title
-Nos séjours en France 🚞
+Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
 ::voyages-card-list
@@ -55,7 +53,7 @@ Nos séjours en France 🚞
 ::
 
 ::section-title
-Nos départs en petits groupes garantis ✔
+Nos départs en petits groupes [garantis]{style="color: #2e8b57;"} ✔
 ::
 
 ::voyages-card-list
@@ -70,7 +68,7 @@ Nos départs en petits groupes garantis ✔
 ::
 
 ::section-title
-Nos voyages pour cet hiver ☃️
+Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
 ::voyages-card-list
@@ -85,7 +83,7 @@ Nos voyages pour cet hiver ☃️
 ::
 
 ::section-title
-Nos voyages pour le printemps 🌱
+Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 ::
 
 ::voyages-card-list
