@@ -1,6 +1,6 @@
 ::hero-section
 #title
-Le partage \<br> cœur du voyage
+Le partage <br> cœur du voyage
 
 #banner-image
 ![chiens de traineaux](/images/AdobeStock_124472096.jpeg)
