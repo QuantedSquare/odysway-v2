@@ -4,15 +4,26 @@
 Le partage <br> cœur du voyage
 ::
 
-
 ::headlines-list
-  :::headline-column{headline-slug="headline-first"}
+  :::headline-column
+  #title
+  Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
+  #text
+  Des voyages conçus avec soin et passion pour vous faire découvrir l’intimité d’une région ou d'un pays, au- delà des clichés, de la manière la plus durable possible.
   :::
 
-  :::headline-column{headline-slug="headline-second"}
+  :::headline-column
+  #title
+  Des départs en [petits groupes]{style="color:#bc5948;"} ou [privatifs]{style="color:#bc5948;"}
+  #text
+  Chez Odysway, voyagez comme vous le souhaitez : rejoignez un petit groupe pour partager ou privatisez votre séjour. Le choix est entre vos mains !
   :::
 
-  :::headline-column{headline-slug="headline-third"}
+  :::headline-column
+  #title
+  Une agence proche de [vous]{style="color:#bc5948;"}
+  #text
+  Votre conseiller(ère) voyage vous accompagne à chaque étape, avec écoute et disponibilité. En restant en contact direct via WhatsApp, nous veillons à ce que votre voyage soit fluide et serein, du premier échange jusqu’à votre retour.
   :::
 ::
 

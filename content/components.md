@@ -1,9 +1,6 @@
 ::hero-section
 ::
 
-::headline-column
-::
-
 ::categorie-card
 ::
 

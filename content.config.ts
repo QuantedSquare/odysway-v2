@@ -6,23 +6,6 @@ export default defineContentConfig({
       type: 'page',
       source: '**/*.md',
     }),
-    banner: defineCollection({
-      type: 'data',
-      source: 'banner/hero-section.json',
-      schema: z.object({
-        title: z.string(),
-        image: z.string(),
-      }),
-    }),
-    headlines: defineCollection({
-      type: 'data',
-      source: 'headlines/**.json',
-      schema: z.object({
-        slug: z.string(),
-        title: z.string(),
-        text: z.string(),
-      }),
-    }),
     categories: defineCollection({
       type: 'data',
       source: 'categories/**.json',
