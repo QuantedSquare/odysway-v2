@@ -11,14 +11,13 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   image: {
     type: String,
     required: true,
     default: '/images/Laponie-(1).webp',
   },
 })
-console.log(props.image)
 </script>
 
 <style scoped>
