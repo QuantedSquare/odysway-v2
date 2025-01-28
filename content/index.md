@@ -1,4 +1,6 @@
 ::hero-section
+#title
+Le partage <br> au cœur du voyage
 
 ::
 

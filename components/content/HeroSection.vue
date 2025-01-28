@@ -5,12 +5,19 @@
     class="top-homepage-container "
   >
     <span class="absolute-position shadow">
-      Le partage <br> au coer du voyage
+      <slot name="title" />
     </span>
   </v-img>
 </template>
 
 <script setup>
+defineProps({
+  image: {
+    type: String,
+    required: true,
+  },
+})
+
 const { data: banner } = await useAsyncData('banner', () => {
   return queryCollection('banner').first()
 })
