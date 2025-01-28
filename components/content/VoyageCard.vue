@@ -12,7 +12,7 @@
       <NuxtLink
         v-if="voyage && voyageSlug"
         :key="voyageSlug"
-        :to="`/destinations/${voyage.slug}`"
+        :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none"
       >
         <v-img
