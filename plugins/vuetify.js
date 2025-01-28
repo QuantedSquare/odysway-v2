@@ -19,6 +19,7 @@ export default defineNuxtPlugin((app) => {
             secondary: '#bc5948', // odysway red
             cream: '#F4F2EB', // banner bg
             textColor: '#3e3e3e',
+            sectionBg: '#edeff8',
           },
         },
       },

@@ -5,7 +5,10 @@
     class="top-homepage-container "
   >
     <span class="absolute-position shadow">
-      <slot name="title" />
+      <slot
+        name="title"
+        mdc-unwrap="p"
+      />
     </span>
   </v-img>
 </template>

@@ -18,7 +18,7 @@
           ref="voyageList"
           class="flex-nowrap overflow-auto hidden-scroll"
         >
-          <slot />
+          <slot mdc-unwrap="p" />
         </v-row>
       </v-col>
       <v-col cols="auto">

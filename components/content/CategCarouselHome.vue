@@ -21,7 +21,7 @@
         sm="10"
         class="d-flex overflow-auto hidden-scroll"
       >
-        <slot />
+        <slot mdc-unwrap="p" />
       </v-col>
       <v-col
         v-if="showArrows"
