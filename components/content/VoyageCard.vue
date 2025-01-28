@@ -2,7 +2,7 @@
   <v-col
     cols="12"
     sm="6"
-    md="3"
+    md="4"
   >
     <v-card
       class="mx-auto"
@@ -53,7 +53,7 @@
                   v-bind="on"
                 >
                   <v-img
-                    src="../../public/icons/child.svg"
+                    src="/icons/child.svg"
                     alt="Child icon"
                     class="svg-child-icon"
                   />
@@ -80,25 +80,25 @@
             </v-card-text>
           </template>
         </v-hover>
-        <v-card-title class="text-body-1 font-weight-bold pa-2">
+        <v-card-title class="text-body-1 font-weight-bold pa-2 text-textColor">
           {{ voyage.title }}
         </v-card-title>
         <v-card-text class="text-body-2 pa-2">
-          <span class="text-grey-darken-2"> A partir de </span>
-          <span class="font-weight-bold">{{ voyage.startingPrice }}€</span>
+          <span class="text-grey-darken-2 "> A partir de </span>
+          <span class="font-weight-bold text-textColor">{{ voyage.startingPrice }}€</span>
         </v-card-text>
         <v-card-text
-          class="d-flex align-center px-2"
-          :class="voyage.comments > 0 ? '' : 'd-none'"
+          class="d-flex align-center px-2 text-textColor"
+          :class="voyage?.comments > 0 ? '' : 'd-none'"
         >
           <v-rating
             half-increments
             :size="24"
-            :model-value="voyage.rating"
+            :model-value="voyage?.rating || 0"
             readonly
             color="orange-lighten-1"
           />({{
-            voyage.comments }})
+            voyage?.comments || 0 }})
         </v-card-text>
       </NuxtLink>
     </v-card>

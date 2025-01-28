@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-const categList = useTemplateRef('categList')
+const categList = ref(false)
 const showArrows = ref(false)
 
 onMounted(() => {

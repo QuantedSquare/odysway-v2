@@ -1,29 +1,47 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row
       dense
-      justify="center"
       align="center"
+      no-gutters
+      class="flex-nowrap"
     >
       <v-col cols="auto">
         <v-icon
           icon="mdi-chevron-left"
-          size="large"
+          size="x-large"
+          @click="scrollVoyages(-400)"
         />
       </v-col>
-      <v-col class="d-flex overflow-auto hidden-scroll">
-        <slot />
+      <v-col cols="10">
+        <v-row
+          ref="voyageList"
+          class="flex-nowrap overflow-auto hidden-scroll"
+        >
+          <slot />
+        </v-row>
       </v-col>
-
       <v-col cols="auto">
         <v-icon
           icon="mdi-chevron-right"
-          size="large"
+          size="x-large"
+          @click="scrollVoyages(400)"
         />
       </v-col>
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+const voyageList = ref(null)
+
+function scrollVoyages(scrollAmount) {
+  voyageList.value.$el.scroll({
+    left: voyageList.value.$el.scrollLeft + scrollAmount,
+    behavior: 'smooth',
+  })
+}
+</script>
 
 <style scoped>
 .hidden-scroll {
