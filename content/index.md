@@ -130,3 +130,7 @@ Odysway est une agence de voyage en ligne spécialisée dans l’immersion. Fond
 Parce que voyager doit avoir du sens, nous nous engageons à construire le tourisme de demain : durable, conscient et accessible.
 
 ::
+
+::section-title
+[Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍
+::

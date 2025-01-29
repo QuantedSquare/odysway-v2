@@ -1,42 +1,38 @@
 <template>
   <v-container class="d-flex align-center">
-    <v-icon
+    <VIconChevron
+      v-if="!arrivedState.left"
       icon="mdi-chevron-left"
-      size="x-large"
-      class="icon-color"
-      @click="scrollVoyages(-400)"
+      @click="x -= 300"
     />
-
     <v-row
       ref="voyageList"
       class="flex-nowrap overflow-auto hidden-scroll"
+      :class="arrivedState.right ? 'mr-6' : ''"
     >
       <slot />
     </v-row>
-    <v-icon
+    <VIconChevron
+      v-if="!arrivedState.right"
       icon="mdi-chevron-right"
-      size="x-large"
-      class="icon-color"
-      @click="scrollVoyages(400)"
+      @click="x += 300"
     />
   </v-container>
 </template>
 
 <script setup>
-const voyageList = ref(null)
+import { useScroll } from '@vueuse/core'
 
-function scrollVoyages(scrollAmount) {
-  voyageList.value.$el.scroll({
-    left: voyageList.value.$el.scrollLeft + scrollAmount,
-    behavior: 'smooth',
-  })
-}
+const voyageList = ref(null)
+const scrollElement = ref(null)
+
+onMounted(() => {
+  scrollElement.value = voyageList.value.$el
+})
+const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
 </script>
 
 <style scoped>
-.icon-color {
-  color: rgba(0, 0, 0, .54);
-}
 .hidden-scroll {
   -webkit-overflow-scrolling: touch;
 }

@@ -8,7 +8,6 @@
     <v-card
       max-width="400"
       elevation="0"
-      class="py-0"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
@@ -45,9 +44,7 @@
               text="Test tooltip"
             >
               <template #activator="{ props }">
-                <VBtnTooltip
-                  v-bind="props"
-                >
+                <VBtnTooltip v-bind="props">
                   <v-img
                     src="/icons/child.svg"
                     alt="Child icon"
@@ -63,7 +60,7 @@
         :to="`/destinations/${voyage.country}`"
         class="text-decoration-none"
       >
-        <v-card-text class="font-weight-bold pa-2 d-flex align-center">
+        <v-card-text class="font-weight-bold py-1 px-0 d-flex align-center">
           <span>
             <span class="text-primary hover-underline">{{ voyage.country }} </span><span class="text-secondary"> - {{
               voyage.duration }}</span>
@@ -74,16 +71,16 @@
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none"
       >
-        <v-card-title class="text-body-1 font-weight-bold pa-2 text-textColor">
+        <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-textColor">
           {{ voyage.title }}
         </v-card-title>
-        <v-card-text class="text-body-2 pa-2">
+        <v-card-text class="text-body-2 py-1 px-0">
           <span class="text-grey-darken-2 "> A partir de </span>
           <span class="font-weight-bold text-textColor">{{ voyage.startingPrice }}€</span>
         </v-card-text>
         <div
           v-if="voyage.comments > 0"
-          class="d-flex align-center px-2 text-textColor"
+          class="d-flex align-center text-textColor"
         >
           <client-only>
             <v-rating
