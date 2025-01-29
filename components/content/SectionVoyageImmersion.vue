@@ -17,15 +17,18 @@
           justify="center"
         >
           <v-col
-            :class="$vuetify.display.mdAndDown ? 'd-none' : ''"
             cols="4"
+            class="d-none d-lg-flex"
           >
             <v-img
               rounded="lg"
               :src="image"
             />
           </v-col>
-          <v-col offset-lg="1">
+          <v-col
+            offset-lg="1"
+            class="text-textColor"
+          >
             <h2 class="my-6 text-h4 font-weight-black">
               <slot
                 name="title"

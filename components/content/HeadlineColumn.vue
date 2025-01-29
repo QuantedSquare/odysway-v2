@@ -1,15 +1,17 @@
 <template>
   <v-col
-    cols="10"
-    md="4"
+    cols="11"
+    sm="10"
+    md="3"
+    class="text-textColor"
   >
-    <h2 class="my-6 pb-6 text-h5 font-weight-black text-textColor">
+    <h2 class="my-6 pb-6 text-h5 font-weight-black">
       <slot
         name="title"
         mdc-unwrap="p"
       />
     </h2>
-    <p class="text-body-1 text-textColor">
+    <p class="text-body-1">
       <slot
         name="text"
         mdc-unwrap="p"

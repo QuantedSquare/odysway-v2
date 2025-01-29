@@ -111,7 +111,7 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
   :::
 :: 
 
-::section-voyage-immersion{image="/images/Pérou-voyage-spirituel.jpg"}
+::section-voyage-immersion{image="/images/IMG-20240320-WA0124.jpg"}
 #title
 Le voyage en [immersion]{style="color: #2e8b57;"} , le partage au cœur du voyage 🌍
 #text
