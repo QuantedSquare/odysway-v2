@@ -29,17 +29,15 @@
               text="Test tooltip"
             >
               <template #activator="{ props }">
-                <v-btn
+                <VBtnTooltip
                   v-bind="props"
-                  size="x-small"
                   icon
-                  color="rgba(0, 0, 0, 0.39)"
                 >
                   <v-icon
                     icon="mdi-account-group"
                     color="white"
                   />
-                </v-btn>
+                </VBtnTooltip>
               </template>
             </v-tooltip>
             <v-tooltip
@@ -47,10 +45,7 @@
               text="Test tooltip"
             >
               <template #activator="{ props }">
-                <v-btn
-                  size="x-small"
-                  icon
-                  color="rgba(0, 0, 0, 0.39)"
+                <VBtnTooltip
                   v-bind="props"
                 >
                   <v-img
@@ -58,7 +53,7 @@
                     alt="Child icon"
                     class="svg-child-icon"
                   />
-                </v-btn>
+                </VBtnTooltip>
               </template>
             </v-tooltip>
           </div>

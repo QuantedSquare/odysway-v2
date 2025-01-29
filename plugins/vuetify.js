@@ -27,6 +27,7 @@ export default defineNuxtPlugin((app) => {
     aliases: {
       VBtnPrimary: VBtn,
       VBtnSecondary: VBtn,
+      VBtnTooltip: VBtn,
     },
     defaults: {
       VBtnPrimary: {
@@ -36,6 +37,11 @@ export default defineNuxtPlugin((app) => {
       VBtnSecondary: {
         variant: 'text',
         color: 'primary',
+      },
+      VBtnTooltip: {
+        size: 'x-small',
+        icon: true,
+        color: 'rgba(0, 0, 0, 0.39)',
       },
     },
   })

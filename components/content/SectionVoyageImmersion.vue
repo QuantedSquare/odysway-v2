@@ -5,7 +5,7 @@
   >
     <v-row
       align="center"
-      justify-lg="center"
+      justify-md="center"
     >
       <v-col
         cols="12"
