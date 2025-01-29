@@ -7,7 +7,6 @@
     <span class="absolute-position shadow">
       <slot
         name="title"
-        mdc-unwrap="p"
       />
     </span>
   </v-img>
@@ -41,11 +40,11 @@ defineProps({
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .absolute-position {
     font-size: 3rem;
     top: 30%;
-    left: 5%;
+    left: 2%;
   }
 
   .top-homepage-container {

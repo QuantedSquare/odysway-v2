@@ -1,45 +1,40 @@
 <template>
-  <v-container>
-    <v-row
-      justify="center"
-      align="center"
+  <v-container
+    class="d-flex align-center"
+  >
+    <div
+      v-if="showArrows"
+      :class="$vuetify.display.smAndDown ? 'd-none' : ''"
     >
-      <v-col
-        v-if="showArrows"
-        cols="auto"
-        :class="$vuetify.display.smAndDown ? 'd-none' : ''"
-      >
-        <v-icon
-          icon="mdi-chevron-left"
-          size="large"
-          @click="scrollCategories(-800)"
-        />
-      </v-col>
-      <v-col
-        ref="categList"
-        cols="12"
-        sm="10"
-        class="d-flex overflow-auto hidden-scroll"
-      >
-        <slot mdc-unwrap="p" />
-      </v-col>
-      <v-col
-        v-if="showArrows"
-        cols="auto"
-        :class="$vuetify.display.smAndDown ? 'd-none' : ''"
-      >
-        <v-icon
-          icon="mdi-chevron-right"
-          size="large"
-          @click="scrollCategories(800)"
-        />
+      <v-icon
+        icon="mdi-chevron-left"
+        size="large"
+        @click="scrollCategories(-800)"
+      />
+    </div>
+    <v-row
+      ref="categList"
+      class="overflow-auto hidden-scroll"
+    >
+      <v-col class="d-flex">
+        <slot />
       </v-col>
     </v-row>
+    <div
+      v-if="showArrows"
+      :class="$vuetify.display.smAndDown ? 'd-none' : ''"
+    >
+      <v-icon
+        icon="mdi-chevron-right"
+        size="large"
+        @click="scrollCategories(800)"
+      />
+    </div>
   </v-container>
 </template>
 
 <script setup>
-const categList = ref(false)
+const categList = ref(null)
 const showArrows = ref(false)
 
 onMounted(() => {

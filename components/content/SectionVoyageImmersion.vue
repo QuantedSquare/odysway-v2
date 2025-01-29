@@ -5,11 +5,10 @@
   >
     <v-row
       align="center"
-      justify="center"
+      justify-lg="center"
     >
       <v-col
-        cols="11"
-        sm="10"
+        cols="12"
         md="8"
       >
         <v-row
@@ -25,22 +24,11 @@
               :src="image"
             />
           </v-col>
-          <v-col
-            offset-lg="1"
-            class="text-textColor"
-          >
-            <h2 class="my-6 text-h4 font-weight-black">
-              <slot
-                name="title"
-                mdc-unwrap="p"
-              />
+          <v-col class="text-textColor">
+            <h2 class="my-6 text-h5 text-h4 font-weight-black">
+              <slot name="title" />
             </h2>
-            <p>
-              <slot
-                name="text"
-                mdc-unwrap="p"
-              />
-            </p>
+            <slot name="text" />
           </v-col>
         </v-row>
       </v-col>
@@ -53,7 +41,7 @@ const props = defineProps({
   image: {
     type: String,
     required: true,
-    default: '',
+    default: '/images/IMG-20240320-WA0124.jpg',
   },
 })
 </script>

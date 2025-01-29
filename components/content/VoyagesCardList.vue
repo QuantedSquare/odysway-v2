@@ -1,34 +1,24 @@
 <template>
-  <v-container>
+  <v-container class="d-flex align-center">
+    <v-icon
+      icon="mdi-chevron-left"
+      size="x-large"
+      class="icon-color"
+      @click="scrollVoyages(-400)"
+    />
+
     <v-row
-      dense
-      align="center"
-      no-gutters
-      class="flex-nowrap"
+      ref="voyageList"
+      class="flex-nowrap overflow-auto hidden-scroll"
     >
-      <v-col cols="auto">
-        <v-icon
-          icon="mdi-chevron-left"
-          size="x-large"
-          @click="scrollVoyages(-400)"
-        />
-      </v-col>
-      <v-col cols="10">
-        <v-row
-          ref="voyageList"
-          class="flex-nowrap overflow-auto hidden-scroll"
-        >
-          <slot mdc-unwrap="p" />
-        </v-row>
-      </v-col>
-      <v-col cols="auto">
-        <v-icon
-          icon="mdi-chevron-right"
-          size="x-large"
-          @click="scrollVoyages(400)"
-        />
-      </v-col>
+      <slot />
     </v-row>
+    <v-icon
+      icon="mdi-chevron-right"
+      size="x-large"
+      class="icon-color"
+      @click="scrollVoyages(400)"
+    />
   </v-container>
 </template>
 
@@ -44,6 +34,9 @@ function scrollVoyages(scrollAmount) {
 </script>
 
 <style scoped>
+.icon-color {
+  color: rgba(0, 0, 0, .54);
+}
 .hidden-scroll {
   -webkit-overflow-scrolling: touch;
 }

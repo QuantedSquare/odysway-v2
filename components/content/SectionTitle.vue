@@ -5,13 +5,9 @@
       no-gutters
     >
       <v-col
-        cols="10"
-        md="11"
-        class="text-textColor"
+        class="text-textColor font-weight-black text-h5 text-md-h4 my-6"
       >
-        <h2 class="font-weight-black text-h5 text-md-h4 my-6">
-          <slot mdc-unwrap="p" />
-        </h2>
+        <slot />
       </v-col>
     </v-row>
   </v-container>

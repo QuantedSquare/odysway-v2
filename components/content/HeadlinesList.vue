@@ -5,7 +5,7 @@
         justify="center"
         class="py-16"
       >
-        <slot mdc-unwrap="p" />
+        <slot />
       </v-row>
     </v-container>
   </div>
