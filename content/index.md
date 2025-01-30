@@ -35,20 +35,23 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
 ::categ-carousel-home
-  :::categorie-card{categorie-slug="chemins-vers-soi"}
-  :::
 
-  :::categorie-card{categorie-slug="echappees-sauvages"}
-  :::
+  ::horizontal-carousel{scroll-amount="400"}
 
-  :::categorie-card{categorie-slug="immersions-locales"}
-  :::
+    :::categorie-card{categorie-slug="chemins-vers-soi"}
+    :::
 
-  :::categorie-card{categorie-slug="regard-faune"}
-  :::
+    :::categorie-card{categorie-slug="echappees-sauvages"}
+    :::
 
-  :::categorie-card{categorie-slug="sentiers-aventures"}
-  :::
+    :::categorie-card{categorie-slug="immersions-locales"}
+    :::
+
+    :::categorie-card{categorie-slug="regard-faune"}
+    :::
+
+    :::categorie-card{categorie-slug="sentiers-aventures"}
+    :::
 ::
 
 ::section-title
@@ -56,14 +59,19 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
 ::voyages-card-list
-  :::voyage-card{voyage-slug="chine"}
-  :::
 
-  :::voyage-card{voyage-slug="japon-fleurs"}
-  :::
+  ::horizontal-carousel{scroll-amount="400"}
 
-  :::voyage-card{voyage-slug="japon"}
-  :::
+     :::voyage-card{voyage-slug="chine"}
+     :::
+
+     :::voyage-card{voyage-slug="japon-fleurs"}
+     :::
+
+     :::voyage-card{voyage-slug="japon"}
+     :::
+
+  ::
 ::
 
 ::section-title
@@ -71,14 +79,19 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 ::
 
 ::voyages-card-list
-  :::voyage-card{voyage-slug="chine"}
-  :::
 
-  :::voyage-card{voyage-slug="japon-fleurs"}
-  :::
+  ::horizontal-carousel{scroll-amount="400"}
 
-  :::voyage-card{voyage-slug="japon"}
-  :::
+     :::voyage-card{voyage-slug="chine"}
+     :::
+
+     :::voyage-card{voyage-slug="japon-fleurs"}
+     :::
+
+     :::voyage-card{voyage-slug="japon"}
+     :::
+
+  ::
 ::
 
 ::section-title
@@ -86,14 +99,17 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
 ::voyages-card-list
-  :::voyage-card{voyage-slug="chine"}
-  :::
+  ::horizontal-carousel{scroll-amount="400"}
+     :::voyage-card{voyage-slug="chine"}
+     :::
 
-  :::voyage-card{voyage-slug="japon-fleurs"}
-  :::
+     :::voyage-card{voyage-slug="japon-fleurs"}
+     :::
 
-  :::voyage-card{voyage-slug="japon"}
-  :::
+     :::voyage-card{voyage-slug="japon"}
+     :::
+
+  ::
 ::
 
 ::section-title
@@ -101,15 +117,18 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 ::
 
 ::voyages-card-list
-  :::voyage-card{voyage-slug="chine"}
-  :::
+  ::horizontal-carousel{scroll-amount="400"}
+     :::voyage-card{voyage-slug="chine"}
+     :::
 
-  :::voyage-card{voyage-slug="japon-fleurs"}
-  :::
+     :::voyage-card{voyage-slug="japon-fleurs"}
+     :::
 
-  :::voyage-card{voyage-slug="japon"}
-  :::
-:: 
+     :::voyage-card{voyage-slug="japon"}
+     :::
+
+  ::
+::
 
 ::section-voyage-immersion{image="/images/IMG-20240320-WA0124.jpg"}
 #title

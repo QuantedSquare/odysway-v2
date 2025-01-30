@@ -42,7 +42,7 @@ export default defineNuxtPlugin((app) => {
       VBtnVoyage: {
         size: 'x-small',
         icon: true,
-        color: 'rgba(0, 0, 0, 0.54)',
+        color: 'rgba(0, 0, 0, 0.32)',
       },
       VIconChevron: {
         size: 'x-large',
