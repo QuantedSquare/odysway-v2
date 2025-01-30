@@ -1,20 +1,21 @@
 <template>
-  <v-container class="d-flex align-center">
+  <v-container class="d-flex align-center position-relative">
     <VIconChevron
       v-if="!arrivedState.left"
       icon="mdi-chevron-left"
+      class="position-absolute"
       @click="x -= 300"
     />
     <v-row
       ref="voyageList"
       class="flex-nowrap overflow-auto hidden-scroll"
-      :class="arrivedState.right ? 'mr-6' : ''"
     >
       <slot />
     </v-row>
     <VIconChevron
       v-if="!arrivedState.right"
       icon="mdi-chevron-right"
+      class="position-absolute right-0"
       @click="x += 300"
     />
   </v-container>

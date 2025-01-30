@@ -1,21 +1,22 @@
 <template>
-  <NuxtLink
-    :key="categorieSlug"
-    :to="`/thematiques/${categorieSlug}`"
-    class="mr-4"
-  >
-    <v-card
-      variant="flat"
-      width="150"
-      height="150"
-      rounded="lg"
-      :image="categorie?.image"
+  <v-col cols="auto">
+    <NuxtLink
+      :key="categorieSlug"
+      :to="`/thematiques/${categorieSlug}`"
     >
-      <span class="shadow text-white font-weight-bold position-absolute bottom-0 pa-2">
-        {{ categorie?.title || 'Loading ... ' }}
-      </span>
-    </v-card>
-  </NuxtLink>
+      <v-card
+        variant="flat"
+        width="150"
+        height="150"
+        rounded="lg"
+        :image="categorie?.image"
+      >
+        <span class="shadow text-white font-weight-bold position-absolute bottom-0 pa-2">
+          {{ categorie?.title || 'Loading ... ' }}
+        </span>
+      </v-card>
+    </NuxtLink>
+  </v-col>
 </template>
 
 <script setup>

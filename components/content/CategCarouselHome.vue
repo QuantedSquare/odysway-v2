@@ -14,11 +14,11 @@
     </div>
     <v-row
       ref="categList"
-      class="overflow-auto hidden-scroll"
+      class="flex-nowrap overflow-auto hidden-scroll"
     >
-      <v-col class="d-flex">
-        <slot />
-      </v-col>
+      <!-- <v-col class="d-flex"> -->
+      <slot />
+      <!-- </v-col> -->
     </v-row>
     <div
       v-if="showArrows"

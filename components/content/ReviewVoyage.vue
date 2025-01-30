@@ -23,3 +23,7 @@
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+const currentReview = ref(0)
+</script>
