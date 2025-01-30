@@ -62,10 +62,10 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 
   ::horizontal-carousel{scroll-amount="400"}
 
-     :::voyage-card{voyage-slug="chine"}
+     :::voyage-card{voyage-slug="japon-fleurs"}
      :::
 
-     :::voyage-card{voyage-slug="japon-fleurs"}
+     :::voyage-card{voyage-slug="chine"}
      :::
 
      :::voyage-card{voyage-slug="japon"}
@@ -99,11 +99,13 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
 ::voyages-card-list
+
   ::horizontal-carousel{scroll-amount="400"}
-     :::voyage-card{voyage-slug="chine"}
-     :::
 
      :::voyage-card{voyage-slug="japon-fleurs"}
+     :::
+
+     :::voyage-card{voyage-slug="chine"}
      :::
 
      :::voyage-card{voyage-slug="japon"}
@@ -117,7 +119,9 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 ::
 
 ::voyages-card-list
+
   ::horizontal-carousel{scroll-amount="400"}
+
      :::voyage-card{voyage-slug="chine"}
      :::
 
@@ -155,7 +159,5 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 ::
 
 ::review-voyage
-  :::review-card
-  :::
   
 ::

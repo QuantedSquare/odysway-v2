@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="voyage"
+    v-if="voyage && voyageSlug"
     cols="12"
     sm="6"
     md="4"

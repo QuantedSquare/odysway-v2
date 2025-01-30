@@ -29,5 +29,19 @@ export default defineContentConfig({
         country: z.string(),
       }),
     }),
+    reviews: defineCollection({
+      type: 'data',
+      source: 'reviews/**.json',
+      schema: z.object({
+        author: z.string(),
+        authorAge: z.string(),
+        photo: z.string(),
+        voyagePhoto: z.string(),
+        text: z.string(),
+        blogSlug: z.string(),
+        blogTitle: z.string(),
+        isOnHome: z.boolean(),
+      }),
+    }),
   },
 })
