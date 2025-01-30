@@ -5,8 +5,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 
-import { VBtn } from 'vuetify/components/VBtn'
-import { VCardSubtitle, VIcon } from 'vuetify/components'
+import { VBtn, VIcon } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -28,7 +27,7 @@ export default defineNuxtPlugin((app) => {
     aliases: {
       VBtnPrimary: VBtn,
       VBtnSecondary: VBtn,
-      VBtnTooltip: VBtn,
+      VBtnVoyage: VBtn,
       VIconChevron: VIcon,
     },
     defaults: {
@@ -38,18 +37,16 @@ export default defineNuxtPlugin((app) => {
       },
       VBtnSecondary: {
         variant: 'text',
-        // color: 'secondary',
         class: 'bg-secondary',
       },
-      VBtnTooltip: {
+      VBtnVoyage: {
         size: 'x-small',
         icon: true,
-        color: 'rgba(0, 0, 0, 0.39)',
+        color: 'rgba(0, 0, 0, 0.54)',
       },
       VIconChevron: {
         size: 'x-large',
-        color: 'rgba(0, 0, 0, .54)',
-        class: 'mx-1',
+        color: 'white',
       },
     },
   })

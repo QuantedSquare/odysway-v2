@@ -1,23 +1,33 @@
 <template>
   <v-container class="d-flex align-center position-relative">
-    <VIconChevron
+    <VBtnVoyage
       v-if="!arrivedState.left"
-      icon="mdi-chevron-left"
-      class="position-absolute"
-      @click="x -= 300"
-    />
+      icon
+      class="position-absolute left-0 zIndex"
+    >
+      <VIconChevron
+        icon="mdi-chevron-left"
+
+        @click="x -= 300"
+      />
+    </VBtnVoyage>
     <v-row
       ref="voyageList"
       class="flex-nowrap overflow-auto hidden-scroll"
     >
       <slot />
     </v-row>
-    <VIconChevron
+
+    <VBtnVoyage
       v-if="!arrivedState.right"
-      icon="mdi-chevron-right"
+      icon
       class="position-absolute right-0"
-      @click="x += 300"
-    />
+    >
+      <VIconChevron
+        icon="mdi-chevron-right"
+        @click="x += 300"
+      />
+    </VBtnVoyage>
   </v-container>
 </template>
 
@@ -40,5 +50,8 @@ const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
 
 .hidden-scroll::-webkit-scrollbar {
   display: none;
+}
+.zIndex {
+  z-index: 100;
 }
 </style>

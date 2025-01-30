@@ -1,52 +1,49 @@
 <template>
   <v-container
-    class="d-flex align-center"
+    class="d-flex align-center position-relative"
   >
-    <div
-      v-if="showArrows"
+    <VBtnVoyage
+      v-if="!arrivedState.left"
       :class="$vuetify.display.smAndDown ? 'd-none' : ''"
+      icon
+      class="position-absolute left-0 zIndex"
     >
-      <v-icon
+      <VIconChevron
         icon="mdi-chevron-left"
-        size="large"
-        @click="scrollCategories(-800)"
+
+        @click="x -= 800"
       />
-    </div>
+    </VBtnVoyage>
     <v-row
       ref="categList"
       class="flex-nowrap overflow-auto hidden-scroll"
     >
-      <!-- <v-col class="d-flex"> -->
       <slot />
-      <!-- </v-col> -->
     </v-row>
-    <div
-      v-if="showArrows"
+    <VBtnVoyage
+      v-if="!arrivedState.right"
       :class="$vuetify.display.smAndDown ? 'd-none' : ''"
+      icon
+      class="position-absolute right-0"
     >
-      <v-icon
+      <VIconChevron
         icon="mdi-chevron-right"
-        size="large"
-        @click="scrollCategories(800)"
+        @click="x += 800"
       />
-    </div>
+    </VBtnVoyage>
   </v-container>
 </template>
 
 <script setup>
+import { useScroll } from '@vueuse/core'
+
 const categList = ref(null)
-const showArrows = ref(false)
+const scrollElement = ref(null)
 
 onMounted(() => {
-  showArrows.value = categList.value.$el.scrollWidth > categList.value.$el.clientWidth
+  scrollElement.value = categList.value.$el
 })
-
-function scrollCategories(scrollAmount) {
-  categList.value.$el.scroll({
-    left: categList.value.$el.scrollLeft + scrollAmount,
-    behavior: 'smooth',
-  })
-}
+const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
 </script>
 
 <style scoped>

@@ -8,6 +8,7 @@
     <v-card
       max-width="400"
       elevation="0"
+      style="overflow: initial; z-index: initial"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
@@ -28,7 +29,7 @@
               text="Test tooltip"
             >
               <template #activator="{ props }">
-                <VBtnTooltip
+                <VBtnVoyage
                   v-bind="props"
                   icon
                 >
@@ -36,7 +37,7 @@
                     icon="mdi-account-group"
                     color="white"
                   />
-                </VBtnTooltip>
+                </VBtnVoyage>
               </template>
             </v-tooltip>
             <v-tooltip
@@ -44,13 +45,13 @@
               text="Test tooltip"
             >
               <template #activator="{ props }">
-                <VBtnTooltip v-bind="props">
+                <VBtnVoyage v-bind="props">
                   <v-img
                     src="/icons/child.svg"
                     alt="Child icon"
                     class="svg-child-icon"
                   />
-                </VBtnTooltip>
+                </VBtnVoyage>
               </template>
             </v-tooltip>
           </div>
