@@ -134,3 +134,9 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 ::section-title
 [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍
 ::
+
+::review-voyage
+  :::review-card
+  :::
+  
+::

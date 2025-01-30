@@ -6,7 +6,7 @@ import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 
 import { VBtn } from 'vuetify/components/VBtn'
-import { VIcon } from 'vuetify/components'
+import { VCardSubtitle, VIcon } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -38,7 +38,8 @@ export default defineNuxtPlugin((app) => {
       },
       VBtnSecondary: {
         variant: 'text',
-        color: 'primary',
+        // color: 'secondary',
+        class: 'bg-secondary',
       },
       VBtnTooltip: {
         size: 'x-small',
