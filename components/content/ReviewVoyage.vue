@@ -2,12 +2,13 @@
   <v-container>
     <v-row justify="center">
       <v-col
+        v-if="reviewsList"
         cols="12"
         sm="10"
       >
         <v-row
-          v-for="review, index in reviews"
-          :key="`Avis sur voyage ${review.blogTitle}`"
+          v-for="review, index in reviewsList"
+          :key="`Avis sur voyage ${review.blogTitle + index}`"
           no-gutters
           justify="center"
         >
@@ -25,7 +26,7 @@
           class="mt-4"
         >
           <v-col
-            v-for="review, index in reviews"
+            v-for="review, index in reviewsList"
             :key="`Avatar de voyageur ${review.author}`"
             cols="auto"
             class="d-flex flex-column align-center justify-center"
@@ -35,16 +36,22 @@
               :border="currentReview === index ? 'lg' : ''"
               :size="currentReview === index ? '70': '60'"
               :class="currentReview === index ? 'opacity-100' : 'opacity-40'"
-              @click="currentIndex(index)"
+              :color="!review.photo ? 'primary': ''"
+              @click="currentReview = index"
             >
               <v-img
+                v-if="review.photo"
                 :src="review.photo"
+                :alt="`Photo de ${review.author}`"
                 cover
               />
+              <span
+                v-else
+              >{{ review.author[0] }}</span>
             </v-avatar>
             <div :class="$vuetify.display.smAndDown ? 'd-none' : 'd-flex flex-column align-center'">
               <span>{{ review.author }}</span>
-              <span>{{ review.age }} ans </span>
+              <span>{{ review.authorAge }} ans </span>
             </div>
           </v-col>
         </v-row>
@@ -67,15 +74,21 @@
 </template>
 
 <script setup>
-const currentReview = ref(0)
+import { useDisplay } from 'vuetify'
 
-function currentIndex(index) {
-  return currentReview.value = index
-}
+const currentReview = ref(0)
+const { xs, sm } = useDisplay()
 
 const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').all()
 })
 
-console.log('current review => ', reviews.value[0].photo)
+const reviewsList = computed(() => {
+  if (xs.value || sm.value) {
+    return reviews.value.slice(0, 3)
+  }
+  else {
+    return reviews.value
+  }
+})
 </script>

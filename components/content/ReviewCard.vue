@@ -1,5 +1,6 @@
 <template>
   <v-col
+    v-if="review.isOnHome"
     cols="auto"
   >
     <v-img
@@ -44,10 +45,10 @@
           />
         </v-col>
         <v-col cols="8">
-          <v-card-subtitle class="text-textColor text-uppercase text-caption no-white-space">
+          <v-card-subtitle class="text-textColor text-uppercase text-caption no-white-space px-0">
             Lire le récit de voyage de {{ review.author }}:
           </v-card-subtitle>
-          <v-card-title class="text-textColor text-subtitle-1 font-weight-bold no-white-space">
+          <v-card-title class="text-textColor text-subtitle-1 font-weight-bold no-white-space px-0">
             <h4>
               {{ review.blogTitle }}
             </h4>
