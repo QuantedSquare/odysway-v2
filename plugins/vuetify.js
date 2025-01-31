@@ -6,7 +6,6 @@ import { VBtn, VIcon } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
-    ssr: true,
     icons: {
       defaultSet: 'mdi',
       aliases,

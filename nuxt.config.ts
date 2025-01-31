@@ -33,6 +33,9 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
   },
+  features: {
+    inlineStyles: false,
+  },
   compatibilityDate: '2024-11-01',
   vite: {
     vue: {
