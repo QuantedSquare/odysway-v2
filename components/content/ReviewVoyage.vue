@@ -33,10 +33,10 @@
           >
             <v-avatar
               v-if="review.isOnHome"
-              :border="currentReview === index ? 'lg' : ''"
-              :size="currentReview === index ? '70': '60'"
+              :border="currentReview === index ? 'lg' : '' "
+              :size="currentReview === index ? '70' : '60'"
               :class="currentReview === index ? 'opacity-100' : 'opacity-40'"
-              :color="!review.photo ? 'primary': ''"
+              :color="!review.photo ? 'primary' : '' "
               @click="currentReview = index"
             >
               <v-img

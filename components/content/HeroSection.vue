@@ -1,23 +1,23 @@
 <template>
   <v-img
-    :src="img(image, { quality: 70, format: 'webp' })"
+    :src="img(imageSrc)"
     cover
     class="top-homepage-container "
   >
-    <span class="absolute-position shadow">
+    <!-- <span class="absolute-position shadow">
       <slot
         name="title"
-        mdc-unwrap="p"
       />
-    </span>
+    </span> -->
   </v-img>
 </template>
 
 <script setup>
+import { useImage } from '#imports'
+
 defineProps({
-  image: {
+  imageSrc: {
     type: String,
-    required: true,
     default: '/images/Laponie-(1).webp',
   },
 })

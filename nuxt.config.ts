@@ -46,5 +46,11 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  // image: {
+  //   provider: 'ipx',
+  //   inject: true,
+  //   format: ['webp'],
+  //   quality: 70,
+  // },
   // css: ['~/assets/scss/main.scss'],
 })
