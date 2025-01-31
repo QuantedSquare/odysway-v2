@@ -33,6 +33,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
   },
+  // ot sure this improve a lot.
   features: {
     inlineStyles: false,
   },
