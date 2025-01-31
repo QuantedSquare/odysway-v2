@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="img(imageSrc)"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height: 1000 })"
     cover
     class="top-homepage-container "
   >
