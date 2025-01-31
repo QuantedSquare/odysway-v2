@@ -49,7 +49,7 @@
                 v-else
               >{{ review.author[0] }}</span>
             </v-avatar>
-            <div :class="$vuetify.display.smAndDown ? 'd-none' : 'd-flex flex-column align-center'">
+            <div :class="smAndDown ? 'd-none' : 'd-flex flex-column align-center'">
               <span>{{ review.author }}</span>
               <span>{{ review.authorAge }} ans </span>
             </div>
@@ -77,14 +77,14 @@
 import { useDisplay } from 'vuetify'
 
 const currentReview = ref(0)
-const { xs, sm } = useDisplay()
+const { smAndDown } = useDisplay()
 
 const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').all()
 })
 
 const reviewsList = computed(() => {
-  if (xs.value || sm.value) {
+  if (smAndDown.value) {
     return reviews.value.slice(0, 3)
   }
   else {
