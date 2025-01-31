@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height, width })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height })"
     :height="xs ? '50vh' : '100vh'"
     cover
   >
@@ -25,7 +25,7 @@ defineProps({
 
 const img = useImage()
 
-const { xs, height, width } = useDisplay()
+const { xs, height } = useDisplay()
 </script>
 
 <style scoped>
