@@ -1,4 +1,3 @@
-// import 'vuetify/styles'
 import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
@@ -7,6 +6,7 @@ import { VBtn, VIcon } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
+    ssr: true,
     icons: {
       defaultSet: 'mdi',
       aliases,
