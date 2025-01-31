@@ -100,11 +100,8 @@
 </template>
 
 <script setup>
-<<<<<<< HEAD
 import { mdiAccountGroup } from '@mdi/js'
-=======
 import { useImage } from '#imports'
->>>>>>> f94597573f89f623142fead480ac96421f0f7ba5
 
 const props = defineProps({
   voyageSlug: {
