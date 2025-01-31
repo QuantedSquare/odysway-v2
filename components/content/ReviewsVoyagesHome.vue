@@ -41,7 +41,7 @@
             >
               <v-img
                 v-if="review.photo"
-                :src="review.photo"
+                :src="img(review.photo, { format: 'webp', quality: 70, height: 100, width: 100 })"
                 :alt="`Photo de ${review.author}`"
                 cover
               />
@@ -75,7 +75,9 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
 
+const img = useImage()
 const currentReview = ref(0)
 const { smAndDown } = useDisplay()
 

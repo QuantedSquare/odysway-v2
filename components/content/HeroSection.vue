@@ -1,14 +1,14 @@
 <template>
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height, width })"
+    :height="xs ? '50vh' : '100vh'"
     cover
-    class="top-homepage-container "
   >
-    <!-- <span class="absolute-position shadow">
+    <span class="absolute-position shadow">
       <slot
         name="title"
       />
-    </span> -->
+    </span>
   </v-img>
 </template>
 
@@ -24,13 +24,11 @@ defineProps({
 })
 
 const img = useImage()
-const { height, width } = useDisplay()
+
+const { xs, height, width } = useDisplay()
 </script>
 
 <style scoped>
-.top-homepage-container {
-  height: 100vh;
-}
 .absolute-position {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -50,10 +48,6 @@ const { height, width } = useDisplay()
     font-size: 3rem;
     top: 30%;
     left: 5%;
-  }
-
-  .top-homepage-container {
-    height: 50vh;
   }
 }
 

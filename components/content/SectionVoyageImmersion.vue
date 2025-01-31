@@ -21,7 +21,7 @@
           >
             <v-img
               rounded="lg"
-              :src="image"
+              :src="img(imageSrc, { format: 'webp', quality: 100, height })"
             />
           </v-col>
           <v-col class="text-textColor">
@@ -37,11 +37,17 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
+
 defineProps({
-  image: {
+  imageSrc: {
     type: String,
     required: true,
     default: '/images/IMG-20240320-WA0124.jpg',
   },
 })
+
+const { height, width } = useDisplay()
+const img = useImage()
 </script>

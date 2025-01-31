@@ -12,7 +12,7 @@
         :image="img(categorie?.image, { format: 'webp', quality: 70, width: 200, height: 200 })"
       >
         <span class="shadow text-white font-weight-bold position-absolute bottom-0 pa-2">
-          {{ categorie?.title || 'Loading ... ' }}
+          {{ categorie.title }}
         </span>
       </v-card>
     </NuxtLink>
@@ -28,7 +28,9 @@ const props = defineProps({
     required: true,
   },
 })
+
 const img = useImage()
+
 const { data: categorie } = await useAsyncData(`categorie-${props.categorieSlug}`, () => {
   return queryCollection('categories').where('slug', '=', props.categorieSlug).first()
 })

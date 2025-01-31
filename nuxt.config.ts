@@ -47,7 +47,6 @@ export default defineNuxtConfig({
     },
   },
   // image: {
-  //   provider: 'ipx',
   //   inject: true,
   //   format: ['webp'],
   //   quality: 70,

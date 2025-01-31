@@ -5,8 +5,7 @@
         justify="center"
         class="py-16"
       >
-        <!-- <slot /> -->
-        test test test
+        <slot />
       </v-row>
     </v-container>
   </div>
