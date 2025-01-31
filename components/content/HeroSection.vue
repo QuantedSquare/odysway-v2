@@ -1,34 +1,34 @@
 <template>
   <v-img
-    :src="img(image, { quality: 70, format: 'webp' })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height })"
+    :height="xs ? '50vh' : '100vh'"
     cover
-    class="top-homepage-container "
   >
     <span class="absolute-position shadow">
       <slot
         name="title"
-        mdc-unwrap="p"
       />
     </span>
   </v-img>
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
+
 defineProps({
-  image: {
+  imageSrc: {
     type: String,
-    required: true,
     default: '/images/Laponie-(1).webp',
   },
 })
 
 const img = useImage()
+
+const { xs, height } = useDisplay()
 </script>
 
 <style scoped>
-.top-homepage-container {
-  height: 100vh;
-}
 .absolute-position {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -48,10 +48,6 @@ const img = useImage()
     font-size: 3rem;
     top: 30%;
     left: 5%;
-  }
-
-  .top-homepage-container {
-    height: 50vh;
   }
 }
 

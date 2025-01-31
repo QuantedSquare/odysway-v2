@@ -8,28 +8,21 @@
     <v-card
       max-width="400"
       elevation="0"
-      style="overflow: initial; z-index: initial"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none position-relative"
       >
-        <!-- <NuxtImg
-          height="220"
-          :src="voyage.imgSrc"
-          :alt="`Image principale du voyage ${voyage.title}`"
-          fit="cover"
-        /> -->
         <v-img
           height="220"
-          :src="voyage.imgSrc"
+          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, width: 400 })"
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="lg"
           cover
         />
         <client-only>
-          <div class="d-flex justify-end ga-1 mt-4 mr-1 position-absolute top-0 right-0">
+          <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
             <v-tooltip
               location="bottom"
               text="Test tooltip"
@@ -107,7 +100,11 @@
 </template>
 
 <script setup>
+<<<<<<< HEAD
 import { mdiAccountGroup } from '@mdi/js'
+=======
+import { useImage } from '#imports'
+>>>>>>> f94597573f89f623142fead480ac96421f0f7ba5
 
 const props = defineProps({
   voyageSlug: {
@@ -115,6 +112,8 @@ const props = defineProps({
     required: true,
   },
 })
+
+const img = useImage()
 
 const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()

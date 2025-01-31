@@ -33,15 +33,15 @@
           >
             <v-avatar
               v-if="review.isOnHome"
-              :border="currentReview === index ? 'lg' : ''"
-              :size="currentReview === index ? '70': '60'"
+              :border="currentReview === index ? 'lg' : '' "
+              :size="currentReview === index ? '70' : '60'"
               :class="currentReview === index ? 'opacity-100' : 'opacity-40'"
-              :color="!review.photo ? 'primary': ''"
+              :color="!review.photo ? 'primary' : '' "
               @click="currentReview = index"
             >
               <v-img
                 v-if="review.photo"
-                :src="review.photo"
+                :src="img(review.photo, { format: 'webp', quality: 70, height: 100, width: 100 })"
                 :alt="`Photo de ${review.author}`"
                 cover
               />
@@ -75,7 +75,9 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
 
+const img = useImage()
 const currentReview = ref(0)
 const { smAndDown } = useDisplay()
 

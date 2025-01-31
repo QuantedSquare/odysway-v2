@@ -33,12 +33,13 @@
       variant="text"
       href="slug"
       target="_blank"
+      class="mt-4"
     >
       <v-row justify="center">
         <v-col cols="4">
           <v-img
             max-width="400px"
-            :src="review.voyagePhoto"
+            :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 400 })"
             rounded="xl"
             cover
             class="border-xl green-border"
@@ -60,9 +61,13 @@
 </template>
 
 <script setup>
+import { useImage } from '#imports'
+
 defineProps({
   review: Object,
 })
+
+const img = useImage()
 </script>
 
 <style scoped>

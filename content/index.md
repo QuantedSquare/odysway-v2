@@ -1,7 +1,7 @@
-::hero-section{image="/images/AdobeStock_124472096.jpeg"}
+::hero-section{imageSrc="/images/AdobeStock_124472096.jpeg"}
 
 #title
-Le partage <br> cœur du voyage
+Le partage <br> au cœur du voyage
 ::
 
 ::headlines-list
@@ -134,7 +134,7 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
   ::
 ::
 
-::section-voyage-immersion{image="/images/IMG-20240320-WA0124.jpg"}
+::section-voyage-immersion{imageSrc="/images/IMG-20240320-WA0124.jpg"}
 #title
 Le voyage en [immersion]{style="color: #2e8b57;"}, le partage au cœur du voyage 🌍
 #text
@@ -158,6 +158,6 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍
 ::
 
-::review-voyage
+::reviews-voyages-home
   
 ::
