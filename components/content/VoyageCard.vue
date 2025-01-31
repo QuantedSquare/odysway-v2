@@ -40,7 +40,7 @@
                   icon
                 >
                   <v-icon
-                    icon="mdi-account-group"
+                    :icon="mdiAccountGroup"
                     color="white"
                   />
                 </VBtnVoyage>
@@ -107,6 +107,8 @@
 </template>
 
 <script setup>
+import { mdiAccountGroup } from '@mdi/js'
+
 const props = defineProps({
   voyageSlug: {
     type: String,
