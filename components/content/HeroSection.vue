@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 1000 })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height, width })"
     cover
     class="top-homepage-container "
   >
@@ -13,6 +13,7 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 defineProps({
@@ -23,6 +24,7 @@ defineProps({
 })
 
 const img = useImage()
+const { height, width } = useDisplay()
 </script>
 
 <style scoped>
