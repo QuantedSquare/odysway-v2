@@ -158,6 +158,28 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍
 ::
 
-::reviews-voyages-home
+::reviews-voyages-test
+  ::horizontal-carousel{scroll-amount="400"}
+
+    :::review-card-test{review-slug="Florence"}
+    :::
+
+    :::review-card-test{review-slug="test1"}
+    :::
+
+    :::review-card-test{review-slug="test2"}
+    :::
+
+    :::review-card-test{review-slug="test3"}
+    :::
+
+    :::review-card-test{review-slug="test4"}
+    :::
   
+  ::
 ::
+
+<!-- ::reviews-voyages-home
+  
+:: -->
+
