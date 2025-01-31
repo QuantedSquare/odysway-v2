@@ -15,6 +15,12 @@
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none position-relative"
       >
+        <!-- <NuxtImg
+          height="220"
+          :src="voyage.imgSrc"
+          :alt="`Image principale du voyage ${voyage.title}`"
+          fit="cover"
+        /> -->
         <v-img
           height="220"
           :src="voyage.imgSrc"

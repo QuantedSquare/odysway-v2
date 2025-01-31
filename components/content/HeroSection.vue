@@ -1,12 +1,13 @@
 <template>
   <v-img
-    :src="image"
+    :src="img(image, { quality: 70, format: 'webp' })"
     cover
     class="top-homepage-container "
   >
     <span class="absolute-position shadow">
       <slot
         name="title"
+        mdc-unwrap="p"
       />
     </span>
   </v-img>
@@ -20,6 +21,8 @@ defineProps({
     default: '/images/Laponie-(1).webp',
   },
 })
+
+const img = useImage()
 </script>
 
 <style scoped>
@@ -40,11 +43,11 @@ defineProps({
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
   .absolute-position {
     font-size: 3rem;
     top: 30%;
-    left: 2%;
+    left: 5%;
   }
 
   .top-homepage-container {
