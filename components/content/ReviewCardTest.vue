@@ -32,7 +32,7 @@
               {{ review.author }}
             </v-card-title>
             <v-card-subtitle class="text-textColor text-uppercase text-caption no-white-space px-0">
-              Le voyage de {{ review.author }} :
+              Son voyage :
             </v-card-subtitle>
             <v-card-title class="text-textColor text-subtitle-1 font-weight-bold no-white-space px-0">
               <NuxtLink

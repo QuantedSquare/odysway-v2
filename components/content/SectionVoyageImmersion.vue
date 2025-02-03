@@ -5,7 +5,7 @@
   >
     <v-row
       align="center"
-      justify-md="center"
+      justify="center"
     >
       <v-col
         cols="12"
@@ -24,7 +24,9 @@
               :src="img(imageSrc, { format: 'webp', quality: 100, height })"
             />
           </v-col>
-          <v-col class="text-textColor">
+          <v-col
+            class="text-textColor"
+          >
             <h2 class="my-6 text-h5 text-h4 font-weight-black">
               <slot name="title" />
             </h2>
@@ -48,6 +50,6 @@ defineProps({
   },
 })
 
-const { height, width } = useDisplay()
+const { height } = useDisplay()
 const img = useImage()
 </script>
