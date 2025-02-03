@@ -1,61 +1,84 @@
 <template>
   <v-col
     v-if="review.isOnHome"
-    cols="auto"
-  >
-    <v-img
-      src="/images/guillemet-gauche.svg"
-      height="27"
-      width="27"
-    />
-  </v-col>
-  <v-col
-    cols="10"
-    xl="8"
-  >
-    <p class="text-center mb-4">
-      {{ review.text }}
-    </p>
-  </v-col>
-  <v-col cols="auto">
-    <v-img
-      src="/images/guillemet-droite.svg"
-      height="27"
-      width="27"
-    />
-  </v-col>
-  <v-col
     cols="12"
-    sm="8"
-    xl="6"
   >
-    <v-card
-      variant="text"
-      href="slug"
-      target="_blank"
-      class="mt-4"
-    >
-      <v-row justify="center">
-        <v-col cols="4">
-          <v-img
-            max-width="400px"
-            :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 400 })"
-            rounded="xl"
-            cover
-            class="border-xl green-border"
-          />
-        </v-col>
-        <v-col cols="8">
-          <v-card-subtitle class="text-textColor text-uppercase text-caption no-white-space px-0">
-            Lire le récit de voyage de {{ review.author }}:
-          </v-card-subtitle>
-          <v-card-title class="text-textColor text-subtitle-1 font-weight-bold no-white-space px-0">
-            <h4>
-              {{ review.blogTitle }}
-            </h4>
-          </v-card-title>
-        </v-col>
-      </v-row>
+    <v-card justify="center">
+      <v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            md="5"
+            xl="4"
+            class="d-flex flex-column justify-center align-center"
+          >
+            <v-avatar
+              size="72"
+              class=" mt-6"
+              border="lg"
+              color="primary"
+            >
+              <v-img
+                v-if="review.photo"
+                :src="img(review.photo, { format: 'webp', quality: 70, height: 100, width: 100 })"
+                :alt="`Photo de ${review.author}`"
+                cover
+              />
+              <span
+                v-else
+              >{{ review.author[0] }}</span>
+            </v-avatar>
+            <v-card-title>
+              {{ review.author }}
+            </v-card-title>
+            <v-card-subtitle class="text-textColor text-uppercase text-caption no-white-space px-0">
+              Le voyage de {{ review.author }} :
+            </v-card-subtitle>
+            <v-card-title class="text-textColor text-subtitle-1 font-weight-bold no-white-space px-0">
+              <NuxtLink
+                :to="`/voyages/${review.voyageSlug}`"
+                class="text-primary text-center"
+              >
+                <h4>
+                  {{ review.voyageTitle }}
+                </h4>
+              </NuxtLink>
+            </v-card-title>
+          </v-col>
+          <v-col
+            cols="12"
+            md="7"
+            xl="8"
+            class="d-flex align-center"
+          >
+            <v-row>
+              <v-col
+                cols="auto"
+              >
+                <v-img
+                  src="/images/guillemet-gauche.svg"
+                  width="25"
+                  height="14"
+                  contain
+                />
+              </v-col>
+              <v-col class="px-0">
+                <v-card-text class="text-body-1 text-center px-0">
+                  {{ review.text }}
+                </v-card-text>
+              </v-col>
+              <v-col cols="auto">
+                <v-img
+                  src="/images/guillemet-droite.svg"
+                  width="25"
+                  height="13"
+                  contain
+                />
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-card>
   </v-col>
 </template>
@@ -75,14 +98,9 @@ const img = useImage()
 const { data: review } = await useAsyncData(`review-${props.reviewSlug}`, () => {
   return queryCollection('reviews').where('slug', '=', props.reviewSlug).first()
 })
-
-console.log('review', review.value)
 </script>
 
 <style scoped>
-.green-border{
-  border: 4px solid #2E8B57 !important;
-}
 .no-white-space {
   white-space: normal;
 }

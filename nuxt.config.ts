@@ -33,6 +33,10 @@ export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
   },
+  // ot sure this improve a lot.
+  features: {
+    inlineStyles: false,
+  },
   compatibilityDate: '2024-11-01',
   vite: {
     vue: {

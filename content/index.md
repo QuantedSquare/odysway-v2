@@ -159,7 +159,7 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 ::
 
 ::reviews-voyages-test
-  ::horizontal-carousel{scroll-amount="400"}
+  ::horizontal-carousel{scroll-amount="375"}
 
     :::review-card-test{review-slug="Florence"}
     :::
@@ -178,8 +178,4 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
   
   ::
 ::
-
-<!-- ::reviews-voyages-home
-  
-:: -->
 

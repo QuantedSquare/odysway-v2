@@ -1,12 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col
-        cols="12"
-        sm="10"
-      >
-        <slot />
-      </v-col>
+      <slot />
       <v-col
         cols="12"
         class="d-flex justify-center"

@@ -4,8 +4,8 @@
   "authorAge": "40",
   "photo": "/images/Florence Guilemaille.jpg",
   "voyagePhoto": "/images/AdobeStock_218029671 (1).webp",
-  "text": "Test 2 !",
-  "blogSlug": "recits-voyage-florence-sejour-immersion-berger-pyrenees",
-  "blogTitle": "Test 2 : Vis ma vie de berger dans les Pyrénées",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper sapien vitae accumsan dignissim. Vivamus.",
+  "voyageSlug": "sejour-immersion-berger-pyrenees",
+  "voyageTitle": "Test 4 : Vis ma vie de berger dans les Pyrénées",
   "isOnHome": true
 }

@@ -33,7 +33,7 @@
                   icon
                 >
                   <v-icon
-                    icon="mdi-account-group"
+                    :icon="mdiAccountGroup"
                     color="white"
                   />
                 </VBtnVoyage>
@@ -100,6 +100,7 @@
 </template>
 
 <script setup>
+import { mdiAccountGroup } from '@mdi/js'
 import { useImage } from '#imports'
 
 const props = defineProps({

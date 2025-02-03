@@ -30,7 +30,6 @@ const { xs, height } = useDisplay()
 
 <style scoped>
 .absolute-position {
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   position: absolute;
   bottom: 10%;

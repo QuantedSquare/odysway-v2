@@ -1,14 +1,18 @@
-// import this after install `@mdi/font` package
-import '@mdi/font/css/materialdesignicons.css'
-
-// import 'vuetify/styles'
 import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
 import { VBtn, VIcon } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
+    icons: {
+      defaultSet: 'mdi',
+      aliases,
+      sets: {
+        mdi,
+      },
+    },
     theme: {
       defaultTheme: 'odysway',
       themes: {

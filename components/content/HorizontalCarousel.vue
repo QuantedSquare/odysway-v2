@@ -9,7 +9,7 @@
       @click="x -= Number(scrollAmount)"
     >
       <VIconChevron
-        icon="mdi-chevron-left"
+        :icon="mdiChevronLeft"
       />
     </VBtnVoyage>
     <v-row
@@ -25,13 +25,14 @@
       @click="x += Number(scrollAmount)"
     >
       <VIconChevron
-        icon="mdi-chevron-right"
+        :icon="mdiChevronRight"
       />
     </VBtnVoyage>
   </v-container>
 </template>
 
 <script setup>
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll } from '@vueuse/core'
 
 defineProps({
