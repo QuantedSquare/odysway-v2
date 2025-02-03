@@ -56,7 +56,7 @@
                 cols="auto"
               >
                 <v-img
-                  src="/images/guillemet-gauche.svg"
+                  :src="img('/images/guillemet-gauche.svg', { format: 'webp', quality: 70 })"
                   width="25"
                   height="14"
                   contain
@@ -69,7 +69,7 @@
               </v-col>
               <v-col cols="auto">
                 <v-img
-                  src="/images/guillemet-droite.svg"
+                  :src="img('/images/guillemet-droite.svg', { format: 'webp', quality: 70 })"
                   width="25"
                   height="13"
                   contain
