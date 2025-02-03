@@ -4,8 +4,8 @@
 ::categorie-card
 ::
 
-::voyage-card
+::voyage-col-card
 ::
 
-::review-card-test
+::review-col-card
 ::

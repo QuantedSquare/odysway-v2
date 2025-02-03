@@ -24,6 +24,7 @@ export default defineNuxtPlugin((app) => {
             cream: '#F4F2EB', // banner bg
             textColor: '#3e3e3e',
             sectionBg: '#edeff8',
+            pinkBorder: '#ffc0cb',
           },
         },
       },

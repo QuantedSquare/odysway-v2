@@ -1,6 +1,5 @@
 <template>
   <v-col
-    v-if="review.isOnHome"
     cols="auto"
   >
     <v-img
@@ -31,7 +30,7 @@
   >
     <v-card
       variant="text"
-      href="slug"
+      :href="`/voyages/${review.voyageSlug}`"
       target="_blank"
       class="mt-4"
     >
@@ -51,7 +50,7 @@
           </v-card-subtitle>
           <v-card-title class="text-textColor text-subtitle-1 font-weight-bold no-white-space px-0">
             <h4>
-              {{ review.blogTitle }}
+              {{ review.voyageTitle }}
             </h4>
           </v-card-title>
         </v-col>

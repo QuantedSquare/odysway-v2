@@ -30,111 +30,108 @@ Le partage <br> au cœur du voyage
   :::
 ::
 
-::section-title
+::title-container
 Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
-::categ-carousel-home
+::horizontal-carousel{scroll-amount="400"}
 
-  ::horizontal-carousel{scroll-amount="400"}
+  :::categ-col-card{categorie-slug="chemins-vers-soi"}
+  :::
 
-    :::categorie-card{categorie-slug="chemins-vers-soi"}
-    :::
+  :::categ-col-card{categorie-slug="echappees-sauvages"}
+  :::
 
-    :::categorie-card{categorie-slug="echappees-sauvages"}
-    :::
+  :::categ-col-card{categorie-slug="immersions-locales"}
+  :::
 
-    :::categorie-card{categorie-slug="immersions-locales"}
-    :::
+  :::categ-col-card{categorie-slug="regard-faune"}
+  :::
 
-    :::categorie-card{categorie-slug="regard-faune"}
-    :::
-
-    :::categorie-card{categorie-slug="sentiers-aventures"}
-    :::
+  :::categ-col-card{categorie-slug="sentiers-aventures"}
+  :::
 ::
 
-::section-title
+::title-container
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
-::voyages-card-list
+::horizontal-carousel{scroll-amount="400"}
 
-  ::horizontal-carousel{scroll-amount="400"}
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
 
-     :::voyage-card{voyage-slug="japon-fleurs"}
-     :::
+  :::voyage-col-card{voyage-slug="chine"}
+  :::
 
-     :::voyage-card{voyage-slug="chine"}
-     :::
+  :::voyage-col-card{voyage-slug="japon"}
+  :::
 
-     :::voyage-card{voyage-slug="japon"}
-     :::
-
-  ::
+  :::voyage-col-card{voyage-slug="japon"}
+  :::
 ::
 
-::section-title
+::title-container
 Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"} 
 ::
 
-::voyages-card-list
+::horizontal-carousel{scroll-amount="400"}
 
-  ::horizontal-carousel{scroll-amount="400"}
+  :::voyage-col-card{voyage-slug="chine"}
+  :::
 
-     :::voyage-card{voyage-slug="chine"}
-     :::
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
 
-     :::voyage-card{voyage-slug="japon-fleurs"}
-     :::
+  :::voyage-col-card{voyage-slug="japon"}
+  :::
 
-     :::voyage-card{voyage-slug="japon"}
-     :::
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
 
-  ::
 ::
 
-::section-title
+::title-container
 Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
-::voyages-card-list
+::horizontal-carousel{scroll-amount="400"}
 
-  ::horizontal-carousel{scroll-amount="400"}
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
 
-     :::voyage-card{voyage-slug="japon-fleurs"}
-     :::
+  :::voyage-col-card{voyage-slug="chine"}
+  :::
 
-     :::voyage-card{voyage-slug="chine"}
-     :::
+  :::voyage-col-card{voyage-slug="japon"}
+  :::
 
-     :::voyage-card{voyage-slug="japon"}
-     :::
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
 
-  ::
 ::
 
-::section-title
+::title-container
 Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 ::
 
-::voyages-card-list
+::horizontal-carousel{scroll-amount="400"}
 
-  ::horizontal-carousel{scroll-amount="400"}
+  :::voyage-col-card{voyage-slug="chine"}
+  :::
 
-     :::voyage-card{voyage-slug="chine"}
-     :::
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
 
-     :::voyage-card{voyage-slug="japon-fleurs"}
-     :::
+  :::voyage-col-card{voyage-slug="japon"}
+  :::
 
-     :::voyage-card{voyage-slug="japon"}
-     :::
+  :::voyage-col-card{voyage-slug="chine"}
+  :::
 
-  ::
 ::
 
-::section-voyage-immersion{imageSrc="/images/IMG-20240320-WA0124.jpg"}
+::voyage-immersion-container{imageSrc="/images/IMG-20240320-WA0124.jpg"}
 #title
 Le voyage en [immersion]{style="color: #2e8b57;"}, le partage au cœur du voyage 🌍
 #text
@@ -154,28 +151,11 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 
 ::
 
-::section-title
+::title-container
 [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍
 ::
 
-::reviews-voyages-test
-  ::horizontal-carousel{scroll-amount="375"}
+::reviews-voyages-container
 
-    :::review-card-test{review-slug="Florence"}
-    :::
-
-    :::review-card-test{review-slug="test1"}
-    :::
-
-    :::review-card-test{review-slug="test2"}
-    :::
-
-    :::review-card-test{review-slug="test3"}
-    :::
-
-    :::review-card-test{review-slug="test4"}
-    :::
-  
-  ::
 ::
 

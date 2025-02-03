@@ -2,7 +2,6 @@
   <v-container>
     <v-row justify="center">
       <v-col
-        v-if="reviewsList"
         cols="12"
         sm="10"
       >
@@ -12,7 +11,7 @@
           no-gutters
           justify="center"
         >
-          <ReviewCard
+          <ReviewColCard
             v-if="review.isOnHome && currentReview === index "
             :review="review"
           />
@@ -32,25 +31,28 @@
             class="d-flex flex-column align-center justify-center"
           >
             <v-avatar
-              v-if="review.isOnHome"
+              v-show="review.isOnHome"
               :border="currentReview === index ? 'lg' : '' "
               :size="currentReview === index ? '70' : '60'"
-              :class="currentReview === index ? 'opacity-100' : 'opacity-40'"
-              :color="!review.photo ? 'primary' : '' "
+              :class="currentReview === index ? 'opacity-100' : 'opacity-50'"
+              :color="currentReview === index ? 'primary' : '' "
               @click="currentReview = index"
             >
               <v-img
-                v-if="review.photo"
+                v-show="review.photo"
                 :src="img(review.photo, { format: 'webp', quality: 70, height: 100, width: 100 })"
                 :alt="`Photo de ${review.author}`"
                 cover
               />
               <span
-                v-else
+                v-show="!review.photo"
               >{{ review.author[0] }}</span>
             </v-avatar>
-            <div :class="smAndDown ? 'd-none' : 'd-flex flex-column align-center'">
-              <span>{{ review.author }}</span>
+            <div
+              :class="currentReview === index ? 'd-none d-md-flex flex-column align-center' : 'd-none'"
+              class="text-textColor"
+            >
+              <span class="text-h6 font-weight-bold ">{{ review.author }}</span>
               <span>{{ review.authorAge }} ans </span>
             </div>
           </v-col>
@@ -79,18 +81,14 @@ import { useImage } from '#imports'
 
 const img = useImage()
 const currentReview = ref(0)
-const { smAndDown } = useDisplay()
+const { smAndUp } = useDisplay()
 
 const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').all()
 })
 
 const reviewsList = computed(() => {
-  if (smAndDown.value) {
-    return reviews.value.slice(0, 3)
-  }
-  else {
-    return reviews.value
-  }
+  const list = [...(reviews.value || [])]
+  return smAndUp.value ? list : list.slice(0, 3)
 })
 </script>
