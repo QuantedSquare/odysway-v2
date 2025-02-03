@@ -159,3 +159,6 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 
 ::
 
+::partenaires-container
+
+::
