@@ -12,15 +12,17 @@
         </NuxtLink>
       </v-app-bar-title>
       <v-spacer />
-      <v-btn icon>
-        <v-icon>{{ mdiMagnify }}</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>{{ mdiAccountCircle }}</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>{{ mdiDotsVertical }}</v-icon>
-      </v-btn>
+      <template #append>
+        <v-btn icon>
+          <v-icon>{{ mdiMagnify }}</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>{{ mdiAccountCircle }}</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>{{ mdiDotsVertical }}</v-icon>
+        </v-btn>
+      </template>
     </v-app-bar>
     <v-main>
       <slot />

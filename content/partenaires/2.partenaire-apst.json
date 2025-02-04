@@ -1,4 +1,5 @@
-  {
-    "imgSrc" : "/images/APST.webp",
-    "description" : "test"
-  }
+{
+  "imgSrc" : "/images/APST.webp",
+  "description" : "test",
+  "isOnHome" : true
+}

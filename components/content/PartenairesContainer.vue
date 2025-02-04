@@ -26,13 +26,6 @@
 </template>
 
 <script setup>
-defineProps({
-  partenaireLogo: {
-    type: String,
-    required: true,
-  },
-})
-
 const img = useImage()
 
 const { data: partenaires } = await useAsyncData('partenaires', () => {

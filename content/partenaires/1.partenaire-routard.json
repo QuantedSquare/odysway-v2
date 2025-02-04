@@ -1,4 +1,5 @@
 {
   "imgSrc" : "/images/routard.png",
-  "description" : "test"
+  "description" : "test",
+  "isOnHome" : false
 }
