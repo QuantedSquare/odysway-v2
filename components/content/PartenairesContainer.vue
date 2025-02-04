@@ -8,7 +8,7 @@
       justify="center"
     >
       <v-col
-        v-for="(logo, index) in partenaires"
+        v-for="logo, index in partenaires"
         :key="index"
         cols="6"
         md="2"

@@ -42,7 +42,8 @@ export default defineNuxtPlugin((app) => {
       },
       VBtnSecondary: {
         variant: 'text',
-        class: 'bg-secondary',
+        class: 'bg-secondary text-button',
+        rounded: 'xl',
       },
       VBtnVoyage: {
         size: 'x-small',
