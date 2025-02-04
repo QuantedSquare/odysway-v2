@@ -16,6 +16,9 @@
         <v-icon>{{ mdiMagnify }}</v-icon>
       </v-btn>
       <v-btn icon>
+        <v-icon>{{ mdiAccountCircle }}</v-icon>
+      </v-btn>
+      <v-btn icon>
         <v-icon>{{ mdiDotsVertical }}</v-icon>
       </v-btn>
     </v-app-bar>
@@ -29,5 +32,5 @@
 </template>
 
 <script setup>
-import { mdiMagnify, mdiDotsVertical } from '@mdi/js'
+import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
 </script>
