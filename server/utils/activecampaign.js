@@ -160,7 +160,6 @@ const upsertContactIntoSupabase = async (contactId) => {
     const contactToUpsert = {
       id: contactId,
       contact: contactId,
-      // eslint-disable-next-line camelcase
       created_at: acContact.contact.cdate,
       firstname: acContact.contact.firstName || null,
       lastname: acContact.contact.lastName || null,
@@ -169,7 +168,6 @@ const upsertContactIntoSupabase = async (contactId) => {
         ? dayjs(acContact.contact.fieldValues.find(i => i.field === '1').value, 'YYYY-MM-DD').toISOString()
         : null,
       city: findCustomFieldValue(acContact.contact.fieldValues, '4'),
-      // eslint-disable-next-line camelcase
       zip_code: +findCustomFieldValue(acContact.contact.fieldValues, '5') || null,
     }
 
@@ -191,8 +189,7 @@ const upsertContactIntoSupabase = async (contactId) => {
 }
 
 // =================== DEAL ===================
-const getDealById = id =>
-  apiRequest(`/deals/${id}`)
+const getDealById = async id => await apiRequest(`/deals/${id}`)
 
 const getDealCustomFields = async (dealId) => {
   const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData`)
@@ -200,6 +197,10 @@ const getDealCustomFields = async (dealId) => {
 }
 
 const createDeal = async (data) => {
+  // #TODO Checker si sendinblue encore nécessaire
+  // sendinBlue.updateContact(data.email, Object.assign({}, data.dealData.deal, this.handleCustomFields(dealData.deal.fields)))
+  // sendinBlue.updateContactListId(data.email, 12) // Prospect
+
   data.deal.fields = reverseCustomFieldsMap(data.deal.fields, customFieldsMapDeal)
   const response = await apiRequest('/deals', 'post', data)
   if (response.deal.id) {
@@ -209,17 +210,15 @@ const createDeal = async (data) => {
 }
 
 const updateDeal = async (dealId, data) => {
+  // #TODO Checker si sendinblue encore nécessaire
+  //  sendinBlue.updateContact(data.email, this.handleCustomFields(data.deal.fields))
   data.deal.fields = reverseCustomFieldsMap(data.deal.fields, customFieldsMapDeal)
-  const response = await apiRequest(`/deals/${dealId}`, 'put', data)
+  const response = await apiRequest(`/deals/${dealId}`, 'put', data.deal)
   return response.deal.id
 }
 
-const getAllDeal = id => apiRequest(`/contacts/${id}/deals`)
+const getAllDeal = async id => await apiRequest(`/contacts/${id}/deals`)
 
-// #TODO Checker si sendinblue encore nécessaire
-//   if (data.deal.fields) {
-//     sendinBlue.updateContact(data.email, this.handleCustomFields(data.deal.fields))
-//   }
 const addNote = async (dealId, data) => await apiRequest(`/deals/${dealId}/notes`, 'post', data)
 
 const retrieveOwner = async (dealId) => {
@@ -228,7 +227,7 @@ const retrieveOwner = async (dealId) => {
     return `${res.user.firstName} ${res.user.lastName}`
   }
   catch (err) {
-    console.error(err)
+    console.error('error retrieve owner', err)
   }
 }
 
@@ -266,7 +265,6 @@ const optionNotification = async (session) => {
   try {
     const deal = await getDealById(session.dealId)
     const client = await getClientById(deal.deal.contact)
-    console.log('send option slack notif client', client)
 
     axios({
       url: process.env.SLACK_URL_POSE_OPTION,
@@ -294,7 +292,6 @@ export default {
   // --- Utils ---
   handleCustomFields: deal => handleCustomFields(deal, customFieldsMapDeal), // A Checker
   handleContactCustomFields: contact => handleCustomFields(contact.fieldValues, customFieldsMapContact), // A Checker
-  // handleReverseCustomFields: (fields) => reverseCustomFieldsMap(fields, customFieldsMapDeal),
   // --- Clients ---
   getClientById, // OK
   getClientByEmail, // OK

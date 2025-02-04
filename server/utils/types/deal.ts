@@ -74,14 +74,14 @@ export const FieldSchema = z.array(
     gotEarlybird: z.string().optional(),
     promoLastMinute: z.number().optional(),
     gotLastMinute: z.string().optional(),
-  }),
+  }).partial(),
 )
 
 // Define DealSchema
 export const DealSchema = z.object({
   contact: z.string(),
   currency: z.string().length(3),
-  fields: FieldSchema,
+  fields: FieldSchema.optional(),
   group: z.string(),
   owner: z.string(),
   stage: z.string(),
@@ -91,10 +91,12 @@ export const DealSchema = z.object({
 
 // Define DataToPushSchema
 export const DataToPushSchema = z.object({
-  deal: DealSchema.required(),
+  deal: DealSchema,
   firstname: z.string().optional(),
   lastname: z.string().optional(),
-  email: z.string().email().optional(),
+  email: z.string().email(),
 })
+
+export const UpdateDealSchema = DataToPushSchema.partial()
 
 export type TypeDeal = z.infer<typeof DealSchema>

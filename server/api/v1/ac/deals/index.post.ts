@@ -17,7 +17,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
   }
 
   try {
-    const response = await activecampaign.createDeal(parsedBody)
+    const response = await activecampaign.createDeal(parsedBody.data)
     return response
   }
   catch (err) {

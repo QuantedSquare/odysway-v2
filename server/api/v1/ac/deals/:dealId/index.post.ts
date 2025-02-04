@@ -8,7 +8,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
 
-  const parsedBody = await readValidatedBody(event, body => DataToPushSchema.safeParse(body))
+  const parsedBody = await readValidatedBody(event, body => UpdateDealSchema.safeParse(body))
   if (!parsedBody.success) {
     throw createError({
       statusCode: 400,
