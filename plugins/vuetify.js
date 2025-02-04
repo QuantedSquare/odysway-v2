@@ -25,6 +25,7 @@ export default defineNuxtPlugin((app) => {
             textColor: '#3e3e3e',
             sectionBg: '#edeff8', // grey-home-bg
             pinkBorder: '#ffc0cb',
+            inputBg: '#ebeff9',
           },
         },
       },
@@ -34,6 +35,7 @@ export default defineNuxtPlugin((app) => {
       VBtnSecondary: VBtn,
       VBtnVoyage: VBtn,
       VIconChevron: VIcon,
+      VBtnSocial: VBtn,
     },
     defaults: {
       VBtnPrimary: {
@@ -53,6 +55,10 @@ export default defineNuxtPlugin((app) => {
       VIconChevron: {
         size: 'x-large',
         color: 'white',
+      },
+      VBtnSocial: {
+        size: 'x-small',
+        icon: true,
       },
     },
   })

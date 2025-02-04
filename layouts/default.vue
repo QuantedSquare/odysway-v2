@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <HeaderAppBar
+    <HeaderOdysway
       @show-drawer="drawer = !drawer"
     />
     <v-navigation-drawer
@@ -25,14 +25,13 @@
     <v-main>
       <slot />
     </v-main>
-    <v-footer>
-      Footer
-    </v-footer>
+    <FooterOdysway />
   </v-app>
 </template>
 
 <script setup>
-import HeaderAppBar from '~/components/HeaderAppBar.vue'
+import HeaderOdysway from '~/components/HeaderOdysway.vue'
+import FooterOdysway from '~/components/FooterOdysway.vue'
 
 const drawer = ref(false)
 

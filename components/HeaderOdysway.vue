@@ -34,11 +34,12 @@
       no-gutters
       align="center"
       justify="end"
-      class="text-uppercase text-primary text-subtitle-2 hidden-md-and-down flex-nowrap "
+      class="text-uppercase text-primary text-subtitle-2 hidden-md-and-down flex-nowrap"
     >
       <v-col>
         <v-text-field
-          variant="outlined"
+          variant="solo"
+          flat
           hide-details
           density="compact"
           rounded="xl"
