@@ -242,7 +242,7 @@ const sendSlackNotification = (id, data) => {
     if (process.env.NODE_ENV !== 'development') {
       const emoji = travelType === 'Voyage de Groupe' ? ':rocket: ' : ':female-technologist:'
       axios({
-        url: 'https://hooks.slack.com/services/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',
+        url: process.env.SLACK_URL_DEVIS,
         method: 'post',
         data:
         {
@@ -269,7 +269,7 @@ const optionNotification = async (session) => {
     console.log('send option slack notif client', client)
 
     axios({
-      url: 'https://hooks.slack.com/services/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',
+      url: process.env.SLACK_URL_POSE_OPTION,
       method: 'post',
       data:
       {
