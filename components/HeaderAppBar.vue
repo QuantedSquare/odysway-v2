@@ -23,7 +23,10 @@
       <v-btn icon>
         <v-icon>{{ mdiAccountCircle }}</v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn
+        icon
+        @click.stop="$emit('show-drawer')"
+      >
         <v-icon>{{ mdiDotsVertical }}</v-icon>
       </v-btn>
     </template>
@@ -92,6 +95,7 @@ import { useDisplay } from 'vuetify'
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
 
 const { mdAndDown } = useDisplay()
+const emit = defineEmits(['show-drawer'])
 
 const items = ref([
   { title: 'destinations', link: '/destinations' },
