@@ -32,12 +32,20 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
+    '/api/**': { cors: true },
   },
   // ot sure this improve a lot.
   features: {
     inlineStyles: false,
   },
   compatibilityDate: '2024-11-01',
+  nitro: {
+    imports: {
+      dirs: [
+        'server/utils/**',
+      ],
+    },
+  },
   vite: {
     vue: {
       template: {
