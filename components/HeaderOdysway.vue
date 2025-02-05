@@ -1,84 +1,106 @@
 <template>
-  <v-app-bar>
-    <v-app-bar-title>
-      <NuxtLink to="/">
-        <v-img
-          width="150px"
-          max-height="48px"
-          :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 70, width: 150 })"
-          contain
-        />
-      </NuxtLink>
-    </v-app-bar-title>
+  <v-app-bar
+    elevation="0"
+    class="px-4"
+  >
+    <v-row>
+      <v-col cols="auto">
+        <v-app-bar-title class="ml-3">
+          <NuxtLink
+            to="/"
+          >
+            <v-img
+              width="150px"
+              max-height="48px"
+              :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 70, width: 150 })"
+              contain
+            />
+          </NuxtLink>
+        </v-app-bar-title>
+      </v-col>
+    </v-row>
+
     <v-spacer />
+
     <template
-      v-if="mdAndDown"
       #append
     >
-      <v-btn icon>
+      <v-btn
+        icon
+        class="d-inline d-lg-none"
+      >
         <v-icon color="grey">
           {{ mdiMagnify }}
         </v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn
+        icon
+        class="mx-md-4"
+      >
         <v-icon>{{ mdiAccountCircle }}</v-icon>
       </v-btn>
       <v-btn
+        class="d-inline d-lg-none"
         icon
         @click.stop="$emit('show-drawer')"
       >
         <v-icon>{{ mdiDotsVertical }}</v-icon>
       </v-btn>
     </template>
-    <VTextFieldHome
-      type="text"
-      placeholder="Rechercher"
-      class="expanding-search"
-      :class="searchOpen ? 'expanded': 'closed'"
+    <v-row
+      justify="end"
+      class="d-none d-lg-flex"
     >
-      <template #prepend-inner>
-        <v-icon
-          color="grey"
-          @click="searchOpen = !searchOpen"
+      <v-col
+        class="d-flex align-center justify-end"
+      >
+        <VTextFieldHome
+          type="text"
+          placeholder="Rechercher"
+          class="expanding-search"
+          :class="searchOpen ? 'expanded': 'closed'"
         >
-          {{ mdiMagnify }}
-        </v-icon>
-      </template>
-    </VTextFieldHome>
-    <VBtnPrimary
-      v-for="item, index in items"
-      :key="`link header ${index}`"
-      :to="item.link"
-      class="font-weight-bold mx-2"
-    >
-      {{ item.title }}
-    </VBtnPrimary>
-    <VBtnSecondary
-      density="compact"
-      size="x-large"
-      to="/calendly"
-      class="px-12"
-    >
-      <div class="text-caption text-uppercase d-flex flex-column align-center">
-        <b>+33 1 84 80 79 75</b>
-        prendre un rdv
-      </div>
-    </VBtnSecondary>
-    <v-btn
-      icon
-      color="black"
-    >
-      <v-icon>{{ mdiAccountCircle }}</v-icon>
-    </v-btn>
+          <template #prepend-inner>
+            <v-btn
+              icon
+              size="xs"
+            >
+              <v-icon
+                color="grey"
+                @click="searchOpen = !searchOpen"
+              >
+                {{ mdiMagnify }}
+              </v-icon>
+            </v-btn>
+          </template>
+        </VTextFieldHome>
+        <VBtnPrimary
+          v-for="item, index in items"
+          :key="`link header ${index}`"
+          :to="item.link"
+          class="text-button text-uppercase font-weight-bold mx-4"
+        >
+          {{ item.title }}
+        </VBtnPrimary>
+        <VBtnSecondary
+          density="compact"
+          size="x-large"
+          href="/calendly"
+          class="px-12"
+        >
+          <div class="text-caption text-uppercase d-flex flex-column align-center">
+            <b>+33 1 84 80 79 75</b>
+            prendre rdv
+          </div>
+        </VBtnSecondary>
+      </v-col>
+    </v-row>
   </v-app-bar>
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
 import { useImage } from '#imports'
-
-const { mdAndDown } = useDisplay()
 
 const emit = defineEmits(['show-drawer'])
 
@@ -95,19 +117,20 @@ const searchOpen = ref(false)
 
 <style scoped>
 .expanding-search {
-    border: 2px solid #2e8b57;
-    border-radius: 50px;
-  }
-.v-input.expanding-search {
-  transition: max-width 0.5s;
-  max-width: 60px;
+  border-radius: 25px;
 }
 
-.v-input.expanding-search.closed {
+.expanding-search.closed {
   max-width: 60px;
+  border: 1px solid #9e9e9e;
 }
 
-.v-input.expanding-search.expanded {
+.expanding-search.expanded {
   max-width: 300px;
+  border: 2px solid #2e8b57;
+  transition: 0.5s;
+}
+.v-text-field--rounded>.v-input__control>.v-input__slot {
+    padding: 0 24px !important;
 }
 </style>
