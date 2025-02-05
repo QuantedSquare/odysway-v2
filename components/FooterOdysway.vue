@@ -117,6 +117,51 @@
         </v-row>
       </v-container>
     </section>
+    <v-divider
+      role="presentation"
+      width="100%"
+    />
+    <section
+      id="policies"
+      class="section-width"
+    >
+      <v-container fluid>
+        <v-row>
+          <v-col
+            cols="12"
+            md="5"
+            class="d-flex justify-center"
+          >
+            <span class="text-center">© Copyright 2025 - Tous droits réservés à Odysway</span>
+          </v-col>
+          <v-col
+            cols="12"
+            md="7"
+            class="d-inline"
+          >
+            <v-btn
+              variant="text"
+            >
+              <v-img
+                :src="img('/icons/gb.svg', { format: 'webp', quality: 70 })"
+                height="20px"
+                width="20px"
+                contain
+              />
+            </v-btn>
+            <v-btn
+              v-for="policy in policies"
+              :key="policy.name"
+              :to="policy.link"
+              variant="text"
+              class="text-overline"
+            >
+              {{ policy.name }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
   </v-footer>
 </template>
 
@@ -183,6 +228,13 @@ const listDestinations = ref([
   { title: 'France',
     link: '/destinations/france',
   },
+])
+
+const policies = ref([
+  { name: 'FAQ', link: '/faq' },
+  { name: 'Mentions légales', link: '/mentions-legales' },
+  { name: 'CGV', link: '/conditions-generales-de-vente' },
+  { name: 'Données personnelles', link: '/politique-de-confidentialite' },
 ])
 </script>
 
