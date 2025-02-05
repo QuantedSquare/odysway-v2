@@ -2,6 +2,7 @@
   <div>
     <v-row>
       <v-col
+        v-if="status === 'success'"
         cols="12"
       >
         <FunnelStepsStepperHeader
@@ -16,8 +17,8 @@
             >
               <FunnelCardHeader
                 v-if="currentStep !== 0 && currentStep !== 6"
-                :titre="voyage.titre"
-                :image="voyage.image_principale"
+                :titre="voyage.title"
+                :image="voyage.imgSrc"
               />
               <v-row class="ma-0 pa-0">
                 <v-col
@@ -33,15 +34,22 @@
                       />
                     </v-stepper-window-item>
                     <v-stepper-window-item>
-                      <FunnelStepsDetails v-if="skipperMode === 'normal'" />
+                      <FunnelStepsDetails
+                        v-if="skipperMode === 'normal'"
+                        :ref="(component) => registerStepComponent(component, 1)"
+                        :current-step="currentStep"
+                      />
                       <FunnelStepsCalendly
                         v-else
-                        :titre="voyage.titre"
+                        :titre="voyage.title"
                         :page="page"
                       />
                     </v-stepper-window-item>
                     <v-stepper-window-item>
-                      coucou244
+                      <FunnelStepsTravelersInfos
+                        :ref="(component) => registerStepComponent(component, 2)"
+                        :current-step="currentStep"
+                      />
                     </v-stepper-window-item>
                   </v-stepper-window>
                 </v-col>
@@ -50,19 +58,36 @@
                 <v-stepper-actions
                   next-text="Suivant"
                   prev-text="Précédent"
-                  @click:next="currentStep++"
-                  @click:prev="currentStep--"
+                  :loading="loading"
+                  @click:next="nextStep()"
+                  @click:prev="previousStep()"
                 />
               </v-card-actions>
             </v-card>
           </div>
         </FunnelStepsStepperHeader>
       </v-col>
+      <v-skeleton-loader
+        v-else
+        type="card"
+      />
     </v-row>
   </div>
 </template>
 
 <script setup>
+const route = useRoute()
+const slug = route.params.slug
+const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
+  return queryCollection('voyages').where('slug', '=', slug).first()
+})
+
+const stepComponents = reactive(new Map())
+const loading = ref(false)
+const currentStep = ref(0)
+const skipperMode = ref('normal')
+
+// Hardcoded page data to be replaced by API call
 const page = {
   fields: {
     devis_rdv_text: '<p>Merci de votre confiance ! L\'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l\'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.</p>',
@@ -81,12 +106,25 @@ const page = {
     },
   },
 }
-const currentStep = ref(0)
-const skipperMode = ref('normal')
-
-const voyage = {
-  titre: 'À bord du train de la Route de la Soie : expériences immersives et nuits en yourte en Ouzbékistan',
-  image_principale: 'https://cdn.buttercms.com/HJtGmNQWuOz2HRQx1uA7',
+const registerStepComponent = (component, step) => {
+  stepComponents.set(step, component)
+}
+const nextStep = async () => {
+  const currentComponent = stepComponents.get(currentStep.value)
+  if (currentComponent && currentComponent.submitStepData) {
+    loading.value = true
+    const isValid = await currentComponent.submitStepData()
+    if (isValid) {
+      currentStep.value++
+      loading.value = false
+    }
+  }
+  else {
+    currentStep.value++
+  }
+}
+const previousStep = () => {
+  currentStep.value--
 }
 </script>
 

@@ -54,6 +54,12 @@ export default defineNuxtPlugin((app) => {
         size: 'x-large',
         color: 'white',
       },
+      VTextField: {
+        variant: 'outlined',
+      },
+      VSelect: {
+        variant: 'outlined',
+      },
     },
   })
 

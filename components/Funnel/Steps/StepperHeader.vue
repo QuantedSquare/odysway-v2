@@ -36,7 +36,6 @@ const props = defineProps({
     default: 'quick',
   },
 })
-console.log('props', props)
 const stepDefinitions = computed(() => {
   const baseSteps = [
     {
@@ -68,22 +67,9 @@ const stepDefinitions = computed(() => {
       ? 'Option / Réservation'
       : props.page.fields.fil_dariane_devis.step_final_rdv,
   })
-  console.log('baseSteps', baseSteps)
 
   return baseSteps
 })
-
-const stepMap = computed(() => ({
-  1: 1,
-  2: 2,
-  2.5: 2,
-  3: 3,
-  4: 3,
-  5: 4,
-  6: 4,
-  10: 4,
-  11: 11,
-}))
 </script>
 
 <style scoped>

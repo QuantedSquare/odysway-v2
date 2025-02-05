@@ -8,13 +8,15 @@ export default defineEventHandler(async (event) => {
   }
   try {
     const reponse = await activecampaign.getDealById(dealId)
-    if (!reponse.deal) {
+    const customFields = await activecampaign.getDealCustomFields(dealId)
+    if (!reponse.deal || !customFields) {
       throw createError({
         statusCode: 404,
         message: 'Deal not found',
       })
     }
     console.log('deal', reponse.deal)
+    console.log('customFields', customFields)
     return reponse.deal
   }
   catch (err) {
