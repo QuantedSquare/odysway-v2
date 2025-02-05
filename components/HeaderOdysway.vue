@@ -36,20 +36,22 @@
       justify="end"
       class="text-uppercase text-primary text-subtitle-2 hidden-md-and-down flex-nowrap"
     >
-      <v-col>
-        <v-text-field
-          variant="solo"
-          flat
-          hide-details
-          density="compact"
-          rounded="xl"
+      <v-col class="d-flex justify-end">
+        <VTextFieldHome
+          type="text"
+          placeholder="Rechercher"
+          class="expanding-search"
+          :class="searchOpen ? 'expanded': 'closed'"
         >
-          <template #append-inner>
-            <v-icon color="grey">
+          <template #prepend-inner>
+            <v-icon
+              color="grey"
+              @click="searchOpen = !searchOpen"
+            >
               {{ mdiMagnify }}
             </v-icon>
           </template>
-        </v-text-field>
+        </VTextFieldHome>
       </v-col>
       <v-col
         v-for="item, index in items"
@@ -107,4 +109,22 @@ const items = ref([
   { title: 'prochains départs', link: '/prochains-departs' },
   { title: 'à propos', link: '/concept' },
 ])
+
+const searchOpen = ref(false)
+console.log(searchOpen.value)
 </script>
+
+<style scoped>
+.v-input.expanding-search {
+  transition: max-width 0.5s;
+  max-width: 55px;
+}
+
+.v-input.expanding-search.closed {
+  max-width: 55px;
+}
+
+.v-input.expanding-search.expanded {
+  max-width: 300px;
+}
+</style>
