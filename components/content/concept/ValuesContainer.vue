@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <v-container>
+      <v-row
+        justify="center"
+      >
+        <v-col
+          cols="12"
+          class="text-dark"
+        >
+          <slot
+            name="text"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>

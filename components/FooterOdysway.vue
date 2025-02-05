@@ -21,7 +21,9 @@
             </h5>
           </v-col>
           <v-col
-            cols="4"
+            cols="12"
+            sm="6"
+            md="4"
           >
             <VTextFieldHome
               bg-color="white"
