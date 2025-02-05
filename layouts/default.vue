@@ -4,6 +4,7 @@
       @show-drawer="drawer = !drawer"
     />
     <v-navigation-drawer
+      v-if="$vuetify.display.mdAndDown"
       v-model="drawer"
       location="right"
     >
