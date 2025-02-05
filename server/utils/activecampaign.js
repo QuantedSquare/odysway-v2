@@ -134,6 +134,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
+    console.log(`API Response from ${endpoint}:`, response.data)
     return response.data
   }
   catch (error) {

@@ -8,7 +8,7 @@
       justify="center"
     >
       <v-col
-        v-for="(logo, index) in partenaires"
+        v-for="logo, index in partenaires"
         :key="index"
         cols="6"
         md="2"
@@ -26,13 +26,6 @@
 </template>
 
 <script setup>
-defineProps({
-  partenaireLogo: {
-    type: String,
-    required: true,
-  },
-})
-
 const img = useImage()
 
 const { data: partenaires } = await useAsyncData('partenaires', () => {

@@ -50,6 +50,7 @@ export default defineContentConfig({
       schema: z.object({
         imgSrc: z.string(),
         description: z.string(),
+        isOnHome: z.boolean(),
       }),
     }),
   },

@@ -1,16 +1,17 @@
 export default defineEventHandler(async (event) => {
   // Validate contact ID
   const id = parseInt(event.context.params.contactId)
+  console.log('id:', id)
   if (!Number.isInteger(id)) {
     throw createError({
       statusCode: 400,
       message: 'Contact ID must be an integer',
     })
   }
-
   try {
     // Fetch all deals for the contact
     const response = await activecampaign.getAllDeal(id)
+    console.log('Deals:', response)
     // Validate deals exist
     if (!response || response.deals.length === 0) {
       throw createError({

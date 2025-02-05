@@ -22,6 +22,7 @@
     "dayjs": "^1.11.13",
     "eslint": "^9.18.0",
     "nuxt": "^3.15.1",
+    "nuxt-calendly": "^0.1.21",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.24.1"

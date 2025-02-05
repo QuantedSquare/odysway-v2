@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/content',
     '@nuxt/image',
+    'nuxt-calendly',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error This come from Vuetify doc.
@@ -15,6 +16,7 @@ export default defineNuxtConfig({
     },
   ],
   components: [
+    '~/components',
     { path: '~/components/content', pathPrefix: false },
   ],
   devtools: { enabled: true },

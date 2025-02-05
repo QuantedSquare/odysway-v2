@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <v-row>
+      <v-col
+        cols="12"
+      >
+        Details
+      </v-col>
+    </v-row>
+  </div>
+</template>

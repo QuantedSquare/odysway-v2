@@ -1,4 +1,5 @@
 {
   "imgSrc" : "/images/pngwing.com.png",
-  "description" : "test"
+  "description" : "test",
+  "isOnHome" : true
 }

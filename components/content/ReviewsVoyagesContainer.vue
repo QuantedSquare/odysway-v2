@@ -31,7 +31,7 @@
             class="d-flex flex-column align-center justify-center"
           >
             <v-avatar
-              v-show="review.isOnHome"
+              v-if="review.isOnHome"
               :border="currentReview === index ? 'lg' : '' "
               :size="currentReview === index ? '70' : '60'"
               :class="currentReview === index ? 'opacity-100' : 'opacity-50'"
@@ -39,13 +39,13 @@
               @click="currentReview = index"
             >
               <v-img
-                v-show="review.photo"
+                v-if="review.photo"
                 :src="img(review.photo, { format: 'webp', quality: 70, height: 100, width: 100 })"
                 :alt="`Photo de ${review.author}`"
                 cover
               />
               <span
-                v-show="!review.photo"
+                v-if="!review.photo"
               >{{ review.author[0] }}</span>
             </v-avatar>
             <div
