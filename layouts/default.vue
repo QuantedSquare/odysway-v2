@@ -30,9 +30,6 @@
 </template>
 
 <script setup>
-import HeaderOdysway from '~/components/HeaderOdysway.vue'
-import FooterOdysway from '~/components/FooterOdysway.vue'
-
 const drawer = ref(false)
 
 const drawerItems = ref([{

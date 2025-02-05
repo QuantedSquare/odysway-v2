@@ -2,7 +2,7 @@ import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
-import { VBtn, VIcon } from 'vuetify/components'
+import { VBtn, VIcon, VTextField } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -36,6 +36,7 @@ export default defineNuxtPlugin((app) => {
       VBtnVoyage: VBtn,
       VIconChevron: VIcon,
       VBtnSocial: VBtn,
+      VTextFieldHome: VTextField,
     },
     defaults: {
       VBtnPrimary: {
@@ -59,6 +60,13 @@ export default defineNuxtPlugin((app) => {
       VBtnSocial: {
         size: 'x-small',
         icon: true,
+      },
+      VTextFieldHome: {
+        variant: 'solo',
+        flat: true,
+        hideDetails: true,
+        density: 'compact',
+        rounded: 'xl',
       },
     },
   })

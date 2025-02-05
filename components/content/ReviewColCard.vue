@@ -37,7 +37,7 @@
       <v-row justify="center">
         <v-col cols="4">
           <v-img
-            max-width="400px"
+            min-height="150px"
             :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 400 })"
             rounded="xl"
             cover
