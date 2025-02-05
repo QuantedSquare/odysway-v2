@@ -5,7 +5,7 @@
         <v-img
           width="150px"
           max-height="48px"
-          src="/logos/logo_couleur.png"
+          :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 70 })"
           contain
         />
       </NuxtLink>
@@ -94,9 +94,13 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
+import { useImage } from '#imports'
 
 const { mdAndDown } = useDisplay()
+
 const emit = defineEmits(['show-drawer'])
+
+const img = useImage()
 
 const items = ref([
   { title: 'destinations', link: '/destinations' },
