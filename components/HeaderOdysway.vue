@@ -5,7 +5,7 @@
         <v-img
           width="150px"
           max-height="48px"
-          :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 70 })"
+          :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 70, width: 150 })"
           contain
         />
       </NuxtLink>
