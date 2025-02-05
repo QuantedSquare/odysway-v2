@@ -42,11 +42,10 @@ export default defineNuxtPlugin((app) => {
     defaults: {
       VBtnPrimary: {
         color: 'primary',
-        rounded: 'xl',
+        variant: 'text',
       },
       VBtnSecondary: {
-        variant: 'text',
-        class: 'bg-secondary text-button',
+        color: 'secondary',
         rounded: 'xl',
       },
       VBtnVoyage: {

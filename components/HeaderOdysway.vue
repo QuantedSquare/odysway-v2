@@ -30,66 +30,46 @@
         <v-icon>{{ mdiDotsVertical }}</v-icon>
       </v-btn>
     </template>
-    <v-row
-      no-gutters
-      align="center"
-      justify="end"
-      class="text-uppercase text-primary text-subtitle-2 hidden-md-and-down flex-nowrap"
+    <VTextFieldHome
+      type="text"
+      placeholder="Rechercher"
+      class="expanding-search"
+      :class="searchOpen ? 'expanded': 'closed'"
     >
-      <v-col class="d-flex justify-end">
-        <VTextFieldHome
-          type="text"
-          placeholder="Rechercher"
-          class="expanding-search"
-          :class="searchOpen ? 'expanded': 'closed'"
+      <template #prepend-inner>
+        <v-icon
+          color="grey"
+          @click="searchOpen = !searchOpen"
         >
-          <template #prepend-inner>
-            <v-icon
-              color="grey"
-              @click="searchOpen = !searchOpen"
-            >
-              {{ mdiMagnify }}
-            </v-icon>
-          </template>
-        </VTextFieldHome>
-      </v-col>
-      <v-col
-        v-for="item, index in items"
-        :key="`link header ${index}`"
-        cols="auto"
-        class="d-flex justify-center"
-      >
-        <v-btn
-          :to="item.link"
-          class="font-weight-bold"
-        >
-          {{ item.title }}
-        </v-btn>
-      </v-col>
-      <v-col class="d-flex justify-center">
-        <VBtnSecondary
-          block
-          height="100%"
-          to="/calendly"
-        >
-          <div class="text-caption text-uppercase d-flex flex-column align-center">
-            <b>+33 1 84 80 79 75</b>
-            prendre un rdv
-          </div>
-        </VBtnSecondary>
-      </v-col>
-      <v-col
-        cols="auto"
-        class="d-flex justify-end"
-      >
-        <v-btn
-          icon
-          color="black"
-        >
-          <v-icon>{{ mdiAccountCircle }}</v-icon>
-        </v-btn>
-      </v-col>
-    </v-row>
+          {{ mdiMagnify }}
+        </v-icon>
+      </template>
+    </VTextFieldHome>
+    <VBtnPrimary
+      v-for="item, index in items"
+      :key="`link header ${index}`"
+      :to="item.link"
+      class="font-weight-bold mx-2"
+    >
+      {{ item.title }}
+    </VBtnPrimary>
+    <VBtnSecondary
+      density="compact"
+      size="x-large"
+      to="/calendly"
+      class="px-12"
+    >
+      <div class="text-caption text-uppercase d-flex flex-column align-center">
+        <b>+33 1 84 80 79 75</b>
+        prendre un rdv
+      </div>
+    </VBtnSecondary>
+    <v-btn
+      icon
+      color="black"
+    >
+      <v-icon>{{ mdiAccountCircle }}</v-icon>
+    </v-btn>
   </v-app-bar>
 </template>
 
