@@ -1,8 +1,13 @@
 <template>
   <v-container>
+    <!-- <v-skeleton-loader
+      v-if="status !== 'success'"
+      type="card"
+    /> -->
+    <!-- v-else -->
     <v-form
       ref="form"
-      v-model="validInfos"
+      v-model="model"
     >
       <v-row>
         <v-col cols="8">
@@ -154,12 +159,13 @@
 <script setup>
 import { z } from 'zod'
 
-const validInfos = ref(false)
+const model = defineModel()
 const isAdvance = ref(true)
-const { deal, fetchDeal } = useDeal()
-await fetchDeal(7126)
+const { deal, dealId, fetchDeal, createDeal, updateDeal } = useDeal()
 
-console.log('deal', deal.value)
+// await fetchDeal(7126)
+// const { status, data: deal } = await useFetch('/api/v1/ac/deals/' + 11269)
+
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
 }
@@ -167,11 +173,15 @@ const selectOptions = function (start, end) {
 const nbAdults = ref(1)
 const childrenUnder12 = ref(0)
 const teenUnder18 = ref(0)
-const firstName = ref('')
-const lastName = ref('')
-const email = ref('')
+const firstName = ref('Yuzu')
+const lastName = ref('& Alex')
+const email = ref('ottmann.alex@gmail.com')
 const phoneCode = ref('+33')
-const phoneNumber = ref('')
+const phoneNumber = ref('631870876')
+
+// if (deal.value) {
+//   lastName.value = deal.value.title
+// }
 
 const saveToLocalStorage = () => {
   const dataToStore = {
@@ -196,11 +206,10 @@ const saveToLocalStorage = () => {
 // }
 // loadFromLocalStorage()
 
-// const schemaToRule = useZodSchema()
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
 const emailSchema = z.string().email({ message: 'Adresse email invalide' })
-const phoneSchema = z.string().min(10, { message: 'Numéro de téléphone invalide' })
+const phoneSchema = z.string().min(9, { message: 'Numéro de téléphone invalide' })
 
 const rules = {
   name: schemaToRule(nameSchema),
@@ -290,19 +299,66 @@ const phonesSelect = [
 
 const submitStepData = async () => {
   // Validate form
-  // if (!validateForm()) return false
-  return await 'coucou'
-  // try {
-  //   // Submit form data
-  //   await $fetch('/api/submit-details', {
-  //     method: 'POST',
-  //     body: formData.value
-  //   })
-  //   return true
-  // } catch (error) {
-  //   // Handle errors
-  //   return false
-  // }
+  if (!model.value) return false
+  try {
+    const flattenedDeal = {
+      value: 85000,
+      title: 'Découverte du Népal',
+      currency: 'eur',
+      group: '1',
+      owner: '1',
+      stage: '2',
+      departureDate: '2025-05-15',
+      returnDate: '2025-05-30',
+      travelType: 'Voyage de Groupe',
+      nbTravelers: 4,
+      nbChildren: 1,
+      nbAdults: 3,
+      country: 'Nepal',
+      iso: 'NP',
+      zoneChapka: 2,
+      pricePerTraveler: 2125,
+      image: 'https://example.com/nepal.jpg',
+      currentStep: 'Création du Deal',
+      alreadyPaid: 0,
+      restTravelersToPay: nbAdults.value + childrenUnder12.value + teenUnder18.value,
+      utm: '',
+      slug: 'decouverte-nepal',
+      depositPrice: 25500,
+      basePricePerTraveler: 85000,
+      totalTravelPrice: 85000,
+      promoChildren: 8000,
+      maxChildrenAge: 12,
+      promoTeen: 8000,
+      maxTeenAge: 18,
+      nbTeen: 0,
+      nbUnderAge: 1,
+      source: 'Devis',
+      forcedIndivRoom: 'Non',
+      indivRoomPrice: 15000,
+      promoEarlybird: 5000,
+      gotEarlybird: 'Non',
+      promoLastMinute: 0,
+      gotLastMinute: 'Non',
+      email: email.value,
+      phone: `${phoneCode.value}${phoneNumber.value}`,
+      firstname: firstName.value,
+      lastname: lastName.value,
+    }
+    // Submit form data
+    if (dealId.value) {
+      await updateDeal(flattenedDeal)
+    }
+    else {
+      await createDeal(flattenedDeal)
+    }
+    return true
+  }
+  catch (error) {
+    // Handle errors
+    console.log('error', error)
+    return false
+  }
 }
 
 defineExpose({

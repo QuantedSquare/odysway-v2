@@ -114,15 +114,38 @@ const reverseCustomFieldsMap = (fields, fieldMap) => {
     return acc
   }, {})
 
-  return fields
-    .map((field) => {
-      const key = Object.keys(field)[0] // Extract the key (e.g., "departureDate")
+  return Object.entries(fields)
+    .map(([key, value]) => {
       if (reversedMap[key]) {
-        return { customFieldId: reversedMap[key], fieldValue: field[key] }
+        return { customFieldId: reversedMap[key], fieldValue: value }
       }
       return null // Ignore fields that are not in the mapping
     })
     .filter(Boolean) // Remove null values
+}
+
+const transformDealForAPI = (flatDeal) => {
+  const {
+    contact, currency, group, owner, stage, title, value,
+    firstname, lastname, email, phone,
+    ...fields
+  } = flatDeal
+  return {
+    deal: {
+      contact,
+      currency,
+      fields: reverseCustomFieldsMap(fields, customFieldsMapDeal), // Wrap fields in an arrays
+      group,
+      owner,
+      stage,
+      title,
+      value,
+    },
+    firstname,
+    lastname,
+    email,
+    phone,
+  }
 }
 
 // API Request Method
@@ -138,7 +161,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
     return response.data
   }
   catch (error) {
-    console.error(`API Error in ${endpoint}:`, error)
+    console.error(`API Error in ${endpoint}:`, error.message)
     throw error
   }
 }
@@ -201,11 +224,29 @@ const createDeal = async (data) => {
   // #TODO Checker si sendinblue encore nécessaire
   // sendinBlue.updateContact(data.email, Object.assign({}, data.dealData.deal, this.handleCustomFields(dealData.deal.fields)))
   // sendinBlue.updateContactListId(data.email, 12) // Prospect
+  // First upsert contact
+  const formatedDeal = transformDealForAPI(data)
+  const client = {
+    contact: {
+      email: data.email,
+      firstName: data.firstname,
+      lastName: data.lastname,
+      phone: `${data.phone}`,
+    },
+  }
 
-  data.deal.fields = reverseCustomFieldsMap(data.deal.fields, customFieldsMapDeal)
-  const response = await apiRequest('/deals', 'post', data)
+  const contact = await upsertContact(client)
+
+  formatedDeal.deal.contact = contact.id
+
+  delete formatedDeal.firstname
+  delete formatedDeal.lastname
+  delete formatedDeal.email
+  delete formatedDeal.phone
+
+  const response = await apiRequest('/deals', 'post', formatedDeal)
   if (response.deal.id) {
-    await sendSlackNotification(response.deal.id, data)
+    await sendSlackNotification(response.deal.id, formatedDeal)
   }
   return response.deal.id
 }
@@ -213,8 +254,26 @@ const createDeal = async (data) => {
 const updateDeal = async (dealId, data) => {
   // #TODO Checker si sendinblue encore nécessaire
   //  sendinBlue.updateContact(data.email, this.handleCustomFields(data.deal.fields))
-  data.deal.fields = reverseCustomFieldsMap(data.deal.fields, customFieldsMapDeal)
-  const response = await apiRequest(`/deals/${dealId}`, 'put', data.deal)
+  const formatedDeal = transformDealForAPI(data)
+  const client = {
+    contact: {
+      email: data.email,
+      firstName: data.firstname,
+      lastName: data.lastname,
+      phone: `${data.phone}`,
+    },
+  }
+  // l'user peut s'être trompé d'infos, on update le contact
+  const contact = await upsertContact(client)
+
+  formatedDeal.deal.contact = contact.id
+
+  delete formatedDeal.firstname
+  delete formatedDeal.lastname
+  delete formatedDeal.email
+  delete formatedDeal.phone
+
+  const response = await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
   return response.deal.id
 }
 
@@ -293,6 +352,7 @@ export default {
   // --- Utils ---
   handleCustomFields: deal => handleCustomFields(deal, customFieldsMapDeal), // A Checker
   handleContactCustomFields: contact => handleCustomFields(contact.fieldValues, customFieldsMapContact), // A Checker
+  transformDealForAPI,
   // --- Clients ---
   getClientById, // OK
   getClientByEmail, // OK

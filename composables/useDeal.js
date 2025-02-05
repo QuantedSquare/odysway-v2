@@ -1,16 +1,20 @@
+const deal = ref(null)
+const dealId = ref(null)
 export function useDeal() {
-  const deal = ref(null)
-  const dealId = ref('11269')
-
   const fetchDeal = async () => {
     const res = await apiRequest(`/ac/deals/${dealId.value}`)
-    console.log('API Response from fetchDeal:', res)
     deal.value = res
   }
   const createDeal = async (deal) => {
     const res = await apiRequest('/ac/deals', 'post', deal)
-    console.log('API Response from createDeal:', res)
+    dealId.value = res
+  }
+  const updateDeal = async (deal) => {
+    console.log('Updating deal:', deal)
+
+    const res = await apiRequest('/ac/deals/' + dealId.value, 'post', deal)
+    dealId.value = res
   }
 
-  return { deal, fetchDeal }
+  return { deal, dealId, fetchDeal, createDeal, updateDeal }
 }

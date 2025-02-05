@@ -15,9 +15,10 @@ export default defineEventHandler(async (event) => {
         message: 'Deal not found',
       })
     }
-    console.log('deal', reponse.deal)
-    console.log('customFields', customFields)
-    return reponse.deal
+    return {
+      ...reponse.deal,
+      ...customFields,
+    }
   }
   catch (err) {
     console.log('Error getting one deal', err, dealId)

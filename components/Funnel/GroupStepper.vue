@@ -37,6 +37,7 @@
                       <FunnelStepsDetails
                         v-if="skipperMode === 'normal'"
                         :ref="(component) => registerStepComponent(component, 1)"
+                        v-model="validForm"
                         :current-step="currentStep"
                       />
                       <FunnelStepsCalendly
@@ -58,10 +59,22 @@
                 <v-stepper-actions
                   next-text="Suivant"
                   prev-text="Précédent"
-                  :loading="loading"
                   @click:next="nextStep()"
                   @click:prev="previousStep()"
-                />
+                >
+                  <template
+                    #next
+                  >
+                    <v-btn
+                      :disabled="!enablingNextButton"
+                      color="secondary"
+                      :loading="loading"
+                      @click="nextStep"
+                    >
+                      Suivant
+                    </v-btn>
+                  </template>
+                </v-stepper-actions>
               </v-card-actions>
             </v-card>
           </div>
@@ -81,11 +94,37 @@ const slug = route.params.slug
 const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
   return queryCollection('voyages').where('slug', '=', slug).first()
 })
-
+const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)
 const currentStep = ref(0)
 const skipperMode = ref('normal')
+
+const enablingNextButton = computed(() => {
+  return currentStep.value === 0 || validForm.value
+})
+
+const registerStepComponent = (component, step) => {
+  stepComponents.set(step, component)
+}
+const nextStep = async () => {
+  const currentComponent = stepComponents.get(currentStep.value)
+
+  if (currentComponent && currentComponent.submitStepData) {
+    loading.value = true
+    const isValid = await currentComponent.submitStepData()
+    if (isValid) {
+      currentStep.value++
+      loading.value = false
+    }
+  }
+  else {
+    currentStep.value++
+  }
+}
+const previousStep = () => {
+  currentStep.value--
+}
 
 // Hardcoded page data to be replaced by API call
 const page = {
@@ -105,26 +144,6 @@ const page = {
       option_4: 'Je ne sais pas encore',
     },
   },
-}
-const registerStepComponent = (component, step) => {
-  stepComponents.set(step, component)
-}
-const nextStep = async () => {
-  const currentComponent = stepComponents.get(currentStep.value)
-  if (currentComponent && currentComponent.submitStepData) {
-    loading.value = true
-    const isValid = await currentComponent.submitStepData()
-    if (isValid) {
-      currentStep.value++
-      loading.value = false
-    }
-  }
-  else {
-    currentStep.value++
-  }
-}
-const previousStep = () => {
-  currentStep.value--
 }
 </script>
 
