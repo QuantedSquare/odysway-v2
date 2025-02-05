@@ -2,7 +2,7 @@
   <v-list
     v-for="item, index in list"
     :key="`${item.title + index}`"
-    class="d-flex justify-center justify-md-start bg-footerBg"
+    class="d-flex justify-center justify-md-start bg-footerBg py-md-0"
   >
     <NuxtLink
       :to="item.link"

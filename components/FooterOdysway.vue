@@ -6,9 +6,10 @@
       id="newsletter"
       class="bg-primary section-width"
     >
-      <v-container fluid>
+      <v-container>
         <v-row
           justify="center"
+          justify-md="left"
           align-md="center"
         >
           <v-col
@@ -117,14 +118,12 @@
         </v-row>
       </v-container>
     </section>
-    <v-divider
-      width="100%"
-    />
     <section
       id="policies"
       class="section-width"
     >
-      <v-container fluid>
+      <v-container>
+        <v-divider />
         <v-row align="center">
           <v-col
             cols="12"
