@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    class="pa-0 d-flex flex-column"
+    class="pa-0 d-flex flex-column bg-footerBg"
   >
     <section
       id="newsletter"
@@ -43,8 +43,8 @@
       id="sitemap"
       class="section-width"
     >
-      <v-container fluid>
-        <v-row justify="space-between">
+      <v-container>
+        <v-row>
           <v-col
             cols="12"
             md="3"
@@ -104,7 +104,7 @@
               readonly
               bg-color="inputBg"
               label="+33 1 84 80 79 75"
-              type="phone"
+              type="tel"
             >
               <template #append-inner>
                 <v-icon color="black">
@@ -118,7 +118,6 @@
       </v-container>
     </section>
     <v-divider
-      role="presentation"
       width="100%"
     />
     <section
@@ -126,18 +125,18 @@
       class="section-width"
     >
       <v-container fluid>
-        <v-row>
+        <v-row align="center">
           <v-col
             cols="12"
             md="5"
             class="d-flex justify-center"
           >
-            <span class="text-center">© Copyright 2025 - Tous droits réservés à Odysway</span>
+            <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
           </v-col>
           <v-col
             cols="12"
             md="7"
-            class="d-inline"
+            class="text-center text-md-left"
           >
             <v-btn
               variant="text"

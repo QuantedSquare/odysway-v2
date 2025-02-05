@@ -26,6 +26,7 @@ export default defineNuxtPlugin((app) => {
             sectionBg: '#edeff8', // grey-home-bg
             pinkBorder: '#ffc0cb',
             inputBg: '#ebeff9',
+            footerBg: '#f5f5f5',
           },
         },
       },
