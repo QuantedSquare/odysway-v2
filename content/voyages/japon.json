@@ -3,7 +3,10 @@
   "country": "Japon",
   "imgSrc" : "/images/flowers.png",
   "title": "Voyage au japon",
-  "duration": "14 jours / 13 nuits",
+  "duration": "11 jours / 10 nuits",
+  "departureDate" : "20/03/2025",
+  "returnDate": "31/03/2025",
+  "iso": "2",
   "startingPrice": 2000,
   "rating": 5,
   "comments": 37
