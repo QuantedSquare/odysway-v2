@@ -5,7 +5,7 @@
       no-gutters
     >
       <v-col
-        class="text-textColor font-weight-black text-h5 text-md-h4 my-6"
+        class="text-dark font-weight-black text-h5 text-md-h4 my-6"
       >
         <slot />
       </v-col>

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-space-around my-4">
+  <div class="d-flex justify-space-around">
     <VBtnSocial
       color="#4267B2"
       href="https://www.facebook.com/odysway/"

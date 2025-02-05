@@ -71,16 +71,16 @@
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none"
       >
-        <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-textColor">
+        <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark">
           {{ voyage.title }}
         </v-card-title>
         <v-card-text class="text-body-2 py-1 px-0">
           <span class="text-grey-darken-2 "> A partir de </span>
-          <span class="font-weight-bold text-textColor">{{ voyage.startingPrice }}€</span>
+          <span class="font-weight-bold text-dark">{{ voyage.startingPrice }}€</span>
         </v-card-text>
         <div
           v-if="voyage.comments > 0"
-          class="d-flex align-center text-textColor"
+          class="d-flex align-center text-dark"
         >
           <client-only>
             <v-rating
@@ -118,38 +118,6 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
 </script>
 
 <style scoped>
-/* @media only screen and (min-width: 400px) {
-  .height-voyageCard
-  {
-    max-height: 120vw !important;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .height-voyageCard
-  {
-    height: 60vw !important;
-  }
-}
-@media only screen and (min-width: 960px) {
-  .height-voyageCard{
-    height: 40vw !important;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .height-voyageCard{
-    height: 35vw !important;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .height-voyageCard{
-    height: 30vw !important;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .height-voyageCard{
-    height: 30vw !important;
-  }
-} */
 .hover-underline:hover{
   text-decoration: underline;
 }

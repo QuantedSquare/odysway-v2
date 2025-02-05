@@ -91,7 +91,6 @@ const items = ref([
 ])
 
 const searchOpen = ref(false)
-console.log(searchOpen.value)
 </script>
 
 <style scoped>

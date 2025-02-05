@@ -2,7 +2,7 @@
   <v-col
     cols="12"
     md="4"
-    class="text-textColor"
+    class="text-dark"
   >
     <h2 class="my-6 pb-6 text-h5 font-weight-black">
       <slot

@@ -9,21 +9,19 @@
       <v-container>
         <v-row
           justify="center"
-          justify-md="left"
           align-md="center"
+          class="py-4"
         >
           <v-col
             cols="12"
             md="8"
           >
-            <h5 class="text-h5 text-center">
+            <h5 class="text-h5 text-center text-md-left">
               2 fois par mois, nos inspirations et idées pour voyager autrement 🌍
             </h5>
           </v-col>
           <v-col
-            cols="12"
-            sm="6"
-            md="4"
+            cols="4"
           >
             <VTextFieldHome
               bg-color="white"
@@ -45,7 +43,9 @@
       class="section-width"
     >
       <v-container>
-        <v-row>
+        <v-row
+          class="text-dark text-center text-md-left"
+        >
           <v-col
             cols="12"
             md="3"
@@ -58,34 +58,40 @@
               class="my-2"
               :src="img('/logos/logo_noir_original.png', { format: 'webp', quality: 70 })"
             />
-            <p class="text-center text-md-left mb-3">
+            <p class="mb-3">
               {{ pOdysway }}
             </p>
           </v-col>
+          <v-spacer />
           <v-col
             cols="12"
-            md="3"
+            md="auto"
+
             class="d-flex flex-column align-center align-md-start"
           >
-            <h3 class="text-uppercase text-h6 text-center text-md-left mb-3 mb-md-0">
+            <h3 class="text-uppercase text-h6 text-md-overline font-weight-bold mb-3 mb-md-0">
               lien utiles
             </h3>
             <LinksList :list="listUsefullLinks" />
           </v-col>
+          <v-spacer />
+
           <v-col
             cols="12"
-            md="3"
+            md="auto"
           >
-            <h3 class="text-uppercase text-h6 text-center text-md-left mb-3 mb-md-0">
+            <h3 class="text-uppercase text-h6 text-md-overline font-weight-bold mb-3 mb-md-0">
               destinations
             </h3>
             <LinksList :list="listDestinations" />
           </v-col>
+          <v-spacer />
+
           <v-col
             cols="12"
-            md="3"
+            md="4"
           >
-            <h3 class="text-uppercase text-h6 text-center text-md-left mb-3 mb-md-0">
+            <h3 class="text-uppercase text-h6 text-md-overline font-weight-bold mb-3 mb-md-0">
               nous joindre
             </h3>
             <VTextFieldHome
@@ -106,6 +112,7 @@
               bg-color="inputBg"
               label="+33 1 84 80 79 75"
               type="tel"
+              class="mb-3"
             >
               <template #append-inner>
                 <v-icon color="black">
@@ -113,7 +120,7 @@
                 </v-icon>
               </template>
             </VTextFieldHome>
-            <SocialContainerButtons />
+            <SocialsContainerButtons />
           </v-col>
         </v-row>
       </v-container>
@@ -135,7 +142,7 @@
           <v-col
             cols="12"
             md="7"
-            class="text-center text-md-left"
+            class="text-center text-md-right"
           >
             <v-btn
               variant="text"

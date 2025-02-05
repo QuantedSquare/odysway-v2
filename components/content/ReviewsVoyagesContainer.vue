@@ -48,7 +48,7 @@
             </v-avatar>
             <div
               :class="currentReview === index ? 'd-none d-md-flex flex-column align-center' : 'd-none'"
-              class="text-textColor"
+              class="text-dark"
             >
               <span class="text-h6 font-weight-bold ">{{ review.author }}</span>
               <span>{{ review.authorAge }} ans </span>
