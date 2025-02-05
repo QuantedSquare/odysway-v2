@@ -115,13 +115,17 @@ console.log(searchOpen.value)
 </script>
 
 <style scoped>
+.expanding-search {
+    border: 2px solid #2e8b57;
+    border-radius: 50px;
+  }
 .v-input.expanding-search {
   transition: max-width 0.5s;
-  max-width: 55px;
+  max-width: 60px;
 }
 
 .v-input.expanding-search.closed {
-  max-width: 55px;
+  max-width: 60px;
 }
 
 .v-input.expanding-search.expanded {
