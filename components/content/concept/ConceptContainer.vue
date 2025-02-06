@@ -14,7 +14,7 @@
         </v-col>
         <v-col class="d-flex align-center">
           <v-avatar class="mr-4">
-            <v-img :src="imageSrc" />
+            <v-img :src="img(imageSrc, { format: 'webp', quality: 70, width: 100 })" />
           </v-avatar>
           <slot name="founder" />
         </v-col>
@@ -24,10 +24,14 @@
 </template>
 
 <script setup>
+import { useImage } from '#imports'
+
 defineProps({
   imageSrc: {
     type: String,
     required: true,
   },
 })
+
+const img = useImage()
 </script>

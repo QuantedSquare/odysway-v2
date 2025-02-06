@@ -41,12 +41,12 @@ const drawerItems = ref([{
 {
   title: 'Prochains départs',
   value: 'Prochains départs',
-  link: '/prochains-departs',
+  // link: '/prochains-departs',
 },
 {
   title: 'Prendre RDV avec un conseiller',
   value: 'Prendre RDV avec un conseiller',
-  link: '/calendly',
+  // link: '/calendly',
 },
 {
   title: 'À propos',
@@ -56,12 +56,12 @@ const drawerItems = ref([{
 {
   title: 'Avis',
   value: 'Avis',
-  link: '/avis-voyageurs',
+  // link: '/avis-voyageurs',
 },
 {
   title: 'Carte cadeau',
   value: 'Carte cadeau',
-  link: '/offre-cadeau',
+  // link: '/offre-cadeau',
 },
 ])
 </script>

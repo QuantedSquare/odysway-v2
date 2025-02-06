@@ -14,7 +14,7 @@
         </v-col>
         <v-col>
           <v-img
-            :src="imageSrc"
+            :src="img(imageSrc, { format: 'webp', quality: 70, width: $vuetify.display.width })"
             rounded="lg"
             class="my-8"
             cover
@@ -27,10 +27,13 @@
 </template>
 
 <script setup>
+import { useImage } from '#imports'
+
 defineProps({
   imageSrc: {
     type: String,
     required: true,
   },
 })
+const img = useImage()
 </script>

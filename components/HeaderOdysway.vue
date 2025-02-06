@@ -107,9 +107,15 @@ const emit = defineEmits(['show-drawer'])
 const img = useImage()
 
 const items = ref([
-  { title: 'destinations', link: '/destinations' },
-  { title: 'prochains départs', link: '/prochains-departs' },
-  { title: 'à propos', link: '/concept' },
+  { title: 'destinations',
+    link: '/destinations',
+  },
+  { title: 'prochains départs',
+    // link: '/prochains-departs',
+  },
+  { title: 'à propos',
+    link: '/concept',
+  },
 ])
 
 const searchOpen = ref(false)

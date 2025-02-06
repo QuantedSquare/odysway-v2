@@ -9,7 +9,7 @@ Le concept d'Odysway
 
 ::
 
-::about-philosophy-container{imageSrc="/images/photo Romain.webp"}
+::concept-container{imageSrc="/images/photo Romain.webp"}
 #text
 "Le vrai voyage ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux." Comme l'a si bien exprimé Marcel Proust, voyager va au-delà du déplacement géographique. Chez Odysway, cette vision du voyage nous guide depuis nos débuts : voir le voyage comme un moyen de redéfinir notre perspective et nos croyances, en embrassant la diversité du monde et des autres.
 
@@ -48,7 +48,7 @@ Les valeurs d'Odysway
 
 ::
 
-::values-container
+::simple-text-container
 
 #text
 Chez Odysway, quatre valeurs guident notre vision du voyage. Elles sont au cœur de tout ce que nous faisons : elles influencent notre façon d’imaginer et de concevoir de nouveaux séjours, notre relation avec les voyageurs, nos échanges au sein de l’équipe, ainsi que nos partenariats avec les acteurs locaux.
@@ -103,7 +103,7 @@ Des séjours créés avec passion
 
 ::
 
-::values-container
+::simple-text-container
 
 #text
 Chez Odysway, nous créons nous-mêmes chacun de nos voyages, directement sur le terrain. Concrètement, cela signifie qu’un membre de notre équipe se rend sur place pour rencontrer les guides, choisir les bons partenaires et s’assurer que chaque expérience soit unique, authentique et bien organisée.

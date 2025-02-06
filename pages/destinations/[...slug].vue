@@ -1,5 +1,5 @@
 <template>
   <div>
-    hello
+    hello from destinations
   </div>
 </template>

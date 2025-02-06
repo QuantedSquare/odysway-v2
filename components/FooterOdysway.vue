@@ -181,14 +181,14 @@ const img = useImage()
 const pOdysway = ref ('Odysway est une agence de voyage certifiée Atout France et immatriculée à l\'APST. Vous avez envie de voyager autrement ? Que ce soit en France ou à l\'étranger, vivez un voyage en immersion unique avec une agence fiable et engagée.')
 
 const listUsefullLinks = ref([
-  { title: 'Nos oyages',
+  { title: 'Nos voyages',
     link: '/thematiques',
   },
   { title: 'Acheter une carte cadeau',
-    link: '/offre-cadeau',
+    // link: '/offre-cadeau',
   },
   { title: 'Blog',
-    link: '/blog',
+    // link: '/blog',
   },
   { title: 'Catégories',
     link: '/thematiques?category=Grands%20espaces',
@@ -197,19 +197,19 @@ const listUsefullLinks = ref([
     link: '/concept',
   },
   { title: 'Avis',
-    link: '/avis-voyageurs',
+    // link: '/avis-voyageurs',
   },
   { title: 'Nous recrutons',
-    link: '/nous-recrutons',
+    // link: '/nous-recrutons',
   },
   { title: 'Voyage sur-mesure',
-    link: '/sur-mesure',
+    // link: '/sur-mesure',
   },
   { title: 'Séminaires & Voyages pour entreprises',
-    link: '/entreprise',
+    // link: '/entreprise',
   },
   { title: 'Séjours pour les groupes (écoles, clubs, associations...)',
-    link: '/https://tally.so/r/n9QLo5',
+    // link: '/https://tally.so/r/n9QLo5',
   },
 ])
 
@@ -238,10 +238,18 @@ const listDestinations = ref([
 ])
 
 const policies = ref([
-  { name: 'FAQ', link: '/faq' },
-  { name: 'Mentions légales', link: '/mentions-legales' },
-  { name: 'CGV', link: '/conditions-generales-de-vente' },
-  { name: 'Données personnelles', link: '/politique-de-confidentialite' },
+  { name: 'FAQ',
+    // link: '/faq',
+  },
+  { name: 'Mentions légales',
+    // link: '/mentions-legales',
+  },
+  { name: 'CGV',
+    // link: '/conditions-generales-de-vente',
+  },
+  { name: 'Données personnelles',
+    // link: '/politique-de-confidentialite',
+  },
 ])
 </script>
 

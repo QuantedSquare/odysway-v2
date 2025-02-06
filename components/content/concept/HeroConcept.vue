@@ -1,7 +1,7 @@
 <template>
   <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70 })"
-    height="70vh"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height: imageHeight, width: $vuetify.display.width })"
+    :height="$vuetify.display.lgAndDown ? '70vh' : '80vh'"
     cover
   >
     <h1 class="absolute-position shadow">
@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 defineProps({
@@ -24,6 +25,11 @@ defineProps({
 })
 
 const img = useImage()
+const { height } = useDisplay()
+
+const imageHeight = computed(() => {
+  return Math.floor(height.value * 0.7)
+})
 </script>
 
 <style scoped>
@@ -31,7 +37,7 @@ const img = useImage()
   font-weight: 900;
   position: absolute;
   bottom: 10%;
-  left: 10%;
+  left: 12%;
   font-size: 3rem;
   color: white;
 }
@@ -40,7 +46,15 @@ const img = useImage()
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  .absolute-position {
+    font-size: 2rem;
+    top: 30%;
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .absolute-position {
     font-size: 2rem;
     top: 30%;
