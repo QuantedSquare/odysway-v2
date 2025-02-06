@@ -6,6 +6,7 @@
     alt-labels
     editable
     show-actions
+    color="primary"
   >
     <v-stepper-header class="elevation-0">
       <template
@@ -15,9 +16,13 @@
         <v-stepper-item
           :complete="model + 1 > step.number"
           :step="step.number"
+          color="primary"
         >
           {{ step.label }}
         </v-stepper-item>
+        <v-divider
+          v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
+        />
       </template>
     </v-stepper-header>
     <slot />
@@ -67,6 +72,13 @@ const stepDefinitions = computed(() => {
       ? 'Option / Réservation'
       : props.page.fields.fil_dariane_devis.step_final_rdv,
   })
+
+  if (props.skipperMode === 'normal') {
+    baseSteps.push({
+      number: 5,
+      label: 'Assurances',
+    })
+  }
 
   return baseSteps
 })

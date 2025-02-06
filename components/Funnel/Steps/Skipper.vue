@@ -18,7 +18,7 @@
             value="quick"
           />
           <v-radio
-            :label="isBooking ? 'Poser une option sur ce voyage' : page.fields.first_step.option_1"
+            :label="isBooking ? page.fields.first_step.option_2 : page.fields.first_step.option_1"
             value="normal"
           />
         </v-radio-group>

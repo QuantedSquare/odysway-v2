@@ -1,0 +1,32 @@
+{
+  "fields": {
+    "devis_rdv_text": "<p>Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.</p>",
+    "fil_dariane_devis": {
+      "step_1": "Votre voyage",
+      "step_2": "Détails",
+      "step_3": "Voyageurs",
+      "step_final_rdv": "Rendez-vous"
+    },
+    "first_step": {
+      "title": "Où en êtes vous dans la préparation de ce voyage ?",
+      "option_1": "Je souhaite poser une option / réserver ce voyage",
+      "option_2": "Poser une option sur ce voyage",
+      "option_3": "Je souhaite prendre un rendez-vous avec un conseiller voyage",
+      "option_4": "Je ne sais pas encore"
+    },
+    "preference_couple": "Je voyage en couple",
+    "room_indiv_title": "Souhaitez-vous une chambre individuelle ?",
+    "food_details_title": "Avez-vous des demandes particulières ou des besoins spécifiques ?",
+    "room_indiv_accroche": "Si vous partez seul, vous ne partagerez pas votre chambre avec d'autres voyageurs.",
+    "room_indiv_text": "Si vous partez seul et que vous ne sélectionnez pas cette option, vous pourrez partager votre chambre avec un autre voyageur du même sexe.",
+    "assurance_img": "https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW",
+    "preference_assurance": "preference_assurance",
+    "accroche_assurance_perou_nepal": "accroche_assurance_perou_nepal",
+    "details_assurance_medicale_perou_nepal": "details_assurance_medicale_perou_nepal",
+    "details_assurance_medicale": "details_assurance_medicale",
+    "preference_assurance_annulation": "preference_assurance_annulation",
+    "accroche_assurance_annulation": "<div>\n        <ul>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vous couvre avant, pendant et après votre voyage</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Annulation pour toutes causes justifiées (événement extérieur, soudain, justifié et indépendant de votre volonté)</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Frais médicaux et hospitalisation</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vol de bagages</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Téléconsultation gratuite</span></li>\n        </ul>\n      </div>",
+    "details_assurance_annulation": "details_assurance_annulation",
+    "insurances_unavailable": "insurances_unavailable"
+  }
+}

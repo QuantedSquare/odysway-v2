@@ -255,25 +255,28 @@ const updateDeal = async (dealId, data) => {
   // #TODO Checker si sendinblue encore nécessaire
   //  sendinBlue.updateContact(data.email, this.handleCustomFields(data.deal.fields))
   const formatedDeal = transformDealForAPI(data)
-  const client = {
-    contact: {
-      email: data.email,
-      firstName: data.firstname,
-      lastName: data.lastname,
-      phone: `${data.phone}`,
-    },
+  if (data.email) {
+    const client = {
+      contact: {
+        email: data.email,
+        firstName: data.firstname,
+        lastName: data.lastname,
+        phone: `${data.phone}`,
+      },
+    }
+    // l'user peut s'être trompé d'infos, on update le contact
+    const contact = await upsertContact(client)
+
+    formatedDeal.deal.contact = contact.id
+
+    delete formatedDeal.firstname
+    delete formatedDeal.lastname
+    delete formatedDeal.email
+    delete formatedDeal.phone
   }
-  // l'user peut s'être trompé d'infos, on update le contact
-  const contact = await upsertContact(client)
-
-  formatedDeal.deal.contact = contact.id
-
-  delete formatedDeal.firstname
-  delete formatedDeal.lastname
-  delete formatedDeal.email
-  delete formatedDeal.phone
-
+  console.log('formatedDeal', formatedDeal)
   const response = await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
+  console.log('response update deal', response)
   return response.deal.id
 }
 
@@ -298,12 +301,12 @@ const sendSlackNotification = (id, data) => {
     const dealData = data.deal
     const travelType = findCustomFieldValue(dealData.fields, 9)
     const nbTravelers = findCustomFieldValue(dealData.fields, 4)
-    if (process.env.NODE_ENV !== 'development') {
-      const emoji = travelType === 'Voyage de Groupe' ? ':rocket: ' : ':female-technologist:'
-      axios({
-        url: process.env.SLACK_URL_DEVIS,
-        method: 'post',
-        data:
+
+    const emoji = travelType === 'Voyage de Groupe' ? ':rocket: ' : ':female-technologist:'
+    axios({
+      url: process.env.SLACK_URL_DEVIS,
+      method: 'post',
+      data:
         {
           blocks: [
             {
@@ -315,8 +318,7 @@ const sendSlackNotification = (id, data) => {
             },
           ],
         },
-      })
-    }
+    })
   }
   return id
 }

@@ -8,13 +8,6 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
     })
   }
 
-  const parsedBody = await readValidatedBody(event, body => UpdateDealSchema.safeParse(body))
-  if (!parsedBody.success) {
-    throw createError({
-      statusCode: 400,
-      message: `Validation failed: ${parsedBody.error.message}`,
-    })
-  }
   const dealId = event.context.params?.dealId
   if (!dealId) {
     throw createError({
@@ -22,7 +15,23 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
       message: 'Deal ID is required',
     })
   }
+  if (!Number.isInteger(+dealId)) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Deal ID should be an integer',
+    })
+  }
+  const parsedBody = await readValidatedBody(event, body => UpdateDealSchema.safeParse(body))
+  console.log('===========Parsed body ============:', parsedBody)
+  if (!parsedBody.success) {
+    console.error('Validation failed:', parsedBody.error)
+    throw createError({
+      statusCode: 400,
+      message: `Validation failed: ${parsedBody.error.message}`,
+    })
+  }
   try {
+    console.log('===========Updating deal after parsing ============:', dealId, parsedBody.data)
     const response = await activecampaign.updateDeal(dealId, parsedBody.data)
     return response
   }

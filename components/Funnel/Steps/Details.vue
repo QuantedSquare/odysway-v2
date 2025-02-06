@@ -44,7 +44,7 @@
                 Nombre d'enfants (0-12 ans)
               </div>
               <v-select
-                v-model="childrenUnder12"
+                v-model="nbChildren"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
@@ -57,7 +57,7 @@
                 Nombre d'adolescents (12-18 ans)
               </div>
               <v-select
-                v-model="teenUnder18"
+                v-model="nbTeen"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
@@ -162,7 +162,8 @@ import { z } from 'zod'
 const model = defineModel()
 const isAdvance = ref(true)
 const { deal, dealId, fetchDeal, createDeal, updateDeal } = useDeal()
-
+const router = useRouter()
+const route = useRoute()
 // await fetchDeal(7126)
 // const { status, data: deal } = await useFetch('/api/v1/ac/deals/' + 11269)
 
@@ -171,14 +172,22 @@ const selectOptions = function (start, end) {
 }
 
 const nbAdults = ref(1)
-const childrenUnder12 = ref(0)
-const teenUnder18 = ref(0)
+const nbChildren = ref(0)
+const nbTeen = ref(0)
 const firstName = ref('Yuzu')
 const lastName = ref('& Alex')
 const email = ref('ottmann.alex@gmail.com')
 const phoneCode = ref('+33')
 const phoneNumber = ref('631870876')
 
+onMounted(async () => {
+  if (dealId.value) {
+    await fetchDeal(dealId.value)
+    nbTeen.value = +deal.value.nbTeen
+    nbAdults.value = +deal.value.nbAdults
+    nbChildren.value = +deal.value.nbChildren
+  }
+})
 // if (deal.value) {
 //   lastName.value = deal.value.title
 // }
@@ -193,18 +202,20 @@ const saveToLocalStorage = () => {
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
-// const loadFromLocalStorage = () => {
-//   const storedData = JSON.parse(localStorage.getItem('detailsData'))
-//   if (storedData) {
-//     console.log(storedData)
-//     firstName.value = storedData.firstname
-//     lastName.value = storedData.lastname
-//     email.value = storedData.email
-//     phone.value = storedData.phone
-//     phoneCode.value = storedData.phoneCode
-//   }
-// }
-// loadFromLocalStorage()
+const loadFromLocalStorage = () => {
+  const storedData = JSON.parse(localStorage.getItem('detailsData'))
+  if (storedData) {
+    console.log('storedData', storedData)
+    firstName.value = storedData.firstname
+    lastName.value = storedData.lastname
+    email.value = storedData.email
+    phoneNumber.value = storedData.phone
+    phoneCode.value = storedData.phoneCode
+  }
+}
+onMounted(() => {
+  loadFromLocalStorage()
+})
 
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
@@ -217,14 +228,97 @@ const rules = {
   phone: schemaToRule(phoneSchema),
 }
 
-const changeAttr = (dataAttribute) => {
-  const EVENTS = {
-    lastname: { eventLabel: 'Groupe Info - Indique prénom' },
-    firstname: { eventLabel: 'Groupe Info - Indique nom' },
-    email: { eventLabel: 'Groupe Info - Indique nom' },
-    phone: { eventLabel: 'Groupe Info - Indique numéro de téléphone' },
+const submitStepData = async () => {
+  // Validate form
+  console.log('start submit', dealId.value)
+  if (!model.value) return false
+  try {
+    const flattenedDeal = {
+      value: 85000,
+      title: 'Découverte du Népal',
+      currency: 'eur',
+      group: '1',
+      owner: '1',
+      stage: '2',
+      // CustomFields
+      departureDate: '2025-05-15',
+      returnDate: '2025-05-30',
+      travelType: 'Voyage de Groupe',
+      nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
+      nbChildren: nbChildren.value + nbTeen.value,
+      nbAdults: nbAdults.value,
+      nbTeen: nbTeen.value,
+      nbUnderAge: nbChildren.value,
+      country: 'Nepal',
+      iso: 'NP',
+      zoneChapka: 2,
+      pricePerTraveler: 2125,
+      image: 'https://example.com/nepal.jpg',
+      currentStep: 'Création du Deal',
+      alreadyPaid: 0,
+      restTravelersToPay: nbAdults.value + nbChildren.value + nbTeen.value,
+      utm: '',
+      slug: 'decouverte-nepal',
+      depositPrice: 25500,
+      basePricePerTraveler: 85000,
+      totalTravelPrice: 85000,
+      promoChildren: 8000,
+      maxChildrenAge: 12,
+      promoTeen: 8000,
+      maxTeenAge: 18,
+      source: 'Devis',
+      forcedIndivRoom: 'Non',
+      indivRoomPrice: 15000,
+      promoEarlybird: 5000,
+      gotEarlybird: 'Non',
+      promoLastMinute: 0,
+      gotLastMinute: 'Non',
+      // Contacts
+      email: email.value,
+      phone: `${phoneCode.value}${phoneNumber.value}`,
+      firstname: firstName.value,
+      lastname: lastName.value,
+    }
+    // Submit form data
+    if (dealId.value) {
+      await updateDeal({
+        nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
+        nbChildren: nbChildren.value + nbTeen.value,
+        nbAdults: nbAdults.value,
+        nbTeen: nbTeen.value,
+        nbUnderAge: nbChildren.value,
+        email: email.value,
+        phone: `${phoneCode.value}${phoneNumber.value}`,
+        firstname: firstName.value,
+        lastname: lastName.value,
+      })
+    }
+    else {
+      dealId.value = await createDeal(flattenedDeal)
+      console.log('dealId', dealId.value)
+      if (dealId.value) {
+        router.push({
+          path: route.path,
+          query: { id: dealId.value },
+        })
+      }
+    }
+    return true
   }
+  catch (error) {
+    // Handle errors
+    console.log('error updating or creating deal', error)
+    return false
+  }
+}
+const changeAttr = (dataAttribute) => {
   // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled
+  // const EVENTS = {
+  //   lastname: { eventLabel: 'Groupe Info - Indique prénom' },
+  //   firstname: { eventLabel: 'Groupe Info - Indique nom' },
+  //   email: { eventLabel: 'Groupe Info - Indique nom' },
+  //   phone: { eventLabel: 'Groupe Info - Indique numéro de téléphone' },
+  // }
   // if (this[dataAttribute] !== '') {
   //   this.$ga.event({
   //     eventCategory: 'Devis',
@@ -296,70 +390,6 @@ const phonesSelect = [
     },
   },
 ]
-
-const submitStepData = async () => {
-  // Validate form
-  if (!model.value) return false
-  try {
-    const flattenedDeal = {
-      value: 85000,
-      title: 'Découverte du Népal',
-      currency: 'eur',
-      group: '1',
-      owner: '1',
-      stage: '2',
-      departureDate: '2025-05-15',
-      returnDate: '2025-05-30',
-      travelType: 'Voyage de Groupe',
-      nbTravelers: 4,
-      nbChildren: 1,
-      nbAdults: 3,
-      country: 'Nepal',
-      iso: 'NP',
-      zoneChapka: 2,
-      pricePerTraveler: 2125,
-      image: 'https://example.com/nepal.jpg',
-      currentStep: 'Création du Deal',
-      alreadyPaid: 0,
-      restTravelersToPay: nbAdults.value + childrenUnder12.value + teenUnder18.value,
-      utm: '',
-      slug: 'decouverte-nepal',
-      depositPrice: 25500,
-      basePricePerTraveler: 85000,
-      totalTravelPrice: 85000,
-      promoChildren: 8000,
-      maxChildrenAge: 12,
-      promoTeen: 8000,
-      maxTeenAge: 18,
-      nbTeen: 0,
-      nbUnderAge: 1,
-      source: 'Devis',
-      forcedIndivRoom: 'Non',
-      indivRoomPrice: 15000,
-      promoEarlybird: 5000,
-      gotEarlybird: 'Non',
-      promoLastMinute: 0,
-      gotLastMinute: 'Non',
-      email: email.value,
-      phone: `${phoneCode.value}${phoneNumber.value}`,
-      firstname: firstName.value,
-      lastname: lastName.value,
-    }
-    // Submit form data
-    if (dealId.value) {
-      await updateDeal(flattenedDeal)
-    }
-    else {
-      await createDeal(flattenedDeal)
-    }
-    return true
-  }
-  catch (error) {
-    // Handle errors
-    console.log('error', error)
-    return false
-  }
-}
 
 defineExpose({
   submitStepData,

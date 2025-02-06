@@ -60,6 +60,12 @@ export default defineNuxtPlugin((app) => {
       VSelect: {
         variant: 'outlined',
       },
+      VSwitch: {
+        color: 'primary',
+        baseColor: 'grey-lighten-1',
+        inset: true,
+        hideDetails: true,
+      },
     },
   })
 

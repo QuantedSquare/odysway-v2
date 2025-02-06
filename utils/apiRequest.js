@@ -4,7 +4,6 @@ export default async function (endpoint, method = 'get', body = null) {
       method,
       body,
     })
-    console.log(`API Response from /api/v1${endpoint}:`, response)
     return response
   }
   catch (error) {

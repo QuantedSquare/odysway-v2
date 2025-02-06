@@ -1,6 +1,5 @@
 <template>
   <v-container
-
     class="height-title bg-primary hidden-md-and-down px-6"
     fluid
   >
