@@ -32,7 +32,6 @@
         xl="8"
       >
         <v-row
-          justify="space-between"
           align="center"
         >
           <v-col
@@ -56,14 +55,12 @@
           </v-col>
           <v-col
             cols="5"
-            sm="4"
+            sm="6"
           >
             <v-select
               v-model="reviewFilter.selectedFilter"
-              :item-title="reviewFilter.items"
-              :item-value="reviewFilter.items"
+              :items="reviewFilter.items"
               density="comfortable"
-              solo
               label="Trier"
               hide-details
               :prepend-inner-icon="mdiFilterVariant"
@@ -86,6 +83,20 @@
           :max-note="maxNote"
         />
       </v-col>
+      <v-col>
+        <v-pagination
+          v-model="pagination.currentPage"
+          :length="nbPages"
+          :total-visible="5"
+          variant="flat"
+          rounded="circle"
+          active-color="primary"
+          elevation="3"
+          class="my-4"
+          @next="pagination.currentPage = pagination.currentPage++"
+          @prev="pagination.currentPage = pagination.currentPage-- "
+        />
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -94,6 +105,11 @@
 import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
 
 const maxNote = ref(5)
+
+const { data: reviews } = await useAsyncData(() => {
+  return queryCollection('avis').all()
+})
+
 const reviewFilter = ref({
   selectedFilter: 'relevant',
   items: [
@@ -103,6 +119,7 @@ const reviewFilter = ref({
     { title: 'Les moins favorables', value: 'worst' },
   ],
 })
+
 const autocompleteVoyage = ref({
   selectedVoyage: null,
   items: [],
@@ -113,18 +130,20 @@ const pagination = ref({
   itemsPerPage: 3,
 })
 
-const { data: reviews } = await useAsyncData(() => {
-  return queryCollection('avis').all()
-})
-
 const displayedReviews = computed(() => {
   return reviews.value.filter(a => a.isDisplayed)
+})
+
+const averageNote = computed(() => {
+  return displayedReviews.value.reduce((acc, cur) => {
+    return acc + cur.note
+  }, 0) / displayedReviews.value.length
 })
 
 const voyagesFromReviews = computed(() => {
   const voyagesSet = new Set()
 
-  reviews.value.forEach((review) => {
+  displayedReviews.value.forEach((review) => {
     if (review.voyageTitle) {
       voyagesSet.add(review.voyageTitle)
     }
@@ -132,13 +151,8 @@ const voyagesFromReviews = computed(() => {
 
   return Array.from(voyagesSet)
 })
-autocompleteVoyage.value.items = [...voyagesFromReviews.value]
 
-const averageNote = computed(() => {
-  return displayedReviews.value.reduce((acc, cur) => {
-    return acc + cur.note
-  }, 0) / displayedReviews.value.length
-})
+autocompleteVoyage.value.items = [...voyagesFromReviews.value]
 
 const filteredReviews = computed (() => {
   let filteredReviews = [...displayedReviews.value]
@@ -150,28 +164,23 @@ const filteredReviews = computed (() => {
 })
 
 const sortedReviews = computed(() => {
-  let sortedReviews = [...filteredReviews.value]
-
   if (reviewFilter.value.selectedFilter === 'recent') {
-    sortedReviews = [...filteredReviews.value]
-    return sortedReviews.sort((a, b) => {
+    return [...filteredReviews.value].sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
     })
   }
   else if (reviewFilter.value.selectedFilter === 'best') {
-    sortedReviews = [...filteredReviews].filter(review => review.note >= 4)
-    return sortedReviews.sort((a, b) => {
+    return [...filteredReviews.value].filter(review => review.note >= 4).sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
     })
   }
   else if (reviewFilter.value.selectedFilter === 'worst') {
-    sortedReviews = [...filteredReviews.value]
-    return sortedReviews.sort((a, b) => {
+    return [...filteredReviews.value].sort((a, b) => {
       return a.note - b.note
     })
   }
   else {
-    return sortedReviews.sort((a, b) => {
+    return [...filteredReviews.value].sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
     }).filter(review => review.note >= 3 && review.text.length >= 70)
   }
@@ -181,5 +190,21 @@ const paginatedItems = computed(() => {
   const start = (pagination.value.currentPage - 1) * pagination.value.itemsPerPage
   const end = pagination.value.currentPage * pagination.value.itemsPerPage
   return sortedReviews.value.slice(start, end)
+})
+
+const nbPages = computed(() => {
+  return Math.ceil(sortedReviews.value.length / pagination.value.itemsPerPage)
+})
+
+watch(() => reviewFilter.value.selectedFilter, (newVal, oldVal) => {
+  if (newVal !== oldVal) {
+    pagination.value.currentPage = 1
+  }
+})
+
+watch(() => autocompleteVoyage.value.selectedVoyage, (newVal, oldVal) => {
+  if (newVal !== oldVal) {
+    pagination.value.currentPage = 1
+  }
 })
 </script>
