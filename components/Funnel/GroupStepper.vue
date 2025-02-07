@@ -123,7 +123,7 @@ const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
 const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)
-const currentStep = ref(4)
+const currentStep = ref(0)
 const skipperMode = ref('normal')
 
 const enablingNextButton = computed(() => {

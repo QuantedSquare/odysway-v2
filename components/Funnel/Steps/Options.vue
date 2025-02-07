@@ -91,8 +91,6 @@ const totalTravelPrice = ref(0)
 const vegeOption = ref(false)
 const otherFoodOption = ref(false)
 
-const indivRoomModal = ref(false)
-
 const model = defineModel()
 
 watch([dealId, () => props.currentStep], async () => {
