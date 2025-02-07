@@ -1,9 +1,10 @@
 <template>
   <v-app>
-    <!-- <HeaderAppBar
+    <HeaderOdysway
       @show-drawer="drawer = !drawer"
-    /> -->
-    <!-- <v-navigation-drawer
+    />
+    <v-navigation-drawer
+      v-if="$vuetify.display.mdAndDown"
       v-model="drawer"
       location="right"
     >
@@ -21,13 +22,11 @@
           </NuxtLink>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer> -->
+    </v-navigation-drawer>
     <v-main>
       <slot />
     </v-main>
-    <v-footer>
-      Footer
-    </v-footer>
+    <FooterOdysway />
   </v-app>
 </template>
 
@@ -42,12 +41,12 @@ const drawerItems = ref([{
 {
   title: 'Prochains départs',
   value: 'Prochains départs',
-  link: '/prochains-departs',
+  // link: '/prochains-departs',
 },
 {
   title: 'Prendre RDV avec un conseiller',
   value: 'Prendre RDV avec un conseiller',
-  link: '/calendly',
+  // link: '/calendly',
 },
 {
   title: 'À propos',
@@ -62,7 +61,7 @@ const drawerItems = ref([{
 {
   title: 'Carte cadeau',
   value: 'Carte cadeau',
-  link: '/offre-cadeau',
+  // link: '/offre-cadeau',
 },
 ])
 </script>

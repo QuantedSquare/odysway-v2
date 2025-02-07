@@ -5,17 +5,16 @@
         cols="12"
         sm="10"
       >
-        <v-row
-          v-for="review, index in reviewsList"
-          :key="`Avis sur voyage ${review.blogTitle + index}`"
-          no-gutters
-          justify="center"
-        >
-          <ReviewColCard
-            v-if="review.isOnHome && currentReview === index "
-            :review="review"
-          />
-        </v-row>
+        <v-window v-model="currentReview">
+          <v-window-item
+            v-for="review, index in reviewsList"
+            :key="index"
+          >
+            <ReviewColCard
+              :review="review"
+            />
+          </v-window-item>
+        </v-window>
       </v-col>
       <v-col
         cols="12"
@@ -26,12 +25,11 @@
         >
           <v-col
             v-for="review, index in reviewsList"
-            :key="`Avatar de voyageur ${review.author}`"
+            :key="index"
             cols="auto"
-            class="d-flex flex-column align-center justify-center"
+            class="d-flex flex-column align-center"
           >
             <v-avatar
-              v-if="review.isOnHome"
               :border="currentReview === index ? 'lg' : '' "
               :size="currentReview === index ? '70' : '60'"
               :class="currentReview === index ? 'opacity-100' : 'opacity-50'"
@@ -50,7 +48,7 @@
             </v-avatar>
             <div
               :class="currentReview === index ? 'd-none d-md-flex flex-column align-center' : 'd-none'"
-              class="text-textColor"
+              class="text-dark"
             >
               <span class="text-h6 font-weight-bold ">{{ review.author }}</span>
               <span>{{ review.authorAge }} ans </span>
@@ -87,8 +85,11 @@ const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').all()
 })
 
+const onHomeReviews = computed(() => {
+  return reviews.value.filter(r => r.isOnHome)
+})
+
 const reviewsList = computed(() => {
-  const list = [...(reviews.value || [])]
-  return smAndUp.value ? list : list.slice(0, 3)
+  return smAndUp.value ? onHomeReviews.value : onHomeReviews.value.slice(0, 3)
 })
 </script>

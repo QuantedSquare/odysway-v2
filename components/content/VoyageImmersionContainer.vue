@@ -25,7 +25,7 @@
             />
           </v-col>
           <v-col
-            class="text-textColor"
+            class="text-dark"
           >
             <h2 class="my-6 text-h5 text-h4 font-weight-black">
               <slot name="title" />

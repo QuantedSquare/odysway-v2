@@ -2,7 +2,7 @@ import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
-import { VBtn, VIcon } from 'vuetify/components'
+import { VBtn, VIcon, VTextField } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -22,9 +22,11 @@ export default defineNuxtPlugin((app) => {
             primary: '#2e8b57', // odysway green
             secondary: '#bc5948', // odysway red
             cream: '#F4F2EB', // banner bg
-            textColor: '#3e3e3e',
+            dark: '#3e3e3e', // dark grey usually applied on text
             sectionBg: '#edeff8', // grey-home-bg
             pinkBorder: '#ffc0cb',
+            inputBg: '#ebeff9',
+            footerBg: '#f5f5f5',
           },
         },
       },
@@ -34,15 +36,16 @@ export default defineNuxtPlugin((app) => {
       VBtnSecondary: VBtn,
       VBtnVoyage: VBtn,
       VIconChevron: VIcon,
+      VBtnSocial: VBtn,
+      VTextFieldHome: VTextField,
     },
     defaults: {
       VBtnPrimary: {
         color: 'primary',
-        rounded: 'xl',
+        variant: 'text',
       },
       VBtnSecondary: {
-        variant: 'text',
-        class: 'bg-secondary text-button',
+        color: 'secondary',
         rounded: 'xl',
       },
       VBtnVoyage: {
@@ -65,6 +68,17 @@ export default defineNuxtPlugin((app) => {
         baseColor: 'grey-lighten-1',
         inset: true,
         hideDetails: true,
+      },
+      VBtnSocial: {
+        size: 'x-small',
+        icon: true,
+      },
+      VTextFieldHome: {
+        variant: 'solo',
+        flat: true,
+        hideDetails: true,
+        density: 'compact',
+        rounded: 'xl',
       },
     },
   })

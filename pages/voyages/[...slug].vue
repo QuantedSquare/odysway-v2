@@ -1,6 +1,6 @@
 <template>
   <div>
-    hello
+    hello from voyages
   </div>
 </template>
 
