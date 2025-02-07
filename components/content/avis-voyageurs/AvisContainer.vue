@@ -48,7 +48,7 @@
               class="text-center mt-4"
             >
               <template #prepend-inner>
-                <v-icon>
+                <v-icon icon>
                   {{ mdiMagnify }}
                 </v-icon>
               </template>

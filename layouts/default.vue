@@ -56,7 +56,7 @@ const drawerItems = ref([{
 {
   title: 'Avis',
   value: 'Avis',
-  // link: '/avis-voyageurs',
+  link: '/avis-voyageurs',
 },
 {
   title: 'Carte cadeau',
