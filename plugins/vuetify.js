@@ -13,6 +13,7 @@ export default defineNuxtPlugin((app) => {
         mdi,
       },
     },
+    ssr: true,
     theme: {
       defaultTheme: 'odysway',
       themes: {

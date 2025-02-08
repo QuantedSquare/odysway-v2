@@ -2,32 +2,32 @@
   <v-container
     class="d-flex align-center position-relative"
   >
-    <VBtnVoyage
+    <v-btn-voyage
       v-if="!arrivedState.left"
       icon
       class="position-absolute left-0 zIndex"
       @click="x -= Number(scrollAmount)"
     >
-      <VIconChevron
+      <v-icon-chevron
         :icon="mdiChevronLeft"
       />
-    </VBtnVoyage>
+    </v-btn-voyage>
     <v-row
       ref="scrollContainer"
       class="flex-nowrap overflow-auto hidden-scroll"
     >
       <slot />
     </v-row>
-    <VBtnVoyage
+    <v-btn-voyage
       v-if="!arrivedState.right"
       icon
       class="position-absolute right-0"
       @click="x += Number(scrollAmount)"
     >
-      <VIconChevron
+      <v-icon-chevron
         :icon="mdiChevronRight"
       />
-    </VBtnVoyage>
+    </v-btn-voyage>
   </v-container>
 </template>
 

@@ -59,7 +59,6 @@ const { data: categories, status } = await useAsyncData(
     immediate: true,
   },
 )
-console.log('test', categories, status)
 </script>
 
 <style scoped>

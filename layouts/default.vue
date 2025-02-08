@@ -3,26 +3,28 @@
     <HeaderOdysway
       @show-drawer="drawer = !drawer"
     />
-    <v-navigation-drawer
-      v-if="$vuetify.display.mdAndDown"
-      v-model="drawer"
-      location="right"
-    >
-      <v-list
-        v-for="item, index in drawerItems"
-        :key="`Drawer item ${index}`"
-        nav
+    <ClientOnly>
+      <v-navigation-drawer
+        v-if="$vuetify.display.mdAndDown"
+        v-model="drawer"
+        location="right"
       >
-        <v-list-item density="compact">
-          <NuxtLink
-            :to="item.link"
-            class="text-primary text-decoration-none"
-          >
-            {{ item.title }}
-          </NuxtLink>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+        <v-list
+          v-for="item, index in drawerItems"
+          :key="`Drawer item ${index}`"
+          nav
+        >
+          <v-list-item density="compact">
+            <NuxtLink
+              :to="item.link"
+              class="text-primary text-decoration-none"
+            >
+              {{ item.title }}
+            </NuxtLink>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    </ClientOnly>
     <v-main>
       <slot />
     </v-main>

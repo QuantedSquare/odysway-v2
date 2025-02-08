@@ -54,7 +54,7 @@
       <v-col
         class="d-flex align-center justify-end"
       >
-        <VTextFieldHome
+        <v-text-field-home
           type="text"
           placeholder="Rechercher"
           class="expanding-search"
@@ -73,16 +73,16 @@
               </v-icon>
             </v-btn>
           </template>
-        </VTextFieldHome>
-        <VBtnPrimary
+        </v-text-field-home>
+        <v-btn-primary
           v-for="item, index in items"
           :key="`link header ${index}`"
           :to="item.link"
           class="text-button text-uppercase font-weight-bold mx-4"
         >
           {{ item.title }}
-        </VBtnPrimary>
-        <VBtnSecondary
+        </v-btn-primary>
+        <v-btn-secondary
           density="compact"
           size="x-large"
           href="/calendly"
@@ -92,7 +92,7 @@
             <b>+33 1 84 80 79 75</b>
             prendre rdv
           </div>
-        </VBtnSecondary>
+        </v-btn-secondary>
       </v-col>
     </v-row>
   </v-app-bar>

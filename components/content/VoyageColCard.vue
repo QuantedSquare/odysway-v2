@@ -27,7 +27,7 @@
                 text="Test tooltip"
               >
                 <template #activator="{ props }">
-                  <VBtnVoyage
+                  <v-btn-voyage
                     v-bind="props"
                     icon
                   >
@@ -35,7 +35,7 @@
                       :icon="mdiAccountGroup"
                       color="white"
                     />
-                  </VBtnVoyage>
+                  </v-btn-voyage>
                 </template>
               </v-tooltip>
               <v-tooltip
@@ -43,13 +43,13 @@
                 text="Test tooltip"
               >
                 <template #activator="{ props }">
-                  <VBtnVoyage v-bind="props">
+                  <v-btn-voyage v-bind="props">
                     <v-img
                       src="/icons/child.svg"
                       alt="Child icon"
                       class="svg-child-icon"
                     />
-                  </VBtnVoyage>
+                  </v-btn-voyage>
                 </template>
               </v-tooltip>
             </div>
