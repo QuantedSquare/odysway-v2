@@ -55,10 +55,12 @@
         class="d-flex align-center justify-end"
       >
         <v-text-field-home
+          v-click-outside="() => searchOpen = false"
           type="text"
           placeholder="Rechercher"
           class="expanding-search"
           :class="searchOpen ? 'expanded': 'closed'"
+          @click.stop="searchOpen = !searchOpen"
         >
           <template #prepend-inner>
             <v-btn
@@ -67,7 +69,6 @@
             >
               <v-icon
                 color="grey"
-                @click="searchOpen = !searchOpen"
               >
                 {{ mdiMagnify }}
               </v-icon>
@@ -129,6 +130,7 @@ const searchOpen = ref(false)
 .expanding-search.closed {
   max-width: 60px;
   border: 1px solid #9e9e9e;
+  transition: 0.5s;
 }
 
 .expanding-search.expanded {

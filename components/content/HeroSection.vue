@@ -1,7 +1,7 @@
 <template>
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height })"
-    :height="imgHeight ? '50vh' : '100vh'"
+    :height="xs ? '50vh' : '100vh'"
     cover
   >
     <span class="absolute-position shadow">

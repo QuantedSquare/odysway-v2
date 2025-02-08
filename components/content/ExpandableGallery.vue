@@ -11,10 +11,17 @@
       class="image-gallery"
     >
       <NuxtLink
-        v-for="category in categories"
+        v-for="(category) in categories"
         :key="category?.id"
+        v-click-outside="{
+          handler: clickOutside(category?.id),
+        }"
         class="image-wrapper"
-        :to="`/thematiques/${category?.slug}`"
+        :class="{
+          expanded: isMobile.value && expandedIndex.value === id,
+          isMobile: isMobile.value,
+        }"
+        @click.stop="handleClick(category?.id)"
       >
         <img
           v-if="category?.image"
@@ -24,8 +31,25 @@
         <div class="blur-overlay" />
         <div class="image-overlay" />
         <div class="content-overlay">
-          <h3 class="category-title text-no-wrap">{{ category?.title }}</h3>
-          <p class="category-description text-no-wrap">Click to explore more about {{ category?.title }}</p>
+          <div class="w-100">
+            <h3 class="category-title text-no-wrap">{{ category?.title }}</h3>
+            <p class="category-description d-flex align-center justify-space-between ">
+              <span class="w-75">
+                Cliquez pour en apprendre plus à propos des {{ category?.title }}
+              </span>
+              <client-only>
+                <v-btn
+                  v-if="isMobile"
+                  class="explore-btn"
+                  :to="`/thematiques/${category?.slug}`"
+                  @click.stop
+                >
+                  Explorez
+                </v-btn>
+              </client-only>
+            </p>
+          </div>
+
         </div>
       </NuxtLink>
     </div>
@@ -33,7 +57,13 @@
 </template>
 
 <script setup>
-import { useImage } from '#imports'
+import { ref, watch } from 'vue'
+import { useDisplay } from 'vuetify'
+
+const router = useRouter()
+const { xs } = useDisplay()
+const expandedIndex = ref(null)
+const isMobile = ref(false)
 
 const props = defineProps({
   categoriesSlug: {
@@ -47,9 +77,7 @@ const { data: categories, status } = await useAsyncData(
   async () => {
     const categoriesData = await Promise.all(
       props.categoriesSlug.map(slug =>
-        queryCollection('categories')
-          .where('slug', '=', slug)
-          .first(),
+        queryCollection('categories').where('slug', '=', slug).first(),
       ),
     )
     return categoriesData
@@ -59,6 +87,27 @@ const { data: categories, status } = await useAsyncData(
     immediate: true,
   },
 )
+
+const handleClick = (id) => {
+  if (isMobile.value) {
+    expandedIndex.value = expandedIndex.value === id ? null : id
+  }
+  else {
+    const slug = categories.value.find(category => category.id === id).slug
+    router.push(`/thematiques/${slug}`)
+  }
+}
+const clickOutside = (id) => {
+  if (isMobile.value && expandedIndex.value !== id) {
+    expandedIndex.value = null
+  }
+}
+
+watch(xs, (newValue) => {
+  isMobile.value = newValue
+}, {
+  immediate: true,
+})
 </script>
 
 <style scoped>
@@ -67,6 +116,11 @@ const { data: categories, status } = await useAsyncData(
   height: 24rem;
   width: 100%;
   gap: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .image-gallery {
+    flex-direction: column;
+  }
 }
 
 .image-wrapper {
@@ -80,7 +134,8 @@ const { data: categories, status } = await useAsyncData(
   transition: all 0.5s ease-in-out;
 }
 
-.image-wrapper:hover {
+.image-wrapper:hover,
+.image-wrapper.expanded {
   flex: 3;
 }
 
@@ -104,7 +159,8 @@ const { data: categories, status } = await useAsyncData(
   transition: opacity 0.5s ease-in-out;
 }
 
-.image-wrapper:hover .blur-overlay {
+.image-wrapper:hover .blur-overlay,
+.image-wrapper.expanded .blur-overlay {
   opacity: 1;
 }
 
@@ -119,11 +175,14 @@ const { data: categories, status } = await useAsyncData(
   transition: opacity 0.5s ease-in-out;
 }
 
-.image-wrapper:hover .image-overlay {
+.image-wrapper:hover .image-overlay,
+.image-wrapper.expanded .image-overlay {
   opacity: 1;
 }
 
 .content-overlay {
+  display:flex;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -135,7 +194,8 @@ const { data: categories, status } = await useAsyncData(
   z-index: 1;
 }
 
-.image-wrapper:hover .content-overlay {
+.image-wrapper:hover .content-overlay,
+.image-wrapper.expanded .content-overlay {
   transform: translateY(0);
 }
 
@@ -147,7 +207,8 @@ const { data: categories, status } = await useAsyncData(
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.image-wrapper:hover .category-title {
+.image-wrapper:hover .category-title,
+.image-wrapper.expanded .category-title {
   transform: translateY(-1.5rem);
 }
 
@@ -160,8 +221,22 @@ const { data: categories, status } = await useAsyncData(
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.image-wrapper:hover .category-description {
+.image-wrapper:hover .category-description,
+.image-wrapper.expanded .category-description {
   opacity: 1;
   transform: translateY(0);
+}
+
+.explore-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.explore-btn:hover {
+  background: white;
+  color: black;
 }
 </style>
