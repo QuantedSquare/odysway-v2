@@ -51,6 +51,19 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
   :::categ-col-card{categorie-slug="sentiers-aventures"}
   :::
 ::
+<!-- Test new component da -->
+
+::title-container
+Nos thématiques [préférées]{style="color: #2e8b57;"} 2 🫶
+::
+
+::horizontal-carousel{scroll-amount="400"}
+
+  :::expandable-gallery{:categories-slug='["chemins-vers-soi", "echappees-sauvages", "immersions-locales", "regard-faune", "sentiers-aventures"]'}
+  :::
+::
+
+
 
 ::title-container
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞

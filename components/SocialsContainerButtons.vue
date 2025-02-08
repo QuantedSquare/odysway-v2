@@ -1,36 +1,36 @@
 <template>
   <div class="d-flex justify-space-around">
-    <VBtnSocial
+    <v-btn-social
       color="#4267B2"
       href="https://www.facebook.com/odysway/"
     >
       <v-icon>{{ mdiFacebook }}</v-icon>
-    </VBtnSocial>
-    <VBtnSocial
+    </v-btn-social>
+    <v-btn-social
       color="rgb(209, 32, 218)"
       href="https://www.instagram.com/odysway_travel/"
     >
       <v-icon>{{ mdiInstagram }}</v-icon>
-    </VBtnSocial>
-    <VBtnSocial
+    </v-btn-social>
+    <v-btn-social
       color="#ce1312"
       href="https://www.youtube.com/channel/UCsc9xUf1MF4-yDGs4ftkT2g"
     >
       <v-icon>{{ mdiYoutube }}</v-icon>
-    </VBtnSocial>
-    <VBtnSocial
+    </v-btn-social>
+    <v-btn-social
       color="#007ebb"
       href="https://linkedin.com/company/odysway"
     >
       <v-icon>{{ mdiLinkedin }}</v-icon>
-    </VBtnSocial>
-    <VBtnSocial
+    </v-btn-social>
+    <v-btn-social
       color="#E60023"
       href="https://www.pinterest.fr/odyswaytravel/"
     >
       <v-icon>{{ mdiPinterest }}</v-icon>
-    </VBtnSocial>
-    <VBtnSocial
+    </v-btn-social>
+    <v-btn-social
       color="#69C9D0"
       href="https://www.tiktok.com/@odyswaytravel"
     >
@@ -40,7 +40,7 @@
         height="24px"
         contain
       />
-    </VBtnSocial>
+    </v-btn-social>
   </div>
 </template>
 

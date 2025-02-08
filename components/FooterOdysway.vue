@@ -25,7 +25,9 @@
             sm="6"
             md="4"
           >
-            <VTextFieldHome
+            <v-text-field-home
+              id="newsletter"
+              v-model="email"
               bg-color="white"
               placeholder="Votre adresse email"
               type="email"
@@ -35,7 +37,7 @@
                   {{ mdiArrowRight }}
                 </v-icon>
               </template>
-            </VTextFieldHome>
+            </v-text-field-home>
           </v-col>
         </v-row>
       </v-container>
@@ -96,7 +98,8 @@
             <h3 class="text-uppercase text-h6 text-md-overline font-weight-bold mb-3 mb-md-0">
               nous joindre
             </h3>
-            <VTextFieldHome
+            <v-text-field-home
+              id="email"
               readonly
               bg-color="inputBg"
               label="contact@odysway.com"
@@ -108,8 +111,9 @@
                   {{ mdiEmailOutline }}
                 </v-icon>
               </template>
-            </VTextFieldHome>
-            <VTextFieldHome
+            </v-text-field-home>
+            <v-text-field-home
+              id="phone"
               readonly
               bg-color="inputBg"
               label="+33 1 84 80 79 75"
@@ -121,7 +125,7 @@
                   {{ mdiPhoneOutline }}
                 </v-icon>
               </template>
-            </VTextFieldHome>
+            </v-text-field-home>
             <SocialsContainerButtons />
           </v-col>
         </v-row>
@@ -177,6 +181,9 @@ import { mdiArrowRight, mdiEmailOutline, mdiPhoneOutline } from '@mdi/js'
 import { useImage } from '#imports'
 
 const img = useImage()
+const email = ref('')
+const odyswayEmail = ref('')
+const odyswayPhone = ref('')
 
 const pOdysway = ref ('Odysway est une agence de voyage certifiée Atout France et immatriculée à l\'APST. Vous avez envie de voyager autrement ? Que ce soit en France ou à l\'étranger, vivez un voyage en immersion unique avec une agence fiable et engagée.')
 

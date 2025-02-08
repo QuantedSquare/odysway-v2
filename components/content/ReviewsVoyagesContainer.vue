@@ -64,9 +64,9 @@
           to="https://fr.trustpilot.com/review/odysway.com"
           target="blank"
         >
-          <VBtnSecondary>
+          <v-btn-secondary>
             Lire d'autres avis voyageurs
-          </VBtnSecondary>
+          </v-btn-secondary>
         </NuxtLink>
       </v-col>
     </v-row>

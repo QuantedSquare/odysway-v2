@@ -1,7 +1,7 @@
 <template>
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height })"
-    :height="xs ? '50vh' : '100vh'"
+    :height="imgHeight ? '50vh' : '100vh'"
     cover
   >
     <span class="absolute-position shadow">
@@ -22,10 +22,16 @@ defineProps({
     default: '/images/Laponie-(1).webp',
   },
 })
-
+const imgHeight = ref('100vh')
 const img = useImage()
 
 const { xs, height } = useDisplay()
+onMounted(() => {
+  imgHeight.value = xs ? '50vh' : '100vh'
+})
+watch(xs, (newValue) => {
+  imgHeight.value = newValue ? '50vh' : '100vh'
+})
 </script>
 
 <style scoped>
