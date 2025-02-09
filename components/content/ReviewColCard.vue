@@ -2,6 +2,8 @@
   <v-row
     no-gutters
     justify="center"
+    align="center"
+    class="height-fixed"
   >
     <v-col
       cols="auto"
@@ -77,9 +79,12 @@ const img = useImage()
 
 <style scoped>
 .green-border{
-  border: 4px solid #2E8B57 !important;
+  border: 4px solid rgb(var(--v-theme-primary)) !important;
 }
 .no-white-space {
   white-space: normal;
+}
+.height-fixed{
+  max-height: 200px;
 }
 </style>

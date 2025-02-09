@@ -23,11 +23,11 @@
         }"
         @click.stop="handleClick(category?.id)"
       >
-        <img
+        <NuxtImg
           v-if="category?.image"
           :src="category.image"
           :alt="category?.title"
-        >
+        />
         <div class="blur-overlay" />
         <div class="image-overlay" />
         <div class="content-overlay">

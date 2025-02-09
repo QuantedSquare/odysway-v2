@@ -182,8 +182,6 @@ import { useImage } from '#imports'
 
 const img = useImage()
 const email = ref('')
-const odyswayEmail = ref('')
-const odyswayPhone = ref('')
 
 const pOdysway = ref ('Odysway est une agence de voyage certifiée Atout France et immatriculée à l\'APST. Vous avez envie de voyager autrement ? Que ce soit en France ou à l\'étranger, vivez un voyage en immersion unique avec une agence fiable et engagée.')
 

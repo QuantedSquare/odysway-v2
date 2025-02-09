@@ -9,30 +9,26 @@
     >
       <v-col
         cols="12"
-        md="8"
+        md="4"
+        class="pa-10 d-flex justify-center"
       >
-        <v-row
-          align="center"
-          justify="center"
-        >
-          <v-col
-            cols="4"
-            class="d-none d-lg-flex"
-          >
-            <v-img
-              rounded="lg"
-              :src="img(imageSrc, { format: 'webp', quality: 100, height })"
-            />
-          </v-col>
-          <v-col
-            class="text-dark"
-          >
-            <h2 class="my-6 text-h5 text-h4 font-weight-black">
-              <slot name="title" />
-            </h2>
-            <slot name="text" />
-          </v-col>
-        </v-row>
+        <!-- <v-img
+          rounded="lg"
+          :src="img(imageSrc, { format: 'webp', quality: 100, height })"
+        /> -->
+        <FlipCard
+          :image="img(imageSrc, { format: 'webp', quality: 100, height })"
+          :description="`Le vrai voyage ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`"
+          title="`Le voyage en immersion, le partage au cœur du voyage 🌍"
+        />
+      </v-col>
+      <v-col
+        class="text-dark pa-10"
+      >
+        <h2 class="text-h5 text-h4 font-weight-black">
+          <slot name="title" />
+        </h2>
+        <slot name="text" />
       </v-col>
     </v-row>
   </v-container>
@@ -50,6 +46,6 @@ defineProps({
   },
 })
 
-const { height } = useDisplay()
+const { height, mobile } = useDisplay()
 const img = useImage()
 </script>
