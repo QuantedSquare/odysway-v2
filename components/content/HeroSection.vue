@@ -1,5 +1,5 @@
 <template>
-  <v-img
+  <v-parallax
     :src="img(imageSrc, { format: 'webp', quality: 70, height })"
     :height="xs ? '50vh' : '100vh'"
     cover
@@ -9,7 +9,7 @@
         name="title"
       />
     </span>
-  </v-img>
+  </v-parallax>
 </template>
 
 <script setup>
