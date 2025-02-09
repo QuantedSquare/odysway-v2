@@ -5,7 +5,7 @@ Le partage <br> au cœur du voyage
 ::
 
 ::headlines-list
-  :::headline-column
+  :::headline-column{index=1}
   #title
   Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
   
@@ -13,7 +13,7 @@ Le partage <br> au cœur du voyage
   Des voyages conçus avec soin et passion pour vous faire découvrir l’intimité d’une région ou d'un pays, au- delà des clichés, de la manière la plus durable possible.
   :::
   
-  :::headline-column
+  :::headline-column{index=2}
   #title
   Des départs en [petits groupes]{style="color:#bc5948;"} ou [privatifs]{style="color:#bc5948;"}
   
@@ -21,7 +21,7 @@ Le partage <br> au cœur du voyage
   Chez Odysway, voyagez comme vous le souhaitez : rejoignez un petit groupe pour partager ou privatisez votre séjour. Le choix est entre vos mains !
   :::
 
-  :::headline-column
+  :::headline-column{index=3}
   #title
   Une agence proche de [vous]{style="color:#bc5948;"}
   

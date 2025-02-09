@@ -38,7 +38,7 @@ watch(xs, (newValue) => {
 .absolute-position {
   font-weight: 700;
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   left: 10%;
   font-size: 5rem;
   color: white;

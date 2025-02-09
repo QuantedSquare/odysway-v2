@@ -6,60 +6,60 @@
     class="height-fixed"
   >
     <v-col
-      cols="auto"
+      cols="12"
+      class="d-flex align-start mb-10"
     >
       <v-img
         src="/images/guillemet-gauche.svg"
         height="27"
         width="27"
       />
-    </v-col>
-    <v-col
-      cols="10"
-      xl="8"
-    >
-      <p class="text-center mb-4">
+      <p class="text-center  text-body-1">
         {{ review.text }}
       </p>
-    </v-col>
-    <v-col cols="auto">
       <v-img
         src="/images/guillemet-droite.svg"
         height="27"
         width="27"
       />
     </v-col>
+
     <v-col
       cols="12"
-      sm="8"
-      xl="6"
     >
       <v-card
         variant="text"
         :href="`/voyages/${review.voyageSlug}`"
         target="_blank"
-        rounded="xl"
-        class="mt-4 pa-2"
+        class="border-card"
       >
-        <v-row justify="center">
-          <v-col cols="4">
+        <v-row
+          justify="center"
+          no-gutters
+          align="center"
+        >
+          <v-col
+            cols="auto"
+            class="d-flex align-center ga-4"
+          >
             <v-img
-              min-height="150px"
+              max-height="150px"
+              min-width="170px"
               :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 400 })"
               rounded="xl"
               cover
-              class="border-xl green-border"
+              class=" green-border"
             />
-          </v-col>
-          <v-col cols="8">
-            <v-card-subtitle class="text-uppercase text-caption no-white-space px-0">
-              Lire le récit de voyage de {{ review.author }}:
-            </v-card-subtitle>
-            <v-card-title class="text-dark text-subtitle-1 font-weight-bold no-white-space px-0">
-              <h4>
-                {{ review.voyageTitle }}
-              </h4>
-            </v-card-title>
+            <div>
+              <v-card-subtitle class="text-uppercase sub-headline text-dark no-white-space px-0">
+                Le voyage de {{ review.author }}:
+              </v-card-subtitle>
+              <v-card-title class="text-dark text-subtitle-1 font-weight-bold no-white-space px-0">
+                <h4>
+                  {{ review.voyageTitle }}
+                </h4>
+              </v-card-title>
+            </div>
           </v-col>
         </v-row>
       </v-card>
@@ -84,7 +84,10 @@ const img = useImage()
 .no-white-space {
   white-space: normal;
 }
-.height-fixed{
-  max-height: 200px;
+.border-card{
+  border-radius: 2% 2% 0 0 !important;
+}
+.sub-headline{
+  font-size: 0.6rem !important;
 }
 </style>

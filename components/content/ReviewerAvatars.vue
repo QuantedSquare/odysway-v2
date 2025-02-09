@@ -1,34 +1,29 @@
 <template>
-  <v-col
-    cols="12"
-    class="d-flex flex-column align-center"
-  >
-    <div class="avatar-list">
-      <v-avatar
-        v-for="(item, index) in items"
-        :key="item.id"
-        v-bind="getAvatarProps(index)"
-        @mouseenter="handleMouseEnter($event, index)"
-        @click="handleAvatarClick(index)"
-      >
-        <v-img
-          v-if="item.photo"
-          :src="formatImage(item.photo)"
-          :alt="`Photo de ${item.author}`"
-          cover
-        />
-        <span v-else>{{ getInitial(item.author) }}</span>
-      </v-avatar>
-    </div>
-
-    <div
-      v-if="selectedItem"
-      class="text-dark d-flex flex-column align-center"
+  <div class="avatar-list">
+    <v-avatar
+      v-for="(item, index) in items"
+      :key="item.id"
+      v-bind="getAvatarProps(index)"
+      @mouseenter="handleMouseEnter($event, index)"
+      @click="handleAvatarClick(index)"
     >
-      <span class="text-h6 font-weight-bold">{{ selectedItem.author }}</span>
-      <span>{{ selectedItem.authorAge }} ans</span>
-    </div>
-  </v-col>
+      <v-img
+        v-if="item.photo"
+        :src="formatImage(item.photo)"
+        :alt="`Photo de ${item.author}`"
+        cover
+      />
+      <span v-else>{{ getInitial(item.author) }}</span>
+    </v-avatar>
+  </div>
+
+  <div
+    v-if="selectedItem"
+    class="text-dark d-flex flex-column align-center"
+  >
+    <span class="text-h6 font-weight-bold">{{ selectedItem.author }}</span>
+    <span>{{ selectedItem.authorAge }} ans</span>
+  </div>
 </template>
 
 <script setup>

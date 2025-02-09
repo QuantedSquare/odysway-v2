@@ -6,6 +6,7 @@
     >
       <v-col
         cols="12"
+        sm="8"
       >
         <v-window v-model="currentReview">
           <v-window-item
@@ -22,16 +23,12 @@
     <v-row>
       <v-col
         cols="12"
+        class="d-flex flex-column align-center"
       >
-        <v-row
-          justify="center"
-          class="mt-4"
-        >
-          <ReviewerAvatars
-            :items="reviewsList"
-            @change-index="handleIndex"
-          />
-        </v-row>
+        <ReviewerAvatars
+          :items="reviewsList"
+          @change-index="handleIndex"
+        />
       </v-col>
       <v-col
         cols="12"
@@ -75,6 +72,6 @@ const handleIndex = (index) => {
 
 <style scoped>
 .row-height {
-  height: auto;
+  /* height: fit-content; */
 }
 </style>
