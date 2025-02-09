@@ -22,7 +22,7 @@ export default defineNuxtPlugin((app) => {
           colors: {
             'primary': '#2e8b57', // odysway green
             'secondary': '#bc5948', // odysway red
-            'cream': '##f5f5f0', // banner bg
+            'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
             'sectionBg': '#edeff8', // grey-home-bg
             'pinkBorder': '#ffc0cb',

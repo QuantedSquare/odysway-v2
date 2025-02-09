@@ -204,7 +204,7 @@ const scrollToSection = (index) => {
   width: 150px;
   background: linear-gradient(to right, #f5f5f0 0%, rgba(245, 245, 240, 0) 100%);
   mask: linear-gradient(0.25turn, black, black, transparent);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(1px);
   pointer-events: none;
   z-index: 2;
 }
@@ -245,7 +245,8 @@ const scrollToSection = (index) => {
 .product-card {
   min-width: 20em;
   min-height:25em;
-  border: 2px solid white;
+  border: 2px solid rgba(var(--v-theme-grey-lighten-2));
+  border-radius: 16px;
   margin-right: 24px;
   position: relative;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
