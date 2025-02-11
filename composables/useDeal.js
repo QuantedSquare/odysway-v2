@@ -8,7 +8,6 @@ export function useDeal() {
 
   const fetchDeal = async () => {
     const res = await apiRequest(`/ac/deals/${dealId.value}`)
-    console.log('fetch', res)
     deal.value = res
   }
   const createDeal = async (body) => {

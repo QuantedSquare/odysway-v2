@@ -174,11 +174,11 @@ const selectOptions = function (start, end) {
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 const nbTeen = ref(0)
-const firstName = ref('Yuzu')
-const lastName = ref('& Alex')
-const email = ref('ottmann.alex@gmail.com')
-const phoneCode = ref('+33')
-const phoneNumber = ref('631870876')
+const firstName = ref('')
+const lastName = ref('')
+const email = ref('')
+const phoneCode = ref('')
+const phoneNumber = ref('')
 
 onMounted(async () => {
   if (dealId.value) {
@@ -205,7 +205,6 @@ const saveToLocalStorage = () => {
 const loadFromLocalStorage = () => {
   const storedData = JSON.parse(localStorage.getItem('detailsData'))
   if (storedData) {
-    console.log('storedData', storedData)
     firstName.value = storedData.firstname
     lastName.value = storedData.lastname
     email.value = storedData.email
@@ -227,14 +226,21 @@ const rules = {
   email: schemaToRule(emailSchema),
   phone: schemaToRule(phoneSchema),
 }
-
+const totalValue = computed(() => {
+  const baseVoyage = 85000 // Récupérer de voyage
+  const reduction_enfant = 8000
+  const reduction_ado = 8000
+  return baseVoyage * nbAdults.value
+    + (baseVoyage - reduction_enfant) * nbChildren.value
+    + (baseVoyage - reduction_ado) * nbTeen.value
+})
 const submitStepData = async () => {
   // Validate form
   console.log('start submit', dealId.value)
   if (!model.value) return false
   try {
     const flattenedDeal = {
-      value: 85000,
+      value: totalValue.value, // # A retravailler avec toutes les valeurs
       title: 'Découverte du Népal',
       currency: 'eur',
       group: '1',

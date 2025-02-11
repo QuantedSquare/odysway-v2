@@ -50,6 +50,10 @@ export default defineNuxtPlugin((app) => {
       VTextFieldHome: VTextField,
     },
     defaults: {
+      VBtn: {
+        color: 'primary',
+        elevation: 0,
+      },
       VBtnPrimary: {
         color: 'primary',
         variant: 'text',

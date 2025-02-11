@@ -1,18 +1,8 @@
 <template>
   <v-container>
+    <!-- Slot for PromoForm -->
+    <slot />
     <v-row>
-      <v-col
-        class="d-flex align-center"
-        cols="12"
-      >
-        <!-- <h2>{{ $t('stepperDevisGroup.insurances') }}</h2> -->
-        <h2>Garanties <span class="text-body-1">avec</span></h2>
-        <img
-          width="90"
-          class="ml-2"
-          :src="page.fields.assurance_img"
-        >
-      </v-col>
       <!-- Medical Insurance -->
       <v-col
         v-if="insurances.rapatriement"

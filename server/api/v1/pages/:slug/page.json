@@ -27,6 +27,8 @@
     "preference_assurance_annulation": "preference_assurance_annulation",
     "accroche_assurance_annulation": "<div>\n        <ul>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vous couvre avant, pendant et après votre voyage</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Annulation pour toutes causes justifiées (événement extérieur, soudain, justifié et indépendant de votre volonté)</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Frais médicaux et hospitalisation</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vol de bagages</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Téléconsultation gratuite</span></li>\n        </ul>\n      </div>",
     "details_assurance_annulation": "details_assurance_annulation",
-    "insurances_unavailable": "insurances_unavailable"
+    "insurances_unavailable": "insurances_unavailable",
+    "phrase_dacceptation": "<p>J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.</p>",
+    "forced_indiv_room_text": "Texte chambre individuelle forcée"
   }
 }

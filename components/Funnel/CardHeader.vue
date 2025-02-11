@@ -9,15 +9,23 @@
         size="100"
         rounded="lg"
       />
-      <div class="text-white text-h6">
-        {{ props.titre }}
+      <div class="text-white text-h6 d-flex flex-column">
+        <span>
+          {{ props.titre }}
+        </span>
+        <span
+          v-if="props.travelType"
+          class="text-caption"
+        >
+          {{ props.travelType }}
+        </span>
       </div>
     </div>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps(['titre', 'image'])
+const props = defineProps(['titre', 'image', 'travelType'])
 </script>
 
 <style scoped>

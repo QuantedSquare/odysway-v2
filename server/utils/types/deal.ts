@@ -98,7 +98,7 @@ export const DealSchema = z.object({
   travelType: z.string().optional(),
   isCouple: z.string().optional(),
   specialRequest: z.string().optional(),
-  insurance: z.string().optional(),
+  insurance: z.array(z.string()).optional(),
   insuranceCommissionPrice: z.number().optional(),
   marginPerTraveler: z.number().optional(),
   totalMargin: z.number().optional(),

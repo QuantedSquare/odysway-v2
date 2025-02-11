@@ -1,4 +1,13 @@
 @use 'vuetify' with (
   // variables go here
   $body-font-family: 'Muli',
-)
+);
+
+a {
+  color: rgb(var(--v-theme-primary));
+  text-decoration: none; // Optional: removes underline
+  
+  &:hover {
+    text-decoration: underline; // Optional: adds underline on hover
+  }
+}
