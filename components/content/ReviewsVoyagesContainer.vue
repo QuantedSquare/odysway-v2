@@ -7,6 +7,7 @@
       <v-col
         cols="12"
         sm="8"
+        class="min-height-container d-flex flex-column justify-center align-center"
       >
         <v-window v-model="currentReview">
           <v-window-item
@@ -26,10 +27,12 @@
         class="d-flex flex-column align-center"
       >
         <ReviewerAvatars
+          v-model="currentReview"
           :items="reviewsList"
-          @change-index="handleIndex"
         />
       </v-col>
+    </v-row>
+    <v-row>
       <v-col
         cols="12"
         class="d-flex justify-center"
@@ -64,14 +67,10 @@ const onHomeReviews = computed(() => {
 const reviewsList = computed(() => {
   return smAndUp.value ? onHomeReviews.value : onHomeReviews.value.slice(0, 3)
 })
-
-const handleIndex = (index) => {
-  currentReview.value = index
-}
 </script>
 
 <style scoped>
-.row-height {
-  /* height: fit-content; */
+.min-height-container{
+  min-height: 40vh;
 }
 </style>

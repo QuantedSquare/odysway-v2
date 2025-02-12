@@ -44,7 +44,7 @@ const { height } = useDisplay()
 @media screen and (max-width: 600px) {
   .absolute-position {
     font-size: 3rem;
-
+    left:0;
     width: 100%;
   }
 }

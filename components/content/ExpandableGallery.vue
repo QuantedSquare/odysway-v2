@@ -32,8 +32,8 @@
         <div class="image-overlay" />
         <div class="content-overlay">
           <div class="w-100">
-            <h3 class="category-title text-no-wrap">{{ category?.title }}</h3>
-            <p class="category-description d-flex align-center justify-space-between ">
+            <h3 class="category-title text-to-wrap">{{ category?.title }}</h3>
+            <p class="category-description d-flex align-center justify-space-between ga-2 ">
               <span class="w-75">
                 Cliquez pour en apprendre plus à propos des {{ category?.title }}
               </span>
@@ -111,6 +111,19 @@ watch(xs, (newValue) => {
 </script>
 
 <style scoped>
+.text-to-wrap{
+  white-space: nowrap;
+}
+@media screen and (max-width: 1280px) {
+  .text-to-wrap{
+    white-space: normal;
+    padding-bottom: 10px;
+  }
+  .category-title{
+    margin:-30px 0 0px 0!important;
+  }
+
+}
 .image-gallery {
   display: flex;
   height: 24rem;
@@ -120,6 +133,9 @@ watch(xs, (newValue) => {
 @media screen and (max-width: 600px) {
   .image-gallery {
     flex-direction: column;
+  }
+  .category-title{
+    margin: 0!important;
   }
 }
 
@@ -228,9 +244,9 @@ watch(xs, (newValue) => {
 }
 
 .explore-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid white;
-  color: white;
+  background: rgba(255, 255, 255, 0.2)!important;
+  border: 1px solid white !important;
+  color: white!important;
   font-weight: bold;
   /* transition: all 0.3s ease-in-out; */
 }

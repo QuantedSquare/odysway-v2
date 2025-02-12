@@ -13,6 +13,9 @@ export default defineNuxtPlugin((app) => {
         mdi,
       },
     },
+    display: {
+      mobileBreakpoint: 600,
+    },
     ssr: true,
     theme: {
       defaultTheme: 'odysway',

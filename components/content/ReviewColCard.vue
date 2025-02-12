@@ -48,7 +48,6 @@
               :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 400 })"
               rounded="xl"
               cover
-              class=" green-border"
             />
             <div>
               <v-card-subtitle class="text-uppercase sub-headline text-dark no-white-space px-0">

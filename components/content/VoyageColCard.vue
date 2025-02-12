@@ -18,7 +18,7 @@
         <v-img
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 400 })"
           :alt="`Image principale du voyage ${voyage.title}`"
-          rounded="lg"
+          rounded="xl"
           contain
           class="hover-scale"
         >
@@ -58,7 +58,6 @@
             <div class="display-mobile">
               <div class="blur-overlay" />
               <div class="position-absolute bottom-text text-white bottom-0">
-
                 <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 ">
                   {{ voyage.title }}
                 </v-card-title>
@@ -191,12 +190,17 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   position:absolute;
   bottom:0;
 }
+
+.hover-scale:hover .blur-overlay {
+  height: 100%;
+}
 .hover-scale:hover{
   transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
 .hover-scale{
   transform:scale(1);
+
   transition: transform 0.2s ease-in-out;
 }
 </style>
