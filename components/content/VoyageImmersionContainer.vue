@@ -17,7 +17,8 @@
           :src="img(imageSrc, { format: 'webp', quality: 100, height })"
         /> -->
         <FlipCard
-          :image="img(imageSrc, { format: 'webp', quality: 100, height })"
+          :front-image="img(imageSrc, { format: 'webp', quality: 100, height })"
+          :back-image="img(backImg, { format: 'webp', quality: 100, height })"
           :description="`Le vrai voyage ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`"
           title="`Le voyage en immersion, le partage au cœur du voyage 🌍"
         />
@@ -43,6 +44,11 @@ defineProps({
     type: String,
     required: true,
     default: '/images/IMG-20240320-WA0124.jpg',
+  },
+  backImg: {
+    type: String,
+    required: true,
+    default: '/images/Capture d’écran 2025-01-08 à 09.41.11',
   },
 })
 

@@ -18,7 +18,7 @@
         <v-img
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 400 })"
           :alt="`Image principale du voyage ${voyage.title}`"
-          rounded="lg"
+          rounded="xl"
           contain
           class="hover-scale"
         >

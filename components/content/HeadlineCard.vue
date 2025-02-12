@@ -1,20 +1,32 @@
 <template>
-  <v-col
+  <div
     ref="sectionRef"
-    cols="12"
-    md="4"
-    class="text-dark"
+    class="product-card"
+    :class="{ 'card-unfocused': +currentSection !== +index }"
+    :style="{
+      transform: `scale(${+currentSection === +index ? 1 : 0.95})`,
+      opacity: +currentSection === +index ? 1 : 0.6,
+    }"
   >
-    <h2 class="my-6 pb-6 text-h5 font-weight-black">
+    <p class="text-secondary text-h5 ">
+      {{ String(+index + 1).padStart(2, '0') }}.
+    </p>
+    <h3 class="text-h5 mb-10">
       <slot name="title" />
-    </h2>
-    <div
-      class="fade-in-text"
+    </h3>
+    <p
+      class="text-body-2 fade-in-text"
       :class="{ 'is-visible': isVisible }"
     >
       <slot name="text" />
-    </div>
-  </v-col>
+    </p>
+    <div
+      class="card-overlay"
+      :style="{
+        opacity: +currentSection === +index ? 0 : 1,
+      }"
+    />
+  </div>
 </template>
 
 <script setup>
@@ -26,6 +38,7 @@ const props = defineProps({
     default: '0',
   },
 })
+const currentSection = inject('current')
 
 const isVisible = ref(false)
 const sectionRef = ref(null)
@@ -65,9 +78,6 @@ onUnmounted(() => {
     observer.unobserve(sectionRef.value.$el ?? sectionRef.value)
   }
 })
-// const attributedClasses = computed(() => {
-//   return props.index === '1' ? 'container1' : ''
-// })
 </script>
 
 <style scoped>
@@ -81,10 +91,59 @@ onUnmounted(() => {
   opacity: 1;
   transform: translateY(0);
 }
-/* .container1 {
-  background-color: white;
+
+.product-card {
+  min-width: 320px;
+  min-height:25em;
+  border: 2px solid rgba(var(--v-theme-secondary));
+  border-radius: 16px;
+  margin-right: 24px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+  will-change: transform, opacity;
+  display:flex;
+  flex-direction:column;
+  justify-content:start;
+  align-content: center;
+  padding:5em 2em;
+  gap:1em;
+}
+
+.card-overlay {
   position: absolute;
-  top:-100px;
-  left:0;
-} */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.card-unfocused {
+  transform: scale(0.95);
+  border: 2px solid rgba(var(--v-theme-grey-lighten-2));
+}
+@keyframes cardFocus {
+  from {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cardUnfocus {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+}
 </style>

@@ -1,9 +1,9 @@
 import page from './page.json'
 
 export default defineEventHandler((event) => {
-  console.log('event', event.context.params)
+  // console.log('event', event.context.params)
   const slug = event.context.params.slug
-  console.log('slug', slug)
+  // console.log('slug', slug)
   try {
     if (!slug) {
       throw createError({

@@ -8,7 +8,7 @@
       <slot
         name="title"
       />
-      <div class="d-flex flex-column ">
+      <div class="d-flex flex-column">
         <v-text-field
           v-model="search"
           label="Saisir votre prochaine destination"
@@ -17,16 +17,28 @@
           :append-inner-icon="mdiMagnify"
         />
         <div class="d-none d-md-flex justify-center ga-6 mt-5">
-          <v-btn variant="outlined">
+          <v-btn
+            variant="outlined"
+            color="white"
+          >
             Laponie
           </v-btn>
-          <v-btn variant="outlined">
+          <v-btn
+            variant="outlined"
+            color="white"
+          >
             Japon
           </v-btn>
-          <v-btn variant="outlined">
+          <v-btn
+            variant="outlined"
+            color="white"
+          >
             France
           </v-btn>
-          <v-btn variant="outlined">
+          <v-btn
+            variant="outlined"
+            color="white"
+          >
             Laos
           </v-btn>
         </div>
@@ -73,7 +85,7 @@ const { height } = useDisplay()
 @media screen and (max-width: 600px) {
   .absolute-position {
     font-size: 3rem;
-
+    left:0;
     width: 100%;
   }
 }

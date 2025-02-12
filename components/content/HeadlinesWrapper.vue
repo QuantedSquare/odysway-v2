@@ -4,20 +4,29 @@
       fluid
       class="pa-0"
     >
-      <div class="d-flex">
+      <div class="d-flex flex-column flex-md-row">
         <div
-          class="px-16 pt-16 title-wrapper will-change d-flex flex-column justify-center"
+          class="px-xl-16 pt-4 pt-md-16 mb-4 mb-md-0 title-wrapper will-change  align-center d-flex flex-column justify-center"
         >
-          <h1 class="text-h4 text-md-h2 font-weight-light mb-4 text-no-wrap">
-            Ce<br>
-            que nous<br>
-            <span class="text-secondary">proposons</span>
-          </h1>
-          <div class="text-caption text-grey text-no-wrap">
-            DRAG AND DROP
-          </div>
+          <template v-if="!isMobile">
+            <h1 class="text-h4 text-md-h2 font-weight-light mb-4 text-no-wrap">
+              Ce<br>
+              que nous<br>
+              <span class="text-secondary">proposons</span>
+            </h1>
+            <div class="text-caption text-grey text-no-wrap">
+              DRAG AND DROP
+            </div>
+          </template>
+          <template v-else>
+            <h1 class="text-h4 py-6 font-weight-light mb-4 text-no-wrap">
+              Ce que nous
+              <span class="text-secondary">proposons</span>
+            </h1>
+          </template>
         </div>
-        <div class="scroll-container mt-16">
+
+        <div class="scroll-container mt-md-16">
           <div
             ref="scrollContainer"
             class="d-flex justify-start relative"
@@ -30,40 +39,17 @@
               class="cards-wrapper will-change"
               :style="cardsTransform"
             >
-              <div
-                v-for="(card, index) in cards"
-                :key="index"
-                class="product-card pa-"
-                :class="{ 'card-unfocused': currentSection !== index }"
-                :style="{
-                  transform: `scale(${currentSection === index ? 1 : 0.95})`,
-                  opacity: currentSection === index ? 1 : 0.6,
-                }"
-              >
-                <p class="text-secondary text-h5 ">
-                  {{ String(index + 1).padStart(2, '0') }}.
-                </p>
-                <h3 class="text-h5 mb-10">
-                  {{ card.title }}
-                </h3>
-                <p class="text-body-2">
-                  {{ card.description }}
-                </p>
-                <div
-                  class="card-overlay"
-                  :style="{
-                    opacity: currentSection === index ? 0 : 1,
-                  }"
-                />
-              </div>
+              <ClientOnly>
+                <slot />
+              </ClientOnly>
             </div>
-            <div class="blur-gradient-left" />
+            <div class="d-none d-md-block blur-gradient-left" />
             <div class="blur-gradient-right" />
           </div>
         </div>
       </div>
 
-      <div class="py-16 d-flex justify-center align-center mt-6">
+      <div class="py-16  d-flex justify-center align-center mt-md-6">
         <v-divider />
         <div class="d-flex justify-space-between align-center">
           <div class="d-flex align-center">
@@ -96,6 +82,12 @@
 import { ref, computed } from 'vue'
 import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiFood, mdiCar, mdiDotsHorizontal } from '@mdi/js'
 
+import { useDisplay } from 'vuetify'
+
+const { md } = useDisplay()
+const isMobile = computed(() => {
+  return !md.value
+})
 const scrollContainer = ref(null)
 const currentSection = ref(0)
 const isDragging = ref(false)
@@ -130,9 +122,10 @@ const icons = [
   // mdiCar,
   // mdiDotsHorizontal,
 ]
+provide('current', currentSection)
 
 const minXPosition = computed(() => {
-  const cardWidth = 322 // card width + margin
+  const cardWidth = 350 // card width + margin
   return -((cards.length - 1) * cardWidth)
 })
 
@@ -160,7 +153,7 @@ const endDrag = () => {
   document.body.style.cursor = ''
 
   // Calculate snap position
-  const cardWidth = 322 // card width + margin
+  const cardWidth = 350 // card width + margin
   const nearestSection = Math.round(currentX.value / cardWidth)
   const targetX = nearestSection * cardWidth
 
@@ -176,23 +169,18 @@ const cardsTransform = computed(() => ({
 
 const scrollToSection = (index) => {
   isDragging.value = false
-  const cardWidth = 322
+  const cardWidth = 350
   currentX.value = -index * cardWidth
   currentSection.value = index
 }
 </script>
 
 <style scoped>
-.min-height{
-  min-height: 50vh;
-}
-
 .scroll-container {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   cursor: grab;
   user-select: none;
-  position: relative;
   position: relative;
   width: 100%;
 }
@@ -206,7 +194,7 @@ const scrollToSection = (index) => {
   mask: linear-gradient(0.25turn, black, black, transparent);
   backdrop-filter: blur(1px);
   pointer-events: none;
-  z-index: 2;
+  z-index: 2
 }
 
 /* .blur-gradient-right {
@@ -238,41 +226,8 @@ const scrollToSection = (index) => {
   will-change: transform;
   pointer-events: none;
   white-space:normal;
-  padding: 0 150px;
+  padding: 0.1em 150px;
 
-}
-
-.product-card {
-  min-width: 20em;
-  min-height:25em;
-  border: 2px solid rgba(var(--v-theme-grey-lighten-2));
-  border-radius: 16px;
-  margin-right: 24px;
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center center;
-  will-change: transform, opacity;
-  display:flex;
-  flex-direction:column;
-  justify-content:start;
-  align-content: center;
-  padding:5em 2em;
-  gap:1em;
-}
-
-.card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.3);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-}
-
-.card-unfocused {
-  transform: scale(0.95);
 }
 
 .nav-dot {
@@ -298,6 +253,12 @@ const scrollToSection = (index) => {
   }
   .title-wrapper {
     margin: 0 0.6em 0 0;
+    width: 100%;
+  }
+  .cards-wrapper {
+    padding: 0.1em 3rem;
+    left: 0;
+    transform: none;
   }
 
 }
@@ -313,27 +274,5 @@ const scrollToSection = (index) => {
 
 .ga-10 {
   gap: 10px;
-}
-
-@keyframes cardFocus {
-  from {
-    transform: scale(0.95);
-    opacity: 0.6;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes cardUnfocus {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(0.95);
-    opacity: 0.6;
-  }
 }
 </style>

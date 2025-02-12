@@ -2,15 +2,16 @@
   <div
     :class="props.class"
     class="flip-card"
+    @click="toggleFlip"
   >
     <div
       class="flip-card-inner"
-      :class="rotation[0]"
+      :class="[rotation[0], { 'is-flipped': isFlipped }]"
     >
       <!-- Front -->
       <div class="flip-card-front">
         <img
-          :src="props.image"
+          :src="props.frontImage"
           alt="image"
           class="card-image"
         >
@@ -24,34 +25,55 @@
         class="flip-card-back"
         :class="rotation[1]"
       >
-        <div class="card-content">
-          <h1 class="card-subtitle">
-            {{ props.subtitle }}
-          </h1>
-          <p class="card-description">
-            {{ props.description }}
-          </p>
+        <img
+          :src="props.backImage"
+          alt="image"
+          class="card-image"
+        >
+        <div class="card-title">
+          Placeholder text à remplacer
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue'
+<script setup>
+import { computed, ref } from 'vue'
 
-interface FlipCardProps {
-  image: string
-  title: string
-  subtitle?: string
-  description: string
-  rotate?: 'x' | 'y'
-  class?: string
-}
-
-const props = withDefaults(defineProps<FlipCardProps>(), {
-  rotate: 'y',
+const props = defineProps({
+  frontImage: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  subtitle: {
+    type: String,
+    default: '',
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  rotate: {
+    type: String,
+    default: 'y',
+    validator: value => ['x', 'y'].includes(value),
+  },
+  backImage: {
+    type: String,
+    default: '',
+  },
+  class: {
+    type: String,
+    default: '',
+  },
 })
+
+const isFlipped = ref(false)
 
 const rotationClass = {
   x: ['flip-x-front', 'flip-x-back'],
@@ -59,6 +81,10 @@ const rotationClass = {
 }
 
 const rotation = computed(() => rotationClass[props.rotate])
+
+const toggleFlip = () => {
+  isFlipped.value = !isFlipped.value
+}
 </script>
 
 <style scoped>
@@ -66,21 +92,26 @@ const rotation = computed(() => rotationClass[props.rotate])
   height: 20rem;
   width: 40rem;
   perspective: 1000px;
+  cursor: pointer;
+}
+.flip-card-inner:hover{
+ box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .flip-card-inner {
   position: relative;
   height: 100%;
   border-radius: 1rem;
-  transition: transform 0.5s;
+  transition: all 0.5s;
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner.flip-x-front {
+/* Remove hover styles and replace with is-flipped class */
+.flip-card-inner.flip-x-front.is-flipped {
   transform: rotateX(180deg);
 }
 
-.flip-card:hover .flip-card-inner.flip-y-front {
+.flip-card-inner.flip-y-front.is-flipped {
   transform: rotateY(180deg);
 }
 
@@ -117,7 +148,6 @@ const rotation = computed(() => rotationClass[props.rotate])
 
 .flip-card-back {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 1rem;
   color: #cbd5e1;
   transform: rotateY(180deg);
 }
