@@ -14,6 +14,9 @@
 </template>
 
 <script setup>
+// @Vlad: This component should not exist. It's a copy of HeroSection.vue
+// The diff between HeroSection and this need to be managed in props in a single component.
+
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 

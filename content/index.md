@@ -2,6 +2,9 @@
 
 #title
 Le partage <br> au cœur du voyage
+
+  :::SearchField
+  :::
 ::
 
 <!-- ::headlines-list
