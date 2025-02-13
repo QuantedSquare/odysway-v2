@@ -65,5 +65,5 @@ const drawerItems = ref([{
   // link: '/offre-cadeau',
 },
 ])
-console.log('drawer', drawer.value)
+console.log('drawer booking', drawer.value)
 </script>

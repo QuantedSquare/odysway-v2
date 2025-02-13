@@ -46,19 +46,17 @@ Le partage <br> au cœur du voyage
 Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
-::horizontal-carousel{scroll-amount="400" }
-
-  :::expandable-gallery{:categories-slug='["chemins-vers-soi", "echappees-sauvages", "immersions-locales", "regard-faune", "sentiers-aventures"]'}
-  :::
+::expandable-gallery{:categories-slug='["chemins-vers-soi", "echappees-sauvages", "immersions-locales", "regard-faune", "sentiers-aventures"]'}
 ::
 
 
 
-::title-container{id="thematiques"}
+
+::title-container
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
-::horizontal-carousel{scroll-amount="400" id="#thematiques"}
+::horizontal-carousel{scroll-amount="400"}
 
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::

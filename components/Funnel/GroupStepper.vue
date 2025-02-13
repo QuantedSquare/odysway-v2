@@ -16,7 +16,19 @@
           <v-card
             class="border-width w-fit-content "
             elevation="2"
+            :image="''"
           >
+            <template #image>
+              <Transition name="fade">
+                <!--  Remplacer src -->
+                <v-img
+                  v-if="voyage.imgSrc && currentStep >= 5"
+                  class="d-none d-md-block bg-img-filter"
+                  lazy-src="https://cdn.buttercms.com/zvLsa1w8QCaf6WaWc3of"
+                  height="400"
+                />
+              </Transition>
+            </template>
             <Transition name="fade">
               <v-img
                 v-if="voyage.imgSrc && currentStep === 0"
@@ -87,7 +99,7 @@
                       <v-col
                         cols="12"
                         md="6"
-                        class="d-flex align-start"
+                        class="d-flex align-end"
                       >
                         <FunnelStepsPaymentRedirect
                           :ref="(component) => registerStepComponent(component, 5)"
@@ -154,7 +166,7 @@
 
 <script setup>
 const route = useRoute()
-const slug = route.params.slug
+const slug = route.params.voyageSlug
 const { data: page, status: asyncDataStatus } = await useFetch('/api/v1/pages/' + slug)
 const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
   return queryCollection('voyages').where('slug', '=', slug).first()
@@ -162,7 +174,7 @@ const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
 const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)
-const currentStep = ref(4)
+const currentStep = ref(0)
 const skipperMode = ref('normal')
 
 const enablingNextButton = computed(() => {
@@ -192,9 +204,6 @@ const previousStep = () => {
   currentStep.value--
   validForm.value = true
 }
-watch(currentStep, () => {
-  console.log('currentStep', currentStep.value)
-})
 </script>
 
 <style scoped>
@@ -221,4 +230,7 @@ watch(currentStep, () => {
 .fade-leave-active {
   position: absolute;
 }
+.bg-img-filter{
+  filter: brightness(0.5);
+  }
 </style>

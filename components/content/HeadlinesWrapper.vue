@@ -95,14 +95,6 @@ const startX = ref(0)
 const currentX = ref(0)
 const dragStartX = ref(0)
 
-const cardsSlot = useTemplateRef('cardsSlot')
-
-const slots = useSlots()
-
-onMounted(() => {
-  console.log(slots)
-})
-
 const cards = [
   {
     title: 'Des séjours immersifs pour voyager autrement',
