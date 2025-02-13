@@ -33,6 +33,7 @@ export default defineNuxtPlugin((app) => {
             'footerBg': '#f5f5f5',
             'grey': '#8E8E8E',
             'on-grey': '#1D1D1B',
+            'orange-lighten-1': '#FFA726',
             'grey-lighten-1': '#C7C7C7',
             'grey-lighten-2': '#E9EAEC',
             'grey-lighten-3': '#F8F8F8',

@@ -1,6 +1,6 @@
 <template>
   <v-parallax
-    :src="img(imageSrc, { format: 'webp', quality: 70, height })"
+    :src="img(imageSrc, { format: 'webp', quality: 70 })"
     height="100vh"
     cover
   >
@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 defineProps({
@@ -24,7 +23,7 @@ defineProps({
   },
 })
 const img = useImage()
-const { height } = useDisplay()
+// const { height } = useDisplay()
 </script>
 
 <style scoped>
