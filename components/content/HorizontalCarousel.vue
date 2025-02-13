@@ -2,6 +2,34 @@
   <v-container
     class="d-flex align-center position-relative"
   >
+    <ClientOnly>
+      <Teleport
+        v-if="id"
+        :to="id"
+      >
+        <div class="d-flex align-center ga-4 ">
+          <v-btn
+            variant="outlined"
+            color="grey"
+            :disabled="arrivedState.left"
+            icon
+            @click="x -= Number(scrollAmount)"
+          >
+            <v-icon-chevron
+              :icon="mdiChevronLeft"
+            />
+          </v-btn>
+          <v-btn-voyage
+            icon
+            @click="x += Number(scrollAmount)"
+          >
+            <v-icon-chevron
+              :icon="mdiChevronRight"
+            />
+          </v-btn-voyage>
+        </div>
+      </Teleport>
+    </ClientOnly>
     <v-btn-voyage
       v-if="!arrivedState.left"
       icon
@@ -40,6 +68,10 @@ defineProps({
     type: String,
     required: true,
     default: '400',
+  },
+  id: {
+    type: String,
+    default: null,
   },
 })
 const scrollContainer = ref(null)

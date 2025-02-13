@@ -1,13 +1,14 @@
 <template>
   <v-app>
     <HeaderOdysway
-      @show-drawer="drawer = !drawer"
+      @show-drawer="toggleDrawer()"
     />
     <ClientOnly>
       <v-navigation-drawer
         v-if="$vuetify.display.mdAndDown"
         v-model="drawer"
         location="right"
+        disable-resize-watcher
       >
         <v-list
           v-for="item, index in drawerItems"
@@ -66,4 +67,8 @@ const drawerItems = ref([{
   // link: '/offre-cadeau',
 },
 ])
+function toggleDrawer() {
+  console.log('drawer', drawer.value)
+  drawer.value = !drawer.value
+}
 </script>
