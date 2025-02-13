@@ -84,9 +84,9 @@ import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiFood, mdiCar, mdiDotsHo
 
 import { useDisplay } from 'vuetify'
 
-const { md } = useDisplay()
+const { mdAndUp } = useDisplay()
 const isMobile = computed(() => {
-  return !md.value
+  return !mdAndUp.value
 })
 const scrollContainer = ref(null)
 const currentSection = ref(0)

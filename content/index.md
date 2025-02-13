@@ -4,31 +4,6 @@
 Le partage <br> au cœur du voyage
 ::
 
-<!-- ::headlines-list
-  :::headline-column{index=1}
-  #title
-  Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
-  
-  #text
-  Des voyages conçus avec soin et passion pour vous faire découvrir l’intimité d’une région ou d'un pays, au- delà des clichés, de la manière la plus durable possible.
-  :::
-  
-  :::headline-column{index=2}
-  #title
-  Des départs en [petits groupes]{style="color:#bc5948;"} ou [privatifs]{style="color:#bc5948;"}
-  
-  #text
-  Chez Odysway, voyagez comme vous le souhaitez : rejoignez un petit groupe pour partager ou privatisez votre séjour. Le choix est entre vos mains !
-  :::
-
-  :::headline-column{index=3}
-  #title
-  Une agence proche de [vous]{style="color:#bc5948;"}
-  
-  #text
-  Votre conseiller(ère) voyage vous accompagne à chaque étape, avec écoute et disponibilité. En restant en contact direct via WhatsApp, nous veillons à ce que votre voyage soit fluide et serein, du premier échange jusqu’à votre retour.
-  :::
-:: -->
 
 
 ::headlines-wrapper
@@ -63,36 +38,12 @@ Le partage <br> au cœur du voyage
   :::
 ::
 
-<!-- 
+
 ::title-container
 Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
-::horizontal-carousel{scroll-amount="400"}
-
-  :::categ-col-card{categorie-slug="chemins-vers-soi"}
-  :::
-
-  :::categ-col-card{categorie-slug="echappees-sauvages"}
-  :::
-
-  :::categ-col-card{categorie-slug="immersions-locales"}
-  :::
-
-  :::categ-col-card{categorie-slug="regard-faune"}
-  :::
-
-  :::categ-col-card{categorie-slug="sentiers-aventures"}
-  :::
-:: -->
-
-<!-- Test new component da -->
-
-::title-container
-Nos thématiques [préférées]{style="color: #2e8b57;"} Test 🫶
-::
-
-::horizontal-carousel{scroll-amount="400"}
+::horizontal-carousel{scroll-amount="400" }
 
   :::expandable-gallery{:categories-slug='["chemins-vers-soi", "echappees-sauvages", "immersions-locales", "regard-faune", "sentiers-aventures"]'}
   :::
@@ -100,11 +51,11 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} Test 🫶
 
 
 
-::title-container
+::title-container{id="thematiques"}
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
-::horizontal-carousel{scroll-amount="400"}
+::horizontal-carousel{scroll-amount="400" id="#thematiques"}
 
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
