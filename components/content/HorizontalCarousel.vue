@@ -8,7 +8,9 @@
         next
       </v-btn>
     </v-row> -->
-
+    <client-only>
+      <div :id="uniqString" />
+    </client-only>
     <v-container
       class="d-flex align-center position-relative"
     >
@@ -58,6 +60,22 @@
           class="w-100"
           :show-arrow="false"
         >
+          <template #next="{ next }">
+            <client-only>
+              <Teleport :to="'#' + uniqString">
+                <v-btn
+                  variant="outlined"
+                  color="grey"
+                  icon
+                  @click="test(next)"
+                >
+                  <!-- <v-icon-chevron
+                    :icon="mdiChevronLeft"
+                  /> -->
+                </v-btn>
+              </Teleport>
+            </client-only>
+          </template>
           <slot />
         </v-slide-group>
       </v-row>
@@ -79,6 +97,8 @@
 <script setup>
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 
+const uniqString = Math.random().toString(36).substring(7)
+console.log(uniqString)
 const currentWindow = ref(0)
 defineProps({
   scrollAmount: {
@@ -87,6 +107,9 @@ defineProps({
     default: '400',
   },
 })
+const test = (tik) => {
+  console.log('test', tik)
+}
 </script>
 
 <style scoped>

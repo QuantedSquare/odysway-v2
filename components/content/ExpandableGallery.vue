@@ -25,8 +25,8 @@
             }"
             class="image-wrapper"
             :class="{
-              expanded: isMobile.value && expandedIndex.value === id,
-              isMobile: isMobile.value,
+              expanded: isMobile && expandedIndex === category?.id,
+              isMobile: isMobile,
             }"
             @click.stop="handleClick(category?.id)"
           >
@@ -70,7 +70,7 @@ import { ref, watch } from 'vue'
 import { useDisplay } from 'vuetify'
 
 const router = useRouter()
-const { xs } = useDisplay()
+const { mdAndDown } = useDisplay()
 const expandedIndex = ref(null)
 const isMobile = ref(false)
 
@@ -81,7 +81,7 @@ const props = defineProps({
   },
 })
 
-const { data: categories, status } = await useAsyncData(
+const { data: categories, status } = useAsyncData(
   `categories-${props.categoriesSlug.join('-')}`,
   async () => {
     const categoriesData = await Promise.all(
@@ -89,6 +89,8 @@ const { data: categories, status } = await useAsyncData(
         queryCollection('categories').where('slug', '=', slug).first(),
       ),
     )
+    // categoriesData.forEach((category, index))
+
     return categoriesData
   },
   {
@@ -96,7 +98,6 @@ const { data: categories, status } = await useAsyncData(
     immediate: true,
   },
 )
-
 const handleClick = (id) => {
   if (isMobile.value) {
     expandedIndex.value = expandedIndex.value === id ? null : id
@@ -112,7 +113,7 @@ const clickOutside = (id) => {
   }
 }
 
-watch(xs, (newValue) => {
+watch(mdAndDown, (newValue) => {
   isMobile.value = newValue
 }, {
   immediate: true,
@@ -144,7 +145,7 @@ watch(xs, (newValue) => {
     flex-direction: column;
   }
   .category-title{
-    margin: 0!important;
+    margin:  0!important;
   }
 }
 
@@ -234,7 +235,7 @@ watch(xs, (newValue) => {
 
 .image-wrapper:hover .category-title,
 .image-wrapper.expanded .category-title {
-  transform: translateY(-1.5rem);
+  transform: translateY(0);
 }
 
 .category-description {

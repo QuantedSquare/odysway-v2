@@ -31,7 +31,7 @@ const props = defineProps({
 
 const img = useImage()
 
-const { data: categorie } = await useAsyncData(`categorie-${props.categorieSlug}`, () => {
+const { data: categorie } = useAsyncData(`categorie-${props.categorieSlug}`, () => {
   return queryCollection('categories').where('slug', '=', props.categorieSlug).first()
 })
 </script>

@@ -28,7 +28,7 @@
 <script setup>
 const img = useImage()
 
-const { data: partenaires } = await useAsyncData('partenaires', () => {
+const { data: partenaires } = useAsyncData('partenaires', () => {
   return queryCollection('partenaires').all()
 })
 </script>

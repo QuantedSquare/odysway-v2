@@ -68,7 +68,6 @@ const drawerItems = ref([{
 },
 ])
 function toggleDrawer() {
-  console.log('drawer', drawer.value)
   drawer.value = !drawer.value
 }
 </script>

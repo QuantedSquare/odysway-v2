@@ -56,7 +56,7 @@ import { useDisplay } from 'vuetify'
 const currentReview = ref(0)
 const { smAndUp } = useDisplay()
 
-const { data: reviews } = await useAsyncData('reviews', () => {
+const { data: reviews } = useAsyncData('reviews', () => {
   return queryCollection('reviews').all()
 })
 

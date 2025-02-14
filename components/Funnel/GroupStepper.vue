@@ -168,7 +168,7 @@
 const route = useRoute()
 const slug = route.params.voyageSlug
 const { data: page, status: asyncDataStatus } = await useFetch('/api/v1/pages/' + slug)
-const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
+const { data: voyage, status } = useAsyncData(`voyage-${slug}`, () => {
   return queryCollection('voyages').where('slug', '=', slug).first()
 })
 const validForm = ref(true)

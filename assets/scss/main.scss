@@ -5,10 +5,9 @@
 );
 
 a {
-  color: rgb(var(--v-theme-primary));
-  text-decoration: none; // Optional: removes underline
+  text-decoration: none; 
   
   &:hover {
-    text-decoration: underline; // Optional: adds underline on hover
+    text-decoration: underline; 
   }
 }
