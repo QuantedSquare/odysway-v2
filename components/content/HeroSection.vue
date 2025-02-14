@@ -1,10 +1,10 @@
 <template>
-  <v-parallax
+  <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
     height="100vh"
     cover
   >
-    <div class="h-100  d-flex align-center">
+    <div class="h-100 d-flex align-center">
       <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
         <v-row
           justify="center"
@@ -46,7 +46,7 @@
         </v-row>
       </v-container>
     </div>
-  </v-parallax>
+  </v-img>
 </template>
 
 <script setup>

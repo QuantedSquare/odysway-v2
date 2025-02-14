@@ -1,4 +1,6 @@
 ::hero-section{imageSrc="/images/AdobeStock_124472096.jpeg"}
+#title
+Immersion hivernale en terre béarnaise
 
 ::
 
