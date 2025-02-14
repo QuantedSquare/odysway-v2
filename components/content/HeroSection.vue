@@ -20,16 +20,12 @@
               class="img-shadow"
               :src="img('/logos/logo_blanc.png', { format: 'webp', quality: 70 })"
             />
-            <h1>
-              <span class="text-h3 text-md-h2">
-                <slot
-                  name="title"
-                />
+            <h1 class="title-container">
+              <span class="responsive-title text-no-wrap">
+                <slot name="title" />
               </span>
-              <span class="text-h5 text-md-h4">
-                <slot
-                  name="title-2"
-                />
+              <span class="responsive-subtitle text-no-wrap">
+                <slot name="title-2" />
               </span>
             </h1>
           </v-col>
@@ -71,5 +67,16 @@ const img = useImage()
 }
 .img-shadow{
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+.title-container {
+  container-type: inline-size;
+}
+.title-container .responsive-title {
+  font-size: 19.2cqw;
+  text-align: start;
+}
+.responsive-subtitle {
+  font-size: 10.9cqw;
+  text-align: start;
 }
 </style>
