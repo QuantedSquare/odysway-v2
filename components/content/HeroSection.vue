@@ -1,6 +1,6 @@
 <template>
   <v-parallax
-    :src="img(imageSrc, { format: 'webp', quality: 70 })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
     height="100vh"
     cover
   >

@@ -43,12 +43,13 @@ defineProps({
   imageSrc: {
     type: String,
     required: true,
-    default: '/images/IMG-20240320-WA0124.jpg',
+    // Why default if required ?
+    // default: '/images/IMG-20240320-WA0124.jpg',
   },
   backImg: {
     type: String,
     required: true,
-    default: '/images/Capture d’écran 2025-01-08 à 09.41.11',
+    // default: '/images/Capture d’écran 2025-01-08 à 09.41.11',
   },
 })
 
