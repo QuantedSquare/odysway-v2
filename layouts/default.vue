@@ -5,7 +5,6 @@
     />
     <ClientOnly>
       <v-navigation-drawer
-        v-if="$vuetify.display.mdAndDown"
         v-model="drawer"
         location="right"
         disable-resize-watcher
@@ -26,7 +25,7 @@
         </v-list>
       </v-navigation-drawer>
     </ClientOnly>
-    <v-main>
+    <v-main style="--v-layout-top: 64px;">
       <slot />
     </v-main>
     <FooterOdysway />
@@ -36,37 +35,39 @@
 <script setup>
 const drawer = ref(false)
 
-const drawerItems = ref([{
-  title: 'Nos Destinations',
-  value: 'Nos Destinations',
-  link: '/destinations',
-},
-{
-  title: 'Prochains départs',
-  value: 'Prochains départs',
+const drawerItems = ref([
+  {
+    title: 'Nos Destinations',
+    value: 'Nos Destinations',
+    link: '/destinations',
+  },
+  {
+    title: 'Prochains départs',
+    value: 'Prochains départs',
   // link: '/prochains-departs',
-},
-{
-  title: 'Prendre RDV avec un conseiller',
-  value: 'Prendre RDV avec un conseiller',
+  },
+  {
+    title: 'Prendre RDV avec un conseiller',
+    value: 'Prendre RDV avec un conseiller',
   // link: '/calendly',
-},
-{
-  title: 'À propos',
-  value: 'À propos',
-  link: '/concept',
-},
-{
-  title: 'Avis',
-  value: 'Avis',
-  link: '/avis-voyageurs',
-},
-{
-  title: 'Carte cadeau',
-  value: 'Carte cadeau',
+  },
+  {
+    title: 'À propos',
+    value: 'À propos',
+    link: '/concept',
+  },
+  {
+    title: 'Avis',
+    value: 'Avis',
+    link: '/avis-voyageurs',
+  },
+  {
+    title: 'Carte cadeau',
+    value: 'Carte cadeau',
   // link: '/offre-cadeau',
-},
+  },
 ])
+
 function toggleDrawer() {
   drawer.value = !drawer.value
 }

@@ -3,53 +3,41 @@
     elevation="0"
     class="px-4"
   >
-    <v-row>
-      <v-col cols="auto">
-        <v-app-bar-title class="ml-3">
-          <NuxtLink
-            to="/"
-          >
-            <v-img
-              width="150px"
-              max-height="48px"
-              :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 70, width: 150 })"
-              contain
-            />
-          </NuxtLink>
-        </v-app-bar-title>
-      </v-col>
-    </v-row>
+    <NuxtLink
+      to="/"
+    >
+      <v-img
+        min-width="150px"
+        :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 150 })"
+      />
+    </NuxtLink>
 
     <v-spacer />
 
-    <template
-      #append
+    <v-btn
+      icon
+      class="d-inline d-lg-none"
     >
-      <v-btn
-        icon
-        class="d-inline d-lg-none"
-      >
-        <v-icon color="grey">
-          {{ mdiMagnify }}
-        </v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        class="mx-md-4"
-      >
-        <v-icon>{{ mdiAccountCircle }}</v-icon>
-      </v-btn>
-      <v-btn
-        class="d-inline d-lg-none"
-        icon
-        @click.stop="$emit('show-drawer')"
-      >
-        <v-icon>{{ mdiDotsVertical }}</v-icon>
-      </v-btn>
-    </template>
-    <v-row
+      <v-icon color="grey">
+        {{ mdiMagnify }}
+      </v-icon>
+    </v-btn>
+    <v-btn
+      icon
+      class="mx-md-4"
+    >
+      <v-icon>{{ mdiAccountCircle }}</v-icon>
+    </v-btn>
+    <v-btn
+      class="d-inline d-lg-none"
+      icon
+      @click.stop="$emit('show-drawer')"
+    >
+      <v-icon>{{ mdiDotsVertical }}</v-icon>
+    </v-btn>
+    <!-- <v-row
       justify="end"
-      class="d-none d-lg-flex"
+      class="d-none d-md-flex"
     >
       <v-col
         class="d-flex align-center justify-end"
@@ -96,7 +84,7 @@
           </div>
         </v-btn-secondary>
       </v-col>
-    </v-row>
+    </v-row> -->
   </v-app-bar>
 </template>
 

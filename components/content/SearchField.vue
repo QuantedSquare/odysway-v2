@@ -1,40 +1,38 @@
 <template>
   <div class="d-flex flex-column max-width">
-    <client-only>
-      <v-text-field
-        v-model="search"
-        label="Saisir votre prochaine destination"
-        hide-details
-        class="mt-5 inner-textfield"
-        :append-inner-icon="mdiMagnify"
-      />
-      <div class="d-none d-md-flex justify-center ga-6 mt-5">
-        <v-btn
-          variant="outlined"
-          color="white"
-        >
-          Laponie
-        </v-btn>
-        <v-btn
-          variant="outlined"
-          color="white"
-        >
-          Japon
-        </v-btn>
-        <v-btn
-          variant="outlined"
-          color="white"
-        >
-          France
-        </v-btn>
-        <v-btn
-          variant="outlined"
-          color="white"
-        >
-          Laos
-        </v-btn>
-      </div>
-    </client-only>
+    <v-text-field
+      v-model="search"
+      label="Saisir votre prochaine destination"
+      hide-details
+      class="mt-5 inner-textfield"
+      :append-inner-icon="mdiMagnify"
+    />
+    <div class="d-none d-md-flex justify-center ga-6 mt-5">
+      <v-btn
+        variant="outlined"
+        color="white"
+      >
+        Laponie
+      </v-btn>
+      <v-btn
+        variant="outlined"
+        color="white"
+      >
+        Japon
+      </v-btn>
+      <v-btn
+        variant="outlined"
+        color="white"
+      >
+        France
+      </v-btn>
+      <v-btn
+        variant="outlined"
+        color="white"
+      >
+        Laos
+      </v-btn>
+    </div>
   </div>
 </template>
 
