@@ -5,28 +5,29 @@
     cover
   >
     <div class="h-100  d-flex align-center">
-      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow  text-center">
+      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
         <v-row
           justify="center"
           align="center"
         >
           <v-col
-            cols="10"
-            md="6"
+            cols="12"
+            md="auto"
           >
-            <v-img
+            <!-- <v-img
               contain
               width="100%"
               class="img-shadow"
               :src="img('/logos/logo_blanc.png', { format: 'webp', quality: 70 })"
-            />
-            <h1 class="title-container">
-              <span class="responsive-title text-no-wrap">
+            /> -->
+            <h1 class="text-h3 text-md-h1">
+              <slot name="title" />
+              <!-- <span class="responsive-title text-no-wrap">
                 <slot name="title" />
               </span>
               <span class="responsive-subtitle text-no-wrap">
                 <slot name="title-2" />
-              </span>
+              </span> -->
             </h1>
           </v-col>
         </v-row>

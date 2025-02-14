@@ -1,20 +1,18 @@
 <template>
-  <div class="bg-cream min-height d-flex align-center">
+  <div class="bg-cream">
     <v-container>
-      <div class="d-flex flex-column flex-md-row">
+      <div class="d-flex flex-column flex-md-row pt-4">
         <div
-          class="px-xl-16 pt-4 pt-md-16 mb-4 mb-md-0 title-wrapper will-change  align-center d-flex flex-column justify-center"
+          class="px-xl-16 pt-md-16 mb-4 mb-md-0 title-wrapper will-change align-center d-none d-md-flex flex-column justify-center"
         >
-          <template v-if="!isMobile">
-            <h1 class="text-h4 text-md-h2 font-weight-light mb-4 text-no-wrap">
-              Ce<br>
-              que nous<br>
-              <span class="text-secondary">proposons</span>
-            </h1>
-            <div class="text-caption text-grey text-no-wrap">
-              DRAG AND DROP
-            </div>
-          </template>
+          <h1 class="text-h4 text-md-h2 font-weight-light mb-4 text-no-wrap">
+            Ce<br>
+            que nous<br>
+            <span class="text-secondary">proposons</span>
+          </h1>
+          <div class="text-caption text-grey text-no-wrap">
+            DRAG AND DROP
+          </div>
         </div>
 
         <div class="scroll-container mt-md-16">
@@ -69,8 +67,7 @@
         <v-divider color="primary" />
       </div>
       <h1
-        v-if="isMobile"
-        class="text-h5 font-weight-light text-no-wrap text-center my-6"
+        class="d-block d-md-none text-h5 font-weight-light text-no-wrap text-center my-6"
       >
         Ce que nous
         <span class="text-secondary">proposons</span>
@@ -85,10 +82,8 @@ import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiCar } from '@mdi/js'
 
 import { useDisplay } from 'vuetify'
 
-const { mdAndUp, lg, md } = useDisplay()
-const isMobile = computed(() => {
-  return !mdAndUp.value
-})
+const { md } = useDisplay()
+
 const scrollContainer = ref(null)
 const currentSection = ref(0)
 const isDragging = ref(false)
