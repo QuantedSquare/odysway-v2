@@ -1,6 +1,7 @@
 <template>
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
+    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
     height="100vh"
     cover
   >
