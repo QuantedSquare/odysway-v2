@@ -55,6 +55,7 @@
         class="d-flex align-center justify-end"
       >
         <v-text-field-home
+          v-model="searchText"
           v-click-outside="() => searchOpen = false"
           type="text"
           placeholder="Rechercher"
@@ -103,8 +104,7 @@
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
-const emit = defineEmits(['show-drawer'])
-
+const searchText = ref('')
 const img = useImage()
 
 const items = ref([

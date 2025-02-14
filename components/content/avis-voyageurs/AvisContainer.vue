@@ -106,7 +106,7 @@ import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
 
 const maxNote = ref(5)
 
-const { data: reviews } = await useAsyncData(() => {
+const { data: reviews } = useAsyncData(() => {
   return queryCollection('avis').all()
 })
 

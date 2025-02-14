@@ -19,10 +19,16 @@
             </div>
           </template>
           <template v-else>
-            <h1 class="text-h4 py-6 font-weight-light mb-4 text-no-wrap">
-              Ce que nous
-              <span class="text-secondary">proposons</span>
-            </h1>
+            <v-row
+              justify="center"
+            >
+              <v-col>
+                <h1 class="text-h5 py-6 font-weight-light mb-4 text-no-wrap">
+                  Ce que nous
+                  <span class="text-secondary">proposons</span>
+                </h1>
+              </v-col>
+            </v-row>
           </template>
         </div>
 
@@ -34,6 +40,9 @@
             @mousemove="onDrag"
             @mouseup="endDrag"
             @mouseleave="endDrag"
+            @touchstart="startTouchDrag"
+            @touchmove="onTouchDrag"
+            @touchend="endTouchDrag"
           >
             <div
               class="cards-wrapper will-change"
@@ -80,13 +89,13 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiFood, mdiCar, mdiDotsHorizontal } from '@mdi/js'
+import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiCar } from '@mdi/js'
 
 import { useDisplay } from 'vuetify'
 
-const { md } = useDisplay()
+const { mdAndUp } = useDisplay()
 const isMobile = computed(() => {
-  return !md.value
+  return !mdAndUp.value
 })
 const scrollContainer = ref(null)
 const currentSection = ref(0)
@@ -94,14 +103,6 @@ const isDragging = ref(false)
 const startX = ref(0)
 const currentX = ref(0)
 const dragStartX = ref(0)
-
-const cardsSlot = useTemplateRef('cardsSlot')
-
-const slots = useSlots()
-
-onMounted(() => {
-  console.log(slots)
-})
 
 const cards = [
   {
@@ -126,8 +127,7 @@ const icons = [
   mdiFileDocumentOutline,
   mdiAirplane,
   mdiBed,
-  mdiFood,
-  // mdiCar,
+  mdiCar,
   // mdiDotsHorizontal,
 ]
 provide('current', currentSection)
@@ -147,11 +147,7 @@ const startDrag = (e) => {
 const onDrag = (e) => {
   if (!isDragging.value) return
   e.preventDefault()
-
-  // Calculate the new position
   const newX = e.clientX - startX.value
-
-  // Clamp the position between the minimum (rightmost) and maximum (leftmost) bounds
   currentX.value = Math.min(0, Math.max(minXPosition.value, newX))
 }
 
@@ -159,13 +155,34 @@ const endDrag = () => {
   if (!isDragging.value) return
   isDragging.value = false
   document.body.style.cursor = ''
+  snapToNearestCard()
+}
 
-  // Calculate snap position
+// Add touch event handlers
+const startTouchDrag = (e) => {
+  isDragging.value = true
+  startX.value = e.touches[0].clientX - currentX.value
+  dragStartX.value = currentX.value
+}
+
+const onTouchDrag = (e) => {
+  if (!isDragging.value) return
+  e.preventDefault()
+  const newX = e.touches[0].clientX - startX.value
+  currentX.value = Math.min(0, Math.max(minXPosition.value, newX))
+}
+
+const endTouchDrag = () => {
+  if (!isDragging.value) return
+  isDragging.value = false
+  snapToNearestCard()
+}
+
+// Extract the snapping logic to a separate function to avoid code duplication
+const snapToNearestCard = () => {
   const cardWidth = 350 // card width + margin
   const nearestSection = Math.round(currentX.value / cardWidth)
   const targetX = nearestSection * cardWidth
-
-  // Ensure the target position is within bounds
   currentX.value = Math.min(0, Math.max(minXPosition.value, targetX))
   currentSection.value = Math.abs(Math.round(currentX.value / cardWidth))
 }
@@ -204,19 +221,6 @@ const scrollToSection = (index) => {
   pointer-events: none;
   z-index: 2
 }
-
-/* .blur-gradient-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 150px;
-  background: linear-gradient(to left, #f5f5f0 0%, rgba(245, 245, 240, 0) 100%);
-  mask: linear-gradient(0.25turn, transparent, black, black);
-  backdrop-filter: blur(4px);
-  pointer-events: none;
-  z-index: 2;
-} */
 
 .scroll-container:active {
   cursor: grabbing;
@@ -268,7 +272,6 @@ const scrollToSection = (index) => {
     left: 0;
     transform: none;
   }
-
 }
 
 .nav-dot.text-secondary {

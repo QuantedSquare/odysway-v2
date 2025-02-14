@@ -16,7 +16,7 @@
             cols="12"
             md="8"
           >
-            <h5 class="text-h5 text-center text-md-left">
+            <h5 class="text-h5 text-center text-md-left ">
               2 fois par mois, nos inspirations et idées pour voyager autrement 🌍
             </h5>
           </v-col>

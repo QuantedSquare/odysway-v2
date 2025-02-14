@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="voyage && voyageSlug"
+    v-if="voyage && voyage.imgSrc"
     cols="12"
     sm="6"
     md="3"
@@ -145,10 +145,9 @@ const props = defineProps({
     required: true,
   },
 })
-
 const img = useImage()
 
-const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => {
+const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
 </script>

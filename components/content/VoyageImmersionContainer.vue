@@ -12,13 +12,9 @@
         md="4"
         class="pa-10 d-flex justify-center"
       >
-        <!-- <v-img
-          rounded="lg"
-          :src="img(imageSrc, { format: 'webp', quality: 100, height })"
-        /> -->
         <FlipCard
-          :front-image="img(imageSrc, { format: 'webp', quality: 100, height })"
-          :back-image="img(backImg, { format: 'webp', quality: 100, height })"
+          :front-image="img(imageSrc, { format: 'webp', quality: 100 })"
+          :back-image="img(backImg, { format: 'webp', quality: 100 })"
           :description="`Le vrai voyage ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`"
           title="`Le voyage en immersion, le partage au cœur du voyage 🌍"
         />
@@ -36,7 +32,6 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 defineProps({
@@ -53,6 +48,5 @@ defineProps({
   },
 })
 
-const { height, mobile } = useDisplay()
 const img = useImage()
 </script>

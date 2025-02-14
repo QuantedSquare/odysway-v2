@@ -1,59 +1,68 @@
 <template>
-  <v-col cols="auto">
-    <div
-      v-if="status === 'pending'"
-      class="image-gallery"
+  <v-container
+    class="d-flex align-center position-relative"
+  >
+    <v-row
+      ref="scrollContainer"
+      class="flex-nowrap overflow-auto hidden-scroll"
     >
-      <v-skeleton-loader type="card" />
-    </div>
-    <div
-      v-else-if="status === 'success'"
-      class="image-gallery"
-    >
-      <NuxtLink
-        v-for="(category) in categories"
-        :key="category?.id"
-        v-click-outside="{
-          handler: clickOutside(category?.id),
-        }"
-        class="image-wrapper"
-        :class="{
-          expanded: isMobile.value && expandedIndex.value === id,
-          isMobile: isMobile.value,
-        }"
-        @click.stop="handleClick(category?.id)"
-      >
-        <NuxtImg
-          v-if="category?.image"
-          :src="category.image"
-          :alt="category?.title"
-        />
-        <div class="blur-overlay" />
-        <div class="image-overlay" />
-        <div class="content-overlay">
-          <div class="w-100">
-            <h3 class="category-title text-to-wrap">{{ category?.title }}</h3>
-            <p class="category-description d-flex align-center justify-space-between ga-2 ">
-              <span class="w-75">
-                Cliquez pour en apprendre plus à propos des {{ category?.title }}
-              </span>
-              <client-only>
-                <v-btn
-                  v-if="isMobile"
-                  class="explore-btn"
-                  :to="`/thematiques/${category?.slug}`"
-                  @click.stop
-                >
-                  Explorez
-                </v-btn>
-              </client-only>
-            </p>
-          </div>
-
+      <v-col cols="auto">
+        <div
+          v-if="status === 'pending'"
+          class="image-gallery"
+        >
+          <v-skeleton-loader type="card" />
         </div>
-      </NuxtLink>
-    </div>
-  </v-col>
+        <div
+          v-else-if="status === 'success'"
+          class="image-gallery"
+        >
+          <NuxtLink
+            v-for="(category) in categories"
+            :key="category?.id"
+            v-click-outside="{
+              handler: clickOutside(category?.id),
+            }"
+            class="image-wrapper"
+            :class="{
+              expanded: isMobile && expandedIndex === category?.id,
+              isMobile: isMobile,
+            }"
+            @click.stop="handleClick(category?.id)"
+          >
+            <NuxtImg
+              v-if="category?.image"
+              :src="category.image"
+              :alt="category?.title"
+            />
+            <div class="blur-overlay" />
+            <div class="image-overlay" />
+            <div class="content-overlay">
+              <div class="w-100">
+                <h3 class="category-title text-to-wrap">{{ category?.title }}</h3>
+                <p class="category-description d-flex align-center justify-space-between ga-2 ">
+                  <span class="w-75">
+                    Cliquez pour en apprendre plus à propos des {{ category?.title }}
+                  </span>
+                  <client-only>
+                    <v-btn
+                      v-if="isMobile"
+                      class="explore-btn"
+                      :to="`/thematiques/${category?.slug}`"
+                      @click.stop
+                    >
+                      Explorez
+                    </v-btn>
+                  </client-only>
+                </p>
+              </div>
+
+            </div>
+          </NuxtLink>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup>
@@ -61,7 +70,7 @@ import { ref, watch } from 'vue'
 import { useDisplay } from 'vuetify'
 
 const router = useRouter()
-const { xs } = useDisplay()
+const { mdAndDown } = useDisplay()
 const expandedIndex = ref(null)
 const isMobile = ref(false)
 
@@ -72,7 +81,7 @@ const props = defineProps({
   },
 })
 
-const { data: categories, status } = await useAsyncData(
+const { data: categories, status } = useAsyncData(
   `categories-${props.categoriesSlug.join('-')}`,
   async () => {
     const categoriesData = await Promise.all(
@@ -80,6 +89,8 @@ const { data: categories, status } = await useAsyncData(
         queryCollection('categories').where('slug', '=', slug).first(),
       ),
     )
+    // categoriesData.forEach((category, index))
+
     return categoriesData
   },
   {
@@ -87,7 +98,6 @@ const { data: categories, status } = await useAsyncData(
     immediate: true,
   },
 )
-
 const handleClick = (id) => {
   if (isMobile.value) {
     expandedIndex.value = expandedIndex.value === id ? null : id
@@ -103,7 +113,7 @@ const clickOutside = (id) => {
   }
 }
 
-watch(xs, (newValue) => {
+watch(mdAndDown, (newValue) => {
   isMobile.value = newValue
 }, {
   immediate: true,
@@ -135,7 +145,7 @@ watch(xs, (newValue) => {
     flex-direction: column;
   }
   .category-title{
-    margin: 0!important;
+    margin:  0!important;
   }
 }
 
@@ -225,7 +235,7 @@ watch(xs, (newValue) => {
 
 .image-wrapper:hover .category-title,
 .image-wrapper.expanded .category-title {
-  transform: translateY(-1.5rem);
+  transform: translateY(0);
 }
 
 .category-description {
@@ -248,7 +258,6 @@ watch(xs, (newValue) => {
   border: 1px solid white !important;
   color: white!important;
   font-weight: bold;
-  /* transition: all 0.3s ease-in-out; */
 }
 
 .explore-btn:hover {
