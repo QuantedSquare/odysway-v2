@@ -60,7 +60,7 @@
               width="100%"
               max-height="42px"
               class="my-2"
-              :src="img('/logos/logo_noir_original.png', { format: 'webp', quality: 70 })"
+              :src="img('/logos/logo_noir.png', { format: 'webp', quality: 70 })"
             />
             <p class="mb-3">
               {{ pOdysway }}

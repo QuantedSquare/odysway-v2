@@ -10,7 +10,7 @@
       v-model="model"
     >
       <v-row>
-        <v-col cols="8">
+        <v-col cols="12">
           <h2 v-if="!isAdvance">
             <!-- {{ $t('stepperDevisPerso.nbTravellersSold') }} -->
             Sélectionnez le nombre de voyageurs à régler

@@ -6,7 +6,7 @@
       ref="scrollContainer"
       class="flex-nowrap overflow-auto hidden-scroll"
     >
-      <v-col cols="auto">
+      <v-col cols="12">
         <div
           v-if="status === 'pending'"
           class="image-gallery"
@@ -30,11 +30,15 @@
             }"
             @click.stop="handleClick(category?.id)"
           >
-            <NuxtImg
+
+            <v-img
               v-if="category?.image"
-              :src="category.image"
+              :src="imgComp(category.image, { format: 'webp', quality: 70 })"
+              width="100%"
               :alt="category?.title"
+              cover
             />
+
             <div class="blur-overlay" />
             <div class="image-overlay" />
             <div class="content-overlay">
@@ -68,6 +72,9 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
+
+const imgComp = useImage()
 
 const router = useRouter()
 const { mdAndDown } = useDisplay()

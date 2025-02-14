@@ -1,9 +1,6 @@
 <template>
   <div class="bg-cream min-height d-flex align-center">
-    <v-container
-      fluid
-      class="pa-0"
-    >
+    <v-container>
       <div class="d-flex flex-column flex-md-row">
         <div
           class="px-xl-16 pt-4 pt-md-16 mb-4 mb-md-0 title-wrapper will-change  align-center d-flex flex-column justify-center"
@@ -17,18 +14,6 @@
             <div class="text-caption text-grey text-no-wrap">
               DRAG AND DROP
             </div>
-          </template>
-          <template v-else>
-            <v-row
-              justify="center"
-            >
-              <v-col>
-                <h1 class="text-h5 py-6 font-weight-light mb-4 text-no-wrap">
-                  Ce que nous
-                  <span class="text-secondary">proposons</span>
-                </h1>
-              </v-col>
-            </v-row>
           </template>
         </div>
 
@@ -58,7 +43,7 @@
         </div>
       </div>
 
-      <div class="py-16  d-flex justify-center align-center mt-md-6">
+      <div class="pt-12 py-md-16 d-flex justify-center align-center mt-md-6">
         <v-divider />
         <div class="d-flex justify-space-between align-center">
           <div class="d-flex align-center">
@@ -83,6 +68,13 @@
         </div>
         <v-divider color="primary" />
       </div>
+      <h1
+        v-if="isMobile"
+        class="text-h5 font-weight-light text-no-wrap text-center my-6"
+      >
+        Ce que nous
+        <span class="text-secondary">proposons</span>
+      </h1>
     </v-container>
   </div>
 </template>
@@ -93,7 +85,7 @@ import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiCar } from '@mdi/js'
 
 import { useDisplay } from 'vuetify'
 
-const { mdAndUp } = useDisplay()
+const { mdAndUp, lg, md } = useDisplay()
 const isMobile = computed(() => {
   return !mdAndUp.value
 })
@@ -198,6 +190,9 @@ const scrollToSection = (index) => {
   currentX.value = -index * cardWidth
   currentSection.value = index
 }
+const dynamicPadding = computed(() => {
+  return md.value ? '1.7em' : '3em'
+})
 </script>
 
 <style scoped>
@@ -221,13 +216,25 @@ const scrollToSection = (index) => {
   pointer-events: none;
   z-index: 2
 }
+.blur-gradient-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  background: linear-gradient(to left, #f5f5f0 0%, rgba(245, 245, 240, 0) 100%);
+  mask: linear-gradient(0.25turn, transparent, black, black);
+  backdrop-filter: blur(1px);
+  pointer-events: none;
+  z-index: 2
+}
 
 .scroll-container:active {
   cursor: grabbing;
 }
 
 .title-wrapper {
-  width: 3.9em;
+  width: v-bind(dynamicPadding);
   font-size: 72px;
   will-change: transform;
   margin: 0 1.2em;
@@ -268,12 +275,14 @@ const scrollToSection = (index) => {
     width: 100%;
   }
   .cards-wrapper {
-    padding: 0.1em 3rem;
+    padding: 0.1em 2.3rem;
     left: 0;
-    transform: none;
+     transform: none;
   }
-}
-
+    .blur-gradient-right{
+      display: none;
+    }
+  }
 .nav-dot.text-secondary {
   border: 2px solid rgba(var(--v-theme-secondary));
   transform: scale(1.1);

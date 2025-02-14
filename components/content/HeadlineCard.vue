@@ -110,6 +110,16 @@ onUnmounted(() => {
   gap:1em;
 }
 
+@media screen and (max-width: 600px) {
+  .product-card {
+    /* min-width: 100%; */
+   min-height:20em;
+   padding: 3em 2em;
+   gap:0.2em;
+    /* padding: 2em 1em; */
+  }
+}
+
 .card-overlay {
   position: absolute;
   top: 0;

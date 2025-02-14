@@ -4,12 +4,51 @@
     height="100vh"
     cover
   >
-    <span class="absolute-position shadow px-6">
-      <slot
-        name="title"
-      />
-      <slot />
-    </span>
+    <div class="h-100  d-flex align-center">
+      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow  text-center">
+        <v-row
+          justify="center"
+          align="center"
+        >
+          <v-col
+            cols="10"
+            md="6"
+          >
+            <v-img
+              contain
+              width="100%"
+              class="img-shadow"
+              :src="img('/logos/logo_blanc.png', { format: 'webp', quality: 70 })"
+            />
+            <h1>
+              <span class="text-h3 text-md-h2">
+                <slot
+                  name="title"
+                />
+              </span>
+              <span class="text-h5 text-md-h4">
+                <slot
+                  name="title-2"
+                />
+              </span>
+            </h1>
+          </v-col>
+        </v-row>
+        <v-row
+          justify="center"
+          align="center"
+        >
+          <v-col
+            cols="10"
+            md="6"
+          >
+            <slot
+              name="component-slot"
+            />
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
   </v-parallax>
 </template>
 
@@ -27,31 +66,10 @@ const img = useImage()
 </script>
 
 <style scoped>
-.absolute-position {
-  font-weight: 700;
-  position: absolute;
-  bottom: 20%;
-  left: 10%;
-  font-size: 5rem;
-  color: white;
-}
-
-.shadow {
+.text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-@media screen and (max-width: 600px) {
-  .absolute-position {
-    font-size: 3rem;
-    left:0;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .absolute-position {
-    font-size: 2rem;
-    left: 2%;
-  }
+.img-shadow{
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 </style>

@@ -61,7 +61,7 @@ const { data: reviews } = useAsyncData('reviews', () => {
 })
 
 const onHomeReviews = computed(() => {
-  return reviews.value.filter(r => r.isOnHome)
+  return reviews.value?.filter(r => r.isOnHome)
 })
 
 const reviewsList = computed(() => {

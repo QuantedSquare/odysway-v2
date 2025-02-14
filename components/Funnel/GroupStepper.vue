@@ -16,19 +16,7 @@
           <v-card
             class="border-width w-fit-content "
             elevation="2"
-            :image="''"
           >
-            <template #image>
-              <Transition name="fade">
-                <!--  Remplacer src -->
-                <v-img
-                  v-if="voyage.imgSrc && currentStep >= 5"
-                  class="d-none d-md-block bg-img-filter"
-                  lazy-src="https://cdn.buttercms.com/zvLsa1w8QCaf6WaWc3of"
-                  height="400"
-                />
-              </Transition>
-            </template>
             <Transition name="fade">
               <v-img
                 v-if="voyage.imgSrc && currentStep === 0"
@@ -98,26 +86,22 @@
                     <v-row>
                       <v-col
                         cols="12"
-                        md="6"
-                        class="d-flex align-end"
+                      >
+                        <FunnelStepsSummary
+                          v-model="validForm"
+                          :current-step="currentStep"
+                          :page="page"
+                          :voyage="voyage"
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
                       >
                         <FunnelStepsPaymentRedirect
                           :ref="(component) => registerStepComponent(component, 5)"
                           v-model="validForm"
                           :page="page"
                           :current-step="currentStep"
-                          :voyage="voyage"
-                        />
-                      </v-col>
-                      <v-col
-                        cols="12"
-                        md="6"
-                        class="d-flex align-start"
-                      >
-                        <FunnelStepsSummary
-                          v-model="validForm"
-                          :current-step="currentStep"
-                          :page="page"
                           :voyage="voyage"
                         />
                       </v-col>

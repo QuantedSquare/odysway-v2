@@ -1,8 +1,11 @@
 ::hero-section{imageSrc="/images/AdobeStock_124472096.jpeg"}
 
 #title
-Le partage <br> au cœur du voyage
+Le partage 
+#title-2
+au cœur du voyage
 
+#component-slot
   :::SearchField
   :::
 ::

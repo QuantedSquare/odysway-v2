@@ -10,11 +10,12 @@
     >
       <!-- Front -->
       <div class="flip-card-front">
-        <img
+        <v-img
           :src="props.frontImage"
           alt="image"
           class="card-image"
-        >
+          cover
+        />
         <div class="card-title">
           {{ props.title }}
         </div>
@@ -25,11 +26,12 @@
         class="flip-card-back"
         :class="rotation[1]"
       >
-        <img
+        <v-img
           :src="props.backImage"
           alt="image"
           class="card-image"
-        >
+          cover
+        />
         <div class="card-title">
           Placeholder text à remplacer
         </div>
@@ -95,7 +97,7 @@ const toggleFlip = () => {
   cursor: pointer;
 }
 .flip-card-inner:hover{
- box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
 }
 
 .flip-card-inner {

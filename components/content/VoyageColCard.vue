@@ -13,7 +13,7 @@
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
         :to="`/voyages/${voyage.slug}`"
-        class="text-decoration-none position-relative "
+        class="text-decoration-none position-relative text-white"
       >
         <v-img
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 400 })"
