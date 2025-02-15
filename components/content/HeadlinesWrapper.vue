@@ -1,9 +1,9 @@
 <template>
   <div class="bg-cream">
     <v-container>
-      <div class="d-flex flex-column flex-md-row pt-4">
+      <v-row class="d-flex flex-column flex-md-row pt-4 ">
         <div
-          class="px-xl-16 pt-md-16 mb-4 mb-md-0 title-wrapper will-change align-center d-none d-md-flex flex-column justify-center"
+          class="pt-md-16 mb-4 mb-md-0  will-change align-center d-none d-md-flex flex-column justify-center"
         >
           <h1 class="text-h4 text-md-h2 font-weight-light mb-4 text-no-wrap">
             Ce<br>
@@ -14,11 +14,12 @@
             DRAG AND DROP
           </div>
         </div>
-
-        <div class="scroll-container mt-md-16 ">
+        <div
+          class="scroll-container mt-md-16 "
+        >
           <div
             ref="scrollContainer"
-            class="d-flex justify-start relative"
+            class=" relative"
             @mousedown="startDrag"
             @mousemove="onDrag"
             @mouseup="endDrag"
@@ -28,6 +29,7 @@
             @touchend="endTouchDrag"
           >
             <div
+              ref="cardContainerRef"
               class="cards-wrapper will-change"
               :style="cardsTransform"
             >
@@ -39,7 +41,7 @@
             <div class="blur-gradient-right" />
           </div>
         </div>
-      </div>
+      </v-row>
 
       <div class="pt-12 py-md-16 d-flex justify-center align-center mt-md-6">
         <v-divider />
@@ -54,7 +56,7 @@
                 :class="['nav-dot', { 'text-secondary': currentSection === index }]"
                 icon
                 variant="outlined"
-                @click="scrollToSection(index)"
+                @click.stop="scrollToSection(index)"
               >
                 <v-icon class="icon-size">
                   {{ icon }}
@@ -80,54 +82,59 @@
 import { ref, computed } from 'vue'
 import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiCar } from '@mdi/js'
 
-import { useDisplay } from 'vuetify'
-
-const { md } = useDisplay()
-
 const scrollContainer = ref(null)
 const currentSection = ref(0)
+const updateCurrentSection = (index) => {
+  console.log('index', index)
+  // scrollToSection(index)
+
+  // centerCard(index)
+}
+provide('current', { currentSection, updateCurrentSection })
 const isDragging = ref(false)
 const startX = ref(0)
 const currentX = ref(0)
-const dragStartX = ref(0)
+const cardWidth = ref(0)
+const cardContainerRef = useTemplateRef('cardContainerRef')
+const totalCards = ref(0)
+const icons = ref([])
+const cardDelta = ref(0)
 
-const cards = [
-  {
-    title: 'Des séjours immersifs pour voyager autrement',
-    description: 'Des voyages conçus avec soin et passion pour vous faire découvrir l’intimité d’une région ou d\'un pays, au- delà des clichés, de la manière la plus durable possible.',
-  },
-  {
-    title: 'Des départs en petits groupes ou privatifs',
-    description: 'Chez Odysway, voyagez comme vous le souhaitez : rejoignez un petit groupe pour partager ou privatisez votre séjour. Le choix est entre vos mains !',
-  },
-  {
-    title: 'Une agence proche de vous',
-    description: 'Votre conseiller(ère) voyage vous accompagne à chaque étape, avec écoute et disponibilité. En restant en contact direct via WhatsApp, nous veillons à ce que votre voyage soit fluide et serein, du premier échange jusqu’à votre retour.',
-  },
-  {
-    title: 'Activities',
-    description: 'Our smart flight inventory system offers the best prices and options fast. For each Travel Plan, the dates and time of flights determine all transfer details to ensure a seamless experience.',
-  },
-]
-
-const icons = [
+const iconsList = [
   mdiFileDocumentOutline,
   mdiAirplane,
   mdiBed,
   mdiCar,
-  // mdiDotsHorizontal,
 ]
-provide('current', currentSection)
+
+onMounted(() => {
+  nextTick(() => {
+    totalCards.value = cardsList.value.length
+    // Apply initial button and card position
+    Array.from(cardsList.value).forEach((card, index) => {
+      icons.value.push(iconsList[index])
+    })
+    cardWidth.value = cardContainerRef.value?.children[0].getBoundingClientRect().width
+    // CardDelta calculate the difference between the first card which is bigger and the others at the first
+    // A focused card will be centered in the middle of the screen and bigger than the others
+    // Focused get transform: scale(1)
+    // Unfocused get transform: scale(0.95)
+    cardDelta.value = cardWidth.value - cardContainerRef.value?.children[1].getBoundingClientRect().width
+    centerCard(currentSection.value)
+  })
+})
+
+const cardsList = computed(() => {
+  return cardContainerRef.value?.children || []
+})
 
 const minXPosition = computed(() => {
-  const cardWidth = 320 // card width + margin
-  return -((cards.length - 1) * cardWidth)
+  return -((totalCards.value - 1) * cardWidth.value)
 })
 
 const startDrag = (e) => {
   isDragging.value = true
   startX.value = e.clientX - currentX.value
-  dragStartX.value = currentX.value
   document.body.style.cursor = 'grabbing'
 }
 
@@ -135,7 +142,18 @@ const onDrag = (e) => {
   if (!isDragging.value) return
   e.preventDefault()
   const newX = e.clientX - startX.value
-  currentX.value = Math.min(0, Math.max(minXPosition.value, newX))
+  console.log('newX', newX, 'currentX.value', currentX.value, 'minXPosition.value', minXPosition.value)
+
+  // Only allow movement if:
+  // 1. Moving right (newX < currentX) when not at right boundary
+  // 2. Moving left (newX > currentX) when not at left boundary
+  if (
+    (newX < (currentX.value + 10) && currentX.value > minXPosition.value)
+    || (newX > currentX.value && currentX.value < 0)
+  ) {
+    currentX.value = Math.min(-minXPosition.value, Math.max(minXPosition.value, newX))
+    // console.log('currentX', currentX.value)
+  }
 }
 
 const endDrag = () => {
@@ -149,14 +167,21 @@ const endDrag = () => {
 const startTouchDrag = (e) => {
   isDragging.value = true
   startX.value = e.touches[0].clientX - currentX.value
-  dragStartX.value = currentX.value
 }
 
 const onTouchDrag = (e) => {
   if (!isDragging.value) return
   e.preventDefault()
+
   const newX = e.touches[0].clientX - startX.value
-  currentX.value = Math.min(0, Math.max(minXPosition.value, newX))
+
+  if (
+    (newX < (currentX.value + 10) && currentX.value > minXPosition.value)
+    || (newX > currentX.value && currentX.value < 0)
+  ) {
+    currentX.value = Math.min(-minXPosition.value, Math.max(minXPosition.value, newX))
+    // console.log('currentX', currentX.value)
+  }
 }
 
 const endTouchDrag = () => {
@@ -167,38 +192,62 @@ const endTouchDrag = () => {
 
 // Extract the snapping logic to a separate function to avoid code duplication
 const snapToNearestCard = () => {
-  const cardWidth = 320 // card width + margin
-  const nearestSection = Math.round(currentX.value / cardWidth)
-  const targetX = nearestSection * cardWidth
-  currentX.value = Math.min(0, Math.max(minXPosition.value, targetX))
-  currentSection.value = Math.abs(Math.round(currentX.value / cardWidth))
+  const nearestSection = Math.round(currentX.value / cardWidth.value)
+  currentSection.value = Math.abs(nearestSection)
+  centerCard(currentSection.value)
 }
+const centerCard = (index) => {
+  // Wait for next tick to ensure DOM is updated
+  nextTick(() => {
+    const viewportWidth = document.documentElement.clientWidth || window.innerWidth
+    const card = cardContainerRef.value?.children[index]
 
-const cardsTransform = computed(() => ({
-  transform: `translateX(${currentX.value}px)`,
-  transition: isDragging.value ? 'none' : 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-}))
+    if (!card) return
 
+    // Get the card's current position and dimensions
+    const cardRect = card.getBoundingClientRect()
+    const cardCenter = cardRect.left + (cardRect.width / 2)
+    const screenCenter = viewportWidth / 2
+
+    // Calculate the precise offset needed to center
+    const offset = screenCenter - cardCenter
+
+    // Apply the offset with boundaries
+    currentX.value = Math.min(-minXPosition.value, Math.max(minXPosition.value, currentX.value + offset))
+  })
+}
 const scrollToSection = (index) => {
   isDragging.value = false
-  const cardWidth = 320
-  currentX.value = -index * cardWidth
   currentSection.value = index
+
+  // Force a layout recalculation before centering
+  requestAnimationFrame(() => {
+    centerCard(index)
+  })
 }
-const dynamicPadding = computed(() => {
-  return md.value ? '1.7em' : '3em'
-})
+const cardsTransform = computed(() => ({
+  transform: `translateX(${currentX.value}px)`,
+  transition: isDragging.value ? 'none' : 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+}))
 </script>
 
 <style scoped>
+.relative{
+  position: relative;
+}
 .scroll-container {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
-  cursor: grab;
+  /* cursor: grab; */
   user-select: none;
   position: relative;
-  width: 100%;
-  /* background-color: red!important; */
+  width: 75%;
+}
+@media screen and (max-width: 1280px) {
+  .scroll-container {
+    width: 100%;
+  }
+
 }
 .blur-gradient-left {
   position: absolute;
@@ -226,24 +275,15 @@ const dynamicPadding = computed(() => {
 }
 
 .scroll-container:active {
-  cursor: grabbing;
-}
-
-.title-wrapper {
-  width: v-bind(dynamicPadding);
-  font-size: 72px;
-  will-change: transform;
-  margin: 0 1.2em;
+  /* cursor: grabbing; */
 }
 
 .cards-wrapper {
   display: inline-flex;
+  gap:1em;
   will-change: transform;
-  pointer-events: none;
-  white-space:normal;
-  padding: 0.1em 150px;
-
-}
+  pointer-events: auto;
+  }
 
 .nav-dot {
   width: 70px;
@@ -266,13 +306,7 @@ const dynamicPadding = computed(() => {
   .icon-size{
     font-size: 20px;
   }
-  .title-wrapper {
-    margin: 0 0.6em 0 0;
-    width: 100%;
-  }
   .cards-wrapper {
-    padding: 0.1em 2.3rem;
-    left: 0;
      transform: none;
   }
     .blur-gradient-right{
@@ -286,9 +320,5 @@ const dynamicPadding = computed(() => {
 
 .will-change {
   will-change: transform;
-}
-
-.ga-10 {
-  gap: 10px;
 }
 </style>

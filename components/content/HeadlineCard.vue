@@ -7,11 +7,12 @@
       transform: `scale(${+currentSection === +index ? 1 : 0.95})`,
       opacity: +currentSection === +index ? 1 : 0.6,
     }"
+    @click="updateCurrentSection(index)"
   >
-    <p class="text-secondary text-h5 ">
+    <p class="text-secondary text-h6 text-mh-h5 ">
       {{ String(+index + 1).padStart(2, '0') }}.
     </p>
-    <h3 class="text-h5 mb-10">
+    <h3 class="text-h6 text-mh-h5 mb-10 ">
       <slot name="title" />
     </h3>
     <p
@@ -38,7 +39,7 @@ const props = defineProps({
     default: '0',
   },
 })
-const currentSection = inject('current')
+const { currentSection, updateCurrentSection } = inject('current')
 
 const isVisible = ref(false)
 const sectionRef = ref(null)
@@ -54,11 +55,15 @@ onMounted(async () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target
-            const delay = Number(el.dataset.index) * 200
+            const delay = Number(el.dataset.index) * 100
 
             setTimeout(() => {
               el.querySelector('.fade-in-text').classList.add('is-visible')
             }, delay)
+          }
+          else {
+            const el = entry.target
+            el.querySelector('.fade-in-text').classList.remove('is-visible')
           }
         })
       },
@@ -94,10 +99,11 @@ onUnmounted(() => {
 
 .product-card {
   min-width: 320px;
+  max-width: 320px;
   min-height:25em;
   border: 2px solid rgba(var(--v-theme-secondary));
   border-radius: 16px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
   position: relative;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center center;
@@ -113,9 +119,11 @@ onUnmounted(() => {
 @media screen and (max-width: 600px) {
   .product-card {
     /* min-width: 100%; */
-   min-height:20em;
-   padding: 3em 2em;
-   gap:0.2em;
+  min-width: 250px;
+  max-width: 250;
+  min-height:20em;
+  padding: 3em 1em;
+  gap:0.2em;
     /* padding: 2em 1em; */
   }
 }
@@ -128,7 +136,7 @@ onUnmounted(() => {
   bottom: 0;
   background: rgba(255, 255, 255, 0.3);
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .card-unfocused {
