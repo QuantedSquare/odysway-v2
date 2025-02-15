@@ -1,6 +1,6 @@
 <template>
   <div class="bg-sectionBg py-8 mt-4">
-    <v-container class="">
+    <v-container>
       <v-row
         align="center"
         justify="space-between"
@@ -8,7 +8,7 @@
         <v-col
           cols="12"
           md="4"
-          class=" d-flex justify-center"
+          class="d-flex justify-center"
         >
           <FlipCard
             :front-image="img(imageSrc, { format: 'webp', quality: 100 })"
@@ -26,22 +26,16 @@
             <slot name="title" />
           </h2>
           <div class="d-flex flex-column align-center">
-            <div
-              v-if="!isExpanded"
-              class="line-clamp-2"
-            >
-              <slot name="text" />
-            </div>
-
-            <v-expand-transition>
-              <div v-if="isExpanded">
+            <div class="text-wrapper">
+              <div :class="['text-content', { expanded: isExpanded }]">
                 <slot name="text" />
               </div>
-            </v-expand-transition>
+              <div :class="['gradient-overlay', { hidden: isExpanded }]" />
+            </div>
 
             <v-btn
               variant="text"
-              class="mt-2 btn-boucing"
+              class="mt-4 btn-bouncing"
               :icon="isExpanded ? mdiChevronDoubleUp : mdiChevronDoubleDown"
               @click="isExpanded = !isExpanded"
             />
@@ -75,29 +69,48 @@ const img = useImage()
 </script>
 
 <style scoped>
-.text-content {
-  transition: all 0.3s ease;
+.text-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
+.text-content {
+  max-height: 12rem; /* Adjust this value based on your needs */
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: max-height 0.5s ease;
 }
-.btn-boucing{
+
+.text-content.expanded {
+  max-height: 2000px; /* Set this to a value larger than your content */
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  right: 0;
+  height: 70%;
+  mask: linear-gradient(transparent, rgba(0, 0, 0, 0.885), black);
+  backdrop-filter: blur(2px);
+  background: linear-gradient(transparent, #edeff8);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.gradient-overlay.hidden {
+  opacity: 0;
+}
+
+.btn-bouncing {
   animation: bounce 3s infinite;
 }
+
 @keyframes bounce {
   0%, 50%, 100% {
     transform: translateY(0);
   }
-  25% {
-    transform: translateY(-10px);
-  }
-  75% {
+  25%, 75% {
     transform: translateY(-10px);
   }
 }

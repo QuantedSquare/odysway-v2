@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <div class="scroll-container mt-md-16">
+        <div class="scroll-container mt-md-16 ">
           <div
             ref="scrollContainer"
             class="d-flex justify-start relative"
@@ -120,7 +120,7 @@ const icons = [
 provide('current', currentSection)
 
 const minXPosition = computed(() => {
-  const cardWidth = 350 // card width + margin
+  const cardWidth = 320 // card width + margin
   return -((cards.length - 1) * cardWidth)
 })
 
@@ -167,7 +167,7 @@ const endTouchDrag = () => {
 
 // Extract the snapping logic to a separate function to avoid code duplication
 const snapToNearestCard = () => {
-  const cardWidth = 350 // card width + margin
+  const cardWidth = 320 // card width + margin
   const nearestSection = Math.round(currentX.value / cardWidth)
   const targetX = nearestSection * cardWidth
   currentX.value = Math.min(0, Math.max(minXPosition.value, targetX))
@@ -181,7 +181,7 @@ const cardsTransform = computed(() => ({
 
 const scrollToSection = (index) => {
   isDragging.value = false
-  const cardWidth = 350
+  const cardWidth = 320
   currentX.value = -index * cardWidth
   currentSection.value = index
 }
@@ -198,6 +198,7 @@ const dynamicPadding = computed(() => {
   user-select: none;
   position: relative;
   width: 100%;
+  /* background-color: red!important; */
 }
 .blur-gradient-left {
   position: absolute;
