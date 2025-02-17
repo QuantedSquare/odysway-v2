@@ -78,10 +78,12 @@
         :key="index"
         cols="12"
       >
-        <ReviewCard
-          :review="review"
-          :max-note="maxNote"
-        />
+        <ClientOnly>
+          <ReviewCard
+            :review="review"
+            :max-note="maxNote"
+          />
+        </ClientOnly>
       </v-col>
       <v-col>
         <v-pagination
@@ -106,7 +108,7 @@ import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
 
 const maxNote = ref(5)
 
-const { data: reviews } = useAsyncData(() => {
+const { data: reviews } = await useAsyncData(() => {
   return queryCollection('avis').all()
 })
 

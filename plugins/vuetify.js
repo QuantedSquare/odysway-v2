@@ -28,7 +28,6 @@ export default defineNuxtPlugin((app) => {
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
             'sectionBg': '#edeff8', // grey-home-bg
-            'pinkBorder': '#ffc0cb',
             'inputBg': '#ebeff9',
             'footerBg': '#f5f5f5',
             'orange-lighten-1': '#FFA726',

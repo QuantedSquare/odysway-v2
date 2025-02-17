@@ -2,10 +2,10 @@
   <div
     ref="sectionRef"
     class="product-card"
-    :class="{ 'card-unfocused': +currentSection !== +index }"
+    :class="{ 'card-unfocused': !isActive }"
     :style="{
-      transform: `scale(${+currentSection === +index ? 1 : 0.95})`,
-      opacity: +currentSection === +index ? 1 : 0.6,
+      transform: `scale(${isActive ? 1 : 0.95})`,
+      opacity: isActive ? 1 : 0.6,
     }"
     @click="updateCurrentSection(index)"
   >
@@ -24,7 +24,7 @@
     <div
       class="card-overlay"
       :style="{
-        opacity: +currentSection === +index ? 0 : 1,
+        opacity: isActive ? 0 : 1,
       }"
     />
   </div>
@@ -33,12 +33,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
-const props = defineProps({
-  index: {
-    type: String,
-    default: '0',
-  },
+const index = ref(0)
+
+const registerComponent = inject('registerComponent')
+
+onMounted(() => {
+  index.value = registerComponent({})
 })
+
+const isActive = computed(() => {
+  return currentSection.value === index.value
+})
+
 const { currentSection, updateCurrentSection } = inject('current')
 
 const isVisible = ref(false)
@@ -73,7 +79,7 @@ onMounted(async () => {
 
   if (sectionRef.value) {
     const el = sectionRef.value.$el ?? sectionRef.value
-    el.dataset.index = props.index
+    el.dataset.index = index.value
     observer.observe(el)
   }
 })

@@ -20,7 +20,6 @@
           {{ props.title }}
         </div>
       </div>
-
       <!-- Back -->
       <div
         class="flip-card-back"
