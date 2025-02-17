@@ -103,7 +103,6 @@ onUnmounted(() => {
   min-height:25em;
   border: 2px solid rgba(var(--v-theme-secondary));
   border-radius: 16px;
-  /* margin-right: 24px; */
   position: relative;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center center;
@@ -118,13 +117,11 @@ onUnmounted(() => {
 
 @media screen and (max-width: 600px) {
   .product-card {
-    /* min-width: 100%; */
   min-width: 250px;
   max-width: 250;
   min-height:20em;
   padding: 3em 1em;
   gap:0.2em;
-    /* padding: 2em 1em; */
   }
 }
 

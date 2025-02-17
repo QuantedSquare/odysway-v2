@@ -81,14 +81,17 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { mdiFileDocumentOutline, mdiAirplane, mdiBed, mdiCar } from '@mdi/js'
+import { useDisplay } from 'vuetify'
+
+const { width } = useDisplay()
+// watch(width, (value) => {
+//   centerCard(2)
+// })
 
 const scrollContainer = ref(null)
 const currentSection = ref(0)
 const updateCurrentSection = (index) => {
   console.log('index', index)
-  // scrollToSection(index)
-
-  // centerCard(index)
 }
 provide('current', { currentSection, updateCurrentSection })
 const isDragging = ref(false)
@@ -98,7 +101,6 @@ const cardWidth = ref(0)
 const cardContainerRef = useTemplateRef('cardContainerRef')
 const totalCards = ref(0)
 const icons = ref([])
-const cardDelta = ref(0)
 
 const iconsList = [
   mdiFileDocumentOutline,
@@ -110,16 +112,10 @@ const iconsList = [
 onMounted(() => {
   nextTick(() => {
     totalCards.value = cardsList.value.length
-    // Apply initial button and card position
     Array.from(cardsList.value).forEach((card, index) => {
       icons.value.push(iconsList[index])
     })
     cardWidth.value = cardContainerRef.value?.children[0].getBoundingClientRect().width
-    // CardDelta calculate the difference between the first card which is bigger and the others at the first
-    // A focused card will be centered in the middle of the screen and bigger than the others
-    // Focused get transform: scale(1)
-    // Unfocused get transform: scale(0.95)
-    cardDelta.value = cardWidth.value - cardContainerRef.value?.children[1].getBoundingClientRect().width
     centerCard(currentSection.value)
   })
 })
@@ -142,7 +138,6 @@ const onDrag = (e) => {
   if (!isDragging.value) return
   e.preventDefault()
   const newX = e.clientX - startX.value
-  console.log('newX', newX, 'currentX.value', currentX.value, 'minXPosition.value', minXPosition.value)
 
   // Only allow movement if:
   // 1. Moving right (newX < currentX) when not at right boundary
@@ -199,7 +194,7 @@ const snapToNearestCard = () => {
 const centerCard = (index) => {
   // Wait for next tick to ensure DOM is updated
   nextTick(() => {
-    const viewportWidth = document.documentElement.clientWidth || window.innerWidth
+    const viewportWidth = width.value > 0 ? width.value : (document.documentElement.clientWidth || window.innerWidth)
     const card = cardContainerRef.value?.children[index]
 
     if (!card) return
@@ -272,10 +267,6 @@ const cardsTransform = computed(() => ({
   backdrop-filter: blur(1px);
   pointer-events: none;
   z-index: 2
-}
-
-.scroll-container:active {
-  /* cursor: grabbing; */
 }
 
 .cards-wrapper {

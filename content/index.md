@@ -8,7 +8,7 @@ La rencontre <br> au cœur du voyage
   :::
 ::
 
-::headlines-wrapper
+<!-- ::headlines-wrapper
   :::headline-card{index=0}
   #title
   Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
@@ -38,7 +38,7 @@ La rencontre <br> au cœur du voyage
   #text
   Our smart flight inventory system offers the best prices and options fast. For each Travel Plan, the dates and time of flights determine all transfer details to ensure a seamless experience.
   :::
-::
+:: -->
 
 
 ::title-container
