@@ -55,40 +55,42 @@
         </v-col>
       </template>
       <!-- Replace btn "Suivant" in parent -->
-      <Teleport
-        v-if="currentStep >= 5"
-        to="#next-btn"
-      >
-        <Transition name="list">
-          <v-btn
-            v-if="!checkedOption"
-            color="info"
-            large
-            :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-            :to="`/confirmation?voyage=${voyage.slug}&success=true&isoption=true`"
-            @click="book"
-          >
-            Poser une option gratuitement
-          </v-btn>
-          <v-btn
-            v-else
-            :loading="loadingStripeSession"
-            :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-            @click="stripePay"
-          >
-            Payer par CB ou Virement
-          </v-btn>
-        </Transition>
-      </Teleport>
+      <ClientOnly>
+        <Teleport
+          v-if="currentStep >= 5"
+          to="#next-btn"
+        >
+          <Transition name="list">
+            <v-btn
+              v-if="!checkedOption"
+              color="info"
+              large
+              :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+              :to="`/confirmation?voyage=${voyage.slug}&success=true&isoption=true`"
+              @click="book"
+            >
+              Poser une option gratuitement
+            </v-btn>
+            <v-btn
+              v-else
+              :loading="loadingStripeSession"
+              :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+              @click="stripePay"
+            >
+              Payer par CB ou Virement
+            </v-btn>
+          </Transition>
+        </Teleport>
+      </ClientOnly>
     </v-row>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 console.log('props', props.voyage)
-const { fetchDeal, deal, dealId, updateDeal } = useDeal()
+const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
 // Data
 const isBooking = ref(false)
 const groupStepper = ref(true)
@@ -120,7 +122,6 @@ const book = async () => {
 
 watch([dealId, () => props.currentStep], () => {
   model.value = true
-  console.log('dealId changed', dealId.value)
   if (dealId.value) {
     return
   }

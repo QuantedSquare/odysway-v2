@@ -33,15 +33,11 @@
         <FunnelStepsSummaryMultipleLines
           v-for="(line) in summaryLines"
           v-show="line.displayLine"
-          :key="line.left"
+          :key="line.left.text"
           :right="line.right"
           :left="line.left"
-        >
-          <v-divider
-            v-if="line.displayDivider"
-            class="my-3 "
-          />
-        </FunnelStepsSummaryMultipleLines>
+          :show-divider="!!line.displayDivider"
+        />
 
         <!--  Options -->
         <FunnelStepsSummaryLine>
@@ -84,7 +80,7 @@
         </FunnelStepsSummaryLine>
 
         <!-- Assurance -->
-        <FunnelStepsSummaryLine>
+        <FunnelStepsSummaryLine v-if="deal.insurance !== 'Aucune Assurance'">
           <template #left>
             {{ travelerText(+deal.nbTravelers, 'insurance') }}
           </template>
@@ -94,14 +90,14 @@
         </FunnelStepsSummaryLine>
 
         <!-- Promo -->
-        <FunnelStepsSummaryLine>
+        <!-- <FunnelStepsSummaryLine>
           <template #left>
             Promo.label
           </template>
           <template #right>
             promoValue * dealDetails.nbTravelers
           </template>
-        </FunnelStepsSummaryLine>
+        </FunnelStepsSummaryLine> -->
       </v-card-text>
     </v-card>
   </v-container>
@@ -112,17 +108,15 @@ import dayjs from 'dayjs'
 import { mdiInformationOutline } from '@mdi/js'
 
 const props = defineProps(['page', 'voyage', 'currentStep'])
-const model = defineModel()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
-const { fetchDeal, deal, dealId } = useDeal()
+const { deal } = useDeal(() => props.currentStep, () => 5)
 
-watch([dealId, () => props.currentStep], async () => {
-  model.value = true
-  if (dealId.value) {
-    await fetchDeal(dealId.value)
-    console.log('deal', deal.value)
-  }
-}, { immediate: true })
+// watch([dealId, () => props.currentStep], async () => {
+//   if (dealId.value) {
+//     await fetchDeal(dealId.value)
+//     console.log('deal', deal.value)
+//   }
+// }, { immediate: true })
 
 function travelerText(nbTraveler, type) {
   const text = {
@@ -167,7 +161,8 @@ const summaryLines = computed(() => {
         text: `${dayjs(deal.value.departureDate).format('DD/MM/YYYY')} au ${dayjs(deal.value.returnDate).format('DD/MM/YYYY')}`,
         classes: '',
       },
-      displayLine: deal.value.departureDate && deal.value.returnDate,
+      displayLine: !!deal.value.departureDate && !!deal.value.returnDate,
+      displayDivider: false,
     },
     {
       left: {
@@ -176,7 +171,8 @@ const summaryLines = computed(() => {
       right: {
         text: formatNumber(deal?.value.value, 'currency', 'EUR'),
       },
-      displayLine: deal.value.value,
+      displayLine: !!deal.value.value,
+      displayDivider: true,
     },
     {
       left: {
@@ -197,6 +193,7 @@ const summaryLines = computed(() => {
         text: '',
       },
       displayLine: true,
+      displayDivider: false,
     },
     {
       left: {

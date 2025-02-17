@@ -77,10 +77,8 @@
 </template>
 
 <script setup>
-import { mdiClose } from '@mdi/js'
-
-const props = defineProps(['page', 'voyage', 'currentStep'])
-const { fetchDeal, deal, dealId, updateDeal } = useDeal()
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
 
 const specialRequest = ref('')
 const indivRoom = ref(false)
@@ -93,13 +91,9 @@ const otherFoodOption = ref(false)
 
 const model = defineModel()
 
-watch([dealId, () => props.currentStep], async () => {
+watch([deal, () => props.currentStep], () => {
   model.value = true
-  console.log('dealId changed', dealId.value)
-  if (dealId.value) {
-    await fetchDeal(dealId.value)
-    console.log('deal', deal.value)
-
+  if (dealId.value && deal.value) {
     if (deal.value && deal.value.nbTravelers) {
       indivRoomPrice.value = +deal.value.indivRoomPrice
       pricePerTraveler.value = +deal.value.pricePerTraveler
@@ -110,6 +104,9 @@ watch([dealId, () => props.currentStep], async () => {
       otherFoodOption.value = deal.value.specialRequest?.includes('Autres demandes particulières')
       specialRequest.value = deal.value.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim()
     }
+  }
+  if (props.currentStep === props.ownStep) {
+    addAnotherParameter('currentStep', props.ownStep)
   }
 }, { immediate: true })
 
@@ -150,8 +147,7 @@ const submitStepData = async () => {
   }
 
   try {
-    await updateDeal(dealData)
-    return true
+    return await updateDeal(dealData)
   }
   catch (error) {
     console.log('error updating Options', error)

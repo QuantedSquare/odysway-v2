@@ -159,18 +159,15 @@
 <script setup>
 import { z } from 'zod'
 
+const props = defineProps(['currentStep', 'ownStep'])
+const { deal, dealId, createDeal, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
 const model = defineModel()
-const isAdvance = ref(true)
-const { deal, dealId, fetchDeal, createDeal, updateDeal } = useDeal()
-const router = useRouter()
-const route = useRoute()
-// await fetchDeal(7126)
-// const { status, data: deal } = await useFetch('/api/v1/ac/deals/' + 11269)
 
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
 }
 
+const isAdvance = ref(true)
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 const nbTeen = ref(0)
@@ -180,17 +177,20 @@ const email = ref('')
 const phoneCode = ref('')
 const phoneNumber = ref('')
 
-onMounted(async () => {
-  if (dealId.value) {
-    await fetchDeal(dealId.value)
+watch(() => props.currentStep, (value) => {
+  if (value === props.ownStep) {
+    addAnotherParameter('currentStep', props.ownStep)
+  }
+}, { immediate: true })
+
+watch(deal, () => {
+  if (deal.value) {
+    console.log('got value in details', deal.value)
     nbTeen.value = +deal.value.nbTeen
     nbAdults.value = +deal.value.nbAdults
     nbChildren.value = +deal.value.nbChildren
   }
 })
-// if (deal.value) {
-//   lastName.value = deal.value.title
-// }
 
 const saveToLocalStorage = () => {
   const dataToStore = {
@@ -247,8 +247,8 @@ const submitStepData = async () => {
       owner: '1',
       stage: '2',
       // CustomFields
-      departureDate: '2025-05-15',
-      returnDate: '2025-05-30',
+      departureDate: '2025-10-15',
+      returnDate: '2025-10-30',
       travelType: 'Voyage de Groupe',
       nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
       nbChildren: nbChildren.value + nbTeen.value,
@@ -300,14 +300,7 @@ const submitStepData = async () => {
       })
     }
     else {
-      dealId.value = await createDeal(flattenedDeal)
-      console.log('dealId', dealId.value)
-      if (dealId.value) {
-        router.push({
-          path: route.path,
-          query: { id: dealId.value },
-        })
-      }
+      await createDeal(flattenedDeal)
     }
     return true
   }

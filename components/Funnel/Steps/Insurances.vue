@@ -1,6 +1,11 @@
 <template>
   <v-container>
-    <v-row>
+    <v-skeleton-loader
+      v-if="isLoadingInsurance"
+      type="card"
+    />
+    <!-- v-else -->
+    <v-row v-else>
       <v-col
         class="d-flex align-center"
         cols="12"
@@ -57,9 +62,6 @@
         />
       </v-col>
       <!-- Insurance Unavailable Message -->
-      <v-col v-else>
-        <div v-html="page.fields.insurances_unavailable " />
-      </v-col>
     </v-row>
     <v-row class="text-caption text-primary">
       <v-col>
@@ -70,30 +72,41 @@
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
+const isLoadingInsurance = ref(true)
 
-const { fetchDeal, deal, dealId, updateDeal } = useDeal()
+const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
 // Data
 const insurances = ref({
   rapatriement: 0,
   cancel: 0,
 })
 
-const fetchInsuranceQuote = async () => {
+const fetchInsuranceQuote = async (retrievedDeal) => {
+  isLoadingInsurance.value = true
   try {
+    console.log('fetch insurance with this data:', {
+      pricePerTraveler: +retrievedDeal.pricePerTraveler,
+      countries: retrievedDeal.iso,
+      zoneChapka: +retrievedDeal.zoneChapka || 0,
+      departureDate: retrievedDeal.departureDate,
+      returnDate: retrievedDeal.returnDate,
+      nbTravelers: +retrievedDeal.nbTravelers,
+    })
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
-        pricePerTraveler: 1800,
-        countries: 'FR',
-        chapkaZone: 2,
-        departureDate: '25/09/2025',
-        returnDate: '13/10/2025',
-        nbTravelers: 5,
+        pricePerTraveler: +retrievedDeal.pricePerTraveler,
+        countries: retrievedDeal.iso,
+        zoneChapka: +retrievedDeal.zoneChapka || 0,
+        departureDate: retrievedDeal.departureDate,
+        returnDate: retrievedDeal.returnDate,
+        nbTravelers: +retrievedDeal.nbTravelers,
       },
     })
     console.log('FETCH INSURANCE QUOTE', insurance)
+    isLoadingInsurance.value = false
     return insurance
   }
   catch (error) {
@@ -105,13 +118,14 @@ const fetchInsuranceQuote = async () => {
 // Values
 const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
 
-watch([dealId, () => props.currentStep], async () => {
+watch([deal, () => props.currentStep], async () => {
   model.value = true
-  console.log('dealId changed', dealId.value)
-  if (dealId.value) {
-    insurances.value = await fetchInsuranceQuote()
-    await fetchDeal(dealId.value)
-    console.log('deal', deal.value)
+  if (props.currentStep === props.ownStep) {
+    addAnotherParameter('currentStep', props.ownStep)
+  }
+  if (deal.value) {
+    console.log('dealId fetched', deal.value)
+    insurances.value = await fetchInsuranceQuote(deal.value)
 
     if (deal.value?.insurance) {
       const insuranceType = deal.value.insurance?.toLowerCase()
@@ -163,7 +177,7 @@ const submitStepData = async () => {
   const dealData = {
     dealId: dealId.value,
     value: +deal.value.value, // #TODO  Remplacer par recalcul total avec assurance
-    pricePerTraveler: 0, // #TODO  Remplacer par recalcul prix avec assurance,
+    pricePerTraveler: +deal.value.pricePerTraveler, // #TODO  Remplacer par recalcul prix avec assurance,
     insurance: [insuranceChoice.value.name],
     insuranceCommissionPrice: (insuranceChoice.value.price * 100),
     currentStep: 'A fait le choix de l\'assurance',

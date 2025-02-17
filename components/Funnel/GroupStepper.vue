@@ -14,8 +14,8 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width w-fit-content "
-            elevation="2"
+            class="border-width w-fit-content"
+            :elevation="currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
               <v-img
@@ -51,6 +51,7 @@
                       :ref="(component) => registerStepComponent(component, 1)"
                       v-model="validForm"
                       :current-step="currentStep"
+                      :own-step="1"
                     />
                     <FunnelStepsCalendly
                       v-else
@@ -64,6 +65,7 @@
                       v-model="validForm"
                       :current-step="currentStep"
                       :page="page"
+                      :own-step="2"
                     />
                   </v-stepper-window-item>
                   <v-stepper-window-item>
@@ -72,6 +74,7 @@
                       v-model="validForm"
                       :current-step="currentStep"
                       :page="page"
+                      :own-step="3"
                     />
                   </v-stepper-window-item>
                   <v-stepper-window-item>
@@ -80,32 +83,28 @@
                       v-model="validForm"
                       :current-step="currentStep"
                       :page="page"
+                      :own-step="4"
                     />
                   </v-stepper-window-item>
                   <v-stepper-window-item :value="5">
-                    <v-row>
-                      <v-col
-                        cols="12"
-                      >
-                        <FunnelStepsSummary
-                          v-model="validForm"
-                          :current-step="currentStep"
-                          :page="page"
-                          :voyage="voyage"
-                        />
-                      </v-col>
-                      <v-col
-                        cols="12"
-                      >
-                        <FunnelStepsPaymentRedirect
-                          :ref="(component) => registerStepComponent(component, 5)"
-                          v-model="validForm"
-                          :page="page"
-                          :current-step="currentStep"
-                          :voyage="voyage"
-                        />
-                      </v-col>
-                    </v-row>
+                    <ClientOnly>
+                      <FunnelStepsSummary
+                        :current-step="currentStep"
+                        :page="page"
+                        :voyage="voyage"
+                      />
+                    </ClientOnly>
+
+                    <FunnelStepsPaymentRedirect
+                      :ref="(component) => registerStepComponent(component, 5)"
+                      v-model="validForm"
+                      :page="page"
+                      :current-step="currentStep"
+                      :own-step="5"
+                      :voyage="voyage"
+                    >
+                      Promo form slot
+                    </FunnelStepsPaymentRedirect>
                   </v-stepper-window-item>
                 </v-stepper-window>
               </v-col>
@@ -188,6 +187,11 @@ const previousStep = () => {
   currentStep.value--
   validForm.value = true
 }
+onMounted(() => {
+  if (route.query.currentStep && route.query.id) {
+    currentStep.value = parseInt(route.query.currentStep) || 0
+  }
+})
 </script>
 
 <style scoped>
@@ -216,5 +220,5 @@ const previousStep = () => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
-  }
+}
 </style>

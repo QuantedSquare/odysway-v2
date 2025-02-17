@@ -9,10 +9,11 @@
     <v-col cols="auto">
       <span :class="right.classes">{{ right.text }}</span>
     </v-col>
+    <v-divider v-if="showDivider" />
   </v-row>
-  <slot />
 </template>
 
 <script setup>
-const props = defineProps(['left', 'right'])
+const props = defineProps(['left', 'right', 'showDivider'])
+console.log(props.showDivider)
 </script>
