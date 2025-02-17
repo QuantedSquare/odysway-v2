@@ -3,27 +3,29 @@
     <v-row
       justify="center"
     >
-      <v-col
-        cols="12"
-        class="d-flex flex-column align-center justify-center my-8"
-      >
-        <h3 class="d-flex align-center justify-center text-h5 text-lg-h4 pb-2">
-          <v-icon color="#ffc658">
-            {{ mdiStar }}
-          </v-icon>
-          <span>
-            {{ averageNote }}/{{ maxNote }}
-            <slot
-              name="first-phrase"
-              mdc-unwrap="p"
-            />
-            {{ displayedReviews.length }} avis
-          </span>
-        </h3>
-        <p class="text-center mb-4">
-          <slot name="second-phrase" />
-        </p>
-      </v-col>
+      <client-only>
+        <v-col
+          cols="12"
+          class="d-flex flex-column align-center justify-center my-8"
+        >
+          <h3 class="d-flex align-center justify-center text-h5 text-lg-h4 pb-2">
+            <v-icon color="#ffc658">
+              {{ mdiStar }}
+            </v-icon>
+            <span>
+              {{ averageNote }}/{{ maxNote }}
+              <slot
+                name="first-phrase"
+                mdc-unwrap="p"
+              />
+              {{ displayedReviews.length }} avis
+            </span>
+          </h3>
+          <p class="text-center mb-4">
+            <slot name="second-phrase" />
+          </p>
+        </v-col>
+      </client-only>
     </v-row>
     <v-row justify="center">
       <v-col
@@ -78,10 +80,12 @@
         :key="index"
         cols="12"
       >
-        <ReviewCard
-          :review="review"
-          :max-note="maxNote"
-        />
+        <client-only>
+          <ReviewCard
+            :review="review"
+            :max-note="maxNote"
+          />
+        </client-only>
       </v-col>
       <v-col>
         <v-pagination
@@ -106,7 +110,7 @@ import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
 
 const maxNote = ref(5)
 
-const { data: reviews } = await useAsyncData(() => {
+const { data: reviews } = await useAsyncData('avisVoyageurs', () => {
   return queryCollection('avisVoyageurs').all()
 })
 
