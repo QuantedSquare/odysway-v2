@@ -56,7 +56,7 @@ export default defineContentConfig({
         isOnHome: z.boolean(),
       }),
     }),
-    avis: defineCollection({
+    avisVoyageurs: defineCollection({
       type: 'data',
       source: 'avis-voyageurs/**.json',
       schema: z.object({

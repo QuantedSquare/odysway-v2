@@ -93,8 +93,8 @@
           active-color="primary"
           elevation="3"
           class="my-4"
-          @next="pagination.currentPage = pagination.currentPage++"
-          @prev="pagination.currentPage = pagination.currentPage-- "
+          @next="pagination.currentPage++"
+          @prev="pagination.currentPage-- "
         />
       </v-col>
     </v-row>
@@ -106,8 +106,8 @@ import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
 
 const maxNote = ref(5)
 
-const { data: reviews } = useAsyncData(() => {
-  return queryCollection('avis').all()
+const { data: reviews } = await useAsyncData(() => {
+  return queryCollection('avisVoyageurs').all()
 })
 
 const reviewFilter = ref({
@@ -135,9 +135,9 @@ const displayedReviews = computed(() => {
 })
 
 const averageNote = computed(() => {
-  return displayedReviews.value.reduce((acc, cur) => {
-    return acc + cur.note
-  }, 0) / displayedReviews.value.length
+  return displayedReviews.value.length
+    ? displayedReviews.value.reduce((acc, cur) => acc + cur.note, 0) / displayedReviews.value.length
+    : 0
 })
 
 const voyagesFromReviews = computed(() => {
