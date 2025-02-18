@@ -87,11 +87,25 @@ Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, sit
 Votre hébergement
 ::
 
-<!-- ::accomodation-row-card
+::accomodation-row
+#know-more
+En savoir plus
+#
+
 #text
 Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées
 
-::horizontal-carousel
+
+#images
+  :::voyage-image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.20.png"}
+  :::
+
+  :::voyage-image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.09.png"}
+  :::
+
+  :::voyage-image-carousel-item{image="/images/329303239.jpeg"}
+  :::
+
+
 
 ::
-:: -->
