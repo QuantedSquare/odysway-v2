@@ -1,4 +1,4 @@
-::hero-avis{imageSrc="/images/lPCsmaT8al25X3drCaAE.webp"}
+::hero-section{imageSrc="/images/lPCsmaT8al25X3drCaAE.webp"}
 #title 
 Avis des voyageurs Odysway
 

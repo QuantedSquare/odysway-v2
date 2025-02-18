@@ -85,12 +85,12 @@
         :key="index"
         cols="12"
       >
-        <client-only>
+        <ClientOnly>
           <ReviewCard
             :review="review"
             :max-note="maxNote"
           />
-        </client-only>
+        </ClientOnly>
       </v-col>
       <v-col>
         <v-pagination

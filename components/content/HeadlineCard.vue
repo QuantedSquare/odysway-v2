@@ -2,10 +2,10 @@
   <div
     ref="sectionRef"
     class="product-card"
-    :class="{ 'card-unfocused': +currentSection !== +index }"
+    :class="{ 'card-unfocused': !isActive }"
     :style="{
-      transform: `scale(${+currentSection === +index ? 1 : 0.95})`,
-      opacity: +currentSection === +index ? 1 : 0.6,
+      transform: `scale(${isActive ? 1 : 0.95})`,
+      opacity: isActive ? 1 : 0.6,
     }"
     @click="updateCurrentSection(index)"
   >
@@ -24,7 +24,7 @@
     <div
       class="card-overlay"
       :style="{
-        opacity: +currentSection === +index ? 0 : 1,
+        opacity: isActive ? 0 : 1,
       }"
     />
   </div>
@@ -33,12 +33,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
-const props = defineProps({
-  index: {
-    type: String,
-    default: '0',
-  },
+const index = ref(0)
+
+const registerComponent = inject('registerComponent')
+
+onMounted(() => {
+  index.value = registerComponent({})
 })
+
+const isActive = computed(() => {
+  return currentSection.value === index.value
+})
+
 const { currentSection, updateCurrentSection } = inject('current')
 
 const isVisible = ref(false)
@@ -73,7 +79,7 @@ onMounted(async () => {
 
   if (sectionRef.value) {
     const el = sectionRef.value.$el ?? sectionRef.value
-    el.dataset.index = props.index
+    el.dataset.index = index.value
     observer.observe(el)
   }
 })
@@ -103,7 +109,6 @@ onUnmounted(() => {
   min-height:25em;
   border: 2px solid rgba(var(--v-theme-secondary));
   border-radius: 16px;
-  /* margin-right: 24px; */
   position: relative;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center center;
@@ -118,13 +123,11 @@ onUnmounted(() => {
 
 @media screen and (max-width: 600px) {
   .product-card {
-    /* min-width: 100%; */
   min-width: 250px;
   max-width: 250;
   min-height:20em;
   padding: 3em 1em;
   gap:0.2em;
-    /* padding: 2em 1em; */
   }
 }
 

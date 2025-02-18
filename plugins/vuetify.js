@@ -27,10 +27,9 @@ export default defineNuxtPlugin((app) => {
             'secondary': '#bc5948', // odysway red
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
-            'sectionBg': '#edeff8', // grey-home-bg
-            'pinkBorder': '#ffc0cb',
-            'inputBg': '#ebeff9',
-            'footerBg': '#f5f5f5',
+            'section-bg': '#edeff8', // grey-home-bg
+            'input-bg': '#ebeff9',
+            'footer-bg': '#f5f5f5',
             'orange-lighten-1': '#FFA726',
             'white': '#FFFFFF',
             'grey': '#8E8E8E',

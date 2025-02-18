@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-sectionBg py-8 mt-4">
+  <div class="bg-section-bg py-8 mt-4">
     <v-container>
       <v-row
         align="center"

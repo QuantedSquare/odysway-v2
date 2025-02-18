@@ -24,6 +24,7 @@
         >
           <client-only>
             <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
+
               <v-tooltip
                 location="bottom"
                 text="Test tooltip"

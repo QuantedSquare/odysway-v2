@@ -3,7 +3,7 @@ import { z } from 'zod'
 export const InsuranceSchema = z.object({
   pricePerTraveler: z.number(),
   countries: z.string(),
-  chapkaZone: z.number().default(0),
+  zoneChapka: z.number().default(0),
   departureDate: z.string(),
   returnDate: z.string(),
   nbTravelers: z.number().min(1),

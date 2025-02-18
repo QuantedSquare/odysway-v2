@@ -17,16 +17,7 @@
 </template>
 
 <script setup>
-import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
-
 const currentWindow = ref(0)
-defineProps({
-  scrollAmount: {
-    type: String,
-    required: true,
-    default: '400',
-  },
-})
 </script>
 
 <style scoped>

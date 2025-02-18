@@ -274,9 +274,7 @@ const updateDeal = async (dealId, data) => {
     delete formatedDeal.email
     delete formatedDeal.phone
   }
-  console.log('formatedDeal', formatedDeal)
   const response = await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
-  console.log('response update deal', response)
   return response.deal.id
 }
 

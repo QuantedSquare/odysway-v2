@@ -80,8 +80,8 @@
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep'])
-const { fetchDeal, deal, dealId, updateDeal } = useDeal()
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
 
 const isCouple = ref(false)
 const nbTravelers = ref(1)
@@ -91,51 +91,53 @@ const isLoading = ref(true)
 // Form model
 const model = defineModel()
 
+// watch([() => props.currentStep, ], (value) => {
+//   if (value === props.ownStep && dealId.value) {
+//     addAnotherParameter('currentStep', props.ownStep)
+//   }
+// }, { immediate: true })
+
 // Data Initialization
-const initializeTravelersData = async () => {
-  try {
-    await fetchDeal(dealId.value)
-    if (deal.value) {
-      nbTravelers.value = deal.value?.nbTravelers || 1
-      const numberOfTravelers = deal.value?.nbTravelers || 1
-      isCouple.value = deal.value?.isCouple === 'Oui'
+const initializeTravelersData = () => {
+  if (deal.value) {
+    nbTravelers.value = deal.value?.nbTravelers || 1
+    const numberOfTravelers = deal.value?.nbTravelers || 1
+    isCouple.value = deal.value?.isCouple === 'Oui'
 
-      travelers.value = Array.from({ length: numberOfTravelers }, (_, index) => {
-        const storedTraveler = deal.value?.[`traveler${index + 1}`]
+    travelers.value = Array.from({ length: numberOfTravelers }, (_, index) => {
+      const storedTraveler = deal.value?.[`traveler${index + 1}`]
 
-        if (storedTraveler) {
-          const [firstname, lastname, birthdate] = storedTraveler.split('_')
-          return {
-            id: index + 1,
-            firstname,
-            lastname,
-            birthdate,
-          }
-        }
-
+      if (storedTraveler) {
+        const [firstname, lastname, birthdate] = storedTraveler.split('_')
         return {
           id: index + 1,
-          firstname: null,
-          lastname: null,
-          birthdate: null,
+          firstname,
+          lastname,
+          birthdate,
         }
-      })
+      }
 
-      isLoading.value = false
-    }
-    else {
-      isLoading.value = false
-    }
+      return {
+        id: index + 1,
+        firstname: null,
+        lastname: null,
+        birthdate: null,
+      }
+    })
+
+    isLoading.value = false
   }
-  catch (error) {
-    console.error('Failed to initialize travelers data', error)
+  else {
     isLoading.value = false
   }
 }
-watch([dealId, () => props.currentStep], async () => {
-  console.log('props changed', props.currentStep, dealId.value)
-  if (dealId.value) {
-    await initializeTravelersData()
+
+watch([deal, () => props.currentStep], () => {
+  if (deal.value) {
+    initializeTravelersData()
+    if (dealId.value && props.currentStep === props.ownStep) {
+      addAnotherParameter('currentStep', props.ownStep)
+    }
   }
 }, {
   immediate: true,
@@ -199,7 +201,7 @@ defineExpose({
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateY(30px);
 }
 
 /* ensure leaving items are taken out of layout flow so that moving

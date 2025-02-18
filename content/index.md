@@ -9,14 +9,14 @@ La rencontre <br> au cœur du voyage
 ::
 
 ::headlines-wrapper
-  :::headline-card{index=0}
+  :::headline-card
   #title
   Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
   #text
   Des voyages conçus avec soin et passion pour vous faire découvrir l’intimité d’une région ou d'un pays, au- delà des clichés, de la manière la plus durable possible.
   :::
   
-  :::headline-card{index=1}
+  :::headline-card
   #title
   Des départs en [petits groupes]{style="color:#bc5948;"} ou [privatifs]{style="color:#bc5948;"}
   
@@ -24,14 +24,14 @@ La rencontre <br> au cœur du voyage
   Chez Odysway, voyagez comme vous le souhaitez : rejoignez un petit groupe pour partager ou privatisez votre séjour. Le choix est entre vos mains !
   :::
 
-  :::headline-card{index=2}
+  :::headline-card
   #title
   Une agence proche de [vous]{style="color:#bc5948;"}
   
   #text
   Votre conseiller(ère) voyage vous accompagne à chaque étape, avec écoute et disponibilité. En restant en contact direct via WhatsApp, nous veillons à ce que votre voyage soit fluide et serein, du premier échange jusqu’à votre retour.
   :::
-  :::headline-card{index=3}
+  :::headline-card
   #title
    Avec [vous]{style="color:#bc5948;"}
   
@@ -39,6 +39,7 @@ La rencontre <br> au cœur du voyage
   Our smart flight inventory system offers the best prices and options fast. For each Travel Plan, the dates and time of flights determine all transfer details to ensure a seamless experience.
   :::
 ::
+
 
 
 ::title-container
@@ -55,7 +56,7 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
-::horizontal-carousel{scroll-amount="400"}
+::horizontal-carousel
 
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
@@ -74,7 +75,7 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"} 
 ::
 
-::horizontal-carousel{scroll-amount="400"}
+::horizontal-carousel
 
   :::voyage-col-card{voyage-slug="chine"}
   :::
@@ -94,7 +95,7 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
-::horizontal-carousel{scroll-amount="400"}
+::horizontal-carousel
 
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
@@ -114,7 +115,7 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 ::
 
-::horizontal-carousel{scroll-amount="400"}
+::horizontal-carousel
 
   :::voyage-col-card{voyage-slug="chine"}
   :::

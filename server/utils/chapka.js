@@ -22,8 +22,8 @@ const createDataQuote = (data, insuranceType) => {
     destination: countries,
     nombre: nbTravelers,
     DATE_RESA: dayjs().format('DD/MM/YYYY'),
-    depart: departureDate,
-    retour: returnDate,
+    depart: dayjs(departureDate, 'YYYY-MM-DD').format('DD/MM/YYYY'),
+    retour: dayjs(returnDate, 'YYYY-MM-DD').format('DD/MM/YYYY'),
     devise: 'EUR',
     montant1: pricePerTraveler,
   }
@@ -72,6 +72,7 @@ const getQuote = async (data, insuranceType) => {
 
   try {
     const dataQuote = createDataQuote(data, insuranceType)
+    console.log('dataQuote', dataQuote)
     const res = await axios.post(
       'https://api.chapka.fr/quote/index.php?request=quote',
       dataQuote,
@@ -90,7 +91,7 @@ const quote = async (body) => {
   const timestampDepart = dayjs(body.departureDate).valueOf()
   const maxTimestamp = 10 * 24 * 60 * 60 * 1000 // 10 days
   if (timestampDepart - timestampNow < maxTimestamp) {
-    pricing(body.pricePerTraveler, body.chapkaZone, body.nbTravelers)
+    pricing(body.pricePerTraveler, body.zoneChapka, body.nbTravelers)
   }
   else {
     const [rapatriementQuote, cancelQuote] = await Promise.all([

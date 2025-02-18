@@ -77,7 +77,7 @@ const fetchInsuranceQuote = async () => {
       body: {
         pricePerTraveler: 1800,
         countries: 'FR',
-        chapkaZone: 2,
+        zoneChapka: 2,
         departureDate: '25/09/2025',
         returnDate: '13/10/2025',
         nbTravelers: 5,
@@ -97,7 +97,6 @@ const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cance
 
 watch([dealId, () => props.currentStep], async () => {
   model.value = true
-  console.log('dealId changed', dealId.value)
   if (dealId.value) {
     insurances.value = await fetchInsuranceQuote()
     await fetchDeal(dealId.value)
