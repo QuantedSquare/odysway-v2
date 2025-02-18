@@ -1,4 +1,4 @@
-::hero-concept{imageSrc="/images/Vélo.jpg"}
+::hero-section{imageSrc="/images/Vélo.jpg"}
 #title
 Odysway, l'agence spécialiste du voyage en immersion
 

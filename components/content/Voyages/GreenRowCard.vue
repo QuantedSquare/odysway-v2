@@ -9,26 +9,26 @@
         >
           <v-card-title
             cols="12"
-            class="py-4 no-white-space"
+            class="d-flex align-center font-weight-bold no-white-space py-4 mt-4"
           >
             <v-icon class="mr-4">
               {{ mdiHandHeartOutline }}
             </v-icon>
-            <div class="d-inline">
-              <span>
-                <slot
-                  name="title"
-                  mdc-unwrap="p"
-                /></span>
+            <div class="w-100 d-inline border-b-sm border-white border-opacity-100 py-4">
+              <slot
+                name="title"
+              />
             </div>
           </v-card-title>
-          <!-- <v-divider  /> -->
           <v-card-text>
             <v-list
               variant="text"
               bg-color="primary"
             >
-              <slot name="items" />
+              <slot
+                name="items"
+                mdc-unwrap="p"
+              />
             </v-list>
           </v-card-text>
         </v-card>
