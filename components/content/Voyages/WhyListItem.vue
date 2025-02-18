@@ -1,6 +1,6 @@
 <template>
   <v-list-item
-    class="text-subtitle-1 text-grey-darken-3"
+    class="text-subtitle-1"
     :prepend-icon="mdiCheck"
   >
     <span><slot mdc-unwrap="p" /></span>

@@ -23,9 +23,14 @@
             </div>
           </v-card-title>
           <!-- <v-divider  /> -->
-          <v-list variant="text">
-            <slot name="items" />
-          </v-list>
+          <v-card-text>
+            <v-list
+              variant="text"
+              bg-color="primary"
+            >
+              <slot name="items" />
+            </v-list>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>

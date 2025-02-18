@@ -8,31 +8,31 @@ Immersion hivernale en terre béarnaise
 #title
 [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
 
-#items  
-  :::highlight-list-item
-  Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
-  
-  :::
-  
-  :::highlight-list-item
-  Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
-  
-  :::
-  
-  :::highlight-list-item
-  Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
-  
-  :::
+#default
+:::highlight-list-item
+Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
 
-  :::highlight-list-item
-  Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
-  
-  :::
+:::
 
-  :::highlight-list-item
-  Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
-  
-  :::
+:::highlight-list-item
+Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
+
+:::
+
+:::highlight-list-item
+Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
+
+:::
+
+:::highlight-list-item
+Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
+
+:::
+
+:::highlight-list-item
+Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
+
+:::
 
 ::
 
