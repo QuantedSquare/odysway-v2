@@ -8,7 +8,7 @@ Immersion hivernale en terre béarnaise
 #title
 [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
 
-#default  
+#items  
   :::highlight-list-item
   Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
   
@@ -40,7 +40,7 @@ Immersion hivernale en terre béarnaise
 #title
 POURQUOI VOYAGER AVEC ODYSWAY ?
   
-#default  
+#items  
   :::why-list-item
   Un accompagnement personnalisé du début à la fin de votre voyage
   

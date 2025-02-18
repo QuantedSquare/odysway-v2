@@ -23,7 +23,7 @@
           </v-card-title>
 
           <v-list>
-            <slot />
+            <slot name="items" />
           </v-list>
         </v-card>
       </v-col>

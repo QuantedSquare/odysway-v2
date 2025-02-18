@@ -24,7 +24,7 @@
           </v-card-title>
           <!-- <v-divider  /> -->
           <v-list variant="text">
-            <slot />
+            <slot name="items" />
           </v-list>
         </v-card>
       </v-col>
