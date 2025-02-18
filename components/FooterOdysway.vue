@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    class="pa-0 d-flex flex-column bg-footerBg"
+    class="pa-0 d-flex flex-column bg-footer-bg"
   >
     <section
       id="newsletter"
@@ -101,7 +101,7 @@
             <v-text-field-home
               id="email"
               readonly
-              bg-color="inputBg"
+              bg-color="input-bg"
               label="contact@odysway.com"
               type="email"
               class="mb-3"
@@ -115,7 +115,7 @@
             <v-text-field-home
               id="phone"
               readonly
-              bg-color="inputBg"
+              bg-color="input-bg"
               label="+33 1 84 80 79 75"
               type="tel"
               class="mb-3"
