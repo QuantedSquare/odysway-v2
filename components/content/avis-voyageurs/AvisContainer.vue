@@ -1,6 +1,7 @@
 <template>
-  <v-container>
+  <v-container ref="scroll-target">
     <v-row
+      ref="scroll-target"
       justify="center"
     >
       <client-only>
@@ -8,7 +9,9 @@
           cols="12"
           class="d-flex flex-column align-center justify-center my-8"
         >
-          <h3 class="d-flex align-center justify-center text-h5 text-lg-h4 pb-2">
+          <h3
+            class="d-flex align-center justify-center text-h5 text-lg-h4 pb-2"
+          >
             <v-icon color="#ffc658">
               {{ mdiStar }}
             </v-icon>
@@ -27,7 +30,9 @@
         </v-col>
       </client-only>
     </v-row>
-    <v-row justify="center">
+    <v-row
+      justify="center"
+    >
       <v-col
         cols="12"
         md="10"
@@ -97,8 +102,9 @@
           active-color="primary"
           elevation="3"
           class="my-4"
-          @next="pagination.currentPage++"
-          @prev="pagination.currentPage-- "
+          @click="goTo(scrollTarget)"
+          @next="pagination.currentPage = pagination.currentPage++"
+          @prev="pagination.currentPage = pagination.currentPage-- "
         />
       </v-col>
     </v-row>
@@ -107,12 +113,17 @@
 
 <script setup>
 import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
-
-const maxNote = ref(5)
+import { useGoTo } from 'vuetify'
 
 const { data: reviews } = await useAsyncData('avisVoyageurs', () => {
   return queryCollection('avisVoyageurs').all()
 })
+
+const scrollTarget = useTemplateRef('scroll-target')
+
+const goTo = useGoTo()
+
+const maxNote = ref(5)
 
 const reviewFilter = ref({
   selectedFilter: 'relevant',
