@@ -49,6 +49,7 @@ onMounted(() => {
     updateCurrentSection.value = draggingContainerRef.value?.updateCurrentSection
   })
 })
+
 provide('current', { currentSection, updateCurrentSection })
 provide('scrollToSection', scrollToSection)
 provide('cardsList', cardsList)
