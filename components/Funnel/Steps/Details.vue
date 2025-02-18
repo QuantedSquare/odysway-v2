@@ -160,6 +160,7 @@
 import { z } from 'zod'
 
 const props = defineProps(['currentStep', 'ownStep'])
+
 const { deal, dealId, createDeal, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
 const model = defineModel()
 
