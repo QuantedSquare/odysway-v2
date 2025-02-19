@@ -102,9 +102,7 @@
                       :current-step="currentStep"
                       :own-step="5"
                       :voyage="voyage"
-                    >
-                      Promo form slot
-                    </FunnelStepsPaymentRedirect>
+                    />
                   </v-stepper-window-item>
                 </v-stepper-window>
               </v-col>
@@ -187,11 +185,10 @@ const previousStep = () => {
   currentStep.value--
   validForm.value = true
 }
-onMounted(() => {
-  if (route.query.currentStep && route.query.id) {
-    currentStep.value = parseInt(route.query.currentStep) || 0
-  }
-})
+
+if (route.query.currentStep) {
+  currentStep.value = parseInt(route.query.currentStep) || 0
+}
 </script>
 
 <style scoped>

@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-card
       elevation="0"
       rounded="xl"
-      class="border-style text-grey-darken-2"
+      class="border-style text-grey-darken-2 pb-6"
     >
       <Transition name="fade">
         <v-img
@@ -28,21 +28,96 @@
         v-else
         class="px-5 text-body-1"
       >
-        <!-- MEttre ici earlyBird // lastMinute -->
+        <!-- Dates Section -->
+        <FunnelStepsSummaryLine v-if="deal.departureDate && deal.returnDate">
+          <template #left>
+            <span class="text-h6 text-dark">Dates confirmées</span>
+          </template>
+          <template #right>
+            {{ dayjs(deal.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(deal.returnDate).format('DD/MM/YYYY') }}
+          </template>
+        </FunnelStepsSummaryLine>
 
-        <FunnelStepsSummaryMultipleLines
-          v-for="(line) in summaryLines"
-          v-show="line.displayLine"
-          :key="line.left.text"
-          :right="line.right"
-          :left="line.left"
-          :show-divider="!!line.displayDivider"
-        />
+        <!-- Base Price Section -->
+        <FunnelStepsSummaryLine v-if="deal.value">
+          <template #left>
+            Prix de base par voyageur
+          </template>
+          <template #right>
+            <div v-if="deal.gotEarlybird !== 'Oui' && deal.gotLastMinute !== 'Oui'">
+              {{ formatNumber(deal.value, 'currency', 'EUR') }}
+            </div>
+            <div v-else>
+              <div class="d-flex flex-column align-end">
+                <span class="d-flex flex-column flex-md-row align-end">
+                  <v-badge
+                    inline
+                    color="info"
+                    :content="deal.gotEarlybird == 'Oui' ? 'EarlyBird: -' + formatNumber(deal.promoEarlybird, 'currency', '€') : 'LastMinute: -' + formatNumber(deal.promoLastMinute, 'currency', '€')"
+                  />
+                  {{ formatNumber(deal.value - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
+                </span>
+                <span class="text-decoration-line-through">
+                  {{ formatNumber(deal.value, 'currency', 'EUR') }}
+                </span>
+              </div>
+            </div>
+          </template>
+        </FunnelStepsSummaryLine>
 
+        <!-- Extension Price Section -->
+        <FunnelStepsSummaryLine v-if="deal.extensionPrice > 0">
+          <template #left>
+            Prix extension voyage
+          </template>
+          <template #right>
+            {{ formatNumber(deal.extensionPrice, 'currency', 'EUR') }}
+          </template>
+        </FunnelStepsSummaryLine>
+
+        <v-divider class="my-6" />
+        <!-- Travelers Details Header -->
+        <FunnelStepsSummaryLine>
+          <template #left>
+            <span class="text-h6 text-dark">Détails Voyageurs(s)</span>
+          </template>
+        </FunnelStepsSummaryLine>
+
+        <!-- Adult Travelers -->
+        <FunnelStepsSummaryLine v-if="deal.nbAdults > 0">
+          <template #left>
+            {{ travelerText(+deal.nbAdults, 'adult') }}
+          </template>
+          <template #right>
+            {{ formatNumber(deal.basePricePerTraveler * deal.nbAdults, 'currency', 'EUR') }}
+          </template>
+        </FunnelStepsSummaryLine>
+
+        <!-- Under Age Travelers -->
+        <FunnelStepsSummaryLine v-if="deal.nbUnderAge > 0">
+          <template #left>
+            {{ travelerText(+deal.nbUnderAge, 'baby') }}
+          </template>
+          <template #right>
+            {{ formatNumber((+deal.basePricePerTraveler - deal.promoChildren) * deal.nbUnderAge, 'currency', 'EUR') }}
+          </template>
+        </FunnelStepsSummaryLine>
+
+        <!-- Teen Travelers -->
+        <FunnelStepsSummaryLine v-if="deal.nbTeen > 0">
+          <template #left>
+            {{ travelerText(+deal.nbTeen, 'child') }}
+          </template>
+          <template #right>
+            {{ formatNumber((+deal.basePricePerTraveler - deal.promoTeen) * deal.nbTeen, 'currency', 'EUR') }}
+          </template>
+        </FunnelStepsSummaryLine>
+
+        <v-divider class="my-6" />
         <!--  Options -->
         <FunnelStepsSummaryLine>
           <template #left>
-            <span class="text-h6 text-black">Options</span>
+            <span class="text-h6 text-dark">Options</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -50,17 +125,16 @@
         <FunnelStepsSummaryLine>
           <template #left>
             <span v-if="forceIndivRoom && deal.indivRoom">
-              {{ travelerText(+deal.nbAdults, 'indivRoom') }}
+              {{ travelerText(+deal.nbTravelers, 'indivRoom') }}
             </span>
 
             <v-tooltip
               v-else
-              class=" pointer"
               bottom
             >
               <template #activator="{ props }">
                 <div class="d-flex align-center ga-2">
-                  <span>  {{ travelerText(+deal.nbAdults, 'indivRoom') }}</span>
+                  <span>  {{ travelerText(+deal.nbTravelers, 'indivRoom') }}</span>
                   <v-icon
                     size="x-small"
                     v-bind="props"
@@ -89,15 +163,63 @@
           </template>
         </FunnelStepsSummaryLine>
 
+        <v-divider class="my-6" />
+
         <!-- Promo -->
-        <!-- <FunnelStepsSummaryLine>
+        <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
           <template #left>
-            Promo.label
+            <!-- #TODO Remplacer par back -->
+            Réduction totale appliquée
           </template>
           <template #right>
-            promoValue * dealDetails.nbTravelers
+            -{{ formatNumber(deal.promoValue * deal.nbTravelers, 'currency', 'EUR') }}
           </template>
-        </FunnelStepsSummaryLine> -->
+        </FunnelStepsSummaryLine>
+
+        <v-divider class="my-6" />
+        <!-- Prix Total -->
+        <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
+          <template #left>
+            <!-- #TODO Remplacer par back -->
+            Prix total
+          </template>
+          <template #right>
+            <span class="font-weight-bold text-dark">
+              <!-- #TODO  S'assurer que le total soit correct avec touts les ajouts / réductions -->
+              {{ formatNumber(deal.value, 'currency', 'EUR') }}
+            </span>
+          </template>
+        </FunnelStepsSummaryLine>
+
+        <!-- Prix Appliqué à régler -->
+        <FunnelStepsSummaryLine>
+          <template #left>
+            <v-tooltip
+              bottom
+            >
+              <template #activator="{ props }">
+                <div class="d-flex align-center ga-2">
+                  <span> Accompte à régler</span>
+                  <v-icon
+                    size="x-small"
+                    v-bind="props"
+                  >
+                    {{ mdiInformationOutline }}
+                  </v-icon>
+                </div>
+              </template>
+              <div>
+                {{ page.fields.cancel_text }}
+              </div>
+            </v-tooltip>
+          </template>
+          <template #right>
+            <span class="font-weight-bold text-primary">
+              <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
+              {{ formatNumber(deal.depositPrice, 'currency', 'EUR') }}
+            </span>
+          </template>
+        </FunnelStepsSummaryLine>
       </v-card-text>
     </v-card>
   </v-container>
@@ -108,15 +230,9 @@ import dayjs from 'dayjs'
 import { mdiInformationOutline } from '@mdi/js'
 
 const props = defineProps(['page', 'voyage', 'currentStep'])
+const route = useRoute()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
-const { deal } = useDeal(() => props.currentStep, () => 5)
-
-// watch([dealId, () => props.currentStep], async () => {
-//   if (dealId.value) {
-//     await fetchDeal(dealId.value)
-//     console.log('deal', deal.value)
-//   }
-// }, { immediate: true })
+const { deal } = useDeal(route.query.currentStep)
 
 function travelerText(nbTraveler, type) {
   const text = {
@@ -149,82 +265,6 @@ function travelerText(nbTraveler, type) {
     return `${nbTraveler} x ${text[type].single}`// this.$t('estimate.' + type + 'Traveler')
   }
 }
-
-const summaryLines = computed(() => {
-  return [
-    {
-      left: {
-        text: 'Dates confirmées',
-        classes: 'text-h6 text-black',
-      },
-      right: {
-        text: `${dayjs(deal.value.departureDate).format('DD/MM/YYYY')} au ${dayjs(deal.value.returnDate).format('DD/MM/YYYY')}`,
-        classes: '',
-      },
-      displayLine: !!deal.value.departureDate && !!deal.value.returnDate,
-      displayDivider: false,
-    },
-    {
-      left: {
-        text: 'Prix de base par voyageur',
-      },
-      right: {
-        text: formatNumber(deal?.value.value, 'currency', 'EUR'),
-      },
-      displayLine: !!deal.value.value,
-      displayDivider: true,
-    },
-    {
-      left: {
-        text: 'Prix extension voyage',
-      },
-      right: {
-        text: formatNumber(deal?.value.value, 'currency', 'EUR'),
-      },
-      displayDivider: true,
-      displayLine: deal.value.extensionPrice > 0,
-    },
-    {
-      left: {
-        text: 'Details Voyageurs(s)',
-        classes: 'text-h6 text-black',
-      },
-      right: {
-        text: '',
-      },
-      displayLine: true,
-      displayDivider: false,
-    },
-    {
-      left: {
-        text: travelerText(+deal.value.nbAdults, 'adult'),
-      },
-      right: {
-        text: formatNumber(deal.value.basePricePerTraveler * deal.value.nbAdults, 'currency', 'EUR'),
-      },
-      displayLine: deal.value.nbAdults > 0,
-    },
-    {
-      left: {
-        text: travelerText(+deal.value.nbUnderAge, 'baby'),
-      },
-      right: {
-        text: formatNumber(+deal.value.basePricePerTraveler * deal.value.nbUnderAge, 'currency', 'EUR'),
-      },
-      displayLine: deal.value.nbUnderAge > 0,
-    },
-    {
-      left: {
-        text: travelerText(+deal.value.nbTeen, 'child'),
-      },
-      right: {
-        text: formatNumber(+deal.value.basePricePerTraveler * deal.value.nbTeen, 'currency', 'EUR'),
-      },
-      displayLine: +deal.value.nbTeen > 0,
-      displayDivider: true,
-    },
-  ]
-})
 </script>
 
 <style scoped>

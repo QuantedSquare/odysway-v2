@@ -78,7 +78,7 @@
 
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
-const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
+const { deal, dealId, updateDeal } = useDeal(props.ownStep)
 
 const specialRequest = ref('')
 const indivRoom = ref(false)
@@ -92,8 +92,9 @@ const otherFoodOption = ref(false)
 const model = defineModel()
 
 watch([deal, () => props.currentStep], () => {
-  model.value = true
+  model.value = false
   if (dealId.value && deal.value) {
+    model.value = true
     if (deal.value && deal.value.nbTravelers) {
       indivRoomPrice.value = +deal.value.indivRoomPrice
       pricePerTraveler.value = +deal.value.pricePerTraveler
@@ -135,7 +136,7 @@ const foodPreferences = computed(() => {
 
 const submitStepData = async () => {
   // Validate form
-  if (!dealId.value || !model.value) return false
+  if (!dealId.value || !deal.value || !model.value) return false
   const dealData = {
     dealId: dealId.value,
     specialRequest: `Préférence alimentaire: ${foodPreferences.value}`,

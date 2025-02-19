@@ -1,88 +1,94 @@
 <template>
   <v-container>
-    <!-- Slot for PromoForm -->
-    <slot />
-    <v-row>
-      <v-col
-        v-if="groupStepper && !depositDatePassed"
-        cols="12"
-      >
-        <template v-if="isBooking">
-          <div class="text-center">
-            Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
-          </div>
-        </template>
-        <template v-else>
-          <v-switch
-            v-model="checkedOption"
-            inset
-            hide-details
+    <!-- Prévoir Promo form -->
+    <v-card variant="plain">
+      <v-card-text>
+        <v-row>
+          <v-col
+            v-if="groupStepper && !depositDatePassed"
+            cols="12"
           >
-            <template #label>
-              Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+            <template v-if="isBooking">
+              <div class="text-center">
+                Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+              </div>
             </template>
-          </v-switch>
-        </template>
-      </v-col>
-      <template v-if="!isBooking">
-        <v-divider
-          horizontal
-          class="ma-2"
-        />
-        <v-col cols="12">
-          <v-switch
-            v-model="switch_accept_data_privacy"
-            inset
-            hide-details
-          >
-            <template #label>
-              <div
-                class="pl-1"
-                @click.stop=""
-                v-html="page.fields.phrase_dacceptation"
-              />
+            <template v-else>
+              <v-switch
+                v-model="checkedOption"
+                inset
+                hide-details
+              >
+                <template #label>
+                  Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                </template>
+              </v-switch>
             </template>
-          </v-switch>
-          <v-switch
-            v-model="switch_accept_country"
-            inset
-            hide-details
-          >
-            <template #label>
-              Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
-            </template>
-          </v-switch>
-        </v-col>
-      </template>
-      <!-- Replace btn "Suivant" in parent -->
-      <ClientOnly>
-        <Teleport
-          v-if="currentStep >= 5"
-          to="#next-btn"
-        >
-          <Transition name="list">
-            <v-btn
-              v-if="!checkedOption"
-              color="info"
-              large
-              :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-              :to="`/confirmation?voyage=${voyage.slug}&success=true&isoption=true`"
-              @click="book"
+          </v-col>
+          <template v-if="!isBooking">
+            <v-divider
+              horizontal
+              class="ma-2"
+            />
+            <v-col cols="12">
+              <v-switch
+                v-model="switch_accept_data_privacy"
+                inset
+                hide-details
+              >
+                <template #label>
+                  <div
+                    class="pl-1"
+                    @click.stop=""
+                    v-html="page.fields.phrase_dacceptation"
+                  />
+                </template>
+              </v-switch>
+              <v-switch
+                v-model="switch_accept_country"
+                inset
+                hide-details
+              >
+                <template #label>
+                  Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
+                </template>
+              </v-switch>
+            </v-col>
+          </template>
+          <!-- Replace btn "Suivant" in parent -->
+          <ClientOnly>
+            <Teleport
+              v-if="currentStep >= 5"
+              to="#next-btn"
+              defer
             >
-              Poser une option gratuitement
-            </v-btn>
-            <v-btn
-              v-else
-              :loading="loadingStripeSession"
-              :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-              @click="stripePay"
-            >
-              Payer par CB ou Virement
-            </v-btn>
-          </Transition>
-        </Teleport>
-      </ClientOnly>
-    </v-row>
+              <Transition name="list">
+                <v-btn
+                  v-if="checkedOption"
+                  color="info"
+                  class="ml-4"
+                  large
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                  :to="`/confirmation?voyage=${voyage.slug}&success=true&isoption=true`"
+                  @click="book"
+                >
+                  Poser une option gratuitement
+                </v-btn>
+                <v-btn
+                  v-else
+                  class="ml-4"
+                  :loading="loadingStripeSession"
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                  @click="stripePay"
+                >
+                  Payer par CB ou Virement
+                </v-btn>
+              </Transition>
+            </Teleport>
+          </ClientOnly>
+        </v-row>
+      </v-card-text>
+    </v-card>
   </v-container>
 </template>
 
@@ -90,7 +96,7 @@
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 console.log('props', props.voyage)
-const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
+const { deal, dealId, updateDeal } = useDeal(props.ownStep)
 // Data
 const isBooking = ref(false)
 const groupStepper = ref(true)
@@ -121,6 +127,9 @@ const book = async () => {
 }
 
 watch([dealId, () => props.currentStep], () => {
+  if (props.currentStep === props.ownStep) {
+    addAnotherParameter('currentStep', props.ownStep)
+  }
   model.value = true
   if (dealId.value) {
     return

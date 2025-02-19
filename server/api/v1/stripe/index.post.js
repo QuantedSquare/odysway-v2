@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 
   stripe.createStripeSession(body).then((stripeSession) => {
     console.log('========Stripe session response =======', stripeSession)
-    ac.updateDeal(body.dealId, activecampaignData)
+    // ac.updateDeal(body.dealId, activecampaignData)
     setResponseStatus(event, 200)
     return stripeSession
   }).catch((err) => {

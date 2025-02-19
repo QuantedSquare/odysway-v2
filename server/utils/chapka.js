@@ -77,6 +77,7 @@ const getQuote = async (data, insuranceType) => {
       'https://api.chapka.fr/quote/index.php?request=quote',
       dataQuote,
     )
+    console.log('response chapka api', res.data)
     return {
       [insuranceType]: res.data?.premium ? res.data.premium / dataQuote.nombre : 0,
     }
