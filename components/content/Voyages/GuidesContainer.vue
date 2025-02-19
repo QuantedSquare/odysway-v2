@@ -8,7 +8,7 @@
               name="text"
               mdc-unwrap="p"
             />
-            <v-list>
+            <v-list lines="three">
               <slot name="guides" />
             </v-list>
           </v-card-text>

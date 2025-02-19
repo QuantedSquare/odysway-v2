@@ -116,21 +116,23 @@ Les accompagnateurs
 Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateurs en moyenne montagne diplômés d’État, passionnés par leur région et engagés dans une approche durable. Ils vous initieront aux techniques de randonnée hivernale en raquettes et ski de fond, tout en adaptant chaque sortie au niveau de chacun pour une expérience agréable et sécurisée. Ensemble, vous explorerez des paysages variés : forêts, rivières, plateaux ouverts, crêtes et pics enneigés, en faisant des pauses dans des cabanes de montagne accueillantes. Fidèles à la philosophie leave no trace, vos guides vous apprendront à évoluer dans ces espaces naturels en limitant votre impact, en respectant la faune et la flore. Grâce à leurs connaissances, vous apprendrez aussi à repérer les traces d’animaux et à observer discrètement les isards, vautours et gypaètes dans leur habitat naturel, pour des randonnées à la fois enrichissantes et respectueuses de l’environnement.
 
 #guides
-  :::guide-avatar-title-wrapper{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
-  #guide-title
+  :::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+  #title
   Accompagnateur en moyenne montagne
 
-  #guide-subtitle
+  #subtitle
   Paco
 
   :::
 
-  :::guide-avatar-title-wrapper{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
-  #guide-title
+  :::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+  #title
   Claire et Sandrine
 
-  #guide-subtitle
+  #subtitle
   Hôtes de votre séjour
+
+  #text
   Lors de ce séjour, vous logerez dans un gîte d'étape situé sur la commune d'Accous. Le gîte est géré par Claire et Sandrine, que vous rencontrerez dès le premier jour, et avec qui vous pourrez partager des moments lors des temps au gîte. Claire et Sandrine ont repris ce gîte début 2020, elles y insufflent depuis de la bonne humeur et un accueil très convivial, sans parler des repas succulents qu'elles proposent, matin, midi et soir !
   :::
 
