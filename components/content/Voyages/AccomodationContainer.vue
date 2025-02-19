@@ -2,7 +2,7 @@
   <v-container>
     <v-card variant="text">
       <v-row>
-        <v-col :class="$vuetify.display.mdAndUp ? 'd-block' : 'd-none'">
+        <v-col class="d-sm-block d-none">
           <v-card-text class="text-subtitle-1 text-grey-darken-3 pt-0 px-0">
             <slot
               name="text"
@@ -20,14 +20,13 @@
             <slot name="images" />
           </v-carousel>
           <v-card-actions
-            :class="$vuetify.display.smAndDown ? 'd-block' : 'd-none'"
-            class="pl-0"
+            class="d-sm-none d-block"
           >
             <v-btn
               variant="text"
               :append-icon="mdiChevronDown"
               color="primary"
-              class="my-4 pl-0"
+              class="my-4"
               @click="show = !show"
             >
               <slot name="know-more" />

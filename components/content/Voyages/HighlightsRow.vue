@@ -9,7 +9,7 @@
           :src="img(props.image, { format: 'webp', quality: 70 })"
           rounded="lg"
           min-height="340px"
-          :max-height="$vuetify.display.lg ? '500' : '' "
+          max-height="500px"
           cover
         />
       </v-col>
@@ -18,13 +18,14 @@
         sm="7"
       >
         <v-card variant="text">
-          <v-card-title class="pl-0 pt-0">
+          <v-card-title class="">
             <slot name="title" />
           </v-card-title>
-
-          <v-list>
-            <slot />
-          </v-list>
+          <v-card-text>
+            <v-list slim>
+              <slot />
+            </v-list>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>

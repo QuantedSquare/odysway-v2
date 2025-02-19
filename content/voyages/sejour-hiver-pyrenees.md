@@ -127,6 +127,16 @@ Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateu
 
   :::
 
+  :::guide-avatar-title-wrapper{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+  #guide-title
+  Claire et Sandrine
+
+  #guide-subtitle
+  Hôtes de votre séjour
+  Lors de ce séjour, vous logerez dans un gîte d'étape situé sur la commune d'Accous. Le gîte est géré par Claire et Sandrine, que vous rencontrerez dès le premier jour, et avec qui vous pourrez partager des moments lors des temps au gîte. Claire et Sandrine ont repris ce gîte début 2020, elles y insufflent depuis de la bonne humeur et un accueil très convivial, sans parler des repas succulents qu'elles proposent, matin, midi et soir !
+
+  :::
+
 ::
 
 ::title-container

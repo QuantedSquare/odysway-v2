@@ -1,4 +1,5 @@
 <template>
+  <!-- @Vlad todo en v-list-item -->
   <div class="d-flex align-center my-2">
     <v-avatar
       :image="props.avatar"
@@ -8,7 +9,7 @@
       <v-card-title class="no-white-space">
         <slot name="guide-title" />
       </v-card-title>
-      <v-card-subtitle>
+      <v-card-subtitle class="no-white-space">
         <slot name="guide-subtitle" />
       </v-card-subtitle>
     </div>

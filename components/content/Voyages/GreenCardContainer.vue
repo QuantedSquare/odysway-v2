@@ -14,12 +14,15 @@
             <v-icon class="mr-4">
               {{ mdiHandHeartOutline }}
             </v-icon>
-            <div class="w-100 d-inline border-b-sm border-white border-opacity-100 py-4">
-              <slot
-                name="title"
-              />
-            </div>
+            <slot
+              name="title"
+            />
           </v-card-title>
+          <v-divider
+            color="white"
+            opacity="100"
+            class="mx-4"
+          />
           <v-card-text>
             <v-list
               variant="text"

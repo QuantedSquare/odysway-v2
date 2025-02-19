@@ -1,6 +1,6 @@
 <template>
   <v-list-item
-    class="text-subtitle-1 text-grey-darken-3 pl-0"
+    class="text-subtitle-1 text-grey-darken-3 px-0"
     :prepend-icon="mdiChevronRight"
   >
     <slot mdc-unwrap="p" />

@@ -21,7 +21,7 @@
           <v-card-title class="text-uppercase">
             <slot name="title" />
           </v-card-title>
-          <v-card-text class="text">
+          <v-card-text>
             <slot name="text" />
           </v-card-text>
         </v-card>

@@ -8,8 +8,10 @@
               name="text"
               mdc-unwrap="p"
             />
+            <v-list>
+              <slot name="guides" />
+            </v-list>
           </v-card-text>
-          <slot name="guides" />
         </v-card>
       </v-col>
     </v-row>
