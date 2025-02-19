@@ -16,7 +16,7 @@
           class="card-image"
           cover
         />
-        <div class="card-title">
+        <div class="card-title shadow">
           {{ props.title }}
         </div>
       </div>
@@ -146,6 +146,9 @@ const toggleFlip = () => {
   font-weight: bold;
   color: white;
 }
+.shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3)
+  }
 
 .flip-card-back {
   background-color: rgba(255, 255, 255, 0.8);

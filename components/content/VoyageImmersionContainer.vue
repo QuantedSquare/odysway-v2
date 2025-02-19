@@ -32,13 +32,7 @@
               </div>
               <div :class="['gradient-overlay', { hidden: isExpanded }]" />
             </div>
-
-            <v-btn
-              variant="text"
-              class="mt-4 btn-bouncing"
-              :icon="isExpanded ? mdiChevronDoubleUp : mdiChevronDoubleDown"
-              @click="isExpanded = !isExpanded"
-            />
+            <BouncingBtn v-model="isExpanded" />
           </div>
         </v-col>
       </v-row>
@@ -47,7 +41,6 @@
 </template>
 
 <script setup>
-import { mdiChevronDoubleDown, mdiChevronDoubleUp } from '@mdi/js'
 import { useImage } from '#imports'
 
 defineProps({
@@ -100,18 +93,5 @@ const img = useImage()
 
 .gradient-overlay.hidden {
   opacity: 0;
-}
-
-.btn-bouncing {
-  animation: bounce 3s infinite;
-}
-
-@keyframes bounce {
-  0%, 50%, 100% {
-    transform: translateY(0);
-  }
-  25%, 75% {
-    transform: translateY(-10px);
-  }
 }
 </style>

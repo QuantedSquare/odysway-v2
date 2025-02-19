@@ -88,9 +88,6 @@ Votre hébergement
 ::
 
 ::accomodation-container
-#know-more
-En savoir plus
-#
 
 #text
 Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées
@@ -105,7 +102,6 @@ Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé
 
   :::voyage-image-carousel-item{image="/images/329303239.jpeg"}
   :::
-
 
 ::
 
