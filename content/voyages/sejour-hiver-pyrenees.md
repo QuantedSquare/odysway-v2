@@ -203,6 +203,75 @@ Détails du prix
   :::
 :: 
 
+
+::faq-container
+
+#section-title
 ::title-container
-Les photos du voyage
+Foire aux questions
+::
+
+#faq
+  :::question-answer-card
+  #question
+  [Où vais-je dormir ?]{style="font-weight:bold"}
+  #answer
+  Lors de ce séjour, vous dormirez dans un gîte d'étape à Accous dans la vallée d'Aspe, en base double à quadruple (chambres partagées). Les chambres sont confortables, la literie est bonne et les repas savoureux. Et la cerise sur le gâteau, la vue sur les montagnes et le reste de la vallée. Les sanitaires sont partagés avec une ou deux chambres.
+
+  :::
+  
+  :::question-answer-card
+  #question
+  [Que vais-je manger ?]{style="font-weight:bold"}
+  #answer
+  Pendant cette expérience, la pension complète est incluse dans le prix de votre voyage, du dîner du jour 1 jusqu'au petit-déjeuner du jour 5. Vous serez accueilli dans un gite d'étape qui vous servira des petits-déjeuner à base de pain frais, confiture maison et miel de la vallée. Le midi, vous aurez des paniers repas, généralement faits de salades gourmandes et de fruits. Le soir, une cuisine locale et savoureuse vous sera servie, en compagnie des autres voyageurs du gite.
+
+  :::
+
+  :::question-answer-card
+  #question
+  [Quoi porter lors de ces randonnées ?]{style="font-weight:bold"}
+  #answer
+  Pour randonner, pas besoin d’équipement onéreux ! Un sac de 30 à 40 litres, des vêtements chauds et imperméables de type Gore-tex, une gourde, votre panier repas, un chapeau et une bonne paire de chaussures suffiront amplement. Nous vous fournirons les raquettes ou les skis de fond selon l’étape du jour et les conditions de neige.
+
+  :::
+  
+  :::question-answer-card
+  #question
+  [Ce voyage est-il fait pour moi ?]{style="font-weight:bold"}
+  #answer
+  Ce voyage est fait pour vous si vous cherchez une expérience immersive en pleine nature, loin de l’agitation du quotidien. Il s’adresse à ceux qui aiment les randonnées en douceur, les paysages enneigés et la découverte des traditions locales. Pas besoin d’être un grand sportif : les randonnées sont accessibles et adaptées au niveau de chacun, avec des étapes progressives et encadrées par des guides passionnés. Si vous appréciez les moments de convivialité, les rencontres authentiques et l’envie de ralentir pour vous reconnecter à l’essentiel, alors ce séjour hivernal en vallée d’Aspe est idéal pour vous.
+
+  <br>
+
+  [Ce séjour est classé niveau 2]{style="font-weight:bold"} : Vous avez l’habitude de marcher régulièrement et pouvez soutenir un rythme de 5 à 7 heures de marche quotidienne, même sur plusieurs jours consécutifs. Vous intégrez de temps à autre des activités d’endurance dans votre routine (comme le jogging, le vélo ou la course à pied). Le parcours comprend un dénivelé positif journalier entre 600 et 800 mètres.
+
+  :::
+
+  :::question-answer-card
+  #question
+  [Où se situe la vallée d'Aspe ?]{style="font-weight:bold"}
+  #answer
+  La vallée d’Aspe est située dans les Pyrénées béarnaises. Elle fait partie du département des Pyrénées-Atlantiques, à proximité de la frontière espagnole. Cette vallée préservée se distingue par ses paysages montagneux spectaculaires, ses forêts, ses rivières et ses villages pittoresques, offrant un cadre idéal pour des randonnées en pleine nature.
+
+  :::
+  
+  :::question-answer-card
+  #question
+  [Quels animaux est-il possible d'observer lors des randonnées ?]{style="font-weight:bold"}
+  #answer
+  Dans la vallée d’Aspe, vous aurez l’occasion d’observer une faune riche et diversifiée. Parmi les espèces emblématiques, vous pourrez apercevoir des isards, petits cousins des chamois, évoluant sur les pentes escarpées. Le majestueux gypaète barbu, un vautour rare aux ailes imposantes, ainsi que le vautour fauve sont souvent visibles dans le ciel. Vous pourrez également rencontrer des marmottes, des renards et parfois des cerfs dans les zones plus boisées. Les plus chanceux pourront même entendre ou apercevoir le discret desman des Pyrénées, un petit mammifère aquatique typique des rivières de montagne.
+  :::
+
+  :::question-answer-card
+  #question
+  [Comment se passe la réservation avec Odysway ? ]{style="font-weight:bold"}
+  #answer
+  Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.
+
+  Vous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.
+
+  Durant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au +33 1 84 80 79 75 ou au +33 7 80 91 95 40.
+  :::
+
 ::
