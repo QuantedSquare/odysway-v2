@@ -3,6 +3,7 @@
     <v-img
       :src="img(props.image, { format: 'webp', quality: 100, height: 300 })"
       class="h-100"
+      rounded="lg"
       cover
     />
   </v-carousel-item>
