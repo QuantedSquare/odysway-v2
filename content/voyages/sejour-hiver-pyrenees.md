@@ -128,3 +128,71 @@ Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateu
   :::
 
 ::
+
+::title-container
+Détails du prix
+::
+
+::price-details-container
+#left-column-phrase
+[Le prix comprend]{style="font-weight: bold"}
+
+#items-list-include
+  :::price-details-item
+  #item
+  ✅ L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.
+  :::
+
+  :::price-details-item
+  #item
+  ✅ Quatre nuitées en chambre partagée dans un gîte de la vallée d'Aspe et les taxes de séjour (deux à quatre personnes par chambre, non-mixtes).
+  :::
+  
+  :::price-details-item
+  #item
+  ✅ La pension complète : petits déjeuners, paniers repas faits de bons produits locaux et dîner copieux le soir. Du dîner du jour 1 au petit-déjeuner du jour 5.
+  :::
+  
+  :::price-details-item
+  #item
+  ✅ Les services d'un accompagnateur en moyenne montagne certifié sur 3 jours.
+  :::
+  
+  :::price-details-item
+  #item
+  ✅ Le matériel pour la marche sur neige : raquette ou skis de fond selon le niveau de neige.
+  :::
+
+#right-column-phrase
+[Le prix ne comprend pas]{style="font-weight: bold"}
+
+#items-list-exclude
+  :::price-details-item
+  #item
+  ❌ Les activités non comprises dans la section "le prix comprend"
+  :::
+
+  :::price-details-item
+  #item
+  ❌ L'assurance annulation ou multirisques
+  :::
+
+  :::price-details-item
+  #item
+  ❌ Le transport pour vous rendre sur place (voiture ou train jusqu'à Bedous)
+  :::
+
+  :::price-details-item
+  #item
+  ❌ Le transfert de la gare au gîte (en bus)
+  :::
+
+  :::price-details-item
+  #item
+  ❌ Les dépenses personnelles et pourboires
+  :::
+:: 
+
+::title-container
+Les photos du voyage
+::
