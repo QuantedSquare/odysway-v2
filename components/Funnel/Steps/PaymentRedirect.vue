@@ -96,6 +96,8 @@
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 console.log('props', props.voyage)
+const route = useRoute()
+
 const { deal, dealId, updateDeal } = useDeal(props.ownStep)
 // Data
 const isBooking = ref(false)
@@ -108,13 +110,33 @@ const switch_accept_country = ref(false)
 const dataForStripeSession = ref({
   acceptAlmaPaiement: false,
   almaTotalPrice: 0,
+
 })
 const loadAlma = false
 const loadingStripeSession = ref(false)
 const disableAlma = ref(false)
+
 const stripePay = async () => {
   // #TODO Add Stripe payment
-  console.log('Stripe payment')
+
+  const stripeData = {
+    deal: {},
+    currentUrl: route.fullPath,
+  }
+
+  const checkoutLink = await $fetch('/api/v1/stripe/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(stripeData),
+  })
+  if (checkoutLink) {
+    console.log('checkoutLink', checkoutLink)
+    await navigateTo(checkoutLink, {
+      external: true,
+    })
+  }
 }
 const almaPay = async () => {
   // #TODO Add Alma payment
