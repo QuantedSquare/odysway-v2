@@ -93,16 +93,18 @@ Votre hébergement
 Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées
 
 
+#carousel
+::carousel
 #images
-  :::voyage-image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.20.png"}
+  :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.20.png"}
   :::
 
-  :::voyage-image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.09.png"}
+  :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.09.png"}
   :::
 
-  :::voyage-image-carousel-item{image="/images/329303239.jpeg"}
+  :::image-carousel-item{image="/images/329303239.jpeg"}
   :::
-
+::
 ::
 
 ::title-container
@@ -130,7 +132,6 @@ Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateu
   #guide-subtitle
   Hôtes de votre séjour
   Lors de ce séjour, vous logerez dans un gîte d'étape situé sur la commune d'Accous. Le gîte est géré par Claire et Sandrine, que vous rencontrerez dès le premier jour, et avec qui vous pourrez partager des moments lors des temps au gîte. Claire et Sandrine ont repris ce gîte début 2020, elles y insufflent depuis de la bonne humeur et un accueil très convivial, sans parler des repas succulents qu'elles proposent, matin, midi et soir !
-
   :::
 
 ::
@@ -201,7 +202,6 @@ Détails du prix
 
 
 ::faq-container
-
 #section-title
 ::title-container
 Foire aux questions
