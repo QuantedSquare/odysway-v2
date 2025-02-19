@@ -8,19 +8,25 @@
   >
     <template #prev="{ props }">
       <v-btn
-        variant="elevated"
-        :icon="mdiChevronLeft"
-        color="black opacity-40"
+        density="compact"
+        icon
         @click="props.onClick"
-      />
+      >
+        <v-icon
+          :icon="mdiChevronLeft"
+        />
+      </v-btn>
     </template>
     <template #next="{ props }">
       <v-btn
-        variant="elevated"
-        :icon="mdiChevronRight"
-        color="black opacity-40"
+        density="compact"
+        icon
         @click="props.onClick"
-      />
+      >
+        <v-icon
+          :icon="mdiChevronRight"
+        />
+      </v-btn>
     </template>
     <slot name="images" />
   </v-carousel>
