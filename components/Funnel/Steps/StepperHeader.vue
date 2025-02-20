@@ -18,7 +18,9 @@
           :step="step.number"
           color="primary"
         >
-          {{ step.label }}
+          <span class="d-none d-md-block">
+            {{ step.label }}
+          </span>
         </v-stepper-item>
         <v-divider
           v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
@@ -79,7 +81,12 @@ const stepDefinitions = computed(() => {
       label: 'Assurances',
     })
   }
-
+  if (props.skipperMode === 'normal') {
+    baseSteps.push({
+      number: baseSteps.length + 1,
+      label: 'Récapitulatif',
+    })
+  }
   return baseSteps
 })
 </script>

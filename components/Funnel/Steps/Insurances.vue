@@ -76,7 +76,9 @@ const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
 
-const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
+const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const { pricePerTraveler } = usePricePerTraveler(deal)
+
 // Data
 const insurances = ref({
   rapatriement: 0,
@@ -87,7 +89,8 @@ const fetchInsuranceQuote = async (retrievedDeal) => {
   isLoadingInsurance.value = true
   try {
     console.log('fetch insurance with this data:', {
-      pricePerTraveler: +retrievedDeal.pricePerTraveler,
+      // Prix sans assurance ici
+      pricePerTraveler: pricePerTraveler.value / 100,
       countries: retrievedDeal.iso,
       zoneChapka: +retrievedDeal.zoneChapka || 0,
       departureDate: retrievedDeal.departureDate,
@@ -97,7 +100,8 @@ const fetchInsuranceQuote = async (retrievedDeal) => {
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
-        pricePerTraveler: +retrievedDeal.pricePerTraveler,
+        // Prix sans assurance ici
+        pricePerTraveler: pricePerTraveler.value / 100,
         countries: retrievedDeal.iso,
         zoneChapka: +retrievedDeal.zoneChapka || 0,
         departureDate: retrievedDeal.departureDate,
@@ -119,11 +123,11 @@ const fetchInsuranceQuote = async (retrievedDeal) => {
 const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
 
 watch([deal, () => props.currentStep], async () => {
-  model.value = true
   if (props.currentStep === props.ownStep) {
     addAnotherParameter('currentStep', props.ownStep)
   }
   if (deal.value) {
+    model.value = true
     console.log('dealId fetched', deal.value)
     insurances.value = await fetchInsuranceQuote(deal.value)
 

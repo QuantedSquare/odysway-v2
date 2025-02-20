@@ -1,12 +1,11 @@
 import addAnotherParameter from '@/utils/addAnotherParameter'
 
-export function useDeal(currentStepGetter, componentStepGetter) {
+export function useDeal(componentStep) {
   const deal = ref(null)
   const dealId = ref(null)
   const route = useRoute()
 
-  const currentStepRef = computed(() => toValue(currentStepGetter()))
-  const componentStepRef = computed(() => toValue(componentStepGetter()))
+  const currentStepRef = ref(1)
 
   const fetchDeal = async (id = dealId.value) => {
     const res = await apiRequest(`/ac/deals/${id}`)
@@ -29,11 +28,15 @@ export function useDeal(currentStepGetter, componentStepGetter) {
 
   watch(route, () => {
     dealId.value = route.query.id || dealId.value
+    console.log('dealId', dealId.value, 'route.query.currentStep', route.query.currentStep)
+    if (route.query.currentStep) {
+      currentStepRef.value = route.query.currentStep
+    }
   }, { immediate: true })
 
   watch([dealId, currentStepRef], async () => {
     dealId.value = route.query.id || dealId.value
-    if (dealId.value && componentStepRef.value === currentStepRef.value) {
+    if (dealId.value && +componentStep === +currentStepRef.value) {
       await fetchDeal()
       console.log('Deal fetched:', deal.value)
     }

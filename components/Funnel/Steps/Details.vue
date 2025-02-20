@@ -161,7 +161,7 @@ import { z } from 'zod'
 
 const props = defineProps(['currentStep', 'ownStep'])
 
-const { deal, dealId, createDeal, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
+const { deal, dealId, createDeal, updateDeal } = useDeal(props.ownStep)
 const model = defineModel()
 
 const selectOptions = function (start, end) {
@@ -189,7 +189,7 @@ watch(deal, () => {
     console.log('got value in details', deal.value)
     nbTeen.value = +deal.value.nbTeen
     nbAdults.value = +deal.value.nbAdults
-    nbChildren.value = +deal.value.nbChildren
+    nbChildren.value = +deal.value.nbUnderAge
   }
 })
 
@@ -301,7 +301,7 @@ const submitStepData = async () => {
       })
     }
     else {
-      await createDeal(flattenedDeal)
+      return await createDeal(flattenedDeal)
     }
     return true
   }

@@ -81,7 +81,7 @@
 
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
-const { deal, dealId, updateDeal } = useDeal(() => props.currentStep, () => props.ownStep)
+const { deal, dealId, updateDeal } = useDeal(props.ownStep)
 
 const isCouple = ref(false)
 const nbTravelers = ref(1)
@@ -132,7 +132,10 @@ const initializeTravelersData = () => {
   }
 }
 
-watch([deal, () => props.currentStep], () => {
+watch([deal, dealId, () => props.currentStep], () => {
+  if (props.currentStep === props.ownStep && dealId.value) {
+    addAnotherParameter('currentStep', props.ownStep)
+  }
   if (deal.value) {
     initializeTravelersData()
     if (dealId.value && props.currentStep === props.ownStep) {

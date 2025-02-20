@@ -1,10 +1,11 @@
-/* eslint-disable camelcase */
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 
 import axios from 'axios'
 
-import { loadStripe } from '@stripe/stripe-js'
+// import { loadStripe } from '@stripe/stripe-js'
+
+import Stripe from 'stripe'
 
 dayjs.extend(customParseFormat)
 
