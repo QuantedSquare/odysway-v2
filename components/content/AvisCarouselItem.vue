@@ -3,11 +3,10 @@
     <v-row>
       <v-col
         cols="12"
-        class="d-flex align-center"
+        class="d-flex align-center ga-4"
       >
         <v-avatar
           size="x-large"
-          class="mr-4"
           color="primary"
         >
           <v-img
@@ -17,7 +16,6 @@
           <v-icon
             v-show="!props.photo"
             size="x-large"
-            color="white"
             :icon="mdiAccount"
           />
         </v-avatar>

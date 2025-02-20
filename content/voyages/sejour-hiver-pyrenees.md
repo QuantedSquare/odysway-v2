@@ -267,8 +267,8 @@ Détails du prix
 ::title-container
 Les photos du voyage
 ::
-
-::photo-gallery-container{:images='["/images/AdobeStock_124472096.jpeg", "/images/Capture d’écran 2022-02-24 à 14.08.09.png", "/images/berger couverture.jpg", "/images/IMG-20240320-WA0124.jpg"]'}
+<!-- 
+::photo-gallery-container{:images='["/images/AdobeStock_124472096.jpeg", "/images/Capture d’écran 2022-02-24 à 14.08.09.png", "/images/berger couverture.jpg", "/images/IMG-20240320-WA0124.jpg"]'} -->
 
 ::
 
@@ -286,7 +286,7 @@ Les avis des voyageurs
   Floriane
 
   #avis
-  « J'ai découvert Odysway pour le séjour dans les Pyrénées pour découvrir la vie de berger et j'en garderais un très beau souvenir, aussi bien pour les paysages à couper le souffle que pour les belles rencontres que j'ai pu faire.
+« J'ai découvert Odysway pour le séjour dans les Pyrénées pour découvrir la vie de berger et j'en garderais un très beau souvenir, aussi bien pour les paysages à couper le souffle que pour les belles rencontres que j'ai pu faire.
   Merci pour cette expérience, vos échanges et votre disponibilité. »
   :::
   
