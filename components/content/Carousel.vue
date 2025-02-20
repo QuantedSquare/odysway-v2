@@ -2,7 +2,7 @@
   <v-carousel
     ref="accomodation-carousel"
     height="300"
-    :show-arrows="nbCarouselItems > 1 ? true : false "
+    :show-arrows="nbCarouselItems > 1 ? 'hover' : false "
     :cycle="nbCarouselItems > 1 ? true : false"
     hide-delimiters
   >
@@ -10,10 +10,12 @@
       <v-btn
         density="compact"
         icon
+        color="grey-lighten-4 opacity-60"
         @click="props.onClick"
       >
         <v-icon
           :icon="mdiChevronLeft"
+          color="grey-darken-3"
         />
       </v-btn>
     </template>
@@ -21,10 +23,12 @@
       <v-btn
         density="compact"
         icon
+        color="grey-lighten-4 opacity-60"
         @click="props.onClick"
       >
         <v-icon
           :icon="mdiChevronRight"
+          color="grey-darken-3"
         />
       </v-btn>
     </template>

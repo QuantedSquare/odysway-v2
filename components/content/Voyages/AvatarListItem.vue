@@ -1,9 +1,6 @@
 <template>
   <v-list-item>
-    <v-row
-      justify="center"
-      align="center"
-    >
+    <v-row>
       <v-col
         cols="12"
         md="auto"
@@ -11,19 +8,19 @@
       >
         <v-avatar
           :image="props.avatar"
-          size="80"
+          :size="props.avatarSize ? props.avatarSize : '80'"
         />
       </v-col>
-      <v-col class="d-flex flex-column align-center align-md-start">
-        <v-card-title class="no-white-space">
+      <v-col class="d-flex flex-column justify-center align-center align-md-start">
+        <v-list-item-title class="text-center text-md-start no-white-space mb-2">
           <slot name="title" />
-        </v-card-title>
-        <v-card-subtitle class="no-white-space">
+        </v-list-item-title>
+        <v-list-item-subtitle class="no-white-space">
           <slot name="subtitle" />
-        </v-card-subtitle>
-        <v-card-text>
+        </v-list-item-subtitle>
+        <p class="mt-4">
           <slot name="text" />
-        </v-card-text>
+        </p>
       </v-col>
     </v-row>
   </v-list-item>
@@ -34,6 +31,10 @@ const props = defineProps({
   avatar: {
     type: String,
     default: '',
+  },
+  avatarSize: {
+    type: String,
+    default: '80',
   },
 })
 </script>

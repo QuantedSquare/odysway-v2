@@ -6,7 +6,6 @@
           <v-card-text class="text-subtitle-1 text-grey-darken-3 px-0">
             <slot
               name="text"
-              mdc-unwrap="p"
             />
             <v-list lines="three">
               <slot name="guides" />

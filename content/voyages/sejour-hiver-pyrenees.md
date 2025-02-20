@@ -4,6 +4,68 @@ Immersion hivernale en terre béarnaise
 
 ::
 
+::title-container
+Immersion hivernale en terre béarnaise
+::
+
+::intro-voyage-container
+#tooltip-text-group
+  :::icon-text-col-tooltip{iconName="mdiCalendar"}
+  #tooltip
+  Durée de voyage
+  #text
+  5 JOURS / 4 NUITS
+  
+  :::
+
+  :::icon-text-col-tooltip{iconName="mdiWhiteBalanceSunny"}
+  #tooltip
+  Période idéale
+  #text
+  JAN À MARS
+  
+  :::
+
+  :::icon-text-col-tooltip{iconName="mdiTent"}
+  #tooltip
+  Hébergement
+  #text
+  GÎTE DANS UN VILLAGE
+  
+  :::
+
+  :::icon-text-col-tooltip{iconName="mdiAccountGroup"}
+  #tooltip
+  Disponible en groupe
+  #text
+  DISPONIBLE EN GROUPE
+  
+  :::
+
+  :::icon-text-col-tooltip{iconName="mdiTeddyBear"}
+  #tooltip
+  Dès 16 ans
+  #text
+  DÈS 16 ANS
+  
+  :::
+
+#intro-voyage
+*« Partez pour une immersion en vallée d’Aspe, où le Béarn en hiver révèle ses paysages grandioses et son authenticité intacte. Ici, chaque pas sur les sentiers enneigés invite à ralentir, à savourer le silence des forêts et l’éclat des lacs d’altitude.*
+
+<br>
+
+*Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce séjour en étoile à pied, raquette ou ski de fond (selon le niveau de neige) est une invitation à renouer avec la nature et le rythme apaisant des montagnes. Le soir, retrouvez la chaleur de Claire et Sandrine, qui vous accueilleront autour de plats de saison gourmands, préparés avec soin et générosité. »*
+
+#avatar
+::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp" avatarSize="60"}
+#title
+[Romain]{style="font-weight: bold"}, fondateur d'Odysway et amoureux de la vallée d'Aspe
+
+::
+
+::
+
 ::highlights-row{image="/images/iStock-925005602.webp"}
 #title
 [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}

@@ -28,12 +28,6 @@
   </v-container>
 </template>
 
-<script setup>
-const route = useRoute()
-const page = await queryCollection('content').path(route.path).first()
-console.log(page)
-</script>
-
 <style scoped>
 .v-list--density-default .v-list-subheader {
   padding-inline-start: 0 !important;
