@@ -2,11 +2,12 @@
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
-    size="(max-width: 600) 480px, 1500px"
-    :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`"
     height="100vh"
     cover
   >
+    <!-- image attributes ⬆️
+    size="(max-width: 600) 480px, 1500px"
+    :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`" -->
     <div class="h-100 d-flex align-center">
       <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
         <v-row

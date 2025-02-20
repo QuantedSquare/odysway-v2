@@ -1,4 +1,4 @@
-::hero-section{imageSrc="/images/AdobeStock_124472096.jpeg"}
+::hero-section{imageSrc="/images/iStock-1336944149.webp"}
 #title
 Immersion hivernale en terre béarnaise
 
