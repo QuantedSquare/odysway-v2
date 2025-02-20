@@ -104,27 +104,27 @@ POURQUOI VOYAGER AVEC ODYSWAY ?
   
 #items  
   :::green-card-item
-  ✓ Un accompagnement personnalisé du début à la fin de votre voyage
+  Un accompagnement personnalisé du début à la fin de votre voyage
   
   :::
   
   :::green-card-item
-  ✓ La liberté de choisir votre mode de voyage : en petit groupe ou privatif (aux dates de votre choix)
+  La liberté de choisir votre mode de voyage : en petit groupe ou privatif (aux dates de votre choix)
   
   :::
   
   :::green-card-item
-  ✓ Des petits groupes pour une dimension intimiste
-  
-  :::
-
-  :::green-card-item
-  ✓ Des expériences en immersion, loin du tourisme de masse, soigneusement conçues par Odysway
+  Des petits groupes pour une dimension intimiste
   
   :::
 
   :::green-card-item
-  ✓ Des guides locaux passionnés
+  Des expériences en immersion, loin du tourisme de masse, soigneusement conçues par Odysway
+  
+  :::
+
+  :::green-card-item
+  Des guides locaux passionnés
   
   :::
 ::
