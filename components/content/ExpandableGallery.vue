@@ -43,8 +43,8 @@
             <div class="image-overlay" />
             <div class="content-overlay">
               <div class="w-100">
-                <h3 class="category-title text-to-wrap">{{ category?.title }}</h3>
-                <p class="category-description d-flex align-center justify-space-between ga-2 ">
+                <h3 class="category-title text-to-wrap text-shadow">{{ category?.title }}</h3>
+                <p class="category-description d-flex align-center justify-space-between ga-2 text-shadow">
                   <span class="w-75">
                     Cliquez pour en apprendre plus à propos des {{ category?.title }}
                   </span>
@@ -237,7 +237,6 @@ watch(mdAndDown, (newValue) => {
   font-size: 1.25rem;
   font-weight: 600;
   transition: transform 0.3s ease-in-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .image-wrapper:hover .category-title,
@@ -251,7 +250,6 @@ watch(mdAndDown, (newValue) => {
   opacity: 0;
   transform: translateY(1rem);
   transition: all 0.3s ease-in-out;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .image-wrapper:hover .category-description,

@@ -14,9 +14,9 @@
           :lazy-src="voyage.imgSrc"
           cover
         >
-          <div class="pa-5 d-flex flex-column align-start">
-            <span class="text-h5">{{ voyage.title }}</span>
-            <span class="text-body-1">{{ deal?.travelType }}</span>
+          <div class="pa-5  d-flex flex-column align-start">
+            <span class="text-h5 text-shadow">{{ voyage.title }}</span>
+            <span class="text-body-1 text-shadow">{{ deal?.travelType }}</span>
           </div>
         </v-img>
       </Transition>

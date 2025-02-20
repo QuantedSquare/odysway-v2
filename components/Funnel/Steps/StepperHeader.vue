@@ -4,7 +4,9 @@
     id="stepper"
     v-model="model"
     alt-labels
+    editable
     show-actions
+    class="text-caption"
     color="primary"
   >
     <v-stepper-header class="elevation-0">

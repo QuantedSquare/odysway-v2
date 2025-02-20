@@ -17,11 +17,11 @@ const createCheckoutSession = async (order) => {
       {
         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
         price: 'price_1QuGIdAYZjtHS4WQh4lQL5L3',
-        quantity: 1,
+        quantity: 3,
       },
     ],
     mode: 'payment',
-    success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+    success_url: `${origin}`,
     cancel_url: `${origin}${order.currentUrl}`,
   })
   console.log('====CREATE STRIPE SESSION======', session)

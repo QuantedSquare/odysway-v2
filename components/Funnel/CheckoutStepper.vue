@@ -51,6 +51,7 @@
                       :ref="(component) => registerStepComponent(component, 1)"
                       v-model="validForm"
                       :current-step="currentStep"
+                      :voyage="voyage"
                       :own-step="1"
                     />
                     <FunnelStepsCalendly
@@ -150,22 +151,45 @@
 <script setup>
 const route = useRoute()
 
-const { step, dealId, slug, date_start, date_end, plan } = route.query
+const { step, dealId, slug, departure_date, return_date, plan } = route.query
 
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 console.log('page', page.value)
 
 // If slug, coming from travel page, otherwise, coming from custom link
+// Voyage are all the statics data of the travel
+// Only deal manage the dynamic values
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
+  console.log('slug', slug)
   if (slug) {
-    return queryCollection('voyages').where('slug', '=', slug).first()
+    const query = queryCollection('voyages').where('slug', '=', slug).first()
+    Object.assign(query, { departureDate: departure_date, returnDate: return_date })
+    return query
   }
   else {
     const deal = await apiRequest(`/ac/deals/${dealId}`)
     return { title: deal.title,
       startingPrice: deal.pricePerTraveler,
       imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+      country: deal.country,
+      iso: deal.iso,
+      zoneChapka: +deal.zoneChapka,
+      slug: deal.slug,
+      depositPrice: deal.depositPrice,
+      promoChildren: deal.promoChildren,
+      promoTeen: deal.promoTeen,
+      maxChildrenAge: 12,
+      maxTeenAge: 18,
+      source: 'Devis', // Possible que ça change
+      forcedIndivRoom: deal.forcedIndivRoom,
+      indivRoomPrice: deal.indivRoomPrice,
+      promoEarlybird: deal.promoEarlybird,
+      promoLastMinute: deal.promoLastMinute,
+      gotLastMinute: deal.gotLastMinute === 'Oui',
+      gotEarlybid: deal.gotEarlybid === 'Oui',
       // {... COMPLETER}
+      departureDate: deal.departureDate,
+      returnDate: deal.returnDate,
     }
   }
 })

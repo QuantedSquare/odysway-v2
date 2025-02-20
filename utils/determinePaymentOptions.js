@@ -3,7 +3,10 @@ import dayjs from 'dayjs'
 export default function (departureDate, queryParams) {
   // If amount is specified in query, use that (custom payment)
   if (queryParams.amount) {
-    return queryParams.type || 'custom'
+    return 'custom'
+  }
+  if (queryParams.type === 'balance') {
+    return 'balance'
   }
 
   // Otherwise calculate based on dates

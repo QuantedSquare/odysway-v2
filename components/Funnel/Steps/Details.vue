@@ -154,10 +154,11 @@
 <script setup>
 import { z } from 'zod'
 
-const props = defineProps(['currentStep', 'ownStep'])
+const props = defineProps(['currentStep', 'ownStep', 'voyage'])
 
 const { deal, dealId, createDeal, updateDeal, checkoutType } = useStepperDeal(props.ownStep)
 const model = defineModel()
+const route = useRoute()
 
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
@@ -167,11 +168,11 @@ const isAdvance = ref(true)
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 const nbTeen = ref(0)
-const firstName = ref('')
-const lastName = ref('')
-const email = ref('')
-const phoneCode = ref('')
-const phoneNumber = ref('')
+const firstName = ref('Alex')
+const lastName = ref('& Yuzu')
+const email = ref('ottmann.alex@gmail.com')
+const phoneCode = ref('+33')
+const phoneNumber = ref('631870876')
 
 watch(() => props.currentStep, (value) => {
   if (value === props.ownStep) {
@@ -185,6 +186,13 @@ watch(deal, () => {
     nbTeen.value = +deal.value.nbTeen || 0
     nbAdults.value = +deal.value.nbAdults
     nbChildren.value = +deal.value.nbUnderAge || 0
+    email.value = deal.value.contact.email
+    firstName.value = deal.value.contact.firstName
+    lastName.value = deal.value.contact.lastName
+
+    const { code, number } = extractPhoneDetails(deal.value.contact.phone, phonesSelect)
+    phoneCode.value = code
+    phoneNumber.value = number
   }
 })
 
@@ -198,19 +206,18 @@ const saveToLocalStorage = () => {
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
-const loadFromLocalStorage = () => {
-  const storedData = JSON.parse(localStorage.getItem('detailsData'))
-  if (storedData) {
-    firstName.value = storedData.firstname
-    lastName.value = storedData.lastname
-    email.value = storedData.email
-    phoneNumber.value = storedData.phone
-    phoneCode.value = storedData.phoneCode
-  }
-}
-onMounted(() => {
-  loadFromLocalStorage()
-})
+// const loadFromLocalStorage = () => {
+
+//   const storedData = JSON.parse(localStorage.getItem('detailsData'))
+//   if (storedData) {
+//     firstName.value = storedData.firstname
+//     lastName.value = storedData.lastname
+//     email.value = storedData.email
+//     phoneNumber.value = storedData.phone
+//     phoneCode.value = storedData.phoneCode
+//   }
+// }
+// loadFromLocalStorage()
 
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
@@ -222,6 +229,9 @@ const rules = {
   email: schemaToRule(emailSchema),
   phone: schemaToRule(phoneSchema),
 }
+
+const nbTravelers = computed(() => nbAdults.value + nbChildren.value + nbTeen.value)
+
 const totalValue = computed(() => {
   const baseVoyage = 85000 // Récupérer de voyage
   const reduction_enfant = 8000
@@ -234,6 +244,9 @@ const submitStepData = async () => {
   // Validate form
   console.log('start submit', dealId.value)
   if (!model.value) return false
+  const totalTravelPrice = 80000 // props.voyage.startingPrice * (nbAdults.value + nbChildren.value + nbTeen.value)
+  //  #todo soustraire la réduction s'il y en a une
+
   try {
     const flattenedDeal = {
       value: totalValue.value, // # A retravailler avec toutes les valeurs
@@ -243,38 +256,38 @@ const submitStepData = async () => {
       owner: '1',
       stage: '2',
       // CustomFields
-      departureDate: '2025-10-15',
-      returnDate: '2025-10-30',
-      travelType: 'Voyage de Groupe',
+      departureDate: props.voyage.departureDate,
+      returnDate: props.voyage.returnDate,
+      travelType: props.voyage.plan, // #todo à checker
       nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
       nbChildren: nbChildren.value + nbTeen.value,
       nbAdults: nbAdults.value,
       nbTeen: nbTeen.value,
       nbUnderAge: nbChildren.value,
-      country: 'Nepal',
-      iso: 'NP',
-      zoneChapka: 2,
-      pricePerTraveler: 2125,
-      image: 'https://example.com/nepal.jpg',
+      country: props.voyage.country,
+      iso: props.voyage.iso,
+      zoneChapka: props.voyage.zoneChapka,
+      pricePerTraveler: props.voyage.startingPrice, // #todo trouver comment faire sauter
+      image: props.voyage.imgSrc || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
       currentStep: 'Création du Deal',
-      alreadyPaid: 0,
+      alreadyPaid: 0, //
       restTravelersToPay: nbAdults.value + nbChildren.value + nbTeen.value,
-      utm: '',
-      slug: 'decouverte-nepal',
-      depositPrice: 25500,
-      basePricePerTraveler: 85000,
-      totalTravelPrice: 85000,
-      promoChildren: 8000,
-      maxChildrenAge: 12,
-      promoTeen: 8000,
-      maxTeenAge: 18,
+      utm: route.query.utm || '',
+      slug: props.voyage.slug,
+      depositPrice: props.voyage.depositPrice,
+      basePricePerTraveler: props.voyage.startingPrice,
+      totalTravelPrice: totalTravelPrice, // #todo checker si *100 ou non
+      promoChildren: props.voyage.promoChildren,
+      maxChildrenAge: props.voyage.maxChildrenAge,
+      promoTeen: props.voyage.promoTeen,
+      maxTeenAge: props.voyage.maxTeenAge,
       source: 'Devis',
-      forcedIndivRoom: 'Non',
-      indivRoomPrice: 15000,
-      promoEarlybird: 5000,
-      gotEarlybird: 'Non',
-      promoLastMinute: 0,
-      gotLastMinute: 'Non',
+      forcedIndivRoom: nbTravelers.value === 1 && props.voyage.forcedIndivRoom,
+      indivRoomPrice: props.voyage.indivRoomPrice,
+      promoEarlybird: props.voyage.promoEarlybird,
+      gotEarlybird: props.voyage.gotEarlybird,
+      promoLastMinute: props.voyage.promoLastMinute,
+      gotLastMinute: props.voyage.gotLastMinute,
       // Contacts
       email: email.value,
       phone: `${phoneCode.value}${phoneNumber.value}`,
@@ -283,6 +296,8 @@ const submitStepData = async () => {
     }
     // Submit form data
     if (dealId.value) {
+      // Update deal with this values only after creation.
+      // So only when checkout type is deposit or full
       await updateDeal({
         nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
         nbChildren: nbChildren.value + nbTeen.value,
@@ -294,8 +309,22 @@ const submitStepData = async () => {
         firstname: firstName.value,
         lastname: lastName.value,
       })
+      // else we update basics
+      // else{
+      //   await updateDeal({
+      //   email: email.value,
+      //   phone: `${phoneCode.value}${phoneNumber.value}`,
+      //   firstname: firstName.value,
+      //   lastname: lastName.value,
+      // })
+      // #TODO we can push here in query the selected travelers to pay.
+      // addAnotherQuery('sa', nbAdults.value)
+      // addAnotherQuery('sc', nbChildren.value)
+      // addAnotherQuery('st', nbTeen.value)
     }
     else {
+      console.log('submitting', flattenedDeal)
+
       return await createDeal(flattenedDeal)
     }
     return true
@@ -385,6 +414,23 @@ const phonesSelect = [
     },
   },
 ]
+const extractPhoneDetails = (fullPhone, phonesList) => {
+  const foundCode = phonesList.find(({ title }) =>
+    fullPhone.startsWith(title),
+  )
+
+  if (foundCode) {
+    return {
+      code: foundCode.title,
+      number: fullPhone.replace(foundCode.title, ''),
+    }
+  }
+
+  return {
+    code: '+33', // Default code
+    number: fullPhone,
+  }
+}
 
 defineExpose({
   submitStepData,

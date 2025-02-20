@@ -37,9 +37,3 @@ const { data: categorie } = useAsyncData(`categorie-${props.categorieSlug}`, () 
   return queryCollection('categories').where('slug', '=', props.categorieSlug).first()
 })
 </script>
-
-<style scoped>
- .shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3)
-  }
-</style>

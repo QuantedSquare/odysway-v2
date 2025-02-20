@@ -1,7 +1,5 @@
 <template>
-  <div>
-    coucou
-  </div>
+  <div />
 </template>
 
 <script setup>

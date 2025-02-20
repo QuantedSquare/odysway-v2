@@ -67,9 +67,6 @@ const img = useImage()
 </script>
 
 <style scoped>
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
 .img-shadow{
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }

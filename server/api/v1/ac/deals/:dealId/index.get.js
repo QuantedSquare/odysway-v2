@@ -9,6 +9,7 @@ export default defineEventHandler(async (event) => {
   try {
     const reponse = await activecampaign.getDealById(dealId)
     const customFields = await activecampaign.getDealCustomFields(dealId)
+    const { contact } = await activecampaign.getClientById(reponse.deal.contact)
     if (!reponse.deal || !customFields) {
       throw createError({
         statusCode: 404,
@@ -18,6 +19,12 @@ export default defineEventHandler(async (event) => {
     return {
       ...reponse.deal,
       ...customFields,
+      contact: {
+        email: contact.email,
+        firstName: contact.firstName,
+        lastName: contact.lastName,
+        phone: contact.phone,
+      },
     }
   }
   catch (err) {
