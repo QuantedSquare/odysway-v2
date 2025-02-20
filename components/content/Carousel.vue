@@ -1,15 +1,14 @@
 <template>
   <v-carousel
     ref="carousel"
-
-    :show-arrows="false"
+    height="300"
     :cycle="nbCarouselItems > 1 ? true : false"
     interval="10000"
     hide-delimiter-background
     :hide-delimiters="nbCarouselItems > 1 ? false : true"
     color="grey-lighten-4"
   >
-    <!-- <template #prev="{ props }">
+    <template #prev="{ props }">
       <v-btn
         density="compact"
         icon
@@ -21,9 +20,9 @@
           color="grey-darken-3"
         />
       </v-btn>
-    </template> -->
+    </template>
     <slot name="carousel-item" />
-    <!-- <template #next="{ props }">
+    <template #next="{ props }">
       <v-btn
         density="compact"
         icon
@@ -35,14 +34,13 @@
           color="grey-darken-3"
         />
       </v-btn>
-    </template> -->
+    </template>
   </v-carousel>
 </template>
 
 <script setup>
-// import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 
-// check if good usage when same component used twice on the same page
 const carousel = useTemplateRef('carousel')
 const nbCarouselItems = ref(0)
 

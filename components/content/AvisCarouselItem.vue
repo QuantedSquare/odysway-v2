@@ -6,7 +6,7 @@
         class="d-flex align-center"
       >
         <v-avatar
-          size="60"
+          size="x-large"
           class="mr-4"
           color="primary"
         >

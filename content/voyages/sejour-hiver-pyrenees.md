@@ -271,7 +271,7 @@ Les avis des voyageurs
 
 ::avis-voyage-container
 #carousel
-::carousel
+::avis-carousel
 #carousel-item
   :::avis-carousel-item{photo="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
   #title
@@ -293,8 +293,7 @@ Les avis des voyageurs
   e gite tenu par Claire et Sandrine est super convivial, chaleureux et à taille humaine. Elles nous ont gâtés par le repas copieux et délicieux.
   La grandeur du groupe est juste ce qu’il faut pour faire connaissance et sympathiser.
   Première expérience réussie avec Odysway. »
-  
-  
+    
   :::
 
 ::
