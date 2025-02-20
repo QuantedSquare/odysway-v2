@@ -1,12 +1,15 @@
 <template>
   <v-carousel
-    ref="accomodation-carousel"
-    height="300"
-    :show-arrows="nbCarouselItems > 1 ? 'hover' : false "
+    ref="carousel"
+
+    :show-arrows="false"
     :cycle="nbCarouselItems > 1 ? true : false"
-    hide-delimiters
+    interval="10000"
+    hide-delimiter-background
+    :hide-delimiters="nbCarouselItems > 1 ? false : true"
+    color="grey-lighten-4"
   >
-    <template #prev="{ props }">
+    <!-- <template #prev="{ props }">
       <v-btn
         density="compact"
         icon
@@ -18,8 +21,9 @@
           color="grey-darken-3"
         />
       </v-btn>
-    </template>
-    <template #next="{ props }">
+    </template> -->
+    <slot name="carousel-item" />
+    <!-- <template #next="{ props }">
       <v-btn
         density="compact"
         icon
@@ -31,19 +35,19 @@
           color="grey-darken-3"
         />
       </v-btn>
-    </template>
-    <slot name="images" />
+    </template> -->
   </v-carousel>
 </template>
 
 <script setup>
-import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
+// import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 
-const accomodationCarousel = useTemplateRef('accomodation-carousel')
+// check if good usage when same component used twice on the same page
+const carousel = useTemplateRef('carousel')
 const nbCarouselItems = ref(0)
 
 onMounted(() => {
-  nbCarouselItems.value = accomodationCarousel.value?.$el.children[0]?.children?.length - 1
+  nbCarouselItems.value = carousel.value?.$el.children[0]?.children?.length
 })
 </script>
 

@@ -157,7 +157,7 @@ Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé
 
 #carousel
 ::carousel
-#images
+#carousel-item
   :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.20.png"}
   :::
 
@@ -264,6 +264,42 @@ Détails du prix
   :::
 :: 
 
+
+::title-container
+Les avis des voyageurs
+::
+
+::avis-voyage-container
+#carousel
+::carousel
+#carousel-item
+  :::avis-carousel-item{photo="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+  #title
+  Floriane
+
+  #avis
+  « J'ai découvert Odysway pour le séjour dans les Pyrénées pour découvrir la vie de berger et j'en garderais un très beau souvenir, aussi bien pour les paysages à couper le souffle que pour les belles rencontres que j'ai pu faire.
+  Merci pour cette expérience, vos échanges et votre disponibilité. »
+  :::
+  
+  :::avis-carousel-item
+  #title
+  Agnès
+
+  #avis
+  « Une très belle expérience vécue avec ma fille de 22 ans dans cette magnifique région qu’est la vallée d’Aspe.
+  Un tout grand merci à Paco qui a dû rebondir en dernière minute pour coller au plus proche au programme reçu.
+  Nous avons surtout marché sur les chemins des bergers, bivouaquer comme les bergers.
+  e gite tenu par Claire et Sandrine est super convivial, chaleureux et à taille humaine. Elles nous ont gâtés par le repas copieux et délicieux.
+  La grandeur du groupe est juste ce qu’il faut pour faire connaissance et sympathiser.
+  Première expérience réussie avec Odysway. »
+  
+  
+  :::
+
+::
+
+::
 
 ::faq-container
 #section-title
