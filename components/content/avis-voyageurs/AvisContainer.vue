@@ -42,7 +42,7 @@
           align="center"
         >
           <v-col
-            cols="7"
+            cols="12"
             sm="6"
           >
             <v-autocomplete
@@ -61,7 +61,7 @@
             </v-autocomplete>
           </v-col>
           <v-col
-            cols="5"
+            cols="12"
             sm="6"
           >
             <v-select

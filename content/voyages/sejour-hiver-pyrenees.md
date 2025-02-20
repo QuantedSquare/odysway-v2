@@ -264,6 +264,14 @@ Détails du prix
   :::
 :: 
 
+::title-container
+Les photos du voyage
+::
+
+::photo-gallery-container{:images='["/images/AdobeStock_124472096.jpeg", "/images/Capture d’écran 2022-02-24 à 14.08.09.png", "/images/berger couverture.jpg", "/images/IMG-20240320-WA0124.jpg"]'}
+
+::
+
 
 ::title-container
 Les avis des voyageurs

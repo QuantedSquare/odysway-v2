@@ -16,7 +16,7 @@
           />
           <v-icon
             v-show="!props.photo"
-            size="50"
+            size="x-large"
             color="white"
             :icon="mdiAccount"
           />
