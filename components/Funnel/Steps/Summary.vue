@@ -232,7 +232,7 @@ import { mdiInformationOutline } from '@mdi/js'
 const props = defineProps(['page', 'voyage', 'currentStep'])
 const route = useRoute()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
-const { deal } = useDeal(route.query.currentStep)
+const { deal } = useStepperDeal(route.query.step)
 
 function travelerText(nbTraveler, type) {
   const text = {

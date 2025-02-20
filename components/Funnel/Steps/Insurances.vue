@@ -76,7 +76,7 @@ const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
 
-const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)
 
 // Data
@@ -124,7 +124,7 @@ const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cance
 
 watch([deal, () => props.currentStep], async () => {
   if (props.currentStep === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+    addAnotherQuery('step', props.ownStep)
   }
   if (deal.value) {
     model.value = true

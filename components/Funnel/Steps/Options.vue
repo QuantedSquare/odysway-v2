@@ -78,7 +78,7 @@
 
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
-const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 
 const specialRequest = ref('')
 const indivRoom = ref(false)
@@ -107,7 +107,7 @@ watch([deal, () => props.currentStep], () => {
     }
   }
   if (props.currentStep === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+    addAnotherQuery('step', props.ownStep)
   }
 }, { immediate: true })
 

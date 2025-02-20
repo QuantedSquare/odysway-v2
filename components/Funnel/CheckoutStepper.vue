@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="status === 'success' && page"
+    v-if="pageStatus === 'success' && voyageStatus === 'success'"
     cols="12"
   >
     <FunnelStepsStepperHeader
@@ -87,13 +87,11 @@
                     />
                   </v-stepper-window-item>
                   <v-stepper-window-item :value="5">
-                    <ClientOnly>
-                      <FunnelStepsSummary
-                        :current-step="currentStep"
-                        :page="page"
-                        :voyage="voyage"
-                      />
-                    </ClientOnly>
+                    <FunnelStepsSummary
+                      :current-step="currentStep"
+                      :page="page"
+                      :voyage="voyage"
+                    />
 
                     <FunnelStepsPaymentRedirect
                       :ref="(component) => registerStepComponent(component, 5)"
@@ -114,23 +112,23 @@
                 @click:next="nextStep()"
                 @click:prev="previousStep()"
               >
-                <template
-                  #next
-                >
-                  <v-btn
-                    v-if="currentStep < 5"
-                    :disabled="!enablingNextButton"
-                    color="secondary"
-                    :loading="loading"
-                    @click="nextStep"
-                  >
-                    Suivant
-                  </v-btn>
-                  <ClientOnly>
+                <template #next>
+                  <div>
+                    <!-- Wrapper div to ensure consistent structure -->
+                    <v-btn
+                      v-if="currentStep < 5"
+                      :disabled="!enablingNextButton"
+                      color="secondary"
+                      :loading="loading"
+                      @click="nextStep"
+                    >
+                      Suivant
+                    </v-btn>
                     <div
+                      v-if="currentStep === 5"
                       id="next-btn"
                     />
-                  </ClientOnly>
+                  </div>
                 </template>
               </v-stepper-actions>
             </v-card-actions>
@@ -139,23 +137,43 @@
       </v-row>
     </FunnelStepsStepperHeader>
   </v-col>
-  <v-skeleton-loader
+  <v-col
     v-else
-    type="card"
-  />
+    cols="12"
+  >
+    <v-skeleton-loader
+      type="card"
+    />
+  </v-col>
 </template>
 
 <script setup>
 const route = useRoute()
-const slug = route.params.voyageSlug
-const { data: page, status: asyncDataStatus } = await useFetch('/api/v1/pages/' + slug)
-const { data: voyage, status } = useAsyncData(`voyage-${slug}`, () => {
-  return queryCollection('voyages').where('slug', '=', slug).first()
+
+const { step, dealId, slug, date_start, date_end, plan } = route.query
+
+const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
+console.log('page', page.value)
+
+// If slug, coming from travel page, otherwise, coming from custom link
+const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
+  if (slug) {
+    return queryCollection('voyages').where('slug', '=', slug).first()
+  }
+  else {
+    const deal = await apiRequest(`/ac/deals/${dealId}`)
+    return { title: deal.title,
+      startingPrice: deal.pricePerTraveler,
+      imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+      // {... COMPLETER}
+    }
+  }
 })
+console.log('voyage', voyage.value)
 const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)
-const currentStep = ref(0)
+const currentStep = ref(step ? parseInt(step) : 1)
 const skipperMode = ref('normal')
 
 const enablingNextButton = computed(() => {
@@ -185,15 +203,10 @@ const previousStep = () => {
   currentStep.value--
   validForm.value = true
 }
-
-if (route.query.currentStep) {
-  currentStep.value = parseInt(route.query.currentStep) || 0
-}
 </script>
 
 <style scoped>
 @media screen and (min-width: 768px) {
-
   .border-width {
     border-radius: 30px!important;
     height: fit-content!important;

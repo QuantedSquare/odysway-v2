@@ -1,10 +1,5 @@
 <template>
   <v-container>
-    <!-- <v-skeleton-loader
-      v-if="status !== 'success'"
-      type="card"
-    /> -->
-    <!-- v-else -->
     <v-form
       ref="form"
       v-model="model"
@@ -161,7 +156,7 @@ import { z } from 'zod'
 
 const props = defineProps(['currentStep', 'ownStep'])
 
-const { deal, dealId, createDeal, updateDeal } = useDeal(props.ownStep)
+const { deal, dealId, createDeal, updateDeal, checkoutType } = useStepperDeal(props.ownStep)
 const model = defineModel()
 
 const selectOptions = function (start, end) {
@@ -180,16 +175,16 @@ const phoneNumber = ref('')
 
 watch(() => props.currentStep, (value) => {
   if (value === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+    addAnotherQuery('step', props.ownStep)
   }
 }, { immediate: true })
 
 watch(deal, () => {
   if (deal.value) {
     console.log('got value in details', deal.value)
-    nbTeen.value = +deal.value.nbTeen
+    nbTeen.value = +deal.value.nbTeen || 0
     nbAdults.value = +deal.value.nbAdults
-    nbChildren.value = +deal.value.nbUnderAge
+    nbChildren.value = +deal.value.nbUnderAge || 0
   }
 })
 

@@ -98,7 +98,7 @@ const model = defineModel()
 console.log('props', props.voyage)
 const route = useRoute()
 
-const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 // Data
 const isBooking = ref(false)
 const groupStepper = ref(true)
@@ -116,6 +116,14 @@ const loadAlma = false
 const loadingStripeSession = ref(false)
 const disableAlma = ref(false)
 
+// const appliedPrice = computed(() => {
+//   if (this.getDepositDatePassed()) {
+//         return this.datesGroup.prix_voyage - this.promo.amount / 100 * this.promo.isValid - this.earlybird.price * this.earlybird.isAvailable - this.lastMinute.price * this.lastMinute.isAvailable
+//       } else {
+//         return this.datesGroup.prix_acompte
+//       }
+// })
+
 const stripePay = async () => {
   // #TODO Add Stripe payment
 
@@ -123,6 +131,36 @@ const stripePay = async () => {
     deal: {},
     currentUrl: route.fullPath,
   }
+
+  // const dataForStripeSession = {
+  //   dealId: dealId.value,
+  //   image: props.voyage.image_principale,
+  //   title: props.voyage.titre,
+  //   appliedPrice: props.appliedPrice,
+  //   promo: props.promo.amount / 100 * props.promo.isValid,
+  //   insurances: props.insurances,
+  //   insurancePricePerTraveler: props.insurancePricePerTraveler,
+  //   nbTravelers: props.nbTravelers,
+  //   options: props.options,
+  //   isDeposit: !props.getDepositDatePassed(),
+  //   includRoom: props.getDepositDatePassed(),
+  //   indivRoomPrice: props.indivRoomPrice(),
+  //   voyage: encodeURIComponent(props.$route.params.slug),
+  //   selectedTravelersToPay: props.nbTravelers,
+  //   isAdvance: !props.getDepositDatePassed(),
+  //   paiementLink = `https://odysway.com/paiement?orderId=${props.dealDetails.dealId}` + `${props.getDepositDatePassed() ? `&montant=${props.datesGroup.prix_voyage}&acompte=true` : `&montant=${props.datesGroup.prix_acompte}&acompte=true`}`,
+  //   restToPay: props.totalPrice * 100,
+  //   childrenPromo: props.voyage.reduction_enfant || 80, // si valeur de reduc non renseignée on met 0 ?
+  //   teenPromo: props.voyage.reduction_ado || 80, // si valeur de reduc non renseignée on met 0 ?
+  //   nbUnderAge: props.dealDetails.nbUnderAge,
+  //   nbTeen: props.dealDetails.nbTeen,
+  //   isSold: false,
+  //   isPayment: false,
+  //   pipeline: 1,
+  //   flatRestToPay: props.flatRestToPay,
+  //   acceptAlmaPaiement: true,
+  //   almaTotalPrice: props.totalPrice * 100,
+  // }
 
   const checkoutLink = await $fetch('/api/v1/stripe/', {
     method: 'POST',
@@ -150,7 +188,7 @@ const book = async () => {
 
 watch([dealId, () => props.currentStep], () => {
   if (props.currentStep === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+    addAnotherQuery('step', props.ownStep)
   }
   model.value = true
   if (dealId.value) {

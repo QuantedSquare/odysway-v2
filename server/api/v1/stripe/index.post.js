@@ -1,19 +1,10 @@
-import { sendRedirect } from 'h3'
-
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  console.log('========stripe post event=======', event)
-
-  // const activecampaignData = {
-  //   deal: {
-  //     fields: [
-  //       { customFieldId: 20, fieldValue: 'Passage sur la page de paiement Stripe' },
-  //     ],
-  //   },
-  // }
+  console.log('stripe checkout body:', body)
   try {
+    activecampaign.updateDeal(body.dealId, { currentStep: 'Passage sur la page de paiement Stripe' })
+
     const redirectLink = await stripe.createCheckoutSession(body)
-    console.log('redirectLink', redirectLink)
     return redirectLink
   }
   catch (err) {

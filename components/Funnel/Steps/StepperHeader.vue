@@ -4,7 +4,6 @@
     id="stepper"
     v-model="model"
     alt-labels
-    editable
     show-actions
     color="primary"
   >

@@ -63,7 +63,7 @@
 const props = defineProps(['page', 'voyage', 'currentStep'])
 const model = defineModel()
 
-const { fetchDeal, deal, dealId, updateDeal } = useDeal()
+const { fetchDeal, deal, dealId, updateDeal } = useStepperDeal()
 // Data
 const insurances = ref({
   rapatriement: 0,
