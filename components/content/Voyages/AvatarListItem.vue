@@ -19,7 +19,10 @@
           <slot name="subtitle" />
         </v-list-item-subtitle>
         <p class="mt-4">
-          <slot name="text" />
+          <slot
+            name="text"
+            mdc-unwrap="p"
+          />
         </p>
       </v-col>
     </v-row>
