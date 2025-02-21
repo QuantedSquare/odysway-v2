@@ -12,7 +12,7 @@
           variant="outlined"
           size="large"
           :append-icon="mdiPlay"
-          color="text-shadow bg-blur"
+          color="text-shadow bg-blur onHover"
         />
       </template>
       <v-sheet>
@@ -136,5 +136,8 @@ const dialog = ref(false)
 
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .3)
+}
+.onHover:hover{
+  scale: 1.03;
 }
 </style>
