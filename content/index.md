@@ -58,8 +58,13 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 
 ::horizontal-carousel
 
+#carousel-item
   :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
+
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::
+
 
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
@@ -80,6 +85,7 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 
 ::horizontal-carousel
 
+#carousel-item
   :::voyage-col-card{voyage-slug="chine"}
   :::
 
@@ -100,6 +106,7 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 
 ::horizontal-carousel
 
+#carousel-item
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
@@ -120,6 +127,7 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 
 ::horizontal-carousel
 
+#carousel-item
   :::voyage-col-card{voyage-slug="chine"}
   :::
 

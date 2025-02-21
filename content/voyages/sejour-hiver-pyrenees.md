@@ -14,7 +14,7 @@ Immersion hivernale en terre béarnaise
 
 ::intro-voyage-container
 #tooltip-text-group
-  :::icon-text-col-tooltip{iconName="mdiCalendar"}
+  :::icon-col{iconName="mdiCalendar"}
   #tooltip
   Durée de voyage
   #text
@@ -22,7 +22,7 @@ Immersion hivernale en terre béarnaise
   
   :::
 
-  :::icon-text-col-tooltip{iconName="mdiWhiteBalanceSunny"}
+  :::icon-col{iconName="mdiWhiteBalanceSunny"}
   #tooltip
   Période idéale
   #text
@@ -30,7 +30,7 @@ Immersion hivernale en terre béarnaise
   
   :::
 
-  :::icon-text-col-tooltip{iconName="mdiTent"}
+  :::icon-col{iconName="mdiTent"}
   #tooltip
   Hébergement
   #text
@@ -38,7 +38,7 @@ Immersion hivernale en terre béarnaise
   
   :::
 
-  :::icon-text-col-tooltip{iconName="mdiAccountGroup"}
+  :::icon-col{iconName="mdiAccountGroup"}
   #tooltip
   Disponible en groupe
   #text
@@ -46,7 +46,7 @@ Immersion hivernale en terre béarnaise
   
   :::
 
-  :::icon-text-col-tooltip{iconName="mdiTeddyBear"}
+  :::icon-col{iconName="mdiTeddyBear"}
   #tooltip
   Dès 16 ans
   #text

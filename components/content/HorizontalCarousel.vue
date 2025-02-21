@@ -9,7 +9,7 @@
           center-active
           class="w-100"
         >
-          <slot />
+          <slot name="carousel-item" />
         </v-slide-group>
       </v-row>
     </v-container>
@@ -27,8 +27,5 @@ const currentWindow = ref(0)
 
 .hidden-scroll::-webkit-scrollbar {
   display: none;
-}
-.zIndex {
-  z-index: 100;
 }
 </style>

@@ -58,7 +58,7 @@
             </div>
             <div class="display-mobile">
               <div class="blur-overlay" />
-              <div class="position-absolute bottom-text text-white bottom-0">
+              <div class="position-absolute bottom-text text-shadow text-white bottom-0">
                 <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 ">
                   {{ voyage.title }}
                 </v-card-title>
@@ -107,7 +107,7 @@
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
         >
-          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark">
+          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark no-white-space">
             {{ voyage.title }}
           </v-card-title>
           <v-card-text class="text-body-2 py-1 px-0">
@@ -172,7 +172,6 @@ const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
 .bottom-text{
   padding-top:1em;
   padding-left:1em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .blur-overlay {
   position: absolute;
@@ -200,7 +199,10 @@ const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
 }
 .hover-scale{
   transform:scale(1);
-
   transition: transform 0.2s ease-in-out;
 }
+
+/* .no-white-space {
+  white-space: normal;
+} */
 </style>

@@ -4,7 +4,7 @@
     :height="$vuetify.display.sm ? '70vh' : '80vh'"
     cover
   >
-    <span class="absolute-position shadow">
+    <span class="absolute-position text-shadow">
       <slot
         name="title"
       />
@@ -33,10 +33,6 @@ const img = useImage()
   left: 10%;
   font-size: 5rem;
   color: white;
-}
-
-.shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 600px) {

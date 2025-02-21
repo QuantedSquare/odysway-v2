@@ -13,7 +13,9 @@
           size="large"
           :append-icon="mdiPlay"
           color="text-shadow bg-blur onHover"
-        />
+        >
+          <span class="text-caption text-uppercase text-md-button">voir la galerie photos</span>
+        </v-btn>
       </template>
       <v-sheet>
         <v-btn
@@ -134,9 +136,6 @@ const dialog = ref(false)
   box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3)
-}
 .onHover:hover{
   scale: 1.03;
 }
