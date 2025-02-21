@@ -2,7 +2,7 @@
   <div class="text-center pa-4">
     <v-dialog
       v-model="dialog"
-      transition="dialog-bottom-transition"
+      transition="dialog-top-transition"
       fullscreen
     >
       <template #activator="{ props: activatorProps }">
@@ -12,27 +12,33 @@
           variant="outlined"
           size="large"
           :append-icon="mdiPlay"
-          color="text-shadow bg-blur onHover"
+          color="text-shadow bg-blur on-hover"
         >
           <span class="text-caption text-uppercase text-md-button">voir la galerie photos</span>
         </v-btn>
       </template>
       <v-sheet>
-        <v-btn
-          variant="outlined"
-          :prepend-icon="mdiClose"
-          color="grey-darken-3"
-          class="ma-4"
-          @click="dialog = false"
-        >
-          Fermer
-        </v-btn>
-
-        <h1 class="text-center text-h3 font-weight-black">
-          Immersion hivernale en terre béarnaise
-        </h1>
         <v-container fluid>
+          <v-row>
+            <v-spacer />
+            <v-col cols="auto">
+              <v-btn
+                variant="outlined"
+                :prepend-icon="mdiClose"
+                color="grey-darken-3"
+                class="ma-4 on-hover"
+                @click="dialog = false"
+              >
+                Fermer
+              </v-btn>
+            </v-col>
+          </v-row>
           <v-row justify="end">
+            <v-col>
+              <h1 class="text-center text-h3 font-weight-black">
+                <slot name="title" />
+              </h1>
+            </v-col>
             <v-col
               cols="12"
               md="9"
@@ -43,11 +49,11 @@
                 rounded="0"
               >
                 <v-img
-                  :src="props.images[0]"
+                  :src="img(props.images[0], { format: 'wepb', quality: 80 })"
+                  :lazy-src="img(props.images[0], { format: 'webp', quality: 10, height: 900 })"
                   height="100%"
                   cover
                 />
-                <v-card-text> Immersion hivernale en terre béarnaise</v-card-text>
               </v-card>
             </v-col>
             <v-col
@@ -56,7 +62,8 @@
               class="mb-4 my-md-10"
             >
               <v-img
-                :src="props.images[1]"
+                :src="img(props.images[1], { format: 'wepb', quality: 80 })"
+                :lazy-src="img(props.images[1], { format: 'webp', quality: 10, height: 900 })"
                 height="100%"
                 class="mr-md-8"
                 cover
@@ -68,7 +75,8 @@
               class="my-4 my-md-10"
             >
               <v-img
-                :src="props.images[2]"
+                :src="img(props.images[2], { format: 'wepb', quality: 80 })"
+                :lazy-src="img(props.images[2], { format: 'webp', quality: 10, height: 900 })"
                 height="100%"
                 cover
                 class="ml-md-8"
@@ -82,7 +90,8 @@
               class="my-4 my-md-8"
             >
               <v-img
-                :src="props.images[3]"
+                :src="img(props.images[3], { format: 'wepb', quality: 80 })"
+                :lazy-src="img(props.images[3], { format: 'webp', quality: 10, height: 900 })"
                 height="100%"
                 cover
               />
@@ -93,7 +102,8 @@
               class="my-4 my-md-8"
             >
               <v-img
-                :src="props.images[4]"
+                :src="img(props.images[4], { format: 'wepb', quality: 80 })"
+                :lazy-src="img(props.images[4], { format: 'webp', quality: 10, height: 900 })"
                 height="100%"
                 cover
                 class="mr-md-8"
@@ -105,7 +115,8 @@
               class="my-4 my-md-8"
             >
               <v-img
-                :src="props.images[5]"
+                :src="img(props.images[5], { format: 'wepb', quality: 80 })"
+                :lazy-src="img(props.images[5], { format: 'webp', quality: 10, height: 900 })"
                 height="100%"
                 cover
                 class="ml-md-8"
@@ -120,12 +131,16 @@
 
 <script setup>
 import { mdiClose, mdiPlay } from '@mdi/js'
+import { useImage } from '#imports'
 
 const props = defineProps({
   images: {
     type: Array,
   },
 })
+
+const img = useImage()
+
 const dialog = ref(false)
 </script>
 
@@ -136,7 +151,7 @@ const dialog = ref(false)
   box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
 }
 
-.onHover:hover{
+.on-hover:hover{
   scale: 1.03;
 }
 </style>

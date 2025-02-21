@@ -4,6 +4,9 @@ Immersion hivernale en terre béarnaise
 
 #component-slot
 ::test-photo-gallery{:images='["/images/iStock-1356423948.webp","/images/iStock-1190369407 (1).webp", "/images/silvan-michel-uNJ5w7rW2i0-unsplash.webp", "/images/thomas-delacretaz-IvMhMKSJ7kA-unsplash.webp", "/images/la-cabane-d-icheus-vallee-d-aspe-en-hiver.webp", "/images/aiguille-d-ansabere-neige-1024x683.jpg", "/images/40805039061_a7d62eb92a_b.jpg", "/images/IMG-20240912-WA0038.jpg"  ]'} 
+
+#title
+Immersion hivernale en terre béarnaise
 :: 
 
 ::
