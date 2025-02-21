@@ -116,7 +116,6 @@
               >
                 <template #next>
                   <div>
-                    <!-- Wrapper div to ensure consistent structure -->
                     <v-btn
                       v-if="currentStep < 5"
                       :disabled="!enablingNextButton"
@@ -150,24 +149,50 @@
 </template>
 
 <script setup>
-const route = useRoute()
+import dayjs from 'dayjs'
 
+const route = useRoute()
 const { step, dealId, slug, departure_date, return_date, plan } = route.query
 
+// ================== Page ==================
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 console.log('page', page.value)
 
-// If slug, coming from travel page, otherwise, coming from custom link
+// ================== Voyage ==================
+// If slug, you're coming from travel page, otherwise, coming from custom link
 // Voyage are all the statics data of the travel
 // Only deal manage the dynamic values
+// We generate dealId after first step and don't need statics values from voyage anymore
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
-  console.log('slug', slug)
   if (slug) {
-    const query = queryCollection('voyages').where('slug', '=', slug).first()
-    Object.assign(query, { departureDate: departure_date, returnDate: return_date })
+    console.log('slug', slug)
+    const query = await queryCollection('voyages').where('slug', '=', slug).first()
+    Object.assign(query, {
+      departureDate: dayjs(departure_date).format('YYYY-MM-YY'),
+      returnDate: dayjs(return_date).format('YYYY-MM-YY'),
+      // ===== Temporary values below until it is replaced in nuxt studio =====
+      // Or travel manager
+      zoneChapka: 1,
+      depositPrice: 500,
+      promoChildren: 80,
+      promoTeen: 80,
+      maxChildrenAge: 12,
+      maxTeenAge: 18,
+      source: 'Devis',
+      forcedIndivRoom: 'Non',
+      indivRoomPrice: 300,
+      promoEarlybird: 50,
+      promoLastMinute: 0,
+      gotLastMinute: 'Non',
+      gotEarlybird: 'Oui',
+      travelType: 'Group',
+    })
+    console.log('query', query)
+
     return query
   }
   else {
+    // Voyage = Toutes les valeurs fixes
     const deal = await apiRequest(`/ac/deals/${dealId}`)
     return { title: deal.title,
       startingPrice: deal.pricePerTraveler,
@@ -188,13 +213,16 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       promoLastMinute: deal.promoLastMinute,
       gotLastMinute: deal.gotLastMinute === 'Oui',
       gotEarlybid: deal.gotEarlybid === 'Oui',
-      // {... COMPLETER}
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
+      travelType: 'Group',
+      // {... COMPLETER}
     }
   }
 })
 console.log('voyage', voyage.value)
+
+// ================== Stepper Management ==================
 const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)

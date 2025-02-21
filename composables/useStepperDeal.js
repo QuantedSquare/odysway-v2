@@ -25,7 +25,7 @@ export function useStepperDeal(componentStep) {
   const createDeal = async (body) => {
     const res = await apiRequest('/ac/deals', 'post', body)
     dealId.value = res
-    addAnotherQuery('id', dealId.value)
+    addAnotherQuery('dealId', dealId.value)
     return true
   }
 

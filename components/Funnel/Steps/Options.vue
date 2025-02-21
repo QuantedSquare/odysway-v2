@@ -30,27 +30,25 @@
       </v-col>
       <v-col
         cols="12"
-        md="4"
+        md="6"
         class="d-flex justify-start align-center"
       >
-        <div>
-          <v-switch
-            v-model="vegeOption"
-            sub-label="Végétarien, Végan, Allergies..."
-          >
-            <template #label>
-              <div class="d-flex flex-column align-start">
-                <!-- <span>{{ $t('stepperDevisGroup.foodOptions.vege') }}</span> -->
-                <span>Régimes alimentaires spécifiques</span>
-                <span class="text-caption">Végétarien, Végan, Allergies...</span>
-              </div>
-            </template>
-          </v-switch>
-        </div>
+        <v-switch
+          v-model="vegeOption"
+          sub-label="Végétarien, Végan, Allergies..."
+        >
+          <template #label>
+            <div class="d-flex flex-column align-start">
+              <!-- <span>{{ $t('stepperDevisGroup.foodOptions.vege') }}</span> -->
+              <span>Régimes alimentaires spécifiques</span>
+              <span class="text-caption">Végétarien, Végan, Allergies...</span>
+            </div>
+          </template>
+        </v-switch>
       </v-col>
       <v-col
         cols="12"
-        md="4"
+        md="6"
       >
         <!-- :label="$t('stepperDevisGroup.foodOptions.other')" -->
         <v-switch

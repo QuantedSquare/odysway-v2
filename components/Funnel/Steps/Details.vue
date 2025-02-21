@@ -154,9 +154,9 @@
 <script setup>
 import { z } from 'zod'
 
-const props = defineProps(['currentStep', 'ownStep', 'voyage'])
+const { currentStep, ownStep, voyage } = defineProps(['currentStep', 'ownStep', 'voyage'])
 
-const { deal, dealId, createDeal, updateDeal, checkoutType } = useStepperDeal(props.ownStep)
+const { deal, dealId, createDeal, updateDeal, checkoutType } = useStepperDeal(ownStep)
 const model = defineModel()
 const route = useRoute()
 
@@ -174,9 +174,9 @@ const email = ref('ottmann.alex@gmail.com')
 const phoneCode = ref('+33')
 const phoneNumber = ref('631870876')
 
-watch(() => props.currentStep, (value) => {
-  if (value === props.ownStep) {
-    addAnotherQuery('step', props.ownStep)
+watch(() => currentStep, (value) => {
+  if (value === ownStep) {
+    addAnotherQuery('step', ownStep)
   }
 }, { immediate: true })
 
@@ -242,9 +242,8 @@ const totalValue = computed(() => {
 })
 const submitStepData = async () => {
   // Validate form
-  console.log('start submit', dealId.value)
   if (!model.value) return false
-  const totalTravelPrice = 80000 // props.voyage.startingPrice * (nbAdults.value + nbChildren.value + nbTeen.value)
+  const totalTravelPrice = 80000 // voyage.startingPrice * (nbAdults.value + nbChildren.value + nbTeen.value)
   //  #todo soustraire la réduction s'il y en a une
 
   try {
@@ -256,38 +255,38 @@ const submitStepData = async () => {
       owner: '1',
       stage: '2',
       // CustomFields
-      departureDate: props.voyage.departureDate,
-      returnDate: props.voyage.returnDate,
-      travelType: props.voyage.plan, // #todo à checker
+      departureDate: voyage.departureDate,
+      returnDate: voyage.returnDate,
+      travelType: voyage.travelType, // voyage.plan, // #todo à checker
       nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
       nbChildren: nbChildren.value + nbTeen.value,
       nbAdults: nbAdults.value,
       nbTeen: nbTeen.value,
       nbUnderAge: nbChildren.value,
-      country: props.voyage.country,
-      iso: props.voyage.iso,
-      zoneChapka: props.voyage.zoneChapka,
-      pricePerTraveler: props.voyage.startingPrice, // #todo trouver comment faire sauter
-      image: props.voyage.imgSrc || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+      country: voyage.country,
+      iso: voyage.iso,
+      zoneChapka: voyage.zoneChapka,
+      pricePerTraveler: voyage.startingPrice, // #todo trouver comment faire sauter
+      image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn' || voyage.imgSrc,
       currentStep: 'Création du Deal',
       alreadyPaid: 0, //
       restTravelersToPay: nbAdults.value + nbChildren.value + nbTeen.value,
       utm: route.query.utm || '',
-      slug: props.voyage.slug,
-      depositPrice: props.voyage.depositPrice,
-      basePricePerTraveler: props.voyage.startingPrice,
+      slug: voyage.slug,
+      depositPrice: voyage.depositPrice,
+      basePricePerTraveler: voyage.startingPrice,
       totalTravelPrice: totalTravelPrice, // #todo checker si *100 ou non
-      promoChildren: props.voyage.promoChildren,
-      maxChildrenAge: props.voyage.maxChildrenAge,
-      promoTeen: props.voyage.promoTeen,
-      maxTeenAge: props.voyage.maxTeenAge,
+      promoChildren: voyage.promoChildren,
+      maxChildrenAge: voyage.maxChildrenAge,
+      promoTeen: voyage.promoTeen,
+      maxTeenAge: voyage.maxTeenAge,
       source: 'Devis',
-      forcedIndivRoom: nbTravelers.value === 1 && props.voyage.forcedIndivRoom,
-      indivRoomPrice: props.voyage.indivRoomPrice,
-      promoEarlybird: props.voyage.promoEarlybird,
-      gotEarlybird: props.voyage.gotEarlybird,
-      promoLastMinute: props.voyage.promoLastMinute,
-      gotLastMinute: props.voyage.gotLastMinute,
+      forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom,
+      indivRoomPrice: voyage.indivRoomPrice,
+      promoEarlybird: voyage.promoEarlybird,
+      gotEarlybird: voyage.gotEarlybird,
+      promoLastMinute: voyage.promoLastMinute,
+      gotLastMinute: voyage.gotLastMinute,
       // Contacts
       email: email.value,
       phone: `${phoneCode.value}${phoneNumber.value}`,
