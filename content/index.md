@@ -3,7 +3,7 @@
 #title
 La rencontre <br> au cœur du voyage
 
-#component-slot
+#component-slot-1
   :::SearchField
   :::
 ::

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center pa-4">
+  <div>
     <v-dialog
       v-model="dialog"
       transition="dialog-top-transition"
@@ -35,8 +35,11 @@
           </v-row>
           <v-row justify="end">
             <v-col>
-              <h1 class="text-center text-h3 font-weight-black">
-                <slot name="title" />
+              <h1 class="text-center text-md-start text-h3 font-weight-black">
+                <slot
+                  name="title"
+                  mdc-unwrap="p"
+                />
               </h1>
             </v-col>
             <v-col
