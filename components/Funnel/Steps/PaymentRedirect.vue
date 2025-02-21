@@ -20,7 +20,9 @@
                 hide-details
               >
                 <template #label>
-                  Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                  <div class="text-caption text-md-body-1 pl-1">
+                    Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                  </div>
                 </template>
               </v-switch>
             </template>
@@ -38,7 +40,7 @@
               >
                 <template #label>
                   <div
-                    class="pl-1"
+                    class="text-caption text-md-body-1 pl-1"
                     @click.stop=""
                     v-html="page.fields.phrase_dacceptation"
                   />
@@ -50,7 +52,9 @@
                 hide-details
               >
                 <template #label>
-                  Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
+                  <div class="text-caption text-md-body-1 pl-1">
+                    Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
+                  </div>
                 </template>
               </v-switch>
             </v-col>
@@ -116,58 +120,73 @@ const loadAlma = false
 const loadingStripeSession = ref(false)
 const disableAlma = ref(false)
 
-// const appliedPrice = computed(() => {
-//   if (this.getDepositDatePassed()) {
-//         return this.datesGroup.prix_voyage - this.promo.amount / 100 * this.promo.isValid - this.earlybird.price * this.earlybird.isAvailable - this.lastMinute.price * this.lastMinute.isAvailable
-//       } else {
-//         return this.datesGroup.prix_acompte
-//       }
-// })
+const appliedPrice = computed(() => {
+  if (route.query.type === 'full') {
+    return deal.value.value// prix_voyage // - this.promo.amount / 100 * this.promo.isValid - this.earlybird.price * this.earlybird.isAvailable - this.lastMinute.price * this.lastMinute.isAvailable
+  }
+  else if (route.query.type === 'deposit') {
+    return deal.value.depositPrice
+  }
+  else if (route.query.type === 'custom') {
+    return route.query.amount
+  }
+  else {
+    // route.query.type === null || 'balance'
+    return deal.value.basePricePerTravel - deal.value.depositPrice
+  }
+})
+
+const selectedTravelersToPay = computed(() => {
+  if (route.query.type === 'custom' || route.query.type === 'balance') {
+    return +route.query.selectedTravelersToPay
+  }
+  else {
+    return +deal.value.nbTravelers
+  }
+})
 
 const stripePay = async () => {
-  // #TODO Add Stripe payment
+  console.log('appliedPrice', appliedPrice.value)
 
-  const stripeData = {
-    deal: {},
+  const dataForStripeSession = {
+    dealId: dealId.value,
+    image: props.voyage.imgSrc,
+    title: props.voyage.title,
+    appliedPrice: +appliedPrice.value, // #TODO CHANGER
+    promo: 5000, // props.promo.amount / 100 * props.promo.isValid, // #TODO checker si valid
+    insurances: deal.value.insurance,
+    insurancePricePerTraveler: +deal.value.insuranceCommissionPerTraveler || 0,
+    nbTravelers: +deal.value.nbTravelers,
+    options: deal.value.indivRoom === 'Oui',
+    isDeposit: route.query.type === 'deposit',
+    includRoom: route.query.type === 'deposit',
+    indivRoomPrice: +deal.value.indivRoomPrice,
+    voyage: encodeURIComponent(deal.value.slug),
+    selectedTravelersToPay: +selectedTravelersToPay.value, // Si Custom || deposit => Osef c'est tous les travelers Sinon c'est sélection (prendre de l'url)
+    isAdvance: route.query.type === 'deposit',
+    paiementLink: `https://odysway.com/paiement`, // 'https://odysway.com/paiement?orderId=${props.dealDetails.dealId}` + `${props.getDepositDatePassed() ? `&montant=${props.datesGroup.prix_voyage}&acompte=true` : `&montant=${props.datesGroup.prix_acompte}&acompte=true`}`,
+    restToPay: +deal.value.restToPay || +deal.value.value, // #TODO CHANGER avant c'était totalPrice * 100, chercher pk ?
+    childrenPromo: +deal.value.promoChildren, // si valeur de reduc non renseignée on met 0 ?
+    teenPromo: +deal.value.promoTeen || 80, // si valeur de reduc non renseignée on met 0 ?
+    nbUnderAge: +deal.value.nbUnderAge,
+    nbTeen: +deal.value.nbTeen,
+    isSold: route.query.type !== 'deposit',
+    isPayment: route.query.type === 'deposit',
+    pipeline: 1,
+    flatRestToPay: +deal.value.flatRestToPay || +deal.value.value, // #TODO Checker comment c'est calculé
+    contact: deal.value.contact,
+    paymentType: route.query.type,
     currentUrl: route.fullPath,
+    insuranceImg: props.page.fields.assurance_img,
   }
-
-  // const dataForStripeSession = {
-  //   dealId: dealId.value,
-  //   image: props.voyage.image_principale,
-  //   title: props.voyage.titre,
-  //   appliedPrice: props.appliedPrice,
-  //   promo: props.promo.amount / 100 * props.promo.isValid,
-  //   insurances: props.insurances,
-  //   insurancePricePerTraveler: props.insurancePricePerTraveler,
-  //   nbTravelers: props.nbTravelers,
-  //   options: props.options,
-  //   isDeposit: !props.getDepositDatePassed(),
-  //   includRoom: props.getDepositDatePassed(),
-  //   indivRoomPrice: props.indivRoomPrice(),
-  //   voyage: encodeURIComponent(props.$route.params.slug),
-  //   selectedTravelersToPay: props.nbTravelers,
-  //   isAdvance: !props.getDepositDatePassed(),
-  //   paiementLink = `https://odysway.com/paiement?orderId=${props.dealDetails.dealId}` + `${props.getDepositDatePassed() ? `&montant=${props.datesGroup.prix_voyage}&acompte=true` : `&montant=${props.datesGroup.prix_acompte}&acompte=true`}`,
-  //   restToPay: props.totalPrice * 100,
-  //   childrenPromo: props.voyage.reduction_enfant || 80, // si valeur de reduc non renseignée on met 0 ?
-  //   teenPromo: props.voyage.reduction_ado || 80, // si valeur de reduc non renseignée on met 0 ?
-  //   nbUnderAge: props.dealDetails.nbUnderAge,
-  //   nbTeen: props.dealDetails.nbTeen,
-  //   isSold: false,
-  //   isPayment: false,
-  //   pipeline: 1,
-  //   flatRestToPay: props.flatRestToPay,
-  //   acceptAlmaPaiement: true,
-  //   almaTotalPrice: props.totalPrice * 100,
-  // }
+  console.log('dataForStripeSession', dataForStripeSession)
 
   const checkoutLink = await $fetch('/api/v1/stripe/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(stripeData),
+    body: JSON.stringify(dataForStripeSession),
   })
   if (checkoutLink) {
     console.log('checkoutLink', checkoutLink)

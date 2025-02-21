@@ -271,4 +271,10 @@ function travelerText(nbTraveler, type) {
 .border-style{
   border: 1px solid rgb(var(--v-theme-grey-lighten-1));
 }
+@media screen and (max-width: 600px) {
+  .border-style {
+    border: none;
+  }
+
+}
 </style>

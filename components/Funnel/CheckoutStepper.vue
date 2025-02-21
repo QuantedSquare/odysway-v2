@@ -14,7 +14,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width w-fit-content"
+            class="border-width  w-md-50 w-lg-50"
             :elevation="currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -36,7 +36,6 @@
             <v-row>
               <v-col
                 cols="12"
-                class="pa-0"
               >
                 <v-stepper-window :model-value="currentStep">
                   <v-stepper-window-item>
@@ -87,7 +86,9 @@
                       :own-step="4"
                     />
                   </v-stepper-window-item>
-                  <v-stepper-window-item :value="5">
+                  <v-stepper-window-item
+                    :value="5"
+                  >
                     <FunnelStepsSummary
                       :current-step="currentStep"
                       :page="page"

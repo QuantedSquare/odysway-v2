@@ -1,29 +1,142 @@
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 
-// import axios from 'axios'
-
-// import { loadStripe } from '@stripe/stripe-js'
+import axios from 'axios'
 
 import { stripeCLI } from './stripeCLI'
 
 dayjs.extend(customParseFormat)
 
+const config = useRuntimeConfig()
+
 const createCheckoutSession = async (order) => {
   console.log('order', order)
-  const origin = 'http://localhost:3000'
-  const session = await stripeCLI.checkout.sessions.create({
-    line_items: [
+  console.log('config', config.public.environment)
+  const origin = config.public.siteURL
+
+  const isDev = config.public.environment === 'development'
+
+  const imageUrl = order.image ? order.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
+  const directPayment = order.paymentType === 'custom' // order.isPayment && !order.isSold && !order.isAdvance
+
+  // AppliedPrice = (baseVoyage - Promo -  + Flight + Extension) * isSold || depositDatePassed
+  const lineItems = []
+
+  if ((order.nbTravelers - order.nbUnderAge - order.nbTeen) > 0) {
+    lineItems.push(
       {
-        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: 'price_1QuGIdAYZjtHS4WQh4lQL5L3',
-        quantity: 3,
+        // Travel Fees
+        price_data: {
+          currency: 'eur',
+          product_data: {
+            name: order.title,
+            images: [imageUrl],
+            description: order.paymentType === 'deposit' ? 'Paiement de l\'acompte, les options et réductions seront appliquées au paiement du solde' : 'Paiement du solde',
+          },
+          unit_amount: order.appliedPrice * 100,
+        },
+        quantity: (order.nbTravelers - order.nbUnderAge - order.nbTeen),
+      })
+  }
+  // -------- AJOUT TARIFS ENFANTS ET ADOS
+  if (order.nbUnderAge > 0) {
+    lineItems.push({
+      // Travel Fees
+      price_data: {
+        currency: 'eur',
+        product_data: {
+          name: order.title + ' - Tarif Enfant',
+          description: order.paymentType === 'deposit' ? 'Paiement de l\'acompte, les options et réductions du tarif enfant seront appliquées au paiement du solde' : 'Paiement du solde tarif enfant',
+          images: [imageUrl],
+        },
+        unit_amount: (order.appliedPrice - (directPayment || order.isDeposit ? 0 : order.childrenPromo)) * 100,
       },
-    ],
+      quantity: order.nbUnderAge,
+    })
+  }
+  if (order.nbTeen > 0) {
+    lineItems.push({
+      // Travel Fees
+      price_data: {
+        currency: 'eur',
+        product_data: {
+          name: order.title + ' - Tarif Adolescent',
+          description: order.paymentType === 'deposit' ? 'Paiement de l\'acompte, les options et réductions du tarif adolescent seront appliquées au paiement du solde' : 'Paiement du solde tarif adolescent',
+          images: [imageUrl],
+        },
+        unit_amount: (order.appliedPrice - (directPayment || order.isDeposit ? 0 : order.teenPromo)) * 100,
+      },
+      quantity: order.nbTeen,
+    })
+  }
+
+  // --------------- AJOUT ASSURANCE -----------------
+  if ((order.insurances.cancellation || order.insurances.global) && !directPayment && !order.isSold) {
+    lineItems.push({
+      // Insurances Fees
+      price_data: {
+        currency: 'eur',
+        product_data: {
+          name: order.insurances.global ? 'Assurance multirisques' : 'Assurance annulation',
+          images: [order.insuranceImg],
+        },
+        unit_amount: order.insurancePricePerTraveler * 100,
+      },
+      quantity: order.nbTravelers,
+    })
+  }
+  // --------------- AJOUT OPTIONS UNIQUEMENT AU SOLDE -----------------
+  if (order.options.indivRoom && order.includRoom && !directPayment) {
+    lineItems.push({
+      // Insurances Fees
+      price_data: {
+        currency: 'eur',
+        product_data: {
+          name: 'Chambre individuelle',
+          images: ['https://odysway.com/logos/logo_noir.png'],
+        },
+        unit_amount: order.indivRoomPrice * 100,
+      },
+      quantity: order.nbTravelers,
+    })
+  }
+
+  if (!isDev) {
+    axios({
+      url: process.env.SLACK_URL_PAIEMENTS,
+      method: 'post',
+      data:
+                {
+                  blocks: [
+                    {
+                      type: 'section',
+                      text: {
+                        type: 'mrkdwn',
+                        text: `:eyes: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Nouveau paiement CB - ${order.contact.firstName} ${order.contact.lastName} - Deal ID : ${order.dealId}>`,
+                      },
+                    },
+                  ],
+                },
+    })
+  }
+
+  //     // Stripe only accept strings for metadata
+  delete order.insurances
+  delete order.options
+  delete order.indivRoomPrice
+  delete order.insurancePricePerTraveler
+  delete order.contact
+
+  const session = await stripeCLI.checkout.sessions.create({
+    line_items: lineItems,
+    payment_method_types: ['card'],
     mode: 'payment',
+    invoice_creation: { enabled: true },
     success_url: `${origin}`,
     cancel_url: `${origin}${order.currentUrl}`,
+    metadata: order,
   })
+
   console.log('====CREATE STRIPE SESSION======', session)
   return session.url
 }
@@ -31,124 +144,8 @@ const createCheckoutSession = async (order) => {
 
 // const BASE_URL = process.env.BASE_URL || 'http://localhost:3000'
 
-// const STRIPE_KEY = isDev ? process.env.STRIPE_KEY_DEV : process.env.STRIPE_KEY_LIVE
-// const stripeApi = loadStripe(STRIPE_KEY) // #A CHECKER SI BONNE METHODE AVEC LUPGRADE DE PACKAGE
-
 // const stripe = {
 //   async createStripeSession(order) {
-//     console.log('====CREATE STRIPE SESSION======', order)
-//     const imageUrl = order.image ? order.image.replace('buttercms', 'filestackcontent') : ''
-//     const directPayment = order.isPayment && !order.isSold && !order.isAdvance
-
-//     const deal = await activecampaign.getDealById(order.dealId)
-
-//     const client = await activecampaign.getClientById(deal.deal.contact)
-//     if (!isDev) {
-//       axios({
-//         url: process.env.SLACK_URL_PAIEMENTS,
-//         method: 'post',
-//         data: // { text: `Nouveau paiement CB - ${client.contact.firstName} ${client.contact.lastName} - Deal ID : ${order.dealId}` }
-//             {
-//               blocks: [
-//                 {
-//                   type: 'section',
-//                   text: {
-//                     type: 'mrkdwn',
-//                     text: `:eyes: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Nouveau paiement CB - ${client.contact.firstName} ${client.contact.lastName} - Deal ID : ${order.dealId}>`,
-//                   },
-//                 },
-//               ],
-//             },
-//       })
-//     }
-//     // AppliedPrice = (baseVoyage - Promo -  + Flight + Extension) * isSold || depositDatePassed
-//     const lineItems = []
-
-//     if ((order.nbTravelers - order.nbUnderAge - order.nbTeen) > 0) {
-//       lineItems.push(
-//         {
-//           // Travel Fees
-//           price_data: {
-//             currency: 'eur',
-//             product_data: {
-//               name: order.title,
-//               images: [imageUrl || 'https://odysway.com/logos/logo_noir.png'],
-//               description: order.isDeposit && !directPayment ? 'Paiement de l\'acompte, les options et réductions seront appliquées au paiement du solde' : 'Paiement du solde',
-//             },
-//             unit_amount: order.appliedPrice * 100,
-//           },
-//           quantity: (order.nbTravelers - order.nbUnderAge - order.nbTeen),
-//         })
-//     }
-//     // -------- AJOUT TARIFS ENFANTS ET ADOS
-//     if (order.nbUnderAge > 0) {
-//       lineItems.push({
-//         // Travel Fees
-//         price_data: {
-//           currency: 'eur',
-//           product_data: {
-//             name: order.title + ' - Tarif Enfant',
-//             description: order.isDeposit && !directPayment ? 'Paiement de l\'acompte, les options et réductions du tarif enfant seront appliquées au paiement du solde' : 'Paiement du solde tarif enfant',
-
-//             // images: [imageUrl || 'https://odysway.com/logos/logo_noir.png']
-//           },
-//           unit_amount: (order.appliedPrice - (directPayment || order.isDeposit ? 0 : order.childrenPromo)) * 100,
-//         },
-//         quantity: order.nbUnderAge,
-//       })
-//     }
-//     if (order.nbTeen > 0) {
-//       lineItems.push({
-//         // Travel Fees
-//         price_data: {
-//           currency: 'eur',
-//           product_data: {
-//             name: order.title + ' - Tarif Adolescent',
-//             description: order.isDeposit && !directPayment ? 'Paiement de l\'acompte, les options et réductions du tarif adolescent seront appliquées au paiement du solde' : 'Paiement du solde tarif adolescent',
-//             // images: [imageUrl || 'https://odysway.com/logos/logo_noir.png']
-//           },
-//           unit_amount: (order.appliedPrice - (directPayment || order.isDeposit ? 0 : order.teenPromo)) * 100,
-//         },
-//         quantity: order.nbTeen,
-//       })
-//     }
-
-//     // --------------- AJOUT ASSURANCE -----------------
-//     if ((order.insurances.cancellation || order.insurances.global) && !directPayment && !order.isSold) {
-//       lineItems.push({
-//         // Insurances Fees
-//         price_data: {
-//           currency: 'eur',
-//           product_data: {
-//             name: order.insurances.global ? 'Assurance multirisques' : 'Assurance annulation',
-//           },
-//           unit_amount: order.insurancePricePerTraveler * 100,
-//         },
-//         quantity: order.nbTravelers,
-//       })
-//     }
-//     // --------------- AJOUT OPTIONS UNIQUEMENT AU SOLDE -----------------
-//     if (order.options.indivRoom && order.includRoom && !directPayment) {
-//       lineItems.push({
-//         // Insurances Fees
-//         price_data: {
-//           currency: 'eur',
-//           product_data: {
-//             name: 'Chambre individuelle',
-//             // images: ['https://odysway.com/logos/logo_noir.png']
-//           },
-//           unit_amount: order.indivRoomPrice * 100,
-//         },
-//         quantity: order.nbTravelers,
-//       })
-//     }
-
-//     // String only in metadata.
-//     // delete order.travelers
-//     delete order.insurances
-//     delete order.options
-//     delete order.indivRoomPrice
-//     delete order.insurancePricePerTraveler
 
 //     return stripeApi.checkout.sessions.create({
 //       payment_method_types: ['card'],
