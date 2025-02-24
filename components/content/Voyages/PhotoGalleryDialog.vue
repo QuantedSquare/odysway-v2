@@ -38,7 +38,7 @@
               <h1><slot name="title" /></h1>
             </v-col>
           </v-row>
-          <slot name="photo-column" />
+          <slot name="photo-row" />
         </v-container>
       </v-sheet>
     </v-dialog>

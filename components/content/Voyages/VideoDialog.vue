@@ -16,10 +16,8 @@
           <span class="text-caption text-uppercase text-md-button">voir video</span>
         </v-btn>
       </template>
-      <v-sheet
-        max-width="1000"
-      >
-        <v-container>
+      <v-sheet>
+        <v-container fluid>
           <v-row>
             <v-spacer />
             <v-col cols="auto">
@@ -35,16 +33,16 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col class="text-caption text-md-h6">
+            <v-col class="text-caption text-md-h6 text-md-center">
               <h1><slot name="video-title" /></h1>
             </v-col>
             <v-col
               cols="12"
-              class="d-flex justify-center"
+              class="d-flex justify-center mb-10"
             >
               <iframe
                 width="720"
-                height="405"
+                height="350"
                 :src="props.videoSrc"
                 title="YouTube video player"
                 frameborder="0"
