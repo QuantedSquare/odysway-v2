@@ -1,0 +1,85 @@
+<template>
+  <div>
+    <v-dialog
+      v-model="dialog"
+      transition="dialog-top-transition"
+    >
+      <template #activator="{ props: activatorProps }">
+        <v-btn
+          text="voir video"
+          v-bind="activatorProps"
+          variant="outlined"
+          size="large"
+          :append-icon="mdiPlay"
+          color="text-shadow bg-blur on-hover"
+        >
+          <span class="text-caption text-uppercase text-md-button">voir video</span>
+        </v-btn>
+      </template>
+      <v-sheet
+        max-width="1000"
+      >
+        <v-container>
+          <v-row>
+            <v-spacer />
+            <v-col cols="auto">
+              <v-btn
+                variant="outlined"
+                :prepend-icon="mdiClose"
+                color="grey-darken-3"
+                class="ma-4 on-hover"
+                @click="dialog = false"
+              >
+                Fermer
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col class="text-caption text-md-h6">
+              <h1><slot name="video-title" /></h1>
+            </v-col>
+            <v-col
+              cols="12"
+              class="d-flex justify-center"
+            >
+              <iframe
+                width="720"
+                height="405"
+                :src="props.videoSrc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              />
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-sheet>
+    </v-dialog>
+  </div>
+</template>
+
+<script setup>
+import { mdiClose, mdiPlay } from '@mdi/js'
+
+const props = defineProps({
+  videoSrc: {
+    type: String,
+  },
+})
+
+const dialog = ref(false)
+</script>
+
+<style scoped>
+.bg-blur{
+  background-color: rgba(255, 255, 255, 0.214)!important;
+  backdrop-filter: blur(8px);
+  box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
+}
+
+.on-hover:hover{
+  scale: 1.03;
+}
+</style>

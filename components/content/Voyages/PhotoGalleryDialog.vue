@@ -3,22 +3,21 @@
     <v-dialog
       v-model="dialog"
       transition="dialog-top-transition"
+      fullscreen
     >
       <template #activator="{ props: activatorProps }">
         <v-btn
-          text="voir video"
+          text="voir la galerie photos"
           v-bind="activatorProps"
           variant="outlined"
           size="large"
           :append-icon="mdiPlay"
           color="text-shadow bg-blur on-hover"
         >
-          <span class="text-caption text-uppercase text-md-button">voir video</span>
+          <span class="text-caption text-uppercase text-md-button">voir la galerie photos</span>
         </v-btn>
       </template>
-      <v-sheet
-        max-width="1000"
-      >
+      <v-sheet>
         <v-container fluid>
           <v-row>
             <v-spacer />
@@ -34,26 +33,12 @@
               </v-btn>
             </v-col>
           </v-row>
-          <v-row align="center">
-            <v-col class="text-center">
-              <h1><slot name="video-title" /></h1>
-            </v-col>
-            <v-col
-              cols="12"
-              class="d-flex justify-center"
-            >
-              <iframe
-                width="720"
-                height="405"
-                :src="props.videoSrc"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              />
+          <v-row>
+            <v-col class="text-caption text-md-h6">
+              <h1><slot name="title" /></h1>
             </v-col>
           </v-row>
+          <slot name="photo-column" />
         </v-container>
       </v-sheet>
     </v-dialog>
@@ -62,12 +47,6 @@
 
 <script setup>
 import { mdiClose, mdiPlay } from '@mdi/js'
-
-const props = defineProps({
-  videoSrc: {
-    type: String,
-  },
-})
 
 const dialog = ref(false)
 </script>

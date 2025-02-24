@@ -2,18 +2,36 @@
 #title
 Immersion hivernale en terre béarnaise
 
-#component-slot-1
-::test-photo-gallery{:images='["/images/iStock-1356423948.webp","/images/iStock-1190369407 (1).webp", "/images/silvan-michel-uNJ5w7rW2i0-unsplash.webp", "/images/thomas-delacretaz-IvMhMKSJ7kA-unsplash.webp", "/images/la-cabane-d-icheus-vallee-d-aspe-en-hiver.webp", "/images/aiguille-d-ansabere-neige-1024x683.jpg", "/images/40805039061_a7d62eb92a_b.jpg", "/images/IMG-20240912-WA0038.jpg"  ]'} 
+<!-- #component-slot-1
+::photo-gallery-dialog{:images='["/images/iStock-1356423948.webp","/images/iStock-1190369407 (1).webp", "/images/silvan-michel-uNJ5w7rW2i0-unsplash.webp", "/images/thomas-delacretaz-IvMhMKSJ7kA-unsplash.webp", "/images/la-cabane-d-icheus-vallee-d-aspe-en-hiver.webp", "/images/aiguille-d-ansabere-neige-1024x683.jpg", "/images/40805039061_a7d62eb92a_b.jpg", "/images/IMG-20240912-WA0038.jpg"  ]'} 
 
 #title
 Immersion hivernale en terre béarnaise
-:: 
+::  -->
+
+#component-slot-1
+  ::photo-gallery-dialog
+  #title
+  Immersion hivernale en terre béarnaise
+  
+  #photo-column
+    :::photo-col{:photoSrc='["/images/iStock-1356423948.webp"]' colWidth="9"}
+    :::
+    
+    :::photo-col{:photoSrc='["/images/aiguille-d-ansabere-neige-1024x683.jpg",  "/images/silvan-michel-uNJ5w7rW2i0-unsplash.webp"]' colWidth="6"}
+    :::
+
+    :::photo-col{:photoSrc='["/images/iStock-1190369407 (1).webp"]' colWidth="9"}
+    :::
+    
+
+  :: 
 
 #component-slot-2
-::test-video-dialog{videoSrc="https://www.youtube.com/embed/vrB9wC6quaU?si=z7xt5GDGS2JnaSot"}
-#video-title
-test
-::
+  ::video-dialog{videoSrc="https://www.youtube.com/embed/vrB9wC6quaU?si=z7xt5GDGS2JnaSot"}
+  #video-title
+  Immersion hivernale en terre béarnaise
+  ::
 ::
 
 
