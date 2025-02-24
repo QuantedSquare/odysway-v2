@@ -70,7 +70,6 @@ defineProps({
   },
 })
 const img = useImage()
-// const { height } = useDisplay()
 </script>
 
 <style scoped>
