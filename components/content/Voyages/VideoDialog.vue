@@ -21,15 +21,7 @@
           <v-row>
             <v-spacer />
             <v-col cols="auto">
-              <v-btn
-                variant="outlined"
-                :prepend-icon="mdiClose"
-                color="grey-darken-3"
-                class="ma-4 on-hover"
-                @click="dialog = false"
-              >
-                Fermer
-              </v-btn>
+              <CloseBtn @close="dialog = false" />
             </v-col>
           </v-row>
           <v-row>
