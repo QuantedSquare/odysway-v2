@@ -62,10 +62,6 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
   :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
-  :::
-
-
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 

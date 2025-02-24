@@ -2,6 +2,30 @@
 #title
 Immersion hivernale en terre béarnaise
 
+#component-slot-1
+  ::photo-gallery-dialog
+  #title
+  Immersion hivernale en terre béarnaise
+  
+  #photo-row
+    :::photo-row{:photoSrc='["/images/iStock-1356423948.webp"]' colWidth="9"}
+    :::
+    
+    :::photo-row{:photoSrc='["/images/aiguille-d-ansabere-neige-1024x683.jpg",  "/images/silvan-michel-uNJ5w7rW2i0-unsplash.webp"]' colWidth="6"}
+    :::
+
+    :::photo-row{:photoSrc='["/images/iStock-1190369407 (1).webp"]' colWidth="12"}
+    :::
+    
+
+  :: 
+
+#component-slot-2
+  ::video-dialog{videoSrc="https://www.youtube.com/embed/vrB9wC6quaU?si=z7xt5GDGS2JnaSot"}
+  #video-title
+  Immersion hivernale en terre béarnaise
+  ::
+  
 ::
 
 
