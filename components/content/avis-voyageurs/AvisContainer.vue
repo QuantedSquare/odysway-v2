@@ -8,7 +8,7 @@
         class="d-flex flex-column align-center justify-center my-8"
       >
         <h3
-          class="d-flex align-center justify-center text-h5 text-lg-h4 pb-2"
+          class="d-flex text-center text-h5 text-lg-h4 pb-2"
         >
           <v-icon color="orange-lighten-1">
             {{ mdiStar }}
@@ -35,7 +35,6 @@
     >
       <v-col
         cols="12"
-        md="10"
         xl="8"
       >
         <v-row
