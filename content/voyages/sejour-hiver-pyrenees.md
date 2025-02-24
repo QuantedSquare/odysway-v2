@@ -83,7 +83,7 @@ Immersion hivernale en terre béarnaise
 *Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce séjour en étoile à pied, raquette ou ski de fond (selon le niveau de neige) est une invitation à renouer avec la nature et le rythme apaisant des montagnes. Le soir, retrouvez la chaleur de Claire et Sandrine, qui vous accueilleront autour de plats de saison gourmands, préparés avec soin et générosité. »*
 
 #avatar
-::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp" avatarSize="60"}
+::avatar-list-item{avatar="/images/WhatsApp Image 2020-02-13 at 5.27.38 PM.jpeg" avatarSize="60"}
 #title
 [Romain]{style="font-weight: bold"}, fondateur d'Odysway et amoureux de la vallée d'Aspe
 
@@ -289,14 +289,6 @@ Détails du prix
   :::
 :: 
 
-<!-- ::title-container
-Les photos du voyage
-::
-
-::test-photo-gallery{:images='["/images/AdobeStock_124472096.jpeg", "/images/Capture d’écran 2022-02-24 à 14.08.09.png", "/images/berger couverture.jpg", "/images/IMG-20240320-WA0124.jpg"]'} 
-
-:: -->
-
 
 ::title-container
 Les avis des voyageurs
@@ -330,6 +322,30 @@ Les avis des voyageurs
   :::
 
 ::
+
+::
+
+::info-card
+<!-- #catch-phrase
+Discutons de votre projet ! -->
+
+
+#payment-items
+  :::payment-item{imageSrc="/images/alma.webp"}
+  #text
+  Payez en 3 versements
+  :::
+
+  :::payment-item{imageSrc="/images/ancv.png"}
+  #text
+  Payez avec vos chèques vacances
+  :::
+
+#text-btn-1
+voir les dates / prix
+
+#text-btn-2
+Prendre RDV avec un conseiller
 
 ::
 

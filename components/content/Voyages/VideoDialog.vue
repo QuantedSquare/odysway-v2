@@ -68,8 +68,4 @@ const dialog = ref(false)
   backdrop-filter: blur(8px);
   box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
 }
-
-.on-hover:hover{
-  scale: 1.03;
-}
 </style>
