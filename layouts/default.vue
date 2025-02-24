@@ -14,7 +14,10 @@
           :key="`Drawer item ${index}`"
           nav
         >
-          <v-list-item density="compact">
+          <v-list-item
+            density="compact"
+            @click="drawer = !drawer"
+          >
             <NuxtLink
               :to="item.link"
               class="text-primary text-decoration-none"
