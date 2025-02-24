@@ -1,7 +1,4 @@
 <template>
-  <!-- image attributes ⬇️
-  size="(max-width: 600) 480px, 1500px"
-  :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`" -->
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"

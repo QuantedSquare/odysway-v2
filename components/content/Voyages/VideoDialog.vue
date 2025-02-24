@@ -51,7 +51,7 @@
 </template>
 
 <script setup>
-import { mdiClose, mdiPlay } from '@mdi/js'
+import { mdiPlay } from '@mdi/js'
 
 const props = defineProps({
   videoSrc: {
