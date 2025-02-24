@@ -89,6 +89,31 @@ Immersion hivernale en terre béarnaise
 
 ::
 
+#info-card
+::info-card
+<!-- #catch-phrase
+Discutons de votre projet ! -->
+
+
+#payment-items
+  :::payment-item{imageSrc="/images/alma.webp"}
+  #text
+  Payez en 3 versements
+  :::
+
+  :::payment-item{imageSrc="/images/ancv.png"}
+  #text
+  Payez avec vos chèques vacances
+  :::
+
+#text-btn-1
+voir les dates / prix
+
+#text-btn-2
+Prendre RDV
+
+::
+
 ::
 
 ::highlights-row{image="/images/iStock-925005602.webp"}
@@ -322,30 +347,6 @@ Les avis des voyageurs
   :::
 
 ::
-
-::
-
-::info-card
-<!-- #catch-phrase
-Discutons de votre projet ! -->
-
-
-#payment-items
-  :::payment-item{imageSrc="/images/alma.webp"}
-  #text
-  Payez en 3 versements
-  :::
-
-  :::payment-item{imageSrc="/images/ancv.png"}
-  #text
-  Payez avec vos chèques vacances
-  :::
-
-#text-btn-1
-voir les dates / prix
-
-#text-btn-2
-Prendre RDV avec un conseiller
 
 ::
 
