@@ -3,7 +3,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat'
 
 import axios from 'axios'
 
-import { loadStripe } from '@stripe/stripe-js'
+// import { loadStripe } from '@stripe/stripe-js'
 
 // import Stripe from 'stripe'
 
@@ -14,7 +14,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000'
 
 const STRIPE_KEY = isDev ? process.env.STRIPE_KEY_DEV : process.env.STRIPE_KEY_LIVE
-const stripeApi = loadStripe(STRIPE_KEY) // #A CHECKER SI BONNE METHODE AVEC LUPGRADE DE PACKAGE
+// const stripeApi = loadStripe(STRIPE_KEY) // #A CHECKER SI BONNE METHODE AVEC LUPGRADE DE PACKAGE
 
 const stripe = {
   async createStripeSession(order) {
