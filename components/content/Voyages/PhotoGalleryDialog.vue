@@ -1,40 +1,39 @@
 <template>
-  <div>
-    <v-dialog
-      v-model="dialog"
-      transition="dialog-top-transition"
-      fullscreen
-    >
-      <template #activator="{ props: activatorProps }">
-        <v-btn
-          text="voir la galerie photos"
-          v-bind="activatorProps"
-          variant="outlined"
-          size="large"
-          :append-icon="mdiPlay"
-          color="text-shadow bg-blur on-hover"
-        >
-          <span class="text-caption text-uppercase text-md-button">voir la galerie photos</span>
-        </v-btn>
-      </template>
-      <v-sheet>
-        <v-container fluid>
-          <v-row>
-            <v-spacer />
-            <v-col cols="auto">
-              <CloseBtn @close="dialog = false" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col class="text-caption text-md-h6">
-              <h1><slot name="title" /></h1>
-            </v-col>
-          </v-row>
-          <slot name="photo-row" />
-        </v-container>
-      </v-sheet>
-    </v-dialog>
-  </div>
+  <v-dialog
+    v-model="dialog"
+    transition="dialog-top-transition"
+    fullscreen
+  >
+    <template #activator="{ props: activatorProps }">
+      <v-btn
+        v-bind="activatorProps"
+        variant="outlined"
+        size="large"
+        :append-icon="mdiPlay"
+        color="text-shadow bg-blur on-hover"
+      >
+        <span class="text-caption text-uppercase text-md-button">voir la galerie photos</span>
+      </v-btn>
+    </template>
+    <v-sheet>
+      <v-container fluid>
+        <v-row>
+          <v-spacer />
+          <v-col cols="auto">
+            <CloseBtn @close="dialog = false" />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="text-caption text-md-h6">
+            <h1><slot name="title" /></h1>
+          </v-col>
+        </v-row>
+        <v-row>
+          <slot name="photos" />
+        </v-row>
+      </v-container>
+    </v-sheet>
+  </v-dialog>
 </template>
 
 <script setup>
