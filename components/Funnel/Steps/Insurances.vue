@@ -181,16 +181,12 @@ const submitStepData = async () => {
   if (!dealId.value || !model.value) return false
   const dealData = {
     dealId: dealId.value,
-    value: +deal.value.value, // #TODO  Remplacer par recalcul total avec assurance
-    pricePerTraveler: +deal.value.pricePerTraveler, // #TODO  Remplacer par recalcul prix avec assurance,
     insurance: [insuranceChoice.value.name],
     insuranceCommissionPrice: (insuranceChoice.value.price * 100),
     currentStep: 'A fait le choix de l\'assurance',
-    // totalTravelPrice: this.dealData.value, ... #TODO
     insuranceCommissionPerTraveler: insuranceChoice.value.price * 30,
-    //
   }
-  console.log('dealData', dealData)
+  console.log('dealData pushed from insurance', dealData)
   try {
     await updateDeal(dealData)
     return true

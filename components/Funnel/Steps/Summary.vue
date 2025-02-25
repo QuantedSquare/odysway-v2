@@ -45,7 +45,7 @@
           </template>
           <template #right>
             <div v-if="deal.gotEarlybird !== 'Oui' && deal.gotLastMinute !== 'Oui'">
-              {{ formatNumber(deal.value, 'currency', 'EUR') }}
+              {{ formatNumber(deal.basePricePerTraveler, 'currency', 'EUR') }}
             </div>
             <div v-else>
               <div class="d-flex flex-column align-end">
@@ -55,10 +55,10 @@
                     color="info"
                     :content="deal.gotEarlybird == 'Oui' ? 'EarlyBird: -' + formatNumber(deal.promoEarlybird, 'currency', '€') : 'LastMinute: -' + formatNumber(deal.promoLastMinute, 'currency', '€')"
                   />
-                  {{ formatNumber(deal.value - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
+                  {{ formatNumber(deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
                 </span>
                 <span class="text-decoration-line-through">
-                  {{ formatNumber(deal.value, 'currency', 'EUR') }}
+                  {{ formatNumber(deal.basePricePerTraveler, 'currency', 'EUR') }}
                 </span>
               </div>
             </div>
@@ -284,18 +284,23 @@ function travelerText(nbTraveler, type) {
   }
 }
 
+function calculateDepositValue(data) {
+  const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0)) + (data.insuranceCommissionPrice ?? 0) * data.nbTravelers
+}
+
 const appliedPrice = computed(() => {
   if (route.query.type === 'deposit') {
-    return deal.value.depositPrice
+    return calculateDepositValue(deal.value)
   }
   else if (route.query.type === 'balance') {
-    return deal.value.value - deal.value.depositPrice
+    return deal.value.value - deal.value.alreadyPaid
   }
   else if (route.query.type === 'full') {
     return deal.value.value
   }
-  else { // type === 'custom'
-    return route.query.amount
+  else { // type = 'custom'
+    return route.query.amount * deal.value.nbTravelers
   }
 })
 </script>

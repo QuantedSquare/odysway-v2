@@ -5,7 +5,7 @@
       <v-card-text>
         <v-row>
           <v-col
-            v-if="groupStepper && !depositDatePassed"
+            v-if="route.query.type === 'deposit'"
             cols="12"
           >
             <template v-if="isBooking">
@@ -29,6 +29,7 @@
           </v-col>
           <template v-if="!isBooking">
             <v-divider
+              v-if="route.query.type === 'deposit'"
               horizontal
               class="ma-2"
             />
@@ -106,66 +107,26 @@ const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 
 // Data
+// IsBooking à définir si une option dans le stepper uniquement pour poser une option
 const isBooking = ref(false)
-const groupStepper = ref(true)
-const depositDatePassed = ref(false)
 const checkedOption = ref(false)
 const switch_accept_data_privacy = ref(false)
 const switch_accept_country = ref(false)
 
 const loadingStripeSession = ref(false)
 
-const appliedPrice = computed(() => {
-  if (route.query.type === 'full') {
-    return deal.value.value// prix_voyage // - this.promo.amount / 100 * this.promo.isValid - this.earlybird.price * this.earlybird.isAvailable - this.lastMinute.price * this.lastMinute.isAvailable
-  }
-  else if (route.query.type === 'deposit') {
-    // Deposit = 30% basePricePerTraveler + insurance + Flight
-    return deal.value.depositPrice
-  }
-  else if (route.query.type === 'custom') {
-    return route.query.amount
-  }
-  else {
-    // route.query.type === null || 'balance'
-    return deal.value.basePricePerTravel - deal.value.depositPrice
-  }
-})
-
 const stripePay = async () => {
-  console.log('appliedPrice', appliedPrice.value)
-
   const dataForStripeSession = {
     dealId: dealId.value,
-    // Fixed Data from voyage
-    image: props.voyage.imgSrc,
-    title: props.voyage.title,
-    indivRoomPrice: +props.voyage.indivRoomPrice,
-    voyage: encodeURIComponent(props.voyage.slug),
-
-    // Dynamic Data from deal and stepper
-    appliedPrice: +appliedPrice.value, // #TODO CHANGER
-    promo: 5000, // props.promo.amount / 100 * props.promo.isValid, // #TODO checker si valid
-    insurances: deal.value.insurance,
-    insurancePricePerTraveler: +deal.value.insuranceCommissionPerTraveler || 0,
-    nbTravelers: +deal.value.nbTravelers,
-    options: deal.value.indivRoom === 'Oui',
-    isDeposit: route.query.type === 'deposit',
-    includRoom: route.query.type === 'deposit',
-    isAdvance: route.query.type === 'deposit',
-    restToPay: +deal.value.restToPay,
-    childrenPromo: +deal.value.promoChildren, // si valeur de reduc non renseignée on met 0 ?
-    teenPromo: +deal.value.promoTeen || 80, // si valeur de reduc non renseignée on met 0 ?
-    nbUnderAge: +deal.value.nbUnderAge,
-    nbTeen: +deal.value.nbTeen,
-    isSold: route.query.type !== 'deposit',
-    isPayment: route.query.type === 'deposit',
-    pipeline: 1,
-    flatRestToPay: +deal.value.flatRestToPay || +deal.value.value, // #TODO Checker comment c'est calculé
-    contact: deal.value.contact,
     paymentType: route.query.type,
+    contact: deal.value.contact,
     currentUrl: route.fullPath,
     insuranceImg: props.page.fields.assurance_img,
+  }
+  if (route.query.type === 'custom') {
+    Object.assign(dataForStripeSession, {
+      amout: +route.query.amount * 100,
+    })
   }
   console.log('dataForStripeSession', dataForStripeSession)
 

@@ -81,9 +81,7 @@ const { addSingleParam } = useParams()
 
 const specialRequest = ref('')
 const indivRoom = ref(false)
-const indivRoomPrice = ref(0)
-const pricePerTraveler = ref(0)
-const totalTravelPrice = ref(0)
+const indivRoomPrice = ref(0) // Checker si on veut afficher ce prix
 
 const vegeOption = ref(false)
 const otherFoodOption = ref(false)
@@ -95,9 +93,7 @@ watch([deal, () => props.currentStep], () => {
   if (dealId.value && deal.value) {
     model.value = true
     if (deal.value && deal.value.nbTravelers) {
-      indivRoomPrice.value = +deal.value.indivRoomPrice
-      pricePerTraveler.value = +deal.value.pricePerTraveler
-      totalTravelPrice.value = +deal.value.totalTravelPrice
+      indivRoomPrice.value = +deal.value.indivRoomPrice //
 
       indivRoom.value = deal.value.indivRoom?.includes('Oui')
       vegeOption.value = deal.value.specialRequest?.includes('Régimes alimentaires spécifiques')
@@ -118,21 +114,6 @@ const foodPreferences = computed(() => {
   return `${foodPreferences.join(', ')} : ${specialRequest.value}`
 })
 
-// #TODO Calculate pricePerTraveler from deal
-// const pricePerTraveler = computed(() => {
-//   return stepperPricing.pricePerTraveler(datesGroup.prix_voyage,
-//     insurancePricePerTraveler,
-//     voyage.indiv_room_price * options.indivRoom,
-//     promo.amount / 100 * promo.isValid,
-//     earlybird.price * earlybird.isAvailable,
-//     lastMinute.price * lastMinute.isAvailable)
-// })
-// Total Acompte & voyage
-
-// const totalPrice = computed(() => {
-//   return pricePerTraveler.value * deal.value.nbTravelers - (deal.value.promoChildren || 80) * deal.value.nbUnderAge - (deal.value.promoTeen || 80) * deal.value.nbTeen
-// })
-
 const submitStepData = async () => {
   // Validate form
   if (!dealId.value || !deal.value || !model.value) return false
@@ -140,10 +121,7 @@ const submitStepData = async () => {
     dealId: dealId.value,
     specialRequest: `Préférence alimentaire: ${foodPreferences.value}`,
     indivRoom: indivRoom.value ? ['Oui'] : ['Non'],
-    indivRoomPrice: indivRoomPrice.value,
-    pricePerTraveler: pricePerTraveler.value,
     currentStep: 'A choisi ses options',
-    totalTravelPrice: totalTravelPrice.value,
   }
 
   try {
