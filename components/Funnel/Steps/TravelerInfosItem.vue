@@ -79,7 +79,7 @@
 <script setup>
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
 import { mdiCalendar, mdiBagPersonal } from '@mdi/js'
 
