@@ -82,6 +82,7 @@
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
+const { addSingleParam } = useParams()
 
 const isCouple = ref(false)
 const nbTravelers = ref(1)
@@ -132,7 +133,7 @@ watch([deal, dealId, () => props.currentStep], () => {
     if (deal.value) {
       initializeTravelersData()
     }
-    addAnotherQuery('step', props.ownStep)
+    addSingleParam('step', props.ownStep)
   }
 }, {
   immediate: true,

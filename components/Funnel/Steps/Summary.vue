@@ -76,6 +76,7 @@
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
+
         <!-- Travelers Details Header -->
         <FunnelStepsSummaryLine>
           <template #left>
@@ -114,6 +115,7 @@
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
+
         <!--  Options -->
         <FunnelStepsSummaryLine>
           <template #left>
@@ -178,7 +180,7 @@
 
         <v-divider class="my-6" />
         <!-- Prix Total -->
-        <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
+        <FunnelStepsSummaryLine>
           <template #left>
             <!-- #TODO Remplacer par back -->
             Prix total
@@ -192,34 +194,50 @@
         </FunnelStepsSummaryLine>
 
         <!-- Prix Appliqué à régler -->
-        <FunnelStepsSummaryLine>
-          <template #left>
-            <v-tooltip
-              bottom
-            >
-              <template #activator="{ props }">
-                <div class="d-flex align-center ga-2">
-                  <span> Accompte à régler</span>
-                  <v-icon
-                    size="x-small"
-                    v-bind="props"
-                  >
-                    {{ mdiInformationOutline }}
-                  </v-icon>
+        <Transition name="slide-fade">
+          <FunnelStepsSummaryLine v-if="route.query.isoption !== 'true'">
+            <template #left>
+              <v-tooltip
+                bottom
+              >
+                <template #activator="{ props }">
+                  <div class="d-flex align-center ga-2 text-primary">
+                    <!-- #Todo Passer en computed les textes -->
+                    <span v-if="route.query.type === 'deposit'"> Accompte à régler</span>
+                    <span v-else-if="route.query.type === 'balance'"> Solde à régler</span>
+                    <span v-else>Montant à régler</span>
+                    <v-icon
+                      size="x-small"
+                      v-bind="props"
+                    >
+                      {{ mdiInformationOutline }}
+                    </v-icon>
+                  </div>
+                </template>
+                <div>
+                  {{ page.fields.cancel_text }}
                 </div>
-              </template>
-              <div>
-                {{ page.fields.cancel_text }}
-              </div>
-            </v-tooltip>
-          </template>
-          <template #right>
-            <span class="font-weight-bold text-primary">
-              <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
-              {{ formatNumber(deal.depositPrice, 'currency', 'EUR') }}
-            </span>
+              </v-tooltip>
+            </template>
+            <template #right>
+              <span class="font-weight-bold text-primary">
+                <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
+                {{ formatNumber(appliedPrice, 'currency', 'EUR') }}
+              </span>
+            </template>
+          </FunnelStepsSummaryLine>
+        </Transition>
+
+        <!--  #Todo Checker s'il faut ajouter le checking sur la date, si le type "full" est uniquement sur les voyages sous 30jours -->
+        <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
+          <template #left>
+            <!-- #TODO Remplacer par cms -->
+            <span class="font-italic text-body-2 ">Comme le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l’intégralité de la somme, sans acompte.</span>
           </template>
         </FunnelStepsSummaryLine>
+
+        <!-- Text for no Insurance available  -->
+        <!-- Le départ est pour bientôt, nous ne pouvons pas vous proposer d'assurances pour cette réservation. -->
       </v-card-text>
     </v-card>
   </v-container>
@@ -265,6 +283,21 @@ function travelerText(nbTraveler, type) {
     return `${nbTraveler} x ${text[type].single}`// this.$t('estimate.' + type + 'Traveler')
   }
 }
+
+const appliedPrice = computed(() => {
+  if (route.query.type === 'deposit') {
+    return deal.value.depositPrice
+  }
+  else if (route.query.type === 'balance') {
+    return deal.value.value - deal.value.depositPrice
+  }
+  else if (route.query.type === 'full') {
+    return deal.value.value
+  }
+  else { // type === 'custom'
+    return route.query.amount
+  }
+})
 </script>
 
 <style scoped>
@@ -276,5 +309,18 @@ function travelerText(nbTraveler, type) {
     border: none;
   }
 
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
 }
 </style>

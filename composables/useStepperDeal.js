@@ -1,10 +1,10 @@
-import addAnotherQuery from '@/utils/addAnotherQuery'
 import determinePaymentOptions from '@/utils/determinePaymentOptions'
 
 export function useStepperDeal(componentStep) {
   const deal = ref(null)
   const dealId = ref(null)
   const route = useRoute()
+  const { addSingleParam } = useParams()
 
   const currentStepRef = ref(1)
 
@@ -25,7 +25,7 @@ export function useStepperDeal(componentStep) {
   const createDeal = async (body) => {
     const res = await apiRequest('/ac/deals', 'post', body)
     dealId.value = res
-    addAnotherQuery('dealId', dealId.value)
+    addSingleParam('dealId', dealId.value)
     return true
   }
 

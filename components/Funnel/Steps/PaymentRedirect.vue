@@ -103,6 +103,8 @@ console.log('props', props.voyage)
 const route = useRoute()
 
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
+const { addSingleParam } = useParams()
+
 // Data
 const isBooking = ref(false)
 const groupStepper = ref(true)
@@ -111,20 +113,14 @@ const checkedOption = ref(false)
 const switch_accept_data_privacy = ref(false)
 const switch_accept_country = ref(false)
 
-const dataForStripeSession = ref({
-  acceptAlmaPaiement: false,
-  almaTotalPrice: 0,
-
-})
-const loadAlma = false
 const loadingStripeSession = ref(false)
-const disableAlma = ref(false)
 
 const appliedPrice = computed(() => {
   if (route.query.type === 'full') {
     return deal.value.value// prix_voyage // - this.promo.amount / 100 * this.promo.isValid - this.earlybird.price * this.earlybird.isAvailable - this.lastMinute.price * this.lastMinute.isAvailable
   }
   else if (route.query.type === 'deposit') {
+    // Deposit = 30% basePricePerTraveler + insurance + Flight
     return deal.value.depositPrice
   }
   else if (route.query.type === 'custom') {
@@ -136,22 +132,18 @@ const appliedPrice = computed(() => {
   }
 })
 
-const selectedTravelersToPay = computed(() => {
-  if (route.query.type === 'custom' || route.query.type === 'balance') {
-    return +route.query.selectedTravelersToPay
-  }
-  else {
-    return +deal.value.nbTravelers
-  }
-})
-
 const stripePay = async () => {
   console.log('appliedPrice', appliedPrice.value)
 
   const dataForStripeSession = {
     dealId: dealId.value,
+    // Fixed Data from voyage
     image: props.voyage.imgSrc,
     title: props.voyage.title,
+    indivRoomPrice: +props.voyage.indivRoomPrice,
+    voyage: encodeURIComponent(props.voyage.slug),
+
+    // Dynamic Data from deal and stepper
     appliedPrice: +appliedPrice.value, // #TODO CHANGER
     promo: 5000, // props.promo.amount / 100 * props.promo.isValid, // #TODO checker si valid
     insurances: deal.value.insurance,
@@ -160,12 +152,8 @@ const stripePay = async () => {
     options: deal.value.indivRoom === 'Oui',
     isDeposit: route.query.type === 'deposit',
     includRoom: route.query.type === 'deposit',
-    indivRoomPrice: +deal.value.indivRoomPrice,
-    voyage: encodeURIComponent(deal.value.slug),
-    selectedTravelersToPay: +selectedTravelersToPay.value, // Si Custom || deposit => Osef c'est tous les travelers Sinon c'est sélection (prendre de l'url)
     isAdvance: route.query.type === 'deposit',
-    paiementLink: `https://odysway.com/paiement`, // 'https://odysway.com/paiement?orderId=${props.dealDetails.dealId}` + `${props.getDepositDatePassed() ? `&montant=${props.datesGroup.prix_voyage}&acompte=true` : `&montant=${props.datesGroup.prix_acompte}&acompte=true`}`,
-    restToPay: +deal.value.restToPay || +deal.value.value, // #TODO CHANGER avant c'était totalPrice * 100, chercher pk ?
+    restToPay: +deal.value.restToPay,
     childrenPromo: +deal.value.promoChildren, // si valeur de reduc non renseignée on met 0 ?
     teenPromo: +deal.value.promoTeen || 80, // si valeur de reduc non renseignée on met 0 ?
     nbUnderAge: +deal.value.nbUnderAge,
@@ -195,10 +183,6 @@ const stripePay = async () => {
     })
   }
 }
-const almaPay = async () => {
-  // #TODO Add Alma payment
-  console.log('Alma payment')
-}
 
 const book = async () => {
   // #TODO Add booking
@@ -207,7 +191,7 @@ const book = async () => {
 
 watch([dealId, () => props.currentStep], () => {
   if (props.currentStep === props.ownStep) {
-    addAnotherQuery('step', props.ownStep)
+    addSingleParam('step', props.ownStep)
   }
   model.value = true
   if (dealId.value) {
@@ -217,6 +201,9 @@ watch([dealId, () => props.currentStep], () => {
 
 const showOptionOrPayment = computed(() => {
   return checkedOption.value ? 0 : 1
+})
+watch(checkedOption, (value) => {
+  addSingleParam('isoption', value)
 })
 
 // Analytics

@@ -105,18 +105,17 @@ const createCheckoutSession = async (order) => {
     axios({
       url: process.env.SLACK_URL_PAIEMENTS,
       method: 'post',
-      data:
-                {
-                  blocks: [
-                    {
-                      type: 'section',
-                      text: {
-                        type: 'mrkdwn',
-                        text: `:eyes: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Nouveau paiement CB - ${order.contact.firstName} ${order.contact.lastName} - Deal ID : ${order.dealId}>`,
-                      },
-                    },
-                  ],
-                },
+      data: {
+        blocks: [
+          {
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: `:eyes: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Nouveau paiement CB - ${order.contact.firstName} ${order.contact.lastName} - Deal ID : ${order.dealId}>`,
+            },
+          },
+        ],
+      },
     })
   }
 

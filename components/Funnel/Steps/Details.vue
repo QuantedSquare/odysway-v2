@@ -26,6 +26,7 @@
               </div>
               <v-select
                 v-model="nbAdults"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(isAdvance ? 1 : 0, 9)"
               />
@@ -40,6 +41,7 @@
               </div>
               <v-select
                 v-model="nbChildren"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
@@ -53,12 +55,14 @@
               </div>
               <v-select
                 v-model="nbTeen"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
             </v-col>
           </v-row>
-          <!--  Contact Deatails -->
+          <!--  Contact Details -->
           <v-row>
             <v-col cols="12">
               <!-- <h2>{{ $t('stepperDevisGroup.contactDetails') }}</h2> -->
@@ -96,6 +100,8 @@
             >
               <v-text-field
                 v-model="email"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+
                 label="Email *"
                 placeholder="Ex: indiana@jones.com"
                 :rules="[rules.email]"
@@ -110,6 +116,7 @@
                 <v-col cols="4">
                   <v-select
                     v-model="phoneCode"
+
                     :items="phonesSelect"
                     :rules="[rules.name]"
                     label="Indicatif *"
@@ -117,6 +124,7 @@
                   >
                     <template #item="{ props }">
                       <v-list-item
+
                         v-bind="props"
                         :title="props.title"
                         :prepend-avatar="props.flagSrc"
@@ -136,6 +144,7 @@
                 <v-col cols="8">
                   <v-text-field
                     v-model="phoneNumber"
+
                     :label="'Téléphone *'"
                     placeholder="Ex: 6 00 00 00 01"
                     :rules="[rules.phone]"
@@ -157,9 +166,9 @@ import { z } from 'zod'
 const { currentStep, ownStep, voyage } = defineProps(['currentStep', 'ownStep', 'voyage'])
 
 const { deal, dealId, createDeal, updateDeal, checkoutType } = useStepperDeal(ownStep)
+const { addMultipleParams, addSingleParam } = useParams()
 const model = defineModel()
 const route = useRoute()
-
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
 }
@@ -176,20 +185,21 @@ const phoneNumber = ref('631870876')
 
 watch(() => currentStep, (value) => {
   if (value === ownStep) {
-    addAnotherQuery('step', ownStep)
+    addSingleParam('step', ownStep)
   }
 }, { immediate: true })
 
 watch(deal, () => {
   if (deal.value) {
     console.log('got value in details', deal.value)
+
     nbTeen.value = +deal.value.nbTeen || 0
     nbAdults.value = +deal.value.nbAdults
     nbChildren.value = +deal.value.nbUnderAge || 0
     email.value = deal.value.contact.email
     firstName.value = deal.value.contact.firstName
     lastName.value = deal.value.contact.lastName
-
+    console.log('totalValue', totalValue.value)
     const { code, number } = extractPhoneDetails(deal.value.contact.phone, phonesSelect)
     phoneCode.value = code
     phoneNumber.value = number
@@ -233,13 +243,22 @@ const rules = {
 const nbTravelers = computed(() => nbAdults.value + nbChildren.value + nbTeen.value)
 
 const totalValue = computed(() => {
-  const baseVoyage = 85000 // Récupérer de voyage
   const reduction_enfant = 8000
   const reduction_ado = 8000
+  const baseVoyage = +voyage.startingPrice // Récupérer de voyage
+
   return baseVoyage * nbAdults.value
     + (baseVoyage - reduction_enfant) * nbChildren.value
     + (baseVoyage - reduction_ado) * nbTeen.value
+    + ((+voyage.indivRoomPrice * +nbTravelers.value) * (deal.value?.indivRoom === 'Oui'))
+    + ((+deal.value?.insuranceCommissionPrice * +nbTravelers.value) * (deal.value?.insurance !== 'Aucune Assurance'))
+    - ((+deal.value?.promoValue * +nbTravelers.value) || 0)
+    + ((voyage.gotEarlybird === 'Oui' ? +voyage.promoEarlybird : 0))
+    + ((voyage.gotLastMinute === 'Oui' ? +voyage.promoLastMinute : 0))
+    + ((deal.value?.flightPrice > 0 ? +deal.value?.flightPrice : 0) * +nbTravelers.value)
+    + ((deal.value?.extensionPrice > 0 ? +deal.value?.extensionPrice : 0) * +nbTravelers.value)
 })
+
 const submitStepData = async () => {
   // Validate form
   if (!model.value) return false
@@ -247,81 +266,83 @@ const submitStepData = async () => {
   //  #todo soustraire la réduction s'il y en a une
 
   try {
-    const flattenedDeal = {
-      value: totalValue.value, // # A retravailler avec toutes les valeurs
-      title: 'Découverte du Népal',
-      currency: 'eur',
-      group: '1',
-      owner: '1',
-      stage: '2',
-      // CustomFields
-      departureDate: voyage.departureDate,
-      returnDate: voyage.returnDate,
-      travelType: voyage.travelType, // voyage.plan, // #todo à checker
-      nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
-      nbChildren: nbChildren.value + nbTeen.value,
-      nbAdults: nbAdults.value,
-      nbTeen: nbTeen.value,
-      nbUnderAge: nbChildren.value,
-      country: voyage.country,
-      iso: voyage.iso,
-      zoneChapka: voyage.zoneChapka,
-      pricePerTraveler: voyage.startingPrice, // #todo trouver comment faire sauter
-      image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn' || voyage.imgSrc,
-      currentStep: 'Création du Deal',
-      alreadyPaid: 0, //
-      restTravelersToPay: nbAdults.value + nbChildren.value + nbTeen.value,
-      utm: route.query.utm || '',
-      slug: voyage.slug,
-      depositPrice: voyage.depositPrice,
-      basePricePerTraveler: voyage.startingPrice,
-      totalTravelPrice: totalTravelPrice, // #todo checker si *100 ou non
-      promoChildren: voyage.promoChildren,
-      maxChildrenAge: voyage.maxChildrenAge,
-      promoTeen: voyage.promoTeen,
-      maxTeenAge: voyage.maxTeenAge,
-      source: 'Devis',
-      forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom,
-      indivRoomPrice: voyage.indivRoomPrice,
-      promoEarlybird: voyage.promoEarlybird,
-      gotEarlybird: voyage.gotEarlybird,
-      promoLastMinute: voyage.promoLastMinute,
-      gotLastMinute: voyage.gotLastMinute,
-      // Contacts
-      email: email.value,
-      phone: `${phoneCode.value}${phoneNumber.value}`,
-      firstname: firstName.value,
-      lastname: lastName.value,
-    }
     // Submit form data
     if (dealId.value) {
       // Update deal with this values only after creation.
       // So only when checkout type is deposit or full
-      await updateDeal({
+      if (checkoutType.value === 'deposit' || checkoutType.value === 'full') {
+        await updateDeal({
+          value: totalValue.value,
+          nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
+          nbChildren: nbChildren.value + nbTeen.value,
+          nbAdults: nbAdults.value,
+          nbTeen: nbTeen.value,
+          nbUnderAge: nbChildren.value,
+          restToPay: totalValue.value,
+          email: email.value,
+          phone: `${phoneCode.value}${phoneNumber.value}`,
+          firstname: firstName.value,
+          lastname: lastName.value,
+        })
+      }
+      else {
+        await updateDeal({
+          email: email.value,
+          phone: `${phoneCode.value}${phoneNumber.value}`,
+          firstname: firstName.value,
+          lastname: lastName.value,
+        })
+      }
+    }
+    // else we update basics
+    else {
+      const flattenedDeal = {
+        value: totalValue.value, // # A retravailler avec toutes les valeurs
+        title: 'Découverte du Népal',
+        currency: 'eur',
+        group: '1',
+        owner: '1',
+        stage: '2',
+        // CustomFields
+        departureDate: voyage.departureDate,
+        returnDate: voyage.returnDate,
+        travelType: voyage.travelType, // voyage.plan, // #todo à checker
         nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
         nbChildren: nbChildren.value + nbTeen.value,
         nbAdults: nbAdults.value,
         nbTeen: nbTeen.value,
         nbUnderAge: nbChildren.value,
+        country: voyage.country,
+        iso: voyage.iso,
+        zoneChapka: voyage.zoneChapka,
+        pricePerTraveler: voyage.startingPrice, // #todo trouver comment faire sauter
+        image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn' || voyage.imgSrc,
+        currentStep: 'Création du Deal',
+        alreadyPaid: 0, //
+        restTravelersToPay: nbAdults.value + nbChildren.value + nbTeen.value, // #todo trouver comment faire sauter
+        restToPay: totalValue.value, // #todo checker si *100 ou non
+        utm: route.query.utm || '',
+        slug: voyage.slug,
+        depositPrice: voyage.depositPrice, // #Todo à faire sauter
+        basePricePerTraveler: voyage.startingPrice,
+        totalTravelPrice: totalTravelPrice, // #todo checker si *100 ou non || à faire sauter ?
+        promoChildren: voyage.promoChildren,
+        maxChildrenAge: voyage.maxChildrenAge,
+        promoTeen: voyage.promoTeen,
+        maxTeenAge: voyage.maxTeenAge,
+        source: 'Devis',
+        forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',
+        indivRoomPrice: voyage.indivRoomPrice,
+        promoEarlybird: voyage.promoEarlybird,
+        gotEarlybird: voyage.gotEarlybird,
+        promoLastMinute: voyage.promoLastMinute,
+        gotLastMinute: voyage.gotLastMinute,
+        // Contacts
         email: email.value,
         phone: `${phoneCode.value}${phoneNumber.value}`,
         firstname: firstName.value,
         lastname: lastName.value,
-      })
-      // else we update basics
-      // else{
-      //   await updateDeal({
-      //   email: email.value,
-      //   phone: `${phoneCode.value}${phoneNumber.value}`,
-      //   firstname: firstName.value,
-      //   lastname: lastName.value,
-      // })
-      // #TODO we can push here in query the selected travelers to pay.
-      // addAnotherQuery('sa', nbAdults.value)
-      // addAnotherQuery('sc', nbChildren.value)
-      // addAnotherQuery('st', nbTeen.value)
-    }
-    else {
+      }
       console.log('submitting', flattenedDeal)
 
       return await createDeal(flattenedDeal)

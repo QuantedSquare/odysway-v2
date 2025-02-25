@@ -65,7 +65,7 @@
     </v-row>
     <v-row class="text-caption text-primary">
       <v-col>
-        Le calcul du prix de votre voyage sera fait à la prochaine étape
+        Le calcul du prix de votre voyage se fera à la prochaine étape
       </v-col>
     </v-row>
   </v-container>
@@ -76,6 +76,7 @@ const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
 
+const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)
 
@@ -124,7 +125,7 @@ const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cance
 
 watch([deal, () => props.currentStep], async () => {
   if (props.currentStep === props.ownStep) {
-    addAnotherQuery('step', props.ownStep)
+    addSingleParam('step', props.ownStep)
   }
   if (deal.value) {
     model.value = true

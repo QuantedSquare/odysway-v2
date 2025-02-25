@@ -171,9 +171,9 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       departureDate: dayjs(departure_date).format('YYYY-MM-YY'),
       returnDate: dayjs(return_date).format('YYYY-MM-YY'),
       // ===== Temporary values below until it is replaced in nuxt studio =====
-      // Or travel manager
+      // ===== Or travel manager =====
       zoneChapka: 1,
-      depositPrice: 500,
+      depositPrice: query.startingPrice * 0.3 || 500,
       promoChildren: 80,
       promoTeen: 80,
       maxChildrenAge: 12,
@@ -195,7 +195,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     // Voyage = Toutes les valeurs fixes
     const deal = await apiRequest(`/ac/deals/${dealId}`)
     return { title: deal.title,
-      startingPrice: deal.pricePerTraveler,
+      startingPrice: deal.basePricePerTraveler,
       imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
       country: deal.country,
       iso: deal.iso,
