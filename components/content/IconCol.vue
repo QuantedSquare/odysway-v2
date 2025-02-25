@@ -40,6 +40,8 @@
 </template>
 
 <script setup>
+import { mdiCalendar, mdiWhiteBalanceSunny, mdiTent, mdiAccountGroup, mdiTeddyBear, mdiAirplane } from '@mdi/js'
+
 const props = defineProps({
   iconName: {
     type: String,
@@ -47,20 +49,9 @@ const props = defineProps({
   },
 })
 
-const icon = ref('')
+const icons = { mdiCalendar, mdiWhiteBalanceSunny, mdiTent, mdiAccountGroup, mdiTeddyBear, mdiAirplane }
 
-// imports all mdi icons ==> move to static import ?
-onMounted(async () => {
-  if (props.iconName) {
-    try {
-      const { [props.iconName]: mdiIcon } = await import('@mdi/js')
-      icon.value = mdiIcon || ''
-    }
-    catch (e) {
-      console.error(e)
-      console.log('Icon not found: ', props.iconName)
-      icon.value = ''
-    }
-  }
+const icon = computed (() => {
+  return icons[props.iconName]
 })
 </script>
