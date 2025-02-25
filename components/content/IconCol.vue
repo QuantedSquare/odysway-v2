@@ -49,6 +49,7 @@ const props = defineProps({
 
 const icon = ref('')
 
+// imports all mdi icons ==> move to static import ?
 onMounted(async () => {
   if (props.iconName) {
     try {
