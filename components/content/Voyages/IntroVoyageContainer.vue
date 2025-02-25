@@ -21,7 +21,7 @@
           <v-col
             cols="12"
           >
-            <v-list>
+            <v-list slim>
               <slot name="avatar" />
             </v-list>
           </v-col>
