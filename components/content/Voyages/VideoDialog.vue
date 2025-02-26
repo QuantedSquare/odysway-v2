@@ -12,7 +12,7 @@
           :append-icon="mdiPlay"
           color="text-shadow bg-blur"
         >
-          <span class="text-caption text-uppercase text-md-button"><slot name="video-btn" /></span>
+          <span class="text-caption text-uppercase text-md-button text-shadow"><slot name="video-btn" /></span>
         </v-btn>
       </template>
       <v-container>

@@ -4,25 +4,24 @@ Immersion hivernale en terre béarnaise
 
 #component-slot-1
   ::photo-gallery-dialog
-  
-  #photos
+  #gallery-btn
+  voir la galerie photos
+
+  #photo-col
     :::photo-col{imageSrc='/images/iStock-1356423948.webp' colWidth="7" height="500"}
     :::
-    
     :::photo-col{imageSrc='/images/aiguille-d-ansabere-neige-1024x683.jpg' colWidth="5"}
     :::
-
     :::photo-col{imageSrc='/images/iStock-1190369407 (1).webp' colWidth="4"}
     :::
-    
     :::photo-col{imageSrc='/images/iStock-1356423948.webp' colWidth="8"}
     :::
-
     :::photo-col{imageSrc='/images/aiguille-d-ansabere-neige-1024x683.jpg' colWidth="5"}
     :::
-
     :::photo-col{imageSrc='/images/iStock-1190369407 (1).webp' colWidth="7"}
     :::
+
+    ::
   :: 
 
 #component-slot-2
