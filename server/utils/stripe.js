@@ -294,19 +294,20 @@ const handlePaymentSession = async (session, paymentType) => {
 
   const order = session.metadata
   // const directPayment = order.paymentType === 'custom'
-
+  console.log('SESSION METADATA as ORDER', order)
   //   // Fetch Deal Data
   const reponse = await activecampaign.getDealById(order.dealId)
+  console.log('Response OK')
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
+  console.log('CustomFields OK')
   const deal = { ...reponse.deal, ...customFields }
+  console.log('Passed deal retrieving', deal)
   const { client } = await activecampaign.getClientById(deal.contact)
-  console.log('Passed deal and client retrieving', deal, client)
+  console.log('Passed client retrieving', client)
   //   // Chapka notify
   if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
     // chapka.notify(session, deal.insurance, deal) // #TODO
   }
-
-  console.log('SESSION METADATA as ORDER', order)
 
   // AC Update toutes les valeur monaitaire sont en centimes
   const totalPaid = +(deal.alreadyPaid || 0) + +(session.amount_total)
