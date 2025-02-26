@@ -27,8 +27,8 @@ Immersion hivernale en terre béarnaise
 
 #component-slot-2
   ::video-dialog{videoSrc="https://www.youtube.com/embed/vrB9wC6quaU?si=z7xt5GDGS2JnaSot"}
-  #video-title
-  Immersion hivernale en terre béarnaise
+  #video-btn
+  voir video
   ::
   
 ::

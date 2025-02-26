@@ -4,7 +4,7 @@
     :prepend-icon="mdiClose"
     color="grey-darken-3"
     class="ma-4 on-hover"
-    @click="$emit('close')"
+    @click="$emit(dialog = false)"
   >
     Fermer
   </v-btn>
