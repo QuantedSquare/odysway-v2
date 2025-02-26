@@ -272,118 +272,119 @@ const createCheckoutSession = async (order) => {
   console.log('====CREATE STRIPE SESSION======', session)
   return session.url
 }
-// async handlePaymentSession (session, paymentType) {
-//   let checkoutId
+const handlePaymentSession = (session, paymentType) => {
+  console.log('In handlePaymentSession', session, paymentType)
+  //   let checkoutId
 
-//   if (paymentType === 'Virement') {
-//     const checkoutSession = await stripe.checkout.sessions.list({
-//       payment_intent: session.id
-//     })
-//     checkoutId = checkoutSession.data[0].id
-//     session = checkoutSession.data[0]
-//   } else {
-//     checkoutId = session.id
-//   }
+  //   if (paymentType === 'Virement') {
+  //     const checkoutSession = await stripe.checkout.sessions.list({
+  //       payment_intent: session.id
+  //     })
+  //     checkoutId = checkoutSession.data[0].id
+  //     session = checkoutSession.data[0]
+  //   } else {
+  //     checkoutId = session.id
+  //   }
 
-//   const order = session.metadata
-//   const directPayment = !order.isSold && order.isPayment && !order.isAdvance
+  //   const order = session.metadata
+  //   const directPayment = !order.isSold && order.isPayment && !order.isAdvance
 
-//   // Fetch Deal Data
-//   const customData = await ac.getCustomFieldData(order.dealId)
-//   const customFields = ac.handleCustomFields(await customData.dealCustomFieldData)
-//   const activecampaignDealData = await ac.getDealById(order.dealId)
-//   const client = await ac.getClientById(activecampaignDealData.deal.contact)
-//   // Chapka notify
+  //   // Fetch Deal Data
+  //   const customData = await ac.getCustomFieldData(order.dealId)
+  //   const customFields = ac.handleCustomFields(await customData.dealCustomFieldData)
+  //   const activecampaignDealData = await ac.getDealById(order.dealId)
+  //   const client = await ac.getClientById(activecampaignDealData.deal.contact)
+  //   // Chapka notify
 
-//   const { data: lineItems } = await stripe.checkout.sessions.listLineItems(checkoutId)
-//   session.lineItems = lineItems
+  //   const { data: lineItems } = await stripe.checkout.sessions.listLineItems(checkoutId)
+  //   session.lineItems = lineItems
 
-//   const inssuranceItem = lineItems.find((item) => {
-//     return [
-//       'Assurance multirisques',
-//       'Assurance annulation'
-//     ].includes(item.description)
-//   })
+  //   const inssuranceItem = lineItems.find((item) => {
+  //     return [
+  //       'Assurance multirisques',
+  //       'Assurance annulation'
+  //     ].includes(item.description)
+  //   })
 
-//   if (inssuranceItem && !isDev) {
-//     chapka.notify(session, inssuranceItem, customFields)
-//   }
-//   console.log('SESSION METADATA as ORDER', order)
-//   // AC Update toutes les valeur monaitaire sont en centimes
-//   const totalPaid = +(customFields.alreadyPaid || 0) + +(session.amount_total)
+  //   if (inssuranceItem && !isDev) {
+  //     chapka.notify(session, inssuranceItem, customFields)
+  //   }
+  //   console.log('SESSION METADATA as ORDER', order)
+  //   // AC Update toutes les valeur monaitaire sont en centimes
+  //   const totalPaid = +(customFields.alreadyPaid || 0) + +(session.amount_total)
 
-//   const restToPay = +activecampaignDealData.deal.value - totalPaid
+  //   const restToPay = +activecampaignDealData.deal.value - totalPaid
 
-//   // FALSE UNIQUEMENT SUR PAGE PAIEMENT ET REGLEMENT SOLDE
-//   const isAdvance = order.isAdvance === true || order.isAdvance === 'true'
+  //   // FALSE UNIQUEMENT SUR PAGE PAIEMENT ET REGLEMENT SOLDE
+  //   const isAdvance = order.isAdvance === true || order.isAdvance === 'true'
 
-//   // console.log('====CUSTOM FIELDS=====', customFields)
+  //   // console.log('====CUSTOM FIELDS=====', customFields)
 
-//   const countUnderAge = +order.nbUnderAge || 0
-//   const countTeen = +order.nbTeen || 0
+  //   const countUnderAge = +order.nbUnderAge || 0
+  //   const countTeen = +order.nbTeen || 0
 
-//   const childrenReduction = countUnderAge * +order.childrenPromo * 100 * !directPayment
-//   const teenReduction = countTeen * +order.teenPromo * 100 * !directPayment
-//   // childrenReduction + teenReduction UNIQUEMENT AU PREMIER CALCUL
-//   const restToPayPerTraveler = (restToPay + childrenReduction + teenReduction) / (isAdvance ? +order.selectedTravelersToPay : (+customFields.restTravelersToPay - +order.selectedTravelersToPay))
+  //   const childrenReduction = countUnderAge * +order.childrenPromo * 100 * !directPayment
+  //   const teenReduction = countTeen * +order.teenPromo * 100 * !directPayment
+  //   // childrenReduction + teenReduction UNIQUEMENT AU PREMIER CALCUL
+  //   const restToPayPerTraveler = (restToPay + childrenReduction + teenReduction) / (isAdvance ? +order.selectedTravelersToPay : (+customFields.restTravelersToPay - +order.selectedTravelersToPay))
 
-//   function restTravelerToPay () {
-//     if (totalPaid >= +activecampaignDealData.deal.value) {
-//       return 0
-//     } else if (isAdvance) {
-//       return +order.selectedTravelersToPay
-//     } else {
-//       return +customFields.restTravelersToPay - +order.selectedTravelersToPay
-//     }
-//   }
+  //   function restTravelerToPay () {
+  //     if (totalPaid >= +activecampaignDealData.deal.value) {
+  //       return 0
+  //     } else if (isAdvance) {
+  //       return +order.selectedTravelersToPay
+  //     } else {
+  //       return +customFields.restTravelersToPay - +order.selectedTravelersToPay
+  //     }
+  //   }
 
-//   const dealData = {
-//     deal: {
-//       group: '2',
-//       stage: totalPaid >= +activecampaignDealData.deal.value ? '33' : '6',
-//       fields: [
-//         {
-//           customFieldId: 20,
-//           fieldValue: totalPaid >= +activecampaignDealData.deal.value
-//             ? 'Solde réglé'
-//             : 'Acompte réglé'
-//         },
-//         { customFieldId: 21, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 'Paiement OK' : 'https://odysway.com/paiement?orderId=' + order.dealId + '&amount=' + (Math.round(order.flatRestToPay)) + '&isSold=true' }, // Lien paiement
-//         { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
-//         { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
-//         { customFieldId: 28, fieldValue: restTravelerToPay() },
-//         { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler } // Solde restant par Voyageur à régler
-//       ]
-//     }
-//   }
+  //   const dealData = {
+  //     deal: {
+  //       group: '2',
+  //       stage: totalPaid >= +activecampaignDealData.deal.value ? '33' : '6',
+  //       fields: [
+  //         {
+  //           customFieldId: 20,
+  //           fieldValue: totalPaid >= +activecampaignDealData.deal.value
+  //             ? 'Solde réglé'
+  //             : 'Acompte réglé'
+  //         },
+  //         { customFieldId: 21, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 'Paiement OK' : 'https://odysway.com/paiement?orderId=' + order.dealId + '&amount=' + (Math.round(order.flatRestToPay)) + '&isSold=true' }, // Lien paiement
+  //         { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
+  //         { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
+  //         { customFieldId: 28, fieldValue: restTravelerToPay() },
+  //         { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler } // Solde restant par Voyageur à régler
+  //       ]
+  //     }
+  //   }
 
-//   // console.log('====DealDataFromWebhookStripe=====', dealData.deal.fields)
+  //   // console.log('====DealDataFromWebhookStripe=====', dealData.deal.fields)
 
-//   ac.updateDeal(order.dealId, dealData)
+  //   ac.updateDeal(order.dealId, dealData)
 
-//   ac.addNote(order.dealId, {
-//     note: {
-//       note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`
-//     }
-//   })
+  //   ac.addNote(order.dealId, {
+  //     note: {
+  //       note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`
+  //     }
+  //   })
 
-//   if (!isDev) {
-//     axios({
-//       url: 'https://hooks.slack.com/services/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',
-//       method: 'post',
-//       data: // { text: `Confirmation paiement CB - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}` }
-//       {
-//         blocks: [
-//           {
-//             type: 'section',
-//             text: {
-//               type: 'mrkdwn',
-//               text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}>`
-//             }
-//           }
-//         ]
-//       }
-//     })
+  //   if (!isDev) {
+  //     axios({
+  //       url: 'https://hooks.slack.com/services/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',
+  //       method: 'post',
+  //       data: // { text: `Confirmation paiement CB - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}` }
+  //       {
+  //         blocks: [
+  //           {
+  //             type: 'section',
+  //             text: {
+  //               type: 'mrkdwn',
+  //               text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}>`
+  //             }
+  //           }
+  //         ]
+  //       }
+  //     })
 
 //     axios({
 //       url: 'https://www.google-analytics.com/collect',
@@ -400,7 +401,8 @@ const createCheckoutSession = async (order) => {
 //       }
 //     })
 //   }
-// }
+}
 export default {
   createCheckoutSession,
+  handlePaymentSession,
 }

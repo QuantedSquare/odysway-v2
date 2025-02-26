@@ -1,16 +1,35 @@
+import { stripeCLI } from './stripeCLI'
+
 export default defineEventHandler(async (event) => {
   const stripeSignature = getRequestHeader(event, 'stripe-signature')
   console.log('stripeSignature', stripeSignature)
-  if (!stripeSignature || stripeSignature !== process.env.STRIPE_WEBHOOK_SIGNATURE) {
+  if (!stripeSignature) {
     return
   }
+
   const body = await readBody(event)
+  let stripeEvent
+  try {
+    stripeEvent = stripeCLI.webhooks.constructEvent(
+      body, stripeSignature, process.env.STRIPE_WEBHOOK_SECRET,
+    )
+  }
+  catch (err) {
+    console.log('Error stripeEvent', err)
+    throw createError({
+      statusCode: 400,
+      message: 'Error stripeEvent',
+    })
+  }
+
   console.log('body from strike webhook', body)
+  console.log('=======stripeEvent=========', stripeEvent)
   // If payment_status not equal to paid, it means that the customer choose to pay by bank transfer or do nothing
-  if (body.type === 'checkout.session.completed' && body.data.object.payment_status === 'paid') {
+  if (stripeEvent.type === 'checkout.session.completed' && stripeEvent.data.object.payment_status === 'paid') {
     // Récupéré le dealId dans les metadata (On passe l'order dedans)
     try {
-      stripe.handlePaymentSession(body.data.object, 'CB')
+      console.log('--------------GOING INTO HANDLE PAYMENT SESSION--------------')
+      stripe.handlePaymentSession(stripeEvent.data.object, 'CB')
       // sendinBlue.updateContactListId(body.data.object.customer_details.email, 14) // Payé
       setResponseStatus(event, 200)
     }
