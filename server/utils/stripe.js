@@ -272,48 +272,42 @@ const createCheckoutSession = async (order) => {
   console.log('====CREATE STRIPE SESSION======', session)
   return session.url
 }
-const handlePaymentSession = (session, paymentType) => {
+const handlePaymentSession = async (session, paymentType) => {
   console.log('In handlePaymentSession', session, paymentType)
-  //   let checkoutId
 
-  //   if (paymentType === 'Virement') {
-  //     const checkoutSession = await stripe.checkout.sessions.list({
-  //       payment_intent: session.id
-  //     })
-  //     checkoutId = checkoutSession.data[0].id
-  //     session = checkoutSession.data[0]
-  //   } else {
-  //     checkoutId = session.id
-  //   }
+  let checkoutId
 
-  //   const order = session.metadata
-  //   const directPayment = !order.isSold && order.isPayment && !order.isAdvance
+  const isDev = false // config.public.environment === 'development'
+
+  if (paymentType === 'Virement') {
+    const checkoutSession = await stripeCLI.checkout.sessions.list({
+      payment_intent: session.id,
+    })
+    checkoutId = checkoutSession.data[0].id
+    session = checkoutSession.data[0]
+  }
+  else {
+    checkoutId = session.id
+  }
+
+  const order = session.metadata
+  const directPayment = order.paymentType === 'custom'
 
   //   // Fetch Deal Data
-  //   const customData = await ac.getCustomFieldData(order.dealId)
-  //   const customFields = ac.handleCustomFields(await customData.dealCustomFieldData)
-  //   const activecampaignDealData = await ac.getDealById(order.dealId)
-  //   const client = await ac.getClientById(activecampaignDealData.deal.contact)
+  const reponse = await activecampaign.getDealById(order.dealId)
+  const customFields = await activecampaign.getDealCustomFields(order.dealId)
+  const deal = { ...reponse.deal, ...customFields }
+  const client = await activecampaign.getClientById(deal.contact)
+
   //   // Chapka notify
-
-  //   const { data: lineItems } = await stripe.checkout.sessions.listLineItems(checkoutId)
-  //   session.lineItems = lineItems
-
-  //   const inssuranceItem = lineItems.find((item) => {
-  //     return [
-  //       'Assurance multirisques',
-  //       'Assurance annulation'
-  //     ].includes(item.description)
-  //   })
-
-  //   if (inssuranceItem && !isDev) {
-  //     chapka.notify(session, inssuranceItem, customFields)
-  //   }
+  if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+    // chapka.notify(session, deal.insurance, deal) // #TODO
+  }
   //   console.log('SESSION METADATA as ORDER', order)
   //   // AC Update toutes les valeur monaitaire sont en centimes
-  //   const totalPaid = +(customFields.alreadyPaid || 0) + +(session.amount_total)
+  const totalPaid = +(deal.alreadyPaid || 0) + +(session.amount_total)
 
-  //   const restToPay = +activecampaignDealData.deal.value - totalPaid
+  const restToPay = +deal.value - totalPaid
 
   //   // FALSE UNIQUEMENT SUR PAGE PAIEMENT ET REGLEMENT SOLDE
   //   const isAdvance = order.isAdvance === true || order.isAdvance === 'true'
@@ -338,69 +332,66 @@ const handlePaymentSession = (session, paymentType) => {
   //     }
   //   }
 
-  //   const dealData = {
-  //     deal: {
-  //       group: '2',
-  //       stage: totalPaid >= +activecampaignDealData.deal.value ? '33' : '6',
-  //       fields: [
-  //         {
-  //           customFieldId: 20,
-  //           fieldValue: totalPaid >= +activecampaignDealData.deal.value
-  //             ? 'Solde réglé'
-  //             : 'Acompte réglé'
-  //         },
-  //         { customFieldId: 21, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 'Paiement OK' : 'https://odysway.com/paiement?orderId=' + order.dealId + '&amount=' + (Math.round(order.flatRestToPay)) + '&isSold=true' }, // Lien paiement
-  //         { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
-  //         { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
-  //         { customFieldId: 28, fieldValue: restTravelerToPay() },
-  //         { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler } // Solde restant par Voyageur à régler
-  //       ]
-  //     }
-  //   }
+  const dealData = {
+    group: '2',
+    stage: totalPaid >= +deal.value ? '33' : '6',
+    paymentLink: totalPaid >= +deal.value ? 'Paiement OK' : `https://odysway.com/checkout?dealId=${order.dealId}&type=balance`,
+    alreadyPaid: totalPaid,
+    restToPay: restToPay,
+    currentStep: totalPaid >= +deal.value
+      ? 'Solde réglé'
+      : 'Acompte réglé',
 
-  //   // console.log('====DealDataFromWebhookStripe=====', dealData.deal.fields)
+    // { customFieldId: 21, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 'Paiement OK' : 'https://odysway.com/paiement?orderId=' + order.dealId + '&amount=' + (Math.round(order.flatRestToPay)) + '&isSold=true' }, // Lien paiement
+    // { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
+    // { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
+    // { customFieldId: 28, fieldValue: restTravelerToPay() },
+    // { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler } // Solde restant par Voyageur à régler
 
-  //   ac.updateDeal(order.dealId, dealData)
+  }
 
-  //   ac.addNote(order.dealId, {
-  //     note: {
-  //       note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`
-  //     }
-  //   })
+  console.log('dealData', dealData)
+  activecampaign.updateDeal(order.dealId, dealData)
 
-  //   if (!isDev) {
-  //     axios({
-  //       url: 'https://hooks.slack.com/services/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',
-  //       method: 'post',
-  //       data: // { text: `Confirmation paiement CB - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}` }
-  //       {
-  //         blocks: [
-  //           {
-  //             type: 'section',
-  //             text: {
-  //               type: 'mrkdwn',
-  //               text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}>`
-  //             }
-  //           }
-  //         ]
-  //       }
-  //     })
+  activecampaign.addNote(order.dealId, {
+    note: {
+      note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
+    },
+  })
 
-//     axios({
-//       url: 'https://www.google-analytics.com/collect',
-//       method: 'post',
-//       params: {
-//         v: 1,
-//         tid: process.env.NODE_ENV === 'development' ? 'UA-160322718-1' : 'UA-120209294-1',
-//         cid: '555',
-//         t: 'event',
-//         ec: 'Transaction_Server',
-//         ea: 'Ping_Confirmation',
-//         el: '' + +order.selectedTravelersToPay,
-//         ev: +session.amount_total
-//       }
-//     })
-//   }
+  if (!isDev) {
+    axios({
+      url: process.env.SLACK_URL_PAIEMENTS,
+      method: 'post',
+      data:
+        {
+          blocks: [
+            {
+              type: 'section',
+              text: {
+                type: 'mrkdwn',
+                text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.firstName} ${client.lastName} - ${order.dealId}>`,
+              },
+            },
+          ],
+        },
+    })
+
+    //     axios({
+    //       url: 'https://www.google-analytics.com/collect',
+    //       method: 'post',
+    //       params: {
+    //         v: 1,
+    //         tid: process.env.NODE_ENV === 'development' ? 'UA-160322718-1' : 'UA-120209294-1',
+    //         cid: '555',
+    //         t: 'event',
+    //         ec: 'Transaction_Server',
+    //         ea: 'Ping_Confirmation',
+    //         el: '' + +order.selectedTravelersToPay,
+    //         ev: +session.amount_total
+    //       }
+    //     })
+  }
 }
 export default {
   createCheckoutSession,
