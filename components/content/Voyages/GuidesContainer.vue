@@ -1,13 +1,16 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
+      <v-col class="text-grey-darken-3">
+        <slot
+          name="text"
+        />
         <v-card variant="text">
-          <v-card-text class="text-subtitle-1 text-grey-darken-3 px-0">
-            <slot
-              name="text"
-            />
-            <v-list lines="three">
+          <v-card-text class="px-0">
+            <v-list
+              lines="three"
+              class="text-body-1 text-grey-darken-3"
+            >
               <slot name="guides" />
             </v-list>
           </v-card-text>

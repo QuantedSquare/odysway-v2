@@ -1,5 +1,5 @@
 <template>
-  <v-container class="my-6">
+  <v-container class="my-md-6">
     <v-row>
       <v-col>
         <v-card

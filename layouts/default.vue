@@ -28,7 +28,7 @@
         </v-list>
       </v-navigation-drawer>
     </ClientOnly>
-    <v-main style="--v-layout-top: 64px;">
+    <v-main style="--v-layout-top: 0px; --v-layout-bottom: 0px;">
       <slot />
     </v-main>
     <FooterOdysway />

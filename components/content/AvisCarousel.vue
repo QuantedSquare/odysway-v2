@@ -3,13 +3,12 @@
     ref="avis-carousel"
     class="h-100 pb-12"
     :show-arrows="false"
-
+    :cycle="nbCarouselItems > 1 ? true : false"
     interval="10000"
     hide-delimiter-background
     :hide-delimiters="nbCarouselItems > 1 ? false : true"
     color="grey-lighten-4"
   >
-    <!-- :cycle="nbCarouselItems > 1 ? true : false" -->
     <slot name="carousel-item" />
   </v-carousel>
 </template>

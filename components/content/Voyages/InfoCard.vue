@@ -16,7 +16,7 @@
       </v-container>
     </v-img>
     <v-card-item>
-      <v-card-title class="text-center no-white-space font-weight-black">
+      <v-card-title class="text-center text-grey-darken-3 no-white-space font-weight-black ">
         <slot name="catch-phrase" />
       </v-card-title>
       <v-list slim>

@@ -22,7 +22,7 @@
         <slot name="title" />
       </v-col>
       <v-col cols="12">
-        <p class="text-grey-darken-2">
+        <p class="text-body-1 text-grey-darken-3">
           <slot
             name="avis"
             mdc-unwrap="p"
