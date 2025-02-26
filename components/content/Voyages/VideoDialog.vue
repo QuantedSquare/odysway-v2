@@ -2,7 +2,7 @@
   <div>
     <v-dialog
       v-model="dialog"
-      transition="dialog-top-transition"
+      transition="dialog-bottom-transition"
     >
       <template #activator="{ props: activatorProps }">
         <v-btn
@@ -25,8 +25,8 @@
             <v-btn
               variant="outlined"
               :prepend-icon="mdiClose"
-              color="white"
-              class="align-self-end"
+              color="grey-darken-3"
+              class="align-self-end bg-white"
               @click="dialog = false"
             >
               Fermer

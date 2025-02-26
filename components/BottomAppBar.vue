@@ -2,6 +2,7 @@
   <v-app-bar
     location="bottom"
     class="d-md-none py-2 py-sm-0"
+    height="100"
   >
     <v-container>
       <v-row
@@ -15,21 +16,28 @@
         >
           <slot name="starting-price" />
         </v-col>
-        <v-col class="d-flex justify-start justify-sm-end">
+        <v-spacer class="d-none d-sm-block" />
+        <v-col sm="4">
           <!-- scroll to prices/dates or different page ? -->
           <v-btn-secondary
             rounded="sm"
-            class="on-hover mr-4 text-caption text-uppercase"
+            class="text-caption text-uppercase"
+            width="100%"
           >
             <slot name="text-btn-1" />
           </v-btn-secondary>
-
+        </v-col>
+        <v-col sm="4">
           <v-btn-secondary
             rounded="sm"
-            class="on-hover text-caption text-uppercase"
+            color="primary"
+            class="text-caption text-uppercase"
+            width="100%"
           >
             <template #prepend>
-              <v-icon>{{ mdiCalendar }}</v-icon>
+              <v-icon size="x-large">
+                {{ mdiCalendar }}
+              </v-icon>
             </template>
             <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
             <slot name="text-btn-2" />
