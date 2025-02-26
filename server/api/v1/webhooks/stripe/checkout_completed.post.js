@@ -31,7 +31,7 @@ export default defineEventHandler(async (event) => {
     // Récupéré le dealId dans les metadata (On passe l'order dedans)
     try {
       console.log('--------------GOING INTO HANDLE PAYMENT SESSION--------------')
-      stripe.handlePaymentSession(stripeEvent.data.object, 'CB')
+      await stripe.handlePaymentSession(stripeEvent.data.object, 'CB')
       // sendinBlue.updateContactListId(body.data.object.customer_details.email, 14) // Payé
       setResponseStatus(event, 200)
     }
