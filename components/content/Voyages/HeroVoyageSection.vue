@@ -29,7 +29,8 @@
           align-md="center"
         >
           <v-col
-            cols="12"
+            cols="10"
+            sm="5"
             md="4"
           >
             <slot
@@ -37,7 +38,8 @@
             />
           </v-col>
           <v-col
-            cols="12"
+            cols="10"
+            sm="5"
             md="4"
           >
             <slot

@@ -2,9 +2,8 @@
   <v-col
     v-if="voyage && voyage.imgSrc"
     cols="12"
-    sm="6"
+    sm="4"
     md="3"
-    class="height-voyageCard "
   >
     <v-card
       elevation="0"
@@ -19,7 +18,7 @@
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 400 })"
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="xl"
-          contain
+          cover
           class="hover-scale"
         >
           <client-only>
@@ -208,8 +207,4 @@ const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   transform:scale(1);
   transition: transform 0.2s ease-in-out;
 }
-
-/* .no-white-space {
-  white-space: normal;
-} */
 </style>

@@ -29,10 +29,10 @@
               id="newsletter"
               v-model="email"
               variant="solo"
+              outlined
               flat
               hide-details
               density="compact"
-              rounded="xl"
               bg-color="white"
               placeholder="Votre adresse email"
               type="email"
@@ -106,10 +106,10 @@
             <v-text-field
               id="email"
               variant="solo"
+              outlined
               flat
               hide-details
               density="compact"
-              rounded="xl"
               readonly
               bg-color="odysway-1"
               label="contact@odysway.com"
@@ -125,10 +125,10 @@
             <v-text-field
               id="phone"
               variant="solo"
+              outlined
               flat
               hide-details
               density="compact"
-              rounded="xl"
               readonly
               bg-color="odysway-1"
               label="+33 1 84 80 79 75"

@@ -8,7 +8,7 @@
         <v-img
           rounded="lg"
           :src="img(props.image, { format: 'webp', quality: 70 })"
-          height="100%"
+          class="h-100 h-lg-75"
           cover
         />
       </v-col>

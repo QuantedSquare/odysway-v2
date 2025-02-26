@@ -1,13 +1,13 @@
 <template>
   <div>
     <v-container
-      class="d-flex align-center position-relative"
+      class="d-flex align-center position-relative "
     >
-      <v-row>
+      <v-row class="overflow-x-hidden">
         <v-slide-group
           v-model="currentWindow"
           center-active
-          class="w-100"
+          class="w-100 "
         >
           <slot name="carousel-item" />
         </v-slide-group>

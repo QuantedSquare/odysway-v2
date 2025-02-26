@@ -2,7 +2,6 @@
   <v-dialog
     v-model="dialog"
     transition="dialog-bottom-transition"
-    class="dialog-class"
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
@@ -11,17 +10,20 @@
         size="large"
         block
         :append-icon="mdiPlay"
-        color="text-shadow bg-blur max-width"
+        color="text-shadow bg-blur"
       >
         <span class="text-caption text-uppercase text-md-button text-shadow"><slot name="video-btn" /></span>
       </v-btn>
     </template>
-    <v-container>
+    <v-container
+      class="pa-1"
+      fluid
+    >
       <v-row justify="center">
         <v-col
           cols="12"
           md="6"
-          class="d-flex flex-column ga-4 "
+          class="d-flex flex-column ga-4 pa-1"
         >
           <v-btn
             variant="outlined"
@@ -66,11 +68,5 @@ const dialog = ref(false)
   background-color: rgba(255, 255, 255, 0.214)!important;
   backdrop-filter: blur(8px);
   box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
-}
-.max-width{
-  max-width: 350px!important;
-}
-.dialog-class:deep(.v-overlay__content){
-  margin: 0!important;
 }
 </style>
