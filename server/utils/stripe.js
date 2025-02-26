@@ -216,7 +216,7 @@ const createCheckoutSession = async (order) => {
       },
     })
   }
-  const contact = await activecampaign.getClientById(deal.contact)
+  const { contact } = await activecampaign.getClientById(deal.contact)
   //     // Stripe only accept strings for metadata
   delete order.insurances
   delete order.options
@@ -272,6 +272,8 @@ const createCheckoutSession = async (order) => {
   console.log('====CREATE STRIPE SESSION======', session)
   return session.url
 }
+
+// ===== HANDLE PAYMENT SESSION =====
 const handlePaymentSession = async (session, paymentType) => {
   console.log('In handlePaymentSession', session, paymentType)
 
@@ -279,58 +281,36 @@ const handlePaymentSession = async (session, paymentType) => {
 
   const isDev = false // config.public.environment === 'development'
 
-  if (paymentType === 'Virement') {
-    const checkoutSession = await stripeCLI.checkout.sessions.list({
-      payment_intent: session.id,
-    })
-    checkoutId = checkoutSession.data[0].id
-    session = checkoutSession.data[0]
-  }
-  else {
-    checkoutId = session.id
-  }
+  // if (paymentType === 'Virement') {
+  //   const checkoutSession = await stripeCLI.checkout.sessions.list({
+  //     payment_intent: session.id,
+  //   })
+  //   checkoutId = checkoutSession.data[0].id
+  //   session = checkoutSession.data[0]
+  // }
+  // else {
+  //   checkoutId = session.id
+  // }
 
   const order = session.metadata
-  const directPayment = order.paymentType === 'custom'
+  // const directPayment = order.paymentType === 'custom'
 
   //   // Fetch Deal Data
   const reponse = await activecampaign.getDealById(order.dealId)
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
   const deal = { ...reponse.deal, ...customFields }
-  const client = await activecampaign.getClientById(deal.contact)
-
+  const { client } = await activecampaign.getClientById(deal.contact)
+  console.log('Passed deal and client retrieving', deal, client)
   //   // Chapka notify
   if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
     // chapka.notify(session, deal.insurance, deal) // #TODO
   }
-  //   console.log('SESSION METADATA as ORDER', order)
-  //   // AC Update toutes les valeur monaitaire sont en centimes
+
+  console.log('SESSION METADATA as ORDER', order)
+
+  // AC Update toutes les valeur monaitaire sont en centimes
   const totalPaid = +(deal.alreadyPaid || 0) + +(session.amount_total)
-
   const restToPay = +deal.value - totalPaid
-
-  //   // FALSE UNIQUEMENT SUR PAGE PAIEMENT ET REGLEMENT SOLDE
-  //   const isAdvance = order.isAdvance === true || order.isAdvance === 'true'
-
-  //   // console.log('====CUSTOM FIELDS=====', customFields)
-
-  //   const countUnderAge = +order.nbUnderAge || 0
-  //   const countTeen = +order.nbTeen || 0
-
-  //   const childrenReduction = countUnderAge * +order.childrenPromo * 100 * !directPayment
-  //   const teenReduction = countTeen * +order.teenPromo * 100 * !directPayment
-  //   // childrenReduction + teenReduction UNIQUEMENT AU PREMIER CALCUL
-  //   const restToPayPerTraveler = (restToPay + childrenReduction + teenReduction) / (isAdvance ? +order.selectedTravelersToPay : (+customFields.restTravelersToPay - +order.selectedTravelersToPay))
-
-  //   function restTravelerToPay () {
-  //     if (totalPaid >= +activecampaignDealData.deal.value) {
-  //       return 0
-  //     } else if (isAdvance) {
-  //       return +order.selectedTravelersToPay
-  //     } else {
-  //       return +customFields.restTravelersToPay - +order.selectedTravelersToPay
-  //     }
-  //   }
 
   const dealData = {
     group: '2',

@@ -326,7 +326,7 @@ const sendSlackNotification = (id, data) => {
 const optionNotification = async (session) => {
   try {
     const deal = await getDealById(session.dealId)
-    const client = await getClientById(deal.deal.contact)
+    const { client } = await getClientById(deal.deal.contact)
 
     axios({
       url: process.env.SLACK_URL_POSE_OPTION,
@@ -338,7 +338,7 @@ const optionNotification = async (session) => {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: `:open_book: <https://odysway90522.activehosted.com/app/deals/${session.dealId}|${session.title} - ${client.contact.firstName} ${client.contact.lastName} - pax ${session.nbTravelers}>`,
+              text: `:open_book: <https://odysway90522.activehosted.com/app/deals/${session.dealId}|${session.title} - ${client.firstName} ${client.lastName} - pax ${session.nbTravelers}>`,
             },
           },
         ],
