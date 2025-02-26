@@ -150,7 +150,7 @@ const transformDealForAPI = (flatDeal) => {
 
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
-  console.log('API Request to', endpoint, method, data)
+  console.log('API Request to', endpoint, method, data, baseUrl)
   try {
     const response = await axios({
       url: `${baseUrl}${endpoint}`,
