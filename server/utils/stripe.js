@@ -1,11 +1,6 @@
-import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
-
 import axios from 'axios'
 
 import { stripeCLI } from './stripeCLI'
-
-dayjs.extend(customParseFormat)
 
 const config = useRuntimeConfig()
 

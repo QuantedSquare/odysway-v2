@@ -1,9 +1,4 @@
-import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
-
 import axios from 'axios'
-
-dayjs.extend(customParseFormat)
 
 const isDev = process.env.NODE_ENV === 'development'
 
