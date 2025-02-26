@@ -2,6 +2,7 @@
   <v-list-item>
     <v-row
       align="center"
+      justify="center"
       no-gutters
     >
       <v-col cols="auto">
@@ -12,7 +13,7 @@
           contain
         />
       </v-col>
-      <v-col>
+      <v-col class="text-center text-lg-start">
         <slot name="text" />
       </v-col>
     </v-row>

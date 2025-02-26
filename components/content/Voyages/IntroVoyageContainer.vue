@@ -3,7 +3,7 @@
     <v-row>
       <v-col
         cols="12"
-        md="7"
+        md="8"
       >
         <v-row>
           <v-col
@@ -28,7 +28,7 @@
         </v-row>
       </v-col>
       <v-col
-        md="5"
+        md="4"
         class="d-none d-md-flex"
       >
         <slot name="info-card" />

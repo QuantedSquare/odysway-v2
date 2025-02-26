@@ -106,8 +106,8 @@ Immersion hivernale en terre béarnaise
 
 #info-card
 ::info-card
-<!-- #catch-phrase
-Discutons de votre projet ! -->
+#catch-phrase
+Discutons de votre projet !
 
 
 #payment-items
@@ -122,10 +122,10 @@ Discutons de votre projet ! -->
   :::
 
 #text-btn-1
-voir les dates / prix
+voir les dates & prix
 
 #text-btn-2
-Prendre RDV
+Prendre RDV avec un conseiller
 
 ::
 
