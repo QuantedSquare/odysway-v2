@@ -29,6 +29,12 @@ export default defineNuxtConfig({
       url: process.env.POSTGRES_URL,
     },
   },
+  runtimeConfig: {
+    public: {
+      environment: process.env.ENV || 'development',
+      siteURL: process.env.SITE_URL,
+    },
+  },
   build: {
     transpile: ['vuetify'],
   },

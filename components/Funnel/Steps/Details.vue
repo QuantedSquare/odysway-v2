@@ -1,10 +1,5 @@
 <template>
   <v-container>
-    <!-- <v-skeleton-loader
-      v-if="status !== 'success'"
-      type="card"
-    /> -->
-    <!-- v-else -->
     <v-form
       ref="form"
       v-model="model"
@@ -31,6 +26,7 @@
               </div>
               <v-select
                 v-model="nbAdults"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(isAdvance ? 1 : 0, 9)"
               />
@@ -45,6 +41,7 @@
               </div>
               <v-select
                 v-model="nbChildren"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
@@ -58,12 +55,14 @@
               </div>
               <v-select
                 v-model="nbTeen"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
             </v-col>
           </v-row>
-          <!--  Contact Deatails -->
+          <!--  Contact Details -->
           <v-row>
             <v-col cols="12">
               <!-- <h2>{{ $t('stepperDevisGroup.contactDetails') }}</h2> -->
@@ -101,6 +100,8 @@
             >
               <v-text-field
                 v-model="email"
+                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
+
                 label="Email *"
                 placeholder="Ex: indiana@jones.com"
                 :rules="[rules.email]"
@@ -115,6 +116,7 @@
                 <v-col cols="4">
                   <v-select
                     v-model="phoneCode"
+
                     :items="phonesSelect"
                     :rules="[rules.name]"
                     label="Indicatif *"
@@ -122,6 +124,7 @@
                   >
                     <template #item="{ props }">
                       <v-list-item
+
                         v-bind="props"
                         :title="props.title"
                         :prepend-avatar="props.flagSrc"
@@ -141,6 +144,7 @@
                 <v-col cols="8">
                   <v-text-field
                     v-model="phoneNumber"
+
                     :label="'Téléphone *'"
                     placeholder="Ex: 6 00 00 00 01"
                     :rules="[rules.phone]"
@@ -159,11 +163,13 @@
 <script setup>
 import { z } from 'zod'
 
-const props = defineProps(['currentStep', 'ownStep'])
+const { currentStep, ownStep, voyage } = defineProps(['currentStep', 'ownStep', 'voyage'])
+const config = useRuntimeConfig()
 
-const { deal, dealId, createDeal, updateDeal } = useDeal(props.ownStep)
+const { deal, dealId, createDeal, updateDeal, checkoutType } = useStepperDeal(ownStep)
+const { addSingleParam } = useParams()
 const model = defineModel()
-
+const route = useRoute()
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
 }
@@ -172,24 +178,31 @@ const isAdvance = ref(true)
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 const nbTeen = ref(0)
-const firstName = ref('')
-const lastName = ref('')
-const email = ref('')
-const phoneCode = ref('')
-const phoneNumber = ref('')
+const firstName = ref('Alex')
+const lastName = ref('& Yuzu')
+const email = ref('ottmann.alex@gmail.com')
+const phoneCode = ref('+33')
+const phoneNumber = ref('631870876')
 
-watch(() => props.currentStep, (value) => {
-  if (value === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+watch(() => currentStep, (value) => {
+  if (value === ownStep) {
+    addSingleParam('step', ownStep)
   }
 }, { immediate: true })
 
 watch(deal, () => {
   if (deal.value) {
     console.log('got value in details', deal.value)
-    nbTeen.value = +deal.value.nbTeen
+
+    nbTeen.value = +deal.value.nbTeen || 0
     nbAdults.value = +deal.value.nbAdults
-    nbChildren.value = +deal.value.nbUnderAge
+    nbChildren.value = +deal.value.nbUnderAge || 0
+    email.value = deal.value.contact.email
+    firstName.value = deal.value.contact.firstName
+    lastName.value = deal.value.contact.lastName
+    const { code, number } = extractPhoneDetails(deal.value.contact.phone, phonesSelect)
+    phoneCode.value = code
+    phoneNumber.value = number
   }
 })
 
@@ -203,19 +216,18 @@ const saveToLocalStorage = () => {
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
-const loadFromLocalStorage = () => {
-  const storedData = JSON.parse(localStorage.getItem('detailsData'))
-  if (storedData) {
-    firstName.value = storedData.firstname
-    lastName.value = storedData.lastname
-    email.value = storedData.email
-    phoneNumber.value = storedData.phone
-    phoneCode.value = storedData.phoneCode
-  }
-}
-onMounted(() => {
-  loadFromLocalStorage()
-})
+// const loadFromLocalStorage = () => {
+
+//   const storedData = JSON.parse(localStorage.getItem('detailsData'))
+//   if (storedData) {
+//     firstName.value = storedData.firstname
+//     lastName.value = storedData.lastname
+//     email.value = storedData.email
+//     phoneNumber.value = storedData.phone
+//     phoneCode.value = storedData.phoneCode
+//   }
+// }
+// loadFromLocalStorage()
 
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
@@ -227,80 +239,88 @@ const rules = {
   email: schemaToRule(emailSchema),
   phone: schemaToRule(phoneSchema),
 }
-const totalValue = computed(() => {
-  const baseVoyage = 85000 // Récupérer de voyage
-  const reduction_enfant = 8000
-  const reduction_ado = 8000
-  return baseVoyage * nbAdults.value
-    + (baseVoyage - reduction_enfant) * nbChildren.value
-    + (baseVoyage - reduction_ado) * nbTeen.value
-})
+
+const nbTravelers = computed(() => nbAdults.value + nbChildren.value + nbTeen.value)
+
 const submitStepData = async () => {
   // Validate form
-  console.log('start submit', dealId.value)
   if (!model.value) return false
+  //  #todo soustraire la réduction s'il y en a une
+
   try {
-    const flattenedDeal = {
-      value: totalValue.value, // # A retravailler avec toutes les valeurs
-      title: 'Découverte du Népal',
-      currency: 'eur',
-      group: '1',
-      owner: '1',
-      stage: '2',
-      // CustomFields
-      departureDate: '2025-10-15',
-      returnDate: '2025-10-30',
-      travelType: 'Voyage de Groupe',
-      nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
-      nbChildren: nbChildren.value + nbTeen.value,
-      nbAdults: nbAdults.value,
-      nbTeen: nbTeen.value,
-      nbUnderAge: nbChildren.value,
-      country: 'Nepal',
-      iso: 'NP',
-      zoneChapka: 2,
-      pricePerTraveler: 2125,
-      image: 'https://example.com/nepal.jpg',
-      currentStep: 'Création du Deal',
-      alreadyPaid: 0,
-      restTravelersToPay: nbAdults.value + nbChildren.value + nbTeen.value,
-      utm: '',
-      slug: 'decouverte-nepal',
-      depositPrice: 25500,
-      basePricePerTraveler: 85000,
-      totalTravelPrice: 85000,
-      promoChildren: 8000,
-      maxChildrenAge: 12,
-      promoTeen: 8000,
-      maxTeenAge: 18,
-      source: 'Devis',
-      forcedIndivRoom: 'Non',
-      indivRoomPrice: 15000,
-      promoEarlybird: 5000,
-      gotEarlybird: 'Non',
-      promoLastMinute: 0,
-      gotLastMinute: 'Non',
-      // Contacts
-      email: email.value,
-      phone: `${phoneCode.value}${phoneNumber.value}`,
-      firstname: firstName.value,
-      lastname: lastName.value,
-    }
     // Submit form data
     if (dealId.value) {
-      await updateDeal({
+      // Update deal with this values only after creation.
+      // So only when checkout type is deposit or full
+      if (checkoutType.value === 'deposit' || checkoutType.value === 'full') {
+        await updateDeal({
+          nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
+          nbChildren: nbChildren.value + nbTeen.value,
+          nbAdults: nbAdults.value,
+          nbTeen: nbTeen.value,
+          nbUnderAge: nbChildren.value,
+          email: email.value,
+          phone: `${phoneCode.value}${phoneNumber.value}`,
+          firstname: firstName.value,
+          lastname: lastName.value,
+        })
+      }
+      else {
+        await updateDeal({
+          email: email.value,
+          phone: `${phoneCode.value}${phoneNumber.value}`,
+          firstname: firstName.value,
+          lastname: lastName.value,
+        })
+      }
+    }
+    // else we update basics
+    else {
+      const flattenedDeal = {
+        value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
+        title: voyage.title,
+        currency: 'eur',
+        group: '1',
+        owner: '1',
+        stage: config.public.environment === 'development' ? '48' : '2',
+        // CustomFields
+        departureDate: voyage.departureDate,
+        returnDate: voyage.returnDate,
+        travelType: voyage.travelType, // voyage.plan, // #todo à checker
         nbTravelers: nbAdults.value + nbChildren.value + nbTeen.value,
         nbChildren: nbChildren.value + nbTeen.value,
         nbAdults: nbAdults.value,
         nbTeen: nbTeen.value,
         nbUnderAge: nbChildren.value,
+        country: voyage.country,
+        iso: voyage.iso,
+        zoneChapka: voyage.zoneChapka,
+        image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn' || voyage.imgSrc,
+        currentStep: 'Création du Deal',
+        alreadyPaid: 0,
+        restToPay: 0, // Don't care about this value, we Calculate it in back
+        utm: route.query.utm || '',
+        slug: voyage.slug,
+        basePricePerTraveler: voyage.startingPrice * 100,
+        promoChildren: voyage.promoChildren * 100,
+        maxChildrenAge: voyage.maxChildrenAge * 100,
+        promoTeen: voyage.promoTeen,
+        maxTeenAge: voyage.maxTeenAge,
+        source: 'Devis',
+        forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',
+        indivRoomPrice: voyage.indivRoomPrice * 100,
+        promoEarlybird: voyage.promoEarlybird * 100,
+        gotEarlybird: voyage.gotEarlybird,
+        promoLastMinute: voyage.promoLastMinute * 100,
+        gotLastMinute: voyage.gotLastMinute,
+        // Contacts
         email: email.value,
         phone: `${phoneCode.value}${phoneNumber.value}`,
         firstname: firstName.value,
         lastname: lastName.value,
-      })
-    }
-    else {
+      }
+      console.log('submitting', flattenedDeal)
+
       return await createDeal(flattenedDeal)
     }
     return true
@@ -390,6 +410,23 @@ const phonesSelect = [
     },
   },
 ]
+const extractPhoneDetails = (fullPhone, phonesList) => {
+  const foundCode = phonesList.find(({ title }) =>
+    fullPhone.startsWith(title),
+  )
+
+  if (foundCode) {
+    return {
+      code: foundCode.title,
+      number: fullPhone.replace(foundCode.title, ''),
+    }
+  }
+
+  return {
+    code: '+33', // Default code
+    number: fullPhone,
+  }
+}
 
 defineExpose({
   submitStepData,

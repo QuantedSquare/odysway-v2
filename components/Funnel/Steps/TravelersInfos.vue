@@ -81,7 +81,8 @@
 
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
-const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
+const { addSingleParam } = useParams()
 
 const isCouple = ref(false)
 const nbTravelers = ref(1)
@@ -91,15 +92,10 @@ const isLoading = ref(true)
 // Form model
 const model = defineModel()
 
-// watch([() => props.currentStep, ], (value) => {
-//   if (value === props.ownStep && dealId.value) {
-//     addAnotherParameter('currentStep', props.ownStep)
-//   }
-// }, { immediate: true })
-
 // Data Initialization
 const initializeTravelersData = () => {
   if (deal.value) {
+    console.log('INITIALIZE TRAVELERS DATA', deal.value)
     nbTravelers.value = deal.value?.nbTravelers || 1
     const numberOfTravelers = deal.value?.nbTravelers || 1
     isCouple.value = deal.value?.isCouple === 'Oui'
@@ -134,13 +130,10 @@ const initializeTravelersData = () => {
 
 watch([deal, dealId, () => props.currentStep], () => {
   if (props.currentStep === props.ownStep && dealId.value) {
-    addAnotherParameter('currentStep', props.ownStep)
-  }
-  if (deal.value) {
-    initializeTravelersData()
-    if (dealId.value && props.currentStep === props.ownStep) {
-      addAnotherParameter('currentStep', props.ownStep)
+    if (deal.value) {
+      initializeTravelersData()
     }
+    addSingleParam('step', props.ownStep)
   }
 }, {
   immediate: true,

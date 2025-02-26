@@ -3,7 +3,7 @@
     <v-row
       justify="center"
     >
-      <FunnelGroupStepper />
+      <FunnelCheckoutStepper />
     </v-row>
   </v-container>
 </template>

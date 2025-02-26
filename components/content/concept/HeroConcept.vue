@@ -4,7 +4,7 @@
     :height="$vuetify.display.lgAndDown ? '70vh' : '80vh'"
     cover
   >
-    <h1 class="absolute-position shadow">
+    <h1 class="absolute-position text-shadow">
       <slot
         name="title"
         mdc-unwrap="p"
@@ -43,10 +43,6 @@ const imageHeight = computed(() => {
   left: 12%;
   font-size: 3rem;
   color: white;
-}
-
-.shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 1200px) {

@@ -19,10 +19,12 @@
     "@supabase/supabase-js": "^2.48.1",
     "@vueuse/core": "^12.5.0",
     "axios": "^1.7.9",
+    "crypto-js": "^4.2.0",
     "dayjs": "^1.11.13",
     "eslint": "^9.18.0",
     "nuxt": "^3.15.1",
     "nuxt-calendly": "^0.1.21",
+    "stripe": "^17.6.0",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.24.1"

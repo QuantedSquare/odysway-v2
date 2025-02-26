@@ -14,9 +14,9 @@
           :lazy-src="voyage.imgSrc"
           cover
         >
-          <div class="pa-5 d-flex flex-column align-start">
-            <span class="text-h5">{{ voyage.title }}</span>
-            <span class="text-body-1">{{ deal?.travelType }}</span>
+          <div class="pa-5  d-flex flex-column align-start">
+            <span class="text-h5 text-shadow">{{ voyage.title }}</span>
+            <span class="text-body-1 text-shadow">{{ deal?.travelType }}</span>
           </div>
         </v-img>
       </Transition>
@@ -45,7 +45,7 @@
           </template>
           <template #right>
             <div v-if="deal.gotEarlybird !== 'Oui' && deal.gotLastMinute !== 'Oui'">
-              {{ formatNumber(deal.value, 'currency', 'EUR') }}
+              {{ formatNumber(deal.basePricePerTraveler, 'currency', 'EUR') }}
             </div>
             <div v-else>
               <div class="d-flex flex-column align-end">
@@ -55,10 +55,10 @@
                     color="info"
                     :content="deal.gotEarlybird == 'Oui' ? 'EarlyBird: -' + formatNumber(deal.promoEarlybird, 'currency', '€') : 'LastMinute: -' + formatNumber(deal.promoLastMinute, 'currency', '€')"
                   />
-                  {{ formatNumber(deal.value - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
+                  {{ formatNumber(deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
                 </span>
                 <span class="text-decoration-line-through">
-                  {{ formatNumber(deal.value, 'currency', 'EUR') }}
+                  {{ formatNumber(deal.basePricePerTraveler, 'currency', 'EUR') }}
                 </span>
               </div>
             </div>
@@ -76,6 +76,7 @@
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
+
         <!-- Travelers Details Header -->
         <FunnelStepsSummaryLine>
           <template #left>
@@ -114,6 +115,7 @@
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
+
         <!--  Options -->
         <FunnelStepsSummaryLine>
           <template #left>
@@ -178,7 +180,7 @@
 
         <v-divider class="my-6" />
         <!-- Prix Total -->
-        <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
+        <FunnelStepsSummaryLine>
           <template #left>
             <!-- #TODO Remplacer par back -->
             Prix total
@@ -192,34 +194,50 @@
         </FunnelStepsSummaryLine>
 
         <!-- Prix Appliqué à régler -->
-        <FunnelStepsSummaryLine>
-          <template #left>
-            <v-tooltip
-              bottom
-            >
-              <template #activator="{ props }">
-                <div class="d-flex align-center ga-2">
-                  <span> Accompte à régler</span>
-                  <v-icon
-                    size="x-small"
-                    v-bind="props"
-                  >
-                    {{ mdiInformationOutline }}
-                  </v-icon>
+        <Transition name="slide-fade">
+          <FunnelStepsSummaryLine v-if="route.query.isoption !== 'true'">
+            <template #left>
+              <v-tooltip
+                bottom
+              >
+                <template #activator="{ props }">
+                  <div class="d-flex align-center ga-2 text-primary">
+                    <!-- #Todo Passer en computed les textes -->
+                    <span v-if="route.query.type === 'deposit'"> Accompte à régler</span>
+                    <span v-else-if="route.query.type === 'balance'"> Solde à régler</span>
+                    <span v-else>Montant à régler</span>
+                    <v-icon
+                      size="x-small"
+                      v-bind="props"
+                    >
+                      {{ mdiInformationOutline }}
+                    </v-icon>
+                  </div>
+                </template>
+                <div>
+                  {{ page.fields.cancel_text }}
                 </div>
-              </template>
-              <div>
-                {{ page.fields.cancel_text }}
-              </div>
-            </v-tooltip>
-          </template>
-          <template #right>
-            <span class="font-weight-bold text-primary">
-              <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
-              {{ formatNumber(deal.depositPrice, 'currency', 'EUR') }}
-            </span>
+              </v-tooltip>
+            </template>
+            <template #right>
+              <span class="font-weight-bold text-primary">
+                <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
+                {{ formatNumber(appliedPrice, 'currency', 'EUR') }}
+              </span>
+            </template>
+          </FunnelStepsSummaryLine>
+        </Transition>
+
+        <!--  #Todo Checker s'il faut ajouter le checking sur la date, si le type "full" est uniquement sur les voyages sous 30jours -->
+        <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
+          <template #left>
+            <!-- #TODO Remplacer par cms -->
+            <span class="font-italic text-body-2 ">Comme le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l’intégralité de la somme, sans acompte.</span>
           </template>
         </FunnelStepsSummaryLine>
+
+        <!-- Text for no Insurance available  -->
+        <!-- Le départ est pour bientôt, nous ne pouvons pas vous proposer d'assurances pour cette réservation. -->
       </v-card-text>
     </v-card>
   </v-container>
@@ -232,7 +250,7 @@ import { mdiInformationOutline } from '@mdi/js'
 const props = defineProps(['page', 'voyage', 'currentStep'])
 const route = useRoute()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
-const { deal } = useDeal(route.query.currentStep)
+const { deal } = useStepperDeal(route.query.step)
 
 function travelerText(nbTraveler, type) {
   const text = {
@@ -265,10 +283,49 @@ function travelerText(nbTraveler, type) {
     return `${nbTraveler} x ${text[type].single}`// this.$t('estimate.' + type + 'Traveler')
   }
 }
+
+function calculateDepositValue(data) {
+  const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0)) + (data.insuranceCommissionPrice ?? 0) * data.nbTravelers
+}
+
+const appliedPrice = computed(() => {
+  if (route.query.type === 'deposit') {
+    return calculateDepositValue(deal.value)
+  }
+  else if (route.query.type === 'balance') {
+    return deal.value.value - deal.value.alreadyPaid
+  }
+  else if (route.query.type === 'full') {
+    return deal.value.value
+  }
+  else { // type = 'custom'
+    return route.query.amount * deal.value.nbTravelers
+  }
+})
 </script>
 
 <style scoped>
 .border-style{
   border: 1px solid rgb(var(--v-theme-grey-lighten-1));
+}
+@media screen and (max-width: 600px) {
+  .border-style {
+    border: none;
+  }
+
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
 }
 </style>

@@ -65,7 +65,7 @@
     </v-row>
     <v-row class="text-caption text-primary">
       <v-col>
-        Le calcul du prix de votre voyage sera fait à la prochaine étape
+        Le calcul du prix de votre voyage se fera à la prochaine étape
       </v-col>
     </v-row>
   </v-container>
@@ -76,7 +76,8 @@ const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
 
-const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const { addSingleParam } = useParams()
+const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)
 
 // Data
@@ -124,7 +125,7 @@ const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cance
 
 watch([deal, () => props.currentStep], async () => {
   if (props.currentStep === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+    addSingleParam('step', props.ownStep)
   }
   if (deal.value) {
     model.value = true
@@ -180,16 +181,12 @@ const submitStepData = async () => {
   if (!dealId.value || !model.value) return false
   const dealData = {
     dealId: dealId.value,
-    value: +deal.value.value, // #TODO  Remplacer par recalcul total avec assurance
-    pricePerTraveler: +deal.value.pricePerTraveler, // #TODO  Remplacer par recalcul prix avec assurance,
     insurance: [insuranceChoice.value.name],
     insuranceCommissionPrice: (insuranceChoice.value.price * 100),
     currentStep: 'A fait le choix de l\'assurance',
-    // totalTravelPrice: this.dealData.value, ... #TODO
     insuranceCommissionPerTraveler: insuranceChoice.value.price * 30,
-    //
   }
-  console.log('dealData', dealData)
+  console.log('dealData pushed from insurance', dealData)
   try {
     await updateDeal(dealData)
     return true

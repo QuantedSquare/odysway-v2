@@ -5,7 +5,7 @@
       <v-card-text>
         <v-row>
           <v-col
-            v-if="groupStepper && !depositDatePassed"
+            v-if="route.query.type === 'deposit'"
             cols="12"
           >
             <template v-if="isBooking">
@@ -20,13 +20,16 @@
                 hide-details
               >
                 <template #label>
-                  Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                  <div class="text-caption text-md-body-1 pl-1">
+                    Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                  </div>
                 </template>
               </v-switch>
             </template>
           </v-col>
           <template v-if="!isBooking">
             <v-divider
+              v-if="route.query.type === 'deposit'"
               horizontal
               class="ma-2"
             />
@@ -38,7 +41,7 @@
               >
                 <template #label>
                   <div
-                    class="pl-1"
+                    class="text-caption text-md-body-1 pl-1"
                     @click.stop=""
                     v-html="page.fields.phrase_dacceptation"
                   />
@@ -50,7 +53,9 @@
                 hide-details
               >
                 <template #label>
-                  Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
+                  <div class="text-caption text-md-body-1 pl-1">
+                    Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
+                  </div>
                 </template>
               </v-switch>
             </v-col>
@@ -96,29 +101,48 @@
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 console.log('props', props.voyage)
-const { deal, dealId, updateDeal } = useDeal(props.ownStep)
+const route = useRoute()
+
+const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
+const { addSingleParam } = useParams()
+
 // Data
+// IsBooking à définir si une option dans le stepper uniquement pour poser une option
 const isBooking = ref(false)
-const groupStepper = ref(true)
-const depositDatePassed = ref(false)
 const checkedOption = ref(false)
 const switch_accept_data_privacy = ref(false)
 const switch_accept_country = ref(false)
 
-const dataForStripeSession = ref({
-  acceptAlmaPaiement: false,
-  almaTotalPrice: 0,
-})
-const loadAlma = false
 const loadingStripeSession = ref(false)
-const disableAlma = ref(false)
+
 const stripePay = async () => {
-  // #TODO Add Stripe payment
-  console.log('Stripe payment')
-}
-const almaPay = async () => {
-  // #TODO Add Alma payment
-  console.log('Alma payment')
+  const dataForStripeSession = {
+    dealId: dealId.value,
+    paymentType: route.query.type,
+    contact: deal.value.contact,
+    currentUrl: route.fullPath,
+    insuranceImg: props.page.fields.assurance_img,
+  }
+  if (route.query.type === 'custom') {
+    Object.assign(dataForStripeSession, {
+      amout: +route.query.amount * 100,
+    })
+  }
+  console.log('dataForStripeSession', dataForStripeSession)
+
+  const checkoutLink = await $fetch('/api/v1/stripe/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dataForStripeSession),
+  })
+  if (checkoutLink) {
+    console.log('checkoutLink', checkoutLink)
+    await navigateTo(checkoutLink, {
+      external: true,
+    })
+  }
 }
 
 const book = async () => {
@@ -128,7 +152,7 @@ const book = async () => {
 
 watch([dealId, () => props.currentStep], () => {
   if (props.currentStep === props.ownStep) {
-    addAnotherParameter('currentStep', props.ownStep)
+    addSingleParam('step', props.ownStep)
   }
   model.value = true
   if (dealId.value) {
@@ -138,6 +162,9 @@ watch([dealId, () => props.currentStep], () => {
 
 const showOptionOrPayment = computed(() => {
   return checkedOption.value ? 0 : 1
+})
+watch(checkedOption, (value) => {
+  addSingleParam('isoption', value)
 })
 
 // Analytics
