@@ -293,26 +293,27 @@ const handlePaymentSession = async (session, paymentType) => {
   // }
 
   const order = session.metadata
-  // const directPayment = order.paymentType === 'custom'
   console.log('SESSION METADATA as ORDER', order)
-  //   // Fetch Deal Data
+
   const reponse = await activecampaign.getDealById(order.dealId)
-  console.log('Response OK')
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
-  console.log('CustomFields OK')
   const deal = { ...reponse.deal, ...customFields }
+  //   // Fetch Deal Data
   console.log('Passed deal retrieving', deal)
-  const { client } = await activecampaign.getClientById(deal.contact)
+
+  const { contact: client } = await activecampaign.getClientById(deal.contact)
   console.log('Passed client retrieving', client)
   //   // Chapka notify
   if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
     // chapka.notify(session, deal.insurance, deal) // #TODO
+    console.log('Chapka notify')
   }
 
   // AC Update toutes les valeur monaitaire sont en centimes
   const totalPaid = +(deal.alreadyPaid || 0) + +(session.amount_total)
   const restToPay = +deal.value - totalPaid
 
+  console.log('totalPaid', totalPaid, restToPay)
   const dealData = {
     group: '2',
     stage: totalPaid >= +deal.value ? '33' : '6',
@@ -341,6 +342,17 @@ const handlePaymentSession = async (session, paymentType) => {
   })
 
   if (!isDev) {
+    console.log(process.env.SLACK_URL_PAIEMENTS, {
+      blocks: [
+        {
+          type: 'section',
+          text: {
+            type: 'mrkdwn',
+            text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.firstName} ${client.lastName} - ${order.dealId}>`,
+          },
+        },
+      ],
+    })
     axios({
       url: process.env.SLACK_URL_PAIEMENTS,
       method: 'post',
