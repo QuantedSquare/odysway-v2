@@ -22,8 +22,8 @@ const createCheckoutSession = async (order) => {
 
   // console.log('deal', deal)
 
-  const isDev = true // config.public.environment === 'development'
-  const origin = isDev ? 'https://odysway.com/' : 'config.public.siteURL'
+  const isDev = false // config.public.environment === 'development'
+  const origin = !isDev ? 'https://odysway.com/' : 'config.public.siteURL'
 
   const imageUrl = deal.image ? deal.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
 
@@ -317,7 +317,7 @@ const handlePaymentSession = async (session, paymentType) => {
   const dealData = {
     group: '2',
     stage: totalPaid >= +deal.value ? '33' : '6',
-    paymentLink: totalPaid >= +deal.value ? 'Paiement OK' : `https://odysway.com/checkout?dealId=${order.dealId}&type=balance`,
+    paiementLink: totalPaid >= +deal.value ? 'Paiement OK' : `https://odysway.com/checkout?dealId=${order.dealId}&type=balance`,
     alreadyPaid: totalPaid,
     restToPay: restToPay,
     currentStep: totalPaid >= +deal.value
@@ -333,9 +333,9 @@ const handlePaymentSession = async (session, paymentType) => {
   }
 
   console.log('dealData', dealData)
-  activecampaign.updateDeal(order.dealId, dealData)
+  await activecampaign.updateDeal(order.dealId, dealData)
 
-  activecampaign.addNote(order.dealId, {
+  await activecampaign.addNote(order.dealId, {
     note: {
       note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
     },
