@@ -1,18 +1,20 @@
 import { stripeCLI } from '@/server/utils/stripeCLI'
 
 export default defineEventHandler(async (event) => {
-  const stripeSignature = getRequestHeader(event, 'stripe-signature')
+  const stripeSignature = getHeader(event, 'stripe-signature')
   console.log('stripeSignature', stripeSignature)
   if (!stripeSignature) {
     return
   }
 
-  const body = await readBody(event)
+  const body = await readRawBody(event, false)
+  console.log('Body from webhook', body)
   let stripeEvent
   try {
     stripeEvent = stripeCLI.webhooks.constructEvent(
       body, stripeSignature, process.env.STRIPE_WEBHOOK_SECRET,
     )
+    console.log('=======stripeEvent=========', stripeEvent)
   }
   catch (err) {
     console.log('Error stripeEvent', err)
@@ -22,8 +24,6 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  console.log('body from strike webhook', body)
-  console.log('=======stripeEvent=========', stripeEvent)
   // If payment_status not equal to paid, it means that the customer choose to pay by bank transfer or do nothing
   if (stripeEvent.type === 'checkout.session.completed' && stripeEvent.data.object.payment_status === 'paid') {
     // Récupéré le dealId dans les metadata (On passe l'order dedans)
