@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="partners-container bg-section-bg"
+    class="partners-container bg-odysway-1"
     fluid
   >
     <div class="wrapper">

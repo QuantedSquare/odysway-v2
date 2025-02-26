@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    class="pa-0 d-flex flex-column bg-footer-bg"
+    class="pa-0 d-flex flex-column bg-odysway-2"
   >
     <section
       id="newsletter"
@@ -25,9 +25,14 @@
             sm="6"
             md="4"
           >
-            <v-text-field-home
+            <v-text-field
               id="newsletter"
               v-model="email"
+              variant="solo"
+              flat
+              hide-details
+              density="compact"
+              rounded="xl"
               bg-color="white"
               placeholder="Votre adresse email"
               type="email"
@@ -37,7 +42,7 @@
                   {{ mdiArrowRight }}
                 </v-icon>
               </template>
-            </v-text-field-home>
+            </v-text-field>
           </v-col>
         </v-row>
       </v-container>
@@ -98,10 +103,15 @@
             <h3 class="text-uppercase text-h6 text-md-overline font-weight-bold mb-3 mb-md-0">
               nous joindre
             </h3>
-            <v-text-field-home
+            <v-text-field
               id="email"
+              variant="solo"
+              flat
+              hide-details
+              density="compact"
+              rounded="xl"
               readonly
-              bg-color="input-bg"
+              bg-color="odysway-1"
               label="contact@odysway.com"
               type="email"
               class="mb-3"
@@ -111,11 +121,16 @@
                   {{ mdiEmailOutline }}
                 </v-icon>
               </template>
-            </v-text-field-home>
-            <v-text-field-home
+            </v-text-field>
+            <v-text-field
               id="phone"
+              variant="solo"
+              flat
+              hide-details
+              density="compact"
+              rounded="xl"
               readonly
-              bg-color="input-bg"
+              bg-color="odysway-1"
               label="+33 1 84 80 79 75"
               type="tel"
               class="mb-3"
@@ -125,7 +140,7 @@
                   {{ mdiPhoneOutline }}
                 </v-icon>
               </template>
-            </v-text-field-home>
+            </v-text-field>
             <SocialsContainerButtons />
           </v-col>
         </v-row>

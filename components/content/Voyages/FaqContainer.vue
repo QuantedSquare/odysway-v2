@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-section-bg">
+  <div class="bg-odysway-1">
     <slot name="section-title" />
     <v-container>
       <v-row>
