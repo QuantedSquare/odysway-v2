@@ -33,6 +33,7 @@ const createCheckoutSession = async (order) => {
   const imageUrl = deal.image ? deal.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
 
   const lineItems = []
+  let paidAmount = 0
 
   function calculatDepositeValue(data) {
     const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
@@ -57,6 +58,7 @@ const createCheckoutSession = async (order) => {
         },
         quantity: 1,
       })
+    paidAmount += depositValue
 
     if (deal.insurance !== 'Aucune Assurance' && +deal.insuranceCommissionPrice > 0) {
       lineItems.push({
@@ -71,6 +73,7 @@ const createCheckoutSession = async (order) => {
         },
         quantity: +deal.nbTravelers,
       })
+      paidAmount += +deal.insuranceCommissionPrice * +deal.nbTravelers
     }
   }
 
@@ -89,6 +92,7 @@ const createCheckoutSession = async (order) => {
         },
         quantity: 1,
       })
+    paidAmount += +deal.restToPay
   }
   if (order.paymentType === 'custom') {
     lineItems.push(
@@ -105,8 +109,10 @@ const createCheckoutSession = async (order) => {
         },
         quantity: 1,
       })
+    paidAmount += +order.amout
   }
   else if (order.paymentType === 'full') {
+    paidAmount += +deal.value
     lineItems.push(
       {
         // Travel Fees
@@ -231,6 +237,8 @@ const createCheckoutSession = async (order) => {
     metadata: order,
     phone: contact.phone,
   })
+
+  Object.assign(order, { customer: customer.id, paidAmount })
 
   const session = await stripeCLI.checkout.sessions.create({
     line_items: lineItems,
