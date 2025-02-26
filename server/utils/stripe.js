@@ -22,8 +22,8 @@ const createCheckoutSession = async (order) => {
 
   // console.log('deal', deal)
 
-  const isDev = false // config.public.environment === 'development'
-  const origin = !isDev ? 'https://odysway.com/' : 'config.public.siteURL'
+  const isDev = true // config.public.environment === 'development'
+  const origin = isDev ? 'https://odysway.com/' : config.public.siteURL // Inverse to change
 
   const imageUrl = deal.image ? deal.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
 
@@ -225,6 +225,7 @@ const createCheckoutSession = async (order) => {
   delete order.contact
 
   // Changer et récupérer le contact d'ac
+  // #TODO Récupérer un contact stripe plutôt que recréer tout le temps
   console.log('====CREATE STRIPE CUSTOMER======', contact)
   const customer = await stripeCLI.customers.create({
     email: contact.email,
@@ -277,20 +278,7 @@ const createCheckoutSession = async (order) => {
 const handlePaymentSession = async (session, paymentType) => {
   console.log('In handlePaymentSession', session, paymentType)
 
-  let checkoutId
-
-  const isDev = false // config.public.environment === 'development'
-
-  // if (paymentType === 'Virement') {
-  //   const checkoutSession = await stripeCLI.checkout.sessions.list({
-  //     payment_intent: session.id,
-  //   })
-  //   checkoutId = checkoutSession.data[0].id
-  //   session = checkoutSession.data[0]
-  // }
-  // else {
-  //   checkoutId = session.id
-  // }
+  const isDev = true // config.public.environment === 'development'
 
   const order = session.metadata
   console.log('SESSION METADATA as ORDER', order)
@@ -335,24 +323,14 @@ const handlePaymentSession = async (session, paymentType) => {
   console.log('dealData', dealData)
   await activecampaign.updateDeal(order.dealId, dealData)
 
-  await activecampaign.addNote(order.dealId, {
+  const note = await activecampaign.addNote(order.dealId, {
     note: {
       note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
     },
   })
+  console.log('added note', note)
 
   if (!isDev) {
-    console.log(process.env.SLACK_URL_PAIEMENTS, {
-      blocks: [
-        {
-          type: 'section',
-          text: {
-            type: 'mrkdwn',
-            text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.firstName} ${client.lastName} - ${order.dealId}>`,
-          },
-        },
-      ],
-    })
     axios({
       url: process.env.SLACK_URL_PAIEMENTS,
       method: 'post',
