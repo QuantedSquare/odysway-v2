@@ -28,7 +28,7 @@ const createCheckoutSession = async (order) => {
   // console.log('deal', deal)
   const origin = config.public.siteURL
 
-  const isDev = config.public.environment === 'development'
+  const isDev = true // config.public.environment === 'development'
 
   const imageUrl = deal.image ? deal.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
 
