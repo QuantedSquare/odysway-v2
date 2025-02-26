@@ -4,7 +4,6 @@
     :prepend-icon="mdiChevronRight"
   >
     <slot mdc-unwrap="p" />
-    <!-- add expanding on list length height > image height -->
   </v-list-item>
 </template>
 

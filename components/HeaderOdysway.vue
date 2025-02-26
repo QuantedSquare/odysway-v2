@@ -16,7 +16,7 @@
 
     <v-btn
       icon
-      class="d-inline d-lg-none"
+      class="d-inline"
     >
       <v-icon color="grey">
         {{ mdiMagnify }}
@@ -29,7 +29,7 @@
       <v-icon>{{ mdiAccountCircle }}</v-icon>
     </v-btn>
     <v-btn
-      class="d-inline d-lg-none"
+      class="d-inline"
       icon
       @click.stop="$emit('show-drawer')"
     >

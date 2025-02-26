@@ -48,7 +48,7 @@ Les valeurs d'Odysway
 
 ::
 
-::simple-text-container
+::text-container
 
 #text
 Chez Odysway, quatre valeurs guident notre vision du voyage. Elles sont au cœur de tout ce que nous faisons : elles influencent notre façon d’imaginer et de concevoir de nouveaux séjours, notre relation avec les voyageurs, nos échanges au sein de l’équipe, ainsi que nos partenariats avec les acteurs locaux.
@@ -103,7 +103,7 @@ Des séjours créés avec passion
 
 ::
 
-::simple-text-container
+::text-container
 
 #text
 Chez Odysway, nous créons nous-mêmes chacun de nos voyages, directement sur le terrain. Concrètement, cela signifie qu’un membre de notre équipe se rend sur place pour rencontrer les guides, choisir les bons partenaires et s’assurer que chaque expérience soit unique, authentique et bien organisée.

@@ -372,7 +372,7 @@ Foire aux questions
 ::
 
 #faq
-  :::question-answer-card
+  :::question-panel
   #question
   [Où vais-je dormir ?]{style="font-weight:bold"}
   #answer
@@ -380,7 +380,7 @@ Foire aux questions
 
   :::
   
-  :::question-answer-card
+  :::question-panel
   #question
   [Que vais-je manger ?]{style="font-weight:bold"}
   #answer
@@ -388,7 +388,7 @@ Foire aux questions
 
   :::
 
-  :::question-answer-card
+  :::question-panel
   #question
   [Quoi porter lors de ces randonnées ?]{style="font-weight:bold"}
   #answer
@@ -396,7 +396,7 @@ Foire aux questions
 
   :::
   
-  :::question-answer-card
+  :::question-panel
   #question
   [Ce voyage est-il fait pour moi ?]{style="font-weight:bold"}
   #answer
@@ -408,7 +408,7 @@ Foire aux questions
 
   :::
 
-  :::question-answer-card
+  :::question-panel
   #question
   [Où se situe la vallée d'Aspe ?]{style="font-weight:bold"}
   #answer
@@ -416,14 +416,14 @@ Foire aux questions
 
   :::
   
-  :::question-answer-card
+  :::question-panel
   #question
   [Quels animaux est-il possible d'observer lors des randonnées ?]{style="font-weight:bold"}
   #answer
   Dans la vallée d’Aspe, vous aurez l’occasion d’observer une faune riche et diversifiée. Parmi les espèces emblématiques, vous pourrez apercevoir des isards, petits cousins des chamois, évoluant sur les pentes escarpées. Le majestueux gypaète barbu, un vautour rare aux ailes imposantes, ainsi que le vautour fauve sont souvent visibles dans le ciel. Vous pourrez également rencontrer des marmottes, des renards et parfois des cerfs dans les zones plus boisées. Les plus chanceux pourront même entendre ou apercevoir le discret desman des Pyrénées, un petit mammifère aquatique typique des rivières de montagne.
   :::
 
-  :::question-answer-card
+  :::question-panel
   #question
   [Comment se passe la réservation avec Odysway ? ]{style="font-weight:bold"}
   #answer
