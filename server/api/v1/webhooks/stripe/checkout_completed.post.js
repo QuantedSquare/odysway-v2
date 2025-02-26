@@ -1,18 +1,20 @@
 import { stripeCLI } from '@/server/utils/stripeCLI'
 
 export default defineEventHandler(async (event) => {
+  const body = await readRawBody(event, false)
+  console.log('Body from webhook', body)
+
   const stripeSignature = getHeader(event, 'stripe-signature')
   console.log('stripeSignature', stripeSignature)
+
   if (!stripeSignature) {
     return
   }
 
-  const body = await readRawBody(event, false)
-  console.log('Body from webhook', body)
   let stripeEvent
   try {
     stripeEvent = stripeCLI.webhooks.constructEvent(
-      body, stripeSignature, process.env.STRIPE_WEBHOOK_SECRET,
+      body, stripeSignature, process.env.STRIPE_WEBHOOK_SIGNATURE,
     )
     console.log('=======stripeEvent=========', stripeEvent)
   }
