@@ -1,4 +1,4 @@
-import { stripeCLI } from './stripeCLI'
+import { stripeCLI } from '@/server/utils/stripeCLI'
 
 export default defineEventHandler(async (event) => {
   const stripeSignature = getRequestHeader(event, 'stripe-signature')
