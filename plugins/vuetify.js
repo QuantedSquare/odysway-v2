@@ -48,6 +48,9 @@ export default defineNuxtPlugin((app) => {
       VBtnSecondary: VBtn,
     },
     defaults: {
+      VCard: {
+        rounded: 'lg',
+      },
       VBtn: {
         color: 'primary',
         elevation: 0,
@@ -58,7 +61,6 @@ export default defineNuxtPlugin((app) => {
       },
       VBtnSecondary: {
         color: 'secondary',
-        rounded: 'xl',
       },
       VTextField: {
         variant: 'outlined',

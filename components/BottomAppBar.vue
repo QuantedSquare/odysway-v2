@@ -7,7 +7,7 @@
     <v-container>
       <v-row
         no-gutters
-        class="ga-2"
+        class="ga-1"
       >
         <v-col
           cols="12"

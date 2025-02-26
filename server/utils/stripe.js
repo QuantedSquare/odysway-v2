@@ -235,7 +235,7 @@ const stripe = {
     })
 
     if (!isDev) {
-      axios({
+      await axios({
         url: process.env.SLACK_URL_PAIEMENTS,
         method: 'post',
         data: // { text: `Confirmation paiement CB - ${client.contact.firstName} ${client.contact.lastName} - ${order.dealId}` }
@@ -252,7 +252,7 @@ const stripe = {
             },
       })
 
-      axios({
+      await axios({
         url: 'https://www.google-analytics.com/collect',
         method: 'post',
         params: {

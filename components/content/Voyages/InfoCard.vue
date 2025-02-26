@@ -1,5 +1,7 @@
 <template>
-  <v-card elevation="0">
+  <v-card
+    elevation="0"
+  >
     <v-img
       :src="img(voyageImg, { format: 'webp', quality: 70, height: 400 })"
       max-height="400"
@@ -33,7 +35,7 @@
             cols="12"
             lg="10"
           >
-            <v-btn-secondary width="100%">
+            <v-btn-secondary block>
               <slot name="text-btn-1" />
             </v-btn-secondary>
           </v-col>

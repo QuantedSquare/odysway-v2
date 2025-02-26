@@ -30,6 +30,7 @@
         >
           <v-col
             cols="12"
+            md="4"
           >
             <slot
               name="component-slot-1"
@@ -37,6 +38,7 @@
           </v-col>
           <v-col
             cols="12"
+            md="4"
           >
             <slot
               name="component-slot-2"

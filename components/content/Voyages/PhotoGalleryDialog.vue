@@ -9,6 +9,7 @@
         v-bind="activatorProps"
         variant="outlined"
         size="large"
+        block
         :append-icon="mdiPlay"
         color="text-shadow bg-blur"
       >
