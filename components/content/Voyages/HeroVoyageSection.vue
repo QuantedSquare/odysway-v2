@@ -16,7 +16,10 @@
             md="auto"
           >
             <h1 class="text-h3 text-md-h1">
-              <slot name="title" />
+              <slot
+                name="title"
+                mdc-unwrap="p"
+              />
             </h1>
           </v-col>
         </v-row>
