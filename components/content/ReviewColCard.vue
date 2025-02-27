@@ -45,7 +45,7 @@
             <v-img
               max-height="150px"
               min-width="170px"
-              :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 400 })"
+              :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 640 })"
               rounded="xl"
               cover
             />

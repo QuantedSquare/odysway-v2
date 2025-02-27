@@ -33,7 +33,7 @@
 
             <v-img
               v-if="category?.image"
-              :src="imgComp(category.image, { format: 'webp', quality: 70, width: 1000 })"
+              :src="imgComp(category.image, { format: 'webp', quality: 70, width: 1024 })"
               width="100%"
               :alt="category?.title"
               cover

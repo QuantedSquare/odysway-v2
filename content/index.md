@@ -66,8 +66,6 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
   :::voyage-col-card{voyage-slug="japon"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
-  :::
 ::
 
 ::title-container

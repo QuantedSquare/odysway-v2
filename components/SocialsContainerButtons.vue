@@ -47,7 +47,7 @@
       href="https://www.tiktok.com/@odyswaytravel"
     >
       <v-img
-        :src="img('/icons/IcRoundTiktok.svg', { format: 'webp', quality: 70 })"
+        :src="img('/icons/IcRoundTiktok.svg', { format: 'webp', quality: 70, width: 640 })"
         width="24px"
         height="24px"
         contain

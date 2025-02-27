@@ -9,7 +9,7 @@
       <v-img
         min-width="150px"
         height="38"
-        :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 150 })"
+        :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 320 })"
       />
     </NuxtLink>
 

@@ -1,9 +1,9 @@
 <template>
   <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
-    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
     size="(max-width: 600) 480px, 1500px"
-    :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`"
+    :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
     height="100vh"
     cover
   >
