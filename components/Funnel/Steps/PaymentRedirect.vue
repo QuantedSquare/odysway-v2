@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <!-- Prévoir Promo form -->
-    <v-card variant="plain">
+    <v-card
+      v-if="deal && deal.alreadyPaid < deal.value"
+      variant="plain"
+    >
       <v-card-text>
         <v-row>
           <v-col
@@ -116,6 +119,7 @@ const switch_accept_country = ref(false)
 const loadingStripeSession = ref(false)
 
 const stripePay = async () => {
+  loadingStripeSession.value = true
   const dataForStripeSession = {
     dealId: dealId.value,
     paymentType: route.query.type,
@@ -143,10 +147,11 @@ const stripePay = async () => {
       external: true,
     })
   }
+  loadingStripeSession.value = false
 }
 
 const book = async () => {
-  // #TODO Add booking
+  // #TODO Add booking redirect to a success page, it only update the ac deal
   console.log('Booking')
 }
 
@@ -160,40 +165,12 @@ watch([dealId, () => props.currentStep], () => {
   }
 }, { immediate: true })
 
-const showOptionOrPayment = computed(() => {
-  return checkedOption.value ? 0 : 1
-})
+// #TODO Add option only on certain travel ?
+// const showOptionOrPayment = computed(() => {
+//   return checkedOption.value ? 0 : 1
+// })
 watch(checkedOption, (value) => {
   addSingleParam('isoption', value)
-})
-
-// Analytics
-const handleGAEvent = (event) => {
-  const EVENTS = {
-    rapatriement: { eventLabel: 'Groupe Détail - V-switch assurance médicale' },
-    cancel: { eventLabel: 'Groupe Détail - V-switch assurance annulation' },
-    none: { eventLabel: 'Groupe Détail - V-switch pas d\'assurance' },
-  }
-  return EVENTS[event].eventLabel
-  // #TODO Add Google Analytics
-  // this.$ga.event({
-  //   eventCategory: 'Devis',
-  //   eventAction: 'Click',
-  //   eventLabel: EVENTS[event].eventLabel,
-  // })
-}
-const insuranceChoice = computed(() => {
-  switch (selectedInsurance.value) {
-    case 'rapatriement':
-      handleGAEvent('rapatriement')
-      return { type: 'rapatriement', name: 'Multirisque', price: insurances.value.rapatriement }
-    case 'cancel':
-      handleGAEvent('cancel')
-      return { type: 'cancel', name: 'Annulation', price: insurances.value.cancel }
-    default:
-      handleGAEvent('none')
-      return { type: 'no_insurance', name: 'Aucune Assurance', price: 0 }
-  }
 })
 
 const submitStepData = async () => {

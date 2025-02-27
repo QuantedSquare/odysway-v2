@@ -31,8 +31,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      environment: process.env.ENV || 'development',
-      siteURL: process.env.SITE_URL,
+      environment: process.env.VERCEL_ENV,
+      siteURL: process.env.VERCEL_URL,
     },
   },
   build: {

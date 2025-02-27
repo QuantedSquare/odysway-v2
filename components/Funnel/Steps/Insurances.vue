@@ -5,69 +5,110 @@
       type="card"
     />
     <!-- v-else -->
-    <v-row v-else>
-      <v-col
-        class="d-flex align-center"
-        cols="12"
-      >
-        <!-- <h2>{{ $t('stepperDevisGroup.insurances') }}</h2> -->
-        <h2>Garanties <span class="text-body-1">avec</span></h2>
-        <img
-          width="90"
-          class="ml-2"
-          :src="page.fields.assurance_img"
+    <template v-else>
+      <v-row>
+        <v-col
+          class="d-flex align-center"
+          cols="12"
         >
-      </v-col>
-      <!-- Medical Insurance -->
-      <v-col
-        v-if="insurances.rapatriement"
-        cols="12"
-      >
-        <v-switch
-          v-model="selectedInsurance"
-          :label="page.fields.preference_assurance"
-          value="rapatriement"
-        />
-        <FunnelStepsDialogLearnMore
-          v-if="deal"
-          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.accroche_assurance_perou_nepal:page.fields.accroche_assurance_medicale "
-          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.details_assurance_medicale_perou_nepal:page.fields.details_assurance_medicale "
-        />
-      </v-col>
+          <!-- <h2>{{ $t('stepperDevisGroup.insurances') }}</h2> -->
+          <h2>Garanties <span class="text-body-1">avec</span></h2>
+          <img
+            width="90"
+            class="ml-2"
+            :src="page.fields.assurance_img"
+          >
+        </v-col>
+      </v-row>
+      <!-- Multirisque Insurance -->
+      <v-row :class="selectedInsurance === 'rapatriement' ? 'text-primary' : 'text-grey'">
+        <v-col
+          v-if="insurances.rapatriement"
+          cols="8"
+        >
+          <v-switch
+            v-model="selectedInsurance"
+            value="rapatriement"
+          >
+            <template #label>
+              <div class="text-body-1">
+                {{ page.fields.preference_assurance_multirisque }}
+                <v-badge
+                  color="secondary"
+                  inline
+                  content="Conseillé"
+                />
+              </div>
+            </template>
+          </v-switch>
+          <FunnelStepsDialogLearnMore
+            v-if="deal"
+            :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.accroche_assurance_perou_nepal:page.fields.accroche_assurance_medicale "
+            :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.details_assurance_medicale_perou_nepal:page.fields.details_assurance_medicale "
+          />
+        </v-col>
+
+        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
+          + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
+        </v-col>
+      </v-row>
+
       <!-- Cancellation Insurance -->
-      <v-col
+      <v-row
         v-if="insurances.cancel"
-        cols="12"
+        :class="selectedInsurance === 'cancel' ? 'text-primary' : 'text-grey'"
       >
-        <v-switch
-          v-model="selectedInsurance"
-          value="cancel"
-          :label="page.fields.preference_assurance_annulation"
-        />
-        <FunnelStepsDialogLearnMore
-          :btn-text="page.fields.accroche_assurance_annulation"
-          :dialog-text="page.fields.details_assurance_annulation"
-        />
-      </v-col>
+        <v-col
+          cols="8"
+        >
+          <v-switch
+            v-model="selectedInsurance"
+            value="cancel"
+            :label="page.fields.preference_assurance_annulation"
+          />
+          <FunnelStepsDialogLearnMore
+            :btn-text="page.fields.accroche_assurance_annulation"
+            :dialog-text="page.fields.details_assurance_annulation"
+          />
+        </v-col>
+        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
+          + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
+        </v-col>
+      </v-row>
+
+      <v-divider class="mt-4" />
       <!-- No Insurance -->
-      <v-col
-        v-if="insurances.cancel || insurances.rapatriement"
-        cols="12"
-      >
-        <!-- :label="$t('stepperDevisGroup.noInsurance')" -->
-        <v-switch
-          v-model="selectedInsurance"
-          value="none"
-          label="Je ne souhaite pas d'assurance"
-        />
-      </v-col>
+      <v-row :class="selectedInsurance === 'none' ? 'text-dark' : 'text-grey'">
+        <v-col
+          v-if="insurances.cancel || insurances.rapatriement"
+          cols="12"
+        >
+          <!-- :label="$t('stepperDevisGroup.noInsurance')" -->
+          <v-switch
+            v-model="selectedInsurance"
+            value="none"
+            label="Je ne souhaite pas d'assurance"
+          />
+        </v-col>
+      </v-row>
       <!-- Insurance Unavailable Message -->
-    </v-row>
-    <v-row class="text-caption text-primary">
-      <v-col>
-        Le calcul du prix de votre voyage se fera à la prochaine étape
-      </v-col>
-    </v-row>
+
+      <v-row class="text-caption text-primary">
+        <v-col>
+          <v-alert
+            border="start"
+            colored-border
+            color="secondary"
+            elevation="2"
+          >
+            <span class="font-weight-bold">
+              Assurance applicable à tous les voyageurs. <br>
+              Le calcul du prix de votre voyage se fera à la prochaine étape.
+            </span>
+          </v-alert>
+        </v-col>
+      </v-row>
+    </template>
   </v-container>
 </template>
 
@@ -124,6 +165,8 @@ const fetchInsuranceQuote = async (retrievedDeal) => {
 const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
 
 watch([deal, () => props.currentStep], async () => {
+  isLoadingInsurance.value = true
+
   if (props.currentStep === props.ownStep) {
     addSingleParam('step', props.ownStep)
   }
@@ -162,6 +205,10 @@ const handleGAEvent = (event) => {
   //   eventLabel: EVENTS[event].eventLabel,
   // })
 }
+watch(selectedInsurance, (value) => {
+  model.value = !!value
+})
+
 const insuranceChoice = computed(() => {
   switch (selectedInsurance.value) {
     case 'rapatriement':

@@ -90,7 +90,7 @@
             {{ travelerText(+deal.nbAdults, 'adult') }}
           </template>
           <template #right>
-            {{ formatNumber(deal.basePricePerTraveler * deal.nbAdults, 'currency', 'EUR') }}
+            {{ formatNumber((deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute)) * deal.nbAdults, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
@@ -100,7 +100,7 @@
             {{ travelerText(+deal.nbUnderAge, 'baby') }}
           </template>
           <template #right>
-            {{ formatNumber((+deal.basePricePerTraveler - deal.promoChildren) * deal.nbUnderAge, 'currency', 'EUR') }}
+            {{ formatNumber((+deal.basePricePerTraveler - deal.promoChildren - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute)) * deal.nbUnderAge, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
@@ -110,14 +110,14 @@
             {{ travelerText(+deal.nbTeen, 'child') }}
           </template>
           <template #right>
-            {{ formatNumber((+deal.basePricePerTraveler - deal.promoTeen) * deal.nbTeen, 'currency', 'EUR') }}
+            {{ formatNumber((+deal.basePricePerTraveler - deal.promoTeen - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute)) * deal.nbTeen, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
 
         <!--  Options -->
-        <FunnelStepsSummaryLine>
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom">
           <template #left>
             <span class="text-h6 text-dark">Options</span>
           </template>
@@ -126,7 +126,7 @@
         <!-- Chambre individuelle -->
         <FunnelStepsSummaryLine>
           <template #left>
-            <span v-if="forceIndivRoom && deal.indivRoom">
+            <span v-if="forceIndivRoom || deal.indivRoom">
               {{ travelerText(+deal.nbTravelers, 'indivRoom') }}
             </span>
 
@@ -165,7 +165,10 @@
           </template>
         </FunnelStepsSummaryLine>
 
-        <v-divider class="my-6" />
+        <v-divider
+          v-if="deal.promoValue > 0"
+          class="my-6"
+        />
 
         <!-- Promo -->
         <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
@@ -179,6 +182,21 @@
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
+
+        <!-- Somme déjà réglé -->
+        <FunnelStepsSummaryLine v-if="deal.alreadyPaid > 0">
+          <template #left>
+            <!-- #TODO Remplacer par back -->
+            Montant déjà réglé
+          </template>
+          <template #right>
+            <span class="font-weight-bold text-dark">
+              <!-- #TODO  S'assurer que le total soit correct avec touts les ajouts / réductions -->
+              {{ formatNumber(deal.alreadyPaid, 'currency', 'EUR') }}
+            </span>
+          </template>
+        </FunnelStepsSummaryLine>
+
         <!-- Prix Total -->
         <FunnelStepsSummaryLine>
           <template #left>
@@ -201,7 +219,10 @@
                 bottom
               >
                 <template #activator="{ props }">
-                  <div class="d-flex align-center ga-2 text-primary">
+                  <div
+                    v-if="appliedPrice > 0"
+                    class="d-flex align-center ga-2 text-primary"
+                  >
                     <!-- #Todo Passer en computed les textes -->
                     <span v-if="route.query.type === 'deposit'"> Accompte à régler</span>
                     <span v-else-if="route.query.type === 'balance'"> Solde à régler</span>
@@ -213,6 +234,9 @@
                       {{ mdiInformationOutline }}
                     </v-icon>
                   </div>
+                  <div v-else>
+                    Le voyage est déjà entièrement réglé
+                  </div>
                 </template>
                 <div>
                   {{ page.fields.cancel_text }}
@@ -220,9 +244,11 @@
               </v-tooltip>
             </template>
             <template #right>
-              <span class="font-weight-bold text-primary">
+              <span
+                class="font-weight-bold text-primary"
+              >
                 <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
-                {{ formatNumber(appliedPrice, 'currency', 'EUR') }}
+                {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}
               </span>
             </template>
           </FunnelStepsSummaryLine>
@@ -286,21 +312,27 @@ function travelerText(nbTraveler, type) {
 
 function calculateDepositValue(data) {
   const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
-  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0)) + (data.insuranceCommissionPrice ?? 0) * data.nbTravelers
+  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0) * data.nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
 }
 
 const appliedPrice = computed(() => {
-  if (route.query.type === 'deposit') {
-    return calculateDepositValue(deal.value)
+  if (deal.value.alreadyPaid >= deal.value.value) {
+    return 0
   }
-  else if (route.query.type === 'balance') {
-    return deal.value.value - deal.value.alreadyPaid
-  }
-  else if (route.query.type === 'full') {
-    return deal.value.value
-  }
-  else { // type = 'custom'
-    return route.query.amount * deal.value.nbTravelers
+  else {
+    if (route.query.type === 'deposit') {
+      return calculateDepositValue(deal.value)
+    }
+    else if (route.query.type === 'balance') {
+      return deal.value.value - deal.value.alreadyPaid
+    }
+    else if (route.query.type === 'full') {
+      // #TODO à checker, utile au final d'avoir un full ?
+      return deal.value.value - deal.value.alreadyPaid
+    }
+    else { // type = 'custom'
+      return route.query.amount * deal.value.nbTravelers
+    }
   }
 })
 </script>

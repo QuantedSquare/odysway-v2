@@ -7,28 +7,18 @@ const config = useRuntimeConfig()
 const createCheckoutSession = async (order) => {
   console.log('order', order)
 
-  // const order = {
-  //   dealId: dealId.value,
-  //   paymentType: route.query.type,
-  //   contact: deal.value.contact,
-  //   currentUrl: route.fullPath,
-  //   insuranceImg: props.page.fields.assurance_img,
-  //   amout: route.query.amount, // Optionnel
-  // }
-
   const reponse = await activecampaign.getDealById(order.dealId)
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
   const deal = { ...reponse.deal, ...customFields }
 
-  // console.log('deal', deal)
-
-  const isDev = true // config.public.environment === 'development'
-  const origin = isDev ? 'https://odysway.com/' : config.public.siteURL // Inverse to change
+  const isDev = config.public.environment !== 'production'
+  const origin = config.public.siteURL
 
   const imageUrl = deal.image ? deal.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
 
   const lineItems = []
   let paidAmount = 0
+  let coupon = null
 
   function calculatDepositeValue(data) {
     const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
@@ -196,6 +186,14 @@ const createCheckoutSession = async (order) => {
         quantity: +deal.nbTravelers,
       })
     }
+    if (deal.alreadyPaid > 0) {
+      coupon = await stripeCLI.coupons.create({
+        amount_off: deal.alreadyPaid, // in cents
+        currency: 'eur',
+        name: 'Credit pour paiement déjà effectué',
+        duration: 'once',
+      })
+    }
   }
   console.log('LineItems', lineItems)
 
@@ -239,6 +237,7 @@ const createCheckoutSession = async (order) => {
   const session = await stripeCLI.checkout.sessions.create({
     line_items: lineItems,
     mode: 'payment',
+    discounts: coupon ? [{ coupon: coupon.id }] : [],
     customer: customer.id,
     invoice_creation: { enabled: true },
     success_url: `${origin}`,
@@ -278,7 +277,7 @@ const createCheckoutSession = async (order) => {
 const handlePaymentSession = async (session, paymentType) => {
   console.log('In handlePaymentSession', session, paymentType)
 
-  const isDev = true // config.public.environment === 'development'
+  const isDev = config.public.environment !== 'production'
 
   const order = session.metadata
   console.log('SESSION METADATA as ORDER', order)
