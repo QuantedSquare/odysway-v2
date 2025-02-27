@@ -4,7 +4,6 @@
     cols="12"
     sm="6"
     md="3"
-    class="height-voyageCard "
   >
     <v-card
       elevation="0"
