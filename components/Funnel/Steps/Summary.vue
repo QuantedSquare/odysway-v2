@@ -11,12 +11,13 @@
           color="surface-variant"
           class="blur"
           height="100"
+          :src="voyage.imgSrc"
           :lazy-src="voyage.imgSrc"
           cover
         >
           <div class="pa-5  d-flex flex-column align-start">
-            <span class="text-h5 text-shadow">{{ voyage.title }}</span>
-            <span class="text-body-1 text-shadow">{{ deal?.travelType }}</span>
+            <span class="text-h5 text-shadow-2">{{ voyage.title }}</span>
+            <span class="text-body-1 text-shadow-2">{{ deal?.travelType }}</span>
           </div>
         </v-img>
       </Transition>
@@ -331,7 +332,7 @@ const appliedPrice = computed(() => {
       return deal.value.value - deal.value.alreadyPaid
     }
     else { // type = 'custom'
-      return route.query.amount * deal.value.nbTravelers
+      return route.query.amount * 100
     }
   }
 })
@@ -359,5 +360,8 @@ const appliedPrice = computed(() => {
 .slide-fade-leave-to {
   transform: translateY(-20px);
   opacity: 0;
+}
+.text-shadow-2{
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
 </style>

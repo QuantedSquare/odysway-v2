@@ -15,11 +15,11 @@
         >
           <v-card
             class="border-width  w-md-50 w-lg-50"
-            :elevation="currentStep < 5 ? 2 : 0"
+            :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
               <v-img
-                v-if="voyage.imgSrc && currentStep === 0"
+                v-if=" skipperMode !== 'summary' && voyage.imgSrc && currentStep === 0"
                 color="surface-variant"
                 height="100"
                 :src="voyage.imgSrc"
@@ -28,7 +28,7 @@
             </Transition>
             <Transition name="fade">
               <FunnelCardHeader
-                v-if="currentStep !== 0 && currentStep < 5"
+                v-if=" currentStep !== 0 && currentStep < 5 "
                 :titre="voyage.title"
                 :image="voyage.imgSrc"
               />
@@ -39,7 +39,24 @@
               >
                 <v-stepper-window :model-value="currentStep">
                   <v-stepper-window-item>
+                    <template v-if="skipperMode === 'summary'">
+                      <FunnelStepsSummary
+                        :current-step="currentStep"
+                        :page="page"
+                        :voyage="voyage"
+                      />
+
+                      <FunnelStepsPaymentRedirect
+                        :ref="(component) => registerStepComponent(component, 5)"
+                        v-model="validForm"
+                        :page="page"
+                        :current-step="currentStep"
+                        :own-step="5"
+                        :voyage="voyage"
+                      />
+                    </template>
                     <FunnelStepsSkipper
+                      v-else
                       v-model="skipperMode"
                       :page="page"
                     />
@@ -110,7 +127,7 @@
             <v-card-actions>
               <v-stepper-actions
                 next-text="Suivant"
-                prev-text="Précédent"
+                :prev-text="skipperMode !== 'summary' ?'Précédent' : ''"
                 @click:next="nextStep()"
                 @click:prev="previousStep()"
               >
@@ -228,7 +245,10 @@ const stepComponents = reactive(new Map())
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 1)
 const skipperMode = ref('normal')
-
+if (route.query.type === 'custom' || route.query.type === 'balance') {
+  currentStep.value = 5
+  skipperMode.value = 'summary'
+}
 const enablingNextButton = computed(() => {
   return currentStep.value === 0 || validForm.value
 })
