@@ -192,6 +192,7 @@ const createCheckoutSession = async (order) => {
         currency: 'eur',
         name: 'Credit pour paiement déjà effectué',
         duration: 'once',
+        redeem_by: Math.floor(Date.now() / 1000) + 3600 * 24 * 1, // 1 jour
       })
     }
   }
@@ -239,9 +240,9 @@ const createCheckoutSession = async (order) => {
     if (customer.name !== contact.firstName + ' ' + contact.lastName) {
       customer = await stripeCLI.customers.update(customer.id, {
         name: contact.firstName + ' ' + contact.lastName,
-        metadata: {
-          test: 'coucou',
-        },
+        // metadata: {
+        //   test: 'coucou',
+        // },
       })
     }
   }
