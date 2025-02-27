@@ -9,7 +9,7 @@
     <v-btn-primary
       to="/"
       color="white"
-      class="btn-position hidden-sm-and-down px-0"
+      class="btn-position hidden-sm-and-down pl-md-0"
     >
       <template #prepend>
         <v-icon>
