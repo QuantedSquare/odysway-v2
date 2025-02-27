@@ -32,6 +32,21 @@ export default defineContentConfig({
         country: z.string(),
       }),
     }),
+    deals: defineCollection({
+      type: 'data',
+      source: 'deals/**.json',
+      schema: z.object({
+        title: z.string(),
+        slug: z.string(),
+        ISO: z.string(),
+        indivRoom: z.boolean(),
+        dates: z.array(z.object({
+          departureDate: z.string(),
+          returnDate: z.string(),
+          startingPrice: z.number(),
+        })),
+      }),
+    }),
     reviews: defineCollection({
       type: 'data',
       source: 'reviews/**.json',
