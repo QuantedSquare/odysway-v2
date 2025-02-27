@@ -2,12 +2,16 @@
   <v-app-bar
     elevation="0"
     class="px-4"
+    scroll-behavior="hide"
+    scroll-threshold="10"
+    floating
   >
     <NuxtLink
       to="/"
     >
       <v-img
         min-width="150px"
+        height="38"
         :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 150 })"
       />
     </NuxtLink>
@@ -18,13 +22,11 @@
       icon
       class="d-inline"
     >
-      <v-icon color="grey">
-        {{ mdiMagnify }}
-      </v-icon>
+      <v-icon>{{ mdiMagnify }}</v-icon>
     </v-btn>
     <v-btn
       icon
-      class="mx-md-4"
+      class="mx-md-4 hidden-xs"
     >
       <v-icon>{{ mdiAccountCircle }}</v-icon>
     </v-btn>
