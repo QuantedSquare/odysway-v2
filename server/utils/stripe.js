@@ -223,15 +223,39 @@ const createCheckoutSession = async (order) => {
   delete order.contact
 
   // Changer et récupérer le contact d'ac
-  // #TODO Récupérer un contact stripe plutôt que recréer tout le temps
-  console.log('====CREATE STRIPE CUSTOMER======', contact)
-  const customer = await stripeCLI.customers.create({
+
+  const existingCustomers = await stripeCLI.customers.list({
     email: contact.email,
-    name: contact.firstName + contact.lastName,
-    metadata: order,
-    phone: contact.phone,
+    limit: 1,
   })
 
+  let customer
+
+  // If customer exists, use that customer
+  if (existingCustomers.data.length > 0) {
+    customer = existingCustomers.data[0]
+
+    // Update customer name if changed
+    if (customer.name !== contact.firstName + ' ' + contact.lastName) {
+      customer = await stripeCLI.customers.update(customer.id, {
+        name: contact.firstName + ' ' + contact.lastName,
+        metadata: {
+          test: 'coucou',
+        },
+      })
+    }
+  }
+  else {
+    // Create new customer if not found
+    customer = await stripeCLI.customers.create({
+      email: contact.email,
+      name: contact.firstName + ' ' + contact.lastName,
+      metadata: order,
+      phone: contact.phone,
+    })
+  }
+
+  // Now use customer.id in your checkout session
   Object.assign(order, { customer: customer.id, paidAmount })
 
   const session = await stripeCLI.checkout.sessions.create({
