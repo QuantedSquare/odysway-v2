@@ -1,7 +1,7 @@
 <template>
   <v-btn
     variant="text"
-    class="mt-4 btn-bouncing"
+    class="btn-bouncing"
     :icon="isExpanded ? mdiChevronDoubleUp : mdiChevronDoubleDown"
     @click="showHide"
   />

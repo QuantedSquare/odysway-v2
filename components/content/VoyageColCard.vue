@@ -2,7 +2,7 @@
   <v-col
     v-if="voyage && voyage.imgSrc"
     cols="12"
-    sm="6"
+    sm="4"
     md="3"
   >
     <v-card
@@ -18,7 +18,7 @@
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 400 })"
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="xl"
-          contain
+          cover
           class="hover-scale"
         >
           <client-only>
@@ -29,15 +29,17 @@
                 text="Test tooltip"
               >
                 <template #activator="{ props }">
-                  <v-btn-voyage
+                  <v-btn
                     v-bind="props"
                     icon
+                    size="x-small"
+                    color="rgba(0, 0, 0, 0.32)"
                   >
                     <v-icon
                       :icon="mdiAccountGroup"
                       color="white"
                     />
-                  </v-btn-voyage>
+                  </v-btn>
                 </template>
               </v-tooltip>
               <v-tooltip
@@ -45,19 +47,24 @@
                 text="Test tooltip"
               >
                 <template #activator="{ props }">
-                  <v-btn-voyage v-bind="props">
+                  <v-btn
+                    v-bind="props"
+                    icon
+                    size="x-small"
+                    color="rgba(0, 0, 0, 0.32)"
+                  >
                     <v-img
                       src="/icons/child.svg"
                       alt="Child icon"
                       class="svg-child-icon"
                     />
-                  </v-btn-voyage>
+                  </v-btn>
                 </template>
               </v-tooltip>
             </div>
             <div class="display-mobile">
               <div class="blur-overlay" />
-              <div class="position-absolute bottom-text text-white bottom-0 text-shadow">
+              <div class="position-absolute bottom-text text-shadow text-white bottom-0">
                 <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 ">
                   {{ voyage.title }}
                 </v-card-title>
@@ -106,7 +113,7 @@
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
         >
-          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark">
+          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark no-white-space">
             {{ voyage.title }}
           </v-card-title>
           <v-card-text class="text-body-2 py-1 px-0">
@@ -198,7 +205,6 @@ const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
 }
 .hover-scale{
   transform:scale(1);
-
   transition: transform 0.2s ease-in-out;
 }
 </style>

@@ -8,9 +8,13 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'voyage',
+})
+
 const route = useRoute()
 
-const { data: page } = useAsyncData(route.path, () => {
+const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 </script>

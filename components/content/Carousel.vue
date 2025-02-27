@@ -1,10 +1,12 @@
 <template>
   <v-carousel
-    ref="accomodation-carousel"
+    ref="carousel"
     height="300"
-    :show-arrows="nbCarouselItems > 1 ? 'hover' : false "
     :cycle="nbCarouselItems > 1 ? true : false"
-    hide-delimiters
+    interval="10000"
+    hide-delimiter-background
+    :hide-delimiters="nbCarouselItems > 1 ? false : true"
+    color="grey-lighten-4"
   >
     <template #prev="{ props }">
       <v-btn
@@ -19,6 +21,7 @@
         />
       </v-btn>
     </template>
+    <slot name="carousel-item" />
     <template #next="{ props }">
       <v-btn
         density="compact"
@@ -32,18 +35,17 @@
         />
       </v-btn>
     </template>
-    <slot name="images" />
   </v-carousel>
 </template>
 
 <script setup>
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 
-const accomodationCarousel = useTemplateRef('accomodation-carousel')
+const carousel = useTemplateRef('carousel')
 const nbCarouselItems = ref(0)
 
 onMounted(() => {
-  nbCarouselItems.value = accomodationCarousel.value?.$el.children[0]?.children?.length - 1
+  nbCarouselItems.value = carousel.value?.$el.children[0]?.children?.length
 })
 </script>
 

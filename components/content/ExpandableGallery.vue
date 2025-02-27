@@ -33,7 +33,7 @@
 
             <v-img
               v-if="category?.image"
-              :src="imgComp(category.image, { format: 'webp', quality: 70 })"
+              :src="imgComp(category.image, { format: 'webp', quality: 70, width: 1000 })"
               width="100%"
               :alt="category?.title"
               cover
@@ -43,8 +43,8 @@
             <div class="image-overlay" />
             <div class="content-overlay">
               <div class="w-100">
-                <h3 class="category-title text-to-wrap text-shadow">{{ category?.title }}</h3>
-                <p class="category-description d-flex align-center justify-space-between ga-2 text-shadow">
+                <h3 class="category-title text-shadow text-to-wrap">{{ category?.title }}</h3>
+                <p class="category-description text-shadow d-flex align-center justify-space-between ga-2 ">
                   <span class="w-75">
                     Cliquez pour en apprendre plus à propos des {{ category?.title }}
                   </span>
@@ -163,7 +163,7 @@ watch(mdAndDown, (newValue) => {
   flex: 1;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   transition: all 0.5s ease-in-out;
 }
 

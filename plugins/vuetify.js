@@ -2,7 +2,7 @@ import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
-import { VBtn, VIcon, VTextField } from 'vuetify/components'
+import { VBtn } from 'vuetify/components'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -27,13 +27,11 @@ export default defineNuxtPlugin((app) => {
             'secondary': '#bc5948', // odysway red
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
-            'section-bg': '#edeff8', // grey-home-bg
-            'input-bg': '#ebeff9',
-            'footer-bg': '#f5f5f5',
+            'odysway-1': '#edeff8', // grey-home-bg
+            'odysway-2': '#f5f5f5',
             'orange-lighten-1': '#FFA726',
             'white': '#FFFFFF',
             'grey': '#8E8E8E',
-            'on-grey': '#1D1D1B',
             'grey-lighten-1': '#C7C7C7',
             'grey-lighten-2': '#E9EAEC',
             'grey-lighten-3': '#F8F8F8',
@@ -48,12 +46,11 @@ export default defineNuxtPlugin((app) => {
     aliases: {
       VBtnPrimary: VBtn,
       VBtnSecondary: VBtn,
-      VBtnVoyage: VBtn,
-      VIconChevron: VIcon,
-      VBtnSocial: VBtn,
-      VTextFieldHome: VTextField,
     },
     defaults: {
+      VCard: {
+        rounded: 'lg',
+      },
       VBtn: {
         color: 'primary',
         elevation: 0,
@@ -64,16 +61,6 @@ export default defineNuxtPlugin((app) => {
       },
       VBtnSecondary: {
         color: 'secondary',
-        rounded: 'xl',
-      },
-      VBtnVoyage: {
-        size: 'x-small',
-        icon: true,
-        color: 'rgba(0, 0, 0, 0.32)',
-      },
-      VIconChevron: {
-        size: 'x-large',
-        color: 'white',
       },
       VTextField: {
         variant: 'outlined',
@@ -86,17 +73,6 @@ export default defineNuxtPlugin((app) => {
         baseColor: 'grey-lighten-1',
         inset: true,
         hideDetails: true,
-      },
-      VBtnSocial: {
-        size: 'x-small',
-        icon: true,
-      },
-      VTextFieldHome: {
-        variant: 'solo',
-        flat: true,
-        hideDetails: true,
-        density: 'compact',
-        rounded: 'xl',
       },
     },
   })

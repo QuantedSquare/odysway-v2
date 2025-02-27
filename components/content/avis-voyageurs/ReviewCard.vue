@@ -33,9 +33,9 @@
               <span class="mt-6"> Son voyage : </span>
               <NuxtLink
                 :to="`voyages/${review.voyageSlug}`"
-                class="text-center text-decoration-none text-primary onHover"
+                class="text-center text-decoration-none text-primary hover-decoration"
               >
-                <span class="onHover">{{ review.voyageTitle }}</span>
+                <span class="hover-decoration">{{ review.voyageTitle }}</span>
               </NuxtLink>
             </v-card-subtitle>
           </v-card-item>
@@ -109,7 +109,7 @@ const formatedDate = computed(() => {
   .no-white-space {
     white-space: normal;
   }
-.onHover:hover{
+.hover-decoration:hover{
   text-decoration: underline;
 }
 </style>

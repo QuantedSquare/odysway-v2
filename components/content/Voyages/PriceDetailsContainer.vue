@@ -6,7 +6,7 @@
         md="6"
       >
         <v-list class="">
-          <v-list-subheader class="text-subtitle-1 grey-darken-3 py-4">
+          <v-list-subheader class="text-subtitle-1 grey-darken-3 pb-0 py-md-4">
             <slot name="left-column-phrase" />
           </v-list-subheader>
           <slot name="items-list-include" />
@@ -18,7 +18,7 @@
         md="6"
       >
         <v-list class="pl-md-4">
-          <v-list-subheader class="text-subtitle-1 grey-darken-3 py-4">
+          <v-list-subheader class="text-subtitle-1 grey-darken-3 pb-0 py-md-4">
             <slot name="right-column-phrase" />
           </v-list-subheader>
           <slot name="items-list-exclude" />

@@ -6,7 +6,7 @@
       no-gutters
     >
       <v-col
-        class="text-dark font-weight-black text-h5 text-md-h4 my-6"
+        class="text-dark font-weight-black text-h5 text-md-h4 my-4"
       >
         <slot />
       </v-col>
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   id: {
     type: String,
     default: '',

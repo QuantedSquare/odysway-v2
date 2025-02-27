@@ -3,16 +3,16 @@
     <v-row>
       <v-col
         cols="12"
-        md="auto"
-        class="d-flex justify-center justify-md-start"
+        sm="auto"
+        class="d-flex justify-center justify-sm-start"
       >
         <v-avatar
           :image="props.avatar"
           :size="props.avatarSize ? props.avatarSize : '80'"
         />
       </v-col>
-      <v-col class="d-flex flex-column justify-center align-center align-md-start">
-        <v-list-item-title class="text-center text-md-start no-white-space mb-2">
+      <v-col class="d-flex flex-column justify-center align-center align-sm-start">
+        <v-list-item-title class="text-center text-sm-start no-white-space mb-2">
           <slot name="title" />
         </v-list-item-title>
         <v-list-item-subtitle class="no-white-space">

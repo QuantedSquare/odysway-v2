@@ -16,6 +16,7 @@
       <v-col
         cols="12"
         sm="7"
+        class="d-flex flex-column justify-lg-center"
       >
         <v-card variant="text">
           <v-card-title class="">

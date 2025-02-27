@@ -3,7 +3,7 @@
 #title
 La rencontre <br> au cœur du voyage
 
-#component-slot
+#component-slot-1
   :::SearchField
   :::
 ::
@@ -40,8 +40,6 @@ La rencontre <br> au cœur du voyage
   :::
 ::
 
-
-
 ::title-container
 Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
@@ -49,14 +47,15 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::expandable-gallery{:categories-slug='["chemins-vers-soi", "echappees-sauvages", "immersions-locales", "regard-faune", "sentiers-aventures"]'}
 ::
 
-
-
-
 ::title-container
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
 ::horizontal-carousel
+
+#carousel-item
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::
 
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
@@ -77,10 +76,11 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 
 ::horizontal-carousel
 
-  :::voyage-col-card{voyage-slug="chine"}
+#carousel-item
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="chine"}
   :::
 
   :::voyage-col-card{voyage-slug="japon"}
@@ -97,6 +97,7 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 
 ::horizontal-carousel
 
+#carousel-item
   :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
@@ -117,6 +118,7 @@ Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 
 ::horizontal-carousel
 
+#carousel-item
   :::voyage-col-card{voyage-slug="chine"}
   :::
 

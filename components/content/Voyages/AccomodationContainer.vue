@@ -3,7 +3,7 @@
     <v-card variant="text">
       <v-row>
         <v-col class="d-sm-block d-none">
-          <v-card-text class="text-subtitle-1 text-grey-darken-3 pt-0 px-0">
+          <v-card-text class="text-body-1 text-grey-darken-3 pt-0 px-0">
             <slot
               name="text"
               mdc-unwrap="p"
@@ -21,7 +21,7 @@
             <div
               v-show="isExpanded && $vuetify.display.smAndDown"
             >
-              <v-card-text class="text-subtitle-1 text-grey-darken-3 px-0">
+              <v-card-text class="text-body-1 text-grey-darken-3 px-0">
                 <slot
                   name="text"
                   mdc-unwrap="p"

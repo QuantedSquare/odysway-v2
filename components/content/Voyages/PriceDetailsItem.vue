@@ -1,5 +1,5 @@
 <template>
-  <v-list-item class="text-subtitle-1 text-grey-darken-3 pl-0">
+  <v-list-item class="text-body-1 text-grey-darken-3 pl-0">
     <slot
       name="item"
     />

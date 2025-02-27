@@ -1,10 +1,9 @@
 <template>
-  <!-- image attributes ⬇️
-  size="(max-width: 600) 480px, 1500px"
-  :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`" -->
   <v-img
     :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
+    size="(max-width: 600) 480px, 1500px"
+    :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`"
     height="100vh"
     cover
   >
@@ -41,11 +40,18 @@
           align="center"
         >
           <v-col
-            cols="10"
+            cols="12"
             md="6"
           >
             <slot
-              name="component-slot"
+              name="component-slot-1"
+            />
+          </v-col>
+          <v-col
+            cols="12"
+          >
+            <slot
+              name="component-slot-2"
             />
           </v-col>
         </v-row>
@@ -64,7 +70,6 @@ defineProps({
   },
 })
 const img = useImage()
-// const { height } = useDisplay()
 </script>
 
 <style scoped>
