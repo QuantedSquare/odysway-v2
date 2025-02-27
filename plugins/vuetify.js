@@ -31,6 +31,7 @@ export default defineNuxtPlugin((app) => {
             'odysway-2': '#f5f5f5',
             'orange-lighten-1': '#FFA726',
             'white': '#FFFFFF',
+            'primary-light': '#67C189',
             'grey': '#8E8E8E',
             'grey-lighten-1': '#C7C7C7',
             'grey-lighten-2': '#E9EAEC',
