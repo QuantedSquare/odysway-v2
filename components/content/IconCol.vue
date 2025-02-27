@@ -45,7 +45,7 @@ import { mdiCalendar, mdiWhiteBalanceSunny, mdiTent, mdiAccountGroup, mdiTeddyBe
 const props = defineProps({
   iconName: {
     type: String,
-    default: '',
+    default: 'mdiCalendar',
   },
 })
 
