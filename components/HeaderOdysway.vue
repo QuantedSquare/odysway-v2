@@ -2,9 +2,6 @@
   <v-app-bar
     elevation="0"
     class="px-4"
-    scroll-behavior="hide"
-    scroll-threshold="10"
-    floating
   >
     <NuxtLink
       to="/"

@@ -4,7 +4,29 @@
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
     height="100vh"
     cover
+    class="position-relative"
   >
+    <v-btn-primary
+      to="/"
+      color="white"
+      class="btn-position hidden-sm-and-down px-0"
+    >
+      <template #prepend>
+        <v-icon>
+          {{ mdiChevronLeft }}
+        </v-icon>
+      </template>
+
+      <span> retour aux voyages</span>
+    </v-btn-primary>
+    <v-btn
+      to="/"
+      variant="outlined"
+      density="compact"
+      color="white"
+      :icon="mdiChevronLeft"
+      class="btn-position hidden-md-and-up"
+    />
     <div class="h-100 d-flex align-center">
       <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
         <v-row
@@ -53,6 +75,7 @@
 </template>
 
 <script setup>
+import { mdiChevronLeft } from '@mdi/js'
 import { useImage } from '#imports'
 
 defineProps({
@@ -65,6 +88,14 @@ const img = useImage()
 </script>
 
 <style scoped>
+.btn-position{
+  position: absolute;
+  top: 10%;
+  left: 32px;
+}
+.v-btn__prepend {
+  margin: 0px !important;
+}
 .img-shadow{
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
