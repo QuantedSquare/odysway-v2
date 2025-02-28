@@ -20,7 +20,7 @@
       <span> retour aux blogs</span>
     </v-btn-primary>
     <v-btn
-      to="/blogs"
+      to="/blog"
       variant="outlined"
       density="compact"
       color="white"

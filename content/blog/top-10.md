@@ -1,6 +1,6 @@
 ::hero-section-blog{imageSrc="/images/blogs/Coub_Blog_New.png"}
 #publication-date
-[20 mai 2022]{style="font-weight: bold"}
+[28/02/2025]{style="font-weight: bold"}
 
 #title
 Top 10 des destinations 2025 pour un été hors des sentiers battus
