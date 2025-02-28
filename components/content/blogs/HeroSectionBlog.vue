@@ -7,7 +7,7 @@
     class="position-relative"
   >
     <v-btn-primary
-      to="/blogs"
+      to="/blog"
       color="white"
       class="btn-position hidden-sm-and-down pl-md-0"
     >

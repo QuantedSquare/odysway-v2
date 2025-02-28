@@ -4,7 +4,7 @@
 
 ::blog-container
 #blog-col
-  :::blog-col{imageSrc="/images/blogs/Coub_Blog_New.png" blogSlug="/blogs/top-10"}
+  :::blog-col{imageSrc="/images/blogs/Coub_Blog_New.png" blogSlug="blog/top-10"}
   #subtitle
   [20 mai 2022]{style="font-weight: bold"}
 
@@ -12,21 +12,21 @@
   Top 10 des destinations 2025 pour un été hors des sentiers battus
   :::
 
-  :::blog-col{imageSrc="/images/blogs/ArticleInsolite_Blog_Couv.png" blogSlug="/blogs/test-page"}
+  :::blog-col{imageSrc="/images/blogs/ArticleInsolite_Blog_Couv.png" blogSlug="blog/test-page"}
   #subtitle
   [20 mai 2022]{style="font-weight: bold"}
 
   #title
   Top 10 des destinations 2025 
   :::
-  :::blog-col{imageSrc="/images/blogs/ArticleInsolite_Blog_Couv.png" blogSlug="/blogs/test-page"}
+  :::blog-col{imageSrc="/images/blogs/ArticleInsolite_Blog_Couv.png" blogSlug="blog/test-page"}
   #subtitle
   [20 mai 2022]{style="font-weight: bold"}
 
   #title
   Top 10 des sentiers battus
   :::
-  :::blog-col{imageSrc="/images/blogs/Coub_Blog_New.png" blogSlug="/blogs/top-10"}
+  :::blog-col{imageSrc="/images/blogs/Coub_Blog_New.png" blogSlug="blog/top-10"}
   #subtitle
   [20 mai 2022]{style="font-weight: bold"}
 

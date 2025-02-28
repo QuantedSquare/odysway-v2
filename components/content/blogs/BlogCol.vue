@@ -3,7 +3,12 @@
     cols="12"
     sm="6"
   >
+    <v-skeleton-loader
+      v-if="loading"
+      type="card"
+    />
     <v-card
+      v-else
       variant="text"
       :href="blogSlug"
       height="100%"
@@ -37,5 +42,12 @@ defineProps({
     required: true,
   },
 })
+
 const img = useImage()
+
+const loading = ref(true)
+
+onMounted(() => {
+  loading.value = false
+})
 </script>
