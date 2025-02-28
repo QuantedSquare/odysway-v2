@@ -6,7 +6,7 @@
         sm="5"
       >
         <v-img
-          :src="img(props.image, { format: 'webp', quality: 70 })"
+          :src="img(props.image, { format: 'webp', quality: 70, width: 1024 })"
           rounded="lg"
           min-height="340px"
           max-height="500px"

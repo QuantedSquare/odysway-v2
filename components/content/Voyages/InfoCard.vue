@@ -3,7 +3,7 @@
     elevation="0"
   >
     <v-img
-      :src="img(voyageImg, { format: 'webp', quality: 70, height: 400 })"
+      :src="img(voyageImg, { format: 'webp', quality: 70, height: 400, width: 640 })"
       max-height="400"
       cover
     >

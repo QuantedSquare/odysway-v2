@@ -13,8 +13,11 @@
           />
         </v-col>
         <v-col class="d-flex align-center">
-          <v-avatar class="mr-4">
-            <v-img :src="img(imageSrc, { format: 'webp', quality: 70, width: 100 })" />
+          <v-avatar
+            size="x-large"
+            class="mr-4"
+          >
+            <v-img :src="img(imageSrc, { format: 'webp', quality: 70, width: 640 })" />
           </v-avatar>
           <slot name="founder" />
         </v-col>

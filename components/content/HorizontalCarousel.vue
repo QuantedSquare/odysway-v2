@@ -6,9 +6,9 @@
       <!-- <v-row class="overflow-x-hidden"> -->
       <v-slide-group
         v-model="currentWindow"
-        :show-arrows="true"
+        show-arrows
         center-active
-        class="w-100"
+        class="w-100 group"
       >
         <slot name="carousel-item" />
       </v-slide-group>

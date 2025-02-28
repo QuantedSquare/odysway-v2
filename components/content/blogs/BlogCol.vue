@@ -9,7 +9,7 @@
       height="100%"
     >
       <v-img
-        :src="imageSrc"
+        :src="img(imageSrc, { format: 'webp', quality: 70, width: 640 })"
         height="100%"
         cover
       >
@@ -25,6 +25,8 @@
 </template>
 
 <script setup>
+import { useImage } from '#imports'
+
 defineProps({
   imageSrc: {
     type: String,
@@ -35,4 +37,5 @@ defineProps({
     required: true,
   },
 })
+const img = useImage()
 </script>

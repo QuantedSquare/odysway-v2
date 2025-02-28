@@ -7,7 +7,7 @@
     >
       <v-col cols="auto">
         <v-img
-          :src="img(props.imageSrc, { format: 'webp', quality: 70 })"
+          :src="img(props.imageSrc, { format: 'webp', quality: 70, width: 640 })"
           width="150"
           height="80"
           contain

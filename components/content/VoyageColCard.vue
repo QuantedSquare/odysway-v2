@@ -8,7 +8,7 @@
   <v-card
     elevation="0"
     rounded="xl"
-    class="mr-1 mr-md-4"
+    class="mr-sm-4"
     width="254px"
   >
     <NuxtLink
