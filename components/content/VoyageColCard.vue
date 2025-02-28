@@ -65,7 +65,7 @@
             <div class="display-mobile">
               <div class="blur-overlay" />
               <div class="position-absolute bottom-text text-shadow text-white bottom-0">
-                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 ">
+                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 text-wrap">
                   {{ voyage.title }}
                 </v-card-title>
                 <v-card-text class="font-weight-bold  px-0 d-flex flex-column align-start ga-2 mt-4">

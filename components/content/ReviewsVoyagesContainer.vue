@@ -187,7 +187,7 @@ import { useDisplay } from 'vuetify'
 import { mdiChevronRight, mdiChevronLeft } from '@mdi/js'
 
 const img = useImage()
-const slideGroup = ref(0)
+const slideGroup = ref(1)
 const currentReview = ref(0)
 const { smAndUp } = useDisplay()
 
