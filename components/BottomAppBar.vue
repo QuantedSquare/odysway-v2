@@ -1,10 +1,9 @@
 <template>
   <v-app-bar
     location="bottom"
-    class="d-md-none py-2 py-sm-0"
-    height="100"
+    class="d-md-none pb-1 pb-sm-0"
   >
-    <v-container>
+    <v-container class="py-0">
       <v-row
         no-gutters
         class="ga-1"
@@ -30,6 +29,7 @@
         <v-col sm="4">
           <v-btn-secondary
             rounded="sm"
+
             color="primary"
             class="text-caption text-uppercase"
             width="100%"

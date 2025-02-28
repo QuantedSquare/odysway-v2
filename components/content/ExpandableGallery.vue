@@ -88,7 +88,7 @@ const props = defineProps({
   },
 })
 
-const { data: categories, status } = useAsyncData(
+const { data: categories, status } = await useAsyncData(
   `categories-${props.categoriesSlug.join('-')}`,
   async () => {
     const categoriesData = await Promise.all(
