@@ -1,31 +1,47 @@
 <template>
   <v-container
-    class="height-title bg-primary hidden-md-and-down px-6"
+    class="height-title bg-primary px-6"
     fluid
   >
-    <div class="d-flex flex-column align-center ga-4 flex-md-row ">
+    <div class="d-flex align-center justify-start ga-4 flex-md-row ">
       <v-avatar
         :image="props.image || 'https://odysway.com/logos/logo_noir.png'"
         size="100"
         rounded="lg"
       />
-      <div class="text-white text-h6 d-flex flex-column">
-        <span>
-          {{ props.titre }}
+      <div class="text-white text-h3 text-md-h5 d-flex flex-column w-100">
+        <span class="font-weight-bold">
+          {{ titre }}
         </span>
-        <span
-          v-if="props.travelType"
-          class="text-caption"
+        <v-row
+          v-if="travelType"
+          class="text-body-1 mt-2 text-no-wrap"
         >
-          {{ props.travelType }}
-        </span>
+          <v-col>
+            {{ travelType }} -  <span
+              v-if="date"
+              class="text-caption"
+            >
+              {{ date }}
+            </span>
+          </v-col>
+
+          <v-col
+
+            class="text-no-wrap text-left text-md-right "
+          >
+            À partir de : {{ formatNumber(total, 'currency', '€') }}/pers.
+          </v-col>
+        </v-row>
       </div>
     </div>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps(['titre', 'image', 'travelType'])
+const props = defineProps(['titre', 'image', 'travelType', 'date'])
+
+const total = 100000
 </script>
 
 <style scoped>

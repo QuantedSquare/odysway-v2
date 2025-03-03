@@ -1,6 +1,7 @@
 import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
+import { VDateInput } from 'vuetify/labs/VDateInput'
 
 import { VBtn } from 'vuetify/components'
 
@@ -12,6 +13,9 @@ export default defineNuxtPlugin((app) => {
       sets: {
         mdi,
       },
+    },
+    components: {
+      VDateInput,
     },
     display: {
       mobileBreakpoint: 600,

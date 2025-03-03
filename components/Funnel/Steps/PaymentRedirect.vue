@@ -84,12 +84,12 @@
                 </v-btn>
                 <v-btn
                   v-else
-                  class="ml-4"
+                  class="ml-md-4"
                   :loading="loadingStripeSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                   @click="stripePay"
                 >
-                  Payer par CB ou Virement
+                  Payer
                 </v-btn>
               </Transition>
             </Teleport>

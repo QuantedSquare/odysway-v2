@@ -9,7 +9,7 @@
     >
       <v-avatar
         size="40"
-        class="mr-2 d-md-none"
+        class="d-md-none"
         :icon="mdiBagPersonal"
       />
       <h3>Voyageur {{ id }}</h3>
@@ -44,7 +44,14 @@
       cols="12"
       md="4"
     >
-      <v-menu
+      <v-text-field
+        v-model="displayedDate"
+        label="Date de naissance *"
+        placeholder="JJ/MM/AAAA"
+        :rules="[rules.required, rules.dateFormat]"
+        type="date"
+      />
+      <!-- <v-menu
         v-model="dateMenu"
         :close-on-content-click="false"
         location="end"
@@ -71,7 +78,7 @@
             min="1910-01-01"
           />
         </v-card>
-      </v-menu>
+      </v-menu> -->
     </v-col>
   </v-row>
 </template>
@@ -105,6 +112,8 @@ const i_lastname = ref(props.lastname)
 const i_birthdate = ref(new Date())
 const dateMenu = ref(false)
 
+// const displayedDate = ref('')
+
 // Initialize birthdate
 onMounted(() => {
   if (props.birthdate) {
@@ -125,6 +134,31 @@ const maxDate = computed(() => dayjs().format('YYYY-MM-DD'))
 // Rules
 const rules = {
   required: v => !!v || 'Cette information est requise.',
+  dateFormat: (v) => {
+    console.log('v', v)
+    if (!v) return true
+
+    // Check format DD/MM/YYYY
+    const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/
+    if (!dateRegex.test(v)) return 'Format invalide. Utilisez JJ/MM/AAAA'
+
+    const matches = v.match(dateRegex)
+    const day = parseInt(matches[1])
+    const month = parseInt(matches[2])
+    const year = parseInt(matches[3])
+
+    // Basic validation
+    if (month < 1 || month > 12) return 'Mois invalide'
+    if (day < 1 || day > 31) return 'Jour invalide'
+    if (year < 1910 || year > new Date().getFullYear()) return 'Année invalide'
+
+    // Check if date is valid using dayjs
+    const dateObj = dayjs(`${year}-${month}-${day}`, 'YYYY-M-D')
+    if (!dateObj.isValid() || dateObj.format('DD/MM/YYYY') !== v)
+      return 'Date invalide'
+
+    return true
+  },
 }
 
 // Methods
@@ -144,6 +178,34 @@ const dataUpdated = () => {
   })
 }
 
+const formatDateInput = (event) => {
+  // Get only digits from input
+  const value = displayedDate.value.replace(/\D/g, '')
+
+  // Auto add slashes
+  if (value.length > 0) {
+    let formattedDate = ''
+
+    for (let i = 0; i < value.length && i < 8; i++) {
+      if (i === 2 || i === 4) {
+        formattedDate += '/'
+      }
+      formattedDate += value[i]
+    }
+
+    displayedDate.value = formattedDate
+  }
+}
+
+// const dataUpdated = () => {
+//   emit('change', {
+//     id: props.id,
+//     firstname: i_firstname.value,
+//     lastname: i_lastname.value,
+//     birthdate: displayedDate.value,
+//   })
+// }
+
 // Watch for prop changes
 watch(() => props.firstname, (newVal) => {
   i_firstname.value = newVal
@@ -156,11 +218,13 @@ watch(() => props.lastname, (newVal) => {
 watch(() => props.birthdate, (newVal) => {
   if (newVal) {
     const parsedDate = dayjs(newVal, 'DD/MM/YYYY')
-    i_birthdate.value = parsedDate.isValid() ? parsedDate.format('YYYY-MM-DD') : null
+    if (parsedDate.isValid()) {
+      displayedDate.value = parsedDate.format('DD/MM/YYYY')
+    }
   }
 })
-watch(modelDate, () => {
-  displayedDate.value = dayjs(modelDate.value).format('DD/MM/YYYY')
-  handleDateSelection()
-})
+// watch(modelDate, () => {
+//   displayedDate.value = dayjs(modelDate.value).format('DD/MM/YYYY')
+//   handleDateSelection()
+// })
 </script>

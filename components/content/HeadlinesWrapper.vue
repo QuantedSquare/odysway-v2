@@ -10,15 +10,15 @@
             que nous<br>
             <span class="text-secondary">proposons</span>
           </h1>
-          <!-- <div class="text-caption text-grey text-no-wrap">
-            DRAG AND DROP
-          </div> -->
         </div>
-        <DraggingContainer ref="draggingContainerRef">
+        <DraggingContainer
+          ref="draggingContainerRef"
+          class="mt-md-16"
+        >
           <slot />
         </DraggingContainer>
       </v-row>
-      <ScrollToBtnList />
+      <ScrollToBtnList class="text-white" />
       <h1
         class="d-block d-md-none text-h5 font-weight-light text-no-wrap text-center my-6"
       >

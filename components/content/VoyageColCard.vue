@@ -19,7 +19,7 @@
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="xl"
           cover
-          class="hover-scale"
+          class="hover-scale min-height-img"
         >
           <client-only>
             <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
@@ -113,9 +113,20 @@
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
         >
-          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark no-white-space">
-            {{ voyage.title }}
-          </v-card-title>
+          <v-tooltip
+            location="top"
+            :text="voyage.title"
+          >
+            <template #activator="{ props }">
+
+              <v-card-title
+                v-bind="props"
+                class="text-body-1 font-weight-bold py-1 px-0 text-dark"
+              >
+                {{ voyage.title }}
+              </v-card-title>
+            </template>
+          </v-tooltip>
           <v-card-text class="text-body-2 py-1 px-0">
             <span class="text-grey-darken-2 "> A partir de </span>
             <span class="font-weight-bold text-dark">{{ voyage.startingPrice }}€</span>
@@ -206,5 +217,14 @@ const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
 .hover-scale{
   transform:scale(1);
   transition: transform 0.2s ease-in-out;
+}
+.min-height-img{
+  height: 225px;
+}
+@media screen and (max-width: 600px) {
+  .min-height-img{
+    height: 350px;
+  }
+
 }
 </style>

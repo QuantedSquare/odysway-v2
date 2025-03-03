@@ -41,15 +41,17 @@
               </div>
             </template>
           </v-switch>
+        </v-col>
+
+        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
+          + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
+        </v-col>
+        <v-col cols="12">
           <FunnelStepsDialogLearnMore
             v-if="deal"
             :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.accroche_assurance_perou_nepal:page.fields.accroche_assurance_medicale "
             :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.details_assurance_medicale_perou_nepal:page.fields.details_assurance_medicale "
           />
-        </v-col>
-
-        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
-          + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
         </v-col>
       </v-row>
 
@@ -66,13 +68,15 @@
             value="cancel"
             :label="page.fields.preference_assurance_annulation"
           />
+        </v-col>
+        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
+          + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
+        </v-col>
+        <v-col cols="12">
           <FunnelStepsDialogLearnMore
             :btn-text="page.fields.accroche_assurance_annulation"
             :dialog-text="page.fields.details_assurance_annulation"
           />
-        </v-col>
-        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
-          + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
         </v-col>
       </v-row>
 
