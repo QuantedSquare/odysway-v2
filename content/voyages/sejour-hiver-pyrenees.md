@@ -45,6 +45,7 @@ Prendre RDV
 ::
 
 ::title-container
+#title
 Immersion hivernale en terre béarnaise
 ::
 
@@ -195,6 +196,7 @@ POURQUOI VOYAGER AVEC ODYSWAY ?
 ::
 
 ::title-container
+#title
 Le programme du voyage
 ::
 
@@ -260,6 +262,7 @@ Pour ce dernier jour dans la vallée, l’heure est aux adieux, mais avec la pro
 
 
 ::title-container
+#title
 Votre hébergement
 ::
 
@@ -284,6 +287,7 @@ Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé
 ::
 
 ::title-container
+#title
 Les accompagnateurs
 ::
 
@@ -315,6 +319,7 @@ Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateu
 ::
 
 ::title-container
+#title
 Détails du prix
 ::
 
@@ -380,6 +385,7 @@ Détails du prix
 
 
 ::title-container
+#title
 Les avis des voyageurs
 ::
 
@@ -417,6 +423,7 @@ Les avis des voyageurs
 ::faq-container
 #section-title
 ::title-container
+#title
 Foire aux questions
 ::
 

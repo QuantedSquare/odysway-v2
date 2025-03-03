@@ -8,7 +8,7 @@
       <v-col
         class="text-dark font-weight-black text-h5 text-md-h4 my-4"
       >
-        <slot />
+        <slot name="title" />
       </v-col>
       <v-col
         v-if="id"
