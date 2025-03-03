@@ -202,8 +202,8 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
-.hover-scale{
-  transform:scale(1);
+/* .hover-scale{
+  transform: scale(1);
   transition: transform 0.2s ease-in-out;
-}
+} */
 </style>

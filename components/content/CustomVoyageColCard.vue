@@ -9,6 +9,7 @@
     <v-card
       elevation="0"
       rounded="xl"
+      class="hover-scale"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
@@ -21,7 +22,6 @@
           rounded="xl"
           height="250px"
           cover
-          class="hover-scale"
         >
           <client-only>
             <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
@@ -90,7 +90,6 @@
                     </div>
                   </client-only>
                 </v-card-text>
-
               </div>
             </div>
           </client-only>
@@ -204,8 +203,8 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
-.hover-scale{
+/* .hover-scale{
   transform:scale(1);
   transition: transform 0.2s ease-in-out;
-}
+} */
 </style>
