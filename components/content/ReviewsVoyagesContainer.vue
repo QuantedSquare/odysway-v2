@@ -112,14 +112,16 @@
                       <!-- <span v-else>{{ getInitial(item.author) }}</span> -->
                     </v-avatar>
                     <span>{{ review.author }}</span>
-                    <v-rating
-                      :model-value="4.5"
-                      color="orange-lighten-1"
-                      density="compact"
-                      size="small"
-                      half-increments
-                      readonly
-                    />
+                    <ClientOnly>
+                      <v-rating
+                        :model-value="4.5"
+                        color="orange-lighten-1"
+                        density="compact"
+                        size="small"
+                        half-increments
+                        readonly
+                      />
+                    </ClientOnly>
                   </v-card-actions>
                 </v-card>
               </v-slide-group-item>
@@ -208,7 +210,7 @@ const formatImage = photo => img(photo, {
   format: 'webp',
   quality: 70,
   height: 100,
-  width: 100,
+  width: 320,
 })
 
 const getInitial = name => name[0]
