@@ -51,25 +51,25 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
-::horizontal-carousel
+::horizontal-custom-carousel
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
   
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::custom-voyage-col-card{voyage-slug="chine"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::custom-voyage-col-card{voyage-slug="japon"}
   :::
 
 ::

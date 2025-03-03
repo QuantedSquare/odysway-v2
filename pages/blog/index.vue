@@ -15,8 +15,13 @@
     </v-container>
     <v-container>
       <v-row>
+        <v-skeleton-loader
+          v-if="loading"
+          type="card"
+        />
         <v-col
           v-for="page, index in parsedPages"
+          v-else
           :key="index"
           cols="12"
           sm="6"
@@ -51,14 +56,22 @@ import { useImage } from '#imports'
 const img = useImage()
 
 const route = useRoute()
-const { data: pages } = await useAsyncData(route.path, () => {
+const { data: pages, status } = await useAsyncData(route.path, () => {
   return queryCollection('blog').all()
+})
+
+const loading = computed(() => {
+  if (status.value === 'success') {
+    return false
+  }
+  return true
 })
 
 const parsedPages = computed(() => {
   const parsedPages = pages.value.map((page) => {
     return {
-      title: page.title,
+      title: page.title, // find the way to get a title from page hero-section
+      testTitle: page.body.value[0][3],
       publicationDate: page.body.value[0][2][2][2][2],
       imgSrc: page.body.value[0][1]['image-src'],
       slug: page.path,
@@ -66,6 +79,7 @@ const parsedPages = computed(() => {
   })
   return parsedPages.slice(1)
 })
+// console.log(parsedPages.value[0].testTitle)
 
 // const sortPages = computed(() => {
 //   return [...parsedPages.value].sort((a, b) => {
