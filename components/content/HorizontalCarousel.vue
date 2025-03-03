@@ -3,16 +3,16 @@
     <v-container
       class="d-flex align-center position-relative "
     >
-      <!-- <v-row class="overflow-x-hidden"> -->
-      <v-slide-group
-        v-model="currentWindow"
-        show-arrows
-        center-active
-        class="w-100 group"
-      >
-        <slot name="carousel-item" />
-      </v-slide-group>
-      <!-- </v-row> -->
+      <v-row class="overflow-x-auto">
+        <v-slide-group
+          v-model="currentWindow"
+          show-arrows
+          center-active
+          class="w-100 group"
+        >
+          <slot name="carousel-item" />
+        </v-slide-group>
+      </v-row>
     </v-container>
   </div>
 </template>

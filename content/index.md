@@ -43,7 +43,7 @@ La rencontre <br> au cœur du voyage
 ::
 
 ::title-container
-#title
+
 #title
 Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
@@ -61,7 +61,8 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 #carousel-item
   :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
-  
+
+#carousel-item  
   :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
