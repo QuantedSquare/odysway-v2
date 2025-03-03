@@ -2,45 +2,6 @@
   <div class="mt-16">
     <v-container>
       <v-row class="bg-primary d-flex flex-column align-center flex-md-row row-height  rounded-xl">
-        <!-- <v-col
-          cols="12"
-          md="4"
-          class="relative rounded-xl d-flex flex-column justify-center align-center"
-        >
-          <v-row
-            class="d-flex flex-column align-center text-center text-md-start  align-md-start px-5 ga-4 mt-16"
-          >
-            <div class="coma-absolute bg-primary-light rounded-circle pa-6 ">
-              <v-img
-                src="/images/guillemet-gauche.svg"
-                height="100"
-                width="100"
-              />
-            </div>
-
-            <h2 class="text-white text-h4 text-md-h3 text-shadow mt-6">
-              Les mots de nos voyageurs
-            </h2>
-            <div class=" text-body-1">
-              Ce que les personnes ayant voyagé avec Odysway disent de nous
-            </div>
-            <NuxtLink
-              to="https://fr.trustpilot.com/review/odysway.com"
-              target="blank"
-            >
-              <span class="text-white">
-                Lire d'autres avis
-              </span>
-              <v-btn
-                :icon="mdiChevronRight"
-              />
-            </NuxtLink>
-          </v-row>
-        </v-col>
-        <v-col
-          cols="12"
-          class="mb-10 relative bg-secondary"
-        > -->
         <div class="coma-absolute bg-primary-light rounded-circle pa-6 z-2  ">
           <v-img
             src="/images/ancv.png"
@@ -59,6 +20,17 @@
           <div class=" text-body-1">
             Ce que les personnes ayant voyagé avec Odysway disent de nous
           </div>
+          <NuxtLink
+            to="https://fr.trustpilot.com/review/odysway.com"
+            target="blank"
+          >
+            <span class="text-white">
+              Lire d'autres avis
+            </span>
+            <v-btn
+              :icon="mdiChevronRight"
+            />
+          </NuxtLink>
         </v-col>
 
         <DraggingContainer
