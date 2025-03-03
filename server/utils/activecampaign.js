@@ -150,6 +150,7 @@ const transformDealForAPI = (flatDeal) => {
 
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
+  console.log('API Request to', endpoint, method, data, baseUrl)
   try {
     const response = await axios({
       url: `${baseUrl}${endpoint}`,
@@ -247,6 +248,7 @@ const createDeal = async (data) => {
   const response = await apiRequest('/deals', 'post', formatedDeal)
   if (response.deal.id) {
     await sendSlackNotification(response.deal.id, formatedDeal)
+    await recalculatTotalValues(response.deal.id)
   }
   return response.deal.id
 }
@@ -275,6 +277,7 @@ const updateDeal = async (dealId, data) => {
     delete formatedDeal.phone
   }
   const response = await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
+  await recalculatTotalValues(response.deal.id)
   return response.deal.id
 }
 
@@ -324,7 +327,7 @@ const sendSlackNotification = (id, data) => {
 const optionNotification = async (session) => {
   try {
     const deal = await getDealById(session.dealId)
-    const client = await getClientById(deal.deal.contact)
+    const { client } = await getClientById(deal.deal.contact)
 
     axios({
       url: process.env.SLACK_URL_POSE_OPTION,
@@ -336,7 +339,7 @@ const optionNotification = async (session) => {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: `:open_book: <https://odysway90522.activehosted.com/app/deals/${session.dealId}|${session.title} - ${client.contact.firstName} ${client.contact.lastName} - pax ${session.nbTravelers}>`,
+              text: `:open_book: <https://odysway90522.activehosted.com/app/deals/${session.dealId}|${session.title} - ${client.firstName} ${client.lastName} - pax ${session.nbTravelers}>`,
             },
           },
         ],
@@ -346,6 +349,52 @@ const optionNotification = async (session) => {
   catch (err) {
     console.log('Error get client by id', err)
   }
+}
+
+const recalculatTotalValues = async (dealId) => {
+  // We need to recalculte the total value of the deal and the rest to pay.
+  const customFields = await getDealCustomFields(dealId)
+  const basePrice = customFields.basePricePerTraveler
+
+  const nbTravelers = customFields.nbTravelers
+  const nbChildren = customFields.nbChildren
+  const nbTeens = customFields.nbTeen
+
+  const promoValue = customFields.promoCode ? customFields.promoValue : 0
+  const promoChildren = customFields.promoChildren || 0
+  const promoTeen = customFields.promoTeen || 0
+  const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
+  const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
+
+  const indivRoomPrice = customFields.indivRoom === 'Oui' ? customFields.indivRoomPrice : 0
+  const flightPrice = customFields.flightPrice || 0
+  const extensionPrice = customFields.extensionPrice || 0
+  const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
+
+  console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
+
+  const value = (basePrice * nbTravelers)
+    + indivRoomPrice * nbTravelers
+    + flightPrice * nbTravelers
+    + extensionPrice * nbTravelers
+    + insurancePrice * nbTravelers
+    - (promoValue * nbTravelers)
+    - (promoChildren * nbChildren)
+    - (promoTeen * nbTeens)
+    - promoEarlybird
+    - promoLastMinute
+
+  console.log('======== totalValue:', value, '========')
+
+  const restToPay = value - customFields.alreadyPaid
+
+  console.log('===========rest to pay', restToPay, '========')
+
+  const formatedDeal = transformDealForAPI({
+    value,
+    restToPay,
+  })
+  return await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
 }
 
 export default {

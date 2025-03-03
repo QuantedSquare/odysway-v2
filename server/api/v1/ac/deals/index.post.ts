@@ -10,6 +10,8 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeDeal> => {
 
   const parsedBody = await readValidatedBody(event, body => DealSchema.safeParse(body))
   if (!parsedBody.success) {
+    console.error('Deal creation validation error:', parsedBody.error)
+    console.log('error on', parsedBody.data)
     throw createError({
       statusCode: 400,
       message: `Validation failed: ${parsedBody.error.message}`,
