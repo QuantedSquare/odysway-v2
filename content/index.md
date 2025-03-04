@@ -167,17 +167,12 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 ::
 
 ::title-container
-<<<<<<< HEAD
-#title
-[Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍
-=======
 <!-- [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍 -->
->>>>>>> main
 ::
 
-::reviews-voyages-container
+<!-- ::reviews-voyages-container
 
-::
+:: -->
 
 ::partenaires-container
 

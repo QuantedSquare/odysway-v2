@@ -22,9 +22,30 @@
     >
       <v-icon>{{ mdiMagnify }}</v-icon>
     </v-btn>
+    <v-btn-secondary
+      density="compact"
+      size="x-large"
+      color="primary"
+      href="/"
+      class="d-none d-md-inline"
+    >
+      <div class="d-flex flex-column align-center text-caption text-uppercase">
+        <b>+33 1 84 80 79 75</b>
+        prendre rdv
+      </div>
+    </v-btn-secondary>
+    <v-btn
+      color="primary"
+      icon
+      class="d-inline d-md-none"
+    >
+      <v-icon>
+        {{ mdiPhone }}
+      </v-icon>
+    </v-btn>
     <v-btn
       icon
-      class="mx-md-4 hidden-xs"
+      class="hidden-xs"
     >
       <v-icon>{{ mdiAccountCircle }}</v-icon>
     </v-btn>
@@ -89,7 +110,7 @@
 </template>
 
 <script setup>
-import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
+import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js'
 import { useImage } from '#imports'
 
 const searchText = ref('')

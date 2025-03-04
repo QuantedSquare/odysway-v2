@@ -10,7 +10,7 @@
           class="relative rounded-xl d-flex flex-column justify-center align-center"
         >
           <v-row
-            class="d-flex flex-column align-center text-center text-md-start  align-md-start px-5 ga-4 mt-16"
+            class="d-flex flex-column align-center text-center text-md-start align-md-start px-5 ga-4 mt-16"
           >
             <div class="coma-absolute bg-primary-light rounded-circle pa-6 ">
               <v-img
