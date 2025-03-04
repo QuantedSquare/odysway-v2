@@ -5,13 +5,18 @@
         cols="12"
         :md="Number(leftSpace)"
       >
-        <slot name="left-side" />
+        <div :class="leftSticky === 'true' ? 'element-position': '' ">
+          <slot name="left-side" />
+        </div>
       </v-col>
       <v-col
         class="d-none d-md-block"
         :md="Number(rightSpace)"
       >
-        <div class="position-sticky offset-top mt-12">
+        <div
+          class="mt-12"
+          :class="rightSticky === 'true' ? 'element-position': '' "
+        >
           <slot name="right-side" />
         </div>
       </v-col>
@@ -29,11 +34,20 @@ defineProps({
     type: String,
     default: '4',
   },
+  leftSticky: {
+    type: String,
+    default: 'false',
+  },
+  rightSticky: {
+    type: String,
+    default: 'false',
+  },
 })
 </script>
 
 <style scoped>
-.offset-top{
+.element-position{
+  position:sticky;
   top: 64px;
 }
 </style>

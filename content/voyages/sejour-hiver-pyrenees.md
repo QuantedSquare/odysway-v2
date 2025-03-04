@@ -43,7 +43,7 @@ Prendre RDV
 
 ::
 
-::sticky-container{leftSpace="8" rightSpace="4"}
+::sticky-container{leftSpace="8" rightSpace="4" leftSticky=false rightSticky=true}
 
 #left-side
   ::title-container
