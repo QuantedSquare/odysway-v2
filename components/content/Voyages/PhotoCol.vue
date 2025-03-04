@@ -4,7 +4,7 @@
     :md="colWidth"
   >
     <v-img
-      :src="img(imageSrc, { format: 'webp', quality: 100 })"
+      :src="img(imageSrc, { format: 'webp', quality: 100, width: 1536 })"
       height="100%"
       :min-height="height"
       cover
