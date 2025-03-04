@@ -14,6 +14,19 @@
             <h2 class="text-center text-white text-h6 font-weight-black text-shadow">
               {{ voyageTitle }}
             </h2>
+            <div class="d-flex align-center justify-center">
+              <ClientOnly>
+                <v-rating
+                  :model-value="Number(averageNote)"
+                  color="orange-lighten-1"
+                  density="compact"
+                  size="small"
+                  half-increments
+                  readonly
+                />
+                <span class="text-white text-shadow">({{ nbNotes }})</span>
+              </ClientOnly>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -75,6 +88,15 @@
 <script setup>
 import { mdiCalendarMonthOutline } from '@mdi/js'
 import { useImage } from '#imports'
+
+defineProps({
+  averageNote: {
+    type: String,
+  },
+  nbNotes: {
+    type: String,
+  },
+})
 
 const route = useRoute()
 const img = useImage()

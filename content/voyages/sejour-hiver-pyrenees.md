@@ -268,7 +268,7 @@ Prendre RDV
   ::
 
 #right-side
-  ::info-card
+  ::info-card{averageNote="4.5" nbNotes="44"}
   #catch-phrase
   Discutons de votre projet !
 
