@@ -4,6 +4,7 @@
   >
     <v-img
       :src="img(voyageImg, { format: 'webp', quality: 70, height: 400, width: 640 })"
+      :lazy-src="img(voyageImg, { format: 'webp', quality: 10, width: 640 })"
       max-height="400"
       cover
     >
