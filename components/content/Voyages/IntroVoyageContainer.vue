@@ -3,7 +3,6 @@
     <v-row>
       <v-col
         cols="12"
-        md="8"
       >
         <v-row>
           <v-col
@@ -28,12 +27,12 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col
+      <!-- <v-col
         md="4"
         class="d-none d-md-flex text-body-1 text-grey-darken-3"
       >
         <slot name="info-card" />
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
