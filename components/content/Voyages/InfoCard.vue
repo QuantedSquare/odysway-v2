@@ -53,7 +53,7 @@
                 size="x-large"
                 class="mr-2"
               >
-                {{ mdiCalendar }}
+                {{ mdiCalendarMonthOutline }}
               </v-icon>
 
               <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
@@ -72,7 +72,7 @@
 </template>
 
 <script setup>
-import { mdiCalendar } from '@mdi/js'
+import { mdiCalendarMonthOutline } from '@mdi/js'
 import { useImage } from '#imports'
 
 const route = useRoute()

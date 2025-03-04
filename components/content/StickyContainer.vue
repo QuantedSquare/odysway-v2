@@ -11,7 +11,9 @@
         class="d-none d-md-block"
         :md="Number(rightSpace)"
       >
-        <slot name="right-side" />
+        <div class="position-sticky offset-top mt-12">
+          <slot name="right-side" />
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -29,3 +31,9 @@ defineProps({
   },
 })
 </script>
+
+<style scoped>
+.offset-top{
+  top: 64px;
+}
+</style>
