@@ -4,17 +4,19 @@
       <v-col
         cols="12"
         :md="leftSpace"
+        :class="leftSticky ? 'd-none d-md-block' : '' "
       >
         <div
           class="sticky-top"
-          :class="leftSticky ? 'position-sticky': '' "
+          :class="leftSticky ? 'position-sticky ': '' "
         >
           <slot name="left-side" />
         </div>
       </v-col>
       <v-col
-        class="d-none d-md-block"
+        cols="12"
         :md="rightSpace"
+        :class="rightSticky ? 'd-none d-md-block' : '' "
       >
         <div
           class="sticky-top"
