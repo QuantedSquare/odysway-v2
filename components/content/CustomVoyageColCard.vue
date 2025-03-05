@@ -8,7 +8,6 @@
   >
     <v-card
       elevation="0"
-      rounded="xl"
       class="hover-scale"
     >
       <NuxtLink
@@ -69,7 +68,7 @@
                 <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 no-white-space">
                   {{ voyage.title }}
                 </v-card-title>
-                <v-card-text class="font-weight-bold  px-0 d-flex flex-column align-start ga-2 mt-4">
+                <v-card-text class="font-weight-bold px-0 d-flex flex-column align-start ga-2 mt-4">
                   <span class="text-body-1">{{ voyage.country }} - {{ voyage.duration }}</span>
                   <span class="text-body-2"> A partir de {{ voyage.startingPrice }}€</span>
                   <client-only>
@@ -185,6 +184,7 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   left: 0;
   right: 0;
   height: 50%;
+  border-radius: 24px;
   mask: linear-gradient(transparent, rgb(0, 0, 0), black);
   backdrop-filter: blur(4px);
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.752));
@@ -203,8 +203,4 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
-/* .hover-scale{
-  transform:scale(1);
-  transition: transform 0.2s ease-in-out;
-} */
 </style>

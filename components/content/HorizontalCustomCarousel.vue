@@ -1,6 +1,17 @@
 <template>
   <v-container class="pt-0">
-    <v-row justify="end">
+    <v-row
+      align="center"
+      no-gutters
+    >
+      <v-col
+        cols="12"
+        sm="auto"
+        class="text-dark font-weight-black text-h5 text-md-h4 my-4"
+      >
+        <slot name="title" />
+      </v-col>
+      <v-spacer />
       <v-col cols="auto">
         <v-btn
           icon
@@ -8,6 +19,7 @@
           color="transparent"
           variant="outlined"
           :disabled="arrivedState.left"
+          class="mr-1"
           @click="x -= scrollAmount"
         >
           <v-icon
@@ -23,6 +35,7 @@
           color="transparent"
           variant="outlined"
           :disabled="arrivedState.right"
+          class="ml-1"
           @click="x += scrollAmount"
         >
           <v-icon
