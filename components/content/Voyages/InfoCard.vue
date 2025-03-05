@@ -39,48 +39,46 @@
         <slot name="payment-items" />
       </v-list>
     </v-card-item>
-    <v-card-actions class="mb-4">
-      <v-container>
-        <v-row
-          justify-md="center"
-          class="text-center"
+    <v-card-actions>
+      <v-row
+        justify-md="center"
+        class="text-center"
+      >
+        <v-col
+          cols="12"
+          lg="10"
         >
-          <v-col
-            cols="12"
-            lg="10"
+          <v-btn-secondary block>
+            <slot name="text-btn-1" />
+          </v-btn-secondary>
+        </v-col>
+        <v-col
+          cols="12"
+          lg="8"
+        >
+          <NuxtLink
+            width="100%"
+            class="text-primary text-decoration-underline text-break"
+            to="#"
           >
-            <v-btn-secondary block>
-              <slot name="text-btn-1" />
-            </v-btn-secondary>
-          </v-col>
-          <v-col
-            cols="12"
-            lg="8"
-          >
-            <NuxtLink
-              width="100%"
-              class="text-primary text-decoration-underline text-break"
-              to="#"
+
+            <v-icon
+              size="x-large"
+              class="mr-2"
             >
+              {{ mdiCalendarMonthOutline }}
+            </v-icon>
 
-              <v-icon
-                size="x-large"
-                class="mr-2"
-              >
-                {{ mdiCalendarMonthOutline }}
-              </v-icon>
-
-              <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
-              <span>
-                <slot
-                  name="text-btn-2"
-                  mdc-unwrap="p"
-                />
-              </span>
-            </NuxtLink>
-          </v-col>
-        </v-row>
-      </v-container>
+            <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
+            <span>
+              <slot
+                name="text-btn-2"
+                mdc-unwrap="p"
+              />
+            </span>
+          </NuxtLink>
+        </v-col>
+      </v-row>
     </v-card-actions>
   </v-card>
 </template>
