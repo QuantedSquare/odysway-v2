@@ -1,57 +1,58 @@
 <template>
-  <div>
-    <v-dialog
-      v-model="dialog"
-      transition="dialog-top-transition"
+  <v-dialog
+    v-model="dialog"
+    transition="dialog-bottom-transition"
+  >
+    <template #activator="{ props: activatorProps }">
+      <v-btn
+        v-bind="activatorProps"
+        variant="outlined"
+        size="large"
+        block
+        :append-icon="mdiPlay"
+        color="text-shadow bg-blur"
+      >
+        <span class="text-caption text-uppercase text-md-button text-shadow"><slot name="video-btn" /></span>
+      </v-btn>
+    </template>
+    <v-container
+      class="pa-1"
+      fluid
     >
-      <template #activator="{ props: activatorProps }">
-        <v-btn
-          text="voir video"
-          v-bind="activatorProps"
-          variant="outlined"
-          size="large"
-          :append-icon="mdiPlay"
-          color="text-shadow bg-blur on-hover"
+      <v-row justify="center">
+        <v-col
+          cols="12"
+          md="6"
+          class="d-flex flex-column ga-4 pa-1"
         >
-          <span class="text-caption text-uppercase text-md-button">voir video</span>
-        </v-btn>
-      </template>
-      <v-sheet>
-        <v-container fluid>
-          <v-row>
-            <v-spacer />
-            <v-col cols="auto">
-              <CloseBtn @close="dialog = false" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col class="text-caption text-md-h6 text-md-center">
-              <h1><slot name="video-title" /></h1>
-            </v-col>
-            <v-col
-              cols="12"
-              class="d-flex justify-center mb-10"
-            >
-              <iframe
-                width="720"
-                height="350"
-                :src="props.videoSrc"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-sheet>
-    </v-dialog>
-  </div>
+          <v-btn
+            variant="outlined"
+            :prepend-icon="mdiClose"
+            color="grey-darken-3"
+            class="align-self-end bg-white"
+            @click="dialog = false"
+          >
+            Fermer
+          </v-btn>
+          <iframe
+            class="align-self-center"
+            width="100%"
+            height="300"
+            :src="props.videoSrc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-dialog>
 </template>
 
 <script setup>
-import { mdiPlay } from '@mdi/js'
+import { mdiPlay, mdiClose } from '@mdi/js'
 
 const props = defineProps({
   videoSrc: {

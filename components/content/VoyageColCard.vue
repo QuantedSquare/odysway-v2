@@ -2,9 +2,8 @@
   <v-col
     v-if="voyage && voyage.imgSrc"
     cols="12"
-    sm="6"
+    sm="4"
     md="3"
-    class="height-voyageCard "
   >
     <v-card
       elevation="0"
@@ -19,7 +18,7 @@
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 400 })"
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="xl"
-          contain
+          cover
           class="hover-scale"
         >
           <client-only>
@@ -30,15 +29,17 @@
                 text="Test tooltip"
               >
                 <template #activator="{ props }">
-                  <v-btn-voyage
+                  <v-btn
                     v-bind="props"
                     icon
+                    size="x-small"
+                    color="rgba(0, 0, 0, 0.32)"
                   >
                     <v-icon
                       :icon="mdiAccountGroup"
                       color="white"
                     />
-                  </v-btn-voyage>
+                  </v-btn>
                 </template>
               </v-tooltip>
               <v-tooltip
@@ -46,13 +47,18 @@
                 text="Test tooltip"
               >
                 <template #activator="{ props }">
-                  <v-btn-voyage v-bind="props">
+                  <v-btn
+                    v-bind="props"
+                    icon
+                    size="x-small"
+                    color="rgba(0, 0, 0, 0.32)"
+                  >
                     <v-img
                       src="/icons/child.svg"
                       alt="Child icon"
                       class="svg-child-icon"
                     />
-                  </v-btn-voyage>
+                  </v-btn>
                 </template>
               </v-tooltip>
             </div>
@@ -201,8 +207,4 @@ const { data: voyage } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   transform:scale(1);
   transition: transform 0.2s ease-in-out;
 }
-
-/* .no-white-space {
-  white-space: normal;
-} */
 </style>

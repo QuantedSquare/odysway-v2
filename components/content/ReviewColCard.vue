@@ -14,7 +14,7 @@
         height="27"
         width="27"
       />
-      <p class="text-center  text-body-1">
+      <p class="text-center text-body-1 text-grey-darken-3">
         {{ review.text }}
       </p>
       <v-img

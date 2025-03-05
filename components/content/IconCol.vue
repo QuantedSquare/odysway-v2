@@ -9,18 +9,17 @@
       location="bottom"
     >
       <template #activator="{ props }">
-        <v-btn
+        <v-btn-secondary
           v-bind="props"
           icon
-          size="small"
-          color="secondary"
+          size="x-small"
           class="mr-2"
         >
           <v-icon
             :icon="icon"
             size="x-large"
           />
-        </v-btn>
+        </v-btn-secondary>
       </template>
       <span>
         <slot

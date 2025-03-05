@@ -13,7 +13,7 @@
         <template #image>
           <v-img :src="img(categorie?.image, { format: 'webp', quality: 70, width: 200, height: 200 })" />
         </template>
-        <span class="text-shadow text-white font-weight-bold position-absolute bottom-0 pa-2">
+        <span class="shadow text-white font-weight-bold position-absolute bottom-0 pa-2">
           {{ categorie.title }}
         </span>
       </v-card>

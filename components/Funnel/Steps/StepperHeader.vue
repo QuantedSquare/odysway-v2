@@ -1,14 +1,17 @@
 <template>
   <v-stepper
-    v-show="model !== 11"
     id="stepper"
     v-model="model"
     alt-labels
     editable
     show-actions
+    class="text-caption"
     color="primary"
   >
-    <v-stepper-header class="elevation-0">
+    <v-stepper-header
+      v-if="props.skipperMode !== 'summary'"
+      class="elevation-0 d-flex justify-center"
+    >
       <template
         v-for="(step) in stepDefinitions"
         :key="step.number"
@@ -44,6 +47,14 @@ const props = defineProps({
   },
 })
 const stepDefinitions = computed(() => {
+  if (props.skipperMode === 'summary') {
+    return [
+      {
+        number: 5,
+        label: 'Récapitulatif',
+      },
+    ]
+  }
   const baseSteps = [
     {
       number: 1,

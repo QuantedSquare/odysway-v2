@@ -4,31 +4,30 @@ Immersion hivernale en terre béarnaise
 
 #component-slot-1
   ::photo-gallery-dialog
-  
-  #photos
+  #gallery-btn
+  voir la galerie photos
+
+  #photo-col
     :::photo-col{imageSrc='/images/iStock-1356423948.webp' colWidth="7" height="500"}
     :::
-    
     :::photo-col{imageSrc='/images/aiguille-d-ansabere-neige-1024x683.jpg' colWidth="5"}
     :::
-
     :::photo-col{imageSrc='/images/iStock-1190369407 (1).webp' colWidth="4"}
     :::
-    
     :::photo-col{imageSrc='/images/iStock-1356423948.webp' colWidth="8"}
     :::
-
     :::photo-col{imageSrc='/images/aiguille-d-ansabere-neige-1024x683.jpg' colWidth="5"}
     :::
-
     :::photo-col{imageSrc='/images/iStock-1190369407 (1).webp' colWidth="7"}
     :::
+
+    ::
   :: 
 
 #component-slot-2
   ::video-dialog{videoSrc="https://www.youtube.com/embed/vrB9wC6quaU?si=z7xt5GDGS2JnaSot"}
-  #video-title
-  Immersion hivernale en terre béarnaise
+  #video-btn
+  voir la video
   ::
   
 ::
@@ -38,7 +37,7 @@ Immersion hivernale en terre béarnaise
 Dès [2000€]{style="font-weight: bold"}
 
 #text-btn-1
-voir les dates / prix
+voir dates & prix
 
 #text-btn-2
 Prendre RDV
@@ -107,8 +106,8 @@ Immersion hivernale en terre béarnaise
 
 #info-card
 ::info-card
-<!-- #catch-phrase
-Discutons de votre projet ! -->
+#catch-phrase
+Discutons de votre projet !
 
 
 #payment-items
@@ -123,10 +122,10 @@ Discutons de votre projet ! -->
   :::
 
 #text-btn-1
-voir les dates / prix
+voir dates & prix
 
 #text-btn-2
-Prendre RDV
+Prendre RDV 
 
 ::
 
@@ -199,7 +198,7 @@ POURQUOI VOYAGER AVEC ODYSWAY ?
 Le programme du voyage
 ::
 
-::day-row{image="/images/AdobeStock_124472096.jpeg"}
+::day-row{image="/images/Capture d’écran 2024-10-31 à 12.27.35.webp"}
 #subtitle
 Jour 1
 
@@ -210,6 +209,55 @@ Arrivée en terre béarnaise
 Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au cœur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !
 
 ::
+
+::day-row{image="/images/donnie-rosie-O7L3MrlSAHA-unsplash.webp"}
+#subtitle
+Jour 2
+
+#title
+PREMIERS PAS DANS LE PARC NATIONAL
+
+#text
+Au cœur de l’hiver, partez pour une douce aventure dans la vallée d’Aspe. Depuis Peyrenère, empruntez le sentier du Somport, une randonnée facile qui vous mène à travers le cœur préservé du Parc National des Pyrénées. Au fil de votre marche, les paysages se dévoilent dans une harmonie délicate, alternant entre forêts mystérieuses et clairières lumineuses, où la neige se pose en silence. Chaque pas est une immersion dans la nature hivernale, loin du tumulte, où la beauté sauvage et sereine de la vallée se révèle sous une lumière douce.
+
+::
+
+::day-row{image="/images/iStock-1199617099.webp"}
+#subtitle
+Jour 3
+
+#title
+LACS ET PANORAMAS D’ALTITUDE
+
+#text
+Laissez-vous guider jusqu’au lac d’Estaëns, après une belle ascension de 650 mètres de dénivelé. En chemin, passez par la cabane d’Escourets, un refuge simple au milieu des montagnes, où la pierre et le bois se fondent dans le paysage sauvage. Au fil de ces randonnées, la nature vous entoure de panoramas saisissants et d’une quiétude rare, où chaque cabane semble veiller sur la vallée, nichée entre les pics majestueux et les prairies enneigées
+
+::
+
+::day-row{image="/images/65a97137fad16a74a8a2682c_Aiguilles-ansabere-ski-de-rando.jpg"}
+#subtitle
+Jour 4
+
+#title
+ENTRE CABANES ET PICS
+
+#text
+Prenez la route de la cabane d’Ansabère, avec une montée de 550 mètres de dénivelé pour une randonnée de difficulté moyenne. Le sentier serpente d’abord à travers les forêts profondes, avant de s’ouvrir sur une crête offrant une vue saisissante. Ici, les majestueuses aiguilles d’Ansabère se dressent, élancées et imposantes, dominant les paysages environnants. Cette alternance de forêt ombragée et de crêtes panoramiques offre une immersion pleine de contrastes, où chaque pas dévoile un peu plus la grandeur de ce massif pyrénéen.
+
+::
+
+::day-row{image="/images/iStock-1739420999.webp"}
+#subtitle
+Jour 5
+
+#title
+DERNIER JOUR DANS LA VALLÉE
+
+#text
+Pour ce dernier jour dans la vallée, l’heure est aux adieux, mais avec la promesse d’un retour. Alors que vous laissez derrière vous les paysages enneigés et les cabanes de montagne, une pensée vous invite à revenir ici en été, lorsque la vallée sera transformée. Les sentiers que vous avez parcourus sous la neige s’ouvriront sur des estives verdoyantes, où les bergers montent avec leurs troupeaux de brebis. Là, dans le calme des prairies d’altitude, vous pourrez rencontrer ces gardiens des montagnes, partager leurs histoires, et découvrir un autre visage de la vallée, vibrant de vie. En quittant les sommets enneigés aujourd’hui, une part de vous sait que cette aventure hivernale est une première invitation, laissant la porte ouverte à de nouvelles découvertes.
+
+::
+
 
 ::title-container
 Votre hébergement
@@ -373,7 +421,7 @@ Foire aux questions
 ::
 
 #faq
-  :::question-answer-card
+  :::question-panel
   #question
   [Où vais-je dormir ?]{style="font-weight:bold"}
   #answer
@@ -381,7 +429,7 @@ Foire aux questions
 
   :::
   
-  :::question-answer-card
+  :::question-panel
   #question
   [Que vais-je manger ?]{style="font-weight:bold"}
   #answer
@@ -389,7 +437,7 @@ Foire aux questions
 
   :::
 
-  :::question-answer-card
+  :::question-panel
   #question
   [Quoi porter lors de ces randonnées ?]{style="font-weight:bold"}
   #answer
@@ -397,7 +445,7 @@ Foire aux questions
 
   :::
   
-  :::question-answer-card
+  :::question-panel
   #question
   [Ce voyage est-il fait pour moi ?]{style="font-weight:bold"}
   #answer
@@ -409,7 +457,7 @@ Foire aux questions
 
   :::
 
-  :::question-answer-card
+  :::question-panel
   #question
   [Où se situe la vallée d'Aspe ?]{style="font-weight:bold"}
   #answer
@@ -417,14 +465,14 @@ Foire aux questions
 
   :::
   
-  :::question-answer-card
+  :::question-panel
   #question
   [Quels animaux est-il possible d'observer lors des randonnées ?]{style="font-weight:bold"}
   #answer
   Dans la vallée d’Aspe, vous aurez l’occasion d’observer une faune riche et diversifiée. Parmi les espèces emblématiques, vous pourrez apercevoir des isards, petits cousins des chamois, évoluant sur les pentes escarpées. Le majestueux gypaète barbu, un vautour rare aux ailes imposantes, ainsi que le vautour fauve sont souvent visibles dans le ciel. Vous pourrez également rencontrer des marmottes, des renards et parfois des cerfs dans les zones plus boisées. Les plus chanceux pourront même entendre ou apercevoir le discret desman des Pyrénées, un petit mammifère aquatique typique des rivières de montagne.
   :::
 
-  :::question-answer-card
+  :::question-panel
   #question
   [Comment se passe la réservation avec Odysway ? ]{style="font-weight:bold"}
   #answer

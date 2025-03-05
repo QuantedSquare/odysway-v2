@@ -163,7 +163,7 @@ watch(mdAndDown, (newValue) => {
   flex: 1;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   transition: all 0.5s ease-in-out;
 }
 

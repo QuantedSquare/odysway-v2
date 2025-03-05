@@ -12,14 +12,13 @@
   white-space: normal !important;
 }
 
-.on-hover:hover{
-  scale: 1.03;
-}
-
 a {
   text-decoration: none; 
   
   &:hover {
     text-decoration: underline; 
   }
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

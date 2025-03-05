@@ -8,7 +8,17 @@
         v-model="drawer"
         location="right"
         disable-resize-watcher
+        mobile
       >
+        <v-btn
+          icon
+          class="mx-md-4 hidden-sm-and-up"
+          color="white"
+        >
+          <v-icon color="primary">
+            {{ mdiAccountCircle }}
+          </v-icon>
+        </v-btn>
         <v-list
           v-for="item, index in drawerItems"
           :key="`Drawer item ${index}`"
@@ -28,7 +38,7 @@
         </v-list>
       </v-navigation-drawer>
     </ClientOnly>
-    <v-main style="--v-layout-top: 64px;">
+    <v-main style="--v-layout-top: 0px; --v-layout-bottom: 0px;">
       <slot />
     </v-main>
     <FooterOdysway />
@@ -36,6 +46,8 @@
 </template>
 
 <script setup>
+import { mdiAccountCircle } from '@mdi/js'
+
 const drawer = ref(false)
 
 const drawerItems = ref([

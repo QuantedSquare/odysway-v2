@@ -10,9 +10,9 @@
             que nous<br>
             <span class="text-secondary">proposons</span>
           </h1>
-          <div class="text-caption text-grey text-no-wrap">
+          <!-- <div class="text-caption text-grey text-no-wrap">
             DRAG AND DROP
-          </div>
+          </div> -->
         </div>
         <DraggingContainer ref="draggingContainerRef">
           <slot />
