@@ -15,7 +15,7 @@
           :icon="mdiChevronLeft"
           class="bg-white"
           size="small"
-          @click="prev"
+          @click="tab = 2"
         >
           <v-icon>{{ mdiChevronLeft }}</v-icon>
         </v-btn>
@@ -25,7 +25,7 @@
           :icon="mdiChevronRight"
           class="bg-white"
           size="small"
-          @click="next"
+          @click="tab = 2"
         >
           <v-icon>{{ mdiChevronLeft }}</v-icon>
         </v-btn>
@@ -34,7 +34,7 @@
         :value="1"
         class="rounded-t-lg"
       >
-        <div>
+        <div class="text-subtitle-1 text-md-h6 font-weight-bold">
           <slot
             name="phrase-left-title"
             mdc-unwrap="p"
@@ -51,7 +51,7 @@
         :value="2"
         class="rounded-t-lg"
       >
-        <div>
+        <div class="text-subtitle-1 text-md-h6 font-weight-bold">
           <slot
             name="phrase-right-title"
             mdc-unwrap="p"
@@ -113,7 +113,7 @@
                     {{ mdiCheckCircleOutline }}
                   </v-icon> <span>Départ garanti</span>
                   <p>Confirmé</p>
-                  <v-icon>{{ mdiAccount }}</v-icon> {{ item.bookedPlaces }} - reste {{ item.maxTravellers - item.bookedPlaces }} places
+                  <v-icon>{{ mdiAccount }}</v-icon> {{ item.bookedPlaces }} inscrits - reste {{ item.maxTravellers - item.bookedPlaces }} places
                 </div>
               </td>
               <td>
@@ -134,7 +134,46 @@
         </v-table>
       </v-tabs-window-item>
       <v-tabs-window-item :value="2">
-        hello private
+        <v-container>
+          <v-row>
+            <v-col
+              cols="12"
+              class="text-subtitle-1 text-md-h6 font-weight-bold"
+            >
+              Décrivez-nous votre projet, un conseiller Odysway reviendra vers vous avec un devis personnalisé
+            </v-col>
+            <v-col
+              cols="12"
+              class="text-subtitle-1 text-md-h6 font-weight-bold"
+            >
+              Combien de participants ?
+            </v-col>
+            <v-col cols="6">
+              <v-select
+                label="Nombres d'adultes"
+                :items="[1, 2, 3, 4, 5, 6, 7, 8]"
+                variant="outlined"
+                bg-color="white"
+              />
+            </v-col>
+            <v-col cols="6">
+              <v-select
+                label="Nombres d'enfants"
+                :items="[1, 2, 3, 4, 5, 6, 7, 8]"
+                variant="outlined"
+                bg-color="white"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              class="d-flex justify-center"
+            >
+              <v-btn-secondary color="white">
+                demander un devis
+              </v-btn-secondary>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
@@ -143,9 +182,9 @@
 <script setup>
 import { mdiChevronLeft, mdiChevronRight, mdiAccount, mdiCheckCircleOutline } from '@mdi/js'
 import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
 
-dayjs.extend(customParseFormat)
+dayjs.extend(localizedFormat)
 
 const props = defineProps({
   slug: {
@@ -166,7 +205,14 @@ const dates = computed(() => {
   return deal.value.dates
 })
 
-// console.log(dayjs(dates.value[0].departureDate))
+const formatedDates = computed(() => {
+  return [...dates.value].map((d) => {
+    dayjs(d.departureDate).locale('fr').format('ddd DD/MM/YYYY')
+    dayjs(d.returnDate).locale('fr').format('ddd DD/MM/YYYY')
+  })
+})
+
+console.log(formatedDates)
 // console.log(dayjs(dates.value[0].departureDate).format('ddd MMMM DD/MM/YYYY'))
 </script>
 
