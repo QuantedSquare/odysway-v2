@@ -394,6 +394,25 @@ Les avis des voyageurs
 
 ::
 
+::title-container
+#title
+Dates & Prix
+::
+
+::dates-prices-container{slug="sejour-pyrenees"}
+#phrase-left-title
+DÉPARTS GROUPÉS
+#phrase-left-subtitle
+REJOIGNEZ UN PETIT GROUPE DE 6 VOYAGEURS
+
+#phrase-right-title
+VOYAGE PRIVATISÉ
+#phrase-right-subtitle
+DEMANDEZ VOTRE DEVIS PERSONNALISÉ
+
+::
+
+
 ::faq-container
 #section-title
 ::title-container
