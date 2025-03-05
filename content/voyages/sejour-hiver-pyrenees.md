@@ -287,7 +287,7 @@ Prendre RDV
   voir dates & prix
 
   #text-btn-2
-  Prendre RDV 
+  Demander plus d’informations
   ::
 
 ::
@@ -372,7 +372,7 @@ Les avis des voyageurs
   Floriane
 
   #avis
-« J'ai découvert Odysway pour le séjour dans les Pyrénées pour découvrir la vie de berger et j'en garderais un très beau souvenir, aussi bien pour les paysages à couper le souffle que pour les belles rencontres que j'ai pu faire.
+  « J'ai découvert Odysway pour le séjour dans les Pyrénées pour découvrir la vie de berger et j'en garderais un très beau souvenir, aussi bien pour les paysages à couper le souffle que pour les belles rencontres que j'ai pu faire.
   Merci pour cette expérience, vos échanges et votre disponibilité. »
   :::
   
@@ -393,6 +393,25 @@ Les avis des voyageurs
 ::
 
 ::
+
+::title-container
+#title
+Dates & Prix
+::
+
+::dates-prices-container{slug="sejour-pyrenees"}
+#phrase-left-title
+DÉPARTS GROUPÉS
+#phrase-left-subtitle
+REJOIGNEZ UN PETIT GROUPE DE 6 VOYAGEURS
+
+#phrase-right-title
+VOYAGE PRIVATISÉ
+#phrase-right-subtitle
+DEMANDEZ VOTRE DEVIS PERSONNALISÉ
+
+::
+
 
 ::faq-container
 #section-title

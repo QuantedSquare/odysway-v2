@@ -1,6 +1,6 @@
 ::hero-section{imageSrc="/images/Vélo.jpg"}
 #title
-Odysway, l'agence spécialiste du voyage en immersion
+Voyager autrement, en plaçant l’humain au cœur de chaque aventure
 
 ::
 
