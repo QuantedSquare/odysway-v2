@@ -5,7 +5,7 @@
         cols="12"
         :md="Number(leftSpace)"
       >
-        <div :class="leftSticky === 'true' ? 'element-position': '' ">
+        <div :class="leftSticky === 'true' ? 'sticky-position': '' ">
           <slot name="left-side" />
         </div>
       </v-col>
@@ -15,7 +15,7 @@
       >
         <div
           class="mt-12"
-          :class="rightSticky === 'true' ? 'element-position': '' "
+          :class="rightSticky === 'true' ? 'sticky-position': '' "
         >
           <slot name="right-side" />
         </div>
@@ -46,7 +46,7 @@ defineProps({
 </script>
 
 <style scoped>
-.element-position{
+.sticky-position{
   position:sticky;
   top: 64px;
 }

@@ -1,7 +1,7 @@
 ::hero-section{imageSrc="/images/AdobeStock_124472096.jpeg"}
 
 #title
-La rencontre <br> au cœur du voyage
+Partez à la rencontre <br> du monde autrement
 
 #component-slot-1
   :::SearchField
