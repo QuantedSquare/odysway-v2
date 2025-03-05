@@ -3,19 +3,22 @@
     <v-row>
       <v-col
         cols="12"
-        :md="Number(leftSpace)"
+        :md="leftSpace"
       >
-        <div :class="leftSticky === 'true' ? 'element-position': '' ">
+        <div
+          class="sticky-top"
+          :class="leftSticky ? 'position-sticky': '' "
+        >
           <slot name="left-side" />
         </div>
       </v-col>
       <v-col
         class="d-none d-md-block"
-        :md="Number(rightSpace)"
+        :md="rightSpace"
       >
         <div
-          class="mt-12"
-          :class="rightSticky === 'true' ? 'element-position': '' "
+          class="sticky-top"
+          :class="rightSticky ? 'position-sticky': '' "
         >
           <slot name="right-side" />
         </div>
@@ -27,27 +30,32 @@
 <script setup>
 defineProps({
   leftSpace: {
-    type: String,
-    default: '8',
+    type: Number,
+    default: 8,
+    validator() {
+      return [3, 4, 5, 6, 7, 8, 9]
+    },
   },
   rightSpace: {
-    type: String,
-    default: '4',
+    type: Number,
+    default: 4,
+    validator() {
+      return [3, 4, 5, 6, 7, 8, 9]
+    },
   },
   leftSticky: {
-    type: String,
-    default: 'false',
+    type: Boolean,
+    default: false,
   },
   rightSticky: {
-    type: String,
-    default: 'false',
+    type: Boolean,
+    default: true,
   },
 })
 </script>
 
 <style scoped>
-.element-position{
-  position:sticky;
+.sticky-top{
   top: 64px;
 }
 </style>

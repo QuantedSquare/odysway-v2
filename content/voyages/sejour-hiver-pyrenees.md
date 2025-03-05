@@ -43,7 +43,7 @@ Prendre RDV
 
 ::
 
-::sticky-container{leftSpace="8" rightSpace="4" leftSticky=false rightSticky=true}
+::sticky-container{:leftSpace="8" :rightSpace="4" :leftSticky=false :rightSticky=true}
 
 #left-side
   ::title-container
@@ -268,7 +268,7 @@ Prendre RDV
   ::
 
 #right-side
-  ::info-card{averageNote="4.5" nbNotes="44"}
+  ::info-card{averageNote="4.5" nbNotes="44" class="mt-12"}
   #catch-phrase
   Discutons de votre projet !
 
