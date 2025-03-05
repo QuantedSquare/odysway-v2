@@ -20,7 +20,7 @@
           </v-col>
           <v-col cols="12">
             <v-img
-              :src="img(imageSrc, { format: 'webp', quality: 100 })"
+              :src="img(imageSrc, { format: 'webp', quality: 100, width: 1024 })"
               max-height="800px"
               width="100%"
               cover

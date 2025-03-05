@@ -65,7 +65,7 @@
               width="100%"
               max-height="42px"
               class="my-2"
-              :src="img('/logos/logo_noir.png', { format: 'webp', quality: 70 })"
+              :src="img('/logos/logo_noir.png', { format: 'webp', quality: 70, width: 640 })"
             />
             <p class="mb-3">
               {{ pOdysway }}
@@ -169,8 +169,7 @@
               variant="text"
             >
               <v-img
-                :src="img('/icons/gb.svg', { format: 'webp', quality: 70 })"
-                height="20px"
+                :src="img('/icons/gb.svg', { format: 'webp', quality: 70, width: 640 })"
                 width="20px"
                 contain
               />

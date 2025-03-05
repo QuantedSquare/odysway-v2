@@ -53,7 +53,7 @@ const formatImage = photo => img(photo, {
   format: 'webp',
   quality: 70,
   height: 100,
-  width: 100,
+  width: 320,
 })
 
 const getInitial = name => name[0]

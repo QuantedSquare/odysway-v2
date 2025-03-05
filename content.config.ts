@@ -6,6 +6,10 @@ export default defineContentConfig({
       type: 'page',
       source: '**/*.md',
     }),
+    blog: defineCollection({
+      type: 'page',
+      source: 'blog/*.md',
+    }),
     categories: defineCollection({
       type: 'data',
       source: 'categories/**.json',

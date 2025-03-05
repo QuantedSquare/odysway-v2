@@ -3,11 +3,12 @@
     <v-container
       class="d-flex align-center position-relative "
     >
-      <v-row class="overflow-x-hidden">
+      <v-row class="overflow-x-auto">
         <v-slide-group
           v-model="currentWindow"
+          show-arrows
           center-active
-          class="w-100 "
+          class="w-100 group"
         >
           <slot name="carousel-item" />
         </v-slide-group>

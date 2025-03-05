@@ -14,7 +14,7 @@
             <v-img
               v-for="(partenaire, key) in partenaires"
               :key="key"
-              :src="img(partenaire?.imgSrc, { format: 'webp', quality: 70, height: 110 })"
+              :src="img(partenaire?.imgSrc, { format: 'webp', quality: 70, height: 110, width: 640 })"
               :alt="`logo du partenaire ${partenaire.description}`"
               class="logo-img"
             />

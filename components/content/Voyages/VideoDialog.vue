@@ -23,7 +23,7 @@
         <v-col
           cols="12"
           md="6"
-          class="d-flex flex-column ga-4 pa-1"
+          class="d-flex flex-column pa-1"
         >
           <v-btn
             variant="outlined"

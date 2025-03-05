@@ -9,7 +9,8 @@
       <v-img
         min-width="150px"
         height="38"
-        :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 150 })"
+        :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 320 })"
+        cover
       />
     </NuxtLink>
 
@@ -21,9 +22,30 @@
     >
       <v-icon>{{ mdiMagnify }}</v-icon>
     </v-btn>
+    <v-btn-secondary
+      density="compact"
+      size="x-large"
+      color="primary"
+      href="/"
+      class="d-none d-md-inline"
+    >
+      <div class="d-flex flex-column align-center text-caption text-uppercase">
+        <b>+33 1 84 80 79 75</b>
+        prendre rdv
+      </div>
+    </v-btn-secondary>
+    <v-btn
+      color="primary"
+      icon
+      class="d-inline d-md-none"
+    >
+      <v-icon>
+        {{ mdiPhone }}
+      </v-icon>
+    </v-btn>
     <v-btn
       icon
-      class="mx-md-4 hidden-xs"
+      class="hidden-xs"
     >
       <v-icon>{{ mdiAccountCircle }}</v-icon>
     </v-btn>
@@ -35,60 +57,60 @@
       <v-icon>{{ mdiDotsVertical }}</v-icon>
     </v-btn>
     <!-- <v-row
-      justify="end"
-      class="d-none d-md-flex"
-    >
-      <v-col
-        class="d-flex align-center justify-end"
-      >
-        <v-text-field-home
-          v-model="searchText"
-          v-click-outside="() => searchOpen = false"
-          type="text"
-          placeholder="Rechercher"
-          class="expanding-search"
-          :class="searchOpen ? 'expanded': 'closed'"
-          @click.stop="searchOpen = !searchOpen"
-        >
-          <template #prepend-inner>
-            <v-btn
-              icon
-              size="xs"
+            justify="end"
+            class="d-none d-md-flex"
+          >
+            <v-col
+              class="d-flex align-center justify-end"
             >
-              <v-icon
-                color="grey"
+              <v-text-field-home
+                v-model="searchText"
+                v-click-outside="() => searchOpen = false"
+                type="text"
+                placeholder="Rechercher"
+                class="expanding-search"
+                :class="searchOpen ? 'expanded': 'closed'"
+                @click.stop="searchOpen = !searchOpen"
               >
-                {{ mdiMagnify }}
-              </v-icon>
-            </v-btn>
-          </template>
-        </v-text-field-home>
-        <v-btn-primary
-          v-for="item, index in items"
-          :key="`link header ${index}`"
-          :to="item.link"
-          class="text-button text-uppercase font-weight-bold mx-4"
-        >
-          {{ item.title }}
-        </v-btn-primary>
-        <v-btn-secondary
-          density="compact"
-          size="x-large"
-          href="/calendly"
-          class="px-12"
-        >
-          <div class="text-caption text-uppercase d-flex flex-column align-center">
-            <b>+33 1 84 80 79 75</b>
-            prendre rdv
-          </div>
-        </v-btn-secondary>
-      </v-col>
-    </v-row> -->
+                <template #prepend-inner>
+                  <v-btn
+                    icon
+                    size="xs"
+                  >
+                    <v-icon
+                      color="grey"
+                    >
+                      {{ mdiMagnify }}
+                    </v-icon>
+                  </v-btn>
+                </template>
+              </v-text-field-home>
+              <v-btn-primary
+                v-for="item, index in items"
+                :key="`link header ${index}`"
+                :to="item.link"
+                class="text-button text-uppercase font-weight-bold mx-4"
+              >
+                {{ item.title }}
+              </v-btn-primary>
+              <v-btn-secondary
+                density="compact"
+                size="x-large"
+                href="/calendly"
+                class="px-12"
+              >
+                <div class="text-caption text-uppercase d-flex flex-column align-center">
+                  <b>+33 1 84 80 79 75</b>
+                  prendre rdv
+                </div>
+              </v-btn-secondary>
+            </v-col>
+          </v-row> -->
   </v-app-bar>
 </template>
 
 <script setup>
-import { mdiMagnify, mdiDotsVertical, mdiAccountCircle } from '@mdi/js'
+import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js'
 import { useImage } from '#imports'
 
 const searchText = ref('')

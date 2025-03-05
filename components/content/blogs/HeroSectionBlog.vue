@@ -1,13 +1,13 @@
 <template>
   <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
-    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
     height="100vh"
     cover
     class="position-relative"
   >
     <v-btn-primary
-      to="/blogs"
+      to="/blog"
       color="white"
       class="btn-position hidden-sm-and-down pl-md-0"
     >
@@ -20,7 +20,7 @@
       <span> retour aux blogs</span>
     </v-btn-primary>
     <v-btn
-      to="/blogs"
+      to="/blog"
       variant="outlined"
       density="compact"
       color="white"

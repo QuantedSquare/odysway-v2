@@ -11,8 +11,8 @@
           class="d-flex justify-center"
         >
           <FlipCard
-            :front-image="img(imageSrc, { format: 'webp', quality: 100 })"
-            :back-image="img(backImg, { format: 'webp', quality: 100 })"
+            :front-image="img(imageSrc, { format: 'webp', quality: 100, width: 640 })"
+            :back-image="img(backImg, { format: 'webp', quality: 100, width: 640 })"
             :description="`Le vrai voyage ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux.`"
             title="`Le voyage en immersion, le partage au cœur du voyage 🌍"
           />

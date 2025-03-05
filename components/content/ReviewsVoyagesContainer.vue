@@ -10,7 +10,7 @@
           class="relative rounded-xl d-flex flex-column justify-center align-center"
         >
           <v-row
-            class="d-flex flex-column align-center text-center text-md-start  align-md-start px-5 ga-4 mt-16"
+            class="d-flex flex-column align-center text-center text-md-start align-md-start px-5 ga-4 mt-16"
           >
             <div class="coma-absolute bg-primary-light rounded-circle pa-6 ">
               <v-img
@@ -112,14 +112,16 @@
                       <!-- <span v-else>{{ getInitial(item.author) }}</span> -->
                     </v-avatar>
                     <span>{{ review.author }}</span>
-                    <v-rating
-                      :model-value="4.5"
-                      color="orange-lighten-1"
-                      density="compact"
-                      size="small"
-                      half-increments
-                      readonly
-                    />
+                    <ClientOnly>
+                      <v-rating
+                        :model-value="4.5"
+                        color="orange-lighten-1"
+                        density="compact"
+                        size="small"
+                        half-increments
+                        readonly
+                      />
+                    </ClientOnly>
                   </v-card-actions>
                 </v-card>
               </v-slide-group-item>
@@ -187,7 +189,7 @@ import { useDisplay } from 'vuetify'
 import { mdiChevronRight, mdiChevronLeft } from '@mdi/js'
 
 const img = useImage()
-const slideGroup = ref(0)
+const slideGroup = ref(1)
 const currentReview = ref(0)
 const { smAndUp } = useDisplay()
 
@@ -208,7 +210,7 @@ const formatImage = photo => img(photo, {
   format: 'webp',
   quality: 70,
   height: 100,
-  width: 100,
+  width: 320,
 })
 
 const getInitial = name => name[0]

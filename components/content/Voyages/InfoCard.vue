@@ -3,7 +3,8 @@
     elevation="0"
   >
     <v-img
-      :src="img(voyageImg, { format: 'webp', quality: 70, height: 400 })"
+      :src="img(voyageImg, { format: 'webp', quality: 70, height: 400, width: 640 })"
+      :lazy-src="img(voyageImg, { format: 'webp', quality: 10, width: 640 })"
       max-height="400"
       cover
     >
@@ -13,6 +14,19 @@
             <h2 class="text-center text-white text-h6 font-weight-black text-shadow">
               {{ voyageTitle }}
             </h2>
+            <div class="d-flex align-center justify-center">
+              <ClientOnly>
+                <v-rating
+                  :model-value="Number(averageNote)"
+                  color="orange-lighten-1"
+                  density="compact"
+                  size="small"
+                  half-increments
+                  readonly
+                />
+                <span class="text-white text-shadow">({{ nbNotes }})</span>
+              </ClientOnly>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -53,7 +67,7 @@
                 size="x-large"
                 class="mr-2"
               >
-                {{ mdiCalendar }}
+                {{ mdiCalendarMonthOutline }}
               </v-icon>
 
               <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
@@ -72,8 +86,17 @@
 </template>
 
 <script setup>
-import { mdiCalendar } from '@mdi/js'
+import { mdiCalendarMonthOutline } from '@mdi/js'
 import { useImage } from '#imports'
+
+defineProps({
+  averageNote: {
+    type: String,
+  },
+  nbNotes: {
+    type: String,
+  },
+})
 
 const route = useRoute()
 const img = useImage()

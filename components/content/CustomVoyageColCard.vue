@@ -1,13 +1,15 @@
 <template>
   <v-col
-    v-if="voyage && voyage.imgSrc"
     cols="12"
-    sm="4"
-    md="3"
+    sm="6"
+    md="4"
+    lg="3"
+    xl="2"
   >
     <v-card
       elevation="0"
       rounded="xl"
+      class="hover-scale"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
@@ -17,10 +19,9 @@
         <v-img
           :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 640 })"
           :alt="`Image principale du voyage ${voyage.title}`"
-          width="100%"
           rounded="xl"
+          height="250px"
           cover
-          class="hover-scale"
         >
           <client-only>
             <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
@@ -65,7 +66,7 @@
             <div class="display-mobile">
               <div class="blur-overlay" />
               <div class="position-absolute bottom-text text-shadow text-white bottom-0">
-                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 text-wrap">
+                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 no-white-space">
                   {{ voyage.title }}
                 </v-card-title>
                 <v-card-text class="font-weight-bold  px-0 d-flex flex-column align-start ga-2 mt-4">
@@ -203,7 +204,7 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   transition: transform 0.2s ease-in-out;
 }
 /* .hover-scale{
-  transform: scale(1);
+  transform:scale(1);
   transition: transform 0.2s ease-in-out;
 } */
 </style>

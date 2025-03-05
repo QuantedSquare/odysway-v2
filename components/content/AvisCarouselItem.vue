@@ -11,7 +11,7 @@
         >
           <v-img
             v-show="props.photo"
-            :src="img(props.photo, { format: 'webp', quality: 70 })"
+            :src="img(props.photo, { format: 'webp', quality: 70, width: 640 })"
           />
           <v-icon
             v-show="!props.photo"

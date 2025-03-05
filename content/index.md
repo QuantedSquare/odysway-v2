@@ -9,6 +9,8 @@ La rencontre <br> au cœur du voyage
 ::
 
 ::headlines-wrapper
+
+#headlines
   :::headline-card
   #title
   Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
@@ -41,6 +43,8 @@ La rencontre <br> au cœur du voyage
 ::
 
 ::title-container
+
+#title
 Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
@@ -48,29 +52,36 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
 ::title-container
+#title
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 ::
 
-::horizontal-carousel
+::horizontal-custom-carousel
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+#carousel-item  
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::custom-voyage-col-card{voyage-slug="chine"}
   :::
+
+  :::custom-voyage-col-card{voyage-slug="japon"}
+  :::
+
 ::
 
 ::title-container
+#title
 Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"} 
 ::
 
@@ -92,6 +103,7 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 ::
 
 ::title-container
+#title
 Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
@@ -113,6 +125,7 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 ::
 
 ::title-container
+#title
 Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 ::
 
@@ -157,9 +170,9 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 <!-- [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍 -->
 ::
 
-::reviews-voyages-container
+<!-- ::reviews-voyages-container
 
-::
+:: -->
 
 ::partenaires-container
 

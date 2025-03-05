@@ -20,9 +20,8 @@ Immersion hivernale en terre béarnaise
     :::
     :::photo-col{imageSrc='/images/iStock-1190369407 (1).webp' colWidth="7"}
     :::
+  ::
 
-    ::
-  :: 
 
 #component-slot-2
   ::video-dialog{videoSrc="https://www.youtube.com/embed/vrB9wC6quaU?si=z7xt5GDGS2JnaSot"}
@@ -44,277 +43,257 @@ Prendre RDV
 
 ::
 
-::title-container
-Immersion hivernale en terre béarnaise
-::
+::sticky-container{leftSpace="8" rightSpace="4" leftSticky=false rightSticky=true}
 
-::intro-voyage-container
-#tooltip-text-group
-  :::icon-col{iconName="mdiCalendar"}
-  #tooltip
-  Durée de voyage
-  #text
-  5 JOURS / 4 NUITS
+#left-side
+  ::title-container
+  #title
+  Immersion hivernale en terre béarnaise
+  ::
+
+  ::intro-voyage-container
+  #tooltip-text-group
+    :::icon-col{iconName="mdiCalendar"}
+    #tooltip
+    Durée de voyage
+    #text
+    5 JOURS / 4 NUITS
+    :::
+
+    :::icon-col{iconName="mdiWhiteBalanceSunny"}
+    #tooltip
+    Période idéale
+    #text
+    JAN À MARS
+    :::
+
+    :::icon-col{iconName="mdiTent"}
+    #tooltip
+    Hébergement
+    #text
+    GÎTE DANS UN VILLAGE
+    :::
+
+    :::icon-col{iconName="mdiAccountGroup"}
+    #tooltip
+    Disponible en groupe
+    #text
+    DISPONIBLE EN GROUPE
+    :::
+
+    :::icon-col{iconName="mdiTeddyBear"}
+    #tooltip
+    Dès 16 ans
+    #text
+    DÈS 16 ANS
+    :::
+
+  #intro-voyage
+  *« Partez pour une immersion en vallée d’Aspe, où le Béarn en hiver révèle ses paysages grandioses et son authenticité intacte. Ici, chaque pas sur les sentiers enneigés invite à ralentir, à savourer le silence des forêts et l’éclat des lacs d’altitude.*
+
+  <br>
+
+  *Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce séjour en étoile à pied, raquette ou ski de fond (selon le niveau de neige) est une invitation à renouer avec la nature et le rythme apaisant des montagnes. Le soir, retrouvez la chaleur de Claire et Sandrine, qui vous accueilleront autour de plats de saison gourmands, préparés avec soin et générosité. »*
+
+  #avatar
+  ::avatar-list-item{avatar="/images/WhatsApp Image 2020-02-13 at 5.27.38 PM.jpeg" avatarSize="60"}
+  #title
+  [Romain]{style="font-weight: bold"}, fondateur d'Odysway et amoureux de la vallée d'Aspe
+  ::  
+  ::
   
-  :::
-
-  :::icon-col{iconName="mdiWhiteBalanceSunny"}
-  #tooltip
-  Période idéale
-  #text
-  JAN À MARS
+  ::highlights-row{image="/images/iStock-925005602.webp"}
+  #title
+  [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
   
+  #default
+  :::highlight-list-item
+  Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
   :::
-
-  :::icon-col{iconName="mdiTent"}
-  #tooltip
-  Hébergement
-  #text
-  GÎTE DANS UN VILLAGE
   
+  :::highlight-list-item
+  Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
   :::
-
-  :::icon-col{iconName="mdiAccountGroup"}
-  #tooltip
-  Disponible en groupe
-  #text
-  DISPONIBLE EN GROUPE
   
+  :::highlight-list-item
+  Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
   :::
-
-  :::icon-col{iconName="mdiTeddyBear"}
-  #tooltip
-  Dès 16 ans
-  #text
-  DÈS 16 ANS
   
+  :::highlight-list-item
+  Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
   :::
-
-#intro-voyage
-*« Partez pour une immersion en vallée d’Aspe, où le Béarn en hiver révèle ses paysages grandioses et son authenticité intacte. Ici, chaque pas sur les sentiers enneigés invite à ralentir, à savourer le silence des forêts et l’éclat des lacs d’altitude.*
-
-<br>
-
-*Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce séjour en étoile à pied, raquette ou ski de fond (selon le niveau de neige) est une invitation à renouer avec la nature et le rythme apaisant des montagnes. Le soir, retrouvez la chaleur de Claire et Sandrine, qui vous accueilleront autour de plats de saison gourmands, préparés avec soin et générosité. »*
-
-#avatar
-::avatar-list-item{avatar="/images/WhatsApp Image 2020-02-13 at 5.27.38 PM.jpeg" avatarSize="60"}
-#title
-[Romain]{style="font-weight: bold"}, fondateur d'Odysway et amoureux de la vallée d'Aspe
-
-::
-
-#info-card
-::info-card
-#catch-phrase
-Discutons de votre projet !
-
-
-#payment-items
-  :::payment-item{imageSrc="/images/alma.webp"}
-  #text
-  Payez en 3 versements
-  :::
-
-  :::payment-item{imageSrc="/images/ancv.png"}
-  #text
-  Payez avec vos chèques vacances
-  :::
-
-#text-btn-1
-voir dates & prix
-
-#text-btn-2
-Prendre RDV 
-
-::
-
-::
-
-::highlights-row{image="/images/iStock-925005602.webp"}
-#title
-[Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
-
-#default
-:::highlight-list-item
-Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
-
-:::
-
-:::highlight-list-item
-Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
-
-:::
-
-:::highlight-list-item
-Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
-
-:::
-
-:::highlight-list-item
-Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
-
-:::
-
-:::highlight-list-item
-Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
-
-:::
-
-::
-
-::green-card-container
-#title
-POURQUOI VOYAGER AVEC ODYSWAY ?
   
-#items  
+  :::highlight-list-item
+  Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
+  :::
+  
+  ::
+  ::green-card-container
+  #title
+  POURQUOI VOYAGER AVEC ODYSWAY ?
+  
+  #items  
   :::green-card-item
   Un accompagnement personnalisé du début à la fin de votre voyage
-  
   :::
   
   :::green-card-item
   La liberté de choisir votre mode de voyage : en petit groupe ou privatif (aux dates de votre choix)
-  
   :::
   
   :::green-card-item
   Des petits groupes pour une dimension intimiste
-  
   :::
 
   :::green-card-item
   Des expériences en immersion, loin du tourisme de masse, soigneusement conçues par Odysway
-  
   :::
 
   :::green-card-item
   Des guides locaux passionnés
-  
   :::
-::
+  ::  
 
-::title-container
-Le programme du voyage
-::
-
-::day-row{image="/images/Capture d’écran 2024-10-31 à 12.27.35.webp"}
-#subtitle
-Jour 1
-
-#title
-Arrivée en terre béarnaise
-
-#text
-Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au cœur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !
-
-::
-
-::day-row{image="/images/donnie-rosie-O7L3MrlSAHA-unsplash.webp"}
-#subtitle
-Jour 2
-
-#title
-PREMIERS PAS DANS LE PARC NATIONAL
-
-#text
-Au cœur de l’hiver, partez pour une douce aventure dans la vallée d’Aspe. Depuis Peyrenère, empruntez le sentier du Somport, une randonnée facile qui vous mène à travers le cœur préservé du Parc National des Pyrénées. Au fil de votre marche, les paysages se dévoilent dans une harmonie délicate, alternant entre forêts mystérieuses et clairières lumineuses, où la neige se pose en silence. Chaque pas est une immersion dans la nature hivernale, loin du tumulte, où la beauté sauvage et sereine de la vallée se révèle sous une lumière douce.
-
-::
-
-::day-row{image="/images/iStock-1199617099.webp"}
-#subtitle
-Jour 3
-
-#title
-LACS ET PANORAMAS D’ALTITUDE
-
-#text
-Laissez-vous guider jusqu’au lac d’Estaëns, après une belle ascension de 650 mètres de dénivelé. En chemin, passez par la cabane d’Escourets, un refuge simple au milieu des montagnes, où la pierre et le bois se fondent dans le paysage sauvage. Au fil de ces randonnées, la nature vous entoure de panoramas saisissants et d’une quiétude rare, où chaque cabane semble veiller sur la vallée, nichée entre les pics majestueux et les prairies enneigées
-
-::
-
-::day-row{image="/images/65a97137fad16a74a8a2682c_Aiguilles-ansabere-ski-de-rando.jpg"}
-#subtitle
-Jour 4
-
-#title
-ENTRE CABANES ET PICS
-
-#text
-Prenez la route de la cabane d’Ansabère, avec une montée de 550 mètres de dénivelé pour une randonnée de difficulté moyenne. Le sentier serpente d’abord à travers les forêts profondes, avant de s’ouvrir sur une crête offrant une vue saisissante. Ici, les majestueuses aiguilles d’Ansabère se dressent, élancées et imposantes, dominant les paysages environnants. Cette alternance de forêt ombragée et de crêtes panoramiques offre une immersion pleine de contrastes, où chaque pas dévoile un peu plus la grandeur de ce massif pyrénéen.
-
-::
-
-::day-row{image="/images/iStock-1739420999.webp"}
-#subtitle
-Jour 5
-
-#title
-DERNIER JOUR DANS LA VALLÉE
-
-#text
-Pour ce dernier jour dans la vallée, l’heure est aux adieux, mais avec la promesse d’un retour. Alors que vous laissez derrière vous les paysages enneigés et les cabanes de montagne, une pensée vous invite à revenir ici en été, lorsque la vallée sera transformée. Les sentiers que vous avez parcourus sous la neige s’ouvriront sur des estives verdoyantes, où les bergers montent avec leurs troupeaux de brebis. Là, dans le calme des prairies d’altitude, vous pourrez rencontrer ces gardiens des montagnes, partager leurs histoires, et découvrir un autre visage de la vallée, vibrant de vie. En quittant les sommets enneigés aujourd’hui, une part de vous sait que cette aventure hivernale est une première invitation, laissant la porte ouverte à de nouvelles découvertes.
-
-::
-
-
-::title-container
-Votre hébergement
-::
-
-::accomodation-container
-
-#text
-Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées
-
-
-#carousel
-::carousel
-#carousel-item
-  :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.20.png"}
-  :::
-
-  :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.09.png"}
-  :::
-
-  :::image-carousel-item{image="/images/329303239.jpeg"}
-  :::
-::
-::
-
-::title-container
-Les accompagnateurs
-::
-
-::guides-container
-#text
-Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateurs en moyenne montagne diplômés d’État, passionnés par leur région et engagés dans une approche durable. Ils vous initieront aux techniques de randonnée hivernale en raquettes et ski de fond, tout en adaptant chaque sortie au niveau de chacun pour une expérience agréable et sécurisée. Ensemble, vous explorerez des paysages variés : forêts, rivières, plateaux ouverts, crêtes et pics enneigés, en faisant des pauses dans des cabanes de montagne accueillantes. Fidèles à la philosophie leave no trace, vos guides vous apprendront à évoluer dans ces espaces naturels en limitant votre impact, en respectant la faune et la flore. Grâce à leurs connaissances, vous apprendrez aussi à repérer les traces d’animaux et à observer discrètement les isards, vautours et gypaètes dans leur habitat naturel, pour des randonnées à la fois enrichissantes et respectueuses de l’environnement.
-
-#guides
-  :::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+  ::title-container
   #title
-  Accompagnateur en moyenne montagne
+  Le programme du voyage
+  ::
 
+  ::day-row{image="/images/Capture d’écran 2024-10-31 à 12.27.35.webp"}
   #subtitle
-  Paco
+  Jour 1
 
-  :::
-
-  :::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
   #title
-  Claire et Sandrine
-
-  #subtitle
-  Hôtes de votre séjour
+  Arrivée en terre béarnaise
 
   #text
-  Lors de ce séjour, vous logerez dans un gîte d'étape situé sur la commune d'Accous. Le gîte est géré par Claire et Sandrine, que vous rencontrerez dès le premier jour, et avec qui vous pourrez partager des moments lors des temps au gîte. Claire et Sandrine ont repris ce gîte début 2020, elles y insufflent depuis de la bonne humeur et un accueil très convivial, sans parler des repas succulents qu'elles proposent, matin, midi et soir !
-  :::
+  Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au cœur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !
+  ::
+
+  ::day-row{image="/images/donnie-rosie-O7L3MrlSAHA-unsplash.webp"}
+  #subtitle
+  Jour 2
+
+  #title
+  PREMIERS PAS DANS LE PARC NATIONAL
+
+  #text
+  Au cœur de l’hiver, partez pour une douce aventure dans la vallée d’Aspe. Depuis Peyrenère, empruntez le sentier du Somport, une randonnée facile qui vous mène à travers le cœur préservé du Parc National des Pyrénées. Au fil de votre marche, les paysages se dévoilent dans une harmonie délicate, alternant entre forêts mystérieuses et clairières lumineuses, où la neige se pose en silence. Chaque pas est une immersion dans la nature hivernale, loin du tumulte, où la beauté sauvage et sereine de la vallée se révèle sous une lumière douce.
+  ::
+
+  ::day-row{image="/images/iStock-1199617099.webp"}
+  #subtitle
+  Jour 3
+
+  #title
+  LACS ET PANORAMAS D’ALTITUDE
+
+  #text
+  Laissez-vous guider jusqu’au lac d’Estaëns, après une belle ascension de 650 mètres de dénivelé. En chemin, passez par la cabane d’Escourets, un refuge simple au milieu des montagnes, où la pierre et le bois se fondent dans le paysage sauvage. Au fil de ces randonnées, la nature vous entoure de panoramas saisissants et d’une quiétude rare, où chaque cabane semble veiller sur la vallée, nichée entre les pics majestueux et les prairies enneigées
+  ::
+
+  ::day-row{image="/images/65a97137fad16a74a8a2682c_Aiguilles-ansabere-ski-de-rando.jpg"}
+  #subtitle
+  Jour 4
+
+  #title
+  ENTRE CABANES ET PICS
+
+  #text
+  Prenez la route de la cabane d’Ansabère, avec une montée de 550 mètres de dénivelé pour une randonnée de difficulté moyenne. Le sentier serpente d’abord à travers les forêts profondes, avant de s’ouvrir sur une crête offrant une vue saisissante. Ici, les majestueuses aiguilles d’Ansabère se dressent, élancées et imposantes, dominant les paysages environnants. Cette alternance de forêt ombragée et de crêtes panoramiques offre une immersion pleine de contrastes, où chaque pas dévoile un peu plus la grandeur de ce massif pyrénéen.
+  ::
+
+  ::day-row{image="/images/iStock-1739420999.webp"}
+  #subtitle
+  Jour 5
+
+  #title
+  DERNIER JOUR DANS LA VALLÉE
+
+  #text
+  Pour ce dernier jour dans la vallée, l’heure est aux adieux, mais avec la promesse d’un retour. Alors que vous laissez derrière vous les paysages enneigés et les cabanes de montagne, une pensée vous invite à revenir ici en été, lorsque la vallée sera transformée. Les sentiers que vous avez parcourus sous la neige s’ouvriront sur des estives verdoyantes, où les bergers montent avec leurs troupeaux de brebis. Là, dans le calme des prairies d’altitude, vous pourrez rencontrer ces gardiens des montagnes, partager leurs histoires, et découvrir un autre visage de la vallée, vibrant de vie. En quittant les sommets enneigés aujourd’hui, une part de vous sait que cette aventure hivernale est une première invitation, laissant la porte ouverte à de nouvelles découvertes.
+  ::
+
+  ::title-container
+  #title
+  Votre hébergement
+  ::
+
+  ::accomodation-container
+  #text
+  Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées
+
+  #carousel
+  ::carousel
+  #carousel-item
+    :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.20.png"}
+    :::
+
+    :::image-carousel-item{image="/images/Capture d’écran 2022-02-24 à 14.08.09.png"}
+    :::
+
+    :::image-carousel-item{image="/images/329303239.jpeg"}
+    :::
+  ::
+  ::
+
+  ::title-container
+  #title
+  Les accompagnateurs
+  ::
+
+  ::guides-container
+  #text
+  Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateurs en moyenne montagne diplômés d’État, passionnés par leur région et engagés dans une approche durable. Ils vous initieront aux techniques de randonnée hivernale en raquettes et ski de fond, tout en adaptant chaque sortie au niveau de chacun pour une expérience agréable et sécurisée. Ensemble, vous explorerez des paysages variés : forêts, rivières, plateaux ouverts, crêtes et pics enneigés, en faisant des pauses dans des cabanes de montagne accueillantes. Fidèles à la philosophie leave no trace, vos guides vous apprendront à évoluer dans ces espaces naturels en limitant votre impact, en respectant la faune et la flore. Grâce à leurs connaissances, vous apprendrez aussi à repérer les traces d’animaux et à observer discrètement les isards, vautours et gypaètes dans leur habitat naturel, pour des randonnées à la fois enrichissantes et respectueuses de l’environnement.
+
+  #guides
+    :::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+    #title
+    Accompagnateur en moyenne montagne
+
+    #subtitle
+    Paco
+    :::
+
+    :::avatar-list-item{avatar="/images/Capture d’écran 2024-10-31 à 13.57.35.webp"}
+    #title
+    Claire et Sandrine
+
+    #subtitle
+    Hôtes de votre séjour
+
+    #text
+    Lors de ce séjour, vous logerez dans un gîte d'étape situé sur la commune d'Accous. Le gîte est géré par Claire et Sandrine, que vous rencontrerez dès le premier jour, et avec qui vous pourrez partager des moments lors des temps au gîte. Claire et Sandrine ont repris ce gîte début 2020, elles y insufflent depuis de la bonne humeur et un accueil très convivial, sans parler des repas succulents qu'elles proposent, matin, midi et soir !
+    :::
+  ::
+
+#right-side
+  ::info-card{averageNote="4.5" nbNotes="44"}
+  #catch-phrase
+  Discutons de votre projet !
+
+  #payment-items
+    :::payment-item{imageSrc="/images/alma.webp"}
+    #text
+    Payez en 3 versements
+    :::
+
+    :::payment-item{imageSrc="/images/ancv.png"}
+    #text
+    Payez avec vos chèques vacances
+    :::
+
+  #text-btn-1
+  voir dates & prix
+
+  #text-btn-2
+  Prendre RDV 
+  ::
 
 ::
 
 ::title-container
+#title
 Détails du prix
 ::
 
@@ -380,6 +359,7 @@ Détails du prix
 
 
 ::title-container
+#title
 Les avis des voyageurs
 ::
 
@@ -417,6 +397,7 @@ Les avis des voyageurs
 ::faq-container
 #section-title
 ::title-container
+#title
 Foire aux questions
 ::
 

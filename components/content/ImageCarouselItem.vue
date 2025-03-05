@@ -1,7 +1,7 @@
 <template>
   <v-carousel-item>
     <v-img
-      :src="img(props.image, { format: 'webp', quality: 100 })"
+      :src="img(props.image, { format: 'webp', quality: 100, width: 1536 })"
       class="h-100"
       rounded="lg"
       cover

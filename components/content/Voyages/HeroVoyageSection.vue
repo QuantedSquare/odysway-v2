@@ -1,7 +1,7 @@
 <template>
   <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
-    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
+    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
     height="100vh"
     cover
     class="position-relative"
@@ -9,7 +9,7 @@
     <v-btn-primary
       to="/"
       color="white"
-      class="btn-position hidden-sm-and-down pl-md-0"
+      class="btn-position hidden-sm-and-down"
     >
       <template #prepend>
         <v-icon>
@@ -90,8 +90,8 @@ const img = useImage()
 <style scoped>
 .btn-position{
   position: absolute;
-  top: 10%;
-  left: 32px;
+  top: 15%;
+  left: 18px;
 }
 .v-btn__prepend {
   margin: 0px !important;

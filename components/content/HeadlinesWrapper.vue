@@ -15,7 +15,7 @@
           </div> -->
         </div>
         <DraggingContainer ref="draggingContainerRef">
-          <slot />
+          <slot name="headlines" />
         </DraggingContainer>
       </v-row>
       <ScrollToBtnList />
