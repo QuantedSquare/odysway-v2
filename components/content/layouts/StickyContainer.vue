@@ -3,7 +3,7 @@
     <v-row>
       <v-col
         cols="12"
-        :md="Number(leftSpace)"
+        :md="leftSpace"
       >
         <div :class="leftSticky === 'true' ? 'sticky-position': '' ">
           <slot name="left-side" />
@@ -11,7 +11,7 @@
       </v-col>
       <v-col
         class="d-none d-md-block"
-        :md="Number(rightSpace)"
+        :md="rightSpace"
       >
         <div
           class="mt-12"
