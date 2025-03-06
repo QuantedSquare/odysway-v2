@@ -44,6 +44,7 @@ export default defineContentConfig({
         slug: z.string(),
         ISO: z.string(),
         indivRoom: z.boolean(),
+        privatisation: z.boolean(),
         dates: z.array(z.object({
           departureDate: z.string(),
           returnDate: z.string(),

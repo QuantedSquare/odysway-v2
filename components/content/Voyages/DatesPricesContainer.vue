@@ -15,7 +15,7 @@
           :icon="mdiChevronLeft"
           class="bg-white"
           size="small"
-          @click="tab = 2"
+          @click="prev"
         >
           <v-icon>{{ mdiChevronLeft }}</v-icon>
         </v-btn>
@@ -25,7 +25,7 @@
           :icon="mdiChevronRight"
           class="bg-white"
           size="small"
-          @click="tab = 2"
+          @click="next"
         >
           <v-icon>{{ mdiChevronLeft }}</v-icon>
         </v-btn>
@@ -48,6 +48,7 @@
         </div>
       </v-tab>
       <v-tab
+        v-if="deal.privatisation"
         :value="2"
         class="rounded-t-lg"
       >
@@ -133,47 +134,11 @@
           </tbody>
         </v-table>
       </v-tabs-window-item>
-      <v-tabs-window-item :value="2">
-        <v-container>
-          <v-row>
-            <v-col
-              cols="12"
-              class="text-subtitle-1 text-md-h6 font-weight-bold"
-            >
-              Décrivez-nous votre projet, un conseiller Odysway reviendra vers vous avec un devis personnalisé
-            </v-col>
-            <v-col
-              cols="12"
-              class="text-subtitle-1 text-md-h6 font-weight-bold"
-            >
-              Combien de participants ?
-            </v-col>
-            <v-col cols="6">
-              <v-select
-                label="Nombres d'adultes"
-                :items="[1, 2, 3, 4, 5, 6, 7, 8]"
-                variant="outlined"
-                bg-color="white"
-              />
-            </v-col>
-            <v-col cols="6">
-              <v-select
-                label="Nombres d'enfants"
-                :items="[1, 2, 3, 4, 5, 6, 7, 8]"
-                variant="outlined"
-                bg-color="white"
-              />
-            </v-col>
-            <v-col
-              cols="12"
-              class="d-flex justify-center"
-            >
-              <v-btn-secondary color="white">
-                demander un devis
-              </v-btn-secondary>
-            </v-col>
-          </v-row>
-        </v-container>
+      <v-tabs-window-item
+        v-show="deal.privatisation"
+        :value="2"
+      >
+        <PrivateTabContainer />
       </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
@@ -204,16 +169,6 @@ const { data: deal } = await useAsyncData(route.params.voyageSlug, () => {
 const dates = computed(() => {
   return deal.value.dates
 })
-
-const formatedDates = computed(() => {
-  return [...dates.value].map((d) => {
-    dayjs(d.departureDate).locale('fr').format('ddd DD/MM/YYYY')
-    dayjs(d.returnDate).locale('fr').format('ddd DD/MM/YYYY')
-  })
-})
-
-console.log(formatedDates)
-// console.log(dayjs(dates.value[0].departureDate).format('ddd MMMM DD/MM/YYYY'))
 </script>
 
 <style scoped>

@@ -3,6 +3,7 @@
     "slug": "sejour-pyrenees",
     "ISO": "FR",
     "indivRoom": true,
+    "privatisation": true,
     "dates": [{
       "departureDate": "11/05/2025",
       "returnDate": "01/06/2025",
