@@ -13,7 +13,7 @@
       "startingPrice": 1000,
       "indivRoomPrice": 300,
       "maxTravellers": 8,
-      "bookedPlaces": 5,
+      "bookedPlaces": 8,
       "earlyBird": false,
       "promoEarlyBird": 80,
       "lastMinute": false,
