@@ -33,7 +33,9 @@
         cols="12"
         class="d-flex justify-center"
       >
-        <v-btn-secondary color="white">
+        <v-btn-secondary
+          color="white"
+        >
           demander un devis
         </v-btn-secondary>
       </v-col>

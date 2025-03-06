@@ -1,5 +1,8 @@
 <template>
-  <v-container fluid>
+  <v-container
+    fluid
+    class="mt-16"
+  >
     <v-row
       justify="center"
     >

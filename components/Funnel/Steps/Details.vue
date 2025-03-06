@@ -303,7 +303,7 @@ const submitStepData = async () => {
         slug: voyage.slug,
         basePricePerTraveler: voyage.startingPrice * 100,
         promoChildren: voyage.promoChildren * 100,
-        maxChildrenAge: voyage.maxChildrenAge * 100,
+        maxChildrenAge: voyage.maxChildrenAge, // no need multiplying by 100 here
         promoTeen: voyage.promoTeen,
         maxTeenAge: voyage.maxTeenAge,
         source: 'Devis',

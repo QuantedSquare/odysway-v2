@@ -167,13 +167,16 @@
 
 <script setup>
 import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
+
+dayjs.extend(customParseFormat)
 
 const route = useRoute()
 const { step, dealId, slug, departure_date, return_date, plan } = route.query
 
 // ================== Page ==================
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
-console.log('page', page.value)
+// console.log('page', page.value)
 
 // ================== Voyage ==================
 // If slug, you're coming from travel page, otherwise, coming from custom link
@@ -182,14 +185,47 @@ console.log('page', page.value)
 // We generate dealId after first step and don't need statics values from voyage anymore
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (slug) {
-    console.log('slug', slug)
-    const query = await queryCollection('voyages').where('slug', '=', slug).first()
-    Object.assign(query, {
-      departureDate: dayjs(departure_date).format('YYYY-MM-YY'),
-      returnDate: dayjs(return_date).format('YYYY-MM-YY'),
+    const query = await queryCollection('deals').where('slug', '=', slug).first()
+
+    if (!query) {
+      throw new Error('Deal not found.')
+    }
+
+    function parseDeal(deal, departureDate, returnDate) {
+      const filteredDates = deal.dates.filter((date) => {
+        return dayjs(date.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD') === returnDate
+      },
+      )
+
+      if (filteredDates.length !== 1) {
+        console.log(filteredDates)
+        throw new Error('Invalid or no matching dates found.')
+      }
+
+      return {
+        title: deal.title,
+        imgSrc: deal.imgSrc,
+        country: deal.country,
+        slug: deal.slug,
+        iso: deal.ISO,
+        zoneChapka: deal.zoneChapka,
+        indivRoom: deal.indivRoom,
+        privatisation: deal.privatisation,
+        startingPrice: filteredDates[0].startingPrice,
+        indivRoomPrice: filteredDates[0].indivRoomPrice,
+        gotEarlybird: filteredDates[0].earlyBird ? 'Oui' : 'Non',
+        promoEarlybird: filteredDates[0].promoEarlyBird,
+        gotLastMinute: filteredDates[0].lastMinute ? 'Oui' : 'Non',
+        promoLastMinute: filteredDates[0].promoLastMinute,
+      }
+    }
+    const deal = parseDeal(query, departure_date, return_date)
+
+    Object.assign(deal, { ...deal }, {
+      departureDate: dayjs(departure_date, 'YYYY-MM-DD').format('DD/MM/YYYY'), // check dates in active campaign
+      returnDate: dayjs(return_date, 'YYYY-MM-DD').format('DD/MM/YYYY'),
       // ===== Temporary values below until it is replaced in nuxt studio =====
       // ===== Or travel manager =====
-      zoneChapka: 1,
       depositPrice: query.startingPrice * 0.3 || 500,
       promoChildren: 80,
       promoTeen: 80,
@@ -197,16 +233,11 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       maxTeenAge: 18,
       source: 'Devis',
       forcedIndivRoom: 'Non',
-      indivRoomPrice: 300,
-      promoEarlybird: 50,
-      promoLastMinute: 0,
-      gotLastMinute: 'Non',
-      gotEarlybird: 'Oui',
       travelType: 'Group',
     })
-    console.log('query', query)
+    console.log('deal post assign', deal)
 
-    return query
+    return deal
   }
   else {
     // Voyage = Toutes les valeurs fixes
@@ -229,7 +260,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       promoEarlybird: deal.promoEarlybird / 100,
       promoLastMinute: deal.promoLastMinute / 100,
       gotLastMinute: deal.gotLastMinute === 'Oui',
-      gotEarlybid: deal.gotEarlybid === 'Oui',
+      gotEarlybird: deal.gotEarlybid === 'Oui',
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
       travelType: 'Group',

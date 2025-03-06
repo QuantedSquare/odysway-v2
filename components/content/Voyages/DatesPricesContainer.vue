@@ -100,7 +100,7 @@
               :key="item"
               class="text-center"
             >
-              <td>{{ item.departureDate }}</td>
+              <td>{{ dayjs(item.departureDate, 'DD/MM/YYYY').format('ddd DD/MM/YYYY') }}</td>
               <td>{{ item.returnDate }}</td>
               <td>{{ item.startingPrice }} €</td>
               <td>
@@ -120,7 +120,7 @@
               <td>
                 <div v-if="item.maxTravellers !== item.bookedPlaces">
                   <v-btn-secondary
-                    :to="`/checkout?slug=${route.params.voyageSlug}&departure_date=${dayjs(item.departureDate).toISOString()}&return_date=${dayjs(item.returnDate).toISOString()}`"
+                    :to="`/checkout?slug=${deal.slug}&departure_date=${dayjs(item.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&return_date=${dayjs(item.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}`"
                     class="text-caption text-uppercase"
                   >
                     réserver / poser une option
@@ -138,7 +138,7 @@
         v-show="deal.privatisation"
         :value="2"
       >
-        <PrivateTabContainer />
+        <PrivateTabContainer :deal="deal" />
       </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
@@ -148,8 +148,10 @@
 import { mdiChevronLeft, mdiChevronRight, mdiAccount, mdiCheckCircleOutline } from '@mdi/js'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
 dayjs.extend(localizedFormat)
+dayjs.extend(customParseFormat)
 
 const props = defineProps({
   slug: {
@@ -162,7 +164,7 @@ const tab = ref(null)
 
 const route = useRoute()
 
-const { data: deal } = useAsyncData(route.params.voyageSlug, () => {
+const { data: deal } = await useAsyncData(route.params.voyageSlug, () => {
   return queryCollection('deals').where('slug', '=', props.slug).first()
 })
 const dates = computed(() => {
