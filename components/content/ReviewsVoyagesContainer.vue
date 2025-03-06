@@ -35,7 +35,7 @@
 
         <DraggingContainer
           ref="draggingContainerRef2"
-          class="card-container "
+          class="card-container"
         >
           <slot />
         </DraggingContainer>
