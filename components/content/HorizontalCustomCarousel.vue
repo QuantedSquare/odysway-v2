@@ -1,8 +1,7 @@
 <template>
-  <v-container class="pt-0">
+  <v-container>
     <v-row
       align="center"
-      no-gutters
     >
       <v-col
         cols="12"
@@ -12,14 +11,17 @@
         <slot name="title" />
       </v-col>
       <v-spacer />
-      <v-col cols="auto">
+      <v-col
+        v-show="displayButton"
+        cols="auto"
+      >
         <v-btn
           icon
           density="compact"
           color="transparent"
           variant="outlined"
           :disabled="arrivedState.left"
-          class="mr-1"
+          class="mr-2"
           @click="x -= scrollAmount"
         >
           <v-icon
@@ -27,15 +29,12 @@
             color="grey-darken-3"
           />
         </v-btn>
-      </v-col>
-      <v-col cols="auto">
         <v-btn
           icon
           density="compact"
           color="transparent"
           variant="outlined"
           :disabled="arrivedState.right"
-          class="ml-1"
           @click="x += scrollAmount"
         >
           <v-icon
@@ -45,27 +44,54 @@
         </v-btn>
       </v-col>
     </v-row>
-
-    <v-row
-      ref="scrollContainer"
-      class="flex-nowrap overflow-auto hidden-scroll"
-    >
-      <slot
-        name="carousel-item"
-      />
-    </v-row>
+    <div ref="items-list">
+      <v-row
+        ref="scrollContainer"
+        class="flex-nowrap overflow-auto hidden-scroll"
+      >
+        <slot
+          name="carousel-item"
+        />
+      </v-row>
+    </div>
   </v-container>
 </template>
 
 <script setup>
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
+import { useDisplay } from 'vuetify'
+
+const { lgAndUp, md, sm } = useDisplay()
 
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
+const itemsList = useTemplateRef('items-list')
+
 onMounted(() => {
-  scrollElement.value = scrollContainer.value.$el
+  nextTick(() => {
+    scrollElement.value = scrollContainer.value.$el
+  })
+})
+
+const childrenCount = computed(() => {
+  return itemsList.value?.children[0].children.length
+})
+
+const displayButton = computed(() => {
+  if (lgAndUp.value) {
+    return childrenCount.value > 4
+  }
+  else if (md.value) {
+    return childrenCount.value > 3
+  }
+  else if (sm.value) {
+    return childrenCount.value > 2
+  }
+  else {
+    return childrenCount.value > 1
+  }
 })
 
 const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })

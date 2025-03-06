@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container
-      class="d-flex align-center position-relative "
+      class="d-flex align-center position-relative"
     >
       <v-row class="overflow-x-auto">
         <v-slide-group

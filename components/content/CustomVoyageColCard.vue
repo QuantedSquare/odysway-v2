@@ -4,7 +4,6 @@
     sm="6"
     md="4"
     lg="3"
-    xl="2"
   >
     <v-card
       elevation="0"

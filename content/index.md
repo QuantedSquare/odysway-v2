@@ -71,6 +71,17 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 
   :::custom-voyage-col-card{voyage-slug="japon"}
   :::
+  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::
+
+  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
+  :::
+
+  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::
+
+  :::custom-voyage-col-card{voyage-slug="japon"}
+  :::
 
 ::
 
@@ -88,8 +99,6 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
   :::custom-voyage-col-card{voyage-slug="chine"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon"}
-  :::
 
 ::
 
