@@ -16,7 +16,7 @@
       <v-col cols="6">
         <v-select
           label="Nombres d'adultes"
-          :items="[1, 2, 3, 4, 5, 6, 7, 8]"
+          :items="selectOptions(1, 8)"
           variant="outlined"
           bg-color="white"
         />
@@ -24,7 +24,7 @@
       <v-col cols="6">
         <v-select
           label="Nombres d'enfants"
-          :items="[1, 2, 3, 4, 5, 6, 7, 8]"
+          :items="selectOptions(0, 8)"
           variant="outlined"
           bg-color="white"
         />
@@ -42,3 +42,16 @@
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+defineProps({
+  deal: {
+    type: Object,
+    required: true,
+  },
+})
+
+const selectOptions = function (start, end) {
+  return Array.from({ length: end - start }, (_, i) => i + start)
+}
+</script>

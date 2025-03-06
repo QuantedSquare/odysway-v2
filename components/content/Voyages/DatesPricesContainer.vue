@@ -9,6 +9,7 @@
       show-arrows
       hide-slider
       selected-class="active"
+      height="64"
     >
       <template #prev="{ prev }">
         <v-btn
@@ -34,12 +35,12 @@
         :value="1"
         class="rounded-t-lg"
       >
-        <div class="text-subtitle-1 text-md-h6 font-weight-bold">
+        <div class="d-flex-column text-subtitle-1 text-md-h6 font-weight-bold ">
           <slot
             name="phrase-left-title"
             mdc-unwrap="p"
           />
-          <p class="text-caption">
+          <p class="text-caption ">
             <slot
               name="phrase-left-subtitle"
               mdc-unwrap="p"
@@ -52,13 +53,13 @@
         :value="2"
         class="rounded-t-lg"
       >
-        <div class="text-subtitle-1 text-md-h6 font-weight-bold">
+        <div class="text-subtitle-1 text-md-h6 font-weight-bold ">
           <slot
             name="phrase-right-title"
             mdc-unwrap="p"
           />
           <p
-            class="text-caption"
+            class="text-caption "
           >
             <slot
               name="phrase-right-subtitle"
