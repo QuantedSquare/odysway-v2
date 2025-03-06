@@ -243,7 +243,7 @@ console.log('voyage', voyage.value)
 const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)
-const currentStep = ref(step ? parseInt(step) : 1)
+const currentStep = ref(step ? parseInt(step) : 0)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = 5

@@ -120,7 +120,7 @@
               <td>
                 <div v-if="item.maxTravellers !== item.bookedPlaces">
                   <v-btn-secondary
-                    :to="`/checkout/${route.params.voyageSlug}`"
+                    :to="`/checkout?slug=${route.params.voyageSlug}&departure_date=${dayjs(item.departureDate).toISOString()}&return_date=${dayjs(item.returnDate).toISOString()}`"
                     class="text-caption text-uppercase"
                   >
                     réserver / poser une option
@@ -162,12 +162,11 @@ const tab = ref(null)
 
 const route = useRoute()
 
-const { data: deal } = await useAsyncData(route.params.voyageSlug, () => {
+const { data: deal } = useAsyncData(route.params.voyageSlug, () => {
   return queryCollection('deals').where('slug', '=', props.slug).first()
 })
-
 const dates = computed(() => {
-  return deal.value.dates
+  return deal.value?.dates
 })
 </script>
 
