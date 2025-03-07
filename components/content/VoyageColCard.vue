@@ -1,9 +1,20 @@
 <template>
   <v-col
-    v-if="voyage && voyage.imgSrc"
+    v-if="status === 'pending'"
     cols="12"
-    sm="4"
-    md="3"
+  >
+    <v-skeleton-loader
+      class="mx-auto"
+      type="card"
+      height="250"
+    />
+  </v-col>
+  <v-col
+    v-else-if="status === 'success'"
+    cols="12"
+    sm="6"
+    md="4"
+    lg="3"
   >
     <v-card
       elevation="0"
@@ -15,10 +26,10 @@
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 50, width: 640 })"
+          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 640 })"
           :alt="`Image principale du voyage ${voyage.title}`"
-          width="100%"
           rounded="xl"
+          height="250px"
           cover
           class="hover-scale min-height-img"
         >
@@ -65,10 +76,10 @@
             <div class="display-mobile">
               <div class="blur-overlay" />
               <div class="position-absolute bottom-text text-shadow text-white bottom-0">
-                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 text-wrap">
+                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 no-white-space">
                   {{ voyage.title }}
                 </v-card-title>
-                <v-card-text class="font-weight-bold  px-0 d-flex flex-column align-start ga-2 mt-4">
+                <v-card-text class="font-weight-bold px-0 d-flex flex-column align-start ga-2 mt-4">
                   <span class="text-body-1">{{ voyage.country }} - {{ voyage.duration }}</span>
                   <span class="text-body-2"> A partir de {{ voyage.startingPrice }}€</span>
                   <client-only>
@@ -112,20 +123,9 @@
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
         >
-          <v-tooltip
-            location="top"
-            :text="voyage.title"
-          >
-            <template #activator="{ props }">
-
-              <v-card-title
-                v-bind="props"
-                class="text-body-1 font-weight-bold py-1 px-0 text-dark"
-              >
-                {{ voyage.title }}
-              </v-card-title>
-            </template>
-          </v-tooltip>
+          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark no-white-space">
+            {{ voyage.title }}
+          </v-card-title>
           <v-card-text class="text-body-2 py-1 px-0">
             <span class="text-grey-darken-2 "> A partir de </span>
             <span class="font-weight-bold text-dark">{{ voyage.startingPrice }}€</span>
@@ -164,7 +164,7 @@ const props = defineProps({
 })
 const img = useImage()
 
-const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => {
+const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
 </script>
@@ -222,7 +222,8 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
 }
 @media screen and (max-width: 600px) {
   .min-height-img{
-    min-height: 450px!important;
+    min-height: 300px!important;
+    min-width:300px;
   }
 }
 </style>
