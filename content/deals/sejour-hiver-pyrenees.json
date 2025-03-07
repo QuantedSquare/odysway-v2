@@ -3,7 +3,7 @@
     "imgSrc": "/images/iStock-1336944149.webp",
     "country": "France", 
     "slug": "sejour-pyrenees",
-    "ISO": "FR",
+    "iso": "FR",
     "zoneChapka": 1,
     "indivRoom": true,
     "privatisation": true,

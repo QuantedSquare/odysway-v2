@@ -215,7 +215,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         imgSrc: deal.imgSrc,
         country: deal.country,
         slug: deal.slug,
-        iso: deal.ISO,
+        iso: deal.iso,
         zoneChapka: deal.zoneChapka,
         indivRoom: deal.indivRoom,
         privatisation: deal.privatisation,
