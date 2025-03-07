@@ -89,7 +89,6 @@ onMounted(() => {
   }, 200)
   draggingContainerRef.value.scrollToSection(0)
 })
-<<<<<<< HEAD
 
 const reviewsList = computed(() => {
   return smAndUp.value ? onHomeReviews.value : onHomeReviews.value.slice(0, 3)
@@ -104,8 +103,6 @@ const formatImage = photo => img(photo, {
 })
 
 const getInitial = name => name[0]
-=======
->>>>>>> main
 </script>
 
 <style scoped>
