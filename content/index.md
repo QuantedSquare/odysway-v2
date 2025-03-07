@@ -168,7 +168,7 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
 <!-- [Les mots]{style="color: #2e8b57;"} de nos voyageurs 😍 -->
 ::
 
-<!-- ::reviews-voyages-container
+::reviews-voyages-container
   :::travel-review-card{slug="florence"}
   :::
   :::travel-review-card{slug="test1"}
@@ -177,7 +177,7 @@ Parce que voyager doit avoir du sens, nous nous engageons à construire le touri
   :::
   :::travel-review-card{slug="test3"}
   :::
-:: -->
+::
 
 ::partenaires-container
 
