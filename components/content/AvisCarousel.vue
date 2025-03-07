@@ -3,7 +3,6 @@
     ref="avis-carousel"
     class="h-100 pb-12"
     :show-arrows="false"
-    :cycle="nbCarouselItems > 1 ? true : false"
     interval="10000"
     hide-delimiter-background
     :hide-delimiters="nbCarouselItems > 1 ? false : true"
