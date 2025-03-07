@@ -3,7 +3,7 @@
   "imgSrc1": "/images/iStock-1336944149.webp",
   "imgSrc2": "/images/Laponie-(1).webp",
   "country": "France",
-  "slug": "sejour-pyrenees",
+  "slug": "sejour-hiver-pyrenees",
   "iso": "FR",
   "zoneChapka": 1,
   "indivRoom": true,
@@ -45,5 +45,6 @@
       "lastMinute": false,
       "promoLastMinute": 80
     }
-  ]
+  ],
+  "ISO": "FR"
 }
