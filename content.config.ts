@@ -41,7 +41,8 @@ export default defineContentConfig({
       source: 'deals/**.json',
       schema: z.object({
         title: z.string(),
-        imgSrc: z.string(),
+        imgSrc1: z.string(),
+        imgSrc2: z.string(),
         country: z.string(),
         slug: z.string(),
         ISO: z.string(),

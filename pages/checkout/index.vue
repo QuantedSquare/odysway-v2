@@ -4,10 +4,10 @@
     class="mt-10 relative"
   >
     <v-img
-      :src="img(imageSrc, { format: 'webp', quality: 70, height: 900 })"
-      :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900 })"
+      :src="img(deal.imgSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :lazy-src="img(deal.imgSrc2, { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
-      :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 600 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 900 })} 1500w`"
+      :srcset="`${img(deal.imgSrc2, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(deal.imgSrc2, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
       height="350px"
       cover
       class="absolute"
@@ -23,7 +23,10 @@
 <script setup>
 import { useImage } from '#imports'
 
-const imageSrc = ref('/images/Laponie-(1).webp')
+const route = useRoute()
+
+const deal = await queryCollection('deals').where('slug', '=', route.query.slug).first()
+
 const img = useImage()
 </script>
 
