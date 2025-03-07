@@ -1,5 +1,16 @@
 <template>
   <v-col
+    v-if="status === 'pending'"
+    cols="12"
+  >
+    <v-skeleton-loader
+      class="mx-auto"
+      type="card"
+      height="250"
+    />
+  </v-col>
+  <v-col
+    v-else-if="status === 'success'"
     cols="12"
     sm="6"
     md="4"
@@ -7,7 +18,7 @@
   >
     <v-card
       elevation="0"
-      class="hover-scale"
+      rounded="xl"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
@@ -15,11 +26,12 @@
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 50, width: 640 })"
+          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 640 })"
           :alt="`Image principale du voyage ${voyage.title}`"
           rounded="xl"
           height="250px"
           cover
+          class="hover-scale min-height-img"
         >
           <client-only>
             <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
@@ -152,7 +164,7 @@ const props = defineProps({
 })
 const img = useImage()
 
-const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => {
+const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
 </script>
@@ -183,7 +195,6 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   left: 0;
   right: 0;
   height: 50%;
-  border-radius: 24px;
   mask: linear-gradient(transparent, rgb(0, 0, 0), black);
   backdrop-filter: blur(4px);
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.752));
@@ -211,7 +222,8 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
 }
 @media screen and (max-width: 600px) {
   .min-height-img{
-    min-height: 450px!important;
+    min-height: 300px!important;
+    min-width:300px;
   }
 }
 </style>
