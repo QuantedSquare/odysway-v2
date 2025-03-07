@@ -9,13 +9,14 @@
         size="100"
         rounded="lg"
       />
-      <div class="text-white text-h3 text-md-h5 d-flex flex-column w-100">
+      <div class="text-white text-h6 text-md-h5 d-flex flex-column w-100">
         <span class="font-weight-bold">
           {{ titre }}
         </span>
         <v-row
           v-if="travelType"
           class="text-body-1 mt-2 text-no-wrap"
+          no-gutters
         >
           <v-col>
             {{ travelType }} -  <span

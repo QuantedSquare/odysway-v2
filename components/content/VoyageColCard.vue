@@ -15,7 +15,7 @@
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 640 })"
+          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 50, width: 640 })"
           :alt="`Image principale du voyage ${voyage.title}`"
           width="100%"
           rounded="xl"
@@ -213,7 +213,7 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
   transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
-/* .hover-scale{
+.hover-scale{
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
 }
@@ -222,8 +222,7 @@ const { data: voyage } = await useAsyncData(`voyage-${props.voyageSlug}`, () => 
 }
 @media screen and (max-width: 600px) {
   .min-height-img{
-    height: 350px;
+    min-height: 450px!important;
   }
-
 }
 </style>

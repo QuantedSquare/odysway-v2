@@ -19,6 +19,7 @@
           :complete="model + 1 > step.number"
           :step="step.number"
           color="primary"
+          :value="index + 1"
         >
           <span class="d-none d-md-block font-weight-bold bg-white rounded-lg pa-2 text-no-wrap">
             {{ index + 1 }}.
@@ -27,6 +28,8 @@
         </v-stepper-item>
         <v-divider
           v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
+          class="text-shadow text-white"
+          opacity="0.6"
         />
       </template>
     </v-stepper-header>
@@ -109,5 +112,8 @@ const stepDefinitions = computed(() => {
 
 #stepper {
   box-shadow: none;
+}
+#stepper:deep(.v-stepper-item) {
+  opacity:1;
 }
 </style>
