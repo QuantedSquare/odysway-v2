@@ -26,7 +26,7 @@
       size="x-large"
       color="primary"
       href="/"
-      class="d-none d-md-inline"
+      class="d-none d-md-inline text-decoration-none"
     >
       <div class="d-flex flex-column align-center text-caption text-uppercase">
         <b>+33 1 84 80 79 75</b>
