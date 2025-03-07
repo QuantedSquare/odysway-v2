@@ -14,7 +14,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width  w-md-50 w-lg-50"
+            class="border-width relative w-md-75 w-lg-50 w-xl-33 no-margin-window"
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -30,102 +30,102 @@
               <FunnelCardHeader
                 v-if=" currentStep !== 0 && currentStep < 5 "
                 :titre="voyage.title"
+                :travel-type="voyage.travelType"
                 :image="voyage.imgSrc"
+                :date="`Du ${voyage.departureDate} au ${voyage.returnDate}`"
               />
             </Transition>
-            <v-row>
-              <v-col
-                cols="12"
+            <v-stepper-window
+              :model-value="currentStep"
+            >
+              <v-stepper-window-item>
+                <template v-if="skipperMode === 'summary'">
+                  <FunnelStepsSummary
+                    :current-step="currentStep"
+                    :page="page"
+                    :voyage="voyage"
+                  />
+
+                  <FunnelStepsPaymentRedirect
+                    :ref="(component) => registerStepComponent(component, 5)"
+                    v-model="validForm"
+                    :page="page"
+                    :current-step="currentStep"
+                    :own-step="5"
+                    :voyage="voyage"
+                  />
+                </template>
+                <FunnelStepsSkipper
+                  v-else
+                  v-model="skipperMode"
+                  :page="page"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item>
+                <FunnelStepsDetails
+                  v-if="skipperMode === 'normal'"
+                  :ref="(component) => registerStepComponent(component, 1)"
+                  v-model="validForm"
+                  :current-step="currentStep"
+                  :voyage="voyage"
+                  :own-step="1"
+                />
+                <FunnelStepsCalendly
+                  v-else
+                  :titre="voyage.title"
+                  :page="page"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item>
+                <FunnelStepsTravelersInfos
+                  :ref="(component) => registerStepComponent(component, 2)"
+                  v-model="validForm"
+                  :current-step="currentStep"
+                  :page="page"
+                  :own-step="2"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item>
+                <FunnelStepsOptions
+                  :ref="(component) => registerStepComponent(component, 3)"
+                  v-model="validForm"
+                  :current-step="currentStep"
+                  :page="page"
+                  :own-step="3"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item>
+                <FunnelStepsInsurances
+                  :ref="(component) => registerStepComponent(component, 4)"
+                  v-model="validForm"
+                  :current-step="currentStep"
+                  :page="page"
+                  :own-step="4"
+                />
+              </v-stepper-window-item>
+              <v-stepper-window-item
+                :value="5"
               >
-                <v-stepper-window :model-value="currentStep">
-                  <v-stepper-window-item>
-                    <template v-if="skipperMode === 'summary'">
-                      <FunnelStepsSummary
-                        :current-step="currentStep"
-                        :page="page"
-                        :voyage="voyage"
-                      />
+                <FunnelStepsSummary
+                  :current-step="currentStep"
+                  :page="page"
+                  :voyage="voyage"
+                />
 
-                      <FunnelStepsPaymentRedirect
-                        :ref="(component) => registerStepComponent(component, 5)"
-                        v-model="validForm"
-                        :page="page"
-                        :current-step="currentStep"
-                        :own-step="5"
-                        :voyage="voyage"
-                      />
-                    </template>
-                    <FunnelStepsSkipper
-                      v-else
-                      v-model="skipperMode"
-                      :page="page"
-                    />
-                  </v-stepper-window-item>
-                  <v-stepper-window-item>
-                    <FunnelStepsDetails
-                      v-if="skipperMode === 'normal'"
-                      :ref="(component) => registerStepComponent(component, 1)"
-                      v-model="validForm"
-                      :current-step="currentStep"
-                      :voyage="voyage"
-                      :own-step="1"
-                    />
-                    <FunnelStepsCalendly
-                      v-else
-                      :titre="voyage.title"
-                      :page="page"
-                    />
-                  </v-stepper-window-item>
-                  <v-stepper-window-item>
-                    <FunnelStepsTravelersInfos
-                      :ref="(component) => registerStepComponent(component, 2)"
-                      v-model="validForm"
-                      :current-step="currentStep"
-                      :page="page"
-                      :own-step="2"
-                    />
-                  </v-stepper-window-item>
-                  <v-stepper-window-item>
-                    <FunnelStepsOptions
-                      :ref="(component) => registerStepComponent(component, 3)"
-                      v-model="validForm"
-                      :current-step="currentStep"
-                      :page="page"
-                      :own-step="3"
-                    />
-                  </v-stepper-window-item>
-                  <v-stepper-window-item>
-                    <FunnelStepsInsurances
-                      :ref="(component) => registerStepComponent(component, 4)"
-                      v-model="validForm"
-                      :current-step="currentStep"
-                      :page="page"
-                      :own-step="4"
-                    />
-                  </v-stepper-window-item>
-                  <v-stepper-window-item
-                    :value="5"
-                  >
-                    <FunnelStepsSummary
-                      :current-step="currentStep"
-                      :page="page"
-                      :voyage="voyage"
-                    />
+                <FunnelStepsPaymentRedirect
+                  :ref="(component) => registerStepComponent(component, 5)"
+                  v-model="validForm"
+                  :page="page"
+                  :current-step="currentStep"
+                  :own-step="5"
+                  :voyage="voyage"
+                />
+              </v-stepper-window-item>
+            </v-stepper-window>
 
-                    <FunnelStepsPaymentRedirect
-                      :ref="(component) => registerStepComponent(component, 5)"
-                      v-model="validForm"
-                      :page="page"
-                      :current-step="currentStep"
-                      :own-step="5"
-                      :voyage="voyage"
-                    />
-                  </v-stepper-window-item>
-                </v-stepper-window>
-              </v-col>
-            </v-row>
             <v-card-actions>
               <v-stepper-actions
+
                 next-text="Suivant"
                 :prev-text="skipperMode !== 'summary' ?'Précédent' : ''"
                 @click:next="nextStep()"
@@ -148,6 +148,14 @@
                     />
                   </div>
                 </template>
+                <v-row>
+                  <v-col
+                    cols="12"
+                    class="d-flex justify-end text-body-1 font-weight-bold"
+                  >
+                    Total : {{ formatNumber(1000000, 'currency', 'EUR') }}
+                  </v-col>
+                </v-row>
               </v-stepper-actions>
             </v-card-actions>
           </v-card>
@@ -173,7 +181,7 @@ dayjs.extend(customParseFormat)
 
 const route = useRoute()
 const { step, dealId, slug, departure_date, return_date, plan } = route.query
-
+const total = ref(0)
 // ================== Page ==================
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 // console.log('page', page.value)
@@ -263,7 +271,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       gotEarlybird: deal.gotEarlybid === 'Oui',
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
-      travelType: 'Group',
+      travelType: deal.travelType,
       // {... COMPLETER}
     }
   }
@@ -334,5 +342,12 @@ const previousStep = () => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
+}
+@media screen and (max-width: 768px) {
+  .no-margin-window .v-stepper-window {
+ margin-left:0!important;
+ margin-right:0!important;
+}
+
 }
 </style>

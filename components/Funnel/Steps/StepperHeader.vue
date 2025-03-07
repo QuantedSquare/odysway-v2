@@ -5,15 +5,14 @@
     alt-labels
     editable
     show-actions
-    class="text-caption"
-    color="primary"
+    class="text-caption "
   >
     <v-stepper-header
       v-if="props.skipperMode !== 'summary'"
-      class="elevation-0 d-flex justify-center"
+      class="elevation-0 d-flex justify-center text-shadow"
     >
       <template
-        v-for="(step) in stepDefinitions"
+        v-for="(step, index) in stepDefinitions"
         :key="step.number"
       >
         <v-stepper-item
@@ -21,7 +20,8 @@
           :step="step.number"
           color="primary"
         >
-          <span class="d-none d-md-block">
+          <span class="d-none d-md-block font-weight-bold bg-white rounded-lg pa-2 text-no-wrap">
+            {{ index + 1 }}.
             {{ step.label }}
           </span>
         </v-stepper-item>

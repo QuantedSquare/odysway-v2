@@ -37,10 +37,6 @@ const index = ref(0)
 
 const registerComponent = inject('registerComponent')
 
-onMounted(() => {
-  index.value = registerComponent({})
-})
-
 const isActive = computed(() => {
   return currentSection.value === index.value
 })
@@ -53,6 +49,8 @@ const sectionRef = ref(null)
 let observer
 
 onMounted(async () => {
+  index.value = registerComponent({})
+
   await nextTick()
 
   if (!observer) {

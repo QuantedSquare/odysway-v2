@@ -58,7 +58,6 @@
       </v-col>
       <v-col
         cols="12"
-        md="8"
       >
         <!-- :label="$t('stepperDevisGroup.foodOptions.spec')" -->
         <Transition name="slide-fade">

@@ -56,7 +56,6 @@
               <v-select
                 v-model="nbTeen"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
               />
@@ -116,7 +115,6 @@
                 <v-col cols="4">
                   <v-select
                     v-model="phoneCode"
-
                     :items="phonesSelect"
                     :rules="[rules.name]"
                     label="Indicatif *"
@@ -135,7 +133,6 @@
                     <template #selection="{ item }">
                       <v-img
                         :src="item.props.flagSrc"
-                        height="20px"
                         width="30px"
                       />
                     </template>
@@ -144,7 +141,6 @@
                 <v-col cols="8">
                   <v-text-field
                     v-model="phoneNumber"
-
                     :label="'Téléphone *'"
                     placeholder="Ex: 6 00 00 00 01"
                     :rules="[rules.phone]"
