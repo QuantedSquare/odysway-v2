@@ -1,14 +1,15 @@
 {
-    "title": "Immersion hivernale en terre béarnaise",
-    "imgSrc1": "/images/iStock-1336944149.webp",
-    "imgSrc2": "/images/Laponie-(1).webp",
-    "country": "France", 
-    "slug": "sejour-pyrenees",
-    "iso": "FR",
-    "zoneChapka": 1,
-    "indivRoom": true,
-    "privatisation": true,
-    "dates": [{
+  "title": "Immersion hivernale en terre béarnaise",
+  "imgSrc1": "/images/iStock-1336944149.webp",
+  "imgSrc2": "/images/Laponie-(1).webp",
+  "country": "France",
+  "slug": "sejour-pyrenees",
+  "iso": "FR",
+  "zoneChapka": 1,
+  "indivRoom": true,
+  "privatisation": true,
+  "dates": [
+    {
       "departureDate": "11/05/2025",
       "returnDate": "01/06/2025",
       "startingPrice": 2000,
