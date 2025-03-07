@@ -2,6 +2,9 @@
   <v-col
     v-if="status === 'pending'"
     cols="12"
+    sm="6"
+    md="4"
+    lg="3"
   >
     <v-skeleton-loader
       class="mx-auto"

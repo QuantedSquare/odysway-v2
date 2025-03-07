@@ -38,14 +38,12 @@
         <div class="d-flex-column text-subtitle-1 text-md-h6 font-weight-bold ">
           <slot
             name="phrase-left-title"
-            mdc-unwrap="p"
           />
-          <p class="text-caption ">
+          <div class="text-caption ">
             <slot
               name="phrase-left-subtitle"
-              mdc-unwrap="p"
             />
-          </p>
+          </div>
         </div>
       </v-tab>
       <v-tab
@@ -56,16 +54,14 @@
         <div class="text-subtitle-1 text-md-h6 font-weight-bold ">
           <slot
             name="phrase-right-title"
-            mdc-unwrap="p"
           />
-          <p
+          <div
             class="text-caption "
           >
             <slot
               name="phrase-right-subtitle"
-              mdc-unwrap="p"
             />
-          </p>
+          </div>
         </div>
       </v-tab>
     </v-tabs>
@@ -99,9 +95,7 @@ const props = defineProps({
 
 const tab = ref(null)
 
-const route = useRoute()
-
-const { data: deal } = await useAsyncData(route.params.voyageSlug, () => {
+const { data: deal } = await useAsyncData(props.slug, () => {
   return queryCollection('deals').where('slug', '=', props.slug).first()
 })
 </script>
