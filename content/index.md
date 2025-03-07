@@ -50,94 +50,94 @@ Nos thématiques [préférées]{style="color: #2e8b57;"} 🫶
 ::
 
 
-::horizontal-custom-carousel
+::horizontal-carousel
 #title
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 
 #carousel-item  
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="chine"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="japon"}
   :::
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
-  :::
-
-  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="chine"}
+  :::
+
+  :::voyage-col-card{voyage-slug="japon"}
   :::
 
 ::
 
-::horizontal-custom-carousel
+::horizontal-carousel
 #title
 Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"} 
 
 #carousel-item  
-  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="chine"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="chine"}
   :::
 
 
 ::
 
 
-::horizontal-custom-carousel
+::horizontal-carousel
 #title
 Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 
 #carousel-item  
-  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="chine"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="japon"}
   :::
 
 ::
 
-::horizontal-custom-carousel
+::horizontal-carousel
 #title
 Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 
 #carousel-item  
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="japon-fleurs"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="chine"}
   :::
 
-  :::custom-voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="japon"}
   :::
 
 ::
