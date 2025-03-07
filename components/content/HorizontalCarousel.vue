@@ -18,7 +18,7 @@
         <v-btn
           icon
           density="compact"
-          color="transparent"
+          color="primary"
           variant="outlined"
           :disabled="arrivedState.left"
           class="mr-2"
@@ -26,20 +26,20 @@
         >
           <v-icon
             :icon="mdiChevronLeft"
-            color="grey-darken-3"
+            color="primary"
           />
         </v-btn>
         <v-btn
           icon
           density="compact"
-          color="transparent"
+          color="primary"
           variant="outlined"
           :disabled="arrivedState.right"
           @click="x += scrollAmount"
         >
           <v-icon
             :icon="mdiChevronRight"
-            color="grey-darken-3"
+            color="primary"
           />
         </v-btn>
       </v-col>
