@@ -209,7 +209,6 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         console.log(filteredDates)
         throw new Error('Invalid or no matching dates found.')
       }
-
       return {
         title: deal.title,
         imgSrc: deal.imgSrc,
@@ -230,11 +229,11 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     const deal = parseDeal(query, departure_date, return_date)
 
     Object.assign(deal, { ...deal }, {
-      departureDate: dayjs(departure_date, 'YYYY-MM-DD').format('DD/MM/YYYY'), // check dates in active campaign
-      returnDate: dayjs(return_date, 'YYYY-MM-DD').format('DD/MM/YYYY'),
+      departureDate: dayjs(departure_date).format('DD/MM/YYYY'), // check dates in active campaign
+      returnDate: dayjs(return_date).format('DD/MM/YYYY'),
       // ===== Temporary values below until it is replaced in nuxt studio =====
       // ===== Or travel manager =====
-      depositPrice: query.startingPrice * 0.3 || 500,
+      depositPrice: deal.startingPrice * 0.3 || 500,
       promoChildren: 80,
       promoTeen: 80,
       maxChildrenAge: 12,
