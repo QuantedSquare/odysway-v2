@@ -75,7 +75,7 @@
       class="bg-primary"
     >
       <v-tabs-window-item :value="1">
-        <DataTable :deal="deal" />
+        <DatesDataTable :deal="deal" />
       </v-tabs-window-item>
       <v-tabs-window-item
         v-show="deal.privatisation"
