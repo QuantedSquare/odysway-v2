@@ -40,9 +40,16 @@ export default defineContentConfig({
       type: 'data',
       source: 'deals/**.json',
       schema: z.object({
+        draft: z.boolean().default(false),
         title: z.string(),
-        imgSrc1: z.string(),
-        imgSrc2: z.string(),
+        imgSrc1: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }),
+        imgSrc2: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }),
         country: z.string(),
         slug: z.string(),
         ISO: z.string(),
@@ -50,8 +57,8 @@ export default defineContentConfig({
         indivRoom: z.boolean(),
         privatisation: z.boolean(),
         dates: z.array(z.object({
-          departureDate: z.string(),
-          returnDate: z.string(),
+          departureDate: z.date(),
+          returnDate: z.date(),
           startingPrice: z.number(),
           indivRoomPrice: z.number(),
           maxTravellers: z.number(),
