@@ -21,5 +21,6 @@
   "country": "Japon",
   "zoneChapka": 5,
   "privatisation": false,
-  "duration": "3 semaines"
+  "duration": "3 semaines",
+  "startingPrice": 3100
 }

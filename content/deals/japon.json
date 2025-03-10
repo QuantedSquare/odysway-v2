@@ -21,5 +21,7 @@
     "src": "/images/roof-china.jpg",
     "alt": "Toitures ville japonaise"
   },
-  "zoneChapka": 3
+  "zoneChapka": 3,
+  "rating": 5,
+  "comments": 132
 }
