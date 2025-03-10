@@ -1,9 +1,12 @@
 <template>
   <v-data-table
+    v-model:expanded="expanded"
     hide-default-footer
     :headers="headers"
     :items="filteredDates"
+    :mobile="smAndDown"
     class="bg-primary"
+    disable-sort
   >
     <template #headers="{ columns }">
       <tr>
@@ -62,6 +65,8 @@ import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import 'dayjs/locale/fr'
 
+import { useDisplay } from 'vuetify'
+
 dayjs.extend(customParseFormat)
 
 const props = defineProps({
@@ -70,7 +75,11 @@ const props = defineProps({
     required: true,
   },
 })
-console.log(props.deal)
+
+const { smAndDown } = useDisplay()
+
+const expanded = ref([])
+
 const headers = [{
   title: 'date départ',
   key: 'date départ',

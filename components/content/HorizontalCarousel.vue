@@ -4,7 +4,7 @@
       align="center"
     >
       <v-col
-        cols="12"
+        cols="8"
         sm="auto"
         class="text-dark font-weight-black text-h5 text-md-h4 my-4"
       >
