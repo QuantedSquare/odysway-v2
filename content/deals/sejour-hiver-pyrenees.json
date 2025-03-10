@@ -39,6 +39,18 @@
       "promoEarlyBird": 80,
       "promoLastMinute": 100,
       "lastMinute": true
+    },
+    {
+      "departureDate": "2026-01-01T00:00:00.000Z",
+      "returnDate": "2026-01-31T00:00:00.000Z",
+      "startingPrice": 2000,
+      "indivRoomPrice": 300,
+      "maxTravellers": 10,
+      "bookedPlaces": 2,
+      "earlyBird": true,
+      "promoEarlyBird": 300,
+      "promoLastMinute": 100,
+      "lastMinute": true
     }
   ],
   "imgSrc2": {
