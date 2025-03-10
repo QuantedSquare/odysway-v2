@@ -1,6 +1,6 @@
 {
-  "title": "JAPON",
-  "slug": "JP-2025",
+  "title": "Japon 2025",
+  "slug": "japon",
   "ISO": "JP",
   "indivRoom": true,
   "dates": [
@@ -9,5 +9,17 @@
       "returnDate": "01/07/2025",
       "startingPrice": 1000
     }
-  ]
+  ],
+  "imgSrc2": {
+    "src": "/images/blogs/Albanie_blog.png",
+    "alt": "Paysage "
+  },
+  "country": "Japon",
+  "duration": "2 semaines",
+  "startingPrice": 3000,
+  "imgSrc1": {
+    "src": "/images/roof-china.jpg",
+    "alt": "Toitures ville japonaise"
+  },
+  "zoneChapka": 3
 }

@@ -1,50 +1,59 @@
 {
   "title": "Immersion hivernale en terre béarnaise",
-  "imgSrc1": "/images/iStock-1336944149.webp",
-  "imgSrc2": "/images/Laponie-(1).webp",
-  "country": "France",
   "slug": "sejour-hiver-pyrenees",
-  "iso": "FR",
-  "zoneChapka": 1,
+  "ISO": "FR",
   "indivRoom": true,
-  "privatisation": true,
   "dates": [
     {
-      "departureDate": "11/05/2025",
-      "returnDate": "01/06/2025",
+      "departureDate": "11/06/2025",
+      "returnDate": "01/07/2025",
       "startingPrice": 2000,
       "indivRoomPrice": 300,
       "maxTravellers": 8,
       "bookedPlaces": 6,
-      "earlyBird": false,
       "promoEarlyBird": 80,
-      "lastMinute": false,
+      "promoLastMinute": 80,
+      "lastMinute": true,
+      "earlyBird": true
+    },
+    {
+      "departureDate": "2025-11-22T00:00:00.000Z",
+      "returnDate": "2025-12-01T00:00:00.000Z",
+      "startingPrice": 2000,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 5,
+      "earlyBird": true,
+      "lastMinute": true,
+      "promoEarlyBird": 100,
       "promoLastMinute": 80
     },
     {
-      "departureDate": "11/06/2025",
-      "returnDate": "01/07/2025",
-      "startingPrice": 1000,
+      "departureDate": "2025-06-06T00:00:00.000Z",
+      "returnDate": "2025-03-23T00:00:00.000Z",
+      "startingPrice": 2500,
       "indivRoomPrice": 300,
-      "maxTravellers": 8,
+      "maxTravellers": 9,
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "lastMinute": false,
-      "promoLastMinute": 80
-    },
-    {
-      "departureDate": "11/07/2025",
-      "returnDate": "01/08/2025",
-      "startingPrice": 1000,
-      "indivRoomPrice": 300,
-      "maxTravellers": 8,
-      "bookedPlaces": 1,
-      "earlyBird": false,
-      "promoEarlyBird": 80,
-      "lastMinute": false,
-      "promoLastMinute": 80
+      "promoLastMinute": 100,
+      "lastMinute": true
     }
   ],
-  "ISO": "FR"
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "France",
+  "zoneChapka": 1,
+  "privatisation": false,
+  "duration": "11 jours / 10 nuits",
+  "startingPrice": 2000,
+  "rating": 4.8,
+  "comments": 65
 }
