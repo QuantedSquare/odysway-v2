@@ -167,7 +167,7 @@ const props = defineProps({
 const img = useImage()
 
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
-  return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
+  return queryCollection('deals').where('slug', '=', props.voyageSlug).first()
 })
 </script>
 
