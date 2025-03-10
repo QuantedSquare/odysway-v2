@@ -20,9 +20,9 @@
     <template #item="{ item }">
       <tr class="text-center">
         <td>
-          {{ dayjs(item.departureDate, 'DD/MM/YYYY').locale('fr').format('ddd DD/MM/YYYY') }}
+          {{ dayjs(item.departureDate).locale('fr').format('ddd DD/MM/YYYY') }}
         </td>
-        <td>{{ dayjs(item.returnDate, 'DD/MM/YYYY').locale('fr').format('ddd DD/MM/YYYY') }}</td>
+        <td>{{ dayjs(item.returnDate).locale('fr').format('ddd DD/MM/YYYY') }}</td>
         <td>{{ item.startingPrice }} €</td>
         <td>
           <div v-if="item.bookedPlaces < 2">
@@ -43,7 +43,7 @@
         <td>
           <div v-if="item.maxTravellers !== item.bookedPlaces">
             <v-btn-secondary
-              :to="`/checkout?slug=${deal.slug}&departure_date=${dayjs(item.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&return_date=${dayjs(item.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&type=deposit`"
+              :to="`/checkout?slug=${deal.slug}&departure_date=${dayjs(item.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(item.returnDate).format('YYYY-MM-DD')}&type=deposit`"
               class="text-caption text-uppercase"
             >
               réserver / poser une option
@@ -83,7 +83,7 @@ const headers = [{
 { title: 'réserver', key: 'réserver' }]
 
 const filteredDates = computed(() => {
-  return [...props.deal.dates].filter(date => dayjs(date.departureDate, 'DD/MM/YYYY').isAfter())
+  return [...props.deal.dates].filter(date => dayjs(date.departureDate).isAfter())
 })
 console.log(filteredDates.value)
 </script>

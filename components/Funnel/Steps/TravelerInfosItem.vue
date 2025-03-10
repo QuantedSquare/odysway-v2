@@ -2,7 +2,6 @@
   <v-row
     class="rounded-xl"
   >
-    <!-- :class="`bg-${bgColor}-lighten-4 `" -->
     <v-col
       cols="12"
       class="d-flex  justify-center  align-center  justify-md-start align-md-start"
@@ -50,35 +49,8 @@
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
         type="date"
+        @change="dataUpdated"
       />
-      <!-- <v-menu
-        v-model="dateMenu"
-        :close-on-content-click="false"
-        location="end"
-      >
-        <template #activator="{ props }">
-          <v-text-field
-            v-bind="props"
-            v-model="displayedDate"
-            label="Date de naissance *"
-            readonly
-            :rules="[rules.required]"
-            :append-inner-icon="mdiCalendar"
-            @change="dataUpdated"
-          />
-        </template>
-
-        <v-card
-          min-width="300"
-          elevation="6"
-        >
-          <v-date-picker
-            v-model="modelDate"
-            :max="maxDate"
-            min="1910-01-01"
-          />
-        </v-card>
-      </v-menu> -->
     </v-col>
   </v-row>
 </template>
@@ -88,10 +60,7 @@ import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 
-import { mdiCalendar, mdiBagPersonal } from '@mdi/js'
-
-const displayedDate = ref(new Date())
-const modelDate = ref(new Date())
+import { mdiBagPersonal } from '@mdi/js'
 
 dayjs.extend(customParseFormat)
 dayjs.extend(localizedFormat)
@@ -103,22 +72,19 @@ const props = defineProps({
   birthdate: { type: String, default: '' },
   bgColor: { type: String, default: 'primary' },
 })
-
-const emit = defineEmits(['change'])
-
 // Refs
 const i_firstname = ref(props.firstname)
 const i_lastname = ref(props.lastname)
-const i_birthdate = ref(new Date())
-const dateMenu = ref(false)
+const displayedDate = ref(dayjs().format('DD/MM/YYYY'))
+const modelDate = ref(new Date())
 
-// const displayedDate = ref('')
+const emit = defineEmits(['change'])
 
 // Initialize birthdate
 onMounted(() => {
   if (props.birthdate) {
     console.log('props.birthdate', props.birthdate)
-    const parsedDate = dayjs(props.birthdate, 'DD/MM/YYYY').format('DD/MM/YYYY')
+    const parsedDate = dayjs(props.birthdate, 'DD/MM/YYYY').format('YYYY-MM-DD')
     displayedDate.value = parsedDate
     const jsDate = dayjs(props.birthdate, 'DD/MM/YYYY').toDate()
     modelDate.value = jsDate
@@ -128,9 +94,6 @@ onMounted(() => {
   }
 })
 
-// Computed
-const maxDate = computed(() => dayjs().format('YYYY-MM-DD'))
-
 // Rules
 const rules = {
   required: v => !!v || 'Cette information est requise.',
@@ -139,71 +102,57 @@ const rules = {
     if (!v) return true
 
     // Check format DD/MM/YYYY
-    const dateRegex = /^(\d{2})\/(\d{2})\/(\d{4})$/
+    const dateRegex = /^(\d{4})-(\d{2})-(\d{2})$/
     if (!dateRegex.test(v)) return 'Format invalide. Utilisez JJ/MM/AAAA'
 
     const matches = v.match(dateRegex)
-    const day = parseInt(matches[1])
+    const day = parseInt(matches[3])
     const month = parseInt(matches[2])
-    const year = parseInt(matches[3])
-
+    const year = parseInt(matches[1])
     // Basic validation
     if (month < 1 || month > 12) return 'Mois invalide'
     if (day < 1 || day > 31) return 'Jour invalide'
     if (year < 1910 || year > new Date().getFullYear()) return 'Année invalide'
 
+    if (month === 2 && day > 29) return 'Février ne peut pas avoir plus de 29 jours'
+    if ([4, 6, 9, 11].includes(month) && day > 30) return 'Ce mois ne peut pas avoir plus de 30 jours'
+
     // Check if date is valid using dayjs
     const dateObj = dayjs(`${year}-${month}-${day}`, 'YYYY-M-D')
-    if (!dateObj.isValid() || dateObj.format('DD/MM/YYYY') !== v)
+    if (!dateObj.isValid() || dateObj.format('DD-MM-YYYY') !== dayjs(v).format('DD-MM-YYYY'))
       return 'Date invalide'
 
     return true
   },
 }
 
-// Methods
-const handleDateSelection = () => {
-  dateMenu.value = false
-  dataUpdated()
-}
-
 const dataUpdated = () => {
   if (!modelDate.value) return
-
   emit('change', {
     id: props.id,
     firstname: i_firstname.value,
     lastname: i_lastname.value,
-    birthdate: displayedDate.value,
+    birthdate: dayjs(displayedDate.value).format('DD/MM/YYYY'),
   })
 }
 
-const formatDateInput = (event) => {
-  // Get only digits from input
-  const value = displayedDate.value.replace(/\D/g, '')
+// const formatDateInput = (event) => {
+//   // Get only digits from input
+//   const value = displayedDate.value.replace(/\D/g, '')
 
-  // Auto add slashes
-  if (value.length > 0) {
-    let formattedDate = ''
+//   // Auto add slashes
+//   if (value.length > 0) {
+//     let formattedDate = ''
 
-    for (let i = 0; i < value.length && i < 8; i++) {
-      if (i === 2 || i === 4) {
-        formattedDate += '/'
-      }
-      formattedDate += value[i]
-    }
+//     for (let i = 0; i < value.length && i < 8; i++) {
+//       if (i === 2 || i === 4) {
+//         formattedDate += '/'
+//       }
+//       formattedDate += value[i]
+//     }
 
-    displayedDate.value = formattedDate
-  }
-}
-
-// const dataUpdated = () => {
-//   emit('change', {
-//     id: props.id,
-//     firstname: i_firstname.value,
-//     lastname: i_lastname.value,
-//     birthdate: displayedDate.value,
-//   })
+//     displayedDate.value = formattedDate
+//   }
 // }
 
 // Watch for prop changes
@@ -215,16 +164,13 @@ watch(() => props.lastname, (newVal) => {
   i_lastname.value = newVal
 })
 
+// Watch for birthdate prop changes and update displayed date to match the format
 watch(() => props.birthdate, (newVal) => {
   if (newVal) {
     const parsedDate = dayjs(newVal, 'DD/MM/YYYY')
     if (parsedDate.isValid()) {
-      displayedDate.value = parsedDate.format('DD/MM/YYYY')
+      displayedDate.value = parsedDate.format('YYYY-MM-DD')
     }
   }
 })
-// watch(modelDate, () => {
-//   displayedDate.value = dayjs(modelDate.value).format('DD/MM/YYYY')
-//   handleDateSelection()
-// })
 </script>

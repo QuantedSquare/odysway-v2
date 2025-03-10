@@ -198,7 +198,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     }
     function parseDeal(deal, departureDate, returnDate) {
       const filteredDates = deal.dates.find((date) => {
-        return dayjs(date.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD') === returnDate
+        return dayjs(date.departureDate).format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate).format('YYYY-MM-DD') === returnDate
       })
 
       if (!filteredDates) {
@@ -225,8 +225,8 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     const deal = parseDeal(query, departure_date, return_date)
 
     Object.assign(deal, { ...deal }, {
-      departureDate: dayjs(departure_date).format('DD/MM/YYYY'), // check dates in active campaign
-      returnDate: dayjs(return_date).format('DD/MM/YYYY'),
+      departureDate: departure_date, // check dates in active campaign
+      returnDate: return_date,
       // ===== Temporary values below until it is replaced in nuxt studio =====
       // ===== Or travel manager =====
       depositPrice: deal.startingPrice * 0.3 || 500,
