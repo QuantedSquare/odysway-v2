@@ -17,11 +17,11 @@
         </v-col>
         <v-spacer class="d-none d-sm-block" />
         <v-col sm="4">
-          <!-- scroll to prices/dates or different page ? -->
           <v-btn-secondary
             rounded="sm"
             class="text-caption text-uppercase"
             width="100%"
+            @click="goTo('#dates-container', { offset: -200 })"
           >
             <slot name="text-btn-1" />
           </v-btn-secondary>
@@ -31,7 +31,7 @@
             rounded="sm"
 
             color="primary"
-            class="text-caption text-uppercase"
+            class="text-caption text-uppercase text-decoration-none"
             width="100%"
           >
             <template #prepend>
@@ -50,4 +50,7 @@
 
 <script setup>
 import { mdiCalendar } from '@mdi/js'
+import { useGoTo } from 'vuetify'
+
+const goTo = useGoTo()
 </script>

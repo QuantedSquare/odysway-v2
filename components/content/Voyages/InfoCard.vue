@@ -48,32 +48,33 @@
           cols="12"
           lg="10"
         >
-          <v-btn-secondary block>
+          <v-btn-secondary
+            block
+            @click="goTo('#dates-container', { offset: -200 })"
+          >
             <slot name="text-btn-1" />
           </v-btn-secondary>
         </v-col>
         <v-col
           cols="12"
-          lg="8"
+          lg="6"
         >
           <NuxtLink
             width="100%"
-            class="text-primary text-decoration-underline text-break"
+            class="text-primary text-break d-flex align-center justify-center ga-3"
             to="#"
           >
 
             <v-icon
               size="x-large"
-              class="mr-2"
             >
               {{ mdiCalendarMonthOutline }}
             </v-icon>
 
             <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
-            <span>
+            <span class="text-left">
               <slot
                 name="text-btn-2"
-                mdc-unwrap="p"
               />
             </span>
           </NuxtLink>
@@ -85,7 +86,10 @@
 
 <script setup>
 import { mdiCalendarMonthOutline } from '@mdi/js'
+import { useGoTo } from 'vuetify'
 import { useImage } from '#imports'
+
+const goTo = useGoTo()
 
 defineProps({
   averageNote: {
