@@ -18,11 +18,11 @@
       </tr>
     </template>
     <template #item="{ item }">
-      <tr class="text-center text-uppercase">
-        <td class="text-lowercase">
+      <tr class="text-center">
+        <td>
           {{ dayjs(item.departureDate, 'DD/MM/YYYY').locale('fr').format('ddd DD/MM/YYYY') }}
         </td>
-        <td>{{ item.returnDate }}</td>
+        <td>{{ dayjs(item.returnDate, 'DD/MM/YYYY').locale('fr').format('ddd DD/MM/YYYY') }}</td>
         <td>{{ item.startingPrice }} €</td>
         <td>
           <div v-if="item.bookedPlaces < 2">
@@ -30,7 +30,9 @@
               {{ mdiAccount }}
             </v-icon> Confirmé dès 2 inscrits
           </div>
-          <div v-else>
+          <div
+            v-else
+          >
             <v-icon>
               {{ mdiCheckCircleOutline }}
             </v-icon> <span>Départ garanti</span>

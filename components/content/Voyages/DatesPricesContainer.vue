@@ -95,9 +95,13 @@ const props = defineProps({
 
 const tab = ref(null)
 
-const { data: deal } = await useAsyncData(props.slug, () => {
-  return queryCollection('deals').where('slug', '=', props.slug).first()
+const { data: deal } = await useAsyncData(props.slug, async () => {
+  console.log('props.slug', props.slug)
+  const query = await queryCollection('deals').where('slug', '=', props.slug).first()
+  console.log('query', query)
+  return query
 })
+console.log('deal', deal.value)
 </script>
 
 <style scoped>

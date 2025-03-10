@@ -29,8 +29,8 @@
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          :src="img(voyage.imgSrc, { format: 'webp', quality: 90, height: 350, width: 640 })"
-          :alt="`Image principale du voyage ${voyage.title}`"
+          :src="img(voyage.imgSrc1.src, { format: 'webp', quality: 90, height: 350, width: 640 })"
+          :alt="voyage.imgSrc1.alt"
           rounded="xl"
           height="250px"
           cover
@@ -169,6 +169,8 @@ const img = useImage()
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('deals').where('slug', '=', props.voyageSlug).first()
 })
+
+console.log('voyage', voyage.value)
 </script>
 
 <style scoped>

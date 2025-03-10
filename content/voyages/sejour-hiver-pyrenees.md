@@ -489,7 +489,7 @@ Dates & Prix
 
 ::dates-prices-container
 ---
-slug: sejour-pyrenees
+slug: sejour-hiver-pyrenees
 ---
 #phrase-left-title
 DÉPARTS GROUPÉS
