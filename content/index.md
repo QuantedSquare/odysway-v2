@@ -3,7 +3,9 @@
 image-src: /images/AdobeStock_124472096.jpeg
 ---
 #title
-Partez à la rencontre :br du monde autrement
+Partez à la rencontre
+
+du monde autrement
 
 #component-slot-1
   :::search-field
