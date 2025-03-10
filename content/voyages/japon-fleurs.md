@@ -489,7 +489,7 @@ Dates & Prix
 
 ::dates-prices-container
 ---
-slug: sejour-hiver-pyrenees
+slug: japon-fleurs
 ---
 #phrase-left-title
 DÉPARTS GROUPÉS
