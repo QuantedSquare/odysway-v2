@@ -43,7 +43,7 @@
         <td>
           <div v-if="item.maxTravellers !== item.bookedPlaces">
             <v-btn-secondary
-              :to="`/checkout?slug=${deal.slug}&departure_date=${dayjs(item.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&return_date=${dayjs(item.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}`"
+              :to="`/checkout?slug=${deal.slug}&departure_date=${dayjs(item.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&return_date=${dayjs(item.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&type=deposit`"
               class="text-caption text-uppercase"
             >
               réserver / poser une option

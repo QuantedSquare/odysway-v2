@@ -14,7 +14,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width relative w-md-75 w-lg-50 w-xl-33 no-margin-window"
+            class="border-width relative w-md-75 w-lg-50 w-xl-33 no-margin-window "
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -125,7 +125,6 @@
 
             <v-card-actions>
               <v-stepper-actions
-
                 next-text="Suivant"
                 :prev-text="skipperMode !== 'summary' ?'Précédent' : ''"
                 @click:next="nextStep()"
@@ -194,36 +193,33 @@ const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + rou
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (slug) {
     const query = await queryCollection('deals').where('slug', '=', slug).first()
-
     if (!query) {
       throw new Error('Deal not found.')
     }
-
     function parseDeal(deal, departureDate, returnDate) {
-      const filteredDates = deal.dates.filter((date) => {
+      const filteredDates = deal.dates.find((date) => {
         return dayjs(date.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD') === returnDate
-      },
-      )
+      })
 
-      if (filteredDates.length !== 1) {
+      if (!filteredDates) {
         console.log(filteredDates)
         throw new Error('Invalid or no matching dates found.')
       }
       return {
         title: deal.title,
-        imgSrc: deal.imgSrc1,
+        imgSrc: deal.imgSrc1.src,
         country: deal.country,
         slug: deal.slug,
         iso: deal.iso,
         zoneChapka: deal.zoneChapka,
         indivRoom: deal.indivRoom,
         privatisation: deal.privatisation,
-        startingPrice: filteredDates[0].startingPrice,
-        indivRoomPrice: filteredDates[0].indivRoomPrice,
-        gotEarlybird: filteredDates[0].earlyBird ? 'Oui' : 'Non',
-        promoEarlybird: filteredDates[0].promoEarlyBird,
-        gotLastMinute: filteredDates[0].lastMinute ? 'Oui' : 'Non',
-        promoLastMinute: filteredDates[0].promoLastMinute,
+        startingPrice: filteredDates.startingPrice,
+        indivRoomPrice: filteredDates.indivRoomPrice,
+        gotEarlybird: filteredDates.earlyBird ? 'Oui' : 'Non',
+        promoEarlybird: filteredDates.promoEarlyBird,
+        gotLastMinute: filteredDates.lastMinute ? 'Oui' : 'Non',
+        promoLastMinute: filteredDates.promoLastMinute,
       }
     }
     const deal = parseDeal(query, departure_date, return_date)
