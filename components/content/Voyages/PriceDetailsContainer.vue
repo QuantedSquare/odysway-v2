@@ -9,7 +9,9 @@
           <v-list-subheader class="text-subtitle-1 grey-darken-3 pb-0 py-md-4">
             <slot name="left-column-phrase" />
           </v-list-subheader>
-          <slot name="items-list-include" />
+          <v-container>
+            <slot name="items-list-include" />
+          </v-container>
         </v-list>
       </v-col>
       <v-divider :vertical="$vuetify.display.mdAndUp" />
@@ -21,7 +23,9 @@
           <v-list-subheader class="text-subtitle-1 grey-darken-3 pb-0 py-md-4">
             <slot name="right-column-phrase" />
           </v-list-subheader>
-          <slot name="items-list-exclude" />
+          <v-container>
+            <slot name="items-list-exclude" />
+          </v-container>
         </v-list>
       </v-col>
     </v-row>

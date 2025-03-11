@@ -85,7 +85,6 @@ const props = defineProps({
     required: true,
   },
 })
-console.log(props.deal)
 const headers = [{
   title: 'date départ',
   key: 'date départ',
