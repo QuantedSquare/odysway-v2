@@ -8,13 +8,19 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: {
+        include: 'blog/*.md',
+      },
       schema: z.object({
         tags: z.array(z.string()),
         image: z.string(),
         date: z.date(),
         author: z.string(),
         published: z.boolean(),
+        heroImg: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }),
       }),
     }),
     categories: defineCollection({
