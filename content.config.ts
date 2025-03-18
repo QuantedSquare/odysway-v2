@@ -9,6 +9,13 @@ export default defineContentConfig({
     blog: defineCollection({
       type: 'page',
       source: 'blog/*.md',
+      schema: z.object({
+        tags: z.array(z.string()),
+        image: z.string(),
+        date: z.date(),
+        author: z.string(),
+        published: z.boolean(),
+      }),
     }),
     categories: defineCollection({
       type: 'data',

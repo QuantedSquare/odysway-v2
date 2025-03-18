@@ -59,6 +59,7 @@ const route = useRoute()
 const { data: pages, status } = await useAsyncData(route.path, () => {
   return queryCollection('blog').all()
 })
+console.log(pages.value)
 
 const loading = computed(() => {
   if (status.value === 'success') {
@@ -69,16 +70,17 @@ const loading = computed(() => {
 
 const parsedPages = computed(() => {
   const parsedPages = pages.value.map((page) => {
+    console.log('page in array', page)
     return {
       title: page.title, // find the way to get a title from page hero-section
-      testTitle: page.body.value[0][3],
       publicationDate: page.body.value[0][2][2][2][2],
       imgSrc: page.body.value[0][1]['image-src'],
       slug: page.path,
     }
   })
-  return parsedPages.slice(1)
+  return parsedPages
 })
+console.log(parsedPages.value)
 // console.log(parsedPages.value[0].testTitle)
 
 // const sortPages = computed(() => {

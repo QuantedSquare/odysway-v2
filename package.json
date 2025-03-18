@@ -22,10 +22,12 @@
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.13",
     "eslint": "^9.18.0",
+    "jsdom": "^26.0.0",
     "nuxt": "^3.15.1",
     "nuxt-calendly": "^0.1.21",
     "pg": "^8.13.3",
     "stripe": "^17.6.0",
+    "turndown": "^7.2.0",
     "vue": "latest",
     "vue-router": "latest",
     "zod": "^3.24.1"

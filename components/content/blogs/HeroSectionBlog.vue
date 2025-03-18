@@ -53,17 +53,6 @@
       </v-container>
     </div>
   </v-img>
-  <v-container>
-    <v-row justify="center">
-      <v-col
-        cols="12"
-        md="10"
-        xl="8"
-      >
-        <slot name="introduction" />
-      </v-col>
-    </v-row>
-  </v-container>
 </template>
 
 <script setup>
