@@ -1,0 +1,84 @@
+{
+  "title": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
+  "slug": "voyage-chamanique-perou",
+  "ISO": "PE",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Pérou",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "13 jours / 12 nuits",
+  "startingPrice": 2060,
+  "rating": 4.6,
+  "comments": 31,
+  "tooltipChild": "Dès 10 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-06-05T00:00:00",
+      "returnDate": "2025-06-17T00:00:00",
+      "startingPrice": 2015,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 0,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 1300
+    },
+    {
+      "departureDate": "2025-05-16T00:00:00",
+      "returnDate": "2025-05-28T00:00:00",
+      "startingPrice": 2015,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 7,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 1300
+    },
+    {
+      "departureDate": "2025-09-17T00:00:00",
+      "returnDate": "2025-09-29T00:00:00",
+      "startingPrice": 2015,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 7,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 1300
+    },
+    {
+      "departureDate": "2025-10-15T00:00:00",
+      "returnDate": "2025-10-27T00:00:00",
+      "startingPrice": 2015,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 0,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 1300
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "title": "Immersion brésilienne et survie dans la jungle amazonienne",
+  "slug": "survie-jungle-amazonienne",
+  "ISO": "BR",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Brésil",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "10 jours / 9 nuits",
+  "startingPrice": 1245,
+  "rating": 4.8,
+  "comments": 18,
+  "tooltipChild": "Dès 7 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-06-01T00:00:00",
+      "returnDate": "2025-06-10T00:00:00",
+      "startingPrice": 1625,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 140,
+      "privatized": false,
+      "flyTicketPrice": 950
+    },
+    {
+      "departureDate": "2025-08-03T00:00:00",
+      "returnDate": "2025-08-12T00:00:00",
+      "startingPrice": 1625,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 140,
+      "privatized": false,
+      "flyTicketPrice": 950
+    },
+    {
+      "departureDate": "2025-09-22T00:00:00",
+      "returnDate": "2025-10-01T00:00:00",
+      "startingPrice": 1625,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 2,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 140,
+      "privatized": false,
+      "flyTicketPrice": 950
+    },
+    {
+      "departureDate": "2025-07-10T00:00:00",
+      "returnDate": "2025-07-19T00:00:00",
+      "startingPrice": 1625,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 140,
+      "privatized": false,
+      "flyTicketPrice": 950
+    },
+    {
+      "departureDate": "2025-07-17T00:00:00",
+      "returnDate": "2025-07-26T00:00:00",
+      "startingPrice": 1625,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 140,
+      "privatized": false,
+      "flyTicketPrice": 950
+    }
+  ]
+}

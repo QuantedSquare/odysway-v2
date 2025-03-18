@@ -1,0 +1,54 @@
+{
+  "title": "A cheval, à la rencontre des nomades en Mongolie",
+  "slug": "voyage-cheval-mongolie",
+  "ISO": "MN",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Mongolie",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "13 jours / 12 nuits",
+  "startingPrice": 1650,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 12 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-04-22T00:00:00",
+      "returnDate": "2025-05-04T00:00:00",
+      "startingPrice": 1650,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 6,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 50,
+      "privatized": false,
+      "flyTicketPrice": 900
+    },
+    {
+      "departureDate": "2025-06-03T00:00:00",
+      "returnDate": "2025-06-15T00:00:00",
+      "startingPrice": 1650,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 6,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 50,
+      "privatized": false,
+      "flyTicketPrice": 900
+    }
+  ]
+}

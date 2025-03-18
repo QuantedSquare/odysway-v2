@@ -1,0 +1,39 @@
+{
+  "title": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
+  "slug": "route-soie-ouzbekistan",
+  "ISO": "UZ",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Ouzbékistan",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "14 jours / 13 nuits",
+  "startingPrice": 1710,
+  "rating": 5,
+  "comments": 1,
+  "tooltipChild": "Dès 7 ans",
+  "tooltipGroup": "",
+  "dates": [
+    {
+      "departureDate": "2025-05-21T00:00:00",
+      "returnDate": "2025-06-03T00:00:00",
+      "startingPrice": 2000,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 140,
+      "privatized": false,
+      "flyTicketPrice": 600
+    }
+  ]
+}

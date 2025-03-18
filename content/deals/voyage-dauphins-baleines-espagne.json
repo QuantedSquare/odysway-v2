@@ -1,0 +1,84 @@
+{
+  "title": "Observez dauphins et baleines sur les îles Canaries",
+  "slug": "voyage-dauphins-baleines-espagne",
+  "ISO": "ESP",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Espagne",
+  "zoneChapka": 1,
+  "privatisation": false,
+  "duration": "8 jours / 7 nuits",
+  "startingPrice": 1535,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 6 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-04-26T00:00:00",
+      "returnDate": "2025-05-03T00:00:00",
+      "startingPrice": 1525,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-05-24T00:00:00",
+      "returnDate": "2025-05-31T00:00:00",
+      "startingPrice": 1525,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-07-05T00:00:00",
+      "returnDate": "2025-07-12T00:00:00",
+      "startingPrice": 1525,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-09-13T00:00:00",
+      "returnDate": "2025-09-20T00:00:00",
+      "startingPrice": 1525,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    }
+  ]
+}

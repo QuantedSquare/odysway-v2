@@ -31,5 +31,7 @@
   "duration": "3 semaines",
   "startingPrice": 3100,
   "rating": 47,
-  "comments": 10
+  "comments": 10,
+  "tooltipChild": "Dès 8 ans",
+  "tooltipGroup": "Disponible en group"
 }

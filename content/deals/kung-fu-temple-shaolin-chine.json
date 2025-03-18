@@ -1,0 +1,54 @@
+{
+  "title": "Initiez-vous au Kung Fu dans un temple Shaolin",
+  "slug": "kung-fu-temple-shaolin-chine",
+  "ISO": "CN",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Chine",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "11 jours / 10 nuits",
+  "startingPrice": 1820,
+  "rating": 5,
+  "comments": 4,
+  "tooltipChild": "Dès 15 ans",
+  "tooltipGroup": "",
+  "dates": [
+    {
+      "departureDate": "2025-03-12T00:00:00",
+      "returnDate": "2025-03-22T00:00:00",
+      "startingPrice": 1880,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 6,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 65,
+      "privatized": false,
+      "flyTicketPrice": 600
+    },
+    {
+      "departureDate": "2025-04-16T00:00:00",
+      "returnDate": "2025-04-26T00:00:00",
+      "startingPrice": 1880,
+      "indivRoomPrice": 300,
+      "maxTravellers": "",
+      "bookedPlaces": 6,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 65,
+      "privatized": false,
+      "flyTicketPrice": 600
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "title": "Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune",
+  "slug": "voyage-immersion-culturelle-sri-lanka",
+  "ISO": "LK",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Sri Lanka",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "12 jours / 11 nuits",
+  "startingPrice": 1850,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 8 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-03-23T10:00:00",
+      "returnDate": "2025-04-03T15:00:00",
+      "startingPrice": 1850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1000
+    },
+    {
+      "departureDate": "2025-04-20T10:00:00",
+      "returnDate": "2025-05-01T15:00:00",
+      "startingPrice": 1850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1000
+    },
+    {
+      "departureDate": "2025-07-06T10:00:00",
+      "returnDate": "2025-07-17T15:00:00",
+      "startingPrice": 1850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1000
+    },
+    {
+      "departureDate": "2025-08-10T10:00:00",
+      "returnDate": "2025-08-21T15:00:00",
+      "startingPrice": 1850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1000
+    }
+  ]
+}

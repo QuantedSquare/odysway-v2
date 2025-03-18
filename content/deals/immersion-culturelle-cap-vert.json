@@ -1,0 +1,54 @@
+{
+  "title": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
+  "slug": "immersion-culturelle-cap-vert",
+  "ISO": "CV",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Cap-Vert",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "10 jours / 9 nuits",
+  "startingPrice": 1470,
+  "rating": 4.5,
+  "comments": 16,
+  "tooltipChild": "Dès 5 ans ",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-08-29T00:00:00",
+      "returnDate": "2025-09-05T00:00:00",
+      "startingPrice": 1520,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 7,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 120,
+      "privatized": false,
+      "flyTicketPrice": 650
+    },
+    {
+      "departureDate": "2025-05-02T00:00:00",
+      "returnDate": "2025-05-09T00:00:00",
+      "startingPrice": 1520,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 120,
+      "privatized": false,
+      "flyTicketPrice": 650
+    }
+  ]
+}

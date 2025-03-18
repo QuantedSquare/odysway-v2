@@ -1,0 +1,99 @@
+{
+  "title": "Marche silencieuse et immersion nomade dans le sahara marocain",
+  "slug": "marche-silencieuse-sahara",
+  "ISO": "MA",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Maroc",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "8 jours / 7 nuits",
+  "startingPrice": 1295,
+  "rating": 5,
+  "comments": 4,
+  "tooltipChild": "Dès 16 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-03-21T00:00:00",
+      "returnDate": "2025-03-28T00:00:00",
+      "startingPrice": 1390,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-10-24T00:00:00",
+      "returnDate": "2025-10-31T00:00:00",
+      "startingPrice": 1390,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-10-03T00:00:00",
+      "returnDate": "2025-10-10T00:00:00",
+      "startingPrice": 1390,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-11-07T00:00:00",
+      "returnDate": "2025-11-14T00:00:00",
+      "startingPrice": 1390,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-12-12T00:00:00",
+      "returnDate": "2025-12-19T00:00:00",
+      "startingPrice": 1390,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 125,
+      "privatized": false,
+      "flyTicketPrice": 0
+    }
+  ]
+}

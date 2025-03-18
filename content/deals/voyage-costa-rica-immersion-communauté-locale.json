@@ -1,0 +1,69 @@
+{
+  "title": "Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri",
+  "slug": "voyage-costa-rica-immersion-communauté-locale",
+  "ISO": "CR",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Costa Rica",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "12 jours / 11 nuits",
+  "startingPrice": 2990,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 5 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-04-21T10:00:00",
+      "returnDate": "2025-05-02T16:00:00",
+      "startingPrice": 2990,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1200
+    },
+    {
+      "departureDate": "2025-06-09T10:00:00",
+      "returnDate": "2025-06-20T16:00:00",
+      "startingPrice": 2990,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1200
+    },
+    {
+      "departureDate": "2025-07-28T10:00:00",
+      "returnDate": "2025-08-08T16:00:00",
+      "startingPrice": 2990,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 8,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 1200
+    }
+  ]
+}

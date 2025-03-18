@@ -23,5 +23,7 @@
   },
   "zoneChapka": 3,
   "rating": 5,
-  "comments": 132
+  "comments": 132,
+  "tooltipChild": "Dès 8 ans",
+  "tooltipGroup": "Disponible en group"
 }

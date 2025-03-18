@@ -60,6 +60,8 @@ export default defineContentConfig({
           src: z.string().editor({ input: 'media' }),
           alt: z.string(),
         }),
+        tooltipChild: z.string(),
+        tooltipGroup: z.string(),
         dates: z.array(z.object({
           departureDate: z.date(),
           returnDate: z.date(),
@@ -71,6 +73,9 @@ export default defineContentConfig({
           promoEarlyBird: z.number(),
           lastMinute: z.boolean(),
           promoLastMinute: z.number(),
+          promo: z.number(),
+          privatized: z.boolean(),
+          flyTicketPrice: z.number(),
         })),
       }),
     }),

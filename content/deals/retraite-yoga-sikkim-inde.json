@@ -1,0 +1,39 @@
+{
+  "title": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",
+  "slug": "retraite-yoga-sikkim-inde",
+  "ISO": "IN",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Inde",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "16 jours / 14 nuits",
+  "startingPrice": 3550,
+  "rating": 4.5,
+  "comments": 8,
+  "tooltipChild": "Dès 18 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-10-19T00:00:00",
+      "returnDate": "2025-11-02T00:00:00",
+      "startingPrice": 4265,
+      "indivRoomPrice": 300,
+      "maxTravellers": 12,
+      "bookedPlaces": 1,
+      "earlyBird": false,
+      "promoEarlyBird": 0,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 75,
+      "privatized": false,
+      "flyTicketPrice": 0
+    }
+  ]
+}

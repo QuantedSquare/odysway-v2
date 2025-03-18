@@ -1,0 +1,69 @@
+{
+  "title": "Découvrez l'art de la photo animalière dans le Jura",
+  "slug": "decouvrez-photo-animaliere-jura",
+  "ISO": "FR",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Jura",
+  "zoneChapka": 1,
+  "privatisation": false,
+  "duration": "6 jours / 5 nuits",
+  "startingPrice": 850,
+  "rating": 4.9,
+  "comments": 37,
+  "tooltipChild": "",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-05-19T00:00:00",
+      "returnDate": "2025-05-24T00:00:00",
+      "startingPrice": 850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 40,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 45,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-04-07T00:00:00",
+      "returnDate": "2025-04-12T00:00:00",
+      "startingPrice": 850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 40,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 45,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-08-18T00:00:00",
+      "returnDate": "2025-08-23T00:00:00",
+      "startingPrice": 850,
+      "indivRoomPrice": 300,
+      "maxTravellers": 4,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 40,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 45,
+      "privatized": false,
+      "flyTicketPrice": 0
+    }
+  ]
+}

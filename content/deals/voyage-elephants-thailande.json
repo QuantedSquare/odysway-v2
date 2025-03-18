@@ -1,0 +1,84 @@
+{
+  "title": "Observer les éléphants, explorer les temples et s'évader sur les plages de Thaïlande",
+  "slug": "voyage-elephants-thailande",
+  "ISO": "TH",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Thaïlande",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "14 jours / 13 nuits",
+  "startingPrice": 2145,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 16 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-03-22T00:00:00",
+      "returnDate": "2025-04-04T00:00:00",
+      "startingPrice": 2440,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 5,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-04-26T00:00:00",
+      "returnDate": "2025-05-09T00:00:00",
+      "startingPrice": 2440,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 5,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-05-17T00:00:00",
+      "returnDate": "2025-05-30T00:00:00",
+      "startingPrice": 2440,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 5,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-05-31T00:00:00",
+      "returnDate": "2025-06-13T00:00:00",
+      "startingPrice": 2440,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 5,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    }
+  ]
+}

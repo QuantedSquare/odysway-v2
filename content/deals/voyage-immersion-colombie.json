@@ -1,0 +1,39 @@
+{
+  "title": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
+  "slug": "voyage-immersion-colombie",
+  "ISO": "COL",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Colombie",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "14 jours / 13 nuits",
+  "startingPrice": 1965,
+  "rating": 5,
+  "comments": 12,
+  "tooltipChild": "Dès 10 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-08-17T00:00:00",
+      "returnDate": "2025-08-30T00:00:00",
+      "startingPrice": 2240,
+      "indivRoomPrice": 300,
+      "maxTravellers": 6,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "promoLastMinute": 30,
+      "lastMinute": false,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 700
+    }
+  ]
+}

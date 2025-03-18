@@ -1,0 +1,99 @@
+{
+  "title": "Partagez le quotidien des nomades des steppes mongoles",
+  "slug": "voyage-nomades-mongolie",
+  "ISO": "MN",
+  "imgSrc2": {
+    "src": "/images/IMG_20250101_161727_049.jpg",
+    "alt": "Petits chiens"
+  },
+  "imgSrc1": {
+    "src": "/images/iStock-1336944149.webp",
+    "alt": "Fleur Japons"
+  },
+  "country": "Mongolie",
+  "zoneChapka": 2,
+  "privatisation": false,
+  "duration": "11 jours / 10 nuits",
+  "startingPrice": 1715,
+  "rating": 4.8,
+  "comments": 12,
+  "tooltipChild": "Dès 5 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": [
+    {
+      "departureDate": "2025-06-07T00:00:00",
+      "returnDate": "2025-06-18T00:00:00",
+      "startingPrice": 1715,
+      "indivRoomPrice": 300,
+      "maxTravellers": 5,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 50,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 160,
+      "privatized": false,
+      "flyTicketPrice": 900
+    },
+    {
+      "departureDate": "2025-07-19T00:00:00",
+      "returnDate": "2025-07-29T00:00:00",
+      "startingPrice": 1715,
+      "indivRoomPrice": 300,
+      "maxTravellers": 5,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 50,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 160,
+      "privatized": false,
+      "flyTicketPrice": 900
+    },
+    {
+      "departureDate": "2025-08-02T00:00:00",
+      "returnDate": "2025-08-12T00:00:00",
+      "startingPrice": 1715,
+      "indivRoomPrice": 300,
+      "maxTravellers": 5,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 50,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 160,
+      "privatized": false,
+      "flyTicketPrice": 900
+    },
+    {
+      "departureDate": "2025-09-06T00:00:00",
+      "returnDate": "2025-09-16T00:00:00",
+      "startingPrice": 1715,
+      "indivRoomPrice": 300,
+      "maxTravellers": 5,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 50,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 160,
+      "privatized": false,
+      "flyTicketPrice": 900
+    },
+    {
+      "departureDate": "2025-05-08T00:00:00",
+      "returnDate": "2025-05-18T00:00:00",
+      "startingPrice": 1715,
+      "indivRoomPrice": 300,
+      "maxTravellers": 5,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 50,
+      "promoLastMinute": 0,
+      "lastMinute": false,
+      "promo": 160,
+      "privatized": false,
+      "flyTicketPrice": 900
+    }
+  ]
+}
