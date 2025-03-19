@@ -8,6 +8,7 @@
         <a
           :href="programme"
           target="_blank"
+          class="text-primary"
         >Télécharger le détail du voyage en PDF</a>
       </v-col>
       <v-col

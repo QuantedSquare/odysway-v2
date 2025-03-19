@@ -3,9 +3,9 @@ import { asSeoCollection } from '@nuxtjs/seo/content'
 
 export default defineContentConfig({
   collections: {
-    landing: defineCollection({
+    content: defineCollection({
       type: 'page',
-      source: 'index.md',
+      source: '**/*.md',
     }),
     blog: defineCollection(
       asSeoCollection({
