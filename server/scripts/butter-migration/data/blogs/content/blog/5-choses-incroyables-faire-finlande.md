@@ -7,7 +7,12 @@ seo:
 navigation:
   title: 5 choses incroyables à faire en Finlande
   description: A quelques heures d'avion de la France, la Finlande vous ouvre ses portes pour un voyage pas comme les autres. De par sa position géographique et sa nature qui prédomine sur près de 1 160 km du nord au sud, ce pays scandinave possède bien des trésors qui en font un territoire à part entière. Afin de comprendre pourquoi la Finlande est si fascinante, nous avons sélectionné pour vous 5 choses incroyables à faire là-bas.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-06-05 11:00:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/D11y2TnhRdSc97RsCpPI
 ---
 
 ::hero-section-blog

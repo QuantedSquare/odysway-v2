@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage au Sikkim : Joyau de l'Himalaya
   description: Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2023-09-20 15:34:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les Initiatives de Tourisme Éco-responsable à Travers le Monde
   description: Le tourisme écoresponsable est devenu une priorité pour les voyageurs soucieux de leur impact sur l'environnement et les communautés locales. Cette approche du voyage vise à minimiser l'empreinte écologique tout en maximisant les bénéfices pour les populations locales. De nombreuses initiatives de tourisme écoresponsable se développent à travers le monde, ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-05-28 07:22:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/pJpCh7nSrGPZBsXQa4zA
 ---
 
 ::hero-section-blog

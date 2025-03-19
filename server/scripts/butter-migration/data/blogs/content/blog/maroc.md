@@ -8,7 +8,12 @@ Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien
 navigation:
   title: Le Maroc
   description: Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-06-29 09:16:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

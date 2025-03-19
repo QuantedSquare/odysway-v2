@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où partir en été pour garder l'esprit tranquille ?
   description: Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 17:41:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

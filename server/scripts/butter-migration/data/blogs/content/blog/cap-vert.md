@@ -7,7 +7,12 @@ seo:
 navigation:
   title: À la découverte du Cap-Vert
   description: Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable.
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2023-05-02 07:15:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF
 ---
 
 ::hero-section-blog

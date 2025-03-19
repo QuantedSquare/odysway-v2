@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway
   description: L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2023-09-19 15:37:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0
 ---
 
 ::hero-section-blog

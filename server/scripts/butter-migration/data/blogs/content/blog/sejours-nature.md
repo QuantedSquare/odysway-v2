@@ -15,7 +15,12 @@ La vie en ville offre bon nombre d’avantages mais nous payons souvent un prix 
 Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
 Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
 La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-16 17:36:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

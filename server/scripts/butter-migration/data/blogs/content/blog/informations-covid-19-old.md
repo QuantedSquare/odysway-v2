@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Informations COVID-19
   description: INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway
-  icon: blog
+author: contact@odysway.com
+published: false
+publishedAt: 2020-09-28 09:39:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH
 ---
 
 ::hero-section-blog

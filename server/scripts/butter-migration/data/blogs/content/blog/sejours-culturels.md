@@ -11,7 +11,12 @@ navigation:
   description: S'évader pour un séjour culturel dans des pays alliant paysages à couper le souffle, expériences humaines et immersion dans les cultures locales est le moyen idéal de faire rimer culture et aventure.
 Partez en quête d’histoire et de traditions, à la rencontre des populations locales pour partager leur quotidien, visitez des lieux uniques et expérimentez le voyage culturel immersif, vous n’en reviendrez pas ! 
 Le voyage culturel immersif est aussi un moyen de voyager de manière solidaire, éco-responsable et éthique, dans le respect de l’autre et de la planète.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-05 14:44:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

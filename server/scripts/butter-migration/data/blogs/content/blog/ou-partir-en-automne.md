@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où partir en automne pour un été indien réussi ?
   description: partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-30 12:08:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

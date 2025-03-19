@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !
   description: En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d'elle pour avoir tué un jeune voyageur Américain qui tentait d'entrer en contact avec elle. Les médias ont fortement relayé l'attaque en racontant un peu tout et n'importe quoi sur ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-01-02 10:47:00+00:00
+tag: undefined
+categories: Culture et decouverte, News Odysway
+displayedImg: https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018
 ---
 
 ::hero-section-blog

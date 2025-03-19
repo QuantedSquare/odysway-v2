@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les causes de la disparition des animaux
   description: Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-06-04 14:02:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252
 ---
 
 ::hero-section-blog

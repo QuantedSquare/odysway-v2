@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway sur le Guide du Routard
   description: wp:paragraph Depuis mars 2019, Odysway apparait dans la liste des agences de voyages referencees sur le site du Routard en ligne. Retrouvez la presentation de notre agence sur cette page : https://www.routard.com/tous-les-organismes-de-voyage/cid137936-odysway.html /wp:paragraph
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-03-22 04:10:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/mVSs1ylGRMSZFrvIsxST
 ---
 
 ::hero-section-blog

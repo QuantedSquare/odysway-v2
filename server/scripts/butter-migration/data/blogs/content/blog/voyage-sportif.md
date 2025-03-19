@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage Sportif : dépassement et évasion
   description: Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-24 12:56:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

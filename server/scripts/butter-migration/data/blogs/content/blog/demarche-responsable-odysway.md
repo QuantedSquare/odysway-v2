@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Notre démarche responsable
   description: Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet "Tribus de demain" !
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2023-01-06 09:00:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h
 ---
 
 ::hero-section-blog

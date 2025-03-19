@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes
   description: Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps.
-  icon: blog
+author: contact@odysway.com
+published: false
+publishedAt: 2021-05-31 14:50:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les indispensables pour partir en trek !
   description: Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 14:42:00+00:00
+tag: undefined
+categories: Depassement de soi, Nature et grands espaces, Blog
+displayedImg: https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f
 ---
 
 ::hero-section-blog

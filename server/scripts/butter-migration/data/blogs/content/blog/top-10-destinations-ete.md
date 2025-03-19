@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Top 10 des destinations pour l'été
   description: Les vacances d'été arrivent et vous ne savez toujours pas ou partir. À la mer, à la montagne ou à la campagne ? En France ou à l'étranger ? Vacances farniente ou sportives ? Pourtant ce n'est pas le choix qui manque ! Pour vous aider a trouver vos ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-06-25 08:03:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: https://cdn.buttercms.com/3ScjZz5yRbK5yAViEvti?1611753148367
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Pérou, un territoire mythique et mystique
   description: Quelles sont les formalités pour partir au Pérou ? Comment se déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi voyager au Pérou ? Berceau de civilisations légendaires, des paysages à couper ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-17 13:07:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/tHEfnbwiTtC11DaEb6z8
 ---
 
 ::hero-section-blog

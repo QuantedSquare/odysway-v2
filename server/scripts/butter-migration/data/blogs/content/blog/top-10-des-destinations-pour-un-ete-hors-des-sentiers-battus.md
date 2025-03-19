@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Top 10 des destinations 2025 pour un été hors des sentiers battus
   description: Envie de vacances loin du tourisme de masse ? Voici notre top 10 des destinations pour un été hors des sentiers battus.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2025-01-24 12:27:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/V9sN55wBRp65NFwgtBJi
 ---
 
 ::hero-section-blog

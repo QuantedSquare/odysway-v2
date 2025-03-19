@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment découvrir les pays scandinaves ?
   description: Regroupant le Danemark, la Suède, la Finlande et la Norvège, la Scandinavie est une région du nord de l'Europe réputée pour ses paysages à couper le souffle et pour son mode de vie respectueux de la nature. Voyager dans les pays scandinaves, c'est découvrir une culture, une histoire et un environnement comme nulle part ailleurs. Pour profiter au maximum de tous les attraits scandinaves, voici les clés pour que votre séjour soit des plus enrichissants.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-08-27 11:00:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/1v7QrvsORZi4EoCLlJg6
 ---
 
 ::hero-section-blog

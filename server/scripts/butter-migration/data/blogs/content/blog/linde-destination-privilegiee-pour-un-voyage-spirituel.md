@@ -7,7 +7,12 @@ seo:
 navigation:
   title: L'Inde, destination privilégiée pour un voyage spirituel ?
   description: Depuis toujours, l'Inde est considérée comme l'un des pays les plus spirituels au monde. Pays aux multiples divinités, pays d'exil du Dalaï-lama, présence de nombreux lieux spirituels, expliquent notamment l'engouement des visiteurs pour l'Inde. Et sur place, votre voyage intérieur peut prendre différentes formes. Méditation, yoga, médecine ayurvédique, a ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-12-27 09:50:00+00:00
+tag: undefined
+categories: Developpement Personnel
+displayedImg: https://cdn.buttercms.com/1xSgoyv1Qx6BshXwGbdb?1612348754839
 ---
 
 ::hero-section-blog

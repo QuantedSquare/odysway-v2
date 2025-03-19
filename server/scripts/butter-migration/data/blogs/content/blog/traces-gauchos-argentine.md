@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Sur les traces des gauchos en Argentine
   description: Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-07-29 13:57:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691
 ---
 
 ::hero-section-blog

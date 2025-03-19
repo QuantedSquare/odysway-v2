@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage Animalier : découvrez les animaux sauvages autrement
   description: S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-24 12:24:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

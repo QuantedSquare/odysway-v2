@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le top 5 des activités insolites à Madagascar
   description: Madagascar, surnommée l'ile rouge en raison de la couleur de sa terre, est probablement l'une des iles les plus singulières qui soit. Avec un écosystème unique, une faune et une flore endémiques, Madagascar regorge de panoramas époustouflants. Entre paysages et traditions, voici 5 activités insolites pour découvrir Madagascar. Faire un ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-12-07 10:48:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/1PMbIeGDSzm6kU7JzDIQ
 ---
 
 ::hero-section-blog

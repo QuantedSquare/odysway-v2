@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Népal, pour un voyage entre ciel et terre
   description: Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2022-06-01 12:00:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion
 ---
 
 ::hero-section-blog

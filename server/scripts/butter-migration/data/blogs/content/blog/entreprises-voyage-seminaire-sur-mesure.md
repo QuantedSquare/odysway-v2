@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Vos séminaires et voyages d'entreprise sur-mesure
   description: Vous êtes une entreprise et souhaitez faire vivre une expérience différentes à vos équipes lors d'un voyage d'entreprise ou d'un séminaire ? Contactez-nous !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-04-04 08:17:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/kgejJJMqQS2oYPUOFbNA
 ---
 
 ::hero-section-blog

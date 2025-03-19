@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway dans "Mieux vivre votre argent
   description: Odysway apparaît dans le magazine papier "Mieux vivre votre argent" du mois de février. Mieux vivre votre argent Ndeg441 - parution février 2019 - page 2.
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-04-25 13:05:00+00:00
+tag: undefined
+categories: Presse ecrite
+displayedImg: https://cdn.buttercms.com/9J5dCj3mTnWWh5tPqAjN
 ---
 
 ::hero-section-blog

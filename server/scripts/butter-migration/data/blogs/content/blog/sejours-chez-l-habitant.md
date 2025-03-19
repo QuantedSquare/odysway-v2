@@ -17,7 +17,12 @@ Sachez que le bonheur est partagé, car vos hôtes se font une joie de vous fair
 Ce besoin d’immersion est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs, briser les barrières et les idées reçues, sentir que nous faisons partie d’un tout - d’une seule et même tribu : celle des humains.
 Si il est un mode de voyage qui vous offre tout cela, c’est bien le voyage chez l’habitant.
 “Le bonheur n'est réel que lorsqu'il est partagé” -  Into the Wild.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-05 11:04:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: https://cdn.buttercms.com/a0wVxSQR5uLpZLCk54DO
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: À la rencontre de ceux qui vivent en harmonie avec la nature
   description: À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-09-18 09:57:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage
   description: Votre départ en voyage est proche et c'est avec enthousiasme que vous commencez a préparer votre sac a dos. Le voyage a déjà commencé ! Parmi les affaires que vous allez emporter, la trousse à pharmacie est un indispensable à mettre dans votre valise. En effet, quelle que soit votre ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-01-06 11:00:00+00:00
+tag: undefined
+categories: Culture et decouverte, News Odysway
+displayedImg: https://cdn.buttercms.com/UZZrwK4pTRK77sC26pWW
 ---
 
 ::hero-section-blog

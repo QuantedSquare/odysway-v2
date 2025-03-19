@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les 10 animaux de la jungle amazonienne
   description: Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-12-20 08:25:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q
 ---
 
 ::hero-section-blog

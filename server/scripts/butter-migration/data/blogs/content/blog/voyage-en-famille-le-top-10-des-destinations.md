@@ -8,7 +8,12 @@ Pour vous aider, voici notre top 10 des destinations pour un voyage en famille 
 navigation:
   title: Voyage en famille : le top 10 des destinations
   description: Vous aimeriez partir en voyage en famille ? Trop compliqué, trop de contraintes ou d’appréhension, des raisons qui pourraient vous pousser à ne pas voyager avec vos enfants ? Pourtant, ce sont bien eux qui s’acclimatent le plus facilement ! Mais une fois la décision prise de partir en voyage ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 09:20:00+00:00
+tag: undefined
+categories: Apprentissage, Blog
+displayedImg: https://cdn.buttercms.com/bqjBdByfSLO3YirCApi4
 ---
 
 ::hero-section-blog

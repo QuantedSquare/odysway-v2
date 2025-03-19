@@ -7,7 +7,12 @@ seo:
 navigation:
   title: La notation écologique des voyages Odysway 🌿
   description: Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Premier niveau : 🌿 Ce premier niveau correspond à un voyage où l'on prend un avion long courrier et où l'on prend la voiture/4x4/bus ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-02-15 02:39:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: À la découverte d'une Inde lointaine : l'Arunachal Pradesh
   description: L'Arunachal Pradesh est l’état indien qui est situe le plus au nord-est du pays.  D'abord considéré comme un territoire de l'Union indienne, il devint un véritable état en 1987. L'Arunachal Pradesh a ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-05-29 16:58:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/RtJ2BdXRQCq43yjaYo6R
 ---
 
 ::hero-section-blog

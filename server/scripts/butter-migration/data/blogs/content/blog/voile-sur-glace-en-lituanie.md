@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voile sur glace en Lituanie
   description: Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-10-29 10:41:00+00:00
+tag: undefined
+categories: Depassement de soi, Nature et grands espaces, Apprentissage
+displayedImg: https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185
 ---
 
 ::hero-section-blog

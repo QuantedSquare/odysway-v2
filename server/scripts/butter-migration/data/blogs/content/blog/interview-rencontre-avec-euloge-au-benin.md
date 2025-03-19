@@ -13,7 +13,12 @@ navigation:
   description: Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
 
 Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2022-10-25 14:00:00+00:00
+tag: undefined
+categories: immersion, voyager, bénin, culture
+displayedImg: https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj
 ---
 
 ::hero-section-blog

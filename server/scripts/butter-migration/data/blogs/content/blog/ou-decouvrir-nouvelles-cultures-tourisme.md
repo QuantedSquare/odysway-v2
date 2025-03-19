@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où découvrir de nouvelles cultures avec le tourisme ?
   description: Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-05-25 15:15:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF
 ---
 
 ::hero-section-blog

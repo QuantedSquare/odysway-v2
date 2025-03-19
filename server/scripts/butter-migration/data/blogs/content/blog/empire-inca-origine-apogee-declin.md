@@ -7,7 +7,12 @@ seo:
 navigation:
   title: L'Empire inca : origine, apogée et déclin
   description: La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-09-13 16:55:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway, vivez l'imprévu !" sur Medium
   description: Imaginez que vous vous retrouviez nez à nez avec un jaguar au cœur de la jungle amazonienne au milieu de la nuit !". Odysway a eu droit a un article dans Medium qui relate comment Odysway est née, au fin fond de la jungle amazonienne.. "Étrangement ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-04-25 13:17:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/l3UPtnzLT528QW1dungk
 ---
 
 ::hero-section-blog

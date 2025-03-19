@@ -15,7 +15,12 @@ Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuve
 En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
 Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
 Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-19 16:53:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

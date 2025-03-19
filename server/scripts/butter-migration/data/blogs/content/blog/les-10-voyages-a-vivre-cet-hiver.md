@@ -7,7 +7,12 @@ seo:
 navigation:
   title: TOP 10 des voyages à vivre cet hiver
   description: L’hiver est une période propice pour voyager et partir à la découverte de paysages différents. Que vous soyez adepte des pays chauds ou froids, vous serez tout aussi émerveillé. La Sibérie, le Cap-Vert, l'Afrique du sud ou encore la Laponie finlandaise ne sont qu’un aperçu des quelques magnifiques endroits à ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2021-10-27 06:25:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/5aOMAxbHR6JgmYJKw4AQ
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Népal, le pays du trek et de la spiritualité
   description: Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays spirituel par excellence, il est également le pays phare pour le trekking. L’Himalaya. Voilà le premier mot qui nous vient à l’esprit lorsque l’on désigne le site le plus exceptionnel du Népal. Cette ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-20 10:13:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

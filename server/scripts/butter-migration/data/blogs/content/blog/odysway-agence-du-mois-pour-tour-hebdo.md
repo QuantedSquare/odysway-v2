@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway, Agence du mois pour Tour Hebdo !
   description: Odysway a eu droit a une rubrique au mois de janvier 2019 et Romain Masina, le fondateur, est cite en tant qu'"agent du mois".
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-02-08 20:14:00+00:00
+tag: undefined
+categories: Presse ecrite
+displayedImg: https://cdn.buttercms.com/d3SlItG7SCGt6q4jo85R
 ---
 
 ::hero-section-blog

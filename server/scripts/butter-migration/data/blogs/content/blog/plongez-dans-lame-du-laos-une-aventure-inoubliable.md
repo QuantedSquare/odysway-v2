@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Plongez dans l'âme du Laos : une aventure inoubliable
   description: Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez leur quotidien auprès des majestueux éléphants. Entre la beauté de Luang Prabang, les cascades de Kuang Si, et les mystères des plaines de Jarres, le Laos promet une aventure unique et captivante. Ne manquez pas le coucher de soleil sur le Mékong, un moment magique à vivre absolument. Embarquez pour une expérience culturelle et naturelle hors du commun !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-08-20 13:44:00+00:00
+tag: undefined
+categories: voyager, Laos, découverte
+displayedImg: https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk
 ---
 
 ::hero-section-blog

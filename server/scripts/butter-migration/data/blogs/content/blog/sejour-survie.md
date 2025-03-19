@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Séjour Survie
   description: Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjour survie, vous allez vivre des moments forts et uniques.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-24 13:14:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

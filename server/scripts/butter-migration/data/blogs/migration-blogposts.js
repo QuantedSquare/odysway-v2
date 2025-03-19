@@ -64,8 +64,12 @@ function convertButtercmsToNuxtContent(post) {
     navigation: {
       title: post.title,
       description: post.summary,
-      icon: 'blog',
     },
+    published: post.published === 'published',
+    publishedAt: post.published,
+    tags: post.tags,
+    categories: post.categories,
+    displayedImg: post.featured_image,
   }
 
   // Format the markdown with Nuxt Content components
@@ -78,7 +82,12 @@ seo:
 navigation:
   title: ${frontMatter.navigation.title}
   description: ${frontMatter.navigation.description}
-  icon: blog
+author: ${frontMatter.author}
+published: ${frontMatter.published}
+publishedAt: ${frontMatter.publishedAt}
+tags: ${frontMatter.tags}
+categories: ${frontMatter.categories}
+displayedImg: ${frontMatter.displayedImg}
 ---
 
 ::hero-section-blog

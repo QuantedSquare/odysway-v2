@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Découvrir la France au fil de la côte ouest - deuxième partie
   description: Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-08-20 11:00:00+00:00
+tag: undefined
+categories: Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD
 ---
 
 ::hero-section-blog

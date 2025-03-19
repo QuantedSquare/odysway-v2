@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées
   description: Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-23 14:16:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Blog
+displayedImg: https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843
 ---
 
 ::hero-section-blog

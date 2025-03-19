@@ -7,7 +7,12 @@ seo:
 navigation:
   title: 8 “nouvelles” bonnes résolutions
   description: Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 15:46:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372
 ---
 
 ::hero-section-blog

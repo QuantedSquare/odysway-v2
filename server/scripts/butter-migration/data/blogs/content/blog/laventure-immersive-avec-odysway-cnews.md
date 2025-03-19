@@ -7,7 +7,12 @@ seo:
 navigation:
   title: L'aventure immersive" avec Odysway dans Cnews !
   description: Odysway a eu droit a un article en pleine page dans le quotidien Cnews du 9 avril 2019. Découvrez ci-dessous l'article dédié a notre agence.
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-04-18 15:49:00+00:00
+tag: undefined
+categories: Presse ecrite
+displayedImg: https://cdn.buttercms.com/Hf3IYFVZSiqEaebxUWtl
 ---
 
 ::hero-section-blog

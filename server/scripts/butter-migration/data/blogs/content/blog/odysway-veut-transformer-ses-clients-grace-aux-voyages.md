@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway veut transformer ses clients grâce aux voyages
   description: Une jeune agence qui monte, qui monte" Odysway a eu droit a un article dans Tourmag, 1er portail des professionnels du tourisme francophone. Tourmag met a l'honneur le concept d'Odysway, qui est de faire vivre des experiences nouvelles a ses voyageurs, dans le but de les marquer, ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-04-21 13:02:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/c4PGp5pUTFuacfMDQ07O
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: COP 25 : changements climatiques et tourisme durable
   description: Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-12-09 08:20:00+00:00
+tag: undefined
+categories: Culture et decouverte, Benefices locaux
+displayedImg: https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage au Cap Vert : Explorez l'Archipel Hors des Sentiers Battus
   description: Le Cap-Vert, un archipel volcanique au large des côtes de l'Afrique de l'Ouest, est une destination de rêve pour les voyageurs en quête d'authenticité et d'aventure. Composé de dix îles principales, le Cap Vert offre une diversité de paysages, de cultures et d'expériences inégalées. Dans cet article, nous allons explorer ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-05-31 13:59:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/ZL9INonQSg2TteCvIA0m
 ---
 
 ::hero-section-blog

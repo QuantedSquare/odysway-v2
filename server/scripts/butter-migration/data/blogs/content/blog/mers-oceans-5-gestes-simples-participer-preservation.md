@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Mers et océans : 5 gestes simples pour participer a leur préservation !
   description: Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-12-19 14:50:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Benefices locaux
+displayedImg: https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ
 ---
 
 ::hero-section-blog

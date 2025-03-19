@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Cap-Vert
   description: Le Cap-Vert est une ancienne colonie portugaise, posée au large des côtes sénégalaises. C’est encore un diamant à l’état brut. Longtemps méconnu du grand public, c’est grâce à Cesaria Evora que le « petit pays » est apparu sur le devant de la scène. Le calme et la douceur des ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-20 10:19:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/RFNpZVXXQ46EmoP39d4J
 ---
 
 ::hero-section-blog

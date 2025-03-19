@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyager au Pérou en séjournant chez l'habitant
   description: Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie.
-  icon: blog
+author: contact@odysway.com
+published: false
+publishedAt: 2021-01-04 10:03:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0
 ---
 
 ::hero-section-blog

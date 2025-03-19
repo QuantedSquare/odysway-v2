@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyager seul : nos conseils pour partir en toute sérénité
   description: Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies.
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2022-07-01 12:49:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE
 ---
 
 ::hero-section-blog

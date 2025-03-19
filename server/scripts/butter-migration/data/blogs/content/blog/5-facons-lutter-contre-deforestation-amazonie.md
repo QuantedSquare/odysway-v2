@@ -7,7 +7,12 @@ seo:
 navigation:
   title: 5 façons de lutter contre la déforestation en Amazonie
   description: L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2020-02-03 17:37:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7
 ---
 
 ::hero-section-blog

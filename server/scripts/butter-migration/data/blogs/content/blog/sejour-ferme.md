@@ -15,7 +15,12 @@ Faire un séjour immersif dans une ferme c’est également la possibilité d’
 Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
 Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
 Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-24 09:24:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

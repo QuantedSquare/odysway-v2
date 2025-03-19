@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway dans la section "2019, hors des sentiers battus" du Figaro !
   description: Retrouvez l'article complet sur le site du Figaro
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-02-14 03:57:00+00:00
+tag: undefined
+categories: Presse ecrite
+displayedImg: https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB
 ---
 
 ::hero-section-blog

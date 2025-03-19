@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les avantages d'un séjour en immersion chez l'habitant : entre authenticité et échange culturel
   description: Les séjours en immersion chez l'habitant offrent une expérience de voyage unique et authentique, permettant aux voyageurs de découvrir une culture de manière inédite, d'apprendre une nouvelle langue et de créer des liens avec les locaux. De plus, ce type de voyage permet de contribuer directement à l'économie locale, en soutenant les communautés et en créant des emplois pour les habitants de la région. Les hôtes proposent également des activités uniques, telles que la cuisine locale ou la visite de sites historiques, permettant aux voyageurs de vivre des moments inoubliables. Si vous cherchez une expérience de voyage enrichissante et responsable, un séjour chez l'habitant peut être la solution idéale.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-02-20 09:37:00+00:00
+tag: undefined
+categories: voyage, tourisme, responsable, nature
+displayedImg: https://cdn.buttercms.com/c7yNiLST3avM9zxyBjeB
 ---
 
 ::hero-section-blog

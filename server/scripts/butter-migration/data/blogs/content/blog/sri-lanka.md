@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Sri Lanka, une île aux mille saveurs
   description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-05-29 12:38:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

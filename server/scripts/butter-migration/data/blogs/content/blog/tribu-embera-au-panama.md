@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Une immersion authentique avec une tribu Embera au Panama
   description: En mars 2019, l'équipe d'Odysway est partie à la recherche de nouvelles expériences de voyage au Panama. L'objectif était de trouver des expériences authentiques, en immersion avec la tribu Embera du Panama. L'histoire de la tribu Embera au Panama Le Panama abrite trois communautés amérindiennes ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-05-03 13:33:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/Io5NKYJQwyuU5xa2nYWA?1612267223650
 ---
 
 ::hero-section-blog

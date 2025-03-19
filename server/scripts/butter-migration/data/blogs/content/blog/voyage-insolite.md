@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage Insolite avec Odysway
   description: Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 15:15:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

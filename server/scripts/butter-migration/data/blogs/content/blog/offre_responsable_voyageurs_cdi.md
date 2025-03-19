@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Responsable Voyageurs - CDI - H/F
   description: Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2022-02-28 15:36:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr
 ---
 
 ::hero-section-blog

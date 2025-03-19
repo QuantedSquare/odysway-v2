@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud
   description: En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse.
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-05-03 14:56:00+00:00
+tag: undefined
+categories: Culture et decouverte, Developpement Personnel
+displayedImg: https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7
 ---
 
 ::hero-section-blog

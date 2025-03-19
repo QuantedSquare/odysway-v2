@@ -11,7 +11,12 @@ navigation:
   description: Havre de paix posé au milieu de l’archipel indonésieni, l’île des Dieux, évoque liberté, spiritualité et art de vivre.
 
 Laissez-vous porter par la beauté de cette terre d’hindouisme et savourez les plages de l'océan Indien aux damiers des rizières, aux plantations de girofliers et caféiers, aux rituels sur la crête ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-02-19 12:00:00+00:00
+tag: undefined
+categories: vacances, voyager, Indonésie
+displayedImg: https://cdn.buttercms.com/p4bvpWT5QViD9BBQzg1F
 ---
 
 ::hero-section-blog

@@ -13,7 +13,12 @@ navigation:
   description: Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
 
 Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2022-10-18 12:33:00+00:00
+tag: undefined
+categories: voyage, immersion, inde
+displayedImg: https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg
 ---
 
 ::hero-section-blog

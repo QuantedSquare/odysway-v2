@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Pourquoi voyager avec une agence de voyage ?
   description: Voyager est une activité enrichissante qui permet de découvrir de nouveaux horizons, de rencontrer des personnes différentes et de vivre des expériences uniques. Toutefois, l'organisation d'un voyage peut s'avérer complexe et stressante. C'est là qu'interviennent les agences de voyage, des professionnelles du secteur touristique qui offrent une multitude d'avantages pour ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-05-28 07:45:32.423000+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/9riCPDocQD2kETAiEidU
 ---
 
 ::hero-section-blog

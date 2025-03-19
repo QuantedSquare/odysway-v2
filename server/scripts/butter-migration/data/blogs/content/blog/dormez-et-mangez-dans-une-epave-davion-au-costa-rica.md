@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Dormez et mangez dans une épave d'avion au Costa Rica
   description: Sur la cote sud du Costa Rica, au bord de l'Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres , son nez dresse vers le ciel. Un crash ? Non. Juste une idée...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-10-13 08:35:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859
 ---
 
 ::hero-section-blog

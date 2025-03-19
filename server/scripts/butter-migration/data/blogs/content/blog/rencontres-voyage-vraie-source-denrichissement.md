@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les rencontres en voyage, une vraie source d'enrichissement
   description: Les rencontres, ces petits événements spontanés qui transforment le voyage . Vous ne pouvez pas imaginer partir sans penser interagir avec ceux que vous allez rencontrer. Sinon votre voyage ne serait pas complet. Qu'importe l'endroit où vous vous rendez, chaque rencontre sera forcément signe de richesse et votre voyage aura ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-03-24 15:07:00+00:00
+tag: undefined
+categories: Apprentissage, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/OpfamDsTTqxKDqWbpsoo
 ---
 
 ::hero-section-blog

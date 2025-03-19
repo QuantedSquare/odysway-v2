@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Communiqué de Presse
   description: L’agence de voyage en ligne, qui proposait exclusivement des séjours immersifs et responsables à l’étranger, a su se réinventer pour créer des voyages en France, en gardant le même concept. Comme de nombreux acteurs du tourisme, Odysway a été impactée par la crise sanitaire de la Covid-19 dès février. Dès ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-09-24 14:06:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/Yao6FvFoSjW5imiBbkEV?1600961512121
 ---
 
 ::hero-section-blog

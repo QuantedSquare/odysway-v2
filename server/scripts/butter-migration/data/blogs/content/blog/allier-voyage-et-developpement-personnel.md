@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Allier voyage et développement personnel
   description: Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des choses essentielles ? Laisser de côté les futilités pour vous rendre compte de ce qui est vraiment important ? Il serait peut-être temps de faire ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-29 15:01:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les bienfaits de l'Ayurveda
   description: Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-07-12 10:28:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P
 ---
 
 ::hero-section-blog

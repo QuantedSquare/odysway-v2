@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées
   description: Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.
-  icon: blog
+author: contact@odysway.com
+published: false
+publishedAt: 2021-05-31 09:14:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq
 ---
 
 ::hero-section-blog

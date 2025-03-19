@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Sahara, ou le plus grand désert du monde
   description: Il s'agit du plus grand désert de sable du monde . Le Sahara représente environ 14 fois la superficie de la France. Un territoire immense ou les conditions de vie sont extrêmes mais où les paysages font partie des plus beaux du continent africain.
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-06-10 08:32:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: https://cdn.buttercms.com/GuTUM1N3QXqx8PSGPFj6
 ---
 
 ::hero-section-blog

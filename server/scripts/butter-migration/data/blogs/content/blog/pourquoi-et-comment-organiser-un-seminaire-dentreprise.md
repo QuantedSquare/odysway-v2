@@ -17,7 +17,12 @@ navigation:
 Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
 
 Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2022-12-20 14:01:00+00:00
+tag: undefined
+categories: séminaire, entreprise, cohésion
+displayedImg: https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA
 ---
 
 ::hero-section-blog

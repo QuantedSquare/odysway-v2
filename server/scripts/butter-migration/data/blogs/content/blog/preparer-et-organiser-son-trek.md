@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Organiser et préparer son trek
   description: Le Trekking est certainement la manière la plus simple de voyager. Il suffit d’une simple paire de chaussures dirait-on. Seulement pour partir en toute sérénité à la découverte du monde, il faut un semblant d’organisation et de préparation. Le trek est avant tout un voyage itinérant, au rythme lent de ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2021-09-24 06:38:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/tfEZnFmERDGedU0VARIY
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où faire de la boxe thaï en Thaïlande?
   description: La boxe thaï est sans conteste le sport de combat le plus populaire en Thaïlande et fait partie intégrante de la culture du pays. Depuis plusieurs années, de plus en plus d'adeptes issus des pays occidentaux viennent en Thaïlande pour s’entraîner auprès de professionnels. Mais où se rendre pour ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-08-23 15:38:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/kaWAk2SGaVAqQnzvRz1g
 ---
 
 ::hero-section-blog

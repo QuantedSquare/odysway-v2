@@ -7,7 +7,12 @@ seo:
 navigation:
   title: 5 bonnes raisons de voyager en France
   description: Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2023-04-04 12:43:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte, Benefices locaux
+displayedImg: https://cdn.buttercms.com/RTyhpDgQ6Wbwgj21fVAA
 ---
 
 ::hero-section-blog

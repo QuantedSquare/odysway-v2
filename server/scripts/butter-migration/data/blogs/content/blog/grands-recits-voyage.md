@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les grands recits de voyage
   description: Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2020-02-03 17:44:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Se perdre dans l'immensité des grands espaces
   description: Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-29 15:50:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

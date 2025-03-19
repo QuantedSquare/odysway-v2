@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Petit tour d’horizon de 10 villes écolos dans le monde
   description: A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 10:55:00+00:00
+tag: undefined
+categories: Apprentissage, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ
 ---
 
 ::hero-section-blog

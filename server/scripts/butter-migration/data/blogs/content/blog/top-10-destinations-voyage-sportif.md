@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le top 10 des destinations pour un voyage sportif
   description: Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-03-24 15:31:00+00:00
+tag: undefined
+categories: Depassement de soi, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872
 ---
 
 ::hero-section-blog

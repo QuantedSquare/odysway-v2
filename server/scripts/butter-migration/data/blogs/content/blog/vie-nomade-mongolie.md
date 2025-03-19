@@ -7,7 +7,12 @@ seo:
 navigation:
   title: La vie nomade en Mongolie
   description: Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-07-01 10:59:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262
 ---
 
 ::hero-section-blog

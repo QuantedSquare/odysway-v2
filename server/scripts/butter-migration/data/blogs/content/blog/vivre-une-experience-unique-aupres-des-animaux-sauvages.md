@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Partir à la rencontre des animaux sauvages
   description: Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-29 14:29:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

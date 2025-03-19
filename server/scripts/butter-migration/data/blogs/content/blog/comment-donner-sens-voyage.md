@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment donner du sens à son voyage ?
   description: En voyage, on oublie tout, on profite, on fait le vide. Mais parfois, il ne suffit pas de partir à l'autre bout du monde pour se ressourcer, il faut donner un sens à ce que l'on fait. Aujourd'hui, ce constat devient de plus en plus un réel besoin chez certains ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-03-24 13:03:00+00:00
+tag: undefined
+categories: Apprentissage, Benefices locaux
+displayedImg: https://cdn.buttercms.com/yPQpThoSCqwYbazAKPQ4?1613669575584
 ---
 
 ::hero-section-blog

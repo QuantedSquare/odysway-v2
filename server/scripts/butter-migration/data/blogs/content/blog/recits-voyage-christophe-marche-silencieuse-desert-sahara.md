@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara
   description: Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-12-01 14:01:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Blog
+displayedImg: https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9
 ---
 
 ::hero-section-blog

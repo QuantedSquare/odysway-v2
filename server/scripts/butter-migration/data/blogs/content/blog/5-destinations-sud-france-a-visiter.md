@@ -7,7 +7,12 @@ seo:
 navigation:
   title: 5 destinations du sud de la France à visiter
   description: Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-05-15 15:44:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ
 ---
 
 ::hero-section-blog

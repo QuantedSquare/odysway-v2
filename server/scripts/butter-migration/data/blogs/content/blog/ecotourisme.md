@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Découvrez l'écotourisme et voyagez autrement
   description: L'écotourisme est une façon de voyager orientée vers découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 15:42:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

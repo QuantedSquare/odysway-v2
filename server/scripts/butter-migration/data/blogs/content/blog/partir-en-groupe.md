@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Partir en groupe une expérience enrichissante
   description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 17:18:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

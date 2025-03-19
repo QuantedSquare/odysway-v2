@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Découvrir la France au fil de la côte ouest - première partie
   description: Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-08-13 11:00:00+00:00
+tag: undefined
+categories: Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd
 ---
 
 ::hero-section-blog

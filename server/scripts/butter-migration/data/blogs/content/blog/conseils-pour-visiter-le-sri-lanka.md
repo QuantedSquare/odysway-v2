@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Conseils pour visiter le Sri Lanka
   description: Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-07-17 07:11:00+00:00
+tag: undefined
+categories: voyage, conseil, préparer
+displayedImg: https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B
 ---
 
 ::hero-section-blog

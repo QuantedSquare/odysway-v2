@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Nos séjours en France
   description: Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2021-02-22 13:16:00+00:00
+tag: undefined
+categories: Nature et grands espaces
+displayedImg: https://cdn.buttercms.com/EgPLFa2TriEUArtylLII
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes
   description: Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-06-03 15:24:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/G9nv26sZReGjGlToUbFZ
 ---
 
 ::hero-section-blog

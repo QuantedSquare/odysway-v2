@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Partir en Amoureux : un voyage hors du temps
   description: Partir en amoureux rime souvent avec hôtel de luxe et dîner aux chandelles. Offrez-vous un voyage hors des sentiers battus en immersion pour fêter votre amour.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 16:47:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: La cérémonie de l'Ukuli en Ethiopie
   description: A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-11-15 08:49:00+00:00
+tag: undefined
+categories: Apprentissage, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272
 ---
 
 ::hero-section-blog

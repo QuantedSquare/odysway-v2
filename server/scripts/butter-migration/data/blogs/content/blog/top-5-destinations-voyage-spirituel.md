@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le top 5 des destinations pour un voyage spirituel
   description: Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-03-24 16:05:00+00:00
+tag: undefined
+categories: Depassement de soi, Apprentissage, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173
 ---
 
 ::hero-section-blog

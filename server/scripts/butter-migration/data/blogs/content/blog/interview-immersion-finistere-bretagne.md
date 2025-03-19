@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
   description: Odysway est heureux de vous présenter Virginie ! Eleveuse d’alpagas du côté de Quimper dans le Finistère Sud, elle vous attend dans sa ferme avec ses animaux doux et curieux !
-  icon: blog
+author: contact@odysway.com
+published: false
+publishedAt: 2021-06-14 15:39:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY
 ---
 
 ::hero-section-blog

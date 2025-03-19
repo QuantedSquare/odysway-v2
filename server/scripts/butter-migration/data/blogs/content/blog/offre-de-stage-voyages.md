@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Offre de stage
   description: Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2022-01-28 13:08:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI
 ---
 
 ::hero-section-blog

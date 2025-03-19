@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment gagner en sérénité en vacances ?
   description: Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter du quotidien. Mais il arrive fréquemment que beaucoup d'entre nous éprouvent des difficultés à être totalement détendu et serein. Odysway vous donne les clés pour gagner en sérénité pendant vos vacances.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-04-16 09:47:00+00:00
+tag: undefined
+categories: Culture et decouverte, Developpement Personnel, Blog
+displayedImg: https://cdn.buttercms.com/gBrJzHbRFuGhmkAAjgAa?1612860600257
 ---
 
 ::hero-section-blog

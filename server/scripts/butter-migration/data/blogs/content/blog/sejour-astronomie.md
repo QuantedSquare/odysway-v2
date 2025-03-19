@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Séjour Astronomie : à la découverte des étoiles
   description: Les étoiles, la voie lactée, l'immensité de la galaxie, ça fait rêver. Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-24 11:09:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Pourquoi ne faut-il pas faire de l'éléphant en Thaïlande ?
   description: Dans toute destination touristique, il y a toujours une attraction phare qui caractérise le pays. Monuments historiques, sites culturels ou nature exceptionnelle, ces centres d'intérêt attirent la curiosité des voyageurs. Tel est le cas en Thaïlande ou la balade a dos d'éléphant est l'une de ces attractions majeures du pays. ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-01-15 10:00:00+00:00
+tag: undefined
+categories: Apprentissage, Culture et decouverte, Benefices locaux
+displayedImg: https://cdn.buttercms.com/exy4r7dpRfqBdYNMYuug?1612266403036
 ---
 
 ::hero-section-blog

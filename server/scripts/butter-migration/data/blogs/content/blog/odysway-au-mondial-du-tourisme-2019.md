@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway au Mondial du tourisme 2019 !
   description: Toute l’équipe d’Odysway sera présente lors du mondial du tourisme 2019. L’événement aura lieu à Paris (Porte de Versailles) du jeudi 14 au Dimanche 17 Mars 2019 !
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-02-06 20:02:00+00:00
+tag: undefined
+categories: Depassement de soi, News Odysway
+displayedImg: https://cdn.buttercms.com/Kn1MimizSFCRyDE63ayX?1612360977660
 ---
 
 ::hero-section-blog

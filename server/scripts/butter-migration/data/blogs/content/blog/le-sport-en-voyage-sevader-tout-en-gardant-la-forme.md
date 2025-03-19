@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le sport en voyage : s'évader tout en gardant la forme
   description: Le sport c'est la santé, en voyage aussi ! On le sait tous, il faut pratiquer une activité physique régulière pour rester en forme et garder la santé. Mais pas que. Le sport est un excellent moyen pour évacuer le stress, garder le contrôle de soi et vivre des sensations ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-29 16:10:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

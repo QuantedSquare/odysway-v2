@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage Aventure : de belles sensations au programme
   description: Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 10:44:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

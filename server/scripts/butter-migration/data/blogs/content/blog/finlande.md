@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Finlande
   description: Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y a mille et une raisons de partir en Finlande . Pourquoi partir en Finlande ? Pays scandinave qui s’étend au-delà du cercle polaire, la Finlande est une merveille naturelle. En quelques chiffres, cela donne : un territoire recouvert à ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2021-02-09 09:52:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

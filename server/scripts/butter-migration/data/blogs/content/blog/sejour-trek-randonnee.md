@@ -19,7 +19,12 @@ Cette forme de tourisme alternatif vous offre la possibilité de séjourner en i
 Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
 
 De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-24 08:59:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway dans Capital
   description: Tourisme : entrepreneurs, pour vous lancer, voici 13 secteurs qui ont le vent en poupe. Depuis neuf ans, le tourisme connait une croissance continue et la France reste le pays du monde le plus visité. Vous avez envie de vous lancer ? Le point sur ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-09-11 09:37:00+00:00
+tag: undefined
+categories: Presse ecrite
+displayedImg: https://cdn.buttercms.com/6hN6qZ2xQp63wtQQfHEh
 ---
 
 ::hero-section-blog

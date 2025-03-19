@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où partir au Printemps pour profiter de la douce saison ?
   description: Le printemps, cette douce saison où tout fleurit, où on sort de son cocon, le temps est encore un peu frais mais c’est la promesse des beaux jours qui arrivent.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-30 11:50:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les 10 plus grands aventuriers
   description: Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-06-21 09:49:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359
 ---
 
 ::hero-section-blog

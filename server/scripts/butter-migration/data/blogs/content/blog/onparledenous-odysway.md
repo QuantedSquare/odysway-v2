@@ -7,7 +7,12 @@ seo:
 navigation:
   title: #Onparledenous #Odysway
   description: Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-10-30 07:30:00+00:00
+tag: undefined
+categories: News Odysway
+displayedImg: https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815
 ---
 
 ::hero-section-blog

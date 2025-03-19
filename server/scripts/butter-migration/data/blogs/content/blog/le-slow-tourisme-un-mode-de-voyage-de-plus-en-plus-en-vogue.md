@@ -8,7 +8,12 @@ Le slow tourisme en quelques mots
 navigation:
   title: Le slow tourisme : un mode de voyage de plus en plus en vogue
   description: Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 13:51:00+00:00
+tag: undefined
+categories: Benefices locaux
+displayedImg: https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh
 ---
 
 ::hero-section-blog

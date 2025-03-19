@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment allier sport et découverte en voyage ?
   description: Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n'est pas en voyage qu'il faut déroger à la règle. Profitez justement de vos vacances pour continuer a faire du sport et même en découvrir de nouveaux. Mais comment allier sport et découverte ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2020-01-16 12:06:00+00:00
+tag: undefined
+categories: Depassement de soi, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd
 ---
 
 ::hero-section-blog

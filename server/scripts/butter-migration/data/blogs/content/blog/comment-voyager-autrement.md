@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment voyager autrement ?
   description: Fuir la foule, découvrir des lieux insoupçonnés, faire de belles rencontres, prendre part à des activités locales . Comment y parvenir alors que les possibilités pour voyager autrement sont si nombreuses ? Voici quelques pistes qui feront de votre prochain voyage, un voyage plein de surprises. Est-ce encore possible de ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-05-28 15:09:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC
 ---
 
 ::hero-section-blog

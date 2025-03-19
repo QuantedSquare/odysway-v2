@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Qu'est-ce que la tarabita en Equateur?
   description: Parmi les modes de transport insolites qui existent de par la planète, la tarabita est probablement l'un des plus anciens. C'est en Equateur , situe entre la Colombie et le Pérou, que vous pourrez tester ce mode de transport plutôt original. Semblable a un téléphérique, les Incas l'utilisaient déjà pour ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-11-29 07:59:00+00:00
+tag: undefined
+categories: Depassement de soi, Developpement Personnel
+displayedImg: https://cdn.buttercms.com/wjgbNs6TSa6hAfBnw0xW
 ---
 
 ::hero-section-blog

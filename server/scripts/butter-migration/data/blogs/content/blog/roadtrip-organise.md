@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Road Trip Organisé : une totale liberté
   description: Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 16:13:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

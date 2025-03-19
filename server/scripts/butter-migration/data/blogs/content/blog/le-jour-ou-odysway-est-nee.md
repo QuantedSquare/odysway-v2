@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le jour où Odysway est née..
   description: Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. " Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-02-05 16:10:00+00:00
+tag: undefined
+categories: Depassement de soi
+displayedImg: https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où partir entre amis ?
   description: Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-08-06 11:51:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj
 ---
 
 ::hero-section-blog

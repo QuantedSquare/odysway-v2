@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Odysway soutenue par Société Générale pour sa campagne "C'est vous l'avenir
   description: Odysway a été accompagné par Société Générale, qui a choisi notre agence de voyage innovante dans le cadre de sa nouvelle campagne de communication, "C'est vous l'avenir". Le principe, une minute vidéo offerte a 5 start-ups sélectionnées pour mettre en avant leur concept.
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-04-25 14:34:00+00:00
+tag: undefined
+categories: Partenaires
+displayedImg: https://cdn.buttercms.com/jCOJ7rTO296sYhMBbeqw
 ---
 
 ::hero-section-blog

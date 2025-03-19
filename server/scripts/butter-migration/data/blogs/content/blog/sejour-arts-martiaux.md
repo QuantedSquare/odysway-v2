@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage et pratique des Arts Martiaux à travers le monde
   description: Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-05-31 14:34:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/q726xyrFTOe76K2LVung
 ---
 
 ::hero-section-blog

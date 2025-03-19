@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment voyager seul ?
   description: Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-07-23 11:00:00+00:00
+tag: undefined
+categories: Depassement de soi, Culture et decouverte, Developpement Personnel, Blog
+displayedImg: https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1
 ---
 
 ::hero-section-blog

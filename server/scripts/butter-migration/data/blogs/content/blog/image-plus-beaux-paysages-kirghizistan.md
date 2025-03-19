@@ -7,7 +7,12 @@ seo:
 navigation:
   title: En images : les plus beaux paysages du Kirghizistan
   description: Pays d'Asie Centrale, le Kirghizistan est encore peu connu des voyageurs. Pourtant, ses paysages grandioses ont de quoi ravir les amateurs de grands espaces et de nature. Steppes, pics enneiges, lacs de montagne, rivières sauvages ou encore canyons, voici ce qui vous attend là-bas. Odysway a décidé de vous ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-11-07 16:31:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/X1cLh2aSEmq9WggtGMVT?1611574701946
 ---
 
 ::hero-section-blog

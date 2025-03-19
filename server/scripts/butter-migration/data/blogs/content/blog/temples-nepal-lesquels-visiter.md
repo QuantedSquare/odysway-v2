@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Temples au Népal : lesquels visiter ?
   description: Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2019-10-07 13:08:00+00:00
+tag: undefined
+categories: Depassement de soi, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ
 ---
 
 ::hero-section-blog

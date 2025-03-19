@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage sur Mesure au Népal : Aventure Personnalisée et Immersive dans l'Himalaya
   description: Le Népal, avec ses paysages époustouflants et sa culture riche, est une destination incontournable pour les amateurs de trek. Odysway propose une expérience unique, alliant immersion culturelle et respect de l'environnement. En optant pour un trek chez l'habitant, vous découvrez le Népal sous un angle authentique et enrichissant. Voici pourquoi ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-05-27 07:11:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/UvFW94qlQLmskEQkHlub
 ---
 
 ::hero-section-blog

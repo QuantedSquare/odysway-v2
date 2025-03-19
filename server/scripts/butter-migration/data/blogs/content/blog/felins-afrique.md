@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Les félins d'Afrique
   description: Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-12-17 16:24:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Blog
+displayedImg: https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit
 ---
 
 ::hero-section-blog

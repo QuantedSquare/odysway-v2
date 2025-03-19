@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Top 10 des destinations pour un voyage immersif en 2024
   description: L'année 2024 s'annonce riche en opportunités pour les voyageurs en quête d'aventures authentiques et de découvertes profondes. Odysway, agence de voyage spécialisée dans les expériences immersives et responsables, vous propose une sélection des meilleures destinations pour vivre des moments inoubliables. Voici notre top 10 des destinations pour un voyage immersif ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-05-22 16:01:30.323000+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/Z6rrMmHCQLO4ufhuCMJP
 ---
 
 ::hero-section-blog

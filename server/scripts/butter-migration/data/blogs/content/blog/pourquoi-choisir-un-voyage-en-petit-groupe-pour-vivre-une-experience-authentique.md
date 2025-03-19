@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentique ?
   description: Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2024-09-19 10:25:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg
 ---
 
 ::hero-section-blog

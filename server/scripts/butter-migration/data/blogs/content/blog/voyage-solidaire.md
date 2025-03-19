@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage Solidaire : à la découverte des autres
   description: Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-26 11:34:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

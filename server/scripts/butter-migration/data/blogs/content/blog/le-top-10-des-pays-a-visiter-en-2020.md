@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le top 10 des pays à visiter en 2020
   description: Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-09 07:49:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN
 ---
 
 ::hero-section-blog

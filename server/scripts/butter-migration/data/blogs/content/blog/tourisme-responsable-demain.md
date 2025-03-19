@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le tourisme responsable de demain
   description: À l'heure ou notre planète rencontre de nombreuses difficultés d'ordre écologique notamment, le tourisme est loin d'y être étranger. Modes de transport polluants, surconsommation des ressources naturelles ou augmentation des déchets, le secteur fait face a certains problèmes éthiques. Pour y remédier, de plus en plus d'acteurs du voyage ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-09-26 13:26:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte, Benefices locaux
+displayedImg: https://cdn.buttercms.com/XUKgYnaJTaiEPUCnPI8A
 ---
 
 ::hero-section-blog

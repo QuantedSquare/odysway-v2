@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment préserver notre environnement en voyage ?
   description: Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-06-29 12:11:00+00:00
+tag: undefined
+categories: Benefices locaux, Blog
+displayedImg: https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA
 ---
 
 ::hero-section-blog

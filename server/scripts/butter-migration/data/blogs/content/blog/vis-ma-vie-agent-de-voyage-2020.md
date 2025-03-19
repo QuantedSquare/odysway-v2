@@ -15,7 +15,12 @@ navigation:
 Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
 
 Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-12-22 02:10:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848
 ---
 
 ::hero-section-blog

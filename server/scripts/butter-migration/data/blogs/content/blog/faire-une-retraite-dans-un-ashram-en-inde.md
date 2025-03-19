@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Faire une retraite dans un ashram en Inde
   description: Opérer une césure dans sa vie quotidienne est un besoin ressenti par un grand nombre d'entre nous. Les raisons sont généralement d'ordre personnel ou professionnel et l'envie première est de se retrouver et se recentrer sur des choses essentielles. Faire une retraite dans un ashram est un excellent moyen pour ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-12-13 17:18:00+00:00
+tag: undefined
+categories: Depassement de soi, Developpement Personnel
+displayedImg: https://cdn.buttercms.com/TZeHLay1RTenSQZknP12?1612349551740
 ---
 
 ::hero-section-blog

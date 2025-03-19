@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Le Sri Lanka, une île aux mille saveurs
   description: Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-17 14:22:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

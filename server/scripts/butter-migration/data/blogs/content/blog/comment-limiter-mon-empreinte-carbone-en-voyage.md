@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Comment limiter mon empreinte carbone en voyage ?
   description: Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 10:47:00+00:00
+tag: undefined
+categories: Apprentissage, Benefices locaux, Blog
+displayedImg: https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA
 ---
 
 ::hero-section-blog

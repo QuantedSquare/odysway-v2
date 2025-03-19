@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Road trip en famille dans le Tessin suisse
   description: Situé aux confins de la Suisse et de l'Italie, le canton du Tessin est une région d'une beauté sans pareille qui vous invite à des voyages en voiture enchanteurs. Avec ses imposants cols alpins offrant des panoramas évocateurs, cette destination est un véritable paradis pour les amateurs de road trip ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2022-11-15 14:53:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/BxjQtmMBQYy3bgAzy8lt
 ---
 
 ::hero-section-blog

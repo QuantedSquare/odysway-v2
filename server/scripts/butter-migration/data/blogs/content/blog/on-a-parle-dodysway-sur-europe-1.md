@@ -7,7 +7,12 @@ seo:
 navigation:
   title: On a parlé d'Odysway sur Europe 1 !
   description: Suite a la présence d'Odysway sur le Salon Mondial du Tourisme 2019, le concept d'Odysway a été relaye dans l'émission de Philippe Vandel, sur Europe 1. Une belle mise en avant de notre agence ! Retrouvez la séquence ci-dessous, diffusée le 16 Mars 2019. (Emission complète en ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-03-21 04:05:00+00:00
+tag: undefined
+categories: Radio
+displayedImg: https://cdn.buttercms.com/bNEKfjcGS6S595P2QnMp
 ---
 
 ::hero-section-blog

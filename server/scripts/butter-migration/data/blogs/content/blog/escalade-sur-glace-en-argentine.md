@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Escalade sur glace en Argentine
   description: Second plus grand pays d'Amérique du Sud, l'Argentine s'étire sur près de 3 700 km jusqu'à la Terre de Feu et sa ville mythique, Ushuaia. Au sud-ouest du pays, en Patagonie, a la frontière avec le Chili, le parc national Los Glaciares est probablement le parc plus emblématique du pays. ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-03-11 15:31:00+00:00
+tag: undefined
+categories: Depassement de soi, Nature et grands espaces
+displayedImg: https://cdn.buttercms.com/ITufAeu6QZWrVuit9uAi?1612264743708
 ---
 
 ::hero-section-blog

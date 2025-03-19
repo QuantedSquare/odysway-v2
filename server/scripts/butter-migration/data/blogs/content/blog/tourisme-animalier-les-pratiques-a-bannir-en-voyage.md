@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Tourisme animalier : les pratiques à bannir en voyage
   description: Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-03-06 09:59:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Blog
+displayedImg: https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774
 ---
 
 ::hero-section-blog

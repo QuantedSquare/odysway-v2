@@ -7,7 +7,12 @@ seo:
 navigation:
   title: BGE ADIL |Odysway en video
   description: Découvrez ci-dessous la video qu'est venue tourner BGE ADIL au Plateau, l'incubateur interne de Société Générale où Odysway a été hébergée pendant 6 mois fin 2018.
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-04-03 04:11:00+00:00
+tag: undefined
+categories: Partenaires
+displayedImg: https://cdn.buttercms.com/QRBctdFbRg2vnPeEmlZp
 ---
 
 ::hero-section-blog

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: L’Inde, terre de contraste
   description: L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-17 13:49:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

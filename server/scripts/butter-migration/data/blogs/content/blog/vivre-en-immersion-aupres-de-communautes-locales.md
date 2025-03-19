@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Vivre en immersion auprès de communautés locales
   description: Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est aussi aller à la rencontre des communautés locales , connaître leurs traditions, écouter leurs histoires et surtout faire face à un mode de vie totalement différent du nôtre. Et ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-04-29 14:51:00+00:00
+tag: undefined
+categories: 
+displayedImg: 
 ---
 
 ::hero-section-blog

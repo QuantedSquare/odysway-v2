@@ -11,7 +11,12 @@ navigation:
   description: Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
 
 ✨ Ludovic, notre guide en Colombie, nous raconte ✨
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-06-06 10:43:00+00:00
+tag: undefined
+categories: voyage, immersion, culture, Colombie, locale
+displayedImg: https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ
 ---
 
 ::hero-section-blog

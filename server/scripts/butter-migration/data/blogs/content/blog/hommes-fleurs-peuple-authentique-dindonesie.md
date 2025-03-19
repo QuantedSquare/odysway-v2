@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Qui sont les hommes-fleurs, ce peuple d'Indonésie ?
   description: Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ...
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2019-12-19 11:54:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906
 ---
 
 ::hero-section-blog

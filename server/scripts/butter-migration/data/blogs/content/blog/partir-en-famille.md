@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Partir en Famille
   description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2021-01-19 09:19:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

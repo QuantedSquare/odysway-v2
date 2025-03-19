@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où voyager en Asie en 2025 loin des pays touristiques ?
   description: L’Asie est une destination qui attire de très nombreux voyageurs. Voici 6 destinations qui permettent de voyager en Asie loin des pays touristiques.
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2022-06-21 06:57:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/JFt5h1VTWGx86P8neiR4
 ---
 
 ::hero-section-blog

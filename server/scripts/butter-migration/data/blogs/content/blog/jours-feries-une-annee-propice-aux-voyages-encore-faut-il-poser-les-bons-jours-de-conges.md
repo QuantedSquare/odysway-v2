@@ -21,7 +21,12 @@ Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours 
 En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
 
 Pour cela, regardez bien le calendrier de cette année prometteuse !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2023-01-10 15:13:00+00:00
+tag: undefined
+categories: vacances, voyager, 2023
+displayedImg: https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o
 ---
 
 ::hero-section-blog

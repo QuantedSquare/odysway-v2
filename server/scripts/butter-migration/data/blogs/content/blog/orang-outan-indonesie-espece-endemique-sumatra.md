@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Orang-outan Indonésie : une espèce endémique de l’île de Sumatra
   description: Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ...
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2019-10-30 17:46:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte
+displayedImg: https://cdn.buttercms.com/ufOd50erRHuCHOs48iba
 ---
 
 ::hero-section-blog

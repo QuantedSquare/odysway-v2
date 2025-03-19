@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où partir en Hiver pour profiter des vacances ?
   description: Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver.
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2020-11-30 11:28:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: 
 ---
 
 ::hero-section-blog

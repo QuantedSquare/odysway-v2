@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où loger et que faire à Chiang Mai ? Le guide complet !
   description: Pour un voyageur qui arrive dans une nouvelle ville, il n'est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l'on a repéré sera dans un quartier secrétaire et proche des attractions locales !
-  icon: blog
+author: julien@quantedsquare.com
+published: false
+publishedAt: 2018-12-18 11:30:00+00:00
+tag: undefined
+categories: Culture et decouverte
+displayedImg: https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME
 ---
 
 ::hero-section-blog

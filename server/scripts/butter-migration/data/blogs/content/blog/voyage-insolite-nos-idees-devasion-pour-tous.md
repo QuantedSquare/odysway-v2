@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Voyage insolite en 2025 : nos idées d’évasion pour tous
   description: Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous.
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2025-01-20 06:28:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL
 ---
 
 ::hero-section-blog

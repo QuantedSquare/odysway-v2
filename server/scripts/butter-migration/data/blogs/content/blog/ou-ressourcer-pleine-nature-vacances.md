@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Où se ressourcer en pleine nature pendant ses vacances ?
   description: Le temps avance à toute allure ? Vous avez une vie professionnelle trépidante, mais fatigante ? Ou simplement une envie de nature ? Parfois, le rythme de notre quotidien est un peu rapide, on se lève, on travaille, on se couche et on s’oublie un peu, quelques jours ou quelques ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-05-25 10:16:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/swBsBj5LTeOBe4uy7oGz
 ---
 
 ::hero-section-blog

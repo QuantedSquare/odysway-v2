@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Pass sanitaire : tout savoir pour son prochain voyage en 5 points
   description: Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !
-  icon: blog
+author: linda.tran@odysway.com
+published: false
+publishedAt: 2021-08-26 08:37:00+00:00
+tag: undefined
+categories: Blog
+displayedImg: https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr
 ---
 
 ::hero-section-blog

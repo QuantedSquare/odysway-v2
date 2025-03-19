@@ -7,7 +7,12 @@ seo:
 navigation:
   title: Bédouins : un mode de vie nomade
   description: Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ...
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2020-03-24 13:15:00+00:00
+tag: undefined
+categories: Nature et grands espaces, Culture et decouverte, Blog
+displayedImg: https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534
 ---
 
 ::hero-section-blog
