@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
     'nuxt-calendly',
