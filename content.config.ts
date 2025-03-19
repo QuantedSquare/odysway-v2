@@ -8,9 +8,7 @@ export default defineContentConfig({
     }),
     blog: defineCollection({
       type: 'page',
-      source: {
-        include: 'blog/*.md',
-      },
+      source: 'blog/*.md',
       schema: z.object({
         tags: z.array(z.string()),
         image: z.string(),
@@ -31,8 +29,8 @@ export default defineContentConfig({
       }),
     }),
     voyages: defineCollection({
-      type: 'data',
-      source: 'voyages/**.md',
+      type: 'page',
+      source: 'voyages/*.md',
       schema: z.object({
         slug: z.string(),
         title: z.string(),
