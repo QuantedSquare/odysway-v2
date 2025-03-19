@@ -21,18 +21,19 @@
   >
     <v-card
       elevation="0"
-      class="hover-scale"
     >
       <NuxtLink
         :key="`Voyage ${voyage.slug}`"
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none position-relative text-white"
       >
+
         <v-img
           :src="img(voyage.imgSrc1.src, { format: 'webp', quality: 90, height: 350, width: 640 })"
           :alt="voyage.imgSrc1.alt"
           rounded="xl"
           height="250px"
+          class="hover-scale"
           cover
         >
           <client-only>
@@ -106,6 +107,7 @@
             </div>
           </client-only>
         </v-img>
+
       </NuxtLink>
 
       <!--  BOTTOM TEXT -->
@@ -211,7 +213,7 @@ console.log('voyage', voyage.value)
   bottom:0;
 }
 
-.hover-scale:hover .blur-overlay {
+.hover-scale:deep:hover .blur-overlay {
   height: 100%;
 }
 .hover-scale:hover{

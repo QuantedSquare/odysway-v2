@@ -17,10 +17,8 @@ export default defineContentConfig({
         date: z.date(),
         author: z.string(),
         published: z.boolean(),
-        heroImg: z.object({
-          src: z.string().editor({ input: 'media' }),
-          alt: z.string(),
-        }),
+        publishedAt: z.date(),
+        displayedImg: z.string(),
       }),
     }),
     categories: defineCollection({
@@ -34,7 +32,7 @@ export default defineContentConfig({
     }),
     voyages: defineCollection({
       type: 'data',
-      source: 'voyages/**.json',
+      source: 'voyages/**.md',
       schema: z.object({
         slug: z.string(),
         title: z.string(),

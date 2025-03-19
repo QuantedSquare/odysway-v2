@@ -70,6 +70,7 @@ async function mergeDeals() {
           src: '/images/iStock-1336944149.webp',
           alt: 'Fleur Japons',
         },
+        interjection: voyage.interjection,
         country: voyage.pays[0].nom,
         zoneChapka: voyage.pays[0].zone_chapka,
         privatisation: false,

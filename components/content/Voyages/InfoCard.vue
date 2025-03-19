@@ -1,5 +1,6 @@
 <template>
   <v-card
+    v-if="status === 'success'"
     elevation="0"
   >
     <v-img
@@ -82,6 +83,10 @@
       </v-row>
     </v-card-actions>
   </v-card>
+  <v-skeleton-loader
+    v-else
+    type="card"
+  />
 </template>
 
 <script setup>
@@ -103,7 +108,7 @@ defineProps({
 const route = useRoute()
 const img = useImage()
 
-const { data: page } = await useAsyncData(route.path, () => {
+const { data: page, status } = useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 const voyageTitle = computed(() => {

@@ -7,7 +7,12 @@ seo:
 navigation:
   title: 3 Itinéraires écoresponsables pour (re)découvrir la France
   description: Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon.
-  icon: blog
+author: romain.masina@odysway.com
+published: false
+publishedAt: 2021-07-30 09:54:00+00:00
+tag: undefined
+categories: 
+displayedImg: https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8
 ---
 
 ::hero-section-blog

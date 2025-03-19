@@ -33,11 +33,12 @@
           >
             <v-img
               :src="img(page.imgSrc, { format: 'webp', quality: 70, width: 640 })"
+              class="hover-scale"
               height="100%"
               cover
             >
               <div class="position-absolute bottom-0 text-white">
-                <v-card-subtitle>{{ page.publicationDate }}</v-card-subtitle>
+                <v-card-subtitle>{{ dayjs(page.publishedAt).format('DD/MM/YYYY') }}</v-card-subtitle>
                 <v-card-title class="no-white-space">
                   {{ page.title }}
                 </v-card-title>
@@ -51,43 +52,47 @@
 </template>
 
 <script setup>
+import dayjs from 'dayjs'
 import { useImage } from '#imports'
 
 const img = useImage()
 
 const route = useRoute()
-const { data: pages, status } = await useAsyncData(route.path, () => {
+const { data: pages, status } = useAsyncData(route.path, () => {
   return queryCollection('blog').all()
 })
-console.log(pages.value)
 
 const loading = computed(() => {
-  if (status.value === 'success') {
-    return false
-  }
-  return true
+  return status.value !== 'success'
 })
 
 const parsedPages = computed(() => {
-  const parsedPages = pages.value.map((page) => {
+  const parsedPages = pages.value?.map((page) => {
     console.log('page in array', page)
     return {
       title: page.title, // find the way to get a title from page hero-section
-      publicationDate: page.body.value[0][2][2][2][2],
-      imgSrc: page.body.value[0][1]['image-src'],
+      publishedAt: page.publishedAt,
+      imgSrc: page.displayedImg,
       slug: page.path,
     }
+  }).sort((a, b) => {
+    return dayjs((b.publishedAt)) - dayjs((a.publishedAt))
   })
   return parsedPages
 })
 console.log(parsedPages.value)
-// console.log(parsedPages.value[0].testTitle)
-
-// const sortPages = computed(() => {
-//   return [...parsedPages.value].sort((a, b) => {
-//     return new Date(b.publicationDate) - new Date(a.publicationDate)
-//   })
-// })
-
-// console.log(sortPages.value)
 </script>
+
+<style scoped>
+.hover-scale:hover {
+  height: 100%;
+}
+.hover-scale:hover{
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
+.hover-scale{
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+</style>
