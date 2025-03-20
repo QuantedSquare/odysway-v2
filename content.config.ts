@@ -32,7 +32,7 @@ export default defineContentConfig({
       }),
     }),
     voyages: defineCollection(
-      asSeoCollection({
+      {
         type: 'page',
         source: 'voyages/*.md',
         schema: z.object({
@@ -47,8 +47,9 @@ export default defineContentConfig({
           comments: z.number(),
           imgSrc: z.string(),
           country: z.string(),
+          programme: z.string(),
         }),
-      }),
+      },
     ),
     deals: defineCollection({
       type: 'data',

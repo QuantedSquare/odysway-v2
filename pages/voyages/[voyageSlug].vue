@@ -3,6 +3,7 @@
     <ContentRenderer
       v-if="page"
       :value="page"
+      :data="mdcVars"
     />
   </div>
 </template>
@@ -17,4 +18,5 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
+const mdcVars = ref({ programme: 'coucou' })
 </script>

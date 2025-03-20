@@ -36,10 +36,6 @@
 </template>
 
 <script setup>
-defineProps({
-  programme: {
-    type: String,
-    default: '',
-  },
-})
+const props = defineProps(['programme'])
+console.log('programme', props)
 </script>

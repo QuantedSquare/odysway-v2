@@ -23,7 +23,9 @@
             <slot name="title" />
           </v-card-title>
           <v-card-text class="text-body-1 text-grey-darken-3">
-            <slot name="text" />
+            <slot
+              name="text"
+            />
           </v-card-text>
         </v-card>
       </v-col>
