@@ -24,10 +24,11 @@ export default defineNuxtConfig({
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
+      dev: true,
     },
     database: {
       type: 'postgres',
-      url: process.env.POSTGRES_URL,
+      url: process.env.POSTGRES_URL || 'postgres://localhost:5432/nuxt',
     },
   },
   runtimeConfig: {

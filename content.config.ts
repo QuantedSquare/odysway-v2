@@ -1,5 +1,4 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
-import { asSeoCollection } from '@nuxtjs/seo/content'
 
 export default defineContentConfig({
   collections: {
@@ -7,21 +6,19 @@ export default defineContentConfig({
       type: 'page',
       source: '**/*.md',
     }),
-    blog: defineCollection(
-      asSeoCollection({
-        type: 'page',
-        source: 'blog/*.md',
-        schema: z.object({
-          tags: z.array(z.string()),
-          image: z.string(),
-          date: z.date(),
-          author: z.string(),
-          published: z.boolean(),
-          publishedAt: z.date(),
-          displayedImg: z.string(),
-        }),
+    blog: defineCollection({
+      type: 'page',
+      source: 'blog/*.md',
+      schema: z.object({
+        tags: z.array(z.string()),
+        image: z.string(),
+        date: z.date(),
+        author: z.string(),
+        published: z.boolean(),
+        publishedAt: z.date(),
+        displayedImg: z.string(),
       }),
-    ),
+    }),
     categories: defineCollection({
       type: 'data',
       source: 'categories/**.json',
@@ -31,25 +28,23 @@ export default defineContentConfig({
         image: z.string(),
       }),
     }),
-    voyages: defineCollection(
-      asSeoCollection({
-        type: 'page',
-        source: 'voyages/*.md',
-        schema: z.object({
-          slug: z.string(),
-          title: z.string(),
-          duration: z.string(),
-          departureDate: z.string(),
-          returnDate: z.string(),
-          iso: z.string(),
-          startingPrice: z.number(),
-          rating: z.number(),
-          comments: z.number(),
-          imgSrc: z.string(),
-          country: z.string(),
-        }),
+    voyages: defineCollection({
+      type: 'page',
+      source: 'voyages/*.md',
+      schema: z.object({
+        slug: z.string(),
+        title: z.string(),
+        duration: z.string(),
+        departureDate: z.string(),
+        returnDate: z.string(),
+        iso: z.string(),
+        startingPrice: z.number(),
+        rating: z.number(),
+        comments: z.number(),
+        imgSrc: z.string(),
+        country: z.string(),
       }),
-    ),
+    }),
     deals: defineCollection({
       type: 'data',
       source: 'deals/**.json',
