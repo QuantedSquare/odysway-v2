@@ -1,23 +1,23 @@
 ---
-title: Odysway dans la section "2019, hors des sentiers battus" du Figaro !
-description: Retrouvez l'article complet sur le site du Figaro
+title: "Odysway dans la section "2019, hors des sentiers battus" du Figaro !"
+description: "Retrouvez l'article complet sur le site du Figaro"
 seo:
-  title: Odysway dans le Figaro | Blog Odysway
-  description: Retrouvez un article complet sur Odysway sur le site du Figaro !
+  title: "Odysway dans le Figaro | Blog Odysway"
+  description: "Retrouvez un article complet sur Odysway sur le site du Figaro !"
 navigation:
-  title: Odysway dans la section "2019, hors des sentiers battus" du Figaro !
-  description: Retrouvez l'article complet sur le site du Figaro
-author: julien@quantedsquare.com
+  title: "Odysway dans la section "2019, hors des sentiers battus" du Figaro !"
+  description: "Retrouvez l'article complet sur le site du Figaro"
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-02-14 03:57:00+00:00
-tag: undefined
-categories: Presse ecrite
-displayedImg: https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB
+publishedAt: "2019-02-14 03:57:00+00:00"
+tags: "Presse"
+categories: "Presse ecrite"
+displayedImg: "https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB
+image-src: "https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB"
 ---
 #publication-date
 14 février 2019
@@ -31,7 +31,7 @@ Odysway dans la section "2019, hors des sentiers battus" du Figaro !
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB
+image-src: "https://cdn.buttercms.com/2vXhMUncQe6HocDItlBB"
 ---
 #content
 ::image-container

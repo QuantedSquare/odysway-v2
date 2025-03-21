@@ -237,6 +237,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
   :::accomodation-container
   #text
   
+
   false
   :::
 
@@ -332,19 +333,7 @@ Détails du prix
 
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

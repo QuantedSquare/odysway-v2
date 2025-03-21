@@ -330,6 +330,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
   :::accomodation-container
   #text
   Lors de ce voyage, vous passerez 5 nuits dans le camp de base et 2 nuits en cabane de trappeur. Le camp de base se situe en pleine nature, au bord d'un lac gelé en hiver que vous pourrez directement admirer dès le réveil depuis votre chalet. Les cabanes de trappeur s'apparentent aux refuges que l'on trouve en France. Ces cabanes en bois sont simples mais charmantes. Elles disposent d’un espace dortoir ou d'une chambre pouvant accueillir 4 à 6 personnes, agrémentées d’une pièce à vivre. Certaines sont équipées d'un sauna pour une détente optimale.
+
   
   #carousel
     ::::carousel
@@ -494,19 +495,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

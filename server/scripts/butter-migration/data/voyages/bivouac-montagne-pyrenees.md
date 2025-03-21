@@ -242,6 +242,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
   :::accomodation-container
   #text
   Deux nuitées en pleine montagne sous tente deux places (une tente par personne / par couple) dans des zones différentes les deux soirs. Chaque participant portera sa tente, son matelas et duvet. Option de dormir en refuge non gardé en cas de mauvaise météo.
+
   
   #carousel
     ::::carousel
@@ -397,19 +398,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

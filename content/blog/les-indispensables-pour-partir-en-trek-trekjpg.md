@@ -1,23 +1,23 @@
 ---
-title: Les indispensables pour partir en trek !
-description: Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ...
+title: "Les indispensables pour partir en trek !"
+description: "Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ..."
 seo:
-  title: Les indispensables pour partir en trek ! | Blog Odysway
-  description: Quels que soient ces paramètres du parcours, il reste des accessoires qu’il faut toujours avoir sur soi. Voici notre liste des indispensables du trek.
+  title: "Les indispensables pour partir en trek ! | Blog Odysway"
+  description: "Quels que soient ces paramètres du parcours, il reste des accessoires qu’il faut toujours avoir sur soi. Voici notre liste des indispensables du trek."
 navigation:
-  title: Les indispensables pour partir en trek !
-  description: Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ...
-author: linda.tran@odysway.com
+  title: "Les indispensables pour partir en trek !"
+  description: "Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 14:42:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f
+publishedAt: "2020-03-06 14:42:00+00:00"
+tags: "Brésil, Grands espaces, Nepal, Perou, Sport"
+categories: "Depassement de soi, Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f
+image-src: "https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Les indispensables pour partir en trek !
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f
+image-src: "https://cdn.buttercms.com/sccFp6UQYO3qJoAalG1f"
 ---
 #content
 Vous cherchez **quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure** ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, d’avoir oublié un répulsif anti-moustique, un duvet ou un vêtement chaud. Le contenu de votre sac va logiquement dépendre de la destination, de la météo, du dénivelé et du relief et de la durée du trek. Quels que soient ces paramètres, il reste des accessoires qu’il faudra toujours avoir sur soi. Voici notre liste des indispensables du trek auxquels il faudra toujours penser.

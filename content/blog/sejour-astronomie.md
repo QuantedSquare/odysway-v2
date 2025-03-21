@@ -1,23 +1,23 @@
 ---
-title: Séjour Astronomie : à la découverte des étoiles
-description: Les étoiles, la voie lactée, l'immensité de la galaxie, ça fait rêver. Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !
+title: "Séjour Astronomie : à la découverte des étoiles"
+description: "Les étoiles, la voie lactée, l'immensité de la galaxie, ça fait rêver. Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !"
 seo:
-  title: Séjours Astronomie : à la découverte des étoiles
-  description: Les étoiles, la voie lactée, l'immensité de la galaxie, ça vous fait rêver ? Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !
+  title: "Séjours Astronomie : à la découverte des étoiles"
+  description: "Les étoiles, la voie lactée, l'immensité de la galaxie, ça vous fait rêver ? Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !"
 navigation:
-  title: Séjour Astronomie : à la découverte des étoiles
-  description: Les étoiles, la voie lactée, l'immensité de la galaxie, ça fait rêver. Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !
-author: linda.tran@odysway.com
+  title: "Séjour Astronomie : à la découverte des étoiles"
+  description: "Les étoiles, la voie lactée, l'immensité de la galaxie, ça fait rêver. Débutant ou expert en astronomie, nos séjours vont vous mettre des étoiles plein les yeux !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-24 11:09:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-24 11:09:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 24 novembre 2020
@@ -31,7 +31,7 @@ L’astronomie est la science des astres, des corps célestes et de la structure
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 L’astronomie est la science des astres, des corps célestes et de la structure de l'univers. Elle remonte à des temps immémoriaux, avant l'Antiquité.

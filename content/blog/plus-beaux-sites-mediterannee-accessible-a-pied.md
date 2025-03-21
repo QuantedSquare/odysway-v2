@@ -1,23 +1,23 @@
 ---
-title: Les plus beaux sites de la Méditerranée accessibles seulement à pied
-description: Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied.
+title: "Les plus beaux sites de la Méditerranée accessibles seulement à pied"
+description: "Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied."
 seo:
-  title: Les plus beaux sites de la Méditerranée accessibles seulement à pied
-  description: Les abords de la Méditerranée recèlent de sites magnifiques. Découvrez les lieux exceptionnels accessibles seulement à pied dans cet article !
+  title: "Les plus beaux sites de la Méditerranée accessibles seulement à pied"
+  description: "Les abords de la Méditerranée recèlent de sites magnifiques. Découvrez les lieux exceptionnels accessibles seulement à pied dans cet article !"
 navigation:
-  title: Les plus beaux sites de la Méditerranée accessibles seulement à pied
-  description: Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied.
-author: linda.tran@odysway.com
+  title: "Les plus beaux sites de la Méditerranée accessibles seulement à pied"
+  description: "Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2021-02-10 12:59:00+00:00
-tag: undefined
-categories: Nature et grands espaces
-displayedImg: https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282
+publishedAt: "2021-02-10 12:59:00+00:00"
+tags: "Europe, France, Grands espaces"
+categories: "Nature et grands espaces"
+displayedImg: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282
+image-src: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
 ---
 #publication-date
 10 février 2021
@@ -31,7 +31,7 @@ Les plus beaux sites de la Méditerranée accessibles seulement à pied
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282
+image-src: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
 ---
 #content
 **Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied.**

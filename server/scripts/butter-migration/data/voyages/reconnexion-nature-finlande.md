@@ -346,6 +346,7 @@ Après cette visite, nous vous proposons de découvrir l'animal emblématique de
   :::accomodation-container
   #text
   Durant les nuits au camp de base, vous logerez dans une chambre double de l'écolodge écoresponsable ou dans un petit chalet selon disponibilité. Durant l'expédition en canoë, vous logerez en tente, en bivouac sur les berges du lac.
+
   
   #carousel
     ::::carousel
@@ -499,6 +500,7 @@ pour 2 pers + matelas ultra-light + sac de couchage + matériel de cuisine : ré
   Les pourboires
   :::
 ::
+
 
 ::title-container
 #title

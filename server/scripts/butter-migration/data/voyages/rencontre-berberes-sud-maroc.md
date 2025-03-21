@@ -412,6 +412,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
   :::accomodation-container
   #text
   Dans ce voyage, l'hébergement varie entre l'authenticité chaleureuse des familles locales et le charme des riads traditionnels. Les familles vous accueillent dans leur foyer, offrant une immersion intime dans la vie quotidienne marocaine, avec des chambres confortables et des espaces communs accueillants. Les riads, au cœur des médinas, dévoilent une ambiance raffinée, avec des chambres décorées dans le style traditionnel marocain, pour des moments de détente et de repos après des journées riches en découvertes.
+
   
   #carousel
     ::::carousel
@@ -575,19 +576,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

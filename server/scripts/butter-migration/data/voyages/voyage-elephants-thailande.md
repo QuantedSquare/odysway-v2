@@ -373,6 +373,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
   :::accomodation-container
   #text
   Tout au long du voyage, vous logerez dans des hôtels / éco-lodges confortables et idéalement placés dans des cadres exceptionnels (en pleine nature, sur les rives du rivière, à proximité d'une plage..) , tous équipés de piscine. Les nuits mentionnées au programme : - Kanchanaburi : The Legacy River Kwai - Superior room | Superior room - Ayutthaya : Baan Thai House - Garden Villa - Hua Hin : Hua Hin Habitat - Studio - Pranburi : Dolphin Bay resort - Upper Floor Garden View Balcony
+
   
   #carousel
     ::::carousel
@@ -521,19 +522,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

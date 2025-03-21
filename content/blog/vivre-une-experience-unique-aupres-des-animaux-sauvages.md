@@ -1,23 +1,23 @@
 ---
-title: Partir à la rencontre des animaux sauvages
-description: Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ...
+title: "Partir à la rencontre des animaux sauvages"
+description: "Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ..."
 seo:
-  title: Vivre une expérience unique auprès des animaux sauvages
-  description: Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontr
+  title: "Vivre une expérience unique auprès des animaux sauvages"
+  description: "Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontr"
 navigation:
-  title: Partir à la rencontre des animaux sauvages
-  description: Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ...
-author: romain.masina@odysway.com
+  title: "Partir à la rencontre des animaux sauvages"
+  description: "Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-29 14:29:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-04-29 14:29:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 29 avril 2020
@@ -31,7 +31,7 @@ Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées dans votre mémoire. Que diriez-vous donc **de partir à la rencontre des animaux sauvages** qui peuplent notre planète ? Éléphants, ours, lions, tortues ou orangs-outans, approchez-les en toute sécurité au cours d'une expérience unique. Mais ce que nous proposons est bien plus qu'une simple rencontre, c'est un véritable moment de partage et d'échange. Une expérience que vous ne vivrez peut-être qu'une seule fois dans votre vie. Bien sûr, **toutes nos expériences se font dans le respect le plus total des animaux et de l'environnement**. Dans des centres de réhabilitation ou dans leur habitat naturel, observez, admirez, approchez ces animaux en toute humilité.  

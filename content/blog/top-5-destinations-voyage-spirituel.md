@@ -1,23 +1,23 @@
 ---
-title: Le top 5 des destinations pour un voyage spirituel
-description: Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ...
+title: "Le top 5 des destinations pour un voyage spirituel"
+description: "Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ..."
 seo:
-  title: Le top 5 des destinations pour un voyage spirituel
-  description: Les destinations axées sur le développement personnel sont nombreuses. Découvrez le top 5 des destinations pour un voyage spirituel.
+  title: "Le top 5 des destinations pour un voyage spirituel"
+  description: "Les destinations axées sur le développement personnel sont nombreuses. Découvrez le top 5 des destinations pour un voyage spirituel."
 navigation:
-  title: Le top 5 des destinations pour un voyage spirituel
-  description: Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ...
-author: romain.masina@odysway.com
+  title: "Le top 5 des destinations pour un voyage spirituel"
+  description: "Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-03-24 16:05:00+00:00
-tag: undefined
-categories: Depassement de soi, Apprentissage, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173
+publishedAt: "2020-03-24 16:05:00+00:00"
+tags: "Afrique, Amerique du Sud, Asie, Developpement personnel, Grands espaces, Inde, Maroc, Mongolie, Perou"
+categories: "Depassement de soi, Apprentissage, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173
+image-src: "https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173"
 ---
 #publication-date
 24 mars 2020
@@ -31,7 +31,7 @@ Le top 5 des destinations pour un voyage spirituel
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173
+image-src: "https://cdn.buttercms.com/3C0q1Q6MRw21BLdoylKK?1613123133173"
 ---
 #content
 Depuis quelques années, **le développement personnel est en plein essor**. L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins du monde. Méditation, yoga, relaxation ou bien rituels chamaniques, il existe maintes solutions pour retrouver la paix intérieure. Découvrons **le top 5 des destinations pour un voyage spirituel** qui changera votre vie.

@@ -1,33 +1,36 @@
 ---
-title: Pourquoi et comment organiser un séminaire d’entreprise ?
-description: Connaissez vous la signification du terme séminaire ?
-
-Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
-
-Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
+title: "Pourquoi et comment organiser un séminaire d’entreprise ?"
+description: |
+    Connaissez vous la signification du terme séminaire ?
+    
+    Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
+    
+    Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
 seo:
-  title: Pourquoi et comment organiser un séminaire d’entreprise ?
-  description: Connaissez vous la signification du terme séminaire ?
-
-Le séminaire d’entreprise permet de faire passer des messages importants dans un ca
+  title: "Pourquoi et comment organiser un séminaire d’entreprise ?"
+  description: |
+    Connaissez vous la signification du terme séminaire ?
+    
+    Le séminaire d’entreprise permet de faire passer des messages importants dans un ca
 navigation:
-  title: Pourquoi et comment organiser un séminaire d’entreprise ?
-  description: Connaissez vous la signification du terme séminaire ?
-
-Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
-
-Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
-author: linda.tran@odysway.com
+  title: "Pourquoi et comment organiser un séminaire d’entreprise ?"
+  description: |
+    Connaissez vous la signification du terme séminaire ?
+    
+    Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
+    
+    Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2022-12-20 14:01:00+00:00
-tag: undefined
-categories: séminaire, entreprise, cohésion
-displayedImg: https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA
+publishedAt: "2022-12-20 14:01:00+00:00"
+tags: "cohésion, équipe, relation, Séminaire, vacances"
+categories: "séminaire, entreprise, cohésion"
+displayedImg: "https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA
+image-src: "https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA"
 ---
 #publication-date
 20 décembre 2022
@@ -41,7 +44,7 @@ La petite sœur d'Odysway est une agence d'évènementielle spécialisée dans l
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA
+image-src: "https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA"
 ---
 #content
 ## Pourquoi parler de séminaire ? C'est très simple, Odysway s'est agrandie !

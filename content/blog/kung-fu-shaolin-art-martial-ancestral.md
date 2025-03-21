@@ -1,23 +1,23 @@
 ---
-title: Le kung-fu shaolin, un art martial ancestral
-description: Art martial chinois, le kung-fu Shaolin fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n'a cesse de se développer au fil des siècles. Aujourd'hui, les disciples qui sortent du monastère de Shaolin constituent l'élite du pays. Mais d'où vient-il et ...
+title: "Le kung-fu shaolin, un art martial ancestral"
+description: "Art martial chinois, le kung-fu Shaolin fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n'a cesse de se développer au fil des siècles. Aujourd'hui, les disciples qui sortent du monastère de Shaolin constituent l'élite du pays. Mais d'où vient-il et ..."
 seo:
-  title: Le kung-fu shaolin, un art martial ancestral | Blog Odysway
-  description: Popularisé avec les films de Bruce Lee dans les années 70, le kung-fu Shaolin remonte pourtant au VIe siècle. Voici son histoire.
+  title: "Le kung-fu shaolin, un art martial ancestral | Blog Odysway"
+  description: "Popularisé avec les films de Bruce Lee dans les années 70, le kung-fu Shaolin remonte pourtant au VIe siècle. Voici son histoire."
 navigation:
-  title: Le kung-fu shaolin, un art martial ancestral
-  description: Art martial chinois, le kung-fu Shaolin fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n'a cesse de se développer au fil des siècles. Aujourd'hui, les disciples qui sortent du monastère de Shaolin constituent l'élite du pays. Mais d'où vient-il et ...
-author: julien@quantedsquare.com
+  title: "Le kung-fu shaolin, un art martial ancestral"
+  description: "Art martial chinois, le kung-fu Shaolin fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n'a cesse de se développer au fil des siècles. Aujourd'hui, les disciples qui sortent du monastère de Shaolin constituent l'élite du pays. Mais d'où vient-il et ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-09-18 15:10:00+00:00
-tag: undefined
-categories: Depassement de soi, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/wXO4hZ6iQhyHWv4PZObA
+publishedAt: "2019-09-18 15:10:00+00:00"
+tags: "Asie, Chine, Famille, Grands espaces, Sport"
+categories: "Depassement de soi, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/wXO4hZ6iQhyHWv4PZObA"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/wXO4hZ6iQhyHWv4PZObA
+image-src: "https://cdn.buttercms.com/wXO4hZ6iQhyHWv4PZObA"
 ---
 #publication-date
 18 septembre 2019
@@ -31,7 +31,7 @@ Le kung-fu shaolin, un art martial ancestral
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/wXO4hZ6iQhyHWv4PZObA
+image-src: "https://cdn.buttercms.com/wXO4hZ6iQhyHWv4PZObA"
 ---
 #content
 Art martial chinois, **le kung fu Shaolin** fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n’a cessé de se développer au fil des siècles. Aujourd’hui, les disciples qui sortent du monastère de Shaolin constituent l’élite du pays. Mais d’où vient-il et comment se pratique-t-il ?

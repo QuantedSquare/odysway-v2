@@ -1,23 +1,23 @@
 ---
-title: Comment voyager seul ?
-description: Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.
+title: "Comment voyager seul ?"
+description: "Mais c'est dangereux !\", \"Tu vas t'ennuyer\", \"Comment vas-tu faire s'il t'arrive un pépin ?\", \"En voilà une drôle d'idée !\". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun."
 seo:
-  title: Comment voyager seul ?
-  description: Comment voyager seul ? Quelques pistes et conseils pour en faire une expérience enrichissante.
+  title: "Comment voyager seul ?"
+  description: "Comment voyager seul ? Quelques pistes et conseils pour en faire une expérience enrichissante."
 navigation:
-  title: Comment voyager seul ?
-  description: Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.
-author: linda.tran@odysway.com
+  title: "Comment voyager seul ?"
+  description: "Mais c'est dangereux !\", \"Tu vas t'ennuyer\", \"Comment vas-tu faire s'il t'arrive un pépin ?\", \"En voilà une drôle d'idée !\". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-07-23 11:00:00+00:00
-tag: undefined
-categories: Depassement de soi, Culture et decouverte, Developpement Personnel, Blog
-displayedImg: https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1
+publishedAt: "2020-07-23 11:00:00+00:00"
+tags: "Developpement personnel, France, Made in France, Roumanie"
+categories: "Depassement de soi, Culture et decouverte, Developpement Personnel, Blog"
+displayedImg: "https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1
+image-src: "https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1"
 ---
 #publication-date
 23 juillet 2020
@@ -31,7 +31,7 @@ Comment voyager seul ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1
+image-src: "https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1"
 ---
 #content
 **"Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.**

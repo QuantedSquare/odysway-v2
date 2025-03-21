@@ -348,6 +348,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   :::accomodation-container
   #text
   Vous logerez au gîte Jupiter accolé à la tour Saturne de l'observatoire. Il est constitué d'une cuisine ouverte sur le salon et coin repas, de WC indépendants, et de trois chambres (Callisto : deux lits simples, Europe : deux lits simples, et Ganymède : quatre lits simples).
+
   
   #carousel
     ::::carousel
@@ -517,6 +518,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

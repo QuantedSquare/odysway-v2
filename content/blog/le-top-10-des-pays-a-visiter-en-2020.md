@@ -1,23 +1,23 @@
 ---
-title: Le top 10 des pays à visiter en 2020
-description: Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020.
+title: "Le top 10 des pays à visiter en 2020"
+description: "Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020."
 seo:
-  title: Le top 10 des pays à visiter en 2020 | Blog Odysway
-  description: Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020 dans cet article "Le top 10 des pays à visiter en 2020".
+  title: "Le top 10 des pays à visiter en 2020 | Blog Odysway"
+  description: "Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020 dans cet article \"Le top 10 des pays à visiter en 2020\"."
 navigation:
-  title: Le top 10 des pays à visiter en 2020
-  description: Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020.
-author: linda.tran@odysway.com
+  title: "Le top 10 des pays à visiter en 2020"
+  description: "Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-09 07:49:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN
+publishedAt: "2020-03-09 07:49:00+00:00"
+tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Cap Vert, Communautés locales, Costa Rica, Europe, Famille, Grands espaces, Guatemala, Kirghizistan, Maroc, Mongolie"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN
+image-src: "https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN"
 ---
 #publication-date
 9 mars 2020
@@ -31,7 +31,7 @@ Le top 10 des pays à visiter en 2020
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN
+image-src: "https://cdn.buttercms.com/ri6lsSePSQ6Ae2luUUNN"
 ---
 #content
 Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un **petit tour d’horizon du top 10 des pays à visiter en 2020**.

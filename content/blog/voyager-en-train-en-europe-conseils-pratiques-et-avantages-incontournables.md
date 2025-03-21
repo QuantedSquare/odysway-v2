@@ -1,23 +1,23 @@
 ---
-title: Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables
-description: Voyager en train en Europe offre une expérience unique et écologique, permettant de découvrir les paysages variés et les diverses cultures du continent. Dans cet article, nous explorerons les conseils pratiques pour voyager en train en Europe, les avantages de ce mode de transport et un comparatif avec le voyage ...
+title: "Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables"
+description: "Voyager en train en Europe offre une expérience unique et écologique, permettant de découvrir les paysages variés et les diverses cultures du continent. Dans cet article, nous explorerons les conseils pratiques pour voyager en train en Europe, les avantages de ce mode de transport et un comparatif avec le voyage ..."
 seo:
-  title: Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables
-  description: Découvrez les avantages du voyage en train en Europe et son impact écologique. Planifiez votre voyage, adoptez le slow travel et comparez les émissions de CO2 avec le voyage en avion. Voyagez en conscience tout en explorant les paysages variés du continent.
+  title: "Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables"
+  description: "Découvrez les avantages du voyage en train en Europe et son impact écologique. Planifiez votre voyage, adoptez le slow travel et comparez les émissions de CO2 avec le voyage en avion. Voyagez en conscience tout en explorant les paysages variés du continent."
 navigation:
-  title: Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables
-  description: Voyager en train en Europe offre une expérience unique et écologique, permettant de découvrir les paysages variés et les diverses cultures du continent. Dans cet article, nous explorerons les conseils pratiques pour voyager en train en Europe, les avantages de ce mode de transport et un comparatif avec le voyage ...
-author: romain.masina@odysway.com
+  title: "Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables"
+  description: "Voyager en train en Europe offre une expérience unique et écologique, permettant de découvrir les paysages variés et les diverses cultures du continent. Dans cet article, nous explorerons les conseils pratiques pour voyager en train en Europe, les avantages de ce mode de transport et un comparatif avec le voyage ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2024-06-07 14:36:20.798000+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/OchpCI5Qs2nFmet7NJYw
+publishedAt: "2024-06-07 14:36:20.798000+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/OchpCI5Qs2nFmet7NJYw"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/OchpCI5Qs2nFmet7NJYw
+image-src: "https://cdn.buttercms.com/OchpCI5Qs2nFmet7NJYw"
 ---
 #publication-date
 7 juin 2024
@@ -31,7 +31,7 @@ Voyager en Train en Europe : Conseils Pratiques et Avantages Incontournables
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/OchpCI5Qs2nFmet7NJYw
+image-src: "https://cdn.buttercms.com/OchpCI5Qs2nFmet7NJYw"
 ---
 #content
 Voyager en train en Europe offre une expérience unique et écologique, permettant de découvrir les paysages variés et les diverses cultures du continent. Dans cet article, nous explorerons les conseils pratiques pour voyager en train en Europe, les avantages de ce mode de transport et un comparatif avec le voyage en avion pour mettre en évidence l'impact écologique du train. De plus, nous fournirons des liens externes et des ressources pour vous aider à planifier votre voyage aux différents coins d'Europe.

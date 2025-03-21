@@ -367,6 +367,7 @@ Day 13: Tshoka- Yuksam : return 2-3 p.m, return to Karma Yoga Center in the even
   :::accomodation-container
   #text
   During this trip, you will stay in 4-star hotels both before and after the immersion in Sikkim. You will be welcomed at a conveniently located and comfortable retreat center during the retreat. The details are as follows: ✓ 1 night in a hôtel 4\* at Siliguri (Bengal) ✓ 6 nights in our retreat center Karma Yoga ✓ 1 night in a resort in the West of Sikkim ✓ 1 night in a local community at Yuksom ✓ 4 nights in camping during the Trek ✓ 1 night in Delhi in a hôtel 4 or 5\* on the return
+
   
   #carousel
     ::::carousel
@@ -543,19 +544,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

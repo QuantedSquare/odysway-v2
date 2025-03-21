@@ -1,23 +1,23 @@
 ---
-title: Voyager seul : nos conseils pour partir en toute sérénité
-description: Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies.
+title: "Voyager seul : nos conseils pour partir en toute sérénité"
+description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
 seo:
-  title: Nos conseils pour voyager seul
-  description: Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies.
+  title: "Nos conseils pour voyager seul"
+  description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
 navigation:
-  title: Voyager seul : nos conseils pour partir en toute sérénité
-  description: Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies.
-author: romain.masina@odysway.com
+  title: "Voyager seul : nos conseils pour partir en toute sérénité"
+  description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2022-07-01 12:49:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE
+publishedAt: "2022-07-01 12:49:00+00:00"
+tags: "conseils, voyager seul"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE
+image-src: "https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE"
 ---
 #publication-date
 1 juillet 2022
@@ -31,7 +31,7 @@ Voyager seul : nos conseils pour partir en toute sérénité
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE
+image-src: "https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE"
 ---
 #content
 Vous aimez voyager ? Alors rien alors ne doit vous empêcher de partir même pas la peur de vous retrouver tout seul. **Voyager seul** est une véritable expérience qui vous permettra de mieux vous connaître et de vivre ce que vous avez réellement envie de vivre. Pour en profiter à 100 %, voici quelques conseils pour des vacances solo réussies.

@@ -339,6 +339,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
   :::accomodation-container
   #text
   Arrivée à Montréal, vous logerez une nuit dans un hôtel 4\* puis partirez le lendemain pour une pourvoirie en bordure du Saguenay pour 5 nuits en pleine nature, un véritable havre de paix. Pour la dernière nuit, direction la ville de Québec, où vous logerez en hôtel 4\*
+
   
   #carousel
     ::::carousel
@@ -542,19 +543,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

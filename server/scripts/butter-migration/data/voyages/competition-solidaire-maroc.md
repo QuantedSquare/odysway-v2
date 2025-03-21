@@ -356,6 +356,7 @@ Transport : Minibus (2 transferts aéroport prévus)
   :::accomodation-container
   #text
   Tous les hébergements de la compétition ont été choisis avec soin, pour qu'ils vous offrent à la fois confort pour un repos mérité après des journées bien remplies, mais aussi rencontres avec des familles marocaines ! Plus d'informations dans la FAQ.
+
   
   #carousel
     ::::carousel
@@ -535,19 +536,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -309,6 +309,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
   :::accomodation-container
   #text
   Vous séjournerez dans des chalets chaleureux, alliant confort et authenticité. Chaque chalet propose des chambres privées avec lits jumeaux ou doubles, dans un cadre unique en pleine nature. Les espaces communs sont conviviaux, avec des sanitaires partagés pour une expérience authentique et agréable.
+
   
   #carousel
     ::::carousel
@@ -462,19 +463,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

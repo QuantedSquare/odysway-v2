@@ -311,6 +311,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
   :::accomodation-container
   #text
   Tous vos hébergements sont inclus dans le séjour. Vous passerez trois nuits en chambre d’hôtes à Moeciu, en immersion en agrotourisme, où votre hôte Daniela vous accueillera chaleureusement. Une nuit unique vous attend en refuge, en pleine forêt, aux côtés d’un guide qui vous fera découvrir la magie des Carpates au crépuscule. Pour clôturer votre voyage en douceur, vous séjournerez une nuit dans un hôtel confortable à Bucarest. Si vous souhaitez prolonger votre aventure, une extension du séjour est possible sur demande lors de votre devis !
+
   
   #carousel
     ::::carousel
@@ -472,6 +473,7 @@ Détails du prix
   Les dépenses personnelles sur place
   :::
 ::
+
 
 ::title-container
 #title

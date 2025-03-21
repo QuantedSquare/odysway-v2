@@ -1,23 +1,23 @@
 ---
-title: Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !
-description: En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d'elle pour avoir tué un jeune voyageur Américain qui tentait d'entrer en contact avec elle. Les médias ont fortement relayé l'attaque en racontant un peu tout et n'importe quoi sur ...
+title: "Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !"
+description: "En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d'elle pour avoir tué un jeune voyageur Américain qui tentait d'entrer en contact avec elle. Les médias ont fortement relayé l'attaque en racontant un peu tout et n'importe quoi sur ..."
 seo:
-  title: Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde ! | Blog Odysway
-  description: Depuis la mort d'un homme qui a approché la tribu des Sentinelles, les médias ont raconté tout et n'importe quoi sur ce peuple.
+  title: "Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde ! | Blog Odysway"
+  description: "Depuis la mort d'un homme qui a approché la tribu des Sentinelles, les médias ont raconté tout et n'importe quoi sur ce peuple."
 navigation:
-  title: Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !
-  description: En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d'elle pour avoir tué un jeune voyageur Américain qui tentait d'entrer en contact avec elle. Les médias ont fortement relayé l'attaque en racontant un peu tout et n'importe quoi sur ...
-author: julien@quantedsquare.com
+  title: "Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !"
+  description: "En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d'elle pour avoir tué un jeune voyageur Américain qui tentait d'entrer en contact avec elle. Les médias ont fortement relayé l'attaque en racontant un peu tout et n'importe quoi sur ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-01-02 10:47:00+00:00
-tag: undefined
-categories: Culture et decouverte, News Odysway
-displayedImg: https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018
+publishedAt: "2019-01-02 10:47:00+00:00"
+tags: "Asie, Communautés locales"
+categories: "Culture et decouverte, News Odysway"
+displayedImg: "https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018
+image-src: "https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018"
 ---
 #publication-date
 2 janvier 2019
@@ -31,7 +31,7 @@ Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018
+image-src: "https://cdn.buttercms.com/SNOEgANqS2ipE8vRuPbl?1612272951018"
 ---
 #content
 En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d’elle pour avoir tué un jeune voyageur Américain qui tentait d’entrer en contact avec elle. Les médias ont fortement relayé l’attaque en racontant un peu tout et n’importe quoi sur le jeune homme, sur les sentinelles et enfin sur leur prétendue agressivité.  Alors qui sont vraiment les sentinelles, d’où viennent-ils et pourquoi sont-ils supposément aussi agressifs ? Analyse de l’histoire d’un des peuples les plus isolés au monde.

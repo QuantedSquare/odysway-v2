@@ -1,23 +1,23 @@
 ---
-title: Le jour où Odysway est née..
-description: Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. " Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ...
+title: "Le jour où Odysway est née.."
+description: "Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. \" Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ..."
 seo:
-  title: Le jour où Odysway est née | Blog Odysway
-  description: Je m'appelle Romain Masina et je suis le fondateur d'Odysway. À 18 ans, mon parcours semblait tout écrit. Mais voici comment Odysway est née
+  title: "Le jour où Odysway est née | Blog Odysway"
+  description: "Je m'appelle Romain Masina et je suis le fondateur d'Odysway. À 18 ans, mon parcours semblait tout écrit. Mais voici comment Odysway est née"
 navigation:
-  title: Le jour où Odysway est née..
-  description: Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. " Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ...
-author: julien@quantedsquare.com
+  title: "Le jour où Odysway est née.."
+  description: "Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. \" Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-02-05 16:10:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771
+publishedAt: "2019-02-05 16:10:00+00:00"
+tags: "Developpement personnel, Grands espaces"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771
+image-src: "https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771"
 ---
 #publication-date
 5 février 2019
@@ -31,7 +31,7 @@ Le jour où Odysway est née..
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771
+image-src: "https://cdn.buttercms.com/kFaiVIN1RAyPsnqMRmt9?1612350236771"
 ---
 #content
 Je m'appelle Romain Masina et je suis le fondateur d'Odysway.  

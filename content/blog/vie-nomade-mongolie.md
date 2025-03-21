@@ -1,23 +1,23 @@
 ---
-title: La vie nomade en Mongolie
-description: Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques...
+title: "La vie nomade en Mongolie"
+description: "Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques..."
 seo:
-  title: La vie nomade en Mongolie | Blog Odysway
-  description: Découvrez la vie nomade en Mongolie, un pays qui fascine autant pour ses paysages sauvages que pour les peuples qui y habitent.
+  title: "La vie nomade en Mongolie | Blog Odysway"
+  description: "Découvrez la vie nomade en Mongolie, un pays qui fascine autant pour ses paysages sauvages que pour les peuples qui y habitent."
 navigation:
-  title: La vie nomade en Mongolie
-  description: Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques...
-author: julien@quantedsquare.com
+  title: "La vie nomade en Mongolie"
+  description: "Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-07-01 10:59:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262
+publishedAt: "2019-07-01 10:59:00+00:00"
+tags: "Asie, Communautés locales, Famille, Grands espaces, Mongolie, Transports insolites"
+categories: "Nature et grands espaces, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262
+image-src: "https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262"
 ---
 #publication-date
 1 juillet 2019
@@ -31,7 +31,7 @@ La vie nomade en Mongolie
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262
+image-src: "https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262"
 ---
 #content
 Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face à des conditions climatiques de plus en plus rudes, à la pression de la sédentarisation et de la modernisation. **Mais comment se déroule une vie de nomade en Mongolie ?** Qui sont ces peuples qui se déplacent à travers les steppes ?

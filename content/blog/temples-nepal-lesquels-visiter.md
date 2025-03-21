@@ -1,23 +1,23 @@
 ---
-title: Temples au Népal : lesquels visiter ?
-description: Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ...
+title: "Temples au Népal : lesquels visiter ?"
+description: "Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ..."
 seo:
-  title: Temples au Népal : lesquels visiter ? | Blog Odysway
-  description: Hindous ou bouddhistes, les temples sont des édifices religieux à ne manquer sous aucun prétexte lors d'un voyage au Népal.
+  title: "Temples au Népal : lesquels visiter ? | Blog Odysway"
+  description: "Hindous ou bouddhistes, les temples sont des édifices religieux à ne manquer sous aucun prétexte lors d'un voyage au Népal."
 navigation:
-  title: Temples au Népal : lesquels visiter ?
-  description: Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ...
-author: romain.masina@odysway.com
+  title: "Temples au Népal : lesquels visiter ?"
+  description: "Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2019-10-07 13:08:00+00:00
-tag: undefined
-categories: Depassement de soi, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ
+publishedAt: "2019-10-07 13:08:00+00:00"
+tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
+categories: "Depassement de soi, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ
+image-src: "https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ"
 ---
 #publication-date
 7 octobre 2019
@@ -31,7 +31,7 @@ Temples au Népal : lesquels visiter ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ
+image-src: "https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ"
 ---
 #content
 Quand on pense au Népal, la première image qui nous traverse l’esprit est celle de l’Himalaya. Mais le Népal, ce n’est pas que des sommets vertigineux que les voyageurs arpentent lors de treks à couper le souffle. Il est le pays de naissance de Bouddha et possède de ce fait un patrimoine religieux riche. Stupas et temples bouddhistes parsèment le territoire, vous en croiserez forcément un sur votre route. Sans oublier bien sûr les temples hindous qui, rappelons-le, font partie de la première religion du pays. **Mais quels sont les temples incontournables à visiter au Népal ?** Voici une liste des temples à ne pas manquer lors de votre voyage.

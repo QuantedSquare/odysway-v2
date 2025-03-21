@@ -1,23 +1,23 @@
 ---
-title: Séjours Immersifs Odysway : Rencontrez, Explorez et Apprenez
-description: Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se distingue par une approche unique, axée sur l'immersion culturelle, la durabilité et le respect des communautés locales. Nous croyons fermement que voyager moins, mais mieux, est la clé pour des expériences enrichissantes et durables. Dans cet article, nous allons ...
+title: "Séjours Immersifs Odysway : Rencontrez, Explorez et Apprenez"
+description: "Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se distingue par une approche unique, axée sur l'immersion culturelle, la durabilité et le respect des communautés locales. Nous croyons fermement que voyager moins, mais mieux, est la clé pour des expériences enrichissantes et durables. Dans cet article, nous allons ..."
 seo:
-  title: Séjours Immersifs Odysway : Rencontrez, Explorez et Apprenez
-  description: Découvrez les séjours immersifs d'Odysway : voyagez de manière authentique et responsable en France et à l'étranger. Profitez d'une immersion culturelle, de rencontres locales et d'un service personnalisé.
+  title: "Séjours Immersifs Odysway : Rencontrez, Explorez et Apprenez"
+  description: "Découvrez les séjours immersifs d'Odysway : voyagez de manière authentique et responsable en France et à l'étranger. Profitez d'une immersion culturelle, de rencontres locales et d'un service personnalisé."
 navigation:
-  title: Séjours Immersifs Odysway : Rencontrez, Explorez et Apprenez
-  description: Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se distingue par une approche unique, axée sur l'immersion culturelle, la durabilité et le respect des communautés locales. Nous croyons fermement que voyager moins, mais mieux, est la clé pour des expériences enrichissantes et durables. Dans cet article, nous allons ...
-author: romain.masina@odysway.com
+  title: "Séjours Immersifs Odysway : Rencontrez, Explorez et Apprenez"
+  description: "Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se distingue par une approche unique, axée sur l'immersion culturelle, la durabilité et le respect des communautés locales. Nous croyons fermement que voyager moins, mais mieux, est la clé pour des expériences enrichissantes et durables. Dans cet article, nous allons ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2024-06-01 12:52:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn
+publishedAt: "2024-06-01 12:52:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn
+image-src: "https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn"
 ---
 #publication-date
 1 juin 2024
@@ -31,7 +31,7 @@ Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se di
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn
+image-src: "https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn"
 ---
 #content
 Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se distingue par une approche unique, axée sur l'immersion culturelle, la durabilité et le respect des communautés locales. Nous croyons fermement que voyager moins, mais mieux, est la clé pour des expériences enrichissantes et durables. Dans cet article, nous allons explorer les différents aspects qui font d'Odysway le choix idéal pour ceux qui cherchent des aventures authentiques et responsables !

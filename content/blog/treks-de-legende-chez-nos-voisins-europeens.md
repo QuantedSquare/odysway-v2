@@ -1,23 +1,23 @@
 ---
-title: 3 Treks de légende chez nos voisins européens
-description: Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers boers de la colonie du Cap vers l’intérieur des terres sud-africaines au XIXème siècle. Les treks les plus célèbres ont conféré au trekking une dimension sportive qui n’est toutefois ...
+title: "3 Treks de légende chez nos voisins européens"
+description: "Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers boers de la colonie du Cap vers l’intérieur des terres sud-africaines au XIXème siècle. Les treks les plus célèbres ont conféré au trekking une dimension sportive qui n’est toutefois ..."
 seo:
-  title: Treks de légende chez nos voisins européens
-  description: Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers
+  title: "Treks de légende chez nos voisins européens"
+  description: "Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers"
 navigation:
-  title: 3 Treks de légende chez nos voisins européens
-  description: Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers boers de la colonie du Cap vers l’intérieur des terres sud-africaines au XIXème siècle. Les treks les plus célèbres ont conféré au trekking une dimension sportive qui n’est toutefois ...
-author: romain.masina@odysway.com
+  title: "3 Treks de légende chez nos voisins européens"
+  description: "Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers boers de la colonie du Cap vers l’intérieur des terres sud-africaines au XIXème siècle. Les treks les plus célèbres ont conféré au trekking une dimension sportive qui n’est toutefois ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2021-09-15 14:44:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY
+publishedAt: "2021-09-15 14:44:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY
+image-src: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
 ---
 #publication-date
 15 septembre 2021
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY
+image-src: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
 ---
 #content
 Le terme « **trek** » est aujourd'hui utilisé pour désigner le **voyage à pied**. Étymologiquement, « trek » fait référence à la migration des fermiers boers de la colonie du Cap vers l'intérieur des terres sud-africaines au XIXème siècle. 

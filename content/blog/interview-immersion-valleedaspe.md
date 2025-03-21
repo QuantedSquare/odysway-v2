@@ -1,23 +1,23 @@
 ---
-title: Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées
-description: Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.
+title: "Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées"
+description: "Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe."
 seo:
-  title: Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées
-  description: Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.
+  title: "Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées"
+  description: "Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe."
 navigation:
-  title: Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées
-  description: Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.
-author: contact@odysway.com
+  title: "Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées"
+  description: "Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe."
+author: "contact@odysway.com"
 published: false
-publishedAt: 2021-05-31 09:14:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq
+publishedAt: "2021-05-31 09:14:00+00:00"
+tags: "auberge, berger, France, gîte, immersion, Pyrénées, randonnée, terroir, Vallée d'Aspe"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq
+image-src: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
 ---
 #publication-date
 31 mai 2021
@@ -31,7 +31,7 @@ Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyag
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq
+image-src: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
 ---
 #content
 **Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.**

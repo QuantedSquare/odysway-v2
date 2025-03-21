@@ -436,6 +436,7 @@ Fin de votre aventure au Costa Rica. Pura vida !
   :::accomodation-container
   #text
   Pendant ce voyage, vous séjournerez dans un hôtel de charme à Alajuela, niché dans un écrin de verdure près de la capitale. Avec ses jardins luxuriants et ses chambres confortables, c’est le lieu idéal pour commencer votre aventure au Costa Rica dans un cadre paisible et accueillant. Au cœur de la jungle, vous vivrez une immersion exceptionnelle au sein de la communauté Bribri. Hébergé dans un cadre simple mais chaleureux, vous partagerez leur quotidien, découvrirez leurs traditions ancestrales et vous connecterez à une culture unique dans un environnement dépaysant et authentique. Pour conclure votre séjour en beauté, vous profiterez du confort d’un hébergement tropical à Puerto Viejo, situé à deux pas de la plage de Cocles. Entouré de nature et bercé par l’ambiance caribéenne, cet hébergement offre tout ce qu’il faut pour vous détendre : piscine, spa et accès direct aux plages paradisiaques. Un cadre parfait pour savourer les derniers instants de votre voyage.
+
   
   #carousel
     ::::carousel
@@ -613,19 +614,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

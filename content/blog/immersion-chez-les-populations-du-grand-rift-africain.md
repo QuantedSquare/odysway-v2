@@ -1,23 +1,23 @@
 ---
-title: Immersion chez les populations du Grand Rift Africain
-description: A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d'une région ou d'un pays. En Afrique de l'est, de nombreuses tribus se sont installées aux abords du ...
+title: "Immersion chez les populations du Grand Rift Africain"
+description: "A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d'une région ou d'un pays. En Afrique de l'est, de nombreuses tribus se sont installées aux abords du ..."
 seo:
-  title: Immersion dans le grand rift Africain | Blog Odysway
-  description: A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation.
+  title: "Immersion dans le grand rift Africain | Blog Odysway"
+  description: "A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation."
 navigation:
-  title: Immersion chez les populations du Grand Rift Africain
-  description: A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d'une région ou d'un pays. En Afrique de l'est, de nombreuses tribus se sont installées aux abords du ...
-author: julien@quantedsquare.com
+  title: "Immersion chez les populations du Grand Rift Africain"
+  description: "A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d'une région ou d'un pays. En Afrique de l'est, de nombreuses tribus se sont installées aux abords du ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-02-04 08:55:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/Z9XchvcjQZya7dwBFrrt
+publishedAt: "2019-02-04 08:55:00+00:00"
+tags: "Afrique, Communautés locales, Ethiopie, Grands espaces"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/Z9XchvcjQZya7dwBFrrt"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/Z9XchvcjQZya7dwBFrrt
+image-src: "https://cdn.buttercms.com/Z9XchvcjQZya7dwBFrrt"
 ---
 #publication-date
 4 février 2019
@@ -31,7 +31,7 @@ Immersion chez les populations du Grand Rift Africain
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/Z9XchvcjQZya7dwBFrrt
+image-src: "https://cdn.buttercms.com/Z9XchvcjQZya7dwBFrrt"
 ---
 #content
 A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d’une région ou d’un pays. En Afrique de l’est, de nombreuses tribus se sont installées aux abords du Grand Rift. Ce profond fossé long de plusieurs milliers de km offre des paysages comme nulle part ailleurs ainsi qu’un faune et flore diversifiées. Entrons en immersion chez ces populations du Grand Rift Africain.

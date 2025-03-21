@@ -1,23 +1,23 @@
 ---
-title: Les félins d'Afrique
-description: Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ...
+title: "Les félins d'Afrique"
+description: "Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ..."
 seo:
-  title: Les félins d'Afrique | Blog Odysway
-  description: Quels sont les félins d'Afrique ? Découvrez ces grands prédateurs : lions, guépards, léopards et autres félins bien moins connus du grand public !
+  title: "Les félins d'Afrique | Blog Odysway"
+  description: "Quels sont les félins d'Afrique ? Découvrez ces grands prédateurs : lions, guépards, léopards et autres félins bien moins connus du grand public !"
 navigation:
-  title: Les félins d'Afrique
-  description: Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ...
-author: julien@quantedsquare.com
+  title: "Les félins d'Afrique"
+  description: "Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-12-17 16:24:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit
+publishedAt: "2019-12-17 16:24:00+00:00"
+tags: "Afrique, Afrique du Sud, Animaux, Famille, Grands espaces"
+categories: "Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit
+image-src: "https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit"
 ---
 #publication-date
 17 décembre 2019
@@ -31,7 +31,7 @@ Les félins d'Afrique
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit
+image-src: "https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit"
 ---
 #content
 Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de **nombreux prédateurs sauvages : les félins d'Afrique**. Parmi ces félidés, on trouve bien sur le lion, le leopard et le guépard, mais également d'autres espèces moins connues, qui sont parfois menacées. Odysway vous présente **une sélection des félins d'Afrique, des grands aux plus petits**.

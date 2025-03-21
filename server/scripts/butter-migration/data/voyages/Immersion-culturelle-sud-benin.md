@@ -412,6 +412,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
   :::accomodation-container
   #text
   Vous serez hébergés en chambre double dans des hôtels et auberges confortables et charmants tout au long du séjour. Un accueil chaleureux et authentique vous sera réservé. Vous pourrez profiter de moments de détente au bord des piscines à Allada, Grand Popo et Ouidah. Dans certains hôtels, le choix des chambres sera sous réserve de disponibilité au moment de la réservation.
+
   
   #carousel
     ::::carousel
@@ -597,19 +598,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

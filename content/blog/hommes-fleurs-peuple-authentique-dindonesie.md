@@ -1,23 +1,23 @@
 ---
-title: Qui sont les hommes-fleurs, ce peuple d'Indonésie ?
-description: Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ...
+title: "Qui sont les hommes-fleurs, ce peuple d'Indonésie ?"
+description: "Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ..."
 seo:
-  title: Qui sont les hommes-fleurs, ce peuple d'Indonésie ? | Blog Odysway
-  description: Qui sont les hommes-fleurs, ce peuple authentique d'Indonesie eloigne de toute civilisation ? Rencontre avec les Mentawai et leurs traditions ancestrales.
+  title: "Qui sont les hommes-fleurs, ce peuple d'Indonésie ? | Blog Odysway"
+  description: "Qui sont les hommes-fleurs, ce peuple authentique d'Indonesie eloigne de toute civilisation ? Rencontre avec les Mentawai et leurs traditions ancestrales."
 navigation:
-  title: Qui sont les hommes-fleurs, ce peuple d'Indonésie ?
-  description: Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ...
-author: linda.tran@odysway.com
+  title: "Qui sont les hommes-fleurs, ce peuple d'Indonésie ?"
+  description: "Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2019-12-19 11:54:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906
+publishedAt: "2019-12-19 11:54:00+00:00"
+tags: "Asie, Communautés locales, Famille, Indonesie"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906
+image-src: "https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906"
 ---
 #publication-date
 19 décembre 2019
@@ -31,7 +31,7 @@ Qui sont les hommes-fleurs, ce peuple d'Indonésie ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906
+image-src: "https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906"
 ---
 #content
 Sur une petite île en Indonésie, au coeur d'une foret primaire préservée, se trouve un peuple authentique, éloigné de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle est leur relation avec la nature et le monde moderne ? **Partons a la rencontre de ce peuple d'Indonésie, surnommés les hommes-fleurs.**

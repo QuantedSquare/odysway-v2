@@ -291,6 +291,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
   :::accomodation-container
   #text
   Le logement est une maison individuelle privatisée pour le groupe de participants située au milieu des champs et des forêts, et qui propose une vue dégagée sur le massif des Vosges ! La maison se situe à proximité de nombreux chemins de randonnées (GR7 à 50m). C'est le lieu idéal pour les amoureux de nature et de tranquillité.
+
   
   #carousel
     ::::carousel
@@ -433,6 +434,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

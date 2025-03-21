@@ -1,23 +1,23 @@
 ---
-title: Voyage Insolite avec Odysway
-description: Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite.
+title: "Voyage Insolite avec Odysway"
+description: "Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite."
 seo:
-  title: Top Voyage Insolite
-  description: Vous êtes à la recherche d’un voyage insolite ? Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite avec Odysway
+  title: "Top Voyage Insolite"
+  description: "Vous êtes à la recherche d’un voyage insolite ? Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite avec Odysway"
 navigation:
-  title: Voyage Insolite avec Odysway
-  description: Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite.
-author: linda.tran@odysway.com
+  title: "Voyage Insolite avec Odysway"
+  description: "Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 15:15:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 15:15:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ Lorsque nous voyageons, nous avons envie de dépaysement, de nouveautés, de sen
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Lorsque nous voyageons, nous avons envie de dépaysement, de nouveautés, de sentir que nous marchons hors des sentiers battus.

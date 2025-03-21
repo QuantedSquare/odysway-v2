@@ -1,23 +1,23 @@
 ---
-title: Séjour Survie
-description: Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjour survie, vous allez vivre des moments forts et uniques.
+title: "Séjour Survie"
+description: "Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjour survie, vous allez vivre des moments forts et uniques."
 seo:
-  title: Séjour Survie
-  description: Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjours survie, vous allez vivre des moments forts et uniques.
+  title: "Séjour Survie"
+  description: "Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjours survie, vous allez vivre des moments forts et uniques."
 navigation:
-  title: Séjour Survie
-  description: Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjour survie, vous allez vivre des moments forts et uniques.
-author: linda.tran@odysway.com
+  title: "Séjour Survie"
+  description: "Apprendre les techniques de bases de la survie en pleine nature peut être un atout majeur. Avec nos séjour survie, vous allez vivre des moments forts et uniques."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-24 13:14:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-24 13:14:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 24 novembre 2020
@@ -31,7 +31,7 @@ Que vous soyez aventurier dans l’âme, passionné de nature sans filtre ou que
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Que vous soyez aventurier dans l’âme, passionné de nature sans filtre ou que vous souhaitiez apprendre les bases de la survie en pleine nature, le **séjour survie** est le moyen idéal de sortir de votre zone de confort.

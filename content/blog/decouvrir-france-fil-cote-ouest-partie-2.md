@@ -1,23 +1,23 @@
 ---
-title: Découvrir la France au fil de la côte ouest - deuxième partie
-description: Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique.
+title: "Découvrir la France au fil de la côte ouest - deuxième partie"
+description: "Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique."
 seo:
-  title: Découvrir la France au fil de la côte ouest - 2ème partie
-  description: A la découverte de la côte ouest française et de ses richesses. Odysway vous donne quelques pistes de lieux exceptionnels à visiter...
+  title: "Découvrir la France au fil de la côte ouest - 2ème partie"
+  description: "A la découverte de la côte ouest française et de ses richesses. Odysway vous donne quelques pistes de lieux exceptionnels à visiter..."
 navigation:
-  title: Découvrir la France au fil de la côte ouest - deuxième partie
-  description: Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique.
-author: linda.tran@odysway.com
+  title: "Découvrir la France au fil de la côte ouest - deuxième partie"
+  description: "Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-08-20 11:00:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD
+publishedAt: "2020-08-20 11:00:00+00:00"
+tags: "Europe, Famille, France, Grands espaces, Made in France, Sport, Transports insolites"
+categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD
+image-src: "https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD"
 ---
 #publication-date
 20 août 2020
@@ -31,7 +31,7 @@ Découvrir la France au fil de la côte ouest - deuxième partie
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD
+image-src: "https://cdn.buttercms.com/q1iuKYa4ScmQKERQs8hD"
 ---
 #content
 **Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique.**

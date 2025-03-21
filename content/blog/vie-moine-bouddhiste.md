@@ -1,23 +1,23 @@
 ---
-title: La vie d'un moine bouddhiste
-description: Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie ou les moines en sont la parfaite représentation. Particulièrement respecte par la population, le moine bouddhiste mène une vie simple ou la méditation tient une place importante. Découvrons en détail...
+title: "La vie d'un moine bouddhiste"
+description: "Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie ou les moines en sont la parfaite représentation. Particulièrement respecte par la population, le moine bouddhiste mène une vie simple ou la méditation tient une place importante. Découvrons en détail..."
 seo:
-  title: La vie d'un moine bouddhiste | Blog Odysway
-  description: Consacrer sa vie à la méditation, à un mode de vie simple, respecter des règles strictes : vivez le quotidien d'un moine bouddhiste !
+  title: "La vie d'un moine bouddhiste | Blog Odysway"
+  description: "Consacrer sa vie à la méditation, à un mode de vie simple, respecter des règles strictes : vivez le quotidien d'un moine bouddhiste !"
 navigation:
-  title: La vie d'un moine bouddhiste
-  description: Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie ou les moines en sont la parfaite représentation. Particulièrement respecte par la population, le moine bouddhiste mène une vie simple ou la méditation tient une place importante. Découvrons en détail...
-author: julien@quantedsquare.com
+  title: "La vie d'un moine bouddhiste"
+  description: "Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie ou les moines en sont la parfaite représentation. Particulièrement respecte par la population, le moine bouddhiste mène une vie simple ou la méditation tient une place importante. Découvrons en détail..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-12-06 11:01:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU
+publishedAt: "2019-12-06 11:01:00+00:00"
+tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU
+image-src: "https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU"
 ---
 #publication-date
 6 décembre 2019
@@ -31,7 +31,7 @@ La vie d'un moine bouddhiste
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU
+image-src: "https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU"
 ---
 #content
 Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie où les moines en sont la parfaite représentation. Particulièrement respecté par la population, **le moine bouddhiste mène une vie simple où la méditation tient une place importante**. Découvrons en détail la vie de ces moines.

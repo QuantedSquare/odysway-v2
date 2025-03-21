@@ -436,6 +436,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
   :::accomodation-container
   #text
   Tout au long de votre voyage, vous serez hébergé dans des établissements soigneusement sélectionnés, alliant confort et immersion locale. À Cusco, vous séjournerez à l’hôtel Sueños del Inka (ou similaire), un établissement de charme offrant une atmosphère chaleureuse et authentique, idéal pour vous reposer après vos journées d’exploration. Lors de votre trek dans les Andes, vous vivrez une expérience unique en dormant chez l’habitant. Chaque soir, vous serez accueilli dans des maisons traditionnelles andines, où vous partagerez le quotidien des communautés locales. Vous disposerez de chambres rustiques mais confortables, avec suffisamment de couvertures pour des nuits agréables en altitude. Ces moments privilégiés seront l’occasion de savourer des repas typiques et de découvrir les traditions péruviennes au plus près. À Aguas Calientes, aux portes du Machu Picchu, vous passerez la nuit à l’hôtel Casa de Luz (ou similaire), un lieu convivial et reposant, parfait avant votre visite du site mythique. Sur les rives du lac Titicaca, vous serez logé chez l’habitant dans des villages pittoresques, pour une immersion totale au cœur d’un cadre grandiose. L’accueil chaleureux des familles locales rendra cette expérience encore plus inoubliable. Enfin, à Lima, votre voyage se conclura à l’hôtel Allpa (ou similaire), un havre de confort avant votre retour. Chaque hébergement a été pensé pour vous offrir une expérience authentique et immersive, rythmée par des rencontres et des paysages exceptionnels.
+
   
   #carousel
     ::::carousel
@@ -594,19 +595,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

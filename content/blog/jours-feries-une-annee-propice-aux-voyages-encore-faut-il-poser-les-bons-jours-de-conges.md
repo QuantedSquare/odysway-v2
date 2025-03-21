@@ -1,37 +1,40 @@
 ---
-title: Jours fériés 2023 : une année propice aux voyages
-description: Reprise difficile ? Déjà envie d’être en congés ? 😎
-
-Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de repos ! 🤪
-
-En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
-
-Pour cela, regardez bien le calendrier de cette année prometteuse !
+title: "Jours fériés 2023 : une année propice aux voyages"
+description: |
+    Reprise difficile ? Déjà envie d’être en congés ? 😎
+    
+    Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de repos ! 🤪
+    
+    En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
+    
+    Pour cela, regardez bien le calendrier de cette année prometteuse !
 seo:
-  title: Jours fériés : une année propice aux voyages, encore faut-il poser les bons jours de congés.
-  description: Reprise difficile ? Déjà envie d’être en congés ? 😎
-
-Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de re
+  title: "Jours fériés : une année propice aux voyages, encore faut-il poser les bons jours de congés."
+  description: |
+    Reprise difficile ? Déjà envie d’être en congés ? 😎
+    
+    Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de re
 navigation:
-  title: Jours fériés 2023 : une année propice aux voyages
-  description: Reprise difficile ? Déjà envie d’être en congés ? 😎
-
-Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de repos ! 🤪
-
-En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
-
-Pour cela, regardez bien le calendrier de cette année prometteuse !
-author: linda.tran@odysway.com
+  title: "Jours fériés 2023 : une année propice aux voyages"
+  description: |
+    Reprise difficile ? Déjà envie d’être en congés ? 😎
+    
+    Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de repos ! 🤪
+    
+    En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
+    
+    Pour cela, regardez bien le calendrier de cette année prometteuse !
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2023-01-10 15:13:00+00:00
-tag: undefined
-categories: vacances, voyager, 2023
-displayedImg: https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o
+publishedAt: "2023-01-10 15:13:00+00:00"
+tags: "2023, repos, rêve, vacances, voyage"
+categories: "vacances, voyager, 2023"
+displayedImg: "https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o
+image-src: "https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o"
 ---
 #publication-date
 10 janvier 2023
@@ -45,7 +48,7 @@ Jours fériés 2023 : une année propice aux voyages
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o
+image-src: "https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o"
 ---
 #content
 Reprise difficile ? Déjà envie d'être en congés ?

@@ -1,29 +1,32 @@
 ---
-title: Interview – Rencontre avec Laurige, notre guide en Inde
-description: Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
-
-Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
+title: "Interview – Rencontre avec Laurige, notre guide en Inde"
+description: |
+    Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
+    
+    Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
 seo:
-  title: Interview – Rencontre avec Laurige, notre guide en Inde
-  description: Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
-
-Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
+  title: "Interview – Rencontre avec Laurige, notre guide en Inde"
+  description: |
+    Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
+    
+    Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
 navigation:
-  title: Interview – Rencontre avec Laurige, notre guide en Inde
-  description: Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
-
-Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
-author: linda.tran@odysway.com
+  title: "Interview – Rencontre avec Laurige, notre guide en Inde"
+  description: |
+    Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
+    
+    Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2022-10-18 12:33:00+00:00
-tag: undefined
-categories: voyage, immersion, inde
-displayedImg: https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg
+publishedAt: "2022-10-18 12:33:00+00:00"
+tags: "Inde"
+categories: "voyage, immersion, inde"
+displayedImg: "https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg
+image-src: "https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg"
 ---
 #publication-date
 18 octobre 2022
@@ -37,7 +40,7 @@ Interview – Rencontre avec Laurige, notre guide en Inde
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg
+image-src: "https://cdn.buttercms.com/dfnJUW9hRYuvjrGOYuxg"
 ---
 #content
        ****Vivre un séjour en [immersion en Inde](https://odysway.com/voyages/inde-arunachal-pradesh "Vivez une immersion en Inde"), c'est possible ! Découvrez ces territoires lointains, habités par des communautés ethniques fascinantes et où la biodiversité est d'une richesse surprenante. Laurige n'attend que vous !****

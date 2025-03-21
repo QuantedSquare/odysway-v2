@@ -439,6 +439,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
   :::accomodation-container
   #text
   Pendant toute la durée de ce voyage, vous séjournerez dans des hébergements charmants, empreints de tradition et nichés dans des cadres idylliques. Vos chambres, spacieuses et confortables, sont prévues en occupation double ou twin (avec la possibilité d'une chambre individuelle moyennant un supplément).
+
   
   #carousel
     ::::carousel
@@ -592,19 +593,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -1,23 +1,23 @@
 ---
-title: COP 25 : changements climatiques et tourisme durable
-description: Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ...
+title: "COP 25 : changements climatiques et tourisme durable"
+description: "Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ..."
 seo:
-  title: COP 25 : changements climatiques et tourisme durable | Blog Odysway
-  description: Quel est l'impact du tourisme sur le climat ? Découvrez de nouvelles façons de voyager tout en limitant notre impact sur l'environnement !
+  title: "COP 25 : changements climatiques et tourisme durable | Blog Odysway"
+  description: "Quel est l'impact du tourisme sur le climat ? Découvrez de nouvelles façons de voyager tout en limitant notre impact sur l'environnement !"
 navigation:
-  title: COP 25 : changements climatiques et tourisme durable
-  description: Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ...
-author: julien@quantedsquare.com
+  title: "COP 25 : changements climatiques et tourisme durable"
+  description: "Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-12-09 08:20:00+00:00
-tag: undefined
-categories: Culture et decouverte, Benefices locaux
-displayedImg: https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV
+publishedAt: "2019-12-09 08:20:00+00:00"
+tags: "Grands espaces, Transports insolites"
+categories: "Culture et decouverte, Benefices locaux"
+displayedImg: "https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV
+image-src: "https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV"
 ---
 #publication-date
 9 décembre 2019
@@ -31,7 +31,7 @@ COP 25 : changements climatiques et tourisme durable
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV
+image-src: "https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV"
 ---
 #content
 Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 Etats dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à de nombreux secteurs d’activité, le tourisme qui représente 12% du PIB mondial, est globalement épargné. Plus précisément, c’est le secteur des transports qui ne cesse d’être montré du doigt. Pourtant, la seule idée de pouvoir parcourir le monde sans transport paraît inconcevable : comment poser le pied sur le sol Australien ou admirer les chutes d’Iguaçu en Argentine sans aucun moyen de locomotion ? D’où l’importance du tourisme durable…

@@ -426,6 +426,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
   :::accomodation-container
   #text
   Vous séjournerez dans des hôtels 2/3\* esprit « petite structure » charmants et bien situés. Certains disposent d'une piscine. A Bandarawella, vous serez hébergés chez l'habitant dans une maison d'hôtes tenue par une famille sri-lankaise.
+
   
   #carousel
     ::::carousel
@@ -630,6 +631,7 @@ Détails du prix
   Facultatif : l'assurance annulation ou multi-risques avec notre partenaire Chapka (devis sur demande)
   :::
 ::
+
 
 ::title-container
 #title

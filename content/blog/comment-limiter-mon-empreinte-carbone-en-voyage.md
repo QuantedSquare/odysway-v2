@@ -1,23 +1,23 @@
 ---
-title: Comment limiter mon empreinte carbone en voyage ?
-description: Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et ...
+title: "Comment limiter mon empreinte carbone en voyage ?"
+description: "Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et ..."
 seo:
-  title: Limiter mon empreinte carbone en voyage | Blog Odysway
-  description: Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. Nous vous proposons différents moyens pour limiter votre empreinte carbone en voyage.
+  title: "Limiter mon empreinte carbone en voyage | Blog Odysway"
+  description: "Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. Nous vous proposons différents moyens pour limiter votre empreinte carbone en voyage."
 navigation:
-  title: Comment limiter mon empreinte carbone en voyage ?
-  description: Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et ...
-author: linda.tran@odysway.com
+  title: "Comment limiter mon empreinte carbone en voyage ?"
+  description: "Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 10:47:00+00:00
-tag: undefined
-categories: Apprentissage, Benefices locaux, Blog
-displayedImg: https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA
+publishedAt: "2020-03-06 10:47:00+00:00"
+tags: "Famille, Grands espaces, Sport, Transports insolites"
+categories: "Apprentissage, Benefices locaux, Blog"
+displayedImg: "https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA
+image-src: "https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Comment limiter mon empreinte carbone en voyage ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA
+image-src: "https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA"
 ---
 #content
 Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et l’aérien ne font pas exception. Mais alors, doit-on s’interdire de voyager et de prendre l’avion pour ne pas aggraver la situation ? La réponse est non et nous vous proposons différents moyens pour limiter votre empreinte carbone en voyage.

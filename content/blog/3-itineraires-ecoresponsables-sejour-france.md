@@ -1,23 +1,23 @@
 ---
-title: 3 Itinéraires écoresponsables pour (re)découvrir la France
-description: Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon.
+title: "3 Itinéraires écoresponsables pour (re)découvrir la France"
+description: "Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon."
 seo:
-  title: 3 Itinéraires écoresponsables pour (re)découvrir la France
-  description: (Re)découvrez la France en train, à vélo ou à pied ! Découvrez nos 3 suggestions écoresponsables à vivre, seul, en famille ou entre amis !
+  title: "3 Itinéraires écoresponsables pour (re)découvrir la France"
+  description: "(Re)découvrez la France en train, à vélo ou à pied ! Découvrez nos 3 suggestions écoresponsables à vivre, seul, en famille ou entre amis !"
 navigation:
-  title: 3 Itinéraires écoresponsables pour (re)découvrir la France
-  description: Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon.
-author: romain.masina@odysway.com
+  title: "3 Itinéraires écoresponsables pour (re)découvrir la France"
+  description: "Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2021-07-30 09:54:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8
+publishedAt: "2021-07-30 09:54:00+00:00"
+tags: "éco-responsable, France, nature, slow tourisme"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8
+image-src: "https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8"
 ---
 #publication-date
 30 juillet 2021
@@ -31,7 +31,7 @@ Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à 
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8
+image-src: "https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8"
 ---
 #content
 Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon.

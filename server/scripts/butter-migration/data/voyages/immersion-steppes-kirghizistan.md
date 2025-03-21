@@ -393,6 +393,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
   :::accomodation-container
   #text
   Les hébergements sur ce voyage varient entre des nuits en hôtel simples mais confortables, en maison d'hôtes chez différentes familles kirghizes et en yourte près du lac Son Koul.
+
   
   #carousel
     ::::carousel
@@ -577,6 +578,7 @@ Détails du prix
   Les boissons alcoolisées
   :::
 ::
+
 
 ::title-container
 #title

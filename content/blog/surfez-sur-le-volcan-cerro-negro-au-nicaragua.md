@@ -1,23 +1,23 @@
 ---
-title: Surfez sur le volcan Cerro Negro au Nicaragua
-description: Au centre de l'Amérique Centrale, le Nicaragua se démarque par un relief particulièrement prononce, notamment due a la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le Cerro Negro , situe a 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous ...
+title: "Surfez sur le volcan Cerro Negro au Nicaragua"
+description: "Au centre de l'Amérique Centrale, le Nicaragua se démarque par un relief particulièrement prononce, notamment due a la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le Cerro Negro , situe a 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous ..."
 seo:
-  title: Surfez sur le volcan Cerro Negro au Nicaragua | Blog Odysway
-  description: Avant de pouvoir dévaler les pentes du Cerro Negro, vous allez devoir faire l'ascension du volcan. Mais ces efforts seront bien récompensés!
+  title: "Surfez sur le volcan Cerro Negro au Nicaragua | Blog Odysway"
+  description: "Avant de pouvoir dévaler les pentes du Cerro Negro, vous allez devoir faire l'ascension du volcan. Mais ces efforts seront bien récompensés!"
 navigation:
-  title: Surfez sur le volcan Cerro Negro au Nicaragua
-  description: Au centre de l'Amérique Centrale, le Nicaragua se démarque par un relief particulièrement prononce, notamment due a la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le Cerro Negro , situe a 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous ...
-author: julien@quantedsquare.com
+  title: "Surfez sur le volcan Cerro Negro au Nicaragua"
+  description: "Au centre de l'Amérique Centrale, le Nicaragua se démarque par un relief particulièrement prononce, notamment due a la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le Cerro Negro , situe a 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-09-22 08:32:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces
-displayedImg: https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149
+publishedAt: "2018-09-22 08:32:00+00:00"
+tags: "Amerique Centrale, Sports"
+categories: "Depassement de soi, Nature et grands espaces"
+displayedImg: "https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149
+image-src: "https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149"
 ---
 #publication-date
 22 septembre 2018
@@ -31,7 +31,7 @@ Surfez sur le volcan Cerro Negro au Nicaragua
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149
+image-src: "https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149"
 ---
 #content
 Au centre de l’Amérique Centrale, le **Nicaragua** se démarque par un relief particulièrement prononcé, notamment due à la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le **Cerro Negro**, situé à 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous les visiteurs à la recherche de sensations extrêmes. Le **volcano** **boarding**, ou le **surf** **sur** **un** **volcan**, est probablement l’une des activités les plus insolites à faire lorsque vous voyagez au Nicaragua.

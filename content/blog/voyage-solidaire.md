@@ -1,23 +1,23 @@
 ---
-title: Voyage Solidaire : à la découverte des autres
-description: Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques.
+title: "Voyage Solidaire : à la découverte des autres"
+description: "Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques."
 seo:
-  title: Voyage Solidaire : à la découverte des autres
-  description: Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques.
+  title: "Voyage Solidaire : à la découverte des autres"
+  description: "Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques."
 navigation:
-  title: Voyage Solidaire : à la découverte des autres
-  description: Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques.
-author: linda.tran@odysway.com
+  title: "Voyage Solidaire : à la découverte des autres"
+  description: "Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 11:34:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 11:34:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ De plus en plus de voyageurs choisissent le voyage solidaire et on les comprend 
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 De plus en plus de voyageurs choisissent le **voyage solidaire** et on les comprend !

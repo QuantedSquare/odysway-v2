@@ -1,23 +1,23 @@
 ---
-title: Comment voyager autrement ?
-description: Fuir la foule, découvrir des lieux insoupçonnés, faire de belles rencontres, prendre part à des activités locales . Comment y parvenir alors que les possibilités pour voyager autrement sont si nombreuses ? Voici quelques pistes qui feront de votre prochain voyage, un voyage plein de surprises. Est-ce encore possible de ...
+title: "Comment voyager autrement ?"
+description: "Fuir la foule, découvrir des lieux insoupçonnés, faire de belles rencontres, prendre part à des activités locales . Comment y parvenir alors que les possibilités pour voyager autrement sont si nombreuses ? Voici quelques pistes qui feront de votre prochain voyage, un voyage plein de surprises. Est-ce encore possible de ..."
 seo:
-  title: Comment voyager autrement ?
-  description: Comment voyager autrement ? Nous vous donnons quelques pistes pour faire de votre prochain voyage un voyage plein de surprises.
+  title: "Comment voyager autrement ?"
+  description: "Comment voyager autrement ? Nous vous donnons quelques pistes pour faire de votre prochain voyage un voyage plein de surprises."
 navigation:
-  title: Comment voyager autrement ?
-  description: Fuir la foule, découvrir des lieux insoupçonnés, faire de belles rencontres, prendre part à des activités locales . Comment y parvenir alors que les possibilités pour voyager autrement sont si nombreuses ? Voici quelques pistes qui feront de votre prochain voyage, un voyage plein de surprises. Est-ce encore possible de ...
-author: romain.masina@odysway.com
+  title: "Comment voyager autrement ?"
+  description: "Fuir la foule, découvrir des lieux insoupçonnés, faire de belles rencontres, prendre part à des activités locales . Comment y parvenir alors que les possibilités pour voyager autrement sont si nombreuses ? Voici quelques pistes qui feront de votre prochain voyage, un voyage plein de surprises. Est-ce encore possible de ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-05-28 15:09:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC
+publishedAt: "2020-05-28 15:09:00+00:00"
+tags: "Communautés locales, Famille, France, Grands espaces, Inde, Made in France, Nepal, Perou"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC
+image-src: "https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC"
 ---
 #publication-date
 28 mai 2020
@@ -31,7 +31,7 @@ Comment voyager autrement ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC
+image-src: "https://cdn.buttercms.com/nFoUpm4nQ7y3rjhpDcgC"
 ---
 #content
 **Fuir la foule, découvrir des lieux insoupçonnés, faire de belles rencontres, prendre part à des activités locales**. Comment y parvenir alors que les possibilités pour **voyager autrement** sont si nombreuses ? Voici quelques pistes qui feront de votre prochain voyage, un voyage plein de surprises.

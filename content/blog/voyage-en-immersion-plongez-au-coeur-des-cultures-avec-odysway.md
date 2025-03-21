@@ -1,23 +1,23 @@
 ---
-title: Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway
-description: L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ...
+title: "Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway"
+description: "L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ..."
 seo:
-  title: Voyage en Immersion : Plongez au Cœur des Cultures
-  description: Découvrez le voyage en immersion, une expérience unique qui vous transporte au cœur des cultures du monde. Avec Odysway, vivez une aventure authentique.
+  title: "Voyage en Immersion : Plongez au Cœur des Cultures"
+  description: "Découvrez le voyage en immersion, une expérience unique qui vous transporte au cœur des cultures du monde. Avec Odysway, vivez une aventure authentique."
 navigation:
-  title: Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway
-  description: L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ...
-author: romain.masina@odysway.com
+  title: "Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway"
+  description: "L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2023-09-19 15:37:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0
+publishedAt: "2023-09-19 15:37:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0
+image-src: "https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0"
 ---
 #publication-date
 19 septembre 2023
@@ -31,7 +31,7 @@ Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0
+image-src: "https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0"
 ---
 #content
 L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ce nouveau mode de voyage, en plongeant au cœur des cultures locales.

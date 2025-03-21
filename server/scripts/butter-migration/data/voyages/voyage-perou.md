@@ -432,6 +432,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
   :::accomodation-container
   #text
   Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3\* et des nuits chez l'habitant. Nous veillons à sélectionner uniquement des hôtels esprit "petite structure" simples mais confortables.
+
   
   #carousel
     ::::carousel
@@ -667,19 +668,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

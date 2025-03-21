@@ -1,23 +1,23 @@
 ---
-title: Partir en groupe une expérience enrichissante
-description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
+title: "Partir en groupe une expérience enrichissante"
+description: "Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !"
 seo:
-  title: Partir en Groupe : une expérience enrichissante
-  description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
+  title: "Partir en Groupe : une expérience enrichissante"
+  description: "Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !"
 navigation:
-  title: Partir en groupe une expérience enrichissante
-  description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
-author: linda.tran@odysway.com
+  title: "Partir en groupe une expérience enrichissante"
+  description: "Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 17:18:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 17:18:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ Partir en groupe ne signifie pas forcément voyager avec 40 personnes foulant le
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 **Partir en groupe** ne signifie pas forcément voyager avec 40 personnes foulant les mêmes chemins que des centaines d’autres vacanciers.

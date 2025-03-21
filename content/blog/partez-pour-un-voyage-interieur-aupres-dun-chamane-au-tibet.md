@@ -1,23 +1,23 @@
 ---
-title: Partez pour un voyage intérieur auprès d'un chamane au Tibet
-description: Région autonome de l'ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité . Et c'est auprès d'un chamane que certains decident de vivre quelques jours ...
+title: "Partez pour un voyage intérieur auprès d'un chamane au Tibet"
+description: "Région autonome de l'ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité . Et c'est auprès d'un chamane que certains decident de vivre quelques jours ..."
 seo:
-  title: Voyage auprès d'un chamane au Tibet | Odysway
-  description: Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité.
+  title: "Voyage auprès d'un chamane au Tibet | Odysway"
+  description: "Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité."
 navigation:
-  title: Partez pour un voyage intérieur auprès d'un chamane au Tibet
-  description: Région autonome de l'ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité . Et c'est auprès d'un chamane que certains decident de vivre quelques jours ...
-author: julien@quantedsquare.com
+  title: "Partez pour un voyage intérieur auprès d'un chamane au Tibet"
+  description: "Région autonome de l'ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité . Et c'est auprès d'un chamane que certains decident de vivre quelques jours ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-09-22 08:38:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel
-displayedImg: https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172
+publishedAt: "2018-09-22 08:38:00+00:00"
+tags: "Communautés locales, Developpement personnel, Grands espaces"
+categories: "Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel"
+displayedImg: "https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172
+image-src: "https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172"
 ---
 #publication-date
 22 septembre 2018
@@ -31,7 +31,7 @@ Partez pour un voyage intérieur auprès d'un chamane au Tibet
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172
+image-src: "https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172"
 ---
 #content
 Région autonome de l’ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalaï Lama, **le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité**. Et c’est auprès d’un **chamane** que certains décident de vivre quelques jours pour aller plus loin dans leur démarche spirituelle. Plus qu’un retour sur soi, c’est un véritable voyage intérieur qui vous est proposé.

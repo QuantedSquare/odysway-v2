@@ -1,23 +1,23 @@
 ---
-title: 5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais
-description: Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie ...
+title: "5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais"
+description: "Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie ..."
 seo:
-  title: 5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais
-  description: Dans le top 10 de spays les plus heureux au monde, on retrouve neuf pays européens dont les Pays-Bas. Voici 5 moyens de vous inspirer de leur mode de vie.
+  title: "5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais"
+  description: "Dans le top 10 de spays les plus heureux au monde, on retrouve neuf pays européens dont les Pays-Bas. Voici 5 moyens de vous inspirer de leur mode de vie."
 navigation:
-  title: 5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais
-  description: Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie ...
-author: linda.tran@odysway.com
+  title: "5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais"
+  description: "Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-10-16 10:46:00+00:00
-tag: undefined
-categories: Developpement Personnel
-displayedImg: https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772
+publishedAt: "2020-10-16 10:46:00+00:00"
+tags: "Developpement personnel, Europe, Famille"
+categories: "Developpement Personnel"
+displayedImg: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772
+image-src: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
 ---
 #publication-date
 16 octobre 2020
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772
+image-src: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
 ---
 #content
 #### **Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie personnelle et professionnelle ? A moins que ce ne soit leur éducation si spécifique qui se transmet au fil des générations ? Ou bien la pratique quotidienne du vélo, l'une des clés pour accéder au bonheur ? Dans différents domaines, les Pays-Bas représentent un modèle à suivre. Découvrez comment être plus heureux en s'inspirant du mode de vie néerlandais.**

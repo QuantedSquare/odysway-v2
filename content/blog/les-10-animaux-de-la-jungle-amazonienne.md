@@ -1,23 +1,23 @@
 ---
-title: Les 10 animaux de la jungle amazonienne
-description: Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ...
+title: "Les 10 animaux de la jungle amazonienne"
+description: "Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ..."
 seo:
-  title: Les 10 animaux de la jungle amazonienne | Blog Odysway
-  description: Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Découvrez toute sa diversité !
+  title: "Les 10 animaux de la jungle amazonienne | Blog Odysway"
+  description: "Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Découvrez toute sa diversité !"
 navigation:
-  title: Les 10 animaux de la jungle amazonienne
-  description: Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ...
-author: julien@quantedsquare.com
+  title: "Les 10 animaux de la jungle amazonienne"
+  description: "Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-12-20 08:25:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q
+publishedAt: "2018-12-20 08:25:00+00:00"
+tags: "Amerique du Sud, Animaux, Brésil, Grands espaces"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q
+image-src: "https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q"
 ---
 #publication-date
 20 décembre 2018
@@ -31,7 +31,7 @@ Les 10 animaux de la jungle amazonienne
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q
+image-src: "https://cdn.buttercms.com/RBKcpa1FQMK6XlASNr2Q"
 ---
 #content
 Avec une surface de 5,5 millions de km², la forêt amazonienne est l’une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité où des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la déforestation. Odysway vous fait découvrir un panel de 10 animaux de la jungle amazonienne.

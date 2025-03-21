@@ -242,6 +242,7 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
   :::accomodation-container
   #text
   Vous serez logés au sein du gite "La bergerie" à Plescop. C'est un hébergement marqué "Valeurs Parc". Le gite et la maison principale sont complètement restaurés sur des critères environnementaux et matériaux biosourcés. Au sein de ce gite, vous profiterez d'un environnement calme et préservé.
+
   
   #carousel
     ::::carousel
@@ -390,19 +391,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

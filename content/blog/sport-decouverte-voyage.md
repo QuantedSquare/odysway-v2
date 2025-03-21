@@ -1,23 +1,23 @@
 ---
-title: Comment allier sport et découverte en voyage ?
-description: Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n'est pas en voyage qu'il faut déroger à la règle. Profitez justement de vos vacances pour continuer a faire du sport et même en découvrir de nouveaux. Mais comment allier sport et découverte ...
+title: "Comment allier sport et découverte en voyage ?"
+description: "Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n'est pas en voyage qu'il faut déroger à la règle. Profitez justement de vos vacances pour continuer a faire du sport et même en découvrir de nouveaux. Mais comment allier sport et découverte ..."
 seo:
-  title: Comment allier sport et découverte en voyage ? | Blog Odysway
-  description: Sport et découverte ne sont pas incompatibles en voyage ! Découvrez les nombreuses possibilités qui vous sont offertes dans notre article.
+  title: "Comment allier sport et découverte en voyage ? | Blog Odysway"
+  description: "Sport et découverte ne sont pas incompatibles en voyage ! Découvrez les nombreuses possibilités qui vous sont offertes dans notre article."
 navigation:
-  title: Comment allier sport et découverte en voyage ?
-  description: Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n'est pas en voyage qu'il faut déroger à la règle. Profitez justement de vos vacances pour continuer a faire du sport et même en découvrir de nouveaux. Mais comment allier sport et découverte ...
-author: julien@quantedsquare.com
+  title: "Comment allier sport et découverte en voyage ?"
+  description: "Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n'est pas en voyage qu'il faut déroger à la règle. Profitez justement de vos vacances pour continuer a faire du sport et même en découvrir de nouveaux. Mais comment allier sport et découverte ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2020-01-16 12:06:00+00:00
-tag: undefined
-categories: Depassement de soi, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd
+publishedAt: "2020-01-16 12:06:00+00:00"
+tags: "Amerique du Sud, Asie, Chine, Developpement personnel, Europe, Famille, Finlande, Grands espaces, Nepal, Perou, Sport, Sri Lanka, Thailande"
+categories: "Depassement de soi, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd
+image-src: "https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd"
 ---
 #publication-date
 16 janvier 2020
@@ -31,7 +31,7 @@ Comment allier sport et découverte en voyage ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd
+image-src: "https://cdn.buttercms.com/PPPbRQFSwuTZ6Q2GO3wd"
 ---
 #content
 Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n’est pas en voyage qu’il faut déroger à la règle. Profitez justement de vos vacances pour continuer à faire du sport et même en découvrir de nouveaux. **Mais comment allier sport et découverte en voyage ?** Odysway vous explique tout !

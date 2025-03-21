@@ -1,23 +1,23 @@
 ---
-title: La notation écologique des voyages Odysway 🌿
-description: Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Premier niveau : 🌿 Ce premier niveau correspond à un voyage où l'on prend un avion long courrier et où l'on prend la voiture/4x4/bus ...
+title: "La notation écologique des voyages Odysway 🌿"
+description: "Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Premier niveau : 🌿 Ce premier niveau correspond à un voyage où l'on prend un avion long courrier et où l'on prend la voiture/4x4/bus ..."
 seo:
-  title: Les niveaux d'empreinte écologique
-  description: Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux démissions carbones, de l'impact le plus faible au plus élevé sur l'environnement.
+  title: "Les niveaux d'empreinte écologique"
+  description: "Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux démissions carbones, de l'impact le plus faible au plus élevé sur l'environnement."
 navigation:
-  title: La notation écologique des voyages Odysway 🌿
-  description: Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Premier niveau : 🌿 Ce premier niveau correspond à un voyage où l'on prend un avion long courrier et où l'on prend la voiture/4x4/bus ...
-author: romain.masina@odysway.com
+  title: "La notation écologique des voyages Odysway 🌿"
+  description: "Odysway a développé une échelle de quatre niveaux d'empreinte écologique, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Premier niveau : 🌿 Ce premier niveau correspond à un voyage où l'on prend un avion long courrier et où l'on prend la voiture/4x4/bus ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2024-02-15 02:39:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg
+publishedAt: "2024-02-15 02:39:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg
+image-src: "https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg"
 ---
 #publication-date
 15 février 2024
@@ -31,7 +31,7 @@ La notation écologique des voyages Odysway 🌿
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg
+image-src: "https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg"
 ---
 #content
 Odysway a développé une échelle de quatre niveaux d'empreinte carbone, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Cette échelle prend en compte les déplacements en transport pour se rendre sur le lieu du voyage et l'empreinte écologique pendant le séjour : ration du déplacement / jours sans transport, nécessite de prendre l'avion ou non, modes de transport utilisés (marche, vélo, train, 4x4..). Cette notation s'inscrit dans le cadre de la [démarche responsable d'Odysway](https://odysway.com/demarche-responsable-odysway), qui vise à limiter l'impact de son activité sur l'environnement.

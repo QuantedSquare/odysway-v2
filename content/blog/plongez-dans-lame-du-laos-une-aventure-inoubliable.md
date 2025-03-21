@@ -1,23 +1,23 @@
 ---
-title: Plongez dans l'âme du Laos : une aventure inoubliable
-description: Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez leur quotidien auprès des majestueux éléphants. Entre la beauté de Luang Prabang, les cascades de Kuang Si, et les mystères des plaines de Jarres, le Laos promet une aventure unique et captivante. Ne manquez pas le coucher de soleil sur le Mékong, un moment magique à vivre absolument. Embarquez pour une expérience culturelle et naturelle hors du commun !
+title: "Plongez dans l'âme du Laos : une aventure inoubliable"
+description: "Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez leur quotidien auprès des majestueux éléphants. Entre la beauté de Luang Prabang, les cascades de Kuang Si, et les mystères des plaines de Jarres, le Laos promet une aventure unique et captivante. Ne manquez pas le coucher de soleil sur le Mékong, un moment magique à vivre absolument. Embarquez pour une expérience culturelle et naturelle hors du commun !"
 seo:
-  title: Plongez dans l'âme du Laos : une aventure inoubliable
-  description: Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez
+  title: "Plongez dans l'âme du Laos : une aventure inoubliable"
+  description: "Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez"
 navigation:
-  title: Plongez dans l'âme du Laos : une aventure inoubliable
-  description: Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez leur quotidien auprès des majestueux éléphants. Entre la beauté de Luang Prabang, les cascades de Kuang Si, et les mystères des plaines de Jarres, le Laos promet une aventure unique et captivante. Ne manquez pas le coucher de soleil sur le Mékong, un moment magique à vivre absolument. Embarquez pour une expérience culturelle et naturelle hors du commun !
-author: linda.tran@odysway.com
+  title: "Plongez dans l'âme du Laos : une aventure inoubliable"
+  description: "Découvrez le Laos, pays ensorcelant au patrimoine riche lors d'un séjour inoubliable. Plongez dans l'authenticité avec les Cornacs, partagez leur quotidien auprès des majestueux éléphants. Entre la beauté de Luang Prabang, les cascades de Kuang Si, et les mystères des plaines de Jarres, le Laos promet une aventure unique et captivante. Ne manquez pas le coucher de soleil sur le Mékong, un moment magique à vivre absolument. Embarquez pour une expérience culturelle et naturelle hors du commun !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2023-08-20 13:44:00+00:00
-tag: undefined
-categories: voyager, Laos, découverte
-displayedImg: https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk
+publishedAt: "2023-08-20 13:44:00+00:00"
+tags: "éléphants, immersion, Laos"
+categories: "voyager, Laos, découverte"
+displayedImg: "https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk
+image-src: "https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk"
 ---
 #publication-date
 20 août 2023
@@ -31,7 +31,7 @@ Le Laos, pays d'une beauté ensorcelante et d'une richesse culturelle profonde, 
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk
+image-src: "https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk"
 ---
 #content
 Le Laos, pays d'une beauté ensorcelante et d'une richesse culturelle profonde, est une destination de voyage qui attire de plus en plus d'aventuriers avides de découvertes authentiques. Lors d'un séjour inoubliable au Laos, vous aurez la chance de vivre une immersion totale dans la vie quotidienne de ce pays enchanteur. Parmi les moments forts du voyage, l'expérience avec les Cornacs sera sans conteste la plus mémorable. Voici cinq points clés pour votre séjour au Laos :

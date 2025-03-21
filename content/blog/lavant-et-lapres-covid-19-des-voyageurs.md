@@ -1,23 +1,23 @@
 ---
-title: L'avant et l'après Covid-19 des voyageurs
-description: Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crainte à l'heure du Covid. Dresser en quelque sorte un bilan de cette année 2020, de comment les voyageurs imaginent le tourisme aujourd'hui. Environ 850 personnes ont répondu ...
+title: "L'avant et l'après Covid-19 des voyageurs"
+description: "Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crainte à l'heure du Covid. Dresser en quelque sorte un bilan de cette année 2020, de comment les voyageurs imaginent le tourisme aujourd'hui. Environ 850 personnes ont répondu ..."
 seo:
-  title: L'avant et l'après Covid-19 des voyageurs
-  description: Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crain
+  title: "L'avant et l'après Covid-19 des voyageurs"
+  description: "Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crain"
 navigation:
-  title: L'avant et l'après Covid-19 des voyageurs
-  description: Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crainte à l'heure du Covid. Dresser en quelque sorte un bilan de cette année 2020, de comment les voyageurs imaginent le tourisme aujourd'hui. Environ 850 personnes ont répondu ...
-author: romain.masina@odysway.com
+  title: "L'avant et l'après Covid-19 des voyageurs"
+  description: "Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crainte à l'heure du Covid. Dresser en quelque sorte un bilan de cette année 2020, de comment les voyageurs imaginent le tourisme aujourd'hui. Environ 850 personnes ont répondu ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-12-10 06:53:00+00:00
-tag: undefined
-categories: News Odysway
-displayedImg: https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw
+publishedAt: "2020-12-10 06:53:00+00:00"
+tags: ""
+categories: "News Odysway"
+displayedImg: "https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw
+image-src: "https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw"
 ---
 #publication-date
 10 décembre 2020
@@ -31,7 +31,7 @@ L'avant et l'après Covid-19 des voyageurs
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw
+image-src: "https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw"
 ---
 #content
 **F**in octobre 2020\*, Odysway a lancé un sondage en ligne avec pour objectif de mieux comprendre l'impact du Covid-19 sur les habitudes de voyage des Français et des éventuelles craintes engendrées. Dresser en quelque sorte un bilan de cette année 2020, et voir de quelle façon les voyageurs imaginent le tourisme d'aujourd'hui et de demain.

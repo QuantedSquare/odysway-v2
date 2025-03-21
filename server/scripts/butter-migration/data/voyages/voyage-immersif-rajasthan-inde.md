@@ -382,6 +382,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
   :::accomodation-container
   #text
   Lors de votre séjour, tous vos hébergements sont compris dans le tarif. Nous avons privilégié des lieux uniques, loin des hôtels de grandes chaînes, pour vous offrir à la fois confort, charme et expérience, comme les nuits en Havelis, ou la nuit en bivouac dans le désert. Un mot sur les Havelis : ces demeures traditionnelles, répandues dans le nord et l'ouest de l'Inde, sont de véritables joyaux architecturaux souvent dotés de cours historiques. Le terme "Haveli" trouve ses racines dans le mot persan "hawli", évoquant quelque chose d'"entouré" ou de "clos". En choisissant de séjourner dans un Haveli, vous embrasserez tout le charme et l'essence de l'Inde !
+
   
   #carousel
     ::::carousel
@@ -563,6 +564,7 @@ Détails du prix
   Les frais d'entrées, excursions et activités proposées en option
   :::
 ::
+
 
 ::title-container
 #title

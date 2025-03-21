@@ -1,23 +1,23 @@
 ---
-title: Faites du kayak et du rafting sur le fleuve Zambèze
-description: Le fleuve Zambèze est le 4e plus grand fleuve d'Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l'Ocean Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre ...
+title: "Faites du kayak et du rafting sur le fleuve Zambèze"
+description: "Le fleuve Zambèze est le 4e plus grand fleuve d'Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l'Ocean Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre ..."
 seo:
-  title: Kayak et Rafting sur le fleuve Zambèze | Blog Odysway
-  description: Ceux qui n'ont pas envie de se mouiller, s'abstenir ! A bord de votre rafting, les eaux du Zambèze vous fera vivre des emotions intenses.
+  title: "Kayak et Rafting sur le fleuve Zambèze | Blog Odysway"
+  description: "Ceux qui n'ont pas envie de se mouiller, s'abstenir ! A bord de votre rafting, les eaux du Zambèze vous fera vivre des emotions intenses."
 navigation:
-  title: Faites du kayak et du rafting sur le fleuve Zambèze
-  description: Le fleuve Zambèze est le 4e plus grand fleuve d'Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l'Ocean Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre ...
-author: julien@quantedsquare.com
+  title: "Faites du kayak et du rafting sur le fleuve Zambèze"
+  description: "Le fleuve Zambèze est le 4e plus grand fleuve d'Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l'Ocean Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-09-18 17:30:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces
-displayedImg: https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc
+publishedAt: "2018-09-18 17:30:00+00:00"
+tags: "Afrique, Sports"
+categories: "Depassement de soi, Nature et grands espaces"
+displayedImg: "https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc
+image-src: "https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc"
 ---
 #publication-date
 18 septembre 2018
@@ -31,7 +31,7 @@ Faites du kayak et du rafting sur le fleuve Zambèze
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc
+image-src: "https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc"
 ---
 #content
 Le fleuve Zambèze est le 4è plus grand fleuve d’Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l’Océan Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre compte de la puissance de ce fleuve et de sa faune, quoi de mieux que de parcourir le Zambèze en kayak ou en rafting.

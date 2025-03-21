@@ -1,25 +1,26 @@
 ---
-title: Récits de Voyage - Laëtitia Jager Protégez les animaux au Sri Lanka
-description: Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le classement des pays à découvrir ! Ses paysages somptueux, sa population accueillante et l’expérience inédite proposée par Odysway a séduit Laetita Jager. Assistante maternelle de 28 ans et originaire de la région parisienne, elle a décidé ...
+title: "Récits de Voyage - Laëtitia Jager Protégez les animaux au Sri Lanka"
+description: "Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le classement des pays à découvrir ! Ses paysages somptueux, sa population accueillante et l’expérience inédite proposée par Odysway a séduit Laetita Jager. Assistante maternelle de 28 ans et originaire de la région parisienne, elle a décidé ..."
 seo:
-  title: Récits de Voyage de Laetitia Jager | Blog Odysway
-  description: Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le top du classement des pays à découvrir !
-
-Ses paysages somptueux, sa population accueillante et l’expérience inédite proposée par Odysway a séduit Laetita Jager. Assistante maternelle de 28 ans et originaire de la région parisienne, elle a décidé de vivre ce voyage seule en septembre 2019 !
+  title: "Récits de Voyage de Laetitia Jager | Blog Odysway"
+  description: |
+    Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le top du classement des pays à découvrir !
+    
+    Ses paysages somptueux, sa population accueillante et l’expérience inédite proposée par Odysway a séduit Laetita Jager. Assistante maternelle de 28 ans et originaire de la région parisienne, elle a décidé de vivre ce voyage seule en septembre 2019 !
 navigation:
-  title: Récits de Voyage - Laëtitia Jager Protégez les animaux au Sri Lanka
-  description: Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le classement des pays à découvrir ! Ses paysages somptueux, sa population accueillante et l’expérience inédite proposée par Odysway a séduit Laetita Jager. Assistante maternelle de 28 ans et originaire de la région parisienne, elle a décidé ...
-author: linda.tran@odysway.com
+  title: "Récits de Voyage - Laëtitia Jager Protégez les animaux au Sri Lanka"
+  description: "Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le classement des pays à découvrir ! Ses paysages somptueux, sa population accueillante et l’expérience inédite proposée par Odysway a séduit Laetita Jager. Assistante maternelle de 28 ans et originaire de la région parisienne, elle a décidé ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 13:17:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/ACJNzM8GQYmXy74Yqnhq
+publishedAt: "2020-03-06 13:17:00+00:00"
+tags: "Animaux, Asie, Famille, Sri Lanka"
+categories: "Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/ACJNzM8GQYmXy74Yqnhq"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/ACJNzM8GQYmXy74Yqnhq
+image-src: "https://cdn.buttercms.com/ACJNzM8GQYmXy74Yqnhq"
 ---
 #publication-date
 6 mars 2020
@@ -33,7 +34,7 @@ Récits de Voyage - Laëtitia Jager Protégez les animaux au Sri Lanka
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/ACJNzM8GQYmXy74Yqnhq
+image-src: "https://cdn.buttercms.com/ACJNzM8GQYmXy74Yqnhq"
 ---
 #content
  Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le top du classement des pays à découvrir !

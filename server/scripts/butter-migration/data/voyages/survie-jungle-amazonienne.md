@@ -365,6 +365,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
   :::accomodation-container
   #text
   Vous serez hébergés en Amazonie au sein même de la famille de Max, dans des maisons annexes avec salle de bain afin de vous assurer une totale autonomie. Lors des immersions de plusieurs jours dans la jungle, vous dormirez dans des hamacs munis d'une moustiquaire et d'un toit.
+
   
   #carousel
     ::::carousel
@@ -535,6 +536,7 @@ Détails du prix
   Les dépenses personnelles et les pourboires (au bon vouloir, selon votre degré de satisfaction)
   :::
 ::
+
 
 ::title-container
 #title

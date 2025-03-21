@@ -1,23 +1,23 @@
 ---
-title: Voyage Animalier : découvrez les animaux sauvages autrement
-description: S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie.
+title: "Voyage Animalier : découvrez les animaux sauvages autrement"
+description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie."
 seo:
-  title: Voyage Animalier : à la découverte des animaux sauvages
-  description: S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur, et des souvenirs à vie !
+  title: "Voyage Animalier : à la découverte des animaux sauvages"
+  description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur, et des souvenirs à vie !"
 navigation:
-  title: Voyage Animalier : découvrez les animaux sauvages autrement
-  description: S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie.
-author: linda.tran@odysway.com
+  title: "Voyage Animalier : découvrez les animaux sauvages autrement"
+  description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-24 12:24:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-24 12:24:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 24 novembre 2020
@@ -31,7 +31,7 @@ Aujourd’hui de nombreuses espèces animales sont menacées d’extinction et s
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Aujourd’hui de nombreuses espèces animales sont menacées d’extinction et sont en danger notamment à cause  du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou d'un tourisme animalier douteux.

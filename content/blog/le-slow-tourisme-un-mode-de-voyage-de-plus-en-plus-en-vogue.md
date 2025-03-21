@@ -1,24 +1,25 @@
 ---
-title: Le slow tourisme : un mode de voyage de plus en plus en vogue
-description: Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ...
+title: "Le slow tourisme : un mode de voyage de plus en plus en vogue"
+description: "Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ..."
 seo:
-  title: Le slow tourisme : un mode de voyage de plus en plus en vogue | Blog Odysway
-  description: Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un tourisme authentique. Focus sur un mode de voyage de plus en plus en vogue.
-Le slow tourisme en quelques mots
+  title: "Le slow tourisme : un mode de voyage de plus en plus en vogue | Blog Odysway"
+  description: |
+    Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un tourisme authentique. Focus sur un mode de voyage de plus en plus en vogue.
+    Le slow tourisme en quelques mots
 navigation:
-  title: Le slow tourisme : un mode de voyage de plus en plus en vogue
-  description: Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ...
-author: linda.tran@odysway.com
+  title: "Le slow tourisme : un mode de voyage de plus en plus en vogue"
+  description: "Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 13:51:00+00:00
-tag: undefined
-categories: Benefices locaux
-displayedImg: https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh
+publishedAt: "2020-03-06 13:51:00+00:00"
+tags: "Communautés locales, Grands espaces, Sport"
+categories: "Benefices locaux"
+displayedImg: "https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh
+image-src: "https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh"
 ---
 #publication-date
 6 mars 2020
@@ -32,7 +33,7 @@ Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh
+image-src: "https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh"
 ---
 #content
 Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un tourisme authentique. Focus sur un mode de voyage de plus en plus en vogue.

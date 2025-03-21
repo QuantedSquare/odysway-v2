@@ -1,7 +1,8 @@
 import fs from 'node:fs'
 import axios from 'axios'
+import _ from 'lodash'
 
-const token = process.env.BUTTER_API_TOKEN
+const token = '19660f0f8ccfbde527e13dd4193c8be8301f4393' // process.env.BUTTER_API_TOKEN
 async function getVoyages() {
   const { data: dataOne } = await axios.get(`https://api.buttercms.com/v2/content/voyages/?auth_token=${token}`)
 
@@ -10,10 +11,14 @@ async function getVoyages() {
   const { data: dataThree } = await axios.get(`https://api.buttercms.com/v2/content/faq/?auth_token=${token}`)
 
   const { data: dataFour } = await axios.get(`https://api.buttercms.com/v2/content/images/?auth_token=${token}`)
+
   const voyages = dataOne.data.voyages
   const programmes = dataTwo.data.programme
   const faq = dataThree.data.faq
   const images = dataFour.data.images
+  // Use uniqBy to check if there are duplicates in images
+  console.log('images json read result ===> ', images)
+  // console.log('images UNIQ json read result ===> ', _.uniqBy(images, 'image').length)
   // Reassigned programme to travel
   programmes.forEach((programme) => {
     if (!programme.voyage.meta) {
@@ -69,8 +74,8 @@ async function getVoyages() {
       })
     }
   })
-  console.log('Voyages json read result ===> ', voyages.length)
-  fs.writeFileSync('./data/voyages.json', JSON.stringify(voyages, null, 2))
+  // console.log('Voyages json read result ===> ', voyages.length)
+  // fs.writeFileSync('./data/voyages.json', JSON.stringify(voyages, null, 2))
 }
 
 function getProgrammes() {

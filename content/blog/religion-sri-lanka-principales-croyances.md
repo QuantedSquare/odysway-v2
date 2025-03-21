@@ -1,23 +1,23 @@
 ---
-title: Religion au Sri Lanka : quelles sont les principales croyances?
-description: Depuis des centaines voire des milliers d'années, la religion tient une place importante au Sri Lanka . Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural... On ne compte plus non plus le nombre d'édifices religieux qui parsèment le territoire ! Il existe aujourd'hui...
+title: "Religion au Sri Lanka : quelles sont les principales croyances?"
+description: "Depuis des centaines voire des milliers d'années, la religion tient une place importante au Sri Lanka . Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural... On ne compte plus non plus le nombre d'édifices religieux qui parsèment le territoire ! Il existe aujourd'hui..."
 seo:
-  title: Religion au Sri Lanka : quelles sont les principales croyances ? | Odysway
-  description: La religion au Sri Lanka tient une place importante. Le pays compte 4 croyances principales : le bouddhisme, l'hindouisme, l'islam et le christianisme.
+  title: "Religion au Sri Lanka : quelles sont les principales croyances ? | Odysway"
+  description: "La religion au Sri Lanka tient une place importante. Le pays compte 4 croyances principales : le bouddhisme, l'hindouisme, l'islam et le christianisme."
 navigation:
-  title: Religion au Sri Lanka : quelles sont les principales croyances?
-  description: Depuis des centaines voire des milliers d'années, la religion tient une place importante au Sri Lanka . Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural... On ne compte plus non plus le nombre d'édifices religieux qui parsèment le territoire ! Il existe aujourd'hui...
-author: julien@quantedsquare.com
+  title: "Religion au Sri Lanka : quelles sont les principales croyances?"
+  description: "Depuis des centaines voire des milliers d'années, la religion tient une place importante au Sri Lanka . Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural... On ne compte plus non plus le nombre d'édifices religieux qui parsèment le territoire ! Il existe aujourd'hui..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-07-05 11:15:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/FTlcfvvRIuDB47DFEYWA
+publishedAt: "2019-07-05 11:15:00+00:00"
+tags: "Asie, Developpement personnel, Sri Lanka"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/FTlcfvvRIuDB47DFEYWA"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/FTlcfvvRIuDB47DFEYWA
+image-src: "https://cdn.buttercms.com/FTlcfvvRIuDB47DFEYWA"
 ---
 #publication-date
 5 juillet 2019
@@ -31,7 +31,7 @@ Religion au Sri Lanka : quelles sont les principales croyances?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/FTlcfvvRIuDB47DFEYWA
+image-src: "https://cdn.buttercms.com/FTlcfvvRIuDB47DFEYWA"
 ---
 #content
 Depuis des centaines voire des milliers d’années, **la religion tient une place importante au Sri Lanka**. Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural… On ne compte plus non plus le nombre d’édifices religieux qui parsèment le territoire ! Il existe aujourd’hui 4 principales religions : **le bouddhisme, l’hindouisme, l’islam et le christianisme**. Découvrons leur origine et leur place dans la société sri-lankaise.

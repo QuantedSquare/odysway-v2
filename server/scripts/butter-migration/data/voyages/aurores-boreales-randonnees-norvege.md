@@ -350,6 +350,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
   :::accomodation-container
   #text
   Lors de ce voyage, vous serez hébergés à l’hôtel et en gîte de type appartement privatif (chambre double ou twin). Une chambre individuelle peut être prévue sur demande, sous réserve de disponibilité. Les hébergements sont choisis avec soin : ils sont confortables et chaleureux, dans un cadre unique.
+
   
   #carousel
     ::::carousel
@@ -515,19 +516,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

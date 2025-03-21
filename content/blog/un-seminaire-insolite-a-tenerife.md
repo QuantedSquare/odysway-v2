@@ -1,23 +1,23 @@
 ---
-title: Un séminaire insolite à Tenerife
-description: Au printemps 2019, Odysway a eu l'occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C'est dans le cadre de l'organisation d'un séminaire pour entreprise que Tenerife a été choisi. L’île a en effet de nombreux atouts a faire valoir. Très bien ...
+title: "Un séminaire insolite à Tenerife"
+description: "Au printemps 2019, Odysway a eu l'occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C'est dans le cadre de l'organisation d'un séminaire pour entreprise que Tenerife a été choisi. L’île a en effet de nombreux atouts a faire valoir. Très bien ..."
 seo:
-  title: Un séminaire insolite à Tenerife | Blog Odysway
-  description: Partez à Tenerife, une île aux possibilités multiples, dans le cadre de votre séminaire pour entreprise. Découvrez-y de nombreuses activités uniques.
+  title: "Un séminaire insolite à Tenerife | Blog Odysway"
+  description: "Partez à Tenerife, une île aux possibilités multiples, dans le cadre de votre séminaire pour entreprise. Découvrez-y de nombreuses activités uniques."
 navigation:
-  title: Un séminaire insolite à Tenerife
-  description: Au printemps 2019, Odysway a eu l'occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C'est dans le cadre de l'organisation d'un séminaire pour entreprise que Tenerife a été choisi. L’île a en effet de nombreux atouts a faire valoir. Très bien ...
-author: julien@quantedsquare.com
+  title: "Un séminaire insolite à Tenerife"
+  description: "Au printemps 2019, Odysway a eu l'occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C'est dans le cadre de l'organisation d'un séminaire pour entreprise que Tenerife a été choisi. L’île a en effet de nombreux atouts a faire valoir. Très bien ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-04-30 14:37:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/3GP1UTdTDGDNUiYyOxXy?1612263085945
+publishedAt: "2019-04-30 14:37:00+00:00"
+tags: "Europe, Grands espaces, Séminaire"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/3GP1UTdTDGDNUiYyOxXy?1612263085945"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/3GP1UTdTDGDNUiYyOxXy?1612263085945
+image-src: "https://cdn.buttercms.com/3GP1UTdTDGDNUiYyOxXy?1612263085945"
 ---
 #publication-date
 30 avril 2019
@@ -31,7 +31,7 @@ Un séminaire insolite à Tenerife
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/3GP1UTdTDGDNUiYyOxXy?1612263085945
+image-src: "https://cdn.buttercms.com/3GP1UTdTDGDNUiYyOxXy?1612263085945"
 ---
 #content
 Au printemps 2019, Odysway a eu l’occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C’est dans le cadre de l’organisation d’un séminaire pour entreprise que Tenerife a été choisi.

@@ -1,23 +1,23 @@
 ---
-title: 8 “nouvelles” bonnes résolutions
-description: Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ...
+title: "8 “nouvelles” bonnes résolutions"
+description: "Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ..."
 seo:
-  title: 8 nouvelles bonnes résolutions | Blog Odysway
-  description: Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions, mais voici les 8 nouvelles "bonnes" résolutions !
+  title: "8 nouvelles bonnes résolutions | Blog Odysway"
+  description: "Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions, mais voici les 8 nouvelles \"bonnes\" résolutions !"
 navigation:
-  title: 8 “nouvelles” bonnes résolutions
-  description: Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ...
-author: linda.tran@odysway.com
+  title: "8 “nouvelles” bonnes résolutions"
+  description: "Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 15:46:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372
+publishedAt: "2020-03-06 15:46:00+00:00"
+tags: "Animaux, Communautés locales, Sport"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372
+image-src: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372
+image-src: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
 ---
 #content
 Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du temps. Mais il est possible de remettre ces bonnes résolutions au goût du jour pour les rendre plus attrayantes et réussir, pour certaines, à les inclure dans nos habitudes quotidiennes. Voici 8 « nouvelles » bonnes résolutions à mettre en œuvre dès le 1er janvier 2020 !

@@ -339,6 +339,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
   :::accomodation-container
   #text
   A Athènes, vous serez logés pendant deux nuits en hôtel, en chambre double, dans le centre ville. A Alonissos, vous serez logés dans une maison qui a deux chambres pour 6 résidents, en chambre partagée. La maison n'est pas climatisée, mais les chambres sont pourvues de ventilateurs. Si vous souhaitez plus de confort et d'intimité, nous pouvons également vous réserver une chambre dans un hôtel à côté de la maison (avec supplément).
+
   
   #carousel
     ::::carousel
@@ -528,6 +529,7 @@ Détails du prix
   Les dépenses personnelles et pourboires
   :::
 ::
+
 
 ::title-container
 #title

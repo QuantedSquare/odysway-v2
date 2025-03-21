@@ -423,6 +423,7 @@ Possibilité en option d’une croisière en dhow au coucher du soleil ou d’un
   :::accomodation-container
   #text
   Tout au long du voyage, vous alternerez entre immersion chez l’habitant, lodges en pleine nature et séjour balnéaire pour une expérience variée et authentique. Dans un village traditionnel, vous partagerez le quotidien d’une famille locale pour une immersion culturelle unique. Près des lacs Nakuru et Naivasha, vous logerez dans des hébergements confortables, parfaits pour se ressourcer après vos journées d’exploration. Au Masai Mara, vivez l’expérience d’un campement en pleine savane, où soirées autour du feu et sons de la nature viendront rythmer vos nuits. Enfin, terminez votre voyage en douceur avec un séjour balnéaire sur la côte kényane, entre plages paradisiaques et océan turquoise. Des hébergements pensés pour allier confort, authenticité et aventure, au plus près de la nature et des cultures locales.
+
   
   #carousel
     ::::carousel
@@ -591,19 +592,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -363,6 +363,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
   :::accomodation-container
   #text
   Vous séjournerez dans un hôtel à Mindelo, chez l'habitant pendant vos journées de marche, et dans une pension familiale à Ponta Do Sol. Nos hébergements au Cap-Vert sont sélectionnés pour leur emplacement le long de votre itinéraire, vous immergeant ainsi dans la vie locale. Chez l'habitant, les conditions peuvent être plus simples, notamment avec une disponibilité d'eau chaude variable.
+
   
   #carousel
     ::::carousel
@@ -523,19 +524,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

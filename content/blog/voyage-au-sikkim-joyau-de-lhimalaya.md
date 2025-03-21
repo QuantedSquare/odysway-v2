@@ -1,23 +1,23 @@
 ---
-title: Voyage au Sikkim : Joyau de l'Himalaya
-description: Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ...
+title: "Voyage au Sikkim : Joyau de l'Himalaya"
+description: "Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ..."
 seo:
-  title: Voyage au Sikkim : Joyau de l'Himalaya
-  description: Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un j
+  title: "Voyage au Sikkim : Joyau de l'Himalaya"
+  description: "Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un j"
 navigation:
-  title: Voyage au Sikkim : Joyau de l'Himalaya
-  description: Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ...
-author: romain.masina@odysway.com
+  title: "Voyage au Sikkim : Joyau de l'Himalaya"
+  description: "Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2023-09-20 15:34:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS
+publishedAt: "2023-09-20 15:34:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS
+image-src: "https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS"
 ---
 #publication-date
 20 septembre 2023
@@ -31,7 +31,7 @@ Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS
+image-src: "https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS"
 ---
 #content
 ## **Voyager au Sikkim : Un paradis préservé**

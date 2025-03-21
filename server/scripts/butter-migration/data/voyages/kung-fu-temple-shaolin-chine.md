@@ -365,6 +365,7 @@ Vous prenez ensuite la direction de Luoyang d’où vous prenez un TGV pour reto
   :::accomodation-container
   #text
   Pendant votre voyage, vous logerez dans des hôtels à Pékin (4 nuits) et dans une chambre double partagée directement sur le centre kungfu.
+
   
   #carousel
     ::::carousel
@@ -517,6 +518,7 @@ Détails du prix
   Les pourboires
   :::
 ::
+
 
 ::title-container
 #title

@@ -1,23 +1,23 @@
 ---
-title: Les causes de la disparition des animaux
-description: Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ...
+title: "Les causes de la disparition des animaux"
+description: "Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ..."
 seo:
-  title: Les causes de la disparition des animaux | Blog Odysway
-  description: Majoritairement d'origine humaine, les causes de la disparition des animaux sont diverses. Découvrons lesquelles et comment y remédier.
+  title: "Les causes de la disparition des animaux | Blog Odysway"
+  description: "Majoritairement d'origine humaine, les causes de la disparition des animaux sont diverses. Découvrons lesquelles et comment y remédier."
 navigation:
-  title: Les causes de la disparition des animaux
-  description: Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ...
-author: julien@quantedsquare.com
+  title: "Les causes de la disparition des animaux"
+  description: "Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-06-04 14:02:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252
+publishedAt: "2019-06-04 14:02:00+00:00"
+tags: "Animaux, Famille"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252
+image-src: "https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252"
 ---
 #publication-date
 4 juin 2019
@@ -31,7 +31,7 @@ Les causes de la disparition des animaux
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252
+image-src: "https://cdn.buttercms.com/LIsRVhl5Tl2b1hKvlHcJ?1611754371252"
 ---
 #content
 Notre planète serait-elle en train de connaître sa sixième extinction massive de sa biodiversité ? C’est ce que confirment nombre d’experts qui, depuis quelques années, tirent la sonnette d’alarme sur la santé de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date de la disparition des dinosaures), celle-ci aurait une origine tout autre : l’Homme. **Déforestation, réchauffement climatique ou pollution**, son empreinte est visible partout provoquant l’extinction progressive de nombreuses espèces parmi les mammifères, les poissons, les reptiles, les oiseaux… **Mais quelles sont donc les causes de la disparition des animaux ?** Voici plusieurs raisons majeures.

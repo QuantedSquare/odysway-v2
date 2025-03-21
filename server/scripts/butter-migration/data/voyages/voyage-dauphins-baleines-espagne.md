@@ -344,6 +344,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
   :::accomodation-container
   #text
   Pendant votre séjour, vous serez hébergé dans la WeWhale Ocean House, située à Puerto del Carmen. Cet appartement spacieux de 100 m², doté d’une piscine, offre un cadre accueillant et convivial, idéal pour se détendre après une journée d’activités. Vous partagerez l’appartement avec Adriana, responsable du programme, et au maximum deux autres voyageurs, garantissant une atmosphère calme et agréable. L’appartement dispose d’une cuisine entièrement équipée, d’un salon confortable, d’une terrasse privée et d’une piscine où vous pourrez vous relaxer. Sa localisation centrale à Puerto del Carmen est un atout : vous serez à seulement cinq minutes à pied de nombreux bars et restaurants, et à dix minutes de la plage et du port. C’est le point de départ idéal pour vivre pleinement cette expérience, tout en profitant de la vie de Puerto del Carmen.
+
   
   #carousel
     ::::carousel
@@ -494,19 +495,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

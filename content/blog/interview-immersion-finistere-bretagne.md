@@ -1,23 +1,23 @@
 ---
-title: Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
-description: Odysway est heureux de vous présenter Virginie ! Eleveuse d’alpagas du côté de Quimper dans le Finistère Sud, elle vous attend dans sa ferme avec ses animaux doux et curieux !
+title: "Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère"
+description: "Odysway est heureux de vous présenter Virginie ! Eleveuse d’alpagas du côté de Quimper dans le Finistère Sud, elle vous attend dans sa ferme avec ses animaux doux et curieux !"
 seo:
-  title: Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
-  description: Virginie vous attend dans sa ferme avec ses adorable alpagas, doux et curieux !
+  title: "Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère"
+  description: "Virginie vous attend dans sa ferme avec ses adorable alpagas, doux et curieux !"
 navigation:
-  title: Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
-  description: Odysway est heureux de vous présenter Virginie ! Eleveuse d’alpagas du côté de Quimper dans le Finistère Sud, elle vous attend dans sa ferme avec ses animaux doux et curieux !
-author: contact@odysway.com
+  title: "Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère"
+  description: "Odysway est heureux de vous présenter Virginie ! Eleveuse d’alpagas du côté de Quimper dans le Finistère Sud, elle vous attend dans sa ferme avec ses animaux doux et curieux !"
+author: "contact@odysway.com"
 published: false
-publishedAt: 2021-06-14 15:39:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY
+publishedAt: "2021-06-14 15:39:00+00:00"
+tags: "alpaga, alpagas, Animaux, Bretagne, déconnexion, élevage, Finistère, France, immersion, nature, paysage, slow tourisme"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY
+image-src: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
 ---
 #publication-date
 14 juin 2021
@@ -31,7 +31,7 @@ Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY
+image-src: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
 ---
 #content
 **Vivre avec des alpagas en Bretagne ? C'est exactement ce que nous vous proposons !**

@@ -1,23 +1,23 @@
 ---
-title: Découvrir la France au fil de la côte ouest - première partie
-description: Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.
+title: "Découvrir la France au fil de la côte ouest - première partie"
+description: "Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine."
 seo:
-  title: Découvrir la France au fil de la côte ouest - 1ère partie
-  description: A la découverte de la côte ouest française et de ses richesses. Odysway vous donne quelques pistes de lieux exceptionnels à visiter...
+  title: "Découvrir la France au fil de la côte ouest - 1ère partie"
+  description: "A la découverte de la côte ouest française et de ses richesses. Odysway vous donne quelques pistes de lieux exceptionnels à visiter..."
 navigation:
-  title: Découvrir la France au fil de la côte ouest - première partie
-  description: Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.
-author: linda.tran@odysway.com
+  title: "Découvrir la France au fil de la côte ouest - première partie"
+  description: "Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-08-13 11:00:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd
+publishedAt: "2020-08-13 11:00:00+00:00"
+tags: "Europe, Famille, France, Grands espaces, Made in France, Sport, Transports insolites"
+categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd
+image-src: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
 ---
 #publication-date
 13 août 2020
@@ -31,7 +31,7 @@ Découvrir la France au fil de la côte ouest - première partie
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd
+image-src: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
 ---
 #content
 **Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.**

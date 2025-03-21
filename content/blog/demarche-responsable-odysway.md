@@ -1,23 +1,23 @@
 ---
-title: Notre démarche responsable
-description: Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet "Tribus de demain" !
+title: "Notre démarche responsable"
+description: "Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet \"Tribus de demain\" !"
 seo:
-  title: Notre démarche responsable
-  description: Proposer un tourisme responsable et accessible au plus grand nombre, telle est la mission d'Odysway avec le projet "Tribus de demain".
+  title: "Notre démarche responsable"
+  description: "Proposer un tourisme responsable et accessible au plus grand nombre, telle est la mission d'Odysway avec le projet \"Tribus de demain\"."
 navigation:
-  title: Notre démarche responsable
-  description: Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet "Tribus de demain" !
-author: romain.masina@odysway.com
+  title: "Notre démarche responsable"
+  description: "Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet \"Tribus de demain\" !"
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2023-01-06 09:00:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h
+publishedAt: "2023-01-06 09:00:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h
+image-src: "https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h"
 ---
 #publication-date
 6 janvier 2023
@@ -31,7 +31,7 @@ Notre démarche responsable
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h
+image-src: "https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h"
 ---
 #content
 Dans le cadre de notre démarche responsable, nous avons à cœur d'agir concrètement et d'apporter notre pierre à l'édifice d'un futur plus durable. Quoi de mieux que de d'imaginer notre propre projet pour une adhésion parfaite à nos valeurs ?

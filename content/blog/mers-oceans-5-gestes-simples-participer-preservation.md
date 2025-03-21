@@ -1,23 +1,23 @@
 ---
-title: Mers et océans : 5 gestes simples pour participer a leur préservation !
-description: Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ...
+title: "Mers et océans : 5 gestes simples pour participer a leur préservation !"
+description: "Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ..."
 seo:
-  title: Comment protéger mers et océans ?  | Blog Odysway
-  description: Aider a la preservation des mers et oceans en 5 gestes simples, ca vous dit ? Voici nos conseils pour accroitre notre resilience ecologique !
+  title: "Comment protéger mers et océans ?  | Blog Odysway"
+  description: "Aider a la preservation des mers et oceans en 5 gestes simples, ca vous dit ? Voici nos conseils pour accroitre notre resilience ecologique !"
 navigation:
-  title: Mers et océans : 5 gestes simples pour participer a leur préservation !
-  description: Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ...
-author: julien@quantedsquare.com
+  title: "Mers et océans : 5 gestes simples pour participer a leur préservation !"
+  description: "Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-12-19 14:50:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Benefices locaux
-displayedImg: https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ
+publishedAt: "2019-12-19 14:50:00+00:00"
+tags: "Animaux, Developpement personnel, Famille, Grands espaces"
+categories: "Nature et grands espaces, Benefices locaux"
+displayedImg: "https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ
+image-src: "https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ"
 ---
 #publication-date
 19 décembre 2019
@@ -31,7 +31,7 @@ Mers et océans : 5 gestes simples pour participer a leur préservation !
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ
+image-src: "https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ"
 ---
 #content
 Les mers et océans recouvrent **77,2 % de la superficie totale de notre** **planète**. Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la **biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine anthropique**. Des tonnes de déchets plastiques et chimiques sont déversées chaque jour dans les mers et les océans. Par surcroit, les émissions de gaz à effet de serre, le réchauffement climatique et la fonte des pôles menacent l'habitât et la survie de très nombreuses espèces vivantes. Vous voulez, a votre modeste échelle, contribuer à préserver les mers et océans ? Odysway a pense a un top 5 des gestes simples à faire pour y parvenir !

@@ -531,6 +531,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
   :::accomodation-container
   #text
   Lors de votre voyage au Népal, vous serez logés en lodge de montagne, chez l'habitant en majorité ou encore au sein d'un monastère. Les chambres sont en base double ou twin. Le confort est simple mais largement compensé par la gentillesse de vos hôtes et par la beauté des lieux ! En début et en fin de séjour, vous serez logés dans un hôtel confortable au cœur de Katmandou.
+
   
   #carousel
     ::::carousel
@@ -705,6 +706,7 @@ Détails du prix
   L'assurance voyage multirisque ou annulation
   :::
 ::
+
 
 ::title-container
 #title

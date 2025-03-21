@@ -278,6 +278,7 @@ Sauf le jour 7 où l'après-midi sera consacré à la navigation retour près de
   :::accomodation-container
   #text
   Embarquez à bord d’un bateau privatisé de 35 mètres, alliant confort et respect de l’environnement. Ancré dans des lagons paisibles, il devient un cocon flottant, idéal pour se détendre et profiter d’une atmosphère sereine. Les espaces, à la fois conviviaux et intimistes, permettent de partager des moments chaleureux ou de se retirer pour savourer le calme et les panoramas exceptionnels. Les cabines, simples mais confortables, disposent chacune d’une salle de bain privée. Celles en cale sont climatisées avec hublots, tandis que les cabines sur le pont supérieur offrent une fenêtre et un ventilateur. Chaque détail est pensé pour vous offrir une expérience agréable, tout en restant connecté à la nature environnante. Sans wifi et avec une connexion cellulaire limitée, ce séjour est une invitation à une véritable déconnexion. Laissez-vous porter par la quiétude des lagons, la sérénité du bateau et l’immensité de la mer pour vous recentrer sur l’essentiel. (Photo non contractuelle, le bateau pourra être celui-ci ou un autre assez similaire selon les dates.)
+
   
   #carousel
     ::::carousel
@@ -470,19 +471,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

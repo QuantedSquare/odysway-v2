@@ -274,6 +274,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
   :::accomodation-container
   #text
   Vous séjournerez dans le gîte de Stéphane, situé à Erbajolo, au cœur du parc naturel régional de Corse. Ce gîte offre cinq chambres confortables, une piscine pour vous détendre en journée et des espaces dédiés à l’observation astronomique. À seulement 30 minutes de Corte, il constitue un point de départ idéal pour découvrir les richesses naturelles de l’île !
+
   
   #carousel
     ::::carousel
@@ -414,19 +415,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

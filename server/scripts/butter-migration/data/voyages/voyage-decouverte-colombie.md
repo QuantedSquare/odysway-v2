@@ -403,6 +403,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
   :::accomodation-container
   #text
   Pendant ce voyage, vous séjournerez en hôtel de charme à Bogotá et à Jardin, dans un écolodge au cœur de la vallée de Cocora. Vous logerez chez l’habitant à Medellín, au sein de la Comuna 13, pour une immersion totale dans la vie locale. Enfin, à Carthagène, vous profiterez du confort d’un hôtel authentique dans le quartier historique.
+
   
   #carousel
     ::::carousel
@@ -563,19 +564,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

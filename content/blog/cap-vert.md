@@ -1,23 +1,23 @@
 ---
-title: À la découverte du Cap-Vert
-description: Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable.
+title: "À la découverte du Cap-Vert"
+description: "Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable."
 seo:
-  title: Voyager au Cap-vert en 2025
-  description: Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable.
+  title: "Voyager au Cap-vert en 2025"
+  description: "Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable."
 navigation:
-  title: À la découverte du Cap-Vert
-  description: Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable.
-author: romain.masina@odysway.com
+  title: "À la découverte du Cap-Vert"
+  description: "Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2023-05-02 07:15:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF
+publishedAt: "2023-05-02 07:15:00+00:00"
+tags: "Cap Vert"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF
+image-src: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
 ---
 #publication-date
 2 mai 2023
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF
+image-src: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
 ---
 #content
 Au large des côtes du Sénégal, **le Cap-Vert** est un archipel encore préservé du tourisme de masse. Les paysages naturels d’exception, une culture métissée et l’hospitalité des habitants font d’un [**voyage au Cap-Vert**](https://odysway.com/voyages/immersion-culturelle-cap-vert) un séjour sous le signe de l’authenticité.

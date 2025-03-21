@@ -404,6 +404,7 @@ monuments laissé en héritage. Vous visiterez donc Praia et Cidade Velha qui es
   :::accomodation-container
   #text
   Lors de votre séjour, vous serez hébergé dans une pension familiale à Cidade Velha, tenue par un couple de retraités capverdiens. Nichée dans un cadre bucolique, cette maison dispose de cinq chambres et d’une piscine idéale pour se détendre après vos journées de découverte. Le dîner sera pris dans un restaurant local situé à seulement cinq minutes à pied.
+
   
   #carousel
     ::::carousel
@@ -590,6 +591,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

@@ -1,23 +1,23 @@
 ---
-title: Comment préserver notre environnement en voyage ?
-description: Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.
+title: "Comment préserver notre environnement en voyage ?"
+description: "Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage."
 seo:
-  title: Comment préserver notre environnement en voyage ?
-  description: Comment préserver notre environnement en voyage ? Voici quelques pistes pour  limiter votre impact lors de vos prochains voyages.
+  title: "Comment préserver notre environnement en voyage ?"
+  description: "Comment préserver notre environnement en voyage ? Voici quelques pistes pour  limiter votre impact lors de vos prochains voyages."
 navigation:
-  title: Comment préserver notre environnement en voyage ?
-  description: Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.
-author: linda.tran@odysway.com
+  title: "Comment préserver notre environnement en voyage ?"
+  description: "Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-06-29 12:11:00+00:00
-tag: undefined
-categories: Benefices locaux, Blog
-displayedImg: https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA
+publishedAt: "2020-06-29 12:11:00+00:00"
+tags: "Communautés locales"
+categories: "Benefices locaux, Blog"
+displayedImg: "https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA
+image-src: "https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA"
 ---
 #publication-date
 29 juin 2020
@@ -31,7 +31,7 @@ Comment préserver notre environnement en voyage ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA
+image-src: "https://cdn.buttercms.com/F9V22mrTnerMx4zx79VA"
 ---
 #content
 **Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.**

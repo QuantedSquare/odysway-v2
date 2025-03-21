@@ -1,23 +1,23 @@
 ---
-title: Le top 10 des destinations pour un voyage sportif
-description: Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ...
+title: "Le top 10 des destinations pour un voyage sportif"
+description: "Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ..."
 seo:
-  title: Le top 10 des destinations pour un voyage sportif
-  description: Vous souhaitez allier voyage et sport ? Découvrez notre top 10 des destinations pour un voyage sportif !
+  title: "Le top 10 des destinations pour un voyage sportif"
+  description: "Vous souhaitez allier voyage et sport ? Découvrez notre top 10 des destinations pour un voyage sportif !"
 navigation:
-  title: Le top 10 des destinations pour un voyage sportif
-  description: Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ...
-author: romain.masina@odysway.com
+  title: "Le top 10 des destinations pour un voyage sportif"
+  description: "Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-03-24 15:31:00+00:00
-tag: undefined
-categories: Depassement de soi, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872
+publishedAt: "2020-03-24 15:31:00+00:00"
+tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Brésil, Chine, Costa Rica, Ethiopie, Europe, Finlande, Nepal, Perou, Sport, Sri Lanka, Thailande, Transports insolites"
+categories: "Depassement de soi, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872
+image-src: "https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872"
 ---
 #publication-date
 24 mars 2020
@@ -31,7 +31,7 @@ Le top 10 des destinations pour un voyage sportif
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872
+image-src: "https://cdn.buttercms.com/u4OjaR4cQomgQUMtvNcy?1613666905872"
 ---
 #content
 Il existe mille et une façons de découvrir et profiter d'une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, vélo au milieu des plantations de thé ou pratique des arts martiaux, vous avez l'embarras du choix. **Nous vous présentons notre top 10 des destinations pour un voyage sportif aux quatre coins du monde.**

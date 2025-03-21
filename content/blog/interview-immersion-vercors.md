@@ -1,23 +1,23 @@
 ---
-title: Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes
-description: Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps.
+title: "Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes"
+description: "Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps."
 seo:
-  title: Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes
-  description: Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps.
+  title: "Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes"
+  description: "Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps."
 navigation:
-  title: Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes
-  description: Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps.
-author: contact@odysway.com
+  title: "Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes"
+  description: "Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps."
+author: "contact@odysway.com"
 published: false
-publishedAt: 2021-05-31 14:50:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC
+publishedAt: "2021-05-31 14:50:00+00:00"
+tags: "cheval, équitation, France, immersion, nature, paysage, ranch, randonnée, tourisme équestre, Vercors, western"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC
+image-src: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
 ---
 #publication-date
 31 mai 2021
@@ -31,7 +31,7 @@ Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans 
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC
+image-src: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
 ---
 #content
 **Vivre un séjour en immersion dans un ranch en France, c’est possible ! Dans le Parc naturel régional du Vercors, Marion vous attend avec ses chevaux pour un voyage dans le temps.**

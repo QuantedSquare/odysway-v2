@@ -316,6 +316,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
   :::accomodation-container
   #text
   À Furnas, place au charme et à l’authenticité d’un residencial (en chambre multiple). Profitez de tout le confort d’une chambre d’hôte et de l’accueil chaleureux des Açoriens. Vous disposerez, en plus, d’une piscine pour vous relaxer après votre journée de découverte. Votre hôtel point de chute à Ponta Delgada (en chambre double) vous permettra d’être au cœur de l’ambiance animée de la capitale et de vivre des soirées festives en compagnie des habitants.
+
   
   #carousel
     ::::carousel
@@ -484,19 +485,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

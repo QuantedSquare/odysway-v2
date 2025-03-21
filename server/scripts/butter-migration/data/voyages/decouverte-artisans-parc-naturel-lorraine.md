@@ -269,6 +269,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
   :::accomodation-container
   #text
   
+
   false
   :::
 
@@ -433,19 +434,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

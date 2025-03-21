@@ -1,23 +1,23 @@
 ---
-title: Quels sont les principaux animaux du Costa Rica ?
-description: Vous partez observer les animaux du Costa Rica ? Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite ...
+title: "Quels sont les principaux animaux du Costa Rica ?"
+description: "Vous partez observer les animaux du Costa Rica ? Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite ..."
 seo:
-  title: Quels sont les principaux animaux du Costa Rica ? | Blog Odysway
-  description: Les animaux du Costa Rica jouissent d’une topographie extraordinaire entre mer, océan, cordillères, plaines et jungle. Voici notre liste des principaux animaux du Costa Rica. Reptiles, mammifères, oiseaux, amphibiens et invertébrés : à vos appareils photos !
+  title: "Quels sont les principaux animaux du Costa Rica ? | Blog Odysway"
+  description: "Les animaux du Costa Rica jouissent d’une topographie extraordinaire entre mer, océan, cordillères, plaines et jungle. Voici notre liste des principaux animaux du Costa Rica. Reptiles, mammifères, oiseaux, amphibiens et invertébrés : à vos appareils photos !"
 navigation:
-  title: Quels sont les principaux animaux du Costa Rica ?
-  description: Vous partez observer les animaux du Costa Rica ? Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite ...
-author: linda.tran@odysway.com
+  title: "Quels sont les principaux animaux du Costa Rica ?"
+  description: "Vous partez observer les animaux du Costa Rica ? Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 14:14:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Apprentissage, Blog
-displayedImg: https://cdn.buttercms.com/tDlmE2ZiSq2tTm3uEd4s
+publishedAt: "2020-03-06 14:14:00+00:00"
+tags: "Amerique Centrale, Animaux, Costa Rica, Famille"
+categories: "Nature et grands espaces, Apprentissage, Blog"
+displayedImg: "https://cdn.buttercms.com/tDlmE2ZiSq2tTm3uEd4s"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/tDlmE2ZiSq2tTm3uEd4s
+image-src: "https://cdn.buttercms.com/tDlmE2ZiSq2tTm3uEd4s"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Quels sont les principaux animaux du Costa Rica ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/tDlmE2ZiSq2tTm3uEd4s
+image-src: "https://cdn.buttercms.com/tDlmE2ZiSq2tTm3uEd4s"
 ---
 #content
 **Vous partez observer les animaux du Costa Rica ?** Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite 6% de la biodiversité mondiale. Selon l’Institut national de la biodiversité, 160 nouvelles espèces y sont découvertes chaque année.            

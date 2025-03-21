@@ -395,6 +395,7 @@ Puis, il sera temps de prendre la route vers le sanctuaire principal, un dernier
   :::accomodation-container
   #text
   Les hébergements jouent un rôle unique dans cette immersion, créant des moments forts au cœur de la nature namibienne. Au sein du sanctuaire, des tentes robustes, alimentées par l'énergie solaire, vous plongent dans une immersion totale au cœur de la nature. Selon la saison, à Neuras, vous pourrez dormir à la belle étoile. Un matelas vous sera fourni. Nous vous conseillons d’apporter un sac de couchage. Des hébergements en lodge peuvent vous être proposés (sur devis et selon disponibilité) Dans les deux réserves, vous disposerez d’une piscine, d’un bar et d’un service de blanchisserie
+
   
   #carousel
     ::::carousel
@@ -560,19 +561,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

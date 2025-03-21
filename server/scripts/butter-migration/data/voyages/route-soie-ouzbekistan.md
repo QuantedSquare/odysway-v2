@@ -389,6 +389,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
   :::accomodation-container
   #text
   Vous logerez en hôtel dans les villes à Tachkent, Samarkand et Boukhara ; en maison d'hôtes lors des immersions chez l'habitant à Yakkabog et Vobkent ; et en yourte dans le désert.
+
   
   #carousel
     ::::carousel
@@ -561,6 +562,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

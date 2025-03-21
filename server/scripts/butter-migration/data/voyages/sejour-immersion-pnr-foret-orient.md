@@ -242,6 +242,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
   :::accomodation-container
   #text
   C'est au château de Brantigny que vous serez accueillis par vos hôtes, Gildas, son épouse, mais aussi ses frères, qui vivent aussi sur le domaine. C'est une famille de passionnés que vous rencontrerez, tous ont un savoir-faire unique à partager, et une histoire commune autour de ce château, qu'ils ont rénové ensemble. Les chambres sont confortables et spacieuses, et offrent une vue sur le parc du château. C'est l'endroit parfait pour déconnecter et se ressourcer en pleine nature, tout en vivant la vie de château !
+
   
   #carousel
     ::::carousel
@@ -372,19 +373,7 @@ Détails du prix
 
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

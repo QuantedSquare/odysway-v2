@@ -1,25 +1,27 @@
 ---
-title: Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande
-description: La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
-Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
+title: "Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande"
+description: |
+    La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
+    Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
 seo:
-  title: Récits de Voyage de Loïc Dauphin | Blog Odysway
-  description: Partez vivre une immersion dans un camp de boxe en Thaïlande pour vous initier à l'art du Muay-Thaï ! Découvrez le témoignage de Loïc !
+  title: "Récits de Voyage de Loïc Dauphin | Blog Odysway"
+  description: "Partez vivre une immersion dans un camp de boxe en Thaïlande pour vous initier à l'art du Muay-Thaï ! Découvrez le témoignage de Loïc !"
 navigation:
-  title: Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande
-  description: La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
-Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
-author: linda.tran@odysway.com
+  title: "Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande"
+  description: |
+    La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
+    Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-10-29 15:14:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Developpement Personnel, Blog
-displayedImg: https://cdn.buttercms.com/WdMaLkdsRJyIJ73QaG7I?1606149652336
+publishedAt: "2020-10-29 15:14:00+00:00"
+tags: "Asie, Sports, Thailande"
+categories: "Nature et grands espaces, Developpement Personnel, Blog"
+displayedImg: "https://cdn.buttercms.com/WdMaLkdsRJyIJ73QaG7I?1606149652336"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/WdMaLkdsRJyIJ73QaG7I?1606149652336
+image-src: "https://cdn.buttercms.com/WdMaLkdsRJyIJ73QaG7I?1606149652336"
 ---
 #publication-date
 29 octobre 2020
@@ -33,7 +35,7 @@ Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/WdMaLkdsRJyIJ73QaG7I?1606149652336
+image-src: "https://cdn.buttercms.com/WdMaLkdsRJyIJ73QaG7I?1606149652336"
 ---
 #content
 La **Boxe Thaïlandaise** ou **_Muay-Thaï_** est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai **camp de boxe en Thaïlande**, loin des nombreux circuits touristiques…

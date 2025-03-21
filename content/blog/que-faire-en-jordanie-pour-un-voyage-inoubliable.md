@@ -1,23 +1,23 @@
 ---
-title: Que faire lors d'un voyage en Jordanie ?
-description: Vous rêvez d'un voyage en Jordanie riche en aventures et découvertes ? Dans cet article, nous vous dévoilerons un itinéraire inoubliable pour savoir que faire en Jordanie. Des trésors antiques de Petra aux immensités désertiques de Wadi Rum, en passant par des rencontres authentiques avec les Bédouins, chaque étape de ce voyage vous promet des moments magiques et marquants. Embarquez avec nous pour un voyage unique et mémorable au cœur de la Jordanie !
+title: "Que faire lors d'un voyage en Jordanie ?"
+description: "Vous rêvez d'un voyage en Jordanie riche en aventures et découvertes ? Dans cet article, nous vous dévoilerons un itinéraire inoubliable pour savoir que faire en Jordanie. Des trésors antiques de Petra aux immensités désertiques de Wadi Rum, en passant par des rencontres authentiques avec les Bédouins, chaque étape de ce voyage vous promet des moments magiques et marquants. Embarquez avec nous pour un voyage unique et mémorable au cœur de la Jordanie !"
 seo:
-  title: Que faire lors d'un voyage en Jordanie ?
-  description: Que faire en Jordanie ? Vivez un voyage unique à travers cet itinéraire unique entre Petra, Wadi Rum et la rencontre avec les Bédouins !
+  title: "Que faire lors d'un voyage en Jordanie ?"
+  description: "Que faire en Jordanie ? Vivez un voyage unique à travers cet itinéraire unique entre Petra, Wadi Rum et la rencontre avec les Bédouins !"
 navigation:
-  title: Que faire lors d'un voyage en Jordanie ?
-  description: Vous rêvez d'un voyage en Jordanie riche en aventures et découvertes ? Dans cet article, nous vous dévoilerons un itinéraire inoubliable pour savoir que faire en Jordanie. Des trésors antiques de Petra aux immensités désertiques de Wadi Rum, en passant par des rencontres authentiques avec les Bédouins, chaque étape de ce voyage vous promet des moments magiques et marquants. Embarquez avec nous pour un voyage unique et mémorable au cœur de la Jordanie !
-author: linda.tran@odysway.com
+  title: "Que faire lors d'un voyage en Jordanie ?"
+  description: "Vous rêvez d'un voyage en Jordanie riche en aventures et découvertes ? Dans cet article, nous vous dévoilerons un itinéraire inoubliable pour savoir que faire en Jordanie. Des trésors antiques de Petra aux immensités désertiques de Wadi Rum, en passant par des rencontres authentiques avec les Bédouins, chaque étape de ce voyage vous promet des moments magiques et marquants. Embarquez avec nous pour un voyage unique et mémorable au cœur de la Jordanie !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2023-07-27 14:17:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/9FmOJSj0Q9uxqFQEjIYt
+publishedAt: "2023-07-27 14:17:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/9FmOJSj0Q9uxqFQEjIYt"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/9FmOJSj0Q9uxqFQEjIYt
+image-src: "https://cdn.buttercms.com/9FmOJSj0Q9uxqFQEjIYt"
 ---
 #publication-date
 27 juillet 2023
@@ -31,7 +31,7 @@ La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/9FmOJSj0Q9uxqFQEjIYt
+image-src: "https://cdn.buttercms.com/9FmOJSj0Q9uxqFQEjIYt"
 ---
 #content
 La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une destination de choix pour les voyageurs en quête d'aventure et de découvertes. Des ruines majestueuses de Petra aux vastes déserts de Wadi Rum, en passant par les rencontres chaleureuses avec les Bédouins, ce voyage en Jordanie vous promet une expérience unique et mémorable. Dans cet article, nous vous dévoilons un itinéraire captivant pour savoir que faire en Jordanie et profiter pleinement de votre voyage dans ce joyau du Moyen-Orient.

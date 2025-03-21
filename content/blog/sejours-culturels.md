@@ -1,27 +1,29 @@
 ---
-title: Séjour Culturel : un voyage sous un autre regard
-description: S'évader pour un séjour culturel dans des pays alliant paysages à couper le souffle, expériences humaines et immersion dans les cultures locales est le moyen idéal de faire rimer culture et aventure.
-Partez en quête d’histoire et de traditions, à la rencontre des populations locales pour partager leur quotidien, visitez des lieux uniques et expérimentez le voyage culturel immersif, vous n’en reviendrez pas ! 
-Le voyage culturel immersif est aussi un moyen de voyager de manière solidaire, éco-responsable et éthique, dans le respect de l’autre et de la planète.
+title: "Séjour Culturel : un voyage sous un autre regard"
+description: |
+    S'évader pour un séjour culturel dans des pays alliant paysages à couper le souffle, expériences humaines et immersion dans les cultures locales est le moyen idéal de faire rimer culture et aventure.
+    Partez en quête d’histoire et de traditions, à la rencontre des populations locales pour partager leur quotidien, visitez des lieux uniques et expérimentez le voyage culturel immersif, vous n’en reviendrez pas ! 
+    Le voyage culturel immersif est aussi un moyen de voyager de manière solidaire, éco-responsable et éthique, dans le respect de l’autre et de la planète.
 seo:
-  title: Séjour culturel : un voyage sous un autre regard
-  description: Les séjours culturels en immersion sont le meilleur moyen d’allier culture et découverte d’un pays. Plongez au cœur du voyage culturel.
+  title: "Séjour culturel : un voyage sous un autre regard"
+  description: "Les séjours culturels en immersion sont le meilleur moyen d’allier culture et découverte d’un pays. Plongez au cœur du voyage culturel."
 navigation:
-  title: Séjour Culturel : un voyage sous un autre regard
-  description: S'évader pour un séjour culturel dans des pays alliant paysages à couper le souffle, expériences humaines et immersion dans les cultures locales est le moyen idéal de faire rimer culture et aventure.
-Partez en quête d’histoire et de traditions, à la rencontre des populations locales pour partager leur quotidien, visitez des lieux uniques et expérimentez le voyage culturel immersif, vous n’en reviendrez pas ! 
-Le voyage culturel immersif est aussi un moyen de voyager de manière solidaire, éco-responsable et éthique, dans le respect de l’autre et de la planète.
-author: linda.tran@odysway.com
+  title: "Séjour Culturel : un voyage sous un autre regard"
+  description: |
+    S'évader pour un séjour culturel dans des pays alliant paysages à couper le souffle, expériences humaines et immersion dans les cultures locales est le moyen idéal de faire rimer culture et aventure.
+    Partez en quête d’histoire et de traditions, à la rencontre des populations locales pour partager leur quotidien, visitez des lieux uniques et expérimentez le voyage culturel immersif, vous n’en reviendrez pas ! 
+    Le voyage culturel immersif est aussi un moyen de voyager de manière solidaire, éco-responsable et éthique, dans le respect de l’autre et de la planète.
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-05 14:44:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-05 14:44:00+00:00"
+tags: "Communautés locales"
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 5 novembre 2020
@@ -35,7 +37,7 @@ S'évader pour un séjour culturel dans des pays alliant paysages à couper le s
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 S'évader pour un **séjour culturel** dans des pays alliant paysages à couper le souffle, expériences humaines et immersion dans les cultures locales est le moyen idéal de faire rimer culture et aventure.

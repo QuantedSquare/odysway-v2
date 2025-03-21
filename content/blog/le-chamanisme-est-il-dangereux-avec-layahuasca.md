@@ -1,23 +1,23 @@
 ---
-title: Le chamanisme est-il dangereux avec l'ayahuasca?
-description: Depuis quelques années, le voyage spirituel connait un véritable boom, notamment dans certains pays d'Asie ou d'Amérique du Sud. Le Tibet et le Pérou sont des destinations phares pour ceux qui souhaitent réaliser un voyage intérieur et guérir de leurs maux. Auprès d'un chaman, ils vont être guides ...
+title: "Le chamanisme est-il dangereux avec l'ayahuasca?"
+description: "Depuis quelques années, le voyage spirituel connait un véritable boom, notamment dans certains pays d'Asie ou d'Amérique du Sud. Le Tibet et le Pérou sont des destinations phares pour ceux qui souhaitent réaliser un voyage intérieur et guérir de leurs maux. Auprès d'un chaman, ils vont être guides ..."
 seo:
-  title: Le chamanisme est-il dangereux avec l'ayahuasca ? | Blog Odysway
-  description: Voyage spirituel et ayahuasca : le chamanisme est-il dangereux? Découvrez tout ce qu'il faut savoir sur l'ayahuasca et le chamanisme dans cet article.
+  title: "Le chamanisme est-il dangereux avec l'ayahuasca ? | Blog Odysway"
+  description: "Voyage spirituel et ayahuasca : le chamanisme est-il dangereux? Découvrez tout ce qu'il faut savoir sur l'ayahuasca et le chamanisme dans cet article."
 navigation:
-  title: Le chamanisme est-il dangereux avec l'ayahuasca?
-  description: Depuis quelques années, le voyage spirituel connait un véritable boom, notamment dans certains pays d'Asie ou d'Amérique du Sud. Le Tibet et le Pérou sont des destinations phares pour ceux qui souhaitent réaliser un voyage intérieur et guérir de leurs maux. Auprès d'un chaman, ils vont être guides ...
-author: julien@quantedsquare.com
+  title: "Le chamanisme est-il dangereux avec l'ayahuasca?"
+  description: "Depuis quelques années, le voyage spirituel connait un véritable boom, notamment dans certains pays d'Asie ou d'Amérique du Sud. Le Tibet et le Pérou sont des destinations phares pour ceux qui souhaitent réaliser un voyage intérieur et guérir de leurs maux. Auprès d'un chaman, ils vont être guides ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-05-13 08:26:00+00:00
-tag: undefined
-categories: Culture et decouverte, Developpement Personnel
-displayedImg: https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj
+publishedAt: "2019-05-13 08:26:00+00:00"
+tags: "Amerique du Sud, Communautés locales, Developpement personnel, Famille, Perou"
+categories: "Culture et decouverte, Developpement Personnel"
+displayedImg: "https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj
+image-src: "https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj"
 ---
 #publication-date
 13 mai 2019
@@ -31,7 +31,7 @@ Le chamanisme est-il dangereux avec l'ayahuasca?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj
+image-src: "https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj"
 ---
 #content
 Depuis quelques années, le **voyage spirituel** connaît un véritable boom, notamment dans certains pays d’Asie ou d’Amérique du Sud. Le Tibet et le Pérou sont des destinations phares pour ceux qui souhaitent réaliser un voyage intérieur et guérir de leurs maux. Auprès d’un chamane, ils vont être guidés sur la route du bien-être spirituel et physique. Mais au Pérou, l’utilisation de l’**ayahuasca**, une plante hallucinogène, amène la question suivante : **le chamanisme est-il dangereux ?** Faisons le point.

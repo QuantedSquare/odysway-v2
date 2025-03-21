@@ -375,6 +375,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
   :::accomodation-container
   #text
   Les hébergements jouent un rôle unique dans cette immersion, créant des moments forts au cœur de la nature namibienne. Au sein du sanctuaire, des tentes robustes, alimentées par l'énergie solaire, vous plongent dans une immersion totale au cœur de la nature. Durant la deuxième semaine, vous logerez dans une maison, offrant des chambres doubles dotées de salles de bains privées, une salle à manger spacieuse, un salon confortable et une terrasse paisible munie d'un barbecue. La piscine, offrant des vues magnifiques sur la réserve, vous permettra de vous rafraîchir en fin de journée. Que ce soit dans la douce intimité des tentes solides ou le confort de la maison, chaque moment passé dans ces logements contribue à enrichir votre séjour, en harmonie avec la nature namibienne.
+
   
   #carousel
     ::::carousel
@@ -527,6 +528,7 @@ Détails du prix
   L'assurance voyage multirisque ou annulation
   :::
 ::
+
 
 ::title-container
 #title

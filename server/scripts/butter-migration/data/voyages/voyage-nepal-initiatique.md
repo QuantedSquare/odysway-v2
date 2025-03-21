@@ -174,6 +174,7 @@ right-sticky: true
   :::accomodation-container
   #text
   
+
   false
   :::
 
@@ -244,19 +245,7 @@ Détails du prix
 
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -1,23 +1,23 @@
 ---
-title: Voyage insolite en 2025 : nos idées d’évasion pour tous
-description: Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous.
+title: "Voyage insolite en 2025 : nos idées d’évasion pour tous"
+description: "Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous."
 seo:
-  title: Idées de voyage insolite en 2025
-  description: Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous.
+  title: "Idées de voyage insolite en 2025"
+  description: "Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous."
 navigation:
-  title: Voyage insolite en 2025 : nos idées d’évasion pour tous
-  description: Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous.
-author: romain.masina@odysway.com
+  title: "Voyage insolite en 2025 : nos idées d’évasion pour tous"
+  description: "Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2025-01-20 06:28:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL
+publishedAt: "2025-01-20 06:28:00+00:00"
+tags: "conseils, insolite"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL
+image-src: "https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL"
 ---
 #publication-date
 20 janvier 2025
@@ -31,7 +31,7 @@ Voyage insolite en 2025 : nos idées d’évasion pour tous
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL
+image-src: "https://cdn.buttercms.com/WgDfxwTASsqxDDagGtjL"
 ---
 #content
 Poussés par l’envie de découvrir un pays autrement, beaucoup misent sur le **voyage insolite**. Mais qu’entend-on par là ? C’est tout simplement un voyage qui sort de l’ordinaire tant sur la façon de se déplacer, de se loger ou de prendre part à des activités. Meilleure connexion à la nature, retrouver une certaine authenticité, telles sont les attentes de celles et ceux en quête d’évasion originale. Et si c’était à votre tour de tenter l’expérience ? À deux, en famille ou entre amis, on vous partage nos idées de voyages insolites !

@@ -451,6 +451,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
   :::accomodation-container
   #text
   Pendant ce séjour, vous logerez en hôtel 3\* lors des différentes étapes de votre voyage au Laos et chez l'habitant lors de votre immersion chez les Cornacs les jours 3 à 5.
+
   
   #carousel
     ::::carousel
@@ -641,19 +642,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -1,23 +1,23 @@
 ---
-title: Ou partir cet été ?
-description: Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Que vous soyez à la recherche d'aventures, de détente, de voyages authentiques ou spirituel ou d'une combinaison des trois, voici 5 destinations à ne pas manquer cet été.
+title: "Ou partir cet été ?"
+description: "Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Que vous soyez à la recherche d'aventures, de détente, de voyages authentiques ou spirituel ou d'une combinaison des trois, voici 5 destinations à ne pas manquer cet été."
 seo:
-  title: Ou partir cet été ?
-  description: Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Mais ou partir cet été ?
+  title: "Ou partir cet été ?"
+  description: "Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Mais ou partir cet été ?"
 navigation:
-  title: Ou partir cet été ?
-  description: Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Que vous soyez à la recherche d'aventures, de détente, de voyages authentiques ou spirituel ou d'une combinaison des trois, voici 5 destinations à ne pas manquer cet été.
-author: linda.tran@odysway.com
+  title: "Ou partir cet été ?"
+  description: "Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Que vous soyez à la recherche d'aventures, de détente, de voyages authentiques ou spirituel ou d'une combinaison des trois, voici 5 destinations à ne pas manquer cet été."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2023-04-10 14:53:00+00:00
-tag: undefined
-categories: ou partir cet été, vacances d'été
-displayedImg: https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE
+publishedAt: "2023-04-10 14:53:00+00:00"
+tags: "été, séjour, vacances, voyage"
+categories: "ou partir cet été, vacances d'été"
+displayedImg: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE
+image-src: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
 ---
 #publication-date
 10 avril 2023
@@ -31,7 +31,7 @@ Ou partir cet été ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE
+image-src: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
 ---
 #content
 ## Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons.

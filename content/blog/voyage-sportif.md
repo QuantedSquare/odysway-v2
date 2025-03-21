@@ -1,23 +1,23 @@
 ---
-title: Voyage Sportif : dépassement et évasion
-description: Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !
+title: "Voyage Sportif : dépassement et évasion"
+description: "Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !"
 seo:
-  title: Voyage Sportif : dépassement et évasion
-  description: Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !
+  title: "Voyage Sportif : dépassement et évasion"
+  description: "Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !"
 navigation:
-  title: Voyage Sportif : dépassement et évasion
-  description: Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !
-author: linda.tran@odysway.com
+  title: "Voyage Sportif : dépassement et évasion"
+  description: "Le voyage sportif est idéal pour se dépasser et s'évader en même temps. Pratiquer une activité physique tout en découvrant un pays, c’est possible avec Odysway !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-24 12:56:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-24 12:56:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 24 novembre 2020
@@ -31,7 +31,7 @@ Voyage Sportif : dépassement et évasion
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Le **voyage sportif** a le vent en poupe !  Il permet d'allier activité physique, découverte d’un pays et immersion dans la culture locale grâce à la **pratique du sport** entre passionnés.

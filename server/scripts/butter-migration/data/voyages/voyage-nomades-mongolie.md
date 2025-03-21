@@ -347,6 +347,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
   :::accomodation-container
   #text
   À Oulan-Bator, vous séjournerez dans un hôtel confortable, idéalement situé près du centre-ville. Lors des autres étapes, vous vivrez l’expérience nomade en dormant dans des yourtes traditionnelles, chez l’habitant ou en camps de yourtes. Selon la composition du groupe, certains logements pourront être partagés.
+
   
   #carousel
     ::::carousel
@@ -501,6 +502,7 @@ Détails du prix
   Facultatif : assurance voyage annulation ou multi-risques (devis sur demande)
   :::
 ::
+
 
 ::title-container
 #title

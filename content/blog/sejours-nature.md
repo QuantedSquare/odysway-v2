@@ -1,31 +1,33 @@
 ---
-title: Séjour Nature : se déconnecter du quotidien
-description: Le bruit permanent, la pollution, les embouteillages, le stress...Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
-La vie en ville offre bon nombre d’avantages mais nous payons souvent un prix assez lourd afin de vivre une vie citadine - fatigue, stress, dépression, insatisfaction, perte de motivation, la liste est longue.
-Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
-Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
-La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
+title: "Séjour Nature : se déconnecter du quotidien"
+description: |
+    Le bruit permanent, la pollution, les embouteillages, le stress...Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
+    La vie en ville offre bon nombre d’avantages mais nous payons souvent un prix assez lourd afin de vivre une vie citadine - fatigue, stress, dépression, insatisfaction, perte de motivation, la liste est longue.
+    Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
+    Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
+    La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
 seo:
-  title: Séjours Nature : se déconnecter du quotidien
-  description: Comme une envie de vous échapper des grandes villes et de vous reconnecter à la source, aux grands espaces et à la nature ? On vous donne la clé des champs !
+  title: "Séjours Nature : se déconnecter du quotidien"
+  description: "Comme une envie de vous échapper des grandes villes et de vous reconnecter à la source, aux grands espaces et à la nature ? On vous donne la clé des champs !"
 navigation:
-  title: Séjour Nature : se déconnecter du quotidien
-  description: Le bruit permanent, la pollution, les embouteillages, le stress...Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
-La vie en ville offre bon nombre d’avantages mais nous payons souvent un prix assez lourd afin de vivre une vie citadine - fatigue, stress, dépression, insatisfaction, perte de motivation, la liste est longue.
-Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
-Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
-La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
-author: linda.tran@odysway.com
+  title: "Séjour Nature : se déconnecter du quotidien"
+  description: |
+    Le bruit permanent, la pollution, les embouteillages, le stress...Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
+    La vie en ville offre bon nombre d’avantages mais nous payons souvent un prix assez lourd afin de vivre une vie citadine - fatigue, stress, dépression, insatisfaction, perte de motivation, la liste est longue.
+    Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
+    Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
+    La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-16 17:36:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-16 17:36:00+00:00"
+tags: "Communautés locales"
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 16 novembre 2020
@@ -39,7 +41,7 @@ Le bruit permanent, la pollution, les embouteillages, le stress… Ça vous rapp
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Le bruit permanent, la pollution, les embouteillages, le stress… Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !

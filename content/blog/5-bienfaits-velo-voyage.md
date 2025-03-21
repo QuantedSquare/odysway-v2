@@ -1,23 +1,23 @@
 ---
-title: 5 bienfaits du vélo en voyage
-description: De nos jours, il n'est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport a part entière. En plus de ne pas nuire à l'environnement, il permet une tout autre approche du voyage. Découvrons 5 ...
+title: "5 bienfaits du vélo en voyage"
+description: "De nos jours, il n'est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport a part entière. En plus de ne pas nuire à l'environnement, il permet une tout autre approche du voyage. Découvrons 5 ..."
 seo:
-  title: Les bienfaits du vélo : 5 raisons de faire du vélo en voyage | Blog Odysway
-  description: Quels sont les bienfaits du vélo et pourquoi choisir ce moyen de transport lorsque vous êtes en voyage ? Découvrez 5 raisons dans cet article !
+  title: "Les bienfaits du vélo : 5 raisons de faire du vélo en voyage | Blog Odysway"
+  description: "Quels sont les bienfaits du vélo et pourquoi choisir ce moyen de transport lorsque vous êtes en voyage ? Découvrez 5 raisons dans cet article !"
 navigation:
-  title: 5 bienfaits du vélo en voyage
-  description: De nos jours, il n'est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport a part entière. En plus de ne pas nuire à l'environnement, il permet une tout autre approche du voyage. Découvrons 5 ...
-author: julien@quantedsquare.com
+  title: "5 bienfaits du vélo en voyage"
+  description: "De nos jours, il n'est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport a part entière. En plus de ne pas nuire à l'environnement, il permet une tout autre approche du voyage. Découvrons 5 ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-05-20 15:50:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774
+publishedAt: "2019-05-20 15:50:00+00:00"
+tags: "Asie, Grands espaces, Sri Lanka, Transports insolites"
+categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774
+image-src: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
 ---
 #publication-date
 20 mai 2019
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774
+image-src: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
 ---
 #content
 De nos jours, il n’est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport à part entière. En plus de ne pas nuire à l’environnement, il permet une tout autre approche du voyage. **Découvrons 5 bienfaits du vélo en voyage.**

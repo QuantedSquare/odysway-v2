@@ -423,6 +423,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
   :::accomodation-container
   #text
   Parce qu’un tel voyage ne se vit (peut-être) qu’une fois, nous avons sélectionné des hébergements en cœur de ville afin que vous puissiez être au plus près du quotidien des habitants et un logement plus tradtionnel pour votre escapade au pied du Mont Fuji. À Kyoto, vous serez logé dans un hôtel dans le quartier de Gion, un quartier traditionnel où demeurent les splendides et énigmatiques geishas. Découvrez la quiétude d'un Ryokan, auberge tradtionnelle japonaise, lors de vos nuits à Hakone. Tout autre cadre à Tokyo où votre hôtel sera situé dans Shinjuku, là où l’activité diurne et nocturne bat son plein. Deux lieux, deux ambiances, mais un seul maître mot : une immersion 100 % japonaise.
+
   
   #carousel
     ::::carousel
@@ -602,6 +603,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

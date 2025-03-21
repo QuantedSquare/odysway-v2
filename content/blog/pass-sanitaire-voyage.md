@@ -1,23 +1,23 @@
 ---
-title: Pass sanitaire : tout savoir pour son prochain voyage en 5 points
-description: Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !
+title: "Pass sanitaire : tout savoir pour son prochain voyage en 5 points"
+description: "Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !"
 seo:
-  title: Voyage et Pass sanitaire : tout comprendre en 5 points
-  description: Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. On vous explique tout en 5 points !
+  title: "Voyage et Pass sanitaire : tout comprendre en 5 points"
+  description: "Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. On vous explique tout en 5 points !"
 navigation:
-  title: Pass sanitaire : tout savoir pour son prochain voyage en 5 points
-  description: Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !
-author: linda.tran@odysway.com
+  title: "Pass sanitaire : tout savoir pour son prochain voyage en 5 points"
+  description: "Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2021-08-26 08:37:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr
+publishedAt: "2021-08-26 08:37:00+00:00"
+tags: "Actualités, Covid"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr
+image-src: "https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr"
 ---
 #publication-date
 26 août 2021
@@ -31,7 +31,7 @@ Pass sanitaire : tout savoir pour son prochain voyage en 5 points
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr
+image-src: "https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr"
 ---
 #content
 **Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Vaccination ou test de dépistage, quels sont les critères pour obtenir ce fameux sésame afin d’explorer les mille richesses de notre territoire et d’ailleurs ? Sans compter que chaque pays – la France comprise – a mis en place ses propres modalités d’entrée. Pour y voir plus clair, Odysway fait le point sur le pass sanitaire afin que vous puissiez partir en voyage dans les meilleures conditions.**

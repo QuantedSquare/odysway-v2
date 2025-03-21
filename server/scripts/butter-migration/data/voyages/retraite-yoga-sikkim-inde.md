@@ -465,6 +465,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
   :::accomodation-container
   #text
   Lors de ce voyage, vous logerez dans des hôtels 4\* hôtel avant et après l'immersion dans le Sikkim. Pendant la retraite, vous serez accueillis dans une maison privatisée et très confortable, idéalement localisée. Le détail ci-dessous : — Une nuit dans un hôtel 4\* à Siliguri (Bengale) - 10 nuits dans une maison durant votre retraite dans le Sikkim (Voir photos). Une nuit dans le village d’une communauté locale — une nuit dans un Resort dans l’ouest du Sikkim et une nuit à Delhi dans un hôtel 4 ou 5\* sur le retour.
+
   
   #carousel
     ::::carousel
@@ -647,6 +648,7 @@ Détails du prix
   Les dépenses personnelles sur place
   :::
 ::
+
 
 ::title-container
 #title

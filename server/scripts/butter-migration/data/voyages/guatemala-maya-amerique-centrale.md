@@ -476,6 +476,7 @@ Après cette rencontre, voguez sur les eaux du lac en kayak. Pagayez au cœur de
   :::accomodation-container
   #text
   Profitez de vos 6 premières nuits dans un hôtel situé à Antigua Guatemala offrant une terrasse avec vue sur la ville. Lors de l'ascension du volcan, vivez une expérience unique avec une nuit en campement à 3600 mètres d'altitude. Tous les équipements vous seront fournis. Pour vos 5 prochaines nuits, profitez d'un hébergement en chambre base double dans une maison individuelle en bord de lac. La dernière nuit aura lieu en hôtel à Panajachel, situé sur la ravie opposé du lac, dans un cadre apaisant.
+
   
   #carousel
     ::::carousel
@@ -658,19 +659,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

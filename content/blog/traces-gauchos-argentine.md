@@ -1,23 +1,23 @@
 ---
-title: Sur les traces des gauchos en Argentine
-description: Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ...
+title: "Sur les traces des gauchos en Argentine"
+description: "Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ..."
 seo:
-  title: Sur les traces des gauchos en Argentine | Blog Odysway
-  description: Les gauchos peuplent l'Argentine depuis plusieurs siècles. Partons sur leurs traces pour découvrir leur mode de vie à travers la pampa.
+  title: "Sur les traces des gauchos en Argentine | Blog Odysway"
+  description: "Les gauchos peuplent l'Argentine depuis plusieurs siècles. Partons sur leurs traces pour découvrir leur mode de vie à travers la pampa."
 navigation:
-  title: Sur les traces des gauchos en Argentine
-  description: Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ...
-author: julien@quantedsquare.com
+  title: "Sur les traces des gauchos en Argentine"
+  description: "Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-07-29 13:57:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691
+publishedAt: "2019-07-29 13:57:00+00:00"
+tags: "Amerique du Sud, Argentine, Communautés locales, Grands espaces"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691
+image-src: "https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691"
 ---
 #publication-date
 29 juillet 2019
@@ -31,7 +31,7 @@ Sur les traces des gauchos en Argentine
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691
+image-src: "https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691"
 ---
 #content
 Peuple fier aux traditions fortes, **les gauchos peuplent l’Argentine depuis plusieurs siècles**. Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d’Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces de ce peuple à part entière.

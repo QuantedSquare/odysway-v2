@@ -1,23 +1,23 @@
 ---
-title: Dormir dans un hôtel de glace
-description: En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d'un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus ...
+title: "Dormir dans un hôtel de glace"
+description: "En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d'un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus ..."
 seo:
-  title: Dormir dans un hôtel de glace | Blog Odysway
-  description: Vous voulez vivre une nuit insolite ? Dormir dans un hôtel de glace est une expérience incroyable à vivre au moins une fois dans sa vie !
+  title: "Dormir dans un hôtel de glace | Blog Odysway"
+  description: "Vous voulez vivre une nuit insolite ? Dormir dans un hôtel de glace est une expérience incroyable à vivre au moins une fois dans sa vie !"
 navigation:
-  title: Dormir dans un hôtel de glace
-  description: En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d'un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus ...
-author: julien@quantedsquare.com
+  title: "Dormir dans un hôtel de glace"
+  description: "En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d'un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-02-15 08:10:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/Hhf2xZj5R7i6bDBV3g8o?1611158894329
+publishedAt: "2019-02-15 08:10:00+00:00"
+tags: "Europe"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/Hhf2xZj5R7i6bDBV3g8o?1611158894329"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/Hhf2xZj5R7i6bDBV3g8o?1611158894329
+image-src: "https://cdn.buttercms.com/Hhf2xZj5R7i6bDBV3g8o?1611158894329"
 ---
 #publication-date
 15 février 2019
@@ -31,7 +31,7 @@ Dormir dans un hôtel de glace
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/Hhf2xZj5R7i6bDBV3g8o?1611158894329
+image-src: "https://cdn.buttercms.com/Hhf2xZj5R7i6bDBV3g8o?1611158894329"
 ---
 #content
 En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d’un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus de curieux tentés une expérience originale. Si vous n’avez pas froid aux yeux, **dormir dans un hôtel de glace** peut s’avérer plus chaleureux qu’il n’en paraît.

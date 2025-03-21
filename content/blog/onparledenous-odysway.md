@@ -1,23 +1,23 @@
 ---
-title: #Onparledenous #Odysway
-description: Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ...
+title: "#Onparledenous #Odysway"
+description: "Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ..."
 seo:
-  title: On parle de nous | Blog Odysway
-  description: Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versa
+  title: "On parle de nous | Blog Odysway"
+  description: "Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versa"
 navigation:
-  title: #Onparledenous #Odysway
-  description: Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ...
-author: julien@quantedsquare.com
+  title: "#Onparledenous #Odysway"
+  description: "Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-10-30 07:30:00+00:00
-tag: undefined
-categories: News Odysway
-displayedImg: https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815
+publishedAt: "2018-10-30 07:30:00+00:00"
+tags: ""
+categories: "News Odysway"
+displayedImg: "https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815
+image-src: "https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815"
 ---
 #publication-date
 30 octobre 2018
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815
+image-src: "https://cdn.buttercms.com/xteGDJlRQQiIzq94QnKg?1612351255815"
 ---
 #content
 Odysway a participé en tant que startup invitée au 40ème salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu à la porte de Versailles à Paris.

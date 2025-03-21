@@ -1,23 +1,23 @@
 ---
-title: Où partir en Hiver pour profiter des vacances ?
-description: Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver.
+title: "Où partir en Hiver pour profiter des vacances ?"
+description: "Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver."
 seo:
-  title: Où partir en hiver pour profiter des vacances ?
-  description: Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver.
+  title: "Où partir en hiver pour profiter des vacances ?"
+  description: "Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver."
 navigation:
-  title: Où partir en Hiver pour profiter des vacances ?
-  description: Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver.
-author: linda.tran@odysway.com
+  title: "Où partir en Hiver pour profiter des vacances ?"
+  description: "Êtes-vous plutôt mer ou montagne pour vos vacances d’hiver ? Le monde est vaste et les possibilités sont grandes pour vos prochaines vacances d’hiver."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-30 11:28:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-30 11:28:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 30 novembre 2020
@@ -31,7 +31,7 @@ Partir en hiver est toujours très excitant tant l’immensité du monde vous of
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 **Partir en hiver** est toujours très excitant tant l’immensité du monde vous offre un large choix de destinations à sélectionner selon vos préférences climatiques !

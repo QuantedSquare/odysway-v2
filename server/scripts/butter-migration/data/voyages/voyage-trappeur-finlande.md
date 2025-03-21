@@ -356,6 +356,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
   :::accomodation-container
   #text
   Lors de ce voyage, vous passerez 4 nuits dans le camp de base et 3 nuits en cabane de trappeur : Les nuits des jours 1, 2,6 et 7 : Camp de base : Vous serez logés dans un chalet traditionnel. Les nuits des jours 3, 4 et 5 : Cabanes de trappeur : Elles s'apparentent aux refuges que l'on trouve en France. Ces cabanes en bois sont simples mais charmantes. Elles disposent d’un espace dortoir ou d'une chambre pouvant accueillir 4 à 6 personnes, agrémentées d’une pièce à vivre. Certaines sont équipées d'un sauna pour une détente optimale. Nichées au bord d'un lac et entourées par la forêt, ces cabanes offrent un panorama idéal pour contempler le coucher du soleil !
+
   
   #carousel
     ::::carousel
@@ -514,19 +515,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

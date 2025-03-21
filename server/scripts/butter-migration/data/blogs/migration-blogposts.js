@@ -33,6 +33,25 @@ turndownService.addRule('images', {
 })
 
 /**
+ * Formats a string for YAML, handling special characters and multi-line strings
+ * @param {String} str - String to format for YAML
+ * @returns {String} - YAML-safe string
+ */
+function formatYamlString(str) {
+  if (!str) return '""'
+
+  // Check if string contains line breaks
+  if (str.includes('\n')) {
+    // Use YAML's literal block scalar (|) for multi-line strings
+    // This preserves line breaks and indentation
+    return `|\n    ${str.replace(/\n/g, '\n    ')}`
+  }
+
+  // For single-line strings with special characters, use double quotes
+  return `"${str.replace(/"/g, '\\"')}"`
+}
+
+/**
  * Convert Buttercms post to Nuxt Content markdown
  * @param {Object} post - Buttercms post object
  * @returns {String} - Markdown content for Nuxt Content
@@ -52,47 +71,36 @@ function convertButtercmsToNuxtContent(post) {
   // Manually replace any remaining standard markdown image syntax
   markdown = markdown.replace(/!\[(.*?)\]\((.*?)\)/g, '::image-container\n---\nimage-src: $2\n---\n::')
 
-  // Create front matter
-  const frontMatter = {
-    title: post.title,
-    description: post.summary,
-    author: post.author,
-    seo: {
-      title: post.seo_title,
-      description: post.meta_description,
-    },
-    navigation: {
-      title: post.title,
-      description: post.summary,
-    },
-    published: post.published === 'published',
-    publishedAt: post.published,
-    tags: post.tags,
-    categories: post.categories,
-    displayedImg: post.featured_image,
-  }
+  // Format arrays properly
+  const formatTags = Array.isArray(post.tags)
+    ? `[${post.tags.map(tag => `"${tag}"`).join(', ')}]`
+    : `"${post.tags}"`
+
+  const formatCategories = Array.isArray(post.categories)
+    ? `[${post.categories.map(cat => `"${cat}"`).join(', ')}]`
+    : `"${post.categories}"`
 
   // Format the markdown with Nuxt Content components
   const formattedMarkdown = `---
-title: ${frontMatter.title}
-description: ${frontMatter.description}
+title: "${post.title}"
+description: ${formatYamlString(post.summary)}
 seo:
-  title: ${frontMatter.seo.title}
-  description: ${frontMatter.seo.description}
+  title: "${post.seo_title}"
+  description: ${formatYamlString(post.meta_description)}
 navigation:
-  title: ${frontMatter.navigation.title}
-  description: ${frontMatter.navigation.description}
-author: ${frontMatter.author}
-published: ${frontMatter.published}
-publishedAt: ${frontMatter.publishedAt}
-tags: ${frontMatter.tags}
-categories: ${frontMatter.categories}
-displayedImg: ${frontMatter.displayedImg}
+  title: "${post.title}"
+  description: ${formatYamlString(post.summary)}
+author: "${post.author}"
+published: ${post.published === 'published'}
+publishedAt: "${post.published}"
+tags: ${formatTags}
+categories: ${formatCategories}
+displayedImg: "${post.featured_image || ''}"
 ---
 
 ::hero-section-blog
 ---
-image-src: ${post.featured_image}
+image-src: "${post.featured_image || ''}"
 ---
 #publication-date
 ${new Date(post.published).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -106,7 +114,7 @@ ${introduction}
 
 ::section-container
 ---
-image-src: ${post.featured_image}
+image-src: "${post.featured_image || ''}"
 ---
 #content
 ${markdown}

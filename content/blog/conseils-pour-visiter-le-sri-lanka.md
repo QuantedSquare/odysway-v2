@@ -1,23 +1,23 @@
 ---
-title: Conseils pour visiter le Sri Lanka
-description: Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi.
+title: "Conseils pour visiter le Sri Lanka"
+description: "Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi."
 seo:
-  title: Conseils pour visiter le Sri Lanka
-  description: Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine variée, sa faune diversifiée et son long littoral parsemé de
+  title: "Conseils pour visiter le Sri Lanka"
+  description: "Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine variée, sa faune diversifiée et son long littoral parsemé de"
 navigation:
-  title: Conseils pour visiter le Sri Lanka
-  description: Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi.
-author: linda.tran@odysway.com
+  title: "Conseils pour visiter le Sri Lanka"
+  description: "Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2023-07-17 07:11:00+00:00
-tag: undefined
-categories: voyage, conseil, préparer
-displayedImg: https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B
+publishedAt: "2023-07-17 07:11:00+00:00"
+tags: "partir seul, Sri Lanka, voyage"
+categories: "voyage, conseil, préparer"
+displayedImg: "https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B
+image-src: "https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B"
 ---
 #publication-date
 17 juillet 2023
@@ -31,7 +31,7 @@ Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B
+image-src: "https://cdn.buttercms.com/x3B0rriAQGmcMLDfKJ1B"
 ---
 #content
 Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine variée, sa faune diversifiée et son long littoral parsemé de plages d'un blanc nacré. Il y a donc de nombreuses possibilités pour un voyage immersif sur l'île. Cependant, la plupart des voyageurs ne séjournent que dans une partie limitée de l'île : le sud ou le sud-ouest. Bien sûr, tout le monde ne peut pas rester éternellement au Sri Lanka, mais il est également dommage de passer à côté des beautés des autres parties de l'île.

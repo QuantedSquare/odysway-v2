@@ -455,6 +455,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
   :::accomodation-container
   #text
   Vous logerez en chambre double au sein d'hôtels confortables, de gîtes villageois ou chez l'habitant. Un accueil chaleureux vous sera réservé par vos hôtes. Vous pourrez profiter de moments de détente au bord de l'eau.
+
   
   #carousel
     ::::carousel
@@ -622,6 +623,7 @@ Détails du prix
   Tout extra d’ordre personnel
   :::
 ::
+
 
 ::title-container
 #title

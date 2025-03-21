@@ -1,23 +1,23 @@
 ---
-title: Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud
-description: En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse.
+title: "Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud"
+description: "En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse."
 seo:
-  title: Le bouddhisme au pays du matin calme, la Corée du Sud | Blog Odysway
-  description: Découvrez les pratiques du bouddhisme au pays du matin calme, la Corée du Sud : de nombreux temples incontournables a visiter sur cette terre de contrastes.
+  title: "Le bouddhisme au pays du matin calme, la Corée du Sud | Blog Odysway"
+  description: "Découvrez les pratiques du bouddhisme au pays du matin calme, la Corée du Sud : de nombreux temples incontournables a visiter sur cette terre de contrastes."
 navigation:
-  title: Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud
-  description: En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse.
-author: julien@quantedsquare.com
+  title: "Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud"
+  description: "En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-05-03 14:56:00+00:00
-tag: undefined
-categories: Culture et decouverte, Developpement Personnel
-displayedImg: https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7
+publishedAt: "2019-05-03 14:56:00+00:00"
+tags: "Asie, Developpement personnel, Sports"
+categories: "Culture et decouverte, Developpement Personnel"
+displayedImg: "https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7
+image-src: "https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7"
 ---
 #publication-date
 3 mai 2019
@@ -31,7 +31,7 @@ En juin 2019, Odysway a été invité au salon international du tourisme de Séo
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7
+image-src: "https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7"
 ---
 #content
 En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d’y trouver de nouvelles expériences. C’est dans ce cadre que nous avons pu découvrir les trésors cachés et encore méconnus du tourisme de masse de cette fascinante Terre de Contrastes.

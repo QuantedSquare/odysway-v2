@@ -1,23 +1,23 @@
 ---
-title: Le vipassana au Sri Lanka
-description: Il existe plusieurs techniques de méditation a travers le monde et chacune d'elles apporte ses propres bienfaits. Parmi elles, il y a le vipassana, que l'on retrouve au Sri Lanka notamment , et qui aide a trouver la paix intérieure. D'où vient cette technique et comment se pratique-t-elle ? ...
+title: "Le vipassana au Sri Lanka"
+description: "Il existe plusieurs techniques de méditation a travers le monde et chacune d'elles apporte ses propres bienfaits. Parmi elles, il y a le vipassana, que l'on retrouve au Sri Lanka notamment , et qui aide a trouver la paix intérieure. D'où vient cette technique et comment se pratique-t-elle ? ..."
 seo:
-  title: Le vipassana au Sri Lanka | Bog Odysway
-  description: Le vipassana est une méditation présente au Sri Lanka qui utilise principalement la respiration pour atteindre le bien-être total.
+  title: "Le vipassana au Sri Lanka | Bog Odysway"
+  description: "Le vipassana est une méditation présente au Sri Lanka qui utilise principalement la respiration pour atteindre le bien-être total."
 navigation:
-  title: Le vipassana au Sri Lanka
-  description: Il existe plusieurs techniques de méditation a travers le monde et chacune d'elles apporte ses propres bienfaits. Parmi elles, il y a le vipassana, que l'on retrouve au Sri Lanka notamment , et qui aide a trouver la paix intérieure. D'où vient cette technique et comment se pratique-t-elle ? ...
-author: julien@quantedsquare.com
+  title: "Le vipassana au Sri Lanka"
+  description: "Il existe plusieurs techniques de méditation a travers le monde et chacune d'elles apporte ses propres bienfaits. Parmi elles, il y a le vipassana, que l'on retrouve au Sri Lanka notamment , et qui aide a trouver la paix intérieure. D'où vient cette technique et comment se pratique-t-elle ? ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-08-02 12:27:00+00:00
-tag: undefined
-categories: Depassement de soi, Apprentissage, Developpement Personnel
-displayedImg: https://cdn.buttercms.com/HRcic4FaSOvwA31f6d5Q
+publishedAt: "2019-08-02 12:27:00+00:00"
+tags: "Asie, Developpement personnel, Sri Lanka"
+categories: "Depassement de soi, Apprentissage, Developpement Personnel"
+displayedImg: "https://cdn.buttercms.com/HRcic4FaSOvwA31f6d5Q"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/HRcic4FaSOvwA31f6d5Q
+image-src: "https://cdn.buttercms.com/HRcic4FaSOvwA31f6d5Q"
 ---
 #publication-date
 2 août 2019
@@ -31,7 +31,7 @@ Le vipassana au Sri Lanka
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/HRcic4FaSOvwA31f6d5Q
+image-src: "https://cdn.buttercms.com/HRcic4FaSOvwA31f6d5Q"
 ---
 #content
 Il existe plusieurs techniques de méditation à travers le monde et chacune d’elles apporte ses propres bienfaits. Parmi elles, il y a **le vipassana, que l’on retrouve au Sri Lanka notamment**, et qui aide à trouver la paix intérieure. D’où vient cette technique et comment se pratique-t-elle ? Quels en sont les bienfaits et où en faire ? Réponse dans ce nouvel article de blog. 

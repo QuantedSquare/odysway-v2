@@ -1,23 +1,23 @@
 ---
-title: Tourisme durable : développement économique et protection de l'environnement
-description: Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux ...
+title: "Tourisme durable : développement économique et protection de l'environnement"
+description: "Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux ..."
 seo:
-  title: Tourisme durable et développement économique
-  description: Tourisme durable, équilibrez développement économique grâce à des activités écotouristiques, sensibilisation aux enjeux environnementaux et projets durables
+  title: "Tourisme durable et développement économique"
+  description: "Tourisme durable, équilibrez développement économique grâce à des activités écotouristiques, sensibilisation aux enjeux environnementaux et projets durables"
 navigation:
-  title: Tourisme durable : développement économique et protection de l'environnement
-  description: Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux ...
-author: romain.masina@odysway.com
+  title: "Tourisme durable : développement économique et protection de l'environnement"
+  description: "Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2023-01-20 13:45:00+00:00
-tag: undefined
-categories: tourisme durable
-displayedImg: https://cdn.buttercms.com/pNWi582GS8eMtd3VqTld
+publishedAt: "2023-01-20 13:45:00+00:00"
+tags: ""
+categories: "tourisme durable"
+displayedImg: "https://cdn.buttercms.com/pNWi582GS8eMtd3VqTld"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/pNWi582GS8eMtd3VqTld
+image-src: "https://cdn.buttercms.com/pNWi582GS8eMtd3VqTld"
 ---
 #publication-date
 20 janvier 2023
@@ -31,7 +31,7 @@ Le tourisme durable est devenu un enjeu majeur pour les destinations touristique
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/pNWi582GS8eMtd3VqTld
+image-src: "https://cdn.buttercms.com/pNWi582GS8eMtd3VqTld"
 ---
 #content
 ## Les activités écotouristiques : une solution pour promouvoir un tourisme durable

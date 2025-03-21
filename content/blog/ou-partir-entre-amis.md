@@ -1,23 +1,23 @@
 ---
-title: Où partir entre amis ?
-description: Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.
+title: "Où partir entre amis ?"
+description: "Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur."
 seo:
-  title: Où partir entre amis ?
-  description: Où partir entre amis ? Quelques pistes pour choisir votre destination...
+  title: "Où partir entre amis ?"
+  description: "Où partir entre amis ? Quelques pistes pour choisir votre destination..."
 navigation:
-  title: Où partir entre amis ?
-  description: Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.
-author: linda.tran@odysway.com
+  title: "Où partir entre amis ?"
+  description: "Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-08-06 11:51:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj
+publishedAt: "2020-08-06 11:51:00+00:00"
+tags: "Europe, Finlande, France, Grands espaces, Made in France"
+categories: "Nature et grands espaces, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj
+image-src: "https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj"
 ---
 #publication-date
 6 août 2020
@@ -31,7 +31,7 @@ Où partir entre amis ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj
+image-src: "https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj"
 ---
 #content
 **Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.**

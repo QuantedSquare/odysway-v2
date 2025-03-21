@@ -345,6 +345,7 @@ Assurément, l'Islande est un autre espace-temps !
   :::accomodation-container
   #text
   Vous découvrirez, pendant cet itinéraire, les différents hébergements sélectionnés dans cet esprit de partage et de respect de la nature islandaise. Vous débuterez votre séjour par Reykjavik où vous serez accueillis dans une Guest House, avant de vous aventurer en pleine nature pour quelques nuits dans une ferme-auberge perdue au milieu des grands espaces, loin de toute agitation. Un retour à l'essentiel qui vous permettra d'apprécier pleinement la découverte de cet état insulaire.
+
   
   #carousel
     ::::carousel
@@ -498,19 +499,7 @@ Blue Lagoon; entrée au bain "Secret Lagoon"; entrée au musée : "the Lava cent
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

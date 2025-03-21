@@ -396,6 +396,7 @@ Nuit à Oulan-Bator. Vol retour le jour 13.
   :::accomodation-container
   #text
   Lors de ce voyage à cheval, vous serez logés en hôtel à Oulan-Bator, localisé à proximité du centre-ville. Sur les autres étapes, vous expérimenterez la vie nomade en dormant chez l'habitant, en yourte ou en bivouac (sous tente confortable, avec matelas) selon les étapes. Les lieux de bivouac seront localisés en pleine nature, à proximité de lacs ou rivières, en bordure de forêts ou en steppes. Le soir, vous ferez un feu pour vous retrouver autour et partager des moments forts avec votre groupe. Vos chevaux vous suivront tout au long de ces étapes et seront à proximité du camp le soir.
+
   
   #carousel
     ::::carousel
@@ -573,19 +574,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

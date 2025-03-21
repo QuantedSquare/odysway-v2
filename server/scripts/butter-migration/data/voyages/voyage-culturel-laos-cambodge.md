@@ -420,6 +420,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
   :::accomodation-container
   #text
   Lors de votre voyage, vous serez hébergés dans des établissements de charme, en hôtels 3\* ou 4\*, en chambre double. Ces hébergements tout confort vous offriront l'occasion de vous détendre dans un cadre luxuriant et apaisant après vos journées de visites !
+
   
   #carousel
     ::::carousel
@@ -582,6 +583,7 @@ Détails du prix
   L'assurance voyage multirisques ou annulation -
   :::
 ::
+
 
 ::title-container
 #title

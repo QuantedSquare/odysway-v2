@@ -388,6 +388,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
   :::accomodation-container
   #text
   Lors de ce voyage, vous serez logés dans des hébergements de charme en hôtel 3\* ou 4\* ainsi que chez l'habitant, en auberge traditionnelle pour une expérience en totale immersion !
+
   
   #carousel
     ::::carousel
@@ -565,19 +566,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

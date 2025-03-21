@@ -1,31 +1,33 @@
 ---
-title: Vis ma vie d'agent de voyage en 2020
-description: 2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
-
-Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
-
-Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
+title: "Vis ma vie d'agent de voyage en 2020"
+description: |
+    2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
+    
+    Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
+    
+    Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
 seo:
-  title: Vis ma vie d'agent de voyage en 2020
-  description: Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage qui en a vu de toutes les couleurs.
+  title: "Vis ma vie d'agent de voyage en 2020"
+  description: "Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage qui en a vu de toutes les couleurs."
 navigation:
-  title: Vis ma vie d'agent de voyage en 2020
-  description: 2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
-
-Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
-
-Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
-author: linda.tran@odysway.com
+  title: "Vis ma vie d'agent de voyage en 2020"
+  description: |
+    2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
+    
+    Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
+    
+    Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-12-22 02:10:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848
+publishedAt: "2020-12-22 02:10:00+00:00"
+tags: "Actualités"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848
+image-src: "https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848"
 ---
 #publication-date
 22 décembre 2020
@@ -39,7 +41,7 @@ Vis ma vie d'agent de voyage en 2020
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848
+image-src: "https://cdn.buttercms.com/lCT979iMRzeqBdBlrEVV?1608727576848"
 ---
 #content
 2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.

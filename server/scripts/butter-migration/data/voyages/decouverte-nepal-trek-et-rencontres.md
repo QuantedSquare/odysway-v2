@@ -437,6 +437,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
   :::accomodation-container
   #text
   Lors de votre voyage au Népal, vous serez logés en hôtels confortables à Katmandou et Pokhara, en guesthouse, chez l’habitant et au sein d’un monastère. Pendant le trek, vous dormirez dans des lodges simples mais accueillants, offrant une immersion authentique au plus près des villages traversés. Les chambres sont en base double ou twin. Le confort varie selon les étapes, mais l’hospitalité népalaise et la beauté des lieux compensent largement la simplicité des hébergements.
+
   
   #carousel
     ::::carousel
@@ -617,6 +618,7 @@ Détails du prix
   L'assurance voyage multirisque ou annulation
   :::
 ::
+
 
 ::title-container
 #title

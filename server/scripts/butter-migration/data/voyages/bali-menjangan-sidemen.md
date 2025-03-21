@@ -453,6 +453,7 @@ beach, entre nature et jolie plage de sable blanc. Transfert à Jimbaran en fin 
   :::accomodation-container
   #text
   Vous séjournerez dans des hôtels 3/4/5\* au cadre idyllique vue sur mer ou rizières. Ces établissements luttent pour des séjours plus durables et participent à des programmes communautaires et d'écotourisme. Vous passerez également deux nuits chez l'habitant dans une famille balinaise.
+
   
   #carousel
     ::::carousel
@@ -622,6 +623,7 @@ Détails du prix
   La taxe séjour touristique (9,50€)
   :::
 ::
+
 
 ::title-container
 #title

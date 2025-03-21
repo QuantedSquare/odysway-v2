@@ -481,6 +481,7 @@ Ce vol vous offre une expérience panoramique inoubliable reliant ces deux ville
   :::accomodation-container
   #text
   Lors de votre trek au Népal, vous serez logés en lodge de montagne. Les chambres sont en base double ou twin. Le confort est basique mais offre l'essentiel pour une expérience authentique, en totale immersion.
+
   
   #carousel
     ::::carousel
@@ -667,19 +668,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

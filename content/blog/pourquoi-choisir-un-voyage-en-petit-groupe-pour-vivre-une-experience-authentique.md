@@ -1,23 +1,23 @@
 ---
-title: Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentique ?
-description: Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? ...
+title: "Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentique ?"
+description: "Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? ..."
 seo:
-  title: Le voyage en petit groupe pour vivre une expérience authentique ?
-  description: Découvrez les avantages du voyage en petit groupe : immersion, flexibilité, rencontres et impact positif sur l’environnement. Une expérience plus humaine et responsable !
+  title: "Le voyage en petit groupe pour vivre une expérience authentique ?"
+  description: "Découvrez les avantages du voyage en petit groupe : immersion, flexibilité, rencontres et impact positif sur l’environnement. Une expérience plus humaine et responsable !"
 navigation:
-  title: Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentique ?
-  description: Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? ...
-author: romain.masina@odysway.com
+  title: "Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentique ?"
+  description: "Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2024-09-19 10:25:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg
+publishedAt: "2024-09-19 10:25:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg
+image-src: "https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg"
 ---
 #publication-date
 19 septembre 2024
@@ -31,7 +31,7 @@ Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentiqu
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg
+image-src: "https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg"
 ---
 #content
 Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? Eh bien, le voyage en petit groupe est peut-être ce qu’il vous faut. Loin du tourisme de masse, ce type de voyage privilégie les rencontres humaines et la découverte en profondeur. Mais voyons ensemble pourquoi il peut transformer votre façon de voyager.

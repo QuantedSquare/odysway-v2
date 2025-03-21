@@ -1,23 +1,23 @@
 ---
-title: 10 astuces de survie en forêt qui peuvent vous sauver la vie
-description: Lors d'une balade en forêt, personne n'est a l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie ...
+title: "10 astuces de survie en forêt qui peuvent vous sauver la vie"
+description: "Lors d'une balade en forêt, personne n'est a l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie ..."
 seo:
-  title: 10 astuces pour survire en forêt | Blog Odysway
-  description: Personne n'est a l'abri de rencontrer un pepin lors d'une balade en plein milieu des bois. Voici 10 astuces de survie bien utiles en foret.
+  title: "10 astuces pour survire en forêt | Blog Odysway"
+  description: "Personne n'est a l'abri de rencontrer un pepin lors d'une balade en plein milieu des bois. Voici 10 astuces de survie bien utiles en foret."
 navigation:
-  title: 10 astuces de survie en forêt qui peuvent vous sauver la vie
-  description: Lors d'une balade en forêt, personne n'est a l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie ...
-author: julien@quantedsquare.com
+  title: "10 astuces de survie en forêt qui peuvent vous sauver la vie"
+  description: "Lors d'une balade en forêt, personne n'est a l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-12-12 14:15:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces, Apprentissage
-displayedImg: https://cdn.buttercms.com/E2I3z2q6SOmZPotV0NL7
+publishedAt: "2019-12-12 14:15:00+00:00"
+tags: "Amerique du Sud, Brésil, Communautés locales, Famille, Grands espaces"
+categories: "Depassement de soi, Nature et grands espaces, Apprentissage"
+displayedImg: "https://cdn.buttercms.com/E2I3z2q6SOmZPotV0NL7"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/E2I3z2q6SOmZPotV0NL7
+image-src: "https://cdn.buttercms.com/E2I3z2q6SOmZPotV0NL7"
 ---
 #publication-date
 12 décembre 2019
@@ -31,7 +31,7 @@ Lors d'une balade en foret, personne n'est à l'abri de rencontrer un pépin. Et
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/E2I3z2q6SOmZPotV0NL7
+image-src: "https://cdn.buttercms.com/E2I3z2q6SOmZPotV0NL7"
 ---
 #content
 Lors d'une balade en foret, personne n'est à l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie mine d'or pour vous sortir de nombreuses impasses. Mais aussi faut-il savoir comment faire... **Nous vous livrons 10 astuces de survie bien utiles si vous êtes en foret**.

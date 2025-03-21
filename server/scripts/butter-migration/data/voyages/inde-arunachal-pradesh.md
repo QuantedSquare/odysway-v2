@@ -422,6 +422,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
   :::accomodation-container
   #text
   Vous séjournerez durant ce voyage en hôtels ou chez l'habitant. Le nord-est s’étant récemment ouvert au tourisme, la plupart des hébergements sont encore rustiques. Bien que simples, ils sont souvent très bien situés et vous recevrez un accueil chaleureux. Odysway favorise l’hébergement chez l’habitant pour une meilleure compréhension de la culture et du mode de vie local.
+
   
   #carousel
     ::::carousel
@@ -608,6 +609,7 @@ Détails du prix
   Tout autre service non mentionné dans «le prix comprend»
   :::
 ::
+
 
 ::title-container
 #title

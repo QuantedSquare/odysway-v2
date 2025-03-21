@@ -417,6 +417,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
   :::accomodation-container
   #text
   Durant la première partie de votre séjour, profitez d'un hôtel situé dans un quartier vivant de San Salvador pour 5 nuits. Sur la Route des Fleurs, vous logerez dans un petit hôtel typique pour une durée de 3 nuits. Pour vos nuits sur la côte Pacifique, votre hôtel se situe à 5 minutes de la plage, bénéficiant d'une piscine et plusieurs espaces de détentes. Les chambres sont composées de 2 à 4 lits tout confort avec salle de bain partagée.
+
   
   #carousel
     ::::carousel
@@ -604,19 +605,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

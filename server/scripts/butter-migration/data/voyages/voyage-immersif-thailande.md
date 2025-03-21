@@ -419,6 +419,7 @@ right-sticky: true
   :::accomodation-container
   #text
   Tout au long de votre voyage, vous dormirez dans des hôtels tout équipés et très confortables. Idéalement placés. Ils sont à proximité des points d'intérêt et expériences de votre voyage. Ces logements sont équipés du wifi et proposés en chambre double (deux lits séparés). Vous y prendrez le petit-déjeuner avant de partir pour les activités de la journée.
+
   
   #carousel
     ::::carousel
@@ -579,19 +580,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

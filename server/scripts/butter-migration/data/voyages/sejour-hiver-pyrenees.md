@@ -306,6 +306,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   :::accomodation-container
   #text
   Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées.
+
   
   #carousel
     ::::carousel
@@ -456,19 +457,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -1,23 +1,23 @@
 ---
-title: Tourisme animalier : les pratiques à bannir en voyage
-description: Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ...
+title: "Tourisme animalier : les pratiques à bannir en voyage"
+description: "Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ..."
 seo:
-  title: Tourisme animalier : les pratiques à bannir en voyage  | Blog Odysway
-  description: Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Mais derrière ces belles images se cachent maltraitance et souffrance. Battus, drogués, enlevés à leur milieu naturel, des animaux sont exploités pour satisfaire des touristes. Plein phare sur le tourisme animalier et ses dérives.
+  title: "Tourisme animalier : les pratiques à bannir en voyage  | Blog Odysway"
+  description: "Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Mais derrière ces belles images se cachent maltraitance et souffrance. Battus, drogués, enlevés à leur milieu naturel, des animaux sont exploités pour satisfaire des touristes. Plein phare sur le tourisme animalier et ses dérives."
 navigation:
-  title: Tourisme animalier : les pratiques à bannir en voyage
-  description: Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ...
-author: linda.tran@odysway.com
+  title: "Tourisme animalier : les pratiques à bannir en voyage"
+  description: "Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 09:59:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774
+publishedAt: "2020-03-06 09:59:00+00:00"
+tags: "Afrique, Afrique du Sud, Amerique Centrale, Amerique du Nord, Animaux, Asie, Costa Rica, Etats Unis, Europe, Famille, France, Sri Lanka"
+categories: "Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774
+image-src: "https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Tourisme animalier : les pratiques à bannir en voyage
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774
+image-src: "https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774"
 ---
 #content
 Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un _must to do_ pour ceux qui ne connaissent pas l’envers du décor. En effet, **derrière ces belles images se cachent maltraitance et souffrance**. [Consultez notre article sur la cause des disparitions des animaux.](https://odysway.com/causes-disparition-animaux) Battus, drogués, enlevés à leur milieu naturel, des animaux sont exploités pour satisfaire des touristes en quête de quelque chose d’inédit. **Plein phare sur le tourisme animalier et ses dérives.**

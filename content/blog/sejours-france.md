@@ -1,23 +1,23 @@
 ---
-title: Nos séjours en France
-description: Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion.
+title: "Nos séjours en France"
+description: "Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion."
 seo:
-  title: Nos séjours en France
-  description: Avec une richesse extraordinaire partir en vacances en France est la promesse d’un voyage tout en émotion. Découvrez nos voyages en France !
+  title: "Nos séjours en France"
+  description: "Avec une richesse extraordinaire partir en vacances en France est la promesse d’un voyage tout en émotion. Découvrez nos voyages en France !"
 navigation:
-  title: Nos séjours en France
-  description: Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion.
-author: linda.tran@odysway.com
+  title: "Nos séjours en France"
+  description: "Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2021-02-22 13:16:00+00:00
-tag: undefined
-categories: Nature et grands espaces
-displayedImg: https://cdn.buttercms.com/EgPLFa2TriEUArtylLII
+publishedAt: "2021-02-22 13:16:00+00:00"
+tags: "Europe, France, Grands espaces"
+categories: "Nature et grands espaces"
+displayedImg: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/EgPLFa2TriEUArtylLII
+image-src: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
 ---
 #publication-date
 22 février 2021
@@ -31,7 +31,7 @@ Nos séjours en France
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/EgPLFa2TriEUArtylLII
+image-src: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
 ---
 #content
  Avec une richesse extraordinaire dans de très nombreux domaines, **partir en vacances en France** est la promesse d’un voyage tout en émotion.

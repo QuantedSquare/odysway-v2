@@ -432,6 +432,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
   :::accomodation-container
   #text
   Vous séjournerez dans des hôtels 2/3\* esprit « petite structure » qualitatifs et bien situés. Vous séjournerez également dans des hôtels insolites comme le Fort Ranvas à Nagaur, le Kaner Retreat dans le désert de Thar, ou en petite huttes dans une maison d'hôte aux alentours de Jodhpur.
+
   
   #carousel
     ::::carousel
@@ -615,19 +616,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

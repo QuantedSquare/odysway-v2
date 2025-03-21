@@ -1,23 +1,23 @@
 ---
-title: Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées
-description: Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !
+title: "Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées"
+description: "Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !"
 seo:
-  title: Récits de Voyage de Florence Guilmaille| Blog Odysway
-  description: Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !
+  title: "Récits de Voyage de Florence Guilmaille| Blog Odysway"
+  description: "Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !"
 navigation:
-  title: Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées
-  description: Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !
-author: linda.tran@odysway.com
+  title: "Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées"
+  description: "Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-23 14:16:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843
+publishedAt: "2020-11-23 14:16:00+00:00"
+tags: "Animaux, Communautés locales, France, Grands espaces, Made in France"
+categories: "Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843
+image-src: "https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843"
 ---
 #publication-date
 23 novembre 2020
@@ -31,7 +31,7 @@ Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyr
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843
+image-src: "https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843"
 ---
 #content
   

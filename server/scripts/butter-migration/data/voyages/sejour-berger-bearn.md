@@ -375,6 +375,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   :::accomodation-container
   #text
   Durant ce séjour, vous logerez 3 nuits dans une chambre d'un gîte, situé dans la ville d'Accous, et 1 nuit en estive, dans une cabane ou en tente, à proximité de la cabane du berger. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées.
+
   
   #carousel
     ::::carousel
@@ -552,6 +553,7 @@ Détails du prix
   Les dépenses personnelles et pourboires
   :::
 ::
+
 
 ::title-container
 #title

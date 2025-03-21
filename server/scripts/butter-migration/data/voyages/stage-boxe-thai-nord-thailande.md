@@ -329,6 +329,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
   :::accomodation-container
   #text
   À Paï, vous séjournerez dans une guesthouse situé au cœur de la ville, un emplacement idéal pour vous balader ! Durant votre stage de boxe, à Paï, l'hôtel sera situé à deux minutes à pied du camp d'entraînement, vous permettant d'y accéder facilement.
+
   
   #carousel
     ::::carousel
@@ -498,6 +499,7 @@ Détails du prix
   Un dépôt de garantie de 1000bahts en arrivant, rendu à la fin (si pas de casse, de perte des clefs, etc).
   :::
 ::
+
 
 ::title-container
 #title

@@ -1,23 +1,23 @@
 ---
-title: Les 7 Équipements Incontournables pour un Trek Immersif et Responsable
-description: Le trekking est une activité enrichissante qui permet de découvrir des paysages incroyables et de vivre des expériences culturelles uniques. Pour que cette aventure soit à la fois réussie, immersive et respectueuse de l’environnement, il est crucial de bien se préparer. Voici les sept équipements incontournables pour un trek immersif ...
+title: "Les 7 Équipements Incontournables pour un Trek Immersif et Responsable"
+description: "Le trekking est une activité enrichissante qui permet de découvrir des paysages incroyables et de vivre des expériences culturelles uniques. Pour que cette aventure soit à la fois réussie, immersive et respectueuse de l’environnement, il est crucial de bien se préparer. Voici les sept équipements incontournables pour un trek immersif ..."
 seo:
-  title: Les 7 Équipements Incontournables pour un Trek Immersif et Responsable
-  description: Découvrez les 7 équipements indispensables pour un trek immersif et respectueux de l'environnement. Conseils sur les chaussures écoresponsables, sacs à dos durables, vêtements techniques et plus pour une aventure responsable.
+  title: "Les 7 Équipements Incontournables pour un Trek Immersif et Responsable"
+  description: "Découvrez les 7 équipements indispensables pour un trek immersif et respectueux de l'environnement. Conseils sur les chaussures écoresponsables, sacs à dos durables, vêtements techniques et plus pour une aventure responsable."
 navigation:
-  title: Les 7 Équipements Incontournables pour un Trek Immersif et Responsable
-  description: Le trekking est une activité enrichissante qui permet de découvrir des paysages incroyables et de vivre des expériences culturelles uniques. Pour que cette aventure soit à la fois réussie, immersive et respectueuse de l’environnement, il est crucial de bien se préparer. Voici les sept équipements incontournables pour un trek immersif ...
-author: linda.tran@odysway.com
+  title: "Les 7 Équipements Incontournables pour un Trek Immersif et Responsable"
+  description: "Le trekking est une activité enrichissante qui permet de découvrir des paysages incroyables et de vivre des expériences culturelles uniques. Pour que cette aventure soit à la fois réussie, immersive et respectueuse de l’environnement, il est crucial de bien se préparer. Voici les sept équipements incontournables pour un trek immersif ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2024-06-05 15:13:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/fSJoAjz4SiUVDqQFpOwf
+publishedAt: "2024-06-05 15:13:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/fSJoAjz4SiUVDqQFpOwf"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/fSJoAjz4SiUVDqQFpOwf
+image-src: "https://cdn.buttercms.com/fSJoAjz4SiUVDqQFpOwf"
 ---
 #publication-date
 5 juin 2024
@@ -31,7 +31,7 @@ Le trekking est une activité enrichissante qui permet de découvrir des paysage
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/fSJoAjz4SiUVDqQFpOwf
+image-src: "https://cdn.buttercms.com/fSJoAjz4SiUVDqQFpOwf"
 ---
 #content
 Le trekking est une activité enrichissante qui permet de découvrir des paysages incroyables et de vivre des expériences culturelles uniques. Pour que cette aventure soit à la fois réussie, immersive et respectueuse de l’environnement, il est crucial de bien se préparer. Voici les sept équipements incontournables pour un trek immersif et responsable.

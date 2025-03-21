@@ -1,23 +1,23 @@
 ---
-title: Le Népal, pour un voyage entre ciel et terre
-description: Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
+title: "Le Népal, pour un voyage entre ciel et terre"
+description: "Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde."
 seo:
-  title: Partir en voyage au Népal
-  description: Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
+  title: "Partir en voyage au Népal"
+  description: "Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde."
 navigation:
-  title: Le Népal, pour un voyage entre ciel et terre
-  description: Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
-author: romain.masina@odysway.com
+  title: "Le Népal, pour un voyage entre ciel et terre"
+  description: "Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2022-06-01 12:00:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion
+publishedAt: "2022-06-01 12:00:00+00:00"
+tags: "Asie, conseils, Nepal"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion
+image-src: "https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion"
 ---
 #publication-date
 1 juin 2022
@@ -31,7 +31,7 @@ Le Népal, pour un voyage entre ciel et terre
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion
+image-src: "https://cdn.buttercms.com/0OVnDSiFTA6zFVo7wion"
 ---
 #content
 Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays hautement spirituel, il est une destination majeure pour le trekking. Un **voyage au Népal**, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.

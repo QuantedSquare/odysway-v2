@@ -443,6 +443,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
   :::accomodation-container
   #text
   Vous séjournerez dans des hôtels 2/3\* esprit « petite structure » charmants et bien situés. Certains disposent d'une piscine. Sur certaines étapes, vous serez hébergés dans des maison d'hôtes tenues par des familles sri-lankaises.
+
   
   #carousel
     ::::carousel
@@ -662,6 +663,7 @@ Détails du prix
   Facultatif : l'assurance annulation ou multi-risques avec notre partenaire Chapka (devis sur demande)
   :::
 ::
+
 
 ::title-container
 #title

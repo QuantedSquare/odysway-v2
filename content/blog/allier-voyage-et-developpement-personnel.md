@@ -1,23 +1,23 @@
 ---
-title: Allier voyage et développement personnel
-description: Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des choses essentielles ? Laisser de côté les futilités pour vous rendre compte de ce qui est vraiment important ? Il serait peut-être temps de faire ...
+title: "Allier voyage et développement personnel"
+description: "Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des choses essentielles ? Laisser de côté les futilités pour vous rendre compte de ce qui est vraiment important ? Il serait peut-être temps de faire ..."
 seo:
-  title: Allier voyage et développement personnel
-  description: Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des c
+  title: "Allier voyage et développement personnel"
+  description: "Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des c"
 navigation:
-  title: Allier voyage et développement personnel
-  description: Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des choses essentielles ? Laisser de côté les futilités pour vous rendre compte de ce qui est vraiment important ? Il serait peut-être temps de faire ...
-author: romain.masina@odysway.com
+  title: "Allier voyage et développement personnel"
+  description: "Besoin de faire une pause spirituelle ? Vous songez sérieusement à faire un break , à vous éloigner du quotidien, à vous recentrer sur des choses essentielles ? Laisser de côté les futilités pour vous rendre compte de ce qui est vraiment important ? Il serait peut-être temps de faire ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-29 15:01:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-04-29 15:01:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 29 avril 2020
@@ -31,7 +31,7 @@ Vous songez sérieusement à faire un break, à vous éloigner du quotidien, à 
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 ## Besoin de faire une pause spirituelle

@@ -1,23 +1,23 @@
 ---
-title: Dormez et mangez dans une épave d'avion au Costa Rica
-description: Sur la cote sud du Costa Rica, au bord de l'Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres , son nez dresse vers le ciel. Un crash ? Non. Juste une idée...
+title: "Dormez et mangez dans une épave d'avion au Costa Rica"
+description: "Sur la cote sud du Costa Rica, au bord de l'Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres , son nez dresse vers le ciel. Un crash ? Non. Juste une idée..."
 seo:
-  title: Dormez et mangez dans une épave d'avion au Costa Rica | Blog Odysway
-  description: Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres, son nez dresse vers le ciel. Dormez dans ce lieu atypique!
+  title: "Dormez et mangez dans une épave d'avion au Costa Rica | Blog Odysway"
+  description: "Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres, son nez dresse vers le ciel. Dormez dans ce lieu atypique!"
 navigation:
-  title: Dormez et mangez dans une épave d'avion au Costa Rica
-  description: Sur la cote sud du Costa Rica, au bord de l'Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres , son nez dresse vers le ciel. Un crash ? Non. Juste une idée...
-author: julien@quantedsquare.com
+  title: "Dormez et mangez dans une épave d'avion au Costa Rica"
+  description: "Sur la cote sud du Costa Rica, au bord de l'Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, une épave d'avion trône au milieu des arbres , son nez dresse vers le ciel. Un crash ? Non. Juste une idée..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-10-13 08:35:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859
+publishedAt: "2018-10-13 08:35:00+00:00"
+tags: "Amerique Centrale, Costa Rica"
+categories: "Nature et grands espaces, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859
+image-src: "https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859"
 ---
 #publication-date
 13 octobre 2018
@@ -31,7 +31,7 @@ Dormez et mangez dans une épave d'avion au Costa Rica
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859
+image-src: "https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859"
 ---
 #content
 Sur la côte sud du Costa Rica, au bord de l’Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, **une épave d’avion trône au milieu des arbres**, son nez dressé vers le ciel. Un crash ? Non. Juste une idée loufoque de créer un hébergement atypique pour une expérience totalement insolite. Embarquement immédiat pour un séjour étonnant à **l’hôtel Costa Verde** !

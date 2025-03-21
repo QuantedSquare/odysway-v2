@@ -311,6 +311,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
   :::accomodation-container
   #text
   Vous serez hébergés chez Virginie et Fabien dans leur ferme jurassienne rénovée au naturel située à 1200 mètres d'altitude. Vous dormirez dans une des trois chambres mises à disposition pour nos voyageurs avec 2 salles d'eau et pourrez profiter des espaces communs tels que le salon, la cuisine et le sauna !
+
   
   #carousel
     ::::carousel
@@ -487,6 +488,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

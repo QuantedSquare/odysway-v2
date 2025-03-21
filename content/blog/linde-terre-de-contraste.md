@@ -1,23 +1,23 @@
 ---
-title: L’Inde, terre de contraste
-description: L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ...
+title: "L’Inde, terre de contraste"
+description: "L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ..."
 seo:
-  title: L’inde, terre de contraste
-  description: L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles
+  title: "L’inde, terre de contraste"
+  description: "L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles"
 navigation:
-  title: L’Inde, terre de contraste
-  description: L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ...
-author: romain.masina@odysway.com
+  title: "L’Inde, terre de contraste"
+  description: "L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-17 13:49:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-04-17 13:49:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 17 avril 2020
@@ -31,7 +31,7 @@ L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliar
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer.

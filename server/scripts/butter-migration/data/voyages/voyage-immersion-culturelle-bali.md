@@ -483,6 +483,7 @@ Détendez-vous en profitant de la piscine, d’un massage balinais ou d’une ba
   :::accomodation-container
   #text
   Tout au long de votre voyage, vous séjournerez dans des hébergements qui reflètent l’authenticité et le charme de Bali, entre maisons d’hôtes, bungalows en pleine nature et hôtels de charme, soigneusement sélectionnés pour leur confort et leur atmosphère. Dès votre arrivée à Sebatu, vous serez hébergé dans un lieu qui combine immersion culturelle et confort moderne. Bien que conçu comme un hébergement chez l’habitant, la famille d’accueil a aménagé d’élégants bungalows dans le jardin à l’arrière de leur maison familiale, située en bord de route. Ces bungalows offrent un espace intime, avec des équipements confortables et une piscine, tout en vous permettant de partager des moments chaleureux et authentiques avec vos hôtes balinais. Cette première étape de votre séjour vous plongera dans l’ambiance paisible et conviviale de la vie locale, pour une immersion douce et enrichissante dès votre arrivée sur l’île des dieux.
+
   
   #carousel
     ::::carousel
@@ -646,19 +647,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

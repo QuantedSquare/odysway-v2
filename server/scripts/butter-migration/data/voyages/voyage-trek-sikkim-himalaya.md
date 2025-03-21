@@ -445,6 +445,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
   :::accomodation-container
   #text
   Lors de ce voyage, vous logerez dans des hébergements confortables et variés, alliant immersion locale et repos bien mérité après le trek. Avant et après votre aventure dans le Sikkim, vous serez accueillis dans des hôtels de charme soigneusement sélectionnés. Pendant le trek, vous dormirez chez l’habitant et en lodges traditionnels, offrant une expérience authentique et chaleureuse.
+
   
   #carousel
     ::::carousel
@@ -633,19 +634,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

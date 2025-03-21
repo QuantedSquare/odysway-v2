@@ -1,24 +1,25 @@
 ---
-title: Le Maroc
-description: Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger.
+title: "Le Maroc"
+description: "Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger."
 seo:
-  title: Le Maroc
-  description: Pourquoi voyager au Maroc ?
-Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France...
+  title: "Le Maroc"
+  description: |
+    Pourquoi voyager au Maroc ?
+    Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France...
 navigation:
-  title: Le Maroc
-  description: Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger.
-author: linda.tran@odysway.com
+  title: "Le Maroc"
+  description: "Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-06-29 09:16:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-06-29 09:16:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 29 juin 2020
@@ -32,7 +33,7 @@ Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 ## Pourquoi voyager au Maroc ?

@@ -1,23 +1,23 @@
 ---
-title: Où loger et que faire à Chiang Mai ? Le guide complet !
-description: Pour un voyageur qui arrive dans une nouvelle ville, il n'est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l'on a repéré sera dans un quartier secrétaire et proche des attractions locales !
+title: "Où loger et que faire à Chiang Mai ? Le guide complet !"
+description: "Pour un voyageur qui arrive dans une nouvelle ville, il n'est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l'on a repéré sera dans un quartier secrétaire et proche des attractions locales !"
 seo:
-  title: Où loger et que faire à Chiang Mai ? Le guide insolite de la ville | Odysway
-  description: Chiang Mai est tres touristique et il n'est pas facile de sortir des sentiers battus. Voici le guide insolite des meilleures choses a faire a Chiang Mai !
+  title: "Où loger et que faire à Chiang Mai ? Le guide insolite de la ville | Odysway"
+  description: "Chiang Mai est tres touristique et il n'est pas facile de sortir des sentiers battus. Voici le guide insolite des meilleures choses a faire a Chiang Mai !"
 navigation:
-  title: Où loger et que faire à Chiang Mai ? Le guide complet !
-  description: Pour un voyageur qui arrive dans une nouvelle ville, il n'est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l'on a repéré sera dans un quartier secrétaire et proche des attractions locales !
-author: julien@quantedsquare.com
+  title: "Où loger et que faire à Chiang Mai ? Le guide complet !"
+  description: "Pour un voyageur qui arrive dans une nouvelle ville, il n'est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l'on a repéré sera dans un quartier secrétaire et proche des attractions locales !"
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-12-18 11:30:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME
+publishedAt: "2018-12-18 11:30:00+00:00"
+tags: "Asie, Thailande"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME
+image-src: "https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME"
 ---
 #publication-date
 18 décembre 2018
@@ -31,7 +31,7 @@ Où loger et que faire à Chiang Mai ? Le guide complet !
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME
+image-src: "https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME"
 ---
 #content
 Pour un voyageur qui arrive dans une nouvelle ville, il n’est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l’on a repéré sera dans un quartier sécuritaire et proche des attractions locales ! Vous êtes prêts ? C’est parti pour le Top des choses à faire à Chiang Maï et les meilleurs quartiers où loger !

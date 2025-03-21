@@ -456,6 +456,7 @@ ${highlightListItems(voyage.plus)}
   :::accomodation-container
   #text
   ${formatDescription(voyage.hebergement_description)}
+
   ${voyage.hebergement_photo_1.length > 0
   && `
   #carousel
@@ -533,6 +534,7 @@ ${formatPriceItems(voyage.price_include, true)}
 ${formatPriceItems(voyage.price_not_include)}
 ::
 
+${mapAvisVoyageInMarkdown(voyage).length > 0 && `
 ::title-container
 #title
 Les avis des voyageurs
@@ -545,7 +547,7 @@ Les avis des voyageurs
   ${mapAvisVoyageInMarkdown(voyage)}
   :::
 ::
-
+`}
 ::title-container
 #title
 Dates & Prix

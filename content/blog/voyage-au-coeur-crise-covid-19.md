@@ -1,23 +1,23 @@
 ---
-title: Le voyage : au cœur de la crise du Covid-19
-description: Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie de Covid-19 a changé la donne . Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de ...
+title: "Le voyage : au cœur de la crise du Covid-19"
+description: "Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie de Covid-19 a changé la donne . Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de ..."
 seo:
-  title: Le voyage : au cœur de la crise du Covid-19
-  description: Le voyage, un secteur qui d'habitude ne connaît pas trop la crise. Découvrez comment la pandémie de Covid-19 a changé la donne.
+  title: "Le voyage : au cœur de la crise du Covid-19"
+  description: "Le voyage, un secteur qui d'habitude ne connaît pas trop la crise. Découvrez comment la pandémie de Covid-19 a changé la donne."
 navigation:
-  title: Le voyage : au cœur de la crise du Covid-19
-  description: Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie de Covid-19 a changé la donne . Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de ...
-author: romain.masina@odysway.com
+  title: "Le voyage : au cœur de la crise du Covid-19"
+  description: "Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie de Covid-19 a changé la donne . Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-14 16:42:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj
+publishedAt: "2020-04-14 16:42:00+00:00"
+tags: "Europe, France"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj
+image-src: "https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj"
 ---
 #publication-date
 14 avril 2020
@@ -31,7 +31,7 @@ Le voyage : au cœur de la crise du Covid-19
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj
+image-src: "https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj"
 ---
 #content
 **Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie** **de Covid-19 a changé la donne**. Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de mise pour bon nombre d'entre nous. Mais qu'en est-il de votre voyage annulé à cause du Covid-19 ? Pourrez-vous partir cet été ? Retour sur une crise qui a ébranlé le monde du tourisme.

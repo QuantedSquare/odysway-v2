@@ -356,6 +356,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
   :::accomodation-container
   #text
   Lors de ce voyage de 8 jours et 7 nuits, vous dormirez dans des hôtels à Kruje et Tirana, en maison d'hôtes à Berat et à Gjirokastra, et chez l'habitant lors de l'immersion à la ferme qui se situe dans le village de Këlcyrë.
+
   
   #carousel
     ::::carousel
@@ -509,19 +510,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

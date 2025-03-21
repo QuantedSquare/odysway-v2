@@ -1,23 +1,23 @@
 ---
-title: Découvrez l'écotourisme et voyagez autrement
-description: L'écotourisme est une façon de voyager orientée vers découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !
+title: "Découvrez l'écotourisme et voyagez autrement"
+description: "L'écotourisme est une façon de voyager orientée vers découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !"
 seo:
-  title: Écotourisme : voyager autrement
-  description: L'écotourisme est une façon de voyager orientée vers la découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !
+  title: "Écotourisme : voyager autrement"
+  description: "L'écotourisme est une façon de voyager orientée vers la découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !"
 navigation:
-  title: Découvrez l'écotourisme et voyagez autrement
-  description: L'écotourisme est une façon de voyager orientée vers découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !
-author: linda.tran@odysway.com
+  title: "Découvrez l'écotourisme et voyagez autrement"
+  description: "L'écotourisme est une façon de voyager orientée vers découverte de la nature, dans le respect de l'environnement et de la culture locale - le voyage parfait !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 15:42:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 15:42:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ Depuis une trentaine d’années maintenant, la mouvance du développement durab
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Depuis une trentaine d’années maintenant, la mouvance du développement durable a vu naître ce type de tourisme. 

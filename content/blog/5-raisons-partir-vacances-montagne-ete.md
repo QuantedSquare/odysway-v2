@@ -1,23 +1,23 @@
 ---
-title: 5 raisons de partir en vacances à la montagne cet été
-description: Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été.
+title: "5 raisons de partir en vacances à la montagne cet été"
+description: "Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été."
 seo:
-  title: 5 raisons de partir en vacances à la montagne cet été
-  description: Plutôt mer ou montagne pour vos vacances ? Voici 5 raisons de partir en vacances à la montagne cet été.
+  title: "5 raisons de partir en vacances à la montagne cet été"
+  description: "Plutôt mer ou montagne pour vos vacances ? Voici 5 raisons de partir en vacances à la montagne cet été."
 navigation:
-  title: 5 raisons de partir en vacances à la montagne cet été
-  description: Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été.
-author: linda.tran@odysway.com
+  title: "5 raisons de partir en vacances à la montagne cet été"
+  description: "Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-07-06 12:40:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx
+publishedAt: "2020-07-06 12:40:00+00:00"
+tags: "Animaux, Europe, France, Grands espaces, Made in France, Sports"
+categories: "Nature et grands espaces, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx
+image-src: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
 ---
 #publication-date
 6 juillet 2020
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx
+image-src: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
 ---
 #content
 **Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été.**

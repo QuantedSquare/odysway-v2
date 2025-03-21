@@ -349,6 +349,7 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
   :::accomodation-container
   #text
   Lors des nuits à Katmandou et dans la vallée, vous serez hébergés dans des hôtels 3\* ou en Guest house, en chambre double ou en chambre partagée. Lors de l'immersion chez l'habitant, vous dormirez dans un "Community Homestay" à Bungamati. Lors de l'immersion dans le monastère bouddhiste, vous serez logés dans un dortoir de 4 personnes dans la Guest House attenante à l'école.
+
   
   #carousel
     ::::carousel
@@ -516,6 +517,7 @@ Détails du prix
   Les frais de visa (25€)
   :::
 ::
+
 
 ::title-container
 #title

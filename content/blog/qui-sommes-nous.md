@@ -1,23 +1,23 @@
 ---
-title: Qui sommes-nous ?
-description: Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ...
+title: "Qui sommes-nous ?"
+description: "Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ..."
 seo:
-  title: Qui sommes-nous ?
-  description: Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passio
+  title: "Qui sommes-nous ?"
+  description: "Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passio"
 navigation:
-  title: Qui sommes-nous ?
-  description: Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ...
-author: romain.masina@odysway.com
+  title: "Qui sommes-nous ?"
+  description: "Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2021-04-09 15:42:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf
+publishedAt: "2021-04-09 15:42:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf
+image-src: "https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf"
 ---
 #publication-date
 9 avril 2021
@@ -31,7 +31,7 @@ Qui sommes-nous ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf
+image-src: "https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf"
 ---
 #content
 ## Une équipe de voyageurs passionnés 

@@ -1,23 +1,23 @@
 ---
-title: Où partir en été pour garder l'esprit tranquille ?
-description: Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !
+title: "Où partir en été pour garder l'esprit tranquille ?"
+description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
 seo:
-  title: Où partir en été pour garder l'esprit tranquille ?
-  description: Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !
+  title: "Où partir en été pour garder l'esprit tranquille ?"
+  description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
 navigation:
-  title: Où partir en été pour garder l'esprit tranquille ?
-  description: Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !
-author: linda.tran@odysway.com
+  title: "Où partir en été pour garder l'esprit tranquille ?"
+  description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 17:41:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 17:41:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ Bien que les modes de voyage soient en pleine évolution et que de plus en plus 
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Bien que les modes de voyage soient en pleine évolution et que de plus en plus de personnes décident de partir hors saison, chaque année pour bon nombre de français, la seule option possible est de **partir en été**.

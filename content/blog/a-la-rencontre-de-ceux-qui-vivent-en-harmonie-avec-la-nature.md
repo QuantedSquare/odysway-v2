@@ -1,23 +1,23 @@
 ---
-title: À la rencontre de ceux qui vivent en harmonie avec la nature
-description: À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ...
+title: "À la rencontre de ceux qui vivent en harmonie avec la nature"
+description: "À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ..."
 seo:
-  title: À la rencontre de ceux qui vivent en harmonie avec la nature
-  description: À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le ch
+  title: "À la rencontre de ceux qui vivent en harmonie avec la nature"
+  description: "À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le ch"
 navigation:
-  title: À la rencontre de ceux qui vivent en harmonie avec la nature
-  description: À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ...
-author: linda.tran@odysway.com
+  title: "À la rencontre de ceux qui vivent en harmonie avec la nature"
+  description: "À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-09-18 09:57:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ
+publishedAt: "2020-09-18 09:57:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ
+image-src: "https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ"
 ---
 #publication-date
 18 septembre 2020
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ
+image-src: "https://cdn.buttercms.com/JmPnIcuRoKsPEtASvzAQ"
 ---
 #content
 **De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver les ressources d'une nature de plus en plus fragilisée, telles sont les raisons qui poussent de plus en plus de personnes à vouloir une existence plus proche de la terre. Mais qui sont-ils ? Partons ensemble à la rencontre de ceux qui vivent en harmonie avec la nature.**

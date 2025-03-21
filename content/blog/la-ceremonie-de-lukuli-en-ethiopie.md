@@ -1,23 +1,23 @@
 ---
-title: La cérémonie de l'Ukuli en Ethiopie
-description: A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ...
+title: "La cérémonie de l'Ukuli en Ethiopie"
+description: "A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ..."
 seo:
-  title: Cérémonie de l'Ukuli en Ethiopie | Blog Odysway
-  description: Demonstration de force et de courage, les jeunes hommes se doivent de reussir sous peine parfois d'etre rejete par leur famille ou leur clan.
+  title: "Cérémonie de l'Ukuli en Ethiopie | Blog Odysway"
+  description: "Demonstration de force et de courage, les jeunes hommes se doivent de reussir sous peine parfois d'etre rejete par leur famille ou leur clan."
 navigation:
-  title: La cérémonie de l'Ukuli en Ethiopie
-  description: A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ...
-author: julien@quantedsquare.com
+  title: "La cérémonie de l'Ukuli en Ethiopie"
+  description: "A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-11-15 08:49:00+00:00
-tag: undefined
-categories: Apprentissage, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272
+publishedAt: "2018-11-15 08:49:00+00:00"
+tags: "Afrique, Communautés locales, Ethiopie"
+categories: "Apprentissage, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272
+image-src: "https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272"
 ---
 #publication-date
 15 novembre 2018
@@ -31,7 +31,7 @@ La cérémonie de l'Ukuli en Ethiopie
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272
+image-src: "https://cdn.buttercms.com/LM4OlQ6QRSq9duWUZ73Q?1612351377272"
 ---
 #content
 A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l’âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d’être rejeté par leur famille ou leur clan. En Ethiopie, **la cérémonie de l’Ukuli** est une véritable fête où toute la tribu se réunit pour assister à la consécration d’un homme dont le destin peut changer en quelques secondes.

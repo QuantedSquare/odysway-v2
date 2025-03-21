@@ -369,6 +369,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
   :::accomodation-container
   #text
   À Machico, Porto da Cruz et Sao Roque do Faial, vous dormirez dans des hébergements familiaux de type residencial, au confort simple. Parfait pour vivre au plus près des locaux. À Boaventura, votre hôtel se situe dans un véritable îlot de tranquillité où vous pourrez vous relaxer après avoir sillonné les sentiers de randonnée. À Funchal, votre hôtel en cœur de ville et son rooftop, avec une superbe vue sur Funchal et ses alentours, vous permettront de profiter encore un peu de la gentillesse des habitants et des magnifiques paysages. Logement en chambre double ou twin, avec salle de bain privative pour tous les hébergements.
+
   
   #carousel
     ::::carousel
@@ -512,19 +513,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

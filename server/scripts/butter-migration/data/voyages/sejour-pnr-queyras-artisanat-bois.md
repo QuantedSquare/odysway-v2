@@ -255,6 +255,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
   :::accomodation-container
   #text
   
+
   false
   :::
 
@@ -363,19 +364,7 @@ Détails du prix
 
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

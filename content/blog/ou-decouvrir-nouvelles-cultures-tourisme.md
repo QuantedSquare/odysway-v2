@@ -1,23 +1,23 @@
 ---
-title: Où découvrir de nouvelles cultures avec le tourisme ?
-description: Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ...
+title: "Où découvrir de nouvelles cultures avec le tourisme ?"
+description: "Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ..."
 seo:
-  title: Où découvrir de nouvelles cultures avec le tourisme ?
-  description: Découvrez nos lieux coups de cœur qui permettent de découvrir de nouvelles cultures et s’immerger dans d’autres mondes.
+  title: "Où découvrir de nouvelles cultures avec le tourisme ?"
+  description: "Découvrez nos lieux coups de cœur qui permettent de découvrir de nouvelles cultures et s’immerger dans d’autres mondes."
 navigation:
-  title: Où découvrir de nouvelles cultures avec le tourisme ?
-  description: Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ...
-author: romain.masina@odysway.com
+  title: "Où découvrir de nouvelles cultures avec le tourisme ?"
+  description: "Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-05-25 15:15:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF
+publishedAt: "2020-05-25 15:15:00+00:00"
+tags: "Communautés locales, Ethiopie, Famille, Mongolie, Ouzbekistan, Perou, Roumanie"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF
+image-src: "https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF"
 ---
 #publication-date
 25 mai 2020
@@ -31,7 +31,7 @@ Où découvrir de nouvelles cultures avec le tourisme ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF
+image-src: "https://cdn.buttercms.com/l25KOUXzRoyiSa45GbvF"
 ---
 #content
 Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche des populations locales. Il existe de nombreuses destinations qui permettent de sortir de sa zone de confort et de se confronter à de nouvelles croyances et à des habitudes différentes. Où découvrir de nouvelles cultures avec le tourisme ? Cap sur des lieux coups de cœur qui permettent de s’immerger dans d’autres mondes.

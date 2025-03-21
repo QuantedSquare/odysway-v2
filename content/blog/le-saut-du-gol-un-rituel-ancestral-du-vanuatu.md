@@ -1,23 +1,23 @@
 ---
-title: Le saut du Gol, un rituel ancestral du Vanuatu
-description: Au large de l'Australie, en plein océan Pacifique, le Vanuatu a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoises et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l'île de Pentecôte est reputée pour son rituel ...
+title: "Le saut du Gol, un rituel ancestral du Vanuatu"
+description: "Au large de l'Australie, en plein océan Pacifique, le Vanuatu a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoises et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l'île de Pentecôte est reputée pour son rituel ..."
 seo:
-  title: Le saut du Gol, un rituel ancestral du Vanuatu | Blog Odysway
-  description: Signe de virilité selon la légende, le saut du Gol est désormais davantage un rite de fertilité de la terre et de passage à l'age adulte.
+  title: "Le saut du Gol, un rituel ancestral du Vanuatu | Blog Odysway"
+  description: "Signe de virilité selon la légende, le saut du Gol est désormais davantage un rite de fertilité de la terre et de passage à l'age adulte."
 navigation:
-  title: Le saut du Gol, un rituel ancestral du Vanuatu
-  description: Au large de l'Australie, en plein océan Pacifique, le Vanuatu a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoises et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l'île de Pentecôte est reputée pour son rituel ...
-author: julien@quantedsquare.com
+  title: "Le saut du Gol, un rituel ancestral du Vanuatu"
+  description: "Au large de l'Australie, en plein océan Pacifique, le Vanuatu a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoises et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l'île de Pentecôte est reputée pour son rituel ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-09-29 16:28:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel
-displayedImg: https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083
+publishedAt: "2018-09-29 16:28:00+00:00"
+tags: "Communautés locales, Océanie"
+categories: "Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel"
+displayedImg: "https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083
+image-src: "https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083"
 ---
 #publication-date
 29 septembre 2018
@@ -31,7 +31,7 @@ Le saut du Gol, un rituel ancestral du Vanuatu
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083
+image-src: "https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083"
 ---
 #content
 Au large de l’Australie, en plein océan Pacifique, **le Vanuatu** a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoise et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l’île de Pentecôte est réputée pour son rituel initiatique : **le saut du Gol**.

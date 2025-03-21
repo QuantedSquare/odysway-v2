@@ -1,35 +1,37 @@
 ---
-title: Trek et Randonnée : une découverte de sites uniques
-description: Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi ! Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région.
-
-Cette forme de tourisme alternatif vous offre la possibilité de séjourner en immersion au sein de communautés locales tout en voyageant de manière éco-responsable.
-
-Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
-
-De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
+title: "Trek et Randonnée : une découverte de sites uniques"
+description: |
+    Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi ! Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région.
+    
+    Cette forme de tourisme alternatif vous offre la possibilité de séjourner en immersion au sein de communautés locales tout en voyageant de manière éco-responsable.
+    
+    Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
+    
+    De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
 seo:
-  title: Trek & Randonnée : une découverte de sites uniques
-  description: Fan de trek ou de randonnée, les deux vous invitent à savourer des paysages grandioses. Explorez les chemins de traverse accompagnés de nos guides locaux.
+  title: "Trek & Randonnée : une découverte de sites uniques"
+  description: "Fan de trek ou de randonnée, les deux vous invitent à savourer des paysages grandioses. Explorez les chemins de traverse accompagnés de nos guides locaux."
 navigation:
-  title: Trek et Randonnée : une découverte de sites uniques
-  description: Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi ! Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région.
-
-Cette forme de tourisme alternatif vous offre la possibilité de séjourner en immersion au sein de communautés locales tout en voyageant de manière éco-responsable.
-
-Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
-
-De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
-author: linda.tran@odysway.com
+  title: "Trek et Randonnée : une découverte de sites uniques"
+  description: |
+    Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi ! Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région.
+    
+    Cette forme de tourisme alternatif vous offre la possibilité de séjourner en immersion au sein de communautés locales tout en voyageant de manière éco-responsable.
+    
+    Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
+    
+    De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-24 08:59:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-24 08:59:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 24 novembre 2020
@@ -43,7 +45,7 @@ Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi !
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Le **Trek et la randonnée** ont le vent en poupe et on comprend pourquoi !

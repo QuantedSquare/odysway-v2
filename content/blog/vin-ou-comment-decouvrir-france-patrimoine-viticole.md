@@ -1,23 +1,23 @@
 ---
-title: Le vin ou comment découvrir la France à travers son patrimoine viticole
-description: De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération.
+title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
+description: "De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération."
 seo:
-  title: Le vin ou comment découvrir la France à travers son patrimoine viticole
-  description: Le vin ou comment découvrir la France à travers son patrimoine viticole ? Quelques pistes pour redécouvrir la France à travers la route des vins.
+  title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
+  description: "Le vin ou comment découvrir la France à travers son patrimoine viticole ? Quelques pistes pour redécouvrir la France à travers la route des vins."
 navigation:
-  title: Le vin ou comment découvrir la France à travers son patrimoine viticole
-  description: De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération.
-author: linda.tran@odysway.com
+  title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
+  description: "De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-07-15 10:35:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT
+publishedAt: "2020-07-15 10:35:00+00:00"
+tags: "France, Made in France"
+categories: "Nature et grands espaces, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT
+image-src: "https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT"
 ---
 #publication-date
 15 juillet 2020
@@ -31,7 +31,7 @@ Le vin ou comment découvrir la France à travers son patrimoine viticole
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT
+image-src: "https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT"
 ---
 #content
 **De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération.**  

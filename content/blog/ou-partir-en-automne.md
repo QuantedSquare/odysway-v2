@@ -1,23 +1,23 @@
 ---
-title: Où partir en automne pour un été indien réussi ?
-description: partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été.
+title: "Où partir en automne pour un été indien réussi ?"
+description: "partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été."
 seo:
-  title: Où partir en automne pour un été indien réussi ?
-  description: Partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été.
+  title: "Où partir en automne pour un été indien réussi ?"
+  description: "Partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été."
 navigation:
-  title: Où partir en automne pour un été indien réussi ?
-  description: partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été.
-author: linda.tran@odysway.com
+  title: "Où partir en automne pour un été indien réussi ?"
+  description: "partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-30 12:08:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-30 12:08:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 30 novembre 2020
@@ -31,7 +31,7 @@ Partir en automne est un bon moyen de faire perdurer cette douce sensation d’�
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 **Partir en automne** est un bon moyen de faire perdurer cette douce sensation d’été indien et de liberté, tout en profitant de l’arrière saison en toute sérénité.

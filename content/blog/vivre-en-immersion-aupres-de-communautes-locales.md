@@ -1,23 +1,23 @@
 ---
-title: Vivre en immersion auprès de communautés locales
-description: Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est aussi aller à la rencontre des communautés locales , connaître leurs traditions, écouter leurs histoires et surtout faire face à un mode de vie totalement différent du nôtre. Et ...
+title: "Vivre en immersion auprès de communautés locales"
+description: "Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est aussi aller à la rencontre des communautés locales , connaître leurs traditions, écouter leurs histoires et surtout faire face à un mode de vie totalement différent du nôtre. Et ..."
 seo:
-  title: Vivre en immersion auprès de communautés locales
-  description: Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est
+  title: "Vivre en immersion auprès de communautés locales"
+  description: "Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est"
 navigation:
-  title: Vivre en immersion auprès de communautés locales
-  description: Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est aussi aller à la rencontre des communautés locales , connaître leurs traditions, écouter leurs histoires et surtout faire face à un mode de vie totalement différent du nôtre. Et ...
-author: romain.masina@odysway.com
+  title: "Vivre en immersion auprès de communautés locales"
+  description: "Pourquoi s'immerger auprès de communautés locales en voyage ? Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est aussi aller à la rencontre des communautés locales , connaître leurs traditions, écouter leurs histoires et surtout faire face à un mode de vie totalement différent du nôtre. Et ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-29 14:51:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-04-29 14:51:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 29 avril 2020
@@ -31,7 +31,7 @@ Voyager ne signifie pas seulement aller visiter un autre pays. Voyager, c'est a
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 ## Pourquoi s'immerger auprès de communautés locales en voyage ?

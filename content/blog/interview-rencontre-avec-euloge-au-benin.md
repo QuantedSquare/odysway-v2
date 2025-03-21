@@ -1,29 +1,32 @@
 ---
-title: Interview - Rencontre avec Euloge au Bénin
-description: Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
-
-Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
+title: "Interview - Rencontre avec Euloge au Bénin"
+description: |
+    Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
+    
+    Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
 seo:
-  title: Interview - Rencontre avec Euloge au Bénin
-  description: Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
-
-Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
+  title: "Interview - Rencontre avec Euloge au Bénin"
+  description: |
+    Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
+    
+    Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
 navigation:
-  title: Interview - Rencontre avec Euloge au Bénin
-  description: Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
-
-Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
-author: linda.tran@odysway.com
+  title: "Interview - Rencontre avec Euloge au Bénin"
+  description: |
+    Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
+    
+    Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2022-10-25 14:00:00+00:00
-tag: undefined
-categories: immersion, voyager, bénin, culture
-displayedImg: https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj
+publishedAt: "2022-10-25 14:00:00+00:00"
+tags: "Afrique, autrement, bénin"
+categories: "immersion, voyager, bénin, culture"
+displayedImg: "https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj
+image-src: "https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj"
 ---
 #publication-date
 25 octobre 2022
@@ -37,7 +40,7 @@ Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj
+image-src: "https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj"
 ---
 #content
 **Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.**

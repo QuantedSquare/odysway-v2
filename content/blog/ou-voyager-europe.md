@@ -1,23 +1,23 @@
 ---
-title: Où voyager en Europe ?
-description: Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous ...
+title: "Où voyager en Europe ?"
+description: "Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous ..."
 seo:
-  title: Où voyager en Europe ?
-  description: Où voyager en Europe ? Devant la diversité des destinations qui existent, nous vous aidons à faire votre choix dans notre article !
+  title: "Où voyager en Europe ?"
+  description: "Où voyager en Europe ? Devant la diversité des destinations qui existent, nous vous aidons à faire votre choix dans notre article !"
 navigation:
-  title: Où voyager en Europe ?
-  description: Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous ...
-author: romain.masina@odysway.com
+  title: "Où voyager en Europe ?"
+  description: "Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-05-12 15:31:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu
+publishedAt: "2020-05-12 15:31:00+00:00"
+tags: "Europe, Famille, Finlande, France, Grands espaces, Roumanie, Sport, Transports insolites"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu
+image-src: "https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu"
 ---
 #publication-date
 12 mai 2020
@@ -31,7 +31,7 @@ Où voyager en Europe ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu
+image-src: "https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu"
 ---
 #content
 Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous vous souviendrez longtemps. **Mais où voyager en Europe ?** Il existe une telle diversité de destinations qu'il est souvent difficile de faire un choix. Odysway a sélectionné pour vous une liste de sept pays coups de cœur.

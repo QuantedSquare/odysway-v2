@@ -333,6 +333,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
   :::accomodation-container
   #text
   Pendant ce séjour, vous dormirez à Ouarzazate dans un hôtel 2\*/3\* du centre ville, en base double. Vous dormirez en bivouac (sous tente et sur un matelas) pendant les nuits dans le désert, cette fois avec des millions d'étoiles (dans le ciel !). Ne vous en faîtes pas, vous dormirez bien , les nuits sont fraiches mais des couvertures vous seront données. Et rien de mieux que le calme du désert pour vous ressourcer !
+
   
   #carousel
     ::::carousel
@@ -513,6 +514,7 @@ Détails du prix
   Un duvet / Sac à viande
   :::
 ::
+
 
 ::title-container
 #title

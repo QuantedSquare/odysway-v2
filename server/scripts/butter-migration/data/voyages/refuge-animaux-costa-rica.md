@@ -370,6 +370,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
   :::accomodation-container
   #text
   Sur la première semaine, vous serez logés dans les dortoirs du refuge, pouvant accueillir jusqu'à 12 personnes. Vous bénéficierez d'un lit simple superposé. Les repas seront servis dans la salle à manger du refuge. Sur la côte caribéenne, à Cahuita, vous dormirez dans un hôtel très confortable, en chambre double (lit double ou deux lits simples selon votre choix), avec piscine, situé en bordure de plage. Un cadre de détente idéal !
+
   
   #carousel
     ::::carousel
@@ -534,6 +535,7 @@ Détails du prix
   L'assurance annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

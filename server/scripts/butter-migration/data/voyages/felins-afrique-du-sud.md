@@ -306,6 +306,7 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
   :::accomodation-container
   #text
   À votre arrivée sur le centre, vous serez accueilli par une famille qui gère le sanctuaire. Leur maison est moderne et très confortable. Elle est située au cœur du parc où vous serez fasciné par la nature environnante et la vue sur les montagnes spectaculaires. La maison se compose de 6 chambres avec 4 salles de bains, une cuisine spacieuse et entièrement équipée, un grand salon, une terrasse extérieure avec une belle piscine pour se rafraîchir.
+
   
   #carousel
     ::::carousel
@@ -453,6 +454,7 @@ Détails du prix
   Les dépenses personnelles et les pourboires
   :::
 ::
+
 
 ::title-container
 #title

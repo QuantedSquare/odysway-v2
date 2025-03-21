@@ -453,6 +453,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
   :::accomodation-container
   #text
   Selon les étapes, vous alternerez entre des nuits en hôtel, en train-couchette et en cabine double à bord du bateau lors de la croisière sur le Nil (bateau darabieh ou sandal de 6 à 10 cabines selon la composition du groupe). Nous veillons à sélectionner uniquement des hébergements esprit "petite structure" simples mais confortables.
+
   
   #carousel
     ::::carousel
@@ -622,6 +623,7 @@ Détails du prix
   Facultatif : l'assurance voyage (devis sur demande)
   :::
 ::
+
 
 ::title-container
 #title

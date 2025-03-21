@@ -1,27 +1,29 @@
 ---
-title: Interview - Rencontre avec Ludovic, notre guide local en Colombie
-description: Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
-
-✨ Ludovic, notre guide en Colombie, nous raconte ✨
+title: "Interview - Rencontre avec Ludovic, notre guide local en Colombie"
+description: |
+    Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
+    
+    ✨ Ludovic, notre guide en Colombie, nous raconte ✨
 seo:
-  title: Interview - Rencontre avec Ludovic, notre guide local en Colombie
-  description: Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facet
+  title: "Interview - Rencontre avec Ludovic, notre guide local en Colombie"
+  description: "Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facet"
 navigation:
-  title: Interview - Rencontre avec Ludovic, notre guide local en Colombie
-  description: Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
-
-✨ Ludovic, notre guide en Colombie, nous raconte ✨
-author: linda.tran@odysway.com
+  title: "Interview - Rencontre avec Ludovic, notre guide local en Colombie"
+  description: |
+    Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
+    
+    ✨ Ludovic, notre guide en Colombie, nous raconte ✨
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2023-06-06 10:43:00+00:00
-tag: undefined
-categories: voyage, immersion, culture, Colombie, locale
-displayedImg: https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ
+publishedAt: "2023-06-06 10:43:00+00:00"
+tags: "Colombie, voyage, Voyager"
+categories: "voyage, immersion, culture, Colombie, locale"
+displayedImg: "https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ
+image-src: "https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ"
 ---
 #publication-date
 6 juin 2023
@@ -35,7 +37,7 @@ Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressen
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ
+image-src: "https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ"
 ---
 #content
 Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, [un pays aux multiples facettes](https://odysway.com/destinations/colombie) empreinte de traditions !

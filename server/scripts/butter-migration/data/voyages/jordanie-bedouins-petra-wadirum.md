@@ -420,6 +420,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
   :::accomodation-container
   #text
   En ville, vous séjournerez dans des hôtels 2/3\* confortables et bien situés. Lors de vos excursions et randonnées, vous vivrez l'expérience unique des nuits en bivouac, en tente dans les camps bédouins et chez l'habitant au cœur du magnifique désert jordanien !
+
   
   #carousel
     ::::carousel
@@ -618,19 +619,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

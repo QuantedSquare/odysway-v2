@@ -1,23 +1,23 @@
 ---
-title: Voyager au Pérou en séjournant chez l'habitant
-description: Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie.
+title: "Voyager au Pérou en séjournant chez l'habitant"
+description: "Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie."
 seo:
-  title: Voyager au Pérou en séjournant chez l'habitant
-  description: Comment voyager au Pérou en restant au plus proche des communautés locales, pour vivre un séjour inoubliable.
+  title: "Voyager au Pérou en séjournant chez l'habitant"
+  description: "Comment voyager au Pérou en restant au plus proche des communautés locales, pour vivre un séjour inoubliable."
 navigation:
-  title: Voyager au Pérou en séjournant chez l'habitant
-  description: Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie.
-author: contact@odysway.com
+  title: "Voyager au Pérou en séjournant chez l'habitant"
+  description: "Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie."
+author: "contact@odysway.com"
 published: false
-publishedAt: 2021-01-04 10:03:00+00:00
-tag: undefined
-categories: Blog
-displayedImg: https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0
+publishedAt: "2021-01-04 10:03:00+00:00"
+tags: "Amerique du Sud, Communautés locales, Grands espaces, Perou"
+categories: "Blog"
+displayedImg: "https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0
+image-src: "https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0"
 ---
 #publication-date
 4 janvier 2021
@@ -31,7 +31,7 @@ Voyager au Pérou en séjournant chez l'habitant
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0
+image-src: "https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0"
 ---
 #content
 Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie. [Découvrez nos voyages au Pérou.](https://odysway.com/destinations/perou)

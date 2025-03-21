@@ -1,31 +1,33 @@
 ---
-title: Se recentrer grâce au voyage initiatique
-description: Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment.
-Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant car soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement.
-En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
-Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
-Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
+title: "Se recentrer grâce au voyage initiatique"
+description: |
+    Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment.
+    Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant car soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement.
+    En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
+    Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
+    Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
 seo:
-  title: Se recentrer grâce au voyage initiatique
-  description: Le voyage initiatique est une expérience unique dans la vie de chacun. Un moment magique qui nous permet de faire le point et de se recentrer sur notre essentiel.
+  title: "Se recentrer grâce au voyage initiatique"
+  description: "Le voyage initiatique est une expérience unique dans la vie de chacun. Un moment magique qui nous permet de faire le point et de se recentrer sur notre essentiel."
 navigation:
-  title: Se recentrer grâce au voyage initiatique
-  description: Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment.
-Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant car soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement.
-En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
-Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
-Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
-author: linda.tran@odysway.com
+  title: "Se recentrer grâce au voyage initiatique"
+  description: |
+    Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment.
+    Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant car soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement.
+    En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
+    Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
+    Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-19 16:53:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-19 16:53:00+00:00"
+tags: "Communautés locales"
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 19 novembre 2020
@@ -39,7 +41,7 @@ Il est des moments dans notre vie où nous avons besoin de faire le point, de no
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment. Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant.

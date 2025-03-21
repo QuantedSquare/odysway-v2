@@ -1,31 +1,33 @@
 ---
-title: Séjour à la ferme : une immersion à la campagne
-description: Le séjour à la ferme est une façon insolite et ludique de découvrir le quotidien des fermiers et agriculteurs de nos régions.
-Faire un séjour immersif dans une ferme c’est également la possibilité d’explorer les différentes régions de France de manière écoresponsable.
-Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
-Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
-Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
+title: "Séjour à la ferme : une immersion à la campagne"
+description: |
+    Le séjour à la ferme est une façon insolite et ludique de découvrir le quotidien des fermiers et agriculteurs de nos régions.
+    Faire un séjour immersif dans une ferme c’est également la possibilité d’explorer les différentes régions de France de manière écoresponsable.
+    Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
+    Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
+    Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
 seo:
-  title: Séjours à la ferme : une immersion à la campagne
-  description: Le séjour à la ferme a ce goût de souvenirs d’enfance où gambader dans la nature et jouer avec les animaux était possible. Ça l’est encore, on vous y emmène ?
+  title: "Séjours à la ferme : une immersion à la campagne"
+  description: "Le séjour à la ferme a ce goût de souvenirs d’enfance où gambader dans la nature et jouer avec les animaux était possible. Ça l’est encore, on vous y emmène ?"
 navigation:
-  title: Séjour à la ferme : une immersion à la campagne
-  description: Le séjour à la ferme est une façon insolite et ludique de découvrir le quotidien des fermiers et agriculteurs de nos régions.
-Faire un séjour immersif dans une ferme c’est également la possibilité d’explorer les différentes régions de France de manière écoresponsable.
-Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
-Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
-Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
-author: linda.tran@odysway.com
+  title: "Séjour à la ferme : une immersion à la campagne"
+  description: |
+    Le séjour à la ferme est une façon insolite et ludique de découvrir le quotidien des fermiers et agriculteurs de nos régions.
+    Faire un séjour immersif dans une ferme c’est également la possibilité d’explorer les différentes régions de France de manière écoresponsable.
+    Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
+    Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
+    Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-24 09:24:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-24 09:24:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 24 novembre 2020
@@ -39,7 +41,7 @@ Le séjour à la ferme est une façon insolite et ludique de découvrir le quoti
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Le **séjour à la ferme** est une façon **insolite et ludique** de découvrir le quotidien des fermiers et agriculteurs de nos régions.

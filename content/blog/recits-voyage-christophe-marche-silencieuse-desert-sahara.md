@@ -1,23 +1,23 @@
 ---
-title: Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara
-description: Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !
+title: "Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara"
+description: "Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !"
 seo:
-  title: Récits de Voyage de Christophe Audoire | Blog Odysway
-  description: Un séjour placé sous le signe de la sérénité au coeur du désert du Sahara... Découvrez le témoignage de Christophe !
+  title: "Récits de Voyage de Christophe Audoire | Blog Odysway"
+  description: "Un séjour placé sous le signe de la sérénité au coeur du désert du Sahara... Découvrez le témoignage de Christophe !"
 navigation:
-  title: Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara
-  description: Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !
-author: linda.tran@odysway.com
+  title: "Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara"
+  description: "Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-12-01 14:01:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9
+publishedAt: "2020-12-01 14:01:00+00:00"
+tags: "Animaux, Communautés locales, France, Grands espaces, Made in France, Thailande"
+categories: "Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9
+image-src: "https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9"
 ---
 #publication-date
 1 décembre 2020
@@ -31,7 +31,7 @@ Partir à la découverte du Sahara, rencontrer les bédouins, se retrouver face 
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9
+image-src: "https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9"
 ---
 #content
 [Partir à la découverte du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Christophe), rencontrer les bédouins, se retrouver face à soi-même au milieu de la plus grande étendue de sable au monde... C'est le voyage au coeur du Sahara que Christophe a décidé de faire en septembre 2019 ! 

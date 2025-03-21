@@ -435,6 +435,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
   :::accomodation-container
   #text
   Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3\* et des nuits chez l'habitant. Nous veillons à sélectionner uniquement des hôtels esprit "petite structure" simples mais confortables.
+
   
   #carousel
     ::::carousel
@@ -664,6 +665,7 @@ Détails du prix
   Facultatif : le supplément chambre individuelle (160€)
   :::
 ::
+
 
 ::title-container
 #title

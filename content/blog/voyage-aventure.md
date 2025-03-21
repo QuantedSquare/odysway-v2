@@ -1,23 +1,23 @@
 ---
-title: Voyage Aventure : de belles sensations au programme
-description: Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure.
+title: "Voyage Aventure : de belles sensations au programme"
+description: "Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure."
 seo:
-  title: Voyage Aventure : de belles sensations au programme
-  description: Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure.
+  title: "Voyage Aventure : de belles sensations au programme"
+  description: "Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure."
 navigation:
-  title: Voyage Aventure : de belles sensations au programme
-  description: Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure.
-author: linda.tran@odysway.com
+  title: "Voyage Aventure : de belles sensations au programme"
+  description: "Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 10:44:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 10:44:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ Partir en voyage est déjà une aventure en soi, car le dépaysement est créate
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Partir en voyage est déjà une aventure en soi, car le dépaysement est créateur d’émotions, de rencontres, de découvertes et de souvenirs.

@@ -1,23 +1,23 @@
 ---
-title: Le Sri Lanka, une île aux mille saveurs
-description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ...
+title: "Le Sri Lanka, une île aux mille saveurs"
+description: "Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ..."
 seo:
-  title: Sri Lanka
-  description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan
+  title: "Sri Lanka"
+  description: "Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan"
 navigation:
-  title: Le Sri Lanka, une île aux mille saveurs
-  description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ...
-author: romain.masina@odysway.com
+  title: "Le Sri Lanka, une île aux mille saveurs"
+  description: "Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-05-29 12:38:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-05-29 12:38:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 29 mai 2020
@@ -31,7 +31,7 @@ Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 ## Pourquoi voyager au Sri Lanka ?

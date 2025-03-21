@@ -388,6 +388,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
   :::accomodation-container
   #text
   Lors des différentes étapes de votre voyage dans le Vietnam du Nord vous aurez l'occasion de dormir dans différents types d'hébergements : écolodges au cœur de la nature, hôtel 3\*, chez l'habitant dans une maison sur pilotis ou encore à bord d'une jonque traditionnelle !
+
   
   #carousel
     ::::carousel
@@ -536,19 +537,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

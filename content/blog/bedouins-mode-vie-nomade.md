@@ -1,23 +1,23 @@
 ---
-title: Bédouins : un mode de vie nomade
-description: Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ...
+title: "Bédouins : un mode de vie nomade"
+description: "Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ..."
 seo:
-  title: Bédouins : un mode de vie nomade
-  description: Découvrez le mode de vie des bédouins, un peuple nomade qui a su apprivoiser et s'adapter à la vie dans le désert.
+  title: "Bédouins : un mode de vie nomade"
+  description: "Découvrez le mode de vie des bédouins, un peuple nomade qui a su apprivoiser et s'adapter à la vie dans le désert."
 navigation:
-  title: Bédouins : un mode de vie nomade
-  description: Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ...
-author: romain.masina@odysway.com
+  title: "Bédouins : un mode de vie nomade"
+  description: "Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-03-24 13:15:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534
+publishedAt: "2020-03-24 13:15:00+00:00"
+tags: "Afrique, Communautés locales, Developpement personnel, Famille, Grands espaces, Maroc"
+categories: "Nature et grands espaces, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534
+image-src: "https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534"
 ---
 #publication-date
 24 mars 2020
@@ -31,7 +31,7 @@ Bédouins : un mode de vie nomade
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534
+image-src: "https://cdn.buttercms.com/gpcwnLt6REWLOQok0Wrf?1613667275534"
 ---
 #content
 Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur de leurs jambes. Et puis on éprouve un soulagement lorsqu’ils aperçoivent au loin l’oasis qu’ils sont venus chercher. Cliché me direz-vous ? Cette vision romancée n’est pourtant pas si loin de la vérité. Allons à la rencontre des Bédouins et découvrons leur mode de vie nomade dans un environnement hostile.

@@ -1,23 +1,23 @@
 ---
-title: Petit tour d’horizon de 10 villes écolos dans le monde
-description: A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ...
+title: "Petit tour d’horizon de 10 villes écolos dans le monde"
+description: "A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ..."
 seo:
-  title: Petit tour d’horizon de 10 villes écolos dans le monde | Blog Odysway
-  description: Faisons ensemble un petit tour d’horizon de 10 villes écolos dans le monde pour voir quelles sont leurs actions au quotidien.
+  title: "Petit tour d’horizon de 10 villes écolos dans le monde | Blog Odysway"
+  description: "Faisons ensemble un petit tour d’horizon de 10 villes écolos dans le monde pour voir quelles sont leurs actions au quotidien."
 navigation:
-  title: Petit tour d’horizon de 10 villes écolos dans le monde
-  description: A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ...
-author: linda.tran@odysway.com
+  title: "Petit tour d’horizon de 10 villes écolos dans le monde"
+  description: "A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-03-06 10:55:00+00:00
-tag: undefined
-categories: Apprentissage, Culture et decouverte, Blog
-displayedImg: https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ
+publishedAt: "2020-03-06 10:55:00+00:00"
+tags: "Afrique, Afrique du Sud, Amerique du Nord, Amerique du Sud, Brésil, Etats Unis, Famille, Transports insolites"
+categories: "Apprentissage, Culture et decouverte, Blog"
+displayedImg: "https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ
+image-src: "https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Petit tour d’horizon de 10 villes écolos dans le monde
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ
+image-src: "https://cdn.buttercms.com/G2ScnNh8TiKfWKcRJvXJ"
 ---
 #content
 A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs engagements pour agir. **Faisons un petit tour d’horizon de 10 villes écolos dans le monde pour voir quelles sont leurs actions au quotidien.**  

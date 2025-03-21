@@ -418,6 +418,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
   :::accomodation-container
   #text
   Au cours de ce voyage, vous aurez l'occasion de séjourner dans différents types de logements. Vous dormirez en hôtel à Katmandou, en logde et chez l'habitant lors de vos randonnées en montagne et vivrez trois nuits en immersion dans un ashram.
+
   
   #carousel
     ::::carousel
@@ -601,19 +602,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

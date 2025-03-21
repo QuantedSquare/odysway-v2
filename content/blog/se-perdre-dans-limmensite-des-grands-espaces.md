@@ -1,23 +1,23 @@
 ---
-title: Se perdre dans l'immensité des grands espaces
-description: Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ...
+title: "Se perdre dans l'immensité des grands espaces"
+description: "Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ..."
 seo:
-  title: Se perdre dans l'immensité des grands espaces
-  description: Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous éc
+  title: "Se perdre dans l'immensité des grands espaces"
+  description: "Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous éc"
 navigation:
-  title: Se perdre dans l'immensité des grands espaces
-  description: Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ...
-author: romain.masina@odysway.com
+  title: "Se perdre dans l'immensité des grands espaces"
+  description: "Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-29 15:50:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-04-29 15:50:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 29 avril 2020
@@ -31,7 +31,7 @@ Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… ST
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 ## Se déconnecter du quotidien

@@ -1,23 +1,23 @@
 ---
-title: Finlande
-description: Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y a mille et une raisons de partir en Finlande . Pourquoi partir en Finlande ? Pays scandinave qui s’étend au-delà du cercle polaire, la Finlande est une merveille naturelle. En quelques chiffres, cela donne : un territoire recouvert à ...
+title: "Finlande"
+description: "Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y a mille et une raisons de partir en Finlande . Pourquoi partir en Finlande ? Pays scandinave qui s’étend au-delà du cercle polaire, la Finlande est une merveille naturelle. En quelques chiffres, cela donne : un territoire recouvert à ..."
 seo:
-  title: Séjours en Finlande
-  description: Partir en Finlande pour vivre un séjour unique, au coeur d'une nature sublime et préservée. Découvrez tous nos séjours en Finlande !
+  title: "Séjours en Finlande"
+  description: "Partir en Finlande pour vivre un séjour unique, au coeur d'une nature sublime et préservée. Découvrez tous nos séjours en Finlande !"
 navigation:
-  title: Finlande
-  description: Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y a mille et une raisons de partir en Finlande . Pourquoi partir en Finlande ? Pays scandinave qui s’étend au-delà du cercle polaire, la Finlande est une merveille naturelle. En quelques chiffres, cela donne : un territoire recouvert à ...
-author: linda.tran@odysway.com
+  title: "Finlande"
+  description: "Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y a mille et une raisons de partir en Finlande . Pourquoi partir en Finlande ? Pays scandinave qui s’étend au-delà du cercle polaire, la Finlande est une merveille naturelle. En quelques chiffres, cela donne : un territoire recouvert à ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2021-02-09 09:52:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2021-02-09 09:52:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 9 février 2021
@@ -31,7 +31,7 @@ Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y 
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y a mille et une raisons de **partir en Finlande**.

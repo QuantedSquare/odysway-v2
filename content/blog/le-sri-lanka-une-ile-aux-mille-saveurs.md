@@ -1,23 +1,23 @@
 ---
-title: Le Sri Lanka, une île aux mille saveurs
-description: Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ...
+title: "Le Sri Lanka, une île aux mille saveurs"
+description: "Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ..."
 seo:
-  title: Le Sri Lanka, une île aux mille saveurs
-  description: Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil
+  title: "Le Sri Lanka, une île aux mille saveurs"
+  description: "Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil"
 navigation:
-  title: Le Sri Lanka, une île aux mille saveurs
-  description: Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ...
-author: romain.masina@odysway.com
+  title: "Le Sri Lanka, une île aux mille saveurs"
+  description: "Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-17 14:22:00+00:00
-tag: undefined
-categories: 
-displayedImg: 
+publishedAt: "2020-04-17 14:22:00+00:00"
+tags: ""
+categories: ""
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 17 avril 2020
@@ -31,7 +31,7 @@ Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil.

@@ -1,23 +1,23 @@
 ---
-title: 5 façons de lutter contre la déforestation en Amazonie
-description: L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?
+title: "5 façons de lutter contre la déforestation en Amazonie"
+description: "L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?"
 seo:
-  title: 5 façons de lutter contre la déforestation en Amazonie | Blog Odysway
-  description: Si vous voulez être acteur pour la planète et lutter contre la déforestation, Odysway vous présente 5 pratiques à mettre en place !
+  title: "5 façons de lutter contre la déforestation en Amazonie | Blog Odysway"
+  description: "Si vous voulez être acteur pour la planète et lutter contre la déforestation, Odysway vous présente 5 pratiques à mettre en place !"
 navigation:
-  title: 5 façons de lutter contre la déforestation en Amazonie
-  description: L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?
-author: julien@quantedsquare.com
+  title: "5 façons de lutter contre la déforestation en Amazonie"
+  description: "L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?"
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2020-02-03 17:37:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7
+publishedAt: "2020-02-03 17:37:00+00:00"
+tags: "Amerique du Sud, Brésil, Famille, Grands espaces"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7
+image-src: "https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7"
 ---
 #publication-date
 3 février 2020
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7
+image-src: "https://cdn.buttercms.com/PLfFp1uATy2c7uzTBdw7"
 ---
 #content
 L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Qu’elle soit d’origine naturelle ou majoritairement humaine, la **déforestation de l’Amazonie** ne cesse de croître au fil des années. Il faut savoir que depuis 50 ans, 17 % de sa surface a été détruite, entraînant la disparition et la migration de certaines espèces animales, ainsi que de tribus indigènes. À ce rythme, la forêt amazonienne aura disparu en 2030… Pourtant, les forêts sont essentielles pour notre planète et notre santé. Face à cette tragédie, il est possible d’apporter individuellement son aide. Voici **5 façons de lutter contre la déforestation en Amazonie**.

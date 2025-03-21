@@ -461,6 +461,7 @@ Un voyage mythique à vivre une fois dans sa vie.
   :::accomodation-container
   #text
   Lors de ce voyage, vous séjournerez dans de jolis hôtels 2-3\* dans un esprit "petite structure", simples mais confortables et bien situés. Lors de votre aventure en 4x4 dans le Sud Lípez, vous dormirez dans des refuges (chambre et salle de bain privative), dont une auberge de sel sur le Salar de Uyuni. Seuls hébergements disponibles pour les voyageurs dans cette zone désertique, ils font partie intégrante du charme de l'aventure. Une bonne douche chaude vous attend en récompense à l'arrivée !
+
   
   #carousel
     ::::carousel
@@ -688,19 +689,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

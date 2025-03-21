@@ -192,6 +192,7 @@ right-sticky: true
   :::accomodation-container
   #text
   À Édimbourg, vous serez logé dans un hôtel 3 étoiles, douillet et confortable, non loin du centre-ville afin de garder cette proximité avec les locaux. Pour les autres jours, vous dormirez dans des hostels, une structure entre l’auberge de jeunesse et le refuge de montagne. Ce type d’hébergement se caractérise par sa simplicité, sa convivialité et son côté pittoresque, et se compose d’espaces communs, de dortoirs de 4 à 8 lits et de salles de bain (à l’intérieur du dortoir ou dans le couloir). Une expérience écossaise authentique  !
+
   false
   :::
 
@@ -280,19 +281,7 @@ Détails du prix
 
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

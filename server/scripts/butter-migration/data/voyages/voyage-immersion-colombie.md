@@ -427,6 +427,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
   :::accomodation-container
   #text
   Pendant ce voyage, vous logerez en hôtel à Bogotá et chez l'habitant dans la région du Café et à Medellín. Dans la province du Choco, vous dormirez dans une cabane privative en bord de mer, au sein de la communauté Jovi.
+
   
   #carousel
     ::::carousel
@@ -622,6 +623,7 @@ Détails du prix
   L'assurance voyage multirisques ou annulation (optionnel)
   :::
 ::
+
 
 ::title-container
 #title

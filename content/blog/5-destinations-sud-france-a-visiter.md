@@ -1,23 +1,23 @@
 ---
-title: 5 destinations du sud de la France à visiter
-description: Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ...
+title: "5 destinations du sud de la France à visiter"
+description: "Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ..."
 seo:
-  title: 5 destinations du sud de la France à visiter
-  description: Découvrez 5 destinations du sud de la France à visiter, avec tout ce qu'elles ont à offrir à leurs visiteurs.
+  title: "5 destinations du sud de la France à visiter"
+  description: "Découvrez 5 destinations du sud de la France à visiter, avec tout ce qu'elles ont à offrir à leurs visiteurs."
 navigation:
-  title: 5 destinations du sud de la France à visiter
-  description: Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ...
-author: romain.masina@odysway.com
+  title: "5 destinations du sud de la France à visiter"
+  description: "Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-05-15 15:44:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ
+publishedAt: "2020-05-15 15:44:00+00:00"
+tags: "Europe, Famille, France, Grands espaces, Made in France"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ
+image-src: "https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ"
 ---
 #publication-date
 15 mai 2020
@@ -31,7 +31,7 @@ image-src: https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ
+image-src: "https://cdn.buttercms.com/RsDDclWT4OuGJUunENzQ"
 ---
 #content
 Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le sud de la France a beaucoup à offrir. **Du Pays Basque à la Provence-Alpes-Côte-d'Azur, en passant par l'Occitanie, la Camargue et la Corse, découvrons tout le charme et les attraits de ces cinq belles régions.**

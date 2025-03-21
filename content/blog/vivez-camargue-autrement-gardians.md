@@ -1,23 +1,23 @@
 ---
-title: Vivez la Camargue autrement avec les gardians
-description: Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys ...
+title: "Vivez la Camargue autrement avec les gardians"
+description: "Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys ..."
 seo:
-  title: Vivez la Camargue autrement avec les gardians
-  description: La Camargue autrement : découvrez la vie des gardians, ces cow-boys qui perpétuent des traditions ayant forgé l'identité de la Camargue.
+  title: "Vivez la Camargue autrement avec les gardians"
+  description: "La Camargue autrement : découvrez la vie des gardians, ces cow-boys qui perpétuent des traditions ayant forgé l'identité de la Camargue."
 navigation:
-  title: Vivez la Camargue autrement avec les gardians
-  description: Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys ...
-author: romain.masina@odysway.com
+  title: "Vivez la Camargue autrement avec les gardians"
+  description: "Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-30 16:50:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/19MwadjxSuaO5EQqBll3?1613058773077
+publishedAt: "2020-04-30 16:50:00+00:00"
+tags: "Animaux, Europe, Famille, France, Grands espaces, Made in France"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/19MwadjxSuaO5EQqBll3?1613058773077"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/19MwadjxSuaO5EQqBll3?1613058773077
+image-src: "https://cdn.buttercms.com/19MwadjxSuaO5EQqBll3?1613058773077"
 ---
 #publication-date
 30 avril 2020
@@ -31,7 +31,7 @@ Vivez la Camargue autrement avec les gardians
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/19MwadjxSuaO5EQqBll3?1613058773077
+image-src: "https://cdn.buttercms.com/19MwadjxSuaO5EQqBll3?1613058773077"
 ---
 #content
 Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys bien de chez nous qui veillent sur les manades. Si vous êtes en quête de **découvrir autrement une Camargue insoupçonnée et envoûtante,** rien de tel que de partir à leur rencontre.

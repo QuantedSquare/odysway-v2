@@ -398,6 +398,7 @@ En parallèle, des temps libres vous invitent à marcher paisiblement dans la na
   :::accomodation-container
   #text
   Lors de ce voyage, vous découvrirez une variété d’hébergements, chacun reflétant une facette de la culture et des paysages mongols. À Oulan-Bator, vous séjournerez dans un hôtel 3\*, offrant tout le confort nécessaire pour débuter et conclure votre aventure. En pleine nature, vous vivrez l’expérience unique de dormir sous tente lors des nuits en bivouac sauvage. Les tentes confortables, équipées de lits et matelas, seront installées près d’un ruisseau, avec douche portable et toilettes aménagées pour un séjour en harmonie avec l’environnement. Vous passerez également plusieurs nuits dans des yourtes traditionnelles, que ce soit dans des camps écologiques ou en immersion chez des familles nomades. Ces moments vous plongeront au cœur du quotidien mongol, en partageant des repas et des soirées chaleureuses autour du poêle.
+
   
   #carousel
     ::::carousel
@@ -555,6 +556,7 @@ Détails du prix
   Facultatif : assurance voyage annulation ou multirisques
   :::
 ::
+
 
 ::title-container
 #title

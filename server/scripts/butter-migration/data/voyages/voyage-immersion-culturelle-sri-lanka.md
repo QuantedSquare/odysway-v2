@@ -431,6 +431,7 @@ C’est la fin de votre séjour sur cette île paradisiaque. En espérant que vo
   :::accomodation-container
   #text
   Votre séjour au Sri Lanka s’accompagne d’hébergements soigneusement sélectionnés, alliant charme, confort et authenticité. Chaque étape reflète l’esprit de la région : une nuit immersive dans un temple bouddhiste, des hôtels standards à deluxe proches des sites emblématiques, et des séjours en pleine nature favorisant la reconnexion avec l’environnement et les communautés locales. Profitez également d’un cadre colonial chaleureux dans les collines sri lankaises, d’une expérience sauvage à proximité d’un parc national, et d’une escapade balnéaire dans un lieu chargé d’histoire. Ces hébergements variés vous offrent une immersion totale et un confort adapté à chaque moment de votre voyage.
+
   
   #carousel
     ::::carousel
@@ -596,19 +597,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

@@ -1,23 +1,23 @@
 ---
-title: Responsable Voyageurs - CDI - H/F
-description: Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !
+title: "Responsable Voyageurs - CDI - H/F"
+description: "Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !"
 seo:
-  title: Responsable Voyageurs - CDI (H/F) - Odysway
-  description: Nous recrutons notre futur Responsable Voyageurs (H/F) CDI. Découvrez le détail de l'offre et rejoignez-nous !
+  title: "Responsable Voyageurs - CDI (H/F) - Odysway"
+  description: "Nous recrutons notre futur Responsable Voyageurs (H/F) CDI. Découvrez le détail de l'offre et rejoignez-nous !"
 navigation:
-  title: Responsable Voyageurs - CDI - H/F
-  description: Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !
-author: linda.tran@odysway.com
+  title: "Responsable Voyageurs - CDI - H/F"
+  description: "Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2022-02-28 15:36:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr
+publishedAt: "2022-02-28 15:36:00+00:00"
+tags: "Actualités"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr
+image-src: "https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr"
 ---
 #publication-date
 28 février 2022
@@ -31,7 +31,7 @@ Responsable Voyageurs - CDI - H/F
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr
+image-src: "https://cdn.buttercms.com/GWp2YHouScG2ZOv9ytJr"
 ---
 #content
 **À propos**

@@ -1,23 +1,23 @@
 ---
-title: Comment voyager près de chez vous?
-description: Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous . Ici un ...
+title: "Comment voyager près de chez vous?"
+description: "Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous . Ici un ..."
 seo:
-  title: Comment voyager près de chez vous ?
-  description: Comment voyager près de chez vous ? Nous vous donnons quelques pistes dans notre article pour faire un beau voyage tout près de chez vous.
+  title: "Comment voyager près de chez vous ?"
+  description: "Comment voyager près de chez vous ? Nous vous donnons quelques pistes dans notre article pour faire un beau voyage tout près de chez vous."
 navigation:
-  title: Comment voyager près de chez vous?
-  description: Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous . Ici un ...
-author: romain.masina@odysway.com
+  title: "Comment voyager près de chez vous?"
+  description: "Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous . Ici un ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-05-22 15:30:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg
+publishedAt: "2020-05-22 15:30:00+00:00"
+tags: "Europe, Famille, France, Made in France"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg
+image-src: "https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg"
 ---
 #publication-date
 22 mai 2020
@@ -31,7 +31,7 @@ Comment voyager près de chez vous?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg
+image-src: "https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg"
 ---
 #content
 Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. **Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous**. Ici un monument historique, là une jolie balade à faire ou bien un panorama à découvrir. Voyager est avant tout un état d'esprit et non une quête aux tampons sur le passeport. **Nous vous donnons quelques pistes pour faire le plus beau des voyages tout près de chez vous**.

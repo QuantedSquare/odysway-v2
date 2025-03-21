@@ -1,23 +1,23 @@
 ---
-title: Road Trip Organisé : une totale liberté
-description: Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ...
+title: "Road Trip Organisé : une totale liberté"
+description: "Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ..."
 seo:
-  title: Road Trip Organisé : une totale liberté
-  description: Road trip rime avec liberté, autonomie, rencontres insolites et découverte d’un pays à votre rythme. Nos road trip organisés c’est tout cela combiné !
+  title: "Road Trip Organisé : une totale liberté"
+  description: "Road trip rime avec liberté, autonomie, rencontres insolites et découverte d’un pays à votre rythme. Nos road trip organisés c’est tout cela combiné !"
 navigation:
-  title: Road Trip Organisé : une totale liberté
-  description: Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ...
-author: linda.tran@odysway.com
+  title: "Road Trip Organisé : une totale liberté"
+  description: "Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ..."
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-11-26 16:13:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2020-11-26 16:13:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 26 novembre 2020
@@ -31,7 +31,7 @@ Lorsque l’on pense road trip, on imagine des kilomètres de route asphaltée, 
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Lorsque l’on pense **road trip**, on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66.

@@ -460,6 +460,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
   :::accomodation-container
   #text
   Vous logerez dans des hôtels 3\* (base chambre double). Nous veillons à sélectionner uniquement des hôtels esprit "petite structure" simples mais confortables.
+
   
   #carousel
     ::::carousel
@@ -690,19 +691,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

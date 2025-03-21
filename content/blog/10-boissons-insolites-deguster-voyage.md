@@ -1,23 +1,23 @@
 ---
-title: 10 boissons insolites à déguster en voyage
-description: Partir en voyage, c'est découvrir de nouveaux paysages, de nouvelles cultures, des modes de vie souvent a l'oppose du notre et faire de belles rencontres. Partir en voyage, c'est aussi découvrir de nouvelles saveurs et avoir l'occasion de goûter a des spécialités parfois surprenantes. Odysway a décidé de faire...
+title: "10 boissons insolites à déguster en voyage"
+description: "Partir en voyage, c'est découvrir de nouveaux paysages, de nouvelles cultures, des modes de vie souvent a l'oppose du notre et faire de belles rencontres. Partir en voyage, c'est aussi découvrir de nouvelles saveurs et avoir l'occasion de goûter a des spécialités parfois surprenantes. Odysway a décidé de faire..."
 seo:
-  title: 10 boissons insolites à déguster en voyage | Blog Odysway
-  description: Chaque pays à travers le monde possède ses propres spécialités culinaires. Découvrons ensemble 10 boissons insolites à déguster en voyage !
+  title: "10 boissons insolites à déguster en voyage | Blog Odysway"
+  description: "Chaque pays à travers le monde possède ses propres spécialités culinaires. Découvrons ensemble 10 boissons insolites à déguster en voyage !"
 navigation:
-  title: 10 boissons insolites à déguster en voyage
-  description: Partir en voyage, c'est découvrir de nouveaux paysages, de nouvelles cultures, des modes de vie souvent a l'oppose du notre et faire de belles rencontres. Partir en voyage, c'est aussi découvrir de nouvelles saveurs et avoir l'occasion de goûter a des spécialités parfois surprenantes. Odysway a décidé de faire...
-author: julien@quantedsquare.com
+  title: "10 boissons insolites à déguster en voyage"
+  description: "Partir en voyage, c'est découvrir de nouveaux paysages, de nouvelles cultures, des modes de vie souvent a l'oppose du notre et faire de belles rencontres. Partir en voyage, c'est aussi découvrir de nouvelles saveurs et avoir l'occasion de goûter a des spécialités parfois surprenantes. Odysway a décidé de faire..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-10-10 13:01:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/qpE0r8siSRDOHVnZM3p7
+publishedAt: "2019-10-10 13:01:00+00:00"
+tags: "Amerique du Nord, Amerique du Sud, Asie, Europe"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/qpE0r8siSRDOHVnZM3p7"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/qpE0r8siSRDOHVnZM3p7
+image-src: "https://cdn.buttercms.com/qpE0r8siSRDOHVnZM3p7"
 ---
 #publication-date
 10 octobre 2019
@@ -31,7 +31,7 @@ Partir en voyage, c’est découvrir de nouveaux paysages, de nouvelles cultures
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/qpE0r8siSRDOHVnZM3p7
+image-src: "https://cdn.buttercms.com/qpE0r8siSRDOHVnZM3p7"
 ---
 #content
 Partir en voyage, c’est découvrir de nouveaux paysages, de nouvelles cultures, des modes de vie souvent à l’opposé du nôtre et faire de belles rencontres. **Partir en voyage, c’est aussi découvrir de nouvelles saveurs** et avoir l’occasion de goûter à des spécialités parfois surprenantes. Odysway a décidé de faire le tour du monde pour vous faire connaître **10 boissons insolites à déguster lors de votre voyage**, certaines avec modération bien sûr.

@@ -1,23 +1,23 @@
 ---
-title: Voyage et pratique des Arts Martiaux à travers le monde
-description: Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ...
+title: "Voyage et pratique des Arts Martiaux à travers le monde"
+description: "Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ..."
 seo:
-  title: Voyage et pratique des Arts Martiaux à Travers le Monde
-  description: Découvrez les arts martiaux à travers le monde en voyageant : boxe thaïlandaise en Thaïlande, kung-fu en Chine, jiu-jitsu au Brésil, lutte au Sénégal, capoeira au Brésil, taekkyeon en Corée du Sud, savate en France et eskrima aux Philippines. Explorez ces disciplines uniques et les cultures qui les entourent.
+  title: "Voyage et pratique des Arts Martiaux à Travers le Monde"
+  description: "Découvrez les arts martiaux à travers le monde en voyageant : boxe thaïlandaise en Thaïlande, kung-fu en Chine, jiu-jitsu au Brésil, lutte au Sénégal, capoeira au Brésil, taekkyeon en Corée du Sud, savate en France et eskrima aux Philippines. Explorez ces disciplines uniques et les cultures qui les entourent."
 navigation:
-  title: Voyage et pratique des Arts Martiaux à travers le monde
-  description: Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ...
-author: romain.masina@odysway.com
+  title: "Voyage et pratique des Arts Martiaux à travers le monde"
+  description: "Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2024-05-31 14:34:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/q726xyrFTOe76K2LVung
+publishedAt: "2024-05-31 14:34:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/q726xyrFTOe76K2LVung"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/q726xyrFTOe76K2LVung
+image-src: "https://cdn.buttercms.com/q726xyrFTOe76K2LVung"
 ---
 #publication-date
 31 mai 2024
@@ -31,7 +31,7 @@ Voyage et pratique des Arts Martiaux à travers le monde
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/q726xyrFTOe76K2LVung
+image-src: "https://cdn.buttercms.com/q726xyrFTOe76K2LVung"
 ---
 #content
 Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent non seulement perfectionner leurs compétences, mais aussi explorer les cultures et les traditions qui les entourent. Dans cet article, nous plongerons dans cette aventure fascinante, allant de la boxe thaïlandaise en Thaïlande au kung-fu en Chine, en passant par le jiu-jitsu brésilien au Brésil, et bien d'autres encore.

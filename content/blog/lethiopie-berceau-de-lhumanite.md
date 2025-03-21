@@ -1,23 +1,23 @@
 ---
-title: L'Ethiopie, berceau de l'humanité
-description: Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de colonisation, l’Éthiopie possède une culture intacte et fascinante ! L’Éthiopie est aussi considérée comme un des berceaux de l’humanité. C’est au bord de la rivière Awash, dans ...
+title: "L'Ethiopie, berceau de l'humanité"
+description: "Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de colonisation, l’Éthiopie possède une culture intacte et fascinante ! L’Éthiopie est aussi considérée comme un des berceaux de l’humanité. C’est au bord de la rivière Awash, dans ..."
 seo:
-  title: L'Ethiopie, berceau de l'humanité
-  description: Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de c
+  title: "L'Ethiopie, berceau de l'humanité"
+  description: "Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de c"
 navigation:
-  title: L'Ethiopie, berceau de l'humanité
-  description: Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de colonisation, l’Éthiopie possède une culture intacte et fascinante ! L’Éthiopie est aussi considérée comme un des berceaux de l’humanité. C’est au bord de la rivière Awash, dans ...
-author: romain.masina@odysway.com
+  title: "L'Ethiopie, berceau de l'humanité"
+  description: "Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de colonisation, l’Éthiopie possède une culture intacte et fascinante ! L’Éthiopie est aussi considérée comme un des berceaux de l’humanité. C’est au bord de la rivière Awash, dans ..."
+author: "romain.masina@odysway.com"
 published: false
-publishedAt: 2020-04-17 14:01:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904
+publishedAt: "2020-04-17 14:01:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904
+image-src: "https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904"
 ---
 #publication-date
 17 avril 2020
@@ -31,7 +31,7 @@ L'Ethiopie, berceau de l'humanité
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904
+image-src: "https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904"
 ---
 #content
 ## Pourquoi partir en voyage en Éthiopie ?

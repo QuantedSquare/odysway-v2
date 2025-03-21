@@ -1,23 +1,23 @@
 ---
-title: Voile sur glace en Lituanie
-description: Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ...
+title: "Voile sur glace en Lituanie"
+description: "Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ..."
 seo:
-  title: Voile sur glace en Lituanie | Blog Odysway
-  description: Nichée au coeur de la jungle, une épave d'avion trône au milieu des arbres, son nez dresse vers le ciel. Dormez dans ce lieu atypique!
+  title: "Voile sur glace en Lituanie | Blog Odysway"
+  description: "Nichée au coeur de la jungle, une épave d'avion trône au milieu des arbres, son nez dresse vers le ciel. Dormez dans ce lieu atypique!"
 navigation:
-  title: Voile sur glace en Lituanie
-  description: Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ...
-author: julien@quantedsquare.com
+  title: "Voile sur glace en Lituanie"
+  description: "Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2018-10-29 10:41:00+00:00
-tag: undefined
-categories: Depassement de soi, Nature et grands espaces, Apprentissage
-displayedImg: https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185
+publishedAt: "2018-10-29 10:41:00+00:00"
+tags: "Europe, Sports"
+categories: "Depassement de soi, Nature et grands espaces, Apprentissage"
+displayedImg: "https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185
+image-src: "https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185"
 ---
 #publication-date
 29 octobre 2018
@@ -31,7 +31,7 @@ Voile sur glace en Lituanie
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185
+image-src: "https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185"
 ---
 #content
 Bordée par la mer Baltique sur sa côte ouest, la Lituanie est l’une des trois nations qui compose les pays baltes. Riche d’un passé historique mouvementé, la Lituanie recèle de nombreux attraits dont **une nature omniprésente aux milliers de lacs et de rivières**. Ces plans d’eau répartis dans tout le pays permettent de pratiquer diverses activités. Une est particulièrement prisée par les amateurs d’adrénaline : **la** **voile** **sur** **glace**.

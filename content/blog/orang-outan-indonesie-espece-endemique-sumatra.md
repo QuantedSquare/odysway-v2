@@ -1,23 +1,23 @@
 ---
-title: Orang-outan Indonésie : une espèce endémique de l’île de Sumatra
-description: Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ...
+title: "Orang-outan Indonésie : une espèce endémique de l’île de Sumatra"
+description: "Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ..."
 seo:
-  title: Orang-outan Indonésie : une espèce endémique de l’île de Sumatra | Blog Odysway
-  description: Espèce endémique d'Indonésie, l'orang-outan voit sa population diminuer d’année en année à cause de la déforestation et du braconnage.
+  title: "Orang-outan Indonésie : une espèce endémique de l’île de Sumatra | Blog Odysway"
+  description: "Espèce endémique d'Indonésie, l'orang-outan voit sa population diminuer d’année en année à cause de la déforestation et du braconnage."
 navigation:
-  title: Orang-outan Indonésie : une espèce endémique de l’île de Sumatra
-  description: Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ...
-author: julien@quantedsquare.com
+  title: "Orang-outan Indonésie : une espèce endémique de l’île de Sumatra"
+  description: "Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-10-30 17:46:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Culture et decouverte
-displayedImg: https://cdn.buttercms.com/ufOd50erRHuCHOs48iba
+publishedAt: "2019-10-30 17:46:00+00:00"
+tags: "Animaux, Asie, Famille, Indonesie"
+categories: "Nature et grands espaces, Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/ufOd50erRHuCHOs48iba"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/ufOd50erRHuCHOs48iba
+image-src: "https://cdn.buttercms.com/ufOd50erRHuCHOs48iba"
 ---
 #publication-date
 30 octobre 2019
@@ -31,7 +31,7 @@ Orang-outan Indonésie : une espèce endémique de l’île de Sumatra
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/ufOd50erRHuCHOs48iba
+image-src: "https://cdn.buttercms.com/ufOd50erRHuCHOs48iba"
 ---
 #content
 Autrefois, il peuplait toute l’Asie jusqu’au nord de la Chine. Aujourd’hui, il ne se trouve qu’à deux seuls endroits sur terre : sur l’île de Sumatra en Indonésie et sur l’île de Bornéo. L’orang-outan est aujourd’hui en voie de disparition à cause de la déforestation et du braconnage. Animal discret et particulièrement intelligent, partons sur les traces de **l’orang-outan d’Indonésie** pour en savoir plus.

@@ -1,23 +1,23 @@
 ---
-title: Les 10 plus grands aventuriers
-description: Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ...
+title: "Les 10 plus grands aventuriers"
+description: "Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ..."
 seo:
-  title: Les 10 plus grands aventuriers | Blog Odysway
-  description: Depuis des siècles, des aventuriers parcourent le monde à leur façon. Voici les 10 plus grands aventuriers qui ont marque l'histoire.
+  title: "Les 10 plus grands aventuriers | Blog Odysway"
+  description: "Depuis des siècles, des aventuriers parcourent le monde à leur façon. Voici les 10 plus grands aventuriers qui ont marque l'histoire."
 navigation:
-  title: Les 10 plus grands aventuriers
-  description: Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ...
-author: julien@quantedsquare.com
+  title: "Les 10 plus grands aventuriers"
+  description: "Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-06-21 09:49:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359
+publishedAt: "2019-06-21 09:49:00+00:00"
+tags: "Communautés locales, Grands espaces, Sport, Transports insolites"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359
+image-src: "https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359"
 ---
 #publication-date
 21 juin 2019
@@ -31,7 +31,7 @@ Les 10 plus grands aventuriers
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359
+image-src: "https://cdn.buttercms.com/HnliEDHSLCkRzi4H0B3X?1611752626359"
 ---
 #content
 Un aventurier est une personne en quête d’aventure, avec en toile de fond l’inconnu et le danger. **Depuis des siècles, des aventuriers parcourent la planète**. Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d’émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez les 10 plus grands aventuriers qui ont marqué l’histoire.

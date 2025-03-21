@@ -304,6 +304,7 @@ Nuits bivouac à Kibish.
   :::accomodation-container
   #text
   
+
   false
   :::
 
@@ -373,6 +374,7 @@ Détails du prix
 #items-list-exclude
 
 ::
+
 
 ::title-container
 #title

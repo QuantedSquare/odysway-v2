@@ -1,23 +1,23 @@
 ---
-title: Quelle faune voir au Sri Lanka ?
-description: Pays dote d'une grande biodiversité, le Sri Lanka héberge une faune riche et variée . Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette faune incroyable présente au Sri Lanka . La faune ...
+title: "Quelle faune voir au Sri Lanka ?"
+description: "Pays dote d'une grande biodiversité, le Sri Lanka héberge une faune riche et variée . Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette faune incroyable présente au Sri Lanka . La faune ..."
 seo:
-  title: Quelle faune voir au Sri Lanka ? | Blog Odysway
-  description: Le Sri Lanka héberge une multitude d'animaux terrestres et aquatiques. Voici une présentation de la faune présente au Sri Lanka.
+  title: "Quelle faune voir au Sri Lanka ? | Blog Odysway"
+  description: "Le Sri Lanka héberge une multitude d'animaux terrestres et aquatiques. Voici une présentation de la faune présente au Sri Lanka."
 navigation:
-  title: Quelle faune voir au Sri Lanka ?
-  description: Pays dote d'une grande biodiversité, le Sri Lanka héberge une faune riche et variée . Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette faune incroyable présente au Sri Lanka . La faune ...
-author: julien@quantedsquare.com
+  title: "Quelle faune voir au Sri Lanka ?"
+  description: "Pays dote d'une grande biodiversité, le Sri Lanka héberge une faune riche et variée . Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette faune incroyable présente au Sri Lanka . La faune ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-07-29 11:00:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/NvdlJEdmQUOtMgESoavv
+publishedAt: "2019-07-29 11:00:00+00:00"
+tags: "Animaux, Asie, Famille, Sri Lanka"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/NvdlJEdmQUOtMgESoavv"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/NvdlJEdmQUOtMgESoavv
+image-src: "https://cdn.buttercms.com/NvdlJEdmQUOtMgESoavv"
 ---
 #publication-date
 29 juillet 2019
@@ -31,7 +31,7 @@ Quelle faune voir au Sri Lanka ?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/NvdlJEdmQUOtMgESoavv
+image-src: "https://cdn.buttercms.com/NvdlJEdmQUOtMgESoavv"
 ---
 #content
 Pays doté d’une grande biodiversité, **le Sri Lanka héberge une faune riche et variée**. Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette **faune incroyable présente au Sri Lanka**.

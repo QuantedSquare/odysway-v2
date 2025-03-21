@@ -401,6 +401,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
   :::accomodation-container
   #text
   Lors de ce voyage, vous serez logés en écolodge, au cœur de la forêt finlandaise. Les écolodges bénéficient d'une grande baie vitrée avec vue sur le lac glacé, pour un émerveillement dès votre réveil. Les repas se prennent en communauté, au sein d'un plus grand bâtiment. Pour améliorer votre confort, nous vous proposons de profiter d'un bain nordique et d'un sauna pour des moments de détente après vos journées d'activités.
+
   
   #carousel
     ::::carousel
@@ -553,6 +554,7 @@ Détails du prix
   Les pourboires (montant conseillé : 20 à 30€ par personne)
   :::
 ::
+
 
 ::title-container
 #title

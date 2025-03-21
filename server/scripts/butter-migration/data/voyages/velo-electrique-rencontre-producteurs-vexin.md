@@ -307,6 +307,7 @@ Ce séjour est parfait si vous cherchez un week-end insolite, paisible et authen
   :::accomodation-container
   #text
   
+
   false
   :::
 
@@ -391,19 +392,7 @@ Détails du prix
 
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix

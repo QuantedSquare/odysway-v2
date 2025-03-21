@@ -1,23 +1,23 @@
 ---
-title: L'Empire inca : origine, apogée et déclin
-description: La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies...
+title: "L'Empire inca : origine, apogée et déclin"
+description: "La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies..."
 seo:
-  title: L’Empire inca : origine, apogée et déclin | Blog Odysway
-  description: Découvrons l'histoire de l'Empire inca, de son origine a son déclin, en passant par son apogée et ses constructions spectaculaires.
+  title: "L’Empire inca : origine, apogée et déclin | Blog Odysway"
+  description: "Découvrons l'histoire de l'Empire inca, de son origine a son déclin, en passant par son apogée et ses constructions spectaculaires."
 navigation:
-  title: L'Empire inca : origine, apogée et déclin
-  description: La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies...
-author: julien@quantedsquare.com
+  title: "L'Empire inca : origine, apogée et déclin"
+  description: "La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-09-13 16:55:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406
+publishedAt: "2019-09-13 16:55:00+00:00"
+tags: "Amerique du Sud, Communautés locales, Developpement personnel, Famille, Perou"
+categories: "Culture et decouverte"
+displayedImg: "https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406
+image-src: "https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406"
 ---
 #publication-date
 13 septembre 2019
@@ -31,7 +31,7 @@ L'Empire inca : origine, apogée et déclin
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406
+image-src: "https://cdn.buttercms.com/bEFHnrRJRsKbLQd36M2w?1611647418406"
 ---
 #content
 **La région de Cuzco au Pérou a vu naître les Incas**. Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu’à être le plus grand empire de l’Amérique précolombienne. Mais avec l’arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies qui ont décimé la population, **l’Empire inca** s’est effondré. Découvrons son histoire.

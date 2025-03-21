@@ -1,23 +1,23 @@
 ---
-title: Informations COVID-19
-description: INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway
+title: "Informations COVID-19"
+description: "INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway"
 seo:
-  title: INFORMATIONS COVID-19
-  description: INFORMATIONS COVID-19 - ODYSWAY - Toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway
+  title: "INFORMATIONS COVID-19"
+  description: "INFORMATIONS COVID-19 - ODYSWAY - Toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway"
 navigation:
-  title: Informations COVID-19
-  description: INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway
-author: contact@odysway.com
+  title: "Informations COVID-19"
+  description: "INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway"
+author: "contact@odysway.com"
 published: false
-publishedAt: 2020-09-28 09:39:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH
+publishedAt: "2020-09-28 09:39:00+00:00"
+tags: ""
+categories: ""
+displayedImg: "https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH
+image-src: "https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH"
 ---
 #publication-date
 28 septembre 2020
@@ -31,7 +31,7 @@ mise à jour le 22/07/2021
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH
+image-src: "https://cdn.buttercms.com/SWdofqZySkuUsb2npvzH"
 ---
 #content
 mise à jour le 22/07/2021

@@ -1,23 +1,23 @@
 ---
-title: Les bienfaits de l'Ayurveda
-description: Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ...
+title: "Les bienfaits de l'Ayurveda"
+description: "Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ..."
 seo:
-  title: Les bienfaits de l'Ayurveda | Blog Odysway
-  description: Médecine traditionnelle indienne ancestrale, l'Ayurveda consiste à soigner l'individu en rééquilibrant son corps et son esprit.
+  title: "Les bienfaits de l'Ayurveda | Blog Odysway"
+  description: "Médecine traditionnelle indienne ancestrale, l'Ayurveda consiste à soigner l'individu en rééquilibrant son corps et son esprit."
 navigation:
-  title: Les bienfaits de l'Ayurveda
-  description: Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ...
-author: julien@quantedsquare.com
+  title: "Les bienfaits de l'Ayurveda"
+  description: "Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2019-07-12 10:28:00+00:00
-tag: undefined
-categories: Depassement de soi
-displayedImg: https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P
+publishedAt: "2019-07-12 10:28:00+00:00"
+tags: "Developpement personnel"
+categories: "Depassement de soi"
+displayedImg: "https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P
+image-src: "https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P"
 ---
 #publication-date
 12 juillet 2019
@@ -31,7 +31,7 @@ Les bienfaits de l'Ayurveda
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P
+image-src: "https://cdn.buttercms.com/IEKA1nKPSFeaE5m6H39P"
 ---
 #content
 Médecine traditionnelle indienne, **l’Ayurveda** propose une approche différente dans la guérison des maux. Qu’ils soient d’ordres physiques ou psychologiques, **l’Ayurveda va d’abord rechercher les causes de ces déséquilibres à l’origine du mal-être**. Réduction du stress, apaisement des douleurs, lutte contre l’insomnie, découvrons les bienfaits de l’Ayurveda à travers différentes pratiques.

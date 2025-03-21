@@ -1,23 +1,23 @@
 ---
-title: Offre de stage
-description: Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !
+title: "Offre de stage"
+description: "Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !"
 seo:
-  title: Concepteur de voyages sur-mesure H/F (stage) - Odysway
-  description: Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !
+  title: "Concepteur de voyages sur-mesure H/F (stage) - Odysway"
+  description: "Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !"
 navigation:
-  title: Offre de stage
-  description: Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !
-author: linda.tran@odysway.com
+  title: "Offre de stage"
+  description: "Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2022-01-28 13:08:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI
+publishedAt: "2022-01-28 13:08:00+00:00"
+tags: "Actualités"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI
+image-src: "https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI"
 ---
 #publication-date
 28 janvier 2022
@@ -31,7 +31,7 @@ Offre de stage
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI
+image-src: "https://cdn.buttercms.com/tRbRx6RbRBe3qJYw6fQI"
 ---
 #content
 ## **Stage - Concepteur de voyages sur-mesure France & Corse (H/F)**

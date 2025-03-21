@@ -1,23 +1,23 @@
 ---
-title: Que faire dans la région du Jura?
-description: Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !
+title: "Que faire dans la région du Jura?"
+description: "Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !"
 seo:
-  title: Que faire dans la région du Jura ?
-  description: Entre les plaines et les massifs montagneux se trouvent des paysages sublimes insoupçonnés. 5 conseils pour découvrir les secrets du Jura !
+  title: "Que faire dans la région du Jura ?"
+  description: "Entre les plaines et les massifs montagneux se trouvent des paysages sublimes insoupçonnés. 5 conseils pour découvrir les secrets du Jura !"
 navigation:
-  title: Que faire dans la région du Jura?
-  description: Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !
-author: linda.tran@odysway.com
+  title: "Que faire dans la région du Jura?"
+  description: "Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2020-06-11 11:54:00+00:00
-tag: undefined
-categories: Nature et grands espaces, Blog
-displayedImg: https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1
+publishedAt: "2020-06-11 11:54:00+00:00"
+tags: "France, Grands espaces"
+categories: "Nature et grands espaces, Blog"
+displayedImg: "https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1
+image-src: "https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1"
 ---
 #publication-date
 11 juin 2020
@@ -31,7 +31,7 @@ Que faire dans la région du Jura?
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1
+image-src: "https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1"
 ---
 #content
 **Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !**

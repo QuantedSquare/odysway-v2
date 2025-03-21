@@ -1,23 +1,23 @@
 ---
-title: Partir en Famille
-description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
+title: "Partir en Famille"
+description: "Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !"
 seo:
-  title: Partir en famille : se retrouver tous ensemble
-  description: Voyager avec vos enfants est une expérience inoubliable. Les voyages forment la jeunesse et vivre en immersion garantit à votre famille des souvenirs mémorables.
+  title: "Partir en famille : se retrouver tous ensemble"
+  description: "Voyager avec vos enfants est une expérience inoubliable. Les voyages forment la jeunesse et vivre en immersion garantit à votre famille des souvenirs mémorables."
 navigation:
-  title: Partir en Famille
-  description: Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
-author: linda.tran@odysway.com
+  title: "Partir en Famille"
+  description: "Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !"
+author: "linda.tran@odysway.com"
 published: false
-publishedAt: 2021-01-19 09:19:00+00:00
-tag: undefined
-categories: Culture et decouverte
-displayedImg: 
+publishedAt: "2021-01-19 09:19:00+00:00"
+tags: ""
+categories: "Culture et decouverte"
+displayedImg: ""
 ---
 
 ::hero-section-blog
 ---
-image-src: 
+image-src: ""
 ---
 #publication-date
 19 janvier 2021
@@ -31,7 +31,7 @@ Le temps des vacances est un moment merveilleux pour toute la famille ! Se retro
 
 ::section-container
 ---
-image-src: 
+image-src: ""
 ---
 #content
 Le temps des vacances est un moment merveilleux pour toute la famille ! Se retrouver enfin tous ensemble, prendre le temps, découvrir et passer des moments de qualité parents-enfants, ça n’a pas de prix !

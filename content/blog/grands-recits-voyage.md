@@ -1,23 +1,23 @@
 ---
-title: Les grands recits de voyage
-description: Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ...
+title: "Les grands recits de voyage"
+description: "Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ..."
 seo:
-  title: Les grands récits de voyage | Blog Odysway
-  description: Pour partir en voyage sans forcément bouger de chez soi, voici une sélection des grands récits de voyage qui vous emmènent aux quatre coins du monde.
+  title: "Les grands récits de voyage | Blog Odysway"
+  description: "Pour partir en voyage sans forcément bouger de chez soi, voici une sélection des grands récits de voyage qui vous emmènent aux quatre coins du monde."
 navigation:
-  title: Les grands recits de voyage
-  description: Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ...
-author: julien@quantedsquare.com
+  title: "Les grands recits de voyage"
+  description: "Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ..."
+author: "julien@quantedsquare.com"
 published: false
-publishedAt: 2020-02-03 17:44:00+00:00
-tag: undefined
-categories: 
-displayedImg: https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn
+publishedAt: "2020-02-03 17:44:00+00:00"
+tags: "Afrique, Amerique du Nord, Communautés locales, Developpement personnel, Etats Unis, Grands espaces, Maroc, Transports insolites"
+categories: ""
+displayedImg: "https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn"
 ---
 
 ::hero-section-blog
 ---
-image-src: https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn
+image-src: "https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn"
 ---
 #publication-date
 3 février 2020
@@ -31,7 +31,7 @@ Les grands recits de voyage
 
 ::section-container
 ---
-image-src: https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn
+image-src: "https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn"
 ---
 #content
 Qu’ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. **Pour s’évader sans forcément bouger de chez soi, voici une sélection des grands récits de voyage.**
