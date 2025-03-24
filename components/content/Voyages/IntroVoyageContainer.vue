@@ -36,6 +36,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['programme'])
-console.log('programme', props)
+defineProps(['programme'])
 </script>

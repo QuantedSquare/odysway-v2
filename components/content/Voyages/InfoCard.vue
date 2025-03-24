@@ -109,13 +109,14 @@ const route = useRoute()
 const img = useImage()
 
 const { data: page, status } = useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
+  return queryCollection('voyages').path(route.path).first()
 })
 const voyageTitle = computed(() => {
   // #TODO @Vlad, c'est obligé ici que le titre soit autre part que cet array
   // En vrai, quand tu vois des trucs qui paraissent chelou comme ces 4 index de suite, c'est qu'il y a un truc à revoir
   // Check le log : console.log('page.value]', page.value)
   return page.value.body.value[0][2][2][2]
+  // A voir si on peut virer cette query pour avoir le même mode de fonctionnement que les autres composants de la page voyage
 })
 
 const voyageImg = computed(() => {

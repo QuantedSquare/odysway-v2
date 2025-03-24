@@ -3,7 +3,6 @@
     <ContentRenderer
       v-if="page"
       :value="page"
-      :data="mdcVars"
     />
   </div>
 </template>
@@ -16,7 +15,9 @@ definePageMeta({
 const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path(route.path).first()
+  console.log('route', route)
+  // route.path ne fonctionne qu'uniquement si on respecte la structure des dossiers nuxt studio (./voyages/[slug])
+  // Checker si on peut avoir une alternative plus solide
+  return queryCollection('voyages').path(route.path).first()
 })
-const mdcVars = ref({ programme: 'coucou' })
 </script>
