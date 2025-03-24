@@ -122,7 +122,6 @@ const { data: deal } = await useAsyncData(props.slug, async () => {
   // query.privatisation = false
   return query
 })
-console.log('deal', deal.value)
 </script>
 
 <style scoped>

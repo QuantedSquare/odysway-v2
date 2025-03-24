@@ -103,5 +103,4 @@ const formatLink = (date) => {
   const checkoutType = dayjs(date.departureDate).isBefore(in30days) ? 'full' : 'deposit'
   return `/checkout?slug=${props.deal.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`
 }
-console.log(filteredDates.value)
 </script>

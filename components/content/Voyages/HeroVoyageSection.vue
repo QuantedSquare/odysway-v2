@@ -60,6 +60,7 @@
             />
           </v-col>
           <v-col
+            v-if="isVideoAdded"
             cols="10"
             sm="5"
             md="4"
@@ -85,6 +86,15 @@ defineProps({
   },
 })
 const img = useImage()
+const route = useRoute()
+
+const { data: page } = useAsyncData(route.path, () => {
+  return queryCollection('voyages').path(route.path).first()
+})
+
+const isVideoAdded = computed(() => {
+  return page.value.body.value[0].length > 4
+})
 </script>
 
 <style scoped>

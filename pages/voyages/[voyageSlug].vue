@@ -18,6 +18,5 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('voyages').path(route.path).first()
 })
-
 const mdcVars = ref({ programme: 'coucou' })
 </script>

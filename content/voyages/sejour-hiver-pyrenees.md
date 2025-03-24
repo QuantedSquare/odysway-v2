@@ -47,6 +47,7 @@ Immersion hivernale en terre béarnaise
   :::video-dialog
   ---
   video-src: 
+    - https://www.youtube.com/embed/cEgwp93M5PU?si=Br7TU-UGrIyVCXEi
   ---
   #video-btn
   voir la video
@@ -158,23 +159,23 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   ---
   image: https://cdn.buttercms.com/XlIHZEHwQmiF9u91dQG1
   ---
-  ::::highlight-list-item
+    ::::highlight-list-item
     Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
     ::::
   
-::::highlight-list-item
+    ::::highlight-list-item
     Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
     ::::
   
-::::highlight-list-item
+    ::::highlight-list-item
     Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
     ::::
   
-::::highlight-list-item
+    ::::highlight-list-item
     Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
     ::::
   
-::::highlight-list-item
+    ::::highlight-list-item
     Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
     ::::
 
@@ -302,20 +303,20 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
     ::::carousel
     #carousel-item
      :::::image-carousel-item
-  ---
-  image: https://cdn.buttercms.com/JacSdSAWTfW40FdENnQh
-  ---
-  :::::
-:::::image-carousel-item
-  ---
-  image: https://cdn.buttercms.com/HJBg4gECT3qXda2TqenG
-  ---
-  :::::
-:::::image-carousel-item
-  ---
-  image: https://cdn.buttercms.com/0S9ohMXZRqqXZqcCr9dZ
-  ---
-  :::::
+      ---
+      image: https://cdn.buttercms.com/JacSdSAWTfW40FdENnQh
+      ---
+     :::::
+     :::::image-carousel-item
+     ---
+     image: https://cdn.buttercms.com/HJBg4gECT3qXda2TqenG
+     ---
+     :::::
+     :::::image-carousel-item
+     ---
+     image: https://cdn.buttercms.com/0S9ohMXZRqqXZqcCr9dZ
+     ---
+     :::::
     ::::
   :::
 
@@ -329,7 +330,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   Lors de ce séjour en vallée d’Aspe, vous serez guidés par des accompagnateurs en moyenne montagne diplômés d’État, passionnés par leur région et engagés dans une approche durable. Ils vous initieront aux techniques de randonnée hivernale en raquettes et ski de fond, tout en adaptant chaque sortie au niveau de chacun pour une expérience agréable et sécurisée. Ensemble, vous explorerez des paysages variés : forêts, rivières, plateaux ouverts, crêtes et pics enneigés, en faisant des pauses dans des cabanes de montagne accueillantes. Fidèles à la philosophie _leave no trace_, vos guides vous apprendront à évoluer dans ces espaces naturels en limitant votre impact, en respectant la faune et la flore. Grâce à leurs connaissances, vous apprendrez aussi à repérer les traces d’animaux et à observer discrètement les isards, vautours et gypaètes dans leur habitat naturel, pour des randonnées à la fois enrichissantes et respectueuses de l’environnement.
 
   #guides
-   ::::avatar-list-item
+    ::::avatar-list-item
     ---
     avatar: https://cdn.buttercms.com/5Wvd4ENSa6776ZcteQlw
     ---
@@ -338,6 +339,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     #subtitle
     Paco
+    
     #text
     
     ::::

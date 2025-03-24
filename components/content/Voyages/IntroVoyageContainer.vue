@@ -37,5 +37,4 @@
 
 <script setup>
 const props = defineProps(['programme'])
-console.log('programme', props)
 </script>
