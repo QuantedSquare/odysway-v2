@@ -29,5 +29,7 @@
   "duration": "11 jours / 10 nuits",
   "startingPrice": 2500,
   "rating": 4.5,
-  "comments": 30
+  "comments": 30,
+  "tooltipChild": "Dès 8 ans",
+  "tooltipGroup": ""
 }

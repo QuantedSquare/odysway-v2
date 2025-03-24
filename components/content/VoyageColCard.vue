@@ -39,8 +39,9 @@
           <client-only>
             <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
               <v-tooltip
+                v-if="voyageTooltips.group"
                 location="bottom"
-                text="Test tooltip"
+                :text="voyageTooltips.group"
               >
                 <template #activator="{ props }">
                   <v-btn
@@ -57,8 +58,9 @@
                 </template>
               </v-tooltip>
               <v-tooltip
+                v-if="voyageTooltips.child"
                 location="bottom"
-                text="Test tooltip"
+                :text="voyageTooltips.child"
               >
                 <template #activator="{ props }">
                   <v-btn
@@ -172,7 +174,14 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
   return queryCollection('deals').where('slug', '=', props.voyageSlug).first()
 })
 
-// console.log('voyage', voyage.value)
+const voyageTooltips = computed(() => {
+  return voyage.value
+    ? {
+        child: voyage.value.tooltipChild,
+        group: voyage.value.tooltipGroup,
+      }
+    : ''
+})
 </script>
 
 <style scoped>
@@ -217,7 +226,7 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
   height: 100%;
 }
 .hover-scale:hover{
-  transform: scale(1.02);
+  transform: scale(1.01);
   transition: transform 0.2s ease-in-out;
 }
 .hover-scale{
