@@ -168,7 +168,7 @@ const scrollToSection = (index) => {
   requestAnimationFrame(() => {
     centerCard(index)
   })
-  console.log('scroll to section', index)
+  // console.log('scroll to section', index)
 }
 const cardsTransform = computed(() => ({
   transform: `translateX(${currentX.value}px)`,
