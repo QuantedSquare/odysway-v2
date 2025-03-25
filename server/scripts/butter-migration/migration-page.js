@@ -534,7 +534,8 @@ ${formatPriceItems(voyage.price_include, true)}
 ${formatPriceItems(voyage.price_not_include)}
 ::
 
-${mapAvisVoyageInMarkdown(voyage).length > 0 && `
+${mapAvisVoyageInMarkdown(voyage).length > 0
+  ? `
 ::title-container
 #title
 Les avis des voyageurs
@@ -547,7 +548,8 @@ Les avis des voyageurs
   ${mapAvisVoyageInMarkdown(voyage)}
   :::
 ::
-`}
+`
+  : ''}
 ::title-container
 #title
 Dates & Prix

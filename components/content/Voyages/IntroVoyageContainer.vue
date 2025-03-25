@@ -36,5 +36,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['programme'])
+defineProps(['programme'])
 </script>

@@ -365,6 +365,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
   :::accomodation-container
   #text
   Durant votre voyage, vous aurez la chance de séjourner dans un hôtel idéalement placé à Alger. Il vous offrira tout le confort nécessaire pour vous reposer et vous ressourcer avant le début de votre expérience dans le désert depuis Djanet. Pour cette partie de votre voyage, vous dormirez dans des chambres d'hôtes confortables et traditionnelles, offrant une immersion authentique dans la culture touareg. Ensuite, pour vivre pleinement l'aventure, vous passerez des nuits en bivouac sous les étoiles, au cœur du désert. Cette expérience unique et inoubliable vous permettra de découvrir la beauté et la sérénité du désert algérien.
+
   
   #carousel
     ::::carousel
@@ -528,19 +529,7 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
-
+false
 ::title-container
 #title
 Dates & Prix
