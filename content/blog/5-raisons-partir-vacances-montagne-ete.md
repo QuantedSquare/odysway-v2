@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-07-06 12:40:00+00:00"
 tags: "Animaux, Europe, France, Grands espaces, Made in France, Sports"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
+displayedImg: "/images/blogs/5-raisons-de-partir-en-vacances-a-la-montagne-cet-ete.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
+image-src: "/images/blogs/5-raisons-de-partir-en-vacances-a-la-montagne-cet-ete.jpg"
 ---
 #publication-date
 6 juillet 2020
@@ -31,7 +31,7 @@ image-src: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/PzUPz5CdS7W8im3J5ltx"
+image-src: "/images/blogs/5-raisons-de-partir-en-vacances-a-la-montagne-cet-ete.jpg"
 ---
 #content
 **Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été.**
@@ -46,7 +46,8 @@ Des embouteillages monstres, une foule bruyante et omniprésente, des espaces de
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/NIIOQETNaUcwuZapB7hw
+image-src: "/images/blogs/NIIOQETNaUcwuZapB7hw-1742840865481.jpg"
+alt: undefined
 ---
 ::
 
@@ -60,13 +61,14 @@ Prisée pour sa tranquillité en été, la montagne n'est pas pour autant un lie
 
 Et si pour vous, montagne rime avec ski, pas de panique, nous avons la solution : du **ski sur glacier** dans les Alpes. Pour les adeptes de la **baignade**, là aussi, ne vous inquiétez pas. Les nombreux lacs de montagne sont une très bonne alternative aux bords de mer et avec un net avantage : le monde en moins !
 
-Odysway vous propose par ailleurs une activité atypique en plein cœur des Alpes. [Un séjour immersif dans un observatoire astronomique](https://odysway.com/voyages/immersion-observatoire-astronomique?utm_source=Blog&utm_medium=SEO&utm_campaign=astronomie_alpes) pour suivre le quotidien d'astronomes et d'astrophysiciens. Nous sommes certains que vous reviendrez avec des étoiles plein les yeux… 
+Odysway vous propose par ailleurs une activité atypique en plein cœur des Alpes. Un séjour immersif dans un observatoire astronomique pour suivre le quotidien d'astronomes et d'astrophysiciens. Nous sommes certains que vous reviendrez avec des étoiles plein les yeux… 
 
 ## Partir sur les traces d'un patrimoine riche et varié
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/9wCzevvwQ82qCPKLVfm2
+image-src: "/images/blogs/9wCzevvwQ82qCPKLVfm2-1742840865998.jpg"
+alt: undefined
 ---
 ::
 
@@ -84,15 +86,15 @@ En outre, **le choix des hébergements est aussi varié qu'ailleurs**. Hôtels, 
 
 Alors, prêt pour vos prochaines vacances à la montagne cet été ?
 
-## [Partagez la vie d'un berger dans les Pyrénées](https://odysway.com/voyages/sejour-berger-bearn)
+## Partagez la vie d'un berger dans les Pyrénées
 
 Béret sur la tête, partez à la rencontre des bergers qui font vivre les montagnes, en plein cœur d’une nature somptueuse dans les Pyrénées. Durant ce séjour, vous partirez en randonnée à travers les alpages à la poursuite de l’herbe… Vous vivrez une immersion en terre sauvage, là où le temps semble s’être arrêté et où l’appel de la montagne reste le plus fort.
 
-[Découvrez tous nos voyages dans les Pyrénées](https://odysway.com/destinations/sud-ouest) 
+Découvrez tous nos voyages dans les Pyrénées 
 
 ## Les voyages randonnées et trek
 
-Le choix du trekking ou de la randonnée accompagné d'un guide avec une expérience locale, c’est l'espoir de l'exploration. Il permet de visiter des régions parfois reculées et de riches écosystèmes de flore et de faune. Vous prenez le temps de découvrir les choses qui vous entourent, puis sortez de votre zone de confort en dépassant les limites. Parfois, vous serez épuisé, mais heureux d'être surpris en fin de parcours ! C’est les [voyages randonnées et trek.](https://odysway.com/thematiques/trek-et-randonnee)
+Le choix du trekking ou de la randonnée accompagné d'un guide avec une expérience locale, c’est l'espoir de l'exploration. Il permet de visiter des régions parfois reculées et de riches écosystèmes de flore et de faune. Vous prenez le temps de découvrir les choses qui vous entourent, puis sortez de votre zone de confort en dépassant les limites. Parfois, vous serez épuisé, mais heureux d'être surpris en fin de parcours ! C’est les voyages randonnées et trek.
 
-Poursuivez votre lecture avec [notre article dédié sur les 5 bonnes raisons de voyager en France.](https://odysway.com/5-bonnes-raisons-voyager-france)
+Poursuivez votre lecture avec notre article dédié sur les 5 bonnes raisons de voyager en France.
 ::

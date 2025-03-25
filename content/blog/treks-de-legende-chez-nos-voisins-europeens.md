@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-09-15 14:44:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
+displayedImg: "/images/blogs/3-Treks-de-legende-chez-nos-voisins-europeens.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
+image-src: "/images/blogs/3-Treks-de-legende-chez-nos-voisins-europeens.jpg"
 ---
 #publication-date
 15 septembre 2021
@@ -31,7 +31,7 @@ image-src: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/wtVe2pMyQVisy3FDzYMY"
+image-src: "/images/blogs/3-Treks-de-legende-chez-nos-voisins-europeens.jpg"
 ---
 #content
 Le terme « **trek** » est aujourd'hui utilisé pour désigner le **voyage à pied**. Étymologiquement, « trek » fait référence à la migration des fermiers boers de la colonie du Cap vers l'intérieur des terres sud-africaines au XIXème siècle. 
@@ -40,7 +40,7 @@ Les treks les plus célèbres ont conféré au trekking une dimension sportive q
 
 La marche est une **expérience existentielle :** elle procure une sensation apaisante, réduit le flux incessant de nos pensées et tranquillise notre conscience.
 
-C'est également un moyen écoresponsable de voyager et de limiter son impact sur notre environnement. Pour plus d'information sur les pratiques écoresponsables lors de vos voyages, nous vous invitons à lire notre article ["Vers des voyages zéro-carbone"](https://odysway.com/vers-voyages-zero-carbone).  
+C'est également un moyen écoresponsable de voyager et de limiter son impact sur notre environnement. Pour plus d'information sur les pratiques écoresponsables lors de vos voyages, nous vous invitons à lire notre article "Vers des voyages zéro-carbone".  
 
 Voici une sélection de **trois treks de légende en Europe**, de trois niveaux différents dans l'ordre chronologique : le Malerweg en Allemagne, le South West Coast Path en Angleterre, et L'Alta Via 1 en Italie. 
 
@@ -48,7 +48,8 @@ Voici une sélection de **trois treks de légende en Europe**, de trois niveaux 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/LnvotbraR5SPQNI6aXJh
+image-src: "/images/blogs/indefini-20.jpg"
+alt: indéfini
 ---
 ::
 
@@ -60,7 +61,8 @@ Le sentier est divisé en **huit étapes** longues de 11 à 17 km pour un circui
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/osG0miQLTJU7BOctH2AW
+image-src: "/images/blogs/Trek-Allemagne.jpg.jpg"
+alt: Trek Allemagne.jpg
 ---
 ::
 
@@ -75,7 +77,8 @@ Le South West Coast Path (le sentier de la côte Sud-Ouest) en Angleterre
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/oAhTxWTeS8uByL2kTwrm
+image-src: "/images/blogs/indefini-21.jpg"
+alt: indéfini
 ---
 ::
 
@@ -85,7 +88,8 @@ Le sentier a été créé à l'origine par des **garde-côtes** patrouillant dan
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ExaiRNxwR7SAgLi4SpVp
+image-src: "/images/blogs/indefini-22.jpg"
+alt: indéfini
 ---
 ::
 
@@ -99,7 +103,8 @@ Le sentier montre de majestueuses **formations rocheuses naturelles** comme l'ar
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/q94wjYGJTviuyUgGadS4
+image-src: "/images/blogs/indefini-23.jpg"
+alt: indéfini
 ---
 ::
 
@@ -111,7 +116,8 @@ C'est dans les années soixante-dix qu'est né, dans les Dolomites, le concept d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Qwx3skyEQraKWTzKgLuX
+image-src: "/images/blogs/indefini-24.jpg"
+alt: indéfini
 ---
 ::
 
@@ -129,9 +135,10 @@ Enfin, tout le long de l'Alta Via 1, vous trouverez des **refuges accueillants**
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dXQTlUMbSIizrAfrsP0S
+image-src: "/images/blogs/indefini-25.jpg"
+alt: indéfini
 ---
 ::
 
-Conscients de l'impact positif de la **randonnée** ; la découverte de **paysages à couper le souffle** qui sont difficilement accessibles en transports, les **rencontres et partages authentiques avec les locaux** et la **liberté d'être dans un cadre naturel magique**, nous avons plusieurs séjours en France et à l'étranger pour découvrir une région , un pays, tout en profitant des bienfaits de la marche. Voici un exemple de voyage "randonnée" : [Randonnez sur le mythique lac Baïkal gelé en Sibérie](https://odysway.com/voyages/randonnee-baikal-hiver?utm_source=article&utm_medium=blog&utm_campaign=trek+l%C3%A9gende+europ%C3%A9ens) . Vous trouverez tous les autres [ici](https://odysway.com/thematiques/trek-et-randonnee) !
+Conscients de l'impact positif de la **randonnée** ; la découverte de **paysages à couper le souffle** qui sont difficilement accessibles en transports, les **rencontres et partages authentiques avec les locaux** et la **liberté d'être dans un cadre naturel magique**, nous avons plusieurs séjours en France et à l'étranger pour découvrir une région , un pays, tout en profitant des bienfaits de la marche. Voici un exemple de voyage "randonnée" : Randonnez sur le mythique lac Baïkal gelé en Sibérie . Vous trouverez tous les autres ici !
 ::

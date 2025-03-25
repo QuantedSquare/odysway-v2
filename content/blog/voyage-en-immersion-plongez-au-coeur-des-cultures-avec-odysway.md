@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-09-19 15:37:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0"
+displayedImg: "/images/blogs/Voyage-en-Immersion-:-Plongez-au-Coeur-des-Cultures-avec-Odysway-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0"
+image-src: "/images/blogs/Voyage-en-Immersion-:-Plongez-au-Coeur-des-Cultures-avec-Odysway-1.jpg"
 ---
 #publication-date
 19 septembre 2023
@@ -31,7 +31,7 @@ Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/9BHXSniTSuiTaZlckrt0"
+image-src: "/images/blogs/Voyage-en-Immersion-:-Plongez-au-Coeur-des-Cultures-avec-Odysway-1.jpg"
 ---
 #content
 L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ce nouveau mode de voyage, en plongeant au cœur des cultures locales.
@@ -42,7 +42,8 @@ Lorsque l'on parle de voyage, les images qui nous viennent souvent à l'esprit s
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/fpbX2ffLSzWw895UIQJs
+image-src: "/images/blogs/Sejour_habitant_odysway.jpg-1.jpg"
+alt: Sejour_habitant_odysway.jpg
 ---
 ::
 
@@ -60,7 +61,8 @@ En fin de compte, un voyage en immersion n'est pas seulement une manière de dé
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/XB5IxY2S6SvWTYFea4mq
+image-src: "/images/blogs/Rencontre-avec-un-chaman-de-la-communaute-Q'ero-au-Perou-1.jpg"
+alt: Rencontre avec un chaman de la communauté Q'ero au Pérou
 ---
 ::
 
@@ -100,7 +102,8 @@ Evidemment, un voyage en immersion sans prendre l'avion, en utilisant des moyens
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/BOBHYOuNSe2UQpZ9BQRQ
+image-src: "/images/blogs/Cabane_berger-Pyrennees.jpg-1.jpg"
+alt: Cabane_berger Pyrenneés.jpg
 ---
 ::
 
@@ -126,7 +129,8 @@ En conclusion, un voyage en immersion est bien plus qu'une simple escapade touri
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/80P4qGTSSuGDzOfcXmiv
+image-src: "/images/blogs/Sahara.webp-1.jpg"
+alt: Sahara.webp
 ---
 ::
 
@@ -134,5 +138,5 @@ image-src: https://cdn.buttercms.com/80P4qGTSSuGDzOfcXmiv
 
 Odysway est une agence de voyage créée en 2018, qui créé et organise des séjours et voyages en immersion en France et à l'étranger. Notre démarche s'inscrit dans une volonté de permettre à plus de monde de voyager de cette façon, tout en permettant un impact positif localement : guides, communautés, prestataires... Nous avons également à coeur de proposer cette façon de voyager au juste prix, car voyager en immersion devrait être accessible au plus grand monde. Pour nous, voyager en immersion est la plus belle des façon d'aller à la rencontre de l'autre, de prendre le temps et donc de se faire du bien, ainsi que de préserver l'environnement en réduisant son impact à destination.
 
-Si vous êtes interessés par le voyage en immersion, rendez-vous sur la page de nos voyages : [https://odysway.com/destinations](https://odysway.com/destinations)
+Si vous êtes interessés par le voyage en immersion, rendez-vous sur la page de nos voyages : https://odysway.com/destinations
 ::

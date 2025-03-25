@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-05-31 13:59:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/ZL9INonQSg2TteCvIA0m"
+displayedImg: "/images/blogs/Voyage-au-Cap-Vert-:-Explorez-l'Archipel-Hors-des-Sentiers-Battus-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/ZL9INonQSg2TteCvIA0m"
+image-src: "/images/blogs/Voyage-au-Cap-Vert-:-Explorez-l'Archipel-Hors-des-Sentiers-Battus-1.jpg"
 ---
 #publication-date
 31 mai 2024
@@ -31,7 +31,7 @@ Voyage au Cap Vert : Explorez l'Archipel Hors des Sentiers Battus
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/ZL9INonQSg2TteCvIA0m"
+image-src: "/images/blogs/Voyage-au-Cap-Vert-:-Explorez-l'Archipel-Hors-des-Sentiers-Battus-1.jpg"
 ---
 #content
 Le Cap-Vert, un archipel volcanique au large des côtes de l'Afrique de l'Ouest, est une destination de rêve pour les voyageurs en quête d'authenticité et d'aventure. Composé de dix îles principales, le Cap Vert offre une diversité de paysages, de cultures et d'expériences inégalées. Dans cet article, nous allons explorer trois des îles les plus fascinantes du Cap-Vert : Santiago, Fogo et Santo Antão. Nous mentionnerons également les autres îles de l'archipel, qui ont chacune leur propre charme et leurs propres attractions. Préparez-vous à découvrir des trésors cachés à vivre des aventures inoubliables et à plonger dans la richesse culturelle de cet archipel hors des sentiers battus.
@@ -50,7 +50,8 @@ Située à quelques kilomètres de Praia, Cidade Velha est la première ville co
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qXWY66hbQbW5FFgkuSEj
+image-src: "/images/blogs/qXWY66hbQbW5FFgkuSEj-1742840556653.jpg"
+alt: undefined
 ---
 ::
 
@@ -60,7 +61,8 @@ Santiago est également un paradis pour les amateurs de randonnée. Explorez les
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/c3J0HBh8TiyfAfSJ09CQ
+image-src: "/images/blogs/cap-vert-santiago.jpeg-1.jpg"
+alt: cap-vert-santiago.jpeg
 ---
 ::
 
@@ -74,7 +76,8 @@ L'ascension du Pico do Fogo est une expérience incontournable pour les randonne
 
 ### **::image-container
 ---
-image-src: https://cdn.buttercms.com/iVkgLhypTUu2hJhNnflF
+image-src: "/images/blogs/iVkgLhypTUu2hJhNnflF-1742840557849.jpg"
+alt: undefined
 ---
 ::**
 
@@ -88,7 +91,8 @@ Bien que Fogo soit surtout connue pour son volcan, l'île possède par ailleurs 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ZZu4ryxQWqt02glHYANS
+image-src: "/images/blogs/ZZu4ryxQWqt02glHYANS-1742840558372.jpg"
+alt: undefined
 ---
 ::
 
@@ -102,7 +106,8 @@ Les vallées de Ribeira Grande et de Ribeira do Paúl sont parmi les plus specta
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/658xmSkBRyO7JyPiWHXk
+image-src: "/images/blogs/kasa-d-vizin-hotel-eito-santo-antao-1800x1200.webp-1.jpg"
+alt: kasa-d-vizin-hotel-eito-santo-antao-1800x1200.webp
 ---
 ::
 
@@ -116,7 +121,8 @@ Santo Antão est également célèbre pour l'hospitalité de ses habitants. Les 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/EMxikP5lTe6Z7z97w4jj
+image-src: "/images/blogs/village-tarrafal-monte-trigo-santo-antao-1800x1200.webp-1.jpg"
+alt: village-tarrafal-monte-trigo-santo-antao-1800x1200.webp
 ---
 ::
 
@@ -154,7 +160,8 @@ Le Cap Vert, avec ses îles diversifiées et ses paysages époustouflants, est u
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/rkJrzbQtRxK8LsvdAoeC
+image-src: "/images/blogs/rkJrzbQtRxK8LsvdAoeC-1742840559932.jpg"
+alt: undefined
 ---
 ::
 ::

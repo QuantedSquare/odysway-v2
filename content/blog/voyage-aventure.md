@@ -50,13 +50,14 @@ Voici les meilleures expériences de **voyages aventure** proposées par Odysway
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qztuSt2gQFi5QvtmUH3J
+image-src: "/images/blogs/qztuSt2gQFi5QvtmUH3J-1742840797408.jpg"
+alt: undefined
 ---
 ::
 
 La plus belle conquête de l’homme ? Si vous avez répondu le cheval, bravo ! Vous êtes prêts à partir à la découverte de la Mongolie, accompagné de votre fidèle destrier.
 
-Durant cette chevauchée fantastique vous allez [**découvrir la vallée de l’Orkhon,**](https://odysway.com/voyages/rencontre-nomades-mongolie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageaventure) une des plus belles et des plus sauvages du pays. À dos de cheval, dans les steppes mongoles, vous aurez la chance de croiser la route de nombreux nomades, et d’écouter leurs histoires ainsi que leurs légendes locales. À la nuit tombée, vous serez hébergé dans les yourtes de familles mongoles qui seront ravies de partager leur quotidien avec vous.
+Durant cette chevauchée fantastique vous allez **découvrir la vallée de l’Orkhon,** une des plus belles et des plus sauvages du pays. À dos de cheval, dans les steppes mongoles, vous aurez la chance de croiser la route de nombreux nomades, et d’écouter leurs histoires ainsi que leurs légendes locales. À la nuit tombée, vous serez hébergé dans les yourtes de familles mongoles qui seront ravies de partager leur quotidien avec vous.
 
 Un **séjour aventure** riche en émotions et en rencontres, où vous aurez l’opportunité de visiter les plus beaux sites naturels du pays, accompagné de guides locaux et expérimentés. 
 
@@ -65,13 +66,14 @@ Un **séjour aventure** riche en émotions et en rencontres, où vous aurez l’
   
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/G3XDy3vaR5SGwdRhg5Wu
+image-src: "/images/blogs/Aland-islands-midnight-sun-Finland.jpg.jpg"
+alt: Aland-islands-midnight-sun-Finland.jpg
 ---
 ::
 
 Faites-vous partie de celles et ceux qui rêvent de déconnecter totalement, de profiter des choses simples de la vie et de partir à l’aventure en Scandinavie ?
 
-En Finlande, vous allez pouvoir [**vous reconnecter à vous-même et à la nature**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageaventure) durant un voyage aventure éco-responsable au cœur de la forêt finlandaise[**.**](https://odysway.com/voyages/reconnexion-nature-finlande)
+En Finlande, vous allez pouvoir **vous reconnecter à vous-même et à la nature** durant un voyage aventure éco-responsable au cœur de la forêt finlandaise**.**
 
 Après un arrêt et briefing par nos équipes au camp de base, vous partirez pour une expédition de plusieurs jours en canoë, en totale autonomie, prêt à découvrir les merveilles environnantes et à bivouaquer sous le ciel finlandais.
 
@@ -86,7 +88,8 @@ De retour au camp de base, vous profiterez de la fin de votre séjour en vous re
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/cuKtO59CRyuD6cq9vhNM
+image-src: "/images/blogs/ouzbekistan-photo.jpeg-3.jpg"
+alt: ouzbekistan-photo.jpeg
 ---
 ::
 
@@ -94,7 +97,7 @@ Il existe en Asie Centrale, un pays splendide et encore peu connu des touristes 
 
 Riche de son histoire et de ce mix des cultures, l'Ouzbékistan et ses communautés locales vont vous accueillir à bras ouverts !
 
-Durant ce **voyage aventure** alliant culture, découverte et immersion au sein des populations locales, vous foulerez les pas des marchands d'étoffes, d’encens, de parfums et [**découvrirez la mythique Route de la Soie.**](https://odysway.com/voyages/route-soie-ouzbekistan?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageaventure) Vous aurez également la chance de découvrir les différentes facettes de l'Ouzbékistan en logeant chez les habitants des steppes, des montagnes et des plaines.
+Durant ce **voyage aventure** alliant culture, découverte et immersion au sein des populations locales, vous foulerez les pas des marchands d'étoffes, d’encens, de parfums et **découvrirez la mythique Route de la Soie.** Vous aurez également la chance de découvrir les différentes facettes de l'Ouzbékistan en logeant chez les habitants des steppes, des montagnes et des plaines.
 
 Durant une partie du voyage effectuée en train, vous pourrez souffler et admirer des paysages à couper le souffle. Samarkand, Boukhara et Khiva ; des noms historiques qui font rêver ! Des villes au passé incroyable et resplendissant.
 
@@ -104,7 +107,8 @@ Vous aurez également la chance de passer la nuit dans une medersa (ancienne éc
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ebqN0SkRTulW5XPmGCn0
+image-src: "/images/blogs/astuces-de-survie-768x512.jpg.jpg"
+alt: astuces-de-survie-768x512.jpg
 ---
 ::
 
@@ -116,9 +120,9 @@ Que vous soyez apprenti(e) aventurier(e) ou aventurier(e) aguerri(e),  nous met
 
 Odysway vous accompagne dans le choix de votre futur **voyage aventure** :
 
-*   que vous rêviez de découvrir les différentes facettes du [**Sri Lanka à vélo**](https://odysway.com/voyages/voyage-velo-sri-lanka?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageaventure) **;** 
-*   **de** [**partir en Inde dans l’Arunachal Pradesh**](https://odysway.com/voyages/inde-arunachal-pradesh?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageaventure) à la rencontre de communautés tribales fascinantes **;**
-*   **o**u encore [**de randonner avec des lamas jusqu'au Machu Picchu**](https://odysway.com/voyages/trek-lamas-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageaventure)**.** 
+*   que vous rêviez de découvrir les différentes facettes du **Sri Lanka à vélo** **;** 
+*   **de** **partir en Inde dans l’Arunachal Pradesh** à la rencontre de communautés tribales fascinantes **;**
+*   **o**u encore **de randonner avec des lamas jusqu'au Machu Picchu****.** 
 
 Notre équipe est là pour vous aider à partir à l’aventure !
 ::

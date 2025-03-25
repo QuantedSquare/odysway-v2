@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-06 10:47:00+00:00"
 tags: "Famille, Grands espaces, Sport, Transports insolites"
 categories: "Apprentissage, Benefices locaux, Blog"
-displayedImg: "https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA"
+displayedImg: "/images/blogs/Comment-limiter-mon-empreinte-carbone-en-voyage.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA"
+image-src: "/images/blogs/Comment-limiter-mon-empreinte-carbone-en-voyage.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Comment limiter mon empreinte carbone en voyage ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/BK7pFjvCROOiSmBooVnA"
+image-src: "/images/blogs/Comment-limiter-mon-empreinte-carbone-en-voyage.jpg"
 ---
 #content
 Véritable fléau actuel, les émissions de gaz à effet de serre (GES) participent activement au dérèglement climatique. On parle alors d’empreinte carbone, cette quantité de GES, et notamment de CO2, émise par une activité, une personne, un objet ou une entreprise. De nombreux secteurs sont concernés et le tourisme et l’aérien ne font pas exception. Mais alors, doit-on s’interdire de voyager et de prendre l’avion pour ne pas aggraver la situation ? La réponse est non et nous vous proposons différents moyens pour limiter votre empreinte carbone en voyage.
@@ -40,11 +40,12 @@ Véritable fléau actuel, les émissions de gaz à effet de serre (GES) particip
 
 La toute première chose à faire **pour limiter son empreinte carbone en voyage est de privilégier des moyens de transport qui ne polluent pas ou peu**. En tête de liste, il y a bien sûr le vélo et la marche. Selon le temps que vous consacrez à votre voyage, ce sont de très bonnes solutions et en plus, vous pourrez prendre votre temps et apprécier davantage ce que vous voyez. Vous pouvez très bien faire un premier trajet en avion ou en voiture puis réaliser le reste de votre séjour à pied ou à vélo. Par exemple, pourquoi ne pas découvrir le Sri Lanka en vélo hors des sentiers battus ?
 
-[C'est aussi l'occasion de redécouvrir les trésors cachés de la France](https://odysway.com/destinations/france) !  La France et ses multiples paysages nous donnent l'occasion de se dépayser proche de chez nous.
+C'est aussi l'occasion de redécouvrir les trésors cachés de la France !  La France et ses multiples paysages nous donnent l'occasion de se dépayser proche de chez nous.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8cFUgYISTTKBbufD8T5d
+image-src: "/images/blogs/Sri-Lanka-velo.jpeg.jpg"
+alt: Sri Lanka vélo.jpeg
 ---
 ::
 
@@ -54,11 +55,12 @@ Si vous prévoyez la visite d’une ville, déplacez-vous à pied ou prenez les 
 
 ### Oui ! Il est tout à fait possible de limiter son empreinte carbone en voyage en prenant l’avion !
 
-Dans la lutte contre les émissions de gaz à effet de serre, l’avion est de plus en plus décrié pour partir en voyage. Avec une moyenne de quatre milliards de personnes qui se déplacent en avion chaque année, le secteur de l’aérien est une vraie source de pollution pour l’environnement. Il représente en effet entre 2 et 3 % des émissions de CO2. _« Donc si je veux limiter mon empreinte carbone en voyage, j’arrête de prendre l’avion ? »_ Non, n’allons pas dans cet extrême car à votre niveau, vous pouvez tout à fait agir sans vous créer de frustrations. [Nous vous invitons à lire notre article sur le tourisme responsable de demain.](https://odysway.com/tourisme-responsable-demain)
+Dans la lutte contre les émissions de gaz à effet de serre, l’avion est de plus en plus décrié pour partir en voyage. Avec une moyenne de quatre milliards de personnes qui se déplacent en avion chaque année, le secteur de l’aérien est une vraie source de pollution pour l’environnement. Il représente en effet entre 2 et 3 % des émissions de CO2. _« Donc si je veux limiter mon empreinte carbone en voyage, j’arrête de prendre l’avion ? »_ Non, n’allons pas dans cet extrême car à votre niveau, vous pouvez tout à fait agir sans vous créer de frustrations. Nous vous invitons à lire notre article sur le tourisme responsable de demain.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/wsUklGPATQu9XyeiR6r5
+image-src: "/images/blogs/wsUklGPATQu9XyeiR6r5-1742840979973.jpg"
+alt: undefined
 ---
 ::
 
@@ -66,17 +68,18 @@ image-src: https://cdn.buttercms.com/wsUklGPATQu9XyeiR6r5
 
 Tout d’abord, **partir moins souvent mais plus longtemps** (au moins deux semaines) contribue à limiter votre empreinte carbone. Ensuite, **évitez de prendre l’avion pour des petits trajets**, ce qui génère beaucoup plus d’émissions de CO2 que les vols long-courriers car ils utilisent 25 % de leur réserve de kérosène au décollage ! Si cela est possible, choisissez le train, le bus ou la voiture. De même, **privilégiez les vols directs** aux vols avec escale(s) car ce sont les décollages qui consomment le plus de carburant. Autre moyen pour moins polluer, **faire attention au poids de ses bagages**. Eh oui, plus la valise est lourde, plus elle émet de CO2. Selon la compagnie Air France, un kg de bagages en moins ferait faire une économie de 69 tonnes de CO2 par an. A méditer non ?
 
-Enfin, **optez pour des compagnies aériennes écoresponsables** qui polluent moins, utilisent du biocarburant et qui proposent des programmes pour compenser l’empreinte carbone. Comme Delta Airlines qui verse de l’argent pour la conservation des forêts. Dans la même lignée, privilégiez une flotte récente qui sera moins gourmande en kérosène. L’ONG [Atmosfair](https://www.atmosfair.de/en/) a établi un classement des compagnies aériennes en fonction de leurs émissions de CO2.
+Enfin, **optez pour des compagnies aériennes écoresponsables** qui polluent moins, utilisent du biocarburant et qui proposent des programmes pour compenser l’empreinte carbone. Comme Delta Airlines qui verse de l’argent pour la conservation des forêts. Dans la même lignée, privilégiez une flotte récente qui sera moins gourmande en kérosène. L’ONG Atmosfair a établi un classement des compagnies aériennes en fonction de leurs émissions de CO2.
 
 #### Choisir une agence de voyages qui pratique un tourisme responsable
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dWjmQaJSJqN7YtTDWvRw
+image-src: "/images/blogs/dWjmQaJSJqN7YtTDWvRw-1742840980507.jpg"
+alt: undefined
 ---
 ::
 
-De leur côté, de plus en plus d’agences de voyages **proposent également de compenser votre empreinte carbone en voyage**. Tel est le cas chez Odysway. Grâce à notre partenariat avec Reforest’Action, **nous plantons des arbres pour chaque voyage effectué**. A titre d’exemple, pour [soigner les animaux au Costa Rica](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=Blog&utm_medium=article&utm_campaign=Limiter_EmpreinteCarbonne), nous plantons 27 arbres par voyageur ou bien 28 arbres pour vous [occuper des félins en Afrique du Sud.](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=Blog&utm_medium=article&utm_campaign=Limiter_EmpreinteCarbonne)
+De leur côté, de plus en plus d’agences de voyages **proposent également de compenser votre empreinte carbone en voyage**. Tel est le cas chez Odysway. Grâce à notre partenariat avec Reforest’Action, **nous plantons des arbres pour chaque voyage effectué**. A titre d’exemple, pour soigner les animaux au Costa Rica, nous plantons 27 arbres par voyageur ou bien 28 arbres pour vous occuper des félins en Afrique du Sud.
 
 ### Limiter son empreinte carbone en voyage, c’est aussi faire attention à son empreinte écologique
 
@@ -96,7 +99,8 @@ L’empreinte carbone fait partie intégrante de l’empreinte écologique dont 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/k8b3lzlbQjGyqnpMvP6s
+image-src: "/images/blogs/k8b3lzlbQjGyqnpMvP6s-1742840981023.jpg"
+alt: undefined
 ---
 ::
 
@@ -106,11 +110,11 @@ Contribuer à **limiter son empreinte carbone** ne se limite pas à agir seule
 
 ### Comment calculer son empreinte carbone ?
 
-Dans votre démarche pour **limiter votre empreinte carbone en voyage**, sachez qu’il existe des calculateurs de CO2. Pour un trajet en avion, en voiture ou en train, rendez-vous par exemple sur le site [GoodPlanet](https://www.goodplanet.org/fr/calculateurs-carbone/particulier/?calculator=1&action=calcul&type=voyage) pour connaître immédiatement le résultat. Et vous ? Quelle sera votre empreinte carbone pour votre prochain voyage ?
+Dans votre démarche pour **limiter votre empreinte carbone en voyage**, sachez qu’il existe des calculateurs de CO2. Pour un trajet en avion, en voiture ou en train, rendez-vous par exemple sur le site GoodPlanet pour connaître immédiatement le résultat. Et vous ? Quelle sera votre empreinte carbone pour votre prochain voyage ?
 
-[Découvrez la notation de l'empreinte écologique d'Odysway.](https://odysway.com/notation-empreinte-ecologique)
+Découvrez la notation de l'empreinte écologique d'Odysway.
 
 ## Explorez notre thématique de voyage écotourisme 
 
-L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'[**écotourisme**](https://odysway.com/thematiques/ecotourisme) à travers les voyages que nous concevons pour vous.
+L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'**écotourisme** à travers les voyages que nous concevons pour vous.
 ::

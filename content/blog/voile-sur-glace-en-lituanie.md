@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-10-29 10:41:00+00:00"
 tags: "Europe, Sports"
 categories: "Depassement de soi, Nature et grands espaces, Apprentissage"
-displayedImg: "https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185"
+displayedImg: "/images/blogs/Voile-sur-glace-en-Lituanie.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185"
+image-src: "/images/blogs/Voile-sur-glace-en-Lituanie.jpg"
 ---
 #publication-date
 29 octobre 2018
@@ -31,7 +31,7 @@ Voile sur glace en Lituanie
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/XnnGSpDPQFKtZXLQByic?1612352419185"
+image-src: "/images/blogs/Voile-sur-glace-en-Lituanie.jpg"
 ---
 #content
 Bordée par la mer Baltique sur sa côte ouest, la Lituanie est l’une des trois nations qui compose les pays baltes. Riche d’un passé historique mouvementé, la Lituanie recèle de nombreux attraits dont **une nature omniprésente aux milliers de lacs et de rivières**. Ces plans d’eau répartis dans tout le pays permettent de pratiquer diverses activités. Une est particulièrement prisée par les amateurs d’adrénaline : **la** **voile** **sur** **glace**.
@@ -42,7 +42,7 @@ D’une superficie de 65 300 km², soit environ 10 fois moins que la France, la
 
 Vous l’aurez donc compris, la Lituanie regorge de plans d’eau sur lesquels vous pouvez pratiquer toutes sortes d’activités aussi bien en été qu’en hiver. **En hiver, les adeptes de sensations fortes se retrouvent aux abords des lacs et des rivières.** Ils s’adonnent à une activité peu commune : la voile sur glace.
 
-[Découvrez nos voyages en Europe.](https://odysway.com/destinations/europe)
+Découvrez nos voyages en Europe.
 
 ## Domptez la glace à bord de votre char à voile
 
@@ -54,11 +54,11 @@ Cependant, la voile sur glace n’est pas exclusivement réservée aux personnes
 
 ## Vivre d'aventure avec Odysway
 
-Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables [voyages aventure](https://odysway.com/thematiques/voyage-aventure).
+Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables voyages aventure.
 
 ## Voyage sportif : dépassement et évasion
 
-Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
+Les voyages sportifs sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 
-Pour poursuivre votre lecture, nous vous invitons à consulter [notre article sur le top 10 des destinations pour un voyage sportif.](https://odysway.com/top-10-destinations-voyage-sportif)
+Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur le top 10 des destinations pour un voyage sportif.
 ::

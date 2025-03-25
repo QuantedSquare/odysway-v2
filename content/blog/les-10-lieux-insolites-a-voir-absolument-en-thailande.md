@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-05-02 19:57:00+00:00"
 tags: "Asie, Grands espaces, Sports, Thailande"
 categories: "Depassement de soi"
-displayedImg: "https://cdn.buttercms.com/OW3sxkKDTiG6Zsj0SAuj?1612262339565"
+displayedImg: "/images/blogs/Les-10-lieux-insolites-a-voir-absolument-en-Thailande.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/OW3sxkKDTiG6Zsj0SAuj?1612262339565"
+image-src: "/images/blogs/Les-10-lieux-insolites-a-voir-absolument-en-Thailande.jpg"
 ---
 #publication-date
 2 mai 2019
@@ -31,30 +31,32 @@ Les 10 lieux insolites à voir absolument en Thaïlande
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/OW3sxkKDTiG6Zsj0SAuj?1612262339565"
+image-src: "/images/blogs/Les-10-lieux-insolites-a-voir-absolument-en-Thailande.jpg"
 ---
 #content
 Des plages paradisiaques, des paysages sublimes, un riche patrimoine culturel, des us et coutumes ancestrales, la Thaïlande est une destination surprenante. Parmi tous ses attraits, il y en a certains qui sortent de l’ordinaire et qui méritent le détour. Voici **le top 10 des lieux insolites à voir absolument en Thaïlande**.
 
-Découvrez notre thématique de voyages [insolites](https://odysway.com/thematiques/voyage-insolite) !
+Découvrez notre thématique de voyages insolites !
 
 ## 1\. L’île de Koh Tarutao
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/2cDY8yCRSQahTDSwOQzl
+image-src: "/images/blogs/2cDY8yCRSQahTDSwOQzl-1742841125277.jpg"
+alt: 
 ---
 ::
 
 _Koh Tarutao_
 
-Située dans le parc marin national de Tarutao, **[Koh Tarutao](http://vivre-en-thailande.com/mysterieuse-histoire-de-koh-tarutao/22320/)** a longtemps été délaissée. Auparavant, l’île abritait un camp de prisonniers puis fut régulièrement sujette aux attaques de pirates. Aujourd’hui Koh Tarutao est un lieu **à voir absolument en Thaïlande**, car c’est une île encore préservée et sauvage. Ici, point de tourisme de masse mais des singes en guise de compagnons. Composée de mangrove et de formations rocheuses bordant des eaux cristallines, Koh Tarutao est définitivement l’un des plus beaux endroits de Thaïlande. 
+Située dans le parc marin national de Tarutao, **Koh Tarutao** a longtemps été délaissée. Auparavant, l’île abritait un camp de prisonniers puis fut régulièrement sujette aux attaques de pirates. Aujourd’hui Koh Tarutao est un lieu **à voir absolument en Thaïlande**, car c’est une île encore préservée et sauvage. Ici, point de tourisme de masse mais des singes en guise de compagnons. Composée de mangrove et de formations rocheuses bordant des eaux cristallines, Koh Tarutao est définitivement l’un des plus beaux endroits de Thaïlande. 
 
 ## 2\. Wat Lan Kuat : le temple fabriqué avec des bouteilles
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/UqenqdP5TAmJCOZMHmML
+image-src: "/images/blogs/UqenqdP5TAmJCOZMHmML-1742841125841.jpg"
+alt: 
 ---
 ::
 
@@ -66,7 +68,8 @@ Dans la province de l’Isan dans la ville de Si Saket, au nord-est de Bangkok, 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/aoLSoXNcSRm5Gktyfp0v
+image-src: "/images/blogs/aoLSoXNcSRm5Gktyfp0v-1742841126424.jpg"
+alt: 
 ---
 ::
 
@@ -78,7 +81,8 @@ Marché atypique et populaire, **le marché de Mae Klong** a la particularité
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/rmiCFZHGQnelBB2sghzf
+image-src: "/images/blogs/rmiCFZHGQnelBB2sghzf-1742841126952.jpg"
+alt: 
 ---
 ::
 
@@ -86,13 +90,14 @@ _Phallus Shrine_
 
 En voilà un lieu plutôt insolite à voir à Bangkok. Non loin du métro Phloen Chit et derrière le parc du Swiss Hotel se trouve un petit **temple dédié à la déesse de la fertilité**. Loin d’être un temple ordinaire, sa décoration se compose de phallus en bois, de toutes les tailles et de toutes les couleurs.   
 
-En outre, profitez de votre présence dans la capitale pour tester [notre expérience de découverte du muay-thaï, la boxe thaïlandaise.](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=article&utm_medium=blog&utm_campaign=dix+lieux+%C3%A0+voir+en+thailande)
+En outre, profitez de votre présence dans la capitale pour tester notre expérience de découverte du muay-thaï, la boxe thaïlandaise.
 
 ## 5\. Le canyon de Sam Phan Bok
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/S5Xd1KtkSwiq1YeQ6TdL
+image-src: "/images/blogs/S5Xd1KtkSwiq1YeQ6TdL-1742841127470.jpg"
+alt: 
 ---
 ::
 
@@ -104,7 +109,8 @@ Littéralement, **Sam Phan Bok** signifie 3 000 trous. Ils font référence au
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/SeCjMRcbToSRYCnPdvcC
+image-src: "/images/blogs/SeCjMRcbToSRYCnPdvcC-1742841127988.jpg"
+alt: 
 ---
 ::
 
@@ -116,19 +122,21 @@ Célèbre pour son pont de bois et ses magnifiques temples, Sangkhlaburi l’est
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/KviXnAlS9KRQmOcTz8kx
+image-src: "/images/blogs/KviXnAlS9KRQmOcTz8kx-1742841128512.jpg"
+alt: 
 ---
 ::
 
 _Nong Han_
 
-**Autre lieu insolite à voir absolument en Thaïlande**, c’est le lac de Nong Han dans la région d’[Udon Thani](https://www.routard.com/guide_voyage_lieu/15754-udon_thani.htm). **Entièrement recouvert de millions de lotus aux teintes roses**, il est unique. Pour pouvoir admirer toutes les subtilités de couleurs, Il faut y aller tôt le matin avant que le soleil ne chauffe trop et ne fasse refermer les fleurs. Ce spectacle incroyable est à son apothéose lors de la floraison entre décembre et mars. Sur **le lac aux lotus**, vous ne manquerez pas d’apercevoir des pagodes, des petits sanctuaires et même des statues de Bouddha. Profitez de votre venue pour goûter à l’une des spécialités : le curry de lotus.
+**Autre lieu insolite à voir absolument en Thaïlande**, c’est le lac de Nong Han dans la région d’Udon Thani. **Entièrement recouvert de millions de lotus aux teintes roses**, il est unique. Pour pouvoir admirer toutes les subtilités de couleurs, Il faut y aller tôt le matin avant que le soleil ne chauffe trop et ne fasse refermer les fleurs. Ce spectacle incroyable est à son apothéose lors de la floraison entre décembre et mars. Sur **le lac aux lotus**, vous ne manquerez pas d’apercevoir des pagodes, des petits sanctuaires et même des statues de Bouddha. Profitez de votre venue pour goûter à l’une des spécialités : le curry de lotus.
 
 ## 8\. Lampang
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ElnicqNsSkOLhrhcVbLB
+image-src: "/images/blogs/ElnicqNsSkOLhrhcVbLB-1742841129029.jpg"
+alt: 
 ---
 ::
 
@@ -140,7 +148,8 @@ Ce qu’il y a d’insolite dans le village de **Lampang**, c’est le mode de 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/gONZlBovQ7uE0IGcM6pR
+image-src: "/images/blogs/gONZlBovQ7uE0IGcM6pR-1742841129613.jpg"
+alt: 
 ---
 ::
 
@@ -148,13 +157,14 @@ _Sakaekrang_
 
 Dans la province d’Uthaï Thani, il existe des habitations plutôt insolites. En effet, sur la rivière Sakaekrang se trouvent des **maisons flottantes faites en bambou coloré**. Sur une ancienne barge à riz aménagée, embarquez pour une balade agréable et tranquille.
 
-Pour poursuivre votre lecture, nous vous invitons à regarder [notre article sur la boxe thaï.](https://odysway.com/boxe-thai-thailande)
+Pour poursuivre votre lecture, nous vous invitons à regarder notre article sur la boxe thaï.
 
 ## 10\. À voir absolument en Thaïlande : la fête de Songkran
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/iEokyDIRQ3a5maB7nL3Q
+image-src: "/images/blogs/iEokyDIRQ3a5maB7nL3Q-1742841130130.jpg"
+alt: 
 ---
 ::
 
@@ -168,7 +178,8 @@ Les éléphants sont torturés pour les touristes en Thaïlande. Si vous le souh
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/pBsu8GW5Q8yICxX9UORQ
+image-src: "/images/blogs/pBsu8GW5Q8yICxX9UORQ-1742841130658.jpg"
+alt: 
 ---
 ::
 ::

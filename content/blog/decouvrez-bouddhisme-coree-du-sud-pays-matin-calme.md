@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-05-03 14:56:00+00:00"
 tags: "Asie, Developpement personnel, Sports"
 categories: "Culture et decouverte, Developpement Personnel"
-displayedImg: "https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7"
+displayedImg: "/images/blogs/Decouvrez-le-bouddhisme-au-Pays-du-Matin-Calme-:-la-Coree-du-Sud.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7"
+image-src: "/images/blogs/Decouvrez-le-bouddhisme-au-Pays-du-Matin-Calme-:-la-Coree-du-Sud.jpg"
 ---
 #publication-date
 3 mai 2019
@@ -31,12 +31,12 @@ En juin 2019, Odysway a été invité au salon international du tourisme de Séo
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/UJkcS3KS9qzUuHvVWLX7"
+image-src: "/images/blogs/Decouvrez-le-bouddhisme-au-Pays-du-Matin-Calme-:-la-Coree-du-Sud.jpg"
 ---
 #content
 En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d’y trouver de nouvelles expériences. C’est dans ce cadre que nous avons pu découvrir les trésors cachés et encore méconnus du tourisme de masse de cette fascinante Terre de Contrastes.
 
-Entre gratte-ciels et temples bouddhistes, les habitants du Pays du Matin Calme semblent avoir trouvé l’harmonie parfaite entre vie moderne et sérénité. Un exemple à suivre pour beaucoup d’entre nous, souvent happés par la frénésie du quotidien… Apprenez à allier vie moderne et paix intérieure en méditant dans les nombreux temples bouddhistes du pays. [Découvrez nos voyages en Asie.](https://odysway.com/destinations/asie)
+Entre gratte-ciels et temples bouddhistes, les habitants du Pays du Matin Calme semblent avoir trouvé l’harmonie parfaite entre vie moderne et sérénité. Un exemple à suivre pour beaucoup d’entre nous, souvent happés par la frénésie du quotidien… Apprenez à allier vie moderne et paix intérieure en méditant dans les nombreux temples bouddhistes du pays. Découvrez nos voyages en Asie.
 
 ## Le Pays du Matin Calme : ce pays qui inspire tant la sérénité
 
@@ -46,7 +46,8 @@ C’est au cours du XIXe siècle que les missionnaires européens traduisirent l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/pbbRZhRRGNxIz4Y1LAAF
+image-src: "/images/blogs/pbbRZhRRGNxIz4Y1LAAF-1742841110158.jpg"
+alt: 
 ---
 ::
 
@@ -58,7 +59,8 @@ Une expression aujourd’hui largement utilisée par les Coréens, qui, malgré 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/rQelH2nTQaPccI8iZMsE
+image-src: "/images/blogs/rQelH2nTQaPccI8iZMsE-1742841110680.jpg"
+alt: 
 ---
 ::
 
@@ -83,7 +85,8 @@ Dans le Bouddhisme Mahayana, il y a six valeurs à perfectionner pour compléter
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/DrvMvZdQVYhdR5LBni4Q
+image-src: "/images/blogs/DrvMvZdQVYhdR5LBni4Q-1742841111195.jpg"
+alt: 
 ---
 ::
 
@@ -101,7 +104,8 @@ Bulguksa est classe au patrimoine mondial de L'UNESCO. C'est un véritable trés
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Y5pgTjR4CShDKxZfkJaQ
+image-src: "/images/blogs/Y5pgTjR4CShDKxZfkJaQ-1742841111715.jpg"
+alt: 
 ---
 ::
 
@@ -111,7 +115,8 @@ Avec ses nombreuses reliques culturelles, pagodes, ponts, statues, stupas et aut
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/roh2pC8uTMSbnANhIg0j
+image-src: "/images/blogs/roh2pC8uTMSbnANhIg0j-1742841112237.jpg"
+alt: 
 ---
 ::
 
@@ -121,7 +126,8 @@ L’énergie merveilleuse de ce lieu unique, si ressourçante, vous envahira de 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/cfvEvIMSHKaYtGeNm0jQ
+image-src: "/images/blogs/cfvEvIMSHKaYtGeNm0jQ-1742841112758.jpg"
+alt: 
 ---
 ::
 
@@ -132,7 +138,8 @@ Odysway a eu la chance de découvrir ce sanctuaire de paix unique durant les cé
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/O4hA0xTFRQmmN926ddsT
+image-src: "/images/blogs/O4hA0xTFRQmmN926ddsT-1742841113276.jpg"
+alt: 
 ---
 ::
 
@@ -141,7 +148,7 @@ _dans une des allées du temple Bulguksa_
 
 Ce grand festival des lanternes, dont les dates varient en fonction des années, est aussi appelé Yeon Deung Hoe et est célèbre dans toute la Corée du Sud traditionnellement à partir du 8ème jour du 4ème mois du calendrier lunaire chinois. Il a pour valeur fondamentale, l’idée d’un monde sans préjugés ni discriminations.
 
-Si vous êtes intéressé par les destinations spirituelles, [nous vous invitons à consulter cet article.](https://odysway.com/top-5-destinations-voyage-spirituel)
+Si vous êtes intéressé par les destinations spirituelles, nous vous invitons à consulter cet article.
 
 ## **La Grotte de Seokguram**
 
@@ -151,7 +158,8 @@ La grotte renferme une statue monumentale de Bouddha de 3,5 mètres regardant la
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/GdSXj0fHQmuja5BrOPuG
+image-src: "/images/blogs/GdSXj0fHQmuja5BrOPuG-1742841113793.jpg"
+alt: 
 ---
 ::
 
@@ -161,7 +169,8 @@ Nous y avons accédé par la route mais il est possible de rejoindre la grotte �
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/CHhlF8LdT3WjbfCZmRUe
+image-src: "/images/blogs/CHhlF8LdT3WjbfCZmRUe-1742841114312.jpg"
+alt: 
 ---
 ::
 
@@ -175,7 +184,8 @@ Contraste entre philosophie bouddhiste et vie moderne d’autant plus marqué, l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/SofKo8vTjyC5V7QWJm12
+image-src: "/images/blogs/SofKo8vTjyC5V7QWJm12-1742841114835.jpg"
+alt: 
 ---
 ::
 
@@ -185,7 +195,8 @@ C’est le cas notamment au temple Jogyesa qui se situe en plein cœur du quarti
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zBdTB0KNSrCrjdQRz8tN
+image-src: "/images/blogs/zBdTB0KNSrCrjdQRz8tN-1742841115357.jpg"
+alt: 
 ---
 ::
 
@@ -196,7 +207,8 @@ Arrivé au temple, une séance de méditation vous attend, libre, assis en posit
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/LfIumR6JSoOIL9eKFp6U
+image-src: "/images/blogs/LfIumR6JSoOIL9eKFp6U-1742841115874.jpg"
+alt: 
 ---
 ::
 
@@ -206,7 +218,8 @@ Vous saurez également apprécier l’authenticité de la promenade nocturne aut
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/cJW5z04QTaWR1u3i7dNb
+image-src: "/images/blogs/cJW5z04QTaWR1u3i7dNb-1742841116395.jpg"
+alt: 
 ---
 ::
 
@@ -216,7 +229,8 @@ La beauté du lieu vous envahira dès les premiers instants. Elle est tout simpl
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/A2907CXtQT2N1oLIRplv
+image-src: "/images/blogs/A2907CXtQT2N1oLIRplv-1742841116914.jpg"
+alt: 
 ---
 ::
 
@@ -227,11 +241,12 @@ Vous l’aurez compris, le bouddhisme est omniprésent partout en Corée du Sud,
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/3kBGU2RGKEFyvEObaH6Q
+image-src: "/images/blogs/3kBGU2RGKEFyvEObaH6Q-1742841117438.jpg"
+alt: 
 ---
 ::
 
 _Recueillement d'un croyant dans l'enceinte principale du temple Jogyesa_
 
-Si vous êtes fan de ce types d'expériences, mêlant immersion et pratique sportive, jetez un œil à [nos voyages centrés autour de la thématique "Sport" sur le site d'Odysway !](https://odysway.com/experiences?date=&categorie=Sport&destination=)
+Si vous êtes fan de ce types d'expériences, mêlant immersion et pratique sportive, jetez un œil à nos voyages centrés autour de la thématique "Sport" sur le site d'Odysway !
 ::

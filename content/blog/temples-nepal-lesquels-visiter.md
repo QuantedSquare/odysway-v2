@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-10-07 13:08:00+00:00"
 tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
 categories: "Depassement de soi, Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ"
+displayedImg: "/images/blogs/Temples-au-Nepal-:-lesquels-visiter.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ"
+image-src: "/images/blogs/Temples-au-Nepal-:-lesquels-visiter.jpg"
 ---
 #publication-date
 7 octobre 2019
@@ -31,12 +31,12 @@ Temples au Népal : lesquels visiter ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/5wiuZaoQ2GAiEoKWRcQJ"
+image-src: "/images/blogs/Temples-au-Nepal-:-lesquels-visiter.jpg"
 ---
 #content
 Quand on pense au Népal, la première image qui nous traverse l’esprit est celle de l’Himalaya. Mais le Népal, ce n’est pas que des sommets vertigineux que les voyageurs arpentent lors de treks à couper le souffle. Il est le pays de naissance de Bouddha et possède de ce fait un patrimoine religieux riche. Stupas et temples bouddhistes parsèment le territoire, vous en croiserez forcément un sur votre route. Sans oublier bien sûr les temples hindous qui, rappelons-le, font partie de la première religion du pays. **Mais quels sont les temples incontournables à visiter au Népal ?** Voici une liste des temples à ne pas manquer lors de votre voyage.
 
-Nous vous invitons à lire notre article [sur la vie d'un moine bouddhiste.](https://odysway.com/vie-moine-bouddhiste?utm_source=article&utm_medium=blog&utm_campaign=temples+nepal+)
+Nous vous invitons à lire notre article sur la vie d'un moine bouddhiste.
 
 ## Katmandou et sa vallée : lieu des temples les plus emblématiques du Népal
 
@@ -46,7 +46,8 @@ Au sein de la capitale népalaise se trouve l’un des plus anciens monuments re
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/0eZpgj77STqMZzHJP9dQ
+image-src: "/images/blogs/0eZpgj77STqMZzHJP9dQ-1742841039109.jpg"
+alt: 
 ---
 ::
 
@@ -58,7 +59,8 @@ Le long de la rivière Bagmati à Katmandou**, le temple de Pashupatinah** est 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/6YOWQz4TgyFJPjKX3Sg4
+image-src: "/images/blogs/6YOWQz4TgyFJPjKX3Sg4-1742841039628.jpg"
+alt: 
 ---
 ::
 
@@ -70,7 +72,8 @@ A 8 km de Katmandou, **le stupa de Bodnath** n’est pas seulement le plus gra
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/3oIRbxDwQIyblBAaezdC
+image-src: "/images/blogs/3oIRbxDwQIyblBAaezdC-1742841040195.jpg"
+alt: 
 ---
 ::
 
@@ -98,7 +101,8 @@ La ville de Bhaktapur possède le plus haut temple du Népal. Du haut de ses 30 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Ww23NhXRHyIBlbImnm4w
+image-src: "/images/blogs/Ww23NhXRHyIBlbImnm4w-1742841040725.jpg"
+alt: 
 ---
 ::
 
@@ -121,15 +125,16 @@ A la frontière du Tibet, le district de Mustang est au cœur de la chaîne de l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/S37VEiD9Tvykt8SDVC8U
+image-src: "/images/blogs/S37VEiD9Tvykt8SDVC8U-1742841041347.jpg"
+alt: 
 ---
 ::
 
 _Avec Odysway, partez enseigner à des enfants bouddhistes au Népal._
 
-Vous aimez transmettre vos connaissances ou êtes autodidacte dans un domaine particulier ? Embarquez alors pour une **expérience unique avec Odysway au cœur du Népal**. En immersion dans un monastère bouddhiste près de Katmandou, nous vous proposons [d’enseigner à des enfants apprentis moines](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=Temples_Nepal) qui n’ont jamais eu la chance d’aller à l’école. Pendant 7 jours, vous allez vivre au quotidien avec ces enfants et partager avec eux des moments forts en émotions. Vous allez par la même occasion découvrir la vie simple des moines bouddhistes et les nombreux temples existants au Népal.
+Vous aimez transmettre vos connaissances ou êtes autodidacte dans un domaine particulier ? Embarquez alors pour une **expérience unique avec Odysway au cœur du Népal**. En immersion dans un monastère bouddhiste près de Katmandou, nous vous proposons d’enseigner à des enfants apprentis moines qui n’ont jamais eu la chance d’aller à l’école. Pendant 7 jours, vous allez vivre au quotidien avec ces enfants et partager avec eux des moments forts en émotions. Vous allez par la même occasion découvrir la vie simple des moines bouddhistes et les nombreux temples existants au Népal.
 
 ## Se recentrer grâce au voyage initiatique
 
-Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité avec nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
+Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité avec nos voyages initiatiques.
 ::

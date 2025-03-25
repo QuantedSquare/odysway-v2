@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-11-07 16:31:00+00:00"
 tags: "Asie, Communautés locales, Famille, Grands espaces, Kirghizistan"
 categories: "Nature et grands espaces, Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/X1cLh2aSEmq9WggtGMVT?1611574701946"
+displayedImg: "/images/blogs/En-images-:-les-plus-beaux-paysages-du-Kirghizistan.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/X1cLh2aSEmq9WggtGMVT?1611574701946"
+image-src: "/images/blogs/En-images-:-les-plus-beaux-paysages-du-Kirghizistan.jpg"
 ---
 #publication-date
 7 novembre 2019
@@ -31,12 +31,12 @@ En images : les plus beaux paysages du Kirghizistan
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/X1cLh2aSEmq9WggtGMVT?1611574701946"
+image-src: "/images/blogs/En-images-:-les-plus-beaux-paysages-du-Kirghizistan.jpg"
 ---
 #content
 Pays d’Asie Centrale, le Kirghizistan est encore peu connu des voyageurs. Pourtant, ses paysages grandioses ont de quoi ravir les amateurs de grands espaces et de nature. Steppes, pics enneigés, lacs de montagne, rivières sauvages ou encore canyons, voici ce qui vous attend là-bas. Odysway a décidé de vous montrer les plus beaux endroits. Et vous, **quels seront donc vos paysages coup de cœur du Kirghizistan ?**
 
-Nous vous invitons à lire notre article [sur les grands récits de voyage.](https://odysway.com/grands-recits-voyage)
+Nous vous invitons à lire notre article sur les grands récits de voyage.
 
 ## Focus sur des paysages enchanteurs du Kirghizistan : les lacs
 
@@ -46,7 +46,8 @@ Ce gigantesque lac d’altitude se trouve au cœur des montagnes Tian Shan, à l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/vlCFXTvSQhmwnFvgoSWA
+image-src: "/images/blogs/vlCFXTvSQhmwnFvgoSWA-1742841020196.jpg"
+alt: 
 ---
 ::
 
@@ -56,7 +57,8 @@ Le **lac Issyk-Kul** est le plus grand lac du pays et le second plus grand lac
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Ax4X2mVQRYmXdlapWgGt
+image-src: "/images/blogs/Ax4X2mVQRYmXdlapWgGt-1742841020711.jpg"
+alt: 
 ---
 ::
 
@@ -66,7 +68,8 @@ Entre les vallées de Karakol et d’Altyn Arashan, le **lac Ala Kulest est san
 
 ### ::image-container
 ---
-image-src: https://cdn.buttercms.com/rgQjBAxQOrlXk3spWdQu
+image-src: "/images/blogs/rgQjBAxQOrlXk3spWdQu-1742841021261.jpg"
+alt: 
 ---
 ::
 
@@ -76,7 +79,8 @@ Au nord-est du pays, le **lac Kul-Ukok** est moins connu que les autres mais i
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/UCJRAvxaSvOP8WevgafE
+image-src: "/images/blogs/UCJRAvxaSvOP8WevgafE-1742841021839.jpg"
+alt: 
 ---
 ::
 
@@ -86,7 +90,8 @@ Sur la rive sud du lac Issyk-Kul, **la vallée de Jety-Oguz fait partie des plu
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/mwdwsKzgR3i5vmWvX26X
+image-src: "/images/blogs/mwdwsKzgR3i5vmWvX26X-1742841022363.jpg"
+alt: 
 ---
 ::
 
@@ -96,7 +101,8 @@ Non loin au sud de Bishek, la capitale, **le Parc National d’Ala Arsha** pos
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/VeVPVj2aROCHjZZ9183Q
+image-src: "/images/blogs/VeVPVj2aROCHjZZ9183Q-1742841022886.jpg"
+alt: 
 ---
 ::
 
@@ -106,7 +112,8 @@ Au sud-ouest de Bishek, le village de montagnes d’**Arslanbob** est une étap
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/kuvmOT9UQTK981UJCyOe
+image-src: "/images/blogs/kuvmOT9UQTK981UJCyOe-1742841023466.jpg"
+alt: 
 ---
 ::
 
@@ -116,7 +123,8 @@ Réputée pour ses sources d’eau chaude, **la réserve naturelle Altyn Arasha
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/9agnOzF0SgadAWEor3qB
+image-src: "/images/blogs/9agnOzF0SgadAWEor3qB-1742841023987.jpg"
+alt: 
 ---
 ::
 
@@ -126,7 +134,8 @@ image-src: https://cdn.buttercms.com/9agnOzF0SgadAWEor3qB
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/4gwIa60GRPCd8lDBQFF4
+image-src: "/images/blogs/4gwIa60GRPCd8lDBQFF4-1742841024531.jpg"
+alt: 
 ---
 ::             
 
@@ -136,7 +145,8 @@ Face au lac Issyk-Kul, **le canyon de Skazkafait partie des paysages sauvages d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/NCTQtZuKSOkqgUbPhxYv
+image-src: "/images/blogs/NCTQtZuKSOkqgUbPhxYv-1742841025049.jpg"
+alt: 
 ---
 ::
 
@@ -146,21 +156,23 @@ Avec ses hauts pâturages verdoyants, **la vallée de Karakol** est le point d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OrznQnQbTuGtYZSLmOB7
+image-src: "/images/blogs/OrznQnQbTuGtYZSLmOB7-1742841025725.jpg"
+alt: 
 ---
 ::
 
 ### Partez en immersion dans les steppes du Kirghizistan
 
-Ces paysages magnifiques et variés vous ont donné envie ? Odysway vous propose de [partir dans les steppes infinies du Kirghizistan](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=Blog&utm_medium=SEO&utm_campaign=Kirghizistan_images). Vous découvrirez des paysages à couper de souffle et rencontrerez les populations locales, notamment un chasseur à l’aigle et une famille qui vous révélera les secrets de la production de yourtes !
+Ces paysages magnifiques et variés vous ont donné envie ? Odysway vous propose de partir dans les steppes infinies du Kirghizistan. Vous découvrirez des paysages à couper de souffle et rencontrerez les populations locales, notamment un chasseur à l’aigle et une famille qui vous révélera les secrets de la production de yourtes !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ZeUO47xzQY2DeJSmwLZG
+image-src: "/images/blogs/ZeUO47xzQY2DeJSmwLZG-1742841026245.jpg"
+alt: 
 ---
 ::
 
 ## Séjour Nature 
 
-Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
+Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::

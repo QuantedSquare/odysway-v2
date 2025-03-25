@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-02-08 20:14:00+00:00"
 tags: "Presse"
 categories: "Presse ecrite"
-displayedImg: "https://cdn.buttercms.com/d3SlItG7SCGt6q4jo85R"
+displayedImg: "/images/blogs/Odysway-Agence-du-mois-pour-Tour-Hebdo-!.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/d3SlItG7SCGt6q4jo85R"
+image-src: "/images/blogs/Odysway-Agence-du-mois-pour-Tour-Hebdo-!.jpg"
 ---
 #publication-date
 8 février 2019
@@ -31,7 +31,7 @@ Odysway a eu droit à une rubrique au mois de janvier 2019 et Romain Masina, le 
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/d3SlItG7SCGt6q4jo85R"
+image-src: "/images/blogs/Odysway-Agence-du-mois-pour-Tour-Hebdo-!.jpg"
 ---
 #content
 Odysway a eu droit à une rubrique au mois de janvier 2019 et Romain Masina, le fondateur, est cité en tant qu' "agent du mois".

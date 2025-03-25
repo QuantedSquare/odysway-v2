@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-18 15:49:00+00:00"
 tags: "Presse"
 categories: "Presse ecrite"
-displayedImg: "https://cdn.buttercms.com/nGzH9SbPRNioTY36z5bM"
+displayedImg: "/images/blogs/Odysway-dans-"Le-Temps-d'un-Voyage.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/nGzH9SbPRNioTY36z5bM"
+image-src: "/images/blogs/Odysway-dans-"Le-Temps-d'un-Voyage.jpg"
 ---
 #publication-date
 18 avril 2019
@@ -31,7 +31,7 @@ Odysway dans "Le Temps d'un Voyage
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/nGzH9SbPRNioTY36z5bM"
+image-src: "/images/blogs/Odysway-dans-"Le-Temps-d'un-Voyage.jpg"
 ---
 #content
 Odysway est apparu dans le numéro du mois de printemps du magazine papier « Le Temps d’un voyage », vendu en Kiosques.

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-07-30 09:54:00+00:00"
 tags: "éco-responsable, France, nature, slow tourisme"
 categories: ""
-displayedImg: "https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8"
+displayedImg: "/images/blogs/3-Itineraires-ecoresponsables-pour-(re)decouvrir-la-France.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8"
+image-src: "/images/blogs/3-Itineraires-ecoresponsables-pour-(re)decouvrir-la-France.jpg"
 ---
 #publication-date
 30 juillet 2021
@@ -31,7 +31,7 @@ Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à 
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/cqEPkzG1RoqQZKzJ3uu8"
+image-src: "/images/blogs/3-Itineraires-ecoresponsables-pour-(re)decouvrir-la-France.jpg"
 ---
 #content
 Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon.
@@ -40,7 +40,8 @@ Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dRKXdMRsSjaWNFYVUA1L
+image-src: "/images/blogs/dRKXdMRsSjaWNFYVUA1L-1742840701555.jpg"
+alt: undefined
 ---
 ::
 
@@ -60,7 +61,8 @@ Pour le retour, rendez-vous à la gare de Deauville-Trouville pour prendre le TE
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/v7DnHl04QgWNWewnUW9W
+image-src: "/images/blogs/v7DnHl04QgWNWewnUW9W-1742840702113.jpg"
+alt: undefined
 ---
 ::
 
@@ -74,17 +76,18 @@ Vous terminez votre étape par **Saint-Jean-Pied-de-Port** (18 min en TER), la c
 
 Pour le retour, reprenez le TER jusqu’à Bayonne (1h05) puis le TGV jusqu’à Bordeaux (1h40) ou Paris (3h40).
 
-[Découvrez la vie d'un berger dans le Béarn](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=itin%C3%A9raires+%C3%A9coresponsables) pendant une semaine grâce à notre séjour !
+Découvrez la vie d'un berger dans le Béarn pendant une semaine grâce à notre séjour !
 
 ## 🌊 **Autour du bassin d’Arcachon à vélo** 🚲
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/gQOHulCSAueZAzc0jXCA
+image-src: "/images/blogs/gQOHulCSAueZAzc0jXCA-1742840702649.jpg"
+alt: undefined
 ---
 ::
 
-Rejoignez **Arcachon** avec le TER partant de Bordeaux (45 min). Vous pouvez louer votre vélo standard ou électrique chez [Locabeach](https://locabeach.com/) qui propose une large gamme de vélos de qualité à des prix intéressants allant de la 1/2 journée à 14 jours. 
+Rejoignez **Arcachon** avec le TER partant de Bordeaux (45 min). Vous pouvez louer votre vélo standard ou électrique chez Locabeach qui propose une large gamme de vélos de qualité à des prix intéressants allant de la 1/2 journée à 14 jours. 
 
 Plus qu’une station balnéaire et un lieu de villégiature, Arcachon recèle des trésors architecturaux magnifiques et possède le second port de plaisance de la façade atlantique après Brest…
 
@@ -98,5 +101,5 @@ Pour la dernière étape de l’itinéraire, rendez-vous à **Gujan-Mestras** pa
 
 Pour le retour, rejoignez Arcachon par la Vélodyssée (15km) pour rendre les vélos, puis prenez un TER direction Bordeaux.
 
-[Découvrez nos voyages nature !](https://odysway.com/thematiques/voyage-nature)
+Découvrez nos voyages nature !
 ::

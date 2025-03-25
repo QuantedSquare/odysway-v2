@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-02-06 20:02:00+00:00"
 tags: "Presse, Salon"
 categories: "Depassement de soi, News Odysway"
-displayedImg: "https://cdn.buttercms.com/Kn1MimizSFCRyDE63ayX?1612360977660"
+displayedImg: "/images/blogs/Odysway-au-Mondial-du-tourisme-2019-!.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/Kn1MimizSFCRyDE63ayX?1612360977660"
+image-src: "/images/blogs/Odysway-au-Mondial-du-tourisme-2019-!.jpg"
 ---
 #publication-date
 6 février 2019
@@ -31,7 +31,7 @@ Toute l’équipe d’Odysway sera présente lors du mondial du tourisme 2019. L
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/Kn1MimizSFCRyDE63ayX?1612360977660"
+image-src: "/images/blogs/Odysway-au-Mondial-du-tourisme-2019-!.jpg"
 ---
 #content
 Toute l’équipe d’Odysway sera présente lors du mondial du tourisme 2019. L’événement aura lieu à Paris (Porte de Versailles) du jeudi 14 au Dimanche 17 Mars 2019 !

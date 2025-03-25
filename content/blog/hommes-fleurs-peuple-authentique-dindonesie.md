@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-12-19 11:54:00+00:00"
 tags: "Asie, Communautés locales, Famille, Indonesie"
 categories: "Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906"
+displayedImg: "/images/blogs/Qui-sont-les-hommes-fleurs-ce-peuple-d'Indonesie.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906"
+image-src: "/images/blogs/Qui-sont-les-hommes-fleurs-ce-peuple-d'Indonesie.jpg"
 ---
 #publication-date
 19 décembre 2019
@@ -31,7 +31,7 @@ Qui sont les hommes-fleurs, ce peuple d'Indonésie ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/r7YanmKLRp2Hfk0X6Ik8?1613812512906"
+image-src: "/images/blogs/Qui-sont-les-hommes-fleurs-ce-peuple-d'Indonesie.jpg"
 ---
 #content
 Sur une petite île en Indonésie, au coeur d'une foret primaire préservée, se trouve un peuple authentique, éloigné de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle est leur relation avec la nature et le monde moderne ? **Partons a la rencontre de ce peuple d'Indonésie, surnommés les hommes-fleurs.**
@@ -42,7 +42,7 @@ Les Mentawai, ou hommes-fleurs, vivent sur l'archipel de Mentawai au large de la
 
 Dans leurs croyances, chaque être vivant (l'homme, l'animal et le végétal) possède une âme. Tout cet ensemble forme un seul et même équilibre et si cet équilibre est perturbé, alors des événements graves peuvent survenir tels que des maladies ou même la mort. Ainsi, les Mentawai ne prennent que ce dont ils ont besoin pour vivre et a travers danses ou cérémonies ils remercient la nature en la vénérant et en la protégeant car elle est leur seule source de survie. 
 
-Poursuivez votre lecture avec notre article [sur la découverte de nouvelles cultures avec le tourisme.](https://odysway.com/ou-decouvrir-nouvelles-cultures-tourisme)
+Poursuivez votre lecture avec notre article sur la découverte de nouvelles cultures avec le tourisme.
 
 ## La vie chez les Mentawai
 
@@ -71,15 +71,16 @@ Les hommes-fleurs ont connu beaucoup d'oppression, notamment pendant la dictatur
 
 Aujourd'hui, **un autre danger menace ce peuple d'Indonésie : la déforestation**. N'oublions pas qu'il vit grâce a la forêt et que sans elle, il n'a plus rien. Pour protéger leur environnement, **les Mentawai misent sur l'ethnotourisme**, cette forme de tourisme qui propose des rencontres authentiques entre des peuples autochtones et des voyageurs. Cette manne financière leur permet de lutter contre l'exploitation de leurs terres.
 
-Découvrez tous nos [voyages en immersion auprès de communautés locales](https://odysway.com/thematiques?category=Communaut%C3%A9s%20locales).
+Découvrez tous nos voyages en immersion auprès de communautés locales.
 
 ## Voyagez sur la terre des premiers hommes en Éthiopie
 
-Partez près de Kibish au sud de l'Éthiopie, là où les plus anciens restes fossilisés d’Homo sapiens ont été retrouvés. Odysway vous propose ce voyage en Ethiopie hors du temps, [à la rencontre des Surmas et d’autres tribus](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=article&utm_medium=blog&utm_campaign=rencontre+surmas), habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo. 
+Partez près de Kibish au sud de l'Éthiopie, là où les plus anciens restes fossilisés d’Homo sapiens ont été retrouvés. Odysway vous propose ce voyage en Ethiopie hors du temps, à la rencontre des Surmas et d’autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo. 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/iOHjNcLS7iG3gQcum6ZA
+image-src: "/images/blogs/iOHjNcLS7iG3gQcum6ZA-1742841006424.jpg"
+alt: 
 ---
 ::
 ::

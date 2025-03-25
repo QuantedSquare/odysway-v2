@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-08-26 08:37:00+00:00"
 tags: "Actualités, Covid"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr"
+displayedImg: "/images/blogs/Pass-sanitaire-:-tout-savoir-pour-son-prochain-voyage-en-5-points.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr"
+image-src: "/images/blogs/Pass-sanitaire-:-tout-savoir-pour-son-prochain-voyage-en-5-points.jpg"
 ---
 #publication-date
 26 août 2021
@@ -31,24 +31,25 @@ Pass sanitaire : tout savoir pour son prochain voyage en 5 points
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/HtahVuSATO6xMU1sOEMr"
+image-src: "/images/blogs/Pass-sanitaire-:-tout-savoir-pour-son-prochain-voyage-en-5-points.jpg"
 ---
 #content
 **Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Vaccination ou test de dépistage, quels sont les critères pour obtenir ce fameux sésame afin d’explorer les mille richesses de notre territoire et d’ailleurs ? Sans compter que chaque pays – la France comprise – a mis en place ses propres modalités d’entrée. Pour y voir plus clair, Odysway fait le point sur le pass sanitaire afin que vous puissiez partir en voyage dans les meilleures conditions.**
 
-Avec une évolution perpétuelle de la pandémie, les directives changent régulièrement. Il est donc primordial de rester informé sur le pass sanitaire dans le cadre d’un voyage. Pour ce faire, consultez les sites officiels et [les ressources mises à disposition](https://www.gouvernement.fr/info-coronavirus/ressources-a-partager) dont les informations sont mises à jour régulièrement. 
+Avec une évolution perpétuelle de la pandémie, les directives changent régulièrement. Il est donc primordial de rester informé sur le pass sanitaire dans le cadre d’un voyage. Pour ce faire, consultez les sites officiels et les ressources mises à disposition dont les informations sont mises à jour régulièrement. 
 
-Consultez également notre page "[Où voyager en ce moment ?](https://odysway.com/informations-covid-19)" dans laquelle nous détaillons les conditions d'entrée de toutes les destinations dans lesquelles vous pouvez voyager avec Odysway et que nous mettons à jour chaque semaine.
+Consultez également notre page "Où voyager en ce moment ?" dans laquelle nous détaillons les conditions d'entrée de toutes les destinations dans lesquelles vous pouvez voyager avec Odysway et que nous mettons à jour chaque semaine.
 
 ## Le pass sanitaire expliqué en quelques mots
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dJWH0pUtQLmz1K3XtL3g
+image-src: "/images/blogs/dJWH0pUtQLmz1K3XtL3g-1742840698928.jpg"
+alt: undefined
 ---
 ::
 
-En vigueur depuis le 9 juin 2021, le [pass sanitaire](https://www.gouvernement.fr/info-coronavirus/pass-sanitaire) est délivré selon trois critères : la vaccination, un test négatif, et avoir déjà été malade et être guéri du Covid-19. Chacun d’eux génère un document comprenant un **QR code** permettant d’accéder à tous les lieux ou transports nécessitant le pass sanitaire.
+En vigueur depuis le 9 juin 2021, le pass sanitaire est délivré selon trois critères : la vaccination, un test négatif, et avoir déjà été malade et être guéri du Covid-19. Chacun d’eux génère un document comprenant un **QR code** permettant d’accéder à tous les lieux ou transports nécessitant le pass sanitaire.
 
 Il n’est – pour le moment – pas obligatoire pour les moins de 12 ans. Pour les 12-17 ans, il s’appliquera dès le 30 septembre 2021.
 
@@ -84,21 +85,23 @@ Depuis le 9 août dernier, tout voyage considéré comme un **long trajet exige 
 
 ### Particularité pour la Corse et l’Outre-mer
 
-**Pour un voyage en Corse (avion et bateau), le pass sanitaire est obligatoire dès l’âge de 12 ans.** Il est en plus demandé de remplir une attestation sur l’honneur mentionnant l’absence de symptômes. Elle est à télécharger sur le site de l’[ARS Corse](https://www.corse.ars.sante.fr/covid19-pass-sanitaire-obligatoire-vers-et-depuis-la-corse).
+**Pour un voyage en Corse (avion et bateau), le pass sanitaire est obligatoire dès l’âge de 12 ans.** Il est en plus demandé de remplir une attestation sur l’honneur mentionnant l’absence de symptômes. Elle est à télécharger sur le site de l’ARS Corse.
 
-Les conditions sanitaires actuelles en Outre-mer, notamment en Martinique et en Guadeloupe, sont telles qu’il est préférable de consulter le site du [ministère des Outre-mer](https://outre-mer.gouv.fr/informations-coronavirus) afin de connaître exactement les modalités de voyage (adultes, enfants, vaccinés, non vaccinés, etc.)
+Les conditions sanitaires actuelles en Outre-mer, notamment en Martinique et en Guadeloupe, sont telles qu’il est préférable de consulter le site du ministère des Outre-mer afin de connaître exactement les modalités de voyage (adultes, enfants, vaccinés, non vaccinés, etc.)
 
 Attention, les autotests ne sont pas recevables pour voyager sur ces destinations ; seuls les tests RT-PCR et antigénique le sont.
 
-**Découvrez tous nos voyages en immersion en [France](https://odysway.com/destinations/france).**
+**Découvrez tous nos voyages en immersion en France.**
 
 ## Zone verte, orange ou rouge, vérifier la couleur de son pays de destination avant de partir à l’étranger
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/JRO6QsMTJqZL367Wglqz
+image-src: "/images/blogs/JRO6QsMTJqZL367Wglqz-1742840699443.jpg"
+alt: undefined
+link: https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage#from3
 ---
-::](https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage#from3 "Carte Covid")
+::
 
 Source : Ministère de l'intérieur
 
@@ -108,7 +111,7 @@ La **zone verte** correspond aux pays où la circulation du virus est inactive, 
 
 La **zone orange** concerne les pays avec une circulation active du virus, mais maîtrisée, et sans diffusion de variants préoccupants. La **zone rouge**, quant à elle, regroupe les pays où la circulation du virus est active et avec des variants inquiétants. Pour ces deux zones, les modalités d’entrée varient en fonction du statut vaccinal de chaque voyageur.
 
-Pour savoir si oui ou non vous êtes autorisés à voyager dans votre pays de destination, consultez la [carte](https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage#from3) où figurent tous les renseignements nécessaires.
+Pour savoir si oui ou non vous êtes autorisés à voyager dans votre pays de destination, consultez la carte où figurent tous les renseignements nécessaires.
 
 ## Mise en place du pass sanitaire européen
 
@@ -121,25 +124,26 @@ Afin de récupérer ce **pass sanitaire européen**, vous devez demander l’att
 
 Il faut savoir que certains pays européens n’autorisent pas la présentation d’un test antigénique pour voyager. Renseignez-vous donc bien avant de partir pour éviter toute déconvenue. De même, l’autotest n’est pas un critère qui rentre dans le cadre du pass sanitaire pour un voyage en Europe.
 
-**Découvrez tous nos voyages en immersion en [Europe](https://odysway.com/destinations/europe).** 
+**Découvrez tous nos voyages en immersion en Europe.** 
 
 ### Cas particulier du Royaume-Uni
 
-L’Angleterre, l’Écosse, l’Irlande du nord et le pays de Galles ont chacun instauré des modalités d’accès à leur territoire. Avant de programmer un voyage vers [le Royaume-Uni](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/royaume-uni/), assurez-vous donc des formalités sanitaires, mais aussi de la catégorie dans laquelle se trouve votre pays de départ. En effet, le Royaume-Uni a mis en place plusieurs zones – verte, ambre et rouge – possédant leurs propres conditions d’entrée.
+L’Angleterre, l’Écosse, l’Irlande du nord et le pays de Galles ont chacun instauré des modalités d’accès à leur territoire. Avant de programmer un voyage vers le Royaume-Uni, assurez-vous donc des formalités sanitaires, mais aussi de la catégorie dans laquelle se trouve votre pays de départ. En effet, le Royaume-Uni a mis en place plusieurs zones – verte, ambre et rouge – possédant leurs propres conditions d’entrée.
 
 ## Peut-on voyager en dehors de l’Union européenne ?
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/UxvXL52XTXesX9X9eSpk
+image-src: "/images/blogs/UxvXL52XTXesX9X9eSpk-1742840699961.jpg"
+alt: undefined
 ---
 ::
 
 Il est bien sûr tout à fait possible de **partir en voyage hors de l’Union européenne**. Mais attention, tout comme les pays européens et en plus de sa classification en zone verte, orange ou rouge, **chaque territoire dispose de ses propres réglementations** qu’il est obligatoire de consulter en amont. Certains d’entre eux imposent par exemple une quarantaine et/ou un test RT-PCR réalisé 72h voire 48h avant le départ, et cela, même si vous êtes vacciné.
 
-Le site [France Diplomatie](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/informations-pratiques/article/coronavirus-covid-19) vous communiquera toutes les informations utiles pour votre prochain voyage à l’étranger, les directives du pass sanitaire en vigueur, ainsi que la réglementation pour les enfants.
+Le site France Diplomatie vous communiquera toutes les informations utiles pour votre prochain voyage à l’étranger, les directives du pass sanitaire en vigueur, ainsi que la réglementation pour les enfants.
 
 **Vous avez des questions concernant les conditions d'entrées de nos destinations ?** 
 
-Contactez-nous au 01 84 80 79 75 ou [prenez rdv avec un conseiller Odysway](https://calendly.com/odysway/demande-information) selon vos disponibilités !
+Contactez-nous au 01 84 80 79 75 ou prenez rdv avec un conseiller Odysway selon vos disponibilités !
 ::

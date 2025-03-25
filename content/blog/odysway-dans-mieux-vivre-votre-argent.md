@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-25 13:05:00+00:00"
 tags: "Presse"
 categories: "Presse ecrite"
-displayedImg: "https://cdn.buttercms.com/9J5dCj3mTnWWh5tPqAjN"
+displayedImg: "/images/blogs/Odysway-dans-"Mieux-vivre-votre-argent.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/9J5dCj3mTnWWh5tPqAjN"
+image-src: "/images/blogs/Odysway-dans-"Mieux-vivre-votre-argent.jpg"
 ---
 #publication-date
 25 avril 2019
@@ -31,7 +31,7 @@ Odysway apparait dans le magazine papier "Mieux vivre votre argent" du mois de f
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/9J5dCj3mTnWWh5tPqAjN"
+image-src: "/images/blogs/Odysway-dans-"Mieux-vivre-votre-argent.jpg"
 ---
 #content
 Odysway apparait dans le magazine papier "Mieux vivre votre argent" du mois de fevrier.
@@ -41,7 +41,8 @@ Odysway apparait dans le magazine papier "Mieux vivre votre argent" du mois de f
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ZhztBvgAQGuKzlyfccFR
+image-src: "/images/blogs/ZhztBvgAQGuKzlyfccFR-1742841139360.jpg"
+alt: 
 ---
 ::
 

@@ -40,11 +40,12 @@ L’Himalaya. Voilà le premier mot qui nous vient à l’esprit lorsque l’on 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/3oIRbxDwQIyblBAaezdC
+image-src: "/images/blogs/nepal-908837_1920.jpg.jpg"
+alt: nepal-908837_1920.jpg
 ---
 ::
 
 Les randonneurs feront cap vers le nord du Népal pour arpenter les nombreux sentiers qui sillonnent l’Himalaya. Pour un séjour plus sportif, pourquoi ne pas s’essayer au rafting ou au canyoning dans les eaux tourbillonnantes des rivières ? Pour vous rendre compte de la majestuosité de certains sites, Odysway vous suggère de vous envoler à bord d’un parapente. Par ailleurs, le Népal est une grande source d’inspiration spirituelle et se révèle être une destination idéale pour un voyage basé sur le développement personnel. Pèlerinage bouddhiste, méditation ou yoga sont autant de chemins pour mener à bien votre voyage intérieur.
 
-Odysway vous propose deux voyages pour découvrir le Népal autrement. Loin des sentiers touristiques, partez faire un [Yoga-trek au cœur de l'Himalaya](https://odysway.com/voyages/yoga-trek-himalaya), l'occasion de prendre du temps pour vous tout en profitant des paysages magnifiques du Népal. Vous pouvez également partir vivre en [immersion dans une école bouddhiste](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal), un voyage qui vous permettra de participer à l'éducation des jeunes moines tout en partageant leur mode de vie, en apprenant à les connaitre et en découvrant leur culture.
+Odysway vous propose deux voyages pour découvrir le Népal autrement. Loin des sentiers touristiques, partez faire un Yoga-trek au cœur de l'Himalaya, l'occasion de prendre du temps pour vous tout en profitant des paysages magnifiques du Népal. Vous pouvez également partir vivre en immersion dans une école bouddhiste, un voyage qui vous permettra de participer à l'éducation des jeunes moines tout en partageant leur mode de vie, en apprenant à les connaitre et en découvrant leur culture.
 ::

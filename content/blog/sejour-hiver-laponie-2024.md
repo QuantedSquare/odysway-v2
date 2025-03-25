@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-09-18 15:53:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/Xtf3qHexSW2Pb3kRg0cY"
+displayedImg: "/images/blogs/Sejour-hiver-Laponie-2024-:-L'experience-nordique-inoubliable-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/Xtf3qHexSW2Pb3kRg0cY"
+image-src: "/images/blogs/Sejour-hiver-Laponie-2024-:-L'experience-nordique-inoubliable-1.jpg"
 ---
 #publication-date
 18 septembre 2023
@@ -31,7 +31,7 @@ Lorsque l'hiver étend son voile sur la Laponie, cette partie de la Finlande dev
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/Xtf3qHexSW2Pb3kRg0cY"
+image-src: "/images/blogs/Sejour-hiver-Laponie-2024-:-L'experience-nordique-inoubliable-1.jpg"
 ---
 #content
 Lorsque l'hiver étend son voile sur la Laponie, cette partie de la Finlande devient le théâtre d'un spectacle éblouissant. Située au nord du cercle polaire arctique, la Laponie se transforme en une terre de rêve. Si vous rêvez d'une aventure unique en 2024, le séjour hiver proposé par Odysway en Laponie est votre billet pour l'émerveillement.
@@ -42,7 +42,8 @@ Chaque enfant a, à un moment donné, été ébloui par les contes de paysages e
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/KldlNGGxTxep3G0bHNQT
+image-src: "/images/blogs/Laponie.webp-1.jpg"
+alt: Laponie.webp
 ---
 ::
 
@@ -52,11 +53,12 @@ Au-delà de ses paysages, la Laponie est riche d'une culture profonde et d'une h
 
 ## **L'expérience Odysway en Laponie finlandaise**
 
-Odysway vous invite à vivre un rêve éveillé. Huit jours intenses où chaque moment est une découverte. Imaginez glisser sur la neige tiré par un attelage de chiens, sentir le frisson de la motoneige, suivre des traces d'animaux en raquettes ou apprendre les techniques ancestrales des trappeurs. Et, alors que la nuit tombe, partir à la chasse aux aurores boréales, ces rideaux lumineux qui dansent dans le ciel. Découvrez le [séjour Odysway en Laponie finlandaise](https://odysway.com/voyages/voyage-hiver-laponie-finlande)
+Odysway vous invite à vivre un rêve éveillé. Huit jours intenses où chaque moment est une découverte. Imaginez glisser sur la neige tiré par un attelage de chiens, sentir le frisson de la motoneige, suivre des traces d'animaux en raquettes ou apprendre les techniques ancestrales des trappeurs. Et, alors que la nuit tombe, partir à la chasse aux aurores boréales, ces rideaux lumineux qui dansent dans le ciel. Découvrez le séjour Odysway en Laponie finlandaise
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/d2Z9TGxpRhSypGddDQbu
+image-src: "/images/blogs/d2Z9TGxpRhSypGddDQbu-1742840587072.jpg"
+alt: undefined
 ---
 ::
 
@@ -70,5 +72,5 @@ Qu'il s'agisse de familles, de couples ou de voyageurs solos, la Laponie a quelq
 
 Le séjour Laponie 2024 d'Odysway est une invitation à découvrir une terre d'une beauté indescriptible, où la nature, la culture et l'aventure se rencontrent. C'est une expérience qui restera gravée dans votre cœur, longtemps après votre retour. Embarquez pour un voyage extraordinaire et laissez la Laponie vous ensorceler.
 
-Tentés par l'expérience ? Partez vivre cette [aventure hivernale lors notre voyage en Laponie Finlandaise](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=Article_Top10_Voyage_Hiver) !
+Tentés par l'expérience ? Partez vivre cette aventure hivernale lors notre voyage en Laponie Finlandaise !
 ::

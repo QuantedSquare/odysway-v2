@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-10-30 17:46:00+00:00"
 tags: "Animaux, Asie, Famille, Indonesie"
 categories: "Nature et grands espaces, Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/ufOd50erRHuCHOs48iba"
+displayedImg: "/images/blogs/Orang-outan-Indonesie-:-une-espece-endemique-de-l'ile-de-Sumatra.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/ufOd50erRHuCHOs48iba"
+image-src: "/images/blogs/Orang-outan-Indonesie-:-une-espece-endemique-de-l'ile-de-Sumatra.jpg"
 ---
 #publication-date
 30 octobre 2019
@@ -31,12 +31,12 @@ Orang-outan Indonésie : une espèce endémique de l’île de Sumatra
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/ufOd50erRHuCHOs48iba"
+image-src: "/images/blogs/Orang-outan-Indonesie-:-une-espece-endemique-de-l'ile-de-Sumatra.jpg"
 ---
 #content
 Autrefois, il peuplait toute l’Asie jusqu’au nord de la Chine. Aujourd’hui, il ne se trouve qu’à deux seuls endroits sur terre : sur l’île de Sumatra en Indonésie et sur l’île de Bornéo. L’orang-outan est aujourd’hui en voie de disparition à cause de la déforestation et du braconnage. Animal discret et particulièrement intelligent, partons sur les traces de **l’orang-outan d’Indonésie** pour en savoir plus.
 
-Nous vous invitons à lire notre article [sur les 5 façons de lutter contre la déforestation en Amazonie.](https://odysway.com/5-facons-lutter-contre-deforestation-amazonie)
+Nous vous invitons à lire notre article sur les 5 façons de lutter contre la déforestation en Amazonie.
 
 ## Sumatra, une île à la biodiversité exceptionnelle
 
@@ -58,7 +58,7 @@ Faisons une toute petite parenthèse, mais importante à nos yeux : il n’y a p
 
 ## Aider les animaux en danger
 
-Avec Odysway, vous avez la possibilité de venir en aide aux animaux en voie de disparition. Au Costa Rica, la préservation de l'environnement est très importante dans le pays au point qu'il y ait un tribunal de l'environnement. En tant que voyageur, Odysway vous propose de loger chez l'habitant tout en allant à un refuge visant la réintroduction des animaux dans leur habitat naturel. [Vivez un voyage solidaire qui a du sens tout en découvrant la beauté du Costa Rica, pour les amoureux des animaux et de la nature.](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=article&utm_medium=blog&utm_campaign=orang+outan)
+Avec Odysway, vous avez la possibilité de venir en aide aux animaux en voie de disparition. Au Costa Rica, la préservation de l'environnement est très importante dans le pays au point qu'il y ait un tribunal de l'environnement. En tant que voyageur, Odysway vous propose de loger chez l'habitant tout en allant à un refuge visant la réintroduction des animaux dans leur habitat naturel. Vivez un voyage solidaire qui a du sens tout en découvrant la beauté du Costa Rica, pour les amoureux des animaux et de la nature.
 
 ## Orang-outan d’Indonésie : où les apercevoir sur l’île de Sumatra ?
 
@@ -68,7 +68,8 @@ Par contre, il faut savoir que cette expérience attire forcément les foules. V
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/J1o72heXRfMwbjD2nc9k
+image-src: "/images/blogs/J1o72heXRfMwbjD2nc9k-1742841027838.jpg"
+alt: 
 ---
 ::
 
@@ -76,5 +77,5 @@ Partez dans un centre de conservation pour orangs-outans en Indonésie et partic
 
 ## Voyage animalier : découvrez les animaux sauvages autrement
 
-De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
+De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos voyages animaliers.
 ::

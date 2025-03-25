@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-12-19 14:50:00+00:00"
 tags: "Animaux, Developpement personnel, Famille, Grands espaces"
 categories: "Nature et grands espaces, Benefices locaux"
-displayedImg: "https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ"
+displayedImg: "/images/blogs/Mers-et-oceans-:-5-gestes-simples-pour-participer-a-leur-preservation-!.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ"
+image-src: "/images/blogs/Mers-et-oceans-:-5-gestes-simples-pour-participer-a-leur-preservation-!.jpg"
 ---
 #publication-date
 19 décembre 2019
@@ -31,7 +31,7 @@ Mers et océans : 5 gestes simples pour participer a leur préservation !
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/bVtqys4SQoCgxd0xUytJ"
+image-src: "/images/blogs/Mers-et-oceans-:-5-gestes-simples-pour-participer-a-leur-preservation-!.jpg"
 ---
 #content
 Les mers et océans recouvrent **77,2 % de la superficie totale de notre** **planète**. Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la **biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine anthropique**. Des tonnes de déchets plastiques et chimiques sont déversées chaque jour dans les mers et les océans. Par surcroit, les émissions de gaz à effet de serre, le réchauffement climatique et la fonte des pôles menacent l'habitât et la survie de très nombreuses espèces vivantes. Vous voulez, a votre modeste échelle, contribuer à préserver les mers et océans ? Odysway a pense a un top 5 des gestes simples à faire pour y parvenir !
@@ -40,7 +40,7 @@ Les mers et océans recouvrent **77,2 % de la superficie totale de notre** **pl
 
 La France consomme moins de poissons que ses voisins européens. Pourtant, les Français ingèrent 34,2 kg de poissons par an. Substituez davantage les fruits et légumes (bio) au poisson. De cette manière, vous contribuerez à **réduire la demande globale sur le marche français**. Malheureusement, vous n'arrêterez pas à vous seule(e) la surpeche industrielle mondiale. Mais au moins, limiter votre consommation de produits de la mer présentera un bénéfice double.
 
-Dans une moindre mesure, vous ne contribuerez pas à la régression de la [biodiversité marine](https://fr.wikipedia.org/wiki/Biodiversit%C3%A9_marine). Et surtout, c'est bénéfique pour votre santé. Vous absorberez moins de métaux lourds, d'antibiotiques, de pesticides et de particules de plastique ! Envisage sous cet angle, on a plutôt envie de moins en manger, n'est-ce pas ?
+Dans une moindre mesure, vous ne contribuerez pas à la régression de la biodiversité marine. Et surtout, c'est bénéfique pour votre santé. Vous absorberez moins de métaux lourds, d'antibiotiques, de pesticides et de particules de plastique ! Envisage sous cet angle, on a plutôt envie de moins en manger, n'est-ce pas ?
 
 ## Consommer des espèces de poissons non menacées
 
@@ -66,9 +66,9 @@ Privilégiez **le vélo, le train ou les transports en commun a la voiture, au b
 
 Voici une idée de geste simple a faire pour aider a préserver les mers et océans : **participer a des chantiers et des missions de nettoyage des plages, des rives de fleuves et des cours d'eau**. Ceux-ci sont jonches de déchets plastique, surtout après la période estivale. Pourquoi ne pas rejoindre une association ou partir en nature avec des ami(e)s pour faire une collecte des déchets amoncelés au sol ? Enfilez des gants et débarrassez ensuite des détritus dans un centre dédié, compétent pour le traitement et le recyclage des déchets.
 
-Vous pouvez poursuivre votre lecture en consultant notre article [sur les 5 façons de lutter contre la déforestation en Amazonie.](https://odysway.com/5-facons-lutter-contre-deforestation-amazonie)
+Vous pouvez poursuivre votre lecture en consultant notre article sur les 5 façons de lutter contre la déforestation en Amazonie.
 
 ## Se tourner vers un tourisme plus responsable
 
-[L'écotourisme](https://odysway.com/thematiques/ecotourisme) vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations.
+L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations.
 ::

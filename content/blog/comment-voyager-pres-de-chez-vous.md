@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-05-22 15:30:00+00:00"
 tags: "Europe, Famille, France, Made in France"
 categories: ""
-displayedImg: "https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg"
+displayedImg: "/images/blogs/Comment-voyager-pres-de-chez-vous.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg"
+image-src: "/images/blogs/Comment-voyager-pres-de-chez-vous.jpg"
 ---
 #publication-date
 22 mai 2020
@@ -31,14 +31,14 @@ Comment voyager près de chez vous?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/dw4SdGYjRajX3HX5Azlg"
+image-src: "/images/blogs/Comment-voyager-pres-de-chez-vous.jpg"
 ---
 #content
 Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. **Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous**. Ici un monument historique, là une jolie balade à faire ou bien un panorama à découvrir. Voyager est avant tout un état d'esprit et non une quête aux tampons sur le passeport. **Nous vous donnons quelques pistes pour faire le plus beau des voyages tout près de chez vous**.
 
 ## Pour voyager près de chez vous, regardez par votre fenêtre !
 
-Vous seriez surpris du nombre de Parisiens qui ne sont jamais montés sur la Tour Eiffel et pourtant c'est LE monument emblématique de la capitale. Ou bien du nombre de Versaillais qui n'ont jamais visité le château de Louis XIV. Des exemples comme ceux-là, il y en a à la pelle. Surprenant n'est-ce pas ? Et vous, connaissez-vous finalement bien votre ville ? Avez-vous déjà flâné dans ses rues et ruelles ? Visité le petit musée local ? Vous êtes-vous attardé à ce joli point de vue pour admirer le spectacle qui s'offre à vous ? Il est donc temps de changer les choses et de partir explorer votre propre ville ! On vous montre que [**voyager près de chez vous est vraiment facile.**](https://odysway.com/destinations/france)
+Vous seriez surpris du nombre de Parisiens qui ne sont jamais montés sur la Tour Eiffel et pourtant c'est LE monument emblématique de la capitale. Ou bien du nombre de Versaillais qui n'ont jamais visité le château de Louis XIV. Des exemples comme ceux-là, il y en a à la pelle. Surprenant n'est-ce pas ? Et vous, connaissez-vous finalement bien votre ville ? Avez-vous déjà flâné dans ses rues et ruelles ? Visité le petit musée local ? Vous êtes-vous attardé à ce joli point de vue pour admirer le spectacle qui s'offre à vous ? Il est donc temps de changer les choses et de partir explorer votre propre ville ! On vous montre que **voyager près de chez vous est vraiment facile.**
 
 Découvrez donc votre ville comme vous ne l'avez jamais fait auparavant, c’est-à-dire en prenant le temps… tout comme le font les visiteurs qui viennent pour la première fois. **A pied ou à vélo, empruntez les chemins de traverse, admirez les maisons, les façades, les ponts, les monuments…** Pour le déjeuner, testez ce restaurant devant lequel vous passez régulièrement mais dans lequel vous n'êtes jamais entré. D'ailleurs, certains dont la devanture ne paie pas de mine, réservent parfois de bonnes surprises et vous invitent à un agréable voyage culinaire.
 
@@ -60,7 +60,8 @@ Si vous êtes plus à l'aise loin de la jungle urbaine, qu'à cela ne tienne ! *
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ziM4LcYPSLWbE6EuEjnz
+image-src: "/images/blogs/ceuillete.jpg.jpg"
+alt: ceuillete.jpg
 ---
 ::
 
@@ -68,13 +69,14 @@ _Partez vous initier aux plantes médicinales dans le Jura avec Odysway_
 
 ## Cap sur les savoir-faire locaux
 
-**La France regorge de trésors et est une** [**destination de choix**](https://odysway.com/5-bonnes-raisons-voyager-france) **pour voyager près de chez vous.** Mais il y a une thématique qui est susceptible d'attirer votre curiosité plus que toute autre raison : ce sont **les savoir-faire de nos régions**. Avec la surproduction et la surconsommation, de plus en plus de Français se tournent vers les produits locaux. Partez à la rencontre des producteurs et des artisans de votre région, visitez une ferme pédagogique, goûtez aux produits du terroir, achetez des souvenirs du coin… Bref, faites un voyage immersif dans le savoir-faire made in France, vous ne serez pas déçu et la qualité sera au rendez-vous. En outre, vous donnerez un véritable coup de pouce à l'économie locale.
+**La France regorge de trésors et est une** **destination de choix** **pour voyager près de chez vous.** Mais il y a une thématique qui est susceptible d'attirer votre curiosité plus que toute autre raison : ce sont **les savoir-faire de nos régions**. Avec la surproduction et la surconsommation, de plus en plus de Français se tournent vers les produits locaux. Partez à la rencontre des producteurs et des artisans de votre région, visitez une ferme pédagogique, goûtez aux produits du terroir, achetez des souvenirs du coin… Bref, faites un voyage immersif dans le savoir-faire made in France, vous ne serez pas déçu et la qualité sera au rendez-vous. En outre, vous donnerez un véritable coup de pouce à l'économie locale.
 
-Avec Odysway, partez dans les [Pyrénées partager la vie d'un berger](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=5+bonnes+raisons+de+voyager+en+France).
+Avec Odysway, partez dans les Pyrénées partager la vie d'un berger.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/VERjG9kvRzivDInMN2nF
+image-src: "/images/blogs/VERjG9kvRzivDInMN2nF-1742840896868.jpg"
+alt: 
 ---
 ::
 
@@ -82,5 +84,5 @@ _Découvrez le savoir-faire des gardians en Camargue !_
 
 ## Découvrez nos voyages culturels !
 
-Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
+Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de voyages culturels proposés par Odysway.
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-06 09:59:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique Centrale, Amerique du Nord, Animaux, Asie, Costa Rica, Etats Unis, Europe, Famille, France, Sri Lanka"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774"
+displayedImg: "/images/blogs/Tourisme-animalier-:-les-pratiques-a-bannir-en-voyage.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774"
+image-src: "/images/blogs/Tourisme-animalier-:-les-pratiques-a-bannir-en-voyage.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -31,10 +31,10 @@ Tourisme animalier : les pratiques à bannir en voyage
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/JBYgcoBQx6Z4ERgjTyWA?1613764454774"
+image-src: "/images/blogs/Tourisme-animalier-:-les-pratiques-a-bannir-en-voyage.jpg"
 ---
 #content
-Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un _must to do_ pour ceux qui ne connaissent pas l’envers du décor. En effet, **derrière ces belles images se cachent maltraitance et souffrance**. [Consultez notre article sur la cause des disparitions des animaux.](https://odysway.com/causes-disparition-animaux) Battus, drogués, enlevés à leur milieu naturel, des animaux sont exploités pour satisfaire des touristes en quête de quelque chose d’inédit. **Plein phare sur le tourisme animalier et ses dérives.**
+Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un _must to do_ pour ceux qui ne connaissent pas l’envers du décor. En effet, **derrière ces belles images se cachent maltraitance et souffrance**. Consultez notre article sur la cause des disparitions des animaux. Battus, drogués, enlevés à leur milieu naturel, des animaux sont exploités pour satisfaire des touristes en quête de quelque chose d’inédit. **Plein phare sur le tourisme animalier et ses dérives.**
 
 ## Le tourisme animalier : un tourisme de plus en plus populaire qui entraîne des dérives
 
@@ -48,17 +48,18 @@ Ce genre de clichés inonde les réseaux sociaux. Pourtant, la réalité est loi
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/CvUfJKKQrS5bINrAq0PY
+image-src: "/images/blogs/CvUfJKKQrS5bINrAq0PY-1742840982850.jpg"
+alt: undefined
 ---
 ::
 
 Partez au Costa Rica soigner les paresseux avec Odysway.
 
-Odysway vous propose un [voyage au Costa Rica au sein d’un refuge pour animaux orphelins ou blessés](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=Blog&utm_medium=article&utm_campaign=TourismeAnimalier_PratiquesABannir), aux antipodes des pratiques néfastes du tourisme animalier : vous soignerez et vous occuperez des animaux dans le but de les réintroduire dans leur habitat naturel.
+Odysway vous propose un voyage au Costa Rica au sein d’un refuge pour animaux orphelins ou blessés, aux antipodes des pratiques néfastes du tourisme animalier : vous soignerez et vous occuperez des animaux dans le but de les réintroduire dans leur habitat naturel.
 
 ### Monter sur le dos d’un éléphant
 
-Nous avions déjà abordé le sujet dans l’un de nos précédents articles. Pour résumé, les éléphanteaux sont arrachés à leur mère et domestiqués selon un rituel cruel : le phajaan. **Enfermés dans une cage étroite, privés de nourriture et battus**, tels sont les actes inhumains que subissent ces petits pachydermes. S’ensuivent des **tortures physiques** avec l’utilisation d’une sorte de pic à glace et cette fameuse nacelle où s’installent les voyageurs et qui leur brise le dos… [Plus d'explications dans notre article sur les balades à dos d'éléphant.](https://odysway.com/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande)
+Nous avions déjà abordé le sujet dans l’un de nos précédents articles. Pour résumé, les éléphanteaux sont arrachés à leur mère et domestiqués selon un rituel cruel : le phajaan. **Enfermés dans une cage étroite, privés de nourriture et battus**, tels sont les actes inhumains que subissent ces petits pachydermes. S’ensuivent des **tortures physiques** avec l’utilisation d’une sorte de pic à glace et cette fameuse nacelle où s’installent les voyageurs et qui leur brise le dos… Plus d'explications dans notre article sur les balades à dos d'éléphant.
 
 ### Se promener avec des lions : le boom d’un tourisme animalier bien particulier en Afrique du Sud
 
@@ -66,11 +67,12 @@ Nous avions déjà abordé le sujet dans l’un de nos précédents articles. P
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dAgwUj6TY6AXwEjOF6Sl
+image-src: "/images/blogs/dAgwUj6TY6AXwEjOF6Sl-1742840983368.jpg"
+alt: undefined
 ---
 ::
 
-Avec Odysway, participez à un [projet de conservation des félins en Afrique du Sud](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=Blog&utm_medium=article&utm_campaign=TourismeAnimalier_PratiquesABannir). Apprenez à connaître les grands félins et leur histoire, construisez-leur des jouets et des espaces de jeux, préparer leur nourriture et partagez des moments inoubliables avec les félins ainsi qu’avec les autres volontaires !
+Avec Odysway, participez à un projet de conservation des félins en Afrique du Sud. Apprenez à connaître les grands félins et leur histoire, construisez-leur des jouets et des espaces de jeux, préparer leur nourriture et partagez des moments inoubliables avec les félins ainsi qu’avec les autres volontaires !
 
 ### Visiter une plantation de café à civette
 
@@ -106,5 +108,5 @@ Lorsque vous êtes en présence d’animaux sauvages en captivité, posez-vous l
 
 ## Découvrez nos séjours éthiques avec les animaux sauvages
 
-Parce que nous prônons **un tourisme responsable**, chez Odysway **nous proposons des séjours inoubliables et éthiques auprès d’animaux sauvages.** N’hésitez pas à consulter tous [nos séjours sur le thème du tourisme animalier](https://odysway.com/thematiques?category=Animaux).
+Parce que nous prônons **un tourisme responsable**, chez Odysway **nous proposons des séjours inoubliables et éthiques auprès d’animaux sauvages.** N’hésitez pas à consulter tous nos séjours sur le thème du tourisme animalier.
 ::

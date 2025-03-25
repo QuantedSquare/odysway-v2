@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-05-02 07:15:00+00:00"
 tags: "Cap Vert"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
+displayedImg: "/images/blogs/A-la-decouverte-du-Cap-Vert.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
+image-src: "/images/blogs/A-la-decouverte-du-Cap-Vert.jpg"
 ---
 #publication-date
 2 mai 2023
@@ -31,16 +31,17 @@ image-src: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/26Kpn8MpRjiowEM0vTHF"
+image-src: "/images/blogs/A-la-decouverte-du-Cap-Vert.jpg"
 ---
 #content
-Au large des côtes du Sénégal, **le Cap-Vert** est un archipel encore préservé du tourisme de masse. Les paysages naturels d’exception, une culture métissée et l’hospitalité des habitants font d’un [**voyage au Cap-Vert**](https://odysway.com/voyages/immersion-culturelle-cap-vert) un séjour sous le signe de l’authenticité.
+Au large des côtes du Sénégal, **le Cap-Vert** est un archipel encore préservé du tourisme de masse. Les paysages naturels d’exception, une culture métissée et l’hospitalité des habitants font d’un **voyage au Cap-Vert** un séjour sous le signe de l’authenticité.
 
 ## Un bijou naturel et culturel au milieu de l’Atlantique
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/5BB0bK4SSCDaHuBa6v1g
+image-src: "/images/blogs/5BB0bK4SSCDaHuBa6v1g-1742840626646.jpg"
+alt: undefined
 ---
 ::
 
@@ -54,7 +55,8 @@ Comment ne pas évoquer l’hospitalité et la convivialité, si caractéristiqu
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Kg68mHR9S1GGG5zUR9cw
+image-src: "/images/blogs/Kg68mHR9S1GGG5zUR9cw-1742840627197.jpg"
+alt: undefined
 ---
 ::
 
@@ -68,19 +70,21 @@ Le Cap-Vert connaît deux saisons : la saison sèche et la saison des pluies. L
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/QlWEajEMREiBm588mUaX
+image-src: "/images/blogs/QlWEajEMREiBm588mUaX-1742840627735.jpg"
+alt: undefined
 ---
 ::
 
 Tout **voyage au Cap-Vert** commence ici. Avec sa nature luxuriante, son riche patrimoine culturel et ses splendides paysages de montagnes, laissez-vous emporter par les beautés de **l’île de Santiago**. Direction **Praia** pour admirer son centre historique, nommé le Platô, doté de belles maisons coloniales et vous immerger dans la vie capverdienne en flânant dans les allées de son célèbre marché. Quittez la capitale pour découvrir **Cidade Velha**, la toute première ville bâtie par les Portugais, et son fort, les villages typiques. Flânez sur les magnifiques plages de Tarrafal et le soir venu, évadez-vous au son de la musique traditionnelle qui envahit les rues.
 
-Pour vivre une expérience unique et authentique sur l’île de Santiago auprès des pêcheurs et des cultivateurs, Odysway vous propose une [immersion au Cap-Vert](https://odysway.com/voyages/immersion-culturelle-cap-vert) au cœur de la culture badiu.
+Pour vivre une expérience unique et authentique sur l’île de Santiago auprès des pêcheurs et des cultivateurs, Odysway vous propose une immersion au Cap-Vert au cœur de la culture badiu.
 
 ### L’île de Boa Vista
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/MjXqZMs0ROiN9SS1Znev
+image-src: "/images/blogs/MjXqZMs0ROiN9SS1Znev-1742840628285.jpg"
+alt: undefined
 ---
 ::
 
@@ -90,7 +94,8 @@ Amateur de paysages désertiques et de sports nautiques, faites cap vers **l’�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/BDOAk6HTQsOhvLJ3deNI
+image-src: "/images/blogs/BDOAk6HTQsOhvLJ3deNI-1742840628824.jpg"
+alt: undefined
 ---
 ::
 
@@ -100,7 +105,8 @@ Lors de votre **voyage au Cap-Vert**, **l’île de Fogo** est une étape obliga
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/16ZgeqGvRMqm6yR81ivm
+image-src: "/images/blogs/16ZgeqGvRMqm6yR81ivm-1742840629362.jpg"
+alt: undefined
 ---
 ::
 
@@ -110,7 +116,8 @@ Assez isolée et uniquement accessible depuis l’île de Fogo, **l’île de Br
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/wB2mmrvnSUisSUFBRbeQ
+image-src: "/images/blogs/wB2mmrvnSUisSUFBRbeQ-1742840629880.jpg"
+alt: undefined
 ---
 ::
 
@@ -120,17 +127,19 @@ image-src: https://cdn.buttercms.com/wB2mmrvnSUisSUFBRbeQ
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/n6UFKeLSZKHDwDo1xO8Q
+image-src: "/images/blogs/n6UFKeLSZKHDwDo1xO8Q-1742840630396.jpg"
+alt: undefined
 ---
 ::
 
-Amateur de randonnée, faites escale sur **l’île de Santo Antão** lors de **voyage au Cap-Vert**. L’île dispose en effet de nombreux **sentiers pédestres** traversant des paysages diversifiés. Ici des montagnes et des vallées luxuriantes, là le désert et des ravins. Vous allez en prendre plein les yeux ! Point d’orgue de votre séjour : la dégustation (avec modération) du rhum local. Découvrir l'île à travers un trek immersif : [https://odysway.com/voyages/trek-chez-lhabitant-cap-vert](https://odysway.com/voyages/trek-chez-lhabitant-cap-vert).
+Amateur de randonnée, faites escale sur **l’île de Santo Antão** lors de **voyage au Cap-Vert**. L’île dispose en effet de nombreux **sentiers pédestres** traversant des paysages diversifiés. Ici des montagnes et des vallées luxuriantes, là le désert et des ravins. Vous allez en prendre plein les yeux ! Point d’orgue de votre séjour : la dégustation (avec modération) du rhum local. Découvrir l'île à travers un trek immersif : https://odysway.com/voyages/trek-chez-lhabitant-cap-vert.
 
 ### L’île de São Vicente
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/2kMPGnmRyaLFoUhevrVa
+image-src: "/images/blogs/2kMPGnmRyaLFoUhevrVa-1742840630944.jpg"
+alt: undefined
 ---
 ::
 
@@ -140,7 +149,8 @@ Voici une autre île propice à de très belles **randonnées** : **l’île de
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dlCV3johRReFwsLAPvBg
+image-src: "/images/blogs/dlCV3johRReFwsLAPvBg-1742840631489.jpg"
+alt: undefined
 ---
 ::
 
@@ -150,7 +160,8 @@ Si vous souhaitez vous retrouver presque seul au monde lors de votre **voyage au
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/JoLm1gwyRWcwO5ZjQKug
+image-src: "/images/blogs/JoLm1gwyRWcwO5ZjQKug-1742840632031.jpg"
+alt: undefined
 ---
 ::
 

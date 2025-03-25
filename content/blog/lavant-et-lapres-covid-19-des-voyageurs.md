@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-12-10 06:53:00+00:00"
 tags: ""
 categories: "News Odysway"
-displayedImg: "https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw"
+displayedImg: "/images/blogs/L'avant-et-l'apres-Covid-19-des-voyageurs.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw"
+image-src: "/images/blogs/L'avant-et-l'apres-Covid-19-des-voyageurs.jpg"
 ---
 #publication-date
 10 décembre 2020
@@ -31,7 +31,7 @@ L'avant et l'après Covid-19 des voyageurs
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/l8e1EclXReG0f7YXsSmw"
+image-src: "/images/blogs/L'avant-et-l'apres-Covid-19-des-voyageurs.jpg"
 ---
 #content
 **F**in octobre 2020\*, Odysway a lancé un sondage en ligne avec pour objectif de mieux comprendre l'impact du Covid-19 sur les habitudes de voyage des Français et des éventuelles craintes engendrées. Dresser en quelque sorte un bilan de cette année 2020, et voir de quelle façon les voyageurs imaginent le tourisme d'aujourd'hui et de demain.
@@ -51,7 +51,8 @@ Sur une échelle de 0 à 10 (0 étant la crainte la plus basse, 10 la plus haute
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/KyeAqrX4QS3bmw1YD3iL
+image-src: "/images/blogs/KyeAqrX4QS3bmw1YD3iL-1742840763435.jpg"
+alt: undefined
 ---
 ::
 
@@ -72,7 +73,8 @@ D'une façon assez surprenante, on peut noter que les premières raisons d'appr�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OfjyWL8TuyQjGPFwdcIP
+image-src: "/images/blogs/OfjyWL8TuyQjGPFwdcIP-1742840763974.jpg"
+alt: undefined
 ---
 ::
 
@@ -84,7 +86,8 @@ Cette question portait sur les habitudes d'organisation des voyages en règle g�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/9jxI5ZEURD6AMVO02mw4
+image-src: "/images/blogs/9jxI5ZEURD6AMVO02mw4-1742840764498.jpg"
+alt: undefined
 ---
 ::
 
@@ -139,7 +142,8 @@ Curieusement, l'assistance médicale multirisque n'est souhaitée que par près 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/x9DDw8QBTt2MdXkZQA9E
+image-src: "/images/blogs/x9DDw8QBTt2MdXkZQA9E-1742840765020.jpg"
+alt: undefined
 ---
 ::
 
@@ -159,7 +163,8 @@ Pour 50% des répondants, la réponse est "Non" ou plutôt non. Leur réponse es
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/pnb20JrrSIC7EER63NCM
+image-src: "/images/blogs/pnb20JrrSIC7EER63NCM-1742840765542.jpg"
+alt: undefined
 ---
 ::
 

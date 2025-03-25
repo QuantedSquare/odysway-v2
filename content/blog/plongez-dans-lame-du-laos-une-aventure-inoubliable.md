@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-08-20 13:44:00+00:00"
 tags: "éléphants, immersion, Laos"
 categories: "voyager, Laos, découverte"
-displayedImg: "https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk"
+displayedImg: "/images/blogs/Plongez-dans-l'ame-du-Laos-:-une-aventure-inoubliable-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk"
+image-src: "/images/blogs/Plongez-dans-l'ame-du-Laos-:-une-aventure-inoubliable-1.jpg"
 ---
 #publication-date
 20 août 2023
@@ -31,7 +31,7 @@ Le Laos, pays d'une beauté ensorcelante et d'une richesse culturelle profonde, 
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/pI339gVqRWqxxSFg8DUk"
+image-src: "/images/blogs/Plongez-dans-l'ame-du-Laos-:-une-aventure-inoubliable-1.jpg"
 ---
 #content
 Le Laos, pays d'une beauté ensorcelante et d'une richesse culturelle profonde, est une destination de voyage qui attire de plus en plus d'aventuriers avides de découvertes authentiques. Lors d'un séjour inoubliable au Laos, vous aurez la chance de vivre une immersion totale dans la vie quotidienne de ce pays enchanteur. Parmi les moments forts du voyage, l'expérience avec les Cornacs sera sans conteste la plus mémorable. Voici cinq points clés pour votre séjour au Laos :
@@ -44,7 +44,8 @@ Luang Prabang, inscrite au patrimoine mondial de l'UNESCO, fascine par son charm
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/F3K3sCFuS9GFlka6lyqJ
+image-src: "/images/blogs/F3K3sCFuS9GFlka6lyqJ-1742840594974.jpg"
+alt: undefined
 ---
 ::
 
@@ -54,7 +55,8 @@ Au cœur d'une jungle luxuriante, les cascades de Kuang Si se déploient majestu
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/pGBiODjLTf2KD9qRT1IT
+image-src: "/images/blogs/pGBiODjLTf2KD9qRT1IT-1742840595494.jpg"
+alt: undefined
 ---
 ::
 
@@ -68,13 +70,14 @@ Nichées dans la province de Xieng Khouang, les énigmatiques plaines de Jarres 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/TJHXRITS2e6T2CQQcbUw
+image-src: "/images/blogs/TJHXRITS2e6T2CQQcbUw-1742840596016.jpg"
+alt: undefined
 ---
 ::
 
 Pour clore votre séjour en beauté, assistez à l'un des couchers de soleil les plus spectaculaires qu'il soit, sur les rives du Mékong. Ce majestueux fleuve est la colonne vertébrale du Laos, observer le soleil se coucher derrière les montagnes au-delà du Mékong est un spectacle à couper le souffle. Les couleurs chaudes qui se reflètent sur l'eau, les barques de pêcheurs glissant lentement sur le fleuve, tout cela crée une ambiance magique et sereine, parfaite pour méditer sur les merveilles du voyage.
 
-Si vous cherchez une destination qui vous marquera à jamais, le Laos est assurément le choix idéal.  Découvrez notre voyage au Laos [à la rencontre des éléphants et de leurs protecteur](https://odysway.com/voyages/voyage-immersion-laos-elephants)s et rejoignez un groupe pour vivre cette expérience unique ! 
+Si vous cherchez une destination qui vous marquera à jamais, le Laos est assurément le choix idéal.  Découvrez notre voyage au Laos à la rencontre des éléphants et de leurs protecteurs et rejoignez un groupe pour vivre cette expérience unique ! 
 
-Envie d’en savoir plus ? Découvrez en vidéo de notre équipe sur place : [https://youtu.be/cEgwp93M5PU](https://youtu.be/cEgwp93M5PU)
+Envie d’en savoir plus ? Découvrez en vidéo de notre équipe sur place : https://youtu.be/cEgwp93M5PU
 ::

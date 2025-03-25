@@ -54,7 +54,8 @@ Voici les meilleures expériences de **road trip** proposées par Odysway :
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/X1cLh2aSEmq9WggtGMVT
+image-src: "/images/blogs/kirghizistan-song-kul.jpg.jpg"
+alt: kirghizistan-song-kul.jpg
 ---
 ::**
 
@@ -62,7 +63,7 @@ Connaissez-vous le Kirghizistan ? Ce pays encore peu fréquenté par les tourist
 
 Extrêmement montagneux et encore peuplé de populations nomades, il vous promet un **road trip** inoubliable.
 
-Durant ce voyage époustouflant vous aurez l’occasion de [**rencontrer des chasseurs à l’aigle,**](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=SEO&utm_medium=thematique&utm_campaign=roadtrip) [](https://odysway.com/voyages/immersion-steppes-kirghizistan)mais aussi d’apprendre les secrets de fabrication des yourtes.
+Durant ce voyage époustouflant vous aurez l’occasion de **rencontrer des chasseurs à l’aigle,** mais aussi d’apprendre les secrets de fabrication des yourtes.
 
 Vous vivrez plusieurs expériences en immersion chez les kirghizes tout en parcourant des kilomètres de route dans des décors à couper le souffle !
 
@@ -78,7 +79,8 @@ Logés en maisons d’hôtes et en yourtes vous vivrez une immersion totale dans
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/cxC2x4cYS2WpOa7JMCVg
+image-src: "/images/blogs/Tibet.jpg"
+alt: Tibet
 ---
 ::
 
@@ -86,7 +88,7 @@ La montagne est le cadre idéal pour un **road trip organisé.**
 
 Respirer l’air pur et passer de longues heures à contempler la beauté du monde où nous vivons, c’est ce qui vous attend durant ce périple inoubliable.
 
-Ce voyage vous offre l'opportunité de [**vivre un des road-trip les plus épiques au monde**](https://odysway.com/voyages/sur-les-routes-nepal-tibet?utm_source=SEO&utm_medium=thematique&utm_campaign=roadtrip)  : la route de l'Himalaya entre **Katmandou**, au **Népal**, et **Lhassa**, la capitale du **Tibet**. 
+Ce voyage vous offre l'opportunité de **vivre un des road-trip les plus épiques au monde**  : la route de l'Himalaya entre **Katmandou**, au **Népal**, et **Lhassa**, la capitale du **Tibet**. 
 
 Des kilomètres de route de montagne rien que pour vous avec d’abord l'immensité de la vallée de Katmandou, puis l'ancienne route du Tibet qui mène jusqu'à Lhassa.
 
@@ -96,13 +98,14 @@ En totale **immersion** en pleine nature, sur le plus haut plateau du monde, vou
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/clAcWplQTqHi1GH0fKNA
+image-src: "/images/blogs/ouzbekistan-photo.jpeg.jpg"
+alt: ouzbekistan-photo.jpeg
 ---
 ::
 
 Que serait un **road trip** sans passer par la case États-Unis ? Et plus particulièrement en Arizona.
 
-Nous avons concocté pour vous un **road trip** digne des meilleurs films hollywoodiens. Vous [**goûterez à la vie dans le Far West**](https://odysway.com/voyages/cow-boy-ranch-etats-unis?utm_source=SEO&utm_medium=thematique&utm_campaign=roadtrip) et découvrirez l'immensité des paysages de l'Arizona.
+Nous avons concocté pour vous un **road trip** digne des meilleurs films hollywoodiens. Vous **goûterez à la vie dans le Far West** et découvrirez l'immensité des paysages de l'Arizona.
 
 Ce **road trip** sera l’opportunité de faire connaissance avec une famille de pionniers, et de vivre en immersion dans leur ranch en plein désert. Vous passerez également quelques jours avec un véritable chamane amérindien.
 
@@ -112,7 +115,8 @@ Ensemble, vous méditerez dans le Grand Canyon au coucher du soleil ; un moment 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/PpHbW5b4TpKlddpFVb0H
+image-src: "/images/blogs/PpHbW5b4TpKlddpFVb0H-1742840788070.jpg"
+alt: undefined
 ---
 ::
 
@@ -124,8 +128,8 @@ Vous profiterez de la liberté d’un voyage que vous aurez organisé vous-même
 
 Toute l'équipe d’Odysway est là pour vous aider à construire le road trip de vos rêves :
 
-*   [](https://odysway.com/voyages/inde-arunachal-pradesh?utm_source=SEO&utm_medium=thematique&utm_campaign=roadtrip)**[découvrez l’Arunachal Pradesh](https://odysway.com/voyages/inde-arunachal-pradesh?utm_source=SEO&utm_medium=thematique&utm_campaign=roadtrip)** à travers les routes d’une Inde inconnue du grand public ;
-*   [**partez sur les routes d’Europe**](https://odysway.com/voyages/village-campagne-roumanie?utm_source=SEO&utm_medium=thematique&utm_campaign=roadtrip) à la rencontre des dernières civilisations paysannes en Roumanie.
+*   **découvrez l’Arunachal Pradesh** à travers les routes d’une Inde inconnue du grand public ;
+*   **partez sur les routes d’Europe** à la rencontre des dernières civilisations paysannes en Roumanie.
 
 Nous sommes à votre écoute pour rester au plus proche de vos rêves les plus fous !
 ::

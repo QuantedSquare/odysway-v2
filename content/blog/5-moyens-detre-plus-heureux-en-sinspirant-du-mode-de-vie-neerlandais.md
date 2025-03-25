@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-10-16 10:46:00+00:00"
 tags: "Developpement personnel, Europe, Famille"
 categories: "Developpement Personnel"
-displayedImg: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
+displayedImg: "/images/blogs/5-moyens-d'etre-plus-heureux-en-s'inspirant-du-mode-de-vie-neerlandais.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
+image-src: "/images/blogs/5-moyens-d'etre-plus-heureux-en-s'inspirant-du-mode-de-vie-neerlandais.jpg"
 ---
 #publication-date
 16 octobre 2020
@@ -31,7 +31,7 @@ image-src: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
+image-src: "/images/blogs/5-moyens-d'etre-plus-heureux-en-s'inspirant-du-mode-de-vie-neerlandais.jpg"
 ---
 #content
 #### **Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie personnelle et professionnelle ? A moins que ce ne soit leur éducation si spécifique qui se transmet au fil des générations ? Ou bien la pratique quotidienne du vélo, l'une des clés pour accéder au bonheur ? Dans différents domaines, les Pays-Bas représentent un modèle à suivre. Découvrez comment être plus heureux en s'inspirant du mode de vie néerlandais.**
@@ -40,7 +40,8 @@ image-src: "https://cdn.buttercms.com/bC5T9kZCR4ynIwMsvF3Y?1613730623772"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zpHnxBq8TKdZzsJ0zjwg
+image-src: "/images/blogs/zpHnxBq8TKdZzsJ0zjwg-1742840831829.jpg"
+alt: undefined
 ---
 ::
 
@@ -50,7 +51,8 @@ S'il y a bien une chose que les Néerlandais préfèrent éviter, ce sont les co
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/794w5jOOSYW3eaPUx82G
+image-src: "/images/blogs/Entreprise_PaysBas.jpg.jpg"
+alt: Entreprise_PaysBas.jpg
 ---
 ::
 
@@ -60,19 +62,21 @@ Si l'on devait définir une devise pour le monde du travail néerlandais, cela p
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zpE7H8udRhasRbHwcyCr
+image-src: "/images/blogs/Famille.jpg.jpg"
+alt: Famille.jpg
 ---
 ::
 
 Aux Pays-Bas, il n'existe pas cette notion de devoir choisir entre carrière et famille. Pour être heureux, les Néerlandais ont besoin de **consacrer du temps à leur famille, cela fait partie intégrante de leur mode de vie**. Nous avons vu précédemment que leur façon de travailler leur permet de combiner parfaitement vie professionnelle et vie personnelle et donc de consacrer plus de temps à leurs enfants. Largement répandu (et nullement décrié), le travail à temps partiel concerne presque la moitié des travailleurs ! Les parents, aussi bien les mamans que les papas, peuvent ainsi passer davantage de temps avec leurs enfants.
 
-Découvrez notre thématique [de voyage pour la famille.](https://odysway.com/thematiques/voyage-en-famille)
+Découvrez notre thématique de voyage pour la famille.
 
 ## 4\. La joie de vivre des enfants néerlandais ou comment être plus heureux grâce à une éducation basée sur l'autonomie et la confiance
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/k12VEOJIS1aDxLCoyt9y
+image-src: "/images/blogs/Enfant_autonome.jpg.jpg"
+alt: Enfant_autonome.jpg
 ---
 ::
 
@@ -80,17 +84,18 @@ Saviez-vous que **les enfants néerlandais sont les plus heureux du monde** ? Il
 
 Les parents apprennent à leur progéniture, dès leur plus jeune âge, à **être autonome et à se** **comporter prudemment**. Il n'est pas rare de voir de jeunes enfants traverser la route tout seuls ou de jouer dans un parc sans adulte pour les surveiller. L'éducation est également basée sur la **bienveillance** : on amorce un dialogue plutôt que de crier ou de punir. Enfin, les enfants participent aux décisions, quel que soit leur âge, ce qui leur permet d'avoir une place à part entière dans leur famille. **Et si le mode de vie néerlandais était la recette pour être plus heureux en famille ?**  
 
-[Découvrez nos voyages en Europe.](https://odysway.com/destinations/europe)
+Découvrez nos voyages en Europe.
 
 ## 5\. Adieu voiture et stress : vive le vélo !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/4gxRwnWKTxeF1VyQSO1i
+image-src: "/images/blogs/PaysBas_a-velo.jpg.jpg"
+alt: PaysBas_a-velo.jpg
 ---
 ::
 
 Les Pays-Bas, un pays où **le vélo est roi** ! C'est le moyen de transport le plus populaire. Et pour cause, avec plus de 20 000 km de pistes cyclables sur tout le territoire, les Néerlandais peuvent rouler en toute sécurité, même dans les grandes villes. Aller travailler, faire les courses ou aller chercher les enfants à l'école, **tout se fait à vélo**. Il est vrai que c'est tellement plus agréable que d'être dans les embouteillages, enfermé et stressé dans sa voiture. Le vélo apporte en outre un **sentiment de liberté et favorise le bien-être… et donc le bonheur**.
 
-Poursuivez votre lecture avec [notre article sur les 5 bienfaits du vélo en voyage.](https://odysway.com/5-bienfaits-velo-voyage)
+Poursuivez votre lecture avec notre article sur les 5 bienfaits du vélo en voyage.
 ::

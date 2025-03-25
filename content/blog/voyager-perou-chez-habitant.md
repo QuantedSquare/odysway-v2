@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-01-04 10:03:00+00:00"
 tags: "Amerique du Sud, Communautés locales, Grands espaces, Perou"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0"
+displayedImg: "/images/blogs/Voyager-au-Perou-en-sejournant-chez-l'habitant.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0"
+image-src: "/images/blogs/Voyager-au-Perou-en-sejournant-chez-l'habitant.jpg"
 ---
 #publication-date
 4 janvier 2021
@@ -31,22 +31,22 @@ Voyager au Pérou en séjournant chez l'habitant
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/3wDPI1TNWjJbrUXMjBA0"
+image-src: "/images/blogs/Voyager-au-Perou-en-sejournant-chez-l'habitant.jpg"
 ---
 #content
-Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie. [Découvrez nos voyages au Pérou.](https://odysway.com/destinations/perou)
+Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie. Découvrez nos voyages au Pérou.
 
 ## **Un séjour authentique**
 
 L’esprit du voyage est de privilégier la rencontre au centre des activités journalières. Les incontournables se découvrent en compagnie des locaux qui vous accueilleront bras ouverts. Sur la sublime péninsule de Capachica du lac Titicaca, la communauté de Paramis vous initiera à la pratique traditionnelle de la pêche.
 
-À Cuzco, votre famille hôte vous fera découvrir l’artisanat ancestral du peuple quéchua à la Féria El Marques de San Francisco. Choisissez les chemins de traverse comme la visite des vestiges incas à Sacsahuaman, la découverte de la cité blanche d’Arequipa à 2.335 m d’altitude au pied du volcan Misti, la pratique de randonnées dans le canyon de Colca et ses pittoresques villages ou encore le partage du quotidien des liméniens. Retrouvez plus d'informations pour un voyage au Pérou sur [voyageva.com.](http://www.voyageva.com)
+À Cuzco, votre famille hôte vous fera découvrir l’artisanat ancestral du peuple quéchua à la Féria El Marques de San Francisco. Choisissez les chemins de traverse comme la visite des vestiges incas à Sacsahuaman, la découverte de la cité blanche d’Arequipa à 2.335 m d’altitude au pied du volcan Misti, la pratique de randonnées dans le canyon de Colca et ses pittoresques villages ou encore le partage du quotidien des liméniens. Retrouvez plus d'informations pour un voyage au Pérou sur voyageva.com.
 
 #### **Lima ou le Pérou aux deux visages**
 
 Le « Cercado » ou le centre historique de la capitale est une invitation à remonter le temps avec ses vestiges de l’époque coloniale mélangés aux constructions d’inspiration Art déco et Art nouveau. La Plaza de Armas est le symbole des pouvoirs religieux et politiques de l’empire espagnol. L’on y trouve une vieille fontaine du XVIIe siècle, souvenir de l’inquisition, le palais de l’Archevêque de Lima, la cathédrale Saint-Jean du XVIe siècle qui abrite le tombeau du conquistador Francisco Pizzaro bâtisseur de Lima, le palais du Gouvernement, le palais de l’Union et le palais Municipal. Le quartier de Miraflores propose une pittoresque promenade en bord de mer : le « Malecon », tandis que les passionnés d’art moderne seront ravis par les fresques de Street Art de Barranco.
 
-Une expérience unique vous attend au coeur de la culture péruvienne : [Voyagez avec un chamane au Pérou.](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article&utm_medium=blog&utm_campaign=p%C3%A9rou+chez+l%27habitant)
+Une expérience unique vous attend au coeur de la culture péruvienne : Voyagez avec un chamane au Pérou.
 
 ## **Shopping ethnique à Cuzco**
 
@@ -54,7 +54,8 @@ La ville coloniale de Cuzco est perchée à 3.400 m d’altitude à proximité d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/YhC2oj47QKGy8ZZzud5N
+image-src: "/images/blogs/YhC2oj47QKGy8ZZzud5N-1742840756162.jpg"
+alt: undefined
 ---
 ::
 
@@ -68,7 +69,7 @@ La nouvelle merveille est classée patrimoine culturel et naturel de l’humanit
 
 ## En savoir plus sur les séjours chez l'habitant avec Odysway
 
-Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant](https://odysway.com/thematiques/sejours-chez-l-habitant).
+Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les voyages chez l’habitant.
 
-Poursuivez votre lecture avec [notre article sur les animaux typiques du Pérou.](https://odysway.com/animaux-typiques-perou)
+Poursuivez votre lecture avec notre article sur les animaux typiques du Pérou.
 ::

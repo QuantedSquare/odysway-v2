@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-12-18 11:30:00+00:00"
 tags: "Asie, Thailande"
 categories: "Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME"
+displayedImg: "/images/blogs/Ou-loger-et-que-faire-a-Chiang-Mai-Le-guide-complet-!.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME"
+image-src: "/images/blogs/Ou-loger-et-que-faire-a-Chiang-Mai-Le-guide-complet-!.jpg"
 ---
 #publication-date
 18 décembre 2018
@@ -31,12 +31,12 @@ Où loger et que faire à Chiang Mai ? Le guide complet !
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/rUka0GPdTPKLxMWAx9ME"
+image-src: "/images/blogs/Ou-loger-et-que-faire-a-Chiang-Mai-Le-guide-complet-!.jpg"
 ---
 #content
 Pour un voyageur qui arrive dans une nouvelle ville, il n’est pas toujours simple de poser bagage ! Les villes sont grandes et on se demande toujours si le super hôtel que l’on a repéré sera dans un quartier sécuritaire et proche des attractions locales ! Vous êtes prêts ? C’est parti pour le Top des choses à faire à Chiang Maï et les meilleurs quartiers où loger !
 
-Pour poursuivre votre lecture, nous vous invitons à lire notre article [sur la boxe thaï en Thaïlande.](https://odysway.com/boxe-thai-thailande?utm_source=article&utm_medium=blog&utm_campaign=o%C3%B9+loger+a+chiang+mai+)
+Pour poursuivre votre lecture, nous vous invitons à lire notre article sur la boxe thaï en Thaïlande.
 
 ## Les quartiers où loger à Chiang Maï
 
@@ -64,7 +64,8 @@ Chiang Mai est une des villes les plus touristiques de la Thaïlande. Il y a mil
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/2nVsMelnQJSbr1tlLoLs
+image-src: "/images/blogs/2nVsMelnQJSbr1tlLoLs-1742842106213.jpg"
+alt: 
 ---
 ::  
 
@@ -76,7 +77,8 @@ Il est rare de marcher une journée dans Chiang Mai sans se voir proposer de ren
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ifmD9n1VR2WwFg7HX4YD
+image-src: "/images/blogs/ifmD9n1VR2WwFg7HX4YD-1742842106743.jpg"
+alt: 
 ---
 ::  
 
@@ -84,13 +86,14 @@ _Un camp de boxe thaï dans la jungle_   
 
 Ce sport est mythique en Thaïlande. C’est un art ancestral pratiqué dès le plus jeune âge. Les jeunes thaïlandais les plus prometteurs évoluent dans des camps où ils reçoivent le meilleur entraînement. C’est une fierté pour eux car ils ont l’opportunité de rapporter beaucoup d’argent à leur famille. Perdu au milieu de la jungle dans les montagnes aux alentours de Chiang Mai, il existe un véritable camp d’entrainement de boxe thaï où il est possible de se former avec un ancien combattant professionnel. Une expérience unique, en immersion dans la nature Thaïlandaise, loin de l’agitation de la ville.
 
-[Je découvre l’expérience dans un camp de boxe thaï.](https://odysway.com/voyages/stage-boxe-thai-nord-thailande)
+Je découvre l’expérience dans un camp de boxe thaï.
 
 ## 3\. Visiter un sanctuaire d’éléphants responsable
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/oYvqrvYQ9i1CmbzUYQQX
+image-src: "/images/blogs/oYvqrvYQ9i1CmbzUYQQX-1742842107263.jpg"
+alt: 
 ---
 ::  
 
@@ -102,7 +105,8 @@ Sauvez les éléphants ! En Thaïlande, vous aurez souvent l’occasion de visi
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/iTrj9ZdT56boVJPQc2O6
+image-src: "/images/blogs/iTrj9ZdT56boVJPQc2O6-1742843027607.jpg"
+alt: 
 ---
 ::  
 
@@ -114,7 +118,8 @@ Goûter à la street-food délicieuse de Chiang Mai, c’est bien ! Ramener le 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/c1eaEu6SC2aUbV7c5mAT
+image-src: "/images/blogs/c1eaEu6SC2aUbV7c5mAT-1742843048275.jpg"
+alt: 
 ---
 ::  
 
@@ -126,15 +131,16 @@ Qui dit Thaïlande dit forcément massage ! Si aller vous faire faire un massage
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Of6ySuYT5CeC8mbLxYpw
+image-src: "/images/blogs/Of6ySuYT5CeC8mbLxYpw-1742843048796.jpg"
+alt: 
 ---
 ::  
 
 _La tyrolienne dans la jungle Thaïlandaise_  
 
-Envie de rendre votre séjour à Chiang Maï ludique et éco-responsable ? Passez une journée au centre [Flight of the Gibbon](https://www.flightofthegibbon.com/). Cette association milite pour la reforestation de la forêt tropicale et la réintroduction des gibbons dans leur habitat naturel. Flight of the Gibbons propose une activité insolite à Chiang Mai : un parcours de tyrolienne en pleine forêt tropicale. Au milieu des singes, vous les imiterez en survolant la canopée à 40 mètres d’altitude, dans un parcours incroyable dans la jungle. C’est l’occasion de prendre conscience de l’importance de la protection de la forêt tropicale. Tout l’argent récolté est utilisé pour la reforestation et la réintroduction des gibbons en Thaïlande. Alors n’attendez plus, et volez ! Consultez notre article [sur les 10 lieux insolites à voir absolument en Thaïlande.](https://odysway.com/les-10-lieux-insolites-a-voir-absolument-en-thailande)
+Envie de rendre votre séjour à Chiang Maï ludique et éco-responsable ? Passez une journée au centre Flight of the Gibbon. Cette association milite pour la reforestation de la forêt tropicale et la réintroduction des gibbons dans leur habitat naturel. Flight of the Gibbons propose une activité insolite à Chiang Mai : un parcours de tyrolienne en pleine forêt tropicale. Au milieu des singes, vous les imiterez en survolant la canopée à 40 mètres d’altitude, dans un parcours incroyable dans la jungle. C’est l’occasion de prendre conscience de l’importance de la protection de la forêt tropicale. Tout l’argent récolté est utilisé pour la reforestation et la réintroduction des gibbons en Thaïlande. Alors n’attendez plus, et volez ! Consultez notre article sur les 10 lieux insolites à voir absolument en Thaïlande.
 
 ## Découvrez les voyages culturels par Odysway 
 
-Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre.  Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
+Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre.  Voici les meilleures expériences de voyages culturels proposés par Odysway.
 ::

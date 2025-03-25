@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-02-22 13:16:00+00:00"
 tags: "Europe, France, Grands espaces"
 categories: "Nature et grands espaces"
-displayedImg: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
+displayedImg: "/images/blogs/Nos-sejours-en-France.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
+image-src: "/images/blogs/Nos-sejours-en-France.jpg"
 ---
 #publication-date
 22 février 2021
@@ -31,7 +31,7 @@ Nos séjours en France
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
+image-src: "/images/blogs/Nos-sejours-en-France.jpg"
 ---
 #content
  Avec une richesse extraordinaire dans de très nombreux domaines, **partir en vacances en France** est la promesse d’un voyage tout en émotion.
@@ -40,13 +40,14 @@ image-src: "https://cdn.buttercms.com/EgPLFa2TriEUArtylLII"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Izh1QDk6RqsrMJdSQqHg
+image-src: "/images/blogs/France.jpg.jpg"
+alt: France.jpg
 ---
 ::
 
 Il paraîtrait que la France est le plus beau pays du monde. N’est-ce pas une raison suffisante pour envisager d’y passer ses vacances ? La France possède une longue histoire, riche et mouvementée, dont on peut encore voir les traces et les vestiges un peu partout sur le territoire. Des monuments qui ont traversé les siècles et qui montrent toute l’inventivité des peuples qui nous ont précédés.
 
-La France se démarque aussi par un patrimoine naturel varié où beaucoup de paysages sont représentés. Des montagnes, des plaines, des vallées, des marais, un immense littoral, des forêts, des canyons, des gorges, des rivières, des lacs… **Partir en vacances en France** vous donne donc l’occasion d’explorer des lieux incroyables à pied, à vélo, en kayak, à cheval ou même en bateau. De quoi programmer des [**vacances en famille**](https://odysway.com/thematiques/voyage-en-famille) ou des **vacances originales en France**, sous le signe de **l’aventure**.    
+La France se démarque aussi par un patrimoine naturel varié où beaucoup de paysages sont représentés. Des montagnes, des plaines, des vallées, des marais, un immense littoral, des forêts, des canyons, des gorges, des rivières, des lacs… **Partir en vacances en France** vous donne donc l’occasion d’explorer des lieux incroyables à pied, à vélo, en kayak, à cheval ou même en bateau. De quoi programmer des **vacances en famille** ou des **vacances originales en France**, sous le signe de **l’aventure**.    
 
 Mentionnons également la richesse de chacune de ses régions. Des traditions anciennes transmises de génération en génération, un folklore qui anime villes et villages tout au long de l’année et des mets tous plus gourmands les uns que les autres.
 
@@ -56,7 +57,8 @@ Ce n’est donc pas un mais des voyages qui vous tendent les bras.
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/WpUKY1F5RpSd9mitdxnn
+image-src: "/images/blogs/France-Season.jpg.jpg"
+alt: France Season.jpg
 ---
 ::**
 
@@ -64,13 +66,14 @@ La réponse est simple : toute l’année ! Par la pluralité de ses climats, 
 
 Eh oui, l’été et l’hiver sont les périodes de **vacances en famille en France**, mais aussi de nos voisins étrangers qui viennent aussi profiter de toutes les richesses de notre beau pays. En été, les littoraux deviennent le rendez-vous favori des vacanciers. Quel bonheur de humer le bon air iodé et de se détendre sur les plages. Pourtant, la campagne et la montagne ne manquent pas d’attraits, avec des vacances 100 % nature à la clé. À vous maintenant de choisir votre **destination en France** **pour cet** **été**.   
 
-Avec ses nombreux massifs, la France propose un large choix de stations de montagne pour profiter des joies hivernales. Si vous n’êtes pas adepte du ski, partez explorer la montagne enneigée en raquettes ou en chiens de traîneau. Un bon moyen d’être au plus près de la nature. Rien de tel que des **vacances originales en France** avec pour thème [l’**aventure**](https://odysway.com/thematiques/voyage-aventure), pour repartir avec des souvenirs inoubliables.
+Avec ses nombreux massifs, la France propose un large choix de stations de montagne pour profiter des joies hivernales. Si vous n’êtes pas adepte du ski, partez explorer la montagne enneigée en raquettes ou en chiens de traîneau. Un bon moyen d’être au plus près de la nature. Rien de tel que des **vacances originales en France** avec pour thème l’**aventure**, pour repartir avec des souvenirs inoubliables.
 
 ## Où partir en France cet été ?
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/EgPLFa2TriEUArtylLII
+image-src: "/images/blogs/Nos-sejours-en-France.jpg"
+alt: France en ete.jpg
 ---
 ::**
 
@@ -78,7 +81,7 @@ Tout dépend bien sûr de vos centres d’intérêt. Si vous avez besoin d’un 
 
 Si l’appel de la mer est plus fort, la France dispose d’un **très grand littoral** et tout le monde y trouvera son compte. Plages de sable ou de galets, criques paradisiaques, côtes désertes ou animées, faites votre choix. Les activités ne manquent pas non plus, autant pour les adultes que pour les enfants. Baignade, surf, vélo, pêche, détente, voile, plongée, à chacun ses vacances ! 
 
-L’intérieur des terres est aussi intéressant pour des **vacances en famille** ou des **vacances à la ferme en France,** comme par exemple [notre séjour dans une ferme des Pyrénées](https://odysway.com/voyages/sejour-vallee-ossau-berger-fromage?utm_source=SEO&utm_medium=PageDestination&utm_campaign=France). On y retrouve des traditions encore fortes, des paysages sauvages, une nature où abondent une faune et une flore riches, des trésors architecturaux qui pullulent çà et là.
+L’intérieur des terres est aussi intéressant pour des **vacances en famille** ou des **vacances à la ferme en France,** comme par exemple notre séjour dans une ferme des Pyrénées. On y retrouve des traditions encore fortes, des paysages sauvages, une nature où abondent une faune et une flore riches, des trésors architecturaux qui pullulent çà et là.
 
 Les villes et les villages de France regorgent de **richesses culturelles et historiques**. Vous pourrez admirer et visiter des monuments, des musées, des édifices religieux… Direction Paris, Avignon, Strasbourg, Lyon, Lille ou Carcassonne… Mais aussi les villages médiévaux, les châteaux ou les sites préhistoriques disséminés dans tout le pays.
 
@@ -88,7 +91,8 @@ Les villes et les villages de France regorgent de **richesses culturelles et his
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/AZllOdqCTsqj7SmuMuit
+image-src: "/images/blogs/France-Patrimoine.jpg.jpg"
+alt: France Patrimoine.jpg
 ---
 ::
 
@@ -104,7 +108,8 @@ Un large choix s’offre donc à vous, que vous décidiez de **partir en France,
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/m7V1W9RHQSHZ9GKQNohf
+image-src: "/images/blogs/Paysages-France.jpg.jpg"
+alt: Paysages France.jpg
 ---
 ::
 
@@ -120,13 +125,14 @@ Pour des **vacances originales** et/ou **en famille en France**, explorez le pay
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/P2JH1W0oSCaUGpjvDFL7
+image-src: "/images/blogs/Littoral-France.jpg.jpg"
+alt: Littoral France.jpg
 ---
 ::**
 
 La France compte **5 500 km de côtes**, toutes très différentes et c’est ce qui fait son charme. La côte Fleurie, la côte de Nacre, la côte d’Émeraude ou encore la côte Vermeille ne peuvent qu’être la promesse de vacances enchanteresses.
 
-La côte nord est une suite de plages de sable, de dunes et de falaises escarpées. Lorsque le vent souffle fort, les concours de cerfs-volants offrent un très beau spectacle. En Normandie, le littoral est tout aussi agréable avec ses jolies maisons colorées, ses stations balnéaires et ses superbes falaises. Ensuite, place à un paysage breton plus contrasté, plus sauvage, mais tout aussi magnifique, aux côtes rocheuses balayées par les vents, aux longues plages de sable et aux villages typiques. La côte atlantique, quant à elle, est une [**destination d’été en France**](https://odysway.com/thematiques/ou-partir-en-%C3%A9t%C3%A9) plébiscitée par les familles. En effet, avec ses kilomètres de plages de sable fin, les nombreuses activités sportives, les cités de caractère et les paysages préservés, tout est réuni pour y passer des vacances fabuleuses. Les côtes landaise et basque offrent un cadre d’exception pour les amateurs de surf et les amoureux des balades en pleine nature.
+La côte nord est une suite de plages de sable, de dunes et de falaises escarpées. Lorsque le vent souffle fort, les concours de cerfs-volants offrent un très beau spectacle. En Normandie, le littoral est tout aussi agréable avec ses jolies maisons colorées, ses stations balnéaires et ses superbes falaises. Ensuite, place à un paysage breton plus contrasté, plus sauvage, mais tout aussi magnifique, aux côtes rocheuses balayées par les vents, aux longues plages de sable et aux villages typiques. La côte atlantique, quant à elle, est une **destination d’été en France** plébiscitée par les familles. En effet, avec ses kilomètres de plages de sable fin, les nombreuses activités sportives, les cités de caractère et les paysages préservés, tout est réuni pour y passer des vacances fabuleuses. Les côtes landaise et basque offrent un cadre d’exception pour les amateurs de surf et les amoureux des balades en pleine nature.
 
 Terminons notre tour de France du littoral par celui de la Méditerranée. Là aussi, les paysages sont variés. Une côte rocheuse et sauvage près de la frontière espagnole, puis de longues plages de sable jusqu’au delta du Rhône. Découvrez ensuite un havre naturel parfaitement préservé, la Camargue, avant d’arriver sur la côte d’Azur aux **paysages de carte postale**.
 
@@ -134,7 +140,8 @@ Terminons notre tour de France du littoral par celui de la Méditerranée. Là a
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/9ImX9rRhSMCT7HsbF8ui
+image-src: "/images/blogs/France-Ile.jpg.jpg"
+alt: France Île.jpg
 ---
 ::
 
@@ -146,7 +153,8 @@ Enfin, terminons par un décor paradisiaque avec l’archipel de Chausey, situé
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/UglfdYUS6q8LLhZK1boA
+image-src: "/images/blogs/Gastronomie-francaise.jpg.jpg"
+alt: Gastronomie française.jpg
 ---
 ::
 
@@ -158,11 +166,12 @@ Sans oublier bien sûr les excellents fromages de nos terroirs. Le bleu d’Auve
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/HHHKBP5aSMGbt0YyGl8u
+image-src: "/images/blogs/Berger-tradition-France.jpg.jpg"
+alt: Berger tradition France.jpg
 ---
 ::
 
 Par la multiplicité de ses régions, la France regorge de **traditions** et d’événements. Il y a bien sûr les magnifiques marchés de Noël en Alsace, la fête des Lumières à Lyon, le carnaval de Nice ou de Dunkerque. Si le sud de la **France** est votre **destination cet été**, assistez aux férias où l’ambiance est plus que survoltée. Participez à la fête du piment à Espelette, du citron à Menton ou de la mirabelle à Metz. Vous l’aurez compris, les traditions sont aussi diverses que nombreuses et permettent une **immersion** dans une **France** pleine de richesses culturelles.
 
-Une richesse se retrouve également dans des modes de vie traditionnels que certains font encore perdurer. Tel est le cas dans les Pyrénées où les bergers sont encore nombreux à parcourir les pâturages avec leurs troupeaux. Odysway vous emmène à leur rencontre grâce à un [séjour dans le Béarn](https://odysway.com/voyages/sejour-berger-bearn) afin de partager leur quotidien. Transhumance, fabrication du fromage et nuit dans une cabane typique, un voyage tout en intensité et en émotion.
+Une richesse se retrouve également dans des modes de vie traditionnels que certains font encore perdurer. Tel est le cas dans les Pyrénées où les bergers sont encore nombreux à parcourir les pâturages avec leurs troupeaux. Odysway vous emmène à leur rencontre grâce à un séjour dans le Béarn afin de partager leur quotidien. Transhumance, fabrication du fromage et nuit dans une cabane typique, un voyage tout en intensité et en émotion.
 ::

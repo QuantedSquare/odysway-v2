@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-02-20 09:37:00+00:00"
 tags: "Habitant, Responsable, Voyager"
 categories: "voyage, tourisme, responsable, nature"
-displayedImg: "https://cdn.buttercms.com/c7yNiLST3avM9zxyBjeB"
+displayedImg: "/images/blogs/Les-avantages-d'un-sejour-en-immersion-chez-l'habitant-:-entre-authenticite-et-echange-culturel.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/c7yNiLST3avM9zxyBjeB"
+image-src: "/images/blogs/Les-avantages-d'un-sejour-en-immersion-chez-l'habitant-:-entre-authenticite-et-echange-culturel.jpg"
 ---
 #publication-date
 20 février 2023
@@ -31,7 +31,7 @@ Les avantages d'un séjour en immersion chez l'habitant : entre authenticité et
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/c7yNiLST3avM9zxyBjeB"
+image-src: "/images/blogs/Les-avantages-d'un-sejour-en-immersion-chez-l'habitant-:-entre-authenticite-et-echange-culturel.jpg"
 ---
 #content
 ### Les voyages offrent une échappatoire parfaite pour découvrir de nouveaux horizons et se libérer de la routine quotidienne. Cependant, les voyageurs recherchent souvent des expériences plus enrichissantes et authentiques, et c'est là que les séjours chez l'habitant entrent en jeu. Ce type de voyage permet aux voyageurs de découvrir une culture de manière authentique et de nouer des liens avec les locaux.
@@ -42,7 +42,8 @@ image-src: "https://cdn.buttercms.com/c7yNiLST3avM9zxyBjeB"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/IAN2uwxzQW62rZqyrGbD
+image-src: "/images/blogs/Ethnie-Laos.webp.jpg"
+alt: Ethnie Laos.webp
 ---
 ::
 
@@ -52,7 +53,8 @@ image-src: https://cdn.buttercms.com/IAN2uwxzQW62rZqyrGbD
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/i88BWiTRaaGdK6yNwrAx
+image-src: "/images/blogs/i88BWiTRaaGdK6yNwrAx-1742840642742.jpg"
+alt: undefined
 ---
 ::
 
@@ -62,9 +64,10 @@ image-src: https://cdn.buttercms.com/i88BWiTRaaGdK6yNwrAx
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/c7yNiLST3avM9zxyBjeB
+image-src: "/images/blogs/Les-avantages-d'un-sejour-en-immersion-chez-l'habitant-:-entre-authenticite-et-echange-culturel.jpg"
+alt: undefined
 ---
 ::
 
-En conclusion, un [séjour en immersion chez l'habitant](https://odysway.com/destinations?utm_source=Article+Blog&utm_medium=lien+article&utm_campaign=nos+voyages) offre de nombreux avantages. C'est une manière unique de découvrir une culture de manière authentique, d'apprendre une nouvelle langue, de créer des liens avec les locaux, de contribuer à l'économie locale et de vivre des expériences uniques. Si vous êtes à la recherche d'une expérience de voyage authentique et enrichissante, un séjour chez l'habitant pourrait bien être la solution idéale pour vous !
+En conclusion, un séjour en immersion chez l'habitant offre de nombreux avantages. C'est une manière unique de découvrir une culture de manière authentique, d'apprendre une nouvelle langue, de créer des liens avec les locaux, de contribuer à l'économie locale et de vivre des expériences uniques. Si vous êtes à la recherche d'une expérience de voyage authentique et enrichissante, un séjour chez l'habitant pourrait bien être la solution idéale pour vous !
 ::

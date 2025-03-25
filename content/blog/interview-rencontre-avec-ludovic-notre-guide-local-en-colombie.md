@@ -18,12 +18,12 @@ published: false
 publishedAt: "2023-06-06 10:43:00+00:00"
 tags: "Colombie, voyage, Voyager"
 categories: "voyage, immersion, culture, Colombie, locale"
-displayedImg: "https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ"
+displayedImg: "/images/blogs/Interview-Rencontre-avec-Ludovic-notre-guide-local-en-Colombie.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ"
+image-src: "/images/blogs/Interview-Rencontre-avec-Ludovic-notre-guide-local-en-Colombie.jpg"
 ---
 #publication-date
 6 juin 2023
@@ -37,10 +37,10 @@ Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressen
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/2qspPd1dRqIAgkDAJNbQ"
+image-src: "/images/blogs/Interview-Rencontre-avec-Ludovic-notre-guide-local-en-Colombie.jpg"
 ---
 #content
-Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, [un pays aux multiples facettes](https://odysway.com/destinations/colombie) empreinte de traditions !
+Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
 
 ✨ Ludovic, notre guide en Colombie, nous raconte ✨
 
@@ -57,6 +57,7 @@ Aujourd'hui la Colombie est ma nouvelle terre d'accueil depuis 5 ans, cette pass
 ::image-container
 ---
 image-src: https://media.licdn.com/dms/image/D4E12AQFKFaCNNcGSzQ/article-inline_image-shrink_1000_1488/0/1684243825750?e=1691625600&v=beta&t=mHv1UWuHXSTrw7qInj_3IfQVzxwJg-IOoZwgpVAzrkw
+alt: Aucun texte alternatif pour cette image
 ---
 ::
 
@@ -76,6 +77,7 @@ Ce métier est un tissu cousu entre deux cultures, ouvrant les portes à un éch
 ::image-container
 ---
 image-src: https://media.licdn.com/dms/image/D4E12AQFunO9OA8spPQ/article-inline_image-shrink_1000_1488/0/1684243689289?e=1691625600&v=beta&t=6z2JXPaDtAnEZLF9fM7tk0ok3_O9J9H0r--in-n5qbY
+alt: Aucun texte alternatif pour cette image
 ---
 ::
 
@@ -94,12 +96,13 @@ Après plusieurs mois de travail sur le terrain, nous avons réussi à proposer 
 ::image-container
 ---
 image-src: https://media.licdn.com/dms/image/D4E12AQHdQPoUc3_DLA/article-inline_image-shrink_1500_2232/0/1684245433878?e=1691625600&v=beta&t=PlZjm1HtVvUXlBm3fzlicGwgHv0xcEjjHI-0Z4PE9uE
+alt: Aucun texte alternatif pour cette image
 ---
 ::
 
-Si vous voulez découvrir d’autres expériences auprès de nos guides locaux, Odysway vous propose des [séjours chez l'habitant](https://odysway.com/thematiques/sejours-chez-l-habitant?utm_source=LK_Post&utm_medium=Article+LK&utm_campaign=chez+l%27habitant) :
+Si vous voulez découvrir d’autres expériences auprès de nos guides locaux, Odysway vous propose des séjours chez l'habitant :
 
-*   [Partagez la vie d'un berger dans les Pyrénées](https://odysway.com/voyages/sejour-berger-bearn?utm_source=LK_Post&utm_medium=Article+LK&utm_campaign=berger) d'une durée de 5 jours 🏔️
-*   [Immersion au sein d'une famille nomade en Mongolie](https://odysway.com/voyages/voyage-nomades-mongolie) d'une durée de 11 jours☀️
-*   [Voyagez avec un chamane au Pérou](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=LK_Post&utm_medium=Article+LK&utm_campaign=perou) d'une durée de 11 jours✨
+*   Partagez la vie d'un berger dans les Pyrénées d'une durée de 5 jours 🏔️
+*   Immersion au sein d'une famille nomade en Mongolie d'une durée de 11 jours☀️
+*   Voyagez avec un chamane au Pérou d'une durée de 11 jours✨
 ::

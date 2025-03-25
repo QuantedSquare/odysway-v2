@@ -12,12 +12,12 @@ published: false
 publishedAt: "2022-07-01 12:49:00+00:00"
 tags: "conseils, voyager seul"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE"
+displayedImg: "/images/blogs/Voyager-seul-:-nos-conseils-pour-partir-en-toute-serenite.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE"
+image-src: "/images/blogs/Voyager-seul-:-nos-conseils-pour-partir-en-toute-serenite.jpg"
 ---
 #publication-date
 1 juillet 2022
@@ -31,7 +31,7 @@ Voyager seul : nos conseils pour partir en toute sérénité
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/h2oYQVSSte9ZbEuqz9qE"
+image-src: "/images/blogs/Voyager-seul-:-nos-conseils-pour-partir-en-toute-serenite.jpg"
 ---
 #content
 Vous aimez voyager ? Alors rien alors ne doit vous empêcher de partir même pas la peur de vous retrouver tout seul. **Voyager seul** est une véritable expérience qui vous permettra de mieux vous connaître et de vivre ce que vous avez réellement envie de vivre. Pour en profiter à 100 %, voici quelques conseils pour des vacances solo réussies.
@@ -40,7 +40,8 @@ Vous aimez voyager ? Alors rien alors ne doit vous empêcher de partir même pas
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/koHtISmpSduVCo9jBuem
+image-src: "/images/blogs/koHtISmpSduVCo9jBuem-1742840665007.jpg"
+alt: undefined
 ---
 ::
 
@@ -52,7 +53,8 @@ Côté logistique, prévoyez un **bagage léger** (pas de mains supplémentaires
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/FLLw5ItmT0emyQHROKGa
+image-src: "/images/blogs/FLLw5ItmT0emyQHROKGa-1742840665547.jpg"
+alt: undefined
 ---
 ::
 
@@ -64,7 +66,8 @@ De la ou les réponses découlera l’objectif de votre épopée solo. Envie de 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/rkzEVsYrQRCGPzhFFobQ
+image-src: "/images/blogs/rkzEVsYrQRCGPzhFFobQ-1742840666087.jpg"
+alt: undefined
 ---
 ::
 
@@ -76,19 +79,21 @@ Néanmoins, partir à l’autre bout du monde ne doit pas être un obstacle pour
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/IkprWvm8TSGNhIqZebBQ
+image-src: "/images/blogs/IkprWvm8TSGNhIqZebBQ-1742840666629.jpg"
+alt: undefined
 ---
 ::
 
 **Voyager seul ne signifie pas rester seul !** Sauf si c’est l’objectif de votre périple bien entendu. Il existe des tas de possibilités pour **rencontrer du monde en voyage** et ainsi rendre votre séjour encore plus enrichissant. Les **auberges de jeunesse** sont idéales pour côtoyer des voyageurs venus des quatre coins de la planète. Autre idée de logement : chez l’habitant grâce au **couchsurfing** pour vivre une véritable immersion. N’ayez pas peur non plus de manger seul, osez aller dans les restaurants pour découvrir la cuisine locale. Vous y ferez aussi de belles rencontres.
 
-Pour vos **visites et excursions**, faites-en de même ponctuellement. Vous **joindre à un groupe** vous permettra de partager votre ressenti et vos émotions avec quelqu’un, ce qui est plus difficile tout seul forcément. Si vous appréhendez de vous retrouver dans un car à touristes manquant cruellement d’authenticité, sachez que chez **Odysway** nos groupes de voyageurs n’excèdent pas dix personnes. Nous proposons aussi des [destinations](https://odysway.com/destinations?utm_source=Blog&utm_medium=SEO&utm_campaign=DestinationsBlog) et des thématiques pour **partir seul en voyage** afin de vivre une expérience immersive et authentique.
+Pour vos **visites et excursions**, faites-en de même ponctuellement. Vous **joindre à un groupe** vous permettra de partager votre ressenti et vos émotions avec quelqu’un, ce qui est plus difficile tout seul forcément. Si vous appréhendez de vous retrouver dans un car à touristes manquant cruellement d’authenticité, sachez que chez **Odysway** nos groupes de voyageurs n’excèdent pas dix personnes. Nous proposons aussi des destinations et des thématiques pour **partir seul en voyage** afin de vivre une expérience immersive et authentique.
 
 ## Avoir une assurance pour ses vacances solo
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/C4yeCOZnQcyv99H8WcJ1
+image-src: "/images/blogs/C4yeCOZnQcyv99H8WcJ1-1742840667176.jpg"
+alt: undefined
 ---
 ::
 
@@ -100,7 +105,8 @@ Gardez dans un coin de votre tête que vous serez seul à gérer s’il vous arr
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/sHIKEJrpSV8ww1nsxgAc
+image-src: "/images/blogs/sHIKEJrpSV8ww1nsxgAc-1742840667715.jpg"
+alt: undefined
 ---
 ::
 

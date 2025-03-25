@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-12-09 08:20:00+00:00"
 tags: "Grands espaces, Transports insolites"
 categories: "Culture et decouverte, Benefices locaux"
-displayedImg: "https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV"
+displayedImg: "/images/blogs/COP-25-:-changements-climatiques-et-tourisme-durable.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV"
+image-src: "/images/blogs/COP-25-:-changements-climatiques-et-tourisme-durable.jpg"
 ---
 #publication-date
 9 décembre 2019
@@ -31,7 +31,7 @@ COP 25 : changements climatiques et tourisme durable
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/rPCANZITSFOg6QhCGyfV"
+image-src: "/images/blogs/COP-25-:-changements-climatiques-et-tourisme-durable.jpg"
 ---
 #content
 Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 Etats dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à de nombreux secteurs d’activité, le tourisme qui représente 12% du PIB mondial, est globalement épargné. Plus précisément, c’est le secteur des transports qui ne cesse d’être montré du doigt. Pourtant, la seule idée de pouvoir parcourir le monde sans transport paraît inconcevable : comment poser le pied sur le sol Australien ou admirer les chutes d’Iguaçu en Argentine sans aucun moyen de locomotion ? D’où l’importance du tourisme durable…
@@ -50,7 +50,8 @@ Mais les effets néfastes du tourisme ne concernent pas uniquement les moyens de
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Yll9j9myTHmnh5Jv21zL
+image-src: "/images/blogs/Yll9j9myTHmnh5Jv21zL-1742841015382.jpg"
+alt: 
 ---
 ::
 
@@ -58,15 +59,16 @@ image-src: https://cdn.buttercms.com/Yll9j9myTHmnh5Jv21zL
 
 De nouvelles formes de tourisme se sont peu à peu imposées depuis ces dix dernières années. Elles sont nées d’une prise de conscience inhérente à une volonté des voyageurs de préserver l’environnement et de respecter les populations locales tout en s’enrichissant personnellement. C’est de cette manière que sont apparus l’écotourisme ou tourisme durable soucieux de faire attention à son influence sur la nature et les populations locales, le slow tourisme qui prône l’utilisation des transports collectifs et des transports zéro pollution, et l’éco-volontariat qui permet de réaliser des missions de protection de la faune et de la flore pendant ses vacances.
 
-Découvrez nos voyages écotouristiques : L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'[**écotourisme**](https://odysway.com/thematiques/ecotourisme) à travers les voyages que nous concevons pour vous.
+Découvrez nos voyages écotouristiques : L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'**écotourisme** à travers les voyages que nous concevons pour vous.
 
-Chez Odysway, nous avons à cœur de développer un tourisme responsable, solidaire et durable. Pour cela, nous limitons à 8 le nombre de voyageurs par immersion pour réduire l’impact sur les communautés locales, et nous nous assurons que les profits générés par nos voyageurs bénéficient d’abord aux locaux. Nos voyages sont de réelles immersions qui favorisent les échanges et le partage entre locaux et voyageurs. La découverte des savoir-faire, du mode de vie ou de la culture de ces communautés se fait sans modifier ou gêner leur quotidien. [Découvrez notre démarche responsable](https://odysway.com/demarche-responsable-odysway).
+Chez Odysway, nous avons à cœur de développer un tourisme responsable, solidaire et durable. Pour cela, nous limitons à 8 le nombre de voyageurs par immersion pour réduire l’impact sur les communautés locales, et nous nous assurons que les profits générés par nos voyageurs bénéficient d’abord aux locaux. Nos voyages sont de réelles immersions qui favorisent les échanges et le partage entre locaux et voyageurs. La découverte des savoir-faire, du mode de vie ou de la culture de ces communautés se fait sans modifier ou gêner leur quotidien. Découvrez notre démarche responsable.
 
-Si vous souhaitez vivre une expérience unique tout en respectant l’environnement et les communautés locales, découvrir et vous enrichir personnellement grâce [à un voyage immersif, découvrez les voyages proposés par Odysway.](https://odysway.com/thematiques/voyage-initiatique)
+Si vous souhaitez vivre une expérience unique tout en respectant l’environnement et les communautés locales, découvrir et vous enrichir personnellement grâce à un voyage immersif, découvrez les voyages proposés par Odysway.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/1fxZslFSL6QYa2DMZKNs
+image-src: "/images/blogs/1fxZslFSL6QYa2DMZKNs-1742841015909.jpg"
+alt: 
 ---
 ::
 ::

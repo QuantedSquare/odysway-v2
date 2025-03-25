@@ -56,7 +56,8 @@ Voici les meilleures expériences de **séjours culturels** proposées par Odysw
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Q7AyXY2Rd6OlB0WYIe6N
+image-src: "/images/blogs/sejour_culturels_chasseur_aigle.jpg.jpg"
+alt: sejour_culturels_chasseur_aigle.jpg
 ---
 ::
 
@@ -68,13 +69,14 @@ Voyager en **immersion**, c’est la promesse de ne faire qu’un avec l’âme 
 
 Le **séjour culturel** est une formidable opportunité pour découvrir les richesses de pays parfois méconnus tel le **Kirghizistan**.
 
-Là-bas, vous pourrez par exemple, apprendre [**les secrets de** **fabrication des yourtes**](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourculturel) Kirghizes et partir à la rencontre des **chasseurs à l'aigle**. 
+Là-bas, vous pourrez par exemple, apprendre **les secrets de** **fabrication des yourtes** Kirghizes et partir à la rencontre des **chasseurs à l'aigle**. 
 
 ## 2\. Séjour culturel & solidarité
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OfLOPFOYTEIdD8Q9U5an
+image-src: "/images/blogs/sejours_culturels_tissage.jpg.jpg"
+alt: sejours_culturels_tissage.jpg
 ---
 ::
 
@@ -84,7 +86,7 @@ Découvrir un pays ou une région à travers les yeux des populations locales es
 
 Partir en **séjour** **immersif**, c’est vous offrir l’opportunité de vivre comme les locaux, à leur rythme, en découvrant les enjeux auxquels ils font face au quotidien tout en partageant  leurs joies.
 
-Au **Népal** par exemple, vous pouvez [**vivre en immersion dans un monastère bouddhiste**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourculturel), dans la région de **Katmandou.**
+Au **Népal** par exemple, vous pouvez **vivre en immersion dans un monastère bouddhiste**, dans la région de **Katmandou.**
 
 Au contact de jeunes moines, vous jouerez un rôle dans leur éducation et apprendrez les bases du **bouddhisme tibétain** à la source ; une expérience de vie unique.
 
@@ -92,7 +94,8 @@ Au contact de jeunes moines, vous jouerez un rôle dans leur éducation et appre
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/oYXyVlzdRAuCSEr07GyY
+image-src: "/images/blogs/oYXyVlzdRAuCSEr07GyY-1742840826494.jpg"
+alt: undefined
 ---
 ::
 
@@ -100,7 +103,7 @@ Au **Cap-Vert**, réputé pour sa culture créole afro-portugaise, où les monta
 
 Le mot “badiu” vient du portuguais “vadio” qui veut dire vagabond. Au temps où l'esclavagisme faisait rage, le badiu était un esclave s'étant enfui de chez son maître ou à qui on avait rendu sa liberté, et qui s’est installé dans les terres par la suite.
 
-Un [**séjour culturel en immersion au cœur de la culture badiu**](https://odysway.com/voyages/immersion-cap-vert?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourculturel), c’est l’opportunité de goûter à l’authenticité et à l'accueil inégalable des Capverdiens.
+Un **séjour culturel en immersion au cœur de la culture badiu**, c’est l’opportunité de goûter à l’authenticité et à l'accueil inégalable des Capverdiens.
 
 Passez du temps entre camponeses (cultivateurs) et pescadores (pêcheurs) et découvrez un patrimoine culturel très peu connu du grand public.
 
@@ -108,7 +111,7 @@ Passez du temps entre camponeses (cultivateurs) et pescadores (pêcheurs) et dé
 
 **Odysway** est une agence jeune, dynamique, spécialiste du **voyage en immersion** et à votre écoute pour vous accompagner dans votre envie de **voyager de manière alternative.**
 
-Que vous souhaitiez vivre un **séjour culturel immersif** en [**plein milieu du Sahara à la rencontre des Bédouins**](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourculturel), vous lancer dans un [**Yoga-trek au cœur de l'Himalaya**](https://odysway.com/voyages/yoga-trek-himalaya?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourculturel), ou encore [**partager le quotidien d'un vigneron dans le Bordelais**](https://odysway.com/voyages/sejour-oenologie-vignoble-bordeaux?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourculturel), nous sommes là pour vous aider à choisir le voyage qui vous correspond le mieux.
+Que vous souhaitiez vivre un **séjour culturel immersif** en **plein milieu du Sahara à la rencontre des Bédouins**, vous lancer dans un **Yoga-trek au cœur de l'Himalaya**, ou encore **partager le quotidien d'un vigneron dans le Bordelais**, nous sommes là pour vous aider à choisir le voyage qui vous correspond le mieux.
 
 Odysway est née de la passion du voyage, sac sur le dos et loin des chemins touristiques. Pour nous, découvrir un pays, s’effectue  bien sûr à travers son histoire, ses sites et ses monuments culturels, mais aussi et surtout grâce aux populations locales qui partagent avec nous, avec vous, la culture de leur pays.
 

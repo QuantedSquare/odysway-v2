@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-02-03 17:44:00+00:00"
 tags: "Afrique, Amerique du Nord, Communautés locales, Developpement personnel, Etats Unis, Grands espaces, Maroc, Transports insolites"
 categories: ""
-displayedImg: "https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn"
+displayedImg: "/images/blogs/Les-grands-recits-de-voyage.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn"
+image-src: "/images/blogs/Les-grands-recits-de-voyage.jpg"
 ---
 #publication-date
 3 février 2020
@@ -31,18 +31,19 @@ Les grands recits de voyage
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/jLuEAvzOQ4ee5RJb50Cn"
+image-src: "/images/blogs/Les-grands-recits-de-voyage.jpg"
 ---
 #content
 Qu’ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. **Pour s’évader sans forcément bouger de chez soi, voici une sélection des grands récits de voyage.**
 
-Pour poursuivre votre lecture, [lisez notre article sur les 10 plus grands aventuriers.](https://odysway.com/dix-plus-grands-aventuriers)
+Pour poursuivre votre lecture, lisez notre article sur les 10 plus grands aventuriers.
 
 ## Récits de voyage de Sylvain Tesson : focus sur _L’Axe du loup_
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/h5X5qJ68QraWYZd6CsSh
+image-src: "/images/blogs/h5X5qJ68QraWYZd6CsSh-1742840991312.jpg"
+alt: 
 ---
 ::
 
@@ -56,7 +57,8 @@ Des voyages, Sylvain Tesson en compte plusieurs. Dans **_l’Axe du loup_**, il
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Fd2WwxpTzqFIxZWJlF4w
+image-src: "/images/blogs/Fd2WwxpTzqFIxZWJlF4w-1742840991825.jpg"
+alt: 
 ---
 ::
 
@@ -70,7 +72,8 @@ C’est l’histoire d’un couple qui décide de refaire le voyage des premiers
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/wbr0iKfkT5GsTDozfN0D
+image-src: "/images/blogs/wbr0iKfkT5GsTDozfN0D-1742840992344.jpg"
+alt: 
 ---
 ::
 
@@ -82,7 +85,8 @@ _Le tour du monde_ _en 80 jours_ de Jules Verne
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/6SAK8dEJStSMlUolHf3S
+image-src: "/images/blogs/6SAK8dEJStSMlUolHf3S-1742840992861.jpg"
+alt: 
 ---
 ::_
 
@@ -94,7 +98,8 @@ La journaliste américaine **Nellie Bly décide de défier Jules Verne** et d�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/saoLUCl1S7mNS8j5uzkQ
+image-src: "/images/blogs/saoLUCl1S7mNS8j5uzkQ-1742840993375.jpg"
+alt: 
 ---
 ::
 
@@ -106,19 +111,21 @@ Marco Polo fut l’un des premiers grands aventuriers. Lorsqu’il quitte Venise
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/sLZazBUQdoBc0LrasqcQ
+image-src: "/images/blogs/sLZazBUQdoBc0LrasqcQ-1742840993903.jpg"
+alt: 
 ---
 ::
 
 _Latitude Zero_ de Mike Horn
 
-Aventurier de l’extrême, Mike Horn raconte son extraordinaire **voyage autour du monde en suivant l’Equateur dans son livre _Latitude_ _Zero_**. Traversée de l’océan Atlantique, de l’Amérique du sud, de l’océan Pacifique, des îles indonésiennes, de l’océan Indien et de l’Afrique, un voyage de 40 000 km qui a duré 16 mois. A pied, à vélo, en pirogue et en voilier, il a dû faire face, seul, aux éléments de la nature. [Découvrez notre articles sur 10 astuces de survie en forêt qui peuvent vous sauver la vie.](https://odysway.com/10-astuces-survie-foret)
+Aventurier de l’extrême, Mike Horn raconte son extraordinaire **voyage autour du monde en suivant l’Equateur dans son livre _Latitude_ _Zero_**. Traversée de l’océan Atlantique, de l’Amérique du sud, de l’océan Pacifique, des îles indonésiennes, de l’océan Indien et de l’Afrique, un voyage de 40 000 km qui a duré 16 mois. A pied, à vélo, en pirogue et en voilier, il a dû faire face, seul, aux éléments de la nature. Découvrez notre articles sur 10 astuces de survie en forêt qui peuvent vous sauver la vie.
 
 ## _Ebène_ de Ryszard Kapuscinski ou l’immersion dans l’un des récits de voyage les plus authentiques
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ypn8RSIDR2uNbZx9fcq3
+image-src: "/images/blogs/ypn8RSIDR2uNbZx9fcq3-1742840994422.jpg"
+alt: 
 ---
 ::
 
@@ -130,7 +137,8 @@ Pour une immersion au cœur de l’Afrique noire**, _Ebène_ est sûrement l�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/fxfMMHKrT6WQpIkaVMDO
+image-src: "/images/blogs/fxfMMHKrT6WQpIkaVMDO-1742840994942.jpg"
+alt: 
 ---
 ::
 
@@ -142,7 +150,8 @@ Seulement « armé » de son pouce, Ludovic Hubler part faire le **tour du mo
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/z2FHcuOXTIOn8w8eyIMA
+image-src: "/images/blogs/z2FHcuOXTIOn8w8eyIMA-1742840995456.jpg"
+alt: 
 ---
 ::
 
@@ -154,7 +163,8 @@ Spécialiste des longues distances, Sarah Marquis comptabilise des milliers km d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OC5eGIiyQtypvShj21fL
+image-src: "/images/blogs/OC5eGIiyQtypvShj21fL-1742840995972.jpg"
+alt: 
 ---
 ::
 
@@ -166,7 +176,8 @@ Est-ce le fragment d’une peau de brontosaure exposé chez sa grand-mère ou bi
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/QdeURSvTgimaFy2br0Xw
+image-src: "/images/blogs/QdeURSvTgimaFy2br0Xw-1742840996488.jpg"
+alt: 
 ---
 ::
 
@@ -178,7 +189,8 @@ _Sur la route_ de Jack Kerouac
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qIVzSYoRdWky4omWjJb6
+image-src: "/images/blogs/qIVzSYoRdWky4omWjJb6-1742840997004.jpg"
+alt: 
 ---
 ::
 
@@ -186,9 +198,9 @@ _Voyage à motocyclette_ de Che Guevara
 
 Avant de devenir le « Che », Ernesto Guevara part explorer l’Amérique du sud avec son ami Alberto Granado. **Pendant neuf mois, ils parcourent le Pérou, la cordillère des Andes, la Colombie et le Venezuela à bord d’une Norton 500**. A force de rencontres avec des peuples pauvres et opprimés, ce voyage renforcera de toute évidence sa conviction que la révolution est le seul moyen de supprimer les inégalités.
 
-Si vous aussi vous désirez faire un voyage marquant, pour lequel vous pourriez, pourquoi pas, écrire un récit, [découvrez toute notre offre de voyage chez Odysway !](https://odysway.com/voyages) 
+Si vous aussi vous désirez faire un voyage marquant, pour lequel vous pourriez, pourquoi pas, écrire un récit, découvrez toute notre offre de voyage chez Odysway ! 
 
 ## Découvrez notre thématique de survie !
 
-Éveillez votre Indiana Jones intérieur et découvrez vos talents cachés à travers nos voyages de survie. Vivez une expérience extraordinaire accompagnée de guides et d'experts locaux qui vous dévoileront leurs secrets de survie! Découvrez nos [voyages de survie.](https://odysway.com/thematiques/survie)
+Éveillez votre Indiana Jones intérieur et découvrez vos talents cachés à travers nos voyages de survie. Vivez une expérience extraordinaire accompagnée de guides et d'experts locaux qui vous dévoileront leurs secrets de survie! Découvrez nos voyages de survie.
 ::

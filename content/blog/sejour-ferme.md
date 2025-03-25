@@ -60,13 +60,14 @@ Voici les meilleures expériences de **séjours à la ferme** proposées par Ody
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/gWRUwgl4Qmh0w8ptSGTo
+image-src: "/images/blogs/gWRUwgl4Qmh0w8ptSGTo-1742840810273.jpg"
+alt: undefined
 ---
 ::
 
 C’est à Laruns en Vallée d’Ossau, dans les Pyrénées Béarnaises, que vous allez **vivre en immersion** **dans la ferme** de Régis ; berger amoureux de son métier et aux petits soins pour ses 130 brebis.
 
-Chez Régis, vous aurez la chance de participer aux tâches quotidiennes de la ferme telles que [**la traite manuelle et les soins aux brebis,**](https://odysway.com/voyages/sejour-vallee-ossau-berger-fromage?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme) de donner la tétée aux agneaux tout doux ou encore d’apprendre à faire du fromage **!**
+Chez Régis, vous aurez la chance de participer aux tâches quotidiennes de la ferme telles que **la traite manuelle et les soins aux brebis,** de donner la tétée aux agneaux tout doux ou encore d’apprendre à faire du fromage **!**
 
 Véritable **immersion dans une ferme** à taille humaine et dans le quotidien d’un passionné de nature et  d’animaux, vous allez vivre des moments uniques en compagnie de Régis et de ses brebis.
 
@@ -78,7 +79,8 @@ Pour sceller votre rencontre, Régis vous enverra chez vous le fromage confectio
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/X1ry73PROqcCtRvtBsMM
+image-src: "/images/blogs/X1ry73PROqcCtRvtBsMM-1742840810788.jpg"
+alt: 
 ---
 ::
 
@@ -86,7 +88,7 @@ Nous sommes de plus en plus nombreux à nous soucier du bien-être de la planèt
 
 Partir en **séjour à la ferme**, en **immersion totale** dans un environnement qui prône un mode de vie sain, et qui préserve la biodiversité en cultivant de nouvelles variétés de plantes ainsi que des légumes anciens, c'est possible !
 
-C’est en Bourgogne, du côté d'Autun que vous allez pouvoir [**vous initier à la permaculture.**](https://odysway.com/voyages/formation-permaculture-bourgogne?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme)
+C’est en Bourgogne, du côté d'Autun que vous allez pouvoir **vous initier à la permaculture.**
 
 Goûtez à une vie saine et riche en expériences dans un éco-centre, et partez à la rencontre de celles et ceux qui ont franchi le pas et quitté la ville pour la campagne.
 
@@ -102,13 +104,14 @@ Ce **séjour à la ferme** est accessible à tout âge.  Vous aurez même la ch
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/6Fdqbn1QfOK47i4peihg
+image-src: "/images/blogs/6Fdqbn1QfOK47i4peihg-1742840811306.jpg"
+alt: 
 ---
 ::
 
 L’alpaga est une créature fascinante. Cet animal réputé pour sa laine et dont le milieu naturel est la cordillère des Andes, est élevé aujourd’hui aux quatre coins du globe et vous allez pouvoir faire connaissance avec lui.
 
-C'est en Bretagne, dans le magnifique décor de la baie de Douarnenez du Finistère, que vous passerez [**un séjour immersif inoubliable entouré d’alpagas**](https://odysway.com/voyages/Immersion-Alpagas-Finistere?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme). Vous partagerez des moments privilégiés avec les éleveurs d’alpaga et leurs animaux à la personnalité si singulière et attachante.
+C'est en Bretagne, dans le magnifique décor de la baie de Douarnenez du Finistère, que vous passerez **un séjour immersif inoubliable entouré d’alpagas**. Vous partagerez des moments privilégiés avec les éleveurs d’alpaga et leurs animaux à la personnalité si singulière et attachante.
 
 Deux éleveurs passionnés vous ouvrent la porte de leur ferme pour un **séjour immersif** unique dans un cadre idyllique.
 
@@ -118,7 +121,8 @@ L**’hébergement insolite** en roulotte ne manquera de vous dépayser et de vo
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/7qs0aQsTVm70GSNIgUby
+image-src: "/images/blogs/7qs0aQsTVm70GSNIgUby-1742840811835.jpg"
+alt: undefined
 ---
 ::
 
@@ -128,7 +132,7 @@ Les expériences que nous avons mises en place avec nos partenaires vous permett
 
 Entre amis, en famille ou solo, nous vous emmenons **en immersion** dans les campagnes françaises pour par exemple :
 
-*   [**partager le quotidien d’une musheuse**](https://odysway.com/voyages/immersion-musheuse-PaysdelaLoire?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme) et de ses 20 chiens dans les Pays de la Loire 
-*   découvrir du Bordelais et [**vous initier à la viticulture**](https://odysway.com/voyages/sejour-oenologie-vignoble-bordeaux?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme) ;
-*   [**apprendre à murmurer à l’oreille des chevaux**](https://odysway.com/voyages/equicie-cheval-cotentin-normandie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme) dans le Cotentin pour les fans d’équidés.
+*   **partager le quotidien d’une musheuse** et de ses 20 chiens dans les Pays de la Loire 
+*   découvrir du Bordelais et **vous initier à la viticulture** ;
+*   **apprendre à murmurer à l’oreille des chevaux** dans le Cotentin pour les fans d’équidés.
 ::

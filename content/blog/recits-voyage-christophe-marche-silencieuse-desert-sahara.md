@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-12-01 14:01:00+00:00"
 tags: "Animaux, Communautés locales, France, Grands espaces, Made in France, Thailande"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9"
+displayedImg: "/images/blogs/Recit-de-Voyage-Christophe-Audoire-Marchez-dans-le-Silence-du-Sahara.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9"
+image-src: "/images/blogs/Recit-de-Voyage-Christophe-Audoire-Marchez-dans-le-Silence-du-Sahara.jpg"
 ---
 #publication-date
 1 décembre 2020
@@ -31,10 +31,10 @@ Partir à la découverte du Sahara, rencontrer les bédouins, se retrouver face 
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9"
+image-src: "/images/blogs/Recit-de-Voyage-Christophe-Audoire-Marchez-dans-le-Silence-du-Sahara.jpg"
 ---
 #content
-[Partir à la découverte du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Christophe), rencontrer les bédouins, se retrouver face à soi-même au milieu de la plus grande étendue de sable au monde... C'est le voyage au coeur du Sahara que Christophe a décidé de faire en septembre 2019 ! 
+Partir à la découverte du Sahara, rencontrer les bédouins, se retrouver face à soi-même au milieu de la plus grande étendue de sable au monde... C'est le voyage au coeur du Sahara que Christophe a décidé de faire en septembre 2019 ! 
 
 Découvrez ses impressions et revivez ce voyage à travers son témoignage !
 
@@ -58,43 +58,49 @@ Avec Odysway, j'ai également eu de très bons échanges, une bonne réactivité
 
 ### **🧐** **Un autre voyage que vous aimeriez faire avec Odysway ?**
 
-Alors je suis très intéressé par le voyage en [Mongolie en terre chamane](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Christophe) ou [partir à la rencontre des jeunes moines bouddhistes au Népal.](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Christophe) J'ai envie de vivre des expériences nouvelles comme vivre avec la [famille dans la jungle au Brésil](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Christophe). Ce qui m'intéresse, ce sont les voyages du type : “voyage en terre inconnue”. En fait, tous les thèmes m'intéressent !
+Alors je suis très intéressé par le voyage en Mongolie en terre chamane ou partir à la rencontre des jeunes moines bouddhistes au Népal. J'ai envie de vivre des expériences nouvelles comme vivre avec la famille dans la jungle au Brésil. Ce qui m'intéresse, ce sont les voyages du type : “voyage en terre inconnue”. En fait, tous les thèmes m'intéressent !
 
 ## **Quelques photos souvenirs de Christophe...**
 
 ## **::image-container
 ---
-image-src: https://cdn.buttercms.com/2wj2ZrcUQ3OJN8QArLbp
+image-src: "/images/blogs/Christophe_VoyageSahara2.jpeg.jpg"
+alt: Christophe_VoyageSahara2.jpeg
 ---
 ::**
 
 ## **::image-container
 ---
-image-src: https://cdn.buttercms.com/PDysjyf4SxP8wMAeHPNQ
+image-src: "/images/blogs/Christophe_VoyageSahara3.jpeg.jpg"
+alt: Christophe_VoyageSahara3.jpeg
 ---
 ::**
 
 ## **::image-container
 ---
-image-src: https://cdn.buttercms.com/PG4BtyQKT0VsbYQ2ReT9
+image-src: "/images/blogs/Recit-de-Voyage-Christophe-Audoire-Marchez-dans-le-Silence-du-Sahara.jpg"
+alt: Christophe_VoyageSahara5.jpeg
 ---
 ::**
 
 ## **::image-container
 ---
-image-src: https://cdn.buttercms.com/LAiEuloTQyOv2USVrijC
+image-src: "/images/blogs/Christophe_VoyageSahara6.jpeg.jpg"
+alt: Christophe_VoyageSahara6.jpeg
 ---
 ::**
 
 ## **::image-container
 ---
-image-src: https://cdn.buttercms.com/2B9NY3UdQC2IVLuxbFaa
+image-src: "/images/blogs/Christophe_VoyageSahara7.jpeg.jpg"
+alt: Christophe_VoyageSahara7.jpeg
 ---
 ::**
 
 ## **::image-container
 ---
-image-src: https://cdn.buttercms.com/78yaW9KGTDm9lSfz9inw
+image-src: "/images/blogs/Christophe_VoyageSahara9.jpeg.jpg"
+alt: Christophe_VoyageSahara9.jpeg
 ---
 ::**
 ::

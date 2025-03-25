@@ -12,12 +12,12 @@ published: false
 publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/V9sN55wBRp65NFwgtBJi"
+displayedImg: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/V9sN55wBRp65NFwgtBJi"
+image-src: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1.jpg"
 ---
 #publication-date
 24 janvier 2025
@@ -31,7 +31,7 @@ L’été approche à grands pas et vous ne savez pas encore où partir en vacan
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/V9sN55wBRp65NFwgtBJi"
+image-src: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1.jpg"
 ---
 #content
 L’été approche à grands pas et vous ne savez pas encore où partir en vacances. En revanche, une chose est sûre : vous misez sur un voyage estival en dehors des sentiers touristiques. Vous n’avez qu’une seule envie, celle de vous immerger au cœur de l’authenticité de votre future destination, loin de la foule et des grands classiques. Voici pour vous notre top 10 des destinations pour un été hors des sentiers battus.
@@ -40,45 +40,51 @@ L’été approche à grands pas et vous ne savez pas encore où partir en vacan
 
 ### L’Albanie
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/KD6q9XheQRqPCUkE9boJ
+image-src: "/images/blogs/Albanie_blog.png-1.jpg"
+alt: Albanie_blog.png
+link: https://odysway.com/voyages/immersion-culture-albanie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
-::](https://odysway.com/voyages/immersion-culture-albanie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus)
+::
 
 Première de nos **destinations pour un été hors des sentiers battus** : **l’Albanie** ! Encore peu fréquenté, ce petit pays des Balkans n’a pourtant pas à envier ses voisins. Entre ses **trésors naturels**, aux nombreux coins sauvages et préservés, et ses **joyaux** **historiques**, vous allez en prendre plein les yeux. Au programme : randonnées dans des paysages extraordinaires, découverte de sites archéologiques incroyables, visites de villes classées à l’Unesco, détente sur des plages au goût de paradis… Le tout, loin de la foule.
 
-Envie d’approfondir votre voyage en Albanie et de vivre un moment unique ? Découvrez notre séjour en [immersion dans la culture albanaise](https://odysway.com/voyages/immersion-culture-albanie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus).
+Envie d’approfondir votre voyage en Albanie et de vivre un moment unique ? Découvrez notre séjour en immersion dans la culture albanaise.
 
 ### La Finlande
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/TxHr0uJGRZOawrGWxfJj
+image-src: "/images/blogs/Finlande_blog.png-1.jpg"
+alt: Finlande_blog.png
 ---
 ::
 
-Ah ! la **Finlande**. À seulement 2 h de la France, cette destination tiendra toutes ses promesses **pour un été hors des sentiers battus en Europe**. Avec des forêts qui recouvrent la majorité du territoire, ce ne sont pas les sentiers de randonnée qui manquent et il se peut que vous croisiez davantage d’animaux que de voyageurs… Vivez en harmonie avec la nature, humez les différentes senteurs, laissez-vous voguer au fil de l’eau... comme avec notre séjour [en totale reconnexion avec la nature finlandaise](https://odysway.com/voyages/reconnexion-nature-finlande).
+Ah ! la **Finlande**. À seulement 2 h de la France, cette destination tiendra toutes ses promesses **pour un été hors des sentiers battus en Europe**. Avec des forêts qui recouvrent la majorité du territoire, ce ne sont pas les sentiers de randonnée qui manquent et il se peut que vous croisiez davantage d’animaux que de voyageurs… Vivez en harmonie avec la nature, humez les différentes senteurs, laissez-vous voguer au fil de l’eau... comme avec notre séjour en totale reconnexion avec la nature finlandaise.
 
 ### La France
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/BpEpld0tReaUghKkoV7P
+image-src: "/images/blogs/Mercantour_Blog.png-1.jpg"
+alt: Mercantour_Blog.png
 ---
 ::
 
 On ne pouvait indéniablement pas exclure **la France** de notre top 10 des **destinations pour des vacances hors des sentiers battus** et notamment en famille. Notre pays regorge encore de lieux préservés du tourisme de masse et c’est tant mieux pour celles et ceux qui souhaitent découvrir autrement notre magnifique territoire. Entre son **patrimoine historique, naturel et culturel**, il y en a vraiment pour tous les goûts. Pourquoi ne pas en profiter pour faire du slow tourisme ? Dans les Alpes, le Jura, en Provence ou dans le sud-ouest, découvrez tous nos séjours en immersion.
 
-Découvrez nos séjours en France : [https://odysway.com/destinations/france](https://odysway.com/destinations/france) 
+Découvrez nos séjours en France : https://odysway.com/destinations/france 
 
 ### La Grèce
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/WPF0Ih8RAKMnmrqnSarW
+image-src: "/images/blogs/Grece_blog.png-1.jpg"
+alt: Grece_blog.png
+link: https://odysway.com/voyages/voyage-etude-dauphins-grece?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
-::](https://odysway.com/voyages/voyage-etude-dauphins-grece?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus)
+::
 
 **La Grèce** en été vous laisse sceptique ? Sachez qu’il existe de **nombreux lieux épargnés par l’afflux de voyageurs**. On pense notamment à toutes ces îles moins connues de la mer Égée, mais qui sont tout aussi belles ! En vous éloignant d’Athènes, loin des routes touristiques, vous aurez l’occasion de découvrir des villes et des sites extraordinaires et… calmes !
 
@@ -86,7 +92,8 @@ image-src: https://cdn.buttercms.com/WPF0Ih8RAKMnmrqnSarW
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/b3U612HmSxQELTW7D5KF
+image-src: "/images/blogs/Slobvenie_blog.png-1.jpg"
+alt: Slobvénie_blog.png
 ---
 ::
 
@@ -94,27 +101,31 @@ image-src: https://cdn.buttercms.com/b3U612HmSxQELTW7D5KF
 
 ## Le Cap-Vert : notre coup de cœur estival en Afrique
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/hNsfkTOBTg2932NdnOu7
+image-src: "/images/blogs/hNsfkTOBTg2932NdnOu7-1742840524642.jpg"
+alt: undefined
+link: https://odysway.com/voyages/immersion-cap-vert?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
-::](https://odysway.com/voyages/immersion-cap-vert?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus)
+::
 
 Formé de dix îles volcaniques, **le Cap-Vert** est synonyme d’authenticité. Si vous recherchez une **destination d’été** **hors des sentiers battus**, prenez le large vers cet archipel de l’Atlantique. Plongez dans une culture pétillante ainsi que dans une nature où le vert des vallées, le gris des volcans et le turquoise de l’eau vous envoûteront tout au long de votre séjour. Avec, en bonus, des rencontres hautes en couleur tant sur terre que dans l’eau…
 
-Pourquoi ne pas prévoir une [immersion au Cap-Vert](https://odysway.com/voyages/immersion-culturelle-cap-vert) pour profiter de l’hospitalité légendaire des habitants et découvrir leur mode de vie le temps de quelques jours ?
+Pourquoi ne pas prévoir une immersion au Cap-Vert pour profiter de l’hospitalité légendaire des habitants et découvrir leur mode de vie le temps de quelques jours ?
 
 ## La Colombie pour un été en dehors des chemins touristiques en Amérique du Sud
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/YUuvQKnZTcCv4heFF5DM
+image-src: "/images/blogs/Colombie_blog.png-1.jpg"
+alt: Colombie_blog.png
+link: https://odysway.com/voyages/voyage-immersion-colombie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
-::](https://odysway.com/voyages/voyage-immersion-colombie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus)
+::
 
 De **la Colombie**, on connaît surtout Bogota ou Medellín. Pourtant ce ne sont pas les seuls attraits de ce pays d’Amérique du Sud. Quittez les villes et partez **sillonner les routes hors des sentiers battus du pays** pour admirer des paysages époustouflants : un désert, des réserves naturelles, des canyons et des sites archéologiques exceptionnels. Sans oublier bien sûr la majestueuse et mystérieuse Amazonie.
 
-Grâce à notre [**voyage en immersion en Colombie**](https://odysway.com/voyages/voyage-immersion-colombie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus), partez loin des sentiers touristiques et découvrez la vie traditionnelle du pays auprès de la communauté Jovi dans la région reculée du Chocό.
+Grâce à notre **voyage en immersion en Colombie**, partez loin des sentiers touristiques et découvrez la vie traditionnelle du pays auprès de la communauté Jovi dans la région reculée du Chocό.
 
 ## Où voyager hors des sentiers battus cet été en Asie ?
 
@@ -122,7 +133,8 @@ Grâce à notre [**voyage en immersion en Colombie**](https://odysway.com/voyage
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/EOfAWLeR9KjMZ0bPa0kE
+image-src: "/images/blogs/EOfAWLeR9KjMZ0bPa0kE-1742840525708.jpg"
+alt: undefined
 ---
 ::
 
@@ -132,7 +144,8 @@ Situé entre l’Inde et la Chine, **le Bhoutan** séduit incontestablement tous
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/3PssJTPRxWqVuKxjYIx9
+image-src: "/images/blogs/Ouzbekhistan.png-1.jpg"
+alt: Ouzbékhistan.png
 ---
 ::
 
@@ -142,11 +155,12 @@ Bienvenue en Asie centrale avec une **destination estivale qui sort des sentiers
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xpT8t5YNQpmUUG85baKY
+image-src: "/images/blogs/Srillanka_Blog.png-1.jpg"
+alt: Srillanka_Blog.png
 ---
 ::
 
 Oui ! Il est possible de **visiter le Sri Lanka en dehors des sentiers touristiques**. Pour cela, rejoignez notamment le centre et la côte est de l’île, ses campagnes et ses petits coins secrets. Temples, villages, le parc national de Maduru Oya, idéal pour un safari moins « usine à touristes », ou encore plages plus intimistes vous attendent pour un séjour au plus près des habitants et de la nature. C’est ce que nous vous proposons avec notre séjour hors des sentiers battus mêlant rencontres et activités insolites.
 
-Pour aller plus loin, découvrez notre article sur comment voyager en Asie autrement en 2025 : [https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques](https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques)
+Pour aller plus loin, découvrez notre article sur comment voyager en Asie autrement en 2025 : https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques
 ::

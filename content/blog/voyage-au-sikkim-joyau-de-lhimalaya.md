@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-09-20 15:34:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS"
+displayedImg: "/images/blogs/Voyage-au-Sikkim-:-Joyau-de-l'Himalaya-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS"
+image-src: "/images/blogs/Voyage-au-Sikkim-:-Joyau-de-l'Himalaya-1.jpg"
 ---
 #publication-date
 20 septembre 2023
@@ -31,7 +31,7 @@ Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/c4J4EvqZTEqf5QmYsbBS"
+image-src: "/images/blogs/Voyage-au-Sikkim-:-Joyau-de-l'Himalaya-1.jpg"
 ---
 #content
 ## **Voyager au Sikkim : Un paradis préservé**
@@ -40,7 +40,8 @@ Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ZKHwtXhNTIC2vjSKinvS
+image-src: "/images/blogs/Buddha-Park.jpeg-1.jpg"
+alt: Buddha Park.jpeg
 ---
 ::
 
@@ -66,7 +67,8 @@ Lors d'un **voyage Sikkim**, l'immersion culturelle est une expérience à ne pa
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/uIJIzTQSNqPq25lXIvtU
+image-src: "/images/blogs/pratap-chhetri-isHDAcU7d2Q-unsplash.webp-1.jpg"
+alt: pratap-chhetri-isHDAcU7d2Q-unsplash.webp
 ---
 ::
 
@@ -78,7 +80,8 @@ Bien que le Sikkim fasse partie de l'Inde, en raison de sa proximité avec des f
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zCNXSaTTdOFp3M0ek8bn
+image-src: "/images/blogs/Jour-8-Monastere-de-Ralong.JPG-1.jpg"
+alt: Jour 8 Monastère de Ralong.JPG
 ---
 ::
 
@@ -107,7 +110,8 @@ N'oubliez pas que le respect de la culture locale est essentiel. Ainsi, avoir de
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/wVgwJmMORYClcAlYwCkq
+image-src: "/images/blogs/prantik-mitra-hPcZarkCT8Q-unsplash-(1...-1.jpg"
+alt: prantik-mitra-hPcZarkCT8Q-unsplash (1...
 ---
 ::
 
@@ -117,7 +121,7 @@ image-src: https://cdn.buttercms.com/wVgwJmMORYClcAlYwCkq
 
 Imaginez un endroit où la nature et la spiritualité s'entremêlent pour offrir une échappée hors du temps. C'est ce que propose Odysway avec son voyage unique au Sikkim, une région où la tranquillité des montagnes de l'Himalaya rencontre la richesse d'une culture ancienne et préservée.
 
-Pour découvrir ce voyage : [https://odysway.com/voyages/retraite-yoga-sikkim-inde](https://odysway.com/voyages/retraite-yoga-sikkim-inde).
+Pour découvrir ce voyage : https://odysway.com/voyages/retraite-yoga-sikkim-inde.
 
 ### **Un voyage pas comme les autres**
 
@@ -129,11 +133,12 @@ Chaque jour, sous le regard bienveillant des sommets enneigés, vous aurez l'opp
 
 Ce voyage est bien plus qu'une simple découverte touristique. C'est une invitation à vivre, même brièvement, au rythme des communautés locales. C'est l'occasion de s'immerger dans le quotidien des habitants, de comprendre leur relation intime avec la nature, et de découvrir l'héritage culturel qui fait du Sikkim un joyau unique en son genre.
 
-Pour découvrir ce voyage : [https://odysway.com/voyages/retraite-yoga-sikkim-inde](https://odysway.com/voyages/retraite-yoga-sikkim-inde)
+Pour découvrir ce voyage : https://odysway.com/voyages/retraite-yoga-sikkim-inde
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/6xb6i7YOSVGRTVRFIeHQ
+image-src: "/images/blogs/Jour-11-immersion.webp-1.jpg"
+alt: Jour 11 immersion.webp
 ---
 ::
 
@@ -167,11 +172,12 @@ Les monastères, omniprésents tout au long du parcours, témoignent de l’**im
 
 Si vous rêvez de **randonnée en haute montagne**, d’**aventures hors des sentiers battus** et de **découvertes culturelles profondes**, ce voyage au Sikkim est fait pour vous. **Partez à la conquête d’un Himalaya authentique et préservé**, entre nature grandiose et traditions millénaires.
 
-👉 **Découvrez le programme complet ici :** [**Voyage Trek au Sikkim - Himalaya**](https://odysway.com/voyages/voyage-trek-sikkim-himalaya) 🏔️🌿
+👉 **Découvrez le programme complet ici :** **Voyage Trek au Sikkim - Himalaya** 🏔️🌿
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/9YTmLYN3RjOL8AZCMYpU
+image-src: "/images/blogs/AdobeStock_363106119.webp-1.jpg"
+alt: AdobeStock_363106119.webp
 ---
 ::
 ::

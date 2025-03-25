@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-09-19 10:25:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg"
+displayedImg: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg"
+image-src: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1.jpg"
 ---
 #publication-date
 19 septembre 2024
@@ -31,7 +31,7 @@ Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentiqu
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/g6TMRZHFQfmS7WBGzITg"
+image-src: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1.jpg"
 ---
 #content
 Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? Eh bien, le voyage en petit groupe est peut-être ce qu’il vous faut. Loin du tourisme de masse, ce type de voyage privilégie les rencontres humaines et la découverte en profondeur. Mais voyons ensemble pourquoi il peut transformer votre façon de voyager.
@@ -40,11 +40,12 @@ Vous en avez marre des circuits touristiques classiques, des bus bondés et des 
 
 On ne va pas se mentir, il est parfois difficile d’avoir des échanges authentiques avec les habitants quand on arrive à 50 voyageurs dans un petit village. En petit groupe, c’est complètement différent. Vous devenez plus discret, plus respectueux des lieux, et les locaux sont souvent plus enclins à vous ouvrir leur porte, à partager un moment de leur vie. C’est là que la magie opère.
 
-Prenons l’exemple d’un voyage organisé par [Odysway](https://odysway.com/voyages/inde-arunachal-pradesh) dans les montagnes d’Arunachal Pradesh, en Inde. Imaginez-vous passer une soirée autour d’un feu de camp avec une communauté locale, écouter leurs histoires et découvrir leur mode de vie. Ce genre de rencontre n’arrive pas tous les jours. Et c’est ça l’intérêt du petit groupe : vous êtes vraiment dans l’échange, dans la découverte.
+Prenons l’exemple d’un voyage organisé par Odysway dans les montagnes d’Arunachal Pradesh, en Inde. Imaginez-vous passer une soirée autour d’un feu de camp avec une communauté locale, écouter leurs histoires et découvrir leur mode de vie. Ce genre de rencontre n’arrive pas tous les jours. Et c’est ça l’intérêt du petit groupe : vous êtes vraiment dans l’échange, dans la découverte.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/BPfz9Bu2QMGQqPIAyXs6
+image-src: "/images/blogs/Capture-d'ecran-2024-07-03-a-18.38.36.webp-1.jpg"
+alt: Capture d’écran 2024-07-03 à 18.38.36.webp
 ---
 ::
 
@@ -56,7 +57,8 @@ Et puis, on est d’accord, quand on est moins nombreux, c’est plus simple d�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/5pavPVFETQqeogAcXkxU
+image-src: "/images/blogs/Nepal_Trek_voyageurs8.webp-2.jpg"
+alt: Nepal_Trek_voyageurs8.webp
 ---
 ::
 
@@ -80,7 +82,8 @@ Ces endroits, qui sortent des sentiers battus, rendent l’expérience encore pl
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qL0iOBnS4aNBSlPpEnRv
+image-src: "/images/blogs/qL0iOBnS4aNBSlPpEnRv-1742840532766.jpg"
+alt: undefined
 ---
 ::
 
@@ -90,7 +93,8 @@ Les voyages en petit groupe offrent fréquemment un avantage que beaucoup sous-e
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/J2btSx7tT02qeEm3hR2o
+image-src: "/images/blogs/guide-velo.jpg-1.jpg"
+alt: guide-velo.jpg
 ---
 ::
 
@@ -102,5 +106,5 @@ Enfin, voyager en petit groupe, c’est aussi se décharger de tout le stress de
 
 Et en cas de souci, vous n’êtes pas seul. Que ce soit un problème avec une réservation, un imprévu ou simplement des questions, l’agence est là pour vous accompagner. Vous avez l’assurance d’avoir un interlocuteur à l’écoute, prêt à réagir rapidement, ce qui est toujours rassurant.
 
-En résumé, le voyage en petit groupe, c’est bien plus qu’un simple moyen de découvrir de nouveaux horizons. C’est une aventure humaine, faite de rencontres authentiques, de découvertes profondes, et de moments de partage. C’est aussi un moyen de voyager en conscience, en respectant les cultures et l’environnement, tout en profitant de la flexibilité et du confort qu’offrent les petits comités. Alors, si vous cherchez à vivre un voyage vraiment différent, n’hésitez plus : le petit groupe est fait pour vous. Découvrez sur notre site nos départs en petits groupes : [https://odysway.com/prochains-departs](https://odysway.com/prochains-departs)
+En résumé, le voyage en petit groupe, c’est bien plus qu’un simple moyen de découvrir de nouveaux horizons. C’est une aventure humaine, faite de rencontres authentiques, de découvertes profondes, et de moments de partage. C’est aussi un moyen de voyager en conscience, en respectant les cultures et l’environnement, tout en profitant de la flexibilité et du confort qu’offrent les petits comités. Alors, si vous cherchez à vivre un voyage vraiment différent, n’hésitez plus : le petit groupe est fait pour vous. Découvrez sur notre site nos départs en petits groupes : https://odysway.com/prochains-departs
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-07-23 11:00:00+00:00"
 tags: "Developpement personnel, France, Made in France, Roumanie"
 categories: "Depassement de soi, Culture et decouverte, Developpement Personnel, Blog"
-displayedImg: "https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1"
+displayedImg: "/images/blogs/Comment-voyager-seul.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1"
+image-src: "/images/blogs/Comment-voyager-seul.jpg"
 ---
 #publication-date
 23 juillet 2020
@@ -31,12 +31,12 @@ Comment voyager seul ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/Lw1Vb0hVRZy2DyXA7wn1"
+image-src: "/images/blogs/Comment-voyager-seul.jpg"
 ---
 #content
 **"Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.**
 
-Après votre lecture, nous vous invitons à regarder [notre article sur 5 destinations pour un voyage spirituel.](https://odysway.com/top-5-destinations-voyage-spirituel)
+Après votre lecture, nous vous invitons à regarder notre article sur 5 destinations pour un voyage spirituel.
 
 ## Bien préparer son voyage en solo
 
@@ -61,7 +61,8 @@ Ce n'est pas parce que vous avez décidé de voyager seul que vous devez vous cl
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/EKWPx9PrRKSVbnYCgisW
+image-src: "/images/blogs/EKWPx9PrRKSVbnYCgisW-1742840860179.jpg"
+alt: undefined
 ---
 ::
 
@@ -94,7 +95,8 @@ Pendant votre voyage, surtout restez flexible. **Ne soyez pas figé dans votre p
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/AMz5hAtpRtGZvXGhPNes
+image-src: "/images/blogs/AMz5hAtpRtGZvXGhPNes-1742840860708.jpg"
+alt: undefined
 ---
 ::
 
@@ -104,5 +106,5 @@ Si vraiment la solitude vous pèse à certains moments de la journée, **essayez
 
 ## Road Trip Organisé : une totale liberté
 
-Le road trip est l’AVENTURE permettant de vous sentir libre. Le chemin n’est jamais entièrement tracé et pleins de rencontres et de découverte vous attendent. Découvrez nos [road trip](https://odysway.com/thematiques/road-trip-organise) organisés.
+Le road trip est l’AVENTURE permettant de vous sentir libre. Le chemin n’est jamais entièrement tracé et pleins de rencontres et de découverte vous attendent. Découvrez nos road trip organisés.
 ::

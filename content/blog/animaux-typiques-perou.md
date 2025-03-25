@@ -18,12 +18,12 @@ published: false
 publishedAt: "2021-01-13 10:39:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/lb9EjNnURKOYjuoUT3So"
+displayedImg: "/images/blogs/Animaux-typiques-du-Perou-:-du-lama-au-condor-des-Andes.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/lb9EjNnURKOYjuoUT3So"
+image-src: "/images/blogs/Animaux-typiques-du-Perou-:-du-lama-au-condor-des-Andes.jpg"
 ---
 #publication-date
 13 janvier 2021
@@ -37,7 +37,7 @@ Vous avez prévu de partir au Pérou ? Vous souhaitez rencontrer la faune locale
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/lb9EjNnURKOYjuoUT3So"
+image-src: "/images/blogs/Animaux-typiques-du-Perou-:-du-lama-au-condor-des-Andes.jpg"
 ---
 #content
 ## Les animaux à observer durant votre séjour au Pérou
@@ -52,7 +52,8 @@ Animal caractéristique des Andes, le lama est essentiellement utilisé comme b�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/RiZu63NLRsic74c99lRc
+image-src: "/images/blogs/RiZu63NLRsic74c99lRc-1742840751366.jpg"
+alt: undefined
 ---
 ::
 
@@ -62,7 +63,8 @@ Autre camélidé domestique, l’alpaga ressemble à une véritable peluche ! Il
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OQLoGGdwTFuoxcETzaRJ
+image-src: "/images/blogs/OQLoGGdwTFuoxcETzaRJ-1742840751886.jpg"
+alt: undefined
 ---
 ::
 
@@ -72,17 +74,19 @@ La troisième espèce de camélidés au Pérou n’est pas domestique mais est o
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/acMkfnFiRVOJDxCiKVkq
+image-src: "/images/blogs/acMkfnFiRVOJDxCiKVkq-1742840752403.jpg"
+alt: undefined
 ---
 ::
 
 ### La vigogne
 
-La vigogne est le plus petit camélidé du monde. Elle est extrêmement méfiante et se trouve à des altitudes très élevées. Sa laine est encore plus précieuse que celle de l’alpaga. Aujourd’hui, les péruviens respectent la tradition des Incas : ils capturent les vigognes afin de récupérer leurs toisons puis les relâchent dans la nature. Si vous voulez l’observer, vous pouvez vous rendre dans la réserve d’Aguada Blanca, près du Canyon de Colca. Si vous souhaitez rencontrer des animaux, [découvrez notre thématique de voyages animaliers.](https://odysway.com/thematiques/voyage-animalier) 
+La vigogne est le plus petit camélidé du monde. Elle est extrêmement méfiante et se trouve à des altitudes très élevées. Sa laine est encore plus précieuse que celle de l’alpaga. Aujourd’hui, les péruviens respectent la tradition des Incas : ils capturent les vigognes afin de récupérer leurs toisons puis les relâchent dans la nature. Si vous voulez l’observer, vous pouvez vous rendre dans la réserve d’Aguada Blanca, près du Canyon de Colca. Si vous souhaitez rencontrer des animaux, découvrez notre thématique de voyages animaliers. 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/do6K1wVORuUea622897C
+image-src: "/images/blogs/do6K1wVORuUea622897C-1742840752921.jpg"
+alt: undefined
 ---
 ::
 
@@ -94,7 +98,8 @@ Surnommé le seigneur des Andes et autrefois vénéré par les Incas, le condor 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/cVor6CcHTl2n1zwRpSzC
+image-src: "/images/blogs/cVor6CcHTl2n1zwRpSzC-1742840753439.jpg"
+alt: undefined
 ---
 ::
 
@@ -104,13 +109,14 @@ L’oiseau national du Pérou est le coq-de-roche péruvien. On peut le trouver 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/fw4LWYVVQnsa23sisaJA
+image-src: "/images/blogs/fw4LWYVVQnsa23sisaJA-1742840753955.jpg"
+alt: undefined
 ---
 ::
 
 ### Le dauphin rose
 
-Voir un dauphin est impressionnant mais avoir la chance d’en observer un rose est une expérience unique, seulement possible dans les bassins de l’Amazone et du fleuve Orénoque ! Il faudra vous rendre dans la région de l’Amazonie, près d’Iquitos au Pérou pour pouvoir le rencontrer. Cet animal aussi appelé boto se distingue du dauphin de mer grâce à sa couleur unique, sa bosse sur le front et ses vertèbres non soudées. Cela lui permet notamment de se déplacer plus facilement dans l’Amazone. [Lisez notre article sur 10 animaux de la jungle amazonienne.](https://odysway.com/les-10-animaux-de-la-jungle-amazonienne)
+Voir un dauphin est impressionnant mais avoir la chance d’en observer un rose est une expérience unique, seulement possible dans les bassins de l’Amazone et du fleuve Orénoque ! Il faudra vous rendre dans la région de l’Amazonie, près d’Iquitos au Pérou pour pouvoir le rencontrer. Cet animal aussi appelé boto se distingue du dauphin de mer grâce à sa couleur unique, sa bosse sur le front et ses vertèbres non soudées. Cela lui permet notamment de se déplacer plus facilement dans l’Amazone. Lisez notre article sur 10 animaux de la jungle amazonienne.
 
 ### Le viscache
 
@@ -118,9 +124,10 @@ Imaginez un rongeur avec une tête de lapin et une queue d’écureuil : vous ob
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/y8YC0WyoS0Ciu4DbrZUv
+image-src: "/images/blogs/y8YC0WyoS0Ciu4DbrZUv-1742840754472.jpg"
+alt: undefined
 ---
 ::
 
- Poursuivez votre lecture avec [notre article de blog sur l'empire inca.](https://odysway.com/empire-inca-origine-apogee-declin)
+ Poursuivez votre lecture avec notre article de blog sur l'empire inca.
 ::

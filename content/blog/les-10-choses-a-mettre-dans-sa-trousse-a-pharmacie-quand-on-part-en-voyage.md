@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-01-06 11:00:00+00:00"
 tags: ""
 categories: "Culture et decouverte, News Odysway"
-displayedImg: "https://cdn.buttercms.com/UZZrwK4pTRK77sC26pWW"
+displayedImg: "/images/blogs/Les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/UZZrwK4pTRK77sC26pWW"
+image-src: "/images/blogs/Les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage.jpg"
 ---
 #publication-date
 6 janvier 2019
@@ -31,7 +31,7 @@ Les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/UZZrwK4pTRK77sC26pWW"
+image-src: "/images/blogs/Les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage.jpg"
 ---
 #content
 #### Votre départ en voyage est proche et c’est avec enthousiasme que vous commencez à préparer votre sac à dos. Le voyage a déjà commencé ! Parmi les affaires que vous allez emporter, la trousse à pharmacie est un indispensable à mettre dans votre valise. En effet, quelle que soit votre destination, vous devez pouvoir faire face aux premiers soins. Voici donc les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage.
@@ -43,7 +43,8 @@ Avant toute chose, **votre trousse à pharmacie doit contenir du** **petit mat
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xHhoTE7FSTWyhGyLMOhe
+image-src: "/images/blogs/xHhoTE7FSTWyhGyLMOhe-1742842091635.jpg"
+alt: 
 ---
 ::
 
@@ -54,7 +55,8 @@ Lors de votre voyage, vous n’êtes pas à l’abri de vous couper. **Pour net
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/M00xmHcKRzXSValBp3aS
+image-src: "/images/blogs/M00xmHcKRzXSValBp3aS-1742842092161.jpg"
+alt: 
 ---
 ::
 
@@ -100,11 +102,12 @@ En voyage, les moustiques sont probablement l’ennemi numéro 1 des voyageurs. 
 
 Si vous comptez faire un trek de plusieurs jours, alors nous vous conseillons d’ajouter certaines choses dans votre trousse à pharmacie. Notamment **des pastilles pour purifier l’eau et une couverture de survie**, en plus de toutes celles mentionnées ci-dessus bien évidemment.
 
-[Découvrez les randonnées et trek by Odysway](https://odysway.com/thematiques/trek-et-randonnee) : Le choix du trekking ou de la randonnée accompagné d'un guide avec une expérience locale, c’est l'espoir de l'exploration. Il permet de visiter des régions parfois reculées et de riches écosystèmes de flore et de faune. Vous prenez le temps de découvrir les choses qui vous entourent, puis sortez de votre zone de confort en dépassant les limites. Parfois, vous serez épuisé, mais heureux d'être surpris en fin de parcours !
+Découvrez les randonnées et trek by Odysway : Le choix du trekking ou de la randonnée accompagné d'un guide avec une expérience locale, c’est l'espoir de l'exploration. Il permet de visiter des régions parfois reculées et de riches écosystèmes de flore et de faune. Vous prenez le temps de découvrir les choses qui vous entourent, puis sortez de votre zone de confort en dépassant les limites. Parfois, vous serez épuisé, mais heureux d'être surpris en fin de parcours !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/JZgUP1b3QVKuZFXu4JL4
+image-src: "/images/blogs/JZgUP1b3QVKuZFXu4JL4-1742842092698.jpg"
+alt: 
 ---
 ::
 
@@ -113,15 +116,16 @@ image-src: https://cdn.buttercms.com/JZgUP1b3QVKuZFXu4JL4
 
 Vous êtes de plus en plus nombreux à partir en voyage avec vos enfants. Même si les maux sont les mêmes que ceux des adultes, **vous devez néanmoins adapter votre trousse à pharmacie en fonction de l’âge de vos enfants**. La majorité des produits et médicaments indiqués dans cet article, existe au format bébé/enfant. Nous vous conseillons par ailleurs de leur prévoir une trousse à part et de rajouter un soluté de réhydratation, fortement conseillé en cas de vomissements et de diarrhée.
 
-Cette liste n’est évidemment **pas exhaustive** mais reprend la plupart des choses qu’il est judicieux de prendre avec vous, avant de partir en voyage. Gardez en mémoire également que ces produits / traitements varient selon le pays dans lequel vous allez voyager. La période de l’année influe également beaucoup !  Dernière chose, renseignez-vous sur le site de le site de [l’institut Pasteur](https://www.pasteur.fr/fr/centre-medical/preparer-son-voyage) pour avoir plus d’informations quant aux vaccins à réaliser avant de partir.
+Cette liste n’est évidemment **pas exhaustive** mais reprend la plupart des choses qu’il est judicieux de prendre avec vous, avant de partir en voyage. Gardez en mémoire également que ces produits / traitements varient selon le pays dans lequel vous allez voyager. La période de l’année influe également beaucoup !  Dernière chose, renseignez-vous sur le site de le site de l’institut Pasteur pour avoir plus d’informations quant aux vaccins à réaliser avant de partir.
 
 ## Devenez un AS de la survie avec Odysway
 
-Se débrouiller lors de petites coupures, blessures durant votre voyage ? Suivez simplement la liste ci-dessus. Aller plus loin et apprendre à se débrouiller en pleine jungle amazonienne ? Nous vous proposons une expérience unique : [une immersion au sein d’une famille locale qui vit dans la jungle amazonienne](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=article&utm_medium=blog&utm_campaign=a+avoir+dans+sa+pharmacie). Les expéditions dans la jungle se font avec des guides locaux, à partir de d'un camp de base !     
+Se débrouiller lors de petites coupures, blessures durant votre voyage ? Suivez simplement la liste ci-dessus. Aller plus loin et apprendre à se débrouiller en pleine jungle amazonienne ? Nous vous proposons une expérience unique : une immersion au sein d’une famille locale qui vit dans la jungle amazonienne. Les expéditions dans la jungle se font avec des guides locaux, à partir de d'un camp de base !     
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/XCMIvufgSiGgkRQMPpgF
+image-src: "/images/blogs/XCMIvufgSiGgkRQMPpgF-1742842093229.jpg"
+alt: 
 ---
 ::
 
@@ -129,5 +133,5 @@ _Thiago, expert en survie_
 
 Les équipes d’Odysway sont elles-mêmes parties dans la jungle, afin de créer ce voyage. Pour vous immerger un peu plus dans cet environnement unique au monde, voici la vidéo créée par Odysway.
 
-Poursuivez votre lecture [avec notre article sur les 5 raisons de partir à la montagne cet été.](https://odysway.com/5-raisons-partir-vacances-montagne-ete)
+Poursuivez votre lecture avec notre article sur les 5 raisons de partir à la montagne cet été.
 ::

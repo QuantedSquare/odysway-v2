@@ -29,12 +29,12 @@ published: false
 publishedAt: "2023-01-10 15:13:00+00:00"
 tags: "2023, repos, rêve, vacances, voyage"
 categories: "vacances, voyager, 2023"
-displayedImg: "https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o"
+displayedImg: "/images/blogs/Jours-feries-2023-:-une-annee-propice-aux-voyages.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o"
+image-src: "/images/blogs/Jours-feries-2023-:-une-annee-propice-aux-voyages.jpg"
 ---
 #publication-date
 10 janvier 2023
@@ -48,7 +48,7 @@ Jours fériés 2023 : une année propice aux voyages
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/g3okAcIFRDObiz4S4J4o"
+image-src: "/images/blogs/Jours-feries-2023-:-une-annee-propice-aux-voyages.jpg"
 ---
 #content
 Reprise difficile ? Déjà envie d'être en congés ?
@@ -90,5 +90,5 @@ De quoi commencer l'année 2024 sous les meilleurs augures !
 
 Alors, on va où ?
 
-Chez Odysway nous avons créé plus de 30 séjours pour vous, en France et à l'étranger. Découvrez nos [voyages en immersion](https://odysway.com/destinations?utm_source=Blog&utm_medium=S%C3%A9jours&utm_campaign=Noss%C3%A9jours) au plus près des locaux pour découvrir le monde sous un autre regard et voyager autrement. C'est parti ?
+Chez Odysway nous avons créé plus de 30 séjours pour vous, en France et à l'étranger. Découvrez nos voyages en immersion au plus près des locaux pour découvrir le monde sous un autre regard et voyager autrement. C'est parti ?
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-09-22 08:38:00+00:00"
 tags: "Communautés locales, Developpement personnel, Grands espaces"
 categories: "Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel"
-displayedImg: "https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172"
+displayedImg: "/images/blogs/Partez-pour-un-voyage-interieur-aupres-d'un-chamane-au-Tibet.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172"
+image-src: "/images/blogs/Partez-pour-un-voyage-interieur-aupres-d'un-chamane-au-Tibet.jpg"
 ---
 #publication-date
 22 septembre 2018
@@ -31,7 +31,7 @@ Partez pour un voyage intérieur auprès d'un chamane au Tibet
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/ODNMJJ1KRM2piHVd2jPe?1612355492172"
+image-src: "/images/blogs/Partez-pour-un-voyage-interieur-aupres-d'un-chamane-au-Tibet.jpg"
 ---
 #content
 Région autonome de l’ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalaï Lama, **le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité**. Et c’est auprès d’un **chamane** que certains décident de vivre quelques jours pour aller plus loin dans leur démarche spirituelle. Plus qu’un retour sur soi, c’est un véritable voyage intérieur qui vous est proposé.
@@ -52,11 +52,11 @@ Au cours du sixième mois du calendrier lunaire, de nombreux villages tibétains
 
 Odysway, c’est aussi cela : vous proposer des séjours autour du développement personnel, de la spiritualité et du bien-être. Et cela loin des sentiers battus, au cœur de populations aux coutumes ancestrales, prêtes à partager leur savoir pour vous aider à évoluer en harmonie avec vous-même et avec les autres. 
 
-Dans le même thème, Odysway vous propose un [voyage chamanique au Pérou](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article&utm_medium=blog&utm_campaign=voyage+int%C3%A9rieur+chamane+tibet) : au cœur de la Vallée Sacrée des Incas et accompagné d’un chamane traditionnel Quechua, reconnectez-vous à la nature au travers de rituels et cérémonies ancestrales, ou même [un voyage chamanique en Mongolie](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=article&utm_medium=blog&utm_campaign=voyage+int%C3%A9rieur+chamane+tibet) dans les steppes mongoles !
+Dans le même thème, Odysway vous propose un voyage chamanique au Pérou : au cœur de la Vallée Sacrée des Incas et accompagné d’un chamane traditionnel Quechua, reconnectez-vous à la nature au travers de rituels et cérémonies ancestrales, ou même un voyage chamanique en Mongolie dans les steppes mongoles !
 
 ## Se recentrer grâce au voyage initiatique 
 
-Ce type de **voyage en immersion** va vous permettre de vous accorder du temps afin de faire le point sur vous-même. Vous amorcez  le changement en sortant de votre zone de confort et de vivre au contact des **populations locales**, gardiennes de savoirs ancestraux. Découvrez comment le [**voyage initiatique**](https://odysway.com/thematiques/voyage-initiatique) peut vous aider dans votre quête !
+Ce type de **voyage en immersion** va vous permettre de vous accorder du temps afin de faire le point sur vous-même. Vous amorcez  le changement en sortant de votre zone de confort et de vivre au contact des **populations locales**, gardiennes de savoirs ancestraux. Découvrez comment le **voyage initiatique** peut vous aider dans votre quête !
 
-Pour poursuivre votre lecture, nous vous invitons à consulter notre article [sur les temples au Népal.](https://odysway.com/temples-nepal-lesquels-visiter)
+Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur les temples au Népal.
 ::

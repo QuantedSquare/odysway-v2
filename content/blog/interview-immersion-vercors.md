@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-05-31 14:50:00+00:00"
 tags: "cheval, équitation, France, immersion, nature, paysage, ranch, randonnée, tourisme équestre, Vercors, western"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
+displayedImg: "/images/blogs/Interview-Rencontre-avec-Marion-accompagnatrice-de-tourisme-equestre-dans-les-Alpes.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
+image-src: "/images/blogs/Interview-Rencontre-avec-Marion-accompagnatrice-de-tourisme-equestre-dans-les-Alpes.jpg"
 ---
 #publication-date
 31 mai 2021
@@ -31,7 +31,7 @@ Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans 
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
+image-src: "/images/blogs/Interview-Rencontre-avec-Marion-accompagnatrice-de-tourisme-equestre-dans-les-Alpes.jpg"
 ---
 #content
 **Vivre un séjour en immersion dans un ranch en France, c’est possible ! Dans le Parc naturel régional du Vercors, Marion vous attend avec ses chevaux pour un voyage dans le temps.**
@@ -46,7 +46,8 @@ image-src: "https://cdn.buttercms.com/6k6RiG5MTLOJgdfIduEC"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ODvEGAmSyW86gArZBjjW
+image-src: "/images/blogs/ODvEGAmSyW86gArZBjjW-1742840713785.jpg"
+alt: undefined
 ---
 ::
 
@@ -62,9 +63,11 @@ image-src: https://cdn.buttercms.com/ODvEGAmSyW86gArZBjjW
 
 "En venant chez nous, vous goûterez à la caillette du Vercors, le gratin de ravioles, le fromage Saint-Marcellin ou du bleu du Vercors. Outre les plats traditionnels, le ranch propose des plats typiques du western !"
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/pGiCh0dORC2qVL1zJb5H
+image-src: "/images/blogs/c5a311_98deaf06541f4869a2398f19991089...-1.jpg"
+alt: c5a311_98deaf06541f4869a2398f19991089...
+link: https://odysway.com/voyages/itinerance-cheval-vercors?utm_source=Blog&utm_medium=Post&utm_campaign=ITW_Ranch
 ---
-::](https://odysway.com/voyages/itinerance-cheval-vercors?utm_source=Blog&utm_medium=Post&utm_campaign=ITW_Ranch)
+::
 ::

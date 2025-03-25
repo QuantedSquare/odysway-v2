@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-06-05 11:00:00+00:00"
 tags: "Animaux, Europe, Finlande, Grands espaces"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "https://cdn.buttercms.com/D11y2TnhRdSc97RsCpPI"
+displayedImg: "/images/blogs/5-choses-incroyables-a-faire-en-Finlande.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/D11y2TnhRdSc97RsCpPI"
+image-src: "/images/blogs/5-choses-incroyables-a-faire-en-Finlande.jpg"
 ---
 #publication-date
 5 juin 2023
@@ -31,7 +31,7 @@ image-src: "https://cdn.buttercms.com/D11y2TnhRdSc97RsCpPI"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/D11y2TnhRdSc97RsCpPI"
+image-src: "/images/blogs/5-choses-incroyables-a-faire-en-Finlande.jpg"
 ---
 #content
 **A quelques heures d'avion de la France, la Finlande vous ouvre ses portes pour un voyage pas comme les autres. De par sa position géographique et sa nature qui prédomine sur près de 1 160 km du nord au sud, ce pays scandinave possède bien des trésors qui en font un territoire à part entière. Afin de comprendre pourquoi la Finlande est si fascinante, nous avons sélectionné pour vous 5 choses incroyables à faire là-bas.**
@@ -40,13 +40,14 @@ image-src: "https://cdn.buttercms.com/D11y2TnhRdSc97RsCpPI"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/TmZcOdo4RU6Qqvl8Fbi9
+image-src: "/images/blogs/TmZcOdo4RU6Qqvl8Fbi9-1742840623426.jpg"
+alt: undefined
 ---
 ::
 
 Saviez-vous que la Finlande est le dernier territoire avec des espaces sauvages en Europe ? Une aubaine pour les amoureux de la nature... Et les Finlandais ne manquent pas non plus de s'y ressourcer dès qu'ils le peuvent. Décider de voyager en Finlande, c'est avant tout **découvrir des paysages d'exception**. Que dire de cette nature omniprésente, ces forêts verdoyantes et profondes, ces lacs par dizaines de milliers ? Rien, mise à part un immense sentiment de liberté et de bien-être.
 
-**La nature s'avère être un formidable terrain d'aventure** et la garantie de sensations et d'émotions qui sortent du quotidien. En été, plusieurs activités permettent de vous immerger dans cet environnement sauvage. La randonnée bien sûr, le vélo mais aussi la voile. Le kayak ou le canoë sont également très prisés en Finlande. Sur la mer, sur un lac ou sur une rivière, laissez-vous glisser au fil de l'eau tout en admirant ce qui vous entoure. **Odysway a décidé de vous emmener au cœur de ces paysages** pour une reconnexion totale avec la nature. Au programme, [une expédition](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=reconnexion_nature) en toute autonomie à bord d'un canoë et un bivouac en forêt. Un vrai retour aux sources.
+**La nature s'avère être un formidable terrain d'aventure** et la garantie de sensations et d'émotions qui sortent du quotidien. En été, plusieurs activités permettent de vous immerger dans cet environnement sauvage. La randonnée bien sûr, le vélo mais aussi la voile. Le kayak ou le canoë sont également très prisés en Finlande. Sur la mer, sur un lac ou sur une rivière, laissez-vous glisser au fil de l'eau tout en admirant ce qui vous entoure. **Odysway a décidé de vous emmener au cœur de ces paysages** pour une reconnexion totale avec la nature. Au programme, une expédition en toute autonomie à bord d'un canoë et un bivouac en forêt. Un vrai retour aux sources.
 
 En hiver, **bravez les températures négatives pour découvrir l'autre visage de la Finlande et faire plein choses incroyables**. Des espaces blancs à perte de vue où seules les traces d'animaux rappellent que vous n'êtes pas seul. En raquettes, à skis ou bien sur un fatbike, explorez cette nature qui force le respect.
 
@@ -54,7 +55,8 @@ En hiver, **bravez les températures négatives pour découvrir l'autre visage d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/9dlYlv7URyej3j1GI0Qx
+image-src: "/images/blogs/9dlYlv7URyej3j1GI0Qx-1742840623947.jpg"
+alt: undefined
 ---
 ::
 
@@ -66,7 +68,8 @@ Pendant la période hivernale, vous ne pouvez décemment pas venir en Finlande s
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/fOLVmn5ZTyftDVLOR2x6
+image-src: "/images/blogs/fOLVmn5ZTyftDVLOR2x6-1742840624463.jpg"
+alt: undefined
 ---
 ::**
 
@@ -78,7 +81,8 @@ Mais le rituel du sauna ne s'arrête pas là. En effet, **la tradition veut que 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/40kf8CrtRuKBgOvJfNhA
+image-src: "/images/blogs/40kf8CrtRuKBgOvJfNhA-1742840624980.jpg"
+alt: undefined
 ---
 ::
 
@@ -92,7 +96,7 @@ Après avoir plongé dans l'eau glacée, nous vous proposons la même chose… m
 
 ## Séjour Nature : se déconnecter du quotidien
 
-Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
+Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 
-Pour continuer votre lecture, nous vous invitons à lire [notre article dédié aux voyages en Europe](https://odysway.com/ou-voyager-europe)
+Pour continuer votre lecture, nous vous invitons à lire notre article dédié aux voyages en Europe
 ::

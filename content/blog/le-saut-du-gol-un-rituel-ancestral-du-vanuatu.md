@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-09-29 16:28:00+00:00"
 tags: "Communautés locales, Océanie"
 categories: "Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel"
-displayedImg: "https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083"
+displayedImg: "/images/blogs/Le-saut-du-Gol-un-rituel-ancestral-du-Vanuatu.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083"
+image-src: "/images/blogs/Le-saut-du-Gol-un-rituel-ancestral-du-Vanuatu.jpg"
 ---
 #publication-date
 29 septembre 2018
@@ -31,7 +31,7 @@ Le saut du Gol, un rituel ancestral du Vanuatu
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/U8sTfsKjSya215YZq1ws?1612356921083"
+image-src: "/images/blogs/Le-saut-du-Gol-un-rituel-ancestral-du-Vanuatu.jpg"
 ---
 #content
 Au large de l’Australie, en plein océan Pacifique, **le Vanuatu** a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoise et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l’île de Pentecôte est réputée pour son rituel initiatique : **le saut du Gol**.
@@ -44,7 +44,7 @@ Considéré comme l’ancêtre du saut à l’élastique, **le saut du Gol** f
 
 Signe de virilité selon la légende, le saut du Gol est désormais davantage **un rite de fertilité de la terre et de passage à l’âge adulte**. Les habitants de l’île de Pentecôte sont particulièrement reconnaissants et respectueux de la nature et ce qu’elle leur apporte. Pour que la terre continue à être fertile, les sauteurs doivent faire un geste bien précis lorsqu’ils se jettent dans le vide : toucher le sol avec leurs épaules.
 
-Les rituels représentent les spécificités mêmes des anciens peuples, pour en découvrir Odysway vous propose [de voyager sur la terre des premiers hommes en Ethiopie.](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=article&utm_medium=blog&utm_campaign=saut+du+gol)
+Les rituels représentent les spécificités mêmes des anciens peuples, pour en découvrir Odysway vous propose de voyager sur la terre des premiers hommes en Ethiopie.
 
 ## Le déroulement du rituel
 
@@ -54,13 +54,14 @@ Le jour du rituel, tout le village se rassemble au pied de la tour. Chaque saute
 
 ## Voyagez vers d'autres cultures
 
-Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l'habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)[](https://odysway.com/thematiques/sejours-chez-l-habitant)
+Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les voyages chez l'habitant.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/NBQLkznjTcuk5G3HWtvn
+image-src: "/images/blogs/NBQLkznjTcuk5G3HWtvn-1742843062640.jpg"
+alt: 
 ---
 ::
 
-Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur [la tribu des sentinelles, le peuple le plus isolé au monde](https://odysway.com/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde).
+Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur la tribu des sentinelles, le peuple le plus isolé au monde.
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-05-31 14:34:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/q726xyrFTOe76K2LVung"
+displayedImg: "/images/blogs/Voyage-et-pratique-des-Arts-Martiaux-a-travers-le-monde-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/q726xyrFTOe76K2LVung"
+image-src: "/images/blogs/Voyage-et-pratique-des-Arts-Martiaux-a-travers-le-monde-1.jpg"
 ---
 #publication-date
 31 mai 2024
@@ -31,7 +31,7 @@ Voyage et pratique des Arts Martiaux à travers le monde
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/q726xyrFTOe76K2LVung"
+image-src: "/images/blogs/Voyage-et-pratique-des-Arts-Martiaux-a-travers-le-monde-1.jpg"
 ---
 #content
 Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent non seulement perfectionner leurs compétences, mais aussi explorer les cultures et les traditions qui les entourent. Dans cet article, nous plongerons dans cette aventure fascinante, allant de la boxe thaïlandaise en Thaïlande au kung-fu en Chine, en passant par le jiu-jitsu brésilien au Brésil, et bien d'autres encore.
@@ -42,11 +42,12 @@ La Thaïlande est célèbre dans le monde entier pour être le berceau de la box
 
 Dans les camps d'entraînement, les voyageurs peuvent s'attendre à une formation intensive, souvent dispensée par d'anciens combattants professionnels ou des instructeurs de renommée mondiale. En plus des séances d'entraînement physiques, les camps de Muay Thai offrent souvent des cours sur l'histoire et la philosophie de cet art martial, fournissant aux participants une compréhension plus profonde de sa signification culturelle. En dehors des séances d'entraînement, les voyageurs ont également l'occasion d'explorer la beauté naturelle de la Thaïlande, des plages de sable blanc aux jungles luxuriantes, faisant de leur séjour une expérience complète.
 
-Que ce soit dans le nord du pays ou sur les îles du sud (Koh Samui), Odysway peut vous organiser un séjour initiation Muay Thai. Découvrir par exemple le séjour à Pai : [Stage boxe thaï en immersion dans le nord de la Thaïlande](https://odysway.com/voyages/stage-boxe-thai-nord-thailande).
+Que ce soit dans le nord du pays ou sur les îles du sud (Koh Samui), Odysway peut vous organiser un séjour initiation Muay Thai. Découvrir par exemple le séjour à Pai : Stage boxe thaï en immersion dans le nord de la Thaïlande.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/tsSt3UrORrWDb26IZArf
+image-src: "/images/blogs/charnchai2resize-vice-670-e1573413873931-650x466.jpg-1.jpg"
+alt: charnchai2resize-vice-670-e1573413873931-650x466.jpg
 ---
 ::
 
@@ -58,11 +59,12 @@ L'une des destinations les plus célèbres pour étudier le kung-fu en Chine est
 
 Outre Shaolin, la province de Wudang est une autre destination prisée pour les amateurs de kung-fu. Connu pour son style de kung-fu interne, Wudang est réputé pour ses mouvements fluides et sa philosophie centrée sur l'équilibre et l'harmonie. Les écoles de kung-fu à Wudang offrent aux voyageurs la possibilité d'étudier dans un environnement serein et inspirant, entouré par les montagnes majestueuses de cette région pittoresque.
 
-Découvrir le voyage proposé par Odysway : [Initiez-vous au Kung Fu dans un temple Shaolin](https://odysway.com/voyages/kung-fu-temple-shaolin-chine).
+Découvrir le voyage proposé par Odysway : Initiez-vous au Kung Fu dans un temple Shaolin.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/vSjqrIfSuml1U1714jqF
+image-src: "/images/blogs/chine-entrainement-kung-fu-shaolin.jpg-1.jpg"
+alt: chine-entrainement-kung-fu-shaolin.jpg
 ---
 ::
 
@@ -76,7 +78,8 @@ Outre Rio, d'autres régions du Brésil sont également réputées pour leur pra
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OImpgv6QIyvCnvzvzSdv
+image-src: "/images/blogs/OImpgv6QIyvCnvzvzSdv-1742840555022.jpg"
+alt: undefined
 ---
 ::
 

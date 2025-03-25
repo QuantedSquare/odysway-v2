@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-02-09 12:36:00+00:00"
 tags: "Developpement personnel, Europe, Famille"
 categories: "Developpement Personnel"
-displayedImg: "https://cdn.buttercms.com/mdCROfoQaGt5qMb8tNBg"
+displayedImg: "/images/blogs/Comment-gerer-le-blues-des-vacances.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/mdCROfoQaGt5qMb8tNBg"
+image-src: "/images/blogs/Comment-gerer-le-blues-des-vacances.jpg"
 ---
 #publication-date
 9 février 2021
@@ -31,7 +31,7 @@ Comment gérer le blues des vacances ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/mdCROfoQaGt5qMb8tNBg"
+image-src: "/images/blogs/Comment-gerer-le-blues-des-vacances.jpg"
 ---
 #content
 **Moment privilégié où l'on se déconnecte de sa routine, les vacances apportent un véritable bien-être. Prendre son temps, profiter de son entourage, ne rien faire ou au contraire tester de nouvelles choses, tel est le propre des vacances. Mais alors, pourquoi le retour à la maison est-il si difficile ? Et ce sentiment de nostalgie et d'angoisse qui persiste… Ne cherchez plus, vous êtes en plein spleen de la rentrée ! Un mal qui touche près d'un tiers des vacanciers. Pour une rentrée sereine, voici quelques astuces pour mieux gérer le blues au retour des vacances.**
@@ -40,19 +40,21 @@ image-src: "https://cdn.buttercms.com/mdCROfoQaGt5qMb8tNBg"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/vMzGs8yIQDqVAAcIhjOG
+image-src: "/images/blogs/vMzGs8yIQDqVAAcIhjOG-1742840736385.jpg"
+alt: undefined
 ---
 ::
 
 En voilà une idée pour se donner un bon coup de boost ! Peu importe qu'elles soient prévues dans deux ou dix mois, il n'y a rien de mieux que de **rêver à ses prochaines vacances pour garder le sourire et le moral**. En outre, rien ne vous empêche de prévoir quelques week-ends entre temps pour vous changer la tête.
 
-Envie de repartir ? Découvrez tous nos [voyages en immersion](https://odysway.com/voyages) et programmez votre prochain séjour avec **Odysway**. 
+Envie de repartir ? Découvrez tous nos voyages en immersion et programmez votre prochain séjour avec **Odysway**. 
 
 ## Une transition de 2/3 jours n'est pas superflue avant de retourner travailler
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/36cqWZ7Sj2SrQrbCLq9x
+image-src: "/images/blogs/36cqWZ7Sj2SrQrbCLq9x-1742840736914.jpg"
+alt: undefined
 ---
 ::
 
@@ -62,7 +64,8 @@ S'il y a bien une chose à éviter pour ne pas être envahi par **le blues des v
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xRIj6u3pSxGuThXTgFj2
+image-src: "/images/blogs/xRIj6u3pSxGuThXTgFj2-1742840737428.jpg"
+alt: undefined
 ---
 ::
 
@@ -72,7 +75,8 @@ Le jour J est arrivé : go back to work ! Toutefois, pour se plonger de nouveau 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/f3wtwtqrR7OeMALGMD5D
+image-src: "/images/blogs/f3wtwtqrR7OeMALGMD5D-1742840737951.jpg"
+alt: undefined
 ---
 ::
 
@@ -82,7 +86,8 @@ Cela peut paraître surprenant, mais **préparer son retour de vacances avant m�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/VxxGssbRfmo3fcmGEjyQ
+image-src: "/images/blogs/VxxGssbRfmo3fcmGEjyQ-1742840738466.jpg"
+alt: undefined
 ---
 ::
 
@@ -94,19 +99,21 @@ Autre conseil : en vacances, notez sur un calepin vos sorties, vos visites, des 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/RRf7nb9Q8GSQuhVhuyX0
+image-src: "/images/blogs/RRf7nb9Q8GSQuhVhuyX0-1742840738984.jpg"
+alt: undefined
 ---
 ::
 
 La rentrée est souvent la période pour adopter de nouvelles résolutions. Pourquoi ne pas vous mettre au sport ? **Pratiquer une activité sportive est idéale pour lutter contre le stress et faire face au blues des vacances**. 
 
-[Découvrez notre thématique de voyage sportif !](https://odysway.com/thematiques/voyage-sportif)
+Découvrez notre thématique de voyage sportif !
 
 ## Restez positif !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/HBIcsjnrQim2NCxatWjQ
+image-src: "/images/blogs/Happy.jpg.jpg"
+alt: Happy.jpg
 ---
 ::  
 
@@ -116,7 +123,8 @@ Quand on n'a pas le moral, on broie du noir et tout va de travers. Renversez cet
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qiAs3IyS1ib48vpwVWfc
+image-src: "/images/blogs/Healthy.jpg.jpg"
+alt: Healthy.jpg
 ---
 ::
 
@@ -126,11 +134,12 @@ En vacances, on a tendance à (re)prendre des bonnes habitudes : manger sainemen
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/5umlToNZQaijXOtluo1q
+image-src: "/images/blogs/Decoration.jpg.jpg"
+alt: Decoration.jpg
 ---
 ::
 
 La fin des vacances est synonyme de retour à la routine. Pour casser cette routine, qui favorise le blues, réaménagez votre maison. Disposez vos meubles autrement, rafraichissez votre intérieur avec un petit coup de peinture, ajoutez de la déco (de vos vacances !), faites un ménage de printemps. Bref, **transformez votre cocon pour vous y sentir encore mieux**.
 
-Poursuivez votre lecture vers [notre article sur le voyage entre amis.](https://odysway.com/ou-partir-entre-amis)
+Poursuivez votre lecture vers notre article sur le voyage entre amis.
 ::

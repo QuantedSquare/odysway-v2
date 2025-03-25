@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-07-15 10:35:00+00:00"
 tags: "France, Made in France"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT"
+displayedImg: "/images/blogs/Le-vin-ou-comment-decouvrir-la-France-a-travers-son-patrimoine-viticole.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT"
+image-src: "/images/blogs/Le-vin-ou-comment-decouvrir-la-France-a-travers-son-patrimoine-viticole.jpg"
 ---
 #publication-date
 15 juillet 2020
@@ -31,18 +31,19 @@ Le vin ou comment découvrir la France à travers son patrimoine viticole
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/UpVYom2QRtWwdnhBBbWT"
+image-src: "/images/blogs/Le-vin-ou-comment-decouvrir-la-France-a-travers-son-patrimoine-viticole.jpg"
 ---
 #content
 **De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération.**  
 
-[Découvrez tous nos voyages en France.](https://odysway.com/destinations/france)
+Découvrez tous nos voyages en France.
 
 ## Bienvenue dans le Bordelais, capitale du vin et haut lieu de notre patrimoine viticole
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/cv26sHQuTUS3LctoeWQ8
+image-src: "/images/blogs/cv26sHQuTUS3LctoeWQ8-1742840862302.jpg"
+alt: undefined
 ---
 ::
 
@@ -68,7 +69,8 @@ Dans le département du Gers, **Sarragachies est le village viticole où se trou
 
 ### ::image-container
 ---
-image-src: https://cdn.buttercms.com/tgjv61ONRf6sehVVIXoP
+image-src: "/images/blogs/tgjv61ONRf6sehVVIXoP-1742840862826.jpg"
+alt: undefined
 ---
 ::
 
@@ -86,7 +88,8 @@ Bien que les châteaux fassent la renommée de la Vallée de la Loire, son patri
 
 ### ::image-container
 ---
-image-src: https://cdn.buttercms.com/NVnQBihxTv6aMGdeZrdQ
+image-src: "/images/blogs/NVnQBihxTv6aMGdeZrdQ-1742840863348.jpg"
+alt: undefined
 ---
 ::
 
@@ -104,7 +107,8 @@ Avec un vignoble de près de 200 000 hectares, de la Méditerranée jusqu'aux Py
 
 ### ::image-container
 ---
-image-src: https://cdn.buttercms.com/meaonj4uSdiCbDUHB8Lr
+image-src: "/images/blogs/meaonj4uSdiCbDUHB8Lr-1742840863870.jpg"
+alt: undefined
 ---
 ::
 
@@ -116,13 +120,13 @@ Classés à l'Unesco, les caves, les coteaux et les maisons de Champagne affiche
 
 **Riesling, Gewurztraminer, Sylvaner**, des noms que vous connaissez certainement. Ces vins blancs sont **les joyaux du patrimoine viticole alsacien** qui compte en tout sept cépages. Votre voyage commence à Strasbourg, dans les caves des hospices. Ce lieu hors du commun abrite tous les vins de la région ! De quoi s'offrir une belle dégustation après la visite de la ville.
 
-Puis poursuivez votre voyage en empruntant **la route des vins**. Au programme de ces 170 km de découverte, des dizaines et des dizaines de **villages pittoresques**. Un parcours jalonné de caves, de domaines et de vignobles à flanc de montagne où sont proposées de nombreuses activités ludiques autour du vin. Si vous êtes adepte du [slow tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue), enfourchez votre vélo et prenez la **véloroute du vignoble** ou bien arpentez les **divers sentiers pédestres balisés**.
+Puis poursuivez votre voyage en empruntant **la route des vins**. Au programme de ces 170 km de découverte, des dizaines et des dizaines de **villages pittoresques**. Un parcours jalonné de caves, de domaines et de vignobles à flanc de montagne où sont proposées de nombreuses activités ludiques autour du vin. Si vous êtes adepte du slow tourisme, enfourchez votre vélo et prenez la **véloroute du vignoble** ou bien arpentez les **divers sentiers pédestres balisés**.
 
 ### Régalez vos papilles avec le vin jaune du Jura
 
-Pour terminer ce tour de France des vignobles, arrêtons-nous dans **le Jura**. Cette région viticole, la plus petite du pays, est la seule qui produit du **vin jaune**, issu entièrement du cépage savagnin. Avec des arômes de noix et d'épices, il fait la fierté du [Jura](https://odysway.com/que-faire-dans-region-jura). Territoire authentique, il fait bon se balader au milieu d'une nature généreuse et des cités de caractère. 
+Pour terminer ce tour de France des vignobles, arrêtons-nous dans **le Jura**. Cette région viticole, la plus petite du pays, est la seule qui produit du **vin jaune**, issu entièrement du cépage savagnin. Avec des arômes de noix et d'épices, il fait la fierté du Jura. Territoire authentique, il fait bon se balader au milieu d'une nature généreuse et des cités de caractère. 
 
 ## Découvrez nos voyages culturels !
 
-Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
+Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de voyages culturels proposés par Odysway.
 ::

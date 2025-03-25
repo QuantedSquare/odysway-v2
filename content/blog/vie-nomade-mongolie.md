@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-07-01 10:59:00+00:00"
 tags: "Asie, Communautés locales, Famille, Grands espaces, Mongolie, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262"
+displayedImg: "/images/blogs/La-vie-nomade-en-Mongolie.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262"
+image-src: "/images/blogs/La-vie-nomade-en-Mongolie.jpg"
 ---
 #publication-date
 1 juillet 2019
@@ -31,12 +31,12 @@ La vie nomade en Mongolie
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/da2hg829QHuUVPQ0O2Z8?1611579864262"
+image-src: "/images/blogs/La-vie-nomade-en-Mongolie.jpg"
 ---
 #content
 Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face à des conditions climatiques de plus en plus rudes, à la pression de la sédentarisation et de la modernisation. **Mais comment se déroule une vie de nomade en Mongolie ?** Qui sont ces peuples qui se déplacent à travers les steppes ?
 
-Nous vous invitons à découvrir [notre article sur les habitants vivant en harmonie avec la nature.](https://odysway.com/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature)
+Nous vous invitons à découvrir notre article sur les habitants vivant en harmonie avec la nature.
 
 ## **La vie nomade : une tradition mongole lointaine**
 
@@ -46,7 +46,8 @@ Nous vous invitons à découvrir [notre article sur les habitants vivant en harm
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/m2wnrqlvTF6BDdecaX3q
+image-src: "/images/blogs/m2wnrqlvTF6BDdecaX3q-1742841071158.jpg"
+alt: undefined
 ---
 ::**
 
@@ -56,7 +57,8 @@ _Un yack broutant de l'herbe_
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OZIs2clPTUaluYcTUD9a
+image-src: "/images/blogs/OZIs2clPTUaluYcTUD9a-1742841071679.jpg"
+alt: undefined
 ---
 ::
 
@@ -70,7 +72,8 @@ Tout comme les animaux subviennent aux besoins des nomades, ces derniers doivent
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/M7qcnI8IQqiOV5VRMdKK
+image-src: "/images/blogs/M7qcnI8IQqiOV5VRMdKK-1742841072244.jpg"
+alt: 
 ---
 ::
 
@@ -82,7 +85,8 @@ Il y aurait **environ 900 000 nomades en Mongolie** vivant au sein de différe
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/H09doheWSsuZqmnTACac
+image-src: "/images/blogs/H09doheWSsuZqmnTACac-1742841072804.jpg"
+alt: undefined
 ---
 ::**
 
@@ -94,19 +98,20 @@ Dans la province du Khövsgöl dans la taïga, dans le nord de la Mongolie, il e
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/01mTMHmPSHuHbXM49hIy
+image-src: "/images/blogs/01mTMHmPSHuHbXM49hIy-1742841073386.jpg"
+alt: undefined
 ---
 ::**
 
 _Un enfant Tsaatan avec un traîneau_
 
-[Découvrez notre voyage avec les nomades](https://odysway.com/voyages/rencontre-nomades-mongolie?utm_source=Blog&utm_medium=SEO&utm_campaign=Vie_Nomade_Mongolie)
+Découvrez notre voyage avec les nomades
 
 Les nomades sont vraiment un peuple à part et s’immerger dans leur vie quotidienne est une expérience à part entière qu’Odysway a décidé de vous faire vivre. Accompagné d’un guide, lui-même d’origine Mongol, vous vivrez plusieurs jours au rythme de la vie nomade. Cueillette, traite des rennes, élevage, **une immersion dans une vie nomade hors du temps** et très enrichissante.
 
-En outre, le chamanisme fait partie des rituels et de la culture des nomades. En voyageant en Mongolie, vous aurez probablement la possibilité d’assister à un rituel chamanique, entre mysticisme et médecine traditionnelle. Si cette thématique vous interesse, [ce séjour](https://odysway.com/voyages/rencontre-nomades-mongolie?utm_source=Blog&utm_medium=SEO&utm_campaign=Vie_Nomade_Mongolie) vous intéressera probablement ! 
+En outre, le chamanisme fait partie des rituels et de la culture des nomades. En voyageant en Mongolie, vous aurez probablement la possibilité d’assister à un rituel chamanique, entre mysticisme et médecine traditionnelle. Si cette thématique vous interesse, ce séjour vous intéressera probablement ! 
 
 ## Séjours chez l'habitant
 
-Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
+Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les voyages chez l’habitant.
 ::

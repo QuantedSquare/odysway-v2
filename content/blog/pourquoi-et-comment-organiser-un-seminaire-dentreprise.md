@@ -25,12 +25,12 @@ published: false
 publishedAt: "2022-12-20 14:01:00+00:00"
 tags: "cohésion, équipe, relation, Séminaire, vacances"
 categories: "séminaire, entreprise, cohésion"
-displayedImg: "https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA"
+displayedImg: "/images/blogs/Pourquoi-et-comment-organiser-un-seminaire-d'entreprise.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA"
+image-src: "/images/blogs/Pourquoi-et-comment-organiser-un-seminaire-d'entreprise.jpg"
 ---
 #publication-date
 20 décembre 2022
@@ -44,7 +44,7 @@ La petite sœur d'Odysway est une agence d'évènementielle spécialisée dans l
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/RwIxQcQs6geqT3wbh4jA"
+image-src: "/images/blogs/Pourquoi-et-comment-organiser-un-seminaire-d'entreprise.jpg"
 ---
 #content
 ## Pourquoi parler de séminaire ? C'est très simple, Odysway s'est agrandie !
@@ -91,7 +91,7 @@ Dernier point non négligeable, le coût financier. Parce que, oui ! organiser 
 
 ### Tribus, pour un séminaire unique et insolite
 
-« Partez entre collègues, revenez en tribu », telle est notre devise chez [Tribus](https://www.linkedin.com/company/tribus-experience/) ! Notre spécialité ? **Organiser des séminaires sur-mesure qui collent à 100 % aux valeurs que véhicule chaque entreprise**. Au programme, des **activités insolites et responsables** ainsi qu’un accompagnement sur place tout au long de l’événement. Immersion mongole aux portes de Paris, séminaire d’entreprise les pieds dans l’eau à Marseille ou voyage d’exception au cœur d’un paradis naturel aux Açores ne sont que quelques idées de notre répertoire.
+« Partez entre collègues, revenez en tribu », telle est notre devise chez Tribus ! Notre spécialité ? **Organiser des séminaires sur-mesure qui collent à 100 % aux valeurs que véhicule chaque entreprise**. Au programme, des **activités insolites et responsables** ainsi qu’un accompagnement sur place tout au long de l’événement. Immersion mongole aux portes de Paris, séminaire d’entreprise les pieds dans l’eau à Marseille ou voyage d’exception au cœur d’un paradis naturel aux Açores ne sont que quelques idées de notre répertoire.
 
 Avec **Tribus**, vous avez la possibilité de créer votre propre **séminaire insolite**. Il suffit de nous faire part du type d’événement que vous souhaitez, du nombre de collaborateurs prévus, la durée et le lieu, et nous vous recontactons pour connaître plus en détail vos besoins et ainsi affiner votre demande. Chaque activité, chaque hébergement est sélectionné avec vous. Notre objectif est bel et bien d’organiser un séminaire d’entreprise original qui restera longtemps gravé dans la mémoire de chacun de vos collaborateurs. Avec notre expertise fondée sur notre métier, qui est la **création de voyages insolites,** vous pouvez être certain que votre objectif sera atteint.
 ::

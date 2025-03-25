@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-04-09 15:42:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf"
+displayedImg: "/images/blogs/Qui-sommes-nous.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf"
+image-src: "/images/blogs/Qui-sommes-nous.jpg"
 ---
 #publication-date
 9 avril 2021
@@ -31,7 +31,7 @@ Qui sommes-nous ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/lOMxqvh4TiGPhzPkQTJf"
+image-src: "/images/blogs/Qui-sommes-nous.jpg"
 ---
 #content
 ## Une équipe de voyageurs passionnés 
@@ -50,7 +50,8 @@ Sa citation préférée: "La vie ce n'est pas seulement respirer. C'est aussi av
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/aucD1BTmQXu3h9Pi4rWl
+image-src: "/images/blogs/aucD1BTmQXu3h9Pi4rWl-1742840721330.jpg"
+alt: undefined
 ---
 ::
 
@@ -66,7 +67,8 @@ Sa citation préférée : “Le visage humain fut toujours mon grand paysage.”
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/KIr1SfIWQeyzUWZ0fcuZ
+image-src: "/images/blogs/KIr1SfIWQeyzUWZ0fcuZ-1742840721860.jpg"
+alt: undefined
 ---
 ::
 
@@ -82,7 +84,8 @@ Sa citation préférée : "Si vous pensez que l'aventure est dangereuse, essayez
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/WQF1A54HQ4iphrUci4I8
+image-src: "/images/blogs/WQF1A54HQ4iphrUci4I8-1742840722420.jpg"
+alt: undefined
 ---
 ::
 
@@ -98,7 +101,8 @@ Sa citation préférée :  "Rien ne développe l'intelligence comme les voyages
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/nQ0O0MkNRtaZOIinMSAX
+image-src: "/images/blogs/nQ0O0MkNRtaZOIinMSAX-1742840722992.jpg"
+alt: undefined
 ---
 ::
 
@@ -114,7 +118,8 @@ Sa citation préférée: « Où que vous alliez, allez-y avec tout votre cœur. 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/rnW5bT5rQLy8WNJKOowB
+image-src: "/images/blogs/rnW5bT5rQLy8WNJKOowB-1742840723507.jpg"
+alt: undefined
 ---
 ::
 

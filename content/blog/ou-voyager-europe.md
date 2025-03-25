@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-05-12 15:31:00+00:00"
 tags: "Europe, Famille, Finlande, France, Grands espaces, Roumanie, Sport, Transports insolites"
 categories: ""
-displayedImg: "https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu"
+displayedImg: "/images/blogs/Ou-voyager-en-Europe.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu"
+image-src: "/images/blogs/Ou-voyager-en-Europe.jpg"
 ---
 #publication-date
 12 mai 2020
@@ -31,24 +31,25 @@ Où voyager en Europe ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/CQoX3aWGTSyihPNHBsyu"
+image-src: "/images/blogs/Ou-voyager-en-Europe.jpg"
 ---
 #content
 Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous vous souviendrez longtemps. **Mais où voyager en Europe ?** Il existe une telle diversité de destinations qu'il est souvent difficile de faire un choix. Odysway a sélectionné pour vous une liste de sept pays coups de cœur.
 
 ## La Finlande : une destination nature idéale où voyager en Europe
 
-Tout comme la Norvège ou bien la Suède, la Finlande est un pays convoité par les amoureux de la nature. Des forêts en abondance, des rivières qui zigzaguent à travers le pays, des lacs à perte de vue et une faune fascinante, c'est un **voyage 100 % plein air** qui vous attend. Randonnées, kayak ou observation des animaux, [**la Finlande est une destination nature par excellence où voyager en Europe**.](https://odysway.com/destinations/finlande)
+Tout comme la Norvège ou bien la Suède, la Finlande est un pays convoité par les amoureux de la nature. Des forêts en abondance, des rivières qui zigzaguent à travers le pays, des lacs à perte de vue et une faune fascinante, c'est un **voyage 100 % plein air** qui vous attend. Randonnées, kayak ou observation des animaux, **la Finlande est une destination nature par excellence où voyager en Europe**.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Ec7XfsDQiCTViJLfxZP6
+image-src: "/images/blogs/Voyager-en-Europe-en-Finlande.jpg"
+alt: Voyager en Europe en Finlande
 ---
 ::
 
 _Une expédition en canoë en Finlande, en reconnexion avec la nature._
 
-Si vous aussi, vous avez envie de vous reconnecter à la nature, osez [notre expérience en Finlande](https://odysway.com/voyages/reconnexion-nature-finlande) ! Entre expédition en canoë et bivouac en pleine forêt, vivez la Finlande intensément.
+Si vous aussi, vous avez envie de vous reconnecter à la nature, osez notre expérience en Finlande ! Entre expédition en canoë et bivouac en pleine forêt, vivez la Finlande intensément.
 
 ## L'Ecosse, une terre de légendes aux étendues sauvages
 
@@ -56,7 +57,8 @@ Saviez-vous qu'il y a plus de moutons que d'habitants en Ecosse ? C'est peut-êt
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/pI29r9CRDSyVsrbGpYgz
+image-src: "/images/blogs/Voyager-en-Europe-en-Ecosse.jpg"
+alt: Voyager en Europe en Ecosse
 ---
 ::
 
@@ -68,7 +70,8 @@ Si vous vous demandez encore **où voyager en Europe**, ne cherchez plus et **en
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/EOOBwG6AQvCaZkESe1zM
+image-src: "/images/blogs/Voyager-en-Europe-en-Roumanie.jpg"
+alt: Voyager en Europe en Roumanie
 ---
 ::
 
@@ -78,7 +81,8 @@ Faisant face à la Finlande, **l'Estonie est l'un des trois pays baltes où voya
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Vg4JwVVhTG3zsHG8t7lI
+image-src: "/images/blogs/Voyager-en-Europe-en-Estonie.jpg"
+alt: Voyager en Europe en Estonie
 ---
 ::
 
@@ -90,7 +94,8 @@ Surnommée le cœur vert de l'Europe**, la Slovénie séduira elle aussi les amo
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Smcq6QpQxK3xNZTRf02R
+image-src: "/images/blogs/Voyager-en-Europe-en-Slovenie.jpg"
+alt: Voyager en Europe en Slovénie
 ---
 ::
 
@@ -102,7 +107,8 @@ Partons maintenant en plein Atlantique, aux Açores. Situées au large du Portug
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/iOfra55xTVq3Tr8SD1FE
+image-src: "/images/blogs/Voyager-en-Europe-dans-les-Acores.jpg"
+alt: Voyager en Europe dans les Açores
 ---
 ::
 
@@ -110,23 +116,24 @@ _Un lac de cratère dans les Açores._
 
 ## Un pays où voyager absolument en Europe : la France bien évidemment !
 
-Comment ne pas citer **la France** dans notre liste des pays d'Europe coups de cœur ? Notre beau pays regorge en effet de nombreuses richesses et chaque région possède sa propre identité, sa propre culture. Il y existe mille et une raisons pour visiter la France : son histoire, son patrimoine, ses paysages, sans oublier sa fantastique gastronomie bien sûr. Retrouvez les 5 bonnes raisons de voyager en France dans [notre article dédié.](https://odysway.com/5-bonnes-raisons-voyager-france)
+Comment ne pas citer **la France** dans notre liste des pays d'Europe coups de cœur ? Notre beau pays regorge en effet de nombreuses richesses et chaque région possède sa propre identité, sa propre culture. Il y existe mille et une raisons pour visiter la France : son histoire, son patrimoine, ses paysages, sans oublier sa fantastique gastronomie bien sûr. Retrouvez les 5 bonnes raisons de voyager en France dans notre article dédié.
 
-Pour nos voyageurs désireux de vivre un court séjour en France tout en étant bien équipé, n'hésitez pas à découvrir les sacs et [valises solides de notre partenaire Eminent.](https://www.eminent.com/fr/collections/hard-shell-suitcases)
+Pour nos voyageurs désireux de vivre un court séjour en France tout en étant bien équipé, n'hésitez pas à découvrir les sacs et valises solides de notre partenaire Eminent.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/mJ32Ud6SF6yIv2ujDUiE
+image-src: "/images/blogs/mJ32Ud6SF6yIv2ujDUiE-1742840905317.jpg"
+alt: 
 ---
 ::
 
-_Partez avec Odysway [dans le pays basque](https://odysway.com/voyages/sejour-berger-pays-basque?utm_source=Blog&utm_medium=SEO&utm_campaign=o%C3%B9_voyager_en%20europe)._
+_Partez avec Odysway dans le pays basque._
 
-Pour voyager en France autrement, Odysway vous propose de [partager la vie d'un berger dans les Pyrénées.](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=5+bonnes+raisons+de+voyager+en+France)
+Pour voyager en France autrement, Odysway vous propose de partager la vie d'un berger dans les Pyrénées.
 
-[Découvrez tous nos voyages en France.](https://odysway.com/destinations/france)
+Découvrez tous nos voyages en France.
 
 ## Explorez notre thématique écotourisme !
 
-L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'[**écotourisme**](https://odysway.com/thematiques/ecotourisme) à travers les voyages que nous concevons pour vous.
+L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'**écotourisme** à travers les voyages que nous concevons pour vous.
 ::
