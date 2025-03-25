@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/81U4JJjqQtm51cIJrYfp.jpg
+image-src: /images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg
 ---
 #title
 En immersion avec un photographe animalier dans les Vosges
@@ -10,43 +10,43 @@ En immersion avec un photographe animalier dans les Vosges
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/Zm4GyjQESBujZV6lcI6W.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/photographie-animaliere-vosges/Zm4GyjQESBujZV6lcI6W.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/iwOwTrQYQ0iyLcp40yZb.jpg
+image-src: /images/voyages/photographie-animaliere-vosges/iwOwTrQYQ0iyLcp40yZb.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/8ukmPftTQGAtZc3Ef1yh.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/photographie-animaliere-vosges/8ukmPftTQGAtZc3Ef1yh.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/WncSFkBjSNeCpbW48uv1.jpg
+image-src: /images/voyages/photographie-animaliere-vosges/WncSFkBjSNeCpbW48uv1.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/P1YLdxOIR9yCXuV5TR5W.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/photographie-animaliere-vosges/P1YLdxOIR9yCXuV5TR5W.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/ezUL4D2DSjmpBJ8N73TD.jpg
+image-src: /images/voyages/photographie-animaliere-vosges/ezUL4D2DSjmpBJ8N73TD.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/jD8zYMQBiXna5zdtqrnw.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/photographie-animaliere-vosges/jD8zYMQBiXna5zdtqrnw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Gh18aadnROm8NkMg38AV.jpg
+image-src: /images/voyages/photographie-animaliere-vosges/Gh18aadnROm8NkMg38AV.jpg
 ---
 ::::
   :::
@@ -134,7 +134,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/UHqIymZAQ02tQckUjyT2.jpg
+    avatar: /images/voyages/photographie-animaliere-vosges/UHqIymZAQ02tQckUjyT2.jpg
     avatar-size: "60"
     ---
     #title
@@ -144,7 +144,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
 
   :::highlights-row
   ---
-  image: /images/voyages/5pABGbe0RUu7q0E3zmMY.jpg
+  image: /images/voyages/photographie-animaliere-vosges/5pABGbe0RUu7q0E3zmMY.jpg
   ---
   ::::highlight-list-item
   La découverte des Vosges et de sa biodiversité
@@ -204,7 +204,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
   
     :::day-row
     ---
-    image: /images/voyages/JywWh0rRa2y9kyj1Aok9.jpg
+    image: /images/voyages/photographie-animaliere-vosges/JywWh0rRa2y9kyj1Aok9.jpg
     ---
     #subtitle
     JOUR 1
@@ -219,7 +219,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
 
     :::day-row
     ---
-    image: /images/voyages/JuFmcHjSTl6ar1uY8pUc.jpg
+    image: /images/voyages/photographie-animaliere-vosges/JuFmcHjSTl6ar1uY8pUc.jpg
     ---
     #subtitle
     JOUR 2
@@ -234,7 +234,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
 
     :::day-row
     ---
-    image: /images/voyages/lNaAR1WxRPOmlFSEvaAo.jpg
+    image: /images/voyages/photographie-animaliere-vosges/lNaAR1WxRPOmlFSEvaAo.jpg
     ---
     #subtitle
     JOUR 3
@@ -249,7 +249,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
 
     :::day-row
     ---
-    image: /images/voyages/LL7lFkWQS0SjhzJAmox6.jpg
+    image: /images/voyages/photographie-animaliere-vosges/LL7lFkWQS0SjhzJAmox6.jpg
     ---
     #subtitle
     JOUR 4
@@ -278,19 +278,19 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/rBGIpdb4QFGgwIoGRqI8.jpg
+    image: /images/voyages/photographie-animaliere-vosges/rBGIpdb4QFGgwIoGRqI8.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/IaTwSIA1QrWy99eRN5NB.jpg
+    image: /images/voyages/photographie-animaliere-vosges/IaTwSIA1QrWy99eRN5NB.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Ua8CbhSbK3rLL8Q7hGgz.jpg
+    image: /images/voyages/photographie-animaliere-vosges/Ua8CbhSbK3rLL8Q7hGgz.jpg
     ---
     :::::
     ::::
@@ -308,7 +308,7 @@ Ce séjour, rythmé par des marches d'approches et affût, sera une expérience 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/UHqIymZAQ02tQckUjyT2.jpg
+    avatar: /images/voyages/photographie-animaliere-vosges/UHqIymZAQ02tQckUjyT2.jpg
     ---
     #title
     Aurélien

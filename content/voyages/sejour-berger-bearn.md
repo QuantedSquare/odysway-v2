@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/lGYd3MVTRoaKoyEEPsjk.jpg
+image-src: /images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg
 ---
 #title
 Vis ma vie de berger dans les Pyrénées
@@ -10,107 +10,107 @@ Vis ma vie de berger dans les Pyrénées
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/vWamthSTHKziJrmdKMOP.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/vWamthSTHKziJrmdKMOP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/EC3QHYsiTdOQyZwo3FFC.jpg
+image-src: /images/voyages/sejour-berger-bearn/EC3QHYsiTdOQyZwo3FFC.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/a5hMKAdJT0OcPQxM7kqB.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/a5hMKAdJT0OcPQxM7kqB.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/E7fXJGvT8vkYdoX8bIrA.jpg
+image-src: /images/voyages/sejour-berger-bearn/E7fXJGvT8vkYdoX8bIrA.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/MErzklaBQZib45Vo1fiF.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/sejour-berger-bearn/MErzklaBQZib45Vo1fiF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/xth65JluTpCrgZOqYIKg.jpg
+image-src: /images/voyages/sejour-berger-bearn/xth65JluTpCrgZOqYIKg.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/PVUDr2h1SIN8aw1ZFBaA.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/PVUDr2h1SIN8aw1ZFBaA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/DPUNdrBVTyaLIh3wnDvk.jpg
+image-src: /images/voyages/sejour-berger-bearn/DPUNdrBVTyaLIh3wnDvk.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/96Kt8b8EQqyPkknTwwBK.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/96Kt8b8EQqyPkknTwwBK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/gRVdpi6pR4iHfpu8QJn0.jpg
+image-src: /images/voyages/sejour-berger-bearn/gRVdpi6pR4iHfpu8QJn0.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ZdbnNd6oTHGGDlRlWn0p.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/sejour-berger-bearn/ZdbnNd6oTHGGDlRlWn0p.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/EMv9MdwtThS8WjK1KxkI.jpg
+image-src: /images/voyages/sejour-berger-bearn/EMv9MdwtThS8WjK1KxkI.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/XHU0cioGTmiuohqDbrug.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/XHU0cioGTmiuohqDbrug.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/dAX63YqwQAOYzhWk54bH.jpg
+image-src: /images/voyages/sejour-berger-bearn/dAX63YqwQAOYzhWk54bH.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/yh0nZkO4STybUGhy7dg1.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/yh0nZkO4STybUGhy7dg1.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/S4DRiTAdQWCFuIMKCi4T.jpg
+image-src: /images/voyages/sejour-berger-bearn/S4DRiTAdQWCFuIMKCi4T.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/bgw7ktIbQN20ggEQJDRV.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/sejour-berger-bearn/bgw7ktIbQN20ggEQJDRV.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/lB6IojDPRaeGCNlkqAQP.jpg
+image-src: /images/voyages/sejour-berger-bearn/lB6IojDPRaeGCNlkqAQP.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/YI03TFR72MJ1kCG1wrwi.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/YI03TFR72MJ1kCG1wrwi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/2l1bUpNsSKCBrauTyyQr.jpg
+image-src: /images/voyages/sejour-berger-bearn/2l1bUpNsSKCBrauTyyQr.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/wMgOoGB7QOSd690LYAfp.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/wMgOoGB7QOSd690LYAfp.jpg"}
 ::::
   :::#component-slot-2
   :::video-dialog
@@ -206,7 +206,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/sejour-berger-bearn/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -216,7 +216,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
 
   :::highlights-row
   ---
-  image: /images/voyages/r7nUJWsgQVKySXxdppm8.jpg
+  image: /images/voyages/sejour-berger-bearn/r7nUJWsgQVKySXxdppm8.jpg
   ---
   ::::highlight-list-item
   La découverte du véritable quotidien de berger en estive
@@ -280,7 +280,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   
     :::day-row
     ---
-    image: /images/voyages/mvx58lw1RDSN108MJDQh.jpg
+    image: /images/voyages/sejour-berger-bearn/mvx58lw1RDSN108MJDQh.jpg
     ---
     #subtitle
     JOUR 1
@@ -295,7 +295,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
 
     :::day-row
     ---
-    image: /images/voyages/8d1vULa4SSqSQsex8Ow9.jpg
+    image: /images/voyages/sejour-berger-bearn/8d1vULa4SSqSQsex8Ow9.jpg
     ---
     #subtitle
     JOUR 2
@@ -310,7 +310,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
 
     :::day-row
     ---
-    image: /images/voyages/GU9frFNRDyBhXErJFx1t.jpg
+    image: /images/voyages/sejour-berger-bearn/GU9frFNRDyBhXErJFx1t.jpg
     ---
     #subtitle
     JOUR 3
@@ -325,7 +325,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
 
     :::day-row
     ---
-    image: /images/voyages/tu5kNEGXQ06ViY6GpBji.jpg
+    image: /images/voyages/sejour-berger-bearn/tu5kNEGXQ06ViY6GpBji.jpg
     ---
     #subtitle
     JOUR 4
@@ -340,7 +340,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
 
     :::day-row
     ---
-    image: /images/voyages/cIv1uTbpTsyKAX5fhKMt.jpg
+    image: /images/voyages/sejour-berger-bearn/cIv1uTbpTsyKAX5fhKMt.jpg
     ---
     #subtitle
     JOUR 5
@@ -369,19 +369,19 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/JacSdSAWTfW40FdENnQh.jpg
+    image: /images/voyages/sejour-berger-bearn/JacSdSAWTfW40FdENnQh.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/HJBg4gECT3qXda2TqenG.jpg
+    image: /images/voyages/sejour-berger-bearn/HJBg4gECT3qXda2TqenG.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/0S9ohMXZRqqXZqcCr9dZ.jpg
+    image: /images/voyages/sejour-berger-bearn/0S9ohMXZRqqXZqcCr9dZ.jpg
     ---
     :::::
     ::::
@@ -399,7 +399,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/IPOu4FhWQCH17gOeOcBY.jpg
+    avatar: /images/voyages/sejour-berger-bearn/IPOu4FhWQCH17gOeOcBY.jpg
     ---
     #title
     Accompagnateur en moyenne montagne
@@ -412,7 +412,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/p4xG2vT7QpW2WcrnIuPa.jpg
+    avatar: /images/voyages/sejour-berger-bearn/p4xG2vT7QpW2WcrnIuPa.jpg
     ---
     #title
     Claire et Sandrine

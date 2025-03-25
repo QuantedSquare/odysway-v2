@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/XtDQHu4QWmr8yiCYCBLg.jpg
+image-src: /images/voyages/sejour-pnr-morbihan/XtDQHu4QWmr8yiCYCBLg.jpg
 ---
 #title
 Entre Terre et Mer dans le Golfe du Morbihan
@@ -93,7 +93,7 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/sejour-pnr-morbihan/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -103,7 +103,7 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
 
   :::highlights-row
   ---
-  image: /images/voyages/6dsOycYOQsS9UnmEM8NO.jpg
+  image: /images/voyages/sejour-pnr-morbihan/6dsOycYOQsS9UnmEM8NO.jpg
   ---
   ::::highlight-list-item
   L'initiation à la pêche à pied, une activité phare de la région
@@ -163,7 +163,7 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
   
     :::day-row
     ---
-    image: /images/voyages/4kOz34KyRQCW96xjvYqv.jpg
+    image: /images/voyages/sejour-pnr-morbihan/4kOz34KyRQCW96xjvYqv.jpg
     ---
     #subtitle
     JOUR 1
@@ -178,7 +178,7 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
 
     :::day-row
     ---
-    image: /images/voyages/iz1YVwkCStG4unc5t8Tz.jpg
+    image: /images/voyages/sejour-pnr-morbihan/iz1YVwkCStG4unc5t8Tz.jpg
     ---
     #subtitle
     JOUR 2
@@ -193,7 +193,7 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
 
     :::day-row
     ---
-    image: /images/voyages/Fgnmo9FpQSeB4P7h9WK7.jpg
+    image: /images/voyages/sejour-pnr-morbihan/Fgnmo9FpQSeB4P7h9WK7.jpg
     ---
     #subtitle
     JOUR 3
@@ -222,19 +222,19 @@ Voici un séjour spécial et idéal pour vous imprégner des richesses que recè
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/hTHt3KpSBys0RAmt7ESx.jpg
+    image: /images/voyages/sejour-pnr-morbihan/hTHt3KpSBys0RAmt7ESx.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/DDntzRg0Q0u6xgXsMJbE.jpg
+    image: /images/voyages/sejour-pnr-morbihan/DDntzRg0Q0u6xgXsMJbE.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/IzbSAoSSwaU92ZlvD5c4.jpg
+    image: /images/voyages/sejour-pnr-morbihan/IzbSAoSSwaU92ZlvD5c4.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/HJtGmNQWuOz2HRQx1uA7.jpg
+image-src: /images/voyages/voyage-train-ouzbekistan/HJtGmNQWuOz2HRQx1uA7.jpg
 ---
 #title
 À bord du train de la Route de la Soie : expériences immersives et nuits en yourte en Ouzbékistan
@@ -91,7 +91,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/2MZG6CWYSZqc1yaulJvh.jpg
+    avatar: /images/voyages/voyage-train-ouzbekistan/2MZG6CWYSZqc1yaulJvh.jpg
     avatar-size: "60"
     ---
     #title
@@ -101,7 +101,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
   :::highlights-row
   ---
-  image: /images/voyages/Cpz5x102Ts6ZCJr2WJpn.jpg
+  image: /images/voyages/voyage-train-ouzbekistan/Cpz5x102Ts6ZCJr2WJpn.jpg
   ---
   ::::highlight-list-item
   Le trajet en train à travers des paysages à couper le souffle
@@ -161,7 +161,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
   
     :::day-row
     ---
-    image: /images/voyages/y58zlvLVTrmdT6a6KMSW.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/y58zlvLVTrmdT6a6KMSW.jpg
     ---
     #subtitle
     JOUR 1
@@ -176,7 +176,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/ZMuvPfeRb2ziEh5m0Qpc.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/ZMuvPfeRb2ziEh5m0Qpc.jpg
     ---
     #subtitle
     JOUR 2
@@ -191,7 +191,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/VVEe9NBpQNrkbDXOguuX.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/VVEe9NBpQNrkbDXOguuX.jpg
     ---
     #subtitle
     JOUR 3
@@ -206,7 +206,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/I2tYrkPSFOQ5f3yYgMqH.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/I2tYrkPSFOQ5f3yYgMqH.jpg
     ---
     #subtitle
     JOUR 4
@@ -221,7 +221,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/5nuAijvzS1OTpgsjC7Dp.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/5nuAijvzS1OTpgsjC7Dp.jpg
     ---
     #subtitle
     JOUR 5
@@ -236,7 +236,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/AOjtG50Ti6lL2EbQAr1F.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/AOjtG50Ti6lL2EbQAr1F.jpg
     ---
     #subtitle
     JOUR 6
@@ -251,7 +251,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/VB13fhuQ8aA4rVLiyZcg.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/VB13fhuQ8aA4rVLiyZcg.jpg
     ---
     #subtitle
     JOUR 7
@@ -266,7 +266,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/dt0E8dioTQ2UsG8glNOW.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/dt0E8dioTQ2UsG8glNOW.jpg
     ---
     #subtitle
     JOUR 8
@@ -281,7 +281,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/4LBf4JuSRylwffBwQo1L.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/4LBf4JuSRylwffBwQo1L.jpg
     ---
     #subtitle
     JOUR 9
@@ -296,7 +296,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/OIhr1oE8RMOUXRWkE5kA.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/OIhr1oE8RMOUXRWkE5kA.jpg
     ---
     #subtitle
     JOURS 10 ET 11
@@ -311,7 +311,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
 
     :::day-row
     ---
-    image: /images/voyages/11g4686pTvGRaYAlDlNl.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/11g4686pTvGRaYAlDlNl.jpg
     ---
     #subtitle
     JOUR 12
@@ -343,19 +343,19 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/6tr4nO9PQ0aJQe6n0J0i.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/6tr4nO9PQ0aJQe6n0J0i.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Od47BItBSlywiP3JCyFS.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/Od47BItBSlywiP3JCyFS.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/t21E07EyRHSHXhT2eyuW.jpg
+    image: /images/voyages/voyage-train-ouzbekistan/t21E07EyRHSHXhT2eyuW.jpg
     ---
     :::::
     ::::
@@ -373,7 +373,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/EZsxdND8QLCtxtt1LPkW.jpg
+    avatar: /images/voyages/voyage-train-ouzbekistan/EZsxdND8QLCtxtt1LPkW.jpg
     ---
     #title
     Bek
@@ -386,7 +386,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/h4VVuobqRiadNq9UvgMU.jpg
+    avatar: /images/voyages/voyage-train-ouzbekistan/h4VVuobqRiadNq9UvgMU.jpg
     ---
     #title
     Ilyos
@@ -543,7 +543,7 @@ Les avis des voyageurs
 
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/yewRGEQauk86g2XXCHzQ.jpg
+    photo: /images/voyages/voyage-train-ouzbekistan/yewRGEQauk86g2XXCHzQ.jpg
     ---
     #title
     Antoine-Benjamin, []{style="color: grey"}

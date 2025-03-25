@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/wm3EZXWTfq2Wpx8IqpMr.jpg
+image-src: /images/voyages/inde-arunachal-pradesh/wm3EZXWTfq2Wpx8IqpMr.jpg
 ---
 #title
 Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh
@@ -10,47 +10,47 @@ Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/LEBMup6yRDaSpdOIdq4p.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/inde-arunachal-pradesh/LEBMup6yRDaSpdOIdq4p.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/4bRonumsSweGQSzKQe5C.jpg
+image-src: /images/voyages/inde-arunachal-pradesh/4bRonumsSweGQSzKQe5C.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/qWd3XZfQM67FKQoCbcod.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/inde-arunachal-pradesh/qWd3XZfQM67FKQoCbcod.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/JAOM0972QvSJ5R1JOeIG.jpg
+image-src: /images/voyages/inde-arunachal-pradesh/JAOM0972QvSJ5R1JOeIG.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/NmLAJaJXTiW0rWB1aWY8.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/inde-arunachal-pradesh/NmLAJaJXTiW0rWB1aWY8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/oXWddwjORpW8SF5dA34l.jpg
+image-src: /images/voyages/inde-arunachal-pradesh/oXWddwjORpW8SF5dA34l.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/QB0lPi1eSCz1enlI0dA3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/inde-arunachal-pradesh/QB0lPi1eSCz1enlI0dA3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/sXo268UOQnWRmMFgl3Yl.jpg
+image-src: /images/voyages/inde-arunachal-pradesh/sXo268UOQnWRmMFgl3Yl.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/xESzmjQBQGilAlEeOcIX.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/inde-arunachal-pradesh/xESzmjQBQGilAlEeOcIX.jpg"}
 ::::
   :::
 ::
@@ -137,7 +137,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/gnUj7NdZQUyplzgAZGJw.jpg
+    avatar: /images/voyages/inde-arunachal-pradesh/gnUj7NdZQUyplzgAZGJw.jpg
     avatar-size: "60"
     ---
     #title
@@ -147,7 +147,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
   :::highlights-row
   ---
-  image: /images/voyages/MUNbct5oSPRuZhTtTzsS.jpg
+  image: /images/voyages/inde-arunachal-pradesh/MUNbct5oSPRuZhTtTzsS.jpg
   ---
   ::::highlight-list-item
   La rencontre des communautés tribales fascinantes d’Arunachal Pradesh
@@ -207,7 +207,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
   
     :::day-row
     ---
-    image: /images/voyages/RA0QrF8QiiKI0MaMsXIl.jpg
+    image: /images/voyages/inde-arunachal-pradesh/RA0QrF8QiiKI0MaMsXIl.jpg
     ---
     #subtitle
     JOUR 1 
@@ -222,7 +222,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/XVfXxy2HRCG3OOxyZ5zI.jpg
+    image: /images/voyages/inde-arunachal-pradesh/XVfXxy2HRCG3OOxyZ5zI.jpg
     ---
     #subtitle
     JOUR 2
@@ -237,7 +237,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/OcpMms6bSgKR6aFxaZ79.jpg
+    image: /images/voyages/inde-arunachal-pradesh/OcpMms6bSgKR6aFxaZ79.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -253,7 +253,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/tVskbnT8iNiexiPr9Qlw.jpg
+    image: /images/voyages/inde-arunachal-pradesh/tVskbnT8iNiexiPr9Qlw.jpg
     ---
     #subtitle
     JOUR 5
@@ -268,7 +268,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/YUiqrBYPQ6619ghLyGQt.jpg
+    image: /images/voyages/inde-arunachal-pradesh/YUiqrBYPQ6619ghLyGQt.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -285,7 +285,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/bHfheY9TqZuUcyiIAdzQ.jpg
+    image: /images/voyages/inde-arunachal-pradesh/bHfheY9TqZuUcyiIAdzQ.jpg
     ---
     #subtitle
     JOURS 8 A 10
@@ -302,7 +302,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/ueC3DYeuQwagJU3qSFzb.jpg
+    image: /images/voyages/inde-arunachal-pradesh/ueC3DYeuQwagJU3qSFzb.jpg
     ---
     #subtitle
     JOUR 11
@@ -317,7 +317,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/Qe8f09CGSyaK8QoEn70W.jpg
+    image: /images/voyages/inde-arunachal-pradesh/Qe8f09CGSyaK8QoEn70W.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -332,7 +332,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/L06v6JIFTHyatNtHl8Fm.jpg
+    image: /images/voyages/inde-arunachal-pradesh/L06v6JIFTHyatNtHl8Fm.jpg
     ---
     #subtitle
     JOURS 14 ET 15
@@ -348,7 +348,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/wf3XyO6mQsqmoRiguCUO.jpg
+    image: /images/voyages/inde-arunachal-pradesh/wf3XyO6mQsqmoRiguCUO.jpg
     ---
     #subtitle
     JOURS 16 ET 17
@@ -364,7 +364,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/npF10MsRQeSG8dS0QvrB.jpg
+    image: /images/voyages/inde-arunachal-pradesh/npF10MsRQeSG8dS0QvrB.jpg
     ---
     #subtitle
     JOURS 18 ET 19
@@ -380,7 +380,7 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
 
     :::day-row
     ---
-    image: /images/voyages/MlprHYR8TraSk0EqoG2P.jpg
+    image: /images/voyages/inde-arunachal-pradesh/MlprHYR8TraSk0EqoG2P.jpg
     ---
     #subtitle
     JOUR 20
@@ -409,19 +409,19 @@ Un voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/yYNpxudHQA2GntE3IqeH.jpg
+    image: /images/voyages/inde-arunachal-pradesh/yYNpxudHQA2GntE3IqeH.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/dOpX4WOSlWIV1FFPS0YA.jpg
+    image: /images/voyages/inde-arunachal-pradesh/dOpX4WOSlWIV1FFPS0YA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ba0McbbSZu0jl5T3fPbf.jpg
+    image: /images/voyages/inde-arunachal-pradesh/ba0McbbSZu0jl5T3fPbf.jpg
     ---
     :::::
     ::::
@@ -441,7 +441,7 @@ Si vous souhaitez être accompagné par un guide francophone également, dites l
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/yTeldV3sR4Ox5SMIEIPV.jpg
+    avatar: /images/voyages/inde-arunachal-pradesh/yTeldV3sR4Ox5SMIEIPV.jpg
     ---
     #title
     Raju

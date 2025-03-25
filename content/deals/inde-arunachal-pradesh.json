@@ -1,14 +1,14 @@
 {
   "title": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",
   "slug": "inde-arunachal-pradesh",
-  "ISO": "IN",
+  "iso": "IN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/inde-arunachal-pradesh/wm3EZXWTfq2Wpx8IqpMr",
+    "alt": "wm3EZXWTfq2Wpx8IqpMr"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/inde-arunachal-pradesh/dsIzD4xYRImkwCnHU9Cb.jpg",
+    "alt": "dsIzD4xYRImkwCnHU9Cb"
   },
   "country": "Inde",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 900
@@ -44,8 +44,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 900

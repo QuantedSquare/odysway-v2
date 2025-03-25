@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/MaEtuo11TVyAUs0BmJtL.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/MaEtuo11TVyAUs0BmJtL.jpg
 ---
 #title
 Du Laos au Cambodge, voyage à la croisée des cultures
@@ -10,77 +10,77 @@ Du Laos au Cambodge, voyage à la croisée des cultures
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/WNTneh5jRde8Y7XB037G.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-culturel-laos-cambodge/WNTneh5jRde8Y7XB037G.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/YBAFhcMcS1amf0xBr6bS.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/YBAFhcMcS1amf0xBr6bS.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/yhWwBGl9RXq7iorcsLoH.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-culturel-laos-cambodge/yhWwBGl9RXq7iorcsLoH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/rDgyn0pnTOWK1SxRX2wX.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/rDgyn0pnTOWK1SxRX2wX.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/FlXW1EhVToulw3TScXnU.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-culturel-laos-cambodge/FlXW1EhVToulw3TScXnU.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/BzSq14UqTkqPX9y5f5qn.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/BzSq14UqTkqPX9y5f5qn.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/37tWJGIIRBKPRIX39DFw.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-culturel-laos-cambodge/37tWJGIIRBKPRIX39DFw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/weF0z8vkRPGrb1L2M5MM.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/weF0z8vkRPGrb1L2M5MM.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/zsSL4e2MQp2DI3RdbGdg.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-culturel-laos-cambodge/zsSL4e2MQp2DI3RdbGdg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/0EGj3aaSdW9U7uJWL3IN.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/0EGj3aaSdW9U7uJWL3IN.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Ybf9JXpmQa8iKiVLC4HY.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-culturel-laos-cambodge/Ybf9JXpmQa8iKiVLC4HY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/MKsHK9jrSG2YiGigsLgt.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/MKsHK9jrSG2YiGigsLgt.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/8bf34XETpuMJ3cGZRqja.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-culturel-laos-cambodge/8bf34XETpuMJ3cGZRqja.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/y5CrrjRCqXbdPpqCHggV.jpg
+image-src: /images/voyages/voyage-culturel-laos-cambodge/y5CrrjRCqXbdPpqCHggV.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/o92rUiUqTWKBvMyXShRc.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-culturel-laos-cambodge/o92rUiUqTWKBvMyXShRc.jpg"}
 ::::
   :::
 ::
@@ -169,7 +169,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-culturel-laos-cambodge/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -179,7 +179,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
   :::highlights-row
   ---
-  image: /images/voyages/qqkNuHYQrGx6Nx24ZClQ.jpg
+  image: /images/voyages/voyage-culturel-laos-cambodge/qqkNuHYQrGx6Nx24ZClQ.jpg
   ---
   ::::highlight-list-item
   Vivez les plus belles expériences du Laos et du Cambodge en un seul voyage
@@ -239,7 +239,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
   
     :::day-row
     ---
-    image: /images/voyages/1cxOpBFSTEqSR0K2ZLvi.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/1cxOpBFSTEqSR0K2ZLvi.jpg
     ---
     #subtitle
     JOUR 1
@@ -254,7 +254,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/Saj1SVQXuESTNagBn5hg.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/Saj1SVQXuESTNagBn5hg.jpg
     ---
     #subtitle
     JOUR 2
@@ -269,7 +269,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/c69pzfa6S64nHDMM05PG.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/c69pzfa6S64nHDMM05PG.jpg
     ---
     #subtitle
     JOUR 3
@@ -284,7 +284,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/MXzyzlKDQJGIXJNjiebR.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/MXzyzlKDQJGIXJNjiebR.jpg
     ---
     #subtitle
     JOUR 4
@@ -299,7 +299,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/2hKaQQATMqrP7AoP6uw2.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/2hKaQQATMqrP7AoP6uw2.jpg
     ---
     #subtitle
     JOUR 5
@@ -314,7 +314,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/pVG0BpmeTFGbmIIFx3HG.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/pVG0BpmeTFGbmIIFx3HG.jpg
     ---
     #subtitle
     JOUR 6
@@ -329,7 +329,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/ng52DBmRRZugsN8umrHv.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/ng52DBmRRZugsN8umrHv.jpg
     ---
     #subtitle
     JOUR 7
@@ -344,7 +344,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/OdOBzPT5yCV81MV3XdAs.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/OdOBzPT5yCV81MV3XdAs.jpg
     ---
     #subtitle
     JOUR 8
@@ -359,7 +359,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/Tz2okeA2S8SUvxvGDSDC.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/Tz2okeA2S8SUvxvGDSDC.jpg
     ---
     #subtitle
     JOUR 9
@@ -375,7 +375,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
 
     :::day-row
     ---
-    image: /images/voyages/CLmZUgDCRWiDxuZQzUAN.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/CLmZUgDCRWiDxuZQzUAN.jpg
     ---
     #subtitle
     JOUR 10
@@ -407,19 +407,19 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/NLiyOv7gQKaCIqGQwSsV.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/NLiyOv7gQKaCIqGQwSsV.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/olfEsckCQy5GlTBVMMym.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/olfEsckCQy5GlTBVMMym.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/MalbMjrRIiFGqkyCJYts.jpg
+    image: /images/voyages/voyage-culturel-laos-cambodge/MalbMjrRIiFGqkyCJYts.jpg
     ---
     :::::
     ::::

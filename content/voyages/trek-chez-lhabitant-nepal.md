@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/CBFPoeCsQLumCFzRoq9e.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/CBFPoeCsQLumCFzRoq9e.jpg
 ---
 #title
 Trek chez l'habitant au Népal, au fil des villages Sherpas
@@ -10,123 +10,123 @@ Trek chez l'habitant au Népal, au fil des villages Sherpas
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/T1p2GZofRN2ozxpSjqC8.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/T1p2GZofRN2ozxpSjqC8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5pavPVFETQqeogAcXkxU.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/5pavPVFETQqeogAcXkxU.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/WwdJ3zSGREKyDOQZo701.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/WwdJ3zSGREKyDOQZo701.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/WnqWLvLRpSLyfbWvdpHc.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/WnqWLvLRpSLyfbWvdpHc.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/WsfcI2DYTS6BB3oAvbtQ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/WsfcI2DYTS6BB3oAvbtQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/5KlRIAwOSiu44yPLffLQ.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/5KlRIAwOSiu44yPLffLQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/U2c5thNXR0WGDi5eP8xq.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/U2c5thNXR0WGDi5eP8xq.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/QVGpF3NRTSyco2BsMIIA.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/QVGpF3NRTSyco2BsMIIA.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/Iy0LyyFwTcuWb7pkvlpD.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/Iy0LyyFwTcuWb7pkvlpD.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/pJTadq6RSP2hVxzottkr.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/pJTadq6RSP2hVxzottkr.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/dmKvr3dBQBO4KubxpilN.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/dmKvr3dBQBO4KubxpilN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/M1QgmTAcSb2U3S9ecL1H.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/M1QgmTAcSb2U3S9ecL1H.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/735rMWt2RIeh21sqGdlt.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/735rMWt2RIeh21sqGdlt.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/I837yU93Tuam5cbdpW0k.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/I837yU93Tuam5cbdpW0k.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/gaKVOTCjTqKhBOW6PjIi.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/gaKVOTCjTqKhBOW6PjIi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/XvwFRYZSqaOgZrVjAy9Q.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/XvwFRYZSqaOgZrVjAy9Q.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/1QaNJcQGSDWbjDFT1Qki.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/1QaNJcQGSDWbjDFT1Qki.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/DNr50OhSfiGJngtSQmnn.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/DNr50OhSfiGJngtSQmnn.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/pyChcQbtT3OSFgzvL1qD.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/pyChcQbtT3OSFgzvL1qD.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/UvFW94qlQLmskEQkHlub.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/UvFW94qlQLmskEQkHlub.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/6eZTyTmqRqKzb8oDivLN.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/6eZTyTmqRqKzb8oDivLN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/nMOP5QfRQ1KS1F2VoWg6.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/nMOP5QfRQ1KS1F2VoWg6.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Mt18gbdRIu9AhJ548slX.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/Mt18gbdRIu9AhJ548slX.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/HMuwdPZNS6YDlUwcKsZJ.jpg
+image-src: /images/voyages/trek-chez-lhabitant-nepal/HMuwdPZNS6YDlUwcKsZJ.jpg
 ---
 ::::
   :::
@@ -218,7 +218,7 @@ Ce voyage s'adresse à tous ceux qui souhaitent découvrir le Népal d'une mani�
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/trek-chez-lhabitant-nepal/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -228,7 +228,7 @@ Ce voyage s'adresse à tous ceux qui souhaitent découvrir le Népal d'une mani�
 
   :::highlights-row
   ---
-  image: /images/voyages/Ks1ehNb2TGS2RO72xrQ7.jpg
+  image: /images/voyages/trek-chez-lhabitant-nepal/Ks1ehNb2TGS2RO72xrQ7.jpg
   ---
   ::::highlight-list-item
   Vivez un trek de niveau modéré (3/4) véritablement unique, à l'écart des circuits classiques et rarement fréquenté par d'autres voyageurs
@@ -296,7 +296,7 @@ Ce voyage s'adresse à tous ceux qui souhaitent découvrir le Népal d'une mani�
   
     :::day-row
     ---
-    image: /images/voyages/9riCPDocQD2kETAiEidU.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/9riCPDocQD2kETAiEidU.jpg
     ---
     #subtitle
     JOUR 1
@@ -312,7 +312,7 @@ Transport en voiture - environ 10 km - 20 minutes de route.
 
     :::day-row
     ---
-    image: /images/voyages/hx8ShbmzTAe0FNnEYNgk.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/hx8ShbmzTAe0FNnEYNgk.jpg
     ---
     #subtitle
     JOUR 2
@@ -328,7 +328,7 @@ Transport en jeep ou bus local - 185km - 7h de route
 
     :::day-row
     ---
-    image: /images/voyages/wFJbSGr3QCGCTwmFl0if.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/wFJbSGr3QCGCTwmFl0if.jpg
     ---
     #subtitle
     JOUR 3
@@ -344,7 +344,7 @@ Transport en jeep ou bus local - 185km - 7h de route
 
     :::day-row
     ---
-    image: /images/voyages/zF4YpD0xRMK8f2gdbatU.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/zF4YpD0xRMK8f2gdbatU.jpg
     ---
     #subtitle
     JOUR 4
@@ -360,7 +360,7 @@ Transport en jeep ou bus local - 185km - 7h de route
 
     :::day-row
     ---
-    image: /images/voyages/lAQ6DOL2TWqAgbJDrDjE.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/lAQ6DOL2TWqAgbJDrDjE.jpg
     ---
     #subtitle
     JOUR 5
@@ -375,7 +375,7 @@ Transport en jeep ou bus local - 185km - 7h de route
 
     :::day-row
     ---
-    image: /images/voyages/UXEJmHsoTZuOQMFKXVBn.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/UXEJmHsoTZuOQMFKXVBn.jpg
     ---
     #subtitle
     JOUR 6
@@ -390,7 +390,7 @@ Transport en jeep ou bus local - 185km - 7h de route
 
     :::day-row
     ---
-    image: /images/voyages/rrdsdBuTQi7DASAqkc9M.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/rrdsdBuTQi7DASAqkc9M.jpg
     ---
     #subtitle
     JOUR 7
@@ -405,7 +405,7 @@ Transport en jeep ou bus local - 185km - 7h de route
 
     :::day-row
     ---
-    image: /images/voyages/aweWNqMCQ9y9D1yl4kMt.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/aweWNqMCQ9y9D1yl4kMt.jpg
     ---
     #subtitle
     JOURS 8 ET 9
@@ -421,7 +421,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
 
     :::day-row
     ---
-    image: /images/voyages/4sdpkmaHTeK3qTFFmbEB.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/4sdpkmaHTeK3qTFFmbEB.jpg
     ---
     #subtitle
     JOUR 10
@@ -437,7 +437,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
 
     :::day-row
     ---
-    image: /images/voyages/i54h8leFQzqihEBoO9pZ.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/i54h8leFQzqihEBoO9pZ.jpg
     ---
     #subtitle
     JOUR 11
@@ -453,7 +453,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
 
     :::day-row
     ---
-    image: /images/voyages/Ixdq6kNYT2CHAQQ8X7zT.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/Ixdq6kNYT2CHAQQ8X7zT.jpg
     ---
     #subtitle
     JOUR 12
@@ -468,7 +468,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
 
     :::day-row
     ---
-    image: /images/voyages/k6kF7fLLRuiLYdAZ5PS9.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/k6kF7fLLRuiLYdAZ5PS9.jpg
     ---
     #subtitle
     JOUR 13
@@ -489,7 +489,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
 
     :::day-row
     ---
-    image: /images/voyages/LCfoNmGWRcWGi6ST8KEh.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/LCfoNmGWRcWGi6ST8KEh.jpg
     ---
     #subtitle
     JOUR 14
@@ -518,31 +518,31 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/Ftrug5EQSTy7NwAanKCC.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/Ftrug5EQSTy7NwAanKCC.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Wjf5QqJRam1mrIvb0FFY.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/Wjf5QqJRam1mrIvb0FFY.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/lqGXCRWmSauyLbYr51pr.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/lqGXCRWmSauyLbYr51pr.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/WN79f8FUSG0hEpTzfKNk.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/WN79f8FUSG0hEpTzfKNk.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GXLh8L8CSxuJebh2etqb.jpg
+    image: /images/voyages/trek-chez-lhabitant-nepal/GXLh8L8CSxuJebh2etqb.jpg
     ---
     :::::
     ::::

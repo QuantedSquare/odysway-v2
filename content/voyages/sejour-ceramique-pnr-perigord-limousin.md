@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/cIRdfnWITBC7BXHIybwT.jpg
+image-src: /images/voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg
 ---
 #title
 Initiez-vous à l'art de la poterie artisanale dans le Limousin
@@ -96,7 +96,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/sejour-ceramique-pnr-perigord-limousin/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -106,7 +106,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
 
   :::highlights-row
   ---
-  image: /images/voyages/0fyOaDIQMqFhyuPsAm15.jpg
+  image: /images/voyages/sejour-ceramique-pnr-perigord-limousin/0fyOaDIQMqFhyuPsAm15.jpg
   ---
   ::::highlight-list-item
   La rencontre avec Kristiane, une véritable passionnée, tant par son métier que par sa région
@@ -166,7 +166,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
   
     :::day-row
     ---
-    image: /images/voyages/gANmfkYnQjeFYHQaftOi.jpg
+    image: /images/voyages/sejour-ceramique-pnr-perigord-limousin/gANmfkYnQjeFYHQaftOi.jpg
     ---
     #subtitle
     JOUR 1
@@ -181,7 +181,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
 
     :::day-row
     ---
-    image: /images/voyages/jJEqKVtTR4aQ2W70Zdds.jpg
+    image: /images/voyages/sejour-ceramique-pnr-perigord-limousin/jJEqKVtTR4aQ2W70Zdds.jpg
     ---
     #subtitle
     JOUR 2
@@ -196,7 +196,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
 
     :::day-row
     ---
-    image: /images/voyages/ekcscm1T66Ul93txv2ip.jpg
+    image: /images/voyages/sejour-ceramique-pnr-perigord-limousin/ekcscm1T66Ul93txv2ip.jpg
     ---
     #subtitle
     JOUR 3
@@ -233,7 +233,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PuE242ojS1SNwpJNYz72.jpg
+    avatar: /images/voyages/sejour-ceramique-pnr-perigord-limousin/PuE242ojS1SNwpJNYz72.jpg
     ---
     #title
     Kristiane

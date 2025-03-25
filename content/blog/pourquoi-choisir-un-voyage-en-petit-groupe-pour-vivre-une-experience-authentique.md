@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-09-19 10:25:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1.jpg"
+displayedImg: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1742920101599"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1.jpg"
+image-src: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1742920101599"
 ---
 #publication-date
 19 septembre 2024
@@ -31,7 +31,7 @@ Pourquoi choisir un voyage en petit groupe pour vivre une expérience authentiqu
 
 ::section-container
 ---
-image-src: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1.jpg"
+image-src: "/images/blogs/Pourquoi-choisir-un-voyage-en-petit-groupe-pour-vivre-une-experience-authentique-1742920101599"
 ---
 #content
 Vous en avez marre des circuits touristiques classiques, des bus bondés et des visites au pas de course ? Vous cherchez quelque chose de différent, une aventure où vous pouvez réellement vous immerger dans la culture locale et vivre des moments uniques avec des personnes partageant les mêmes valeurs ? Eh bien, le voyage en petit groupe est peut-être ce qu’il vous faut. Loin du tourisme de masse, ce type de voyage privilégie les rencontres humaines et la découverte en profondeur. Mais voyons ensemble pourquoi il peut transformer votre façon de voyager.
@@ -44,7 +44,7 @@ Prenons l’exemple d’un voyage organisé par Odysway dans les montagnes d’
 
 ::image-container
 ---
-image-src: "/images/blogs/Capture-d'ecran-2024-07-03-a-18.38.36.webp-1.jpg"
+image-src: "/images/blogs/Capture-d'ecran-2024-07-03-a-18.38.36.webp-1742920102116"
 alt: Capture d’écran 2024-07-03 à 18.38.36.webp
 ---
 ::
@@ -57,7 +57,7 @@ Et puis, on est d’accord, quand on est moins nombreux, c’est plus simple d�
 
 ::image-container
 ---
-image-src: "/images/blogs/Nepal_Trek_voyageurs8.webp-2.jpg"
+image-src: "/images/blogs/Nepal_Trek_voyageurs8.webp-1742920102644"
 alt: Nepal_Trek_voyageurs8.webp
 ---
 ::
@@ -82,7 +82,7 @@ Ces endroits, qui sortent des sentiers battus, rendent l’expérience encore pl
 
 ::image-container
 ---
-image-src: "/images/blogs/qL0iOBnS4aNBSlPpEnRv-1742840532766.jpg"
+image-src: "/images/blogs/qL0iOBnS4aNBSlPpEnRv-1742920103169"
 alt: undefined
 ---
 ::
@@ -93,7 +93,7 @@ Les voyages en petit groupe offrent fréquemment un avantage que beaucoup sous-e
 
 ::image-container
 ---
-image-src: "/images/blogs/guide-velo.jpg-1.jpg"
+image-src: "/images/blogs/guide-velo.jpg-1742920103690"
 alt: guide-velo.jpg
 ---
 ::

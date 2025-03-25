@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/ZgNk3FrIQaq4lV1ggLAA.jpg
+image-src: /images/voyages/sejour-pnr-pilat-famille/ZgNk3FrIQaq4lV1ggLAA.jpg
 ---
 #title
 Goutez l'aventure Pilat en famille
@@ -98,7 +98,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4qPUENE8RTCNFRYHHyOm.jpg
+    avatar: /images/voyages/sejour-pnr-pilat-famille/4qPUENE8RTCNFRYHHyOm.jpg
     avatar-size: "60"
     ---
     #title
@@ -108,7 +108,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
 
   :::highlights-row
   ---
-  image: /images/voyages/eOqhJGw8TQu64n6LVIfR.jpg
+  image: /images/voyages/sejour-pnr-pilat-famille/eOqhJGw8TQu64n6LVIfR.jpg
   ---
   ::::highlight-list-item
   L'immersion à la ferme avec une famille d'agriculteurs implantée dans le territoire depuis 3 générations
@@ -164,7 +164,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
   
     :::day-row
     ---
-    image: /images/voyages/mQRFrOaFTQ215koah4jL.jpg
+    image: /images/voyages/sejour-pnr-pilat-famille/mQRFrOaFTQ215koah4jL.jpg
     ---
     #subtitle
     JOUR 1
@@ -179,7 +179,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
 
     :::day-row
     ---
-    image: /images/voyages/hXeqlVHwQ1qOnZDtbQdl.jpg
+    image: /images/voyages/sejour-pnr-pilat-famille/hXeqlVHwQ1qOnZDtbQdl.jpg
     ---
     #subtitle
     JOUR 2
@@ -194,7 +194,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
 
     :::day-row
     ---
-    image: /images/voyages/OazJQPUXR7i1d6pxMoBP.jpg
+    image: /images/voyages/sejour-pnr-pilat-famille/OazJQPUXR7i1d6pxMoBP.jpg
     ---
     #subtitle
     JOUR 3
@@ -231,7 +231,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FblFzCvjSOSSXJIcvm0n.jpg
+    avatar: /images/voyages/sejour-pnr-pilat-famille/FblFzCvjSOSSXJIcvm0n.jpg
     ---
     #title
     La famille Linossier
@@ -244,7 +244,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/vdl5WyqBQs6ta7QUfyyg.jpg
+    avatar: /images/voyages/sejour-pnr-pilat-famille/vdl5WyqBQs6ta7QUfyyg.jpg
     ---
     #title
     Véronique et Olivier

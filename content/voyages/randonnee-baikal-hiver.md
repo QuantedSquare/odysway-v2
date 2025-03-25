@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/QOlOVfSARnSLFCpnO3iK.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg
 ---
 #title
 Randonnez sur le mythique lac Baïkal gelé en Sibérie
@@ -10,73 +10,73 @@ Randonnez sur le mythique lac Baïkal gelé en Sibérie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/z24XhZdNQ2FJfKUOKskQ.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/randonnee-baikal-hiver/z24XhZdNQ2FJfKUOKskQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/BWi6qZ5TuCza4AMETHzV.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/BWi6qZ5TuCza4AMETHzV.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/LfwiAncZSyCs0Daxi4dW.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/randonnee-baikal-hiver/LfwiAncZSyCs0Daxi4dW.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/eOEpdh4Q062LZcUzO7sp.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/eOEpdh4Q062LZcUzO7sp.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ERfYKcFHS1aNNiTXTX6W.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/randonnee-baikal-hiver/ERfYKcFHS1aNNiTXTX6W.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/mE18MClIRWq8pfxh5qaG.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/mE18MClIRWq8pfxh5qaG.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/WrrxbIxbQWit0ngmmm9N.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/randonnee-baikal-hiver/WrrxbIxbQWit0ngmmm9N.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Z4xuSY9cRzC0KsN2oJuM.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/Z4xuSY9cRzC0KsN2oJuM.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/Tbc6xWBSYi30wdQdyzEA.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/randonnee-baikal-hiver/Tbc6xWBSYi30wdQdyzEA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/DyN3OAZWSWqDEZSXnaOF.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/DyN3OAZWSWqDEZSXnaOF.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/RWGBTuBQ463jwf7XLsGC.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/randonnee-baikal-hiver/RWGBTuBQ463jwf7XLsGC.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/213nSeoBQ6eihawnMPib.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/213nSeoBQ6eihawnMPib.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/pm7zPX3uTU69DwHPF495.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/randonnee-baikal-hiver/pm7zPX3uTU69DwHPF495.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/sb6QIaBWRk6XWq58gzyy.jpg
+image-src: /images/voyages/randonnee-baikal-hiver/sb6QIaBWRk6XWq58gzyy.jpg
 ---
 ::::
   :::
@@ -166,7 +166,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4qPUENE8RTCNFRYHHyOm.jpg
+    avatar: /images/voyages/randonnee-baikal-hiver/4qPUENE8RTCNFRYHHyOm.jpg
     avatar-size: "60"
     ---
     #title
@@ -176,7 +176,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
   :::highlights-row
   ---
-  image: /images/voyages/jZO3m0X9SmMaZWhSoMBL.jpg
+  image: /images/voyages/randonnee-baikal-hiver/jZO3m0X9SmMaZWhSoMBL.jpg
   ---
   ::::highlight-list-item
   Une aventure hors du temps, sur le légendaire lac Baïkal, dont vous vous souviendrez toute votre vie
@@ -236,7 +236,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
   
     :::day-row
     ---
-    image: /images/voyages/JsUvlpC5TUWr1yi3TjTT.jpg
+    image: /images/voyages/randonnee-baikal-hiver/JsUvlpC5TUWr1yi3TjTT.jpg
     ---
     #subtitle
     JOURS 1&2
@@ -251,7 +251,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
     :::day-row
     ---
-    image: /images/voyages/k1TJoWhRHKGVMUkao5V1.jpg
+    image: /images/voyages/randonnee-baikal-hiver/k1TJoWhRHKGVMUkao5V1.jpg
     ---
     #subtitle
     JOUR 3
@@ -266,7 +266,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
     :::day-row
     ---
-    image: /images/voyages/Zo6M8EBRkydrbsBsUxK8.jpg
+    image: /images/voyages/randonnee-baikal-hiver/Zo6M8EBRkydrbsBsUxK8.jpg
     ---
     #subtitle
     JOUR 4
@@ -281,7 +281,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
     :::day-row
     ---
-    image: /images/voyages/tFm1dV6PTUGXIlTR7nFp.jpg
+    image: /images/voyages/randonnee-baikal-hiver/tFm1dV6PTUGXIlTR7nFp.jpg
     ---
     #subtitle
     JOUR 5
@@ -296,7 +296,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
     :::day-row
     ---
-    image: /images/voyages/ItpNNMuQbCZy61OGpxvM.jpg
+    image: /images/voyages/randonnee-baikal-hiver/ItpNNMuQbCZy61OGpxvM.jpg
     ---
     #subtitle
     JOUR 6
@@ -311,7 +311,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
     :::day-row
     ---
-    image: /images/voyages/S3PBA4v9TKKryEsTudu5.jpg
+    image: /images/voyages/randonnee-baikal-hiver/S3PBA4v9TKKryEsTudu5.jpg
     ---
     #subtitle
     JOUR 7
@@ -326,7 +326,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
 
     :::day-row
     ---
-    image: /images/voyages/Zp966Q8aMzPvvNe66uwD.jpg
+    image: /images/voyages/randonnee-baikal-hiver/Zp966Q8aMzPvvNe66uwD.jpg
     ---
     #subtitle
     JOUR 8

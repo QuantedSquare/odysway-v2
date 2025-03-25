@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/H5XdSb5CQVSLAy22flrN.jpg
+image-src: /images/voyages/voyage-elephants-thailande/H5XdSb5CQVSLAy22flrN.jpg
 ---
 #title
 Observer les éléphants, explorer les temples et s'évader sur les plages de Thaïlande
@@ -10,47 +10,47 @@ Observer les éléphants, explorer les temples et s'évader sur les plages de Th
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/QV6e7XRQEaZrdFGJ1veS.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-elephants-thailande/QV6e7XRQEaZrdFGJ1veS.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/04AByOfcRBqb0B0UNrnC.jpg
+image-src: /images/voyages/voyage-elephants-thailande/04AByOfcRBqb0B0UNrnC.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/VHvErVXThGNUIg7GpNgT.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-elephants-thailande/VHvErVXThGNUIg7GpNgT.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/xZk2U8SIRvmNqmwlw5EZ.jpg
+image-src: /images/voyages/voyage-elephants-thailande/xZk2U8SIRvmNqmwlw5EZ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ztIcIn02RAegznDy5GVh.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-elephants-thailande/ztIcIn02RAegznDy5GVh.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/mgrdluNzQeemgLZVfdSd.jpg
+image-src: /images/voyages/voyage-elephants-thailande/mgrdluNzQeemgLZVfdSd.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/CU4e3sFSAW24MCvx4TMI.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-elephants-thailande/CU4e3sFSAW24MCvx4TMI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/6yTbEHYcSjuCAyilidkt.jpg
+image-src: /images/voyages/voyage-elephants-thailande/6yTbEHYcSjuCAyilidkt.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/p4LxVLgdTJK4IGej7n99.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-elephants-thailande/p4LxVLgdTJK4IGej7n99.jpg"}
 ::::
   :::
 ::
@@ -141,7 +141,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-elephants-thailande/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -151,7 +151,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
   :::highlights-row
   ---
-  image: /images/voyages/vYc4MXPfQomn84PCrJEx.jpg
+  image: /images/voyages/voyage-elephants-thailande/vYc4MXPfQomn84PCrJEx.jpg
   ---
   ::::highlight-list-item
   Vivez une immersion unique d'une semaine au sein d'un des refuges pour éléphants les plus sérieux et éthiques du pays
@@ -211,7 +211,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
   
     :::day-row
     ---
-    image: /images/voyages/Qf9jD1L5QEenTBcjIzLR.jpg
+    image: /images/voyages/voyage-elephants-thailande/Qf9jD1L5QEenTBcjIzLR.jpg
     ---
     #subtitle
     JOUR 1
@@ -226,7 +226,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/KHCS5SvJQtSIOp7684fi.jpg
+    image: /images/voyages/voyage-elephants-thailande/KHCS5SvJQtSIOp7684fi.jpg
     ---
     #subtitle
     JOUR 2
@@ -241,7 +241,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/5PAVPKILQLWteTJ5yTCx.jpg
+    image: /images/voyages/voyage-elephants-thailande/5PAVPKILQLWteTJ5yTCx.jpg
     ---
     #subtitle
     JOURS 3 À 6
@@ -256,7 +256,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/qYWiE57JRny9iXMn6iy6.jpg
+    image: /images/voyages/voyage-elephants-thailande/qYWiE57JRny9iXMn6iy6.jpg
     ---
     #subtitle
     JOUR 7
@@ -271,7 +271,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/4SARoaqYRHqSRjbrACer.jpg
+    image: /images/voyages/voyage-elephants-thailande/4SARoaqYRHqSRjbrACer.jpg
     ---
     #subtitle
     JOUR 8
@@ -286,7 +286,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/UrwIhmXrQ8OJ0wbHMIdd.jpg
+    image: /images/voyages/voyage-elephants-thailande/UrwIhmXrQ8OJ0wbHMIdd.jpg
     ---
     #subtitle
     JOUR 9
@@ -301,7 +301,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/a0JNwurdTYSHr767B9Q1.jpg
+    image: /images/voyages/voyage-elephants-thailande/a0JNwurdTYSHr767B9Q1.jpg
     ---
     #subtitle
     JOUR 10
@@ -316,7 +316,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/uWK3lwLwQmyJqEatUXcw.jpg
+    image: /images/voyages/voyage-elephants-thailande/uWK3lwLwQmyJqEatUXcw.jpg
     ---
     #subtitle
     JOURS 11 À 13
@@ -331,7 +331,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
 
     :::day-row
     ---
-    image: /images/voyages/ultrh04NQxGghyesoSGA.jpg
+    image: /images/voyages/voyage-elephants-thailande/ultrh04NQxGghyesoSGA.jpg
     ---
     #subtitle
     JOUR 14
@@ -360,19 +360,19 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/Sg5GjA33RJStYs5YQHUK.jpg
+    image: /images/voyages/voyage-elephants-thailande/Sg5GjA33RJStYs5YQHUK.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/UowQAAVVTqa0hFEai1sg.jpg
+    image: /images/voyages/voyage-elephants-thailande/UowQAAVVTqa0hFEai1sg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/iPLwVIm6Rm6cOhIzul2h.jpg
+    image: /images/voyages/voyage-elephants-thailande/iPLwVIm6Rm6cOhIzul2h.jpg
     ---
     :::::
     ::::

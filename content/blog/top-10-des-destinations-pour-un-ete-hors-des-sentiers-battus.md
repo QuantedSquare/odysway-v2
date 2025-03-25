@@ -12,12 +12,12 @@ published: false
 publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
 categories: "Blog"
-displayedImg: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1.jpg"
+displayedImg: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1742920091651"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1.jpg"
+image-src: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1742920091651"
 ---
 #publication-date
 24 janvier 2025
@@ -31,7 +31,7 @@ L’été approche à grands pas et vous ne savez pas encore où partir en vacan
 
 ::section-container
 ---
-image-src: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1.jpg"
+image-src: "/images/blogs/Top-10-des-destinations-2025-pour-un-ete-hors-des-sentiers-battus-1742920091651"
 ---
 #content
 L’été approche à grands pas et vous ne savez pas encore où partir en vacances. En revanche, une chose est sûre : vous misez sur un voyage estival en dehors des sentiers touristiques. Vous n’avez qu’une seule envie, celle de vous immerger au cœur de l’authenticité de votre future destination, loin de la foule et des grands classiques. Voici pour vous notre top 10 des destinations pour un été hors des sentiers battus.
@@ -42,7 +42,7 @@ L’été approche à grands pas et vous ne savez pas encore où partir en vacan
 
 ::image-container
 ---
-image-src: "/images/blogs/Albanie_blog.png-1.jpg"
+image-src: "/images/blogs/Albanie_blog.png-1742920092366"
 alt: Albanie_blog.png
 link: https://odysway.com/voyages/immersion-culture-albanie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
@@ -56,7 +56,7 @@ Envie d’approfondir votre voyage en Albanie et de vivre un moment unique ? D�
 
 ::image-container
 ---
-image-src: "/images/blogs/Finlande_blog.png-1.jpg"
+image-src: "/images/blogs/Finlande_blog.png-1742920092901"
 alt: Finlande_blog.png
 ---
 ::
@@ -67,7 +67,7 @@ Ah ! la **Finlande**. À seulement 2 h de la France, cette destination tiendra
 
 ::image-container
 ---
-image-src: "/images/blogs/Mercantour_Blog.png-1.jpg"
+image-src: "/images/blogs/Mercantour_Blog.png-1742920093444"
 alt: Mercantour_Blog.png
 ---
 ::
@@ -80,7 +80,7 @@ Découvrez nos séjours en France : https://odysway.com/destinations/france 
 
 ::image-container
 ---
-image-src: "/images/blogs/Grece_blog.png-1.jpg"
+image-src: "/images/blogs/Grece_blog.png-1742920093981"
 alt: Grece_blog.png
 link: https://odysway.com/voyages/voyage-etude-dauphins-grece?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
@@ -92,7 +92,7 @@ link: https://odysway.com/voyages/voyage-etude-dauphins-grece?utm_source=Blog&ut
 
 ::image-container
 ---
-image-src: "/images/blogs/Slobvenie_blog.png-1.jpg"
+image-src: "/images/blogs/Slobvenie_blog.png-1742920094526"
 alt: Slobvénie_blog.png
 ---
 ::
@@ -103,7 +103,7 @@ alt: Slobvénie_blog.png
 
 ::image-container
 ---
-image-src: "/images/blogs/hNsfkTOBTg2932NdnOu7-1742840524642.jpg"
+image-src: "/images/blogs/hNsfkTOBTg2932NdnOu7-1742920095066"
 alt: undefined
 link: https://odysway.com/voyages/immersion-cap-vert?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
@@ -117,7 +117,7 @@ Pourquoi ne pas prévoir une immersion au Cap-Vert pour profiter de l’hospital
 
 ::image-container
 ---
-image-src: "/images/blogs/Colombie_blog.png-1.jpg"
+image-src: "/images/blogs/Colombie_blog.png-1742920095595"
 alt: Colombie_blog.png
 link: https://odysway.com/voyages/voyage-immersion-colombie?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_destinations_hors_sentiers_battus
 ---
@@ -133,7 +133,7 @@ Grâce à notre **voyage en immersion en Colombie**, partez loin des sentiers to
 
 ::image-container
 ---
-image-src: "/images/blogs/EOfAWLeR9KjMZ0bPa0kE-1742840525708.jpg"
+image-src: "/images/blogs/EOfAWLeR9KjMZ0bPa0kE-1742920096123"
 alt: undefined
 ---
 ::
@@ -144,7 +144,7 @@ Situé entre l’Inde et la Chine, **le Bhoutan** séduit incontestablement tous
 
 ::image-container
 ---
-image-src: "/images/blogs/Ouzbekhistan.png-1.jpg"
+image-src: "/images/blogs/Ouzbekhistan.png-1742920096663"
 alt: Ouzbékhistan.png
 ---
 ::
@@ -155,7 +155,7 @@ Bienvenue en Asie centrale avec une **destination estivale qui sort des sentiers
 
 ::image-container
 ---
-image-src: "/images/blogs/Srillanka_Blog.png-1.jpg"
+image-src: "/images/blogs/Srillanka_Blog.png-1742920097201"
 alt: Srillanka_Blog.png
 ---
 ::

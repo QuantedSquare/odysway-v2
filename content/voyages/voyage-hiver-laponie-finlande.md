@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/1lWuqjgCSJGybM9aeudB.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/1lWuqjgCSJGybM9aeudB.jpg
 ---
 #title
 Séjour multi-activités en Laponie finlandaise
@@ -10,83 +10,83 @@ Séjour multi-activités en Laponie finlandaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/3AN9s8zTeS2s0vY5InQI.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-hiver-laponie-finlande/3AN9s8zTeS2s0vY5InQI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/RmLV1y4NTlyOkqAddCck.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/RmLV1y4NTlyOkqAddCck.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/TGsiyl8mQfyS7vPTTHY5.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-hiver-laponie-finlande/TGsiyl8mQfyS7vPTTHY5.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/uB9htAjBQSDtlK3ogTtB.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/uB9htAjBQSDtlK3ogTtB.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/dXYuztMSK2HUalSNheVo.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-hiver-laponie-finlande/dXYuztMSK2HUalSNheVo.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/nPTYRSAaQOuJid5z3Zsw.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/nPTYRSAaQOuJid5z3Zsw.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/2fNpARHZRDWDc9FTLhip.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-hiver-laponie-finlande/2fNpARHZRDWDc9FTLhip.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/vIiJtZdbRLSn51PRPhfL.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/vIiJtZdbRLSn51PRPhfL.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/soxvHDZhSXScHYV5tSrM.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-hiver-laponie-finlande/soxvHDZhSXScHYV5tSrM.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/1sx5kEzXQGK4JKlgIpzz.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/1sx5kEzXQGK4JKlgIpzz.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Vw8My3NDSkCUiGIkLc5c.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-hiver-laponie-finlande/Vw8My3NDSkCUiGIkLc5c.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/VqFJUgASEirneSy2gXAE.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/VqFJUgASEirneSy2gXAE.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/MDvCa5ARS1atzKFS075h.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-hiver-laponie-finlande/MDvCa5ARS1atzKFS075h.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/3676NK0ETeaV1Jc17hiK.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/3676NK0ETeaV1Jc17hiK.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/O60Eje2yR8SqwYAEzD5Y.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-hiver-laponie-finlande/O60Eje2yR8SqwYAEzD5Y.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/deNtnAPAQq2lHvGHRssh.jpg
+image-src: /images/voyages/voyage-hiver-laponie-finlande/deNtnAPAQq2lHvGHRssh.jpg
 ---
 ::::
   :::
@@ -176,7 +176,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/voyage-hiver-laponie-finlande/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -186,7 +186,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
   :::highlights-row
   ---
-  image: /images/voyages/mU7zDc33TrKlbPbe2RAQ.jpg
+  image: /images/voyages/voyage-hiver-laponie-finlande/mU7zDc33TrKlbPbe2RAQ.jpg
   ---
   ::::highlight-list-item
   Partez en mars/avril et profiter de la meilleure période pour les aurores boréales, des journées plus longues et moins de touristes !
@@ -254,7 +254,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
   
     :::day-row
     ---
-    image: /images/voyages/nQgO69x3RMmTeTBnokDS.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/nQgO69x3RMmTeTBnokDS.jpg
     ---
     #subtitle
     JOUR 1
@@ -269,7 +269,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/BvynkVFnRx282Cbha0Qy.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/BvynkVFnRx282Cbha0Qy.jpg
     ---
     #subtitle
     JOUR 2
@@ -284,7 +284,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/tEFQKwAKTM27HCkRy5Ru.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/tEFQKwAKTM27HCkRy5Ru.jpg
     ---
     #subtitle
     JOUR 3
@@ -299,7 +299,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/zr2G33SES3KwBSnDg6BD.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/zr2G33SES3KwBSnDg6BD.jpg
     ---
     #subtitle
     JOUR 4
@@ -314,7 +314,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/DR5hE5WcS7q5YGDAW85I.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/DR5hE5WcS7q5YGDAW85I.jpg
     ---
     #subtitle
     JOUR 5
@@ -329,7 +329,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/sHULfpYqQh14tjz6yalA.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/sHULfpYqQh14tjz6yalA.jpg
     ---
     #subtitle
     JOUR 6
@@ -344,7 +344,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/0t7liOiIRd2v1acTB5k5.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/0t7liOiIRd2v1acTB5k5.jpg
     ---
     #subtitle
     JOUR 7
@@ -359,7 +359,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
 
     :::day-row
     ---
-    image: /images/voyages/8CcC6pDaTC6xZyQfqYZS.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/8CcC6pDaTC6xZyQfqYZS.jpg
     ---
     #subtitle
     JOUR 8
@@ -388,19 +388,19 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/NLjHAh8LRirtjG8Rky25.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/NLjHAh8LRirtjG8Rky25.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/v6M0I39wQAOlZMc2h35t.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/v6M0I39wQAOlZMc2h35t.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/mHf8T4v8SbGzjqTcx5FU.jpg
+    image: /images/voyages/voyage-hiver-laponie-finlande/mHf8T4v8SbGzjqTcx5FU.jpg
     ---
     :::::
     ::::

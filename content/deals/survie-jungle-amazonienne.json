@@ -1,14 +1,14 @@
 {
   "title": "Immersion brésilienne et survie dans la jungle amazonienne",
   "slug": "survie-jungle-amazonienne",
-  "ISO": "BR",
+  "iso": "BR",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16",
+    "alt": "z0INP3CRmWU5BLBzEh16"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/survie-jungle-amazonienne/CcunI5iPTj6Kk4gqZBeO.jpg",
+    "alt": "CcunI5iPTj6Kk4gqZBeO"
   },
   "country": "Brésil",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 950
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 950
@@ -59,8 +59,8 @@
       "bookedPlaces": 2,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 950
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 950
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 950

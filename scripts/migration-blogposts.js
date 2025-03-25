@@ -32,7 +32,6 @@ turndownService.addRule('imageCenter', {
     const link = parentLink && parentLink.nodeName === 'A' ? parentLink.getAttribute('href') : null
 
     if (link) {
-      // Return just the image-container without markdown link syntax
       return `::image-container\n---\nimage-src: ${src}\nalt: ${alt}\nlink: ${link}\n---\n::`
     }
 
@@ -50,23 +49,10 @@ turndownService.addRule('images', {
     const link = parentLink && parentLink.nodeName === 'A' ? parentLink.getAttribute('href') : null
 
     if (link) {
-      // Return just the image-container without markdown link syntax
       return `::image-container\n---\nimage-src: ${src}\nalt: ${alt}\nlink: ${link}\n---\n::`
     }
 
     return `::image-container\n---\nimage-src: ${src}\nalt: ${alt}\n---\n::`
-  },
-})
-
-// Add a rule to prevent wrapping image-container in markdown links
-turndownService.addRule('preventLinkWrapping', {
-  filter: (node) => {
-    // Check if this is a link that contains an img tag
-    return node.nodeName === 'A' && node.querySelector('img') !== null
-  },
-  replacement: (content) => {
-    // Just return the content without the link wrapper
-    return content
   },
 })
 

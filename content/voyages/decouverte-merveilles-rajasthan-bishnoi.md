@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/xqRAixuQSw6Tm4zpZhN8.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/xqRAixuQSw6Tm4zpZhN8.jpg
 ---
 #title
 Au fil du Rajasthan : découverte et immersion chez les Bishnoïs
@@ -10,87 +10,87 @@ Au fil du Rajasthan : découverte et immersion chez les Bishnoïs
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/vzv2ieaIRjDL0FoZemr7.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/vzv2ieaIRjDL0FoZemr7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/KS70xzyQ66HRIpVig6hY.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/KS70xzyQ66HRIpVig6hY.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/koJ1z6ZTSm5bVVzAEEiB.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/koJ1z6ZTSm5bVVzAEEiB.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/1Z8lOvPQSo6Y6gXeopO3.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/1Z8lOvPQSo6Y6gXeopO3.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/4MSkbjRlTeq7xpy2IUHY.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/4MSkbjRlTeq7xpy2IUHY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/t3pDRt2QRyicanqHBfrL.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/t3pDRt2QRyicanqHBfrL.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/UDy4F8Z8R9KxRNaLi4aR.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/UDy4F8Z8R9KxRNaLi4aR.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/11aAJ65sSqlj91cF05XB.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/11aAJ65sSqlj91cF05XB.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/O8t5JdZGQVGtwUdbnFnp.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/O8t5JdZGQVGtwUdbnFnp.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/CtQcKpiQAocKTJdRpiAn.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/CtQcKpiQAocKTJdRpiAn.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/lIOaKxcuTYKelx0A6X05.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/lIOaKxcuTYKelx0A6X05.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/4IKEVKZUS7iM0GxgL3N0.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/4IKEVKZUS7iM0GxgL3N0.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/ainXthqbRG2MnL5wIKRs.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/ainXthqbRG2MnL5wIKRs.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/gIwjrTiuQnCwDhKpHaME.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/gIwjrTiuQnCwDhKpHaME.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/IqQwgykNTxGImIErhCds.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/IqQwgykNTxGImIErhCds.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/XnU1a7iSe6vOlPmaLLAt.jpg
+image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/XnU1a7iSe6vOlPmaLLAt.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/qfAZkKKETjuELl1HlgBa.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/qfAZkKKETjuELl1HlgBa.jpg"}
 ::::
   :::
 ::
@@ -179,7 +179,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/bVXFKm3STigEvd3j0aOU.jpg
+    avatar: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/bVXFKm3STigEvd3j0aOU.jpg
     avatar-size: "60"
     ---
     #title
@@ -189,7 +189,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
   :::highlights-row
   ---
-  image: /images/voyages/WgFapPclQ4mwJM8max3j.jpg
+  image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/WgFapPclQ4mwJM8max3j.jpg
   ---
   ::::highlight-list-item
   Découvrez les villes mythiques et les monuments emblématiques du Rajasthan accompagné d'un guide local francophone
@@ -249,7 +249,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
   
     :::day-row
     ---
-    image: /images/voyages/ZU6iCPymSy6QNqQmgIEA.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/ZU6iCPymSy6QNqQmgIEA.jpg
     ---
     #subtitle
     JOUR 1
@@ -264,7 +264,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/bEvl2uLxTKK9RYMbvi9i.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/bEvl2uLxTKK9RYMbvi9i.jpg
     ---
     #subtitle
     JOURS 2 ET 3
@@ -279,7 +279,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/2rY4mJXoRyammWMfcSyA.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/2rY4mJXoRyammWMfcSyA.jpg
     ---
     #subtitle
     JOUR 4
@@ -294,7 +294,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/Kp5Sq8JSRpy1e2Iy2gvk.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/Kp5Sq8JSRpy1e2Iy2gvk.jpg
     ---
     #subtitle
     JOURS 5 ET 6
@@ -310,7 +310,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/5y1w3ctETMuaUhoOIx2E.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/5y1w3ctETMuaUhoOIx2E.jpg
     ---
     #subtitle
     JOUR 7 ET 8 
@@ -326,7 +326,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/LKe66Hw0SQC6CDzFLahd.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/LKe66Hw0SQC6CDzFLahd.jpg
     ---
     #subtitle
     JOUR 9 
@@ -341,7 +341,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/NwUKRUJATyyK5qE8533h.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/NwUKRUJATyyK5qE8533h.jpg
     ---
     #subtitle
     JOUR 10
@@ -359,7 +359,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/04IapUDVS9el6TmWNkWx.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/04IapUDVS9el6TmWNkWx.jpg
     ---
     #subtitle
     JOUR 11
@@ -374,7 +374,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/YgCyU6quSFKEqiMnVaax.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/YgCyU6quSFKEqiMnVaax.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -390,7 +390,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
 
     :::day-row
     ---
-    image: /images/voyages/rxZcGpySkujAXMzWytGO.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/rxZcGpySkujAXMzWytGO.jpg
     ---
     #subtitle
     JOUR 14
@@ -419,19 +419,19 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/9csggwtTbmrVTz2tSeaU.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/9csggwtTbmrVTz2tSeaU.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/HnUTTtsR1OZhTsqtq1tx.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/HnUTTtsR1OZhTsqtq1tx.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/cwUCa9mfQFyA4KJfwE2w.jpg
+    image: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/cwUCa9mfQFyA4KJfwE2w.jpg
     ---
     :::::
     ::::

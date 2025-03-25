@@ -1,14 +1,14 @@
 {
   "title": "Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie",
   "slug": "algerie-sud-touaregs",
-  "ISO": "DZA",
+  "iso": "DZA",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/algerie-sud-touaregs/5cgA4EuxRzCrSoWr8xEg",
+    "alt": "5cgA4EuxRzCrSoWr8xEg"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/algerie-sud-touaregs/RKy5I9j0TtiK5k7zzqJr.jpg",
+    "alt": "RKy5I9j0TtiK5k7zzqJr"
   },
   "country": "Algérie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0

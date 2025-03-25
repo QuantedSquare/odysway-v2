@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/b7PckcBQCe7UeHMhXBZr.jpg
+image-src: /images/voyages/voyage-bali-immersion-incontournables/b7PckcBQCe7UeHMhXBZr.jpg
 ---
 #title
 Explorez les incontournables de Bali entre plages, rizières et volcan 
@@ -10,53 +10,53 @@ Explorez les incontournables de Bali entre plages, rizières et volcan
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/JhCv2m4lSIyQOVRdl0gO.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-bali-immersion-incontournables/JhCv2m4lSIyQOVRdl0gO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/qcRD0F7S6OYrMN5VXDBB.jpg
+image-src: /images/voyages/voyage-bali-immersion-incontournables/qcRD0F7S6OYrMN5VXDBB.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/LvI19C6vRri54MpJlsyC.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-bali-immersion-incontournables/LvI19C6vRri54MpJlsyC.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/8a3JRWHTiaPYs9pkHthN.jpg
+image-src: /images/voyages/voyage-bali-immersion-incontournables/8a3JRWHTiaPYs9pkHthN.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/366EgobvTyqb1fhGofnM.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-bali-immersion-incontournables/366EgobvTyqb1fhGofnM.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/8a3JRWHTiaPYs9pkHthN.jpg
+image-src: /images/voyages/voyage-bali-immersion-incontournables/8a3JRWHTiaPYs9pkHthN.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/PMvSkJ4FR1eo311D1td7.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-bali-immersion-incontournables/PMvSkJ4FR1eo311D1td7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/pTQ6yTWTRQentEjGoJsp.jpg
+image-src: /images/voyages/voyage-bali-immersion-incontournables/pTQ6yTWTRQentEjGoJsp.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/N7Kaa1f9RrGaPwxLNqjc.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-bali-immersion-incontournables/N7Kaa1f9RrGaPwxLNqjc.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ckvFhiYUQhWpRh7hcivQ.jpg
+image-src: /images/voyages/voyage-bali-immersion-incontournables/ckvFhiYUQhWpRh7hcivQ.jpg
 ---
 ::::
   :::
@@ -146,7 +146,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-bali-immersion-incontournables/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -156,7 +156,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
   :::highlights-row
   ---
-  image: /images/voyages/VXgmFbfSROZSmFVbYZZK.jpg
+  image: /images/voyages/voyage-bali-immersion-incontournables/VXgmFbfSROZSmFVbYZZK.jpg
   ---
   ::::highlight-list-item
   L'ascension mythique du volcan Batur, au dessus des nuages
@@ -216,7 +216,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
   
     :::day-row
     ---
-    image: /images/voyages/v6dd2vMIQu6TjXFbnjEc.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/v6dd2vMIQu6TjXFbnjEc.jpg
     ---
     #subtitle
     JOUR 1
@@ -231,7 +231,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/x6H0o1h2T5mQNlX88XqQ.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/x6H0o1h2T5mQNlX88XqQ.jpg
     ---
     #subtitle
     JOUR 2
@@ -247,7 +247,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/flUJay9bR6mVwe3yWpsl.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/flUJay9bR6mVwe3yWpsl.jpg
     ---
     #subtitle
     JOUR 3
@@ -262,7 +262,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/JNuwAjRwTBKIKik9TLkh.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/JNuwAjRwTBKIKik9TLkh.jpg
     ---
     #subtitle
     JOUR 4
@@ -277,7 +277,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/m02JGtFmRo6FV00wZ4uQ.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/m02JGtFmRo6FV00wZ4uQ.jpg
     ---
     #subtitle
     JOUR 5
@@ -292,7 +292,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/85uXJNFkSDun3vM7cGID.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/85uXJNFkSDun3vM7cGID.jpg
     ---
     #subtitle
     JOUR 6
@@ -307,7 +307,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/ckvFhiYUQhWpRh7hcivQ.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/ckvFhiYUQhWpRh7hcivQ.jpg
     ---
     #subtitle
     JOUR 7
@@ -322,7 +322,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/N7Kaa1f9RrGaPwxLNqjc.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/N7Kaa1f9RrGaPwxLNqjc.jpg
     ---
     #subtitle
     JOUR 8
@@ -337,7 +337,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/bE8YJgnS72GEtZmALL8Q.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/bE8YJgnS72GEtZmALL8Q.jpg
     ---
     #subtitle
     JOUR 9
@@ -352,7 +352,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/7YqDuQpWSxSN0a6sBAt2.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/7YqDuQpWSxSN0a6sBAt2.jpg
     ---
     #subtitle
     JOUR 10
@@ -367,7 +367,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/nTl7VuWZThMvjsZONuAo.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/nTl7VuWZThMvjsZONuAo.jpg
     ---
     #subtitle
     JOUR 11
@@ -382,7 +382,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/llfqdUCbTyu8gk2bCCJz.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/llfqdUCbTyu8gk2bCCJz.jpg
     ---
     #subtitle
     JOUR 12
@@ -397,7 +397,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
 
     :::day-row
     ---
-    image: /images/voyages/HfAXsN6jQLmIIwT7F6Gd.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/HfAXsN6jQLmIIwT7F6Gd.jpg
     ---
     #subtitle
     JOUR 13
@@ -426,19 +426,19 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/dqmjwQ5LREOJ5z0RwPtI.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/dqmjwQ5LREOJ5z0RwPtI.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ugS62ExkSlSfM2HXMkhP.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/ugS62ExkSlSfM2HXMkhP.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/EQk5wwuTayAj1UhcSRd2.jpg
+    image: /images/voyages/voyage-bali-immersion-incontournables/EQk5wwuTayAj1UhcSRd2.jpg
     ---
     :::::
     ::::

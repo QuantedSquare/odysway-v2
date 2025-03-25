@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/crL01Y3RDSMtg2Bbmtks.jpg
+image-src: /images/voyages/acores-volcans-dauphins-baleines/crL01Y3RDSMtg2Bbmtks.jpg
 ---
 #title
 L’appel des Açores entre volcans, dauphins, baleines et cachalots 
@@ -87,7 +87,7 @@ right-sticky: true
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FbEN6KxzS62uUwejT351.jpg
+    avatar: /images/voyages/acores-volcans-dauphins-baleines/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -97,7 +97,7 @@ right-sticky: true
 
   :::highlights-row
   ---
-  image: /images/voyages/q4lPBZSIR7CztNNRxSwg.jpg
+  image: /images/voyages/acores-volcans-dauphins-baleines/q4lPBZSIR7CztNNRxSwg.jpg
   ---
   ::::highlight-list-item
   Observez les dauphins, les baleines et les cachalots lors de sorties en mer accompagnées de chercheurs scientifiques qui œuvrent pour la préservation de l’océan
@@ -161,7 +161,7 @@ right-sticky: true
   
     :::day-row
     ---
-    image: /images/voyages/QZlemQBR6eWGS5kJUmEk.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/QZlemQBR6eWGS5kJUmEk.jpg
     ---
     #subtitle
     JOUR 1
@@ -179,7 +179,7 @@ Faial, surnommée « l’île bleue », séduit par ses paysages volcaniques uni
 
     :::day-row
     ---
-    image: /images/voyages/tfk3q7WyQuy8WD2adXh1.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/tfk3q7WyQuy8WD2adXh1.jpg
     ---
     #subtitle
     JOUR 2
@@ -197,7 +197,7 @@ Selon la saison, vous pourrez observer des dauphins communs, des cachalots rési
 
     :::day-row
     ---
-    image: /images/voyages/d3Wgu9RfSeiFAz5rCFpw.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/d3Wgu9RfSeiFAz5rCFpw.jpg
     ---
     #subtitle
     JOUR 3
@@ -213,7 +213,7 @@ Traversez les forêts de cryptomeria parcourues de petites levadas, les côtes d
 
     :::day-row
     ---
-    image: /images/voyages/1SZ5UtelQlGNjtsggctm.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/1SZ5UtelQlGNjtsggctm.jpg
     ---
     #subtitle
     JOUR 4
@@ -230,7 +230,7 @@ L’équipe pourra également partager son travail sur les tortues marines si l�
 
     :::day-row
     ---
-    image: /images/voyages/CYtqBxzbRtm5wYL8AITJ.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/CYtqBxzbRtm5wYL8AITJ.jpg
     ---
     #subtitle
     JOUR 5
@@ -247,7 +247,7 @@ Traversez une nature rurale préservée, typique des Açores, jusqu’à la plus
 
     :::day-row
     ---
-    image: /images/voyages/qjSrzxwdQP6mA7ydCOxm.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/qjSrzxwdQP6mA7ydCOxm.jpg
     ---
     #subtitle
     JOUR 6
@@ -265,7 +265,7 @@ De juin à septembre, en fin d’après-midi ou début de soirée, choisissez en
 
     :::day-row
     ---
-    image: /images/voyages/d53zjhyQeeoJIlkFIA9H.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/d53zjhyQeeoJIlkFIA9H.jpg
     ---
     #subtitle
     JOUR 7
@@ -283,7 +283,7 @@ Cette expérience combine découverte scientifique, immersion dans la nature et 
 
     :::day-row
     ---
-    image: /images/voyages/zZ4Yyn2DSvCAnGBY13yj.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/zZ4Yyn2DSvCAnGBY13yj.jpg
     ---
     #subtitle
     JOUR 8
@@ -314,19 +314,19 @@ Bon retour et à bientôt pour de nouvelles découvertes !
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/Pl8Vlj0KTOeOzxf46lNN.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/Pl8Vlj0KTOeOzxf46lNN.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/P06xcXv3S1agA3FtctcU.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/P06xcXv3S1agA3FtctcU.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/rco0uppuTVafrdsC5wFn.jpg
+    image: /images/voyages/acores-volcans-dauphins-baleines/rco0uppuTVafrdsC5wFn.jpg
     ---
     :::::
     ::::

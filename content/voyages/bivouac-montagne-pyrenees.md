@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/TDOdwcvYQharNYFpuu2W.jpg
+image-src: /images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg
 ---
 #title
 Initiation au bivouac en montagne dans les Pyrénées
@@ -89,7 +89,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/bivouac-montagne-pyrenees/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -99,7 +99,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
 
   :::highlights-row
   ---
-  image: /images/voyages/IuMvK6q7QfqjlvnT7C6L.jpg
+  image: /images/voyages/bivouac-montagne-pyrenees/IuMvK6q7QfqjlvnT7C6L.jpg
   ---
   ::::highlight-list-item
   Vivez une expérience de déconnexion unique en pleine nature
@@ -163,7 +163,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
   
     :::day-row
     ---
-    image: /images/voyages/uNZVlAbQSMG8lgQlUVra.jpg
+    image: /images/voyages/bivouac-montagne-pyrenees/uNZVlAbQSMG8lgQlUVra.jpg
     ---
     #subtitle
     JOUR 1
@@ -178,7 +178,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
 
     :::day-row
     ---
-    image: /images/voyages/BFjLftKoTIW9HPAkpxZV.jpg
+    image: /images/voyages/bivouac-montagne-pyrenees/BFjLftKoTIW9HPAkpxZV.jpg
     ---
     #subtitle
     JOUR 2
@@ -193,7 +193,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
 
     :::day-row
     ---
-    image: /images/voyages/WhN39AaSkWCTX9srA68M.jpg
+    image: /images/voyages/bivouac-montagne-pyrenees/WhN39AaSkWCTX9srA68M.jpg
     ---
     #subtitle
     JOUR 3
@@ -222,19 +222,19 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/fcK4JOxjTuej9uMFxqnJ.jpg
+    image: /images/voyages/bivouac-montagne-pyrenees/fcK4JOxjTuej9uMFxqnJ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/3Mm5BStbRXWiTTTUswGM.jpg
+    image: /images/voyages/bivouac-montagne-pyrenees/3Mm5BStbRXWiTTTUswGM.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/CKtncQeQaEDzKsczowSA.jpg
+    image: /images/voyages/bivouac-montagne-pyrenees/CKtncQeQaEDzKsczowSA.jpg
     ---
     :::::
     ::::
@@ -252,7 +252,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/5Wvd4ENSa6776ZcteQlw.jpg
+    avatar: /images/voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg
     ---
     #title
     Accompagnateur en moyenne montagne

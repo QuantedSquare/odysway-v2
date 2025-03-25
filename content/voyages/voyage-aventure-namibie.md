@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/VBcFhIQWTLhEDBEEyEBg.jpg
+image-src: /images/voyages/voyage-aventure-namibie/VBcFhIQWTLhEDBEEyEBg.jpg
 ---
 #title
 Namibie sauvage : entre aventure et protection des animaux
@@ -93,7 +93,7 @@ Un séjour immersif entre nature, aventure et protection dans l'un des plus beau
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-aventure-namibie/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -103,7 +103,7 @@ Un séjour immersif entre nature, aventure et protection dans l'un des plus beau
 
   :::highlights-row
   ---
-  image: /images/voyages/oHISURvSRm6Y6Jl4oTdQ.jpg
+  image: /images/voyages/voyage-aventure-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg
   ---
   ::::highlight-list-item
   Découvrez l’immensité du désert du Namib et laissez-vous envoûter par l’ascension de Big Daddy, la dune reine de Namibie.
@@ -167,7 +167,7 @@ Un séjour immersif entre nature, aventure et protection dans l'un des plus beau
   
     :::day-row
     ---
-    image: /images/voyages/nf1iKt0eQ6aGjk47peJj.jpg
+    image: /images/voyages/voyage-aventure-namibie/nf1iKt0eQ6aGjk47peJj.jpg
     ---
     #subtitle
     JOUR 1
@@ -182,7 +182,7 @@ Un séjour immersif entre nature, aventure et protection dans l'un des plus beau
 
     :::day-row
     ---
-    image: /images/voyages/VLb1RJBrTh2qntF5S3ch.jpg
+    image: /images/voyages/voyage-aventure-namibie/VLb1RJBrTh2qntF5S3ch.jpg
     ---
     #subtitle
     JOUR 2
@@ -197,7 +197,7 @@ Un séjour immersif entre nature, aventure et protection dans l'un des plus beau
 
     :::day-row
     ---
-    image: /images/voyages/WbH8SRcKQ7CgEHR9mu2P.jpg
+    image: /images/voyages/voyage-aventure-namibie/WbH8SRcKQ7CgEHR9mu2P.jpg
     ---
     #subtitle
     JOURS 3 À 5
@@ -212,7 +212,7 @@ Un séjour immersif entre nature, aventure et protection dans l'un des plus beau
 
     :::day-row
     ---
-    image: /images/voyages/Go5Imn23Sxy8QvVjA83j.jpg
+    image: /images/voyages/voyage-aventure-namibie/Go5Imn23Sxy8QvVjA83j.jpg
     ---
     #subtitle
     JOUR 6
@@ -230,7 +230,7 @@ Après une journée riche en découvertes, détendez-vous et laissez-vous impré
 
     :::day-row
     ---
-    image: /images/voyages/qi9E1fCScaAxmGceRFZv.jpg
+    image: /images/voyages/voyage-aventure-namibie/qi9E1fCScaAxmGceRFZv.jpg
     ---
     #subtitle
     JOUR 7
@@ -245,7 +245,7 @@ Après une journée riche en découvertes, détendez-vous et laissez-vous impré
 
     :::day-row
     ---
-    image: /images/voyages/ilPsoaTARh2K32l7iACe.jpg
+    image: /images/voyages/voyage-aventure-namibie/ilPsoaTARh2K32l7iACe.jpg
     ---
     #subtitle
     JOUR 8
@@ -260,7 +260,7 @@ Après une journée riche en découvertes, détendez-vous et laissez-vous impré
 
     :::day-row
     ---
-    image: /images/voyages/vkbtAXSbS3m6E9NIZ0qo.jpg
+    image: /images/voyages/voyage-aventure-namibie/vkbtAXSbS3m6E9NIZ0qo.jpg
     ---
     #subtitle
     JOUR 9
@@ -278,7 +278,7 @@ Après l’effort, offrez-vous une parenthèse de douceur à Hauchabfontein. Nic
 
     :::day-row
     ---
-    image: /images/voyages/aKh8SwPYRsS9Z0e7OpPc.jpg
+    image: /images/voyages/voyage-aventure-namibie/aKh8SwPYRsS9Z0e7OpPc.jpg
     ---
     #subtitle
     JOUR 10
@@ -293,7 +293,7 @@ Après l’effort, offrez-vous une parenthèse de douceur à Hauchabfontein. Nic
 
     :::day-row
     ---
-    image: /images/voyages/UMuqpDqT9eSp38XjJeGf.jpg
+    image: /images/voyages/voyage-aventure-namibie/UMuqpDqT9eSp38XjJeGf.jpg
     ---
     #subtitle
     JOUR 11
@@ -310,7 +310,7 @@ Terminez la journée avec une soirée conviviale, parfaite pour partager vos imp
 
     :::day-row
     ---
-    image: /images/voyages/A7rH3H9Q4CIsCzqnO0y5.jpg
+    image: /images/voyages/voyage-aventure-namibie/A7rH3H9Q4CIsCzqnO0y5.jpg
     ---
     #subtitle
     JOUR 12
@@ -328,7 +328,7 @@ Terminez cette journée immersive par un braai (barbecue) convivial.
 
     :::day-row
     ---
-    image: /images/voyages/lCSgpqA0QdOJRQPizkfC.jpg
+    image: /images/voyages/voyage-aventure-namibie/lCSgpqA0QdOJRQPizkfC.jpg
     ---
     #subtitle
     JOUR 13
@@ -345,7 +345,7 @@ Puis, il sera temps de prendre la route vers le sanctuaire principal, un dernier
 
     :::day-row
     ---
-    image: /images/voyages/vrUWq1IYQgCqwCvSEQvg.jpg
+    image: /images/voyages/voyage-aventure-namibie/vrUWq1IYQgCqwCvSEQvg.jpg
     ---
     #subtitle
     JOUR 14
@@ -375,31 +375,31 @@ Puis, il sera temps de prendre la route vers le sanctuaire principal, un dernier
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/zINNQ6LJR9uU4hOEP9yL.jpg
+    image: /images/voyages/voyage-aventure-namibie/zINNQ6LJR9uU4hOEP9yL.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/UeUTW89sRrOQ2oWCjwhq.jpg
+    image: /images/voyages/voyage-aventure-namibie/UeUTW89sRrOQ2oWCjwhq.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/cakms0TNTeudMigSJpdR.jpg
+    image: /images/voyages/voyage-aventure-namibie/cakms0TNTeudMigSJpdR.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/6MwtJA8ZQyWA5LcaGKy8.jpg
+    image: /images/voyages/voyage-aventure-namibie/6MwtJA8ZQyWA5LcaGKy8.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/rzvWCow8SJSCm7P74Fm9.jpg
+    image: /images/voyages/voyage-aventure-namibie/rzvWCow8SJSCm7P74Fm9.jpg
     ---
     :::::
     ::::

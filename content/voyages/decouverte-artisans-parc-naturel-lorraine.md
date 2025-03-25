@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/1aWdKJNxSyWjXRIY9Vj0.jpg
+image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/1aWdKJNxSyWjXRIY9Vj0.jpg
 ---
 #title
 Viticultrice et souffleur de verre, rencontrez les artisans lorrains
@@ -10,33 +10,33 @@ Viticultrice et souffleur de verre, rencontrez les artisans lorrains
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/zI1FfMyCQ4C2sVgeWInK.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/decouverte-artisans-parc-naturel-lorraine/zI1FfMyCQ4C2sVgeWInK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/GbplUYHyQVeymr51VwNX.jpg
+image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/GbplUYHyQVeymr51VwNX.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/iRJjmAtuSBu7xGCKlhi9.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/decouverte-artisans-parc-naturel-lorraine/iRJjmAtuSBu7xGCKlhi9.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/DxCcRROWTS6IZoRgbJtX.jpg
+image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/DxCcRROWTS6IZoRgbJtX.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/mqnzv56hQPexOPJMI5i7.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/decouverte-artisans-parc-naturel-lorraine/mqnzv56hQPexOPJMI5i7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/HUsn3eC5Q0i6Rxzfz3Y0.jpg
+image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/HUsn3eC5Q0i6Rxzfz3Y0.jpg
 ---
 ::::
   :::#component-slot-2
@@ -133,7 +133,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/bvQMCK1lT6WXfcQU3HC0.jpg
+    avatar: /images/voyages/decouverte-artisans-parc-naturel-lorraine/bvQMCK1lT6WXfcQU3HC0.jpg
     avatar-size: "60"
     ---
     #title
@@ -143,7 +143,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
 
   :::highlights-row
   ---
-  image: /images/voyages/Ikg4x93IRGq7TxINEizL.jpg
+  image: /images/voyages/decouverte-artisans-parc-naturel-lorraine/Ikg4x93IRGq7TxINEizL.jpg
   ---
   ::::highlight-list-item
   Découvrez les richesses naturelles et les savoir-faire du Parc naturel régional de Lorraine
@@ -203,7 +203,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
   
     :::day-row
     ---
-    image: /images/voyages/rJeR5YABQNeiaeEJRLTv.jpg
+    image: /images/voyages/decouverte-artisans-parc-naturel-lorraine/rJeR5YABQNeiaeEJRLTv.jpg
     ---
     #subtitle
     JOUR 1
@@ -219,7 +219,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
 
     :::day-row
     ---
-    image: /images/voyages/Q11MJAlbSp68gggRbAfn.jpg
+    image: /images/voyages/decouverte-artisans-parc-naturel-lorraine/Q11MJAlbSp68gggRbAfn.jpg
     ---
     #subtitle
     JOUR 2
@@ -234,7 +234,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
 
     :::day-row
     ---
-    image: /images/voyages/pD3XyBHGTRmFuZlr5XRW.jpg
+    image: /images/voyages/decouverte-artisans-parc-naturel-lorraine/pD3XyBHGTRmFuZlr5XRW.jpg
     ---
     #subtitle
     JOUR 3
@@ -271,7 +271,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/85c5S0oXTN6p4MNaeIu8.jpg
+    avatar: /images/voyages/decouverte-artisans-parc-naturel-lorraine/85c5S0oXTN6p4MNaeIu8.jpg
     ---
     #title
     Eve
@@ -284,7 +284,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/xJ6FaABrQuq6WxSAVsQX.jpg
+    avatar: /images/voyages/decouverte-artisans-parc-naturel-lorraine/xJ6FaABrQuq6WxSAVsQX.jpg
     ---
     #title
     Frédéric
@@ -297,7 +297,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/w4TSSvjuT8SC2bxgiDq3.jpg
+    avatar: /images/voyages/decouverte-artisans-parc-naturel-lorraine/w4TSSvjuT8SC2bxgiDq3.jpg
     ---
     #title
     Logan

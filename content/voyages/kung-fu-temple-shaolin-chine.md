@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/dVDzYTfSQvITmnOkHPlg.jpg
+image-src: /images/voyages/kung-fu-temple-shaolin-chine/dVDzYTfSQvITmnOkHPlg.jpg
 ---
 #title
 Initiez-vous au Kung Fu dans un temple Shaolin
@@ -10,57 +10,57 @@ Initiez-vous au Kung Fu dans un temple Shaolin
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/ns0crrMRyu8jK2PXOojQ.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/kung-fu-temple-shaolin-chine/ns0crrMRyu8jK2PXOojQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/cd0vcsSRmGbssoUCyzQw.jpg
+image-src: /images/voyages/kung-fu-temple-shaolin-chine/cd0vcsSRmGbssoUCyzQw.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/FbfRxKnbSfCBPIsM7IVF.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/kung-fu-temple-shaolin-chine/FbfRxKnbSfCBPIsM7IVF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/7TP9pVJQdyQkA8hqZMvz.jpg
+image-src: /images/voyages/kung-fu-temple-shaolin-chine/7TP9pVJQdyQkA8hqZMvz.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/pSEDIMzTBGfHB9LM50CV.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/kung-fu-temple-shaolin-chine/pSEDIMzTBGfHB9LM50CV.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/3Tv50UAQRmKZH6ENSpbP.jpg
+image-src: /images/voyages/kung-fu-temple-shaolin-chine/3Tv50UAQRmKZH6ENSpbP.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/BNFfVmB8QcyvJDtGx1ki.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/kung-fu-temple-shaolin-chine/BNFfVmB8QcyvJDtGx1ki.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/awfDXogVSIOzCRmidL73.jpg
+image-src: /images/voyages/kung-fu-temple-shaolin-chine/awfDXogVSIOzCRmidL73.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/5nTsl0JhRoudD1u6NmUT.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/kung-fu-temple-shaolin-chine/5nTsl0JhRoudD1u6NmUT.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ci9MzGkITD6RENKlGn3t.jpg
+image-src: /images/voyages/kung-fu-temple-shaolin-chine/ci9MzGkITD6RENKlGn3t.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/JzfpAhcpRg6Xxvi8gYwP.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/kung-fu-temple-shaolin-chine/JzfpAhcpRg6Xxvi8gYwP.jpg"}
 ::::
   :::
 ::
@@ -147,7 +147,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/S0BxOsmhSTKNddO2yhl5.jpg
+    avatar: /images/voyages/kung-fu-temple-shaolin-chine/S0BxOsmhSTKNddO2yhl5.jpg
     avatar-size: "60"
     ---
     #title
@@ -157,7 +157,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
 
   :::highlights-row
   ---
-  image: /images/voyages/V6iL94H7T62Z2jwznZPB.jpg
+  image: /images/voyages/kung-fu-temple-shaolin-chine/V6iL94H7T62Z2jwznZPB.jpg
   ---
   ::::highlight-list-item
   Une véritable immersion au sein du temple Shaolin, dans le berceau du Kung-Fu
@@ -217,7 +217,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
   
     :::day-row
     ---
-    image: /images/voyages/9UWxWSj8SJS0YaXm22gH.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/9UWxWSj8SJS0YaXm22gH.jpg
     ---
     #subtitle
     JOUR 1
@@ -232,7 +232,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
 
     :::day-row
     ---
-    image: /images/voyages/OyC74hQSCqWtDY3fkBx7.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/OyC74hQSCqWtDY3fkBx7.jpg
     ---
     #subtitle
     JOUR 2
@@ -247,7 +247,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
 
     :::day-row
     ---
-    image: /images/voyages/iIirth4LTBOkVsGB27pg.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/iIirth4LTBOkVsGB27pg.jpg
     ---
     #subtitle
     JOUR 3
@@ -262,7 +262,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
 
     :::day-row
     ---
-    image: /images/voyages/K6hP4LHQICQtlC1zjX7E.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/K6hP4LHQICQtlC1zjX7E.jpg
     ---
     #subtitle
     JOUR 4
@@ -277,7 +277,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
 
     :::day-row
     ---
-    image: /images/voyages/bEzMTYXlRtipXSruzoB3.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/bEzMTYXlRtipXSruzoB3.jpg
     ---
     #subtitle
     JOURS 5 À 8
@@ -292,7 +292,7 @@ En deuxième partie de voyage, découvrez durant deux jours Pékin et ses enviro
 
     :::day-row
     ---
-    image: /images/voyages/4kc44JpHR2Ec4NVeL5OT.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/4kc44JpHR2Ec4NVeL5OT.jpg
     ---
     #subtitle
     JOUR 9
@@ -308,7 +308,7 @@ Vous prenez ensuite la direction de Luoyang d’où vous prenez un TGV pour reto
 
     :::day-row
     ---
-    image: /images/voyages/1fRYFitFSCSwfgUAtiYz.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/1fRYFitFSCSwfgUAtiYz.jpg
     ---
     #subtitle
     JOUR 10
@@ -323,7 +323,7 @@ Vous prenez ensuite la direction de Luoyang d’où vous prenez un TGV pour reto
 
     :::day-row
     ---
-    image: /images/voyages/mNo3DzS4R1aZJN6npKYS.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/mNo3DzS4R1aZJN6npKYS.jpg
     ---
     #subtitle
     JOUR 11
@@ -352,19 +352,19 @@ Vous prenez ensuite la direction de Luoyang d’où vous prenez un TGV pour reto
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/B2kOcYiYSq2kH7bvCoyC.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/B2kOcYiYSq2kH7bvCoyC.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/jnE9gUgQ6Oyswamu03Tp.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/jnE9gUgQ6Oyswamu03Tp.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/JI2aL2ReRHe2UWM5LVhO.jpg
+    image: /images/voyages/kung-fu-temple-shaolin-chine/JI2aL2ReRHe2UWM5LVhO.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/XswXuuzZTDaUTeek1NrH.jpg
+image-src: /images/voyages/voyage-nepal-initiatique/XswXuuzZTDaUTeek1NrH.jpg
 ---
 #title
 Retour au partage et à la pleine présence - initiation à la méditation sonore au Népal - avec Lauriane Sornette

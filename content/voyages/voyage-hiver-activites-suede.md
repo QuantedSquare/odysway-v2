@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/n4LPXi1QRuPsqLJDHuAe.jpg
+image-src: /images/voyages/voyage-hiver-activites-suede/n4LPXi1QRuPsqLJDHuAe.jpg
 ---
 #title
 Séjour multi-activités en Laponie suédoise
@@ -89,7 +89,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/voyage-hiver-activites-suede/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -99,7 +99,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
   :::highlights-row
   ---
-  image: /images/voyages/52LkaPeBTCCMSZWQJ8US.jpg
+  image: /images/voyages/voyage-hiver-activites-suede/52LkaPeBTCCMSZWQJ8US.jpg
   ---
   ::::highlight-list-item
   Plongez au cœur de la culture nordique en profitant d'activités locales et ancestrales
@@ -155,7 +155,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
   
     :::day-row
     ---
-    image: /images/voyages/QdVAI8h9Stqa3QSLKxFF.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/QdVAI8h9Stqa3QSLKxFF.jpg
     ---
     #subtitle
     JOUR 1
@@ -170,7 +170,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/4scq3FmMRVu7NhFFv6NW.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/4scq3FmMRVu7NhFFv6NW.jpg
     ---
     #subtitle
     JOUR 2
@@ -185,7 +185,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/9z3Cm1sTT5eBVep69GBB.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/9z3Cm1sTT5eBVep69GBB.jpg
     ---
     #subtitle
     JOUR 3
@@ -200,7 +200,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/TPGiIeJuTtuQERjevUM5.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/TPGiIeJuTtuQERjevUM5.jpg
     ---
     #subtitle
     JOUR 4
@@ -215,7 +215,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/9i1yMgmxRlmVc98ZmbNn.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/9i1yMgmxRlmVc98ZmbNn.jpg
     ---
     #subtitle
     JOUR 5
@@ -230,7 +230,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/uoYUTiA2RRSBqxUE6BBG.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/uoYUTiA2RRSBqxUE6BBG.jpg
     ---
     #subtitle
     JOUR 6
@@ -245,7 +245,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/50CFxN43TL6tFocB3xUM.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/50CFxN43TL6tFocB3xUM.jpg
     ---
     #subtitle
     JOUR 7
@@ -260,7 +260,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
 
     :::day-row
     ---
-    image: /images/voyages/TQcY4SMYTOyD6Y5qZ1qu.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/TQcY4SMYTOyD6Y5qZ1qu.jpg
     ---
     #subtitle
     JOUR 8
@@ -289,19 +289,19 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/9qZKpORfR1y3aVTCTEEc.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/9qZKpORfR1y3aVTCTEEc.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/vzkuGVdLR4mYiZL5zACI.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/vzkuGVdLR4mYiZL5zACI.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/4FGxhmCQ1WEAeBMVnBuY.jpg
+    image: /images/voyages/voyage-hiver-activites-suede/4FGxhmCQ1WEAeBMVnBuY.jpg
     ---
     :::::
     ::::

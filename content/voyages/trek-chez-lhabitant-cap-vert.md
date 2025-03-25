@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/G8NnpiyeQqwymCIAkpfn.jpg
+image-src: /images/voyages/trek-chez-lhabitant-cap-vert/G8NnpiyeQqwymCIAkpfn.jpg
 ---
 #title
 Randonnées et nuits chez l'habitant sur l'île de Santo Antão au Cap-Vert
@@ -10,53 +10,53 @@ Randonnées et nuits chez l'habitant sur l'île de Santo Antão au Cap-Vert
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/nflZ8aO9TwmcKWV5MayT.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/nflZ8aO9TwmcKWV5MayT.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/rVR6SRFWRcmdyU1IRYhM.jpg
+image-src: /images/voyages/trek-chez-lhabitant-cap-vert/rVR6SRFWRcmdyU1IRYhM.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/bRaIjOAXR5epIRC2yxnc.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/bRaIjOAXR5epIRC2yxnc.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/qmup1c8ATsSjJyYvsXJY.jpg
+image-src: /images/voyages/trek-chez-lhabitant-cap-vert/qmup1c8ATsSjJyYvsXJY.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/AWUXaKxKQ7yuq6E0uhkK.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/AWUXaKxKQ7yuq6E0uhkK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/2YIorst3RiyPv9NprLdE.jpg
+image-src: /images/voyages/trek-chez-lhabitant-cap-vert/2YIorst3RiyPv9NprLdE.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/CwfLOPluSFW7cKCtTzr6.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/CwfLOPluSFW7cKCtTzr6.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/XQATlksBRF6PzanZVJiF.jpg
+image-src: /images/voyages/trek-chez-lhabitant-cap-vert/XQATlksBRF6PzanZVJiF.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/yS8c7PUNSMSD4nLazQx8.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/yS8c7PUNSMSD4nLazQx8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/yziznDoJToKFI5zKdmN3.jpg
+image-src: /images/voyages/trek-chez-lhabitant-cap-vert/yziznDoJToKFI5zKdmN3.jpg
 ---
 ::::
   :::
@@ -146,7 +146,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/trek-chez-lhabitant-cap-vert/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -156,7 +156,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
   :::highlights-row
   ---
-  image: /images/voyages/7tiZmqPTNqXsucdW5ePA.jpg
+  image: /images/voyages/trek-chez-lhabitant-cap-vert/7tiZmqPTNqXsucdW5ePA.jpg
   ---
   ::::highlight-list-item
   Explorez l'île de Santo Antao lors de randonnées magnifiques et accessibles
@@ -216,7 +216,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
   
     :::day-row
     ---
-    image: /images/voyages/nJljY8asSSmdNmu60ZLg.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/nJljY8asSSmdNmu60ZLg.jpg
     ---
     #subtitle
     JOUR 1
@@ -231,7 +231,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/gagF7jpTaKSX9W4BE7Pw.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/gagF7jpTaKSX9W4BE7Pw.jpg
     ---
     #subtitle
     JOUR 2
@@ -246,7 +246,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/658xmSkBRyO7JyPiWHXk.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/658xmSkBRyO7JyPiWHXk.jpg
     ---
     #subtitle
     JOUR 3
@@ -261,7 +261,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/YuoRCjB0SuqM6l1KpYWa.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/YuoRCjB0SuqM6l1KpYWa.jpg
     ---
     #subtitle
     JOUR 4
@@ -276,7 +276,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/6JfSLd4uSwmbour2itNs.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/6JfSLd4uSwmbour2itNs.jpg
     ---
     #subtitle
     JOUR 5
@@ -291,7 +291,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/aXKrzLNQOKN6H7F11WaS.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/aXKrzLNQOKN6H7F11WaS.jpg
     ---
     #subtitle
     JOUR 6
@@ -306,7 +306,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/C3tsZQdQ37zuB3hAlf8A.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/C3tsZQdQ37zuB3hAlf8A.jpg
     ---
     #subtitle
     JOUR 7
@@ -321,7 +321,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
 
     :::day-row
     ---
-    image: /images/voyages/v4QtACyRZK2CSSYpV3QX.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/v4QtACyRZK2CSSYpV3QX.jpg
     ---
     #subtitle
     JOUR 8
@@ -350,19 +350,19 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/SyeWicLQeCitG7AAFWxK.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/SyeWicLQeCitG7AAFWxK.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/wqZLVuHiQHW9v1az1aGP.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/wqZLVuHiQHW9v1az1aGP.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/dmlj60iqQDi2ZgddGnt1.jpg
+    image: /images/voyages/trek-chez-lhabitant-cap-vert/dmlj60iqQDi2ZgddGnt1.jpg
     ---
     :::::
     ::::
@@ -380,7 +380,7 @@ Un séjour unique, mêlant randonnées à couper le souffle et des rencontres ch
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/m3FjXIxRWapQjGLEYRkK.jpg
+    avatar: /images/voyages/trek-chez-lhabitant-cap-vert/m3FjXIxRWapQjGLEYRkK.jpg
     ---
     #title
     Adilson

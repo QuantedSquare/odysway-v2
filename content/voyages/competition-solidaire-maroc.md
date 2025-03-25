@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/xBhu52wpT82onjEdNMQT.jpg
+image-src: /images/voyages/competition-solidaire-maroc/xBhu52wpT82onjEdNMQT.jpg
 ---
 #title
 La Grande aventure : Challenge solidaire en immersion au Maroc
@@ -93,7 +93,7 @@ Séjour engagé et solidaire, votre objectif sera de finir en tête en fin de s�
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/naDH2vrhSOVoGZM6MSpA.jpg
+    avatar: /images/voyages/competition-solidaire-maroc/naDH2vrhSOVoGZM6MSpA.jpg
     avatar-size: "60"
     ---
     #title
@@ -103,7 +103,7 @@ Séjour engagé et solidaire, votre objectif sera de finir en tête en fin de s�
 
   :::highlights-row
   ---
-  image: /images/voyages/4uZNfdZqTRij3dnpFVE1.jpg
+  image: /images/voyages/competition-solidaire-maroc/4uZNfdZqTRij3dnpFVE1.jpg
   ---
   ::::highlight-list-item
   Découvrez le _vrai_ Maroc d’une façon ludique et immersive
@@ -163,7 +163,7 @@ Séjour engagé et solidaire, votre objectif sera de finir en tête en fin de s�
   
     :::day-row
     ---
-    image: /images/voyages/iJRtTdGTYqwCA0sesYTA.jpg
+    image: /images/voyages/competition-solidaire-maroc/iJRtTdGTYqwCA0sesYTA.jpg
     ---
     #subtitle
     JOUR 1
@@ -183,7 +183,7 @@ Transport : Minibus (20 min de route) - Pension : Déjeuner et dîner inclus
 
     :::day-row
     ---
-    image: /images/voyages/CFVRCAfDTEiClttJrPVw.jpg
+    image: /images/voyages/competition-solidaire-maroc/CFVRCAfDTEiClttJrPVw.jpg
     ---
     #subtitle
     JOUR 2
@@ -204,7 +204,7 @@ Transport : Minibus et voitures de location - Pension : Pension complète
 
     :::day-row
     ---
-    image: /images/voyages/iJRtTdGTYqwCA0sesYTA.jpg
+    image: /images/voyages/competition-solidaire-maroc/iJRtTdGTYqwCA0sesYTA.jpg
     ---
     #subtitle
     JOUR 3
@@ -225,7 +225,7 @@ Transport : Voitures de location - Pension : Pension complète
 
     :::day-row
     ---
-    image: /images/voyages/Y9mBkNLNSjCLr7zcbrsa.jpg
+    image: /images/voyages/competition-solidaire-maroc/Y9mBkNLNSjCLr7zcbrsa.jpg
     ---
     #subtitle
     JOUR 4
@@ -245,7 +245,7 @@ Transport : Voitures de location - Pension : Pension complète
 
     :::day-row
     ---
-    image: /images/voyages/XbpmxscRySDWuVfDNxwQ.jpg
+    image: /images/voyages/competition-solidaire-maroc/XbpmxscRySDWuVfDNxwQ.jpg
     ---
     #subtitle
     JOUR 5
@@ -265,7 +265,7 @@ Transport : Voitures de location - Pension : Demi-pension
 
     :::day-row
     ---
-    image: /images/voyages/8r7tYn7kSC2pOpDtRFsN.jpg
+    image: /images/voyages/competition-solidaire-maroc/8r7tYn7kSC2pOpDtRFsN.jpg
     ---
     #subtitle
     JOUR 6
@@ -285,7 +285,7 @@ Transport : Voitures de location et minibus - Pension : Pension complète
 
     :::day-row
     ---
-    image: /images/voyages/2UHi64lLQUiaRBioXNbk.jpg
+    image: /images/voyages/competition-solidaire-maroc/2UHi64lLQUiaRBioXNbk.jpg
     ---
     #subtitle
     JOUR 7
@@ -304,7 +304,7 @@ Transport : Minibus - Pension : Demi-pension
 
     :::day-row
     ---
-    image: /images/voyages/nXOlMilDSr6tyiBdglRS.jpg
+    image: /images/voyages/competition-solidaire-maroc/nXOlMilDSr6tyiBdglRS.jpg
     ---
     #subtitle
     JOUR 8
@@ -336,19 +336,19 @@ Transport : Minibus (2 transferts aéroport prévus)
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/Ifa0HRTfSrOPQUugTwTB.jpg
+    image: /images/voyages/competition-solidaire-maroc/Ifa0HRTfSrOPQUugTwTB.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/vZHX5JQ5TwCQy8oDYnJu.jpg
+    image: /images/voyages/competition-solidaire-maroc/vZHX5JQ5TwCQy8oDYnJu.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/h1bcenAsR8S8x7BEvKlR.jpg
+    image: /images/voyages/competition-solidaire-maroc/h1bcenAsR8S8x7BEvKlR.jpg
     ---
     :::::
     ::::
@@ -366,7 +366,7 @@ Transport : Minibus (2 transferts aéroport prévus)
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/StlHcQI3QBG0z1DvzB8H.jpg
+    avatar: /images/voyages/competition-solidaire-maroc/StlHcQI3QBG0z1DvzB8H.jpg
     ---
     #title
     Hamid
@@ -379,7 +379,7 @@ Transport : Minibus (2 transferts aéroport prévus)
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/naDH2vrhSOVoGZM6MSpA.jpg
+    avatar: /images/voyages/competition-solidaire-maroc/naDH2vrhSOVoGZM6MSpA.jpg
     ---
     #title
     Charles

@@ -1,14 +1,14 @@
 {
   "title": "Voyage au Rajasthan : éveil des sens au cœur de l'Inde",
   "slug": "voyage-immersif-rajasthan-inde",
-  "ISO": "IN",
+  "iso": "IN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersif-rajasthan-inde/uUlHz9bETycICVXKxWAH",
+    "alt": "uUlHz9bETycICVXKxWAH"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersif-rajasthan-inde/YLqdmgs6Sju556CG5WP0.jpg",
+    "alt": "YLqdmgs6Sju556CG5WP0"
   },
   "country": "Inde",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -119,8 +119,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

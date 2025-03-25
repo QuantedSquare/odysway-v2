@@ -1,14 +1,14 @@
 {
   "title": "L’appel des Açores entre volcans, dauphins, baleines et cachalots ",
   "slug": "acores-volcans-dauphins-baleines",
-  "ISO": "PRT",
+  "iso": "PRT",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/acores-volcans-dauphins-baleines/crL01Y3RDSMtg2Bbmtks",
+    "alt": "crL01Y3RDSMtg2Bbmtks"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/açores-volcans-dauphins-baleines/bj1Yaq2tS3aRd4U5tiIQ.jpg",
+    "alt": "bj1Yaq2tS3aRd4U5tiIQ"
   },
   "country": "Portugal",
   "zoneChapka": 1,
@@ -29,8 +29,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 12,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 12,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 12,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

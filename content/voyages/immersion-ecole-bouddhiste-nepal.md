@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/FTeXsfE0RQGf9KTP9qOv.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/FTeXsfE0RQGf9KTP9qOv.jpg
 ---
 #title
 Au cœur du Népal entre randonnées et immersion dans un monastère
@@ -10,67 +10,67 @@ Au cœur du Népal entre randonnées et immersion dans un monastère
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/BLGTxKTlq5TZDYx4heiA.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/BLGTxKTlq5TZDYx4heiA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/zr5R7IIERICBGcIw008g.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/zr5R7IIERICBGcIw008g.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/CAu5jzsdQUepDoETqVwD.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/CAu5jzsdQUepDoETqVwD.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/9O6MItANQXu6o98CQk0J.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/9O6MItANQXu6o98CQk0J.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/jUMSxlxrR6KFe5J7vtQA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/jUMSxlxrR6KFe5J7vtQA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/UyeSIvZwTLi39Uutbd9V.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/UyeSIvZwTLi39Uutbd9V.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/ctxg97qSxC39F0NFe2iM.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/ctxg97qSxC39F0NFe2iM.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/W9xg48zUQV2ZqNwbbKFU.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/W9xg48zUQV2ZqNwbbKFU.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/qZr7crRtes4o9yEmTHZA.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/qZr7crRtes4o9yEmTHZA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/oA2tXJhVSU2LiSFIeCKg.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/oA2tXJhVSU2LiSFIeCKg.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Il4wy7dMSI6T5PQLitTm.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/Il4wy7dMSI6T5PQLitTm.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/8n5lheupQimGbceCgfRg.jpg
+image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/8n5lheupQimGbceCgfRg.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/qJtWcSxnTDi7E5RYMMOg.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/qJtWcSxnTDi7E5RYMMOg.jpg"}
 ::::
   :::
 ::
@@ -161,7 +161,7 @@ Pour la dernière partie de ce voyage, place au repos et à la découverte de l'
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/immersion-ecole-bouddhiste-nepal/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -171,7 +171,7 @@ Pour la dernière partie de ce voyage, place au repos et à la découverte de l'
 
   :::highlights-row
   ---
-  image: /images/voyages/0FvJC6XDTyayef5dvx1A.jpg
+  image: /images/voyages/immersion-ecole-bouddhiste-nepal/0FvJC6XDTyayef5dvx1A.jpg
   ---
   ::::highlight-list-item
   Plongez dans l'ambiance animée de Katmandou et découvrez ses temples bouddhistes
@@ -231,7 +231,7 @@ Pour la dernière partie de ce voyage, place au repos et à la découverte de l'
   
     :::day-row
     ---
-    image: /images/voyages/f8SULDodTmCON0ztDf8d.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/f8SULDodTmCON0ztDf8d.jpg
     ---
     #subtitle
     JOUR 1 
@@ -246,7 +246,7 @@ Pour la dernière partie de ce voyage, place au repos et à la découverte de l'
 
     :::day-row
     ---
-    image: /images/voyages/T5IOP7WQQBWaUgtjXHch.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/T5IOP7WQQBWaUgtjXHch.jpg
     ---
     #subtitle
     JOURS 2 ET 3
@@ -262,7 +262,7 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
 
     :::day-row
     ---
-    image: /images/voyages/kkKFWy03TMKHjI7qEgwA.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/kkKFWy03TMKHjI7qEgwA.jpg
     ---
     #subtitle
     JOURS 4 À 7
@@ -277,7 +277,7 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
 
     :::day-row
     ---
-    image: /images/voyages/kq3V0YGrTFG5tme7QwoW.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/kq3V0YGrTFG5tme7QwoW.jpg
     ---
     #subtitle
     JOURS 8 ET 9
@@ -292,7 +292,7 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
 
     :::day-row
     ---
-    image: /images/voyages/5EqNupPRsK99l9j2TjYj.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/5EqNupPRsK99l9j2TjYj.jpg
     ---
     #subtitle
     JOUR 10 À 13
@@ -307,7 +307,7 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
 
     :::day-row
     ---
-    image: /images/voyages/NYp2g6CMROW2j658CVSX.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/NYp2g6CMROW2j658CVSX.jpg
     ---
     #subtitle
     JOUR 14
@@ -336,19 +336,19 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/1QeS40dOSI67I1JRxxsa.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/1QeS40dOSI67I1JRxxsa.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/qIgO4EmITE0JiSlBtUjQ.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/qIgO4EmITE0JiSlBtUjQ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/tWQhFDiYTaudgmsEP1k0.jpg
+    image: /images/voyages/immersion-ecole-bouddhiste-nepal/tWQhFDiYTaudgmsEP1k0.jpg
     ---
     :::::
     ::::

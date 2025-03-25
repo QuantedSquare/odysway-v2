@@ -1,14 +1,14 @@
 {
   "title": "Namibie sauvage : entre aventure et protection des animaux",
   "slug": "voyage-aventure-namibie",
-  "ISO": "NAM",
+  "iso": "NAM",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-aventure-namibie/VBcFhIQWTLhEDBEEyEBg",
+    "alt": "VBcFhIQWTLhEDBEEyEBg"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-aventure-namibie/L5SZWDsQMCUjx5LTHIlh.jpg",
+    "alt": "L5SZWDsQMCUjx5LTHIlh"
   },
   "country": "Namibie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -44,8 +44,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -59,8 +59,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -74,8 +74,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -89,8 +89,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -104,8 +104,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -119,8 +119,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/o6NlblcSpaXQieQMFU8a.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/o6NlblcSpaXQieQMFU8a.jpg
 ---
 #title
 Occupez-vous des animaux de la jungle au Costa Rica
@@ -10,83 +10,83 @@ Occupez-vous des animaux de la jungle au Costa Rica
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/A4xu6XPvTmueQqL5U13F.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/refuge-animaux-costa-rica/A4xu6XPvTmueQqL5U13F.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/sEE27sK6TP6j57B5TYYH.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/sEE27sK6TP6j57B5TYYH.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/epIBTUDiTaaiOzEG8GRe.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/refuge-animaux-costa-rica/epIBTUDiTaaiOzEG8GRe.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/rn7NTchS8qRWnJZRJLow.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/rn7NTchS8qRWnJZRJLow.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/QKvwwaEWTU8TdkSsVKRQ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/refuge-animaux-costa-rica/QKvwwaEWTU8TdkSsVKRQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/ttjEEzXQFOQGrblak5cA.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/ttjEEzXQFOQGrblak5cA.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/tsNDKRgBSuWsU37hqLNx.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/refuge-animaux-costa-rica/tsNDKRgBSuWsU37hqLNx.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/GiryjjFySRqCBEB8WEI5.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/GiryjjFySRqCBEB8WEI5.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/au44p9kgTSaBoHP2TbZg.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/refuge-animaux-costa-rica/au44p9kgTSaBoHP2TbZg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/yl02VdAITA8aUL6FVi4p.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/yl02VdAITA8aUL6FVi4p.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/pUdz8MDVQcOHK2vDBQzi.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/refuge-animaux-costa-rica/pUdz8MDVQcOHK2vDBQzi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/oQBOquejR3yAIyatnWnM.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/oQBOquejR3yAIyatnWnM.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/yh4OKQumQ5aAsoxY8513.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/refuge-animaux-costa-rica/yh4OKQumQ5aAsoxY8513.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5SCRwzvhQL2pCKox8C0Q.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/5SCRwzvhQL2pCKox8C0Q.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/u5KVV3KlSaeNIPEFLYdW.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/refuge-animaux-costa-rica/u5KVV3KlSaeNIPEFLYdW.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/TIMMIZSTyeHXDHBdA3JL.jpg
+image-src: /images/voyages/refuge-animaux-costa-rica/TIMMIZSTyeHXDHBdA3JL.jpg
 ---
 ::::
   :::#component-slot-2
@@ -185,7 +185,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/refuge-animaux-costa-rica/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -195,7 +195,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
 
   :::highlights-row
   ---
-  image: /images/voyages/b30gOPruThiP9T40AH2n.jpg
+  image: /images/voyages/refuge-animaux-costa-rica/b30gOPruThiP9T40AH2n.jpg
   ---
   ::::highlight-list-item
   Vivez une immersion unique au cœur d'un refuge animalier engagé, dont la mission est de relâcher les animaux blessés ou malades
@@ -255,7 +255,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
   
     :::day-row
     ---
-    image: /images/voyages/7vPlQ6Ro2R9pzCuwLvOg.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/7vPlQ6Ro2R9pzCuwLvOg.jpg
     ---
     #subtitle
     JOUR 1
@@ -270,7 +270,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
 
     :::day-row
     ---
-    image: /images/voyages/CHadScvMRCTeEaruXjHw.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/CHadScvMRCTeEaruXjHw.jpg
     ---
     #subtitle
     JOUR 2
@@ -285,7 +285,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
 
     :::day-row
     ---
-    image: /images/voyages/jtH3HrGeSOOthEaxRBg4.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/jtH3HrGeSOOthEaxRBg4.jpg
     ---
     #subtitle
     JOURS 3 À 6
@@ -300,7 +300,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
 
     :::day-row
     ---
-    image: /images/voyages/MXpSb67bQHCZHgyQcaz4.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/MXpSb67bQHCZHgyQcaz4.jpg
     ---
     #subtitle
     JOUR 7
@@ -315,7 +315,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
 
     :::day-row
     ---
-    image: /images/voyages/SRfzYlFESc8lVABdZHjj.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/SRfzYlFESc8lVABdZHjj.jpg
     ---
     #subtitle
     JOURS 8 À 10
@@ -335,7 +335,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
 
     :::day-row
     ---
-    image: /images/voyages/J2LzuT7MQ8K5E0XDNXoq.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/J2LzuT7MQ8K5E0XDNXoq.jpg
     ---
     #subtitle
     JOUR 11
@@ -364,31 +364,31 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/WzFz2p1SQzGiHh2B767F.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/WzFz2p1SQzGiHh2B767F.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/r5QdrkEcQIe5HqcFdSeC.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/r5QdrkEcQIe5HqcFdSeC.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/NyoZX1StRiWZnfLWN0HA.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/NyoZX1StRiWZnfLWN0HA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/YUnW9jLkS8GL2G6qXyVs.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/YUnW9jLkS8GL2G6qXyVs.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/MDaNmJCRcK3tDVaeZYmc.jpg
+    image: /images/voyages/refuge-animaux-costa-rica/MDaNmJCRcK3tDVaeZYmc.jpg
     ---
     :::::
     ::::
@@ -548,7 +548,7 @@ Je vous recommande vivement Odysway, une équipe sympa, jeune et dynamique! Je v
 
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/7EnMKGGgRjeECVpshzJZ.jpg
+    photo: /images/voyages/refuge-animaux-costa-rica/7EnMKGGgRjeECVpshzJZ.jpg
     ---
     #title
     Emilie et Charlie, [40 et 9 ans]{style="color: grey"}
@@ -561,7 +561,7 @@ Et notre hôte, Jenny s'est démenée pour que nous nous sentions bien. Et toujo
 
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/zf72BkDQ3a25PtqF189g.jpg
+    photo: /images/voyages/refuge-animaux-costa-rica/zf72BkDQ3a25PtqF189g.jpg
     ---
     #title
     David, [34 ans]{style="color: grey"}
@@ -572,7 +572,7 @@ Et notre hôte, Jenny s'est démenée pour que nous nous sentions bien. Et toujo
 
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/Nn2J4bCQTNajdwQLPij0.jpg
+    photo: /images/voyages/refuge-animaux-costa-rica/Nn2J4bCQTNajdwQLPij0.jpg
     ---
     #title
     Karine, [53 ans]{style="color: grey"}
@@ -584,7 +584,7 @@ Une expérience inoubliable !
 
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/4MfqINUS9yHiyntbvjvL.jpg
+    photo: /images/voyages/refuge-animaux-costa-rica/4MfqINUS9yHiyntbvjvL.jpg
     ---
     #title
     Pauline et Nino, [34 et 10 ans]{style="color: grey"}

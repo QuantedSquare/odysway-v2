@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/YZpfhas4QcK1uOHlHAAn.jpg
+image-src: /images/voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg
 ---
 #title
 Immersion hivernale en terre béarnaise
@@ -10,43 +10,43 @@ Immersion hivernale en terre béarnaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/G4x6f8kSuKhzHIwVfAO8.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-hiver-pyrenees/G4x6f8kSuKhzHIwVfAO8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/sQWytymSOe1bJcc4i4rf.jpg
+image-src: /images/voyages/sejour-hiver-pyrenees/sQWytymSOe1bJcc4i4rf.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/IldQdsuiT7K7x3uZb6LI.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-hiver-pyrenees/IldQdsuiT7K7x3uZb6LI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/EpN6Kb6KTVi7e0x9oWb1.jpg
+image-src: /images/voyages/sejour-hiver-pyrenees/EpN6Kb6KTVi7e0x9oWb1.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/NZWQcdWiRRqlDgNBKVXI.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/sejour-hiver-pyrenees/NZWQcdWiRRqlDgNBKVXI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/TIEN63hbQ6OZ161rVHlL.jpg
+image-src: /images/voyages/sejour-hiver-pyrenees/TIEN63hbQ6OZ161rVHlL.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/tkvbHE7QdmU9Rt4A8oig.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/sejour-hiver-pyrenees/tkvbHE7QdmU9Rt4A8oig.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ycb748L0T9upWAcemHXe.jpg
+image-src: /images/voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg
 ---
 ::::
   :::
@@ -134,7 +134,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/sejour-hiver-pyrenees/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -144,7 +144,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
   :::highlights-row
   ---
-  image: /images/voyages/XlIHZEHwQmiF9u91dQG1.jpg
+  image: /images/voyages/sejour-hiver-pyrenees/XlIHZEHwQmiF9u91dQG1.jpg
   ---
   ::::highlight-list-item
   Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
@@ -204,7 +204,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   
     :::day-row
     ---
-    image: /images/voyages/UqLivEYnSbKKZNwzeJPy.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/UqLivEYnSbKKZNwzeJPy.jpg
     ---
     #subtitle
     JOUR 1
@@ -219,7 +219,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: /images/voyages/4bvBF9pCSvel4UDxkx6C.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/4bvBF9pCSvel4UDxkx6C.jpg
     ---
     #subtitle
     JOUR 2
@@ -234,7 +234,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: /images/voyages/KSKepVmqSK6BlnNDW2oN.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/KSKepVmqSK6BlnNDW2oN.jpg
     ---
     #subtitle
     JOUR 3
@@ -249,7 +249,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: /images/voyages/Itk1VTqRa2h80m3nlffV.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/Itk1VTqRa2h80m3nlffV.jpg
     ---
     #subtitle
     JOUR 4
@@ -264,7 +264,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: /images/voyages/hQMQsoiSUmO5b7woRYOg.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/hQMQsoiSUmO5b7woRYOg.jpg
     ---
     #subtitle
     JOUR 5
@@ -293,19 +293,19 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/JacSdSAWTfW40FdENnQh.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/JacSdSAWTfW40FdENnQh.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/HJBg4gECT3qXda2TqenG.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/HJBg4gECT3qXda2TqenG.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/0S9ohMXZRqqXZqcCr9dZ.jpg
+    image: /images/voyages/sejour-hiver-pyrenees/0S9ohMXZRqqXZqcCr9dZ.jpg
     ---
     :::::
     ::::
@@ -323,7 +323,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/5Wvd4ENSa6776ZcteQlw.jpg
+    avatar: /images/voyages/sejour-hiver-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg
     ---
     #title
     Accompagnateur en moyenne montagne

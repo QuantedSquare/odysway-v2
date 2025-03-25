@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/EQgF2rwwQkWJBdFZ6gCy.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/EQgF2rwwQkWJBdFZ6gCy.jpg
 ---
 #title
 Bolivie : lagunes colorées, désert de sel et rencontres hors des sentiers battus
@@ -10,83 +10,83 @@ Bolivie : lagunes colorées, désert de sel et rencontres hors des sentiers batt
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/T8FTNKDbT0mp5nNmfHqm.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/T8FTNKDbT0mp5nNmfHqm.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/USuPdQfCQEyu2iND1PYM.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/USuPdQfCQEyu2iND1PYM.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/R9p88jZCQT6oevoFHjwX.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/R9p88jZCQT6oevoFHjwX.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/XOmpyXQURxm9bOMWCiF6.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/XOmpyXQURxm9bOMWCiF6.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/4MQjW8eaTkW9cyhRwPWH.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/4MQjW8eaTkW9cyhRwPWH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/eyNbMMkrSGOxqAfrhvai.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/eyNbMMkrSGOxqAfrhvai.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/hoDUD5mQuXhyZZPyBEw3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/hoDUD5mQuXhyZZPyBEw3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/SIthwDeTQZeJfhJilokQ.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/SIthwDeTQZeJfhJilokQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/QpDmn1JGSdec7utLIGUL.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/QpDmn1JGSdec7utLIGUL.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/d8tJOaz6RxW5gI921SF0.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/d8tJOaz6RxW5gI921SF0.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/jMauTXT6SGsQi1hz5gKA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/jMauTXT6SGsQi1hz5gKA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/eoJxUuabTzqwlAI5dn4h.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/eoJxUuabTzqwlAI5dn4h.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/MWhQmtSSm2wI3CDp6GHg.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/MWhQmtSSm2wI3CDp6GHg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/9zP57SNBQVKY7nuDXNQi.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/9zP57SNBQVKY7nuDXNQi.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/xkc9M70SmO74Vd8cQgxy.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/xkc9M70SmO74Vd8cQgxy.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/TsylkHWpRJmPE9OLPxPM.jpg
+image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/TsylkHWpRJmPE9OLPxPM.jpg
 ---
 ::::
   :::
@@ -180,7 +180,7 @@ Un voyage mythique à vivre une fois dans sa vie.
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/OQ3pO17GTOGZpxgJvo4l.jpg
+    avatar: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/OQ3pO17GTOGZpxgJvo4l.jpg
     avatar-size: "60"
     ---
     #title
@@ -190,7 +190,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
   :::highlights-row
   ---
-  image: /images/voyages/vNOzbHMtRsaz6Q09CKaS.jpg
+  image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/vNOzbHMtRsaz6Q09CKaS.jpg
   ---
   ::::highlight-list-item
   Parcourez la Bolivie au fil d'expériences intimistes et hors des sentiers battus
@@ -254,7 +254,7 @@ Un voyage mythique à vivre une fois dans sa vie.
   
     :::day-row
     ---
-    image: /images/voyages/6BlssFzhSSOoLosLEPSb.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/6BlssFzhSSOoLosLEPSb.jpg
     ---
     #subtitle
     JOUR 1 ET 2
@@ -269,7 +269,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/zGVeeuHaTV2IVsAYyspE.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/zGVeeuHaTV2IVsAYyspE.jpg
     ---
     #subtitle
     JOUR 3
@@ -284,7 +284,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/dJZuyirOSrykw0v8Awd1.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/dJZuyirOSrykw0v8Awd1.jpg
     ---
     #subtitle
     JOUR 4
@@ -299,7 +299,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/BbBReffZShObcPfxQeAu.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/BbBReffZShObcPfxQeAu.jpg
     ---
     #subtitle
     JOUR 5
@@ -314,7 +314,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/KJo9cpGkQiWJs3xE0PNo.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/KJo9cpGkQiWJs3xE0PNo.jpg
     ---
     #subtitle
     JOUR 6
@@ -329,7 +329,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/2v433EjPTwyvuIOt7pHx.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/2v433EjPTwyvuIOt7pHx.jpg
     ---
     #subtitle
     JOUR 7
@@ -344,7 +344,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/P3Re3qtpQX2nPn7ClyuE.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/P3Re3qtpQX2nPn7ClyuE.jpg
     ---
     #subtitle
     JOUR 8
@@ -359,7 +359,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/YHBhr2fRRNmiNM77gOZL.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/YHBhr2fRRNmiNM77gOZL.jpg
     ---
     #subtitle
     JOUR 9
@@ -374,7 +374,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/u0yRb0nBTmOAJ6CK20CR.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/u0yRb0nBTmOAJ6CK20CR.jpg
     ---
     #subtitle
     JOUR 10
@@ -389,7 +389,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/LOqceUzTfOKg9WxxXkuz.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/LOqceUzTfOKg9WxxXkuz.jpg
     ---
     #subtitle
     JOUR 11
@@ -404,7 +404,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/HfossVwRuWFLpMcsEJXU.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/HfossVwRuWFLpMcsEJXU.jpg
     ---
     #subtitle
     JOUR 12
@@ -419,7 +419,7 @@ Un voyage mythique à vivre une fois dans sa vie.
 
     :::day-row
     ---
-    image: /images/voyages/yfd4TaA2QTyM9w4pxdJQ.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/yfd4TaA2QTyM9w4pxdJQ.jpg
     ---
     #subtitle
     JOUR 13
@@ -448,19 +448,19 @@ Un voyage mythique à vivre une fois dans sa vie.
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/NJBvX5MxQky1MQlrbGOc.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/NJBvX5MxQky1MQlrbGOc.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/yxSV0QCT2KjUbEHsRmMZ.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/yxSV0QCT2KjUbEHsRmMZ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/iVi83ilnQzypykTYf1z2.jpg
+    image: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/iVi83ilnQzypykTYf1z2.jpg
     ---
     :::::
     ::::

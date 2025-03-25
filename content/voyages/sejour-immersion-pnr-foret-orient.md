@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/bW2jUoUBSzaYyTPGAiPy.jpg
+image-src: /images/voyages/sejour-immersion-pnr-foret-orient/bW2jUoUBSzaYyTPGAiPy.jpg
 ---
 #title
 Immergez-vous dans le Parc naturel de la Forêt d'Orient
@@ -100,7 +100,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PERXSCZWQnuO5CBei5kJ.jpg
+    avatar: /images/voyages/sejour-immersion-pnr-foret-orient/PERXSCZWQnuO5CBei5kJ.jpg
     avatar-size: "60"
     ---
     #title
@@ -110,7 +110,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
 
   :::highlights-row
   ---
-  image: /images/voyages/TsKJqWVS5R18HTm6Jg9w.jpg
+  image: /images/voyages/sejour-immersion-pnr-foret-orient/TsKJqWVS5R18HTm6Jg9w.jpg
   ---
   ::::highlight-list-item
   Découvrez les superbes forêts et lacs du Parc naturel régional de la Forêt d’Orient
@@ -170,7 +170,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
   
     :::day-row
     ---
-    image: /images/voyages/g1t5Ao3iTcugGoeS3pkK.jpg
+    image: /images/voyages/sejour-immersion-pnr-foret-orient/g1t5Ao3iTcugGoeS3pkK.jpg
     ---
     #subtitle
     JOUR 1
@@ -185,7 +185,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
 
     :::day-row
     ---
-    image: /images/voyages/3vNTFlT1TBGpTGN4iYBQ.jpg
+    image: /images/voyages/sejour-immersion-pnr-foret-orient/3vNTFlT1TBGpTGN4iYBQ.jpg
     ---
     #subtitle
     JOUR 2
@@ -200,7 +200,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
 
     :::day-row
     ---
-    image: /images/voyages/hDyRYYDFTTXVKnbtTk6s.jpg
+    image: /images/voyages/sejour-immersion-pnr-foret-orient/hDyRYYDFTTXVKnbtTk6s.jpg
     ---
     #subtitle
     JOUR 3
@@ -229,19 +229,19 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/IPf6MupyQNenULTNVNGM.jpg
+    image: /images/voyages/sejour-immersion-pnr-foret-orient/IPf6MupyQNenULTNVNGM.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/eRChz1tQTZ2Muc0XUQSG.jpg
+    image: /images/voyages/sejour-immersion-pnr-foret-orient/eRChz1tQTZ2Muc0XUQSG.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/OwwXOPrS2mCM5i0S72AP.jpg
+    image: /images/voyages/sejour-immersion-pnr-foret-orient/OwwXOPrS2mCM5i0S72AP.jpg
     ---
     :::::
     ::::
@@ -259,7 +259,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/hr6umBdcT2u2Wb8nZRN4.jpg
+    avatar: /images/voyages/sejour-immersion-pnr-foret-orient/hr6umBdcT2u2Wb8nZRN4.jpg
     ---
     #title
     Clément
@@ -272,7 +272,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/zxUcRPMyRzqC8Ai8pEg5.jpg
+    avatar: /images/voyages/sejour-immersion-pnr-foret-orient/zxUcRPMyRzqC8Ai8pEg5.jpg
     ---
     #title
     Grégory
@@ -285,7 +285,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/v4GDrL2TXqLCiwRIUJuT.jpg
+    avatar: /images/voyages/sejour-immersion-pnr-foret-orient/v4GDrL2TXqLCiwRIUJuT.jpg
     ---
     #title
     Gildas

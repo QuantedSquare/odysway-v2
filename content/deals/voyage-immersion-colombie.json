@@ -1,14 +1,14 @@
 {
   "title": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
   "slug": "voyage-immersion-colombie",
-  "ISO": "COL",
+  "iso": "COL",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ",
+    "alt": "UeAQzWrBSA6rs8EyNeeJ"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersion-colombie/QFZ2Em82QH2PrA35hpbD.jpg",
+    "alt": "QFZ2Em82QH2PrA35hpbD"
   },
   "country": "Colombie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 700

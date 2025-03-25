@@ -1,16 +1,16 @@
 {
   "title": "Du Laos au Cambodge, voyage à la croisée des cultures",
   "slug": "voyage-culturel-laos-cambodge",
-  "ISO": "KHM",
+  "iso": "KHM,LAO",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-culturel-laos-cambodge/MaEtuo11TVyAUs0BmJtL",
+    "alt": "MaEtuo11TVyAUs0BmJtL"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-culturel-laos-cambodge/6CnKxtZ0QaaCql0RC8YX.jpg",
+    "alt": "6CnKxtZ0QaaCql0RC8YX"
   },
-  "country": "Cambodge",
+  "country": "Cambodge,Laos",
   "zoneChapka": 2,
   "privatisation": false,
   "duration": "10 jours / 9 nuits",
@@ -29,8 +29,8 @@
       "bookedPlaces": 11,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 9,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0
@@ -119,8 +119,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 0

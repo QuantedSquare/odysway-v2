@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/gzdJu2fbQDi9Pl3h80Jn.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/gzdJu2fbQDi9Pl3h80Jn.jpg
 ---
 #title
 Voyagez en terre chamane en Mongolie
@@ -10,63 +10,63 @@ Voyagez en terre chamane en Mongolie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/82zgjz7Qb6Cyoqfzux3v.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamane-mongolie/82zgjz7Qb6Cyoqfzux3v.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/0xwIULbJRuOHcBV61gLk.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/0xwIULbJRuOHcBV61gLk.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/da2hg829QHuUVPQ0O2Z8.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamane-mongolie/da2hg829QHuUVPQ0O2Z8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/e3JcdoXQSuY7oYnBRhpQ.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/e3JcdoXQSuY7oYnBRhpQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/QOkJGBaTjunzcLzUFGlN.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamane-mongolie/QOkJGBaTjunzcLzUFGlN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/3tvCI44yQpaOr5gTBV82.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/3tvCI44yQpaOr5gTBV82.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/JlgmelNlQRujtO2P3E9d.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamane-mongolie/JlgmelNlQRujtO2P3E9d.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Bu5e9O8SaGAf02cMQd8A.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/Bu5e9O8SaGAf02cMQd8A.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/wHwjSByYTGWO14f9n7Xc.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamane-mongolie/wHwjSByYTGWO14f9n7Xc.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/XJEqqPWNRzWwf5nUV9J7.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/XJEqqPWNRzWwf5nUV9J7.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/y5BsM9gdSUKxj96HthU1.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamane-mongolie/y5BsM9gdSUKxj96HthU1.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/mthXmMwzTyq9OZ98cdR8.jpg
+image-src: /images/voyages/voyage-chamane-mongolie/mthXmMwzTyq9OZ98cdR8.jpg
 ---
 ::::
   :::#component-slot-2
@@ -163,7 +163,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/voyage-chamane-mongolie/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -173,7 +173,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
 
   :::highlights-row
   ---
-  image: /images/voyages/bjkNrF6ESACxsLUaBgno.jpg
+  image: /images/voyages/voyage-chamane-mongolie/bjkNrF6ESACxsLUaBgno.jpg
   ---
   ::::highlight-list-item
   Rencontrez un véritable chamane mongol et laissez-vous initier à ses rituels
@@ -241,7 +241,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
   
     :::day-row
     ---
-    image: /images/voyages/HL7RqcJ7QiK0IagbeOnQ.jpg
+    image: /images/voyages/voyage-chamane-mongolie/HL7RqcJ7QiK0IagbeOnQ.jpg
     ---
     #subtitle
     JOUR 1
@@ -256,7 +256,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
 
     :::day-row
     ---
-    image: /images/voyages/2Tv1s9DESqqd14lfWm1t.jpg
+    image: /images/voyages/voyage-chamane-mongolie/2Tv1s9DESqqd14lfWm1t.jpg
     ---
     #subtitle
     JOUR 2
@@ -271,7 +271,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
 
     :::day-row
     ---
-    image: /images/voyages/qpRJoCNQ4maKwfq97MzA.jpg
+    image: /images/voyages/voyage-chamane-mongolie/qpRJoCNQ4maKwfq97MzA.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -286,7 +286,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
 
     :::day-row
     ---
-    image: /images/voyages/qX9nS7X9TumrHDEoL4y4.jpg
+    image: /images/voyages/voyage-chamane-mongolie/qX9nS7X9TumrHDEoL4y4.jpg
     ---
     #subtitle
     JOUR 5
@@ -301,7 +301,7 @@ Laissez-vous porter par cette aventure unique, entre rencontres inoubliables, sp
 
     :::day-row
     ---
-    image: /images/voyages/e3JcdoXQSuY7oYnBRhpQ.jpg
+    image: /images/voyages/voyage-chamane-mongolie/e3JcdoXQSuY7oYnBRhpQ.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -318,7 +318,7 @@ En parallèle, des temps libres vous invitent à marcher paisiblement dans la na
 
     :::day-row
     ---
-    image: /images/voyages/tnZ30PDSvqqIruni9glg.jpg
+    image: /images/voyages/voyage-chamane-mongolie/tnZ30PDSvqqIruni9glg.jpg
     ---
     #subtitle
     JOURS 8 ET 9
@@ -333,7 +333,7 @@ En parallèle, des temps libres vous invitent à marcher paisiblement dans la na
 
     :::day-row
     ---
-    image: /images/voyages/Ya3jV0vWRfGokYwAjUDj.jpg
+    image: /images/voyages/voyage-chamane-mongolie/Ya3jV0vWRfGokYwAjUDj.jpg
     ---
     #subtitle
     JOUR 10
@@ -348,7 +348,7 @@ En parallèle, des temps libres vous invitent à marcher paisiblement dans la na
 
     :::day-row
     ---
-    image: /images/voyages/mJiQwOD2SGGNi4py8BYh.jpg
+    image: /images/voyages/voyage-chamane-mongolie/mJiQwOD2SGGNi4py8BYh.jpg
     ---
     #subtitle
     JOUR 11
@@ -363,7 +363,7 @@ En parallèle, des temps libres vous invitent à marcher paisiblement dans la na
 
     :::day-row
     ---
-    image: /images/voyages/ByCVUSL1QVJPH6uk4oQ0.jpg
+    image: /images/voyages/voyage-chamane-mongolie/ByCVUSL1QVJPH6uk4oQ0.jpg
     ---
     #subtitle
     JOUR 12
@@ -392,19 +392,19 @@ En parallèle, des temps libres vous invitent à marcher paisiblement dans la na
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/RnCgfxq2RX6bAco4oPNj.jpg
+    image: /images/voyages/voyage-chamane-mongolie/RnCgfxq2RX6bAco4oPNj.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/da2hg829QHuUVPQ0O2Z8.jpg
+    image: /images/voyages/voyage-chamane-mongolie/da2hg829QHuUVPQ0O2Z8.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/t0n5cUWyRUSMz3dgNXXp.jpg
+    image: /images/voyages/voyage-chamane-mongolie/t0n5cUWyRUSMz3dgNXXp.jpg
     ---
     :::::
     ::::
@@ -556,7 +556,7 @@ Les avis des voyageurs
   
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/gkI2ZvkmTNKE1eJhIIwP.jpg
+    photo: /images/voyages/voyage-chamane-mongolie/gkI2ZvkmTNKE1eJhIIwP.jpg
     ---
     #title
     Perrine , []{style="color: grey"}

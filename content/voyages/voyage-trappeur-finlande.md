@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/jD8zYMQBiXna5zdtqrnw.jpg
+image-src: /images/voyages/voyage-trappeur-finlande/jD8zYMQBiXna5zdtqrnw.jpg
 ---
 #title
 Voyagez comme un trappeur en Finlande
@@ -10,47 +10,47 @@ Voyagez comme un trappeur en Finlande
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/TFp0OZkRQhu5LkKrTqd1.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-trappeur-finlande/TFp0OZkRQhu5LkKrTqd1.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/u9N0aQIcRC6hH88kCClD.jpg
+image-src: /images/voyages/voyage-trappeur-finlande/u9N0aQIcRC6hH88kCClD.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/ChvznmLnSAilkskY2eWj.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-trappeur-finlande/ChvznmLnSAilkskY2eWj.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ZvQf8XdEREOpfqg4KmkC.jpg
+image-src: /images/voyages/voyage-trappeur-finlande/ZvQf8XdEREOpfqg4KmkC.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/GeVABfyhRqbVOfcrxXjN.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-trappeur-finlande/GeVABfyhRqbVOfcrxXjN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/iqnoAO7wRYetFmWxrS9y.jpg
+image-src: /images/voyages/voyage-trappeur-finlande/iqnoAO7wRYetFmWxrS9y.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/GPLfdo5KTB276neSnEg5.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-trappeur-finlande/GPLfdo5KTB276neSnEg5.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/4Zrdrm0SpOvyCHp9XHue.jpg
+image-src: /images/voyages/voyage-trappeur-finlande/4Zrdrm0SpOvyCHp9XHue.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/KWXYb6SqRqmOzvDQmY5s.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-trappeur-finlande/KWXYb6SqRqmOzvDQmY5s.jpg"}
 ::::
   :::
 ::
@@ -137,7 +137,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-trappeur-finlande/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -147,7 +147,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
   :::highlights-row
   ---
-  image: /images/voyages/uK35DnkhRXKolS44QboH.jpg
+  image: /images/voyages/voyage-trappeur-finlande/uK35DnkhRXKolS44QboH.jpg
   ---
   ::::highlight-list-item
   Plongez au cœur de la forêt boréale de Hossa accompagné d'un guide spécialiste de la région.
@@ -207,7 +207,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
   
     :::day-row
     ---
-    image: /images/voyages/kqrCLj5uQy236nvVu7vk.jpg
+    image: /images/voyages/voyage-trappeur-finlande/kqrCLj5uQy236nvVu7vk.jpg
     ---
     #subtitle
     JOUR 1
@@ -222,7 +222,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/HfToZQcSL6OQsGP1cfhT.jpg
+    image: /images/voyages/voyage-trappeur-finlande/HfToZQcSL6OQsGP1cfhT.jpg
     ---
     #subtitle
     JOUR 2
@@ -238,7 +238,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/3ttFEr80Rhq9ZTb5WH5x.jpg
+    image: /images/voyages/voyage-trappeur-finlande/3ttFEr80Rhq9ZTb5WH5x.jpg
     ---
     #subtitle
     JOUR 3
@@ -253,7 +253,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/VDQ6F94bQaOsP8f5ukFI.jpg
+    image: /images/voyages/voyage-trappeur-finlande/VDQ6F94bQaOsP8f5ukFI.jpg
     ---
     #subtitle
     JOUR 4
@@ -268,7 +268,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/YUEp47fRUi0tXGxYR9Tw.jpg
+    image: /images/voyages/voyage-trappeur-finlande/YUEp47fRUi0tXGxYR9Tw.jpg
     ---
     #subtitle
     JOUR 5
@@ -283,7 +283,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/QPpaSAc2SiStn9cGaUT5.jpg
+    image: /images/voyages/voyage-trappeur-finlande/QPpaSAc2SiStn9cGaUT5.jpg
     ---
     #subtitle
     JOUR 6
@@ -298,7 +298,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/fV1PkadoR5GOSFtjOB1V.jpg
+    image: /images/voyages/voyage-trappeur-finlande/fV1PkadoR5GOSFtjOB1V.jpg
     ---
     #subtitle
     JOUR 7
@@ -313,7 +313,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
 
     :::day-row
     ---
-    image: /images/voyages/yJ0CvRxGRaKZtSc8VIkt.jpg
+    image: /images/voyages/voyage-trappeur-finlande/yJ0CvRxGRaKZtSc8VIkt.jpg
     ---
     #subtitle
     JOUR 8
@@ -343,19 +343,19 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/WbWPvxiR2u4ggVYI8jIQ.jpg
+    image: /images/voyages/voyage-trappeur-finlande/WbWPvxiR2u4ggVYI8jIQ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/vIslyiZNQ6G2ZcmY0HMI.jpg
+    image: /images/voyages/voyage-trappeur-finlande/vIslyiZNQ6G2ZcmY0HMI.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GeVABfyhRqbVOfcrxXjN.jpg
+    image: /images/voyages/voyage-trappeur-finlande/GeVABfyhRqbVOfcrxXjN.jpg
     ---
     :::::
     ::::

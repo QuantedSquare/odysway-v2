@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/z0INP3CRmWU5BLBzEh16.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg
 ---
 #title
 Immersion brésilienne et survie dans la jungle amazonienne
@@ -10,67 +10,67 @@ Immersion brésilienne et survie dans la jungle amazonienne
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/ZKzdVybRyW8cwKoWvQAw.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/survie-jungle-amazonienne/ZKzdVybRyW8cwKoWvQAw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/LD3bvcNTKOTNFGQeWRQQ.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/LD3bvcNTKOTNFGQeWRQQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/pq9vlVyiRiqlojGkYgbC.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/survie-jungle-amazonienne/pq9vlVyiRiqlojGkYgbC.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ks2buuoRTSqbHEbHqX32.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/ks2buuoRTSqbHEbHqX32.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/JWb1NwH1Sv2mx9AehJVD.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/survie-jungle-amazonienne/JWb1NwH1Sv2mx9AehJVD.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/kzghnGTfuPgdfdYHuGYg.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/kzghnGTfuPgdfdYHuGYg.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/C7OuhN4VTBOzf3FDMAt9.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/survie-jungle-amazonienne/C7OuhN4VTBOzf3FDMAt9.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ESJ37MATcywZdCvuy5b6.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/ESJ37MATcywZdCvuy5b6.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/ICUpMnEJTTy4bTO1nq3Q.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/survie-jungle-amazonienne/ICUpMnEJTTy4bTO1nq3Q.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/V1drATqOSreTlKxFHhio.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/V1drATqOSreTlKxFHhio.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/nxQwt83NScqVVPhtEAuu.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/survie-jungle-amazonienne/nxQwt83NScqVVPhtEAuu.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/1THXQ9KUSyCnWQK1I5Y4.jpg
+image-src: /images/voyages/survie-jungle-amazonienne/1THXQ9KUSyCnWQK1I5Y4.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/D2JNyoFLQD5ESrxQ2FF3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/survie-jungle-amazonienne/D2JNyoFLQD5ESrxQ2FF3.jpg"}
 ::::
   :::#component-slot-2
   :::video-dialog
@@ -170,7 +170,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/survie-jungle-amazonienne/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -180,7 +180,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
   :::highlights-row
   ---
-  image: /images/voyages/up83LVUNQfO6SYOhzTsh.jpg
+  image: /images/voyages/survie-jungle-amazonienne/up83LVUNQfO6SYOhzTsh.jpg
   ---
   ::::highlight-list-item
   Une immersion au sein d'une famille brésilienne en pleine forêt amazonienne
@@ -240,7 +240,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
   
     :::day-row
     ---
-    image: /images/voyages/UO43DsM3SuuWwlv0pr3Q.jpg
+    image: /images/voyages/survie-jungle-amazonienne/UO43DsM3SuuWwlv0pr3Q.jpg
     ---
     #subtitle
     JOUR 1
@@ -255,7 +255,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
     :::day-row
     ---
-    image: /images/voyages/vf3CwGBTEa5Xg3Y0V295.jpg
+    image: /images/voyages/survie-jungle-amazonienne/vf3CwGBTEa5Xg3Y0V295.jpg
     ---
     #subtitle
     JOUR 2
@@ -270,7 +270,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
     :::day-row
     ---
-    image: /images/voyages/tUEh5LYbQlyuthjm5Xae.jpg
+    image: /images/voyages/survie-jungle-amazonienne/tUEh5LYbQlyuthjm5Xae.jpg
     ---
     #subtitle
     JOURS 3 À 4
@@ -285,7 +285,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
     :::day-row
     ---
-    image: /images/voyages/vvODBgreTOXB00W4vrt6.jpg
+    image: /images/voyages/survie-jungle-amazonienne/vvODBgreTOXB00W4vrt6.jpg
     ---
     #subtitle
     JOUR 5
@@ -300,7 +300,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
     :::day-row
     ---
-    image: /images/voyages/8PG2yGc7S7WZie1reuZ9.jpg
+    image: /images/voyages/survie-jungle-amazonienne/8PG2yGc7S7WZie1reuZ9.jpg
     ---
     #subtitle
     JOURS 6 À 8
@@ -315,7 +315,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
     :::day-row
     ---
-    image: /images/voyages/QMob5l5LSxyxDuvFZLa4.jpg
+    image: /images/voyages/survie-jungle-amazonienne/QMob5l5LSxyxDuvFZLa4.jpg
     ---
     #subtitle
     JOUR 9
@@ -330,7 +330,7 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
 
     :::day-row
     ---
-    image: /images/voyages/CgeWwa2GTEaaaxrOZEkb.jpg
+    image: /images/voyages/survie-jungle-amazonienne/CgeWwa2GTEaaaxrOZEkb.jpg
     ---
     #subtitle
     JOUR 10
@@ -359,13 +359,13 @@ Un voyage riche en émotions, en rencontres et en défis, conçu pour un dépays
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/AfXwboBrTZKsKXd8bVVw.jpg
+    image: /images/voyages/survie-jungle-amazonienne/AfXwboBrTZKsKXd8bVVw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GiSNtKibRAeHqHqvMr0o.jpg
+    image: /images/voyages/survie-jungle-amazonienne/GiSNtKibRAeHqHqvMr0o.jpg
     ---
     :::::
     ::::
@@ -385,7 +385,7 @@ Un accompagnement francophone est possible sur-demande pendant le séjour, mais 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/ATfKD8gIS8qq0TWg0INd.jpg
+    avatar: /images/voyages/survie-jungle-amazonienne/ATfKD8gIS8qq0TWg0INd.jpg
     ---
     #title
     Alciney

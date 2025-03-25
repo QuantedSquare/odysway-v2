@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/GJESVxRlTgCuvdzzcYXU.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/GJESVxRlTgCuvdzzcYXU.jpg
 ---
 #title
 Bénin, rencontres et traditions au pays vodoun
@@ -10,113 +10,113 @@ Bénin, rencontres et traditions au pays vodoun
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/CXW0DBDlTpeN817LU3Jd.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/CXW0DBDlTpeN817LU3Jd.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/MfztFJLRRhSufO1xvEcV.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/MfztFJLRRhSufO1xvEcV.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/qyTYmByWTVic0e1OvPIN.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/qyTYmByWTVic0e1OvPIN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/cApO5i9OQ1O9waLJbMbg.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/cApO5i9OQ1O9waLJbMbg.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ynuh4SXCTKesIHaV8A1a.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-sud-benin/ynuh4SXCTKesIHaV8A1a.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/uwFExyUiRgWsmx7RtC46.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/uwFExyUiRgWsmx7RtC46.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/E0hgnYKcQyGVlA1lHyGs.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/E0hgnYKcQyGVlA1lHyGs.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/L1VHTk8T4yrhOhJOCrd3.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/L1VHTk8T4yrhOhJOCrd3.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/uHQI0ibZQYqrjne7axBp.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/uHQI0ibZQYqrjne7axBp.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/CPo9uS6YQrG9JTLAZCr3.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/CPo9uS6YQrG9JTLAZCr3.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/kqDICZNRAGI9llL2rqSw.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-sud-benin/kqDICZNRAGI9llL2rqSw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/A4JkvnrRoixYr8VmZAMg.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/A4JkvnrRoixYr8VmZAMg.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/MNlF4QxhSmKaiQG1SnX8.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/MNlF4QxhSmKaiQG1SnX8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/YrsyvnfeRdOOlqGRojyX.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/YrsyvnfeRdOOlqGRojyX.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/OuqajUMeTMOzdhXRZWhH.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/OuqajUMeTMOzdhXRZWhH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/Z9V4A8BKTnSeMb2JVo7C.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/Z9V4A8BKTnSeMb2JVo7C.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/F2NZvoTQ6GrG8XGeV4kN.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-sud-benin/F2NZvoTQ6GrG8XGeV4kN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/DiMD0BtR2ee8oT3cI4dA.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/DiMD0BtR2ee8oT3cI4dA.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/O2Xy9LrKRfu5hwYCc07I.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/O2Xy9LrKRfu5hwYCc07I.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/rIY1Y0kCSK2Z13xgE18K.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/rIY1Y0kCSK2Z13xgE18K.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/X0BcCujqT0yB9s0UmE4Y.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/X0BcCujqT0yB9s0UmE4Y.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/zshyfHcR82BEXnTDdKF4.jpg
+image-src: /images/voyages/immersion-culturelle-sud-benin/zshyfHcR82BEXnTDdKF4.jpg
 ---
 ::::
   :::
@@ -208,7 +208,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/A3sKplswR6KPbawu6lvx.jpg
+    avatar: /images/voyages/immersion-culturelle-sud-benin/A3sKplswR6KPbawu6lvx.jpg
     avatar-size: "60"
     ---
     #title
@@ -218,7 +218,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
   :::highlights-row
   ---
-  image: /images/voyages/Hh50618gQzeFzzfq33d8.jpg
+  image: /images/voyages/immersion-culturelle-sud-benin/Hh50618gQzeFzzfq33d8.jpg
   ---
   ::::highlight-list-item
   Naviguer au fil de l’eau (Ganvié, Adjarra, La Ahémé et Grand Popo)
@@ -278,7 +278,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
   
     :::day-row
     ---
-    image: /images/voyages/1XRzwADjSs6V6esYWDJI.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/1XRzwADjSs6V6esYWDJI.jpg
     ---
     #subtitle
     JOURS 1 ET 2
@@ -293,7 +293,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
     :::day-row
     ---
-    image: /images/voyages/PSMHhFakSciOePArKD1h.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/PSMHhFakSciOePArKD1h.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -309,7 +309,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
     :::day-row
     ---
-    image: /images/voyages/k8MsNpPMSjiNPeGtDTUF.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/k8MsNpPMSjiNPeGtDTUF.jpg
     ---
     #subtitle
     JOUR 5
@@ -324,7 +324,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
     :::day-row
     ---
-    image: /images/voyages/mScRteLR56wTvx9m5R0E.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/mScRteLR56wTvx9m5R0E.jpg
     ---
     #subtitle
     JOURS 6 ET 7 
@@ -339,7 +339,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
     :::day-row
     ---
-    image: /images/voyages/slrqFbJaRduc30iYomqk.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/slrqFbJaRduc30iYomqk.jpg
     ---
     #subtitle
     JOUR 8
@@ -355,7 +355,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
     :::day-row
     ---
-    image: /images/voyages/dDFlqMTnQImh9BGMyxxS.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/dDFlqMTnQImh9BGMyxxS.jpg
     ---
     #subtitle
     JOUR 9
@@ -370,7 +370,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
 
     :::day-row
     ---
-    image: /images/voyages/njxTP5AR2WaDbuFT0yEw.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/njxTP5AR2WaDbuFT0yEw.jpg
     ---
     #subtitle
     JOUR 10
@@ -399,19 +399,19 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/nypvFjdpTMyFSV8Zl8L0.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/nypvFjdpTMyFSV8Zl8L0.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/DZWCKoLUThSnnYcO1j1a.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/DZWCKoLUThSnnYcO1j1a.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/6HdaVAcFRuCtLynhY1TS.jpg
+    image: /images/voyages/immersion-culturelle-sud-benin/6HdaVAcFRuCtLynhY1TS.jpg
     ---
     :::::
     ::::
@@ -429,7 +429,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/R5xMxlrQSlmuN42D8Bvp.jpg
+    avatar: /images/voyages/immersion-culturelle-sud-benin/R5xMxlrQSlmuN42D8Bvp.jpg
     ---
     #title
     Euloge

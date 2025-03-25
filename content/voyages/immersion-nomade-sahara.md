@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/FoAChDQkiV0VboB2jyRw.jpg
+image-src: /images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg
 ---
 #title
 Vivez comme un nomade du Sahara au Maroc
@@ -10,83 +10,83 @@ Vivez comme un nomade du Sahara au Maroc
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/ZiTTrmaRMO136UbjnVmJ.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-nomade-sahara/ZiTTrmaRMO136UbjnVmJ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/6wa7JTbRemJNghtfo1Iv.jpg
+image-src: /images/voyages/immersion-nomade-sahara/6wa7JTbRemJNghtfo1Iv.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/wDX3HhGlTA6ZFkkKx3ka.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-nomade-sahara/wDX3HhGlTA6ZFkkKx3ka.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/RHdWl2tJTQuhmbMksus2.jpg
+image-src: /images/voyages/immersion-nomade-sahara/RHdWl2tJTQuhmbMksus2.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/1N4oXzhxT4at3ViaNEKa.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-nomade-sahara/1N4oXzhxT4at3ViaNEKa.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/MDyb4PuCQ76KScBMBXO7.jpg
+image-src: /images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/8RtRUj4wTHOINJi2TtWF.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5UqN13B0SISuHttVXBf9.jpg
+image-src: /images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/H5lqKMOQ2Gbfk6bE9FgM.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-nomade-sahara/H5lqKMOQ2Gbfk6bE9FgM.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/deuIjQtTD6LYVDtD7YIU.jpg
+image-src: /images/voyages/immersion-nomade-sahara/deuIjQtTD6LYVDtD7YIU.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/miqysTbfTuaAL0JZ6yMY.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-nomade-sahara/miqysTbfTuaAL0JZ6yMY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/b3DnshhRpeckGGM4R0bs.jpg
+image-src: /images/voyages/immersion-nomade-sahara/b3DnshhRpeckGGM4R0bs.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/JOMqi6YBS86fjHqZwiZO.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-nomade-sahara/JOMqi6YBS86fjHqZwiZO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/En0fdsDxT8OQMY7QBSgE.jpg
+image-src: /images/voyages/immersion-nomade-sahara/En0fdsDxT8OQMY7QBSgE.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/gvadBNaQJm3qwBNaQwSw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-nomade-sahara/gvadBNaQJm3qwBNaQwSw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/SkpA40F4R7mK9yIBLdJZ.jpg
+image-src: /images/voyages/immersion-nomade-sahara/SkpA40F4R7mK9yIBLdJZ.jpg
 ---
 ::::
   :::
@@ -176,7 +176,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/5d0bpYsfQ5WoYZavGHgh.jpg
+    avatar: /images/voyages/immersion-nomade-sahara/5d0bpYsfQ5WoYZavGHgh.jpg
     avatar-size: "60"
     ---
     #title
@@ -186,7 +186,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
 
   :::highlights-row
   ---
-  image: /images/voyages/QLMu7DEXSeOav93pOHVk.jpg
+  image: /images/voyages/immersion-nomade-sahara/QLMu7DEXSeOav93pOHVk.jpg
   ---
   ::::highlight-list-item
   L'immersion dans les grandes étendues du Sahara dans le sud marocain
@@ -246,7 +246,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
   
     :::day-row
     ---
-    image: /images/voyages/5UqN13B0SISuHttVXBf9.jpg
+    image: /images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg
     ---
     #subtitle
     JOUR 1
@@ -261,7 +261,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
 
     :::day-row
     ---
-    image: /images/voyages/UhDcUySnTHKZKJdlVPvo.jpg
+    image: /images/voyages/immersion-nomade-sahara/UhDcUySnTHKZKJdlVPvo.jpg
     ---
     #subtitle
     JOUR 2
@@ -277,7 +277,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
 
     :::day-row
     ---
-    image: /images/voyages/1WGKKDFASyyJiWzE8FJW.jpg
+    image: /images/voyages/immersion-nomade-sahara/1WGKKDFASyyJiWzE8FJW.jpg
     ---
     #subtitle
     JOUR 3
@@ -292,7 +292,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
 
     :::day-row
     ---
-    image: /images/voyages/MDyb4PuCQ76KScBMBXO7.jpg
+    image: /images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg
     ---
     #subtitle
     JOURS 4 À 9
@@ -307,7 +307,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
 
     :::day-row
     ---
-    image: /images/voyages/c8u6R0D8SxSssKicpiKy.jpg
+    image: /images/voyages/immersion-nomade-sahara/c8u6R0D8SxSssKicpiKy.jpg
     ---
     #subtitle
     JOUR 10
@@ -322,7 +322,7 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
 
     :::day-row
     ---
-    image: /images/voyages/8RtRUj4wTHOINJi2TtWF.jpg
+    image: /images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg
     ---
     #subtitle
     JOUR 11
@@ -351,19 +351,19 @@ Un voyage unique, qui fait du bien, à la découverte de la culture des nomades,
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/ZJBc8wSraRnGCcjTDeAm.jpg
+    image: /images/voyages/immersion-nomade-sahara/ZJBc8wSraRnGCcjTDeAm.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/2wj2ZrcUQ3OJN8QArLbp.jpg
+    image: /images/voyages/immersion-nomade-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/LKNyFjoRQi3MZFvQ5383.jpg
+    image: /images/voyages/immersion-nomade-sahara/LKNyFjoRQi3MZFvQ5383.jpg
     ---
     :::::
     ::::
@@ -383,7 +383,7 @@ Vos guides connaissent le désert comme leur poche, ils y sont nés, vous serez 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/vPcfCixxQJyCX61Xe82i.jpg
+    avatar: /images/voyages/immersion-nomade-sahara/vPcfCixxQJyCX61Xe82i.jpg
     ---
     #title
     Ali

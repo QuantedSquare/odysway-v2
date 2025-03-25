@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/v8XkfTxQbaDymiR6UKdW.jpg
+image-src: /images/voyages/voyage-nomades-mongolie/v8XkfTxQbaDymiR6UKdW.jpg
 ---
 #title
 Partagez le quotidien des nomades des steppes mongoles
@@ -10,37 +10,37 @@ Partagez le quotidien des nomades des steppes mongoles
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/CgggvhHxQ4m61gtEKl8q.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-nomades-mongolie/CgggvhHxQ4m61gtEKl8q.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Cmgzlx2SciABYZ0cWOtL.jpg
+image-src: /images/voyages/voyage-nomades-mongolie/Cmgzlx2SciABYZ0cWOtL.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/tnZ30PDSvqqIruni9glg.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-nomades-mongolie/tnZ30PDSvqqIruni9glg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ZEbVLEPQ0ev8wytqAnNw.jpg
+image-src: /images/voyages/voyage-nomades-mongolie/ZEbVLEPQ0ev8wytqAnNw.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/lmoi3UdhTmWOWzJ57Zfk.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-nomades-mongolie/lmoi3UdhTmWOWzJ57Zfk.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/NDTrtRoSQvejLvfW3O9z.jpg
+image-src: /images/voyages/voyage-nomades-mongolie/NDTrtRoSQvejLvfW3O9z.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/SRZiq3siQn25cCiaMHIb.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-nomades-mongolie/SRZiq3siQn25cCiaMHIb.jpg"}
 ::::
   :::
 ::
@@ -129,7 +129,7 @@ Après cette immersion, vous explorerez les merveilles de la vallée de l’Orkh
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-nomades-mongolie/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -139,7 +139,7 @@ Après cette immersion, vous explorerez les merveilles de la vallée de l’Orkh
 
   :::highlights-row
   ---
-  image: /images/voyages/RHyEmM7DQGa4inVT61ZY.jpg
+  image: /images/voyages/voyage-nomades-mongolie/RHyEmM7DQGa4inVT61ZY.jpg
   ---
   ::::highlight-list-item
   Vivez une immersion de plusieurs jours avec une famille nomade, partageant leurs activités quotidiennes.
@@ -199,7 +199,7 @@ Après cette immersion, vous explorerez les merveilles de la vallée de l’Orkh
   
     :::day-row
     ---
-    image: /images/voyages/9O3g3OVRgu6mjlczSOwR.jpg
+    image: /images/voyages/voyage-nomades-mongolie/9O3g3OVRgu6mjlczSOwR.jpg
     ---
     #subtitle
     JOUR 1
@@ -214,7 +214,7 @@ Après cette immersion, vous explorerez les merveilles de la vallée de l’Orkh
 
     :::day-row
     ---
-    image: /images/voyages/DICLnnUHQouBgmKobGLb.jpg
+    image: /images/voyages/voyage-nomades-mongolie/DICLnnUHQouBgmKobGLb.jpg
     ---
     #subtitle
     JOUR 2
@@ -230,7 +230,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
 
     :::day-row
     ---
-    image: /images/voyages/Cmgzlx2SciABYZ0cWOtL.jpg
+    image: /images/voyages/voyage-nomades-mongolie/Cmgzlx2SciABYZ0cWOtL.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -245,7 +245,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
 
     :::day-row
     ---
-    image: /images/voyages/1qlvLdlrRzS5iczx7sdr.jpg
+    image: /images/voyages/voyage-nomades-mongolie/1qlvLdlrRzS5iczx7sdr.jpg
     ---
     #subtitle
     JOUR 5
@@ -260,7 +260,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
 
     :::day-row
     ---
-    image: /images/voyages/PZ5HsErRTDyWomILZK0X.jpg
+    image: /images/voyages/voyage-nomades-mongolie/PZ5HsErRTDyWomILZK0X.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -275,7 +275,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
 
     :::day-row
     ---
-    image: /images/voyages/VkYs2mO3SX2NrgJ0Aqpr.jpg
+    image: /images/voyages/voyage-nomades-mongolie/VkYs2mO3SX2NrgJ0Aqpr.jpg
     ---
     #subtitle
     JOUR 8
@@ -290,7 +290,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
 
     :::day-row
     ---
-    image: /images/voyages/BC9lNQciRv60UQS75TeN.jpg
+    image: /images/voyages/voyage-nomades-mongolie/BC9lNQciRv60UQS75TeN.jpg
     ---
     #subtitle
     JOUR 9
@@ -305,7 +305,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
 
     :::day-row
     ---
-    image: /images/voyages/9BHXSniTSuiTaZlckrt0.jpg
+    image: /images/voyages/voyage-nomades-mongolie/9BHXSniTSuiTaZlckrt0.jpg
     ---
     #subtitle
     JOURS 10 ET 11
@@ -334,19 +334,19 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/9HBqGQccTxKS2Hn8IzhE.jpg
+    image: /images/voyages/voyage-nomades-mongolie/9HBqGQccTxKS2Hn8IzhE.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/LoQ04wBQTmhog7BKfjew.jpg
+    image: /images/voyages/voyage-nomades-mongolie/LoQ04wBQTmhog7BKfjew.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/NBXjhOqTim52s9fMMPSx.jpg
+    image: /images/voyages/voyage-nomades-mongolie/NBXjhOqTim52s9fMMPSx.jpg
     ---
     :::::
     ::::
@@ -364,7 +364,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Lgg1wmSmRBSw4g5qhnKl.jpg
+    avatar: /images/voyages/voyage-nomades-mongolie/Lgg1wmSmRBSw4g5qhnKl.jpg
     ---
     #title
     Tuya

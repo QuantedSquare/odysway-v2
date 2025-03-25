@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/9U8kgfJS7ORLToveeUUj.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/9U8kgfJS7ORLToveeUUj.jpg
 ---
 #title
 Cap-Vert en immersion : partagez le quotidien des habitants de Santiago
@@ -10,107 +10,107 @@ Cap-Vert en immersion : partagez le quotidien des habitants de Santiago
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/RefG7s9vT9O4u2dd2Kag.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/RefG7s9vT9O4u2dd2Kag.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/0iASouxOSPSjsNXbminc.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/0iASouxOSPSjsNXbminc.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/RFNpZVXXQ46EmoP39d4J.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ENfLTNGMQfWhZ9kv7MsK.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/ENfLTNGMQfWhZ9kv7MsK.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/vhhN0yQE6nMrC1b6rCnw.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-cap-vert/vhhN0yQE6nMrC1b6rCnw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/NX0HWRhRoCrvp6ewVyRh.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/NX0HWRhRoCrvp6ewVyRh.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/o5MVPctISPWumTNeo6nc.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/o5MVPctISPWumTNeo6nc.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5JYWEdQ3TTWMAylAa7Ea.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/5JYWEdQ3TTWMAylAa7Ea.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/HlWn3YFkQIWkSmeI4PeF.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/HlWn3YFkQIWkSmeI4PeF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/SjCE9J36SdidVRY2xP7j.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/SjCE9J36SdidVRY2xP7j.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/PuIe5FST6CPhZlY7iiMY.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-cap-vert/PuIe5FST6CPhZlY7iiMY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/WRN9453RrqbjStRpILGw.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/WRN9453RrqbjStRpILGw.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/D4Qv930RWyPuIuxxAZg3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/D4Qv930RWyPuIuxxAZg3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/K5A74q9kSOE7LY7s1N7d.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/K5A74q9kSOE7LY7s1N7d.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/XDPHtYnBT3qvWn87KYkb.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/XDPHtYnBT3qvWn87KYkb.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/sOT8T7LwRFSOQji302Gg.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/sOT8T7LwRFSOQji302Gg.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Ke5jDUS8O1byDElSPs5g.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-cap-vert/Ke5jDUS8O1byDElSPs5g.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/TCGxZeJQcegjBoAssv1Q.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/TCGxZeJQcegjBoAssv1Q.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/pBHhouZRG6gopFICcC9C.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/pBHhouZRG6gopFICcC9C.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/MI4tovpZSfy3XnWMTKy4.jpg
+image-src: /images/voyages/immersion-culturelle-cap-vert/MI4tovpZSfy3XnWMTKy4.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/9U1ZyYx1RuaLGqXw6WID.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/9U1ZyYx1RuaLGqXw6WID.jpg"}
 ::::
   :::
 ::
@@ -201,7 +201,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/immersion-culturelle-cap-vert/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -211,7 +211,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
 
   :::highlights-row
   ---
-  image: /images/voyages/oOeGdEvFQ0uhnzYIFNF3.jpg
+  image: /images/voyages/immersion-culturelle-cap-vert/oOeGdEvFQ0uhnzYIFNF3.jpg
   ---
   ::::highlight-list-item
   Plongez dans le quotidien des habitants et découvrez leurs traditions
@@ -271,7 +271,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
   
     :::day-row
     ---
-    image: /images/voyages/EG0dm9oUQLmeemorDuc3.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/EG0dm9oUQLmeemorDuc3.jpg
     ---
     #subtitle
     JOUR 1 
@@ -286,7 +286,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
 
     :::day-row
     ---
-    image: /images/voyages/6tdsUV2yQOa5Lam3cWi9.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/6tdsUV2yQOa5Lam3cWi9.jpg
     ---
     #subtitle
     JOURS 2 et 3
@@ -301,7 +301,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
 
     :::day-row
     ---
-    image: /images/voyages/Z88pToJTy6iumcDRdxkg.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/Z88pToJTy6iumcDRdxkg.jpg
     ---
     #subtitle
     JOURS 4 et 5
@@ -316,7 +316,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
 
     :::day-row
     ---
-    image: /images/voyages/jzHUxC84Qwy0eZnRXlTJ.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/jzHUxC84Qwy0eZnRXlTJ.jpg
     ---
     #subtitle
     JOUR 6
@@ -331,7 +331,7 @@ Tout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotid
 
     :::day-row
     ---
-    image: /images/voyages/m424EquqQf6XSvxOiUeU.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/m424EquqQf6XSvxOiUeU.jpg
     ---
     #subtitle
     JOUR 7
@@ -347,7 +347,7 @@ monuments laissé en héritage. Vous visiterez donc Praia et Cidade Velha qui es
 
     :::day-row
     ---
-    image: /images/voyages/0sqjfsRxRBCC3sX76Esc.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/0sqjfsRxRBCC3sX76Esc.jpg
     ---
     #subtitle
     JOURS 8 ET 9
@@ -362,7 +362,7 @@ monuments laissé en héritage. Vous visiterez donc Praia et Cidade Velha qui es
 
     :::day-row
     ---
-    image: /images/voyages/BEBLj9z1QZaIj8Q5bfRx.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/BEBLj9z1QZaIj8Q5bfRx.jpg
     ---
     #subtitle
     JOUR 10
@@ -391,19 +391,19 @@ monuments laissé en héritage. Vous visiterez donc Praia et Cidade Velha qui es
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/2qov1atQFyM82jtI60AY.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/2qov1atQFyM82jtI60AY.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/xvtaAHtARaK1cF2rGTnv.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/xvtaAHtARaK1cF2rGTnv.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ugLb1D2ITEyXopmkeGXi.jpg
+    image: /images/voyages/immersion-culturelle-cap-vert/ugLb1D2ITEyXopmkeGXi.jpg
     ---
     :::::
     ::::
@@ -425,7 +425,7 @@ Jessica, coordinatrice du séjour, est née en France, mais a découvert le Cap-
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/52W4ffeiS6yIwl4dHqyY.jpg
+    avatar: /images/voyages/immersion-culturelle-cap-vert/52W4ffeiS6yIwl4dHqyY.jpg
     ---
     #title
     Jessica
@@ -438,7 +438,7 @@ Jessica, coordinatrice du séjour, est née en France, mais a découvert le Cap-
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/dezdgU6oQtWkQhHvdVpc.jpg
+    avatar: /images/voyages/immersion-culturelle-cap-vert/dezdgU6oQtWkQhHvdVpc.jpg
     ---
     #title
     Dino

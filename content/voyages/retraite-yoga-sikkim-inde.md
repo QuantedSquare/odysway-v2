@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/VQgiR4CREWR0nTGN0mbc.jpg
+image-src: /images/voyages/retraite-yoga-sikkim-inde/VQgiR4CREWR0nTGN0mbc.jpg
 ---
 #title
 Retraite Himalayenne : méditation et yoga au cœur du Sikkim
@@ -10,47 +10,47 @@ Retraite Himalayenne : méditation et yoga au cœur du Sikkim
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/07NDzvoSzeHxDfDcPqP3.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/retraite-yoga-sikkim-inde/07NDzvoSzeHxDfDcPqP3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Gz6UePM1Sjau0SdZ8mRW.jpg
+image-src: /images/voyages/retraite-yoga-sikkim-inde/Gz6UePM1Sjau0SdZ8mRW.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/8IS71zlRYOnHUGSbU4gw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/retraite-yoga-sikkim-inde/8IS71zlRYOnHUGSbU4gw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/KrClAAxHRGajDhfOeeqn.jpg
+image-src: /images/voyages/retraite-yoga-sikkim-inde/KrClAAxHRGajDhfOeeqn.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/L1tSm9drRuGBs7POyIAF.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/retraite-yoga-sikkim-inde/L1tSm9drRuGBs7POyIAF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/GVwVeUDgTxCL5aCx0XsM.jpg
+image-src: /images/voyages/retraite-yoga-sikkim-inde/GVwVeUDgTxCL5aCx0XsM.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/GHrhLImjSUaHr9YohcEZ.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/retraite-yoga-sikkim-inde/GHrhLImjSUaHr9YohcEZ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/KdFImStIRGKyJ4vFyCaj.jpg
+image-src: /images/voyages/retraite-yoga-sikkim-inde/KdFImStIRGKyJ4vFyCaj.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/WoWUKLy4Tky4mIop8fDY.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/retraite-yoga-sikkim-inde/WoWUKLy4Tky4mIop8fDY.jpg"}
 ::::
   :::#component-slot-2
   :::video-dialog
@@ -146,7 +146,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/UoFq0WuPQpGfrRNXSICU.jpg
+    avatar: /images/voyages/retraite-yoga-sikkim-inde/UoFq0WuPQpGfrRNXSICU.jpg
     avatar-size: "60"
     ---
     #title
@@ -156,7 +156,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
   :::highlights-row
   ---
-  image: /images/voyages/QIXoVqShTQ342s0dnnsl.jpg
+  image: /images/voyages/retraite-yoga-sikkim-inde/QIXoVqShTQ342s0dnnsl.jpg
   ---
   ::::highlight-list-item
   Pratiquez du yoga et de la méditation quotidiennement, guidée par des enseignants passionnés et originaires du Sikkim
@@ -216,7 +216,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
   
     :::day-row
     ---
-    image: /images/voyages/UAia8YBYSNOyOzR24ts4.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/UAia8YBYSNOyOzR24ts4.jpg
     ---
     #subtitle
     JOUR 1
@@ -231,7 +231,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/fL7ObLMWQRarzaQqDo7H.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/fL7ObLMWQRarzaQqDo7H.jpg
     ---
     #subtitle
     JOUR 2
@@ -246,7 +246,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/OUBJ3elCT22UzZlNFoJp.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/OUBJ3elCT22UzZlNFoJp.jpg
     ---
     #subtitle
     JOUR 3
@@ -261,7 +261,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/sBEjMxtxQJGqt1NzRnwx.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/sBEjMxtxQJGqt1NzRnwx.jpg
     ---
     #subtitle
     JOUR 4
@@ -277,7 +277,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/wPrg3AXtTkWy2yXWK2CO.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/wPrg3AXtTkWy2yXWK2CO.jpg
     ---
     #subtitle
     JOUR 5
@@ -292,7 +292,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/x9Do1AlFSWaP1mDXjDlx.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/x9Do1AlFSWaP1mDXjDlx.jpg
     ---
     #subtitle
     JOUR 6
@@ -307,7 +307,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/x0DPt7MTSkyaM9qeuNoj.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/x0DPt7MTSkyaM9qeuNoj.jpg
     ---
     #subtitle
     JOUR 7
@@ -322,7 +322,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/KdmC5UVETzKj8wdqEtpf.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/KdmC5UVETzKj8wdqEtpf.jpg
     ---
     #subtitle
     JOUR 8
@@ -337,7 +337,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/GlBdkkFlS5aM0eltcQfJ.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/GlBdkkFlS5aM0eltcQfJ.jpg
     ---
     #subtitle
     JOUR 9
@@ -352,7 +352,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/c4J4EvqZTEqf5QmYsbBS.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/c4J4EvqZTEqf5QmYsbBS.jpg
     ---
     #subtitle
     JOUR 10
@@ -368,7 +368,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/6xb6i7YOSVGRTVRFIeHQ.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/6xb6i7YOSVGRTVRFIeHQ.jpg
     ---
     #subtitle
     JOUR 11
@@ -384,7 +384,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/Fe9CWhrTTFaOijL0Are2.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/Fe9CWhrTTFaOijL0Are2.jpg
     ---
     #subtitle
     JOUR 12
@@ -399,7 +399,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/DcURZfgPTpWc3gFSngLQ.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/DcURZfgPTpWc3gFSngLQ.jpg
     ---
     #subtitle
     JOUR 13
@@ -414,7 +414,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/px3AsqvuRFG85S0nwLOi.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/px3AsqvuRFG85S0nwLOi.jpg
     ---
     #subtitle
     JOUR 14
@@ -429,7 +429,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
 
     :::day-row
     ---
-    image: /images/voyages/vAuHu6FoQ836nQ2i1ANs.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/vAuHu6FoQ836nQ2i1ANs.jpg
     ---
     #subtitle
     JOURS 15 ET 16
@@ -459,19 +459,19 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/iyZxJdnMSJaqkcnDRkhB.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/iyZxJdnMSJaqkcnDRkhB.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/LJnltTGkRXuzAFF0geVg.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/LJnltTGkRXuzAFF0geVg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/VulhaqIFSoCwQ1DIt2WY.jpg
+    image: /images/voyages/retraite-yoga-sikkim-inde/VulhaqIFSoCwQ1DIt2WY.jpg
     ---
     :::::
     ::::
@@ -489,7 +489,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RJ6YZcQ5RO66Rbu5evyM.jpg
+    avatar: /images/voyages/retraite-yoga-sikkim-inde/RJ6YZcQ5RO66Rbu5evyM.jpg
     ---
     #title
     Chookela
@@ -502,7 +502,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/O4KKw4ApSKBZVdK8bxpK.jpg
+    avatar: /images/voyages/retraite-yoga-sikkim-inde/O4KKw4ApSKBZVdK8bxpK.jpg
     ---
     #title
     Maxime
@@ -648,7 +648,7 @@ Les avis des voyageurs
   
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/gE7DjDjGQpkSjeWEKBzF.jpg
+    photo: /images/voyages/retraite-yoga-sikkim-inde/gE7DjDjGQpkSjeWEKBzF.jpg
     ---
     #title
     Loan, [70]{style="color: grey"}
@@ -660,7 +660,7 @@ Les échanges avec Odysway étaient rapides.
 
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/pNbTjS3rTwG8B6ATUsGy.jpg
+    photo: /images/voyages/retraite-yoga-sikkim-inde/pNbTjS3rTwG8B6ATUsGy.jpg
     ---
     #title
     Valérie, [48]{style="color: grey"}

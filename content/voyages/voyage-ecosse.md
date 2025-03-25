@@ -87,7 +87,7 @@ right-sticky: true
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Z2I8h1G4S0y4SAcJZcq2.jpg
+    avatar: /images/voyages/voyage-ecosse/Z2I8h1G4S0y4SAcJZcq2.jpg
     avatar-size: "60"
     ---
     #title

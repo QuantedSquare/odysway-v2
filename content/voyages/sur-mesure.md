@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/I1AtzHTPyqLSTl9jKDZA.jpg
+image-src: /images/voyages/sur-mesure/I1AtzHTPyqLSTl9jKDZA.jpg
 ---
 #title
 Voyage sur-mesure en Jordanie

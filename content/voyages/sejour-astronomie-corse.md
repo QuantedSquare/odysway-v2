@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/Vqy5esbLTrWRlRY73ozi.jpg
+image-src: /images/voyages/sejour-astronomie-corse/Vqy5esbLTrWRlRY73ozi.jpg
 ---
 #title
 Initiation à l'observation astronomique en Corse
@@ -91,7 +91,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/sejour-astronomie-corse/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -101,7 +101,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
 
   :::highlights-row
   ---
-  image: /images/voyages/V6SjIPGSTHmNN71o2e6U.jpg
+  image: /images/voyages/sejour-astronomie-corse/V6SjIPGSTHmNN71o2e6U.jpg
   ---
   ::::highlight-list-item
   Découvrir la beauté de la Corse et prendre un bain d'air dans les montagnes et rivières du parc naturel
@@ -165,7 +165,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
   
     :::day-row
     ---
-    image: /images/voyages/Rma3nPKtSfefNZXnpTzw.jpg
+    image: /images/voyages/sejour-astronomie-corse/Rma3nPKtSfefNZXnpTzw.jpg
     ---
     #subtitle
     JOUR 1
@@ -180,7 +180,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
 
     :::day-row
     ---
-    image: /images/voyages/zemH57ZFQW6fV90b13m3.jpg
+    image: /images/voyages/sejour-astronomie-corse/zemH57ZFQW6fV90b13m3.jpg
     ---
     #subtitle
     JOUR 2
@@ -195,7 +195,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
 
     :::day-row
     ---
-    image: /images/voyages/le48d3a8RxKFbnSqiTIs.jpg
+    image: /images/voyages/sejour-astronomie-corse/le48d3a8RxKFbnSqiTIs.jpg
     ---
     #subtitle
     JOUR 3
@@ -210,7 +210,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
 
     :::day-row
     ---
-    image: /images/voyages/gCCC1rQeSM2iqtnkDBnl.jpg
+    image: /images/voyages/sejour-astronomie-corse/gCCC1rQeSM2iqtnkDBnl.jpg
     ---
     #subtitle
     JOUR 4
@@ -225,7 +225,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
 
     :::day-row
     ---
-    image: /images/voyages/ctoEhaNWRvOWO0xDNNdo.jpg
+    image: /images/voyages/sejour-astronomie-corse/ctoEhaNWRvOWO0xDNNdo.jpg
     ---
     #subtitle
     JOUR 5
@@ -254,19 +254,19 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/QY3ONufdQtucrnFVFvg1.jpg
+    image: /images/voyages/sejour-astronomie-corse/QY3ONufdQtucrnFVFvg1.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/jJykSIwT7CFxJVZC5Zp2.jpg
+    image: /images/voyages/sejour-astronomie-corse/jJykSIwT7CFxJVZC5Zp2.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Xd1JJsgvRfKYCHuxU5xd.jpg
+    image: /images/voyages/sejour-astronomie-corse/Xd1JJsgvRfKYCHuxU5xd.jpg
     ---
     :::::
     ::::
@@ -284,7 +284,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/LVgr85GXTgGEEneLa7Ie.jpg
+    avatar: /images/voyages/sejour-astronomie-corse/LVgr85GXTgGEEneLa7Ie.jpg
     ---
     #title
     Stéphane

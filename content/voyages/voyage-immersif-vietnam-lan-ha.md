@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/4Mzpj2CWQmaEINIcvsif.jpg
+image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/4Mzpj2CWQmaEINIcvsif.jpg
 ---
 #title
 Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong
@@ -10,47 +10,47 @@ Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/WZ5iktlRQaEDb7O3WOrA.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/WZ5iktlRQaEDb7O3WOrA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ywKCjuNdT9OgDB6GCAd5.jpg
+image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/ywKCjuNdT9OgDB6GCAd5.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/3SmJclXbTzajxbVrgMw7.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/3SmJclXbTzajxbVrgMw7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/HLayzWR7TCq21JpJUiE3.jpg
+image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/HLayzWR7TCq21JpJUiE3.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/KkQGDzxRUCUEBJApW03w.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/KkQGDzxRUCUEBJApW03w.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/HZ8MMdwbRIes9xq6Tv0t.jpg
+image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/HZ8MMdwbRIes9xq6Tv0t.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/0ksiM8tTcWaEyes38vCO.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/0ksiM8tTcWaEyes38vCO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/nzDJw6d5TdquZMBN7sou.jpg
+image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/nzDJw6d5TdquZMBN7sou.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/0iLXubHQSxSoNf5SS0XO.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/0iLXubHQSxSoNf5SS0XO.jpg"}
 ::::
   :::
 ::
@@ -139,7 +139,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-immersif-vietnam-lan-ha/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -149,7 +149,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
   :::highlights-row
   ---
-  image: /images/voyages/6PzQyhf0QYy0qqaL9sCy.jpg
+  image: /images/voyages/voyage-immersif-vietnam-lan-ha/6PzQyhf0QYy0qqaL9sCy.jpg
   ---
   ::::highlight-list-item
   La journée de croisière en jonque sur la Baie de Lanh Ha
@@ -209,7 +209,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
   
     :::day-row
     ---
-    image: /images/voyages/0GeZeuPFSRiGgc1ejXtJ.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/0GeZeuPFSRiGgc1ejXtJ.jpg
     ---
     #subtitle
     JOUR 1
@@ -224,7 +224,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/aCf2KmmBTxqg3An8CaM1.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/aCf2KmmBTxqg3An8CaM1.jpg
     ---
     #subtitle
     JOURS 2 ET 3
@@ -239,7 +239,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/0ZGKTGsLQumnbOHtfvDR.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/0ZGKTGsLQumnbOHtfvDR.jpg
     ---
     #subtitle
     JOURS 4 ET 5
@@ -254,7 +254,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/qlpt5y0T7uDKutelao5A.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/qlpt5y0T7uDKutelao5A.jpg
     ---
     #subtitle
     JOUR 6
@@ -269,7 +269,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/ijZJ6N4jQJWuxPHIOEDA.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/ijZJ6N4jQJWuxPHIOEDA.jpg
     ---
     #subtitle
     JOUR 7
@@ -285,7 +285,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/HIVJuFMuT1m26qLFRQAs.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/HIVJuFMuT1m26qLFRQAs.jpg
     ---
     #subtitle
     JOUR 8
@@ -300,7 +300,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/gdJchAjSKWCTsQzY5HQs.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/gdJchAjSKWCTsQzY5HQs.jpg
     ---
     #subtitle
     JOUR 9
@@ -315,7 +315,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/xpTvHCoCSQu4de6eHfoA.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/xpTvHCoCSQu4de6eHfoA.jpg
     ---
     #subtitle
     JOUR 10
@@ -330,7 +330,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/e9iUp7wBQJKnt1AI3EF6.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/e9iUp7wBQJKnt1AI3EF6.jpg
     ---
     #subtitle
     JOUR 11
@@ -345,7 +345,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/mk6hVwdRCudmAqjTQYzA.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/mk6hVwdRCudmAqjTQYzA.jpg
     ---
     #subtitle
     JOUR 12
@@ -360,7 +360,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
 
     :::day-row
     ---
-    image: /images/voyages/pOoU4VrvTZGANPs2nRuM.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/pOoU4VrvTZGANPs2nRuM.jpg
     ---
     #subtitle
     JOUR 13
@@ -389,19 +389,19 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/cIxZcqlGQNmUaO8k9EvT.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/cIxZcqlGQNmUaO8k9EvT.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/tlhWT1EOSauLxtVthRom.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/tlhWT1EOSauLxtVthRom.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/M3CGMRnQIeTdNBAI7XUD.jpg
+    image: /images/voyages/voyage-immersif-vietnam-lan-ha/M3CGMRnQIeTdNBAI7XUD.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/sSgrEWvQ8GtQ8tCRSebB.jpg
+image-src: /images/voyages/voyage-cheval-mongolie/sSgrEWvQ8GtQ8tCRSebB.jpg
 ---
 #title
 A cheval, à la rencontre des nomades en Mongolie
@@ -10,53 +10,53 @@ A cheval, à la rencontre des nomades en Mongolie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/xgTLLIAbQZ2Ya08iV93h.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-cheval-mongolie/xgTLLIAbQZ2Ya08iV93h.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/FoLVKCpIQgiWNkbCzt61.jpg
+image-src: /images/voyages/voyage-cheval-mongolie/FoLVKCpIQgiWNkbCzt61.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/SaH5sPlYQfyWzyomgGPm.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-cheval-mongolie/SaH5sPlYQfyWzyomgGPm.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ahbVz26ISaWPfmVAIJLB.jpg
+image-src: /images/voyages/voyage-cheval-mongolie/ahbVz26ISaWPfmVAIJLB.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/4wo2NkJRpCnRNwJ4yv9w.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-cheval-mongolie/4wo2NkJRpCnRNwJ4yv9w.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/0eOyRwoTu6ZynS6q4wT0.jpg
+image-src: /images/voyages/voyage-cheval-mongolie/0eOyRwoTu6ZynS6q4wT0.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/W2ZV8EunRoyQ0YYzCEdx.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-cheval-mongolie/W2ZV8EunRoyQ0YYzCEdx.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/8Eh7wrF7S3WP4Hr6vpQ2.jpg
+image-src: /images/voyages/voyage-cheval-mongolie/8Eh7wrF7S3WP4Hr6vpQ2.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/E8TF7474S22mxWT3rblI.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-cheval-mongolie/E8TF7474S22mxWT3rblI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/JRnWKUESiG7XrFD1OhVh.jpg
+image-src: /images/voyages/voyage-cheval-mongolie/JRnWKUESiG7XrFD1OhVh.jpg
 ---
 ::::
   :::
@@ -142,7 +142,7 @@ right-sticky: true
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FbEN6KxzS62uUwejT351.jpg
+    avatar: /images/voyages/voyage-cheval-mongolie/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -152,7 +152,7 @@ right-sticky: true
 
   :::highlights-row
   ---
-  image: /images/voyages/KIX9ojtURbObYMvXBFpM.jpg
+  image: /images/voyages/voyage-cheval-mongolie/KIX9ojtURbObYMvXBFpM.jpg
   ---
   ::::highlight-list-item
   Traversez les steppes, forêts et rivières à cheval
@@ -212,7 +212,7 @@ right-sticky: true
   
     :::day-row
     ---
-    image: /images/voyages/9O3g3OVRgu6mjlczSOwR.jpg
+    image: /images/voyages/voyage-cheval-mongolie/9O3g3OVRgu6mjlczSOwR.jpg
     ---
     #subtitle
     JOUR 1
@@ -227,7 +227,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/Sg4u2UEQGS3LoG3lvnPp.jpg
+    image: /images/voyages/voyage-cheval-mongolie/Sg4u2UEQGS3LoG3lvnPp.jpg
     ---
     #subtitle
     JOUR 2
@@ -242,7 +242,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/D9AECPGSGaDxUOk1bU1R.jpg
+    image: /images/voyages/voyage-cheval-mongolie/D9AECPGSGaDxUOk1bU1R.jpg
     ---
     #subtitle
     JOUR 3
@@ -258,7 +258,7 @@ Vous parcourez une dizaine de kilomètres sur un terrain qui ne présente pas di
 
     :::day-row
     ---
-    image: /images/voyages/mMXd6EGGS5eJfCpEo4lL.jpg
+    image: /images/voyages/voyage-cheval-mongolie/mMXd6EGGS5eJfCpEo4lL.jpg
     ---
     #subtitle
     JOUR 4
@@ -273,7 +273,7 @@ Vous parcourez une dizaine de kilomètres sur un terrain qui ne présente pas di
 
     :::day-row
     ---
-    image: /images/voyages/EFNyvgxcRKmoSuV2NJFm.jpg
+    image: /images/voyages/voyage-cheval-mongolie/EFNyvgxcRKmoSuV2NJFm.jpg
     ---
     #subtitle
     JOURS 5 ET 6
@@ -294,7 +294,7 @@ Vous remontez dans le véhicule pour parcourir les derniers 25km qui vous sépar
 
     :::day-row
     ---
-    image: /images/voyages/MICtHvQ3SN2H8DKtHIIb.jpg
+    image: /images/voyages/voyage-cheval-mongolie/MICtHvQ3SN2H8DKtHIIb.jpg
     ---
     #subtitle
     JOUR 7 à 9
@@ -317,7 +317,7 @@ Temps de marche : 3 à 6h par jour
 
     :::day-row
     ---
-    image: /images/voyages/t4dKiyXRMSJZY4WKWn6z.jpg
+    image: /images/voyages/voyage-cheval-mongolie/t4dKiyXRMSJZY4WKWn6z.jpg
     ---
     #subtitle
     JOUR 10
@@ -336,7 +336,7 @@ Vous passerez la nuit en camp de yourte.
 
     :::day-row
     ---
-    image: /images/voyages/1qlvLdlrRzS5iczx7sdr.jpg
+    image: /images/voyages/voyage-cheval-mongolie/1qlvLdlrRzS5iczx7sdr.jpg
     ---
     #subtitle
     JOUR 11
@@ -352,7 +352,7 @@ Vous passerez la nuit en camp de yourte.
 
     :::day-row
     ---
-    image: /images/voyages/faUA4JszTegSQ75BxtgA.jpg
+    image: /images/voyages/voyage-cheval-mongolie/faUA4JszTegSQ75BxtgA.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -383,19 +383,19 @@ Nuit à Oulan-Bator. Vol retour le jour 13.
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/9HBqGQccTxKS2Hn8IzhE.jpg
+    image: /images/voyages/voyage-cheval-mongolie/9HBqGQccTxKS2Hn8IzhE.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/bvljlgqVSGCUYs2hzMQf.jpg
+    image: /images/voyages/voyage-cheval-mongolie/bvljlgqVSGCUYs2hzMQf.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/f94K5ohWSSiBXCmiWqs0.jpg
+    image: /images/voyages/voyage-cheval-mongolie/f94K5ohWSSiBXCmiWqs0.jpg
     ---
     :::::
     ::::
@@ -415,7 +415,7 @@ Pour les randonnées équestres et pédestres, un « guide local » vient compl�
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Lgg1wmSmRBSw4g5qhnKl.jpg
+    avatar: /images/voyages/voyage-cheval-mongolie/Lgg1wmSmRBSw4g5qhnKl.jpg
     ---
     #title
     Accompagnateur Interprète

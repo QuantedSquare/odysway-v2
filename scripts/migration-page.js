@@ -1,12 +1,14 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import axios from 'axios'
+
 import { JSDOM } from 'jsdom'
 import TurndownService from 'turndown'
 import slugify from 'slugify'
 
 // Image download configuration
 const IMAGE_DOWNLOAD_DIR = '../public/images/voyages'
-const DOWNLOAD_DELAY_MS = 500 // 500ms delay between downloads
+const DOWNLOAD_DELAY_MS = 200 // 500ms delay between downloads
 const MAX_RETRIES = 3 // Maximum number of retry attempts
 const RETRY_DELAY_MS = 2000 // Wait 2 seconds before retrying
 
@@ -21,6 +23,12 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
  * @returns {Promise<String>} - Local path to the downloaded image
  */
 async function downloadImage(imageUrl, outputPath, retryCount = 0) {
+  // Create the directory if it doesn't exist
+  const dir = path.dirname(outputPath)
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+
   // Check if file already exists
   if (fs.existsSync(outputPath)) {
     console.log(`Image already exists at: ${outputPath}`)
@@ -29,14 +37,13 @@ async function downloadImage(imageUrl, outputPath, retryCount = 0) {
 
   try {
     console.log(`Downloading image: ${imageUrl}`)
-    const response = await fetch(imageUrl)
+    const response = await axios.get(imageUrl, { responseType: 'arraybuffer' })
 
-    if (!response.ok) {
+    if (!response.data) {
       throw new Error(`Failed to download image: ${response.status} ${response.statusText}`)
     }
 
-    const buffer = await response.arrayBuffer()
-    fs.writeFileSync(outputPath, Buffer.from(buffer))
+    fs.writeFileSync(outputPath, response.data)
     console.log(`Saved image to: ${outputPath}`)
     return outputPath
   }
@@ -59,12 +66,12 @@ async function downloadImage(imageUrl, outputPath, retryCount = 0) {
  * @returns {String} - Filename for the image
  */
 function generateImageFilename(imageUrl) {
-  // Parse the URL to get the original filename
   const urlObj = new URL(imageUrl)
   const originalFilename = path.basename(urlObj.pathname)
+  const extension = path.extname(originalFilename)
 
-  // If no extension, add .jpg
-  if (!path.extname(originalFilename)) {
+  if (extension.length === 0) {
+    console.log('No extension found for image: ', urlObj)
     return `${originalFilename}.jpg`
   }
 
@@ -77,9 +84,16 @@ function generateImageFilename(imageUrl) {
  * @returns {Promise<Object>} - Object containing mappings from original URLs to local paths
  */
 async function processAndDownloadImages(voyage) {
-  // Create image directory if it doesn't exist
+  // Create base image directory if it doesn't exist
   if (!fs.existsSync(IMAGE_DOWNLOAD_DIR)) {
     fs.mkdirSync(IMAGE_DOWNLOAD_DIR, { recursive: true })
+  }
+
+  // Create voyage-specific directory
+  const voyageSlug = slugify(voyage.slug, { lower: true })
+  const voyageDir = path.join(IMAGE_DOWNLOAD_DIR, voyageSlug)
+  if (!fs.existsSync(voyageDir)) {
+    fs.mkdirSync(voyageDir, { recursive: true })
   }
 
   const imageUrlMap = new Map()
@@ -161,9 +175,9 @@ async function processAndDownloadImages(voyage) {
   for (const image of imagesToProcess) {
     try {
       const filename = generateImageFilename(image.url)
-      const outputPath = path.join(IMAGE_DOWNLOAD_DIR, filename)
+      const outputPath = path.join(voyageDir, filename)
       await downloadImage(image.url, outputPath)
-      const relativePath = `/images/voyages/${filename}`
+      const relativePath = `/images/voyages/${voyageSlug}/${filename}`
       imageUrlMap.set(image.url, relativePath)
       await sleep(DOWNLOAD_DELAY_MS)
     }
@@ -171,6 +185,7 @@ async function processAndDownloadImages(voyage) {
       console.error(`Error processing image ${image.url}: ${error.message}`)
     }
   }
+  // await sleep(2000)
 
   return imageUrlMap
 }

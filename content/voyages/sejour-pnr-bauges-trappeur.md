@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/PdWgVJRxSdOcrLL149CO.jpg
+image-src: /images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg
 ---
 #title
 Vivez comme un trappeur dans les Bauges
@@ -10,43 +10,43 @@ Vivez comme un trappeur dans les Bauges
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/cJBCgTbaRSmMzbBargUY.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-pnr-bauges-trappeur/cJBCgTbaRSmMzbBargUY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/RtzFYv0TYC9zDSx1AW3m.jpg
+image-src: /images/voyages/sejour-pnr-bauges-trappeur/RtzFYv0TYC9zDSx1AW3m.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/wRNYWVeQS8yXy50iqE9S.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-pnr-bauges-trappeur/wRNYWVeQS8yXy50iqE9S.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/Fgc4z5fzTVYoyhUqF3Lm.jpg
+image-src: /images/voyages/sejour-pnr-bauges-trappeur/Fgc4z5fzTVYoyhUqF3Lm.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Y0IUCmsUSkBEvf89SpLA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/sejour-pnr-bauges-trappeur/Y0IUCmsUSkBEvf89SpLA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/SzRQEVGaTAmmng1ARgd4.jpg
+image-src: /images/voyages/sejour-pnr-bauges-trappeur/SzRQEVGaTAmmng1ARgd4.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/75sKvM5jRoiOqWkqGSFu.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/sejour-pnr-bauges-trappeur/75sKvM5jRoiOqWkqGSFu.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/N81WPAtBR1KwM17xUoV1.jpg
+image-src: /images/voyages/sejour-pnr-bauges-trappeur/N81WPAtBR1KwM17xUoV1.jpg
 ---
 ::::
   :::#component-slot-2
@@ -145,7 +145,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/fex3JfIRaSYThw69JkRO.jpg
+    avatar: /images/voyages/sejour-pnr-bauges-trappeur/fex3JfIRaSYThw69JkRO.jpg
     avatar-size: "60"
     ---
     #title
@@ -155,7 +155,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
 
   :::highlights-row
   ---
-  image: /images/voyages/LcbUaJztStiqmdAUdqlp.jpg
+  image: /images/voyages/sejour-pnr-bauges-trappeur/LcbUaJztStiqmdAUdqlp.jpg
   ---
   ::::highlight-list-item
   La découverte d'un patrimoine géologique d'exception, reconnu à l'UNESCO.
@@ -215,7 +215,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
   
     :::day-row
     ---
-    image: /images/voyages/iQAhe418Q6aG1EZ1i8VP.jpg
+    image: /images/voyages/sejour-pnr-bauges-trappeur/iQAhe418Q6aG1EZ1i8VP.jpg
     ---
     #subtitle
     JOUR 1
@@ -230,7 +230,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
 
     :::day-row
     ---
-    image: /images/voyages/YkAsUmjHQIu4mXqW1vXN.jpg
+    image: /images/voyages/sejour-pnr-bauges-trappeur/YkAsUmjHQIu4mXqW1vXN.jpg
     ---
     #subtitle
     JOUR 2
@@ -245,7 +245,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
 
     :::day-row
     ---
-    image: /images/voyages/YQCbybGSwaRYTkYgYWWQ.jpg
+    image: /images/voyages/sejour-pnr-bauges-trappeur/YQCbybGSwaRYTkYgYWWQ.jpg
     ---
     #subtitle
     JOUR 3
@@ -282,7 +282,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/uSs9eKmyRNtKULuALHBm.jpg
+    avatar: /images/voyages/sejour-pnr-bauges-trappeur/uSs9eKmyRNtKULuALHBm.jpg
     ---
     #title
     Véronique
@@ -295,7 +295,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/HRta86kOTKOehBztcjPw.jpg
+    avatar: /images/voyages/sejour-pnr-bauges-trappeur/HRta86kOTKOehBztcjPw.jpg
     ---
     #title
     Matthieu

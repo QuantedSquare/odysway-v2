@@ -1,14 +1,14 @@
 {
   "title": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
   "slug": "voyage-chamanique-perou",
-  "ISO": "PE",
+  "iso": "PE",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-chamanique-perou/kKjnz57eQS7NLDd0AnsS",
+    "alt": "kKjnz57eQS7NLDd0AnsS"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-chamanique-perou/WfgboEJzTIeDvGseX3xe.jpg",
+    "alt": "WfgboEJzTIeDvGseX3xe"
   },
   "country": "Pérou",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 1300
@@ -44,8 +44,8 @@
       "bookedPlaces": 7,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 1300
@@ -59,8 +59,8 @@
       "bookedPlaces": 7,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 1300
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 1300

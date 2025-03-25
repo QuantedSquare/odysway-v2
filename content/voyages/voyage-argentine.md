@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/kKYNl9h2Q5a1ZZTpjV7w.jpg
+image-src: /images/voyages/voyage-argentine/kKYNl9h2Q5a1ZZTpjV7w.jpg
 ---
 #title
 Contrastes et grands espaces en Argentine
@@ -10,37 +10,37 @@ Contrastes et grands espaces en Argentine
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/q2jUxhHeSMu3UQLryRPK.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-argentine/q2jUxhHeSMu3UQLryRPK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/CPkwmeWRdiStdRIZG6Fd.jpg
+image-src: /images/voyages/voyage-argentine/CPkwmeWRdiStdRIZG6Fd.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/pVeHmVPQTtGphuPtIhsF.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-argentine/pVeHmVPQTtGphuPtIhsF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/kw8lK1BVTCenASfjpUFD.jpg
+image-src: /images/voyages/voyage-argentine/kw8lK1BVTCenASfjpUFD.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/lu7vayxaQPGLxN5udxNy.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-argentine/lu7vayxaQPGLxN5udxNy.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/8668LhmhQW4ol31ViBvw.jpg
+image-src: /images/voyages/voyage-argentine/8668LhmhQW4ol31ViBvw.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/RGQ0LqRyQBuRiET8ci7F.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-argentine/RGQ0LqRyQBuRiET8ci7F.jpg"}
 ::::
   :::
 ::
@@ -129,7 +129,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/MGKzR0kLS0iVkW6PifBD.jpg
+    avatar: /images/voyages/voyage-argentine/MGKzR0kLS0iVkW6PifBD.jpg
     avatar-size: "60"
     ---
     #title
@@ -139,7 +139,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
   :::highlights-row
   ---
-  image: /images/voyages/GThVs7ySWevone7CO5hQ.jpg
+  image: /images/voyages/voyage-argentine/GThVs7ySWevone7CO5hQ.jpg
   ---
   ::::highlight-list-item
   Vivez l'émotion des grands espaces argentins : de la Patagonie aux paysages désertiques du Nord
@@ -203,7 +203,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
   
     :::day-row
     ---
-    image: /images/voyages/gOiQxcgFS5moTY2sBqJc.jpg
+    image: /images/voyages/voyage-argentine/gOiQxcgFS5moTY2sBqJc.jpg
     ---
     #subtitle
     JOUR 1
@@ -218,7 +218,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/v5cYKqpgTEKWMcbm34JT.jpg
+    image: /images/voyages/voyage-argentine/v5cYKqpgTEKWMcbm34JT.jpg
     ---
     #subtitle
     JOUR 2
@@ -233,7 +233,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/4jlpJ9ilQA2gpHMjFy25.jpg
+    image: /images/voyages/voyage-argentine/4jlpJ9ilQA2gpHMjFy25.jpg
     ---
     #subtitle
     JOUR 3
@@ -248,7 +248,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/rWFL9iASSdS1ve4bf1LI.jpg
+    image: /images/voyages/voyage-argentine/rWFL9iASSdS1ve4bf1LI.jpg
     ---
     #subtitle
     JOUR 4
@@ -263,7 +263,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/B5Zd8oxdRFShahrE5fDE.jpg
+    image: /images/voyages/voyage-argentine/B5Zd8oxdRFShahrE5fDE.jpg
     ---
     #subtitle
     JOUR 5
@@ -278,7 +278,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/Ef8FFVuVSkKl0OM3gp3E.jpg
+    image: /images/voyages/voyage-argentine/Ef8FFVuVSkKl0OM3gp3E.jpg
     ---
     #subtitle
     JOUR 6
@@ -293,7 +293,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/MshSKDmQ92mqwBxbR1Vg.jpg
+    image: /images/voyages/voyage-argentine/MshSKDmQ92mqwBxbR1Vg.jpg
     ---
     #subtitle
     JOUR 7
@@ -308,7 +308,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/a0uB8GS0RcWYLcTzinaz.jpg
+    image: /images/voyages/voyage-argentine/a0uB8GS0RcWYLcTzinaz.jpg
     ---
     #subtitle
     JOUR 8
@@ -323,7 +323,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/NZ72Ul44TB2RR5rFuw36.jpg
+    image: /images/voyages/voyage-argentine/NZ72Ul44TB2RR5rFuw36.jpg
     ---
     #subtitle
     JOUR 9
@@ -338,7 +338,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/JjbbDlOFRx6Ldox6nO3N.jpg
+    image: /images/voyages/voyage-argentine/JjbbDlOFRx6Ldox6nO3N.jpg
     ---
     #subtitle
     JOUR 10
@@ -355,7 +355,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/MGvRw9nFQz2Nu4D17pug.jpg
+    image: /images/voyages/voyage-argentine/MGvRw9nFQz2Nu4D17pug.jpg
     ---
     #subtitle
     JOUR 11
@@ -370,7 +370,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/Ye3oM9RuS9yXl7aLKsU3.jpg
+    image: /images/voyages/voyage-argentine/Ye3oM9RuS9yXl7aLKsU3.jpg
     ---
     #subtitle
     JOUR 12
@@ -386,7 +386,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/exqK8SLSOCyBY7vjqbLw.jpg
+    image: /images/voyages/voyage-argentine/exqK8SLSOCyBY7vjqbLw.jpg
     ---
     #subtitle
     JOUR 13
@@ -402,7 +402,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/G50s20URQz22LXa7nhG8.jpg
+    image: /images/voyages/voyage-argentine/G50s20URQz22LXa7nhG8.jpg
     ---
     #subtitle
     JOUR 14
@@ -418,7 +418,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
 
     :::day-row
     ---
-    image: /images/voyages/WvTfhliWSKqbUfwHzBFa.jpg
+    image: /images/voyages/voyage-argentine/WvTfhliWSKqbUfwHzBFa.jpg
     ---
     #subtitle
     JOUR 15
@@ -447,19 +447,19 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/XB9CGAlmSaC5zYrP9DHj.jpg
+    image: /images/voyages/voyage-argentine/XB9CGAlmSaC5zYrP9DHj.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/SxvJpKBjTlm01YPORFoY.jpg
+    image: /images/voyages/voyage-argentine/SxvJpKBjTlm01YPORFoY.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/o5i0mXSPSJSofEobh0O1.jpg
+    image: /images/voyages/voyage-argentine/o5i0mXSPSJSofEobh0O1.jpg
     ---
     :::::
     ::::
@@ -477,7 +477,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/8N7j592iT2CYtPs0pp8D.jpg
+    avatar: /images/voyages/voyage-argentine/8N7j592iT2CYtPs0pp8D.jpg
     ---
     #title
     Des guides francophones dédiés

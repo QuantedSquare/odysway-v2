@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/bvfJqJqLT6KbXdDOYiyZ.jpg
+image-src: /images/voyages/felins-afrique-du-sud/bvfJqJqLT6KbXdDOYiyZ.jpg
 ---
 #title
 Occupez-vous des félins en Afrique du Sud
@@ -10,47 +10,47 @@ Occupez-vous des félins en Afrique du Sud
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/AE1MefzLSSesDpVfz6xS.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/felins-afrique-du-sud/AE1MefzLSSesDpVfz6xS.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/JoJNaVabQjaia1UZb5f2.jpg
+image-src: /images/voyages/felins-afrique-du-sud/JoJNaVabQjaia1UZb5f2.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/2HYVDqFKTgG4jKMSqG8F.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/felins-afrique-du-sud/2HYVDqFKTgG4jKMSqG8F.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/yyn67ZizRO2hydZsMdHd.jpg
+image-src: /images/voyages/felins-afrique-du-sud/yyn67ZizRO2hydZsMdHd.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/u0pXlLVTHSW5FFGdr4nw.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/felins-afrique-du-sud/u0pXlLVTHSW5FFGdr4nw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/JMrtJe8RSLlei5EYwBAk.jpg
+image-src: /images/voyages/felins-afrique-du-sud/JMrtJe8RSLlei5EYwBAk.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/78K9yIFQ76Gd5rpc9xDQ.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/felins-afrique-du-sud/78K9yIFQ76Gd5rpc9xDQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/xj4aF5pMSs2rJMCPcnQJ.jpg
+image-src: /images/voyages/felins-afrique-du-sud/xj4aF5pMSs2rJMCPcnQJ.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/Q8Z3k9wT3egHQ2tkv4Pw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/felins-afrique-du-sud/Q8Z3k9wT3egHQ2tkv4Pw.jpg"}
 ::::
   :::
 ::
@@ -137,7 +137,7 @@ Vous profiterez également des alentours du sanctuaire proche de la ville du Cap
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/hzpvLYwdSkWrR3Bw3FHN.jpg
+    avatar: /images/voyages/felins-afrique-du-sud/hzpvLYwdSkWrR3Bw3FHN.jpg
     avatar-size: "60"
     ---
     #title
@@ -147,7 +147,7 @@ Vous profiterez également des alentours du sanctuaire proche de la ville du Cap
 
   :::highlights-row
   ---
-  image: /images/voyages/VpRL1V0kSrq7bvU7dFSQ.jpg
+  image: /images/voyages/felins-afrique-du-sud/VpRL1V0kSrq7bvU7dFSQ.jpg
   ---
   ::::highlight-list-item
   Participer à un projet unique de conservation
@@ -203,7 +203,7 @@ Vous profiterez également des alentours du sanctuaire proche de la ville du Cap
   
     :::day-row
     ---
-    image: /images/voyages/1q3gvlABSMWbp7LYKcTB.jpg
+    image: /images/voyages/felins-afrique-du-sud/1q3gvlABSMWbp7LYKcTB.jpg
     ---
     #subtitle
     JOUR 1 
@@ -219,7 +219,7 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
 
     :::day-row
     ---
-    image: /images/voyages/BAHEyNRSTraleD3msN74.jpg
+    image: /images/voyages/felins-afrique-du-sud/BAHEyNRSTraleD3msN74.jpg
     ---
     #subtitle
     JOURS 2 À 5, 7, 8, ET 10 À 12
@@ -234,7 +234,7 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
 
     :::day-row
     ---
-    image: /images/voyages/QlxYEjvTq2EiuO7m0CZQ.jpg
+    image: /images/voyages/felins-afrique-du-sud/QlxYEjvTq2EiuO7m0CZQ.jpg
     ---
     #subtitle
     JOURS 6 ET 13
@@ -249,7 +249,7 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
 
     :::day-row
     ---
-    image: /images/voyages/8eUH3TOTZiHUNKFDVWu8.jpg
+    image: /images/voyages/felins-afrique-du-sud/8eUH3TOTZiHUNKFDVWu8.jpg
     ---
     #subtitle
     JOURS 9 ET 14
@@ -264,7 +264,7 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
 
     :::day-row
     ---
-    image: /images/voyages/LLCMTs9MRDeMyps2Q1uq.jpg
+    image: /images/voyages/felins-afrique-du-sud/LLCMTs9MRDeMyps2Q1uq.jpg
     ---
     #subtitle
     JOUR 15
@@ -293,19 +293,19 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/GjZ1909xS9y7a4xGVZpZ.jpg
+    image: /images/voyages/felins-afrique-du-sud/GjZ1909xS9y7a4xGVZpZ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/2UqzmI3RqzFASHky8nwy.jpg
+    image: /images/voyages/felins-afrique-du-sud/2UqzmI3RqzFASHky8nwy.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/V2GhUU4OTDaPfJBy8w6O.jpg
+    image: /images/voyages/felins-afrique-du-sud/V2GhUU4OTDaPfJBy8w6O.jpg
     ---
     :::::
     ::::

@@ -1,14 +1,14 @@
 {
   "title": "Découvrez l'art de la photo animalière dans le Jura",
   "slug": "decouvrez-photo-animaliere-jura",
-  "ISO": "FR",
+  "iso": "FR",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO",
+    "alt": "03GZYcbTRW9Fa6I7YvQO"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/decouvrez-photo-animaliere-jura/aUfx5rXLQqiRHbypIpXN.jpg",
+    "alt": "aUfx5rXLQqiRHbypIpXN"
   },
   "country": "Jura",
   "zoneChapka": 1,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 45,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 45,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 45,
       "privatized": false,
       "flyTicketPrice": 0

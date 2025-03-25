@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/EY8s3CZQSHKTnizKPdIi.jpg
+image-src: /images/voyages/voyage-nepal-randonnee-yoga/EY8s3CZQSHKTnizKPdIi.jpg
 ---
 #title
 Séjour trek, yoga et immersion chez l'habitant au Népal
@@ -10,53 +10,53 @@ Séjour trek, yoga et immersion chez l'habitant au Népal
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/48w1GY3RQBGpbIh35XNL.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-nepal-randonnee-yoga/48w1GY3RQBGpbIh35XNL.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/hv22KHMQ0eStGK0vZQWr.jpg
+image-src: /images/voyages/voyage-nepal-randonnee-yoga/hv22KHMQ0eStGK0vZQWr.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/NTKN2cGkRJ61JoWmuUr2.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-nepal-randonnee-yoga/NTKN2cGkRJ61JoWmuUr2.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/6qMxuFOqTZmX3j7LbPR8.jpg
+image-src: /images/voyages/voyage-nepal-randonnee-yoga/6qMxuFOqTZmX3j7LbPR8.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/19vb4tcFR6SQyNxUtm59.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-nepal-randonnee-yoga/19vb4tcFR6SQyNxUtm59.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/ouLBRnBXQTi5EZkdGkK6.jpg
+image-src: /images/voyages/voyage-nepal-randonnee-yoga/ouLBRnBXQTi5EZkdGkK6.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/66jLqDSBSYqHHYgbKJau.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-nepal-randonnee-yoga/66jLqDSBSYqHHYgbKJau.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/fWgEXwX5S3OkjP2rpWb0.jpg
+image-src: /images/voyages/voyage-nepal-randonnee-yoga/fWgEXwX5S3OkjP2rpWb0.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/NL9m9evQWqUo1mfYgVIw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-nepal-randonnee-yoga/NL9m9evQWqUo1mfYgVIw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/O8KRh5REQqoOPW8NVlVw.jpg
+image-src: /images/voyages/voyage-nepal-randonnee-yoga/O8KRh5REQqoOPW8NVlVw.jpg
 ---
 ::::
   :::
@@ -148,7 +148,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-nepal-randonnee-yoga/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -158,7 +158,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
   :::highlights-row
   ---
-  image: /images/voyages/Fz6k7xVbTkKlX7evRa0z.jpg
+  image: /images/voyages/voyage-nepal-randonnee-yoga/Fz6k7xVbTkKlX7evRa0z.jpg
   ---
   ::::highlight-list-item
   Partez pour un trek accessible en itinérance dans la région des Annapurnas
@@ -218,7 +218,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
   
     :::day-row
     ---
-    image: /images/voyages/hSjchJZQJWaRGhOudAmJ.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/hSjchJZQJWaRGhOudAmJ.jpg
     ---
     #subtitle
     JOUR 1
@@ -233,7 +233,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/McQuY2hQQ7W7hSTdzHyD.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/McQuY2hQQ7W7hSTdzHyD.jpg
     ---
     #subtitle
     JOUR 2
@@ -248,7 +248,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/nZmQGuqRTAOmnStlfdM9.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/nZmQGuqRTAOmnStlfdM9.jpg
     ---
     #subtitle
     JOUR 3
@@ -263,7 +263,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/Qmz0yDXjTey0thvEA9cq.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/Qmz0yDXjTey0thvEA9cq.jpg
     ---
     #subtitle
     JOUR 4
@@ -278,7 +278,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/PswEvHDgT1C6MTcvZrcR.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/PswEvHDgT1C6MTcvZrcR.jpg
     ---
     #subtitle
     JOUR 5
@@ -293,7 +293,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/JK56DLEbS8uSO78iThlv.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/JK56DLEbS8uSO78iThlv.jpg
     ---
     #subtitle
     JOUR 6
@@ -311,7 +311,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/kiYpQZ9Qo2aP5H5BufQ4.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/kiYpQZ9Qo2aP5H5BufQ4.jpg
     ---
     #subtitle
     JOUR 7
@@ -331,7 +331,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/TOtCu9RSLiyfQeWJMXLQ.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/TOtCu9RSLiyfQeWJMXLQ.jpg
     ---
     #subtitle
     JOUR 8
@@ -346,7 +346,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/R69PRhusROzQtwhVApN3.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/R69PRhusROzQtwhVApN3.jpg
     ---
     #subtitle
     JOURS 9 ET 10
@@ -361,7 +361,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/3M1LHqiGQu6KjSHoSnp7.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/3M1LHqiGQu6KjSHoSnp7.jpg
     ---
     #subtitle
     JOUR 11
@@ -376,7 +376,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
 
     :::day-row
     ---
-    image: /images/voyages/X28fC5bRbCYcZCSehMp3.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/X28fC5bRbCYcZCSehMp3.jpg
     ---
     #subtitle
     JOUR 12
@@ -405,19 +405,19 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/AlDB9MsqQoa7xDw0xfxG.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/AlDB9MsqQoa7xDw0xfxG.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/FxHPKpTaSyCdaokqVNm0.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/FxHPKpTaSyCdaokqVNm0.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/pCaAOuIZRvqetUHZCY4M.jpg
+    image: /images/voyages/voyage-nepal-randonnee-yoga/pCaAOuIZRvqetUHZCY4M.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/dQS8VWGAQIe3DVaBqlyP.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/dQS8VWGAQIe3DVaBqlyP.jpg
 ---
 #title
 Voyagez hors des sentiers battus au Sri Lanka (été)
@@ -10,63 +10,63 @@ Voyagez hors des sentiers battus au Sri Lanka (été)
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/np1ln7sOTnCjyLxVrK0x.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-ete-sri-lanka/np1ln7sOTnCjyLxVrK0x.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/R9Vo4e61TeeeGvyqvH5V.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/R9Vo4e61TeeeGvyqvH5V.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/07rIZCYSwiq7bu5F8kEw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-ete-sri-lanka/07rIZCYSwiq7bu5F8kEw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/y1VockRfRfUcjswVMMWQ.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/y1VockRfRfUcjswVMMWQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/iKL21xWfR5WMXWR9Qz7f.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-ete-sri-lanka/iKL21xWfR5WMXWR9Qz7f.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/1OifIhqTWKQwiSf6Nnvf.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/1OifIhqTWKQwiSf6Nnvf.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/3xH5tcnwQ06CKjlPBuAn.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-ete-sri-lanka/3xH5tcnwQ06CKjlPBuAn.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/jnHAVtxgROqtZ0XsgjdO.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/jnHAVtxgROqtZ0XsgjdO.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/QxYI0gPRSKgk35iweJU3.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-ete-sri-lanka/QxYI0gPRSKgk35iweJU3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/UJq1UidRN6pohE8o8exA.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/UJq1UidRN6pohE8o8exA.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/uPs2S80BSlKe1UMUR6Bg.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-ete-sri-lanka/uPs2S80BSlKe1UMUR6Bg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/yg3yxz1Qqi56nQQDnzPx.jpg
+image-src: /images/voyages/voyage-ete-sri-lanka/yg3yxz1Qqi56nQQDnzPx.jpg
 ---
 ::::
   :::
@@ -160,7 +160,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/kgpLmCyvSCqj5Fv8l4Qb.jpg
+    avatar: /images/voyages/voyage-ete-sri-lanka/kgpLmCyvSCqj5Fv8l4Qb.jpg
     avatar-size: "60"
     ---
     #title
@@ -170,7 +170,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
   :::highlights-row
   ---
-  image: /images/voyages/gxjYjFFfQsuiahVPkqid.jpg
+  image: /images/voyages/voyage-ete-sri-lanka/gxjYjFFfQsuiahVPkqid.jpg
   ---
   ::::highlight-list-item
   Vivez un voyage vraiment atypique et au plus près des locaux au Sri Lanka, sans oublier les incontournables!
@@ -234,7 +234,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
   
     :::day-row
     ---
-    image: /images/voyages/y4pNi9atTneHgQXJpaXD.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/y4pNi9atTneHgQXJpaXD.jpg
     ---
     #subtitle
     JOUR 1
@@ -249,7 +249,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/Z1TlgskTSxWfsrTqrXFu.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/Z1TlgskTSxWfsrTqrXFu.jpg
     ---
     #subtitle
     JOUR 2
@@ -264,7 +264,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/8eYDo0MmRuWVvqhOLLs9.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/8eYDo0MmRuWVvqhOLLs9.jpg
     ---
     #subtitle
     JOUR 3
@@ -279,7 +279,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/uzFKilSnQoWdOdTfSJGt.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/uzFKilSnQoWdOdTfSJGt.jpg
     ---
     #subtitle
     JOUR 4
@@ -294,7 +294,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/sT7w6fDTRaJ8TVJLqjPV.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/sT7w6fDTRaJ8TVJLqjPV.jpg
     ---
     #subtitle
     JOUR 5
@@ -309,7 +309,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/Ktfgq8NSSgS1gfAWXEaM.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/Ktfgq8NSSgS1gfAWXEaM.jpg
     ---
     #subtitle
     JOUR 6
@@ -324,7 +324,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/04q3UgynTk2YpC1LppZ1.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/04q3UgynTk2YpC1LppZ1.jpg
     ---
     #subtitle
     JOUR 7
@@ -339,7 +339,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/I7uwzVsTZCj2rU6zubQJ.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/I7uwzVsTZCj2rU6zubQJ.jpg
     ---
     #subtitle
     JOUR 8
@@ -354,7 +354,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/PpD525A7TKOGSdb8azNR.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/PpD525A7TKOGSdb8azNR.jpg
     ---
     #subtitle
     JOURS 9 ET 10
@@ -369,7 +369,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/tpNq46v4RsFncCrCXdyw.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/tpNq46v4RsFncCrCXdyw.jpg
     ---
     #subtitle
     JOUR 11
@@ -384,7 +384,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
 
     :::day-row
     ---
-    image: /images/voyages/6ybeHrHVQCi3y7kRyqjo.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/6ybeHrHVQCi3y7kRyqjo.jpg
     ---
     #subtitle
     JOUR 12
@@ -413,19 +413,19 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/5YIFQFiT7iCsnuWshihA.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/5YIFQFiT7iCsnuWshihA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/zIRXfcwZQOu2KcjlIgvk.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/zIRXfcwZQOu2KcjlIgvk.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/MbRZy1vMRrqXGwtilpGz.jpg
+    image: /images/voyages/voyage-ete-sri-lanka/MbRZy1vMRrqXGwtilpGz.jpg
     ---
     :::::
     ::::
@@ -443,7 +443,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/AUxdLPwhQXapSyVzxff8.jpg
+    avatar: /images/voyages/voyage-ete-sri-lanka/AUxdLPwhQXapSyVzxff8.jpg
     ---
     #title
     Un guide local francophone dédié

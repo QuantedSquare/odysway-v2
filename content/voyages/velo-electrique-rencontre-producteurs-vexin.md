@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/IjeIN64NTY66hlF7RMeQ.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/IjeIN64NTY66hlF7RMeQ.jpg
 ---
 #title
 En vélo électrique, à la rencontre des producteurs locaux dans le Vexin
@@ -10,83 +10,83 @@ En vélo électrique, à la rencontre des producteurs locaux dans le Vexin
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/MgdWPnvRNyfZCYET0ldQ.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/MgdWPnvRNyfZCYET0ldQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ZxVVuLM0RzqRqFC1pZsy.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ZxVVuLM0RzqRqFC1pZsy.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/ChKS7X9tRUiyITro5cNG.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/ChKS7X9tRUiyITro5cNG.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ylz00tSGR2auh9takWkN.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ylz00tSGR2auh9takWkN.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/h9a6X0tSsuwxtStlpURA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/h9a6X0tSsuwxtStlpURA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/fv1i2jmRS2Ea71aIZRoi.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/fv1i2jmRS2Ea71aIZRoi.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/IU7D06wmTb6luRd3K6R3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/IU7D06wmTb6luRd3K6R3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/7UmbMDHWTUKA6yForvDa.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/7UmbMDHWTUKA6yForvDa.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/11d1cMqqSPGgV7Nlw2Eq.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/11d1cMqqSPGgV7Nlw2Eq.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/xD87ITO1Q1aIZy9a2ErV.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/xD87ITO1Q1aIZy9a2ErV.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/sac0qCBlRDeU9w4kN7nL.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/sac0qCBlRDeU9w4kN7nL.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/blzpSsL8Q8SpMKdeQQFP.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/blzpSsL8Q8SpMKdeQQFP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/rm5fvyYSQwurYcJcxs44.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/rm5fvyYSQwurYcJcxs44.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/OoKA8QUWTMGL5xup721Y.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/OoKA8QUWTMGL5xup721Y.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/u11RArVR5miRCfXNf6OT.jpg
+image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/u11RArVR5miRCfXNf6OT.jpg
 ---
 ::::
   :::#component-slot-2
@@ -193,7 +193,7 @@ Ce séjour est parfait si vous cherchez un week-end insolite, paisible et authen
 
   :::highlights-row
   ---
-  image: /images/voyages/kafZYSnsRH2YjQA5ThBO.jpg
+  image: /images/voyages/velo-electrique-rencontre-producteurs-vexin/kafZYSnsRH2YjQA5ThBO.jpg
   ---
   ::::highlight-list-item
   La découverte de la richesse du Parc naturel du Vexin
@@ -257,7 +257,7 @@ Ce séjour est parfait si vous cherchez un week-end insolite, paisible et authen
   
     :::day-row
     ---
-    image: /images/voyages/wBLD3RBRgitFRRPKrbyA.jpg
+    image: /images/voyages/velo-electrique-rencontre-producteurs-vexin/wBLD3RBRgitFRRPKrbyA.jpg
     ---
     #subtitle
     JOUR 1
@@ -272,7 +272,7 @@ Ce séjour est parfait si vous cherchez un week-end insolite, paisible et authen
 
     :::day-row
     ---
-    image: /images/voyages/PQNxtpmSSzPbbc3wIxHA.jpg
+    image: /images/voyages/velo-electrique-rencontre-producteurs-vexin/PQNxtpmSSzPbbc3wIxHA.jpg
     ---
     #subtitle
     JOUR 2
@@ -311,7 +311,7 @@ Genséric restera joignable durant l'ensemble du séjour en cas de problème !
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/F7LBBhxFTPyfwtnTa8dK.jpg
+    avatar: /images/voyages/velo-electrique-rencontre-producteurs-vexin/F7LBBhxFTPyfwtnTa8dK.jpg
     ---
     #title
     Genséric

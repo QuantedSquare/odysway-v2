@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/1jmKyz0Q1q2Aypl75Cwf.jpg
+image-src: /images/voyages/voyage-vietnam-nord/1jmKyz0Q1q2Aypl75Cwf.jpg
 ---
 #title
 Le Vietnam du Nord, un voyage à la rencontre des populations ethniques
@@ -10,57 +10,57 @@ Le Vietnam du Nord, un voyage à la rencontre des populations ethniques
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/lQBY6WOxQyClPoeR4Y0k.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-vietnam-nord/lQBY6WOxQyClPoeR4Y0k.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/KLiPrvnPSzCzqtpvWGLB.jpg
+image-src: /images/voyages/voyage-vietnam-nord/KLiPrvnPSzCzqtpvWGLB.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/1O9XD7iKTbutrysqxeyA.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-vietnam-nord/1O9XD7iKTbutrysqxeyA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/zyTJbQSRv6cqGqGfct00.jpg
+image-src: /images/voyages/voyage-vietnam-nord/zyTJbQSRv6cqGqGfct00.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/m4uoF2P4QgKZxTNl2jW0.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-vietnam-nord/m4uoF2P4QgKZxTNl2jW0.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/G5Fnc1lTVCBp4ikNGVww.jpg
+image-src: /images/voyages/voyage-vietnam-nord/G5Fnc1lTVCBp4ikNGVww.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/DLA2OspS1ibwGRvI0Wm6.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-vietnam-nord/DLA2OspS1ibwGRvI0Wm6.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/nrOT6LQQWOkc2JlSsWwg.jpg
+image-src: /images/voyages/voyage-vietnam-nord/nrOT6LQQWOkc2JlSsWwg.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/oq38Nl3jTeaoGyznJD24.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-vietnam-nord/oq38Nl3jTeaoGyznJD24.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/joKuUbwxSJOm5FV6g86V.jpg
+image-src: /images/voyages/voyage-vietnam-nord/joKuUbwxSJOm5FV6g86V.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/RRhCr1tSRiPfMFltfOdw.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-vietnam-nord/RRhCr1tSRiPfMFltfOdw.jpg"}
 ::::
   :::
 ::
@@ -151,7 +151,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-vietnam-nord/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -161,7 +161,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
   :::highlights-row
   ---
-  image: /images/voyages/chG0MXmyTMSCAwloWAvd.jpg
+  image: /images/voyages/voyage-vietnam-nord/chG0MXmyTMSCAwloWAvd.jpg
   ---
   ::::highlight-list-item
   La découverte d'une région encore préservée du tourisme de masse
@@ -221,7 +221,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
   
     :::day-row
     ---
-    image: /images/voyages/OoJqtC5fRluVQopFCf6B.jpg
+    image: /images/voyages/voyage-vietnam-nord/OoJqtC5fRluVQopFCf6B.jpg
     ---
     #subtitle
     JOUR 1 
@@ -236,7 +236,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/CXNykGwPT27YTgPyaYAA.jpg
+    image: /images/voyages/voyage-vietnam-nord/CXNykGwPT27YTgPyaYAA.jpg
     ---
     #subtitle
     JOUR 2 
@@ -252,7 +252,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/gVMneR7mRvKvVPBf4fSK.jpg
+    image: /images/voyages/voyage-vietnam-nord/gVMneR7mRvKvVPBf4fSK.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -267,7 +267,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/JzPTr2AMQ32BYZmypC0I.jpg
+    image: /images/voyages/voyage-vietnam-nord/JzPTr2AMQ32BYZmypC0I.jpg
     ---
     #subtitle
     JOUR 5
@@ -283,7 +283,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/Hl2FkgRaTbyLHgw8EFq3.jpg
+    image: /images/voyages/voyage-vietnam-nord/Hl2FkgRaTbyLHgw8EFq3.jpg
     ---
     #subtitle
     JOUR 6
@@ -298,7 +298,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/tTrNo8PgRqel8llgqa7Z.jpg
+    image: /images/voyages/voyage-vietnam-nord/tTrNo8PgRqel8llgqa7Z.jpg
     ---
     #subtitle
     JOUR 7
@@ -314,7 +314,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/Fr8E9vBxSoikFD9zLhKq.jpg
+    image: /images/voyages/voyage-vietnam-nord/Fr8E9vBxSoikFD9zLhKq.jpg
     ---
     #subtitle
     JOUR 8
@@ -329,7 +329,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/9fClVYRp20YsYxW4Im5w.jpg
+    image: /images/voyages/voyage-vietnam-nord/9fClVYRp20YsYxW4Im5w.jpg
     ---
     #subtitle
     JOUR 9 
@@ -345,7 +345,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
 
     :::day-row
     ---
-    image: /images/voyages/TcOmeRmBS9qIA1zzkLsC.jpg
+    image: /images/voyages/voyage-vietnam-nord/TcOmeRmBS9qIA1zzkLsC.jpg
     ---
     #subtitle
     JOUR 10
@@ -375,19 +375,19 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/SAzog25RjWGDhlLD8pmw.jpg
+    image: /images/voyages/voyage-vietnam-nord/SAzog25RjWGDhlLD8pmw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/46J3pdoRBqlUiXQJSGQ4.jpg
+    image: /images/voyages/voyage-vietnam-nord/46J3pdoRBqlUiXQJSGQ4.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/FIZhmJqQsCLxxwYZxS5e.jpg
+    image: /images/voyages/voyage-vietnam-nord/FIZhmJqQsCLxxwYZxS5e.jpg
     ---
     :::::
     ::::

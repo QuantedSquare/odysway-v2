@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/wlnzJH7S6ahGPl2ix2Hg.jpg
+image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/wlnzJH7S6ahGPl2ix2Hg.jpg
 ---
 #title
 Trek en immersion dans les communautés Andines du Pérou
@@ -10,33 +10,33 @@ Trek en immersion dans les communautés Andines du Pérou
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/2o1uuQtoQhmgS0nanHso.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-perou-trek-immersion-chez-l'habitant/2o1uuQtoQhmgS0nanHso.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/DcAP7AhzTayNwcs1jJPW.jpg
+image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/DcAP7AhzTayNwcs1jJPW.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/nPi04F9bRVywNMDu5W0D.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-perou-trek-immersion-chez-l'habitant/nPi04F9bRVywNMDu5W0D.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/hL2ZW0B1RgWI3GLmjpqA.jpg
+image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/hL2ZW0B1RgWI3GLmjpqA.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/4EeqTfRgSUmyfEQnfwJI.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-perou-trek-immersion-chez-l'habitant/4EeqTfRgSUmyfEQnfwJI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/N4xEAVbQqq3Oe2bMep6Q.jpg
+image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/N4xEAVbQqq3Oe2bMep6Q.jpg
 ---
 ::::
   :::
@@ -128,7 +128,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FbEN6KxzS62uUwejT351.jpg
+    avatar: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -138,7 +138,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
   :::highlights-row
   ---
-  image: /images/voyages/XvI8U842QnfMf2sTah84.jpg
+  image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/XvI8U842QnfMf2sTah84.jpg
   ---
   ::::highlight-list-item
   Partez à la découverte de sites incas spectaculaires tels que Sacsayhuaman et Huchuy Qosqo, tout en profitant de panoramas à couper le souffle
@@ -202,7 +202,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
   
     :::day-row
     ---
-    image: /images/voyages/ctjUvgqGQ9i5Zi76NodS.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/ctjUvgqGQ9i5Zi76NodS.jpg
     ---
     #subtitle
     JOUR 1
@@ -218,7 +218,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/nsGTgW3fRcmDeDAvh1XB.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/nsGTgW3fRcmDeDAvh1XB.jpg
     ---
     #subtitle
     JOUR 2
@@ -233,7 +233,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/HNQBMFKKSTuLYJjNUBe8.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/HNQBMFKKSTuLYJjNUBe8.jpg
     ---
     #subtitle
     JOUR 3
@@ -248,7 +248,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/TJNYrAF0TJGtvBi2MtNL.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/TJNYrAF0TJGtvBi2MtNL.jpg
     ---
     #subtitle
     JOUR 4
@@ -263,7 +263,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/Gk0a7aRfTNSWGZjsF6IC.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/Gk0a7aRfTNSWGZjsF6IC.jpg
     ---
     #subtitle
     JOUR 5
@@ -278,7 +278,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/I1UzmwZoRiKvbCItmc8q.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/I1UzmwZoRiKvbCItmc8q.jpg
     ---
     #subtitle
     JOUR 6
@@ -293,7 +293,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/eUXFncWaQzSg1Z11vllP.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/eUXFncWaQzSg1Z11vllP.jpg
     ---
     #subtitle
     JOUR 7
@@ -308,7 +308,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/PUpGi1B3Sp15mpcpy2US.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/PUpGi1B3Sp15mpcpy2US.jpg
     ---
     #subtitle
     JOUR 8
@@ -323,7 +323,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/5YpobSuSOmXmCeH5tang.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/5YpobSuSOmXmCeH5tang.jpg
     ---
     #subtitle
     JOUR 9
@@ -339,7 +339,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/Ik1oOiTRoOQ6pUhmndhQ.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/Ik1oOiTRoOQ6pUhmndhQ.jpg
     ---
     #subtitle
     JOUR 10
@@ -356,7 +356,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/LPUFvVBR4KTJy10mIAaY.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/LPUFvVBR4KTJy10mIAaY.jpg
     ---
     #subtitle
     JOUR 11
@@ -373,7 +373,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/1HPMsQH2kLGDispZ0A7G.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/1HPMsQH2kLGDispZ0A7G.jpg
     ---
     #subtitle
     JOUR 12
@@ -391,7 +391,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
 
     :::day-row
     ---
-    image: /images/voyages/Yfd14MldQyicLGXeOB3y.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/Yfd14MldQyicLGXeOB3y.jpg
     ---
     #subtitle
     JOUR 13
@@ -423,19 +423,19 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/wG4lhnOUQkqLFrApLJRR.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/wG4lhnOUQkqLFrApLJRR.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/H8Ue6ceQwGYBoAVzipHg.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/H8Ue6ceQwGYBoAVzipHg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/RgcIc3cyTRGMm0WIc7ri.jpg
+    image: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/RgcIc3cyTRGMm0WIc7ri.jpg
     ---
     :::::
     ::::

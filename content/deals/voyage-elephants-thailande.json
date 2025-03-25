@@ -1,14 +1,14 @@
 {
   "title": "Observer les éléphants, explorer les temples et s'évader sur les plages de Thaïlande",
   "slug": "voyage-elephants-thailande",
-  "ISO": "TH",
+  "iso": "TH",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-elephants-thailande/H5XdSb5CQVSLAy22flrN",
+    "alt": "H5XdSb5CQVSLAy22flrN"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-elephants-thailande/2Q3e67CSj6VBAzqr3O45.jpg",
+    "alt": "2Q3e67CSj6VBAzqr3O45"
   },
   "country": "Thaïlande",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

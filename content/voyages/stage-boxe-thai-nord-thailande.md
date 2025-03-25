@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/TAJH64DTcmuKXmD42UHs.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/TAJH64DTcmuKXmD42UHs.jpg
 ---
 #title
 Stage boxe thaï en immersion dans le nord de la Thaïlande
@@ -10,67 +10,67 @@ Stage boxe thaï en immersion dans le nord de la Thaïlande
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/zSOMkcvcQJmDTZKWkFrv.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/stage-boxe-thai-nord-thailande/zSOMkcvcQJmDTZKWkFrv.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/tsSt3UrORrWDb26IZArf.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/tsSt3UrORrWDb26IZArf.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/HRXtyC8RtOEbKW138zRQ.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/stage-boxe-thai-nord-thailande/HRXtyC8RtOEbKW138zRQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/i2ENp7HfQruXlZDVNkzw.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/i2ENp7HfQruXlZDVNkzw.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/aUiSqyWmQHiBBhv8oZfR.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/stage-boxe-thai-nord-thailande/aUiSqyWmQHiBBhv8oZfR.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/KDmYoE0DSbSknY0PzLpR.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/KDmYoE0DSbSknY0PzLpR.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/dCyRwmQzRiCnUUBwgiAT.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/stage-boxe-thai-nord-thailande/dCyRwmQzRiCnUUBwgiAT.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/zLai1L4RTaBGkZ9PIUa4.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/zLai1L4RTaBGkZ9PIUa4.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/8RUh05mhRDmfFWVpgwue.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/S4wbPaaHTC5xNIY0JX8h.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/S4wbPaaHTC5xNIY0JX8h.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/qxs7qmVrShaZGfYqxRIZ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/stage-boxe-thai-nord-thailande/qxs7qmVrShaZGfYqxRIZ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/FP25YywyT8SYvtJo5aNQ.jpg
+image-src: /images/voyages/stage-boxe-thai-nord-thailande/FP25YywyT8SYvtJo5aNQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/3CvXPTpzRQ2JJIZhOukO.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/stage-boxe-thai-nord-thailande/3CvXPTpzRQ2JJIZhOukO.jpg"}
 ::::
   :::#component-slot-2
   :::video-dialog
@@ -164,7 +164,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/BiZpOEKTO2XivCvpFmwz.jpg
+    avatar: /images/voyages/stage-boxe-thai-nord-thailande/BiZpOEKTO2XivCvpFmwz.jpg
     avatar-size: "60"
     ---
     #title
@@ -174,7 +174,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
 
   :::highlights-row
   ---
-  image: /images/voyages/cAZjK0NRQb6QnfIJByDk.jpg
+  image: /images/voyages/stage-boxe-thai-nord-thailande/cAZjK0NRQb6QnfIJByDk.jpg
   ---
   ::::highlight-list-item
   Les entraînements de muay thaï (deux par jour) avec un ancien champion thaï
@@ -234,7 +234,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
   
     :::day-row
     ---
-    image: /images/voyages/2WdIaCrOT1yoQ6kIcJng.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/2WdIaCrOT1yoQ6kIcJng.jpg
     ---
     #subtitle
     JOUR 1
@@ -249,7 +249,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
 
     :::day-row
     ---
-    image: /images/voyages/8RUh05mhRDmfFWVpgwue.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg
     ---
     #subtitle
     JOUR 2
@@ -264,7 +264,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
 
     :::day-row
     ---
-    image: /images/voyages/UZD9U9kuQYmersCOu3jE.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/UZD9U9kuQYmersCOu3jE.jpg
     ---
     #subtitle
     JOUR 3
@@ -279,7 +279,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
 
     :::day-row
     ---
-    image: /images/voyages/HRXtyC8RtOEbKW138zRQ.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/HRXtyC8RtOEbKW138zRQ.jpg
     ---
     #subtitle
     JOURS 4 À 14
@@ -294,7 +294,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
 
     :::day-row
     ---
-    image: /images/voyages/RNyzSRbmoRDFsJfF0vAx.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/RNyzSRbmoRDFsJfF0vAx.jpg
     ---
     #subtitle
     JOUR 15
@@ -323,19 +323,19 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/pySMR6NwQLWT8VI1VPz7.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/pySMR6NwQLWT8VI1VPz7.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Hyyj4HMQQqGgRiKHNnf5.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/Hyyj4HMQQqGgRiKHNnf5.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/vynMcPjnQqu9NY74yNkL.jpg
+    image: /images/voyages/stage-boxe-thai-nord-thailande/vynMcPjnQqu9NY74yNkL.jpg
     ---
     :::::
     ::::
@@ -353,7 +353,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Kdoc8v5ATlq5NvR6bfdH.jpg
+    avatar: /images/voyages/stage-boxe-thai-nord-thailande/Kdoc8v5ATlq5NvR6bfdH.jpg
     ---
     #title
     Bee

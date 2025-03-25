@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/u0chLDHNQGO30EvASBFn.jpg
+image-src: /images/voyages/patagonie-chili-argentine/u0chLDHNQGO30EvASBFn.jpg
 ---
 #title
 Au bout du monde en Patagonie, terre de feu et de glace
@@ -10,53 +10,53 @@ Au bout du monde en Patagonie, terre de feu et de glace
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/kCm5tB2MSEmt66LEUYvQ.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/patagonie-chili-argentine/kCm5tB2MSEmt66LEUYvQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/QJ8ohrtqSwyV4xw4m6ZR.jpg
+image-src: /images/voyages/patagonie-chili-argentine/QJ8ohrtqSwyV4xw4m6ZR.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/THr0zZ03QyO80sNcBxgv.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/patagonie-chili-argentine/THr0zZ03QyO80sNcBxgv.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/70qjSCoJQNmutIDtP4cT.jpg
+image-src: /images/voyages/patagonie-chili-argentine/70qjSCoJQNmutIDtP4cT.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/HmY6JLxlR561rcZ8UkhS.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/patagonie-chili-argentine/HmY6JLxlR561rcZ8UkhS.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/rJrok9MRQOx6IlaO7JNN.jpg
+image-src: /images/voyages/patagonie-chili-argentine/rJrok9MRQOx6IlaO7JNN.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/V4kxLzi1SDlgJuYRL3rB.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/patagonie-chili-argentine/V4kxLzi1SDlgJuYRL3rB.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/MhnY54rDQqmFvopgej0g.jpg
+image-src: /images/voyages/patagonie-chili-argentine/MhnY54rDQqmFvopgej0g.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/3gYItfysSd4DuCbTQNDP.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/patagonie-chili-argentine/3gYItfysSd4DuCbTQNDP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/IExIN3iQwi7NPMNlX2ix.jpg
+image-src: /images/voyages/patagonie-chili-argentine/IExIN3iQwi7NPMNlX2ix.jpg
 ---
 ::::
   :::
@@ -146,7 +146,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/MGKzR0kLS0iVkW6PifBD.jpg
+    avatar: /images/voyages/patagonie-chili-argentine/MGKzR0kLS0iVkW6PifBD.jpg
     avatar-size: "60"
     ---
     #title
@@ -156,7 +156,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
   :::highlights-row
   ---
-  image: /images/voyages/t4opccr5TvSVmMLfiTbt.jpg
+  image: /images/voyages/patagonie-chili-argentine/t4opccr5TvSVmMLfiTbt.jpg
   ---
   ::::highlight-list-item
   Explorez la Patagonie : de l'Argentine au Chili
@@ -220,7 +220,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
   
     :::day-row
     ---
-    image: /images/voyages/ZkyBeZ24Tr6CCHGhJkT4.jpg
+    image: /images/voyages/patagonie-chili-argentine/ZkyBeZ24Tr6CCHGhJkT4.jpg
     ---
     #subtitle
     JOUR 1
@@ -235,7 +235,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/j122ssd8QgOQN0yZ0jvJ.jpg
+    image: /images/voyages/patagonie-chili-argentine/j122ssd8QgOQN0yZ0jvJ.jpg
     ---
     #subtitle
     JOUR 2
@@ -250,7 +250,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/WJitzKeEQLOcKTFqifD1.jpg
+    image: /images/voyages/patagonie-chili-argentine/WJitzKeEQLOcKTFqifD1.jpg
     ---
     #subtitle
     JOUR 3
@@ -265,7 +265,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/ecTqnHNTQ6EPY1YqCX9A.jpg
+    image: /images/voyages/patagonie-chili-argentine/ecTqnHNTQ6EPY1YqCX9A.jpg
     ---
     #subtitle
     JOUR 4
@@ -280,7 +280,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/f1kz94HfRgmGjebGSsia.jpg
+    image: /images/voyages/patagonie-chili-argentine/f1kz94HfRgmGjebGSsia.jpg
     ---
     #subtitle
     JOUR 5
@@ -295,7 +295,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/YMDHcAogRBG8JhfDxuN7.jpg
+    image: /images/voyages/patagonie-chili-argentine/YMDHcAogRBG8JhfDxuN7.jpg
     ---
     #subtitle
     JOUR 6
@@ -310,7 +310,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/sd2IdCUoTIqaAwa6R0UB.jpg
+    image: /images/voyages/patagonie-chili-argentine/sd2IdCUoTIqaAwa6R0UB.jpg
     ---
     #subtitle
     JOUR 7
@@ -325,7 +325,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/PRG0zMu2R2CqwR3iMn6k.jpg
+    image: /images/voyages/patagonie-chili-argentine/PRG0zMu2R2CqwR3iMn6k.jpg
     ---
     #subtitle
     JOUR 8
@@ -340,7 +340,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/c3Fke2AeSBScy1u0Jr6s.jpg
+    image: /images/voyages/patagonie-chili-argentine/c3Fke2AeSBScy1u0Jr6s.jpg
     ---
     #subtitle
     JOUR 9
@@ -356,7 +356,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/uClpx6LLSyemD9nV9u2S.jpg
+    image: /images/voyages/patagonie-chili-argentine/uClpx6LLSyemD9nV9u2S.jpg
     ---
     #subtitle
     JOUR 10
@@ -371,7 +371,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/ZxMm4yrHQN2BFu74CpL5.jpg
+    image: /images/voyages/patagonie-chili-argentine/ZxMm4yrHQN2BFu74CpL5.jpg
     ---
     #subtitle
     JOUR 11
@@ -386,7 +386,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/fX2UlKNpS1WX2UqWDgCd.jpg
+    image: /images/voyages/patagonie-chili-argentine/fX2UlKNpS1WX2UqWDgCd.jpg
     ---
     #subtitle
     JOUR 12
@@ -401,7 +401,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/UbZVWQm6SWCEzWLfOvGV.jpg
+    image: /images/voyages/patagonie-chili-argentine/UbZVWQm6SWCEzWLfOvGV.jpg
     ---
     #subtitle
     JOUR 13
@@ -416,7 +416,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
 
     :::day-row
     ---
-    image: /images/voyages/fQZ9GHXeTzeNWK9REF0T.jpg
+    image: /images/voyages/patagonie-chili-argentine/fQZ9GHXeTzeNWK9REF0T.jpg
     ---
     #subtitle
     JOUR 14
@@ -445,19 +445,19 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/vCegnTXStWeLbqdeYNXw.jpg
+    image: /images/voyages/patagonie-chili-argentine/vCegnTXStWeLbqdeYNXw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/dtze6WH4QpKF1wYaqwxW.jpg
+    image: /images/voyages/patagonie-chili-argentine/dtze6WH4QpKF1wYaqwxW.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/3pMOrHYySHuWt9waw82n.jpg
+    image: /images/voyages/patagonie-chili-argentine/3pMOrHYySHuWt9waw82n.jpg
     ---
     :::::
     ::::
@@ -475,7 +475,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Z4AWJoGTgycEpiiE7VeN.jpg
+    avatar: /images/voyages/patagonie-chili-argentine/Z4AWJoGTgycEpiiE7VeN.jpg
     ---
     #title
     Des guides francophones dédiés

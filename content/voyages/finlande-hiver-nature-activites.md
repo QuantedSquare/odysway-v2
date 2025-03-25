@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/VyqUkN8tSI2fgngrOGDw.jpg
+image-src: /images/voyages/finlande-hiver-nature-activites/VyqUkN8tSI2fgngrOGDw.jpg
 ---
 #title
 Aventures hivernales en Laponie Finlandaise
@@ -10,27 +10,27 @@ Aventures hivernales en Laponie Finlandaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/oacKyPb7RquVVkwCxNCV.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/finlande-hiver-nature-activites/oacKyPb7RquVVkwCxNCV.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/4sHw1p1TQazUW2z52MhY.jpg
+image-src: /images/voyages/finlande-hiver-nature-activites/4sHw1p1TQazUW2z52MhY.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/poYOkUPRSQu2IKkxps0d.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/finlande-hiver-nature-activites/poYOkUPRSQu2IKkxps0d.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/OrTvibbRk6DenrE24Hcx.jpg
+image-src: /images/voyages/finlande-hiver-nature-activites/OrTvibbRk6DenrE24Hcx.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/4f38KUSPTAmqvRn7nuEy.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/finlande-hiver-nature-activites/4f38KUSPTAmqvRn7nuEy.jpg"}
 ::::
   :::
 ::
@@ -117,7 +117,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/finlande-hiver-nature-activites/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -127,7 +127,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
   :::highlights-row
   ---
-  image: /images/voyages/eU3mP6sLQIa3GXLbxoYi.jpg
+  image: /images/voyages/finlande-hiver-nature-activites/eU3mP6sLQIa3GXLbxoYi.jpg
   ---
   ::::highlight-list-item
   Explorez la pureté des paysages de la forêt boréale et de la Taïga aux côtés d'un guide spécialisé du milieu polaire
@@ -183,7 +183,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
   
     :::day-row
     ---
-    image: /images/voyages/ofbCTKWnSEef2nmsYg5D.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/ofbCTKWnSEef2nmsYg5D.jpg
     ---
     #subtitle
     JOUR 1
@@ -198,7 +198,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/Z5KFZArMTtClNh6ztyYy.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/Z5KFZArMTtClNh6ztyYy.jpg
     ---
     #subtitle
     JOUR 2
@@ -213,7 +213,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/qvlIDbAWTRaiGZtDFLjC.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/qvlIDbAWTRaiGZtDFLjC.jpg
     ---
     #subtitle
     JOUR 3
@@ -228,7 +228,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/79yn5AwNSrqSTAucC6vo.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/79yn5AwNSrqSTAucC6vo.jpg
     ---
     #subtitle
     JOUR 4
@@ -243,7 +243,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/RGNBAaFQ7qPiVBx3OPKA.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/RGNBAaFQ7qPiVBx3OPKA.jpg
     ---
     #subtitle
     JOUR 5
@@ -258,7 +258,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/y5PfceasQFuIxQoj4ZyI.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/y5PfceasQFuIxQoj4ZyI.jpg
     ---
     #subtitle
     JOUR 6
@@ -273,7 +273,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/0Ra8RVsQoaUGqrnk4gyc.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/0Ra8RVsQoaUGqrnk4gyc.jpg
     ---
     #subtitle
     JOUR 7
@@ -288,7 +288,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
 
     :::day-row
     ---
-    image: /images/voyages/mI3ZSWrfQTKEye7rFQk1.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/mI3ZSWrfQTKEye7rFQk1.jpg
     ---
     #subtitle
     JOUR 8
@@ -317,13 +317,13 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/YhlJJDNuRXeKRN7thF5k.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/YhlJJDNuRXeKRN7thF5k.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/B2RTRaowRiWY4sp142A8.jpg
+    image: /images/voyages/finlande-hiver-nature-activites/B2RTRaowRiWY4sp142A8.jpg
     ---
     :::::
     ::::
@@ -341,7 +341,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/7Dl6jZ8qRLudPfevhjxW.jpg
+    avatar: /images/voyages/finlande-hiver-nature-activites/7Dl6jZ8qRLudPfevhjxW.jpg
     ---
     #title
     Guide francophone spécialiste du milieu polaire

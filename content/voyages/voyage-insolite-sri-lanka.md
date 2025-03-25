@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/EJdFI6LQl6MLst0OEjYV.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/EJdFI6LQl6MLst0OEjYV.jpg
 ---
 #title
 Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les rencontres authentiques (hiver)
@@ -10,77 +10,77 @@ Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les 
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/NKBsTqM7TvWx9z4pF3NM.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-insolite-sri-lanka/NKBsTqM7TvWx9z4pF3NM.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/wP3Fr7aARbG6lJk7WrOc.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/wP3Fr7aARbG6lJk7WrOc.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/ySjJykXSyivdFKnhToHE.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-insolite-sri-lanka/ySjJykXSyivdFKnhToHE.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/6xk8GFMHSL2pGr2d9lVb.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/6xk8GFMHSL2pGr2d9lVb.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/wJasfOcyR4Oz4JEMJFAX.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-insolite-sri-lanka/wJasfOcyR4Oz4JEMJFAX.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/dq0j7D8tSFq0O1XcDqis.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/dq0j7D8tSFq0O1XcDqis.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/DaU88J8TPK3CQ3DTMGRq.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-insolite-sri-lanka/DaU88J8TPK3CQ3DTMGRq.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/NaYYg0dKSFGoWGWrTaau.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/NaYYg0dKSFGoWGWrTaau.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/SahabwZ7RQaAnwLTOevH.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-insolite-sri-lanka/SahabwZ7RQaAnwLTOevH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/BGV91tGvRV6Pp1Tdhm8K.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/BGV91tGvRV6Pp1Tdhm8K.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/40BepUN5SAuvbG7jQjhb.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-insolite-sri-lanka/40BepUN5SAuvbG7jQjhb.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/IOOD2L1xRIEGdaDkFSSa.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/IOOD2L1xRIEGdaDkFSSa.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/FIbmWuRImhijdkrwBB0g.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-insolite-sri-lanka/FIbmWuRImhijdkrwBB0g.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ssfhAv5nQHSLDQCZr8dR.jpg
+image-src: /images/voyages/voyage-insolite-sri-lanka/ssfhAv5nQHSLDQCZr8dR.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/s0Ppb1TkTx2iFth2oxt8.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-insolite-sri-lanka/s0Ppb1TkTx2iFth2oxt8.jpg"}
 ::::
   :::
 ::
@@ -175,7 +175,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/NbyqDVTcSlmyHMVMDOq2.jpg
+    avatar: /images/voyages/voyage-insolite-sri-lanka/NbyqDVTcSlmyHMVMDOq2.jpg
     avatar-size: "60"
     ---
     #title
@@ -185,7 +185,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
   :::highlights-row
   ---
-  image: /images/voyages/Q8uNqWS7TLCERK3YJBmS.jpg
+  image: /images/voyages/voyage-insolite-sri-lanka/Q8uNqWS7TLCERK3YJBmS.jpg
   ---
   ::::highlight-list-item
   Vivez un voyage vraiment atypique et au plus près des locaux au Sri Lanka, sans oublier les incontournables!
@@ -249,7 +249,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
   
     :::day-row
     ---
-    image: /images/voyages/g5sTcxFpTGmzie7zuKCl.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/g5sTcxFpTGmzie7zuKCl.jpg
     ---
     #subtitle
     JOUR 1 
@@ -264,7 +264,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/JUVAEEmySjOVe08TrhQY.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/JUVAEEmySjOVe08TrhQY.jpg
     ---
     #subtitle
     JOUR 2
@@ -279,7 +279,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/BFIQNwSfQjCAHnJsSjk9.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/BFIQNwSfQjCAHnJsSjk9.jpg
     ---
     #subtitle
     JOUR 3
@@ -294,7 +294,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/GIZXAmelQGWDpdAAYsCe.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/GIZXAmelQGWDpdAAYsCe.jpg
     ---
     #subtitle
     JOUR 4
@@ -309,7 +309,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/RQ5UmnTSvCTdmkxlynig.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/RQ5UmnTSvCTdmkxlynig.jpg
     ---
     #subtitle
     JOUR 5
@@ -324,7 +324,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/FCu2C1YOSQ2W8v0F98Wg.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/FCu2C1YOSQ2W8v0F98Wg.jpg
     ---
     #subtitle
     JOUR 6
@@ -340,7 +340,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/3ZJnXLuxRDOGmpuRCs8Q.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/3ZJnXLuxRDOGmpuRCs8Q.jpg
     ---
     #subtitle
     JOUR 7
@@ -355,7 +355,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/TaUCvj0wTFe2hR779h0q.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/TaUCvj0wTFe2hR779h0q.jpg
     ---
     #subtitle
     JOUR 8
@@ -371,7 +371,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/Bt4IURrDQ56BHIoRgX4L.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/Bt4IURrDQ56BHIoRgX4L.jpg
     ---
     #subtitle
     JOURS 9 ET 10
@@ -386,7 +386,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/SDPHfzsOTqaevT6foIYB.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/SDPHfzsOTqaevT6foIYB.jpg
     ---
     #subtitle
     JOUR 11
@@ -401,7 +401,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
 
     :::day-row
     ---
-    image: /images/voyages/Ja8xbYE9Txi93RhPCyvx.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/Ja8xbYE9Txi93RhPCyvx.jpg
     ---
     #subtitle
     JOUR 12
@@ -430,19 +430,19 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/Z5wDAeDvQVSnM733pv7Z.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/Z5wDAeDvQVSnM733pv7Z.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ihE1SCfJTvytKDAaHhxk.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/ihE1SCfJTvytKDAaHhxk.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/uOEpuzGsSvWaaU3FQMsa.jpg
+    image: /images/voyages/voyage-insolite-sri-lanka/uOEpuzGsSvWaaU3FQMsa.jpg
     ---
     :::::
     ::::
@@ -460,7 +460,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/GgxBWF4TIuMGmXMgu1W6.jpg
+    avatar: /images/voyages/voyage-insolite-sri-lanka/GgxBWF4TIuMGmXMgu1W6.jpg
     ---
     #title
     Un guide local francophone dédié

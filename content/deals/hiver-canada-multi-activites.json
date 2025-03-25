@@ -1,14 +1,14 @@
 {
   "title": "Séjour multiactivités dans les fjords canadiens",
   "slug": "hiver-canada-multi-activites",
-  "ISO": "CAN",
+  "iso": "CAN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/hiver-canada-multi-activites/OM6tLNR3i6v2PuQZLKxA",
+    "alt": "OM6tLNR3i6v2PuQZLKxA"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/hiver-canada-multi-activites/mMlVAlZOSiqR6W5REGlv.jpg",
+    "alt": "mMlVAlZOSiqR6W5REGlv"
   },
   "country": "Canada",
   "zoneChapka": 3,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -119,8 +119,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -134,8 +134,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/gBTEFLBSRrGnQ5XcFrau.jpg
+image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/gBTEFLBSRrGnQ5XcFrau.jpg
 ---
 #title
 A la découverte du Népal : randonnées accessibles et immersion locale
@@ -10,43 +10,43 @@ A la découverte du Népal : randonnées accessibles et immersion locale
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/KimqhXl7Qzm0Y6hiPsUS.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/KimqhXl7Qzm0Y6hiPsUS.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/jY5UQ91ARI6GdVCeyHzQ.jpg
+image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/jY5UQ91ARI6GdVCeyHzQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/zrHXRYDQYeX1pqIgDqqg.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/zrHXRYDQYeX1pqIgDqqg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/G6XQJW7ZQXuVRdwgutdQ.jpg
+image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/G6XQJW7ZQXuVRdwgutdQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/tKnBIWI1S0CPsko3TNHH.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/tKnBIWI1S0CPsko3TNHH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/OZBdn96BQ2OZ2xFcKJXF.jpg
+image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/OZBdn96BQ2OZ2xFcKJXF.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/MNtkYdtSRGuiIL8kUr8r.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/MNtkYdtSRGuiIL8kUr8r.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/zWivo6fSiJMic49CjNCA.jpg
+image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/zWivo6fSiJMic49CjNCA.jpg
 ---
 ::::
   :::
@@ -140,7 +140,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/decouverte-nepal-trek-et-rencontres/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -150,7 +150,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
   :::highlights-row
   ---
-  image: /images/voyages/cZLKjiJTISkpg3LsrBvZ.jpg
+  image: /images/voyages/decouverte-nepal-trek-et-rencontres/cZLKjiJTISkpg3LsrBvZ.jpg
   ---
   ::::highlight-list-item
   **Profitez d'un mini-trek accessible de 4 jours**, à travers rizières en terrasses, villages traditionnels et monastères, au cœur de la vallée de Katmandou
@@ -210,7 +210,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
   
     :::day-row
     ---
-    image: /images/voyages/Iv90XMSTICgo9nKnBELA.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/Iv90XMSTICgo9nKnBELA.jpg
     ---
     #subtitle
     JOUR 1
@@ -225,7 +225,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/VQkOemZTySDQTWqLqOEu.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/VQkOemZTySDQTWqLqOEu.jpg
     ---
     #subtitle
     JOUR 2
@@ -240,7 +240,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/dZOuU0URTfO5kZ1QIKFX.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/dZOuU0URTfO5kZ1QIKFX.jpg
     ---
     #subtitle
     JOUR 3
@@ -255,7 +255,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/0wGIPSqQZSVSmmmGJyuF.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/0wGIPSqQZSVSmmmGJyuF.jpg
     ---
     #subtitle
     JOUR 4
@@ -270,7 +270,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/2Tin1cpsRPe2NKSCiSj2.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/2Tin1cpsRPe2NKSCiSj2.jpg
     ---
     #subtitle
     JOUR 5
@@ -285,7 +285,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/Oy5e9qMfTSOvox7obz0u.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/Oy5e9qMfTSOvox7obz0u.jpg
     ---
     #subtitle
     JOUR 6
@@ -303,7 +303,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/z4lwonPCSCObUp3D55UV.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/z4lwonPCSCObUp3D55UV.jpg
     ---
     #subtitle
     JOUR 7
@@ -318,7 +318,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/amWKtjUTmWFdIBGECY2Q.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/amWKtjUTmWFdIBGECY2Q.jpg
     ---
     #subtitle
     JOUR 8
@@ -333,7 +333,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/YyqwnHOZQAqQSpmFMG6u.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/YyqwnHOZQAqQSpmFMG6u.jpg
     ---
     #subtitle
     JOUR 9
@@ -348,7 +348,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/aOc9WKoRxiw3Yc7NKv8w.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/aOc9WKoRxiw3Yc7NKv8w.jpg
     ---
     #subtitle
     JOUR 10
@@ -363,7 +363,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/XPlMzB3TSKuKCf3TwIFf.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/XPlMzB3TSKuKCf3TwIFf.jpg
     ---
     #subtitle
     JOUR 11
@@ -378,7 +378,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/l6bjesxlS32llPbv4Wgq.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/l6bjesxlS32llPbv4Wgq.jpg
     ---
     #subtitle
     JOUR 12
@@ -393,7 +393,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
 
     :::day-row
     ---
-    image: /images/voyages/hNYpOGgTJkMDmGvtrbGQ.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/hNYpOGgTJkMDmGvtrbGQ.jpg
     ---
     #subtitle
     JOUR 13
@@ -424,37 +424,37 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/Ftrug5EQSTy7NwAanKCC.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/Ftrug5EQSTy7NwAanKCC.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/9dalX59jQVuAv2cPMW41.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/9dalX59jQVuAv2cPMW41.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/WN79f8FUSG0hEpTzfKNk.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/WN79f8FUSG0hEpTzfKNk.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GXLh8L8CSxuJebh2etqb.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/GXLh8L8CSxuJebh2etqb.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Wjf5QqJRam1mrIvb0FFY.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/Wjf5QqJRam1mrIvb0FFY.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/lqGXCRWmSauyLbYr51pr.jpg
+    image: /images/voyages/decouverte-nepal-trek-et-rencontres/lqGXCRWmSauyLbYr51pr.jpg
     ---
     :::::
     ::::

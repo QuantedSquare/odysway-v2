@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/nU3WqzhvRq6UporDGVb1.jpg
+image-src: /images/voyages/voyage-trek-sikkim-himalaya/nU3WqzhvRq6UporDGVb1.jpg
 ---
 #title
 Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya
@@ -10,43 +10,43 @@ Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/pzPTaWMLRqG3Q74udqk3.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-trek-sikkim-himalaya/pzPTaWMLRqG3Q74udqk3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ZTDLeoaESMqp8y5whhSc.jpg
+image-src: /images/voyages/voyage-trek-sikkim-himalaya/ZTDLeoaESMqp8y5whhSc.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/LhsZmo8zRIyiu7nWQqhZ.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-trek-sikkim-himalaya/LhsZmo8zRIyiu7nWQqhZ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/YgsdsJrSMC1OxoSvJABz.jpg
+image-src: /images/voyages/voyage-trek-sikkim-himalaya/YgsdsJrSMC1OxoSvJABz.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/baXQKzf7R3WE3shKuPwU.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-trek-sikkim-himalaya/baXQKzf7R3WE3shKuPwU.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/Y9SCH0RuR1aM8XOiIePz.jpg
+image-src: /images/voyages/voyage-trek-sikkim-himalaya/Y9SCH0RuR1aM8XOiIePz.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/B7BkEBVxQGqq2uDvW1m8.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-trek-sikkim-himalaya/B7BkEBVxQGqq2uDvW1m8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/peZ55Eh2RGCfSHyoZf2m.jpg
+image-src: /images/voyages/voyage-trek-sikkim-himalaya/peZ55Eh2RGCfSHyoZf2m.jpg
 ---
 ::::
   :::
@@ -138,7 +138,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-trek-sikkim-himalaya/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -148,7 +148,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
   :::highlights-row
   ---
-  image: /images/voyages/Kne2SffTRi67H7Mfkyr5.jpg
+  image: /images/voyages/voyage-trek-sikkim-himalaya/Kne2SffTRi67H7Mfkyr5.jpg
   ---
   ::::highlight-list-item
   Vivez une immersion unique chez l’habitant en partageant le quotidien des Lepchas et Bhotias, gardiens des traditions du Sikkim
@@ -208,7 +208,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
   
     :::day-row
     ---
-    image: /images/voyages/QvMkLh0UQLassGiU1njo.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/QvMkLh0UQLassGiU1njo.jpg
     ---
     #subtitle
     JOUR 1
@@ -223,7 +223,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/6iSHM2l6SuCupKz99AyB.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/6iSHM2l6SuCupKz99AyB.jpg
     ---
     #subtitle
     JOUR 2
@@ -238,7 +238,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/I4rlrGGQQxeWXAZJvkkr.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/I4rlrGGQQxeWXAZJvkkr.jpg
     ---
     #subtitle
     JOUR 3
@@ -253,7 +253,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/HTmu32hhQay0zXt9PBzm.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/HTmu32hhQay0zXt9PBzm.jpg
     ---
     #subtitle
     JOUR 4
@@ -268,7 +268,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/UvdFhVD2R2ep4T6FucRu.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/UvdFhVD2R2ep4T6FucRu.jpg
     ---
     #subtitle
     JOUR 5
@@ -283,7 +283,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/cqc5KqkiRKObv8XYCLJw.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/cqc5KqkiRKObv8XYCLJw.jpg
     ---
     #subtitle
     JOUR 6
@@ -298,7 +298,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/FdR6B4vCRPeJuVhCmbqa.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/FdR6B4vCRPeJuVhCmbqa.jpg
     ---
     #subtitle
     JOUR 7
@@ -313,7 +313,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/wBdxw7KCT36v5SIeeeLz.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/wBdxw7KCT36v5SIeeeLz.jpg
     ---
     #subtitle
     JOUR 8
@@ -328,7 +328,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/9YTmLYN3RjOL8AZCMYpU.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/9YTmLYN3RjOL8AZCMYpU.jpg
     ---
     #subtitle
     JOUR 9
@@ -343,7 +343,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/v2yB05mQXubOF35hkkCy.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/v2yB05mQXubOF35hkkCy.jpg
     ---
     #subtitle
     JOUR 10
@@ -358,7 +358,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/nxQcOqg0S429FQ71Znm0.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/nxQcOqg0S429FQ71Znm0.jpg
     ---
     #subtitle
     JOUR 11
@@ -373,7 +373,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/KVy4pjHSmW2UHU2J2ewe.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/KVy4pjHSmW2UHU2J2ewe.jpg
     ---
     #subtitle
     JOUR 12
@@ -388,7 +388,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/liXrMJZrSBmaYf9KnAF0.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/liXrMJZrSBmaYf9KnAF0.jpg
     ---
     #subtitle
     JOUR 13
@@ -403,7 +403,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
 
     :::day-row
     ---
-    image: /images/voyages/MlprHYR8TraSk0EqoG2P.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/MlprHYR8TraSk0EqoG2P.jpg
     ---
     #subtitle
     JOUR 14
@@ -432,19 +432,19 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/nxQcOqg0S429FQ71Znm0.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/nxQcOqg0S429FQ71Znm0.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/xQtGsKWLQJm5yMvQ3EzV.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/xQtGsKWLQJm5yMvQ3EzV.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Ep7aNVyxTg66dM5Ei48n.jpg
+    image: /images/voyages/voyage-trek-sikkim-himalaya/Ep7aNVyxTg66dM5Ei48n.jpg
     ---
     :::::
     ::::

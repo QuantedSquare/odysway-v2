@@ -1,14 +1,14 @@
 {
   "title": "Observez dauphins et baleines sur les îles Canaries",
   "slug": "voyage-dauphins-baleines-espagne",
-  "ISO": "ESP",
+  "iso": "ESP",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-dauphins-baleines-espagne/gGQOtr2TQg28vgyJDN1u",
+    "alt": "gGQOtr2TQg28vgyJDN1u"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-dauphins-baleines-espagne/L0VU9teRu6dWSS1aY63W.jpg",
+    "alt": "L0VU9teRu6dWSS1aY63W"
   },
   "country": "Espagne",
   "zoneChapka": 1,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

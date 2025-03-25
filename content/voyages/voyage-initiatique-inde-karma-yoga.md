@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/mBp5qYBQDmXcS8tevnn7.jpg
+image-src: /images/voyages/voyage-initiatique-inde-karma-yoga/mBp5qYBQDmXcS8tevnn7.jpg
 ---
 #title
 Voyage initiatique en Inde Himalaya

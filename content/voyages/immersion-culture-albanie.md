@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/Wh7DjgWCSsaYsCyGCJFH.jpg
+image-src: /images/voyages/immersion-culture-albanie/Wh7DjgWCSsaYsCyGCJFH.jpg
 ---
 #title
 Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise
@@ -10,77 +10,77 @@ Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditi
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/VYupluEtRNC3bni0LqPl.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-culture-albanie/VYupluEtRNC3bni0LqPl.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/lbosMkH0T9WvaCQ0nAex.jpg
+image-src: /images/voyages/immersion-culture-albanie/lbosMkH0T9WvaCQ0nAex.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/eJkwGrjTeeepKecxuab4.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culture-albanie/eJkwGrjTeeepKecxuab4.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/nr0NzvIQ6GouzUGlsN9H.jpg
+image-src: /images/voyages/immersion-culture-albanie/nr0NzvIQ6GouzUGlsN9H.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/LupkARk8S9Ka8S0otPOA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culture-albanie/LupkARk8S9Ka8S0otPOA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/JOVakVdRuK7EAFBYfxWB.jpg
+image-src: /images/voyages/immersion-culture-albanie/JOVakVdRuK7EAFBYfxWB.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/uuPy3mgQmaZFgtXRGZHO.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culture-albanie/uuPy3mgQmaZFgtXRGZHO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/aApag8uKSxOH1ZUdV894.jpg
+image-src: /images/voyages/immersion-culture-albanie/aApag8uKSxOH1ZUdV894.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/6LQ9sRdSOSBneimuOaBg.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culture-albanie/6LQ9sRdSOSBneimuOaBg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/G3EzjzIuSHiQMKfLdrhs.jpg
+image-src: /images/voyages/immersion-culture-albanie/G3EzjzIuSHiQMKfLdrhs.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Ar1gUFJNTT27edvKicUV.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-culture-albanie/Ar1gUFJNTT27edvKicUV.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/6yWvsYjQgSYE9urFc663.jpg
+image-src: /images/voyages/immersion-culture-albanie/6yWvsYjQgSYE9urFc663.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/KijNtdvTPe28WsHNP4FJ.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-culture-albanie/KijNtdvTPe28WsHNP4FJ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/qgjCVoXuQdyximpTMnIG.jpg
+image-src: /images/voyages/immersion-culture-albanie/qgjCVoXuQdyximpTMnIG.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/DJAkC5BiS1iot8nycyTY.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-culture-albanie/DJAkC5BiS1iot8nycyTY.jpg"}
 ::::
   :::
 ::
@@ -169,7 +169,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/immersion-culture-albanie/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -179,7 +179,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
 
   :::highlights-row
   ---
-  image: /images/voyages/t1Az3uHQ0awgAVzKAL1g.jpg
+  image: /images/voyages/immersion-culture-albanie/t1Az3uHQ0awgAVzKAL1g.jpg
   ---
   ::::highlight-list-item
   Vivez un voyage 100% immersif à chaque étape
@@ -239,7 +239,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
   
     :::day-row
     ---
-    image: /images/voyages/1NKFAqt9R9Wb8FmKbAPP.jpg
+    image: /images/voyages/immersion-culture-albanie/1NKFAqt9R9Wb8FmKbAPP.jpg
     ---
     #subtitle
     JOUR 1
@@ -254,7 +254,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
 
     :::day-row
     ---
-    image: /images/voyages/39jIViRjSMydEBEXuxVI.jpg
+    image: /images/voyages/immersion-culture-albanie/39jIViRjSMydEBEXuxVI.jpg
     ---
     #subtitle
     JOUR 2
@@ -269,7 +269,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
 
     :::day-row
     ---
-    image: /images/voyages/ykAvVrnSaSfCJq5aaB8X.jpg
+    image: /images/voyages/immersion-culture-albanie/ykAvVrnSaSfCJq5aaB8X.jpg
     ---
     #subtitle
     JOUR 3
@@ -284,7 +284,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
 
     :::day-row
     ---
-    image: /images/voyages/Cf5F3Sm0SiGGoPRX02mK.jpg
+    image: /images/voyages/immersion-culture-albanie/Cf5F3Sm0SiGGoPRX02mK.jpg
     ---
     #subtitle
     JOUR 4
@@ -299,7 +299,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
 
     :::day-row
     ---
-    image: /images/voyages/vVE1zhAbQPutBeWza1bA.jpg
+    image: /images/voyages/immersion-culture-albanie/vVE1zhAbQPutBeWza1bA.jpg
     ---
     #subtitle
     JOURS 5 ET 6
@@ -314,7 +314,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
 
     :::day-row
     ---
-    image: /images/voyages/Ph38bUdMRBuROMYJZ5Lb.jpg
+    image: /images/voyages/immersion-culture-albanie/Ph38bUdMRBuROMYJZ5Lb.jpg
     ---
     #subtitle
     JOURS 7 ET 8
@@ -343,19 +343,19 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/kL7fWqeCTuayflKxP6KT.jpg
+    image: /images/voyages/immersion-culture-albanie/kL7fWqeCTuayflKxP6KT.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/4hripbOoTm6l9HX3I7Rt.jpg
+    image: /images/voyages/immersion-culture-albanie/4hripbOoTm6l9HX3I7Rt.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/kLlV1IoRaWKEpLSltk2A.jpg
+    image: /images/voyages/immersion-culture-albanie/kLlV1IoRaWKEpLSltk2A.jpg
     ---
     :::::
     ::::

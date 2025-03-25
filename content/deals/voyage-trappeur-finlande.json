@@ -1,14 +1,14 @@
 {
   "title": "Voyagez comme un trappeur en Finlande",
   "slug": "voyage-trappeur-finlande",
-  "ISO": "FI",
+  "iso": "FI",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-trappeur-finlande/jD8zYMQBiXna5zdtqrnw",
+    "alt": "jD8zYMQBiXna5zdtqrnw"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-trappeur-finlande/8bnlL0tSJCklwtume5b6.jpg",
+    "alt": "8bnlL0tSJCklwtume5b6"
   },
   "country": "Finlande",
   "zoneChapka": 1,
@@ -29,8 +29,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 110,
       "privatized": false,
       "flyTicketPrice": 0

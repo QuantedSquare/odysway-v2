@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/L2Z5hRafTnGSrBASFcC3.jpg
+image-src: /images/voyages/immersion-salvador-amerique-centrale/L2Z5hRafTnGSrBASFcC3.jpg
 ---
 #title
 Au cœur de la vie locale du Salvador
@@ -10,33 +10,33 @@ Au cœur de la vie locale du Salvador
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/zpelpWUxTaOOlgtrLWZX.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-salvador-amerique-centrale/zpelpWUxTaOOlgtrLWZX.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/XQAGk3qJTe60wVWH1CJv.jpg
+image-src: /images/voyages/immersion-salvador-amerique-centrale/XQAGk3qJTe60wVWH1CJv.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/BaFqR3mJSjS64Py9RO5n.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-salvador-amerique-centrale/BaFqR3mJSjS64Py9RO5n.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/cMWgbefxQty8uKT7xWoc.jpg
+image-src: /images/voyages/immersion-salvador-amerique-centrale/cMWgbefxQty8uKT7xWoc.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/PFVTbeK5Ta67nTSgc6j4.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-salvador-amerique-centrale/PFVTbeK5Ta67nTSgc6j4.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/tLA0ArnNTGepncnIRnA8.jpg
+image-src: /images/voyages/immersion-salvador-amerique-centrale/tLA0ArnNTGepncnIRnA8.jpg
 ---
 ::::
   :::
@@ -124,7 +124,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/immersion-salvador-amerique-centrale/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -134,7 +134,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
   :::highlights-row
   ---
-  image: /images/voyages/QhMpWcyESySFTYL2w5gP.jpg
+  image: /images/voyages/immersion-salvador-amerique-centrale/QhMpWcyESySFTYL2w5gP.jpg
   ---
   ::::highlight-list-item
   Plongez au cœur des traditions historiques ancestrales Maya
@@ -194,7 +194,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
   
     :::day-row
     ---
-    image: /images/voyages/jbR7PyhTMyYVLMhfazEs.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/jbR7PyhTMyYVLMhfazEs.jpg
     ---
     #subtitle
     JOUR 1
@@ -209,7 +209,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/eYM566iWQC6qq45u8AJt.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/eYM566iWQC6qq45u8AJt.jpg
     ---
     #subtitle
     JOUR 2
@@ -224,7 +224,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/qu4RDI5CSHKADYguB1Yb.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/qu4RDI5CSHKADYguB1Yb.jpg
     ---
     #subtitle
     JOUR 3
@@ -239,7 +239,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/zf3jshWQd6qYbB90qUAA.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/zf3jshWQd6qYbB90qUAA.jpg
     ---
     #subtitle
     JOUR 4
@@ -254,7 +254,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/3GrfWhPNTQ6X40bbQdGg.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/3GrfWhPNTQ6X40bbQdGg.jpg
     ---
     #subtitle
     JOUR 5
@@ -270,7 +270,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/SbM6sD7TvC6VcmbKSFPh.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/SbM6sD7TvC6VcmbKSFPh.jpg
     ---
     #subtitle
     JOUR 6
@@ -285,7 +285,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/paOOl06sQ4qpGCWGERpP.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/paOOl06sQ4qpGCWGERpP.jpg
     ---
     #subtitle
     JOUR 7
@@ -300,7 +300,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/YeBtimkaTBaGf4XwZp8y.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/YeBtimkaTBaGf4XwZp8y.jpg
     ---
     #subtitle
     JOUR 8
@@ -315,7 +315,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/G3WGNkjlSHGIrD7X6aa8.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/G3WGNkjlSHGIrD7X6aa8.jpg
     ---
     #subtitle
     JOUR 9
@@ -330,7 +330,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/GMBTTzg8TBC8hytOzAkH.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/GMBTTzg8TBC8hytOzAkH.jpg
     ---
     #subtitle
     JOUR 10
@@ -345,7 +345,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/NWw9qt9cS66LRpa1o0r5.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/NWw9qt9cS66LRpa1o0r5.jpg
     ---
     #subtitle
     JOUR 11
@@ -360,7 +360,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/uMPh5MiIQHiSI514N4hC.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/uMPh5MiIQHiSI514N4hC.jpg
     ---
     #subtitle
     JOUR 12 ET 13
@@ -375,7 +375,7 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
 
     :::day-row
     ---
-    image: /images/voyages/EUzq98bLRFyuyXBPvhig.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/EUzq98bLRFyuyXBPvhig.jpg
     ---
     #subtitle
     JOUR 14
@@ -404,19 +404,19 @@ Laissez vous charmer par le plus petit pays d'Amérique centrale !
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/EHwjnvRlqLoSFygHgXcg.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/EHwjnvRlqLoSFygHgXcg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/CWCnQ5rGS8egsZWoQ5sY.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/CWCnQ5rGS8egsZWoQ5sY.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/DSaGaOScSO2FlSGwoUjU.jpg
+    image: /images/voyages/immersion-salvador-amerique-centrale/DSaGaOScSO2FlSGwoUjU.jpg
     ---
     :::::
     ::::
@@ -436,7 +436,7 @@ Elisa, française installée au Salvador est tombée amoureuse du pays au point 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/5KU0ndDWRliX45zGnBxW.jpg
+    avatar: /images/voyages/immersion-salvador-amerique-centrale/5KU0ndDWRliX45zGnBxW.jpg
     ---
     #title
     Elisa et Mauricio

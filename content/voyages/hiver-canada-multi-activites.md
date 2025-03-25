@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/OM6tLNR3i6v2PuQZLKxA.jpg
+image-src: /images/voyages/hiver-canada-multi-activites/OM6tLNR3i6v2PuQZLKxA.jpg
 ---
 #title
 Séjour multiactivités dans les fjords canadiens
@@ -10,33 +10,33 @@ Séjour multiactivités dans les fjords canadiens
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/IXuhHihnSLCyXkPkqzrt.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/hiver-canada-multi-activites/IXuhHihnSLCyXkPkqzrt.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Dtww4JV6QmGzEjyjpO5Z.jpg
+image-src: /images/voyages/hiver-canada-multi-activites/Dtww4JV6QmGzEjyjpO5Z.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/U9MoSycLRMm44bZUXdDQ.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/hiver-canada-multi-activites/U9MoSycLRMm44bZUXdDQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/YaIECxiTveC58oCebovQ.jpg
+image-src: /images/voyages/hiver-canada-multi-activites/YaIECxiTveC58oCebovQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/N3EaSMMPRXOyIJzciyI7.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/hiver-canada-multi-activites/N3EaSMMPRXOyIJzciyI7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/IUWPpj3MTiO5z283rL0V.jpg
+image-src: /images/voyages/hiver-canada-multi-activites/IUWPpj3MTiO5z283rL0V.jpg
 ---
 ::::
   :::
@@ -126,7 +126,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/hiver-canada-multi-activites/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -136,7 +136,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
   :::highlights-row
   ---
-  image: /images/voyages/S3Jr8DXrRauqr06ZN0z7.jpg
+  image: /images/voyages/hiver-canada-multi-activites/S3Jr8DXrRauqr06ZN0z7.jpg
   ---
   ::::highlight-list-item
   Découvrez le Fjord du Saguenay, une merveille de la nature canadienne
@@ -192,7 +192,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
   
     :::day-row
     ---
-    image: /images/voyages/g8A0y9ckS9q2A0i4Tx6E.jpg
+    image: /images/voyages/hiver-canada-multi-activites/g8A0y9ckS9q2A0i4Tx6E.jpg
     ---
     #subtitle
     JOUR 1
@@ -207,7 +207,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/o9Ah5hKRdC6ratzey5OA.jpg
+    image: /images/voyages/hiver-canada-multi-activites/o9Ah5hKRdC6ratzey5OA.jpg
     ---
     #subtitle
     JOUR 2
@@ -222,7 +222,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/xjg6uwaNS66PyK0rqNAC.jpg
+    image: /images/voyages/hiver-canada-multi-activites/xjg6uwaNS66PyK0rqNAC.jpg
     ---
     #subtitle
     JOUR 3
@@ -237,7 +237,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/rK2lVvEHS9i8DiQlaWmL.jpg
+    image: /images/voyages/hiver-canada-multi-activites/rK2lVvEHS9i8DiQlaWmL.jpg
     ---
     #subtitle
     JOUR 4
@@ -252,7 +252,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/Hfnr3wNzQz6TxRyJNbeh.jpg
+    image: /images/voyages/hiver-canada-multi-activites/Hfnr3wNzQz6TxRyJNbeh.jpg
     ---
     #subtitle
     JOUR 5
@@ -267,7 +267,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/OqsmVRQBRjS9lHJl8yG7.jpg
+    image: /images/voyages/hiver-canada-multi-activites/OqsmVRQBRjS9lHJl8yG7.jpg
     ---
     #subtitle
     JOUR 6
@@ -282,7 +282,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/P39Om6kHT9iFweKLjL7u.jpg
+    image: /images/voyages/hiver-canada-multi-activites/P39Om6kHT9iFweKLjL7u.jpg
     ---
     #subtitle
     JOUR 7
@@ -297,7 +297,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
 
     :::day-row
     ---
-    image: /images/voyages/ug5gXMnGQ5ey7BVxrHQy.jpg
+    image: /images/voyages/hiver-canada-multi-activites/ug5gXMnGQ5ey7BVxrHQy.jpg
     ---
     #subtitle
     JOUR 8
@@ -326,19 +326,19 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/LuOuWUtSXGUGURFEQtxH.jpg
+    image: /images/voyages/hiver-canada-multi-activites/LuOuWUtSXGUGURFEQtxH.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/QmKhdjRbRbGtgLtj7bDD.jpg
+    image: /images/voyages/hiver-canada-multi-activites/QmKhdjRbRbGtgLtj7bDD.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/4UsBfq4URgehoDbSadIT.jpg
+    image: /images/voyages/hiver-canada-multi-activites/4UsBfq4URgehoDbSadIT.jpg
     ---
     :::::
     ::::

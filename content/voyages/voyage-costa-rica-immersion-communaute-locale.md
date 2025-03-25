@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/ry7Hnsm9R1KxzOdMuUPx.jpg
+image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/ry7Hnsm9R1KxzOdMuUPx.jpg
 ---
 #title
 Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri
@@ -10,57 +10,57 @@ Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Br
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/LmBkmunQSiKCbohL3U8g.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/LmBkmunQSiKCbohL3U8g.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/rA3Tk4DaQ5qnNFSL9rn9.jpg
+image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/rA3Tk4DaQ5qnNFSL9rn9.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/xZXBTTlSR5CdTpyGtlX8.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/xZXBTTlSR5CdTpyGtlX8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/a0P1TrWDRBuXRfIldyvb.jpg
+image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/a0P1TrWDRBuXRfIldyvb.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/dIL93QQRSqixgJ7GNASg.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/dIL93QQRSqixgJ7GNASg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/jvD6cyMjSdCPvxNMOt5a.jpg
+image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/jvD6cyMjSdCPvxNMOt5a.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/9ZYdvIhvSOWXI0xepOrk.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/9ZYdvIhvSOWXI0xepOrk.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/RIrvM1AsSDa18y10lsoj.jpg
+image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/RIrvM1AsSDa18y10lsoj.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/7UEDdGpS0KkmSgoWIzOv.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/7UEDdGpS0KkmSgoWIzOv.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/2ebDsqNTSeRX4OyRPujI.jpg
+image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/2ebDsqNTSeRX4OyRPujI.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ukWDZHgQKWr6DhaMEjJI.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/ukWDZHgQKWr6DhaMEjJI.jpg"}
 ::::
   :::
 ::
@@ -151,7 +151,7 @@ Cette expérience culturelle et humaine transformera votre perception du monde, 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/voyage-costa-rica-immersion-communaute-locale/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -161,7 +161,7 @@ Cette expérience culturelle et humaine transformera votre perception du monde, 
 
   :::highlights-row
   ---
-  image: /images/voyages/w5TvOe7SsSQBy5CLkbki.jpg
+  image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/w5TvOe7SsSQBy5CLkbki.jpg
   ---
   ::::highlight-list-item
   Découvrez les volcans Poás et Irazú, marchez jusqu’à leurs cratères et explorez des paysages spectaculaires
@@ -225,7 +225,7 @@ Cette expérience culturelle et humaine transformera votre perception du monde, 
   
     :::day-row
     ---
-    image: /images/voyages/d2QcgKfS9GuVs7WJwgn4.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/d2QcgKfS9GuVs7WJwgn4.jpg
     ---
     #subtitle
     JOUR 1
@@ -240,7 +240,7 @@ Cette expérience culturelle et humaine transformera votre perception du monde, 
 
     :::day-row
     ---
-    image: /images/voyages/fXdejqbBQHKVfdrVyeWH.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/fXdejqbBQHKVfdrVyeWH.jpg
     ---
     #subtitle
     JOUR 2
@@ -256,7 +256,7 @@ Votre visite se poursuit au musée de l’or précolombien, où vous serez émer
 
     :::day-row
     ---
-    image: /images/voyages/m8xLY50T5KXvho41mQRo.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/m8xLY50T5KXvho41mQRo.jpg
     ---
     #subtitle
     JOUR 3
@@ -273,7 +273,7 @@ Ensuite, découvrez Grecia, avec son église en métal, monument national, et so
 
     :::day-row
     ---
-    image: /images/voyages/cEkzdKf5RXSDR8ODSEIv.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/cEkzdKf5RXSDR8ODSEIv.jpg
     ---
     #subtitle
     JOUR 4
@@ -291,7 +291,7 @@ Terminez par les magnifiques vallées d’Orosí et d’Ujarrás, entourées de 
 
     :::day-row
     ---
-    image: /images/voyages/qeTbF0JSyuDz4JoayijQ.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/qeTbF0JSyuDz4JoayijQ.jpg
     ---
     #subtitle
     JOUR 5
@@ -308,7 +308,7 @@ Nuit dans la communauté.
 
     :::day-row
     ---
-    image: /images/voyages/p943RxdSR82X9FMV5B3S.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/p943RxdSR82X9FMV5B3S.jpg
     ---
     #subtitle
     JOUR 6
@@ -325,7 +325,7 @@ Une immersion unique dans les traditions et la biodiversité costaricienne.
 
     :::day-row
     ---
-    image: /images/voyages/h6PmphvnSMGfTcS2iSUK.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/h6PmphvnSMGfTcS2iSUK.jpg
     ---
     #subtitle
     JOUR 7
@@ -342,7 +342,7 @@ Une expérience de 10 heures au cœur de l’immensité de la nature, riche en d
 
     :::day-row
     ---
-    image: /images/voyages/JCKls41RR5qaal1pfyLA.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/JCKls41RR5qaal1pfyLA.jpg
     ---
     #subtitle
     JOUR 8
@@ -359,7 +359,7 @@ Retour en fin d’après-midi dans la communauté.
 
     :::day-row
     ---
-    image: /images/voyages/AcVJ9JvmSLWBeytLGLFz.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/AcVJ9JvmSLWBeytLGLFz.jpg
     ---
     #subtitle
     JOUR 9
@@ -376,7 +376,7 @@ Dans l’après-midi, partez vers les plages de Puerto Viejo. À votre arrivée,
 
     :::day-row
     ---
-    image: /images/voyages/Ck62iGenSFW2wYtaqzb1.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/Ck62iGenSFW2wYtaqzb1.jpg
     ---
     #subtitle
     JOURS 10 ET 11
@@ -393,7 +393,7 @@ Dégustez un repas typique dans un restaurant local, flânez dans les boutiques 
 
     :::day-row
     ---
-    image: /images/voyages/knDbUXf1TmaMkd6IqwOC.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/knDbUXf1TmaMkd6IqwOC.jpg
     ---
     #subtitle
     JOUR 12
@@ -423,19 +423,19 @@ Fin de votre aventure au Costa Rica. Pura vida !
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/DVjp2u5rTnurxmVMcYhy.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/DVjp2u5rTnurxmVMcYhy.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/SeTyLDzGTaOXXFmOoyxX.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/SeTyLDzGTaOXXFmOoyxX.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/XDcU2TPVSYWYKTjGKrPp.jpg
+    image: /images/voyages/voyage-costa-rica-immersion-communaute-locale/XDcU2TPVSYWYKTjGKrPp.jpg
     ---
     :::::
     ::::
@@ -457,7 +457,7 @@ Fin de votre aventure au Costa Rica. Pura vida !
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/KxxKdkKgSxSeFbovpeqp.jpg
+    avatar: /images/voyages/voyage-costa-rica-immersion-communaute-locale/KxxKdkKgSxSeFbovpeqp.jpg
     ---
     #title
     Nelson

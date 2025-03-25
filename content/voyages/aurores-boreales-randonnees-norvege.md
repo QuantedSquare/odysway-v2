@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/z0Yeoy5OTf2rlaqzA13f.jpg
+image-src: /images/voyages/aurores-boreales-randonnees-norvege/z0Yeoy5OTf2rlaqzA13f.jpg
 ---
 #title
 Observez les aurores boréales en Laponie Norvégienne
@@ -10,37 +10,37 @@ Observez les aurores boréales en Laponie Norvégienne
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/cpZuNQxREKt6OpyxYG0F.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/aurores-boreales-randonnees-norvege/cpZuNQxREKt6OpyxYG0F.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/DWBV7mfIRQ6eqhQRPzjh.jpg
+image-src: /images/voyages/aurores-boreales-randonnees-norvege/DWBV7mfIRQ6eqhQRPzjh.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/Ho1MCSJZRM61Ac1Kjcty.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/aurores-boreales-randonnees-norvege/Ho1MCSJZRM61Ac1Kjcty.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/YIHiGl7SKSOf6mRsSO0g.jpg
+image-src: /images/voyages/aurores-boreales-randonnees-norvege/YIHiGl7SKSOf6mRsSO0g.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/qNq74EJQiK5lTf77UOgF.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/aurores-boreales-randonnees-norvege/qNq74EJQiK5lTf77UOgF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/aOnljRWSy6L5gPdfQycb.jpg
+image-src: /images/voyages/aurores-boreales-randonnees-norvege/aOnljRWSy6L5gPdfQycb.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/ynPVP7WuRD2ohHdt7Xf3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/aurores-boreales-randonnees-norvege/ynPVP7WuRD2ohHdt7Xf3.jpg"}
 ::::
   :::
 ::
@@ -131,7 +131,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/rV3A7NmIR360yKDl157d.jpg
+    avatar: /images/voyages/aurores-boreales-randonnees-norvege/rV3A7NmIR360yKDl157d.jpg
     avatar-size: "60"
     ---
     #title
@@ -141,7 +141,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
   :::highlights-row
   ---
-  image: /images/voyages/U4PjLnVeTHiPzL2IEtq0.jpg
+  image: /images/voyages/aurores-boreales-randonnees-norvege/U4PjLnVeTHiPzL2IEtq0.jpg
   ---
   ::::highlight-list-item
   Partez à la chasse aux aurores boréales dans des spots privilégiés
@@ -201,7 +201,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
   
     :::day-row
     ---
-    image: /images/voyages/bTYrWKDQOytTTYv1Lgsg.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/bTYrWKDQOytTTYv1Lgsg.jpg
     ---
     #subtitle
     JOUR 1
@@ -217,7 +217,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/oBJNgOJRGS4jpObBypFt.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/oBJNgOJRGS4jpObBypFt.jpg
     ---
     #subtitle
     JOUR 2
@@ -232,7 +232,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/koVLyPkbRvWrsUJHBE8g.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/koVLyPkbRvWrsUJHBE8g.jpg
     ---
     #subtitle
     JOUR 3
@@ -247,7 +247,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/BHpGQa8uS8Kt1AjXuk7y.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/BHpGQa8uS8Kt1AjXuk7y.jpg
     ---
     #subtitle
     JOUR 4
@@ -262,7 +262,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/09Q4FkkPQLi0YbcWeQLq.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/09Q4FkkPQLi0YbcWeQLq.jpg
     ---
     #subtitle
     JOUR 5
@@ -277,7 +277,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/BKj61UPGSCaWA5UmAeuM.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/BKj61UPGSCaWA5UmAeuM.jpg
     ---
     #subtitle
     JOUR 6 
@@ -293,7 +293,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/Z0XBGEK7TIOANQUJkSTH.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/Z0XBGEK7TIOANQUJkSTH.jpg
     ---
     #subtitle
     JOUR 7
@@ -308,7 +308,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
 
     :::day-row
     ---
-    image: /images/voyages/FzqTo1l2SPaRPlA8bnGy.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/FzqTo1l2SPaRPlA8bnGy.jpg
     ---
     #subtitle
     JOUR 8 
@@ -337,19 +337,19 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/jAFVIzWQxmdLesqMxq6E.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/jAFVIzWQxmdLesqMxq6E.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Sk3RozAnRTGwL7GIKsAC.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/Sk3RozAnRTGwL7GIKsAC.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/QSXqqNgOQWCtixMUnQZi.jpg
+    image: /images/voyages/aurores-boreales-randonnees-norvege/QSXqqNgOQWCtixMUnQZi.jpg
     ---
     :::::
     ::::
@@ -367,7 +367,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/WLoElBSlQe2Th1lVwd4m.jpg
+    avatar: /images/voyages/aurores-boreales-randonnees-norvege/WLoElBSlQe2Th1lVwd4m.jpg
     ---
     #title
     Un guide francophone dédié

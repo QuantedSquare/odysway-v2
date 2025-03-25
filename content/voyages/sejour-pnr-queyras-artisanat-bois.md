@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/RXJS0dQLSSOT7nvYyKc6.jpg
+image-src: /images/voyages/sejour-pnr-queyras-artisanat-bois/RXJS0dQLSSOT7nvYyKc6.jpg
 ---
 #title
 Vivez le Queyras entre rencontres et traditions
@@ -98,7 +98,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/2ONo54GQ2r0LxAcVlClw.jpg
+    avatar: /images/voyages/sejour-pnr-queyras-artisanat-bois/2ONo54GQ2r0LxAcVlClw.jpg
     avatar-size: "60"
     ---
     #title
@@ -108,7 +108,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
 
   :::highlights-row
   ---
-  image: /images/voyages/XJYgg05kQAqSXsfvFUKZ.jpg
+  image: /images/voyages/sejour-pnr-queyras-artisanat-bois/XJYgg05kQAqSXsfvFUKZ.jpg
   ---
   ::::highlight-list-item
   L'atelier d'initiation avec Floranne, jeune sculptrice sur bois passionnée.
@@ -168,7 +168,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
   
     :::day-row
     ---
-    image: /images/voyages/zsozk0UQgWGFeg9rONMw.jpg
+    image: /images/voyages/sejour-pnr-queyras-artisanat-bois/zsozk0UQgWGFeg9rONMw.jpg
     ---
     #subtitle
     JOUR 2
@@ -183,7 +183,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
 
     :::day-row
     ---
-    image: /images/voyages/gnrWJaQkQfmVihXrgT1Y.jpg
+    image: /images/voyages/sejour-pnr-queyras-artisanat-bois/gnrWJaQkQfmVihXrgT1Y.jpg
     ---
     #subtitle
     JOUR 1
@@ -198,7 +198,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
 
     :::day-row
     ---
-    image: /images/voyages/kmy5TSp1QHdbmZzC8at2.jpg
+    image: /images/voyages/sejour-pnr-queyras-artisanat-bois/kmy5TSp1QHdbmZzC8at2.jpg
     ---
     #subtitle
     JOUR 3
@@ -213,7 +213,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
 
     :::day-row
     ---
-    image: /images/voyages/yBSHh0m5Qua5VHPRoNzb.jpg
+    image: /images/voyages/sejour-pnr-queyras-artisanat-bois/yBSHh0m5Qua5VHPRoNzb.jpg
     ---
     #subtitle
     JOUR 4
@@ -250,7 +250,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/aecEEvDdSM6b17F6GuGD.jpg
+    avatar: /images/voyages/sejour-pnr-queyras-artisanat-bois/aecEEvDdSM6b17F6GuGD.jpg
     ---
     #title
     Floranne
@@ -263,7 +263,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/YhK8GiheQQ2jEFU72Fkz.jpg
+    avatar: /images/voyages/sejour-pnr-queyras-artisanat-bois/YhK8GiheQQ2jEFU72Fkz.jpg
     ---
     #title
     Chantal & François
@@ -276,7 +276,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/nMikRQs5RS214ZsdE7zw.jpg
+    avatar: /images/voyages/sejour-pnr-queyras-artisanat-bois/nMikRQs5RS214ZsdE7zw.jpg
     ---
     #title
     Yves

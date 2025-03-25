@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/IZFLmkpR921ESlSnDfl9.jpg
+image-src: /images/voyages/rencontre-berberes-sud-maroc/IZFLmkpR921ESlSnDfl9.jpg
 ---
 #title
 Partez à la rencontre des berbères dans le Sud du Maroc
@@ -10,53 +10,53 @@ Partez à la rencontre des berbères dans le Sud du Maroc
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/vLDBSBUFT5GdribZYDoS.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/rencontre-berberes-sud-maroc/vLDBSBUFT5GdribZYDoS.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/P6VfC0E2Tq6mKXGtuGla.jpg
+image-src: /images/voyages/rencontre-berberes-sud-maroc/P6VfC0E2Tq6mKXGtuGla.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/d9lZDkhdRSm8WJfYO2ss.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/rencontre-berberes-sud-maroc/d9lZDkhdRSm8WJfYO2ss.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/FTZ7ntR1yONReWIcqGqw.jpg
+image-src: /images/voyages/rencontre-berberes-sud-maroc/FTZ7ntR1yONReWIcqGqw.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/0v7GO6kS1qwEfczqJz4x.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/rencontre-berberes-sud-maroc/0v7GO6kS1qwEfczqJz4x.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/LQmZxagbTaufj76LSiTc.jpg
+image-src: /images/voyages/rencontre-berberes-sud-maroc/LQmZxagbTaufj76LSiTc.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/bvIzgRHQgu5OdKHgDPV3.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/rencontre-berberes-sud-maroc/bvIzgRHQgu5OdKHgDPV3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/tuM30UySWC7elxeXr52e.jpg
+image-src: /images/voyages/rencontre-berberes-sud-maroc/tuM30UySWC7elxeXr52e.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/uHpk6sb5R6SjCEs6i7ld.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/rencontre-berberes-sud-maroc/uHpk6sb5R6SjCEs6i7ld.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/eDC2ZtZTYivOjjg3R9BW.jpg
+image-src: /images/voyages/rencontre-berberes-sud-maroc/eDC2ZtZTYivOjjg3R9BW.jpg
 ---
 ::::
   :::
@@ -144,7 +144,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Z2I8h1G4S0y4SAcJZcq2.jpg
+    avatar: /images/voyages/rencontre-berberes-sud-maroc/Z2I8h1G4S0y4SAcJZcq2.jpg
     avatar-size: "60"
     ---
     #title
@@ -154,7 +154,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
   :::highlights-row
   ---
-  image: /images/voyages/DaTT681IQsCt8pfGzFFl.jpg
+  image: /images/voyages/rencontre-berberes-sud-maroc/DaTT681IQsCt8pfGzFFl.jpg
   ---
   ::::highlight-list-item
   Découvrez des modes de vie marocains variées, de Casablanca aux villages berbères de l'anti-Atlas
@@ -214,7 +214,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
   
     :::day-row
     ---
-    image: /images/voyages/7z9emyIYQbm4RAxdPjvA.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/7z9emyIYQbm4RAxdPjvA.jpg
     ---
     #subtitle
     JOUR 1
@@ -229,7 +229,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/BwUjTXGR2SVg52JUDHt0.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/BwUjTXGR2SVg52JUDHt0.jpg
     ---
     #subtitle
     JOUR 2
@@ -244,7 +244,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/nDS38MMiSvaRv0BhLSRw.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/nDS38MMiSvaRv0BhLSRw.jpg
     ---
     #subtitle
     JOUR 3
@@ -259,7 +259,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/egQ5QCAmRNiAPfWSANzu.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/egQ5QCAmRNiAPfWSANzu.jpg
     ---
     #subtitle
     JOUR 4
@@ -274,7 +274,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/xJQP907zTLW6aZhOss8I.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/xJQP907zTLW6aZhOss8I.jpg
     ---
     #subtitle
     JOUR 5
@@ -289,7 +289,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/qwmdRwUWT24RITPIKFsQ.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/qwmdRwUWT24RITPIKFsQ.jpg
     ---
     #subtitle
     JOUR 6
@@ -310,7 +310,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/IjexpBIPQDCM9WWc2tOF.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/IjexpBIPQDCM9WWc2tOF.jpg
     ---
     #subtitle
     JOUR 7
@@ -325,7 +325,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/tIJLPwmxQzm9OVwFMvFw.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/tIJLPwmxQzm9OVwFMvFw.jpg
     ---
     #subtitle
     JOUR 8
@@ -340,7 +340,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/AFzPq6YQTiqIHSWYT5Ql.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/AFzPq6YQTiqIHSWYT5Ql.jpg
     ---
     #subtitle
     JOUR 9
@@ -355,7 +355,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/r9pJU2PYTc6lPY0i292A.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/r9pJU2PYTc6lPY0i292A.jpg
     ---
     #subtitle
     JOUR 10
@@ -370,7 +370,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
 
     :::day-row
     ---
-    image: /images/voyages/95rapdWgRX66aS865QDz.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/95rapdWgRX66aS865QDz.jpg
     ---
     #subtitle
     JOUR 11
@@ -399,19 +399,19 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/ETi8H6VjTred15eopAzL.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/ETi8H6VjTred15eopAzL.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/jiDuHQ6NQi2SUfImXv52.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/jiDuHQ6NQi2SUfImXv52.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/PGKgLPJdQ7uCHdi3g075.jpg
+    image: /images/voyages/rencontre-berberes-sud-maroc/PGKgLPJdQ7uCHdi3g075.jpg
     ---
     :::::
     ::::

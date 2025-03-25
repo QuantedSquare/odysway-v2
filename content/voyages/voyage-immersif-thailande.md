@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/81rf8aPTGeiqs2g4ZbHU.jpg
+image-src: /images/voyages/voyage-immersif-thailande/81rf8aPTGeiqs2g4ZbHU.jpg
 ---
 #title
 Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Karen et plages de rêve
@@ -10,77 +10,77 @@ Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Ka
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/XVDohV9gSySD7Yf3iBXO.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-thailande/XVDohV9gSySD7Yf3iBXO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/WD7W1jG6QPqO9J7OySz9.jpg
+image-src: /images/voyages/voyage-immersif-thailande/WD7W1jG6QPqO9J7OySz9.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/oD848M8TAqnaaOT30SW0.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-thailande/oD848M8TAqnaaOT30SW0.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/hezFbsCZT3akvmZhjL4w.jpg
+image-src: /images/voyages/voyage-immersif-thailande/hezFbsCZT3akvmZhjL4w.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/8pbxsaK3TziuA5Wlj0Tr.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-thailande/8pbxsaK3TziuA5Wlj0Tr.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/P3cQPTL0RaeXqy5n1EAW.jpg
+image-src: /images/voyages/voyage-immersif-thailande/P3cQPTL0RaeXqy5n1EAW.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/CU4e3sFSAW24MCvx4TMI.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-thailande/CU4e3sFSAW24MCvx4TMI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/0BG2K71R2GV0UxZhIqPn.jpg
+image-src: /images/voyages/voyage-immersif-thailande/0BG2K71R2GV0UxZhIqPn.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/EtGgxnfTWyr6dXUl4no7.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-thailande/EtGgxnfTWyr6dXUl4no7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/z9tYqJScTwyrHS9TEu2a.jpg
+image-src: /images/voyages/voyage-immersif-thailande/z9tYqJScTwyrHS9TEu2a.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/niclsZXjTBCtELAHAFNi.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-thailande/niclsZXjTBCtELAHAFNi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/a2IqswWgRaEQJozYMVp5.jpg
+image-src: /images/voyages/voyage-immersif-thailande/a2IqswWgRaEQJozYMVp5.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/B3crTFkmSEKLQthB1cYG.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-thailande/B3crTFkmSEKLQthB1cYG.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/FIg0W6vEQumDCIvb4nor.jpg
+image-src: /images/voyages/voyage-immersif-thailande/FIg0W6vEQumDCIvb4nor.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/KxRIHfSTRxeRMCrrvgzk.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-thailande/KxRIHfSTRxeRMCrrvgzk.jpg"}
 ::::
   :::
 ::
@@ -167,7 +167,7 @@ right-sticky: true
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-immersif-thailande/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -177,7 +177,7 @@ right-sticky: true
 
   :::highlights-row
   ---
-  image: /images/voyages/0itRzlvzSWud5NBefpO6.jpg
+  image: /images/voyages/voyage-immersif-thailande/0itRzlvzSWud5NBefpO6.jpg
   ---
   ::::highlight-list-item
   Plongez au cœur de Bangkok, où temples majestueux et gratte-ciels modernes cohabitent harmonieusement
@@ -241,7 +241,7 @@ right-sticky: true
   
     :::day-row
     ---
-    image: /images/voyages/Qf9jD1L5QEenTBcjIzLR.jpg
+    image: /images/voyages/voyage-immersif-thailande/Qf9jD1L5QEenTBcjIzLR.jpg
     ---
     #subtitle
     JOUR 1
@@ -256,7 +256,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/UrwIhmXrQ8OJ0wbHMIdd.jpg
+    image: /images/voyages/voyage-immersif-thailande/UrwIhmXrQ8OJ0wbHMIdd.jpg
     ---
     #subtitle
     JOUR 2
@@ -271,7 +271,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/72mRAgEgQf2N9LSDkxd0.jpg
+    image: /images/voyages/voyage-immersif-thailande/72mRAgEgQf2N9LSDkxd0.jpg
     ---
     #subtitle
     JOUR 3
@@ -287,7 +287,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/wZgn3ypQw2GkGElxlXDr.jpg
+    image: /images/voyages/voyage-immersif-thailande/wZgn3ypQw2GkGElxlXDr.jpg
     ---
     #subtitle
     JOUR 4
@@ -302,7 +302,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/Z6rrMmHCQLO4ufhuCMJP.jpg
+    image: /images/voyages/voyage-immersif-thailande/Z6rrMmHCQLO4ufhuCMJP.jpg
     ---
     #subtitle
     JOUR 5
@@ -317,7 +317,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/KeaBU1OqQ9aV1Ru40H85.jpg
+    image: /images/voyages/voyage-immersif-thailande/KeaBU1OqQ9aV1Ru40H85.jpg
     ---
     #subtitle
     JOUR 6
@@ -332,7 +332,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/7LFLYtVQT4KqZ8HIvzBZ.jpg
+    image: /images/voyages/voyage-immersif-thailande/7LFLYtVQT4KqZ8HIvzBZ.jpg
     ---
     #subtitle
     JOUR 7
@@ -347,7 +347,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/UdqOnWRrQCwuNSTjApqg.jpg
+    image: /images/voyages/voyage-immersif-thailande/UdqOnWRrQCwuNSTjApqg.jpg
     ---
     #subtitle
     JOUR 8
@@ -362,7 +362,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/ZvwlcGiSSuCigXC52eLu.jpg
+    image: /images/voyages/voyage-immersif-thailande/ZvwlcGiSSuCigXC52eLu.jpg
     ---
     #subtitle
     JOURS 9 À 11
@@ -377,7 +377,7 @@ right-sticky: true
 
     :::day-row
     ---
-    image: /images/voyages/ebJOac2sTpSU6qd4yVlb.jpg
+    image: /images/voyages/voyage-immersif-thailande/ebJOac2sTpSU6qd4yVlb.jpg
     ---
     #subtitle
     JOUR 12
@@ -406,19 +406,19 @@ right-sticky: true
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/d7PsQn6oR9W20CC494Bw.jpg
+    image: /images/voyages/voyage-immersif-thailande/d7PsQn6oR9W20CC494Bw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/12BZTFU9QDuIeVbgVsx0.jpg
+    image: /images/voyages/voyage-immersif-thailande/12BZTFU9QDuIeVbgVsx0.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/PjJtDgET5emCNDgnY80H.jpg
+    image: /images/voyages/voyage-immersif-thailande/PjJtDgET5emCNDgnY80H.jpg
     ---
     :::::
     ::::

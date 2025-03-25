@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/mOBzi9xlS42WnQd5sgmo.jpg
+image-src: /images/voyages/voyage-immersion-namibie/mOBzi9xlS42WnQd5sgmo.jpg
 ---
 #title
 Dans la peau d’un Ranger : immersion au cœur d’une réserve en Namibie
@@ -91,7 +91,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-immersion-namibie/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -101,7 +101,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
   :::highlights-row
   ---
-  image: /images/voyages/oHISURvSRm6Y6Jl4oTdQ.jpg
+  image: /images/voyages/voyage-immersion-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg
   ---
   ::::highlight-list-item
   Immergez-vous dans le quotidien d'un ranger d'une réserve namibienne
@@ -161,7 +161,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
   
     :::day-row
     ---
-    image: /images/voyages/nf1iKt0eQ6aGjk47peJj.jpg
+    image: /images/voyages/voyage-immersion-namibie/nf1iKt0eQ6aGjk47peJj.jpg
     ---
     #subtitle
     JOUR 1
@@ -176,7 +176,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/VLb1RJBrTh2qntF5S3ch.jpg
+    image: /images/voyages/voyage-immersion-namibie/VLb1RJBrTh2qntF5S3ch.jpg
     ---
     #subtitle
     JOUR 2
@@ -191,7 +191,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/WbH8SRcKQ7CgEHR9mu2P.jpg
+    image: /images/voyages/voyage-immersion-namibie/WbH8SRcKQ7CgEHR9mu2P.jpg
     ---
     #subtitle
     JOURS 3 À 5
@@ -206,7 +206,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/Go5Imn23Sxy8QvVjA83j.jpg
+    image: /images/voyages/voyage-immersion-namibie/Go5Imn23Sxy8QvVjA83j.jpg
     ---
     #subtitle
     JOUR 6
@@ -221,7 +221,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/d0V1QzNSQ67jeDA44Orp.jpg
+    image: /images/voyages/voyage-immersion-namibie/d0V1QzNSQ67jeDA44Orp.jpg
     ---
     #subtitle
     JOUR 7
@@ -236,7 +236,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/gQ5n2GGVS7dWYFyZmYPS.jpg
+    image: /images/voyages/voyage-immersion-namibie/gQ5n2GGVS7dWYFyZmYPS.jpg
     ---
     #subtitle
     JOUR 8
@@ -251,7 +251,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/sMv53tJSSx6Fh2FoPk76.jpg
+    image: /images/voyages/voyage-immersion-namibie/sMv53tJSSx6Fh2FoPk76.jpg
     ---
     #subtitle
     JOUR 9
@@ -266,7 +266,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/XnWZ9yfdTvCRPZrXXVU2.jpg
+    image: /images/voyages/voyage-immersion-namibie/XnWZ9yfdTvCRPZrXXVU2.jpg
     ---
     #subtitle
     JOUR 10
@@ -281,7 +281,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/eOIHX1dbS1KOzT9rpKfg.jpg
+    image: /images/voyages/voyage-immersion-namibie/eOIHX1dbS1KOzT9rpKfg.jpg
     ---
     #subtitle
     JOUR 11
@@ -296,7 +296,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/Um7ZopIQoqnC7EKyeUdV.jpg
+    image: /images/voyages/voyage-immersion-namibie/Um7ZopIQoqnC7EKyeUdV.jpg
     ---
     #subtitle
     JOUR 12
@@ -311,7 +311,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/73P8CPn3SMX4EQAFeWfM.jpg
+    image: /images/voyages/voyage-immersion-namibie/73P8CPn3SMX4EQAFeWfM.jpg
     ---
     #subtitle
     JOUR 13
@@ -326,7 +326,7 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
 
     :::day-row
     ---
-    image: /images/voyages/dyGlUh74SeAOHIs5SpwB.jpg
+    image: /images/voyages/voyage-immersion-namibie/dyGlUh74SeAOHIs5SpwB.jpg
     ---
     #subtitle
     JOUR 14
@@ -355,19 +355,19 @@ Une expérience haute en couleurs, à la rencontre de personnes engagées, duran
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/zINNQ6LJR9uU4hOEP9yL.jpg
+    image: /images/voyages/voyage-immersion-namibie/zINNQ6LJR9uU4hOEP9yL.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/sdjB1BTCqdYB5k4j82Jw.jpg
+    image: /images/voyages/voyage-immersion-namibie/sdjB1BTCqdYB5k4j82Jw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/cakms0TNTeudMigSJpdR.jpg
+    image: /images/voyages/voyage-immersion-namibie/cakms0TNTeudMigSJpdR.jpg
     ---
     :::::
     ::::

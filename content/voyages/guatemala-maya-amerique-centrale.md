@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/u5s44b92SXulTPfjnN4Y.jpg
+image-src: /images/voyages/guatemala-maya-amerique-centrale/u5s44b92SXulTPfjnN4Y.jpg
 ---
 #title
 Mystères de la culture Maya au Guatemala
@@ -10,33 +10,33 @@ Mystères de la culture Maya au Guatemala
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/qQun0AxVTs6QNWgPieGB.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/guatemala-maya-amerique-centrale/qQun0AxVTs6QNWgPieGB.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/mP9WKsPCQmCkc3YhiBUy.jpg
+image-src: /images/voyages/guatemala-maya-amerique-centrale/mP9WKsPCQmCkc3YhiBUy.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/BYmthTbQxaCLRdCk2M54.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/guatemala-maya-amerique-centrale/BYmthTbQxaCLRdCk2M54.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/qgJDlWs3T02xuCTmewYr.jpg
+image-src: /images/voyages/guatemala-maya-amerique-centrale/qgJDlWs3T02xuCTmewYr.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/QOB41RXYSAepxIy7Kb3J.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/guatemala-maya-amerique-centrale/QOB41RXYSAepxIy7Kb3J.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/qWmEZTr7TXGeM1sAoL1z.jpg
+image-src: /images/voyages/guatemala-maya-amerique-centrale/qWmEZTr7TXGeM1sAoL1z.jpg
 ---
 ::::
   :::
@@ -124,7 +124,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/guatemala-maya-amerique-centrale/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -134,7 +134,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
   :::highlights-row
   ---
-  image: /images/voyages/JtsL6zRbR3STsQNnzTTQ.jpg
+  image: /images/voyages/guatemala-maya-amerique-centrale/JtsL6zRbR3STsQNnzTTQ.jpg
   ---
   ::::highlight-list-item
   Une exploration intense du passé et des traditions maya
@@ -194,7 +194,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
   
     :::day-row
     ---
-    image: /images/voyages/fofnEyFR0GCWOADZtcFA.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/fofnEyFR0GCWOADZtcFA.jpg
     ---
     #subtitle
     JOUR 1
@@ -209,7 +209,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/G5zBJg4nS0eBMTF5nz6w.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/G5zBJg4nS0eBMTF5nz6w.jpg
     ---
     #subtitle
     JOUR 2
@@ -224,7 +224,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/q8Su9XpTfSkrgQE9lgRt.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/q8Su9XpTfSkrgQE9lgRt.jpg
     ---
     #subtitle
     JOUR 3
@@ -239,7 +239,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/mGCVGs26Ruqj7y7Irv15.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/mGCVGs26Ruqj7y7Irv15.jpg
     ---
     #subtitle
     JOUR 4
@@ -254,7 +254,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/PJsGnfRrRsWCp4KMs2P9.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/PJsGnfRrRsWCp4KMs2P9.jpg
     ---
     #subtitle
     JOUR 5
@@ -269,7 +269,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/2KlPKqiTDyYzBDZDMIhV.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/2KlPKqiTDyYzBDZDMIhV.jpg
     ---
     #subtitle
     JOUR 6
@@ -284,7 +284,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/CfVkyvCkTcSgiONKjSJo.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/CfVkyvCkTcSgiONKjSJo.jpg
     ---
     #subtitle
     JOUR 7
@@ -301,7 +301,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/kACTHKXScr4kIi1QnoAJ.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/kACTHKXScr4kIi1QnoAJ.jpg
     ---
     #subtitle
     JOUR 8
@@ -318,7 +318,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/DsWmJm0hSD6M8Nq8wo9A.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/DsWmJm0hSD6M8Nq8wo9A.jpg
     ---
     #subtitle
     JOUR 9
@@ -335,7 +335,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/ezv5vvumSZiQ5QZ8qieq.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/ezv5vvumSZiQ5QZ8qieq.jpg
     ---
     #subtitle
     JOUR 10
@@ -358,7 +358,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/PHOAWVt8SbejN6J0fdnV.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/PHOAWVt8SbejN6J0fdnV.jpg
     ---
     #subtitle
     JOUR 11
@@ -381,7 +381,7 @@ Chaleureux et pittoresque, le Guatemala vous transporte dans un univers varié e
 
     :::day-row
     ---
-    image: /images/voyages/7yKFlH8QGWzrlyNC8GOY.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/7yKFlH8QGWzrlyNC8GOY.jpg
     ---
     #subtitle
     JOUR 12
@@ -405,7 +405,7 @@ Après cette rencontre, voguez sur les eaux du lac en kayak. Pagayez au cœur de
 
     :::day-row
     ---
-    image: /images/voyages/30wdXAbSTaRTHC4a24AC.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/30wdXAbSTaRTHC4a24AC.jpg
     ---
     #subtitle
     JOUR 13
@@ -427,7 +427,7 @@ Après cette rencontre, voguez sur les eaux du lac en kayak. Pagayez au cœur de
 
     :::day-row
     ---
-    image: /images/voyages/fHv1o4rCQjyQ1sebdZoA.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/fHv1o4rCQjyQ1sebdZoA.jpg
     ---
     #subtitle
     JOUR 14
@@ -463,19 +463,19 @@ Après cette rencontre, voguez sur les eaux du lac en kayak. Pagayez au cœur de
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/iXWOfWiWTpyJkOScg30N.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/iXWOfWiWTpyJkOScg30N.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/l2i1NDkMSkqeNZTweW4P.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/l2i1NDkMSkqeNZTweW4P.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/EQx95DGhTvGgh8x86MJv.jpg
+    image: /images/voyages/guatemala-maya-amerique-centrale/EQx95DGhTvGgh8x86MJv.jpg
     ---
     :::::
     ::::
@@ -493,7 +493,7 @@ Après cette rencontre, voguez sur les eaux du lac en kayak. Pagayez au cœur de
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/5PG7GR0qRR6jOi0j8PDt.jpg
+    avatar: /images/voyages/guatemala-maya-amerique-centrale/5PG7GR0qRR6jOi0j8PDt.jpg
     ---
     #title
     Elisa & Mauricio

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/cDq6o9JTQQeVeA71lxll.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/cDq6o9JTQQeVeA71lxll.jpg
 ---
 #title
 Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune
@@ -10,57 +10,57 @@ Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres hu
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/4Xz9ZdjQP2YsMZxUzMFX.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/4Xz9ZdjQP2YsMZxUzMFX.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/dJ0jod6sSXOHTrI2SVbv.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/dJ0jod6sSXOHTrI2SVbv.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/WMnpgOGQ6eYeVjlZXgQU.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/WMnpgOGQ6eYeVjlZXgQU.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/8mB1DDEqTmewcYneUxcI.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/8mB1DDEqTmewcYneUxcI.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/92PvUt88QeSMIWFjvhUB.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/92PvUt88QeSMIWFjvhUB.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/hOTdGHRwRnyRmHqxBL8m.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/hOTdGHRwRnyRmHqxBL8m.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/DWxaz5YQqSSewuxqTv6T.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/DWxaz5YQqSSewuxqTv6T.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/z3MbFHJVTIaacCdAukpG.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/z3MbFHJVTIaacCdAukpG.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/Xe4dPfBgRBK1Byxukwxl.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/Xe4dPfBgRBK1Byxukwxl.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/aXwUPoQ5qzc5hV5FkLVQ.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/aXwUPoQ5qzc5hV5FkLVQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/GErFGLUfQiWGOhEJDeuX.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/GErFGLUfQiWGOhEJDeuX.jpg"}
 ::::
   :::
 ::
@@ -153,7 +153,7 @@ Ce voyage, conçu pour capturer l’essence du Sri Lanka dans toute sa diversit�
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/voyage-immersion-culturelle-sri-lanka/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -163,7 +163,7 @@ Ce voyage, conçu pour capturer l’essence du Sri Lanka dans toute sa diversit�
 
   :::highlights-row
   ---
-  image: /images/voyages/7Rr3RIToR3KViFxBjvRp.jpg
+  image: /images/voyages/voyage-immersion-culturelle-sri-lanka/7Rr3RIToR3KViFxBjvRp.jpg
   ---
   ::::highlight-list-item
   Plongez dans la sérénité d’un temple bouddhiste et découvrez les rituels spirituels, entre méditation et mode de vie monastique
@@ -227,7 +227,7 @@ Ce voyage, conçu pour capturer l’essence du Sri Lanka dans toute sa diversit�
   
     :::day-row
     ---
-    image: /images/voyages/fqwTxVTZy6hFZM0YGNYw.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/fqwTxVTZy6hFZM0YGNYw.jpg
     ---
     #subtitle
     JOUR 1
@@ -244,7 +244,7 @@ Passez une nuit inoubliable au Temple Bouddhiste de Ridigama, près de Kurunegal
 
     :::day-row
     ---
-    image: /images/voyages/KmpTXNjYS0SJ5qdjxK2L.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/KmpTXNjYS0SJ5qdjxK2L.jpg
     ---
     #subtitle
     JOUR 2
@@ -262,7 +262,7 @@ Terminez la journée avec votre installation à l’hôtel de Girithale.
 
     :::day-row
     ---
-    image: /images/voyages/YnWTg5RoSV69AOPxxqcZ.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/YnWTg5RoSV69AOPxxqcZ.jpg
     ---
     #subtitle
     JOUR 3
@@ -278,7 +278,7 @@ L’après-midi, découvrez Polonnaruwa, ancienne capitale royale, ses ruines ma
 
     :::day-row
     ---
-    image: /images/voyages/oLDGXGgDQ6q3xO86AErM.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/oLDGXGgDQ6q3xO86AErM.jpg
     ---
     #subtitle
     JOUR 4
@@ -293,7 +293,7 @@ L’après-midi, découvrez Polonnaruwa, ancienne capitale royale, ses ruines ma
 
     :::day-row
     ---
-    image: /images/voyages/mDeoQEgUSmD3Gddg6uFQ.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/mDeoQEgUSmD3Gddg6uFQ.jpg
     ---
     #subtitle
     JOUR 5
@@ -309,7 +309,7 @@ Rejoignez ensuite Digana pour deux nuits chez l’habitant, au cœur de la natur
 
     :::day-row
     ---
-    image: /images/voyages/bCIMotSMTxmfI9UhWxTc.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/bCIMotSMTxmfI9UhWxTc.jpg
     ---
     #subtitle
     JOUR 6
@@ -324,7 +324,7 @@ Rejoignez ensuite Digana pour deux nuits chez l’habitant, au cœur de la natur
 
     :::day-row
     ---
-    image: /images/voyages/7pRIFw2QhOMUnfO354NN.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/7pRIFw2QhOMUnfO354NN.jpg
     ---
     #subtitle
     JOUR 7
@@ -341,7 +341,7 @@ L’après-midi, initiez-vous à la cuisine sri lankaise au sein d’une famille
 
     :::day-row
     ---
-    image: /images/voyages/Rfy68QVRT8EVs8N6qT4Y.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/Rfy68QVRT8EVs8N6qT4Y.jpg
     ---
     #subtitle
     JOUR 9
@@ -356,7 +356,7 @@ L’après-midi, initiez-vous à la cuisine sri lankaise au sein d’une famille
 
     :::day-row
     ---
-    image: /images/voyages/bh676U5TOSIIkZz08FWy.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/bh676U5TOSIIkZz08FWy.jpg
     ---
     #subtitle
     JOUR 10
@@ -373,7 +373,7 @@ Continuation vers Unawatuna pour deux nuits en bord de mer, avec temps libre pou
 
     :::day-row
     ---
-    image: /images/voyages/6T4PG2w0RQKjiWTdOoGO.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/6T4PG2w0RQKjiWTdOoGO.jpg
     ---
     #subtitle
     JOUR 11
@@ -388,7 +388,7 @@ Continuation vers Unawatuna pour deux nuits en bord de mer, avec temps libre pou
 
     :::day-row
     ---
-    image: /images/voyages/cCyXpFx2Qwu1HiJeskSF.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/cCyXpFx2Qwu1HiJeskSF.jpg
     ---
     #subtitle
     JOUR 12
@@ -418,19 +418,19 @@ C’est la fin de votre séjour sur cette île paradisiaque. En espérant que vo
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/h5ddoNUISnidwBZituCJ.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/h5ddoNUISnidwBZituCJ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/eeAUoxuiRUuQtZs6tmTj.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/eeAUoxuiRUuQtZs6tmTj.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/olYHUABLQcKJZBKN1qIP.jpg
+    image: /images/voyages/voyage-immersion-culturelle-sri-lanka/olYHUABLQcKJZBKN1qIP.jpg
     ---
     :::::
     ::::

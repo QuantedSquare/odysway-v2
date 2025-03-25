@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/AjNZlDsJQYy6sYuatDRC.jpg
+image-src: /images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg
 ---
 #title
 Séjour au cœur d'un observatoire astronomique
@@ -91,7 +91,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FbEN6KxzS62uUwejT351.jpg
+    avatar: /images/voyages/sejour-observatoire-astronomique/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -101,7 +101,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
   :::highlights-row
   ---
-  image: /images/voyages/AfnnG33bQ7iFEGeK6zQh.jpg
+  image: /images/voyages/sejour-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg
   ---
   ::::highlight-list-item
   Mener de véritables missions d'observation scientifique
@@ -157,7 +157,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   
     :::day-row
     ---
-    image: /images/voyages/wAuHGGLhQmioeMOJmNUh.jpg
+    image: /images/voyages/sejour-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg
     ---
     #subtitle
     JOUR 1
@@ -172,7 +172,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/0CkJEb5SIWny0DaMSuUP.jpg
+    image: /images/voyages/sejour-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg
     ---
     #subtitle
     JOUR 2
@@ -187,7 +187,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/45kIi6WpSkmCRjNvRjj4.jpg
+    image: /images/voyages/sejour-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg
     ---
     #subtitle
     JOUR 3
@@ -216,19 +216,19 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/uOrmpmM5S6OellRXSS6e.jpg
+    image: /images/voyages/sejour-observatoire-astronomique/uOrmpmM5S6OellRXSS6e.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/H5fONAJcS8Wid7WY3JbT.jpg
+    image: /images/voyages/sejour-observatoire-astronomique/H5fONAJcS8Wid7WY3JbT.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/EthVSk7Qm2uW66yqs8gD.jpg
+    image: /images/voyages/sejour-observatoire-astronomique/EthVSk7Qm2uW66yqs8gD.jpg
     ---
     :::::
     ::::
@@ -246,7 +246,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/LYkGdRhHQbaUItRGJ36k.jpg
+    avatar: /images/voyages/sejour-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg
     ---
     #title
     Marc

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/R0zRiThdQBmWFVAhC8y5.jpg
+image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/R0zRiThdQBmWFVAhC8y5.jpg
 ---
 #title
 En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara
@@ -10,33 +10,33 @@ En immersion dans les villages traditionnels du Kenya et safari dans le Masai Ma
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/iEaQTkM3Swo5i3Shyi6y.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-kenya-safari-immersion-communaute-locale/iEaQTkM3Swo5i3Shyi6y.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/BZdE3PSSuSnXTGYVqEw2.jpg
+image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/BZdE3PSSuSnXTGYVqEw2.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/eZcgL00XSASOZXPVBeHu.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-kenya-safari-immersion-communaute-locale/eZcgL00XSASOZXPVBeHu.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/6nSpmkNCT1SKXO7MX3nm.jpg
+image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/6nSpmkNCT1SKXO7MX3nm.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/YiHULTsvQ12JDsm01uwB.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-kenya-safari-immersion-communaute-locale/YiHULTsvQ12JDsm01uwB.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/IpHvxy8SQziyvhPLIOXf.jpg
+image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/IpHvxy8SQziyvhPLIOXf.jpg
 ---
 ::::
   :::
@@ -128,7 +128,7 @@ Enfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontr
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/8KYsYYpqTlaPXElExeZC.jpg
+    avatar: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/8KYsYYpqTlaPXElExeZC.jpg
     avatar-size: "60"
     ---
     #title
@@ -138,7 +138,7 @@ Enfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontr
 
   :::highlights-row
   ---
-  image: /images/voyages/tl7zmyhkSKGNhe251V8o.jpg
+  image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/tl7zmyhkSKGNhe251V8o.jpg
   ---
   ::::highlight-list-item
   Plongez au cœur des traditions bantoues en partageant le quotidien des habitants d’un village traditionnel
@@ -202,7 +202,7 @@ Enfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontr
   
     :::day-row
     ---
-    image: /images/voyages/IDYl968tQFeDoVmzC7fk.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/IDYl968tQFeDoVmzC7fk.jpg
     ---
     #subtitle
     JOUR 1
@@ -217,7 +217,7 @@ Enfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontr
 
     :::day-row
     ---
-    image: /images/voyages/TZgJXbXrRE6FHYXGOy7B.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/TZgJXbXrRE6FHYXGOy7B.jpg
     ---
     #subtitle
     JOUR 2
@@ -234,7 +234,7 @@ Enfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontr
 
     :::day-row
     ---
-    image: /images/voyages/aiurI941ST6xGOpkcQsF.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/aiurI941ST6xGOpkcQsF.jpg
     ---
     #subtitle
     JOUR 3
@@ -252,7 +252,7 @@ En fin de journée, direction le village de Kianjogu, niché au pied du Mont Ken
 
     :::day-row
     ---
-    image: /images/voyages/h0kQ2gh7S3ubaTqKybll.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/h0kQ2gh7S3ubaTqKybll.jpg
     ---
     #subtitle
     JOUR 4
@@ -269,7 +269,7 @@ De retour au village, la journée se conclut par un repas traditionnel en famill
 
     :::day-row
     ---
-    image: /images/voyages/sFkjwWBTPSg8TAkkgo1f.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/sFkjwWBTPSg8TAkkgo1f.jpg
     ---
     #subtitle
     JOUR 5
@@ -287,7 +287,7 @@ Installation dans votre lodge en pleine nature et dîner aux saveurs locales ave
 
     :::day-row
     ---
-    image: /images/voyages/0UZitsecTk2Da5G03EXS.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/0UZitsecTk2Da5G03EXS.jpg
     ---
     #subtitle
     JOUR 6
@@ -303,7 +303,7 @@ Installation dans votre lodge en pleine nature et dîner aux saveurs locales ave
 
     :::day-row
     ---
-    image: /images/voyages/nfOXR1uURS29KvRon0NJ.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/nfOXR1uURS29KvRon0NJ.jpg
     ---
     #subtitle
     JOUR 7
@@ -321,7 +321,7 @@ En fin de journée, rejoignez un village masaï pour une nuit immersion unique. 
 
     :::day-row
     ---
-    image: /images/voyages/86b3NMujSjuYUJzvjOSN.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/86b3NMujSjuYUJzvjOSN.jpg
     ---
     #subtitle
     JOUR 8
@@ -338,7 +338,7 @@ Vous aurez l’opportunité de faire du vélo ou d’explorer à pied le Parc Na
 
     :::day-row
     ---
-    image: /images/voyages/W8hNik0XQiabiudyEJGi.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/W8hNik0XQiabiudyEJGi.jpg
     ---
     #subtitle
     JOUR 9
@@ -356,7 +356,7 @@ Vous aurez l’opportunité de faire du vélo ou d’explorer à pied le Parc Na
 
     :::day-row
     ---
-    image: /images/voyages/WblIOkX2RBFviB4WO0Vf.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/WblIOkX2RBFviB4WO0Vf.jpg
     ---
     #subtitle
     JOURS 10 A 11
@@ -377,7 +377,7 @@ Possibilité en option d’une croisière en dhow au coucher du soleil ou d’un
 
     :::day-row
     ---
-    image: /images/voyages/tdRpawuSBOdrXwBcP7wi.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/tdRpawuSBOdrXwBcP7wi.jpg
     ---
     #subtitle
     JOUR 12
@@ -410,19 +410,19 @@ Possibilité en option d’une croisière en dhow au coucher du soleil ou d’un
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/BmCbwJEiRAioWYpwhkR3.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/BmCbwJEiRAioWYpwhkR3.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/IpHvxy8SQziyvhPLIOXf.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/IpHvxy8SQziyvhPLIOXf.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/7ZvXT7VQ8m9LiIV1O0bt.jpg
+    image: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/7ZvXT7VQ8m9LiIV1O0bt.jpg
     ---
     :::::
     ::::

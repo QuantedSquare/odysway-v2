@@ -1,14 +1,14 @@
 {
   "title": "A cheval, à la rencontre des nomades en Mongolie",
   "slug": "voyage-cheval-mongolie",
-  "ISO": "MN",
+  "iso": "MN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-cheval-mongolie/sSgrEWvQ8GtQ8tCRSebB",
+    "alt": "sSgrEWvQ8GtQ8tCRSebB"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-cheval-mongolie/0psIU6BHSE2mj2IdYHJI.jpg",
+    "alt": "0psIU6BHSE2mj2IdYHJI"
   },
   "country": "Mongolie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 50,
       "privatized": false,
       "flyTicketPrice": 900
@@ -44,8 +44,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 50,
       "privatized": false,
       "flyTicketPrice": 900

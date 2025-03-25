@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/03GZYcbTRW9Fa6I7YvQO.jpg
+image-src: /images/voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg
 ---
 #title
 Découvrez l'art de la photo animalière dans le Jura
@@ -10,33 +10,33 @@ Découvrez l'art de la photo animalière dans le Jura
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/qdz0bUEuTeaJTikuWAYN.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/decouvrez-photo-animaliere-jura/qdz0bUEuTeaJTikuWAYN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/NQv95R13St69ovnoOd52.jpg
+image-src: /images/voyages/decouvrez-photo-animaliere-jura/NQv95R13St69ovnoOd52.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/5OdOk8Q4SZWMdtsKLZsJ.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/decouvrez-photo-animaliere-jura/5OdOk8Q4SZWMdtsKLZsJ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/47YID5uiTCGNS9JyCJla.jpg
+image-src: /images/voyages/decouvrez-photo-animaliere-jura/47YID5uiTCGNS9JyCJla.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/QabwQsreQMqBlrBnirFn.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/decouvrez-photo-animaliere-jura/QabwQsreQMqBlrBnirFn.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/EXeJQYjCSW2gq1z5ZZtM.jpg
+image-src: /images/voyages/decouvrez-photo-animaliere-jura/EXeJQYjCSW2gq1z5ZZtM.jpg
 ---
 ::::
   :::
@@ -124,7 +124,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/decouvrez-photo-animaliere-jura/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -134,7 +134,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
 
   :::highlights-row
   ---
-  image: /images/voyages/eT6zaBM3R3mBT1FK9ZDf.jpg
+  image: /images/voyages/decouvrez-photo-animaliere-jura/eT6zaBM3R3mBT1FK9ZDf.jpg
   ---
   ::::highlight-list-item
   Un véritable stage photo, axé sur les techniques de photographie animalière
@@ -194,7 +194,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
   
     :::day-row
     ---
-    image: /images/voyages/xB1DznRgTme22KVd8hkR.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/xB1DznRgTme22KVd8hkR.jpg
     ---
     #subtitle
     JOUR 1
@@ -209,7 +209,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
 
     :::day-row
     ---
-    image: /images/voyages/6P5jARhZTbacQ5PUIGAX.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/6P5jARhZTbacQ5PUIGAX.jpg
     ---
     #subtitle
     JOUR 2
@@ -224,7 +224,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
 
     :::day-row
     ---
-    image: /images/voyages/E8YX3edGQdCgyiTxVUsQ.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/E8YX3edGQdCgyiTxVUsQ.jpg
     ---
     #subtitle
     JOUR 3
@@ -239,7 +239,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
 
     :::day-row
     ---
-    image: /images/voyages/HGUo5JdgTxmlkVOtlMOc.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/HGUo5JdgTxmlkVOtlMOc.jpg
     ---
     #subtitle
     JOUR 4
@@ -254,7 +254,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
 
     :::day-row
     ---
-    image: /images/voyages/W3utfp7VQ2mD5EtB0X77.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/W3utfp7VQ2mD5EtB0X77.jpg
     ---
     #subtitle
     JOUR 5
@@ -269,7 +269,7 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
 
     :::day-row
     ---
-    image: /images/voyages/T5VfRB0BSO6dqnO41WN3.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/T5VfRB0BSO6dqnO41WN3.jpg
     ---
     #subtitle
     JOUR 6
@@ -298,19 +298,19 @@ Durant 6 jours, vous vivrez avec Fabien Bruggmann, un expert de la photographie 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/LeIJVWFyRESNwUqZbbUh.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/LeIJVWFyRESNwUqZbbUh.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/n9wUBgiQQXOpMlSkTEjA.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/n9wUBgiQQXOpMlSkTEjA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/3rSkeH4dTs2z4ocEIDqe.jpg
+    image: /images/voyages/decouvrez-photo-animaliere-jura/3rSkeH4dTs2z4ocEIDqe.jpg
     ---
     :::::
     ::::
@@ -332,7 +332,7 @@ Afin de vivre une belle aventure en immersion dans la vie d'un photographe anima
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/IaDITcXLQlaHtAyFFjYH.jpg
+    avatar: /images/voyages/decouvrez-photo-animaliere-jura/IaDITcXLQlaHtAyFFjYH.jpg
     ---
     #title
     Fabien Bruggmann
@@ -345,7 +345,7 @@ Afin de vivre une belle aventure en immersion dans la vie d'un photographe anima
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/GkFkhg3hRLqJiMxCl1Q2.jpg
+    avatar: /images/voyages/decouvrez-photo-animaliere-jura/GkFkhg3hRLqJiMxCl1Q2.jpg
     ---
     #title
     Virginie

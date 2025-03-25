@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/S7qbvJEtSjKkMue8ZhGV.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/S7qbvJEtSjKkMue8ZhGV.jpg
 ---
 #title
 Immersion culturelle à travers les paysages spectaculaires de Madagascar
@@ -10,113 +10,113 @@ Immersion culturelle à travers les paysages spectaculaires de Madagascar
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/f3Xrv7x6RyqnnTWuLzmg.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/f3Xrv7x6RyqnnTWuLzmg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/wNjjQYdRnSrEvgCK9oPF.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/wNjjQYdRnSrEvgCK9oPF.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/ayCbs8DTSLK94ljoanxy.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/ayCbs8DTSLK94ljoanxy.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/6Wp5yqyLRZGUYESteYeR.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/6Wp5yqyLRZGUYESteYeR.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/vyQQj8oQ1WCiLg9ZWbXQ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/madagascar-immersion-culturelle/vyQQj8oQ1WCiLg9ZWbXQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/gnCZLxIaSOKBI3oU4xb2.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/gnCZLxIaSOKBI3oU4xb2.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/v90MtZ24QLCLqdc5Iq3X.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/v90MtZ24QLCLqdc5Iq3X.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/A7aIWTdUTfWfpgQmLuBR.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/A7aIWTdUTfWfpgQmLuBR.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/MAPgFxXTS0SI7EFN1ckH.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/MAPgFxXTS0SI7EFN1ckH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/xlu5XnMTRpSgsa2s3vQk.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/xlu5XnMTRpSgsa2s3vQk.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ee1GFfwkQUaKiGbfpmff.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/madagascar-immersion-culturelle/ee1GFfwkQUaKiGbfpmff.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/RnqoQC9LRAw2TSx1f1wb.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/RnqoQC9LRAw2TSx1f1wb.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/hPwbaJRKQ0ONpkfFYfJF.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/hPwbaJRKQ0ONpkfFYfJF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/lM1pyUi1TZW3hymS7su2.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/lM1pyUi1TZW3hymS7su2.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/vE3LvMShGdiaWKKqVfQy.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/vE3LvMShGdiaWKKqVfQy.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/n1rwUGFyRniO12FteV2c.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/n1rwUGFyRniO12FteV2c.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/hwEl7qENSuyrUdeVESzn.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/madagascar-immersion-culturelle/hwEl7qENSuyrUdeVESzn.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/5Wgyo9MZRlKwQbr7kWCU.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/5Wgyo9MZRlKwQbr7kWCU.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/IGd4tR6IQn2dpDtVHsRE.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/IGd4tR6IQn2dpDtVHsRE.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5qOX6c1LQbaxF3Mw0JSd.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/5qOX6c1LQbaxF3Mw0JSd.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/SmBRT7EmQBxXUTWBgm7X.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/SmBRT7EmQBxXUTWBgm7X.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/utvhL8qtSJ6QyRyawDLQ.jpg
+image-src: /images/voyages/madagascar-immersion-culturelle/utvhL8qtSJ6QyRyawDLQ.jpg
 ---
 ::::
   :::
@@ -208,7 +208,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/A3sKplswR6KPbawu6lvx.jpg
+    avatar: /images/voyages/madagascar-immersion-culturelle/A3sKplswR6KPbawu6lvx.jpg
     avatar-size: "60"
     ---
     #title
@@ -218,7 +218,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
   :::highlights-row
   ---
-  image: /images/voyages/PLZeJvSDSKKsheIaOr8m.jpg
+  image: /images/voyages/madagascar-immersion-culturelle/PLZeJvSDSKKsheIaOr8m.jpg
   ---
   ::::highlight-list-item
   Rencontrez les peuples locaux et immergez-vous dans un village Zafimaniry
@@ -278,7 +278,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
   
     :::day-row
     ---
-    image: /images/voyages/EhYGbTsKQzuHfa3FGjhO.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/EhYGbTsKQzuHfa3FGjhO.jpg
     ---
     #subtitle
     JOUR 1 
@@ -293,7 +293,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/ywneiWPRU6Zxcf2m8RZH.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/ywneiWPRU6Zxcf2m8RZH.jpg
     ---
     #subtitle
     JOUR 2
@@ -308,7 +308,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/AWrAFWYSMebhSpt2D8z4.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/AWrAFWYSMebhSpt2D8z4.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -323,7 +323,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/5vnoSZUvS6m8oCO6Ubu7.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/5vnoSZUvS6m8oCO6Ubu7.jpg
     ---
     #subtitle
     JOURS 5 À 6
@@ -338,7 +338,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/3lERjuDJQieUdG9l65La.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/3lERjuDJQieUdG9l65La.jpg
     ---
     #subtitle
     JOUR 7
@@ -353,7 +353,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/hTcK7frmSHep7ENDl5yL.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/hTcK7frmSHep7ENDl5yL.jpg
     ---
     #subtitle
     JOURS 8 A 10
@@ -368,7 +368,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/2X6Lw8lmTTipfEqX3NUA.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/2X6Lw8lmTTipfEqX3NUA.jpg
     ---
     #subtitle
     JOUR 11
@@ -383,7 +383,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/IvGhUweTmSwfvRos3BcT.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/IvGhUweTmSwfvRos3BcT.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -398,7 +398,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/3Z9mrZnPQLqJB25M8bou.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/3Z9mrZnPQLqJB25M8bou.jpg
     ---
     #subtitle
     JOUR 14 ET 15
@@ -413,7 +413,7 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
 
     :::day-row
     ---
-    image: /images/voyages/1DfgVndyRiOvyiOAA0xg.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/1DfgVndyRiOvyiOAA0xg.jpg
     ---
     #subtitle
     JOUR 16
@@ -442,19 +442,19 @@ Ce séjour est fait pour vous si vous souhaitez faire des rencontres inoubliable
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/2RKMvbG0SMeCIaLHVNWg.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/2RKMvbG0SMeCIaLHVNWg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/qWzTOg2NRCmklSP6K5xH.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/qWzTOg2NRCmklSP6K5xH.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ZgefkdhRRNuwIAV3FIqg.jpg
+    image: /images/voyages/madagascar-immersion-culturelle/ZgefkdhRRNuwIAV3FIqg.jpg
     ---
     :::::
     ::::
@@ -616,7 +616,7 @@ Les avis des voyageurs
   
     ::::avis-carousel-item
     ---
-    photo: /images/voyages/LPmie3SJKWzcVtv3pQTb.jpg
+    photo: /images/voyages/madagascar-immersion-culturelle/LPmie3SJKWzcVtv3pQTb.jpg
     ---
     #title
     Maryline et Stéphane, [45 et 52 ans]{style="color: grey"}

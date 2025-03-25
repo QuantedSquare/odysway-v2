@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/t0YGWQMHSeS5gHCo4Ncs.jpg
+image-src: /images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg
 ---
 #title
 Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue
@@ -97,7 +97,7 @@ Laissez-vous porter par la magie de la mer Rouge et vivez une expérience mémor
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-dauphins-egypte/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -107,7 +107,7 @@ Laissez-vous porter par la magie de la mer Rouge et vivez une expérience mémor
 
   :::highlights-row
   ---
-  image: /images/voyages/R3IigocTQvyVLNZgKknl.jpg
+  image: /images/voyages/voyage-dauphins-egypte/R3IigocTQvyVLNZgKknl.jpg
   ---
   ::::highlight-list-item
   Rencontrez les dauphins sauvages de la mer Rouge lors d’approches respectueuses, encadrées par nos spécialistes, et contribuez activement à leur préservation.
@@ -167,7 +167,7 @@ Laissez-vous porter par la magie de la mer Rouge et vivez une expérience mémor
   
     :::day-row
     ---
-    image: /images/voyages/VbJMFmLYRs6fkaUBjeRJ.jpg
+    image: /images/voyages/voyage-dauphins-egypte/VbJMFmLYRs6fkaUBjeRJ.jpg
     ---
     #subtitle
     JOUR 1
@@ -182,7 +182,7 @@ Laissez-vous porter par la magie de la mer Rouge et vivez une expérience mémor
 
     :::day-row
     ---
-    image: /images/voyages/0EPSuUOtQIe8GDwmFDyt.jpg
+    image: /images/voyages/voyage-dauphins-egypte/0EPSuUOtQIe8GDwmFDyt.jpg
     ---
     #subtitle
     JOURS 2 A 7 : LE MATIN
@@ -197,7 +197,7 @@ Laissez-vous porter par la magie de la mer Rouge et vivez une expérience mémor
 
     :::day-row
     ---
-    image: /images/voyages/kG5ZnLItSNKxJuzIMFIR.jpg
+    image: /images/voyages/voyage-dauphins-egypte/kG5ZnLItSNKxJuzIMFIR.jpg
     ---
     #subtitle
     JOURS 2 A 7 : LE DEBUT D'APRES-MIDI
@@ -213,7 +213,7 @@ Embarquez en zodiac pour explorer les merveilles du lagon en palmes, masque et t
 
     :::day-row
     ---
-    image: /images/voyages/rvGIg6jwQzugA3vfCsaS.jpg
+    image: /images/voyages/voyage-dauphins-egypte/rvGIg6jwQzugA3vfCsaS.jpg
     ---
     #subtitle
     JOURS 2 A 7 : LA FIN D'APRES-MIDI
@@ -229,7 +229,7 @@ Sauf le jour 7 où l'après-midi sera consacré à la navigation retour près de
 
     :::day-row
     ---
-    image: /images/voyages/mdeqeiT6yzo4XQgkReQM.jpg
+    image: /images/voyages/voyage-dauphins-egypte/mdeqeiT6yzo4XQgkReQM.jpg
     ---
     #subtitle
     JOUR 8 
@@ -258,25 +258,25 @@ Sauf le jour 7 où l'après-midi sera consacré à la navigation retour près de
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/cHS8MdKwQdmQUT5c2XTA.jpg
+    image: /images/voyages/voyage-dauphins-egypte/cHS8MdKwQdmQUT5c2XTA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/RnWEMbB0RWaoVzOCXcvJ.jpg
+    image: /images/voyages/voyage-dauphins-egypte/RnWEMbB0RWaoVzOCXcvJ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/xZLR8rnWS7Www6kJtqGu.jpg
+    image: /images/voyages/voyage-dauphins-egypte/xZLR8rnWS7Www6kJtqGu.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/poowsyOvT06WaCiUPxlr.jpg
+    image: /images/voyages/voyage-dauphins-egypte/poowsyOvT06WaCiUPxlr.jpg
     ---
     :::::
     ::::
@@ -300,7 +300,7 @@ _Note : L’accompagnateur peut être remplacé pour des raisons techniques ou d
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/YcsFvmSBTcGZtu2SaK5S.jpg
+    avatar: /images/voyages/voyage-dauphins-egypte/YcsFvmSBTcGZtu2SaK5S.jpg
     ---
     #title
     Valérie Valton

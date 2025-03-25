@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/gGQOtr2TQg28vgyJDN1u.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg
 ---
 #title
 Observez les dauphins avec un biologiste marin en Grèce
@@ -10,77 +10,77 @@ Observez les dauphins avec un biologiste marin en Grèce
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/bzQw8mqJR4K9nloUKkSQ.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-etude-dauphins-grece/bzQw8mqJR4K9nloUKkSQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/6ZnaNC7SJuv8LqrRSp9d.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/6ZnaNC7SJuv8LqrRSp9d.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/j1FovjA3QG67Mc5Zv3x0.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-etude-dauphins-grece/j1FovjA3QG67Mc5Zv3x0.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/lRsy10VTmv68a2a3cOJA.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/lRsy10VTmv68a2a3cOJA.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/iiPRMLpSvWTTfEOov7Sc.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-etude-dauphins-grece/iiPRMLpSvWTTfEOov7Sc.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/SFb414puTeaeePBSnDSN.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/SFb414puTeaeePBSnDSN.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/55fWbN0TYWSNQbJC6nXN.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-etude-dauphins-grece/55fWbN0TYWSNQbJC6nXN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/F8fXe7IWRzuDV2cKI0F6.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/F8fXe7IWRzuDV2cKI0F6.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/PBosHsfWQwukejiL0ARh.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-etude-dauphins-grece/PBosHsfWQwukejiL0ARh.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/AAWTXwHdR8Ono4LjLjaB.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/AAWTXwHdR8Ono4LjLjaB.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/gC85mnUSdCBMuidzPu0b.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-etude-dauphins-grece/gC85mnUSdCBMuidzPu0b.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/c2lzVo2TkyFd2HDFQFUQ.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/c2lzVo2TkyFd2HDFQFUQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/dUbWAkIZQ1mG7fpUKrVg.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-etude-dauphins-grece/dUbWAkIZQ1mG7fpUKrVg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/XdCJ3kGfSECuHNrtrfYG.jpg
+image-src: /images/voyages/voyage-etude-dauphins-grece/XdCJ3kGfSECuHNrtrfYG.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/wM5w9rxASWadgEej9Nve.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-etude-dauphins-grece/wM5w9rxASWadgEej9Nve.jpg"}
 ::::
   :::
 ::
@@ -171,7 +171,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-etude-dauphins-grece/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -181,7 +181,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
 
   :::highlights-row
   ---
-  image: /images/voyages/uDNSq8qTAmHG9OEXz3zg.jpg
+  image: /images/voyages/voyage-etude-dauphins-grece/uDNSq8qTAmHG9OEXz3zg.jpg
   ---
   ::::highlight-list-item
   Les journées à bord d'Odysseia, à observer les dauphins et à se baigner dans les criques de la mer Egée
@@ -237,7 +237,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
   
     :::day-row
     ---
-    image: /images/voyages/fLOsmjJiT4WMJUoJnqFa.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/fLOsmjJiT4WMJUoJnqFa.jpg
     ---
     #subtitle
     JOURS 1 & 2
@@ -252,7 +252,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
 
     :::day-row
     ---
-    image: /images/voyages/Lh4nMNFkShu1lrJHT1Tt.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/Lh4nMNFkShu1lrJHT1Tt.jpg
     ---
     #subtitle
     JOUR 3
@@ -267,7 +267,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
 
     :::day-row
     ---
-    image: /images/voyages/L7rarPY8RKa7QjghDoxL.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/L7rarPY8RKa7QjghDoxL.jpg
     ---
     #subtitle
     JOUR 4 
@@ -282,7 +282,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
 
     :::day-row
     ---
-    image: /images/voyages/nGQVORg3RwqvN0U5qukN.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/nGQVORg3RwqvN0U5qukN.jpg
     ---
     #subtitle
     JOURS 5 À 8
@@ -297,7 +297,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
 
     :::day-row
     ---
-    image: /images/voyages/0tln2JxxTEqBegtUt3Z2.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/0tln2JxxTEqBegtUt3Z2.jpg
     ---
     #subtitle
     JOUR 9
@@ -326,19 +326,19 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/BJZAYgAR6u46cqaAhe9W.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/BJZAYgAR6u46cqaAhe9W.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/W6QQOzwvQo2QyPWpsqeo.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/W6QQOzwvQo2QyPWpsqeo.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/KXBpdZOSFCZszQ0RUSJu.jpg
+    image: /images/voyages/voyage-etude-dauphins-grece/KXBpdZOSFCZszQ0RUSJu.jpg
     ---
     :::::
     ::::
@@ -356,7 +356,7 @@ Ce voyage est idéal pour les voyageurs qui souhaitent vivre une expérience dif
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/oLfeYZdRQ8SsNjWICRUM.jpg
+    avatar: /images/voyages/voyage-etude-dauphins-grece/oLfeYZdRQ8SsNjWICRUM.jpg
     ---
     #title
     Kimonas

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/muOWBWDKTIGNfglRWVKY.jpg
+image-src: /images/voyages/trek-tour-annapurna-nepal/muOWBWDKTIGNfglRWVKY.jpg
 ---
 #title
 Vivez l'aventure mythique du Tour des Annapurnas au Népal
@@ -10,53 +10,53 @@ Vivez l'aventure mythique du Tour des Annapurnas au Népal
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/cgAFuKt7RJSQH099blg2.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/trek-tour-annapurna-nepal/cgAFuKt7RJSQH099blg2.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/OyiTh3zpQYqZwFYefRID.jpg
+image-src: /images/voyages/trek-tour-annapurna-nepal/OyiTh3zpQYqZwFYefRID.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/WOWmhZp4Qlma3RDBxI4D.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-tour-annapurna-nepal/WOWmhZp4Qlma3RDBxI4D.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/YPhGRNJTHCvpMvhrATR0.jpg
+image-src: /images/voyages/trek-tour-annapurna-nepal/YPhGRNJTHCvpMvhrATR0.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/qW9lRN5HRUpe0zPsSeiw.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/trek-tour-annapurna-nepal/qW9lRN5HRUpe0zPsSeiw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/qG03GXphRKaAE21oZ1P7.jpg
+image-src: /images/voyages/trek-tour-annapurna-nepal/qG03GXphRKaAE21oZ1P7.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/BPGGEWL4QhYDA2E6kdNC.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/trek-tour-annapurna-nepal/BPGGEWL4QhYDA2E6kdNC.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/ImbLRnLFRBCFoRf3xqau.jpg
+image-src: /images/voyages/trek-tour-annapurna-nepal/ImbLRnLFRBCFoRf3xqau.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/le2mhQrPTC6e6GVSEgNT.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/trek-tour-annapurna-nepal/le2mhQrPTC6e6GVSEgNT.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/QgQ8z0fiT2efuxnGDIRw.jpg
+image-src: /images/voyages/trek-tour-annapurna-nepal/QgQ8z0fiT2efuxnGDIRw.jpg
 ---
 ::::
   :::
@@ -150,7 +150,7 @@ Que vous soyez un passionné de marche invétéré ou un amoureux des grands esp
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/trek-tour-annapurna-nepal/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -160,7 +160,7 @@ Que vous soyez un passionné de marche invétéré ou un amoureux des grands esp
 
   :::highlights-row
   ---
-  image: /images/voyages/E7vtI9qSHqlT5nYKjsBw.jpg
+  image: /images/voyages/trek-tour-annapurna-nepal/E7vtI9qSHqlT5nYKjsBw.jpg
   ---
   ::::highlight-list-item
   Lancez vous sur le plus varié et ancien trek du Népal, considéré comme l'un des plus beaux au monde
@@ -220,7 +220,7 @@ Que vous soyez un passionné de marche invétéré ou un amoureux des grands esp
   
     :::day-row
     ---
-    image: /images/voyages/NVcQcDPjS8a8IIgIy8Sr.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/NVcQcDPjS8a8IIgIy8Sr.jpg
     ---
     #subtitle
     JOUR 1
@@ -235,7 +235,7 @@ Que vous soyez un passionné de marche invétéré ou un amoureux des grands esp
 
     :::day-row
     ---
-    image: /images/voyages/lfHoknsR8u85khkBYoph.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/lfHoknsR8u85khkBYoph.jpg
     ---
     #subtitle
     JOUR 2
@@ -253,7 +253,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/JJKL4zY5TtinTynhVdNc.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/JJKL4zY5TtinTynhVdNc.jpg
     ---
     #subtitle
     JOUR 3
@@ -269,7 +269,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/KzVeLYw4RYSH4QcolwlJ.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/KzVeLYw4RYSH4QcolwlJ.jpg
     ---
     #subtitle
     JOUR 4
@@ -284,7 +284,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/OMdH7LBITdS70hmvlTzA.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/OMdH7LBITdS70hmvlTzA.jpg
     ---
     #subtitle
     JOUR 5
@@ -299,7 +299,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/miDz1WdpTv6r5gxNjBPU.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/miDz1WdpTv6r5gxNjBPU.jpg
     ---
     #subtitle
     JOUR 6
@@ -319,7 +319,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/5FE1J2NgSlmJ7mBBN5y4.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/5FE1J2NgSlmJ7mBBN5y4.jpg
     ---
     #subtitle
     JOUR 7
@@ -335,7 +335,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/kudjrwZPToB6NSLhNg6C.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/kudjrwZPToB6NSLhNg6C.jpg
     ---
     #subtitle
     JOUR 8
@@ -353,7 +353,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/QWGy9UYQQGy1mqtm54os.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/QWGy9UYQQGy1mqtm54os.jpg
     ---
     #subtitle
     JOUR 9
@@ -368,7 +368,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/qG03GXphRKaAE21oZ1P7.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/qG03GXphRKaAE21oZ1P7.jpg
     ---
     #subtitle
     JOUR 10
@@ -383,7 +383,7 @@ Altitude à Dharapani : 1960m
 
     :::day-row
     ---
-    image: /images/voyages/rhDOB3xbTPqulcLPRDKw.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/rhDOB3xbTPqulcLPRDKw.jpg
     ---
     #subtitle
     JOUR 11
@@ -399,7 +399,7 @@ Environ 1h de route (23km)
 
     :::day-row
     ---
-    image: /images/voyages/pmO2YtqSEW8sierbx0A3.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/pmO2YtqSEW8sierbx0A3.jpg
     ---
     #subtitle
     JOUR 12
@@ -417,7 +417,7 @@ Vers 15/16 heures, vous arriverez à Pokhara (820m d'altitude), la deuxième plu
 
     :::day-row
     ---
-    image: /images/voyages/PKc4R8pfSPaZLf3VA87H.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/PKc4R8pfSPaZLf3VA87H.jpg
     ---
     #subtitle
     JOUR 13
@@ -439,7 +439,7 @@ Ce vol vous offre une expérience panoramique inoubliable reliant ces deux ville
 
     :::day-row
     ---
-    image: /images/voyages/oP60k17oSrqEL4mgpVPc.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/oP60k17oSrqEL4mgpVPc.jpg
     ---
     #subtitle
     JOUR 14
@@ -468,19 +468,19 @@ Ce vol vous offre une expérience panoramique inoubliable reliant ces deux ville
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/AlDB9MsqQoa7xDw0xfxG.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/AlDB9MsqQoa7xDw0xfxG.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/I5glHecWToqQbZsVpZ4u.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/I5glHecWToqQbZsVpZ4u.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/vnsYhER3TGaKzSI02wf1.jpg
+    image: /images/voyages/trek-tour-annapurna-nepal/vnsYhER3TGaKzSI02wf1.jpg
     ---
     :::::
     ::::

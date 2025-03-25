@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/o08YedTuTO2GxYxdml4H.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/o08YedTuTO2GxYxdml4H.jpg
 ---
 #title
 À la rencontre des habitants de la route de la soie en Ouzbékistan
@@ -10,67 +10,67 @@ image-src: /images/voyages/o08YedTuTO2GxYxdml4H.jpg
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/l3OGkpUBSxSjgB0pFabX.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/route-soie-ouzbekistan/l3OGkpUBSxSjgB0pFabX.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/yAJ98arHTnKeRNnvPCMG.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/yAJ98arHTnKeRNnvPCMG.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/7p2JQbI7SHmtOmPLcpHa.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/route-soie-ouzbekistan/7p2JQbI7SHmtOmPLcpHa.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/1AfV4nEPRfyjcCxCIg6J.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/1AfV4nEPRfyjcCxCIg6J.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/jBV2x7R0SvuYpqfhVsDY.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/route-soie-ouzbekistan/jBV2x7R0SvuYpqfhVsDY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/RE31XnkHQtOObEn9o4C6.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/RE31XnkHQtOObEn9o4C6.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/tSxnIzIsR4aioG2AKPOK.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/route-soie-ouzbekistan/tSxnIzIsR4aioG2AKPOK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/sBoLF4viRRiygJeoqotf.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/sBoLF4viRRiygJeoqotf.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/m1O1SOLPQeyFbLJNDRSw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/route-soie-ouzbekistan/m1O1SOLPQeyFbLJNDRSw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/9AJIDuqTXyygxyEn0YNM.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/9AJIDuqTXyygxyEn0YNM.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/jUIteeUKRBmNlYwJEt0Q.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/route-soie-ouzbekistan/jUIteeUKRBmNlYwJEt0Q.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/GEU9ZQd2nqbnLbNEcVA9.jpg
+image-src: /images/voyages/route-soie-ouzbekistan/GEU9ZQd2nqbnLbNEcVA9.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/BOGkIXRs2yoFcBEqvwEG.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/route-soie-ouzbekistan/BOGkIXRs2yoFcBEqvwEG.jpg"}
 ::::
   :::
 ::
@@ -157,7 +157,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/2MZG6CWYSZqc1yaulJvh.jpg
+    avatar: /images/voyages/route-soie-ouzbekistan/2MZG6CWYSZqc1yaulJvh.jpg
     avatar-size: "60"
     ---
     #title
@@ -167,7 +167,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
   :::highlights-row
   ---
-  image: /images/voyages/Cpz5x102Ts6ZCJr2WJpn.jpg
+  image: /images/voyages/route-soie-ouzbekistan/Cpz5x102Ts6ZCJr2WJpn.jpg
   ---
   ::::highlight-list-item
   Le trajet en train à travers des paysages à couper le souffle
@@ -227,7 +227,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
   
     :::day-row
     ---
-    image: /images/voyages/ts7PvdbcSH2yukIu4S8j.jpg
+    image: /images/voyages/route-soie-ouzbekistan/ts7PvdbcSH2yukIu4S8j.jpg
     ---
     #subtitle
     JOUR 1
@@ -244,7 +244,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/NX71WsnqQRKSTAahW7AT.jpg
+    image: /images/voyages/route-soie-ouzbekistan/NX71WsnqQRKSTAahW7AT.jpg
     ---
     #subtitle
     JOURS 2 À 3
@@ -259,7 +259,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/MIlPRzZcRkaycrIHPGag.jpg
+    image: /images/voyages/route-soie-ouzbekistan/MIlPRzZcRkaycrIHPGag.jpg
     ---
     #subtitle
     JOURS 4 ET 5
@@ -277,7 +277,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/WvxqcGC7SN2Vw5v8we1z.jpg
+    image: /images/voyages/route-soie-ouzbekistan/WvxqcGC7SN2Vw5v8we1z.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -292,7 +292,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/c3N8IXozSmW4yxuTDtez.jpg
+    image: /images/voyages/route-soie-ouzbekistan/c3N8IXozSmW4yxuTDtez.jpg
     ---
     #subtitle
     JOURS 8 ET 9
@@ -310,7 +310,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/BGT6u2NlRsH1M8BpaT0C.jpg
+    image: /images/voyages/route-soie-ouzbekistan/BGT6u2NlRsH1M8BpaT0C.jpg
     ---
     #subtitle
     JOURS 10 ET 11
@@ -327,7 +327,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/Nqvf30FQvaX6urGAqnco.jpg
+    image: /images/voyages/route-soie-ouzbekistan/Nqvf30FQvaX6urGAqnco.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -344,7 +344,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
 
     :::day-row
     ---
-    image: /images/voyages/11g4686pTvGRaYAlDlNl.jpg
+    image: /images/voyages/route-soie-ouzbekistan/11g4686pTvGRaYAlDlNl.jpg
     ---
     #subtitle
     JOUR 14
@@ -376,19 +376,19 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/6tr4nO9PQ0aJQe6n0J0i.jpg
+    image: /images/voyages/route-soie-ouzbekistan/6tr4nO9PQ0aJQe6n0J0i.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Od47BItBSlywiP3JCyFS.jpg
+    image: /images/voyages/route-soie-ouzbekistan/Od47BItBSlywiP3JCyFS.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/t21E07EyRHSHXhT2eyuW.jpg
+    image: /images/voyages/route-soie-ouzbekistan/t21E07EyRHSHXhT2eyuW.jpg
     ---
     :::::
     ::::
@@ -406,7 +406,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/EZsxdND8QLCtxtt1LPkW.jpg
+    avatar: /images/voyages/route-soie-ouzbekistan/EZsxdND8QLCtxtt1LPkW.jpg
     ---
     #title
     Bek
@@ -419,7 +419,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/h4VVuobqRiadNq9UvgMU.jpg
+    avatar: /images/voyages/route-soie-ouzbekistan/h4VVuobqRiadNq9UvgMU.jpg
     ---
     #title
     Ilyos

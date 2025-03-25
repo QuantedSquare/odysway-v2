@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/zvLsa1w8QCaf6WaWc3of.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/zvLsa1w8QCaf6WaWc3of.jpg
 ---
 #title
 Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité
@@ -10,67 +10,67 @@ Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/MBx8HQSRKSd6HtvTTZGA.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-japon/MBx8HQSRKSd6HtvTTZGA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5wj6lGPFTCGSIeF1TBVF.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/5wj6lGPFTCGSIeF1TBVF.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/kFgv7MPR6CxndHdBmjT9.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-japon/kFgv7MPR6CxndHdBmjT9.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/Q6yqLaRBS0mwXXbSr73O.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/Q6yqLaRBS0mwXXbSr73O.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/CdzQaYxlQdWMb0P1Cd8V.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-japon/CdzQaYxlQdWMb0P1Cd8V.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/8wp8bQcQQEikrQM7zNC8.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/8wp8bQcQQEikrQM7zNC8.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/jkpdvMNzQ6TH1kIbLUMw.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-japon/jkpdvMNzQ6TH1kIbLUMw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/TsmGKKlWQoGaj39KIv1e.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/TsmGKKlWQoGaj39KIv1e.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/GxOvCjNRS66u6dXA6oUi.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-japon/GxOvCjNRS66u6dXA6oUi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/vCJTO8H7SqyxOJi3f5tX.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/vCJTO8H7SqyxOJi3f5tX.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Mw8CO9OMQYubYz6kEGzE.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-japon/Mw8CO9OMQYubYz6kEGzE.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/nJQYqGHATTaF6zQToxql.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-japon/nJQYqGHATTaF6zQToxql.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/qkMNPSmSTiAVUek0BN6w.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-japon/qkMNPSmSTiAVUek0BN6w.jpg"}
 ::::
   :::#component-slot-2
   :::video-dialog
@@ -166,7 +166,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/uIFMXNX6S4ughf6X871F.jpg
+    avatar: /images/voyages/voyage-immersion-culturelle-japon/uIFMXNX6S4ughf6X871F.jpg
     avatar-size: "60"
     ---
     #title
@@ -176,7 +176,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
   :::highlights-row
   ---
-  image: /images/voyages/VgWfNXRjQ4it57R0RcKF.jpg
+  image: /images/voyages/voyage-immersion-culturelle-japon/VgWfNXRjQ4it57R0RcKF.jpg
   ---
   ::::highlight-list-item
   Découvrez le Japon avec Régis Defurnaux, votre guide conférencier, l’un des rares anthropologues occidentaux autorisés à suivre la formation des Geishas
@@ -236,7 +236,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
   
     :::day-row
     ---
-    image: /images/voyages/dRggKvTiuhjjVqtzO2Ug.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/dRggKvTiuhjjVqtzO2Ug.jpg
     ---
     #subtitle
     JOUR 1
@@ -252,7 +252,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
     :::day-row
     ---
-    image: /images/voyages/fReZiIzVQViCAdvqnoJL.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/fReZiIzVQViCAdvqnoJL.jpg
     ---
     #subtitle
     JOUR 2
@@ -267,7 +267,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
     :::day-row
     ---
-    image: /images/voyages/CzXy6TfTTIKtOKZWB91j.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/CzXy6TfTTIKtOKZWB91j.jpg
     ---
     #subtitle
     JOUR 3
@@ -282,7 +282,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
     :::day-row
     ---
-    image: /images/voyages/MJrijzGERIG1n9oqXElL.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/MJrijzGERIG1n9oqXElL.jpg
     ---
     #subtitle
     JOUR 4
@@ -297,7 +297,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
     :::day-row
     ---
-    image: /images/voyages/tcOWLjjWRpyN69xoYqQz.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/tcOWLjjWRpyN69xoYqQz.jpg
     ---
     #subtitle
     JOUR 5
@@ -312,7 +312,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
     :::day-row
     ---
-    image: /images/voyages/4VSIIE5NQ16QalmcfUTy.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/4VSIIE5NQ16QalmcfUTy.jpg
     ---
     #subtitle
     JOUR 6
@@ -327,7 +327,7 @@ Tout au long de notre voyage, nous prendrons le temps pour rencontrer « les dif
 
     :::day-row
     ---
-    image: /images/voyages/vIvAf0hmSkKpEyHrOu35.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/vIvAf0hmSkKpEyHrOu35.jpg
     ---
     #subtitle
     JOURS 7 & 8
@@ -343,7 +343,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
 
     :::day-row
     ---
-    image: /images/voyages/P4JAclcQNmdy3GOr6WYX.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/P4JAclcQNmdy3GOr6WYX.jpg
     ---
     #subtitle
     JOUR 9
@@ -358,7 +358,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
 
     :::day-row
     ---
-    image: /images/voyages/9oVkJFP5Q3CQASjeACgT.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/9oVkJFP5Q3CQASjeACgT.jpg
     ---
     #subtitle
     JOUR 10
@@ -373,7 +373,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
 
     :::day-row
     ---
-    image: /images/voyages/9mDo1RE7S2qFL07TJyB3.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/9mDo1RE7S2qFL07TJyB3.jpg
     ---
     #subtitle
     JOUR 11
@@ -388,7 +388,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
 
     :::day-row
     ---
-    image: /images/voyages/tUBTUzODRQmLYJyhmNfK.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/tUBTUzODRQmLYJyhmNfK.jpg
     ---
     #subtitle
     JOUR 12
@@ -417,19 +417,19 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/uxXwV9TdSOSOKD759PUF.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/uxXwV9TdSOSOKD759PUF.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/vVzjq2GvST6psQDg6Han.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/vVzjq2GvST6psQDg6Han.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/q8SFnvNT7iDtpu1q6M9r.jpg
+    image: /images/voyages/voyage-immersion-culturelle-japon/q8SFnvNT7iDtpu1q6M9r.jpg
     ---
     :::::
     ::::
@@ -447,7 +447,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/uIFMXNX6S4ughf6X871F.jpg
+    avatar: /images/voyages/voyage-immersion-culturelle-japon/uIFMXNX6S4ughf6X871F.jpg
     ---
     #title
     Régis Defurnaux

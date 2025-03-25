@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/rkwkGlNTJinuNd1jvHx6.jpg
+image-src: /images/voyages/voyage-immersif-vietnam/rkwkGlNTJinuNd1jvHx6.jpg
 ---
 #title
 Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale
@@ -95,7 +95,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-immersif-vietnam/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -105,7 +105,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
   :::highlights-row
   ---
-  image: /images/voyages/HWp5LdV0TVq9qE9aMqbn.jpg
+  image: /images/voyages/voyage-immersif-vietnam/HWp5LdV0TVq9qE9aMqbn.jpg
   ---
   ::::highlight-list-item
   Flânez dans les ruelles animées de Hanoi, entre les stands de street food et les échoppes traditionnelles
@@ -169,7 +169,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
   
     :::day-row
     ---
-    image: /images/voyages/Ri3BCJwJTL2mZjJ4nfCQ.jpg
+    image: /images/voyages/voyage-immersif-vietnam/Ri3BCJwJTL2mZjJ4nfCQ.jpg
     ---
     #subtitle
     JOUR 1
@@ -184,7 +184,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
     :::day-row
     ---
-    image: /images/voyages/GKtyVbNEToK2j9S7zymt.jpg
+    image: /images/voyages/voyage-immersif-vietnam/GKtyVbNEToK2j9S7zymt.jpg
     ---
     #subtitle
     JOUR 2
@@ -199,7 +199,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
     :::day-row
     ---
-    image: /images/voyages/2XLxrPSNQCOsIoSm6eNT.jpg
+    image: /images/voyages/voyage-immersif-vietnam/2XLxrPSNQCOsIoSm6eNT.jpg
     ---
     #subtitle
     JOUR 3
@@ -218,7 +218,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
     :::day-row
     ---
-    image: /images/voyages/Mdz6ctHSfuNYB0kuhKAx.jpg
+    image: /images/voyages/voyage-immersif-vietnam/Mdz6ctHSfuNYB0kuhKAx.jpg
     ---
     #subtitle
     JOUR 4
@@ -233,7 +233,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
     :::day-row
     ---
-    image: /images/voyages/BTVIi6I7TDG9kQeuzIxZ.jpg
+    image: /images/voyages/voyage-immersif-vietnam/BTVIi6I7TDG9kQeuzIxZ.jpg
     ---
     #subtitle
     JOUR 5
@@ -248,7 +248,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
     :::day-row
     ---
-    image: /images/voyages/UjpRtoNHTIGeyyQ24TQh.jpg
+    image: /images/voyages/voyage-immersif-vietnam/UjpRtoNHTIGeyyQ24TQh.jpg
     ---
     #subtitle
     JOUR 6
@@ -263,7 +263,7 @@ Un voyage qui vous emmène à la découverte de l'essence du Vietnam, de sa cult
 
     :::day-row
     ---
-    image: /images/voyages/tYihkP2kTIOL7MuyBBXd.jpg
+    image: /images/voyages/voyage-immersif-vietnam/tYihkP2kTIOL7MuyBBXd.jpg
     ---
     #subtitle
     JOURS 7 ET 8
@@ -279,7 +279,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
 
     :::day-row
     ---
-    image: /images/voyages/GJTIfU2ISNubMxGzReFK.jpg
+    image: /images/voyages/voyage-immersif-vietnam/GJTIfU2ISNubMxGzReFK.jpg
     ---
     #subtitle
     JOUR 9
@@ -294,7 +294,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
 
     :::day-row
     ---
-    image: /images/voyages/vImIaB6JTVCYSvST3mci.jpg
+    image: /images/voyages/voyage-immersif-vietnam/vImIaB6JTVCYSvST3mci.jpg
     ---
     #subtitle
     JOUR 10
@@ -309,7 +309,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
 
     :::day-row
     ---
-    image: /images/voyages/561V6zgjQcGl6mhrwTI5.jpg
+    image: /images/voyages/voyage-immersif-vietnam/561V6zgjQcGl6mhrwTI5.jpg
     ---
     #subtitle
     JOUR 11
@@ -324,7 +324,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
 
     :::day-row
     ---
-    image: /images/voyages/45StGXgzRM2tDyZnGANA.jpg
+    image: /images/voyages/voyage-immersif-vietnam/45StGXgzRM2tDyZnGANA.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -339,7 +339,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
 
     :::day-row
     ---
-    image: /images/voyages/XXxle7lFQcuvOBbC3VFN.jpg
+    image: /images/voyages/voyage-immersif-vietnam/XXxle7lFQcuvOBbC3VFN.jpg
     ---
     #subtitle
     JOUR 14
@@ -368,25 +368,25 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/8TKC3haR1OvEi7MxOXQP.jpg
+    image: /images/voyages/voyage-immersif-vietnam/8TKC3haR1OvEi7MxOXQP.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/uRvNhTAjS3W9SAJqDRu3.jpg
+    image: /images/voyages/voyage-immersif-vietnam/uRvNhTAjS3W9SAJqDRu3.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/tDtaKlUTfOZy8lMDl7dw.jpg
+    image: /images/voyages/voyage-immersif-vietnam/tDtaKlUTfOZy8lMDl7dw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/hqIlY3zxRPuiyNfDPlFW.jpg
+    image: /images/voyages/voyage-immersif-vietnam/hqIlY3zxRPuiyNfDPlFW.jpg
     ---
     :::::
     ::::

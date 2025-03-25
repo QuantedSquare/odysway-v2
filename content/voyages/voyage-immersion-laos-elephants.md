@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/7UF5O3PnTSOSHDMOcLCB.jpg
+image-src: /images/voyages/voyage-immersion-laos-elephants/7UF5O3PnTSOSHDMOcLCB.jpg
 ---
 #title
 Voyage au Laos : rencontres avec les éléphants et communautés locales
@@ -10,57 +10,57 @@ Voyage au Laos : rencontres avec les éléphants et communautés locales
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/pI339gVqRWqxxSFg8DUk.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-laos-elephants/pI339gVqRWqxxSFg8DUk.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/9bhgQ17QCLMSbOFTX6AH.jpg
+image-src: /images/voyages/voyage-immersion-laos-elephants/9bhgQ17QCLMSbOFTX6AH.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/u52eSy8eTxOUr8wX1qqK.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-laos-elephants/u52eSy8eTxOUr8wX1qqK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/0raJw9A9TmX6YTUEVzr2.jpg
+image-src: /images/voyages/voyage-immersion-laos-elephants/0raJw9A9TmX6YTUEVzr2.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/qKrKgLysR025GLk7d1eZ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-laos-elephants/qKrKgLysR025GLk7d1eZ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/OoKoEKoZTX6Ua3EYmqNs.jpg
+image-src: /images/voyages/voyage-immersion-laos-elephants/OoKoEKoZTX6Ua3EYmqNs.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/MF4ky6kdTdCXcccUtQ2R.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-laos-elephants/MF4ky6kdTdCXcccUtQ2R.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/cAqjL4jORoGwPL4UI7Ao.jpg
+image-src: /images/voyages/voyage-immersion-laos-elephants/cAqjL4jORoGwPL4UI7Ao.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/J5q5rt0bTCfYBeCJYzbz.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-laos-elephants/J5q5rt0bTCfYBeCJYzbz.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/o92rUiUqTWKBvMyXShRc.jpg
+image-src: /images/voyages/voyage-immersion-laos-elephants/o92rUiUqTWKBvMyXShRc.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/HRhrySSeSoqQUDH79PmR.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-laos-elephants/HRhrySSeSoqQUDH79PmR.jpg"}
 ::::
   :::
 ::
@@ -151,7 +151,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-immersion-laos-elephants/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -161,7 +161,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
   :::highlights-row
   ---
-  image: /images/voyages/IlcYSdTNRUWpZdXAdji7.jpg
+  image: /images/voyages/voyage-immersion-laos-elephants/IlcYSdTNRUWpZdXAdji7.jpg
   ---
   ::::highlight-list-item
   La journée de croisière sur le Mékong sur un bateau familial traditionnel
@@ -221,7 +221,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
   
     :::day-row
     ---
-    image: /images/voyages/ZIlG4F8CQCKuJDKq5smF.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/ZIlG4F8CQCKuJDKq5smF.jpg
     ---
     #subtitle
     JOUR 1 
@@ -236,7 +236,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/q6RQwtP5QyCdxn7IGozQ.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/q6RQwtP5QyCdxn7IGozQ.jpg
     ---
     #subtitle
     JOUR 2
@@ -251,7 +251,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/PS2JpKo7TIik0Ax2nqjl.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/PS2JpKo7TIik0Ax2nqjl.jpg
     ---
     #subtitle
     JOUR 3
@@ -266,7 +266,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/oS1TK2J7Se3Yu5VKiQXm.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/oS1TK2J7Se3Yu5VKiQXm.jpg
     ---
     #subtitle
     JOUR 4
@@ -281,7 +281,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/58DdwrFeTzWvpKkSW8By.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/58DdwrFeTzWvpKkSW8By.jpg
     ---
     #subtitle
     JOUR 5
@@ -296,7 +296,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/DdbC60djT0iQMZPOH0aS.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/DdbC60djT0iQMZPOH0aS.jpg
     ---
     #subtitle
     JOUR 6
@@ -313,7 +313,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/nJu57AbRS1aWfnIa56Hd.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/nJu57AbRS1aWfnIa56Hd.jpg
     ---
     #subtitle
     JOUR 7
@@ -328,7 +328,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/gz5Tk77iQIyprKyQGeoX.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/gz5Tk77iQIyprKyQGeoX.jpg
     ---
     #subtitle
     JOUR 8
@@ -343,7 +343,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/r3W9DqajReuYMTY5eFZe.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/r3W9DqajReuYMTY5eFZe.jpg
     ---
     #subtitle
     JOUR 9
@@ -363,7 +363,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/nldttJzgSQ2qBNfGEwbH.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/nldttJzgSQ2qBNfGEwbH.jpg
     ---
     #subtitle
     JOUR 10
@@ -379,7 +379,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/k0ttJdrGSwilKEa6vvTw.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/k0ttJdrGSwilKEa6vvTw.jpg
     ---
     #subtitle
     JOUR 11
@@ -394,7 +394,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/jRkbBMjSB6zLKh0Hs3bb.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/jRkbBMjSB6zLKh0Hs3bb.jpg
     ---
     #subtitle
     JOUR 12
@@ -409,7 +409,7 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
 
     :::day-row
     ---
-    image: /images/voyages/ENApXU9WQ2CqnHAJLs2H.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/ENApXU9WQ2CqnHAJLs2H.jpg
     ---
     #subtitle
     JOUR 13
@@ -438,19 +438,19 @@ Un voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moment
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/xYoxQuYHRWacPYgapxhy.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/xYoxQuYHRWacPYgapxhy.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/7Ut7130fSCOvfiQYdTh2.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/7Ut7130fSCOvfiQYdTh2.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/JgAykyRmRGSriJsdPKdm.jpg
+    image: /images/voyages/voyage-immersion-laos-elephants/JgAykyRmRGSriJsdPKdm.jpg
     ---
     :::::
     ::::

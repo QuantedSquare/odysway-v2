@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/UeAQzWrBSA6rs8EyNeeJ.jpg
+image-src: /images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg
 ---
 #title
 Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó
@@ -10,87 +10,87 @@ image-src: /images/voyages/UeAQzWrBSA6rs8EyNeeJ.jpg
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/j0ZjFWffQ8C2Yet202JL.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-colombie/j0ZjFWffQ8C2Yet202JL.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/DahB6X8Sjuxr1n0gMtGi.jpg
+image-src: /images/voyages/voyage-immersion-colombie/DahB6X8Sjuxr1n0gMtGi.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/lUzdUC3YRHO0YesNn5Oi.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-colombie/lUzdUC3YRHO0YesNn5Oi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/rsJx84xTYCpxYgV64kr4.jpg
+image-src: /images/voyages/voyage-immersion-colombie/rsJx84xTYCpxYgV64kr4.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/EqrWl4GTpGHrBl8Iq2j4.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-colombie/EqrWl4GTpGHrBl8Iq2j4.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/XOgptkQsRTSDzUH94MLe.jpg
+image-src: /images/voyages/voyage-immersion-colombie/XOgptkQsRTSDzUH94MLe.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/nqrz7kyTqe2Y4ESzJfGQ.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-colombie/nqrz7kyTqe2Y4ESzJfGQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/GbzmXOpTfi0ojEphvdVw.jpg
+image-src: /images/voyages/voyage-immersion-colombie/GbzmXOpTfi0ojEphvdVw.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/rJfxhDS7Q9mIiXqvTOJO.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-colombie/rJfxhDS7Q9mIiXqvTOJO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/rqHAVhj1TMOkIp9m92uB.jpg
+image-src: /images/voyages/voyage-immersion-colombie/rqHAVhj1TMOkIp9m92uB.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/ECRTp8ryQT8QQ5BEiwYd.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-colombie/ECRTp8ryQT8QQ5BEiwYd.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/saluSVSzRpW6VyxerCGv.jpg
+image-src: /images/voyages/voyage-immersion-colombie/saluSVSzRpW6VyxerCGv.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/ogEpQPBFRHqtCdb0aZSi.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-colombie/ogEpQPBFRHqtCdb0aZSi.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/WUnsYre5Q7GhUx0YbewM.jpg
+image-src: /images/voyages/voyage-immersion-colombie/WUnsYre5Q7GhUx0YbewM.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/WqILpS9qSEyef7k0Na86.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-colombie/WqILpS9qSEyef7k0Na86.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/E8AcVpvhTFGpyn3uuR2w.jpg
+image-src: /images/voyages/voyage-immersion-colombie/E8AcVpvhTFGpyn3uuR2w.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/OsqA8939SHqcRHyioRln.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-colombie/OsqA8939SHqcRHyioRln.jpg"}
 ::::
   :::
 ::
@@ -179,7 +179,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/l9j05M3SmZqGtC3aro3Q.jpg
+    avatar: /images/voyages/voyage-immersion-colombie/l9j05M3SmZqGtC3aro3Q.jpg
     avatar-size: "60"
     ---
     #title
@@ -189,7 +189,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
   :::highlights-row
   ---
-  image: /images/voyages/RVrO1r7jSsevWJ5Rllpw.jpg
+  image: /images/voyages/voyage-immersion-colombie/RVrO1r7jSsevWJ5Rllpw.jpg
   ---
   ::::highlight-list-item
   Découvrez la région du café pour vivre la Colombie traditionnelle
@@ -249,7 +249,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
   
     :::day-row
     ---
-    image: /images/voyages/BlusygzLSsiA3LfkT2JT.jpg
+    image: /images/voyages/voyage-immersion-colombie/BlusygzLSsiA3LfkT2JT.jpg
     ---
     #subtitle
     JOURS 1  ET 2
@@ -264,7 +264,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/s56kBiJKRPSdE3Ukk6id.jpg
+    image: /images/voyages/voyage-immersion-colombie/s56kBiJKRPSdE3Ukk6id.jpg
     ---
     #subtitle
     JOUR 3
@@ -279,7 +279,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/icZrKgv3TniMpJRQ7Axc.jpg
+    image: /images/voyages/voyage-immersion-colombie/icZrKgv3TniMpJRQ7Axc.jpg
     ---
     #subtitle
     JOURS 4 ET 5
@@ -294,7 +294,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/pKsCNrMaSWuI7I5kl1Vw.jpg
+    image: /images/voyages/voyage-immersion-colombie/pKsCNrMaSWuI7I5kl1Vw.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -309,7 +309,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/ScvnZtUSmCNsKh0ZFggl.jpg
+    image: /images/voyages/voyage-immersion-colombie/ScvnZtUSmCNsKh0ZFggl.jpg
     ---
     #subtitle
     JOUR 8
@@ -324,7 +324,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/J8otk45aTU2Eob2w0G20.jpg
+    image: /images/voyages/voyage-immersion-colombie/J8otk45aTU2Eob2w0G20.jpg
     ---
     #subtitle
     JOUR 9
@@ -339,7 +339,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/WGHEFIJlSgiPbhAWmrbz.jpg
+    image: /images/voyages/voyage-immersion-colombie/WGHEFIJlSgiPbhAWmrbz.jpg
     ---
     #subtitle
     JOURS 10 A 12
@@ -354,7 +354,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/F4tmm9eTOyhMMizXZ8oo.jpg
+    image: /images/voyages/voyage-immersion-colombie/F4tmm9eTOyhMMizXZ8oo.jpg
     ---
     #subtitle
     JOURS 10 A 12
@@ -369,7 +369,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/sgeLuv1TZehEE1G9mYQY.jpg
+    image: /images/voyages/voyage-immersion-colombie/sgeLuv1TZehEE1G9mYQY.jpg
     ---
     #subtitle
     JOUR 13
@@ -385,7 +385,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
 
     :::day-row
     ---
-    image: /images/voyages/p4RdLU1rRoOFSLE0gRYB.jpg
+    image: /images/voyages/voyage-immersion-colombie/p4RdLU1rRoOFSLE0gRYB.jpg
     ---
     #subtitle
     JOUR 14
@@ -414,19 +414,19 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/s7NcA6VlQveCtRs9PhwT.jpg
+    image: /images/voyages/voyage-immersion-colombie/s7NcA6VlQveCtRs9PhwT.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/DhoSm0IjQOucrG9IkgS6.jpg
+    image: /images/voyages/voyage-immersion-colombie/DhoSm0IjQOucrG9IkgS6.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/fdWuG1MpQXKF2L0QjWuv.jpg
+    image: /images/voyages/voyage-immersion-colombie/fdWuG1MpQXKF2L0QjWuv.jpg
     ---
     :::::
     ::::
@@ -444,7 +444,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/bRfKGMZQQSdM6IDwqVpg.jpg
+    avatar: /images/voyages/voyage-immersion-colombie/bRfKGMZQQSdM6IDwqVpg.jpg
     ---
     #title
     Viviana
@@ -457,7 +457,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/JmGAjlT9QoSS72jU7NTq.jpg
+    avatar: /images/voyages/voyage-immersion-colombie/JmGAjlT9QoSS72jU7NTq.jpg
     ---
     #title
     Diana
@@ -470,7 +470,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/Ywo0CrjzTSqyaLb42Ygy.jpg
+    avatar: /images/voyages/voyage-immersion-colombie/Ywo0CrjzTSqyaLb42Ygy.jpg
     ---
     #title
     Laura

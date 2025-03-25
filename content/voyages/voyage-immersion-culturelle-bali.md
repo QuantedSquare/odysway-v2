@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/9ElqH6ahQUuaoHPLoBFB.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/9ElqH6ahQUuaoHPLoBFB.jpg
 ---
 #title
 Immersion culturelle au coeur des traditions d’une famille balinaise
@@ -10,67 +10,67 @@ Immersion culturelle au coeur des traditions d’une famille balinaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/8TqRnowiSLWijOM8P0pG.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-bali/8TqRnowiSLWijOM8P0pG.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Ex4oHrorQyG63VUamoal.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/Ex4oHrorQyG63VUamoal.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/XeIiQTUFRD2y2VRel3XQ.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-bali/XeIiQTUFRD2y2VRel3XQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/iLdo6AAPQv6GInL0MfuQ.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/iLdo6AAPQv6GInL0MfuQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/LRKcxSrxQ1Cf0RYmFBN7.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-bali/LRKcxSrxQ1Cf0RYmFBN7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/HrT6uuQASGucpveDP7QJ.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/HrT6uuQASGucpveDP7QJ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/ckoS0sq3SR2sosiS9HAj.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-bali/ckoS0sq3SR2sosiS9HAj.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/33uCMbQwSu2rLFWF3KOs.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/33uCMbQwSu2rLFWF3KOs.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/lU5h4nZSfe3qcffNNv12.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-bali/lU5h4nZSfe3qcffNNv12.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/hVDfW4lyQVCQwJXh7bQr.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/hVDfW4lyQVCQwJXh7bQr.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/pWDvdNX9Q9qYpusO8zXN.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-bali/pWDvdNX9Q9qYpusO8zXN.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/zYg8cSmT1CIxcYu0BtEQ.jpg
+image-src: /images/voyages/voyage-immersion-culturelle-bali/zYg8cSmT1CIxcYu0BtEQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/NnRuEfanQdaTiIr4mDJt.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-bali/NnRuEfanQdaTiIr4mDJt.jpg"}
 ::::
   :::
 ::
@@ -159,7 +159,7 @@ Entre traditions vivantes et paysages enchanteurs, ce séjour vous permettra de 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/voyage-immersion-culturelle-bali/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -169,7 +169,7 @@ Entre traditions vivantes et paysages enchanteurs, ce séjour vous permettra de 
 
   :::highlights-row
   ---
-  image: /images/voyages/IDXIBwvrRjmL0gAS9Q1d.jpg
+  image: /images/voyages/voyage-immersion-culturelle-bali/IDXIBwvrRjmL0gAS9Q1d.jpg
   ---
   ::::highlight-list-item
   Plongez au cœur des paysages balinais, entre rizières en terrasses, volcans majestueux et lacs enchanteurs
@@ -233,7 +233,7 @@ Entre traditions vivantes et paysages enchanteurs, ce séjour vous permettra de 
   
     :::day-row
     ---
-    image: /images/voyages/HIA6J1vZSymXHE5SigIX.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/HIA6J1vZSymXHE5SigIX.jpg
     ---
     #subtitle
     JOUR 1
@@ -248,7 +248,7 @@ Entre traditions vivantes et paysages enchanteurs, ce séjour vous permettra de 
 
     :::day-row
     ---
-    image: /images/voyages/GLK49ePVRoqtZCSWcXkb.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/GLK49ePVRoqtZCSWcXkb.jpg
     ---
     #subtitle
     JOUR 2
@@ -264,7 +264,7 @@ Dans l’après-midi, si vous le souhaitez, partez pour une balade d’environ 2
 
     :::day-row
     ---
-    image: /images/voyages/zLmQaqeuSKFAtujtjPTQ.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/zLmQaqeuSKFAtujtjPTQ.jpg
     ---
     #subtitle
     JOUR 3
@@ -280,7 +280,7 @@ Apprenez ensuite à cuisiner des plats locaux lors d’un atelier culinaire que 
 
     :::day-row
     ---
-    image: /images/voyages/M3ZI4K2lRiGn2IVBHFvX.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/M3ZI4K2lRiGn2IVBHFvX.jpg
     ---
     #subtitle
     JOUR 4
@@ -296,7 +296,7 @@ Vous participerez ensuite à une cérémonie de purification appelée Melukat, u
 
     :::day-row
     ---
-    image: /images/voyages/tnQUr6YATwCBu3mdElBm.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/tnQUr6YATwCBu3mdElBm.jpg
     ---
     #subtitle
     JOUR 5
@@ -312,7 +312,7 @@ Votre itinéraire vous mène ensuite au Gunung Kawi Tampaksiring, avec ses impre
 
     :::day-row
     ---
-    image: /images/voyages/WVZoYS2WT3uGAxbs8kwf.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/WVZoYS2WT3uGAxbs8kwf.jpg
     ---
     #subtitle
     JOUR 6
@@ -329,7 +329,7 @@ Dans l’après-midi, initiez-vous à ces mélodies fascinantes, avant d’assis
 
     :::day-row
     ---
-    image: /images/voyages/EbkP28XhSyehXpbeT5tw.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/EbkP28XhSyehXpbeT5tw.jpg
     ---
     #subtitle
     JOUR 7
@@ -346,7 +346,7 @@ Descendez ensuite dans la caldeira pour explorer de près ces coulées de lave f
 
     :::day-row
     ---
-    image: /images/voyages/yoPEocKDTHmXavtNH7Gc.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/yoPEocKDTHmXavtNH7Gc.jpg
     ---
     #subtitle
     JOUR 8
@@ -363,7 +363,7 @@ L’après-midi, partez pour une marche immersive à travers cette nature luxuri
 
     :::day-row
     ---
-    image: /images/voyages/qWygQpYpQWDIJ6sfwZig.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/qWygQpYpQWDIJ6sfwZig.jpg
     ---
     #subtitle
     JOUR 9
@@ -381,7 +381,7 @@ Pour les amateurs d’aventure, une excursion en bateau autour de l’île de Me
 
     :::day-row
     ---
-    image: /images/voyages/Tgz0rikRCOekgvIrLTzN.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/Tgz0rikRCOekgvIrLTzN.jpg
     ---
     #subtitle
     JOUR 10
@@ -400,7 +400,7 @@ Dans l’après-midi, partez en balade pour explorer la nature environnante. Dé
 
     :::day-row
     ---
-    image: /images/voyages/LRKcxSrxQ1Cf0RYmFBN7.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/LRKcxSrxQ1Cf0RYmFBN7.jpg
     ---
     #subtitle
     JOUR 11
@@ -419,7 +419,7 @@ Visitez ensuite le majestueux temple d’Ulun Danau, emblématique avec son toit
 
     :::day-row
     ---
-    image: /images/voyages/IBj7hB0tQlWEqHeTDthj.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/IBj7hB0tQlWEqHeTDthj.jpg
     ---
     #subtitle
     JOUR 12
@@ -438,7 +438,7 @@ Détendez-vous en profitant de la piscine, d’un massage balinais ou d’une ba
 
     :::day-row
     ---
-    image: /images/voyages/lf9w0AHIRqWLKyO4TKVt.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/lf9w0AHIRqWLKyO4TKVt.jpg
     ---
     #subtitle
     JOUR 13
@@ -470,19 +470,19 @@ Détendez-vous en profitant de la piscine, d’un massage balinais ou d’une ba
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/K7dlZLJTdKeUUZLDDKUg.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/K7dlZLJTdKeUUZLDDKUg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ddZCnZYuT46Y0tZ7TrQJ.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/ddZCnZYuT46Y0tZ7TrQJ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/8O4wc0LRuSSG9BLrHVdz.jpg
+    image: /images/voyages/voyage-immersion-culturelle-bali/8O4wc0LRuSSG9BLrHVdz.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/uUlHz9bETycICVXKxWAH.jpg
+image-src: /images/voyages/voyage-immersif-rajasthan-inde/uUlHz9bETycICVXKxWAH.jpg
 ---
 #title
 Voyage au Rajasthan : éveil des sens au cœur de l'Inde
@@ -10,33 +10,33 @@ Voyage au Rajasthan : éveil des sens au cœur de l'Inde
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/Fgj2EFc1TmGlY2ki6uov.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-rajasthan-inde/Fgj2EFc1TmGlY2ki6uov.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/wHrupdHSQ7yyhCLSNUVY.jpg
+image-src: /images/voyages/voyage-immersif-rajasthan-inde/wHrupdHSQ7yyhCLSNUVY.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/x8Xa1cn8SRKgnxK8nhpv.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-rajasthan-inde/x8Xa1cn8SRKgnxK8nhpv.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/6X8SLc5RZOPMFYdV52bx.jpg
+image-src: /images/voyages/voyage-immersif-rajasthan-inde/6X8SLc5RZOPMFYdV52bx.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/asgNhycERGqNB584nYdZ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-rajasthan-inde/asgNhycERGqNB584nYdZ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/BCH8viUJSWGzwyjBD4YJ.jpg
+image-src: /images/voyages/voyage-immersif-rajasthan-inde/BCH8viUJSWGzwyjBD4YJ.jpg
 ---
 ::::
   :::
@@ -128,7 +128,7 @@ Ce sont aussi les rencontres avec les locaux, artisans, cuisiniers, guides que v
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/voyage-immersif-rajasthan-inde/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -138,7 +138,7 @@ Ce sont aussi les rencontres avec les locaux, artisans, cuisiniers, guides que v
 
   :::highlights-row
   ---
-  image: /images/voyages/cWGkXwCMQLC5f7kMbb1J.jpg
+  image: /images/voyages/voyage-immersif-rajasthan-inde/cWGkXwCMQLC5f7kMbb1J.jpg
   ---
   ::::highlight-list-item
   Découvrez Jaipur d'une manière écologique et intime en pédalant à travers ses rues vibrantes et ses marchés animés.
@@ -202,7 +202,7 @@ Ce sont aussi les rencontres avec les locaux, artisans, cuisiniers, guides que v
   
     :::day-row
     ---
-    image: /images/voyages/weWA5zgcRqSqfKXt9TEW.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/weWA5zgcRqSqfKXt9TEW.jpg
     ---
     #subtitle
     JOUR 1
@@ -217,7 +217,7 @@ Ce sont aussi les rencontres avec les locaux, artisans, cuisiniers, guides que v
 
     :::day-row
     ---
-    image: /images/voyages/J55nyqwHQIC2W3QJa4Cm.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/J55nyqwHQIC2W3QJa4Cm.jpg
     ---
     #subtitle
     JOUR 2
@@ -232,7 +232,7 @@ Ce sont aussi les rencontres avec les locaux, artisans, cuisiniers, guides que v
 
     :::day-row
     ---
-    image: /images/voyages/CeA8RJM6ROiUif9odqY1.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/CeA8RJM6ROiUif9odqY1.jpg
     ---
     #subtitle
     JOUR 3
@@ -247,7 +247,7 @@ Ce sont aussi les rencontres avec les locaux, artisans, cuisiniers, guides que v
 
     :::day-row
     ---
-    image: /images/voyages/YeNdcZDER4OMyrSh2QMA.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/YeNdcZDER4OMyrSh2QMA.jpg
     ---
     #subtitle
     JOUR 4
@@ -264,7 +264,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
 
     :::day-row
     ---
-    image: /images/voyages/lHQJKiuPTm7JkGNRU79J.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/lHQJKiuPTm7JkGNRU79J.jpg
     ---
     #subtitle
     JOUR 5
@@ -280,7 +280,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
 
     :::day-row
     ---
-    image: /images/voyages/Nvc5f82aQYifRMHaFj6Q.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/Nvc5f82aQYifRMHaFj6Q.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -295,7 +295,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
 
     :::day-row
     ---
-    image: /images/voyages/cInHZa4bQ42W59ba6ciT.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/cInHZa4bQ42W59ba6ciT.jpg
     ---
     #subtitle
     JOUR 8
@@ -310,7 +310,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
 
     :::day-row
     ---
-    image: /images/voyages/AUHO86rfSnSfgSsfd692.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/AUHO86rfSnSfgSsfd692.jpg
     ---
     #subtitle
     JOUR 9
@@ -325,7 +325,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
 
     :::day-row
     ---
-    image: /images/voyages/NFK92T8Td6ManuexLGNH.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/NFK92T8Td6ManuexLGNH.jpg
     ---
     #subtitle
     JOURS 10 ET 11
@@ -340,7 +340,7 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
 
     :::day-row
     ---
-    image: /images/voyages/Rw9D9ku8Qj5ij75PsS2Q.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/Rw9D9ku8Qj5ij75PsS2Q.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -369,19 +369,19 @@ Déjeuner en cours de route, avant de poursuivre la route vers Jaisalmer. Arriv�
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/PClELGBTYms76JoeDmQw.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/PClELGBTYms76JoeDmQw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/khcah2JdTauHR9yNBf5T.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/khcah2JdTauHR9yNBf5T.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/1iZ6prAnQpGuzlzApJSz.jpg
+    image: /images/voyages/voyage-immersif-rajasthan-inde/1iZ6prAnQpGuzlzApJSz.jpg
     ---
     :::::
     ::::

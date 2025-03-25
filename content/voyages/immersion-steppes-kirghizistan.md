@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/houbc9LTe6gRrnPRY3KA.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg
 ---
 #title
  Immersion culturelle et aventures en terres sauvages au kirghizistan
@@ -10,83 +10,83 @@ image-src: /images/voyages/houbc9LTe6gRrnPRY3KA.jpg
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/33RXXTTSCeCjBh4P9MIg.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-steppes-kirghizistan/33RXXTTSCeCjBh4P9MIg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/4VNn0Xg0SzSa0Ixv44h2.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/4VNn0Xg0SzSa0Ixv44h2.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/qjruSciwSwiy1isKsMCw.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-steppes-kirghizistan/qjruSciwSwiy1isKsMCw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/2rdQFnBQs2gyCzVtNLMU.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/2rdQFnBQs2gyCzVtNLMU.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/j8xBji5S6uFiRvGROFVp.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-steppes-kirghizistan/j8xBji5S6uFiRvGROFVp.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/paJSyzBTGaGEmaiV4oqH.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/paJSyzBTGaGEmaiV4oqH.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/ut0n3mZQROJNKPmpuLQ7.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-steppes-kirghizistan/ut0n3mZQROJNKPmpuLQ7.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/QBUl7sgsSBuXTmWJU8LP.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/QBUl7sgsSBuXTmWJU8LP.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/DceF8Jw3SSOIojoA6F49.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-steppes-kirghizistan/DceF8Jw3SSOIojoA6F49.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/MTrWaOyCTFWuuIxIe8Hs.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/MTrWaOyCTFWuuIxIe8Hs.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/gZxaUAGRRpau5tu7jMAU.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-steppes-kirghizistan/gZxaUAGRRpau5tu7jMAU.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/YGMxsAR1SbiuYZS7qwZZ.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/YGMxsAR1SbiuYZS7qwZZ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/TcFXIOauTfKxfNdkqdhs.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-steppes-kirghizistan/TcFXIOauTfKxfNdkqdhs.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/nTwpJo59RKKIWS0eeV82.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/nTwpJo59RKKIWS0eeV82.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/9T4G7eonRTgfTEdHuDaW.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-steppes-kirghizistan/9T4G7eonRTgfTEdHuDaW.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/L39NykzRbCnzWot9MpCw.jpg
+image-src: /images/voyages/immersion-steppes-kirghizistan/L39NykzRbCnzWot9MpCw.jpg
 ---
 ::::
   :::#component-slot-2
@@ -181,7 +181,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/e52s51YzT5OywXjJTyzg.jpg
+    avatar: /images/voyages/immersion-steppes-kirghizistan/e52s51YzT5OywXjJTyzg.jpg
     avatar-size: "60"
     ---
     #title
@@ -191,7 +191,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
   :::highlights-row
   ---
-  image: /images/voyages/CNDs3dS8QAWQB5SEDBF5.jpg
+  image: /images/voyages/immersion-steppes-kirghizistan/CNDs3dS8QAWQB5SEDBF5.jpg
   ---
   ::::highlight-list-item
   Les steppes infinies et les lacs de montagne
@@ -251,7 +251,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
   
     :::day-row
     ---
-    image: /images/voyages/jLp7A7iCRmyKQXoriDGp.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/jLp7A7iCRmyKQXoriDGp.jpg
     ---
     #subtitle
     JOUR 1
@@ -266,7 +266,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/JqOOdFxPSJSD4PKa6BF5.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/JqOOdFxPSJSD4PKa6BF5.jpg
     ---
     #subtitle
     JOURS 2 ET 3
@@ -281,7 +281,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/wdTWqwQHSoGJPIieHQsV.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/wdTWqwQHSoGJPIieHQsV.jpg
     ---
     #subtitle
     JOURS 4 ET 5
@@ -296,7 +296,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/0mmyx0FTCiysKv5Ff8Sw.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/0mmyx0FTCiysKv5Ff8Sw.jpg
     ---
     #subtitle
     JOUR 6
@@ -311,7 +311,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/7PpOSFC7TWiFTA6qpfOQ.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/7PpOSFC7TWiFTA6qpfOQ.jpg
     ---
     #subtitle
     JOURS 7 ET 8
@@ -326,7 +326,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/1quIZFubQM2Xu8iwInYE.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/1quIZFubQM2Xu8iwInYE.jpg
     ---
     #subtitle
     JOURS 9 ET 10
@@ -341,7 +341,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/0lG4QRAmTvaoWk1QcWVi.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/0lG4QRAmTvaoWk1QcWVi.jpg
     ---
     #subtitle
     JOUR 11
@@ -358,7 +358,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
 
     :::day-row
     ---
-    image: /images/voyages/3HP7BvreTZylNyRBAmT4.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/3HP7BvreTZylNyRBAmT4.jpg
     ---
     #subtitle
     JOURS 12 ET 13
@@ -387,19 +387,19 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/NdR9eY6BSlOhXrHNg2Di.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/NdR9eY6BSlOhXrHNg2Di.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/qgVamOpPRtSBT26FG3FY.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/qgVamOpPRtSBT26FG3FY.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/RnCgfxq2RX6bAco4oPNj.jpg
+    image: /images/voyages/immersion-steppes-kirghizistan/RnCgfxq2RX6bAco4oPNj.jpg
     ---
     :::::
     ::::
@@ -417,7 +417,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/7LNliSwITMOlyKnUZxQs.jpg
+    avatar: /images/voyages/immersion-steppes-kirghizistan/7LNliSwITMOlyKnUZxQs.jpg
     ---
     #title
     Danil

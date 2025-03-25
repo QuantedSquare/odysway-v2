@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/OUICGwoqRuLRXrhtJTXF.jpg
+image-src: /images/voyages/trek-madere-portugal/OUICGwoqRuLRXrhtJTXF.jpg
 ---
 #title
 Randonnées inoubliables à la découverte des joyaux naturels de Madère
@@ -89,7 +89,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FbEN6KxzS62uUwejT351.jpg
+    avatar: /images/voyages/trek-madere-portugal/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -99,7 +99,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
   :::highlights-row
   ---
-  image: /images/voyages/yZU1hNDJSlWGlfi07Xag.jpg
+  image: /images/voyages/trek-madere-portugal/yZU1hNDJSlWGlfi07Xag.jpg
   ---
   ::::highlight-list-item
   Détendez-vous dans les piscines naturelles de Porto Moniz
@@ -155,7 +155,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
   
     :::day-row
     ---
-    image: /images/voyages/6vyL6tw1TA6vjbEzko4k.jpg
+    image: /images/voyages/trek-madere-portugal/6vyL6tw1TA6vjbEzko4k.jpg
     ---
     #subtitle
     JOUR 1
@@ -170,7 +170,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/O7kI6p9RjihtOI4ZLFlQ.jpg
+    image: /images/voyages/trek-madere-portugal/O7kI6p9RjihtOI4ZLFlQ.jpg
     ---
     #subtitle
     JOUR 2
@@ -185,7 +185,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/rtbxJ8QSWCN4clsKH80Q.jpg
+    image: /images/voyages/trek-madere-portugal/rtbxJ8QSWCN4clsKH80Q.jpg
     ---
     #subtitle
     JOUR 3
@@ -200,7 +200,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/Br2WKvCQsaa4d8IEDjHF.jpg
+    image: /images/voyages/trek-madere-portugal/Br2WKvCQsaa4d8IEDjHF.jpg
     ---
     #subtitle
     JOUR 4
@@ -215,7 +215,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/OvNz66zZRCSIBLnR80ke.jpg
+    image: /images/voyages/trek-madere-portugal/OvNz66zZRCSIBLnR80ke.jpg
     ---
     #subtitle
     JOUR 5
@@ -230,7 +230,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/wjBOEV29TMSNC9SShPuM.jpg
+    image: /images/voyages/trek-madere-portugal/wjBOEV29TMSNC9SShPuM.jpg
     ---
     #subtitle
     JOUR 6
@@ -245,7 +245,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/k6YYkOiGSZufr78Vr6Ej.jpg
+    image: /images/voyages/trek-madere-portugal/k6YYkOiGSZufr78Vr6Ej.jpg
     ---
     #subtitle
     JOUR 7
@@ -260,7 +260,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/tBp8KKCfT9SQf2Q3ZhEA.jpg
+    image: /images/voyages/trek-madere-portugal/tBp8KKCfT9SQf2Q3ZhEA.jpg
     ---
     #subtitle
     JOUR 8
@@ -275,7 +275,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/rbSp1OybRk6RvaAMI787.jpg
+    image: /images/voyages/trek-madere-portugal/rbSp1OybRk6RvaAMI787.jpg
     ---
     #subtitle
     JOUR 9
@@ -290,7 +290,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/q1eJhiblQcqPpS8elIBL.jpg
+    image: /images/voyages/trek-madere-portugal/q1eJhiblQcqPpS8elIBL.jpg
     ---
     #subtitle
     JOUR 10
@@ -305,7 +305,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/fiev2HMQ8O4HV4cCxjH9.jpg
+    image: /images/voyages/trek-madere-portugal/fiev2HMQ8O4HV4cCxjH9.jpg
     ---
     #subtitle
     JOUR 11
@@ -320,7 +320,7 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
 
     :::day-row
     ---
-    image: /images/voyages/KruIqiQsQTO1IFZRuPCN.jpg
+    image: /images/voyages/trek-madere-portugal/KruIqiQsQTO1IFZRuPCN.jpg
     ---
     #subtitle
     JOUR 12
@@ -349,19 +349,19 @@ S’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/9v7SBOcJRmiOcT4fy8gf.jpg
+    image: /images/voyages/trek-madere-portugal/9v7SBOcJRmiOcT4fy8gf.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/lNOtVBWPROmIXmoCr7uT.jpg
+    image: /images/voyages/trek-madere-portugal/lNOtVBWPROmIXmoCr7uT.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/VWNHzBQTaLuI85hfQzQ6.jpg
+    image: /images/voyages/trek-madere-portugal/VWNHzBQTaLuI85hfQzQ6.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/06i8l0DTqCaNrxPY4RmQ.jpg
+image-src: /images/voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg
 ---
 #title
 Expédition sauvage en Roumanie : sur les traces des ours des Carpates
@@ -10,47 +10,47 @@ Expédition sauvage en Roumanie : sur les traces des ours des Carpates
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/tG3MO9WwQAeBLJKtRpsd.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-ours-roumanie/tG3MO9WwQAeBLJKtRpsd.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/oRN0fAQkSMmsswrzFqMQ.jpg
+image-src: /images/voyages/voyage-ours-roumanie/oRN0fAQkSMmsswrzFqMQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/i9I0OWfSQjKQou4GzMRG.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-ours-roumanie/i9I0OWfSQjKQou4GzMRG.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/1Q8alzmLQkK7H94YbcFS.jpg
+image-src: /images/voyages/voyage-ours-roumanie/1Q8alzmLQkK7H94YbcFS.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/KhmsYoMyT3eg6ZXCEnWI.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-ours-roumanie/KhmsYoMyT3eg6ZXCEnWI.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/DG7zZ47hSm6IwThQmNVk.jpg
+image-src: /images/voyages/voyage-ours-roumanie/DG7zZ47hSm6IwThQmNVk.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/uXOMbftpSvGS9rzETYSW.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-ours-roumanie/uXOMbftpSvGS9rzETYSW.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/5jPxegQbWJGPtw7Cc5eQ.jpg
+image-src: /images/voyages/voyage-ours-roumanie/5jPxegQbWJGPtw7Cc5eQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/4KkMRzMqTkarK2rwhpef.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-ours-roumanie/4KkMRzMqTkarK2rwhpef.jpg"}
 ::::
   :::
 ::
@@ -139,7 +139,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-ours-roumanie/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -149,7 +149,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
 
   :::highlights-row
   ---
-  image: /images/voyages/E4QMCgH4QeG7AXF2GFxC.jpg
+  image: /images/voyages/voyage-ours-roumanie/E4QMCgH4QeG7AXF2GFxC.jpg
   ---
   ::::highlight-list-item
   Vivez deux jours d’immersion totale avec une nuit en refuge isolé dans les Carpates
@@ -209,7 +209,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
   
     :::day-row
     ---
-    image: /images/voyages/UwlHjWgrTGeo2OyWOTFY.jpg
+    image: /images/voyages/voyage-ours-roumanie/UwlHjWgrTGeo2OyWOTFY.jpg
     ---
     #subtitle
     JOUR 1
@@ -224,7 +224,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
 
     :::day-row
     ---
-    image: /images/voyages/FJ29e8DfSMe8clV5v3ok.jpg
+    image: /images/voyages/voyage-ours-roumanie/FJ29e8DfSMe8clV5v3ok.jpg
     ---
     #subtitle
     JOUR 2
@@ -239,7 +239,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
 
     :::day-row
     ---
-    image: /images/voyages/zmvFSwtuQWbTKSCk7LOb.jpg
+    image: /images/voyages/voyage-ours-roumanie/zmvFSwtuQWbTKSCk7LOb.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -254,7 +254,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
 
     :::day-row
     ---
-    image: /images/voyages/25toXSe3THyOXhT4s0xr.jpg
+    image: /images/voyages/voyage-ours-roumanie/25toXSe3THyOXhT4s0xr.jpg
     ---
     #subtitle
     JOUR 5
@@ -269,7 +269,7 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
 
     :::day-row
     ---
-    image: /images/voyages/px4rhA8RHmAp6liKj7zn.jpg
+    image: /images/voyages/voyage-ours-roumanie/px4rhA8RHmAp6liKj7zn.jpg
     ---
     #subtitle
     JOUR 6
@@ -298,19 +298,19 @@ Enfin, grâce à votre voiture de location, vous pourrez explorer à votre rythm
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/3srRd6QpR7K4YwttDiKN.jpg
+    image: /images/voyages/voyage-ours-roumanie/3srRd6QpR7K4YwttDiKN.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/2EDJK19rR0TpreQujjGp.jpg
+    image: /images/voyages/voyage-ours-roumanie/2EDJK19rR0TpreQujjGp.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GfsyfQs1RmaNApNNGSHG.jpg
+    image: /images/voyages/voyage-ours-roumanie/GfsyfQs1RmaNApNNGSHG.jpg
     ---
     :::::
     ::::

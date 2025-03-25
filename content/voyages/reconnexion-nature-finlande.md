@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/d6kQEqcLRtKXyKL3v5ax.jpg
+image-src: /images/voyages/reconnexion-nature-finlande/d6kQEqcLRtKXyKL3v5ax.jpg
 ---
 #title
 Aventure éco responsable et reconnexion à la nature en Finlande
@@ -10,53 +10,53 @@ Aventure éco responsable et reconnexion à la nature en Finlande
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/Dtc5gRdsRkOuOJIFVeSF.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/reconnexion-nature-finlande/Dtc5gRdsRkOuOJIFVeSF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/kOYoprVnRminYUUKvYbV.jpg
+image-src: /images/voyages/reconnexion-nature-finlande/kOYoprVnRminYUUKvYbV.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/gJP3kk6RFSm14l4Wea3g.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/reconnexion-nature-finlande/gJP3kk6RFSm14l4Wea3g.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/uWBnVnVATbGqVwOR9UcC.jpg
+image-src: /images/voyages/reconnexion-nature-finlande/uWBnVnVATbGqVwOR9UcC.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/92s9g5WjSQ27dr3ToBEf.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/reconnexion-nature-finlande/92s9g5WjSQ27dr3ToBEf.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/G3XDy3vaR5SGwdRhg5Wu.jpg
+image-src: /images/voyages/reconnexion-nature-finlande/G3XDy3vaR5SGwdRhg5Wu.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/BKfpxnsR1aPcV5K8yxDq.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/reconnexion-nature-finlande/BKfpxnsR1aPcV5K8yxDq.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/j0VQYxNOSeWXnT504xFD.jpg
+image-src: /images/voyages/reconnexion-nature-finlande/j0VQYxNOSeWXnT504xFD.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/oFvkkxVhQXWtAUTPZQzV.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/reconnexion-nature-finlande/oFvkkxVhQXWtAUTPZQzV.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/oLW8l7KmQ9GdzGERhFHa.jpg
+image-src: /images/voyages/reconnexion-nature-finlande/oLW8l7KmQ9GdzGERhFHa.jpg
 ---
 ::::
   :::
@@ -142,7 +142,7 @@ right-sticky: true
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/reconnexion-nature-finlande/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -152,7 +152,7 @@ right-sticky: true
 
   :::highlights-row
   ---
-  image: /images/voyages/g2Qs69FOQMSJ3ZixVJEB.jpg
+  image: /images/voyages/reconnexion-nature-finlande/g2Qs69FOQMSJ3ZixVJEB.jpg
   ---
   ::::highlight-list-item
   Un voyage éco-responsable au coeur de la nature
@@ -212,7 +212,7 @@ right-sticky: true
   
     :::day-row
     ---
-    image: /images/voyages/6rHYwmEGSYqkZaPiuGEQ.jpg
+    image: /images/voyages/reconnexion-nature-finlande/6rHYwmEGSYqkZaPiuGEQ.jpg
     ---
     #subtitle
     JOUR 1
@@ -228,7 +228,7 @@ Première journée d'installation et d'exploration des environs !
 
     :::day-row
     ---
-    image: /images/voyages/OhzhMl6wTVSCsFUSqVts.jpg
+    image: /images/voyages/reconnexion-nature-finlande/OhzhMl6wTVSCsFUSqVts.jpg
     ---
     #subtitle
     JOUR 2
@@ -243,7 +243,7 @@ Première journée d'installation et d'exploration des environs !
 
     :::day-row
     ---
-    image: /images/voyages/e5BbH6cKTmXdFGT3NLOW.jpg
+    image: /images/voyages/reconnexion-nature-finlande/e5BbH6cKTmXdFGT3NLOW.jpg
     ---
     #subtitle
     JOURS 3 ET 4
@@ -258,7 +258,7 @@ Première journée d'installation et d'exploration des environs !
 
     :::day-row
     ---
-    image: /images/voyages/igPBzZMThtkDfMR4TJiw.jpg
+    image: /images/voyages/reconnexion-nature-finlande/igPBzZMThtkDfMR4TJiw.jpg
     ---
     #subtitle
     JOUR 5
@@ -274,7 +274,7 @@ Après cette visite, nous vous proposons de découvrir l'animal emblématique de
 
     :::day-row
     ---
-    image: /images/voyages/9oszkzZQlyXdWmTTKSup.jpg
+    image: /images/voyages/reconnexion-nature-finlande/9oszkzZQlyXdWmTTKSup.jpg
     ---
     #subtitle
     JOUR 6
@@ -289,7 +289,7 @@ Après cette visite, nous vous proposons de découvrir l'animal emblématique de
 
     :::day-row
     ---
-    image: /images/voyages/elYi7UQTROSqgGkaIv7Q.jpg
+    image: /images/voyages/reconnexion-nature-finlande/elYi7UQTROSqgGkaIv7Q.jpg
     ---
     #subtitle
     JOUR 7
@@ -304,7 +304,7 @@ Après cette visite, nous vous proposons de découvrir l'animal emblématique de
 
     :::day-row
     ---
-    image: /images/voyages/G3XDy3vaR5SGwdRhg5Wu.jpg
+    image: /images/voyages/reconnexion-nature-finlande/G3XDy3vaR5SGwdRhg5Wu.jpg
     ---
     #subtitle
     JOUR 8
@@ -333,19 +333,19 @@ Après cette visite, nous vous proposons de découvrir l'animal emblématique de
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/GHlQkgJrRTGo1pgnO4zh.jpg
+    image: /images/voyages/reconnexion-nature-finlande/GHlQkgJrRTGo1pgnO4zh.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/bQSg6bh1TBmLMjJV03fG.jpg
+    image: /images/voyages/reconnexion-nature-finlande/bQSg6bh1TBmLMjJV03fG.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/OcsmgCqcQIKxsGIqYnQv.jpg
+    image: /images/voyages/reconnexion-nature-finlande/OcsmgCqcQIKxsGIqYnQv.jpg
     ---
     :::::
     ::::

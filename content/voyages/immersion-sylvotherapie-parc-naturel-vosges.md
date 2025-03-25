@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/x01hdUHCS7G5BKtubMLo.jpg
+image-src: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg
 ---
 #title
 Eveillez vos sens dans les forêts des Vosges du Nord
@@ -98,7 +98,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Y6NdwN1SRGcdoSTc2j2A.jpg
+    avatar: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/Y6NdwN1SRGcdoSTc2j2A.jpg
     avatar-size: "60"
     ---
     #title
@@ -108,7 +108,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
 
   :::highlights-row
   ---
-  image: /images/voyages/EjxhDwGVTq6gRfWfvDCZ.jpg
+  image: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/EjxhDwGVTq6gRfWfvDCZ.jpg
   ---
   ::::highlight-list-item
   Parcourez les forêts des Vosges du Nord, territoire classé réserve mondiale de la biosphère à l'UNESCO
@@ -164,7 +164,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
   
     :::day-row
     ---
-    image: /images/voyages/opkYJFbJTMy6abyVmTFK.jpg
+    image: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg
     ---
     #subtitle
     JOUR 1
@@ -179,7 +179,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
 
     :::day-row
     ---
-    image: /images/voyages/Vu5dL7KaT2KhbK89jhtK.jpg
+    image: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/Vu5dL7KaT2KhbK89jhtK.jpg
     ---
     #subtitle
     JOUR 2
@@ -194,7 +194,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
 
     :::day-row
     ---
-    image: /images/voyages/7J0hRtadTaOsEVwEOmD7.jpg
+    image: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/7J0hRtadTaOsEVwEOmD7.jpg
     ---
     #subtitle
     JOUR 3
@@ -232,7 +232,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/Tdiq7lKKQeteqlD8fARe.jpg
+    avatar: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/Tdiq7lKKQeteqlD8fARe.jpg
     ---
     #title
     Sandrine
@@ -245,7 +245,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
   
   ::::avatar-list-item
     ---
-    avatar: /images/voyages/MO2OmtjjQTqnBjytg9zn.jpg
+    avatar: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/MO2OmtjjQTqnBjytg9zn.jpg
     ---
     #title
     Manuela

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/49ZTjhjFSBBWxMIzcHb1.jpg
+image-src: /images/voyages/voyage-acores-portugal/49ZTjhjFSBBWxMIzcHb1.jpg
 ---
 #title
 Trek immersif sur l’île de Sao Miguel aux Açores
@@ -89,7 +89,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/FbEN6KxzS62uUwejT351.jpg
+    avatar: /images/voyages/voyage-acores-portugal/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -99,7 +99,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
   :::highlights-row
   ---
-  image: /images/voyages/pBn4yS7hSrSTiMSfhIq4.jpg
+  image: /images/voyages/voyage-acores-portugal/pBn4yS7hSrSTiMSfhIq4.jpg
   ---
   ::::highlight-list-item
   Vivez une immersion au plus près de la nature de Sao Miguel
@@ -159,7 +159,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
   
     :::day-row
     ---
-    image: /images/voyages/BiDYOgGRdawH5cB2AEhb.jpg
+    image: /images/voyages/voyage-acores-portugal/BiDYOgGRdawH5cB2AEhb.jpg
     ---
     #subtitle
     JOUR 1
@@ -175,7 +175,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/XUx1ZI2GSkaF1vYSkCMK.jpg
+    image: /images/voyages/voyage-acores-portugal/XUx1ZI2GSkaF1vYSkCMK.jpg
     ---
     #subtitle
     JOUR 2
@@ -191,7 +191,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/n3xgYI3KRDGV049vzoc6.jpg
+    image: /images/voyages/voyage-acores-portugal/n3xgYI3KRDGV049vzoc6.jpg
     ---
     #subtitle
     JOUR 3
@@ -206,7 +206,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/kaSIwhFmQraCEVwcP7Un.jpg
+    image: /images/voyages/voyage-acores-portugal/kaSIwhFmQraCEVwcP7Un.jpg
     ---
     #subtitle
     JOUR 4
@@ -221,7 +221,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/6LOCg8RESrKnTzJYD9sa.jpg
+    image: /images/voyages/voyage-acores-portugal/6LOCg8RESrKnTzJYD9sa.jpg
     ---
     #subtitle
     JOUR 5
@@ -236,7 +236,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/OObqFTWmRIimc9lnWhxF.jpg
+    image: /images/voyages/voyage-acores-portugal/OObqFTWmRIimc9lnWhxF.jpg
     ---
     #subtitle
     JOUR 6
@@ -251,7 +251,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/TCtxeELFRpi5G1GoVfda.jpg
+    image: /images/voyages/voyage-acores-portugal/TCtxeELFRpi5G1GoVfda.jpg
     ---
     #subtitle
     JOUR 7
@@ -267,7 +267,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
 
     :::day-row
     ---
-    image: /images/voyages/M6UPQWWQYuPpCpfdfyKA.jpg
+    image: /images/voyages/voyage-acores-portugal/M6UPQWWQYuPpCpfdfyKA.jpg
     ---
     #subtitle
     JOUR 8
@@ -296,19 +296,19 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/JIfveKsMSg2rxeA2To9X.jpg
+    image: /images/voyages/voyage-acores-portugal/JIfveKsMSg2rxeA2To9X.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/gxEbxOG1RV6pXbo7yQgg.jpg
+    image: /images/voyages/voyage-acores-portugal/gxEbxOG1RV6pXbo7yQgg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ENQWirVnTjKuXPEPQLEo.jpg
+    image: /images/voyages/voyage-acores-portugal/ENQWirVnTjKuXPEPQLEo.jpg
     ---
     :::::
     ::::

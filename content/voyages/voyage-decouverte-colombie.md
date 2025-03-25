@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/TlfzO34Qme24nFWGUhOg.jpg
+image-src: /images/voyages/voyage-decouverte-colombie/TlfzO34Qme24nFWGUhOg.jpg
 ---
 #title
 Découvrez la Colombie au cœur des traditions et des rencontres
@@ -10,47 +10,47 @@ Découvrez la Colombie au cœur des traditions et des rencontres
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/5L0Bkbd5QjibxBrj3kfR.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-decouverte-colombie/5L0Bkbd5QjibxBrj3kfR.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/WTc0gJ6sR9uRdnM1mJxD.jpg
+image-src: /images/voyages/voyage-decouverte-colombie/WTc0gJ6sR9uRdnM1mJxD.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/8qsQ7QwRji2tEHuoISoQ.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-decouverte-colombie/8qsQ7QwRji2tEHuoISoQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/FAkF9ZVcTnyJbvmeWAEA.jpg
+image-src: /images/voyages/voyage-decouverte-colombie/FAkF9ZVcTnyJbvmeWAEA.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/eHHoMulCRojBJn3PH6GS.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-decouverte-colombie/eHHoMulCRojBJn3PH6GS.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/mFmJHeszQP6TABDsdyFw.jpg
+image-src: /images/voyages/voyage-decouverte-colombie/mFmJHeszQP6TABDsdyFw.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/QUXBd4lQtCiIVkAPHhjJ.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-decouverte-colombie/QUXBd4lQtCiIVkAPHhjJ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/Hs1aVYwyRhOU103BiROg.jpg
+image-src: /images/voyages/voyage-decouverte-colombie/Hs1aVYwyRhOU103BiROg.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/ivUQr9tnS3u9nHHDpvzd.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-decouverte-colombie/ivUQr9tnS3u9nHHDpvzd.jpg"}
 ::::
   :::
 ::
@@ -137,7 +137,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/voyage-decouverte-colombie/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -147,7 +147,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
   :::highlights-row
   ---
-  image: /images/voyages/RVrO1r7jSsevWJ5Rllpw.jpg
+  image: /images/voyages/voyage-decouverte-colombie/RVrO1r7jSsevWJ5Rllpw.jpg
   ---
   ::::highlight-list-item
   Vibrez au rythme de l’énergie et de la chaleur des Colombiens
@@ -211,7 +211,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
   
     :::day-row
     ---
-    image: /images/voyages/lSqEWSeQAiZNzR3siVEv.jpg
+    image: /images/voyages/voyage-decouverte-colombie/lSqEWSeQAiZNzR3siVEv.jpg
     ---
     #subtitle
     JOUR 1
@@ -226,7 +226,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/5z2R4qOZRouiIDKnSrKl.jpg
+    image: /images/voyages/voyage-decouverte-colombie/5z2R4qOZRouiIDKnSrKl.jpg
     ---
     #subtitle
     JOUR 2
@@ -241,7 +241,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/hs82ylliTyKJIzXpJkNs.jpg
+    image: /images/voyages/voyage-decouverte-colombie/hs82ylliTyKJIzXpJkNs.jpg
     ---
     #subtitle
     JOUR 3
@@ -256,7 +256,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/YUuvQKnZTcCv4heFF5DM.jpg
+    image: /images/voyages/voyage-decouverte-colombie/YUuvQKnZTcCv4heFF5DM.jpg
     ---
     #subtitle
     JOUR 4
@@ -271,7 +271,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/c7yNiLST3avM9zxyBjeB.jpg
+    image: /images/voyages/voyage-decouverte-colombie/c7yNiLST3avM9zxyBjeB.jpg
     ---
     #subtitle
     JOUR 5
@@ -286,7 +286,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/d4A1ANCyS5SpfHyFuUln.jpg
+    image: /images/voyages/voyage-decouverte-colombie/d4A1ANCyS5SpfHyFuUln.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -301,7 +301,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/ph0XBrr0RefIOJXQQ5wl.jpg
+    image: /images/voyages/voyage-decouverte-colombie/ph0XBrr0RefIOJXQQ5wl.jpg
     ---
     #subtitle
     JOURS 8 ET 9
@@ -316,7 +316,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/iCM6qP4mQLaLQtb2ChIV.jpg
+    image: /images/voyages/voyage-decouverte-colombie/iCM6qP4mQLaLQtb2ChIV.jpg
     ---
     #subtitle
     JOUR 10
@@ -331,7 +331,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/NldsGUzTb64PskzWRbwT.jpg
+    image: /images/voyages/voyage-decouverte-colombie/NldsGUzTb64PskzWRbwT.jpg
     ---
     #subtitle
     JOUR 11
@@ -346,7 +346,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/qd1HIrbT7KCQP7UB6Mpy.jpg
+    image: /images/voyages/voyage-decouverte-colombie/qd1HIrbT7KCQP7UB6Mpy.jpg
     ---
     #subtitle
     JOUR 12
@@ -361,7 +361,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
 
     :::day-row
     ---
-    image: /images/voyages/fZtYKFayRPas77FLe940.jpg
+    image: /images/voyages/voyage-decouverte-colombie/fZtYKFayRPas77FLe940.jpg
     ---
     #subtitle
     JOUR 13
@@ -390,31 +390,31 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/rXjL8XTfSkycyMY0xp46.jpg
+    image: /images/voyages/voyage-decouverte-colombie/rXjL8XTfSkycyMY0xp46.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/DhoSm0IjQOucrG9IkgS6.jpg
+    image: /images/voyages/voyage-decouverte-colombie/DhoSm0IjQOucrG9IkgS6.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/fdWuG1MpQXKF2L0QjWuv.jpg
+    image: /images/voyages/voyage-decouverte-colombie/fdWuG1MpQXKF2L0QjWuv.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/3gvVEOoNQROxORCguoT0.jpg
+    image: /images/voyages/voyage-decouverte-colombie/3gvVEOoNQROxORCguoT0.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/PHTQjgwTW6brmYI98Egx.jpg
+    image: /images/voyages/voyage-decouverte-colombie/PHTQjgwTW6brmYI98Egx.jpg
     ---
     :::::
     ::::

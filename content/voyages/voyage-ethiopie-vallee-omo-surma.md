@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/56OAQsCQRIC0V59UpIaA.jpg
+image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/56OAQsCQRIC0V59UpIaA.jpg
 ---
 #title
 Voyagez sur la terre des premiers hommes en Éthiopie
@@ -10,23 +10,23 @@ Voyagez sur la terre des premiers hommes en Éthiopie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/CrBYpD6xQPidUtyN6RbL.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-ethiopie-vallee-omo-surma/CrBYpD6xQPidUtyN6RbL.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/hb6oKAbtSIytGZj0FoWk.jpg
+image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/hb6oKAbtSIytGZj0FoWk.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/RRFDx1roQweK4YMOUtch.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-ethiopie-vallee-omo-surma/RRFDx1roQweK4YMOUtch.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/piODqsYbSJCo1g2tUowC.jpg
+image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/piODqsYbSJCo1g2tUowC.jpg
 ---
 ::::
   :::#component-slot-2
@@ -121,7 +121,7 @@ Partez découvrir leur mode de vie, qui n’a que très peu changé depuis des m
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/RxTWYwSSu4WAg9S26acA.jpg
+    avatar: /images/voyages/voyage-ethiopie-vallee-omo-surma/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -131,7 +131,7 @@ Partez découvrir leur mode de vie, qui n’a que très peu changé depuis des m
 
   :::highlights-row
   ---
-  image: /images/voyages/SZsgpaNRuaT2YJeg0bA6.jpg
+  image: /images/voyages/voyage-ethiopie-vallee-omo-surma/SZsgpaNRuaT2YJeg0bA6.jpg
   ---
   ::::highlight-list-item
   La rencontre avec les tribus du fleuve Omo
@@ -191,7 +191,7 @@ Partez découvrir leur mode de vie, qui n’a que très peu changé depuis des m
   
     :::day-row
     ---
-    image: /images/voyages/MlprHYR8TraSk0EqoG2P.jpg
+    image: /images/voyages/voyage-ethiopie-vallee-omo-surma/MlprHYR8TraSk0EqoG2P.jpg
     ---
     #subtitle
     JOUR 1 
@@ -206,7 +206,7 @@ Partez découvrir leur mode de vie, qui n’a que très peu changé depuis des m
 
     :::day-row
     ---
-    image: /images/voyages/iLbxgoWJTZrJDvjQG8UA.jpg
+    image: /images/voyages/voyage-ethiopie-vallee-omo-surma/iLbxgoWJTZrJDvjQG8UA.jpg
     ---
     #subtitle
     JOUR 2
@@ -221,7 +221,7 @@ Partez découvrir leur mode de vie, qui n’a que très peu changé depuis des m
 
     :::day-row
     ---
-    image: /images/voyages/qOX8ToghTn6vYOjloJpq.jpg
+    image: /images/voyages/voyage-ethiopie-vallee-omo-surma/qOX8ToghTn6vYOjloJpq.jpg
     ---
     #subtitle
     JOURS 4 ET 5
@@ -237,7 +237,7 @@ Partez découvrir leur mode de vie, qui n’a que très peu changé depuis des m
 
     :::day-row
     ---
-    image: /images/voyages/olbsMkWwScqttAfA6x6p.jpg
+    image: /images/voyages/voyage-ethiopie-vallee-omo-surma/olbsMkWwScqttAfA6x6p.jpg
     ---
     #subtitle
     JOURS 6 A 9 
@@ -254,7 +254,7 @@ Nuits bivouac à Kibish.
 
     :::day-row
     ---
-    image: /images/voyages/7kZhIlcBRPuhTnI47Px1.jpg
+    image: /images/voyages/voyage-ethiopie-vallee-omo-surma/7kZhIlcBRPuhTnI47Px1.jpg
     ---
     #subtitle
     JOURS 10 ET 11
@@ -269,7 +269,7 @@ Nuits bivouac à Kibish.
 
     :::day-row
     ---
-    image: /images/voyages/QfRKOHZT629OSiVKLjVi.jpg
+    image: /images/voyages/voyage-ethiopie-vallee-omo-surma/QfRKOHZT629OSiVKLjVi.jpg
     ---
     #subtitle
     JOUR 12

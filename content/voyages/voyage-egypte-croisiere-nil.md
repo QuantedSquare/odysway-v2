@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/lWOcVmIeRxyfTtKHbxrR.jpg
+image-src: /images/voyages/voyage-egypte-croisiere-nil/lWOcVmIeRxyfTtKHbxrR.jpg
 ---
 #title
 Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte
@@ -10,37 +10,37 @@ Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/7lL0FJPyTuK5vz2d3sf3.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-croisiere-nil/7lL0FJPyTuK5vz2d3sf3.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/OnGBweu4S0W6brJ2TnSz.jpg
+image-src: /images/voyages/voyage-egypte-croisiere-nil/OnGBweu4S0W6brJ2TnSz.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/H6Z6G1T3SGym4jV0WM5a.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-croisiere-nil/H6Z6G1T3SGym4jV0WM5a.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/rxLU0p1cSbOBLwJUk8Zl.jpg
+image-src: /images/voyages/voyage-egypte-croisiere-nil/rxLU0p1cSbOBLwJUk8Zl.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/I9zCB3fKR0ygY88iOpHH.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-croisiere-nil/I9zCB3fKR0ygY88iOpHH.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/lQ1D7UxeQj2KsIhiDao2.jpg
+image-src: /images/voyages/voyage-egypte-croisiere-nil/lQ1D7UxeQj2KsIhiDao2.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/1TCMgskgSBa772hOhgQ7.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-croisiere-nil/1TCMgskgSBa772hOhgQ7.jpg"}
 ::::
   :::
 ::
@@ -131,7 +131,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/mQunR3zVRdq3aymchOuD.jpg
+    avatar: /images/voyages/voyage-egypte-croisiere-nil/mQunR3zVRdq3aymchOuD.jpg
     avatar-size: "60"
     ---
     #title
@@ -141,7 +141,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
   :::highlights-row
   ---
-  image: /images/voyages/xUck8ZP5QbgiWECy549C.jpg
+  image: /images/voyages/voyage-egypte-croisiere-nil/xUck8ZP5QbgiWECy549C.jpg
   ---
   ::::highlight-list-item
   Visitez l'Egypte autrement : entre sites mythiques et escales hors des sentiers battus avec un guide égyptologue francophone
@@ -205,7 +205,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
   
     :::day-row
     ---
-    image: /images/voyages/unow4SIxQCW2xtWG02pe.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/unow4SIxQCW2xtWG02pe.jpg
     ---
     #subtitle
     JOUR 1
@@ -220,7 +220,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/HJkGTHJhTcy0ZPnVf61b.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/HJkGTHJhTcy0ZPnVf61b.jpg
     ---
     #subtitle
     JOUR 2
@@ -235,7 +235,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/A47eItzQ7UDmyhSm6nyA.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/A47eItzQ7UDmyhSm6nyA.jpg
     ---
     #subtitle
     JOUR 3
@@ -250,7 +250,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/RtL5K2inTRS9hjl1Lxqj.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/RtL5K2inTRS9hjl1Lxqj.jpg
     ---
     #subtitle
     JOUR 4
@@ -265,7 +265,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/qXtRZccuRdur6QuFpMtD.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/qXtRZccuRdur6QuFpMtD.jpg
     ---
     #subtitle
     JOUR 5
@@ -280,7 +280,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/msXtvh2CTv6rAgKJH5Mh.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/msXtvh2CTv6rAgKJH5Mh.jpg
     ---
     #subtitle
     JOUR 6
@@ -295,7 +295,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/ILiEvjAxT8ycQhKlh2Tl.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/ILiEvjAxT8ycQhKlh2Tl.jpg
     ---
     #subtitle
     JOUR 7
@@ -310,7 +310,7 @@ Ce circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette é
 
     :::day-row
     ---
-    image: /images/voyages/mDQDhLtcQ9avKVX56aLf.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/mDQDhLtcQ9avKVX56aLf.jpg
     ---
     #subtitle
     JOUR 8
@@ -340,19 +340,19 @@ De belles images plein la tête !
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/t7mlhqOAQIGggDK9LjAA.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/t7mlhqOAQIGggDK9LjAA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/XSwtAQrSoe46tnGQcgsP.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/XSwtAQrSoe46tnGQcgsP.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GHXbGQtQQEeHMhnA24d3.jpg
+    image: /images/voyages/voyage-egypte-croisiere-nil/GHXbGQtQQEeHMhnA24d3.jpg
     ---
     :::::
     ::::
@@ -370,7 +370,7 @@ De belles images plein la tête !
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/jMPqLheWQzulsSPPLbXA.jpg
+    avatar: /images/voyages/voyage-egypte-croisiere-nil/jMPqLheWQzulsSPPLbXA.jpg
     ---
     #title
     Guide égyptologue francophone

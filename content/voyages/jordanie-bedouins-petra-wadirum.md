@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/J6w752pGTaedDLCovuwD.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/J6w752pGTaedDLCovuwD.jpg
 ---
 #title
 Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wadi Rum
@@ -10,63 +10,63 @@ Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wa
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/YuB6VeNJQlcvayIdFAOC.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/YuB6VeNJQlcvayIdFAOC.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/zeXQMtT2TixqFzAAQyfY.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/zeXQMtT2TixqFzAAQyfY.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/MgeXqu50REWfZ3wxWO1R.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/MgeXqu50REWfZ3wxWO1R.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/yjmsRBtYQ6eKiVbSowRG.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/yjmsRBtYQ6eKiVbSowRG.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Zz0KdUZT6SowJQRPAIQK.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/Zz0KdUZT6SowJQRPAIQK.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/1zT2uBC1TF2juU04mLkH.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/1zT2uBC1TF2juU04mLkH.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/NNCrJx4iTSutBM7pgvfv.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/NNCrJx4iTSutBM7pgvfv.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/VaR1ikE9Sais4AsaDe07.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/VaR1ikE9Sais4AsaDe07.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/DcWjdRk8Ro6HuZET8btq.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/DcWjdRk8Ro6HuZET8btq.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/DpBn9xU2TXaiNc3o49g4.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/DpBn9xU2TXaiNc3o49g4.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/5d6MZfhdSzO2SO4DZUWn.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/5d6MZfhdSzO2SO4DZUWn.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/4Uz2EJvNR1OtnIZANioJ.jpg
+image-src: /images/voyages/jordanie-bedouins-petra-wadirum/4Uz2EJvNR1OtnIZANioJ.jpg
 ---
 ::::
   :::
@@ -156,7 +156,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/PhDZ168hSqbaSlbbyGqX.jpg
+    avatar: /images/voyages/jordanie-bedouins-petra-wadirum/PhDZ168hSqbaSlbbyGqX.jpg
     avatar-size: "60"
     ---
     #title
@@ -166,7 +166,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
   :::highlights-row
   ---
-  image: /images/voyages/mCcCPpSwQhGSKqeMjLjy.jpg
+  image: /images/voyages/jordanie-bedouins-petra-wadirum/mCcCPpSwQhGSKqeMjLjy.jpg
   ---
   ::::highlight-list-item
   Explorez l'incroyable Pétra, hors des sentiers battus
@@ -226,7 +226,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
   
     :::day-row
     ---
-    image: /images/voyages/g2n7EMrwTTynYIjgoYjs.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/g2n7EMrwTTynYIjgoYjs.jpg
     ---
     #subtitle
     JOUR 1
@@ -242,7 +242,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/OWMx95YISUSyIYNzgzRQ.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/OWMx95YISUSyIYNzgzRQ.jpg
     ---
     #subtitle
     JOUR 2
@@ -257,7 +257,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/KJHoXYrAQla3UL0uHC41.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/KJHoXYrAQla3UL0uHC41.jpg
     ---
     #subtitle
     JOUR 3
@@ -273,7 +273,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/r5B65nuYRcuH6PdkiICl.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/r5B65nuYRcuH6PdkiICl.jpg
     ---
     #subtitle
     JOUR 4
@@ -288,7 +288,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/CH7GsD2kREq4VxKlzI95.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/CH7GsD2kREq4VxKlzI95.jpg
     ---
     #subtitle
     JOUR 5
@@ -303,7 +303,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/zeXQMtT2TixqFzAAQyfY.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/zeXQMtT2TixqFzAAQyfY.jpg
     ---
     #subtitle
     JOUR 6
@@ -318,7 +318,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/YuB6VeNJQlcvayIdFAOC.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/YuB6VeNJQlcvayIdFAOC.jpg
     ---
     #subtitle
     JOUR 7
@@ -333,7 +333,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/iHr1NKdSiGOvKhJNrcaA.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/iHr1NKdSiGOvKhJNrcaA.jpg
     ---
     #subtitle
     JOUR 8
@@ -348,7 +348,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/5K4IzLpeQLSv36JBEsTP.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/5K4IzLpeQLSv36JBEsTP.jpg
     ---
     #subtitle
     JOUR 9
@@ -363,7 +363,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/VWDoxobdQHSeEAc9eFT1.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/VWDoxobdQHSeEAc9eFT1.jpg
     ---
     #subtitle
     JOUR 10
@@ -378,7 +378,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
 
     :::day-row
     ---
-    image: /images/voyages/0LcfsO4VQlmdCtmas34H.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/0LcfsO4VQlmdCtmas34H.jpg
     ---
     #subtitle
     JOUR 11
@@ -407,19 +407,19 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/8tt0VRvmRpmnuJsiaOFy.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/8tt0VRvmRpmnuJsiaOFy.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Uk77mmzuRCOnhzLJAfXA.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/Uk77mmzuRCOnhzLJAfXA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/Eu8L5sKvSmiYLNV3DFka.jpg
+    image: /images/voyages/jordanie-bedouins-petra-wadirum/Eu8L5sKvSmiYLNV3DFka.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/D7RhGLH9RYyEGIiOdLSq.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/D7RhGLH9RYyEGIiOdLSq.jpg
 ---
 #title
 Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil
@@ -10,103 +10,103 @@ Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/INADjJRSW7MzCvNWqQJw.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/INADjJRSW7MzCvNWqQJw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/A4DcgbjQ8mM27RKLS2xF.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/A4DcgbjQ8mM27RKLS2xF.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/0NUmGIfOR5eBWfGxQXzP.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/0NUmGIfOR5eBWfGxQXzP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ESXjfMbdR66EvelchkO2.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/ESXjfMbdR66EvelchkO2.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/1pivEKiZRIyUEq5LZwFq.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/1pivEKiZRIyUEq5LZwFq.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/lPVjwazKRC2uOgky7wp9.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/lPVjwazKRC2uOgky7wp9.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/rrREnnaTHujgpdHc1Hx2.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/rrREnnaTHujgpdHc1Hx2.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/rRMKC1yRtCyLBxTjpNsw.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rRMKC1yRtCyLBxTjpNsw.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/zax9drzRSUucjMZ37Z6A.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/zax9drzRSUucjMZ37Z6A.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/FGXbdBsmSIG0F5GzM736.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/FGXbdBsmSIG0F5GzM736.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/9hKPq6eIQeaikedG1M5P.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/9hKPq6eIQeaikedG1M5P.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/ECiZJ8ZHQ2KKTGJAEPAQ.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/ECiZJ8ZHQ2KKTGJAEPAQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/PdCyH1iQTlaZRNcmckiL.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/PdCyH1iQTlaZRNcmckiL.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/rds5eeFKRp2FLwRiZvWy.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rds5eeFKRp2FLwRiZvWy.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/R19mqATaGQMSgmWmBJga.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/R19mqATaGQMSgmWmBJga.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/zyHwpJOoRB6CFPal6UCN.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/zyHwpJOoRB6CFPal6UCN.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/c8bbu7ITdWYH39SLA9NQ.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/c8bbu7ITdWYH39SLA9NQ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/0QlriGWzQa2yPj4hGX7u.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/0QlriGWzQa2yPj4hGX7u.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/akRhHarqTqe6uL7PoYOa.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/akRhHarqTqe6uL7PoYOa.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/j4edrJjqQGq411i5WsbS.jpg
+image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/j4edrJjqQGq411i5WsbS.jpg
 ---
 ::::
   :::
@@ -200,7 +200,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/mQunR3zVRdq3aymchOuD.jpg
+    avatar: /images/voyages/voyage-egypte-caire-croisiere-nil/mQunR3zVRdq3aymchOuD.jpg
     avatar-size: "60"
     ---
     #title
@@ -210,7 +210,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
   :::highlights-row
   ---
-  image: /images/voyages/xUck8ZP5QbgiWECy549C.jpg
+  image: /images/voyages/voyage-egypte-caire-croisiere-nil/xUck8ZP5QbgiWECy549C.jpg
   ---
   ::::highlight-list-item
   Visitez l'Egypte autrement : entre sites incontournables et découvertes hors des sentiers battus
@@ -274,7 +274,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
   
     :::day-row
     ---
-    image: /images/voyages/VV26lQ5TKWZL1dYQ5R2q.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/VV26lQ5TKWZL1dYQ5R2q.jpg
     ---
     #subtitle
     JOUR 1
@@ -289,7 +289,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/2ewkC6qVSRaUNQoZbpev.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/2ewkC6qVSRaUNQoZbpev.jpg
     ---
     #subtitle
     JOUR 2
@@ -304,7 +304,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/uWqHyqgMTlm2nG5Lw6Bf.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/uWqHyqgMTlm2nG5Lw6Bf.jpg
     ---
     #subtitle
     JOUR 3
@@ -319,7 +319,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/WY5Xe78GTGRfbYsnybvk.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/WY5Xe78GTGRfbYsnybvk.jpg
     ---
     #subtitle
     JOUR 4
@@ -336,7 +336,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/OImVDaowRH60uD5XtHqG.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/OImVDaowRH60uD5XtHqG.jpg
     ---
     #subtitle
     JOUR 5
@@ -366,7 +366,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/a5lvf9ELRYWcZ30GQqPX.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/a5lvf9ELRYWcZ30GQqPX.jpg
     ---
     #subtitle
     JOUR 7
@@ -381,7 +381,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/4W3gEGhgSV2r0X9rF3RS.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/4W3gEGhgSV2r0X9rF3RS.jpg
     ---
     #subtitle
     JOUR 8
@@ -396,7 +396,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/Kwhu4qTzWBarpgqi7qwA.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/Kwhu4qTzWBarpgqi7qwA.jpg
     ---
     #subtitle
     JOUR 9
@@ -411,7 +411,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
 
     :::day-row
     ---
-    image: /images/voyages/xDdXuvzRwi4iqxkGActp.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/xDdXuvzRwi4iqxkGActp.jpg
     ---
     #subtitle
     JOUR 10
@@ -440,19 +440,19 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/t7mlhqOAQIGggDK9LjAA.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/t7mlhqOAQIGggDK9LjAA.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/XSwtAQrSoe46tnGQcgsP.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/XSwtAQrSoe46tnGQcgsP.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GHXbGQtQQEeHMhnA24d3.jpg
+    image: /images/voyages/voyage-egypte-caire-croisiere-nil/GHXbGQtQQEeHMhnA24d3.jpg
     ---
     :::::
     ::::
@@ -470,7 +470,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/jMPqLheWQzulsSPPLbXA.jpg
+    avatar: /images/voyages/voyage-egypte-caire-croisiere-nil/jMPqLheWQzulsSPPLbXA.jpg
     ---
     #title
     Guide égyptologue francophone

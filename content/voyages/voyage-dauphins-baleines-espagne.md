@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/gGQOtr2TQg28vgyJDN1u.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/gGQOtr2TQg28vgyJDN1u.jpg
 ---
 #title
 Observez dauphins et baleines sur les îles Canaries
@@ -10,67 +10,67 @@ Observez dauphins et baleines sur les îles Canaries
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/phqLPETfTkGoAbb9QXuD.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-dauphins-baleines-espagne/phqLPETfTkGoAbb9QXuD.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/9QcdWIItQdqQxxMy7u8t.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/9QcdWIItQdqQxxMy7u8t.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/AiOXKzUJSsYB0NugPwwG.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-dauphins-baleines-espagne/AiOXKzUJSsYB0NugPwwG.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/dMlCGg9DQmmdbyCB6p7y.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/dMlCGg9DQmmdbyCB6p7y.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/9YrTBcjeSiqUWXSL3TuA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-dauphins-baleines-espagne/9YrTBcjeSiqUWXSL3TuA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/UNOsEpzJT0CPWbqBbNNQ.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/UNOsEpzJT0CPWbqBbNNQ.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/b633G5TQ7qV16cfk3Lcg.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-dauphins-baleines-espagne/b633G5TQ7qV16cfk3Lcg.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/qwQvg4v5S7Sz2pxagmvO.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/qwQvg4v5S7Sz2pxagmvO.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/z68IHlwLTW2qe7ehx4cr.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-dauphins-baleines-espagne/z68IHlwLTW2qe7ehx4cr.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/ON104ffBTXWodkLMTqsz.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/ON104ffBTXWodkLMTqsz.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/WNZ6ffQXG9uLaRU1CqSA.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-dauphins-baleines-espagne/WNZ6ffQXG9uLaRU1CqSA.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/ASSVRlENSqijp5x2gojP.jpg
+image-src: /images/voyages/voyage-dauphins-baleines-espagne/ASSVRlENSqijp5x2gojP.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/QfUFBVbBQh6ach8DcZhp.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-dauphins-baleines-espagne/QfUFBVbBQh6ach8DcZhp.jpg"}
 ::::
   :::
 ::
@@ -161,7 +161,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/OQ3pO17GTOGZpxgJvo4l.jpg
+    avatar: /images/voyages/voyage-dauphins-baleines-espagne/OQ3pO17GTOGZpxgJvo4l.jpg
     avatar-size: "60"
     ---
     #title
@@ -171,7 +171,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
 
   :::highlights-row
   ---
-  image: /images/voyages/8bym7cvR5OL3Qjq8BXkH.jpg
+  image: /images/voyages/voyage-dauphins-baleines-espagne/8bym7cvR5OL3Qjq8BXkH.jpg
   ---
   ::::highlight-list-item
   Observez les baleines et les dauphins dans leur habitat naturel à Lanzarote, l’un des rares endroits au monde où ces animaux peuvent être étudiés tout au long de l’année.
@@ -235,7 +235,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
   
     :::day-row
     ---
-    image: /images/voyages/ajLqia9YQnOAh2fvPWo9.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/ajLqia9YQnOAh2fvPWo9.jpg
     ---
     #subtitle
     JOURS 1 À 3
@@ -250,7 +250,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
 
     :::day-row
     ---
-    image: /images/voyages/Stxq6wpsT4ONiKinYhrw.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/Stxq6wpsT4ONiKinYhrw.jpg
     ---
     #subtitle
     JOUR 4
@@ -265,7 +265,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
 
     :::day-row
     ---
-    image: /images/voyages/0lOliizSIm40vprK0Nk4.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/0lOliizSIm40vprK0Nk4.jpg
     ---
     #subtitle
     JOUR 5
@@ -287,7 +287,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
 
     :::day-row
     ---
-    image: /images/voyages/nPa0c6RdTLKDPEBGqKBJ.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/nPa0c6RdTLKDPEBGqKBJ.jpg
     ---
     #subtitle
     JOURS 6 ET 7
@@ -302,7 +302,7 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
 
     :::day-row
     ---
-    image: /images/voyages/UdokQZkVR8amYX6aDV9b.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/UdokQZkVR8amYX6aDV9b.jpg
     ---
     #subtitle
     JOUR 8
@@ -331,19 +331,19 @@ Une aventure inoubliable pour tous les amoureux de la nature et des animaux, con
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/JZOp86v7Q22uCOSwyny7.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/JZOp86v7Q22uCOSwyny7.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/uyyce9RHSKjcOjGCkEAV.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/uyyce9RHSKjcOjGCkEAV.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/SsDwZCJ5RGC8EQgqgdb7.jpg
+    image: /images/voyages/voyage-dauphins-baleines-espagne/SsDwZCJ5RGC8EQgqgdb7.jpg
     ---
     :::::
     ::::

@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/kKjnz57eQS7NLDd0AnsS.jpg
+image-src: /images/voyages/voyage-chamanique-perou/kKjnz57eQS7NLDd0AnsS.jpg
 ---
 #title
 Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou
@@ -10,73 +10,73 @@ Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pér
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/tT9gTjMqRMiBDrInboem.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamanique-perou/tT9gTjMqRMiBDrInboem.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/oA2oz3OZSA6mjjPiivWM.jpg
+image-src: /images/voyages/voyage-chamanique-perou/oA2oz3OZSA6mjjPiivWM.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/7VY9b8pbTxmuSKCIn8HL.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamanique-perou/7VY9b8pbTxmuSKCIn8HL.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/WL5W03E7QvNrMOiURmYx.jpg
+image-src: /images/voyages/voyage-chamanique-perou/WL5W03E7QvNrMOiURmYx.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/l2n0dHZsTSexL6USOKvn.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamanique-perou/l2n0dHZsTSexL6USOKvn.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/nq6yFJHnSVWmrAJaCadL.jpg
+image-src: /images/voyages/voyage-chamanique-perou/nq6yFJHnSVWmrAJaCadL.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/LaqJigGgQzSuBZiV1vDk.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamanique-perou/LaqJigGgQzSuBZiV1vDk.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/knSrOSKSTfSBqbkI0L3c.jpg
+image-src: /images/voyages/voyage-chamanique-perou/knSrOSKSTfSBqbkI0L3c.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/zI48t1BORaS9k0lmwrQP.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamanique-perou/zI48t1BORaS9k0lmwrQP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/llQ0GFv6QcSmT4gwDyKf.jpg
+image-src: /images/voyages/voyage-chamanique-perou/llQ0GFv6QcSmT4gwDyKf.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/g392juCQT2ZpX6n0f5Ah.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamanique-perou/g392juCQT2ZpX6n0f5Ah.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/YjjuPzrgQSSWVLelWgvm.jpg
+image-src: /images/voyages/voyage-chamanique-perou/YjjuPzrgQSSWVLelWgvm.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/fQrJ44yrTkOf31UsAESJ.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamanique-perou/fQrJ44yrTkOf31UsAESJ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/atyw8kERrmJsPjm6IFKJ.jpg
+image-src: /images/voyages/voyage-chamanique-perou/atyw8kERrmJsPjm6IFKJ.jpg
 ---
 ::::
   :::
@@ -168,7 +168,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/MGKzR0kLS0iVkW6PifBD.jpg
+    avatar: /images/voyages/voyage-chamanique-perou/MGKzR0kLS0iVkW6PifBD.jpg
     avatar-size: "60"
     ---
     #title
@@ -178,7 +178,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
   :::highlights-row
   ---
-  image: /images/voyages/sKv1BykTQaObxWwlCYqe.jpg
+  image: /images/voyages/voyage-chamanique-perou/sKv1BykTQaObxWwlCYqe.jpg
   ---
   ::::highlight-list-item
   La rencontre privilégiée avec un chamane de la respectée communauté Q'ero
@@ -242,7 +242,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
   
     :::day-row
     ---
-    image: /images/voyages/BCLpHjwsT5W78hX2ddQo.jpg
+    image: /images/voyages/voyage-chamanique-perou/BCLpHjwsT5W78hX2ddQo.jpg
     ---
     #subtitle
     JOUR 1
@@ -257,7 +257,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/M8ym1nS8OLMo7uQ4XGHw.jpg
+    image: /images/voyages/voyage-chamanique-perou/M8ym1nS8OLMo7uQ4XGHw.jpg
     ---
     #subtitle
     JOUR 2
@@ -272,7 +272,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/A75W5dH1SQSisDj6Wx2V.jpg
+    image: /images/voyages/voyage-chamanique-perou/A75W5dH1SQSisDj6Wx2V.jpg
     ---
     #subtitle
     JOUR 3
@@ -287,7 +287,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/rnqFutE0RkObREntfaEG.jpg
+    image: /images/voyages/voyage-chamanique-perou/rnqFutE0RkObREntfaEG.jpg
     ---
     #subtitle
     JOUR 4
@@ -302,7 +302,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/8vZhHs71SWiCHP9pZUCd.jpg
+    image: /images/voyages/voyage-chamanique-perou/8vZhHs71SWiCHP9pZUCd.jpg
     ---
     #subtitle
     JOUR 5
@@ -317,7 +317,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/xVWiB1bfSLeoSKhGxwH3.jpg
+    image: /images/voyages/voyage-chamanique-perou/xVWiB1bfSLeoSKhGxwH3.jpg
     ---
     #subtitle
     JOURS 6, 7 ET 8
@@ -332,7 +332,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/92rP0Y2Rcyp13742OLq7.jpg
+    image: /images/voyages/voyage-chamanique-perou/92rP0Y2Rcyp13742OLq7.jpg
     ---
     #subtitle
     JOUR 9
@@ -347,7 +347,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/6aXjPwCQAGwLFBlhwwwL.jpg
+    image: /images/voyages/voyage-chamanique-perou/6aXjPwCQAGwLFBlhwwwL.jpg
     ---
     #subtitle
     JOUR 10
@@ -363,7 +363,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/IXFb7uTQ6OIjc1dOnkOn.jpg
+    image: /images/voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg
     ---
     #subtitle
     JOUR 11
@@ -378,7 +378,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/MsL2XM6Rpi40UtBwIbdw.jpg
+    image: /images/voyages/voyage-chamanique-perou/MsL2XM6Rpi40UtBwIbdw.jpg
     ---
     #subtitle
     JOUR 12
@@ -393,7 +393,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
 
     :::day-row
     ---
-    image: /images/voyages/oEZoRV7TQV66yK2r4iNt.jpg
+    image: /images/voyages/voyage-chamanique-perou/oEZoRV7TQV66yK2r4iNt.jpg
     ---
     #subtitle
     JOUR 13
@@ -422,19 +422,19 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/SbzNCziSLuUEKI6Us9Xu.jpg
+    image: /images/voyages/voyage-chamanique-perou/SbzNCziSLuUEKI6Us9Xu.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/NwlZC9pnTOKFrtKv6SrQ.jpg
+    image: /images/voyages/voyage-chamanique-perou/NwlZC9pnTOKFrtKv6SrQ.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/CPgtoFO1QCmhp1gyiw9Z.jpg
+    image: /images/voyages/voyage-chamanique-perou/CPgtoFO1QCmhp1gyiw9Z.jpg
     ---
     :::::
     ::::

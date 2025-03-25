@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/AjNZlDsJQYy6sYuatDRC.jpg
+image-src: /images/voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg
 ---
 #title
 Immersion au cœur d'un observatoire astronomique
@@ -10,53 +10,53 @@ Immersion au cœur d'un observatoire astronomique
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/kN2l6NP4TeuLvCp3Kj5v.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-observatoire-astronomique/kN2l6NP4TeuLvCp3Kj5v.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/AlhoWV2nQL6r63cNX6qY.jpg
+image-src: /images/voyages/immersion-observatoire-astronomique/AlhoWV2nQL6r63cNX6qY.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/1A7GnLyvT6S2FGoB24qD.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-observatoire-astronomique/1A7GnLyvT6S2FGoB24qD.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/wAuHGGLhQmioeMOJmNUh.jpg
+image-src: /images/voyages/immersion-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/weER0FCQYWalbgEae6jw.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/immersion-observatoire-astronomique/weER0FCQYWalbgEae6jw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/hsEfs2cZQbetS2KxnPno.jpg
+image-src: /images/voyages/immersion-observatoire-astronomique/hsEfs2cZQbetS2KxnPno.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/45kIi6WpSkmCRjNvRjj4.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/FGyr95QnSWyaEDn0nNoH.jpg
+image-src: /images/voyages/immersion-observatoire-astronomique/FGyr95QnSWyaEDn0nNoH.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/0CkJEb5SIWny0DaMSuUP.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/immersion-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/oVoM177SRTukoOvlAHW8.jpg
+image-src: /images/voyages/immersion-observatoire-astronomique/oVoM177SRTukoOvlAHW8.jpg
 ---
 ::::
   :::
@@ -146,7 +146,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/4eJgN13dSJe17Dhxzd6X.jpg
+    avatar: /images/voyages/immersion-observatoire-astronomique/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -156,7 +156,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
   :::highlights-row
   ---
-  image: /images/voyages/AfnnG33bQ7iFEGeK6zQh.jpg
+  image: /images/voyages/immersion-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg
   ---
   ::::highlight-list-item
   Mener de véritables missions d'observation scientifique
@@ -216,7 +216,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   
     :::day-row
     ---
-    image: /images/voyages/wAuHGGLhQmioeMOJmNUh.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg
     ---
     #subtitle
     JOUR 1
@@ -231,7 +231,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/0CkJEb5SIWny0DaMSuUP.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg
     ---
     #subtitle
     JOUR 2
@@ -246,7 +246,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/6xyzINy9TjOS6XIloLe0.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/6xyzINy9TjOS6XIloLe0.jpg
     ---
     #subtitle
     JOUR 3
@@ -261,7 +261,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/FGyr95QnSWyaEDn0nNoH.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/FGyr95QnSWyaEDn0nNoH.jpg
     ---
     #subtitle
     JOUR 4
@@ -276,7 +276,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/45kIi6WpSkmCRjNvRjj4.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg
     ---
     #subtitle
     JOUR 5
@@ -291,7 +291,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/AlhoWV2nQL6r63cNX6qY.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/AlhoWV2nQL6r63cNX6qY.jpg
     ---
     #subtitle
     JOUR 6
@@ -306,7 +306,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
 
     :::day-row
     ---
-    image: /images/voyages/KxLbWWfXRMuHgO7XuFrf.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/KxLbWWfXRMuHgO7XuFrf.jpg
     ---
     #subtitle
     JOUR 7
@@ -335,19 +335,19 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/uOrmpmM5S6OellRXSS6e.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/uOrmpmM5S6OellRXSS6e.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/H5fONAJcS8Wid7WY3JbT.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/H5fONAJcS8Wid7WY3JbT.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/EthVSk7Qm2uW66yqs8gD.jpg
+    image: /images/voyages/immersion-observatoire-astronomique/EthVSk7Qm2uW66yqs8gD.jpg
     ---
     :::::
     ::::
@@ -365,7 +365,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/LYkGdRhHQbaUItRGJ36k.jpg
+    avatar: /images/voyages/immersion-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg
     ---
     #title
     Marc

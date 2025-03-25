@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/hS2L7RnkTwKjbqYg93ZF.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/hS2L7RnkTwKjbqYg93ZF.jpg
 ---
 #title
 Immersion à Bali, au cœur des traditions et des paysages spectaculaires
@@ -10,67 +10,67 @@ Immersion à Bali, au cœur des traditions et des paysages spectaculaires
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/n66BoDQTTqo7dmmdyxY1.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/bali-menjangan-sidemen/n66BoDQTTqo7dmmdyxY1.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/CWYGNwqmSQqHBZAeS12U.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/CWYGNwqmSQqHBZAeS12U.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/KSM0NI92R9OCsioOBCVO.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/G61Fd84FTl6JbRkGWGRh.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/G61Fd84FTl6JbRkGWGRh.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/3883c6KUSUuCOVBarmSO.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/bali-menjangan-sidemen/3883c6KUSUuCOVBarmSO.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/fow5S9GNQmGBAD2ciVVq.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/fow5S9GNQmGBAD2ciVVq.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/1DphAClRSqa7TU5dxNpw.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/bali-menjangan-sidemen/1DphAClRSqa7TU5dxNpw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/H0KoMjDHRUPApX9BJ01n.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/H0KoMjDHRUPApX9BJ01n.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/DIm8LvqVSaUhvfjKIQhC.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/bali-menjangan-sidemen/DIm8LvqVSaUhvfjKIQhC.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/0D712pk4Ri2j9YWIVBBg.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/0D712pk4Ri2j9YWIVBBg.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/bimJ4sWwS121SRw0pziv.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/bali-menjangan-sidemen/bimJ4sWwS121SRw0pziv.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/wI6wKO5jS96RgP0T87WP.jpg
+image-src: /images/voyages/bali-menjangan-sidemen/wI6wKO5jS96RgP0T87WP.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/YUwbuThub1Arp6exOFwt.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/bali-menjangan-sidemen/YUwbuThub1Arp6exOFwt.jpg"}
 ::::
   :::
 ::
@@ -159,7 +159,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/xBDf2R8TyCPOqrSpVH9P.jpg
+    avatar: /images/voyages/bali-menjangan-sidemen/xBDf2R8TyCPOqrSpVH9P.jpg
     avatar-size: "60"
     ---
     #title
@@ -169,7 +169,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
   :::highlights-row
   ---
-  image: /images/voyages/e9FBFN8zReqYKbbv6HoQ.jpg
+  image: /images/voyages/bali-menjangan-sidemen/e9FBFN8zReqYKbbv6HoQ.jpg
   ---
   ::::highlight-list-item
   La découverte de nombreuses régions balinaises différentes
@@ -229,7 +229,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
   
     :::day-row
     ---
-    image: /images/voyages/4KL0UuVgRu6nUnfDaunN.jpg
+    image: /images/voyages/bali-menjangan-sidemen/4KL0UuVgRu6nUnfDaunN.jpg
     ---
     #subtitle
     JOUR 1
@@ -244,7 +244,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/J8pzYqZ4S8qMmIfxHnLW.jpg
+    image: /images/voyages/bali-menjangan-sidemen/J8pzYqZ4S8qMmIfxHnLW.jpg
     ---
     #subtitle
     JOUR 2
@@ -259,7 +259,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/NXVb7i7TLOIx1mnoIhJo.jpg
+    image: /images/voyages/bali-menjangan-sidemen/NXVb7i7TLOIx1mnoIhJo.jpg
     ---
     #subtitle
     JOUR 3 
@@ -274,7 +274,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/GksN0keTTRi6doESw71J.jpg
+    image: /images/voyages/bali-menjangan-sidemen/GksN0keTTRi6doESw71J.jpg
     ---
     #subtitle
     JOUR 4
@@ -289,7 +289,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/RbocXDxS9CH5LmcEZo6m.jpg
+    image: /images/voyages/bali-menjangan-sidemen/RbocXDxS9CH5LmcEZo6m.jpg
     ---
     #subtitle
     JOUR 5
@@ -304,7 +304,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/mSzJxBSjR7WGwyENNWAg.jpg
+    image: /images/voyages/bali-menjangan-sidemen/mSzJxBSjR7WGwyENNWAg.jpg
     ---
     #subtitle
     JOUR 6
@@ -319,7 +319,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/F7RbSq1GSqyx8SpJ4hDg.jpg
+    image: /images/voyages/bali-menjangan-sidemen/F7RbSq1GSqyx8SpJ4hDg.jpg
     ---
     #subtitle
     JOUR 7
@@ -334,7 +334,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/4Xr3wr4QjHlMi3LUn70A.jpg
+    image: /images/voyages/bali-menjangan-sidemen/4Xr3wr4QjHlMi3LUn70A.jpg
     ---
     #subtitle
     JOUR 8
@@ -349,7 +349,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/9k4EQzOkQXK06PtJPYLb.jpg
+    image: /images/voyages/bali-menjangan-sidemen/9k4EQzOkQXK06PtJPYLb.jpg
     ---
     #subtitle
     JOUR 9 
@@ -364,7 +364,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/bmIZroVTsG5CcgAuhoAt.jpg
+    image: /images/voyages/bali-menjangan-sidemen/bmIZroVTsG5CcgAuhoAt.jpg
     ---
     #subtitle
     JOUR 10
@@ -379,7 +379,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/caX0nyRIRwSejNdKiBNJ.jpg
+    image: /images/voyages/bali-menjangan-sidemen/caX0nyRIRwSejNdKiBNJ.jpg
     ---
     #subtitle
     JOUR 11
@@ -394,7 +394,7 @@ Un voyage dépaysant vous attend au rythme de la culture balinaise, hors des sen
 
     :::day-row
     ---
-    image: /images/voyages/BjQ9eoxShqYk8jFzRKMH.jpg
+    image: /images/voyages/bali-menjangan-sidemen/BjQ9eoxShqYk8jFzRKMH.jpg
     ---
     #subtitle
     JOUR 12
@@ -410,7 +410,7 @@ beach, entre nature et jolie plage de sable blanc. Transfert à Jimbaran en fin 
 
     :::day-row
     ---
-    image: /images/voyages/OiCUJfbT3qFPZgy0DEKf.jpg
+    image: /images/voyages/bali-menjangan-sidemen/OiCUJfbT3qFPZgy0DEKf.jpg
     ---
     #subtitle
     JOUR 13
@@ -440,19 +440,19 @@ beach, entre nature et jolie plage de sable blanc. Transfert à Jimbaran en fin 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/kqQ9SjnRvOf5kvsUOuxw.jpg
+    image: /images/voyages/bali-menjangan-sidemen/kqQ9SjnRvOf5kvsUOuxw.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/O31ZKeGQqqsiBrBcjX3w.jpg
+    image: /images/voyages/bali-menjangan-sidemen/O31ZKeGQqqsiBrBcjX3w.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/UbxcjFeeSSKKusAUrEkc.jpg
+    image: /images/voyages/bali-menjangan-sidemen/UbxcjFeeSSKKusAUrEkc.jpg
     ---
     :::::
     ::::

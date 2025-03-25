@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/id91ylw7SN2395ZGSRck.jpg
+image-src: /images/voyages/voyage-perou/id91ylw7SN2395ZGSRck.jpg
 ---
 #title
 Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca
@@ -10,37 +10,37 @@ Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/uDnQ0hySTn2HXdhOtXm8.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-perou/uDnQ0hySTn2HXdhOtXm8.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/KYZBJrnQ0mLRJrSrCaGs.jpg
+image-src: /images/voyages/voyage-perou/KYZBJrnQ0mLRJrSrCaGs.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/6nd4MDfRSreIbH6MCkzT.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/voyage-perou/6nd4MDfRSreIbH6MCkzT.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/iflJn1eGSEmxNxgcQPkp.jpg
+image-src: /images/voyages/voyage-perou/iflJn1eGSEmxNxgcQPkp.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/Nk6dHFQwSBmLoI1SdvXk.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/voyage-perou/Nk6dHFQwSBmLoI1SdvXk.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/TMDs5ihqSuabZD5sWfzg.jpg
+image-src: /images/voyages/voyage-perou/TMDs5ihqSuabZD5sWfzg.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/XfrwqtepQ7e73nR26n3i.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/voyage-perou/XfrwqtepQ7e73nR26n3i.jpg"}
 ::::
   :::
 ::
@@ -129,7 +129,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/MGKzR0kLS0iVkW6PifBD.jpg
+    avatar: /images/voyages/voyage-perou/MGKzR0kLS0iVkW6PifBD.jpg
     avatar-size: "60"
     ---
     #title
@@ -139,7 +139,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
   :::highlights-row
   ---
-  image: /images/voyages/CMyMU5PuRNdWAFs1WhhA.jpg
+  image: /images/voyages/voyage-perou/CMyMU5PuRNdWAFs1WhhA.jpg
   ---
   ::::highlight-list-item
   La découverte des essentiels du Pérou
@@ -207,7 +207,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
   
     :::day-row
     ---
-    image: /images/voyages/sSDtyLJRI6zP3hfVdSDA.jpg
+    image: /images/voyages/voyage-perou/sSDtyLJRI6zP3hfVdSDA.jpg
     ---
     #subtitle
     JOUR 1
@@ -222,7 +222,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
     :::day-row
     ---
-    image: /images/voyages/KOuHTNOJT8OVJf7D6igG.jpg
+    image: /images/voyages/voyage-perou/KOuHTNOJT8OVJf7D6igG.jpg
     ---
     #subtitle
     JOUR 2
@@ -238,7 +238,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
     :::day-row
     ---
-    image: /images/voyages/64ampJ7SRFKU69ygm1mp.jpg
+    image: /images/voyages/voyage-perou/64ampJ7SRFKU69ygm1mp.jpg
     ---
     #subtitle
     JOUR 3
@@ -253,7 +253,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
     :::day-row
     ---
-    image: /images/voyages/GCdVvwxS5uwC6GSu2BMq.jpg
+    image: /images/voyages/voyage-perou/GCdVvwxS5uwC6GSu2BMq.jpg
     ---
     #subtitle
     JOUR 4
@@ -268,7 +268,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
     :::day-row
     ---
-    image: /images/voyages/z0tyEIGSMa4jtoqCqXaz.jpg
+    image: /images/voyages/voyage-perou/z0tyEIGSMa4jtoqCqXaz.jpg
     ---
     #subtitle
     JOUR 5
@@ -283,7 +283,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
     :::day-row
     ---
-    image: /images/voyages/EjdtkWGLQRCBeyXKg26l.jpg
+    image: /images/voyages/voyage-perou/EjdtkWGLQRCBeyXKg26l.jpg
     ---
     #subtitle
     JOUR 6
@@ -298,7 +298,7 @@ Ce voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (date
 
     :::day-row
     ---
-    image: /images/voyages/Lqn4xfOSb6KR4afEZpmY.jpg
+    image: /images/voyages/voyage-perou/Lqn4xfOSb6KR4afEZpmY.jpg
     ---
     #subtitle
     JOUR 7
@@ -315,7 +315,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
 
     :::day-row
     ---
-    image: /images/voyages/oVTlEfuQsSyPCUil4ZhU.jpg
+    image: /images/voyages/voyage-perou/oVTlEfuQsSyPCUil4ZhU.jpg
     ---
     #subtitle
     JOUR 8
@@ -330,7 +330,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
 
     :::day-row
     ---
-    image: /images/voyages/m3mkV742RLuTVUQjEbYi.jpg
+    image: /images/voyages/voyage-perou/m3mkV742RLuTVUQjEbYi.jpg
     ---
     #subtitle
     JOUR 9
@@ -345,7 +345,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
 
     :::day-row
     ---
-    image: /images/voyages/pUPNvWRSbS7JeNpGVyoO.jpg
+    image: /images/voyages/voyage-perou/pUPNvWRSbS7JeNpGVyoO.jpg
     ---
     #subtitle
     JOUR 10
@@ -360,7 +360,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
 
     :::day-row
     ---
-    image: /images/voyages/IAwPxjjITF6PDF0oy3Sw.jpg
+    image: /images/voyages/voyage-perou/IAwPxjjITF6PDF0oy3Sw.jpg
     ---
     #subtitle
     JOUR 11
@@ -375,7 +375,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
 
     :::day-row
     ---
-    image: /images/voyages/xNbaqYTWSnBi1eA1i6QA.jpg
+    image: /images/voyages/voyage-perou/xNbaqYTWSnBi1eA1i6QA.jpg
     ---
     #subtitle
     JOUR 12
@@ -390,7 +390,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
 
     :::day-row
     ---
-    image: /images/voyages/X06tVQ3fSGqVq2zoQkZ0.jpg
+    image: /images/voyages/voyage-perou/X06tVQ3fSGqVq2zoQkZ0.jpg
     ---
     #subtitle
     JOUR 13
@@ -419,19 +419,19 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/UoHOrzmdQKqvJUAjWChR.jpg
+    image: /images/voyages/voyage-perou/UoHOrzmdQKqvJUAjWChR.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/SlyImqsRuqdHWfHXECU5.jpg
+    image: /images/voyages/voyage-perou/SlyImqsRuqdHWfHXECU5.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/swxS4jWLQ3usjTb8Qtd6.jpg
+    image: /images/voyages/voyage-perou/swxS4jWLQ3usjTb8Qtd6.jpg
     ---
     :::::
     ::::
@@ -449,7 +449,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/AGvLK5ohSf2ggSIFbNMx.jpg
+    avatar: /images/voyages/voyage-perou/AGvLK5ohSf2ggSIFbNMx.jpg
     ---
     #title
     Des guides francophones dédiés

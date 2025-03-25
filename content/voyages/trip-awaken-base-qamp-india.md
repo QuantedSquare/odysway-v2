@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/g5ZyWzcXTpWk5Vu5U7ei.jpg
+image-src: /images/voyages/trip-awaken-base-qamp-india/g5ZyWzcXTpWk5Vu5U7ei.jpg
 ---
 #title
 Awaken your own nature - BaseQamp
@@ -98,7 +98,7 @@ This journey also offers the opportunity to live in immersion with local communi
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/UoFq0WuPQpGfrRNXSICU.jpg
+    avatar: /images/voyages/trip-awaken-base-qamp-india/UoFq0WuPQpGfrRNXSICU.jpg
     avatar-size: "60"
     ---
     #title
@@ -108,7 +108,7 @@ This journey also offers the opportunity to live in immersion with local communi
 
   :::highlights-row
   ---
-  image: /images/voyages/exnvCJ2uTROHZzDQktaS.jpg
+  image: /images/voyages/trip-awaken-base-qamp-india/exnvCJ2uTROHZzDQktaS.jpg
   ---
   ::::highlight-list-item
   The Majesty of Sikkim's Landscapes
@@ -168,7 +168,7 @@ This journey also offers the opportunity to live in immersion with local communi
   
     :::day-row
     ---
-    image: /images/voyages/QfRKOHZT629OSiVKLjVi.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/QfRKOHZT629OSiVKLjVi.jpg
     ---
     #subtitle
     DAY 1
@@ -183,7 +183,7 @@ This journey also offers the opportunity to live in immersion with local communi
 
     :::day-row
     ---
-    image: /images/voyages/EorjiMtnQ5uIRjjWfVt6.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/EorjiMtnQ5uIRjjWfVt6.jpg
     ---
     #subtitle
     DAY 2
@@ -198,7 +198,7 @@ This journey also offers the opportunity to live in immersion with local communi
 
     :::day-row
     ---
-    image: /images/voyages/wVgwJmMORYClcAlYwCkq.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/wVgwJmMORYClcAlYwCkq.jpg
     ---
     #subtitle
     DAY 3
@@ -213,7 +213,7 @@ This journey also offers the opportunity to live in immersion with local communi
 
     :::day-row
     ---
-    image: /images/voyages/vAH9v5xSDyhbopk5qAjQ.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/vAH9v5xSDyhbopk5qAjQ.jpg
     ---
     #subtitle
     DAY 4
@@ -228,7 +228,7 @@ This journey also offers the opportunity to live in immersion with local communi
 
     :::day-row
     ---
-    image: /images/voyages/zCNXSaTTdOFp3M0ek8bn.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/zCNXSaTTdOFp3M0ek8bn.jpg
     ---
     #subtitle
     DAY 6
@@ -243,7 +243,7 @@ This journey also offers the opportunity to live in immersion with local communi
 
     :::day-row
     ---
-    image: /images/voyages/oipJMAOTF2uH9TNNDoQS.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/oipJMAOTF2uH9TNNDoQS.jpg
     ---
     #subtitle
     DAY 7
@@ -259,7 +259,7 @@ We will then settle in the hotel around noon. After lunch, we will visit the rui
 
     :::day-row
     ---
-    image: /images/voyages/cFokIWQGROezfzEOYUVE.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/cFokIWQGROezfzEOYUVE.jpg
     ---
     #subtitle
     DAY 8
@@ -275,7 +275,7 @@ We will leave for immersion to meet the indigenous populations in a village inha
 
     :::day-row
     ---
-    image: /images/voyages/a2bEXajMS9CLWEM3eZma.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/a2bEXajMS9CLWEM3eZma.jpg
     ---
     #subtitle
     DAY 9 TO 13
@@ -294,7 +294,7 @@ Day 13: Tshoka- Yuksam : return 2-3 p.m, return to Karma Yoga Center in the even
 
     :::day-row
     ---
-    image: /images/voyages/dWUiTzSQ2WAGoOtDLvIW.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/dWUiTzSQ2WAGoOtDLvIW.jpg
     ---
     #subtitle
     DAY 14
@@ -309,7 +309,7 @@ Day 13: Tshoka- Yuksam : return 2-3 p.m, return to Karma Yoga Center in the even
 
     :::day-row
     ---
-    image: /images/voyages/6Yl939USPqgHBgIWfaEQ.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/6Yl939USPqgHBgIWfaEQ.jpg
     ---
     #subtitle
     DAY 15
@@ -325,7 +325,7 @@ Day 13: Tshoka- Yuksam : return 2-3 p.m, return to Karma Yoga Center in the even
 
     :::day-row
     ---
-    image: /images/voyages/MlprHYR8TraSk0EqoG2P.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/MlprHYR8TraSk0EqoG2P.jpg
     ---
     #subtitle
     DAY 16
@@ -354,19 +354,19 @@ Day 13: Tshoka- Yuksam : return 2-3 p.m, return to Karma Yoga Center in the even
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/iyZxJdnMSJaqkcnDRkhB.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/iyZxJdnMSJaqkcnDRkhB.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/LJnltTGkRXuzAFF0geVg.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/LJnltTGkRXuzAFF0geVg.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/VulhaqIFSoCwQ1DIt2WY.jpg
+    image: /images/voyages/trip-awaken-base-qamp-india/VulhaqIFSoCwQ1DIt2WY.jpg
     ---
     :::::
     ::::
@@ -390,7 +390,7 @@ Our guides are highly experienced and dedicated to your personal growth. They wi
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/ZEbgBCXeSde0CpRGAgqx.jpg
+    avatar: /images/voyages/trip-awaken-base-qamp-india/ZEbgBCXeSde0CpRGAgqx.jpg
     ---
     #title
     BaseQamp

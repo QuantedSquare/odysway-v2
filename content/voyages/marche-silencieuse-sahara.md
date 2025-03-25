@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/SVKLuIkSxeJ9WX0fEbrP.jpg
+image-src: /images/voyages/marche-silencieuse-sahara/SVKLuIkSxeJ9WX0fEbrP.jpg
 ---
 #title
 Marche silencieuse et immersion nomade dans le sahara marocain
@@ -10,53 +10,53 @@ Marche silencieuse et immersion nomade dans le sahara marocain
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/OwyrDJC2QVuNTgCsLUYw.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/marche-silencieuse-sahara/OwyrDJC2QVuNTgCsLUYw.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/yvLapN4oSlSeyOzDHRF1.jpg
+image-src: /images/voyages/marche-silencieuse-sahara/yvLapN4oSlSeyOzDHRF1.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/blk4lkEnRztb9L9aRQll.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/marche-silencieuse-sahara/blk4lkEnRztb9L9aRQll.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/0D7MT3w9Sqmn4HFeqoEB.jpg
+image-src: /images/voyages/marche-silencieuse-sahara/0D7MT3w9Sqmn4HFeqoEB.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/buMli9vOQ9awoo2y8OHs.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/marche-silencieuse-sahara/buMli9vOQ9awoo2y8OHs.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/oENl9NRDQpyZXDJNfFUy.jpg
+image-src: /images/voyages/marche-silencieuse-sahara/oENl9NRDQpyZXDJNfFUy.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/QymTNxWxQOiSbw5iTukF.jpg"}
+::::photo-col{col-width="7" image-src="/images/voyages/marche-silencieuse-sahara/QymTNxWxQOiSbw5iTukF.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/wp4kIowERsiL0f7UFYxV.jpg
+image-src: /images/voyages/marche-silencieuse-sahara/wp4kIowERsiL0f7UFYxV.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/zACwLvRiutd3IJaDJkAR.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/marche-silencieuse-sahara/zACwLvRiutd3IJaDJkAR.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/6LGbt4oQsicoygJe3Yf2.jpg
+image-src: /images/voyages/marche-silencieuse-sahara/6LGbt4oQsicoygJe3Yf2.jpg
 ---
 ::::
   :::
@@ -146,7 +146,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/5d0bpYsfQ5WoYZavGHgh.jpg
+    avatar: /images/voyages/marche-silencieuse-sahara/5d0bpYsfQ5WoYZavGHgh.jpg
     avatar-size: "60"
     ---
     #title
@@ -156,7 +156,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
 
   :::highlights-row
   ---
-  image: /images/voyages/QLMu7DEXSeOav93pOHVk.jpg
+  image: /images/voyages/marche-silencieuse-sahara/QLMu7DEXSeOav93pOHVk.jpg
   ---
   ::::highlight-list-item
   Une retraite au rythme du désert, alternant marches silencieuses et moments d'introspection. Lisez, méditez, contemplez, et laissez-vous imprégner par la quiétude des dunes
@@ -216,7 +216,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
   
     :::day-row
     ---
-    image: /images/voyages/5UqN13B0SISuHttVXBf9.jpg
+    image: /images/voyages/marche-silencieuse-sahara/5UqN13B0SISuHttVXBf9.jpg
     ---
     #subtitle
     JOUR 1
@@ -231,7 +231,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
 
     :::day-row
     ---
-    image: /images/voyages/1WGKKDFASyyJiWzE8FJW.jpg
+    image: /images/voyages/marche-silencieuse-sahara/1WGKKDFASyyJiWzE8FJW.jpg
     ---
     #subtitle
     JOUR 2
@@ -246,7 +246,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
 
     :::day-row
     ---
-    image: /images/voyages/80P4qGTSSuGDzOfcXmiv.jpg
+    image: /images/voyages/marche-silencieuse-sahara/80P4qGTSSuGDzOfcXmiv.jpg
     ---
     #subtitle
     JOUR 3
@@ -261,7 +261,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
 
     :::day-row
     ---
-    image: /images/voyages/PG4BtyQKT0VsbYQ2ReT9.jpg
+    image: /images/voyages/marche-silencieuse-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg
     ---
     #subtitle
     JOURS 4 À 6
@@ -276,7 +276,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
 
     :::day-row
     ---
-    image: /images/voyages/PjCaoXw9SdSA9P69ZAV8.jpg
+    image: /images/voyages/marche-silencieuse-sahara/PjCaoXw9SdSA9P69ZAV8.jpg
     ---
     #subtitle
     JOUR 7
@@ -291,7 +291,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
 
     :::day-row
     ---
-    image: /images/voyages/2PHPgID9RcCW9AEGPrt6.jpg
+    image: /images/voyages/marche-silencieuse-sahara/2PHPgID9RcCW9AEGPrt6.jpg
     ---
     #subtitle
     JOUR 8
@@ -320,25 +320,25 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/2wj2ZrcUQ3OJN8QArLbp.jpg
+    image: /images/voyages/marche-silencieuse-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/hVDy0zpQ8yFEhVxOvw9t.jpg
+    image: /images/voyages/marche-silencieuse-sahara/hVDy0zpQ8yFEhVxOvw9t.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/ItfrMkgsQlGb3vkj6NP8.jpg
+    image: /images/voyages/marche-silencieuse-sahara/ItfrMkgsQlGb3vkj6NP8.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/nHdSwJER4mqHHQx1JdTl.jpg
+    image: /images/voyages/marche-silencieuse-sahara/nHdSwJER4mqHHQx1JdTl.jpg
     ---
     :::::
     ::::
@@ -356,7 +356,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
   #guides
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/dpcBur1YRE6k1uQJ0NYp.jpg
+    avatar: /images/voyages/marche-silencieuse-sahara/dpcBur1YRE6k1uQJ0NYp.jpg
     ---
     #title
     Pascale

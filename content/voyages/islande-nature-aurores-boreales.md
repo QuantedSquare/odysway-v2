@@ -1,6 +1,6 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/2ESIsFijT9q3P4xUjuPs.jpg
+image-src: /images/voyages/islande-nature-aurores-boreales/2ESIsFijT9q3P4xUjuPs.jpg
 ---
 #title
 Islande sauvage : Terre de feu et de glace
@@ -10,33 +10,33 @@ Islande sauvage : Terre de feu et de glace
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/5x5yqeRnQ7KIKFCtbSJs.jpg"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/islande-nature-aurores-boreales/5x5yqeRnQ7KIKFCtbSJs.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: /images/voyages/g02X86V8Tw2gC29uCIlW.jpg
+image-src: /images/voyages/islande-nature-aurores-boreales/g02X86V8Tw2gC29uCIlW.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/lf1WQDrtTZqR5TZzsVqP.jpg"}
+::::photo-col{col-width="4" image-src="/images/voyages/islande-nature-aurores-boreales/lf1WQDrtTZqR5TZzsVqP.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: /images/voyages/jisuvPRzRJi7N5XSiU7h.jpg
+image-src: /images/voyages/islande-nature-aurores-boreales/jisuvPRzRJi7N5XSiU7h.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/nZ3BTkTRwO1B1togqHws.jpg"}
+::::photo-col{col-width="5" image-src="/images/voyages/islande-nature-aurores-boreales/nZ3BTkTRwO1B1togqHws.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: /images/voyages/z1R0mQFRCzWFWPGCadfA.jpg
+image-src: /images/voyages/islande-nature-aurores-boreales/z1R0mQFRCzWFWPGCadfA.jpg
 ---
 ::::
   :::
@@ -128,7 +128,7 @@ Assurément, l'Islande est un autre espace-temps !
   #avatar
     ::::avatar-list-item
     ---
-    avatar: /images/voyages/sx6tjjepQ1CijtCcKtMG.jpg
+    avatar: /images/voyages/islande-nature-aurores-boreales/sx6tjjepQ1CijtCcKtMG.jpg
     avatar-size: "60"
     ---
     #title
@@ -138,7 +138,7 @@ Assurément, l'Islande est un autre espace-temps !
 
   :::highlights-row
   ---
-  image: /images/voyages/XjLbSMeJTECSTfRaHPHq.jpg
+  image: /images/voyages/islande-nature-aurores-boreales/XjLbSMeJTECSTfRaHPHq.jpg
   ---
   ::::highlight-list-item
   Vivez l'intensité des paysages : glaciers, volcans, plages de sable noir...
@@ -198,7 +198,7 @@ Assurément, l'Islande est un autre espace-temps !
   
     :::day-row
     ---
-    image: /images/voyages/htXzHbSeQbCtPuMhXIoX.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/htXzHbSeQbCtPuMhXIoX.jpg
     ---
     #subtitle
     JOUR 1
@@ -213,7 +213,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/Vc2VkysHQp2vP0baPKop.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/Vc2VkysHQp2vP0baPKop.jpg
     ---
     #subtitle
     JOUR 2
@@ -228,7 +228,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/qxDKimRz6U2FA3oxH8LQ.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/qxDKimRz6U2FA3oxH8LQ.jpg
     ---
     #subtitle
     JOUR 3
@@ -243,7 +243,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/bCplgRG0QZWBCpUB0c3Z.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/bCplgRG0QZWBCpUB0c3Z.jpg
     ---
     #subtitle
     JOUR 4
@@ -258,7 +258,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/7fSZXWADR8GV9UrG3ZtT.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/7fSZXWADR8GV9UrG3ZtT.jpg
     ---
     #subtitle
     JOUR 5
@@ -273,7 +273,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/5PY9OVctSlSlZPdSxiOD.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/5PY9OVctSlSlZPdSxiOD.jpg
     ---
     #subtitle
     JOUR 6
@@ -288,7 +288,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/fyfnJy69TBmXCO1DWFy6.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/fyfnJy69TBmXCO1DWFy6.jpg
     ---
     #subtitle
     JOUR 7
@@ -303,7 +303,7 @@ Assurément, l'Islande est un autre espace-temps !
 
     :::day-row
     ---
-    image: /images/voyages/vnqWa1JRR2ZdkzZO7yf9.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/vnqWa1JRR2ZdkzZO7yf9.jpg
     ---
     #subtitle
     JOUR 8
@@ -332,13 +332,13 @@ Assurément, l'Islande est un autre espace-temps !
       
     :::::image-carousel-item
     ---
-    image: /images/voyages/4tfObeYuT9GJ6STQTBQU.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/4tfObeYuT9GJ6STQTBQU.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: /images/voyages/GCOIprMxTTuR4aCNsMoG.jpg
+    image: /images/voyages/islande-nature-aurores-boreales/GCOIprMxTTuR4aCNsMoG.jpg
     ---
     :::::
     ::::
