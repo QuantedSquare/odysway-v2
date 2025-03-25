@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-odysway-1 pb-8">
+  <div
+    id="faq-container"
+    class="bg-odysway-1 pb-8"
+  >
     <slot name="section-title" />
     <v-container>
       <v-row>

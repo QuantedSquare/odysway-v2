@@ -88,7 +88,6 @@ const filteredDates = computed(() => {
 
 const tableItems = computed(() => {
   return filteredDates.value.map((date) => {
-    console.log(date.startingPrice)
     return {
       departureDate: dayjs(date.departureDate).locale('fr').format('ddd DD/MM/YYYY'),
       returnDate: dayjs(date.returnDate).locale('fr').format('ddd DD/MM/YYYY'),
@@ -99,7 +98,6 @@ const tableItems = computed(() => {
     }
   })
 })
-console.log(tableItems.value)
 
 const formatLink = (date) => {
   const in30days = dayjs().add(30, 'day')

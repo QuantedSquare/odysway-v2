@@ -66,6 +66,9 @@ voir dates & prix
 Prendre RDV
 ::
 
+::horizontal-ariane
+::
+
 ::sticky-container
 ---
 left-space: 8

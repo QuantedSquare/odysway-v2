@@ -1,7 +1,7 @@
 <template>
   <v-app-bar
     location="bottom"
-    class="d-md-none pb-1 pb-sm-0"
+    class="d-md-none pb-1 pb-sm-0 bottom-app-bar"
   >
     <v-container class="py-0">
       <v-row
@@ -54,3 +54,9 @@ import { useGoTo } from 'vuetify'
 
 const goTo = useGoTo()
 </script>
+
+<style scoped>
+.bottom-app-bar{
+  z-index: 1020 !important;
+}
+</style>
