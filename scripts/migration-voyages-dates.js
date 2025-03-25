@@ -155,7 +155,7 @@ async function mergeDeals() {
       }
 
       const filename = voyage.slug
-      fs.writeFileSync(`./butter-data/deals/${filename}.json`, JSON.stringify(formatedData, null, 2))
+      fs.writeFileSync(`..content/deals/${filename}.json`, JSON.stringify(formatedData, null, 2))
     }
   }
 }

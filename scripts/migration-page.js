@@ -5,7 +5,7 @@ import TurndownService from 'turndown'
 import slugify from 'slugify'
 
 // Image download configuration
-const IMAGE_DOWNLOAD_DIR = './content/voyages/images'
+const IMAGE_DOWNLOAD_DIR = '../public/images/voyages'
 const DOWNLOAD_DELAY_MS = 500 // 500ms delay between downloads
 const MAX_RETRIES = 3 // Maximum number of retry attempts
 const RETRY_DELAY_MS = 2000 // Wait 2 seconds before retrying
@@ -109,6 +109,24 @@ async function processAndDownloadImages(voyage) {
     })
   }
 
+  // Add programme images if they exist
+  if (voyage.programme && Array.isArray(voyage.programme)) {
+    voyage.programme.forEach((day) => {
+      if (day.image) {
+        imagesToProcess.push({
+          url: day.image,
+        })
+      }
+    })
+  }
+
+  // Add author photo if it exists
+  if (voyage.photo_auteur_description) {
+    imagesToProcess.push({
+      url: voyage.photo_auteur_description,
+    })
+  }
+
   // Add accommodation photos if they exist
   for (let i = 1; i <= 6; i++) {
     const photo = voyage[`hebergement_photo_${i}`]
@@ -145,7 +163,7 @@ async function processAndDownloadImages(voyage) {
       const filename = generateImageFilename(image.url)
       const outputPath = path.join(IMAGE_DOWNLOAD_DIR, filename)
       await downloadImage(image.url, outputPath)
-      const relativePath = `/images/${filename}`
+      const relativePath = `/images/voyages/${filename}`
       imageUrlMap.set(image.url, relativePath)
       await sleep(DOWNLOAD_DELAY_MS)
     }
@@ -185,8 +203,7 @@ turndown.addRule('lineBreaks', {
 // Fix for lists inside HTML content
 turndown.addRule('lists', {
   filter: ['ul', 'ol'],
-  replacement: function (content, node) {
-    const listType = node.nodeName.toLowerCase() === 'ol' ? 'ordered' : 'unordered'
+  replacement: function (content) {
     return '\n\n' + content + '\n\n'
   },
 })
@@ -205,20 +222,9 @@ function formatDescription(htmlContent) {
   return markdown
 }
 
-// Function to clean text strings
-function cleanString(str) {
-  if (!str) return ''
-
-  // Remove extra spaces, line breaks and html tags
-  return str.replace(/^\s*\*\s*\\r\\n\s*\*\s*/gm, '')
-    .replace(/^\s*\*\s*/gm, '')
-    .replace(/\\r\\n/g, '\n')
-    .trim()
-}
-
 // input is an array of images [{image: 'url', image_mobile: 'alt'}]
 // output is a string of markdown like
-function formatImageArray(array) {
+function formatImageArray(array, imageUrlMap) {
   if (!array || !array.length) return ''
 
   // Pattern for left columns: 7, 4, 5, repeat...
@@ -238,7 +244,7 @@ function formatImageArray(array) {
     // Format left column
     if (i < array.length) {
       // Using the inline format for the first item in each pair
-      result += `::::photo-col{col-width="${leftColWidth}" image-src="${array[i].image}"}
+      result += `::::photo-col{col-width="${leftColWidth}" image-src="${imageUrlMap.get(array[i].image) || array[i].image}"}
 ::::\n\n`
     }
 
@@ -250,7 +256,7 @@ function formatImageArray(array) {
       result += `::::photo-col
 ---
 col-width: "${rightColWidth}"
-image-src: ${array[i + 1].image}
+image-src: ${imageUrlMap.get(array[i + 1].image) || array[i + 1].image}
 ---
 ::::\n\n`
     }
@@ -303,12 +309,12 @@ function formatPriceItems(htmlList, isIncluded = false) {
   return priceItems.join('\n\n')
 }
 
-function mapProgrammeInMarkdon(programme) {
+function mapProgrammeInMarkdon(programme, imageUrlMap) {
   return programme.map((item) => {
     return `
     :::day-row
     ---
-    image: ${item.image}
+    image: ${imageUrlMap.get(item.image) || item.image}
     ---
     #subtitle
     ${item.jours}
@@ -323,13 +329,13 @@ function mapProgrammeInMarkdon(programme) {
   }).join('\n')
 }
 
-function mapHerebergementInMarkdown(voyage) {
+function mapHerebergementInMarkdown(voyage, imageUrlMap) {
   // There can be up to 6 hebergement_photo_n fiels
   // We need to check which ones got a velue and include them in the markdown
   const hebergementPhotos = []
   for (let i = 1; i <= 6; i++) {
     const photo = voyage[`hebergement_photo_${i}`]
-    if (photo.length > 0) {
+    if (photo && photo.length > 0) {
       hebergementPhotos.push(photo)
     }
   }
@@ -338,7 +344,7 @@ function mapHerebergementInMarkdown(voyage) {
     return `
     :::::image-carousel-item
     ---
-    image: ${photo}
+    image: ${imageUrlMap.get(photo) || photo}
     ---
     :::::`
   }).join('\n')
@@ -348,7 +354,7 @@ function mapAccompagnateursInMarkdown(voyage, imageUrlMap) {
   const accompagnateurs = []
   for (let i = 1; i <= 4; i++) {
     const accompagnateur = voyage[`accompagnateur_${i}_nom`]
-    if (accompagnateur.length > 0) {
+    if (accompagnateur && accompagnateur.length > 0) {
       accompagnateurs.push({
         nom: accompagnateur,
         role: voyage[`accompagnateur_${i}_role`],
@@ -376,7 +382,7 @@ function mapAvisVoyageInMarkdown(voyage, imageUrlMap) {
   const avis = []
   for (let i = 1; i <= 7; i++) {
     const nom = voyage[`avis_${i}_nom`]
-    if (nom.length > 0) {
+    if (nom && nom.length > 0) {
       avis.push({
         nom: nom,
         age: voyage[`avis_${i}_age`],
@@ -426,7 +432,7 @@ function mapFaqsInMarkdown(faq) {
 
 // Function to convert the voyage data to markdown
 function convertToMarkdown(voyageData, imageUrlMap) {
-  const voyage = voyageData // Assuming we're processing one voyage at a time
+  const voyage = voyageData
 
   // Helper function to get local image path
   const getLocalImagePath = (url) => {
@@ -441,38 +447,33 @@ image-src: ${getLocalImagePath(voyage.image_principale)}
 ---
 #title
 ${voyage.titre}
+`
 
-#component-slot-1
+  if (voyage.images && voyage.images.length > 0) {
+    markdown += `#component-slot-1
   :::photo-gallery-dialog
   #gallery-btn
   voir la galerie photos
 
   #photo-col
-    ${formatImageArray(voyage.images)}
-  :::
+    ${formatImageArray(voyage.images, imageUrlMap)}
+  :::`
+  }
 
-#component-slot-2
+  if (voyage.lien_video_1) {
+    markdown += `#component-slot-2
   :::video-dialog
   ---
-  video-src: ${voyage.lien_video_1 || ''}
+  video-src: ${voyage.lien_video_1}
   ---
   #video-btn
   voir la video
-  :::
-::
+  :::`
+  }
 
-::bottom-app-bar
-#starting-price
-Dès [${voyage.prix}€]{style="font-weight: bold"}
+  markdown += '\n::\n\n'
 
-#text-btn-1
-voir dates & prix
-
-#text-btn-2
-Prendre RDV
-::
-
-::sticky-container
+  markdown += `::sticky-container
 ---
 left-space: 8
 left-sticky: false
@@ -556,7 +557,7 @@ right-sticky: true
     avatar-size: "60"
     ---
     #title
-    [${voyage.nom_auteur_description}]{style="font-weight: bold"} , ${voyage.role_auteur_description}
+    [${voyage.nom_auteur_description}]{style="font-weight: bold"}${voyage.role_auteur_description ? ` , ${voyage.role_auteur_description}` : ''}
     ::::
   :::
 
@@ -601,7 +602,7 @@ ${highlightListItems(voyage.plus)}
   Le programme du voyage
   :::
 
-  ${voyage.programme && mapProgrammeInMarkdon(voyage.programme)}
+  ${voyage.programme && mapProgrammeInMarkdon(voyage.programme, imageUrlMap)}
 
   :::title-container
   #title
@@ -612,12 +613,12 @@ ${highlightListItems(voyage.plus)}
   #text
   ${formatDescription(voyage.hebergement_description)}
 
-  ${voyage.hebergement_photo_1.length > 0
+  ${voyage.hebergement_photo_1 && voyage.hebergement_photo_1.length > 0
   && `
   #carousel
     ::::carousel
     #carousel-item
-      ${mapHerebergementInMarkdown(voyage)}
+      ${mapHerebergementInMarkdown(voyage, imageUrlMap)}
     ::::`
   }
   :::
@@ -783,7 +784,7 @@ async function processVoyageData(inputJson, outputDir) {
   }
 }
 
-const inputFile = 'data/voyages.json'
-const outputDir = 'data/voyages'
+const inputFile = './butter-data/voyages.json'
+const outputDir = '../content/voyages'
 
 processVoyageData(inputFile, outputDir)
