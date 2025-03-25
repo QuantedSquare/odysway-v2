@@ -48,6 +48,7 @@ Immersion hivernale en terre béarnaise
   ---
   video-src: 
     - https://www.youtube.com/embed/cEgwp93M5PU?si=Br7TU-UGrIyVCXEi
+    - https://www.youtube.com/embed/cEgwp93M5PU?si=Br7TU-UGrIyVCXEi
   ---
   #video-btn
   voir la video

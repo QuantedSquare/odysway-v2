@@ -13,13 +13,18 @@
           v-if="deal.privatisation"
           fab
           small
+          icon
           :disabled="activeTab === 1"
           @click="switchTab(1)"
         >
           <v-icon>{{ mdiChevronLeft }}</v-icon>
         </v-btn>
       </v-col>
-      <v-col :class="deal.privatisation ? 'px-2' : ''">
+      <v-col
+        :cols="deal.privatisation ? 8 : 12"
+        sm=""
+        :class="deal.privatisation ? 'px-2' : ''"
+      >
         <v-tabs
           v-model="activeTab"
           hide-slider
@@ -27,7 +32,7 @@
           centered
           center-active
           height="80px"
-          class="tabs-custom-container"
+          class="tabs-custom-container rounded-t-lg"
         >
           <v-tab
             :value="1"
@@ -40,7 +45,7 @@
                   name="phrase-left-title"
                 />
               </h6>
-              <span class="text-caption text-sm-body2 text-md-subtitle-2 text-wrap">
+              <span class="text-caption text-sm-body-2 text-md-subtitle-2 text-wrap">
                 <slot
                   name="phrase-left-subtitle"
                 />
@@ -59,7 +64,7 @@
                   name="phrase-right-title"
                 />
               </h6>
-              <span class="text-caption text-sm-body2 text-md-subtitle-2 text-wrap">
+              <span class="text-caption text-sm-body-2 text-md-subtitle-2 text-wrap">
                 <slot
                   name="phrase-right-subtitle"
                 />
@@ -76,6 +81,7 @@
           v-if="deal.privatisation"
           fab
           small
+          icon
           :disabled="activeTab === 2"
           @click="switchTab(2)"
         >
