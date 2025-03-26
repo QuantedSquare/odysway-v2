@@ -297,8 +297,8 @@ function formatImageArray(array, imageUrlMap) {
   return result.trim()
 }
 
-function formatVideoLinks(vidoeUrlMap) {
-  return vidoeUrlMap.map((video) => {
+function formatVideoLinks(videoUrlMap) {
+  return videoUrlMap.map((video) => {
     return `${video.url}`
   }).join('\n')
 }
@@ -469,7 +469,7 @@ function mapFaqsInMarkdown(faq) {
 }
 
 // Function to convert the voyage data to markdown
-function convertToMarkdown(voyageData, imageUrlMap, vidoeUrlMap) {
+function convertToMarkdown(voyageData, imageUrlMap, videoUrlMap) {
   const voyage = voyageData
 
   // Helper function to get local image path
@@ -503,7 +503,7 @@ ${voyage.titre}
   :::video-dialog
   ---
   video-src:
-    - ${formatVideoLinks(vidoeUrlMap)}
+    - ${formatVideoLinks(videoUrlMap)}
   ---
   #video-btn
   voir la video
@@ -814,7 +814,7 @@ async function processVoyageData(inputJson, outputDir) {
         // Process images first
         const imageUrlMap = await processAndDownloadImages(post)
         // Get video links
-        const vidoeUrlMap = getVideoLinks(post)
+        const videoUrlMap = getVideoLinks(post)
         // Convert markdown with updated image paths and video urls
         const markdown = convertToMarkdown(post, imageUrlMap, vidoeUrlMap)
         processMarkdown(markdown, outputDir, slugify(post.slug))
@@ -826,7 +826,7 @@ async function processVoyageData(inputJson, outputDir) {
       // Get video links
       const vidoeUrlMap = getVideoLinks(voyageData)
       // Convert markdown with updated image paths and video urls
-      const markdown = convertToMarkdown(voyageData, imageUrlMap, vidoeUrlMap)
+      const markdown = convertToMarkdown(voyageData, imageUrlMap, videoUrlMap)
       processMarkdown(markdown, outputDir, slugify(voyageData.slug))
     }
 
