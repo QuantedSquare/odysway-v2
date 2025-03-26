@@ -10,116 +10,173 @@ Vis ma vie de berger dans les Pyrénées
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/vWamthSTHKziJrmdKMOP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/vWamthSTHKziJrmdKMOP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-berger-bearn/EC3QHYsiTdOQyZwo3FFC.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/EC3QHYsiTdOQyZwo3FFC.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/a5hMKAdJT0OcPQxM7kqB.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/sejour-berger-bearn/a5hMKAdJT0OcPQxM7kqB.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/sejour-berger-bearn/E7fXJGvT8vkYdoX8bIrA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/sejour-berger-bearn/E7fXJGvT8vkYdoX8bIrA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/sejour-berger-bearn/MErzklaBQZib45Vo1fiF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/MErzklaBQZib45Vo1fiF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/sejour-berger-bearn/xth65JluTpCrgZOqYIKg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/xth65JluTpCrgZOqYIKg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/PVUDr2h1SIN8aw1ZFBaA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/PVUDr2h1SIN8aw1ZFBaA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-berger-bearn/DPUNdrBVTyaLIh3wnDvk.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/DPUNdrBVTyaLIh3wnDvk.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/96Kt8b8EQqyPkknTwwBK.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/sejour-berger-bearn/96Kt8b8EQqyPkknTwwBK.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/sejour-berger-bearn/gRVdpi6pR4iHfpu8QJn0.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/sejour-berger-bearn/gRVdpi6pR4iHfpu8QJn0.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/sejour-berger-bearn/ZdbnNd6oTHGGDlRlWn0p.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/ZdbnNd6oTHGGDlRlWn0p.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/sejour-berger-bearn/EMv9MdwtThS8WjK1KxkI.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/EMv9MdwtThS8WjK1KxkI.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/XHU0cioGTmiuohqDbrug.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/XHU0cioGTmiuohqDbrug.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-berger-bearn/dAX63YqwQAOYzhWk54bH.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/dAX63YqwQAOYzhWk54bH.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/yh0nZkO4STybUGhy7dg1.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/sejour-berger-bearn/yh0nZkO4STybUGhy7dg1.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/sejour-berger-bearn/S4DRiTAdQWCFuIMKCi4T.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/sejour-berger-bearn/S4DRiTAdQWCFuIMKCi4T.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/sejour-berger-bearn/bgw7ktIbQN20ggEQJDRV.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/bgw7ktIbQN20ggEQJDRV.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/sejour-berger-bearn/lB6IojDPRaeGCNlkqAQP.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/lB6IojDPRaeGCNlkqAQP.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/sejour-berger-bearn/YI03TFR72MJ1kCG1wrwi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-berger-bearn/YI03TFR72MJ1kCG1wrwi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-berger-bearn/2l1bUpNsSKCBrauTyyQr.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-berger-bearn/2l1bUpNsSKCBrauTyyQr.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/wMgOoGB7QOSd690LYAfp.jpg"}
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/sejour-berger-bearn/wMgOoGB7QOSd690LYAfp.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/JKpO_UqYveA
+  video-src:
+    - https://www.youtube.com/embed/JKpO_UqYveA
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [615€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container
