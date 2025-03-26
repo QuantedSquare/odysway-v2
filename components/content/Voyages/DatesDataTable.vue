@@ -1,10 +1,11 @@
 <template>
   <v-data-table
+    :mobile="smAndDown"
     hide-default-footer
-    :mobile="mdAndDown"
     :headers="headers"
-    :items="filteredDates"
-    class="bg-primary rounded-lg py-4  font-weight-bold"
+    :items="tableItems"
+    class="bg-primary text-center py-4 font-weight-bold"
+    :class="deal.privatisation ? 'rounded-lg' : 'rounded-b-lg'"
   >
     <template #headers="{ columns }">
       <tr>
@@ -18,51 +19,37 @@
         </template>
       </tr>
     </template>
-    <template #item="{ item }">
-      <tr class="text-center">
-        <td>
-          {{ dayjs(item.departureDate).locale('fr').format('ddd DD/MM/YYYY') }}
-        </td>
-        <td>{{ dayjs(item.returnDate).locale('fr').format('ddd DD/MM/YYYY') }}</td>
-        <td>{{ item.startingPrice }} €</td>
-        <td class="text-start d-flex flex-column align-center">
-          <div
-            v-if="item.bookedPlaces < 2"
-            class="d-flex justify-center align-center h-100"
-          >
-            <v-icon>
-              {{ mdiAccount }}
-            </v-icon>
-            <span>Confirmé dès 2 inscrits</span>
-          </div>
-          <div
-            v-else
-            class="d-flex flex-column justify-center align-center ga-1"
-          >
-            <div>
-              <v-icon>
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>Départ garanti confirmé</span>
-            </div>
-            <div>
-              <v-icon>{{ mdiAccount }}</v-icon> {{ item.bookedPlaces }} inscrits - reste {{ item.maxTravellers - item.bookedPlaces }} places
-            </div>
-          </div>
-        </td>
-        <td>
-          <div v-if="item.maxTravellers !== item.bookedPlaces">
-            <v-btn-secondary
-              :to="formatLink(item)"
-              class="text-caption text-uppercase"
-            >
-              réserver / poser une option
-            </v-btn-secondary>
-          </div>
-          <div v-else>
-            plus de places disponibles
-          </div>
-        </td>
+    <template #[`item.bookedPlaces`]="{ item }">
+      <tr class="d-flex justify-end justify-lg-center">
+        <div
+          v-if="item.bookedPlaces < 2"
+        >
+          <span><v-icon> {{ mdiAccount }} </v-icon>Confirmé dès 2 inscrits</span>
+        </div>
+        <div
+          v-else
+          class="d-flex flex-column justify-center align-end align-lg-center ga-1"
+        >
+          <span> <v-icon>
+            {{ mdiCheckCircleOutline }}
+          </v-icon> Départ garanti confirmé</span>
+          <span><v-icon>{{ mdiAccount }}</v-icon> {{ item.bookedPlaces }} inscrits - reste {{ item.maxTravellers - item.bookedPlaces }} places </span>
+        </div>
+      </tr>
+    </template>
+    <template #[`item.canBeBooked`]="{ item }">
+      <tr class="d-flex justify-end justify-lg-center">
+        <v-btn-secondary
+          v-if="item.canBeBooked"
+          :to="formatLink(item)"
+          class="text-caption text-uppercase"
+          max-width="250"
+        >
+          réserver / poser une option
+        </v-btn-secondary>
+        <div v-else>
+          plus de places disponibles
+        </div>
       </tr>
     </template>
   </v-data-table>
@@ -76,7 +63,7 @@ import 'dayjs/locale/fr'
 
 import { useDisplay } from 'vuetify'
 
-const { mdAndDown } = useDisplay()
+const { smAndDown } = useDisplay()
 dayjs.extend(customParseFormat)
 
 const props = defineProps({
@@ -85,17 +72,31 @@ const props = defineProps({
     required: true,
   },
 })
-const headers = [{
-  title: 'date départ',
-  key: 'date départ',
-},
-{ title: 'date retour', key: 'calodate retourries' },
-{ title: 'prix', key: 'prix' },
-{ title: 'état', key: 'état' },
-{ title: 'réserver', key: 'réserver' }]
+
+const headers = [
+  { title: 'DATE DE DÉPART', key: 'departureDate' },
+  { title: 'DATE RETOUR', key: 'returnDate' },
+  { title: 'PRIX', key: 'price' },
+  { title: 'ÉTAT', key: 'bookedPlaces' },
+  { title: 'RÉSERVER', key: 'canBeBooked' }]
 
 const filteredDates = computed(() => {
-  return [...props.deal.dates].filter(date => dayjs(date.departureDate).isAfter())
+  return [...props.deal.dates || []].filter(date => dayjs(date.departureDate).isAfter()).sort((a, b) => {
+    return dayjs(a.departureDate).diff(dayjs(b.departureDate))
+  })
+})
+
+const tableItems = computed(() => {
+  return filteredDates.value.map((date) => {
+    return {
+      departureDate: dayjs(date.departureDate).locale('fr').format('ddd DD/MM/YYYY'),
+      returnDate: dayjs(date.returnDate).locale('fr').format('ddd DD/MM/YYYY'),
+      price: `${date.startingPrice || 0} €`,
+      bookedPlaces: date.bookedPlaces || 0,
+      maxTravellers: date.maxTravellers || 0,
+      canBeBooked: date.maxTravellers !== date.bookedPlaces,
+    }
+  })
 })
 
 const formatLink = (date) => {
@@ -103,5 +104,4 @@ const formatLink = (date) => {
   const checkoutType = dayjs(date.departureDate).isBefore(in30days) ? 'full' : 'deposit'
   return `/checkout?slug=${props.deal.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`
 }
-console.log(filteredDates.value)
 </script>

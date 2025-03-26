@@ -50,6 +50,19 @@ image-src: /images/voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg
 ---
 ::::
   :::
+
+::bottom-app-bar
+#starting-price
+Dès [650€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
+::
+
+::horizontal-ariane
 ::
 
 ::sticky-container
@@ -330,6 +343,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     #subtitle
     Paco
+    
     #text
     
     ::::

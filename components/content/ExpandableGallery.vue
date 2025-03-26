@@ -18,17 +18,18 @@
           class="image-gallery"
         >
           <NuxtLink
-            v-for="(category) in categories"
+            v-for="(category, index) in categories"
             :key="category?.id"
             v-click-outside="{
-              handler: clickOutside(category?.id),
+              handler: () => clickOutside(index),
             }"
             class="image-wrapper"
             :class="{
-              expanded: isMobile && expandedIndex === category?.id,
-              isMobile: isMobile,
+              'default-expanded': isMobile && expandedIndex === 0,
+              'expanded': isMobile && expandedIndex === index,
+              'isMobile': isMobile,
             }"
-            @click.stop="handleClick(category?.id)"
+            @click.stop="handleClick(index, category?.id)"
           >
 
             <v-img
@@ -60,7 +61,6 @@
                   </client-only>
                 </p>
               </div>
-
             </div>
           </NuxtLink>
         </div>
@@ -70,15 +70,15 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
 
 const router = useRouter()
-const { mdAndDown } = useDisplay()
-const expandedIndex = ref(null)
+const { smAndDown } = useDisplay()
+const expandedIndex = ref(0)
 const isMobile = ref(false)
 
 const props = defineProps({
@@ -96,8 +96,6 @@ const { data: categories, status } = await useAsyncData(
         queryCollection('categories').where('slug', '=', slug).first(),
       ),
     )
-    // categoriesData.forEach((category, index))
-
     return categoriesData
   },
   {
@@ -105,25 +103,32 @@ const { data: categories, status } = await useAsyncData(
     immediate: true,
   },
 )
-const handleClick = (id) => {
+
+const handleClick = (index, id) => {
   if (isMobile.value) {
-    expandedIndex.value = expandedIndex.value === id ? null : id
+    expandedIndex.value = expandedIndex.value === index ? -1 : index
   }
   else {
     const slug = categories.value.find(category => category.id === id).slug
     router.push(`/thematiques/${slug}`)
   }
 }
-const clickOutside = (id) => {
-  if (isMobile.value && expandedIndex.value !== id) {
-    expandedIndex.value = null
+
+const clickOutside = (index) => {
+  if (isMobile.value && expandedIndex.value === index) {
+    expandedIndex.value = 0
   }
 }
 
-watch(mdAndDown, (newValue) => {
+watch(smAndDown, (newValue) => {
   isMobile.value = newValue
+  expandedIndex.value = 0
 }, {
   immediate: true,
+})
+
+onMounted(() => {
+  isMobile.value = smAndDown.value
 })
 </script>
 
@@ -131,29 +136,12 @@ watch(mdAndDown, (newValue) => {
 .text-to-wrap{
   white-space: nowrap;
 }
-@media screen and (max-width: 1280px) {
-  .text-to-wrap{
-    white-space: normal;
-    padding-bottom: 10px;
-  }
-  .category-title{
-    margin:-30px 0 0px 0!important;
-  }
 
-}
 .image-gallery {
   display: flex;
   height: 24rem;
   width: 100%;
   gap: 0.5rem;
-}
-@media screen and (max-width: 600px) {
-  .image-gallery {
-    flex-direction: column;
-  }
-  .category-title{
-    margin:  0!important;
-  }
 }
 
 .image-wrapper {
@@ -165,11 +153,6 @@ watch(mdAndDown, (newValue) => {
   overflow: hidden;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
-}
-
-.image-wrapper:hover,
-.image-wrapper.expanded {
-  flex: 3;
 }
 
 .image-wrapper img {
@@ -192,7 +175,7 @@ watch(mdAndDown, (newValue) => {
   transition: opacity 0.5s ease-in-out;
 }
 
-.image-wrapper:hover .blur-overlay,
+.image-wrapper.default-expanded .blur-overlay,
 .image-wrapper.expanded .blur-overlay {
   opacity: 1;
 }
@@ -208,7 +191,7 @@ watch(mdAndDown, (newValue) => {
   transition: opacity 0.5s ease-in-out;
 }
 
-.image-wrapper:hover .image-overlay,
+.image-wrapper.default-expanded .image-overlay,
 .image-wrapper.expanded .image-overlay {
   opacity: 1;
 }
@@ -268,5 +251,36 @@ watch(mdAndDown, (newValue) => {
 .explore-btn:hover {
   background: white;
   color: black;
+}
+@media screen and (max-width: 1280px) {
+  .text-to-wrap{
+    white-space: normal;
+    padding-bottom: 10px;
+  }
+  .category-title{
+    margin:-30px 0 0px 0!important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+  .category-title{
+    margin:  0!important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+.image-wrapper:hover,
+.image-wrapper.expanded {
+  flex: 4;
+}
+}
+
+@media screen and (min-width: 960px) {
+.image-wrapper:hover,
+.image-wrapper.expanded {
+  flex: 3;
+}
 }
 </style>

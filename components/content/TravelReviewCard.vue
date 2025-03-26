@@ -69,7 +69,7 @@ const registerComponent = inject('registerComponent')
 
 onMounted(() => {
   index.value = registerComponent({})
-  console.log(index.value)
+  // console.log(index.value)
 })
 const { currentSection } = inject('current')
 
@@ -86,7 +86,7 @@ const formatImage = photo => img(photo, {
 })
 
 const isActive = computed(() => {
-  console.log('currentSection', currentSection.value, 'index', index.value)
+  // console.log('currentSection', currentSection.value, 'index', index.value)
   return currentSection.value === index.value
 })
 </script>

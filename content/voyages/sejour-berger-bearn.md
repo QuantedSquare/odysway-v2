@@ -112,10 +112,14 @@ image-src: /images/voyages/sejour-berger-bearn/2l1bUpNsSKCBrauTyyQr.jpg
 
 ::::photo-col{col-width="4" image-src="/images/voyages/sejour-berger-bearn/wMgOoGB7QOSd690LYAfp.jpg"}
 ::::
-  :::#component-slot-2
+
+:::
+
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/JKpO_UqYveA
+  video-src: 
+    - https://www.youtube.com/embed/JKpO_UqYveA
   ---
   #video-btn
   voir la video

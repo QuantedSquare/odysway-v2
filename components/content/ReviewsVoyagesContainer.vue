@@ -83,7 +83,7 @@ onMounted(() => {
       // Force an initial centering
       if (typeof draggingContainerRef.value.scrollToSection === 'function') {
         draggingContainerRef.value.scrollToSection(0)
-        console.log('scrollToSection', scrollToSection.value)
+        // console.log('scrollToSection', scrollToSection.value)
       }
     }
   }, 200)

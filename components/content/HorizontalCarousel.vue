@@ -4,8 +4,8 @@
       align="center"
     >
       <v-col
-        cols="12"
-        sm="auto"
+        cols="8"
+        sm="10"
         class="text-dark font-weight-black text-h5 text-md-h4 my-4"
       >
         <slot name="title" />
