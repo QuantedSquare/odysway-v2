@@ -10,56 +10,88 @@ Immersion au cœur d'un observatoire astronomique
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-observatoire-astronomique/kN2l6NP4TeuLvCp3Kj5v.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-observatoire-astronomique/kN2l6NP4TeuLvCp3Kj5v.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-observatoire-astronomique/AlhoWV2nQL6r63cNX6qY.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-observatoire-astronomique/AlhoWV2nQL6r63cNX6qY.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-observatoire-astronomique/1A7GnLyvT6S2FGoB24qD.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-observatoire-astronomique/1A7GnLyvT6S2FGoB24qD.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-observatoire-astronomique/weER0FCQYWalbgEae6jw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-observatoire-astronomique/weER0FCQYWalbgEae6jw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-observatoire-astronomique/hsEfs2cZQbetS2KxnPno.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-observatoire-astronomique/hsEfs2cZQbetS2KxnPno.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-observatoire-astronomique/FGyr95QnSWyaEDn0nNoH.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-observatoire-astronomique/FGyr95QnSWyaEDn0nNoH.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-observatoire-astronomique/oVoM177SRTukoOvlAHW8.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-observatoire-astronomique/oVoM177SRTukoOvlAHW8.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1850€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

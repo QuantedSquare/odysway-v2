@@ -10,69 +10,109 @@ Immersion culturelle au coeur des traditions d’une famille balinaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-bali/8TqRnowiSLWijOM8P0pG.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/8TqRnowiSLWijOM8P0pG.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-culturelle-bali/Ex4oHrorQyG63VUamoal.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/Ex4oHrorQyG63VUamoal.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-bali/XeIiQTUFRD2y2VRel3XQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/XeIiQTUFRD2y2VRel3XQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-culturelle-bali/iLdo6AAPQv6GInL0MfuQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/iLdo6AAPQv6GInL0MfuQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-bali/LRKcxSrxQ1Cf0RYmFBN7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/LRKcxSrxQ1Cf0RYmFBN7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-culturelle-bali/HrT6uuQASGucpveDP7QJ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/HrT6uuQASGucpveDP7QJ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-bali/ckoS0sq3SR2sosiS9HAj.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/ckoS0sq3SR2sosiS9HAj.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-culturelle-bali/33uCMbQwSu2rLFWF3KOs.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/33uCMbQwSu2rLFWF3KOs.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-bali/lU5h4nZSfe3qcffNNv12.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/lU5h4nZSfe3qcffNNv12.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-culturelle-bali/hVDfW4lyQVCQwJXh7bQr.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/hVDfW4lyQVCQwJXh7bQr.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-bali/pWDvdNX9Q9qYpusO8zXN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/pWDvdNX9Q9qYpusO8zXN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-culturelle-bali/zYg8cSmT1CIxcYu0BtEQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/zYg8cSmT1CIxcYu0BtEQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-bali/NnRuEfanQdaTiIr4mDJt.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-bali/NnRuEfanQdaTiIr4mDJt.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1890€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

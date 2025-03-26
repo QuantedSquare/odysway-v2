@@ -10,49 +10,81 @@ Voyagez comme un trappeur en Finlande
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-trappeur-finlande/TFp0OZkRQhu5LkKrTqd1.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-trappeur-finlande/TFp0OZkRQhu5LkKrTqd1.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-trappeur-finlande/u9N0aQIcRC6hH88kCClD.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-trappeur-finlande/u9N0aQIcRC6hH88kCClD.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-trappeur-finlande/ChvznmLnSAilkskY2eWj.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-trappeur-finlande/ChvznmLnSAilkskY2eWj.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-trappeur-finlande/ZvQf8XdEREOpfqg4KmkC.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-trappeur-finlande/ZvQf8XdEREOpfqg4KmkC.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-trappeur-finlande/GeVABfyhRqbVOfcrxXjN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-trappeur-finlande/GeVABfyhRqbVOfcrxXjN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-trappeur-finlande/iqnoAO7wRYetFmWxrS9y.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-trappeur-finlande/iqnoAO7wRYetFmWxrS9y.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-trappeur-finlande/GPLfdo5KTB276neSnEg5.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-trappeur-finlande/GPLfdo5KTB276neSnEg5.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-trappeur-finlande/4Zrdrm0SpOvyCHp9XHue.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-trappeur-finlande/4Zrdrm0SpOvyCHp9XHue.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-trappeur-finlande/KWXYb6SqRqmOzvDQmY5s.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-trappeur-finlande/KWXYb6SqRqmOzvDQmY5s.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2150€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

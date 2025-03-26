@@ -10,56 +10,88 @@ Marche silencieuse et immersion nomade dans le sahara marocain
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/marche-silencieuse-sahara/OwyrDJC2QVuNTgCsLUYw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/marche-silencieuse-sahara/OwyrDJC2QVuNTgCsLUYw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/marche-silencieuse-sahara/yvLapN4oSlSeyOzDHRF1.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/marche-silencieuse-sahara/yvLapN4oSlSeyOzDHRF1.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/marche-silencieuse-sahara/blk4lkEnRztb9L9aRQll.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/marche-silencieuse-sahara/blk4lkEnRztb9L9aRQll.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/marche-silencieuse-sahara/0D7MT3w9Sqmn4HFeqoEB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/marche-silencieuse-sahara/0D7MT3w9Sqmn4HFeqoEB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/marche-silencieuse-sahara/buMli9vOQ9awoo2y8OHs.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/marche-silencieuse-sahara/buMli9vOQ9awoo2y8OHs.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/marche-silencieuse-sahara/oENl9NRDQpyZXDJNfFUy.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/marche-silencieuse-sahara/oENl9NRDQpyZXDJNfFUy.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/marche-silencieuse-sahara/QymTNxWxQOiSbw5iTukF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/marche-silencieuse-sahara/QymTNxWxQOiSbw5iTukF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/marche-silencieuse-sahara/wp4kIowERsiL0f7UFYxV.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/marche-silencieuse-sahara/wp4kIowERsiL0f7UFYxV.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/marche-silencieuse-sahara/zACwLvRiutd3IJaDJkAR.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/marche-silencieuse-sahara/zACwLvRiutd3IJaDJkAR.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/marche-silencieuse-sahara/6LGbt4oQsicoygJe3Yf2.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/marche-silencieuse-sahara/6LGbt4oQsicoygJe3Yf2.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1295€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

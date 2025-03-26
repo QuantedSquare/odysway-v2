@@ -7,11 +7,24 @@ Immergez-vous dans le Parc naturel de la Forêt d'Orient
 #component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/ZNdYg9xFchA
+  video-src:
+    - https://www.youtube.com/embed/ZNdYg9xFchA
+https://www.youtube.com/embed/Htd2auXXGmw
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [385€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

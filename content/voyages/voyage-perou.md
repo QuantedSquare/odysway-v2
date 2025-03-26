@@ -10,39 +10,67 @@ Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-perou/uDnQ0hySTn2HXdhOtXm8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-perou/uDnQ0hySTn2HXdhOtXm8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-perou/KYZBJrnQ0mLRJrSrCaGs.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-perou/KYZBJrnQ0mLRJrSrCaGs.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-perou/6nd4MDfRSreIbH6MCkzT.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-perou/6nd4MDfRSreIbH6MCkzT.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-perou/iflJn1eGSEmxNxgcQPkp.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-perou/iflJn1eGSEmxNxgcQPkp.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-perou/Nk6dHFQwSBmLoI1SdvXk.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-perou/Nk6dHFQwSBmLoI1SdvXk.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-perou/TMDs5ihqSuabZD5sWfzg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-perou/TMDs5ihqSuabZD5sWfzg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-perou/XfrwqtepQ7e73nR26n3i.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-perou/XfrwqtepQ7e73nR26n3i.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1880€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

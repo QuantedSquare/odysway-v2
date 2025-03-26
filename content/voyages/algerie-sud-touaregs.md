@@ -10,39 +10,67 @@ Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/algerie-sud-touaregs/6OGdZtvsSbaqjG3fEboY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/algerie-sud-touaregs/6OGdZtvsSbaqjG3fEboY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/algerie-sud-touaregs/UZ5bpO6hSr2MM2KwzSS7.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/algerie-sud-touaregs/UZ5bpO6hSr2MM2KwzSS7.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/algerie-sud-touaregs/CTc8vVOcQcKpxrY069oZ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/algerie-sud-touaregs/CTc8vVOcQcKpxrY069oZ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/algerie-sud-touaregs/zky2Nh8PRYKoEPmbmGHB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/algerie-sud-touaregs/zky2Nh8PRYKoEPmbmGHB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/algerie-sud-touaregs/WQ6L5xjKRb2nSF29nZRc.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/algerie-sud-touaregs/WQ6L5xjKRb2nSF29nZRc.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/algerie-sud-touaregs/JA44yI1TDqZKngp8vLzw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/algerie-sud-touaregs/JA44yI1TDqZKngp8vLzw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/algerie-sud-touaregs/PbHg6tSlQ26OOdyiTuCl.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/algerie-sud-touaregs/PbHg6tSlQ26OOdyiTuCl.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1855€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,56 +10,89 @@ Retraite Himalayenne : méditation et yoga au cœur du Sikkim
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/retraite-yoga-sikkim-inde/07NDzvoSzeHxDfDcPqP3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/07NDzvoSzeHxDfDcPqP3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/retraite-yoga-sikkim-inde/Gz6UePM1Sjau0SdZ8mRW.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/Gz6UePM1Sjau0SdZ8mRW.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/retraite-yoga-sikkim-inde/8IS71zlRYOnHUGSbU4gw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/8IS71zlRYOnHUGSbU4gw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/retraite-yoga-sikkim-inde/KrClAAxHRGajDhfOeeqn.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/KrClAAxHRGajDhfOeeqn.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/retraite-yoga-sikkim-inde/L1tSm9drRuGBs7POyIAF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/L1tSm9drRuGBs7POyIAF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/retraite-yoga-sikkim-inde/GVwVeUDgTxCL5aCx0XsM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/GVwVeUDgTxCL5aCx0XsM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/retraite-yoga-sikkim-inde/GHrhLImjSUaHr9YohcEZ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/GHrhLImjSUaHr9YohcEZ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/retraite-yoga-sikkim-inde/KdFImStIRGKyJ4vFyCaj.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/KdFImStIRGKyJ4vFyCaj.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/retraite-yoga-sikkim-inde/WoWUKLy4Tky4mIop8fDY.jpg"}
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/retraite-yoga-sikkim-inde/WoWUKLy4Tky4mIop8fDY.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/3aH6CsMkLGA
+  video-src:
+    - https://www.youtube.com/embed/3aH6CsMkLGA
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [3550€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

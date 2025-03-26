@@ -10,79 +10,123 @@ Du Laos au Cambodge, voyage à la croisée des cultures
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-culturel-laos-cambodge/WNTneh5jRde8Y7XB037G.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/WNTneh5jRde8Y7XB037G.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/YBAFhcMcS1amf0xBr6bS.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/YBAFhcMcS1amf0xBr6bS.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-culturel-laos-cambodge/yhWwBGl9RXq7iorcsLoH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/yhWwBGl9RXq7iorcsLoH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/rDgyn0pnTOWK1SxRX2wX.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/rDgyn0pnTOWK1SxRX2wX.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-culturel-laos-cambodge/FlXW1EhVToulw3TScXnU.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/FlXW1EhVToulw3TScXnU.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/BzSq14UqTkqPX9y5f5qn.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/BzSq14UqTkqPX9y5f5qn.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-culturel-laos-cambodge/37tWJGIIRBKPRIX39DFw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/37tWJGIIRBKPRIX39DFw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/weF0z8vkRPGrb1L2M5MM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/weF0z8vkRPGrb1L2M5MM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-culturel-laos-cambodge/zsSL4e2MQp2DI3RdbGdg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/zsSL4e2MQp2DI3RdbGdg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/0EGj3aaSdW9U7uJWL3IN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/0EGj3aaSdW9U7uJWL3IN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-culturel-laos-cambodge/Ybf9JXpmQa8iKiVLC4HY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/Ybf9JXpmQa8iKiVLC4HY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/MKsHK9jrSG2YiGigsLgt.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/MKsHK9jrSG2YiGigsLgt.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-culturel-laos-cambodge/8bf34XETpuMJ3cGZRqja.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/8bf34XETpuMJ3cGZRqja.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-culturel-laos-cambodge/y5CrrjRCqXbdPpqCHggV.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/y5CrrjRCqXbdPpqCHggV.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-culturel-laos-cambodge/o92rUiUqTWKBvMyXShRc.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-culturel-laos-cambodge/o92rUiUqTWKBvMyXShRc.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1510€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

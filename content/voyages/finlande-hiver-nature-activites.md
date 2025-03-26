@@ -10,29 +10,53 @@ Aventures hivernales en Laponie Finlandaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/finlande-hiver-nature-activites/oacKyPb7RquVVkwCxNCV.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/finlande-hiver-nature-activites/oacKyPb7RquVVkwCxNCV.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/finlande-hiver-nature-activites/4sHw1p1TQazUW2z52MhY.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/finlande-hiver-nature-activites/4sHw1p1TQazUW2z52MhY.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/finlande-hiver-nature-activites/poYOkUPRSQu2IKkxps0d.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/finlande-hiver-nature-activites/poYOkUPRSQu2IKkxps0d.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/finlande-hiver-nature-activites/OrTvibbRk6DenrE24Hcx.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/finlande-hiver-nature-activites/OrTvibbRk6DenrE24Hcx.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/finlande-hiver-nature-activites/4f38KUSPTAmqvRn7nuEy.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/finlande-hiver-nature-activites/4f38KUSPTAmqvRn7nuEy.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1990€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

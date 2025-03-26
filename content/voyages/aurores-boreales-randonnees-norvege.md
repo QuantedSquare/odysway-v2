@@ -10,39 +10,67 @@ Observez les aurores boréales en Laponie Norvégienne
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/aurores-boreales-randonnees-norvege/cpZuNQxREKt6OpyxYG0F.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/cpZuNQxREKt6OpyxYG0F.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/aurores-boreales-randonnees-norvege/DWBV7mfIRQ6eqhQRPzjh.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/DWBV7mfIRQ6eqhQRPzjh.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/aurores-boreales-randonnees-norvege/Ho1MCSJZRM61Ac1Kjcty.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/Ho1MCSJZRM61Ac1Kjcty.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/aurores-boreales-randonnees-norvege/YIHiGl7SKSOf6mRsSO0g.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/YIHiGl7SKSOf6mRsSO0g.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/aurores-boreales-randonnees-norvege/qNq74EJQiK5lTf77UOgF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/qNq74EJQiK5lTf77UOgF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/aurores-boreales-randonnees-norvege/aOnljRWSy6L5gPdfQycb.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/aOnljRWSy6L5gPdfQycb.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/aurores-boreales-randonnees-norvege/ynPVP7WuRD2ohHdt7Xf3.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/aurores-boreales-randonnees-norvege/ynPVP7WuRD2ohHdt7Xf3.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1958€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,66 +10,102 @@ Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wa
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/YuB6VeNJQlcvayIdFAOC.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/YuB6VeNJQlcvayIdFAOC.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/jordanie-bedouins-petra-wadirum/zeXQMtT2TixqFzAAQyfY.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/zeXQMtT2TixqFzAAQyfY.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/MgeXqu50REWfZ3wxWO1R.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/MgeXqu50REWfZ3wxWO1R.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/jordanie-bedouins-petra-wadirum/yjmsRBtYQ6eKiVbSowRG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/yjmsRBtYQ6eKiVbSowRG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/Zz0KdUZT6SowJQRPAIQK.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/Zz0KdUZT6SowJQRPAIQK.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/jordanie-bedouins-petra-wadirum/1zT2uBC1TF2juU04mLkH.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/1zT2uBC1TF2juU04mLkH.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/NNCrJx4iTSutBM7pgvfv.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/NNCrJx4iTSutBM7pgvfv.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/jordanie-bedouins-petra-wadirum/VaR1ikE9Sais4AsaDe07.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/VaR1ikE9Sais4AsaDe07.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/DcWjdRk8Ro6HuZET8btq.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/DcWjdRk8Ro6HuZET8btq.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/jordanie-bedouins-petra-wadirum/DpBn9xU2TXaiNc3o49g4.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/DpBn9xU2TXaiNc3o49g4.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/jordanie-bedouins-petra-wadirum/5d6MZfhdSzO2SO4DZUWn.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/5d6MZfhdSzO2SO4DZUWn.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/jordanie-bedouins-petra-wadirum/4Uz2EJvNR1OtnIZANioJ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/jordanie-bedouins-petra-wadirum/4Uz2EJvNR1OtnIZANioJ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2390€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

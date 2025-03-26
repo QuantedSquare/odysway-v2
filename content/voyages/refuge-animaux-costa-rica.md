@@ -10,93 +10,138 @@ Occupez-vous des animaux de la jungle au Costa Rica
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/refuge-animaux-costa-rica/A4xu6XPvTmueQqL5U13F.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/refuge-animaux-costa-rica/A4xu6XPvTmueQqL5U13F.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/refuge-animaux-costa-rica/sEE27sK6TP6j57B5TYYH.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/refuge-animaux-costa-rica/sEE27sK6TP6j57B5TYYH.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/refuge-animaux-costa-rica/epIBTUDiTaaiOzEG8GRe.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/refuge-animaux-costa-rica/epIBTUDiTaaiOzEG8GRe.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/refuge-animaux-costa-rica/rn7NTchS8qRWnJZRJLow.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/refuge-animaux-costa-rica/rn7NTchS8qRWnJZRJLow.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/refuge-animaux-costa-rica/QKvwwaEWTU8TdkSsVKRQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/refuge-animaux-costa-rica/QKvwwaEWTU8TdkSsVKRQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/refuge-animaux-costa-rica/ttjEEzXQFOQGrblak5cA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/refuge-animaux-costa-rica/ttjEEzXQFOQGrblak5cA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/refuge-animaux-costa-rica/tsNDKRgBSuWsU37hqLNx.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/refuge-animaux-costa-rica/tsNDKRgBSuWsU37hqLNx.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/refuge-animaux-costa-rica/GiryjjFySRqCBEB8WEI5.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/refuge-animaux-costa-rica/GiryjjFySRqCBEB8WEI5.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/refuge-animaux-costa-rica/au44p9kgTSaBoHP2TbZg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/refuge-animaux-costa-rica/au44p9kgTSaBoHP2TbZg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/refuge-animaux-costa-rica/yl02VdAITA8aUL6FVi4p.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/refuge-animaux-costa-rica/yl02VdAITA8aUL6FVi4p.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/refuge-animaux-costa-rica/pUdz8MDVQcOHK2vDBQzi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/refuge-animaux-costa-rica/pUdz8MDVQcOHK2vDBQzi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/refuge-animaux-costa-rica/oQBOquejR3yAIyatnWnM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/refuge-animaux-costa-rica/oQBOquejR3yAIyatnWnM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/refuge-animaux-costa-rica/yh4OKQumQ5aAsoxY8513.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/refuge-animaux-costa-rica/yh4OKQumQ5aAsoxY8513.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/refuge-animaux-costa-rica/5SCRwzvhQL2pCKox8C0Q.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/refuge-animaux-costa-rica/5SCRwzvhQL2pCKox8C0Q.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/refuge-animaux-costa-rica/u5KVV3KlSaeNIPEFLYdW.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/refuge-animaux-costa-rica/u5KVV3KlSaeNIPEFLYdW.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/refuge-animaux-costa-rica/TIMMIZSTyeHXDHBdA3JL.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/refuge-animaux-costa-rica/TIMMIZSTyeHXDHBdA3JL.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/4DG2ivsWAfg
+  video-src:
+    - https://www.youtube.com/embed/4DG2ivsWAfg
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1295€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

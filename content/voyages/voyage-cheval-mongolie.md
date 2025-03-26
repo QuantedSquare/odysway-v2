@@ -10,56 +10,88 @@ A cheval, à la rencontre des nomades en Mongolie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-cheval-mongolie/xgTLLIAbQZ2Ya08iV93h.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-cheval-mongolie/xgTLLIAbQZ2Ya08iV93h.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-cheval-mongolie/FoLVKCpIQgiWNkbCzt61.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-cheval-mongolie/FoLVKCpIQgiWNkbCzt61.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-cheval-mongolie/SaH5sPlYQfyWzyomgGPm.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-cheval-mongolie/SaH5sPlYQfyWzyomgGPm.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-cheval-mongolie/ahbVz26ISaWPfmVAIJLB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-cheval-mongolie/ahbVz26ISaWPfmVAIJLB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-cheval-mongolie/4wo2NkJRpCnRNwJ4yv9w.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-cheval-mongolie/4wo2NkJRpCnRNwJ4yv9w.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-cheval-mongolie/0eOyRwoTu6ZynS6q4wT0.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-cheval-mongolie/0eOyRwoTu6ZynS6q4wT0.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-cheval-mongolie/W2ZV8EunRoyQ0YYzCEdx.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-cheval-mongolie/W2ZV8EunRoyQ0YYzCEdx.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-cheval-mongolie/8Eh7wrF7S3WP4Hr6vpQ2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-cheval-mongolie/8Eh7wrF7S3WP4Hr6vpQ2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-cheval-mongolie/E8TF7474S22mxWT3rblI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-cheval-mongolie/E8TF7474S22mxWT3rblI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-cheval-mongolie/JRnWKUESiG7XrFD1OhVh.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-cheval-mongolie/JRnWKUESiG7XrFD1OhVh.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1650€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

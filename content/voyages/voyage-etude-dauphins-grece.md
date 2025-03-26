@@ -10,79 +10,123 @@ Observez les dauphins avec un biologiste marin en Grèce
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-etude-dauphins-grece/bzQw8mqJR4K9nloUKkSQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/bzQw8mqJR4K9nloUKkSQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-etude-dauphins-grece/6ZnaNC7SJuv8LqrRSp9d.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/6ZnaNC7SJuv8LqrRSp9d.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-etude-dauphins-grece/j1FovjA3QG67Mc5Zv3x0.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/j1FovjA3QG67Mc5Zv3x0.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-etude-dauphins-grece/lRsy10VTmv68a2a3cOJA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/lRsy10VTmv68a2a3cOJA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-etude-dauphins-grece/iiPRMLpSvWTTfEOov7Sc.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/iiPRMLpSvWTTfEOov7Sc.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-etude-dauphins-grece/SFb414puTeaeePBSnDSN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/SFb414puTeaeePBSnDSN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-etude-dauphins-grece/55fWbN0TYWSNQbJC6nXN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/55fWbN0TYWSNQbJC6nXN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-etude-dauphins-grece/F8fXe7IWRzuDV2cKI0F6.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/F8fXe7IWRzuDV2cKI0F6.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-etude-dauphins-grece/PBosHsfWQwukejiL0ARh.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/PBosHsfWQwukejiL0ARh.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-etude-dauphins-grece/AAWTXwHdR8Ono4LjLjaB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/AAWTXwHdR8Ono4LjLjaB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-etude-dauphins-grece/gC85mnUSdCBMuidzPu0b.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/gC85mnUSdCBMuidzPu0b.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-etude-dauphins-grece/c2lzVo2TkyFd2HDFQFUQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/c2lzVo2TkyFd2HDFQFUQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-etude-dauphins-grece/dUbWAkIZQ1mG7fpUKrVg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/dUbWAkIZQ1mG7fpUKrVg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-etude-dauphins-grece/XdCJ3kGfSECuHNrtrfYG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/XdCJ3kGfSECuHNrtrfYG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-etude-dauphins-grece/wM5w9rxASWadgEej9Nve.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-etude-dauphins-grece/wM5w9rxASWadgEej9Nve.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1725€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

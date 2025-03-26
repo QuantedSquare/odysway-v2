@@ -10,69 +10,109 @@ Au cœur du Népal entre randonnées et immersion dans un monastère
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/BLGTxKTlq5TZDYx4heiA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/BLGTxKTlq5TZDYx4heiA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/zr5R7IIERICBGcIw008g.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/zr5R7IIERICBGcIw008g.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/CAu5jzsdQUepDoETqVwD.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/CAu5jzsdQUepDoETqVwD.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/9O6MItANQXu6o98CQk0J.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/9O6MItANQXu6o98CQk0J.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/jUMSxlxrR6KFe5J7vtQA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/jUMSxlxrR6KFe5J7vtQA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/UyeSIvZwTLi39Uutbd9V.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/UyeSIvZwTLi39Uutbd9V.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/ctxg97qSxC39F0NFe2iM.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/ctxg97qSxC39F0NFe2iM.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/W9xg48zUQV2ZqNwbbKFU.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/W9xg48zUQV2ZqNwbbKFU.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/qZr7crRtes4o9yEmTHZA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/qZr7crRtes4o9yEmTHZA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/oA2tXJhVSU2LiSFIeCKg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/oA2tXJhVSU2LiSFIeCKg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/Il4wy7dMSI6T5PQLitTm.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/Il4wy7dMSI6T5PQLitTm.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/8n5lheupQimGbceCgfRg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/8n5lheupQimGbceCgfRg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-ecole-bouddhiste-nepal/qJtWcSxnTDi7E5RYMMOg.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-ecole-bouddhiste-nepal/qJtWcSxnTDi7E5RYMMOg.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1590€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

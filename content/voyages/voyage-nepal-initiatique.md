@@ -7,6 +7,17 @@ Retour au partage et à la pleine présence - initiation à la méditation sonor
 
 ::
 
+::bottom-app-bar
+#starting-price
+Dès [3725€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
+::
+
 ::sticky-container
 ---
 left-space: 8

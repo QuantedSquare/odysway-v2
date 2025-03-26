@@ -10,89 +10,137 @@ image-src: /images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-colombie/j0ZjFWffQ8C2Yet202JL.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-colombie/j0ZjFWffQ8C2Yet202JL.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-colombie/DahB6X8Sjuxr1n0gMtGi.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-colombie/DahB6X8Sjuxr1n0gMtGi.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-colombie/lUzdUC3YRHO0YesNn5Oi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-colombie/lUzdUC3YRHO0YesNn5Oi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-colombie/rsJx84xTYCpxYgV64kr4.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-colombie/rsJx84xTYCpxYgV64kr4.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-colombie/EqrWl4GTpGHrBl8Iq2j4.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-colombie/EqrWl4GTpGHrBl8Iq2j4.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-colombie/XOgptkQsRTSDzUH94MLe.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-colombie/XOgptkQsRTSDzUH94MLe.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-colombie/nqrz7kyTqe2Y4ESzJfGQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-colombie/nqrz7kyTqe2Y4ESzJfGQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-colombie/GbzmXOpTfi0ojEphvdVw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-colombie/GbzmXOpTfi0ojEphvdVw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-colombie/rJfxhDS7Q9mIiXqvTOJO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-colombie/rJfxhDS7Q9mIiXqvTOJO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-colombie/rqHAVhj1TMOkIp9m92uB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-colombie/rqHAVhj1TMOkIp9m92uB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-colombie/ECRTp8ryQT8QQ5BEiwYd.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-colombie/ECRTp8ryQT8QQ5BEiwYd.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-colombie/saluSVSzRpW6VyxerCGv.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-colombie/saluSVSzRpW6VyxerCGv.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-colombie/ogEpQPBFRHqtCdb0aZSi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-colombie/ogEpQPBFRHqtCdb0aZSi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-colombie/WUnsYre5Q7GhUx0YbewM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-colombie/WUnsYre5Q7GhUx0YbewM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-colombie/WqILpS9qSEyef7k0Na86.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-colombie/WqILpS9qSEyef7k0Na86.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-colombie/E8AcVpvhTFGpyn3uuR2w.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-colombie/E8AcVpvhTFGpyn3uuR2w.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-colombie/OsqA8939SHqcRHyioRln.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-colombie/OsqA8939SHqcRHyioRln.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1965€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

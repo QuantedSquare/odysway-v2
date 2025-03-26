@@ -10,56 +10,88 @@ Vivez l'aventure mythique du Tour des Annapurnas au Népal
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/trek-tour-annapurna-nepal/cgAFuKt7RJSQH099blg2.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/cgAFuKt7RJSQH099blg2.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-tour-annapurna-nepal/OyiTh3zpQYqZwFYefRID.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/OyiTh3zpQYqZwFYefRID.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-tour-annapurna-nepal/WOWmhZp4Qlma3RDBxI4D.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/WOWmhZp4Qlma3RDBxI4D.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-tour-annapurna-nepal/YPhGRNJTHCvpMvhrATR0.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/YPhGRNJTHCvpMvhrATR0.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/trek-tour-annapurna-nepal/qW9lRN5HRUpe0zPsSeiw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/qW9lRN5HRUpe0zPsSeiw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/trek-tour-annapurna-nepal/qG03GXphRKaAE21oZ1P7.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/qG03GXphRKaAE21oZ1P7.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/trek-tour-annapurna-nepal/BPGGEWL4QhYDA2E6kdNC.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/BPGGEWL4QhYDA2E6kdNC.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-tour-annapurna-nepal/ImbLRnLFRBCFoRf3xqau.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/ImbLRnLFRBCFoRf3xqau.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-tour-annapurna-nepal/le2mhQrPTC6e6GVSEgNT.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/le2mhQrPTC6e6GVSEgNT.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-tour-annapurna-nepal/QgQ8z0fiT2efuxnGDIRw.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-tour-annapurna-nepal/QgQ8z0fiT2efuxnGDIRw.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1730€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,76 +10,116 @@ Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pér
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamanique-perou/tT9gTjMqRMiBDrInboem.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamanique-perou/tT9gTjMqRMiBDrInboem.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-chamanique-perou/oA2oz3OZSA6mjjPiivWM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamanique-perou/oA2oz3OZSA6mjjPiivWM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamanique-perou/7VY9b8pbTxmuSKCIn8HL.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-chamanique-perou/7VY9b8pbTxmuSKCIn8HL.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-chamanique-perou/WL5W03E7QvNrMOiURmYx.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-chamanique-perou/WL5W03E7QvNrMOiURmYx.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamanique-perou/l2n0dHZsTSexL6USOKvn.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamanique-perou/l2n0dHZsTSexL6USOKvn.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-chamanique-perou/nq6yFJHnSVWmrAJaCadL.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamanique-perou/nq6yFJHnSVWmrAJaCadL.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamanique-perou/LaqJigGgQzSuBZiV1vDk.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamanique-perou/LaqJigGgQzSuBZiV1vDk.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-chamanique-perou/knSrOSKSTfSBqbkI0L3c.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamanique-perou/knSrOSKSTfSBqbkI0L3c.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamanique-perou/zI48t1BORaS9k0lmwrQP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-chamanique-perou/zI48t1BORaS9k0lmwrQP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-chamanique-perou/llQ0GFv6QcSmT4gwDyKf.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-chamanique-perou/llQ0GFv6QcSmT4gwDyKf.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamanique-perou/g392juCQT2ZpX6n0f5Ah.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamanique-perou/g392juCQT2ZpX6n0f5Ah.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-chamanique-perou/YjjuPzrgQSSWVLelWgvm.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamanique-perou/YjjuPzrgQSSWVLelWgvm.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamanique-perou/fQrJ44yrTkOf31UsAESJ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamanique-perou/fQrJ44yrTkOf31UsAESJ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-chamanique-perou/atyw8kERrmJsPjm6IFKJ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamanique-perou/atyw8kERrmJsPjm6IFKJ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2060€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,46 +10,74 @@ A la découverte du Népal : randonnées accessibles et immersion locale
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/KimqhXl7Qzm0Y6hiPsUS.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/KimqhXl7Qzm0Y6hiPsUS.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/jY5UQ91ARI6GdVCeyHzQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/jY5UQ91ARI6GdVCeyHzQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/zrHXRYDQYeX1pqIgDqqg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/zrHXRYDQYeX1pqIgDqqg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/G6XQJW7ZQXuVRdwgutdQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/G6XQJW7ZQXuVRdwgutdQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/tKnBIWI1S0CPsko3TNHH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/tKnBIWI1S0CPsko3TNHH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/OZBdn96BQ2OZ2xFcKJXF.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/OZBdn96BQ2OZ2xFcKJXF.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/decouverte-nepal-trek-et-rencontres/MNtkYdtSRGuiIL8kUr8r.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/MNtkYdtSRGuiIL8kUr8r.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/zWivo6fSiJMic49CjNCA.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-nepal-trek-et-rencontres/zWivo6fSiJMic49CjNCA.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1410€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

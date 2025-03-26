@@ -10,93 +10,138 @@ En vélo électrique, à la rencontre des producteurs locaux dans le Vexin
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/MgdWPnvRNyfZCYET0ldQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/MgdWPnvRNyfZCYET0ldQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ZxVVuLM0RzqRqFC1pZsy.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ZxVVuLM0RzqRqFC1pZsy.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/ChKS7X9tRUiyITro5cNG.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ChKS7X9tRUiyITro5cNG.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ylz00tSGR2auh9takWkN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/ylz00tSGR2auh9takWkN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/h9a6X0tSsuwxtStlpURA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/h9a6X0tSsuwxtStlpURA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/fv1i2jmRS2Ea71aIZRoi.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/fv1i2jmRS2Ea71aIZRoi.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/IU7D06wmTb6luRd3K6R3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/IU7D06wmTb6luRd3K6R3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/7UmbMDHWTUKA6yForvDa.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/7UmbMDHWTUKA6yForvDa.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/xD87ITO1Q1aIZy9a2ErV.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/xD87ITO1Q1aIZy9a2ErV.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/sac0qCBlRDeU9w4kN7nL.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/sac0qCBlRDeU9w4kN7nL.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/blzpSsL8Q8SpMKdeQQFP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/blzpSsL8Q8SpMKdeQQFP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/rm5fvyYSQwurYcJcxs44.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/rm5fvyYSQwurYcJcxs44.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/velo-electrique-rencontre-producteurs-vexin/OoKA8QUWTMGL5xup721Y.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/OoKA8QUWTMGL5xup721Y.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/u11RArVR5miRCfXNf6OT.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/velo-electrique-rencontre-producteurs-vexin/u11RArVR5miRCfXNf6OT.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/wRV4SnvcHfs
+  video-src:
+    - https://www.youtube.com/embed/wRV4SnvcHfs
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [350€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

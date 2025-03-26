@@ -10,76 +10,117 @@ Stage boxe thaï en immersion dans le nord de la Thaïlande
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/stage-boxe-thai-nord-thailande/zSOMkcvcQJmDTZKWkFrv.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/zSOMkcvcQJmDTZKWkFrv.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/stage-boxe-thai-nord-thailande/tsSt3UrORrWDb26IZArf.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/tsSt3UrORrWDb26IZArf.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/stage-boxe-thai-nord-thailande/HRXtyC8RtOEbKW138zRQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/HRXtyC8RtOEbKW138zRQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/stage-boxe-thai-nord-thailande/i2ENp7HfQruXlZDVNkzw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/i2ENp7HfQruXlZDVNkzw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/stage-boxe-thai-nord-thailande/aUiSqyWmQHiBBhv8oZfR.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/aUiSqyWmQHiBBhv8oZfR.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/stage-boxe-thai-nord-thailande/KDmYoE0DSbSknY0PzLpR.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/KDmYoE0DSbSknY0PzLpR.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/stage-boxe-thai-nord-thailande/dCyRwmQzRiCnUUBwgiAT.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/dCyRwmQzRiCnUUBwgiAT.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/stage-boxe-thai-nord-thailande/zLai1L4RTaBGkZ9PIUa4.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/zLai1L4RTaBGkZ9PIUa4.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/stage-boxe-thai-nord-thailande/S4wbPaaHTC5xNIY0JX8h.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/S4wbPaaHTC5xNIY0JX8h.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/stage-boxe-thai-nord-thailande/qxs7qmVrShaZGfYqxRIZ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/qxs7qmVrShaZGfYqxRIZ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/stage-boxe-thai-nord-thailande/FP25YywyT8SYvtJo5aNQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/FP25YywyT8SYvtJo5aNQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/stage-boxe-thai-nord-thailande/3CvXPTpzRQ2JJIZhOukO.jpg"}
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/stage-boxe-thai-nord-thailande/3CvXPTpzRQ2JJIZhOukO.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/TvD0nXeOt34
+  video-src:
+    - https://www.youtube.com/embed/TvD0nXeOt34
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [770€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

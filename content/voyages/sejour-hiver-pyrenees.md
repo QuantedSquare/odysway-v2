@@ -10,46 +10,74 @@ Immersion hivernale en terre béarnaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-hiver-pyrenees/G4x6f8kSuKhzHIwVfAO8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-hiver-pyrenees/G4x6f8kSuKhzHIwVfAO8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-hiver-pyrenees/sQWytymSOe1bJcc4i4rf.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-hiver-pyrenees/sQWytymSOe1bJcc4i4rf.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/sejour-hiver-pyrenees/IldQdsuiT7K7x3uZb6LI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/sejour-hiver-pyrenees/IldQdsuiT7K7x3uZb6LI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/sejour-hiver-pyrenees/EpN6Kb6KTVi7e0x9oWb1.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/sejour-hiver-pyrenees/EpN6Kb6KTVi7e0x9oWb1.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/sejour-hiver-pyrenees/NZWQcdWiRRqlDgNBKVXI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-hiver-pyrenees/NZWQcdWiRRqlDgNBKVXI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/sejour-hiver-pyrenees/TIEN63hbQ6OZ161rVHlL.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-hiver-pyrenees/TIEN63hbQ6OZ161rVHlL.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/sejour-hiver-pyrenees/tkvbHE7QdmU9Rt4A8oig.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-hiver-pyrenees/tkvbHE7QdmU9Rt4A8oig.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [650€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

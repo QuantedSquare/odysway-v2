@@ -10,49 +10,81 @@ Occupez-vous des félins en Afrique du Sud
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/felins-afrique-du-sud/AE1MefzLSSesDpVfz6xS.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/felins-afrique-du-sud/AE1MefzLSSesDpVfz6xS.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/felins-afrique-du-sud/JoJNaVabQjaia1UZb5f2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/felins-afrique-du-sud/JoJNaVabQjaia1UZb5f2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/felins-afrique-du-sud/2HYVDqFKTgG4jKMSqG8F.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/felins-afrique-du-sud/2HYVDqFKTgG4jKMSqG8F.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/felins-afrique-du-sud/yyn67ZizRO2hydZsMdHd.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/felins-afrique-du-sud/yyn67ZizRO2hydZsMdHd.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/felins-afrique-du-sud/u0pXlLVTHSW5FFGdr4nw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/felins-afrique-du-sud/u0pXlLVTHSW5FFGdr4nw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/felins-afrique-du-sud/JMrtJe8RSLlei5EYwBAk.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/felins-afrique-du-sud/JMrtJe8RSLlei5EYwBAk.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/felins-afrique-du-sud/78K9yIFQ76Gd5rpc9xDQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/felins-afrique-du-sud/78K9yIFQ76Gd5rpc9xDQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/felins-afrique-du-sud/xj4aF5pMSs2rJMCPcnQJ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/felins-afrique-du-sud/xj4aF5pMSs2rJMCPcnQJ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/felins-afrique-du-sud/Q8Z3k9wT3egHQ2tkv4Pw.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/felins-afrique-du-sud/Q8Z3k9wT3egHQ2tkv4Pw.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1490€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

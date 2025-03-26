@@ -10,76 +10,117 @@ Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-japon/MBx8HQSRKSd6HtvTTZGA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/MBx8HQSRKSd6HtvTTZGA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-culturelle-japon/5wj6lGPFTCGSIeF1TBVF.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/5wj6lGPFTCGSIeF1TBVF.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-japon/kFgv7MPR6CxndHdBmjT9.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/kFgv7MPR6CxndHdBmjT9.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-culturelle-japon/Q6yqLaRBS0mwXXbSr73O.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/Q6yqLaRBS0mwXXbSr73O.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-japon/CdzQaYxlQdWMb0P1Cd8V.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/CdzQaYxlQdWMb0P1Cd8V.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-culturelle-japon/8wp8bQcQQEikrQM7zNC8.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/8wp8bQcQQEikrQM7zNC8.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-japon/jkpdvMNzQ6TH1kIbLUMw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/jkpdvMNzQ6TH1kIbLUMw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-culturelle-japon/TsmGKKlWQoGaj39KIv1e.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/TsmGKKlWQoGaj39KIv1e.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-japon/GxOvCjNRS66u6dXA6oUi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/GxOvCjNRS66u6dXA6oUi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-culturelle-japon/vCJTO8H7SqyxOJi3f5tX.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/vCJTO8H7SqyxOJi3f5tX.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-japon/Mw8CO9OMQYubYz6kEGzE.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/Mw8CO9OMQYubYz6kEGzE.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-culturelle-japon/nJQYqGHATTaF6zQToxql.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/nJQYqGHATTaF6zQToxql.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-japon/qkMNPSmSTiAVUek0BN6w.jpg"}
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-japon/qkMNPSmSTiAVUek0BN6w.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/smxELaAq8Ic
+  video-src:
+    - https://www.youtube.com/embed/smxELaAq8Ic
   ---
   #video-btn
   voir la video
   :::
+::
+
+::bottom-app-bar
+#starting-price
+Dès [3990€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

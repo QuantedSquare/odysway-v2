@@ -10,59 +10,95 @@ Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Br
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/LmBkmunQSiKCbohL3U8g.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/LmBkmunQSiKCbohL3U8g.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/rA3Tk4DaQ5qnNFSL9rn9.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/rA3Tk4DaQ5qnNFSL9rn9.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/xZXBTTlSR5CdTpyGtlX8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/xZXBTTlSR5CdTpyGtlX8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/a0P1TrWDRBuXRfIldyvb.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/a0P1TrWDRBuXRfIldyvb.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/dIL93QQRSqixgJ7GNASg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/dIL93QQRSqixgJ7GNASg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/jvD6cyMjSdCPvxNMOt5a.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/jvD6cyMjSdCPvxNMOt5a.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/9ZYdvIhvSOWXI0xepOrk.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/9ZYdvIhvSOWXI0xepOrk.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/RIrvM1AsSDa18y10lsoj.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/RIrvM1AsSDa18y10lsoj.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/7UEDdGpS0KkmSgoWIzOv.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/7UEDdGpS0KkmSgoWIzOv.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/2ebDsqNTSeRX4OyRPujI.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/2ebDsqNTSeRX4OyRPujI.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-costa-rica-immersion-communaute-locale/ukWDZHgQKWr6DhaMEjJI.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-costa-rica-immersion-communaute-locale/ukWDZHgQKWr6DhaMEjJI.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2990€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

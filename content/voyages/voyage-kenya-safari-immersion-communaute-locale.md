@@ -10,36 +10,60 @@ En immersion dans les villages traditionnels du Kenya et safari dans le Masai Ma
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-kenya-safari-immersion-communaute-locale/iEaQTkM3Swo5i3Shyi6y.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/iEaQTkM3Swo5i3Shyi6y.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/BZdE3PSSuSnXTGYVqEw2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/BZdE3PSSuSnXTGYVqEw2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-kenya-safari-immersion-communaute-locale/eZcgL00XSASOZXPVBeHu.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/eZcgL00XSASOZXPVBeHu.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/6nSpmkNCT1SKXO7MX3nm.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/6nSpmkNCT1SKXO7MX3nm.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-kenya-safari-immersion-communaute-locale/YiHULTsvQ12JDsm01uwB.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/YiHULTsvQ12JDsm01uwB.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/IpHvxy8SQziyvhPLIOXf.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-kenya-safari-immersion-communaute-locale/IpHvxy8SQziyvhPLIOXf.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2090€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,56 +10,88 @@ Explorez les incontournables de Bali entre plages, rizières et volcan
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-bali-immersion-incontournables/JhCv2m4lSIyQOVRdl0gO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/JhCv2m4lSIyQOVRdl0gO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-bali-immersion-incontournables/qcRD0F7S6OYrMN5VXDBB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/qcRD0F7S6OYrMN5VXDBB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-bali-immersion-incontournables/LvI19C6vRri54MpJlsyC.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/LvI19C6vRri54MpJlsyC.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-bali-immersion-incontournables/8a3JRWHTiaPYs9pkHthN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/8a3JRWHTiaPYs9pkHthN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-bali-immersion-incontournables/366EgobvTyqb1fhGofnM.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/366EgobvTyqb1fhGofnM.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-bali-immersion-incontournables/8a3JRWHTiaPYs9pkHthN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/8a3JRWHTiaPYs9pkHthN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-bali-immersion-incontournables/PMvSkJ4FR1eo311D1td7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/PMvSkJ4FR1eo311D1td7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-bali-immersion-incontournables/pTQ6yTWTRQentEjGoJsp.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/pTQ6yTWTRQentEjGoJsp.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-bali-immersion-incontournables/N7Kaa1f9RrGaPwxLNqjc.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/N7Kaa1f9RrGaPwxLNqjc.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-bali-immersion-incontournables/ckvFhiYUQhWpRh7hcivQ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-bali-immersion-incontournables/ckvFhiYUQhWpRh7hcivQ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1400€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

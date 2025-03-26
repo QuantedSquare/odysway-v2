@@ -10,59 +10,95 @@ Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres hu
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/4Xz9ZdjQP2YsMZxUzMFX.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/4Xz9ZdjQP2YsMZxUzMFX.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/dJ0jod6sSXOHTrI2SVbv.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/dJ0jod6sSXOHTrI2SVbv.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/WMnpgOGQ6eYeVjlZXgQU.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/WMnpgOGQ6eYeVjlZXgQU.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/8mB1DDEqTmewcYneUxcI.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/8mB1DDEqTmewcYneUxcI.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/92PvUt88QeSMIWFjvhUB.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/92PvUt88QeSMIWFjvhUB.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/hOTdGHRwRnyRmHqxBL8m.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/hOTdGHRwRnyRmHqxBL8m.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/DWxaz5YQqSSewuxqTv6T.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/DWxaz5YQqSSewuxqTv6T.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/z3MbFHJVTIaacCdAukpG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/z3MbFHJVTIaacCdAukpG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/Xe4dPfBgRBK1Byxukwxl.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/Xe4dPfBgRBK1Byxukwxl.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/aXwUPoQ5qzc5hV5FkLVQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/aXwUPoQ5qzc5hV5FkLVQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-culturelle-sri-lanka/GErFGLUfQiWGOhEJDeuX.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-culturelle-sri-lanka/GErFGLUfQiWGOhEJDeuX.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1850€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

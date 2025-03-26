@@ -10,36 +10,60 @@ Islande sauvage : Terre de feu et de glace
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/islande-nature-aurores-boreales/5x5yqeRnQ7KIKFCtbSJs.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/islande-nature-aurores-boreales/5x5yqeRnQ7KIKFCtbSJs.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/islande-nature-aurores-boreales/g02X86V8Tw2gC29uCIlW.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/islande-nature-aurores-boreales/g02X86V8Tw2gC29uCIlW.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/islande-nature-aurores-boreales/lf1WQDrtTZqR5TZzsVqP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/islande-nature-aurores-boreales/lf1WQDrtTZqR5TZzsVqP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/islande-nature-aurores-boreales/jisuvPRzRJi7N5XSiU7h.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/islande-nature-aurores-boreales/jisuvPRzRJi7N5XSiU7h.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/islande-nature-aurores-boreales/nZ3BTkTRwO1B1togqHws.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/islande-nature-aurores-boreales/nZ3BTkTRwO1B1togqHws.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/islande-nature-aurores-boreales/z1R0mQFRCzWFWPGCadfA.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/islande-nature-aurores-boreales/z1R0mQFRCzWFWPGCadfA.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2865€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

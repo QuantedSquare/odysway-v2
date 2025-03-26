@@ -10,36 +10,60 @@ Mystères de la culture Maya au Guatemala
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/guatemala-maya-amerique-centrale/qQun0AxVTs6QNWgPieGB.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/guatemala-maya-amerique-centrale/qQun0AxVTs6QNWgPieGB.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/guatemala-maya-amerique-centrale/mP9WKsPCQmCkc3YhiBUy.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/guatemala-maya-amerique-centrale/mP9WKsPCQmCkc3YhiBUy.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/guatemala-maya-amerique-centrale/BYmthTbQxaCLRdCk2M54.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/guatemala-maya-amerique-centrale/BYmthTbQxaCLRdCk2M54.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/guatemala-maya-amerique-centrale/qgJDlWs3T02xuCTmewYr.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/guatemala-maya-amerique-centrale/qgJDlWs3T02xuCTmewYr.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/guatemala-maya-amerique-centrale/QOB41RXYSAepxIy7Kb3J.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/guatemala-maya-amerique-centrale/QOB41RXYSAepxIy7Kb3J.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/guatemala-maya-amerique-centrale/qWmEZTr7TXGeM1sAoL1z.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/guatemala-maya-amerique-centrale/qWmEZTr7TXGeM1sAoL1z.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1950€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

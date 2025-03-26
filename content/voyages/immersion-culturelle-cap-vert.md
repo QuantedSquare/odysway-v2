@@ -10,109 +10,165 @@ Cap-Vert en immersion : partagez le quotidien des habitants de Santiago
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/RefG7s9vT9O4u2dd2Kag.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/RefG7s9vT9O4u2dd2Kag.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-cap-vert/0iASouxOSPSjsNXbminc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/0iASouxOSPSjsNXbminc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-cap-vert/ENfLTNGMQfWhZ9kv7MsK.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/ENfLTNGMQfWhZ9kv7MsK.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-cap-vert/vhhN0yQE6nMrC1b6rCnw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/vhhN0yQE6nMrC1b6rCnw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culturelle-cap-vert/NX0HWRhRoCrvp6ewVyRh.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/NX0HWRhRoCrvp6ewVyRh.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/o5MVPctISPWumTNeo6nc.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/o5MVPctISPWumTNeo6nc.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-cap-vert/5JYWEdQ3TTWMAylAa7Ea.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/5JYWEdQ3TTWMAylAa7Ea.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/HlWn3YFkQIWkSmeI4PeF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/HlWn3YFkQIWkSmeI4PeF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-cap-vert/SjCE9J36SdidVRY2xP7j.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/SjCE9J36SdidVRY2xP7j.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-cap-vert/PuIe5FST6CPhZlY7iiMY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/PuIe5FST6CPhZlY7iiMY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culturelle-cap-vert/WRN9453RrqbjStRpILGw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/WRN9453RrqbjStRpILGw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/D4Qv930RWyPuIuxxAZg3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/D4Qv930RWyPuIuxxAZg3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-cap-vert/K5A74q9kSOE7LY7s1N7d.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/K5A74q9kSOE7LY7s1N7d.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/XDPHtYnBT3qvWn87KYkb.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/XDPHtYnBT3qvWn87KYkb.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-cap-vert/sOT8T7LwRFSOQji302Gg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/sOT8T7LwRFSOQji302Gg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-cap-vert/Ke5jDUS8O1byDElSPs5g.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/Ke5jDUS8O1byDElSPs5g.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culturelle-cap-vert/TCGxZeJQcegjBoAssv1Q.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/TCGxZeJQcegjBoAssv1Q.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-cap-vert/pBHhouZRG6gopFICcC9C.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/pBHhouZRG6gopFICcC9C.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-cap-vert/MI4tovpZSfy3XnWMTKy4.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/MI4tovpZSfy3XnWMTKy4.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-cap-vert/9U1ZyYx1RuaLGqXw6WID.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-cap-vert/9U1ZyYx1RuaLGqXw6WID.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1470€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

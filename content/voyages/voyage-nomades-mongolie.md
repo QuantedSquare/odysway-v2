@@ -10,39 +10,67 @@ Partagez le quotidien des nomades des steppes mongoles
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-nomades-mongolie/CgggvhHxQ4m61gtEKl8q.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-nomades-mongolie/CgggvhHxQ4m61gtEKl8q.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-nomades-mongolie/Cmgzlx2SciABYZ0cWOtL.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-nomades-mongolie/Cmgzlx2SciABYZ0cWOtL.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-nomades-mongolie/tnZ30PDSvqqIruni9glg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-nomades-mongolie/tnZ30PDSvqqIruni9glg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-nomades-mongolie/ZEbVLEPQ0ev8wytqAnNw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-nomades-mongolie/ZEbVLEPQ0ev8wytqAnNw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-nomades-mongolie/lmoi3UdhTmWOWzJ57Zfk.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-nomades-mongolie/lmoi3UdhTmWOWzJ57Zfk.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-nomades-mongolie/NDTrtRoSQvejLvfW3O9z.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-nomades-mongolie/NDTrtRoSQvejLvfW3O9z.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-nomades-mongolie/SRZiq3siQn25cCiaMHIb.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-nomades-mongolie/SRZiq3siQn25cCiaMHIb.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1715€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

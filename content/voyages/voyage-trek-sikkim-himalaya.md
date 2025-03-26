@@ -10,46 +10,74 @@ Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-trek-sikkim-himalaya/pzPTaWMLRqG3Q74udqk3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/pzPTaWMLRqG3Q74udqk3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-trek-sikkim-himalaya/ZTDLeoaESMqp8y5whhSc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/ZTDLeoaESMqp8y5whhSc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-trek-sikkim-himalaya/LhsZmo8zRIyiu7nWQqhZ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/LhsZmo8zRIyiu7nWQqhZ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-trek-sikkim-himalaya/YgsdsJrSMC1OxoSvJABz.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/YgsdsJrSMC1OxoSvJABz.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-trek-sikkim-himalaya/baXQKzf7R3WE3shKuPwU.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/baXQKzf7R3WE3shKuPwU.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-trek-sikkim-himalaya/Y9SCH0RuR1aM8XOiIePz.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/Y9SCH0RuR1aM8XOiIePz.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-trek-sikkim-himalaya/B7BkEBVxQGqq2uDvW1m8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/B7BkEBVxQGqq2uDvW1m8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-trek-sikkim-himalaya/peZ55Eh2RGCfSHyoZf2m.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-trek-sikkim-himalaya/peZ55Eh2RGCfSHyoZf2m.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2435€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

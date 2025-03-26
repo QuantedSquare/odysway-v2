@@ -7,6 +7,17 @@ Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et imme
 
 ::
 
+::bottom-app-bar
+#starting-price
+Dès [1415€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
+::
+
 ::sticky-container
 ---
 left-space: 8

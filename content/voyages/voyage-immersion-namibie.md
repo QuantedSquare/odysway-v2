@@ -7,6 +7,17 @@ Dans la peau d’un Ranger : immersion au cœur d’une réserve en Namibie
 
 ::
 
+::bottom-app-bar
+#starting-price
+Dès [1600€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
+::
+
 ::sticky-container
 ---
 left-space: 8

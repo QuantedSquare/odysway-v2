@@ -10,106 +10,158 @@ Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/INADjJRSW7MzCvNWqQJw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/INADjJRSW7MzCvNWqQJw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/A4DcgbjQ8mM27RKLS2xF.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/A4DcgbjQ8mM27RKLS2xF.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/0NUmGIfOR5eBWfGxQXzP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/0NUmGIfOR5eBWfGxQXzP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/ESXjfMbdR66EvelchkO2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/ESXjfMbdR66EvelchkO2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/1pivEKiZRIyUEq5LZwFq.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/1pivEKiZRIyUEq5LZwFq.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/lPVjwazKRC2uOgky7wp9.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/lPVjwazKRC2uOgky7wp9.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/rrREnnaTHujgpdHc1Hx2.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rrREnnaTHujgpdHc1Hx2.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rRMKC1yRtCyLBxTjpNsw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rRMKC1yRtCyLBxTjpNsw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/zax9drzRSUucjMZ37Z6A.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/zax9drzRSUucjMZ37Z6A.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/FGXbdBsmSIG0F5GzM736.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/FGXbdBsmSIG0F5GzM736.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/9hKPq6eIQeaikedG1M5P.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/9hKPq6eIQeaikedG1M5P.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/ECiZJ8ZHQ2KKTGJAEPAQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/ECiZJ8ZHQ2KKTGJAEPAQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/PdCyH1iQTlaZRNcmckiL.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/PdCyH1iQTlaZRNcmckiL.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rds5eeFKRp2FLwRiZvWy.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/rds5eeFKRp2FLwRiZvWy.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/R19mqATaGQMSgmWmBJga.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/R19mqATaGQMSgmWmBJga.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/zyHwpJOoRB6CFPal6UCN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/zyHwpJOoRB6CFPal6UCN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/c8bbu7ITdWYH39SLA9NQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/c8bbu7ITdWYH39SLA9NQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/0QlriGWzQa2yPj4hGX7u.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/0QlriGWzQa2yPj4hGX7u.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-caire-croisiere-nil/akRhHarqTqe6uL7PoYOa.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/akRhHarqTqe6uL7PoYOa.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/j4edrJjqQGq411i5WsbS.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-caire-croisiere-nil/j4edrJjqQGq411i5WsbS.jpg
+  ---
+  ::::
+:::
+
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2190€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container
