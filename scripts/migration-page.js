@@ -816,7 +816,7 @@ async function processVoyageData(inputJson, outputDir) {
         // Get video links
         const videoUrlMap = getVideoLinks(post)
         // Convert markdown with updated image paths and video urls
-        const markdown = convertToMarkdown(post, imageUrlMap, vidoeUrlMap)
+        const markdown = convertToMarkdown(post, imageUrlMap, videoUrlMap)
         processMarkdown(markdown, outputDir, slugify(post.slug))
       }
     }
@@ -824,7 +824,7 @@ async function processVoyageData(inputJson, outputDir) {
       // Process images first
       const imageUrlMap = await processAndDownloadImages(voyageData)
       // Get video links
-      const vidoeUrlMap = getVideoLinks(voyageData)
+      const videoUrlMap = getVideoLinks(voyageData)
       // Convert markdown with updated image paths and video urls
       const markdown = convertToMarkdown(voyageData, imageUrlMap, videoUrlMap)
       processMarkdown(markdown, outputDir, slugify(voyageData.slug))
