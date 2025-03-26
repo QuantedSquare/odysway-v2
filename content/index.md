@@ -67,31 +67,31 @@ categories-slug:
 Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
   :::
 ::
 
@@ -100,13 +100,13 @@ Nos séjours en [France]{style="color: #2e8b57;"} 🚞
 Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 ::
 
@@ -115,16 +115,16 @@ Nos départs en petits groupes [garantis ✔]{style="color: #2e8b57;"}
 Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
   :::
 ::
 
@@ -133,19 +133,19 @@ Nos voyages pour cet [hiver]{style="color: #2e8b57;"} ☃️
 Nos voyages pour le [printemps]{style="color: #2e8b57;"} 🌱
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-hiver-pyrenees"}
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon-fleurs"}
+  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
   :::
 
-  :::voyage-col-card{voyage-slug="chine"}
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 
-  :::voyage-col-card{voyage-slug="japon"}
+  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
   :::
 ::
 

@@ -1,14 +1,14 @@
 {
   "title": "La Grande aventure : Challenge solidaire en immersion au Maroc",
   "slug": "competition-solidaire-maroc",
-  "ISO": "MA",
+  "iso": "MA",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/competition-solidaire-maroc/xBhu52wpT82onjEdNMQT",
+    "alt": "xBhu52wpT82onjEdNMQT"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/competition-solidaire-maroc/bvGcUSq3TBeajc4QiM4C.jpg",
+    "alt": "bvGcUSq3TBeajc4QiM4C"
   },
   "country": "Maroc",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": false,
+      "promoLastMinute": 80,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": false,
+      "promoLastMinute": 80,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

@@ -1,14 +1,14 @@
 {
   "title": "Séjour multi-activités en Laponie finlandaise",
   "slug": "voyage-hiver-laponie-finlande",
-  "ISO": "FI",
+  "iso": "FI",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-hiver-laponie-finlande/1lWuqjgCSJGybM9aeudB",
+    "alt": "1lWuqjgCSJGybM9aeudB"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-hiver-laponie-finlande/DrBd8tzTdqBuoQDZSICy.jpg",
+    "alt": "DrBd8tzTdqBuoQDZSICy"
   },
   "country": "Finlande",
   "zoneChapka": 1,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 3,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 250,
       "lastMinute": true,
+      "promoLastMinute": 250,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 3,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 250,
       "lastMinute": true,
+      "promoLastMinute": 250,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 8,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 250,
       "lastMinute": true,
+      "promoLastMinute": 250,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -89,8 +89,8 @@
       "bookedPlaces": 6,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 250,
       "lastMinute": true,
+      "promoLastMinute": 250,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -119,8 +119,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -134,8 +134,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -149,8 +149,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -164,8 +164,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -179,8 +179,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -194,8 +194,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -209,8 +209,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -224,8 +224,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -239,8 +239,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -254,8 +254,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0
@@ -269,8 +269,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 0

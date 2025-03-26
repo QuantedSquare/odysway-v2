@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-04-20 09:43:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/UXogh4S9RQKhUqYOXbQ0?1613731004481"
+displayedImg: "/images/blogs/La-Thailande-le-pays-du-sourire.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/UXogh4S9RQKhUqYOXbQ0?1613731004481"
+image-src: "/images/blogs/La-Thailande-le-pays-du-sourire.jpg"
 ---
 #publication-date
 20 avril 2020
@@ -31,7 +31,7 @@ Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizai
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/UXogh4S9RQKhUqYOXbQ0?1613731004481"
+image-src: "/images/blogs/La-Thailande-le-pays-du-sourire.jpg"
 ---
 #content
 # Pourquoi partir en voyage en Thaïlande ?
@@ -52,7 +52,8 @@ La Thaïlande n’exige **aucun vaccin obligatoire**. Outre les vaccinations uni
 
 ::image-container
 ---
-image-src: https://img.jakpost.net/c/2017/10/26/2017_10_26_34776_1509017989._large.jpg
+image-src: "/images/blogs/Passport-stamps-becoming-a-thing-of-the-past-News-The-Jakarta-Post.jpg"
+alt: Passport stamps becoming a thing of the past - News - The Jakarta Post
 ---
 ::
 
@@ -64,7 +65,8 @@ Pour tous les séjours de moins de 30 jours, **aucun visa n’est nécessaire po
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/QPPwdto1TfOEeNEOOBH8
+image-src: "/images/blogs/QPPwdto1TfOEeNEOOBH8-1742840920176.jpg"
+alt: 
 ---
 ::
 
@@ -118,7 +120,8 @@ La Thaïlande est riche en paysages, lieux culturels et traditions. Voici les 10
 
 ::image-container
 ---
-image-src: https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/Thailand/Bangkok/talad-rod-fai-market-bangkok-shopping-lead-image.jpg
+image-src: "/images/blogs/https:www.telegraph.co.ukcontentdamTravelDestinationsAsiaThailandBangkoktalad-rod-fai-market-bangkok-shopping-lead-image.jpg.jpg"
+alt: https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/Thailand/Bangkok/talad-rod-fai-market-bangkok-shopping-lead-image.jpg
 ---
 ::
 
@@ -136,13 +139,14 @@ Du côté du golfe de Thaïlande, trois îles se démarquent : **Koh Tao**, là 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qymTtf0LQu2LOnza1j8r
+image-src: "/images/blogs/qymTtf0LQu2LOnza1j8r-1742840921727.jpg"
+alt: 
 ---
 ::
 
 Ville phare du nord de la Thaïlande, **Chiang Mai** a conservé un côté très traditionnel qui fait tout son charme. Explorez les nombreux temples et flânez ensuite dans les marchés de nuit. Autour de Chiang Mai, les paysages de rizières sont un régal pour les yeux. C’est également d’ici que vous partirez pour l’un des nombreux treks afin de découvrir une **Thaïlande authentique**.
 
-Pour plus d’informations, lisez notre article sur les choses [à faire à Chiang Maï](https://odysway.com/ou-loger-et-que-faire-a-chiang-mai/).
+Pour plus d’informations, lisez notre article sur les choses à faire à Chiang Maï.
 
 ### Partir à la découverte de cités royales d’Ayutthaya et de Sukhothai
 
@@ -154,7 +158,8 @@ Autre lieu gorgé d’histoire, **Sukhothai** mérite également le détour lors
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/bY5opOXBRMimiSUwq6C2
+image-src: "/images/blogs/bY5opOXBRMimiSUwq6C2-1742840922253.jpg"
+alt: 
 ---
 ::
 
@@ -164,7 +169,7 @@ Goûteuse et relevée, aux saveurs multiples, **la cuisine thaïe est mondialeme
 
 Véritable symbole depuis des siècles, l’éléphant est omniprésent en Thaïlande. Pourtant, le nombre de pachydermes est en net déclin à cause de l’une des attractions touristiques phares du pays : la balade à dos d’éléphant. Subissant des tortures physiques insoutenables, nombre d’éléphants meurent chaque année. Des associations ont vu le jour pour sauver ces fragiles mastodontes, les soigner et les reconstruire.
 
-Découvrez en détail pourquoi il ne faut [pas faire d'éléphant en Thaïlande](https://odysway.com/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande).
+Découvrez en détail pourquoi il ne faut pas faire d'éléphant en Thaïlande.
 
 ### Kanchanaburi
 
@@ -182,9 +187,10 @@ Vous ne pouvez pas envisager un **séjour en Thaïlande** sans passer par un mas
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/A3DfoS7GSviX10ZiJAQ7
+image-src: "/images/blogs/A3DfoS7GSviX10ZiJAQ7-1742840922776.jpg"
+alt: 
 ---
 ::
 
-Un **voyage en Thaïlande**, c’est aussi avoir l’opportunité de découvrir le sport emblématique du pays : le **muay-thaï**. Odysway vous propose une expérience unique, celle de [boxer dans les rizières en Thaïlande](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=article&utm_medium=blog&utm_campaign=thailande+pays+du+sourire) et de vivre une véritable immersion dans la culture locale. Pendant une semaine, recevez le meilleur entraînement de boxe thaïe avec un combattant professionnel dans les forêts du nord du pays.
+Un **voyage en Thaïlande**, c’est aussi avoir l’opportunité de découvrir le sport emblématique du pays : le **muay-thaï**. Odysway vous propose une expérience unique, celle de boxer dans les rizières en Thaïlande et de vivre une véritable immersion dans la culture locale. Pendant une semaine, recevez le meilleur entraînement de boxe thaïe avec un combattant professionnel dans les forêts du nord du pays.
 ::

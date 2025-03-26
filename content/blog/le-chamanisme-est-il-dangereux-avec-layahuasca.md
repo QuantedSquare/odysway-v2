@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-05-13 08:26:00+00:00"
 tags: "Amerique du Sud, Communautés locales, Developpement personnel, Famille, Perou"
 categories: "Culture et decouverte, Developpement Personnel"
-displayedImg: "https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj"
+displayedImg: "/images/blogs/Le-chamanisme-est-il-dangereux-avec-l'ayahuasca.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj"
+image-src: "/images/blogs/Le-chamanisme-est-il-dangereux-avec-l'ayahuasca.jpg"
 ---
 #publication-date
 13 mai 2019
@@ -31,7 +31,7 @@ Le chamanisme est-il dangereux avec l'ayahuasca?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/871JZMw8RJOEffZUuqWj"
+image-src: "/images/blogs/Le-chamanisme-est-il-dangereux-avec-l'ayahuasca.jpg"
 ---
 #content
 Depuis quelques années, le **voyage spirituel** connaît un véritable boom, notamment dans certains pays d’Asie ou d’Amérique du Sud. Le Tibet et le Pérou sont des destinations phares pour ceux qui souhaitent réaliser un voyage intérieur et guérir de leurs maux. Auprès d’un chamane, ils vont être guidés sur la route du bien-être spirituel et physique. Mais au Pérou, l’utilisation de l’**ayahuasca**, une plante hallucinogène, amène la question suivante : **le chamanisme est-il dangereux ?** Faisons le point.
@@ -42,7 +42,8 @@ Avant de pouvoir répondre à cette question, il est important de comprendre ce 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/CS8vEESVaKGH17AnolNw
+image-src: "/images/blogs/CS8vEESVaKGH17AnolNw-1742841106442.jpg"
+alt: 
 ---
 ::
 
@@ -54,7 +55,7 @@ _Le chamanisme, un voyage intérieur_
 
 Le mot chamanisme vient du mot sibérien _shaman_ qui signifie **« celui qui sait »**. Le chamane est un membre à part entière d’une tribu, d’une communauté. Il vit généralement isolé, au contact de la nature. Il considère que, sur Terre, tout est vivant et que chacun doit vivre dans le respect de l’autre, quel qu’il soit : être humain, animal, plante, minéraux… Respecté par ses pairs, **son rôle est de maintenir l’équilibre et l’harmonie entre l’homme et le monde qui l’entoure**. Le chamane considère également que la maladie est un déséquilibre entre le corps et l’esprit, quelles qu’en soient les raisons (physiques ou psychologiques). Grâce à ses connaissances et à sa faculté à parler aux esprits, il va ainsi rétablir ce déséquilibre.
 
-Nous vous invitons à lire notre article [sur la destination privilégiée pour un voyage spirituel.](https://odysway.com/linde-destination-privilegiee-pour-un-voyage-spirituel)
+Nous vous invitons à lire notre article sur la destination privilégiée pour un voyage spirituel.
 
 Pour le chamane, il existe plusieurs mondes : celui du visible qui correspond au monde des vivants, et celui de l’invisible qui fait référence au monde des esprits. Et pour faire en sorte que l’équilibre spirituel, environnemental, social soit maintenu, **il va bâtir des ponts entre les deux mondes**. Mais comment y parvient-t-il ? En faisant un voyage chamanique, c’est-à-dire un voyage spirituel qui lui permet d’entrer en contact avec les esprits. Pour cela il met en place des rituels, des cérémonies ponctués de danses, de chants, et, guidé par le rythme du tambour, il va entrer dans un état de transe totale.
 
@@ -62,7 +63,8 @@ Au Pérou, le chamane a l’habitude de boire une décoction à base d’**ayahu
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/5Gxsi8e1RWmZ4sgQAly6
+image-src: "/images/blogs/5Gxsi8e1RWmZ4sgQAly6-1742841106980.jpg"
+alt: 
 ---
 ::
 
@@ -72,11 +74,12 @@ _Le chamanisme est-il dangereux ?_   
 
 ### **Qu’est-ce que l’ayahuasca ?**
 
-[L’ayahuasca](https://fr.wikipedia.org/wiki/Ayahuasca), également appelée Yage, est une plante d’Amérique du Sud que l’on trouve dans la partie amazonienne du continent. Dans le langage quechua, l’ayahuasca vient de _aya_ qui signifie liane et _huaska_ qui signifie esprits, morts, âmes. Les tribus l’utilisent à des fins thérapeutiques ou divinatoires. D’autres s’en servent pour purifier leur corps et leur esprit de certains maux ou pour entreprendre un voyage spirituel en élevant leur état de conscience.
+L’ayahuasca, également appelée Yage, est une plante d’Amérique du Sud que l’on trouve dans la partie amazonienne du continent. Dans le langage quechua, l’ayahuasca vient de _aya_ qui signifie liane et _huaska_ qui signifie esprits, morts, âmes. Les tribus l’utilisent à des fins thérapeutiques ou divinatoires. D’autres s’en servent pour purifier leur corps et leur esprit de certains maux ou pour entreprendre un voyage spirituel en élevant leur état de conscience.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/1inFNlldSY2ma4iMagya
+image-src: "/images/blogs/1inFNlldSY2ma4iMagya-1742841107499.jpg"
+alt: 
 ---
 ::
 
@@ -92,7 +95,7 @@ Depuis plusieurs années, l’Amérique du Sud, notamment au Pérou, connaît un
 
 ## A la découverte des voyages initiatiques !
 
-Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité avec nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
+Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité avec nos voyages initiatiques.
 
 ## **Vous voulez réaliser un voyage chamanique ?**
 
@@ -102,7 +105,8 @@ Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/MABboZciRIutPwfTXSMV
+image-src: "/images/blogs/MABboZciRIutPwfTXSMV-1742841108021.jpg"
+alt: 
 ---
 ::
 
@@ -110,7 +114,7 @@ _Voyage avec un chamane au Pérou_
 
 L’agence de voyage Odysway vous propose une **voyage chamanique inoubliable dans la vallée sacrée des Incas, au Pérou**. En compagnie d’un chamane traditionnel, vous en découvrirez les **lieux spirituels emblématiques**, parmi lesquels l’incontournable Machu Picchu, les salines de Maras ou encore les ruines d’Ollantaytambo.
 
-[Découvrez le voyage chamanique au Pérou](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=Blog&utm_medium=SEO&utm_campaign=Chamanisme_Ayahuasca)
+Découvrez le voyage chamanique au Pérou
 
 Votre **guide chamane** vous initiera aux **rituels chamaniques et cérémonies ancestrales** : par exemple la cérémonie de l’arc-en-ciel, cérémonie incontournable du voyage chamanique. Pas d’inquiétude, le voyage s’effectuera **sans ayahuasca**. De ce fait, vous n’aurez pas à vous soucier de ses éventuels effets négatifs. Vous serez en mesure de profiter pleinement de cette expérience.
 
@@ -120,7 +124,8 @@ Le chamane vous aidera à oublier le stress de votre vie quotidienne et à vous�
 
 #### ::image-container
 ---
-image-src: https://cdn.buttercms.com/zFfzDLzSuGMbbQA8ZLAo
+image-src: "/images/blogs/zFfzDLzSuGMbbQA8ZLAo-1742841108549.jpg"
+alt: 
 ---
 ::
 
@@ -128,5 +133,5 @@ _Voyagez en terre Chamane en Mongolie_
 
 Loin du Pérou, partez à la découverte d’un chamanisme très différent. Voyagez en Mongolie, dans une des régions les moins touristiques du pays, le Khenti. Découvrez le mode de vie de véritables chamanes et initiez-vous à leurs traditions ancestrales.
 
-[Découvrez le voyage chamanique en Mongolie](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=Blog&utm_medium=SEO&utm_campaign=Chamanisme_Ayahuasca)
+Découvrez le voyage chamanique en Mongolie
 ::

@@ -1,14 +1,14 @@
 {
   "title": "Partagez le quotidien des nomades des steppes mongoles",
   "slug": "voyage-nomades-mongolie",
-  "ISO": "MN",
+  "iso": "MN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-nomades-mongolie/v8XkfTxQbaDymiR6UKdW",
+    "alt": "v8XkfTxQbaDymiR6UKdW"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-nomades-mongolie/EGNwnNRnTMCEuTq6bj45.jpg",
+    "alt": "EGNwnNRnTMCEuTq6bj45"
   },
   "country": "Mongolie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 50,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 160,
       "privatized": false,
       "flyTicketPrice": 900
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 50,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 160,
       "privatized": false,
       "flyTicketPrice": 900
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 50,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 160,
       "privatized": false,
       "flyTicketPrice": 900
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 50,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 160,
       "privatized": false,
       "flyTicketPrice": 900
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 50,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 160,
       "privatized": false,
       "flyTicketPrice": 900

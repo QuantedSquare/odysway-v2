@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-01-06 09:00:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h"
+displayedImg: "/images/blogs/Notre-demarche-responsable.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h"
+image-src: "/images/blogs/Notre-demarche-responsable.jpg"
 ---
 #publication-date
 6 janvier 2023
@@ -31,7 +31,7 @@ Notre démarche responsable
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/jlb35gyQXWhP814Jp27h"
+image-src: "/images/blogs/Notre-demarche-responsable.jpg"
 ---
 #content
 Dans le cadre de notre démarche responsable, nous avons à cœur d'agir concrètement et d'apporter notre pierre à l'édifice d'un futur plus durable. Quoi de mieux que de d'imaginer notre propre projet pour une adhésion parfaite à nos valeurs ?
@@ -42,25 +42,28 @@ L'objectif de ce projet, c'est offrir à des jeunes qui ne partent pas en vacanc
 
 Une belle occasion pour créer des moments de vie inoubliables et faire de notre joyeuse tribu, des acteurs de demain ! Pour financer ce projet, Odysway reverse 1% de son chiffre d'affaires annuel. En voyageant avec notre agence, vous participez donc directement à la réalisation de ces séjours, et permettez à des enfants et adolescents de vivre des expériences marquantes et pédagogiques.
 
-Pour la première édition (avril 2023), notre équipe a donc réalisé ce projet en bord de mer pour faire profiter les enfants de l’association [EGDO](https://www.egdo.fr/) pendant 3 jours merveilleux !  
+Pour la première édition (avril 2023), notre équipe a donc réalisé ce projet en bord de mer pour faire profiter les enfants de l’association EGDO pendant 3 jours merveilleux !  
   
 Une première édition remplie de joie, rires, jeux, et rencontres ! voici en quelques images le résumé de ce séjour :
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Omyqr2SpyL9JDfyhiegM
+image-src: "/images/blogs/Omyqr2SpyL9JDfyhiegM-1742840651226.jpg"
+alt: undefined
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/YsWcipyCQ2u5TipBKU1N
+image-src: "/images/blogs/YsWcipyCQ2u5TipBKU1N-1742840651742.jpg"
+alt: undefined
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dtWixTRoTyqPkZfiGckP
+image-src: "/images/blogs/dtWixTRoTyqPkZfiGckP-1742840652265.jpg"
+alt: undefined
 ---
 ::
 ::

@@ -50,11 +50,12 @@ Voici les meilleures expériences de **voyages sportif** proposées par Odysway 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/vSjqrIfSuml1U1714jqF
+image-src: "/images/blogs/Entrainement-moines-Shaolin.jpg"
+alt: Entrainement moines Shaolin
 ---
 ::
 
-Vous avez toujours rêvé d’[**apprendre le mythique Kung-Fu de Shaolin**](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursportif) dans un des plus anciens temples bouddhistes de Chine ? [](https://odysway.com/voyages/kung-fu-temple-shaolin-chine)Ne rêvez plus, c’est possible !
+Vous avez toujours rêvé d’**apprendre le mythique Kung-Fu de Shaolin** dans un des plus anciens temples bouddhistes de Chine ? Ne rêvez plus, c’est possible !
 
 Grâce à ce **voyage sportif** que nous avons concocté pour vous, vous allez pouvoir vous entraîner quotidiennement au Kung-Fu de Shaolin.
 
@@ -68,13 +69,14 @@ Un **voyage sportif** unique et authentique que vous n'oublierez pas de sitôt !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/FvfEBxuJSTe2ZPanzzrn
+image-src: "/images/blogs/FvfEBxuJSTe2ZPanzzrn-1742840803322.jpg"
+alt: undefined
 ---
 ::
 
 Quoi de mieux pour vivre comme un local et découvrir des endroits peu touristiques que de monter sur un vélo ? C’est ce que nous vous proposons avec ce **voyage sportif** qui va faire travailler vos mollets !
 
-[**Découvrez la perle de l’Océan Indien à vélo**](https://odysway.com/voyages/voyage-velo-sri-lanka?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursportif) ; le Sri Lanka, au fil d’étapes quotidiennes magnifiques et surprenantes, ravivera  tous vos sens. 
+**Découvrez la perle de l’Océan Indien à vélo** ; le Sri Lanka, au fil d’étapes quotidiennes magnifiques et surprenantes, ravivera  tous vos sens. 
 
 Chaque jour, faites connaissance avec la diversité culturelle de cette petite île si généreuse, de ses populations locales, de sa délicieuse cuisine et changez de paysages et de traditions tous les 40 km.
 
@@ -86,7 +88,8 @@ Durant ce **voyage sportif,** nous nous chargeons de l’accompagnement logistiq
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/RN9z5BmTRUi7CRB7vUCg
+image-src: "/images/blogs/RN9z5BmTRUi7CRB7vUCg-1742840803837.jpg"
+alt: undefined
 ---
 ::
 
@@ -94,7 +97,7 @@ Connaissez-vous le Muay-Thaï ? C’est l’autre nom de la boxe thaïlandaise e
 
 Les thaïlandais sont extrêmement fiers et attachés à ce sport de combat, qui fait partie de la catégorie “pieds-poings”, et qui fait vivre des milliers de personnes à travers le pays.
 
-Notre **voyage sportif** en Thaïlande vous propose de découvrir ce pays sous un autre jour, grâce à [**un stage de Muay-thaï dans la région de Chiang Mai**](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursportif), et plus exactement dans le charmant village de Pai.
+Notre **voyage sportif** en Thaïlande vous propose de découvrir ce pays sous un autre jour, grâce à **un stage de Muay-thaï dans la région de Chiang Mai**, et plus exactement dans le charmant village de Pai.
 
 Que vous soyez débutant ou déjà habitué à la technique poings-pieds, vous pourrez vous entraîner pendant 12 jours avec les meilleurs instructeurs au monde.
 
@@ -112,7 +115,8 @@ Un **voyage sportif** que vous n’êtes pas prêts d’oublier !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/iw6gDls8QpqgqFEUXiEh
+image-src: "/images/blogs/iw6gDls8QpqgqFEUXiEh-1742840804353.jpg"
+alt: undefined
 ---
 ::
 
@@ -122,9 +126,9 @@ Avec nos **séjours sportifs**, nous souhaitons que chacun puisse y trouver son 
 
 Que vous souhaitiez découvrir un nouveau sport, vous perfectionner sur une pratique ou encore simplement exercer une activité physique durant votre séjour, nos **voyages sportifs** s’adaptent à tous les goûts :
 
-*   envie de grands espaces, d’aurores boréales et d’[**aventures au cœur de la Laponie finlandaise**](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursportif) ; 
-*   d’allier [**Yoga et Trekking au cœur de l'Himalaya**](https://odysway.com/voyages/yoga-trek-himalaya?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursportif) ;
-*   [**de vivre une chevauchée fantastique**](https://odysway.com/voyages/rencontre-nomades-mongolie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursportif) à la rencontre des nomades de Mongolie. 
+*   envie de grands espaces, d’aurores boréales et d’**aventures au cœur de la Laponie finlandaise** ; 
+*   d’allier **Yoga et Trekking au cœur de l'Himalaya** ;
+*   **de vivre une chevauchée fantastique** à la rencontre des nomades de Mongolie. 
 
 Odysway est là pour vous accompagner dans votre projet de voyage sportif !
 ::

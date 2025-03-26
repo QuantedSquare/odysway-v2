@@ -40,7 +40,8 @@ Nature, culture, vie sauvage, traditions ancestrales ou passé historique, il y 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/RusO5Xj3Qbi3CYV77Z8e
+image-src: "/images/blogs/Pourquoi-partir-en-Finlande.jpg"
+alt: Pourquoi partir en Finlande ? 
 ---
 ::
 
@@ -58,13 +59,14 @@ Si vous vous rendez en **Finlande en été**, vous aurez l’occasion d’admire
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/G3XDy3vaR5SGwdRhg5Wu
+image-src: "/images/blogs/Quand-partir-en-Finlande.jpg"
+alt: Quand partir en Finlande ?
 ---
 ::
 
 Le climat est un facteur décisif pour savoir **quand partir en Finlande** en fonction de ses envies.
 
-L’hiver est une très belle saison, car tout le pays se recouvre d’un joli manteau blanc. Ce qui n’empêche en rien les Finlandais de profiter pleinement des joies hivernales, et elles sont nombreuses. L’hiver ne fait pas que passer en Finlande, il dure. Longtemps. Environ cinq mois dans le sud, entre décembre et avril, et sept mois dans le nord, entre novembre et mai. Les températures passent largement en dessous de zéro pour avoisiner les -15°C et jusqu’à -30°C en Laponie ! Si malgré tout, votre curiosité l’emporte sur le froid, succombez à notre [voyage en hiver en Laponie finlandaise](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO&utm_medium=PageDestination&utm_campaign=Finlande).
+L’hiver est une très belle saison, car tout le pays se recouvre d’un joli manteau blanc. Ce qui n’empêche en rien les Finlandais de profiter pleinement des joies hivernales, et elles sont nombreuses. L’hiver ne fait pas que passer en Finlande, il dure. Longtemps. Environ cinq mois dans le sud, entre décembre et avril, et sept mois dans le nord, entre novembre et mai. Les températures passent largement en dessous de zéro pour avoisiner les -15°C et jusqu’à -30°C en Laponie ! Si malgré tout, votre curiosité l’emporte sur le froid, succombez à notre voyage en hiver en Laponie finlandaise.
 
 La **Finlande en été** est donc la période la plus agréable pour découvrir le pays sans être transis de froid. La saison s’étend de juin à août avec une température moyenne de 20°C dans le sud et de 15°C dans le nord. Il arrive que des pics de chaleur traversent le sud du pays et fassent grimper les températures jusqu’à 30°C ! À l’inverse, il se peut qu’il fasse beaucoup plus frais. Bien que les journées soient généralement douces en été, les nuits sont au contraire plutôt fraîches. Des vêtements chauds ne seront donc pas de trop dans votre valise pour affronter des températures inférieures à 10°C voire glaciales du côté de la Laponie…
 
@@ -74,7 +76,8 @@ L’automne, appelé le Ruska, commence dès septembre en Laponie finlandaise et
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/nxzRaUKkRbmkMLAOjLlb
+image-src: "/images/blogs/Partir-en-Finlande.jpg"
+alt: Partir en Finlande
 ---
 ::
 
@@ -88,7 +91,8 @@ Néanmoins, si vous comptez explorer le pays pendant plus longtemps, il est imp�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/wpYqtjoQI20dk1OYgbTY
+image-src: "/images/blogs/Helsinki.jpg"
+alt: Helsinki
 ---
 ::
 
@@ -100,7 +104,8 @@ Au large d’Helsinki, deux sites sont à visiter. Tout d’abord, **l’archipe
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/VGZV39eIRFOqUEszWYkt
+image-src: "/images/blogs/Laponie-Finlandaise.jpg"
+alt: Laponie Finlandaise
 ---
 ::
 
@@ -110,13 +115,14 @@ Située tout au nord du pays, la **Laponie finlandaise** a comme un air du bout 
 
 En été ou en hiver, le **lac Inari** permet de pratiquer diverses activités. Au programme, randonnées, baignade (frileux s’abstenir), découverte des îles et visite du musée Siida sur la culture sami. Accompagné d’un guide, vous pourrez même skier sur le lac.
 
-Envie d’une [reconnexion totale avec la nature en Finlande](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=PageDestination&utm_campaign=Finlande) ? Découvrez notre séjour incroyable au cœur de la Laponie !
+Envie d’une reconnexion totale avec la nature en Finlande ? Découvrez notre séjour incroyable au cœur de la Laponie !
 
 ### 3\. Découvrir la ville de Tampere
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/n55tVmxTRZWdHaQruVVl
+image-src: "/images/blogs/Tampere.jpg"
+alt: Tampere
 ---
 ::
 
@@ -126,7 +132,8 @@ Deuxième ville de Finlande, **Tampere** fut autrefois une importante ville indu
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/vc2zMz1GQhSGLZitAATh
+image-src: "/images/blogs/Parc-national-d'Oulanka.jpg"
+alt: Parc national d'Oulanka
 ---
 ::
 
@@ -136,7 +143,8 @@ Avec ses 40 **parcs nationaux**, la Finlande est le paradis des randonneurs. For
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OuaYAj54QXWjFuXG1Y6I
+image-src: "/images/blogs/Archipel-d'Aland.jpg"
+alt: Archipel d'Aland
 ---
 ::
 
@@ -146,7 +154,8 @@ En pleine mer Baltique, **l’archipel d’Aland** regroupe 6 500 îles. Régio
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8m1yRqmRLi8SNnSBnBXW
+image-src: "/images/blogs/Finlande-region-des-lacs.jpg"
+alt: Finlande, région des lacs
 ---
 ::
 
@@ -158,7 +167,8 @@ Le plus grand d’entre eux, est le **lac Saimaa** qui est un véritable labyrin
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/pPaH4eiQSepRfOjJkXIA
+image-src: "/images/blogs/Turku.jpg"
+alt: Turku
 ---
 ::
 
@@ -170,7 +180,8 @@ Sur la côte est de la Finlande, **Turku** est la plus ancienne ville du pays. C
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/hmF8HyFuQCaY3aMqD6W2
+image-src: "/images/blogs/Rauma.jpg"
+alt: Rauma
 ---
 ::
 
@@ -178,5 +189,5 @@ Avec les villes de Rauma et de Porvoo, c’est parti pour un voyage au temps du 
 
 Ville d’art et de culture, **Porvoo** est tout aussi jolie. Sa vieille ville médiévale est ponctuée de belles maisons en bois peint, mais aussi de manoirs, d’églises, de chapelles et de musées.
 
-La Finlande est donc la promesse d’un voyage hors du commun. Grâce à sa carte animée très ludique, l’office de tourisme vous propose de découvrir les principales [destinations](https://www.visitfinland.com/fr/destinations/) du pays.
+La Finlande est donc la promesse d’un voyage hors du commun. Grâce à sa carte animée très ludique, l’office de tourisme vous propose de découvrir les principales destinations du pays.
 ::

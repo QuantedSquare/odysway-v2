@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-09-18 17:30:00+00:00"
 tags: "Afrique, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
-displayedImg: "https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc"
+displayedImg: "/images/blogs/Faites-du-kayak-et-du-rafting-sur-le-fleuve-Zambeze.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc"
+image-src: "/images/blogs/Faites-du-kayak-et-du-rafting-sur-le-fleuve-Zambeze.jpg"
 ---
 #publication-date
 18 septembre 2018
@@ -31,12 +31,12 @@ Faites du kayak et du rafting sur le fleuve Zambèze
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/3IABCPWQ1SLq2DgALMqc"
+image-src: "/images/blogs/Faites-du-kayak-et-du-rafting-sur-le-fleuve-Zambeze.jpg"
 ---
 #content
 Le fleuve Zambèze est le 4è plus grand fleuve d’Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l’Océan Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre compte de la puissance de ce fleuve et de sa faune, quoi de mieux que de parcourir le Zambèze en kayak ou en rafting.
 
-Après votre lecture, nous vous invitons à consulter l'article [sur le surf sur un volcan en Nicaragua](https://odysway.com/surfez-sur-le-volcan-cerro-negro-au-nicaragua)
+Après votre lecture, nous vous invitons à consulter l'article sur le surf sur un volcan en Nicaragua
 
 ## Du kayak pour observer la faune et la flore du Zambèze
 
@@ -44,7 +44,7 @@ Le fleuve **Zambèze** est divisé en 3 parties : le cours supérieur, le cou
 
 Un spectacle exceptionnel qui restera gravé dans votre mémoire pour longtemps. Et il se peut que dans des passages aux eaux moins profondes, vous aperceviez hippopotames et crocodiles.
 
-Sous la bienveillance de guides confirmés et en totale sécurité, votre navigation en kayak se révèlera une **expérience unique** et particulièrement enrichissante. Découvrez [nos voyages en Afrique](https://odysway.com/destinations/afrique) pour d'autres expériences hors du commun.
+Sous la bienveillance de guides confirmés et en totale sécurité, votre navigation en kayak se révèlera une **expérience unique** et particulièrement enrichissante. Découvrez nos voyages en Afrique pour d'autres expériences hors du commun.
 
 ## Une descente en rafting pour des sensations fortes
 
@@ -54,5 +54,5 @@ En aval des chutes, le Zambèze offre un paysage plus escarpé. Les **rapides**
 
 Et pour prolonger cette expérience, pourquoi ne pas partir plusieurs jours ? Une occasion d’apercevoir la faune qui peuple les berges du fleuve lorsque vous installerez votre bivouac pour la nuit.
 
-Si vous aimez les voyages sportifs, voici notre [thématique de voyage sportif en immersion !](https://odysway.com/thematiques/voyage-sportif)
+Si vous aimez les voyages sportifs, voici notre thématique de voyage sportif en immersion !
 ::

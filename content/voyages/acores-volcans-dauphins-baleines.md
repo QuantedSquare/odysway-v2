@@ -1,38 +1,10 @@
 ::hero-voyage-section
 ---
-image-src: https://cdn.buttercms.com/crL01Y3RDSMtg2Bbmtks
+image-src: /images/voyages/acores-volcans-dauphins-baleines/crL01Y3RDSMtg2Bbmtks.jpg
 ---
 #title
 L’appel des Açores entre volcans, dauphins, baleines et cachalots 
 
-#component-slot-1
-  :::photo-gallery-dialog
-  #gallery-btn
-  voir la galerie photos
-
-  #photo-col
-    
-  :::
-
-#component-slot-2
-  :::video-dialog
-  ---
-  video-src: 
-  ---
-  #video-btn
-  voir la video
-  :::
-::
-
-::bottom-app-bar
-#starting-price
-Dès [1515€]{style="font-weight: bold"}
-
-#text-btn-1
-voir dates & prix
-
-#text-btn-2
-Prendre RDV
 ::
 
 ::sticky-container
@@ -115,7 +87,7 @@ right-sticky: true
   #avatar
     ::::avatar-list-item
     ---
-    avatar: https://cdn.buttercms.com/FbEN6KxzS62uUwejT351
+    avatar: /images/voyages/acores-volcans-dauphins-baleines/FbEN6KxzS62uUwejT351.jpg
     avatar-size: "60"
     ---
     #title
@@ -125,7 +97,7 @@ right-sticky: true
 
   :::highlights-row
   ---
-  image: https://cdn.buttercms.com/q4lPBZSIR7CztNNRxSwg
+  image: /images/voyages/acores-volcans-dauphins-baleines/q4lPBZSIR7CztNNRxSwg.jpg
   ---
   ::::highlight-list-item
   Observez les dauphins, les baleines et les cachalots lors de sorties en mer accompagnées de chercheurs scientifiques qui œuvrent pour la préservation de l’océan
@@ -189,7 +161,7 @@ right-sticky: true
   
     :::day-row
     ---
-    image: https://cdn.buttercms.com/QZlemQBR6eWGS5kJUmEk
+    image: /images/voyages/acores-volcans-dauphins-baleines/QZlemQBR6eWGS5kJUmEk.jpg
     ---
     #subtitle
     JOUR 1
@@ -207,7 +179,7 @@ Faial, surnommée « l’île bleue », séduit par ses paysages volcaniques uni
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/tfk3q7WyQuy8WD2adXh1
+    image: /images/voyages/acores-volcans-dauphins-baleines/tfk3q7WyQuy8WD2adXh1.jpg
     ---
     #subtitle
     JOUR 2
@@ -225,7 +197,7 @@ Selon la saison, vous pourrez observer des dauphins communs, des cachalots rési
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/d3Wgu9RfSeiFAz5rCFpw
+    image: /images/voyages/acores-volcans-dauphins-baleines/d3Wgu9RfSeiFAz5rCFpw.jpg
     ---
     #subtitle
     JOUR 3
@@ -241,7 +213,7 @@ Traversez les forêts de cryptomeria parcourues de petites levadas, les côtes d
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/1SZ5UtelQlGNjtsggctm
+    image: /images/voyages/acores-volcans-dauphins-baleines/1SZ5UtelQlGNjtsggctm.jpg
     ---
     #subtitle
     JOUR 4
@@ -258,7 +230,7 @@ L’équipe pourra également partager son travail sur les tortues marines si l�
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/CYtqBxzbRtm5wYL8AITJ
+    image: /images/voyages/acores-volcans-dauphins-baleines/CYtqBxzbRtm5wYL8AITJ.jpg
     ---
     #subtitle
     JOUR 5
@@ -275,7 +247,7 @@ Traversez une nature rurale préservée, typique des Açores, jusqu’à la plus
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/qjSrzxwdQP6mA7ydCOxm
+    image: /images/voyages/acores-volcans-dauphins-baleines/qjSrzxwdQP6mA7ydCOxm.jpg
     ---
     #subtitle
     JOUR 6
@@ -293,7 +265,7 @@ De juin à septembre, en fin d’après-midi ou début de soirée, choisissez en
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/d53zjhyQeeoJIlkFIA9H
+    image: /images/voyages/acores-volcans-dauphins-baleines/d53zjhyQeeoJIlkFIA9H.jpg
     ---
     #subtitle
     JOUR 7
@@ -311,7 +283,7 @@ Cette expérience combine découverte scientifique, immersion dans la nature et 
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/zZ4Yyn2DSvCAnGBY13yj
+    image: /images/voyages/acores-volcans-dauphins-baleines/zZ4Yyn2DSvCAnGBY13yj.jpg
     ---
     #subtitle
     JOUR 8
@@ -334,6 +306,7 @@ Bon retour et à bientôt pour de nouvelles découvertes !
   :::accomodation-container
   #text
   Séjournez dans une Guest House idéalement située sur le front de mer de Faial. Profitez de chambres modernes et confortables avec salle de douche, disponibles en double, supérieure ou individuelle. Détendez-vous dans les espaces communs, avec une cuisine équipée, un salon partagé et un toit-terrasse offrant une vue sur la mer. Savourez un petit-déjeuner maison inclus et restez connecté grâce au wifi gratuit. À proximité, découvrez restaurants, bars et épicerie à moins de 50 mètres, ainsi que le port et le Monte Da Guia. Vous avez la possibilité de choisir l’option (en supplément) d’un hôtel (avec piscine, spa et centre de bien-être).
+
   
   #carousel
     ::::carousel
@@ -341,19 +314,19 @@ Bon retour et à bientôt pour de nouvelles découvertes !
       
     :::::image-carousel-item
     ---
-    image: https://cdn.buttercms.com/Pl8Vlj0KTOeOzxf46lNN
+    image: /images/voyages/acores-volcans-dauphins-baleines/Pl8Vlj0KTOeOzxf46lNN.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: https://cdn.buttercms.com/P06xcXv3S1agA3FtctcU
+    image: /images/voyages/acores-volcans-dauphins-baleines/P06xcXv3S1agA3FtctcU.jpg
     ---
     :::::
 
     :::::image-carousel-item
     ---
-    image: https://cdn.buttercms.com/rco0uppuTVafrdsC5wFn
+    image: /images/voyages/acores-volcans-dauphins-baleines/rco0uppuTVafrdsC5wFn.jpg
     ---
     :::::
     ::::
@@ -512,18 +485,6 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
 
 ::title-container
 #title

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-06 15:46:00+00:00"
 tags: "Animaux, Communautés locales, Sport"
 categories: ""
-displayedImg: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
+displayedImg: "/images/blogs/8-"nouvelles"-bonnes-resolutions.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
+image-src: "/images/blogs/8-"nouvelles"-bonnes-resolutions.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ image-src: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/Ha2CnLmRSpCZikYxenEE?1613731980372"
+image-src: "/images/blogs/8-"nouvelles"-bonnes-resolutions.jpg"
 ---
 #content
 Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du temps. Mais il est possible de remettre ces bonnes résolutions au goût du jour pour les rendre plus attrayantes et réussir, pour certaines, à les inclure dans nos habitudes quotidiennes. Voici 8 « nouvelles » bonnes résolutions à mettre en œuvre dès le 1er janvier 2020 !
@@ -50,7 +50,7 @@ Aux seuls mots « langue étrangère », beaucoup se voient déjà la tête p
 > 
 > Michel de Montaigne
 
-Cette phrase est tirée d’un ouvrage des plus éloquents de la littérature française : écrits au XVIème siècle, _les Essais_ de Michel de Montaigne, rassemblent toutes les réflexions de l’auteur sur le genre humain et sur le sens de son existence. L’idée de tolérance y est omniprésente. Elle se traduit en anglais par un terme fréquemment utilisé de nos jours, celui d’_open minded_ qui signifie littéralement le fait d’être « ouvert d’esprit ». Il s’agit d’aborder des croyances, des cultures, des opinions très différentes des nôtres sans porter de jugement et en admettant qu’elles sont égales à celles que nous possédons. Pour cela, rien de mieux que de voyager aux quatre coins du monde pour découvrir de nouveaux modes de vie et comprendre leur fonctionnement afin d’identifier les valeurs qui en jaillissent. Les voyages en immersion sont les plus appropriés : de cette manière, vous vivrez un [voyage authentique au sein d’une communauté locale](https://odysway.com/thematiques/sejours-chez-l-habitant). En participant à la vie quotidienne de ses habitants, vous serez à même de saisir leurs valeurs.
+Cette phrase est tirée d’un ouvrage des plus éloquents de la littérature française : écrits au XVIème siècle, _les Essais_ de Michel de Montaigne, rassemblent toutes les réflexions de l’auteur sur le genre humain et sur le sens de son existence. L’idée de tolérance y est omniprésente. Elle se traduit en anglais par un terme fréquemment utilisé de nos jours, celui d’_open minded_ qui signifie littéralement le fait d’être « ouvert d’esprit ». Il s’agit d’aborder des croyances, des cultures, des opinions très différentes des nôtres sans porter de jugement et en admettant qu’elles sont égales à celles que nous possédons. Pour cela, rien de mieux que de voyager aux quatre coins du monde pour découvrir de nouveaux modes de vie et comprendre leur fonctionnement afin d’identifier les valeurs qui en jaillissent. Les voyages en immersion sont les plus appropriés : de cette manière, vous vivrez un voyage authentique au sein d’une communauté locale. En participant à la vie quotidienne de ses habitants, vous serez à même de saisir leurs valeurs.
 
 ## 3\. Défendez une cause qui vous tient à cœur
 
@@ -58,7 +58,7 @@ Cette phrase est tirée d’un ouvrage des plus éloquents de la littérature fr
 > 
 > Victor Hugo
 
-De nombreuses personnes sont touchées par les difficultés que peuvent rencontrer leurs semblables : maladie, inégalités, violences, pauvreté… Mais peu d’entre nous offrons notre temps, notre aide ou notre argent pour participer à un projet volontaire quel qu’il soit. Des organisations à but non lucratif ont besoin de petites mains tout au long de l’année pour aller aider sur place ou même près de chez vous, par exemple lors de collectes de fonds. C’est le cas de WWF, Médecins sans Frontière, la SPA, l’UNICEF qui a récemment créé une catégorie « jeunes ambassadeurs » encourageant les moins de 24 ans à s’impliquer dans la défense des droits de l’enfant. Vous pouvez aussi prendre part à des actions humanitaires dans le cadre de vos vacances (d’autant plus si vous manquez de temps pendant l’année !). Chez Odysway, nous vous proposons des voyages où vous pouvez devenir bénévole et apportez votre pierre à l’édifice afin de défendre une cause qui vous tient à cœur. Par exemple, vous pouvez vous [occuper d’animaux orphelins ou malades au Costa Rica](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=Blog&utm_medium=article&utm_campaign=8_resolutions). Vous vivrez un voyage qui a du sens tout en découvrant un pays magnifique !
+De nombreuses personnes sont touchées par les difficultés que peuvent rencontrer leurs semblables : maladie, inégalités, violences, pauvreté… Mais peu d’entre nous offrons notre temps, notre aide ou notre argent pour participer à un projet volontaire quel qu’il soit. Des organisations à but non lucratif ont besoin de petites mains tout au long de l’année pour aller aider sur place ou même près de chez vous, par exemple lors de collectes de fonds. C’est le cas de WWF, Médecins sans Frontière, la SPA, l’UNICEF qui a récemment créé une catégorie « jeunes ambassadeurs » encourageant les moins de 24 ans à s’impliquer dans la défense des droits de l’enfant. Vous pouvez aussi prendre part à des actions humanitaires dans le cadre de vos vacances (d’autant plus si vous manquez de temps pendant l’année !). Chez Odysway, nous vous proposons des voyages où vous pouvez devenir bénévole et apportez votre pierre à l’édifice afin de défendre une cause qui vous tient à cœur. Par exemple, vous pouvez vous occuper d’animaux orphelins ou malades au Costa Rica. Vous vivrez un voyage qui a du sens tout en découvrant un pays magnifique !
 
 ## 4\. Vadrouillez à travers le monde entier
 
@@ -74,7 +74,7 @@ Découvrir un nouveau pays est une manière plaisante d’apprendre et de s’en
 > 
 > Albert Al Gore
 
-Face au changement climatique, la plupart d’entre nous pensons que notre action individuelle est semblable à une goutte d’eau dans l’océan. Mais ces comportements individuels, combinés les uns aux autres, peuvent se transformer en océans. En France, chaque habitant produit environ 390 kg d’ordures ménagères par an. Des gestes simples permettraient de réduire d’au moins 85% la quantité de ces déchets : acheter en vrac, fabriquer soi-même ses produits d’entretien, utiliser des Tupperware plutôt que du papier aluminium, acheter des vêtements de seconde-main… Des livres sur le _zéro déchet_ sont très informatifs et pratiques. Ils vous proposent des alternatives peu coûteuses et surtout très efficaces pour instituer un mode de vie durable. En plus des emballages nocifs pour l’environnement, il existe des composants chimiques notamment dans les produits d’entretien et les soins corporels qui ne sont pas biodégradables ! Si certains produits de beauté sont néfastes pour la planète, imaginez leurs effets sur votre peau…  Nous vous invitons à lire [notre article sur les 5 gestes simples pour participer à la préservation des mers et océans.](https://odysway.com/mers-oceans-5-gestes-simples-participer-preservation) 
+Face au changement climatique, la plupart d’entre nous pensons que notre action individuelle est semblable à une goutte d’eau dans l’océan. Mais ces comportements individuels, combinés les uns aux autres, peuvent se transformer en océans. En France, chaque habitant produit environ 390 kg d’ordures ménagères par an. Des gestes simples permettraient de réduire d’au moins 85% la quantité de ces déchets : acheter en vrac, fabriquer soi-même ses produits d’entretien, utiliser des Tupperware plutôt que du papier aluminium, acheter des vêtements de seconde-main… Des livres sur le _zéro déchet_ sont très informatifs et pratiques. Ils vous proposent des alternatives peu coûteuses et surtout très efficaces pour instituer un mode de vie durable. En plus des emballages nocifs pour l’environnement, il existe des composants chimiques notamment dans les produits d’entretien et les soins corporels qui ne sont pas biodégradables ! Si certains produits de beauté sont néfastes pour la planète, imaginez leurs effets sur votre peau…  Nous vous invitons à lire notre article sur les 5 gestes simples pour participer à la préservation des mers et océans. 
 
 ## 6\. Prenez du temps pour vivre pleinement
 
@@ -90,7 +90,7 @@ Dans notre société actuelle, la consommation occupe une place prépondérante.
 > 
 > François Rabelais 
 
-Oui, le sport est un grand classique des listes de bonnes résolutions. Alors pourquoi le proposer ici ? La différence réside dans l’approche que l’on a avec l’activité sportive. De nombreuses personnes s’inscrivent dans une salle de sport, poussées par leur raison ou par la pression des autres. Faire du sport ne signifie pas courir sur un tapis pendant deux heures en vue d’éliminer ce que l’on a mangé la veille, mais pratiquer une activité qui nous permette de nous entretenir physiquement et de nous épanouir psychologiquement. Il s’agit de trouver un sport qui nous plaise, nous motive, nous passionne. Alors mettez de côté votre tapis de course ou votre rameur (sauf si vous êtes féru de ces machines !) et optez pour des sports plus « atypiques » : le [kung-fu](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=Blog&utm_medium=article&utm_campaign=8_resolutions), le parapente, la boxe… Avec Odysway, vous pouvez voyager et pratiquer un sport dans son pays d’origine avec des personnes hautement qualifiées. Si vous êtes fan de boxe thaï, [partez le pratiquer dans les forêts du nord de la Thaïlande](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=Blog&utm_medium=article&utm_campaign=8_resolutions) ! Peu importe le sport que vous choisissez : l’essentiel est de sentir son corps vivant !
+Oui, le sport est un grand classique des listes de bonnes résolutions. Alors pourquoi le proposer ici ? La différence réside dans l’approche que l’on a avec l’activité sportive. De nombreuses personnes s’inscrivent dans une salle de sport, poussées par leur raison ou par la pression des autres. Faire du sport ne signifie pas courir sur un tapis pendant deux heures en vue d’éliminer ce que l’on a mangé la veille, mais pratiquer une activité qui nous permette de nous entretenir physiquement et de nous épanouir psychologiquement. Il s’agit de trouver un sport qui nous plaise, nous motive, nous passionne. Alors mettez de côté votre tapis de course ou votre rameur (sauf si vous êtes féru de ces machines !) et optez pour des sports plus « atypiques » : le kung-fu, le parapente, la boxe… Avec Odysway, vous pouvez voyager et pratiquer un sport dans son pays d’origine avec des personnes hautement qualifiées. Si vous êtes fan de boxe thaï, partez le pratiquer dans les forêts du nord de la Thaïlande ! Peu importe le sport que vous choisissez : l’essentiel est de sentir son corps vivant !
 
 ## 8\. Partez à la découverte vous-même
 
@@ -100,5 +100,5 @@ Oui, le sport est un grand classique des listes de bonnes résolutions. Alors po
 
 Le voyage, souvent réalisé pendant les périodes de vacances, est généralement associé à la famille, aux amis : quoi de mieux que de profiter des siens sous le soleil californien ou sur les pistes alpines ! Pourtant, nous devrions aussi voyager seul, enfin pas tout à fait seul : en tête à tête avec nous-mêmes afin de se retrouver et apprendre à se connaître. Lorsque nous sommes entourés, nous ne prêtons plus tellement attention à notre voix intérieure, à notre intuition. Voyager, c’est apprendre à l’entendre à nouveau et surtout savoir l’écouter. Explorer, s’aventurer, découvrir, expérimenter, sont autant d’expériences qui vous permettront de grandir, d’avoir davantage confiance en vous, de réaliser à quel point vous êtes plus fort.e. que vous ne le pensiez. Cela ne veut pas obligatoirement dire partir à l’autre bout du monde pendant plusieurs mois : si vous préférez voyager un week-end ou quelques jours en France cela vous sera très bénéfique !
 
-Contrairement à leurs aînées, ces résolutions ne sont nullement contraignantes ; elles visent à augmenter votre bonheur et votre confiance en vous. Le voyage est cité à de nombreuses reprises car il permet à la fois de s’enrichir, de s’épanouir et de grandir ! [Odysway vous propose des voyages élaborés autour de plusieurs thématiques](https://odysway.com) : nul doute que certains d’entre eux vous permettront de réaliser certaines de vos résolutions 2020 !
+Contrairement à leurs aînées, ces résolutions ne sont nullement contraignantes ; elles visent à augmenter votre bonheur et votre confiance en vous. Le voyage est cité à de nombreuses reprises car il permet à la fois de s’enrichir, de s’épanouir et de grandir ! Odysway vous propose des voyages élaborés autour de plusieurs thématiques : nul doute que certains d’entre eux vous permettront de réaliser certaines de vos résolutions 2020 !
 ::

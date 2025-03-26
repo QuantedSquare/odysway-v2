@@ -1,14 +1,14 @@
 {
   "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
   "slug": "voyage-immersion-culturelle-japon",
-  "ISO": "JPN",
+  "iso": "JPN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersion-culturelle-japon/zvLsa1w8QCaf6WaWc3of",
+    "alt": "zvLsa1w8QCaf6WaWc3of"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersion-culturelle-japon/oGzYbLacQLWjxKzRy8nn.jpg",
+    "alt": "oGzYbLacQLWjxKzRy8nn"
   },
   "country": "Japon",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 3,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

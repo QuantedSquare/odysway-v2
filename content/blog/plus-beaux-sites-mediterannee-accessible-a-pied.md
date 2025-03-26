@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-02-10 12:59:00+00:00"
 tags: "Europe, France, Grands espaces"
 categories: "Nature et grands espaces"
-displayedImg: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
+displayedImg: "/images/blogs/Les-plus-beaux-sites-de-la-Mediterranee-accessibles-seulement-a-pied.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
+image-src: "/images/blogs/Les-plus-beaux-sites-de-la-Mediterranee-accessibles-seulement-a-pied.jpg"
 ---
 #publication-date
 10 février 2021
@@ -31,7 +31,7 @@ Les plus beaux sites de la Méditerranée accessibles seulement à pied
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
+image-src: "/images/blogs/Les-plus-beaux-sites-de-la-Mediterranee-accessibles-seulement-a-pied.jpg"
 ---
 #content
 **Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied.**
@@ -40,7 +40,8 @@ image-src: "https://cdn.buttercms.com/SC83IvNrSluqsLTeLkOQ?1612966484282"
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/Mp7KOVMITg2RlMMj0mYc
+image-src: "/images/blogs/Marseilleveyre.jpg.jpg"
+alt: Marseilleveyre.jpg
 ---
 ::  
 **
@@ -55,25 +56,27 @@ Ce qui caractérise **la calanque de Sugiton**, ce sont ces deux petites criques
 
 Enfin, **la calanque de l'Œil de Verre** se démarque des autres puisqu'il est interdit de s'y baigner. Toutefois, le chemin pour l'atteindre est tout bonnement sublime. Et une fois arrivé, vous serez subjugué par la beauté des falaises et le panorama qui se dévoile devant vous.
 
-De passage dans le coin, ne manquez pas de faire un saut dans la superbe région de la Camargue. Entre paysages naturels et traditions, Odysway vous propose [une immersion unique chez les gardians](https://odysway.com/voyages/gardian-camargue-cheval?utm_source=SEO&utm_medium=BlogPost&utm_campaign=Mediterannee_a_pied).
+De passage dans le coin, ne manquez pas de faire un saut dans la superbe région de la Camargue. Entre paysages naturels et traditions, Odysway vous propose une immersion unique chez les gardians.
 
 ## Les falaises Soubeyranes à Cassis
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/ApAP9G9oTcyw4bLMXqF0
+image-src: "/images/blogs/Soubeyranes.jpg.jpg"
+alt: Soubeyranes.jpg
 ---
 ::**
 
 Avec une alternance d'ocre et de calcaire blanc, **les falaises Soubeyranes** forment un magnifique tableau naturel coloré. Depuis les hauteurs, la vue sur la baie de Cassis est superbe. En empruntant un sentier situé à flanc de falaise, vous aurez le privilège de profiter de points de **vue époustouflants sur la Méditerranée**.
 
-Découvrez notre [thématique de voyage nature](https://odysway.com/thematiques/voyage-nature), Odysway vous emmène jusqu'à des lieux spectaculaires.
+Découvrez notre thématique de voyage nature, Odysway vous emmène jusqu'à des lieux spectaculaires.
 
 ## Le massif du Garlaban
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/59NiqqsiT4GzhN1pnuCu
+image-src: "/images/blogs/Garlaban.jpg.jpg"
+alt: Garlaban.jpg
 ---
 ::**
 
@@ -83,7 +86,8 @@ Surplombant la ville d'Aubagne, **le massif du Garlaban** fleure bon les essence
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/68a6CFZDRWW2hJucfdTq
+image-src: "/images/blogs/Girolata.jpg.jpg"
+alt: Girolata.jpg
 ---
 ::**
 
@@ -93,7 +97,8 @@ Adepte de tranquillité et de paysages remarquables ? Direction l'Ile de Beauté
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Vw8FhEheTTCT0cQr5rtr
+image-src: "/images/blogs/Canigou.jpg.jpg"
+alt: Canigou.jpg
 ---
 ::
 
@@ -101,7 +106,8 @@ Le pic du Canigou
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Ir1n9RAySgK4nMHaRV1I
+image-src: "/images/blogs/Abbaye-St-Martin-du-Canigou.jpg.jpg"
+alt: Abbaye St-Martin-du-Canigou.jpg
 ---
 ::
 
@@ -113,7 +119,8 @@ Haut lieu de la chaîne des Pyrénées, **le Canigou** est le rendez-vous incont
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/dXgtc5Re2Os4Wx8CuQiX
+image-src: "/images/blogs/Chapelle-Notre-Dame-du-Mai.jpeg.jpg"
+alt: Chapelle Notre-Dame du Mai.jpeg
 ---
 ::**
 
@@ -125,21 +132,23 @@ Les sentiers raides ne vous font pas peur ? Dans ce cas, faites cap vers **la ch
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/nGbpBa28TJSvyaBUaMgg
+image-src: "/images/blogs/Dormillouse.jpg.jpg"
+alt: Dormillouse.jpg
 ---
 ::**
 
-Au fin fond de la vallée de Freissinières, se niche l'unique hameau habité du Parc National des Ecrins. Bienvenue dans le joli **village de Dormillouse**. Perché à 1 800 m d'altitude, il n'est accessible qu'à pied depuis la route départementale qui passe par le village de Freissinières. Pour y accéder, comptez une heure de marche le long d'un sentier aménagé, lui-même ponctué de plusieurs hautes cascades. En arrivant, laissez-vous charmer par les petites maisons, le temple, les fours à pain, le moulin à eau, les ponts de bois ou encore par les cabanes destinées aux [bergers en transhumance](https://odysway.com/voyages/sejour-berger-bearn?utm_source=SEO&utm_medium=BlogPost&utm_campaign=Mediterannee_a_pied). Un havre de paix en plein cœur d'une nature riche et préservée. 
+Au fin fond de la vallée de Freissinières, se niche l'unique hameau habité du Parc National des Ecrins. Bienvenue dans le joli **village de Dormillouse**. Perché à 1 800 m d'altitude, il n'est accessible qu'à pied depuis la route départementale qui passe par le village de Freissinières. Pour y accéder, comptez une heure de marche le long d'un sentier aménagé, lui-même ponctué de plusieurs hautes cascades. En arrivant, laissez-vous charmer par les petites maisons, le temple, les fours à pain, le moulin à eau, les ponts de bois ou encore par les cabanes destinées aux bergers en transhumance. Un havre de paix en plein cœur d'une nature riche et préservée. 
 
 ### Les Concluses de Lussan
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/hPQI7JOhRMqbmgKUSxVy
+image-src: "/images/blogs/hPQI7JOhRMqbmgKUSxVy-1742840734723.jpg"
+alt: undefined
 ---
 ::
 
 Dans le département du Gard, aux abords de l'un des plus beaux villages de France – Lussan – de magnifiques gorges attirent les amoureux de paysages spectaculaires. **Accessibles seulement à pied par un chemin entouré de hautes falaises, les Concluses de Lussan** s'étendent sur 6 km où points de vue incroyables, arches de roches et cavités se succèdent dans un cadre sauvage.
 
-Pour poursuivre votre lecture, nous vous proposons de lire [notre article sur la région du Jura.](https://odysway.com/que-faire-dans-region-jura)
+Pour poursuivre votre lecture, nous vous proposons de lire notre article sur la région du Jura.
 ::

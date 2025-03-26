@@ -46,7 +46,8 @@ Odysway a sélectionné pour vous des destinations pour vous évader en toute qu
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/kdqq43McR62Zc8wo8xKg
+image-src: "/images/blogs/Partie-en-Ethiopie-en-automne.jpg"
+alt: Partie en Ethiopie en automne
 ---
 ::
 
@@ -54,7 +55,7 @@ image-src: https://cdn.buttercms.com/kdqq43McR62Zc8wo8xKg
 
 Les températures sont plus agréables, les animaux sont plus facilement observables et les fleurs sauvages apparaissent un peu partout ; un vrai régal pour les yeux dans ce pays aride !
 
-Nous vous proposons de [**découvrir la terre des premiers hommes en Éthiopie**](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_automne), et de partir à la rencontre des Surmas et autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo.
+Nous vous proposons de **découvrir la terre des premiers hommes en Éthiopie**, et de partir à la rencontre des Surmas et autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo.
 
 **Partez en automne** **en immersion,** à la rencontre de tribus millénaires, de leurs rites ancestraux, de leur quotidien intact depuis des siècles et qui vous attendent à bras ouverts !
 
@@ -62,7 +63,8 @@ Nous vous proposons de [**découvrir la terre des premiers hommes en Éthiopie**
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/6Fdqbn1QfOK47i4peihg
+image-src: "/images/blogs/Alpagas-dans-le-Finistere.jpg"
+alt: Alpagas dans le Finistère
 ---
 ::
 
@@ -70,7 +72,7 @@ Savez-vous que vous pouvez **partir en automne** dans le Finistère et vivre en 
 
 Faites connaissance avec l’alpaga, une créature fascinante. Cet animal réputé pour sa laine et dont le milieu naturel est la cordillère des Andes, est élevé aujourd’hui aux quatre coins du globe.
 
-C'est en Bretagne, dans le magnifique décor de la baie de Douarnenez dans le Finistère, que vous passerez [**un séjour immersif inoubliable entouré d’alpagas**](https://odysway.com/voyages/Immersion-Alpagas-Finistere?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_automne). Vous partagerez des moments privilégiés avec les éleveurs et leurs animaux à la personnalité si singulière et attachante.
+C'est en Bretagne, dans le magnifique décor de la baie de Douarnenez dans le Finistère, que vous passerez **un séjour immersif inoubliable entouré d’alpagas**. Vous partagerez des moments privilégiés avec les éleveurs et leurs animaux à la personnalité si singulière et attachante.
 
 Deux éleveurs passionnés vous ouvrent les portes de leur ferme pour un **séjour immersif** unique, où vous aurez l’opportunité de prendre soin des alpagas dans un cadre idyllique.
 
@@ -80,7 +82,8 @@ L'hébergement en roulotte fera de ce séjour un moment encore plus magique et i
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/c3J0HBh8TiyfAfSJ09CQ
+image-src: "/images/blogs/cap-vert-santiago.jpeg-2.jpg"
+alt: cap-vert-santiago.jpeg
 ---
 ::
 
@@ -88,7 +91,7 @@ image-src: https://cdn.buttercms.com/c3J0HBh8TiyfAfSJ09CQ
 
 Sur cette île réputée pour sa culture créole afro-portugaise, où les montagnes et les plaines cohabitent avec la mer dans un décor idyllique, existe une culture riche et pourtant peu connue, la **culture badiu**.
 
-Nous vous proposons de passer un [**séjour culturel en immersion au cœur de la culture badiu**](https://odysway.com/voyages/immersion-cap-vert?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_automne). Vous aurez l’opportunité de goûter à l’authenticité et à l'accueil inégalable des Capverdiens.
+Nous vous proposons de passer un **séjour culturel en immersion au cœur de la culture badiu**. Vous aurez l’opportunité de goûter à l’authenticité et à l'accueil inégalable des Capverdiens.
 
 Vous passerez également  du temps entre camponeses (cultivateurs) et pescadores (pêcheurs) et découvrirez un patrimoine culturel très peu connu du grand public.
 
@@ -98,7 +101,8 @@ Vous passerez également  du temps entre camponeses (cultivateurs) et pescadore
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xdFuasCrT1aoI91NTL2y
+image-src: "/images/blogs/Partir-en-automne-avec-Odysway.jpg"
+alt: Partir en automne avec Odysway
 ---
 ::
 
@@ -108,9 +112,9 @@ Il est donc temps de **profiter de l’automne**, de la douceur de l’arrière-
 
 Partez en toute liberté et en immersion au quatre coins du monde :
 
-*   vivez le véritable été indien en Arizona, [**à la découverte du grand canyon et de la vallée de la mort**](https://odysway.com/voyages/cow-boy-ranch-etats-unis?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_automne) ;
-*   [**initiez-vous à la photo animalière**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_automne) avec un pro et découvrez le Jura en automne ;
-*   partez à la rencontre de producteurs locaux et [**apprenez la survie douce en Ardèche**](https://odysway.com/voyages/randonnee-rencontre-producteur-locaux-ardeche?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_automne). 
+*   vivez le véritable été indien en Arizona, **à la découverte du grand canyon et de la vallée de la mort** ;
+*   **initiez-vous à la photo animalière** avec un pro et découvrez le Jura en automne ;
+*   partez à la rencontre de producteurs locaux et **apprenez la survie douce en Ardèche**. 
 
 L’automne n’a pas fini de vous surprendre avec nos voyages en immersion !
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-08-13 11:00:00+00:00"
 tags: "Europe, Famille, France, Grands espaces, Made in France, Sport, Transports insolites"
 categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
+displayedImg: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-premiere-partie.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
+image-src: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-premiere-partie.jpg"
 ---
 #publication-date
 13 août 2020
@@ -31,7 +31,7 @@ Découvrir la France au fil de la côte ouest - première partie
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
+image-src: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-premiere-partie.jpg"
 ---
 #content
 **Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.**
@@ -40,7 +40,8 @@ image-src: "https://cdn.buttercms.com/3LKFJHucQjqF3WAeolLd"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/F8vIrT6idcj4UCMldAla
+image-src: "/images/blogs/F8vIrT6idcj4UCMldAla-1742840849125.jpg"
+alt: undefined
 ---
 ::
 
@@ -58,7 +59,8 @@ Enfin, terminons notre tour de France de cette partie de la côte ouest par l'in
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/bzVToILoTPyUypkB6cqR
+image-src: "/images/blogs/bzVToILoTPyUypkB6cqR-1742840849647.jpg"
+alt: undefined
 ---
 ::
 
@@ -72,17 +74,18 @@ Tout à l'ouest de la France, **la côte regorge de trésors et de points de vue
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/95Fn8nDSJGAC4uhUxNwA
+image-src: "/images/blogs/95Fn8nDSJGAC4uhUxNwA-1742840850175.jpg"
+alt: undefined
 ---
 ::
 
-Parce que [le vélo](https://odysway.com/5-bienfaits-velo-voyage) est le moyen de transport idéal pour voyager à son rythme**, la Vélodyssée** vous permet de rejoindre Roscoff en Bretagne à Hendaye au Pays Basque. **Un itinéraire de 1 200 km pour découvrir tous les aspects de la côte ouest de la France** : paysages, histoire, culture, gastronomie etc. Et cela en toute sécurité puisque plus de 70 % des pistes sont éloignées des routes principales. A vos vélos !
+Parce que le vélo est le moyen de transport idéal pour voyager à son rythme**, la Vélodyssée** vous permet de rejoindre Roscoff en Bretagne à Hendaye au Pays Basque. **Un itinéraire de 1 200 km pour découvrir tous les aspects de la côte ouest de la France** : paysages, histoire, culture, gastronomie etc. Et cela en toute sécurité puisque plus de 70 % des pistes sont éloignées des routes principales. A vos vélos !
 
 A très vite pour la seconde partie, avec la côte des Pays-de-la-Loire, la Charente-Maritime, les Landes et le Pays Basque.
 
 ## Découvrez les voyages en immersion à la ferme
 
-Aller à la ferme est une façon insolite et intéressante de découvrir la vie quotidienne des agriculteurs et agriculteurs de notre région. Le [voyage en immersion dans une ferme](https://odysway.com/thematiques/sejour-a-la-ferme?utm_source=Blog&utm_medium=SEO&utm_campaign=decouvrir+france+partie+une)  est aussi l'occasion d'explorer différentes régions de France de manière écologiquement responsable.     
+Aller à la ferme est une façon insolite et intéressante de découvrir la vie quotidienne des agriculteurs et agriculteurs de notre région. Le voyage en immersion dans une ferme  est aussi l'occasion d'explorer différentes régions de France de manière écologiquement responsable.     
 
-Pour poursuivre votre lecture, nous vous invitons à découvrir [notre article sur la découverte de la France Partie 2](https://odysway.com/decouvrir-france-fil-cote-ouest-partie-2)
+Pour poursuivre votre lecture, nous vous invitons à découvrir notre article sur la découverte de la France Partie 2
 ::

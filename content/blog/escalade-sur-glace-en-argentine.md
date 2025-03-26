@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-03-11 15:31:00+00:00"
 tags: "Amerique du Sud, Argentine, Grands espaces, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
-displayedImg: "https://cdn.buttercms.com/ITufAeu6QZWrVuit9uAi?1612264743708"
+displayedImg: "/images/blogs/Escalade-sur-glace-en-Argentine.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/ITufAeu6QZWrVuit9uAi?1612264743708"
+image-src: "/images/blogs/Escalade-sur-glace-en-Argentine.jpg"
 ---
 #publication-date
 11 mars 2019
@@ -31,10 +31,10 @@ Escalade sur glace en Argentine
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/ITufAeu6QZWrVuit9uAi?1612264743708"
+image-src: "/images/blogs/Escalade-sur-glace-en-Argentine.jpg"
 ---
 #content
-Second plus grand pays d’[Amérique du Sud](https://odysway.com/destinations/amerique-du-sud), l’Argentine s’étire sur près de 3 700 km jusqu’à la Terre de Feu et sa ville mythique, Ushuaia. Au sud-ouest du pays, en Patagonie, à la frontière avec le Chili, le parc national Los Glaciares est probablement le parc plus emblématique du pays. La nature y est époustouflante de par ses glaciers qui attirent de nombreux visiteurs en quête de sensations fortes. L’un d’eux, le Viedma, est propice à une activité plutôt insolite : l’escalade sur glace. À vos crampons !
+Second plus grand pays d’Amérique du Sud, l’Argentine s’étire sur près de 3 700 km jusqu’à la Terre de Feu et sa ville mythique, Ushuaia. Au sud-ouest du pays, en Patagonie, à la frontière avec le Chili, le parc national Los Glaciares est probablement le parc plus emblématique du pays. La nature y est époustouflante de par ses glaciers qui attirent de nombreux visiteurs en quête de sensations fortes. L’un d’eux, le Viedma, est propice à une activité plutôt insolite : l’escalade sur glace. À vos crampons !
 
 ## Rendez-vous à El Chalten
 
@@ -42,7 +42,8 @@ Pour partir à l’assaut du glacier Viedma, rendez-vous dans la province de San
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xeIDs25ERqSmzeHWtbTq
+image-src: "/images/blogs/xeIDs25ERqSmzeHWtbTq-1742841148565.jpg"
+alt: 
 ---
 ::
 
@@ -54,7 +55,7 @@ D’une hauteur de 50 m et d’une largeur de 1 250 m, le Viedma est le plus gra
 
 Une fois arrivé au pied du glacier, vous serez briefé sur les consignes de sécurité et les rudiments de l’escalade sur glace : marcher avec des crampons, utiliser un piolet, apprendre à escalader et à descendre en rappel. Pour pratiquer cette activité, nul besoin d’être un expert en escalade mais vous devez être en bonne forme physique. Car vous vous en rendrez vite compte : l’escalade sur glace est une activité physique intense dont vous rentrerez fourbu. Désormais harnachés, vous voilà partis à l’ascension de parois vous permettant d’accéder à de fantastiques panoramas. Ici, plus qu’ailleurs, la nature force le respect. Vous n’avez plus qu’à profiter avant de redescendre.
 
-Pour poursuivre votre lecture, nous vous invitons à regarder notre article [sur la voile sur glace en Lituanie.](https://odysway.com/voile-sur-glace-en-lituanie?utm_source=article&utm_medium=blog&utm_campaign=escalade+sur+glace+)
+Pour poursuivre votre lecture, nous vous invitons à regarder notre article sur la voile sur glace en Lituanie.
 
 ## Et si je ne veux pas escalader ?
 
@@ -62,7 +63,8 @@ Pour ceux qui ne seraient pas tentés par l’escalade, il existe une autre alte
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/DfejwOkRkyALAinDEUyg
+image-src: "/images/blogs/DfejwOkRkyALAinDEUyg-1742841149107.jpg"
+alt: 
 ---
 ::
 
@@ -70,7 +72,7 @@ _Passage souterrain dans le glacier Viedma_
 
 Si vous êtes un visiteur soucieux de l’environnement qui vous entoure lorsque vous êtes en voyage, alors n’hésitez pas à nous contacter. Nous préconisons un tourisme responsable et durable et toutes nos activités sont organisées en ce sens.
 
-Découvrez nos derniers voyages aventures ajoutées en cliquant [ici](https://odysway.com/thematiques/voyage-aventure).
+Découvrez nos derniers voyages aventures ajoutées en cliquant ici.
 
 Vivez plus fort avec Odysway !
 ::

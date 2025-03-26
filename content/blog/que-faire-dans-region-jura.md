@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-06-11 11:54:00+00:00"
 tags: "France, Grands espaces"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1"
+displayedImg: "/images/blogs/Que-faire-dans-la-region-du-Jura.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1"
+image-src: "/images/blogs/Que-faire-dans-la-region-du-Jura.jpg"
 ---
 #publication-date
 11 juin 2020
@@ -31,7 +31,7 @@ Que faire dans la région du Jura?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/TNxew1EjTfyaUwqLYRO1"
+image-src: "/images/blogs/Que-faire-dans-la-region-du-Jura.jpg"
 ---
 #content
 **Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !**
@@ -48,7 +48,8 @@ Pour découvrir la région du Jura autrement, grimpez à bord du train touristiq
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/VxL7nIQSS6B0zk2foAuF
+image-src: "/images/blogs/VxL7nIQSS6B0zk2foAuF-1742840878940.jpg"
+alt: undefined
 ---
 ::
 
@@ -61,13 +62,14 @@ Au milieu de cette nature si belle se trouvent des **sites incroyables** dont ce
 *   **les** **pertes** **de** **l'Ain**, un site sauvage au cours d'eau tumultueux,
 *   sans oublier **le** **vignoble** **de** **la** **région** **du** **Jura** et son renommé vin jaune.
 
-[Découvrez des merveilles de la nature en voyageant avec Odysway.](https://odysway.com/thematiques/voyage-nature)
+Découvrez des merveilles de la nature en voyageant avec Odysway.
 
 ## Flâner des les villes et villages typiques de la région
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/vcoXgd5PT76OI854umC2
+image-src: "/images/blogs/vcoXgd5PT76OI854umC2-1742840879464.jpg"
+alt: undefined
 ---
 ::
 
@@ -85,7 +87,8 @@ Citons également les villes de **Saint-Claude**, fière de ses traditions comme
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ZZEbFUSmRug4BWiMXa98
+image-src: "/images/blogs/ZZEbFUSmRug4BWiMXa98-1742840879981.jpg"
+alt: undefined
 ---
 ::
 
@@ -95,7 +98,7 @@ Dans **la région du Jura**, l'eau est omniprésente. Les **2 100 km de rivière
 
 ## A votre tour de tomber sous le charme de la région du Jura grâce à Odysway
 
-Vous avez désormais comme une furieuse envie de partir dans le Jura ? **Odysway vous propose un séjour atypique pour découvrir la région du Jura autrement**.  Les animaux vous fascinent et vous aimeriez vous perfectionner dans l'art de la photographie animalière ? [Rejoignez un expert](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=Blog&utm_medium=SEO&utm_campaign=Region_Jura) dans le parc naturel du Haut-Jura pour des rencontres insolites et inoubliables.   
+Vous avez désormais comme une furieuse envie de partir dans le Jura ? **Odysway vous propose un séjour atypique pour découvrir la région du Jura autrement**.  Les animaux vous fascinent et vous aimeriez vous perfectionner dans l'art de la photographie animalière ? Rejoignez un expert dans le parc naturel du Haut-Jura pour des rencontres insolites et inoubliables.   
 
-Afin de poursuivre votre lecture, découvrez [notre article sur les 5 raisons de partir à la montagne en été.](https://odysway.com/5-raisons-partir-vacances-montagne-ete)
+Afin de poursuivre votre lecture, découvrez notre article sur les 5 raisons de partir à la montagne en été.
 ::

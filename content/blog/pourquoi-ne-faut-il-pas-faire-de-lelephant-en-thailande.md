@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-01-15 10:00:00+00:00"
 tags: "Animaux, Asie, Thailande"
 categories: "Apprentissage, Culture et decouverte, Benefices locaux"
-displayedImg: "https://cdn.buttercms.com/exy4r7dpRfqBdYNMYuug?1612266403036"
+displayedImg: "/images/blogs/Pourquoi-ne-faut-il-pas-faire-de-l'elephant-en-Thailande.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/exy4r7dpRfqBdYNMYuug?1612266403036"
+image-src: "/images/blogs/Pourquoi-ne-faut-il-pas-faire-de-l'elephant-en-Thailande.jpg"
 ---
 #publication-date
 15 janvier 2019
@@ -31,7 +31,7 @@ Pourquoi ne faut-il pas faire de l'éléphant en Thaïlande ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/exy4r7dpRfqBdYNMYuug?1612266403036"
+image-src: "/images/blogs/Pourquoi-ne-faut-il-pas-faire-de-l'elephant-en-Thailande.jpg"
 ---
 #content
 Dans toute destination touristique, il y a toujours une attraction phare qui caractérise le pays. Monuments historiques, sites culturels ou nature exceptionnelle, ces centres d’intérêts attirent la curiosité des voyageurs. Tel est le cas en Thaïlande où la balade à dos d’éléphant est l’une de ces attractions majeures du pays. En réalité, nous sommes loin de l’image insolite qu’elle peut renvoyer. Entre maltraitance et business lucratif, voici pourquoi il ne faut pas faire de l’éléphant en Thaïlande.
@@ -40,7 +40,8 @@ Dans toute destination touristique, il y a toujours une attraction phare qui car
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/76iJhzQlSFKdN5rIXx9C
+image-src: "/images/blogs/76iJhzQlSFKdN5rIXx9C-1742842087191.jpg"
+alt: 
 ---
 ::  
 
@@ -56,7 +57,8 @@ Malgré cette position glorieuse, cela n’a pas empêché son exploitation lors
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/guVqStJTNa8EsZLJcU98
+image-src: "/images/blogs/guVqStJTNa8EsZLJcU98-1742842087751.jpg"
+alt: 
 ---
 ::_
 
@@ -70,7 +72,8 @@ La domestication de **l’éléphant en Thaïlande** passe par un rituel bien 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/2mgraeMEQ1WcXcsltdEr
+image-src: "/images/blogs/2mgraeMEQ1WcXcsltdEr-1742842088272.jpg"
+alt: 
 ---
 ::
 
@@ -88,7 +91,8 @@ Par ailleurs, n’oublions pas que l’éléphant reste un animal sauvage. Il a 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OHUHawk3RACsKlB8t5t1
+image-src: "/images/blogs/OHUHawk3RACsKlB8t5t1-1742842088790.jpg"
+alt: 
 ---
 ::
 
@@ -104,15 +108,16 @@ Dans un tout autre esprit, Odysway vous propose son expérience au Sri Lanka. Da
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/zkO7AGOTuqGWXQYoHAFp
+image-src: "/images/blogs/zkO7AGOTuqGWXQYoHAFp-1742842089304.jpg"
+alt: 
 ---
 ::_
 
 _Un éléphant dans la forêt de Kanchanaburi_
 
-Une autre façon de voir un **éléphant en Thaïlande**, c’est d’aller à sa rencontre directement dans son milieu naturel. Il existe de nombreux parcs nationaux en Thaïlande où les éléphants évoluent en totale liberté. Comme par exemple au [Parc National de Kui Buri](https://www.thainationalparks.com/kui-buri-national-park/guided-tours/kui-buri-wildlife-safari) dans la province de Prachuap Khiri Khan. Ce type de visite ne se fait pas seul bien évidemment, pour des questions de sécurité évidentes. Rappelons qu’un éléphant est un animal sauvage et qu’une mère protégera son petit coûte que coûte. C’est pourquoi vous êtes accompagné par un ranger. Par son expérience, il sait où se rassemblent les éléphants et vous mènera au plus près dans des conditions de sécurité optimum. Et pour profiter de ce spectacle magique, n’oubliez pas vos jumelles !
+Une autre façon de voir un **éléphant en Thaïlande**, c’est d’aller à sa rencontre directement dans son milieu naturel. Il existe de nombreux parcs nationaux en Thaïlande où les éléphants évoluent en totale liberté. Comme par exemple au Parc National de Kui Buri dans la province de Prachuap Khiri Khan. Ce type de visite ne se fait pas seul bien évidemment, pour des questions de sécurité évidentes. Rappelons qu’un éléphant est un animal sauvage et qu’une mère protégera son petit coûte que coûte. C’est pourquoi vous êtes accompagné par un ranger. Par son expérience, il sait où se rassemblent les éléphants et vous mènera au plus près dans des conditions de sécurité optimum. Et pour profiter de ce spectacle magique, n’oubliez pas vos jumelles !
 
-Pour découvrir nos voyages axés sur la thématique "Animaux", [cliquez ici.](https://odysway.com/thematiques/voyage-animalier)
+Pour découvrir nos voyages axés sur la thématique "Animaux", cliquez ici.
 
 ## Contribuez à la sauvegarde des éléphants dans les sanctuaires
 
@@ -120,9 +125,10 @@ Les éléphants sont torturés pour les touristes en Thaïlande. Notre vision du
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/rtVOFZqWQNawQyi1vwjD
+image-src: "/images/blogs/rtVOFZqWQNawQyi1vwjD-1742842089907.jpg"
+alt: 
 ---
 ::
 
-Poursuivez votre lecture avec [notre article de blog dédié à la Thaïlande.](https://odysway.com/la-thailande-le-pays-du-sourire)
+Poursuivez votre lecture avec notre article de blog dédié à la Thaïlande.
 ::

@@ -1,14 +1,14 @@
 {
   "title": "Vivez comme un nomade du Sahara au Maroc",
   "slug": "immersion-nomade-sahara",
-  "ISO": "MA",
+  "iso": "MA",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw",
+    "alt": "FoAChDQkiV0VboB2jyRw"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/immersion-nomade-sahara/2GBrM6vXQ2fAAYspPLaA.jpg",
+    "alt": "2GBrM6vXQ2fAAYspPLaA"
   },
   "country": "Maroc",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": true,
+      "promoLastMinute": 80,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 200
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": false,
+      "promoLastMinute": 80,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 200
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": false,
+      "promoLastMinute": 80,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 200
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": false,
+      "promoLastMinute": 80,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 200
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 80,
       "lastMinute": false,
+      "promoLastMinute": 80,
       "promo": 125,
       "privatized": false,
       "flyTicketPrice": 200

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-04-17 13:07:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/tHEfnbwiTtC11DaEb6z8"
+displayedImg: "/images/blogs/Le-Perou-un-territoire-mythique-et-mystique.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/tHEfnbwiTtC11DaEb6z8"
+image-src: "/images/blogs/Le-Perou-un-territoire-mythique-et-mystique.jpg"
 ---
 #publication-date
 17 avril 2020
@@ -31,7 +31,7 @@ Berceau de civilisations légendaires, des paysages à couper le souffle, une po
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/tHEfnbwiTtC11DaEb6z8"
+image-src: "/images/blogs/Le-Perou-un-territoire-mythique-et-mystique.jpg"
 ---
 #content
 # Voyager au Pérou
@@ -40,7 +40,8 @@ Berceau de civilisations légendaires, des paysages à couper le souffle, une po
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/5U4T1yoeR6JMxvRAlUZw
+image-src: "/images/blogs/1e863c3bb9-108100-machu-picchu-histoi....jpg"
+alt: 1e863c3bb9-108100-machu-picchu-histoi...
 ---
 ::
 
@@ -70,11 +71,12 @@ Il existe deux saisons au Pérou : la **saison** **sèche** qui correspond à
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/S9FgMteERziwfHKWALwK
+image-src: "/images/blogs/S9FgMteERziwfHKWALwK-1742840932992.jpg"
+alt: undefined
 ---
 ::
 
-Infographie Climat – [Partir.com](https://www.partir.com/) ©
+Infographie Climat – Partir.com ©
 
 ## Qu’emporter dans vos bagages ?
 
@@ -116,7 +118,8 @@ Capitale dynamique du Pérou, **Lima** est une ville coloniale où les traces 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/MH2LTThfTJSqc10q7Gu8
+image-src: "/images/blogs/MH2LTThfTJSqc10q7Gu8-1742840933512.jpg"
+alt: undefined
 ---
 ::
 
@@ -128,7 +131,7 @@ Comment ne pas mentionner le célèbre **Machu** **Picchu** ? C’est le site
 
 Lieu ancestral, **la vallée** **sacrée** est le berceau de la civilisation des Incas. Vous y trouverez des ruines, d’anciens postes militaires ainsi que des villages vivant de la fabrication de tissus et de la terre. Parmi les ruines, ne manquez pas celles de **Pisaq, d’Urubamba et d’Ollantaytambo**. La Vallée sacrée se prête également à différentes activités sportives comme la randonnée, le trek et le rafting.
 
-Profitez de votre présence dans cette vallée mythique pour tester les **voyages** **Odysway** qui vous feront découvrir le Pérou autrement : [Voyager avec un chamane](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article&utm_medium=blog&utm_campaign=perou+territoire+mythique) 
+Profitez de votre présence dans cette vallée mythique pour tester les **voyages** **Odysway** qui vous feront découvrir le Pérou autrement : Voyager avec un chamane 
 
 ### Cuzco
 
@@ -136,7 +139,8 @@ Profitez de votre présence dans cette vallée mythique pour tester les **voyag
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/QUE03AgyQa2SnbuKE6OH
+image-src: "/images/blogs/cuzco-3-1024x683.jpg.jpg"
+alt: cuzco-3-1024x683.jpg
 ---
 ::
 
@@ -154,7 +158,8 @@ En plein milieu désert, à 2 300 m d’altitude, **Arequipa** est la deuxièm
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/141nGTouTEG9seNCg4ca
+image-src: "/images/blogs/141nGTouTEG9seNCg4ca-1742840934555.jpg"
+alt: undefined
 ---
 ::
 
@@ -188,7 +193,8 @@ Voici une autre merveille de la nature. Dans la cordillère des Andes, **la mon
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/WXoNxQMPRc2QDYQFTvmQ
+image-src: "/images/blogs/WXoNxQMPRc2QDYQFTvmQ-1742840935071.jpg"
+alt: undefined
 ---
 ::
 ::

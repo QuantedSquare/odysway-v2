@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-09-22 08:16:00+00:00"
 tags: "Europe, Irlande, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
-displayedImg: "https://cdn.buttercms.com/A6V2USjRNah4qmPoIdXr"
+displayedImg: "/images/blogs/Roulez-a-velo-sur-les-falaises-de-Moher-en-Irlande.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/A6V2USjRNah4qmPoIdXr"
+image-src: "/images/blogs/Roulez-a-velo-sur-les-falaises-de-Moher-en-Irlande.jpg"
 ---
 #publication-date
 22 septembre 2018
@@ -31,12 +31,12 @@ Roulez à vélo sur les falaises de Moher en Irlande
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/A6V2USjRNah4qmPoIdXr"
+image-src: "/images/blogs/Roulez-a-velo-sur-les-falaises-de-Moher-en-Irlande.jpg"
 ---
 #content
 Au sud de Galway dans le comté de Clare en Irlande, se trouve un site grandiose : les **falaises de Moher**. Étape incontournable de tout **séjour en Irlande**, elles s’imposent dans le paysage et forcent le respect. Hautes de 214 m, elles sont balayées par les vents avec en fond sonore le bruit incessant des vagues qui se brisent sur la roche. Si pour vous le vertige ne fait pas partie de votre vocabulaire, enfourchez votre **vélo** et longez les sentiers bordant les falaises qui tombent à pic dans l’océan…
 
-Après votre lecture, nous vous invitons à lire notre article [sur les 10 paysages incontournables à voir en Irlande.](https://odysway.com/10-paysages-incontournables-a-voir-irlande)
+Après votre lecture, nous vous invitons à lire notre article sur les 10 paysages incontournables à voir en Irlande.
 
 ## Le vélo, un bon moyen pour découvrir l’Irlande
 
@@ -52,5 +52,5 @@ Brutes et abruptes, les **falaises de Moher** ont été façonnées par la nat
 
 Bien que la majorité des visiteurs parcourent les falaises de Moher à pied, il vous est tout à fait possible de les arpenter avec votre **vélo.** Mais attention, la force des vents est parfois telle qu’il convient de bien évaluer votre capacité à maintenir votre équilibre. Sans oublier ces pierres qui font souvent obstacle, faire du vélo sur les falaises de Moher n’est pas à envisager sans une extrême prudence. Néanmoins, cette **expérience insolite** vous laissera des souvenirs intarissables et vous fera ressentir des sensations extrêmes. Et c’est ce que nous voulons vous faire vivre chez **Odysway** : des moments intenses dans des décors somptueux. 
 
-Envie de découverte et exploration en pleine nature? Découvrez [nos voyages sur la thématique "voyage nature"](https://odysway.com/thematiques/voyage-nature) et libérez l'aventurier qui est en vous !
+Envie de découverte et exploration en pleine nature? Découvrez nos voyages sur la thématique "voyage nature" et libérez l'aventurier qui est en vous !
 ::

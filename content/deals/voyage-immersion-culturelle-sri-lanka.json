@@ -1,14 +1,14 @@
 {
   "title": "Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune",
   "slug": "voyage-immersion-culturelle-sri-lanka",
-  "ISO": "LK",
+  "iso": "LK",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/cDq6o9JTQQeVeA71lxll",
+    "alt": "cDq6o9JTQQeVeA71lxll"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/NYrKgeVRRqCaYycsWcMD.jpg",
+    "alt": "NYrKgeVRRqCaYycsWcMD"
   },
   "country": "Sri Lanka",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 8,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -44,8 +44,8 @@
       "bookedPlaces": 8,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -59,8 +59,8 @@
       "bookedPlaces": 8,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -74,8 +74,8 @@
       "bookedPlaces": 8,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000

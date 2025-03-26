@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-04-17 14:01:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904"
+displayedImg: "/images/blogs/L'Ethiopie-berceau-de-l'humanite.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904"
+image-src: "/images/blogs/L'Ethiopie-berceau-de-l'humanite.jpg"
 ---
 #publication-date
 17 avril 2020
@@ -31,7 +31,7 @@ L'Ethiopie, berceau de l'humanité
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/MTQfMRnOQTKViDZAuKzZ?1613729942904"
+image-src: "/images/blogs/L'Ethiopie-berceau-de-l'humanite.jpg"
 ---
 #content
 ## Pourquoi partir en voyage en Éthiopie ?
@@ -48,7 +48,8 @@ Encore épargnée par le tourisme de masse, l’Éthiopie est toutefois en plein
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Ujd7JwQBRiGDzpdEFLOh
+image-src: "/images/blogs/voyage-en-ethiopie.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
@@ -62,9 +63,9 @@ Bien sûr, l’Éthiopie reste un pays pauvre, où les touristes, surtout blancs
 *   Quand vous sortez, munissez-vous d’une photocopie de votre passeport plutôt que l’original.
 *   Mettez vos effets personnels dans une banane sous la ceinture plutôt que dans un sac à main pour éviter les pickpockets et les vols à l’arraché qui peuvent être fréquents dans la capitale.
 
-Entreprendre un voyage en Éthiopie n’est donc pas particulièrement dangereux. Néanmoins, il y a des zones à éviter. En particulier les zones frontalières, où le climat est particulièrement tendu, ainsi que la région du Sud-est, à cause de tensions entre les communautés locales. Mais les principales zones touristiques, comme la vallée de l’Omo et les hauts plateaux ne sont pas concernées par ces restrictions. Vous pourrez donc voyager sereins, et profiter pleinement de ce magnifique pays. Si vous souhaitez en savoir plus sur des tribus très isolés, [nous vous conseillons cet article.](https://odysway.com/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde)
+Entreprendre un voyage en Éthiopie n’est donc pas particulièrement dangereux. Néanmoins, il y a des zones à éviter. En particulier les zones frontalières, où le climat est particulièrement tendu, ainsi que la région du Sud-est, à cause de tensions entre les communautés locales. Mais les principales zones touristiques, comme la vallée de l’Omo et les hauts plateaux ne sont pas concernées par ces restrictions. Vous pourrez donc voyager sereins, et profiter pleinement de ce magnifique pays. Si vous souhaitez en savoir plus sur des tribus très isolés, nous vous conseillons cet article.
 
-Pour plus d’informations sur la sécurité en Éthiopie, lisez [les recommandations du gouvernement français](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/ethiopie/).
+Pour plus d’informations sur la sécurité en Éthiopie, lisez les recommandations du gouvernement français.
 
 ## Quels vaccins sont nécessaires lors d’un voyage en Éthiopie ?
 
@@ -76,13 +77,14 @@ En ce qui concerne le paludisme, tout dépend où vous comptez aller lors de vot
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/2wW0yed0RQCMOMPmTyTx
+image-src: "/images/blogs/voyage-en-ethiopie-1.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
 _La chasse aux tampons sur les passeports !_
 
-L’obtention d’un visa est obligatoire pour voyager en Éthiopie. La procédure est toutefois simplifiée par la possibilité de faire un e-visa sur le [site du gouvernement éthiopien](https://www.evisa.gov.et/#/home). Le prix du visa pour l’Éthiopie est de $52 pour 30 jours, et de $72 pour 90 jours.
+L’obtention d’un visa est obligatoire pour voyager en Éthiopie. La procédure est toutefois simplifiée par la possibilité de faire un e-visa sur le site du gouvernement éthiopien. Le prix du visa pour l’Éthiopie est de $52 pour 30 jours, et de $72 pour 90 jours.
 
 Récemment, la procédure a changé et il est désormais possible d’obtenir un visa à l’arrivée sur le territoire éthiopien, à l’aéroport d’Addis-Abeba. Attention : si vous vous rendez en Éthiopie depuis une frontière terrestre, il vous faudra faire la demande de visa en ligne au préalable. Le visa sur place n’est disponible qu’à l’aéroport.
 
@@ -90,11 +92,12 @@ Récemment, la procédure a changé et il est désormais possible d’obtenir un
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/yaBdolPT1S953ro7XB7m
+image-src: "/images/blogs/voyage-en-ethiopie-2.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
-_La meilleure période pour voyager ©[Partir.com](https://www.partir.com/)_
+_La meilleure période pour voyager ©Partir.com_
 
 Il existe deux climats distincts en Éthiopie. Un climat très doux dans la capitale et sur les hauts plateaux où il fait entre 20 et 25° toute l’année, et un climat aride dans les régions désertiques du Sud-est du pays, où les températures peuvent avoisiner les 50° !! Heureusement, les principaux lieux touristiques comme les hauts plateaux et la vallée du Grand Rift se situent en altitude et vous n’aurez pas à subir de telles chaleurs.
 
@@ -107,7 +110,7 @@ La meilleure période pour entreprendre un voyage en Éthiopie est donc d’octo
 Faire son sac à dos avant de partir en voyage dans un pays inconnu est toujours une source de stress. Il faut à la fois savoir garder un sac léger pour ne pas s’encombrer outre mesure, mais ne rien oublier car on ne pourra pas forcément acheter ce dont on a besoin sur place. Pour vous aider dans votre démarche, voici une petite liste de choses à mettre dans votre sac avant de partir en Éthiopie :
 
 *   **Du papier toilette**. Et oui ! Si on a l’habitude des WC d’hôtels et de restaurants propres et bien fournis, ça ne sera pas forcément le cas dans certains pays d’Afrique. Pensez à prendre au moins un rouleau pour éviter de pénibles pénuries !
-*   **Des vêtements chauds.** Le froid n’est pas la première chose à laquelle on pense avant de partir en Afrique. Mais en Éthiopie, les températures peuvent rapidement chuter le soir et en matinée sur les haut plateaux, ainsi que dans la capitale. Il peut facilement faire 7 ou 8 degrés au lever du soleil, prévoyez donc une polaire ainsi qu’un manteau léger. Nous conseillons particulièrement une doudoune ultralégère, qui ne prend pas beaucoup de place dans le sac ([comme la doudoune Uniqlo](https://www.uniqlo.com/fr/fr/pages/down-guide/?gender=men&warmth=warm)).
+*   **Des vêtements chauds.** Le froid n’est pas la première chose à laquelle on pense avant de partir en Afrique. Mais en Éthiopie, les températures peuvent rapidement chuter le soir et en matinée sur les haut plateaux, ainsi que dans la capitale. Il peut facilement faire 7 ou 8 degrés au lever du soleil, prévoyez donc une polaire ainsi qu’un manteau léger. Nous conseillons particulièrement une doudoune ultralégère, qui ne prend pas beaucoup de place dans le sac (comme la doudoune Uniqlo).
 *   **Une lampe frontale.** Les coupures de courant sont fréquentes en Éthiopie, prévoyez donc une petite lampe frontale pour épargner vos tibias des tables basses !
 *   **Pas besoin d’adaptateur.** Rien de pire que de commencer un voyage en allant acheter un adaptateur électrique à 50€ ! Heureusement, les prises éthiopiennes sont les mêmes que celles utilisées en France !
 
@@ -115,7 +118,8 @@ Faire son sac à dos avant de partir en voyage dans un pays inconnu est toujours
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/x6hpu1CuSIi65XO8t474
+image-src: "/images/blogs/voyage-en-ethiopie-3.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
@@ -125,7 +129,7 @@ Il est important de savoir que l’état des routes est assez mauvais en Éthiop
 
 ### L’Éthiopie par voie aérienne
 
-La compagnie [Ethiopian Airlines](https://www.ethiopianairlines.com/FR/FR) propose des tarifs avantageux pour les vols internes. Toutes les villes majeures de l’historique route du Nord, comme Baher-Dar, Gondar, Lalibela et Axum sont très bien desservies et vous pouvez prendre l’avion entre chacune d’elles sans avoir besoin de retourner à Addis-Abeba. A titre d’information, un billet d’avion depuis Addis-Abeba jusqu’à Gondar coûte environ 130€ puis comptez 60€ pour l’avion Lalibela-Gondar. C’est plus cher que le bus, mais vous gagnez deux jours de voyage !
+La compagnie Ethiopian Airlines propose des tarifs avantageux pour les vols internes. Toutes les villes majeures de l’historique route du Nord, comme Baher-Dar, Gondar, Lalibela et Axum sont très bien desservies et vous pouvez prendre l’avion entre chacune d’elles sans avoir besoin de retourner à Addis-Abeba. A titre d’information, un billet d’avion depuis Addis-Abeba jusqu’à Gondar coûte environ 130€ puis comptez 60€ pour l’avion Lalibela-Gondar. C’est plus cher que le bus, mais vous gagnez deux jours de voyage !
 
 ### L’Éthiopie en bus
 
@@ -172,7 +176,8 @@ L’Éthiopie regorge de paysages et de lieux culturels uniques au monde. Voici 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/6rSgClaSoCiVUnq9BFHg
+image-src: "/images/blogs/voyage-en-ethiopie-4.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
@@ -186,7 +191,8 @@ La légende raconte que le roi Lalibela avait terminé la construction des dix p
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/u1IlIcvoSAmUJgvGWLQK
+image-src: "/images/blogs/voyage-en-ethiopie-5.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
@@ -200,7 +206,8 @@ Prenez vos quartiers dans le village de Debarq, en bordure du parc. Laissez vos 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Pmb8LxrCRymIFYvxdNhP
+image-src: "/images/blogs/voyage-en-ethiopie-6.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
@@ -214,7 +221,8 @@ Taillée à même la paroi montagneuse, cette église a été ainsi bâtie pour 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/42GLKuzrQDG0SVKFrOzf
+image-src: "/images/blogs/voyage-en-ethiopie-7.jpg"
+alt: voyage en éthiopie
 ---
 ::
 
@@ -226,5 +234,5 @@ Plus de 200.000 personnes vivent dans cette vallée, et sont répartis entre plu
 
 ## Séjours chez l'habitant : une immersion totale
 
-Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
+Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les voyages chez l’habitant.
 ::

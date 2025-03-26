@@ -12,12 +12,12 @@ published: false
 publishedAt: "2022-11-15 14:53:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/BxjQtmMBQYy3bgAzy8lt"
+displayedImg: "/images/blogs/Road-trip-en-famille-dans-le-Tessin-suisse.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/BxjQtmMBQYy3bgAzy8lt"
+image-src: "/images/blogs/Road-trip-en-famille-dans-le-Tessin-suisse.jpg"
 ---
 #publication-date
 15 novembre 2022
@@ -31,14 +31,15 @@ Road trip en famille dans le Tessin suisse
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/BxjQtmMBQYy3bgAzy8lt"
+image-src: "/images/blogs/Road-trip-en-famille-dans-le-Tessin-suisse.jpg"
 ---
 #content
 Situé aux confins de la Suisse et de l'Italie, le canton du Tessin est une région d'une beauté sans pareille qui vous invite à des voyages en voiture enchanteurs. Avec ses imposants cols alpins offrant des panoramas évocateurs, cette destination est un véritable paradis pour les amateurs de road trip en famille. Dans cet article, nous vous présenterons des endroits où faire des arrêts et prendre des détours surprenants pour le plaisir de vos enfants. De plus, nous vous fournirons des conseils précieux pour vous assurer un trajet fluide, sans stress et en toute sécurité. Si vous avez opté pour un voyage en voiture, nos recommandations vous aideront à partir et à revenir avec sérénité, sans surprises inattendues.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/4hzrct7CTTu85reaECWu
+image-src: "/images/blogs/4hzrct7CTTu85reaECWu-1742840654939.jpg"
+alt: undefined
 ---
 ::
 
@@ -54,7 +55,8 @@ L'univers magique d'Harry Potter, niché au cœur de la nature montagneuse, Cios
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/NgFNYCGcSuqgGSS7CHoM
+image-src: "/images/blogs/NgFNYCGcSuqgGSS7CHoM-1742840655462.jpg"
+alt: undefined
 ---
 ::
 
@@ -100,11 +102,12 @@ Lorsque vous prévoyez de partir en Suisse en voiture avec votre famille, il est
 
 5\. Documents de voyage supplémentaires : Il peut être judicieux d'emporter d'autres documents tels que des réservations d'hôtel, des confirmations des itinéraires de voyage, au cas où vous auriez besoin de les présenter lors des contrôles aux frontières.
 
-6\. En Suisse, les autoroutes ne sont pas gratuites. Il est obligatoire d'acheter une vignette autoroutière annuelle pour circuler sur les autoroutes et les voies rapides. Vous pouvez l'acheter dans les bureaux de poste et les points de passage frontaliers. Cependant, pour une option plus pratique et rapide, vous pouvez également acheter la vignette sur le site Internet de [Vignetteswitzerland.com](https://vignetteswitzerland.com/fr/vignette-suisse/). Vignetteswitzerland.com est le site Internet officiel pour l'achat de votre vignette suisse. Cela vous permettra d'éviter les files d'attente aux stations-service et d'obtenir votre vignette en quelques clics.
+6\. En Suisse, les autoroutes ne sont pas gratuites. Il est obligatoire d'acheter une vignette autoroutière annuelle pour circuler sur les autoroutes et les voies rapides. Vous pouvez l'acheter dans les bureaux de poste et les points de passage frontaliers. Cependant, pour une option plus pratique et rapide, vous pouvez également acheter la vignette sur le site Internet de Vignetteswitzerland.com. Vignetteswitzerland.com est le site Internet officiel pour l'achat de votre vignette suisse. Cela vous permettra d'éviter les files d'attente aux stations-service et d'obtenir votre vignette en quelques clics.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Xj0wxQaFQmKlwRNz8k9w
+image-src: "/images/blogs/Xj0wxQaFQmKlwRNz8k9w-1742840655992.jpg"
+alt: undefined
 ---
 ::
 
@@ -124,5 +127,5 @@ Lorsqu'il s'agit de voyager, une planification minutieuse est essentielle pour g
 
 ## **Découvrez les séjours en immersion d'Odysway**
 
-Si vous voulez vivre un voyage immersif, que ce soit sur quelques jours ou sur plus longtemps, en solo ou à plusieurs, découvrez nos différents voyages : [https://odysway.com/destinations.](https://odysway.com/destinations)
+Si vous voulez vivre un voyage immersif, que ce soit sur quelques jours ou sur plus longtemps, en solo ou à plusieurs, découvrez nos différents voyages : https://odysway.com/destinations.
 ::

@@ -48,7 +48,8 @@ Suivez-nous, on vous guide !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/G3XDy3vaR5SGwdRhg5Wu
+image-src: "/images/blogs/Partir-en-ete-en-Finlande.jpg"
+alt: Partir en été en Finlande
 ---
 ::
 
@@ -56,7 +57,7 @@ Faites-vous partie de celles et ceux qui rêvent de déconnecter totalement dura
 
 Savez-vous que la Finlande jouit d’un climat extrêmement agréable durant les mois d’été ?  **Partir en été** dans ce pays magnifique, loin des plages bondées est une vraie opportunité pour faire un break bien mérité !
 
-En Finlande, vous pourrez [**vous reconnecter à vous-même et à la nature**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) durant un voyage aventure éco-responsable au cœur de la forêt finlandaise.
+En Finlande, vous pourrez **vous reconnecter à vous-même et à la nature** durant un voyage aventure éco-responsable au cœur de la forêt finlandaise.
 
 Vous partirez en expédition de plusieurs jours en canoë, en totale autonomie, à la découverte des merveilles alentour et bivouaquerez sous le ciel finlandais.
 
@@ -68,13 +69,14 @@ De retour au camp de base, profitez de la fin de votre séjour en vous relaxant 
 
 ## ::image-container
 ---
-image-src: https://cdn.buttercms.com/N1wp37n7SnCkgWfa17OF
+image-src: "/images/blogs/Sejour-Astronomie-Sud-Ouest.jpg"
+alt: Séjour Astronomie Sud-Ouest
 ---
 ::
 
 S'éloigner de la ville et de son brouhaha pour vivre une expérience **en immersion** au sein d’un observatoire astronomique en plein cœur des Alpes, ça vous tente ?
 
-Si vous voulez **partir en été** et vous retrouver dans un environnement calme et hors du temps, ce **séjour astronomie** vous offre la possibilité de [**partager le quotidien d’astronomes et d'astrophysiciens**](https://odysway.com/voyages/immersion-observatoire-astronomique?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete).
+Si vous voulez **partir en été** et vous retrouver dans un environnement calme et hors du temps, ce **séjour astronomie** vous offre la possibilité de **partager le quotidien d’astronomes et d'astrophysiciens**.
 
 Vous discuterez avec eux de sujets passionnants autour d’un bon repas, et pourrez également mener vos propres expériences scientifiques.
 
@@ -90,7 +92,8 @@ Vous aurez donc la mission d’aider l'équipe à suivre un astéroïde ou à d�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8fWg9ByTTIadFgr9Xup1
+image-src: "/images/blogs/Grands-espaces-dans-le-Yukon.jpg"
+alt: Grands espaces dans le Yukon
 ---
 ::
 
@@ -100,7 +103,7 @@ Le Grand Nord canadien et le Yukon ça vous dit quelque chose ? Ce territoire im
 
 Imaginez que vous puissiez: 
 
-*   [**partir en expédition en canoë sur le fleuve Yukon**](https://odysway.com/voyages/voyage-nature-canada-yukon?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) et découvrir les arts et traditions des peuples Kwanlin Dun ; 
+*   **partir en expédition en canoë sur le fleuve Yukon** et découvrir les arts et traditions des peuples Kwanlin Dun ; 
 *   visiter des lieux historiques datant de l'époque de la ruée vers l'or ; 
 *   découvrir le Parc National et Réserve de Kluane.
 
@@ -112,7 +115,8 @@ Vivez en pleine immensité grâce à ce **séjour en immersion** "into the wild"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/yWaabJ9vR7Cdaq5hzAXc
+image-src: "/images/blogs/yWaabJ9vR7Cdaq5hzAXc-1742840780051.jpg"
+alt: undefined
 ---
 ::
 
@@ -128,9 +132,9 @@ Près de chez vous ou à l’autre bout du monde, nos séjours vont vous ravir, 
 
 Partir en été pour :
 
-*   [**apprendre la permaculture dans un éco-centre en Bourgogne**](https://odysway.com/voyages/formation-permaculture-bourgogne?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) ;
-*   un [**voyage initiatique en Mongolie**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) à la rencontre des chamanes ;
-*   découvrir la magnifique région du Jura et [**faire connaissance avec les plantes médicinales**](https://odysway.com/voyages/plantes-medicinales-jura?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete). 
+*   **apprendre la permaculture dans un éco-centre en Bourgogne** ;
+*   un **voyage initiatique en Mongolie** à la rencontre des chamanes ;
+*   découvrir la magnifique région du Jura et **faire connaissance avec les plantes médicinales**. 
 
 Tout cela devient possible avec les séjours en immersion d’Odysway !
 ::

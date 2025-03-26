@@ -61,13 +61,13 @@ export default defineContentConfig({
         slug: z.string(),
         title: z.string(),
         country: z.string(),
-        ISO: z.string(),
+        iso: z.string(),
         zoneChapka: z.number(),
         duration: z.string(),
         startingPrice: z.number(),
         rating: z.number(),
         comments: z.number(),
-        indivRoom: z.boolean(),
+        indivRoom: z.boolean().optional(),
         privatisation: z.boolean(),
         imgSrc1: z.object({
           src: z.string().editor({ input: 'media' }),
@@ -79,6 +79,7 @@ export default defineContentConfig({
         }),
         tooltipChild: z.string(),
         tooltipGroup: z.string(),
+        interjection: z.string(),
         dates: z.array(z.object({
           departureDate: z.date(),
           returnDate: z.date(),

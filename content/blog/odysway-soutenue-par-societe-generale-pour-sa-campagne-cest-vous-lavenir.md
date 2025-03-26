@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-25 14:34:00+00:00"
 tags: "Presse"
 categories: "Partenaires"
-displayedImg: "https://cdn.buttercms.com/jCOJ7rTO296sYhMBbeqw"
+displayedImg: "/images/blogs/Odysway-soutenue-par-Societe-Generale-pour-sa-campagne-"C'est-vous-l'avenir.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/jCOJ7rTO296sYhMBbeqw"
+image-src: "/images/blogs/Odysway-soutenue-par-Societe-Generale-pour-sa-campagne-"C'est-vous-l'avenir.jpg"
 ---
 #publication-date
 25 avril 2019
@@ -31,7 +31,7 @@ Odysway a été accompagné par Société Générale, qui a choisi notre agence 
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/jCOJ7rTO296sYhMBbeqw"
+image-src: "/images/blogs/Odysway-soutenue-par-Societe-Generale-pour-sa-campagne-"C'est-vous-l'avenir.jpg"
 ---
 #content
 Odysway a été accompagné par Société Générale, qui a choisi notre agence de voyage innovante dans le cadre de sa nouvelle campagne de communication, "C'est vous l'avenir". Le principe, une minute vidéo offerte a 5 start-ups selectionnées pour mettre en avant leur concept.
@@ -45,14 +45,15 @@ Odysway a été accompagné par Société Générale, qui a choisi notre agence 
   
   
 
-###### **[Video Odysway | Startup soutenue par Societe Generale | Don't Skip my Project](https://cestvouslavenir.societegenerale.com/dontskip/)**
+###### **Video Odysway | Startup soutenue par Societe Generale | Don't Skip my Project**
 
   
   
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ww8GpAfyTNa9wTzBqT3a
+image-src: "/images/blogs/ww8GpAfyTNa9wTzBqT3a-1742841136209.jpg"
+alt: 
 ---
 ::
 ::

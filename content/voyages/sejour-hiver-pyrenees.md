@@ -1,59 +1,55 @@
 ::hero-voyage-section
 ---
-image-src: https://cdn.buttercms.com/YZpfhas4QcK1uOHlHAAn
+image-src: /images/voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg
 ---
 #title
 Immersion hivernale en terre béarnaise
-
 #component-slot-1
   :::photo-gallery-dialog
   #gallery-btn
   voir la galerie photos
 
   #photo-col
-    ::::photo-col
-    ---
-    col-width: "7"
-    height: "500"
-    image-src: https://cdn.buttercms.com/YZpfhas4QcK1uOHlHAAn
-    ---
-    ::::
+    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-hiver-pyrenees/G4x6f8kSuKhzHIwVfAO8.jpg"}
+::::
 
-    ::::photo-col
-    ---
-    col-width: "5"
-    image-src: https://cdn.buttercms.com/XlIHZEHwQmiF9u91dQG1
-    ---
-    ::::
+::::photo-col
+---
+col-width: "5"
+image-src: /images/voyages/sejour-hiver-pyrenees/sQWytymSOe1bJcc4i4rf.jpg
+---
+::::
 
-    ::::photo-col{col-width="4" image-src="https://cdn.buttercms.com/JacSdSAWTfW40FdENnQh"}
-    ::::
+::::photo-col{col-width="4" image-src="/images/voyages/sejour-hiver-pyrenees/IldQdsuiT7K7x3uZb6LI.jpg"}
+::::
 
-    ::::photo-col{col-width="8" image-src="https://cdn.buttercms.com/HJBg4gECT3qXda2TqenG"}
-    ::::
+::::photo-col
+---
+col-width: "8"
+image-src: /images/voyages/sejour-hiver-pyrenees/EpN6Kb6KTVi7e0x9oWb1.jpg
+---
+::::
 
-    ::::photo-col
-    ---
-    col-width: "5"
-    image-src: https://cdn.buttercms.com/0S9ohMXZRqqXZqcCr9dZ
-    ---
-    ::::
+::::photo-col{col-width="5" image-src="/images/voyages/sejour-hiver-pyrenees/NZWQcdWiRRqlDgNBKVXI.jpg"}
+::::
 
-    ::::photo-col{col-width="7" image-src="https://cdn.buttercms.com/YZpfhas4QcK1uOHlHAAn"}
-    ::::
+::::photo-col
+---
+col-width: "7"
+image-src: /images/voyages/sejour-hiver-pyrenees/TIEN63hbQ6OZ161rVHlL.jpg
+---
+::::
+
+::::photo-col{col-width="7" image-src="/images/voyages/sejour-hiver-pyrenees/tkvbHE7QdmU9Rt4A8oig.jpg"}
+::::
+
+::::photo-col
+---
+col-width: "5"
+image-src: /images/voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg
+---
+::::
   :::
-
-#component-slot-2
-  :::video-dialog
-  ---
-  video-src: 
-    - https://www.youtube.com/embed/cEgwp93M5PU?si=Br7TU-UGrIyVCXEi
-    - https://www.youtube.com/embed/cEgwp93M5PU?si=Br7TU-UGrIyVCXEi
-  ---
-  #video-btn
-  voir la video
-  :::
-::
 
 ::bottom-app-bar
 #starting-price
@@ -151,7 +147,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   #avatar
     ::::avatar-list-item
     ---
-    avatar: https://cdn.buttercms.com/RxTWYwSSu4WAg9S26acA
+    avatar: /images/voyages/sejour-hiver-pyrenees/RxTWYwSSu4WAg9S26acA.jpg
     avatar-size: "60"
     ---
     #title
@@ -161,27 +157,27 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
   :::highlights-row
   ---
-  image: https://cdn.buttercms.com/XlIHZEHwQmiF9u91dQG1
+  image: /images/voyages/sejour-hiver-pyrenees/XlIHZEHwQmiF9u91dQG1.jpg
   ---
-    ::::highlight-list-item
-    Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
-    ::::
-  
-    ::::highlight-list-item
-    Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
-    ::::
-  
-    ::::highlight-list-item
-    Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
-    ::::
-  
-    ::::highlight-list-item
-    Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
-    ::::
-  
-    ::::highlight-list-item
-    Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
-    ::::
+  ::::highlight-list-item
+  Plongez dans une immersion hivernale totale, loin du rythme de la vie quotidienne
+  ::::
+
+  ::::highlight-list-item
+  Initiez-vous au trekking hivernal et apprenez à lire la montagne en compagnie de guides passionnés
+  ::::
+
+  ::::highlight-list-item
+  Passez des soirées conviviales, réchauffés par l’accueil et les plats de saison de vos hôtes
+  ::::
+
+  ::::highlight-list-item
+  Traversez des paysages enneigés, entre forêts, crêtes et lacs gelés, au cœur de la vallée d’Aspe
+  ::::
+
+  ::::highlight-list-item
+  Observez isards, vautours, gypaètes et aigles majestueux dans leur habitat naturel
+  ::::
 
   #title
   [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
@@ -221,7 +217,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   
     :::day-row
     ---
-    image: https://cdn.buttercms.com/UqLivEYnSbKKZNwzeJPy
+    image: /images/voyages/sejour-hiver-pyrenees/UqLivEYnSbKKZNwzeJPy.jpg
     ---
     #subtitle
     JOUR 1
@@ -236,7 +232,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/4bvBF9pCSvel4UDxkx6C
+    image: /images/voyages/sejour-hiver-pyrenees/4bvBF9pCSvel4UDxkx6C.jpg
     ---
     #subtitle
     JOUR 2
@@ -251,7 +247,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/KSKepVmqSK6BlnNDW2oN
+    image: /images/voyages/sejour-hiver-pyrenees/KSKepVmqSK6BlnNDW2oN.jpg
     ---
     #subtitle
     JOUR 3
@@ -266,7 +262,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/Itk1VTqRa2h80m3nlffV
+    image: /images/voyages/sejour-hiver-pyrenees/Itk1VTqRa2h80m3nlffV.jpg
     ---
     #subtitle
     JOUR 4
@@ -281,7 +277,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/hQMQsoiSUmO5b7woRYOg
+    image: /images/voyages/sejour-hiver-pyrenees/hQMQsoiSUmO5b7woRYOg.jpg
     ---
     #subtitle
     JOUR 5
@@ -303,24 +299,28 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   #text
   Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées.
 
+  
   #carousel
     ::::carousel
     #carousel-item
-     :::::image-carousel-item
-      ---
-      image: https://cdn.buttercms.com/JacSdSAWTfW40FdENnQh
-      ---
-     :::::
-     :::::image-carousel-item
-     ---
-     image: https://cdn.buttercms.com/HJBg4gECT3qXda2TqenG
-     ---
-     :::::
-     :::::image-carousel-item
-     ---
-     image: https://cdn.buttercms.com/0S9ohMXZRqqXZqcCr9dZ
-     ---
-     :::::
+      
+    :::::image-carousel-item
+    ---
+    image: /images/voyages/sejour-hiver-pyrenees/JacSdSAWTfW40FdENnQh.jpg
+    ---
+    :::::
+
+    :::::image-carousel-item
+    ---
+    image: /images/voyages/sejour-hiver-pyrenees/HJBg4gECT3qXda2TqenG.jpg
+    ---
+    :::::
+
+    :::::image-carousel-item
+    ---
+    image: /images/voyages/sejour-hiver-pyrenees/0S9ohMXZRqqXZqcCr9dZ.jpg
+    ---
+    :::::
     ::::
   :::
 
@@ -336,7 +336,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
   #guides
     ::::avatar-list-item
     ---
-    avatar: https://cdn.buttercms.com/5Wvd4ENSa6776ZcteQlw
+    avatar: /images/voyages/sejour-hiver-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg
     ---
     #title
     Accompagnateur en moyenne montagne
@@ -450,18 +450,6 @@ Détails du prix
   :::
 ::
 
-::title-container
-#title
-Les avis des voyageurs
-::
-
-::avis-voyage-container
-#carousel
-  :::avis-carousel
-  #carousel-item
-  
-  :::
-::
 
 ::title-container
 #title
@@ -476,7 +464,7 @@ slug: sejour-hiver-pyrenees
 DÉPARTS GROUPÉS
 
 #phrase-left-subtitle
-REJOIGNEZ UN PETIT GROUPE DE 6 VOYAGEURS
+REJOIGNEZ UN PETIT GROUPE DE 8 VOYAGEURS
 #phrase-right-title
 VOYAGE PRIVATISÉ
 

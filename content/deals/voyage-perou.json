@@ -1,14 +1,14 @@
 {
   "title": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",
   "slug": "voyage-perou",
-  "ISO": "PE",
+  "iso": "PE",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-perou/id91ylw7SN2395ZGSRck",
+    "alt": "id91ylw7SN2395ZGSRck"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-perou/nQyUoxkrRImnkVfmCvqw.jpg",
+    "alt": "nQyUoxkrRImnkVfmCvqw"
   },
   "country": "Pérou",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1200
@@ -44,8 +44,8 @@
       "bookedPlaces": 5,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1200
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1200
@@ -74,8 +74,8 @@
       "bookedPlaces": 6,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1200

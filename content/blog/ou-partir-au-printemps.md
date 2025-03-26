@@ -46,13 +46,14 @@ Sortez de votre cocon et dites bonjour au printemps qui fait fleurir des graines
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/dVDzYTfSQvITmnOkHPlg
+image-src: "/images/blogs/La-Chine-au-Printemps.jpg"
+alt: La Chine au Printemps
 ---
 ::
 
 **Partir au printemps** en Chine et plus spécialement à Henan va vous permettre de découvrir une région magnifique et mythique en plein milieu des montagnes.
 
-Nous avons conçu un **voyage insolite** où vous [**apprendrez le mythique Kung-Fu de Shaolin**](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_printemps) dans un des plus anciens temples bouddhistes de Chine.
+Nous avons conçu un **voyage insolite** où vous **apprendrez le mythique Kung-Fu de Shaolin** dans un des plus anciens temples bouddhistes de Chine.
 
 Grâce à cette expérience **sportive et insolite** concoctée pour vous, vous pourrez vous entraîner quotidiennement au Kung-Fu et pratiquer cet art millénaire sous la supervision d’un véritable maître Shaolin. 
 
@@ -64,13 +65,14 @@ Vous visiterez entre autres, la province du Henan et l’incontournable Temple d
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8cFUgYISTTKBbufD8T5d
+image-src: "/images/blogs/Le-Sri-Lanka-a-velo.jpg"
+alt: Le Sri Lanka à vélo
 ---
 ::
 
 Le Sri Lanka est un véritable joyau de faune et de flore, entre mer, montagne et forêt. Vous vous régalerez à tous les niveaux et encore plus si vous avez décidé d’y partir au printemps.
 
-[**Découvrir la perle de l’Océan Indien**](https://odysway.com/voyages/voyage-velo-sri-lanka?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_printemps) à vélo, au fil d’étapes quotidiennes magnifiques et surprenantes qui raviront tous vos sens, ça vous tente ?
+**Découvrir la perle de l’Océan Indien** à vélo, au fil d’étapes quotidiennes magnifiques et surprenantes qui raviront tous vos sens, ça vous tente ?
 
 Chaque jour, faites connaissance avec la diversité culturelle de cette petite île si généreuse, ses populations locales, sa délicieuse cuisine et changez de paysage et de tradition tous les 40 km.
 
@@ -84,13 +86,14 @@ Vous aurez néanmoins l’occasion de reposer vos jambes durant un magnifique tr
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/WnI2sT0oSh2jHeuvgJqB
+image-src: "/images/blogs/La-Bretagne-au-Printemps.jpg"
+alt: La Bretagne au Printemps
 ---
 ::
 
 **Partir au printemps** en Bretagne, est le moment parfait pour vous accorder un break après l’hiver et vous ressourcer en bord de mer.
 
-C’est près de Saint Malo, que nous vous proposons de faire frétiller les papilles des plus gourmands pendant [**un séjour découverte de la gastronomie bretonne.**](https://odysway.com/voyages/decouvrez-les-secrets-de-la-gastronomie-bretonne?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_printemps)
+C’est près de Saint Malo, que nous vous proposons de faire frétiller les papilles des plus gourmands pendant **un séjour découverte de la gastronomie bretonne.**
 
 Corinne, cuisinière de profession et Jean son mari, vous accueilleront dans leur maison d'hôtes cosy au charme breton.
 
@@ -100,7 +103,8 @@ Vous apprendrez à cuisiner le fameux Kig Ha Farz, le pot-au-feu traditionnel br
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/XxWW05S3WZgsQBUCOufA
+image-src: "/images/blogs/Partir-au-printemps-avec-Odysway.jpg"
+alt: Partir au printemps avec Odysway
 ---
 ::
 
@@ -115,9 +119,9 @@ Si vous souhaitez **partir au printemps**, nous avons dans notre besace de super
 
 Que vous ayez envie de :
 
-*   vous [**évader au Cap Vert**](https://odysway.com/voyages/immersion-cap-vert?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_printemps) pour une escapade en immersion sur l'île de Santiago ; 
-*   [**partager le quotidien d’un vigneron Bordelais**](https://odysway.com/voyages/sejour-oenologie-vignoble-bordeaux?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_printemps) pour en apprendre plus sur la vigne ;
-*   [**partir à cheval, à la rencontre des Gardians de Camargue**](https://odysway.com/voyages/gardian-camargue-cheval?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_printemps). 
+*   vous **évader au Cap Vert** pour une escapade en immersion sur l'île de Santiago ; 
+*   **partager le quotidien d’un vigneron Bordelais** pour en apprendre plus sur la vigne ;
+*   **partir à cheval, à la rencontre des Gardians de Camargue**. 
 
 Toute l'équipe d’Odysway est là pour vous aider à partir au printemps et vivre des moments uniques !
 ::

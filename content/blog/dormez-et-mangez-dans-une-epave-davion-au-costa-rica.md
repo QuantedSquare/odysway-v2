@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-10-13 08:35:00+00:00"
 tags: "Amerique Centrale, Costa Rica"
 categories: "Nature et grands espaces, Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859"
+displayedImg: "/images/blogs/Dormez-et-mangez-dans-une-epave-d'avion-au-Costa-Rica.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859"
+image-src: "/images/blogs/Dormez-et-mangez-dans-une-epave-d'avion-au-Costa-Rica.jpg"
 ---
 #publication-date
 13 octobre 2018
@@ -31,12 +31,12 @@ Dormez et mangez dans une épave d'avion au Costa Rica
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/5J1YHHKQhiuKTNeQkMco?1612351530859"
+image-src: "/images/blogs/Dormez-et-mangez-dans-une-epave-d'avion-au-Costa-Rica.jpg"
 ---
 #content
 Sur la côte sud du Costa Rica, au bord de l’Océan Pacifique, le Parc National Manuel Antonio abrite quelque chose plutôt surprenant. Nichée au cœur de la jungle, **une épave d’avion trône au milieu des arbres**, son nez dressé vers le ciel. Un crash ? Non. Juste une idée loufoque de créer un hébergement atypique pour une expérience totalement insolite. Embarquement immédiat pour un séjour étonnant à **l’hôtel Costa Verde** !
 
-Découvrez notre thématique de voyages [insolites](https://odysway.com/thematiques/voyage-insolite) !
+Découvrez notre thématique de voyages insolites !
 
 ## Le fuselage d’un Boeing 727 reconstitué
 
@@ -52,7 +52,7 @@ Pourquoi ne pas continuer votre expérience insolite en déjeunant dans un lieu 
 
 D’une hauteur de 10 m et d’une envergure de 35 m, il ne passe pas inaperçu dans le paysage. Aujourd’hui, **les plats à base de fruits de mer font la réputation du restaurant** El Avion, que vous pouvez déguster face à la baie. Ceux qui se laissent tenter, le font aussi pour **assister à de somptueux couchers de soleil**.
 
-Si vous aussi, vous voulez vivre des expériences insolites : Occupez vous des animaux blessés ou orphelins de la forêt tropicale, dans un refuge dont la mission est de réintroduire ces animaux dans leur habitat naturel. [Vivez un voyage solidaire qui a du sens tout en découvrant la beauté du Costa Rica !](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=article&utm_medium=blog&utm_campaign=dormez+mangez+epave+costa+rica)
+Si vous aussi, vous voulez vivre des expériences insolites : Occupez vous des animaux blessés ou orphelins de la forêt tropicale, dans un refuge dont la mission est de réintroduire ces animaux dans leur habitat naturel. Vivez un voyage solidaire qui a du sens tout en découvrant la beauté du Costa Rica !
 
-Poursuivrez votre lecture en consultant notre article [sur les principaux animaux au Costa Rica.](https://odysway.com/quels-sont-les-principaux-animaux-du-costa-rica)
+Poursuivrez votre lecture en consultant notre article sur les principaux animaux au Costa Rica.
 ::

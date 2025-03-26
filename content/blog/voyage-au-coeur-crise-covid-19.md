@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-04-14 16:42:00+00:00"
 tags: "Europe, France"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj"
+displayedImg: "/images/blogs/Le-voyage-:-au-coeur-de-la-crise-du-Covid-19.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj"
+image-src: "/images/blogs/Le-voyage-:-au-coeur-de-la-crise-du-Covid-19.jpg"
 ---
 #publication-date
 14 avril 2020
@@ -31,7 +31,7 @@ Le voyage : au cœur de la crise du Covid-19
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/BweucfsHQOuqlyVTHugj"
+image-src: "/images/blogs/Le-voyage-:-au-coeur-de-la-crise-du-Covid-19.jpg"
 ---
 #content
 **Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie** **de Covid-19 a changé la donne**. Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de mise pour bon nombre d'entre nous. Mais qu'en est-il de votre voyage annulé à cause du Covid-19 ? Pourrez-vous partir cet été ? Retour sur une crise qui a ébranlé le monde du tourisme.
@@ -58,19 +58,19 @@ NB : pour tous les vols ou voyages achetés à l'étranger, c'est la réglementa
 
 Alors que les vacances de printemps ont bel et bien pour thème "je reste à la maison", beaucoup de Français songent déjà aux prochaines vacances d'été. Et les idées et les envies vont bon train. Un moyen de mieux supporter le confinement peut-être et d'en voir la fin ? Très certainement. Pourtant, **le gouvernement ainsi que les professionnels du voyage suggèrent de ne pas trop faire de projets et d'attendre de voir comment évolue la pandémie de Covid-19.** Effectivement, il n'est pas certain que le virus sera suffisamment enrayé d'ici là. Mais surtout, il sera probablement compliqué d'aller au-delà de nos frontières. Pour exemple, l'Espagne envisagerait d'interdire les touristes étrangers cet été pour éviter une seconde vague de contamination. Et si d'autres pays suivaient le même chemin ? Affaire à suivre... Par ailleurs, les compagnies aériennes auront-elles rouvert une partie de leurs lignes ? Là aussi, la question demeure.
 
-Et bien qu'à cela ne tienne ! La France ne figure-t-elle pas en haut du top 3 des pays les plus visités au monde ? Nous avons la chance de posséder une belle diversité de paysages, des savoir-faire uniques ainsi qu'un riche passé historique. Direction les littoraux et leurs longues plages de sable, les Alpes ou les Pyrénées pour d'agréables randonnées en montagne, les parcs nationaux et régionaux pour une reconnexion à la nature, les sites historiques, goûtez à une gastronomie mondialement reconnue… La liste est encore longue. Découvrez nos [voyages en France](https://odysway.com/experiences?search=france&utm_source=Blog&utm_medium=SEO&utm_campaign=Voyage_Covid_19) !
+Et bien qu'à cela ne tienne ! La France ne figure-t-elle pas en haut du top 3 des pays les plus visités au monde ? Nous avons la chance de posséder une belle diversité de paysages, des savoir-faire uniques ainsi qu'un riche passé historique. Direction les littoraux et leurs longues plages de sable, les Alpes ou les Pyrénées pour d'agréables randonnées en montagne, les parcs nationaux et régionaux pour une reconnexion à la nature, les sites historiques, goûtez à une gastronomie mondialement reconnue… La liste est encore longue. Découvrez nos voyages en France !
 
 ## Partir en voyage malgré le Covid-19 : évadez-vous depuis chez vous ! 
 
 Depuis l'annonce du confinement, de nombreuses chaînes de télévision ont adapté leurs programmes pour permettre à chacun d'entre nous de mieux vivre cette situation inédite. Au milieu des émissions culturelles ou d'apprentissage pour les enfants, celles en lien avec les voyages connaissent un véritable boom. Il est vrai qu'être enfermé au quotidien donne l'envie de s'évader. **Rien ne vous empêche donc de continuer à voyager depuis chez vous**. Regardez sans modération les excellentes émissions comme Rendez-vous en terre inconnue, J'irai dormir chez vous, Échappées belles, Nus et Culottés sur France Télévision, Voyages et Découvertes sur Arte…
 
-Le web est une mine d'or pour trouver un documentaire ou un reportage sur les voyages. Parmi le flot de propositions, allez sur **le site spécial voyage de** [**TV5 Monde**](https://voyage.tv5monde.com/)**, qui met en avant un tourisme responsable** ou bien sur celui de l'Office de Tourisme d'Irlande. Partez sur les traces des voyageurs extrêmes comme Mike Horn en suivant ses périples sur sa chaîne YouTube. Dédié à l'actualité du secteur touristique, le site de [L'Echo Touristique](https://www.lechotouristique.com/destinations) propose de "voyager depuis son canapé" : de l'Occitanie à la Grèce en passant par New York, prenez-en plein les yeux.
+Le web est une mine d'or pour trouver un documentaire ou un reportage sur les voyages. Parmi le flot de propositions, allez sur **le site spécial voyage de** **TV5 Monde****, qui met en avant un tourisme responsable** ou bien sur celui de l'Office de Tourisme d'Irlande. Partez sur les traces des voyageurs extrêmes comme Mike Horn en suivant ses périples sur sa chaîne YouTube. Dédié à l'actualité du secteur touristique, le site de L'Echo Touristique propose de "voyager depuis son canapé" : de l'Occitanie à la Grèce en passant par New York, prenez-en plein les yeux.
 
 **Les différentes plateformes de streaming (légales) proposent également de nombreux documentaires sur les voyages**. Si vous possédez l'une d'elles, vous trouverez facilement de quoi vous évader. Par ailleurs, la plateforme The Explorers a mis en ligne gratuitement ses films documentaires le temps du confinement. Le site ou l'application **Google Arts & Culture** permet de visiter des sites emblématiques comme le Taj Mahal.
 
-Pour ceux qui préfèrent s'évader au travers de la lecture, n'hésitez pas à consulter notre sélection de [récits de voyage](https://odysway.com/grands-recits-voyage) ou à feuilleter des **magazines en ligne comme Géo ou National Geographic**. Ou bien de lire ou relire nos [articles de blog](https://odysway.com/blog) !
+Pour ceux qui préfèrent s'évader au travers de la lecture, n'hésitez pas à consulter notre sélection de récits de voyage ou à feuilleter des **magazines en ligne comme Géo ou National Geographic**. Ou bien de lire ou relire nos articles de blog !
 
-Toute l'équipe Odysway se tient à disposition pour tous ceux qui ont réservé un voyage avec nous au cours de cette année, par email ou par téléphone. Nous suivons l’actualité de près afin de pouvoir vous proposer des alternatives d’évasion dès que possible ! Nous restons également à disposition pour vous aider à préparer vos [voyages de demain](https://odysway.com/voyages).
+Toute l'équipe Odysway se tient à disposition pour tous ceux qui ont réservé un voyage avec nous au cours de cette année, par email ou par téléphone. Nous suivons l’actualité de près afin de pouvoir vous proposer des alternatives d’évasion dès que possible ! Nous restons également à disposition pour vous aider à préparer vos voyages de demain.
 
 Et n'oubliez pas, #restezchezvous
 ::

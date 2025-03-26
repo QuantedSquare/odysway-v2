@@ -1,14 +1,14 @@
 {
   "title": "Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale",
   "slug": "voyage-immersif-vietnam",
-  "ISO": "VNM",
+  "iso": "VNM",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersif-vietnam/rkwkGlNTJinuNd1jvHx6",
+    "alt": "rkwkGlNTJinuNd1jvHx6"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersif-vietnam/Y8gCdLg9QvySHEk4yPiB.jpg",
+    "alt": "Y8gCdLg9QvySHEk4yPiB"
   },
   "country": "Vietnam",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 900
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 900
@@ -59,8 +59,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 900
@@ -74,8 +74,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 900
@@ -89,8 +89,8 @@
       "bookedPlaces": 12,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 900
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 80,
-      "promoLastMinute": 30,
       "lastMinute": false,
+      "promoLastMinute": 30,
       "promo": 100,
       "privatized": false,
       "flyTicketPrice": 900

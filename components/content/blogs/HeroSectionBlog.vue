@@ -4,7 +4,7 @@
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
     height="100vh"
     cover
-    class="position-relative"
+    class="position-relative bg-primary"
   >
     <v-btn-primary
       to="/blog"

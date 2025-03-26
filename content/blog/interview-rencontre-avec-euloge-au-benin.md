@@ -21,12 +21,12 @@ published: false
 publishedAt: "2022-10-25 14:00:00+00:00"
 tags: "Afrique, autrement, bénin"
 categories: "immersion, voyager, bénin, culture"
-displayedImg: "https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj"
+displayedImg: "/images/blogs/Interview-Rencontre-avec-Euloge-au-Benin.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj"
+image-src: "/images/blogs/Interview-Rencontre-avec-Euloge-au-Benin.jpg"
 ---
 #publication-date
 25 octobre 2022
@@ -40,12 +40,12 @@ Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/F67WL3G8RzSfabyCk2Dj"
+image-src: "/images/blogs/Interview-Rencontre-avec-Euloge-au-Benin.jpg"
 ---
 #content
 **Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.**
 
-**[Un séjour hors du temps](https://odysway.com/voyages/Immersion-culturelle-sud-benin?utm_source=Blog&utm_medium=Article&utm_campaign=VoyageB%C3%A9nin) , différent de ce que vous avez vécu jusqu'à présent !**
+**Un séjour hors du temps , différent de ce que vous avez vécu jusqu'à présent !**
 
 **On vous dévoile le quotidien de notre guide à travers une courte ITW dans une démarche de transparence et de confiance.**
 
@@ -57,7 +57,8 @@ Je suis titulaire d'une licence professionnelle en tourisme et depuis douze ans,
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xdoJ4tbSDyf5GZIRLCvQ
+image-src: "/images/blogs/indefini-4.jpg"
+alt: indéfini
 ---
 ::
 
@@ -75,7 +76,8 @@ Après le repas de midi, j'annonce la suite du programme. En fin de journée, l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ipJSXGT1TFSbZbO63Oui
+image-src: "/images/blogs/indefini-5.jpg"
+alt: indéfini
 ---
 ::
 
@@ -85,7 +87,8 @@ image-src: https://cdn.buttercms.com/ipJSXGT1TFSbZbO63Oui
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ukopMUoVRjmQYrZDeNEI
+image-src: "/images/blogs/indefini-6.jpg"
+alt: indéfini
 ---
 ::
 
@@ -97,7 +100,8 @@ Comme inconvénients, vous devez sacrifier le temps au détriment de votre famil
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/sklfu93EQEqTrFuIQQkw
+image-src: "/images/blogs/indefini-7.jpg"
+alt: indéfini
 ---
 ::
 
@@ -107,7 +111,8 @@ image-src: https://cdn.buttercms.com/sklfu93EQEqTrFuIQQkw
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/1PP5GQqRrWj1BNRhq85w
+image-src: "/images/blogs/indefini-8.jpg"
+alt: indéfini
 ---
 ::
 

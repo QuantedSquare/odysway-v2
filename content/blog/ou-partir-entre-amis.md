@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-08-06 11:51:00+00:00"
 tags: "Europe, Finlande, France, Grands espaces, Made in France"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj"
+displayedImg: "/images/blogs/Ou-partir-entre-amis.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj"
+image-src: "/images/blogs/Ou-partir-entre-amis.jpg"
 ---
 #publication-date
 6 août 2020
@@ -31,7 +31,7 @@ Où partir entre amis ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/QNuT7bmCSqaVvGpyxAkj"
+image-src: "/images/blogs/Ou-partir-entre-amis.jpg"
 ---
 #content
 **Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.**
@@ -44,7 +44,8 @@ Sans être chauvin, la France fait partie des pays les plus beaux du monde et se
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/OAccUAAT3qype1IdxSMF
+image-src: "/images/blogs/OAccUAAT3qype1IdxSMF-1742840851771.jpg"
+alt: undefined
 ---
 ::
 
@@ -54,7 +55,8 @@ Des paysages à couper le souffle, plus de 2 700 km de côtes, des traditions et
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/fMOhUrubQa6ptJcelaRq
+image-src: "/images/blogs/WhatsApp-Image-2020-07-13-at-16.20.46....jpg"
+alt: WhatsApp Image 2020-07-13 at 16.20.46...
 ---
 ::
 
@@ -64,19 +66,21 @@ Si le chant des cigales, les essences méditerranéennes et les vieilles pierres
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/95Fn8nDSJGAC4uhUxNwA
+image-src: "/images/blogs/coen-van-de-broek-OFyh9TpMyM8-unsplas....jpg"
+alt: coen-van-de-broek-OFyh9TpMyM8-unsplas...
 ---
 ::
 
 Parce que vous êtes toujours à 100 à l'heure, vous avez une très forte envie de lever le pied. Une envie de **prendre votre temps avec vos amis** dans un cadre magique et unique. Avec des plages à perte de vue, la possibilité de pratiquer divers sports nautiques et une atmosphère chaleureuse, **l'Ile d'Oléron vous tend les bras**. Et le must pour en profiter sans se presser, c'est le vélo. Ce sont près de **160 km de pistes cyclables** qui sillonnent l'île vous promettant de très belles balades. Et probablement de nombreux fous rires en perspective.
 
-[Voir notre article dédié au slow tourisme.](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue)
+Voir notre article dédié au slow tourisme.
 
 ### La Normandie, entre histoire et gastronomie
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zSPzNuw6S2mksRKdpUpK
+image-src: "/images/blogs/zSPzNuw6S2mksRKdpUpK-1742840853339.jpg"
+alt: undefined
 ---
 ::
 
@@ -90,19 +94,21 @@ Vos amis et vous-même êtes cavaliers émérites ou novices ? Initiez-vous à l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zxbXctg5SLWdjBeWfDad
+image-src: "/images/blogs/zxbXctg5SLWdjBeWfDad-1742840853864.jpg"
+alt: undefined
 ---
 ::
 
 Pour fuir le bruit et la pollution et **se retrouver entre amis dans une nature grandiose** à quelques heures de la France, embarquement immédiat pour **la** **Finlande**. Saviez-vous que le pays est recouvert de plus de 70 % par des forêts ? Amoureux de la nature, vous serez comblés ! Randonnées, canoë ou kayak, dépassez vos limites en partant entre amis en Finlande. Exit le monde connecté et retrouvez le vrai plaisir d'être ensemble.
 
-Nous proposons d'ailleurs un [séjour en parfaite harmonie avec la nature](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=nature_finlande) : expédition en autonomie en canoë et bivouac en pleine forêt, qui, de vous ou de vos amis, aura le plus l'âme d'un aventurier ?
+Nous proposons d'ailleurs un séjour en parfaite harmonie avec la nature : expédition en autonomie en canoë et bivouac en pleine forêt, qui, de vous ou de vos amis, aura le plus l'âme d'un aventurier ?
 
 ### L'Espagne et le Portugal pour allier visites culturelles, farniente et fiesta
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/0d6MqLmSSarxGh6yUo1w
+image-src: "/images/blogs/0d6MqLmSSarxGh6yUo1w-1742840854387.jpg"
+alt: undefined
 ---
 ::
 
@@ -112,7 +118,8 @@ Si vous êtes en quête d'une destination où **partir à moindre coût entre am
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/1B5zCepLSxSWwx1YxVYS
+image-src: "/images/blogs/1B5zCepLSxSWwx1YxVYS-1742840854909.jpg"
+alt: undefined
 ---
 ::
 
@@ -120,5 +127,5 @@ Au contraire, si vous préférez vous retrouver entre amis loin du monde, la Bul
 
 ## Découvrez notre thématique sur les voyages de groupe !
 
-Partir [en groupe](https://odysway.com/thematiques/voyage-en-groupe) avec Odysway c’est : Profitez de l'activité à votre rythme et voyagez de manière éthique et écologiquement responsable à 8 maximum. C'est aussi la garantie d'un bon moment avec les communautés locales, car il est plus conviviale de vous accueillir lorsque vous voyagez en petit groupe.
+Partir en groupe avec Odysway c’est : Profitez de l'activité à votre rythme et voyagez de manière éthique et écologiquement responsable à 8 maximum. C'est aussi la garantie d'un bon moment avec les communautés locales, car il est plus conviviale de vous accueillir lorsque vous voyagez en petit groupe.
 ::

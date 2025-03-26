@@ -42,7 +42,8 @@ Le pays possède une **forte diversité culturelle et spirituelle**. Son histoir
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/2pSWpstVQkGVDe2PQk86
+image-src: "/images/blogs/Sri-Lanka-Sigiriya.jpg"
+alt: Sri Lanka Sigiriya
 ---
 ::
 
@@ -62,7 +63,7 @@ Si besoin, avant votre départ, consultez votre médecin traitant ou un centre d
 
 ## Faut-il un visa pour visiter le Sri Lanka ?
 
-Depuis août 2019, les **Français n’ont pas besoin de visa pour des séjours de moins de 30 jours**. Vous devez cependant demander sur le [site Internet officiel de l’office de tourisme du Sri Lanka](http://www.eta.gov.lk/slvisa/), une E.T.A., une autorisation de voyage électronique. Vous devez y choisir la version française.
+Depuis août 2019, les **Français n’ont pas besoin de visa pour des séjours de moins de 30 jours**. Vous devez cependant demander sur le site Internet officiel de l’office de tourisme du Sri Lanka, une E.T.A., une autorisation de voyage électronique. Vous devez y choisir la version française.
 
 Pour un **séjour entre 30 et 90 jours, une E.T.A. payante est obligatoire**. Seuls l’ambassade et le consulat du Sri Lanka pourront vous la délivrer.
 
@@ -117,7 +118,7 @@ Voyager avec un chauffeur est donc plus simple. Cette solution permet de gagner 
 
 Les **transports en bus ou en train** sont tout à fait envisageables si vous avez davantage de temps ou si vous priorisez certaines régions. Les trajets peuvent être longs et moins confortables, mais davantage immersifs. Il est le meilleur moyen de vivre des expériences authentiques avec les locaux. Le trajet en train dans la région montagneuse est par exemple, un moment unique à vivre.
 
-Pour un voyage au plus proche de la population locale, [visitez le Sri Lanka à vélo](https://odysway.com/voyages/voyage-velo-sri-lanka). Vous ne serez pas déçu par cette expérience hors du commun où vous prendrez tout le temps nécessaire pour apprécier les paysages et nouer des contacts avec les Sri-Lankais.
+Pour un voyage au plus proche de la population locale, visitez le Sri Lanka à vélo. Vous ne serez pas déçu par cette expérience hors du commun où vous prendrez tout le temps nécessaire pour apprécier les paysages et nouer des contacts avec les Sri-Lankais.
 
 ## Le coût de la vie au Sri Lanka, quel budget prévoir ?
 
@@ -145,7 +146,8 @@ Ce site se situe dans ce qu’on appelle le triangle culturel. Incontournable et
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/yJH506IQUqsFLJjRGuue
+image-src: "/images/blogs/Sri-Lanka-Anuradhapura.jpg"
+alt: Sri Lanka Anuradhapura
 ---
 ::
 
@@ -163,7 +165,8 @@ Polonnaruwa fut la capitale du Sri Lanka du Xe au XIIIe siècle. Classée au pat
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/YjO49PgzRJyRAjzEY1SX
+image-src: "/images/blogs/Sri-Lanka-Polonnaruwa.jpg"
+alt: Sri Lanka Polonnaruwa
 ---
 ::
 
@@ -175,7 +178,7 @@ Ne manquez pas de réaliser un safari dans l’un des 24 parcs nationaux du Sri 
 
 Les deux parcs de Yala et d’Uda Walave sont les plus réputés. Ils possèdent tous les deux des paysages de savanes qui ressemblent un peu à l’Afrique et de nombreuses espèces à observer : oiseaux, buffles, singes, crocodiles, etc. Pour moins d’affluence et pour voir les éléphants, choisissez Uda Walave. Si vous voulez observer le léopard, vous devrez vous rendre à Yala.
 
-Pour un voyage au plus proche des animaux du Sri Lanka, [participez à la sauvegarde des éléphants et des tortues marines.](https://odysway.com/voyages/protection-animaux-sri-lanka)
+Pour un voyage au plus proche des animaux du Sri Lanka, participez à la sauvegarde des éléphants et des tortues marines.
 
 ### 5.     La ville spirituelle de Kandy 
 
@@ -187,7 +190,8 @@ Ce train est encore utilisé par les locaux pour se déplacer dans la région mo
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/VTIgkf2HQNmEHSRH8qTC
+image-src: "/images/blogs/srilanka.jpg.jpg"
+alt: srilanka.jpg
 ---
 ::
 
@@ -201,7 +205,8 @@ Au sommet, vous apprécierez le lever de soleil et l’empreinte de pas gravée 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/4A8XSgFGSV2tl9XWgqJ2
+image-src: "/images/blogs/Sri-Lanka-Adam's-Peak.jpg"
+alt: Sri Lanka Adam’s Peak
 ---
 ::
 
@@ -217,7 +222,8 @@ Ne manquez pas le fort de Galle et une promenade sur les remparts, inscrits au p
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Zc2zdFpjToudSN3Mdl1i
+image-src: "/images/blogs/Sri-Lanka-Galle.jpg"
+alt: Sri Lanka Galle
 ---
 ::
 

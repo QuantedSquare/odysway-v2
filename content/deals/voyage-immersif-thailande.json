@@ -1,14 +1,14 @@
 {
   "title": "Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Karen et plages de rêve",
   "slug": "voyage-immersif-thailande",
-  "ISO": "TH",
+  "iso": "TH",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersif-thailande/81rf8aPTGeiqs2g4ZbHU",
+    "alt": "81rf8aPTGeiqs2g4ZbHU"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersif-thailande/tj1VVuGSR1O50EIEDF96.jpg",
+    "alt": "tj1VVuGSR1O50EIEDF96"
   },
   "country": "Thaïlande",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

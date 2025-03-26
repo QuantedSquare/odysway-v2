@@ -1,14 +1,14 @@
 {
   "title": "Immersion culturelle au coeur des traditions d’une famille balinaise",
   "slug": "voyage-immersion-culturelle-bali",
-  "ISO": "IDN",
+  "iso": "IDN",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersion-culturelle-bali/9ElqH6ahQUuaoHPLoBFB",
+    "alt": "9ElqH6ahQUuaoHPLoBFB"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersion-culturelle-bali/NSQhO9PQSEiNChZ9kqt0.jpg",
+    "alt": "NSQhO9PQSEiNChZ9kqt0"
   },
   "country": "Indonésie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 9,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -44,8 +44,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -59,8 +59,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -74,8 +74,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000
@@ -89,8 +89,8 @@
       "bookedPlaces": 10,
       "earlyBird": false,
       "promoEarlyBird": 0,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 1000

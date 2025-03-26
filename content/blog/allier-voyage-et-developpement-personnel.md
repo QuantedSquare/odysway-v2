@@ -44,11 +44,12 @@ Pourquoi ne pas tenter l'une de nos expériences et en profiter pour partir en v
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/TPZSk4E7TheXu5v4D1yC
+image-src: "/images/blogs/Inde-voyage-spirituel.jpeg.jpg"
+alt: Inde voyage spirituel.jpeg
 ---
 ::
 
-[Partez faire une retraite de méditation en Inde, dans la ville du Dalaï-lama.](https://odysway.com/voyages/retraite-meditation-inde)
+Partez faire une retraite de méditation en Inde, dans la ville du Dalaï-lama.
 
 ## Découvrir autrement un pays, une région, une culture
 
@@ -57,19 +58,20 @@ image-src: https://cdn.buttercms.com/TPZSk4E7TheXu5v4D1yC
   
 Par nos voyages, nous souhaitons également vous faire découvrir votre pays d'accueil sous un autre angle. Découvrez des paysages comme vous n'en avez jamais vu, totalement préservés et loin de la foule. **Un séjour hors des sentiers battus** où vos rencontres n'auront d'égal que la richesse des enseignements que vous recevrez. Et tout cela aura forcément une incidence positive sur votre quête de paix intérieure. Sans tentation et dans un esprit libéré, votre chemin spirituel sera d'autant plus facile à atteindre.  
   
-Odysway a à cœur de vous faire connaître aussi des méthodes méconnues afin de pouvoir vous immerger encore un peu plus dans une nouvelle culture, comme la [marche silencieuse dans l'immensité du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara) ou bien une [digitale detox au Maroc](https://odysway.com/voyages/digital-detox-maroc).   
+Odysway a à cœur de vous faire connaître aussi des méthodes méconnues afin de pouvoir vous immerger encore un peu plus dans une nouvelle culture, comme la marche silencieuse dans l'immensité du Sahara ou bien une digitale detox au Maroc.   
   
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/UGbEQh2vSUWIB8XW18D7
+image-src: "/images/blogs/Maroc-voyage-spirituel.jpg.jpg"
+alt: Maroc voyage spirituel.jpg
 ---
 ::
 
-[Profitez des étendues du Sahara pour marcher dans le silence.](https://odysway.com/voyages/marche-silencieuse-sahara)
+Profitez des étendues du Sahara pour marcher dans le silence.
 
 ## Trouver le séjour en développement personnel qui vous convient
 
   
-**Nous proposons un large choix de séjours en développement personnel dans plusieurs pays du monde**. Que vous partiez en Asie, en Afrique ou bien en Amérique du Sud, que vous soyez débutant ou expérimenté, il y a une expérience qui vous ressemble. Faire une [retraite spirituelle](https://odysway.com/voyages/retraite-meditation-inde) ou un [Yoga-trek](https://odysway.com/voyages/yoga-trek-himalaya), [vivre avec des moines](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal) ou [partager le quotidien d'un chamane](https://odysway.com/voyages/voyage-chamane-mongolie), à vous de choisir. Consultez l'ensemble de nos voyages et nous restons à votre disposition pour répondre à toutes vos questions.
+**Nous proposons un large choix de séjours en développement personnel dans plusieurs pays du monde**. Que vous partiez en Asie, en Afrique ou bien en Amérique du Sud, que vous soyez débutant ou expérimenté, il y a une expérience qui vous ressemble. Faire une retraite spirituelle ou un Yoga-trek, vivre avec des moines ou partager le quotidien d'un chamane, à vous de choisir. Consultez l'ensemble de nos voyages et nous restons à votre disposition pour répondre à toutes vos questions.
 ::

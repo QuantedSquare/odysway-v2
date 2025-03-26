@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-08-23 15:38:00+00:00"
 tags: "Asie, Famille, Grands espaces, Sport, Thailande"
 categories: "Depassement de soi"
-displayedImg: "https://cdn.buttercms.com/kaWAk2SGaVAqQnzvRz1g"
+displayedImg: "/images/blogs/Ou-faire-de-la-boxe-thai-en-Thailande.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/kaWAk2SGaVAqQnzvRz1g"
+image-src: "/images/blogs/Ou-faire-de-la-boxe-thai-en-Thailande.jpg"
 ---
 #publication-date
 23 août 2019
@@ -31,12 +31,12 @@ La boxe thaï est sans conteste le sport de combat le plus populaire en Thaïl
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/kaWAk2SGaVAqQnzvRz1g"
+image-src: "/images/blogs/Ou-faire-de-la-boxe-thai-en-Thailande.jpg"
 ---
 #content
 La **boxe thaï** est sans conteste le sport de combat le plus populaire en Thaïlande et fait partie intégrante de la culture du pays. Depuis plusieurs années, de plus en plus d’adeptes issus des pays occidentaux viennent en Thaïlande pour s’entraîner auprès de professionnels. **Mais où se rendre pour faire de la boxe thaï ?** Dans les grandes villes ou à la campagne, ce sport se pratique un peu partout sur le territoire.
 
-Après votre lecture, nous vous invitons à découvrir notre article [sur la Thaïlande, le pays du sourire.](https://odysway.com/la-thailande-le-pays-du-sourire)
+Après votre lecture, nous vous invitons à découvrir notre article sur la Thaïlande, le pays du sourire.
 
 ## La boxe thaï expliquée en quelques lignes
 
@@ -48,7 +48,8 @@ La boxe thaï attire aujourd’hui de nombreux étrangers et est devenue un marc
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/JbBcisWAT7Osdp22o5Gc
+image-src: "/images/blogs/JbBcisWAT7Osdp22o5Gc-1742841052669.jpg"
+alt: 
 ---
 ::
 
@@ -64,7 +65,8 @@ Si vous avez envie de vivre la frénésie de la Thaïlande, choisissez sans hés
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/zCwLoEn8SCDcPtFFCs0V
+image-src: "/images/blogs/zCwLoEn8SCDcPtFFCs0V-1742841053197.jpg"
+alt: 
 ---
 ::
 
@@ -74,11 +76,12 @@ _Le camp d’entraînement de Muay-thaï à Bangkok_
 
 Vous préférez un environnement plus calme et une expérience plus immersive pour faire de la boxe thaï ? Direction **la campagne thaïlandaise**, notamment dans la région de Chiang Mai. Des paysages verdoyants, des cascades et des montagnes caractérisent notamment cette partie du pays. Loin de l’agitation de Bangkok, **vous serez au cœur même d’une vie et d’une ambiance plus traditionnelles**. Profitez des grands espaces pour vous ressourcer après une journée intensive. Amoureux de la nature, notre stage dans un centre d’entraînement dans la ville de Pai correspondra parfaitement à vos attentes.
 
-[Découvrez notre expérience de boxe thaï en pleine campagne](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=Blog&utm_medium=SEO&utm_campaign=Ou_Faire_Boxe_Tahi)
+Découvrez notre expérience de boxe thaï en pleine campagne
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Ysf6tzDVSWSKS8ZIu4Y9
+image-src: "/images/blogs/Ysf6tzDVSWSKS8ZIu4Y9-1742841053719.jpg"
+alt: 
 ---
 ::
 
@@ -90,7 +93,8 @@ Si vous ne craignez pas des conditions de vie rudes, tentez un stage de **boxe 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/KaqBCKVQSOpo1eu1P5kN
+image-src: "/images/blogs/KaqBCKVQSOpo1eu1P5kN-1742841054245.jpg"
+alt: 
 ---
 ::
 
@@ -106,5 +110,5 @@ Pour un entraînement plus poussif avec pour objectif de faire des combats sur l
 
 ## Les Voyages Sportifs d'Odysway
 
-Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
+Les voyages sportifs sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::

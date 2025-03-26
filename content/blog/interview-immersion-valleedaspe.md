@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-05-31 09:14:00+00:00"
 tags: "auberge, berger, France, gîte, immersion, Pyrénées, randonnée, terroir, Vallée d'Aspe"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
+displayedImg: "/images/blogs/Interview-La-Maison-Despourrins-:-un-gite-accueillant-les-voyageurs-Odysway-dans-les-Pyrenees.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
+image-src: "/images/blogs/Interview-La-Maison-Despourrins-:-un-gite-accueillant-les-voyageurs-Odysway-dans-les-Pyrenees.jpg"
 ---
 #publication-date
 31 mai 2021
@@ -31,7 +31,7 @@ Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyag
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
+image-src: "/images/blogs/Interview-La-Maison-Despourrins-:-un-gite-accueillant-les-voyageurs-Odysway-dans-les-Pyrenees.jpg"
 ---
 #content
 **Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.**
@@ -50,7 +50,8 @@ image-src: "https://cdn.buttercms.com/qhAwUYRBQCWR9XqG05Wq"
 
 ###  ::image-container
 ---
-image-src: https://cdn.buttercms.com/flDLx52CQZCCm06zTexK
+image-src: "/images/blogs/flDLx52CQZCCm06zTexK-1742840715906.jpg"
+alt: undefined
 ---
 ::
 
@@ -66,11 +67,13 @@ image-src: https://cdn.buttercms.com/flDLx52CQZCCm06zTexK
 
 "C’était forcément compliqué en 2020, surtout que nous venions de reprendre le gîte. Nous avons fait des travaux durant les fermetures causées par le confinement. Aujourd'hui, nous sommes plutôt positives, nous prenons les réservations et nous remboursons les acomptes lorsque c’est nécessaire. Il y a aussi une nouvelle demande, nous accueillons des personnes qui n'étaient pas forcément habituées à la montagne. **Nous sommes plutôt préservés en étant dans un petit village**. Le gîte est suffisamment grand pour appliquer les règles de distanciation sociale et il y a de la place dans la vallée pour se balader sereinement."
 
-Vous souhaitez découvrir le séjour _**"Partagez la vie d'un berger dans les Pyrénées"**_ ? [Cliquez-ici](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=interview+g%C3%AEte+despourrins) !
+Vous souhaitez découvrir le séjour _**"Partagez la vie d'un berger dans les Pyrénées"**_ ? Cliquez-ici !
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/lGYd3MVTRoaKoyEEPsjk
+image-src: "/images/blogs/berger-couverture.jpeg.jpg"
+alt: berger couverture.jpeg
+link: https://odysway.com/voyages/sejour-berger-bearn
 ---
-::](https://odysway.com/voyages/sejour-berger-bearn)
+::
 ::

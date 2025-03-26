@@ -1,14 +1,14 @@
 {
   "title": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
   "slug": "immersion-culturelle-cap-vert",
-  "ISO": "CV",
+  "iso": "CV",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/immersion-culturelle-cap-vert/9U8kgfJS7ORLToveeUUj",
+    "alt": "9U8kgfJS7ORLToveeUUj"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/immersion-culturelle-cap-vert/9tDJ3KkWS06toTzucVgw.jpg",
+    "alt": "9tDJ3KkWS06toTzucVgw"
   },
   "country": "Cap-Vert",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 7,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 120,
       "privatized": false,
       "flyTicketPrice": 650
@@ -44,8 +44,8 @@
       "bookedPlaces": 8,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 120,
       "privatized": false,
       "flyTicketPrice": 650

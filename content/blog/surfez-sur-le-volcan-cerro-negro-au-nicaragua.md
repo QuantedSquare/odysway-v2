@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-09-22 08:32:00+00:00"
 tags: "Amerique Centrale, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
-displayedImg: "https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149"
+displayedImg: "/images/blogs/Surfez-sur-le-volcan-Cerro-Negro-au-Nicaragua.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149"
+image-src: "/images/blogs/Surfez-sur-le-volcan-Cerro-Negro-au-Nicaragua.jpg"
 ---
 #publication-date
 22 septembre 2018
@@ -31,12 +31,12 @@ Surfez sur le volcan Cerro Negro au Nicaragua
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/4rnwUHndRBC1DN3bTEQA?1612359218149"
+image-src: "/images/blogs/Surfez-sur-le-volcan-Cerro-Negro-au-Nicaragua.jpg"
 ---
 #content
 Au centre de l’Amérique Centrale, le **Nicaragua** se démarque par un relief particulièrement prononcé, notamment due à la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le **Cerro Negro**, situé à 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous les visiteurs à la recherche de sensations extrêmes. Le **volcano** **boarding**, ou le **surf** **sur** **un** **volcan**, est probablement l’une des activités les plus insolites à faire lorsque vous voyagez au Nicaragua.
 
-Après votre lecture, nous vous invitons à consulter notre article [sur le tarabitia en Equateur.](https://odysway.com/quest-ce-que-la-tarabita-en-equateur)
+Après votre lecture, nous vous invitons à consulter notre article sur le tarabitia en Equateur.
 
 ## L’histoire du Cerro Negro
 
@@ -54,7 +54,7 @@ Vous serez équipé d’une combinaison, d’un masque pour vos yeux et d’un f
 
 ## Découvrez les voyages sportifs
 
-Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
+Les voyages sportifs sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 
-Odysway vous propose [un voyage en immersion en Amérique centrale.](https://odysway.com/destinations/amerique-centrale)
+Odysway vous propose un voyage en immersion en Amérique centrale.
 ::

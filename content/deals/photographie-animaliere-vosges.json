@@ -1,14 +1,14 @@
 {
   "title": "En immersion avec un photographe animalier dans les Vosges",
   "slug": "photographie-animaliere-vosges",
-  "ISO": "FR",
+  "iso": "FR",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp",
+    "alt": "81U4JJjqQtm51cIJrYfp"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/photographie-animaliere-vosges/ccWSJ8gpTDukRDoykVcZ.jpg",
+    "alt": "ccWSJ8gpTDukRDoykVcZ"
   },
   "country": "Vosges",
   "zoneChapka": 1,
@@ -29,8 +29,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -44,8 +44,8 @@
       "bookedPlaces": 1,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -59,8 +59,8 @@
       "bookedPlaces": 3,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0
@@ -74,8 +74,8 @@
       "bookedPlaces": 3,
       "earlyBird": true,
       "promoEarlyBird": 40,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 0

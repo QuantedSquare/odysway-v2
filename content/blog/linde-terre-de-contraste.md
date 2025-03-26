@@ -38,7 +38,8 @@ L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliar
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/10ldC2ljQje5QJChyqCL
+image-src: "/images/blogs/10ldC2ljQje5QJChyqCL-1742840930321.jpg"
+alt: undefined
 ---
 ::
 
@@ -46,11 +47,12 @@ En ce qui concerne ses paysages, ils sont aussi diversifiés qu’époustouflant
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/HH1IFKBTkyl8TGASScns
+image-src: "/images/blogs/HH1IFKBTkyl8TGASScns-1742840930844.jpg"
+alt: undefined
 ---
 ::
 
-Avec une nature généreuse et des immenses espaces, l’Inde est une destination idéale pour les activités sportives. Les aventuriers auront le choix de randonner au milieu de paysages aux mille couleurs à des hauteurs vertigineuses ou de pratiquer du rafting. Pour s’immerger pleinement dans la culture indienne, assistez au pèlerinage de Kumbh Mela, le plus grand rassemblement religieux du monde. Enfin, haut lieu de spiritualité, l’Inde vous accueille sur ses terres saintes pour [méditer et effectuer un véritable voyage intérieur](https://odysway.com/voyages/retraite-meditation-inde). Partez aussi découvrir ou approfondir la pratique du yoga, originaire d’Inde.
+Avec une nature généreuse et des immenses espaces, l’Inde est une destination idéale pour les activités sportives. Les aventuriers auront le choix de randonner au milieu de paysages aux mille couleurs à des hauteurs vertigineuses ou de pratiquer du rafting. Pour s’immerger pleinement dans la culture indienne, assistez au pèlerinage de Kumbh Mela, le plus grand rassemblement religieux du monde. Enfin, haut lieu de spiritualité, l’Inde vous accueille sur ses terres saintes pour méditer et effectuer un véritable voyage intérieur. Partez aussi découvrir ou approfondir la pratique du yoga, originaire d’Inde.
 
-Odysway vous propose également de [partir à la découverte de l'Arunachal Pradesh](https://odysway.com/voyages/inde-arunachal-pradesh), une région encore méconnue au nord-est du pays.
+Odysway vous propose également de partir à la découverte de l'Arunachal Pradesh, une région encore méconnue au nord-est du pays.
 ::

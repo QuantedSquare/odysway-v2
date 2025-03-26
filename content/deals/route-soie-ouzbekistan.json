@@ -1,14 +1,14 @@
 {
   "title": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
   "slug": "route-soie-ouzbekistan",
-  "ISO": "UZ",
+  "iso": "UZ",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/route-soie-ouzbekistan/o08YedTuTO2GxYxdml4H",
+    "alt": "o08YedTuTO2GxYxdml4H"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/route-soie-ouzbekistan/SfQmJ3zS2W7BSsylNSwN.jpg",
+    "alt": "SfQmJ3zS2W7BSsylNSwN"
   },
   "country": "Ouzbékistan",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 140,
       "privatized": false,
       "flyTicketPrice": 600

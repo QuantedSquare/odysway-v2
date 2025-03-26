@@ -91,7 +91,6 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('voyages').path(route.path).first()
 })
-
 const isVideoAdded = computed(() => {
   return page.value.body.value[0].length > 4
 })

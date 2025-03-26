@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-02-15 02:39:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg"
+displayedImg: "/images/blogs/La-notation-ecologique-des-voyages-Odysway-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg"
+image-src: "/images/blogs/La-notation-ecologique-des-voyages-Odysway-1.jpg"
 ---
 #publication-date
 15 février 2024
@@ -31,10 +31,10 @@ La notation écologique des voyages Odysway 🌿
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/2viEWVuS3yADeNQPWMHg"
+image-src: "/images/blogs/La-notation-ecologique-des-voyages-Odysway-1.jpg"
 ---
 #content
-Odysway a développé une échelle de quatre niveaux d'empreinte carbone, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Cette échelle prend en compte les déplacements en transport pour se rendre sur le lieu du voyage et l'empreinte écologique pendant le séjour : ration du déplacement / jours sans transport, nécessite de prendre l'avion ou non, modes de transport utilisés (marche, vélo, train, 4x4..). Cette notation s'inscrit dans le cadre de la [démarche responsable d'Odysway](https://odysway.com/demarche-responsable-odysway), qui vise à limiter l'impact de son activité sur l'environnement.
+Odysway a développé une échelle de quatre niveaux d'empreinte carbone, correspondant à des niveaux d'émissions carbones, de l'impact le plus faible au plus important sur l'environnement. Cette échelle prend en compte les déplacements en transport pour se rendre sur le lieu du voyage et l'empreinte écologique pendant le séjour : ration du déplacement / jours sans transport, nécessite de prendre l'avion ou non, modes de transport utilisés (marche, vélo, train, 4x4..). Cette notation s'inscrit dans le cadre de la démarche responsable d'Odysway, qui vise à limiter l'impact de son activité sur l'environnement.
 
 ## Quatrième et meilleure note écologique : 🌿🌿🌿🌿
 
@@ -44,7 +44,8 @@ Empreinte carbone estimée : 622 kg CO2 pour un séjour de 5 jours en moyenne, p
 
 **::image-container
 ---
-image-src: https://cdn.buttercms.com/Yx1zY7OQQDOtynI9cOUp
+image-src: "/images/blogs/juratourisme_11848a5.jpg-1.jpg"
+alt: juratourisme_11848a5.jpg
 ---
 ::**
 
@@ -52,13 +53,14 @@ image-src: https://cdn.buttercms.com/Yx1zY7OQQDOtynI9cOUp
 
 Ce troisième niveau correspond à un voyage en Europe ou proche Europe (Vol de moins de 4 heures).
 
-**Exemple de voyage** **:** [**Aventures au cœur de la Laponie finlandaise**](https://odysway.com/voyages/voyage-hiver-laponie-finlande) 
+**Exemple de voyage** **:** **Aventures au cœur de la Laponie finlandaise** 
 
 ⏲ Empreinte carbone estimée : 1180 kg CO2 pour un séjour de 8 jours en moyenne, par voyageur.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/1sx5kEzXQGK4JKlgIpzz
+image-src: "/images/blogs/83587045_1516971385132538_60737503182...-1.jpg"
+alt: 83587045_1516971385132538_60737503182...
 ---
 ::
 
@@ -66,13 +68,14 @@ image-src: https://cdn.buttercms.com/1sx5kEzXQGK4JKlgIpzz
 
 Ce deuxième niveau correspond à un voyage où l'on prend un avion long courrier et où l'immersion sur place limite le nombre d'étapes. Le voyageur passe plus de temps au même endroit et l'utilisation de transports motorisés est limité.
 
-**Exemple de voyage** **:** [**Soignez les animaux de la jungle au Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica)
+**Exemple de voyage** **:** **Soignez les animaux de la jungle au Costa Rica**
 
 ⏲ Empreinte carbone estimée : 4815 kg CO2 pour un séjour de 12 jours en moyenne, par voyageur.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/LrwXdA4S5i7YHy1nQWPQ
+image-src: "/images/blogs/costa-rica.png-1.jpg"
+alt: costa rica.png
 ---
 ::
 
@@ -80,13 +83,14 @@ image-src: https://cdn.buttercms.com/LrwXdA4S5i7YHy1nQWPQ
 
 Ce premier niveau correspond à un voyage où l'on prend un avion long courrier et où l'on prend la voiture/4x4/bus sur place à plusieurs reprises. 
 
-**Exemple de voyage :** [Découvrez l’Arunachal Pradesh, l’Inde inconnue.](https://odysway.com/voyages/inde-arunachal-pradesh)
+**Exemple de voyage :** Découvrez l’Arunachal Pradesh, l’Inde inconnue.
 
 ⏲ Empreinte carbone estimée : 4907 kg CO2 pour un séjour de 12 jours en moyenne, par voyageur.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/4bRonumsSweGQSzKQe5C
+image-src: "/images/blogs/arunachal-paysage.jpeg-1.jpg"
+alt: arunachal-paysage.jpeg
 ---
 ::
 

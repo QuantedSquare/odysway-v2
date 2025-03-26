@@ -1,14 +1,14 @@
 {
   "title": "Occupez-vous des animaux de la jungle au Costa Rica",
   "slug": "refuge-animaux-costa-rica",
-  "ISO": "CR",
+  "iso": "CR",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/refuge-animaux-costa-rica/o6NlblcSpaXQieQMFU8a",
+    "alt": "o6NlblcSpaXQieQMFU8a"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/refuge-animaux-costa-rica/6uroDQEDQKOH2l1yVFbu.jpg",
+    "alt": "6uroDQEDQKOH2l1yVFbu"
   },
   "country": "Costa Rica",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -74,8 +74,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -119,8 +119,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -134,8 +134,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -149,8 +149,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -164,8 +164,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -179,8 +179,8 @@
       "bookedPlaces": 4,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -194,8 +194,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -209,8 +209,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -224,8 +224,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -239,8 +239,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -254,8 +254,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -269,8 +269,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800
@@ -284,8 +284,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 105,
       "privatized": false,
       "flyTicketPrice": 800

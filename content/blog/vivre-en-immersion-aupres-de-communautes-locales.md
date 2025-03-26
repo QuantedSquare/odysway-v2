@@ -43,29 +43,31 @@ En vivant en immersion dans une communauté locale, vous montrez tout votre int�
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/XwuxE8eRLG3nKMmkDoCw
+image-src: "/images/blogs/enfants.jpg.jpg"
+alt: enfants.jpg
 ---
 ::
 
-[Partagez le mode de vie des Surmas en Ethiopie.](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma)
+Partagez le mode de vie des Surmas en Ethiopie.
 
 ## Faites une pause humaine et authentique durant votre séjour
 
 Voyager, ce n'est pas faire la course, c'est prendre son temps pour observer tout ce qui nous entoure. Vous ne pourrez pas connaître un pays sans côtoyer les communautés locales. Mais parfois, par timidité ou peur de faire quelque chose de déplacé, nous n'osons pas aller à leur rencontre. Pourtant, les habitants n'attendent que ça ! Vous faire découvrir leur univers, des lieux cachés, goûter à leurs spécialités, ne sont que quelques exemples de ce que vous allez vivre auprès d'eux.  
   
-Pendant votre séjour, accordez-vous plusieurs jours hors des sentiers battus pour vous immerger auprès d'une famille ou d'un village. Vous partez par exemple en Mongolie ? Mettez-vous dans la peau d'un nomade et vivez au rythme d'une famille en plein milieu des steppes. Inoubliable ! Avant de repartir en France après votre trek au Népal, pourquoi ne pas partager et enseigner l'une de vos compétences ou votre passion à des [enfants bouddhistes dans un monastère](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal) ? Autant de possibilités pour enrichir votre voyage et revenir chez vous avec des souvenirs à jamais gravés dans votre tête.
+Pendant votre séjour, accordez-vous plusieurs jours hors des sentiers battus pour vous immerger auprès d'une famille ou d'un village. Vous partez par exemple en Mongolie ? Mettez-vous dans la peau d'un nomade et vivez au rythme d'une famille en plein milieu des steppes. Inoubliable ! Avant de repartir en France après votre trek au Népal, pourquoi ne pas partager et enseigner l'une de vos compétences ou votre passion à des enfants bouddhistes dans un monastère ? Autant de possibilités pour enrichir votre voyage et revenir chez vous avec des souvenirs à jamais gravés dans votre tête.
 
   
 
 ## Consultez dès à présent nos voyages auprès des communautés locales
 
-Allez au-devant des communautés locales, oui, mais où et comment ? Pour vous accompagner dans ce projet, Odysway propose plusieurs expériences partout dans le monde. En Asie, en Amérique du Sud ou en Afrique, choisissez celle qui correspond le plus à vos envies : par exemple, [chevaucher à la rencontre des nomades en Mongolie](https://odysway.com/voyages/rencontre-nomades-mongolie), [voyager avec un chamane au Pérou](https://odysway.com/voyages/voyage-chamanique-perou), [voyager sur la terre des premiers hommes en Éthiopie](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma)... Et le plus difficile sera de choisir car nos expériences sont toutes uniques ! Pour vous aider à faire votre choix, nous sommes à votre disposition pour répondre à toutes vos questions. N'hésitez pas à nous solliciter !
+Allez au-devant des communautés locales, oui, mais où et comment ? Pour vous accompagner dans ce projet, Odysway propose plusieurs expériences partout dans le monde. En Asie, en Amérique du Sud ou en Afrique, choisissez celle qui correspond le plus à vos envies : par exemple, chevaucher à la rencontre des nomades en Mongolie, voyager avec un chamane au Pérou, voyager sur la terre des premiers hommes en Éthiopie... Et le plus difficile sera de choisir car nos expériences sont toutes uniques ! Pour vous aider à faire votre choix, nous sommes à votre disposition pour répondre à toutes vos questions. N'hésitez pas à nous solliciter !
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/eFjy0oUiSNCOkCKgRZK8
+image-src: "/images/blogs/eFjy0oUiSNCOkCKgRZK8-1742840913429.jpg"
+alt: undefined
 ---
 ::
 
-[A la rencontre des nomades en Mongolie.](https://odysway.com/voyages/rencontre-nomades-mongolie)
+A la rencontre des nomades en Mongolie.
 ::

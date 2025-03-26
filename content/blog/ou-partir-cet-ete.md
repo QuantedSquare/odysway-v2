@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-04-10 14:53:00+00:00"
 tags: "été, séjour, vacances, voyage"
 categories: "ou partir cet été, vacances d'été"
-displayedImg: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
+displayedImg: "/images/blogs/Ou-partir-cet-ete.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
+image-src: "/images/blogs/Ou-partir-cet-ete.jpg"
 ---
 #publication-date
 10 avril 2023
@@ -31,7 +31,7 @@ Ou partir cet été ?
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
+image-src: "/images/blogs/Ou-partir-cet-ete.jpg"
 ---
 #content
 ## Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons.
@@ -42,7 +42,8 @@ image-src: "https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/iqDlTARYTAqP6QpCWsP9
+image-src: "/images/blogs/iqDlTARYTAqP6QpCWsP9-1742840635767.jpg"
+alt: undefined
 ---
 ::
 
@@ -52,27 +53,30 @@ Le Portugal est un pays ensoleillé et chaleureux qui est parfait pour une escap
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8Ncwcu6JQAeEDn71GZ4e
+image-src: "/images/blogs/8Ncwcu6JQAeEDn71GZ4e-1742840636291.jpg"
+alt: undefined
 ---
 ::
 
-La Finlande est une [destination de choix pour les amateurs de nature et d'aventures](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Article+Blog&utm_medium=Article+de+blog+%2F+ou+partir+cet+%C3%A9t%C3%A9&utm_campaign=finlande). Situé en Scandinavie, ce pays offre une beauté naturelle à couper le souffle avec ses lacs cristallins, ses forêts luxuriantes et ses paysages arctiques magnifiques. Les voyageurs y trouveront une multitude d'activités pour découvrir la nature, telles que l'observation des ours bruns, des randonnées en montagne ou dans les forêts, ainsi que des balades en canoë sur les lacs majestueux. Les nuits d'été sont idéales pour admirer les aurores boréales, un spectacle céleste unique en son genre. La Finlande offre également une riche culture locale, avec des traditions telles que les bains de sauna et les festivals de musique. Que vous cherchiez à explorer la nature ou à découvrir la culture locale, la Finlande est une destination inoubliable pour tous les types de voyageurs.
+La Finlande est une destination de choix pour les amateurs de nature et d'aventures. Situé en Scandinavie, ce pays offre une beauté naturelle à couper le souffle avec ses lacs cristallins, ses forêts luxuriantes et ses paysages arctiques magnifiques. Les voyageurs y trouveront une multitude d'activités pour découvrir la nature, telles que l'observation des ours bruns, des randonnées en montagne ou dans les forêts, ainsi que des balades en canoë sur les lacs majestueux. Les nuits d'été sont idéales pour admirer les aurores boréales, un spectacle céleste unique en son genre. La Finlande offre également une riche culture locale, avec des traditions telles que les bains de sauna et les festivals de musique. Que vous cherchiez à explorer la nature ou à découvrir la culture locale, la Finlande est une destination inoubliable pour tous les types de voyageurs.
 
 ### Le Costa Rica
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/gMOkN1KfTZOdYfDCuGgp
+image-src: "/images/blogs/gMOkN1KfTZOdYfDCuGgp-1742840636817.jpg"
+alt: undefined
 ---
 ::
 
-Le Costa Rica est une destination incontournable pour les amoureux de la nature. Situé en Amérique centrale, ce pays est célèbre pour sa biodiversité incroyable et sa nature luxuriante. Les voyageurs peuvent explorer les volcans, les plages et les forêts tropicales du Costa Rica, où ils peuvent découvrir une grande variété d'animaux sauvages tels que les singes hurleurs, les toucans et les paresseux. Pour les plus engagés, il est possible de [participer à des voyages solidaires](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=Article+Blog&utm_medium=Article+de+blog+%2F+ou+partir+cet+%C3%A9t%C3%A9&utm_campaign=Costa+rica) dans des centres de protection des animaux sur plusieurs jours et de contribuer ainsi à leur préservation. La gastronomie locale est également un aspect à ne pas manquer, avec des plats traditionnels tels que le "gallo pinto" et des fruits tropicaux frais comme la papaye et l'ananas. Le Costa Rica est également un endroit idéal pour pratiquer des activités telles que la randonnée, le surf et la plongée. Que vous cherchiez à vous reconnecter avec la nature ou à vivre une expérience de voyage responsable, le Costa Rica est une destination qui saura vous séduire.
+Le Costa Rica est une destination incontournable pour les amoureux de la nature. Situé en Amérique centrale, ce pays est célèbre pour sa biodiversité incroyable et sa nature luxuriante. Les voyageurs peuvent explorer les volcans, les plages et les forêts tropicales du Costa Rica, où ils peuvent découvrir une grande variété d'animaux sauvages tels que les singes hurleurs, les toucans et les paresseux. Pour les plus engagés, il est possible de participer à des voyages solidaires dans des centres de protection des animaux sur plusieurs jours et de contribuer ainsi à leur préservation. La gastronomie locale est également un aspect à ne pas manquer, avec des plats traditionnels tels que le "gallo pinto" et des fruits tropicaux frais comme la papaye et l'ananas. Le Costa Rica est également un endroit idéal pour pratiquer des activités telles que la randonnée, le surf et la plongée. Que vous cherchiez à vous reconnecter avec la nature ou à vivre une expérience de voyage responsable, le Costa Rica est une destination qui saura vous séduire.
 
 ### La Croatie
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/xRfwvIltTLGRyX38iFUE
+image-src: "/images/blogs/Ou-partir-cet-ete.jpg"
+alt: undefined
 ---
 ::
 
@@ -82,13 +86,14 @@ La Croatie est un petit pays d'Europe de l'Est qui offre une côte magnifique bo
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/LCuk8THRNCt9bvL0neNd
+image-src: "/images/blogs/LCuk8THRNCt9bvL0neNd-1742840637333.jpg"
+alt: undefined
 ---
 ::
 
-Le Kirghizstan est une [destination idéale pour les voyageurs en quête d'aventure,](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=Article+Blog&utm_medium=Article+de+blog+%2F+ou+partir+cet+%C3%A9t%C3%A9&utm_campaign=kirghizistan) de nature et de culture. Situé en Asie centrale, ce pays est connu pour ses paysages spectaculaires de montagnes majestueuses, de lacs cristallins et de vastes steppes. Les voyageurs peuvent rencontrer des nomades kirghizes et découvrir leur mode de vie traditionnel en participant à des cours de cuisine locale, à des cérémonies religieuses et en apprenant des techniques artisanales de fabrication telles que la confection de tapis, de vêtements et de céramiques. Les amateurs de randonnée peuvent explorer les montagnes du Tian Shan et les parcs naturels du Kirghizstan, qui abritent une faune et une flore riches et variées. Les lacs alpins, tels que le lac Issyk-Kul, offrent des possibilités de baignade et de sports nautiques en été. Le Kirghizstan est également un endroit idéal pour découvrir une culture unique et authentique, notamment à travers la musique traditionnelle, les danses et les festivals locaux. Que vous cherchiez à vivre une expérience de voyage authentique, à explorer des paysages à couper le souffle ou à découvrir une culture locale riche, le Kirghizstan est une destination de voyage inoubliable.
+Le Kirghizstan est une destination idéale pour les voyageurs en quête d'aventure, de nature et de culture. Situé en Asie centrale, ce pays est connu pour ses paysages spectaculaires de montagnes majestueuses, de lacs cristallins et de vastes steppes. Les voyageurs peuvent rencontrer des nomades kirghizes et découvrir leur mode de vie traditionnel en participant à des cours de cuisine locale, à des cérémonies religieuses et en apprenant des techniques artisanales de fabrication telles que la confection de tapis, de vêtements et de céramiques. Les amateurs de randonnée peuvent explorer les montagnes du Tian Shan et les parcs naturels du Kirghizstan, qui abritent une faune et une flore riches et variées. Les lacs alpins, tels que le lac Issyk-Kul, offrent des possibilités de baignade et de sports nautiques en été. Le Kirghizstan est également un endroit idéal pour découvrir une culture unique et authentique, notamment à travers la musique traditionnelle, les danses et les festivals locaux. Que vous cherchiez à vivre une expérience de voyage authentique, à explorer des paysages à couper le souffle ou à découvrir une culture locale riche, le Kirghizstan est une destination de voyage inoubliable.
 
 Que vous soyez à la recherche de vacances ensoleillées, de destinations aventureuses ou de découvertes culturelles inoubliables, ces 5 destinations offrent une grande variété d'expériences pour tous les amateurs du voyage.
 
-Contactez notre agence de voyage [Odysway](https://odysway.com/?utm_source=Article+Blog&utm_medium=Article+de+blog+%2F+ou+partir+cet+%C3%A9t%C3%A9&utm_campaign=acceuil) pour planifier votre prochaine aventure et profitez au maximum de votre été !
+Contactez notre agence de voyage Odysway pour planifier votre prochaine aventure et profitez au maximum de votre été !
 ::

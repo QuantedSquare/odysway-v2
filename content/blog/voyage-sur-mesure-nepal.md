@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-05-27 07:11:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "https://cdn.buttercms.com/UvFW94qlQLmskEQkHlub"
+displayedImg: "/images/blogs/Voyage-sur-Mesure-au-Nepal-:-Aventure-Personnalisee-et-Immersive-dans-l'Himalaya-1.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/UvFW94qlQLmskEQkHlub"
+image-src: "/images/blogs/Voyage-sur-Mesure-au-Nepal-:-Aventure-Personnalisee-et-Immersive-dans-l'Himalaya-1.jpg"
 ---
 #publication-date
 27 mai 2024
@@ -31,7 +31,7 @@ Le Népal, un pays niché au cœur de l'Himalaya, est une destination de choix p
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/UvFW94qlQLmskEQkHlub"
+image-src: "/images/blogs/Voyage-sur-Mesure-au-Nepal-:-Aventure-Personnalisee-et-Immersive-dans-l'Himalaya-1.jpg"
 ---
 #content
 Le Népal, un pays niché au cœur de l'Himalaya, est une destination de choix pour les voyageurs en quête d'aventures authentiques et immersives. Entre ses montagnes majestueuses, ses vallées verdoyantes et ses villages pittoresques, le Népal offre un cadre idéal pour des voyages sur mesure. Que vous soyez un randonneur chevronné, un passionné de culture ou simplement en quête de sérénité, un voyage sur mesure au Népal avec Odysway vous promet une expérience unique et inoubliable.
@@ -44,11 +44,12 @@ L'un des principaux avantages d'un voyage sur mesure est la possibilité de cré
 
 Pour les amateurs de trekking et de randonnée, le Népal est une véritable terre promise. Avec ses sommets emblématiques comme l'Everest, l'Annapurna et le Manaslu, le pays offre certains des treks les plus spectaculaires au monde. Un voyage sur mesure vous permet de choisir des itinéraires adaptés à votre niveau de condition physique et à vos préférences. Vous pouvez opter pour des treks populaires comme le Circuit de l'Annapurna ou le Camp de Base de l'Everest, ou choisir des sentiers moins fréquentés pour une expérience plus intime et exclusive. Quoi qu'il en soit, chaque pas sur ces chemins vous rapproche des panoramas à couper le souffle et des rencontres inoubliables avec les populations locales.
 
-Pour échanger sur votre projet de voyage, prenez rendez-vous avec l'un de nos conseillers. [Prendre rendez-vous](https://calendly.com/odysway/15min).
+Pour échanger sur votre projet de voyage, prenez rendez-vous avec l'un de nos conseillers. Prendre rendez-vous.
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/hZxQvUu5Tq67yEJL34sA
+image-src: "/images/blogs/Trek-Nepal.webp-1.jpg"
+alt: Trek Népal.webp
 ---
 ::
 
@@ -60,7 +61,7 @@ Le Népal est également un lieu de rencontre avec des cultures riches et varié
 
 Pour ceux qui recherchent l'inédit, un voyage sur mesure au Népal offre la possibilité d'explorer des régions moins connues mais tout aussi magnifiques. Les vallées de Langtang et de Mustang, par exemple, sont des joyaux cachés qui offrent des paysages époustouflants et une tranquillité incomparable. Vous pouvez également découvrir le parc national de Bardia, un paradis pour les amoureux de la faune, où vous aurez peut-être la chance d'apercevoir des tigres, des rhinocéros et des éléphants. En sortant des sentiers battus, vous vivrez des aventures uniques et authentiques, loin des foules de touristes.
 
-Pour découvrir tous nos voyages existants au Népal : [https://odysway.com/destinations/nepal](https://odysway.com/destinations/nepal).
+Pour découvrir tous nos voyages existants au Népal : https://odysway.com/destinations/nepal.
 
 ## Bien-être et Spiritualité : Ressourcez Votre Corps et Votre Esprit
 
@@ -68,7 +69,8 @@ Le Népal est un lieu propice au bien-être et à la spiritualité. De nombreux 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/U6xKSdNhRGeUlB3FtOqY
+image-src: "/images/blogs/Nepal-voyage-sportif.jpg-1.jpg"
+alt: Népal voyage sportif.jpg
 ---
 ::
 
@@ -86,13 +88,14 @@ Odysway s'engage à promouvoir un tourisme responsable et durable. En choisissan
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ri33cZ6SDWQFe36pXaTi
+image-src: "/images/blogs/Nepal_Trekhabitant_Hebergement.webp-2.jpg"
+alt: Nepal_Trekhabitant_Hebergement.webp
 ---
 ::
 
 ## Témoignages de Voyageurs : Des Expériences Inoubliables
 
-Les voyageurs qui ont opté pour un voyage sur mesure au Népal avec Odysway partagent des témoignages de leurs expériences. Vous pouvez les découvrir ici [https://fr.trustpilot.com/review/odysway.com](https://fr.trustpilot.com/review/odysway.com).
+Les voyageurs qui ont opté pour un voyage sur mesure au Népal avec Odysway partagent des témoignages de leurs expériences. Vous pouvez les découvrir ici https://fr.trustpilot.com/review/odysway.com.
 
 Par exemple, **Carole** : "Première expérience de collaboration avec l’agence Odysway en ce début d’année (publicité Facebook) et la réservation de pas moins de 3 séjours « d’un coup » :-) pour agrémenter en partie et ponctuellement mon périple de 3 mois entre l’Inde 🇮🇳 le Népal 🇳🇵 et la Mongolie 🇲🇳 pendant ce printemps. Concernant le suivi, les conseils et l’accompagnement par l’agence Odysway (principalement par Lucie et ponctuellement par Coralie et Romain), je suis clairement très satisfaite car ils sont à l’écoute, sérieux et réactifs. On se sent bien encadrés. Ce sont de bons professionnels.  
 Concernant les séjours dans ces trois pays, les programmes ont été tenus, les prestations qualitatives, les activités étaient mémorables (festival des couleurs Holi et cours de cuisine en Inde, trek et présence au monastère boudhiste au Népal, initiation découverte chaman et balade à cheval en Mongolie) = soit les expériences immersives que je recherchais en un petit comité ont été les meilleures souvenirs de ces voyages. Les parcours et circuits choisis permettent de se sentir réellement hors des sentiers battus, loin du tourisme de masse et la vie chez l’habitant et les locaux (nomades mongols) passionnante et authentique. Les équipes prestataires sur place en local sont exceptionnelles. Les guides passionnants, à l’écoute et aux petits soins, très soucieux de notre bien-être et les chauffeurs ou porteurs serviables, souriants et dynamiques. Je ne changerai absolument rien, ou peut-être juste quelques petits détails :-), mais pour que ce soit juste « plus que parfait » car cela mérite assurément un 5 étoiles 🌟 ! Je recommande et je suis prête à repartir avec Odysway quand j’aurai de prochaines vacances. En attendant, retour au travail, avec des souvenirs, plein la tête et dans le cœur."
@@ -101,5 +104,5 @@ Concernant les séjours dans ces trois pays, les programmes ont été tenus, les
 
 Un voyage sur mesure au Népal avec Odysway est bien plus qu'un simple voyage. C'est une aventure personnalisée et immersive qui vous permet de découvrir le Népal dans toute sa splendeur. Que vous soyez un randonneur passionné, un amateur de culture, un chercheur de bien-être ou un explorateur intrépide, Odysway crée un itinéraire qui répond à vos envies et à vos besoins. En choisissant Odysway, vous voyagez en toute sérénité, avec la certitude de vivre des expériences authentiques et enrichissantes. Préparez-vous à découvrir le Népal de manière unique et mémorable, et à revenir chez vous avec des souvenirs impérissables.
 
-Pour en savoir plus et organiser votre voyage sur mesure au Népal, prenez rendez-vous [via ce lien](https://calendly.com/odysway/15min) avec l'un de nos conseillers.
+Pour en savoir plus et organiser votre voyage sur mesure au Népal, prenez rendez-vous via ce lien avec l'un de nos conseillers.
 ::

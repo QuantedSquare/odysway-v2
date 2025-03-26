@@ -1,14 +1,14 @@
 {
   "title": "Dans la peau d’un Ranger : immersion au cœur d’une réserve en Namibie",
   "slug": "voyage-immersion-namibie",
-  "ISO": "NAM",
+  "iso": "NAM",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/voyage-immersion-namibie/mOBzi9xlS42WnQd5sgmo",
+    "alt": "mOBzi9xlS42WnQd5sgmo"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/voyage-immersion-namibie/rSJBFwDWRCuG3kwHgHbX.jpg",
+    "alt": "rSJBFwDWRCuG3kwHgHbX"
   },
   "country": "Namibie",
   "zoneChapka": 2,
@@ -29,8 +29,8 @@
       "bookedPlaces": 6,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -44,8 +44,8 @@
       "bookedPlaces": 2,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -59,8 +59,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -74,8 +74,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -89,8 +89,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850
@@ -104,8 +104,8 @@
       "bookedPlaces": 5,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 0,
       "privatized": false,
       "flyTicketPrice": 850

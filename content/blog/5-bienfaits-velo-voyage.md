@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-05-20 15:50:00+00:00"
 tags: "Asie, Grands espaces, Sri Lanka, Transports insolites"
 categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte"
-displayedImg: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
+displayedImg: "/images/blogs/5-bienfaits-du-velo-en-voyage.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
+image-src: "/images/blogs/5-bienfaits-du-velo-en-voyage.jpg"
 ---
 #publication-date
 20 mai 2019
@@ -31,18 +31,19 @@ image-src: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/6plbi2gNQI6cTmtfAKZX?1612256179774"
+image-src: "/images/blogs/5-bienfaits-du-velo-en-voyage.jpg"
 ---
 #content
 De nos jours, il n’est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport à part entière. En plus de ne pas nuire à l’environnement, il permet une tout autre approche du voyage. **Découvrons 5 bienfaits du vélo en voyage.**
 
 ## 1. **Le slow tourisme, l’un des bienfaits du vélo en voyage**
 
-Le **[slow tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue)**, voilà un terme que l’on entend de plus en plus. En voyage, il s’agit de **prendre son temps**, de redécouvrir les plaisirs simples, de profiter pleinement de l’environnement qui nous entoure. Fini les vacances à courir à droite et à gauche pour voir le plus de choses possible. Désormais, la qualité prévaut sur la quantité. C’est sans conteste l’un des **bienfaits du vélo en voyage**.
+Le **slow tourisme**, voilà un terme que l’on entend de plus en plus. En voyage, il s’agit de **prendre son temps**, de redécouvrir les plaisirs simples, de profiter pleinement de l’environnement qui nous entoure. Fini les vacances à courir à droite et à gauche pour voir le plus de choses possible. Désormais, la qualité prévaut sur la quantité. C’est sans conteste l’un des **bienfaits du vélo en voyage**.
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/sbdKGfNHTFyRCsagb03G
+image-src: "/images/blogs/sbdKGfNHTFyRCsagb03G-1742841102169.jpg"
+alt: 
 ---
 ::_
 
@@ -54,7 +55,8 @@ _Prendre son vélo et partir à la découverte de paysages magnifiques_
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/XQ5SIvc3STeKtn3MQSZO
+image-src: "/images/blogs/XQ5SIvc3STeKtn3MQSZO-1742841102706.jpg"
+alt: 
 ---
 ::_
 
@@ -70,7 +72,8 @@ Mais les belles rencontres ne sont pas uniquement humaines. Le fait d’être à
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8kcHngDnRWyMI2a8PLhE
+image-src: "/images/blogs/8kcHngDnRWyMI2a8PLhE-1742841103241.jpg"
+alt: 
 ---
 ::
 
@@ -82,7 +85,8 @@ _Le vélo : un mode de transport écologique_
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/8oPgVeRTW2Kv7cKn8JMu
+image-src: "/images/blogs/8oPgVeRTW2Kv7cKn8JMu-1742841103766.jpg"
+alt: 
 ---
 ::
 
@@ -94,7 +98,8 @@ Loin d’être une activité solitaire, **le vélo se pratique aussi et surtout
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/rbkW4DVSoaUDjfjQWSFg
+image-src: "/images/blogs/rbkW4DVSoaUDjfjQWSFg-1742841104299.jpg"
+alt: 
 ---
 ::_
 
@@ -108,7 +113,8 @@ Alors, faire du vélo en voyage, ça vous tente ?
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/zruYwmXGQXaJtX2n3nCF
+image-src: "/images/blogs/zruYwmXGQXaJtX2n3nCF-1742841104858.jpg"
+alt: 
 ---
 ::_
 
@@ -124,9 +130,9 @@ Vous serez **libre d’aller à votre rythme** durant votre séjour, toutefois
 
 Chez Odysway, nous pensons que la magie du voyage s’opère quand on prend son temps, sans contraintes, que l’on découvre un pays à travers ses habitants, leur quotidien et coutumes. Limiter le nombre d’étapes dans son voyage, accepter de visiter moins, pour vivre plus.
 
-[Découvrir le concept Odysway.](https://odysway.com/concept)
+Découvrir le concept Odysway.
 
 ## Découvrez nos voyages en immersion dans la nature !
 
-Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
+Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::

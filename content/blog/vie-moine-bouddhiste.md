@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-12-06 11:01:00+00:00"
 tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
 categories: "Depassement de soi"
-displayedImg: "https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU"
+displayedImg: "/images/blogs/La-vie-d'un-moine-bouddhiste.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU"
+image-src: "/images/blogs/La-vie-d'un-moine-bouddhiste.jpg"
 ---
 #publication-date
 6 décembre 2019
@@ -31,12 +31,12 @@ La vie d'un moine bouddhiste
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/PmZIISCHRhieDCWIHGSU"
+image-src: "/images/blogs/La-vie-d'un-moine-bouddhiste.jpg"
 ---
 #content
 Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie où les moines en sont la parfaite représentation. Particulièrement respecté par la population, **le moine bouddhiste mène une vie simple où la méditation tient une place importante**. Découvrons en détail la vie de ces moines.
 
-Nous vous invitons à lire notre article [sur le top 5 des destinations pour un voyage spirituel.](https://odysway.com/top-5-destinations-voyage-spirituel)
+Nous vous invitons à lire notre article sur le top 5 des destinations pour un voyage spirituel.
 
 ## Un mode de vie simple
 
@@ -56,7 +56,8 @@ Que ce soit au Népal, en Thaïlande ou ailleurs, **un moine bouddhiste s’eng
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/CGVer8LxS7GvUmDrWFnp
+image-src: "/images/blogs/CGVer8LxS7GvUmDrWFnp-1742841017493.jpg"
+alt: 
 ---
 ::
 
@@ -68,7 +69,8 @@ Quel que soit le pays, le quotidien d’un moine bouddhiste est relativement le 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/LxcfIjQCQ02CmrNV7USG
+image-src: "/images/blogs/LxcfIjQCQ02CmrNV7USG-1742841018018.jpg"
+alt: 
 ---
 ::
 
@@ -82,13 +84,14 @@ Dans les monastères, **il est fréquent de voir des enfants vivre auprès des 
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/ZdBsKgmpTtCtcu3XVPAV
+image-src: "/images/blogs/ZdBsKgmpTtCtcu3XVPAV-1742841018589.jpg"
+alt: 
 ---
 ::
 
-Odysway vous propose de vivre en immersion dans un [monastère au Népal, pour enseigner votre passion à des enfants bouddhistes](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=Vie_Moine_Bouddhiste). Vous pourrez ainsi participer à l’enseignement des enfants apprentis moines !
+Odysway vous propose de vivre en immersion dans un monastère au Népal, pour enseigner votre passion à des enfants bouddhistes. Vous pourrez ainsi participer à l’enseignement des enfants apprentis moines !
 
 ## Se recentrer grâce au voyage initiatique
 
-Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
+Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos voyages initiatiques.
 ::

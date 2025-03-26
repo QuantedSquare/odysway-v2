@@ -14,12 +14,12 @@ published: false
 publishedAt: "2020-03-06 13:51:00+00:00"
 tags: "Communautés locales, Grands espaces, Sport"
 categories: "Benefices locaux"
-displayedImg: "https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh"
+displayedImg: "/images/blogs/Le-slow-tourisme-:-un-mode-de-voyage-de-plus-en-plus-en-vogue.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh"
+image-src: "/images/blogs/Le-slow-tourisme-:-un-mode-de-voyage-de-plus-en-plus-en-vogue.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -33,14 +33,14 @@ Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/yofM2WkORbitnz8VrtLh"
+image-src: "/images/blogs/Le-slow-tourisme-:-un-mode-de-voyage-de-plus-en-plus-en-vogue.jpg"
 ---
 #content
 Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un tourisme authentique. Focus sur un mode de voyage de plus en plus en vogue.
 
 ## Le slow tourisme en quelques mots
 
-**Le slow tourisme**, nous en parlions déjà il y a quelques mois dans l’un de nos articles sur [les bienfaits du vélo en voyage](https://odysway.com/5-bienfaits-velo-voyage). Il s’agit d’une nouvelle façon de voyager qui privilégie la qualité à la quantité. Son objectif ? Profiter pleinement de ce qui nous entoure tant au niveau humain qu’environnemental. Prendre le temps de faire des rencontres, de partager, d’échanger, de créer des liens… Mais aussi d’être en harmonie avec la nature en la respectant.
+**Le slow tourisme**, nous en parlions déjà il y a quelques mois dans l’un de nos articles sur les bienfaits du vélo en voyage. Il s’agit d’une nouvelle façon de voyager qui privilégie la qualité à la quantité. Son objectif ? Profiter pleinement de ce qui nous entoure tant au niveau humain qu’environnemental. Prendre le temps de faire des rencontres, de partager, d’échanger, de créer des liens… Mais aussi d’être en harmonie avec la nature en la respectant.
 
 **Le slow tourisme, c’est aussi et surtout laisser place à l’improvisation**. On est bien loin du tourisme de masse où les touristes se pressent pour tout voir sans finalement apprécier (et comprendre) ce qu’ils ont vu.
 
@@ -58,7 +58,8 @@ Comme nous l’avons dit plus haut, pratiquer le slow tourisme c’est prendre s
 
  ::image-container
 ---
-image-src: https://cdn.buttercms.com/uAYWzGTYTQi5OwQOpVys
+image-src: "/images/blogs/uAYWzGTYTQi5OwQOpVys-1742840967384.jpg"
+alt: undefined
 ---
 ::
 
@@ -76,7 +77,7 @@ Toutes ces formes de voyage contribuent à être au plus près de la culture loc
 
 ## Et si c’était la réponse au tourisme de demain ?
 
-Aujourd’hui, l’impact du tourisme sur l’environnement est au cœur de nombreuses préoccupations. Empreinte carbone élevée, destruction des habitats naturels, gaspillage, mise en danger des espèces animales et végétales, pollution… ne sont que quelques exemples des effets néfastes de ce secteur qui compte de plus en plus de voyageurs chaque année. En pratiquant le slow tourisme, vous contribuez à un [tourisme responsable](https://odysway.com/tourisme-responsable-demain) où les hommes et la nature sont respectés. Comment ? En faisant notamment tourner l’économie locale : nourriture, logement, artisanat etc. Mais aussi en étant respectueux de l’environnement en préconisant (lorsque c’est possible) des moyens de transports moins polluants. Des ingrédients essentiels pour voyager de façon éthique.
+Aujourd’hui, l’impact du tourisme sur l’environnement est au cœur de nombreuses préoccupations. Empreinte carbone élevée, destruction des habitats naturels, gaspillage, mise en danger des espèces animales et végétales, pollution… ne sont que quelques exemples des effets néfastes de ce secteur qui compte de plus en plus de voyageurs chaque année. En pratiquant le slow tourisme, vous contribuez à un tourisme responsable où les hommes et la nature sont respectés. Comment ? En faisant notamment tourner l’économie locale : nourriture, logement, artisanat etc. Mais aussi en étant respectueux de l’environnement en préconisant (lorsque c’est possible) des moyens de transports moins polluants. Des ingrédients essentiels pour voyager de façon éthique.
 
 ## A chacun son slow tourisme !
 
@@ -84,5 +85,5 @@ Tout le monde peut pratiquer le slow tourisme. Seul, à deux, entre amis ou en f
 
 ## Séjour Nature : se déconnecter du quotidien
 
-Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
+Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::

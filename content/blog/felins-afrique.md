@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-12-17 16:24:00+00:00"
 tags: "Afrique, Afrique du Sud, Animaux, Famille, Grands espaces"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit"
+displayedImg: "/images/blogs/Les-felins-d'Afrique.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit"
+image-src: "/images/blogs/Les-felins-d'Afrique.jpg"
 ---
 #publication-date
 17 décembre 2019
@@ -31,7 +31,7 @@ Les félins d'Afrique
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/zOz0Rd2rQ0elVYXphjit"
+image-src: "/images/blogs/Les-felins-d'Afrique.jpg"
 ---
 #content
 Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de **nombreux prédateurs sauvages : les félins d'Afrique**. Parmi ces félidés, on trouve bien sur le lion, le leopard et le guépard, mais également d'autres espèces moins connues, qui sont parfois menacées. Odysway vous présente **une sélection des félins d'Afrique, des grands aux plus petits**.
@@ -40,7 +40,8 @@ Avec une superficie de 30,4 millions de km2, le continent africain est le troisi
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/bFaumm71TwiLusdhJaAq
+image-src: "/images/blogs/bFaumm71TwiLusdhJaAq-1742841008027.jpg"
+alt: 
 ---
 ::
 
@@ -52,7 +53,8 @@ Contrairement aux autres félins d'Afrique, le lion vit en meute de 3 a 30 indiv
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/YpPhttTCGv6qWql7buQc
+image-src: "/images/blogs/YpPhttTCGv6qWql7buQc-1742841008543.jpg"
+alt: 
 ---
 ::
 
@@ -62,7 +64,8 @@ Le léopard africain figure parmi les plus grands félins d'Afrique. Il peuple l
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/qQrVkpMKTL6mPN4PRKMD
+image-src: "/images/blogs/qQrVkpMKTL6mPN4PRKMD-1742841009061.jpg"
+alt: 
 ---
 ::
 
@@ -72,7 +75,8 @@ Facilement reconnaissable a sa robe couleur sable mouchetée de noir, le guépar
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/fZpENLkmROuBUADSrMDC
+image-src: "/images/blogs/fZpENLkmROuBUADSrMDC-1742841009585.jpg"
+alt: 
 ---
 ::
 
@@ -82,7 +86,8 @@ Voici un des félins d'Afrique les moins connus : le serval. Caractérise par se
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/VE9NBmCQFeqarH8VwrXw
+image-src: "/images/blogs/VE9NBmCQFeqarH8VwrXw-1742841010104.jpg"
+alt: 
 ---
 ::
 
@@ -92,24 +97,26 @@ Souvent surnomme le "**lynx du désert"**, le caracal se caractérise par ses or
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/nsGqdJRGeXCMcEdBzjJA
+image-src: "/images/blogs/nsGqdJRGeXCMcEdBzjJA-1742841010623.jpg"
+alt: 
 ---
 ::
 
   
-Parmi les félins d'Afrique, il existe plusieurs sous-espèces de chats. Parmi ces petits mammifères qu'on aime voir ronronner, on dénombre le chat dore d'Afrique. C'est un **chat sauvage, parfois assimile au caracal**. Le chat dore est un **félin endémique des forets d'Afrique équatoriale**. Ce félin vit principalement dans les forets humides ou montagneuses. Son alimentation se compose d'oiseaux, de serpents et de petits rongeurs (souris, rats). Comme nombre de félins d'Afrique, le chat dore peut s'attaquer à des proies plus importantes que lui, a l'instar de petites antilopes, de singes, de moutons et de chèvres. Découvrez d'autres animaux en lisant notre article [sur les principaux animaux du Costa Rica.](https://odysway.com/quels-sont-les-principaux-animaux-du-costa-rica)
+Parmi les félins d'Afrique, il existe plusieurs sous-espèces de chats. Parmi ces petits mammifères qu'on aime voir ronronner, on dénombre le chat dore d'Afrique. C'est un **chat sauvage, parfois assimile au caracal**. Le chat dore est un **félin endémique des forets d'Afrique équatoriale**. Ce félin vit principalement dans les forets humides ou montagneuses. Son alimentation se compose d'oiseaux, de serpents et de petits rongeurs (souris, rats). Comme nombre de félins d'Afrique, le chat dore peut s'attaquer à des proies plus importantes que lui, a l'instar de petites antilopes, de singes, de moutons et de chèvres. Découvrez d'autres animaux en lisant notre article sur les principaux animaux du Costa Rica.
 
 ## Partez vous occuper des félins d'Afrique du Sud
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/fnTY9CwR2Sll9v21MnWg
+image-src: "/images/blogs/fnTY9CwR2Sll9v21MnWg-1742841011137.jpg"
+alt: undefined
 ---
 ::
 
-Odysway vous propose une incroyable [expérience de volontariat, en immersion dans un sanctuaire pour félins.](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=Blog&utm_medium=article&utm_campaign=Felins_Afrique) Au coeur de la nature sud-africaine, vous participerez à un projet de conservation unique. Vous apprendrez à connaitre les grands félins et partagerez des moments inoubliables avec les félin ainsi qu'avec les autres volontaires.
+Odysway vous propose une incroyable expérience de volontariat, en immersion dans un sanctuaire pour félins. Au coeur de la nature sud-africaine, vous participerez à un projet de conservation unique. Vous apprendrez à connaitre les grands félins et partagerez des moments inoubliables avec les félin ainsi qu'avec les autres volontaires.
 
 ## Découvrez nos voyages animaliers 
 
-De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
+De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos voyages animaliers.
 ::

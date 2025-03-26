@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-07-29 13:57:00+00:00"
 tags: "Amerique du Sud, Argentine, Communautés locales, Grands espaces"
 categories: "Depassement de soi"
-displayedImg: "https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691"
+displayedImg: "/images/blogs/Sur-les-traces-des-gauchos-en-Argentine.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691"
+image-src: "/images/blogs/Sur-les-traces-des-gauchos-en-Argentine.jpg"
 ---
 #publication-date
 29 juillet 2019
@@ -31,12 +31,12 @@ Sur les traces des gauchos en Argentine
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/swtFxmXGSjWxL1i4pQsA?1612194085691"
+image-src: "/images/blogs/Sur-les-traces-des-gauchos-en-Argentine.jpg"
 ---
 #content
 Peuple fier aux traditions fortes, **les gauchos peuplent l’Argentine depuis plusieurs siècles**. Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d’Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces de ce peuple à part entière.
 
-Après votre lecture, nous vous invitons à découvrir notre article [sur l'histoire de l'empire inca.](https://odysway.com/empire-inca-origine-apogee-declin)
+Après votre lecture, nous vous invitons à découvrir notre article sur l'histoire de l'empire inca.
 
 ## Les gauchos d’Argentine : des origines qui remontent au XVIIe siècle
 
@@ -48,7 +48,8 @@ A cette époque, un grand nombre de chevaux sauvages et de bovins envahissent le
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/4UDlyAIaRAChNZ9y0w5I
+image-src: "/images/blogs/4UDlyAIaRAChNZ9y0w5I-1742841058005.jpg"
+alt: 
 ---
 ::_
 
@@ -60,7 +61,8 @@ Leur mode de vie est plutôt austère, éloigné de toute civilisation. **Les g
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/3ttUtxfKRay7yRsUyp2k
+image-src: "/images/blogs/3ttUtxfKRay7yRsUyp2k-1742841058533.jpg"
+alt: 
 ---
 ::
 
@@ -78,11 +80,12 @@ Même si leur mode de vie initial a disparu, **la culture et les traditions des
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/GYiejwURvynYsB7hq14V
+image-src: "/images/blogs/GYiejwURvynYsB7hq14V-1742841059051.jpg"
+alt: 
 ---
 ::
 
 ## Partez à la découverte de la nature avec Odysway!
 
-Odysway vous propose plusieurs expériences en immersion dans des paysages à couper le souffle. Vous les trouverez au coeur de [la thématique "voyage nature" de notre site !](https://odysway.com/thematiques/voyage-nature)
+Odysway vous propose plusieurs expériences en immersion dans des paysages à couper le souffle. Vous les trouverez au coeur de la thématique "voyage nature" de notre site !
 ::

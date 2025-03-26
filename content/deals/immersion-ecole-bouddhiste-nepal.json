@@ -1,14 +1,14 @@
 {
   "title": "Au cœur du Népal entre randonnées et immersion dans un monastère",
   "slug": "immersion-ecole-bouddhiste-nepal",
-  "ISO": "NP",
+  "iso": "NP",
   "imgSrc2": {
-    "src": "/images/IMG_20250101_161727_049.jpg",
-    "alt": "Petits chiens"
+    "src": "/images/voyages/immersion-ecole-bouddhiste-nepal/FTeXsfE0RQGf9KTP9qOv",
+    "alt": "FTeXsfE0RQGf9KTP9qOv"
   },
   "imgSrc1": {
-    "src": "/images/iStock-1336944149.webp",
-    "alt": "Fleur Japons"
+    "src": "/images/voyages/immersion-ecole-bouddhiste-nepal/l42mMGfJRjTieCyWUowe.jpg",
+    "alt": "l42mMGfJRjTieCyWUowe"
   },
   "country": "Népal",
   "zoneChapka": 3,
@@ -29,8 +29,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -44,8 +44,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -59,8 +59,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -74,8 +74,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -89,8 +89,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -104,8 +104,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -119,8 +119,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -134,8 +134,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -149,8 +149,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -164,8 +164,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -179,8 +179,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -194,8 +194,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -209,8 +209,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -224,8 +224,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -239,8 +239,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -254,8 +254,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -269,8 +269,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -284,8 +284,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -299,8 +299,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -314,8 +314,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650
@@ -329,8 +329,8 @@
       "bookedPlaces": 0,
       "earlyBird": true,
       "promoEarlyBird": 80,
-      "promoLastMinute": 0,
       "lastMinute": false,
+      "promoLastMinute": 0,
       "promo": 115,
       "privatized": false,
       "flyTicketPrice": 650

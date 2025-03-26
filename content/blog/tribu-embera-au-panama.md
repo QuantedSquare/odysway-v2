@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-05-03 13:33:00+00:00"
 tags: "Amerique Centrale, Communautés locales, Panama"
 categories: "Depassement de soi"
-displayedImg: "https://cdn.buttercms.com/Io5NKYJQwyuU5xa2nYWA?1612267223650"
+displayedImg: "/images/blogs/Une-immersion-authentique-avec-une-tribu-Embera-au-Panama.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/Io5NKYJQwyuU5xa2nYWA?1612267223650"
+image-src: "/images/blogs/Une-immersion-authentique-avec-une-tribu-Embera-au-Panama.jpg"
 ---
 #publication-date
 3 mai 2019
@@ -31,12 +31,12 @@ Une immersion authentique avec une tribu Embera au Panama
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/Io5NKYJQwyuU5xa2nYWA?1612267223650"
+image-src: "/images/blogs/Une-immersion-authentique-avec-une-tribu-Embera-au-Panama.jpg"
 ---
 #content
 En mars 2019, l’équipe d’Odysway est partie à la recherche de nouvelles expériences de voyage au Panama. L’objectif était de trouver des expériences authentiques, en immersion avec la tribu Embera du Panama.
 
-Pour poursuivre votre lecture, nous vous invitions ensuite de consulter notre article [sur l'immersion chez les populations du grand rift Africain.](https://odysway.com/immersion-chez-les-populations-du-grand-rift-africain)
+Pour poursuivre votre lecture, nous vous invitions ensuite de consulter notre article sur l'immersion chez les populations du grand rift Africain.
 
 ## L’histoire de la tribu Embera au Panama
 
@@ -44,7 +44,8 @@ Le Panama abrite trois communautés amérindiennes distinctes. Les Guaymis viven
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/MRMyYC1zRsOyDw6BiGLo
+image-src: "/images/blogs/MRMyYC1zRsOyDw6BiGLo-1742841119069.jpg"
+alt: 
 ---
 ::
 
@@ -56,13 +57,14 @@ Dans les années 1980, les Emberas vivaient encore complètement isolés du rest
 
 Durant cette assemblée, les représentants des deux partis se sont accordés sur la création de deux « comarcas » dans la province du Darién, à l’Est du Panama. Les « comarcas » sont des territoires protégés. Le gouvernement a laissé la propriété de ces terres aux tribus Embera. En échange, les Emberas se sont engagés à protéger ce territoire, le parc naturel du Darién et les espèces protégées qui y vivent.
 
-Si vous souhaitez en savoir plus sur ce texte de loi, vous pouvez le lire en cliquent sur [ce lien](http://www.utp.ac.pa/documentos/2010/pdf/EMBERA.pdf) (en espagnol).
+Si vous souhaitez en savoir plus sur ce texte de loi, vous pouvez le lire en cliquent sur ce lien (en espagnol).
 
 ## Où vivent les tribus Embera aujourd’hui ?
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/m6AXuuo9SSyD1PVhXIDP
+image-src: "/images/blogs/m6AXuuo9SSyD1PVhXIDP-1742841119648.jpg"
+alt: 
 ---
 ::
 
@@ -76,11 +78,12 @@ L’objectif initial de la délocalisation de ces Emberas était de créer des v
 
 Le problème de cette délocalisation est qu’avec l’avènement du tourisme de masse dans les années 2000, ces tribus Emberas se sont retrouvées submergées de touristes… Aujourd’hui, il peut y avoir jusqu’à 300 touristes par jour qui visitent un village !
 
-[Découvrez nos voyages en Amérique du Sud.](https://odysway.com/destinations/amerique-du-sud)
+Découvrez nos voyages en Amérique du Sud.
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/B0lnzCtvS06pSBm3FGUi
+image-src: "/images/blogs/B0lnzCtvS06pSBm3FGUi-1742841120165.jpg"
+alt: 
 ---
 ::_
 
@@ -90,7 +93,8 @@ Les tribus Emberas présentent alors des spectacles de danses, munis de leurs ha
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/1AlWnYOtRFiPReK1IQbG
+image-src: "/images/blogs/1AlWnYOtRFiPReK1IQbG-1742841120688.jpg"
+alt: 
 ---
 ::
 
@@ -108,7 +112,8 @@ Bien que ces villages Emberas soient isolés dans la jungle et n’aient pas enc
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/c513lFFZTBigoWv6Rssf
+image-src: "/images/blogs/c513lFFZTBigoWv6Rssf-1742841121202.jpg"
+alt: 
 ---
 ::
 
@@ -122,7 +127,8 @@ Ces tribus Emberas vivent pour eux, et non pas pour les touristes. Ils ne vous f
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/K06XHT3dTP2arf79EufO
+image-src: "/images/blogs/K06XHT3dTP2arf79EufO-1742841121722.jpg"
+alt: 
 ---
 ::
 
@@ -136,7 +142,8 @@ Une fois arrivé au village, c’est rendez-vous en terre inconnue ! Les Embera
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/Fmud1hrgQuSYQSm1fllg
+image-src: "/images/blogs/Fmud1hrgQuSYQSm1fllg-1742841122245.jpg"
+alt: 
 ---
 ::
 
@@ -150,7 +157,8 @@ Durant la semaine en immersion dans la tribu Embera, les activités journalière
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/DuFAy0WNSQqQmaELcE3O
+image-src: "/images/blogs/DuFAy0WNSQqQmaELcE3O-1742841122763.jpg"
+alt: 
 ---
 ::
 
@@ -170,7 +178,8 @@ Nous avons créé cette expérience de voyage après nous être longuement entre
 
 _::image-container
 ---
-image-src: https://cdn.buttercms.com/9WjSJvST6C8jSy2bTIEX
+image-src: "/images/blogs/9WjSJvST6C8jSy2bTIEX-1742841123292.jpg"
+alt: 
 ---
 ::_
 
@@ -182,5 +191,5 @@ L’autre aspect est financier. Cette communauté Embera tient à ses terres et 
 
 Avec le chef du village, nous avons décidé ensemble qu’il y aurait au maximum 6 voyageurs qui pourraient venir en même temps dans la communauté. Le village compte environ 300 personnes, la communauté ne serait alors pas submergée d’un flux de touristes incessant. L’argent des voyageurs est versé directement à la communauté, pour leur permettre d’améliorer leur vie quotidienne.
 
-Découvrez nos [voyages en immersion auprès de communautés locales.](https://odysway.com/thematiques/sejours-chez-l-habitant "Découvrez nos voyages en immersions auprès des communautés locales.")
+Découvrez nos voyages en immersion auprès de communautés locales.
 ::

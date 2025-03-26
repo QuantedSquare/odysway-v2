@@ -1,69 +1,48 @@
 ::hero-voyage-section
 ---
-image-src: https://cdn.buttercms.com/5cgA4EuxRzCrSoWr8xEg
+image-src: /images/voyages/algerie-sud-touaregs/5cgA4EuxRzCrSoWr8xEg.jpg
 ---
 #title
 Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie
-
 #component-slot-1
   :::photo-gallery-dialog
   #gallery-btn
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="https://cdn.buttercms.com/6OGdZtvsSbaqjG3fEboY"}
+    ::::photo-col{col-width="7" image-src="/images/voyages/algerie-sud-touaregs/6OGdZtvsSbaqjG3fEboY.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "5"
-image-src: https://cdn.buttercms.com/UZ5bpO6hSr2MM2KwzSS7
+image-src: /images/voyages/algerie-sud-touaregs/UZ5bpO6hSr2MM2KwzSS7.jpg
 ---
 ::::
 
-::::photo-col{col-width="4" image-src="https://cdn.buttercms.com/CTc8vVOcQcKpxrY069oZ"}
+::::photo-col{col-width="4" image-src="/images/voyages/algerie-sud-touaregs/CTc8vVOcQcKpxrY069oZ.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "8"
-image-src: https://cdn.buttercms.com/zky2Nh8PRYKoEPmbmGHB
+image-src: /images/voyages/algerie-sud-touaregs/zky2Nh8PRYKoEPmbmGHB.jpg
 ---
 ::::
 
-::::photo-col{col-width="5" image-src="https://cdn.buttercms.com/WQ6L5xjKRb2nSF29nZRc"}
+::::photo-col{col-width="5" image-src="/images/voyages/algerie-sud-touaregs/WQ6L5xjKRb2nSF29nZRc.jpg"}
 ::::
 
 ::::photo-col
 ---
 col-width: "7"
-image-src: https://cdn.buttercms.com/JA44yI1TDqZKngp8vLzw
+image-src: /images/voyages/algerie-sud-touaregs/JA44yI1TDqZKngp8vLzw.jpg
 ---
 ::::
 
-::::photo-col{col-width="7" image-src="https://cdn.buttercms.com/PbHg6tSlQ26OOdyiTuCl"}
+::::photo-col{col-width="7" image-src="/images/voyages/algerie-sud-touaregs/PbHg6tSlQ26OOdyiTuCl.jpg"}
 ::::
   :::
-
-#component-slot-2
-  :::video-dialog
-  ---
-  video-src: 
-  ---
-  #video-btn
-  voir la video
-  :::
-::
-
-::bottom-app-bar
-#starting-price
-Dès [1855€]{style="font-weight: bold"}
-
-#text-btn-1
-voir dates & prix
-
-#text-btn-2
-Prendre RDV
 ::
 
 ::sticky-container
@@ -150,7 +129,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
   #avatar
     ::::avatar-list-item
     ---
-    avatar: https://cdn.buttercms.com/4eJgN13dSJe17Dhxzd6X
+    avatar: /images/voyages/algerie-sud-touaregs/4eJgN13dSJe17Dhxzd6X.jpg
     avatar-size: "60"
     ---
     #title
@@ -160,7 +139,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
   :::highlights-row
   ---
-  image: https://cdn.buttercms.com/exEp4FxqSnKRuad8gDW4
+  image: /images/voyages/algerie-sud-touaregs/exEp4FxqSnKRuad8gDW4.jpg
   ---
   ::::highlight-list-item
   Découvrez une destination authentique et préservée du tourisme de masse
@@ -224,7 +203,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
   
     :::day-row
     ---
-    image: https://cdn.buttercms.com/8ENXPgrXSSmH1i7Bu1N4
+    image: /images/voyages/algerie-sud-touaregs/8ENXPgrXSSmH1i7Bu1N4.jpg
     ---
     #subtitle
     JOUR 1
@@ -239,7 +218,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/ZIczIB1QTdeqrBpflCrg
+    image: /images/voyages/algerie-sud-touaregs/ZIczIB1QTdeqrBpflCrg.jpg
     ---
     #subtitle
     JOUR 2
@@ -254,7 +233,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/BVMQvrLQpe01yx5Rrjgn
+    image: /images/voyages/algerie-sud-touaregs/BVMQvrLQpe01yx5Rrjgn.jpg
     ---
     #subtitle
     JOUR 3
@@ -269,7 +248,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/RrcrOsG7Q6CF8X5wa9E1
+    image: /images/voyages/algerie-sud-touaregs/RrcrOsG7Q6CF8X5wa9E1.jpg
     ---
     #subtitle
     JOUR 4
@@ -284,7 +263,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/Enzlmey4RJuKGPRhVSsf
+    image: /images/voyages/algerie-sud-touaregs/Enzlmey4RJuKGPRhVSsf.jpg
     ---
     #subtitle
     JOUR 5
@@ -299,7 +278,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/oMcMCHeFRiKuc05c85zz
+    image: /images/voyages/algerie-sud-touaregs/oMcMCHeFRiKuc05c85zz.jpg
     ---
     #subtitle
     JOUR 6
@@ -314,7 +293,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/f1c7xnIRYAasZbloQgwv
+    image: /images/voyages/algerie-sud-touaregs/f1c7xnIRYAasZbloQgwv.jpg
     ---
     #subtitle
     JOUR 7
@@ -329,7 +308,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/AjG4K5xLTISrPq1R06I7
+    image: /images/voyages/algerie-sud-touaregs/AjG4K5xLTISrPq1R06I7.jpg
     ---
     #subtitle
     JOUR 8
@@ -344,7 +323,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
 
     :::day-row
     ---
-    image: https://cdn.buttercms.com/DH8lyM4dRBq7ubfKvVjh
+    image: /images/voyages/algerie-sud-touaregs/DH8lyM4dRBq7ubfKvVjh.jpg
     ---
     #subtitle
     JOUR 9
@@ -373,7 +352,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
       
     :::::image-carousel-item
     ---
-    image: https://cdn.buttercms.com/Y6gbb4SJSvqDQ4O6bbIa
+    image: /images/voyages/algerie-sud-touaregs/Y6gbb4SJSvqDQ4O6bbIa.jpg
     ---
     :::::
     ::::
@@ -391,7 +370,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
   #guides
     ::::avatar-list-item
     ---
-    avatar: https://cdn.buttercms.com/ukR3TTrYRSvuQNqjLqtd
+    avatar: /images/voyages/algerie-sud-touaregs/ukR3TTrYRSvuQNqjLqtd.jpg
     ---
     #title
     Mohamed
@@ -529,7 +508,7 @@ Détails du prix
   :::
 ::
 
-false
+
 ::title-container
 #title
 Dates & Prix

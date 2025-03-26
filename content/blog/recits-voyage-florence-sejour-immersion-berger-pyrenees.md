@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-11-23 14:16:00+00:00"
 tags: "Animaux, Communautés locales, France, Grands espaces, Made in France"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843"
+displayedImg: "/images/blogs/Recits-de-Voyage-Florence-Guilmaille-Partagez-la-vie-d'un-berger-dans-les-Pyrenees.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843"
+image-src: "/images/blogs/Recits-de-Voyage-Florence-Guilmaille-Partagez-la-vie-d'un-berger-dans-les-Pyrenees.jpg"
 ---
 #publication-date
 23 novembre 2020
@@ -31,7 +31,7 @@ Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyr
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/MVJHBQyQeOnW01mDbDUw?1606383155843"
+image-src: "/images/blogs/Recits-de-Voyage-Florence-Guilmaille-Partagez-la-vie-d'un-berger-dans-les-Pyrenees.jpg"
 ---
 #content
   
@@ -44,7 +44,7 @@ Découvrez ses impressions et revivez ce voyage à travers son témoignage !
 
 Après quelques soucis personnels, je suis tombée sur votre site dont le concept m'a tout de suite parlé. Je me suis dit que partir comme ça, durant quelques jours au coeur de la nature ne pourrait que me faire du bien et m'aider à avancer !
 
-Et c’est le voyage dans [les Pyrénées à la rencontre des bergers](https://odysway.com/voyages/sejour-berger-bearn?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Florence) qui m’a interpellée. Ce que je recherchais, c’est l’immersion dans la nature, me rapprocher des montagnes pour me déconnecter totalement du quotidien. Je n’étais d'ailleurs jamais allée dans les Pyrénées, c'était une belle occasion pour moi de découvrir ce joli coin de France.
+Et c’est le voyage dans les Pyrénées à la rencontre des bergers qui m’a interpellée. Ce que je recherchais, c’est l’immersion dans la nature, me rapprocher des montagnes pour me déconnecter totalement du quotidien. Je n’étais d'ailleurs jamais allée dans les Pyrénées, c'était une belle occasion pour moi de découvrir ce joli coin de France.
 
 ### **🔥 Les moments les plus marquants de votre voyage ?**
 
@@ -60,43 +60,49 @@ Avec le Covid-19, ça n’a pas été simple pour venir. L'encadrement proposé 
 
 ## **🧐 Un autre voyage que vous aimeriez faire avec Odysway ?**
 
-Absolument ! J'aimerai prochainement partir plus loin, pourquoi pas le voyage proposé par Odysway au [Cap-vert à Santo Antao](https://odysway.com/voyages/trek-chez-lhabitant-cap-vert) ou au [Népal pour randonner tout en dormant le soir chez l'habitant](https://odysway.com/voyages/trek-chez-lhabitant-nepal)..
+Absolument ! J'aimerai prochainement partir plus loin, pourquoi pas le voyage proposé par Odysway au Cap-vert à Santo Antao ou au Népal pour randonner tout en dormant le soir chez l'habitant..
 
 ## **Quelques photos souvenirs de Florence**
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/9UKaRogcQbSWga1brjbY
+image-src: "/images/blogs/IMG_20200706_112812.jpg.jpg"
+alt: IMG_20200706_112812.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/GNeQfMaMRPWcvZCii94D
+image-src: "/images/blogs/IMG_20200710_072158.jpg.jpg"
+alt: IMG_20200710_072158.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/4x1kpw1fTPC4dbJebNQL
+image-src: "/images/blogs/IMG_20200710_102216.jpg.jpg"
+alt: IMG_20200710_102216.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/I0baHrsGQBSb2DZBUYHT
+image-src: "/images/blogs/IMG_20200710_072555.jpg.jpg"
+alt: IMG_20200710_072555.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/3xaKL3rgQpqvYsvMWBkG
+image-src: "/images/blogs/IMG_20200710_072135.jpg.jpg"
+alt: IMG_20200710_072135.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/96pBDB31QGalAi3BwL5E
+image-src: "/images/blogs/IMG_20200707_103357.jpg.jpg"
+alt: IMG_20200707_103357.jpg
 ---
 ::
 ::

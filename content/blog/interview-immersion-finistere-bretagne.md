@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-06-14 15:39:00+00:00"
 tags: "alpaga, alpagas, Animaux, Bretagne, déconnexion, élevage, Finistère, France, immersion, nature, paysage, slow tourisme"
 categories: "Blog"
-displayedImg: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
+displayedImg: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-dans-le-Finistere.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
+image-src: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-dans-le-Finistere.jpg"
 ---
 #publication-date
 14 juin 2021
@@ -31,7 +31,7 @@ Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
 
 ::section-container
 ---
-image-src: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
+image-src: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-dans-le-Finistere.jpg"
 ---
 #content
 **Vivre avec des alpagas en Bretagne ? C'est exactement ce que nous vous proposons !**
@@ -48,7 +48,8 @@ image-src: "https://cdn.buttercms.com/9UdWTutoSJKlogLmZXSY"
 
 ::image-container
 ---
-image-src: https://cdn.buttercms.com/yXxK0Qd5SEmUZvwg8Jra
+image-src: "/images/blogs/yXxK0Qd5SEmUZvwg8Jra-1742840711423.jpg"
+alt: undefined
 ---
 ::
 
@@ -64,9 +65,11 @@ image-src: https://cdn.buttercms.com/yXxK0Qd5SEmUZvwg8Jra
 
 "Il y a la déconnexion, nous avons **l’impression d’être dans un autre monde !** Ils peuvent observer les animaux, notamment dans l’évolution de leur apprentissage. Bientôt, il y aura les mises-bas, les petits vont naître ! Je propose aussi des ateliers comme l’initiation au feutre par exemple. En partant de la laine brute, nous travaillons à base d’eau bouillante, de savon et de frottements pour créer de la laine feutrée pour différents articles comme des chapeaux, des chaussons ou encore des gilets."
 
-[::image-container
+::image-container
 ---
-image-src: https://cdn.buttercms.com/j3mCajHxToivHpo9LkSE
+image-src: "/images/blogs/c5a311_98deaf06541f4869a2398f19991089....jpg"
+alt: c5a311_98deaf06541f4869a2398f19991089...
+link: https://odysway.com/voyages/Immersion-Alpagas-Finistere
 ---
-::](https://odysway.com/voyages/Immersion-Alpagas-Finistere)
+::
 ::
