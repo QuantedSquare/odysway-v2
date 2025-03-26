@@ -175,12 +175,10 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
 })
 
 const voyageTooltips = computed(() => {
-  return voyage.value
-    ? {
-        child: voyage.value.tooltipChild,
-        group: voyage.value.tooltipGroup,
-      }
-    : ''
+  return {
+    child: voyage.value?.tooltipChild,
+    group: voyage.value?.tooltipGroup,
+  }
 })
 </script>
 

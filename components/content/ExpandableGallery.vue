@@ -136,30 +136,12 @@ onMounted(() => {
 .text-to-wrap{
   white-space: nowrap;
 }
-@media screen and (max-width: 1280px) {
-  .text-to-wrap{
-    white-space: normal;
-    padding-bottom: 10px;
-  }
-  .category-title{
-    margin:-30px 0 0px 0!important;
-  }
-}
 
 .image-gallery {
   display: flex;
   height: 24rem;
   width: 100%;
   gap: 0.5rem;
-}
-
-@media screen and (max-width: 600px) {
-  .image-gallery {
-    flex-direction: column;
-  }
-  .category-title{
-    margin:  0!important;
-  }
 }
 
 .image-wrapper {
@@ -171,11 +153,6 @@ onMounted(() => {
   overflow: hidden;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
-}
-
-.image-wrapper:hover,
-.image-wrapper.expanded {
-  flex: 4;
 }
 
 .image-wrapper img {
@@ -274,5 +251,36 @@ onMounted(() => {
 .explore-btn:hover {
   background: white;
   color: black;
+}
+@media screen and (max-width: 1280px) {
+  .text-to-wrap{
+    white-space: normal;
+    padding-bottom: 10px;
+  }
+  .category-title{
+    margin:-30px 0 0px 0!important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+  .category-title{
+    margin:  0!important;
+  }
+}
+
+@media screen and (max-width: 960px) {
+.image-wrapper:hover,
+.image-wrapper.expanded {
+  flex: 4;
+}
+}
+
+@media screen and (min-width: 960px) {
+.image-wrapper:hover,
+.image-wrapper.expanded {
+  flex: 3;
+}
 }
 </style>
