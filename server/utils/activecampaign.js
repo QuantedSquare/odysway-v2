@@ -150,7 +150,7 @@ const transformDealForAPI = (flatDeal) => {
 
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
-  console.log('API Request to', endpoint, method, data, baseUrl)
+  // console.log('API Request to', endpoint, method, data, baseUrl)
   try {
     const response = await axios({
       url: `${baseUrl}${endpoint}`,
@@ -158,7 +158,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
-    console.log(`API Response from ${endpoint}:`, response.data)
+    // console.log(`API Response from ${endpoint}:`, response.data)
     return response.data
   }
   catch (error) {
@@ -371,7 +371,7 @@ const recalculatTotalValues = async (dealId) => {
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
 
-  console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
+  // console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers
@@ -384,11 +384,11 @@ const recalculatTotalValues = async (dealId) => {
     - promoEarlybird
     - promoLastMinute
 
-  console.log('======== totalValue:', value, '========')
+  // console.log('======== totalValue:', value, '========')
 
   const restToPay = value - customFields.alreadyPaid
 
-  console.log('===========rest to pay', restToPay, '========')
+  // console.log('===========rest to pay', restToPay, '========')
 
   const formatedDeal = transformDealForAPI({
     value,

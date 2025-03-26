@@ -31,7 +31,7 @@
 
             class="text-no-wrap text-left text-md-right "
           >
-            À partir de : {{ formatNumber(total, 'currency', '€') }}/pers.
+            À partir de : {{ formatNumber(price, 'currency', '€') }}/pers.
           </v-col>
         </v-row>
       </div>
@@ -40,9 +40,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['titre', 'image', 'travelType', 'date'])
-
-const total = 100000
+const props = defineProps(['titre', 'image', 'travelType', 'date', 'price'])
 </script>
 
 <style scoped>

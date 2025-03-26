@@ -13,8 +13,11 @@ const createCheckoutSession = async (order) => {
 
   const isDev = config.public.environment !== 'production'
   const origin = config.public.siteURL
-
-  const imageUrl = deal.image ? deal.image.replace('buttercms', 'filestackcontent') : 'https://odysway.com/logos/logo_noir.png'
+  console.log('======Origin======', origin, 'isDev', isDev)
+  console.log('======Config======', config.public)
+  console.log('======Success URL======', `${origin}/success`)
+  console.log('======Cancel URL======', `${origin}${order.currentUrl}`)
+  const imageUrl = 'https://odysway.com/logos/logo_noir.png'// CHeck si on peut remplacer par quelque chose
 
   const lineItems = []
   let paidAmount = 0
@@ -224,7 +227,7 @@ const createCheckoutSession = async (order) => {
   delete order.contact
 
   // Changer et récupérer le contact d'ac
-
+  console.log('contact retrieved', contact)
   const existingCustomers = await stripeCLI.customers.list({
     email: contact.email,
     limit: 1,
@@ -240,11 +243,9 @@ const createCheckoutSession = async (order) => {
     if (customer.name !== contact.firstName + ' ' + contact.lastName) {
       customer = await stripeCLI.customers.update(customer.id, {
         name: contact.firstName + ' ' + contact.lastName,
-        // metadata: {
-        //   test: 'coucou',
-        // },
       })
     }
+    console.log('customer updated', customer)
   }
   else {
     // Create new customer if not found
@@ -254,48 +255,67 @@ const createCheckoutSession = async (order) => {
       metadata: order,
       phone: contact.phone,
     })
+    console.log('customer created', customer)
   }
 
   // Now use customer.id in your checkout session
   Object.assign(order, { customer: customer.id, paidAmount })
+  console.log('order before session', order)
 
-  const session = await stripeCLI.checkout.sessions.create({
-    line_items: lineItems,
-    mode: 'payment',
-    discounts: coupon ? [{ coupon: coupon.id }] : [],
-    customer: customer.id,
-    invoice_creation: { enabled: true },
-    success_url: `${origin}`,
-    cancel_url: `${origin}${order.currentUrl}`,
-    metadata: order,
-    payment_intent_data: {
-      metadata: order, // used in bank transfer webhook otherwise it's blank
-    },
-    after_expiration: {
-      recovery: {
-        enabled: true,
+  // Ensure URLs are properly encoded
+  const successUrl = encodeURI(`${origin}/success`)
+  const cancelUrl = encodeURI(`${origin}${order.currentUrl}`)
+
+  console.log('Final URLs:', {
+    successUrl,
+    cancelUrl,
+    origin,
+    currentUrl: order.currentUrl,
+  })
+
+  try {
+    const session = await stripeCLI.checkout.sessions.create({
+      line_items: lineItems,
+      mode: 'payment',
+      discounts: coupon ? [{ coupon: coupon.id }] : [],
+      customer: customer.id,
+      invoice_creation: { enabled: true },
+      success_url: successUrl,
+      cancel_url: cancelUrl,
+      metadata: order,
+      payment_intent_data: {
+        metadata: order,
       },
-    },
-    currency: 'eur',
-    payment_method_types: [
-      'customer_balance',
-      'card',
-    ],
-    payment_method_options: {
-      customer_balance: {
-        funding_type: 'bank_transfer',
-        bank_transfer: {
-          type: 'eu_bank_transfer',
-          eu_bank_transfer: {
-            country: 'FR',
+      after_expiration: {
+        recovery: {
+          enabled: true,
+        },
+      },
+      currency: 'eur',
+      payment_method_types: [
+        'customer_balance',
+        'card',
+      ],
+      payment_method_options: {
+        customer_balance: {
+          funding_type: 'bank_transfer',
+          bank_transfer: {
+            type: 'eu_bank_transfer',
+            eu_bank_transfer: {
+              country: 'FR',
+            },
           },
         },
       },
-    },
-  })
+    })
 
-  console.log('====CREATE STRIPE SESSION======', session)
-  return session.url
+    console.log('====CREATE STRIPE SESSION======', session)
+    return session.url
+  }
+  catch (error) {
+    console.error('Stripe session creation error:', error)
+    throw error
+  }
 }
 
 // ===== HANDLE PAYMENT SESSION =====

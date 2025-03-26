@@ -213,7 +213,7 @@ console.log('voyage', voyage.value)
   bottom:0;
 }
 
-.hover-scale:deep:hover .blur-overlay {
+.hover-scale:hover .blur-overlay {
   height: 100%;
 }
 .hover-scale:hover{

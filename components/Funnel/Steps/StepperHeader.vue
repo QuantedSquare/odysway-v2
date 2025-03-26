@@ -3,7 +3,6 @@
     id="stepper"
     v-model="model"
     alt-labels
-    editable
     show-actions
     class="text-caption "
   >

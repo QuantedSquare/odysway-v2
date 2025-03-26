@@ -75,22 +75,16 @@ const props = defineProps({
 // Refs
 const i_firstname = ref(props.firstname)
 const i_lastname = ref(props.lastname)
-const displayedDate = ref(dayjs().format('DD/MM/YYYY'))
-const modelDate = ref(new Date())
+const displayedDate = ref('')
 
 const emit = defineEmits(['change'])
 
 // Initialize birthdate
 onMounted(() => {
   if (props.birthdate) {
-    console.log('props.birthdate', props.birthdate)
-    const parsedDate = dayjs(props.birthdate, 'DD/MM/YYYY').format('YYYY-MM-DD')
-    displayedDate.value = parsedDate
-    const jsDate = dayjs(props.birthdate, 'DD/MM/YYYY').toDate()
-    modelDate.value = jsDate
-  }
-  else {
-    displayedDate.value = dayjs().format('DD/MM/YYYY')
+    // Convert from DD/MM/YYYY to YYYY-MM-DD for the input
+    const [day, month, year] = props.birthdate.split('/')
+    displayedDate.value = `${year}-${month}-${day}`
   }
 })
 
@@ -98,41 +92,29 @@ onMounted(() => {
 const rules = {
   required: v => !!v || 'Cette information est requise.',
   dateFormat: (v) => {
-    console.log('v', v)
     if (!v) return true
 
-    // Check format DD/MM/YYYY
-    const dateRegex = /^(\d{4})-(\d{2})-(\d{2})$/
-    if (!dateRegex.test(v)) return 'Format invalide. Utilisez JJ/MM/AAAA'
+    // Basic validation using dayjs
+    const dateObj = dayjs(v)
+    if (!dateObj.isValid()) return 'Date invalide'
 
-    const matches = v.match(dateRegex)
-    const day = parseInt(matches[3])
-    const month = parseInt(matches[2])
-    const year = parseInt(matches[1])
-    // Basic validation
-    if (month < 1 || month > 12) return 'Mois invalide'
-    if (day < 1 || day > 31) return 'Jour invalide'
+    const year = dateObj.year()
     if (year < 1910 || year > new Date().getFullYear()) return 'Année invalide'
-
-    if (month === 2 && day > 29) return 'Février ne peut pas avoir plus de 29 jours'
-    if ([4, 6, 9, 11].includes(month) && day > 30) return 'Ce mois ne peut pas avoir plus de 30 jours'
-
-    // Check if date is valid using dayjs
-    const dateObj = dayjs(`${year}-${month}-${day}`, 'YYYY-M-D')
-    if (!dateObj.isValid() || dateObj.format('DD-MM-YYYY') !== dayjs(v).format('DD-MM-YYYY'))
-      return 'Date invalide'
 
     return true
   },
 }
 
 const dataUpdated = () => {
-  if (!modelDate.value) return
+  if (!displayedDate.value) return
+
+  // Convert from YYYY-MM-DD to DD/MM/YYYY for emission
+  const dateObj = dayjs(displayedDate.value)
   emit('change', {
     id: props.id,
     firstname: i_firstname.value,
     lastname: i_lastname.value,
-    birthdate: dayjs(displayedDate.value).format('DD/MM/YYYY'),
+    birthdate: dateObj.format('DD/MM/YYYY'),
   })
 }
 
@@ -164,13 +146,12 @@ watch(() => props.lastname, (newVal) => {
   i_lastname.value = newVal
 })
 
-// Watch for birthdate prop changes and update displayed date to match the format
+// Watch for birthdate prop changes
 watch(() => props.birthdate, (newVal) => {
   if (newVal) {
-    const parsedDate = dayjs(newVal, 'DD/MM/YYYY')
-    if (parsedDate.isValid()) {
-      displayedDate.value = parsedDate.format('YYYY-MM-DD')
-    }
+    // Convert from DD/MM/YYYY to YYYY-MM-DD for the input
+    const [day, month, year] = newVal.split('/')
+    displayedDate.value = `${year}-${month}-${day}`
   }
 })
 </script>

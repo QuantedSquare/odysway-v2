@@ -90,7 +90,7 @@ async function mergeDeals() {
 
       let imgSrc2Path = '/images/iStock-1336944149.webp'
       if (voyage.image_principale) {
-        const filename = path.basename(voyage.image_principale)
+        const filename = generateImageFilename(voyage.image_principale)
         imgSrc2Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
       }
 
