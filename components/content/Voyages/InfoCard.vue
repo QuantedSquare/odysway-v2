@@ -112,10 +112,7 @@ const { data: page, status } = useAsyncData(route.path, () => {
   return queryCollection('voyages').path(route.path).first()
 })
 const voyageTitle = computed(() => {
-  // #TODO @Vlad, c'est obligé ici que le titre soit autre part que cet array
-  // En vrai, quand tu vois des trucs qui paraissent chelou comme ces 4 index de suite, c'est qu'il y a un truc à revoir
-  // Check le log : console.log('page.value]', page.value)
-  return page.value ? page.value.title : ''
+  return page?.value?.title ?? ''
 })
 
 const voyageImg = computed(() => {

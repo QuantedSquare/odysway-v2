@@ -17,7 +17,6 @@
     </template>
     <v-container
       class="d-flex flex-column pa-1"
-      :class="$vuetify.display.smAndDown ? 'w-100': 'w-40'"
     >
       <v-btn
         variant="outlined"
@@ -63,7 +62,7 @@
           <iframe
             class="align-self-center"
             width="100%"
-            :height="$vuetify.display.smAndDown ? '400': '500'"
+            :height="$vuetify.display.smAndDown ? '400': '600'"
             :src="video"
             title="YouTube video player"
             frameborder="0"
