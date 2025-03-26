@@ -14,26 +14,33 @@
         >
           Combien de participants ?
         </v-col>
-        <v-col cols="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-select
             v-model="nbAdults"
             label="Nombres d'adultes"
             :items="selectOptions(1, 9)"
-            variant="outlined"
-            bg-color="white"
-          />
-        </v-col>
-        <v-col cols="6">
-          <v-select
-            v-model="nbChildren"
-            label="Nombres d'enfants"
-            :items="selectOptions(0, 9)"
-            variant="outlined"
+            variant="solo"
             bg-color="white"
           />
         </v-col>
         <v-col
           cols="12"
+          sm="6"
+        >
+          <v-select
+            v-model="nbChildren"
+            label="Nombres d'enfants"
+            :items="selectOptions(0, 9)"
+            variant="solo"
+            bg-color="white"
+          />
+        </v-col>
+        <v-col
+          cols="12"
+
           class="d-flex justify-center"
         >
           <v-btn-secondary
