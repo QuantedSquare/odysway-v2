@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="mt-16">
+    <div :class="isCheckout ? '':'mt-16'">
       {{ text }}
     </div>
     <div
@@ -12,6 +12,12 @@
 </template>
 
 <script setup>
+const route = useRoute()
+
+const isCheckout = computed(() => {
+  return route.path.includes('checkout')
+})
+
 const text = 'Merci de votre confiance ! L\'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l\'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.'
 const calendly = useCalendly()
 onMounted(() => {
