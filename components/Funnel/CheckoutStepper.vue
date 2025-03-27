@@ -75,7 +75,6 @@
                   v-else
                   :titre="voyage.title"
                   :page="page"
-                  :has-margin-top="false"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
