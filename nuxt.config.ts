@@ -33,8 +33,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      environment: process.env.VERCEL_ENV,
-      siteURL: process.env.VERCEL_URL,
+      environment: process.env.VERCEL_ENV || 'development',
+      siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
     },
   },
   build: {
