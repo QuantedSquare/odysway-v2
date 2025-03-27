@@ -1,0 +1,19 @@
+{
+  "propos": [
+    {
+      "titre": "Découvrir Odysway",
+      "image": "/images/propos-header/Dans-la-bergerie.jpg",
+      "slug": "/concept"
+    },
+    {
+      "titre": "Lire notre blog",
+      "image": "/images/propos-header/rana-sawalha-W_-6PWGbYaU-unsplash.jpg",
+      "slug": "/blog"
+    },
+    {
+      "titre": "Avis",
+      "image": "/images/propos-header/VoyageInitiatique_reflechir.jpg",
+      "slug": "/avis-voyageurs"
+    }
+  ]
+}

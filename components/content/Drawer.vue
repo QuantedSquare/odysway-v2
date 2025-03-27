@@ -3,33 +3,36 @@
     location="right"
     disable-resize-watcher
     mobile
+    class="hidden-md-and-up"
   >
-    <v-btn
-      icon
-      class="mx-md-4 hidden-sm-and-up"
-      color="white"
-    >
-      <v-icon color="primary">
-        {{ mdiAccountCircle }}
-      </v-icon>
-    </v-btn>
-    <v-list
-      v-for="item, index in drawerItems"
-      :key="`Drawer item ${index}`"
-      nav
-    >
-      <v-list-item
-        density="compact"
-        @click="drawer = !drawer"
+    <div>
+      <v-btn
+        icon
+        class="mx-md-4 hidden-sm-and-up"
+        color="white"
       >
-        <NuxtLink
-          :to="item.link"
-          class="text-primary text-decoration-none"
+        <v-icon color="primary">
+          {{ mdiAccountCircle }}
+        </v-icon>
+      </v-btn>
+      <v-list
+        v-for="item, index in drawerItems"
+        :key="`Drawer item ${index}`"
+        nav
+      >
+        <v-list-item
+          density="compact"
+          @click="drawer = !drawer"
         >
-          {{ item.title }}
-        </NuxtLink>
-      </v-list-item>
-    </v-list>
+          <NuxtLink
+            :to="item.link"
+            class="text-primary text-decoration-none"
+          >
+            {{ item.title }}
+          </NuxtLink>
+        </v-list-item>
+      </v-list>
+    </div>
   </v-navigation-drawer>
 </template>
 
@@ -45,12 +48,12 @@ const drawerItems = ref([
   {
     title: 'Prochains départs',
     value: 'Prochains départs',
-  // link: '/prochains-departs',
+    // link: '/prochains-departs',
   },
   {
     title: 'Prendre RDV avec un conseiller',
     value: 'Prendre RDV avec un conseiller',
-  // link: '/calendly',
+    // link: '/calendly',
   },
   {
     title: 'À propos',
@@ -67,10 +70,10 @@ const drawerItems = ref([
     value: 'Avis',
     link: '/avis-voyageurs',
   },
-  {
-    title: 'Carte cadeau',
-    value: 'Carte cadeau',
-  // link: '/offre-cadeau',
-  },
+  // {
+  //   title: 'Carte cadeau',
+  //   value: 'Carte cadeau',
+  // // link: '/offre-cadeau',
+  // },
 ])
 </script>

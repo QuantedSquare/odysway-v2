@@ -135,5 +135,16 @@ export default defineContentConfig({
         date: z.string(),
       }),
     }),
+    propos: defineCollection({
+      type: 'data',
+      source: 'top-bar/propos.json',
+      schema: z.object({
+        propos: z.array(z.object({
+          title: z.string(),
+          image: z.string(),
+          slug: z.string(),
+        })),
+      }),
+    }),
   },
 })
