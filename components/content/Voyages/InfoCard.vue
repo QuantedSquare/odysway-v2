@@ -63,7 +63,7 @@
           <NuxtLink
             width="100%"
             class="text-primary text-break d-flex align-center justify-center ga-3"
-            to="#"
+            to="/calendly"
           >
 
             <v-icon
@@ -71,8 +71,6 @@
             >
               {{ mdiCalendarMonthOutline }}
             </v-icon>
-
-            <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
             <span class="text-left">
               <slot
                 name="text-btn-2"

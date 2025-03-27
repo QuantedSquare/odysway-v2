@@ -25,7 +25,7 @@
       density="compact"
       size="x-large"
       color="primary"
-      href="/"
+      href="/calendly"
       class="d-none d-md-inline text-decoration-none"
     >
       <div class="d-flex flex-column align-center text-caption text-uppercase">
@@ -36,7 +36,8 @@
     <v-btn
       color="primary"
       icon
-      class="d-inline d-md-none"
+      class="d-flex align-center d-md-none"
+      href="/calendly"
     >
       <v-icon>
         {{ mdiPhone }}

@@ -70,7 +70,7 @@
                   :voyage="voyage"
                   :own-step="1"
                 />
-                <FunnelStepsCalendly
+                <FunnelStepsCalendlyContainer
                   v-else
                   :titre="voyage.title"
                   :page="page"

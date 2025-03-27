@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div>
+    <div class="mt-16">
       {{ text }}
     </div>
     <div
