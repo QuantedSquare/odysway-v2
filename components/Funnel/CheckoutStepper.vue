@@ -32,7 +32,8 @@
                 :titre="voyage.title"
                 :travel-type="voyage.travelType"
                 :image="voyage.imgSrc"
-                :date="`Du ${voyage.departureDate} au ${voyage.returnDate}`"
+                :date="`Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`"
+                :price="voyage.startingPrice"
               />
             </Transition>
             <v-stepper-window
@@ -147,14 +148,14 @@
                     />
                   </div>
                 </template>
-                <v-row>
+                <!-- <v-row>
                   <v-col
                     cols="12"
                     class="d-flex justify-end text-body-1 font-weight-bold"
                   >
                     Total : {{ formatNumber(1000000, 'currency', 'EUR') }}
                   </v-col>
-                </v-row>
+                </v-row> -->
               </v-stepper-actions>
             </v-card-actions>
           </v-card>
@@ -180,7 +181,12 @@ dayjs.extend(customParseFormat)
 
 const route = useRoute()
 const { step, dealId, slug, departure_date, return_date, plan } = route.query
-const total = ref(0)
+
+const pricePerTraveler = ref(0)
+function updatePricePerTraveler(price) {
+  pricePerTraveler.value = price
+}
+provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
 // ================== Page ==================
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 // console.log('page', page.value)
@@ -205,21 +211,23 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         console.log(filteredDates)
         throw new Error('Invalid or no matching dates found.')
       }
+      updatePricePerTraveler(filteredDates.startingPrice)
+      console.log('image check', deal.imgSrc1.src)
       return {
         title: deal.title,
         imgSrc: deal.imgSrc1.src,
         country: deal.country,
         slug: deal.slug,
-        iso: deal.ISO,
+        iso: deal.iso,
         zoneChapka: deal.zoneChapka,
         indivRoom: deal.indivRoom,
         privatisation: deal.privatisation,
-        startingPrice: filteredDates.startingPrice,
-        indivRoomPrice: filteredDates.indivRoomPrice,
+        startingPrice: filteredDates.startingPrice * 100,
+        indivRoomPrice: filteredDates.indivRoomPrice * 100,
         gotEarlybird: filteredDates.earlyBird ? 'Oui' : 'Non',
-        promoEarlybird: filteredDates.promoEarlyBird,
+        promoEarlybird: filteredDates.promoEarlyBird * 100,
         gotLastMinute: filteredDates.lastMinute ? 'Oui' : 'Non',
-        promoLastMinute: filteredDates.promoLastMinute,
+        promoLastMinute: filteredDates.promoLastMinute * 100,
       }
     }
     const deal = parseDeal(query, departure_date, return_date)
@@ -230,13 +238,13 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       // ===== Temporary values below until it is replaced in nuxt studio =====
       // ===== Or travel manager =====
       depositPrice: deal.startingPrice * 0.3 || 500,
-      promoChildren: 80,
-      promoTeen: 80,
+      promoChildren: 800,
+      promoTeen: 800,
       maxChildrenAge: 12,
       maxTeenAge: 18,
       source: 'Devis',
       forcedIndivRoom: 'Non',
-      travelType: 'Group',
+      travelType: 'Groupe',
     })
     console.log('deal post assign', deal)
 
@@ -245,6 +253,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
   else {
     // Voyage = Toutes les valeurs fixes
     const deal = await apiRequest(`/ac/deals/${dealId}`)
+    updatePricePerTraveler(deal.basePricePerTraveler)
     return { title: deal.title,
       startingPrice: deal.basePricePerTraveler,
       imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',

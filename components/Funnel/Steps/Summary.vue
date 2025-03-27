@@ -118,21 +118,17 @@
         <v-divider class="my-6" />
 
         <!--  Options -->
-        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom">
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui'">
           <template #left>
             <span class="text-h6 text-dark">Options</span>
           </template>
         </FunnelStepsSummaryLine>
 
         <!-- Chambre individuelle -->
-        <FunnelStepsSummaryLine>
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui'">
           <template #left>
-            <span v-if="forceIndivRoom || deal.indivRoom">
-              {{ travelerText(+deal.nbTravelers, 'indivRoom') }}
-            </span>
-
             <v-tooltip
-              v-else
+              v-if="forceIndivRoom "
               bottom
             >
               <template #activator="{ props }">
@@ -150,6 +146,9 @@
                 {{ page.fields.forced_indiv_room_text }}
               </div>
             </v-tooltip>
+            <span v-else>
+              {{ travelerText(+deal.nbTravelers, 'indivRoom') }}
+            </span>
           </template>
           <template #right>
             {{ formatNumber(deal.indivRoomPrice * deal.nbTravelers, 'currency', 'EUR') }}
@@ -206,7 +205,7 @@
           </template>
           <template #right>
             <span class="font-weight-bold text-dark">
-              <!-- #TODO  S'assurer que le total soit correct avec touts les ajouts / réductions -->
+              <!-- #TODO  S'assurer que le total soit correct avec tous les ajouts / réductions -->
               {{ formatNumber(deal.value, 'currency', 'EUR') }}
             </span>
           </template>
@@ -248,7 +247,7 @@
               <span
                 class="font-weight-bold text-primary"
               >
-                <!-- #TODO : Changer par le prix appliquer, total, direct, solde etc... -->
+                <!-- #TODO : Check si on a toujours la bonne valeur -->
                 {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}
               </span>
             </template>

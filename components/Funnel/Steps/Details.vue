@@ -174,11 +174,11 @@ const isAdvance = ref(true)
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 const nbTeen = ref(0)
-const firstName = ref('Alex')
-const lastName = ref('& Yuzu')
-const email = ref('ottmann.alex@gmail.com')
+const firstName = ref('')
+const lastName = ref('')
+const email = ref('')
 const phoneCode = ref('+33')
-const phoneNumber = ref('631870876')
+const phoneNumber = ref('')
 
 watch(() => currentStep, (value) => {
   if (value === ownStep) {
@@ -212,18 +212,19 @@ const saveToLocalStorage = () => {
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
-// const loadFromLocalStorage = () => {
-
-//   const storedData = JSON.parse(localStorage.getItem('detailsData'))
-//   if (storedData) {
-//     firstName.value = storedData.firstname
-//     lastName.value = storedData.lastname
-//     email.value = storedData.email
-//     phoneNumber.value = storedData.phone
-//     phoneCode.value = storedData.phoneCode
-//   }
-// }
-// loadFromLocalStorage()
+const loadFromLocalStorage = () => {
+  const storedData = JSON.parse(localStorage.getItem('detailsData'))
+  if (storedData) {
+    firstName.value = storedData.firstname
+    lastName.value = storedData.lastname
+    email.value = storedData.email
+    phoneNumber.value = storedData.phone
+    phoneCode.value = storedData.phoneCode
+  }
+}
+onMounted(() => {
+  loadFromLocalStorage()
+})
 
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
@@ -291,23 +292,23 @@ const submitStepData = async () => {
         country: voyage.country,
         iso: voyage.iso,
         zoneChapka: voyage.zoneChapka,
-        image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn' || voyage.imgSrc,
+        image: voyage.imgSrc || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
         currentStep: 'Création du Deal',
         alreadyPaid: 0,
         restToPay: 0, // Don't care about this value, we Calculate it in back
         utm: route.query.utm || '',
         slug: voyage.slug,
-        basePricePerTraveler: voyage.startingPrice * 100,
-        promoChildren: voyage.promoChildren * 100,
+        basePricePerTraveler: voyage.startingPrice,
+        promoChildren: voyage.promoChildren,
         maxChildrenAge: voyage.maxChildrenAge, // no need multiplying by 100 here
         promoTeen: voyage.promoTeen,
         maxTeenAge: voyage.maxTeenAge,
         source: 'Devis',
         forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',
-        indivRoomPrice: voyage.indivRoomPrice * 100,
-        promoEarlybird: voyage.promoEarlybird * 100,
+        indivRoomPrice: voyage.indivRoomPrice,
+        promoEarlybird: voyage.promoEarlybird,
         gotEarlybird: voyage.gotEarlybird,
-        promoLastMinute: voyage.promoLastMinute * 100,
+        promoLastMinute: voyage.promoLastMinute,
         gotLastMinute: voyage.gotLastMinute,
         // Contacts
         email: email.value,
