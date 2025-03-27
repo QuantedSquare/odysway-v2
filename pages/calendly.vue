@@ -1,3 +1,3 @@
 <template>
-  <CalendlyContainer />
+  <CalendlyContainer :has-margin-top="true" />
 </template>
