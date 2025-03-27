@@ -83,6 +83,9 @@ Vivez l'aventure mythique du Tour des Annapurnas au Népal
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1730€]{style="font-weight: bold"}

@@ -62,6 +62,9 @@ Partagez le quotidien des nomades des steppes mongoles
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1715€]{style="font-weight: bold"}

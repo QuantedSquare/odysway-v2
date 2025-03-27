@@ -76,6 +76,9 @@ Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2060€]{style="font-weight: bold"}

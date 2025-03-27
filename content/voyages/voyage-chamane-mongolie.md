@@ -97,12 +97,15 @@ Voyagez en terre chamane en Mongolie
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/bCld29RABQw
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

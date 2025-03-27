@@ -7,6 +7,9 @@ Randonnées inoubliables à la découverte des joyaux naturels de Madère
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1645€]{style="font-weight: bold"}

@@ -62,6 +62,9 @@ Observez les aurores boréales en Laponie Norvégienne
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1958€]{style="font-weight: bold"}

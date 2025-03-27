@@ -83,6 +83,9 @@ A cheval, à la rencontre des nomades en Mongolie
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1650€]{style="font-weight: bold"}

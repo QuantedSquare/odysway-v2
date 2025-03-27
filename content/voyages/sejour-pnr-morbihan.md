@@ -7,6 +7,9 @@ Entre Terre et Mer dans le Golfe du Morbihan
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [120€]{style="font-weight: bold"}

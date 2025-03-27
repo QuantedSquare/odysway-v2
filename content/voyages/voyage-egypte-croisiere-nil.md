@@ -62,6 +62,9 @@ Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1695€]{style="font-weight: bold"}

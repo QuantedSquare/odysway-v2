@@ -125,6 +125,9 @@ Bolivie : lagunes colorées, désert de sel et rencontres hors des sentiers batt
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2130€]{style="font-weight: bold"}

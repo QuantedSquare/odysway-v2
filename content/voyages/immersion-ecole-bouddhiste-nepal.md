@@ -104,6 +104,9 @@ Au cœur du Népal entre randonnées et immersion dans un monastère
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1590€]{style="font-weight: bold"}

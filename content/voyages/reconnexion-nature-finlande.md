@@ -83,6 +83,9 @@ Aventure éco responsable et reconnexion à la nature en Finlande
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1480€]{style="font-weight: bold"}

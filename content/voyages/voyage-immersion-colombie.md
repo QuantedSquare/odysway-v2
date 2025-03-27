@@ -132,6 +132,9 @@ image-src: /images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1965€]{style="font-weight: bold"}

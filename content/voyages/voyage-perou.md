@@ -62,6 +62,9 @@ Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1880€]{style="font-weight: bold"}

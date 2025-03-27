@@ -7,6 +7,9 @@ Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2950€]{style="font-weight: bold"}

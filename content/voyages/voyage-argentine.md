@@ -62,6 +62,9 @@ Contrastes et grands espaces en Argentine
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [5480€]{style="font-weight: bold"}

@@ -7,6 +7,9 @@ Initiation au bivouac en montagne dans les Pyrénées
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [350€]{style="font-weight: bold"}

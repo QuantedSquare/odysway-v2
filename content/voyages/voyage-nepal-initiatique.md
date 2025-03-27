@@ -7,6 +7,9 @@ Retour au partage et à la pleine présence - initiation à la méditation sonor
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [3725€]{style="font-weight: bold"}

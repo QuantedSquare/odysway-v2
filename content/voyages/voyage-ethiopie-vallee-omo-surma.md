@@ -41,12 +41,15 @@ Voyagez sur la terre des premiers hommes en Éthiopie
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/8UwFNAF-Jvk?start=13"
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

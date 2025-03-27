@@ -97,6 +97,9 @@ Voyagez hors des sentiers battus au Sri Lanka (été)
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1695€]{style="font-weight: bold"}

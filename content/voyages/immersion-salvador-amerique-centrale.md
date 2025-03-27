@@ -55,6 +55,9 @@ Au cœur de la vie locale du Salvador
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1995€]{style="font-weight: bold"}

@@ -299,8 +299,9 @@ function formatImageArray(array, imageUrlMap) {
 
 function formatVideoLinks(videoUrlMap) {
   return videoUrlMap.map((video) => {
-    return `${video.url}`
-  }).join('\n')
+    return `
+    - ${video.url}`
+  }).join('')
 }
 // Function to convert list items from Butter CMS format
 function highlightListItems(htmlList) {
@@ -502,8 +503,7 @@ ${voyage.titre}
     markdown += `#component-slot-2
   :::video-dialog
   ---
-  video-src:
-    - ${formatVideoLinks(videoUrlMap)}
+  video-src: ${formatVideoLinks(videoUrlMap)}
   ---
   #video-btn
   voir la video
@@ -511,6 +511,10 @@ ${voyage.titre}
   }
 
   markdown += '\n::\n\n'
+
+  markdown += `::horizontal-ariane
+::\n
+`
 
   markdown += `::bottom-app-bar
 #starting-price

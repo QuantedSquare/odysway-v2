@@ -76,6 +76,9 @@ Voyagez comme un trappeur en Finlande
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2150€]{style="font-weight: bold"}

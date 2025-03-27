@@ -7,6 +7,9 @@ Voyage en Inde sur mesure
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1980€]{style="font-weight: bold"}

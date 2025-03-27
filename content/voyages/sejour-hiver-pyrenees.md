@@ -69,6 +69,9 @@ Immersion hivernale en terre béarnaise
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [650€]{style="font-weight: bold"}
@@ -358,7 +361,6 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
 
     #subtitle
     Paco
-    
     #text
     
     ::::

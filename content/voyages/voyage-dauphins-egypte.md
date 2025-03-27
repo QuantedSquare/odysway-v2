@@ -7,6 +7,9 @@ Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1890€]{style="font-weight: bold"}

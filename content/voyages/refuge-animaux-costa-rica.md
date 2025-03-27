@@ -125,12 +125,15 @@ Occupez-vous des animaux de la jungle au Costa Rica
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/4DG2ivsWAfg
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

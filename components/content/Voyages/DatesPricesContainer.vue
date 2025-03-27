@@ -1,5 +1,8 @@
 <template>
-  <v-container id="dates-container">
+  <v-container
+    v-if="deal"
+    id="dates-container"
+  >
     <v-row
       no-gutters
       align="center"

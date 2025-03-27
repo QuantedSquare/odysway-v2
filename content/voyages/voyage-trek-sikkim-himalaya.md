@@ -69,6 +69,9 @@ Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2435€]{style="font-weight: bold"}

@@ -7,6 +7,9 @@ Randonnez sur les terres sauvages des Highlands
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2295€]{style="font-weight: bold"}

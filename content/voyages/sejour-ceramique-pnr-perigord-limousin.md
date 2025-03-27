@@ -7,12 +7,15 @@ Initiez-vous à l'art de la poterie artisanale dans le Limousin
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/AMn0YrJ_qbk
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

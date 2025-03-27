@@ -104,6 +104,9 @@ Immersion culturelle au coeur des traditions d’une famille balinaise
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1890€]{style="font-weight: bold"}

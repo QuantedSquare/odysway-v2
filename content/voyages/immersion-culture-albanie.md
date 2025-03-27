@@ -118,6 +118,9 @@ Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditi
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1590€]{style="font-weight: bold"}

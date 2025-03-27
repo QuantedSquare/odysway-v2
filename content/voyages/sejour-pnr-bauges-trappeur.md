@@ -69,13 +69,16 @@ Vivez comme un trappeur dans les Bauges
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/UTXBrU8XV_E
-https://www.youtube.com/watch?v=dOzVHLqmYuQ
+    - https://www.youtube.com/watch?v=dOzVHLqmYuQ
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

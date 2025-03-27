@@ -90,6 +90,9 @@ Initiez-vous au Kung Fu dans un temple Shaolin
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1820€]{style="font-weight: bold"}

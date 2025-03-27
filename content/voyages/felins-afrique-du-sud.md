@@ -76,6 +76,9 @@ Occupez-vous des félins en Afrique du Sud
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1490€]{style="font-weight: bold"}

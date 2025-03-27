@@ -118,6 +118,9 @@ Observez les dauphins avec un biologiste marin en Grèce
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1725€]{style="font-weight: bold"}

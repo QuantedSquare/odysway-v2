@@ -55,6 +55,9 @@ Découvrez l'art de la photo animalière dans le Jura
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [850€]{style="font-weight: bold"}

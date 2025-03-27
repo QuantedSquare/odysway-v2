@@ -125,12 +125,15 @@ image-src: /images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.j
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/fEuw4Hl04hU
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

@@ -132,6 +132,9 @@ Au fil du Rajasthan : découverte et immersion chez les Bishnoïs
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2522€]{style="font-weight: bold"}

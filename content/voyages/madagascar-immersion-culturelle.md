@@ -167,6 +167,9 @@ Immersion culturelle à travers les paysages spectaculaires de Madagascar
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2135€]{style="font-weight: bold"}

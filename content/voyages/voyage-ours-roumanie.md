@@ -76,6 +76,9 @@ Expédition sauvage en Roumanie : sur les traces des ours des Carpates
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1565€]{style="font-weight: bold"}

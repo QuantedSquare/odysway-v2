@@ -7,6 +7,9 @@ Voyage initiatique en Inde Himalaya
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [3685€]{style="font-weight: bold"}

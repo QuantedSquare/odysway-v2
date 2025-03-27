@@ -7,13 +7,16 @@ Immergez-vous dans le Parc naturel de la Forêt d'Orient
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/ZNdYg9xFchA
-https://www.youtube.com/embed/Htd2auXXGmw
+    - https://www.youtube.com/embed/Htd2auXXGmw
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

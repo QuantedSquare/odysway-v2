@@ -83,6 +83,9 @@ Randonnées et nuits chez l'habitant sur l'île de Santo Antão au Cap-Vert
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1190€]{style="font-weight: bold"}

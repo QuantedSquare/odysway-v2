@@ -76,6 +76,9 @@ Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1580€]{style="font-weight: bold"}

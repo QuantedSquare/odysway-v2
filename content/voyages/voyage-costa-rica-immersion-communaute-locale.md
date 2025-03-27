@@ -90,6 +90,9 @@ Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Br
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2990€]{style="font-weight: bold"}

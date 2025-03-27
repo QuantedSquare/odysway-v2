@@ -55,6 +55,9 @@ Mystères de la culture Maya au Guatemala
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1950€]{style="font-weight: bold"}

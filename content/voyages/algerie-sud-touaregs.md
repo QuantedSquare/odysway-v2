@@ -62,6 +62,9 @@ Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1855€]{style="font-weight: bold"}

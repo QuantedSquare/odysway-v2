@@ -7,12 +7,15 @@ Vivez le Queyras entre rencontres et traditions
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/MyISXi_sXjQ
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

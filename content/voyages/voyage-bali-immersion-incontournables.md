@@ -83,6 +83,9 @@ Explorez les incontournables de Bali entre plages, rizières et volcan
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1400€]{style="font-weight: bold"}

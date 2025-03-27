@@ -7,6 +7,9 @@ Séjour multi-activités en Laponie suédoise
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2039€]{style="font-weight: bold"}

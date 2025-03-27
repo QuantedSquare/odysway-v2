@@ -69,6 +69,9 @@ En immersion avec un photographe animalier dans les Vosges
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [690€]{style="font-weight: bold"}

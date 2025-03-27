@@ -83,6 +83,9 @@ Au bout du monde en Patagonie, terre de feu et de glace
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [4690€]{style="font-weight: bold"}

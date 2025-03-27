@@ -90,6 +90,9 @@ Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres hu
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1850€]{style="font-weight: bold"}

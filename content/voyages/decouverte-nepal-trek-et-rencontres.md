@@ -69,6 +69,9 @@ A la découverte du Népal : randonnées accessibles et immersion locale
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1410€]{style="font-weight: bold"}

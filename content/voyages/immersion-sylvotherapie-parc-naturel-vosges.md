@@ -7,14 +7,17 @@ Eveillez vos sens dans les forêts des Vosges du Nord
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/wDxKCyf3TcA
-https://www.youtube.com/embed/Jr_E8lgOgBs
-https://www.youtube.com/embed/WLftw0EyLZM
+    - https://www.youtube.com/embed/Jr_E8lgOgBs
+    - https://www.youtube.com/embed/WLftw0EyLZM
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

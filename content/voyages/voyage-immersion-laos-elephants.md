@@ -90,6 +90,9 @@ Voyage au Laos : rencontres avec les éléphants et communautés locales
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2425€]{style="font-weight: bold"}

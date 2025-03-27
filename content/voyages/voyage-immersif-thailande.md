@@ -118,6 +118,9 @@ Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Ka
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1740€]{style="font-weight: bold"}

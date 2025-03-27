@@ -181,6 +181,9 @@ Trek chez l'habitant au Népal, au fil des villages Sherpas
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1460€]{style="font-weight: bold"}

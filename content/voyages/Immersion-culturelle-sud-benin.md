@@ -167,6 +167,9 @@ Bénin, rencontres et traditions au pays vodoun
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1185€]{style="font-weight: bold"}

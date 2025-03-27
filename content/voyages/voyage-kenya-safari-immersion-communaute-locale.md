@@ -55,6 +55,9 @@ En immersion dans les villages traditionnels du Kenya et safari dans le Masai Ma
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2090€]{style="font-weight: bold"}

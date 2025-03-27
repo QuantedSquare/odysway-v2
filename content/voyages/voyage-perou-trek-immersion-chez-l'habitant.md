@@ -55,6 +55,9 @@ Trek en immersion dans les communautés Andines du Pérou
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2200€]{style="font-weight: bold"}

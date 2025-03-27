@@ -76,6 +76,9 @@ Découvrez la Colombie au cœur des traditions et des rencontres
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2140€]{style="font-weight: bold"}

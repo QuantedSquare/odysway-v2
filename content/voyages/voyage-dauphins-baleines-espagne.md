@@ -104,6 +104,9 @@ Observez dauphins et baleines sur les îles Canaries
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1535€]{style="font-weight: bold"}

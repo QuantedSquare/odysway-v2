@@ -7,6 +7,9 @@ Voyage sur-mesure en Jordanie
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1500€]{style="font-weight: bold"}

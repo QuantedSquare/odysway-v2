@@ -7,6 +7,9 @@ La Grande aventure : Challenge solidaire en immersion au Maroc
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1590€]{style="font-weight: bold"}

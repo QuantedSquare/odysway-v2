@@ -7,6 +7,9 @@ Initiation à l'observation astronomique en Corse
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [295€]{style="font-weight: bold"}

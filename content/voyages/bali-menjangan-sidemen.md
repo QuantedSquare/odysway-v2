@@ -104,6 +104,9 @@ Immersion à Bali, au cœur des traditions et des paysages spectaculaires
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1780€]{style="font-weight: bold"}

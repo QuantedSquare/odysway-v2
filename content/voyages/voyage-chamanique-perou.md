@@ -111,6 +111,9 @@ Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pér
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2060€]{style="font-weight: bold"}

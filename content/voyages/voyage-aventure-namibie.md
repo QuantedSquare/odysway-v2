@@ -7,6 +7,9 @@ Namibie sauvage : entre aventure et protection des animaux
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1585€]{style="font-weight: bold"}

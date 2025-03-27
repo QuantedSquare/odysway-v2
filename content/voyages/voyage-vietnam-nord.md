@@ -90,6 +90,9 @@ Le Vietnam du Nord, un voyage à la rencontre des populations ethniques
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1950€]{style="font-weight: bold"}

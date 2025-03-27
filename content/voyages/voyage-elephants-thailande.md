@@ -76,6 +76,9 @@ Observer les éléphants, explorer les temples et s'évader sur les plages de Th
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2145€]{style="font-weight: bold"}

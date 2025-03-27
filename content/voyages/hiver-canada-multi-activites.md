@@ -55,6 +55,9 @@ Séjour multiactivités dans les fjords canadiens
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2230€]{style="font-weight: bold"}

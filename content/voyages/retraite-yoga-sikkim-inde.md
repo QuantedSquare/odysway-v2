@@ -76,12 +76,15 @@ Retraite Himalayenne : méditation et yoga au cœur du Sikkim
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/3aH6CsMkLGA
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

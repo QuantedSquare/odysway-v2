@@ -104,6 +104,9 @@ image-src: /images/voyages/route-soie-ouzbekistan/o08YedTuTO2GxYxdml4H.jpg
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1710€]{style="font-weight: bold"}

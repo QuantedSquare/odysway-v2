@@ -83,6 +83,9 @@ Immersion au cœur d'un observatoire astronomique
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1850€]{style="font-weight: bold"}

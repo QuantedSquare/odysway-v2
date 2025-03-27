@@ -7,6 +7,9 @@ Séjour au cœur d'un observatoire astronomique
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [630€]{style="font-weight: bold"}

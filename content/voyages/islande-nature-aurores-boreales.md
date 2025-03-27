@@ -55,6 +55,9 @@ Islande sauvage : Terre de feu et de glace
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [2865€]{style="font-weight: bold"}

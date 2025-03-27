@@ -125,6 +125,9 @@ Vivez comme un nomade du Sahara au Maroc
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1390€]{style="font-weight: bold"}

@@ -83,6 +83,9 @@ Marche silencieuse et immersion nomade dans le sahara marocain
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1295€]{style="font-weight: bold"}

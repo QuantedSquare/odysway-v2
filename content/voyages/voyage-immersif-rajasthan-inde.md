@@ -55,6 +55,9 @@ Voyage au Rajasthan : éveil des sens au cœur de l'Inde
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1815€]{style="font-weight: bold"}

@@ -83,6 +83,9 @@ Partez à la rencontre des berbères dans le Sud du Maroc
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1435€]{style="font-weight: bold"}

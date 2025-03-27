@@ -118,6 +118,9 @@ Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les 
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1640€]{style="font-weight: bold"}

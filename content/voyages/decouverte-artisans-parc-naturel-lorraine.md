@@ -55,14 +55,17 @@ Viticultrice et souffleur de verre, rencontrez les artisans lorrains
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/e6WSpl5F8sI
-https://www.youtube.com/embed/xioFugqVekg
-https://www.youtube.com/embed/i63X1wpE-Z0
+    - https://www.youtube.com/embed/xioFugqVekg
+    - https://www.youtube.com/embed/i63X1wpE-Z0
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar

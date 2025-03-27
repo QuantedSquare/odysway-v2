@@ -160,6 +160,9 @@ Cap-Vert en immersion : partagez le quotidien des habitants de Santiago
 
 ::
 
+::horizontal-ariane
+::
+
 ::bottom-app-bar
 #starting-price
 Dès [1470€]{style="font-weight: bold"}

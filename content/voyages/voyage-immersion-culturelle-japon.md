@@ -104,12 +104,15 @@ Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité
 #component-slot-2
   :::video-dialog
   ---
-  video-src:
+  video-src: 
     - https://www.youtube.com/embed/smxELaAq8Ic
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
 ::
 
 ::bottom-app-bar
