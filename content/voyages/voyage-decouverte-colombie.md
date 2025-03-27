@@ -10,49 +10,84 @@ Découvrez la Colombie au cœur des traditions et des rencontres
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-decouverte-colombie/5L0Bkbd5QjibxBrj3kfR.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-decouverte-colombie/5L0Bkbd5QjibxBrj3kfR.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-decouverte-colombie/WTc0gJ6sR9uRdnM1mJxD.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-decouverte-colombie/WTc0gJ6sR9uRdnM1mJxD.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-decouverte-colombie/8qsQ7QwRji2tEHuoISoQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-decouverte-colombie/8qsQ7QwRji2tEHuoISoQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-decouverte-colombie/FAkF9ZVcTnyJbvmeWAEA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-decouverte-colombie/FAkF9ZVcTnyJbvmeWAEA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-decouverte-colombie/eHHoMulCRojBJn3PH6GS.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-decouverte-colombie/eHHoMulCRojBJn3PH6GS.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-decouverte-colombie/mFmJHeszQP6TABDsdyFw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-decouverte-colombie/mFmJHeszQP6TABDsdyFw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-decouverte-colombie/QUXBd4lQtCiIVkAPHhjJ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-decouverte-colombie/QUXBd4lQtCiIVkAPHhjJ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-decouverte-colombie/Hs1aVYwyRhOU103BiROg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-decouverte-colombie/Hs1aVYwyRhOU103BiROg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-decouverte-colombie/ivUQr9tnS3u9nHHDpvzd.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-decouverte-colombie/ivUQr9tnS3u9nHHDpvzd.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2140€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

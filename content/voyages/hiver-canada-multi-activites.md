@@ -10,36 +10,63 @@ Séjour multiactivités dans les fjords canadiens
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/hiver-canada-multi-activites/IXuhHihnSLCyXkPkqzrt.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/hiver-canada-multi-activites/IXuhHihnSLCyXkPkqzrt.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/hiver-canada-multi-activites/Dtww4JV6QmGzEjyjpO5Z.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/hiver-canada-multi-activites/Dtww4JV6QmGzEjyjpO5Z.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/hiver-canada-multi-activites/U9MoSycLRMm44bZUXdDQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/hiver-canada-multi-activites/U9MoSycLRMm44bZUXdDQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/hiver-canada-multi-activites/YaIECxiTveC58oCebovQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/hiver-canada-multi-activites/YaIECxiTveC58oCebovQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/hiver-canada-multi-activites/N3EaSMMPRXOyIJzciyI7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/hiver-canada-multi-activites/N3EaSMMPRXOyIJzciyI7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/hiver-canada-multi-activites/IUWPpj3MTiO5z283rL0V.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/hiver-canada-multi-activites/IUWPpj3MTiO5z283rL0V.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2230€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

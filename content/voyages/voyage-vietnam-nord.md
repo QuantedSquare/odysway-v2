@@ -10,59 +10,98 @@ Le Vietnam du Nord, un voyage à la rencontre des populations ethniques
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-vietnam-nord/lQBY6WOxQyClPoeR4Y0k.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-vietnam-nord/lQBY6WOxQyClPoeR4Y0k.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-vietnam-nord/KLiPrvnPSzCzqtpvWGLB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-vietnam-nord/KLiPrvnPSzCzqtpvWGLB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-vietnam-nord/1O9XD7iKTbutrysqxeyA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-vietnam-nord/1O9XD7iKTbutrysqxeyA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-vietnam-nord/zyTJbQSRv6cqGqGfct00.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-vietnam-nord/zyTJbQSRv6cqGqGfct00.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-vietnam-nord/m4uoF2P4QgKZxTNl2jW0.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-vietnam-nord/m4uoF2P4QgKZxTNl2jW0.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-vietnam-nord/G5Fnc1lTVCBp4ikNGVww.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-vietnam-nord/G5Fnc1lTVCBp4ikNGVww.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-vietnam-nord/DLA2OspS1ibwGRvI0Wm6.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-vietnam-nord/DLA2OspS1ibwGRvI0Wm6.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-vietnam-nord/nrOT6LQQWOkc2JlSsWwg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-vietnam-nord/nrOT6LQQWOkc2JlSsWwg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-vietnam-nord/oq38Nl3jTeaoGyznJD24.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-vietnam-nord/oq38Nl3jTeaoGyznJD24.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-vietnam-nord/joKuUbwxSJOm5FV6g86V.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-vietnam-nord/joKuUbwxSJOm5FV6g86V.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-vietnam-nord/RRhCr1tSRiPfMFltfOdw.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-vietnam-nord/RRhCr1tSRiPfMFltfOdw.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1950€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

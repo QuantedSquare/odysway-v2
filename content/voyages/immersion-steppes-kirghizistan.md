@@ -10,93 +10,141 @@ image-src: /images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.j
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-steppes-kirghizistan/33RXXTTSCeCjBh4P9MIg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/33RXXTTSCeCjBh4P9MIg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-steppes-kirghizistan/4VNn0Xg0SzSa0Ixv44h2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/4VNn0Xg0SzSa0Ixv44h2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-steppes-kirghizistan/qjruSciwSwiy1isKsMCw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/qjruSciwSwiy1isKsMCw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-steppes-kirghizistan/2rdQFnBQs2gyCzVtNLMU.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/2rdQFnBQs2gyCzVtNLMU.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-steppes-kirghizistan/j8xBji5S6uFiRvGROFVp.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/j8xBji5S6uFiRvGROFVp.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-steppes-kirghizistan/paJSyzBTGaGEmaiV4oqH.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/paJSyzBTGaGEmaiV4oqH.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-steppes-kirghizistan/ut0n3mZQROJNKPmpuLQ7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/ut0n3mZQROJNKPmpuLQ7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-steppes-kirghizistan/QBUl7sgsSBuXTmWJU8LP.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/QBUl7sgsSBuXTmWJU8LP.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-steppes-kirghizistan/DceF8Jw3SSOIojoA6F49.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/DceF8Jw3SSOIojoA6F49.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-steppes-kirghizistan/MTrWaOyCTFWuuIxIe8Hs.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/MTrWaOyCTFWuuIxIe8Hs.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-steppes-kirghizistan/gZxaUAGRRpau5tu7jMAU.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/gZxaUAGRRpau5tu7jMAU.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-steppes-kirghizistan/YGMxsAR1SbiuYZS7qwZZ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/YGMxsAR1SbiuYZS7qwZZ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-steppes-kirghizistan/TcFXIOauTfKxfNdkqdhs.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/TcFXIOauTfKxfNdkqdhs.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-steppes-kirghizistan/nTwpJo59RKKIWS0eeV82.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/nTwpJo59RKKIWS0eeV82.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-steppes-kirghizistan/9T4G7eonRTgfTEdHuDaW.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/9T4G7eonRTgfTEdHuDaW.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-steppes-kirghizistan/L39NykzRbCnzWot9MpCw.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-steppes-kirghizistan/L39NykzRbCnzWot9MpCw.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/fEuw4Hl04hU
+  video-src: 
+    - https://www.youtube.com/embed/fEuw4Hl04hU
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2243€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

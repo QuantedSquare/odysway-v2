@@ -10,39 +10,70 @@ Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-croisiere-nil/7lL0FJPyTuK5vz2d3sf3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/7lL0FJPyTuK5vz2d3sf3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-egypte-croisiere-nil/OnGBweu4S0W6brJ2TnSz.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/OnGBweu4S0W6brJ2TnSz.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-egypte-croisiere-nil/H6Z6G1T3SGym4jV0WM5a.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/H6Z6G1T3SGym4jV0WM5a.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-egypte-croisiere-nil/rxLU0p1cSbOBLwJUk8Zl.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/rxLU0p1cSbOBLwJUk8Zl.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-egypte-croisiere-nil/I9zCB3fKR0ygY88iOpHH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/I9zCB3fKR0ygY88iOpHH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-egypte-croisiere-nil/lQ1D7UxeQj2KsIhiDao2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/lQ1D7UxeQj2KsIhiDao2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-egypte-croisiere-nil/1TCMgskgSBa772hOhgQ7.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-egypte-croisiere-nil/1TCMgskgSBa772hOhgQ7.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1695€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

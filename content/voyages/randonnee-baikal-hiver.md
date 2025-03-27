@@ -10,76 +10,119 @@ Randonnez sur le mythique lac Baïkal gelé en Sibérie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/randonnee-baikal-hiver/z24XhZdNQ2FJfKUOKskQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/randonnee-baikal-hiver/z24XhZdNQ2FJfKUOKskQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/randonnee-baikal-hiver/BWi6qZ5TuCza4AMETHzV.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/randonnee-baikal-hiver/BWi6qZ5TuCza4AMETHzV.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/randonnee-baikal-hiver/LfwiAncZSyCs0Daxi4dW.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/randonnee-baikal-hiver/LfwiAncZSyCs0Daxi4dW.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/randonnee-baikal-hiver/eOEpdh4Q062LZcUzO7sp.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/randonnee-baikal-hiver/eOEpdh4Q062LZcUzO7sp.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/randonnee-baikal-hiver/ERfYKcFHS1aNNiTXTX6W.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/randonnee-baikal-hiver/ERfYKcFHS1aNNiTXTX6W.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/randonnee-baikal-hiver/mE18MClIRWq8pfxh5qaG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/randonnee-baikal-hiver/mE18MClIRWq8pfxh5qaG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/randonnee-baikal-hiver/WrrxbIxbQWit0ngmmm9N.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/randonnee-baikal-hiver/WrrxbIxbQWit0ngmmm9N.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/randonnee-baikal-hiver/Z4xuSY9cRzC0KsN2oJuM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/randonnee-baikal-hiver/Z4xuSY9cRzC0KsN2oJuM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/randonnee-baikal-hiver/Tbc6xWBSYi30wdQdyzEA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/randonnee-baikal-hiver/Tbc6xWBSYi30wdQdyzEA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/randonnee-baikal-hiver/DyN3OAZWSWqDEZSXnaOF.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/randonnee-baikal-hiver/DyN3OAZWSWqDEZSXnaOF.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/randonnee-baikal-hiver/RWGBTuBQ463jwf7XLsGC.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/randonnee-baikal-hiver/RWGBTuBQ463jwf7XLsGC.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/randonnee-baikal-hiver/213nSeoBQ6eihawnMPib.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/randonnee-baikal-hiver/213nSeoBQ6eihawnMPib.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/randonnee-baikal-hiver/pm7zPX3uTU69DwHPF495.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/randonnee-baikal-hiver/pm7zPX3uTU69DwHPF495.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/randonnee-baikal-hiver/sb6QIaBWRk6XWq58gzyy.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/randonnee-baikal-hiver/sb6QIaBWRk6XWq58gzyy.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1930€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

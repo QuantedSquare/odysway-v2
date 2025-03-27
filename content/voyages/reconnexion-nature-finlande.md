@@ -10,56 +10,91 @@ Aventure éco responsable et reconnexion à la nature en Finlande
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/reconnexion-nature-finlande/Dtc5gRdsRkOuOJIFVeSF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/reconnexion-nature-finlande/Dtc5gRdsRkOuOJIFVeSF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/reconnexion-nature-finlande/kOYoprVnRminYUUKvYbV.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/reconnexion-nature-finlande/kOYoprVnRminYUUKvYbV.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/reconnexion-nature-finlande/gJP3kk6RFSm14l4Wea3g.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/reconnexion-nature-finlande/gJP3kk6RFSm14l4Wea3g.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/reconnexion-nature-finlande/uWBnVnVATbGqVwOR9UcC.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/reconnexion-nature-finlande/uWBnVnVATbGqVwOR9UcC.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/reconnexion-nature-finlande/92s9g5WjSQ27dr3ToBEf.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/reconnexion-nature-finlande/92s9g5WjSQ27dr3ToBEf.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/reconnexion-nature-finlande/G3XDy3vaR5SGwdRhg5Wu.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/reconnexion-nature-finlande/G3XDy3vaR5SGwdRhg5Wu.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/reconnexion-nature-finlande/BKfpxnsR1aPcV5K8yxDq.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/reconnexion-nature-finlande/BKfpxnsR1aPcV5K8yxDq.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/reconnexion-nature-finlande/j0VQYxNOSeWXnT504xFD.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/reconnexion-nature-finlande/j0VQYxNOSeWXnT504xFD.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/reconnexion-nature-finlande/oFvkkxVhQXWtAUTPZQzV.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/reconnexion-nature-finlande/oFvkkxVhQXWtAUTPZQzV.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/reconnexion-nature-finlande/oLW8l7KmQ9GdzGERhFHa.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/reconnexion-nature-finlande/oLW8l7KmQ9GdzGERhFHa.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1480€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

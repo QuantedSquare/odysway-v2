@@ -10,43 +10,73 @@ Viticultrice et souffleur de verre, rencontrez les artisans lorrains
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/decouverte-artisans-parc-naturel-lorraine/zI1FfMyCQ4C2sVgeWInK.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/zI1FfMyCQ4C2sVgeWInK.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/GbplUYHyQVeymr51VwNX.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/GbplUYHyQVeymr51VwNX.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/decouverte-artisans-parc-naturel-lorraine/iRJjmAtuSBu7xGCKlhi9.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/iRJjmAtuSBu7xGCKlhi9.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/DxCcRROWTS6IZoRgbJtX.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/DxCcRROWTS6IZoRgbJtX.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/decouverte-artisans-parc-naturel-lorraine/mqnzv56hQPexOPJMI5i7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/mqnzv56hQPexOPJMI5i7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/HUsn3eC5Q0i6Rxzfz3Y0.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-artisans-parc-naturel-lorraine/HUsn3eC5Q0i6Rxzfz3Y0.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/e6WSpl5F8sI
+  video-src: 
+    - https://www.youtube.com/embed/e6WSpl5F8sI
+    - https://www.youtube.com/embed/xioFugqVekg
+    - https://www.youtube.com/embed/i63X1wpE-Z0
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [295€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

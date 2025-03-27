@@ -10,53 +10,86 @@ Vivez comme un trappeur dans les Bauges
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/sejour-pnr-bauges-trappeur/cJBCgTbaRSmMzbBargUY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/cJBCgTbaRSmMzbBargUY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-pnr-bauges-trappeur/RtzFYv0TYC9zDSx1AW3m.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/RtzFYv0TYC9zDSx1AW3m.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/sejour-pnr-bauges-trappeur/wRNYWVeQS8yXy50iqE9S.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/wRNYWVeQS8yXy50iqE9S.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/sejour-pnr-bauges-trappeur/Fgc4z5fzTVYoyhUqF3Lm.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/Fgc4z5fzTVYoyhUqF3Lm.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/sejour-pnr-bauges-trappeur/Y0IUCmsUSkBEvf89SpLA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/Y0IUCmsUSkBEvf89SpLA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/sejour-pnr-bauges-trappeur/SzRQEVGaTAmmng1ARgd4.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/SzRQEVGaTAmmng1ARgd4.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/sejour-pnr-bauges-trappeur/75sKvM5jRoiOqWkqGSFu.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/75sKvM5jRoiOqWkqGSFu.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/sejour-pnr-bauges-trappeur/N81WPAtBR1KwM17xUoV1.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/sejour-pnr-bauges-trappeur/N81WPAtBR1KwM17xUoV1.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/UTXBrU8XV_E
+  video-src: 
+    - https://www.youtube.com/embed/UTXBrU8XV_E
+    - https://www.youtube.com/watch?v=dOzVHLqmYuQ
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [355€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

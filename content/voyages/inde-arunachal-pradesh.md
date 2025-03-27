@@ -10,49 +10,84 @@ Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/inde-arunachal-pradesh/LEBMup6yRDaSpdOIdq4p.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/inde-arunachal-pradesh/LEBMup6yRDaSpdOIdq4p.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/inde-arunachal-pradesh/4bRonumsSweGQSzKQe5C.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/inde-arunachal-pradesh/4bRonumsSweGQSzKQe5C.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/inde-arunachal-pradesh/qWd3XZfQM67FKQoCbcod.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/inde-arunachal-pradesh/qWd3XZfQM67FKQoCbcod.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/inde-arunachal-pradesh/JAOM0972QvSJ5R1JOeIG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/inde-arunachal-pradesh/JAOM0972QvSJ5R1JOeIG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/inde-arunachal-pradesh/NmLAJaJXTiW0rWB1aWY8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/inde-arunachal-pradesh/NmLAJaJXTiW0rWB1aWY8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/inde-arunachal-pradesh/oXWddwjORpW8SF5dA34l.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/inde-arunachal-pradesh/oXWddwjORpW8SF5dA34l.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/inde-arunachal-pradesh/QB0lPi1eSCz1enlI0dA3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/inde-arunachal-pradesh/QB0lPi1eSCz1enlI0dA3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/inde-arunachal-pradesh/sXo268UOQnWRmMFgl3Yl.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/inde-arunachal-pradesh/sXo268UOQnWRmMFgl3Yl.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/inde-arunachal-pradesh/xESzmjQBQGilAlEeOcIX.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/inde-arunachal-pradesh/xESzmjQBQGilAlEeOcIX.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2060€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

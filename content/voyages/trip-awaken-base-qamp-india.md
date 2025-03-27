@@ -7,11 +7,26 @@ Awaken your own nature - BaseQamp
 #component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/3aH6CsMkLGA
+  video-src: 
+    - https://www.youtube.com/embed/3aH6CsMkLGA
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [3888€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,79 +10,126 @@ Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les 
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-insolite-sri-lanka/NKBsTqM7TvWx9z4pF3NM.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/NKBsTqM7TvWx9z4pF3NM.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-insolite-sri-lanka/wP3Fr7aARbG6lJk7WrOc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/wP3Fr7aARbG6lJk7WrOc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-insolite-sri-lanka/ySjJykXSyivdFKnhToHE.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/ySjJykXSyivdFKnhToHE.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-insolite-sri-lanka/6xk8GFMHSL2pGr2d9lVb.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/6xk8GFMHSL2pGr2d9lVb.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-insolite-sri-lanka/wJasfOcyR4Oz4JEMJFAX.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/wJasfOcyR4Oz4JEMJFAX.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-insolite-sri-lanka/dq0j7D8tSFq0O1XcDqis.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/dq0j7D8tSFq0O1XcDqis.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-insolite-sri-lanka/DaU88J8TPK3CQ3DTMGRq.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/DaU88J8TPK3CQ3DTMGRq.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-insolite-sri-lanka/NaYYg0dKSFGoWGWrTaau.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/NaYYg0dKSFGoWGWrTaau.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-insolite-sri-lanka/SahabwZ7RQaAnwLTOevH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/SahabwZ7RQaAnwLTOevH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-insolite-sri-lanka/BGV91tGvRV6Pp1Tdhm8K.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/BGV91tGvRV6Pp1Tdhm8K.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-insolite-sri-lanka/40BepUN5SAuvbG7jQjhb.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/40BepUN5SAuvbG7jQjhb.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-insolite-sri-lanka/IOOD2L1xRIEGdaDkFSSa.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/IOOD2L1xRIEGdaDkFSSa.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-insolite-sri-lanka/FIbmWuRImhijdkrwBB0g.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/FIbmWuRImhijdkrwBB0g.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-insolite-sri-lanka/ssfhAv5nQHSLDQCZr8dR.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/ssfhAv5nQHSLDQCZr8dR.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-insolite-sri-lanka/s0Ppb1TkTx2iFth2oxt8.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-insolite-sri-lanka/s0Ppb1TkTx2iFth2oxt8.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1640€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

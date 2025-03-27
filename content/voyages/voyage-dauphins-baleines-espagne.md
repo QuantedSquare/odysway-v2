@@ -10,69 +10,112 @@ Observez dauphins et baleines sur les îles Canaries
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-dauphins-baleines-espagne/phqLPETfTkGoAbb9QXuD.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/phqLPETfTkGoAbb9QXuD.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-dauphins-baleines-espagne/9QcdWIItQdqQxxMy7u8t.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/9QcdWIItQdqQxxMy7u8t.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-dauphins-baleines-espagne/AiOXKzUJSsYB0NugPwwG.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/AiOXKzUJSsYB0NugPwwG.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-dauphins-baleines-espagne/dMlCGg9DQmmdbyCB6p7y.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/dMlCGg9DQmmdbyCB6p7y.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-dauphins-baleines-espagne/9YrTBcjeSiqUWXSL3TuA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/9YrTBcjeSiqUWXSL3TuA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-dauphins-baleines-espagne/UNOsEpzJT0CPWbqBbNNQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/UNOsEpzJT0CPWbqBbNNQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-dauphins-baleines-espagne/b633G5TQ7qV16cfk3Lcg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/b633G5TQ7qV16cfk3Lcg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-dauphins-baleines-espagne/qwQvg4v5S7Sz2pxagmvO.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/qwQvg4v5S7Sz2pxagmvO.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-dauphins-baleines-espagne/z68IHlwLTW2qe7ehx4cr.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/z68IHlwLTW2qe7ehx4cr.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-dauphins-baleines-espagne/ON104ffBTXWodkLMTqsz.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/ON104ffBTXWodkLMTqsz.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-dauphins-baleines-espagne/WNZ6ffQXG9uLaRU1CqSA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/WNZ6ffQXG9uLaRU1CqSA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-dauphins-baleines-espagne/ASSVRlENSqijp5x2gojP.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/ASSVRlENSqijp5x2gojP.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-dauphins-baleines-espagne/QfUFBVbBQh6ach8DcZhp.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-dauphins-baleines-espagne/QfUFBVbBQh6ach8DcZhp.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1535€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

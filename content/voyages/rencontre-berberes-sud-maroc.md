@@ -10,56 +10,91 @@ Partez à la rencontre des berbères dans le Sud du Maroc
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/rencontre-berberes-sud-maroc/vLDBSBUFT5GdribZYDoS.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/vLDBSBUFT5GdribZYDoS.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/rencontre-berberes-sud-maroc/P6VfC0E2Tq6mKXGtuGla.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/P6VfC0E2Tq6mKXGtuGla.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/rencontre-berberes-sud-maroc/d9lZDkhdRSm8WJfYO2ss.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/d9lZDkhdRSm8WJfYO2ss.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/rencontre-berberes-sud-maroc/FTZ7ntR1yONReWIcqGqw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/FTZ7ntR1yONReWIcqGqw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/rencontre-berberes-sud-maroc/0v7GO6kS1qwEfczqJz4x.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/0v7GO6kS1qwEfczqJz4x.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/rencontre-berberes-sud-maroc/LQmZxagbTaufj76LSiTc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/LQmZxagbTaufj76LSiTc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/rencontre-berberes-sud-maroc/bvIzgRHQgu5OdKHgDPV3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/bvIzgRHQgu5OdKHgDPV3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/rencontre-berberes-sud-maroc/tuM30UySWC7elxeXr52e.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/tuM30UySWC7elxeXr52e.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/rencontre-berberes-sud-maroc/uHpk6sb5R6SjCEs6i7ld.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/uHpk6sb5R6SjCEs6i7ld.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/rencontre-berberes-sud-maroc/eDC2ZtZTYivOjjg3R9BW.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/rencontre-berberes-sud-maroc/eDC2ZtZTYivOjjg3R9BW.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1435€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,49 +10,84 @@ Expédition sauvage en Roumanie : sur les traces des ours des Carpates
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-ours-roumanie/tG3MO9WwQAeBLJKtRpsd.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ours-roumanie/tG3MO9WwQAeBLJKtRpsd.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-ours-roumanie/oRN0fAQkSMmsswrzFqMQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ours-roumanie/oRN0fAQkSMmsswrzFqMQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-ours-roumanie/i9I0OWfSQjKQou4GzMRG.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-ours-roumanie/i9I0OWfSQjKQou4GzMRG.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-ours-roumanie/1Q8alzmLQkK7H94YbcFS.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-ours-roumanie/1Q8alzmLQkK7H94YbcFS.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-ours-roumanie/KhmsYoMyT3eg6ZXCEnWI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ours-roumanie/KhmsYoMyT3eg6ZXCEnWI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-ours-roumanie/DG7zZ47hSm6IwThQmNVk.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ours-roumanie/DG7zZ47hSm6IwThQmNVk.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-ours-roumanie/uXOMbftpSvGS9rzETYSW.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ours-roumanie/uXOMbftpSvGS9rzETYSW.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-ours-roumanie/5jPxegQbWJGPtw7Cc5eQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ours-roumanie/5jPxegQbWJGPtw7Cc5eQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-ours-roumanie/4KkMRzMqTkarK2rwhpef.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-ours-roumanie/4KkMRzMqTkarK2rwhpef.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1565€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

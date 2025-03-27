@@ -190,6 +190,19 @@ async function processAndDownloadImages(voyage) {
   return imageUrlMap
 }
 
+function getVideoLinks(voyage) {
+  const videoLinks = []
+  for (let i = 1; i <= 4; i++) {
+    const video = voyage[`lien_video_${i}`]
+    if (video) {
+      videoLinks.push({
+        url: video,
+      })
+    }
+  }
+  return videoLinks
+}
+
 // Initialize turndown service to convert HTML to markdown
 const turndown = new TurndownService({
   headingStyle: 'atx',
@@ -259,8 +272,12 @@ function formatImageArray(array, imageUrlMap) {
     // Format left column
     if (i < array.length) {
       // Using the inline format for the first item in each pair
-      result += `::::photo-col{col-width="${leftColWidth}" image-src="${imageUrlMap.get(array[i].image) || array[i].image}"}
-::::\n\n`
+      result += `  ::::photo-col
+  ---
+  col-width: "${leftColWidth}"
+  image-src: ${imageUrlMap.get(array[i].image) || array[i].image}
+  ---
+  ::::\n\n`
     }
 
     // Right column (even indices in your layout)
@@ -268,16 +285,23 @@ function formatImageArray(array, imageUrlMap) {
       const rightColWidth = rightColWidths[rowIndex]
 
       // Using the block format for the second item in each pair
-      result += `::::photo-col
----
-col-width: "${rightColWidth}"
-image-src: ${imageUrlMap.get(array[i + 1].image) || array[i + 1].image}
----
-::::\n\n`
+      result += `  ::::photo-col
+  ---
+  col-width: "${rightColWidth}"
+  image-src: ${imageUrlMap.get(array[i + 1].image) || array[i + 1].image}
+  ---
+  ::::\n\n`
     }
   }
 
   return result.trim()
+}
+
+function formatVideoLinks(videoUrlMap) {
+  return videoUrlMap.map((video) => {
+    return `
+    - ${video.url}`
+  }).join('')
 }
 // Function to convert list items from Butter CMS format
 function highlightListItems(htmlList) {
@@ -446,7 +470,7 @@ function mapFaqsInMarkdown(faq) {
 }
 
 // Function to convert the voyage data to markdown
-function convertToMarkdown(voyageData, imageUrlMap) {
+function convertToMarkdown(voyageData, imageUrlMap, videoUrlMap) {
   const voyage = voyageData
 
   // Helper function to get local image path
@@ -471,15 +495,15 @@ ${voyage.titre}
   voir la galerie photos
 
   #photo-col
-    ${formatImageArray(voyage.images, imageUrlMap)}
-  :::`
+  ${formatImageArray(voyage.images, imageUrlMap)}
+:::\n`
   }
 
-  if (voyage.lien_video_1) {
+  if (getVideoLinks(voyage).length > 0) {
     markdown += `#component-slot-2
   :::video-dialog
   ---
-  video-src: ${voyage.lien_video_1}
+  video-src: ${formatVideoLinks(videoUrlMap)}
   ---
   #video-btn
   voir la video
@@ -487,6 +511,22 @@ ${voyage.titre}
   }
 
   markdown += '\n::\n\n'
+
+  markdown += `::horizontal-ariane
+::\n
+`
+
+  markdown += `::bottom-app-bar
+#starting-price
+Dès [${voyage.prix}€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
+::\n
+`
 
   markdown += `::sticky-container
 ---
@@ -777,16 +817,20 @@ async function processVoyageData(inputJson, outputDir) {
       for (const post of voyageData) {
         // Process images first
         const imageUrlMap = await processAndDownloadImages(post)
-        // Convert markdown with updated image paths
-        const markdown = convertToMarkdown(post, imageUrlMap)
+        // Get video links
+        const videoUrlMap = getVideoLinks(post)
+        // Convert markdown with updated image paths and video urls
+        const markdown = convertToMarkdown(post, imageUrlMap, videoUrlMap)
         processMarkdown(markdown, outputDir, slugify(post.slug))
       }
     }
     else {
       // Process images first
       const imageUrlMap = await processAndDownloadImages(voyageData)
-      // Convert markdown with updated image paths
-      const markdown = convertToMarkdown(voyageData, imageUrlMap)
+      // Get video links
+      const videoUrlMap = getVideoLinks(voyageData)
+      // Convert markdown with updated image paths and video urls
+      const markdown = convertToMarkdown(voyageData, imageUrlMap, videoUrlMap)
       processMarkdown(markdown, outputDir, slugify(voyageData.slug))
     }
 

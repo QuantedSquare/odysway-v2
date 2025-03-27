@@ -10,86 +10,133 @@ Séjour multi-activités en Laponie finlandaise
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-hiver-laponie-finlande/3AN9s8zTeS2s0vY5InQI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/3AN9s8zTeS2s0vY5InQI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/RmLV1y4NTlyOkqAddCck.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/RmLV1y4NTlyOkqAddCck.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-hiver-laponie-finlande/TGsiyl8mQfyS7vPTTHY5.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/TGsiyl8mQfyS7vPTTHY5.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/uB9htAjBQSDtlK3ogTtB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/uB9htAjBQSDtlK3ogTtB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-hiver-laponie-finlande/dXYuztMSK2HUalSNheVo.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/dXYuztMSK2HUalSNheVo.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/nPTYRSAaQOuJid5z3Zsw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/nPTYRSAaQOuJid5z3Zsw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-hiver-laponie-finlande/2fNpARHZRDWDc9FTLhip.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/2fNpARHZRDWDc9FTLhip.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/vIiJtZdbRLSn51PRPhfL.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/vIiJtZdbRLSn51PRPhfL.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-hiver-laponie-finlande/soxvHDZhSXScHYV5tSrM.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/soxvHDZhSXScHYV5tSrM.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/1sx5kEzXQGK4JKlgIpzz.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/1sx5kEzXQGK4JKlgIpzz.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-hiver-laponie-finlande/Vw8My3NDSkCUiGIkLc5c.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/Vw8My3NDSkCUiGIkLc5c.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/VqFJUgASEirneSy2gXAE.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/VqFJUgASEirneSy2gXAE.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-hiver-laponie-finlande/MDvCa5ARS1atzKFS075h.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/MDvCa5ARS1atzKFS075h.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/3676NK0ETeaV1Jc17hiK.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/3676NK0ETeaV1Jc17hiK.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-hiver-laponie-finlande/O60Eje2yR8SqwYAEzD5Y.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/O60Eje2yR8SqwYAEzD5Y.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-hiver-laponie-finlande/deNtnAPAQq2lHvGHRssh.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-hiver-laponie-finlande/deNtnAPAQq2lHvGHRssh.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2430€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

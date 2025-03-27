@@ -7,11 +7,28 @@ Eveillez vos sens dans les forêts des Vosges du Nord
 #component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/wDxKCyf3TcA
+  video-src: 
+    - https://www.youtube.com/embed/wDxKCyf3TcA
+    - https://www.youtube.com/embed/Jr_E8lgOgBs
+    - https://www.youtube.com/embed/WLftw0EyLZM
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [210€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

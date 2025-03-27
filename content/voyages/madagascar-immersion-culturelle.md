@@ -10,116 +10,175 @@ Immersion culturelle à travers les paysages spectaculaires de Madagascar
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/f3Xrv7x6RyqnnTWuLzmg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/f3Xrv7x6RyqnnTWuLzmg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/madagascar-immersion-culturelle/wNjjQYdRnSrEvgCK9oPF.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/wNjjQYdRnSrEvgCK9oPF.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/ayCbs8DTSLK94ljoanxy.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/madagascar-immersion-culturelle/ayCbs8DTSLK94ljoanxy.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/madagascar-immersion-culturelle/6Wp5yqyLRZGUYESteYeR.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/madagascar-immersion-culturelle/6Wp5yqyLRZGUYESteYeR.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/madagascar-immersion-culturelle/vyQQj8oQ1WCiLg9ZWbXQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/vyQQj8oQ1WCiLg9ZWbXQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/madagascar-immersion-culturelle/gnCZLxIaSOKBI3oU4xb2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/gnCZLxIaSOKBI3oU4xb2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/v90MtZ24QLCLqdc5Iq3X.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/v90MtZ24QLCLqdc5Iq3X.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/madagascar-immersion-culturelle/A7aIWTdUTfWfpgQmLuBR.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/A7aIWTdUTfWfpgQmLuBR.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/MAPgFxXTS0SI7EFN1ckH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/madagascar-immersion-culturelle/MAPgFxXTS0SI7EFN1ckH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/madagascar-immersion-culturelle/xlu5XnMTRpSgsa2s3vQk.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/madagascar-immersion-culturelle/xlu5XnMTRpSgsa2s3vQk.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/madagascar-immersion-culturelle/ee1GFfwkQUaKiGbfpmff.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/ee1GFfwkQUaKiGbfpmff.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/madagascar-immersion-culturelle/RnqoQC9LRAw2TSx1f1wb.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/RnqoQC9LRAw2TSx1f1wb.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/hPwbaJRKQ0ONpkfFYfJF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/hPwbaJRKQ0ONpkfFYfJF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/madagascar-immersion-culturelle/lM1pyUi1TZW3hymS7su2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/lM1pyUi1TZW3hymS7su2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/vE3LvMShGdiaWKKqVfQy.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/madagascar-immersion-culturelle/vE3LvMShGdiaWKKqVfQy.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/madagascar-immersion-culturelle/n1rwUGFyRniO12FteV2c.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/madagascar-immersion-culturelle/n1rwUGFyRniO12FteV2c.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/madagascar-immersion-culturelle/hwEl7qENSuyrUdeVESzn.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/hwEl7qENSuyrUdeVESzn.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/madagascar-immersion-culturelle/5Wgyo9MZRlKwQbr7kWCU.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/5Wgyo9MZRlKwQbr7kWCU.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/madagascar-immersion-culturelle/IGd4tR6IQn2dpDtVHsRE.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/madagascar-immersion-culturelle/IGd4tR6IQn2dpDtVHsRE.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/madagascar-immersion-culturelle/5qOX6c1LQbaxF3Mw0JSd.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/madagascar-immersion-culturelle/5qOX6c1LQbaxF3Mw0JSd.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/madagascar-immersion-culturelle/SmBRT7EmQBxXUTWBgm7X.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/madagascar-immersion-culturelle/SmBRT7EmQBxXUTWBgm7X.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/madagascar-immersion-culturelle/utvhL8qtSJ6QyRyawDLQ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/madagascar-immersion-culturelle/utvhL8qtSJ6QyRyawDLQ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2135€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

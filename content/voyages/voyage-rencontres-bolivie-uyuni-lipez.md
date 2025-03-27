@@ -10,86 +10,133 @@ Bolivie : lagunes colorées, désert de sel et rencontres hors des sentiers batt
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/T8FTNKDbT0mp5nNmfHqm.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/T8FTNKDbT0mp5nNmfHqm.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/USuPdQfCQEyu2iND1PYM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/USuPdQfCQEyu2iND1PYM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/R9p88jZCQT6oevoFHjwX.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/R9p88jZCQT6oevoFHjwX.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/XOmpyXQURxm9bOMWCiF6.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/XOmpyXQURxm9bOMWCiF6.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/4MQjW8eaTkW9cyhRwPWH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/4MQjW8eaTkW9cyhRwPWH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/eyNbMMkrSGOxqAfrhvai.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/eyNbMMkrSGOxqAfrhvai.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/hoDUD5mQuXhyZZPyBEw3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/hoDUD5mQuXhyZZPyBEw3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/SIthwDeTQZeJfhJilokQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/SIthwDeTQZeJfhJilokQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/QpDmn1JGSdec7utLIGUL.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/QpDmn1JGSdec7utLIGUL.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/d8tJOaz6RxW5gI921SF0.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/d8tJOaz6RxW5gI921SF0.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/jMauTXT6SGsQi1hz5gKA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/jMauTXT6SGsQi1hz5gKA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/eoJxUuabTzqwlAI5dn4h.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/eoJxUuabTzqwlAI5dn4h.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/MWhQmtSSm2wI3CDp6GHg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/MWhQmtSSm2wI3CDp6GHg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/9zP57SNBQVKY7nuDXNQi.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/9zP57SNBQVKY7nuDXNQi.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/xkc9M70SmO74Vd8cQgxy.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/xkc9M70SmO74Vd8cQgxy.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/TsylkHWpRJmPE9OLPxPM.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-rencontres-bolivie-uyuni-lipez/TsylkHWpRJmPE9OLPxPM.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2130€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -7,11 +7,26 @@ Goutez l'aventure Pilat en famille
 #component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/j47ZCVB-cXo
+  video-src: 
+    - https://www.youtube.com/embed/j47ZCVB-cXo
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [145€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

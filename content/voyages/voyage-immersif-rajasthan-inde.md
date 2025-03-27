@@ -10,36 +10,63 @@ Voyage au Rajasthan : éveil des sens au cœur de l'Inde
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-rajasthan-inde/Fgj2EFc1TmGlY2ki6uov.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-rajasthan-inde/Fgj2EFc1TmGlY2ki6uov.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersif-rajasthan-inde/wHrupdHSQ7yyhCLSNUVY.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-rajasthan-inde/wHrupdHSQ7yyhCLSNUVY.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-rajasthan-inde/x8Xa1cn8SRKgnxK8nhpv.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersif-rajasthan-inde/x8Xa1cn8SRKgnxK8nhpv.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersif-rajasthan-inde/6X8SLc5RZOPMFYdV52bx.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersif-rajasthan-inde/6X8SLc5RZOPMFYdV52bx.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-rajasthan-inde/asgNhycERGqNB584nYdZ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-rajasthan-inde/asgNhycERGqNB584nYdZ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersif-rajasthan-inde/BCH8viUJSWGzwyjBD4YJ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-rajasthan-inde/BCH8viUJSWGzwyjBD4YJ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1815€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

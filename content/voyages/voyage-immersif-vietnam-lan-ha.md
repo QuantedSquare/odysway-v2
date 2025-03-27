@@ -10,49 +10,84 @@ Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/WZ5iktlRQaEDb7O3WOrA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/WZ5iktlRQaEDb7O3WOrA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/ywKCjuNdT9OgDB6GCAd5.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/ywKCjuNdT9OgDB6GCAd5.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/3SmJclXbTzajxbVrgMw7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/3SmJclXbTzajxbVrgMw7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/HLayzWR7TCq21JpJUiE3.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/HLayzWR7TCq21JpJUiE3.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/KkQGDzxRUCUEBJApW03w.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/KkQGDzxRUCUEBJApW03w.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/HZ8MMdwbRIes9xq6Tv0t.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/HZ8MMdwbRIes9xq6Tv0t.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/0ksiM8tTcWaEyes38vCO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/0ksiM8tTcWaEyes38vCO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/nzDJw6d5TdquZMBN7sou.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/nzDJw6d5TdquZMBN7sou.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-vietnam-lan-ha/0iLXubHQSxSoNf5SS0XO.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersif-vietnam-lan-ha/0iLXubHQSxSoNf5SS0XO.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1580€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,73 +10,113 @@ Voyagez en terre chamane en Mongolie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamane-mongolie/82zgjz7Qb6Cyoqfzux3v.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamane-mongolie/82zgjz7Qb6Cyoqfzux3v.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-chamane-mongolie/0xwIULbJRuOHcBV61gLk.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamane-mongolie/0xwIULbJRuOHcBV61gLk.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamane-mongolie/da2hg829QHuUVPQ0O2Z8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-chamane-mongolie/da2hg829QHuUVPQ0O2Z8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-chamane-mongolie/e3JcdoXQSuY7oYnBRhpQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-chamane-mongolie/e3JcdoXQSuY7oYnBRhpQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamane-mongolie/QOkJGBaTjunzcLzUFGlN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamane-mongolie/QOkJGBaTjunzcLzUFGlN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-chamane-mongolie/3tvCI44yQpaOr5gTBV82.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamane-mongolie/3tvCI44yQpaOr5gTBV82.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-chamane-mongolie/JlgmelNlQRujtO2P3E9d.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamane-mongolie/JlgmelNlQRujtO2P3E9d.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-chamane-mongolie/Bu5e9O8SaGAf02cMQd8A.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamane-mongolie/Bu5e9O8SaGAf02cMQd8A.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-chamane-mongolie/wHwjSByYTGWO14f9n7Xc.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-chamane-mongolie/wHwjSByYTGWO14f9n7Xc.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-chamane-mongolie/XJEqqPWNRzWwf5nUV9J7.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-chamane-mongolie/XJEqqPWNRzWwf5nUV9J7.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-chamane-mongolie/y5BsM9gdSUKxj96HthU1.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-chamane-mongolie/y5BsM9gdSUKxj96HthU1.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-chamane-mongolie/mthXmMwzTyq9OZ98cdR8.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-chamane-mongolie/mthXmMwzTyq9OZ98cdR8.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/bCld29RABQw
+  video-src: 
+    - https://www.youtube.com/embed/bCld29RABQw
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1815€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

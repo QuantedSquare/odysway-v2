@@ -10,33 +10,57 @@ Voyagez sur la terre des premiers hommes en Éthiopie
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-ethiopie-vallee-omo-surma/CrBYpD6xQPidUtyN6RbL.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/CrBYpD6xQPidUtyN6RbL.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/hb6oKAbtSIytGZj0FoWk.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/hb6oKAbtSIytGZj0FoWk.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-ethiopie-vallee-omo-surma/RRFDx1roQweK4YMOUtch.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/RRFDx1roQweK4YMOUtch.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/piODqsYbSJCo1g2tUowC.jpg
----
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-ethiopie-vallee-omo-surma/piODqsYbSJCo1g2tUowC.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/8UwFNAF-Jvk?start=13"
+  video-src: 
+    - https://www.youtube.com/embed/8UwFNAF-Jvk?start=13"
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2735€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

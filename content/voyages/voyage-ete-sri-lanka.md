@@ -10,66 +10,105 @@ Voyagez hors des sentiers battus au Sri Lanka (été)
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-ete-sri-lanka/np1ln7sOTnCjyLxVrK0x.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ete-sri-lanka/np1ln7sOTnCjyLxVrK0x.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-ete-sri-lanka/R9Vo4e61TeeeGvyqvH5V.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ete-sri-lanka/R9Vo4e61TeeeGvyqvH5V.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-ete-sri-lanka/07rIZCYSwiq7bu5F8kEw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-ete-sri-lanka/07rIZCYSwiq7bu5F8kEw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-ete-sri-lanka/y1VockRfRfUcjswVMMWQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-ete-sri-lanka/y1VockRfRfUcjswVMMWQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-ete-sri-lanka/iKL21xWfR5WMXWR9Qz7f.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ete-sri-lanka/iKL21xWfR5WMXWR9Qz7f.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-ete-sri-lanka/1OifIhqTWKQwiSf6Nnvf.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ete-sri-lanka/1OifIhqTWKQwiSf6Nnvf.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-ete-sri-lanka/3xH5tcnwQ06CKjlPBuAn.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ete-sri-lanka/3xH5tcnwQ06CKjlPBuAn.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-ete-sri-lanka/jnHAVtxgROqtZ0XsgjdO.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ete-sri-lanka/jnHAVtxgROqtZ0XsgjdO.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-ete-sri-lanka/QxYI0gPRSKgk35iweJU3.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-ete-sri-lanka/QxYI0gPRSKgk35iweJU3.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-ete-sri-lanka/UJq1UidRN6pohE8o8exA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-ete-sri-lanka/UJq1UidRN6pohE8o8exA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-ete-sri-lanka/uPs2S80BSlKe1UMUR6Bg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-ete-sri-lanka/uPs2S80BSlKe1UMUR6Bg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-ete-sri-lanka/yg3yxz1Qqi56nQQDnzPx.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-ete-sri-lanka/yg3yxz1Qqi56nQQDnzPx.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1695€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

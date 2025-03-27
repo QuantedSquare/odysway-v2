@@ -10,69 +10,112 @@ Immersion à Bali, au cœur des traditions et des paysages spectaculaires
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/bali-menjangan-sidemen/n66BoDQTTqo7dmmdyxY1.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/bali-menjangan-sidemen/n66BoDQTTqo7dmmdyxY1.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/bali-menjangan-sidemen/CWYGNwqmSQqHBZAeS12U.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/bali-menjangan-sidemen/CWYGNwqmSQqHBZAeS12U.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/bali-menjangan-sidemen/G61Fd84FTl6JbRkGWGRh.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/bali-menjangan-sidemen/G61Fd84FTl6JbRkGWGRh.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/bali-menjangan-sidemen/3883c6KUSUuCOVBarmSO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/bali-menjangan-sidemen/3883c6KUSUuCOVBarmSO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/bali-menjangan-sidemen/fow5S9GNQmGBAD2ciVVq.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/bali-menjangan-sidemen/fow5S9GNQmGBAD2ciVVq.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/bali-menjangan-sidemen/1DphAClRSqa7TU5dxNpw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/bali-menjangan-sidemen/1DphAClRSqa7TU5dxNpw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/bali-menjangan-sidemen/H0KoMjDHRUPApX9BJ01n.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/bali-menjangan-sidemen/H0KoMjDHRUPApX9BJ01n.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/bali-menjangan-sidemen/DIm8LvqVSaUhvfjKIQhC.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/bali-menjangan-sidemen/DIm8LvqVSaUhvfjKIQhC.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/bali-menjangan-sidemen/0D712pk4Ri2j9YWIVBBg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/bali-menjangan-sidemen/0D712pk4Ri2j9YWIVBBg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/bali-menjangan-sidemen/bimJ4sWwS121SRw0pziv.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/bali-menjangan-sidemen/bimJ4sWwS121SRw0pziv.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/bali-menjangan-sidemen/wI6wKO5jS96RgP0T87WP.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/bali-menjangan-sidemen/wI6wKO5jS96RgP0T87WP.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/bali-menjangan-sidemen/YUwbuThub1Arp6exOFwt.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/bali-menjangan-sidemen/YUwbuThub1Arp6exOFwt.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1780€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,56 +10,91 @@ Au bout du monde en Patagonie, terre de feu et de glace
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/patagonie-chili-argentine/kCm5tB2MSEmt66LEUYvQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/patagonie-chili-argentine/kCm5tB2MSEmt66LEUYvQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/patagonie-chili-argentine/QJ8ohrtqSwyV4xw4m6ZR.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/patagonie-chili-argentine/QJ8ohrtqSwyV4xw4m6ZR.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/patagonie-chili-argentine/THr0zZ03QyO80sNcBxgv.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/patagonie-chili-argentine/THr0zZ03QyO80sNcBxgv.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/patagonie-chili-argentine/70qjSCoJQNmutIDtP4cT.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/patagonie-chili-argentine/70qjSCoJQNmutIDtP4cT.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/patagonie-chili-argentine/HmY6JLxlR561rcZ8UkhS.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/patagonie-chili-argentine/HmY6JLxlR561rcZ8UkhS.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/patagonie-chili-argentine/rJrok9MRQOx6IlaO7JNN.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/patagonie-chili-argentine/rJrok9MRQOx6IlaO7JNN.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/patagonie-chili-argentine/V4kxLzi1SDlgJuYRL3rB.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/patagonie-chili-argentine/V4kxLzi1SDlgJuYRL3rB.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/patagonie-chili-argentine/MhnY54rDQqmFvopgej0g.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/patagonie-chili-argentine/MhnY54rDQqmFvopgej0g.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/patagonie-chili-argentine/3gYItfysSd4DuCbTQNDP.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/patagonie-chili-argentine/3gYItfysSd4DuCbTQNDP.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/patagonie-chili-argentine/IExIN3iQwi7NPMNlX2ix.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/patagonie-chili-argentine/IExIN3iQwi7NPMNlX2ix.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [4690€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

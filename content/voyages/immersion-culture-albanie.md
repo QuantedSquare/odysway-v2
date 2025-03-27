@@ -10,79 +10,126 @@ Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditi
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-culture-albanie/VYupluEtRNC3bni0LqPl.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culture-albanie/VYupluEtRNC3bni0LqPl.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culture-albanie/lbosMkH0T9WvaCQ0nAex.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culture-albanie/lbosMkH0T9WvaCQ0nAex.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culture-albanie/eJkwGrjTeeepKecxuab4.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culture-albanie/eJkwGrjTeeepKecxuab4.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culture-albanie/nr0NzvIQ6GouzUGlsN9H.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culture-albanie/nr0NzvIQ6GouzUGlsN9H.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culture-albanie/LupkARk8S9Ka8S0otPOA.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culture-albanie/LupkARk8S9Ka8S0otPOA.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culture-albanie/JOVakVdRuK7EAFBYfxWB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culture-albanie/JOVakVdRuK7EAFBYfxWB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culture-albanie/uuPy3mgQmaZFgtXRGZHO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culture-albanie/uuPy3mgQmaZFgtXRGZHO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culture-albanie/aApag8uKSxOH1ZUdV894.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culture-albanie/aApag8uKSxOH1ZUdV894.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culture-albanie/6LQ9sRdSOSBneimuOaBg.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culture-albanie/6LQ9sRdSOSBneimuOaBg.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culture-albanie/G3EzjzIuSHiQMKfLdrhs.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culture-albanie/G3EzjzIuSHiQMKfLdrhs.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culture-albanie/Ar1gUFJNTT27edvKicUV.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culture-albanie/Ar1gUFJNTT27edvKicUV.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culture-albanie/6yWvsYjQgSYE9urFc663.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culture-albanie/6yWvsYjQgSYE9urFc663.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culture-albanie/KijNtdvTPe28WsHNP4FJ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culture-albanie/KijNtdvTPe28WsHNP4FJ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culture-albanie/qgjCVoXuQdyximpTMnIG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culture-albanie/qgjCVoXuQdyximpTMnIG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culture-albanie/DJAkC5BiS1iot8nycyTY.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culture-albanie/DJAkC5BiS1iot8nycyTY.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1590€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

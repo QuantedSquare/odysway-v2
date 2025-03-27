@@ -10,86 +10,133 @@ Vivez comme un nomade du Sahara au Maroc
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-nomade-sahara/ZiTTrmaRMO136UbjnVmJ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-nomade-sahara/ZiTTrmaRMO136UbjnVmJ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-nomade-sahara/6wa7JTbRemJNghtfo1Iv.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-nomade-sahara/6wa7JTbRemJNghtfo1Iv.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-nomade-sahara/wDX3HhGlTA6ZFkkKx3ka.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-nomade-sahara/wDX3HhGlTA6ZFkkKx3ka.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-nomade-sahara/RHdWl2tJTQuhmbMksus2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-nomade-sahara/RHdWl2tJTQuhmbMksus2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-nomade-sahara/1N4oXzhxT4at3ViaNEKa.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-nomade-sahara/1N4oXzhxT4at3ViaNEKa.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-nomade-sahara/H5lqKMOQ2Gbfk6bE9FgM.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-nomade-sahara/H5lqKMOQ2Gbfk6bE9FgM.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-nomade-sahara/deuIjQtTD6LYVDtD7YIU.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-nomade-sahara/deuIjQtTD6LYVDtD7YIU.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-nomade-sahara/miqysTbfTuaAL0JZ6yMY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-nomade-sahara/miqysTbfTuaAL0JZ6yMY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-nomade-sahara/b3DnshhRpeckGGM4R0bs.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-nomade-sahara/b3DnshhRpeckGGM4R0bs.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-nomade-sahara/JOMqi6YBS86fjHqZwiZO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-nomade-sahara/JOMqi6YBS86fjHqZwiZO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-nomade-sahara/En0fdsDxT8OQMY7QBSgE.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-nomade-sahara/En0fdsDxT8OQMY7QBSgE.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-nomade-sahara/gvadBNaQJm3qwBNaQwSw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-nomade-sahara/gvadBNaQJm3qwBNaQwSw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-nomade-sahara/SkpA40F4R7mK9yIBLdJZ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-nomade-sahara/SkpA40F4R7mK9yIBLdJZ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1390€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

@@ -10,56 +10,91 @@ Séjour trek, yoga et immersion chez l'habitant au Népal
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-nepal-randonnee-yoga/48w1GY3RQBGpbIh35XNL.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/48w1GY3RQBGpbIh35XNL.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-nepal-randonnee-yoga/hv22KHMQ0eStGK0vZQWr.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/hv22KHMQ0eStGK0vZQWr.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-nepal-randonnee-yoga/NTKN2cGkRJ61JoWmuUr2.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/NTKN2cGkRJ61JoWmuUr2.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-nepal-randonnee-yoga/6qMxuFOqTZmX3j7LbPR8.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/6qMxuFOqTZmX3j7LbPR8.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-nepal-randonnee-yoga/19vb4tcFR6SQyNxUtm59.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/19vb4tcFR6SQyNxUtm59.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-nepal-randonnee-yoga/ouLBRnBXQTi5EZkdGkK6.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/ouLBRnBXQTi5EZkdGkK6.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-nepal-randonnee-yoga/66jLqDSBSYqHHYgbKJau.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/66jLqDSBSYqHHYgbKJau.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-nepal-randonnee-yoga/fWgEXwX5S3OkjP2rpWb0.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/fWgEXwX5S3OkjP2rpWb0.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-nepal-randonnee-yoga/NL9m9evQWqUo1mfYgVIw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/NL9m9evQWqUo1mfYgVIw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-nepal-randonnee-yoga/O8KRh5REQqoOPW8NVlVw.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-nepal-randonnee-yoga/O8KRh5REQqoOPW8NVlVw.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1600€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

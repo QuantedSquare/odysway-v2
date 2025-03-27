@@ -10,89 +10,140 @@ Au fil du Rajasthan : découverte et immersion chez les Bishnoïs
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/vzv2ieaIRjDL0FoZemr7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/vzv2ieaIRjDL0FoZemr7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/KS70xzyQ66HRIpVig6hY.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/KS70xzyQ66HRIpVig6hY.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/koJ1z6ZTSm5bVVzAEEiB.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/koJ1z6ZTSm5bVVzAEEiB.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/1Z8lOvPQSo6Y6gXeopO3.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/1Z8lOvPQSo6Y6gXeopO3.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/4MSkbjRlTeq7xpy2IUHY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/4MSkbjRlTeq7xpy2IUHY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/t3pDRt2QRyicanqHBfrL.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/t3pDRt2QRyicanqHBfrL.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/UDy4F8Z8R9KxRNaLi4aR.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/UDy4F8Z8R9KxRNaLi4aR.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/11aAJ65sSqlj91cF05XB.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/11aAJ65sSqlj91cF05XB.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/O8t5JdZGQVGtwUdbnFnp.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/O8t5JdZGQVGtwUdbnFnp.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/CtQcKpiQAocKTJdRpiAn.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/CtQcKpiQAocKTJdRpiAn.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/lIOaKxcuTYKelx0A6X05.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/lIOaKxcuTYKelx0A6X05.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/4IKEVKZUS7iM0GxgL3N0.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/4IKEVKZUS7iM0GxgL3N0.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/ainXthqbRG2MnL5wIKRs.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/ainXthqbRG2MnL5wIKRs.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/gIwjrTiuQnCwDhKpHaME.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/gIwjrTiuQnCwDhKpHaME.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/IqQwgykNTxGImIErhCds.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/IqQwgykNTxGImIErhCds.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/XnU1a7iSe6vOlPmaLLAt.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/XnU1a7iSe6vOlPmaLLAt.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/decouverte-merveilles-rajasthan-bishnoi/qfAZkKKETjuELl1HlgBa.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouverte-merveilles-rajasthan-bishnoi/qfAZkKKETjuELl1HlgBa.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2522€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

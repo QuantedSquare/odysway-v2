@@ -10,49 +10,84 @@ Observer les éléphants, explorer les temples et s'évader sur les plages de Th
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-elephants-thailande/QV6e7XRQEaZrdFGJ1veS.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-elephants-thailande/QV6e7XRQEaZrdFGJ1veS.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-elephants-thailande/04AByOfcRBqb0B0UNrnC.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-elephants-thailande/04AByOfcRBqb0B0UNrnC.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-elephants-thailande/VHvErVXThGNUIg7GpNgT.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-elephants-thailande/VHvErVXThGNUIg7GpNgT.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-elephants-thailande/xZk2U8SIRvmNqmwlw5EZ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-elephants-thailande/xZk2U8SIRvmNqmwlw5EZ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-elephants-thailande/ztIcIn02RAegznDy5GVh.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-elephants-thailande/ztIcIn02RAegznDy5GVh.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-elephants-thailande/mgrdluNzQeemgLZVfdSd.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-elephants-thailande/mgrdluNzQeemgLZVfdSd.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-elephants-thailande/CU4e3sFSAW24MCvx4TMI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-elephants-thailande/CU4e3sFSAW24MCvx4TMI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-elephants-thailande/6yTbEHYcSjuCAyilidkt.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-elephants-thailande/6yTbEHYcSjuCAyilidkt.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-elephants-thailande/p4LxVLgdTJK4IGej7n99.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-elephants-thailande/p4LxVLgdTJK4IGej7n99.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2145€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

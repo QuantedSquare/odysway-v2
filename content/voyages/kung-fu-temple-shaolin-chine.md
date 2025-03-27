@@ -10,59 +10,98 @@ Initiez-vous au Kung Fu dans un temple Shaolin
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/kung-fu-temple-shaolin-chine/ns0crrMRyu8jK2PXOojQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/ns0crrMRyu8jK2PXOojQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/kung-fu-temple-shaolin-chine/cd0vcsSRmGbssoUCyzQw.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/cd0vcsSRmGbssoUCyzQw.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/kung-fu-temple-shaolin-chine/FbfRxKnbSfCBPIsM7IVF.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/FbfRxKnbSfCBPIsM7IVF.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/kung-fu-temple-shaolin-chine/7TP9pVJQdyQkA8hqZMvz.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/7TP9pVJQdyQkA8hqZMvz.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/kung-fu-temple-shaolin-chine/pSEDIMzTBGfHB9LM50CV.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/pSEDIMzTBGfHB9LM50CV.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/kung-fu-temple-shaolin-chine/3Tv50UAQRmKZH6ENSpbP.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/3Tv50UAQRmKZH6ENSpbP.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/kung-fu-temple-shaolin-chine/BNFfVmB8QcyvJDtGx1ki.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/BNFfVmB8QcyvJDtGx1ki.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/kung-fu-temple-shaolin-chine/awfDXogVSIOzCRmidL73.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/awfDXogVSIOzCRmidL73.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/kung-fu-temple-shaolin-chine/5nTsl0JhRoudD1u6NmUT.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/5nTsl0JhRoudD1u6NmUT.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/kung-fu-temple-shaolin-chine/ci9MzGkITD6RENKlGn3t.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/ci9MzGkITD6RENKlGn3t.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/kung-fu-temple-shaolin-chine/JzfpAhcpRg6Xxvi8gYwP.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/kung-fu-temple-shaolin-chine/JzfpAhcpRg6Xxvi8gYwP.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1820€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

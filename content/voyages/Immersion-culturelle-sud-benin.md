@@ -10,116 +10,175 @@ Bénin, rencontres et traditions au pays vodoun
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/CXW0DBDlTpeN817LU3Jd.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/CXW0DBDlTpeN817LU3Jd.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-sud-benin/MfztFJLRRhSufO1xvEcV.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/MfztFJLRRhSufO1xvEcV.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/qyTYmByWTVic0e1OvPIN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/qyTYmByWTVic0e1OvPIN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-sud-benin/cApO5i9OQ1O9waLJbMbg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/cApO5i9OQ1O9waLJbMbg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-sud-benin/ynuh4SXCTKesIHaV8A1a.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/ynuh4SXCTKesIHaV8A1a.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culturelle-sud-benin/uwFExyUiRgWsmx7RtC46.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/uwFExyUiRgWsmx7RtC46.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/E0hgnYKcQyGVlA1lHyGs.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/E0hgnYKcQyGVlA1lHyGs.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-sud-benin/L1VHTk8T4yrhOhJOCrd3.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/L1VHTk8T4yrhOhJOCrd3.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/uHQI0ibZQYqrjne7axBp.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/uHQI0ibZQYqrjne7axBp.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-sud-benin/CPo9uS6YQrG9JTLAZCr3.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/CPo9uS6YQrG9JTLAZCr3.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-sud-benin/kqDICZNRAGI9llL2rqSw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/kqDICZNRAGI9llL2rqSw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culturelle-sud-benin/A4JkvnrRoixYr8VmZAMg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/A4JkvnrRoixYr8VmZAMg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/MNlF4QxhSmKaiQG1SnX8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/MNlF4QxhSmKaiQG1SnX8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-sud-benin/YrsyvnfeRdOOlqGRojyX.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/YrsyvnfeRdOOlqGRojyX.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/OuqajUMeTMOzdhXRZWhH.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/OuqajUMeTMOzdhXRZWhH.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-sud-benin/Z9V4A8BKTnSeMb2JVo7C.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/Z9V4A8BKTnSeMb2JVo7C.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-culturelle-sud-benin/F2NZvoTQ6GrG8XGeV4kN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/F2NZvoTQ6GrG8XGeV4kN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-culturelle-sud-benin/DiMD0BtR2ee8oT3cI4dA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/DiMD0BtR2ee8oT3cI4dA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/immersion-culturelle-sud-benin/O2Xy9LrKRfu5hwYCc07I.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/O2Xy9LrKRfu5hwYCc07I.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-culturelle-sud-benin/rIY1Y0kCSK2Z13xgE18K.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/rIY1Y0kCSK2Z13xgE18K.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-culturelle-sud-benin/X0BcCujqT0yB9s0UmE4Y.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/X0BcCujqT0yB9s0UmE4Y.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-culturelle-sud-benin/zshyfHcR82BEXnTDdKF4.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-culturelle-sud-benin/zshyfHcR82BEXnTDdKF4.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1185€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

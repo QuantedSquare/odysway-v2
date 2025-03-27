@@ -10,36 +10,63 @@ Au cœur de la vie locale du Salvador
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/immersion-salvador-amerique-centrale/zpelpWUxTaOOlgtrLWZX.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-salvador-amerique-centrale/zpelpWUxTaOOlgtrLWZX.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/immersion-salvador-amerique-centrale/XQAGk3qJTe60wVWH1CJv.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-salvador-amerique-centrale/XQAGk3qJTe60wVWH1CJv.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/immersion-salvador-amerique-centrale/BaFqR3mJSjS64Py9RO5n.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/immersion-salvador-amerique-centrale/BaFqR3mJSjS64Py9RO5n.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/immersion-salvador-amerique-centrale/cMWgbefxQty8uKT7xWoc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/immersion-salvador-amerique-centrale/cMWgbefxQty8uKT7xWoc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/immersion-salvador-amerique-centrale/PFVTbeK5Ta67nTSgc6j4.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/immersion-salvador-amerique-centrale/PFVTbeK5Ta67nTSgc6j4.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/immersion-salvador-amerique-centrale/tLA0ArnNTGepncnIRnA8.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/immersion-salvador-amerique-centrale/tLA0ArnNTGepncnIRnA8.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1995€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

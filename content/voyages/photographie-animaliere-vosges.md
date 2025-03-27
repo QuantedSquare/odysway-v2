@@ -10,46 +10,77 @@ En immersion avec un photographe animalier dans les Vosges
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/photographie-animaliere-vosges/Zm4GyjQESBujZV6lcI6W.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/photographie-animaliere-vosges/Zm4GyjQESBujZV6lcI6W.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/photographie-animaliere-vosges/iwOwTrQYQ0iyLcp40yZb.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/photographie-animaliere-vosges/iwOwTrQYQ0iyLcp40yZb.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/photographie-animaliere-vosges/8ukmPftTQGAtZc3Ef1yh.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/photographie-animaliere-vosges/8ukmPftTQGAtZc3Ef1yh.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/photographie-animaliere-vosges/WncSFkBjSNeCpbW48uv1.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/photographie-animaliere-vosges/WncSFkBjSNeCpbW48uv1.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/photographie-animaliere-vosges/P1YLdxOIR9yCXuV5TR5W.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/photographie-animaliere-vosges/P1YLdxOIR9yCXuV5TR5W.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/photographie-animaliere-vosges/ezUL4D2DSjmpBJ8N73TD.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/photographie-animaliere-vosges/ezUL4D2DSjmpBJ8N73TD.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/photographie-animaliere-vosges/jD8zYMQBiXna5zdtqrnw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/photographie-animaliere-vosges/jD8zYMQBiXna5zdtqrnw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/photographie-animaliere-vosges/Gh18aadnROm8NkMg38AV.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/photographie-animaliere-vosges/Gh18aadnROm8NkMg38AV.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [690€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

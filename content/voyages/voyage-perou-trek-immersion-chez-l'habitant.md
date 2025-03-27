@@ -10,36 +10,63 @@ Trek en immersion dans les communautés Andines du Pérou
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-perou-trek-immersion-chez-l'habitant/2o1uuQtoQhmgS0nanHso.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/2o1uuQtoQhmgS0nanHso.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/DcAP7AhzTayNwcs1jJPW.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/DcAP7AhzTayNwcs1jJPW.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-perou-trek-immersion-chez-l'habitant/nPi04F9bRVywNMDu5W0D.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/nPi04F9bRVywNMDu5W0D.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/hL2ZW0B1RgWI3GLmjpqA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/hL2ZW0B1RgWI3GLmjpqA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-perou-trek-immersion-chez-l'habitant/4EeqTfRgSUmyfEQnfwJI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/4EeqTfRgSUmyfEQnfwJI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/N4xEAVbQqq3Oe2bMep6Q.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-perou-trek-immersion-chez-l'habitant/N4xEAVbQqq3Oe2bMep6Q.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2200€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

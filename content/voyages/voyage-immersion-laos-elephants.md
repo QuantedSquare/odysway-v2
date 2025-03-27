@@ -10,59 +10,98 @@ Voyage au Laos : rencontres avec les éléphants et communautés locales
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-laos-elephants/pI339gVqRWqxxSFg8DUk.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/pI339gVqRWqxxSFg8DUk.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-laos-elephants/9bhgQ17QCLMSbOFTX6AH.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/9bhgQ17QCLMSbOFTX6AH.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-laos-elephants/u52eSy8eTxOUr8wX1qqK.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/u52eSy8eTxOUr8wX1qqK.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-laos-elephants/0raJw9A9TmX6YTUEVzr2.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/0raJw9A9TmX6YTUEVzr2.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-laos-elephants/qKrKgLysR025GLk7d1eZ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/qKrKgLysR025GLk7d1eZ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersion-laos-elephants/OoKoEKoZTX6Ua3EYmqNs.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/OoKoEKoZTX6Ua3EYmqNs.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersion-laos-elephants/MF4ky6kdTdCXcccUtQ2R.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/MF4ky6kdTdCXcccUtQ2R.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersion-laos-elephants/cAqjL4jORoGwPL4UI7Ao.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/cAqjL4jORoGwPL4UI7Ao.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersion-laos-elephants/J5q5rt0bTCfYBeCJYzbz.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/J5q5rt0bTCfYBeCJYzbz.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersion-laos-elephants/o92rUiUqTWKBvMyXShRc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/o92rUiUqTWKBvMyXShRc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersion-laos-elephants/HRhrySSeSoqQUDH79PmR.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersion-laos-elephants/HRhrySSeSoqQUDH79PmR.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [2425€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

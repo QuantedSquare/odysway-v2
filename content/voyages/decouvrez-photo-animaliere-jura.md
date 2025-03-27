@@ -10,36 +10,63 @@ Découvrez l'art de la photo animalière dans le Jura
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/decouvrez-photo-animaliere-jura/qdz0bUEuTeaJTikuWAYN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouvrez-photo-animaliere-jura/qdz0bUEuTeaJTikuWAYN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/decouvrez-photo-animaliere-jura/NQv95R13St69ovnoOd52.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouvrez-photo-animaliere-jura/NQv95R13St69ovnoOd52.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/decouvrez-photo-animaliere-jura/5OdOk8Q4SZWMdtsKLZsJ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/decouvrez-photo-animaliere-jura/5OdOk8Q4SZWMdtsKLZsJ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/decouvrez-photo-animaliere-jura/47YID5uiTCGNS9JyCJla.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/decouvrez-photo-animaliere-jura/47YID5uiTCGNS9JyCJla.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/decouvrez-photo-animaliere-jura/QabwQsreQMqBlrBnirFn.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/decouvrez-photo-animaliere-jura/QabwQsreQMqBlrBnirFn.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/decouvrez-photo-animaliere-jura/EXeJQYjCSW2gq1z5ZZtM.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/decouvrez-photo-animaliere-jura/EXeJQYjCSW2gq1z5ZZtM.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [850€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

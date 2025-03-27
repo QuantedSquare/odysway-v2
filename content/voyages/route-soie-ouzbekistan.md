@@ -10,69 +10,112 @@ image-src: /images/voyages/route-soie-ouzbekistan/o08YedTuTO2GxYxdml4H.jpg
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/route-soie-ouzbekistan/l3OGkpUBSxSjgB0pFabX.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/route-soie-ouzbekistan/l3OGkpUBSxSjgB0pFabX.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/route-soie-ouzbekistan/yAJ98arHTnKeRNnvPCMG.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/route-soie-ouzbekistan/yAJ98arHTnKeRNnvPCMG.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/route-soie-ouzbekistan/7p2JQbI7SHmtOmPLcpHa.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/route-soie-ouzbekistan/7p2JQbI7SHmtOmPLcpHa.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/route-soie-ouzbekistan/1AfV4nEPRfyjcCxCIg6J.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/route-soie-ouzbekistan/1AfV4nEPRfyjcCxCIg6J.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/route-soie-ouzbekistan/jBV2x7R0SvuYpqfhVsDY.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/route-soie-ouzbekistan/jBV2x7R0SvuYpqfhVsDY.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/route-soie-ouzbekistan/RE31XnkHQtOObEn9o4C6.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/route-soie-ouzbekistan/RE31XnkHQtOObEn9o4C6.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/route-soie-ouzbekistan/tSxnIzIsR4aioG2AKPOK.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/route-soie-ouzbekistan/tSxnIzIsR4aioG2AKPOK.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/route-soie-ouzbekistan/sBoLF4viRRiygJeoqotf.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/route-soie-ouzbekistan/sBoLF4viRRiygJeoqotf.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/route-soie-ouzbekistan/m1O1SOLPQeyFbLJNDRSw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/route-soie-ouzbekistan/m1O1SOLPQeyFbLJNDRSw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/route-soie-ouzbekistan/9AJIDuqTXyygxyEn0YNM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/route-soie-ouzbekistan/9AJIDuqTXyygxyEn0YNM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/route-soie-ouzbekistan/jUIteeUKRBmNlYwJEt0Q.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/route-soie-ouzbekistan/jUIteeUKRBmNlYwJEt0Q.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/route-soie-ouzbekistan/GEU9ZQd2nqbnLbNEcVA9.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/route-soie-ouzbekistan/GEU9ZQd2nqbnLbNEcVA9.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/route-soie-ouzbekistan/BOGkIXRs2yoFcBEqvwEG.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/route-soie-ouzbekistan/BOGkIXRs2yoFcBEqvwEG.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1710€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

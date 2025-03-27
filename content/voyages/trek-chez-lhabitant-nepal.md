@@ -10,126 +10,189 @@ Trek chez l'habitant au Népal, au fil des villages Sherpas
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/T1p2GZofRN2ozxpSjqC8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/T1p2GZofRN2ozxpSjqC8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/5pavPVFETQqeogAcXkxU.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/5pavPVFETQqeogAcXkxU.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/WwdJ3zSGREKyDOQZo701.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/WwdJ3zSGREKyDOQZo701.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/WnqWLvLRpSLyfbWvdpHc.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/WnqWLvLRpSLyfbWvdpHc.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/WsfcI2DYTS6BB3oAvbtQ.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/WsfcI2DYTS6BB3oAvbtQ.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/5KlRIAwOSiu44yPLffLQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/5KlRIAwOSiu44yPLffLQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/U2c5thNXR0WGDi5eP8xq.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/U2c5thNXR0WGDi5eP8xq.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/QVGpF3NRTSyco2BsMIIA.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/QVGpF3NRTSyco2BsMIIA.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/Iy0LyyFwTcuWb7pkvlpD.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/Iy0LyyFwTcuWb7pkvlpD.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/pJTadq6RSP2hVxzottkr.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/pJTadq6RSP2hVxzottkr.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/dmKvr3dBQBO4KubxpilN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/dmKvr3dBQBO4KubxpilN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/M1QgmTAcSb2U3S9ecL1H.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/M1QgmTAcSb2U3S9ecL1H.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/735rMWt2RIeh21sqGdlt.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/735rMWt2RIeh21sqGdlt.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/I837yU93Tuam5cbdpW0k.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/I837yU93Tuam5cbdpW0k.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/gaKVOTCjTqKhBOW6PjIi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/gaKVOTCjTqKhBOW6PjIi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/XvwFRYZSqaOgZrVjAy9Q.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/XvwFRYZSqaOgZrVjAy9Q.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/1QaNJcQGSDWbjDFT1Qki.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/1QaNJcQGSDWbjDFT1Qki.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/DNr50OhSfiGJngtSQmnn.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/DNr50OhSfiGJngtSQmnn.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-nepal/pyChcQbtT3OSFgzvL1qD.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/pyChcQbtT3OSFgzvL1qD.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/UvFW94qlQLmskEQkHlub.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/UvFW94qlQLmskEQkHlub.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-nepal/6eZTyTmqRqKzb8oDivLN.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/6eZTyTmqRqKzb8oDivLN.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/nMOP5QfRQ1KS1F2VoWg6.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/nMOP5QfRQ1KS1F2VoWg6.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-nepal/Mt18gbdRIu9AhJ548slX.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/Mt18gbdRIu9AhJ548slX.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/trek-chez-lhabitant-nepal/HMuwdPZNS6YDlUwcKsZJ.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-nepal/HMuwdPZNS6YDlUwcKsZJ.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1460€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

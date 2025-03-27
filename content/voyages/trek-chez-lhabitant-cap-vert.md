@@ -10,56 +10,91 @@ Randonnées et nuits chez l'habitant sur l'île de Santo Antão au Cap-Vert
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/nflZ8aO9TwmcKWV5MayT.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/nflZ8aO9TwmcKWV5MayT.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-chez-lhabitant-cap-vert/rVR6SRFWRcmdyU1IRYhM.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/rVR6SRFWRcmdyU1IRYhM.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/bRaIjOAXR5epIRC2yxnc.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/bRaIjOAXR5epIRC2yxnc.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-chez-lhabitant-cap-vert/qmup1c8ATsSjJyYvsXJY.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/qmup1c8ATsSjJyYvsXJY.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/AWUXaKxKQ7yuq6E0uhkK.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/AWUXaKxKQ7yuq6E0uhkK.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/trek-chez-lhabitant-cap-vert/2YIorst3RiyPv9NprLdE.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/2YIorst3RiyPv9NprLdE.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/CwfLOPluSFW7cKCtTzr6.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/CwfLOPluSFW7cKCtTzr6.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/trek-chez-lhabitant-cap-vert/XQATlksBRF6PzanZVJiF.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/XQATlksBRF6PzanZVJiF.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/trek-chez-lhabitant-cap-vert/yS8c7PUNSMSD4nLazQx8.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/yS8c7PUNSMSD4nLazQx8.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/trek-chez-lhabitant-cap-vert/yziznDoJToKFI5zKdmN3.jpg
----
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/trek-chez-lhabitant-cap-vert/yziznDoJToKFI5zKdmN3.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1190€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

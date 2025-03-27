@@ -7,6 +7,20 @@ image-src: /images/voyages/voyage-train-ouzbekistan/HJtGmNQWuOz2HRQx1uA7.jpg
 
 ::
 
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1990€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
+::
+
 ::sticky-container
 ---
 left-space: 8

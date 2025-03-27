@@ -10,79 +10,126 @@ Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Ka
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-thailande/XVDohV9gSySD7Yf3iBXO.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-thailande/XVDohV9gSySD7Yf3iBXO.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersif-thailande/WD7W1jG6QPqO9J7OySz9.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-thailande/WD7W1jG6QPqO9J7OySz9.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-thailande/oD848M8TAqnaaOT30SW0.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersif-thailande/oD848M8TAqnaaOT30SW0.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersif-thailande/hezFbsCZT3akvmZhjL4w.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersif-thailande/hezFbsCZT3akvmZhjL4w.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-thailande/8pbxsaK3TziuA5Wlj0Tr.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-thailande/8pbxsaK3TziuA5Wlj0Tr.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersif-thailande/P3cQPTL0RaeXqy5n1EAW.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-thailande/P3cQPTL0RaeXqy5n1EAW.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-thailande/CU4e3sFSAW24MCvx4TMI.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-thailande/CU4e3sFSAW24MCvx4TMI.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersif-thailande/0BG2K71R2GV0UxZhIqPn.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-thailande/0BG2K71R2GV0UxZhIqPn.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-thailande/EtGgxnfTWyr6dXUl4no7.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersif-thailande/EtGgxnfTWyr6dXUl4no7.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/voyage-immersif-thailande/z9tYqJScTwyrHS9TEu2a.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/voyage-immersif-thailande/z9tYqJScTwyrHS9TEu2a.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/voyage-immersif-thailande/niclsZXjTBCtELAHAFNi.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-thailande/niclsZXjTBCtELAHAFNi.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/voyage-immersif-thailande/a2IqswWgRaEQJozYMVp5.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-thailande/a2IqswWgRaEQJozYMVp5.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/voyage-immersif-thailande/B3crTFkmSEKLQthB1cYG.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/voyage-immersif-thailande/B3crTFkmSEKLQthB1cYG.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/voyage-immersif-thailande/FIg0W6vEQumDCIvb4nor.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/voyage-immersif-thailande/FIg0W6vEQumDCIvb4nor.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/voyage-immersif-thailande/KxRIHfSTRxeRMCrrvgzk.jpg"}
-::::
-  :::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/voyage-immersif-thailande/KxRIHfSTRxeRMCrrvgzk.jpg
+  ---
+  ::::
+:::
+
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1740€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container

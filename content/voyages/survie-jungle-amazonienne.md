@@ -10,76 +10,120 @@ Immersion brésilienne et survie dans la jungle amazonienne
   voir la galerie photos
 
   #photo-col
-    ::::photo-col{col-width="7" image-src="/images/voyages/survie-jungle-amazonienne/ZKzdVybRyW8cwKoWvQAw.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/survie-jungle-amazonienne/ZKzdVybRyW8cwKoWvQAw.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/survie-jungle-amazonienne/LD3bvcNTKOTNFGQeWRQQ.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/survie-jungle-amazonienne/LD3bvcNTKOTNFGQeWRQQ.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/survie-jungle-amazonienne/pq9vlVyiRiqlojGkYgbC.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/survie-jungle-amazonienne/pq9vlVyiRiqlojGkYgbC.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/survie-jungle-amazonienne/ks2buuoRTSqbHEbHqX32.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/survie-jungle-amazonienne/ks2buuoRTSqbHEbHqX32.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/survie-jungle-amazonienne/JWb1NwH1Sv2mx9AehJVD.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/survie-jungle-amazonienne/JWb1NwH1Sv2mx9AehJVD.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/survie-jungle-amazonienne/kzghnGTfuPgdfdYHuGYg.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/survie-jungle-amazonienne/kzghnGTfuPgdfdYHuGYg.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/survie-jungle-amazonienne/C7OuhN4VTBOzf3FDMAt9.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/survie-jungle-amazonienne/C7OuhN4VTBOzf3FDMAt9.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "5"
-image-src: /images/voyages/survie-jungle-amazonienne/ESJ37MATcywZdCvuy5b6.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/survie-jungle-amazonienne/ESJ37MATcywZdCvuy5b6.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="4" image-src="/images/voyages/survie-jungle-amazonienne/ICUpMnEJTTy4bTO1nq3Q.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "4"
+  image-src: /images/voyages/survie-jungle-amazonienne/ICUpMnEJTTy4bTO1nq3Q.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "8"
-image-src: /images/voyages/survie-jungle-amazonienne/V1drATqOSreTlKxFHhio.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "8"
+  image-src: /images/voyages/survie-jungle-amazonienne/V1drATqOSreTlKxFHhio.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="5" image-src="/images/voyages/survie-jungle-amazonienne/nxQwt83NScqVVPhtEAuu.jpg"}
-::::
+  ::::photo-col
+  ---
+  col-width: "5"
+  image-src: /images/voyages/survie-jungle-amazonienne/nxQwt83NScqVVPhtEAuu.jpg
+  ---
+  ::::
 
-::::photo-col
----
-col-width: "7"
-image-src: /images/voyages/survie-jungle-amazonienne/1THXQ9KUSyCnWQK1I5Y4.jpg
----
-::::
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/survie-jungle-amazonienne/1THXQ9KUSyCnWQK1I5Y4.jpg
+  ---
+  ::::
 
-::::photo-col{col-width="7" image-src="/images/voyages/survie-jungle-amazonienne/D2JNyoFLQD5ESrxQ2FF3.jpg"}
-::::
-  :::#component-slot-2
+  ::::photo-col
+  ---
+  col-width: "7"
+  image-src: /images/voyages/survie-jungle-amazonienne/D2JNyoFLQD5ESrxQ2FF3.jpg
+  ---
+  ::::
+:::
+#component-slot-2
   :::video-dialog
   ---
-  video-src: https://www.youtube.com/embed/lo61W3QIX4M
+  video-src: 
+    - https://www.youtube.com/embed/lo61W3QIX4M
   ---
   #video-btn
   voir la video
   :::
+::
+
+::horizontal-ariane
+::
+
+::bottom-app-bar
+#starting-price
+Dès [1245€]{style="font-weight: bold"}
+
+#text-btn-1
+voir dates & prix
+
+#text-btn-2
+Prendre RDV
 ::
 
 ::sticky-container
