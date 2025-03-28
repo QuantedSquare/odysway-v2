@@ -72,8 +72,8 @@
     v-if="showExtension && extensionName"
     :extension="extensionName"
     class="d-md-and-down-none zIndex"
-    @mouseleave="resetExtension()"
   />
+  <!-- @mouseleave="resetExtension()" -->
 </template>
 
 <script setup>
