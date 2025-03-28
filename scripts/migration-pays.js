@@ -8,7 +8,7 @@ const DESTINATIONS_DIR = '../content/destinations'
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 2000
 
-const token = '19660f0f8ccfbde527e13dd4193c8be8301f4393' // process.env.BUTTER_API_TOKEN
+const token = process.env.BUTTER_API_TOKEN
 
 async function getPays() {
   const { data: paysData } = await axios.get(`https://api.buttercms.com/v2/content/pays/?auth_token=${token}`)
