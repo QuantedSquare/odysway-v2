@@ -146,5 +146,21 @@ export default defineContentConfig({
         })),
       }),
     }),
+    destinations: defineCollection({
+      type: 'data',
+      source: 'destinations/**.json',
+      schema: z.object({
+        title: z.string(),
+        slug: z.string(),
+        metaDescription: z.string(),
+        isOnPage: z.boolean(),
+        countries: z.array(z.object({
+          country: z.string(),
+          image: z.string(),
+          metaDescription: z.string(),
+          isOnPage: z.boolean(),
+        })),
+      }),
+    }),
   },
 })

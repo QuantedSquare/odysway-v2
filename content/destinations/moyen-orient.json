@@ -1,0 +1,15 @@
+{
+  "title": "Moyen-Orient",
+  "slug": "moyen-orient",
+  "metaDescription": "Voyagez au cœur du Moyen-Orient, terre d'histoire, de culture et d'aventure. Plongez au cœur de la culture locale et découvrez un monde fascinant !",
+  "image": "",
+  "isOnPage": true,
+  "countries": [
+    {
+      "country": "Jordanie",
+      "image": "/images/destinations/I1AtzHTPyqLSTl9jKDZA.jpg",
+      "metaDescription": "Voyagez au cœur du Moyen-Orient, terre d'histoire, de culture et d'aventure. Plongez au cœur de la culture locale et découvrez un monde fascinant !",
+      "isOnPage": false
+    }
+  ]
+}

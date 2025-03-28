@@ -1,0 +1,57 @@
+{
+  "title": "Afrique",
+  "slug": "afrique",
+  "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+  "image": "/images/destinations/bvfJqJqLT6KbXdDOYiyZ.jpg",
+  "isOnPage": true,
+  "countries": [
+    {
+      "country": "Algérie",
+      "image": "/images/destinations/RKy5I9j0TtiK5k7zzqJr.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": true
+    },
+    {
+      "country": "Bénin",
+      "image": "/images/destinations/nWATq01ETfacc5Kvamyc.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": false
+    },
+    {
+      "country": "Cap-Vert",
+      "image": "/images/destinations/ffytz87TqGZQ0o6dzjGp.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": true
+    },
+    {
+      "country": "Madagascar",
+      "image": "/images/destinations/iyixOsdRiGgJTyOQWFmE.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": false
+    },
+    {
+      "country": "Maroc",
+      "image": "/images/destinations/aDHTZbgDQHGx1q3davZC.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": true
+    },
+    {
+      "country": "Namibie",
+      "image": "/images/destinations/UMSwQy9nQvGDplpQ8gRP.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": false
+    },
+    {
+      "country": "Égypte",
+      "image": "/images/destinations/sHj0SQKTQmMgXBiai8rW.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": false
+    },
+    {
+      "country": "Kenya",
+      "image": "/images/destinations/JrrP2ZAQeiFnSwQ75RIS.jpg",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "isOnPage": false
+    }
+  ]
+}

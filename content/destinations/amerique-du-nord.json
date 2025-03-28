@@ -1,0 +1,15 @@
+{
+  "title": "Amérique du Nord",
+  "slug": "amerique-du-nord",
+  "metaDescription": "",
+  "image": "",
+  "isOnPage": true,
+  "countries": [
+    {
+      "country": "Canada",
+      "image": "/images/destinations/6gquOf0jStlnEkXHeat4.jpg",
+      "metaDescription": "",
+      "isOnPage": false
+    }
+  ]
+}
