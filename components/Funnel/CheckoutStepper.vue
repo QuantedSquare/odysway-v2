@@ -180,7 +180,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-const { step, dealId, slug, departure_date, return_date, plan } = route.query
+const { step, dealId, slug, departure_date, return_date, type } = route.query
 
 const pricePerTraveler = ref(0)
 function updatePricePerTraveler(price) {

@@ -1,5 +1,6 @@
 <template>
   <v-data-table
+    v-if="deal"
     :mobile="smAndDown"
     hide-default-footer
     :headers="headers"
@@ -20,37 +21,37 @@
       </tr>
     </template>
     <template #[`item.bookedPlaces`]="{ item }">
-      <tr class="d-flex justify-end justify-lg-center">
+      <div class="d-flex justify-end justify-lg-center">
         <div
           v-if="item.bookedPlaces < 2"
         >
-          <span><v-icon> {{ mdiAccount }} </v-icon>Confirmé dès 2 inscrits</span>
+          <span class="d-flex align-center ga-1"><v-icon> {{ mdiAccount }} </v-icon>Confirmé dès 2 inscrits</span>
         </div>
         <div
           v-else
-          class="d-flex flex-column justify-center align-end align-lg-center ga-1"
+          class="d-flex flex-column justify-center align-end align-lg-center ga-1 text-caption"
         >
-          <span> <v-icon>
+          <span class="font-weight-bold"> <v-icon>
             {{ mdiCheckCircleOutline }}
           </v-icon> Départ garanti confirmé</span>
           <span><v-icon>{{ mdiAccount }}</v-icon> {{ item.bookedPlaces }} inscrits - reste {{ item.maxTravellers - item.bookedPlaces }} places </span>
         </div>
-      </tr>
+      </div>
     </template>
     <template #[`item.canBeBooked`]="{ item }">
-      <tr class="d-flex justify-end justify-lg-center">
+      <div class="d-flex justify-end justify-lg-center">
         <v-btn-secondary
           v-if="item.canBeBooked"
           :to="formatLink(item)"
           class="text-caption text-uppercase"
           max-width="250"
         >
-          réserver / poser une option
+          réserver {{ !item.canPlaceOption ? '/ poser une option' : '' }}
         </v-btn-secondary>
         <div v-else>
           plus de places disponibles
         </div>
-      </tr>
+      </div>
     </template>
   </v-data-table>
 </template>
@@ -62,6 +63,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import 'dayjs/locale/fr'
 
 import { useDisplay } from 'vuetify'
+import { hashPaymentParams } from '@/utils/hash'
 
 const { smAndDown } = useDisplay()
 dayjs.extend(customParseFormat)
@@ -95,13 +97,24 @@ const tableItems = computed(() => {
       bookedPlaces: date.bookedPlaces || 0,
       maxTravellers: date.maxTravellers || 0,
       canBeBooked: date.maxTravellers !== date.bookedPlaces,
+      canPlaceOption: dayjs(date.departureDate, 'DD/MM/YYYY').isBefore(dayjs().add(30, 'day')),
     }
   })
 })
 
 const formatLink = (date) => {
   const in30days = dayjs().add(30, 'day')
-  const checkoutType = dayjs(date.departureDate).isBefore(in30days) ? 'full' : 'deposit'
-  return `/checkout?slug=${props.deal.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`
+  const checkoutType = dayjs(date.departureDate, 'DD/MM/YYYY').isBefore(in30days) ? 'full' : 'deposit'
+  const params = {
+    slug: props.deal.slug,
+    departure_date: dayjs(date.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD'),
+    return_date: dayjs(date.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD'),
+    type: checkoutType,
+    step: 1,
+  }
+  const hash = hashPaymentParams(params)
+  console.log(hash)
+  return `/checkout?hash=${hash}`
+  // return `/checkout?slug=${props.deal.slug}&departure_date=${dayjs(date.departureDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate, 'DD/MM/YYYY').format('YYYY-MM-DD')}&type=${checkoutType}`
 }
 </script>

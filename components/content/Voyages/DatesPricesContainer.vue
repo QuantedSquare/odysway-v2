@@ -1,6 +1,6 @@
 <template>
   <v-container
-    v-if="deal"
+    v-if="dealStatus === 'success'"
     id="dates-container"
   >
     <v-row
@@ -109,6 +109,11 @@
       </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
+  <v-container v-else>
+    <v-skeleton-loader
+      type="card"
+    />
+  </v-container>
 </template>
 
 <script setup>
@@ -126,10 +131,8 @@ const switchTab = (tab) => {
   activeTab.value = tab
 }
 
-const { data: deal } = await useAsyncData(props.slug, async () => {
-  const query = await queryCollection('deals').where('slug', '=', props.slug).first()
-  // query.privatisation = false
-  return query
+const { data: deal, status: dealStatus } = useAsyncData(props.slug, () => {
+  return queryCollection('deals').where('slug', '=', props.slug).first()
 })
 </script>
 

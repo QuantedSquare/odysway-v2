@@ -5,9 +5,8 @@ const SECRET_KEY = process.env.NUXT_URL_HASH_SECRET || 'your-secret-key'
 interface PaymentParams {
   dealId?: string
   slug?: string
-  dateStart?: string
-  dateEnd?: string
-  plan?: string
+  departure_date?: string
+  return_date?: string
   amount?: string
   type?: 'deposit' | 'balance' | 'full' | 'custom'
 }
@@ -17,6 +16,7 @@ export const hashPaymentParams = (params: PaymentParams): string => {
   const cleanParams = Object.fromEntries(
     Object.entries(params).filter(([_, v]) => v !== null && v !== ''),
   )
+  console.log('cleanParams', cleanParams)
 
   // Convert to string
   const paramsString = JSON.stringify(cleanParams)

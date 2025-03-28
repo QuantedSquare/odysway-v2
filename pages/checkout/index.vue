@@ -4,7 +4,7 @@
     class="mt-10 relative"
   >
     <v-img
-      v-if="deal"
+      v-if="deal && dealStatus === 'success'"
       :src="img(deal.imgSrc2.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
       :lazy-src="img(deal.imgSrc2.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
@@ -17,7 +17,7 @@
     <v-row
       justify="center"
     >
-      <FunnelCheckoutStepper />
+      <!-- <FunnelCheckoutStepper /> -->
     </v-row>
   </v-container>
 </template>
@@ -26,8 +26,17 @@
 import { useImage } from '#imports'
 
 const route = useRoute()
+// const hash = route.query.hash
 
-const deal = await queryCollection('deals').where('slug', '=', route.query.slug).first()
+const slug = computed(() => {
+  const params = decryptPaymentParams(hash)
+  console.log('params', params)
+  return route.query.slug || params?.slug
+})
+const { data: deal, status: dealStatus } = useAsyncData('deal', async () => {
+  console.log('slug', slug.value)
+  return await queryCollection('deals').where('slug', '=', slug.value).first()
+})
 
 const img = useImage()
 </script>
