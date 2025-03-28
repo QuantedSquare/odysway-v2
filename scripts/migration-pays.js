@@ -96,6 +96,7 @@ async function formatDestinations() {
         destinationsMap[destinationIndex].countries.push({
           country: pays.nom,
           image: pays.image,
+          slug: slugify(pays.nom, { lower: true }),
           metaDescription: destination.meta_description,
           isOnPage: pays.top || false,
         })

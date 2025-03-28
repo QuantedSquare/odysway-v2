@@ -8,78 +8,91 @@
     {
       "country": "Chine",
       "image": "/images/destinations/jSdT9NVTz6j9h4LvhI7k.jpg",
+      "slug": "chine",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Inde",
       "image": "/images/destinations/niNh7HaCRXanTLAGev6h.jpg",
+      "slug": "inde",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": true
     },
     {
       "country": "Japon",
       "image": "/images/destinations/IqgfsH1yRTWrwIxz75PQ.jpg",
+      "slug": "japon",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Kirghizistan",
       "image": "/images/destinations/DceF8Jw3SSOIojoA6F49.jpg",
+      "slug": "kirghizistan",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Laos",
       "image": "/images/destinations/rf5aeAyUSaWO31IcXRbC.jpg",
+      "slug": "laos",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": true
     },
     {
       "country": "Mongolie",
       "image": "/images/destinations/CgggvhHxQ4m61gtEKl8q.jpg",
+      "slug": "mongolie",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": true
     },
     {
       "country": "Népal",
       "image": "/images/destinations/QNDXpRTyKYX5HbK6HKQH.jpg",
+      "slug": "nepal",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": true
     },
     {
       "country": "Ouzbékistan",
       "image": "/images/destinations/MIlPRzZcRkaycrIHPGag.jpg",
+      "slug": "ouzbekistan",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Sibérie",
       "image": "/images/destinations/IiN9lZErS96ar0hHHiB4.jpg",
+      "slug": "siberie",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Sri Lanka",
       "image": "/images/destinations/vFLMk0BRnm4ForgdUXec.jpg",
+      "slug": "sri-lanka",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": true
     },
     {
       "country": "Thaïlande",
       "image": "/images/destinations/FEjgVmnQLmFo74t7fMSx.jpg",
+      "slug": "thailande",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Tibet",
       "image": "/images/destinations/viNSNoK6Ta2G6MTZ7f4B.jpg",
+      "slug": "tibet",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     },
     {
       "country": "Vietnam",
       "image": "/images/destinations/S3Lv80MmRy63uZabtgnh.jpg",
+      "slug": "vietnam",
       "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
       "isOnPage": false
     }

@@ -157,6 +157,7 @@ export default defineContentConfig({
         countries: z.array(z.object({
           country: z.string(),
           image: z.string(),
+          slug: z.string(),
           metaDescription: z.string(),
           isOnPage: z.boolean(),
         })),
