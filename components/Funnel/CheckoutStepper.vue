@@ -148,14 +148,6 @@
                     />
                   </div>
                 </template>
-                <!-- <v-row>
-                  <v-col
-                    cols="12"
-                    class="d-flex justify-end text-body-1 font-weight-bold"
-                  >
-                    Total : {{ formatNumber(1000000, 'currency', 'EUR') }}
-                  </v-col>
-                </v-row> -->
               </v-stepper-actions>
             </v-card-actions>
           </v-card>
@@ -198,19 +190,20 @@ const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + rou
 // We generate dealId after first step and don't need statics values from voyage anymore
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (slug) {
+    console.log('slug', slug)
     const query = await queryCollection('deals').where('slug', '=', slug).first()
     if (!query) {
       throw new Error('Deal not found.')
     }
     function parseDeal(deal, departureDate, returnDate) {
       const filteredDates = deal.dates.find((date) => {
-        return dayjs(date.departureDate).format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate).format('YYYY-MM-DD') === returnDate
+        return dayjs(date.departureDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === returnDate
       })
-
       if (!filteredDates) {
         console.log(filteredDates)
         throw new Error('Invalid or no matching dates found.')
       }
+      console.log('filteredDates', filteredDates)
       updatePricePerTraveler(filteredDates.startingPrice)
       console.log('image check', deal.imgSrc1.src)
       return {

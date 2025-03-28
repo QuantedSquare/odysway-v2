@@ -3,7 +3,7 @@
     <v-row class="py-0">
       <v-col>
         <h2 class="my-0">
-          {{ page.fields.first_step.title }}
+          {{ page.first_step.title }}
         </h2>
       </v-col>
     </v-row>
@@ -14,11 +14,11 @@
           :mandatory="true"
         >
           <v-radio
-            :label="page.fields.first_step.option_3"
+            :label="page.first_step.option_3"
             value="quick"
           />
           <v-radio
-            :label="isBooking ? page.fields.first_step.option_2 : page.fields.first_step.option_1"
+            :label="isBooking ? page.first_step.option_2 : page.first_step.option_1"
             value="normal"
           />
         </v-radio-group>

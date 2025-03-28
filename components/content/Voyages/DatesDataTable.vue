@@ -5,7 +5,7 @@
     :headers="headers"
     :items="tableItems"
     class="bg-primary text-center py-4 font-weight-bold"
-    :class="deal.privatisation ? 'rounded-lg' : 'rounded-b-lg'"
+    :class="deal.privatisationAvailable ? 'rounded-lg' : 'rounded-b-lg'"
   >
     <template #headers="{ columns }">
       <tr>

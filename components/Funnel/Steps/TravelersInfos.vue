@@ -23,7 +23,7 @@
             elevation="2"
           >
             Les informations ci-dessous doivent être identiques à celles qui sont écrites sur les documents d'identité utilisés pour ce voyage.
-            <!-- {{ page.fields.rappel_informations_voyageurs }} -->
+            <!-- {{ page.rappel_informations_voyageurs }} -->
           </v-alert>
         </v-col>
         <v-col cols="12">
@@ -60,10 +60,10 @@
           <v-switch
             v-model="isCouple"
             style="margin-bottom : 5px"
-            :label="page.fields.preference_couple"
+            :label="page.preference_couple"
           />
-          <!-- page.fields.preference_couple" -->
-          <!-- <div v-html="page.fields.preference_couple_details" /> -->
+          <!-- page.preference_couple" -->
+          <!-- <div v-html="page.preference_couple_details" /> -->
         </v-col>
       </v-row>
     </v-form>

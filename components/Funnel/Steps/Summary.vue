@@ -143,7 +143,7 @@
                 </div>
               </template>
               <div>
-                {{ page.fields.forced_indiv_room_text }}
+                {{ page.forced_indiv_room_text }}
               </div>
             </v-tooltip>
             <span v-else>
@@ -239,7 +239,7 @@
                   </div>
                 </template>
                 <div>
-                  {{ page.fields.cancel_text }}
+                  {{ page.cancel_text }}
                 </div>
               </v-tooltip>
             </template>

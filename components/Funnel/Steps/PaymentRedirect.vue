@@ -46,7 +46,7 @@
                   <div
                     class="text-caption text-md-body-1 pl-1"
                     @click.stop=""
-                    v-html="page.fields.phrase_dacceptation"
+                    v-html="page.phrase_dacceptation"
                   />
                 </template>
               </v-switch>
@@ -125,7 +125,7 @@ const stripePay = async () => {
     paymentType: route.query.type,
     contact: deal.value.contact,
     currentUrl: route.fullPath,
-    insuranceImg: props.page.fields.assurance_img,
+    insuranceImg: props.page.assurance_img,
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {

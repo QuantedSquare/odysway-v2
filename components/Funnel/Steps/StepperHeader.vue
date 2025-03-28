@@ -49,6 +49,38 @@ const props = defineProps({
   },
 })
 const stepDefinitions = computed(() => {
+  if (props.skipperMode === 'devis') {
+    return [
+      {
+        number: 1,
+        label: props.page.fil_dariane_devis.step_1,
+      },
+      {
+        number: 2,
+        label: props.page.fil_dariane_devis.step_2,
+      },
+      {
+        number: 3,
+        label: props.page.fil_dariane_devis.step_3,
+      },
+    ]
+  }
+  else if (props.skipperMode === 'custom') {
+    return [
+      {
+        number: 1,
+        label: props.page.fil_dariane_devis.step_1,
+      },
+    ]
+  }
+  else if (props.skipperMode === 'call') {
+    return [
+      {
+        number: 1,
+        label: props.page.fil_dariane_devis.step_1,
+      },
+    ]
+  }
   if (props.skipperMode === 'summary') {
     return [
       {
@@ -60,21 +92,21 @@ const stepDefinitions = computed(() => {
   const baseSteps = [
     {
       number: 1,
-      label: props.page.fields.fil_dariane_devis.step_1,
+      label: props.page.fil_dariane_devis.step_1,
     },
   ]
 
   if (props.skipperMode !== 'quick') {
     baseSteps.push({
       number: 2,
-      label: props.page.fields.fil_dariane_devis.step_2,
+      label: props.page.fil_dariane_devis.step_2,
     })
   }
 
   if (props.skipperMode === 'normal') {
     baseSteps.push({
       number: 3,
-      label: props.page.fields.fil_dariane_devis.step_3,
+      label: props.page.fil_dariane_devis.step_3,
     })
   }
 
@@ -85,7 +117,7 @@ const stepDefinitions = computed(() => {
       : props.skipperMode === 'quick' ? 2 : 3,
     label: props.skipperMode === 'normal'
       ? 'Option / Réservation'
-      : props.page.fields.fil_dariane_devis.step_final_rdv,
+      : props.page.fil_dariane_devis.step_final_rdv,
   })
 
   if (props.skipperMode === 'normal') {
