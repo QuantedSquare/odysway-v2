@@ -1,59 +1,58 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxtjs/seo',
-    '@nuxt/content',
-    '@nuxt/image',
-    'nuxt-calendly',
+    "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxtjs/seo",
+    "@nuxt/content",
+    "@nuxt/image",
+    "nuxt-calendly",
     (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
+      nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error This come from Vuetify doc.
-        config.plugins.push(vuetify({ autoImport: true }))
-      })
+        config.plugins.push(vuetify({ autoImport: true }));
+      });
     },
   ],
   components: [
-    '~/components',
-    { path: '~/components/content', pathPrefix: false },
+    "~/components",
+    { path: "~/components/content", pathPrefix: false },
   ],
   devtools: { enabled: true },
   content: {
     preview: {
-      api: 'https://api.nuxt.studio',
+      api: "https://api.nuxt.studio",
       dev: true,
     },
     database: {
-      type: 'postgres',
-      url: process.env.POSTGRES_URL || 'postgres://localhost:5432/nuxt',
+      type: "postgres",
+      url: process.env.POSTGRES_URL || "postgres://localhost:5432/nuxt",
     },
   },
   runtimeConfig: {
+    urlHashSecret: process.env.NUXT_URL_HASH_SECRET,
     public: {
-      environment: process.env.VERCEL_ENV || 'development',
-      siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
+      environment: process.env.VERCEL_ENV || "development",
+      siteURL: process.env.VERCEL_URL || "http://localhost:3000",
     },
   },
   build: {
-    transpile: ['vuetify'],
+    transpile: ["vuetify"],
   },
   routeRules: {
-    '/': { prerender: true },
-    '/api/**': { cors: true },
+    "/": { prerender: true },
+    "/api/**": { cors: true },
   },
   // ot sure this improve a lot.
   features: {
     inlineStyles: false,
   },
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: "2024-11-01",
   nitro: {
     imports: {
-      dirs: [
-        'server/utils/**',
-      ],
+      dirs: ["server/utils/**"],
     },
   },
   vite: {
@@ -74,4 +73,4 @@ export default defineNuxtConfig({
   //   quality: 70,
   // },
   // css: ['~/assets/scss/main.scss'],
-})
+});
