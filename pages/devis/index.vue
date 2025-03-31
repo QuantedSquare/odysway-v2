@@ -40,7 +40,28 @@
                     />
                   </v-stepper-window-item>
                   <v-stepper-window-item :value="2">
-                    coucou
+                    <DevisDetails
+                      v-if="skipperChoice === 'devis'"
+                      v-model="details"
+                      :page="page.second_step"
+                    />
+                    <DevisUserInfoForm
+                      v-if="skipperChoice === 'call'"
+                      v-model="userInfo"
+                      :page="page.third_step"
+                    />
+                    <FunnelTallyForm v-if="skipperChoice === 'calendly'" />
+
+                    <!--  <DevisCustom v-if="skipperChoice === 'custom'" /> -->
+                  </v-stepper-window-item>
+                  <v-stepper-window-item
+                    v-if="skipperChoice === 'devis'"
+                    :value="3 "
+                  >
+                    <DevisUserInfoForm
+                      v-model="userInfo"
+                      :page="page.third_step"
+                    />
                   </v-stepper-window-item>
                 </v-stepper-window>
                 <v-card-actions>
@@ -53,6 +74,15 @@
                     <template #next>
                       <div>
                         <v-btn
+                          v-if="displaySubmit"
+                          color="secondary"
+                          :disabled="!validateInfos"
+                          @click="submit"
+                        >
+                          {{ skipperChoice === 'devis' ? 'Envoyer ma demande de devis' : 'Prendre rendez-vous' }}
+                        </v-btn>
+                        <v-btn
+                          v-else
                           color="secondary"
                           @click="nextStep"
                         >
@@ -74,22 +104,92 @@
 <script setup>
 import { useImage } from '#imports'
 
+const config = useRuntimeConfig()
+const img = useImage()
+const route = useRoute()
 const skipperChoice = ref('devis')
 const currentStep = ref(1)
+const details = ref({
+  departureDate: '',
+  returnDate: '',
+  nbAdults: route.query.nbAdults,
+  nbChildren: route.query.nbChildren,
+  includeFlight: false,
+  departureAirport: '',
+})
 
-const { slug } = useRoute().query
-console.log('slug', slug)
-const route = useRoute()
-const deal = await queryCollection('deals').where('slug', '=', slug).first()
+const userInfo = ref({
+  firstname: '',
+  lastname: '',
+  email: '',
+  phone: '',
+  acceptTerms: false,
+  subscribeToNewsletter: false,
+  departureAirport: '',
+})
+
+const validateInfos = computed(() => {
+  console.log('userInfo', userInfo.value)
+  return userInfo.value.firstname && userInfo.value.lastname && userInfo.value.email && userInfo.value.phone && userInfo.value.acceptTerms
+})
+
+const deal = await queryCollection('deals').where('slug', '=', route.query.slug).first()
+
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 console.log('page', page)
-const img = useImage()
 
 const nextStep = () => {
   currentStep.value++
 }
 const previousStep = () => {
   currentStep.value--
+}
+const displaySubmit = computed(() => {
+  return (skipperChoice.value === 'devis' && currentStep.value === 3) || (skipperChoice.value === 'call' && currentStep.value === 2)
+})
+const submit = async () => {
+  const dealBody = {
+    value: deal.startingPrice * 100,
+    title: deal.title,
+    currency: 'eur',
+    group: '1',
+    owner: '1',
+    stage: config.public.environment === 'development' ? '48' : '2',
+    // CustomFields
+    specialRequest: details.value.comment + (details.value.includeFlight ? `- Aéroport de départ : ${details.value.departureAirport}` : ''),
+    departureDate: details.value.departureDate.length > 0 ? details.value.departureDate : deal.dates[0].departureDate,
+    returnDate: details.value.returnDate.length > 0 ? details.value.returnDate : deal.dates[0].returnDate,
+    travelType: deal.travelType || 'Individuel',
+    nbTravelers: +details.value.nbAdults + +details.value.nbChildren,
+    nbChildren: +details.value.nbChildren,
+    nbAdults: +details.value.nbAdults,
+    nbTeen: 0,
+    nbUnderAge: +details.value.nbChildren,
+    country: deal.country,
+    iso: deal.iso,
+    zoneChapka: deal.zoneChapka,
+    image: deal.imgSrc1.src || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+    currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
+    alreadyPaid: 0,
+    restToPay: 0,
+    utm: route.query.utm || '',
+    slug: deal.slug,
+    basePricePerTraveler: deal.startingPrice * 100,
+    flightTickets: details.value.includeFlight ? 'Oui' : 'Non',
+    promoChildren: deal.promoChildren || 0,
+    depositPrice: deal.startingPrice * 100 * 0.3,
+    maxChildrenAge: deal.maxChildrenAge || 12,
+    promoTeen: deal.promoTeen || 0,
+    maxTeenAge: deal.maxTeenAge || 18,
+    source: 'Demande d\'infos',
+    // Contacts
+    email: userInfo.value.email,
+    phone: userInfo.value.phone,
+    firstname: userInfo.value.firstname,
+    lastname: userInfo.value.lastname,
+  }
+  console.log('dealBody', dealBody)
+  await apiRequest('/ac/deals', 'post', dealBody)
 }
 </script>
 
@@ -104,9 +204,6 @@ const previousStep = () => {
   right: 0;
   bottom: 0;
 }
-</style>
-
-<style scoped>
 @media screen and (min-width: 768px) {
   .border-width {
     border-radius: 30px!important;
@@ -116,6 +213,13 @@ const previousStep = () => {
     min-height: 50vh!important;
     padding: 2em;
 
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .no-margin-window .v-stepper-window {
+  margin-left:0!important;
+  margin-right:0!important;
   }
 }
 </style>

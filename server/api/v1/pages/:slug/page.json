@@ -37,7 +37,6 @@
 },
 {
   "fields": {
-    "devis_rdv_text": "Pour personnaliser au mieux votre expérience et vous donner le meilleur tarif possible, veuillez répondre à ce questionnaire :",
     "fil_dariane_devis": {
       "step_1": "Infos",
       "step_2": "Détails",
@@ -49,6 +48,20 @@
       "option_1": "Je souhaite faire une demande de devis sur mes dates",
       "option_2": "Je souhaite une proposition sur-mesure sur cette destination",
       "option_3": "Je souhaite prendre un RDV téléphonique avec un de nos conseillers voyages"
+    },
+    "second_step": {
+      "title": "Pour personnaliser au mieux votre expérience et vous donner le meilleur tarif possible, veuillez répondre à ce questionnaire :",
+      "sub_1": "Qui vient ?",
+      "sub_2": "Quand ?",
+      "sub_3": "Souhaitez vous inclure le vol dans votre offre ?",
+      "option_1": "Je ne sais pas encore...",
+      "option_2": "J'ai mes dates !",
+      "comment_title": "Un commentaire à partager avec votre conseiller ?"
+    },
+    "third_step": {
+      "title": "Vos informations",
+      "sub_1": "J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.",
+      "sub_2": "Je souhaite recevoir des inspirations et des idées pour voyager autrement"
     }
   },
   "slug": "devis"

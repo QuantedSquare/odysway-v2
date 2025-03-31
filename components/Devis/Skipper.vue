@@ -19,7 +19,7 @@
           />
           <v-radio
             :label="page.option_2"
-            value="custom"
+            value="calendly"
           />
           <v-radio
             :label="page.option_3"

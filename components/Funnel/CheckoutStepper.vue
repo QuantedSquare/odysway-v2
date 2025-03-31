@@ -323,8 +323,11 @@ const previousStep = () => {
   .funnel-stepper{
     min-height: 50vh!important;
     padding: 2em;
-
   }
+  .no-margin-window .v-stepper-window {
+ margin-left:0!important;
+ margin-right:0!important;
+}
 }
 .fade-enter-active {
   transition: all 0.3s ease-out;
@@ -339,12 +342,5 @@ const previousStep = () => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
-}
-@media screen and (max-width: 768px) {
-  .no-margin-window .v-stepper-window {
- margin-left:0!important;
- margin-right:0!important;
-}
-
 }
 </style>

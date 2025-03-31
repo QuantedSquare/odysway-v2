@@ -24,4 +24,7 @@ useCalendlyEventListener({
     // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: this.titre })
   },
 })
+onUnmounted(() => {
+  // calendly.destroyInlineWidget()
+})
 </script>
