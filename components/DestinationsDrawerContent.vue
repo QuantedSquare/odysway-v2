@@ -29,7 +29,7 @@
         >
           <v-card
             :image="country.image"
-            :href="`destinations/${country.slug}`"
+            :href="`/destinations/${country.slug}`"
             height="120"
             width="120"
           >

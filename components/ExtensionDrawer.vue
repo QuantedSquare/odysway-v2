@@ -2,7 +2,7 @@
   <v-navigation-drawer
     expand-on-hover
     location="top"
-    class="zIndex"
+    class="zIndex nav-height"
   >
     <component
       :is="drawerConent"
@@ -43,5 +43,8 @@ const extensionItems = computed(() => {
 <style scoped>
 .zIndex{
   z-index: 1050 !important;
+}
+.nav-height{
+  height: 233px !important;
 }
 </style>

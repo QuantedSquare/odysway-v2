@@ -59,15 +59,19 @@ import { useScroll, useElementSize } from '@vueuse/core'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const scrollContainer = ref(null)
+const scrollContainer = useTemplateRef('scrollContainer')
 const scrollElement = ref(null)
+const childElement = ref(null)
 const nbScrollElementChildren = ref(0)
 const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
 const { width: scrollElementWidth } = useElementSize(scrollElement)
+const { width: childElementWidth } = useElementSize(childElement)
 
 watch(() => route.path, () => {
   if (x.value > 0) {
     x.value = 0
+    arrivedState.left = true
+    arrivedState.right = false
   }
 })
 
@@ -103,8 +107,8 @@ watch(() => scrollElement.value, (newElement) => {
 
 function updateChildrenCount() {
   if (scrollElement.value?.children) {
-    const count = scrollElement.value.children.length
-    nbScrollElementChildren.value = count
+    childElement.value = scrollElement.value.children[0]
+    nbScrollElementChildren.value = scrollElement.value.children.length
   }
 }
 
@@ -113,7 +117,7 @@ const scrollAmount = computed(() => {
 })
 
 const displayScrollBtn = computed(() => {
-  return (nbScrollElementChildren.value * 120) > scrollElementWidth.value
+  return (nbScrollElementChildren.value * childElementWidth.value) > scrollElementWidth.value
 })
 </script>
 
