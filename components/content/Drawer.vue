@@ -1,5 +1,6 @@
 <template>
   <v-navigation-drawer
+    v-model="model"
     location="right"
     disable-resize-watcher
     mobile
@@ -22,7 +23,7 @@
       >
         <v-list-item
           density="compact"
-          @click="drawer = !drawer"
+          @click="model = false"
         >
           <NuxtLink
             :to="item.link"
@@ -38,6 +39,8 @@
 
 <script setup>
 import { mdiAccountCircle } from '@mdi/js'
+
+const model = defineModel()
 
 const drawerItems = ref([
   {

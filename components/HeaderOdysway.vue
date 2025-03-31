@@ -62,7 +62,7 @@
       <v-btn
         class="d-inline d-md-none"
         icon
-        @click.stop="$emit('show-drawer')"
+        @click.stop="model = !model"
       >
         <v-icon>{{ mdiDotsVertical }}</v-icon>
       </v-btn>
@@ -80,7 +80,7 @@
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js'
 import { useImage } from '#imports'
 
-defineEmits(['show-drawer'])
+const model = defineModel()
 
 const img = useImage()
 
