@@ -61,7 +61,7 @@
                       v-model="userInfo"
                       :page="page.third_step"
                     />
-                    <FunnelStepsCalendly
+                    <CalendlyContainer
                       v-else-if="skipperChoice === 'call' && showCalendly"
                       :travel-title="deal.title"
                       :text="page.calendly.text"
@@ -91,6 +91,7 @@
                           v-if="displaySubmit"
                           color="secondary"
                           :disabled="!validateInfos"
+                          :loading="isLoading"
                           @click="submit"
                         >
                           {{ skipperChoice === 'devis' ? 'Envoyer ma demande de devis' : 'Prendre rendez-vous' }}
@@ -121,6 +122,7 @@ import { useImage } from '#imports'
 const config = useRuntimeConfig()
 const img = useImage()
 const route = useRoute()
+const router = useRouter()
 const skipperChoice = ref('devis')
 const currentStep = ref(1)
 const details = ref({
@@ -131,6 +133,7 @@ const details = ref({
   includeFlight: false,
   departureAirport: '',
 })
+const isLoading = ref(false)
 
 const showCalendly = ref(false)
 
@@ -168,6 +171,7 @@ const displaySubmit = computed(() => {
   return !showCalendly.value && ((skipperChoice.value === 'devis' && currentStep.value === 3) || (skipperChoice.value === 'call' && currentStep.value === 2))
 })
 const submit = async () => {
+  isLoading.value = true
   const dealBody = {
     value: deal.startingPrice * 100,
     title: deal.title,
@@ -216,6 +220,7 @@ const submit = async () => {
   else if (skipperChoice.value === 'call') {
     showCalendly.value = true
   }
+  isLoading.value = false
 }
 </script>
 

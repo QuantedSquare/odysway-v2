@@ -73,8 +73,8 @@
                 />
                 <CalendlyContainer
                   v-else
-                  :titre="voyage.title"
-                  :page="page"
+                  :travel-title="voyage.title"
+                  :text="page.calendly"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>

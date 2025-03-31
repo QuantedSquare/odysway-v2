@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div :class="hasMarginTop ? 'mt-16' : ''">
+    <div>
       {{ text }}
     </div>
     <div
@@ -13,13 +13,16 @@
 
 <script setup>
 defineProps({
-  hasMarginTop: {
-    type: Boolean,
-    default: false,
+  travelTitle: {
+    type: String,
+    default: '',
+  },
+  text: {
+    type: String,
+    default: '',
   },
 })
 
-const text = 'Merci de votre confiance ! L\'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l\'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.'
 const calendly = useCalendly()
 onMounted(() => {
   calendly.initInlineWidget()
@@ -28,7 +31,7 @@ useCalendlyEventListener({
   onEventScheduled: (event) => {
     console.log('Event scheduled:', event)
     // Pixel à mettre en place
-    // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: this.titre })
+    // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: travelTitle })
   },
 })
 </script>

@@ -147,8 +147,10 @@ const displayFormat = (date) => {
   return dayjs(date).format('DD/MM/YYYY')
 }
 watch([selectedDates, includeFlight], () => {
-  model.value.departureDate = dayjs(selectedDates.value[0]).format('YYYY-MM-DD')
-  model.value.returnDate = dayjs(selectedDates.value[1]).format('YYYY-MM-DD')
+  if (selectedDates.value.length > 0) {
+    model.value.departureDate = dayjs(selectedDates.value[0]).format('YYYY-MM-DD')
+    model.value.returnDate = dayjs(selectedDates.value[selectedDates.value.length - 1]).format('YYYY-MM-DD')
+  }
   model.value.includeFlight = includeFlight.value
 })
 </script>
