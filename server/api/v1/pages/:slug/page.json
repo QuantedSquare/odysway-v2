@@ -41,6 +41,7 @@
       "step_1": "Infos",
       "step_2": "Détails",
       "step_3": "Confirmation",
+      "step_4": "Questionnaire",
       "step_final_rdv": "Rendez-vous"
     },
     "first_step": {
@@ -62,6 +63,10 @@
       "title": "Vos informations",
       "sub_1": "J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.",
       "sub_2": "Je souhaite recevoir des inspirations et des idées pour voyager autrement"
+    },
+    "calendly": {
+      "title": "Vos informations",
+      "text": "Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage."
     }
   },
   "slug": "devis"

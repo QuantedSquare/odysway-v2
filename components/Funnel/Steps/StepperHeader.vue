@@ -65,7 +65,19 @@ const stepDefinitions = computed(() => {
       },
     ]
   }
-  else if (props.skipperMode === 'calendly') {
+  else if (props.skipperMode === 'tally') {
+    return [
+      {
+        number: 1,
+        label: props.page.fil_dariane_devis.step_1,
+      },
+      {
+        number: 2,
+        label: props.page.fil_dariane_devis.step_4,
+      },
+    ]
+  }
+  else if (props.skipperMode === 'call') {
     return [
       {
         number: 1,
@@ -75,13 +87,9 @@ const stepDefinitions = computed(() => {
         number: 2,
         label: props.page.fil_dariane_devis.step_2,
       },
-    ]
-  }
-  else if (props.skipperMode === 'call') {
-    return [
       {
-        number: 1,
-        label: props.page.fil_dariane_devis.step_1,
+        number: 3,
+        label: props.page.fil_dariane_devis.step_final_rdv,
       },
     ]
   }

@@ -32,6 +32,17 @@
               <v-card
                 class="border-width relative w-md-75 w-lg-50 w-xl-33 no-margin-window "
               >
+                <v-img
+                  color="surface-variant"
+                  height="100"
+                  :src="deal.imgSrc1.src"
+                  cover
+                  class="align-center"
+                >
+                  <div class="text-center text-body-1 text-shadow">
+                    {{ deal.title }}
+                  </div>
+                </v-img>
                 <v-stepper-window :model-value="currentStep">
                   <v-stepper-window-item :value="1">
                     <DevisSkipper
@@ -46,13 +57,16 @@
                       :page="page.second_step"
                     />
                     <DevisUserInfoForm
-                      v-if="skipperChoice === 'call'"
+                      v-if="skipperChoice === 'call' && !showCalendly"
                       v-model="userInfo"
                       :page="page.third_step"
                     />
-                    <FunnelTallyForm v-if="skipperChoice === 'calendly'" />
-
-                    <!--  <DevisCustom v-if="skipperChoice === 'custom'" /> -->
+                    <FunnelStepsCalendly
+                      v-else-if="skipperChoice === 'call' && showCalendly"
+                      :travel-title="deal.title"
+                      :text="page.calendly.text"
+                    />
+                    <FunnelTallyForm v-if="skipperChoice === 'tally'" />
                   </v-stepper-window-item>
                   <v-stepper-window-item
                     v-if="skipperChoice === 'devis'"
@@ -82,7 +96,7 @@
                           {{ skipperChoice === 'devis' ? 'Envoyer ma demande de devis' : 'Prendre rendez-vous' }}
                         </v-btn>
                         <v-btn
-                          v-else
+                          v-else-if="!showCalendly"
                           color="secondary"
                           @click="nextStep"
                         >
@@ -118,6 +132,8 @@ const details = ref({
   departureAirport: '',
 })
 
+const showCalendly = ref(false)
+
 const userInfo = ref({
   firstname: '',
   lastname: '',
@@ -143,9 +159,13 @@ const nextStep = () => {
 }
 const previousStep = () => {
   currentStep.value--
+  if (showCalendly.value) {
+    showCalendly.value = false
+    currentStep.value = 2
+  }
 }
 const displaySubmit = computed(() => {
-  return (skipperChoice.value === 'devis' && currentStep.value === 3) || (skipperChoice.value === 'call' && currentStep.value === 2)
+  return !showCalendly.value && ((skipperChoice.value === 'devis' && currentStep.value === 3) || (skipperChoice.value === 'call' && currentStep.value === 2))
 })
 const submit = async () => {
   const dealBody = {
@@ -190,6 +210,12 @@ const submit = async () => {
   }
   console.log('dealBody', dealBody)
   await apiRequest('/ac/deals', 'post', dealBody)
+  if (skipperChoice.value === 'devis') {
+    router.push('/devis/success?slug=' + deal.slug)
+  }
+  else if (skipperChoice.value === 'call') {
+    showCalendly.value = true
+  }
 }
 </script>
 
