@@ -19,7 +19,7 @@
 import ProposDrawerContent from './ProposDrawerContent.vue'
 import DestinationsDrawerContent from './DestinationsDrawerContent.vue'
 
-const props = defineProps({
+defineProps({
   extension: String,
 })
 

@@ -54,9 +54,8 @@ const props = defineProps({
 const selectedDestinationSlug = ref(props.destinations[0].slug)
 
 const destinationsFiltered = computed(() => {
-  return props.destinations.filter(destination => destination.isOnPage)
+  return props.destinations.filter(destination => destination.visible)
 })
-
 function setSelectedDestinationSlug(slug) {
   selectedDestinationSlug.value = slug
 }
