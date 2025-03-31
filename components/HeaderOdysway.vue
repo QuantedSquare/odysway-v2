@@ -71,7 +71,7 @@
   <ExtensionDrawer
     v-if="showExtension && extensionName"
     :extension="extensionName"
-    class="d-md-and-down-none zIndex"
+    class="d-md-and-down-none"
     @mouseleave="resetExtension()"
   />
 </template>
@@ -92,9 +92,9 @@ const items = ref([
     link: '/destinations',
     extension: 'destinations',
   },
-  // { title: 'prochains départs',
-  //   // link: '/prochains-departs',
-  // },
+  { title: 'prochains départs',
+    // link: '/prochains-departs',
+  },
   { title: 'à propos',
     link: '/concept',
     extension: 'propos',
