@@ -3,56 +3,56 @@
   "slug": "france",
   "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
   "image": "",
-  "isOnPage": true,
+  "visible": true,
   "countries": [
     {
       "country": "Alpes",
       "image": "/images/destinations/Jhs8ssZrSKmFtXNU4bIR.jpg",
       "slug": "alpes",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Corse",
       "image": "/images/destinations/wdtE4OFSQG7XbkunagVt.jpg",
       "slug": "corse",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Ile de France",
       "image": "/images/destinations/nFLyl4RzTECeX7l5rb21.jpg",
       "slug": "ile-de-france",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Jura",
       "image": "/images/destinations/Yx1zY7OQQDOtynI9cOUp.jpg",
       "slug": "jura",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Provence",
       "image": "/images/destinations/bRA5U5kTISqNQxHydGLe.jpg",
       "slug": "provence",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Sud Ouest",
       "image": "/images/destinations/GhsiuK4RTba0t2f0egV4.jpg",
       "slug": "sud-ouest",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Vosges",
       "image": "/images/destinations/jsDezJwRlmgBcp7vYFow.jpg",
       "slug": "vosges",
       "metaDescription": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
-      "isOnPage": false
+      "visible": false
     }
   ]
 }

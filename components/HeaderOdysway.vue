@@ -36,7 +36,7 @@
         density="compact"
         size="x-large"
         color="primary"
-        href="/"
+        href="/calendly"
         class="d-none d-md-inline text-decoration-none"
       >
         <div class="d-flex flex-column align-center text-caption text-uppercase">

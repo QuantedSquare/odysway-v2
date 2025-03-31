@@ -3,28 +3,28 @@
   "slug": "amerique-centrale",
   "metaDescription": "Partez en Amérique Centrale où vous attendent forêts luxuriantes, sites mayas, eaux turquoises... Découvrez nos voyages hors des sentiers battus !",
   "image": "/images/destinations/Q8Z3k9wT3egHQ2tkv4Pw.jpg",
-  "isOnPage": true,
+  "visible": true,
   "countries": [
     {
       "country": "Costa Rica",
       "image": "/images/destinations/E6y6OnhT1WWv9oFKdMYE.jpg",
       "slug": "costa-rica",
       "metaDescription": "Partez en Amérique Centrale où vous attendent forêts luxuriantes, sites mayas, eaux turquoises... Découvrez nos voyages hors des sentiers battus !",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Guatemala",
       "image": "/images/destinations/R98uZsOUTrCmQzpY07D8.jpg",
       "slug": "guatemala",
       "metaDescription": "Partez en Amérique Centrale où vous attendent forêts luxuriantes, sites mayas, eaux turquoises... Découvrez nos voyages hors des sentiers battus !",
-      "isOnPage": false
+      "visible": false
     },
     {
       "country": "Salvador",
       "image": "/images/destinations/uhE3Uc3ITFSMWcgEaz9F.jpg",
       "slug": "salvador",
       "metaDescription": "Partez en Amérique Centrale où vous attendent forêts luxuriantes, sites mayas, eaux turquoises... Découvrez nos voyages hors des sentiers battus !",
-      "isOnPage": false
+      "visible": false
     }
   ]
 }

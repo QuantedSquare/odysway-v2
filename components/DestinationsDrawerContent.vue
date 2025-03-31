@@ -8,7 +8,7 @@
         class="d-flex justify-center ga-2"
       >
         <v-chip
-          v-for="item of destinations"
+          v-for="item of destinationsFiltered"
           :key="item.title"
           variant="outlined"
           :class="item.slug === selectedDestinationSlug ? 'bg-secondary': ''"
@@ -45,16 +45,16 @@
 
 <script setup>
 const props = defineProps({
-  items: {
+  destinations: {
     type: Array,
     default: () => [],
   },
 })
 
-const selectedDestinationSlug = ref(props.items[0].slug)
+const selectedDestinationSlug = ref(props.destinations[0].slug)
 
-const destinations = computed(() => {
-  return props.items.filter(item => item.isOnPage)
+const destinationsFiltered = computed(() => {
+  return props.destinations.filter(destination => destination.isOnPage)
 })
 
 function setSelectedDestinationSlug(slug) {
@@ -62,6 +62,6 @@ function setSelectedDestinationSlug(slug) {
 }
 
 const countries = computed(() => {
-  return props.items.find(item => item.slug === selectedDestinationSlug.value).countries
+  return props.destinations.find(destination => destination.slug === selectedDestinationSlug.value).countries
 })
 </script>

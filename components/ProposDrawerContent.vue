@@ -1,7 +1,7 @@
 <template>
   <div class="h-100 d-flex justify-center align-center ga-4 ">
     <v-card
-      v-for="item of items"
+      v-for="item of propos"
       :key="item.title"
       :image="item.image"
       :href="item.slug"
@@ -17,7 +17,7 @@
 
 <script setup>
 defineProps({
-  items: {
+  propos: {
     type: Array,
     default: () => [],
   },

@@ -4,9 +4,13 @@
     location="top"
     class="zIndex nav-height"
   >
-    <component
-      :is="drawerConent"
-      :items="extensionItems"
+    <DestinationsDrawerContent
+      v-if="extension === 'destinations'"
+      :destinations="destinationsItems"
+    />
+    <ProposDrawerContent
+      v-else-if="extension === 'propos'"
+      :propos="proposItems.propos"
     />
   </v-navigation-drawer>
 </template>
@@ -19,25 +23,13 @@ const props = defineProps({
   extension: String,
 })
 
-const { data: destinationsItems } = await useAsyncData(() => {
-  return queryCollection('destinations').all()
-})
-
-const { data: proposItems } = await useAsyncData(() => {
-  return queryCollection('propos').all()
-})
-
-const drawerConent = computed(() => {
-  return props.extension === 'destinations' ? DestinationsDrawerContent : ProposDrawerContent
-})
-
-const extensionItems = computed(() => {
-  switch (props.extension) {
-    case 'destinations': return destinationsItems.value
-    case 'propos': return proposItems.value[0].propos
-    default: return null
-  }
-})
+const [
+  { data: destinationsItems },
+  { data: proposItems },
+] = await Promise.all([
+  useAsyncData('destinations', () => queryCollection('destinations').all()),
+  useAsyncData('propos', () => queryCollection('propos').first()),
+])
 </script>
 
 <style scoped>

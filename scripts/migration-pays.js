@@ -86,7 +86,7 @@ async function formatDestinations() {
             slug: slugify(destination.nom, { lower: true }),
             metaDescription: destination.meta_description,
             image: destination.image_1 || '',
-            isOnPage: true,
+            visible: true,
             countries: [],
           })
         }
@@ -98,7 +98,7 @@ async function formatDestinations() {
           image: pays.image,
           slug: slugify(pays.nom, { lower: true }),
           metaDescription: destination.meta_description,
-          isOnPage: pays.top || false,
+          visible: pays.top || false,
         })
       })
     })

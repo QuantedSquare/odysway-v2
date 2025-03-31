@@ -3,14 +3,14 @@
   "slug": "amerique-du-nord",
   "metaDescription": "",
   "image": "",
-  "isOnPage": true,
+  "visible": true,
   "countries": [
     {
       "country": "Canada",
       "image": "/images/destinations/6gquOf0jStlnEkXHeat4.jpg",
       "slug": "canada",
       "metaDescription": "",
-      "isOnPage": false
+      "visible": false
     }
   ]
 }
