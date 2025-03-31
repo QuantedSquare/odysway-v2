@@ -73,9 +73,7 @@
     :extension="extensionName"
     class="d-md-and-down-none zIndex"
     @mouseleave="resetExtension()"
-  >
-    />
-  </extensiondrawer>
+  />
 </template>
 
 <script setup>

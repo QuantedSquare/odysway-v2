@@ -56,42 +56,65 @@
 <script setup>
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
+import { useRoute } from 'vue-router'
 
-const scrollContainer = useTemplateRef('scrollContainer')
+const route = useRoute()
+const scrollContainer = ref(null)
 const scrollElement = ref(null)
-const nbScrollElementChildren = ref(null)
+const nbScrollElementChildren = ref(0)
 const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
 const { width: scrollElementWidth } = useElementSize(scrollElement)
 
-const route = useRoute()
+watch(() => route.path, () => {
+  if (x.value > 0) {
+    x.value = 0
+  }
+})
 
 onMounted(() => {
   nextTick(() => {
-    console.log('scroll element ', scrollContainer.value.$el)
+    // Get the actual DOM element from the Vuetify component
     scrollElement.value = scrollContainer.value.$el
-    console.log('scroll element ', scrollElement.value)
-    console.log('scroll element children ', scrollElement.value.children)
-    nbScrollElementChildren.value = scrollElement.value.children.length
-    console.log('scroll element children ', nbScrollElementChildren.value)
+    updateChildrenCount()
+
+    // Set up a MutationObserver to watch for changes in the container
+    const observer = new MutationObserver(() => {
+      updateChildrenCount()
+    })
+
+    // Ensure we have a valid DOM node before observing
+    if (scrollElement.value instanceof Node) {
+      observer.observe(scrollElement.value, {
+        childList: true,
+        subtree: true,
+      })
+    }
+    else {
+      console.warn('Scroll element is not a valid DOM node:', scrollElement.value)
+    }
   })
 })
-console.log('scroll element after unmounted ', scrollElement.value)
+
+watch(() => scrollElement.value, (newElement) => {
+  if (newElement instanceof Node) {
+    updateChildrenCount()
+  }
+}, { deep: true })
+
+function updateChildrenCount() {
+  if (scrollElement.value?.children) {
+    const count = scrollElement.value.children.length
+    nbScrollElementChildren.value = count
+  }
+}
 
 const scrollAmount = computed(() => {
   return 400
 })
 
 const displayScrollBtn = computed(() => {
-  console.log('scroll element width ', scrollElementWidth.value)
-  console.log('cumulate children width ', nbScrollElementChildren.value * 120)
-  console.log('show scroll btn ? ', displayScrollBtn.value)
   return (nbScrollElementChildren.value * 120) > scrollElementWidth.value
 })
-
-// si x > 0 et new route.path => remettre x à 0
-function setXtoZero() {
-  x.value = 0
-}
 </script>
 
 <style scoped>
