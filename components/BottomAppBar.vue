@@ -29,17 +29,16 @@
         <v-col sm="4">
           <v-btn-secondary
             rounded="sm"
-
             color="primary"
             class="text-caption text-uppercase text-decoration-none"
             width="100%"
+            href="/calendly"
           >
             <template #prepend>
               <v-icon size="x-large">
                 {{ mdiCalendar }}
               </v-icon>
             </template>
-            <!-- <NuxtLink :to="`/calendly/${route.params?.voyageSlug}`"> Prendre RDV avec un conseiller </NuxtLink> -->
             <slot name="text-btn-2" />
           </v-btn-secondary>
         </v-col>

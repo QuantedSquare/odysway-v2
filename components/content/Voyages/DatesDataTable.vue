@@ -19,6 +19,16 @@
         </template>
       </tr>
     </template>
+    <template #[`item.departureDate`]="{ item }">
+      <div>
+        {{ dayjs(item.departureDate).locale('fr').format('ddd DD/MM/YYYY') }}
+      </div>
+    </template>
+    <template #[`item.returnDate`]="{ item }">
+      <div>
+        {{ dayjs(item.returnDate).locale('fr').format('ddd DD/MM/YYYY') }}
+      </div>
+    </template>
     <template #[`item.bookedPlaces`]="{ item }">
       <tr class="d-flex justify-end justify-lg-center">
         <div
@@ -89,8 +99,8 @@ const filteredDates = computed(() => {
 const tableItems = computed(() => {
   return filteredDates.value.map((date) => {
     return {
-      departureDate: dayjs(date.departureDate).locale('fr').format('ddd DD/MM/YYYY'),
-      returnDate: dayjs(date.returnDate).locale('fr').format('ddd DD/MM/YYYY'),
+      departureDate: date.departureDate,
+      returnDate: date.returnDate,
       price: `${date.startingPrice || 0} €`,
       bookedPlaces: date.bookedPlaces || 0,
       maxTravellers: date.maxTravellers || 0,

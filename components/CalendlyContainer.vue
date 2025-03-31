@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <div>
-      {{ props.text }}
+    <div :class="hasMarginTop ? 'mt-16' : ''">
+      {{ text }}
     </div>
     <div
       class="calendly-inline-widget"
@@ -12,16 +12,14 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  travelTitle: {
-    type: String,
-    required: true,
-  },
-  text: {
-    type: String,
-    default: '',
+defineProps({
+  hasMarginTop: {
+    type: Boolean,
+    default: false,
   },
 })
+
+const text = 'Merci de votre confiance ! L\'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l\'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.'
 const calendly = useCalendly()
 onMounted(() => {
   calendly.initInlineWidget()
@@ -30,10 +28,7 @@ useCalendlyEventListener({
   onEventScheduled: (event) => {
     console.log('Event scheduled:', event)
     // Pixel à mettre en place
-    // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: props.travelTitle })
+    // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: this.titre })
   },
-})
-onUnmounted(() => {
-  // calendly.destroyInlineWidget()
 })
 </script>

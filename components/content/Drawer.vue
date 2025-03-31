@@ -3,6 +3,7 @@
     location="right"
     disable-resize-watcher
     mobile
+    class="zIndex"
   >
     <v-btn
       icon
@@ -50,7 +51,7 @@ const drawerItems = ref([
   {
     title: 'Prendre RDV avec un conseiller',
     value: 'Prendre RDV avec un conseiller',
-  // link: '/calendly',
+    link: '/calendly',
   },
   {
     title: 'À propos',
@@ -74,3 +75,9 @@ const drawerItems = ref([
   },
 ])
 </script>
+
+<style scoped>
+.zIndex{
+  z-index: 1030 !important;
+}
+</style>
