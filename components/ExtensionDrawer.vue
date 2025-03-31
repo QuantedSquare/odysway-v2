@@ -16,9 +16,6 @@
 </template>
 
 <script setup>
-import ProposDrawerContent from './ProposDrawerContent.vue'
-import DestinationsDrawerContent from './DestinationsDrawerContent.vue'
-
 defineProps({
   extension: String,
 })
