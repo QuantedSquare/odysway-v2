@@ -21,6 +21,13 @@ export default defineNuxtConfig({
     { path: '~/components/content', pathPrefix: false },
   ],
   devtools: { enabled: true },
+  app: {
+    head: {
+      script: [
+        { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
+      ],
+    },
+  },
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
