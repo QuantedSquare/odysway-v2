@@ -69,10 +69,10 @@
     </div>
   </v-app-bar>
   <ExtensionDrawer
-    
+    v-if="showExtension && extensionName"
     :extension="extensionName"
     class="d-md-and-down-none"
-   
+    @mouseleave="resetExtension()"
   />
 </template>
 

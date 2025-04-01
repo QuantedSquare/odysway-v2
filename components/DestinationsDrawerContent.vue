@@ -20,8 +20,7 @@
         </v-chip>
       </v-col>
     </v-row>
-    <DestinationsCarousel :destinations="countries" />
-      
+    <DestinationsCarousel :countries="countries" />
   </v-container>
 </template>
 
@@ -38,6 +37,7 @@ const selectedDestinationSlug = ref(props.destinations[0].slug)
 const destinationsFiltered = computed(() => {
   return props.destinations.filter(destination => destination.visible)
 })
+
 function setSelectedDestinationSlug(slug) {
   selectedDestinationSlug.value = slug
 }

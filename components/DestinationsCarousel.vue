@@ -23,25 +23,27 @@
       </v-btn>
     </v-col>
     <v-col cols="10">
-    <div
-      ref="scrollContainer"
-      class="d-flex flex-nowrap overflow-auto hidden-scroll"
-    >
-    <div 
-    v-for="country of props.destinations"
-    :key="country.country">
-      <v-card
-        :image="country.image"
-        :href="`/destinations/${country.slug}`"
-        min-height="120"
-        min-width="120"
-        class="mr-2">
+      <div
+        ref="scrollContainer"
+        class="d-flex flex-nowrap overflow-auto hidden-scroll"
+      >
+        <div
+          v-for="country of countries"
+          :key="country.country"
+        >
+          <v-card
+            :image="country.image"
+            :href="`/destinations/${country.slug}`"
+            min-height="120"
+            min-width="120"
+            class="mr-2"
+          >
             <v-card-title class="position-absolute bottom-0 text-subtitle-1 font-weight-bold text-white no-white-space text-shadow">
               {{ country.country }}
             </v-card-title>
           </v-card>
-    </div>
-  </div>
+        </div>
+      </div>
     </v-col>
     <v-col
       cols="auto"
@@ -54,7 +56,7 @@
         variant="outlined"
         :disabled="arrivedState.right"
         :class="displayScrollBtn ? 'd-inline' : 'd-none'"
-      @click="x+=scrollAmount"
+        @click="x+=scrollAmount"
       >
         <v-icon
           :icon="mdiChevronRight"
@@ -71,13 +73,13 @@ import { useScroll, useElementSize } from '@vueuse/core'
 import { useRoute } from 'vue-router'
 
 const props = defineProps({
-  destinations: {
+  countries: {
     type: Array,
     default: () => [],
   },
 })
 
-const scrollAmount = 400
+const scrollAmount = 128 * 3
 const route = useRoute()
 const scrollContainer = useTemplateRef('scrollContainer')
 
@@ -89,7 +91,7 @@ watch(() => route.path, () => {
   measure()
 })
 
-const displayScrollBtn = computed(() => (props.destinations.length * 120) > scrollElementWidth.value)
+const displayScrollBtn = computed(() => (props.countries.length * 128) > scrollElementWidth.value)
 </script>
 
 <style scoped>
