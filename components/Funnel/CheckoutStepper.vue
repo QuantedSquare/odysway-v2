@@ -180,6 +180,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
+// TODO: retrouver les params du hash
 const { step, dealId, slug, departure_date, return_date, type } = route.query
 
 const pricePerTraveler = ref(0)
