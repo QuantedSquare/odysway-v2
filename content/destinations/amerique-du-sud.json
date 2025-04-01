@@ -1,0 +1,51 @@
+{
+  "title": "Amérique du Sud",
+  "slug": "amerique-du-sud",
+  "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+  "image": "",
+  "visible": true,
+  "countries": [
+    {
+      "country": "Argentine",
+      "image": "/images/destinations/ap4lUTGbTbyuJxcUyDtM.jpg",
+      "slug": "argentine",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": false
+    },
+    {
+      "country": "Bolivie",
+      "image": "/images/destinations/0hJyalh5TQ620yIh3aeP.jpg",
+      "slug": "bolivie",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": false
+    },
+    {
+      "country": "Brésil",
+      "image": "/images/destinations/9dpfaZhTT6G4zTJDGGOQ.jpg",
+      "slug": "bresil",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": false
+    },
+    {
+      "country": "Chili",
+      "image": "/images/destinations/xNvg1dKHQ4SYo8Gnco43.jpg",
+      "slug": "chili",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": false
+    },
+    {
+      "country": "Colombie",
+      "image": "/images/destinations/BJp7aPN8RIyYQ8Cszgde.jpg",
+      "slug": "colombie",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": true
+    },
+    {
+      "country": "Pérou",
+      "image": "/images/destinations/Gw72QyhsTYaK4EHDWQLo.jpg",
+      "slug": "perou",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": true
+    }
+  ]
+}
