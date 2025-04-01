@@ -14,7 +14,7 @@
         :disabled="arrivedState.left"
         class="mr-2"
         :class="displayScrollBtn ? 'd-inline' : 'd-none'"
-        @click="x -= scrollAmount"
+        @click="x-=scrollAmount"
       >
         <v-icon
           :icon="mdiChevronLeft"
@@ -22,14 +22,26 @@
         />
       </v-btn>
     </v-col>
-    <v-col
+    <v-col cols="10">
+    <div
       ref="scrollContainer"
-      cols="10"
       class="d-flex flex-nowrap overflow-auto hidden-scroll"
     >
-      <slot
-        name="carousel-item"
-      />
+    <div 
+    v-for="country of props.destinations"
+    :key="country.country">
+      <v-card
+        :image="country.image"
+        :href="`/destinations/${country.slug}`"
+        min-height="120"
+        min-width="120"
+        class="mr-2">
+            <v-card-title class="position-absolute bottom-0 text-subtitle-1 font-weight-bold text-white no-white-space text-shadow">
+              {{ country.country }}
+            </v-card-title>
+          </v-card>
+    </div>
+  </div>
     </v-col>
     <v-col
       cols="auto"
@@ -42,7 +54,7 @@
         variant="outlined"
         :disabled="arrivedState.right"
         :class="displayScrollBtn ? 'd-inline' : 'd-none'"
-        @click="x += scrollAmount"
+      @click="x+=scrollAmount"
       >
         <v-icon
           :icon="mdiChevronRight"
@@ -58,67 +70,26 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useRoute } from 'vue-router'
 
+const props = defineProps({
+  destinations: {
+    type: Array,
+    default: () => [],
+  },
+})
+
+const scrollAmount = 400
 const route = useRoute()
 const scrollContainer = useTemplateRef('scrollContainer')
-const scrollElement = ref(null)
-const childElement = ref(null)
-const nbScrollElementChildren = ref(0)
-const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
-const { width: scrollElementWidth } = useElementSize(scrollElement)
-const { width: childElementWidth } = useElementSize(childElement)
+
+const { x, arrivedState, measure } = useScroll(scrollContainer, { behavior: 'smooth' })
+const { width: scrollElementWidth } = useElementSize(scrollContainer)
 
 watch(() => route.path, () => {
-  if (x.value > 0) {
-    x.value = 0
-    arrivedState.left = true
-    arrivedState.right = false
-  }
+  x.value = 0
+  measure()
 })
 
-onMounted(() => {
-  nextTick(() => {
-    // Get the actual DOM element from the Vuetify component
-    scrollElement.value = scrollContainer.value.$el
-    updateChildrenCount()
-
-    // Set up a MutationObserver to watch for changes in the container
-    const observer = new MutationObserver(() => {
-      updateChildrenCount()
-    })
-
-    // Ensure we have a valid DOM node before observing
-    if (scrollElement.value instanceof Node) {
-      observer.observe(scrollElement.value, {
-        childList: true,
-        subtree: true,
-      })
-    }
-    else {
-      console.warn('Scroll element is not a valid DOM node:', scrollElement.value)
-    }
-  })
-})
-
-watch(() => scrollElement.value, (newElement) => {
-  if (newElement instanceof Node) {
-    updateChildrenCount()
-  }
-}, { deep: true })
-
-function updateChildrenCount() {
-  if (scrollElement.value?.children) {
-    childElement.value = scrollElement.value.children[0]
-    nbScrollElementChildren.value = scrollElement.value.children.length
-  }
-}
-
-const scrollAmount = computed(() => {
-  return 400
-})
-
-const displayScrollBtn = computed(() => {
-  return (nbScrollElementChildren.value * childElementWidth.value) > scrollElementWidth.value
-})
+const displayScrollBtn = computed(() => (props.destinations.length * 120) > scrollElementWidth.value)
 </script>
 
 <style scoped>

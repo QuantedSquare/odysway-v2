@@ -20,26 +20,8 @@
         </v-chip>
       </v-col>
     </v-row>
-    <DestinationsCarousel>
-      <template #carousel-item>
-        <v-col
-          v-for="country of countries"
-          :key="country.country"
-          cols="auto"
-        >
-          <v-card
-            :image="country.image"
-            :href="`/destinations/${country.slug}`"
-            height="120"
-            width="120"
-          >
-            <v-card-title class="position-absolute bottom-0 text-subtitle-1 font-weight-bold text-white no-white-space text-shadow">
-              {{ country.country }}
-            </v-card-title>
-          </v-card>
-        </v-col>
-      </template>
-    </DestinationsCarousel>
+    <DestinationsCarousel :destinations="countries" />
+      
   </v-container>
 </template>
 
