@@ -258,16 +258,16 @@ const listDestinations = ref([
 
 const policies = ref([
   { name: 'FAQ',
-    // link: '/faq',
+    link: '/faq',
   },
   { name: 'Mentions légales',
-    // link: '/mentions-legales',
+    link: '/mentions-legales',
   },
   { name: 'CGV',
-    // link: '/conditions-generales-de-vente',
+    link: '/conditions-generales-de-vente',
   },
   { name: 'Données personnelles',
-    // link: '/politique-de-confidentialite',
+    link: '/politique-de-confidentialite',
   },
 ])
 </script>
