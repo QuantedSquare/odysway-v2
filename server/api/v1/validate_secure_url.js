@@ -10,13 +10,19 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    const payload = verifyToken(body.token)
+    const securePayload = verifyToken(body.token)
 
-    if (!payload) {
+    if (!securePayload) {
       throw createError({
         statusCode: 401,
         message: 'Invalid token',
       })
+    }
+
+    // Combine secure payload with non-secure parameters
+    const payload = {
+      ...securePayload,
+      ...body.nonSecureParams
     }
 
     return { payload }

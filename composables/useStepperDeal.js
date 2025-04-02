@@ -1,10 +1,12 @@
 import determinePaymentOptions from '@/utils/determinePaymentOptions'
+import { useSecureUrl } from './useSecureUrl'
 
 export function useStepperDeal(componentStep) {
   const deal = ref(null)
   const dealId = ref(null)
   const route = useRoute()
   const { addSingleParam } = useParams()
+  const { generateSecureUrl, validateSecureUrl } = useSecureUrl()
 
   const currentStepRef = ref(1)
 
@@ -25,7 +27,16 @@ export function useStepperDeal(componentStep) {
   const createDeal = async (body) => {
     const res = await apiRequest('/ac/deals', 'post', body)
     dealId.value = res
-    addSingleParam('dealId', dealId.value)
+    
+    // Generate secure URL with encrypted dealId
+    const secureUrl = await generateSecureUrl({ dealId: res }, ['dealId'])
+    
+    // Extract the secure parameter from the URL string
+    const secureMatch = secureUrl.match(/secure=([^&]+)/)
+    if (secureMatch) {
+      addSingleParam('secure', secureMatch[1])
+    }
+    
     return true
   }
 
@@ -33,18 +44,35 @@ export function useStepperDeal(componentStep) {
     const res = await apiRequest('/ac/deals/' + dealId.value, 'post', body)
     dealId.value = res
 
+    // Generate secure URL with encrypted dealId
+    const secureUrl = await generateSecureUrl({ dealId: res }, ['dealId'])
+    
+    // Extract the secure parameter from the URL string
+    const secureMatch = secureUrl.match(/secure=([^&]+)/)
+    if (secureMatch) {
+      addSingleParam('secure', secureMatch[1])
+    }
+
     return true
   }
 
-  watch(route, () => {
-    dealId.value = route.query.dealId || dealId.value
+  // Watch for route changes and handle secure dealId
+  watch(route, async () => {
+    if (route.query.secure) {
+      try {
+        const payload = await validateSecureUrl(route.query.secure)
+        dealId.value = payload.dealId
+      } catch (error) {
+        console.error('Failed to validate secure dealId:', error)
+      }
+    }
+
     if (route.query.step) {
       currentStepRef.value = route.query.step
     }
   }, { immediate: true })
 
   watch([dealId, currentStepRef], async () => {
-    dealId.value = route.query.dealId || dealId.value
     if (dealId.value && +componentStep === +currentStepRef.value) {
       await fetchDeal()
       console.log('Deal fetched:', deal.value)

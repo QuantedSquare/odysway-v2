@@ -2,14 +2,30 @@ export const useSecureUrl = () => {
   const loading = ref(false)
   const error = ref(null)
   const secureUrl = ref(null)
-  const generateSecureUrl = async (params) => {
+  const config = useRuntimeConfig()
+  const baseURL = config.public.siteURL || ''
+
+  const generateSecureUrl = async (params, secureParams = []) => {
     try {
-      const response = await fetch('/api/v1/generate_secure_url', {
+      // Separate secure and non-secure parameters
+      const secureData = {}
+      const nonSecureData = {}
+      
+      Object.keys(params).forEach(key => {
+        if (secureParams.includes(key)) {
+          secureData[key] = params[key]
+        } else {
+          nonSecureData[key] = params[key]
+        }
+      })
+
+      // Only encrypt the secure parameters
+      const response = await fetch(`${baseURL}/api/v1/generate_secure_url`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ params }),
+        body: JSON.stringify({ params: secureData }),
       })
 
       if (!response.ok) {
@@ -18,8 +34,20 @@ export const useSecureUrl = () => {
 
       const data = await response.json()
 
-      // Construct URL with encrypted params as query parameter
-      const url = `/checkout?params=${data.params}`
+      // Construct URL with encrypted secure params and non-secure params
+      const queryParams = new URLSearchParams()
+      
+      // Add encrypted secure params
+      if (data.params) {
+        queryParams.append('secure', data.params)
+      }
+      
+      // Add non-secure params directly
+      Object.entries(nonSecureData).forEach(([key, value]) => {
+        queryParams.append(key, value)
+      })
+
+      const url = `/checkout?${queryParams.toString()}`
 
       return url
     }
@@ -34,16 +62,23 @@ export const useSecureUrl = () => {
     error.value = null
 
     try {
-      const response = await fetch('/api/v1/validate_secure_url', {
+      // Decode the URL-encoded token
+      const decodedToken = decodeURIComponent(token)
+
+      const response = await fetch(`${baseURL}/api/v1/validate_secure_url`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ token }),
+        body: JSON.stringify({ 
+          token: decodedToken,
+          nonSecureParams: {}
+        }),
       })
 
       if (!response.ok) {
-        throw new Error(`Validation failed with status: ${response.status}`)
+        const errorData = await response.json()
+        throw new Error(errorData.message || `Validation failed with status: ${response.status}`)
       }
 
       const data = await response.json()

@@ -317,7 +317,6 @@ const submitStepData = async () => {
         lastname: lastName.value,
       }
       console.log('submitting', flattenedDeal)
-
       return await createDeal(flattenedDeal)
     }
     return true
@@ -327,8 +326,8 @@ const submitStepData = async () => {
     console.log('error updating or creating deal', error)
     return false
   }
-}
-const changeAttr = (dataAttribute) => {
+
+  const changeAttr = (dataAttribute) => {
   // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled
   // const EVENTS = {
   //   lastname: { eventLabel: 'Groupe Info - Indique prénom' },
@@ -342,7 +341,8 @@ const changeAttr = (dataAttribute) => {
   //     eventAction: 'Click',
   //     eventLabel: EVENTS[dataAttribute].eventLabel
   //   })
-  // }
+   }
+
 }
 // STATICS DATA
 const phonesSelect = [
