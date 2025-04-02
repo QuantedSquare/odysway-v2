@@ -1,26 +1,28 @@
 <template>
-  <v-container>
-    <v-row
-      justify="center"
+  <v-container fluid>
+    <v-chip-group
+      v-model="selectedDestination"
+      selected-class="bg-secondary"
+      :mobile="true"
+      mobile-breakpoint="md"
+      show-arrows
+      class="mb-4 chip-group"
     >
-      <v-col
-        cols="12"
-        class="d-flex justify-center ga-2"
+      <v-chip
+        v-for="item of destinationsFiltered"
+        :key="item.title"
+        variant="outlined"
+        :value="item.slug"
+        class="text-decoration-none"
+        @click="(event) => navigateToDestination(item.slug, event)"
       >
-        <v-chip
-          v-for="item of destinationsFiltered"
-          :key="item.title"
-          variant="outlined"
-          :class="item.slug === selectedDestinationSlug ? 'bg-secondary': ''"
-          :to="`/destinations/${item.slug}`"
-          class="text-decoration-none px-2"
-          @click="setSelectedDestinationSlug(item.slug)"
-        >
-          {{ item.title }}
-        </v-chip>
-      </v-col>
-    </v-row>
-    <DestinationsCarousel :countries="countries" />
+        {{ item.title }}
+      </v-chip>
+    </v-chip-group>
+    <CountriesCarousel
+      v-model:slug="selectedCountry"
+      :countries="countriesFiltered"
+    />
   </v-container>
 </template>
 
@@ -32,17 +34,42 @@ const props = defineProps({
   },
 })
 
-const selectedDestinationSlug = ref(props.destinations[0].slug)
+const route = useRoute()
+
+const selectedCountry = ref(null)
+
+const getSlugString = (slug) => {
+  if (!slug) return 'top'
+  return Array.isArray(slug) ? slug[0] : slug
+}
+
+const selectedDestination = ref(getSlugString(route.params.slug))
+
+async function navigateToDestination(slug, event) {
+  if (route.path.includes('destinations')) {
+    event.preventDefault()
+    navigateTo(`/destinations/${slug}`)
+  }
+  else {
+    await navigateTo(`/destinations/${slug}`)
+  }
+}
 
 const destinationsFiltered = computed(() => {
   return props.destinations.filter(destination => destination.visible)
 })
 
-function setSelectedDestinationSlug(slug) {
-  selectedDestinationSlug.value = slug
-}
+const countriesFiltered = computed(() => {
+  console.log('selected country drawer', selectedCountry.value)
 
-const countries = computed(() => {
-  return props.destinations.find(destination => destination.slug === selectedDestinationSlug.value).countries
+  if (selectedCountry.value === null) {
+    return props.destinations.find((destination) => {
+      return destination.slug === selectedDestination.value
+    })?.countries
+  }
+
+  return props.destinations.find((destination) => {
+    return destination.countries.some(c => c.slug === selectedCountry.value)
+  }).countries
 })
 </script>

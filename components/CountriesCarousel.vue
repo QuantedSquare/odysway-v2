@@ -22,7 +22,10 @@
         />
       </v-btn>
     </v-col>
-    <v-col cols="10">
+    <v-col
+      cols="8"
+      md="10"
+    >
       <div
         ref="scrollContainer"
         class="d-flex flex-nowrap overflow-auto hidden-scroll"
@@ -33,10 +36,13 @@
         >
           <v-card
             :image="country.image"
-            :href="`/destinations/${country.slug}`"
             min-height="120"
             min-width="120"
             class="mr-2"
+            @click="(event) => {
+              selectCountry(country.slug);
+              navigateToCountry(country.slug, event);
+            }"
           >
             <v-card-title class="position-absolute bottom-0 text-subtitle-1 font-weight-bold text-white no-white-space text-shadow">
               {{ country.country }}
@@ -69,8 +75,8 @@
 
 <script setup>
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
-import { useScroll, useElementSize } from '@vueuse/core'
 import { useRoute } from 'vue-router'
+import { useScroll, useElementSize } from '@vueuse/core'
 
 const props = defineProps({
   countries: {
@@ -79,8 +85,26 @@ const props = defineProps({
   },
 })
 
-const scrollAmount = 128 * 3
 const route = useRoute()
+
+const model = defineModel('slug')
+
+function selectCountry(slug) {
+  model.value = slug
+  console.log('carousel selected country ', model.value)
+}
+
+function navigateToCountry(slug, event) {
+  if (route.path.includes('destinations')) {
+    event.preventDefault()
+    navigateTo(`/destinations/${slug}`)
+  }
+  else {
+    navigateTo(`/destinations/${slug}`)
+  }
+}
+
+const scrollAmount = 128 * 3
 const scrollContainer = useTemplateRef('scrollContainer')
 
 const { x, arrivedState, measure } = useScroll(scrollContainer, { behavior: 'smooth' })

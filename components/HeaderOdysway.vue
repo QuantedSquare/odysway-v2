@@ -72,6 +72,7 @@
     v-if="showExtension && extensionName"
     :extension="extensionName"
     class="d-md-and-down-none"
+    @click.stop="resetExtension()"
     @mouseleave="resetExtension()"
   />
 </template>
@@ -82,6 +83,7 @@ import { useImage } from '#imports'
 
 const model = defineModel()
 
+const route = useRoute()
 const img = useImage()
 
 const showExtension = ref(false)
@@ -89,7 +91,7 @@ const extensionName = ref('')
 
 const items = ref([
   { title: 'destinations',
-    link: '/destinations',
+    link: '/destinations/top',
     extension: 'destinations',
   },
   { title: 'prochains départs',
@@ -102,7 +104,7 @@ const items = ref([
 ])
 
 function displayExtension(item) {
-  if (item.extension) {
+  if (item.extension && !route.name.includes(item.extension)) {
     showExtension.value = true
     extensionName.value = item.extension
   }
