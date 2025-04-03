@@ -134,7 +134,7 @@
                 <template #next>
                   <div>
                     <v-btn
-                      v-if="currentStep < 5"
+                      v-if="showNextButton"
                       :disabled="!enablingNextButton"
                       color="secondary"
                       :loading="loading"
@@ -148,14 +148,15 @@
                     />
                   </div>
                 </template>
-                <!-- <v-row>
-                  <v-col
-                    cols="12"
-                    class="d-flex justify-end text-body-1 font-weight-bold"
+                <template #prev>
+                  <v-btn
+                    v-if="skipperMode !== 'summary'"
+                    :disabled="isPreviousButtonDisabled"
+                    @click="previousStep"
                   >
-                    Total : {{ formatNumber(1000000, 'currency', 'EUR') }}
-                  </v-col>
-                </v-row> -->
+                    Précédent
+                  </v-btn>
+                </template>
               </v-stepper-actions>
             </v-card-actions>
           </v-card>
@@ -314,11 +315,19 @@ const nextStep = async () => {
   else {
     currentStep.value++
   }
+  console.log('currentStep', currentStep.value, skipperMode.value)
 }
 const previousStep = () => {
   currentStep.value--
   validForm.value = true
 }
+const showNextButton = computed(() => {
+  return (skipperMode.value === 'normal' && currentStep.value < 5) || (skipperMode.value === 'quick' && currentStep.value !== 1)
+})
+
+const isPreviousButtonDisabled = computed(() => {
+  return currentStep.value === 0 || skipperMode.value === 'summary'
+})
 </script>
 
 <style scoped>
