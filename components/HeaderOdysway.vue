@@ -93,7 +93,7 @@ const items = ref([
     extension: 'destinations',
   },
   { title: 'prochains départs',
-    // link: '/prochains-departs',
+    link: '/prochains-departs',
   },
   { title: 'à propos',
     link: '/concept',
