@@ -22,6 +22,4 @@ const [{ data: destinationsItems }, { data: page }] = await Promise.all([
   useAsyncData('destinations', () => queryCollection('destinations').all()),
   useAsyncData(route.path, () => queryCollection('destinationsPage').path(route.path).first()),
 ])
-
-console.log(page.value)
 </script>
