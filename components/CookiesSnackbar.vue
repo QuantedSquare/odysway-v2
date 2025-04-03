@@ -1,9 +1,6 @@
 <template>
   <v-snackbar
     v-model="consentBar"
-    :vertical="$vuetify.display.smAndDown"
-    :centered="$vuetify.display.smAndDown"
-    :left="$vuetify.display.mdAndUp"
     :timeout="-1"
   >
     <v-row>

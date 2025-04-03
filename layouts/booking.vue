@@ -9,7 +9,6 @@
     <v-main>
       <slot />
     </v-main>
-    <CookiesSnackbar />
   </v-app>
 </template>
 
