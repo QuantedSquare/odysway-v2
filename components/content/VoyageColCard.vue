@@ -13,7 +13,7 @@
     />
   </v-col>
   <v-col
-    v-else-if="status === 'success'"
+    v-else-if="status === 'success' && voyage"
     cols="12"
     sm="6"
     md="4"
@@ -113,7 +113,9 @@
       </NuxtLink>
 
       <!--  BOTTOM TEXT -->
-      <div class="d-none d-sm-block ">
+      <div
+        class="d-none d-sm-block "
+      >
         <NuxtLink
           :to="`/destinations/${voyage.country}`"
           class="text-decoration-none"
