@@ -37,7 +37,7 @@ turndown.addRule('lists', {
   },
 })
 
-// Function to convert the voyage data to markdown
+// Function to convert the destination data to markdown
 function formatData(inputJson1, inputJson2) {
   try {
     const destinationData = JSON.parse(fs.readFileSync(inputJson2, 'utf8')).filter(d => d.destinations.length > 0)
@@ -48,12 +48,14 @@ function formatData(inputJson1, inputJson2) {
     destinationData.forEach((d) => {
       const destinationName = d.destinations[0].nom
 
-      if (!destinationsMap.some(d => d.title === destinationName)) destinationsMap.push({
-        title: destinationName,
-        slug: slugify(destinationName, { lower: true }),
-        id: d.destinations[0].meta.id,
-        deals: [],
-      })
+      if (!destinationsMap.some(d => d.title === destinationName)) {
+        destinationsMap.push({
+          title: destinationName,
+          slug: slugify(destinationName, { lower: true }),
+          id: d.destinations[0].meta.id,
+          deals: [],
+        })
+      }
     })
 
     const regex = /\[_id=(\d+)\]/
@@ -74,12 +76,10 @@ function formatData(inputJson1, inputJson2) {
   }
   catch (error) {
     console.error('Error processing voyage data:', error)
-    return false
+    return error
   }
 }
 
-const inputVoyagesFile = './butter-data/voyages.json'
-const inputDestinationsFile = './butter-data/pays.json'
 function convertToMarkdown() {
   const destinations = formatData(inputVoyagesFile, inputDestinationsFile)
   // Build the markdown content
@@ -110,8 +110,7 @@ function processMarkdown(markdown, outputDir, slug) {
   fs.writeFileSync(outputFile, markdown)
 }
 
-// Main function that processes the JSON data and writes the markdown file
-
+const inputVoyagesFile = './butter-data/voyages.json'
+const inputDestinationsFile = './butter-data/pays.json'
 const outputDir = '../content/destinations'
-
 processMarkdown(convertToMarkdown(), outputDir, 'top')

@@ -102,7 +102,11 @@ async function mergeDeals() {
           startingPrice: cur.prix_voyage,
           indivRoomPrice: cur.voyage.price_indiv_room_forced || 300,
           maxTravellers: cur.voyage.number_catchline_tab_group,
-          bookedPlaces: cur.voyage_complet_indisponible ? cur.voyage.number_catchline_tab_group : (Number(cur.nombre_de_pax_disponible) > 0 ? cur.voyage.number_catchline_tab_group - Number(cur.nombre_de_pax_disponible) : 0),
+          bookedPlaces: cur.voyage_complet_indisponible
+            ? cur.voyage.number_catchline_tab_group
+            : (Number(cur.nombre_de_pax_disponible) > 0
+                ? cur.voyage.number_catchline_tab_group - Number(cur.nombre_de_pax_disponible)
+                : 0),
           earlyBird: cur.voyage.got_earlybird || false,
           promoEarlyBird: cur.voyage.reduction_earlybird || 0,
           lastMinute: cur.last_minute_disponible || false,
