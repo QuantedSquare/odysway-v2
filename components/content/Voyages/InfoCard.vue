@@ -15,7 +15,10 @@
             <h2 class="text-center text-white text-h6 font-weight-black text-shadow">
               {{ voyageTitle }}
             </h2>
-            <div class="d-flex align-center justify-center">
+            <div
+              v-if="averageNote"
+              class="d-flex align-center justify-center"
+            >
               <ClientOnly>
                 <v-rating
                   :model-value="Number(averageNote)"

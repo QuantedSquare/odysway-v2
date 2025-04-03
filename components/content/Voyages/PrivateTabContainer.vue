@@ -1,5 +1,5 @@
 <template>
-  <v-container class="rounded-lg bg-primary">
+  <v-container class="rounded-b-lg bg-primary">
     <v-form v-model="model">
       <v-row>
         <v-col

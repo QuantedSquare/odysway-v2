@@ -1,0 +1,55 @@
+{
+  "title": "Bolivie : lagunes colorées, désert de sel et rencontres hors des sentiers battus",
+  "slug": "voyage-rencontres-bolivie-uyuni-lipez",
+  "iso": "BOL",
+  "imgSrc2": {
+    "src": "/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/EQgF2rwwQkWJBdFZ6gCy.jpg",
+    "alt": "EQgF2rwwQkWJBdFZ6gCy"
+  },
+  "imgSrc1": {
+    "src": "/images/voyages/voyage-rencontres-bolivie-uyuni-lipez/nWcKtUwYQcSaY3fSqP1Q.jpg",
+    "alt": "nWcKtUwYQcSaY3fSqP1Q"
+  },
+  "country": "Bolivie",
+  "zoneChapka": 2,
+  "individuel": true,
+  "group": false,
+  "duration": "13 jours / 12 nuits",
+  "startingPrice": 2130,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 8 ans",
+  "tooltipGroup": "",
+  "dates": [
+    {
+      "departureDate": "2025-09-12T00:00:00",
+      "returnDate": "2025-09-24T00:00:00",
+      "startingPrice": 2395,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "lastMinute": false,
+      "promoLastMinute": 0,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    },
+    {
+      "departureDate": "2025-10-03T00:00:00",
+      "returnDate": "2025-10-15T00:00:00",
+      "startingPrice": 2395,
+      "indivRoomPrice": 300,
+      "maxTravellers": 8,
+      "bookedPlaces": 0,
+      "earlyBird": true,
+      "promoEarlyBird": 80,
+      "lastMinute": false,
+      "promoLastMinute": 0,
+      "promo": 0,
+      "privatized": false,
+      "flyTicketPrice": 0
+    }
+  ]
+}

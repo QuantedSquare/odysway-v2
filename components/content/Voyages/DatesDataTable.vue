@@ -1,11 +1,12 @@
 <template>
   <v-data-table
     :mobile="smAndDown"
+    items-per-page="20"
     hide-default-footer
     :headers="headers"
     :items="tableItems"
     class="bg-primary text-center py-4 font-weight-bold"
-    :class="deal.privatisation ? 'rounded-lg' : 'rounded-b-lg'"
+    :class="deal.individuel ? 'rounded-lg' : 'rounded-b-lg'"
   >
     <template #headers="{ columns }">
       <tr>
@@ -95,6 +96,8 @@ const filteredDates = computed(() => {
     return dayjs(a.departureDate).diff(dayjs(b.departureDate))
   })
 })
+
+console.log(filteredDates.value)
 
 const tableItems = computed(() => {
   return filteredDates.value.map((date) => {

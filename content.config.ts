@@ -72,7 +72,8 @@ export default defineContentConfig({
         rating: z.number(),
         comments: z.number(),
         indivRoom: z.boolean().optional(),
-        privatisation: z.boolean(),
+        individuel: z.boolean(),
+        group: z.boolean(),
         imgSrc1: z.object({
           src: z.string().editor({ input: 'media' }),
           alt: z.string(),

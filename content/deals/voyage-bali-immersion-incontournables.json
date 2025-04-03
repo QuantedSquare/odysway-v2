@@ -12,7 +12,8 @@
   },
   "country": "Indonésie",
   "zoneChapka": 2,
-  "privatisation": false,
+  "individuel": true,
+  "group": true,
   "duration": "13 jours / 12 nuits",
   "startingPrice": 1400,
   "rating": 4.4,
@@ -20,21 +21,6 @@
   "tooltipChild": "8 ans",
   "tooltipGroup": "Disponible en groupe",
   "dates": [
-    {
-      "departureDate": "2025-03-23T00:00:00",
-      "returnDate": "2025-04-04T00:00:00",
-      "startingPrice": 1830,
-      "indivRoomPrice": 300,
-      "maxTravellers": 12,
-      "bookedPlaces": 0,
-      "earlyBird": true,
-      "promoEarlyBird": 80,
-      "lastMinute": false,
-      "promoLastMinute": 0,
-      "promo": 0,
-      "privatized": false,
-      "flyTicketPrice": 0
-    },
     {
       "departureDate": "2025-04-14T00:00:00",
       "returnDate": "2025-04-26T00:00:00",

@@ -12,7 +12,8 @@
   },
   "country": "Ouzbékistan",
   "zoneChapka": 2,
-  "privatisation": false,
+  "individuel": true,
+  "group": true,
   "duration": "12 jours / 11 nuits",
   "startingPrice": 1990,
   "rating": 5,
@@ -20,21 +21,6 @@
   "tooltipChild": "Dès 15 ans",
   "tooltipGroup": "Disponible en groupe",
   "dates": [
-    {
-      "departureDate": "2025-03-17T00:00:00",
-      "returnDate": "2025-03-28T00:00:00",
-      "startingPrice": 1685,
-      "indivRoomPrice": 300,
-      "maxTravellers": 8,
-      "bookedPlaces": 1,
-      "earlyBird": true,
-      "promoEarlyBird": 80,
-      "lastMinute": false,
-      "promoLastMinute": 0,
-      "promo": 140,
-      "privatized": false,
-      "flyTicketPrice": 600
-    },
     {
       "departureDate": "2025-04-03T00:00:00",
       "returnDate": "2025-04-14T00:00:00",

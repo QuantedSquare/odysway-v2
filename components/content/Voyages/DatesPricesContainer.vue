@@ -13,7 +13,7 @@
         class="d-flex align-center"
       >
         <v-btn
-          v-if="deal.privatisation"
+          v-if="deal.group && deal.individuel"
           fab
           small
           icon
@@ -24,9 +24,8 @@
         </v-btn>
       </v-col>
       <v-col
-        :cols="deal.privatisation ? 8 : 12"
+        :cols="deal.individuel ? 8 : 12"
         sm=""
-        :class="deal.privatisation ? 'px-2' : ''"
       >
         <v-tabs
           v-model="activeTab"
@@ -38,6 +37,7 @@
           class="tabs-custom-container rounded-t-lg"
         >
           <v-tab
+            v-if="deal.group"
             :value="1"
             active-class="bg-tab-selected"
             class="tab-custom"
@@ -56,7 +56,7 @@
             </div>
           </v-tab>
           <v-tab
-            v-if="deal.privatisation"
+            v-if="deal.individuel"
             :value="2"
             active-class="bg-tab-selected"
             class="tab-custom"
@@ -81,7 +81,7 @@
         class="d-flex align-center"
       >
         <v-btn
-          v-if="deal.privatisation"
+          v-if="deal.group && deal.individuel"
           fab
           small
           icon
@@ -98,11 +98,14 @@
     <v-tabs-window
       v-model="activeTab"
     >
-      <v-tabs-window-item :value="1">
+      <v-tabs-window-item
+        v-if="deal.group"
+        :value="1"
+      >
         <DatesDataTable :deal="deal" />
       </v-tabs-window-item>
       <v-tabs-window-item
-        v-show="deal.privatisation"
+        v-if="deal.individuel"
         :value="2"
       >
         <PrivateTabContainer :deal="deal" />
@@ -131,6 +134,7 @@ const { data: deal } = await useAsyncData(props.slug, async () => {
   // query.privatisation = false
   return query
 })
+console.log(deal.value.individuel)
 </script>
 
 <style scoped>

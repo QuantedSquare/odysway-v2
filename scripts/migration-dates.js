@@ -2,9 +2,9 @@ import fs from 'node:fs'
 import path from 'node:path'
 import axios from 'axios'
 import slugify from 'slugify'
+import dayjs from 'dayjs'
 
 const IMAGE_DOWNLOAD_DIR = '../public/images/voyages'
-const DOWNLOAD_DELAY_MS = 500
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 2000
 
@@ -72,7 +72,8 @@ async function mergeDeals() {
     if (!fs.existsSync(voyageDir)) {
       fs.mkdirSync(voyageDir, { recursive: true })
     }
-    const filteredDeals = datesVoyagesGroupe.filter(date => date.voyage.slug === voyage.slug)
+
+    const filteredDeals = datesVoyagesGroupe.filter(date => date.voyage.meta.id === voyage.meta.id)
 
     if (filteredDeals.length !== 0) {
       let imgSrc1Path = '/images/flowers.png'
@@ -101,7 +102,7 @@ async function mergeDeals() {
           startingPrice: cur.prix_voyage,
           indivRoomPrice: cur.voyage.price_indiv_room_forced || 300,
           maxTravellers: cur.voyage.number_catchline_tab_group,
-          bookedPlaces: cur.nombre_de_pax_disponible || 0,
+          bookedPlaces: cur.voyage_complet_indisponible ? cur.voyage.number_catchline_tab_group : (Number(cur.nombre_de_pax_disponible) > 0 ? cur.voyage.number_catchline_tab_group - Number(cur.nombre_de_pax_disponible) : 0),
           earlyBird: cur.voyage.got_earlybird || false,
           promoEarlyBird: cur.voyage.reduction_earlybird || 0,
           lastMinute: cur.last_minute_disponible || false,
@@ -113,6 +114,12 @@ async function mergeDeals() {
         acc.push(date)
         return acc
       }, [])
+
+      const sortedFormatedDates = [...formatedDates].sort((a, b) => {
+        const dateA = dayjs(a.departureDate)
+        const dateB = dayjs(b.departureDate)
+        return dateA.diff(dateB)
+      })
 
       const formatedData = {
         title: voyage.titre,
@@ -129,14 +136,15 @@ async function mergeDeals() {
         interjection: voyage.interjection,
         country: voyage.pays.map(p => p.nom).join(','),
         zoneChapka: voyage.pays[0]?.zone_chapka || 0,
-        privatisation: false,
+        individuel: voyage.individuel,
+        group: voyage.groupe,
         duration: voyage.duree,
         startingPrice: voyage.prix,
         rating: voyage.note || 0,
         comments: voyage.nombre_avis || 0,
         tooltipChild: voyage.description_bandeau_famille || '',
         tooltipGroup: voyage.groupe ? 'Disponible en groupe' : '',
-        dates: [...formatedDates],
+        dates: [...sortedFormatedDates],
       }
 
       const filename = voyage.slug

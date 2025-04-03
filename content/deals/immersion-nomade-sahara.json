@@ -12,7 +12,8 @@
   },
   "country": "Maroc",
   "zoneChapka": 2,
-  "privatisation": false,
+  "individuel": true,
+  "group": true,
   "duration": "11 jours / 10 nuits",
   "startingPrice": 1390,
   "rating": 4.6,
@@ -20,21 +21,6 @@
   "tooltipChild": "Dès 14 ans",
   "tooltipGroup": "Disponible en groupe",
   "dates": [
-    {
-      "departureDate": "2025-03-21T00:00:00",
-      "returnDate": "2025-03-28T00:00:00",
-      "startingPrice": 1240,
-      "indivRoomPrice": 300,
-      "maxTravellers": "",
-      "bookedPlaces": 0,
-      "earlyBird": true,
-      "promoEarlyBird": 80,
-      "lastMinute": true,
-      "promoLastMinute": 80,
-      "promo": 125,
-      "privatized": false,
-      "flyTicketPrice": 200
-    },
     {
       "departureDate": "2025-10-03T00:00:00",
       "returnDate": "2025-10-10T00:00:00",
