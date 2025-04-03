@@ -24,7 +24,7 @@ Notre sélection [pour cet été]{style="color: #2e8b57;"}
 
 ::horizontal-carousel
 #title
-Notre sélection [en France]{style="color: #2e8b57;"}
+Notre sélection [en France]{style="color: #2e8b57;"} 🇫🇷
   
 #carousel-item
   :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
@@ -48,7 +48,7 @@ Notre sélection [en France]{style="color: #2e8b57;"}
 
 ::horizontal-carousel
 #title
-Notre sélection [Europe]{style="color: #2e8b57;"}
+Notre sélection [Europe]{style="color: #2e8b57;"} 🇪🇺
   
 #carousel-item
   :::voyage-col-card{voyage-slug="voyage-ours-roumanie"}
@@ -72,7 +72,7 @@ Notre sélection [Europe]{style="color: #2e8b57;"}
 
 ::horizontal-carousel
 #title
-Notre sélection [Asie]{style="color: #2e8b57;"}
+Notre sélection [Asie]{style="color: #2e8b57;"} 🌎
   
 #carousel-item
   :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-bali"}
@@ -139,7 +139,7 @@ Notre sélection [Amérique du Sud et centrale]{style="color: #2e8b57;"} 🌎
 
 ::horizontal-carousel
 #title
-Notre sélection [Afrique]{style="color: #2e8b57;"}
+Notre sélection [Afrique]{style="color: #2e8b57;"} 🌎
   
 #carousel-item
   :::voyage-col-card{voyage-slug="voyage-kenya-safari-immersion-communaute-locale"}
