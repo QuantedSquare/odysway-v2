@@ -11,6 +11,7 @@
     <v-main style="--v-layout-top: 0px; --v-layout-bottom: 0px;">
       <slot />
     </v-main>
+    <CookiesSnackbar />
     <FooterOdysway />
   </v-app>
 </template>
