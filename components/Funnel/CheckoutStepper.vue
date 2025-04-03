@@ -180,9 +180,10 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-// TODO: retrouver les params du hash
-const { step, dealId, slug, departure_date, return_date, type } = route.query
 
+const { step, slug, departure_date, return_date, type } = route.query
+const { dealId } = useStepperDeal(step)
+console.log('BEFORE dealId', dealId.value)
 const pricePerTraveler = ref(0)
 function updatePricePerTraveler(price) {
   pricePerTraveler.value = price
@@ -197,8 +198,21 @@ const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + rou
 // Voyage are all the statics data of the travel
 // Only deal manage the dynamic values
 // We generate dealId after first step and don't need statics values from voyage anymore
-const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
+const { data: voyage, status: voyageStatus } = await useAsyncData(`voyage-${step}`, async () => {
+  // Wait for dealId to be available if we're not using a slug
+  if (!slug && !dealId.value) {
+    await new Promise(resolve => {
+      const unwatch = watch(dealId, (newValue) => {
+        if (newValue) {
+          unwatch()
+          resolve()
+        }
+      })
+    })
+  }
+
   if (slug) {
+    console.log('SLUGGG', dealId.value)
     const query = await queryCollection('deals').where('slug', '=', slug).first()
     if (!query) {
       throw new Error('Deal not found.')
@@ -252,8 +266,9 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     return deal
   }
   else {
+    console.log('dealId', dealId.value)
     // Voyage = Toutes les valeurs fixes
-    const deal = await apiRequest(`/ac/deals/${dealId}`)
+    const deal = await apiRequest(`/ac/deals/${dealId.value}`)
     updatePricePerTraveler(deal.basePricePerTraveler)
     return { title: deal.title,
       startingPrice: deal.basePricePerTraveler,
