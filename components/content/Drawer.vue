@@ -46,7 +46,7 @@ const drawerItems = ref([
   {
     title: 'Nos Destinations',
     value: 'Nos Destinations',
-    link: '/destinations',
+    link: '/destinations/top',
   },
   {
     title: 'Prochains départs',

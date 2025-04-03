@@ -44,6 +44,10 @@ export default defineContentConfig({
       }),
     },
     ),
+    destinationsPage: defineCollection({
+      type: 'page',
+      source: 'destinations/*.md',
+    }),
     categories: defineCollection({
       type: 'data',
       source: 'categories/**.json',

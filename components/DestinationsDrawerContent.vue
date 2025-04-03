@@ -14,7 +14,7 @@
         variant="outlined"
         :value="item.slug"
         class="text-decoration-none"
-        @click="(event) => navigateToDestination(item.slug, event)"
+        @click="(event) => { navigateToDestination(item.slug, event) }"
       >
         {{ item.title }}
       </v-chip>
@@ -35,6 +35,7 @@ const props = defineProps({
 })
 
 const route = useRoute()
+const router = useRouter()
 
 const selectedCountry = ref(null)
 
@@ -42,13 +43,12 @@ const getSlugString = (slug) => {
   if (!slug) return 'top'
   return Array.isArray(slug) ? slug[0] : slug
 }
-
-const selectedDestination = ref(getSlugString(route.params.slug))
+const selectedDestination = ref(getSlugString(route.params.destinationSlug))
 
 async function navigateToDestination(slug, event) {
   if (route.path.includes('destinations')) {
     event.preventDefault()
-    navigateTo(`/destinations/${slug}`)
+    router.push(`/destinations/${slug}`)
   }
   else {
     await navigateTo(`/destinations/${slug}`)
