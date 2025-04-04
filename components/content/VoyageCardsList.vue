@@ -1,12 +1,24 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-if="dealsLastminute.length > 0">
       <v-col
         cols="8"
         sm="10"
-        class="text-dark font-weight-black text-h5 text-md-h4 my-4"
+        class="text-dark font-weight-black my-4"
       >
-        test
+        <p>Profitez d'une réduction sur nos voyages de <span class="text-secondary">dernière minute</span></p>
+      </v-col>
+      <v-col
+        v-for="deal in dealsLastminute"
+        :key="`${deal.slug}-${deal.departureDate}`"
+        cols="12"
+        sm="6"
+        md="4"
+        lg="3"
+      >
+        <DestinationsColCard
+          :deal="deal"
+        />
       </v-col>
     </v-row>
     <v-row
@@ -14,19 +26,20 @@
       :key="month"
     >
       <v-col cols="12">
-        <h2>{{ month }}</h2>
+        <h2 class="text-primary">
+          {{ month }}
+        </h2>
       </v-col>
       <v-col
-        v-for="voyage in filteredDeals[month]"
-        :key="`${voyage.slug}-${voyage.departureDate}`"
+        v-for="deal in filteredDeals[month]"
+        :key="`${deal.slug}-${deal.departureDate}`"
         cols="12"
         sm="6"
         md="4"
         lg="3"
       >
         <DestinationsColCard
-          :month="month"
-          :voyage="voyage"
+          :deal="deal"
         />
       </v-col>
     </v-row>
@@ -39,9 +52,12 @@ const props = defineProps({
     type: Object,
     default: () => {},
   },
+  dealsLastminute: {
+    type: Array,
+    default: () => [],
+  },
 })
 
-console.log(props.filteredDeals)
 const sortedMonths = computed(() => {
   return Object.keys(props.filteredDeals)
 })
