@@ -1,0 +1,58 @@
+{
+  "title": "Top",
+  "slug": "top",
+  "metaDescription": "top voyages",
+  "image": "",
+  "visible": true,
+  "countries": [
+    {
+      "country": "Algérie",
+      "image": "/images/destinations/RKy5I9j0TtiK5k7zzqJr.jpg",
+      "slug": "algerie",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "visible": true
+    },
+    {
+      "country": "Cap-Vert",
+      "image": "/images/destinations/ffytz87TqGZQ0o6dzjGp.jpg",
+      "slug": "cap-vert",
+      "metaDescription": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+      "visible": true
+    },
+    {
+      "country": "Colombie",
+      "image": "/images/destinations/BJp7aPN8RIyYQ8Cszgde.jpg",
+      "slug": "colombie",
+      "metaDescription": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+      "visible": true
+    },
+    {
+      "country": "Finlande",
+      "image": "/images/destinations/1tkqoB8S0CBFKM464jAo.jpg",
+      "slug": "finlande",
+      "metaDescription": "L'Europe n'a pas fini de vous surprendre ! Partez avec Odysway, à la découverte des somptueux paysages et des traditions ancestrales du Vieux Continent !",
+      "visible": true
+    },
+    {
+      "country": "Inde",
+      "image": "/images/destinations/niNh7HaCRXanTLAGev6h.jpg",
+      "slug": "inde",
+      "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
+      "visible": true
+    },
+    {
+      "country": "Islande",
+      "image": "/images/destinations/h6nOKytR36QadpIDsaRw.jpg",
+      "slug": "islande",
+      "metaDescription": "L'Europe n'a pas fini de vous surprendre ! Partez avec Odysway, à la découverte des somptueux paysages et des traditions ancestrales du Vieux Continent !",
+      "visible": true
+    },
+    {
+      "country": "Laos",
+      "image": "/images/destinations/rf5aeAyUSaWO31IcXRbC.jpg",
+      "slug": "laos",
+      "metaDescription": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
+      "visible": true
+    }
+  ]
+}

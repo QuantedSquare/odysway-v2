@@ -91,7 +91,7 @@
             {{ travelerText(+deal.nbAdults, 'adult') }}
           </template>
           <template #right>
-            {{ formatNumber((deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute)) * deal.nbAdults, 'currency', 'EUR') }}
+            {{ formatNumber((deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : (deal.gotLastMinute === 'Oui' ? deal.promoLastMinute : 0))) * deal.nbAdults, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
@@ -101,7 +101,7 @@
             {{ travelerText(+deal.nbUnderAge, 'baby') }}
           </template>
           <template #right>
-            {{ formatNumber((+deal.basePricePerTraveler - deal.promoChildren - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute)) * deal.nbUnderAge, 'currency', 'EUR') }}
+            {{ formatNumber((+deal.basePricePerTraveler - deal.promoChildren - (deal.gotEarlybird === 'Oui' ? deal.promoEarlybird : (deal.gotLastMinute === 'Oui' ? deal.promoLastMinute : 0))) * deal.nbUnderAge, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
@@ -111,21 +111,24 @@
             {{ travelerText(+deal.nbTeen, 'child') }}
           </template>
           <template #right>
-            {{ formatNumber((+deal.basePricePerTraveler - deal.promoTeen - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute)) * deal.nbTeen, 'currency', 'EUR') }}
+            {{ formatNumber((+deal.basePricePerTraveler - deal.promoTeen - (deal.gotEarlybird === 'Oui' ? deal.promoEarlybird : (deal.gotLastMinute === 'Oui' ? deal.promoLastMinute : 0))) * deal.nbTeen, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
-        <v-divider class="my-6" />
+        <v-divider
+          v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0"
+          class="my-6"
+        />
 
         <!--  Options -->
-        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui'">
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0">
           <template #left>
             <span class="text-h6 text-dark">Options</span>
           </template>
         </FunnelStepsSummaryLine>
 
         <!-- Chambre individuelle -->
-        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui'">
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0">
           <template #left>
             <v-tooltip
               v-if="forceIndivRoom "
@@ -258,7 +261,7 @@
         <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
           <template #left>
             <!-- #TODO Remplacer par cms -->
-            <span class="font-italic text-body-2 ">Comme le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l’intégralité de la somme, sans acompte.</span>
+            <span class="font-italic text-body-2 ">Le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l’intégralité de la somme, sans acompte.</span>
           </template>
         </FunnelStepsSummaryLine>
 

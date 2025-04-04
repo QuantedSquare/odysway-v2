@@ -5,7 +5,7 @@
       type="card"
     />
     <!-- v-else -->
-    <template v-else>
+    <template v-else-if="!isLoadingInsurance && !isEmpty(insurances)">
       <v-row>
         <v-col
           class="d-flex align-center"
@@ -113,14 +113,31 @@
         </v-col>
       </v-row>
     </template>
+    <template v-else>
+      <v-row>
+        <v-col>
+          <v-alert
+            border="start"
+            colored-border
+            color="secondary"
+            elevation="2"
+          >
+            <span class="font-weight-bold">
+              L'assurance n'est pas disponible pour votre voyage.
+            </span>
+          </v-alert>
+        </v-col>
+      </v-row>
+    </template>
   </v-container>
 </template>
 
 <script setup>
+import { isEmpty } from 'lodash'
+
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
-
 const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)

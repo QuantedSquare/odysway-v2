@@ -136,5 +136,33 @@ export default defineContentConfig({
         date: z.string(),
       }),
     }),
+    propos: defineCollection({
+      type: 'data',
+      source: 'top-bar/propos.json',
+      schema: z.object({
+        propos: z.array(z.object({
+          title: z.string(),
+          image: z.string(),
+          slug: z.string(),
+        })),
+      }),
+    }),
+    destinations: defineCollection({
+      type: 'data',
+      source: 'destinations/**.json',
+      schema: z.object({
+        title: z.string(),
+        slug: z.string(),
+        metaDescription: z.string(),
+        visible: z.boolean(),
+        countries: z.array(z.object({
+          country: z.string(),
+          image: z.string(),
+          slug: z.string(),
+          metaDescription: z.string(),
+          visible: z.boolean(),
+        })),
+      }),
+    }),
   },
 })

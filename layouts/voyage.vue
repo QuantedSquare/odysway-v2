@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <HeaderOdysway
+      v-model="drawer"
       :scroll-behavior="$vuetify.display.smAndDown ? 'hide' :'' "
       scroll-threshold="5"
-      @show-drawer="toggleDrawer()"
     />
     <ClientOnly>
       <Drawer v-model="drawer" />
@@ -17,8 +17,4 @@
 
 <script setup>
 const drawer = ref(false)
-
-function toggleDrawer() {
-  drawer.value = !drawer.value
-}
 </script>

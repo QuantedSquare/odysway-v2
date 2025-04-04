@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <HeaderOdysway
-      @show-drawer="toggleDrawer()"
+      v-model="drawer"
     />
     <ClientOnly>
       <Drawer v-model="drawer" />
@@ -15,8 +15,4 @@
 
 <script setup>
 const drawer = ref(false)
-
-function toggleDrawer() {
-  drawer.value = !drawer.value
-}
 </script>

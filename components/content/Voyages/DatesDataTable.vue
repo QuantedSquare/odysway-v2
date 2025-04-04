@@ -1,6 +1,7 @@
 <template>
   <v-data-table
     :mobile="smAndDown"
+    :items-per-page="fullTabView ? -1 : 5"
     hide-default-footer
     :headers="headers"
     :items="tableItems"
@@ -63,10 +64,32 @@
       </tr>
     </template>
   </v-data-table>
+  <div
+    v-if="tableItems.length > 5"
+    class="d-flex justify-center mt-2"
+  >
+    <v-btn
+      class="text-decoration-underline"
+      variant="text"
+      @click="fullTabView = !fullTabView"
+    >
+      <span
+        v-if="fullTabView"
+        class="d-none d-md-block mr-1 font-weight-bold"
+      >Voir moins de dates</span>
+      <span
+        v-else
+        class="d-none d-md-block mr-1 font-weight-bold"
+      >Voir plus de dates</span>
+      <v-icon color="primary">
+        {{ fullTabView ? mdiMinusCircle : mdiPlusCircle }}
+      </v-icon>
+    </v-btn>
+  </div>
 </template>
 
 <script setup>
-import { mdiAccount, mdiCheckCircleOutline } from '@mdi/js'
+import { mdiAccount, mdiCheckCircleOutline, mdiMinusCircle, mdiPlusCircle } from '@mdi/js'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import 'dayjs/locale/fr'
@@ -82,6 +105,8 @@ const props = defineProps({
     required: true,
   },
 })
+
+const fullTabView = ref(false)
 
 const headers = [
   { title: 'DATE DE DÉPART', key: 'departureDate' },
