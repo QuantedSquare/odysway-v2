@@ -7,54 +7,67 @@
       </v-col>
     </v-row>
     <v-row>
-      <div class="bg-secondary pa-2 rounded-lg">
+      <v-col
+        cols="auto"
+        class="bg-secondary rounded-lg my-4"
+      >
         <v-btn-toggle
           v-model="filter"
-          base-color="secondary"
-          color="white"
           mandatory
-          variant="plain"
+          color="secondary"
           density="compact"
           class="d-flex ga-2"
         >
           <v-btn
-            value="all"
-            text="Tous"
-            to="prochains-departs"
+            v-for="btn of toggleBtns"
+            :key="btn.text"
+            :value="btn.value"
+            :to="btn.path"
+            selected-class="bg-white"
             class="text-decoration-none rounded-lg"
-          />
-          <v-btn
-            value="france"
-            text="En France"
-            :to="{ path: '/prochains-departs', query: { type: 'france' } }"
-            class="text-decoration-none rounded-lg"
-          />
-          <v-btn
-            value="other"
-            text="À l'étranger"
-            :to="{ path: '/prochains-departs', query: { type: 'other' } }"
-            class="text-decoration-none rounded-lg"
-          />
+          >
+            <span class="text-subtitle-1"> {{ btn.text }}</span>
+          </v-btn>
         </v-btn-toggle>
-      </div>
-      <VoyageCardsList
-        :value="filter"
-        :filtered-deals="groupByMonth"
-      />
+      </v-col>
     </v-row>
+    <VoyageCardsList
+      :filtered-deals="groupByMonth"
+      :deals-lastminute="dealsLastMinuteFiltered"
+    />
   </v-container>
 </template>
 
 <script setup>
-import _ from 'lodash'
 import dayjs from 'dayjs'
 
 const route = useRoute()
 
-const filter = ref(route.query.type || 'all')
+const filter = ref('')
 
 const { data: deals } = await useAsyncData(() => {
   return queryCollection('deals').all()
+})
+
+const toggleBtns = ref([
+  { value: 'all',
+    path: '/prochains-departs',
+    text: 'Tous',
+  },
+  { value: 'france',
+    path: 'prochains-departs?type=france',
+    text: 'En France',
+  },
+  { value: 'other',
+    path: 'prochains-departs?type=other',
+    text: 'À l\'étranger',
+  },
+])
+
+onMounted(() => {
+  nextTick(() => {
+    filter.value = route.query?.type || 'all'
+  })
 })
 
 const filteredDeals = computed(() => {
@@ -132,5 +145,15 @@ const groupByMonth = computed(() => {
   })
 
   return sortedResult
+})
+
+const dealsLastMinuteFiltered = computed(() => {
+  const filteredDeals = []
+  for (const month in groupByMonth.value) {
+    for (const deal of groupByMonth.value[month]) {
+      if (deal.dates[0].lastMinute) filteredDeals.push(deal)
+    }
+  }
+  return filteredDeals
 })
 </script>
