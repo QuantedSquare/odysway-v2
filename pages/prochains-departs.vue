@@ -6,17 +6,20 @@
         <p>Réservez un voyage groupé et rejoignez un petit groupe de 8 voyageurs maximum.</p>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row
+      align="center"
+    >
       <v-col
-        cols="auto"
+        cols="12"
+        sm="auto"
         class="bg-secondary rounded-lg my-4"
       >
         <v-btn-toggle
-          v-model="filter"
+          v-model="toggledBtn"
           mandatory
           color="secondary"
           density="compact"
-          class="d-flex ga-2"
+          class="d-flex justify-center ga-2"
         >
           <v-btn
             v-for="btn of toggleBtns"
@@ -30,20 +33,45 @@
           </v-btn>
         </v-btn-toggle>
       </v-col>
+      <v-col
+        cols="12"
+        sm="4"
+      >
+        <v-select
+          v-model="selectedFilter"
+          :items="sortedMonths"
+          density="comfortable"
+          label="Trier"
+          hide-details
+          :prepend-inner-icon="mdiFilterVariant"
+        />
+      </v-col>
     </v-row>
-    <VoyageCardsList
-      :filtered-deals="groupByMonth"
-      :deals-lastminute="dealsLastMinuteFiltered"
-    />
+    <v-row>
+      <v-col cols="12">
+        <VoyageCardsList
+          :filtered-deals="groupByMonthFiltered"
+          :deals-lastminute="dealsLastMinuteFiltered"
+          :selected-filter="selectedFilter"
+          :toggled-btn="toggledBtn"
+        />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script setup>
+import { mdiFilterVariant } from '@mdi/js'
 import dayjs from 'dayjs'
+import customParseFormat from 'dayjs/plugin/customParseFormat.js'
+import 'dayjs/locale/fr'
+
+dayjs.extend(customParseFormat)
 
 const route = useRoute()
 
-const filter = ref('')
+const toggledBtn = ref('')
+const selectedFilter = ref(capitalizeFirstLetter(dayjs().locale('fr').format('MMMM YYYY')))
 
 const { data: deals } = await useAsyncData(() => {
   return queryCollection('deals').all()
@@ -66,7 +94,7 @@ const toggleBtns = ref([
 
 onMounted(() => {
   nextTick(() => {
-    filter.value = route.query?.type || 'all'
+    toggledBtn.value = route.query?.type || 'all'
   })
 })
 
@@ -101,7 +129,7 @@ const groupByMonth = computed(() => {
         return
       }
 
-      const monthYear = departureDate.format('MMMM YYYY')
+      const monthYear = capitalizeFirstLetter(departureDate.locale('fr').format('MMMM YYYY'))
 
       if (!unsortedResult[monthYear]) {
         unsortedResult[monthYear] = []
@@ -111,7 +139,7 @@ const groupByMonth = computed(() => {
       const dealWithSingleDate = {
         ...deal,
         dates: [dateInfo], // Include only this specific date
-        departureDate: dateInfo.departureDate, // Add departure date at the top level for easier sorting
+        departureDate: dateInfo.departureDate,
       }
 
       // Add this deal-date combination to the month
@@ -121,7 +149,8 @@ const groupByMonth = computed(() => {
 
   // Step 2: Sort the months chronologically and the deals within each month by departure date
   const monthsArray = Object.keys(unsortedResult).map((monthYear) => {
-    const date = dayjs(monthYear, 'MMMM YYYY')
+    // Create a date for sorting (first day of the month)
+    const date = dayjs(`01 ${monthYear.toLowerCase()}`, 'DD MMMM YYYY', 'fr')
 
     // Sort the deals within this month by departure date
     const sortedDeals = unsortedResult[monthYear].sort((a, b) => {
@@ -147,6 +176,14 @@ const groupByMonth = computed(() => {
   return sortedResult
 })
 
+const sortedMonths = computed(() => {
+  return Object.keys(groupByMonth.value)
+})
+
+const groupByMonthFiltered = computed(() => {
+  return groupByMonth.value[selectedFilter.value]
+})
+
 const dealsLastMinuteFiltered = computed(() => {
   const filteredDeals = []
   for (const month in groupByMonth.value) {
@@ -156,4 +193,8 @@ const dealsLastMinuteFiltered = computed(() => {
   }
   return filteredDeals
 })
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
 </script>

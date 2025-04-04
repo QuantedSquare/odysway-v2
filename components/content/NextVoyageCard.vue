@@ -139,7 +139,7 @@
             <span class="text-primary">{{ deal.dates[0].startingPrice - deal.dates[0].promoEarlyBird }} €</span>
           </div>
           <div
-            v-else-if="deal.dates[0].lastMinute "
+            v-else-if="deal.dates[0].lastMinute"
           >
             À partir de
             <span class="text-decoration-line-through">{{ deal.dates[0].startingPrice }} €</span>
