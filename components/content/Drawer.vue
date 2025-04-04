@@ -51,7 +51,7 @@ const drawerItems = ref([
   {
     title: 'Prochains départs',
     value: 'Prochains départs',
-    // link: '/prochains-departs',
+    link: '/prochains-departs',
   },
   {
     title: 'Prendre RDV avec un conseiller',
