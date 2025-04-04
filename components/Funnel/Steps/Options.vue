@@ -7,7 +7,7 @@
     <!-- <v-row v-if="voyage.indiv_room && !forcedIndivRoom"> -->
     <v-row>
       <v-col cols="12">
-        <h2>{{ page.fields.room_indiv_title }}</h2>
+        <h2>{{ page.room_indiv_title }}</h2>
       </v-col>
       <!-- :label="$t('stepperDevisGroup.roomIndivLabel')" -->
       <v-col cols="12">
@@ -16,8 +16,8 @@
           label="Je souhaite bénéficier d'une chambre individuelle"
         />
         <FunnelStepsDialogLearnMore
-          :btn-text="page.fields.room_indiv_accroche"
-          :dialog-text="page.fields.room_indiv_text"
+          :btn-text="page.room_indiv_accroche"
+          :dialog-text="page.room_indiv_text"
         />
       </v-col>
     </v-row>
@@ -25,7 +25,7 @@
     <v-row>
       <v-col cols="12">
         <h2 class="h2-option">
-          {{ page.fields.food_details_title }}
+          {{ page.food_details_title }}
         </h2>
       </v-col>
       <v-col

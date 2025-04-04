@@ -1,0 +1,24 @@
+{
+  "title": "Immersion hivernale en terre béarnaise",
+  "slug": "sejour-hiver-pyrenees",
+  "iso": "FR",
+  "imgSrc2": {
+    "src": "/images/voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
+    "alt": "YZpfhas4QcK1uOHlHAAn"
+  },
+  "imgSrc1": {
+    "src": "/images/voyages/sejour-hiver-pyrenees/6u0JBzAQ26cRklnBOyKi.jpg",
+    "alt": "6u0JBzAQ26cRklnBOyKi"
+  },
+  "country": "Sud Ouest",
+  "zoneChapka": 1,
+  "privatisationAvailable": false,
+  "groupeAvailable": true,
+  "duration": "5 jours / 4 nuits",
+  "startingPrice": 650,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 16 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": []
+}

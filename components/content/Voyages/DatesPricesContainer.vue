@@ -13,7 +13,7 @@
         class="d-flex align-center"
       >
         <v-btn
-          v-if="deal.privatisation"
+          v-if="deal.privatisationAvailable"
           fab
           small
           icon
@@ -24,9 +24,9 @@
         </v-btn>
       </v-col>
       <v-col
-        :cols="deal.privatisation ? 8 : 12"
+        :cols="deal.privatisationAvailable ? 8 : 12"
         sm=""
-        :class="deal.privatisation ? 'px-2' : ''"
+        :class="deal.privatisationAvailable ? 'px-2' : ''"
       >
         <v-tabs
           v-model="activeTab"
@@ -56,7 +56,7 @@
             </div>
           </v-tab>
           <v-tab
-            v-if="deal.privatisation"
+            v-if="deal.privatisationAvailable"
             :value="2"
             active-class="bg-tab-selected"
             class="tab-custom"
@@ -81,7 +81,7 @@
         class="d-flex align-center"
       >
         <v-btn
-          v-if="deal.privatisation"
+          v-if="deal.privatisationAvailable"
           fab
           small
           icon
@@ -98,11 +98,14 @@
     <v-tabs-window
       v-model="activeTab"
     >
-      <v-tabs-window-item :value="1">
+      <v-tabs-window-item
+        v-show="deal.groupeAvailable"
+        :value="1"
+      >
         <DatesDataTable :deal="deal" />
       </v-tabs-window-item>
       <v-tabs-window-item
-        v-show="deal.privatisation"
+        v-show="deal.privatisationAvailable"
         :value="2"
       >
         <PrivateTabContainer :deal="deal" />
@@ -128,7 +131,7 @@ const switchTab = (tab) => {
 
 const { data: deal } = await useAsyncData(props.slug, async () => {
   const query = await queryCollection('deals').where('slug', '=', props.slug).first()
-  // query.privatisation = false
+  console.log('deal', query)
   return query
 })
 </script>

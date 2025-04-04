@@ -50,7 +50,7 @@ export const FieldSchema = z.array(
     insuranceCommissionPerTraveler: z.number().optional(),
     depositPrice: z.number().optional(),
     basePricePerTraveler: z.number().optional(),
-    iso: z.string().length(2).optional(),
+    iso: z.string().optional(),
     zoneChapka: z.number().optional(),
     indivRoomPrice: z.number().optional(),
     promoValue: z.number().optional(),
@@ -134,7 +134,7 @@ export const DealSchema = z.object({
   insuranceCommissionPerTraveler: z.number().optional(),
   depositPrice: z.number().optional(),
   basePricePerTraveler: z.number().optional(),
-  iso: z.string().length(2).optional(),
+  iso: z.string().optional(),
   zoneChapka: z.number().optional(),
   indivRoomPrice: z.number().optional(),
   promoValue: z.number().optional(),
@@ -163,6 +163,7 @@ export const DealSchema = z.object({
   lastname: z.string().optional(),
   email: z.string().email().optional(),
   phone: z.string().optional(),
+  optinNewsletter: z.boolean().optional(),
 })
 
 // Define DataToPushSchema

@@ -5,7 +5,7 @@
       type="card"
     />
     <!-- v-else -->
-    <template v-else>
+    <template v-else-if="!isLoadingInsurance && !isEmpty(insurances)">
       <v-row>
         <v-col
           class="d-flex align-center"
@@ -16,7 +16,7 @@
           <img
             width="90"
             class="ml-2"
-            :src="page.fields.assurance_img"
+            :src="page.assurance_img"
           >
         </v-col>
       </v-row>
@@ -32,7 +32,7 @@
           >
             <template #label>
               <div class="text-body-1">
-                {{ page.fields.preference_assurance_multirisque }}
+                {{ page.preference_assurance_multirisque }}
                 <v-badge
                   color="secondary"
                   inline
@@ -49,8 +49,8 @@
         <v-col cols="12">
           <FunnelStepsDialogLearnMore
             v-if="deal"
-            :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.accroche_assurance_perou_nepal:page.fields.accroche_assurance_medicale "
-            :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.details_assurance_medicale_perou_nepal:page.fields.details_assurance_medicale "
+            :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.accroche_assurance_perou_nepal:page.accroche_assurance_medicale "
+            :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.details_assurance_medicale_perou_nepal:page.details_assurance_medicale "
           />
         </v-col>
       </v-row>
@@ -66,7 +66,7 @@
           <v-switch
             v-model="selectedInsurance"
             value="cancel"
-            :label="page.fields.preference_assurance_annulation"
+            :label="page.preference_assurance_annulation"
           />
         </v-col>
         <v-col class="d-flex justify-end text-body-1 font-weight-bold">
@@ -74,8 +74,8 @@
         </v-col>
         <v-col cols="12">
           <FunnelStepsDialogLearnMore
-            :btn-text="page.fields.accroche_assurance_annulation"
-            :dialog-text="page.fields.details_assurance_annulation"
+            :btn-text="page.accroche_assurance_annulation"
+            :dialog-text="page.details_assurance_annulation"
           />
         </v-col>
       </v-row>
@@ -113,14 +113,31 @@
         </v-col>
       </v-row>
     </template>
+    <template v-else>
+      <v-row>
+        <v-col>
+          <v-alert
+            border="start"
+            colored-border
+            color="secondary"
+            elevation="2"
+          >
+            <span class="font-weight-bold">
+              L'assurance n'est pas disponible pour votre voyage.
+            </span>
+          </v-alert>
+        </v-col>
+      </v-row>
+    </template>
   </v-container>
 </template>
 
 <script setup>
+import { isEmpty } from 'lodash'
+
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
-
 const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)

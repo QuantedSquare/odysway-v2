@@ -32,15 +32,46 @@
               outlined
               flat
               hide-details
+              :readonly="emailSentToBrevo"
+              persistent-hint
               density="compact"
               bg-color="white"
               placeholder="Votre adresse email"
               type="email"
             >
               <template #append-inner>
-                <v-icon color="grey">
-                  {{ mdiArrowRight }}
-                </v-icon>
+                <TransitionGroup name="slide">
+                  <v-btn
+                    v-if="validEmail && !emailSentToBrevo"
+                    :icon="mdiSend"
+                    size="regular"
+                    variant="text"
+                    @click="subscribeToNewsletter"
+                  />
+                  <v-icon
+                    v-else
+                    color="grey"
+                  >
+                    {{ mdiArrowRight }}
+                  </v-icon>
+                </TransitionGroup>
+                <v-dialog
+                  v-model="dialogEmailSent"
+                  width="auto"
+                >
+                  <v-card
+                    max-width="300px"
+                    text="Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍"
+                  >
+                    <template #actions>
+                      <v-btn
+                        class="ms-auto"
+                        text="Ok"
+                        @click="dialogEmailSent = false"
+                      />
+                    </template>
+                  </v-card>
+                </v-dialog>
               </template>
             </v-text-field>
           </v-col>
@@ -191,12 +222,14 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiEmailOutline, mdiPhoneOutline } from '@mdi/js'
+import { mdiArrowRight, mdiEmailOutline, mdiPhoneOutline, mdiSend } from '@mdi/js'
+import { z } from 'zod'
 import { useImage } from '#imports'
 
 const img = useImage()
 const email = ref('')
-
+const emailSentToBrevo = ref(false)
+const dialogEmailSent = ref(false)
 const pOdysway = ref ('Odysway est une agence de voyage certifiée Atout France et immatriculée à l\'APST. Vous avez envie de voyager autrement ? Que ce soit en France ou à l\'étranger, vivez un voyage en immersion unique avec une agence fiable et engagée.')
 
 const listUsefullLinks = ref([
@@ -270,10 +303,45 @@ const policies = ref([
     link: '/politique-de-confidentialite',
   },
 ])
+
+const validEmail = computed(() => {
+  return z.string().email().safeParse(email.value).success
+})
+
+const subscribeToNewsletter = async () => {
+  const newsletterData = {
+    email: email.value,
+    listIds: [18],
+    listName: 'Optin Newsletter',
+    state: 'Optin Newsletter',
+  }
+  await apiRequest('/brevo/optin', 'post', newsletterData)
+  email.value = ''
+  validEmail.value = false
+  emailSentToBrevo.value = true
+  dialogEmailSent.value = true
+}
 </script>
 
 <style>
 .section-width {
   width: 100%;
+}
+</style>
+
+<style scoped>
+.slide-move,
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-leave-active {
+  position: absolute;
 }
 </style>

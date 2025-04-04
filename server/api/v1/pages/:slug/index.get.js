@@ -1,9 +1,8 @@
 import page from './page.json'
 
 export default defineEventHandler((event) => {
-  // console.log('event', event.context.params)
   const slug = event.context.params.slug
-  // console.log('slug', slug)
+  const foundPage = page.find(i => i.slug === slug)
   try {
     if (!slug) {
       throw createError({
@@ -12,7 +11,7 @@ export default defineEventHandler((event) => {
       })
     }
     return {
-      ...page,
+      ...foundPage.fields,
     }
   }
   catch (err) {

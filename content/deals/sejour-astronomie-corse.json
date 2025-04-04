@@ -1,0 +1,24 @@
+{
+  "title": "Initiation à l'observation astronomique en Corse",
+  "slug": "sejour-astronomie-corse",
+  "iso": "FR",
+  "imgSrc2": {
+    "src": "/images/voyages/sejour-astronomie-corse/Vqy5esbLTrWRlRY73ozi.jpg",
+    "alt": "Vqy5esbLTrWRlRY73ozi"
+  },
+  "imgSrc1": {
+    "src": "/images/voyages/sejour-astronomie-corse/87HHN1ZT5yzUZ0Ufsxo9.jpg",
+    "alt": "87HHN1ZT5yzUZ0Ufsxo9"
+  },
+  "country": "Corse",
+  "zoneChapka": 1,
+  "privatisationAvailable": true,
+  "groupeAvailable": false,
+  "duration": "5 jours / 4 nuits",
+  "startingPrice": 295,
+  "rating": 5,
+  "comments": 2,
+  "tooltipChild": "Dès 12 ans",
+  "tooltipGroup": "",
+  "dates": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Eveillez vos sens dans les forêts des Vosges du Nord",
+  "slug": "immersion-sylvotherapie-parc-naturel-vosges",
+  "iso": "FR",
+  "imgSrc2": {
+    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+    "alt": "x01hdUHCS7G5BKtubMLo"
+  },
+  "imgSrc1": {
+    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/XtBbXFmQEKblyNGa7oyC.jpg",
+    "alt": "XtBbXFmQEKblyNGa7oyC"
+  },
+  "country": "Vosges",
+  "zoneChapka": 1,
+  "privatisationAvailable": false,
+  "groupeAvailable": true,
+  "duration": "3 jours",
+  "startingPrice": 210,
+  "rating": 0,
+  "comments": 0,
+  "tooltipChild": "Dès 14 ans",
+  "tooltipGroup": "Disponible en groupe",
+  "dates": []
+}

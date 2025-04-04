@@ -10,13 +10,13 @@
       >
         <v-switch
           v-model="selectedInsurance"
-          :label="page.fields.preference_assurance"
+          :label="page.preference_assurance"
           value="rapatriement"
         />
         <FunnelStepsDialogLearnMore
           v-if="deal"
-          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.accroche_assurance_perou_nepal:page.fields.accroche_assurance_medicale "
-          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.fields.details_assurance_medicale_perou_nepal:page.fields.details_assurance_medicale "
+          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.accroche_assurance_perou_nepal:page.accroche_assurance_medicale "
+          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.details_assurance_medicale_perou_nepal:page.details_assurance_medicale "
         />
       </v-col>
       <!-- Cancellation Insurance -->
@@ -27,11 +27,11 @@
         <v-switch
           v-model="selectedInsurance"
           value="cancel"
-          :label="page.fields.preference_assurance_annulation"
+          :label="page.preference_assurance_annulation"
         />
         <FunnelStepsDialogLearnMore
-          :btn-text="page.fields.accroche_assurance_annulation"
-          :dialog-text="page.fields.details_assurance_annulation"
+          :btn-text="page.accroche_assurance_annulation"
+          :dialog-text="page.details_assurance_annulation"
         />
       </v-col>
       <!-- No Insurance -->
@@ -48,7 +48,7 @@
       </v-col>
       <!-- Insurance Unavailable Message -->
       <v-col v-else>
-        <div v-html="page.fields.insurances_unavailable " />
+        <div v-html="page.insurances_unavailable " />
       </v-col>
     </v-row>
     <v-row class="text-caption text-primary">
@@ -60,6 +60,7 @@
 </template>
 
 <script setup>
+// #TODO: THIS COMPONENT IS JUST A COPY OF INSURANCES.VUE, REMAKE IT INTO A promo form
 const props = defineProps(['page', 'voyage', 'currentStep'])
 const model = defineModel()
 

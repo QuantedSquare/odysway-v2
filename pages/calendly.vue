@@ -1,3 +1,5 @@
 <template>
-  <CalendlyContainer :has-margin-top="true" />
+  <v-container class="mt-16">
+    <CalendlyContainer />
+  </v-container>
 </template>

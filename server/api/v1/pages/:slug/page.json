@@ -1,4 +1,4 @@
-{
+[{
   "fields": {
     "devis_rdv_text": "<p>Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.</p>",
     "fil_dariane_devis": {
@@ -14,6 +14,8 @@
       "option_3": "Je souhaite prendre un rendez-vous avec un conseiller voyage",
       "option_4": "Je ne sais pas encore"
     },
+
+    "calendly": "Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.",
     "preference_couple": "Je voyage en couple",
     "room_indiv_title": "Souhaitez-vous une chambre individuelle ?",
     "food_details_title": "Avez-vous des demandes particulières ou des besoins spécifiques ?",
@@ -32,5 +34,42 @@
     "phrase_dacceptation": "<p>J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.</p>",
     "forced_indiv_room_text": "Texte chambre individuelle forcée",
     "cancel_text": "Vous pouvez annuler gratuitement jusqu'à 30 jours avant le départ. Vous serez remboursé sous 7 jours (sans aucun frais retenu)."
-  }
-}
+  },
+  "slug": "checkout"
+},
+{
+  "fields": {
+    "fil_dariane_devis": {
+      "step_1": "Infos",
+      "step_2": "Détails",
+      "step_3": "Confirmation",
+      "step_4": "Questionnaire",
+      "step_final_rdv": "Rendez-vous"
+    },
+    "first_step": {
+      "title": "Où en êtes vous dans votre projet de voyage ?",
+      "option_1": "Je souhaite faire une demande de devis sur mes dates",
+      "option_2": "Je souhaite une proposition sur-mesure sur cette destination",
+      "option_3": "Je souhaite prendre un RDV téléphonique avec un de nos conseillers voyages"
+    },
+    "second_step": {
+      "title": "Pour personnaliser au mieux votre expérience et vous donner le meilleur tarif possible, veuillez répondre à ce questionnaire :",
+      "sub_1": "Qui vient ?",
+      "sub_2": "Quand ?",
+      "sub_3": "Souhaitez vous inclure le vol dans votre offre ?",
+      "option_1": "Je ne sais pas encore...",
+      "option_2": "J'ai mes dates !",
+      "comment_title": "Un commentaire à partager avec votre conseiller ?"
+    },
+    "third_step": {
+      "title": "Vos informations",
+      "sub_1": "J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.",
+      "sub_2": "Je souhaite recevoir des inspirations et des idées pour voyager autrement"
+    },
+    "calendly": {
+      "title": "Vos informations",
+      "text": "Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage."
+    }
+  },
+  "slug": "devis"
+}]

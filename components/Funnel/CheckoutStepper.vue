@@ -73,8 +73,8 @@
                 />
                 <CalendlyContainer
                   v-else
-                  :titre="voyage.title"
-                  :page="page"
+                  :travel-title="voyage.title"
+                  :text="page.calendly"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -134,7 +134,7 @@
                 <template #next>
                   <div>
                     <v-btn
-                      v-if="currentStep < 5"
+                      v-if="showNextButton"
                       :disabled="!enablingNextButton"
                       color="secondary"
                       :loading="loading"
@@ -148,14 +148,15 @@
                     />
                   </div>
                 </template>
-                <!-- <v-row>
-                  <v-col
-                    cols="12"
-                    class="d-flex justify-end text-body-1 font-weight-bold"
+                <template #prev>
+                  <v-btn
+                    v-if="skipperMode !== 'summary'"
+                    :disabled="isPreviousButtonDisabled"
+                    @click="previousStep"
                   >
-                    Total : {{ formatNumber(1000000, 'currency', 'EUR') }}
-                  </v-col>
-                </v-row> -->
+                    Précédent
+                  </v-btn>
+                </template>
               </v-stepper-actions>
             </v-card-actions>
           </v-card>
@@ -198,19 +199,20 @@ const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + rou
 // We generate dealId after first step and don't need statics values from voyage anymore
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (slug) {
+    console.log('slug', slug)
     const query = await queryCollection('deals').where('slug', '=', slug).first()
     if (!query) {
       throw new Error('Deal not found.')
     }
     function parseDeal(deal, departureDate, returnDate) {
       const filteredDates = deal.dates.find((date) => {
-        return dayjs(date.departureDate).format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate).format('YYYY-MM-DD') === returnDate
+        return dayjs(date.departureDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === returnDate
       })
-
       if (!filteredDates) {
         console.log(filteredDates)
         throw new Error('Invalid or no matching dates found.')
       }
+      console.log('filteredDates', filteredDates)
       updatePricePerTraveler(filteredDates.startingPrice)
       console.log('image check', deal.imgSrc1.src)
       return {
@@ -314,11 +316,19 @@ const nextStep = async () => {
   else {
     currentStep.value++
   }
+  console.log('currentStep', currentStep.value, skipperMode.value)
 }
 const previousStep = () => {
   currentStep.value--
   validForm.value = true
 }
+const showNextButton = computed(() => {
+  return (skipperMode.value === 'normal' && currentStep.value < 5) || (skipperMode.value === 'quick' && currentStep.value !== 1)
+})
+
+const isPreviousButtonDisabled = computed(() => {
+  return currentStep.value === 0 || skipperMode.value === 'summary'
+})
 </script>
 
 <style scoped>
@@ -330,8 +340,11 @@ const previousStep = () => {
   .funnel-stepper{
     min-height: 50vh!important;
     padding: 2em;
-
   }
+  .no-margin-window .v-stepper-window {
+ margin-left:0!important;
+ margin-right:0!important;
+}
 }
 .fade-enter-active {
   transition: all 0.3s ease-out;
@@ -346,12 +359,5 @@ const previousStep = () => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
-}
-@media screen and (max-width: 768px) {
-  .no-margin-window .v-stepper-window {
- margin-left:0!important;
- margin-right:0!important;
-}
-
 }
 </style>

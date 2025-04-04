@@ -45,6 +45,7 @@
         >
           <v-btn-secondary
             color="white"
+            @click="navigateToIndivCheckout"
           >
             demander un devis
           </v-btn-secondary>
@@ -55,12 +56,13 @@
 </template>
 
 <script setup>
-defineProps({
+const { deal } = defineProps({
   deal: {
     type: Object,
     required: true,
   },
 })
+
 const model = defineModel()
 
 const selectOptions = function (start, end) {
@@ -70,4 +72,11 @@ const nbAdults = ref(1)
 const nbChildren = ref(0)
 
 console.log('nb adults ', nbAdults.value)
+
+const navigateToIndivCheckout = () => {
+  navigateTo({
+    path: '/devis',
+    query: { slug: deal.slug, nbAdults: nbAdults.value, nbChildren: nbChildren.value },
+  })
+}
 </script>
