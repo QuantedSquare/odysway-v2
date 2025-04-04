@@ -150,7 +150,7 @@ const transformDealForAPI = (flatDeal) => {
 
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
-  // console.log('API Request to', endpoint, method, data, baseUrl)
+  console.log('API Request to', endpoint, method, data, baseUrl)
   try {
     const response = await axios({
       url: `${baseUrl}${endpoint}`,
@@ -158,7 +158,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
-    // console.log(`API Response from ${endpoint}:`, response.data)
+    console.log(`API Response from ${endpoint}:`, response.data)
     return response.data
   }
   catch (error) {
@@ -238,8 +238,32 @@ const createDeal = async (data) => {
 
   const contact = await upsertContact(client)
 
+  const brevoData = {
+    email: data.email,
+    firstName: data.firstName,
+    lastName: data.lastname,
+    listName: 'Optin Newsletter',
+    state: 'Optin Newsletter',
+    // 18: Optin Newsletter, 12: Prospect
+    listIds: [12],
+  }
+  if (data.optinNewsletter) {
+    brevoData.listIds.push(18)
+  }
+  try {
+    brevo.updateContact(data.email, brevoData)
+  }
+  catch (err) {
+    console.log('Error brevo update', err)
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Error sending brevo update', err,
+    })
+  }
+
   formatedDeal.deal.contact = contact.id
 
+  delete formatedDeal.optinNewsletter
   delete formatedDeal.firstname
   delete formatedDeal.lastname
   delete formatedDeal.email
@@ -366,12 +390,12 @@ const recalculatTotalValues = async (dealId) => {
   const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
   const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
 
-  const indivRoomPrice = customFields.indivRoom === 'Oui' ? customFields.indivRoomPrice : 0
+  const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
   const flightPrice = customFields.flightPrice || 0
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
 
-  // console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
+  console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers

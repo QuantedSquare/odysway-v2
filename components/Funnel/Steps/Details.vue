@@ -100,12 +100,21 @@
               <v-text-field
                 v-model="email"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-
                 label="Email *"
                 placeholder="Ex: indiana@jones.com"
                 :rules="[rules.email]"
                 @change="saveToLocalStorage()"
               />
+              <v-checkbox
+                v-model="optinNewsletter"
+                :class="optinNewsletter && 'text-primary'"
+              >
+                <template #label>
+                  <div class="text-caption text-no-wrap">
+                    Je souhaite recevoir des inspirations et des idées pour voyager autrement
+                  </div>
+                </template>
+              </v-checkbox>
             </v-col>
             <v-col
               cols="12"
@@ -171,6 +180,7 @@ const selectOptions = function (start, end) {
 }
 
 const isAdvance = ref(true)
+const optinNewsletter = ref(false)
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 const nbTeen = ref(0)
@@ -315,8 +325,8 @@ const submitStepData = async () => {
         phone: `${phoneCode.value}${phoneNumber.value}`,
         firstname: firstName.value,
         lastname: lastName.value,
+        optinNewsletter: optinNewsletter.value,
       }
-      console.log('submitting', flattenedDeal)
 
       return await createDeal(flattenedDeal)
     }
