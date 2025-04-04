@@ -63,7 +63,7 @@
           <NuxtLink
             width="100%"
             class="text-primary text-break d-flex align-center justify-center ga-3"
-            to="/calendly"
+            :to="`/calendly?travelTitle=${voyageTitle}`"
           >
 
             <v-icon

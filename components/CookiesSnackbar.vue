@@ -2,6 +2,7 @@
   <v-snackbar
     v-model="consentBar"
     :timeout="-1"
+    location="left"
   >
     <v-row>
       <v-col cols="12">

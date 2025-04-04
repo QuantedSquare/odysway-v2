@@ -174,10 +174,12 @@ const cardsTransform = computed(() => ({
   transition: isDragging.value ? 'none' : 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
 }))
 
+let resizeObserver = null
+
 onMounted(async () => {
   await nextTick()
 
-  const resizeObserver = new ResizeObserver(() => {
+  resizeObserver = new ResizeObserver(() => {
     if (cardContainerRef.value?.children[0]) {
       cardWidth.value = cardContainerRef.value.children[0].getBoundingClientRect().width
       centerCard(currentSection.value)
@@ -187,10 +189,12 @@ onMounted(async () => {
   if (cardContainerRef.value) {
     resizeObserver.observe(cardContainerRef.value)
   }
+})
 
-  onBeforeUnmount(() => {
+onBeforeUnmount(() => {
+  if (resizeObserver) {
     resizeObserver.disconnect()
-  })
+  }
 })
 
 defineExpose({

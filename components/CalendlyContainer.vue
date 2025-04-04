@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   travelTitle: {
     type: String,
     default: '',
@@ -26,6 +26,7 @@ defineProps({
 const calendly = useCalendly()
 onMounted(() => {
   calendly.initInlineWidget()
+  console.log(props.travelTitle)
 })
 useCalendlyEventListener({
   onEventScheduled: (event) => {

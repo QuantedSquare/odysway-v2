@@ -2,6 +2,8 @@
   <v-app-bar
     elevation="0"
     class="px-4"
+    :scroll-behavior="scrollBehavior"
+    :scroll-threshold="scrollThreshold"
   >
     <NuxtLink
       to="/"
@@ -16,7 +18,7 @@
     <div class="d-flex align-center ga-4">
       <v-btn
         icon
-        class="d-inline"
+        class="d-inline "
       >
         <v-icon>{{ mdiMagnify }}</v-icon>
       </v-btn>
@@ -69,7 +71,7 @@
     </div>
   </v-app-bar>
   <ExtensionDrawer
-    v-if="showExtension && extensionName"
+    v-model="testModel"
     :extension="extensionName"
     class="d-md-and-down-none"
     @mouseleave="resetExtension()"
@@ -80,8 +82,18 @@
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js'
 import { useImage } from '#imports'
 
+const testModel = ref(false)
 const model = defineModel()
-
+defineProps({
+  scrollBehavior: {
+    type: String,
+    default: '',
+  },
+  scrollThreshold: {
+    type: Number,
+    default: 5,
+  },
+})
 const img = useImage()
 
 const showExtension = ref(false)
@@ -100,6 +112,9 @@ const items = ref([
     extension: 'propos',
   },
 ])
+watch([showExtension, extensionName], () => {
+  testModel.value = !!(showExtension.value && extensionName.value)
+})
 
 function displayExtension(item) {
   if (item.extension) {

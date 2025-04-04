@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="mt-10 relative"
+    class="relative"
   >
     <v-img
       v-if="deal"
@@ -24,6 +24,10 @@
 
 <script setup>
 import { useImage } from '#imports'
+
+definePageMeta({
+  layout: 'funnel',
+})
 
 const route = useRoute()
 

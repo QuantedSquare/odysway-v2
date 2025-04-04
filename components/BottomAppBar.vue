@@ -32,7 +32,7 @@
             color="primary"
             class="text-caption text-uppercase text-decoration-none"
             width="100%"
-            href="/calendly"
+            :href="'/calendly?type=' + route.params.voyageSlug"
           >
             <template #prepend>
               <v-icon size="x-large">
@@ -51,6 +51,8 @@
 import { mdiCalendar } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 
+const route = useRoute()
+console.log(route)
 const goTo = useGoTo()
 </script>
 

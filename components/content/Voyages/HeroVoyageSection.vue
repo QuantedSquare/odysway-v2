@@ -1,5 +1,6 @@
 <template>
   <v-img
+    v-if="status === 'success'"
     :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
     height="100vh"
@@ -37,10 +38,9 @@
             cols="12"
             md="auto"
           >
-            <h1 class="text-h3 text-md-h1">
+            <h1 class="text-h4 text-md-h1">
               <slot
                 name="title"
-                mdc-unwrap="p"
               />
             </h1>
           </v-col>
@@ -73,6 +73,12 @@
       </v-container>
     </div>
   </v-img>
+  <v-skeleton-loader
+    v-else
+    type="image"
+    height="100vh"
+    width="100%"
+  />
 </template>
 
 <script setup>
@@ -88,7 +94,7 @@ defineProps({
 const img = useImage()
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => {
+const { data: page, status } = useAsyncData(route.path, () => {
   return queryCollection('voyages').path(route.path).first()
 })
 const isVideoAdded = computed(() => {

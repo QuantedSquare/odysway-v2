@@ -258,7 +258,7 @@ onMounted(() => {
     padding-bottom: 10px;
   }
   .category-title{
-    margin:-30px 0 0px 0!important;
+    margin:-20px 0 0 0!important;
   }
 }
 @media screen and (max-width: 600px) {
@@ -266,7 +266,7 @@ onMounted(() => {
     flex-direction: column;
   }
   .category-title{
-    margin:  0!important;
+    margin:  8px 0 0 0!important;
   }
 }
 

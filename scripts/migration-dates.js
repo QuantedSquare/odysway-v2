@@ -80,7 +80,7 @@ async function mergeDeals() {
         const filename = generateImageFilename(voyage.image_miniature)
         const outputPath = path.join(voyageDir, filename)
         await downloadImage(voyage.image_miniature, outputPath)
-        imgSrc1Path = `/images/voyages/${voyage.slug}/${filename}`
+        imgSrc1Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
       }
       catch (error) {
         console.error(`Failed to download miniature image for ${voyage.slug}: ${error.message}`)

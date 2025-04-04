@@ -1,17 +1,20 @@
 <template>
   <v-navigation-drawer
-    expand-on-hover
+    v-model="model"
     location="top"
+    temporary
     class="zIndex nav-height"
   >
-    <DestinationsDrawerContent
-      v-if="extension === 'destinations'"
-      :destinations="destinationsItems"
-    />
-    <ProposDrawerContent
-      v-else-if="extension === 'propos'"
-      :propos="proposItems.propos"
-    />
+    <TransitionGroup name="slide-fade">
+      <DestinationsDrawerContent
+        v-if="extension === 'destinations'"
+        :destinations="destinationsItems"
+      />
+      <ProposDrawerContent
+        v-else-if="extension === 'propos'"
+        :propos="proposItems.propos"
+      />
+    </TransitionGroup>
   </v-navigation-drawer>
 </template>
 
@@ -19,7 +22,7 @@
 defineProps({
   extension: String,
 })
-
+const model = defineModel()
 const [
   { data: destinationsItems },
   { data: proposItems },
@@ -31,9 +34,22 @@ const [
 
 <style scoped>
 .zIndex{
-  z-index: 1050 !important;
+  /* z-index: 1050 !important; */
 }
 .nav-height{
-  height: 233px !important;
+  height: 220px !important;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(100px);
+  opacity: 0;
 }
 </style>

@@ -2,13 +2,13 @@
   <v-app>
     <HeaderOdysway
       v-model="drawer"
-      :scroll-behavior="$vuetify.display.smAndDown ? 'hide' :'' "
-      scroll-threshold="5"
+      :scroll-behavior="smAndDown ? 'hide' :'' "
+      :scroll-threshold="5"
     />
     <ClientOnly>
       <Drawer v-model="drawer" />
     </ClientOnly>
-    <v-main style="--v-layout-top: 0px; --v-layout-bottom: 0px;">
+    <v-main>
       <slot />
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">
@@ -23,7 +23,11 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
+
 const drawer = ref(false)
+const { smAndDown } = useDisplay()
+console.log(smAndDown.value)
 </script>
 
 <style scoped>
