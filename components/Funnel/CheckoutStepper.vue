@@ -73,8 +73,8 @@
                 />
                 <CalendlyContainer
                   v-else
-                  :titre="voyage.title"
-                  :page="page"
+                  :travel-title="voyage.title"
+                  :text="page.calendly"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -199,19 +199,20 @@ const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + rou
 // We generate dealId after first step and don't need statics values from voyage anymore
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (slug) {
+    console.log('slug', slug)
     const query = await queryCollection('deals').where('slug', '=', slug).first()
     if (!query) {
       throw new Error('Deal not found.')
     }
     function parseDeal(deal, departureDate, returnDate) {
       const filteredDates = deal.dates.find((date) => {
-        return dayjs(date.departureDate).format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate).format('YYYY-MM-DD') === returnDate
+        return dayjs(date.departureDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === returnDate
       })
-
       if (!filteredDates) {
         console.log(filteredDates)
         throw new Error('Invalid or no matching dates found.')
       }
+      console.log('filteredDates', filteredDates)
       updatePricePerTraveler(filteredDates.startingPrice)
       console.log('image check', deal.imgSrc1.src)
       return {
@@ -339,8 +340,11 @@ const isPreviousButtonDisabled = computed(() => {
   .funnel-stepper{
     min-height: 50vh!important;
     padding: 2em;
-
   }
+  .no-margin-window .v-stepper-window {
+ margin-left:0!important;
+ margin-right:0!important;
+}
 }
 .fade-enter-active {
   transition: all 0.3s ease-out;
@@ -355,12 +359,5 @@ const isPreviousButtonDisabled = computed(() => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
-}
-@media screen and (max-width: 768px) {
-  .no-margin-window .v-stepper-window {
- margin-left:0!important;
- margin-right:0!important;
-}
-
 }
 </style>

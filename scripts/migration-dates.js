@@ -74,27 +74,27 @@ async function mergeDeals() {
     }
     const filteredDeals = datesVoyagesGroupe.filter(date => date.voyage.slug === voyage.slug)
 
+    let imgSrc1Path = '/images/flowers.png'
+    if (voyage.image_miniature) {
+      try {
+        const filename = generateImageFilename(voyage.image_miniature)
+        const outputPath = path.join(voyageDir, filename)
+        await downloadImage(voyage.image_miniature, outputPath)
+        imgSrc1Path = `/images/voyages/${voyage.slug}/${filename}`
+      }
+      catch (error) {
+        console.error(`Failed to download miniature image for ${voyage.slug}: ${error.message}`)
+      }
+    }
+
+    let imgSrc2Path = '/images/iStock-1336944149.webp'
+    if (voyage.image_principale) {
+      const filename = generateImageFilename(voyage.image_principale)
+      imgSrc2Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
+    }
+    let formatedDates = []
     if (filteredDeals.length !== 0) {
-      let imgSrc1Path = '/images/flowers.png'
-      if (voyage.image_miniature) {
-        try {
-          const filename = generateImageFilename(voyage.image_miniature)
-          const outputPath = path.join(voyageDir, filename)
-          await downloadImage(voyage.image_miniature, outputPath)
-          imgSrc1Path = `/images/voyages/${voyage.slug}/${filename}`
-        }
-        catch (error) {
-          console.error(`Failed to download miniature image for ${voyage.slug}: ${error.message}`)
-        }
-      }
-
-      let imgSrc2Path = '/images/iStock-1336944149.webp'
-      if (voyage.image_principale) {
-        const filename = generateImageFilename(voyage.image_principale)
-        imgSrc2Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
-      }
-
-      const formatedDates = filteredDeals.reduce((acc, cur) => {
+      formatedDates = filteredDeals.reduce((acc, cur) => {
         const date = {
           departureDate: cur.date_debut,
           returnDate: cur.date_fin,
@@ -113,35 +113,36 @@ async function mergeDeals() {
         acc.push(date)
         return acc
       }, [])
-
-      const formatedData = {
-        title: voyage.titre,
-        slug: slugify(voyage.slug, { lower: true }),
-        iso: voyage.pays.map(p => p.iso).join(','),
-        imgSrc2: {
-          src: imgSrc2Path,
-          alt: path.basename(imgSrc2Path, path.extname(imgSrc2Path)),
-        },
-        imgSrc1: {
-          src: imgSrc1Path,
-          alt: path.basename(imgSrc1Path, path.extname(imgSrc1Path)),
-        },
-        interjection: voyage.interjection,
-        country: voyage.pays.map(p => p.nom).join(','),
-        zoneChapka: voyage.pays[0]?.zone_chapka || 0,
-        privatisation: false,
-        duration: voyage.duree,
-        startingPrice: voyage.prix,
-        rating: voyage.note || 0,
-        comments: voyage.nombre_avis || 0,
-        tooltipChild: voyage.description_bandeau_famille || '',
-        tooltipGroup: voyage.groupe ? 'Disponible en groupe' : '',
-        dates: [...formatedDates],
-      }
-
-      const filename = voyage.slug
-      fs.writeFileSync(`../content/deals/${slugify(filename, { lower: true })}.json`, JSON.stringify(formatedData, null, 2))
     }
+
+    const formatedData = {
+      title: voyage.titre,
+      slug: slugify(voyage.slug, { lower: true }),
+      iso: voyage.pays.map(p => p.iso).join(','),
+      imgSrc2: {
+        src: imgSrc2Path,
+        alt: path.basename(imgSrc2Path, path.extname(imgSrc2Path)),
+      },
+      imgSrc1: {
+        src: imgSrc1Path,
+        alt: path.basename(imgSrc1Path, path.extname(imgSrc1Path)),
+      },
+      interjection: voyage.interjection,
+      country: voyage.pays.map(p => p.nom).join(','),
+      zoneChapka: voyage.pays[0]?.zone_chapka || 0,
+      privatisationAvailable: voyage.individuel,
+      groupeAvailable: voyage.groupe,
+      duration: voyage.duree,
+      startingPrice: voyage.prix,
+      rating: voyage.note || 0,
+      comments: voyage.nombre_avis || 0,
+      tooltipChild: voyage.description_bandeau_famille || '',
+      tooltipGroup: voyage.groupe ? 'Disponible en groupe' : '',
+      dates: [...formatedDates],
+    }
+
+    const filename = voyage.slug
+    fs.writeFileSync(`../content/deals/${slugify(filename, { lower: true })}.json`, JSON.stringify(formatedData, null, 2))
   }
 }
 

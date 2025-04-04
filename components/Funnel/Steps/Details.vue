@@ -120,43 +120,9 @@
               cols="12"
               md="6"
             >
-              <v-row>
-                <v-col cols="4">
-                  <v-select
-                    v-model="phoneCode"
-                    :items="phonesSelect"
-                    :rules="[rules.name]"
-                    label="Indicatif *"
-                    hide-details
-                  >
-                    <template #item="{ props }">
-                      <v-list-item
-
-                        v-bind="props"
-                        :title="props.title"
-                        :prepend-avatar="props.flagSrc"
-                        slim
-                      />
-                    </template>
-
-                    <template #selection="{ item }">
-                      <v-img
-                        :src="item.props.flagSrc"
-                        width="30px"
-                      />
-                    </template>
-                  </v-select>
-                </v-col>
-                <v-col cols="8">
-                  <v-text-field
-                    v-model="phoneNumber"
-                    :label="'Téléphone *'"
-                    placeholder="Ex: 6 00 00 00 01"
-                    :rules="[rules.phone]"
-                    @change="changeAttr('phone'); saveToLocalStorage()"
-                  />
-                </v-col>
-              </v-row>
+              <CustomPhoneField
+                v-model="phoneNumber"
+              />
             </v-col>
           </v-row>
         </v-col>
@@ -187,8 +153,7 @@ const nbTeen = ref(0)
 const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
-const phoneCode = ref('+33')
-const phoneNumber = ref('')
+const phone = ref('')
 
 watch(() => currentStep, (value) => {
   if (value === ownStep) {
@@ -206,9 +171,6 @@ watch(deal, () => {
     email.value = deal.value.contact.email
     firstName.value = deal.value.contact.firstName
     lastName.value = deal.value.contact.lastName
-    const { code, number } = extractPhoneDetails(deal.value.contact.phone, phonesSelect)
-    phoneCode.value = code
-    phoneNumber.value = number
   }
 })
 
@@ -217,8 +179,6 @@ const saveToLocalStorage = () => {
     firstname: firstName.value,
     lastname: lastName.value,
     email: email.value,
-    phone: phoneNumber.value,
-    phoneCode: phoneCode.value,
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
@@ -228,8 +188,6 @@ const loadFromLocalStorage = () => {
     firstName.value = storedData.firstname
     lastName.value = storedData.lastname
     email.value = storedData.email
-    phoneNumber.value = storedData.phone
-    phoneCode.value = storedData.phoneCode
   }
 }
 onMounted(() => {
@@ -239,12 +197,10 @@ onMounted(() => {
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
 const emailSchema = z.string().email({ message: 'Adresse email invalide' })
-const phoneSchema = z.string().min(9, { message: 'Numéro de téléphone invalide' })
 
 const rules = {
   name: schemaToRule(nameSchema),
   email: schemaToRule(emailSchema),
-  phone: schemaToRule(phoneSchema),
 }
 
 const nbTravelers = computed(() => nbAdults.value + nbChildren.value + nbTeen.value)
@@ -267,7 +223,7 @@ const submitStepData = async () => {
           nbTeen: nbTeen.value,
           nbUnderAge: nbChildren.value,
           email: email.value,
-          phone: `${phoneCode.value}${phoneNumber.value}`,
+          phone: phone.value,
           firstname: firstName.value,
           lastname: lastName.value,
         })
@@ -275,7 +231,7 @@ const submitStepData = async () => {
       else {
         await updateDeal({
           email: email.value,
-          phone: `${phoneCode.value}${phoneNumber.value}`,
+          phone: phone.value,
           firstname: firstName.value,
           lastname: lastName.value,
         })
@@ -322,7 +278,7 @@ const submitStepData = async () => {
         gotLastMinute: voyage.gotLastMinute,
         // Contacts
         email: email.value,
-        phone: `${phoneCode.value}${phoneNumber.value}`,
+        phone: phone.value,
         firstname: firstName.value,
         lastname: lastName.value,
         optinNewsletter: optinNewsletter.value,
@@ -353,86 +309,6 @@ const changeAttr = (dataAttribute) => {
   //     eventLabel: EVENTS[dataAttribute].eventLabel
   //   })
   // }
-}
-// STATICS DATA
-const phonesSelect = [
-  {
-    title: '+33',
-    props: {
-      flagSrc: '/images/flags/FlagFr4x3.svg',
-    },
-  },
-  {
-    title: '+32',
-    props: {
-      flagSrc: '/images/flags/FlagBe4x3.svg',
-    },
-  },
-  {
-    title: '+1',
-    props: {
-      flagSrc: '/images/flags/FlagCa4x3.svg',
-    },
-  },
-  {
-    title: '+41',
-    props: {
-      flagSrc: '/images/flags/FlagCh4x3.svg',
-    },
-  },
-  {
-    title: '+44',
-    props: {
-      flagSrc: '/images/flags/FlagGb4x3.svg',
-    },
-  },
-  {
-    title: '+39',
-    props: {
-      flagSrc: '/images/flags/FlagIt4x3.svg',
-    },
-  },
-  {
-    title: '+34',
-    props: {
-      flagSrc: '/images/flags/FlagEs4x3.svg',
-    },
-  },
-  {
-    title: '+49',
-    props: {
-      flagSrc: '/images/flags/FlagDe4x3.svg',
-    },
-  },
-  {
-    title: '+352',
-    props: {
-      flagSrc: '/images/flags/FlagLu4x3.svg',
-    },
-  },
-  {
-    title: '+31',
-    props: {
-      flagSrc: '/images/flags/FlagNl4x3.svg',
-    },
-  },
-]
-const extractPhoneDetails = (fullPhone, phonesList) => {
-  const foundCode = phonesList.find(({ title }) =>
-    fullPhone.startsWith(title),
-  )
-
-  if (foundCode) {
-    return {
-      code: foundCode.title,
-      number: fullPhone.replace(foundCode.title, ''),
-    }
-  }
-
-  return {
-    code: '+33', // Default code
-    number: fullPhone,
-  }
 }
 
 defineExpose({

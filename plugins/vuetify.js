@@ -2,6 +2,8 @@ import '@/assets/scss/main.scss'
 import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { VDateInput } from 'vuetify/labs/VDateInput'
+import DayjsAdapter from '@date-io/dayjs'
+import { fr } from 'vuetify/locale'
 
 import { VBtn } from 'vuetify/components'
 
@@ -13,6 +15,10 @@ export default defineNuxtPlugin((app) => {
       sets: {
         mdi,
       },
+    },
+    date: {
+      adapter: DayjsAdapter,
+      local: { fr: fr },
     },
     components: {
       VDateInput,

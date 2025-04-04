@@ -1,0 +1,24 @@
+{
+  "title": "Le Vietnam du Nord, un voyage à la rencontre des populations ethniques",
+  "slug": "voyage-vietnam-nord",
+  "iso": "VNM",
+  "imgSrc2": {
+    "src": "/images/voyages/voyage-vietnam-nord/1jmKyz0Q1q2Aypl75Cwf.jpg",
+    "alt": "1jmKyz0Q1q2Aypl75Cwf"
+  },
+  "imgSrc1": {
+    "src": "/images/voyages/voyage-vietnam-nord/o3WbI2tjTzubZCaz9sIo.jpg",
+    "alt": "o3WbI2tjTzubZCaz9sIo"
+  },
+  "country": "Vietnam",
+  "zoneChapka": 2,
+  "privatisationAvailable": true,
+  "groupeAvailable": false,
+  "duration": "10 jours / 9 nuits",
+  "startingPrice": 1950,
+  "rating": 4.5,
+  "comments": 9,
+  "tooltipChild": "10 ans",
+  "tooltipGroup": "",
+  "dates": []
+}
