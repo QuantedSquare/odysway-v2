@@ -48,7 +48,7 @@ Voici les meilleures expériences de **voyage en amoureux** proposées par Odysw
 
 ## **1\. L'Inde inconnue, l'Arunachal Pradesh en amoureux**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/partir-en-amoureux/CAl11GszTACrDe1lpjM1.jpg"
 alt: Arunachal Pradesh

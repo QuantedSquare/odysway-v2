@@ -290,6 +290,10 @@ function convertButtercmsToNuxtContent(post, imageUrlMap) {
   // Remove any link wrapping around image-container components
   markdown = markdown.replace(/\[(::image-container[\s\S]*?::)\]\((.*?)\)/g, '$1')
 
+  // Clean up image-container components with Markdown formatting
+  markdown = markdown.replace(/([_*]+)::image-container/g, '::image-container')
+  markdown = markdown.replace(/::image-container([_*]+)/g, '::image-container')
+
   // Replace all image URLs with local paths
   markdown = replaceImageUrls(markdown, imageUrlMap)
 

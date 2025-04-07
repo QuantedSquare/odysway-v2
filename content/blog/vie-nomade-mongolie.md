@@ -44,7 +44,7 @@ Nous vous invitons à découvrir [notre article sur les habitants vivant en harm
 
 ## **Un mode de vie en osmose avec les animaux**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/vie-nomade-mongolie/m2wnrqlvTF6BDdecaX3q.jpg"
 alt: undefined
@@ -83,7 +83,7 @@ Il y aurait **environ 900 000 nomades en Mongolie** vivant au sein de différe
 
 ## **Les Tsaatans : une vie de nomade à part entière**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/vie-nomade-mongolie/H09doheWSsuZqmnTACac.jpg"
 alt: undefined
@@ -96,7 +96,7 @@ Dans la province du Khövsgöl dans la taïga, dans le nord de la Mongolie, il e
 
 ## **Immersion chez les nomades avec Odysway : vivre leur vie nomade**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/vie-nomade-mongolie/01mTMHmPSHuHbXM49hIy.jpg"
 alt: undefined

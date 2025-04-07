@@ -74,7 +74,7 @@ Fogo, l'île volcanique du Cap-Vert, est dominée par le majestueux Pico do Fogo
 
 L'ascension du Pico do Fogo est une expérience incontournable pour les randonneurs avides de défis. Le trek jusqu'au sommet du volcan offre des panoramas époustouflants sur les paysages lunaires de l'île. Vous traverserez des champs de lave, des cratères et des villages perchés sur les pentes du volcan. Le village de Chã das Caldeiras, situé au pied du volcan, est le point de départ idéal pour cette aventure. Après l'ascension, prenez le temps de découvrir la culture unique de ce village, qui a été reconstruit après l'éruption de 2014.
 
-### **::image-container
+### ::image-container
 ---
 image-src: "/images/blogs/voyage-au-cap-vert-explorez-larchipel-hors-des-sentiers-battus/iVkgLhypTUu2hJhNnflF.jpg"
 alt: undefined

@@ -38,7 +38,7 @@ image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/SC83Iv
 
 ## **Les calanques accessibles seulement à pied : peut-être les plus beaux sites de la Méditerranée**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/Mp7KOVMITg2RlMMj0mYc.jpg"
 alt: Marseilleveyre.jpg
@@ -60,7 +60,7 @@ De passage dans le coin, ne manquez pas de faire un saut dans la superbe région
 
 ## Les falaises Soubeyranes à Cassis
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/ApAP9G9oTcyw4bLMXqF0.jpg"
 alt: Soubeyranes.jpg
@@ -73,7 +73,7 @@ Découvrez notre [thématique de voyage nature](https://odysway.com/thematiques/
 
 ## Le massif du Garlaban
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/59NiqqsiT4GzhN1pnuCu.jpg"
 alt: Garlaban.jpg
@@ -84,7 +84,7 @@ Surplombant la ville d'Aubagne, **le massif du Garlaban** fleure bon les essence
 
 ## Le village côtier de Girolata
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/68a6CFZDRWW2hJucfdTq.jpg"
 alt: Girolata.jpg
@@ -117,7 +117,7 @@ Haut lieu de la chaîne des Pyrénées, **le Canigou** est le rendez-vous incont
 
 ## La chapelle Notre-Dame du Mai
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/dXgtc5Re2Os4Wx8CuQiX.jpg"
 alt: Chapelle Notre-Dame du Mai.jpeg
@@ -130,7 +130,7 @@ Les sentiers raides ne vous font pas peur ? Dans ce cas, faites cap vers **la ch
 
 ### Le village de Dormillouse
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/nGbpBa28TJSvyaBUaMgg.jpg"
 alt: Dormillouse.jpg

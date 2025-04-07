@@ -46,7 +46,7 @@ A cette époque, un grand nombre de chevaux sauvages et de bovins envahissent le
 
 ## Un mode de vie à leur image : austère mais simple
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/traces-gauchos-argentine/4UDlyAIaRAChNZ9y0w5I.jpg"
 alt: 

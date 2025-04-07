@@ -62,42 +62,42 @@ Alors je suis très intéressé par le voyage en [Mongolie en terre chamane](htt
 
 ## **Quelques photos souvenirs de Christophe...**
 
-## **::image-container
+## ::image-container
 ---
 image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg"
 alt: Christophe_VoyageSahara2.jpeg
 ---
 ::**
 
-## **::image-container
+## ::image-container
 ---
 image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/PDysjyf4SxP8wMAeHPNQ.jpg"
 alt: Christophe_VoyageSahara3.jpeg
 ---
 ::**
 
-## **::image-container
+## ::image-container
 ---
 image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg"
 alt: Christophe_VoyageSahara5.jpeg
 ---
 ::**
 
-## **::image-container
+## ::image-container
 ---
 image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/LAiEuloTQyOv2USVrijC.jpg"
 alt: Christophe_VoyageSahara6.jpeg
 ---
 ::**
 
-## **::image-container
+## ::image-container
 ---
 image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/2B9NY3UdQC2IVLuxbFaa.jpg"
 alt: Christophe_VoyageSahara7.jpeg
 ---
 ::**
 
-## **::image-container
+## ::image-container
 ---
 image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/78yaW9KGTDm9lSfz9inw.jpg"
 alt: Christophe_VoyageSahara9.jpeg

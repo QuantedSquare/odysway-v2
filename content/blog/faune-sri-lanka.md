@@ -88,7 +88,7 @@ Autre animal sacré, cette fois dans l’hindouisme, **le singe est probablemen
 
 ### Les oiseaux
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/faune-sri-lanka/nqC60PbcT4ONUg3qYuqy.jpg"
 alt: 
@@ -101,7 +101,7 @@ Avec pas moins de 482 espèces, **les oiseaux** feront le bonheur des ornithol
 
 ### Les reptiles
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/faune-sri-lanka/wnfsz11QuiVe2z3qytNO.jpg"
 alt: 
@@ -114,7 +114,7 @@ _Le crocodile, reptile présent au Sri Lanka_
 
 ### La faune aquatique du Sri Lanka
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/faune-sri-lanka/V7rqWAqTT7a5QKH74UlD.jpg"
 alt: 

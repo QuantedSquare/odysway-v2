@@ -80,7 +80,7 @@ Le problème de cette délocalisation est qu’avec l’avènement du tourisme d
 
 [Découvrez nos voyages en Amérique du Sud.](https://odysway.com/destinations/amerique-du-sud)
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/tribu-embera-au-panama/B0lnzCtvS06pSBm3FGUi.jpg"
 alt: 
@@ -176,7 +176,7 @@ Plus haut dans l’article, nous parlions des effets néfastes du tourisme sur l
 
 Nous avons créé cette expérience de voyage après nous être longuement entretenu avec le chef de la tribu Embera. Il souhaite lui aussi préserver son village du tourisme de masse, mais il voudrait également recevoir quelques voyageurs.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/tribu-embera-au-panama/9WjSJvST6C8jSy2bTIEX.jpg"
 alt: 

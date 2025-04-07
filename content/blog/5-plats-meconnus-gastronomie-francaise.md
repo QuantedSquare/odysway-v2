@@ -66,7 +66,7 @@ Le dampfnudel accompagne parfaitement les soupes de légumes, le chou et même l
 
 ## Parmi les plats méconnus de la gastronomie française, le pitilig est à déguster absolument
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/K3iBaxkXSg2ppaBSoGNd.jpg"
 alt: undefined
@@ -77,7 +77,7 @@ alt: undefined
 
 ## La morbiflette pour les amoureux des plats à base de fromage fondu
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/xvg4qvz5T4vGZ5egrdgN.jpg"
 alt: undefined

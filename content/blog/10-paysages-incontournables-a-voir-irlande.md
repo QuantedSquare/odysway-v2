@@ -97,7 +97,7 @@ Moins connues que les précédentes mais qui valent aussi le détour, l**es fala
 
 Au large de la côte ouest de l’Irlande, **Skellig Michael est une île sauvage** accessible uniquement entre avril et octobre et au bon vouloir de la météo. S’élevant à 700 m au-dessus de la mer, **elle abrite les ruines d’un ancien monastère**. Pour y accéder, il suffit de monter les 600 marches taillées autrefois par les moines directement dans le roc. Une fois arrivé, vous pourrez admirer deux églises, six cellules ainsi que deux oratoires. Skellig Michael est par ailleurs l’habitat des puffins, ces oiseaux marins blanc et noir et au bec orange. Cette île a servi de lieu de tournage pour les épisodes VII et VIII de la saga Star Wars.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/10-paysages-incontournables-a-voir-irlande/Zfj2uuUgTjusWOwlTcNv.jpg"
 alt: 

@@ -38,7 +38,7 @@ Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter d
 
 ## Planifier son départ en vacances pour gagner en sérénité
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/comment-gagner-serenite-vacances/SijfoYoR0yYy9yljTx4X.jpg"
 alt: undefined

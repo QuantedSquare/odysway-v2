@@ -72,7 +72,7 @@ Le tigre, victime de braconnage pour sa fourrure, ainsi que pour ses organes.
 
 Bien que l’effet de serre soit un phénomène naturel, **l’augmentation des gaz à effet de serre a pour origine les activités humaines, entraînant ainsi le réchauffement climatique**. Il s’agit notamment de la production d’énergie, de carburant, la déforestation, l’agriculture, l’élevage et la pollution des mers et des océans. Certains animaux sont en première ligne face au réchauffement climatique. Tel est le cas des ours polaires qui voient leur habitat de glace fondre d’année en année. Mais ce n’est pas tout, les phoques, leur principale source de nourriture, désertent la banquise à la recherche d’un autre milieu plus favorable pour vivre. Il n’est pas rare de voir des ours amaigris, errer à la recherche de quoi manger.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/causes-disparition-animaux/nwONeL38TGiL1VMvNTxi.jpg"
 alt: 
@@ -85,7 +85,7 @@ _Les ours polaires voient leur habitat de glace fondre face au réchauffement cl
 
 Parce que nous sommes dans une société de consommation excessive, **la surexploitation** est malheureusement devenue inévitable. Et elle **occasionne de graves conséquences sur notre biodiversité et est donc l’une des causes de la disparition des animaux**. Prenons un exemple avec la surpêche qui a pour conséquence la diminution significative de certains poissons. En effet, la pêche massive les empêche de se reproduire normalement. Ce phénomène est par ailleurs accentué avec la pêche illégale. La surexploitation se retrouve également dans la déforestation (pour le bois) et la chasse.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/causes-disparition-animaux/zU1F6f89QdSeb8RbNzJt.jpg"
 alt: undefined

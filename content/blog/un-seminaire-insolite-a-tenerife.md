@@ -55,7 +55,7 @@ _Tenerife, l’île au printemps perpétuel_
 
 Tout comme les 6 autres îles de l’archipel (Fuerteventura, La Gomera, Grande Canarie, El Hierro, Lanzarote, La Palma), l’île de Tenerife est une île volcanique. Elle s’est formée des suites de plusieurs éruptions, dont la dernière date de 1909. Le Mont Teide, nom du volcan de l’île, est le plus haut point de Tenerife. A 3718 mètres, c’est également le point culminant d’Espagne. Éteint aujourd’hui, le volcan est aussi le troisième plus haut volcan du monde !
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/pN63hJs3SxWV2KCfAqug.jpg"
 alt: 

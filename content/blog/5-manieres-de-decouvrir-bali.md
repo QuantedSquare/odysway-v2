@@ -46,7 +46,7 @@ Nous vous avons sélectionné pour vous 5 expériences pour découvrir Bali autr
 
 ## **Découvrir la plongée en parcourant les fonds marins du Lagon Bleu !**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-manieres-de-decouvrir-bali/nt77PWQWRG9BV19nLmQi.jpg"
 alt: indéfini
@@ -57,7 +57,7 @@ Le Lagon Bleu, petite baie dotée d'une plage de sable blanc. En plongeant dans 
 
 ## **Baladez-vous dans les rizières de Jatiluwih reconnues par l'UNESCO**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-manieres-de-decouvrir-bali/jNeSpI7QLaDRsHumAxvQ.jpg"
 alt: indéfini
@@ -68,7 +68,7 @@ Un site classé au patrimoine mondial de l'UNESCO pour sa beauté naturelle et s
 
 ## **Apprenez à cuisiner des plats typiques balinais et surtout, il faudra déguster vos mets.**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-manieres-de-decouvrir-bali/L7pWdxHVSSieLOtj6p28.jpg"
 alt: indéfini
@@ -90,7 +90,7 @@ Situé sur la côte Est de Bali, Amed offre des paysages magnifiques avec ses co
 
 ## **Immersion dans une famille balinaise**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-manieres-de-decouvrir-bali/TzZha60oSieofS0SjGVP.jpg"
 alt: indéfini

@@ -48,7 +48,7 @@ Plus qu’une simple méthode de méditation, le vipassana est un véritable art
 
 Il n’y a pas de restriction particulière pour pratiquer le vipassana. C’est une méditation douce, accessible à tous mais qui demande une certaine discipline et une pratique régulière. En effet, il faut souvent plusieurs semaines pour en constater les effets. **Cette méthode se base principalement sur la respiration**, point d’orgue à toute bonne concentration et attention. Et en pratique, **comment se déroule une retraite de vipassana au Sri Lanka ?**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/vipassana-sri-lanka/6qGARsZGSJGmIPlMmzoV.jpg"
 alt: 

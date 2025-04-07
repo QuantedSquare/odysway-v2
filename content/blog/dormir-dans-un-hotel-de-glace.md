@@ -51,7 +51,7 @@ Courant octobre, lorsque le froid et la neige reviennent, les hôtels de glace (
 
 Durant la phase de construction, les architectes font particulièrement attention à la qualité des blocs de glace utilisés. Ils s’assurent de leur parfaite transparence pour que le rendu soit impeccable et de la minutie dans le découpage des blocs de glace. Un vrai travail d’artiste qui réalise une œuvre d’art.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/dormir-dans-un-hotel-de-glace/TvPR8pT2S0SnUySXUB8L.jpg"
 alt: 

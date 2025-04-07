@@ -46,7 +46,7 @@ Mais faire du sport en voyage ne se résume pas à fréquenter la salle de sport
 
 ## **Allier sport et découverte en ville**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/sport-decouverte-voyage/s4qltoo1TNaWfsTBAOOm.jpg"
 alt: 

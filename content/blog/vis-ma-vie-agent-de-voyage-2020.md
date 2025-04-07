@@ -146,7 +146,7 @@ Nous contactons donc de nombreuses agences que nous avons sélectionnées et nom
 
 ## **7\. Mode survivor activé** 
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/bsfrpHO1Q6eb1CD9rwbF.jpg"
 alt: undefined
@@ -163,7 +163,7 @@ Après quelques échanges avec nos voyageurs qui sont séduits par l'idée, nous
 
 ## **8\. Fin d'année, on ne lâche rien**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/PEorPO9QymdI32nJ5M5Q.jpg"
 alt: undefined

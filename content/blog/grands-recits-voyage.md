@@ -83,7 +83,7 @@ _Le tour du monde_ _en 80 jours_ de Jules Verne
 
 ## _Le tour du monde en 72 jours_ de Nellie Bly
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/grands-recits-voyage/6SAK8dEJStSMlUolHf3S.jpg"
 alt: 

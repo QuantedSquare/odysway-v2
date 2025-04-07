@@ -55,7 +55,7 @@ Malgré cette position glorieuse, cela n’a pas empêché son exploitation lors
 
 ## La domestication de l’éléphant en Thaïlande
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/guVqStJTNa8EsZLJcU98.jpg"
 alt: 
@@ -106,7 +106,7 @@ Dans un tout autre esprit, Odysway vous propose son expérience au Sri Lanka. Da
 
 ## Aller à la rencontre de l’éléphant en Thaïlande dans son milieu naturel
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/zkO7AGOTuqGWXQYoHAFp.jpg"
 alt: 

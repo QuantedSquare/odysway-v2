@@ -66,7 +66,7 @@ Pendant la période hivernale, vous ne pouvez décemment pas venir en Finlande s
 
 ## A faire absolument en Finlande : le sauna !
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-choses-incroyables-faire-finlande/fOLVmn5ZTyftDVLOR2x6.jpg"
 alt: undefined

@@ -40,7 +40,7 @@ De nos jours, il n’est plus rare de croiser des vacanciers à vélo. En solo, 
 
 Le **[slow tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue)**, voilà un terme que l’on entend de plus en plus. En voyage, il s’agit de **prendre son temps**, de redécouvrir les plaisirs simples, de profiter pleinement de l’environnement qui nous entoure. Fini les vacances à courir à droite et à gauche pour voir le plus de choses possible. Désormais, la qualité prévaut sur la quantité. C’est sans conteste l’un des **bienfaits du vélo en voyage**.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-bienfaits-velo-voyage/sbdKGfNHTFyRCsagb03G.jpg"
 alt: 
@@ -53,7 +53,7 @@ _Prendre son vélo et partir à la découverte de paysages magnifiques_
 
 ## **2\. Faire de très belles rencontres**
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-bienfaits-velo-voyage/XQ5SIvc3STeKtn3MQSZO.jpg"
 alt: 
@@ -96,7 +96,7 @@ Loin d’être une activité solitaire, **le vélo se pratique aussi et surtout
 
 ## **5\. Découvrir des lieux que l’on n’aurait pas forcément visités**
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-bienfaits-velo-voyage/rbkW4DVSoaUDjfjQWSFg.jpg"
 alt: 
@@ -111,7 +111,7 @@ Alors, faire du vélo en voyage, ça vous tente ?
 
 ## **Partez à la découverte du Sri Lanka à vélo !**
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/5-bienfaits-velo-voyage/zruYwmXGQXaJtX2n3nCF.jpg"
 alt: 

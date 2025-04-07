@@ -55,7 +55,7 @@ Ce n’est donc pas un mais des voyages qui vous tendent les bras.
 
 ## Quand voyager en France ?
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/sejours-france/WpUKY1F5RpSd9mitdxnn.jpg"
 alt: France Season.jpg
@@ -70,7 +70,7 @@ Avec ses nombreux massifs, la France propose un large choix de stations de monta
 
 ## Où partir en France cet été ?
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg"
 alt: France en ete.jpg
@@ -123,7 +123,7 @@ Pour des **vacances originales** et/ou **en famille en France**, explorez le pay
 
 ### Découvrir son magnifique littoral
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/sejours-france/P2JH1W0oSCaUGpjvDFL7.jpg"
 alt: Littoral France.jpg

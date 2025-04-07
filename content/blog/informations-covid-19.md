@@ -154,7 +154,7 @@ Voyage Retour 
 
 **CANADA**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/informations-covid-19/5YQkErTsQZWiQLGCVFFg.jpg"
 alt: undefined

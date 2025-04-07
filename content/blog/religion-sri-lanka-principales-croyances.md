@@ -70,7 +70,7 @@ Seconde religion du Sri Lanka, **l’hindouisme concerne 15% de la population**
 
 Les temples, appelés kovils, se distinguent par leur aspect très coloré comparé aux couleurs plutôt sobres des temples bouddhistes. Plusieurs fêtes religieuses rythment la vie des hindouistes. Citons **le festival de Kataragama** qui se déroule en été et qui célèbre le Dieu de la guerre Skanda Kumara et sa déesse Nalei. Durant cette fête ont lieu des cérémonies de purification mais aussi des rituels corporels assez impressionnants. Par exemple, marcher sur des braises ou se transpercer le corps avec des objets métalliques.
 
-_::image-container
+::image-container
 ---
 image-src: "/images/blogs/religion-sri-lanka-principales-croyances/dXEfrQpPRqeeVBmO5DEQ.jpg"
 alt: 

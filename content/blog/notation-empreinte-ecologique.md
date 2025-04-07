@@ -42,7 +42,7 @@ Ce quatrième niveau correspond à un voyage en France ou proche Europe sans pre
 
 Empreinte carbone estimée : 622 kg CO2 pour un séjour de 5 jours en moyenne, par voyageur.
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/notation-empreinte-ecologique/Yx1zY7OQQDOtynI9cOUp.jpg"
 alt: juratourisme_11848a5.jpg

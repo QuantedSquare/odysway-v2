@@ -52,7 +52,7 @@ Voici les meilleures expériences de **road trip** proposées par Odysway :
 
 ## **1\. Road Trip organisé sur les routes du Kirghizistan**
 
-**::image-container
+::image-container
 ---
 image-src: "/images/blogs/roadtrip-organise/X1cLh2aSEmq9WggtGMVT.jpg"
 alt: kirghizistan-song-kul.jpg
