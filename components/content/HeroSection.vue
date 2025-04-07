@@ -17,22 +17,10 @@
             cols="12"
             md="auto"
           >
-            <!-- <v-img
-              contain
-              width="100%"
-              class="img-shadow"
-              lazy-src="/images/Laponie-(1).webp"
-              :src="img('/logos/logo_blanc.png', { format: 'webp', quality: 70 })"
-            /> -->
             <h1 class="text-h3 text-md-h1">
               <slot name="title" />
-              <!-- <span class="responsive-title text-no-wrap">
-                <slot name="title" />
-              </span>
-              <span class="responsive-subtitle text-no-wrap">
-                <slot name="title-2" />
-              </span> -->
             </h1>
+            <slot name="subtitle" />
           </v-col>
         </v-row>
         <v-row
