@@ -12,12 +12,12 @@ published: false
 publishedAt: "2022-02-28 15:36:00+00:00"
 tags: "Actualités"
 categories: ""
-displayedImg: "/images/blogs/Responsable-Voyageurs-CDI-HF.jpg"
+displayedImg: "/images/blogs/offre_responsable_voyageurs_cdi/GWp2YHouScG2ZOv9ytJr.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Responsable-Voyageurs-CDI-HF.jpg"
+image-src: "/images/blogs/offre_responsable_voyageurs_cdi/GWp2YHouScG2ZOv9ytJr.jpg"
 ---
 #publication-date
 28 février 2022
@@ -31,7 +31,7 @@ Responsable Voyageurs - CDI - H/F
 
 ::section-container
 ---
-image-src: "/images/blogs/Responsable-Voyageurs-CDI-HF.jpg"
+image-src: "/images/blogs/offre_responsable_voyageurs_cdi/GWp2YHouScG2ZOv9ytJr.jpg"
 ---
 #content
 **À propos**
@@ -100,5 +100,5 @@ Au-delà de tes compétences, nous recherchons surtout quelqu’un qui sera forc
 *   **Télétravail :** 2 jours par semaine
 *   **Rémunération :** Selon profil
 
-Envie de rejoindre l’aventure ? Envoie ton CV à romain.masina@odysway.com et dis-nous pourquoi c’est toi que nous devrions recruter !
+Envie de rejoindre l’aventure ? Envoie ton CV à [romain.masina@odysway.com](mailto:romain.masina@odysway.com) et dis-nous pourquoi c’est toi que nous devrions recruter !
 ::

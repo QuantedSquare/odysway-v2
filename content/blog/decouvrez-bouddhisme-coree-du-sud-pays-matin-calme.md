@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-05-03 14:56:00+00:00"
 tags: "Asie, Developpement personnel, Sports"
 categories: "Culture et decouverte, Developpement Personnel"
-displayedImg: "/images/blogs/Decouvrez-le-bouddhisme-au-Pays-du-Matin-Calme-:-la-Coree-du-Sud.jpg"
+displayedImg: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/UJkcS3KS9qzUuHvVWLX7.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Decouvrez-le-bouddhisme-au-Pays-du-Matin-Calme-:-la-Coree-du-Sud.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/UJkcS3KS9qzUuHvVWLX7.jpg"
 ---
 #publication-date
 3 mai 2019
@@ -31,12 +31,12 @@ En juin 2019, Odysway a été invité au salon international du tourisme de Séo
 
 ::section-container
 ---
-image-src: "/images/blogs/Decouvrez-le-bouddhisme-au-Pays-du-Matin-Calme-:-la-Coree-du-Sud.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/UJkcS3KS9qzUuHvVWLX7.jpg"
 ---
 #content
 En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d’y trouver de nouvelles expériences. C’est dans ce cadre que nous avons pu découvrir les trésors cachés et encore méconnus du tourisme de masse de cette fascinante Terre de Contrastes.
 
-Entre gratte-ciels et temples bouddhistes, les habitants du Pays du Matin Calme semblent avoir trouvé l’harmonie parfaite entre vie moderne et sérénité. Un exemple à suivre pour beaucoup d’entre nous, souvent happés par la frénésie du quotidien… Apprenez à allier vie moderne et paix intérieure en méditant dans les nombreux temples bouddhistes du pays. Découvrez nos voyages en Asie.
+Entre gratte-ciels et temples bouddhistes, les habitants du Pays du Matin Calme semblent avoir trouvé l’harmonie parfaite entre vie moderne et sérénité. Un exemple à suivre pour beaucoup d’entre nous, souvent happés par la frénésie du quotidien… Apprenez à allier vie moderne et paix intérieure en méditant dans les nombreux temples bouddhistes du pays. [Découvrez nos voyages en Asie.](https://odysway.com/destinations/asie)
 
 ## Le Pays du Matin Calme : ce pays qui inspire tant la sérénité
 
@@ -46,7 +46,7 @@ C’est au cours du XIXe siècle que les missionnaires européens traduisirent l
 
 ::image-container
 ---
-image-src: "/images/blogs/pbbRZhRRGNxIz4Y1LAAF-1742841110158.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/pbbRZhRRGNxIz4Y1LAAF.jpg"
 alt: 
 ---
 ::
@@ -59,7 +59,7 @@ Une expression aujourd’hui largement utilisée par les Coréens, qui, malgré 
 
 ::image-container
 ---
-image-src: "/images/blogs/rQelH2nTQaPccI8iZMsE-1742841110680.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/rQelH2nTQaPccI8iZMsE.jpg"
 alt: 
 ---
 ::
@@ -85,7 +85,7 @@ Dans le Bouddhisme Mahayana, il y a six valeurs à perfectionner pour compléter
 
 ::image-container
 ---
-image-src: "/images/blogs/DrvMvZdQVYhdR5LBni4Q-1742841111195.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/DrvMvZdQVYhdR5LBni4Q.jpg"
 alt: 
 ---
 ::
@@ -104,7 +104,7 @@ Bulguksa est classe au patrimoine mondial de L'UNESCO. C'est un véritable trés
 
 ::image-container
 ---
-image-src: "/images/blogs/Y5pgTjR4CShDKxZfkJaQ-1742841111715.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/Y5pgTjR4CShDKxZfkJaQ.jpg"
 alt: 
 ---
 ::
@@ -115,7 +115,7 @@ Avec ses nombreuses reliques culturelles, pagodes, ponts, statues, stupas et aut
 
 ::image-container
 ---
-image-src: "/images/blogs/roh2pC8uTMSbnANhIg0j-1742841112237.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/roh2pC8uTMSbnANhIg0j.jpg"
 alt: 
 ---
 ::
@@ -126,7 +126,7 @@ L’énergie merveilleuse de ce lieu unique, si ressourçante, vous envahira de 
 
 ::image-container
 ---
-image-src: "/images/blogs/cfvEvIMSHKaYtGeNm0jQ-1742841112758.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/cfvEvIMSHKaYtGeNm0jQ.jpg"
 alt: 
 ---
 ::
@@ -138,7 +138,7 @@ Odysway a eu la chance de découvrir ce sanctuaire de paix unique durant les cé
 
 ::image-container
 ---
-image-src: "/images/blogs/O4hA0xTFRQmmN926ddsT-1742841113276.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/O4hA0xTFRQmmN926ddsT.jpg"
 alt: 
 ---
 ::
@@ -148,7 +148,7 @@ _dans une des allées du temple Bulguksa_
 
 Ce grand festival des lanternes, dont les dates varient en fonction des années, est aussi appelé Yeon Deung Hoe et est célèbre dans toute la Corée du Sud traditionnellement à partir du 8ème jour du 4ème mois du calendrier lunaire chinois. Il a pour valeur fondamentale, l’idée d’un monde sans préjugés ni discriminations.
 
-Si vous êtes intéressé par les destinations spirituelles, nous vous invitons à consulter cet article.
+Si vous êtes intéressé par les destinations spirituelles, [nous vous invitons à consulter cet article.](https://odysway.com/top-5-destinations-voyage-spirituel)
 
 ## **La Grotte de Seokguram**
 
@@ -158,7 +158,7 @@ La grotte renferme une statue monumentale de Bouddha de 3,5 mètres regardant la
 
 ::image-container
 ---
-image-src: "/images/blogs/GdSXj0fHQmuja5BrOPuG-1742841113793.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/GdSXj0fHQmuja5BrOPuG.jpg"
 alt: 
 ---
 ::
@@ -169,7 +169,7 @@ Nous y avons accédé par la route mais il est possible de rejoindre la grotte �
 
 ::image-container
 ---
-image-src: "/images/blogs/CHhlF8LdT3WjbfCZmRUe-1742841114312.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/CHhlF8LdT3WjbfCZmRUe.jpg"
 alt: 
 ---
 ::
@@ -184,7 +184,7 @@ Contraste entre philosophie bouddhiste et vie moderne d’autant plus marqué, l
 
 ::image-container
 ---
-image-src: "/images/blogs/SofKo8vTjyC5V7QWJm12-1742841114835.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/SofKo8vTjyC5V7QWJm12.jpg"
 alt: 
 ---
 ::
@@ -195,7 +195,7 @@ C’est le cas notamment au temple Jogyesa qui se situe en plein cœur du quarti
 
 ::image-container
 ---
-image-src: "/images/blogs/zBdTB0KNSrCrjdQRz8tN-1742841115357.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/zBdTB0KNSrCrjdQRz8tN.jpg"
 alt: 
 ---
 ::
@@ -207,7 +207,7 @@ Arrivé au temple, une séance de méditation vous attend, libre, assis en posit
 
 ::image-container
 ---
-image-src: "/images/blogs/LfIumR6JSoOIL9eKFp6U-1742841115874.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/LfIumR6JSoOIL9eKFp6U.jpg"
 alt: 
 ---
 ::
@@ -218,7 +218,7 @@ Vous saurez également apprécier l’authenticité de la promenade nocturne aut
 
 ::image-container
 ---
-image-src: "/images/blogs/cJW5z04QTaWR1u3i7dNb-1742841116395.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/cJW5z04QTaWR1u3i7dNb.jpg"
 alt: 
 ---
 ::
@@ -229,7 +229,7 @@ La beauté du lieu vous envahira dès les premiers instants. Elle est tout simpl
 
 ::image-container
 ---
-image-src: "/images/blogs/A2907CXtQT2N1oLIRplv-1742841116914.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/A2907CXtQT2N1oLIRplv.jpg"
 alt: 
 ---
 ::
@@ -241,12 +241,12 @@ Vous l’aurez compris, le bouddhisme est omniprésent partout en Corée du Sud,
 
 ::image-container
 ---
-image-src: "/images/blogs/3kBGU2RGKEFyvEObaH6Q-1742841117438.jpg"
+image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/3kBGU2RGKEFyvEObaH6Q.jpg"
 alt: 
 ---
 ::
 
 _Recueillement d'un croyant dans l'enceinte principale du temple Jogyesa_
 
-Si vous êtes fan de ce types d'expériences, mêlant immersion et pratique sportive, jetez un œil à nos voyages centrés autour de la thématique "Sport" sur le site d'Odysway !
+Si vous êtes fan de ce types d'expériences, mêlant immersion et pratique sportive, jetez un œil à [nos voyages centrés autour de la thématique "Sport" sur le site d'Odysway !](https://odysway.com/experiences?date=&categorie=Sport&destination=)
 ::

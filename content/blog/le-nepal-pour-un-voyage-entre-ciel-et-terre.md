@@ -12,12 +12,12 @@ published: false
 publishedAt: "2022-06-01 12:00:00+00:00"
 tags: "Asie, conseils, Nepal"
 categories: "Blog"
-displayedImg: "/images/blogs/Le-Nepal-pour-un-voyage-entre-ciel-et-terre.jpg"
+displayedImg: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiFTA6zFVo7wion.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-Nepal-pour-un-voyage-entre-ciel-et-terre.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiFTA6zFVo7wion.jpg"
 ---
 #publication-date
 1 juin 2022
@@ -31,7 +31,7 @@ Le Népal, pour un voyage entre ciel et terre
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-Nepal-pour-un-voyage-entre-ciel-et-terre.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiFTA6zFVo7wion.jpg"
 ---
 #content
 Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays hautement spirituel, il est une destination majeure pour le trekking. Un **voyage au Népal**, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
@@ -40,7 +40,7 @@ Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Boudd
 
 ::image-container
 ---
-image-src: "/images/blogs/TP3JvjtTuypt9TNNEbe4-1742840673853.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/TP3JvjtTuypt9TNNEbe4.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -48,7 +48,7 @@ link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Bl
 
 Doté d’un **incroyable patrimoine**, à la fois naturel, historique et religieux, **le Népal** est une destination qui ne laisse pas indifférente. Il y a d’abord l’Himalaya où les **monts Everest et Annapurna** agissent tels des aimants poussant les voyageurs à s’approcher toujours plus près. Et puis, ces paysages, époustouflants, qui oscillent entre vallées verdoyantes, jungles tropicales, forêts luxuriantes et bien sûr montagnes gigantesques. Un environnement dans lequel évolue une **faune intrigante et majestueuse** que l’on peut apercevoir dans les différents parcs nationaux.
 
-Pays de naissance de **Bouddha**, le Népal est empreint de spiritualité. **Temples et stupas** ponctuent les paysages ruraux et urbains du pays et vous plongent pleinement dans la culture népalaise. Pour une expérience insolite lors de votre **voyage au Népal**, nous vous proposons de vivre auprès de moines lors d’une immersion dans une école bouddhiste.
+Pays de naissance de **Bouddha**, le Népal est empreint de spiritualité. **Temples et stupas** ponctuent les paysages ruraux et urbains du pays et vous plongent pleinement dans la culture népalaise. Pour une expérience insolite lors de votre **voyage au Népal**, nous vous proposons de vivre auprès de moines lors d’une [immersion dans une école bouddhiste](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog).
 
 Ne faites surtout pas l’impasse sur les villes de **Katmandou**, Bodnath, Lumbini ou encore Pokhara ainsi que sur les pittoresques villages de montagne. Entre trésors architecturaux et activités sportives à sensations, ce **voyage au Népal** sera certainement l’un des plus marquant de votre vie.
 
@@ -64,7 +64,7 @@ Mars et avril sont aussi faisables, néanmoins la chaleur sera au rendez-vous. L
 
 ::image-container
 ---
-image-src: "/images/blogs/Lw21oYPJRP6htMWBtcQ4-1742840674395.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/Lw21oYPJRP6htMWBtcQ4.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -80,7 +80,7 @@ Autre lieu qui mérite toute votre attention : **la vallée de Katmandou**. Ave
 
 ::image-container
 ---
-image-src: "/images/blogs/SxAFlxERpms3Y5sSyTFD-1742840674929.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/SxAFlxERpms3Y5sSyTFD.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -92,7 +92,7 @@ Située sur les rives du lac Phewa, la petite ville de **Pokhara** dégage un ch
 
 ::image-container
 ---
-image-src: "/images/blogs/jiuuCftrRYKu2mbETYte-1742840675463.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/jiuuCftrRYKu2mbETYte.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -104,7 +104,7 @@ Destination phare pour le **trekking**, le Népal ouvre les portes du toit du mo
 
 ::image-container
 ---
-image-src: "/images/blogs/YIap9qAYTf2ImajQLaxR-1742840676004.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/YIap9qAYTf2ImajQLaxR.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -121,7 +121,7 @@ Pour les amoureux de nature, un **voyage au Népal** est idéal pour s’immerge
 
 ::image-container
 ---
-image-src: "/images/blogs/rtyHRNBpSAK3UtSWE479-1742840676550.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/rtyHRNBpSAK3UtSWE479.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -133,7 +133,7 @@ Lieu de naissance de **Bouddha**, **Lumbini** est un site sacré et un haut lieu
 
 ::image-container
 ---
-image-src: "/images/blogs/PZm5HfoSjmlv9BgW5CkE-1742840677086.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/PZm5HfoSjmlv9BgW5CkE.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---
@@ -145,7 +145,7 @@ Impensable de prendre part à un **voyage au Népal** sans goûter à la **cuisi
 
 ::image-container
 ---
-image-src: "/images/blogs/ZeZQFtCrSHCuSFUjZuNl-1742840677630.jpg"
+image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/ZeZQFtCrSHCuSFUjZuNl.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Blog&utm_medium=SEO&utm_campaign=N%C3%A9palBlog
 ---

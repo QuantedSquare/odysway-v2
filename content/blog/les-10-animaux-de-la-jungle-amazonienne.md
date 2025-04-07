@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-12-20 08:25:00+00:00"
 tags: "Amerique du Sud, Animaux, Brésil, Grands espaces"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Les-10-animaux-de-la-jungle-amazonienne.jpg"
+displayedImg: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/RBKcpa1FQMK6XlASNr2Q.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Les-10-animaux-de-la-jungle-amazonienne.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/RBKcpa1FQMK6XlASNr2Q.jpg"
 ---
 #publication-date
 20 décembre 2018
@@ -31,7 +31,7 @@ Les 10 animaux de la jungle amazonienne
 
 ::section-container
 ---
-image-src: "/images/blogs/Les-10-animaux-de-la-jungle-amazonienne.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/RBKcpa1FQMK6XlASNr2Q.jpg"
 ---
 #content
 Avec une surface de 5,5 millions de km², la forêt amazonienne est l’une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité où des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la déforestation. Odysway vous fait découvrir un panel de 10 animaux de la jungle amazonienne.
@@ -40,7 +40,7 @@ Avec une surface de 5,5 millions de km², la forêt amazonienne est l’une des 
 
 ::image-container
 ---
-image-src: "/images/blogs/qwfBAuDTR7SdbvzZnYt3-1742842099276.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/qwfBAuDTR7SdbvzZnYt3.jpg"
 alt: 
 ---
 ::
@@ -53,7 +53,7 @@ Egalement surnommée la grenouille à flèches empoisonnées, **la dendrobate b
 
 ::image-container
 ---
-image-src: "/images/blogs/GakSbcobTH2YWLOmNeJA-1742842099801.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/GakSbcobTH2YWLOmNeJA.jpg"
 alt: 
 ---
 ::
@@ -66,7 +66,7 @@ C’est l’un des perroquets les plus bruyants parmi tous ses congénères. **
 
 ::image-container
 ---
-image-src: "/images/blogs/h4DzO6MWTzqwDiVvmsfJ-1742842100320.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/h4DzO6MWTzqwDiVvmsfJ.jpg"
 alt: 
 ---
 ::
@@ -77,7 +77,7 @@ alt:
 
 ::image-container
 ---
-image-src: "/images/blogs/aMjMv0niTNuYSPVckqCI-1742842100901.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/aMjMv0niTNuYSPVckqCI.jpg"
 alt: 
 ---
 ::
@@ -88,7 +88,7 @@ La jungle amazonienne est traversée par l’un des fleuves les plus longs du mo
 
 ::image-container
 ---
-image-src: "/images/blogs/zvpeRcIWTWuCTjUU6DcJ-1742842101420.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/zvpeRcIWTWuCTjUU6DcJ.jpg"
 alt: 
 ---
 ::
@@ -101,7 +101,7 @@ _Dauphin de rivière au Brésil_
 
 ::image-container
 ---
-image-src: "/images/blogs/o3IJG8ucTQaWlhHrbHb8-1742842101934.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/o3IJG8ucTQaWlhHrbHb8.jpg"
 alt: 
 ---
 ::
@@ -112,7 +112,7 @@ alt:
 
 ::image-container
 ---
-image-src: "/images/blogs/tfM7DiOJSWCLqiIdIKFJ-1742842102473.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/tfM7DiOJSWCLqiIdIKFJ.jpg"
 alt: 
 ---
 ::
@@ -123,7 +123,7 @@ Voici un animal plutôt imposant. **L’anaconda pèse entre 200 et 250 kg et �
 
 ::image-container
 ---
-image-src: "/images/blogs/s61vFPRMQIm5LpKEkSPs-1742842103006.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/s61vFPRMQIm5LpKEkSPs.jpg"
 alt: 
 ---
 ::
@@ -134,18 +134,18 @@ alt:
 
 ::image-container
 ---
-image-src: "/images/blogs/h9u4hL8WRWG1G4xQObjt-1742842103552.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/h9u4hL8WRWG1G4xQObjt.jpg"
 alt: 
 ---
 ::
 
 ## 10\. Le jaguar, le roi de la jungle amazonienne
 
-Dans la savane, le roi c’est le lion. Dans la forêt amazonienne, c’est **le jaguar**. Ce mammifère ne craint personne, même pas l’homme. Il s’attaque à n’importe quelle proie. Celle-ci ne lui résiste pas longtemps d’ailleurs, tant sa mâchoire est puissante. **C’est un prédateur redouté et redoutable**. Chassant la nuit, il se repose en journée, souvent en hauteur dans les arbres. Retrouvez la rencontre tant attendue de Romain, le fondateur d’Odysway, avec un jaguar lors de son aventure en Amérique du Sud. Lire le récit sur la rencontre entre Romain le fondateur d'Odysway et le roi de la jungle, lors d'un voyage en Bolivie.
+Dans la savane, le roi c’est le lion. Dans la forêt amazonienne, c’est **le jaguar**. Ce mammifère ne craint personne, même pas l’homme. Il s’attaque à n’importe quelle proie. Celle-ci ne lui résiste pas longtemps d’ailleurs, tant sa mâchoire est puissante. **C’est un prédateur redouté et redoutable**. Chassant la nuit, il se repose en journée, souvent en hauteur dans les arbres. Retrouvez la rencontre tant attendue de Romain, le fondateur d’Odysway, avec un jaguar lors de son aventure en Amérique du Sud. [Lire le récit](https://odysway.com/le-jour-ou-odysway-est-nee/) sur la rencontre entre Romain le fondateur d'Odysway et le roi de la jungle, lors d'un voyage en Bolivie.
 
 ::image-container
 ---
-image-src: "/images/blogs/gAcMkYTiR6qcYc25XyP9-1742842104081.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/gAcMkYTiR6qcYc25XyP9.jpg"
 alt: 
 ---
 ::
@@ -158,11 +158,11 @@ L’agence de voyage Odysway propose une expérience hors du commun en Amazonie 
 
 Lors de cette expériences, vous évoluerez en compagnie de guides experts de la région, dont un ex-militaire qui formait les commandos à la survie dans la jungle. Vous pourrez aussi observer toutes sortes de singes, tamanoirs, fourmiliers géants, cerfs, sangliers, léopards, pumas et jaguars qui évoluent en toute liberté dans la jungle. 
 
-Découvrez notre voyage de survie au cœur de la jungle
+[Découvrez notre voyage de survie au cœur de la jungle](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=article&utm_medium=blog&utm_campaign=animaux+de+la+jungle)
 
 ::image-container
 ---
-image-src: "/images/blogs/v6t8JVBSgGc2lAp0lNrQ-1742842104611.jpg"
+image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/v6t8JVBSgGc2lAp0lNrQ.jpg"
 alt: 
 ---
 ::
@@ -173,7 +173,7 @@ Avec vos deux guides, vous partirez dans la jungle pendant sept jours. Vous éta
 
 ## Partez à l'aventure avec Odysway
 
-Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables voyages aventure.
+Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables [voyages aventure](https://odysway.com/thematiques/voyage-aventure).
 
-Pour poursuivre votre lecture, vous pouvez consulter notre article de blog sur la faune au Sri Lanka.
+Pour poursuivre votre lecture, vous pouvez consulter notre article de blog [sur la faune au Sri Lanka.](https://odysway.com/faune-sri-lanka)
 ::

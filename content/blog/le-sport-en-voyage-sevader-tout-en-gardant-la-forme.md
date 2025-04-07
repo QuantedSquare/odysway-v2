@@ -42,27 +42,27 @@ On le sait tous, il faut pratiquer une activité physique régulière pour reste
 
 ::image-container
 ---
-image-src: "/images/blogs/trek-annapurnas.jpg.jpg"
+image-src: "/images/blogs/le-sport-en-voyage-sevader-tout-en-gardant-la-forme/0p1gG5nTT8WDoBJGpRSR.jpg"
 alt: trek annapurnas.jpg
 ---
 ::
 
-Un trek dans les Annapurnas au Népal.
+[Un trek dans les Annapurnas au Népal.](https://odysway.com/voyages/yoga-trek-himalaya)
 
 ## Des expériences pour se dépasser
 
-Lorsque vous partez en voyage, il vous arrive probablement de tenter de nouvelles expériences. Quelles qu'elles soient, sportives aussi bien entendu, elles apportent une réelle richesse à votre voyage. Pourquoi ? Parce qu'elles vous permettent de vous immerger totalement dans la culture du pays dans lequel vous êtes, de vivre et de faire comme les locaux. Au Sri Lanka, beaucoup d'habitants se déplacent à vélo. Faites comme eux ! En plus de faire de belles rencontres, vous traverserez des paysages sublimes que vous n'auriez sûrement jamais vus autrement. Une belle expérience de slow tourisme en perspective. Les kilomètres vont défiler sans que vous vous en rendiez compte : **se dépasser tout en en prenant plein les yeux**, voilà notre et votre objectif.  
+Lorsque vous partez en voyage, il vous arrive probablement de tenter de nouvelles expériences. Quelles qu'elles soient, sportives aussi bien entendu, elles apportent une réelle richesse à votre voyage. Pourquoi ? Parce qu'elles vous permettent de vous immerger totalement dans la culture du pays dans lequel vous êtes, de vivre et de faire comme les locaux. Au Sri Lanka, beaucoup d'habitants se déplacent à vélo. [Faites comme eux](https://odysway.com/voyages/voyage-velo-sri-lanka) ! En plus de faire de belles rencontres, vous traverserez des paysages sublimes que vous n'auriez sûrement jamais vus autrement. Une belle expérience de slow tourisme en perspective. Les kilomètres vont défiler sans que vous vous en rendiez compte : **se dépasser tout en en prenant plein les yeux**, voilà notre et votre objectif.  
   
-Si vous êtes du genre à toujours repousser vos limites, alors **envolez-vous en Chine ou en Thaïlande** pour des expériences pas comme les autres. Perfectionnez vos connaissances en **Kung Fu ou en boxe thaï** avec des séances et des entraînements de pointe pour vivre des sensations uniques. Et tout cela en pleine nature, en osmose avec les éléments. N'est-ce pas en sortant de sa zone de confort que l'on parvient à se dépasser le plus ?
+Si vous êtes du genre à toujours repousser vos limites, alors **envolez-vous en Chine ou en Thaïlande** pour des expériences pas comme les autres. Perfectionnez vos connaissances en **[Kung Fu](https://odysway.com/voyages/kung-fu-temple-shaolin-chine) ou en [boxe thaï](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande)** avec des séances et des entraînements de pointe pour vivre des sensations uniques. Et tout cela en pleine nature, en osmose avec les éléments. N'est-ce pas en sortant de sa zone de confort que l'on parvient à se dépasser le plus ?
 
 ::image-container
 ---
-image-src: "/images/blogs/Thailande-voyage-sportif.jpg.jpg"
+image-src: "/images/blogs/le-sport-en-voyage-sevader-tout-en-gardant-la-forme/7vBJDOYuRqqOVqSouxjN.jpg"
 alt: Thaïlande voyage sportif.jpg
 ---
 ::
 
-Partez vous entraîner à la boxe thaï avec les meilleurs entraîneurs au monde, dans le Nord de la Thaïlande.
+[Partez vous entraîner à la boxe thaï avec les meilleurs entraîneurs au monde, dans le Nord de la Thaïlande.](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande)
 
 ## Découvrez l'ensemble de nos séjours sport
 

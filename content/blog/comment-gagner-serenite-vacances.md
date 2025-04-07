@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-04-16 09:47:00+00:00"
 tags: "Developpement personnel"
 categories: "Culture et decouverte, Developpement Personnel, Blog"
-displayedImg: "/images/blogs/Comment-gagner-en-serenite-en-vacances.jpg"
+displayedImg: "/images/blogs/comment-gagner-serenite-vacances/gBrJzHbRFuGhmkAAjgAa.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Comment-gagner-en-serenite-en-vacances.jpg"
+image-src: "/images/blogs/comment-gagner-serenite-vacances/gBrJzHbRFuGhmkAAjgAa.jpg"
 ---
 #publication-date
 16 avril 2023
@@ -31,7 +31,7 @@ Comment gagner en sérénité en vacances ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Comment-gagner-en-serenite-en-vacances.jpg"
+image-src: "/images/blogs/comment-gagner-serenite-vacances/gBrJzHbRFuGhmkAAjgAa.jpg"
 ---
 #content
 Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter du quotidien. Mais il arrive fréquemment que beaucoup d'entre nous éprouvent des difficultés à être totalement détendu et serein. **Odysway vous donne les clés pour gagner en sérénité pendant vos vacances.**
@@ -40,7 +40,7 @@ Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter d
 
 **::image-container
 ---
-image-src: "/images/blogs/SijfoYoR0yYy9yljTx4X-1742840633657.jpg"
+image-src: "/images/blogs/comment-gagner-serenite-vacances/SijfoYoR0yYy9yljTx4X.jpg"
 alt: undefined
 ---
 ::**
@@ -59,7 +59,7 @@ Si vraiment vous ne pouvez pas vous empêcher de jeter un œil à votre boîte m
 
 ::image-container
 ---
-image-src: "/images/blogs/5FgRTnQdT9igXXZgK2S1-1742840634176.jpg"
+image-src: "/images/blogs/comment-gagner-serenite-vacances/5FgRTnQdT9igXXZgK2S1.jpg"
 alt: undefined
 ---
 ::
@@ -82,7 +82,11 @@ Evitez de planifier vos vacances jour par jour, ne prévoyez pas un programme tr
 
 Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment. Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant.
 
-Soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement. En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie, mais c'est un cap à passer. Et pour le passer en douceur, beaucoup de voyageurs se tournent vers le **voyage initiatique** afin de trouver des réponses à leurs questions.
+Soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement. En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie, mais c'est un cap à passer. Et pour le passer en douceur, beaucoup de voyageurs se tournent vers le [**voyage initiatique**](https://odysway.com/thematiques/voyage-initiatique) afin de trouver des réponses à leurs questions.
 
-Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur les 5 destinations pour un voyage spirituel.
+[](https://odysway.com/voyages/yoga-trek-himalaya?utm_source=article&utm_medium=blog&utm_campaign=gagner+s%C3%A9r%C3%A9nit%C3%A9+vacances)
+
+Pour poursuivre votre lecture, nous vous invitons à consulter [notre article sur les 5 destinations pour un voyage spirituel.](https://odysway.com/top-5-destinations-voyage-spirituel)
+
+[](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=Blog&utm_medium=SEO&utm_campaign=ou_partir_pour_voyage_en_immersion_totale)
 ::

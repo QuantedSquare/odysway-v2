@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-08-27 11:00:00+00:00"
 tags: "Europe, Finlande, Grands espaces"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "/images/blogs/Comment-decouvrir-les-pays-scandinaves.jpg"
+displayedImg: "/images/blogs/comment-decouvrir-pays-scandinaves/1v7QrvsORZi4EoCLlJg6.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Comment-decouvrir-les-pays-scandinaves.jpg"
+image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/1v7QrvsORZi4EoCLlJg6.jpg"
 ---
 #publication-date
 27 août 2020
@@ -31,7 +31,7 @@ Comment découvrir les pays scandinaves ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Comment-decouvrir-les-pays-scandinaves.jpg"
+image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/1v7QrvsORZi4EoCLlJg6.jpg"
 ---
 #content
 **Regroupant le Danemark, la Suède, la Finlande et la Norvège, la Scandinavie est une région du nord de l'Europe réputée pour ses paysages à couper le souffle et pour son mode de vie respectueux de la nature. Voyager dans les pays scandinaves, c'est découvrir une culture, une histoire et un environnement comme nulle part ailleurs. Pour profiter au maximum de tous les attraits scandinaves, voici les clés pour que votre séjour soit des plus enrichissants.**
@@ -40,7 +40,7 @@ image-src: "/images/blogs/Comment-decouvrir-les-pays-scandinaves.jpg"
 
 ::image-container
 ---
-image-src: "/images/blogs/D11y2TnhRdSc97RsCpPI-1742840841921.jpg"
+image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/D11y2TnhRdSc97RsCpPI.jpg"
 alt: undefined
 ---
 ::
@@ -51,15 +51,15 @@ Elans, ours, loups peuplent les forêts scandinaves en compagnie des chevreuils,
 
 **Se rendre sur les îles est également une autre façon de découvrir les pays scandinaves**. Et pour cause, elles sont présentes un peu partout. Des petites îles aux plus grandes, elles rivalisent par leur beauté et leur diversité. Comment ne pas évoquer les îles Lofoten ou le Svalbard en Norvège ou l'archipel de Bohuslan en Suède ? Même les grandes villes scandinaves sont entourées d'innombrables îles. Stockholm par exemple en compte près de 24 000 !
 
-Odysway vous invite à découvrir cet environnement exceptionnel lors d'un séjour en Finlande. Entre expédition en canoë et bivouac dans la forêt, venez vivre une totale reconnexion avec la nature.
+Odysway vous invite à découvrir cet environnement exceptionnel lors d'un [séjour en Finlande](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=reconnexion_nature). Entre expédition en canoë et bivouac dans la forêt, venez vivre une totale reconnexion avec la nature.
 
-Découvrez nos séjours en immersion totale avec la nature.
+[Découvrez nos séjours en immersion totale avec la nature.](https://odysway.com/thematiques/voyage-nature)
 
 ## Enfourcher son vélo !
 
 ::image-container
 ---
-image-src: "/images/blogs/eoda1ufwRzqYZznH7ZNx-1742840842448.jpg"
+image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/eoda1ufwRzqYZznH7ZNx.jpg"
 alt: undefined
 ---
 ::
@@ -74,7 +74,7 @@ Vous l'aurez donc compris, les pays scandinaves sont au top pour voyager à vél
 
 ::image-container
 ---
-image-src: "/images/blogs/bB8C0bNgQFOQeGiJx8Rd-1742840842968.jpg"
+image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/bB8C0bNgQFOQeGiJx8Rd.jpg"
 alt: undefined
 ---
 ::
@@ -87,12 +87,12 @@ Bien que chaque pays scandinave possède sa propre histoire, il existe quand mê
 
 ::image-container
 ---
-image-src: "/images/blogs/633AYVSTaEWvHlM7hA9w-1742840843493.jpg"
+image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/633AYVSTaEWvHlM7hA9w.jpg"
 alt: undefined
 ---
 ::
 
-Découvrir un pays, et les pays scandinaves ne font pas exception, c'est aussi **découvrir** **sa gastronomie**. Celle-ci **reflète sa culture et ses traditions** et réserve souvent de belles surprises pour les papilles. **En Scandinavie, les recettes salées et sucrées se multiplient** pour le plus grand bonheur des gourmands et des gourmets. Salami de renne en Norvège, brioche à la cannelle ou pommes de terre Hasselback en Suède, drommekage (gâteau parfumé à la vanille) au Danemark ainsi que le leipäjuusto, un fromage finlandais, vous promettent des repas savoureux.
+Découvrir un pays, et les pays scandinaves ne font pas exception, c'est aussi **découvrir** [**sa gastronomie**](https://odysway.com/5-plats-meconnus-gastronomie-francaise). Celle-ci **reflète sa culture et ses traditions** et réserve souvent de belles surprises pour les papilles. **En Scandinavie, les recettes salées et sucrées se multiplient** pour le plus grand bonheur des gourmands et des gourmets. Salami de renne en Norvège, brioche à la cannelle ou pommes de terre Hasselback en Suède, drommekage (gâteau parfumé à la vanille) au Danemark ainsi que le leipäjuusto, un fromage finlandais, vous promettent des repas savoureux.
 
-Accédez à ce lien pour découvrir les voyages en Europe made in Odysway.
+[Accédez à ce lien pour découvrir les voyages en Europe made in Odysway.](https://odysway.com/destinations/europe)
 ::

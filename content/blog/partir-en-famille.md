@@ -52,7 +52,7 @@ Voici les meilleures expériences de **séjours en famille** proposées par Odys
 
 ::image-container
 ---
-image-src: "/images/blogs/Bretagne-en-Famille.jpg"
+image-src: "/images/blogs/partir-en-famille/XICEdza9RY6ECeTl7hRw.jpg"
 alt: Bretagne en Famille
 ---
 ::
@@ -61,7 +61,7 @@ Les enfants sont curieux de nature et s'il est un endroit où ils aiment passer 
 
 Laisser les enfants cuisiner, c’est les responsabiliser, leur faire découvrir de nouvelles saveurs et laisser leur créativité s’exprimer.
 
-C’est au cœur de la Bretagne, près de Saint Malo que nous vous proposons de faire frétiller les papilles de toute la famille pendant **un séjour découverte de la gastronomie bretonne.**
+C’est au cœur de la Bretagne, près de Saint Malo que nous vous proposons de faire frétiller les papilles de toute la famille pendant [**un séjour découverte de la gastronomie bretonne.**](https://odysway.com/voyages/decouvrez-les-secrets-de-la-gastronomie-bretonne?utm_source=SEO&utm_medium=thematique&utm_campaign=en_famille)
 
 Corinne, cuisinière de profession et propriétaire de la maison d'hôtes où vous serez hébergés, va vous apprendre à cuisiner le fameux Kig Ha Farz, le pot-au-feu traditionnel breton.
 
@@ -73,7 +73,7 @@ Passez un **séjour en famille** dans un cadre calme et reposant, et régalez-vo
 
 ## ::image-container
 ---
-image-src: "/images/blogs/Protection-animale-en-famille.jpg"
+image-src: "/images/blogs/partir-en-famille/U77Q8nzaR2WxHxsnQLYk.jpg"
 alt: Protection animale en famille
 ---
 ::
@@ -84,7 +84,7 @@ Le Sri Lanka est une merveille en termes de faune et de flore ; la perle de l’
 
 Quoi de plus magnifique pour vos bambins que de participer à la protection de tortues marines et d'éléphants dans des décors paradisiaques ?
 
-En famille et **en immersion** au Sri Lanka, vous allez durant ce voyage solidaire avoir l'opportunité d'**observer la ponte des tortues marines, et de soigner des éléphants** dans leur propre sanctuaire.
+En famille et **en immersion** au Sri Lanka, vous allez durant ce voyage solidaire avoir l'opportunité d'[**observer la ponte des tortues marines, et de soigner des éléphants**](https://odysway.com/voyages/protection-animaux-sri-lanka?utm_source=SEO&utm_medium=thematique&utm_campaign=en_famille) dans leur propre sanctuaire.
 
 Offrez la chance à vos enfants de rencontrer la population locale et de faire connaissance avec une culture et un pays riche en couleurs et en saveurs.
 
@@ -92,7 +92,7 @@ Offrez la chance à vos enfants de rencontrer la population locale et de faire c
 
 ## ::image-container
 ---
-image-src: "/images/blogs/astronomie-en-famille.jpg"
+image-src: "/images/blogs/partir-en-famille/D28vrDnNTi2hRHh68zAd.jpg"
 alt: astronomie en famille
 ---
 ::  
@@ -101,7 +101,7 @@ L’astronomie fascine, et ce depuis la nuit des temps (ce ne sont pas les enfan
 
 Grands comme petits, tout le monde raffole des étoiles, des constellations, des planètes et de la magie qui les entourent. C’est autour de ce thème que nous avons concocté un séjour idéal pour **partir en famille**.
 
-Sur les hauteurs des gorges de l'Aveyron, vous allez pouvoir **observer au télescope des planètes,** des constellations et des nébuleuses, sous l'œil expert d'un animateur astronomique professionnel.
+Sur les hauteurs des gorges de l'Aveyron, vous allez pouvoir [**observer au télescope des planètes,**](https://odysway.com/voyages/sejour-astronomie-occitanie?utm_source=SEO&utm_medium=thematique&utm_campaign=en_famille) des constellations et des nébuleuses, sous l'œil expert d'un animateur astronomique professionnel.
 
 Profitez de nuits étoilées comme vous n’en avez jamais vu, loin de la pollution lumineuse des grandes villes, et apprenez à vos enfants à nommer les constellations.
 
@@ -113,7 +113,7 @@ Un **séjour en famille** où vous aurez des étoiles plein les yeux !
 
 ::image-container
 ---
-image-src: "/images/blogs/voyager-en-famille-avec-Odysway.jpg"
+image-src: "/images/blogs/partir-en-famille/zpE7H8udRhasRbHwcyCr.jpg"
 alt: voyager en famille avec Odysway
 ---
 ::
@@ -128,9 +128,9 @@ Odysway vous accompagne dans vos **séjours en famille**.
 
 Que vous souhaitiez :
 
-*   faire **découvrir les plantes médicinales du Jura** à vos enfants ;
-*   les emmener **sur les traces des cowboys et des indiens en Arizona** ;
-*   leur offrir l’opportunité de **soigner les animaux de la jungle au Costa Rica**. 
+*   faire [**découvrir les plantes médicinales du Jura**](https://odysway.com/voyages/plantes-medicinales-jura?utm_source=SEO&utm_medium=thematique&utm_campaign=en_famille) à vos enfants ;
+*   les emmener [**sur les traces des cowboys et des indiens en Arizona**](https://odysway.com/voyages/cow-boy-ranch-etats-unis?utm_source=SEO&utm_medium=thematique&utm_campaign=en_famille) ;
+*   leur offrir l’opportunité de [**soigner les animaux de la jungle au Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=SEO&utm_medium=thematique&utm_campaign=en_famille). 
 
 Toute l'équipe d’Odysway est à votre service pour que vous passiez un séjour en famille inoubliable !
 ::

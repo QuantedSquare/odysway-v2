@@ -52,14 +52,14 @@ Voici les meilleures expériences de **séjours astronomie** proposées par Odys
 
 ::image-container
 ---
-image-src: "/images/blogs/jBu6FzUJRtm8Rp8cwLcX-1742840808093.jpg"
+image-src: "/images/blogs/sejour-astronomie/jBu6FzUJRtm8Rp8cwLcX.jpg"
 alt: 
 ---
 ::
 
 Non loin de la cité médiévale de St Antonin-Noble-Val dans le Sud-Ouest, existe un gîte qui vous reçoit pour un **séjour découverte de l’astronomie**.
 
-Ce **séjour astronomie** va vous mettre des étoiles plein les yeux ! Grâce à de puissants téléscopes, vous aurez la possibilité **d’observer les planètes,** les objets du ciel profond, les constellations et les nébuleuses.
+Ce **séjour astronomie** va vous mettre des étoiles plein les yeux ! Grâce à de puissants téléscopes, vous aurez la possibilité [**d’observer les planètes,**](https://odysway.com/voyages/sejour-astronomie-occitanie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourastronomie) les objets du ciel profond, les constellations et les nébuleuses.
 
 Vous apprendrez aussi les bases de l’astronomie, et comment vous servir du matériel d’observation, le tout guidé par un animateur astronomique passionné. Une magnifique expérience en pleine **immersion** dans le pays Occitan.
 
@@ -71,14 +71,14 @@ Le logement en **chambre d'hôtes** au sein d'une ferme en pierre rénovée dans
 
 ::image-container
 ---
-image-src: "/images/blogs/6xyzINy9TjOS6XIloLe0-1742840808690.jpg"
+image-src: "/images/blogs/sejour-astronomie/6xyzINy9TjOS6XIloLe0.jpg"
 alt: 
 ---
 ::
 
 Une expérience de 7 jours **en immersion** au sein d’un observatoire astronomique en plein cœur des Alpes, ça vous tente ?
 
-Durant ce **séjour astronomie**, vous allez **partager le quotidien d’astronomes et d'astrophysiciens** et pourrez :
+Durant ce **séjour astronomie**, vous allez [**partager le quotidien d’astronomes et d'astrophysiciens**](https://odysway.com/voyages/immersion-observatoire-astronomique?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejourastronomie) et pourrez :
 
 *   discuter avec eux de sujets passionnants autour d’un bon repas ;
 *   mener vos propres expériences scientifiques ;
@@ -94,7 +94,7 @@ Vous aurez pour mission d’aider l'équipe à suivre un astéroïde ou à déte
 
 ::image-container
 ---
-image-src: "/images/blogs/0CkJEb5SIWny0DaMSuUP-1742840809206.jpg"
+image-src: "/images/blogs/sejour-astronomie/0CkJEb5SIWny0DaMSuUP.jpg"
 alt: 
 ---
 ::
@@ -105,5 +105,5 @@ Les **séjours astronomie** sont construits de telle sorte que vous puissiez pro
 
 Odysway vous offre la possibilité de **vivre en immersion** dans des endroits préservés, au sein de communautés locales, dans des **hébergements insolites,** mais toujours de qualité. 
 
-Si vous souhaitez découvrir d’autres thématiques et vous immerger dans le quotidien de populations locales, contactez-nous sans plus attendre **!**
+Si vous souhaitez découvrir d’autres thématiques et [vous immerger dans le quotidien de populations locales](https://odysway.com/thematiques), contactez-nous sans plus attendre **!**
 ::

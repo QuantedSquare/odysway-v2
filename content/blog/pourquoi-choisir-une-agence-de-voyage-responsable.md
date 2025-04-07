@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-05-26 18:09:45.148000+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Pourquoi-choisir-une-agence-de-voyage-responsable-1.jpg"
+displayedImg: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/DVxiTc6fRDKGjoituMFq.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Pourquoi-choisir-une-agence-de-voyage-responsable-1.jpg"
+image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/DVxiTc6fRDKGjoituMFq.jpg"
 ---
 #publication-date
 26 mai 2024
@@ -31,7 +31,7 @@ Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux v
 
 ::section-container
 ---
-image-src: "/images/blogs/Pourquoi-choisir-une-agence-de-voyage-responsable-1.jpg"
+image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/DVxiTc6fRDKGjoituMFq.jpg"
 ---
 #content
 Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux voyageurs des opportunités infinies de découvrir de nouveaux horizons, cultures et paysages. Cependant, cette quête d'aventure et de dépaysement peut parfois avoir un coût élevé pour l'environnement et les communautés locales. C'est là qu'intervient le concept de voyage responsable. Choisir une agence de voyage responsable, comme Odysway, présente de nombreux avantages non seulement pour les voyageurs, mais aussi pour la planète et ses habitants. Voici pourquoi vous devriez envisager de faire appel à une telle agence pour vos prochaines aventures.
@@ -40,11 +40,11 @@ Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux v
 
 Les voyages, en particulier les vols longue distance, sont une source majeure d'émissions de gaz à effet de serre. Une agence de voyage responsable prend en compte l'empreinte carbone de vos déplacements et propose des alternatives pour la réduire. Cela peut inclure des options de transport plus écologiques, comme les trains ou les bus, ainsi que des séjours plus longs à destination pour minimiser le nombre de trajets. Par ailleurs, certaines agences, comme Odysway, intègrent des programmes de compensation carbone pour neutraliser l'impact des voyages aériens.
 
-Calculez l’empreinte carbone de votre voyage sur https://www.goodplanet.org/fr/calculateurs-carbone/.
+Calculez l’empreinte carbone de votre voyage sur [https://www.goodplanet.org/fr/calculateurs-carbone/](https://www.goodplanet.org/fr/calculateurs-carbone/).
 
 ::image-container
 ---
-image-src: "/images/blogs/train-mongolie.jpeg-1.jpg"
+image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/XgdpZTWyQNapi1952CDc.jpg"
 alt: train-mongolie.jpeg
 ---
 ::
@@ -57,7 +57,7 @@ Voyager de manière responsable signifie aussi soutenir les économies locales. 
 
 La préservation de l'environnement est au cœur du tourisme responsable. Les agences responsables mettent en place des pratiques pour minimiser l'impact environnemental de leurs activités. Cela peut inclure des initiatives de réduction des déchets, la promotion de l'utilisation de matériaux recyclés, et la sensibilisation des voyageurs à des comportements respectueux de l'environnement. Par exemple, éviter les plastiques à usage unique et favoriser l'utilisation de bouteilles d'eau réutilisables sont des pratiques courantes encouragées par les agences de voyage responsables.
 
-**Pour aller plus loin : https://www.worldwildlife.org/pages/responsible-travel-tips**
+**Pour aller plus loin : [https://www.worldwildlife.org/pages/responsible-travel-tips](https://www.worldwildlife.org/pages/responsible-travel-tips)**
 
 ## Protection de la biodiversité
 
@@ -69,7 +69,7 @@ L'un des aspects les plus enrichissants du voyage est la possibilité de découv
 
 ::image-container
 ---
-image-src: "/images/blogs/Jour-par-Jour-Chaman-Perou.jpg-3.jpg"
+image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/1kmpH1efSIewr0Sysrab.jpg"
 alt: Jour par Jour Chaman Pérou.jpg
 ---
 ::
@@ -78,7 +78,7 @@ alt: Jour par Jour Chaman Pérou.jpg
 
 Le tourisme solidaire est une forme de voyage responsable qui met l'accent sur le soutien aux projets communautaires et aux initiatives locales. En choisissant une agence de voyage responsable, vous avez l'opportunité de participer à des projets qui ont un impact positif sur les communautés visitées. Cela peut inclure la construction d'infrastructures, le soutien à des écoles locales, ou la participation à des projets de développement durable. Ces expériences permettent de donner un sens plus profond à vos voyages, en contribuant activement au bien-être des populations locales.
 
-**Découvrez les séjours solidaires d'Odysway : https://odysway.com/thematiques/voyage-solidaire**
+**Découvrez les séjours solidaires d'Odysway : [https://odysway.com/thematiques/voyage-solidaire](https://odysway.com/thematiques/voyage-solidaire)**
 
 ## Sécurité et bien-être des voyageurs
 

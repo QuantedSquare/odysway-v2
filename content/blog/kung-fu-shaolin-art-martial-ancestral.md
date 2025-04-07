@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-09-18 15:10:00+00:00"
 tags: "Asie, Chine, Famille, Grands espaces, Sport"
 categories: "Depassement de soi, Culture et decouverte"
-displayedImg: "/images/blogs/Le-kung-fu-shaolin-un-art-martial-ancestral.jpg"
+displayedImg: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/wXO4hZ6iQhyHWv4PZObA.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-kung-fu-shaolin-un-art-martial-ancestral.jpg"
+image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/wXO4hZ6iQhyHWv4PZObA.jpg"
 ---
 #publication-date
 18 septembre 2019
@@ -31,12 +31,12 @@ Le kung-fu shaolin, un art martial ancestral
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-kung-fu-shaolin-un-art-martial-ancestral.jpg"
+image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/wXO4hZ6iQhyHWv4PZObA.jpg"
 ---
 #content
 Art martial chinois, **le kung fu Shaolin** fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n’a cessé de se développer au fil des siècles. Aujourd’hui, les disciples qui sortent du monastère de Shaolin constituent l’élite du pays. Mais d’où vient-il et comment se pratique-t-il ?
 
-Après votre lecture, nous vous invitons à lire notre article sur la destination privilégiée pour un voyage spirituel.
+Après votre lecture, nous vous invitons à lire notre article [sur la destination privilégiée pour un voyage spirituel.](https://odysway.com/linde-destination-privilegiee-pour-un-voyage-spirituel)
 
 ## La légende de Bodhidharma et la naissance du kung-fu Shaolin
 
@@ -65,7 +65,7 @@ Côté techniques des jambes, elles sont nombreuses. Citons le coup de pied dire
 
 ::image-container
 ---
-image-src: "/images/blogs/VuDoDeBGRXqjapfunezR-1742841045222.jpg"
+image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/VuDoDeBGRXqjapfunezR.jpg"
 alt: 
 ---
 ::
@@ -81,7 +81,7 @@ Ces deux types de combat amènent à distinguer **deux types de kung-fu : l’i
 
 ::image-container
 ---
-image-src: "/images/blogs/ceacP43SheNRhdxEon0r-1742841045739.jpg"
+image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/ceacP43SheNRhdxEon0r.jpg"
 alt: 
 ---
 ::
@@ -95,16 +95,16 @@ Des moines sont toujours présents dans le temple. Ils sont un peu moins d’une
 
 ::image-container
 ---
-image-src: "/images/blogs/tkbo5hx4T46y2vZrNFWl-1742841046262.jpg"
+image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/tkbo5hx4T46y2vZrNFWl.jpg"
 alt: 
 ---
 ::
 
 Un entraînement de kung fu dans un temple Shaolin en Chine.
 
-Vous souhaitez apprendre le kung fu avec des moines Shaolin ? Découvrez notre expérience en Chine dans un temple bouddhiste, en immersion dans le quotidien des moines !
+Vous souhaitez apprendre le kung fu avec des moines Shaolin ? Découvrez [notre expérience en Chine dans un temple bouddhiste, en immersion dans le quotidien des moines !](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=Blog&utm_medium=SEO&utm_campaign=Kung-Fu_shaolin)
 
 ## Les voyages sportifs d'Odysway
 
-Les voyages sportifs sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
+Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::

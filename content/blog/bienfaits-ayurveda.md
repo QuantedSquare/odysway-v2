@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-07-12 10:28:00+00:00"
 tags: "Developpement personnel"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Les-bienfaits-de-l'Ayurveda.jpg"
+displayedImg: "/images/blogs/bienfaits-ayurveda/IEKA1nKPSFeaE5m6H39P.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Les-bienfaits-de-l'Ayurveda.jpg"
+image-src: "/images/blogs/bienfaits-ayurveda/IEKA1nKPSFeaE5m6H39P.jpg"
 ---
 #publication-date
 12 juillet 2019
@@ -31,7 +31,7 @@ Les bienfaits de l'Ayurveda
 
 ::section-container
 ---
-image-src: "/images/blogs/Les-bienfaits-de-l'Ayurveda.jpg"
+image-src: "/images/blogs/bienfaits-ayurveda/IEKA1nKPSFeaE5m6H39P.jpg"
 ---
 #content
 Médecine traditionnelle indienne, **l’Ayurveda** propose une approche différente dans la guérison des maux. Qu’ils soient d’ordres physiques ou psychologiques, **l’Ayurveda va d’abord rechercher les causes de ces déséquilibres à l’origine du mal-être**. Réduction du stress, apaisement des douleurs, lutte contre l’insomnie, découvrons les bienfaits de l’Ayurveda à travers différentes pratiques.
@@ -46,7 +46,7 @@ Médecine traditionnelle indienne, **l’Ayurveda** propose une approche diff�
 
 ::image-container
 ---
-image-src: "/images/blogs/YKKWMQ4oSfKFHHPu7rS4-1742841065684.jpg"
+image-src: "/images/blogs/bienfaits-ayurveda/YKKWMQ4oSfKFHHPu7rS4.jpg"
 alt: 
 ---
 ::
@@ -74,7 +74,7 @@ La médecine ayurvédique se décline en différentes pratiques. La plus courant
 
 ::image-container
 ---
-image-src: "/images/blogs/6pxYwwWZQHpYd8ordj7w-1742841066207.jpg"
+image-src: "/images/blogs/bienfaits-ayurveda/6pxYwwWZQHpYd8ordj7w.jpg"
 alt: 
 ---
 ::  
@@ -91,7 +91,7 @@ Il s’agit d’une **alimentation basée sur la consommation d’aliments clas
 
 ### Les autres méthodes utilisées par la médecine ayurvédique
 
-*   **la méditation** pour réduire le stress ou retrouver un sommeil récupérateur, découvrez notre article sur les 5 destinations de voyages spirituels.
+*   **la méditation** pour réduire le stress ou retrouver un sommeil récupérateur, [découvrez notre article sur les 5 destinations de voyages spirituels.](https://odysway.com/top-5-destinations-voyage-spirituel)
 *   **la** **respiration**, clé de voûte de l’Ayurveda. La respiration alternée pour chasser le stress est particulièrement utilisée
 *   **le** **yoga** qui finalement est indissociable de cette médecine car il aide aussi à créer l’harmonie entre le corps et l’esprit
 *   **la** **phytothérapie**, **l’aromathérapie** ou l’utilisation des plantes. Là aussi, la connaissance de votre constitution est essentielle car chaque plante possède sa propre énergie et correspond à tel ou tel dosha.
@@ -99,7 +99,7 @@ Il s’agit d’une **alimentation basée sur la consommation d’aliments clas
 
 ::image-container
 ---
-image-src: "/images/blogs/GqV6TrUFS2um1vtSmPF6-1742841066763.jpg"
+image-src: "/images/blogs/bienfaits-ayurveda/GqV6TrUFS2um1vtSmPF6.jpg"
 alt: 
 ---
 ::
@@ -111,7 +111,7 @@ La phytothérapie, une des méthodes utilisées par la médecine ayurvédique, q
 
 En plus des bienfaits cités ci-dessus, ces différentes techniques permettent de lutter aussi contre l’insomnie et la fatigue, prévenir les allergies, apaiser les douleurs, contrôler son poids, promouvoir sa longévité…
 
-Envie de retrouver un meilleur équilibre ? Découvrez notre thématique "voyage initiatique" ! 
+Envie de retrouver un meilleur équilibre ? [Découvrez notre thématique "voyage initiatique"](https://odysway.com/thematiques/voyage-initiatique) ! 
 
 ## Un Yoga-trek au cœur de l'Himalaya
 

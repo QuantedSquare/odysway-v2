@@ -58,7 +58,7 @@ Voici les meilleures expériences de **voyages initiatiques** proposées par Ody
 
 ::image-container
 ---
-image-src: "/images/blogs/hcaXdqRBTmSljo3cep6Q-1742840820532.jpg"
+image-src: "/images/blogs/voyage-initiatique/hcaXdqRBTmSljo3cep6Q.jpg"
 alt: undefined
 ---
 ::
@@ -69,7 +69,7 @@ La première étape du **voyage initiatique** passe souvent par apprivoiser un e
 
 Savez-vous qu’il existe en France un endroit parfait pour vous poser les questions qui vous tiennent à cœur, vivre un quotidien plus calme, plus tranquille et repartir serein ?
 
-Au cœur du Parc naturel régional de la Sainte-Baume, vous allez pouvoir **vous immerger dans le quotidien des frères dominicains**, qui vivent dans une hostellerie idéalement située en pleine nature.
+Au cœur du Parc naturel régional de la Sainte-Baume, vous allez pouvoir [**vous immerger dans le quotidien des frères dominicains**](https://odysway.com/voyages/voyage-provence-monastique?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique), qui vivent dans une hostellerie idéalement située en pleine nature.
 
 Durant ce **séjour initiatique** vous allez vous offrir un mode de vie plus simple, un échange de manière laïque et humaine avec les **frères dominicains** ainsi qu’un **hébergement insolite** dans un couvent au cœur de la Provence.
 
@@ -77,7 +77,7 @@ Durant ce **séjour initiatique** vous allez vous offrir un mode de vie plus sim
 
 ::image-container
 ---
-image-src: "/images/blogs/pEkG8waSCKWWrIvcDWwJ-1742840821052.jpg"
+image-src: "/images/blogs/voyage-initiatique/pEkG8waSCKWWrIvcDWwJ.jpg"
 alt: undefined
 ---
 ::
@@ -86,7 +86,7 @@ Le **voyage initiatique** vous permet de faire voyager votre esprit, mais aussi 
 
 En décidant de faire ce type de voyage au sein de populations locales, par exemple chez les Bédouins du Sahara, vous allez vivre une expérience unique en plein milieu du désert. De quoi prendre conscience de l'immensité de la vie ! 
 
-**Marche silencieuse en pleine conscience,** méditation, bivouacs sous les étoiles et rencontre avec les bédouins, voilà ce qui vous attend lors ce **voyage initiatique** aux accents de paix et de partage.
+[**Marche silencieuse en pleine conscience,**](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique) méditation, bivouacs sous les étoiles et rencontre avec les bédouins, voilà ce qui vous attend lors ce **voyage initiatique** aux accents de paix et de partage.
 
 Le désert, de par son immensité, à ce pouvoir magique de transcender les limitations et les barrières que nous nous imposons au quotidien.
 
@@ -96,7 +96,7 @@ Le **voyage initiatique** nous autorise à briser ces chaînes qui nous empêche
 
 ::image-container
 ---
-image-src: "/images/blogs/MCUzQWfT9yc65q9CBB5r-1742840821566.jpg"
+image-src: "/images/blogs/voyage-initiatique/MCUzQWfT9yc65q9CBB5r.jpg"
 alt: undefined
 ---
 ::
@@ -107,7 +107,7 @@ Pratiquée depuis des millénaires à travers le monde, la **méditation** n’e
 
 Découvrir **la méditation** lors d’un **voyage initiatique** peut vous aider à avancer vers un nouveau chemin “La voie du milieu” comme les bouddhistes l'appellent.
 
-Un **voyage initiatique au Nord de L’Inde** combinant méditation bouddhiste et découverte des paysages himalayens à couper le souffle, est une formidable opportunité pour vous aider à retrouver le chemin vers vous et votre cœur.
+Un [**voyage initiatique au Nord de L’Inde**](https://odysway.com/voyages/retraite-meditation-inde?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique) combinant méditation bouddhiste et découverte des paysages himalayens à couper le souffle, est une formidable opportunité pour vous aider à retrouver le chemin vers vous et votre cœur.
 
 Passer du temps au contact de **moines bouddhistes** et séjourner dans la ville où le gouvernement tibétain est en exil, tout comme le Dalaï Lama, va vous permettre de voir les choses différemment. 
 
@@ -115,7 +115,7 @@ Passer du temps au contact de **moines bouddhistes** et séjourner dans la ville
 
 ::image-container
 ---
-image-src: "/images/blogs/arbre-mongolie.jpeg.jpg"
+image-src: "/images/blogs/voyage-initiatique/bjkNrF6ESACxsLUaBgno.jpg"
 alt: arbre-mongolie.jpeg
 ---
 ::
@@ -136,5 +136,5 @@ Les **voyages initiatiques** créés pour vous par Odysway, vont dans le sens d�
 
 Privilégiez un retour  à soi par le biais de  marches conscientes ou de rencontres avec des communautés locales ayant une manière différente de vivre ces reconnections.
 
-Que vous rêviez de découvrir le **chamanisme mongol** et de parcourir les steppes en train, de **vivre en immersion dans la jungle péruvienne** au sein de la Vallée des Incas, ou encore de **partager le quotidien de jeunes moines dans une école bouddhiste au Népal**, l'équipe d’Odysway se fera un plaisir de vous guider pas à pas dans votre quête d’absolu.
+Que vous rêviez de découvrir le [**chamanisme mongol**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique) et de parcourir les steppes en train, de [**vivre en immersion dans la jungle péruvienne**](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique) au sein de la Vallée des Incas, ou encore de [**partager le quotidien de jeunes moines dans une école bouddhiste au Népal**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique), l'équipe d’Odysway se fera un plaisir de vous guider pas à pas dans votre quête d’absolu.
 ::

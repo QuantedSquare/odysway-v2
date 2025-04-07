@@ -21,12 +21,12 @@ published: false
 publishedAt: "2022-10-18 12:33:00+00:00"
 tags: "Inde"
 categories: "voyage, immersion, inde"
-displayedImg: "/images/blogs/Interview-Rencontre-avec-Laurige-notre-guide-en-Inde.jpg"
+displayedImg: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/dfnJUW9hRYuvjrGOYuxg.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Interview-Rencontre-avec-Laurige-notre-guide-en-Inde.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/dfnJUW9hRYuvjrGOYuxg.jpg"
 ---
 #publication-date
 18 octobre 2022
@@ -40,16 +40,16 @@ Interview – Rencontre avec Laurige, notre guide en Inde
 
 ::section-container
 ---
-image-src: "/images/blogs/Interview-Rencontre-avec-Laurige-notre-guide-en-Inde.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/dfnJUW9hRYuvjrGOYuxg.jpg"
 ---
 #content
-       ****Vivre un séjour en immersion en Inde, c'est possible ! Découvrez ces territoires lointains, habités par des communautés ethniques fascinantes et où la biodiversité est d'une richesse surprenante. Laurige n'attend que vous !****
+       ****Vivre un séjour en [immersion en Inde](https://odysway.com/voyages/inde-arunachal-pradesh "Vivez une immersion en Inde"), c'est possible ! Découvrez ces territoires lointains, habités par des communautés ethniques fascinantes et où la biodiversité est d'une richesse surprenante. Laurige n'attend que vous !****
 
 ****Eco-entrepreneur français vivant en Inde depuis plus de 8 ans, Laurige partage sa vie entre l'Himalaya, Varanasi et le Nord-Est.**** 
 
 **Présentez-vous en quelques mots**
 
-" Après avoir obtenu mon MBA Tourisme International à Aix en Provence, j'ai découvert l'Inde en travaillant dans une agence de voyage basée à Delhi. Après 5 années d'expérience en tant que responsable du pôle Himalaya et chef de production, j'ai décidé de développer différents concepts écologiques liés au tourisme au Ladakh, à Varanasi et dans le Nord-Est. Dès que j'ai un peu de temps, j'accompagne à pied ou à moto au Rajasthan, dans le sud de l'Inde et dans l'Himalaya. 
+" Après avoir obtenu mon MBA Tourisme International à Aix en Provence, j'ai découvert l'Inde en travaillant dans une agence de voyage basée à Delhi. Après 5 années d'expérience en tant que responsable du pôle Himalaya et chef de production, j'ai décidé de développer différents concepts écologiques liés au tourisme au Ladakh, à Varanasi et dans le Nord-Est. Dès que j'ai un peu de temps, j'accompagne à pied ou à moto au [Rajasthan,](https://odysway.com/voyages/decouverte-merveilles-rajasthan-bishnoi "Découvrez notre nouveau séjour au Rajasthan") dans le sud de l'Inde et dans l'Himalaya. 
 
 Je passe mes étés au Ladakh où je gère un camp éco-chic sur les rives de l'Indus. Très apprécié des trekkeurs et voyageurs, c'est un modèle de tourisme responsable qui tend à préserver le fragile équilibre de ce haut plateau désertique. 
 
@@ -69,7 +69,7 @@ La journée peut être flexible en fonction de la saison et du rythme scolaire. 
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-9.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/pOLfobabQmmaMXNqWwvR.jpg"
 alt: indéfini
 ---
 ::
@@ -84,7 +84,7 @@ Concernant la disponibilité, je parle des aléas du voyage qui peuvent arriver 
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-10.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/snq95wDhQgmHXcIw0rnl.jpg"
 alt: indéfini
 ---
 ::
@@ -95,7 +95,7 @@ alt: indéfini
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-11.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/SrvdLp4xRpeUXgkQLQdp.jpg"
 alt: indéfini
 ---
 ::
@@ -106,7 +106,7 @@ alt: indéfini
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-12.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/O8RQLai1RHK3t9kOzNHY.jpg"
 alt: indéfini
 ---
 ::
@@ -119,7 +119,7 @@ Mais également faire profiter aux voyageurs mon expérience personnelle pour é
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-13.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/ZdoxonKCTyiQb1NFEcuz.jpg"
 alt: indéfini
 ---
 ::  
@@ -127,8 +127,8 @@ alt: indéfini
 
 Odysway vous propose aujourd'hui 2 voyages en Inde :
 
-*   A la découverte des merveilles du Rajasthan en pays Bishnoï : d'une durée de 14 jours.
-*   Voyagez en Inde à la rencontre des tribus d'Arunachal Pradesh : d'une durée de 20 jours.
+*   [A la découverte des merveilles du Rajasthan en pays Bishnoï](https://odysway.com/voyages/decouverte-merveilles-rajasthan-bishnoi) : d'une durée de 14 jours.
+*   [Voyagez en Inde à la rencontre des tribus d'Arunachal Pradesh](https://odysway.com/voyages/inde-arunachal-pradesh) : d'une durée de 20 jours.
 
 Deux séjours hors du temps, différents de ce que vous avez vécu jusqu'à présent !
 ::

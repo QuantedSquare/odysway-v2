@@ -64,14 +64,14 @@ Voici les meilleures expériences de **séjours nature** proposées par Odysway 
 
 ::image-container
 ---
-image-src: "/images/blogs/t5HDTB94Rv2Q4deEc8z1-1742840823338.jpg"
+image-src: "/images/blogs/sejours-nature/t5HDTB94Rv2Q4deEc8z1.jpg"
 alt: undefined
 ---
 ::
 
 Qu’est-ce qui nous pousse à voyager ? Découvrir d’autres cultures, partir à l’aventure ou l’envie d’apprendre de nouvelles choses. Nous avons tous nos raisons, mais au fond, c’est ce besoin de **déconnecter du quotidien**.
 
-Le temps d’un **séjour dans la nature**, nos soucis, notre stress et nos obligations sont oubliés pour nous reconnecter à l’essentiel. Quoi de mieux que de **marcher, flâner et méditer dans les montagnes** pour se ressourcer et vivre un moment unique **en immersion** !
+Le temps d’un **séjour dans la nature**, nos soucis, notre stress et nos obligations sont oubliés pour nous reconnecter à l’essentiel. Quoi de mieux que de [**marcher, flâner et méditer dans les montagnes**](https://odysway.com/voyages/marche-ane-meditation-france?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature) pour se ressourcer et vivre un moment unique **en immersion** !
 
 C'est dans la région des Baronnies au sud de la France, que vous allez vous baigner dans une rivière de montagne pure et vivifiante.Vous avancez à votre rythme, guidé par un âne et campez en pleine nature sous les étoiles au son des cigales.
 
@@ -79,16 +79,16 @@ C'est dans la région des Baronnies au sud de la France, que vous allez vous bai
 
 ::image-container
 ---
-image-src: "/images/blogs/kyPK0iZHTvqEoszgWlai-1742840823853.jpg"
+image-src: "/images/blogs/sejours-nature/kyPK0iZHTvqEoszgWlai.jpg"
 alt: undefined
 ---
 ::
 
 Lorsque l’on pense à Dame Nature, on pense souvent aux **grands espaces**.
 
-**Aux étendues sans fin de l’Ouest américain**, **aux steppes de Mongolie** ou encore **aux dunes à perte de vue du désert du Sahara**.
+[**Aux étendues sans fin de l’Ouest américain**](https://odysway.com/voyages/cow-boy-ranch-etats-unis?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature), [**aux steppes de Mongolie**](https://odysway.com/voyages/rencontre-nomades-mongolie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature) ou encore [**aux dunes à perte de vue du désert du Sahara**](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature).
 
-Pour qui est la recherche de grands espaces, la Laponie finlandaise n’est pas en reste ! Vivez un **séjour nature immersif** **en Laponie, au milieu des vastes étendues blanches,** admirez les aurores boréales et goûtez à la douceur du feu de bois dans un chalet typique après une journée de chien de traineau. 
+Pour qui est la recherche de grands espaces, la Laponie finlandaise n’est pas en reste ! Vivez un **séjour nature immersif** [**en Laponie, au milieu des vastes étendues blanches,**](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature) admirez les aurores boréales et goûtez à la douceur du feu de bois dans un chalet typique après une journée de chien de traineau. 
 
 Puis le soir venu, reposez-dans votre écolodge en bordure d'un lac, au cœur de la forêt finlandaise, le bonheur à l'état pur !
 
@@ -96,14 +96,14 @@ Puis le soir venu, reposez-dans votre écolodge en bordure d'un lac, au cœur de
 
 ::image-container
 ---
-image-src: "/images/blogs/yzyFiSygRdmNwvbBlEAR-1742840824380.jpg"
+image-src: "/images/blogs/sejours-nature/yzyFiSygRdmNwvbBlEAR.jpg"
 alt: undefined
 ---
 ::
 
 La montagne est le cadre idéal pour un **séjour nature** où il fait bon respirer l’air pur et passer de longues heures à contempler la beauté de ce monde dans lequel nous vivons.
 
-Vous pouvez allier **séjour immersif** au **Népal au Tibet** en vivant **un des road-trip les plus épiques au monde** : la route de l'Himalaya entre **Katmandou** au **Népal**, et **Lhassa**, la capitale du **Tibet**. 
+Vous pouvez allier **séjour immersif** au **Népal au Tibet** en vivant [**un des road-trip les plus épiques au monde**](https://odysway.com/voyages/sur-les-routes-nepal-tibet?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature) : la route de l'Himalaya entre **Katmandou** au **Népal**, et **Lhassa**, la capitale du **Tibet**. 
 
 En totale **immersion** en pleine nature, sur le plus haut plateau du monde, vous découvrirez en profondeur la culture tibétaine, au plus près de ses habitants et de ses traditions. 
 
@@ -117,7 +117,7 @@ La nature occupe une part très importante dans les valeurs d’Odysway et nous 
 
 Vous avez envie de prendre l’air, de respirer à pleins poumons et d’un **séjour en immersion ?**
 
-Partez **à la recherche d’une pyramide Maya dans la jungle péruvienne**, partagez **la vie d'une éleveuse d'alpagas dans le Finistère** ou vivez **chez l’habitant dans la campagne roumaine**. 
+Partez [**à la recherche d’une pyramide Maya dans la jungle péruvienne**](https://odysway.com/voyages/voyage-pyramide-guatemala?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature), partagez [**la vie d'une éleveuse d'alpagas dans le Finistère**](https://odysway.com/voyages/Immersion-Alpagas-Finistere?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature) ou vivez [**chez l’habitant dans la campagne roumaine**](https://odysway.com/voyages/village-campagne-roumanie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursnature). 
 
 Notre équipe est à votre écoute pour vous aider à réaliser votre rêve.
 

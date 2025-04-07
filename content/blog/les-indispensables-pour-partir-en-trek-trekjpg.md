@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-06 14:42:00+00:00"
 tags: "Brésil, Grands espaces, Nepal, Perou, Sport"
 categories: "Depassement de soi, Nature et grands espaces, Blog"
-displayedImg: "/images/blogs/Les-indispensables-pour-partir-en-trek-!.jpg"
+displayedImg: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/sccFp6UQYO3qJoAalG1f.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Les-indispensables-pour-partir-en-trek-!.jpg"
+image-src: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/sccFp6UQYO3qJoAalG1f.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -31,20 +31,20 @@ Les indispensables pour partir en trek !
 
 ::section-container
 ---
-image-src: "/images/blogs/Les-indispensables-pour-partir-en-trek-!.jpg"
+image-src: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/sccFp6UQYO3qJoAalG1f.jpg"
 ---
 #content
 Vous cherchez **quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure** ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, d’avoir oublié un répulsif anti-moustique, un duvet ou un vêtement chaud. Le contenu de votre sac va logiquement dépendre de la destination, de la météo, du dénivelé et du relief et de la durée du trek. Quels que soient ces paramètres, il reste des accessoires qu’il faudra toujours avoir sur soi. Voici notre liste des indispensables du trek auxquels il faudra toujours penser.
 
 ## La trousse de premiers secours
 
-**La trousse à pharmacie est un élément fondamental parmi vos indispensables du trek**. Elle permet de désinfecter les plaies. Et aussi de se soigner lorsque surviennent piqûre, éraflure, foulure ou toute autre blessure. Elle contient le matériel de base pour soigner les blessures : pansements, désinfectant, ciseaux, bandes, Bétadine. Il faut aussi avoir des médicaments de base (paracétamol, anti-bactériens, contraception, anti-histaminique, probiotiques). Et selon la destination, on prendra également les pastilles pour purifier l’eau, les pilules anti-paludisme ou les médicaments prévenant les troubles intestinaux. **Ne pas oublier non plus votre répulsif anti-moustique** : les moustiques ne sont pas vos amis et peuvent être porteurs de maladies ! Lisez notre article sur les 10 choses à mettre dans sa trousse à pharmacie en voyage.
+**La trousse à pharmacie est un élément fondamental parmi vos indispensables du trek**. Elle permet de désinfecter les plaies. Et aussi de se soigner lorsque surviennent piqûre, éraflure, foulure ou toute autre blessure. Elle contient le matériel de base pour soigner les blessures : pansements, désinfectant, ciseaux, bandes, Bétadine. Il faut aussi avoir des médicaments de base (paracétamol, anti-bactériens, contraception, anti-histaminique, probiotiques). Et selon la destination, on prendra également les pastilles pour purifier l’eau, les pilules anti-paludisme ou les médicaments prévenant les troubles intestinaux. **Ne pas oublier non plus votre répulsif anti-moustique** : les moustiques ne sont pas vos amis et peuvent être porteurs de maladies ! Lisez notre article sur [les 10 choses à mettre dans sa trousse à pharmacie en voyage.](https://odysway.com/les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage)
 
 ## Les indispensables du trek pour la marche
 
 ::image-container
 ---
-image-src: "/images/blogs/trek.jpg.jpg"
+image-src: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/9iM9yQZRg6OzR7j4KNnB.jpg"
 alt: trek.jpg
 ---
 ::
@@ -55,7 +55,7 @@ alt: trek.jpg
 
 ::image-container
 ---
-image-src: "/images/blogs/trek2.jpg.jpg"
+image-src: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/8cFUEsRKGdaqiusl6hgF.jpg"
 alt: trek2.jpg
 ---
 ::
@@ -74,9 +74,9 @@ Inversement, l’hiver apporte le froid qui saisit les os et fige le corps si l�
 
 **A quoi d’autre faut-il penser parmi les indispensables du trek ?** Du savon sans eau, des lingettes pour la peau, des sacs poubelle, des allumettes ou encore du fil et une aiguille. Une boîte de boules Quiès sauveront vos nuits dans un environnement bruyant. **Avant de partir, n’oubliez pas d’envoyer une copie de vos papiers d’identité sur une boîte e-mail**. Emporter une ou deux photocopies avec vous. Vous n’auriez surtout pas envie, en cas de perte, de vous retrouver sans-papiers à l’étranger et/ou au milieu de nulle part !
 
-Vous souhaitez partir à l’aventure ? Odysway vous propose une expérience de survie au cœur de la jungle amazonienne.
+Vous souhaitez partir à l’aventure ? Odysway vous propose une [expérience de survie au cœur de la jungle amazonienne.](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=Blog&utm_medium=article&utm_campaign=Indispensables_trek)
 
 ## Voyage Sportif : dépassement et évasion
 
-Les voyages sportifs sont en plein essor ! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
+Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor ! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::

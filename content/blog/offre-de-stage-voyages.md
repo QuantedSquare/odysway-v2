@@ -12,12 +12,12 @@ published: false
 publishedAt: "2022-01-28 13:08:00+00:00"
 tags: "Actualités"
 categories: ""
-displayedImg: "/images/blogs/Offre-de-stage.jpg"
+displayedImg: "/images/blogs/offre-de-stage-voyages/tRbRx6RbRBe3qJYw6fQI.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Offre-de-stage.jpg"
+image-src: "/images/blogs/offre-de-stage-voyages/tRbRx6RbRBe3qJYw6fQI.jpg"
 ---
 #publication-date
 28 janvier 2022
@@ -31,7 +31,7 @@ Offre de stage
 
 ::section-container
 ---
-image-src: "/images/blogs/Offre-de-stage.jpg"
+image-src: "/images/blogs/offre-de-stage-voyages/tRbRx6RbRBe3qJYw6fQI.jpg"
 ---
 #content
 ## **Stage - Concepteur de voyages sur-mesure France & Corse (H/F)**
@@ -95,5 +95,5 @@ Au-delà de tes compétences, nous recherchons surtout quelqu’un qui sera forc
 *   **Télétravail** : 2 jours par semaine
 *   **Rémunération** : selon profil
 
-Envie de rejoindre l’aventure ? Envoie ton CV à contact@odysway.com et dis-nous pourquoi c’est toi que nous devons recruter !
+Envie de rejoindre l’aventure ? Envoie ton CV à [contact@odysway.com](mailto:romain.masina@odysway.com) et dis-nous pourquoi c’est toi que nous devons recruter !
 ::

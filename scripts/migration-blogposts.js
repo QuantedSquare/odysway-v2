@@ -3,6 +3,7 @@ import path from 'node:path'
 import { JSDOM } from 'jsdom'
 import TurndownService from 'turndown'
 import slugify from 'slugify'
+import axios from 'axios'
 
 const turndownService = new TurndownService({
   headingStyle: 'atx',
@@ -11,7 +12,7 @@ const turndownService = new TurndownService({
 
 // Image download configuration
 const IMAGE_DOWNLOAD_DIR = '../public/images/blogs'
-const DOWNLOAD_DELAY_MS = 500 // 500ms delay between downloads
+const DOWNLOAD_DELAY_MS = 100 // 500ms delay between downloads
 const MAX_RETRIES = 3 // Maximum number of retry attempts
 const RETRY_DELAY_MS = 2000 // Wait 2 seconds before retrying
 
@@ -56,6 +57,17 @@ turndownService.addRule('images', {
   },
 })
 
+// Add a rule to handle links that contain images
+turndownService.addRule('linkWithImage', {
+  filter: (node) => {
+    return node.nodeName === 'A' && node.querySelector('img')
+  },
+  replacement: (content) => {
+    // Just return the content (which will be processed by the image rule)
+    return content
+  },
+})
+
 /**
  * Formats a string for YAML, handling special characters and multi-line strings
  * @param {String} str - String to format for YAML
@@ -83,6 +95,11 @@ function formatYamlString(str) {
  * @returns {Promise<String>} - Local path to the downloaded image
  */
 async function downloadImage(imageUrl, outputPath, retryCount = 0) {
+  const dir = path.dirname(outputPath)
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+
   // Check if file already exists
   if (fs.existsSync(outputPath)) {
     console.log(`Image already exists at: ${outputPath}`)
@@ -91,14 +108,13 @@ async function downloadImage(imageUrl, outputPath, retryCount = 0) {
 
   try {
     console.log(`Downloading image: ${imageUrl}`)
-    const response = await fetch(imageUrl)
+    const response = await axios.get(imageUrl, { responseType: 'arraybuffer' })
 
-    if (!response.ok) {
-      throw new Error(`Failed to download image: ${response.status} ${response.statusText}`)
+    if (!response.data) {
+      throw new Error('Failed to download image: No data received')
     }
 
-    const buffer = await response.arrayBuffer()
-    fs.writeFileSync(outputPath, Buffer.from(buffer))
+    fs.writeFileSync(outputPath, response.data)
     console.log(`Saved image to: ${outputPath}`)
     return outputPath
   }
@@ -121,37 +137,18 @@ async function downloadImage(imageUrl, outputPath, retryCount = 0) {
  * @param {String} altText - Alt text of the image
  * @returns {String} - Filename for the image
  */
-function generateImageFilename(imageUrl, altText) {
+function generateImageFilename(imageUrl) {
   // Parse the URL to get the original filename extension
   const urlObj = new URL(imageUrl)
   const originalFilename = path.basename(urlObj.pathname)
+  const extension = path.extname(originalFilename)
 
-  // Get the file extension, defaulting to .jpg if none exists
-  let fileExtension = path.extname(originalFilename)
-  if (!fileExtension) {
-    fileExtension = '.jpg'
+  // If no extension is found, default to .jpg
+  if (extension.length === 0) {
+    console.log('No extension found for image: ', urlObj)
+    return `${originalFilename}.jpg`
   }
-
-  // Get the base name without extension
-  let baseName = path.basename(originalFilename, fileExtension)
-
-  // Only remove .jpg if it's a duplicate (i.e., if the original extension is .jpg and the base name ends with .jpg)
-  if (fileExtension === '.jpg' && baseName.endsWith('.jpg')) {
-    baseName = baseName.slice(0, -4)
-  }
-
-  // If alt text is available and not "undefined", use it as the base for the filename
-  if (altText && altText.trim() !== '' && altText.toLowerCase() !== 'undefined') {
-    const slugifiedAlt = slugify(altText)
-    // If slugification produces an empty string, fall back to URL-based naming
-    if (slugifiedAlt) {
-      return `${slugifiedAlt}${fileExtension}`
-    }
-  }
-
-  // Fall back to URL-based naming (with hash to avoid collisions)
-  const timestamp = Date.now()
-  return `${baseName}-${timestamp}${fileExtension}`
+  return originalFilename
 }
 
 /**
@@ -163,6 +160,12 @@ async function processAndDownloadImages(post) {
   // Create image directory if it doesn't exist
   if (!fs.existsSync(IMAGE_DOWNLOAD_DIR)) {
     fs.mkdirSync(IMAGE_DOWNLOAD_DIR, { recursive: true })
+  }
+
+  const postSlug = slugify(post.slug, { lower: true })
+  const postDir = path.join(IMAGE_DOWNLOAD_DIR, postSlug)
+  if (!fs.existsSync(postDir)) {
+    fs.mkdirSync(postDir, { recursive: true })
   }
 
   const imageUrlMap = new Map()
@@ -203,25 +206,25 @@ async function processAndDownloadImages(post) {
   for (const image of imagesToProcess) {
     try {
       // Generate a filename based on alt text if available, or URL otherwise
-      const filename = generateImageFilename(image.url, image.alt)
+      const filename = generateImageFilename(image.url)
 
       // Check if a file with this name already exists and make it unique if needed
-      let uniqueFilename = filename
-      let counter = 1
-      while (fs.existsSync(path.join(IMAGE_DOWNLOAD_DIR, uniqueFilename))) {
-        const ext = path.extname(filename)
-        const baseName = path.basename(filename, ext)
-        uniqueFilename = `${baseName}-${counter}${ext}`
-        counter++
-      }
+      // let uniqueFilename = filename
+      // let counter = 1
+      // while (fs.existsSync(path.join(IMAGE_DOWNLOAD_DIR, uniqueFilename))) {
+      //   const ext = path.extname(filename)
+      //   const baseName = path.basename(filename, ext)
+      //   uniqueFilename = `${baseName}-${counter}${ext}`
+      //   counter++
+      // }
 
-      const outputPath = path.join(IMAGE_DOWNLOAD_DIR, uniqueFilename)
+      const outputPath = path.join(postDir, filename)
 
       // Download the image
       await downloadImage(image.url, outputPath)
 
       // Map original URL to local path
-      const relativePath = `/images/blogs/${uniqueFilename}`
+      const relativePath = `/images/blogs/${postSlug}/${filename}`
       imageUrlMap.set(image.url, relativePath)
 
       // Apply rate limiting
@@ -283,6 +286,9 @@ function convertButtercmsToNuxtContent(post, imageUrlMap) {
 
   // Manually replace any remaining standard markdown image syntax
   markdown = markdown.replace(/!\[(.*?)\]\((.*?)\)/g, '::image-container\n---\nimage-src: $2\n---\n::')
+
+  // Remove any link wrapping around image-container components
+  markdown = markdown.replace(/\[(::image-container[\s\S]*?::)\]\((.*?)\)/g, '$1')
 
   // Replace all image URLs with local paths
   markdown = replaceImageUrls(markdown, imageUrlMap)

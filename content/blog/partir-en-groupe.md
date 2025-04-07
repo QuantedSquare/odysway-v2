@@ -52,14 +52,14 @@ Voici les meilleures expériences de **voyage en groupe** proposées par Odysway
 
 ::image-container
 ---
-image-src: "/images/blogs/akchour-maroc.jpg.jpg"
+image-src: "/images/blogs/partir-en-groupe/cA5HvvtqQDuaILKBPj2D.jpg"
 alt: akchour-maroc.jpg
 ---
 ::
 
 Nous sommes constamment connectés, c’est un fait. Messagerie instantanée, emails, téléphone, tablettes, tous ces appareils qui nous accompagnent et nous servent au quotidien sont également sources de stress et de tensions.
 
-Que diriez-vous d’une **détox digitale** **au cœur du rif marocain pour un vrai moment de kiff, de déconnexion et de détente** **?**
+Que diriez-vous d’une [**détox digitale**](https://odysway.com/voyages/digital-detox-maroc?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe) **au cœur du rif marocain pour un vrai moment de kiff, de déconnexion et de détente** [**?**](https://odysway.com/voyages/digital-detox-maroc)
 
 **Partez en groupe de 8 personnes** et découvrez Chefchaouen, surnommée "la perle bleue". Entre moments de détente et activités avec les locaux, vous oublierez vite votre portable !
 
@@ -75,7 +75,7 @@ Des hébergements de qualité dans des endroits qui vont vous aider à déconnec
 
 ## ::image-container
 ---
-image-src: "/images/blogs/Sauver-les-elephants-en-Thailande.jpg"
+image-src: "/images/blogs/partir-en-groupe/lMRA7gB6SB2CS3k3Y0Wd.jpg"
 alt: Sauver les éléphants en Thaïlande
 ---
 ::
@@ -84,9 +84,9 @@ Bon nombre de **personnes qui partent en groupe**, pensent que le tour à dos d'
 
 Sachez que cette pratique cache une réalité sordide car les éléphants subissent une véritable torture afin de devenir dociles.
 
-Chez Odysway, nous vous proposons de faire vraiment connaissance avec ces géants au grand cœur, en partant **en immersion dans un sanctuaire pour éléphants** en plein milieu de la jungle thaïlandaise.
+Chez Odysway, nous vous proposons de faire vraiment connaissance avec ces géants au grand cœur, en partant [**en immersion dans un sanctuaire pour éléphants**](https://odysway.com/voyages/sanctuaire-%C3%A9l%C3%A9phants-thailande?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe) en plein milieu de la jungle thaïlandaise.
 
-Ce sanctuaire rachète des éléphants maltraités, les nourrit, les soigne et les réintroduit dans leur habitat naturel. En participant à ce **voyage solidaire et éco-responsable** vous allez pouvoir vous occuper des éléphants en étant logé au sein même du sanctuaire.
+Ce sanctuaire rachète des éléphants maltraités, les nourrit, les soigne et les réintroduit dans leur habitat naturel. En participant à ce [**voyage solidaire et éco-responsable**](https://odysway.com/voyages/sanctuaire-%C3%A9l%C3%A9phants-thailande?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe) vous allez pouvoir vous occuper des éléphants en étant logé au sein même du sanctuaire.
 
 Vous aurez également l’opportunité de partager le quotidien de la communauté locale qui œuvre pour la bonne cause, celle des éléphants.
 
@@ -94,16 +94,16 @@ Vous aurez également l’opportunité de partager le quotidien de la communaut�
 
 ## ::image-container
 ---
-image-src: "/images/blogs/Photo-animaliere-dans-le-Jura.jpg"
+image-src: "/images/blogs/partir-en-groupe/E8YX3edGQdCgyiTxVUsQ.jpg"
 alt: Photo animalière dans le Jura
 ---
 ::  
 
 Que diriez-vous de **partir en groupe** dans le Jura afin de vous initier à la **photo animalière** ?
 
-C’est **Fabien Bruggmann**, **expert de la photographie animalière** connu dans le monde entier qui se fera un plaisir de vous apprendre à manier l'objectif, et vous expliquera comment approcher les animaux en montagne, sans les déranger ; comme un pro !
+C’est [**Fabien Bruggmann**](https://www.fabienbruggmannjura.com/wildlife), **expert de la photographie animalière** connu dans le monde entier qui se fera un plaisir de vous apprendre à manier l'objectif, et vous expliquera comment approcher les animaux en montagne, sans les déranger ; comme un pro !
 
-Durant ce séjour en immersion, vous allez pouvoir découvrir la nature enivrante du Parc Naturel du Haut Jura, un lieu idéal pour **apprendre les techniques de la photo animalière** et les mettre en pratique.
+Durant ce séjour en immersion, vous allez pouvoir découvrir la nature enivrante du Parc Naturel du Haut Jura, un lieu idéal pour [**apprendre les techniques de la photo animalière**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe) et les mettre en pratique.
 
 Dans ce parc vivent des renards, des chevreuils, des cerfs, des faucons, des loups et des lynx. Avec un peu de chance et de patience vous pourrez peut-être parvenir à photographier ces animaux sauvages.
 
@@ -115,7 +115,7 @@ Un **voyage en groupe** inoubliable et riche en émotions !
 
 ::image-container
 ---
-image-src: "/images/blogs/felix-rostig-UmV2wr-Vbq8-unsplash.jpg.jpg"
+image-src: "/images/blogs/partir-en-groupe/ukiK8LNCQEivfEuNNMoz.jpg"
 alt: felix-rostig-UmV2wr-Vbq8-unsplash.jpg
 ---
 ::
@@ -130,9 +130,9 @@ Toute l'équipe d’Odysway est là pour vous aider à construire le **séjour e
 
 Que vous souhaitiez : 
 
-*   partir pour un **séjour nature dans les Alpes avec au programme randonnée et bivouac sous les étoiles** ; 
-*   **découvrir la Vallée de l’Omo, plus connue comme la terre des premiers hommes en Ethiopie**
-*   **partir à l’aventure en Mongolie à la rencontre des chamanes des Steppes**. 
+*   partir pour un [**séjour nature dans les Alpes avec au programme randonnée et bivouac sous les étoiles**](https://odysway.com/voyages/marche-ane-meditation-france?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe) ; 
+*   [**découvrir la Vallée de l’Omo, plus connue comme la terre des premiers hommes en Ethiopie**](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe)
+*   [**partir à l’aventure en Mongolie à la rencontre des chamanes des Steppes**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO&utm_medium=thematique&utm_campaign=en_groupe). 
 
 Nous sommes là pour vous guider dans vos choix.
 ::

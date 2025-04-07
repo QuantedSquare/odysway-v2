@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-03 04:11:00+00:00"
 tags: "Presse"
 categories: "Partenaires"
-displayedImg: "/images/blogs/BGE-ADIL-orOdysway-en-video.jpg"
+displayedImg: "/images/blogs/bge-adil/QRBctdFbRg2vnPeEmlZp.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/BGE-ADIL-orOdysway-en-video.jpg"
+image-src: "/images/blogs/bge-adil/QRBctdFbRg2vnPeEmlZp.jpg"
 ---
 #publication-date
 3 avril 2019
@@ -31,10 +31,10 @@ Découvrez la video qu'est venue tourner BGE ADIL au Plateau, l'incubateur inter
 
 ::section-container
 ---
-image-src: "/images/blogs/BGE-ADIL-orOdysway-en-video.jpg"
+image-src: "/images/blogs/bge-adil/QRBctdFbRg2vnPeEmlZp.jpg"
 ---
 #content
-Découvrez la video qu'est venue tourner BGE ADIL au Plateau, l'incubateur interne de Société Générale où Odysway a été hébergée pendant 6 mois fin 2018.
+Découvrez [la video](https://youtu.be/bgFHho91QqI) qu'est venue tourner BGE ADIL au Plateau, l'incubateur interne de Société Générale où Odysway a été hébergée pendant 6 mois fin 2018.
 
   
   

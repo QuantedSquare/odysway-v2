@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-21 13:02:00+00:00"
 tags: "Presse"
 categories: "Blog"
-displayedImg: "/images/blogs/Odysway-veut-transformer-ses-clients-grace-aux-voyages.jpg"
+displayedImg: "/images/blogs/odysway-veut-transformer-ses-clients-grace-aux-voyages/c4PGp5pUTFuacfMDQ07O.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Odysway-veut-transformer-ses-clients-grace-aux-voyages.jpg"
+image-src: "/images/blogs/odysway-veut-transformer-ses-clients-grace-aux-voyages/c4PGp5pUTFuacfMDQ07O.jpg"
 ---
 #publication-date
 21 avril 2019
@@ -31,7 +31,7 @@ Odysway a eu droit a un article dans Tourmag, 1er portail des professionnels du 
 
 ::section-container
 ---
-image-src: "/images/blogs/Odysway-veut-transformer-ses-clients-grace-aux-voyages.jpg"
+image-src: "/images/blogs/odysway-veut-transformer-ses-clients-grace-aux-voyages/c4PGp5pUTFuacfMDQ07O.jpg"
 ---
 #content
 ## "Une jeune agence qui monte, qui monte"
@@ -40,12 +40,12 @@ Odysway a eu droit a un article dans Tourmag, 1er portail des professionnels du 
 
 ::image-container
 ---
-image-src: "/images/blogs/uVsbtnP2SnSJWMJ8gN63-1742841140930.jpg"
+image-src: "/images/blogs/odysway-veut-transformer-ses-clients-grace-aux-voyages/uVsbtnP2SnSJWMJ8gN63.jpg"
 alt: 
 ---
 ::
 
-Voyagez avec un chamane au Pérou.
+[Voyagez avec un chamane au Pérou.](https://odysway.com/voyages/voyage-chamanique-perou)
 
-➡ Retrouvez l'article complet en cliquant ici. Un grand merci à Aurelie Resch pour cette belle mise en avant.
+➡ Retrouvez l'article complet en cliquant [ici](https://www.tourmag.com/Nouveau-Odysway-veut-transformer-ses-clients-grace-aux-voyages_a96556.html). Un grand merci à [Aurelie Resch](http://aurelieresch.com/biographie/) pour cette belle mise en avant.
 ::

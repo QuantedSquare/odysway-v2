@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-07-29 11:00:00+00:00"
 tags: "Animaux, Asie, Famille, Sri Lanka"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/Quelle-faune-voir-au-Sri-Lanka.jpg"
+displayedImg: "/images/blogs/faune-sri-lanka/NvdlJEdmQUOtMgESoavv.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Quelle-faune-voir-au-Sri-Lanka.jpg"
+image-src: "/images/blogs/faune-sri-lanka/NvdlJEdmQUOtMgESoavv.jpg"
 ---
 #publication-date
 29 juillet 2019
@@ -31,12 +31,12 @@ Quelle faune voir au Sri Lanka ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Quelle-faune-voir-au-Sri-Lanka.jpg"
+image-src: "/images/blogs/faune-sri-lanka/NvdlJEdmQUOtMgESoavv.jpg"
 ---
 #content
 Pays doté d’une grande biodiversité, **le Sri Lanka héberge une faune riche et variée**. Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette **faune incroyable présente au Sri Lanka**.
 
-Après votre lecture, nous vous invitons à découvrir notre article sur les pratiques à bannir en voyage animalier.
+Après votre lecture, nous vous invitons à découvrir notre article [sur les pratiques à bannir en voyage animalier.](https://odysway.com/tourisme-animalier-les-pratiques-a-bannir-en-voyage)
 
 ## La faune : l’une des raisons de votre voyage au Sri Lanka
 
@@ -50,20 +50,20 @@ La présence de cette faune incroyable au Sri Lanka date de plusieurs millénair
 
 ::image-container
 ---
-image-src: "/images/blogs/2lNDmO5FR0GuQI9vdQYR-1742841060636.jpg"
+image-src: "/images/blogs/faune-sri-lanka/2lNDmO5FR0GuQI9vdQYR.jpg"
 alt: 
 ---
 ::
 
 _Les éléphants, faune sacrée au Sri Lanka_
 
-Faune sacrée du Sri Lanka, **l’éléphant** est omniprésent dans la culture du pays. Plusieurs centaines d’entre eux évoluent **en liberté dans le parc national d’Uda Walawe** situé dans le sud du pays. Vous pouvez également les voir dans **le parc de Minneriya**, dans celui de **Yala** ou encore au **parc national de Wilpattu**. Par ailleurs, nous vous rappelons qu’il est totalement déconseillé de faire une balade à dos d’éléphant lors de votre séjour. Arrachés à leur mère dans leurs premières années de vie, les éléphanteaux sont ensuite torturés. N’hésitez pas à lire notre article de blog à ce sujet.
+Faune sacrée du Sri Lanka, **l’éléphant** est omniprésent dans la culture du pays. Plusieurs centaines d’entre eux évoluent **en liberté dans le parc national d’Uda Walawe** situé dans le sud du pays. Vous pouvez également les voir dans **le parc de Minneriya**, dans celui de **Yala** ou encore au **parc national de Wilpattu**. Par ailleurs, nous vous rappelons qu’il est totalement déconseillé de faire une balade à dos d’éléphant lors de votre séjour. Arrachés à leur mère dans leurs premières années de vie, les éléphanteaux sont ensuite torturés. N’hésitez pas à lire [notre article de blog](https://odysway.com/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande) à ce sujet.
 
 ### Les tortues marines
 
 ::image-container
 ---
-image-src: "/images/blogs/tiyOusqzRja1cLNgCGtS-1742841061201.jpg"
+image-src: "/images/blogs/faune-sri-lanka/tiyOusqzRja1cLNgCGtS.jpg"
 alt: 
 ---
 ::
@@ -77,7 +77,7 @@ Envie de faire une action solidaire ? Participez à la sauvegarde des tortues ma
 
 ::image-container
 ---
-image-src: "/images/blogs/DloT5IvqSH6HkVfVif1g-1742841061781.jpg"
+image-src: "/images/blogs/faune-sri-lanka/DloT5IvqSH6HkVfVif1g.jpg"
 alt: 
 ---
 ::
@@ -90,7 +90,7 @@ Autre animal sacré, cette fois dans l’hindouisme, **le singe est probablemen
 
 _::image-container
 ---
-image-src: "/images/blogs/nqC60PbcT4ONUg3qYuqy-1742841062352.jpg"
+image-src: "/images/blogs/faune-sri-lanka/nqC60PbcT4ONUg3qYuqy.jpg"
 alt: 
 ---
 ::_
@@ -103,7 +103,7 @@ Avec pas moins de 482 espèces, **les oiseaux** feront le bonheur des ornithol
 
 _::image-container
 ---
-image-src: "/images/blogs/wnfsz11QuiVe2z3qytNO-1742841062928.jpg"
+image-src: "/images/blogs/faune-sri-lanka/wnfsz11QuiVe2z3qytNO.jpg"
 alt: 
 ---
 ::_
@@ -116,7 +116,7 @@ _Le crocodile, reptile présent au Sri Lanka_
 
 _::image-container
 ---
-image-src: "/images/blogs/V7rqWAqTT7a5QKH74UlD-1742841063461.jpg"
+image-src: "/images/blogs/faune-sri-lanka/V7rqWAqTT7a5QKH74UlD.jpg"
 alt: 
 ---
 ::_
@@ -129,7 +129,7 @@ Le Sri Lanka est une destination idéale pour admirer la faune aquatique. **Les
 
 ::image-container
 ---
-image-src: "/images/blogs/KfAlV2VSMa2jIJ2nniNW-1742841064058.jpg"
+image-src: "/images/blogs/faune-sri-lanka/KfAlV2VSMa2jIJ2nniNW.jpg"
 alt: 
 ---
 ::

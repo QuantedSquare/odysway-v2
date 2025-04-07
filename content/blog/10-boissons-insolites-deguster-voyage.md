@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-10-10 13:01:00+00:00"
 tags: "Amerique du Nord, Amerique du Sud, Asie, Europe"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/10-boissons-insolites-a-deguster-en-voyage.jpg"
+displayedImg: "/images/blogs/10-boissons-insolites-deguster-voyage/qpE0r8siSRDOHVnZM3p7.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/10-boissons-insolites-a-deguster-en-voyage.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/qpE0r8siSRDOHVnZM3p7.jpg"
 ---
 #publication-date
 10 octobre 2019
@@ -31,18 +31,18 @@ Partir en voyage, c’est découvrir de nouveaux paysages, de nouvelles cultures
 
 ::section-container
 ---
-image-src: "/images/blogs/10-boissons-insolites-a-deguster-en-voyage.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/qpE0r8siSRDOHVnZM3p7.jpg"
 ---
 #content
 Partir en voyage, c’est découvrir de nouveaux paysages, de nouvelles cultures, des modes de vie souvent à l’opposé du nôtre et faire de belles rencontres. **Partir en voyage, c’est aussi découvrir de nouvelles saveurs** et avoir l’occasion de goûter à des spécialités parfois surprenantes. Odysway a décidé de faire le tour du monde pour vous faire connaître **10 boissons insolites à déguster lors de votre voyage**, certaines avec modération bien sûr.
 
 ## Le vin de serpent
 
-Populaire **dans le sud de l’Asie**, **le vin de serpent fait partie des boissons insolites à déguster en voyage**. Toutefois, ce vin n’est pas à base de serpents mais d’alcool de riz. Et c’est dans ce liquide que l’on fait fermenter pendant plusieurs mois des serpents dont on a préalablement extrait le venin. Ce dernier est dissous dans l’alcool de riz qui va totalement annihiler ses effets dangereux. A noter que d’autres reptiles comme les scorpions sont également utilisés pour fabriquer ce breuvage considéré en Asie comme bon pour la santé. Découvrez nos voyages en Asie.
+Populaire **dans le sud de l’Asie**, **le vin de serpent fait partie des boissons insolites à déguster en voyage**. Toutefois, ce vin n’est pas à base de serpents mais d’alcool de riz. Et c’est dans ce liquide que l’on fait fermenter pendant plusieurs mois des serpents dont on a préalablement extrait le venin. Ce dernier est dissous dans l’alcool de riz qui va totalement annihiler ses effets dangereux. A noter que d’autres reptiles comme les scorpions sont également utilisés pour fabriquer ce breuvage considéré en Asie comme bon pour la santé. [Découvrez nos voyages en Asie.](https://odysway.com/destinations/asie)
 
 ## ::image-container
 ---
-image-src: "/images/blogs/17V1Fi2TKSl8iEZYsIiA-1742841034915.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/17V1Fi2TKSl8iEZYsIiA.jpg"
 alt: 
 ---
 ::
@@ -53,7 +53,7 @@ Si vous êtes **en voyage en Italie**, ne manquez pas de goûter au **Cynar**�
 
 ## ::image-container
 ---
-image-src: "/images/blogs/QHS7oBu8RxCDABkpbx2c-1742841035432.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/QHS7oBu8RxCDABkpbx2c.jpg"
 alt: 
 ---
 ::
@@ -64,18 +64,18 @@ Dans le massif de Charlevoix **au Québec**, offrez-vous une dégustation de *
 
 ## ::image-container
 ---
-image-src: "/images/blogs/7jgzgeIDQVGXRiP5JGHv-1742841035952.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/7jgzgeIDQVGXRiP5JGHv.jpg"
 alt: 
 ---
 ::
 
 ## Le masato et l’Inca Kola : des boissons insolites à goûter en voyage au Pérou
 
-Au cœur de la forêt amazonienne péruvienne, les Indiens aiment à préparer **le masato** dont la fabrication est peu singulière. Il s’agit d’une **boisson à base de manioc mâché puis recraché auquel on ajoute de l’eau et du sucre**. Le tout fermente ensuite pendant une semaine. De même, on ne peut pas évoquer le Pérou sans parler aussi de **l’Inca Kola**. Avec une couleur jaune fluo et avec un goût de chewing-gum et de bonbon, **c’est le soda le plus consommé au Pérou**. Découvrez l'ancienne culture péruvienne à travers notre article.
+Au cœur de la forêt amazonienne péruvienne, les Indiens aiment à préparer **le masato** dont la fabrication est peu singulière. Il s’agit d’une **boisson à base de manioc mâché puis recraché auquel on ajoute de l’eau et du sucre**. Le tout fermente ensuite pendant une semaine. De même, on ne peut pas évoquer le Pérou sans parler aussi de **l’Inca Kola**. Avec une couleur jaune fluo et avec un goût de chewing-gum et de bonbon, **c’est le soda le plus consommé au Pérou**. [Découvrez l'ancienne culture péruvienne à travers notre article.](https://odysway.com/empire-inca-origine-apogee-declin)
 
 ## ::image-container
 ---
-image-src: "/images/blogs/iQkh5RoSDVz4H2IBYWsQ-1742841036474.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/iQkh5RoSDVz4H2IBYWsQ.jpg"
 alt: 
 ---
 ::
@@ -86,7 +86,7 @@ Café. Œuf. Le mélange est plutôt… surprenant ! Cela n’empêche pas **le
 
 ## ::image-container
 ---
-image-src: "/images/blogs/cb58qVGGQVCE52XJiJLl-1742841036997.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/cb58qVGGQVCE52XJiJLl.jpg"
 alt: 
 ---
 ::
@@ -101,7 +101,7 @@ De l’autre côté de l’Atlantique, la pizza fait indéniablement partie de l
 
 ## ::image-container
 ---
-image-src: "/images/blogs/XtgSyb2zSmSqqBTgFKSK-1742841037512.jpg"
+image-src: "/images/blogs/10-boissons-insolites-deguster-voyage/XtgSyb2zSmSqqBTgFKSK.jpg"
 alt: 
 ---
 ::
@@ -118,7 +118,7 @@ Dans la **gastronomie irlandaise**, les huîtres et la bière font partie des s
 
 **Au Japon**, il existe une boisson qui fait fureur, notamment en été pour se rafraîchir : **le ramune.** Cette limonade se décline en plusieurs saveurs dont certaines ne manqueront pas de susciter votre curiosité. Citons par exemple les goûts curry, wasabi, champagne, sauce teriyaki ou encore potage de maïs. Quelle que soit sa saveur, **les ramune sont des boissons incontournables et insolites à déguster lors de tout voyage au pays du soleil levant.**
 
-Peut-être aurez-vous l'opportunité de goûter à l'une de ces boissons en partant en voyage en immersion avec Odysway ! C'est l'occasion parfaite d'allier expériences fortes et découvertes culinaires. 
+Peut-être aurez-vous l'opportunité de goûter à l'une de ces boissons [en partant en voyage en immersion avec Odysway](https://odysway.com/voyages) ! C'est l'occasion parfaite d'allier expériences fortes et découvertes culinaires. 
 
-Pour poursuivre votre lecture, lisez notre article sur le top 5 des activités insolites à faire à Madagascar.
+Pour poursuivre votre lecture, lisez notre article [sur le top 5 des activités insolites à faire à Madagascar.](https://odysway.com/le-top-5-des-activites-insolites-a-madagascar)
 ::

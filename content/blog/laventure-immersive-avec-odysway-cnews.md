@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-18 15:49:00+00:00"
 tags: "Presse"
 categories: "Presse ecrite"
-displayedImg: "/images/blogs/L'aventure-immersive"-avec-Odysway-dans-Cnews-!.jpg"
+displayedImg: "/images/blogs/laventure-immersive-avec-odysway-cnews/Hf3IYFVZSiqEaebxUWtl.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/L'aventure-immersive"-avec-Odysway-dans-Cnews-!.jpg"
+image-src: "/images/blogs/laventure-immersive-avec-odysway-cnews/Hf3IYFVZSiqEaebxUWtl.jpg"
 ---
 #publication-date
 18 avril 2019
@@ -31,7 +31,7 @@ Odysway a eu droit a un article en pleine page dans le quotidien Cnews du 9 avri
 
 ::section-container
 ---
-image-src: "/images/blogs/L'aventure-immersive"-avec-Odysway-dans-Cnews-!.jpg"
+image-src: "/images/blogs/laventure-immersive-avec-odysway-cnews/Hf3IYFVZSiqEaebxUWtl.jpg"
 ---
 #content
 Odysway a eu droit a un article en pleine page dans le quotidien Cnews du 9 avril 2019. Découvrez ci-dessous l'article dédié a notre agence.
@@ -41,7 +41,7 @@ Odysway a eu droit a un article en pleine page dans le quotidien Cnews du 9 avri
 
 ::image-container
 ---
-image-src: "/images/blogs/FFSymISRQQCd6iUTsQYA-1742841143549.jpg"
+image-src: "/images/blogs/laventure-immersive-avec-odysway-cnews/FFSymISRQQCd6iUTsQYA.jpg"
 alt: 
 ---
 ::

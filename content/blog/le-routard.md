@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-03-22 04:10:00+00:00"
 tags: "Presse"
 categories: "Blog"
-displayedImg: "/images/blogs/Odysway-sur-le-Guide-du-Routard.jpg"
+displayedImg: "/images/blogs/le-routard/mVSs1ylGRMSZFrvIsxST.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Odysway-sur-le-Guide-du-Routard.jpg"
+image-src: "/images/blogs/le-routard/mVSs1ylGRMSZFrvIsxST.jpg"
 ---
 #publication-date
 22 mars 2019
@@ -31,10 +31,10 @@ Depuis mars 2019, Odysway apparait dans la liste des agences de voyages référe
 
 ::section-container
 ---
-image-src: "/images/blogs/Odysway-sur-le-Guide-du-Routard.jpg"
+image-src: "/images/blogs/le-routard/mVSs1ylGRMSZFrvIsxST.jpg"
 ---
 #content
 Depuis mars 2019, Odysway apparait dans la liste des agences de voyages référencées sur le site du Routard en ligne. Retrouvez la présentation de notre agence sur cette page : 
 
-https://www.routard.com/tous-les-organismes-de-voyage/cid137936-odysway.html
+[https://www.routard.com/tous-les-organismes-de-voyage/cid137936-odysway.html](https://www.routard.com/tous-les-organismes-de-voyage/cid137936-odysway.html)
 ::

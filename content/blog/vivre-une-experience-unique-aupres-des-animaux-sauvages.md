@@ -40,7 +40,7 @@ Aujourd'hui, de nombreux animaux sauvages sont en danger dont beaucoup en voie d
 
 ::image-container
 ---
-image-src: "/images/blogs/Fq7M0sEdSOSBy0NUXiQc-1742840914488.jpg"
+image-src: "/images/blogs/vivre-une-experience-unique-aupres-des-animaux-sauvages/Fq7M0sEdSOSBy0NUXiQc.jpg"
 alt: undefined
 ---
 ::
@@ -55,10 +55,10 @@ Vous partez bientôt au Costa Rica, en Afrique du Sud, au Sri Lanka ou bien aill
 
 ::image-container
 ---
-image-src: "/images/blogs/WNDrCRSK6naTCWPHAGRA-1742840915021.jpg"
+image-src: "/images/blogs/vivre-une-experience-unique-aupres-des-animaux-sauvages/WNDrCRSK6naTCWPHAGRA.jpg"
 alt: undefined
 ---
 ::
 
-**Vous souhaitez rencontrer des animaux sauvages lors d'une expérience solidaire tournée vers un tourisme responsable ?** Mais vous ne savez pas comment ? Ni où ? N'attendez plus et consultez sans plus tarder nos différents voyages. Parmi eux, protéger les animaux au Sri Lanka, soigner les animaux de la jungle au Costa Rica ou bien s'occuper des félins en Afrique du Sud. Vers quoi votre cœur va-t-il pencher ? N'hésitez pas non plus à nous contacter pour en savoir plus.
+**Vous souhaitez rencontrer des animaux sauvages lors d'une expérience solidaire tournée vers un tourisme responsable ?** Mais vous ne savez pas comment ? Ni où ? N'attendez plus et consultez sans plus tarder nos différents voyages. Parmi eux, [protéger les animaux au Sri Lanka](https://odysway.com/voyages/protection-animaux-sri-lanka), [soigner les animaux de la jungle au Costa Rica](https://odysway.com/voyages/refuge-animaux-costa-rica) ou bien [s'occuper des félins en Afrique du Sud](https://odysway.com/voyages/felins-afrique-du-sud). Vers quoi votre cœur va-t-il pencher ? N'hésitez pas non plus à nous contacter pour en savoir plus.
 ::

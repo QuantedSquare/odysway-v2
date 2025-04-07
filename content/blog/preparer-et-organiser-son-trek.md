@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-09-24 06:38:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Organiser-et-preparer-son-trek.jpg"
+displayedImg: "/images/blogs/preparer-et-organiser-son-trek/tfEZnFmERDGedU0VARIY.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Organiser-et-preparer-son-trek.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/tfEZnFmERDGedU0VARIY.jpg"
 ---
 #publication-date
 24 septembre 2021
@@ -31,7 +31,7 @@ Organiser et préparer son trek
 
 ::section-container
 ---
-image-src: "/images/blogs/Organiser-et-preparer-son-trek.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/tfEZnFmERDGedU0VARIY.jpg"
 ---
 #content
 Le **Trekking** est certainement la manière la plus simple de voyager. Il suffit d'une simple paire de chaussures dirait-on. Seulement pour partir en toute sérénité à la découverte du monde, il faut un semblant d' **organisation** et de **préparation** .
@@ -40,11 +40,11 @@ Le trek est avant tout un **voyage itinérant** , au rythme lent de la marche, d
 
 Derrière le terme de trek se cache de **nombreuses pratiques sportives** et également de **nombreux types d'hébergement** . Ce voyage d'aventure doit tout d'abord s'adapter au terrain dans lequel vous évoluez, il se peut donc que vous ameniez à utiliser d'autres moyens de déplacement comme le kayak lors de la traversée de cours d'eau ou les raquettes en hiver... Vous pouvez également passer la nuit en bivouac, dans une auberge ou un refuge. 
 
-→ Découvrez nos voyages Trek et aventures.
+→ [Découvrez nos voyages Trek et aventures.](https://odysway.com/thematiques/voyage-aventure)
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-14.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/uQarymbXQdmCElyKpknd.jpg"
 alt: indéfini
 ---
 ::
@@ -59,14 +59,14 @@ Si vous avez déjà une expérience de la randonnée pédestre et que vous conna
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-15.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/3DJlCuaUQ7mDoBFu94sI.jpg"
 alt: indéfini
 ---
 ::
 
 ## **Avec qui partir ?** 
 
-Il est très simple d'organiser son trek sur les chemins proches et fréquentés en France et en Europe grâce aux nombreux **guides de randonnées** . Cependant, les choses se compliquent pour les treks à l'étranger : les chemins moins bien balisés, le recrutement de porteur, les langues étrangères... il est donc préférable de faire confiance aux guides qui connaissent sur le bout des doigts les chemins de randonnées et départ avec des **agences locales** comme Odysway qui vous propose divers séjours autour de la thématique de l'aventure en France ou à l'étranger ! 
+Il est très simple d'organiser son trek sur les chemins proches et fréquentés en France et en Europe grâce aux nombreux **guides de randonnées** . Cependant, les choses se compliquent pour les treks à l'étranger : les chemins moins bien balisés, le recrutement de porteur, les langues étrangères... il est donc préférable de faire confiance aux guides qui connaissent sur le bout des doigts les chemins de randonnées et départ avec des **agences locales** comme Odysway qui vous propose divers séjours autour de la thématique de [l'aventure](https://odysway.com/thematiques/voyage-aventure) en France ou à l'étranger ! 
 
 ## Les préparatifs
 
@@ -76,7 +76,7 @@ Comme pour tout voyage, tout d'abord renseignez-vous sur les **formalités d'ent
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-16.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/Y7asjTTmRLypKwM2PKca.jpg"
 alt: indéfini
 ---
 ::
@@ -91,7 +91,7 @@ Selon votre itinéraire et votre niveau, élaborez un **programme progressif d'e
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-17.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/PyaeKzB5St23ZQNw3VJM.jpg"
 alt: indéfini
 ---
 ::
@@ -110,7 +110,7 @@ Le réchaud peut fonctionner **soit au gaz soit à l'essence** . Attention, il e
 
 ::image-container
 ---
-image-src: "/images/blogs/tente.jpg.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/gPYMaWmyRNKVR05cfjp9.jpg"
 alt: tente.jpg
 ---
 ::
@@ -129,7 +129,7 @@ Enfin le **soleil** en haute montagne est certainement l'ennemi n°1 du randonne
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-18.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/ugRjXEDzQnSIDAEH8Bbb.jpg"
 alt: indéfini
 ---
 ::
@@ -158,7 +158,7 @@ En fonction du score, il faut adopter une **conduite particulière** : 
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-19.jpg"
+image-src: "/images/blogs/preparer-et-organiser-son-trek/GHZdT0PNT9i9POJ0adxn.jpg"
 alt: indéfini
 ---
 ::
@@ -169,5 +169,7 @@ En autonomie, faites attention au poids de votre sac. Privilégiez les **aliment
 
 ### L'eau
 
-S'il est impossible d'acheter des bouteilles d'eau sur les lieux de votre randonnée, vous pouvez utiliser des **pastilles de type Micropur** pour traiter l'eau que vous trouverez.
+S'il est impossible d'acheter des bouteilles d'eau sur les lieux de votre randonnée, vous pouvez utiliser des **pastilles de type Micropur** pour traiter l'eau que vous trouverez. 
+
+ [](https://drive.google.com/file/d/1j5SZds1HsJUZkLYjYccLb8e_WrjIy5pc/view)
 ::

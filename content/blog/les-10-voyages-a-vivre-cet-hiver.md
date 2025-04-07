@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-10-27 06:25:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/TOP-10-des-voyages-a-vivre-cet-hiver.jpg"
+displayedImg: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/5aOMAxbHR6JgmYJKw4AQ.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/TOP-10-des-voyages-a-vivre-cet-hiver.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/5aOMAxbHR6JgmYJKw4AQ.jpg"
 ---
 #publication-date
 27 octobre 2021
@@ -31,7 +31,7 @@ TOP 10 des voyages à vivre cet hiver
 
 ::section-container
 ---
-image-src: "/images/blogs/TOP-10-des-voyages-a-vivre-cet-hiver.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/5aOMAxbHR6JgmYJKw4AQ.jpg"
 ---
 #content
 L’hiver est une période propice pour voyager et partir à la découverte de paysages différents. Que vous soyez adepte des pays chauds ou froids, vous serez tout aussi émerveillé. La Sibérie, le Cap-Vert, l'Afrique du sud ou encore la Laponie finlandaise ne sont qu’un aperçu des quelques magnifiques endroits à (re)découvrir en hiver. Pour vous, Odysway a dressé une liste des 10 voyages à vivre cet hiver. Et vous, quel sera votre coup de cœur ?
@@ -40,7 +40,7 @@ L’hiver est une période propice pour voyager et partir à la découverte de p
 
 ::image-container
 ---
-image-src: "/images/blogs/1NZNfRdRQ7aQj2BY22I5-1742840681449.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/1NZNfRdRQ7aQj2BY22I5.jpg"
 alt: undefined
 ---
 ::
@@ -53,7 +53,7 @@ L’**Afrique du sud** est sans conteste l’un des **10 voyages à vivre cet hi
 
 ::image-container
 ---
-image-src: "/images/blogs/kanlXmUyQua3oZnYXj1D-1742840681965.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/kanlXmUyQua3oZnYXj1D.jpg"
 alt: undefined
 ---
 ::
@@ -66,20 +66,20 @@ Les balades en bateau sont également possibles pendant cette saison. Vous aurez
 
 ::image-container
 ---
-image-src: "/images/blogs/ODuyKeUR0eniMSLnFyip-1742840682516.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/ODuyKeUR0eniMSLnFyip.jpg"
 alt: undefined
 ---
 ::
 
 Avec un climat agréable, cette destination fait partie des **10 voyages à vivre cet hiver**. Par l’immensité de son territoire et la diversité de ses paysages, le **Brésil** est la promesse d’un **voyage riche en découvertes**. Venez profiter des superbes plages de sable fin, vibrez au rythme du carnaval, apprenez les rudiments de la capoeira… Partez également sur les traces de l’histoire du pays en arpentant ses villes coloniales comme Salvador de Bahia.
 
-Le Brésil se dote d’une **nature généreuse** et le plus bel exemple est la forêt amazonienne. Croisière sur le fleuve ou randonnée dans la jungle, la forêt vous réserve de très belles surprises. De son côté, la région du Pantanal est propice à l’observation des oiseaux. Découvrez notre séjour en immersion chez une famille habitant en pleine forêt amazonienne.
+Le Brésil se dote d’une **nature généreuse** et le plus bel exemple est la forêt amazonienne. Croisière sur le fleuve ou randonnée dans la jungle, la forêt vous réserve de très belles surprises. De son côté, la région du Pantanal est propice à l’observation des oiseaux. Découvrez notre séjour en immersion [chez une famille habitant en pleine forêt amazonienne](https://odysway.com/voyages/survie-jungle-amazonienne).
 
 ## 4\. Le Canada
 
 ::image-container
 ---
-image-src: "/images/blogs/vGf8JwPTaeNkv3ZPxd2z-1742840683157.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/vGf8JwPTaeNkv3ZPxd2z.jpg"
 alt: undefined
 ---
 ::
@@ -90,38 +90,38 @@ D’ouest en est, le **Canada** est une succession d’espaces naturels gigantes
 
 ::image-container
 ---
-image-src: "/images/blogs/TplBgb61SE2vT0Lj5uM3-1742840683801.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/TplBgb61SE2vT0Lj5uM3.jpg"
 alt: undefined
 ---
 ::
 
 Archipel aux îles sauvages et volcaniques, le **Cap-Vert** est un pays fascinant. Façonné par diverses influences culturelles, c’est un voyage aux **multiples visages** qui vous attend. Vous tomberez certainement sous le charme de ses habitants dont la gentillesse n’a d’égale que la **beauté de ses paysages**. Plages de sable blanc bordées par une eau turquoise, volcans, vallées luxuriantes, la **nature** est encore parfaitement **préservée**. Sur terre ou dans l’eau, il ne tient qu’à vous d’explorer toutes les merveilles de cet archipel.
 
-Pour aller plus loin dans votre expérience capverdienne, prenez part à notre séjour sur l’île de Santiago. Une immersion au cœur de la vie des Capverdiens, pour un voyage sous le signe de l’authenticité.
+Pour aller plus loin dans votre expérience capverdienne, prenez part à notre séjour sur l’île de Santiago. Une [immersion au cœur de la vie des Capverdiens](https://odysway.com/voyages/immersion-culturelle-cap-vert), pour un voyage sous le signe de l’authenticité.
 
 ## 6\. Le Costa Rica
 
 ::image-container
 ---
-image-src: "/images/blogs/pCSsSHCGQMOgYjb07q2I-1742840684371.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/pCSsSHCGQMOgYjb07q2I.jpg"
 alt: undefined
 ---
 ::
 
 Le **Costa** **Rica** est incontestablement l’un des **10 voyages à vivre cet hiver** pour changer d’air. Destination phare pour les amoureux de la nature, ce pays d’Amérique centrale est un véritable **paradis** **naturel** où règne une certaine douceur de vivre. Sa faune et sa flore sont d’une richesse incroyable aux multiples couleurs. Lors de vos randonnées et balades dans les mangroves, la jungle ou les montagnes, ouvrez vos yeux et vos oreilles pour tenter d’apercevoir les diverses espèces qui y vivent.
 
-Si vous souhaitez contribuer à la préservation de la faune du Costa Rica, notre séjour pour soigner les animaux de la jungle devrait vous plaire.
+Si vous souhaitez contribuer à la préservation de la faune du Costa Rica, notre séjour pour [soigner les animaux de la jungle](https://odysway.com/voyages/refuge-animaux-costa-rica) devrait vous plaire.
 
 ## 7\. La Laponie finlandaise
 
 ::image-container
 ---
-image-src: "/images/blogs/Xtf3qHexSW2Pb3kRg0cY-1742840684888.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/Xtf3qHexSW2Pb3kRg0cY.jpg"
 alt: undefined
 ---
 ::
 
-Bienvenue dans les terres du Grand Nord. Parmi les **10 voyages à vivre cet hiver**, impossible de ne pas mentionner la **Laponie** **finlandaise**. Avec plus de rennes que d’habitants, le dépaysement est au rendez-vous. Devant vous, de vastes étendues blanches et sauvages, des forêts immenses où règnent une certaine quiétude. Avec un tel environnement, vive les activités de plein air ! Ski de fond, raquettes, chien de traîneau… D’ailleurs, nous proposons un séjour aventure au cœur de cette magnifique région.
+Bienvenue dans les terres du Grand Nord. Parmi les **10 voyages à vivre cet hiver**, impossible de ne pas mentionner la **Laponie** **finlandaise**. Avec plus de rennes que d’habitants, le dépaysement est au rendez-vous. Devant vous, de vastes étendues blanches et sauvages, des forêts immenses où règnent une certaine quiétude. Avec un tel environnement, vive les activités de plein air ! Ski de fond, raquettes, chien de traîneau… D’ailleurs, nous proposons un [séjour aventure](https://odysway.com/voyages/voyage-hiver-laponie-finlande) au cœur de cette magnifique région.
 
 Un voyage en Laponie finlandaise ne serait pas complet sans un moment de détente au sauna – une tradition ! – et l’observation des **aurores boréales**. Faites également des rencontres inoubliables avec les Samis ou même le Père Noël.
 
@@ -129,7 +129,7 @@ Un voyage en Laponie finlandaise ne serait pas complet sans un moment de détent
 
 ::image-container
 ---
-image-src: "/images/blogs/6SLsf3gTBWn1CM9yzC1o-1742840685405.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/6SLsf3gTBWn1CM9yzC1o.jpg"
 alt: undefined
 ---
 ::
@@ -138,13 +138,13 @@ Le **Népal** est une destination incontournable pour les amateurs d'aventure. A
 
 Prenez également le temps de découvrir les petits villages montagnards, si pittoresques, et d’échanger avec les locaux. Allez visiter les temples de la vallée de Katmandou pour vous immerger dans les traditions et les croyances népalaises. Quant à la **faune du Népal**, elle est tout aussi impressionnante : éléphants, rhinocéros, tigres ou encore yacks évoluent au milieu d’une nature verdoyante.
 
-Si vous souhaitez découvrir le Népal autrement, nous vous proposons de découvrir nos séjours uniques.
+Si vous souhaitez découvrir le Népal autrement, nous vous proposons de [découvrir nos séjours uniques.](https://odysway.com/destinations/nepal)
 
 ## 9\. La Sibérie
 
 ::image-container
 ---
-image-src: "/images/blogs/C52-RHNWgAA1X7t.jpg.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/S3PBA4v9TKKryEsTudu5.jpg"
 alt: C52-RHNWgAA1X7t.jpg
 ---
 ::
@@ -157,12 +157,12 @@ Pour un séjour mémorable, embarquez à bord du **Transsibérien** pour un voya
 
 ::image-container
 ---
-image-src: "/images/blogs/yE82kajDSMaVvz5h5j2V-1742840686788.jpg"
+image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/yE82kajDSMaVvz5h5j2V.jpg"
 alt: undefined
 ---
 ::
 
 Au cœur de l’océan Indien, le **Sri Lanka** est un joyau, avec ses plages de sable fin, ses montagnes majestueuses, ses rizières, ses forêts luxuriantes et ses villages traditionnels. **Entre nature et culture**, c’est un voyage qui vous emmènera découvrir les plus belles merveilles du pays. Il s’agit notamment des villes coloniales comme Colombo, des plantations de thé, des temples bouddhistes et hindouistes, et de la jungle qui regorge d’une faune intrigante. Sur terre, dans l’air ou dans l’eau, il y a mille et une façons d’admirer le Sri Lanka.
 
-Envie de vivre une belle expérience ? Découvrez notre séjour pour voyager autrement au Sri Lanka.
+Envie de vivre une belle expérience ? [Découvrez notre séjour pour voyager autrement au Sri Lanka.](https://odysway.com/voyages/voyage-immersion-culturelle-sri-lanka)
 ::

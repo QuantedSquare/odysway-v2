@@ -40,7 +40,7 @@ Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionn
 
 ::image-container
 ---
-image-src: "/images/blogs/srilanka.jpg-1.jpg"
+image-src: "/images/blogs/le-sri-lanka-une-ile-aux-mille-saveurs/VTIgkf2HQNmEHSRH8qTC.jpg"
 alt: srilanka.jpg
 ---
 ::
@@ -49,5 +49,5 @@ Le célèbre train du Sri Lanka reliant Ella à Hatton.
 
 Que vous ayez envie de vous ressourcer ou de vivre des expériences insolites, Odysway vous accompagne dans votre voyage. Par exemple, partez à la rencontre des Veddas, une tribu âgée de 35 000 ans. Dormez dans un monastère et assistez aux cérémonies sacrées. Les plus sportifs useront leurs semelles sur les sentiers de trekking et les plus téméraires oseront les descentes mouvementées en rafting. Sinon, initiez-vous aux massages ayurvédiques, la médecine traditionnelle du pays. Ou bien embarquez à bord d’une montgolfière et laissez-vous porter au-dessus de paysages uniques. Découvrez aussi le Yoga, le snorkeling ou la plongée : au Sri Lanka, vous avez L’embarras du choix!
 
-Partez avec Odysway, en découvrant le Sri Lanka à deux-roues ou pour protéger les animaux du Sri Lanka.
+Partez avec Odysway, en [découvrant le Sri Lanka à deux-roues](https://odysway.com/voyages/voyage-velo-sri-lanka) ou pour [protéger les animaux du Sri Lanka](https://odysway.com/voyages/protection-animaux-sri-lanka).
 ::

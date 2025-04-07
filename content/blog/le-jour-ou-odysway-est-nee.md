@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-02-05 16:10:00+00:00"
 tags: "Developpement personnel, Grands espaces"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Le-jour-ou-Odysway-est-nee...jpg"
+displayedImg: "/images/blogs/le-jour-ou-odysway-est-nee/kFaiVIN1RAyPsnqMRmt9.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-jour-ou-Odysway-est-nee...jpg"
+image-src: "/images/blogs/le-jour-ou-odysway-est-nee/kFaiVIN1RAyPsnqMRmt9.jpg"
 ---
 #publication-date
 5 février 2019
@@ -31,7 +31,7 @@ Le jour où Odysway est née..
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-jour-ou-Odysway-est-nee...jpg"
+image-src: "/images/blogs/le-jour-ou-odysway-est-nee/kFaiVIN1RAyPsnqMRmt9.jpg"
 ---
 #content
 Je m'appelle Romain Masina et je suis le fondateur d'Odysway.  
@@ -55,7 +55,7 @@ Alors que j'étais a Rurrenabaque, une petite ville du Nord de la Bolivie, je fa
 
 ::image-container
 ---
-image-src: "/images/blogs/2WuquIbWSIWigsukDhcs-1742842059627.jpg"
+image-src: "/images/blogs/le-jour-ou-odysway-est-nee/2WuquIbWSIWigsukDhcs.jpg"
 alt: 
 ---
 ::
@@ -70,7 +70,7 @@ J'ai une confiance aveugle en mon guide, sans qui je ne survivrai sans doute pas
 
 ::image-container
 ---
-image-src: "/images/blogs/snDikNLYTKilDFJJ1Dsu-1742842080288.jpg"
+image-src: "/images/blogs/le-jour-ou-odysway-est-nee/snDikNLYTKilDFJJ1Dsu.jpg"
 alt: 
 ---
 ::
@@ -94,7 +94,7 @@ Les voyages d'Odysway ne visent pas l'itinéraire mais l'émotion du voyage, cel
   
 J'ai souhaité partager ces expériences pour les rendre accessibles pour tous afin que chacun puisse voyager autrement, vivre plus fortement, se sentir plus vivant. 
 
-Découvrir le concept d'Odysway.  
+[Découvrir le concept d'Odysway.](https://odysway.com/concept)  
   
 Intensément,  
   

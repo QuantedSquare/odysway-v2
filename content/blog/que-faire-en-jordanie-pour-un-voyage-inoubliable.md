@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-07-27 14:17:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Que-faire-lors-d'un-voyage-en-Jordanie-1.jpg"
+displayedImg: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/9FmOJSj0Q9uxqFQEjIYt.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Que-faire-lors-d'un-voyage-en-Jordanie-1.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/9FmOJSj0Q9uxqFQEjIYt.jpg"
 ---
 #publication-date
 27 juillet 2023
@@ -31,7 +31,7 @@ La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une
 
 ::section-container
 ---
-image-src: "/images/blogs/Que-faire-lors-d'un-voyage-en-Jordanie-1.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/9FmOJSj0Q9uxqFQEjIYt.jpg"
 ---
 #content
 La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une destination de choix pour les voyageurs en quête d'aventure et de découvertes. Des ruines majestueuses de Petra aux vastes déserts de Wadi Rum, en passant par les rencontres chaleureuses avec les Bédouins, ce voyage en Jordanie vous promet une expérience unique et mémorable. Dans cet article, nous vous dévoilons un itinéraire captivant pour savoir que faire en Jordanie et profiter pleinement de votre voyage dans ce joyau du Moyen-Orient.
@@ -40,7 +40,7 @@ La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une
 
 ::image-container
 ---
-image-src: "/images/blogs/Jordanie_Jour6_Petra.webp-1.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/YuB6VeNJQlcvayIdFAOC.jpg"
 alt: Jordanie_Jour6_Petra.webp
 ---
 ::
@@ -51,7 +51,7 @@ Votre voyage en Jordanie débute par l'exploration de Petra, l'une des merveille
 
 ::image-container
 ---
-image-src: "/images/blogs/Jordanie-Jour9_Wadirum_Bedouin.webp.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/5K4IzLpeQLSv36JBEsTP.jpg"
 alt: Jordanie-Jour9_Wadirum_Bedouin.webp
 ---
 ::
@@ -62,7 +62,7 @@ Le voyage en Jordanie ne serait pas complet sans une rencontre authentique avec 
 
 ::image-container
 ---
-image-src: "/images/blogs/Jordanie_Jour9_Wadirum.webp.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/tJmf9r12Q6isgfgG2t6l.jpg"
 alt: Jordanie_Jour9_Wadirum.webp
 ---
 ::
@@ -73,7 +73,7 @@ Poursuivez votre périple en Jordanie en vous aventurant dans le désert de Wadi
 
 ::image-container
 ---
-image-src: "/images/blogs/Jordanie_Jour10_MerMorte.webp.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/VWDoxobdQHSeEAc9eFT1.jpg"
 alt: Jordanie_Jour10_MerMorte.webp
 ---
 ::
@@ -84,7 +84,7 @@ Après ces aventures dans le désert, offrez-vous une pause bien méritée sur l
 
 ::image-container
 ---
-image-src: "/images/blogs/Jordanie_Jour5_WadiGhuweir.webp.jpg"
+image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/kmJslk1wQvmITWrlHlaH.jpg"
 alt: Jordanie_Jour5_WadiGhuweir.webp
 ---
 ::
@@ -93,5 +93,5 @@ Pour les amateurs d'aventure et de randonnée, ne manquez pas l'occasion d'explo
 
 Avec ces quelques idées, vous savez maintenant que faire en Jordanie pour un voyage mémorable et riche en émotions !
 
-Chez Odysway, nous sommes passionnés par la création de voyages uniques et mémorables. Si vous souhaitez vivre cette expérience exceptionnelle, notre voyage en immersion chez les Bédouins en Jordanie vous offrira une expérience authentique et des souvenirs durables. Embarquez avec nous pour découvrir la Jordanie sous un nouveau jour et plongez-vous dans une aventure extraordinaire !
+Chez Odysway, nous sommes passionnés par la création de voyages uniques et mémorables. Si vous souhaitez vivre cette expérience exceptionnelle, notre [voyage en immersion chez les Bédouins en Jordanie](https://odysway.com/voyages/jordanie-bedouins-petra-wadirum) vous offrira une expérience authentique et des souvenirs durables. Embarquez avec nous pour découvrir la Jordanie sous un nouveau jour et plongez-vous dans une aventure extraordinaire !
 ::

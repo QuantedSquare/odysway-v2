@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-04-30 14:37:00+00:00"
 tags: "Europe, Grands espaces, Séminaire"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Un-seminaire-insolite-a-Tenerife.jpg"
+displayedImg: "/images/blogs/un-seminaire-insolite-a-tenerife/3GP1UTdTDGDNUiYyOxXy.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Un-seminaire-insolite-a-Tenerife.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/3GP1UTdTDGDNUiYyOxXy.jpg"
 ---
 #publication-date
 30 avril 2019
@@ -31,12 +31,12 @@ Un séminaire insolite à Tenerife
 
 ::section-container
 ---
-image-src: "/images/blogs/Un-seminaire-insolite-a-Tenerife.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/3GP1UTdTDGDNUiYyOxXy.jpg"
 ---
 #content
 Au printemps 2019, Odysway a eu l’occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C’est dans le cadre de l’organisation d’un séminaire pour entreprise que Tenerife a été choisi.
 
-Découvrez notre thématique de voyages insolites !
+Découvrez notre thématique de voyages [insolites](https://odysway.com/thematiques/voyage-insolite) !
 
 L’île a en effet de nombreux atouts à faire valoir. Très bien desservie depuis la France, par plusieurs vols directs (Easyjet, Transavia ou Ryanair) ou via l’Espagne, avec Iberia, Tenerife est très accessible. Appartenant à l’Espagne, les Canaries bénéficient en outre d’un climat idéal tout au long de l’année. On dit que le printemps y est perpétuel. A toute période, c’est donc une destination de choix.
 
@@ -44,7 +44,7 @@ A moins de 5 heures de Paris, évadez-vous ne serait-ce que pour 4 jours, ou une
 
 ::image-container
 ---
-image-src: "/images/blogs/jXNsK43aQ9iqZhZE4vnB-1742841132376.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/jXNsK43aQ9iqZhZE4vnB.jpg"
 alt: 
 ---
 ::  
@@ -57,7 +57,7 @@ Tout comme les 6 autres îles de l’archipel (Fuerteventura, La Gomera, Grande 
 
 _::image-container
 ---
-image-src: "/images/blogs/pN63hJs3SxWV2KCfAqug-1742841132958.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/pN63hJs3SxWV2KCfAqug.jpg"
 alt: 
 ---
 ::_
@@ -83,7 +83,7 @@ Non loin, Odysway vous incite fortement à pousser la route une vingtaine de kil
 
 ::image-container
 ---
-image-src: "/images/blogs/YZlnghI1Q86fctgNashc-1742841133528.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/YZlnghI1Q86fctgNashc.jpg"
 alt: 
 ---
 ::
@@ -96,18 +96,18 @@ Dans le cadre d’un séminaire en entreprise ou d’un voyage entre amis, vous 
 
 ::image-container
 ---
-image-src: "/images/blogs/PDilK9KQQGCN5GwXfNDL-1742841134056.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/PDilK9KQQGCN5GwXfNDL.jpg"
 alt: 
 ---
 ::  
 
 _Le parc naturel d’Anaga, entre nuages et forêts_
 
-L’ascension du Teide, de jour comme de nuit, est aussi une activité insolite à ne pas manquer. De nuit, il vous faudra marcher entre 3h00 et 6h00, en fonction de votre rythme. Vous pouvez couper l’effort en deux, en dormant dans un refuge, situé à 3100 mètres au-dessus du niveau de la mer. La redescente pourra se faire en téléphérique, à partir de 9h00. Notez que l’accès au sommet sera réservé aux courageux y arrivant avant 9h00. Autre possibilité, en journée : réservez votre accès sur Internet, plusieurs mois à l’avance. Vous pourrez le faire via ce site.
+L’ascension du Teide, de jour comme de nuit, est aussi une activité insolite à ne pas manquer. De nuit, il vous faudra marcher entre 3h00 et 6h00, en fonction de votre rythme. Vous pouvez couper l’effort en deux, en dormant dans un refuge, situé à 3100 mètres au-dessus du niveau de la mer. La redescente pourra se faire en téléphérique, à partir de 9h00. Notez que l’accès au sommet sera réservé aux courageux y arrivant avant 9h00. Autre possibilité, en journée : réservez votre accès sur Internet, plusieurs mois à l’avance. Vous pourrez le faire via [ce site](https://www.reservasparquesnacionales.es/real/ParquesNac/usu/html/Previo-inicio-reserva-oapn.aspx?cen=2&act=%201).
 
 ::image-container
 ---
-image-src: "/images/blogs/sPUbKBNQRG6ECkFOGM8J-1742841134584.jpg"
+image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/sPUbKBNQRG6ECkFOGM8J.jpg"
 alt: 
 ---
 ::
@@ -124,9 +124,9 @@ Au Sud de l’île, vous pourrez vous exercer aux sports aquatiques : plongée, 
 
 Si l’île reste touristique par endroits (au sud de l’île plus qu’ailleurs), Tenerife laisse malgré tout la possibilité de découvrir une vie locale authentique, à l’écart des circuits habituels et de la foule. Perdez-vous en hauteur de l’île, à la lisière du parc du Teide. Entrez au hasard dans un des nombreux Guachinche, restaurants chez l’habitant où vous mangerez une cuisine canarienne succulente. Vous y dégusterez des plats préparés avec amour et pour moins de 5 euros. L’après-midi, prenez un bar au hasard et demandez-y un barraquito, café local à base de lait concentré sucré. Idéal au retour d’une randonnée !
 
-Tenerife est touchante. Prendre le temps. Échanger un regard ou un mot avec les locaux, tellement attachants. Peut-être vous donner l’envie de rester un peu plus longtemps, de découvrir les autres îles canariennes. Ou d’y organiser votre séminaire d’entreprise avec Odysway, pour vivre des moments forts. Entre Europe et Amérique du Sud, Tenerife est une destination facile pour un séjour réussi à tous les coups et occasions.
+Tenerife est touchante. Prendre le temps. Échanger un regard ou un mot avec les locaux, tellement attachants. Peut-être vous donner l’envie de rester un peu plus longtemps, de découvrir les autres îles canariennes. Ou d’y organiser votre séminaire d’entreprise avec Odysway, pour vivre des moments forts. Entre [Europe](https://odysway.com/destinations/europe) et [Amérique du Sud](https://odysway.com/destinations/amerique-du-sud), Tenerife est une destination facile pour un séjour réussi à tous les coups et occasions.
 
 Si vous êtes un groupe ou une entreprise, n’hésitez pas à nous contacter via notre mail, contact@odysway.com, nous serons très heureux de pouvoir vous faire vivre ces moments forts en découverte et en émotions.
 
-Pour poursuivre votre lecture, nous vous invitions à regarder notre article sur le Workation, où quand le travail et les vacances font qu'un.
+Pour poursuivre votre lecture, nous vous invitions à regarder notre article [sur le Workation, où quand le travail et les vacances font qu'un.](https://odysway.com/workation-travail-vacances)
 ::

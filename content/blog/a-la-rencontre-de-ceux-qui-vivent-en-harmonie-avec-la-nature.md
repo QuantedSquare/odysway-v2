@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-09-18 09:57:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/A-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature.jpg"
+displayedImg: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/JmPnIcuRoKsPEtASvzAQ.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/A-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/JmPnIcuRoKsPEtASvzAQ.jpg"
 ---
 #publication-date
 18 septembre 2020
@@ -31,18 +31,18 @@ image-src: "/images/blogs/A-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-
 
 ::section-container
 ---
-image-src: "/images/blogs/A-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/JmPnIcuRoKsPEtASvzAQ.jpg"
 ---
 #content
 **De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver les ressources d'une nature de plus en plus fragilisée, telles sont les raisons qui poussent de plus en plus de personnes à vouloir une existence plus proche de la terre. Mais qui sont-ils ? Partons ensemble à la rencontre de ceux qui vivent en harmonie avec la nature.**
 
-Après avoir lu notre article, nous vous conseillons de consulter notre page de blog sur Comment donner du sens à son voyage ? 
+Après avoir lu notre article, nous vous conseillons de consulter notre page de blog sur [Comment donner du sens à son voyage ?](https://odysway.com/comment-donner-sens-voyage) 
 
 ## Au cœur de la nature avec son troupeau, le berger chérit son environnement
 
 ::image-container
 ---
-image-src: "/images/blogs/UZJrhLRvSMqJaLcS1oLW-1742840837702.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/UZJrhLRvSMqJaLcS1oLW.jpg"
 alt: undefined
 ---
 ::
@@ -51,13 +51,13 @@ alt: undefined
 
 Pour sa mission, dont la durée varie de quelques jours à plusieurs semaines, le berger n'a pour seuls compagnons que ses bêtes, son chien et… la nature ! A lui, les grands espaces où aucun bruit ne se fait entendre mis à part celui des bêtes qui paissent tranquillement.
 
-Partager le quotidien d'un berger en transhumance vous tente ? Découvrez notre séjour avec un berger dans la magnifique vallée d'Aspe dans les Pyrénées.
+Partager le quotidien d'un berger en transhumance vous tente ? Découvrez [notre séjour avec un berger dans la magnifique vallée d'Aspe](https://odysway.com/voyages/sejour-berger-bearn?utm_source=SEO&utm_medium=Blog&utm_campaign=Harmonie_nature) dans les Pyrénées.
 
 ## Garde forestier, un métier pour vivre en harmonie avec la nature
 
 ::image-container
 ---
-image-src: "/images/blogs/0qIa3EepQKSQcvKLJJBr-1742840838240.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/0qIa3EepQKSQcvKLJJBr.jpg"
 alt: undefined
 ---
 ::
@@ -70,7 +70,7 @@ Bien sûr, il existe plusieurs autres métiers qui permettent de vivre et d'êtr
 
 ::image-container
 ---
-image-src: "/images/blogs/NnBqBUuQGenaiJ5axs6Q-1742840838765.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/NnBqBUuQGenaiJ5axs6Q.jpg"
 alt: undefined
 ---
 ::
@@ -83,7 +83,7 @@ Pour s'imprégner d'une telle ambiance, direction le village de **Magura**, en p
 
 ::image-container
 ---
-image-src: "/images/blogs/z3OdFHfBTeCMOAY2Aubi-1742840839291.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/z3OdFHfBTeCMOAY2Aubi.jpg"
 alt: undefined
 ---
 ::
@@ -94,7 +94,7 @@ Dans les contrées nord de la Scandinavie existe l'un des tout derniers peuples 
 
 ::image-container
 ---
-image-src: "/images/blogs/eS0RBNGTsOigKq33W5dg-1742840839814.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/eS0RBNGTsOigKq33W5dg.jpg"
 alt: undefined
 ---
 ::
@@ -105,7 +105,7 @@ Au nord-ouest de l'Espagne, se trouve un village pas comme les autres. **Mataven
 
 ::image-container
 ---
-image-src: "/images/blogs/PKQen9Q7TLCC5Rbs8Z4n-1742840840332.jpg"
+image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/PKQen9Q7TLCC5Rbs8Z4n.jpg"
 alt: undefined
 ---
 ::
@@ -114,5 +114,5 @@ alt: undefined
 
 ## Découvrez les voyages nature par Odysway 
 
-Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
+Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::

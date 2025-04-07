@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-05-28 07:22:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Les-Initiatives-de-Tourisme-Eco-responsable-a-Travers-le-Monde-1.jpg"
+displayedImg: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/pJpCh7nSrGPZBsXQa4zA.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Les-Initiatives-de-Tourisme-Eco-responsable-a-Travers-le-Monde-1.jpg"
+image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/pJpCh7nSrGPZBsXQa4zA.jpg"
 ---
 #publication-date
 28 mai 2024
@@ -31,7 +31,7 @@ Les Initiatives de Tourisme Éco-responsable à Travers le Monde
 
 ::section-container
 ---
-image-src: "/images/blogs/Les-Initiatives-de-Tourisme-Eco-responsable-a-Travers-le-Monde-1.jpg"
+image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/pJpCh7nSrGPZBsXQa4zA.jpg"
 ---
 #content
 Le tourisme écoresponsable est devenu une priorité pour les voyageurs soucieux de leur impact sur l'environnement et les communautés locales. Cette approche du voyage vise à minimiser l'empreinte écologique tout en maximisant les bénéfices pour les populations locales. De nombreuses initiatives de tourisme écoresponsable se développent à travers le monde, offrant des solutions innovantes et durables. Voici un tour d'horizon des meilleures pratiques et des initiatives inspirantes en matière de tourisme éco-responsable.
@@ -50,7 +50,7 @@ De nombreux hôtels obtiennent des certifications environnementales telles que l
 
 ::image-container
 ---
-image-src: "/images/blogs/Ecolodge.jpg-1.jpg"
+image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/bQSg6bh1TBmLMjJV03fG.jpg"
 alt: Ecolodge.jpg
 ---
 ::
@@ -65,11 +65,11 @@ Cette forme de tourisme permet aux voyageurs de vivre des expériences authentiq
 
 ### Projets de conservation
 
-De nombreuses initiatives de tourisme durable impliquent des projets de conservation qui bénéficient à la faune et à la flore locales. En Équateur, la Réserve de biodiversité Mashpi combine tourisme de luxe et conservation de la forêt tropicale, offrant des expériences immersives tout en finançant des projets de recherche et de protection de la biodiversité. Au Costa Rica, des ONG ont créé des refuges pour animaux blessés ou malades, avec comme objectif de les soigner et les réintroduire dans leur habitat naturel. https://odysway.com/voyages/refuge-animaux-costa-rica
+De nombreuses initiatives de tourisme durable impliquent des projets de conservation qui bénéficient à la faune et à la flore locales. En Équateur, la Réserve de biodiversité Mashpi combine tourisme de luxe et conservation de la forêt tropicale, offrant des expériences immersives tout en finançant des projets de recherche et de protection de la biodiversité. Au Costa Rica, des ONG ont créé des refuges pour animaux blessés ou malades, avec comme objectif de les soigner et les réintroduire dans leur habitat naturel. [https://odysway.com/voyages/refuge-animaux-costa-rica](https://odysway.com/voyages/refuge-animaux-costa-rica)
 
 ::image-container
 ---
-image-src: "/images/blogs/Costa-Rica-Emilie.jpg-1.jpg"
+image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/7EnMKGGgRjeECVpshzJZ.jpg"
 alt: Costa Rica Emilie.jpg
 ---
 ::
@@ -96,14 +96,14 @@ Ces activités en pleine nature sont souvent encadrées par des guides locaux fo
 
 ::image-container
 ---
-image-src: "/images/blogs/Trek-couverture.jpg-1.jpg"
+image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/wtVe2pMyQVisy3FDzYMY.jpg"
 alt: Trek couverture.jpg
 ---
 ::
 
 ### Plongée écoresponsable
 
-La plongée sous-marine peut avoir un impact négatif sur les écosystèmes marins, mais des initiatives comme Green Fins (https://www.greenfins.net/) aux Philippines sensibilisent les plongeurs et les opérateurs à adopter des pratiques respectueuses des récifs coralliens.
+La plongée sous-marine peut avoir un impact négatif sur les écosystèmes marins, mais des initiatives comme Green Fins ([https://www.greenfins.net/)](https://www.greenfins.net/\)) aux Philippines sensibilisent les plongeurs et les opérateurs à adopter des pratiques respectueuses des récifs coralliens.
 
 ## Gastronomie Durable
 
@@ -123,11 +123,11 @@ L'éducation et la sensibilisation sont essentielles pour encourager les pratiqu
 
 ### Programmes éducatifs
 
-Des organisations comme le Global Sustainable Tourism Council (GSTC - https://www.gstcouncil.org/) offrent des formations et des certifications en tourisme durable, aidant les professionnels du secteur à adopter des pratiques éco-responsables.
+Des organisations comme le Global Sustainable Tourism Council (GSTC - [https://www.gstcouncil.org/](https://www.gstcouncil.org/)) offrent des formations et des certifications en tourisme durable, aidant les professionnels du secteur à adopter des pratiques éco-responsables.
 
 ### Campagnes de sensibilisation
 
-Des initiatives comme le Leave No Trace Center for Outdoor Ethics (https://lnt.org/) aux États-Unis promeuvent des comportements respectueux de l'environnement auprès des randonneurs et des campeurs.
+Des initiatives comme le Leave No Trace Center for Outdoor Ethics ([https://lnt.org/)](https://lnt.org/\)) aux États-Unis promeuvent des comportements respectueux de l'environnement auprès des randonneurs et des campeurs.
 
 ## Expériences Locales Sans Avion
 
@@ -139,7 +139,7 @@ Des agences comme Back on Track en Europe promeuvent les voyages en train comme 
 
 ### Séjours locaux
 
-Odysway propose également des expériences locales permettant de découvrir des destinations proches sans prendre l'avion. Par exemple : Initiation à l'observation astronomique en Corse ou En immersion avec un photographe animalier dans les Vosges.
+Odysway propose également des expériences locales permettant de découvrir des destinations proches sans prendre l'avion. Par exemple : [Initiation à l'observation astronomique en Corse](https://odysway.com/voyages/sejour-astronomie-corse) ou [En immersion avec un photographe animalier dans les Vosges](https://odysway.com/voyages/photographie-animaliere-vosges).
 
 ### Tourisme de proximité
 

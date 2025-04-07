@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-24 15:31:00+00:00"
 tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Brésil, Chine, Costa Rica, Ethiopie, Europe, Finlande, Nepal, Perou, Sport, Sri Lanka, Thailande, Transports insolites"
 categories: "Depassement de soi, Culture et decouverte"
-displayedImg: "/images/blogs/Le-top-10-des-destinations-pour-un-voyage-sportif.jpg"
+displayedImg: "/images/blogs/top-10-destinations-voyage-sportif/u4OjaR4cQomgQUMtvNcy.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-top-10-des-destinations-pour-un-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/u4OjaR4cQomgQUMtvNcy.jpg"
 ---
 #publication-date
 24 mars 2020
@@ -31,12 +31,12 @@ Le top 10 des destinations pour un voyage sportif
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-top-10-des-destinations-pour-un-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/u4OjaR4cQomgQUMtvNcy.jpg"
 ---
 #content
 Il existe mille et une façons de découvrir et profiter d'une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, vélo au milieu des plantations de thé ou pratique des arts martiaux, vous avez l'embarras du choix. **Nous vous présentons notre top 10 des destinations pour un voyage sportif aux quatre coins du monde.**
 
-Après avoir lu cette article, nous vous conseillons de découvrir les indispensables pour partir en trek !
+Après avoir lu cette article, nous vous conseillons de [découvrir les indispensables pour partir en trek !](https://odysway.com/les-indispensables-pour-partir-en-trek-trekjpg)
 
 ## 1\. Le Brésil où le sport est légion
 
@@ -44,7 +44,7 @@ Qui dit voyage sportif au **Brésil** dit football ! Oui mais pas que. Fierté n
 
 ::image-container
 ---
-image-src: "/images/blogs/CabEkBDdRbGz7BYM0P4z-1742840941458.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/CabEkBDdRbGz7BYM0P4z.jpg"
 alt: 
 ---
 ::
@@ -53,11 +53,11 @@ _Le jiu jitsu, sport très répandu au Brésil._
 
 ## 2\. La Chine pour un voyage sportif dépaysant
 
-Vous êtes un inconditionnel des arts martiaux et plus précisément du **Kung Fu** ? Dans ce cas, direction **la Chine** pour parfaire vos techniques auprès d'un maître Shaolin. **Un voyage à la fois sportif et spirituel** car vous vivrez dans un temple avec des moines. Réputées pour leur beauté, les campagnes chinoises sont à découvrir absolument et le meilleur moyen pour cela est d'enfourcher un vélo.
+Vous êtes un inconditionnel des arts martiaux et plus précisément du **Kung Fu** ? Dans ce cas, direction [**la Chine** pour parfaire vos techniques auprès d'un maître Shaolin](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=Blog&utm_medium=SEO&utm_campaign=Top_10_destinations_voyage_sportif). **Un voyage à la fois sportif et spirituel** car vous vivrez dans un temple avec des moines. Réputées pour leur beauté, les campagnes chinoises sont à découvrir absolument et le meilleur moyen pour cela est d'enfourcher un vélo.
 
 ::image-container
 ---
-image-src: "/images/blogs/Chine-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/vTNkINOGRamG7XnFZKcc.jpg"
 alt: Chine voyage sportif
 ---
 ::
@@ -70,7 +70,7 @@ Autre pays qui offre de **multiples possibilités d'activités sportives, le Cos
 
 ::image-container
 ---
-image-src: "/images/blogs/Costa-Rica-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/UI6SxtugSZSL1DKvld14.jpg"
 alt: Costa Rica voyage sportif
 ---
 ::
@@ -83,7 +83,7 @@ Si vous désirez faire **un voyage sportif pour dépasser vos limites, direction
 
 ::image-container
 ---
-image-src: "/images/blogs/Ethiopie-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/6TbK01isRUiNB6xCdQ5p.jpg"
 alt: Ethiopie voyage sportif
 ---
 ::
@@ -92,11 +92,11 @@ _L'Ethiopie, pays des plus grands athlètes de course._
 
 ## 5\. La Finlande où le sport est roi !
 
-Le sport fait partie intégrante dans la vie des Finlandais. Vous n'aurez donc pas de mal à trouver votre bonheur et cela aussi bien en été qu'en hiver. Avec un territoire qui compte près de 70 % de forêt, misez sur les sports de plein air ! Randonnées, vélo, canoë, kayak, rafting ou voile ne sont que quelques exemples. Lorsque les premiers flocons sont tombés, chaussez vos skis, vos raquettes ou partez en balade en motoneige ou en chien de traîneau. Découvrez le voyage proposé par Odysway pour vous reconnecter à la nature en Finlande, avec notamment au programme expédition en canoë et bivouacs dans la forêt !
+Le sport fait partie intégrante dans la vie des Finlandais. Vous n'aurez donc pas de mal à trouver votre bonheur et cela aussi bien en été qu'en hiver. Avec un territoire qui compte près de 70 % de forêt, misez sur les sports de plein air ! Randonnées, vélo, canoë, kayak, rafting ou voile ne sont que quelques exemples. Lorsque les premiers flocons sont tombés, chaussez vos skis, vos raquettes ou partez en balade en motoneige ou en chien de traîneau. Découvrez le [voyage proposé par Odysway pour vous reconnecter à la nature en Finlande](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=Top_10_destinations_voyage_sportif), avec notamment au programme expédition en canoë et bivouacs dans la forêt !
 
 ::image-container
 ---
-image-src: "/images/blogs/Finlande-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/zxMJsj9RbylM8lGCGWbX.jpg"
 alt: Finlande voyage sportif
 ---
 ::
@@ -109,7 +109,7 @@ _A la découverte de la nature finlandaise en canoë._
 
 ::image-container
 ---
-image-src: "/images/blogs/Nepal-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/U6xKSdNhRGeUlB3FtOqY.jpg"
 alt: Népal voyage sportif
 ---
 ::
@@ -122,7 +122,7 @@ Pour les amoureux de la nature et des randonnées, **la Nouvelle-Zélande est pr
 
 ::image-container
 ---
-image-src: "/images/blogs/Nouvelle-Zelande-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/lpRzOxstSu6M8jlwhEvW.jpg"
 alt: Nouvelle Zélande voyage sportif
 ---
 ::
@@ -135,7 +135,7 @@ Lorsque l'on pense au **Pérou**, plein de paysages défilent dans notre tête e
 
 ::image-container
 ---
-image-src: "/images/blogs/Perou-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/EtYXpVbYSdSeozcpPZaq.jpg"
 alt: Pérou voyage sportif
 ---
 ::
@@ -148,7 +148,7 @@ Vous ne le saviez peut-être pas mais **le Sri Lanka** est une destination de pl
 
 ::image-container
 ---
-image-src: "/images/blogs/Sri-Lanka-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/rt0DbQNyScqAdVcQ7lZo.jpg"
 alt: Sri Lanka voyage sportif
 ---
 ::
@@ -157,11 +157,11 @@ _A la découverte du Sri Lanka à vélo._ 
 
 ## 10\. La Thaïlande, entre sport extrême et de découverte
 
-Lorsque l'on pense à **la Thaïlande pour un voyage sportif,** la toute première idée qui nous vient à l'esprit, c'est bien sûr **la boxe**. Le muay-thaï est un sport de combat très physique qui se pratique un peu partout dans le pays. Mais la Thaïlande est également idéale pour f**aire du vélo**, comme à Ayutthaya pour explorer les temples, **de la plongée** sur l'une des îles ou **des randonnées dans la jungle et les parcs nationaux**. Amateurs de sensations fortes, pourquoi ne pas tester du rafting sur la rivière Pai ?
+Lorsque l'on pense à **la Thaïlande pour un voyage sportif,** la toute première idée qui nous vient à l'esprit, c'est bien sûr **la boxe**. [Le muay-thaï](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=Blog&utm_medium=SEO&utm_campaign=Top_10_destinations_voyage_sportif) est un sport de combat très physique qui se pratique un peu partout dans le pays. Mais la Thaïlande est également idéale pour f**aire du vélo**, comme à Ayutthaya pour explorer les temples, **de la plongée** sur l'une des îles ou **des randonnées dans la jungle et les parcs nationaux**. Amateurs de sensations fortes, pourquoi ne pas tester du rafting sur la rivière Pai ?
 
 ::image-container
 ---
-image-src: "/images/blogs/Thailande-voyage-sportif.jpg"
+image-src: "/images/blogs/top-10-destinations-voyage-sportif/7vBJDOYuRqqOVqSouxjN.jpg"
 alt: Thaïlande voyage sportif
 ---
 ::
@@ -170,5 +170,5 @@ _Entraînez-vous au muay-thaï en Thaïlande !_
 
 ## Découvrez notre thématique de voyages sportifs !
 
-Les voyages sportifs sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
+Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::

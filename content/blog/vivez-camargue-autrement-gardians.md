@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-04-30 16:50:00+00:00"
 tags: "Animaux, Europe, Famille, France, Grands espaces, Made in France"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/Vivez-la-Camargue-autrement-avec-les-gardians.jpg"
+displayedImg: "/images/blogs/vivez-camargue-autrement-gardians/19MwadjxSuaO5EQqBll3.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Vivez-la-Camargue-autrement-avec-les-gardians.jpg"
+image-src: "/images/blogs/vivez-camargue-autrement-gardians/19MwadjxSuaO5EQqBll3.jpg"
 ---
 #publication-date
 30 avril 2020
@@ -31,12 +31,12 @@ Vivez la Camargue autrement avec les gardians
 
 ::section-container
 ---
-image-src: "/images/blogs/Vivez-la-Camargue-autrement-avec-les-gardians.jpg"
+image-src: "/images/blogs/vivez-camargue-autrement-gardians/19MwadjxSuaO5EQqBll3.jpg"
 ---
 #content
 Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys bien de chez nous qui veillent sur les manades. Si vous êtes en quête de **découvrir autrement une Camargue insoupçonnée et envoûtante,** rien de tel que de partir à leur rencontre.
 
-Après votre lecture, nous vous invitons à poursuivre avec notre article sur comment voyager près de chez vous ?
+Après votre lecture, nous vous invitons à poursuivre avec [notre article sur comment voyager près de chez vous ?](https://odysway.com/comment-voyager-pres-de-chez-vous)
 
 ## La manade, au cœur de l'identité de la Camargue pour découvrir autrement cette région emblématique
 
@@ -44,7 +44,7 @@ La Camargue, ce n'est pas seulement une région naturelle du delta du Rhône. **
 
 ::image-container
 ---
-image-src: "/images/blogs/Camargue-gardian.jpg.jpg"
+image-src: "/images/blogs/vivez-camargue-autrement-gardians/KnxOpHS4TWCloND8h8lA.jpg"
 alt: Camargue gardian.jpg
 ---
 ::
@@ -77,5 +77,5 @@ Précisons par ailleurs que cette course n'a rien de commun avec la corrida car 
 
 ## Découvrez nos voyages animaliers
 
-De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos voyages animaliers.
+De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
 ::

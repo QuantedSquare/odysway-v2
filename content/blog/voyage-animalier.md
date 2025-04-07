@@ -50,14 +50,14 @@ Voici les meilleures expériences de **voyages animaliers** proposées par Odysw
 
 ::image-container
 ---
-image-src: "/images/blogs/singe-costa-rica.jpeg-1.jpg"
+image-src: "/images/blogs/voyage-animalier/DUFDH0E3QK6umvYGhURK.jpg"
 alt: singe-costa-rica.jpeg
 ---
 ::
 
 Que diriez-vous d’un **voyage animalier** au cœur de la perle de l’Océan Indien, le Sri Lanka. Cette île, qui a littéralement la forme d’une perle, est un vrai joyaux de faune, de flore et de culture. Océan, montagnes, plantations de thé, singes, tortues de mer, éléphants, oiseaux aux couleurs chatoyantes, le Sri Lanka est un petit paradis sur terre.
 
-Durant ce **séjour animalier** vous aurez l’opportunité de partir à la rencontre des populations locales de l'île, mais aussi de **vivre en immersion dans un centre de protection pour tortues.** Vous vous déplacerez en train à travers les plantations de thé entre Ella et Hatton, et pourrez admirer des paysages à couper le souffle.
+Durant ce **séjour animalier** vous aurez l’opportunité de partir à la rencontre des populations locales de l'île, mais aussi de [**vivre en immersion dans un centre de protection pour tortues.**](https://odysway.com/voyages/protection-animaux-sri-lanka?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) Vous vous déplacerez en train à travers les plantations de thé entre Ella et Hatton, et pourrez admirer des paysages à couper le souffle.
 
 Un **séjour animalier immersif** où vous serez hébergé dans le sanctuaire pour éléphants de Kegalle. Là-bas, vous contribuerez à la sauvegarde de ces géants au cœur d’or, maltraités par l’industrie touristique.
 
@@ -67,14 +67,14 @@ Ce **voyage** au Sri Lanka est un voyage solidaire, qui a du sens, et qui vous p
 
 ::image-container
 ---
-image-src: "/images/blogs/8DEMkSS9Qgu9xt4yZsLx-1742840805983.jpg"
+image-src: "/images/blogs/voyage-animalier/8DEMkSS9Qgu9xt4yZsLx.jpg"
 alt: undefined
 ---
 ::
 
 L’Afrique du Sud, la “rainbow nation” aux paysages et cultures si variés, possédant une grande variété d'écosystèmes ainsi qu’une faune et une flore très diversifiées, va vous enchanter durant ce **voyage animalier** hors du commun !
 
-Durant 15 jours vous aurez la possibilité de **vivre quotidiennement en immersion avec des félins**, et d’être hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
+Durant 15 jours vous aurez la possibilité de [**vivre quotidiennement en immersion avec des félins**](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier), et d’être hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
 
 Vous participerez à un projet unique de conservation, à de petits travaux agricoles, apprendrez à communiquer avec les félins et à créer des liens forts avec eux.
 
@@ -86,14 +86,14 @@ Un **séjour animalier** que vous n’oublierez pas de sitôt !
 
 ::image-container
 ---
-image-src: "/images/blogs/QX6cx1G0Tye89HysxDov-1742840806503.jpg"
+image-src: "/images/blogs/voyage-animalier/QX6cx1G0Tye89HysxDov.jpg"
 alt: undefined
 ---
 ::
 
 Connaissez-vous l'équicie ? C’est une discipline qui permet d’établir une connexion émotionnelle avec les chevaux.
 
-Partez dans le Cotentin à la rencontre de Rémi, équicien diplômé et de ses chevaux. Vous pourrez y renforcer votre motivation ainsi que votre confiance en vous et **vivre en immersion dans une magnifique ferme équestre.**
+Partez dans le Cotentin à la rencontre de Rémi, équicien diplômé et de ses chevaux. Vous pourrez y renforcer votre motivation ainsi que votre confiance en vous et [**vivre en immersion dans une magnifique ferme équestre.**](https://odysway.com/voyages/equicie-cheval-cotentin-normandie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier)
 
 À travers l'équicie, Rémi, ce passionné de chevaux et de rencontres humaines, sera là pour vous guider dans cette discipline passionnante.
 
@@ -107,7 +107,7 @@ Ce **voyage animalier** est l’opportunité d'expérimenter une approche innova
 
 ::image-container
 ---
-image-src: "/images/blogs/rUuF9gYfTB6Z0iAzrd6n-1742840807019.jpg"
+image-src: "/images/blogs/voyage-animalier/rUuF9gYfTB6Z0iAzrd6n.jpg"
 alt: undefined
 ---
 ::
@@ -120,7 +120,7 @@ Vous passerez des journées entières avec eux, apprendrez à prendre soin d’e
 
 Si vous rêvez de faire un **voyage animalier** solidaire et éco-responsable, Odysway vous propose des **séjours en immersion** tels que : 
 
-*   **randonner au Pérou avec des lamas** jusqu'au Machu Picchu ;
-*   **découvrir l'art de la photo animalière dans le Jura** ;
-*   **faire connaissance avec les chiens de traîneau** grâce à une aventure au cœur de la Laponie finlandaise**.**
+*   [**randonner au Pérou avec des lamas**](https://odysway.com/voyages/trek-lamas-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) jusqu'au Machu Picchu ;
+*   [**découvrir l'art de la photo animalière dans le Jura**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) ;
+*   [**faire connaissance avec les chiens de traîneau**](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) grâce à une aventure au cœur de la Laponie finlandaise**.**
 ::

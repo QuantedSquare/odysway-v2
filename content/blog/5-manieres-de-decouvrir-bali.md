@@ -18,12 +18,12 @@ published: false
 publishedAt: "2023-02-19 12:00:00+00:00"
 tags: "bali, vacances, voyage"
 categories: "vacances, voyager, Indonésie"
-displayedImg: "/images/blogs/5-idees-pour-voyager-a-Bali-autrement.jpg"
+displayedImg: "/images/blogs/5-manieres-de-decouvrir-bali/p4bvpWT5QViD9BBQzg1F.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-idees-pour-voyager-a-Bali-autrement.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/p4bvpWT5QViD9BBQzg1F.jpg"
 ---
 #publication-date
 19 février 2023
@@ -37,7 +37,7 @@ Havre de paix posé au milieu de l'archipel indonésien, l'île des Dieux, évoq
 
 ::section-container
 ---
-image-src: "/images/blogs/5-idees-pour-voyager-a-Bali-autrement.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/p4bvpWT5QViD9BBQzg1F.jpg"
 ---
 #content
 Havre de paix posé au milieu de l'archipel indonésien, l'île des Dieux, évoque liberté, spiritualité et art de vivre. Laissez vous porter par la beauté de cette terre d'hindouisme et savourez les plages de l'océan Indien aux damiers des rizières, aux plantations de girofliers et caféiers, aux rituels sur la crête des volcans. Un voyage à Bali, perle de l'Indonésie, est le meilleur moyen pour retrouver la paix et la sérénité intérieures, à la rencontre d'une spiritualité présente en toute chose et d'un peuple d'une infinie gentillesse.
@@ -48,7 +48,7 @@ Nous vous avons sélectionné pour vous 5 expériences pour découvrir Bali autr
 
 **::image-container
 ---
-image-src: "/images/blogs/indefini.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/nt77PWQWRG9BV19nLmQi.jpg"
 alt: indéfini
 ---
 ::**
@@ -59,7 +59,7 @@ Le Lagon Bleu, petite baie dotée d'une plage de sable blanc. En plongeant dans 
 
 **::image-container
 ---
-image-src: "/images/blogs/indefini-1.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/jNeSpI7QLaDRsHumAxvQ.jpg"
 alt: indéfini
 ---
 ::**
@@ -70,7 +70,7 @@ Un site classé au patrimoine mondial de l'UNESCO pour sa beauté naturelle et s
 
 **::image-container
 ---
-image-src: "/images/blogs/indefini-2.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/L7pWdxHVSSieLOtj6p28.jpg"
 alt: indéfini
 ---
 ::**
@@ -81,7 +81,7 @@ Apprenez à cuisiner des plats typiques balinais en visitant un atelier culinair
 
 ::image-container
 ---
-image-src: "/images/blogs/Ga5Kn1ryTrqx1Zcq6vwz-1742840645897.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/Ga5Kn1ryTrqx1Zcq6vwz.jpg"
 alt: undefined
 ---
 ::
@@ -92,12 +92,12 @@ Situé sur la côte Est de Bali, Amed offre des paysages magnifiques avec ses co
 
 **::image-container
 ---
-image-src: "/images/blogs/indefini-3.jpg"
+image-src: "/images/blogs/5-manieres-de-decouvrir-bali/TzZha60oSieofS0SjGVP.jpg"
 alt: indéfini
 ---
 ::**
 
 Immergez-vous dans la culture et les traditions balinaises en passant du temps avec une famille locale sur l'île de Bali, en Indonésie. Cette expérience vous permettra de découvrir la vie quotidienne des Balinais et de comprendre leur mode de vie familial et communautaire. Vous pourrez participer à des activités telles que la préparation des repas, les rituels religieux et les cérémonies traditionnelles, qui sont un élément important de la culture balinaise. Vous découvrirez également les arts et les artisanats locaux, tels que la danse, la musique et les travaux manuels, et vous pourrez échanger avec les membres de la famille sur leur mode de vie et leurs croyances. Cette immersion vous permettra de vivre une expérience authentique et de développer une connexion profonde avec la culture et les gens de Bali. Ce sera également l'occasion de faire des souvenirs inoubliables et de développer des relations durables avec les gens que vous aurez rencontrés.
 
-Chez Odysway nous indiquons un séjour en Indonésie, plus précisément Bali d'Ouest en Est : un voyage dépaysant vous attend, hors des sentiers battus, en parcourant des régions aux paysages divers idylliques !
+Chez Odysway nous indiquons un séjour en Indonésie, plus précisément [Bali d'Ouest en Est](https://odysway.com/voyages/bali-menjangan-sidemen?utm_source=Article+blog&utm_medium=Article+blog&utm_campaign=Bali) : un voyage dépaysant vous attend, hors des sentiers battus, en parcourant des régions aux paysages divers idylliques !
 ::

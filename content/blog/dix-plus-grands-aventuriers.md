@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-06-21 09:49:00+00:00"
 tags: "Communautés locales, Grands espaces, Sport, Transports insolites"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Les-10-plus-grands-aventuriers.jpg"
+displayedImg: "/images/blogs/dix-plus-grands-aventuriers/HnliEDHSLCkRzi4H0B3X.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Les-10-plus-grands-aventuriers.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/HnliEDHSLCkRzi4H0B3X.jpg"
 ---
 #publication-date
 21 juin 2019
@@ -31,18 +31,18 @@ Les 10 plus grands aventuriers
 
 ::section-container
 ---
-image-src: "/images/blogs/Les-10-plus-grands-aventuriers.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/HnliEDHSLCkRzi4H0B3X.jpg"
 ---
 #content
 Un aventurier est une personne en quête d’aventure, avec en toile de fond l’inconnu et le danger. **Depuis des siècles, des aventuriers parcourent la planète**. Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d’émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez les 10 plus grands aventuriers qui ont marqué l’histoire.
 
-Après votre lecture, nous vous invitons à lire notre article sur les grands récits de voyage.
+Après votre lecture, nous vous invitons à lire notre article [sur les grands récits de voyage.](https://odysway.com/grands-recits-voyage)
 
 ## 1\. Marco Polo, l’un des tous premiers aventuriers de l’histoire
 
 ::image-container
 ---
-image-src: "/images/blogs/WW7neCwSPaRTJDV4BRyz-1742841081501.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/WW7neCwSPaRTJDV4BRyz.jpg"
 alt: 
 ---
 ::
@@ -55,7 +55,7 @@ Marco Polo, un des premiers aventuriers de l’histoire
 
 ::image-container
 ---
-image-src: "/images/blogs/iqq04qZvRqaEJHYSlqvw-1742841082021.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/iqq04qZvRqaEJHYSlqvw.jpg"
 alt: 
 ---
 ::
@@ -68,7 +68,7 @@ Comment ne pas parler des plus grands aventuriers sans mentionner **Mike Horn**
 
 ::image-container
 ---
-image-src: "/images/blogs/Q3jApdiuQ1KAaWusBHHC-1742841082540.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/Q3jApdiuQ1KAaWusBHHC.jpg"
 alt: 
 ---
 ::
@@ -81,7 +81,7 @@ Sans conteste, **Nicolas Vanier fait partie des 10 plus grands aventuriers**. P
 
 ::image-container
 ---
-image-src: "/images/blogs/dtiVZb9QMCMu85Ulg5h2-1742841083164.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/dtiVZb9QMCMu85Ulg5h2.jpg"
 alt: 
 ---
 ::
@@ -94,7 +94,7 @@ Le 1er janvier 2009, **Graham Hughes** part pour un voyage surprenant : **vis
 
 ::image-container
 ---
-image-src: "/images/blogs/tGGClLaxQaGJ2RWazTj7-1742841083681.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/tGGClLaxQaGJ2RWazTj7.jpg"
 alt: 
 ---
 ::
@@ -103,13 +103,13 @@ Photo ©  Sarah Marquis
 
 Cette Suissesse a à son actif **20 ans d’aventure à travers notre planète**. Des treks, elle en a fait sa spécialité. Parmi ces expéditions, une traversée des Etats-Unis en partant du Canada jusqu’au Mexique, soit 4 260 km parcourus en 4 mois et 6 jours. L’un de ses plus grands périples fut sa traversée des déserts australiens. Un voyage de 14 000 km qui a duré 17 mois ! **Sarah Marquis** fait incontestablement partie des grands aventuriers de notre ère.
 
-Si Sarah Maquis vous inspire, nous proposons un voyage de survie dans la jungle amazonienne.
+Si Sarah Maquis vous inspire, nous proposons [un voyage de survie dans la jungle amazonienne.](https://odysway.com/voyages/survie-jungle-amazonienne)
 
 ## 6\. Sylvain Tesson, l’un des aventuriers écrivains voyageurs
 
 ::image-container
 ---
-image-src: "/images/blogs/PxwNRy4UTrqXj7iirbuE-1742841084200.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/PxwNRy4UTrqXj7iirbuE.jpg"
 alt: 
 ---
 ::
@@ -122,7 +122,7 @@ Sylvain Tesson, écrivain voyageur ayant exploré tous les continents
 
 ::image-container
 ---
-image-src: "/images/blogs/3TbM4GNTeS3r391u80wY-1742841084714.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/3TbM4GNTeS3r391u80wY.jpg"
 alt: 
 ---
 ::
@@ -135,7 +135,7 @@ Navigateur explorateur du début du XVIe siècle, **Magellan** est l’un des 
 
 ::image-container
 ---
-image-src: "/images/blogs/qyG8xEVxRCqDgTEUnlTA-1742841085231.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/qyG8xEVxRCqDgTEUnlTA.jpg"
 alt: 
 ---
 ::
@@ -148,7 +148,7 @@ Autre femme de notre Top 10 des plus grands aventuriers, **Ella Maillard** com
 
 ::image-container
 ---
-image-src: "/images/blogs/wEF9SBZRSmSWfmvySosw-1742841085747.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/wEF9SBZRSmSWfmvySosw.jpg"
 alt: 
 ---
 ::
@@ -161,7 +161,7 @@ A l’âge de 18 ans, **Alexandra David-Néel** rejoint l’Espagne depuis la 
 
 ::image-container
 ---
-image-src: "/images/blogs/s8Vga7TQXaiix9od7VEw-1742841086261.jpg"
+image-src: "/images/blogs/dix-plus-grands-aventuriers/s8Vga7TQXaiix9od7VEw.jpg"
 alt: 
 ---
 ::
@@ -172,5 +172,5 @@ Sur les traces de Marco Polo, **Christophe Colomb** entreprend lui aussi un vo
 
 Si vous aussi, vous avez soif d’aventure et de grands espaces, Odysway vous propose des expériences comme la survie au cœur de la jungle amazonienne, de la marche méditative dans le Sahara et bien d’autres.
 
-Découvrez nos voyages sur le thème de l'aventure !
+[Découvrez nos voyages sur le thème de l'aventure !](https://odysway.com/thematiques/voyage-aventure)
 ::

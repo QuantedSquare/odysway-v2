@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-01-20 13:45:00+00:00"
 tags: ""
 categories: "tourisme durable"
-displayedImg: "/images/blogs/Tourisme-durable-:-developpement-economique-et-protection-de-l'environnement.jpg"
+displayedImg: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/pNWi582GS8eMtd3VqTld.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Tourisme-durable-:-developpement-economique-et-protection-de-l'environnement.jpg"
+image-src: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/pNWi582GS8eMtd3VqTld.jpg"
 ---
 #publication-date
 20 janvier 2023
@@ -31,7 +31,7 @@ Le tourisme durable est devenu un enjeu majeur pour les destinations touristique
 
 ::section-container
 ---
-image-src: "/images/blogs/Tourisme-durable-:-developpement-economique-et-protection-de-l'environnement.jpg"
+image-src: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/pNWi582GS8eMtd3VqTld.jpg"
 ---
 #content
 ## Les activités écotouristiques : une solution pour promouvoir un tourisme durable
@@ -44,7 +44,7 @@ L'une des principales manières de promouvoir un tourisme durable est de favoris
 
 ::image-container
 ---
-image-src: "/images/blogs/juratourisme_11848a5.jpg-2.jpg"
+image-src: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/Yx1zY7OQQDOtynI9cOUp.jpg"
 alt: juratourisme_11848a5.jpg
 ---
 ::
@@ -61,10 +61,10 @@ Enfin, il est important de soutenir les entreprises locales qui ont adopté des 
 
 ::image-container
 ---
-image-src: "/images/blogs/Child_Protection-MongolianGer-600x600....jpg"
+image-src: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/9BHXSniTSuiTaZlckrt0.jpg"
 alt: Child_Protection-MongolianGer-600x600...
 ---
 ::
 
-Retrouvez tous nos voyages ici : https://odysway.com/destinations
+Retrouvez tous nos voyages ici : [https://odysway.com/destinations](https://odysway.com/destinations)
 ::

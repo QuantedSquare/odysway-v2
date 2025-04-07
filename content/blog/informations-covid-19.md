@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-07-27 10:54:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Informations-COVID-19-Ou-peut-on-voyager.jpg"
+displayedImg: "/images/blogs/informations-covid-19/CQoX3aWGTSyihPNHBsyu.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Informations-COVID-19-Ou-peut-on-voyager.jpg"
+image-src: "/images/blogs/informations-covid-19/CQoX3aWGTSyihPNHBsyu.jpg"
 ---
 #publication-date
 27 juillet 2021
@@ -31,7 +31,7 @@ mise à jour le 04/02/2022
 
 ::section-container
 ---
-image-src: "/images/blogs/Informations-COVID-19-Ou-peut-on-voyager.jpg"
+image-src: "/images/blogs/informations-covid-19/CQoX3aWGTSyihPNHBsyu.jpg"
 ---
 #content
 mise à jour le 04/02/2022
@@ -42,9 +42,9 @@ Nous vous invitons à consulter la liste des pays ci-dessous afin d’en connaî
 
 Nos conseillers restent à votre disposition pour répondre à toutes  vos questions sur nos séjours, en France ou à l’étranger. 🌍
 
-Merci de noter que la situation évoluant rapidement, cette page ne pourra pas être mise à jour en temps réel. Il est donc important de visiter le site France Diplomatie et les sites des ambassades situées dans les pays qui vous intéressent.
+Merci de noter que la situation évoluant rapidement, cette page ne pourra pas être mise à jour en temps réel. Il est donc important de visiter le site [France Diplomatie](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/) et les sites des ambassades situées dans les pays qui vous intéressent.
 
-N'hésitez pas à consulter également notre article dédié au pass sanitaire et aux conditions de voyage "**Pass sanitaire & voyages : tout savoir sur votre prochain voyage en 5 points ".**
+N'hésitez pas à consulter également notre article dédié au pass sanitaire et aux conditions de voyage "[**Pass sanitaire & voyages : tout savoir sur votre prochain voyage en 5 points ".**](https://odysway.com/pass-sanitaire-voyage)
 
 ### **1) Mesures sanitaires prises par Odysway & nos agents locaux 🧽**
 
@@ -94,7 +94,7 @@ En cas de non-respect de la législation en vigueur concernant les formalités �
 
 ::image-container
 ---
-image-src: "/images/blogs/LR9jZlm4RCuCyOFEfgtN-1742840704358.jpg"
+image-src: "/images/blogs/informations-covid-19/LR9jZlm4RCuCyOFEfgtN.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-culture-albanie?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -116,13 +116,13 @@ Voyage Retour
 
 Il est demandé aux personnes vaccinés et non-vaccinés, un test PCR négatif de moins de 48 heures.  
 
-**Découvrez notre voyage à la découverte de la culture albanaise 🇦🇱**
+[**Découvrez notre voyage à la découverte de la culture albanaise 🇦🇱**](https://odysway.com/voyages/immersion-culture-albanie?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **BRÉSIL**
 
 ::image-container
 ---
-image-src: "/images/blogs/survie-amazonie.jpg.jpg"
+image-src: "/images/blogs/informations-covid-19/8PG2yGc7S7WZie1reuZ9.jpg"
 alt: survie amazonie.jpg
 link: https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -138,7 +138,7 @@ Les voyageurs (de plus de 12 ans) doivent présenter :
 
 *   un **certificat de vaccination**, imprimé ou électronique, dont l’application de la dernière dose a eu lieu au moins 14 jours avant le départ. Le certificat doit indiquer le nom du voyageur, le nom commercial ou nom du fabricant ; le numéro du lot de vaccins et la date d’application de la dernière dose. La simple présentation d’un QR-Code est insuffisante ;
 *   le **résultat négatif d’un test antigénique effectué dans les 24 heures ou d’un test PCR effectué dans les 72 heures** avant l’embarquement, réalisé par un laboratoire reconnu dans le pays d’origine du voyageur et rédigé en anglais, en portugais ou en espagnol.
-*   **la déclaration de santé du voyageur, à remplir moins de 72 heures** avant l’embarquement et à présenter à l’embarquement sous forme imprimée ou numérique.
+*   **la [déclaration de santé du voyageur](https://formulario.anvisa.gov.br/?lang=en "https://formulario.anvisa.gov.br/?lang=en - en anglais (nouvelle fenêtre)"), à remplir moins de 72 heures** avant l’embarquement et à présenter à l’embarquement sous forme imprimée ou numérique.
 
 Voyage Retour 
 
@@ -150,13 +150,13 @@ Voyage Retour 
 
 \- Tout enfant entre deux et douze ans voyageant non-accompagné doit présenter un test négatif. Les enfants de moins de deux ans en sont dispensés.
 
-**Découvrez notre voyage de survie au coeur de la jungle amazonienne 🇧🇷**
+[**Découvrez notre voyage de survie au coeur de la jungle amazonienne 🇧🇷**](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **CANADA**
 
 **::image-container
 ---
-image-src: "/images/blogs/5YQkErTsQZWiQLGCVFFg-1742840705451.jpg"
+image-src: "/images/blogs/informations-covid-19/5YQkErTsQZWiQLGCVFFg.jpg"
 alt: undefined
 ---
 ::**
@@ -170,10 +170,10 @@ Voyage Aller
 
 Les voyageurs doivent :
 
-*   être entièrement vaccinés au sens des autorités canadiennes (les personnes rétablies de la COVID-19 et n’ayant reçu qu’une dose de vaccin ne sont pas considérées comme entièrement vaccinées : voir sur le site du Gouvernement du Canada ;
+*   être entièrement vaccinés au sens des autorités canadiennes (les personnes rétablies de la COVID-19 et n’ayant reçu qu’une dose de vaccin ne sont pas considérées comme entièrement vaccinées : voir sur le site du [Gouvernement du Canada](https://voyage.gc.ca/voyage-covid/voyage-restrictions/voyageurs-vaccines-covid-entrent-canada?utm_campaign=cbsa-asfc-covid19-21-22&utm_source=news&utm_medium=pog&utm_content=exemptions_sep21_fr124 "https://voyage.gc.ca/voyage-covid/voyage-restrictions/voyageurs-vaccines-covid-entrent-canada?utm_campaign=cbsa-asfc-covid19-21-22&utm_source=news&utm_medium=pog&utm_content=exemptions_sep21_fr124 (nouvelle fenêtre)") ;
 *   présenter un résultat négatif à un test moléculaire (PCR, RT- PCR…) de dépistage de la COVID-19 de moins de 72 heures avant le vol prévu, ou un résultat positif à un test effectué entre 14 et 180 jours avant leur départ pour le Canada. Les tests de détection des antigènes, souvent appelés « tests rapides », ne sont pas acceptés. Les voyageurs de moins de 12 ans sont exemptés ;
 *   être asymptomatiques ;
-*   soumettre leurs informations obligatoires au moyen d’ArriveCAN, y compris une preuve de vaccination en anglais ou en français ainsi qu’un plan de mise en quarantaine ;
+*   soumettre leurs informations obligatoires au moyen d’[ArriveCAN](https://www.canada.ca/fr/sante-publique/services/maladies/maladie-coronavirus-covid-19/arrivecan.html#a3 "https://www.canada.ca/fr/sante-publique/services/maladies/maladie-coronavirus-covid-19/arrivecan.html#a3 (nouvelle fenêtre)"), y compris une preuve de vaccination en anglais ou en français ainsi qu’un plan de mise en quarantaine ;
 *   Se soumettre à un test à l’arrivée, **si ils sont sélectionnés au hasard** pour passer un test moléculaire de dépistage de la COVID-19 au jour 1 ;
 *   détenir une autorisation de voyage électronique (AVE) ou un visa correspondant à la raison de son séjour (étude, travail…).
 
@@ -183,13 +183,13 @@ Voyage Retour 
 
 **À l’heure actuelle, les voyageurs qui n’ont pas reçu toutes leurs doses d’un vaccin doivent toujours respecter l’obligation de présenter un « motif essentiel » pour entrer au Canada et doivent se soumettre aux exigences de dépistage à l’arrivée et à la mise en quarantaine pour 14 jours.** 
 
-#### **Découvrez notre séjour à travers l'immensité du** **Yukon** 🇨🇦
+#### [**Découvrez notre séjour à travers l'immensité du**](https://odysway.com/voyages/voyage-nature-canada-yukon) [](https://odysway.com/voyages/voyage-nature-canada-yukon)[**Yukon**](https://odysway.com/voyages/voyage-nature-canada-yukon) 🇨🇦
 
 **CAP-VERT**
 
 ::image-container
 ---
-image-src: "/images/blogs/BX6K0tEDTaK9B9fPqZBn-1742840705982.jpg"
+image-src: "/images/blogs/informations-covid-19/BX6K0tEDTaK9B9fPqZBn.jpg"
 alt: undefined
 link: https://odysway.com/voyages/immersion-cap-vert?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -207,17 +207,17 @@ Les voyageurs doivent présenter au départ comme à l’arrivée :
 
 *   un document attestant la réalisation d’un test virologique (PCR), avec résultat négatif, moins de 72 heures avant l’embarquement, ou d’un test antigénique, avec résultat négatif, moins de 48 heures avant l’embarquement (indépendamment de la durée du vol ou de la traversée). Les tests PCR au Cap Vert coûtent 6 500 escudos (58,95 euros).
 
-*   un formulaire de surveillance et de contrôle sanitaire : formulaire de contrôle sanitaire
+*   un formulaire de surveillance et de contrôle sanitaire : [formulaire de contrôle sanitaire](https://igrp.gov.cv/IGRP/app/webapps?r=controle_sanitario/FichaVigilanciaControleSanitario/index&dad=controle_sanitario&p_fwl_toolsbar_2=en_lang&target=_blank&isPublic=1)
 
-*   **Quels que soient la durée et le motif de son séjour**, tout voyageur doit se soumettre, **au moins cinq jours avant son arrivée** sur le territoire capverdien, à une **formalité préalable de pré-enregistrement sur la plate-forme gouvernementale dédiée www.ease.gov.cv**. Lors de l’accomplissement de cette démarche, le voyageur saisit les données de son passeport, ses dates prévisibles d’entrée et de sortie du territoire capverdien, son numéro de vol et son lieu de villégiature, et s’**acquitte d’une taxe de sécurité aéroportuaire de 3 400 escudos (30,83 euros)**. La présentation du justificatif du paiement de cette taxe sera exigée à son arrivée sur le territoire capverdien.
+*   **Quels que soient la durée et le motif de son séjour**, tout voyageur doit se soumettre, **au moins cinq jours avant son arrivée** sur le territoire capverdien, à une **formalité préalable de pré-enregistrement sur la plate-forme gouvernementale dédiée [www.ease.gov.cv](http://www.ease.gov.cv/ "http://www.ease.gov.cv (nouvelle fenêtre)")**. Lors de l’accomplissement de cette démarche, le voyageur saisit les données de son passeport, ses dates prévisibles d’entrée et de sortie du territoire capverdien, son numéro de vol et son lieu de villégiature, et s’**acquitte d’une taxe de sécurité aéroportuaire de 3 400 escudos (30,83 euros)**. La présentation du justificatif du paiement de cette taxe sera exigée à son arrivée sur le territoire capverdien.
 
-**Découvrez notre voyage en immersion avec les locaux au Cap-Vert 🇨🇻**
+[**Découvrez notre voyage en immersion avec les locaux au Cap-Vert 🇨🇻**](https://odysway.com/voyages/immersion-cap-vert?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **COSTA RICA**
 
 ::image-container
 ---
-image-src: "/images/blogs/singe-costa-rica.jpeg.jpg"
+image-src: "/images/blogs/informations-covid-19/DUFDH0E3QK6umvYGhURK.jpg"
 alt: singe-costa-rica.jpeg
 link: https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -233,7 +233,7 @@ Voyage Aller
     
     Ce pass sanitaire doit être présenté, sous format papier ou digital, à la compagnie aérienne au moment de l’embarquement. De même, à l’arrivée au Costa Rica, il faut le présenter en même temps que le passeport, lors du contrôle à la frontière. Le contrôle est réalisé à l’aide du QR code figurant sur le passe.
     
-    Pour obtenir ce pass sanitaire, il faut se connecter au site internet (en anglais et en espagnol) salud.go.cr et remplir la condition suivante :
+    Pour obtenir ce pass sanitaire, il faut se connecter au site internet (en anglais et en espagnol) [salud.go.cr](https://www.ministeriodesalud.go.cr/index.php "https://www.ministeriodesalud.go.cr/index.php (nouvelle fenêtre)") et remplir la condition suivante :
     
     \- disposer d’un pass sanitaire européen (à téléverser dans le formulaire) apportant **la preuve de vaccination complète** (ou d’une contamination suivie d’une seule injection). Cela concerne les vaccins Moderna, Pfizer-BioNTech, AstraZeneca, Janssen, Sinovac, Sinopharm et Covaxin uniquement. La dernière dose du vaccin doit avoir été appliquée au moins 14 jours avant l’arrivée au Costa Rica. Dans ce cas, à compter du 1er décembre 2021, le passe sanitaire permettra également d’accéder, sans restriction, aux lieux recevant du public. 
     
@@ -261,13 +261,13 @@ Voyage Retour 
 
 *   Il est demandé aux voyageurs de présenter un test PCR-RT négatif de moins de 48h avant l'embarquement.
 
-**Découvrez notre voyage en immersion dans un refuge pour sauver les animaux de la jungle au Costa Rica 😍**
+[**Découvrez notre voyage en immersion dans un refuge pour sauver les animaux de la jungle au Costa Rica 😍**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **FINLANDE**
 
 ::image-container
 ---
-image-src: "/images/blogs/kayak-finlande.jpg.jpg"
+image-src: "/images/blogs/informations-covid-19/Ec7XfsDQiCTViJLfxZP6.jpg"
 alt: kayak finlande.jpg
 link: https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -289,13 +289,13 @@ Les voyageurs de plus de 16 ans doivent présenter :
 
 À partir du 1er février, les personnes vaccinées n’auront plus besoin de présenter un test négatif pour entrer en **Finlande**. Nous vous conseillons cependant d'en faire un pour prendre toutes vos précautions.
 
-**Découvrez notre aventure en canoë au coeur de la nature finlandaise 🇫🇮**
+[**Découvrez notre aventure en canoë au coeur de la nature finlandaise 🇫🇮**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **KIRGHIZISTAN**
 
 ::image-container
 ---
-image-src: "/images/blogs/kirghizistan-blog.jpg.jpg"
+image-src: "/images/blogs/informations-covid-19/3BdWyG2RVCkJakUswmAJ.jpg"
 alt: kirghizistan blog.jpg
 link: https://odysway.com/voyages/immersion-steppes-kirghizistan
 ---
@@ -309,13 +309,13 @@ Les voyageurs (de plus de 6 ans) doivent présenter à l'aller comme au retour :
 
 *   un résultat négatif d’un test PCR réalisé moins de 72 heures avant l’entrée sur le territoire kirghize et moins de 48h avant l'embarquement pour la France.
 
-**Découvrez notre séjour en immersion dans les steppes du Kirghizistan 🇰🇬**
+[**Découvrez notre séjour en immersion dans les steppes du Kirghizistan 🇰🇬**](https://odysway.com/voyages/immersion-steppes-kirghizistan)
 
 **OUZBÉKISTAN**
 
 ::image-container
 ---
-image-src: "/images/blogs/6ce9Ds1TTYu4xhTfOH9N-1742840708152.jpg"
+image-src: "/images/blogs/informations-covid-19/6ce9Ds1TTYu4xhTfOH9N.jpg"
 alt: undefined
 link: https://odysway.com/voyages/route-soie-ouzbekistan?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -336,13 +336,13 @@ Voyage Retour
 
 *   présenter un résultat négatif de test RT-PCR (TAAN) ou antigénique (test rapide) effectué dans un délai de 48 heures avant leur départ pour la France.
 
-**Découvrez notre voyage à la rencontre des habitants de la route de la soie 🇺🇿**
+[**Découvrez notre voyage à la rencontre des habitants de la route de la soie 🇺🇿**](https://odysway.com/voyages/route-soie-ouzbekistan?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **P****ÉROU**
 
 ::image-container
 ---
-image-src: "/images/blogs/Perou-voyage-spirituel-recadre-blog.jpg.jpg"
+image-src: "/images/blogs/informations-covid-19/SRiTg19GQYizHLJugHkg.jpg"
 alt: Pérou voyage spirituel recadré blog.jpg
 link: https://odysway.com/experiences?search=perou
 ---
@@ -355,18 +355,18 @@ Formalités d'entrée (par voie aérienne uniquement) :
 *   Les voyageurs **totalement vaccinés** sont exemptés de la présentation d’un test COVID négatif à l'entrée du territoire. Afin d’entrer au Pérou, ils doivent présenter leur carnet ou certificat de vaccination. il est cependant obligatoire de présenter un test COVID négatif à la sortie du territoire réalisé moins de 48 heures avant le vol.
 *   Les voyageurs non-vaccinés doivent présenter un test COVID négatif dans un délai de 48h au départ et au retour. 
 
-*   Il est obligatoire de remplir la "Déclaracion Jurada" de santé et la géolocalisation du service de migration à partir de 72 heures avant le vol ;  
-    L’enregistrement se fait en ligne. Il est recommandé d’effectuer le pré-enregistrement dans la demande de migration
+*   Il est obligatoire de remplir la ["Déclaracion Jurada"](https://e-notificacion.migraciones.gob.pe/dj-salud/ "https://e-notificacion.migraciones.gob.pe/dj-salud/ (nouvelle fenêtre)") de santé et la géolocalisation du service de migration à partir de 72 heures avant le vol ;  
+    L’enregistrement se fait en ligne. Il est recommandé d’effectuer le [pré-enregistrement dans la demande de migration](https://play.google.com/store/apps/details?id=pe.gob.migraciones.preregistro&hl=es_CL&gl=US "https://play.google.com/store/apps/details?id=pe.gob.migraciones.preregistro&hl=es_CL&gl=US (nouvelle fenêtre)")
 
 Les frontières terrestres sont fermées jusqu’à nouvel ordre, en vertu du Decreto Supremo Nº 184-2020-PCM.
 
-**Découvrez nos voyages en immersion au Pérou 🇵🇪**
+[**Découvrez nos voyages en immersion au Pérou 🇵🇪**](https://odysway.com/experiences?search=perou)
 
 **SRI LANKA**
 
 ::image-container
 ---
-image-src: "/images/blogs/beautiful-dawn-elephant-1054655.jpg.jpg"
+image-src: "/images/blogs/informations-covid-19/NvdlJEdmQUOtMgESoavv.jpg"
 alt: beautiful-dawn-elephant-1054655.jpg
 link: https://odysway.com/voyages/protection-animaux-sri-lanka?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup
 ---
@@ -376,20 +376,20 @@ Ouvert: ✅
 Vaccination obligatoire: Oui, 8 jours de quarantaine à l'arrivée  
 Formalités d'entrée:
 
-*   L’entrée sur le territoire srilankais pour les touristes est soumise à l’obtention d’un visa en ligne avant le voyage (sur le portail de l’immigration) ;
+*   L’entrée sur le territoire srilankais pour les touristes est soumise à l’obtention d’un [visa en ligne](http://www.eta.gov.lk/slvisa/ "http://www.eta.gov.lk/slvisa/ - en anglais (nouvelle fenêtre)") avant le voyage (sur le portail de l’immigration) ;
 
-*   De plus, les touristes devront se munir d’un justificatif de test PCR négatif de moins de 72 heures imprimé, avec résultat en anglais ;
-*   Ils devront aussi remplir et imprimer un formulaire de santé en cliquant ici
+*   [](https://srilanka.travel/helloagain/documents/Fully-Vaccinated-Travellers.pdf)De plus, les touristes devront se munir d’un justificatif de test PCR négatif de moins de 72 heures imprimé, avec résultat en anglais ;
+*   Ils devront aussi remplir et imprimer un formulaire de santé en cliquant [ici](https://www.airport.lk/health_declaration/index)
 *   A partir du 1er janvier, l'assurance covid sera aussi obligatoire et coûtera 12 USD. Vous pouvez vous rendre sur ce site : www.visitsrilanka.gov.lk pour payer la couverture d'assurance locale COVID 19 ;
 *   Enfin ils devront présenter une copie d'un certificat UE de vaccination Covid en anglais téléchargeable sur Ameli avec 2 doses dont la dernière depuis au moins 14 jours.
 
-**Découvrez notre voyage solidaire pour sauver les animaux du Sri Lanka 🇱🇰**
+[**Découvrez notre voyage solidaire pour sauver les animaux du Sri Lanka 🇱🇰**](https://odysway.com/voyages/protection-animaux-sri-lanka?utm_source=destinations_ouvertes&utm_campaign=Info_Covid&utm_id=popup)
 
 **TAÏLANDE**
 
 ::image-container
 ---
-image-src: "/images/blogs/thailande-blog.jpg.jpg"
+image-src: "/images/blogs/informations-covid-19/eLsrN7yuQaGLP7YMlfgp.jpg"
 alt: thailande blog.jpg
 ---
 ::
@@ -403,26 +403,26 @@ Formalités d'entrée:
     1\. Programme Test & Go : PCR à l’arrivée + première nuit dans un hôtel de quarantaine AQ ou SHA+ en attente du résultat négatif du test. 2nd test après 5 jours avec nouvelle nuit dans un hôtel AQ ou SHA Extra+ réservé à l’avance.  
     2\. Le programme Sandbox : Les voyageurs vaccinés doivent arriver à Phuket, Surat Thani (Koh Samui, Koh Tao et Koh Phangan), Krabi et Phangnga sans quarantaine (programme Sandbox). Ils doivent y rester au moins 7 nuits avant de pouvoir se rendre dans d’autres régions de Thaïlande. Test PCR obligatoire moins de 72 heures avant le départ + test à l’arrivée + test le 7e jour.
 *   Test PCR : Moins de 72 heures avant le départ + test à l’arrivée + test le 7e jour
-*   Formulaire : À remplir ici
+*   Formulaire : [À remplir ici](https://tp.consular.go.th/en/plan)
 *   Assurance obligatoire
-*   Restriction : Réservation obligatoire dans un hôtel certifié SHA plus et installation de l’application Morchana.
+*   Restriction : Réservation obligatoire dans un [hôtel certifié SHA plus](https://www.shathailand.com/) et installation de l’application Morchana.
 
-**Découvrez notre séjour sportif dans un camp de boxe-thaï**
+[**Découvrez notre séjour sportif dans un camp de boxe-thaï**](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande)
 
 #### **La liste des pays où il n'est pas encore possible de voyager :** 
 
 Inde  
-Ouvert: Partiellement. Les conditions de voyage peuvent être lues ici. Nos séjours en Inde n'ont pour le moment pas repris. 
+Ouvert: Partiellement. Les conditions de voyage peuvent être lues [ici.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/inde/) Nos séjours en Inde n'ont pour le moment pas repris. 
 
 Maroc 
 
 Fermé
 
 Mongolie  
-Ouvert: Partiellement. Les conditions de voyage peuvent être lues ici. Nos séjours en Mongolie n'ont pour le moment pas repris.
+Ouvert: Partiellement. Les conditions de voyage peuvent être lues [ici.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/mongolie/) Nos séjours en Mongolie n'ont pour le moment pas repris.
 
 Népal  
-Ouvert: Partiellement. Les conditions de voyage peuvent être lues ici. Nos séjours au Népal n'ont pour le moment pas repris.
+Ouvert: Partiellement. Les conditions de voyage peuvent être lues [ici.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/nepal/) Nos séjours au Népal n'ont pour le moment pas repris.
 
 #### **Formalités pour le retour en France**
 
@@ -432,7 +432,7 @@ Les formalités d'entrée sur le territoire français à votre retour dépend de
 
 \- si le pays de provenance se trouve dans la liste Verte, Orange ou Rouge.
 
-Nous vous invitons à suivre la carte mise en ligne par le Gouvernement à l'adresse suivante : carte des couleurs selon pays
+Nous vous invitons à suivre la carte mise en ligne par le Gouvernement à l'adresse suivante : [carte des couleurs selon pays](https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage)
 
 **En provenance d'un pays vert:**
 
@@ -488,7 +488,7 @@ Vous devrez également présenter :
 *   un engagement sur l’honneur à se soumettre au test antigénique ou à l’examen biologique qui sera réalisé à l’arrivée en France métropolitaine ;
 *   un justificatif permettant d’attester l’adresse du domicile ou d’un lieu d’hébergement adapté (hôtel ou assimilé), précisant le cas échéant les modalités d’accès permettant aux agents de contrôle de vérifier le respect de la mesure de quarantaine ou d’isolement, sauf en cas d’isolement dans un lieu d’hébergement mis à disposition par l’administration (des cellules territoriales d’appui à l’isolement ont été mises en place pour accompagner les personnes placées à l’isolement) ou de transit en zone internationale.
 
-Source: Ministère de l'Intérieur ; Site du Gouvernement
+Source: [Ministère de l'Intérieur](https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestation-de-deplacement-et-de-voyage) ; [Site du Gouvernement](https://www.gouvernement.fr/info-coronavirus/deplacements)
 
 **4) Informations sur la vaccination**
 
@@ -502,7 +502,7 @@ Les vaccins admis par la France sont ceux reconnus par l’Agence européenne du
 
 ### **5) Ressources/liens**
 
-L’Union européenne a mis en ligne un site permettant de suivre l’évolution de l’ouverture des frontières au fur et à mesure : https://reopen.europa.eu/fr/map/FRA.
+L’Union européenne a mis en ligne un site permettant de suivre l’évolution de l’ouverture des frontières au fur et à mesure : [https://reopen.europa.eu/fr/map/FRA.](https://reopen.europa.eu/fr/map/FRA)
 
-Pour chaque pays, nous vous conseillons de visiter le site France Diplomatie qui résume la situation sur place, tant d’un point de vue sanitaire que plus général : https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/.
+Pour chaque pays, nous vous conseillons de visiter le site France Diplomatie qui résume la situation sur place, tant d’un point de vue sanitaire que plus général : [https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/)
 ::

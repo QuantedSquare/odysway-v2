@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-02-03 17:37:00+00:00"
 tags: "Amerique du Sud, Brésil, Famille, Grands espaces"
 categories: ""
-displayedImg: "/images/blogs/5-facons-de-lutter-contre-la-deforestation-en-Amazonie.jpg"
+displayedImg: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/PLfFp1uATy2c7uzTBdw7.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-facons-de-lutter-contre-la-deforestation-en-Amazonie.jpg"
+image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/PLfFp1uATy2c7uzTBdw7.jpg"
 ---
 #publication-date
 3 février 2020
@@ -31,12 +31,12 @@ image-src: "/images/blogs/5-facons-de-lutter-contre-la-deforestation-en-Amazonie
 
 ::section-container
 ---
-image-src: "/images/blogs/5-facons-de-lutter-contre-la-deforestation-en-Amazonie.jpg"
+image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/PLfFp1uATy2c7uzTBdw7.jpg"
 ---
 #content
 L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Qu’elle soit d’origine naturelle ou majoritairement humaine, la **déforestation de l’Amazonie** ne cesse de croître au fil des années. Il faut savoir que depuis 50 ans, 17 % de sa surface a été détruite, entraînant la disparition et la migration de certaines espèces animales, ainsi que de tribus indigènes. À ce rythme, la forêt amazonienne aura disparu en 2030… Pourtant, les forêts sont essentielles pour notre planète et notre santé. Face à cette tragédie, il est possible d’apporter individuellement son aide. Voici **5 façons de lutter contre la déforestation en Amazonie**.
 
-Nous vous invitons à lire l'article sur comment limiter mon empreinte carbone en voyage. 
+Nous vous invitons à lire l'article sur [comment limiter mon empreinte carbone en voyage.](https://odysway.com/comment-limiter-mon-empreinte-carbone-en-voyage) 
 
 ## **1\. Réduire sa consommation de papier pour lutter contre la déforestation en Amazonie**
 
@@ -56,14 +56,14 @@ On la retrouve dans de nombreux produits : pâtes à tartiner, gâteaux, pains d
 
 ::image-container
 ---
-image-src: "/images/blogs/Ce7LipITwibORAEKVCWm-1742840998596.jpg"
+image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/Ce7LipITwibORAEKVCWm.jpg"
 alt: 
 ---
 ::  
 
 Source : Avise / Say Yess
 
-L’**économie circulaire**, qu’est-ce que c’est ? C’est un modèle économique qui a pour objectif de **produire des biens et des services de façon durable**. Et ainsi de limiter la consommation, le gaspillage et l’amoncellement des déchets. Cela signifie qu’au lieu de jeter, on va réparer, recycler, réutiliser, troquer, revendre, customiser… Un excellent moyen de prolonger la durée de vie des objets et éviter la surconsommation. Qui n’a pas entendu parler du home staging, cette façon de donner une seconde vie à ses meubles ? Un autre moyen pour lutter contre la déforestation en Amazonie, c’est de traîner dans des brocantes où vous pourrez en plus dénicher toutes sortes d’objets à des prix défiant toute concurrence. Vous pouvez également donner à des associations qui se chargeront de remettre en circulation les objets en question.
+L’**[économie circulaire](https://www.ecologique-solidaire.gouv.fr/leconomie-circulaire)**, qu’est-ce que c’est ? C’est un modèle économique qui a pour objectif de **produire des biens et des services de façon durable**. Et ainsi de limiter la consommation, le gaspillage et l’amoncellement des déchets. Cela signifie qu’au lieu de jeter, on va réparer, recycler, réutiliser, troquer, revendre, customiser… Un excellent moyen de prolonger la durée de vie des objets et éviter la surconsommation. Qui n’a pas entendu parler du home staging, cette façon de donner une seconde vie à ses meubles ? Un autre moyen pour lutter contre la déforestation en Amazonie, c’est de traîner dans des brocantes où vous pourrez en plus dénicher toutes sortes d’objets à des prix défiant toute concurrence. Vous pouvez également donner à des associations qui se chargeront de remettre en circulation les objets en question.
 
 **Mais l’économie circulaire passe aussi par un tourisme responsable et durable**. Les habitants de la forêt amazonienne vivent en partie grâce au commerce du bois. Des agences locales ont décidé de davantage les impliquer dans la préservation de leur environnement. L’objectif est de leur procurer d’autres sources de revenus en vue de délaisser ceux issus du bois. Enfin, il est important de **favoriser l’économie responsable** en évitant d’acheter dans les magasins de la grande distribution mais plutôt dans les petits magasins régionaux.
 
@@ -75,7 +75,7 @@ Il n’est pas du tout question ici de chauvinisme mais d’un réel engagement 
 
 ::image-container
 ---
-image-src: "/images/blogs/5ju8u0H7SwKCi6O6kUl8-1742840999117.jpg"
+image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/5ju8u0H7SwKCi6O6kUl8.jpg"
 alt: 
 ---
 ::
@@ -88,22 +88,22 @@ _Plantation d’un arbre_
 
 ::image-container
 ---
-image-src: "/images/blogs/bw9r5RgQRynMtOyJExPz-1742840999635.jpg"
+image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/bw9r5RgQRynMtOyJExPz.jpg"
 alt: 
 ---
 ::
 
 _Découvrez comment allumer un feu sans allumettes ni briquet._
 
-Odysway vous propose une expérience insolite de survie dans la jungle amazonienne. En compagnie de guides locaux expérimentés, vous apprendrez à survivre dans la jungle et testerez vos limites tout en restant bien encadré. Cette aventure dans la jungle amazonienne est accessible quel que soit votre niveau, les guides s’adapteront à vous. Vous aurez également la possibilité de choisir vos activités en fonction de vos envies et de ce dont vous vous sentez capable. Alors n’hésitez plus, foncez !
+Odysway vous propose une expérience insolite de [survie dans la jungle amazonienne](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=Blog&utm_medium=article&utm_campaign=Lutter_contre_deforestation). En compagnie de guides locaux expérimentés, vous apprendrez à survivre dans la jungle et testerez vos limites tout en restant bien encadré. Cette aventure dans la jungle amazonienne est accessible quel que soit votre niveau, les guides s’adapteront à vous. Vous aurez également la possibilité de choisir vos activités en fonction de vos envies et de ce dont vous vous sentez capable. Alors n’hésitez plus, foncez !
 
 ## **La démarche responsable d'Odysway**
 
 Odysway a à coeur d’inscrire chacun des séjours qu’elle propose dans un tourisme responsable, durable et solidaire, dans le respect des populations locales, de leur culture et de leur environnement. C’est pourquoi, nous avons développé un partenariat avec Pur Project, qui finance des projets solidaires partout dans le monde. Chaque année, Odysway communique à Pur Project son empreinte carbone et celles de ses voyageurs, qui finance ces projets à hauteur des émissions carbones réalisées.
 
-Lire davantage sur la démarche responsable d'Odysway.
+Lire davantage sur la [démarche responsable d'Odysway](https://odysway.com/demarche-responsable-odysway).
 
 ## Séjour Nature : se déconnecter du quotidien
 
-Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturels exceptionnelles.
+Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturels exceptionnelles.
 ::

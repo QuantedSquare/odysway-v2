@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-09-11 09:37:00+00:00"
 tags: "Presse"
 categories: "Presse ecrite"
-displayedImg: "/images/blogs/Odysway-dans-Capital.jpg"
+displayedImg: "/images/blogs/odysway-dans-capital/6hN6qZ2xQp63wtQQfHEh.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Odysway-dans-Capital.jpg"
+image-src: "/images/blogs/odysway-dans-capital/6hN6qZ2xQp63wtQQfHEh.jpg"
 ---
 #publication-date
 11 septembre 2019
@@ -31,16 +31,16 @@ Odysway dans Capital
 
 ::section-container
 ---
-image-src: "/images/blogs/Odysway-dans-Capital.jpg"
+image-src: "/images/blogs/odysway-dans-capital/6hN6qZ2xQp63wtQQfHEh.jpg"
 ---
 #content
-Tourisme : entrepreneurs, pour vous lancer, voici 13 secteurs qui ont le vent en poupe. Lire l’article.
+Tourisme : entrepreneurs, pour vous lancer, voici 13 secteurs qui ont le vent en poupe. [Lire l’article.](https://www.capital.fr/votre-carriere/tourisme-entrepreneurs-pour-vous-lancer-voici-13-secteurs-qui-ont-le-vent-en-poupe-1348897)
 
 Depuis neuf ans, le tourisme connaît une croissance continue et la France reste le pays du monde le plus visité. Vous avez envie de vous lancer ? Le point sur les tendances qui ont le vent en poupe.
 
 _::image-container
 ---
-image-src: "/images/blogs/DKfQCXUNSui5afyl3CMm-1742841051103.jpg"
+image-src: "/images/blogs/odysway-dans-capital/DKfQCXUNSui5afyl3CMm.jpg"
 alt: 
 ---
 ::_

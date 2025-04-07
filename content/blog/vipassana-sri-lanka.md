@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-08-02 12:27:00+00:00"
 tags: "Asie, Developpement personnel, Sri Lanka"
 categories: "Depassement de soi, Apprentissage, Developpement Personnel"
-displayedImg: "/images/blogs/Le-vipassana-au-Sri-Lanka.jpg"
+displayedImg: "/images/blogs/vipassana-sri-lanka/HRcic4FaSOvwA31f6d5Q.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-vipassana-au-Sri-Lanka.jpg"
+image-src: "/images/blogs/vipassana-sri-lanka/HRcic4FaSOvwA31f6d5Q.jpg"
 ---
 #publication-date
 2 août 2019
@@ -31,12 +31,12 @@ Le vipassana au Sri Lanka
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-vipassana-au-Sri-Lanka.jpg"
+image-src: "/images/blogs/vipassana-sri-lanka/HRcic4FaSOvwA31f6d5Q.jpg"
 ---
 #content
 Il existe plusieurs techniques de méditation à travers le monde et chacune d’elles apporte ses propres bienfaits. Parmi elles, il y a **le vipassana, que l’on retrouve au Sri Lanka notamment**, et qui aide à trouver la paix intérieure. D’où vient cette technique et comment se pratique-t-elle ? Quels en sont les bienfaits et où en faire ? Réponse dans ce nouvel article de blog. 
 
-Après votre lecture, nous vous invitons à découvrir notre article sur un voyage intérieur auprès d'un chamane au Tibet.
+Après votre lecture, nous vous invitons à découvrir notre article [sur un voyage intérieur auprès d'un chamane au Tibet.](https://odysway.com/partez-pour-un-voyage-interieur-aupres-dun-chamane-au-tibet)
 
 ## Qu’est-ce que le vipassana ?
 
@@ -50,7 +50,7 @@ Il n’y a pas de restriction particulière pour pratiquer le vipassana. C’est
 
 **::image-container
 ---
-image-src: "/images/blogs/6qGARsZGSJGmIPlMmzoV-1742841055835.jpg"
+image-src: "/images/blogs/vipassana-sri-lanka/6qGARsZGSJGmIPlMmzoV.jpg"
 alt: 
 ---
 ::**
@@ -59,7 +59,7 @@ _La respiration est un élément important de la pratique du vipassana_
 
 En règle générale, une retraite de méditation vipassana au Sri Lanka dure **10 jours**, à l’écart de toute vie extérieure et où règne un **silence total** jusqu’au 10è jour. Et cela aussi bien pendant les séances, qui durent au moins 7h par jour, que lors des repas et des encas (deux fois par jour chacun). Dans les centres, les hommes et les femmes sont séparés sauf pendant les séances de méditation. Cependant, le regard de chacun doit être dirigé vers le sol. Chaque méditant se doit de suivre également certaines **règles morales** comme ne pas voler, ni mentir (aux autres ou à soi-même) ou ne pas tuer d’êtres vivants. Tout cela pour préserver la tranquillité de l’esprit.
 
-Les premiers jours sont consacrés à **l’apprentissage de la concentration** grâce à des techniques bien précises de respiration. Comme par exemple **la respiration abdominale** qui consiste à observer les mouvements de l’abdomen en fonction du souffle. Ensuite, les séances évoluent pour apprendre à se concentrer cette fois sur soi-même. Il s’agit en quelque sorte d’une **exploration intérieure** de ses sensations physiques et mentales, tout en faisant abstraction de ses émotions. On apprend également à écouter ses propres pensées. Tous ces exercices amènent progressivement à un apaisement, à la fois spirituel et intérieur. Découvrez nos voyages en immersion au Sri Lanka.
+Les premiers jours sont consacrés à **l’apprentissage de la concentration** grâce à des techniques bien précises de respiration. Comme par exemple **la respiration abdominale** qui consiste à observer les mouvements de l’abdomen en fonction du souffle. Ensuite, les séances évoluent pour apprendre à se concentrer cette fois sur soi-même. Il s’agit en quelque sorte d’une **exploration intérieure** de ses sensations physiques et mentales, tout en faisant abstraction de ses émotions. On apprend également à écouter ses propres pensées. Tous ces exercices amènent progressivement à un apaisement, à la fois spirituel et intérieur. [Découvrez nos voyages en immersion au Sri Lanka.](https://odysway.com/destinations/sri-lanka)
 
 ## Les bienfaits du vipassana
 
@@ -75,16 +75,16 @@ Comme toute méditation, **le vipassana apporte maints bienfaits aux personnes 
 
 ## Où partir faire une retraite de méditation vipassana au Sri Lanka ?
 
-Le bouddhisme étant la première religion du pays, vous trouverez forcément **un centre de vipassana au Sri Lanka**. Il y en a notamment à Colombo, la capitale. Si vous souhaitez un lieu plus calme et plus isolé, rendez-vous dans la ville de **Kandy**, à l’est de Colombo. 
+Le bouddhisme étant [la première religion du pays](https://odysway.com/religion-sri-lanka-principales-croyances/), vous trouverez forcément **un centre de vipassana au Sri Lanka**. Il y en a notamment à Colombo, la capitale. Si vous souhaitez un lieu plus calme et plus isolé, rendez-vous dans la ville de **Kandy**, à l’est de Colombo. 
 
 ::image-container
 ---
-image-src: "/images/blogs/N0ibWpNQMqaW9fL2LsyO-1742841056363.jpg"
+image-src: "/images/blogs/vipassana-sri-lanka/N0ibWpNQMqaW9fL2LsyO.jpg"
 alt: 
 ---
 ::
 
 ## Découvrez les voyages initiatiques
 
-Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité. Découvrez nos voyages initiatiques.
+Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité. Découvrez nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::

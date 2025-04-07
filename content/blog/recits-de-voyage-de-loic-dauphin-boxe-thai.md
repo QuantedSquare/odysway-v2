@@ -16,12 +16,12 @@ published: false
 publishedAt: "2020-10-29 15:14:00+00:00"
 tags: "Asie, Sports, Thailande"
 categories: "Nature et grands espaces, Developpement Personnel, Blog"
-displayedImg: "/images/blogs/Recits-de-Voyage-Loic-Dauphin-"Boxez-dans-les-rizieres-en-Thailande.jpg"
+displayedImg: "/images/blogs/recits-de-voyage-de-loic-dauphin-boxe-thai/WdMaLkdsRJyIJ73QaG7I.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Recits-de-Voyage-Loic-Dauphin-"Boxez-dans-les-rizieres-en-Thailande.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-loic-dauphin-boxe-thai/WdMaLkdsRJyIJ73QaG7I.jpg"
 ---
 #publication-date
 29 octobre 2020
@@ -35,7 +35,7 @@ Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande
 
 ::section-container
 ---
-image-src: "/images/blogs/Recits-de-Voyage-Loic-Dauphin-"Boxez-dans-les-rizieres-en-Thailande.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-loic-dauphin-boxe-thai/WdMaLkdsRJyIJ73QaG7I.jpg"
 ---
 #content
 La **Boxe Thaïlandaise** ou **_Muay-Thaï_** est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai **camp de boxe en Thaïlande**, loin des nombreux circuits touristiques…
@@ -74,5 +74,5 @@ Je trouve aussi que le fait que l’équipe Odysway soit francophone est rassur
 
 Pour rester sur le thème du sport, j’aimerai faire un voyage de judo au Japon. Peut-être dans une école de judo si Odysway le proposait un jour, ce serait mon voyage rêvé !
 
-Envie vous aussi de découvrir la **Boxe thaï en Thaïlande** ? Cliquez ici !
+Envie vous aussi de découvrir la **Boxe thaï en Thaïlande** ? [Cliquez ici](https://odysway.com/voyages/stage-boxe-thai-nord-thailande) !
 ::

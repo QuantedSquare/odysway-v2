@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-12-13 17:18:00+00:00"
 tags: "Asie, Developpement personnel, Inde"
 categories: "Depassement de soi, Developpement Personnel"
-displayedImg: "/images/blogs/Faire-une-retraite-dans-un-ashram-en-Inde.jpg"
+displayedImg: "/images/blogs/faire-une-retraite-dans-un-ashram-en-inde/TZeHLay1RTenSQZknP12.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Faire-une-retraite-dans-un-ashram-en-Inde.jpg"
+image-src: "/images/blogs/faire-une-retraite-dans-un-ashram-en-inde/TZeHLay1RTenSQZknP12.jpg"
 ---
 #publication-date
 13 décembre 2018
@@ -31,12 +31,12 @@ Faire une retraite dans un ashram en Inde
 
 ::section-container
 ---
-image-src: "/images/blogs/Faire-une-retraite-dans-un-ashram-en-Inde.jpg"
+image-src: "/images/blogs/faire-une-retraite-dans-un-ashram-en-inde/TZeHLay1RTenSQZknP12.jpg"
 ---
 #content
 Opérer une césure dans sa vie quotidienne est un besoin ressenti par un grand nombre d'entre nous. Les raisons sont généralement d'ordre personnel ou professionnel et l'envie première est de se retrouver et se recentrer sur des choses essentielles. Faire une retraite dans un ashram est un excellent moyen pour apaiser son corps et son esprit. Direction l'Inde pour un voyage sous le signe du bien-être intérieur.
 
-Après la lecture de l'article, nous vous invitons à poursuivre avec la découverte de l'Inde lointaine : Arunashal Pradesh  
+Après la lecture de l'article, nous vous invitons à poursuivre [avec la découverte de l'Inde lointaine : Arunashal Pradesh](https://odysway.com/decouverte-inde-lointaine-arunachal-pradesh?utm_source=article&utm_medium=blog&utm_campaign=retraite+ashram)  
 
 ## Qu'est-ce qu'un ashram ?
 
@@ -60,5 +60,5 @@ Le nombre d'ashrams en Inde est probablement proportionnel à la taille du pays.
 
 ## Les voyages initiatiques avec Odysway
 
-Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité. C’est les voyages initiatiques.
+Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité. C’est les [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::

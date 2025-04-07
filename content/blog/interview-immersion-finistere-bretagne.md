@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-06-14 15:39:00+00:00"
 tags: "alpaga, alpagas, Animaux, Bretagne, déconnexion, élevage, Finistère, France, immersion, nature, paysage, slow tourisme"
 categories: "Blog"
-displayedImg: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-dans-le-Finistere.jpg"
+displayedImg: "/images/blogs/interview-immersion-finistere-bretagne/9UdWTutoSJKlogLmZXSY.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-dans-le-Finistere.jpg"
+image-src: "/images/blogs/interview-immersion-finistere-bretagne/9UdWTutoSJKlogLmZXSY.jpg"
 ---
 #publication-date
 14 juin 2021
@@ -31,7 +31,7 @@ Interview – Rencontre avec Virginie, éleveuse d'alpagas dans le Finistère
 
 ::section-container
 ---
-image-src: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-dans-le-Finistere.jpg"
+image-src: "/images/blogs/interview-immersion-finistere-bretagne/9UdWTutoSJKlogLmZXSY.jpg"
 ---
 #content
 **Vivre avec des alpagas en Bretagne ? C'est exactement ce que nous vous proposons !**
@@ -48,7 +48,7 @@ image-src: "/images/blogs/Interview-Rencontre-avec-Virginie-eleveuse-d'alpagas-d
 
 ::image-container
 ---
-image-src: "/images/blogs/yXxK0Qd5SEmUZvwg8Jra-1742840711423.jpg"
+image-src: "/images/blogs/interview-immersion-finistere-bretagne/yXxK0Qd5SEmUZvwg8Jra.jpg"
 alt: undefined
 ---
 ::
@@ -67,7 +67,7 @@ alt: undefined
 
 ::image-container
 ---
-image-src: "/images/blogs/c5a311_98deaf06541f4869a2398f19991089....jpg"
+image-src: "/images/blogs/interview-immersion-finistere-bretagne/j3mCajHxToivHpo9LkSE.jpg"
 alt: c5a311_98deaf06541f4869a2398f19991089...
 link: https://odysway.com/voyages/Immersion-Alpagas-Finistere
 ---

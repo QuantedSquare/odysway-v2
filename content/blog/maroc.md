@@ -44,7 +44,7 @@ Les influences berbères, arabes et européennes se retrouvent dans la culture l
 
 ::image-container
 ---
-image-src: "/images/blogs/mzruCCsZTWGdYT5SVwAp-1742840869714.jpg"
+image-src: "/images/blogs/maroc/mzruCCsZTWGdYT5SVwAp.jpg"
 alt: undefined
 ---
 ::
@@ -153,7 +153,7 @@ Située dans les terres, au sud, Marrakech abrite la médina la plus grande du M
 
 ### ::image-container
 ---
-image-src: "/images/blogs/u9IKVsjTvSNkQJHr1iLg-1742840870237.jpg"
+image-src: "/images/blogs/maroc/u9IKVsjTvSNkQJHr1iLg.jpg"
 alt: undefined
 ---
 ::
@@ -169,11 +169,11 @@ Taroudant est aussi le départ de randonnées dans une riche nature : oasis, cul
 
 ### Le désert du Sahara
 
-Il faut voir au moins une fois dans sa vie un désert de sable. Mythique et magique, l’impression d’infini délivre une sensation forte face à la nature grandiose. Vous chevaucherez un dromadaire et boirez le thé avec les Bédouins. Rien de tel pour revenir aux sources et profiter de vacances sereines. Vous vivrez à la manière des nomades et pratiquerez une marche silencieuse dans l’immensité du Sahara.
+Il faut voir au moins une fois dans sa vie un désert de sable. Mythique et magique, l’impression d’infini délivre une sensation forte face à la nature grandiose. Vous chevaucherez un dromadaire et [boirez le thé avec les Bédouins](https://bit.ly/2YMzhgd). Rien de tel pour revenir aux sources et profiter de vacances sereines. Vous vivrez à la manière des nomades et pratiquerez une [marche silencieuse dans l’immensité du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=Blog&utm_medium=SEO&utm_campaign=marche_sahara).
 
 ### ::image-container
 ---
-image-src: "/images/blogs/XyNR1NM4QHKBZVyVsgpE-1742840870767.jpg"
+image-src: "/images/blogs/maroc/XyNR1NM4QHKBZVyVsgpE.jpg"
 alt: undefined
 ---
 ::
@@ -192,7 +192,7 @@ La vallée du Drâa est longue de 200 km. Les villages disséminés çà et là 
 
 ### ::image-container
 ---
-image-src: "/images/blogs/2mn27gl5Qz3mXLcUBfTQ-1742840871290.jpg"
+image-src: "/images/blogs/maroc/2mn27gl5Qz3mXLcUBfTQ.jpg"
 alt: undefined
 ---
 ::
@@ -207,11 +207,11 @@ Si vous avez envie de diversifier vos découvertes, n’hésitez pas à aller vi
 
 ### La médina de Chefchaouen
 
-Les ruelles pavées peintes à la chaux sont typiques de Chefchaouen. Promenez-vous dans la ville bleue, à la découverte des portes cloutées, de tapis, d’objets artisanaux et à la rencontre des marchandes de légumes. Chefchaouen est une belle introduction à un séjour dans la vallée du Rif, loin du tourisme de masse et propice à une déconnexion totale. Et si vous jouiez complètement le jeu en partant pour un séjour « digital detox » ?
+Les ruelles pavées peintes à la chaux sont typiques de Chefchaouen. Promenez-vous dans la ville bleue, à la découverte des portes cloutées, de tapis, d’objets artisanaux et à la rencontre des marchandes de légumes. Chefchaouen est une belle introduction à un séjour dans la vallée du Rif, loin du tourisme de masse et propice à une déconnexion totale. Et si vous jouiez complètement le jeu en partant pour un [séjour « digital detox »](https://odysway.com/voyages/digital-detox-maroc?utm_source=Blog&utm_medium=SEO&utm_campaign=digitaldetox_maroc) ?
 
 ## ::image-container
 ---
-image-src: "/images/blogs/LH95GJmR8WNTqvQbft2F-1742840871811.jpg"
+image-src: "/images/blogs/maroc/LH95GJmR8WNTqvQbft2F.jpg"
 alt: undefined
 ---
 ::

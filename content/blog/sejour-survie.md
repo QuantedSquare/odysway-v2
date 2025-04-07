@@ -50,7 +50,7 @@ Voici les meilleures expériences de **séjours survie** proposées par Odysway 
 
 ::image-container
 ---
-image-src: "/images/blogs/ZGCnbTBCQsaC2PyBNMAW-1742840800160.jpg"
+image-src: "/images/blogs/sejour-survie/ZGCnbTBCQsaC2PyBNMAW.jpg"
 alt: undefined
 ---
 ::
@@ -59,7 +59,7 @@ Si vous souhaitez faire connaissance avec la survie en milieu naturel mais que v
 
 Le magnifique département de l'Ardèche vous tend les bras pour un **séjour survie** tout en douceur, à la découverte des forêts, rivières, gorges et canyons de l’une des plus belles régions de France.
 
-Ce **séjour survie** vous invite à **une randonnée en itinérance**, accompagné par des experts en techniques de survie, où vous serez initié à la survie douce en milieu sauvage.
+Ce **séjour survie** vous invite à [**une randonnée en itinérance**](https://odysway.com/voyages/randonnee-rencontre-producteur-locaux-ardeche?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursurvie), accompagné par des experts en techniques de survie, où vous serez initié à la survie douce en milieu sauvage.
 
 Vous apprendrez à vous orienter, à cueillir et à cuisiner les plantes médicinales, à trouver de l'eau et faire du feu mais aussi à bâtir votre campement en pleine nature.
 
@@ -73,7 +73,7 @@ Un **séjour survie** tout en douceur mais qui ne manquera pas de vous ravir !
 
 ::image-container
 ---
-image-src: "/images/blogs/KHBxijTMWiDCWQiB05zQ-1742840800677.jpg"
+image-src: "/images/blogs/sejour-survie/KHBxijTMWiDCWQiB05zQ.jpg"
 alt: undefined
 ---
 ::
@@ -82,7 +82,7 @@ C’est dans le massif du Jura que nous vous proposons un **séjour survie** en 
 
 Si vous n’êtes pas encore familier avec ce terme, le musher est un meneur et conducteur de traîneau à neige tiré par un attelage de chiens, dans les régions où il fait généralement assez froid et où la neige est monnaie courante.
 
-Ce séjour survie dans le Jura va vous permettre de vivre **une expérience unique en milieu polaire** où vous apprendrez à construire un igloo, à faire du feu dans des conditions climatiques extrêmes et les gestes de premiers secours.
+Ce séjour survie dans le Jura va vous permettre de vivre [**une expérience unique en milieu polaire**](https://odysway.com/voyages/sejour-survie-musher?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursurvie) où vous apprendrez à construire un igloo, à faire du feu dans des conditions climatiques extrêmes et les gestes de premiers secours.
 
 Au programme : expéditions avec l'attelage de chiens de traîneau, orientation de nuit grâce aux étoiles et observation des constellations dans un décor à couper le souffle.
 
@@ -92,7 +92,7 @@ Si vous êtes en quête de sensations fortes et si vivre en immersion dans le fr
 
 ::image-container
 ---
-image-src: "/images/blogs/Pyramide-El-Mirador.jpg"
+image-src: "/images/blogs/sejour-survie/glA7hLuGQz6pJzsETZVS.jpg"
 alt: Pyramide El Mirador
 ---
 ::
@@ -101,7 +101,7 @@ Vous avez l’âme d’Indiana Jones et l’appel de la jungle se fait sentir ? 
 
 En plein milieu de la jungle entre le Mexique et le Guatemala, la pyramide d’El Mirador est restée le secret le mieux gardé des Mayas pendant des siècles. Découverte seulement au 20è siècle, ce joyaux d'archéologie est la plus grande pyramide du monde.
 
-Durant ce **séjour survie**, vous participerez à **une réelle expédition dans la jungle guatémaltèque,** partirez à la découverte d’anciens vestiges mayas et pourrez admirer le coucher de soleil au sommet de la pyramide d’El Mirador.
+Durant ce **séjour survie**, vous participerez à [**une réelle expédition dans la jungle guatémaltèque,**](https://odysway.com/voyages/voyage-pyramide-guatemala?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursurvie) partirez à la découverte d’anciens vestiges mayas et pourrez admirer le coucher de soleil au sommet de la pyramide d’El Mirador.
 
 En immersion avec les communautés locales, vous aurez la chance de participer à une cérémonie traditionnelle maya autour du feu, en offrande à la jungle, afin que l’expédition se passe sous les meilleurs auspices.
 
@@ -113,7 +113,7 @@ Vous allez garder des souvenirs mémorables de ce **séjour survie** au Guatemal
 
 ::image-container
 ---
-image-src: "/images/blogs/astuces-de-survie-768x512.jpg-1.jpg"
+image-src: "/images/blogs/sejour-survie/E2I3z2q6SOmZPotV0NL7.jpg"
 alt: astuces-de-survie-768x512.jpg
 ---
 ::
@@ -122,7 +122,7 @@ Sortez des sentiers battus et de votre zone confort en partant **en immersion** 
 
 Que vous souhaitiez vivre une véritable expérience de survie **en immersion** ou simplement apprendre des techniques qui peuvent vous aider au quotidien, nous avons créé pour vous des séjours uniques en partenariat avec des experts locaux.
 
-Odysway vous accompagne dans vos **séjours survie**, que vous souhaitiez **découvrir le Grand Nord canadien** en expédition en canoë sur le fleuve Yukon ou vivre en immersion et **apprendre la survie dans la jungle amazonienne**.
+Odysway vous accompagne dans vos **séjours survie**, que vous souhaitiez [**découvrir le Grand Nord canadien**](https://odysway.com/voyages/voyage-nature-canada-yukon?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursurvie) en expédition en canoë sur le fleuve Yukon ou vivre en immersion et [**apprendre la survie dans la jungle amazonienne**](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursurvie).
 
-Ou encore **faire un break loin de tout dans la forêt finlandaise**, nous sommes là pour vous aider à choisir ce qui vous correspond le mieux.
+Ou encore [**faire un break loin de tout dans la forêt finlandaise**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejoursurvie), nous sommes là pour vous aider à choisir ce qui vous correspond le mieux.
 ::

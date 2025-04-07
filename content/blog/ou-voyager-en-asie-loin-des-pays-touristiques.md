@@ -12,12 +12,12 @@ published: false
 publishedAt: "2022-06-21 06:57:00+00:00"
 tags: "Asie"
 categories: "Blog"
-displayedImg: "/images/blogs/Ou-voyager-en-Asie-en-2025-loin-des-pays-touristiques.jpg"
+displayedImg: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/JFt5h1VTWGx86P8neiR4.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Ou-voyager-en-Asie-en-2025-loin-des-pays-touristiques.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/JFt5h1VTWGx86P8neiR4.jpg"
 ---
 #publication-date
 21 juin 2022
@@ -31,7 +31,7 @@ Où voyager en Asie en 2025 loin des pays touristiques ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Ou-voyager-en-Asie-en-2025-loin-des-pays-touristiques.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/JFt5h1VTWGx86P8neiR4.jpg"
 ---
 #content
 Par la diversité de ses paysages, de son patrimoine et de ses cultures, l’Asie est une destination qui attire de très nombreux voyageurs. Or, aujourd’hui, certains pays connaissent une affluence telle que l’authenticité et le dépaysement se font moins ressentir. Heureusement, il existe encore des lieux où le tourisme de masse n’a pas fait son apparition. Plein phare sur 6 destinations qui permettent de **voyager en Asie loin des pays touristiques**.
@@ -40,7 +40,7 @@ Par la diversité de ses paysages, de son patrimoine et de ses cultures, l’Asi
 
 ::image-container
 ---
-image-src: "/images/blogs/xp0yAGemTvaDkrJmZZyd-1742840669465.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/xp0yAGemTvaDkrJmZZyd.jpg"
 alt: undefined
 ---
 ::
@@ -49,13 +49,13 @@ Amateurs de randonnées et de treks, **le Kirghizistan** vous ouvre ses portes. 
 
 De Bichkek, la capitale, partez pour un périple à travers le pays à la découverte du village de montagne d’**Arslanbob** et de sa forêt de noyers, la plus ancienne du monde. Och, célèbre pour son immense bazar et sa colline sacrée, et Karakol, au riche patrimoine architectural, sont deux autres villes permettant de **voyager en Asie loin des pays touristiques**.
 
-Découvrez notre séjour en immersion au cœur des steppes kirghizes pour vivre une expérience unique auprès des nomades. 
+Découvrez notre séjour en [immersion au cœur des steppes kirghizes](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=Blog&utm_medium=SEO&utm_campaign=VoyagerEnAsie-Kirghizistan) pour vivre une expérience unique auprès des nomades. 
 
 ## Le Laos
 
 ::image-container
 ---
-image-src: "/images/blogs/8jFZsH3GRnylZOim72dI-1742840670005.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/8jFZsH3GRnylZOim72dI.jpg"
 alt: undefined
 ---
 ::
@@ -64,13 +64,13 @@ alt: undefined
 
 La nature laotienne, quant à elle, vous plonge dans des paysages sauvages et préservés. La réserve naturelle de la Nam Tha ou de Bokeo, le plateau de Bolovens et l’archipel de **Si Phan Don** vous permettront d’observer une faune et une flore riches.
 
-Grâce à Odysway, vous pourrez aussi aller à la rencontre des Cornacs, les gardiens d’éléphants, et faire une immersion au Laos qui restera gravée à jamais dans vos souvenirs.
+Grâce à Odysway, vous pourrez aussi aller à la rencontre des Cornacs, les gardiens d’éléphants, et faire une [immersion au Laos](https://odysway.com/voyages/voyage-immersion-laos-elephants?utm_source=Blog&utm_medium=SEO&utm_campaign=VoyagerEnAsie-Laos) qui restera gravée à jamais dans vos souvenirs.
 
 ## La Mongolie
 
 ::image-container
 ---
-image-src: "/images/blogs/Zg9hyCKbTWCZKOSkhid1-1742840670544.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/Zg9hyCKbTWCZKOSkhid1.jpg"
 alt: undefined
 ---
 ::
@@ -79,13 +79,13 @@ Lorsque l’on pense à **la Mongolie**, on a en tête des paysages qui s’éte
 
 Partez explorer un environnement naturel d’exception doté de forêts, de plaines, de montagnes et de taïga où vit une faune abondante. Randonnez dans le **parc national de Khövsgöl**, qui abrite un lac long de 136 km, ou celui de Khorgo-Terkhiin Tsagaan Nuur dont les dunes s’étirent sur près de 180 km. Traversez le célèbre **désert de Gobi**, explorez Karakorum, l’ancienne capitale mongole fondée par Gengis Khan, et visitez l’incroyable monastère d’Amarbayasgalant Khiid.
 
-Odysway vous emmène en plein cœur des steppes mongoles lors d’un voyage à la rencontre des nomades.
+Odysway vous emmène en plein cœur des steppes mongoles lors d’un voyage à la [rencontre des nomades](https://odysway.com/voyages/voyage-nomades-mongolie).
 
 ## Le Myanmar (ex-Birmanie)
 
 ::image-container
 ---
-image-src: "/images/blogs/ctKsCBNOSlqpNduAl81v-1742840671090.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/ctKsCBNOSlqpNduAl81v.jpg"
 alt: undefined
 ---
 ::
@@ -98,7 +98,7 @@ Au programme, visites culturelles, mais aussi découverte de sites naturels qui 
 
 ::image-container
 ---
-image-src: "/images/blogs/xIXwzv1iRPK2ACgSZpeH-1742840671629.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/xIXwzv1iRPK2ACgSZpeH.jpg"
 alt: undefined
 ---
 ::
@@ -107,13 +107,13 @@ Pays situé sur la mythique route de la Soie, dont les villes servaient d’éta
 
 Venez explorer les villes anciennes de **Samarcande** et de **Boukhara** pour admirer mosquées, minarets et madrasas, mais aussi celle de **Khiva** dont la cité fortifiée d’Itchan Kala est un véritable joyau historique. **Tachkent**, la capitale, ne démérite pas non plus avec son métro aux stations de métro joliment décorées, son bazar et son centre-ville très animé. Le **désert du Kyzyl-Koum**, immense étendue de sable rouge, et la **mer d’Aral**, en réalité un lac salé qui ne cesse de s’assécher, font partie des sites à ne pas manquer.
 
-Si vous aussi vous voulez vivre une expérience singulière en Ouzbékistan, Odysway vous invite à un séjour immersif sur la route de la Soie.
+Si vous aussi vous voulez vivre une expérience singulière en Ouzbékistan, Odysway vous invite à un séjour immersif sur [la route de la Soie](https://odysway.com/voyages/route-soie-ouzbekistan?utm_source=Blog&utm_medium=SEO&utm_campaign=VoyagerEnAsie-ouzb%C3%A9kistan).
 
 ## Le Tadjikistan
 
 ::image-container
 ---
-image-src: "/images/blogs/elkXNWBNTpejREnn22Ko-1742840672167.jpg"
+image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/elkXNWBNTpejREnn22Ko.jpg"
 alt: undefined
 ---
 ::

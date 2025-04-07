@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-08-20 11:00:00+00:00"
 tags: "Europe, Famille, France, Grands espaces, Made in France, Sport, Transports insolites"
 categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog"
-displayedImg: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-deuxieme-partie.jpg"
+displayedImg: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/q1iuKYa4ScmQKERQs8hD.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-deuxieme-partie.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/q1iuKYa4ScmQKERQs8hD.jpg"
 ---
 #publication-date
 20 août 2020
@@ -31,7 +31,7 @@ Découvrir la France au fil de la côte ouest - deuxième partie
 
 ::section-container
 ---
-image-src: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-deuxieme-partie.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/q1iuKYa4ScmQKERQs8hD.jpg"
 ---
 #content
 **Après avoir sillonné les côtes normandes et bretonnes, poursuivons notre voyage jusqu'à la frontière espagnole. Moins rocheuse, cette partie de la côte ouest de la France est moins spectaculaire mais non moins dénuée d'intérêt. Les nombreuses stations balnéaires, la présence d'une nature préservée et un terroir unique représentent les points phares du littoral atlantique.**
@@ -42,7 +42,7 @@ image-src: "/images/blogs/Decouvrir-la-France-au-fil-de-la-cote-ouest-deuxieme-p
 
 ### ::image-container
 ---
-image-src: "/images/blogs/oo1C0sCtS6Wpfl2q9oAH-1742840845446.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/oo1C0sCtS6Wpfl2q9oAH.jpg"
 alt: undefined
 ---
 ::
@@ -59,7 +59,7 @@ Pour vous évader au large de la côte ouest, **les îles de Noirmoutier et d'Ye
 
 ::image-container
 ---
-image-src: "/images/blogs/9dVuOj5xS4aYTAoULzCc-1742840845970.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/9dVuOj5xS4aYTAoULzCc.jpg"
 alt: undefined
 ---
 ::
@@ -76,7 +76,7 @@ Pour ceux qui rêvent d'un séjour en bord de mer pour allier découverte, déte
 
 ::image-container
 ---
-image-src: "/images/blogs/zzpTpWDnRti12MIqwQmQ-1742840846495.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/zzpTpWDnRti12MIqwQmQ.jpg"
 alt: undefined
 ---
 ::
@@ -93,7 +93,7 @@ De passage en Gironde, il serait dommage de ne pas pousser votre voyage un peu p
 
 ::image-container
 ---
-image-src: "/images/blogs/omY30sFgSPeNhkHRORSk-1742840847015.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/omY30sFgSPeNhkHRORSk.jpg"
 alt: undefined
 ---
 ::
@@ -104,7 +104,7 @@ Bordée par la forêt des Landes de Gascogne, **la côte landaise hume bon l'air
 
 ::image-container
 ---
-image-src: "/images/blogs/LhvJbCsR7CxKlD5lcBD9-1742840847539.jpg"
+image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-2/LhvJbCsR7CxKlD5lcBD9.jpg"
 alt: undefined
 ---
 ::
@@ -113,11 +113,11 @@ Nous arrivons au terme de notre voyage sur la côte ouest de France et faisons m
 
 Enfin, ne pas oublier de succomber à **la gastronomie basque**. Charcuterie, fromage ou plats typiques, vos papilles vous diront merci.
 
-Probablement charmé par cette région, nous vous proposons de prolonger votre voyage un peu plus loin dans le Béarn pour partager la vie d'un berger. Au cœur de la sublime vallée d'Aspe, participez à un séjour entre terroir, nature et traditions.
+Probablement charmé par cette région, nous vous proposons de prolonger votre voyage un peu plus loin dans le Béarn pour [partager la vie d'un berger](https://odysway.com/voyages/sejour-berger-bearn?utm_source=Blog&utm_medium=SEO&utm_campaign=berger_bearn). Au cœur de la sublime vallée d'Aspe, participez à un séjour entre terroir, nature et traditions.
 
 ## Découvrez notre thématique sur l'écotourisme
 
-L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'**écotourisme** à travers les voyages que nous concevons pour vous.
+L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'[**écotourisme**](https://odysway.com/thematiques/ecotourisme) à travers les voyages que nous concevons pour vous.
 
-Afin de poursuivre votre lecture, nous vous invitons à découvrir notre article sur le patrimoine viticole de la France.
+Afin de poursuivre votre lecture, nous vous invitons à découvrir [notre article sur le patrimoine viticole de la France.](https://odysway.com/vin-ou-comment-decouvrir-france-patrimoine-viticole)
 ::

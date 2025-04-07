@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-09-13 16:55:00+00:00"
 tags: "Amerique du Sud, Communautés locales, Developpement personnel, Famille, Perou"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/L'Empire-inca-:-origine-apogee-et-declin.jpg"
+displayedImg: "/images/blogs/empire-inca-origine-apogee-declin/bEFHnrRJRsKbLQd36M2w.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/L'Empire-inca-:-origine-apogee-et-declin.jpg"
+image-src: "/images/blogs/empire-inca-origine-apogee-declin/bEFHnrRJRsKbLQd36M2w.jpg"
 ---
 #publication-date
 13 septembre 2019
@@ -31,12 +31,12 @@ L'Empire inca : origine, apogée et déclin
 
 ::section-container
 ---
-image-src: "/images/blogs/L'Empire-inca-:-origine-apogee-et-declin.jpg"
+image-src: "/images/blogs/empire-inca-origine-apogee-declin/bEFHnrRJRsKbLQd36M2w.jpg"
 ---
 #content
 **La région de Cuzco au Pérou a vu naître les Incas**. Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu’à être le plus grand empire de l’Amérique précolombienne. Mais avec l’arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies qui ont décimé la population, **l’Empire inca** s’est effondré. Découvrons son histoire.
 
-Nous vous invitons à lire notre article évoquant les destinations de voyage pour une immersion totale.
+Nous vous invitons à lire notre article évoquant [les destinations de voyage pour une immersion totale.](https://odysway.com/ou-partir-voyage-immersion-totale)
 
 ## Les origines de l’Empire inca
 
@@ -46,7 +46,7 @@ Manco Capac s’occupa d’apprendre aux hommes les rudiments de l’agriculture
 
 ::image-container
 ---
-image-src: "/images/blogs/vPc4bs17SzyiOEXY5iya-1742841048295.jpg"
+image-src: "/images/blogs/empire-inca-origine-apogee-declin/vPc4bs17SzyiOEXY5iya.jpg"
 alt: 
 ---
 ::
@@ -67,7 +67,7 @@ Les Incas sont connus pour leur **habileté dans les constructions** et ont b�
 
 ::image-container
 ---
-image-src: "/images/blogs/nfbWQtOToufooqdRZIoV-1742841048815.jpg"
+image-src: "/images/blogs/empire-inca-origine-apogee-declin/nfbWQtOToufooqdRZIoV.jpg"
 alt: 
 ---
 ::
@@ -94,7 +94,7 @@ On ne peut pas parler de l’Empire inca sans mentionner **le Machu Picchu**. I
 
 ::image-container
 ---
-image-src: "/images/blogs/7tFYWbltSN6HQ9ICszzM-1742841049395.jpg"
+image-src: "/images/blogs/empire-inca-origine-apogee-declin/7tFYWbltSN6HQ9ICszzM.jpg"
 alt: 
 ---
 ::
@@ -103,9 +103,9 @@ Expérimentez le mode de vie Inca au Pérou
 
 ## Découvrez le Pérou avec Odysway
 
-Si vous souhaitez vivre comme au temps des Incas et partir vivre dans une communauté traditionnelle Quechua, après une immersion avec un chamane, découvrez le voyage qu’Odysway propose au Pérou.
+Si vous souhaitez vivre comme au temps des Incas et partir vivre dans une communauté traditionnelle Quechua, après une immersion avec un chamane, [découvrez le voyage qu’Odysway propose au Pérou.](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=Blog&utm_medium=SEO&utm_campaign=Empire_inca)
 
 ## Découvrir le voyage initiatique
 
-Ce voyage immersif vous donnera le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos voyages initiatiques.
+Ce voyage immersif vous donnera le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::

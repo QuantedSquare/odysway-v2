@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-01-02 10:47:00+00:00"
 tags: "Asie, Communautés locales"
 categories: "Culture et decouverte, News Odysway"
-displayedImg: "/images/blogs/Tout-savoir-sur-la-tribu-des-Sentinelles-le-peuple-le-plus-isole-au-monde-!.jpg"
+displayedImg: "/images/blogs/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde/SNOEgANqS2ipE8vRuPbl.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Tout-savoir-sur-la-tribu-des-Sentinelles-le-peuple-le-plus-isole-au-monde-!.jpg"
+image-src: "/images/blogs/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde/SNOEgANqS2ipE8vRuPbl.jpg"
 ---
 #publication-date
 2 janvier 2019
@@ -31,18 +31,18 @@ Tout savoir sur la tribu des Sentinelles, le peuple le plus isolé au monde !
 
 ::section-container
 ---
-image-src: "/images/blogs/Tout-savoir-sur-la-tribu-des-Sentinelles-le-peuple-le-plus-isole-au-monde-!.jpg"
+image-src: "/images/blogs/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde/SNOEgANqS2ipE8vRuPbl.jpg"
 ---
 #content
 En Novembre 2018, la tribu des sentinelles, connue comme la tribu autochtone la plus isolée au monde, a fait parler d’elle pour avoir tué un jeune voyageur Américain qui tentait d’entrer en contact avec elle. Les médias ont fortement relayé l’attaque en racontant un peu tout et n’importe quoi sur le jeune homme, sur les sentinelles et enfin sur leur prétendue agressivité.  Alors qui sont vraiment les sentinelles, d’où viennent-ils et pourquoi sont-ils supposément aussi agressifs ? Analyse de l’histoire d’un des peuples les plus isolés au monde.
 
-Afin de poursuivre la lecture, nous vous invitons à consulter notre article sur la tribu Embara au Panama.
+Afin de poursuivre la lecture, nous vous invitons à consulter notre article [sur la tribu Embara au Panama.](https://odysway.com/tribu-embera-au-panama)
 
 ## Qui sont réellement les sentinelles ?
 
 ::image-container
 ---
-image-src: "/images/blogs/jGhVgHdHSiSzmpT2UD0z-1742842094913.jpg"
+image-src: "/images/blogs/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde/jGhVgHdHSiSzmpT2UD0z.jpg"
 alt: 
 ---
 ::
@@ -65,7 +65,7 @@ Les Sentinelles sont une tribu du peuple des Andamanais autochtones, cités dans
 
 ::image-container
 ---
-image-src: "/images/blogs/3DHFz3oQ0S0ekUFXpmyY-1742842095439.jpg"
+image-src: "/images/blogs/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde/3DHFz3oQ0S0ekUFXpmyY.jpg"
 alt: 
 ---
 ::
@@ -86,7 +86,7 @@ En 1880, l’Inde est une colonie britannique. Une expédition menée par Mauric
 
 ::image-container
 ---
-image-src: "/images/blogs/TFwRdmFPS4yOHuYNTxCO-1742842095955.jpg"
+image-src: "/images/blogs/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde/TFwRdmFPS4yOHuYNTxCO.jpg"
 alt: 
 ---
 ::  
@@ -111,9 +111,9 @@ Malheureusement, cet interdit est bravé par des braconniers, qui vont chasser e
 
 On espère que les Sentinelles pourront préserver leur île le plus longtemps possible, et continuer de vivre et d’évoluer en paix, loin de l’agitation du monde moderne…
 
-Vous souhaitez partir en Inde sans vous faire cribler de flèches ? Découvrez nos nouvelles expériences à vivre en Inde !
+Vous souhaitez partir en Inde sans vous faire cribler de flèches ? Découvrez [nos nouvelles expériences à vivre en Inde](https://odysway.com/destinations/inde) !
 
 ## Le voyage chez l'habitant par Odysway
 
-Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les voyages chez l’habitant.
+Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::

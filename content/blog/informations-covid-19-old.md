@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-09-28 09:39:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Informations-COVID-19.jpg"
+displayedImg: "/images/blogs/informations-covid-19-old/SWdofqZySkuUsb2npvzH.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Informations-COVID-19.jpg"
+image-src: "/images/blogs/informations-covid-19-old/SWdofqZySkuUsb2npvzH.jpg"
 ---
 #publication-date
 28 septembre 2020
@@ -31,7 +31,7 @@ mise à jour le 22/07/2021
 
 ::section-container
 ---
-image-src: "/images/blogs/Informations-COVID-19.jpg"
+image-src: "/images/blogs/informations-covid-19-old/SWdofqZySkuUsb2npvzH.jpg"
 ---
 #content
 mise à jour le 22/07/2021
@@ -42,7 +42,7 @@ Nous vous invitons à consulter la liste des pays ci-dessous afin d’en connaî
 
 Nos conseillers restent à votre disposition pour répondre à toutes  vos questions sur nos séjours, en France ou à l’étranger. 🌍
 
-Merci de noter que la situation évoluant rapidement, cette page ne pourra pas être mise à jour en temps réel. Il est donc important de visiter le site France Diplomatie et les sites des ambassades situées dans les pays qui vous intéressent.
+Merci de noter que la situation évoluant rapidement, cette page ne pourra pas être mise à jour en temps réel. Il est donc important de visiter le site [France Diplomatie](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/) et les sites des ambassades situées dans les pays qui vous intéressent.
 
 ### **1) Mesures sanitaires prises par Odysway & nos agents locaux 🧽**
 
@@ -103,7 +103,7 @@ Vaccination obligatoire: Oui, sinon motif impérieux uniquement
 Formalités d'entrée :
 
 *   Un document attestant de la réalisation d’un test RT-PCR négatif ou non réactif au SARS-CoV-2, effectué moins de 72 heures avant l’embarquement. Dans le cas d’un vol avec correspondances ou escales où le voyageur resterait dans une zone réglementée de l’aéroport, la période de soixante-douze heures sera prise en compte pour l’embarquement relatif à la première étape du voyage. **Ce test devra avoir été réalisé par un laboratoire reconnu par les autorités de santé du pays d’origine du voyageur. Ce document devra être rédigé en anglais, en portugais ou en espagnol.**
-*   Une Déclaration de santé du voyageur (DSV) dûment remplie, qui devra être présentée sous format imprimé ou de façon numérique (accessible à partir du lien suivant en portugais, en espagnol et en anglais) dans laquelle le voyageur s’engage à respecter les mesures sanitaires en vigueur pendant tout son séjour au Brésil.
+*   Une Déclaration de santé du voyageur (DSV) dûment remplie, qui devra être présentée sous format imprimé ou de façon numérique ([accessible à partir du lien suivant en portugais, en espagnol et en anglais](https://formulario.anvisa.gov.br/ "https://formulario.anvisa.gov.br/ (nouvelle fenêtre)")) dans laquelle le voyageur s’engage à respecter les mesures sanitaires en vigueur pendant tout son séjour au Brésil.
     
     La Déclaration de santé du voyageur devra avoir été remplie moins de 72 heures avant l’embarquement pour pouvoir être recevable.
     
@@ -119,7 +119,7 @@ Formalités d'entrée:
 
 *   Présenter un test virologique (PCR) négatif effectué moins de 72 heures avant le départ.
 *   Tous les voyageurs (âgés de sept ans et plus) quittant le Cap-Vert par voie aérienne, quelle que soit leur destination, doivent présenter, à l’entrée de l’aéroport puis à l’embarquement, un test virologique (PCR) négatif de moins de 72 heures.
-*   Les tests PCR coûtent 6 500 escudos (58,95 euros) et doivent faire l’objet d’une prise de rendez-vous en ligne sur la plate-forme https://agendamento.covid19.cv/.
+*   Les tests PCR coûtent 6 500 escudos (58,95 euros) et doivent faire l’objet d’une prise de rendez-vous en ligne sur la plate-forme [https://agendamento.covid19.cv/](https://agendamento.covid19.cv/ "https://agendamento.covid19.cv/ - en portugais (nouvelle fenêtre)").
 
 Chine  
 Ouvert: ❌  
@@ -131,11 +131,11 @@ Vaccination obligatoire : Oui, sinon motif impérieux uniquement
 Formalités d'entrée:
 
 *   Le résultat négatif du test PCR-RT pour COVID-19 n’est plus exigé des touristes et aucun ordre sanitaire de mise en quarantaine obligatoire n’est plus expédié. Cependant, **les voyageurs présentant des symptômes ne pourront pas embarquer.**
-*   **Le voyageur doit remplir le formulaire épidémiologique numérique** (Pase de Salud) du ministère costaricien de la Santé (disponible en espagnol et en anglais)
+*   **Le voyageur doit remplir le formulaire épidémiologique numérique** ([Pase de Salud](https://salud.go.cr/ "https://salud.go.cr/ - en anglais (nouvelle fenêtre)")) du ministère costaricien de la Santé (disponible en espagnol et en anglais)
 *   **Jusqu’au 1er août 2021, tout voyageur, doit souscrire une assurance médicale internationale ou nationale** qui couvre les frais médicaux générés par la maladie COVID-19, les frais médicaux minimaux équivalents aux frais d’admission à l’hôpital pendant le temps requis et une couverture minimale de 14 jours pour les frais d’hébergement.
 *   **À partir du 1er août 2021 le Costa Rica autorise l’entrée de touristes sans assurance médicale dès lors que leur schéma de vaccination est complet, ainsi qu’à tous les mineurs de moins de 18 ans.**
 
-Les détails des conditions d'entrée au Costa Rica peuvent être lus ici.
+Les détails des conditions d'entrée au Costa Rica peuvent être lus [ici.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/costa-rica/)
 
 Etats-Unis  
 Ouvert: ❌  
@@ -163,11 +163,11 @@ Vaccination Obligatoire: Oui, sinon motif impérieux uniquement
 Formalités d'entrée:
 
 *   \- Il est impératif de présenter à l’embarquement le résultat négatif d’un test, effectué moins de 96h avant l’arrivée au Guatémala pour un test PCR ou moins de 72h pour un test antigénique (les enfants de moins de 10 ans en sont exemptés), ou la preuve d’une vaccination complète effectuée au moins 15 jours avant l’arrivée au Guatemala.
-*   \- Un questionnaire sanitaire doit également être renseigné avant le départ, disponible en ligne.
+*   \- Un questionnaire sanitaire doit également être renseigné avant le départ, [disponible en ligne](https://sre.gt/ "https://sre.gt/ (nouvelle fenêtre)").
 *   **Les personnes ayant visité ou effectué un transit au Royaume-Uni, au Brésil ou en Afrique du Sud dans les quatorze derniers jours se verront refuser l’accès au territoire guatémaltèque. Les ressortissants guatémaltèques**
 
 Inde  
-Ouvert: Partiellement. Les conditions de voyage peuvent être lues ici. Nos séjours en Inde n'ont pour le moment pas repris.   
+Ouvert: Partiellement. Les conditions de voyage peuvent être lues [ici.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/inde/) Nos séjours en Inde n'ont pour le moment pas repris.   
   
 
 Kirghizistan   
@@ -185,7 +185,7 @@ Formalités d'entrée:
     *   un **certificat de vaccination complet** ;
     *   un **test PCR négatif de moins de 48h** avant la date d’embarquement ;
     *   une fiche sanitaire remplie et signée.
-*   2\. Pour les passagers non-vaccinés, les conditions d'entrée peuvent être lues ici.
+*   2\. Pour les passagers non-vaccinés, les conditions d'entrée peuvent être lues [ici](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/maroc/).
 
 Mongolie  
 Ouvert: ✅  
@@ -197,7 +197,7 @@ Formalités d'entrée:
 *   présentation du résultat négatif d’un test PCR effectué moins de 72 heures avant l’arrivée en Mongolie.
 
 Népal  
-Ouvert: Partiellement. Les conditions de voyage peuvent être lues ici. Nos séjours au Népal n'ont pour le moment pas repris.  
+Ouvert: Partiellement. Les conditions de voyage peuvent être lues [ici.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/nepal/) Nos séjours au Népal n'ont pour le moment pas repris.  
   
 
 Ouzbékistan  
@@ -206,7 +206,7 @@ Vaccination obligatoire: Oui, sinon motif impérieux uniquement
 Formalités d'entrée:  
 
 *   **L’Ouzbékistan a suspendu ses liaisons aériennes (vols entrants, sortants et de transit) avec le Royaume-Uni, l’Italie, le Danemark, l’Autriche, l’Australie, les Pays-Bas et l’Afrique du Sud**. Les résidents de ces pays, ainsi que les citoyens des pays tiers ayant visité ces pays au cours des 14 derniers jours sont interdits d’entrée en Ouzbékistan durant la période de restriction. Une quarantaine de 14 jours est obligatoire pour les passagers en provenance de ce pays, à domicile ou à l’hôtel aux frais de l’arrivant. Un test PCR express à l’arrivée à l’aéroport de Tachkent peut être exigé.
-*   La présentation avant l’embarquement d’un certificat de test PCR négatif de moins de 72 heures (en anglais ou en russe) est exigée pour entrer sur le territoire ouzbek. Pour plus d’informations, consulter le site de l’Ambassade d’Ouzbékistan à Paris.
+*   La présentation avant l’embarquement d’un certificat de test PCR négatif de moins de 72 heures (en anglais ou en russe) est exigée pour entrer sur le territoire ouzbek. Pour plus d’informations, [consulter le site de l’Ambassade d’Ouzbékistan à Paris](http://ouzbekistan.fr/news/1928?language=x "http://ouzbekistan.fr/news/1928?language=x (nouvelle fenêtre)").
 
 Pérou  
 Ouvert: ✅  
@@ -214,8 +214,8 @@ Vaccination Obligatoire: Oui, sinon motif impérieux uniquement
 Formalités d'entrée:
 
 *   \- Il est obligatoire de disposer d’un test PCR avec un résultat négatif, délivré au plus tard 72 heures avant le vol ;
-*   \- Il est obligatoire de remplir la "Déclaracion Jurada" de santé et de géolocalisation du service de migration à partir de 72 heures avant le vol ;  
-    L’enregistrement se fait en ligne. Il est recommandé d’effectuer le pré-enregistrement dans la demande de migration
+*   \- Il est obligatoire de remplir la ["Déclaracion Jurada"](https://e-notificacion.migraciones.gob.pe/dj-salud/ "https://e-notificacion.migraciones.gob.pe/dj-salud/ (nouvelle fenêtre)") de santé et de géolocalisation du service de migration à partir de 72 heures avant le vol ;  
+    L’enregistrement se fait en ligne. Il est recommandé d’effectuer le [pré-enregistrement dans la demande de migration](https://play.google.com/store/apps/details?id=pe.gob.migraciones.preregistro&hl=es_CL&gl=US "https://play.google.com/store/apps/details?id=pe.gob.migraciones.preregistro&hl=es_CL&gl=US (nouvelle fenêtre)")
 *   \- Il est obligatoire d’effectuer un test antigénique à l’arrivée à l’aéroport Jorge Chavez, dont le coût sera pris en charge par le voyageur.
 
 Roumanie  
@@ -228,8 +228,8 @@ Ouvert: ✅
 Vaccination obligatoire: Oui, sinon motif impérieux uniquement  
 Formalités d'entrée:
 
-*   L’entrée sur le territoire srilankais pour les touristes est soumise à l’obtention d’un visa en ligne avant le voyage (sur le portail de l’immigration).
-*   Préalablement à cette demande de visa, les touristes devront se munir d’un justificatif de test PCR négatif de moins de 72 heures et d’une assurance prenant en charge le risque d’infection à la Covid-19. Toutes ces démarches sont explicitées sur le site « Sri Lanka Travel » (en anglais).
+*   L’entrée sur le territoire srilankais pour les touristes est soumise à l’obtention d’un [visa en ligne](http://www.eta.gov.lk/slvisa/ "http://www.eta.gov.lk/slvisa/ - en anglais (nouvelle fenêtre)") avant le voyage (sur le portail de l’immigration).
+*   Préalablement à cette demande de visa, les touristes devront se munir d’un justificatif de test PCR négatif de moins de 72 heures et d’une assurance prenant en charge le risque d’infection à la Covid-19. Toutes ces démarches sont explicitées sur le site « [Sri Lanka Travel](https://www.srilanka.travel/helloagain/ "https://www.srilanka.travel/helloagain/ (nouvelle fenêtre)") » (en anglais).
 *   Les voyageurs ayant complété un schéma vaccinal au moins deux semaines avant leur départ seront exemptés de quarantaine après avoir reçu le résultat négatif du test PCR réalisé à leur arrivée ; ils devront cependant produire un nouveau test PCR 7 jours après leur arrivée et respecter scrupuleusement l’ensemble des gestes barrières ;
 
 Thaïlande  
@@ -248,7 +248,7 @@ Les vaccins admis par la France sont ceux reconnus par l’Agence européenne du
 
 ### **5) Ressources/liens**
 
-L’Union européenne a mis en ligne un site permettant de suivre l’évolution de l’ouverture des frontières au fur et à mesure : https://reopen.europa.eu/fr/map/FRA.
+L’Union européenne a mis en ligne un site permettant de suivre l’évolution de l’ouverture des frontières au fur et à mesure : [https://reopen.europa.eu/fr/map/FRA.](https://reopen.europa.eu/fr/map/FRA)
 
-Pour chaque pays, nous vous conseillons de visiter le site France Diplomatie qui résume la situation sur place, tant d’un point de vue sanitaire que plus général : https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/.
+Pour chaque pays, nous vous conseillons de visiter le site France Diplomatie qui résume la situation sur place, tant d’un point de vue sanitaire que plus général : [https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/)
 ::

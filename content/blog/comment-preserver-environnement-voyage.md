@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-06-29 12:11:00+00:00"
 tags: "Communautés locales"
 categories: "Benefices locaux, Blog"
-displayedImg: "/images/blogs/Comment-preserver-notre-environnement-en-voyage.jpg"
+displayedImg: "/images/blogs/comment-preserver-environnement-voyage/F9V22mrTnerMx4zx79VA.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Comment-preserver-notre-environnement-en-voyage.jpg"
+image-src: "/images/blogs/comment-preserver-environnement-voyage/F9V22mrTnerMx4zx79VA.jpg"
 ---
 #publication-date
 29 juin 2020
@@ -31,7 +31,7 @@ Comment préserver notre environnement en voyage ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Comment-preserver-notre-environnement-en-voyage.jpg"
+image-src: "/images/blogs/comment-preserver-environnement-voyage/F9V22mrTnerMx4zx79VA.jpg"
 ---
 #content
 **Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.**
@@ -40,14 +40,14 @@ image-src: "/images/blogs/Comment-preserver-notre-environnement-en-voyage.jpg"
 
 ::image-container
 ---
-image-src: "/images/blogs/Nskiv2VnQziUkNROcc6E-1742840867600.jpg"
+image-src: "/images/blogs/comment-preserver-environnement-voyage/Nskiv2VnQziUkNROcc6E.jpg"
 alt: undefined
 ---
 ::
 
 Partir en voyage, quelle que soit la destination, implique forcément d'utiliser un moyen de transport. Et en haut de la liste figurent **la voiture et l'avion**. Mais à défaut d'être les plus pratiques, ils ont un incontestable défaut : **ils polluent énormément**. **Pour préserver notre environnement, mieux vaut donc privilégier le train, le vélo ou le car**. Sinon, voici deux conseils pour les trajets en voiture : empruntez les routes secondaires pour rouler moins vite et évitez la climatisation autant que possible. Le covoiturage est également un bon moyen pour rouler de façon écoresponsable. 
 
-Lisez notre article sur les 5 bienfaits du voyage en vélo.
+[Lisez notre article sur les 5 bienfaits du voyage en vélo.](https://odysway.com/5-bienfaits-velo-voyage)
 
 Mais qu'en est-il des destinations lointaines ? Doit-on se priver de ces pays où le moyen de transport le plus rapide pour s'y rendre est l'avion ? Et si la voiture est plus économique que le train pour une famille ? Là aussi, est-on obligé de faire une croix sur un voyage pour éviter de polluer ? La réponse est non car **il existe des solutions alternatives pour limiter les déplacements polluants en voyage**. Par exemple, une fois installé sur votre lieu de vacances, privilégiez le vélo ou la marche. Si vous effectuez un road trip, pensez plutôt au train ou au car pour rejoindre vos différentes étapes.
 
@@ -57,13 +57,13 @@ Dans votre recherche d'hébergement pour vos vacances, **misez sur les hébergem
 
 Vous pouvez également décider de **dormir chez l'habitant**. Pour cela, deux possibilités : faire du couchsurfing ou bien louer le logement d'un particulier. Dans les deux cas, vous limiterez votre consommation d'énergie et préserverez davantage l'environnement.
 
-Découvrez nos séjours chez l'habitant.
+[Découvrez nos séjours chez l'habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 
 ## Vivre local !
 
 ::image-container
 ---
-image-src: "/images/blogs/h9x4ktJASn6zE7cX7NKg-1742840868125.jpg"
+image-src: "/images/blogs/comment-preserver-environnement-voyage/h9x4ktJASn6zE7cX7NKg.jpg"
 alt: undefined
 ---
 ::
@@ -80,7 +80,7 @@ Elles sont nombreuses ces activités prisées des vacanciers mais qui nuisent co
 
 ::image-container
 ---
-image-src: "/images/blogs/rdCinw37QEG1wTqV0lYE-1742840868646.jpg"
+image-src: "/images/blogs/comment-preserver-environnement-voyage/rdCinw37QEG1wTqV0lYE.jpg"
 alt: undefined
 ---
 ::
@@ -101,5 +101,5 @@ De même, si vous possédez un smartphone, privilégiez les applications pour st
 
 ## Explorez nos voyages solidaires !
 
-Voyager solidaire signifie vivre le partage, le dévouement et la joie de vivre avec les communautés locales, et comprendre les défis auxquels ils sont confrontés chaque jour.
+Voyager [solidaire](https://odysway.com/thematiques/voyage-solidaire) signifie vivre le partage, le dévouement et la joie de vivre avec les communautés locales, et comprendre les défis auxquels ils sont confrontés chaque jour.
 ::

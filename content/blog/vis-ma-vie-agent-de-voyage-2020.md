@@ -22,12 +22,12 @@ published: false
 publishedAt: "2020-12-22 02:10:00+00:00"
 tags: "Actualités"
 categories: ""
-displayedImg: "/images/blogs/Vis-ma-vie-d'agent-de-voyage-en-2020.jpg"
+displayedImg: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/lCT979iMRzeqBdBlrEVV.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Vis-ma-vie-d'agent-de-voyage-en-2020.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/lCT979iMRzeqBdBlrEVV.jpg"
 ---
 #publication-date
 22 décembre 2020
@@ -41,7 +41,7 @@ Vis ma vie d'agent de voyage en 2020
 
 ::section-container
 ---
-image-src: "/images/blogs/Vis-ma-vie-d'agent-de-voyage-en-2020.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/lCT979iMRzeqBdBlrEVV.jpg"
 ---
 #content
 2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
@@ -54,7 +54,7 @@ Odysway revient sur cette année riche en émotions, pour vous faire découvrir 
 
 ::image-container
 ---
-image-src: "/images/blogs/hjYTz9KfTU2vK9yvyNSf-1742840757796.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/hjYTz9KfTU2vK9yvyNSf.jpg"
 alt: undefined
 ---
 ::
@@ -67,7 +67,7 @@ Dès décembre 2019, nous entendons parler d'un nouveau virus en Chine, mais cel
 
 ::image-container
 ---
-image-src: "/images/blogs/RMeeQ07lTlS6NPbJ2yRW-1742840758319.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/RMeeQ07lTlS6NPbJ2yRW.jpg"
 alt: undefined
 ---
 ::
@@ -86,16 +86,16 @@ Dès fin mars, nous commençons donc à contacter des acteurs locaux qui souhait
 
 ::image-container
 ---
-image-src: "/images/blogs/Yessssssss.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/O42CMU3QuCFJMkSWAJfg.jpg"
 alt: Yessssssss
 ---
 ::
 
 **11 mai 2020 : Le confinement est finalement levé ! Les déplacements sont autorisés mais limités à 100km SAUF pour les déplacements professionnels.**
 
-Ni une ni deux, Romain et Nicolas sautent dans leur voiture et prennent la route pour partir à la rencontre des contacts qui ont acceptés de nous rencontrer ! Romain se rend dans le sud-ouest quand Nicolas prend la direction de la région Rhône-Alpes en commençant par la Bourgogne ! Plus tard, ce sera au tour de Linda de se rendre en Bretagne pour rencontrer les personnes avec qui elle a pris contact. Une petite vidéo de leur périple ICI.
+Ni une ni deux, Romain et Nicolas sautent dans leur voiture et prennent la route pour partir à la rencontre des contacts qui ont acceptés de nous rencontrer ! Romain se rend dans le sud-ouest quand Nicolas prend la direction de la région Rhône-Alpes en commençant par la Bourgogne ! Plus tard, ce sera au tour de Linda de se rendre en Bretagne pour rencontrer les personnes avec qui elle a pris contact. Une petite vidéo de leur périple [ICI](https://www.youtube.com/watch?v=lahT-3mnxgk).
 
-**Juin 2020 :** Après ce petit tour de France rafraichissant pour nos 3 compères, il est temps de revenir dans les locaux le sourire aux lèvres ! Et il y a de quoi ! Avec toutes ces rencontres merveilleuses, nous avons pu créer en moins de 2 mois, **15 nouveaux séjours immersifs en France** ! 
+**Juin 2020 :** Après ce petit tour de France rafraichissant pour nos 3 compères, il est temps de revenir dans les locaux le sourire aux lèvres ! Et il y a de quoi ! Avec toutes ces rencontres merveilleuses, nous avons pu créer en moins de 2 mois, [**15 nouveaux séjours immersifs en France**](https://odysway.com/destinations/france) ! 
 
 Il est même temps pour nous d'accueillir une nouvelle recrue dans l'équipe pour la team voyageurs : elle a le profil que nous recherchions depuis une moment et partage les mêmes valeurs qu'Odysway. Roxane intègre donc l'équipe et sera la nouvelle voix d'Odysway auprès de nos voyageurs et de nos partenaires !
 
@@ -103,7 +103,7 @@ Il est même temps pour nous d'accueillir une nouvelle recrue dans l'équipe pou
 
 ::image-container
 ---
-image-src: "/images/blogs/Alive.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/8On2evAuTAuRr0OSscAL.jpg"
 alt: Alive
 ---
 ::
@@ -116,7 +116,7 @@ Les demandes de réservations sont nombreuses, les voyageurs partent en confianc
 
 ::image-container
 ---
-image-src: "/images/blogs/nHXedn7qS7qHgoCNAiEX-1742840760004.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/nHXedn7qS7qHgoCNAiEX.jpg"
 alt: 
 ---
 ::
@@ -131,7 +131,7 @@ Pour nous accompagner dans cette tâche, nous recrutons notre tout premier alter
 
 ::image-container
 ---
-image-src: "/images/blogs/ODwF5CbtQ5GyfKrzZe0k-1742840760661.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/ODwF5CbtQ5GyfKrzZe0k.jpg"
 alt: undefined
 ---
 ::
@@ -148,14 +148,14 @@ Nous contactons donc de nombreuses agences que nous avons sélectionnées et nom
 
 **::image-container
 ---
-image-src: "/images/blogs/bsfrpHO1Q6eb1CD9rwbF-1742840761220.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/bsfrpHO1Q6eb1CD9rwbF.jpg"
 alt: undefined
 ---
 ::**
 
 **Novembre : Les partenariats noués, nous lançons la plateforme #jesoutiensmonAGV et espérons sensibiliser les voyageurs à un tourisme différent.**
 
-Côté voyages, pas de surprise, tout est à l'arrêt. Pour en savoir plus sur l'état d'esprit des voyageurs, nous lançons donc un sondage en ligne et le résultat est sans appel : la crainte de voyager est bien présente et la confiance dans les sites de comparateurs en ligne totalement ébranlée. Nous retenons surtout que le frein au voyage n'est pas dû à la peur de contracter le virus mais surtout à la difficulté d'obtenir des remboursements en cas d'annulation (comme lors du premier confinement) ou l'impossibilité de revenir en France le moment venu.
+Côté voyages, pas de surprise, tout est à l'arrêt. Pour en savoir plus sur l'état d'esprit des voyageurs, nous lançons donc un [sondage en ligne](https://odysway.com/lavant-et-lapres-covid-19-des-voyageurs) et le résultat est sans appel : la crainte de voyager est bien présente et la confiance dans les sites de comparateurs en ligne totalement ébranlée. Nous retenons surtout que le frein au voyage n'est pas dû à la peur de contracter le virus mais surtout à la difficulté d'obtenir des remboursements en cas d'annulation (comme lors du premier confinement) ou l'impossibilité de revenir en France le moment venu.
 
 **Tout cela nous a donné une idée.** Et si on lançait un service pour accompagner nos voyageurs lors de leurs prochains voyages en leur assurant un accompagnement sans faille du début à la fin et une prise en charge de leur démarche en cas d'annulation ?
 
@@ -165,12 +165,12 @@ Après quelques échanges avec nos voyageurs qui sont séduits par l'idée, nous
 
 **::image-container
 ---
-image-src: "/images/blogs/PEorPO9QymdI32nJ5M5Q-1742840761775.jpg"
+image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/PEorPO9QymdI32nJ5M5Q.jpg"
 alt: undefined
 ---
 ::**
 
-**15 décembre :** Jour du re-dé-confinement saison 2. Certaines restrictions sont levées et malgré le couvre-feu, les voyages à l'étranger sont à nouveau autorisés. C'est le moment ! Après avoir peaufiné l'offre, il est temps d'annoncer **le lancement de LIBERTY** ! Beaucoup de pays sont encore fermés ou imposent des quarantaines à l'arrivée, mais cela n'empêche pas les voyageurs de se projeter pour l'année prochaine. Dès le 2ème jour du lancement, nous avons notre première réservation pour un voyage en Amérique du Sud courant 2021 ! Certes, ce n'est qu'une première réservation, mais ça fait du bien au moral et nous redonne le sourire.
+**15 décembre :** Jour du re-dé-confinement saison 2. Certaines restrictions sont levées et malgré le couvre-feu, les voyages à l'étranger sont à nouveau autorisés. C'est le moment ! Après avoir peaufiné l'offre, il est temps d'annoncer **le lancement de [LIBERTY](https://www.liberty.odysway.com/)** ! Beaucoup de pays sont encore fermés ou imposent des quarantaines à l'arrivée, mais cela n'empêche pas les voyageurs de se projeter pour l'année prochaine. Dès le 2ème jour du lancement, nous avons notre première réservation pour un voyage en Amérique du Sud courant 2021 ! Certes, ce n'est qu'une première réservation, mais ça fait du bien au moral et nous redonne le sourire.
 
 **Fin décembre :** À l'heure où nous écrivons ces quelques lignes, nous sommes déjà à la veille de Noël, les cadeaux sous le sapin, les esprits quelque peu fatigués. Nous allons prendre quelques jours de repos bien mérités et avons hâte d'attaquer l'année prochaine, en espérant qu'elle soit (bien meilleure) que cette année.
 ::

@@ -15,12 +15,12 @@ published: false
 publishedAt: "2020-03-06 13:17:00+00:00"
 tags: "Animaux, Asie, Famille, Sri Lanka"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "/images/blogs/Recits-de-Voyage-Laetitia-Jager-Protegez-les-animaux-au-Sri-Lanka.jpg"
+displayedImg: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/ACJNzM8GQYmXy74Yqnhq.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Recits-de-Voyage-Laetitia-Jager-Protegez-les-animaux-au-Sri-Lanka.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/ACJNzM8GQYmXy74Yqnhq.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -34,7 +34,7 @@ Récits de Voyage - Laëtitia Jager Protégez les animaux au Sri Lanka
 
 ::section-container
 ---
-image-src: "/images/blogs/Recits-de-Voyage-Laetitia-Jager-Protegez-les-animaux-au-Sri-Lanka.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/ACJNzM8GQYmXy74Yqnhq.jpg"
 ---
 #content
  Le Sri-Lanka, la pépite de l’Océan Indien, se hisse petit à petit dans le top du classement des pays à découvrir !
@@ -67,41 +67,41 @@ J’ai pu avoir une réponse rapide dès que j’en avais besoin, **je ne me su
 
 ### **🧐** **Un autre voyage que vous aimeriez faire avec Odysway ?**
 
-Je suis intéressée par plusieurs voyages ! Voyager avec un Chamane en Mongolie ou encore changer de continent et aller rencontrer les Chamanes au Pérou !
+Je suis intéressée par plusieurs voyages ! [Voyager avec un Chamane en Mongolie](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=Blog&utm_medium=article&utm_campaign=RecitsVoyage_LaetitiaJager) ou encore changer de continent et aller [rencontrer les Chamanes au Pérou](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=Blog&utm_medium=article&utm_campaign=RecitsVoyage_LaetitiaJager) !
 
 ### **Quelques photos souvenirs de Laetitia...**
 
 ::image-container
 ---
-image-src: "/images/blogs/Fuu60X3SMGJKBoqVLtM5-1742840969006.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/Fuu60X3SMGJKBoqVLtM5.jpg"
 alt: undefined
 ---
 :: 
 
 ::image-container
 ---
-image-src: "/images/blogs/6Hxpu9AgStWIY6zeaIyQ-1742840969533.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/6Hxpu9AgStWIY6zeaIyQ.jpg"
 alt: undefined
 ---
 :: 
 
 ::image-container
 ---
-image-src: "/images/blogs/37PR5mg0T0WvVJIwgO4w-1742840970114.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/37PR5mg0T0WvVJIwgO4w.jpg"
 alt: undefined
 ---
 :: 
 
 ::image-container
 ---
-image-src: "/images/blogs/UgEAbsCTaqinxWc7NaLe-1742840970680.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/UgEAbsCTaqinxWc7NaLe.jpg"
 alt: undefined
 ---
 ::
 
 ::image-container
 ---
-image-src: "/images/blogs/image.png.jpg"
+image-src: "/images/blogs/recits-de-voyage-de-laetitia-jager-protegez-les-animaux-au-sri-lanka/qZelSOOqQuUhjeXHtU4m.jpg"
 alt: image.png
 ---
 ::

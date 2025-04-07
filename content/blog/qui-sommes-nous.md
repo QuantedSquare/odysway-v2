@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-04-09 15:42:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Qui-sommes-nous.jpg"
+displayedImg: "/images/blogs/qui-sommes-nous/lOMxqvh4TiGPhzPkQTJf.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Qui-sommes-nous.jpg"
+image-src: "/images/blogs/qui-sommes-nous/lOMxqvh4TiGPhzPkQTJf.jpg"
 ---
 #publication-date
 9 avril 2021
@@ -31,7 +31,7 @@ Qui sommes-nous ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Qui-sommes-nous.jpg"
+image-src: "/images/blogs/qui-sommes-nous/lOMxqvh4TiGPhzPkQTJf.jpg"
 ---
 #content
 ## Une équipe de voyageurs passionnés 
@@ -50,7 +50,7 @@ Sa citation préférée: "La vie ce n'est pas seulement respirer. C'est aussi av
 
 ::image-container
 ---
-image-src: "/images/blogs/aucD1BTmQXu3h9Pi4rWl-1742840721330.jpg"
+image-src: "/images/blogs/qui-sommes-nous/aucD1BTmQXu3h9Pi4rWl.jpg"
 alt: undefined
 ---
 ::
@@ -67,7 +67,7 @@ Sa citation préférée : “Le visage humain fut toujours mon grand paysage.”
 
 ::image-container
 ---
-image-src: "/images/blogs/KIr1SfIWQeyzUWZ0fcuZ-1742840721860.jpg"
+image-src: "/images/blogs/qui-sommes-nous/KIr1SfIWQeyzUWZ0fcuZ.jpg"
 alt: undefined
 ---
 ::
@@ -84,7 +84,7 @@ Sa citation préférée : "Si vous pensez que l'aventure est dangereuse, essayez
 
 ::image-container
 ---
-image-src: "/images/blogs/WQF1A54HQ4iphrUci4I8-1742840722420.jpg"
+image-src: "/images/blogs/qui-sommes-nous/WQF1A54HQ4iphrUci4I8.jpg"
 alt: undefined
 ---
 ::
@@ -101,7 +101,7 @@ Sa citation préférée :  "Rien ne développe l'intelligence comme les voyages
 
 ::image-container
 ---
-image-src: "/images/blogs/nQ0O0MkNRtaZOIinMSAX-1742840722992.jpg"
+image-src: "/images/blogs/qui-sommes-nous/nQ0O0MkNRtaZOIinMSAX.jpg"
 alt: undefined
 ---
 ::
@@ -118,7 +118,7 @@ Sa citation préférée: « Où que vous alliez, allez-y avec tout votre cœur. 
 
 ::image-container
 ---
-image-src: "/images/blogs/rnW5bT5rQLy8WNJKOowB-1742840723507.jpg"
+image-src: "/images/blogs/qui-sommes-nous/rnW5bT5rQLy8WNJKOowB.jpg"
 alt: undefined
 ---
 ::

@@ -36,7 +36,7 @@ image-src: ""
 #content
 Depuis une trentaine d’années maintenant, la mouvance du développement durable a vu naître ce type de tourisme. 
 
-Cette nouvelle façon de voyager a été définie en 1992 par la **Société internationale d'écotourisme** comme _"une forme de voyage responsable dans les espaces naturels qui contribue à la protection de l'environnement et au bien-être des populations locales”._
+Cette nouvelle façon de voyager a été définie en 1992 par la [**Société internationale d'écotourisme**](https://ecotourism.org/) comme _"une forme de voyage responsable dans les espaces naturels qui contribue à la protection de l'environnement et au bien-être des populations locales”._
 
 Souvent associé au tourisme vert, cette forme de **tourisme durable est** un excellent moyen de découvrir la nature, ses écosystèmes, mais aussi les agrosystèmes et le tourisme rural.
 
@@ -52,14 +52,14 @@ Voici les meilleures expériences de **voyages** proposées par Odysway :
 
 ::image-container
 ---
-image-src: "/images/blogs/Ecotourisme-en-Finlande.jpg"
+image-src: "/images/blogs/ecotourisme/92s9g5WjSQ27dr3ToBEf.jpg"
 alt: Ecotourisme en Finlande
 ---
 ::
 
 Faites-vous partie de celles et ceux qui rêvent de nature en toute liberté, de déconnecter totalement, de profiter des choses simples de la vie et de partir à l’aventure en Scandinavie ?
 
-En Finlande, vous pourrez **vous reconnecter à vous-même et à la nature** durant un **voyage aventure éco-responsable** au cœur de la forêt finlandaise.
+En Finlande, vous pourrez [**vous reconnecter à vous-même et à la nature**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=thematique&utm_campaign=ecotourisme) durant un **voyage aventure éco-responsable** au cœur de la forêt finlandaise.
 
 Après un arrêt et un briefing réalisé par nos équipes au camp de base, vous partirez en expédition de plusieurs jours en canoë. En totale autonomie, vous découvrirez les merveilles alentour et le bivouac sous le ciel finlandais.
 
@@ -71,7 +71,7 @@ De retour au camp de base, profitez de la fin de votre séjour en vous relaxant 
 
 ## ::image-container
 ---
-image-src: "/images/blogs/Yukon-1.jpg.jpg"
+image-src: "/images/blogs/ecotourisme/xU7c6gnES0OtTeOl7DdA.jpg"
 alt: Yukon 1.jpg
 ---
 ::
@@ -82,7 +82,7 @@ Connaissez-vous le Yukon ? Ce territoire immense - plus de 400 000 km2, situé a
 
 Imaginez que vous puissiez :
 
-*   **partir en expédition en canoë sur le fleuve Yukon** et découvrir les arts et traditions des peuples Kwanlin Dun ;
+*   [**partir en expédition en canoë sur le fleuve Yukon**](https://odysway.com/voyages/voyage-nature-canada-yukon?utm_source=SEO&utm_medium=thematique&utm_campaign=ecotourisme) et découvrir les arts et traditions des peuples Kwanlin Dun ;
 *   visiter des lieux historiques datant de l'époque de la ruée vers l'or ;
 *   découvrir le Parc National et Réserve de Kluane.
 
@@ -94,7 +94,7 @@ Vivez en pleine immensité grâce à ce **séjour** "into the wild" à travers l
 
 ## ::image-container
 ---
-image-src: "/images/blogs/ouzbekistan-photo.jpeg-1.jpg"
+image-src: "/images/blogs/ecotourisme/BOBHYOuNSe2UQpZ9BQRQ.jpg"
 alt: ouzbekistan-photo.jpeg
 ---
 ::
@@ -103,7 +103,7 @@ La France regorge aussi de magnifiques écosystèmes, de sentiers de randonnées
 
 Savez-vous que dans la vallée d'Aspe, une des vallées les plus sauvages des Pyrénées, vit encore l'ours brun ?
 
-Grâce à ce **voyage écotourisme,** vous traverserez de magnifiques crêtes de montagnes, **marcherez dans les forêts de la vallée d’Aspe** et passerez une nuit dans un igloo construit par vos soins. Partez à la découverte des recoins cachés et de la faune de la vallée grâce à une **randonnée en raquettes,** et observez aux jumelles les différents animaux de ce petit coin de paradis.
+Grâce à ce **voyage écotourisme,** vous traverserez de magnifiques crêtes de montagnes, [**marcherez dans les forêts de la vallée d’Aspe**](https://odysway.com/voyages/sejour-montagne-marche-pyrenees?utm_source=SEO&utm_medium=thematique&utm_campaign=ecotourisme) et passerez une nuit dans un igloo construit par vos soins. Partez à la découverte des recoins cachés et de la faune de la vallée grâce à une **randonnée en raquettes,** et observez aux jumelles les différents animaux de ce petit coin de paradis.
 
 Alliant **écotourisme** et **immersion en pleine nature**, ce séjour vous enchantera à tous les niveaux.
 
@@ -113,7 +113,7 @@ Un **tourisme vert et durable** dans une des plus belles régions de France !
 
 ::image-container
 ---
-image-src: "/images/blogs/Odysway-et-l'ecotourisme.jpg"
+image-src: "/images/blogs/ecotourisme/qEh9liIOR32xAKumOtQI.jpg"
 alt: Odysway et l'écotourisme
 ---
 ::
@@ -126,8 +126,8 @@ Toute l'équipe d’Odysway est là pour vous guider dans votre choix de **voyag
 
 Que vous souhaitiez :
 
-*   **vous accorder une pause nature** en alliant marche et méditation dans la magnifique région de la Drôme ; 
-*   découvrir les joies d’une **digital detox au cœur du rif marocain** ; **partager le quotidien d’un berger dans les Pyrénées**. 
+*   [**vous accorder une pause nature**](https://odysway.com/voyages/marche-ane-meditation-france?utm_source=SEO&utm_medium=thematique&utm_campaign=ecotourisme) en alliant marche et méditation dans la magnifique région de la Drôme ; 
+*   découvrir les joies d’une [**digital detox au cœur du rif marocain**](https://odysway.com/voyages/digital-detox-maroc?utm_source=SEO&utm_medium=thematique&utm_campaign=ecotourisme) ; [**partager le quotidien d’un berger dans les Pyrénées**](https://odysway.com/voyages/sejour-berger-bearn?utm_source=SEO&utm_medium=thematique&utm_campaign=ecotourisme). 
 
 Nous sommes là pour vous guider !
 ::

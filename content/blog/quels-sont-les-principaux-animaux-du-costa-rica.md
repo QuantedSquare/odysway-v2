@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-06 14:14:00+00:00"
 tags: "Amerique Centrale, Animaux, Costa Rica, Famille"
 categories: "Nature et grands espaces, Apprentissage, Blog"
-displayedImg: "/images/blogs/Quels-sont-les-principaux-animaux-du-Costa-Rica.jpg"
+displayedImg: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/tDlmE2ZiSq2tTm3uEd4s.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Quels-sont-les-principaux-animaux-du-Costa-Rica.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/tDlmE2ZiSq2tTm3uEd4s.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Quels sont les principaux animaux du Costa Rica ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Quels-sont-les-principaux-animaux-du-Costa-Rica.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/tDlmE2ZiSq2tTm3uEd4s.jpg"
 ---
 #content
 **Vous partez observer les animaux du Costa Rica ?** Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite 6% de la biodiversité mondiale. Selon l’Institut national de la biodiversité, 160 nouvelles espèces y sont découvertes chaque année.            
@@ -42,7 +42,7 @@ Les animaux du Costa Rica jouissent d’une topographie extraordinaire entre mer
 
 ::image-container
 ---
-image-src: "/images/blogs/E4NVmu49Qme22957gVi6-1742840962790.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/E4NVmu49Qme22957gVi6.jpg"
 alt: undefined
 ---
 ::
@@ -53,7 +53,7 @@ alt: undefined
 
 ::image-container
 ---
-image-src: "/images/blogs/NfgonyhqTg6KOMHzsruX-1742840963310.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/NfgonyhqTg6KOMHzsruX.jpg"
 alt: undefined
 ---
 ::
@@ -62,7 +62,7 @@ alt: undefined
 
 ## Observer les animaux du Costa Rica : les espèces de colibris::image-container
 ---
-image-src: "/images/blogs/un9DvYDSSTq4qsxkLXu1-1742840963862.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/un9DvYDSSTq4qsxkLXu1.jpg"
 alt: undefined
 ---
 ::
@@ -75,7 +75,7 @@ alt: undefined
 
 ## Le singe capucin à tête blanche::image-container
 ---
-image-src: "/images/blogs/zWuQUgUgRa6lpNbCfLi3-1742840964390.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/zWuQUgUgRa6lpNbCfLi3.jpg"
 alt: undefined
 ---
 ::
@@ -86,7 +86,7 @@ alt: undefined
 
 ::image-container
 ---
-image-src: "/images/blogs/zdenek-machacek-HYTwWSE5ztw-unsplash.jpg.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/7Re9fSC3SDyqI2PdXtel.jpg"
 alt: zdenek-machacek-HYTwWSE5ztw-unsplash.jpg
 ---
 ::
@@ -97,7 +97,7 @@ alt: zdenek-machacek-HYTwWSE5ztw-unsplash.jpg
 
 ::image-container
 ---
-image-src: "/images/blogs/stefan-steinbauer-QPqUrQFpRZQ-unsplash.jpg.jpg"
+image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/mIFFNwPaReCHZKnqZD2C.jpg"
 alt: stefan-steinbauer-QPqUrQFpRZQ-unsplash.jpg
 ---
 ::
@@ -108,11 +108,11 @@ Comme tous les pays tropicaux, le Costa Rica est également la zone d’habitat 
 
 **Quels autres reptiles trouve-t-on parmi les principaux animaux du Costa Rica ?** Vous en apercevrez facilement en nature : le basilic vert. Ce petit reptile est tout de vert vêtu, et moucheté de points bleu clair. **Il est visible dans les parcs naturels du pays, notamment dans le parc national Tortuguero.** On le surnomme «Lézard Jésus-Christ» car il peut courir sur l’eau avant de nager pour échapper aux prédateurs.
 
-Vous souhaitez soigner les animaux de la jungle du Costa Rica ? Odysway vous propose de partir pour vous occuper des animaux blessés ou orphelins dans un refuge animalier au Costa Rica, dont la mission est de réintroduire ces animaux dans leur habitat naturel.
+Vous souhaitez soigner les animaux de la jungle du Costa Rica ? Odysway vous propose de partir pour vous [occuper des animaux blessés ou orphelins dans un refuge animalier au Costa Rica](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=Blog&utm_medium=article&utm_campaign=Principaux_animaux_CostaRica), dont la mission est de réintroduire ces animaux dans leur habitat naturel.
 
 ## Voyage Animalier : découvrez les animaux sauvages autrement
 
-De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos voyages animaliers.
+De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
 
-Pour poursuivre votre lecture, découvrez notre articles sur 10 animaux de la jungle amazonienne.
+Pour poursuivre votre lecture, [découvrez notre articles sur 10 animaux de la jungle amazonienne.](https://odysway.com/les-10-animaux-de-la-jungle-amazonienne)
 ::

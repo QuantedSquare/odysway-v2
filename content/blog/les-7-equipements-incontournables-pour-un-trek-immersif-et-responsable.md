@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-06-05 15:13:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Les-7-Equipements-Incontournables-pour-un-Trek-Immersif-et-Responsable-1.jpg"
+displayedImg: "/images/blogs/les-7-equipements-incontournables-pour-un-trek-immersif-et-responsable/fSJoAjz4SiUVDqQFpOwf.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Les-7-Equipements-Incontournables-pour-un-Trek-Immersif-et-Responsable-1.jpg"
+image-src: "/images/blogs/les-7-equipements-incontournables-pour-un-trek-immersif-et-responsable/fSJoAjz4SiUVDqQFpOwf.jpg"
 ---
 #publication-date
 5 juin 2024
@@ -31,14 +31,14 @@ Le trekking est une activité enrichissante qui permet de découvrir des paysage
 
 ::section-container
 ---
-image-src: "/images/blogs/Les-7-Equipements-Incontournables-pour-un-Trek-Immersif-et-Responsable-1.jpg"
+image-src: "/images/blogs/les-7-equipements-incontournables-pour-un-trek-immersif-et-responsable/fSJoAjz4SiUVDqQFpOwf.jpg"
 ---
 #content
 Le trekking est une activité enrichissante qui permet de découvrir des paysages incroyables et de vivre des expériences culturelles uniques. Pour que cette aventure soit à la fois réussie, immersive et respectueuse de l’environnement, il est crucial de bien se préparer. Voici les sept équipements incontournables pour un trek immersif et responsable.
 
 ::image-container
 ---
-image-src: "/images/blogs/randonneur.jpg-1.jpg"
+image-src: "/images/blogs/les-7-equipements-incontournables-pour-un-trek-immersif-et-responsable/uQarymbXQdmCElyKpknd.jpg"
 alt: randonneur.jpg
 ---
 ::
@@ -124,12 +124,12 @@ En plus de ces équipements, voici quelques conseils pour rendre votre trek enco
 
 ::image-container
 ---
-image-src: "/images/blogs/Jour-6-Sri-Lanka-Insolite.png-1.jpg"
+image-src: "/images/blogs/les-7-equipements-incontournables-pour-un-trek-immersif-et-responsable/agnYIIT2Q6CX1mNK2goZ.jpg"
 alt: Jour 6 - Sri Lanka Insolite.png
 ---
 ::
 
 En suivant ces conseils et en utilisant des équipements écoresponsables, vous pouvez vivre une expérience de trekking immersive tout en respectant l’environnement et les communautés locales. Le trekking responsable est non seulement bénéfique pour la planète, mais il enrichit également votre aventure en vous connectant de manière plus profonde à la nature et aux cultures que vous découvrez.
 
-Si vous souhaitez découvrir le trek lors d'un séjour en France ou voyage à l'étranger, découvrez l'offre de randonnées et trek immersifs de l'**agence Odysway : https://odysway.com/thematiques/trek-et-randonnee**
+Si vous souhaitez découvrir le trek lors d'un séjour en France ou voyage à l'étranger, découvrez l'offre de randonnées et trek immersifs de l'**agence Odysway : [https://odysway.com/thematiques/trek-et-randonnee](https://odysway.com/thematiques/trek-et-randonnee)**
 ::

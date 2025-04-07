@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-09-24 14:06:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Communique-de-Presse.jpg"
+displayedImg: "/images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Communique-de-Presse.jpg"
+image-src: "/images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg"
 ---
 #publication-date
 24 septembre 2020
@@ -31,7 +31,7 @@ L’agence de voyage en ligne, qui proposait exclusivement des séjours immersif
 
 ::section-container
 ---
-image-src: "/images/blogs/Communique-de-Presse.jpg"
+image-src: "/images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg"
 ---
 #content
 ## Comment Odysway - l’agence spécialiste du voyage en immersion - a décidé de faire face à la Covid-19 ?

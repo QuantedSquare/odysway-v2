@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-06-01 12:52:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Sejours-Immersifs-Odysway-:-Rencontrez-Explorez-et-Apprenez-1.jpg"
+displayedImg: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/FvfEBxuJSTe2ZPanzzrn.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Sejours-Immersifs-Odysway-:-Rencontrez-Explorez-et-Apprenez-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/FvfEBxuJSTe2ZPanzzrn.jpg"
 ---
 #publication-date
 1 juin 2024
@@ -31,7 +31,7 @@ Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se di
 
 ::section-container
 ---
-image-src: "/images/blogs/Sejours-Immersifs-Odysway-:-Rencontrez-Explorez-et-Apprenez-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/FvfEBxuJSTe2ZPanzzrn.jpg"
 ---
 #content
 Voyager autrement, c'est l'essence même d'Odysway. Notre agence de voyage se distingue par une approche unique, axée sur l'immersion culturelle, la durabilité et le respect des communautés locales. Nous croyons fermement que voyager moins, mais mieux, est la clé pour des expériences enrichissantes et durables. Dans cet article, nous allons explorer les différents aspects qui font d'Odysway le choix idéal pour ceux qui cherchent des aventures authentiques et responsables !
@@ -42,18 +42,18 @@ Chez Odysway, la responsabilité est au cœur de nos valeurs. Nous nous engageon
 
 ::image-container
 ---
-image-src: "/images/blogs/Jour-par-Jour-(950-x-633)-2024-05-31T115753.366.webp-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/ECiZJ8ZHQ2KKTGJAEPAQ.jpg"
 alt: Jour par Jour (950 x 633) - 2024-05-31T115753.366.webp
 ---
 ::
 
 "Le partage au cœur du voyage"
 
-Découvrir ce voyage en train en Ouzbékistan : https://odysway.com/voyages/voyage-train-ouzbekistan ou ce séjour dans les Pyrénées, accessible en train jusqu'à la dernière étape du séjour : https://odysway.com/voyages/sejour-berger-bearn.
+Découvrir ce voyage en train en Ouzbékistan : [https://odysway.com/voyages/voyage-train-ouzbekistan](https://odysway.com/voyages/voyage-train-ouzbekistan) ou ce séjour dans les Pyrénées, accessible en train jusqu'à la dernière étape du séjour : [https://odysway.com/voyages/sejour-berger-bearn](https://odysway.com/voyages/sejour-berger-bearn).
 
 Nos séjours incluent également des initiatives pour soutenir les communautés locales et les ONG. Nous travaillons en étroite collaboration avec des organisations locales pour garantir que nos voyages bénéficient directement aux populations locales. Par exemple, une partie des revenus générés par nos séjours est réinvestie dans des projets communautaires, tels que la construction d'écoles, le soutien à des initiatives de conservation, ou encore le développement de programmes de formation pour les habitants.
 
-Découvrir notre voyage 100% immersif au Cap-vert, dont une partie du montant du voyage est reversé à des initiatives locales : https://odysway.com/voyages/immersion-cap-vert
+Découvrir notre voyage 100% immersif au Cap-vert, dont une partie du montant du voyage est reversé à des initiatives locales : [https://odysway.com/voyages/immersion-cap-vert](https://odysway.com/voyages/immersion-cap-vert)
 
 ## Voyager Moins, Mais Mieux
 
@@ -63,7 +63,7 @@ Nous proposons des séjours en France, parfaits pour des courtes escapades, ains
 
 ::image-container
 ---
-image-src: "/images/blogs/Voyager-en-France-pour-un-depaysement-garanti-!-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/e9GmsFZQ1Oiph9FmfylY.jpg"
 alt: Voyager en France pour un dépaysement garanti !
 ---
 ::
@@ -78,7 +78,7 @@ Cette proximité nous permet de mieux comprendre les attentes et les besoins de 
 
 ::image-container
 ---
-image-src: "/images/blogs/sac-odysway.jpg-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/lOMxqvh4TiGPhzPkQTJf.jpg"
 alt: sac-odysway.jpg
 ---
 ::
@@ -93,12 +93,12 @@ Nous favorisons les rencontres avec les habitants, les échanges culturels et le
 
 ::image-container
 ---
-image-src: "/images/blogs/chine-shaolin.jpg-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/qlKQ3FhTJi2iC3SZIgfE.jpg"
 alt: chine-shaolin.jpg
 ---
 ::
 
-Odysway voyage sur place pour concevoir, tester et valider ses nouveaux voyages en immersion, ici Virginia en Chine, au sein d'un monastère bouddhiste, pendant la construction de ce voyage : https://odysway.com/voyages/kung-fu-temple-shaolin-chine
+Odysway voyage sur place pour concevoir, tester et valider ses nouveaux voyages en immersion, ici Virginia en Chine, au sein d'un monastère bouddhiste, pendant la construction de ce voyage : [https://odysway.com/voyages/kung-fu-temple-shaolin-chine](https://odysway.com/voyages/kung-fu-temple-shaolin-chine)
 
 ## Promotion des Courts Séjours en France
 
@@ -108,7 +108,7 @@ Ces courts séjours sont conçus pour être facilement accessibles, avec un faib
 
 ## ::image-container
 ---
-image-src: "/images/blogs/Photo-animaliere.jpg-1.jpg"
+image-src: "/images/blogs/sejours-immersifs-odysway-rencontrez-explorez-et-apprenez/MkdAVHVUQEqPqJIgnoRc.jpg"
 alt: Photo animaliere.jpg
 ---
 ::
@@ -117,7 +117,7 @@ alt: Photo animaliere.jpg
 
 Pour ceux qui ont le temps et l'envie d'explorer plus loin, nous proposons également des voyages plus longs à l'étranger. Ces séjours permettent une immersion encore plus profonde dans la culture et la vie quotidienne des pays visités. En prenant le temps de voyager lentement et de s'intégrer aux communautés locales, nos voyageurs peuvent vivre des expériences inoubliables et significatives.
 
-Par exemple, un séjour prolongé au Japon peut inclure des cours de langue, des ateliers de calligraphie, des séjours dans des ryokan traditionnels, et des rencontres avec des habitants pour découvrir leur quotidien. Découvrir ce voyage : https://odysway.com/voyages/voyage-immersion-culturelle-japon.
+Par exemple, un séjour prolongé au Japon peut inclure des cours de langue, des ateliers de calligraphie, des séjours dans des ryokan traditionnels, et des rencontres avec des habitants pour découvrir leur quotidien. Découvrir ce voyage : [https://odysway.com/voyages/voyage-immersion-culturelle-japon](https://odysway.com/voyages/voyage-immersion-culturelle-japon).
 
 ## Respect et Éthique : Lien avec les Communautés Locales
 
@@ -125,7 +125,7 @@ Chez Odysway, le respect des communautés locales et des environnements visités
 
 Nous sélectionnons avec soin nos partenaires locaux pour garantir qu'ils partagent nos valeurs de respect, d'authenticité et de durabilité. Nos voyageurs sont ainsi assurés que leurs séjours ont un impact positif sur les communautés locales et contribuent à leur développement durable.
 
-Découvrir notre voyage en Thaïlande, dans un des camps les plus éthiques et les plus sérieux dans la préservation des éléphants : https://odysway.com/voyages/voyage-elephants-thailande.
+Découvrir notre voyage en Thaïlande, dans un des camps les plus éthiques et les plus sérieux dans la préservation des éléphants : [https://odysway.com/voyages/voyage-elephants-thailande](https://odysway.com/voyages/voyage-elephants-thailande).
 
 ## Promouvoir le Voyage pour Tous
 
@@ -133,7 +133,7 @@ Odysway s'engage également à rendre le voyage accessible à tous, indépendamm
 
 En outre, nous organisons des séjours spécialement conçus pour les enfants et les jeunes qui n'ont pas souvent l'opportunité de voyager. Ces séjours éducatifs sont pensés pour éveiller la curiosité des plus jeunes, leur faire découvrir de nouvelles cultures et leur offrir des expériences enrichissantes qui marqueront leur vie. En collaborant avec des écoles, des associations et des ONG, nous permettons à ces enfants de vivre des aventures extraordinaires, tout en apprenant les valeurs de respect, de tolérance et de diversité.
 
-Découvrir notre démarche sur ce point : https://odysway.com/demarche-responsable-odysway.
+Découvrir notre démarche sur ce point : [https://odysway.com/demarche-responsable-odysway](https://odysway.com/demarche-responsable-odysway).
 
 ## Conclusion
 

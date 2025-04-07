@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-12-12 14:15:00+00:00"
 tags: "Amerique du Sud, Brésil, Communautés locales, Famille, Grands espaces"
 categories: "Depassement de soi, Nature et grands espaces, Apprentissage"
-displayedImg: "/images/blogs/10-astuces-de-survie-en-foret-qui-peuvent-vous-sauver-la-vie.jpg"
+displayedImg: "/images/blogs/10-astuces-survie-foret/E2I3z2q6SOmZPotV0NL7.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/10-astuces-de-survie-en-foret-qui-peuvent-vous-sauver-la-vie.jpg"
+image-src: "/images/blogs/10-astuces-survie-foret/E2I3z2q6SOmZPotV0NL7.jpg"
 ---
 #publication-date
 12 décembre 2019
@@ -31,7 +31,7 @@ Lors d'une balade en foret, personne n'est à l'abri de rencontrer un pépin. Et
 
 ::section-container
 ---
-image-src: "/images/blogs/10-astuces-de-survie-en-foret-qui-peuvent-vous-sauver-la-vie.jpg"
+image-src: "/images/blogs/10-astuces-survie-foret/E2I3z2q6SOmZPotV0NL7.jpg"
 ---
 #content
 Lors d'une balade en foret, personne n'est à l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie mine d'or pour vous sortir de nombreuses impasses. Mais aussi faut-il savoir comment faire... **Nous vous livrons 10 astuces de survie bien utiles si vous êtes en foret**.
@@ -42,7 +42,7 @@ Si vous êtes perdu en pleine foret, il suffit de lever le nez vers le ciel. En 
 
 ::image-container
 ---
-image-src: "/images/blogs/KDfewEeoToyiCjzGRkTP-1742841012779.jpg"
+image-src: "/images/blogs/10-astuces-survie-foret/KDfewEeoToyiCjzGRkTP.jpg"
 alt: 
 ---
 ::
@@ -69,7 +69,7 @@ Le feu vous permettra de vous réchauffer, d'avoir de la lumière et d'éloigner
 
 ::image-container
 ---
-image-src: "/images/blogs/6po5KS7wTiq2x0kWVBBE-1742841013301.jpg"
+image-src: "/images/blogs/10-astuces-survie-foret/6po5KS7wTiq2x0kWVBBE.jpg"
 alt: 
 ---
 ::
@@ -105,18 +105,18 @@ Avant de partir en balade en foret, vérifiez que votre sac à dos contienne au 
 *   une boussole,
 *   de la nourriture et de l'eau en suffisance.
 
-Lisez notre article sur les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage.
+[Lisez notre article sur les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage.](https://odysway.com/les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage)
 
 Et surtout, prévenez votre entourage de votre itinéraire et de votre heure approximative de retour.
 
 ::image-container
 ---
-image-src: "/images/blogs/uIg3xkClQQCH8UMUuM2C-1742841013818.jpg"
+image-src: "/images/blogs/10-astuces-survie-foret/uIg3xkClQQCH8UMUuM2C.jpg"
 alt: 
 ---
 ::
 
-Vous avez envie de tester ces astuces en situation réelle ? Odysway vous propose une expérience unique de survie au coeur de la jungle amazonienne. Vous serez accompagnés de guides locaux experts de la jungle, dont un ex-militaire qui formait les commandos à la survie dans la jungle !
+Vous avez envie de tester ces astuces en situation réelle ? Odysway vous propose une [expérience unique de survie au coeur de la jungle amazonienne](https://odysway.com/experience-survivez-au-coeur-de-la-jungle-amazonienne/?utm_source=Blog&utm_medium=SEO&utm_campaign=Astuces_Survie). Vous serez accompagnés de guides locaux experts de la jungle, dont un ex-militaire qui formait les commandos à la survie dans la jungle !
 
-Si vous êtes intéressés par le mode de vie d'autres populations, découvrez nos voyages chez l'habitant.
+[Si vous êtes intéressés par le mode de vie d'autres populations, découvrez nos voyages chez l'habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::

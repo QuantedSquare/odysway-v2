@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-09-26 13:26:00+00:00"
 tags: "Animaux, Communautés locales, Famille, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte, Benefices locaux"
-displayedImg: "/images/blogs/Le-tourisme-responsable-de-demain.jpg"
+displayedImg: "/images/blogs/tourisme-responsable-demain/XUKgYnaJTaiEPUCnPI8A.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-tourisme-responsable-de-demain.jpg"
+image-src: "/images/blogs/tourisme-responsable-demain/XUKgYnaJTaiEPUCnPI8A.jpg"
 ---
 #publication-date
 26 septembre 2019
@@ -31,7 +31,7 @@ Le tourisme responsable de demain
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-tourisme-responsable-de-demain.jpg"
+image-src: "/images/blogs/tourisme-responsable-demain/XUKgYnaJTaiEPUCnPI8A.jpg"
 ---
 #content
 À l’heure où notre planète rencontre de nombreuses difficultés d’ordre écologique notamment, le tourisme est loin d’y être étranger. Modes de transport polluants, surconsommation des ressources naturelles ou augmentation des déchets, le secteur fait face à certains problèmes éthiques. Pour y remédier, de plus en plus d’acteurs du voyage privilégient un tourisme basé sur le respect des hommes et de la nature : **c’est le tourisme responsable**. Mais à quoi correspond-il plus précisément et comment faire pour l’appliquer à chacun de vos voyages ?
@@ -46,19 +46,19 @@ Tout d’abord, **le tourisme équitable** fait référence à l’implication
 
 En 2014, un chiffre clé est entré dans l’histoire du tourisme. Il s’agit de la première année où le nombre de voyageurs a atteint le milliard. Un chiffre qui ne cesse de croître depuis et qui, forcément, n’est pas sans conséquence sur notre environnement. En effet, **le tourisme mondial produit à lui seul 8 % des émissions de gaz à effet de serre**. Un impact écologique important que certains experts dénoncent avec véhémence en demandant que les acteurs du tourisme réagissent rapidement.
 
-En cause notamment, l’avion. Depuis quelques semaines, il est question de bannir l’avion pour voyager afin de limiter la pollution de l’air. Autre problème important, l’état des eaux à travers le monde. **Les voyageurs sont la cause d’une surconsommation des ressources naturelles**, comme par exemple l’eau douce. On ne compte plus le nombre d’hôtels à travers le monde qui utilisent beaucoup trop d’eau pour répondre aux besoins de leur clientèle. Ou encore les déchets, en constante augmentation aussi, qui sont souvent impunément jetés dans la nature ou qui ne sont pas recyclés et qui provoquent un véritable désastre écologique. Peut-on parler aussi du gaspillage ? On a tous la vision de ces buffets gargantuesques dans certains hôtels aux formules « all inclusive » où la moitié des assiettes part à la poubelle en fin de repas. Alors qu’à côté, des familles n’arrivent pas à se nourrir… Outre les conséquences environnementales, **les populations locales sont elles aussi touchées par la croissance de l’activité touristique dans le monde**. Par exemple, la construction d’hébergements dans des zones habitées provoque la délocalisation des habitants qui se retrouvent parfois sans rien. Sans compter la destruction de l’habitat naturel de certains animaux, expliquant en partie leur disparition. **Le tourisme responsable de demain agit justement pour éviter ces drames écologiques et sociaux**.
+En cause notamment, l’avion. Depuis quelques semaines, il est question de bannir l’avion pour voyager afin de limiter la pollution de l’air. Autre problème important, l’état des eaux à travers le monde. **Les voyageurs sont la cause d’une surconsommation des ressources naturelles**, comme par exemple l’eau douce. On ne compte plus le nombre d’hôtels à travers le monde qui utilisent beaucoup trop d’eau pour répondre aux besoins de leur clientèle. Ou encore les déchets, en constante augmentation aussi, qui sont souvent impunément jetés dans la nature ou qui ne sont pas recyclés et qui provoquent un véritable désastre écologique. Peut-on parler aussi du gaspillage ? On a tous la vision de ces buffets gargantuesques dans certains hôtels aux formules « all inclusive » où la moitié des assiettes part à la poubelle en fin de repas. Alors qu’à côté, des familles n’arrivent pas à se nourrir… Outre les conséquences environnementales, **les populations locales sont elles aussi touchées par la croissance de l’activité touristique dans le monde**. Par exemple, la construction d’hébergements dans des zones habitées provoque la délocalisation des habitants qui se retrouvent parfois sans rien. Sans compter la destruction de l’habitat naturel de certains animaux, expliquant en partie [leur disparition](https://odysway.com/causes-disparition-animaux). **Le tourisme responsable de demain agit justement pour éviter ces drames écologiques et sociaux**.
 
 ## Les bonnes pratiques du tourisme responsable de demain
 
-C’est un fait, le tourisme fait vivre les populations locales car c’est une manne économique très importante. C’est pourquoi **le tourisme responsable de demain contribue fortement à faire vivre une partie de la population mondiale tout en limitant les impacts négatifs sur l’environnement**. On vous explique comment faire au travers de pratiques simples. Odysway s'engage à avoir une démarche responsable.
+C’est un fait, le tourisme fait vivre les populations locales car c’est une manne économique très importante. C’est pourquoi **le tourisme responsable de demain contribue fortement à faire vivre une partie de la population mondiale tout en limitant les impacts négatifs sur l’environnement**. On vous explique comment faire au travers de pratiques simples. [Odysway s'engage à avoir une démarche responsable.](https://odysway.com/demarche-responsable-odysway)
 
-L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'**écotourisme** à travers les voyages que nous concevons pour vous.
+L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'[**écotourisme**](https://odysway.com/thematiques/ecotourisme) à travers les voyages que nous concevons pour vous.
 
 ### Respecter les populations locales
 
 ::image-container
 ---
-image-src: "/images/blogs/UAJhYM91Ti2thFb4nUaK-1742841043033.jpg"
+image-src: "/images/blogs/tourisme-responsable-demain/UAJhYM91Ti2thFb4nUaK.jpg"
 alt: 
 ---
 ::
@@ -67,17 +67,17 @@ _Immersion au sein de la tribu indigène des Embera, au Panama._
 
 Lorsque l’on part dans un pays étranger, il ne faut pas oublier que l’on arrive sur une terre inconnue. C’est-à-dire dans un lieu aux us et coutumes différentes, avec une religion différente… Avant de partir, il est donc intéressant (voire même obligatoire) de se renseigner sur le mode de vie, l’habillement etc., tout cela dans un sentiment de respect vis-à-vis d’autrui. Apprendre quelques mots d’usage est un réel plus et facilitera les échanges et les rencontres. **C’est au contact des habitants que vous pourrez vraiment vous immerger dans la culture locale et vivre des moments forts et authentiques**. De même, avant de photographier quelqu’un, demandez-lui sa permission. Le cliché n’en sera que plus beau.
 
-Découvrez les expériences que vous propose Odysway en immersion au cœur de communautés locales.
+Découvrez les [expériences que vous propose Odysway en immersion au cœur de communautés locales](https://odysway.com/thematiques?category=Communaut%C3%A9s%20locales).
 
 ### Respecter la faune et la flore
 
 Notre planète est riche en écosystèmes où évoluent pléthore d’animaux et de végétaux. Certains pays possèdent même des espèces endémiques ou des forêts vieilles de plusieurs millions d’années. Un trésor naturel qu’il faut respecter à tout prix. Ainsi, lors de vos balades, **ne prenez ou n’arrachez pas une plante ou une fleur** que vous trouveriez jolie. De même, **ne vous approchez et ne touchez pas les animaux** que vous pourriez croiser. Ils sont fragiles et le contact avec des êtres humains pourraient nuire à leur santé et sauvegarde. Nous en profitons également pour faire une parenthèse sur le **tourisme animalier**. Bannissez promenade à dos d’éléphants ou selfie avec un tigre ! Ne donnez pas d’argent au petit singe attaché qui fait des pirouettes. Ces animaux sont maltraités et/ou drogués et ces pratiques honteuses contribuent à leur extinction progressive. N’achetez pas non plus de produits provenant d’espèces animales ou végétales protégées.
 
-Vous souhaitez vivre une expérience unique tournée autour des animaux, en pleine nature ou dans des centres de conservation ? Découvrez nos voyages !
+Vous souhaitez vivre une expérience unique tournée autour des animaux, en pleine nature ou dans des centres de conservation ? Découvrez [nos voyages](https://odysway.com/thematiques?category=Animaux) !
 
 ::image-container
 ---
-image-src: "/images/blogs/t0uVRusTQS8TB4K5nMgD-1742841043631.jpg"
+image-src: "/images/blogs/tourisme-responsable-demain/t0uVRusTQS8TB4K5nMgD.jpg"
 alt: 
 ---
 ::
@@ -108,5 +108,5 @@ Lorsque vous réservez votre hébergement, deux points importants sont à prendr
 
 Parce qu’ils n’ont pas l’argent pour, certains villages peinent à construire des infrastructures comme des écoles ou simplement faire venir l’eau courante. En vous engageant pour un tourisme responsable, aidez-les à se développer en **faisant des dons** à des associations ou à des villages. **Vous pouvez même participer aux projets**. Une expérience très enrichissante.
 
-Découvrez notre thématique de voyages solidaires: Voyager solidaire signifie vivre le partage, le dévouement et la joie de vivre avec les communautés locales, et comprendre les défis auxquels ils sont confrontés chaque jour.
+[Découvrez notre thématique de voyages solidaires](https://odysway.com/thematiques/voyage-solidaire): Voyager [solidaire](https://odysway.com/thematiques/voyage-solidaire) signifie vivre le partage, le dévouement et la joie de vivre avec les communautés locales, et comprendre les défis auxquels ils sont confrontés chaque jour.
 ::

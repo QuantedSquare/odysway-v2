@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-07-05 11:15:00+00:00"
 tags: "Asie, Developpement personnel, Sri Lanka"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/Religion-au-Sri-Lanka-:-quelles-sont-les-principales-croyances.jpg"
+displayedImg: "/images/blogs/religion-sri-lanka-principales-croyances/FTlcfvvRIuDB47DFEYWA.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Religion-au-Sri-Lanka-:-quelles-sont-les-principales-croyances.jpg"
+image-src: "/images/blogs/religion-sri-lanka-principales-croyances/FTlcfvvRIuDB47DFEYWA.jpg"
 ---
 #publication-date
 5 juillet 2019
@@ -31,12 +31,12 @@ Religion au Sri Lanka : quelles sont les principales croyances?
 
 ::section-container
 ---
-image-src: "/images/blogs/Religion-au-Sri-Lanka-:-quelles-sont-les-principales-croyances.jpg"
+image-src: "/images/blogs/religion-sri-lanka-principales-croyances/FTlcfvvRIuDB47DFEYWA.jpg"
 ---
 #content
 Depuis des centaines voire des milliers d’années, **la religion tient une place importante au Sri Lanka**. Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural… On ne compte plus non plus le nombre d’édifices religieux qui parsèment le territoire ! Il existe aujourd’hui 4 principales religions : **le bouddhisme, l’hindouisme, l’islam et le christianisme**. Découvrons leur origine et leur place dans la société sri-lankaise.
 
-Après votre lecture, nous vous invitons à lire notre article sur le vipassana au Sri Lanka.
+Après votre lecture, nous vous invitons à lire [notre article sur le vipassana au Sri Lanka.](https://odysway.com/vipassana-sri-lanka)
 
 ## **Le bouddhisme : la principale religion du Sri Lanka**
 
@@ -44,7 +44,7 @@ Après votre lecture, nous vous invitons à lire notre article sur le vipassana 
 
 ::image-container
 ---
-image-src: "/images/blogs/dKaEuTySamYEBbzXueMt-1742841068391.jpg"
+image-src: "/images/blogs/religion-sri-lanka-principales-croyances/dKaEuTySamYEBbzXueMt.jpg"
 alt: 
 ---
 ::
@@ -57,7 +57,7 @@ Le pays possède également de nombreux lieux de culte et de pèlerinage. **La 
 
 ::image-container
 ---
-image-src: "/images/blogs/mMIZs4f6R2CJy6sWFv2O-1742841068911.jpg"
+image-src: "/images/blogs/religion-sri-lanka-principales-croyances/mMIZs4f6R2CJy6sWFv2O.jpg"
 alt: 
 ---
 ::
@@ -72,7 +72,7 @@ Les temples, appelés kovils, se distinguent par leur aspect très coloré compa
 
 _::image-container
 ---
-image-src: "/images/blogs/dXEfrQpPRqeeVBmO5DEQ-1742841069429.jpg"
+image-src: "/images/blogs/religion-sri-lanka-principales-croyances/dXEfrQpPRqeeVBmO5DEQ.jpg"
 alt: 
 ---
 ::_
@@ -87,7 +87,7 @@ _Les Kovils : temples hindous qui se distinguent par leur aspect coloré_
 
 Si vous voulez partir au Sri Lanka, cliquez ci-dessous pour découvrir nos expériences.
 
-Découvrez nos voyages au Sri Lanka
+[Découvrez nos voyages au Sri Lanka](https://odysway.com/destinations/sri-lanka)
 
 ## **Le christianisme**
 
@@ -95,5 +95,5 @@ Dernière religion principale du Sri Lanka, **le christianisme regroupe 7% de l
 
 ## Découvrez les voyages initiatiques !
 
-Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos voyages initiatiques.
+Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::

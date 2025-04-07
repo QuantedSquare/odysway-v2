@@ -24,12 +24,12 @@ published: false
 publishedAt: "2020-11-05 11:04:00+00:00"
 tags: "Communautés locales"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/Sejours-chez-l'habitant-:-une-immersion-totale.jpg"
+displayedImg: "/images/blogs/sejours-chez-l-habitant/a0wVxSQR5uLpZLCk54DO.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Sejours-chez-l'habitant-:-une-immersion-totale.jpg"
+image-src: "/images/blogs/sejours-chez-l-habitant/a0wVxSQR5uLpZLCk54DO.jpg"
 ---
 #publication-date
 5 novembre 2020
@@ -43,10 +43,10 @@ Les modes de voyage ont considérablement évolué ces 10 dernières années. Pl
 
 ::section-container
 ---
-image-src: "/images/blogs/Sejours-chez-l'habitant-:-une-immersion-totale.jpg"
+image-src: "/images/blogs/sejours-chez-l-habitant/a0wVxSQR5uLpZLCk54DO.jpg"
 ---
 #content
-Les modes de voyage ont considérablement évolué ces 10 dernières années. Plateformes de couchsurfing, échange de maisons, volontariat **éco-responsable**, location d’appartements ou **séjour chez l’habitant**, le choix est vaste. S’inviter chez l’autre le temps d’une nuit ou d’une semaine est devenu monnaie courante et on comprend pourquoi ! Quoi de plus sympa que d’arriver en terre inconnue et être accueilli par des hôtes locaux ! Sachez que ce bonheur est partagé car vos hôtes se font une joie de vous faire découvrir leur quotidien, leur environnement et leurs coutumes. Ce besoin d**’immersion** est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne pas s’en tenir aux idées reçues et sentir que nous faisons partie d’un tout,d’une seule et même tribu : celle des humains. S’il est un mode de voyage qui vous offre tout cela, c’est bien le **voyage chez l’habitant**.
+Les modes de voyage ont considérablement évolué ces 10 dernières années. Plateformes de couchsurfing, échange de maisons, volontariat **éco-responsable**, location d’appartements ou [**séjour chez l’habitant**](https://odysway.com/thematiques/voyage-chez-l-habitant), le choix est vaste. S’inviter chez l’autre le temps d’une nuit ou d’une semaine est devenu monnaie courante et on comprend pourquoi ! Quoi de plus sympa que d’arriver en terre inconnue et être accueilli par des hôtes locaux ! Sachez que ce bonheur est partagé car vos hôtes se font une joie de vous faire découvrir leur quotidien, leur environnement et leurs coutumes. Ce besoin d**’immersion** est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne pas s’en tenir aux idées reçues et sentir que nous faisons partie d’un tout,d’une seule et même tribu : celle des humains. S’il est un mode de voyage qui vous offre tout cela, c’est bien le [**voyage chez l’habitant**.](https://odysway.com/thematiques/voyage-chez-l-habitant)
 
 _“Le bonheur n'est réel que lorsqu'il est partagé” -_  Into the Wild.
 
@@ -57,7 +57,7 @@ Voici les meilleures expériences de **séjours chez l’habitant** proposées p
 
 ::image-container
 ---
-image-src: "/images/blogs/1R1b1rfURYexxsolH8aQ-1742840828084.jpg"
+image-src: "/images/blogs/sejours-chez-l-habitant/1R1b1rfURYexxsolH8aQ.jpg"
 alt: undefined
 ---
 ::
@@ -68,13 +68,13 @@ Partir en voyage, c’est bien, mais vivre une expérience hors du commun, c’e
 
 Cette expérience vous permet de  flâner dans un marché aux produits totalement inconnus de vos papilles et de faire sourire un inconnu en le remerciant  dans sa langue.
 
-Vous avez toujours rêvé de **partir dans la jungle du Costa Rica** pour vous occuper d’animaux blessés ou orphelins ?
+Vous avez toujours rêvé de [**partir dans la jungle du Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant) pour vous occuper d’animaux blessés ou orphelins ?
 
 C’est possible ! En partant **en immersion** dans un refuge qui a pour mission de réintroduire ces animaux dans leur habitat naturel, vous allez pouvoir vous sentir utile.
 
 Le **Voyage immersif** fait souvent penser à l'étranger, mais la France n’est pas en reste et rencontrer les populations locales ne rime pas qu’avec des destinations lointaines.
 
-Savez-vous que vous pouvez partager la vie d'un berger dans les Pyrénées ? Au programme : randonnée au cœur de la magnifique vallée d'Aspe, rencontre et partage avec un berger, découverte de la délicieuse gastronomie du Béarn....
+Savez-vous que vous pouvez [partager la vie d'un berger dans les Pyrénées](https://odysway.com/voyages/sejour-berger-bearn?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant) ? Au programme : randonnée au cœur de la magnifique vallée d'Aspe, rencontre et partage avec un berger, découverte de la délicieuse gastronomie du Béarn....
 
 Les bonnes raisons pour avoir envie de voyager de façon **alternative** sont légion, et **voyager en immersion chez l’habitant** est une option merveilleuse qui vous promet une expérience unique. 
 
@@ -82,7 +82,7 @@ Les bonnes raisons pour avoir envie de voyager de façon **alternative** sont l�
 
 ::image-container
 ---
-image-src: "/images/blogs/oh5tsaMS6mWz0aqQvOBS-1742840828600.jpg"
+image-src: "/images/blogs/sejours-chez-l-habitant/oh5tsaMS6mWz0aqQvOBS.jpg"
 alt: undefined
 ---
 ::
@@ -93,7 +93,7 @@ Vous **voyagez responsable et éthique,** mais surtout vous vivez une expérienc
 
 Grâce au **voyage immersif** vous partagez le quotidien de vos hôtes, vous créez des liens et vivez des moments uniques, qui resteront à jamais gravés en vous.
 
-Quelle plus belle expérience que d’aider une femme kirghize à **préparer le repas sous une yourte**, ou **se balader dans un marché indien** avec votre hôte qui vous aide à découvrir les spécialités du coin ?
+Quelle plus belle expérience que d’aider une femme kirghize à [**préparer le repas sous une yourte**](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant), ou [**se balader dans un marché indien**](https://odysway.com/voyages/inde-arunachal-pradesh?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant) avec votre hôte qui vous aide à découvrir les spécialités du coin ?
 
 Voyage rime avec partage, et l’expérience du **séjour chez l’habitant** va vous permettre de goûter à des tranches de vie dans une ambiance intimiste, avec des personnes que vous n’auriez peut-être jamais rencontrées au hasard de vos vacances.
 
@@ -105,7 +105,7 @@ S’offrir un **voyage en immersion**, est un moyen privilégié pour s'enrichir
 
 ::image-container
 ---
-image-src: "/images/blogs/fpbX2ffLSzWw895UIQJs-1742840829113.jpg"
+image-src: "/images/blogs/sejours-chez-l-habitant/fpbX2ffLSzWw895UIQJs.jpg"
 alt: undefined
 ---
 ::
@@ -114,9 +114,9 @@ La mission d’**Odysway**, est de vous offrir des **expériences immersives** u
 
 Que ça soit en **immersion** : 
 
-*   **au sein d'une famille de chamanes** dans la province du Khentii en Mongolie ;
-*   aux côtés d’une **communauté d'agriculteurs quechuas au Pérou** ;
-*   pour **vivre une immersion dans une école bouddhiste au Népal**
+*   [**au sein d'une famille de chamanes**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant) dans la province du Khentii en Mongolie ;
+*   aux côtés d’une [**communauté d'agriculteurs quechuas au Pérou**](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant) ;
+*   pour [**vivre une immersion dans une école bouddhiste au Népal**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO&utm_medium=BlogPost&utm_campaign=chezlhabitant)
 
 Partir avec Odysway, c'est faire le choix de sortir du tourisme de masse pour voyager différemment, en **immersion** avec les populations locales. 
 

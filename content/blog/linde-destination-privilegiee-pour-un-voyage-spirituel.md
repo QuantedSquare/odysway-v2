@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-12-27 09:50:00+00:00"
 tags: "Asie, Developpement personnel, Inde"
 categories: "Developpement Personnel"
-displayedImg: "/images/blogs/L'Inde-destination-privilegiee-pour-un-voyage-spirituel.jpg"
+displayedImg: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/1xSgoyv1Qx6BshXwGbdb.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/L'Inde-destination-privilegiee-pour-un-voyage-spirituel.jpg"
+image-src: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/1xSgoyv1Qx6BshXwGbdb.jpg"
 ---
 #publication-date
 27 décembre 2018
@@ -31,14 +31,14 @@ L'Inde, destination privilégiée pour un voyage spirituel ?
 
 ::section-container
 ---
-image-src: "/images/blogs/L'Inde-destination-privilegiee-pour-un-voyage-spirituel.jpg"
+image-src: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/1xSgoyv1Qx6BshXwGbdb.jpg"
 ---
 #content
 Depuis toujours, l’Inde est considérée comme l’un des pays les plus spirituels au monde. Pays aux multiples divinités, pays d’exil du Dalaï-lama, présence de nombreux lieux spirituels, expliquent notamment l’engouement des visiteurs pour l’Inde. Et sur place, votre voyage intérieur peut prendre différentes formes. Méditation, yoga, médecine ayurvédique, à vous de voir celle qui correspond le plus à vos attentes. Qu’est-ce qui fait de l’Inde une destination privilégiée pour un voyage spirituel ?
 
 #### ::image-container
 ---
-image-src: "/images/blogs/euucEolpSNaueGYSlzla-1742842097564.jpg"
+image-src: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/euucEolpSNaueGYSlzla.jpg"
 alt: 
 ---
 ::
@@ -64,9 +64,9 @@ Dans le nord-est indien, dans l’état du Penjab, visitez Amritsar. La ville es
 
 ## Comment réaliser son voyage spirituel en Inde ?
 
-Ceux qui viennent en Inde pour un voyage spirituel ont plusieurs solutions pour atteindre la paix intérieure. **Citons notamment la pratique de la méditation, du yoga ou encore de l’ayurvéda**. Pour les deux premiers, ce sont des yogis, hommes ou femmes, qui dispensent de l’enseignement dans des ashrams. **Pendant plusieurs jours vous alternez les séances pour bien vous recentrer sur des choses essentielles**. Vous allez apprendre à maîtriser votre respiration, à faire travailler votre esprit pour vous libérer des tensions et ainsi retrouver l’apaisement. Si vous voulez en savoir plus sur la retraite dans un ashram, n’hésitez pas à consulter notre article dédié.
+Ceux qui viennent en Inde pour un voyage spirituel ont plusieurs solutions pour atteindre la paix intérieure. **Citons notamment la pratique de la méditation, du yoga ou encore de l’ayurvéda**. Pour les deux premiers, ce sont des yogis, hommes ou femmes, qui dispensent de l’enseignement dans des ashrams. **Pendant plusieurs jours vous alternez les séances pour bien vous recentrer sur des choses essentielles**. Vous allez apprendre à maîtriser votre respiration, à faire travailler votre esprit pour vous libérer des tensions et ainsi retrouver l’apaisement. Si vous voulez en savoir plus sur la retraite dans un ashram, n’hésitez pas à consulter [notre article](https://odysway.com/faire-une-retraite-dans-un-ashram-en-inde) dédié.
 
-**L’ayurvéda** est une médecine traditionnelle indienne, sans doute la plus ancienne qui existe actuellement. **Elle consiste à déceler les déséquilibres qui existent entre le corps et l’esprit, ceux-là même qui sont à l’origine de nos maux**. La médecine ayurvédique va donc rééquilibrer l’ensemble à travers des massages spécifiques et des remèdes à base de plantes. Pour que les bienfaits de l’ayurvéda soient efficaces sur le long terme, privilégiez une cure de plusieurs jours. Découvrez les bienfaits de l'ayurvéda à travers notre page de blog.
+**L’ayurvéda** est une médecine traditionnelle indienne, sans doute la plus ancienne qui existe actuellement. **Elle consiste à déceler les déséquilibres qui existent entre le corps et l’esprit, ceux-là même qui sont à l’origine de nos maux**. La médecine ayurvédique va donc rééquilibrer l’ensemble à travers des massages spécifiques et des remèdes à base de plantes. Pour que les bienfaits de l’ayurvéda soient efficaces sur le long terme, privilégiez une cure de plusieurs jours. [Découvrez les bienfaits de l'ayurvéda à travers notre page de blog.](https://odysway.com/bienfaits-ayurveda)
 
-Odysway vous propose de nombreuses expériences autour du thème du voyage initiatique ainsi que des voyages en immersion pour découvrir l'Inde et sa spiritualité.
+Odysway vous propose de nombreuses expériences autour du thème du [voyage initiatique](https://odysway.com/thematiques/voyage-initiatique) ainsi que des [voyages en immersion pour découvrir l'Inde](https://odysway.com/destinations/inde) et sa spiritualité.
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2024-05-27 07:04:00+00:00"
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/Le-Trek-au-Nepal-avec-Odysway-:-Une-Aventure-Authentique-Chez-l'Habitant-1.jpg"
+displayedImg: "/images/blogs/le-trek-au-nepal-avec-odysway-une-aventure-authentique-chez-lhabitant/1QaNJcQGSDWbjDFT1Qki.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-Trek-au-Nepal-avec-Odysway-:-Une-Aventure-Authentique-Chez-l'Habitant-1.jpg"
+image-src: "/images/blogs/le-trek-au-nepal-avec-odysway-une-aventure-authentique-chez-lhabitant/1QaNJcQGSDWbjDFT1Qki.jpg"
 ---
 #publication-date
 27 mai 2024
@@ -31,7 +31,7 @@ Le Népal, avec ses paysages époustouflants et sa culture riche, est une destin
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-Trek-au-Nepal-avec-Odysway-:-Une-Aventure-Authentique-Chez-l'Habitant-1.jpg"
+image-src: "/images/blogs/le-trek-au-nepal-avec-odysway-une-aventure-authentique-chez-lhabitant/1QaNJcQGSDWbjDFT1Qki.jpg"
 ---
 #content
 Le Népal, avec ses paysages époustouflants et sa culture riche, est une destination incontournable pour les amateurs de trek. Odysway propose une expérience unique, alliant immersion culturelle et respect de l'environnement. En optant pour un trek chez l'habitant, vous découvrez le Népal sous un angle authentique et enrichissant. Voici pourquoi cette aventure est bien plus qu'une simple randonnée.
@@ -42,7 +42,7 @@ L'un des aspects les plus remarquables du trek avec Odysway est l'immersion cult
 
 ::image-container
 ---
-image-src: "/images/blogs/Nepal_Trekhabitant_Hebergement.webp-3.jpg"
+image-src: "/images/blogs/le-trek-au-nepal-avec-odysway-une-aventure-authentique-chez-lhabitant/ri33cZ6SDWQFe36pXaTi.jpg"
 alt: Nepal_Trekhabitant_Hebergement.webp
 ---
 ::
@@ -69,7 +69,7 @@ Un trek au Népal nécessite une bonne préparation physique et mentale. Odysway
 
 ::image-container
 ---
-image-src: "/images/blogs/Nepal_Trekhabitant_J12.webp-1.jpg"
+image-src: "/images/blogs/le-trek-au-nepal-avec-odysway-une-aventure-authentique-chez-lhabitant/Ixdq6kNYT2CHAQQ8X7zT.jpg"
 alt: Nepal_Trekhabitant_J12.webp
 ---
 ::
@@ -87,5 +87,5 @@ Ces moments forts font de ce trek une aventure unique et mémorable, offrant bie
 
 Opter pour un trek au Népal avec Odysway, c'est choisir une aventure humaine et culturelle, respectueuse de l'environnement et des communautés locales. En séjournant chez l'habitant, vous découvrirez le Népal de manière authentique, loin des sentiers battus. Vous contribuerez au développement des communautés locales et à la préservation des paysages naturels. Préparez-vous à vivre une expérience inoubliable, riche en découvertes et en émotions, dans l'un des plus beaux pays du monde.
 
-Pour en savoir plus et réserver votre trek chez l'habitant au Népal, visitez la page dédiée sur le site d'Odysway : Trek chez l'habitant au Népal. Si vous souhaitez vivre un trek plus sportif, découvrez le voyage : Vivez l'aventure mythique du Tour des Annapurnas au Népal.
+Pour en savoir plus et réserver votre trek chez l'habitant au Népal, visitez la page dédiée sur le site d'Odysway : [Trek chez l'habitant au Népal](https://odysway.com/voyages/trek-chez-lhabitant-nepal). Si vous souhaitez vivre un trek plus sportif, découvrez le voyage : [Vivez l'aventure mythique du Tour des Annapurnas au Népal.](https://odysway.com/voyages/trek-tour-annapurna-nepal)
 ::

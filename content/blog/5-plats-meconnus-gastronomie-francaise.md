@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-07-30 12:00:00+00:00"
 tags: "Europe, France, Made in France"
 categories: "Culture et decouverte, Blog"
-displayedImg: "/images/blogs/5-plats-meconnus-de-la-gastronomie-francaise.jpg"
+displayedImg: "/images/blogs/5-plats-meconnus-gastronomie-francaise/VdrTBt3YTdC9emMWsFyw.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-plats-meconnus-de-la-gastronomie-francaise.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/VdrTBt3YTdC9emMWsFyw.jpg"
 ---
 #publication-date
 30 juillet 2020
@@ -31,7 +31,7 @@ image-src: "/images/blogs/5-plats-meconnus-de-la-gastronomie-francaise.jpg"
 
 ::section-container
 ---
-image-src: "/images/blogs/5-plats-meconnus-de-la-gastronomie-francaise.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/VdrTBt3YTdC9emMWsFyw.jpg"
 ---
 #content
 **Outre son histoire et son riche patrimoine, la France se caractérise par son nombre incalculable de spécialités culinaires. Du nord au sud et de l'ouest à l'est, nos régions pullulent de mets tous plus appétissants les uns que les autres. Mais entre la quiche lorraine, les escargots de Bourgogne, l'aligot et les canelés bordelais, d'autres spécialités bien moins célèbres font pourtant le régal des amateurs de bonne chère. Partons stimuler nos papilles avec 5 plats méconnus de la gastronomie française.**  
@@ -40,7 +40,7 @@ image-src: "/images/blogs/5-plats-meconnus-de-la-gastronomie-francaise.jpg"
 
 ::image-container
 ---
-image-src: "/images/blogs/xw044pCKT1uPwD9IeuK2-1742840856503.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/xw044pCKT1uPwD9IeuK2.jpg"
 alt: undefined
 ---
 ::
@@ -49,13 +49,13 @@ Bienvenue dans le sud-ouest de la France et plus précisément au **Pays Basque*
 
 Ce plat est notamment **agrémenté de piment d'Espelette et est servi avec des haricots blancs**. Un régal pour ce repas très apprécié lors des réunions de famille ou entre amis avec une belle promesse : celles de partager des moments conviviaux.
 
-De passage dans le sud-ouest pour vos prochaines vacances ? Laissez-vous tenter par une expérience unique auprès d'un berger dans la sublime vallée de l'Aspe. Au programme : transhumance, fabrication de fromage de brebis et nuit en plein cœur de la montagne.
+De passage dans le sud-ouest pour vos prochaines vacances ? Laissez-vous tenter par une [expérience unique auprès d'un berger](https://odysway.com/voyages/sejour-berger-bearn?utm_source=Blog&utm_medium=SEO&utm_campaign=berger_bearn) dans la sublime vallée de l'Aspe. Au programme : transhumance, fabrication de fromage de brebis et nuit en plein cœur de la montagne.
 
 ## Le dampfnudel, une spécialité venue de l'est
 
 ::image-container
 ---
-image-src: "/images/blogs/2sf1S8kLTHGzs09byYpU-1742840857022.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/2sf1S8kLTHGzs09byYpU.jpg"
 alt: undefined
 ---
 ::
@@ -68,7 +68,7 @@ Le dampfnudel accompagne parfaitement les soupes de légumes, le chou et même l
 
 **::image-container
 ---
-image-src: "/images/blogs/K3iBaxkXSg2ppaBSoGNd-1742840857540.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/K3iBaxkXSg2ppaBSoGNd.jpg"
 alt: undefined
 ---
 ::**
@@ -79,18 +79,18 @@ alt: undefined
 
 **::image-container
 ---
-image-src: "/images/blogs/xvg4qvz5T4vGZ5egrdgN-1742840858064.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/xvg4qvz5T4vGZ5egrdgN.jpg"
 alt: undefined
 ---
 ::**
 
-**La morbiflette ou le plat d'hiver par excellence dans la région du** **Jura**. Prenez une tartiflette, du morbier à la place du reblochon et vous obtenez… de la morbiflette ! Un plat généreux et gourmand qui ne manque pas de succès mais pourtant encore peu connu de la gastronomie française. **Cuisinée avec du vin blanc du Jura, des pommes de terre, du lard ou de la saucisse** (de Morteau ou de Montbéliard par exemple), **des** **oignons et de** **la crème** **fraîche**, il faut bien ça pour résister au froid hivernal…. Fermez les yeux et imaginez le fromage fondu à souhait qui se mélange avec les autres ingrédients. Hmmmm… Bon appétit !
+**La morbiflette ou le plat d'hiver par excellence dans la région du** [**Jura**](https://odysway.com/destinations/jura). Prenez une tartiflette, du morbier à la place du reblochon et vous obtenez… de la morbiflette ! Un plat généreux et gourmand qui ne manque pas de succès mais pourtant encore peu connu de la gastronomie française. **Cuisinée avec du vin blanc du Jura, des pommes de terre, du lard ou de la saucisse** (de Morteau ou de Montbéliard par exemple), **des** **oignons et de** **la crème** **fraîche**, il faut bien ça pour résister au froid hivernal…. Fermez les yeux et imaginez le fromage fondu à souhait qui se mélange avec les autres ingrédients. Hmmmm… Bon appétit !
 
 ## Cap sur un plat sucré/salé avec le pounti
 
 ::image-container
 ---
-image-src: "/images/blogs/YeQXLF3TSXi9Ioce0Ro3-1742840858582.jpg"
+image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/YeQXLF3TSXi9Ioce0Ro3.jpg"
 alt: undefined
 ---
 ::
@@ -99,7 +99,7 @@ Terminons notre voyage culinaire des **plats méconnus de la gastronomie frança
 
 ## Découvrez les séjours culturels by Odysway !
 
-Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de voyages culturels proposés par Odysway.
+Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 
-Pour poursuivre votre lecture, nous vous invitons à découvrir notre article sur la découverte de la côte Ouest de la France.
+Pour poursuivre votre lecture, nous vous invitons à découvrir [notre article sur la découverte de la côte Ouest de la France.](https://odysway.com/decouvrir-france-fil-cote-ouest-partie-1)
 ::

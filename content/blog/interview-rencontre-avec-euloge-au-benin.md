@@ -21,12 +21,12 @@ published: false
 publishedAt: "2022-10-25 14:00:00+00:00"
 tags: "Afrique, autrement, bénin"
 categories: "immersion, voyager, bénin, culture"
-displayedImg: "/images/blogs/Interview-Rencontre-avec-Euloge-au-Benin.jpg"
+displayedImg: "/images/blogs/interview-rencontre-avec-euloge-au-benin/F67WL3G8RzSfabyCk2Dj.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Interview-Rencontre-avec-Euloge-au-Benin.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/F67WL3G8RzSfabyCk2Dj.jpg"
 ---
 #publication-date
 25 octobre 2022
@@ -40,12 +40,12 @@ Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.
 
 ::section-container
 ---
-image-src: "/images/blogs/Interview-Rencontre-avec-Euloge-au-Benin.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/F67WL3G8RzSfabyCk2Dj.jpg"
 ---
 #content
 **Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.**
 
-**Un séjour hors du temps , différent de ce que vous avez vécu jusqu'à présent !**
+**[Un séjour hors du temps](https://odysway.com/voyages/Immersion-culturelle-sud-benin?utm_source=Blog&utm_medium=Article&utm_campaign=VoyageB%C3%A9nin) , différent de ce que vous avez vécu jusqu'à présent !**
 
 **On vous dévoile le quotidien de notre guide à travers une courte ITW dans une démarche de transparence et de confiance.**
 
@@ -57,7 +57,7 @@ Je suis titulaire d'une licence professionnelle en tourisme et depuis douze ans,
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-4.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/xdoJ4tbSDyf5GZIRLCvQ.jpg"
 alt: indéfini
 ---
 ::
@@ -76,7 +76,7 @@ Après le repas de midi, j'annonce la suite du programme. En fin de journée, l
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-5.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/ipJSXGT1TFSbZbO63Oui.jpg"
 alt: indéfini
 ---
 ::
@@ -87,7 +87,7 @@ alt: indéfini
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-6.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/ukopMUoVRjmQYrZDeNEI.jpg"
 alt: indéfini
 ---
 ::
@@ -100,7 +100,7 @@ Comme inconvénients, vous devez sacrifier le temps au détriment de votre famil
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-7.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/sklfu93EQEqTrFuIQQkw.jpg"
 alt: indéfini
 ---
 ::
@@ -111,7 +111,7 @@ alt: indéfini
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-8.jpg"
+image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/1PP5GQqRrWj1BNRhq85w.jpg"
 alt: indéfini
 ---
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2021-04-28 18:00:00+00:00"
 tags: "conseils, éco-responsable, nature, transports"
 categories: "Blog"
-displayedImg: "/images/blogs/Vers-des-voyages-zero-carbone.jpg"
+displayedImg: "/images/blogs/vers-voyages-zero-carbone/vR3ApDrmQF6C2fIbovf0.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Vers-des-voyages-zero-carbone.jpg"
+image-src: "/images/blogs/vers-voyages-zero-carbone/vR3ApDrmQF6C2fIbovf0.jpg"
 ---
 #publication-date
 28 avril 2021
@@ -31,7 +31,7 @@ Vers des voyages zéro-carbone
 
 ::section-container
 ---
-image-src: "/images/blogs/Vers-des-voyages-zero-carbone.jpg"
+image-src: "/images/blogs/vers-voyages-zero-carbone/vR3ApDrmQF6C2fIbovf0.jpg"
 ---
 #content
 ## Une prise de conscience
@@ -44,11 +44,11 @@ Après avoir suscité l'intérêt du monde entier en 2018, Greta Thunberg, jeune
 
 Lors d'un voyage, l'émission de carbone par personne est due en grande partie aux transports. Voyager implique le déplacement vers un lieu autre que notre «chez-soi» et souvent par le biais d'un ou plusieurs moyens de transport. **Dire que l'on voyage «zéro-carbone» n'est donc pas 100% adéquat** mais on peut s'en rapprocher au maximum en diminuant nos émissions de carbone. 
 
-Il faut savoir **limiter nos déplacements**, partir moins loin et choisir dans la mesure du possible le moyen de transport le plus écologique. Bien évidemment, les déplacements hors Europe sont difficiles sans transports aériens à moins que ce déplacement soit le but du voyage, mais il existe tout de même des alternatives. Cette pratique s'apparente au Slow Tourisme, un mode de voyage où l’on prends son temps pour vivre réellement l’instant présent, mieux apprécier son voyage par la qualité que par la quantité de choses vues ou faites.
+Il faut savoir **limiter nos déplacements**, partir moins loin et choisir dans la mesure du possible le moyen de transport le plus écologique. Bien évidemment, les déplacements hors Europe sont difficiles sans transports aériens à moins que ce déplacement soit le but du voyage, mais il existe tout de même des alternatives. Cette pratique s'apparente au [Slow Tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue), un mode de voyage où l’on prends son temps pour vivre réellement l’instant présent, mieux apprécier son voyage par la qualité que par la quantité de choses vues ou faites.
 
 ::image-container
 ---
-image-src: "/images/blogs/c6hhzifnSPRbLUB3BKFC-1742840718056.jpg"
+image-src: "/images/blogs/vers-voyages-zero-carbone/c6hhzifnSPRbLUB3BKFC.jpg"
 alt: undefined
 ---
 ::
@@ -61,17 +61,17 @@ Les émissions par km pour **une voiture** avec un passager sont donc quasiment 
 
 ## Les solutions alternatives à ces deux moyens de transport polluants 
 
-Il existe des moyens de transports plus écologiques que la voiture et l'avion; en plus d'être plus économiques, ils facilitent la rencontre ! Il vous est possible de comparer ces différents moyens de transport sur Tictactrip. 
+Il existe des moyens de transports plus écologiques que la voiture et l'avion; en plus d'être plus économiques, ils facilitent la rencontre ! Il vous est possible de comparer ces différents moyens de transport sur [Tictactrip](https://www.tictactrip.eu/?partnerId=WB-OTA-ODYSWAY). 
 
 **Le bus longue distance** est le transport à carburant le plus écologique. Même si un bus longue distance consomme du diesel pour rouler, il génère en moyenne six fois moins de CO2 par passager qu’un vol court-courrier et cinq fois moins qu’une voiture avec un seul passager à bord. C'est un moyen de transport idéal pour se rendre dans les villes européennes comme Lisbonne, Barcelone ou Amsterdam.  
 
-**Le train** est également un moyen de transport du même ressort. Il faut savoir que **la plupart des trains dans le monde sont électriques**. Ils ne rejettent donc pas de CO2 directement. Cependant, ils en rejettent indirectement si l'électricité qu'ils utilisent est produite à partir d'énergies fossiles (centrales à charbon, au gaz ou au pétrole). En France, seulement 6% de l'électricité provient des énergies fossiles. Les trains n'émettent donc presque pas de CO2. Dans d'autres pays, comme la Russie, la Chine ou l'Inde, plus des deux tiers de l'électricité proviennent des énergies fossiles. Il existe des trains mythiques longue distance comme le transsibérien de Moscou à Vladivostok en Russie, l'Orient Express de Paris à Istanbul, ou le Glacier Express de Zermatt à St Moritz en Suisse. Le Monde en Train décrit les voyages en train existants pour l'Europe et l'Asie au départ de Paris.
+**Le train** est également un moyen de transport du même ressort. Il faut savoir que **la plupart des trains dans le monde sont électriques**. Ils ne rejettent donc pas de CO2 directement. Cependant, ils en rejettent indirectement si l'électricité qu'ils utilisent est produite à partir d'énergies fossiles (centrales à charbon, au gaz ou au pétrole). En France, seulement 6% de l'électricité provient des énergies fossiles. Les trains n'émettent donc presque pas de CO2. Dans d'autres pays, comme la Russie, la Chine ou l'Inde, plus des deux tiers de l'électricité proviennent des énergies fossiles. Il existe des trains mythiques longue distance comme le transsibérien de Moscou à Vladivostok en Russie, l'Orient Express de Paris à Istanbul, ou le Glacier Express de Zermatt à St Moritz en Suisse. [Le Monde en Train](https://www.lemondeentrain.fr/) décrit les voyages en train existants pour l'Europe et l'Asie au départ de Paris.
 
-Enfin, **l******e** vélo** est le moyen de transport **écologique par excellence**. Il permet d'aller là où les autres voyageurs ne peuvent se rendre et **mieux apprécier les paysages** tout en facilitant la rencontre! Il existe dix-neuf itinéraires cyclables EuroVelo totalement balisés qui traversent le continent européen comme la Vélodyssée de Roscoff à Hendaye, la Via Romea Francigena de Canterbury en Angleterre à Brindisi en Italie, ou la Scandibérique de Trondheim en Norvège à Saint-Jacques de Compostelle en Espagne.  
+Enfin, **l******e** vélo** est le moyen de transport **écologique par excellence**. Il permet d'aller là où les autres voyageurs ne peuvent se rendre et **mieux apprécier les paysages** tout en facilitant la rencontre! Il existe dix-neuf itinéraires cyclables [EuroVelo](https://fr.eurovelo.com/) totalement balisés qui traversent le continent européen comme la Vélodyssée de Roscoff à Hendaye, la Via Romea Francigena de Canterbury en Angleterre à Brindisi en Italie, ou la Scandibérique de Trondheim en Norvège à Saint-Jacques de Compostelle en Espagne.  [](https://fr.eurovelo.com/)  
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-26.jpg"
+image-src: "/images/blogs/vers-voyages-zero-carbone/WCVkbGpShqwiEVvbkWIA.jpg"
 alt: indéfini
 ---
 ::
@@ -82,13 +82,13 @@ Il est possible de compenser son empreinte carbone en finançant un projet dont 
 
 ## Choisir un hébergement responsable
 
-**Le logement** est l'un des plus gros postes d'émissions de CO2 après les transports. Certains hébergements produisent beaucoup de déchets et dépensent beaucoup d'eau : il faut donc choisir dans la mesure du possible un hébergement avec un **écolabel**. Par exemple, la Clé Verte en France  respecte les critères écologiques comme la gestion durable en utilisant des matières premières durables et des produits d'entretien écologiques. D'autres actions sont mises en place pour répondre à cette problématique : la réduction de l'eau, de l'énergie, des déchets, et la formation de sensibilisation à l'environnement pour tous les employés. D'autres pratiques sont envisageables comme le couchsurfing (être logé gratuitement chez quelqu'un), le woofing (être logé et nourri gratuitement en échange de menus travaux), ou le house-sitting (s'occuper d'une maison en l'absence des propriétaires). En plus d'être écologique, cela permet de vivre un réel enrichissement humain et d'être au plus près de la culture locale. Des plateformes proposent des logements responsables en France comme Green Trip . 
+**Le logement** est l'un des plus gros postes d'émissions de CO2 après les transports. Certains hébergements produisent beaucoup de déchets et dépensent beaucoup d'eau : il faut donc choisir dans la mesure du possible un hébergement avec un **écolabel**. Par exemple, [la Clé Verte en France](https://www.laclefverte.org/?gclid=CjwKCAjwj6SEBhAOEiwAvFRuKGa0oXKUvOtd3MRfSD9pp8FRS38H_upWKvSzcC9Brn78Ze4FxYqiHRoCWOIQAvD_BwE)  respecte les critères écologiques comme la gestion durable en utilisant des matières premières durables et des produits d'entretien écologiques. D'autres actions sont mises en place pour répondre à cette problématique : la réduction de l'eau, de l'énergie, des déchets, et la formation de sensibilisation à l'environnement pour tous les employés. D'autres pratiques sont envisageables comme le couchsurfing (être logé gratuitement chez quelqu'un), le woofing (être logé et nourri gratuitement en échange de menus travaux), ou le house-sitting (s'occuper d'une maison en l'absence des propriétaires). En plus d'être écologique, cela permet de vivre un réel enrichissement humain et d'être au plus près de la culture locale. Des plateformes proposent des logements responsables en France comme [Green Trip](https://www.greentrip.io/) . 
 
 Au sein de l'hébergement, plusieurs actions sont possibles pour réduire nos émissions de CO2 : réduire sa consommation d'eau et d'énergie, éviter la climatisation et la surconsommation du chauffage, garder les draps et serviettes plusieurs jours, et ne pas utiliser les échantillons gratuits (pour éviter le plastique).
 
 ::image-container
 ---
-image-src: "/images/blogs/indefini-27.jpg"
+image-src: "/images/blogs/vers-voyages-zero-carbone/I931TKQGRxOsJYtLtCQa.jpg"
 alt: indéfini
 ---
 ::
@@ -109,7 +109,7 @@ Conscient de l'impact que peut avoir le tourisme, nous proposons des **voyages e
 
 ::image-container
 ---
-image-src: "/images/blogs/comme-forestier.jpg.jpg"
+image-src: "/images/blogs/vers-voyages-zero-carbone/0bKrfet3SbCY7jXD9e5T.jpg"
 alt: comme-forestier.jpg
 ---
 ::

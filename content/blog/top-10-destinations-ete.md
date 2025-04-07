@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-06-25 08:03:00+00:00"
 tags: "Amerique du Nord, Amerique du Sud, Animaux, Asie, Brésil, Communautés locales, Developpement personnel, Etats Unis, Europe, Famille, France, Grands espaces, Made in France, Thailande, Transports insolites"
 categories: "Culture et decouverte"
-displayedImg: "/images/blogs/Top-10-des-destinations-pour-l'ete.jpg"
+displayedImg: "/images/blogs/top-10-destinations-ete/3ScjZz5yRbK5yAViEvti.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Top-10-des-destinations-pour-l'ete.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/3ScjZz5yRbK5yAViEvti.jpg"
 ---
 #publication-date
 25 juin 2019
@@ -31,7 +31,7 @@ Top 10 des destinations pour l'été
 
 ::section-container
 ---
-image-src: "/images/blogs/Top-10-des-destinations-pour-l'ete.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/3ScjZz5yRbK5yAViEvti.jpg"
 ---
 #content
   
@@ -42,33 +42,33 @@ Les vacances d'été arrivent et vous ne savez toujours pas ou partir. À la mer
 
 ::image-container
 ---
-image-src: "/images/blogs/KQb8bHNDSOOx1bEvLyNq-1742841075172.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/KQb8bHNDSOOx1bEvLyNq.jpg"
 alt: 
 ---
 ::
 
 _Les somptueuses rizières à Bali_
 
-Alors que d'autres pays d'Asie sont touchés par la mousson, **Bali** est en pleine saison sèche pendant l'été. C'est pourquoi l'île fait partie de notre **top 10 des destinations**. C'est une période idéale pour aller découvrir **les** **rizières** à vélo, visiter **les temples**, se prélasser sur les plages, **plonger** pour admirer la vie sous-marine, **se faire masser**, découvrir des villes pleines de charme comme Ubud, faire du surf ou encore partir faire l'ascension du mont Batur au lever du soleil. Nous vous proposons un voyage d'Ouest en Est, de Menjangan à Nusa Lembongan.
+Alors que d'autres pays d'Asie sont touchés par la mousson, **Bali** est en pleine saison sèche pendant l'été. C'est pourquoi l'île fait partie de notre **top 10 des destinations**. C'est une période idéale pour aller découvrir **les** **rizières** à vélo, visiter **les temples**, se prélasser sur les plages, **plonger** pour admirer la vie sous-marine, **se faire masser**, découvrir des villes pleines de charme comme Ubud, faire du surf ou encore partir faire l'ascension du mont Batur au lever du soleil. Nous vous proposons un voyage [d'Ouest en Est, de Menjangan à Nusa Lembongan.](https://odysway.com/voyages/bali-menjangan-lembungan)
 
 ## 2\. L'inattendu Brésil 
 
 ::image-container
 ---
-image-src: "/images/blogs/CjGw9ptGRJChfGumHLCi-1742841075692.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/CjGw9ptGRJChfGumHLCi.jpg"
 alt: 
 ---
 ::
 
 _Vivez avec une famille dans la jungle au Brésil avec Odysway_
 
-On n'y pense peut-être pas assez, mais **le** **Brésil** est une destination interessante en été. En effet, c'est la période ou les températures sont les plus agréables mais aussi celle de la basse saison touristique. Direction **Rio de Janeiro** pour grimper au sommet du Corcovado, découvrir la très urbaine **SaoPaulo**, les plages, l'exotique **Salvador de Bahia**, les spectaculaires **chutes d'Igacu**, la somptueuse réserve animale de Pantanal ou encore **l'Amazonie**. Pourquoi ne pas profiter de votre présence dans la plus grande foret du monde pour tenter l'une de nos expériences au coeur de la forêt amazonienne ?
+On n'y pense peut-être pas assez, mais **le** **Brésil** est une destination interessante en été. En effet, c'est la période ou les températures sont les plus agréables mais aussi celle de la basse saison touristique. Direction **Rio de Janeiro** pour grimper au sommet du Corcovado, découvrir la très urbaine **SaoPaulo**, les plages, l'exotique **Salvador de Bahia**, les spectaculaires **chutes d'Igacu**, la somptueuse réserve animale de Pantanal ou encore **l'Amazonie**. Pourquoi ne pas profiter de votre présence dans la plus grande foret du monde pour tenter l'une de [nos expériences au coeur de la forêt amazonienne](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_Destination_Ete) ?
 
 ## 3\. La Corse, l'île de Beauté
 
 ::image-container
 ---
-image-src: "/images/blogs/hqtVeF2TyiwdYqqEP4WA-1742841076212.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/hqtVeF2TyiwdYqqEP4WA.jpg"
 alt: 
 ---
 ::
@@ -81,7 +81,7 @@ _La citadelle de Calvi_ _en Corse_
 
 ::image-container
 ---
-image-src: "/images/blogs/yeLUHei7S9mhz0EdNe8f-1742841076731.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/yeLUHei7S9mhz0EdNe8f.jpg"
 alt: 
 ---
 ::
@@ -94,7 +94,7 @@ _Le parc de Plitvice et ses nombreux lacs en Croatie_
 
 ::image-container
 ---
-image-src: "/images/blogs/X17LumbmSfWjOUaW37cF-1742841077253.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/X17LumbmSfWjOUaW37cF.jpg"
 alt: 
 ---
 ::
@@ -103,13 +103,13 @@ _Le célèbre Parthénon a Athènes en_ Grèce
 
 Classée dans le **top 10 des destinations**, **la** **Grèce** est un incontournable des vacances d'été. En effet, pays charge d'histoire aux sites archéologiques d'exception, la Grèce est un véritable musée a ciel ouvert. **Athènes, Delphes, Olympie ou Thessalonique**, autant de villes qui méritent le détour. N'oublions pas non plus les **plages paradisiaques** ou il fait bon se prélasser. La Grèce, ce sont aussi **ses îles**, chacune avec leur propre caractère. Santorin, Mykonos, Corfou, Rhodes, la Crete, Hydra ou Lesbos, laquelle vous fera succomber ?
 
-Envie de vivre une expérience insolite ? Odysway vous propose de partir observer les dauphins auprès d'un biologiste marin en Grèce ! 
+Envie de vivre une expérience insolite ? Odysway vous propose de partir [observer les dauphins auprès d'un biologiste marin en Grèce](https://odysway.com/voyages/voyage-etude-dauphins-grece?utm_source=Blog&utm_medium=SEO&utm_campaign=Top10_Destination_Ete) ! 
 
 ## 6\. La Norvège, une destination nature
 
 ::image-container
 ---
-image-src: "/images/blogs/yuFkbgfSC8tFLbuXct2g-1742841077773.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/yuFkbgfSC8tFLbuXct2g.jpg"
 alt: 
 ---
 ::
@@ -122,7 +122,7 @@ Faire du surf sous les aurores boréales en Norvège
 
 ::image-container
 ---
-image-src: "/images/blogs/T0V2B5KIS3G03xtublAh-1742841078293.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/T0V2B5KIS3G03xtublAh.jpg"
 alt: 
 ---
 ::
@@ -136,7 +136,7 @@ _La magnifique région de l'Algarve, au sud du Portugal_
 
 ::image-container
 ---
-image-src: "/images/blogs/wIdv8jlSTBa1ledIIQhI-1742841078813.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/wIdv8jlSTBa1ledIIQhI.jpg"
 alt: 
 ---
 ::
@@ -149,7 +149,7 @@ _Le volcan du Teide a Tenerife, la plus populaire des îles Canaries_
 
 ::image-container
 ---
-image-src: "/images/blogs/4LFqzAoIQVWyO0PYiuUE-1742841079331.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/4LFqzAoIQVWyO0PYiuUE.jpg"
 alt: 
 ---
 ::
@@ -158,20 +158,20 @@ _Partez sauver les éléphants avec Odysway dans un refuge en_ Thaïlande
 
 Sans doute la destination la plus prise d'Asie du sud-est ! Venez découvrir la **Thaïlande** au travers de la bouillonnante capitale qu'est **Bangkok**, les cites royales **d'Ayutthaya** et de **Sukhothai** ou la très traditionnelle **Chiangmai**. Partez randonner dans les parcs a la rencontre de la faune locale et partez boxer dans les rizières lors d'une expérience Odysway. Et bien sûr que serait le pays du sourire sans ses **îles paradisiaques** ? D'ailleurs en été, privilégiez celles du **golfe de** **Thaïlande** qui échappent à la mousson. Activités sportives, nautiques et aquatiques vous attendent. 
 
-Envie de vivre une expérience inoubliable ? Odysway vous propose un voyage unique en totale immersion en Thaïlande ! 
+Envie de vivre une expérience inoubliable ? Odysway vous propose un [voyage unique en totale immersion en Thaïlande](https://odysway.com/destinations/thailande) ! 
 
 ## 10\. L'Amérique du Nord et ses grands espaces
 
 ::image-container
 ---
-image-src: "/images/blogs/bEwGD6tSQWartFadx6mI-1742841079853.jpg"
+image-src: "/images/blogs/top-10-destinations-ete/bEwGD6tSQWartFadx6mI.jpg"
 alt: 
 ---
 ::
 
-_Partir en roadtrip aux Etats-Unis_
+[_Partir en roadtrip aux Etats-Unis_](https://odysway.com/thematiques/road-trip-organise)
 
-**L'Amérique** **du Nord** clôture notre top 10 des destinations pour l'été. Et plus précisément la cote atlantique. Les grands espaces sont propices à des **road-trips** permettant de découvrir une faune et une flore extraordinaires. Sillonnez les routes de la **Nouvelle-Angleterre** aux Etats-Unis ou visitez la trépidante **New** **York**. Passez la frontière pour arriver au **Quebec** ou la aussi la nature est reine et permet de faire des randonnées a couper le souffle. En été, il est encore temps d'**observer les baleines** qui voguent dans le fleuve Saint-Laurent ou au large de Boston. Ou alors, partez dans le Far West, découvrir ses grands espaces.
+**L'Amérique** **du Nord** clôture notre top 10 des destinations pour l'été. Et plus précisément la cote atlantique. [Les grands espaces sont propices à des **road-trips**](https://odysway.com/thematiques/road-trip-organise) permettant de découvrir une faune et une flore extraordinaires. Sillonnez les routes de la **Nouvelle-Angleterre** aux Etats-Unis ou visitez la trépidante **New** **York**. Passez la frontière pour arriver au **Quebec** ou la aussi la nature est reine et permet de faire des randonnées a couper le souffle. En été, il est encore temps d'**observer les baleines** qui voguent dans le fleuve Saint-Laurent ou au large de Boston. Ou alors, partez dans le Far West, découvrir ses grands espaces.
 
-Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur le voyage solitaire.
+Pour poursuivre votre lecture, nous vous invitons à consulter [notre article sur le voyage solitaire.](https://odysway.com/comment-voyager-seul)
 ::

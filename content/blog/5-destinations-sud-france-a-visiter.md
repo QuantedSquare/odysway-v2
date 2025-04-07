@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-05-15 15:44:00+00:00"
 tags: "Europe, Famille, France, Grands espaces, Made in France"
 categories: ""
-displayedImg: "/images/blogs/5-destinations-du-sud-de-la-France-a-visiter.jpg"
+displayedImg: "/images/blogs/5-destinations-sud-france-a-visiter/RsDDclWT4OuGJUunENzQ.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-destinations-du-sud-de-la-France-a-visiter.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/RsDDclWT4OuGJUunENzQ.jpg"
 ---
 #publication-date
 15 mai 2020
@@ -31,7 +31,7 @@ image-src: "/images/blogs/5-destinations-du-sud-de-la-France-a-visiter.jpg"
 
 ::section-container
 ---
-image-src: "/images/blogs/5-destinations-du-sud-de-la-France-a-visiter.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/RsDDclWT4OuGJUunENzQ.jpg"
 ---
 #content
 Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le sud de la France a beaucoup à offrir. **Du Pays Basque à la Provence-Alpes-Côte-d'Azur, en passant par l'Occitanie, la Camargue et la Corse, découvrons tout le charme et les attraits de ces cinq belles régions.**
@@ -42,11 +42,11 @@ Avec un climat plutôt agréable, le sud de la France fait partie des destinatio
 
 Côté nature, l'Occitanie n'a rien à envier à ses voisines. Tombez sous le charme de **paysages grandioses** comme le cirque de Gavarnie, le plateau de l'Aubrac, des vallées, des grottes ou les Pyrénées ariégeoises pour randonner. Un environnement idéal pour tester le canyoning ou le rafting. Prenez aussi le temps de visiter les nombreux **villages de charme** comme Rocamadour et optez pour du **slow tourisme** sur le canal du Midi. A pied, à vélo ou bien en bateau, 240 km de cours d'eau pour profiter à son rythme des beautés de la région. 
 
-Découvrez nos voyages dans le Sud-Ouest de la France
+[Découvrez nos voyages dans le Sud-Ouest de la France](https://odysway.com/destinations/sud-ouest)
 
 ::image-container
 ---
-image-src: "/images/blogs/Occitanie-destinations-sud-France.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/lJXpzfuFRnaH7CS8ZnGh.jpg"
 alt: Occitanie destinations sud France
 ---
 ::
@@ -61,7 +61,7 @@ Outre un patrimoine naturel exceptionnel, la Camargue se distingue par un riche 
 
 ::image-container
 ---
-image-src: "/images/blogs/J3-camargue.jpg.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/IFPgxaeNRfynd2YFy4pJ.jpg"
 alt: J3 camargue.jpg
 ---
 ::
@@ -72,11 +72,11 @@ _Les gardians, emblématiques de la culture camarguaise._
 
 Parmi les destinations existantes du sud de la France, c'est probablement **la région PACA** qui accueille le plus de vacanciers. Pour comprendre cet engouement, il suffit peut-être de décomposer son acronyme. Il y a tout d'abord le "P" pour Provence. Ce territoire où se mêlent toutes sortes de senteurs et de couleurs méditerranéennes. Et que dire de ces charmants villages perchés si authentiques et pittoresques du Lubéron ou du pays de Fayence ? Vous avez ensuite le "A" pour Alpes. Un lieu idéal pour être loin de l'agitation du littoral et au cœur d'une nature verdoyante. Enfin, le C et le A pour Côte-d'Azur où se succèdent des stations balnéaires bordées par des eaux turquoise.
 
-Vous l'aurez donc compris, la région PACA alterne **activités nature, culturelles, historiques et balnéaires**. De quoi ravir tous les types de voyageurs. Pour aiguiser votre curiosité, voici quelques exemples de lieux incontournables : **les gorges du Verdon**, les îles d'Hyères, **les** **calanques** **de** **Cassis**, le mont Ventoux, les parcs naturels des Ecrins et du Mercantour, le massif de l'Esterel, **le** **Colorado** **Provençal**, **Avignon**, les nombreux lacs…
+Vous l'aurez donc compris, la région PACA alterne **activités nature, culturelles, historiques et balnéaires**. De quoi ravir tous les types de voyageurs. Pour aiguiser votre curiosité, voici quelques exemples de lieux incontournables : **les gorges du Verdon**, les îles d'Hyères, **les** **calanques** **de** **Cassis**, le mont Ventoux, les parcs naturels des Ecrins et du Mercantour, le massif de l'Esterel, **le** **Colorado** **Provençal**, **Avignon**, les nombreux lacs…[](https://odysway.com/destinations/provence)
 
 ::image-container
 ---
-image-src: "/images/blogs/PACA-destinations-sud-France.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/t9OP1xjMSi2j4qVWGbpb.jpg"
 alt: PACA destinations sud France
 ---
 ::
@@ -89,11 +89,11 @@ Enclavé entre mer et montagne dans le sud-ouest de la France, **le Pays Basque 
 
 Il y a bien sûr les villes incontournables comme Biarritz, Hendaye et ses villas néo-basques qui bordent le front de mer, Saint-Jean-de-Luz et sa vieille ville… Et que dire de la gastronomie ? Entre le piment d'Espelette, la charcuterie, l'axoa et le fromage au lait de brebis, les papilles seront en éveil. Vous comprenez maintenant pourquoi **le Pays Basque est l'une des destinations prisées du sud de la France.**
 
-Tentés par une expérience unique au Pays Basque ? Odysway vous propose de partager la vie d'un berger dans les Pyrénées.
+Tentés par une expérience unique au Pays Basque ? Odysway vous propose de [partager la vie d'un berger dans les Pyrénées](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=5+destinations+sud+de+la+France).
 
 ::image-container
 ---
-image-src: "/images/blogs/Olha-la-cabane-du-berger-copie.jpg.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/49BRGoGITtuhCoRicBQe.jpg"
 alt: Olha-la-cabane-du-berger copie.jpg
 ---
 ::
@@ -108,7 +108,7 @@ Les plus aguerris tenteront **le GR20** qui traverse le pays du nord au sud. Un 
 
 ::image-container
 ---
-image-src: "/images/blogs/Corse-destination-sud-France.jpg"
+image-src: "/images/blogs/5-destinations-sud-france-a-visiter/R8d602S5RQG08uoODFdD.jpg"
 alt: Corse destination sud France
 ---
 ::

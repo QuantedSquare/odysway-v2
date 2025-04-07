@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-05-25 10:16:00+00:00"
 tags: "Etats Unis, Famille, Finlande, France, Grands espaces, Nepal"
 categories: ""
-displayedImg: "/images/blogs/Ou-se-ressourcer-en-pleine-nature-pendant-ses-vacances.jpg"
+displayedImg: "/images/blogs/ou-ressourcer-pleine-nature-vacances/swBsBj5LTeOBe4uy7oGz.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Ou-se-ressourcer-en-pleine-nature-pendant-ses-vacances.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/swBsBj5LTeOBe4uy7oGz.jpg"
 ---
 #publication-date
 25 mai 2020
@@ -31,22 +31,22 @@ Où se ressourcer en pleine nature pendant ses vacances ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Ou-se-ressourcer-en-pleine-nature-pendant-ses-vacances.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/swBsBj5LTeOBe4uy7oGz.jpg"
 ---
 #content
 Le temps avance à toute allure ? Vous avez une vie professionnelle trépidante, mais fatigante ? Ou simplement une envie de nature ? Parfois, le rythme de notre quotidien est un peu rapide, on se lève, on travaille, on se couche et on s’oublie un peu, quelques jours ou quelques semaines. Stop ! Si on s’arrêtait un peu et on respirait à nouveau ? Rien de tel que de partir au vert pour prendre l’air. Nous vous invitons à vivre un séjour loin de l’agitation et de la pollution des villes. Où se ressourcer en pleine nature pendant ses vacances ? Voici quelques destinations avec de grands espaces où la nature a gardé ses droits. Vous pouvez vous reconnecter à l’environnement et apprécier des paysages grandioses. Allez, on se détend et on se laisse porter par ces idées de voyages.
 
 ## Séjour Nature : se déconnecter du quotidien
 
-Les voyages nature en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
+Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 
 ## Respirer en France
 
-Et si on commençait par voyager près de chez soi ? La France regorge de trésors. Nul besoin de partir loin pour être dépaysé et s’oxygéner les poumons. Pour une échappée rurale d’un long week-end ou plus, une randonnée dans les volcans d’Auvergne, la Drôme, ou les montagnes du Pays Basque vous permettra de recharger vos batteries. Les amoureux de la marche à pied, en quête de paix et de tranquillité, seront heureux dans ces espaces naturels préservés. Pour un voyage en immersion totale, éloigné du tourisme de masse, partagez le quotidien d’un berger des Pyrénées. Pour ceux qui préfèrent la randonnée à cheval, partez vous ressourcer en pleine nature en Camargue. Au rythme des gardians, les étendues sauvages n’auront plus de secret pour vous. Laissez-vous guider, cheveux au vent et faites corps avec l’animal. Profitez de cette sensation de liberté au sein du parc naturel et appréciez cette réserve de biodiversité.
+Et si on commençait par voyager près de chez soi ? La France regorge de trésors. Nul besoin de partir loin pour être dépaysé et s’oxygéner les poumons. Pour une échappée rurale d’un long week-end ou plus, une randonnée dans les volcans d’Auvergne, la Drôme, ou les montagnes du Pays Basque vous permettra de recharger vos batteries. Les amoureux de la marche à pied, en quête de paix et de tranquillité, seront heureux dans ces espaces naturels préservés. Pour un voyage en immersion totale, éloigné du tourisme de masse, [partagez le quotidien d’un berger des Pyrénées](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=se+ressourcer+pendant+ses+vacances). Pour ceux qui préfèrent la randonnée à cheval, partez vous ressourcer en pleine nature en Camargue. Au rythme des gardians, les étendues sauvages n’auront plus de secret pour vous. Laissez-vous guider, cheveux au vent et faites corps avec l’animal. Profitez de cette sensation de liberté au sein du parc naturel et appréciez cette réserve de biodiversité.
 
 ::image-container
 ---
-image-src: "/images/blogs/France-se-ressourcer-en-pleine-nature.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/ZNDbUOHKRhKL3d2wUnP8.jpg"
 alt: France se ressourcer en pleine nature
 ---
 ::
@@ -59,7 +59,7 @@ Le Laos est le pays d’Asie du Sud-Est idéal pour se ressourcer. Moins fréque
 
 ::image-container
 ---
-image-src: "/images/blogs/Nature-Laos.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/FGNUXgUcRwaonlLwLPkC.jpg"
 alt: Nature Laos
 ---
 ::
@@ -72,7 +72,7 @@ alt: Nature Laos
 
 ::image-container
 ---
-image-src: "/images/blogs/cow-boy-USA-Nature.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/MDwSqwqOTFanS0lCgPQI.jpg"
 alt: cow boy USA Nature
 ---
 ::
@@ -85,7 +85,7 @@ Le Népal est une destination magique pour se ressourcer en pleine nature. Un yo
 
 ::image-container
 ---
-image-src: "/images/blogs/trek-Annapurna.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/kxNOEeRSaW2NDg5u2Pvq.jpg"
 alt: trek Annapurna
 ---
 ::
@@ -98,7 +98,7 @@ L’Australie est une île gigantesque qui fait à peu près la taille de l’Eu
 
 ::image-container
 ---
-image-src: "/images/blogs/ou-se-ressourcer-en-pleine-nature-Uluru.jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/2CdPblGkRbOz8zpiTfgy.jpg"
 alt: où se ressourcer en pleine nature Uluru
 ---
 ::
@@ -107,16 +107,16 @@ _L'imposant rocher Uluru en Australie._ 
 
 ## Se ressourcer en pleine nature en Finlande 
 
-A seulement quelques heures d’avion de la France, la Finlande ravira les friands de nature sauvage. Faites le plein d’énergie pendant votre virée au pays des lacs, des marais et des rennes. Prenez votre temps en Finlande, ses terres sont aussi fascinantes que dépaysantes. Le concept du slowtourisme prend tout son sens en Finlande. Pour une déconnexion totale, oubliez votre téléphone et le wifi pour une reconnexion avec les éléments naturels. Observez les ours bruns, pagayez dans votre canoë sur un lac au milieu de la forêt, péchez dans le lac, détendez-vous au sauna. Vibrez résolument nature en Finlande.
+A seulement quelques heures d’avion de la France, la Finlande ravira les friands de nature sauvage. Faites le plein d’énergie pendant votre virée au pays des lacs, des marais et des rennes. Prenez votre temps en Finlande, ses terres sont aussi fascinantes que dépaysantes. Le concept du slowtourisme prend tout son sens en Finlande. Pour une déconnexion totale, oubliez votre téléphone et le wifi pour une reconnexion avec les éléments naturels. Observez les ours bruns, pagayez dans votre canoë sur un lac au milieu de la forêt, péchez dans le lac, détendez-vous au sauna. [Vibrez résolument nature en Finlande](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=o%C3%B9_se_ressourcer_en_pleine_nature_pendant_vacancesD).
 
 ::image-container
 ---
-image-src: "/images/blogs/canoe-dans-le-parc-national-de-hossa-....jpg"
+image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/uWBnVnVATbGqVwOR9UcC.jpg"
 alt: canoe-dans-le-parc-national-de-hossa-...
 ---
 ::
 
 _Profitez du calme de la nature dans votre canoë._
 
-En attendant, vous pouvez consulter notre article sur comment découvrir les pays scandinaves !
+En attendant, vous pouvez consulter [notre article sur comment découvrir les pays scandinaves !](https://odysway.com/comment-decouvrir-pays-scandinaves)
 ::

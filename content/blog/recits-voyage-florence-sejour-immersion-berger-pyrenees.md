@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-11-23 14:16:00+00:00"
 tags: "Animaux, Communautés locales, France, Grands espaces, Made in France"
 categories: "Nature et grands espaces, Blog"
-displayedImg: "/images/blogs/Recits-de-Voyage-Florence-Guilmaille-Partagez-la-vie-d'un-berger-dans-les-Pyrenees.jpg"
+displayedImg: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/MVJHBQyQeOnW01mDbDUw.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Recits-de-Voyage-Florence-Guilmaille-Partagez-la-vie-d'un-berger-dans-les-Pyrenees.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/MVJHBQyQeOnW01mDbDUw.jpg"
 ---
 #publication-date
 23 novembre 2020
@@ -31,7 +31,7 @@ Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyr
 
 ::section-container
 ---
-image-src: "/images/blogs/Recits-de-Voyage-Florence-Guilmaille-Partagez-la-vie-d'un-berger-dans-les-Pyrenees.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/MVJHBQyQeOnW01mDbDUw.jpg"
 ---
 #content
   
@@ -44,7 +44,7 @@ Découvrez ses impressions et revivez ce voyage à travers son témoignage !
 
 Après quelques soucis personnels, je suis tombée sur votre site dont le concept m'a tout de suite parlé. Je me suis dit que partir comme ça, durant quelques jours au coeur de la nature ne pourrait que me faire du bien et m'aider à avancer !
 
-Et c’est le voyage dans les Pyrénées à la rencontre des bergers qui m’a interpellée. Ce que je recherchais, c’est l’immersion dans la nature, me rapprocher des montagnes pour me déconnecter totalement du quotidien. Je n’étais d'ailleurs jamais allée dans les Pyrénées, c'était une belle occasion pour moi de découvrir ce joli coin de France.
+Et c’est le voyage dans [les Pyrénées à la rencontre des bergers](https://odysway.com/voyages/sejour-berger-bearn?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Florence) qui m’a interpellée. Ce que je recherchais, c’est l’immersion dans la nature, me rapprocher des montagnes pour me déconnecter totalement du quotidien. Je n’étais d'ailleurs jamais allée dans les Pyrénées, c'était une belle occasion pour moi de découvrir ce joli coin de France.
 
 ### **🔥 Les moments les plus marquants de votre voyage ?**
 
@@ -60,48 +60,48 @@ Avec le Covid-19, ça n’a pas été simple pour venir. L'encadrement proposé 
 
 ## **🧐 Un autre voyage que vous aimeriez faire avec Odysway ?**
 
-Absolument ! J'aimerai prochainement partir plus loin, pourquoi pas le voyage proposé par Odysway au Cap-vert à Santo Antao ou au Népal pour randonner tout en dormant le soir chez l'habitant..
+Absolument ! J'aimerai prochainement partir plus loin, pourquoi pas le voyage proposé par Odysway au [Cap-vert à Santo Antao](https://odysway.com/voyages/trek-chez-lhabitant-cap-vert) ou au [Népal pour randonner tout en dormant le soir chez l'habitant](https://odysway.com/voyages/trek-chez-lhabitant-nepal)..
 
 ## **Quelques photos souvenirs de Florence**
 
 ::image-container
 ---
-image-src: "/images/blogs/IMG_20200706_112812.jpg.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/9UKaRogcQbSWga1brjbY.jpg"
 alt: IMG_20200706_112812.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: "/images/blogs/IMG_20200710_072158.jpg.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/GNeQfMaMRPWcvZCii94D.jpg"
 alt: IMG_20200710_072158.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: "/images/blogs/IMG_20200710_102216.jpg.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/4x1kpw1fTPC4dbJebNQL.jpg"
 alt: IMG_20200710_102216.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: "/images/blogs/IMG_20200710_072555.jpg.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/I0baHrsGQBSb2DZBUYHT.jpg"
 alt: IMG_20200710_072555.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: "/images/blogs/IMG_20200710_072135.jpg.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/3xaKL3rgQpqvYsvMWBkG.jpg"
 alt: IMG_20200710_072135.jpg
 ---
 ::
 
 ::image-container
 ---
-image-src: "/images/blogs/IMG_20200707_103357.jpg.jpg"
+image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/96pBDB31QGalAi3BwL5E.jpg"
 alt: IMG_20200707_103357.jpg
 ---
 ::

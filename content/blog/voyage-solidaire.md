@@ -52,14 +52,14 @@ Voici les meilleures expériences de **voyages solidaires** proposées par Odysw
 
 ::image-container
 ---
-image-src: "/images/blogs/5heSbNTR2eVFeANk6gwt-1742840794404.jpg"
+image-src: "/images/blogs/voyage-solidaire/5heSbNTR2eVFeANk6gwt.jpg"
 alt: undefined
 ---
 ::
 
 Sur les 4 continents, on constate avec dépit que de plus en plus d’espèces animales sont menacées d’extinction.
 
-Braconnage, déforestation, tourisme de masse, les dangers ne manquent pas et la liste est longue, malheureusement. Vous pouvez changer la donne à votre niveau en participant à **un voyage solidaire au cœur de la jungle du Costa Rica** au cours duquel vous aiderez  et soignerez des animaux blessés ou orphelins.
+Braconnage, déforestation, tourisme de masse, les dangers ne manquent pas et la liste est longue, malheureusement. Vous pouvez changer la donne à votre niveau en participant à [**un voyage solidaire au cœur de la jungle du Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) au cours duquel vous aiderez  et soignerez des animaux blessés ou orphelins.
 
 C’est dans un refuge ayant pour mission de réintroduire ces animaux de la forêt tropicale dans leur habitat naturel,  que vous pourrez partager et donner votre amour à ces créatures fantastiques. Faire connaissance avec les animaux, préparer leurs repas, interagir avec eux, c’est entre autres ce qui vous attend durant ce **périple** au Costa Rica.
 
@@ -69,14 +69,14 @@ Vous serez logé chez l’habitant afin de **vivre en immersion** au cœur de la
 
 ::image-container
 ---
-image-src: "/images/blogs/GcF6LYPSPGNCJo0LULE5-1742840794918.jpg"
+image-src: "/images/blogs/voyage-solidaire/GcF6LYPSPGNCJo0LULE5.jpg"
 alt: undefined
 ---
 ::  
 
 Offrez-vous l’opportunité de vivre comme les locaux, à leur rythme, de comprendre les enjeux auxquels ils font face au quotidien et de partager leurs joies.
 
-Au Népal par exemple, au contact de jeunes moines, vous pourrez **vivre en immersion dans un monastère bouddhiste,** dans la région de Katmandou. 
+Au Népal par exemple, au contact de jeunes moines, vous pourrez [**vivre en immersion dans un monastère bouddhiste,**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) dans la région de Katmandou. 
 
 Durant ce **voyage solidaire**, vous jouerez un rôle dans leur éducation et apprendrez les bases du bouddhisme tibétain à la source ; une expérience de vie unique.
 
@@ -86,14 +86,14 @@ Vous logerez au sein même du monastère dans un environnement empreint de sér�
 
 ::image-container
 ---
-image-src: "/images/blogs/Solidarite-en-Afrique-du-Sud.jpg"
+image-src: "/images/blogs/voyage-solidaire/MSNxhVjQVqMUr93EN4Cg.jpg"
 alt: Solidarité en Afrique du Sud
 ---
 ::
 
 L’Afrique du Sud, la “rainbow nation” aux paysages et cultures si variés, possède une grande variété d'écosystèmes ainsi qu’une faune et une flore très diversifiées qui vous enchantera durant cette expérience hors du commun !
 
-C’est non loin du Cap, que vous allez **vivrez quotidiennement en immersion avec des félins** et serez hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
+C’est non loin du Cap, que vous allez [**vivrez quotidiennement en immersion avec des félins**](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) et serez hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
 
 Ce **voyage solidair**e vous offre la possibilité de participer à un projet unique de conservation. Vous effectuerez de petits travaux agricoles, apprendrez à communiquer avec les félins et à créer des liens forts avec eux. Les félins de ce sanctuaire ont été sauvés du braconnage, des zoos et d’autres environnements peu amicaux pour eux. Vous apprendrez à les connaître ainsi que leur parcours parfois très triste.
 
@@ -105,7 +105,7 @@ Vous aurez également la chance de découvrir le Cap, ses magnifiques plages et 
 
 ::image-container
 ---
-image-src: "/images/blogs/Odysway-et-le-voyage-solidaire.jpg"
+image-src: "/images/blogs/voyage-solidaire/oc8MJq0wSGieXa9WNA6t.jpg"
 alt: Odysway et le voyage solidaire
 ---
 ::
@@ -120,9 +120,9 @@ Toute l'équipe d’Odysway est là pour vous guider dans votre choix de **voyag
 
 Que vous souhaitiez : 
 
-*   **vous occuper d'éléphants** dans leur sanctuaire en Thaïlande ; 
-*   **soutenir les populations locales au coeur de la jungle amazonienne** ;
-*   partir à la **découverte de la culture quechua au Pérou** et rencontrer un chamane. 
+*   [**vous occuper d'éléphants**](https://odysway.com/voyages/sanctuaire-%C3%A9l%C3%A9phants-thailande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) dans leur sanctuaire en Thaïlande ; 
+*   [**soutenir les populations locales au coeur de la jungle amazonienne**](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) ;
+*   partir à la [**découverte de la culture quechua au Pérou**](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) et rencontrer un chamane. 
 
 Nous sommes à votre disposition pour toute question.
 ::

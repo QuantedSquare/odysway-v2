@@ -12,12 +12,12 @@ published: false
 publishedAt: "2019-02-04 08:55:00+00:00"
 tags: "Afrique, Communautés locales, Ethiopie, Grands espaces"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Immersion-chez-les-populations-du-Grand-Rift-Africain.jpg"
+displayedImg: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/Z9XchvcjQZya7dwBFrrt.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Immersion-chez-les-populations-du-Grand-Rift-Africain.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/Z9XchvcjQZya7dwBFrrt.jpg"
 ---
 #publication-date
 4 février 2019
@@ -31,16 +31,16 @@ Immersion chez les populations du Grand Rift Africain
 
 ::section-container
 ---
-image-src: "/images/blogs/Immersion-chez-les-populations-du-Grand-Rift-Africain.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/Z9XchvcjQZya7dwBFrrt.jpg"
 ---
 #content
 A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d’une région ou d’un pays. En Afrique de l’est, de nombreuses tribus se sont installées aux abords du Grand Rift. Ce profond fossé long de plusieurs milliers de km offre des paysages comme nulle part ailleurs ainsi qu’un faune et flore diversifiées. Entrons en immersion chez ces populations du Grand Rift Africain.
 
-Nous vous invitons après votre lecture, de poursuive en consultant notre article de blog sur l'Éthiopie, le berceau de l'humanité.
+Nous vous invitons après votre lecture, de poursuive en consultant notre article de blog [sur l'Éthiopie, le berceau de l'humanité.](https://odysway.com/lethiopie-berceau-de-lhumanite)
 
 ::image-container
 ---
-image-src: "/images/blogs/XwUrpyOQlexMyXJXx2Xf-1742842081950.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/XwUrpyOQlexMyXJXx2Xf.jpg"
 alt: 
 ---
 ::  
@@ -53,7 +53,7 @@ Le Grand Rift Africain est un profond fossé apparu il y a environ 35 millions d
 
 ::image-container
 ---
-image-src: "/images/blogs/FSQLzuzIR62DflNu7eRt-1742842082637.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/FSQLzuzIR62DflNu7eRt.jpg"
 alt: 
 ---
 ::  
@@ -64,7 +64,7 @@ En effet, chacune possède leur propre langage et traditions ancestrales. Ces tr
 
 ## Les populations du Grand Rift Africain en Ethiopie
 
-Dans le Grand Rift Africain éthiopien, la vallée de l’Omo abrite la tribu des Hamar. Eleveurs de bovins, ils cultivent également le mil, les légumes, le tabac et le coton. Comme beaucoup de populations, ils apportent avant tout une très grande importance à leur apparence. En toute occasion, hommes et femmes se parent de leurs plus beaux bijoux et se font les plus belles coiffures. Notamment lors de cérémonies, comme celle de l’Ukuli.
+Dans le Grand Rift Africain éthiopien, la vallée de l’Omo abrite la tribu des Hamar. Eleveurs de bovins, ils cultivent également le mil, les légumes, le tabac et le coton. Comme beaucoup de populations, ils apportent avant tout une très grande importance à leur apparence. En toute occasion, hommes et femmes se parent de leurs plus beaux bijoux et se font les plus belles coiffures. Notamment lors de cérémonies, comme [celle de l’Ukuli](https://odysway.com/la-ceremonie-de-lukuli-en-ethiopie).
 
 A plus de 2 700 m d’altitude, au nord de la ville d’Arba Minch, la tribu des Dorzé est célèbre pour ses huttes atypiques, appelées toukoul. En effet, leur hauteur atteint les 10 m, elles sont faites de bambou et de faux bananier et le toit est en forme de cône. Anciens guerriers, les membres de cette tribu vivent aujourd’hui du tissage et de la culture du faux bananier.
 
@@ -72,11 +72,11 @@ Agriculteurs aguerris, les Konzo ont développé la culture en terrasse, leur pe
 
 Dans le Parc National de Mago, les Mursi sont un peuple nomade facilement reconnaissable grâce à aux femmes. En effet, elles portent un plateau labial pouvant atteindre 15 cm de diamètre. Les hommes, quant à eux, arborent fièrement crâne rasé, scarifications et oreilles percées.
 
-Voyagez sur la terre des premiers hommes en Éthiopie avec Odysway
+[Voyagez sur la terre des premiers hommes en Éthiopie avec Odysway](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=article&utm_medium=blog&utm_campaign=voyage+terre+premiers+hommes)
 
 ::image-container
 ---
-image-src: "/images/blogs/SlymT4uzRNCJJDkxqyqD-1742842083151.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/SlymT4uzRNCJJDkxqyqD.jpg"
 alt: 
 ---
 ::  
@@ -91,7 +91,7 @@ Partons maintenant dans la partie kenyane du Grand Rift Africain. Eleveurs semi-
 
 ::image-container
 ---
-image-src: "/images/blogs/UkWflrqyS5yPffs4qmS8-1742842083783.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/UkWflrqyS5yPffs4qmS8.jpg"
 alt: 
 ---
 ::  
@@ -112,7 +112,7 @@ Autre ethnie du Grand Rift Africain en Ouganda, les Karamojong sont une tribu d�
 
 ::image-container
 ---
-image-src: "/images/blogs/jdZ0SMrTX1YzwfeerQ0C-1742842084360.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/jdZ0SMrTX1YzwfeerQ0C.jpg"
 alt: 
 ---
 ::  
@@ -125,7 +125,7 @@ Sur les berges du lac Eyasi en Tanzanie, une région très isolée du Grand Rift
 
 ::image-container
 ---
-image-src: "/images/blogs/h71ItV1YS3yVi9PMM5YU-1742842084887.jpg"
+image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/h71ItV1YS3yVi9PMM5YU.jpg"
 alt: 
 ---
 ::  
@@ -134,5 +134,5 @@ _Les Hadzabé, partis pour la chasse_
 
 ## Voyager chez l'habitant avec Odysway
 
-Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les voyages chez l’habitant.
+Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::

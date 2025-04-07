@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-01-16 12:06:00+00:00"
 tags: "Amerique du Sud, Asie, Chine, Developpement personnel, Europe, Famille, Finlande, Grands espaces, Nepal, Perou, Sport, Sri Lanka, Thailande"
 categories: "Depassement de soi, Culture et decouverte"
-displayedImg: "/images/blogs/Comment-allier-sport-et-decouverte-en-voyage.jpg"
+displayedImg: "/images/blogs/sport-decouverte-voyage/PPPbRQFSwuTZ6Q2GO3wd.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Comment-allier-sport-et-decouverte-en-voyage.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/PPPbRQFSwuTZ6Q2GO3wd.jpg"
 ---
 #publication-date
 16 janvier 2020
@@ -31,12 +31,12 @@ Comment allier sport et découverte en voyage ?
 
 ::section-container
 ---
-image-src: "/images/blogs/Comment-allier-sport-et-decouverte-en-voyage.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/PPPbRQFSwuTZ6Q2GO3wd.jpg"
 ---
 #content
 Tout le monde le sait, pratiquer une activité sportive est bon pour la santé. Et ce n’est pas en voyage qu’il faut déroger à la règle. Profitez justement de vos vacances pour continuer à faire du sport et même en découvrir de nouveaux. **Mais comment allier sport et découverte en voyage ?** Odysway vous explique tout !
 
-Nous vous invitons à lire notre article sur le top 10 des destinations pour un voyage sportif.
+Nous vous invitons à lire notre article [sur le top 10 des destinations pour un voyage sportif.](https://odysway.com/top-10-destinations-voyage-sportif)
 
 ## **Pourquoi faire du sport en voyage ?**
 
@@ -48,7 +48,7 @@ Mais faire du sport en voyage ne se résume pas à fréquenter la salle de sport
 
 **::image-container
 ---
-image-src: "/images/blogs/s4qltoo1TNaWfsTBAOOm-1742841001386.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/s4qltoo1TNaWfsTBAOOm.jpg"
 alt: 
 ---
 ::**
@@ -61,20 +61,20 @@ Tout pays possède une ou plusieurs villes incontournables à visiter. **Pour a
 
 ::image-container
 ---
-image-src: "/images/blogs/rt0DbQNyScqAdVcQ7lZo-1742841001970.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/rt0DbQNyScqAdVcQ7lZo.jpg"
 alt: 
 ---
 ::
 
 ## **Campagne, mer ou montagne : des environnements adaptés pour allier sport et découverte**
 
-En quittant les villes, vous allez vous apercevoir qu’il y a mille et une façons de combiner sport et découverte. Et tout naturellement. Prenons comme exemple la montagne. **Randonnées à pied ou en VTT**, voilà une façon d’observer les paysages tout en faisant du sport. Pour vous faire découvrir ce type de voyage, Odysway vous a préparé un voyage au coeur de la nature Finlande : découvrir ses merveilleux paysage en canoë et profitez de votre temps libre pour faire des randonnées ou du VTT ! Pour les amateurs de sensations fortes, il existe maintes activités sportives permettant de découvrir un environnement : **du kayak, du rafting, de l’escalade, du canyoning**… 
+En quittant les villes, vous allez vous apercevoir qu’il y a mille et une façons de combiner sport et découverte. Et tout naturellement. Prenons comme exemple la montagne. **Randonnées à pied ou en VTT**, voilà une façon d’observer les paysages tout en faisant du sport. Pour vous faire découvrir ce type de voyage, Odysway vous a préparé [un voyage au coeur de la nature Finlande](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=Allier_Sport_Decouverte) : découvrir ses merveilleux paysage en canoë et profitez de votre temps libre pour faire des randonnées ou du VTT ! Pour les amateurs de sensations fortes, il existe maintes activités sportives permettant de découvrir un environnement : **du kayak, du rafting, de l’escalade, du canyoning**… 
 
 **A la campagne, optez pour le vélo** pour parcourir les chemins en pleine nature et faire de fantastiques découvertes. Il permet en outre de s’adonner au slow tourisme, le meilleur moyen d’apprécier la destination de ses vacances à sa juste valeur. A mi-chemin entre la marche et la course, **la marche nordique** permet de se balader au milieu de la forêt par exemple.
 
 ::image-container
 ---
-image-src: "/images/blogs/rme9UXsyTQiKUNDgtbww-1742841002488.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/rme9UXsyTQiKUNDgtbww.jpg"
 alt: 
 ---
 ::
@@ -85,7 +85,7 @@ _Faire du vélo au Sri Lanka et découvrir de sulimes paysages_
 
 ::image-container
 ---
-image-src: "/images/blogs/sI28RTosT2u05WLm9oPj-1742841003021.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/sI28RTosT2u05WLm9oPj.jpg"
 alt: 
 ---
 ::
@@ -100,14 +100,14 @@ Les beaux jours n’ont pas l’exclusivité de l’association sport et découv
 
 Pour les fans de sports de combat, il n’est pas impossible d’allier sport de combat et voyage ! Que diriez-vous d’aller à la découverte du Muay Thaï (ou boxe thaïlandaise) en Thaïlande ou du Jiu-Jitsu dans son pays d’origine, le Brésil ?
 
-Odysway vous propose de vous initier ou d’approfondir votre connaissance de la boxe thaï dans un des centres les plus réputés de Thaïlande en plein cœur de la nature, dans les collines verdoyantes de Pai. Vous serez entraîné par un expert de la discipline qui baigne dedans depuis son enfance.
+Odysway vous propose de vous initier ou d’approfondir votre connaissance de la [boxe thaï dans un des centres les plus réputés de Thaïlande](https://odysway.com/voyages/stage-boxe-thai-nord-thailande) en plein cœur de la nature, dans les collines verdoyantes de Pai. Vous serez entraîné par un expert de la discipline qui baigne dedans depuis son enfance.
 
 ::image-container
 ---
-image-src: "/images/blogs/YtCQfmCyRTWP2gdAl5ch-1742841003538.jpg"
+image-src: "/images/blogs/sport-decouverte-voyage/YtCQfmCyRTWP2gdAl5ch.jpg"
 alt: 
 ---
 ::
 
-Si vous êtes plutôt intéressé par le sport, et notamment par les arts martiaux, jetez un œil à l'offre Odysway dans notre thématique "Sport" ! Découvrez aussi les différents arts martiaux que vous pouvez découvrir tout en voyageant !
+Si vous êtes plutôt intéressé par le sport, et notamment par les arts martiaux, jetez un œil à l'offre Odysway [dans notre thématique "Sport"](https://odysway.com/thematiques/voyage-sportif) ! Découvrez aussi les [différents arts martiaux que vous pouvez découvrir tout en voyageant](https://odysway.com/sejour-arts-martiaux) !
 ::

@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-04-04 12:43:00+00:00"
 tags: "Animaux, Communautés locales, Europe, Famille, France, Grands espaces, Made in France, Sport"
 categories: "Nature et grands espaces, Culture et decouverte, Benefices locaux"
-displayedImg: "/images/blogs/5-bonnes-raisons-de-voyager-en-France.jpg"
+displayedImg: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-bonnes-raisons-de-voyager-en-France.jpg"
+image-src: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
 ---
 #publication-date
 4 avril 2023
@@ -31,22 +31,22 @@ image-src: "/images/blogs/5-bonnes-raisons-de-voyager-en-France.jpg"
 
 ::section-container
 ---
-image-src: "/images/blogs/5-bonnes-raisons-de-voyager-en-France.jpg"
+image-src: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
 ---
 #content
 Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement tout cela à la fois. Il est vrai que **notre pays recèle bien des trésors culturels, architecturaux, environnementaux et historiques**. Et si c'était votre tour de voyager en France pour les (re)découvrir ? On vous donne 5 bonnes raisons de ne pas voyager hors de nos frontières.
 
-Découvrez les voyages en France made in Odysway.
+[Découvrez les voyages en France made in Odysway.](https://odysway.com/destinations/france)
 
 ## Voyager en France pour faire du bien à la planète
 
-Fortement pointé du doigt à cause de son effet néfaste sur l'environnement, le voyage – ou du moins la façon de voyager – est mis à mal. L'avion pollue et le tourisme accentue les désastres écologiques. Même s'il existe des moyens pour réduire notre empreinte carbone et écologique, **voyager en France permet à notre planète de souffler un peu**. Et puis partir moins loin a deux impacts positifs : **réduire la pollution donc et permettre de voyager plus longtemps**. Vous pouvez ainsi profiter davantage de vos vacances et découvrir pleinement le lieu où vous êtes. Selon la durée de votre séjour, planifiez un ou deux lieux de résidence pour minimiser vos déplacements. Ensuite, sur place, privilégiez un mode de transport écolo comme le vélo ou la marche pour des petits trajets.
+Fortement pointé du doigt à cause de son effet néfaste sur l'environnement, le voyage – ou du moins la façon de voyager – est mis à mal. L'avion pollue et le tourisme accentue les désastres écologiques. Même s'il existe des moyens pour [réduire notre empreinte carbone](https://odysway.com/comment-limiter-mon-empreinte-carbone-en-voyage) et écologique, **voyager en France permet à notre planète de souffler un peu**. Et puis partir moins loin a deux impacts positifs : **réduire la pollution donc et permettre de voyager plus longtemps**. Vous pouvez ainsi profiter davantage de vos vacances et découvrir pleinement le lieu où vous êtes. Selon la durée de votre séjour, planifiez un ou deux lieux de résidence pour minimiser vos déplacements. Ensuite, sur place, privilégiez un mode de transport écolo comme le vélo ou la marche pour des petits trajets.
 
 Les normes écologiques sont identiques sur tout le territoire, donc **pas de difficulté particulière pour continuer à trier et à recycler vos déchets** pendant votre voyage. Agissez pour un tourisme responsable et de proximité en optant pour des produits locaux et de saison. Un bon moyen d'éveiller ses papilles à de nouvelles saveurs tout en donnant un coup de pouce aux producteurs du coin. De même, avant de réserver une excursion ou une activité, vérifiez le bon respect de l'environnement. Comme il n'y a pas le problème de la barrière de la langue, c'est plus facile de poser les bonnes questions.
 
 ::image-container
 ---
-image-src: "/images/blogs/5CSzEkt3RxqauH7XgMgC-1742840638948.jpg"
+image-src: "/images/blogs/5-bonnes-raisons-voyager-france/5CSzEkt3RxqauH7XgMgC.jpg"
 alt: 
 ---
 ::
@@ -63,13 +63,13 @@ Sachez que **quarante-cinq sites français sont aujourd'hui classés à l'Unesco
 
 ## Voyager en France pour s'essayer au slow tourisme
 
-Aviez-vous l'habitude de partir à l'étranger et de programmer plusieurs étapes pendant votre voyage afin de voir un maximum de choses ? La langue et la culture différentes vous empêchaient-elles d'aller vers les autres ? **Et si voyager en France vous permettait** justement de passer outre ces difficultés et **de concevoir vos vacances différemment ?** Essayez-vous dans ce cas au slow tourisme ! Partez sur les routes de France pour en découvrir toutes ses richesses naturelles et culturelles. Notre pays possède pas moins de **60 000 km de sentiers de randonnées, plus de 20 000 km de voies vertes ou véloroutes et environ 6 700 km de voies navigables**. Il y a de quoi faire ! De plus, le slow tourisme s'adapte à tous : en famille, à deux ou entre amis, chacun y trouvera son compte. Un excellent moyen aussi d'aller au plus près des habitants et de faire de belles rencontres souvent inattendues.
+Aviez-vous l'habitude de partir à l'étranger et de programmer plusieurs étapes pendant votre voyage afin de voir un maximum de choses ? La langue et la culture différentes vous empêchaient-elles d'aller vers les autres ? **Et si voyager en France vous permettait** justement de passer outre ces difficultés et **de concevoir vos vacances différemment ?** Essayez-vous dans ce cas au [slow tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue) ! Partez sur les routes de France pour en découvrir toutes ses richesses naturelles et culturelles. Notre pays possède pas moins de **60 000 km de sentiers de randonnées, plus de 20 000 km de voies vertes ou véloroutes et environ 6 700 km de voies navigables**. Il y a de quoi faire ! De plus, le slow tourisme s'adapte à tous : en famille, à deux ou entre amis, chacun y trouvera son compte. Un excellent moyen aussi d'aller au plus près des habitants et de faire de belles rencontres souvent inattendues.
 
-Et pourquoi ne pas partir à la rencontre de celles et ceux qui détiennent des savoirs-faire français. Odysway vous propose de partir dans les Pyrénées partager la vie d'un berger. Vous vivrez une immersion en terre sauvage au cœur de somptueux paysages, à la découverte des traditions, entre transhumance, traite de brebis, fabrication de fromages et bien d'autres.
+Et pourquoi ne pas partir à la rencontre de celles et ceux qui détiennent des savoirs-faire français. Odysway vous propose de [partir dans les Pyrénées partager la vie d'un berger](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=5+bonnes+raisons+de+voyager+en+France). Vous vivrez une immersion en terre sauvage au cœur de somptueux paysages, à la découverte des traditions, entre transhumance, traite de brebis, fabrication de fromages et bien d'autres.
 
 ::image-container
 ---
-image-src: "/images/blogs/OtaozpDXTsGswuiAt8fX-1742840639531.jpg"
+image-src: "/images/blogs/5-bonnes-raisons-voyager-france/OtaozpDXTsGswuiAt8fX.jpg"
 alt: 
 ---
 ::
@@ -90,5 +90,5 @@ Accordons une mention spéciale à la Bourgogne qui multiplie les mets très gou
 
 ## Découvrez nos voyages culturels 
 
-Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de voyages culturels proposés par Odysway.
+Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 ::

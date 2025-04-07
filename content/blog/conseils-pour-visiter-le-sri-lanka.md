@@ -12,12 +12,12 @@ published: false
 publishedAt: "2023-07-17 07:11:00+00:00"
 tags: "partir seul, Sri Lanka, voyage"
 categories: "voyage, conseil, préparer"
-displayedImg: "/images/blogs/Conseils-pour-visiter-le-Sri-Lanka.jpg"
+displayedImg: "/images/blogs/conseils-pour-visiter-le-sri-lanka/x3B0rriAQGmcMLDfKJ1B.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Conseils-pour-visiter-le-Sri-Lanka.jpg"
+image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/x3B0rriAQGmcMLDfKJ1B.jpg"
 ---
 #publication-date
 17 juillet 2023
@@ -31,14 +31,14 @@ Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine
 
 ::section-container
 ---
-image-src: "/images/blogs/Conseils-pour-visiter-le-Sri-Lanka.jpg"
+image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/x3B0rriAQGmcMLDfKJ1B.jpg"
 ---
 #content
 Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine variée, sa faune diversifiée et son long littoral parsemé de plages d'un blanc nacré. Il y a donc de nombreuses possibilités pour un voyage immersif sur l'île. Cependant, la plupart des voyageurs ne séjournent que dans une partie limitée de l'île : le sud ou le sud-ouest. Bien sûr, tout le monde ne peut pas rester éternellement au Sri Lanka, mais il est également dommage de passer à côté des beautés des autres parties de l'île.
 
 ::image-container
 ---
-image-src: "/images/blogs/BbvB1h7oRziuoc2HmaDM-1742840601282.jpg"
+image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/BbvB1h7oRziuoc2HmaDM.jpg"
 alt: undefined
 ---
 ::
@@ -49,7 +49,7 @@ Assurez-vous d'avoir un passeport encore valable pendant au moins six mois aprè
 
 En outre, veillez à demander le bon **visa** à temps.
 
-Pour le Sri Lanka, il faut obtenir un **ETA** visa.
+Pour le [Sri Lanka](https://demandevisa.fr/sri-lanka), il faut obtenir un **ETA** visa.
 
 Il s'agit d'une autorisation de voyage numérique que vous pouvez facilement demander en ligne. La procédure de demande prend tout au plus une demi-heure et la plupart des ETA sont délivrés dans un délai de quelques heures à un jour. Vous n'avez même pas besoin d'imprimer le document, car les services d'immigration sri-lankais peuvent déterminer instantanément, à partir du numéro de votre passeport, si vous disposez d'un document de voyage valide.
 
@@ -75,7 +75,7 @@ Si vous aimez le surf, vous devriez vous rendre sur les côtes est et sud de l'�
 
 ::image-container
 ---
-image-src: "/images/blogs/kkGUWKIRtirzLBmlGv2A-1742840601803.jpg"
+image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/kkGUWKIRtirzLBmlGv2A.jpg"
 alt: undefined
 ---
 ::
@@ -88,7 +88,7 @@ Le climat du Sri Lanka est fortement influencé par la mousson. De la mi-mai à 
 
 ::image-container
 ---
-image-src: "/images/blogs/LDGymYOoSV6jX9YQtMkh-1742840602323.jpg"
+image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/LDGymYOoSV6jX9YQtMkh.jpg"
 alt: undefined
 ---
 ::
@@ -107,5 +107,5 @@ Réalisez-le aujourd'hui avec notre nouvelle offre de voyage sur-mesure !
 
 Qu'il s'agisse d'une escapade romantique, d'une aventure en plein air ou d'une immersion culturelle, nos équipes passionnées mettront tout en œuvre afin de créer pour vous, le voyage de vos rêves !
 
-Créez votre projet maintenant : https://tally.so/r/wQM8g1
+Créez votre projet maintenant : [https://tally.so/r/wQM8g](https://tally.so/r/wQM8g1?fbclid=IwAR0LD73MS9eh9V6gsfd3pk_PX3qTbStFZr5yvvB5AQyj9AOZbikHfWFG6CM)1
 ::

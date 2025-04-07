@@ -12,12 +12,12 @@ published: false
 publishedAt: "2018-12-07 10:48:00+00:00"
 tags: "Afrique, Grands espaces, Madagascar"
 categories: "Depassement de soi"
-displayedImg: "/images/blogs/Le-top-5-des-activites-insolites-a-Madagascar.jpg"
+displayedImg: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/1PMbIeGDSzm6kU7JzDIQ.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Le-top-5-des-activites-insolites-a-Madagascar.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/1PMbIeGDSzm6kU7JzDIQ.jpg"
 ---
 #publication-date
 7 décembre 2018
@@ -31,7 +31,7 @@ Le top 5 des activités insolites à Madagascar
 
 ::section-container
 ---
-image-src: "/images/blogs/Le-top-5-des-activites-insolites-a-Madagascar.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/1PMbIeGDSzm6kU7JzDIQ.jpg"
 ---
 #content
 Madagascar, surnommée l’île rouge en raison de la couleur de sa terre, est probablement l’une des îles les plus singulières qui soit. Avec un écosystème unique, une faune et une flore endémiques, Madagascar regorge de panoramas époustouflants. Entre paysages et traditions, voici 5 activités insolites pour découvrir Madagascar.
@@ -43,7 +43,7 @@ Au sud-ouest de Madagascar, **le massif du Makay** est un lieu isolé dû à s
 
 ::image-container
 ---
-image-src: "/images/blogs/2E7HjWLR4ODyu5qF0nso-1742843052301.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/2E7HjWLR4ODyu5qF0nso.jpg"
 alt: 
 ---
 ::
@@ -55,13 +55,13 @@ _Massif du Makay_  
 
 Si vous voulez découvrir toutes les beautés de Madagascar d’une façon plus insolite, **descendez les fleuves à bord d’une pirogue**. C’est un mode de transport populaire sur l’île et est sans conteste une des activités insolites de Madagascar. La pirogue (privilégiez la traditionnelle, celle qui n’a pas de moteur) est donc le meilleur moyen pour accéder à des endroits inaccessibles autrement.
 
-Sur la partie ouest de l’île, **les fleuves Tsiribihina et Manambolo se prêtent tout à fait à cette activité insolite**. Au programme, une nature sauvage composée de falaises, de gorges, de cascades et d’autres paysages tout aussi envoutants. Observez bien les berges car la faune y est abondante et comprend plusieurs espèces endémiques. Cliquez ici pour découvrir notre article sur le kayak et rafting sur le fleuve Zambèze. 
+Sur la partie ouest de l’île, **les fleuves Tsiribihina et Manambolo se prêtent tout à fait à cette activité insolite**. Au programme, une nature sauvage composée de falaises, de gorges, de cascades et d’autres paysages tout aussi envoutants. Observez bien les berges car la faune y est abondante et comprend plusieurs espèces endémiques. Cliquez ici pour découvrir [notre article sur le kayak et rafting sur le fleuve Zambèze.](https://odysway.com/faites-du-kayak-et-du-rafting-sur-le-fleuve-zambeze) 
 
-Découvrez nos voyages en Afrique.
+[Découvrez nos voyages en Afrique.](https://odysway.com/destinations/afrique)
 
 ::image-container
 ---
-image-src: "/images/blogs/rec9lGWWQ2CGhBshmgyT-1742843052946.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/rec9lGWWQ2CGhBshmgyT.jpg"
 alt: 
 ---
 ::
@@ -77,7 +77,7 @@ Dormir dans les arbres fait partie des activités insolites de Madagascar. En ef
 
 ::image-container
 ---
-image-src: "/images/blogs/oOVjiHiQ9WzsOCcJFnxr-1742843053539.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/oOVjiHiQ9WzsOCcJFnxr.jpg"
 alt: 
 ---
 ::
@@ -91,7 +91,7 @@ _Cabane dans l'arbre sur la plage de l'île de Sainte-Marie_
 
 ::image-container
 ---
-image-src: "/images/blogs/eckdHWckREqz43UQnCgf-1742843054071.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/eckdHWckREqz43UQnCgf.jpg"
 alt: 
 ---
 ::
@@ -101,11 +101,11 @@ _Vallée de Tsaranoro_
 5.  ## Assister à une rencontre de moraingy à Madagascar
     
 
-**Le moraingy est un sport de combat traditionnel qui fait partie intégrante de la culture malgache**. Il se pratique essentiellement dans les régions côtières et est un mélange de boxe et de lutte. Souvent assimilé à la capoeira, son origine remonte au XVe siècle et était utilisé comme moyen de défense. Au fil du temps, le moraingy était un événement à part entière lors de certaines cérémonies. Puis, il est devenu un divertissement pendant les jours de fête. Sous fond de musique, les adversaires combattent à mains nues jusqu’à que l’un d’eux finisse KO. La rencontre de moraingy est une des activités insolites à Madagascar qui permet d’appréhender d’une autre façon la culture de l’île. Découvrez notre voyage vous permettant de boxer dans les rizières en Thaïlande !
+**Le moraingy est un sport de combat traditionnel qui fait partie intégrante de la culture malgache**. Il se pratique essentiellement dans les régions côtières et est un mélange de boxe et de lutte. Souvent assimilé à la capoeira, son origine remonte au XVe siècle et était utilisé comme moyen de défense. Au fil du temps, le moraingy était un événement à part entière lors de certaines cérémonies. Puis, il est devenu un divertissement pendant les jours de fête. Sous fond de musique, les adversaires combattent à mains nues jusqu’à que l’un d’eux finisse KO. La rencontre de moraingy est une des activités insolites à Madagascar qui permet d’appréhender d’une autre façon la culture de l’île. Découvrez notre voyage [vous permettant de boxer dans les rizières en Thaïlande !](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande)
 
   ::image-container
 ---
-image-src: "/images/blogs/6xnGuiIRdmcGLHbims5g-1742843054600.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/6xnGuiIRdmcGLHbims5g.jpg"
 alt: 
 ---
 ::
@@ -114,11 +114,11 @@ _Rencontre de moraingy_
 
 ## Partir à l'aventure avec Odysway
 
-Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables voyages aventure.
+Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables [voyages aventure](https://odysway.com/thematiques/voyage-aventure).
 
 ::image-container
 ---
-image-src: "/images/blogs/jGECHCKfSaicSFZw7ueZ-1742843055118.jpg"
+image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/jGECHCKfSaicSFZw7ueZ.jpg"
 alt: 
 ---
 ::

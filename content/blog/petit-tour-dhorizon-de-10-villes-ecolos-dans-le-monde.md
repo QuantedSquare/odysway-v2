@@ -12,12 +12,12 @@ published: false
 publishedAt: "2020-03-06 10:55:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique du Nord, Amerique du Sud, Brésil, Etats Unis, Famille, Transports insolites"
 categories: "Apprentissage, Culture et decouverte, Blog"
-displayedImg: "/images/blogs/Petit-tour-d'horizon-de-10-villes-ecolos-dans-le-monde.jpg"
+displayedImg: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/G2ScnNh8TiKfWKcRJvXJ.jpg"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/Petit-tour-d'horizon-de-10-villes-ecolos-dans-le-monde.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/G2ScnNh8TiKfWKcRJvXJ.jpg"
 ---
 #publication-date
 6 mars 2020
@@ -31,7 +31,7 @@ Petit tour d’horizon de 10 villes écolos dans le monde
 
 ::section-container
 ---
-image-src: "/images/blogs/Petit-tour-d'horizon-de-10-villes-ecolos-dans-le-monde.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/G2ScnNh8TiKfWKcRJvXJ.jpg"
 ---
 #content
 A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs engagements pour agir. **Faisons un petit tour d’horizon de 10 villes écolos dans le monde pour voir quelles sont leurs actions au quotidien.**  
@@ -42,7 +42,7 @@ Il y a quelques années, **Buenos Aires a décidé d’opérer une transformati
 
 ::image-container
 ---
-image-src: "/images/blogs/Yerk2IQDTAqa1F6Sr2nX-1742840972910.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/Yerk2IQDTAqa1F6Sr2nX.jpg"
 alt: 
 ---
 ::
@@ -51,11 +51,11 @@ alt:
 
 Prenant conscience de l’enjeu environnemental, **Cap** **Town** fait tout pour être écoresponsable. La ville a tout d’abord développé son réseau de transports en commun et bien lui en a pris. En effet, beaucoup d’habitants ont délaissé leur voiture, ce qui a réduit le trafic et donc la pollution et les émissions de CO². Mais **la ville s’appuie aussi sur des ressources renouvelables pour produire une partie de son énergie**.
 
-Vous voulez visiter Cap Town ? Odysway vous propose un voyage en Afrique du Sud, pendant lequel en plus de visiter le Cap et ses environs, vous aurez surtout l’opportunité de vous occuper des félins dans un sanctuaire, dans le cadre d’un projet de conservation.
+Vous voulez visiter Cap Town ? Odysway vous propose un [voyage en Afrique du Sud](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=Blog&utm_medium=article&utm_campaign=10_villes_ecolos), pendant lequel en plus de visiter le Cap et ses environs, vous aurez surtout l’opportunité de vous occuper des félins dans un sanctuaire, dans le cadre d’un projet de conservation.
 
 ::image-container
 ---
-image-src: "/images/blogs/A4dngVKDRH6M4wjtOAzv-1742840973487.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/A4dngVKDRH6M4wjtOAzv.jpg"
 alt: 
 ---
 ::
@@ -66,7 +66,7 @@ Copenhague est un parfait exemple d’une ville où l’environnement est une pr
 
 ::image-container
 ---
-image-src: "/images/blogs/06y3FY0pQTT0ID0mkjb2-1742840974044.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/06y3FY0pQTT0ID0mkjb2.jpg"
 alt: 
 ---
 ::
@@ -75,11 +75,11 @@ alt:
 
 La ville de **Curitiba** dispose d’une politique environnementale depuis les années 80. Ses nombreuses actions lui valent d’être la ville la plus verte du Brésil. Par exemple, son réseau de transport en commun est l’un des plus propres et 85 % de la population l’utilise. D’ailleurs cette dernière a la possibilité de **troquer des tickets de bus contre des déchets**. En outre, les enfants sont sensibilisés au recyclage dès le plus jeune âge et aujourd’hui 90 % des habitants recyclent.
 
-Pour vraiment vivre une expérience dépaysante au Brésil, Odysway vous propose une expédition de survie au cœur de la jungle amazonienne, accompagnés de guides experts locaux.
+Pour vraiment vivre une expérience dépaysante au Brésil, Odysway vous propose une [expédition de survie au cœur de la jungle amazonienne](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=Blog&utm_medium=article&utm_campaign=10_villes_ecolos), accompagnés de guides experts locaux.
 
   ::image-container
 ---
-image-src: "/images/blogs/3nanxxOKToOFqqmyZ6fp-1742840974639.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/3nanxxOKToOFqqmyZ6fp.jpg"
 alt: 
 ---
 ::
@@ -90,7 +90,7 @@ Il n’est pas étonnant de citer Oslo dans ce tour d’horizon. Il s’agit tou
 
 ::image-container
 ---
-image-src: "/images/blogs/2HtE63rQQW6KKxJqvMxr-1742840975167.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/2HtE63rQQW6KKxJqvMxr.jpg"
 alt: 
 ---
 ::
@@ -101,7 +101,7 @@ Capitale de l’Islande, **Reykjavik est l’une des villes les plus écolos du
 
 ::image-container
 ---
-image-src: "/images/blogs/3uraaVaQES1A1C2WCyx3-1742840975729.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/3uraaVaQES1A1C2WCyx3.jpg"
 alt: 
 ---
 ::
@@ -112,7 +112,7 @@ alt:
 
 ::image-container
 ---
-image-src: "/images/blogs/ZacGXpjcTyEIgPGOJNwA-1742840976250.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/ZacGXpjcTyEIgPGOJNwA.jpg"
 alt: 
 ---
 ::
@@ -123,7 +123,7 @@ A 65 km de Séoul, la ville de **Songdo** **est unique en son genre**. Sortie 
 
 ::image-container
 ---
-image-src: "/images/blogs/43SFmrPSwu30L8nvtIKV-1742840976766.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/43SFmrPSwu30L8nvtIKV.jpg"
 alt: 
 ---
 ::
@@ -134,7 +134,7 @@ Capitale verte européenne, **Stockholm est un modèle parmi les villes écolos
 
 ::image-container
 ---
-image-src: "/images/blogs/NLPsW01uQAeYUE04LDoj-1742840977292.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/NLPsW01uQAeYUE04LDoj.jpg"
 alt: 
 ---
 ::
@@ -145,14 +145,14 @@ alt:
 
         ::image-container
 ---
-image-src: "/images/blogs/NQLL3qlTySKy2cRmadBD-1742840977812.jpg"
+image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/NQLL3qlTySKy2cRmadBD.jpg"
 alt: 
 ---
 ::
 
 ## Séjour Culturel : un voyage sous un autre regard
 
-Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de voyages culturels proposés par Odysway.
+Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 
-Poursuivez votre lecture en découvrant notre article sur la façon limiter son empreinte carbone en voyage !
+Poursuivez votre lecture en découvrant notre article [sur la façon limiter son empreinte carbone en voyage !](https://odysway.com/comment-limiter-mon-empreinte-carbone-en-voyage)
 ::
