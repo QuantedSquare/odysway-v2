@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column  bg-white rounded-lg">
+  <div class="d-flex flex-column  rounded-lg bg-white pa-4">
     <v-row align="center">
       <v-col
         cols="6"
@@ -8,6 +8,9 @@
         <v-autocomplete
           label="Destinations"
           :items="destinations"
+          variant="outlined"
+          clearable
+          hide-details
         />
       </v-col>
       <v-col
@@ -17,7 +20,7 @@
         <v-select
           v-model="travelTypeChoices"
           :items="travelTypes"
-
+          hide-details
           label="Type de voyage"
           multiple
         />
@@ -36,6 +39,7 @@
               v-bind="props"
               :value="formattedDate"
               readonly
+              hide-details
               append-inner-icon="mdi-calendar-outline"
             />
           </template>
@@ -58,45 +62,18 @@
       <v-col
         cols="6"
         md="3"
+        class=" h-100"
       >
-        <v-btn block>
-          Découvrir
+        <v-btn
+          height="56"
+          block
+          color="#DB6644"
+          class="text-none text-body-1"
+        >
+          Découvrir les voyages
         </v-btn>
       </v-col>
     </v-row>
-    <!-- <v-text-field
-      v-model="search"
-      label="Saisir votre prochaine destination"
-      hide-details
-      class="mt-5 inner-textfield"
-      :append-inner-icon="mdiMagnify"
-    /> -->
-    <div class="d-none d-md-flex justify-center ga-6 mt-5">
-      <v-btn
-        variant="outlined"
-        color="white"
-      >
-        Laponie
-      </v-btn>
-      <v-btn
-        variant="outlined"
-        color="white"
-      >
-        Japon
-      </v-btn>
-      <v-btn
-        variant="outlined"
-        color="white"
-      >
-        France
-      </v-btn>
-      <v-btn
-        variant="outlined"
-        color="white"
-      >
-        Laos
-      </v-btn>
-    </div>
   </div>
 </template>
 
