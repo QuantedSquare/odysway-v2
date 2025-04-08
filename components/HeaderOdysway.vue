@@ -18,7 +18,8 @@
     <div class="d-flex align-center ga-4">
       <v-btn
         icon
-        class="d-inline "
+        class="d-inline"
+        @click="searchOpen = !searchOpen"
       >
         <v-icon>{{ mdiMagnify }}</v-icon>
       </v-btn>
@@ -83,6 +84,7 @@ import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js
 import { useImage } from '#imports'
 
 const testModel = ref(false)
+const searchOpen = ref(false)
 const model = defineModel()
 defineProps({
   scrollBehavior: {
