@@ -3,9 +3,14 @@ import { createVuetify } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 import { VDateInput } from 'vuetify/labs/VDateInput'
 import DayjsAdapter from '@date-io/dayjs'
+import dayjs from 'dayjs'
+import 'dayjs/locale/fr'
+
 import { fr } from 'vuetify/locale'
 
 import { VBtn } from 'vuetify/components'
+
+dayjs.locale('fr')
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -16,9 +21,13 @@ export default defineNuxtPlugin((app) => {
         mdi,
       },
     },
+    locale: {
+      locale: 'fr',
+      messages: { fr },
+    },
     date: {
       adapter: DayjsAdapter,
-      local: { fr: fr },
+      locale: 'fr',
     },
     components: {
       VDateInput,

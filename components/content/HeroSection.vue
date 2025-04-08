@@ -29,7 +29,6 @@
         >
           <v-col
             cols="12"
-            md="6"
           >
             <slot
               name="component-slot-1"

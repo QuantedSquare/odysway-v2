@@ -1,12 +1,76 @@
 <template>
-  <div class="d-flex flex-column max-width">
-    <v-text-field
+  <div class="d-flex flex-column  bg-white rounded-lg">
+    <v-row align="center">
+      <v-col
+        cols="6"
+        md="3"
+      >
+        <v-autocomplete
+          label="Destinations"
+          :items="destinations"
+        />
+      </v-col>
+      <v-col
+        cols="6"
+        md="3"
+      >
+        <v-select
+          v-model="travelTypeChoices"
+          :items="travelTypes"
+
+          label="Type de voyage"
+          multiple
+        />
+      </v-col>
+      <v-col
+        cols="6"
+        md="3"
+      >
+        <v-menu
+          v-model="dateMenu"
+          :close-on-content-click="false"
+          location="end"
+        >
+          <template #activator="{ props }">
+            <v-text-field
+              v-bind="props"
+              :value="formattedDate"
+              readonly
+              append-inner-icon="mdi-calendar-outline"
+            />
+          </template>
+
+          <v-card
+            min-width="300"
+            elevation="6"
+          >
+            <v-locale-provider locale="fr">
+              <v-date-picker
+                v-model="date"
+                multiple="range"
+                width="400"
+                format="dd/mm/YYYY"
+              />
+            </v-locale-provider>
+          </v-card>
+        </v-menu>
+      </v-col>
+      <v-col
+        cols="6"
+        md="3"
+      >
+        <v-btn block>
+          Découvrir
+        </v-btn>
+      </v-col>
+    </v-row>
+    <!-- <v-text-field
       v-model="search"
       label="Saisir votre prochaine destination"
       hide-details
       class="mt-5 inner-textfield"
       :append-inner-icon="mdiMagnify"
-    />
+    /> -->
     <div class="d-none d-md-flex justify-center ga-6 mt-5">
       <v-btn
         variant="outlined"
@@ -41,11 +105,25 @@
 // On doit prendre la rigueur de faire des composants super simple et réutilisable pour exploité nuxt studio au max.
 
 import { mdiMagnify } from '@mdi/js'
+import dayjs from 'dayjs'
 
 const search = ref('')
+const dateMenu = ref(false)
+const date = ref([])
+const travelTypeChoices = ref([])
+
+const destinations = ref(['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'])
+const travelTypes = [
+  'All', 'Voyage individuel', 'Voyage en famille', 'Voyage en couple', 'Voyage en groupe', 'Voyage en couple', 'Voyage en groupe',
+]
+
+const formattedDate = computed(() => {
+  console.log(date.value)
+  return date.value ? dayjs(date.value[0]).format('ll') + ' - ' + dayjs(date.value[date.value.length - 1]).format('ll') : ''
+})
 </script>
 
-<style lang="css" scoped>
+<!-- <style lang="css" scoped>
 .inner-textfield:deep(.v-field__overlay) {
   background-color: rgba(255, 255, 255, 0.214)!important;
   backdrop-filter: blur(8px);
@@ -54,4 +132,4 @@ const search = ref('')
 .inner-textfield:deep(.v-field__field){
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.554);
 }
-</style>
+</style> -->
