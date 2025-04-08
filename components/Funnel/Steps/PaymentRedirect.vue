@@ -77,7 +77,6 @@
                   class="ml-4"
                   large
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                  :to="`/confirmation?voyage=${voyage.slug}&success=true&isoption=true`"
                   @click="book"
                 >
                   Poser une option gratuitement
@@ -151,8 +150,27 @@ const stripePay = async () => {
 }
 
 const book = async () => {
-  // #TODO Add booking redirect to a success page, it only update the ac deal
-  console.log('Booking')
+  loadingStripeSession.value = true
+  const dealData = {
+    dealId: dealId.value,
+    stage: '27',
+    currentStep: 'A posé une option',
+    title: props.voyage.title,
+    nbTravelers: deal.value.nbTravelers,
+    firstName: deal.value.contact.firstName,
+    lastName: deal.value.contact.lastName,
+  }
+  // Check si on ajoute le payment link ici
+
+  await updateDeal(dealData)
+  await $fetch('/api/v1/slack/notification', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dealData),
+  })
+  await navigateTo(`/confirmation?voyage=${props.voyage.slug}&isoption=true`)
 }
 
 watch([dealId, () => props.currentStep], () => {

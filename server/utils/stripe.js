@@ -263,7 +263,7 @@ const createCheckoutSession = async (order) => {
   console.log('order before session', order)
 
   // Ensure URLs are properly encoded
-  const successUrl = encodeURI(`${origin}/success`)
+  const successUrl = encodeURI(`${origin}/confirmation?voyage=${deal.slug}`)
   const cancelUrl = encodeURI(`${origin}${order.currentUrl}`)
 
   console.log('Final URLs:', {
