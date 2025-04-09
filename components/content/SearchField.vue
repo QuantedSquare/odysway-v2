@@ -6,10 +6,12 @@
         md="3"
       >
         <v-autocomplete
+          v-model="destinationsChoices"
           label="Destinations"
           :items="destinations"
           variant="outlined"
           clearable
+          :prepend-inner-icon="mdiMapMarkerOutline"
           hide-details
         />
       </v-col>
@@ -23,6 +25,7 @@
           hide-details
           label="Type de voyage"
           multiple
+          :prepend-inner-icon="mdiTargetAccount"
         />
       </v-col>
       <v-col
@@ -40,7 +43,7 @@
               :value="formattedDate"
               readonly
               hide-details
-              append-inner-icon="mdi-calendar-outline"
+              :prepend-inner-icon="mdiCalendarBlankOutline"
             />
           </template>
 
@@ -69,6 +72,7 @@
           block
           color="#DB6644"
           class="text-none text-body-1"
+          @click="search"
         >
           Découvrir les voyages
         </v-btn>
@@ -78,26 +82,37 @@
 </template>
 
 <script setup>
-// @Alex J'ai retirer ce composant du hero.
-// On doit prendre la rigueur de faire des composants super simple et réutilisable pour exploité nuxt studio au max.
-
-import { mdiMagnify } from '@mdi/js'
+import { mdiMapMarkerOutline, mdiTargetAccount, mdiCalendarBlankOutline, mdiTune } from '@mdi/js'
 import dayjs from 'dayjs'
+import slugify from 'slugify'
 
-const search = ref('')
+const router = useRouter()
 const dateMenu = ref(false)
 const date = ref([])
 const travelTypeChoices = ref([])
-
-const destinations = ref(['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'])
+const destinationsChoices = ref('fr')
+const destinations = ref(['France', 'Italie', 'Espagne', 'Portugal', 'Turquie', 'Grèce'])
 const travelTypes = [
-  'All', 'Voyage individuel', 'Voyage en famille', 'Voyage en couple', 'Voyage en groupe', 'Voyage en couple', 'Voyage en groupe',
+  'All', 'Voyage individuel', 'Voyage en famille', 'Voyage en couple', 'Voyage en groupe',
 ]
 
 const formattedDate = computed(() => {
-  console.log(date.value)
   return date.value ? dayjs(date.value[0]).format('ll') + ' - ' + dayjs(date.value[date.value.length - 1]).format('ll') : ''
 })
+
+const search = () => {
+  if (destinationsChoices.value.length > 0) {
+    router.push({
+      path: '/search',
+      query: {
+        destination: slugify(destinationsChoices.value, { lower: true }),
+        travelTypes: travelTypeChoices.value,
+        // #TODO change formating of dates
+        date: date.value ? `${dayjs(date.value[0]).format('YYYY-MM-DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY-MM-DD')}` : '',
+      },
+    })
+  }
+}
 </script>
 
 <!-- <style lang="css" scoped>

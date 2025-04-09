@@ -6,7 +6,11 @@
 
 <script setup>
 // const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('voyages'))
-const { data: files } = await useAsyncData('search', () => queryCollectionSearchSections('voyages'))
-// console.log(navigation.value)
-console.log(files.value)
+const route = useRoute()
+
+const { data: deal, status } = useAsyncData('search', async () => {
+  const query = await queryCollection('deals').where('iso', '=', 'FR').all()
+  console.log('deal', query)
+  return query
+})
 </script>
