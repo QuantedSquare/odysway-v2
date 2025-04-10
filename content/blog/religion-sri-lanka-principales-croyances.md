@@ -75,7 +75,7 @@ Les temples, appelés kovils, se distinguent par leur aspect très coloré compa
 image-src: "/images/blogs/religion-sri-lanka-principales-croyances/dXEfrQpPRqeeVBmO5DEQ.jpg"
 alt: 
 ---
-::_
+::
 
 _Les Kovils : temples hindous qui se distinguent par leur aspect coloré_
 

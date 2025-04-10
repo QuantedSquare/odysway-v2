@@ -60,7 +60,7 @@ Malgré cette position glorieuse, cela n’a pas empêché son exploitation lors
 image-src: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/guVqStJTNa8EsZLJcU98.jpg"
 alt: 
 ---
-::_
+::
 
 _Touristes sur des éléphants Thaï_
 
@@ -111,7 +111,7 @@ Dans un tout autre esprit, Odysway vous propose son expérience au Sri Lanka. Da
 image-src: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/zkO7AGOTuqGWXQYoHAFp.jpg"
 alt: 
 ---
-::_
+::
 
 _Un éléphant dans la forêt de Kanchanaburi_
 

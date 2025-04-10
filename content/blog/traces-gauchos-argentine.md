@@ -51,7 +51,7 @@ A cette époque, un grand nombre de chevaux sauvages et de bovins envahissent le
 image-src: "/images/blogs/traces-gauchos-argentine/4UDlyAIaRAChNZ9y0w5I.jpg"
 alt: 
 ---
-::_
+::
 
 _Les chevaux sont profondément ancrés dans la culture des gauchos_
 

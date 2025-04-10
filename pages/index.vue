@@ -12,4 +12,5 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
+defineOgImageComponent('NuxtSeo')
 </script>

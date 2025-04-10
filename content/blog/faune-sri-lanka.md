@@ -93,7 +93,7 @@ Autre animal sacré, cette fois dans l’hindouisme, **le singe est probablemen
 image-src: "/images/blogs/faune-sri-lanka/nqC60PbcT4ONUg3qYuqy.jpg"
 alt: 
 ---
-::_
+::
 
 _Le martin-pêcheur, un des nombreux oiseaux que vous pourrez observer au Sri Lanka_
 
@@ -106,7 +106,7 @@ Avec pas moins de 482 espèces, **les oiseaux** feront le bonheur des ornithol
 image-src: "/images/blogs/faune-sri-lanka/wnfsz11QuiVe2z3qytNO.jpg"
 alt: 
 ---
-::_
+::
 
 _Le crocodile, reptile présent au Sri Lanka_
 
@@ -119,7 +119,7 @@ _Le crocodile, reptile présent au Sri Lanka_
 image-src: "/images/blogs/faune-sri-lanka/V7rqWAqTT7a5QKH74UlD.jpg"
 alt: 
 ---
-::_
+::
 
 _Les poissons multicolores dont regorgent les fonds marins du Sri Lanka_
 

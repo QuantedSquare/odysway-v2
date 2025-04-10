@@ -60,7 +60,7 @@ Tout comme les 6 autres îles de l’archipel (Fuerteventura, La Gomera, Grande 
 image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/pN63hJs3SxWV2KCfAqug.jpg"
 alt: 
 ---
-::_
+::
 
 _Le Mont Teide_
 

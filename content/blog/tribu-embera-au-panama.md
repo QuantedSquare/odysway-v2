@@ -85,7 +85,7 @@ Le problème de cette délocalisation est qu’avec l’avènement du tourisme d
 image-src: "/images/blogs/tribu-embera-au-panama/B0lnzCtvS06pSBm3FGUi.jpg"
 alt: 
 ---
-::_
+::
 
 _Des bateaux de touristes débarquent dans un des nouveaux villages Embera, le long du Rio Chagres_
 
@@ -181,7 +181,7 @@ Nous avons créé cette expérience de voyage après nous être longuement entre
 image-src: "/images/blogs/tribu-embera-au-panama/9WjSJvST6C8jSy2bTIEX.jpg"
 alt: 
 ---
-::_
+::
 
 _Séance photo pendant la pause de l’école_
 

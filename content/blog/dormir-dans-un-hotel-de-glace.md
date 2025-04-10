@@ -56,7 +56,7 @@ Durant la phase de construction, les architectes font particulièrement attentio
 image-src: "/images/blogs/dormir-dans-un-hotel-de-glace/TvPR8pT2S0SnUySXUB8L.jpg"
 alt: 
 ---
-::_
+::
 
 _L’intérieur d’une chambre_
 

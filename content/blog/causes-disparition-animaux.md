@@ -77,7 +77,7 @@ Bien que l’effet de serre soit un phénomène naturel, **l’augmentation des
 image-src: "/images/blogs/causes-disparition-animaux/nwONeL38TGiL1VMvNTxi.jpg"
 alt: 
 ---
-::_
+::
 
 _Les ours polaires voient leur habitat de glace fondre face au réchauffement climatique._
 
@@ -90,7 +90,7 @@ Parce que nous sommes dans une société de consommation excessive, **la surexp
 image-src: "/images/blogs/causes-disparition-animaux/zU1F6f89QdSeb8RbNzJt.jpg"
 alt: undefined
 ---
-::_
+::
 
 _La surpêche, cause de la diminution significative de certains poissons._
 

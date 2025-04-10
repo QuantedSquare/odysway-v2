@@ -1,48 +1,54 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { asSeoCollection } from '@nuxtjs/seo/content'
 
 export default defineContentConfig({
   collections: {
-    content: defineCollection({
-      type: 'page',
-      source: '*.md',
-    }),
-    blog: defineCollection({
-      type: 'page',
-      source: 'blog/*.md',
-      schema: z.object({
-        tags: z.array(z.string()),
-        image: z.object({
-          src: z.string().editor({ input: 'media' }),
-          alt: z.string(),
-        }),
-        date: z.date(),
-        author: z.string(),
-        published: z.boolean(),
-        publishedAt: z.date(),
-        displayedImg: z.object({
-          src: z.string().editor({ input: 'media' }),
-          alt: z.string(),
+    content: defineCollection(
+      asSeoCollection({
+        type: 'page',
+        source: '*.md',
+      }),
+    ),
+    blog: defineCollection(
+      asSeoCollection({
+        type: 'page',
+        source: 'blog/*.md',
+        schema: z.object({
+          tags: z.array(z.string()),
+          image: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
+          date: z.date(),
+          author: z.string(),
+          published: z.boolean(),
+          publishedAt: z.date(),
+          displayedImg: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
         }),
       }),
-    }),
-    voyages: defineCollection({
-      type: 'page',
-      source: 'voyages/*.md',
-      schema: z.object({
-        slug: z.string(),
-        title: z.string(),
-        duration: z.string(),
-        departureDate: z.date(),
-        returnDate: z.date(),
-        iso: z.string(),
-        startingPrice: z.number(),
-        rating: z.number(),
-        comments: z.number(),
-        imgSrc: z.string(),
-        country: z.string(),
-        programme: z.string(),
+    ),
+    voyages: defineCollection(
+      asSeoCollection({
+        type: 'page',
+        source: 'voyages/*.md',
+        schema: z.object({
+          slug: z.string(),
+          title: z.string(),
+          duration: z.string(),
+          departureDate: z.date(),
+          returnDate: z.date(),
+          iso: z.string(),
+          startingPrice: z.number(),
+          rating: z.number(),
+          comments: z.number(),
+          imgSrc: z.string(),
+          country: z.string(),
+          programme: z.string(),
+        }),
       }),
-    },
     ),
     categories: defineCollection({
       type: 'data',

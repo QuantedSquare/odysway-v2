@@ -45,7 +45,7 @@ Le **[slow tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-
 image-src: "/images/blogs/5-bienfaits-velo-voyage/sbdKGfNHTFyRCsagb03G.jpg"
 alt: 
 ---
-::_
+::
 
 _Prendre son vélo et partir à la découverte de paysages magnifiques_
 
@@ -58,7 +58,7 @@ _Prendre son vélo et partir à la découverte de paysages magnifiques_
 image-src: "/images/blogs/5-bienfaits-velo-voyage/XQ5SIvc3STeKtn3MQSZO.jpg"
 alt: 
 ---
-::_
+::
 
 _Partir en quête de rencontres uniques en vélo_
 
@@ -101,7 +101,7 @@ Loin d’être une activité solitaire, **le vélo se pratique aussi et surtout
 image-src: "/images/blogs/5-bienfaits-velo-voyage/rbkW4DVSoaUDjfjQWSFg.jpg"
 alt: 
 ---
-::_
+::
 
 _Partir à la découverte de lieux insoupçonnés_ en vélo
 
@@ -116,7 +116,7 @@ Alors, faire du vélo en voyage, ça vous tente ?
 image-src: "/images/blogs/5-bienfaits-velo-voyage/zruYwmXGQXaJtX2n3nCF.jpg"
 alt: 
 ---
-::_
+::
 
 _Vivez une expérience magique à la découverte de la richesse du Sri Lanka_
 

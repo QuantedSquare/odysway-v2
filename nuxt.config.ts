@@ -30,6 +30,10 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
 
   },
+  site: {
+    url: process.env.NUXT_SITE_URL || 'https://odysway.com', // TODO: change the first to the dev env
+    name: process.env.NUXT_SITE_NAME || 'Odysway', // TODO: change the first to the dev env
+  },
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
