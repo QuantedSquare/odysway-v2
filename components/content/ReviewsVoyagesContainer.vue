@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16">
+  <div>
     <v-container>
       <v-row class="bg-primary d-flex flex-column align-center flex-md-row row-height  rounded-xl">
         <div class="coma-absolute bg-primary-light rounded-circle pa-6 z-2  ">

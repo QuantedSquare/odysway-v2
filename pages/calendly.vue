@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-16">
+  <v-container>
     <CalendlyContainer :travel-title="titre" />
   </v-container>
 </template>

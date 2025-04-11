@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16">
+  <div>
     <ContentRenderer
       v-if="page"
       :value="page"

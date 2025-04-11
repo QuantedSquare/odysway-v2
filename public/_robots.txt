@@ -1,1 +1,5 @@
 
+User-agent: *
+Disallow: /paiement
+Disallow: /devis
+Disallow: /checkout

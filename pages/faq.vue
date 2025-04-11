@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16">
+  <div>
     <ContentRenderer
       v-if="page"
       :value="page"
@@ -13,4 +13,16 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
+if (page.value) {
+  console.log('page', page.value)
+  defineOgImageComponent(page.value?.ogImage?.component, {
+    title: page.value.ogImage?.props.title,
+    description: page.value.ogImage?.props.description,
+    image: page.value.ogImage?.props.image,
+    // author: page.value?.ogImage?.author,
+    // twitter: page.value?.ogImage?.twitter,
+  })
+  useHead(page.value.head || {}) // <-- Nuxt Schema.org
+  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+}
 </script>

@@ -13,12 +13,21 @@
 </template>
 
 <script setup>
-// const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('voyages'))
 const route = useRoute()
 
 const { data: deals } = useAsyncData('search', async () => {
   const destination = route.query.destination?.toUpperCase() || 'FR'
-  const query = await queryCollection('deals').where('iso', '=', destination).all()
+  let query = queryCollection('deals').where('iso', '=', destination).all()
+  if (route.query.departure) {
+    query = query.where('departure', '=', route.query.departure)
+  }
+  if (route.query.return) {
+    query = query.where('return', '=', route.query.return)
+  }
+  if (route.query.departureDate) {
+    query = query.where('departureDate', '=', route.query.departureDate)
+  }
+
   console.log('deals', query)
   return query
 }, {

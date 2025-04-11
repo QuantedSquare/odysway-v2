@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16">
+  <div>
     <v-container>
       <v-row
         justify="center"

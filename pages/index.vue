@@ -12,5 +12,14 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
-defineOgImageComponent('NuxtSeo')
+if (page.value) {
+  console.log('page', page.value)
+  defineOgImageComponent(page.value?.ogImage?.component, {
+    title: page.value.ogImage?.props.title,
+    description: page.value.ogImage?.props.description,
+    image: page.value.ogImage?.props.image,
+  })
+  useHead(page.value.head || {}) // <-- Nuxt Schema.org
+  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+}
 </script>

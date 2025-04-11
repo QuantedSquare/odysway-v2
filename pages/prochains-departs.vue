@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-16">
+  <v-container>
     <v-row>
       <v-col>
         <h1><span>Découvrez nos voyages</span> <span class="text-primary"> de groupe </span></h1>

@@ -1,3 +1,37 @@
+---
+ogImage:
+  component: "default"
+  props:
+    title: "Accueil Odysway"
+    description: "La rencontre au cœur du voyage"
+    image: "/images/AdobeStock_124472096.jpeg"
+sitemap:
+  lastmod: 2025-01-01
+robots: index, nofollow
+schemaOrg:
+  - "@type": "TravelAgency"
+    headline: "Odysway, agence de voyage"
+    author:
+      type: "Person"
+      name: "Alexandre Ottmann"
+    datePublished: "2025-04-10"
+    "@context": "http://schema.org"
+    address:
+      "@type": "PostalAddress"
+      addressLocality: "Le Plessis Trévise"
+      addressCountry: "France"
+      postalCode: "94420"
+      streetAddress: "27 avenue Nicolas Boileau"
+    description: "Odysway est l'agence spécialiste des voyages en immersion. Nous proposons un tourisme authentique et responsable qui vous fera voyager différemment."
+    name: "ODYSWAY"
+    legalName: "ODYSWAY SAS"
+    priceRange: "€€"
+    telephone: "+ 33 (0) 1 84 80 79 75"
+    email: "contact@odysway.com"
+    image: "https://odysway.com/logos/logo_noir.png"
+---
+
+
 ::hero-section
 ---
 image-src: /images/AdobeStock_124472096.jpeg

@@ -22,3 +22,9 @@ logs
 .env
 .env.*
 !.env.example
+
+# MCP
+mcp.json
+
+# Cursor
+cursor/
