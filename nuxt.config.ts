@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     'nuxt-calendly',
+    'nuxt-gtag',
+    'nuxt-meta-pixel',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error This come from Vuetify doc.
@@ -50,6 +52,9 @@ export default defineNuxtConfig({
     public: {
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
+      metapixel: {
+        default: { id: process.env.METAPIXEL_ID || '' },
+      },
     },
   },
   build: {
@@ -82,6 +87,20 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+  },
+  gtag: {
+    enabled: true, // process.env.NUXT_SITE_ENV === 'production',
+    id: process.env.GTAG_ID || '',
+    initCommands: [
+      // Setup up consent mode
+      ['consent', 'default', {
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+      }],
+    ],
   },
   schemaOrg: {
     identity: defineOrganization({

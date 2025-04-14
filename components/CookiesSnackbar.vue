@@ -36,6 +36,7 @@
 
 <script setup>
 const consentBar = ref(true)
+const { gtag, initialize } = useGtag()
 
 onMounted (() => {
   if (!localStorage.getItem('consent')) {
@@ -44,6 +45,7 @@ onMounted (() => {
     }, 100)
   }
   else {
+    initialize()
     consentBar.value = false
   }
 
@@ -69,11 +71,24 @@ onMounted (() => {
 
 function acceptCookies() {
   consentBar.value = false
+  initialize()
+  gtag('consent', 'update', {
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+  })
   localStorage.setItem('consent', 'agree')
 }
 
 function refuseCookies() {
   consentBar.value = false
+  gtag('consent', 'update', {
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+  })
   localStorage.setItem('consent', 'false')
 }
 
@@ -88,12 +103,13 @@ function refuseCookies() {
 // }
 
 // function captureOutboundLink(link) {
-//   const location = window.location.href
+//   const location = route.fullPath
 
-//   this.$ga.event({
-//     eventCategory: 'Header Link',
-//     eventAction: 'Click',
-//     eventLabel: `Header link from ${location} to ${link}`,
-//   })
+//   gtag('event',
+//     'click',
+//     {
+//       event_category: 'Header Link',
+//       event_label: `Header link from ${location} to ${link}`,
+//     })
 // }
 </script>

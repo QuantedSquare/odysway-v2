@@ -226,6 +226,9 @@ import { mdiArrowRight, mdiEmailOutline, mdiPhoneOutline, mdiSend } from '@mdi/j
 import { z } from 'zod'
 import { useImage } from '#imports'
 
+const { gtag } = useGtag()
+const route = useRoute()
+
 const img = useImage()
 const email = ref('')
 const emailSentToBrevo = ref(false)
@@ -320,6 +323,14 @@ const subscribeToNewsletter = async () => {
   validEmail.value = false
   emailSentToBrevo.value = true
   dialogEmailSent.value = true
+  gtag('event',
+    'click',
+    {
+      event_category: 'Newsletter',
+      event_action: 'subscribe',
+      event_label: `Newsletter Subscription`,
+      event_value: 1,
+    })
 }
 </script>
 
