@@ -75,22 +75,29 @@
                 @click:close="error = ''"
               >
                 {{ error }}
+                <v-btn
+                  v-if="showResetPasswordAlert"
+                  variant="text"
+                  color="error"
+                  class="mt-2"
+                  @click="handleResetPassword"
+                >
+                  Reset Password
+                </v-btn>
               </v-alert>
               <v-alert
                 v-if="showVerificationAlert"
                 type="warning"
                 class="ma-4"
               >
-                {{ verificationMessage }}
-                <v-btn
-                  variant="text"
-                  color="warning"
-                  @click="handleResetPassword"
-                  :loading="resetting"
-                  class="ml-2"
-                >
-                  Reset Password
-                </v-btn>
+                Please check your email to verify your account
+              </v-alert>
+              <v-alert
+                v-if="showResetPasswordAlert && !error"
+                type="success"
+                class="ma-4"
+              >
+                A password reset link has been sent to your email. Please check your inbox to set your password.
               </v-alert>
             </v-card>
           </v-col>
@@ -121,6 +128,7 @@ const error = ref('')
 const showVerificationAlert = ref(false)
 const googleLoading = ref(false)
 const verificationMessage = ref('')
+const showResetPasswordAlert = ref(false)
 
 const emailRules = [
   v => !!v || 'Email is required',
@@ -141,7 +149,7 @@ const handleSignIn = async () => {
   loading.value = true
   error.value = ''
   showVerificationAlert.value = false
-  verificationMessage.value = ''
+  showResetPasswordAlert.value = false
 
   try {
     const { data, error: signInError } = await signIn(email.value, password.value)
@@ -151,32 +159,29 @@ const handleSignIn = async () => {
       console.log('Handling sign in error:', signInError)
       switch (signInError.status) {
         case 'NEEDS_PASSWORD_RESET':
-          console.log('Password reset needed')
-          // Show success message - the reset email was already sent by the signIn function
-          verificationMessage.value = 'A password reset link has been sent to your email. Please check your inbox to set your password.'
-          showVerificationAlert.value = true
+          error.value = 'No password set for this account. Please reset your password.'
+          showResetPasswordAlert.value = true
           break
-        case 'WRONG_PASSWORD':
-          console.log('Wrong password')
-          error.value = 'Incorrect password. Please try again.'
+        case 'EMAIL_NOT_CONFIRMED':
+          error.value = 'Please verify your email before signing in.'
+          showVerificationAlert.value = true
           break
         default:
           console.log('Other error:', signInError)
-          error.value = signInError.message || 'An error occurred during sign in'
+          error.value = signInError.message || 'Invalid email or password'
       }
       return
     }
     
     if (data?.user) {
-      console.log('Sign in successful, redirecting to home')
-      router.push('/')
+      console.log('Sign in successful, redirecting to dashboard')
+      router.push('/dashboard')
     }
   } catch (err) {
     console.error('Unexpected error in handleSignIn:', err)
     error.value = err.message || 'An error occurred during sign in'
   } finally {
     loading.value = false
-    resetting.value = false
   }
 }
 
@@ -200,19 +205,27 @@ const handleGoogleSignIn = async () => {
 }
 
 const handleResetPassword = async () => {
-  resetting.value = true
+  console.log('Starting password reset for:', email.value)
+  loading.value = true
   error.value = ''
+  showVerificationAlert.value = false
+  showResetPasswordAlert.value = false
 
   try {
     const { error: resetError } = await resetPassword(email.value)
-    if (resetError) throw resetError
+    console.log('Password reset result:', { resetError })
     
-    verificationMessage.value = 'A password reset link has been sent to your email. Please check your inbox to set your password.'
-    showVerificationAlert.value = true
+    if (resetError) {
+      error.value = resetError.message || 'An error occurred while sending reset link'
+      return
+    }
+    
+    showResetPasswordAlert.value = true
   } catch (err) {
-    error.value = err.message || 'Failed to send reset password email'
+    console.error('Unexpected error in handleResetPassword:', err)
+    error.value = err.message || 'An error occurred while sending reset link'
   } finally {
-    resetting.value = false
+    loading.value = false
   }
 }
 </script>

@@ -154,16 +154,22 @@ export const useSupabase = () => {
           return { 
             data: null, 
             error: {
-              ...error,
-              status: 'EMAIL_EXISTS',
-              message: 'An account with this email already exists. Please sign in instead.'
+              message: 'An account with this email already exists. Please sign in instead.',
+              status: 'EMAIL_EXISTS'
             }
           }
         }
         throw error
       }
 
-      return { data, error: null }
+      // If we get here, it means the sign up was successful
+      return { 
+        data: { 
+          user: data.user,
+          status: 'NEW_ACCOUNT'
+        }, 
+        error: null 
+      }
     } catch (error) {
       console.error('Error during sign up:', error)
       return { data: null, error }

@@ -66,22 +66,22 @@
                 type="warning"
                 class="ma-4"
               >
-                This email is already registered but not verified. Please reset your password to verify your email.
-                <v-btn
-                  variant="text"
-                  color="warning"
-                  @click="router.push('/forgot-password')"
-                  class="ml-2"
-                >
-                  Reset Password
-                </v-btn>
+                Please check your email to verify your account
               </v-alert>
               <v-alert
                 v-if="showSuccessAlert"
                 type="success"
                 class="ma-4"
               >
-                Please check your email for the verification link.
+                Account created successfully! You can now sign in.
+                <v-btn
+                  variant="text"
+                  color="success"
+                  class="mt-2"
+                  @click="router.push('/signin')"
+                >
+                  Go to Sign In
+                </v-btn>
               </v-alert>
             </v-card>
           </v-col>
@@ -129,6 +129,8 @@ const handleSignUp = async () => {
   loading.value = true
   error.value = ''
   showVerificationAlert.value = false
+  showSignInButton.value = false
+  showSuccessAlert.value = false
 
   try {
     const { data, error: signUpError } = await signUp(email.value, password.value)
@@ -139,7 +141,10 @@ const handleSignUp = async () => {
       switch (signUpError.status) {
         case 'EMAIL_EXISTS':
           error.value = 'An account with this email already exists. Please sign in instead.'
-          // Add a button to navigate to sign in
+          showSignInButton.value = true
+          break
+        case 'EMAIL_EXISTS_UNVERIFIED':
+          error.value = 'An account with this email exists but is not verified. Please sign in to verify your account.'
           showSignInButton.value = true
           break
         case 'ALREADY_SIGNED_IN':
@@ -153,8 +158,11 @@ const handleSignUp = async () => {
     }
     
     if (data?.user) {
-      console.log('Sign up successful, showing verification alert')
-      showVerificationAlert.value = true
+      console.log('Sign up successful')
+      showSuccessAlert.value = true
+      // Clear the form
+      email.value = ''
+      password.value = ''
     }
   } catch (err) {
     console.error('Unexpected error in handleSignUp:', err)
