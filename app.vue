@@ -1,9 +1,21 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-    <CookiesSnackbar />
-  </NuxtLayout>
+  <v-app>
+    <v-main>
+      <NuxtPage />
+    </v-main>
+  </v-app>
 </template>
+
+<script setup>
+useHead({
+  script: [
+    {
+      src: 'https://accounts.google.com/gsi/client',
+      async: true
+    }
+  ]
+})
+</script>
 
 <style>
 .page-enter-active,

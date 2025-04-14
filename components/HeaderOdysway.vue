@@ -56,12 +56,45 @@
           {{ mdiPhone }}
         </v-icon>
       </v-btn>
-      <v-btn
-        icon
-        class="hidden-xs"
-      >
-        <v-icon>{{ mdiAccountCircle }}</v-icon>
-      </v-btn>
+      <template v-if="isConnected && user">
+        <v-menu location="bottom end">
+          <template v-slot:activator="{ props }">
+            <v-btn
+              icon
+              class="hidden-xs"
+              v-bind="props"
+            >
+              <v-icon>{{ mdiAccountCircle }}</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item>
+              <v-list-item-title>{{ user.email }}</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="handleSignOut">
+              <v-list-item-title>Sign Out</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </template>
+      <template v-else>
+        <div class="d-flex align-center ga-2">
+          <v-btn
+            variant="text"
+            class="hidden-xs text-uppercase"
+            @click="router.push('/signin')"
+          >
+            Sign In
+          </v-btn>
+          <v-btn
+            color="primary"
+            class="hidden-xs text-uppercase"
+            @click="router.push('/signup')"
+          >
+            Sign Up
+          </v-btn>
+        </div>
+      </template>
       <v-btn
         class="d-inline d-md-none"
         icon
@@ -82,6 +115,11 @@
 <script setup>
 import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js'
 import { useImage } from '#imports'
+import { useUser } from '~/composables/useUser'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const { user, signOut, isConnected } = useUser()
 
 const testModel = ref(false)
 const searchOpen = ref(false)
@@ -128,6 +166,11 @@ function displayExtension(item) {
 function resetExtension() {
   showExtension.value = false
   extensionName.value = ''
+}
+
+const handleSignOut = async () => {
+  await signOut()
+  router.push('/signin')
 }
 
 // TODO : add google analytics
