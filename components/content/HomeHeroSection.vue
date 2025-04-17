@@ -104,6 +104,7 @@ const img = useImage()
   left:0;
   right: 0;
   bottom: -60px;
+
 }
 
 .relative-hero-section {
@@ -116,7 +117,6 @@ const img = useImage()
 @media (max-width: 960px) {
     .absolute {
     bottom: -250px;
-    box-shadow: 5px 5px 100px 0px #2B4C5280;
   }
   .relative-hero-section {
     height: 70vh;

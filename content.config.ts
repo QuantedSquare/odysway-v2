@@ -119,15 +119,6 @@ export default defineContentConfig({
         isOnHome: z.boolean(),
       }),
     }),
-    partenaires: defineCollection({
-      type: 'data',
-      source: 'partenaires/**.json',
-      schema: z.object({
-        imgSrc: z.string(),
-        description: z.string(),
-        isOnHome: z.boolean(),
-      }),
-    }),
     avisVoyageurs: defineCollection({
       type: 'data',
       source: 'avis-voyageurs/**.json',
