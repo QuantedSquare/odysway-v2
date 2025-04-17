@@ -42,23 +42,34 @@ export default defineNuxtPlugin((app) => {
         odysway: {
           dark: false,
           colors: {
-            'primary': '#2e8b57', // odysway green
-            'secondary': '#bc5948', // odysway red
+            'primary': 'rgba(43, 76, 82, 1)',
+            'text': 'rgba(43, 76, 82, 1)',
+            'primary-light': 'rgba(43, 76, 82, 0.8)',
+            'primary-light-2': 'rgba(43, 76, 82, 0.6)',
+            'primary-light-3': 'rgba(43, 76, 82, 0.4)', // odysway text
+            'primary-light-4': 'rgba(43, 76, 82, 0.2)', // odysway text
+            'secondary': '#DB6644', // odysway red
+            'secondary-light': 'rgba(219, 102, 68, 0.8)', // odysway red
+            'secondary-light-2': 'rgba(219, 102, 68, 0.6)', // odysway red
+            'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // odysway red
+            'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // odysway red
+            'tertiary': '#F0B348', // odysway yellow
+            'tertiary-light': '#EADFB1', // odysway yellow
+            'quaternary': '#2D5843', // odysway green
+            'quaternary-light': '#7D9676', // odysway green
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
+
+            // Virer les suivants
             'odysway-1': '#edeff8', // grey-home-bg
             'odysway-2': '#f5f5f5',
             'orange-lighten-1': '#FFA726',
             'white': '#FFFFFF',
-            'primary-light': '#67C189',
-            'grey': '#8E8E8E',
-            'grey-lighten-1': '#C7C7C7',
-            'grey-lighten-2': '#E9EAEC',
-            'grey-lighten-3': '#F8F8F8',
-            'grey-lighten-4': '#C5C7C9',
-            'grey-darken-1': '#61615F',
-            'grey-darken-2': '#737774',
-            'grey-darken-3': '#4A4A48',
+            'grey': '#95A5A8',
+            'grey-light': '#EAEDEE',
+          },
+          variables: {
+            'medium-emphasis-opacity': '1',
           },
         },
       },
@@ -74,6 +85,7 @@ export default defineNuxtPlugin((app) => {
       VBtn: {
         color: 'primary',
         elevation: 0,
+        rounded: 'default',
       },
       VBtnPrimary: {
         color: 'primary',
@@ -82,18 +94,44 @@ export default defineNuxtPlugin((app) => {
       VBtnSecondary: {
         color: 'secondary',
       },
-      VTextField: {
-        variant: 'outlined',
-      },
-      VSelect: {
-        variant: 'outlined',
-      },
       VSwitch: {
         color: 'primary',
         baseColor: 'grey-lighten-1',
         inset: true,
         hideDetails: true,
       },
+
+      // Fields
+      VTextField: {
+        variant: 'solo',
+        rounded: 'default',
+        bgColor: 'grey-light',
+        color: 'primary',
+        elevation: 0,
+        iconColor: 'primary',
+        class: ['text-primary'],
+        flat: true,
+      },
+      VAutocomplete: {
+        variant: 'solo',
+        rounded: 'default',
+        bgColor: 'grey-light',
+        color: 'primary',
+        elevation: 0,
+        flat: true,
+      },
+      VFieldLabel: {
+        class: ['text-primary'],
+      },
+      VSelect: {
+        variant: 'solo',
+        rounded: 'default',
+        color: 'primary',
+        bgColor: 'grey-light',
+        iconColor: 'primary',
+        flat: true,
+      },
+
     },
   })
 

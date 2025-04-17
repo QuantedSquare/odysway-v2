@@ -1,104 +1,105 @@
 <template>
-  <div class="rounded-lg bg-white pa-4">
-    <ClientOnly>
-      <v-row align="center">
-        <v-col
-          cols="6"
-          :md="isSearchPage ? 2 : 3"
-        >
-          <v-autocomplete
-            v-model="destinationsChoices"
-            label="Destinations"
-            :items="destinations"
-            variant="outlined"
-            clearable
-            :prepend-inner-icon="mdiMapMarkerOutline"
-            hide-details
-          />
-        </v-col>
-        <v-col
-          cols="6"
-          :md="isSearchPage ? 2 : 3"
-        >
-          <v-select
-            v-model="travelTypeChoices"
-            :items="travelTypes"
-            hide-details
-            label="Type de voyage"
-            multiple
-            :prepend-inner-icon="mdiTargetAccount"
-          />
-        </v-col>
-        <v-col
-          :cols="2"
-          :md="isSearchPage ? 2 : 3"
-        >
-          <v-menu
-            v-model="dateMenu"
-            :close-on-content-click="false"
-            location="end"
+  <v-container class="search-field-container">
+    <div class="rounded-lg bg-white pa-4">
+      <ClientOnly>
+        <v-row align="center">
+          <v-col
+            cols="12"
+            :md="isSearchPage ? 2 : 3"
           >
-            <template #activator="{ props }">
-              <v-text-field
-                v-bind="props"
-                :value="formattedDate"
-                readonly
-                hide-details
-                :prepend-inner-icon="mdiCalendarBlankOutline"
-              />
-            </template>
-
-            <v-card
-              min-width="300"
-              elevation="6"
+            <v-autocomplete
+              v-model="destinationsChoices"
+              label="Destinations"
+              :items="destinations"
+              clearable
+              :prepend-inner-icon="mdiMapMarkerOutline"
+              hide-details
+            />
+          </v-col>
+          <v-col
+            cols="12"
+            :md="isSearchPage ? 2 : 3"
+          >
+            <v-select
+              v-model="travelTypeChoices"
+              :items="travelTypes"
+              hide-details
+              label="Type de voyage"
+              multiple
+              :prepend-inner-icon="mdiTargetAccount"
+            />
+          </v-col>
+          <v-col
+            :cols="12"
+            :md="isSearchPage ? 2 : 3"
+          >
+            <v-menu
+              v-model="dateMenu"
+              :close-on-content-click="false"
+              location="end"
             >
-              <v-locale-provider locale="fr">
-                <v-date-picker
-                  v-model="date"
-                  multiple="range"
-                  width="400"
-                  format="dd/mm/YYYY"
+              <template #activator="{ props }">
+                <v-text-field
+                  v-bind="props"
+                  :value="formattedDate"
+                  readonly
+                  hide-details
+                  :prepend-inner-icon="mdiCalendarBlankOutline"
                 />
-              </v-locale-provider>
-            </v-card>
-          </v-menu>
-        </v-col>
-        <!-- Visible only on search page -->
-        <v-col
-          v-if="isSearchPage"
-          cols="6"
-          :md="isSearchPage ? 2 : 0"
-        >
-          <v-select
-            v-model="travelTypeChoices"
-            :items="travelTypes"
-            hide-details
-            label="Plus de filtres"
-            clearable
-            chips
-            closable-chips
-            multiple
-            :prepend-inner-icon="mdiTune"
-          />
-        </v-col>
-        <v-col
-          cols="6"
-          :md="isSearchPage ? 2 : 3"
-          class=" h-100"
-        >
-          <v-btn
-            height="56"
-            block
-            color="#DB6644"
-            class="text-none text-body-1"
-            @click="search"
+              </template>
+
+              <v-card
+                min-width="300"
+                elevation="6"
+              >
+                <v-locale-provider locale="fr">
+                  <v-date-picker
+                    v-model="date"
+                    multiple="range"
+                    width="400"
+                    format="dd/mm/YYYY"
+                  />
+                </v-locale-provider>
+              </v-card>
+            </v-menu>
+          </v-col>
+          <!-- Visible only on search page -->
+          <v-col
+            v-if="isSearchPage"
+            cols="12"
+            :md="isSearchPage ? 2 : 0"
           >
-            Découvrir les voyages
-          </v-btn>
-        </v-col>
-      </v-row>
-    </ClientOnly>
-  </div>
+            <v-select
+              v-model="travelTypeChoices"
+              :items="travelTypes"
+              hide-details
+              label="Plus de filtres"
+              clearable
+              chips
+              closable-chips
+              multiple
+              :prepend-inner-icon="mdiTune"
+            />
+          </v-col>
+          <v-col
+            cols="12"
+            :md="isSearchPage ? 2 : 3"
+            class=" h-100"
+          >
+            <v-btn
+              height="56"
+              block
+              color="secondary"
+              class="text-none text-body-1"
+              @click="search"
+            >
+              Découvrir les voyages
+            </v-btn>
+          </v-col>
+        </v-row>
+      </ClientOnly>
+    </div>
+  </v-container>
 </template>
 
 <script setup>
@@ -128,7 +129,7 @@ const travelTypes = [
 ]
 
 const formattedDate = computed(() => {
-  return date.value ? dayjs(date.value[0]).format('ll') + ' - ' + dayjs(date.value[date.value.length - 1]).format('ll') : ''
+  return date.value ? dayjs(date.value[0]).format('DD/MM/YYYY') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM/YYYY') : ''
 })
 
 const search = () => {
@@ -160,3 +161,8 @@ console.log(isSearchPage.value)
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.554);
 }
 </style> -->
+<style scoped>
+.search-field-container {
+  max-width: 1070px;
+}
+</style>

@@ -130,7 +130,7 @@ const switchTab = (tab) => {
 }
 
 const { data: deal } = await useAsyncData(props.slug, async () => {
-  const query = await queryCollection('deals').where('country', '=', props.slug).first()
+  const query = await queryCollection('deals').where('slug', '=', props.slug).first()
   console.log('deal', query)
   return query
 })

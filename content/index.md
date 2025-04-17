@@ -32,21 +32,24 @@ schemaOrg:
 ---
 
 
-::hero-section
+::home-hero-section
 ---
-image-src: /images/AdobeStock_124472096.jpeg
+image-src: /images/homeHero.jpeg
+primary-color: '#2B4C52'
+secondary-color: '#DB6644'
+tertiary-color: '#F0B348'
 ---
 #title
-Partez à la rencontre
+La rencontre
 
-du monde autrement
+au coeur du voyage
 
 #component-slot-1
   :::search-field
   :::
 ::
 
-::headlines-wrapper
+<!-- ::headlines-wrapper
   :::headline-card
   #title
   Des séjours [immersifs]{style="color:#bc5948;"} pour voyager [autrement]{style="color:#bc5948;"}
@@ -78,7 +81,7 @@ du monde autrement
   #text
   Our smart flight inventory system offers the best prices and options fast. For each Travel Plan, the dates and time of flights determine all transfer details to ensure a seamless experience.
   :::
-::
+:: -->
 
 ::title-container
 #title
