@@ -81,6 +81,7 @@ export default defineNuxtPlugin((app) => {
     defaults: {
       VCard: {
         rounded: 'lg',
+        class: 'subtle-shadow',
       },
       VBtn: {
         color: 'primary',

@@ -114,7 +114,7 @@ const dateMenu = ref(false)
 // Replace individual refs with useState
 const date = useState('searchDate', () => [])
 const travelTypeChoices = useState('searchTravelTypes', () => [])
-const destinationsChoices = useState('searchDestination', () => 'FR')
+const destinationsChoices = useState('searchDestination', () => '')
 
 const destinations = ref([
   { value: 'FR', title: 'France' },
@@ -129,7 +129,7 @@ const travelTypes = [
 ]
 
 const formattedDate = computed(() => {
-  return date.value ? dayjs(date.value[0]).format('DD/MM/YYYY') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM/YYYY') : ''
+  return date.value ? dayjs(date.value[0]).format('DD/MM') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM') : ''
 })
 
 const search = () => {

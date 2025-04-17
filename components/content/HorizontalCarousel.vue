@@ -6,7 +6,7 @@
       <v-col
         cols="8"
         sm="10"
-        class="text-dark font-weight-black text-h5 text-md-h4 my-4"
+        class="text-dark font-weight-black text-h2 my-4"
       >
         <slot name="title" />
       </v-col>
@@ -17,29 +17,27 @@
       >
         <v-btn
           icon
-          density="compact"
           color="primary"
-          variant="outlined"
           :disabled="arrivedState.left"
           class="mr-2"
+          elevation="5"
           @click="x -= scrollAmount"
         >
           <v-icon
             :icon="mdiChevronLeft"
-            color="primary"
+            color="white"
           />
         </v-btn>
         <v-btn
           icon
-          density="compact"
           color="primary"
-          variant="outlined"
+          elevation="5"
           :disabled="arrivedState.right"
           @click="x += scrollAmount"
         >
           <v-icon
             :icon="mdiChevronRight"
-            color="primary"
+            color="white"
           />
         </v-btn>
       </v-col>
@@ -62,7 +60,7 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
-const { lgAndUp, md, sm } = useDisplay()
+const { mdAndUp, sm } = useDisplay()
 
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
@@ -80,10 +78,7 @@ const childrenCount = computed(() => {
 })
 
 const displayButton = computed(() => {
-  if (lgAndUp.value) {
-    return childrenCount.value > 4
-  }
-  else if (md.value) {
+  if (mdAndUp.value) {
     return childrenCount.value > 3
   }
   else if (sm.value) {

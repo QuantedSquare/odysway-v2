@@ -4,7 +4,6 @@
     cols="12"
     sm="6"
     md="4"
-    lg="3"
   >
     <v-skeleton-loader
       class="mx-auto"
@@ -17,7 +16,6 @@
     cols="12"
     sm="6"
     md="4"
-    lg="3"
   >
     <v-card
       elevation="0"
