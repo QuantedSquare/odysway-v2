@@ -12,7 +12,7 @@
     />
   </v-col>
   <v-col
-    v-else-if="status === 'success'"
+    v-else-if="status === 'success' && voyage"
     cols="12"
     sm="6"
     md="4"
@@ -86,7 +86,7 @@
                   vertical
                 />
                 <v-col class="text-center">
-                  <div class="font-weight-bold text-primary">{{ voyageDurationInDays }}</div>
+                  <div class="font-weight-bold text-primary">{{ voyage.duration }}</div>
                   <div class="text-grey-lighten-1 font-weight-medium">Jours </div>
                 </v-col>
                 <v-divider
@@ -102,23 +102,25 @@
           </v-card-text>
           <v-divider />
           <v-card-actions class="justify-center">
-            <v-btn
-              v-if="voyage.dates.length > 0"
-              block
-              color="primary"
-              class="font-weight-bold"
-            >
-              Découvrir les dates
-            </v-btn>
-            <v-btn
-              v-else
-              block
-              color="secondary"
-              class="text-decoration-none font-weight-bold"
-              :to="`/calendly?travelTitle=${voyage.title}`"
-            >
-              Demander un devis
-            </v-btn>
+            <client-only>
+              <v-btn
+                v-if="voyage.dates?.length > 0"
+                block
+                color="primary"
+                class="font-weight-bold"
+              >
+                Découvrir les dates
+              </v-btn>
+              <v-btn
+                v-else
+                block
+                color="secondary"
+                class="text-decoration-none font-weight-bold"
+                :to="`/calendly?travelTitle=${voyage.title}`"
+              >
+                Demander un devis
+              </v-btn>
+            </client-only>
           </v-card-actions>
         </NuxtLink>
       </div>
@@ -140,16 +142,6 @@ const img = useImage()
 
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('deals').where('slug', '=', props.voyageSlug).first()
-})
-
-const voyageDurationInDays = computed(() => {
-  let duration = 0
-
-  if (status.value === 'success') {
-    duration = voyage.value.duration.split('jours')[0].trim()
-  }
-
-  return duration
 })
 </script>
 

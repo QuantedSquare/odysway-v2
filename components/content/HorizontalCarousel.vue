@@ -61,8 +61,9 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
-defineProps({
+const props = defineProps({
   textColor: { type: String, default: 'primary' },
+  showButtons: { type: Boolean, default: true },
 })
 
 const { mdAndUp, sm } = useDisplay()
@@ -82,14 +83,19 @@ const childrenCount = computed(() => {
   return itemsList.value?.children[0].children.length
 })
 const displayButton = computed(() => {
-  if (mdAndUp.value) {
-    return childrenCount.value > 3
-  }
-  else if (sm.value) {
-    return childrenCount.value > 2
+  if (props.showButtons) {
+    if (mdAndUp.value) {
+      return childrenCount.value > 3
+    }
+    else if (sm.value) {
+      return childrenCount.value > 2
+    }
+    else {
+      return childrenCount.value > 1
+    }
   }
   else {
-    return childrenCount.value > 1
+    return false
   }
 })
 
