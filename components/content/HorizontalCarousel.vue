@@ -6,7 +6,7 @@
       <v-col
         cols="8"
         sm="10"
-        class="text-dark font-weight-black text-h2 my-4"
+        class="text-h2 my-4"
       >
         <slot name="title" />
       </v-col>

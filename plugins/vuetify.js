@@ -101,7 +101,6 @@ export default defineNuxtPlugin((app) => {
         inset: true,
         hideDetails: true,
       },
-
       // Fields
       VTextField: {
         variant: 'solo',
