@@ -223,7 +223,21 @@ Des voyageurs épanouis
   ---
   :::
 ::
+::cta-button
+---
+link: /avis-voyageurs
+---
+#text
+Afficher plus de témoignages
+::
 
+::color-container
+---
+color: grey-light-2
+---
+:::team-container
+:::
+::
 
 ::title-container
 #title

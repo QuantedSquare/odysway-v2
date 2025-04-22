@@ -1,5 +1,7 @@
 <template>
-  <v-container :fluid="width < 1440">
+  <v-container
+    :fluid="width < 1440"
+  >
     <v-row
       align="center"
     >
@@ -71,7 +73,7 @@ defineProps({
     default: 'primary',
   },
 })
-const { mdAndUp, sm } = useDisplay()
+const { mdAndUp, sm, width } = useDisplay()
 
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
@@ -104,11 +106,11 @@ const { width: scrollContainerWidth } = useElementSize(scrollContainer)
 
 const scrollAmount = computed(() => {
   // 892 is a scroll container width on md breakpoint
-  if (scrollContainerWidth.value >= 892) {
+  if (scrollContainerWidth.value && scrollContainerWidth.value >= 892) {
     return 400
   }
   else {
-    return scrollContainerWidth.value
+    return scrollContainerWidth?.value || 0
   }
 })
 </script>

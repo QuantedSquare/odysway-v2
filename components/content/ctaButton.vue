@@ -4,8 +4,10 @@
       v-if="!external"
       :to="link"
       :color="color"
+      height="60"
+      size="large"
     >
-      <div class="text-white">
+      <div class="text-white font-weight-bold">
         <slot
           mdc-unwrap="p"
           name="text"
