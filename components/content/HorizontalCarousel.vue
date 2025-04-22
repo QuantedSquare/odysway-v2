@@ -1,5 +1,5 @@
 <template>
-  <v-container :fluid="width < 1440">
+  <v-container :fluid="scrollContainerWidth < 1440">
     <v-row
       align="center"
     >
@@ -7,6 +7,7 @@
         cols="8"
         sm="10"
         class="text-h2 my-4"
+        :class="'text-'+ textColor "
       >
         <slot name="title" />
       </v-col>
@@ -59,6 +60,10 @@
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
+
+defineProps({
+  textColor: { type: String, default: 'primary' },
+})
 
 const { mdAndUp, sm } = useDisplay()
 

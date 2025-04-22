@@ -57,6 +57,7 @@ export default defineNuxtPlugin((app) => {
             'tertiary-light': '#EADFB1', // odysway yellow
             'quaternary': '#2D5843', // odysway green
             'quaternary-light': '#7D9676', // odysway green
+            'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
 
@@ -67,6 +68,8 @@ export default defineNuxtPlugin((app) => {
             'white': '#FFFFFF',
             'grey': '#95A5A8',
             'grey-light': '#EAEDEE',
+            'grey-lighten-1': '#BDBDBD',
+            'grey-darken-2': '#616161',
           },
           variables: {
             'medium-emphasis-opacity': '1',

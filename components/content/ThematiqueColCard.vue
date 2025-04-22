@@ -51,7 +51,7 @@ import { useImage } from '#imports'
 const imgComp = useImage()
 const isMobile = ref(false)
 
-const props = defineProps({
+defineProps({
   slug: {
     type: String,
     required: true,
@@ -65,7 +65,6 @@ const props = defineProps({
     required: true,
   },
 })
-console.log(' !!!', props)
 onMounted(() => {
   const checkMobile = () => {
     isMobile.value = window.innerWidth <= 960

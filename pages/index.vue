@@ -11,17 +11,13 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
 const route = useRoute()
 
-const { width } = useDisplay()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
 
 if (page.value) {
-  console.log('page', page.value)
   defineOgImageComponent(page.value?.ogImage?.component, {
     title: page.value.ogImage?.props.title,
     description: page.value.ogImage?.props.description,

@@ -92,38 +92,46 @@ Laissez-vous inspirer
   :::
 ::
 
+::color-container
+---
+color: soft-blush
+---
+  ::horizontal-carousel
+  ---
+  text-color: primary
+  ---
+  #title
+  Coups de coeur voyageurs
 
-::horizontal-carousel
-#title
-Coups de coeur voyageurs (ajouter props color Bg)
+  #carousel-item
+    :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+    :::
+    :::voyage-col-card{voyage-slug="decouverte-merveilles-rajasthan-bishnoi"}
+    :::
+    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::
 
-#carousel-item
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-  :::
+    :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
+    :::
 
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-  :::
+    :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+    :::
 
-  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
-  :::
+    :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
+    :::
 
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
-  :::
+    :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+    :::
 
-  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
-  :::
+    :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
+    :::
 
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-  :::
+    :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+    :::
 
-  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
-  :::
-
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
-  :::
-
-  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
-  :::
+    :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
+    :::
+  ::
 ::
 
 ::horizontal-carousel

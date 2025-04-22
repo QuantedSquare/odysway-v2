@@ -229,7 +229,7 @@ import { useImage } from '#imports'
 const { gtag } = useGtag()
 const route = useRoute()
 const check = useAppConfig()
-console.log('check', check)
+// console.log('check', check)
 
 const img = useImage()
 const email = ref('')

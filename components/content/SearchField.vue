@@ -148,7 +148,7 @@ const search = () => {
 const isSearchPage = computed(() => {
   return route.name === 'search'
 })
-console.log(isSearchPage.value)
+// console.log(isSearchPage.value)
 </script>
 
 <!-- <style lang="css" scoped>
