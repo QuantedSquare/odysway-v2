@@ -22,10 +22,10 @@
       <div class="blur-overlay" />
       <div class="image-overlay" />
       <div class="content-overlay">
-        <div class="w-100">
-          <h3 class="category-title text-h4 text-lg-h2 text-shadow text-to-wrap">{{ title }}</h3>
-          <p class="category-description text-shadow d-flex flex-column align-start justify-space-between ga-2">
-            <span>
+        <div class="w-100 d-flex flex-column align-center justify-center">
+          <h3 class="category-title text-h4 text-lg-h2 d-flex align-center text-center  text-shadow ">{{ title }}</h3>
+          <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
+            <span class="text-center">
               Cliquez pour en apprendre plus à propos des {{ title }}
             </span>
             <client-only>

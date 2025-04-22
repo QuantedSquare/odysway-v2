@@ -50,47 +50,47 @@ au coeur du voyage
   :::
 ::
 
-  :::horizontal-carousel
-  #title
-  Laissez-vous inspirer
+::horizontal-carousel
+#title
+Laissez-vous inspirer
 
-  #carousel-item
-    ::::thematique-col-card
-    ---
-    slug: chemins-vers-soi
-    image: /images/Maroc-voyage-spirituel.jpg
-    title: Plongée dans la culture Indienne
-    ---
-    ::::
-    ::::thematique-col-card
-    ---
-    slug: echappees-sauvages
-    image: /images/montagne.jpg
-    title: Échapées sauvages
-    ---
-    ::::
-    ::::thematique-col-card
-    ---
-    slug: immersions-locales
-    image: /images/Pérou-voyage-spirituel.jpg
-    title: Immersions locales
-    ---
-    ::::
-    ::::thematique-col-card
-    ---
-    slug: regard-faune
-    image: /images/AdobeStock_175948238.webp
-    title: Regard sur la faune
-    ---
-    ::::
-    ::::thematique-col-card
-    ---
-    slug: sentiers-aventures
-    image: /images/Laponie-(1).webp
-    title: Sentiers d'aventure
-    ---
-    ::::
+#carousel-item
+  :::thematique-col-card
+  ---
+  slug: chemins-vers-soi
+  image: /images/Maroc-voyage-spirituel.jpg
+  title: Plongée dans la culture Indienne
+  ---
   :::
+  :::thematique-col-card
+  ---
+  slug: echappees-sauvages
+  image: /images/montagne.jpg
+  title: Échapées sauvages
+  ---
+  :::
+  :::thematique-col-card
+  ---
+  slug: immersions-locales
+  image: /images/Pérou-voyage-spirituel.jpg
+  title: Immersions locales
+  ---
+  :::
+  :::thematique-col-card
+  ---
+  slug: regard-faune
+  image: /images/AdobeStock_175948238.webp
+  title: Regard sur la faune
+  ---
+  :::
+  :::thematique-col-card
+  ---
+  slug: sentiers-aventures
+  image: /images/Laponie-(1).webp
+  title: Sentiers d'aventure
+  ---
+  :::
+::
 
 
 ::horizontal-carousel
