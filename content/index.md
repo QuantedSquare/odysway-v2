@@ -57,11 +57,44 @@ white-text: true
 ---
   :::horizontal-carousel
   #title
-  Laissez-vous inspirer (Ici remplacer VoyageColCard par card thème (à créer)) ALEX
+  Laissez-vous inspirer
 
   #carousel-item
-    :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-    :::
+    ::::thematique-col-card
+    ---
+    slug: chemins-vers-soi
+    image: /images/Maroc-voyage-spirituel.jpg
+    title: Chemins vers soi
+    ---
+    ::::
+    ::::thematique-col-card
+    ---
+    slug: echappees-sauvages
+    image: /images/montagne.jpg
+    title: Échapées sauvages
+    ---
+    ::::
+    ::::thematique-col-card
+    ---
+    slug: immersions-locales
+    image: /images/Pérou-voyage-spirituel.jpg
+    title: Immersions locales
+    ---
+    ::::
+    ::::thematique-col-card
+    ---
+    slug: regard-faune
+    image: /images/AdobeStock_175948238.webp
+    title: Regard sur la faune
+    ---
+    ::::
+    ::::thematique-col-card
+    ---
+    slug: sentiers-aventures
+    image: /images/Laponie-(1).webp
+    title: Sentiers d'aventure
+    ---
+    ::::
   :::
 ::
 
@@ -188,8 +221,8 @@ Nouveau component "Notre équipe est là pour vous renseigner" + subtext + bouto
 
 
 Redesign faq, une props image à rajouter pour le bg + Subtext tout en bas :
-D’autres questions? Consulter notre FAQ
-Si vous ne trouvez pas la réponse que vous cherchez, n’hésitez pas à nous contacter.
+D'autres questions? Consulter notre FAQ
+Si vous ne trouvez pas la réponse que vous cherchez, n'hésitez pas à nous contacter.
 
 ::faq-container
 #section-title
