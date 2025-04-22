@@ -17,11 +17,8 @@
     sm="6"
     md="4"
   >
-    <v-card
-      elevation="0"
-    >
+    <v-card elevation="0">
       <NuxtLink
-        :key="`Voyage ${voyage.slug}`"
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none position-relative text-white"
       >
@@ -29,127 +26,75 @@
         <v-img
           :src="img(voyage.imgSrc1.src, { format: 'webp', quality: 90, height: 350, width: 640 })"
           :alt="voyage.imgSrc1.alt"
-          rounded="xl"
+          rounded="t-xl"
           height="250px"
           class="hover-scale"
           cover
         >
-          <client-only>
-            <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
-              <v-tooltip
-                v-if="voyageTooltips.group"
-                location="bottom"
-                :text="voyageTooltips.group"
-              >
-                <template #activator="{ props }">
-                  <v-btn
-                    v-bind="props"
-                    icon
-                    size="x-small"
-                    color="rgba(0, 0, 0, 0.32)"
-                  >
-                    <v-icon
-                      :icon="mdiAccountGroup"
-                      color="white"
-                    />
-                  </v-btn>
-                </template>
-              </v-tooltip>
-              <v-tooltip
-                v-if="voyageTooltips.child"
-                location="bottom"
-                :text="voyageTooltips.child"
-              >
-                <template #activator="{ props }">
-                  <v-btn
-                    v-bind="props"
-                    icon
-                    size="x-small"
-                    color="rgba(0, 0, 0, 0.32)"
-                  >
-                    <v-img
-                      src="/icons/child.svg"
-                      alt="Child icon"
-                      class="svg-child-icon"
-                    />
-                  </v-btn>
-                </template>
-              </v-tooltip>
-            </div>
-            <div class="display-mobile">
-              <div class="blur-overlay" />
-              <div class="position-absolute bottom-text text-shadow text-white bottom-0">
-                <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 no-white-space">
-                  {{ voyage.title }}
-                </v-card-title>
-                <v-card-text class="font-weight-bold px-0 d-flex flex-column align-start ga-2 mt-4">
-                  <span class="text-body-1">{{ voyage.country }} - {{ voyage.duration }}</span>
-                  <span class="text-body-2"> A partir de {{ voyage.startingPrice }}€</span>
-                  <client-only>
-                    <div
-                      v-if="voyage.comments > 0"
-                      class="d-flex align-center text-catpion"
-                    >
-                      <v-rating
-                        :key="`rating-${voyage.slug}`"
-                        half-increments
-                        size="small"
-                        readonly
-                        :model-value="voyage.rating"
-                        color="orange-lighten-1"
-                        density="compact"
-                      />
-                      <span class="text-caption">({{ voyage.comments }})</span>
-                    </div>
-                  </client-only>
-                </v-card-text>
-              </div>
-            </div>
-          </client-only>
-        </v-img>
+          <div
+            v-if="voyage.comments > 0"
+            class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0"
+          >
+            <v-btn
+              size="small"
+              color="white"
+              rounded="pill"
+            >
 
+              <v-icon
+                :icon="mdiStar"
+                color="primary"
+              />
+              {{ voyage.rating }}/5
+            </v-btn>
+
+          </div>
+        </v-img>
       </NuxtLink>
 
       <!--  BOTTOM TEXT -->
       <div class="d-none d-sm-block ">
         <NuxtLink
-          :to="`/destinations/${voyage.country}`"
-          class="text-decoration-none"
-        >
-          <v-card-text class="font-weight-bold py-1 px-0 d-flex align-center">
-            <span>
-              <span class="text-primary hover-underline">{{ voyage.country }} </span><span class="text-secondary"> - {{
-                voyage.duration }}</span>
-            </span>
-          </v-card-text>
-        </NuxtLink>
-        <NuxtLink
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
         >
-          <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark no-white-space">
-            {{ voyage.title }}
-          </v-card-title>
+
           <v-card-text class="text-body-2 py-1 px-0">
-            <span class="text-grey-darken-2 "> A partir de </span>
-            <span class="font-weight-bold text-dark">{{ voyage.startingPrice }}€</span>
+            <v-container>
+              <v-row>
+                <v-col>
+                  <div class="text-body-1 font-weight-black py-1 px-0 text-dark no-white-space">
+                    {{ voyage.title }}
+                  </div>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col>
+                  <div class="text-grey-darken-2 "> Type </div>
+                  <div class="font-weight-bold text-dark">{{ voyage.startingPrice }}€</div>
+                </v-col>
+                <v-divider vertical />
+                <v-col class="text-center">
+                  <div class="font-weight-bold text-dark">{{ voyage.duration }}</div>
+                  <div class="text-grey-darken-2 ">Jours </div>
+                </v-col>
+                <v-divider vertical />
+                <v-col class="text-right">
+                  <div class="text-grey-darken-2"> A partir de </div>
+                  <div class="font-weight-bold text-dark">{{ voyage.startingPrice }}€</div>
+                </v-col>
+              </v-row>
+            </v-container>
+            <v-divider />
           </v-card-text>
-          <div
-            v-if="voyage.comments > 0"
-            class="d-flex align-center text-dark"
-          >
-            <client-only>
-              <v-rating
-                :key="`rating-${voyage.slug}`"
-                half-increments
-                :size="24"
-                :model-value="voyage.rating"
-                readonly
-                color="orange-lighten-1"
-              />
-              <span>({{ voyage.comments }})</span>
-            </client-only>
-          </div>
+          <v-card-actions class="justify-center">
+            <v-btn
+              block
+              color="primary"
+            >
+              Découvrir les dates
+            </v-btn>
+          </v-card-actions>
         </NuxtLink>
       </div>
     </v-card>
@@ -157,7 +102,7 @@
 </template>
 
 <script setup>
-import { mdiAccountGroup } from '@mdi/js'
+import { mdiAccountGroup, mdiStar } from '@mdi/js'
 import { useImage } from '#imports'
 
 const props = defineProps({
