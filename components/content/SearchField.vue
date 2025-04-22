@@ -1,6 +1,6 @@
 <template>
   <v-container class="search-field-container">
-    <div class="rounded-lg bg-white pa-4">
+    <div class="rounded-lg bg-white pa-4 search-field-shadow">
       <ClientOnly>
         <v-row align="center">
           <v-col
@@ -164,5 +164,8 @@ console.log(isSearchPage.value)
 <style scoped>
 .search-field-container {
   max-width: 1070px;
+}
+.search-field-shadow {
+  box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
 }
 </style>

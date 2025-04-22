@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container :fluid="width <= 1440">
     <v-row
       align="center"
     >
@@ -76,7 +76,6 @@ onMounted(() => {
 const childrenCount = computed(() => {
   return itemsList.value?.children[0].children.length
 })
-
 const displayButton = computed(() => {
   if (mdAndUp.value) {
     return childrenCount.value > 3

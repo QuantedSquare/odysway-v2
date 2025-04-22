@@ -1,11 +1,12 @@
 <template>
-  <div class="relative-hero-section mb-16">
+  <div class="relative-hero-section mb-16 rounded-xl">
     <v-img
       :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
       :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
       :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
       height="80vh"
+      class="rounded-xl"
       cover
     >
       <template #placeholder>
@@ -104,14 +105,12 @@ const img = useImage()
   left:0;
   right: 0;
   bottom: -60px;
-
 }
 
 .relative-hero-section {
  position:relative;
  height: 80vh;
  width: 100%;
- box-shadow: 5px 5px 100px 0px #2B4C5280;
 }
 
 @media (max-width: 960px) {

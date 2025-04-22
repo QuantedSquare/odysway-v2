@@ -50,11 +50,6 @@ au coeur du voyage
   :::
 ::
 
-::color-container
----
-color: primary
-white-text: true
----
   :::horizontal-carousel
   #title
   Laissez-vous inspirer
@@ -64,7 +59,7 @@ white-text: true
     ---
     slug: chemins-vers-soi
     image: /images/Maroc-voyage-spirituel.jpg
-    title: Chemins vers soi
+    title: Plongée dans la culture Indienne
     ---
     ::::
     ::::thematique-col-card
@@ -96,16 +91,6 @@ white-text: true
     ---
     ::::
   :::
-::
-
-::horizontal-carousel
-#title
-Laissez-vous inspirer (Ici remplacer VoyageColCard par card thème (à créer)) ALEX
-
-#carousel-item
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-  :::
-::
 
 
 ::horizontal-carousel
@@ -205,7 +190,8 @@ Voyages inoubliables
 
 ::horizontal-carousel
 #title
-Voyages inoubliables (ajouter props pour centrer ce text) Remplacer voyageColCard par une Card "avis voyageur" Check comment la donnée est récupérée ici https://github.com/QuantedSquare/odysway-v2/blob/hashing/components/content/TravelReviewCard.vue
+Voyages inoubliables 
+<!-- (ajouter props pour centrer ce text) Remplacer voyageColCard par une Card "avis voyageur" Check comment la donnée est récupérée ici https://github.com/QuantedSquare/odysway-v2/blob/hashing/components/content/TravelReviewCard.vue -->
 
 
 #carousel-item

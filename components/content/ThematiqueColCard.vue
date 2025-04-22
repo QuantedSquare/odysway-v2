@@ -1,7 +1,7 @@
 <template>
   <v-col
     cols="12"
-    sm="6"
+    sm="4"
     md="3"
   >
     <NuxtLink
@@ -23,9 +23,9 @@
       <div class="image-overlay" />
       <div class="content-overlay">
         <div class="w-100">
-          <h3 class="category-title text-shadow text-to-wrap">{{ title }}</h3>
-          <p class="category-description text-shadow d-flex align-center justify-space-between ga-2">
-            <span class="w-75">
+          <h3 class="category-title text-h4 text-lg-h2 text-shadow text-to-wrap">{{ title }}</h3>
+          <p class="category-description text-shadow d-flex flex-column align-start justify-space-between ga-2">
+            <span>
               Cliquez pour en apprendre plus à propos des {{ title }}
             </span>
             <client-only>
@@ -81,14 +81,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.text-to-wrap {
-  white-space: nowrap;
-}
-
 .image-wrapper {
   position: relative;
   display: flex;
-  height: 24rem;
+  height: 415px;
   width: 100%;
   cursor: pointer;
   overflow: hidden;
@@ -148,8 +144,7 @@ onMounted(() => {
 }
 
 .category-title {
-  margin: 0;
-  font-size: 1.25rem;
+  margin: -2em 0 0 0;
   font-weight: 600;
   transition: transform 0.3s ease-in-out;
 }
@@ -181,11 +176,11 @@ onMounted(() => {
 
 @media screen and (max-width: 1280px) {
   .text-to-wrap {
-    white-space: normal;
     padding-bottom: 10px;
   }
   .category-title {
-    margin: -30px 0 0 0 !important;
+    margin: -60px 0 0 0 !important;
+    font-size: 1.5rem !important;
   }
 }
 
