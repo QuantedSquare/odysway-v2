@@ -10,6 +10,8 @@
       :class="{
         'default-expanded': isMobile,
       }"
+      @mouseenter="isHovered = true"
+      @mouseleave="isHovered = false"
     >
       <v-img
         v-if="image"
@@ -21,26 +23,36 @@
 
       <div class="blur-overlay" />
       <div class="image-overlay" />
-      <div class="content-overlay">
-        <div class="w-100 d-flex flex-column align-center justify-center">
-          <h3 class="category-title text-h4 text-lg-h2 d-flex align-center text-center  text-shadow ">{{ title }}</h3>
-          <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
-            <span class="text-center">
-              Cliquez pour en apprendre plus à propos des {{ title }}
-            </span>
-            <client-only>
-              <v-btn
-                v-if="isMobile"
-                class="explore-btn"
-                :to="`/thematiques/${slug}`"
-                @click.stop
-              >
-                Explorez
-              </v-btn>
-            </client-only>
-          </p>
-        </div>
-      </div>
+
+      <TransitionGroup
+        name="slide"
+        class="content-wrapper"
+        tag="div"
+      >
+        <h3
+          key="title"
+          class="text-h4 text-lg-h2 text-center text-shadow"
+        >
+          {{ title }}
+        </h3>
+        <p
+          v-if="isHovered || isMobile"
+          key="description"
+          class="description text-shadow text-center"
+        >
+          Cliquez pour en apprendre plus à propos des {{ title }}
+          <client-only>
+            <v-btn
+              v-if="isMobile"
+              class="explore-btn mt-4"
+              :to="`/thematiques/${slug}`"
+              @click.stop
+            >
+              Explorez
+            </v-btn>
+          </client-only>
+        </p>
+      </TransitionGroup>
     </NuxtLink>
   </v-col>
 </template>
@@ -50,7 +62,7 @@ import { useImage } from '#imports'
 
 const imgComp = useImage()
 const isMobile = ref(false)
-
+const isHovered = ref(false)
 const props = defineProps({
   slug: {
     type: String,
@@ -89,7 +101,6 @@ onMounted(() => {
   cursor: pointer;
   overflow: hidden;
   border-radius: 1rem;
-  transition: all 0.5s ease-in-out;
 }
 
 .blur-overlay {
@@ -125,41 +136,23 @@ onMounted(() => {
   opacity: 1;
 }
 
-.content-overlay {
-  display: flex;
-  justify-content: space-between;
+.content-wrapper {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2rem 1rem;
+  padding: 2rem;
   color: white;
-  transform: translateY(calc(100% - 5rem));
-  transition: transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   z-index: 1;
 }
 
-.image-wrapper:hover .content-overlay {
-  transform: translateY(0);
-}
-
-.category-title {
-  margin: -2em 0 0 0;
-  font-weight: 600;
-  transition: transform 0.3s ease-in-out;
-}
-
-.category-description {
-  margin: 0.5rem 0 0;
+.description {
+  margin-top: 1rem;
   font-size: 0.875rem;
-  opacity: 0;
-  transform: translateY(1rem);
-  transition: all 0.3s ease-in-out;
-}
-
-.image-wrapper:hover .category-description {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .explore-btn {
@@ -170,24 +163,38 @@ onMounted(() => {
 }
 
 .explore-btn:hover {
-  background: white;
-  color: black;
+  background: white !important;
+  color: black !important;
+}
+
+/* TransitionGroup animations */
+.slide-move,
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-leave-active {
+  position: absolute;
 }
 
 @media screen and (max-width: 1280px) {
-  .text-to-wrap {
-    padding-bottom: 10px;
-  }
-  .category-title {
-    margin: -60px 0 0 0 !important;
+  h3 {
     font-size: 1.5rem !important;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .category-title {
-    margin: 0 !important;
-  }
   .image-wrapper {
     height: 16rem;
   }
