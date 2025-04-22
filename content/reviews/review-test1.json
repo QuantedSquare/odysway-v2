@@ -1,11 +1,11 @@
 {
-  "slug": "test1",
-  "author": "Test1",
+  "slug": "francois",
+  "author": "François",
   "authorAge": "50",
   "photo": "/images/Florence Guilemaille.jpg",
   "voyagePhoto": "/images/AdobeStock_218029671 (1).webp",
   "text": "Une expérience incroyable au Népal ! Un grand merci à l'équipe d'Odysway et plus particulièrement à Lucie qui a été notre interlocutrice pendant la préparation de ce voyage, mais aussi pendant et après.  Nous recommandons vivement Odysway pour des voyages uniques !",
   "voyageSlug": "sejour-immersion-berger-pyrenees",
-  "voyageTitle": "Test 1 : Vis ma vie de berger dans les Pyrénées",
+  "voyageTitle": "Vis ma vie de berger dans les Pyrénées",
   "isOnHome": true
 }

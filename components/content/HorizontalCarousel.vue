@@ -7,6 +7,7 @@
         cols="8"
         sm="10"
         class="text-h2 my-4"
+        :class="{ 'text-center': centerTitle }"
       >
         <slot name="title" />
       </v-col>
@@ -17,7 +18,7 @@
       >
         <v-btn
           icon
-          color="primary"
+          :color="color"
           :disabled="arrivedState.left"
           class="mr-2"
           elevation="5"
@@ -30,7 +31,7 @@
         </v-btn>
         <v-btn
           icon
-          color="primary"
+          :color="color"
           elevation="5"
           :disabled="arrivedState.right"
           @click="x += scrollAmount"
@@ -60,6 +61,16 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
+defineProps({
+  centerTitle: {
+    type: Boolean,
+    default: false,
+  },
+  color: {
+    type: String,
+    default: 'primary',
+  },
+})
 const { mdAndUp, sm } = useDisplay()
 
 const scrollContainer = ref(null)
@@ -74,7 +85,7 @@ onMounted(() => {
 })
 
 const childrenCount = computed(() => {
-  return itemsList.value?.children[0].children.length
+  return itemsList.value?.children[0]?.children.length
 })
 const displayButton = computed(() => {
   if (mdAndUp.value) {

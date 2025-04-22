@@ -48,7 +48,7 @@ export default defineNuxtPlugin((app) => {
             'primary-light-2': 'rgba(43, 76, 82, 0.6)',
             'primary-light-3': 'rgba(43, 76, 82, 0.4)', // odysway text
             'primary-light-4': 'rgba(43, 76, 82, 0.2)', // odysway text
-            'secondary': '#DB6644', // odysway red
+            'secondary': 'rgba(219, 102, 68, 1)', // odysway red
             'secondary-light': 'rgba(219, 102, 68, 0.8)', // odysway red
             'secondary-light-2': 'rgba(219, 102, 68, 0.6)', // odysway red
             'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // odysway red

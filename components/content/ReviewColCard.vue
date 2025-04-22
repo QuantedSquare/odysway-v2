@@ -1,78 +1,67 @@
 <template>
-  <v-row
-    no-gutters
-    justify="center"
-    align="center"
-    class="height-fixed"
+  <v-col
+    v-if="status === 'pending'"
+    cols="12"
+    sm="6"
+    md="4"
   >
-    <v-col
-      cols="12"
-      class="d-flex align-start mb-10"
-    >
-      <v-img
-        src="/images/guillemet-gauche.svg"
-        height="27"
-        width="27"
-      />
-      <p class="text-center text-body-1 text-grey-darken-3">
-        {{ review.text }}
-      </p>
-      <v-img
-        src="/images/guillemet-droite.svg"
-        height="27"
-        width="27"
-      />
-    </v-col>
-
-    <v-col
-      cols="12"
-    >
-      <v-card
-        variant="text"
-        :href="`/voyages/${review.voyageSlug}`"
-        target="_blank"
-        class="border-card"
-      >
-        <v-row
-          justify="center"
-          no-gutters
-          align="center"
-        >
-          <v-col
-            cols="auto"
-            class="d-flex align-center ga-4"
-          >
+    <v-skeleton-loader
+      class="mx-auto"
+      type="card"
+      height="250"
+    />
+  </v-col>
+  <v-col
+    v-else-if="status === 'success' && review"
+    cols="12"
+    sm="6"
+    md="4"
+  >
+    <v-sheet elevation="0">
+      <v-card-item>
+        <v-card-title class="d-flex align-center ga-2">
+          <v-avatar size="62">
             <v-img
-              max-height="150px"
-              min-width="170px"
-              :src="img(review.voyagePhoto, { format: 'webp', quality: 70, width: 640 })"
-              rounded="xl"
-              cover
+              :src="img(review.photo, { format: 'webp', quality: 70, width: 640 })"
+              rounded="circle"
             />
-            <div>
-              <v-card-subtitle class="text-uppercase sub-headline text-dark no-white-space px-0">
-                Le voyage de {{ review.author }}:
-              </v-card-subtitle>
-              <v-card-title class="text-dark text-subtitle-1 font-weight-bold no-white-space px-0">
-                <h4>
-                  {{ review.voyageTitle }}
-                </h4>
-              </v-card-title>
-            </div>
-          </v-col>
-        </v-row>
-      </v-card>
-    </v-col>
-  </v-row>
+          </v-avatar>
+          <div class="d-flex flex-column">
+            <span class="text-h5"> {{ review.author }}</span>
+            <span class="text-h6 text-grey text-truncate"> {{ review.voyageTitle }}</span>
+          </div>
+        </v-card-title>
+        <v-card-subtitle class="mt-4">
+          <client-only>
+            <v-rating
+              :model-value="5"
+              color="secondary"
+              length="5"
+              size="20"
+              readonly
+            />
+          </client-only>
+        </v-card-subtitle>
+      </v-card-item>
+      <v-card-text class="text-h4 font-weight-bold">
+        "{{ review.text }}
+      </v-card-text>
+    </v-sheet>
+  </v-col>
 </template>
 
 <script setup>
 import { useImage } from '#imports'
 
-defineProps({
-  review: Object,
+const props = defineProps({
+  slug: {
+    type: String,
+    required: true,
+  },
 })
-
+const { data: review, status } = useAsyncData('reviews' + props.slug, () => {
+  return queryCollection('reviews').where('slug', '=', props.slug).first()
+})
 const img = useImage()
 </script>
 

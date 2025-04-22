@@ -38,8 +38,8 @@ image-src: /images/homeHero.jpeg
 primary-color: '#2B4C52'
 secondary-color: '#DB6644'
 tertiary-color: '#F0B348'
-
 ---
+
 #title
 La rencontre
 
@@ -189,13 +189,38 @@ Voyages inoubliables
 ::
 
 ::horizontal-carousel
+---
+center-title: true
+color: secondary
+---
 #title
-Voyages inoubliables 
-<!-- (ajouter props pour centrer ce text) Remplacer voyageColCard par une Card "avis voyageur" Check comment la donnée est récupérée ici https://github.com/QuantedSquare/odysway-v2/blob/hashing/components/content/TravelReviewCard.vue -->
-
+Des voyageurs épanouis
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::review-col-card
+  ---
+  slug: 'florence'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'francois'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'test2'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'test3'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'test4'
+  ---
   :::
 ::
 
