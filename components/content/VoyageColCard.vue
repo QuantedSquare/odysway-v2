@@ -151,8 +151,6 @@ const voyageDurationInDays = computed(() => {
 
   return duration
 })
-
-// findClosestVoyageDate(voyage.value)
 </script>
 
 <style scoped>

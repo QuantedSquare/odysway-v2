@@ -134,6 +134,75 @@ color: soft-blush
   ::
 ::
 
+::color-container
+---
+color: primary
+---
+  ::card-grid
+  #title
+  Suivez vos envies
+
+  #cards
+      :::desires-col-card
+      ---
+      slug: chemins-vers-soi
+      image: /images/Maroc-voyage-spirituel.jpg
+      title: Nature
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: echappees-sauvages
+      image: /images/montagne.jpg
+      title: Animaux
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: immersions-locales
+      image: /images/Pérou-voyage-spirituel.jpg
+      title: Immersion
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: regard-faune
+      image: /images/AdobeStock_175948238.webp
+      title: Culture
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: chemins-vers-soi
+      image: /images/Maroc-voyage-spirituel.jpg
+      title: Nature
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: echappees-sauvages
+      image: /images/montagne.jpg
+      title: Animaux
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: immersions-locales
+      image: /images/Pérou-voyage-spirituel.jpg
+      title: Immersion
+      ---
+      :::
+      :::desires-col-card
+      ---
+      slug: regard-faune
+      image: /images/AdobeStock_175948238.webp
+      title: Culture
+      ---
+      :::
+  ::
+::
+
+
 ::horizontal-carousel
 #title
 Nos séjours en France

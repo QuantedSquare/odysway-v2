@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="rounded-xl py-8"
+    class="rounded-xl py-8 mt-8"
     :class="['bg-' + color, { 'text-white': whiteText }]"
   >
     <slot />
