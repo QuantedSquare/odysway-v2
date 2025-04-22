@@ -114,7 +114,7 @@ const dateMenu = ref(false)
 // Replace individual refs with useState
 const date = useState('searchDate', () => [])
 const travelTypeChoices = useState('searchTravelTypes', () => [])
-const destinationsChoices = useState('searchDestination', () => '')
+const destinationsChoices = useState('searchDestination', () => null)
 
 const destinations = ref([
   { value: 'FR', title: 'France' },
