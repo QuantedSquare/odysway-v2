@@ -40,18 +40,18 @@ export default defineAppConfig({
   },
   footer: {
     logo: {
-      logo: '/images/logo_blanc.png',
+      image: '/logos/logo_noir.png',
       description: 'Découvrez le monde autrement avec Odysway, votre partenaire de voyage éthique et responsable.',
     },
     team: {
-      logo: '/team-photo.webp',
+      image: '/images/team-photo.webp',
     },
     contact: {
       ctaText: 'N\'hésitez pas à nous contacter',
       phone: '01 23 45 67 89',
       email: 'contact@odysway.com',
       buttonContact: {
-        text: 'Prendre rendez-vous',
+        text: 'contact',
         lien: '/calendly',
       },
     },

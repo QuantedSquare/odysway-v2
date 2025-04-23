@@ -175,7 +175,7 @@ export default defineNuxtSchema({
           description: 'Section Logo et description',
           icon: 'i-mdi-image-filter-center-focus-strong-outline',
           fields: {
-            logo: field({
+            image: field({
               type: 'media',
               title: 'Logo Odysway',
               description: 'Logo Odysway',
@@ -196,7 +196,7 @@ export default defineNuxtSchema({
           description: 'Section Team',
           icon: 'i-mdi-account-group',
           fields: {
-            logo: field({
+            image: field({
               type: 'media',
               title: 'Photo l\'équipe Odysway',
               description: 'Photo de groupe de l\'équipe',

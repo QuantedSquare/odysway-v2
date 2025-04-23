@@ -4,7 +4,7 @@
     justify="center"
   >
     <div
-      class="avatar-stack"
+      class="avatar-stack d-flex justify-center"
       :style="{
         width: `${(avatars.length - 1) * 60 + 100}px`,
       }"
@@ -70,10 +70,16 @@ const img = useImage()
 @media (max-width: 600px) {
   .avatar-stack {
     width: auto !important;
+    overflow: visible;
   }
 
   .v-avatar[class*="avatar-"] {
-    left: calc(var(--avatar-index) * 40px);
+    left: 50%;
+    transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * 40px));
+  }
+
+  .v-avatar:hover {
+    transform: translateX(calc(-50% + (var(--avatar-index) - ((var(--total-avatars) - 1) / 2)) * 40px)) translateY(-5px);
   }
 }
 
@@ -81,6 +87,7 @@ const img = useImage()
 @for $i from 1 through 10 {
   .avatar-#{$i} {
     --avatar-index: #{$i - 1};
+    --total-avatars: v-bind(avatars.length); /* Update this number based on max possible avatars */
   }
 }
 </style>

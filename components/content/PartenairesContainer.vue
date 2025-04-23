@@ -12,7 +12,7 @@
       >
         <v-img
 
-          :src="img(partenaire?.imgSrc, { format: 'webp', quality: 70, height: 32, width: 150 })"
+          :src="img(partenaire?.imgSrc, { format: 'webp', quality: 70, height: 32, width: 320 })"
           :alt="`logo du partenaire ${partenaire.description}`"
           height="50"
           width="150"
