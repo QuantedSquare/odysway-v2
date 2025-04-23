@@ -87,6 +87,24 @@ export default defineAppConfig({
           to: '/destinations/amerique',
         }],
       },
+      colonne3: {
+        title: 'Colonne 3',
+        links: [{
+          label: 'Europe',
+          to: '/destinations/europe',
+        }, {
+          label: 'Asie',
+          to: '/destinations/asie',
+        }, {
+          label: 'Amérique',
+          to: '/destinations/amerique',
+        }],
+      },
+      colonne4: {
+        title: 'Odysway',
+        address: '40 Rue du Louvre, Paris, France',
+        city: 'Paris, France',
+      },
     },
   },
 })

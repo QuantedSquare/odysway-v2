@@ -131,13 +131,13 @@
           </h5>
           <div class="d-flex flex-column">
             <p class="mb-3">
-              {{ footer.linksList.colonne2.title }}
+              {{ footer.linksList.colonne4.title }}
             </p>
             <p class="text-grey">
-              {{ footer.linksList.colonne2.title }}
+              {{ footer.linksList.colonne4.address }}
             </p>
             <p class="text-grey">
-              {{ footer.linksList.colonne2.title }}
+              {{ footer.linksList.colonne4.city }}
             </p>
           </div>
         </v-col>
