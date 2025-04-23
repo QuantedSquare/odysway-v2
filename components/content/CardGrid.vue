@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container :fluid="width < 1440">
     <v-row>
       <v-col
         cols="12"
@@ -11,3 +11,9 @@
     </v-row>
   </v-container>
 </template>
+
+<script setup>
+import { useDisplay } from 'vuetify'
+
+const { width } = useDisplay()
+</script>

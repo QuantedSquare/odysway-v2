@@ -62,7 +62,7 @@
       </NuxtLink>
 
       <!--  BOTTOM TEXT -->
-      <div class="d-none d-sm-block ">
+      <div>
         <NuxtLink
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
@@ -146,43 +146,6 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
 </script>
 
 <style scoped>
-/* .hover-underline:hover{
-  text-decoration: underline;
-}
-.svg-child-icon {
-    width: 1rem;
-    height: 1rem;
-} */
-/* .display-mobile{
-  display:none;
-}
-@media screen and (max-width: 600px) {
-  .display-mobile{
-    display:block;
-  }
-}
-.bottom-text{
-  padding-top:1em;
-  padding-left:1em;
-} */
-/* .blur-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  border-radius: 24px;
-  mask: linear-gradient(transparent, rgb(0, 0, 0), black);
-  backdrop-filter: blur(4px);
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.752));
-  transition: all 0.5s ease-in-out;
-} */
-
-/* .position-absolute{
-  position:absolute;
-  bottom:0;
-} */
-
  .hover-scale:hover .blur-overlay {
   height: 100%;
 }
@@ -194,14 +157,4 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
 }
-  /*
-.min-height-img{
-  height: 225px;
-}
-@media screen and (max-width: 600px) {
-  .min-height-img{
-    min-height: 300px!important;
-    min-width:300px;
-  }
-} */
 </style>

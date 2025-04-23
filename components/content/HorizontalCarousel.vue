@@ -24,6 +24,7 @@
           :disabled="arrivedState.left"
           class="mr-2"
           elevation="5"
+          :size="mdAndUp ? 'large' : 'small'"
           @click="x -= scrollAmount"
         >
           <v-icon
@@ -34,8 +35,9 @@
         <v-btn
           icon
           :color="color"
-          elevation="5"
           :disabled="arrivedState.right"
+          elevation="5"
+          :size="mdAndUp ? 'large' : 'small'"
           @click="x += scrollAmount"
         >
           <v-icon
@@ -74,7 +76,6 @@ defineProps({
   },
 })
 const { mdAndUp, sm, width } = useDisplay()
-
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
@@ -90,19 +91,14 @@ const childrenCount = computed(() => {
   return itemsList.value?.children[0]?.children.length
 })
 const displayButton = computed(() => {
-  if (props.showButtons) {
-    if (mdAndUp.value) {
-      return childrenCount.value > 3
-    }
-    else if (sm.value) {
-      return childrenCount.value > 2
-    }
-    else {
-      return childrenCount.value > 1
-    }
+  if (mdAndUp.value) {
+    return childrenCount.value > 3
+  }
+  else if (sm.value) {
+    return childrenCount.value > 2
   }
   else {
-    return false
+    return childrenCount.value > 1
   }
 })
 
