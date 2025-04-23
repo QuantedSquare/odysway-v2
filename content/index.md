@@ -261,6 +261,20 @@ color: white
 
 ::
 
+
+::color-container
+---
+color: soft-blush
+---
+  ::newsletter-container
+  #title
+  [Nos bonnes idées 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
+
+  #subtitle
+  [2 fois par mois, nos inspirations et idées pour voyager autrement ]{style="color: #BDBDBD; font-weight: 500"}
+  ::
+
+::
 ::horizontal-carousel
 #title
 Nos séjours en France
