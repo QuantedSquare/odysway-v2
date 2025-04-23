@@ -167,69 +167,159 @@ export default defineNuxtSchema({
     }),
     footer: group({
       title: 'Footer',
-      description: 'Footer configuration.',
+      description: 'Configuration du Footer',
       icon: 'i-mdi-page-layout-footer',
       fields: {
-        credits: field({
-          type: 'string',
-          title: 'Footer credits section',
-          description: 'Text to display as credits in the footer.',
-          icon: 'i-mdi-circle-edit-outline',
-          default: '',
-        }),
-        colorMode: field({
-          type: 'boolean',
-          title: 'Color Mode',
-          description: 'Hide or display the color mode button in the footer.',
-          icon: 'i-mdi-moon-waning-crescent',
-          default: false,
-        }),
-        links: field({
-          type: 'array',
-          title: 'Links',
-          description: 'Array of link object displayed in footer.',
-          icon: 'i-mdi-link-variant',
-          default: [],
-        }),
-      },
-    }),
-    toc: group({
-      title: 'Table of contents',
-      description: 'TOC configuration.',
-      icon: 'i-mdi-table-of-contents',
-      fields: {
-        title: field({
-          type: 'string',
-          title: 'Title',
-          description: 'Text to display as title of the main toc.',
-          icon: 'i-mdi-format-title',
-          default: '',
-        }),
-        bottom: group({
-          title: 'Bottom',
-          description: 'Bottom TOC configuration.',
-          icon: 'i-mdi-table-of-contents',
+        logo: group({
+          title: 'Logo',
+          description: 'Section Logo et description',
+          icon: 'i-mdi-image-filter-center-focus-strong-outline',
           fields: {
-            title: field({
-              type: 'string',
-              title: 'Title',
-              description: 'Text to display as title of the bottom toc.',
-              icon: 'i-mdi-format-title',
+            logo: field({
+              type: 'media',
+              title: 'Logo Odysway',
+              description: 'Logo Odysway',
+              icon: 'i-mdi-white-balance-sunny',
               default: '',
             }),
-            edit: field({
+            description: field({
               type: 'string',
-              title: 'Edit Page Link',
-              description: 'URL of your repository content folder.',
-              icon: 'i-ph-note-pencil',
+              title: 'Description',
+              description: 'Description de Odysway placé sous le Logo',
+              icon: 'i-mdi-alphabet-latin',
+              default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna sed tortor nullam.',
+            }),
+          },
+        }),
+        team: group({
+          title: 'Team',
+          description: 'Section Team',
+          icon: 'i-mdi-account-group',
+          fields: {
+            logo: field({
+              type: 'media',
+              title: 'Photo l\'équipe Odysway',
+              description: 'Photo de groupe de l\'équipe',
+              icon: 'i-mdi-white-balance-sunny',
+              default: '/team-photo.webp',
+            }),
+          },
+        }),
+        contact: group({
+          title: 'Contact',
+          description: 'Contact information and social links',
+          icon: 'i-mdi-contact-mail',
+          fields: {
+            ctaText: field({
+              type: 'string',
+              title: 'Contact texte',
+              description: 'Texte au dessus des informations de contact',
+              icon: 'i-mdi-text-box-plus-outline',
+              default: 'N\'hésitez pas à nous contacter',
+            }),
+            phone: field({
+              type: 'string',
+              title: 'Phone',
+              description: 'Phone of Odysway',
+              icon: 'i-mdi-phone',
+              default: '01 23 45 67 89',
+            }),
+            email: field({
+              type: 'string',
+              title: 'Email',
+              description: 'Email of Odysway',
+              icon: 'i-mdi-email',
+              default: 'contact@odysway.com',
+            }),
+            buttonContact: group({
+              title: 'Contact',
+              description: 'Contact information and social links',
+              icon: 'i-mdi-button-contact',
+              fields: {
+                text: field({
+                  type: 'string',
+                  title: 'Texte du bouton',
+                  description: 'Texte du bouton',
+                  icon: 'i-mdi-text-box-plus-outline',
+                }),
+                lien: field({
+                  type: 'string',
+                  title: 'lien',
+                  description: 'URL de redirection au click du bouton',
+                  default: '/calendly',
+                  icon: 'i-mdi-link-variant',
+                }),
+              },
+            }),
+          },
+        }),
+        social: group({
+          title: 'Social Media',
+          description: 'Social media links',
+          fields: {
+            facebook: field({
+              type: 'string',
+              title: 'Facebook',
               default: '',
             }),
-            links: field({
-              type: 'array',
-              title: 'Links',
-              description: 'Array of link object displayed in bottom toc.',
+            instagram: field({
+              type: 'string',
+              title: 'Instagram',
+              default: '',
+            }),
+            tiktok: field({
+              type: 'string',
+              title: 'TikTok',
+              default: '',
+            }),
+          },
+        }),
+        linksList: group({
+          title: 'Links List',
+          description: 'Links list',
+          icon: 'i-mdi-link-variant',
+          fields: {
+            colonne1: group({
+              title: 'Colonne 1',
+              description: 'Colonne 1',
               icon: 'i-mdi-link-variant',
-              default: [],
+              fields: {
+                title: field({
+                  type: 'string',
+                  title: 'Titre',
+                  description: 'Titre de la colonne',
+                  icon: 'i-mdi-title',
+                  default: 'Liens utiles',
+                }),
+                links: field({
+                  type: 'array',
+                  title: 'Links',
+                  description: 'Array of link object displayed in footer.',
+                  icon: 'i-mdi-link-variant',
+                  default: [],
+                }),
+              },
+            }),
+            colonne2: group({
+              title: 'Colonne 2',
+              description: 'Colonne 2',
+              icon: 'i-mdi-link-variant',
+              fields: {
+                title: field({
+                  type: 'string',
+                  title: 'Titre',
+                  description: 'Titre de la colonne',
+                  icon: 'i-mdi-title',
+                  default: 'Destinations',
+                }),
+                links: field({
+                  type: 'array',
+                  title: 'Links',
+                  description: 'Array of link object displayed in footer.',
+                  icon: 'i-mdi-link-variant',
+                  default: [],
+                }),
+              },
             }),
           },
         }),
@@ -237,8 +327,6 @@ export default defineNuxtSchema({
     }),
   },
 })
-
-// declare module '@nuxt/schema' {
 //   interface CustomAppConfig {
 //     ui: {
 //       icons: object

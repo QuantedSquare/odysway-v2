@@ -4,81 +4,89 @@ export default defineAppConfig({
       primary: 'green',
       neutral: 'slate',
     },
-  },
-  uiPro: {
-    footer: {
-      slots: {
-        root: 'border-t border-(--ui-border)',
-        left: 'text-sm text-(--ui-text-muted)',
-      },
+    icons: {
+      search: 'i-lucide-search',
+      dark: 'i-lucide-moon',
+      light: 'i-lucide-sun',
+      external: 'i-lucide-external-link',
+      chevron: 'i-lucide-chevron-down',
+      hash: 'i-lucide-hash',
     },
   },
   seo: {
-    siteName: 'Nuxt UI Pro - Docs template',
+    siteName: 'Odysway',
   },
   header: {
-    title: '',
+    title: 'Odysway',
     to: '/',
     logo: {
-      alt: '',
       light: '',
       dark: '',
+      alt: 'Odysway Logo',
     },
     search: true,
     colorMode: true,
     links: [{
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt-ui-pro/docs',
+      'icon': 'i-simple-icons-facebook',
+      'to': 'https://facebook.com/odysway',
       'target': '_blank',
-      'aria-label': 'GitHub',
+      'aria-label': 'Facebook',
+    }, {
+      'icon': 'i-simple-icons-instagram',
+      'to': 'https://instagram.com/odysway',
+      'target': '_blank',
+      'aria-label': 'Instagram',
     }],
   },
   footer: {
-    credits: `Copyright © ${new Date().getFullYear()}`,
-    colorMode: false,
-    links: [{
-      'icon': 'i-simple-icons-nuxtdotjs',
-      'to': 'https://nuxt.com',
-      'target': '_blank',
-      'aria-label': 'Nuxt Website',
-    }, {
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://discord.com/invite/ps2h6QT',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on Discord',
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://x.com/nuxt_js',
-      'target': '_blank',
-      'aria-label': 'Nuxt on X',
-    }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub',
-    }],
-  },
-  toc: {
-    title: 'Table of Contents',
-    bottom: {
-      title: 'Community',
-      edit: 'https://github.com/nuxt-ui-pro/docs/edit/main/content',
-      links: [{
-        icon: 'i-lucide-star',
-        label: 'Star on GitHub',
-        to: 'https://github.com/nuxt/ui',
-        target: '_blank',
-      }, {
-        icon: 'i-lucide-book-open',
-        label: 'Nuxt UI Pro docs',
-        to: 'https://ui.nuxt.com/getting-started/installation/pro/nuxt',
-        target: '_blank',
-      }, {
-        icon: 'i-simple-icons-nuxtdotjs',
-        label: 'Purchase a license',
-        to: 'https://ui.nuxt.com/pro/purchase',
-        target: '_blank',
-      }],
+    logo: {
+      logo: '/images/logo_blanc.png',
+      description: 'Découvrez le monde autrement avec Odysway, votre partenaire de voyage éthique et responsable.',
+    },
+    team: {
+      logo: '/team-photo.webp',
+    },
+    contact: {
+      ctaText: 'N\'hésitez pas à nous contacter',
+      phone: '01 23 45 67 89',
+      email: 'contact@odysway.com',
+      buttonContact: {
+        text: 'Prendre rendez-vous',
+        lien: '/calendly',
+      },
+    },
+    social: {
+      facebook: 'https://facebook.com/odysway',
+      instagram: 'https://instagram.com/odysway',
+      tiktok: 'https://tiktok.com/@odysway',
+    },
+    linksList: {
+      colonne1: {
+        title: 'Liens utiles',
+        links: [{
+          label: 'À propos',
+          to: '/about',
+        }, {
+          label: 'Blog',
+          to: '/blog',
+        }, {
+          label: 'Contact',
+          to: '/contact',
+        }],
+      },
+      colonne2: {
+        title: 'Destinations',
+        links: [{
+          label: 'Europe',
+          to: '/destinations/europe',
+        }, {
+          label: 'Asie',
+          to: '/destinations/asie',
+        }, {
+          label: 'Amérique',
+          to: '/destinations/amerique',
+        }],
+      },
     },
   },
 })

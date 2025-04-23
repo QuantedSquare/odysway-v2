@@ -23,7 +23,7 @@
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          :src="img(voyage.imgSrc1.src, { format: 'webp', quality: 90, height: 350, width: 640 })"
+          :src="img(voyage.imgSrc1.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
           :alt="voyage.imgSrc1.alt"
           height="228px"
           class="hover-scale"
@@ -71,7 +71,7 @@
             <v-container>
               <v-row>
                 <v-col>
-                  <div class="text-primary text-h4 text-lg-h3 font-weight-bold py-1 px-0 no-white-space">
+                  <div class="text-primary text-test font-weight-bold py-1 px-0 no-white-space">
                     {{ voyage.title }}
                   </div>
                 </v-col>
