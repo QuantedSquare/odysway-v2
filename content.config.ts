@@ -59,6 +59,27 @@ export default defineContentConfig({
         image: z.string(),
       }),
     }),
+    team: defineCollection({
+      type: 'data',
+      source: 'team/**.json',
+      schema: z.object({
+        slug: z.string(),
+        name: z.string().optional(),
+        image: z.string().optional(),
+        description: z.string().optional(),
+        linkedin: z.string().optional(),
+        position: z.string().optional(),
+      }),
+    }),
+    partenaires: defineCollection({
+      type: 'data',
+      source: 'partenaires/**.json',
+      schema: z.object({
+        imgSrc: z.string(),
+        description: z.string(),
+        isOnHome: z.boolean(),
+      }),
+    }),
     deals: defineCollection({
       type: 'data',
       source: 'deals/**.json',

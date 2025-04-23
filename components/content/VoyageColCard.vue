@@ -71,7 +71,7 @@
             <v-container>
               <v-row>
                 <v-col>
-                  <div class="text-primary text-h4 text-lg-h2 font-weight-bold py-1 px-0 no-white-space">
+                  <div class="text-primary text-h4 text-lg-h3 font-weight-bold py-1 px-0 no-white-space">
                     {{ voyage.title }}
                   </div>
                 </v-col>

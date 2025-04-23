@@ -63,10 +63,14 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
-defineProps({
+const props = defineProps({
   centerTitle: {
     type: Boolean,
     default: false,
+  },
+  showButtons: {
+    type: Boolean,
+    default: true,
   },
   color: {
     type: String,

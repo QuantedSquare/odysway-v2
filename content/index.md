@@ -312,14 +312,29 @@ Afficher plus de témoignages
 ---
 color: grey-light-2
 ---
-:::team-container
-:::
+  ::info-container
+  #top
+  ::avatars-row-stack
+  ::
+  #title
+  Notre équipe est là pour vous renseigner  
+  #description
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  #bottom
+  ::cta-button
+  ---
+  link: /avis-voyageurs
+  color: secondary
+  ---
+  #text
+  Afficher plus de témoignages
+  ::
+  ::
 ::
 
-::title-container
-#title
-Nouveau component "Notre équipe est là pour vous renseigner" + subtext + bouton "Contactez-nous"
-::
+
+
+
 
 
 Redesign faq, une props image à rajouter pour le bg + Subtext tout en bas :
@@ -443,6 +458,26 @@ Lors de l'achat d'un voyage, il est vivement recommandé d'être assuré. Une as
 ::
 
 
+::color-container
+---
+color: secondary
+whiteText: true
+---
+  :::info-container
+  ---
+  whiteText: true
+  ---
+  #title
+  Une agence fiable et engagée    
+
+  #description
+  Fringilla ut morbi tincidunt augue interdum velit euismod cursus vitae congue mauris rhoncus aenean.  
+
+  #bottom
+    ::::partenaires-container
+    ::::
+  :::
+::
 
 ::title-container
 #title
