@@ -101,7 +101,7 @@ color: soft-blush
   text-color: primary
   ---
   #title
-  Coups de coeur voyageurs
+  [Coups de coeur voyageurs]{style="color: rgba(43, 76, 82, 1)"}
 
   #carousel-item
     :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
@@ -110,25 +110,18 @@ color: soft-blush
     :::
     :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
     :::
-
     :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
     :::
-
     :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
     :::
-
     :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
     :::
-
     :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
     :::
-
     :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
     :::
-
     :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
     :::
-
     :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
     :::
   ::
@@ -143,65 +136,130 @@ color: primary
   Suivez vos envies
 
   #cards
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: chemins-vers-soi
       image: /images/Maroc-voyage-spirituel.jpg
       title: Nature
+      link: /thematiques/chemins-vers-soi
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: echappees-sauvages
       image: /images/montagne.jpg
       title: Animaux
+      link: /thematiques/echappees-sauvages
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: immersions-locales
       image: /images/Pérou-voyage-spirituel.jpg
       title: Immersion
+      link: /thematiques/immersions-locales
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: regard-faune
       image: /images/AdobeStock_175948238.webp
       title: Culture
+      link: /thematiques/regard-faune
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: chemins-vers-soi
       image: /images/Maroc-voyage-spirituel.jpg
       title: Nature
+      link: /thematiques/chemins-vers-soi
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: echappees-sauvages
       image: /images/montagne.jpg
       title: Animaux
+      link: /thematiques/echappees-sauvages
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: immersions-locales
       image: /images/Pérou-voyage-spirituel.jpg
       title: Immersion
+      link: /thematiques/immersions-locales
       ---
       :::
-      :::desires-col-card
+      :::image-title-col-card
       ---
-      slug: regard-faune
       image: /images/AdobeStock_175948238.webp
       title: Culture
+      link: /thematiques/regard-faune
       ---
       :::
   ::
 ::
 
+
+::color-container
+---
+color: white
+---
+  ::text-image-container
+  ---
+  imageSrc: /images/voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg
+  imageDesktopRight: true
+  displayImageMobile: true
+  displayCtaButton: true
+  ---
+  
+  #title
+  [Voyager autrement]{style="color: rgba(43, 76, 82, 1)"}
+  
+  #content-cols
+    :::icon-text-col
+    ---
+    icon: /icons/globe.svg
+    sideBySide: false
+    ---
+    #text
+    Des séjours immersifs 
+    conçus avec soin  
+    :::
+    
+    :::icon-text-col
+    ---
+    icon: /icons/business-team.svg
+    sideBySide: false
+    ---
+    #text
+    Des départs en petits groupes ou privatifs
+    :::
+
+    :::icon-text-col
+    ---
+    icon: /icons/love-flag.svg
+    sideBySide: false
+    ---
+    #text
+    Des voyages conscients et porteurs de sens 
+    :::
+
+    :::icon-text-col
+    ---
+    icon: /icons/user-friends.svg
+    sideBySide: false
+    ---
+    #text
+    Une agence proche de vous 
+    :::
+  #cta-button
+    :::cta-button
+    ---
+    link: /
+    color: secondary
+    ---
+    #text
+    Notre vision du voyage
+    :::
+  ::
+
+::
 
 ::horizontal-carousel
 #title
@@ -217,7 +275,6 @@ Nos séjours en France
   :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
   :::
 ::
-
 
 
 ::title-container
