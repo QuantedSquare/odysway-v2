@@ -60,7 +60,7 @@ export default defineNuxtPlugin((app) => {
             'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
-
+            'yellow': 'rgba(246, 191, 75, 1)',
             // Virer les suivants
             'odysway-1': '#edeff8', // grey-home-bg
             'odysway-2': '#f5f5f5',
@@ -68,7 +68,6 @@ export default defineNuxtPlugin((app) => {
             'white': '#FFFFFF',
             'grey': '#95A5A8',
             'grey-light': '#EAEDEE',
-            'grey-lighten-1': '#BDBDBD',
             'grey-darken-2': '#616161',
             'grey-light-2': 'rgba(234, 237, 238, 1)',
           },
@@ -84,7 +83,7 @@ export default defineNuxtPlugin((app) => {
     },
     defaults: {
       VCard: {
-        rounded: 'lg',
+        rounded: 'xl',
         class: 'subtle-shadow',
       },
       VBtn: {
@@ -95,13 +94,15 @@ export default defineNuxtPlugin((app) => {
       VBtnPrimary: {
         color: 'primary',
         variant: 'text',
+        elevation: 0,
       },
       VBtnSecondary: {
         color: 'secondary',
+        elevation: 0,
       },
       VSwitch: {
         color: 'primary',
-        baseColor: 'grey-lighten-1',
+        baseColor: 'grey',
         inset: true,
         hideDetails: true,
       },
@@ -125,7 +126,7 @@ export default defineNuxtPlugin((app) => {
         flat: true,
       },
       VFieldLabel: {
-        class: ['text-primary'],
+        class: ['text-primary', 'font-weight-bold'],
       },
       VSelect: {
         variant: 'solo',
@@ -135,7 +136,10 @@ export default defineNuxtPlugin((app) => {
         iconColor: 'primary',
         flat: true,
       },
-
+      VExpansionPanel: {
+        elevation: 0,
+        class: ['rounded-md', 'elevation-0'],
+      },
     },
   })
 

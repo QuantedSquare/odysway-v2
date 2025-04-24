@@ -63,7 +63,7 @@ import { useImage } from '#imports'
 const imgComp = useImage()
 const isMobile = ref(false)
 const isHovered = ref(false)
-const props = defineProps({
+defineProps({
   slug: {
     type: String,
     required: true,

@@ -342,7 +342,7 @@ const appliedPrice = computed(() => {
 
 <style scoped>
 .border-style{
-  border: 1px solid rgb(var(--v-theme-grey-lighten-1));
+  border: 1px solid rgb(var(--v-theme-grey));
 }
 @media screen and (max-width: 600px) {
   .border-style {

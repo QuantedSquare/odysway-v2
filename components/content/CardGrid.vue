@@ -1,7 +1,5 @@
 <template>
-  <v-container
-    :fluid="width < 1440"
-  >
+  <v-container :fluid="width < 1440">
     <v-row>
       <v-col
         cols="12"

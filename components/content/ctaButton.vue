@@ -1,13 +1,14 @@
 <template>
-  <div class="text-center my-3">
+  <div>
     <v-btn
       v-if="!external"
       :to="link"
       :color="color"
-      height="60"
+      block
+      height="62"
       size="large"
     >
-      <div class="text-white font-weight-bold">
+      <div class="text-white text-decoration-none text-body-1 font-weight-bold">
         <slot
           mdc-unwrap="p"
           name="text"
@@ -18,6 +19,7 @@
       v-else
       :href="link"
       :color="color"
+      block
     >
       <div class="text-white">
         <slot
