@@ -138,57 +138,57 @@ color: primary
   #cards
       :::image-title-col-card
       ---
-      image: /images/Maroc-voyage-spirituel.jpg
+      image: /images/nature.jpeg
       title: Nature
       link: /thematiques/chemins-vers-soi
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/montagne.jpg
+      image: /images/animals.jpeg
       title: Animaux
       link: /thematiques/echappees-sauvages
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/Pérou-voyage-spirituel.jpg
+      image: /images/immersion.jpeg
       title: Immersion
       link: /thematiques/immersions-locales
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/AdobeStock_175948238.webp
+      image: /images/culture.jpeg
       title: Culture
       link: /thematiques/regard-faune
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/Maroc-voyage-spirituel.jpg
-      title: Nature
+      image: /images/animals.jpeg
+      title: Animaux
       link: /thematiques/chemins-vers-soi
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/montagne.jpg
-      title: Animaux
+      image: /images/culture.jpeg
+      title: Culture
       link: /thematiques/echappees-sauvages
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/Pérou-voyage-spirituel.jpg
-      title: Immersion
+      image: /images/nature.jpeg
+      title: Nature
       link: /thematiques/immersions-locales
       ---
       :::
       :::image-title-col-card
       ---
-      image: /images/AdobeStock_175948238.webp
-      title: Culture
+      image: /images/immersion.jpeg
+      title: Immersion
       link: /thematiques/regard-faune
       ---
       :::
@@ -261,6 +261,47 @@ color: white
 
 ::
 
+::color-container
+---
+color: grey-light
+---
+::horizontal-carousel
+#title
+[Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
+
+#carousel-item
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::
+
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::
+
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::
+::
+::
+
+::color-container
+---
+color: white
+---
+::horizontal-carousel
+#title
+[Partir au printemps]{style="color: rgba(43, 76, 82, 1)"}
+#carousel-item
+  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
+  :::
+
+  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::
+
+  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::
+
+  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
+  :::
+::
+::
 
 ::color-container
 ---
@@ -275,49 +316,14 @@ color: soft-blush
   ::
 
 ::
+
+::color-container
+---
+color: grey-light
+---
 ::horizontal-carousel
 #title
-Nos séjours en France
-
-#carousel-item
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
-  :::
-
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-  :::
-
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
-  :::
-::
-
-
-::title-container
-#title
-[Ici "Nos bonnes idées" réutiliser la logic d'inscription newsletter dans le composant FooterOdysway]{style="color: #2e8b57;"}
-::
-
-
-
-::horizontal-carousel
-#title
-Partir au printemps
-#carousel-item
-  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
-  :::
-
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-  :::
-
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
-  :::
-
-  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
-  :::
-::
-
-::horizontal-carousel
-#title
-Voyages inoubliables
+[Voyages inoubliables]{style="color: rgba(43, 76, 82, 1)"}
 
 #carousel-item
   :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
@@ -335,7 +341,12 @@ Voyages inoubliables
   :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
   :::
 ::
+::
 
+::color-container
+---
+color: white
+---
 ::horizontal-carousel
 ---
 center-title: true
@@ -377,6 +388,7 @@ link: /avis-voyageurs
 ---
 #text
 Afficher plus de témoignages
+::
 ::
 
 ::color-container

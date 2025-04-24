@@ -8,7 +8,7 @@
       :src="icon"
       width="40px"
       height="40px"
-      class="mb-4"
+      class="mb-4 mr-2"
     />
     <slot
       name="text"

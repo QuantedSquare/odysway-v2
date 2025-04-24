@@ -71,7 +71,7 @@
             <v-container>
               <v-row>
                 <v-col>
-                  <div class="text-primary text-test font-weight-bold py-1 px-0 no-white-space">
+                  <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space">
                     {{ voyage.title }}
                   </div>
                 </v-col>
@@ -79,14 +79,14 @@
               <v-row>
                 <v-col>
                   <div class="text-grey-lighten-1 font-weight-medium"> Type </div>
-                  <div class="font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
                 </v-col>
                 <v-divider
                   inset
                   vertical
                 />
                 <v-col class="text-center">
-                  <div class="font-weight-bold text-primary">{{ voyage.duration }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.duration }}</div>
                   <div class="text-grey-lighten-1 font-weight-medium">Jours </div>
                 </v-col>
                 <v-divider
@@ -95,7 +95,7 @@
                 />
                 <v-col class="text-right">
                   <div class="text-grey-lighten-1 font-weight-medium"> À partir de </div>
-                  <div class="font-weight-bold text-primary">{{ voyage.startingPrice }}€</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.startingPrice }}€</div>
                 </v-col>
               </v-row>
             </v-container>
@@ -110,15 +110,23 @@
                 class="font-weight-bold"
               >
                 Découvrir les dates
+                <v-icon
+                  size="24px"
+                  class="ml-3"
+                >{{ mdiPlusCircle }}</v-icon>
               </v-btn>
               <v-btn
                 v-else
                 block
                 color="secondary"
-                class="text-decoration-none font-weight-bold"
+                class="text-decoration-none font-weight-bold mr-3"
                 :to="`/calendly?travelTitle=${voyage.title}`"
               >
                 Demander un devis
+                <v-icon
+                  size="24px"
+                  class="ml-3"
+                >{{ mdiPlusCircle }}</v-icon>
               </v-btn>
             </client-only>
           </v-card-actions>
@@ -129,7 +137,7 @@
 </template>
 
 <script setup>
-import { mdiStar } from '@mdi/js'
+import { mdiPlusCircle, mdiStar } from '@mdi/js'
 import { useImage } from '#imports'
 
 const props = defineProps({
