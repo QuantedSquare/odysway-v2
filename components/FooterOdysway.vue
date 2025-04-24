@@ -1,6 +1,9 @@
 <template>
   <v-footer class="bg-cover-odysway">
-    <v-container v-if="footer">
+    <v-container
+      v-if="footer"
+      :fluid="width < 1440"
+    >
       <v-row
         align="center"
         justify="space-between"
@@ -35,26 +38,30 @@
         </v-col>
         <v-col
           cols="12"
-          md="3"
+          md="4"
           class="d-flex flex-column align-start justify-space-between ga-6"
         >
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
           </h5>
-          <div class="d-flex justify-start align-center ga-4">
+          <div class="d-flex justify-start align-center ga-4 ">
             <v-chip
               :text="footer.contact.phone"
               color="primary"
+              class="font-weight-bold"
             />
             <v-chip
               :text="footer.contact.email"
               color="primary"
+              class="font-weight-bold"
             />
           </div>
           <v-btn
-            block
+
             color="secondary"
             height="62"
+            width="360"
+            class="font-weight-bold"
             :to="footer.contact.buttonContact.link"
           >
             {{ footer.contact.buttonContact.text }}
@@ -126,12 +133,11 @@
           md="3"
         >
           <h5 class="text-h4 font-weight-bold mb-10">
-            Où nous trouver
-            <!--  {{ footer.linksList.colonne2.title }} -->
+            {{ footer.linksList.colonne4.title }}
           </h5>
           <div class="d-flex flex-column">
             <p class="mb-3">
-              {{ footer.linksList.colonne4.title }}
+              {{ footer.linksList.colonne4.name }}
             </p>
             <p class="text-grey">
               {{ footer.linksList.colonne4.address }}
@@ -180,8 +186,10 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+const { width } = useDisplay()
 const { footer } = useAppConfig()
 console.log('footer', footer)
 

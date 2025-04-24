@@ -18,5 +18,4 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
-console.log('CardGrid')
 </script>

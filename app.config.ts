@@ -101,9 +101,10 @@ export default defineAppConfig({
         }],
       },
       colonne4: {
-        title: 'Odysway',
-        address: '40 Rue du Louvre, Paris, France',
-        city: 'Paris, France',
+        title: 'Où nous trouver',
+        name: 'Odysway',
+        address: '40 Rue du Louvre',
+        city: 'Paris, 75000 France',
       },
     },
   },

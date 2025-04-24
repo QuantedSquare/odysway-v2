@@ -350,7 +350,14 @@ export default defineNuxtSchema({
                 title: field({
                   type: 'string',
                   title: 'Titre',
-                  description: 'Titre de l\'adresse',
+                  description: 'Titre de la colonne',
+                  icon: 'i-mdi-title',
+                  default: 'Où nous trouver',
+                }),
+                name: field({
+                  type: 'string',
+                  title: 'Nom',
+                  description: 'Nom de la société',
                   icon: 'i-mdi-title',
                   default: 'Odysway',
                 }),

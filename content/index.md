@@ -479,13 +479,13 @@ whiteText: true
   :::
 ::
 
-::title-container
-#title
-Nouveau component Une agence fiable et engagée avec titre + subtext + array de partenaires (text/logo) + bg color
-::
-
-
-::title-container
-#title
-Nouveau component Des idées pour vos prochains voyages // Listes d'idées de voyages
+::color-container
+---
+color: primary
+whiteText: true
+---
+  ::title-container
+  #title
+  [FooterOdysway]{style="color: #FFFF;"}
+  ::
 ::
