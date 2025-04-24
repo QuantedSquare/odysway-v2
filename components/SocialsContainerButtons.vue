@@ -1,49 +1,45 @@
 <template>
   <div class="d-flex justify-space-around">
     <v-btn
-      icon
+      :icon="mdiFacebook"
+      rounded="circle"
       size="small"
-      color="#4267B2"
+      color="primary"
       href="https://www.facebook.com/odysway/"
-    >
-      <v-icon>{{ mdiFacebook }}</v-icon>
-    </v-btn>
+    />
     <v-btn
-      icon
+      :icon="mdiInstagram"
+      rounded="circle"
       size="small"
-      color="rgb(209, 32, 218)"
+      color="primary"
       href="https://www.instagram.com/odysway_travel/"
-    >
-      <v-icon>{{ mdiInstagram }}</v-icon>
-    </v-btn>
-    <v-btn
-      icon
+    />
+    <!-- <v-btn
+      :icon="mdiYoutube"
+      rounded="circle"
       size="small"
-      color="#ce1312"
+      color="primary"
       href="https://www.youtube.com/channel/UCsc9xUf1MF4-yDGs4ftkT2g"
-    >
-      <v-icon>{{ mdiYoutube }}</v-icon>
-    </v-btn>
+    />
     <v-btn
-      icon
+      :icon="mdiLinkedin"
+      rounded="circle"
       size="small"
-      color="#007ebb"
+      color="primary"
       href="https://linkedin.com/company/odysway"
-    >
-      <v-icon>{{ mdiLinkedin }}</v-icon>
-    </v-btn>
+    />
     <v-btn
-      icon
+      :icon="mdiPinterest"
+      rounded="circle"
       size="small"
-      color="#E60023"
+      color="primary"
       href="https://www.pinterest.fr/odyswaytravel/"
-    >
-      <v-icon>{{ mdiPinterest }}</v-icon>
-    </v-btn>
+    /> -->
     <v-btn
       icon
       size="small"
-      color="#69C9D0"
+      rounded="circle"
+      color="primary"
       href="https://www.tiktok.com/@odyswaytravel"
     >
       <v-img

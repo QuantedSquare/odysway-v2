@@ -383,19 +383,25 @@ Afficher plus de témoignages
 ---
 color: grey-light-2
 ---
-:::team-container
-:::
+  ::info-container
+  #top
+  ::avatars-row-stack
+  ::
+  #title
+  Notre équipe est là pour vous renseigner  
+  #description
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  #bottom
+  ::cta-button
+  ---
+  link: /avis-voyageurs
+  color: secondary
+  ---
+  #text
+  Afficher plus de témoignages
+  ::
+  ::
 ::
-
-::title-container
-#title
-Nouveau component "Notre équipe est là pour vous renseigner" + subtext + bouton "Contactez-nous"
-::
-
-
-Redesign faq, une props image à rajouter pour le bg + Subtext tout en bas :
-D'autres questions? Consulter notre FAQ
-Si vous ne trouvez pas la réponse que vous cherchez, n'hésitez pas à nous contacter.
 
 ::faq-container
 ---

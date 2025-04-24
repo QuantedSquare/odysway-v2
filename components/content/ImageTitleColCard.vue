@@ -1,6 +1,6 @@
 <template>
   <v-col
-    cols="12"
+    cols="6"
     sm="4"
     md="3"
   >
