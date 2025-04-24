@@ -1,6 +1,7 @@
 <template>
   <div class="mx-4 my-7">
     <v-container
+      v-if="tops"
       fluid
       class="bg-primary rounded-lg"
     >
@@ -27,52 +28,46 @@
               thickness="2"
             />
 
-            <v-tab :value="0">
-              <span class="font-weight-bold">Voyages</span>
-            </v-tab>
-            <v-tab :value="1">
-              <span class="font-weight-bold">Voyages</span>
-            </v-tab>
-            <v-tab :value="2">
-              <span class="font-weight-bold">Voyages</span>
-            </v-tab>
-            <v-tab :value="3">
-              <span class="font-weight-bold">Voyages</span>
+            <v-tab
+              v-for="top, index in tops"
+              :key="index"
+              :value="index"
+            >
+              <span class="font-weight-bold">
+                {{ top.title }}
+              </span>
             </v-tab>
           </v-tabs>
           <v-tabs-window
             v-model="currentTab"
           >
-            <v-tabs-window-item :value="0">
+            <v-tabs-window-item
+              v-for="tab, index in tops[currentTab].contenuOnglet"
+              :key="`${tab.title}-${index}`"
+              :value="index"
+            >
               <v-row class="mb-16 pb-16">
                 <v-col
+                  v-for="top, f in tops[currentTab].contenuOnglet"
+                  :key="`${top.title}-${f}`"
                   cols="6"
                   md="2"
                 >
-                  <h5 class="text-h4 font-weight-bold mb-10">
-                    Top voyages
+                  <h5 class="text-h4 font-weight-bold mb-10 ">
+                    {{ top.title }}
                   </h5>
                   <div class="d-flex flex-column ga-2">
                     <NuxtLink
-                      v-for="link, index in linksList"
-                      :key="`${link.label}-${index}`"
-                      :to="link.to"
-                      class="text-grey"
+                      v-for="link, i in top.linksList"
+                      :key="`${link.slug}-${i}`"
+                      :to="`/voyages/${link.slug}`"
+                      class="text-grey line-clamp-2"
                     >
-                      {{ link.label }}
+                      {{ link.title }}
                     </NuxtLink>
                   </div>
                 </v-col>
               </v-row>
-            </v-tabs-window-item>
-            <v-tabs-window-item :value="1">
-              <span class="text-white font-weight-bold">Coucou</span>
-            </v-tabs-window-item>
-            <v-tabs-window-item :value="2">
-              <span class="text-white font-weight-bold">Coucou</span>
-            </v-tabs-window-item>
-            <v-tabs-window-item :value="3">
-              <span class="text-white font-weight-bold">Coucou</span>
             </v-tabs-window-item>
           </v-tabs-window>
         </v-col>
@@ -87,32 +82,9 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const currentTab = ref(0)
 
-const linksList = [
-  {
-    label: 'Voyage 1',
-    to: '/voyage-1',
-  },
-  {
-    label: 'Voyage 2',
-    to: '/voyage-2',
-  },
-  {
-    label: 'Voyage 2',
-    to: '/voyage-2',
-  },
-  {
-    label: 'Voyage 2',
-    to: '/voyage-2',
-  },
-  {
-    label: 'Voyage 2',
-    to: '/voyage-2',
-  },
-  {
-    label: 'Voyage 2',
-    to: '/voyage-2',
-  },
-]
+const tops = await queryCollection('tops').all()
+
+console.log('tops', tops)
 </script>
 
 <style scoped>
@@ -121,5 +93,12 @@ const linksList = [
   left: 0;
   right: 0;
   bottom: 0;
+}
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 </style>
