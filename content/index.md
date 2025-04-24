@@ -52,7 +52,7 @@ au coeur du voyage
 
 ::horizontal-carousel
 #title
-Laissez-vous inspirer
+[Laissez-vous inspirer]{style="color: rgba(43, 76, 82, 1)"}
 
 #carousel-item
   :::thematique-col-card
@@ -353,7 +353,7 @@ center-title: true
 color: secondary
 ---
 #title
-Des voyageurs épanouis
+[Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
 
 #carousel-item
   :::review-col-card
@@ -381,13 +381,14 @@ Des voyageurs épanouis
   slug: 'test4'
   ---
   :::
-::
-::cta-button
----
-link: /avis-voyageurs
----
-#text
-Afficher plus de témoignages
+#cta
+  :::cta-button
+  ---
+  link: /avis-voyageurs
+  ---
+  #text
+  Afficher plus de témoignages
+  :::
 ::
 ::
 
@@ -410,7 +411,7 @@ color: grey-light-2
   color: secondary
   ---
   #text
-  Afficher plus de témoignages
+  Contactez-nous
   ::
   ::
 ::
@@ -519,6 +520,27 @@ backgroundImage: /images/b27a23f333a8c96567d46c123d1efb15.jpeg
   
   #answer
   Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  :::
+::
+
+::color-container
+---
+color: secondary
+whiteText: true
+---
+  :::info-container
+  ---
+  whiteText: true
+  ---
+  #title
+  Une agence fiable et engagée    
+
+  #description
+  Fringilla ut morbi tincidunt augue interdum velit euismod cursus vitae congue mauris rhoncus aenean.  
+
+  #bottom
+    ::::partenaires-container
+    ::::
   :::
 ::
 

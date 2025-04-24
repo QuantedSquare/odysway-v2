@@ -57,6 +57,20 @@
         />
       </v-row>
     </div>
+    <v-row
+      v-show="gotCtaSlot"
+      justify="center"
+      no-gutters
+    >
+      <v-col cols="4">
+        <div
+          ref="cta-container"
+          class="mt-16"
+        >
+          <slot name="cta" />
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -65,7 +79,7 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
-const props = defineProps({
+defineProps({
   centerTitle: {
     type: Boolean,
     default: false,
@@ -84,11 +98,15 @@ const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
 const itemsList = useTemplateRef('items-list')
+const ctaContainer = useTemplateRef('cta-container')
 
 onMounted(() => {
   nextTick(() => {
     scrollElement.value = scrollContainer.value.$el
   })
+})
+const gotCtaSlot = computed(() => {
+  return ctaContainer.value?.children[0]
 })
 
 const childrenCount = computed(() => {

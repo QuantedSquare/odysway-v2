@@ -4,11 +4,10 @@
       v-if="!external"
       :to="link"
       :color="color"
-      block
       height="62"
       size="large"
     >
-      <div class="text-white text-decoration-none text-body-1 font-weight-bold">
+      <div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4">
         <slot
           mdc-unwrap="p"
           name="text"
@@ -19,9 +18,10 @@
       v-else
       :href="link"
       :color="color"
-      block
+      height="62"
+      size="large"
     >
-      <div class="text-white">
+      <div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4">
         <slot
           mdc-unwrap="p"
           name="text"

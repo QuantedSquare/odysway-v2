@@ -22,7 +22,7 @@
           <slot name="faq" />
         </v-col>
       </v-row>
-      <v-row>
+      <v-row class="mb-10">
         <v-col>
           <div
             v-if="!route.path.includes('faq')"
@@ -66,7 +66,6 @@ defineProps({
 })
 
 const route = useRoute()
-console.log(route.path)
 </script>
 
 <style scoped>

@@ -73,7 +73,7 @@
         thickness="2"
         class="my-16"
       />
-      <v-row class="mb-16 pb-16">
+      <v-row class="mb-16 pb-16 text-primary">
         <v-col
           cols="6"
           md="3"
@@ -136,7 +136,7 @@
             {{ footer.linksList.colonne4.title }}
           </h5>
           <div class="d-flex flex-column">
-            <p class="mb-3">
+            <p class="mb-3 font-weight-bold">
               {{ footer.linksList.colonne4.name }}
             </p>
             <p class="text-grey">
