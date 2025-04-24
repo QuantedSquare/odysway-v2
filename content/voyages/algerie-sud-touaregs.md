@@ -70,7 +70,7 @@ Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie
 Dès [1855€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -442,7 +442,7 @@ Un voyage à la découverte de la culture algérienne, d'Alger jusqu'au sud dés
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

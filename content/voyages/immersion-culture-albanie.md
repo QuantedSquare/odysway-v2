@@ -126,7 +126,7 @@ Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditi
 Dès [1590€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -449,7 +449,7 @@ Préparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Parta
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

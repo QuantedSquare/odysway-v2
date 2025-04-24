@@ -24,7 +24,7 @@ Immergez-vous dans le Parc naturel de la Forêt d'Orient
 Dès [385€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -342,7 +342,7 @@ Autant d'expériences qui vous feront découvrir les richesses d'un territoire u
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

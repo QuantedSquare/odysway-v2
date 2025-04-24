@@ -23,7 +23,7 @@ Goutez l'aventure Pilat en famille
 Dès [145€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -300,7 +300,7 @@ Ce “Bourg du Feu” a le charme tranquille d’un village authentique de moyen
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

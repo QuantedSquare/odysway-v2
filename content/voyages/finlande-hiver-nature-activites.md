@@ -56,7 +56,7 @@ Aventures hivernales en Laponie Finlandaise
 Dès [1990€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -409,7 +409,7 @@ Tout au long de ce voyage, vous explorerez des sentiers reculés et des paysages
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

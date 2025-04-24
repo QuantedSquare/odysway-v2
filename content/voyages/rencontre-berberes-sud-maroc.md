@@ -91,7 +91,7 @@ Partez à la rencontre des berbères dans le Sud du Maroc
 Dès [1435€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -493,7 +493,7 @@ Rencontrez les habitants d'Imzilen et de Taliouine, où les villages se distingu
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

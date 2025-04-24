@@ -63,7 +63,7 @@ En immersion dans les villages traditionnels du Kenya et safari dans le Masai Ma
 Dès [2090€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -496,7 +496,7 @@ Possibilité en option d’une croisière en dhow au coucher du soleil ou d’un
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

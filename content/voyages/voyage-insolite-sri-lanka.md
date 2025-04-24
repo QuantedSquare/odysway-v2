@@ -126,7 +126,7 @@ Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les 
 Dès [1640€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -548,7 +548,7 @@ Le présent itinéraire est adapté pour l'hiver (décembre à avril). Pour nos 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

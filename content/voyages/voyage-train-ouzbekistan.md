@@ -15,7 +15,7 @@ image-src: /images/voyages/voyage-train-ouzbekistan/HJtGmNQWuOz2HRQx1uA7.jpg
 Dès [1990€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -441,7 +441,7 @@ Ce voyage culturel, ancré dans la vie locale, vous offre l'opportunité de fusi
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

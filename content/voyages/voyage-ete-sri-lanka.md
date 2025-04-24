@@ -105,7 +105,7 @@ Voyagez hors des sentiers battus au Sri Lanka (été)
 Dès [1695€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -523,7 +523,7 @@ Le présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dat
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

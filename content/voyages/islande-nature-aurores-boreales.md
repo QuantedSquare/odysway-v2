@@ -63,7 +63,7 @@ Islande sauvage : Terre de feu et de glace
 Dès [2865€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -412,7 +412,7 @@ Assurément, l'Islande est un autre espace-temps !
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

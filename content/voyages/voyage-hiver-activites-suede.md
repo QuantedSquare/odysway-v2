@@ -15,7 +15,7 @@ Séjour multi-activités en Laponie suédoise
 Dès [2039€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -362,7 +362,7 @@ Chaque journée est une nouvelle occasion de se reconnecter à la nature sauvage
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

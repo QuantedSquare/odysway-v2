@@ -112,7 +112,7 @@ Au cœur du Népal entre randonnées et immersion dans un monastère
 Dès [1590€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -438,7 +438,7 @@ paysanne et artisanale, qui présente une diversité de temples et de statues ra
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

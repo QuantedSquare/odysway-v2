@@ -133,7 +133,7 @@ Bolivie : lagunes colorées, désert de sel et rencontres hors des sentiers batt
 Dès [2130€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -558,7 +558,7 @@ Lors de l'aventure en 4x4 de 3 jours dans le Sud Lípez, vous serez accompagnés
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -84,7 +84,7 @@ Expédition sauvage en Roumanie : sur les traces des ours des Carpates
 Dès [1565€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -421,7 +421,7 @@ Lors de votre immersion en pleine nature, un spécialiste de l’ours vous accom
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

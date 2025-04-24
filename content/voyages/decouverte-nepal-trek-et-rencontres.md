@@ -77,7 +77,7 @@ A la découverte du Népal : randonnées accessibles et immersion locale
 Dès [1410€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -532,7 +532,7 @@ Ce voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

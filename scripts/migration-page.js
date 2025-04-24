@@ -521,7 +521,7 @@ ${voyage.titre}
 Dès [${voyage.prix}€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -719,7 +719,7 @@ ${highlightListItems(voyage.plus)}
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

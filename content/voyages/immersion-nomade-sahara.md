@@ -133,7 +133,7 @@ Vivez comme un nomade du Sahara au Maroc
 Dès [1390€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -471,7 +471,7 @@ Vos guides connaissent le désert comme leur poche, ils y sont nés, vous serez 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

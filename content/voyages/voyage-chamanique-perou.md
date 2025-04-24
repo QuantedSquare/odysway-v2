@@ -119,7 +119,7 @@ Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pér
 Dès [2060€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -536,7 +536,7 @@ Un voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

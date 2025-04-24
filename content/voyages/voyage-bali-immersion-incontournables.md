@@ -91,7 +91,7 @@ Explorez les incontournables de Bali entre plages, rizières et volcan
 Dès [1400€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -520,7 +520,7 @@ Un voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

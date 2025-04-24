@@ -126,7 +126,7 @@ Du Laos au Cambodge, voyage à la croisée des cultures
 Dès [1510€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -513,7 +513,7 @@ Préparez-vous à être émerveillés et à revenir chez vous avec des souvenirs
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

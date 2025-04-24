@@ -112,7 +112,7 @@ Immersion culturelle au coeur des traditions d’une famille balinaise
 Dès [1890€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -572,7 +572,7 @@ Détendez-vous en profitant de la piscine, d’un massage balinais ou d’une ba
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

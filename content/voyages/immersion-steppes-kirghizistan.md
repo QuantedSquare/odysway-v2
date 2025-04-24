@@ -141,7 +141,7 @@ image-src: /images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.j
 Dès [2243€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -506,7 +506,7 @@ Préparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

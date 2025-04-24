@@ -91,7 +91,7 @@ Immersion au cœur d'un observatoire astronomique
 Dès [1850€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -441,7 +441,7 @@ Ce séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est req
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

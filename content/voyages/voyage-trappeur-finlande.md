@@ -84,7 +84,7 @@ Voyagez comme un trappeur en Finlande
 Dès [2150€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -437,7 +437,7 @@ Après une initiation en douceur, lancez-vous pour une expédition de 4 jours en
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

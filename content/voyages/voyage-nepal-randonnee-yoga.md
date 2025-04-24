@@ -91,7 +91,7 @@ Séjour trek, yoga et immersion chez l'habitant au Népal
 Dès [1600€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -499,7 +499,7 @@ Ce voyage s'adresse à tous les voyageurs souhaitant vivre une expérience de ma
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

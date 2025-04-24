@@ -84,7 +84,7 @@ Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong
 Dès [1580€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -483,7 +483,7 @@ Plongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -15,7 +15,7 @@ Initiation à l'observation astronomique en Corse
 Dès [295€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -339,7 +339,7 @@ Un séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'il
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

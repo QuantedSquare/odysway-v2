@@ -141,7 +141,7 @@ En vélo électrique, à la rencontre des producteurs locaux dans le Vexin
 Dès [350€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -400,7 +400,7 @@ Genséric restera joignable durant l'ensemble du séjour en cas de problème !
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

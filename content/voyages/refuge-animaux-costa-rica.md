@@ -141,7 +141,7 @@ Occupez-vous des animaux de la jungle au Costa Rica
 Dès [1295€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -483,7 +483,7 @@ Ce voyage est une invitation pour les passionnés de nature et d'animaux, adapt�
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

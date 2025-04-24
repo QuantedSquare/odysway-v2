@@ -91,7 +91,7 @@ Marche silencieuse et immersion nomade dans le sahara marocain
 Dès [1295€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -432,7 +432,7 @@ Vivez au rythme des nomades, en partageant des moments authentiques et en savour
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -120,7 +120,7 @@ Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité
 Dès [3990€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -532,7 +532,7 @@ Pour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

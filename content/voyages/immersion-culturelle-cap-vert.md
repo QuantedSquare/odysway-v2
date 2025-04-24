@@ -168,7 +168,7 @@ Cap-Vert en immersion : partagez le quotidien des habitants de Santiago
 Dès [1470€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -538,7 +538,7 @@ Jessica, coordinatrice du séjour, est née en France, mais a découvert le Cap-
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -120,7 +120,7 @@ Stage boxe thaï en immersion dans le nord de la Thaïlande
 Dès [770€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -438,7 +438,7 @@ Loin des centres hyper touristiques du sud du pays, nous vous proposons un séjo
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -23,7 +23,7 @@ Initiez-vous à l'art de la poterie artisanale dans le Limousin
 Dès [155€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -289,7 +289,7 @@ Vous serez accueillis par Kristiane, véritable ambassadrice du territoire, qui 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

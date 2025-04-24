@@ -91,7 +91,7 @@ A cheval, à la rencontre des nomades en Mongolie
 Dès [1650€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -491,7 +491,7 @@ Pour les randonnées équestres et pédestres, un « guide local » vient compl�
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

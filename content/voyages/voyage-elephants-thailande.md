@@ -84,7 +84,7 @@ Observer les éléphants, explorer les temples et s'évader sur les plages de Th
 Dès [2145€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -454,7 +454,7 @@ Ce voyage est une expérience unique, vous permettant de découvrir _le pays du
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

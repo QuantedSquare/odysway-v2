@@ -23,7 +23,7 @@ Awaken your own nature - BaseQamp
 Dès [3888€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -446,7 +446,7 @@ Our guides are highly experienced and dedicated to your personal growth. They wi
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -92,7 +92,7 @@ Retraite Himalayenne : méditation et yoga au cœur du Sikkim
 Dès [3550€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -579,7 +579,7 @@ Ce voyage est aussi l'opportunité de vivre en immersion avec les communautés l
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

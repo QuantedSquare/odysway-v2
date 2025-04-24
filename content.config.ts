@@ -59,6 +59,21 @@ export default defineContentConfig({
         image: z.string(),
       }),
     }),
+    tops: defineCollection({
+      type: 'data',
+      source: 'tops/**.json',
+      schema: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        contenuOnglet: z.array(z.object({
+          title: z.string(),
+          linksList: z.array(z.object({
+            title: z.string(),
+            slug: z.string(),
+          })),
+        })),
+      }),
+    }),
     team: defineCollection({
       type: 'data',
       source: 'team/**.json',

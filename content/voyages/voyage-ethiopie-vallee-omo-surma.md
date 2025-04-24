@@ -57,7 +57,7 @@ Voyagez sur la terre des premiers hommes en Éthiopie
 Dès [2735€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -359,7 +359,7 @@ Nuits bivouac à Kibish.
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

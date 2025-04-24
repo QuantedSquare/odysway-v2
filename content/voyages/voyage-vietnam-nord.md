@@ -98,7 +98,7 @@ Le Vietnam du Nord, un voyage à la rencontre des populations ethniques
 Dès [1950€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -473,7 +473,7 @@ Tout au long de votre voyage, vous aurez la chance de rencontrer les minorités 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

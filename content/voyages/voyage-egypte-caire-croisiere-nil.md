@@ -161,7 +161,7 @@ Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil
 Dès [2190€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -566,7 +566,7 @@ Rareté, splendeur et émotion seront les maître-mot de cette aventure...
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations
