@@ -37,7 +37,7 @@
           <div class="text-center text-subtitle-1 text-white font-weight-bold d-flex flex-column mt-6">
             <span>Si vous ne trouvez pas la réponse que vous cherchez</span>
             <span>n'hésitez pas à <NuxtLink
-              to="/calendry"
+              to="/calendly"
               class="text-secondary font-weight-bold"
             >nous contacter.</NuxtLink></span>
           </div>
