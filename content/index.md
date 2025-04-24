@@ -460,6 +460,66 @@ backgroundImage: /images/b27a23f333a8c96567d46c123d1efb15.jpeg
   #answer
   Vous pouvez consulter notre page démarche responsable pour plus d'informations.
   :::
+
+  :::question-panel
+  ---
+  questionColor: primary
+  answerColor: grey
+  ---
+  #question
+  03 Quelle est la démarche responsable d'Odysway ?
+  
+  #answer
+  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  :::
+
+  :::question-panel
+  ---
+  questionColor: primary
+  answerColor: grey
+  ---
+  #question
+  03 Quelle est la démarche responsable d'Odysway ?
+  
+  #answer
+  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  :::
+
+  :::question-panel
+  ---
+  questionColor: primary
+  answerColor: grey
+  ---
+  #question
+  03 Quelle est la démarche responsable d'Odysway ?
+  
+  #answer
+  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  :::
+
+  :::question-panel
+  ---
+  questionColor: primary
+  answerColor: grey
+  ---
+  #question
+  03 Quelle est la démarche responsable d'Odysway ?
+  
+  #answer
+  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  :::
+
+  :::question-panel
+  ---
+  questionColor: primary
+  answerColor: grey
+  ---
+  #question
+  03 Quelle est la démarche responsable d'Odysway ?
+  
+  #answer
+  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  :::
 ::
 
 ::title-container

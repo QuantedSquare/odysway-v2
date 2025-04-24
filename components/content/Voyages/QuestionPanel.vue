@@ -1,30 +1,31 @@
 <template>
-  <v-expansion-panel
-    class="my-2 py-4"
-    rounded="xl"
-  >
-    <v-expansion-panel-title
-      class="text-subtitle-1 font-weight-bold text-md-h6 "
-      :class="'text-'+ questionColor"
+  <v-expansion-panels>
+    <v-expansion-panel
+      class="my-2 py-4"
     >
-      <slot
-        name="question"
-        mdc-unwrap="p"
-      />
-      <template #actions="{ expanded }">
-        <v-icon
-          color="secondary"
-          :icon="expanded ? mdiMinus : mdiPlus"
+      <v-expansion-panel-title
+        class="text-subtitle-1 font-weight-bold text-md-h6 "
+        :class="'text-'+ questionColor"
+      >
+        <slot
+          name="question"
+          mdc-unwrap="p"
         />
-      </template>
-    </v-expansion-panel-title>
-    <v-expansion-panel-text class="text-subtitle-1 text-grey pl-6">
-      <slot
-        name="answer"
-        mdc-unwrap="p"
-      />
-    </v-expansion-panel-text>
-  </v-expansion-panel>
+        <template #actions="{ expanded }">
+          <v-icon
+            color="secondary"
+            :icon="expanded ? mdiMinus : mdiPlus"
+          />
+        </template>
+      </v-expansion-panel-title>
+      <v-expansion-panel-text class="text-subtitle-1 text-grey pl-6 ">
+        <slot
+          name="answer"
+          mdc-unwrap="p"
+        />
+      </v-expansion-panel-text>
+    </v-expansion-panel>
+  </v-expansion-panels>
 </template>
 
 <script setup>

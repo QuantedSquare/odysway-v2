@@ -31,30 +31,38 @@
         >
           <div
             v-if="voyage.comments > 0"
-            class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0"
+            class="badge-position"
           >
             <v-btn
               size="small"
               color="white"
               rounded="pill"
+              height="46"
             >
-
-              <v-icon
-                :icon="mdiStar"
-                color="secondary-light"
-              />
-              {{ voyage.rating }}/5
+              <div class="d-flex justify-center align-center mx-1">
+                <v-icon
+                  :icon="mdiStar"
+                  color="yellow"
+                  size="20"
+                />
+                <span class="text-body-2 font-weight-bold text-primary">
+                  {{ `${voyage.rating.toString().replace('.', ',')}/5` }}
+                </span>
+              </div>
             </v-btn>
           </div>
           <div
             v-else
-            class="d-flex justify-center mt-4 mr-1 position-absolute top-0 right-0"
+            class="badge-position"
           >
             <v-btn
               size="small"
               color="primary"
+              class="font-weight-bold"
               rounded="pill"
+              height="46"
             >
+
               Nouveau
             </v-btn>
           </div>
@@ -71,14 +79,25 @@
             <v-container>
               <v-row>
                 <v-col>
-                  <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space">
-                    {{ voyage.title }}
+                  <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space ">
+                    <div
+                      ref="titleRef"
+                      class="line-clamp-2"
+                    >{{ voyage.title }}</div>
+                    <v-tooltip
+                      v-if="voyage.title.length > 60"
+                      activator="parent"
+                    >
+                      <span>
+                        {{ voyage.title }}
+                      </span>
+                    </v-tooltip>
                   </div>
                 </v-col>
               </v-row>
               <v-row>
                 <v-col>
-                  <div class="text-grey-lighten-1 font-weight-medium"> Type </div>
+                  <div class="text-grey font-weight-bold"> Type </div>
                   <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
                 </v-col>
                 <v-divider
@@ -86,15 +105,17 @@
                   vertical
                 />
                 <v-col class="text-center">
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.duration }}</div>
-                  <div class="text-grey-lighten-1 font-weight-medium">Jours </div>
+                  <div class="text-h6 font-weight-bold text-primary">(todo)
+                    <!-- {{ voyage.duration }} -->
+                  </div>
+                  <div class="text-grey font-weight-bold">Jours </div>
                 </v-col>
                 <v-divider
                   inset
                   vertical
                 />
                 <v-col class="text-right">
-                  <div class="text-grey-lighten-1 font-weight-medium"> À partir de </div>
+                  <div class="text-grey font-weight-bold text-no-wrap"> À partir de </div>
                   <div class="text-h6 font-weight-bold text-primary">{{ voyage.startingPrice }}€</div>
                 </v-col>
               </v-row>
@@ -107,25 +128,27 @@
                 v-if="voyage.dates?.length > 0"
                 block
                 color="primary"
-                class="font-weight-bold"
+                class="font-weight-bold text-body-1"
               >
-                Découvrir les dates
+                <div class="mb-1 mr-2">
+                  Découvrir les dates
+                </div>
                 <v-icon
                   size="24px"
-                  class="ml-3"
                 >{{ mdiPlusCircle }}</v-icon>
               </v-btn>
               <v-btn
                 v-else
                 block
                 color="secondary"
-                class="text-decoration-none font-weight-bold mr-3"
+                class="text-decoration-none font-weight-bold text-body-1"
                 :to="`/calendly?travelTitle=${voyage.title}`"
               >
-                Demander un devis
+                <div class="mb-1 mr-2">
+                  Demander un devis
+                </div>
                 <v-icon
                   size="24px"
-                  class="ml-3"
                 >{{ mdiPlusCircle }}</v-icon>
               </v-btn>
             </client-only>
@@ -151,6 +174,7 @@ const img = useImage()
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('deals').where('slug', '=', props.voyageSlug).first()
 })
+console.log('voyage', voyage.value)
 </script>
 
 <style scoped>
@@ -164,5 +188,17 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
 .hover-scale{
   transform: scale(1);
   transition: transform 0.2s ease-in-out;
+}
+.badge-position{
+  position: absolute;
+  top: 25px;
+  right: 28px;
+}
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 </style>

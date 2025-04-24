@@ -29,7 +29,7 @@
               <v-btn
                 v-if="isMobile"
                 class="explore-btn"
-                :to="url"
+                :to="link"
                 @click.stop
               >
                 Explorez

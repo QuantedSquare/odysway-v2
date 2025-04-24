@@ -1,6 +1,8 @@
 <template>
   <v-container :fluid="width < 1440">
-    <v-row :class="imageDesktopRight ? '' : 'flex-row-reverse'">
+    <v-row
+      :class="imageDesktopRight ? '' : 'flex-row-reverse'"
+    >
       <v-col
         cols="12"
         sm="6"
