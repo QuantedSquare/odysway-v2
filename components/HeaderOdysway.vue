@@ -11,7 +11,7 @@
       <v-img
         min-width="150px"
         height="38"
-        :src="img('/logos/logo_couleur.png', { format: 'webp', quality: 100, width: 320 })"
+        :src="img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 100, width: 320 })"
       />
     </NuxtLink>
     <v-spacer />

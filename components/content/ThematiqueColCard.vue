@@ -31,7 +31,7 @@
       >
         <h3
           key="title"
-          class="text-h4 text-lg-h2 text-center text-shadow"
+          class="text-h4 text-lg-h2 text-center text-shadow text-line-space"
         >
           {{ title }}
         </h3>
@@ -140,7 +140,7 @@ onMounted(() => {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2rem;
+  padding: 2rem 0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -197,5 +197,9 @@ onMounted(() => {
   .image-wrapper {
     height: 16rem;
   }
+}
+
+.text-line-space {
+  line-height: 40px!important;
 }
 </style>

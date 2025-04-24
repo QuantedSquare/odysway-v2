@@ -40,7 +40,7 @@ export default defineAppConfig({
   },
   footer: {
     logo: {
-      image: '/logos/logo_noir.png',
+      image: '/logos/Logo-Odysway-Bleu.png',
       description: 'Découvrez le monde autrement avec Odysway, votre partenaire de voyage éthique et responsable.',
     },
     team: {

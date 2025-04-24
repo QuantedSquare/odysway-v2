@@ -381,11 +381,47 @@ export default defineNuxtSchema({
         }),
       },
     }),
+    topTravels: group({
+      title: 'TopTravels',
+      description: 'Configuration du Footer',
+      icon: 'i-mdi-page-layout-footer',
+      fields: {
+        columns: field({
+          type: 'array',
+          title: 'Colonnes',
+          description: 'Configuration des colonnes du footer',
+          icon: 'i-mdi-view-column',
+          default: [],
+          items: group({
+            title: 'Colonne',
+            description: 'Configuration d\'une colonne',
+            icon: 'i-mdi-link-variant',
+            fields: {
+              display: field({
+                type: 'boolean',
+                title: 'Afficher',
+                description: 'Afficher ou non la colonne',
+                icon: 'i-mdi-checkbox-marked-circle-plus-outline',
+                default: true,
+              }),
+              title: field({
+                type: 'string',
+                title: 'Titre',
+                description: 'Titre de la colonne',
+                icon: 'i-mdi-title',
+                default: 'Liens utiles',
+              }),
+              links: field({
+                type: 'array',
+                title: 'Links',
+                description: 'Array of link object displayed in footer.',
+                icon: 'i-mdi-link-variant',
+                default: [],
+              }),
+            },
+          }),
+        }),
+      },
+    }),
   },
 })
-//   interface CustomAppConfig {
-//     ui: {
-//       icons: object
-//     }
-//   }
-// }

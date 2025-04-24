@@ -544,13 +544,3 @@ whiteText: true
   :::
 ::
 
-::color-container
----
-color: primary
-whiteText: true
----
-  ::title-container
-  #title
-  [FooterOdysway]{style="color: #FFFF;"}
-  ::
-::

@@ -16,6 +16,12 @@
       id="Smallchat"
       class="d-none d-lg-block"
     />
+    <ColorContainer
+      color="primary"
+      :white-text="true"
+    >
+      <TopTravelsTabs />
+    </ColorContainer>
     <FooterOdysway />
   </v-app>
 </template>
