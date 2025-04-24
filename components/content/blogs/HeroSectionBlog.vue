@@ -1,14 +1,11 @@
 <template>
-  <v-img
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-    height="100vh"
-    cover
-    class="position-relative bg-primary"
+  <div
+    class="rounded-xl"
+    :class="`bg-${backgroundColor}`"
   >
-    <v-btn-primary
+    <!-- <v-btn-primary
       to="/blog"
-      color="white"
+      color="primary"
       class="btn-position hidden-sm-and-down pl-md-0"
     >
       <template #prepend>
@@ -23,55 +20,140 @@
       to="/blog"
       variant="outlined"
       density="compact"
-      color="white"
+      color="primary"
       :icon="mdiChevronLeft"
       class="btn-position hidden-md-and-up"
-    />
-    <div class="h-100 d-flex align-end">
-      <v-container class="text-white text-shadow">
-        <v-row justify="center">
-          <v-col
-            cols="12"
-            md="10"
-            xl="8"
-            class="d-flex flex-column justify-center"
-          >
-            <p class="text-body-1">
+    /> -->
+    <v-container
+      fluid
+      :height="smAndDown ? '': '687px'"
+      class="pa-0"
+    >
+      <v-row
+        class="ma-0 h-100 flex-column-reverse flex-md-row"
+      >
+        <v-col
+          cols="12"
+          md="5"
+          class="d-flex flex-column justify-center ga-6 ga-md-8 pl-md-8"
+        >
+          <div class="text-body-2 text-lg-body-1 d-flex align-center ga-3">
+            <v-chip
+              size="x-large"
+              class="text-body-2 font-weight-bold px-5"
+              :class="`bg-${badgeColor}`"
+            >
+              <slot name="badge" />
+            </v-chip>
+            <div
+              class="d-flex align-center ga-2"
+              :class="`text-${badgeColor}`"
+            >
+              <v-icon size="24px">
+                {{ mdiClockTimeThreeOutline }}
+              </v-icon>
+              <slot
+                name="reading-time"
+                mdc-unwrap="p"
+              />
+            </div>
+            <div class="text-grey">
               <slot
                 name="publication-date"
                 mdc-unwrap="p"
               />
-            </p>
-            <h1 class="text-h4 text-md-h1 font-weight-bold ">
-              <slot
-                name="title"
-                mdc-unwrap="p"
-              />
-            </h1>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
-  </v-img>
+            </div>
+          </div>
+          <h1
+            class="text-h4 text-lg-h1 font-weight-bold"
+            :class="`text-${titleColor}`"
+          >
+            <slot
+              name="title"
+              mdc-unwrap="p"
+            />
+          </h1>
+          <div
+            class="text-h6 text-lg-h5 text-grey font-weight-medium"
+            :class="`text-${introductionColor}`"
+          >
+            <slot name="introduction" />
+          </div>
+          <BlogAuthorWrapper
+            :author-avatar="authorAvatar"
+            :author-name="authorName"
+            :author-role="authorRole"
+            class="pb-4"
+          />
+        </v-col>
+        <v-spacer />
+        <v-col
+          cols="12"
+          md="6"
+          class="pa-0 h-100"
+        >
+          <v-img
+            :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+            :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+            cover
+            height="100%"
+            :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script setup>
-import { mdiChevronLeft } from '@mdi/js'
+import { mdiChevronLeft, mdiClockTimeThreeOutline } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 defineProps({
+  backgroundColor: {
+    type: String,
+    default: 'primary',
+  },
+  badgeColor: {
+    type: String,
+    default: 'primary',
+  },
+  titleColor: {
+    type: String,
+    default: 'primary',
+  },
+  introductionColor: {
+    type: String,
+    default: 'grey',
+  },
+  authorAvatar: {
+    type: String,
+    default: '/images/team/romain.webp',
+  },
+  authorName: {
+    type: String,
+    default: '/images/team/romain.webp',
+  },
+  authorRole: {
+    type: String,
+    default: 'Conseiller en voyages',
+  },
   imageSrc: {
     type: String,
     default: '/images/Laponie-(1).webp',
   },
 })
+
+const { smAndDown } = useDisplay()
+console.log(smAndDown.value)
 const img = useImage()
 </script>
 
-<style scoped>
+<!-- <style scoped>
 .btn-position{
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 32px;
 }
-</style>
+</style> -->

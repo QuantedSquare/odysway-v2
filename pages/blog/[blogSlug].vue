@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <v-container
+    class="py-0 my-0"
+    fluid
+  >
     <ContentRenderer
       v-if="page"
       :value="page"
     />
-  </div>
+  </v-container>
 </template>
 
 <script setup>
