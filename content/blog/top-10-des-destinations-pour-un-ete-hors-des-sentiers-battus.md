@@ -21,9 +21,8 @@ background-color: soft-blush
 badge-color: secondary
 title-color: primary
 introduction-color: grey
-author-avatar: "/images/team/romain.webp"
-author-name: Romain Masina
-author-role: "Fondateur Odysway"
+avatar-author: "/images/team/romain.webp"
+avatar-size: '60'
 image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 ---
 #badge
@@ -41,6 +40,11 @@ Top 10 des destinations 2025 pour un été hors des sentiers battus
 #introduction
 Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend nullam eros, nulla erat magnis inceptos aptent hac odio pretium montes, fames.
 
+#author-name
+Romain Masina
+
+#author-role
+Fondateur Odysway
 ::
 
 ::section-container
@@ -211,9 +215,14 @@ whiteText: true
   ::
 ::
 
+::color-container
+---
+color: white
+---
 ::blog-author-card
 ---
-author-avatar: "/images/team/romain.webp"
+avatar-author: "/images/team/romain.webp"
+avatar-size: '86'
 ---
 #author-name
 Romain Masina
@@ -221,4 +230,5 @@ Romain Masina
 Fondateur Odysway
 #text
 Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
+::
 ::

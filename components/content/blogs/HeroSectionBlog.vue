@@ -79,12 +79,20 @@
           >
             <slot name="introduction" />
           </div>
-          <BlogAuthorWrapper
-            :author-avatar="authorAvatar"
-            :author-name="authorName"
-            :author-role="authorRole"
-            class="pb-4"
-          />
+          <div class="d-flex align-center ga-4">
+            <AvatarImg
+              :avatar-img="avatarAuthor"
+              :avatar-size="avatarSize"
+            />
+            <div class="text-body-2 text-lg-body-1 d-flex flex-column justify-center align-center align-sm-start ga-4">
+              <div class="text-primary  font-weight-bold">
+                <slot name="author-name" />
+              </div>
+              <div class="text-grey">
+                <slot name="author-role" />
+              </div>
+            </div>
+          </div>
         </v-col>
         <v-spacer />
         <v-col
@@ -106,7 +114,7 @@
 </template>
 
 <script setup>
-import { mdiChevronLeft, mdiClockTimeThreeOutline } from '@mdi/js'
+import { mdiClockTimeThreeOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
@@ -127,17 +135,13 @@ defineProps({
     type: String,
     default: 'grey',
   },
-  authorAvatar: {
+  avatarAuthor: {
     type: String,
     default: '/images/team/romain.webp',
   },
-  authorName: {
+  avatarSize: {
     type: String,
-    default: '/images/team/romain.webp',
-  },
-  authorRole: {
-    type: String,
-    default: 'Conseiller en voyages',
+    default: '60',
   },
   imageSrc: {
     type: String,

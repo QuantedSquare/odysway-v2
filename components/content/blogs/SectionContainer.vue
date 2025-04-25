@@ -3,7 +3,7 @@
     <v-row justify="center">
       <v-col
         cols="12"
-        md="8"
+        lg="8"
         class="content-class"
       >
         <slot name="content" />

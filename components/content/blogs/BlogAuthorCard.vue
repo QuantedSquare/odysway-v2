@@ -10,9 +10,9 @@
           sm="auto"
           class="d-flex justify-center justify-sm-start"
         >
-          <v-avatar
-            :image="authorAvatar"
-            size="86"
+          <AvatarImg
+            :avatar-img="avatarAuthor"
+            :avatar-size="avatarSize"
           />
         </v-col>
         <v-col class="d-flex flex-column justify-center align-center align-sm-start">
@@ -22,11 +22,8 @@
           <v-card-subtitle class="text-secondary text-h4 no-white-space ">
             <slot name="author-role" />
           </v-card-subtitle>
-
           <v-card-text class="text-h4 text-grey">
-            <slot
-              name="text"
-            />
+            <slot name="text" />
           </v-card-text>
         </v-col>
       </v-row>
@@ -38,8 +35,13 @@
 import { useDisplay } from 'vuetify'
 
 defineProps({
-  authorAvatar: {
+  avatarAuthor: {
     type: String,
+    default: '/images/team/romain.webp',
+  },
+  avatarSize: {
+    type: String,
+    default: '60',
   },
 })
 

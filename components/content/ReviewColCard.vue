@@ -20,12 +20,10 @@
     <v-sheet elevation="0">
       <v-card-item>
         <v-card-title class="d-flex align-center ga-2">
-          <v-avatar size="62">
-            <v-img
-              :src="img(review.photo, { format: 'webp', quality: 70, width: 640 })"
-              rounded="circle"
-            />
-          </v-avatar>
+          <AvatarImg
+            :avatar-img="review.photo"
+            avatar-size="62"
+          />
           <div class="d-flex flex-column">
             <span class="text-h5"> {{ review.author }}</span>
             <span class="text-h6 text-grey text-truncate"> {{ review.voyageTitle }}</span>
