@@ -215,10 +215,6 @@ whiteText: true
   ::
 ::
 
-::color-container
----
-color: white
----
 ::blog-author-card
 ---
 avatar-author: "/images/team/romain.webp"
@@ -230,5 +226,4 @@ Romain Masina
 Fondateur Odysway
 #text
 Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
-::
 ::

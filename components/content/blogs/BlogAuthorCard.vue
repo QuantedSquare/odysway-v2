@@ -1,10 +1,10 @@
 <template>
   <v-container
     :fluid="width < 1440"
-    class="px-0"
+    class="pa-0 mt-8"
   >
     <v-card class="pa-10">
-      <v-row dense>
+      <v-row no-gutters>
         <v-col
           cols="12"
           sm="auto"
