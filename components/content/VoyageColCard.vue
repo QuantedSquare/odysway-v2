@@ -44,7 +44,7 @@
               <div class="d-flex justify-center align-center mx-1">
                 <v-icon
                   :icon="mdiStar"
-                  color="yellow"
+                  color="yellow-rating"
                   size="20"
                 />
                 <span class="text-body-2 font-weight-bold text-primary">

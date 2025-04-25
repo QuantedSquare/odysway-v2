@@ -32,7 +32,7 @@
                 <div class="d-flex justify-center align-center mx-1">
                   <v-icon
                     :icon="mdiStar"
-                    color="yellow"
+                    color="yellow-rating"
                     size="20"
                   />
                   <span class="text-body-2 font-weight-bold text-primary">
@@ -72,15 +72,13 @@
               color="grey-light-3"
               rounded="md"
               block
+              :to="date.link"
+              class="w-100 block-btn-without-padding"
             >
-              <div class="d-flex align-center justify-space-between bg-secondary w-full">
+              <div class="d-inline-flex align-center justify-space-between w-100">
                 <div class="d-flex align-center ">
-                  <v-badge
-                    inline
-                    :color="date.status.color"
-                    class="border-primary"
-                  />
-                  <span class="text-caption text-decoration-none text-primary ">
+                  <CustomBadge :color="date.status.color" />
+                  <span class="text-body-2 text-decoration-none text-primary text-size-14">
                     du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMMM ') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMMM') }} {{ dayjs(date.returnDate).format('YYYY') }}</span>
                   </span>
                 </div>
@@ -90,7 +88,7 @@
                   :color="date.status.color"
                   rounded="lg"
                 >
-                  <span class="text-body-2 font-weight-bold  text-white mb-1">
+                  <span class="text-caption font-weight-bold  text-white mb-1 ">
                     {{ date.status.text }}
                   </span>
                 </v-chip>
@@ -145,6 +143,37 @@
             </v-btn-secondary>
           </v-col>
         </v-row>
+        <v-row class="text-size-14 text-grey">
+          <v-col
+            cols="12"
+            class="d-flex align-start flex-column ga-1"
+          >
+            <div class="d-flex align-center ga-2">
+              <v-icon>
+                {{ mdiCheckCircleOutline }}
+              </v-icon>
+              <span>
+                <strong>15 jours</strong> pour changer d'avis
+              </span>
+            </div>
+            <div class="d-flex align-center ga-2">
+              <v-icon>
+                {{ mdiCheckCircleOutline }}
+              </v-icon>
+              <span>
+                Paiement en <strong>trois fois</strong> (Alma)
+              </span>
+            </div>
+            <div class="d-flex align-center ga-2">
+              <v-icon>
+                {{ mdiCheckCircleOutline }}
+              </v-icon>
+              <span>
+                Paiement par <strong>chèque vacances</strong> (ANCV)
+              </span>
+            </div>
+          </v-col>
+        </v-row>
       </v-container>
     </v-card-text>
   </v-card>
@@ -181,7 +210,7 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiStar } from '@mdi/js'
+import { mdiArrowRight, mdiStar, mdiCheckCircleOutline } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
@@ -196,23 +225,23 @@ const getStatus = (date) => {
   if (date.bookedPlaces < 2) {
     return {
       status: 'pending',
-      text: 'Bientôt confirmé',
-      color: 'tertiary',
+      text: `Bientôt confirmé`,
+      color: 'yellow',
     }
   }
   else {
     if (date.bookedPlaces === date.maxTravellers) {
       return {
         status: 'full',
-        text: 'Confirmé',
-        color: 'quaternary',
+        text: 'Complet',
+        color: 'blue',
       }
     }
     else {
       return {
         status: 'confirmed',
-        text: 'Départ garanti',
-        color: 'quinary',
+        text: 'Départ confirmé',
+        color: 'green',
       }
     }
   }
@@ -239,4 +268,14 @@ if (deal.value?.dates.length > 0) {
 .btn-shadow {
   box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
 }
+.block-btn-without-padding:deep(.v-btn__content) {
+  padding: 0px !important;
+  width: 100% !important;
+}
+  .text-size-14 {
+  font-size: 14px!important;
+  }
+  .text-size-11 {
+  font-size: 11px!important;
+  }
 </style>

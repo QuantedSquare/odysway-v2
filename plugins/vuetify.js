@@ -53,15 +53,17 @@ export default defineNuxtPlugin((app) => {
             'secondary-light-2': 'rgba(219, 102, 68, 0.6)', // red
             'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // red
             'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // red
-            'tertiary': '#F0B348', // yellow
-            'tertiary-light': '#EADFB1', // yellow
-            'quaternary': '#2D5843', // green
-            'quinary': '#237C8C', // blue
+            'yellow': '#F0B348', // yellow
+            'yellow-light': '#EADFB1', // yellow
+            'green': '#2D5843', // green
+            'green-light': '#7D9676', // green
+            'blue': '#237C8C', // blue
+            'blue-light': '#9CC5CC', // blue
 
             'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
-            'yellow': 'rgba(246, 191, 75, 1)',
+            'yellow-rating': 'rgba(246, 191, 75, 1)',
             // Virer les suivants
             'odysway-1': '#edeff8', // grey-home-bg
             'odysway-2': '#f5f5f5',
