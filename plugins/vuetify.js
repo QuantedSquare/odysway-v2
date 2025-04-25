@@ -46,17 +46,18 @@ export default defineNuxtPlugin((app) => {
             'text': 'rgba(43, 76, 82, 1)',
             'primary-light': 'rgba(43, 76, 82, 0.8)',
             'primary-light-2': 'rgba(43, 76, 82, 0.6)',
-            'primary-light-3': 'rgba(43, 76, 82, 0.4)', // odysway text
-            'primary-light-4': 'rgba(43, 76, 82, 0.2)', // odysway text
-            'secondary': 'rgba(219, 102, 68, 1)', // odysway red
-            'secondary-light': 'rgba(219, 102, 68, 0.8)', // odysway red
-            'secondary-light-2': 'rgba(219, 102, 68, 0.6)', // odysway red
-            'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // odysway red
-            'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // odysway red
-            'tertiary': '#F0B348', // odysway yellow
-            'tertiary-light': '#EADFB1', // odysway yellow
-            'quaternary': '#2D5843', // odysway green
-            'quaternary-light': '#7D9676', // odysway green
+            'primary-light-3': 'rgba(43, 76, 82, 0.4)', // text
+            'primary-light-4': 'rgba(43, 76, 82, 0.2)', // text
+            'secondary': 'rgba(219, 102, 68, 1)', // red
+            'secondary-light': 'rgba(219, 102, 68, 0.8)', // red
+            'secondary-light-2': 'rgba(219, 102, 68, 0.6)', // red
+            'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // red
+            'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // red
+            'tertiary': '#F0B348', // yellow
+            'tertiary-light': '#EADFB1', // yellow
+            'quaternary': '#2D5843', // green
+            'quinary': '#237C8C', // blue
+
             'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
@@ -70,6 +71,7 @@ export default defineNuxtPlugin((app) => {
             'grey-light': '#EAEDEE',
             'grey-darken-2': '#616161',
             'grey-light-2': 'rgba(234, 237, 238, 1)',
+            'grey-light-3': 'rgba(249, 249, 249, 1)',
           },
           variables: {
             'medium-emphasis-opacity': '1',

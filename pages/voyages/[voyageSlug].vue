@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <v-container fluid>
     <ContentRenderer
       v-if="page"
       :value="page"
     />
-  </div>
+  </v-container>
 </template>
 
 <script setup>

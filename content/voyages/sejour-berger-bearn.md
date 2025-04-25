@@ -168,8 +168,6 @@ Vis ma vie de berger dans les Pyrénées
   :::
 ::
 
-::horizontal-ariane
-::
 
 ::bottom-app-bar
 #starting-price
@@ -487,36 +485,6 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
 
 #right-side
   :::info-card
-  ---
-  average-note: 4.8
-  class: mt-12
-  nb-notes: 44
-  ---
-  #catch-phrase
-  Discutons de votre projet !
-
-  #payment-items
-    ::::payment-item
-    ---
-    image-src: /images/alma.webp
-    ---
-    #text
-    Payez en 3 versements
-    ::::
-
-    ::::payment-item
-    ---
-    image-src: /images/ancv.png
-    ---
-    #text
-    Payez avec vos chèques vacances
-    ::::
-
-  #text-btn-1
-  Voir tous les départs
-
-  #text-btn-2
-  Demander plus d'informations
   :::
 ::
 

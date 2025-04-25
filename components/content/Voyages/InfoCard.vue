@@ -1,86 +1,179 @@
 <template>
   <v-card
-    v-if="status === 'success'"
-    elevation="0"
+    v-if="deal"
   >
-    <v-img
-      :src="img(voyageImg, { format: 'webp', quality: 70, height: 400, width: 640 })"
-      :lazy-src="img(voyageImg, { format: 'webp', quality: 10, width: 640 })"
-      max-height="400"
-      cover
-    >
-      <v-container class="h-100 d-flex align-center">
+    <v-card-text>
+      <v-container fluid>
         <v-row>
+          <v-col
+            cols="5"
+            class="d-flex flex-column align-start"
+          >
+            <span class="text-body-2 text-grey">
+              À partir de
+            </span>
+            <span class="text-h2 font-weight-bold text-primary">
+              {{ deal.startingPrice }}€<span class="text-body-2 font-weight-bold">/pers</span>
+            </span>
+          </v-col>
+          <v-spacer class="d-block" />
+          <v-col
+            cols="5"
+            class="d-flex align-start justify-end"
+          >
+            <ClientOnly>
+              <v-btn
+                size="small"
+                color="white"
+                rounded="pill"
+                height="46"
+                class="btn-shadow"
+              >
+                <div class="d-flex justify-center align-center mx-1">
+                  <v-icon
+                    :icon="mdiStar"
+                    color="yellow"
+                    size="20"
+                  />
+                  <span class="text-body-2 font-weight-bold text-primary">
+                    {{ `${deal.rating.toString().replace('.', ',')}/5` }}
+                  </span>
+                </div>
+              </v-btn>
+            </ClientOnly>
+          </v-col>
+        </v-row>
+        <v-row justify-md="center">
+          <v-col
+            cols="12"
+          >
+            <v-divider />
+          </v-col>
+        </v-row>
+
+        <v-row class="mt-0">
           <v-col cols="12">
-            <h2 class="text-center text-white text-h6 font-weight-black text-shadow">
-              {{ voyageTitle }}
-            </h2>
-            <div class="d-flex align-center justify-center">
-              <ClientOnly>
-                <v-rating
-                  :model-value="Number(averageNote)"
-                  color="orange-lighten-1"
-                  density="compact"
-                  size="small"
-                  half-increments
-                  readonly
+            <span class="text-h4 font-weight-bold text-primary">
+              Dates disponibles
+            </span>
+          </v-col>
+        </v-row>
+        <v-row
+          justify-md="center"
+          class="text-center"
+        >
+          <v-col
+            v-for="(date, i) in displayedDates"
+            :key="date.departureDate + i"
+            cols="12"
+          >
+            <v-btn
+              height="52"
+              color="grey-light-3"
+              rounded="md"
+              block
+            >
+              <div class="d-flex align-center justify-space-between bg-secondary w-full">
+                <div class="d-flex align-center ">
+                  <v-badge
+                    inline
+                    :color="date.status.color"
+                    class="border-primary"
+                  />
+                  <span class="text-caption text-decoration-none text-primary ">
+                    du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMMM ') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMMM') }} {{ dayjs(date.returnDate).format('YYYY') }}</span>
+                  </span>
+                </div>
+
+                <v-chip
+                  variant="flat"
+                  :color="date.status.color"
+                  rounded="lg"
+                >
+                  <span class="text-body-2 font-weight-bold  text-white mb-1">
+                    {{ date.status.text }}
+                  </span>
+                </v-chip>
+              </div>
+            </v-btn>
+          </v-col>
+
+          <v-col
+            cols="12"
+          >
+            <v-btn
+              height="60"
+              block
+              rounded="md"
+              @click="goTo('#dates-container', { offset: -200 })"
+            >
+              <span class="text-body-2 font-weight-bold text-decoration-none">
+                Voir tous les départs +
+              </span>
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row justify-md="center">
+          <v-col
+            cols="12"
+          >
+            <v-divider />
+          </v-col>
+        </v-row>
+        <v-row
+          justify-md="center"
+          class="text-center"
+        >
+          <v-col
+            cols="12"
+          >
+            <v-btn-secondary
+              height="60"
+              block
+              rounded="md"
+              @click="goTo('#dates-container', { offset: -200 })"
+            >
+              <div class="d-flex align-center ga-2">
+                <v-avatar
+                  image="/images/photo Romain.webp"
+                  color="white"
                 />
-                <span class="text-white text-shadow">({{ nbNotes }})</span>
-              </ClientOnly>
-            </div>
+                <span class="text-body-2 font-weight-bold text-decoration-none">
+                  Contacter un expert en voyage
+                </span>
+              </div>
+            </v-btn-secondary>
           </v-col>
         </v-row>
       </v-container>
-    </v-img>
-    <v-card-item>
-      <v-card-title class="text-center text-grey-darken-3 no-white-space font-weight-black ">
-        <slot name="catch-phrase" />
-      </v-card-title>
-      <v-list slim>
-        <slot name="payment-items" />
-      </v-list>
-    </v-card-item>
-    <v-card-actions>
-      <v-row
-        justify-md="center"
-        class="text-center"
-      >
-        <v-col
-          cols="12"
-          lg="10"
-        >
-          <v-btn-secondary
-            block
-            @click="goTo('#dates-container', { offset: -200 })"
-          >
-            <slot name="text-btn-1" />
-          </v-btn-secondary>
-        </v-col>
-        <v-col
-          cols="12"
-          lg="6"
-        >
-          <NuxtLink
-            width="100%"
-            class="text-primary text-break d-flex align-center justify-center ga-3"
-            :to="`/calendly?travelTitle=${voyageTitle}`"
-          >
-
-            <v-icon
-              size="x-large"
-            >
-              {{ mdiCalendarMonthOutline }}
-            </v-icon>
-            <span class="text-left">
-              <slot
-                name="text-btn-2"
-              />
-            </span>
-          </NuxtLink>
-        </v-col>
-      </v-row>
-    </v-card-actions>
+    </v-card-text>
   </v-card>
+  <v-row
+    v-if="deal"
+    class="mt-4"
+  >
+    <v-col
+      cols="12"
+    >
+      <NuxtLink
+        width="100%"
+        class="text-primary text-break d-flex align-center justify-center ga-3"
+        :to="`/calendly?travelTitle=${deal.slug}`"
+      >
+
+        <v-icon
+          size="small"
+          color="x-small"
+          class="bg-primary rounded-lg pa-1"
+        >
+          {{ mdiArrowRight }}
+        </v-icon>
+        <span class="text-left font-weight-bold text-primary">
+          Demander une privatisation de ce voyage
+        </span>
+      </NuxtLink>
+    </v-col>
+  </v-row>
   <v-skeleton-loader
     v-else
     type="card"
@@ -88,32 +181,62 @@
 </template>
 
 <script setup>
-import { mdiCalendarMonthOutline } from '@mdi/js'
+import { mdiArrowRight, mdiStar } from '@mdi/js'
 import { useGoTo } from 'vuetify'
-import { useImage } from '#imports'
+import dayjs from 'dayjs'
 
 const goTo = useGoTo()
-
-defineProps({
-  averageNote: {
-    type: Number,
-  },
-  nbNotes: {
-    type: Number,
-  },
-})
-
+const deal = useState('deal', () => null)
 const route = useRoute()
-const img = useImage()
+const displayedDates = ref([])
+deal.value = await queryCollection('deals').where('slug', '=', route.params.voyageSlug).first()
+console.log('deal in infocard', deal.value)
 
-const { data: page, status } = useAsyncData(route.path, () => {
-  return queryCollection('voyages').path(route.path).first()
-})
-const voyageTitle = computed(() => {
-  return page?.value?.title ?? ''
-})
+const getStatus = (date) => {
+  if (date.bookedPlaces < 2) {
+    return {
+      status: 'pending',
+      text: 'Bientôt confirmé',
+      color: 'tertiary',
+    }
+  }
+  else {
+    if (date.bookedPlaces === date.maxTravellers) {
+      return {
+        status: 'full',
+        text: 'Confirmé',
+        color: 'quaternary',
+      }
+    }
+    else {
+      return {
+        status: 'confirmed',
+        text: 'Départ garanti',
+        color: 'quinary',
+      }
+    }
+  }
+}
 
-const voyageImg = computed(() => {
-  return page.value.body.value[0][1]['image-src']
-})
+if (deal.value?.dates.length > 0) {
+  const sortedByDates = deal.value.dates
+    .filter(date => dayjs(date.departureDate).isAfter(dayjs()))
+    .sort((a, b) => dayjs(a.departureDate).diff(dayjs(b.departureDate)))
+  displayedDates.value = sortedByDates.slice(0, 3).map((date) => {
+    const in30days = dayjs().add(30, 'day')
+    const checkoutType = dayjs(date.departureDate).isBefore(in30days) ? 'full' : 'deposit'
+    return {
+      departureDate: date.departureDate,
+      returnDate: date.returnDate,
+      status: getStatus(date),
+      link: `/checkout?slug=${deal.value.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`,
+    }
+  })
+}
 </script>
+
+<style scoped>
+.btn-shadow {
+  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
+}
+</style>
