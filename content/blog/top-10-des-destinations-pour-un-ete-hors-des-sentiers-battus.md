@@ -214,9 +214,11 @@ whiteText: true
 ::blog-author-card
 ---
 author-avatar: "/images/team/romain.webp"
-author-name: Romain Masina
-author-role: "Fondateur Odysway"
 ---
+#author-name
+Romain Masina
+#author-role
+Fondateur Odysway
 #text
 Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
 ::
