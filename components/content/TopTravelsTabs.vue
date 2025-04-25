@@ -2,7 +2,6 @@
   <div class="mx-4 my-7">
     <v-container
       v-if="tops"
-      fluid
       class="bg-primary rounded-lg"
     >
       <v-row

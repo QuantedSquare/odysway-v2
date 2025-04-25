@@ -46,7 +46,7 @@
               <slot name="badge" />
             </v-chip>
             <div
-              class="d-flex align-center ga-2"
+              class="d-flex align-center ga-2 font-weight-2"
               :class="`text-${badgeColor}`"
             >
               <v-icon size="24px">
@@ -153,10 +153,8 @@ const { smAndDown } = useDisplay()
 const img = useImage()
 </script>
 
-<!-- <style scoped>
-.btn-position{
-  position: absolute;
-  top: 0;
-  left: 32px;
+<style scoped>
+.font-weight-2{
+  font-weight: 500;
 }
-</style> -->
+</style>

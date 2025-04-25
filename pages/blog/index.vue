@@ -25,6 +25,7 @@
           :key="index"
           cols="12"
           sm="6"
+          md="4"
         >
           <BlogCard
             :blog-slug="page.slug"

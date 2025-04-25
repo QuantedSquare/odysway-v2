@@ -1,6 +1,5 @@
 <template>
   <v-container
-    fluid
     class="rounded-lg py-8 mt-8"
     :class="['bg-' + color, { 'text-white': whiteText }]"
   >

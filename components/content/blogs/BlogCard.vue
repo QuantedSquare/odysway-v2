@@ -24,47 +24,48 @@
     </v-img>
 
     <!--  BOTTOM TEXT -->
-    <div>
-      <v-card-text>
-        <v-container>
-          <v-row>
-            <v-col cols="12">
-              <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space ">
-                <div
-                  class="line-clamp-2"
-                >
+    <v-card-text class="pb-0">
+      <v-container class="pb-0">
+        <v-row>
+          <v-col cols="12">
+            <div class="text-primary text-h3 font-weight-bold py-1 px-0 no-white-space ">
+              <div
+                class="line-clamp-2"
+              >
+                {{ blogTitle }}
+              </div>
+              <v-tooltip
+                v-if="blogTitle.length > 60"
+                activator="parent"
+              >
+                <span>
                   {{ blogTitle }}
-                </div>
-                <v-tooltip
-                  v-if="blogTitle.length > 60"
-                  activator="parent"
-                >
-                  <span>
-                    {{ blogTitle }}
-                  </span>
-                </v-tooltip>
+                </span>
+              </v-tooltip>
+            </div>
+          </v-col>
+          <v-spacer />
+          <v-divider />
+          <v-col
+            cols="12"
+            class="d-flex justify-space-between align-center text-secondary-light-2 text-h5 mt-4"
+          >
+            <div class="d-flex align-center ga-2">
+              <v-icon size="small">
+                {{ mdiClockTimeThreeOutline }}
+              </v-icon>
+
+              <div>
+                3 min
               </div>
-            </v-col>
-            <v-spacer />
-            <v-divider />
-            <v-col
-              cols="12"
-              class="d-flex justify-space-between text-secondary"
-            >
-              <div class="d-flex align-center ga-2">
-                <v-icon size="24px">
-                  {{ mdiClockTimeThreeOutline }}
-                </v-icon>
-                <div>3 min</div>
-              </div>
-              <div class="text-grey">
-                {{ formatDate(blogDate) }}
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card-text>
-    </div>
+            </div>
+            <div class="text-grey">
+              {{ formatDate(blogDate) }}
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card-text>
   </v-card>
 </template>
 
@@ -115,7 +116,7 @@ dayjs.extend(customParseFormat)
 const img = useImage()
 
 const formatDate = (date) => {
-  return dayjs(date).locale('fr').format('DD MMMM YYYY')
+  return dayjs(date).locale('fr').format('DD MMMM, YYYY')
 }
 </script>
 

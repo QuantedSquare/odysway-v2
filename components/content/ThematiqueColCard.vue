@@ -31,14 +31,14 @@
       >
         <h3
           key="title"
-          class="text-h4 text-lg-h2 text-center text-shadow text-line-space"
+          class="text-h4 text-lg-h2 text-center text-shadow text-line-space mx-2"
         >
           {{ title }}
         </h3>
         <p
           v-if="isHovered || isMobile"
           key="description"
-          class="description text-shadow text-center"
+          class="description text-shadow text-center mx-2"
         >
           Cliquez pour en apprendre plus à propos des {{ title }}
           <client-only>

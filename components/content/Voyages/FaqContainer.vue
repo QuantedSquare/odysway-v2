@@ -1,7 +1,6 @@
 <template>
   <v-container
     id="faq-container"
-    fluid
     class="rounded-xl py-8 mt-8 position-relative"
   >
     <div

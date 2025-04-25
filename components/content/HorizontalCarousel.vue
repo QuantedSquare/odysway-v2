@@ -1,7 +1,5 @@
 <template>
-  <v-container
-    :fluid="width < 1440"
-  >
+  <v-container>
     <v-row
       align="center"
     >

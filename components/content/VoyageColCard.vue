@@ -15,7 +15,7 @@
     v-else-if="status === 'success' && voyage"
     cols="12"
     sm="6"
-    md="4"
+    lg="4"
   >
     <v-card
       elevation="0"
@@ -98,7 +98,7 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col>
+                <v-col cols="4">
                   <div class="text-grey font-weight-bold"> Type </div>
                   <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
                 </v-col>
@@ -106,7 +106,10 @@
                   inset
                   vertical
                 />
-                <v-col class="text-center">
+                <v-col
+                  cols="4"
+                  class="text-center"
+                >
                   <div class="text-h6 font-weight-bold text-primary">(todo)
                     <!-- {{ voyage.duration }} -->
                   </div>
@@ -116,7 +119,10 @@
                   inset
                   vertical
                 />
-                <v-col class="text-right">
+                <v-col
+                  cols="4"
+                  class="text-right"
+                >
                   <div class="text-grey font-weight-bold text-no-wrap"> À partir de </div>
                   <div class="text-h6 font-weight-bold text-primary">{{ voyage.startingPrice }}€</div>
                 </v-col>
