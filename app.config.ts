@@ -65,13 +65,13 @@ export default defineAppConfig({
         title: 'Liens utiles',
         links: [{
           label: 'À propos',
-          to: '/about',
+          // to: '/about',
         }, {
           label: 'Blog',
           to: '/blog',
         }, {
           label: 'Contact',
-          to: '/contact',
+          // to: '/contact',
         }],
       },
       colonne2: {

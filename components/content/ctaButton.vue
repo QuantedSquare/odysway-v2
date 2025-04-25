@@ -7,7 +7,10 @@
       height="62"
       size="large"
     >
-      <div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4">
+      <div
+        class="text-decoration-none text-body-1 font-weight-bold mx-4"
+        :class="`text-${textColor}`"
+      >
         <slot
           mdc-unwrap="p"
           name="text"
@@ -40,6 +43,10 @@ defineProps({
   color: {
     type: String,
     default: 'primary',
+  },
+  textColor: {
+    type: String,
+    default: 'white',
   },
   external: {
     type: Boolean,

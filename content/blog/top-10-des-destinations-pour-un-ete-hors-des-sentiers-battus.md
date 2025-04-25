@@ -13,12 +13,26 @@ publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
 categories: "Blog"
 displayedImg: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
 ---
 
 ::hero-section-blog
 ---
+background-color: soft-blush
+badge-color: secondary
+title-color: primary
+introduction-color: grey
+avatar-author: "/images/team/romain.webp"
+avatar-size: '60'
 image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 ---
+#badge
+Actu
+
+#reading-time
+3 min
+
 #publication-date
 24 janvier 2025
 
@@ -26,7 +40,13 @@ image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-
 Top 10 des destinations 2025 pour un été hors des sentiers battus
 
 #introduction
-L’été approche à grands pas et vous ne savez pas encore où partir en vacances. En revanche, une chose est sûre : vous misez sur un voyage estival en dehors des sentiers touristiques. Vous n’avez qu’une seule envie, celle de vous immerger au cœur de l’authenticité de votre future destination, loin de la foule et des grands classiques. Voici pour vous notre top 10 des destinations pour un été hors des sentiers battus.
+Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend nullam eros, nulla erat magnis inceptos aptent hac odio pretium montes, fames.
+
+#author-name
+Romain Masina
+
+#author-role
+Fondateur Odysway
 ::
 
 ::section-container
@@ -163,4 +183,74 @@ alt: Srillanka_Blog.png
 Oui ! Il est possible de **visiter le Sri Lanka en dehors des sentiers touristiques**. Pour cela, rejoignez notamment le centre et la côte est de l’île, ses campagnes et ses petits coins secrets. Temples, villages, le parc national de Maduru Oya, idéal pour un safari moins « usine à touristes », ou encore plages plus intimistes vous attendent pour un séjour au plus près des habitants et de la nature. C’est ce que nous vous proposons avec notre séjour hors des sentiers battus mêlant rencontres et activités insolites.
 
 Pour aller plus loin, découvrez notre article sur comment voyager en Asie autrement en 2025 : [https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques](https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques)
+::
+
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Lorem ipsum dolor sit amet consectetur adipiscing elit et sed lectus vulputate nisi donec sed sit volutpat id.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: primary
+whiteText: true
+---
+  ::raw-text
+  #text
+  “Nisi quis eleifend quam adipiscing vitae aliquet bibendum enim facilisis gravida neque velit euismod in pellentesque massa placerat.”
+  ::
+::
+
+::blog-author-card
+---
+avatar-author: "/images/team/romain.webp"
+avatar-size: '86'
+---
+#author-name
+Romain Masina
+#author-role
+Fondateur Odysway
+#text
+Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::
 ::

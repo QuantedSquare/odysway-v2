@@ -26,25 +26,15 @@
           cols="12"
           sm="6"
         >
-          <v-card
-            variant="text"
-            height="100%"
-            :href="page.slug"
-          >
-            <v-img
-              :src="img(page.imgSrc, { format: 'webp', quality: 70, width: 640 })"
-              class="hover-scale"
-              height="100%"
-              cover
-            >
-              <div class="position-absolute bottom-0 text-white">
-                <v-card-subtitle>{{ dayjs(page.publishedAt).format('DD/MM/YYYY') }}</v-card-subtitle>
-                <v-card-title class="no-white-space">
-                  {{ page.title }}
-                </v-card-title>
-              </div>
-            </v-img>
-          </v-card>
+          <BlogCard
+            :blog-slug="page.slug"
+            :blog-title="page.title"
+            :blog-image="page.imgSrc"
+            :blog-published="page.published"
+            :blog-date="page.publishedAt"
+            :blog-type="page.blogType"
+            :blog-badge-color="page.badgeColor"
+          />
         </v-col>
       </v-row>
     </v-container>
@@ -53,9 +43,6 @@
 
 <script setup>
 import dayjs from 'dayjs'
-import { useImage } from '#imports'
-
-const img = useImage()
 
 const route = useRoute()
 const { data: pages, status } = useAsyncData(route.path, () => {
@@ -68,19 +55,20 @@ const loading = computed(() => {
 
 const parsedPages = computed(() => {
   const parsedPages = pages.value?.map((page) => {
-    console.log('page in array', page)
     return {
       title: page.title, // find the way to get a title from page hero-section
       publishedAt: page.publishedAt,
       imgSrc: page.displayedImg,
       slug: page.path,
+      published: page.published,
+      blogType: page.blogType,
+      badgeColor: page.badgeColor,
     }
   }).sort((a, b) => {
     return dayjs((b.publishedAt)) - dayjs((a.publishedAt))
   })
   return parsedPages
 })
-console.log(parsedPages.value)
 </script>
 
 <style scoped>

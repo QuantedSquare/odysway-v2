@@ -13,6 +13,8 @@ publishedAt: "2025-01-20 06:28:00+00:00"
 tags: "conseils, insolite"
 categories: "Blog"
 displayedImg: "/images/blogs/voyage-insolite-nos-idees-devasion-pour-tous/WgDfxwTASsqxDDagGtjL.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
 ---
 
 ::hero-section-blog
