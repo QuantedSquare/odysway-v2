@@ -18,7 +18,7 @@
 
   <div
     v-if="selectedItem"
-    class="text-dark d-flex flex-column align-center"
+    class=" d-flex flex-column align-center"
   >
     <span class="text-h6 font-weight-bold">{{ selectedItem.author }}</span>
     <span>{{ selectedItem.authorAge }} ans</span>

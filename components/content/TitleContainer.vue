@@ -6,7 +6,7 @@
       no-gutters
     >
       <v-col
-        class="text-dark font-weight-black text-h2 my-4"
+        class=" font-weight-black text-h2 my-4"
       >
         <slot name="title" />
       </v-col>

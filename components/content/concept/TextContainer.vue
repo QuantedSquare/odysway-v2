@@ -6,7 +6,7 @@
       >
         <v-col
           cols="12"
-          class="text-dark"
+          class=""
         >
           <slot
             name="text"

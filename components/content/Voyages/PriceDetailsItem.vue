@@ -1,10 +1,11 @@
 <template>
   <v-row
-    class="text-body-1 text-grey-darken-3"
+    class="text-body-1 text-grey-darken-3 my-2"
     align="center"
+    no-gutters
   >
     <v-col cols="1">
-      <v-icon :class="isIncluded ? 'text-primary' : 'text-error'">
+      <v-icon :class="isIncluded ? 'text-green' : 'text-secondary'">
         {{ isIncluded ? mdiCheckCircleOutline : mdiCloseCircleOutline }}
       </v-icon>
     </v-col>

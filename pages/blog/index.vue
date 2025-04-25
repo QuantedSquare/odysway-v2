@@ -7,7 +7,7 @@
         no-gutters
       >
         <v-col
-          class="text-dark font-weight-black text-h5 text-md-h4 my-4"
+          class=" font-weight-black text-h5 text-md-h4 my-4"
         >
           Blog
         </v-col>

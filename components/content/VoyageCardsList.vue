@@ -3,7 +3,7 @@
     <v-col
       cols="8"
       sm="10"
-      class="text-dark font-weight-black my-4"
+      class=" font-weight-black my-4"
     >
       <p>Profitez d'une réduction sur nos voyages de <span class="text-secondary">dernière minute</span></p>
     </v-col>

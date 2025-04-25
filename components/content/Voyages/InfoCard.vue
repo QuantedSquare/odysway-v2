@@ -88,7 +88,7 @@
                   :color="date.status.color"
                   rounded="lg"
                 >
-                  <span class="text-caption font-weight-bold  text-white mb-1 ">
+                  <span class="text-caption font-weight-bold  text-white ">
                     {{ date.status.text }}
                   </span>
                 </v-chip>

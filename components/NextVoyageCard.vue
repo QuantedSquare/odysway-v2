@@ -127,10 +127,10 @@
         :to="`/voyages/${deal.slug}`"
         class="text-decoration-none"
       >
-        <v-card-title class="text-body-1 font-weight-bold py-1 px-0 text-dark no-white-space">
+        <v-card-title class="text-body-1 font-weight-bold py-1 px-0  no-white-space">
           {{ deal.title }}
         </v-card-title>
-        <v-card-text class="text-body-2 font-weight-bold text-dark py-1 px-0">
+        <v-card-text class="text-body-2 font-weight-bold  py-1 px-0">
           <div
             v-if="deal.dates[0].earlyBird"
           >
@@ -151,7 +151,7 @@
         </v-card-text>
         <div
           v-if="deal.comments > 0"
-          class="d-flex align-center text-dark"
+          class="d-flex align-center "
         >
           <client-only>
             <v-rating

@@ -32,7 +32,7 @@
         <!-- Dates Section -->
         <FunnelStepsSummaryLine v-if="deal.departureDate && deal.returnDate">
           <template #left>
-            <span class="text-h6 text-dark">Dates confirmées</span>
+            <span class="text-h6 ">Dates confirmées</span>
           </template>
           <template #right>
             {{ dayjs(deal.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(deal.returnDate).format('DD/MM/YYYY') }}
@@ -81,7 +81,7 @@
         <!-- Travelers Details Header -->
         <FunnelStepsSummaryLine>
           <template #left>
-            <span class="text-h6 text-dark">Détails Voyageurs(s)</span>
+            <span class="text-h6 ">Détails Voyageurs(s)</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -123,7 +123,7 @@
         <!--  Options -->
         <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0">
           <template #left>
-            <span class="text-h6 text-dark">Options</span>
+            <span class="text-h6 ">Options</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -193,7 +193,7 @@
             Montant déjà réglé
           </template>
           <template #right>
-            <span class="font-weight-bold text-dark">
+            <span class="font-weight-bold ">
               <!-- #TODO  S'assurer que le total soit correct avec touts les ajouts / réductions -->
               {{ formatNumber(deal.alreadyPaid, 'currency', 'EUR') }}
             </span>
@@ -207,7 +207,7 @@
             Prix total
           </template>
           <template #right>
-            <span class="font-weight-bold text-dark">
+            <span class="font-weight-bold ">
               <!-- #TODO  S'assurer que le total soit correct avec tous les ajouts / réductions -->
               {{ formatNumber(deal.value, 'currency', 'EUR') }}
             </span>

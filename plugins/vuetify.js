@@ -43,14 +43,16 @@ export default defineNuxtPlugin((app) => {
           dark: false,
           colors: {
             'primary': 'rgba(43, 76, 82, 1)',
+            'on-background': 'rgba(43, 76, 82, 1)',
+            'on-surface': 'rgba(43, 76, 82, 1)',
             'text': 'rgba(43, 76, 82, 1)',
             'primary-light': 'rgba(43, 76, 82, 0.8)',
             'primary-light-2': 'rgba(43, 76, 82, 0.6)',
             'primary-light-3': 'rgba(43, 76, 82, 0.4)', // text
             'primary-light-4': 'rgba(43, 76, 82, 0.2)', // text
             'secondary': 'rgba(219, 102, 68, 1)', // red
-            'secondary-light': 'rgba(219, 102, 68, 0.8)', // red
-            'secondary-light-2': 'rgba(219, 102, 68, 0.6)', // red
+            'secondary-light': '#edb2a1', // red
+            'secondary-light-2': 'rgba(219, 102, 68, 0.5)', // red
             'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // red
             'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // red
             'yellow': '#F0B348', // yellow

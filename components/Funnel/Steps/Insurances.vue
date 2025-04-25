@@ -82,7 +82,7 @@
 
       <v-divider class="mt-4" />
       <!-- No Insurance -->
-      <v-row :class="selectedInsurance === 'none' ? 'text-dark' : 'text-grey'">
+      <v-row :class="selectedInsurance === 'none' ? '' : 'text-grey'">
         <v-col
           v-if="insurances.cancel || insurances.rapatriement"
           cols="12"
