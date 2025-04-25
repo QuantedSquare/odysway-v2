@@ -13,6 +13,8 @@ publishedAt: "2020-07-15 10:35:00+00:00"
 tags: "France, Made in France"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/UpVYom2QRtWwdnhBBbWT.jpg"
+blogType: "Playbook"
+badgeColor: yellow
 ---
 
 ::hero-section-blog

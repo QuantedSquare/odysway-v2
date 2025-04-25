@@ -19,6 +19,8 @@
           :blog-image="blog.displayedImg"
           :blog-published="blog.published"
           :blog-date="blog.publishedAt"
+          :blog-type="blog.blogType"
+          :blog-badge-color="blog.badgeColor"
         />
       </v-col>
     </v-row>
@@ -47,9 +49,9 @@ const [
   { data: blog2 },
   { data: blog3 },
 ] = await Promise.all([
-  useAsyncData('blog', () => queryCollection('blog').path(props.blogCardSlug1).first()),
-  useAsyncData('blog', () => queryCollection('blog').path(props.blogCardSlug2).first()),
-  useAsyncData('blog', () => queryCollection('blog').path(props.blogCardSlug3).first()),
+  useAsyncData('blog1', () => queryCollection('blog').path(props.blogCardSlug1).first()),
+  useAsyncData('blog2', () => queryCollection('blog').path(props.blogCardSlug2).first()),
+  useAsyncData('blog3', () => queryCollection('blog').path(props.blogCardSlug3).first()),
 ])
 
 const mergedData = computed(() => {

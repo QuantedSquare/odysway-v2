@@ -7,7 +7,7 @@
         no-gutters
       >
         <v-col
-          class="text-dark font-weight-black text-h5 text-md-h4 my-4"
+          class="text-primary text-h5 text-md-h2 font-weight-black text-center my-4"
         >
           Blog
         </v-col>
@@ -32,9 +32,9 @@
             :blog-image="page.imgSrc"
             :blog-published="page.published"
             :blog-date="page.publishedAt"
+            :blog-type="page.blogType"
+            :blog-badge-color="page.badgeColor"
           />
-          <!-- :blog-badge-content="page.badgeContent"
-            :blog-badge-color="page.badgeColor" -->
         </v-col>
       </v-row>
     </v-container>
@@ -55,22 +55,20 @@ const loading = computed(() => {
 
 const parsedPages = computed(() => {
   const parsedPages = pages.value?.map((page) => {
-    console.log(page)
     return {
       title: page.title, // find the way to get a title from page hero-section
       publishedAt: page.publishedAt,
       imgSrc: page.displayedImg,
       slug: page.path,
       published: page.published,
-      // badgeContent: page.badge.content,
-      // badgeColor: page.badge.color,
+      blogType: page.blogType,
+      badgeColor: page.badgeColor,
     }
   }).sort((a, b) => {
     return dayjs((b.publishedAt)) - dayjs((a.publishedAt))
   })
   return parsedPages
 })
-console.log(parsedPages.value)
 </script>
 
 <style scoped>

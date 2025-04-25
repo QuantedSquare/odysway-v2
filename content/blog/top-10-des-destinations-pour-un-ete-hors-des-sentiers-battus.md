@@ -13,9 +13,8 @@ publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
 categories: "Blog"
 displayedImg: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
-badge: 
-  - content: "Récit de voyage secondary"
-  - color: "secondary"
+blogType: "Actu"
+badgeColor: "secondary"
 ---
 
 ::hero-section-blog
@@ -237,8 +236,8 @@ color: grey-light-2
 ---
   ::blog-cards-container
   ---
-  blogCardSlug1: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
-  blogCardSlug2: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
   blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
   ---
   #title

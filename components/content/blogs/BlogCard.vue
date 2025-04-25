@@ -7,7 +7,7 @@
   >
     <v-img
       :src="img(blogImage, { format: 'webp', quality: 90, height: 228, width: 640 })"
-      :alt="blogTitle"
+      :alt="`image de ${blogTitle}`"
       height="261px"
       class="hover-scale"
       cover
@@ -15,10 +15,10 @@
       <div class="badge-position">
         <v-chip
           size="x-large"
-          class="text-body-2 font-weight-bold px-5 bg-secondary"
+          class="text-body-2 text-white font-weight-bold px-5"
+          :class="`bg-${blogBadgeColor}`"
         >
-          <!-- :class="`bg-${badgeColor}`" -->
-          <slot name="badge" />
+          {{ blogType }}
         </v-chip>
       </div>
     </v-img>
@@ -88,6 +88,7 @@ defineProps({
     type: String,
     required: true,
   },
+  // ADD TO EACH MAIN BLOG IMAGE
   // blogImageAlt: {
   //   type: String,
   //   required: true,
@@ -100,14 +101,14 @@ defineProps({
     type: String,
     required: true,
   },
-  // blogBadgeContent: {
-  //   type: String,
-  //   default: 'Actu',
-  // },
-  // blogBadgeColor: {
-  //   type: String,
-  //   default: 'secondary',
-  // },
+  blogType: {
+    type: String,
+    default: 'Actu',
+  },
+  blogBadgeColor: {
+    type: String,
+    default: 'secondary',
+  },
 })
 
 dayjs.extend(customParseFormat)

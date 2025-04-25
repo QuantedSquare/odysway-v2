@@ -13,6 +13,8 @@ publishedAt: "2024-05-31 14:34:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/sejour-arts-martiaux/q726xyrFTOe76K2LVung.jpg"
+blogType: "Récit du voyage"
+badgeColor: primary
 ---
 
 ::hero-section-blog
