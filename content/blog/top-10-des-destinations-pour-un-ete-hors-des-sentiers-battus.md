@@ -178,3 +178,37 @@ Oui ! Il est possible de **visiter le Sri Lanka en dehors des sentiers touristi
 
 Pour aller plus loin, découvrez notre article sur comment voyager en Asie autrement en 2025 : [https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques](https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques)
 ::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Lorem ipsum dolor sit amet consectetur adipiscing elit et sed lectus vulputate nisi donec sed sit volutpat id.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: primary
+whiteText: true
+---
+  ::raw-text
+  #text
+  “Nisi quis eleifend quam adipiscing vitae aliquet bibendum enim facilisis gravida neque velit euismod in pellentesque massa placerat.”
+ 
+  ::
+
+::
