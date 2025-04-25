@@ -77,7 +77,7 @@ Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya
 Dès [2435€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -522,7 +522,7 @@ En fin de parcours, vous explorerez Gangtok, la capitale du Sikkim, avec ses mo
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -98,7 +98,7 @@ Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres hu
 Dès [1850€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -518,7 +518,7 @@ Le guide francophone est prévu pour un groupe à partir de 4 personnes. Pour un
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

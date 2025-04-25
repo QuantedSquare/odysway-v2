@@ -6,40 +6,33 @@
     <v-container class="py-0">
       <v-row
         no-gutters
-        class="ga-1"
+        class="mx-4"
       >
         <v-col
-          cols="12"
-          sm="auto"
-          class="d-flex align-center"
+          cols="5"
+          class="d-flex flex-column align-start"
         >
-          <slot name="starting-price" />
+          <span class="text-caption text-grey">
+            À partir de
+          </span>
+          <span class="text-body-2 font-weight-bold text-primary">
+            {{ 600 }}€<span class="text-caption">/pers</span>
+          </span>
         </v-col>
-        <v-spacer class="d-none d-sm-block" />
-        <v-col sm="4">
+        <v-spacer class="d-block" />
+        <v-col
+          cols="5"
+          class="d-flex align-center justify-end"
+        >
           <v-btn-secondary
-            rounded="sm"
-            class="text-caption text-uppercase"
-            width="100%"
+            density="compact"
+            height="50"
+            rounded="md"
+            color="primary"
+            class="text-caption font-weight-bold text-decoration-none"
             @click="goTo('#dates-container', { offset: -200 })"
           >
             <slot name="text-btn-1" />
-          </v-btn-secondary>
-        </v-col>
-        <v-col sm="4">
-          <v-btn-secondary
-            rounded="sm"
-            color="primary"
-            class="text-caption text-uppercase text-decoration-none"
-            width="100%"
-            :href="'/calendly?type=' + route.params.voyageSlug"
-          >
-            <template #prepend>
-              <v-icon size="x-large">
-                {{ mdiCalendar }}
-              </v-icon>
-            </template>
-            <slot name="text-btn-2" />
           </v-btn-secondary>
         </v-col>
       </v-row>
@@ -48,11 +41,10 @@
 </template>
 
 <script setup>
-import { mdiCalendar } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 
 const route = useRoute()
-console.log(route)
+
 const goTo = useGoTo()
 </script>
 

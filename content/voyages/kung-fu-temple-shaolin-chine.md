@@ -98,7 +98,7 @@ Initiez-vous au Kung Fu dans un temple Shaolin
 Dès [1820€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -450,7 +450,7 @@ Vous prenez ensuite la direction de Luoyang d’où vous prenez un TGV pour reto
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -23,7 +23,7 @@ Vivez le Queyras entre rencontres et traditions
 Dès [355€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -332,7 +332,7 @@ L’occasion de vous immerger dans un Queyras encore sauvage et préservé, au p
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

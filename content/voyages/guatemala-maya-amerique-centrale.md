@@ -63,7 +63,7 @@ Mystères de la culture Maya au Guatemala
 Dès [1950€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -563,7 +563,7 @@ Elisa, française installée au Salvador est tombée amoureuse du pays au point 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

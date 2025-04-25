@@ -77,7 +77,7 @@ Immersion hivernale en terre béarnaise
 Dès [650€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -395,7 +395,7 @@ _Entre cabanes de bergers, rencontres inattendues et panoramas saisissants, ce s
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

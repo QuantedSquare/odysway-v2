@@ -140,7 +140,7 @@ image-src: /images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg
 Dès [1965€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -562,7 +562,7 @@ Un voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la C
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

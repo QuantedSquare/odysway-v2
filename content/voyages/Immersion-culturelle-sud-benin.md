@@ -175,7 +175,7 @@ Bénin, rencontres et traditions au pays vodoun
 Dès [1185€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -529,7 +529,7 @@ Partez pour un séjour dépaysant entre rencontres locales, découvertes culture
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

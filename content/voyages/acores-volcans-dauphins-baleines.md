@@ -15,7 +15,7 @@ L’appel des Açores entre volcans, dauphins, baleines et cachalots
 Dès [1515€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -387,7 +387,7 @@ Bon retour et à bientôt pour de nouvelles découvertes !
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

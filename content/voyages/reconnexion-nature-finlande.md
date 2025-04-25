@@ -91,7 +91,7 @@ Aventure éco responsable et reconnexion à la nature en Finlande
 Dès [1480€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -427,7 +427,7 @@ Après cette visite, nous vous proposons de découvrir l'animal emblématique de
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

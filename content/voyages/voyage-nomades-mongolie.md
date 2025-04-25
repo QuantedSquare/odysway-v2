@@ -70,7 +70,7 @@ Partagez le quotidien des nomades des steppes mongoles
 Dès [1715€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -436,7 +436,7 @@ Sur la route vous découvrez les premières images mongoles : grandes steppes ve
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

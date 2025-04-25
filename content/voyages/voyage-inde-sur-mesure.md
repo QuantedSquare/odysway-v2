@@ -15,7 +15,7 @@ Voyage en Inde sur mesure
 Dès [1980€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -205,7 +205,7 @@ right-sticky: true
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

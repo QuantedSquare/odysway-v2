@@ -15,7 +15,7 @@ Trek immersif sur l’île de Sao Miguel aux Açores
 Dès [1865€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -369,7 +369,7 @@ Sans compter les nombreux et adorables villages pittoresques qui ponctuent le te
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -140,7 +140,7 @@ Au fil du Rajasthan : découverte et immersion chez les Bishnoïs
 Dès [2522€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -529,7 +529,7 @@ Partez avec Odysway pour découvrir le Rajasthan autrement en alternant visites 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

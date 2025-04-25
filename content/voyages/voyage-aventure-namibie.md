@@ -15,7 +15,7 @@ Namibie sauvage : entre aventure et protection des animaux
 Dès [1585€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -460,7 +460,7 @@ Puis, il sera temps de prendre la route vers le sanctuaire principal, un dernier
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

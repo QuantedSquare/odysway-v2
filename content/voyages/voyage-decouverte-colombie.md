@@ -84,7 +84,7 @@ Découvrez la Colombie au cœur des traditions et des rencontres
 Dès [2140€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -496,7 +496,7 @@ Ici, voyager, c’est prendre le temps de se laisser surprendre, de s’ouvrir a
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

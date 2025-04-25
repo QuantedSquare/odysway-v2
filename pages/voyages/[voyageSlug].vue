@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <v-container fluid>
     <ContentRenderer
       v-if="page"
       :value="page"
     />
-  </div>
+  </v-container>
 </template>
 
 <script setup>
@@ -15,7 +15,6 @@ definePageMeta({
 const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () => {
-  console.log('route', route)
   return queryCollection('voyages').path(route.path).first()
 })
 if (page.value) {

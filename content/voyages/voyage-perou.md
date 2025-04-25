@@ -70,7 +70,7 @@ Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca
 Dès [1880€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -521,7 +521,7 @@ consistant à cuire les denrées à l'étouffée, à même la terre avec l'aide 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -15,7 +15,7 @@ Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et imme
 Dès [1415€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -447,7 +447,7 @@ Le lendemain, partez explorer la grotte Thien Canh Son, un trésor naturel nich�
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

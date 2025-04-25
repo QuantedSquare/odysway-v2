@@ -120,7 +120,7 @@ Immersion brésilienne et survie dans la jungle amazonienne
 Dès [1245€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -470,7 +470,7 @@ Un accompagnement francophone est possible sur-demande pendant le séjour, mais 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

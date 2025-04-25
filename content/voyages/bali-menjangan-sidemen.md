@@ -112,7 +112,7 @@ Immersion à Bali, au cœur des traditions et des paysages spectaculaires
 Dès [1780€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -544,7 +544,7 @@ Durant votre voyage, vous bénéficiez de l'assistance personnalisée avec un co
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

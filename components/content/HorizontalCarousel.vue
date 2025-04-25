@@ -62,10 +62,13 @@
       justify="center"
       no-gutters
     >
-      <v-col cols="4">
+      <v-col
+        cols="4"
+        class="d-flex justify-center"
+      >
         <div
           ref="cta-container"
-          class="mt-16"
+          class="mt-16 d-flex justify-center"
         >
           <slot name="cta" />
         </div>

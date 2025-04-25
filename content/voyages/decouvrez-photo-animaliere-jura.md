@@ -63,7 +63,7 @@ Découvrez l'art de la photo animalière dans le Jura
 Dès [850€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -413,7 +413,7 @@ Afin de vivre une belle aventure en immersion dans la vie d'un photographe anima
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

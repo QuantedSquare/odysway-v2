@@ -105,7 +105,7 @@ Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wa
 Dès [2390€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -505,7 +505,7 @@ Ce voyage en Jordanie au plus près des locaux est une expérience magique, qui 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

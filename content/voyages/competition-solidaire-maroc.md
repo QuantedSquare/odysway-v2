@@ -15,7 +15,7 @@ La Grande aventure : Challenge solidaire en immersion au Maroc
 Dès [1590€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -435,7 +435,7 @@ Pour cette première édition du voyage "La Grande Aventure", Charles vous accom
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

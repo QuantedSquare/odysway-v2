@@ -70,7 +70,7 @@ Contrastes et grands espaces en Argentine
 Dès [5480€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -549,7 +549,7 @@ Des moments de silence, des moments de partage, des moments d'émotion aussi : c
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

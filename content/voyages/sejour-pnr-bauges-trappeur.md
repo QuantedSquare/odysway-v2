@@ -86,7 +86,7 @@ Vivez comme un trappeur dans les Bauges
 Dès [355€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -369,7 +369,7 @@ L’occasion de vous passionner pour ce territoire d’exception, respectueux de
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

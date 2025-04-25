@@ -1,0 +1,104 @@
+<template>
+  <div class="mx-4 my-7">
+    <v-container
+      v-if="tops"
+      fluid
+      class="bg-primary rounded-lg"
+    >
+      <v-row
+        align="center"
+      >
+        <v-col
+          cols="8"
+          sm="10"
+          class="text-h3 font-weight-bold my-4"
+        >
+          Des idées pour vos prochains voyages
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-tabs
+            v-model="currentTab"
+            class="text-grey position-relative mb-6"
+            color="white"
+          >
+            <v-divider
+              class="absolute-divider"
+              thickness="2"
+            />
+
+            <v-tab
+              v-for="top, index in tops"
+              :key="index"
+              :value="index"
+            >
+              <span class="font-weight-bold">
+                {{ top.title }}
+              </span>
+            </v-tab>
+          </v-tabs>
+          <v-tabs-window
+            v-model="currentTab"
+          >
+            <v-tabs-window-item
+              v-for="tab, index in tops[currentTab].contenuOnglet"
+              :key="`${tab.title}-${index}`"
+              :value="index"
+            >
+              <v-row class="mb-16 pb-16">
+                <v-col
+                  v-for="top, f in tops[currentTab].contenuOnglet"
+                  :key="`${top.title}-${f}`"
+                  cols="6"
+                  md="2"
+                >
+                  <h5 class="text-h4 font-weight-bold mb-10 ">
+                    {{ top.title }}
+                  </h5>
+                  <div class="d-flex flex-column ga-2">
+                    <NuxtLink
+                      v-for="link, i in top.linksList"
+                      :key="`${link.slug}-${i}`"
+                      :to="`/voyages/${link.slug}`"
+                      class="text-grey line-clamp-2"
+                    >
+                      {{ link.title }}
+                    </NuxtLink>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-tabs-window-item>
+          </v-tabs-window>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+
+<script setup>
+import { useDisplay } from 'vuetify'
+
+const { width } = useDisplay()
+const currentTab = ref(0)
+
+const tops = await queryCollection('tops').all()
+
+console.log('tops', tops)
+</script>
+
+<style scoped>
+.absolute-divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+</style>

@@ -91,7 +91,7 @@ Vivez l'aventure mythique du Tour des Annapurnas au Népal
 Dès [1730€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -562,7 +562,7 @@ Ce vol vous offre une expérience panoramique inoubliable reliant ces deux ville
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

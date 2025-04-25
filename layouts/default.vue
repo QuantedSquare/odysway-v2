@@ -16,6 +16,7 @@
       id="Smallchat"
       class="d-none d-lg-block"
     />
+    <TopTravelsTabs />
     <FooterOdysway />
   </v-app>
 </template>

@@ -84,7 +84,7 @@ Occupez-vous des félins en Afrique du Sud
 Dès [1490€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -387,7 +387,7 @@ Transfert en voiture vers le sanctuaire pour félins dans lequel vous séjourner
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

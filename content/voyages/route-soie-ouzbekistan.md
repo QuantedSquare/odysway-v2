@@ -112,7 +112,7 @@ image-src: /images/voyages/route-soie-ouzbekistan/o08YedTuTO2GxYxdml4H.jpg
 Dès [1710€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -503,7 +503,7 @@ Un voyage culturel au plus proche des locaux, alliant traditions et paysages enc
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

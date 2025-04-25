@@ -25,7 +25,7 @@ Eveillez vos sens dans les forêts des Vosges du Nord
 Dès [210€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -303,7 +303,7 @@ Le cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somp
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

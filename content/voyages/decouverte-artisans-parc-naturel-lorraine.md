@@ -73,7 +73,7 @@ Viticultrice et souffleur de verre, rencontrez les artisans lorrains
 Dès [295€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -368,7 +368,7 @@ Un séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

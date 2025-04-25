@@ -91,7 +91,7 @@ Au bout du monde en Patagonie, terre de feu et de glace
 Dès [4690€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -551,7 +551,7 @@ L'occasion de déconnecter et de vivre une aventure inoubliable aux confins du m
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

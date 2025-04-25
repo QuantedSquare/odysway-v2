@@ -383,9 +383,3 @@ export default defineNuxtSchema({
     }),
   },
 })
-//   interface CustomAppConfig {
-//     ui: {
-//       icons: object
-//     }
-//   }
-// }

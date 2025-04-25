@@ -63,7 +63,7 @@ Séjour multiactivités dans les fjords canadiens
 Dès [2230€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -412,7 +412,7 @@ Explorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hive
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

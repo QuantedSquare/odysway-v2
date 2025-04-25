@@ -189,7 +189,7 @@ Trek chez l'habitant au Népal, au fil des villages Sherpas
 Dès [1460€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -652,7 +652,7 @@ Jour 9 : Dénivelé +700m/ -350m ; +/- 6h de marche.
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

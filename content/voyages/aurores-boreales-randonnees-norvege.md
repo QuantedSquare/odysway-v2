@@ -70,7 +70,7 @@ Observez les aurores boréales en Laponie Norvégienne
 Dès [1958€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -439,7 +439,7 @@ Un voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels m
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

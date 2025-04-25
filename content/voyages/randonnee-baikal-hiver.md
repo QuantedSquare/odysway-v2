@@ -119,7 +119,7 @@ Randonnez sur le mythique lac Baïkal gelé en Sibérie
 Dès [1930€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -435,7 +435,7 @@ Ce voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

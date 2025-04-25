@@ -63,7 +63,7 @@ Trek en immersion dans les communautés Andines du Pérou
 Dès [2200€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -509,7 +509,7 @@ Ce voyage vous plongera au plus près de l’âme andine, loin des foules et au 
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

@@ -133,7 +133,7 @@ Séjour multi-activités en Laponie finlandaise
 Dès [2430€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -494,7 +494,7 @@ Ce séjour offre une expérience où l'action, la nature et la détente se mêle
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

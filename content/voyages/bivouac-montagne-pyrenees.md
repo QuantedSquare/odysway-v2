@@ -15,7 +15,7 @@ Initiation au bivouac en montagne dans les Pyrénées
 Dès [350€]{style="font-weight: bold"}
 
 #text-btn-1
-voir dates & prix
+Voir tous les départs
 
 #text-btn-2
 Prendre RDV
@@ -307,7 +307,7 @@ _Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une i
     ::::
 
   #text-btn-1
-  voir dates & prix
+  Voir tous les départs
 
   #text-btn-2
   Demander plus d'informations

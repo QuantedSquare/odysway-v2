@@ -17,7 +17,9 @@
     sm="6"
     md="4"
   >
-    <v-card elevation="0">
+    <v-card
+      elevation="0"
+    >
       <NuxtLink
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none position-relative text-white"
@@ -42,7 +44,7 @@
               <div class="d-flex justify-center align-center mx-1">
                 <v-icon
                   :icon="mdiStar"
-                  color="yellow"
+                  color="yellow-rating"
                   size="20"
                 />
                 <span class="text-body-2 font-weight-bold text-primary">
@@ -75,11 +77,11 @@
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
         >
-          <v-card-text class="py-1 px-0">
+          <v-card-text class="py-1 px-2">
             <v-container>
               <v-row>
-                <v-col>
-                  <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space ">
+                <v-col class="pt-md-3 pt-0">
+                  <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space title-container">
                     <div
                       ref="titleRef"
                       class="line-clamp-2"
@@ -177,10 +179,10 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
 </script>
 
 <style scoped>
- .hover-scale:hover .blur-overlay {
+.hover-scale:hover .blur-overlay {
   height: 100%;
 }
- .hover-scale:hover{
+.hover-scale:hover{
   transform: scale(1.01);
   transition: transform 0.2s ease-in-out;
 }
@@ -192,6 +194,9 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
   position: absolute;
   top: 25px;
   right: 28px;
+}
+.title-container {
+  height: 2.4em; /* This sets a fixed height equivalent to 2 lines */
 }
 .line-clamp-2{
   overflow: hidden;
