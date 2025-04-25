@@ -12,6 +12,9 @@
       <v-col
         v-for="(blog, index) in mergedData"
         :key="index"
+        cols="12"
+        sm="6"
+        md="4"
       >
         <BlogCard
           :blog-slug="blog.path"
