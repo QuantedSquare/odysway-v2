@@ -208,7 +208,15 @@ whiteText: true
   ::raw-text
   #text
   “Nisi quis eleifend quam adipiscing vitae aliquet bibendum enim facilisis gravida neque velit euismod in pellentesque massa placerat.”
- 
   ::
+::
 
+::blog-author-card
+---
+author-avatar: "/images/team/romain.webp"
+author-name: Romain Masina
+author-role: "Fondateur Odysway"
+---
+#text
+Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
 ::
