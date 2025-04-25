@@ -13,6 +13,9 @@ publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
 categories: "Blog"
 displayedImg: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
+badge: 
+  - content: "Récit de voyage secondary"
+  - color: "secondary"
 ---
 
 ::hero-section-blog
@@ -185,7 +188,7 @@ Pour aller plus loin, découvrez notre article sur comment voyager en Asie autre
 
 ::color-container
 ---
-color: grey-light-2
+color: soft-blush
 ---
   ::info-container
   #title
@@ -226,4 +229,29 @@ Romain Masina
 Fondateur Odysway
 #text
 Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug2: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::
 ::

@@ -150,7 +150,6 @@ defineProps({
 })
 
 const { smAndDown } = useDisplay()
-console.log(smAndDown.value)
 const img = useImage()
 </script>
 

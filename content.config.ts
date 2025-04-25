@@ -27,6 +27,10 @@ export default defineContentConfig({
             src: z.string().editor({ input: 'media' }),
             alt: z.string(),
           }),
+          badge: z.object({
+            content: z.string(),
+            color: z.string(),
+          }),
         }),
       }),
     ),
