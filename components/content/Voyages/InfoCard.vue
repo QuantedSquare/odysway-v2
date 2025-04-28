@@ -195,7 +195,7 @@
 
 <script setup>
 import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
-import { useGoTo } from 'vuetify'
+import { useGoTo, useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
 
 const { mdAndDown } = useDisplay()

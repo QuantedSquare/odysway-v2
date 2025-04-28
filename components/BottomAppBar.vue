@@ -10,7 +10,7 @@
       >
         <v-col
           cols="5"
-          class="d-flex flex-column align-start"
+          class="d-flex flex-column align-start justify-center"
         >
           <span class="text-caption text-grey">
             À partir de
@@ -21,7 +21,7 @@
         </v-col>
         <v-spacer class="d-block" />
         <v-col
-          cols="5"
+          cols="6"
           class="d-flex align-center justify-end"
         >
           <v-btn-secondary
@@ -42,8 +42,6 @@
 
 <script setup>
 import { useGoTo } from 'vuetify'
-
-const route = useRoute()
 
 const goTo = useGoTo()
 </script>

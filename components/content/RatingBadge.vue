@@ -3,14 +3,14 @@
     v-if="rating"
     color="white"
     rounded="pill"
-    height="46"
+    :height="mdAndUp ? 46 : 36"
     class="btn-shadow"
   >
     <div class="d-flex align-center mt-1">
       <v-icon
         :icon="mdiStar"
         color="yellow-rating"
-        size="20"
+        :size="mdAndUp ? 20 : 16"
         class="mb-1"
       />
       <span class="text-body-2 font-weight-bold text-primary">
@@ -21,9 +21,9 @@
   <v-btn
     v-else
     color="primary"
-    class="font-weight-bold btn-shadow"
+    class="font-weight-bold btn-shadow text-body-2 text-md-body-1"
     rounded="pill"
-    height="46"
+    :height="mdAndUp ? 46 : 36"
   >
     <span class="mt-1">
       Nouveau
@@ -33,6 +33,9 @@
 
 <script setup>
 import { mdiStar } from '@mdi/js'
+import { useDisplay } from 'vuetify'
+
+const { mdAndUp } = useDisplay()
 
 defineProps({
   rating: {

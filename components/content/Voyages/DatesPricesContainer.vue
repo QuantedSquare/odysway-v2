@@ -3,10 +3,9 @@
     v-if="deal"
     id="dates-container"
   >
-    <v-row>
+    <v-row class="relative">
       <TransitionGroup
         name="list"
-        class="relative"
       >
         <v-col
           v-for="(date, index) in limitedDatesList"

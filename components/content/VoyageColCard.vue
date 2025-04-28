@@ -137,7 +137,6 @@
 import { mdiPlusCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
-const { mdAndUp } = useDisplay()
 const props = defineProps({
   voyageSlug: {
     type: String,
