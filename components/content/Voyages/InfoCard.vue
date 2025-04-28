@@ -21,7 +21,7 @@
             cols="5"
             class="d-flex align-start justify-end"
           >
-            <ClientOnly>
+            <!-- <ClientOnly>
               <v-btn
                 size="small"
                 color="white"
@@ -40,7 +40,10 @@
                   </span>
                 </div>
               </v-btn>
-            </ClientOnly>
+            </ClientOnly> -->
+            <RatingBadge
+              :rating="deal.rating"
+            />
           </v-col>
         </v-row>
         <v-row justify-md="center">
@@ -210,7 +213,7 @@
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiStar, mdiCheckCircleOutline } from '@mdi/js'
+import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
@@ -265,9 +268,9 @@ if (deal.value?.dates.length > 0) {
 </script>
 
 <style scoped>
-.btn-shadow {
+/* .btn-shadow {
   box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
-}
+} */
 .block-btn-without-padding:deep(.v-btn__content) {
   padding: 0px !important;
   width: 100% !important;

@@ -14,9 +14,15 @@ definePageMeta({
 
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('voyages').path(route.path).first()
-})
+const [{ data: page }, { data: deal }] = await Promise.all([
+  useAsyncData(route.path, () => {
+    return queryCollection('voyages').path(route.path).first()
+  }),
+  useAsyncData('deal', () => {
+    return queryCollection('deals').where('slug', '=', route.params.voyageSlug).first()
+  }),
+])
+
 if (page.value) {
   console.log('page', page.value)
   defineOgImageComponent(page.value?.ogImage?.component, {
@@ -26,4 +32,6 @@ if (page.value) {
   useHead(page.value.head || {}) // <-- Nuxt Schema.org
   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
 }
+
+provide('deal', deal.value)
 </script>
