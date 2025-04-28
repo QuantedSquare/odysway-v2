@@ -88,7 +88,7 @@
                 <client-only>
                   <div
                     v-if="deal.comments > 0"
-                    class="d-flex align-center text-catpion"
+                    class="d-flex align-center text-caption"
                   >
                     <v-rating
                       :key="`rating-${deal.slug}`"

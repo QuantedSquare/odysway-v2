@@ -161,13 +161,14 @@ Vis ma vie de berger dans les Pyrénées
   :::video-dialog
   ---
   video-src: 
+    - https://www.youtube.com/embed/JK2O_UqYveA
+    - https://www.youtube.com/embed/JKpO_UqYveA
     - https://www.youtube.com/embed/JKpO_UqYveA
   ---
   #video-btn
   voir la video
   :::
 ::
-
 
 ::bottom-app-bar
 #starting-price

@@ -37,58 +37,43 @@
   </v-container>
   <v-container
     fluid
-    height="455px"
+    height="455"
     class="d-flex align-center position-relative"
   >
-    <v-row
-      class="h-100"
-    >
+    <v-row>
       <v-col
         cols="12"
         sm="9"
-        class="h-100"
       >
         <v-img
           v-if="status === 'success'"
           :src="img(imageSrc1, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
-          height="100%"
+          height="455"
           rounded="lg"
         />
       </v-col>
       <v-col
         cols="3"
-        class="d-none h-100 d-sm-flex flex-column"
+        class="d-none d-sm-flex flex-column ga-7"
       >
-        <v-row class="h-100">
-          <v-col
-            cols="12"
-            class="h-50"
-          >
-            <v-img
-              v-if="status === 'success'"
-              :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-              :lazy-src="img(imageSrc2, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              cover
-              height="100%"
-              rounded="lg"
-            />
-          </v-col>
-          <v-col
-            cols="12"
-            class="h-50"
-          >
-            <v-img
-              v-if="status === 'success'"
-              :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-              :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              cover
-              height="100%"
-              rounded="lg"
-            />
-          </v-col>
-        </v-row>
+        <v-img
+          v-if="status === 'success'"
+          :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(imageSrc2, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          cover
+          height="214"
+          rounded="lg"
+        />
+        <v-img
+          v-if="status === 'success'"
+          :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          cover
+          height="214"
+          rounded="lg"
+        />
       </v-col>
     </v-row>
     <v-row class="media-btns-position w-100">
@@ -151,7 +136,7 @@ function copyUrl() {
 <style scoped>
 .media-btns-position{
   position: absolute;
-  bottom: 16%;
+  bottom: 10%;
   left: 4%;
 }
 </style>

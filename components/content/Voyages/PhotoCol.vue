@@ -8,6 +8,7 @@
       height="100%"
       :min-height="height"
       cover
+      rounded="lg"
     />
   </v-col>
 </template>

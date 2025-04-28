@@ -44,7 +44,7 @@
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
           </h5>
-          <div class="d-flex justify-start align-center ga-4 ">
+          <div class="d-flex flex-column flex-md-row justify-start align-start align-md-center ga-4 ">
             <v-chip
               :text="footer.contact.phone"
               color="primary"

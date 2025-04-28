@@ -15,6 +15,7 @@
       >
         <v-icon
           :icon="mdiCameraOutline"
+          color="primary"
           size="22"
         />
         <span class="text-subtitle-2 text-primary font-weight-bold ml-2"> Voir les photos</span>

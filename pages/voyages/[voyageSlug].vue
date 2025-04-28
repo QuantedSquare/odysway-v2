@@ -1,5 +1,7 @@
 <template>
-  <v-container fluid>
+  <v-container
+    fluid
+  >
     <ContentRenderer
       v-if="page"
       :value="page"
