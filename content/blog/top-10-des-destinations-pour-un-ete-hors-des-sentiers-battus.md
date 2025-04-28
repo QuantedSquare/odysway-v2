@@ -7,7 +7,9 @@ seo:
 navigation:
   title: "Top 10 des destinations 2025 pour un été hors des sentiers battus"
   description: "Envie de vacances loin du tourisme de masse ? Voici notre top 10 des destinations pour un été hors des sentiers battus."
-author: "linda.tran@odysway.com"
+author: "Romain Masina"
+authorPhoto: "/images/team/romain.webp"
+authorRole: "Fondateur Odysway"
 published: false
 publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
@@ -15,38 +17,22 @@ categories: "Blog"
 displayedImg: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 blogType: "Actu"
 badgeColor: "secondary"
+readingTime: "3 min"
 ---
 
 ::hero-section-blog
 ---
 background-color: soft-blush
-badge-color: secondary
 title-color: primary
 introduction-color: grey
-avatar-author: "/images/team/romain.webp"
 avatar-size: '60'
 image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 ---
-#badge
-Actu
-
-#reading-time
-3 min
-
-#publication-date
-24 janvier 2025
-
 #title
 Top 10 des destinations 2025 pour un été hors des sentiers battus
 
 #introduction
 Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend nullam eros, nulla erat magnis inceptos aptent hac odio pretium montes, fames.
-
-#author-name
-Romain Masina
-
-#author-role
-Fondateur Odysway
 ::
 
 ::section-container
@@ -219,13 +205,8 @@ whiteText: true
 
 ::blog-author-card
 ---
-avatar-author: "/images/team/romain.webp"
 avatar-size: '86'
 ---
-#author-name
-Romain Masina
-#author-role
-Fondateur Odysway
 #text
 Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
 ::

@@ -1,6 +1,5 @@
 <template>
   <v-container
-    :fluid="width < 1440"
     class="pa-0 mt-8"
   >
     <v-card class="pa-10">
@@ -11,7 +10,7 @@
           class="d-flex justify-center justify-sm-start"
         >
           <AvatarImg
-            :avatar-img="avatarAuthor"
+            :avatar-img="page.authorPhoto"
             :avatar-size="avatarSize"
           />
         </v-col>
@@ -32,8 +31,6 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
 defineProps({
   avatarAuthor: {
     type: String,
@@ -45,5 +42,5 @@ defineProps({
   },
 })
 
-const { width } = useDisplay()
+const page = inject('page')
 </script>

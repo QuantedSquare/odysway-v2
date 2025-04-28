@@ -3,30 +3,9 @@
     class="rounded-xl"
     :class="`bg-${backgroundColor}`"
   >
-    <!-- <v-btn-primary
-      to="/blog"
-      color="primary"
-      class="btn-position hidden-sm-and-down pl-md-0"
-    >
-      <template #prepend>
-        <v-icon>
-          {{ mdiChevronLeft }}
-        </v-icon>
-      </template>
-
-      <span> retour aux blogs</span>
-    </v-btn-primary>
-    <v-btn
-      to="/blog"
-      variant="outlined"
-      density="compact"
-      color="primary"
-      :icon="mdiChevronLeft"
-      class="btn-position hidden-md-and-up"
-    /> -->
     <v-container
       fluid
-      :height="smAndDown ? '': '687px'"
+      :height="smAndDown ? '': '682px'"
       class="pa-0"
     >
       <v-row
@@ -37,31 +16,29 @@
           md="5"
           class="d-flex flex-column justify-center ga-6 ga-md-8 pl-md-8"
         >
-          <div class="text-body-2 text-lg-body-1 d-flex align-center ga-3">
+          <div
+            v-if="page.blogType && page.badgeColor"
+            class="text-body-2 text-lg-body-1 d-flex align-center ga-3"
+          >
             <v-chip
               size="x-large"
               class="text-body-2 font-weight-bold px-5"
-              :class="`bg-${badgeColor}`"
+              :class="`bg-${page.badgeColor}`"
             >
-              <slot name="badge" />
+              {{ page.blogType }}
             </v-chip>
             <div
+              v-if="page.readingTime"
               class="d-flex align-center ga-2 font-weight-2"
-              :class="`text-${badgeColor}`"
+              :class="`text-${page.badgeColor ?? 'primary'}`"
             >
               <v-icon size="24px">
                 {{ mdiClockTimeThreeOutline }}
               </v-icon>
-              <slot
-                name="reading-time"
-                mdc-unwrap="p"
-              />
+              {{ page.readingTime }}
             </div>
             <div class="text-grey">
-              <slot
-                name="publication-date"
-                mdc-unwrap="p"
-              />
+              {{ formatDate(page.publishedAt, 'DD MMMM, YYYY') }}
             </div>
           </div>
           <h1
@@ -79,17 +56,20 @@
           >
             <slot name="introduction" />
           </div>
-          <div class="d-flex align-center ga-4">
+          <div
+            v-if="page.author"
+            class="d-flex align-center ga-4"
+          >
             <AvatarImg
-              :avatar-img="avatarAuthor"
+              :avatar-img="page.authorPhoto"
               :avatar-size="avatarSize"
             />
             <div class="text-body-2 text-lg-body-1 d-flex flex-column justify-center align-center align-sm-start ga-4">
               <div class="text-primary  font-weight-bold">
-                <slot name="author-name" />
+                {{ page.author }}
               </div>
               <div class="text-grey">
-                <slot name="author-role" />
+                {{ page.authorRole }}
               </div>
             </div>
           </div>
@@ -123,10 +103,6 @@ defineProps({
     type: String,
     default: 'primary',
   },
-  badgeColor: {
-    type: String,
-    default: 'primary',
-  },
   titleColor: {
     type: String,
     default: 'primary',
@@ -134,10 +110,6 @@ defineProps({
   introductionColor: {
     type: String,
     default: 'grey',
-  },
-  avatarAuthor: {
-    type: String,
-    default: '/images/team/romain.webp',
   },
   avatarSize: {
     type: String,
@@ -151,6 +123,7 @@ defineProps({
 
 const { smAndDown } = useDisplay()
 const img = useImage()
+const page = inject('page')
 </script>
 
 <style scoped>

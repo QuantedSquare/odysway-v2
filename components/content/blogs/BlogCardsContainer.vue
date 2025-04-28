@@ -1,10 +1,18 @@
 <template>
   <v-container :fluid="width < 1440 ">
     <v-row justify="space-between">
-      <v-col class="text-h2 text-primary">
+      <v-col
+        cols="12"
+        sm="6"
+        class="text-center text-sm-start text-h2 text-primary"
+      >
         <slot name="title" />
       </v-col>
-      <v-col class="text-right">
+      <v-col
+        cols="12"
+        sm="6"
+        class="text-center text-sm-right"
+      >
         <slot name="cta-button" />
       </v-col>
     </v-row>
@@ -21,9 +29,10 @@
           :blog-title="blog.title"
           :blog-image="blog.displayedImg"
           :blog-published="blog.published"
-          :blog-date="blog.publishedAt"
+          :blog-publication-date="blog.publishedAt"
           :blog-type="blog.blogType"
           :blog-badge-color="blog.badgeColor"
+          :blog-reading-time="blog.readingTime"
         />
       </v-col>
     </v-row>

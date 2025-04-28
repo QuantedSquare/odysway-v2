@@ -4,8 +4,8 @@
     fluid
   >
     <ContentRenderer
-      v-if="page"
-      :value="page"
+      v-if="data"
+      :value="data"
     />
   </v-container>
 </template>
@@ -13,8 +13,10 @@
 <script setup>
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => {
+const { data } = await useAsyncData(route.path, () => {
   return queryCollection('blog').path(route.path).first()
 })
+
+provide('page', data)
 // # NEED TO WORK ON SEO
 </script>

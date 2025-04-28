@@ -25,16 +25,17 @@
           :key="index"
           cols="12"
           sm="6"
-          md="4"
+          lg="4"
         >
           <BlogCard
             :blog-slug="page.slug"
             :blog-title="page.title"
             :blog-image="page.imgSrc"
             :blog-published="page.published"
-            :blog-date="page.publishedAt"
+            :blog-publication-date="page.publishedAt"
             :blog-type="page.blogType"
             :blog-badge-color="page.badgeColor"
+            :blog-reading-time="page.readingTime"
           />
         </v-col>
       </v-row>
@@ -57,13 +58,14 @@ const loading = computed(() => {
 const parsedPages = computed(() => {
   const parsedPages = pages.value?.map((page) => {
     return {
-      title: page.title, // find the way to get a title from page hero-section
+      title: page.title,
       publishedAt: page.publishedAt,
       imgSrc: page.displayedImg,
       slug: page.path,
       published: page.published,
       blogType: page.blogType,
       badgeColor: page.badgeColor,
+      readingTime: page.readingTime,
     }
   }).sort((a, b) => {
     return dayjs((b.publishedAt)) - dayjs((a.publishedAt))

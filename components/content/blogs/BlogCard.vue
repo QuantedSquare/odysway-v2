@@ -2,7 +2,7 @@
   <v-card
     elevation="0"
     :href="`${blogSlug}`"
-    height="456px"
+    height="460px"
     class="text-decoration-none"
   >
     <v-img
@@ -12,7 +12,10 @@
       class="hover-scale"
       cover
     >
-      <div class="badge-position">
+      <div
+        v-if="blogBadgeColor"
+        class="badge-position"
+      >
         <v-chip
           size="x-large"
           class="text-body-2 text-white font-weight-bold px-5"
@@ -50,17 +53,20 @@
             cols="12"
             class="d-flex justify-space-between align-center text-secondary-light-2 text-h5 mt-4"
           >
-            <div class="d-flex align-center ga-2">
+            <div
+              v-if="blogReadingTime"
+              class="d-flex align-center ga-2"
+            >
               <v-icon size="small">
                 {{ mdiClockTimeThreeOutline }}
               </v-icon>
 
               <div>
-                3 min
+                {{ blogReadingTime }}
               </div>
             </div>
             <div class="text-grey">
-              {{ formatDate(blogDate) }}
+              {{ formatDate(blogPublicationDate, 'DD MMMM, YYYY') }}
             </div>
           </v-col>
         </v-row>
@@ -70,9 +76,6 @@
 </template>
 
 <script setup>
-import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import 'dayjs/locale/fr'
 import { mdiClockTimeThreeOutline } from '@mdi/js'
 import { useImage } from '#imports'
 
@@ -98,7 +101,7 @@ defineProps({
     type: Boolean,
     required: true,
   },
-  blogDate: {
+  blogPublicationDate: {
     type: String,
     required: true,
   },
@@ -110,14 +113,13 @@ defineProps({
     type: String,
     default: 'secondary',
   },
+  blogReadingTime: {
+    type: String,
+    default: '3 min',
+  },
 })
 
-dayjs.extend(customParseFormat)
 const img = useImage()
-
-const formatDate = (date) => {
-  return dayjs(date).locale('fr').format('DD MMMM, YYYY')
-}
 </script>
 
 <style scoped>
