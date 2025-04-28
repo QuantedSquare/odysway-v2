@@ -146,6 +146,23 @@ export default defineContentConfig({
         })),
       }),
     }),
+    travelList: defineCollection({
+      type: 'data',
+      source: 'travel-list/**.json',
+      schema: z.object({
+        slug: z.string(),
+        title: z.string(),
+      }),
+    }),
+    dates: defineCollection({
+      type: 'data',
+      source: 'dates/**.json',
+      schema: z.object({
+        draft: z.boolean().default(false),
+        slug: z.string(),
+        travelChoice: z.enum(['Alps', 'Himalaya', 'Pyrenees']).optional(),
+      }),
+    }),
     reviews: defineCollection({
       type: 'data',
       source: 'reviews/**.json',

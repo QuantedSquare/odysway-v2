@@ -17,7 +17,8 @@
       <v-spacer />
       <v-col
         cols="12"
-        md="5"
+        md="6"
+        lg="5"
       >
         <div class="d-flex align-center bg-white rounded-md px-3">
           <v-text-field
@@ -36,8 +37,8 @@
             type="email"
           />
           <v-btn-secondary
-            height="62"
-            width="161"
+            :height="mdAndUp ? 62 : 40"
+            :width="mdAndUp ? 161 : 100"
             class="my-3 text-body-1 font-weight-bold "
             rounded="md"
             @click="subscribeToNewsletter"
@@ -73,7 +74,7 @@ import { z } from 'zod'
 
 const { gtag } = useGtag()
 
-const { width } = useDisplay()
+const { width, mdAndUp } = useDisplay()
 const email = ref('')
 const emailSentToBrevo = ref(false)
 const dialogEmailSent = ref(false)
@@ -112,5 +113,11 @@ const subscribeToNewsletter = async () => {
 :deep(.v-field-label) {
   font-weight: bold !important;
   color: rgb(var(--v-theme-grey)) !important;
+  font-size: 14px !important;
+}
+@media (max-width: 500px) {
+  :deep(.v-field-label) {
+    font-size: 13px !important;
+  }
 }
 </style>

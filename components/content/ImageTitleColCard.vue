@@ -14,6 +14,7 @@
         :src="imgComp(image, { format: 'webp', quality: 70, width: 640 })"
         :alt="title"
         cover
+        height="228"
       />
 
       <div class="blur-overlay" />
@@ -86,6 +87,11 @@ onMounted(() => {
   overflow: hidden;
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 500px) {
+  .image-wrapper {
+    max-height: 200px;
+  }
 }
 
 .blur-overlay {

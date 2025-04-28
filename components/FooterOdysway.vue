@@ -11,7 +11,7 @@
         <v-col
           cols="12"
           md="3"
-          class="d-flex flex-column align-start justify-space-between ga-6"
+          class="d-flex flex-column align-center align-md-start justify-space-between ga-6"
         >
           <v-img
             :src="img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })"
@@ -39,7 +39,7 @@
         <v-col
           cols="12"
           md="4"
-          class="d-flex flex-column align-start justify-space-between ga-6"
+          class="d-flex flex-column align-center align-md-start justify-space-between ga-6"
         >
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
@@ -57,7 +57,6 @@
             />
           </div>
           <v-btn
-
             color="secondary"
             height="62"
             width="360"
@@ -68,7 +67,6 @@
           </v-btn>
         </v-col>
       </v-row>
-
       <v-divider
         thickness="2"
         class="my-16"
@@ -110,6 +108,7 @@
             </NuxtLink>
           </div>
         </v-col>
+        <v-divider class="my-8 d-md-none" />
         <v-col
           cols="6"
           md="3"

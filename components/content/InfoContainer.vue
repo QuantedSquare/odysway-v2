@@ -10,7 +10,10 @@
           <slot name="title" />
         </h4>
       </v-col>
-      <v-col cols="8">
+      <v-col
+        cols="12"
+        md="8"
+      >
         <h5
           class="text-h5 mt-2"
           :class="whiteText ? 'text-white' : 'text-grey'"

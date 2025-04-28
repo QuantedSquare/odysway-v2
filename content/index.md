@@ -347,49 +347,39 @@ color: grey-light
 ---
 color: white
 ---
-::horizontal-carousel
----
-center-title: true
-color: secondary
----
-#title
-[Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
+  ::horizontal-carousel
+  ---
+  center-title: true
+  color: secondary
+  ---
+  #title
+  [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
 
-#carousel-item
-  :::review-col-card
-  ---
-  slug: 'florence'
-  ---
-  :::
-  :::review-col-card
-  ---
-  slug: 'francois'
-  ---
-  :::
-  :::review-col-card
-  ---
-  slug: 'test2'
-  ---
-  :::
-  :::review-col-card
-  ---
-  slug: 'test3'
-  ---
-  :::
-  :::review-col-card
-  ---
-  slug: 'test4'
-  ---
-  :::
-#cta
-  :::cta-button
-  ---
-  link: /avis-voyageurs
-  ---
-  #text
-  Afficher plus de témoignages
-  :::
-::
+  #carousel-item
+    :::review-col-card{slug="florence"}
+    :::
+
+    :::review-col-card{slug="francois"}
+    :::
+
+    :::review-col-card{slug="test2"}
+    :::
+
+    :::review-col-card{slug="test3"}
+    :::
+
+    :::review-col-card{slug="test4"}
+    :::
+    
+  #cta
+    :::cta-button
+    ---
+    link: /avis-voyageurs
+    ---
+    #text
+    Afficher plus de témoignages
+    :::
+  ::
 ::
 
 ::color-container

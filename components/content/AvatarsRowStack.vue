@@ -12,7 +12,7 @@
       <v-avatar
         v-for="(avatar, index) in avatars"
         :key="index"
-        size="100"
+        :size="mdAndUp ? 100 : 70"
         :class="`avatar-${index + 1}`"
         :style="{
           zIndex: avatars.length - index,
@@ -29,8 +29,10 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+const { mdAndUp } = useDisplay()
 const avatars = await queryCollection('team').all()
 const img = useImage()
 </script>
