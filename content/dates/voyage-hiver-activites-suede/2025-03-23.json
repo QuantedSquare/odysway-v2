@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-hiver-activites-suede",
+  "badges": [],
+  "departureDate": "2025-03-23T00:00:00",
+  "returnDate": "2025-03-30T00:00:00",
+  "startingPrice": 3205,
+  "maxTravelers": 8,
+  "bookedTravelers": 6,
+  "includeFlight": false,
+  "flightPrice": 0
+}

@@ -39,7 +39,7 @@
           />
         </v-card-subtitle>
       </v-card-item>
-      <v-card-text class="text-h4 font-weight-bold text-primary">
+      <v-card-text class="text-h5 font-weight-bold text-primary">
         "{{ review.text }}
       </v-card-text>
     </v-sheet>

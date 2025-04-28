@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "survie-jungle-amazonienne",
+  "badges": [],
+  "departureDate": "2025-07-10T00:00:00",
+  "returnDate": "2025-07-19T00:00:00",
+  "startingPrice": 1625,
+  "maxTravelers": 6,
+  "bookedTravelers": 0,
+  "includeFlight": true,
+  "flightPrice": 950
+}

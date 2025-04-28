@@ -1,7 +1,7 @@
 <template>
   <v-container
     class="subtle-shadow rounded-lg text-primary d-flex align-center"
-    height="190"
+    :height="xs ? 275 : 190"
   >
     <v-row>
       <v-col
@@ -147,8 +147,10 @@
 import dayjs from 'dayjs'
 import { capitalize } from 'lodash'
 import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarOutline, mdiCheckCircleOutline } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import BookingStatus from './BookingStatus.vue'
 
+const { xs } = useDisplay()
 const { date } = defineProps({
   date: {
     type: Object,

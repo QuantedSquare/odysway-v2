@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-elephants-thailande",
+  "badges": [],
+  "departureDate": "2025-05-17T00:00:00",
+  "returnDate": "2025-05-30T00:00:00",
+  "startingPrice": 2440,
+  "maxTravelers": 6,
+  "bookedTravelers": 5,
+  "includeFlight": false,
+  "flightPrice": 0
+}

@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-train-ouzbekistan",
+  "badges": [],
+  "departureDate": "2025-03-17T00:00:00",
+  "returnDate": "2025-03-28T00:00:00",
+  "startingPrice": 1685,
+  "maxTravelers": 8,
+  "bookedTravelers": 1,
+  "includeFlight": true,
+  "flightPrice": 600
+}

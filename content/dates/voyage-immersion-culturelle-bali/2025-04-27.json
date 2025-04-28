@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-immersion-culturelle-bali",
+  "badges": [],
+  "departureDate": "2025-04-27T10:00:00",
+  "returnDate": "2025-05-09T15:00:00",
+  "startingPrice": 1890,
+  "maxTravelers": 8,
+  "bookedTravelers": 9,
+  "includeFlight": true,
+  "flightPrice": 1000
+}

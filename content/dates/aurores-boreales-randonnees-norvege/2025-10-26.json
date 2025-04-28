@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "aurores-boreales-randonnees-norvege",
+  "badges": [],
+  "departureDate": "2025-10-26T00:00:00",
+  "returnDate": "2025-11-02T00:00:00",
+  "startingPrice": 2020,
+  "maxTravelers": 8,
+  "bookedTravelers": 8,
+  "includeFlight": true,
+  "flightPrice": 800
+}

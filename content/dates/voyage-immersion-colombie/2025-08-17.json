@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-immersion-colombie",
+  "badges": [],
+  "departureDate": "2025-08-17T00:00:00",
+  "returnDate": "2025-08-30T00:00:00",
+  "startingPrice": 2240,
+  "maxTravelers": 6,
+  "bookedTravelers": 0,
+  "includeFlight": true,
+  "flightPrice": 700
+}

@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-chamane-mongolie",
+  "badges": [],
+  "departureDate": "2025-08-03T00:00:00",
+  "returnDate": "2025-08-14T00:00:00",
+  "startingPrice": 1965,
+  "maxTravelers": 10,
+  "bookedTravelers": 9,
+  "includeFlight": true,
+  "flightPrice": 1000
+}

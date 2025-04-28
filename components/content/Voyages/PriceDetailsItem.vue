@@ -1,15 +1,17 @@
 <template>
   <v-row
-    class="text-body-1 text-grey-darken-3 my-2"
+    class="text-body-1 text-grey-darken-3 my-2 "
     align="center"
     no-gutters
   >
-    <v-col cols="1">
+    <v-col
+      cols="12"
+      class="d-flex align-center ga-2 "
+    >
       <v-icon :class="isIncluded ? 'text-green' : 'text-secondary'">
         {{ isIncluded ? mdiCheckCircleOutline : mdiCloseCircleOutline }}
       </v-icon>
-    </v-col>
-    <v-col cols="11">
+
       <slot
         name="item"
       />

@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-immersion-culturelle-sri-lanka",
+  "badges": [],
+  "departureDate": "2025-03-23T10:00:00",
+  "returnDate": "2025-04-03T15:00:00",
+  "startingPrice": 1850,
+  "maxTravelers": 8,
+  "bookedTravelers": 8,
+  "includeFlight": true,
+  "flightPrice": 1000
+}

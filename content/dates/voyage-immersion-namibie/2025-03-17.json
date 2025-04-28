@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-immersion-namibie",
+  "badges": [],
+  "departureDate": "2025-03-17T12:00:00",
+  "returnDate": "2025-03-30T00:00:00",
+  "startingPrice": 1575,
+  "maxTravelers": 6,
+  "bookedTravelers": 6,
+  "includeFlight": true,
+  "flightPrice": 850
+}

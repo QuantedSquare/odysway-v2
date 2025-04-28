@@ -156,11 +156,20 @@ export default defineContentConfig({
     }),
     dates: defineCollection({
       type: 'data',
-      source: 'dates/**.json',
+      source: 'dates/*/**.json',
       schema: z.object({
-        draft: z.boolean().default(false),
+        published: z.boolean().default(false),
         slug: z.string(),
-        travelChoice: z.enum(['Alps', 'Himalaya', 'Pyrenees']).optional(),
+        badges: z.array(z.object({
+          text: z.string().describe('Texte du badge'),
+        })),
+        departureDate: z.date(),
+        returnDate: z.date(),
+        startingPrice: z.number(),
+        maxTravelers: z.number(),
+        bookedTravelers: z.number(),
+        includeFlight: z.boolean(),
+        flightPrice: z.number(),
       }),
     }),
     reviews: defineCollection({

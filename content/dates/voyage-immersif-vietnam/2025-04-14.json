@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-immersif-vietnam",
+  "badges": [],
+  "departureDate": "2025-04-14T00:00:00",
+  "returnDate": "2025-04-27T00:00:00",
+  "startingPrice": 1420,
+  "maxTravelers": 12,
+  "bookedTravelers": 10,
+  "includeFlight": true,
+  "flightPrice": 900
+}

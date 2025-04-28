@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-hiver-laponie-finlande",
+  "badges": [],
+  "departureDate": "2026-02-15T00:00:00",
+  "returnDate": "2026-02-22T00:00:00",
+  "startingPrice": 2860,
+  "maxTravelers": 12,
+  "bookedTravelers": 0,
+  "includeFlight": false,
+  "flightPrice": 0
+}
