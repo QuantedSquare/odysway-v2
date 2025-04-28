@@ -5,14 +5,18 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
+        height="58px"
+        width="172px"
         v-bind="activatorProps"
-        variant="outlined"
-        size="large"
-        block
-        :append-icon="mdiPlay"
-        color="text-shadow bg-blur"
+        rounded="pill"
+        color="white"
+        class="btn-shadow"
       >
-        <span class="text-caption text-uppercase text-md-button text-shadow"><slot name="video-btn" /></span>
+        <v-icon
+          :icon="mdiVideoOutline"
+          size="22"
+        />
+        <span class="text-subtitle-2 text-primary font-weight-bold ml-2">Voir les vidéos</span>
       </v-btn>
     </template>
     <v-container
@@ -77,7 +81,7 @@
 </template>
 
 <script setup>
-import { mdiPlay, mdiClose, mdiChevronLeft, mdiChevronRight } from '@mdi/js'
+import { mdiClose, mdiChevronLeft, mdiChevronRight, mdiVideoOutline } from '@mdi/js'
 
 defineProps({
   videoSrc: {
@@ -87,11 +91,3 @@ defineProps({
 
 const dialog = ref(false)
 </script>
-
-<style scoped>
-.bg-blur{
-  background-color: rgba(255, 255, 255, 0.214)!important;
-  backdrop-filter: blur(8px);
-  box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
-}
-</style>

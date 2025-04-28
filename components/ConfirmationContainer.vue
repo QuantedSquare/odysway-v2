@@ -111,10 +111,8 @@ const route = useRoute()
 const isOption = ref(route.query.isOption === 'true')
 const { data: voyage, status } = useAsyncData(route.query.voyage, async () => {
   const query = await queryCollection('deals').where('slug', '=', route.query.voyage).first()
-  console.log('deal', query, route.query.voyage)
   return query
 })
-console.log('voyage', voyage.value)
 
 onMounted(() => {
   // if (route.query.amount) {
