@@ -22,8 +22,8 @@
   "tooltipGroup": "Disponible en groupe",
   "dates": [
     {
-      "departureDate": "2025-06-16T00:00:00",
-      "returnDate": "2025-06-20T00:00:00",
+      "departureDate": "2025-06-16",
+      "returnDate": "2025-06-20",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -37,8 +37,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-06-23T00:00:00",
-      "returnDate": "2025-06-27T00:00:00",
+      "departureDate": "2025-06-23",
+      "returnDate": "2025-06-27",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -52,8 +52,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-07-07T00:00:00",
-      "returnDate": "2025-07-11T00:00:00",
+      "departureDate": "2025-07-07",
+      "returnDate": "2025-07-11",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -67,8 +67,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-07-14T00:00:00",
-      "returnDate": "2025-07-18T00:00:00",
+      "departureDate": "2025-07-14",
+      "returnDate": "2025-07-18",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -82,8 +82,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-07-21T00:00:00",
-      "returnDate": "2025-07-25T00:00:00",
+      "departureDate": "2025-07-21",
+      "returnDate": "2025-07-25",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -97,8 +97,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-07-28T00:00:00",
-      "returnDate": "2025-08-01T00:00:00",
+      "departureDate": "2025-07-28",
+      "returnDate": "2025-08-01",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -112,8 +112,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-08-04T00:00:00",
-      "returnDate": "2025-08-08T00:00:00",
+      "departureDate": "2025-08-04",
+      "returnDate": "2025-08-08",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -127,8 +127,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-08-11T00:00:00",
-      "returnDate": "2025-08-15T00:00:00",
+      "departureDate": "2025-08-11",
+      "returnDate": "2025-08-15",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -142,8 +142,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-08-18T00:00:00",
-      "returnDate": "2025-08-22T00:00:00",
+      "departureDate": "2025-08-18",
+      "returnDate": "2025-08-22",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -157,8 +157,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-08-25T00:00:00",
-      "returnDate": "2025-08-29T00:00:00",
+      "departureDate": "2025-08-25",
+      "returnDate": "2025-08-29",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,
@@ -172,8 +172,8 @@
       "flyTicketPrice": 0
     },
     {
-      "departureDate": "2025-09-01T00:00:00",
-      "returnDate": "2025-09-05T00:00:00",
+      "departureDate": "2025-09-01",
+      "returnDate": "2025-09-05",
       "startingPrice": 650,
       "indivRoomPrice": 300,
       "maxTravellers": 6,

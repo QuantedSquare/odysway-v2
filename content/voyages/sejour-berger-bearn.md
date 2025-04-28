@@ -686,6 +686,44 @@ VOYAGE PRIVATISÉ
 DEMANDEZ VOTRE DEVIS PERSONNALISÉ
 ::
 
+
+::horizontal-carousel
+---
+color: secondary
+---
+#title
+[Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
+
+#carousel-item
+  :::review-col-card
+  ---
+  slug: 'florence'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'francois'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'test2'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'test3'
+  ---
+  :::
+  :::review-col-card
+  ---
+  slug: 'test4'
+  ---
+  :::
+::
+
+
+
 ::faq-container
 #section-title
   :::title-container
