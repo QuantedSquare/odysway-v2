@@ -44,9 +44,3 @@ defineProps({
   },
 })
 </script>
-
-<style scoped>
-.btn-shadow {
-  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
-}
-</style>

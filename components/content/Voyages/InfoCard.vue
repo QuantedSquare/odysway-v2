@@ -21,26 +21,6 @@
             cols="5"
             class="d-flex align-start justify-end"
           >
-            <!-- <ClientOnly>
-              <v-btn
-                size="small"
-                color="white"
-                rounded="pill"
-                height="46"
-                class="btn-shadow"
-              >
-                <div class="d-flex justify-center align-center mx-1">
-                  <v-icon
-                    :icon="mdiStar"
-                    color="yellow-rating"
-                    size="20"
-                  />
-                  <span class="text-body-2 font-weight-bold text-primary">
-                    {{ `${deal.rating.toString().replace('.', ',')}/5` }}
-                  </span>
-                </div>
-              </v-btn>
-            </ClientOnly> -->
             <RatingBadge
               :rating="deal.rating"
             />
@@ -222,7 +202,6 @@ const deal = useState('deal', () => null)
 const route = useRoute()
 const displayedDates = ref([])
 deal.value = await queryCollection('deals').where('slug', '=', route.params.voyageSlug).first()
-console.log('deal in infocard', deal.value)
 
 const getStatus = (date) => {
   if (date.bookedPlaces < 2) {
@@ -268,9 +247,6 @@ if (deal.value?.dates.length > 0) {
 </script>
 
 <style scoped>
-/* .btn-shadow {
-  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
-} */
 .block-btn-without-padding:deep(.v-btn__content) {
   padding: 0px !important;
   width: 100% !important;

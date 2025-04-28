@@ -192,6 +192,9 @@ $border-radius-root: 10px !default;
 .subtle-shadow{
   box-shadow: 0px 3px 20px 0px rgba(34, 34, 35, 0.06)!important;
 }
+.btn-shadow {
+  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
+}
 
 .no-white-space {
   white-space: normal !important;

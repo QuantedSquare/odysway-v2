@@ -24,7 +24,6 @@ const [{ data: page }, { data: deal }] = await Promise.all([
 ])
 
 if (page.value) {
-  console.log('page', page.value)
   defineOgImageComponent(page.value?.ogImage?.component, {
     title: page.value.ogImage?.props.title,
     description: page.value.ogImage?.props.description,
