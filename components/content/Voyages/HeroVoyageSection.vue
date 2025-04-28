@@ -1,98 +1,123 @@
 <template>
-  <v-img
-    v-if="status === 'success'"
-    :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-    :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-    height="100vh"
-    cover
-    class="position-relative"
+  <v-container fluid>
+    <v-row>
+      <v-col
+        cols="12"
+        md="8"
+      >
+        <h1 class="text-h2 font-weight-bold">
+          <slot name="title" />
+        </h1>
+      </v-col>
+      <v-col class="text-body-2 text-lg-body-1 d-flex align-start justify-md-end ga-4">
+        <RatingBadge
+          :rating="deal.rating"
+          elevation="2"
+        />
+        <v-btn
+          color="white"
+          rounded="pill"
+          height="46"
+          class="btn-shadow"
+          @click="copyUrl"
+        >
+          <div class="d-flex align-center ga-2">
+            <v-icon
+              :icon="mdiExportVariant"
+              size="20"
+              color="primary"
+            />
+            <span class="text-primary text-body-2 font-weight-medium mt-1">
+              Partager
+            </span>
+          </div>
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
+  <v-container
+    fluid
+    height="455"
+    class="d-flex align-center position-relative"
   >
-    <v-btn-primary
-      to="/"
-      color="white"
-      class="btn-position hidden-sm-and-down"
-    >
-      <template #prepend>
-        <v-icon>
-          {{ mdiChevronLeft }}
-        </v-icon>
-      </template>
-
-      <span> retour aux voyages</span>
-    </v-btn-primary>
-    <v-btn
-      to="/"
-      variant="outlined"
-      density="compact"
-      color="white"
-      :icon="mdiChevronLeft"
-      class="btn-position hidden-md-and-up"
-    />
-    <div class="h-100 d-flex align-center">
-      <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-        <v-row
-          justify="center"
-          align="center"
-        >
-          <v-col
-            cols="12"
-            md="auto"
-          >
-            <h1 class="text-h4 text-md-h1">
-              <slot
-                name="title"
-              />
-            </h1>
-          </v-col>
-        </v-row>
-        <v-row
-          justify="center"
-          align="start"
-          align-md="center"
-        >
-          <v-col
-            cols="10"
-            sm="5"
-            md="4"
-          >
-            <slot
-              name="component-slot-1"
-            />
-          </v-col>
-          <v-col
-            v-if="isVideoAdded"
-            cols="10"
-            sm="5"
-            md="4"
-          >
-            <slot
-              name="component-slot-2"
-            />
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
-  </v-img>
-  <v-skeleton-loader
-    v-else
-    type="image"
-    height="100vh"
-    width="100%"
-  />
+    <v-row>
+      <v-col
+        cols="12"
+        sm="9"
+      >
+        <v-img
+          v-if="status === 'success'"
+          :src="img(imageSrc1, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          cover
+          height="455"
+          rounded="lg"
+        />
+      </v-col>
+      <v-col
+        cols="3"
+        class="d-none d-sm-flex flex-column ga-7"
+      >
+        <v-img
+          v-if="status === 'success'"
+          :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(imageSrc2, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          cover
+          height="214"
+          rounded="lg"
+        />
+        <v-img
+          v-if="status === 'success'"
+          :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          cover
+          height="214"
+          rounded="lg"
+        />
+      </v-col>
+    </v-row>
+    <v-row class="media-btns-position w-100">
+      <v-col
+        cols="12"
+        sm="auto"
+        class="text-center"
+      >
+        <slot name="component-slot-1" />
+      </v-col>
+      <v-col
+        v-if="isVideoAdded"
+        cols="12"
+        sm="auto"
+        class="text-center"
+      >
+        <slot name="component-slot-2" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup>
-import { mdiChevronLeft } from '@mdi/js'
+import { mdiExportVariant } from '@mdi/js'
 import { useImage } from '#imports'
 
 defineProps({
-  imageSrc: {
+  imageSrc1: {
+    type: String,
+    default: '/images/Laponie-(1).webp',
+  },
+  imageSrc2: {
+    type: String,
+    default: '/images/Laponie-(1).webp',
+  },
+  imageSrc3: {
     type: String,
     default: '/images/Laponie-(1).webp',
   },
 })
+
 const img = useImage()
 const route = useRoute()
+const deal = inject('deal')
 
 const { data: page, status } = useAsyncData(route.path, () => {
   return queryCollection('voyages').path(route.path).first()
@@ -100,29 +125,18 @@ const { data: page, status } = useAsyncData(route.path, () => {
 const isVideoAdded = computed(() => {
   return page.value.body.value[0].length > 4
 })
+
+function copyUrl() {
+  const copiedUrl = `https://localhost:3000/${route.fullPath}`
+  navigator.clipboard.writeText(copiedUrl)
+  alert('copied url : ', copiedUrl)
+}
 </script>
 
 <style scoped>
-.btn-position{
+.media-btns-position{
   position: absolute;
-  top: 10%;
-  left: 18px;
-}
-.v-btn__prepend {
-  margin: 0px !important;
-}
-.img-shadow{
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-}
-.title-container {
-  container-type: inline-size;
-}
-.title-container .responsive-title {
-  font-size: 19.2cqw;
-  text-align: start;
-}
-.responsive-subtitle {
-  font-size: 10.9cqw;
-  text-align: start;
+  bottom: 10%;
+  left: 4%;
 }
 </style>

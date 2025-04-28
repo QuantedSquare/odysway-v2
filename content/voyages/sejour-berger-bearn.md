@@ -1,14 +1,14 @@
 ::hero-voyage-section
 ---
-image-src: /images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg
+image-src1: /images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg
+image-src2: /images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg
+image-src3: /images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg
+
 ---
 #title
 Vis ma vie de berger dans les Pyrénées
 #component-slot-1
   :::photo-gallery-dialog
-  #gallery-btn
-  voir la galerie photos
-
   #photo-col
   ::::photo-col
   ---
@@ -161,13 +161,14 @@ Vis ma vie de berger dans les Pyrénées
   :::video-dialog
   ---
   video-src: 
+    - https://www.youtube.com/embed/JK2O_UqYveA
+    - https://www.youtube.com/embed/JKpO_UqYveA
     - https://www.youtube.com/embed/JKpO_UqYveA
   ---
   #video-btn
   voir la video
   :::
 ::
-
 
 ::bottom-app-bar
 #starting-price
@@ -188,11 +189,6 @@ right-space: 4
 right-sticky: true
 ---
 #left-side
-  :::title-container
-  #title
-  Vis ma vie de berger dans les Pyrénées
-  :::
-
   :::intro-voyage-container
   ---
   programme: 

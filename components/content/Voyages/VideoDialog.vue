@@ -5,24 +5,28 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
+        height="58px"
+        width="172px"
         v-bind="activatorProps"
-        variant="outlined"
-        size="large"
-        block
-        :append-icon="mdiPlay"
-        color="text-shadow bg-blur"
+        rounded="pill"
+        color="white"
+        class="btn-shadow"
       >
-        <span class="text-caption text-uppercase text-md-button text-shadow"><slot name="video-btn" /></span>
+        <v-icon
+          :icon="mdiVideoOutline"
+          color="primary"
+          size="22"
+        />
+        <span class="text-subtitle-2 text-primary font-weight-bold ml-2">Voir les vidéos</span>
       </v-btn>
     </template>
     <v-container
-      class="d-flex flex-column pa-1"
+      class="d-flex flex-column pa-1 ga-2"
     >
       <v-btn
-        variant="outlined"
         :prepend-icon="mdiClose"
-        color="grey-darken-3"
-        class="align-self-end bg-white"
+        color="primary"
+        class="align-self-end"
         max-width="150px"
         @click="dialog = false"
       >
@@ -34,7 +38,7 @@
             density="compact"
             icon
             color="grey-lighten-4 opacity-60"
-            @click="props.onClick"
+            @click.stop="props.onClick"
           >
             <v-icon
               :icon="mdiChevronLeft"
@@ -47,7 +51,7 @@
             density="compact"
             icon
             color="grey-lighten-4 opacity-60"
-            @click="props.onClick"
+            @click.stop="props.onClick"
           >
             <v-icon
               :icon="mdiChevronRight"
@@ -60,7 +64,7 @@
           :key="video"
         >
           <iframe
-            class="align-self-center"
+            class="align-self-center rounded-lg"
             width="100%"
             :height="$vuetify.display.smAndDown ? '400': '600'"
             :src="video"
@@ -77,7 +81,7 @@
 </template>
 
 <script setup>
-import { mdiPlay, mdiClose, mdiChevronLeft, mdiChevronRight } from '@mdi/js'
+import { mdiClose, mdiChevronLeft, mdiChevronRight, mdiVideoOutline } from '@mdi/js'
 
 defineProps({
   videoSrc: {
@@ -87,11 +91,3 @@ defineProps({
 
 const dialog = ref(false)
 </script>
-
-<style scoped>
-.bg-blur{
-  background-color: rgba(255, 255, 255, 0.214)!important;
-  backdrop-filter: blur(8px);
-  box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
-}
-</style>

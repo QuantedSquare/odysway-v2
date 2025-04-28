@@ -31,43 +31,8 @@
           class="hover-scale"
           cover
         >
-          <div
-            v-if="voyage.comments > 0"
-            class="badge-position"
-          >
-            <v-btn
-              size="small"
-              color="white"
-              rounded="pill"
-              :height="mdAndUp ? 46 : 36"
-            >
-              <div class="d-flex justify-center align-center mx-1">
-                <v-icon
-                  :icon="mdiStar"
-                  color="yellow-rating"
-                  class="mb-1"
-                  :size="mdAndUp ? 20 : 16"
-                />
-                <span class="text-body-2 font-weight-bold text-primary">
-                  {{ `${voyage.rating.toString().replace('.', ',')}/5` }}
-                </span>
-              </div>
-            </v-btn>
-          </div>
-          <div
-            v-else
-            class="badge-position"
-          >
-            <v-btn
-              size="small"
-              color="primary"
-              class="font-weight-bold text-body-2 text-md-body-1"
-              rounded="pill"
-              :height="mdAndUp ? 46 : 36"
-            >
-
-              Nouveau
-            </v-btn>
+          <div class="badge-position">
+            <RatingBadge :rating="voyage.rating" />
           </div>
         </v-img>
       </NuxtLink>
@@ -169,8 +134,7 @@
 </template>
 
 <script setup>
-import { mdiPlusCircle, mdiStar } from '@mdi/js'
-import { useDisplay } from 'vuetify'
+import { mdiPlusCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
 const { mdAndUp } = useDisplay()

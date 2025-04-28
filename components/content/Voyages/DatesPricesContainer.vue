@@ -43,7 +43,6 @@ const props = defineProps({
 
 const { data: deal } = await useAsyncData(props.slug, async () => {
   const query = await queryCollection('deals').where('slug', '=', props.slug).first()
-  console.log('deal', query)
   return query
 })
 watch(isExpanded, (newValue) => {
