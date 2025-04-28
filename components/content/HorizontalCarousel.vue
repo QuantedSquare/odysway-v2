@@ -4,7 +4,8 @@
       align="center"
     >
       <v-col
-        cols="7"
+        cols="6"
+        xs="7"
         sm="9"
         class="text-h2 my-4"
         :class="{ 'text-md-center text-start': centerTitle }"
@@ -66,7 +67,7 @@
       >
         <div
           ref="cta-container"
-          class="mt-16 d-flex justify-center"
+          class="mt-md-16 d-flex justify-center"
         >
           <slot name="cta" />
         </div>

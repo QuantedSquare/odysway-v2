@@ -18,7 +18,7 @@
           />
         </template>
       </v-expansion-panel-title>
-      <v-expansion-panel-text class="text-subtitle-1 text-grey pl-6 ">
+      <v-expansion-panel-text class="text-subtitle-2 text-md-subtitle-1 text-grey pl-6 ">
         <slot
           name="answer"
           mdc-unwrap="p"

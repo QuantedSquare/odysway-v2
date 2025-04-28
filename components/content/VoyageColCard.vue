@@ -39,13 +39,14 @@
               size="small"
               color="white"
               rounded="pill"
-              height="46"
+              :height="mdAndUp ? 46 : 36"
             >
               <div class="d-flex justify-center align-center mx-1">
                 <v-icon
                   :icon="mdiStar"
                   color="yellow-rating"
-                  size="20"
+                  class="mb-1"
+                  :size="mdAndUp ? 20 : 16"
                 />
                 <span class="text-body-2 font-weight-bold text-primary">
                   {{ `${voyage.rating.toString().replace('.', ',')}/5` }}
@@ -60,9 +61,9 @@
             <v-btn
               size="small"
               color="primary"
-              class="font-weight-bold"
+              class="font-weight-bold text-body-2 text-md-body-1"
               rounded="pill"
-              height="46"
+              :height="mdAndUp ? 46 : 36"
             >
 
               Nouveau
@@ -169,8 +170,10 @@
 
 <script setup>
 import { mdiPlusCircle, mdiStar } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+const { mdAndUp } = useDisplay()
 const props = defineProps({
   voyageSlug: {
     type: String,

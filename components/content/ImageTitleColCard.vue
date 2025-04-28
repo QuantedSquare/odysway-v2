@@ -21,7 +21,7 @@
       <div class="image-overlay" />
       <div class="content-overlay">
         <div class="w-100 d-flex flex-column align-center justify-center">
-          <h3 class="category-title text-h5 text-lg-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
+          <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
           <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
             <span class="text-center">
               Cliquez pour en apprendre plus à propos des {{ title }}
@@ -147,7 +147,6 @@ onMounted(() => {
 
 .category-title {
   margin: -2em 0 0 0;
-  font-weight: 600;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -182,7 +181,6 @@ onMounted(() => {
   }
   .category-title {
     margin: -60px 0 0 0 !important;
-    font-size: 1.5rem !important;
   }
 }
 

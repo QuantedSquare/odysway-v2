@@ -6,7 +6,6 @@
     <v-row>
       <TransitionGroup
         name="list"
-        tag="div"
         class="relative"
       >
         <v-col
@@ -64,6 +63,7 @@ const limitedDatesList = computed(() => {
 <style scoped>
 .relative {
   position: relative;
+
 }
 
 .list-move, /* apply transition to moving elements */

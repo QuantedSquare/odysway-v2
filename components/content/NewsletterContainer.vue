@@ -20,7 +20,7 @@
         md="6"
         lg="5"
       >
-        <div class="d-flex align-center bg-white rounded-md px-3">
+        <div class="d-flex flex-column flex-md-row align-center bg-white rounded-md px-3 pt-2">
           <v-text-field
             id="newsletter"
             v-model="email"
@@ -33,6 +33,7 @@
             persistent-hint
             density="compact"
             bg-color="white"
+            class="w-100"
             label="Entrez votre adresse email"
             type="email"
           />
@@ -41,6 +42,7 @@
             :width="mdAndUp ? 161 : 100"
             class="my-3 text-body-1 font-weight-bold "
             rounded="md"
+            :block="!mdAndUp"
             @click="subscribeToNewsletter"
           >
             S'inscrire
@@ -114,7 +116,9 @@ const subscribeToNewsletter = async () => {
   font-weight: bold !important;
   color: rgb(var(--v-theme-grey)) !important;
   font-size: 14px !important;
+  width: 100% !important;
 }
+
 @media (max-width: 500px) {
   :deep(.v-field-label) {
     font-size: 13px !important;

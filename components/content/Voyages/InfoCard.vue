@@ -68,14 +68,14 @@
             cols="12"
           >
             <v-btn
-              height="52"
+              :height="mdAndDown ? 80 : 52"
               color="grey-light-3"
               rounded="md"
               block
               :to="date.link"
               class="w-100 block-btn-without-padding"
             >
-              <div class="d-inline-flex align-center justify-space-between w-100">
+              <div class="d-inline-flex flex-column flex-lg-row align-center  ga-2 justify-space-between w-100">
                 <div class="d-flex align-center  ga-1">
                   <CustomBadge :color="date.status.color" />
                   <span class="text-body-2 text-decoration-none text-primary text-size-14 text-wrap text-start">
@@ -133,10 +133,11 @@
             >
               <div class="d-flex align-center ga-2">
                 <v-avatar
+                  :size="mdAndDown ? 30 : 40"
                   image="/images/photo Romain.webp"
                   color="white"
                 />
-                <span class="text-body-2 font-weight-bold text-decoration-none">
+                <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
                   Contacter un expert en voyage
                 </span>
               </div>
@@ -211,8 +212,10 @@
 
 <script setup>
 import { mdiArrowRight, mdiStar, mdiCheckCircleOutline } from '@mdi/js'
-import { useGoTo } from 'vuetify'
+import { useGoTo, useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
+
+const { mdAndDown } = useDisplay()
 
 const goTo = useGoTo()
 const deal = useState('deal', () => null)
