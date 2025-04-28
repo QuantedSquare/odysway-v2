@@ -1,27 +1,28 @@
 <template>
+  <!-- v-if="published" -->
   <v-card
     elevation="0"
-    :href="`${blogSlug}`"
+    :href="`${path}`"
     height="460px"
     class="text-decoration-none"
   >
     <v-img
-      :src="img(blogImage, { format: 'webp', quality: 90, height: 228, width: 640 })"
-      :alt="`image de ${blogTitle}`"
+      :src="img(displayedImg, { format: 'webp', quality: 90, height: 228, width: 640 })"
+      :alt="`image de ${title}`"
       height="261px"
       class="hover-scale"
       cover
     >
       <div
-        v-if="blogBadgeColor"
+        v-if="badgeColor"
         class="badge-position"
       >
         <v-chip
           size="x-large"
           class="text-body-2 text-white font-weight-bold px-5"
-          :class="`bg-${blogBadgeColor}`"
+          :class="`bg-${badgeColor}`"
         >
-          {{ blogType }}
+          {{ type }}
         </v-chip>
       </div>
     </v-img>
@@ -35,14 +36,14 @@
               <div
                 class="line-clamp-2"
               >
-                {{ blogTitle }}
+                {{ title }}
               </div>
               <v-tooltip
-                v-if="blogTitle.length > 60"
+                v-if="title.length > 60"
                 activator="parent"
               >
                 <span>
-                  {{ blogTitle }}
+                  {{ title }}
                 </span>
               </v-tooltip>
             </div>
@@ -54,19 +55,19 @@
             class="d-flex justify-space-between align-center text-secondary-light-2 text-h5 mt-4"
           >
             <div
-              v-if="blogReadingTime"
-              class="d-flex align-center ga-2"
+              v-if="readingTime"
+              class="d-flex align-center gaNumber"
             >
               <v-icon size="small">
                 {{ mdiClockTimeThreeOutline }}
               </v-icon>
 
-              <div>
-                {{ blogReadingTime }}
-              </div>
+              <span>
+                {{ readingTime }} min
+              </span>
             </div>
             <div class="text-grey">
-              {{ formatDate(blogPublicationDate, 'DD MMMM, YYYY') }}
+              {{ formatDate(publishedAt, 'DD MMMM, YYYY') }}
             </div>
           </v-col>
         </v-row>
@@ -80,42 +81,42 @@ import { mdiClockTimeThreeOutline } from '@mdi/js'
 import { useImage } from '#imports'
 
 defineProps({
-  blogSlug: {
+  path: {
     type: String,
     required: true,
   },
-  blogTitle: {
+  title: {
     type: String,
     required: true,
   },
-  blogImage: {
+  displayedImg: {
     type: String,
     required: true,
   },
-  // ADD TO EACH MAIN BLOG IMAGE
+  // ADD alt TO EACH MAIN BLOG IMAGE
   // blogImageAlt: {
   //   type: String,
   //   required: true,
   // },
-  blogPublished: {
+  published: {
     type: Boolean,
     required: true,
   },
-  blogPublicationDate: {
+  publishedAt: {
     type: String,
     required: true,
   },
-  blogType: {
+  type: {
     type: String,
     default: 'Actu',
   },
-  blogBadgeColor: {
+  badgeColor: {
     type: String,
     default: 'secondary',
   },
-  blogReadingTime: {
-    type: String,
-    default: '3 min',
+  readingTime: {
+    type: Number,
+    default: 3,
   },
 })
 

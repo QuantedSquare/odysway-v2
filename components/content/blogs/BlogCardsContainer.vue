@@ -24,16 +24,8 @@
         sm="6"
         md="4"
       >
-        <!-- #todo changer par un v-bind & simplifier les noms de keys -->
         <BlogCard
-          :blog-slug="blog.path"
-          :blog-title="blog.title"
-          :blog-image="blog.displayedImg"
-          :blog-published="blog.published"
-          :blog-publication-date="blog.publishedAt"
-          :blog-type="blog.blogType"
-          :blog-badge-color="blog.badgeColor"
-          :blog-reading-time="blog.readingTime"
+          v-bind="blog"
         />
       </v-col>
     </v-row>
