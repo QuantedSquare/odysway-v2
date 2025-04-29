@@ -17,6 +17,7 @@
           elevation="2"
         />
         <v-btn
+          ref="shareBtn"
           color="white"
           rounded="pill"
           class="btn-shadow"
@@ -29,11 +30,18 @@
               :size="mdAndUp ? 20 : 16"
               color="primary"
             />
-            <span class="mt-1">
-              Partager
-            </span>
+            <span class="mt-1">Partager</span>
           </div>
         </v-btn>
+
+        <v-snackbar
+          v-model="snackbar"
+          location="top"
+          timeout="2000"
+          color="primary"
+        >
+          Le lien de ce voyage a été copié avec succès !
+        </v-snackbar>
       </v-col>
     </v-row>
   </v-container>
@@ -116,6 +124,7 @@ const { mdAndUp } = useDisplay()
 const img = useImage()
 const route = useRoute()
 const deal = inject('deal')
+const snackbar = ref(false)
 
 const { data: page, status } = useAsyncData(route.path, () => {
   return queryCollection('voyages').path(route.path).first()
@@ -127,21 +136,21 @@ const isVideoAdded = computed(() => {
 function copyUrl() {
   const copiedUrl = `https://localhost:3000/${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
-  alert('copied url : ', copiedUrl)
+  snackbar.value = true
 }
 </script>
 
 <style scoped>
 .media-btns-position{
   position: absolute;
-  bottom: 7%;
+  bottom: 9%;
   left: 4%;
 }
 
-@media screen and (max-width: 600px ) {
+@media screen and (max-width: 1280px) {
   .media-btns-position{
   position: absolute;
-  bottom: 42px;
+  bottom: 21px;
   left: 42px;
 }
 }
