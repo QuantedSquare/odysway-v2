@@ -6,8 +6,8 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
-        height="58px"
-        width="172px"
+        :height="lgAndUp ? 58 : 40"
+        :width="lgAndUp ? 172: ''"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
@@ -16,9 +16,10 @@
         <v-icon
           :icon="mdiCameraOutline"
           color="primary"
-          size="22"
+          :size="lgAndUp ? 22 : 19"
         />
-        <span class="text-subtitle-2 text-primary font-weight-bold ml-2"> Voir les photos</span>
+        <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les photos</span>
+        <span class="d-block d-sm-none text-caption text-md-subtitle-2 text-primary font-weight-bold ml-2">Photos</span>
       </v-btn>
     </template>
     <v-sheet>
@@ -45,6 +46,8 @@
 
 <script setup>
 import { mdiClose, mdiCameraOutline } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 
+const { lgAndUp } = useDisplay()
 const dialog = ref(false)
 </script>
