@@ -98,7 +98,6 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const { header } = useAppConfig()
-console.log('header', header)
 // #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
 const { mdAndUp } = useDisplay()
 const router = useRouter()

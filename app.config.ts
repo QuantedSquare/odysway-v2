@@ -25,7 +25,7 @@ export default defineAppConfig({
     },
     search: false,
     textButton1: 'Notre vision du voyage',
-    textButton2: '01 00 00 00 00',
+    textButton2: '+33 1 84 80 79 75',
     textButton3: 'Faisons connaissance!',
   },
   footer: {
@@ -38,7 +38,7 @@ export default defineAppConfig({
     },
     contact: {
       ctaText: 'N\'hésitez pas à nous contacter',
-      phone: '01 23 45 67 89',
+      phone: '+33 1 84 80 79 75',
       email: 'contact@odysway.com',
       buttonContact: {
         text: 'contact',

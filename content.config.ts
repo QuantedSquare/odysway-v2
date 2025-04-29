@@ -1,5 +1,14 @@
+import fs from 'fs'
+import path from 'path'
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { asSeoCollection } from '@nuxtjs/seo/content'
+
+// #TODO: Move to content.schema.ts
+const teamDir = path.resolve(__dirname, 'content/team')
+const teamFiles = fs.readdirSync(teamDir)
+const teamChoices = teamFiles
+  .map(file => JSON.parse(fs.readFileSync(path.join(teamDir, file), 'utf-8')).name)
+  .filter(Boolean) as [string, ...string[]]
 
 export default defineContentConfig({
   collections: {
@@ -228,6 +237,45 @@ export default defineContentConfig({
           metaDescription: z.string(),
           visible: z.boolean(),
         })),
+      }),
+    }),
+    page_voyage_fr: defineCollection({
+      type: 'data',
+      source: 'textes/fr/**.json',
+      schema: z.object({
+        shareButton: z.object({
+          text: z.string(),
+          icon: z.string().editor({ input: 'icon' }),
+        }).describe('Bouton partager en haut de la page'),
+        photoButton: z.object({
+          text: z.string().describe('Texte du bouton photo, ajouter x à la place du nombre de photos, ex: "Voir les X photos"').default('Voir les X photos'),
+          icon: z.string().editor({ input: 'icon' }),
+        }).describe('Bouton photo en bas du hero'),
+        stickyBlock: z.object({
+          pricePrefix: z.string().describe('Texte avant le prix, ex: "à partir de"').default('à partir de'),
+          priceSuffix: z.string().describe('Texte après le prix, ex: "/pers"').default('/pers'),
+          dateText: z.string().describe('Titre de la section de dates').default('Dates disponibles'),
+          dateButtonText: z.string().describe('Texte du bouton de dates, ex: "Voir les dates"').default('Voir tous les départs +'),
+          ctaCall: z.object({
+            text: z.string().describe('Texte du bouton de CTA, ex: "Contactez-nous"').default('Contactez-nous'),
+            icon: z.string().editor({ input: 'media' }).describe('avatar de l\'expert'),
+            to: z.string().describe('Lien du bouton de CTA, ex: "/calendly"').default('/calendly'),
+          }).describe('CTA en bas du composant'),
+          ctaBottom: z.object({
+            list: z.array(z.string()).describe('Liste de CTAs en bas, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
+          }).describe('Liste de points sous le CTA'),
+          privatisationText: z.string().describe('Texte du bouton de privatisation sous le composant').default('Demander une privatisation de ce voyage'),
+        }).describe('Section sticky à droite où se trouvent les 3 premières dates et CTAs'),
+        authorNote: z.object({
+          title: z.string().describe('Titre de la note de l\'auteur').default('En deux mots'),
+          text: z.string().describe('Texte de la note de l\'auteur'),
+          author: z.enum(teamChoices).describe('Auteur de la note défini dans le fichier team.json'),
+        }).describe('Note de l\'auteur sous le hero/section photo, défini dans le dossier team'),
+        experiencesBlock: z.object({
+          title: z.string().describe('Titre de la section').default('Ce qui vous attend'),
+          icon: z.string().editor({ input: 'icon' }),
+          color: z.string().describe('Couleur de la section, ex: primary, secondary'),
+        }).describe('Section expérience, liste de ce qui vous attend sur le voyage'),
       }),
     }),
   },
