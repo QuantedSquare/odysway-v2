@@ -2,28 +2,31 @@
   <v-app-bar
     elevation="0"
     class="px-4"
+    :class="mdAndUp ? '' : 'app-bar-shadow mt-2'"
+    rounded="lg"
+    :height="mdAndUp ? '90' : '52'"
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"
   >
     <NuxtLink
-      to="/"
+      :to="header.to"
     >
       <v-img
-        min-width="150px"
+        :min-width="mdAndUp ? '150px' : '100px'"
         height="38"
-        :src="img('/logos/Logo-Odysway-Bleu.png', { format: 'webp', quality: 100, width: 320 })"
+        :src="img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })"
       />
     </NuxtLink>
     <v-spacer />
     <div class="d-flex align-center ga-4">
-      <v-btn
+      <!-- <v-btn
         icon
         class="d-inline"
         @click="searchOpen = !searchOpen"
       >
         <v-icon>{{ mdiMagnify }}</v-icon>
-      </v-btn>
-      <v-btn-primary
+      </v-btn> -->
+      <!-- <v-btn-primary
         v-for="item, index in items"
         :key="`link header ${index}`"
         :href="item.link"
@@ -34,40 +37,50 @@
         <div class="text-button text-uppercase font-weight-bold">
           {{ item.title }}
         </div>
-      </v-btn-primary>
-      <v-btn-secondary
-        density="compact"
-        size="x-large"
-        color="primary"
-        href="/calendly"
-        class="d-none d-md-inline text-decoration-none"
-      >
-        <div class="d-flex flex-column align-center text-caption text-uppercase">
-          <b>+33 1 84 80 79 75</b>
-          prendre rdv
-        </div>
-      </v-btn-secondary>
+      </v-btn-primary> -->
       <v-btn
         color="primary"
-        icon
-        class="d-inline d-md-none"
+        height="54"
+        class="text-caption text-md-body-1 d-none d-md-inline"
       >
-        <v-icon>
-          {{ mdiPhone }}
-        </v-icon>
+        {{ header.textButton1 }}
       </v-btn>
       <v-btn
+        color="primary"
+        variant="tonal"
+        height="54"
+        class="text-caption text-md-body-1 d-none d-md-inline"
+      >
+        {{ header.textButton2 }}
+      </v-btn>
+      <v-btn
+        density="compact"
+        size="x-large"
+        height="54"
+        color="white"
+        rounded="default"
+        class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
+        @click="() => router.push('/calendly')"
+      >
+        {{ header.textButton3 }}
+      </v-btn>
+
+      <!-- <v-btn
         icon
         class="hidden-xs"
       >
         <v-icon>{{ mdiAccountCircle }}</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-btn
-        class="d-inline d-md-none"
+        class="d-inline d-md-none "
         icon
-        @click.stop="model = !model"
+        height="35"
+        variant="text"
+        @click.stop="testModel = !testModel"
       >
-        <v-icon>{{ mdiDotsVertical }}</v-icon>
+        <v-icon>
+          {{ mdiMenu }}
+        </v-icon>
       </v-btn>
     </div>
   </v-app-bar>
@@ -80,9 +93,15 @@
 </template>
 
 <script setup>
-import { mdiMagnify, mdiDotsVertical, mdiAccountCircle, mdiPhone } from '@mdi/js'
+import { mdiMagnify, mdiAccountCircle, mdiPhone, mdiMenu } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+const { header } = useAppConfig()
+console.log('header', header)
+// #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
+const { mdAndUp } = useDisplay()
+const router = useRouter()
 const testModel = ref(false)
 const searchOpen = ref(false)
 const model = defineModel()
@@ -151,5 +170,8 @@ function resetExtension() {
 }
 .v-text-field--rounded>.v-input__control>.v-input__slot {
     padding: 0 24px !important;
+}
+.app-bar-shadow:deep(){
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
 }
 </style>

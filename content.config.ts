@@ -159,7 +159,6 @@ export default defineContentConfig({
       source: 'dates/*/**.json',
       schema: z.object({
         published: z.boolean().default(false),
-        slug: z.string().describe('Slug du voyage à copier coller (ex: "sejour-berger-bearn")'),
         badges: z.array(z.object({
           text: z.string().describe('Texte du badge, utiliser des "*" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
           icon: z.string().editor({ input: 'icon' }),

@@ -4,10 +4,10 @@
     location="right"
     disable-resize-watcher
     mobile
-    class="zIndex"
+    class="zIndex mt-2"
   >
     <div>
-      <v-btn
+      <!-- <v-btn
         icon
         class="mx-md-4 hidden-sm-and-up"
         color="white"
@@ -15,7 +15,7 @@
         <v-icon color="primary">
           {{ mdiAccountCircle }}
         </v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-list
         v-for="item, index in drawerItems"
         :key="`Drawer item ${index}`"
@@ -84,5 +84,8 @@ const drawerItems = ref([
 <style scoped>
 .zIndex{
   z-index: 1030 !important;
+}
+.drawer-shadow{
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
 }
 </style>

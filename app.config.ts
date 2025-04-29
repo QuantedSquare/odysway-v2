@@ -17,26 +17,16 @@ export default defineAppConfig({
     siteName: 'Odysway',
   },
   header: {
-    title: 'Odysway',
     to: '/',
     logo: {
-      light: '',
-      dark: '',
+      desktop: '/logos/Logo-Odysway-Bleu.png',
+      mobile: '/logos/Logo-Odysway-Bleu.png',
       alt: 'Odysway Logo',
     },
-    search: true,
-    colorMode: true,
-    links: [{
-      'icon': 'i-simple-icons-facebook',
-      'to': 'https://facebook.com/odysway',
-      'target': '_blank',
-      'aria-label': 'Facebook',
-    }, {
-      'icon': 'i-simple-icons-instagram',
-      'to': 'https://instagram.com/odysway',
-      'target': '_blank',
-      'aria-label': 'Instagram',
-    }],
+    search: false,
+    textButton1: 'Notre vision du voyage',
+    textButton2: '01 00 00 00 00',
+    textButton3: 'Faisons connaissance!',
   },
   footer: {
     logo: {
