@@ -1,47 +1,38 @@
 <template>
-  <v-container id="les_plus">
-    <v-row>
-      <v-col
-        cols="12"
-        sm="5"
-      >
-        <v-img
-          :src="img(props.image, { format: 'webp', quality: 70, width: 1024 })"
-          rounded="lg"
-          min-height="340px"
-          max-height="500px"
-          cover
-        />
-      </v-col>
-      <v-col
-        cols="12"
-        sm="7"
-        class="d-flex flex-column justify-lg-center"
-      >
-        <v-card variant="text">
-          <v-card-title class="">
-            <slot name="title" />
-          </v-card-title>
-          <v-card-text>
-            <v-list slim>
-              <slot />
-            </v-list>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+  <ColorContainer color="yellow-light-2">
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          class="text-primary d-flex flex-column justify-lg-center"
+        >
+          <div class="d-flex align-center ga-4">
+            <v-avatar
+              color="yellow"
+              size="40"
+            >
+              <v-icon
+                color="white"
+                size="20"
+                :icon="mdiHeartOutline"
+              />
+            </v-avatar>
+            <h4 class="text-h4 font-weight-bold">
+              <slot name="title" />
+            </h4>
+          </div>
+          <v-list
+            slim
+            bg-color="yellow-light-2"
+          >
+            <slot />
+          </v-list>
+        </v-col>
+      </v-row>
+    </v-container>
+  </ColorContainer>
 </template>
 
 <script setup>
-import { useImage } from '#imports'
-
-const props = defineProps({
-  image: {
-    type: String,
-    default: '',
-  },
-})
-
-const img = useImage()
+import { mdiHeartOutline } from '@mdi/js'
 </script>

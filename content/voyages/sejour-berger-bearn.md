@@ -192,86 +192,8 @@ right-space: 4
 right-sticky: true
 ---
 #left-side
-  <!-- :::intro-voyage-container
-  ---
-  programme: 
-  ---
-
-  #tooltip-text-group
-    ::::icon-col
-    ---
-    icon-name: mdiCalendar
-    ---
-    #tooltip
-    Durée de voyage
-
-    #text
-    5 JOURS / 4 NUITS
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiWhiteBalanceSunny
-    ---
-    #tooltip
-    Période idéale
-
-    #text
-    JUIN À SEPT
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiTent
-    ---
-    #tooltip
-    Hébergement
-
-    #text
-    GITE ET BIVOUAC
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiAccountGroup
-    ---
-    #tooltip
-    Disponible en groupe
-
-    #text
-    DISPONIBLE EN GROUPE
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiTeddyBear
-    ---
-    #tooltip
-    Dès 10 ans
-
-    #text
-    DÈS 10 ANS
-    ::::
-
-  #intro-voyage
-  _Laissez-vous porter par la douceur du Béarn et la sérénité des Pyrénées. Dans la vallée d’Aspe, les randonnées légères vous conduiront à travers les estives, ces pâturages d’altitude où les bergers vivent au rythme de leurs troupeaux et de la nature environnante. Ici, le temps semble suspendu, et chaque rencontre devient un moment privilégié._
-
-_Au fil des sentiers, découvrez les traditions vivantes des bergers : la traite des brebis, le savoir-faire ancestral du fromage, les histoires partagées au coin du feu. Passer une nuit près d’un berger, dans l’isolement apaisant des montagnes, vous offrira une expérience rare et précieuse._
-
-_Ce séjour est une invitation à ralentir, à observer et à se reconnecter profondément à la nature. Une escapade qui réveille l’essence d’une vie simple, en harmonie avec les montagnes, et laisse en vous une empreinte inoubliable de calme, à emporter dans votre quotidien ensuite !_
-
-  #avatar
-    ::::avatar-list-item
-    ---
-    avatar: /images/voyages/sejour-berger-bearn/RxTWYwSSu4WAg9S26acA.jpg
-    avatar-size: "60"
-    ---
-    #title
-    [Romain]{style="font-weight: bold"} , fondateur d'Odysway et amoureux de la vallée d'Aspe
-    ::::
-  ::: -->
-::en-deux-mots
-::
+  ::en-deux-mots
+  ::
   :::highlights-row
   ---
   image: /images/voyages/sejour-berger-bearn/r7nUJWsgQVKySXxdppm8.jpg
@@ -301,7 +223,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   ::::
 
   #title
-  [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
+  Ce que vous allez vivre
   :::
 
   :::green-card-container

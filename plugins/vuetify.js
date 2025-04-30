@@ -57,6 +57,7 @@ export default defineNuxtPlugin((app) => {
             'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // red
             'yellow': '#F0B348', // yellow
             'yellow-light': '#EADFB1', // yellow
+            'yellow-light-2': 'rgb(254, 248, 237)', // yellow
             'green': '#2D5843', // green
             'green-light': '#7D9676', // green
             'blue': '#237C8C', // blue
