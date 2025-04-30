@@ -14,7 +14,7 @@
           :color="chips.experience.color"
           class="px-2"
         >
-          <span class="text-white text-subtitle-2 text-md-subtitle-1 font-weight-bold">
+          <span class="text-white text-caption text-md-subtitle-2 font-weight-bold">
             {{ chips.experience.text }}
           </span>
         </v-chip>
@@ -27,13 +27,13 @@
         >
           <template #prepend>
             <v-img
-              height="20"
-              width="20"
+              :height="lgAndUp ? 20: 18"
+              :width="lgAndUp ? 20 : 18"
               src="/public/icons/Business-Team-Goal--Streamline-Ultimate.svg"
               class="mr-3"
             />
           </template>
-          <span class="text-primary text-subtitle-2 text-md-subtitle-1 font-weight-bold">
+          <span class="text-primary text-caption text-md-subtitle-2 font-weight-bold">
             Groupe {{ chips.minMaxTravellers }} personnes
           </span>
         </v-chip>
@@ -47,11 +47,12 @@
           <template #prepend>
             <v-icon
               :icon="mdiCalendarBlankOutline"
+              :size="lgAndUp ? 20 : 18"
               color="primary"
               class="mr-3"
             />
           </template>
-          <span class="text-primary text-subtitle-2 text-md-subtitle-1 font-weight-bold">
+          <span class="text-primary text-caption text-md-subtitle-2 font-weight-bold">
             {{ chips.nbNights }} nuits sur place
           </span>
         </v-chip>
@@ -65,12 +66,12 @@
           <template #prepend>
             <v-img
               src="/public/icons/airplane.svg"
-              height="20"
-              width="20"
+              :height="lgAndUp ? 20: 18"
+              :width="lgAndUp ? 20 : 18"
               class="mr-3"
             />
           </template>
-          <span class="text-primary text-subtitle-2 text-md-subtitle-1 font-weight-bold">
+          <span class="text-primary text-caption text-md-subtitle-2 font-weight-bold">
             Vol {{ chips.flightIncluded ? 'compris' : 'non compris' }}
           </span>
         </v-chip>
@@ -83,13 +84,13 @@
         >
           <template #prepend>
             <v-img
-              height="20"
-              width="20"
+              :height="lgAndUp ? 20: 18"
+              :width="lgAndUp ? 20 : 18"
               src="/public/icons/bed.svg"
               class="mr-3"
             />
           </template>
-          <span class="text-primary text-subtitle-2 text-md-subtitle-1 font-weight-bold">
+          <span class="text-primary text-caption text-md-subtitle-2 font-weight-bold">
             Hôtel {{ chips.hotelStars }} étoiles
           </span>
         </v-chip>
@@ -102,13 +103,13 @@
         >
           <template #prepend>
             <v-img
-              height="20"
-              width="20"
+              :height="lgAndUp ? 20: 18"
+              :width="lgAndUp ? 20 : 18"
               src="/public/icons/sun.svg"
               class="mr-3"
             />
           </template>
-          <span class="text-primary text-subtitle-2 text-md-subtitle-1 font-weight-bold">{{ chips.bestSeason }} </span>
+          <span class="text-primary text-caption text-md-subtitle-2 font-weight-bold">{{ chips.bestSeason }} </span>
         </v-chip>
       </v-col>
     </v-row>
