@@ -76,7 +76,7 @@
         icon
         height="35"
         variant="text"
-        @click.stop="testModel = !testModel"
+        @click.stop="model = !model"
       >
         <v-icon>
           {{ mdiMenu }}

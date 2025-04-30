@@ -38,8 +38,6 @@
 </template>
 
 <script setup>
-import { mdiAccountCircle } from '@mdi/js'
-
 const model = defineModel()
 
 const drawerItems = ref([

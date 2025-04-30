@@ -219,7 +219,7 @@ const getStatus = (date) => {
       return {
         status: 'full',
         text: 'Complet',
-        color: 'blue',
+        color: 'secondary',
       }
     }
     else {

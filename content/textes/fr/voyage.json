@@ -1,0 +1,118 @@
+{
+  "shareButton": {
+    "text": "Partager",
+    "icon": "mdiExportVariant"
+  },
+  "photoButton": {
+    "text": "Voir les X photos",
+    "icon": "mdiCameraOutline"
+  },
+  "stickyBlock": {
+    "pricePrefix": "à partir de",
+    "priceSuffix": "/pers",
+    "dateText": "Dates disponibles",
+    "dateButtonText": "Voir tous les départs +",
+    "ctaCall": {
+      "text": "Contactez un expert en voyage",
+      "avatar": "/images/team/romain.webp",
+      "to": "/calendly"
+    },
+    "ctaBottom": {
+      "list": [
+        "**15 jours** pour changer d'avis",
+        "**Paiement en 3 fois**(Alma)",
+        "Paiement par **chèque vacances** (ANCV)"
+      ]
+    },
+    "privatisationText": "Demander une privatisation de ce voyage"
+  },
+  "authorNote": {
+    "title": "En deux mots"
+  },
+  "experiencesBlock": {
+    "title": "Ce qui vous attend",
+    "icon": "mdiHeart",
+    "iconColor": "yellow",
+    "backgroundColor": "yellow-light"
+  },
+  "programmeBlock": {
+    "title": "Programme",
+    "badgeColor": "secondary"
+  },
+  "accompanistsTitle": "Les accompagnateurs",
+  "housingTitle": "Votre hébergement",
+  "dateSections": {
+    "title": "Quel départ vous intéresse ?",
+    "pricePrefix": "à partir de",
+    "priceSuffix": "/pers",
+    "bookingButtonText": "Réserver",
+    "bookingButtonColor": "secondary",
+    "optionButtonText": "Poser une option",
+    "optionButtonColor": "blue",
+    "disabledButtonText": "Complet",
+    "disabledButtonColor": "grey",
+    "ctaList": {
+      "list": [
+        "**15 jours** pour changer d'avis",
+        "**Paiement en 3 fois**(Alma)",
+        "Paiement par **chèque vacances** (ANCV)"
+      ]
+    },
+    "status": {
+      "partiallyBooked": {
+        "title": "Départ garanti",
+        "text": "**X inscrits** - Reste X places",
+        "color": "yellow"
+      },
+      "fullyBooked": {
+        "title": "Complet",
+        "text": "**Complet**",
+        "color": "secondary"
+      },
+      "open": {
+        "title": "**Bientôt confirmé**",
+        "text": "**X inscrits**",
+        "color": "blue"
+      }
+    }
+  },
+  "indivSection": {
+    "title": "Vous préférez partir seul? C'est aussi possible.",
+    "backgroundColor": "grey-light-2",
+    "textButton": "Je privatise ce voyage",
+    "buttonColor": "primary"
+  },
+  "priceDetailsSection": {
+    "title": "Détail du prix",
+    "priceInclude": "Le prix comprend",
+    "colorInclude": "green",
+    "priceExclude": "Le prix ne comprend pas",
+    "colorExclude": "secondary"
+  },
+  "reviewsSection": {
+    "title": "Des voyageurs épanouis",
+    "ratingColor": "secondary"
+  },
+  "faqSection": {
+    "title": "Questions fréquentes",
+    "backgroundColor": "primary",
+    "textButton": "Contactez-nous",
+    "buttonColor": "secondary",
+    "to": "/contact",
+    "avatar": "/images/team/romain.webp",
+    "subtitle": "Autres questions? Notre équipe est là pour vous renseigner",
+    "description": "Lorem ipsum dolor sit amet dolor consectetur adipiscing elit"
+  },
+  "whySection": {
+    "title": "Pourquoi voyager avec Odysway ?",
+    "backgroundColor": "secondary-light-4",
+    "itemBackgroundColor": "secondary-light-3",
+    "list": [
+      {
+        "icon": "mdiHeart",
+        "text": "Des séjours immersif conçus avec soin"
+      }
+    ]
+  },
+  "otherIdeas": "D'autres idées de voyage"
+}

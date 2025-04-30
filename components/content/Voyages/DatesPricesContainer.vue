@@ -44,6 +44,7 @@ const { data: deal } = await useAsyncData(props.slug, async () => {
   const query = await queryCollection('deals').where('slug', '=', props.slug).first()
   return query
 })
+console.log('deal', deal.value)
 watch(isExpanded, (newValue) => {
   console.log('isExpanded', newValue)
   if (!newValue) {

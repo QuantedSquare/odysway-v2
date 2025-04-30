@@ -13,18 +13,21 @@
 definePageMeta({
   layout: 'voyage',
 })
-
 const route = useRoute()
-
-const [{ data: page }, { data: deal }] = await Promise.all([
+console.log(route.path)
+const [{ data: page }, { data: deal }, { data: voyagesTextes }] = await Promise.all([
   useAsyncData(route.path, () => {
     return queryCollection('voyages').path(route.path).first()
   }),
   useAsyncData('deal', () => {
     return queryCollection('deals').where('slug', '=', route.params.voyageSlug).first()
   }),
+  useAsyncData('voyages-textes', () => {
+    return queryCollection('page_voyage_fr').first()
+  }),
 ])
 
+console.log('voyages-textes', voyagesTextes.value)
 if (page.value) {
   defineOgImageComponent(page.value?.ogImage?.component, {
     title: page.value.ogImage?.props.title,
