@@ -1,5 +1,5 @@
 <template>
-  <div class="text-primary d-flex flex-column ga-3">
+  <div class="text-primary d-flex flex-column ga-4">
     <h4 class="text-h4 font-weight-bold">
       En deux mots
     </h4>
@@ -10,22 +10,16 @@
     <div class="d-flex ga-3">
       <v-avatar
         image="/public/images/team/romain.webp"
-        :size="mdAndDown ? 60 : 80"
+        size="40"
       />
-      <div class="text-body-2 d-flex flex-column justify-center ga-2">
+      <div class="text-subtitle-2 d-flex flex-column justify-center">
         <span class="font-weight-bold">
           Romain
         </span>
-        <span>
+        <span class="font-weight-regular">
           Fondateur Odysway
         </span>
       </div>
     </div>
   </div>
 </template>
-
-<script setup>
-import { useDisplay } from 'vuetify'
-
-const { mdAndDown } = useDisplay()
-</script>

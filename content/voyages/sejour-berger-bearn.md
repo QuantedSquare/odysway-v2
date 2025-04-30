@@ -181,7 +181,7 @@ Voir tous les départs
 Prendre RDV
 ::
 
-::chips-row
+::chips-container
 ::
 
 ::sticky-container
@@ -194,7 +194,7 @@ right-sticky: true
 #left-side
   ::en-deux-mots
   ::
-  :::highlights-row
+  :::highlights-container
   ---
   image: /images/voyages/sejour-berger-bearn/r7nUJWsgQVKySXxdppm8.jpg
   ---
@@ -223,7 +223,7 @@ right-sticky: true
   ::::
 
   #title
-  Ce que vous allez vivre
+  Ce qui vous attend
   :::
 
   :::programme-container

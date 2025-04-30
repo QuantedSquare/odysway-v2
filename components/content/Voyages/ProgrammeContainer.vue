@@ -5,7 +5,7 @@
   >
     <v-row v-if="programme">
       <v-col cols="12">
-        <h4 class="text-primary text-h4 font-weight-bold pb-0 pb-md-7">
+        <h4 class="text-primary text-h4 font-weight-bold pb-0 pb-md-4">
           Au programme
         </h4>
       </v-col>

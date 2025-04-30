@@ -1,6 +1,7 @@
 <template>
   <v-list-item
-    class="px-0"
+    class="px-0 py-2"
+    min-height="30"
   >
     <template #prepend>
       <v-icon

@@ -1,9 +1,9 @@
 <template>
-  <div class="my-8 my-md-12">
+  <div class="my-8 mt-md-12 mb-md-5 ">
     <ColorContainer
       color="yellow-light-2"
     >
-      <v-container>
+      <v-container class="py-0">
         <v-row>
           <v-col
             cols="12"
@@ -16,7 +16,7 @@
               >
                 <v-icon
                   color="white"
-                  size="20"
+                  size="22"
                   :icon="mdiHeartOutline"
                 />
               </v-avatar>

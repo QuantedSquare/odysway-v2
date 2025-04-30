@@ -6,8 +6,9 @@
       <v-col
         cols="12"
         md="8"
+        class="mb-md-5"
       >
-        <h1 class="text-h2 font-weight-bold">
+        <h1 class="text-primary text-h2 font-weight-bold">
           <slot name="title" />
         </h1>
       </v-col>
@@ -24,7 +25,7 @@
           :height="mdAndUp ? 46 : 36"
           @click="copyUrl"
         >
-          <div class="text-primary text-body-2 text-lg-body-1 font-weight-medium d-flex align-center ga-2">
+          <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-2">
             <v-icon
               :icon="mdiExportVariant"
               :size="mdAndUp ? 20 : 16"
@@ -33,7 +34,6 @@
             <span class="mt-1">Partager</span>
           </div>
         </v-btn>
-
         <v-snackbar
           v-model="snackbar"
           location="top"

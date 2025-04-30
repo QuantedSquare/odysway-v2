@@ -30,7 +30,7 @@
               size="small"
               class="px-2"
             >
-              <span class="text-caption font-weight-bold text-white">
+              <span class="text-subtitle-2 font-weight-bold text-white">
                 {{ day }}
               </span>
             </v-chip>
@@ -38,7 +38,7 @@
           </div>
         </v-card-title>
         <v-card-text
-          class="text-primary text-subtitle-1 font-weight-regula pt-2"
+          class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height"
           :style="!isExpanded ? 'max-height: 124px; overflow: hidden;' : ''"
         >
           {{ text }}
@@ -100,5 +100,8 @@ const toggle = () => {
 <style scoped>
 .shadow-none{
   box-shadow: none !important;
+}
+.line-height{
+  line-height: 30px !important;
 }
 </style>
