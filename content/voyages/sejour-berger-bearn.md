@@ -226,39 +226,9 @@ right-sticky: true
   Ce que vous allez vivre
   :::
 
-  :::green-card-container
-  #title
-  POURQUOI VOYAGER AVEC ODYSWAY ?
-
-  #items
-    ::::green-card-item
-    Un accompagnement personnalisé du début à la fin de votre voyage
-    ::::
-
-    ::::green-card-item
-    La liberté de choisir votre mode de voyage : en petit groupe ou privatif (aux dates de votre choix)
-    ::::
-
-    ::::green-card-item
-    Des petits groupes pour une dimension intimiste
-    ::::
-
-    ::::green-card-item
-    Des expériences en immersion, loin du tourisme de masse, soigneusement conçues par Odysway
-    ::::
-
-    ::::green-card-item
-    Des guides locaux passionnés
-    ::::
-  :::
-
-  :::title-container
-  #title
-  Le programme du voyage
-  :::
-
-  
-    :::day-row
+  :::programme-container
+  #cards
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/mvx58lw1RDSN108MJDQh.jpg
     ---
@@ -273,7 +243,7 @@ right-sticky: true
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/8d1vULa4SSqSQsex8Ow9.jpg
     ---
@@ -288,7 +258,7 @@ right-sticky: true
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/GU9frFNRDyBhXErJFx1t.jpg
     ---
@@ -303,7 +273,7 @@ right-sticky: true
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/tu5kNEGXQ06ViY6GpBji.jpg
     ---
@@ -318,7 +288,7 @@ right-sticky: true
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/cIv1uTbpTsyKAX5fhKMt.jpg
     ---
@@ -331,7 +301,7 @@ right-sticky: true
     #text
     Pour ce dernier jour dans le Béarn, la journée est libre. Partez pour une randonnée autour du lac d'Estaens ou allez explorer le village de Lescun, au cadre enchanteur. Vous pourrez aussi vous détendre sur le plateau de Lhers situé non loin. Sur votre retour dans la vallée, vous pourrez aller acheter du fromage à ramener chez vous, comme un souvenir de cette immersion dans les montagnes.
     :::
-    
+  :::
 
   :::title-container
   #title
