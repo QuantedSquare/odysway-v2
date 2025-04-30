@@ -15,9 +15,9 @@
           variant="flat"
           :size="chipSize"
           :color="chips.experience.color"
-          class="px-2"
+          density="comfortable"
         >
-          <span class="text-white text-caption text-sm-subtitle-2 font-weight-bold">
+          <span class="d-flex align-center text-white text-caption text-sm-subtitle-2 font-weight-bold px-3">
             {{ chips.experience.text }}
           </span>
         </v-chip>
@@ -28,18 +28,14 @@
           variant="flat"
           :size="chipSize"
           color="grey-light-2"
-          class="px-4 btn-shadow"
         >
-          <template #prepend>
+          <span class="d-flex text-primary text-caption text-sm-subtitle-2 font-weight-bold px-2">
             <v-img
               :src="chip.iconProps.src"
               :height="chip.iconProps.iconSize"
               :width="chip.iconProps.iconSize"
               class="mr-3"
             />
-          </template>
-
-          <span class="text-primary text-caption text-sm-subtitle-2 font-weight-bold">
             {{ chip.text }}
           </span>
         </v-chip>

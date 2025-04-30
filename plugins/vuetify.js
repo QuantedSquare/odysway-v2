@@ -93,6 +93,10 @@ export default defineNuxtPlugin((app) => {
         rounded: 'xl',
         class: 'subtle-shadow',
       },
+      VChip: {
+        class: 'pt-1 px-2',
+        rounded: 'chip',
+      },
       VBtn: {
         color: 'primary',
         elevation: 0,

@@ -37,12 +37,14 @@
             <span class="text-primary text-h5 font-weight-bold ">{{ title }}</span>
           </div>
         </v-card-title>
-        <v-card-text
-          class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height"
-          :style="!isExpanded ? 'max-height: 124px; overflow: hidden;' : ''"
-        >
-          {{ text }}
-        </v-card-text>
+        <v-expand-transition>
+          <v-card-text
+            class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height text-wrapper"
+            :class="{ 'text-truncate': !isExpanded }"
+          >
+            {{ text }}
+          </v-card-text>
+        </v-expand-transition>
         <v-card-actions class="text-decoration-underline">
           <v-btn
             variant="text"
@@ -103,5 +105,14 @@ const toggle = () => {
 }
 .line-height{
   line-height: 30px !important;
+}
+.text-wrapper {
+  transition: max-height 0.3s ease-out;
+}
+.text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>
