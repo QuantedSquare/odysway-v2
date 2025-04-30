@@ -74,7 +74,7 @@ export default defineNuxtPlugin((app) => {
             'grey': '#95A5A8',
             'grey-light': '#EAEDEE',
             'grey-darken-2': '#616161',
-            'grey-light-2': 'rgba(234, 237, 238, 1)',
+            'grey-light-2': 'rgba(234, 236, 238, 1)',
             'grey-light-3': 'rgba(249, 249, 249, 1)',
           },
           variables: {

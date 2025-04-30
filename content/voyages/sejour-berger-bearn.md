@@ -181,6 +181,9 @@ Voir tous les départs
 Prendre RDV
 ::
 
+::chips-row
+::
+
 ::sticky-container
 ---
 left-space: 8
@@ -189,7 +192,7 @@ right-space: 4
 right-sticky: true
 ---
 #left-side
-  :::intro-voyage-container
+  <!-- :::intro-voyage-container
   ---
   programme: 
   ---
@@ -266,7 +269,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     #title
     [Romain]{style="font-weight: bold"} , fondateur d'Odysway et amoureux de la vallée d'Aspe
     ::::
-  :::
+  ::: -->
 
   :::highlights-row
   ---
