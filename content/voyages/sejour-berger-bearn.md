@@ -270,7 +270,8 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     [Romain]{style="font-weight: bold"} , fondateur d'Odysway et amoureux de la vallée d'Aspe
     ::::
   ::: -->
-
+::en-deux-mots
+::
   :::highlights-row
   ---
   image: /images/voyages/sejour-berger-bearn/r7nUJWsgQVKySXxdppm8.jpg
