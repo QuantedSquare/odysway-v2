@@ -9,12 +9,12 @@
         class="mb-md-5"
       >
         <h1 class="text-primary text-h2 font-weight-bold">
-          <slot name="title" />
+          {{ voyage.title }}
         </h1>
       </v-col>
       <v-col class="d-flex align-start justify-md-end ga-4">
         <RatingBadge
-          :rating="deal.rating"
+          :rating="voyage.rating"
           elevation="2"
         />
         <v-btn
@@ -56,9 +56,8 @@
         sm="9"
       >
         <v-img
-          v-if="status === 'success'"
-          :src="img(imageSrc1, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
           height="455"
           rounded="lg"
@@ -69,17 +68,17 @@
         class="d-none d-sm-flex flex-column ga-7"
       >
         <v-img
-          v-if="status === 'success'"
-          :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(imageSrc2, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          v-if="voyage.imageSecondary"
+          :src="img(voyage.imageSecondary.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(voyage.imageSecondary.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
           height="214"
           rounded="lg"
         />
         <v-img
-          v-if="status === 'success'"
-          :src="img(imageSrc2, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(imageSrc1, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          v-if="voyage.photosList.length > 0"
+          :src="img(voyage.photosList[0].src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(voyage.photosList[0].src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
           height="214"
           rounded="lg"
@@ -88,13 +87,18 @@
     </v-row>
     <v-row class="media-btns-position">
       <v-col cols="auto">
-        <slot name="component-slot-1" />
+        <PhotoGalleryDialog
+          v-if="voyage.photosList.length > 0"
+          :photos-list="voyage.photosList"
+        />
       </v-col>
       <v-col
-        v-if="isVideoAdded"
+        v-if="voyage.videoLinks.length > 0"
         cols="auto"
       >
-        <slot name="component-slot-2" />
+        <VideoDialog
+          :videos-link="voyage.videoLinks"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -105,35 +109,16 @@ import { mdiExportVariant } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-defineProps({
-  imageSrc1: {
-    type: String,
-    default: '/images/Laponie-(1).webp',
-  },
-  imageSrc2: {
-    type: String,
-    default: '/images/Laponie-(1).webp',
-  },
-  imageSrc3: {
-    type: String,
-    default: '/images/Laponie-(1).webp',
-  },
-})
+const voyage = inject('voyage')
 
+console.log('injected voyage', voyage)
 const { mdAndUp } = useDisplay()
 const img = useImage()
 const route = useRoute()
-const deal = inject('deal')
 const snackbar = ref(false)
 
-const { data: page, status } = useAsyncData(route.path, () => {
-  return queryCollection('voyages').path(route.path).first()
-})
-const isVideoAdded = computed(() => {
-  return page.value.body.value[0].length > 4
-})
-
 function copyUrl() {
+  // TODO: change to the dynamic url
   const copiedUrl = `https://localhost:3000/${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true

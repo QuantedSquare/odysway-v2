@@ -4,7 +4,7 @@
     class="mt-5 mb-1"
   >
     <v-row
-      v-if="chips"
+      v-if="badgeSection"
       class="flex-nowrap overflow-auto hidden-scroll flex-md-wrap"
     >
       <v-col
@@ -13,30 +13,30 @@
       >
         <v-chip
           variant="flat"
-          :size="chipSize"
-          :color="chips.experience.color"
+          :size="lgAndUp ? 'x-large' : 'large'"
+          :color="badgeSection.experienceBadge.color"
           density="comfortable"
         >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-2 font-weight-bold px-3">
-            {{ chips.experience.text }}
+          <span class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3">
+            <div v-dompurify-html="parseBoldText(badgeSection.experienceBadge.text)" />
           </span>
         </v-chip>
 
         <v-chip
-          v-for="(chip, index) in chipData"
+          v-for="(chip, index) in badgeSection.otherBadges"
           :key="index"
           variant="flat"
-          :size="chipSize"
-          color="grey-light-2"
+          :size="lgAndUp ? 'x-large' : 'large'"
+          :color="chip.color"
         >
-          <span class="d-flex text-primary text-caption text-sm-subtitle-2 font-weight-bold px-2">
+          <span class="d-flex text-primary text-caption text-sm-subtitle-2  px-2">
             <v-img
-              :src="chip.iconProps.src"
-              :height="chip.iconProps.iconSize"
-              :width="chip.iconProps.iconSize"
+              :src="chip.icon"
+              :height="lgAndUp ? 20 : 18"
+              :width="lgAndUp ? 20 : 18"
               class="mr-3"
             />
-            {{ chip.text }}
+            <div v-dompurify-html="parseBoldText(chip.text)" />
           </span>
         </v-chip>
       </v-col>
@@ -47,60 +47,58 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
+const { badgeSection } = inject('voyage')
 const { lgAndUp } = useDisplay()
-const chipSize = computed(() => (lgAndUp.value ? 'x-large' : 'large'))
 
-const chips = {
-  experience: {
-    text: 'Dans la peau de blablabla... ',
-    color: 'yellow',
-  },
-  minMaxTravellers: '3 à 8',
-  nbNights: 7,
-  flightIncluded: true,
-  hotelStars: 4,
-  bestSeason: 'Printemps-été',
-}
+// const chips = {
+//   experience: {
+//     text: badgeSection.experience,
+//     color: badgeSection.experienceColor,
+//   },
+//   minMaxTravellers: '3 à 8',
+//   nbNights: 7,
+//   flightIncluded: true,
+//   hotelStars: 4,
+//   bestSeason: 'Printemps-été',
+// }
 
-const iconSize = computed(() => (lgAndUp.value ? 20 : 18))
-
-const chipData = [
-  {
-    text: `Groupe ${chips.minMaxTravellers} personnes`,
-    iconProps: {
-      src: '/icons/business-team.svg',
-      iconSize: iconSize.value,
-    },
-  },
-  {
-    text: `${chips.nbNights} nuits sur place`,
-    iconProps: {
-      src: '/icons/calendar.svg',
-      iconSize: iconSize.value,
-    },
-  },
-  {
-    text: `Vol ${chips.flightIncluded ? 'compris' : 'non compris'}`,
-    iconProps: {
-      src: '/icons/airplane.svg',
-      iconSize: iconSize.value,
-    },
-  },
-  {
-    text: `Hôtel ${chips.hotelStars} étoiles`,
-    iconProps: {
-      src: '/icons/bed.svg',
-      iconSize: iconSize.value,
-    },
-  },
-  {
-    text: chips.bestSeason,
-    iconProps: {
-      src: '/icons/sun.svg',
-      iconSize: iconSize.value,
-    },
-  },
-]
+// const chipData = [
+//   {
+//     text: `Groupe ${chips.minMaxTravellers} personnes`,
+//     iconProps: {
+//       src: '/icons/business-team.svg',
+//       iconSize: iconSize.value,
+//     },
+//   },
+//   {
+//     text: `${chips.nbNights} nuits sur place`,
+//     iconProps: {
+//       src: '/icons/calendar.svg',
+//       iconSize: iconSize.value,
+//     },
+//   },
+//   {
+//     text: `Vol ${chips.flightIncluded ? 'compris' : 'non compris'}`,
+//     iconProps: {
+//       src: '/icons/airplane.svg',
+//       iconSize: iconSize.value,
+//     },
+//   },
+//   {
+//     text: `Hôtel ${chips.hotelStars} étoiles`,
+//     iconProps: {
+//       src: '/icons/bed.svg',
+//       iconSize: iconSize.value,
+//     },
+//   },
+//   {
+//     text: chips.bestSeason,
+//     iconProps: {
+//       src: '/icons/sun.svg',
+//       iconSize: iconSize.value,
+//     },
+//   },
+// ]
 </script>
 
 <style scoped>

@@ -1,5 +1,6 @@
 <template>
   <v-dialog
+    v-if="photosList.length > 0"
     v-model="dialog"
     transition="dialog-top-transition"
     fullscreen
@@ -18,7 +19,7 @@
           color="primary"
           :size="lgAndUp ? 22 : 19"
         />
-        <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les photos</span>
+        <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>
         <span class="d-block d-sm-none text-caption text-md-subtitle-2 text-primary font-weight-bold ml-2">Photos</span>
       </v-btn>
     </template>
@@ -37,7 +38,13 @@
           </v-col>
         </v-row>
         <v-row>
-          <slot name="photo-col" />
+          <PhotoCol
+            v-for="(photo, index) in photosList"
+            :key="photo.src + index"
+            :image-src="photo.src"
+            :col-width="getColWidth(index)"
+            :alt="photo.alt"
+          />
         </v-row>
       </v-container>
     </v-sheet>
@@ -48,6 +55,17 @@
 import { mdiClose, mdiCameraOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 
+defineProps({
+  photosList: {
+    type: Array,
+    required: true,
+  },
+})
 const { lgAndUp } = useDisplay()
 const dialog = ref(false)
+
+const getColWidth = (index) => {
+  const pattern = [7, 5, 4, 8, 5, 7, 7, 5, 4, 8, 5, 7, 7, 5, 4, 8, 5, 7, 7, 5, 4]
+  return pattern[index % pattern.length].toString()
+}
 </script>

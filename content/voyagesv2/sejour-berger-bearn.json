@@ -12,7 +12,7 @@
     "alt": "Paysage montagneux de la vallée d'Aspe avec troupeau de brebis"
   },
   "imageSecondary": {
-    "src": "/images/voyages/sejour-berger-bearn/OOzgsubRRRiMprrkTtng.jpg",
+    "src": "/images/voyages/sejour-berger-bearn/96Kt8b8EQqyPkknTwwBK.jpg",
     "alt": "Berger avec son troupeau dans les Pyrénées"
   },
   "photosList": [
@@ -33,27 +33,28 @@
       "alt": "Randonnée dans les Pyrénées"
     }
   ],
+  "videoLinks": [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  ],
   "badgeSection": {
     "experienceBadge": {
       "text": "Dans la peau de...",
-      "color": "primary",
-      "otherBadges": [
-        {
-          "text": "**5 jours** d'immersion",
-          "color": "secondary",
-          "icon": "calendar"
-        },
-        {
-          "text": "**4 nuits** sur place",
-          "color": "secondary-light",
-          "icon": "bed"
-        }
-      ]
+      "color": "primary"
     },
-    "minMaxTravellersBadge": {
-      "text": "De 2 à 6 voyageurs",
-      "color": "primary-light"
-    }
+    "otherBadges": [
+      {
+        "text": "**5 jours** d'immersion",
+        "color": "secondary",
+        "icon": "calendar"
+      },
+      {
+        "text": "**4 nuits** sur place",
+        "color": "secondary-light",
+        "icon": "bed"
+      }
+    ]
   },
   "authorNote": {
     "text": "La découverte du véritable quotidien de berger en estive, la nuit au cœur de la montagne dans une cabane de berger, les randonnées à travers les paysages sauvages et préservés de la vallée d'Aspe... Une expérience authentique qui vous plongera dans la vie pastorale des Pyrénées.",

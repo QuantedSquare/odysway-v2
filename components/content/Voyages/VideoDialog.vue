@@ -61,7 +61,7 @@
           </v-btn>
         </template>
         <v-window-item
-          v-for="video in videoSrc"
+          v-for="video in videosLink"
           :key="video"
         >
           <iframe
@@ -86,7 +86,7 @@ import { mdiClose, mdiChevronLeft, mdiChevronRight, mdiVideoOutline } from '@mdi
 import { useDisplay } from 'vuetify'
 
 defineProps({
-  videoSrc: {
+  videosLink: {
     type: Array,
   },
 })

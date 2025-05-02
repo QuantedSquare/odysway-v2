@@ -34,6 +34,7 @@
     "stripe": "^17.6.0",
     "turndown": "^7.2.0",
     "vue": "latest",
+    "vue-dompurify-html": "^5.2.0",
     "vue-router": "latest",
     "zod": "^3.24.1"
   },

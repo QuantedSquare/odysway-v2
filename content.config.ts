@@ -425,21 +425,18 @@ export default defineContentConfig({
           src: z.string().editor({ input: 'media' }).describe('Image de la photo, conseil: Les ranger dans un dossier images/voyages/slug-voyage'),
           alt: z.string().describe('Texte descriptif de la photo'),
         })).describe('Liste des photos du voyage, présents dans le hero en haut de page'),
+        videoLinks: z.array(z.string()).describe('Liste des liens de videos du voyage, ex: ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"]'),
         // ==========================================
         badgeSection: z.object({
           experienceBadge: z.object({
             text: z.enum(experienceChoices).describe('Texte du badge experience placé en premier'),
+            color: z.enum(colorChoices).describe('Couleur du premier badge'),
+          }),
+          otherBadges: z.array(z.object({
+            text: z.string().describe('Texte du badge, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
             color: z.enum(colorChoices).describe('Couleur du badge'),
-            otherBadges: z.array(z.object({
-              text: z.string().describe('Texte du badge, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
-              color: z.enum(colorChoices).describe('Couleur du badge'),
-              icon: z.string().editor({ input: 'icon' }).describe('Icone du badge'),
-            })).describe('Liste des autres badges'),
-          }).describe('Badge experience placé en premier'),
-          minMaxTravellersBadge: z.object({
-            text: z.string().describe('Texte du badge minMaxTravellers placé en second'),
-            color: z.enum(colorChoices).describe('Couleur du badge'),
-          }).describe('Badge minMaxTravellers placé en second'),
+            icon: z.string().editor({ input: 'icon' }).describe('Icone du badge'),
+          })).describe('Liste des autres badges'),
         }).describe('Liste de Badges sous la section photo'),
         authorNote: z.object({
           text: z.string().describe('Texte de la note de auteur'),
