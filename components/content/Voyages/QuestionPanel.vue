@@ -7,7 +7,11 @@
         class="text-subtitle-1 font-weight-bold text-md-h6 "
         :class="'text-'+ questionColor"
       >
+        <div v-if="item">
+          {{ item.question }}
+        </div>
         <slot
+          v-else
           name="question"
           mdc-unwrap="p"
         />
@@ -19,7 +23,11 @@
         </template>
       </v-expansion-panel-title>
       <v-expansion-panel-text class="text-subtitle-2 text-md-subtitle-1 text-grey pl-6 ">
+        <div v-if="item">
+          <div v-dompurify-html="parseBoldText(item.answer)" />
+        </div>
         <slot
+          v-else
           name="answer"
           mdc-unwrap="p"
         />
@@ -39,6 +47,10 @@ defineProps({
   answerColor: {
     type: String,
     default: 'grey',
+  },
+  item: {
+    type: Object,
+    default: null,
   },
 })
 </script>

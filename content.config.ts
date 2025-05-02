@@ -210,7 +210,7 @@ export default defineContentConfig({
       }),
     }),
     dates: defineCollection({
-      type: 'data',
+      type: 'page',
       source: 'dates/*/**.json',
       schema: z.object({
         published: z.boolean().default(false),
@@ -237,8 +237,9 @@ export default defineContentConfig({
         authorAge: z.string().describe('Age du voyageur'),
         photo: z.string().describe('Photo du voyageur'),
         voyagePhoto: z.string().describe('Photo du voyage'),
+        rating: z.number().describe('Note attribuée au voyage ou à Odysway'),
         text: z.string().describe('Texte de la review'),
-        voyageSlug: z.string().describe('Slug du voyage'),
+        voyageSlug: z.enum(voyageChoices).describe('Slug du voyage'),
         voyageTitle: z.string().describe('Titre du voyage'),
         isOnHome: z.boolean().describe('Afficher sur la page d\'accueil'),
       }),

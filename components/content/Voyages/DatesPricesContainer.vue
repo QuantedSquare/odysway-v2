@@ -1,8 +1,20 @@
 <template>
   <v-container
-    v-if="deal"
+    v-if="dates"
     id="dates-container"
+    :fluid="width < 1440"
   >
+    <v-row
+      justify="center"
+      align="center"
+    >
+      <v-col
+        class=" font-weight-black text-h2 my-4"
+      >
+        Quel départ vous intéresse ?
+      </v-col>
+    </v-row>
+
     <v-row class="relative">
       <TransitionGroup
         name="list"
@@ -28,23 +40,14 @@
 </template>
 
 <script setup>
-import { useGoTo } from 'vuetify'
+import { useGoTo, useDisplay } from 'vuetify'
 
 const goTo = useGoTo()
-
 const isExpanded = ref(false)
-const props = defineProps({
-  slug: {
-    type: String,
-    required: true,
-  },
-})
+const { width } = useDisplay()
 
-const { data: deal } = await useAsyncData(props.slug, async () => {
-  const query = await queryCollection('deals').where('slug', '=', props.slug).first()
-  return query
-})
-console.log('deal', deal.value)
+const dates = inject('dates')
+
 watch(isExpanded, (newValue) => {
   console.log('isExpanded', newValue)
   if (!newValue) {
@@ -55,7 +58,7 @@ watch(isExpanded, (newValue) => {
 })
 
 const limitedDatesList = computed(() => {
-  return deal.value?.dates.slice(0, isExpanded.value ? deal.value.dates.length : 4)
+  return dates.slice(0, isExpanded.value ? dates.length : 4)
 })
 </script>
 

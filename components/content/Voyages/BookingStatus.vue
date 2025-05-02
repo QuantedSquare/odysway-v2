@@ -36,7 +36,7 @@
 <script setup>
 import { mdiAccountOutline } from '@mdi/js'
 
-const props = defineProps({
+defineProps({
   status: {
     type: Object,
     required: true,

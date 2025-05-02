@@ -111,8 +111,20 @@
     "itemBackgroundColor": "secondary-light-3",
     "list": [
       {
-        "icon": "mdiHeart",
+        "icon": "/icons/globe.svg",
         "text": "Des séjours immersif conçus avec soin"
+      },
+      {
+        "icon": "/icons/business-team.svg",
+        "text": "Des départs en petits groupes ou privatifs"
+      },
+      {
+        "icon": "/icons/love-flag.svg",
+        "text": "Des voyages conscients et porteurs de sens"
+      },
+      {
+        "icon": "/icons/user-friends.svg",
+        "text": "Une agence vraiment proche de vous"
       }
     ]
   },
