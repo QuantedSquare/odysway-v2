@@ -1,0 +1,193 @@
+{
+  "title": "Vis ma vie de berger dans les Pyrénées",
+  "slug": "sejour-berger-bearn",
+  "rating": 4.8,
+  "comments": 44,
+  "description": "Plongez dans le quotidien authentique d'un berger en estive dans les Pyrénées. Entre randonnées spectaculaires dans la vallée d'Aspe, nuits en cabane de berger et découverte du savoir-faire fromager, vivez une expérience unique au cœur des montagnes béarnaises.",
+  "interjection": "",
+  "country": "france",
+  "continent": "Europe",
+  "image": {
+    "src": "/images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg",
+    "alt": "Paysage montagneux de la vallée d'Aspe avec troupeau de brebis"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-berger-bearn/OOzgsubRRRiMprrkTtng.jpg",
+    "alt": "Berger avec son troupeau dans les Pyrénées"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/sejour-berger-bearn/vWamthSTHKziJrmdKMOP.jpg",
+      "alt": "Vue panoramique de la vallée d'Aspe"
+    },
+    {
+      "src": "/images/voyages/sejour-berger-bearn/EC3QHYsiTdOQyZwo3FFC.jpg",
+      "alt": "Cabane de berger traditionnelle"
+    },
+    {
+      "src": "/images/voyages/sejour-berger-bearn/a5hMKAdJT0OcPQxM7kqB.jpg",
+      "alt": "Fabrication de fromage traditionnel"
+    },
+    {
+      "src": "/images/voyages/sejour-berger-bearn/E7fXJGvT8vkYdoX8bIrA.jpg",
+      "alt": "Randonnée dans les Pyrénées"
+    }
+  ],
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "Dans la peau de...",
+      "color": "primary",
+      "otherBadges": [
+        {
+          "text": "**5 jours** d'immersion",
+          "color": "secondary",
+          "icon": "calendar"
+        },
+        {
+          "text": "**4 nuits** sur place",
+          "color": "secondary-light",
+          "icon": "bed"
+        }
+      ]
+    },
+    "minMaxTravellersBadge": {
+      "text": "De 2 à 6 voyageurs",
+      "color": "primary-light"
+    }
+  },
+  "authorNote": {
+    "text": "La découverte du véritable quotidien de berger en estive, la nuit au cœur de la montagne dans une cabane de berger, les randonnées à travers les paysages sauvages et préservés de la vallée d'Aspe... Une expérience authentique qui vous plongera dans la vie pastorale des Pyrénées.",
+    "author": "Claire",
+    "affixeAuthor": "et amoureuse de la vallée d'Aspe"
+  },
+  "experiencesBlock": [
+    "La découverte du véritable quotidien de berger en estive",
+    "La nuit au cœur de la montagne, dans une cabane de berger",
+    "Les randonnées à travers les paysages sauvages et préservés de la vallée d'Aspe",
+    "La gastronomie délicieuse du Béarn, en pension complète",
+    "Les conseils et le partage avec un accompagnateur de montagne expérimenté",
+    "La participation financière pour le berger"
+  ],
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE EN VALLEE D'ASPE",
+      "badgeText": "Jour 1",
+      "description": "Cap vers l'intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au coeur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !",
+      "photo": "/images/voyages/sejour-berger-bearn/mvx58lw1RDSN108MJDQh.jpg"
+    },
+    {
+      "title": "RANDONNÉE DANS LA VALLÉE",
+      "badgeText": "Jour 2",
+      "description": "Petit-déjeuner puis rencontre avec votre accompagnateur du séjour, avant un départ pour une randonnée sur les hauteurs de la vallée d'aspe à la journée. Première rencontre avec les bergers en estive et découverte des paysages sublimes de la vallée.",
+      "photo": "/images/voyages/sejour-berger-bearn/8d1vULa4SSqSQsex8Ow9.jpg"
+    },
+    {
+      "title": "UNE NUIT EN ESTIVE",
+      "badgeText": "Jour 3",
+      "description": "Partez pour 2 jours de randonnée sur le lieu de l'estive, aux côtés du berger et de son troupeau et passez la nuit en cabane ou en bivouac ! Une occasion rare et unique de plonger dans le quotidien de berger, comme un air du bout du monde... La cabane du berger se trouve dans une zone peu fréquentée. Au programme : marche avec le berger et son troupeau, traite du lait, fabrication du fromage, soin porté aux brebis...",
+      "photo": "/images/voyages/sejour-berger-bearn/GU9frFNRDyBhXErJFx1t.jpg"
+    },
+    {
+      "title": "COMME UN BERGER",
+      "badgeText": "Jour 4",
+      "description": "Réveil mémorable en montagne au rythme du berger, petit-déjeuner puis puis partage de ses activités sur la matinée. Derniers moments en sa compagnie, avant de redescendre en fin de matinée pour rejoindre la vallée dans l'après-midi. Pique-nique sur la route. Fin d'après-midi libre, profitez en pour aller vous explorer les villages de la vallée ou grimper jusqu'au Poey, pour avoir une vue unique sur la vallée d'Aspe. Nuit en gîte à Accous le soir.",
+      "photo": "/images/voyages/sejour-berger-bearn/tu5kNEGXQ06ViY6GpBji.jpg"
+    },
+    {
+      "title": "DERNIER JOUR DANS LES PYRÉNÉES",
+      "badgeText": "Jour 5",
+      "description": "Pour ce dernier jour dans le Béarn, la journée est libre. Partez pour une randonnée autour du lac d'Estaens ou allez explorer le village de Lescun, au cadre enchanteur. Vous pourrez aussi vous détendre sur le plateau de Lhers situé non loin. Sur votre retour dans la vallée, vous pourrez aller acheter du fromage à ramener chez vous, comme un souvenir de cette immersion dans les montagnes.",
+      "photo": "/images/voyages/sejour-berger-bearn/cIv1uTbpTsyKAX5fhKMt.jpg"
+    }
+  ],
+  "accompanistsList": [
+    {
+      "name": "Accompagnateur en moyenne montagne",
+      "description": "Que ce soit Pascale, Paco ou un autre, vous serez entre de bonnes mains avec l'un de nos accompagnateurs, qui connaissent la vallée, la montagne et les bergers depuis longtemps !",
+      "role": "Guide de montagne",
+      "image": "/images/voyages/sejour-berger-bearn/IPOu4FhWQCH17gOeOcBY.jpg"
+    },
+    {
+      "name": "Claire et Sandrine",
+      "description": "Claire et Sandrine ont repris ce gîte début 2020, elles y insufflent depuis de la bonne humeur et un accueil très convivial, sans parler des repas succulents qu'elles proposent, matin, midi et soir !",
+      "role": "Hôtes de votre séjour",
+      "image": "/images/voyages/sejour-berger-bearn/p4xG2vT7QpW2WcrnIuPa.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Gîte d'étape à Accous",
+      "housingType": "Gîte de montagne",
+      "housingMood": "Durant ce séjour, vous logerez 3 nuits dans une chambre d'un gîte, situé dans la ville d'Accous, et 1 nuit en estive, dans une cabane ou en tente, à proximité de la cabane du berger. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées.",
+      "image": [
+        {
+          "src": "/images/voyages/sejour-berger-bearn/JacSdSAWTfW40FdENnQh.jpg",
+          "alt": "Intérieur du gîte"
+        },
+        {
+          "src": "/images/voyages/sejour-berger-bearn/HJBg4gECT3qXda2TqenG.jpg",
+          "alt": "Vue extérieure du gîte"
+        },
+        {
+          "src": "/images/voyages/sejour-berger-bearn/0S9ohMXZRqqXZqcCr9dZ.jpg",
+          "alt": "Salle commune du gîte"
+        }
+      ]
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L'assistance Odysway 24h/24 et 7j/7",
+      "3 nuitées en chambre partagée dans un gîte de la vallée d'Aspe et les taxes de séjour",
+      "1 nuitée en montagne dans une cabane de berger, refuge ou bivouac selon conditions météo",
+      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 5",
+      "Les repas avec le berger, une partie du prix de votre séjour pour le berger",
+      "Les services d'un accompagnateur en moyenne montagne sur 3 jours",
+      "Le matériel pour la nuit près du berger (couette, tente)",
+      "La participation financière pour le berger"
+    ],
+    "exclude": [
+      "Les activités non comprises dans la section \"le prix comprend\"",
+      "L'assurance annulation ou multirisques",
+      "Le transport pour vous rendre sur place (voiture ou train jusqu'à Bedous)",
+      "Le transfert de la gare au gîte (en bus ou à pied)",
+      "Les dépenses personnelles et pourboires"
+    ]
+  },
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je dormir ?",
+        "answer": "Lors de ce séjour, vous dormirez dans un gîte d'étape à Accous dans la vallée d'Aspe, en base double à quadruple (chambres partagées). Les chambres sont confortables, la literie est bonne et les repas savoureux. Et la cerise sur le gâteau, la vue sur les montagnes et le reste de la vallée. Les sanitaires sont partagés avec une ou deux chambres."
+      },
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Pendant cette expérience, la pension complète est incluse dans le prix de votre voyage, du dîner du jour 1 jusqu'au petit-déjeuner du jour 5. Vous serez accueilli dans un gite d'étape qui vous servira des petits-déjeuner à base de pain frais, confiture maison et miel de la vallée. Le midi, vous aurez des paniers repas, généralement faits de salades gourmandes et de fruits. Le soir, une cuisine locale et savoureuse vous sera servie, en compagnie des autres voyageurs du gite."
+      },
+      {
+        "question": "Ce voyage est-il fait pour moi ?",
+        "answer": "Ce voyage est pour tous les amoureux des grands espaces et de randonnée. Vous serez accompagnés par un accompagnateur en montagne, qui s'adaptera à votre rythme et votre condition physique. En effet, plusieurs options de randonnée sont possibles à la journée pour aller à la rencontre des bergers. Il faudra compter au minimum 4 heures de marche par jour avec un dénivelé positif entre 400 et 600 mètres. La nuit avec le berger pourra aussi être adapté, en fonction de la météo et du confort souhaité : cabane, refuge ou tente."
+      }
+    ]
+  },
+  "pricing": {
+    "startingPrice": 615,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 0,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 0,
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 2,
+    "zoneChapka": 1,
+    "iso": "FR",
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 300,
+    "privatisationAvailable": false,
+    "groupeAvailable": true,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12
+  }
+}

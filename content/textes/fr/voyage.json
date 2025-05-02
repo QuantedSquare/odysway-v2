@@ -41,6 +41,8 @@
   },
   "accompanistsTitle": "Les accompagnateurs",
   "housingTitle": "Votre hébergement",
+  "housingTypeTitle": "Type de logement",
+  "housingMoodTitle": "L'ambiance du logement",
   "dateSections": {
     "title": "Quel départ vous intéresse ?",
     "pricePrefix": "à partir de",

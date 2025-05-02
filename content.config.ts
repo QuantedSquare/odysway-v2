@@ -22,6 +22,8 @@ const paysChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content
   .map(country => country.slug) as [string, ...string[]]
 console.log('paysChoices', paysChoices)
 
+const experienceChoices = ['Dans la peau de...', 'En immersion chez...', 'Dans l\'objectif de...'] as const
+
 const colorChoices = [
   'primary',
   'primary-light',
@@ -230,15 +232,15 @@ export default defineContentConfig({
       type: 'data',
       source: 'reviews/**.json',
       schema: z.object({
-        slug: z.string(),
-        author: z.string(),
-        authorAge: z.string(),
-        photo: z.string(),
-        voyagePhoto: z.string(),
-        text: z.string(),
-        voyageSlug: z.string(),
-        voyageTitle: z.string(),
-        isOnHome: z.boolean(),
+        slug: z.string().describe('Slug du voyage'),
+        author: z.string().describe('Nom du voyageur'),
+        authorAge: z.string().describe('Age du voyageur'),
+        photo: z.string().describe('Photo du voyageur'),
+        voyagePhoto: z.string().describe('Photo du voyage'),
+        text: z.string().describe('Texte de la review'),
+        voyageSlug: z.string().describe('Slug du voyage'),
+        voyageTitle: z.string().describe('Titre du voyage'),
+        isOnHome: z.boolean().describe('Afficher sur la page d\'accueil'),
       }),
     }),
     avisVoyageurs: defineCollection({
@@ -326,6 +328,8 @@ export default defineContentConfig({
         }).describe('Section programme, liste des activites du voyage'),
         accompanistsTitle: z.string().describe('Titre de la section accompagnants').default('Les accompagnants'),
         housingTitle: z.string().describe('Titre de la section logement').default('Votre hebergement'),
+        housingTypeTitle: z.string().describe('Titre de la section type de logement').default('Type de logement'),
+        housingMoodTitle: z.string().describe('Titre de la section ambiance du logement').default('Ambiance du logement'),
         dateSections: z.object({
           title: z.string().describe('Titre de la section').default('Quel depart vous interesse ?'),
           pricePrefix: z.string().describe('Texte avant le prix, ex: "a partir de"').default('a partir de'),
@@ -405,6 +409,7 @@ export default defineContentConfig({
         rating: z.number().describe('Note du voyage sur 5'),
         comments: z.number().describe('Nombre de commentaires'),
         description: z.string().describe('Description du voyage'),
+        interjection: z.string(),
         country: z.enum(paysChoices).describe('Pays du voyage'),
         continent: z.enum(['Europe', 'Afrique', 'Asie', 'Amérique du Nord', 'Amérique du Sud', 'Océanie']).describe('Continent du voyage'),
         // ==========================================
@@ -421,6 +426,21 @@ export default defineContentConfig({
           alt: z.string().describe('Texte descriptif de la photo'),
         })).describe('Liste des photos du voyage, présents dans le hero en haut de page'),
         // ==========================================
+        badgeSection: z.object({
+          experienceBadge: z.object({
+            text: z.enum(experienceChoices).describe('Texte du badge experience placé en premier'),
+            color: z.enum(colorChoices).describe('Couleur du badge'),
+            otherBadges: z.array(z.object({
+              text: z.string().describe('Texte du badge, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
+              color: z.enum(colorChoices).describe('Couleur du badge'),
+              icon: z.string().editor({ input: 'icon' }).describe('Icone du badge'),
+            })).describe('Liste des autres badges'),
+          }).describe('Badge experience placé en premier'),
+          minMaxTravellersBadge: z.object({
+            text: z.string().describe('Texte du badge minMaxTravellers placé en second'),
+            color: z.enum(colorChoices).describe('Couleur du badge'),
+          }).describe('Badge minMaxTravellers placé en second'),
+        }).describe('Liste de Badges sous la section photo'),
         authorNote: z.object({
           text: z.string().describe('Texte de la note de auteur'),
           author: z.enum(teamChoices).describe('Auteur de la note defini dans le fichier team.json'),
@@ -441,6 +461,25 @@ export default defineContentConfig({
           role: z.string().describe('Role de accompagnateur'),
           image: z.string().editor({ input: 'media' }).describe('Image de accompagnateur'),
         })).describe('Liste des accompagnateurs'),
+        housingBlock: z.array(z.object({
+          title: z.string().describe('Titre de la section'),
+          housingType: z.string().describe('Type de logement'),
+          housingMood: z.string().describe('Ambiance du logement'),
+          image: z.array(z.object({
+            src: z.string().editor({ input: 'media' }).describe('Image de la section'),
+            alt: z.string().describe('Texte descriptif de la photo'),
+          })).describe('Liste de photos de l\'hébergement'),
+        })).describe('Section logements'),
+        pricingDetailsBlock: z.object({
+          include: z.array(z.string()).describe('Liste des prix inclus, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
+          exclude: z.array(z.string()).describe('Liste des prix non inclus, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
+        }).describe('Section détails du prix, ce qui est inclus / exclus'),
+        faqBlock: z.object({
+          faqList: z.array(z.object({
+            question: z.string().describe('Question'),
+            answer: z.string().describe('Réponse'),
+          })).describe('Liste des questions / réponses'),
+        }).describe('Section FAQ'),
         // ==========================================
         pricing: z.object({
           startingPrice: z.number().describe('Prix d\'appel du voyage'),
