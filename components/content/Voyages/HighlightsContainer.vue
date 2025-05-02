@@ -19,14 +19,17 @@
                   size="22"
                   :icon="mdiHeartOutline"
                 />
+                <!-- //#TODO: replace this icon by the one from the textes, import svg -->
+                <!-- {{ experiencesBlockTextes.icon }} -->
               </v-avatar>
               <h4 class="text-h4 font-weight-bold">
-                Ce qui vous attend
+                {{ experiencesBlockTextes.title }}
               </h4>
             </div>
             <v-list
               slim
               bg-color="yellow-light-2"
+              class="px-3"
             >
               <HighlightListItem
                 v-for="highlight in experiencesBlock"
@@ -46,4 +49,5 @@ import { mdiHeartOutline } from '@mdi/js'
 import HighlightListItem from './HighlightListItem.vue'
 
 const { experiencesBlock } = inject('voyage')
+const { experiencesBlock: experiencesBlockTextes } = inject('page')
 </script>

@@ -459,6 +459,7 @@ export default defineContentConfig({
           role: z.string().describe('Role de accompagnateur'),
           image: z.string().editor({ input: 'media' }).describe('Image de accompagnateur'),
         })).describe('Liste des accompagnateurs'),
+        accompanistsDescription: z.string().describe('Description des accompagnateurs'),
         housingBlock: z.array(z.object({
           title: z.string().describe('Titre de la section'),
           housingType: z.string().describe('Type de logement'),

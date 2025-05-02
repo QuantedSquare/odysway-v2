@@ -5,7 +5,7 @@
   >
     <v-row v-if="programmeBlock">
       <v-col cols="12">
-        <h4 class=" font-weight-black text-h2 my-4 pb-0 pb-md-4">
+        <h4 class=" font-weight-black text-h4 my-4 pb-0 pb-md-4">
           Au programme
         </h4>
       </v-col>
@@ -16,7 +16,6 @@
       >
         <DayCard
           v-bind="day"
-          v-model="expandedIndex"
           :index="index"
         />
       </v-col>
@@ -25,7 +24,5 @@
 </template>
 
 <script setup>
-const expandedIndex = ref(null)
-
 const { programmeBlock } = inject('voyage')
 </script>

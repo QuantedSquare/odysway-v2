@@ -62,7 +62,8 @@ export default defineNuxtPlugin((app) => {
             'green-light': '#7D9676', // green
             'blue': '#237C8C', // blue
             'blue-light': '#9CC5CC', // blue
-
+            'red': '#DB6644',
+            'red-light': '#EB9A82',
             'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text

@@ -42,7 +42,8 @@
         >
           <div
             ref="content"
-            :class="['text-content', { expanded: isExpanded, clamped: !isExpanded }]"
+            class="text-content"
+            :class="{ truncated: !isExpanded }"
             :style="contentStyle"
           >
             {{ description }}
@@ -53,7 +54,7 @@
           <v-btn
             variant="text"
             class="text-h5"
-            @click="toggle"
+            @click="() => isExpanded = !isExpanded"
           >
             {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
             <v-icon
@@ -71,9 +72,9 @@
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
 import { useDisplay } from 'vuetify'
-import { ref, watch, nextTick, computed } from 'vue'
+import { ref, watch, nextTick } from 'vue'
 
-const props = defineProps({
+defineProps({
   photo: {
     type: String,
     required: true,
@@ -90,14 +91,12 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  index: Number,
 })
 
 const img = useImage()
 const { xs, width } = useDisplay()
 
-const expandedIndex = defineModel()
-
+const isExpanded = ref(false)
 const content = ref(null)
 const lineHeight = 30 // px, match your CSS
 const clampLines = 3
@@ -108,25 +107,15 @@ const contentStyle = ref({
   transition: 'max-height 0.5s ease',
 })
 
-const isExpanded = computed(() => expandedIndex.value === props.index)
-
-const toggle = () => {
-  expandedIndex.value = isExpanded.value ? null : props.index
-}
-
 watch(isExpanded, async (newVal) => {
   await nextTick()
   if (newVal) {
-    // Remove clamp, animate to full height
-    content.value.classList.remove('clamped')
+    // Expanding: animate to full height
     contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
   }
   else {
-    // Add clamp, animate to 3 lines
+    // Collapsing: animate to 3 lines
     contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
-    setTimeout(() => {
-      content.value.classList.add('clamped')
-    }, 100)
   }
 })
 </script>
@@ -146,18 +135,18 @@ watch(isExpanded, async (newVal) => {
 .text-content {
   overflow: hidden;
   transition: max-height 0.5s ease;
+  position: relative;
 }
 
-.text-content.clamped {
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.text-content.expanded {
-  /* No clamp, let content expand */
-  display: block;
+.text-content.truncated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2em;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
 }
 
 .rotate-180 {

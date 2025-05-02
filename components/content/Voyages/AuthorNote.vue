@@ -1,7 +1,7 @@
 <template>
   <div class="text-primary d-flex flex-column ga-4">
     <h4 class="text-h4 font-weight-bold">
-      En deux mots
+      {{ page.authorNote.title }}
     </h4>
     <p class="text-subtitle-1 text-md-h5 font-weight-regular">
       {{ authorNote.text }}
@@ -30,7 +30,7 @@
 
 <script setup>
 const { authorNote } = inject('voyage')
-
+const page = inject('page')
 const author = await queryCollection('team').where('name', '==', authorNote.author).first()
 console.log('author', author)
 </script>

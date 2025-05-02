@@ -1,7 +1,5 @@
 <template>
-  <v-card
-    v-if="dates.length > 0"
-  >
+  <v-card>
     <v-card-text>
       <v-container fluid>
         <v-row>
@@ -42,6 +40,7 @@
           </v-col>
         </v-row>
         <v-row
+          v-if="dates.length < 0"
           justify-md="center"
           class="text-center"
         >
@@ -94,6 +93,34 @@
             </v-btn>
           </v-col>
         </v-row>
+        <v-row v-else>
+          <v-col
+            cols="12"
+          >
+            <v-alert
+              color="#fbefec"
+              rounded="lg"
+              class="d-flex align-center ga-2 text-secondary font-weight-bold"
+            >
+              <CustomBadge :color="'red'" />
+              Pas encore de dates indiquées
+              <!-- #TODO: add link to ask for a quote and add the key -->
+            </v-alert>
+          </v-col>
+          <v-col
+            cols="12"
+          >
+            <v-btn
+              height="60"
+              block
+              rounded="md"
+            >
+              <span class="text-body-2 font-weight-bold text-decoration-none">
+                Demander un devis
+              </span>
+            </v-btn>
+          </v-col>
+        </v-row>
         <v-row justify-md="center">
           <v-col
             cols="12"
@@ -101,56 +128,70 @@
             <v-divider />
           </v-col>
         </v-row>
-        <v-row
-          justify-md="center"
-          class="text-center"
-        >
-          <v-col
-            cols="12"
+        <template v-if="dates.length < 0">
+          <v-row
+            justify-md="center"
+            class="text-center"
           >
-            <v-btn-secondary
-              height="60"
-              block
-              rounded="md"
-              :to="stickyBlock.ctaCall.link"
+            <v-col
+              cols="12"
             >
+              <v-btn-secondary
+                height="60"
+                block
+                rounded="md"
+                :to="stickyBlock.ctaCall.link"
+              >
+                <div class="d-flex align-center ga-2">
+                  <v-avatar
+                    :size="mdAndDown ? 30 : 40"
+                    :image="stickyBlock.ctaCall.avatar"
+                    color="white"
+                  />
+                  <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
+                    {{ stickyBlock.ctaCall.text }}
+                  </span>
+                </div>
+              </v-btn-secondary>
+            </v-col>
+          </v-row>
+          <v-row class="text-size-14 text-grey">
+            <v-col
+              cols="12"
+              class="d-flex align-start flex-column ga-1"
+            >
+              <div
+                v-for="item, index in stickyBlock.ctaBottom.list"
+                :key="index"
+                class="d-flex align-center ga-2"
+              >
+                <v-icon>
+                  {{ mdiCheckCircleOutline }}
+                </v-icon>
+                <span v-dompurify-html="parseBoldText(item)" />
+              </div>
+            </v-col>
+          </v-row>
+        </template>
+        <template v-else>
+          <v-row>
+            <v-col cols="12">
               <div class="d-flex align-center ga-2">
-                <v-avatar
-                  :size="mdAndDown ? 30 : 40"
-                  :image="stickyBlock.ctaCall.avatar"
-                  color="white"
-                />
-                <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
-                  {{ stickyBlock.ctaCall.text }}
+                <v-icon>
+                  {{ mdiCheckCircleOutline }}
+                </v-icon>
+                <span class="text-primary font-weight-bold">
+                  <!-- #TODO: add the key in the page -->
+                  Je souhaite être tenu informé des départs
                 </span>
               </div>
-            </v-btn-secondary>
-          </v-col>
-        </v-row>
-        <v-row class="text-size-14 text-grey">
-          <v-col
-            cols="12"
-            class="d-flex align-start flex-column ga-1"
-          >
-            <div
-              v-for="item, index in stickyBlock.ctaBottom.list"
-              :key="index"
-              class="d-flex align-center ga-2"
-            >
-              <v-icon>
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span v-dompurify-html="parseBoldText(item)" />
-            </div>
-          </v-col>
-        </v-row>
+            </v-col>
+            <NewsletterContainer is-on-voyage />
+          </v-row>
+        </template>
       </v-container>
     </v-card-text>
   </v-card>
-  <v-skeleton-loader
-    v-else
-    type="card"
-  />
   <v-row
     v-if="voyage.privatisationAvailable"
     class="mt-4"
