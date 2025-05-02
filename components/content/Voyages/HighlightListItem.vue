@@ -1,12 +1,21 @@
 <template>
   <v-list-item
-    class="text-body-1 text-grey-darken-3 px-0"
-    :prepend-icon="mdiChevronRight"
+    class="px-0 py-2"
+    min-height="30"
   >
-    <slot mdc-unwrap="p" />
+    <template #prepend>
+      <v-icon
+        :icon="mdiCheckboxMarkedCircle"
+        color="primary"
+        size="20"
+      />
+    </template>
+    <p class="text-body-1 text-primary">
+      <slot mdc-unwrap="p" />
+    </p>
   </v-list-item>
 </template>
 
 <script setup>
-import { mdiChevronRight } from '@mdi/js'
+import { mdiCheckboxMarkedCircle } from '@mdi/js'
 </script>

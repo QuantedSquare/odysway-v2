@@ -12,6 +12,7 @@ $border-radius-root: 10px !default;
     "md": $border-radius-root * 1.2,
     "lg": $border-radius-root * 2,
     "xl": $border-radius-root * 2.6,
+    "chip": $border-radius-root * 4,
     "pill": 60px,
     "circle": 50%,
     "shaped": $border-radius-root * 6 0,
@@ -39,7 +40,7 @@ $border-radius-root: 10px !default;
       "text-transform": none,
     ),
     "h4": (
-      "size": 20px,
+      "size": 22px,
       "weight": 400,
       "line-height": 30px,
       "letter-spacing": normal,
@@ -169,7 +170,7 @@ $border-radius-root: 10px !default;
   }
 
   .text-h5 {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 21px !important;
   }
 
@@ -183,6 +184,12 @@ $border-radius-root: 10px !default;
   }
   .text-body-2 {
     font-size: 12px !important;
+    line-height: 15px !important;
+  }
+  .text-subtitle-1 {
+    line-height: 21px !important;
+  }
+  .text-subtitle-2 {
     line-height: 15px !important;
   }
 }

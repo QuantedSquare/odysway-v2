@@ -181,6 +181,9 @@ Voir tous les départs
 Prendre RDV
 ::
 
+::chips-container
+::
+
 ::sticky-container
 ---
 left-space: 8
@@ -189,86 +192,9 @@ right-space: 4
 right-sticky: true
 ---
 #left-side
-  :::intro-voyage-container
-  ---
-  programme: 
-  ---
-
-  #tooltip-text-group
-    ::::icon-col
-    ---
-    icon-name: mdiCalendar
-    ---
-    #tooltip
-    Durée de voyage
-
-    #text
-    5 JOURS / 4 NUITS
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiWhiteBalanceSunny
-    ---
-    #tooltip
-    Période idéale
-
-    #text
-    JUIN À SEPT
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiTent
-    ---
-    #tooltip
-    Hébergement
-
-    #text
-    GITE ET BIVOUAC
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiAccountGroup
-    ---
-    #tooltip
-    Disponible en groupe
-
-    #text
-    DISPONIBLE EN GROUPE
-    ::::
-
-    ::::icon-col
-    ---
-    icon-name: mdiTeddyBear
-    ---
-    #tooltip
-    Dès 10 ans
-
-    #text
-    DÈS 10 ANS
-    ::::
-
-  #intro-voyage
-  _Laissez-vous porter par la douceur du Béarn et la sérénité des Pyrénées. Dans la vallée d’Aspe, les randonnées légères vous conduiront à travers les estives, ces pâturages d’altitude où les bergers vivent au rythme de leurs troupeaux et de la nature environnante. Ici, le temps semble suspendu, et chaque rencontre devient un moment privilégié._
-
-_Au fil des sentiers, découvrez les traditions vivantes des bergers : la traite des brebis, le savoir-faire ancestral du fromage, les histoires partagées au coin du feu. Passer une nuit près d’un berger, dans l’isolement apaisant des montagnes, vous offrira une expérience rare et précieuse._
-
-_Ce séjour est une invitation à ralentir, à observer et à se reconnecter profondément à la nature. Une escapade qui réveille l’essence d’une vie simple, en harmonie avec les montagnes, et laisse en vous une empreinte inoubliable de calme, à emporter dans votre quotidien ensuite !_
-
-  #avatar
-    ::::avatar-list-item
-    ---
-    avatar: /images/voyages/sejour-berger-bearn/RxTWYwSSu4WAg9S26acA.jpg
-    avatar-size: "60"
-    ---
-    #title
-    [Romain]{style="font-weight: bold"} , fondateur d'Odysway et amoureux de la vallée d'Aspe
-    ::::
-  :::
-
-  :::highlights-row
+  ::en-deux-mots
+  ::
+  :::highlights-container
   ---
   image: /images/voyages/sejour-berger-bearn/r7nUJWsgQVKySXxdppm8.jpg
   ---
@@ -297,42 +223,12 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
   ::::
 
   #title
-  [Ce que vous allez vivre ❤️️]{style="font-weight: bold"}
+  Ce qui vous attend
   :::
 
-  :::green-card-container
-  #title
-  POURQUOI VOYAGER AVEC ODYSWAY ?
-
-  #items
-    ::::green-card-item
-    Un accompagnement personnalisé du début à la fin de votre voyage
-    ::::
-
-    ::::green-card-item
-    La liberté de choisir votre mode de voyage : en petit groupe ou privatif (aux dates de votre choix)
-    ::::
-
-    ::::green-card-item
-    Des petits groupes pour une dimension intimiste
-    ::::
-
-    ::::green-card-item
-    Des expériences en immersion, loin du tourisme de masse, soigneusement conçues par Odysway
-    ::::
-
-    ::::green-card-item
-    Des guides locaux passionnés
-    ::::
-  :::
-
-  :::title-container
-  #title
-  Le programme du voyage
-  :::
-
-  
-    :::day-row
+  :::programme-container
+  #cards
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/mvx58lw1RDSN108MJDQh.jpg
     ---
@@ -347,7 +243,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/8d1vULa4SSqSQsex8Ow9.jpg
     ---
@@ -362,7 +258,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/GU9frFNRDyBhXErJFx1t.jpg
     ---
@@ -377,7 +273,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/tu5kNEGXQ06ViY6GpBji.jpg
     ---
@@ -392,7 +288,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     :::
     
 
-    :::day-row
+    :::day-card
     ---
     image: /images/voyages/sejour-berger-bearn/cIv1uTbpTsyKAX5fhKMt.jpg
     ---
@@ -405,7 +301,7 @@ _Ce séjour est une invitation à ralentir, à observer et à se reconnecter pro
     #text
     Pour ce dernier jour dans le Béarn, la journée est libre. Partez pour une randonnée autour du lac d'Estaens ou allez explorer le village de Lescun, au cadre enchanteur. Vous pourrez aussi vous détendre sur le plateau de Lhers situé non loin. Sur votre retour dans la vallée, vous pourrez aller acheter du fromage à ramener chez vous, comme un souvenir de cette immersion dans les montagnes.
     :::
-    
+  :::
 
   :::title-container
   #title
