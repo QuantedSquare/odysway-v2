@@ -16,123 +16,15 @@ Prendre RDV
 ::
 
 ::sticky-container
----
-left-space: 8
-left-sticky: false
-right-space: 4
-right-sticky: true
----
 #left-side
-  ::en-deux-mots
+  ::author-note
   ::
-  :::highlights-container
-  ---
-  image: /images/voyages/sejour-berger-bearn/r7nUJWsgQVKySXxdppm8.jpg
-  ---
-  ::::highlight-list-item
-  La découverte du véritable quotidien de berger en estive
-  ::::
 
-  ::::highlight-list-item
-  La nuit au cœur de la montagne, dans une cabane de berger
-  ::::
+  ::highlights-container
+  ::
 
-  ::::highlight-list-item
-  Les randonnées à travers les paysages sauvages et préservés de la vallée d'Aspe
-  ::::
-
-  ::::highlight-list-item
-  La gastronomie délicieuse du Béarn, en pension complète
-  ::::
-
-  ::::highlight-list-item
-  Les conseils et le partage avec un accompagnateur de montagne expérimenté
-  ::::
-
-  ::::highlight-list-item
-  La participation financière pour le berger
-  ::::
-
-  #title
-  Ce qui vous attend
-  :::
-
-  :::programme-container
-  #cards
-    :::day-card
-    ---
-    image: /images/voyages/sejour-berger-bearn/mvx58lw1RDSN108MJDQh.jpg
-    ---
-    #subtitle
-    JOUR 1
-
-    #title
-    ARRIVEE EN VALLEE D'ASPE 
-
-    #text
-    Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au coeur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !
-    :::
-    
-
-    :::day-card
-    ---
-    image: /images/voyages/sejour-berger-bearn/8d1vULa4SSqSQsex8Ow9.jpg
-    ---
-    #subtitle
-    JOUR 2
-
-    #title
-    RANDONNÉE DANS LA VALLÉE
-
-    #text
-    Petit-déjeuner puis rencontre avec votre accompagnateur du séjour, avant un départ pour une randonnée sur les hauteurs de la vallée d'aspe à la journée. Première rencontre avec les bergers en estive et découverte des paysages sublimes de la vallée.
-    :::
-    
-
-    :::day-card
-    ---
-    image: /images/voyages/sejour-berger-bearn/GU9frFNRDyBhXErJFx1t.jpg
-    ---
-    #subtitle
-    JOUR 3
-
-    #title
-    UNE NUIT EN ESTIVE
-
-    #text
-    Partez pour 2 jours de randonnée sur le lieu de l'estive, aux côtés du berger et de son troupeau et passez la nuit en cabane ou en bivouac ! Une occasion rare et unique de plonger dans le quotidien de berger, comme un air du bout du monde... La cabane du berger se trouve dans une zone peu fréquentée. Au programme : marche avec le berger et son troupeau, traite du lait, fabrication du fromage, soin porté aux brebis...
-    :::
-    
-
-    :::day-card
-    ---
-    image: /images/voyages/sejour-berger-bearn/tu5kNEGXQ06ViY6GpBji.jpg
-    ---
-    #subtitle
-    JOUR 4
-
-    #title
-    COMME UN BERGER
-
-    #text
-    Réveil mémorable en montagne au rythme du berger, petit-déjeuner puis puis partage de ses activités sur la matinée. Derniers moments en sa compagnie, avant de redescendre en fin de matinée pour rejoindre la vallée dans l'après-midi. Pique-nique sur la route. Fin d'après-midi libre, profitez en pour aller vous explorer les villages de la vallée ou grimper jusqu'au Poey, pour avoir une vue unique sur la vallée d'Aspe. Nuit en gîte à Accous le soir.
-    :::
-    
-
-    :::day-card
-    ---
-    image: /images/voyages/sejour-berger-bearn/cIv1uTbpTsyKAX5fhKMt.jpg
-    ---
-    #subtitle
-    JOUR 5
-
-    #title
-    DERNIER JOUR DANS LES PYRÉNÉES
-
-    #text
-    Pour ce dernier jour dans le Béarn, la journée est libre. Partez pour une randonnée autour du lac d'Estaens ou allez explorer le village de Lescun, au cadre enchanteur. Vous pourrez aussi vous détendre sur le plateau de Lhers situé non loin. Sur votre retour dans la vallée, vous pourrez aller acheter du fromage à ramener chez vous, comme un souvenir de cette immersion dans les montagnes.
-    :::
-  :::
+  ::programme-container
+  ::
 
   :::title-container
   #title

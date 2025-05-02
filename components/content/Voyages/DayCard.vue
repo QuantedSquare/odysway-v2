@@ -11,9 +11,9 @@
       >
         <v-img
           rounded="lg"
-          :src="img(image, { format: 'webp', quality: 70, width: 640 })"
+          :src="img(photo, { format: 'webp', quality: 70, width: 640 })"
           cover
-          :width="xs ? 'w-100' : 298"
+          :width="xs ? width : 298"
           height="214"
         />
       </v-col>
@@ -28,23 +28,27 @@
               color="secondary"
               rounded="lg"
               size="small"
-              class="px-2"
             >
-              <span class="text-subtitle-2 font-weight-bold text-white">
-                {{ day }}
+              <span class="text-subtitle-2 font-weight-bold text-white px-1">
+                {{ badgeText }}
               </span>
             </v-chip>
             <span class="text-primary text-h5 font-weight-bold ">{{ title }}</span>
           </div>
         </v-card-title>
-        <v-expand-transition>
-          <v-card-text
-            class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height text-wrapper"
-            :class="{ 'text-truncate': !isExpanded }"
+
+        <v-card-text
+          class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height text-wrapper"
+        >
+          <div
+            ref="content"
+            :class="['text-content', { expanded: isExpanded, clamped: !isExpanded }]"
+            :style="contentStyle"
           >
-            {{ text }}
-          </v-card-text>
-        </v-expand-transition>
+            {{ description }}
+          </div>
+        </v-card-text>
+
         <v-card-actions class="text-decoration-underline">
           <v-btn
             variant="text"
@@ -55,6 +59,7 @@
             <v-icon
               :icon="mdiArrowRight"
               color="primary"
+              :class="isExpanded ? 'rotate-180' : ''"
             />
           </v-btn>
         </v-card-actions>
@@ -66,13 +71,14 @@
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
 import { useDisplay } from 'vuetify'
+import { ref, watch, nextTick, computed } from 'vue'
 
 const props = defineProps({
-  image: {
+  photo: {
     type: String,
     required: true,
   },
-  day: {
+  badgeText: {
     type: String,
     required: true,
   },
@@ -80,7 +86,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  text: {
+  description: {
     type: String,
     required: true,
   },
@@ -88,15 +94,41 @@ const props = defineProps({
 })
 
 const img = useImage()
-const { xs } = useDisplay()
+const { xs, width } = useDisplay()
 
 const expandedIndex = defineModel()
+
+const content = ref(null)
+const lineHeight = 30 // px, match your CSS
+const clampLines = 3
+
+const contentStyle = ref({
+  maxHeight: `${lineHeight * clampLines}px`,
+  overflow: 'hidden',
+  transition: 'max-height 0.5s ease',
+})
 
 const isExpanded = computed(() => expandedIndex.value === props.index)
 
 const toggle = () => {
   expandedIndex.value = isExpanded.value ? null : props.index
 }
+
+watch(isExpanded, async (newVal) => {
+  await nextTick()
+  if (newVal) {
+    // Remove clamp, animate to full height
+    content.value.classList.remove('clamped')
+    contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
+  }
+  else {
+    // Add clamp, animate to 3 lines
+    contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
+    setTimeout(() => {
+      content.value.classList.add('clamped')
+    }, 100)
+  }
+})
 </script>
 
 <style scoped>
@@ -107,12 +139,28 @@ const toggle = () => {
   line-height: 30px !important;
 }
 .text-wrapper {
-  transition: max-height 0.3s ease-out;
+  position: relative;
+  width: 100%;
 }
-.text-truncate {
+
+.text-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.text-content.clamped {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3; /* Number of lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.text-content.expanded {
+  /* No clamp, let content expand */
+  display: block;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
 }
 </style>

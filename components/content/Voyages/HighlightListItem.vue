@@ -10,12 +10,20 @@
         size="20"
       />
     </template>
-    <p class="text-body-1 text-primary">
-      <slot mdc-unwrap="p" />
-    </p>
+    <p
+      v-dompurify-html="parseBoldText(highlight)"
+      class="text-body-1 text-primary"
+    />
   </v-list-item>
 </template>
 
 <script setup>
 import { mdiCheckboxMarkedCircle } from '@mdi/js'
+
+const { highlight } = defineProps({
+  highlight: {
+    type: String,
+    required: true,
+  },
+})
 </script>

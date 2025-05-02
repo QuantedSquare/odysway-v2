@@ -4,22 +4,33 @@
       En deux mots
     </h4>
     <p class="text-subtitle-1 text-md-h5 font-weight-regular">
-      “Lorem ipsum dolor sit amet consectetur adipiscing elit etiam cras tellus sit tempor amet, nascetur quam ornare proin platea diam amet sed fringilla eget pretium id sagittis in porttitor pharetra dui”.
+      {{ authorNote.text }}
     </p>
 
-    <div class="d-flex ga-3">
+    <div
+      v-if="author"
+      class="d-flex ga-3"
+    >
       <v-avatar
-        image="/public/images/team/romain.webp"
+        :image="author.image"
         size="40"
+        :alt="author.description"
       />
       <div class="text-subtitle-2 d-flex flex-column justify-center">
         <span class="font-weight-bold">
-          Romain
+          {{ authorNote.author }}
         </span>
         <span class="font-weight-regular">
-          Fondateur Odysway
+          {{ author.position }} &nbsp;{{ authorNote.affixeAuthor }}
         </span>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+const { authorNote } = inject('voyage')
+
+const author = await queryCollection('team').where('name', '==', authorNote.author).first()
+console.log('author', author)
+</script>

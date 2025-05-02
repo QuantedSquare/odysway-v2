@@ -21,14 +21,18 @@
                 />
               </v-avatar>
               <h4 class="text-h4 font-weight-bold">
-                <slot name="title" />
+                Ce qui vous attend
               </h4>
             </div>
             <v-list
               slim
               bg-color="yellow-light-2"
             >
-              <slot />
+              <HighlightListItem
+                v-for="highlight in experiencesBlock"
+                :key="highlight"
+                :highlight="highlight"
+              />
             </v-list>
           </v-col>
         </v-row>
@@ -39,4 +43,7 @@
 
 <script setup>
 import { mdiHeartOutline } from '@mdi/js'
+import HighlightListItem from './HighlightListItem.vue'
+
+const { experiencesBlock } = inject('voyage')
 </script>
