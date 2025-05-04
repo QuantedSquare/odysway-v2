@@ -112,7 +112,7 @@ $border-radius-root: 10px !default;
   )
 );
 
-@import 'fonts';
+@use 'fonts';
 
 // Responsive Typography
 @media (max-width: 960px) {

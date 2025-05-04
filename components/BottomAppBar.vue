@@ -13,10 +13,10 @@
           class="d-flex flex-column align-start justify-center"
         >
           <span class="text-caption text-grey">
-            À partir de
+            {{ dateSections.pricePrefix }}
           </span>
           <span class="text-body-2 font-weight-bold text-primary">
-            {{ 600 }}€<span class="text-caption">/pers</span>
+            {{ pricing.startingPrice }}€<span class="text-caption">{{ dateSections.priceSuffix }}</span>
           </span>
         </v-col>
         <v-spacer class="d-block" />
@@ -32,7 +32,7 @@
             class="text-caption font-weight-bold text-decoration-none"
             @click="goTo('#dates-container', { offset: -200 })"
           >
-            <slot name="text-btn-1" />
+            {{ dateSections.bookingButtonText }}
           </v-btn-secondary>
         </v-col>
       </v-row>
@@ -44,6 +44,8 @@
 import { useGoTo } from 'vuetify'
 
 const goTo = useGoTo()
+const { dateSections } = inject('page')
+const { pricing } = inject('voyage')
 </script>
 
 <style scoped>

@@ -2,10 +2,37 @@
   <v-container
     fluid
   >
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
+    <HeroVoyageSection />
+    <BottomAppBar />
+
+    <ChipsContainer />
+
+    <StickyContainer>
+      <template #left-side>
+        <AuthorNote />
+
+        <HighlightsContainer />
+
+        <ProgrammeContainer />
+
+        <AccompanistsContainer />
+      </template>
+      <template #right-side>
+        <InfoCard />
+      </template>
+    </StickyContainer>
+
+    <HousingSection />
+
+    <DatesPricesContainer />
+
+    <PriceDetailsContainer />
+
+    <ReviewCarousel />
+
+    <FaqVoyagesContainer />
+
+    <WhySection />
   </v-container>
 </template>
 

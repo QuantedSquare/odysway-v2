@@ -40,7 +40,7 @@
           </v-col>
         </v-row>
         <v-row
-          v-if="dates.length < 0"
+          v-if="dates.length > 0"
           justify-md="center"
           class="text-center"
         >
@@ -104,7 +104,7 @@
             >
               <CustomBadge :color="'red'" />
               Pas encore de dates indiquées
-              <!-- #TODO: add link to ask for a quote and add the key -->
+              <!-- #TODO: add the key in the page schema -->
             </v-alert>
           </v-col>
           <v-col
