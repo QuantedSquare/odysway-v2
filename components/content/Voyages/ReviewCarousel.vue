@@ -7,10 +7,10 @@
         cols="6"
         xs="7"
         sm="9"
-        class="text-h2 my-4"
+        class="text-h4 my-4 font-weight-bold"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
-        <slot name="title" />
+        {{ reviewsSection.title }}
       </v-col>
       <v-spacer />
       <v-col
@@ -75,7 +75,7 @@
                   v-for="i in 5"
                   :key="i"
                   :icon="mdiStar"
-                  :color="i <= review.rating ? 'secondary' : 'grey'"
+                  :color="i <= review.rating ? reviewsSection.ratingColor : 'grey'"
                   size="20"
                 />
               </v-card-subtitle>
@@ -101,12 +101,9 @@ defineProps({
     type: Boolean,
     default: false,
   },
-  showButtons: {
-    type: Boolean,
-    default: true,
-  },
   color: {
     type: String,
+    default: 'primary',
   },
 })
 const { mdAndUp, sm } = useDisplay()
@@ -152,6 +149,7 @@ const scrollAmount = computed(() => {
 const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
 })
+const { reviewsSection } = inject('page')
 // #TODO REVOIR CE COMPOSANT POUR ajouter faire le lien avec le voyage en plus
 </script>
 

@@ -43,8 +43,7 @@
             md="4"
           >
             <v-sheet
-              class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-8 py-10 d-flex flex-column justify-start "
-              height="480"
+              class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6 py-10 d-flex flex-column justify-start "
             >
               <v-avatar size="80">
                 <v-img
@@ -52,7 +51,7 @@
                 />
               </v-avatar>
 
-              <span class="text-h3 text-md-h4 text-lg-h3 font-weight-bold my-8">
+              <span class="text-h3 text-md-h4 text-lg-h3 font-weight-bold my-6">
                 Autres questions ?
                 Notre équipe est là pour vous renseigner
               </span>

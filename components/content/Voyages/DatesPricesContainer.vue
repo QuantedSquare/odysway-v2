@@ -2,16 +2,16 @@
   <v-container
     v-if="dates"
     id="dates-container"
-    :fluid="width < 1440"
+    :fluid="width < 1600"
   >
     <v-row
       justify="center"
       align="center"
     >
       <v-col
-        class=" font-weight-black text-h2 my-4"
+        class=" font-weight-black text-h4 my-4"
       >
-        Quel départ vous intéresse ?
+        {{ dateSections.title }}
       </v-col>
     </v-row>
 
@@ -47,6 +47,7 @@ const isExpanded = ref(false)
 const { width } = useDisplay()
 
 const dates = inject('dates')
+const { dateSections } = inject('page')
 
 watch(isExpanded, (newValue) => {
   console.log('isExpanded', newValue)
