@@ -38,7 +38,7 @@
               {{ page.readingTime }} min
             </div>
             <div class="text-grey">
-              {{ formatDate(page.publishedAt, 'DD MMMM, YYYY') }}
+              {{ formatDate(page.publishedAt, 'DD MMMM YYYY') }}
             </div>
           </div>
           <h1
@@ -51,7 +51,7 @@
             />
           </h1>
           <div
-            class="text-h6 text-lg-h5 text-grey font-weight-medium"
+            class="text-h6 text-lg-h5 font-weight-medium"
             :class="`text-${introductionColor}`"
           >
             <slot name="introduction" />
@@ -65,7 +65,7 @@
               :avatar-size="avatarSize"
             />
             <div class="text-body-2 text-lg-body-1 d-flex flex-column justify-center align-center align-sm-start ga-4">
-              <div class="text-primary  font-weight-bold">
+              <div class="text-primary font-weight-bold">
                 {{ page.author }}
               </div>
               <div class="text-grey">

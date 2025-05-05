@@ -29,14 +29,31 @@
       </v-row>
       <v-row v-else>
         <v-col
-          v-for="page, index in parsedPages"
-          :key="index"
+          v-for="page in paginatedBlogs"
+          ref="scroll-target"
+          :key="page.slug"
           cols="12"
           sm="6"
           lg="4"
         >
           <BlogCard
             v-bind="page"
+          />
+        </v-col>
+        <v-col cols="12">
+          <v-pagination
+            v-model="pagination.currentPage"
+            :length="nbPages"
+            :total-visible="7"
+            variant="flat"
+            density="comfortable"
+            rounded="circle"
+            active-color="primary"
+            elevation="3"
+            class="my-4"
+            @click="goTo(scrollTarget, { offset: -50, duration: 1000, easing: 'easeInCubic' })"
+            @next="pagination.currentPage = pagination.currentPage++"
+            @prev="pagination.currentPage = pagination.currentPage-- "
           />
         </v-col>
       </v-row>
@@ -46,6 +63,7 @@
 
 <script setup>
 import dayjs from 'dayjs'
+import { useGoTo } from 'vuetify'
 
 const route = useRoute()
 const { data: pages, status } = useAsyncData(route.path, () => {
@@ -72,6 +90,36 @@ const parsedPages = computed(() => {
     return dayjs((b.publishedAt)) - dayjs((a.publishedAt))
   })
   return parsedPages
+})
+
+const goTo = useGoTo()
+const scrollTarget = useTemplateRef('scroll-target')
+
+const pagination = ref({
+  currentPage: 1,
+  itemsPerPage: 12,
+})
+
+const paginatedBlogs = computed(() => {
+  const start = (pagination.value.currentPage - 1) * pagination.value.itemsPerPage
+  const end = pagination.value.currentPage * pagination.value.itemsPerPage
+  return parsedPages.value.slice(start, end)
+})
+
+const nbPages = computed(() => {
+  return Math.ceil(parsedPages.value.length / pagination.value.itemsPerPage)
+})
+
+watch(() => parsedPages.value, (newVal, oldVal) => {
+  if (newVal !== oldVal) {
+    pagination.value.currentPage = 1
+  }
+})
+
+watch(() => parsedPages.value, (newVal, oldVal) => {
+  if (newVal !== oldVal) {
+    pagination.value.currentPage = 1
+  }
 })
 </script>
 
