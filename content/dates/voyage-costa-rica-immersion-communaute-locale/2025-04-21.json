@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-costa-rica-immersion-communaute-locale",
+  "badges": [],
+  "departureDate": "2025-04-21T10:00:00",
+  "returnDate": "2025-05-02T16:00:00",
+  "startingPrice": 2990,
+  "maxTravelers": 8,
+  "bookedTravelers": 8,
+  "includeFlight": true,
+  "flightPrice": 1200
+}

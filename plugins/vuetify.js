@@ -54,14 +54,16 @@ export default defineNuxtPlugin((app) => {
             'secondary-light': '#edb2a1', // red
             'secondary-light-2': '#EB9A82', // red
             'secondary-light-3': 'rgba(219, 102, 68, 0.4)', // red
-            'secondary-light-4': 'rgba(219, 102, 68, 0.2)', // red
+            'secondary-light-4': '#DB66441A', // red
             'yellow': '#F0B348', // yellow
             'yellow-light': '#EADFB1', // yellow
+            'yellow-light-2': 'rgb(254, 248, 237)', // yellow
             'green': '#2D5843', // green
             'green-light': '#7D9676', // green
             'blue': '#237C8C', // blue
             'blue-light': '#9CC5CC', // blue
-
+            'red': '#DB6644',
+            'red-light': '#EB9A82',
             'soft-blush': '#FBF0EC',
             'cream': '#f5f5f0', // banner bg
             'dark': '#3e3e3e', // dark grey usually applied on text
@@ -74,7 +76,7 @@ export default defineNuxtPlugin((app) => {
             'grey': '#95A5A8',
             'grey-light': '#EAEDEE',
             'grey-darken-2': '#616161',
-            'grey-light-2': 'rgba(234, 237, 238, 1)',
+            'grey-light-2': 'rgba(234, 236, 238, 1)',
             'grey-light-3': 'rgba(249, 249, 249, 1)',
           },
           variables: {
@@ -91,6 +93,10 @@ export default defineNuxtPlugin((app) => {
       VCard: {
         rounded: 'xl',
         class: 'subtle-shadow',
+      },
+      VChip: {
+        class: 'pt-1 px-2',
+        rounded: 'chip',
       },
       VBtn: {
         color: 'primary',

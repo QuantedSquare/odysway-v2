@@ -17,7 +17,6 @@ const props = defineProps({
 const getBorderColor = computed(() => {
   return `rgba(var(--v-theme-${props.color}-light))`
 })
-console.log(getBorderColor.value)
 </script>
 
 <style scoped>

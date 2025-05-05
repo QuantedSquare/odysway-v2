@@ -17,26 +17,16 @@ export default defineAppConfig({
     siteName: 'Odysway',
   },
   header: {
-    title: 'Odysway',
     to: '/',
     logo: {
-      light: '',
-      dark: '',
+      desktop: '/logos/Logo-Odysway-Bleu.png',
+      mobile: '/logos/Logo-Odysway-Bleu.png',
       alt: 'Odysway Logo',
     },
-    search: true,
-    colorMode: true,
-    links: [{
-      'icon': 'i-simple-icons-facebook',
-      'to': 'https://facebook.com/odysway',
-      'target': '_blank',
-      'aria-label': 'Facebook',
-    }, {
-      'icon': 'i-simple-icons-instagram',
-      'to': 'https://instagram.com/odysway',
-      'target': '_blank',
-      'aria-label': 'Instagram',
-    }],
+    search: false,
+    textButton1: 'Notre vision du voyage',
+    textButton2: '+33 1 84 80 79 75',
+    textButton3: 'Faisons connaissance!',
   },
   footer: {
     logo: {
@@ -48,7 +38,7 @@ export default defineAppConfig({
     },
     contact: {
       ctaText: 'N\'hésitez pas à nous contacter',
-      phone: '01 23 45 67 89',
+      phone: '+33 1 84 80 79 75',
       email: 'contact@odysway.com',
       buttonContact: {
         text: 'contact',

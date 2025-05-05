@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "sejour-berger-bearn",
+  "badges": [],
+  "departureDate": "2025-06-16",
+  "returnDate": "2025-06-20",
+  "startingPrice": 650,
+  "maxTravelers": 6,
+  "bookedTravelers": 5,
+  "includeFlight": false,
+  "flightPrice": 0
+}

@@ -31,7 +31,7 @@
               cols="12"
               md="auto"
             >
-              <h1 class="text-h1">
+              <h1 class="custom-hero-title">
                 <slot name="title" />
               </h1>
               <slot name="subtitle" />
@@ -121,5 +121,14 @@ const img = useImage()
     height: 70vh;
     margin-bottom:300px!important;
   }
+  .custom-hero-title {
+    font-size: 42px!important;
+    line-height: 42px!important;
+  }
+}
+.custom-hero-title {
+font-weight: 700;
+font-size: 78px;
+line-height: 80px;
 }
 </style>

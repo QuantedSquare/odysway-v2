@@ -14,6 +14,9 @@
         v-else-if="extension === 'propos'"
         :propos="proposItems.propos"
       />
+      <DefaultDrawerContent
+        v-else
+      />
     </TransitionGroup>
   </v-navigation-drawer>
 </template>
@@ -37,7 +40,7 @@ const [
   /* z-index: 1050 !important; */
 }
 .nav-height{
-  height: 220px !important;
+  height: 100px !important;
 }
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;

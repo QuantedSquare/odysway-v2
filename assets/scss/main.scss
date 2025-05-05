@@ -12,6 +12,7 @@ $border-radius-root: 10px !default;
     "md": $border-radius-root * 1.2,
     "lg": $border-radius-root * 2,
     "xl": $border-radius-root * 2.6,
+    "chip": $border-radius-root * 4,
     "pill": 60px,
     "circle": 50%,
     "shaped": $border-radius-root * 6 0,
@@ -39,7 +40,7 @@ $border-radius-root: 10px !default;
       "text-transform": none,
     ),
     "h4": (
-      "size": 20px,
+      "size": 22px,
       "weight": 400,
       "line-height": 30px,
       "letter-spacing": normal,
@@ -75,7 +76,7 @@ $border-radius-root: 10px !default;
     ),
     "body-1": (
       "size": 18px,
-      "weight": 400,
+      "weight": 500,
       "line-height": 20px,
       "letter-spacing": normal,
       "text-transform": none,
@@ -111,7 +112,7 @@ $border-radius-root: 10px !default;
   )
 );
 
-@import 'fonts';
+@use 'fonts';
 
 // Responsive Typography
 @media (max-width: 960px) {
@@ -169,7 +170,7 @@ $border-radius-root: 10px !default;
   }
 
   .text-h5 {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 21px !important;
   }
 
@@ -185,12 +186,21 @@ $border-radius-root: 10px !default;
     font-size: 12px !important;
     line-height: 15px !important;
   }
+  .text-subtitle-1 {
+    line-height: 21px !important;
+  }
+  .text-subtitle-2 {
+    line-height: 15px !important;
+  }
 }
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .3) !important;
 }
 .subtle-shadow{
   box-shadow: 0px 3px 20px 0px rgba(34, 34, 35, 0.06)!important;
+}
+.btn-shadow {
+  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
 }
 
 .no-white-space {

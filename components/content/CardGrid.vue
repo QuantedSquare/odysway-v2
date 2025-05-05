@@ -3,7 +3,7 @@
     <v-row>
       <v-col
         cols="12"
-        class="text-center text-h2 font-weight-bold mt-4 mb-12"
+        class="text-center text-h2 font-weight-bold mt-md-4 mb-md-12"
       >
         <slot name="title" />
       </v-col>

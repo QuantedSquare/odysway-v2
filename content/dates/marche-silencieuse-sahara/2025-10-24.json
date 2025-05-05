@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "marche-silencieuse-sahara",
+  "badges": [],
+  "departureDate": "2025-10-24T00:00:00",
+  "returnDate": "2025-10-31T00:00:00",
+  "startingPrice": 1390,
+  "maxTravelers": 4,
+  "bookedTravelers": 0,
+  "includeFlight": false,
+  "flightPrice": 0
+}

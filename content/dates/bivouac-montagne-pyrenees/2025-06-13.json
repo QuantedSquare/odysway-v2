@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "bivouac-montagne-pyrenees",
+  "badges": [],
+  "departureDate": "2025-06-13T00:00:00",
+  "returnDate": "2025-06-15T00:00:00",
+  "startingPrice": 350,
+  "maxTravelers": 8,
+  "bookedTravelers": 6,
+  "includeFlight": false,
+  "flightPrice": 0
+}

@@ -1,7 +1,8 @@
 <template>
   <v-container
     class="subtle-shadow rounded-lg text-primary d-flex align-center"
-    height="190"
+    :height="xs ? 275 : 190"
+    fluid
   >
     <v-row>
       <v-col
@@ -35,8 +36,8 @@
         </div>
         <BookingStatus
           :status="enrichedDate.status"
-          :booked-places="enrichedDate.bookedPlaces"
-          :max-travellers="enrichedDate.maxTravellers"
+          :booked-places="enrichedDate.bookedTravelers"
+          :max-travellers="enrichedDate.maxTravelers"
         />
         <div class="d-none d-md-flex align-center ga-3">
           <v-chip
@@ -147,14 +148,17 @@
 import dayjs from 'dayjs'
 import { capitalize } from 'lodash'
 import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarOutline, mdiCheckCircleOutline } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import BookingStatus from './BookingStatus.vue'
 
+const { xs } = useDisplay()
 const { date } = defineProps({
   date: {
     type: Object,
     required: true,
   },
 })
+
 const enrichedDate = computed(() => {
   return {
     ...date,
@@ -162,7 +166,7 @@ const enrichedDate = computed(() => {
   }
 })
 const getStatus = (date) => {
-  if (date.bookedPlaces < 2) {
+  if (date.bookedTravelers < 2) {
     return {
       status: 'pending',
       text: `Bientôt confirmé`,
@@ -170,7 +174,7 @@ const getStatus = (date) => {
     }
   }
   else {
-    if (date.bookedPlaces === date.maxTravellers) {
+    if (date.bookedTravelers === date.maxTravelers) {
       return {
         status: 'full',
         text: 'Complet',

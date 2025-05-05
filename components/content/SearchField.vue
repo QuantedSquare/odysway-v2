@@ -43,6 +43,7 @@
                   v-bind="props"
                   :value="formattedDate"
                   readonly
+                  class="font-weight-bold text-primary"
                   hide-details
                   :prepend-inner-icon="mdiCalendarBlankOutline"
                 />
@@ -125,7 +126,7 @@ const destinations = ref([
   { value: 'GR', title: 'Grèce' },
 ])
 const travelTypes = [
-  'All', 'Voyage individuel', 'Voyage en famille', 'Voyage en couple', 'Voyage en groupe',
+  'Tous', 'Voyage individuel', 'Voyage en famille', 'Voyage en couple', 'Voyage en groupe',
 ]
 
 const formattedDate = computed(() => {
@@ -162,6 +163,12 @@ const isSearchPage = computed(() => {
 }
 </style> -->
 <style scoped>
+:deep(.v-icon__svg) {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+:deep(.v-field__input) {
+  color: rgb(var(--v-theme-primary)) !important;
+}
 .search-field-container {
   max-width: 1070px;
 }

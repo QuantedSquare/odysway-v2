@@ -14,13 +14,14 @@
         :src="imgComp(image, { format: 'webp', quality: 70, width: 640 })"
         :alt="title"
         cover
+        height="228"
       />
 
       <div class="blur-overlay" />
       <div class="image-overlay" />
       <div class="content-overlay">
         <div class="w-100 d-flex flex-column align-center justify-center">
-          <h3 class="category-title text-h5 text-lg-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
+          <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
           <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
             <span class="text-center">
               Cliquez pour en apprendre plus à propos des {{ title }}
@@ -87,6 +88,11 @@ onMounted(() => {
   border-radius: 1rem;
   transition: all 0.5s ease-in-out;
 }
+@media (max-width: 500px) {
+  .image-wrapper {
+    max-height: 200px;
+  }
+}
 
 .blur-overlay {
   position: absolute;
@@ -141,7 +147,6 @@ onMounted(() => {
 
 .category-title {
   margin: -2em 0 0 0;
-  font-weight: 600;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -176,7 +181,6 @@ onMounted(() => {
   }
   .category-title {
     margin: -60px 0 0 0 !important;
-    font-size: 1.5rem !important;
   }
 }
 

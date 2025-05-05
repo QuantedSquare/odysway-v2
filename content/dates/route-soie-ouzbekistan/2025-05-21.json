@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "route-soie-ouzbekistan",
+  "badges": [],
+  "departureDate": "2025-05-21T00:00:00",
+  "returnDate": "2025-06-03T00:00:00",
+  "startingPrice": 2000,
+  "maxTravelers": 8,
+  "bookedTravelers": 0,
+  "includeFlight": true,
+  "flightPrice": 600
+}

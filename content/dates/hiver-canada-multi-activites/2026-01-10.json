@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "hiver-canada-multi-activites",
+  "badges": [],
+  "departureDate": "2026-01-10T00:00:00",
+  "returnDate": "2026-01-17T00:00:00",
+  "startingPrice": 1760,
+  "maxTravelers": 12,
+  "bookedTravelers": 0,
+  "includeFlight": false,
+  "flightPrice": 0
+}

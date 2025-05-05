@@ -29,19 +29,17 @@
             <span class="text-h6 text-grey text-truncate"> {{ review.voyageTitle }}</span>
           </div>
         </v-card-title>
-        <v-card-subtitle class="mt-4">
-          <client-only>
-            <v-rating
-              :model-value="5"
-              color="secondary"
-              length="5"
-              size="20"
-              readonly
-            />
-          </client-only>
+        <v-card-subtitle class="mt-4 ">
+          <v-icon
+            v-for="i in 5"
+            :key="i"
+            :icon="mdiStar"
+            color="secondary"
+            size="20"
+          />
         </v-card-subtitle>
       </v-card-item>
-      <v-card-text class="text-h4 font-weight-bold text-primary">
+      <v-card-text class="text-h5 font-weight-bold text-primary">
         "{{ review.text }}
       </v-card-text>
     </v-sheet>
@@ -49,6 +47,7 @@
 </template>
 
 <script setup>
+import { mdiStar } from '@mdi/js'
 import { useImage } from '#imports'
 
 const props = defineProps({

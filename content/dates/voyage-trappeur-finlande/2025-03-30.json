@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-trappeur-finlande",
+  "badges": [],
+  "departureDate": "2025-03-30T00:00:00",
+  "returnDate": "2025-04-06T00:00:00",
+  "startingPrice": 2275,
+  "maxTravelers": 8,
+  "bookedTravelers": 6,
+  "includeFlight": false,
+  "flightPrice": 0
+}

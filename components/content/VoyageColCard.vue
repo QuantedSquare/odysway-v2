@@ -31,42 +31,8 @@
           class="hover-scale"
           cover
         >
-          <div
-            v-if="voyage.comments > 0"
-            class="badge-position"
-          >
-            <v-btn
-              size="small"
-              color="white"
-              rounded="pill"
-              height="46"
-            >
-              <div class="d-flex justify-center align-center mx-1">
-                <v-icon
-                  :icon="mdiStar"
-                  color="yellow-rating"
-                  size="20"
-                />
-                <span class="text-body-2 font-weight-bold text-primary">
-                  {{ `${voyage.rating.toString().replace('.', ',')}/5` }}
-                </span>
-              </div>
-            </v-btn>
-          </div>
-          <div
-            v-else
-            class="badge-position"
-          >
-            <v-btn
-              size="small"
-              color="primary"
-              class="font-weight-bold"
-              rounded="pill"
-              height="46"
-            >
-
-              Nouveau
-            </v-btn>
+          <div class="badge-position">
+            <RatingBadge :rating="voyage.rating" />
           </div>
         </v-img>
       </NuxtLink>
@@ -168,7 +134,7 @@
 </template>
 
 <script setup>
-import { mdiPlusCircle, mdiStar } from '@mdi/js'
+import { mdiPlusCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
 const props = defineProps({

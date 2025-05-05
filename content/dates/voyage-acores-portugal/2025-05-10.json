@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-acores-portugal",
+  "badges": [],
+  "departureDate": "2025-05-10T00:00:00",
+  "returnDate": "2025-05-17T00:00:00",
+  "startingPrice": 1970,
+  "maxTravelers": 15,
+  "bookedTravelers": 10,
+  "includeFlight": false,
+  "flightPrice": 0
+}

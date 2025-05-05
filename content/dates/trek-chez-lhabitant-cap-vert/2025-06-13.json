@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "trek-chez-lhabitant-cap-vert",
+  "badges": [],
+  "departureDate": "2025-06-13T00:00:00",
+  "returnDate": "2025-06-20T00:00:00",
+  "startingPrice": 1240,
+  "maxTravelers": 8,
+  "bookedTravelers": 0,
+  "includeFlight": false,
+  "flightPrice": 0
+}

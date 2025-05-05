@@ -4,10 +4,11 @@
       align="center"
     >
       <v-col
-        cols="8"
-        sm="10"
+        cols="6"
+        xs="7"
+        sm="9"
         class="text-h2 my-4"
-        :class="{ 'text-center': centerTitle }"
+        :class="{ 'text-md-center text-start': centerTitle }"
       >
         <slot name="title" />
       </v-col>
@@ -66,7 +67,7 @@
       >
         <div
           ref="cta-container"
-          class="mt-16 d-flex justify-center"
+          class="mt-md-16 d-flex justify-center"
         >
           <slot name="cta" />
         </div>
@@ -113,6 +114,7 @@ const gotCtaSlot = computed(() => {
 const childrenCount = computed(() => {
   return itemsList.value?.children[0]?.children.length
 })
+
 const displayButton = computed(() => {
   if (mdAndUp.value) {
     return childrenCount.value > 3

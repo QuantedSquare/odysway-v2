@@ -1,19 +1,26 @@
 <template>
   <v-dialog
+    v-if="photosList.length > 0"
     v-model="dialog"
     transition="dialog-top-transition"
     fullscreen
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
+        :height="lgAndUp ? 58 : 40"
+        :width="lgAndUp ? 172: ''"
         v-bind="activatorProps"
-        variant="outlined"
-        size="large"
-        block
-        :append-icon="mdiPlay"
-        color="text-shadow bg-blur"
+        rounded="pill"
+        color="white"
+        class="btn-shadow"
       >
-        <span class="text-caption text-uppercase text-md-button text-shadow"><slot name="gallery-btn" /></span>
+        <v-icon
+          :icon="mdiCameraOutline"
+          color="primary"
+          :size="lgAndUp ? 22 : 19"
+        />
+        <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>
+        <span class="d-block d-sm-none text-caption text-md-subtitle-2 text-primary font-weight-bold ml-2">Photos</span>
       </v-btn>
     </template>
     <v-sheet>
@@ -23,7 +30,7 @@
             <v-btn
               variant="outlined"
               :prepend-icon="mdiClose"
-              color="grey-darken-3"
+              color="primary"
               @click="dialog = false"
             >
               Fermer
@@ -31,7 +38,13 @@
           </v-col>
         </v-row>
         <v-row>
-          <slot name="photo-col" />
+          <PhotoCol
+            v-for="(photo, index) in photosList"
+            :key="photo.src + index"
+            :image-src="photo.src"
+            :col-width="getColWidth(index)"
+            :alt="photo.alt"
+          />
         </v-row>
       </v-container>
     </v-sheet>
@@ -39,15 +52,20 @@
 </template>
 
 <script setup>
-import { mdiPlay, mdiClose } from '@mdi/js'
+import { mdiClose, mdiCameraOutline } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 
+defineProps({
+  photosList: {
+    type: Array,
+    required: true,
+  },
+})
+const { lgAndUp } = useDisplay()
 const dialog = ref(false)
-</script>
 
-<style scoped>
-.bg-blur{
-  background-color: rgba(255, 255, 255, 0.214)!important;
-  backdrop-filter: blur(8px);
-  box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
+const getColWidth = (index) => {
+  const pattern = [7, 5, 4, 8, 5, 7, 7, 5, 4, 8, 5, 7, 7, 5, 4, 8, 5, 7, 7, 5, 4]
+  return pattern[index % pattern.length].toString()
 }
-</style>
+</script>

@@ -1,7 +1,5 @@
 <template>
-  <v-card
-    v-if="deal"
-  >
+  <v-card>
     <v-card-text>
       <v-container fluid>
         <v-row>
@@ -10,10 +8,10 @@
             class="d-flex flex-column align-start"
           >
             <span class="text-body-2 text-grey">
-              À partir de
+              {{ stickyBlock.pricePrefix }}
             </span>
             <span class="text-h2 font-weight-bold text-primary">
-              {{ deal.startingPrice }}€<span class="text-body-2 font-weight-bold">/pers</span>
+              {{ voyage.pricing.startingPrice }}€<span class="text-body-2 font-weight-bold">{{ stickyBlock.priceSuffix }}</span>
             </span>
           </v-col>
           <v-spacer class="d-block" />
@@ -21,26 +19,9 @@
             cols="5"
             class="d-flex align-start justify-end"
           >
-            <ClientOnly>
-              <v-btn
-                size="small"
-                color="white"
-                rounded="pill"
-                height="46"
-                class="btn-shadow"
-              >
-                <div class="d-flex justify-center align-center mx-1">
-                  <v-icon
-                    :icon="mdiStar"
-                    color="yellow-rating"
-                    size="20"
-                  />
-                  <span class="text-body-2 font-weight-bold text-primary">
-                    {{ `${deal.rating.toString().replace('.', ',')}/5` }}
-                  </span>
-                </div>
-              </v-btn>
-            </ClientOnly>
+            <RatingBadge
+              :rating="voyage.rating"
+            />
           </v-col>
         </v-row>
         <v-row justify-md="center">
@@ -54,11 +35,12 @@
         <v-row class="mt-0">
           <v-col cols="12">
             <span class="text-h4 font-weight-bold text-primary">
-              Dates disponibles
+              {{ stickyBlock.dateText }}
             </span>
           </v-col>
         </v-row>
         <v-row
+          v-if="dates.length > 0"
           justify-md="center"
           class="text-center"
         >
@@ -68,17 +50,17 @@
             cols="12"
           >
             <v-btn
-              height="52"
+              :height="mdAndDown ? 80 : 52"
               color="grey-light-3"
               rounded="md"
               block
               :to="date.link"
               class="w-100 block-btn-without-padding"
             >
-              <div class="d-inline-flex align-center justify-space-between w-100">
-                <div class="d-flex align-center ">
+              <div class="d-inline-flex flex-column flex-lg-row align-center  ga-2 justify-space-between w-100">
+                <div class="d-flex align-center  ga-1">
                   <CustomBadge :color="date.status.color" />
-                  <span class="text-body-2 text-decoration-none text-primary text-size-14">
+                  <span class="text-body-2 text-decoration-none text-primary text-size-14 text-wrap text-start">
                     du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMMM ') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMMM') }} {{ dayjs(date.returnDate).format('YYYY') }}</span>
                   </span>
                 </div>
@@ -88,7 +70,7 @@
                   :color="date.status.color"
                   rounded="lg"
                 >
-                  <span class="text-caption font-weight-bold  text-white ">
+                  <span class="text-caption font-weight-bold  text-white mb-1 px-1">
                     {{ date.status.text }}
                   </span>
                 </v-chip>
@@ -106,7 +88,35 @@
               @click="goTo('#dates-container', { offset: -200 })"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
-                Voir tous les départs +
+                {{ stickyBlock.dateButtonText }}
+              </span>
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row v-else>
+          <v-col
+            cols="12"
+          >
+            <v-alert
+              color="#fbefec"
+              rounded="lg"
+              class="d-flex align-center ga-2 text-secondary font-weight-bold"
+            >
+              <CustomBadge :color="'red'" />
+              Pas encore de dates indiquées
+              <!-- #TODO: add the key in the page schema -->
+            </v-alert>
+          </v-col>
+          <v-col
+            cols="12"
+          >
+            <v-btn
+              height="60"
+              block
+              rounded="md"
+            >
+              <span class="text-body-2 font-weight-bold text-decoration-none">
+                Demander un devis
               </span>
             </v-btn>
           </v-col>
@@ -118,67 +128,72 @@
             <v-divider />
           </v-col>
         </v-row>
-        <v-row
-          justify-md="center"
-          class="text-center"
-        >
-          <v-col
-            cols="12"
+        <template v-if="dates.length > 0">
+          <v-row
+            justify-md="center"
+            class="text-center"
           >
-            <v-btn-secondary
-              height="60"
-              block
-              rounded="md"
-              @click="goTo('#dates-container', { offset: -200 })"
+            <v-col
+              cols="12"
             >
+              <v-btn-secondary
+                height="60"
+                block
+                rounded="md"
+                :to="stickyBlock.ctaCall.link"
+              >
+                <div class="d-flex align-center ga-2">
+                  <v-avatar
+                    :size="mdAndDown ? 30 : 40"
+                    :image="stickyBlock.ctaCall.avatar"
+                    color="white"
+                  />
+                  <span class="text-caption text-lg-body-2 font-weight-bold text-decoration-none">
+                    {{ stickyBlock.ctaCall.text }}
+                  </span>
+                </div>
+              </v-btn-secondary>
+            </v-col>
+          </v-row>
+          <v-row class="text-size-14 text-grey">
+            <v-col
+              cols="12"
+              class="d-flex align-start flex-column ga-1"
+            >
+              <div
+                v-for="item, index in stickyBlock.ctaBottom.list"
+                :key="index"
+                class="d-flex align-center ga-2"
+              >
+                <v-icon>
+                  {{ mdiCheckCircleOutline }}
+                </v-icon>
+                <span v-dompurify-html="parseBoldText(item)" />
+              </div>
+            </v-col>
+          </v-row>
+        </template>
+        <template v-else>
+          <v-row>
+            <v-col cols="12">
               <div class="d-flex align-center ga-2">
-                <v-avatar
-                  image="/images/photo Romain.webp"
-                  color="white"
-                />
-                <span class="text-body-2 font-weight-bold text-decoration-none">
-                  Contacter un expert en voyage
+                <v-icon>
+                  {{ mdiCheckCircleOutline }}
+                </v-icon>
+                <span class="text-primary font-weight-bold">
+                  <!-- #TODO: add the key in the page -->
+                  Je souhaite être tenu informé des départs
                 </span>
               </div>
-            </v-btn-secondary>
-          </v-col>
-        </v-row>
-        <v-row class="text-size-14 text-grey">
-          <v-col
-            cols="12"
-            class="d-flex align-start flex-column ga-1"
-          >
-            <div class="d-flex align-center ga-2">
-              <v-icon>
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                <strong>15 jours</strong> pour changer d'avis
-              </span>
-            </div>
-            <div class="d-flex align-center ga-2">
-              <v-icon>
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                Paiement en <strong>trois fois</strong> (Alma)
-              </span>
-            </div>
-            <div class="d-flex align-center ga-2">
-              <v-icon>
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                Paiement par <strong>chèque vacances</strong> (ANCV)
-              </span>
-            </div>
-          </v-col>
-        </v-row>
+            </v-col>
+            <NewsletterContainer is-on-voyage />
+          </v-row>
+        </template>
       </v-container>
     </v-card-text>
   </v-card>
   <v-row
-    v-if="deal"
+    v-if="voyage.privatisationAvailable"
     class="mt-4"
   >
     <v-col
@@ -187,7 +202,7 @@
       <NuxtLink
         width="100%"
         class="text-primary text-break d-flex align-center justify-center ga-3"
-        :to="`/calendly?travelTitle=${deal.slug}`"
+        :to="`/calendly?travelTitle=${voyage.slug}`"
       >
 
         <v-icon
@@ -198,31 +213,27 @@
           {{ mdiArrowRight }}
         </v-icon>
         <span class="text-left font-weight-bold text-primary">
-          Demander une privatisation de ce voyage
+          {{ stickyBlock.privatisationText }}
         </span>
       </NuxtLink>
     </v-col>
   </v-row>
-  <v-skeleton-loader
-    v-else
-    type="card"
-  />
 </template>
 
 <script setup>
-import { mdiArrowRight, mdiStar, mdiCheckCircleOutline } from '@mdi/js'
-import { useGoTo } from 'vuetify'
+import { mdiArrowRight, mdiCheckCircleOutline } from '@mdi/js'
+import { useGoTo, useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
 
+const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
-const deal = useState('deal', () => null)
-const route = useRoute()
 const displayedDates = ref([])
-deal.value = await queryCollection('deals').where('slug', '=', route.params.voyageSlug).first()
-console.log('deal in infocard', deal.value)
+const dates = inject('dates')
+const { stickyBlock } = inject('page')
+const voyage = inject('voyage')
 
 const getStatus = (date) => {
-  if (date.bookedPlaces < 2) {
+  if (date.bookedTravelers < 2) {
     return {
       status: 'pending',
       text: `Bientôt confirmé`,
@@ -230,11 +241,11 @@ const getStatus = (date) => {
     }
   }
   else {
-    if (date.bookedPlaces === date.maxTravellers) {
+    if (date.bookedTravelers === date.maxTravellers) {
       return {
         status: 'full',
         text: 'Complet',
-        color: 'blue',
+        color: 'secondary',
       }
     }
     else {
@@ -247,8 +258,8 @@ const getStatus = (date) => {
   }
 }
 
-if (deal.value?.dates.length > 0) {
-  const sortedByDates = deal.value.dates
+if (dates.length > 0) {
+  const sortedByDates = dates
     .filter(date => dayjs(date.departureDate).isAfter(dayjs()))
     .sort((a, b) => dayjs(a.departureDate).diff(dayjs(b.departureDate)))
   displayedDates.value = sortedByDates.slice(0, 3).map((date) => {
@@ -258,16 +269,14 @@ if (deal.value?.dates.length > 0) {
       departureDate: date.departureDate,
       returnDate: date.returnDate,
       status: getStatus(date),
-      link: `/checkout?slug=${deal.value.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`,
+      link: `/checkout?slug=${voyage.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`,
     }
   })
+  console.log('displayedDates', displayedDates.value)
 }
 </script>
 
 <style scoped>
-.btn-shadow {
-  box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
-}
 .block-btn-without-padding:deep(.v-btn__content) {
   padding: 0px !important;
   width: 100% !important;

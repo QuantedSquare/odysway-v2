@@ -27,7 +27,6 @@ import { useDisplay } from 'vuetify'
 
 const drawer = ref(false)
 const { smAndDown } = useDisplay()
-console.log(smAndDown.value)
 </script>
 
 <style scoped>

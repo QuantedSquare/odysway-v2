@@ -1,0 +1,12 @@
+{
+  "published": false,
+  "slug": "voyage-egypte-croisiere-nil",
+  "badges": [],
+  "departureDate": "2025-09-13T00:00:00",
+  "returnDate": "2025-09-20T00:00:00",
+  "startingPrice": 1695,
+  "maxTravelers": 12,
+  "bookedTravelers": 0,
+  "includeFlight": true,
+  "flightPrice": 900
+}
