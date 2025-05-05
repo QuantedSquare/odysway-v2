@@ -14,28 +14,29 @@
       </v-row>
     </v-container>
     <v-container>
-      <v-row>
-        <v-skeleton-loader
-          v-if="loading"
-          type="card"
-        />
+      <v-row v-if="loading">
+        <v-col
+          v-for="n in 10"
+          :key="n"
+          cols="12"
+          sm="6"
+          lg="4"
+        >
+          <v-skeleton-loader
+            type="card"
+          />
+        </v-col>
+      </v-row>
+      <v-row v-else>
         <v-col
           v-for="page, index in parsedPages"
-          v-else
           :key="index"
           cols="12"
           sm="6"
           lg="4"
         >
           <BlogCard
-            :path="page.slug"
-            :title="page.title"
-            :displayed-img="page.imgSrc"
-            :published="page.published"
-            :published-at="page.publishedAt"
-            :type="page.blogType"
-            :badge-color="page.badgeColor"
-            :reading-time="page.readingTime"
+            v-bind="page"
           />
         </v-col>
       </v-row>
@@ -60,8 +61,8 @@ const parsedPages = computed(() => {
     return {
       title: page.title,
       publishedAt: page.publishedAt,
-      imgSrc: page.displayedImg,
-      slug: page.path,
+      displayedImg: page.displayedImg,
+      path: page.path,
       published: page.published,
       blogType: page.blogType,
       badgeColor: page.badgeColor,
