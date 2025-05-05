@@ -28,14 +28,14 @@
           lg="4"
         >
           <BlogCard
-            :blog-slug="page.slug"
-            :blog-title="page.title"
-            :blog-image="page.imgSrc"
-            :blog-published="page.published"
-            :blog-publication-date="page.publishedAt"
-            :blog-type="page.blogType"
-            :blog-badge-color="page.badgeColor"
-            :blog-reading-time="page.readingTime"
+            :path="page.slug"
+            :title="page.title"
+            :displayed-img="page.imgSrc"
+            :published="page.published"
+            :published-at="page.publishedAt"
+            :type="page.blogType"
+            :badge-color="page.badgeColor"
+            :reading-time="page.readingTime"
           />
         </v-col>
       </v-row>

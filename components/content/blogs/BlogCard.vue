@@ -115,8 +115,8 @@ defineProps({
     default: 'secondary',
   },
   readingTime: {
-    type: Number,
-    default: 3,
+    type: String,
+    default: '3',
   },
 })
 

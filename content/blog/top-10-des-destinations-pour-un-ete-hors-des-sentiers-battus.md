@@ -17,7 +17,7 @@ categories: "Blog"
 displayedImg: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 blogType: "Actu"
 badgeColor: "secondary"
-readingTime: "3 min"
+readingTime: "3"
 ---
 
 ::hero-section-blog
