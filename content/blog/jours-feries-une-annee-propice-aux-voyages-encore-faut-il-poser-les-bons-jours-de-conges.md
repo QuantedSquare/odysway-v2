@@ -37,7 +37,7 @@ badgeColor: "secondary"
 readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
 background-color: soft-blush
 title-color: primary

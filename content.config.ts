@@ -9,18 +9,18 @@ const teamFiles = fs.readdirSync(teamDir)
 const teamChoices = teamFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(teamDir, file), 'utf-8')).name)
   .filter(Boolean) as [string, ...string[]]
-console.log('teamChoices', teamChoices)
+// console.log('teamChoices', teamChoices)
 
 const voyageDir = path.resolve(__dirname, 'content/voyages')
 const voyageFiles = fs.readdirSync(voyageDir)
 const voyageChoices = voyageFiles
   .map(file => file.replace('.md', ''))
   .filter(Boolean) as [string, ...string[]]
-console.log('voyageChoices', voyageChoices)
+// console.log('voyageChoices', voyageChoices)
 
 const paysChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/pays/countriesList.json'), 'utf-8')) as Array<{ slug: string }>)
   .map(country => country.slug) as [string, ...string[]]
-console.log('paysChoices', paysChoices)
+// console.log('paysChoices', paysChoices)
 
 const experienceChoices = ['Dans la peau de...', 'En immersion chez...', 'Dans l\'objectif de...'] as const
 
