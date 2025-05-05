@@ -31,7 +31,7 @@
         >
           <span class="d-flex text-primary text-caption text-sm-subtitle-2  px-2">
             <v-img
-              :src="chip.icon"
+              :src="'/icons/' + chip.icon + '.svg'"
               :height="lgAndUp ? 20 : 18"
               :width="lgAndUp ? 20 : 18"
               class="mr-3"

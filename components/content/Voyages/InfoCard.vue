@@ -128,7 +128,7 @@
             <v-divider />
           </v-col>
         </v-row>
-        <template v-if="dates.length < 0">
+        <template v-if="dates.length > 0">
           <v-row
             justify-md="center"
             class="text-center"
