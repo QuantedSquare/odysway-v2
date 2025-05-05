@@ -26,7 +26,6 @@ background-color: soft-blush
 title-color: primary
 introduction-color: grey
 avatar-size: '60'
-image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 ---
 #title
 Top 10 des destinations 2025 pour un été hors des sentiers battus
@@ -36,9 +35,6 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend nullam eros, nul
 ::
 
 ::section-container
----
-image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
----
 #content
 L’été approche à grands pas et vous ne savez pas encore où partir en vacances. En revanche, une chose est sûre : vous misez sur un voyage estival en dehors des sentiers touristiques. Vous n’avez qu’une seule envie, celle de vous immerger au cœur de l’authenticité de votre future destination, loin de la foule et des grands classiques. Voici pour vous notre top 10 des destinations pour un été hors des sentiers battus.
 

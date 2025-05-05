@@ -35,7 +35,7 @@
               <v-icon size="24px">
                 {{ mdiClockTimeThreeOutline }}
               </v-icon>
-              {{ page.readingTime }}
+              {{ page.readingTime }} min
             </div>
             <div class="text-grey">
               {{ formatDate(page.publishedAt, 'DD MMMM, YYYY') }}
@@ -81,8 +81,8 @@
           class="pa-0 h-100"
         >
           <v-img
-            :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-            :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+            :src="img(page.displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+            :lazy-src="img(page.displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
             cover
             height="100%"
             :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
@@ -114,10 +114,6 @@ defineProps({
   avatarSize: {
     type: String,
     default: '60',
-  },
-  imageSrc: {
-    type: String,
-    default: '/images/Laponie-(1).webp',
   },
 })
 
