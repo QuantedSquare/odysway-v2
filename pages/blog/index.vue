@@ -7,7 +7,8 @@
         no-gutters
       >
         <v-col
-          class=" font-weight-black text-h2 my-4"
+          ref="scroll-target"
+          class="font-weight-black text-h2 my-4"
         >
           Blog
         </v-col>
@@ -27,10 +28,11 @@
           />
         </v-col>
       </v-row>
-      <v-row v-else>
+      <v-row
+        v-else
+      >
         <v-col
           v-for="page in paginatedBlogs"
-          ref="scroll-target"
           :key="page.slug"
           cols="12"
           sm="6"
@@ -51,7 +53,7 @@
             active-color="primary"
             elevation="3"
             class="my-4"
-            @click="goTo(scrollTarget, { offset: -50, duration: 1000, easing: 'easeInCubic' })"
+            @click="goTo(scrollTarget, { offset: -100, duration: 1000, easing: 'easeInOutCubic' })"
             @next="pagination.currentPage = pagination.currentPage++"
             @prev="pagination.currentPage = pagination.currentPage-- "
           />
