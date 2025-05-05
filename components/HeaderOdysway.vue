@@ -19,25 +19,45 @@
     </NuxtLink>
     <v-spacer />
     <div class="d-flex align-center ga-4">
-      <!-- <v-btn
-        icon
-        class="d-inline"
-        @click="searchOpen = !searchOpen"
-      >
-        <v-icon>{{ mdiMagnify }}</v-icon>
-      </v-btn> -->
-      <!-- <v-btn-primary
-        v-for="item, index in items"
-        :key="`link header ${index}`"
-        :href="item.link"
-        class="d-none d-md-inline text-decoration-none"
-        @mouseover="displayExtension(item)"
-        @click="resetExtension()"
-      >
-        <div class="text-button text-uppercase font-weight-bold">
-          {{ item.title }}
+      <!-- <template v-if="isConnected && user">
+        <v-menu location="bottom end">
+          <template #activator="{ props }">
+            <v-btn
+              icon
+              class="hidden-xs"
+              v-bind="props"
+            >
+              <v-icon>{{ mdiAccountCircle }}</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item>
+              <v-list-item-title>{{ user.email }}</v-list-item-title>
+            </v-list-item>
+            <v-list-item @click="handleSignOut">
+              <v-list-item-title>Sign Out</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </template>
+      <template v-else>
+        <div class="d-flex align-center ga-2">
+          <v-btn
+            variant="text"
+            class="hidden-xs text-uppercase"
+            @click="router.push('/signin')"
+          >
+            Sign In
+          </v-btn>
+          <v-btn
+            color="primary"
+            class="hidden-xs text-uppercase"
+            @click="router.push('/signup')"
+          >
+            Sign Up
+          </v-btn>
         </div>
-      </v-btn-primary> -->
+      </template> -->
       <v-btn
         color="primary"
         height="54"
@@ -100,6 +120,7 @@ import { useImage } from '#imports'
 const { header } = useAppConfig()
 // #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
 const { mdAndUp } = useDisplay()
+const { user, signOut, isConnected } = useUser()
 const router = useRouter()
 const testModel = ref(false)
 const searchOpen = ref(false)
@@ -146,6 +167,11 @@ function displayExtension(item) {
 function resetExtension() {
   showExtension.value = false
   extensionName.value = ''
+}
+
+const handleSignOut = async () => {
+  await signOut()
+  router.push('/signin')
 }
 
 // TODO : add google analytics

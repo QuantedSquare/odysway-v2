@@ -50,6 +50,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+      supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
       metapixel: {
