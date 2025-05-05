@@ -1,14 +1,22 @@
 <template>
   <v-container :fluid="width < 1440 ">
     <v-row justify="space-between">
-      <v-col class="text-h2 text-primary">
+      <v-col
+        cols="12"
+        sm="6"
+        class="text-center text-sm-start text-h2 text-primary"
+      >
         <slot name="title" />
       </v-col>
-      <v-col class="text-right">
+      <v-col
+        cols="12"
+        sm="6"
+        class="text-center text-sm-right"
+      >
         <slot name="cta-button" />
       </v-col>
     </v-row>
-    <v-row>
+    <v-row v-if="mergedData">
       <v-col
         v-for="(blog, index) in mergedData"
         :key="index"
@@ -17,13 +25,7 @@
         md="4"
       >
         <BlogCard
-          :blog-slug="blog.path"
-          :blog-title="blog.title"
-          :blog-image="blog.displayedImg"
-          :blog-published="blog.published"
-          :blog-date="blog.publishedAt"
-          :blog-type="blog.blogType"
-          :blog-badge-color="blog.badgeColor"
+          v-bind="blog"
         />
       </v-col>
     </v-row>
@@ -47,17 +49,9 @@ const props = defineProps({
 
 const { width } = useDisplay()
 
-const [
-  { data: blog1 },
-  { data: blog2 },
-  { data: blog3 },
-] = await Promise.all([
-  useAsyncData('blog1', () => queryCollection('blog').path(props.blogCardSlug1).first()),
-  useAsyncData('blog2', () => queryCollection('blog').path(props.blogCardSlug2).first()),
-  useAsyncData('blog3', () => queryCollection('blog').path(props.blogCardSlug3).first()),
+const mergedData = await Promise.all([
+  queryCollection('blog').path(props.blogCardSlug1).first(),
+  queryCollection('blog').path(props.blogCardSlug2).first(),
+  queryCollection('blog').path(props.blogCardSlug3).first(),
 ])
-
-const mergedData = computed(() => {
-  return [blog1.value, blog2.value, blog3.value]
-})
 </script>

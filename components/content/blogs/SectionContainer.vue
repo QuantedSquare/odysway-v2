@@ -33,12 +33,9 @@ defineProps({
   margin: 1.5rem 0;
 }
 .content-class:deep(h2){
- text-align: center;
  margin-bottom: 1em;
- color:black!important;
 }
 .content-class:deep(h3){
- text-align: center;
  margin-bottom: 1em;
 }
 </style>
