@@ -217,6 +217,7 @@ export default defineContentConfig({
           text: z.string().describe('Texte du badge, utiliser des "*" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
           icon: z.string().editor({ input: 'icon' }),
         })),
+        displayedStatus: z.enum(['Bientôt confirmé', 'Départ garanti', 'Complet']).describe('Status de la date, en affichage uniquement'),
         departureDate: z.date().describe('Date de départ du voyage'),
         returnDate: z.date().describe('Date de retour du voyage'),
         startingPrice: z.number().describe('Prix de départ du voyage'),
@@ -412,6 +413,7 @@ export default defineContentConfig({
         interjection: z.string(),
         country: z.enum(paysChoices).describe('Pays du voyage'),
         continent: z.enum(['Europe', 'Afrique', 'Asie', 'Amérique du Nord', 'Amérique du Sud', 'Océanie']).describe('Continent du voyage'),
+        duration: z.number().describe('Durée du voyage en jours'),
         // ==========================================
         image: z.object({
           src: z.string().editor({ input: 'media' }).describe('Image principale du voyage'),
@@ -489,6 +491,7 @@ export default defineContentConfig({
           minTravelersToConfirm: z.number().describe('Nombre de personnes minimum pour confirmer le voyage'),
           zoneChapka: z.number().describe('Zone du chapka'),
           iso: z.string().describe('ISO du voyage'),
+
           indivRoom: z.boolean().describe('Indique si le voyage est disponible en chambre individuelle'),
           forcedIndivRoom: z.boolean().describe('Indique si le voyageur est contraint de prendre une chambre individuelle'),
           indivRoomPrice: z.number().describe('Prix de la chambre individuelle'),

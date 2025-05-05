@@ -77,9 +77,6 @@
         md="2"
         class="d-flex flex-column align-start ga-1"
       >
-        <span class="text-body-2 text-grey">
-          À partir de
-        </span>
         <span class="text-h2 font-weight-black ">
           {{ enrichedDate.startingPrice }}€<span class="text-body-2 font-weight-bold">/pers</span>
         </span>

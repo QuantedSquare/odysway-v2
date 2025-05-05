@@ -10,49 +10,49 @@ const RETRY_DELAY_MS = 2000
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-async function downloadImage(imageUrl, outputPath, retryCount = 0) {
-  if (fs.existsSync(outputPath)) {
-    console.log(`Image already exists at: ${outputPath}`)
-    return outputPath
-  }
+// async function downloadImage(imageUrl, outputPath, retryCount = 0) {
+//   if (fs.existsSync(outputPath)) {
+//     console.log(`Image already exists at: ${outputPath}`)
+//     return outputPath
+//   }
 
-  try {
-    console.log(`Downloading image: ${imageUrl}`)
-    const response = await axios.get(imageUrl, { responseType: 'arraybuffer' })
+//   try {
+//     console.log(`Downloading image: ${imageUrl}`)
+//     const response = await axios.get(imageUrl, { responseType: 'arraybuffer' })
 
-    if (!response.data) {
-      throw new Error('Failed to download image: No data received')
-    }
+//     if (!response.data) {
+//       throw new Error('Failed to download image: No data received')
+//     }
 
-    fs.writeFileSync(outputPath, response.data)
-    console.log(`Saved image to: ${outputPath}`)
-    return outputPath
-  }
-  catch (error) {
-    if (retryCount < MAX_RETRIES) {
-      console.warn(`Error downloading image, retrying (${retryCount + 1}/${MAX_RETRIES}): ${error.message}`)
-      await sleep(RETRY_DELAY_MS)
-      return downloadImage(imageUrl, outputPath, retryCount + 1)
-    }
-    else {
-      console.error(`Failed to download image after ${MAX_RETRIES} attempts: ${imageUrl}`)
-      throw error
-    }
-  }
-}
+//     fs.writeFileSync(outputPath, response.data)
+//     console.log(`Saved image to: ${outputPath}`)
+//     return outputPath
+//   }
+//   catch (error) {
+//     if (retryCount < MAX_RETRIES) {
+//       console.warn(`Error downloading image, retrying (${retryCount + 1}/${MAX_RETRIES}): ${error.message}`)
+//       await sleep(RETRY_DELAY_MS)
+//       return downloadImage(imageUrl, outputPath, retryCount + 1)
+//     }
+//     else {
+//       console.error(`Failed to download image after ${MAX_RETRIES} attempts: ${imageUrl}`)
+//       throw error
+//     }
+//   }
+// }
 
-function generateImageFilename(imageUrl) {
-  const urlObj = new URL(imageUrl)
-  const originalFilename = path.basename(urlObj.pathname)
-  const extension = path.extname(originalFilename)
+// function generateImageFilename(imageUrl) {
+//   const urlObj = new URL(imageUrl)
+//   const originalFilename = path.basename(urlObj.pathname)
+//   const extension = path.extname(originalFilename)
 
-  if (extension.length === 0) {
-    console.log('No extension found for image: ', urlObj)
-    return `${originalFilename}.jpg`
-  }
+//   if (extension.length === 0) {
+//     console.log('No extension found for image: ', urlObj)
+//     return `${originalFilename}.jpg`
+//   }
 
-  return originalFilename
-}
+//   return originalFilename
+// }
 
 function readJson(filename) {
   const data = JSON.parse(fs.readFileSync(filename))
@@ -74,75 +74,64 @@ async function mergeDeals() {
     }
     const filteredDeals = datesVoyagesGroupe.filter(date => date.voyage.slug === voyage.slug)
 
-    let imgSrc1Path = '/images/flowers.png'
-    if (voyage.image_miniature) {
-      try {
-        const filename = generateImageFilename(voyage.image_miniature)
-        const outputPath = path.join(voyageDir, filename)
-        await downloadImage(voyage.image_miniature, outputPath)
-        imgSrc1Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
-      }
-      catch (error) {
-        console.error(`Failed to download miniature image for ${voyage.slug}: ${error.message}`)
-      }
-    }
+    // let imgSrc1Path = '/images/flowers.png'
+    // if (voyage.image_miniature) {
+    //   try {
+    //     const filename = generateImageFilename(voyage.image_miniature)
+    //     const outputPath = path.join(voyageDir, filename)
+    //     await downloadImage(voyage.image_miniature, outputPath)
+    //     imgSrc1Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
+    //   }
+    //   catch (error) {
+    //     console.error(`Failed to download miniature image for ${voyage.slug}: ${error.message}`)
+    //   }
+    // }
 
-    let imgSrc2Path = '/images/iStock-1336944149.webp'
-    if (voyage.image_principale) {
-      const filename = generateImageFilename(voyage.image_principale)
-      imgSrc2Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
-    }
+    // let imgSrc2Path = '/images/iStock-1336944149.webp'
+    // if (voyage.image_principale) {
+    //   const filename = generateImageFilename(voyage.image_principale)
+    //   imgSrc2Path = `/images/voyages/${slugify(voyage.slug, { lower: true })}/${filename}`
+    // }
     let formatedDates = []
     if (filteredDeals.length !== 0) {
       formatedDates = filteredDeals.reduce((acc, cur) => {
         const date = {
+          published: true,
+          badges: [],
           departureDate: cur.date_debut,
           returnDate: cur.date_fin,
           startingPrice: cur.prix_voyage,
-          indivRoomPrice: cur.voyage.price_indiv_room_forced || 300,
-          maxTravellers: cur.voyage.number_catchline_tab_group,
-          bookedPlaces: cur.nombre_de_pax_disponible || 0,
-          earlyBird: cur.voyage.got_earlybird || false,
-          promoEarlyBird: cur.voyage.reduction_earlybird || 0,
-          lastMinute: cur.last_minute_disponible || false,
-          promoLastMinute: cur.reduction_last_minute || 0,
-          promo: cur.voyage.reduction_code_promo || 0,
-          privatized: false,
-          flyTicketPrice: cur.voyage.prix_avion || 0,
+          maxTravelers: cur.voyage.number_catchline_tab_group,
+          minTravelers: 2,
+          bookedTravelers: cur.nombre_de_pax_disponible || 0,
+          includeFlight: cur.voyage.got_avion || false,
+          flightPrice: cur.voyage.prix_avion || 0,
         }
         acc.push(date)
         return acc
       }, [])
     }
 
-    const formatedData = {
-      title: voyage.titre,
-      slug: slugify(voyage.slug, { lower: true }),
-      iso: voyage.pays.map(p => p.iso).join(','),
-      imgSrc2: {
-        src: imgSrc2Path,
-        alt: path.basename(imgSrc2Path, path.extname(imgSrc2Path)),
-      },
-      imgSrc1: {
-        src: imgSrc1Path,
-        alt: path.basename(imgSrc1Path, path.extname(imgSrc1Path)),
-      },
-      interjection: voyage.interjection,
-      country: voyage.pays.map(p => p.nom).join(','),
-      zoneChapka: voyage.pays[0]?.zone_chapka || 0,
-      privatisationAvailable: voyage.individuel,
-      groupeAvailable: voyage.groupe,
-      duration: voyage.duree,
-      startingPrice: voyage.prix,
-      rating: voyage.note || 0,
-      comments: voyage.nombre_avis || 0,
-      tooltipChild: voyage.description_bandeau_famille || '',
-      tooltipGroup: voyage.groupe ? 'Disponible en groupe' : '',
-      dates: [...formatedDates],
-    }
+    console.log(formatedDates)
 
-    const filename = voyage.slug
-    fs.writeFileSync(`../content/deals/${slugify(filename, { lower: true })}.json`, JSON.stringify(formatedData, null, 2))
+    // const formatedDate = {
+    //   published: z.boolean().default(true),
+    //   badges: z.array(z.object({
+    //     text: z.string().describe('Texte du badge, utiliser des "*" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
+    //     icon: z.string().editor({ input: 'icon' }),
+    //   })),
+    //   departureDate: z.date().describe('Date de départ du voyage'),
+    //   returnDate: z.date().describe('Date de retour du voyage'),
+    //   startingPrice: z.number().describe('Prix de départ du voyage'),
+    //   maxTravelers: z.number().describe('Nombre de personnes maximum'),
+    //   minTravelers: z.number().describe('Nombre de personnes minimum').default(2),
+    //   bookedTravelers: z.number().describe('Nombre de personnes réservées'),
+    //   includeFlight: z.boolean().describe('Inclure un vol'),
+    //   flightPrice: z.number().describe('Prix du vol si inclus'),
+    // }
+
+    // const filename = voyage.slug
+    // fs.writeFileSync(`../content/dates/${slugify(voyage.slug, { lower: true })}/date.json`, JSON.stringify(formatedDates, null, 2))
   }
 }
 
