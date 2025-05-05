@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les plus beaux sites de la Méditerranée accessibles seulement à pied"
   description: "Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-02-10 12:59:00+00:00"
 tags: "Europe, France, Grands espaces"
 categories: "Nature et grands espaces"
 displayedImg: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/SC83IvNrSluqsLTeLkOQ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/SC83IvNrSluqsLTeLkOQ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-10 février 2021
-
 #title
 Les plus beaux sites de la Méditerranée accessibles seulement à pied
 
 #introduction
-  
+Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/plus-beaux-sites-mediterannee-accessible-a-pied/SC83IvNrSluqsLTeLkOQ.jpg"
----
 #content
 **Les abords de la Méditerranée recèlent de sites exceptionnels. Parmi eux, des lieux que l'on ne peut atteindre qu'à pied, de par leur isolation ou bien de leur situation au cœur de paysages préservés. Entre les sites naturels, les villages et les édifices historiques, les amoureux d'authenticité en prendront plein les yeux. Découvrons ensemble quelques un des plus beaux sites de la Méditerranée accessibles seulement à pied.**
 
@@ -152,3 +154,47 @@ Dans le département du Gard, aux abords de l'un des plus beaux villages de Fran
 
 Pour poursuivre votre lecture, nous vous proposons de lire [notre article sur la région du Jura.](https://odysway.com/que-faire-dans-region-jura)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

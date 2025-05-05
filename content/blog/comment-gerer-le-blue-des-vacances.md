@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment gérer le blues des vacances ?"
   description: "Moment privilégié où l'on se déconnecte de sa routine, les vacances apportent un véritable bien-être. Prendre son temps, profiter de son entourage, ne rien faire ou au contraire tester de nouvelles choses, tel est le propre des vacances. Mais alors, pourquoi le retour à la maison est-il si difficile ? Et ce sentiment de nostalgie et d'angoisse qui persiste… Ne cherchez plus, vous êtes en plein spleen de la rentrée ! Un mal qui touche près d'un tiers des vacanciers. Pour une rentrée sereine, voici quelques astuces pour mieux gérer le blues au retour des vacances."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-02-09 12:36:00+00:00"
 tags: "Developpement personnel, Europe, Famille"
 categories: "Developpement Personnel"
 displayedImg: "/images/blogs/comment-gerer-le-blue-des-vacances/mdCROfoQaGt5qMb8tNBg.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/comment-gerer-le-blue-des-vacances/mdCROfoQaGt5qMb8tNBg.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-9 février 2021
-
 #title
 Comment gérer le blues des vacances ?
 
 #introduction
-
+Moment privilégié où l'on se déconnecte de sa routine, les vacances apportent un véritable bien-être. Prendre son temps, profiter de son entourage, ne rien faire ou au contraire tester de nouvelles choses, tel est le propre des vacances. Mais alors, pourquoi le retour à la maison est-il si difficile ? Et ce sentiment de nostalgie et d'angoisse qui persiste… Ne cherchez plus, vous êtes en plein spleen de la rentrée ! Un mal qui touche près d'un tiers des vacanciers. Pour une rentrée sereine, voici quelques astuces pour mieux gérer le blues au retour des vacances.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-gerer-le-blue-des-vacances/mdCROfoQaGt5qMb8tNBg.jpg"
----
 #content
 **Moment privilégié où l'on se déconnecte de sa routine, les vacances apportent un véritable bien-être. Prendre son temps, profiter de son entourage, ne rien faire ou au contraire tester de nouvelles choses, tel est le propre des vacances. Mais alors, pourquoi le retour à la maison est-il si difficile ? Et ce sentiment de nostalgie et d'angoisse qui persiste… Ne cherchez plus, vous êtes en plein spleen de la rentrée ! Un mal qui touche près d'un tiers des vacanciers. Pour une rentrée sereine, voici quelques astuces pour mieux gérer le blues au retour des vacances.**
 
@@ -143,3 +145,47 @@ La fin des vacances est synonyme de retour à la routine. Pour casser cette rout
 
 Poursuivez votre lecture vers [notre article sur le voyage entre amis.](https://odysway.com/ou-partir-entre-amis)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "L'Ethiopie, berceau de l'humanité"
   description: "Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de colonisation, l’Éthiopie possède une culture intacte et fascinante ! L’Éthiopie est aussi considérée comme un des berceaux de l’humanité. C’est au bord de la rivière Awash, dans ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-17 14:01:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/lethiopie-berceau-de-lhumanite/MTQfMRnOQTKViDZAuKzZ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/lethiopie-berceau-de-lhumanite/MTQfMRnOQTKViDZAuKzZ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-17 avril 2020
-
 #title
 L'Ethiopie, berceau de l'humanité
 
 #introduction
-    
+Pourquoi partir en voyage en Éthiopie ? L’église Makkonen Selassie à Harar, Éthiopie Seul pays d’Afrique orientale à ne pas avoir connu de colonisation, l’Éthiopie possède une culture intacte et fascinante ! L’Éthiopie est aussi considérée comme un des berceaux de l’humanité. C’est au bord de la rivière Awash, dans ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/lethiopie-berceau-de-lhumanite/MTQfMRnOQTKViDZAuKzZ.jpg"
----
 #content
 ## Pourquoi partir en voyage en Éthiopie ?
 
@@ -236,3 +238,47 @@ Plus de 200.000 personnes vivent dans cette vallée, et sont répartis entre plu
 
 Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

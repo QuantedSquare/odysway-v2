@@ -13,32 +13,36 @@ navigation:
     Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
     
     ✨ Ludovic, notre guide en Colombie, nous raconte ✨
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-06-06 10:43:00+00:00"
 tags: "Colombie, voyage, Voyager"
 categories: "voyage, immersion, culture, Colombie, locale"
 displayedImg: "/images/blogs/interview-rencontre-avec-ludovic-notre-guide-local-en-colombie/2qspPd1dRqIAgkDAJNbQ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/interview-rencontre-avec-ludovic-notre-guide-local-en-colombie/2qspPd1dRqIAgkDAJNbQ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 juin 2023
-
 #title
 Interview - Rencontre avec Ludovic, notre guide local en Colombie
 
 #introduction
-Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
+Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, un pays aux multiples facettes empreinte de traditions !
+
+✨ Ludovic, notre guide en Colombie, nous raconte ✨
 ::
 
 ::section-container
----
-image-src: "/images/blogs/interview-rencontre-avec-ludovic-notre-guide-local-en-colombie/2qspPd1dRqIAgkDAJNbQ.jpg"
----
 #content
 Un voyage idéal, hors des sentiers battus, pour tous ceux qui rêvent de ressentir l'essence même de la Colombie, [un pays aux multiples facettes](https://odysway.com/destinations/colombie) empreinte de traditions !
 
@@ -106,3 +110,47 @@ Si vous voulez découvrir d’autres expériences auprès de nos guides locaux, 
 *   [Immersion au sein d'une famille nomade en Mongolie](https://odysway.com/voyages/voyage-nomades-mongolie) d'une durée de 11 jours☀️
 *   [Voyagez avec un chamane au Pérou](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=LK_Post&utm_medium=Article+LK&utm_campaign=perou) d'une durée de 11 jours✨
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

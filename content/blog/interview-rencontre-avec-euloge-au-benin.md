@@ -16,32 +16,36 @@ navigation:
     Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
     
     Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2022-10-25 14:00:00+00:00"
 tags: "Afrique, autrement, bénin"
 categories: "immersion, voyager, bénin, culture"
 displayedImg: "/images/blogs/interview-rencontre-avec-euloge-au-benin/F67WL3G8RzSfabyCk2Dj.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/F67WL3G8RzSfabyCk2Dj.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-25 octobre 2022
-
 #title
 Interview - Rencontre avec Euloge au Bénin
 
 #introduction
-Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.
+Vous souhaitez voyager au pays Vodoun ? Rencontrez sans plus attendre notre guide sur place ! 
+
+Direction l'Afrique, à la rencontre d'Euloge, notre agent local qui vous fera découvrir au mieux ce pays aux multiples facettes.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/interview-rencontre-avec-euloge-au-benin/F67WL3G8RzSfabyCk2Dj.jpg"
----
 #content
 **Odysway vous propose l'interview d'Euloge, notre agent local au Bénin.**
 
@@ -131,3 +135,47 @@ Odysway vous propose plusieurs voyages en Afrique :
 *   Vivez comme un nomade du Sahara au Maroc d'une durée de 11 jours
 *   Vivez comme un cap-verdien sur l'île de Santiago d'une durée de 8 jours
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

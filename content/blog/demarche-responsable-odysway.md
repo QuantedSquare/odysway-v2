@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Notre démarche responsable"
   description: "Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet \"Tribus de demain\" !"
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2023-01-06 09:00:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/demarche-responsable-odysway/jlb35gyQXWhP814Jp27h.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/demarche-responsable-odysway/jlb35gyQXWhP814Jp27h.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 janvier 2023
-
 #title
 Notre démarche responsable
 
 #introduction
-  
+Notre démarche responsable ? Proposer un tourisme responsable et qui a du sens, pour les voyageurs, les locaux et l'environnement. Mais également accessible ! C'est ainsi qu'Odysway reverse 1% de son chiffre d'affaires pour son projet "Tribus de demain" !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/demarche-responsable-odysway/jlb35gyQXWhP814Jp27h.jpg"
----
 #content
 Dans le cadre de notre démarche responsable, nous avons à cœur d'agir concrètement et d'apporter notre pierre à l'édifice d'un futur plus durable. Quoi de mieux que de d'imaginer notre propre projet pour une adhésion parfaite à nos valeurs ?
 
@@ -67,3 +69,47 @@ alt: undefined
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées"
   description: "Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-23 14:16:00+00:00"
 tags: "Animaux, Communautés locales, France, Grands espaces, Made in France"
 categories: "Nature et grands espaces, Blog"
 displayedImg: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/MVJHBQyQeOnW01mDbDUw.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/MVJHBQyQeOnW01mDbDUw.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-23 novembre 2020
-
 #title
 Récits de Voyage - Florence Guilmaille Partagez la vie d'un berger dans les Pyrénées
 
 #introduction
-
+Un séjour dans les Pyrénées, en immersion avec un berger et ses troupeaux. Découvrez le témoignage de Florence !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/recits-voyage-florence-sejour-immersion-berger-pyrenees/MVJHBQyQeOnW01mDbDUw.jpg"
----
 #content
   
 
@@ -106,3 +108,47 @@ alt: IMG_20200707_103357.jpg
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

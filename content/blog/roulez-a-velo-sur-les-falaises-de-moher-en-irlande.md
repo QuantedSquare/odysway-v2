@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Roulez à vélo sur les falaises de Moher en Irlande"
   description: "Au sud de Galway dans le comte de Clare en Irlande, se trouve un site grandiose : les falaises de Moher . Etape incontournable de tout séjour en Irlande , elles s'imposent dans le paysage et forcent le respect. Hautes de 214 m, elles sont balayées par les vents avec ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-09-22 08:16:00+00:00"
 tags: "Europe, Irlande, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
 displayedImg: "/images/blogs/roulez-a-velo-sur-les-falaises-de-moher-en-irlande/A6V2USjRNah4qmPoIdXr.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/roulez-a-velo-sur-les-falaises-de-moher-en-irlande/A6V2USjRNah4qmPoIdXr.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-22 septembre 2018
-
 #title
 Roulez à vélo sur les falaises de Moher en Irlande
 
 #introduction
-   
+Au sud de Galway dans le comte de Clare en Irlande, se trouve un site grandiose : les falaises de Moher . Etape incontournable de tout séjour en Irlande , elles s'imposent dans le paysage et forcent le respect. Hautes de 214 m, elles sont balayées par les vents avec ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/roulez-a-velo-sur-les-falaises-de-moher-en-irlande/A6V2USjRNah4qmPoIdXr.jpg"
----
 #content
 Au sud de Galway dans le comté de Clare en Irlande, se trouve un site grandiose : les **falaises de Moher**. Étape incontournable de tout **séjour en Irlande**, elles s’imposent dans le paysage et forcent le respect. Hautes de 214 m, elles sont balayées par les vents avec en fond sonore le bruit incessant des vagues qui se brisent sur la roche. Si pour vous le vertige ne fait pas partie de votre vocabulaire, enfourchez votre **vélo** et longez les sentiers bordant les falaises qui tombent à pic dans l’océan…
 
@@ -54,3 +56,47 @@ Bien que la majorité des visiteurs parcourent les falaises de Moher à pied, il
 
 Envie de découverte et exploration en pleine nature? Découvrez [nos voyages sur la thématique "voyage nature"](https://odysway.com/thematiques/voyage-nature) et libérez l'aventurier qui est en vous !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Sur les traces des gauchos en Argentine"
   description: "Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-07-29 13:57:00+00:00"
 tags: "Amerique du Sud, Argentine, Communautés locales, Grands espaces"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/traces-gauchos-argentine/swtFxmXGSjWxL1i4pQsA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/traces-gauchos-argentine/swtFxmXGSjWxL1i4pQsA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 juillet 2019
-
 #title
 Sur les traces des gauchos en Argentine
 
 #introduction
-     
+Peuple fier aux traditions fortes, les gauchos peuplent l'Argentine depuis plusieurs siècles . Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d'Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/traces-gauchos-argentine/swtFxmXGSjWxL1i4pQsA.jpg"
----
 #content
 Peuple fier aux traditions fortes, **les gauchos peuplent l’Argentine depuis plusieurs siècles**. Incarnant le symbole de la liberté, ils ont longtemps mené une vie austère loin de toute civilisation. Mais qui sont ces cow-boys d’Amérique du sud qui chevauche à travers la pampa ? Partons sur les traces de ce peuple à part entière.
 
@@ -89,3 +91,47 @@ alt:
 
 Odysway vous propose plusieurs expériences en immersion dans des paysages à couper le souffle. Vous les trouverez au coeur de [la thématique "voyage nature" de notre site !](https://odysway.com/thematiques/voyage-nature)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

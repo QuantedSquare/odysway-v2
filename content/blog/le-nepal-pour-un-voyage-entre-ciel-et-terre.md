@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le Népal, pour un voyage entre ciel et terre"
   description: "Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2022-06-01 12:00:00+00:00"
 tags: "Asie, conseils, Nepal"
 categories: "Blog"
 displayedImg: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiFTA6zFVo7wion.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiFTA6zFVo7wion.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-1 juin 2022
-
 #title
 Le Népal, pour un voyage entre ciel et terre
 
 #introduction
-       
+Un voyage au Népal, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiFTA6zFVo7wion.jpg"
----
 #content
 Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays hautement spirituel, il est une destination majeure pour le trekking. Un **voyage au Népal**, c’est s’aventurer sur des terres sacrées au cœur d’un environnement naturel d’exception où s’élèvent les plus hauts sommets du monde.
 
@@ -153,3 +155,47 @@ link: https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=Bl
 
 Les fêtes traditionnelles font partie de la culture d’un pays et c’est toujours intéressant d’y participer pour en apprendre plus sur ses us et coutumes. Au Népal, la fête des couleurs – le **festival Holi** – célèbre l’arrivée du printemps et les habitants s’aspergent de peinture de toutes les couleurs. Vers la mi-avril, on célèbre le **Bisket Jatra** annonçant le Nouvel An népalais.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

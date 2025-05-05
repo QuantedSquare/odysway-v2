@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Organiser et préparer son trek"
   description: "Le Trekking est certainement la manière la plus simple de voyager. Il suffit d’une simple paire de chaussures dirait-on. Seulement pour partir en toute sérénité à la découverte du monde, il faut un semblant d’organisation et de préparation. Le trek est avant tout un voyage itinérant, au rythme lent de ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-09-24 06:38:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/preparer-et-organiser-son-trek/tfEZnFmERDGedU0VARIY.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/preparer-et-organiser-son-trek/tfEZnFmERDGedU0VARIY.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 septembre 2021
-
 #title
 Organiser et préparer son trek
 
 #introduction
- 
+Le Trekking est certainement la manière la plus simple de voyager. Il suffit d’une simple paire de chaussures dirait-on. Seulement pour partir en toute sérénité à la découverte du monde, il faut un semblant d’organisation et de préparation. Le trek est avant tout un voyage itinérant, au rythme lent de ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/preparer-et-organiser-son-trek/tfEZnFmERDGedU0VARIY.jpg"
----
 #content
 Le **Trekking** est certainement la manière la plus simple de voyager. Il suffit d'une simple paire de chaussures dirait-on. Seulement pour partir en toute sérénité à la découverte du monde, il faut un semblant d' **organisation** et de **préparation** .
 
@@ -173,3 +175,47 @@ S'il est impossible d'acheter des bouteilles d'eau sur les lieux de votre randon
 
  [](https://drive.google.com/file/d/1j5SZds1HsJUZkLYjYccLb8e_WrjIy5pc/view)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le kung-fu shaolin, un art martial ancestral"
   description: "Art martial chinois, le kung-fu Shaolin fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n'a cesse de se développer au fil des siècles. Aujourd'hui, les disciples qui sortent du monastère de Shaolin constituent l'élite du pays. Mais d'où vient-il et ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-09-18 15:10:00+00:00"
 tags: "Asie, Chine, Famille, Grands espaces, Sport"
 categories: "Depassement de soi, Culture et decouverte"
 displayedImg: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/wXO4hZ6iQhyHWv4PZObA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/wXO4hZ6iQhyHWv4PZObA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-18 septembre 2019
-
 #title
 Le kung-fu shaolin, un art martial ancestral
 
 #introduction
-    
+Art martial chinois, le kung-fu Shaolin fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n'a cesse de se développer au fil des siècles. Aujourd'hui, les disciples qui sortent du monastère de Shaolin constituent l'élite du pays. Mais d'où vient-il et ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/kung-fu-shaolin-art-martial-ancestral/wXO4hZ6iQhyHWv4PZObA.jpg"
----
 #content
 Art martial chinois, **le kung fu Shaolin** fait partie intégrante de la culture chinoise. Apparu il y a environ 1 500 ans, il n’a cessé de se développer au fil des siècles. Aujourd’hui, les disciples qui sortent du monastère de Shaolin constituent l’élite du pays. Mais d’où vient-il et comment se pratique-t-il ?
 
@@ -108,3 +110,47 @@ Vous souhaitez apprendre le kung fu avec des moines Shaolin ? Découvrez [notre 
 
 Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

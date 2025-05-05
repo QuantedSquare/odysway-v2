@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "La cérémonie de l'Ukuli en Ethiopie"
   description: "A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-11-15 08:49:00+00:00"
 tags: "Afrique, Communautés locales, Ethiopie"
 categories: "Apprentissage, Culture et decouverte"
 displayedImg: "/images/blogs/la-ceremonie-de-lukuli-en-ethiopie/LM4OlQ6QRSq9duWUZ73Q.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/la-ceremonie-de-lukuli-en-ethiopie/LM4OlQ6QRSq9duWUZ73Q.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-15 novembre 2018
-
 #title
 La cérémonie de l'Ukuli en Ethiopie
 
 #introduction
-    
+A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l'âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d'être rejeté par leur famille ou ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/la-ceremonie-de-lukuli-en-ethiopie/LM4OlQ6QRSq9duWUZ73Q.jpg"
----
 #content
 A travers le monde, certaines tribus ont su conserver leurs traditions ancestrales. Parmi elle, il y a le traditionnel rituel du passage à l’âge adulte chez les garçons. Démonstration de force et de courage, les jeunes hommes se doivent de réussir sous peine parfois d’être rejeté par leur famille ou leur clan. En Ethiopie, **la cérémonie de l’Ukuli** est une véritable fête où toute la tribu se réunit pour assister à la consécration d’un homme dont le destin peut changer en quelques secondes.
 
@@ -71,3 +73,47 @@ alt:
 
 Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

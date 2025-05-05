@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 bonnes raisons de voyager en France"
   description: "Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2023-04-04 12:43:00+00:00"
 tags: "Animaux, Communautés locales, Europe, Famille, France, Grands espaces, Made in France, Sport"
 categories: "Nature et grands espaces, Culture et decouverte, Benefices locaux"
 displayedImg: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-4 avril 2023
-
 #title
 5 bonnes raisons de voyager en France
 
 #introduction
-     
+Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
----
 #content
 Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement tout cela à la fois. Il est vrai que **notre pays recèle bien des trésors culturels, architecturaux, environnementaux et historiques**. Et si c'était votre tour de voyager en France pour les (re)découvrir ? On vous donne 5 bonnes raisons de ne pas voyager hors de nos frontières.
 
@@ -92,3 +94,47 @@ Accordons une mention spéciale à la Bourgogne qui multiplie les mets très gou
 
 Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

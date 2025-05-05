@@ -17,32 +17,38 @@ navigation:
     Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
     
     Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-12-22 02:10:00+00:00"
 tags: "Actualités"
 categories: ""
 displayedImg: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/lCT979iMRzeqBdBlrEVV.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/lCT979iMRzeqBdBlrEVV.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-22 décembre 2020
-
 #title
 Vis ma vie d'agent de voyage en 2020
 
 #introduction
-  
+2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
+
+Une année noire (mais pas que) durant laquelle nous avons dû redoubler d'effort pour survivre à la crise mais aussi réinventer notre façon de travailler et d'imaginer le tourisme de demain.
+
+Odysway revient sur cette année riche en émotions, pour vous faire découvrir les coulisses d'une agence de voyage en pleine crise sanitaire.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vis-ma-vie-agent-de-voyage-2020/lCT979iMRzeqBdBlrEVV.jpg"
----
 #content
 2020... Une année qui restera gravée dans les mémoires de tous. Covid-19, (dé)confinements, chômage partiel, gestes barrières, gel hydroalcoolique sont les maîtres mots de cette année inédite. Parmi les professions les plus touchées par cette crise sur le plan économique, on compte évidemment les restaurateurs et professionnels du voyage.
 
@@ -174,3 +180,47 @@ alt: undefined
 
 **Fin décembre :** À l'heure où nous écrivons ces quelques lignes, nous sommes déjà à la veille de Noël, les cadeaux sous le sapin, les esprits quelque peu fatigués. Nous allons prendre quelques jours de repos bien mérités et avons hâte d'attaquer l'année prochaine, en espérant qu'elle soit (bien meilleure) que cette année.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

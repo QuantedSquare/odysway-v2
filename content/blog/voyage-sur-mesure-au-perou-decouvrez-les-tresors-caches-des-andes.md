@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes"
   description: "Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-06-03 15:24:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/G9nv26sZReGjGlToUbFZ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/G9nv26sZReGjGlToUbFZ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-3 juin 2024
-
 #title
 Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes
 
 #introduction
-Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. Un voyage sur mesure au Pérou permet de découvrir ces trésors cachés tout en vivant des aventures authentiques et immersives. Plongeons ensemble dans les régions emblématiques du Pérou et les expériences hors des sentiers battus qui vous attendent.
+Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/G9nv26sZReGjGlToUbFZ.jpg"
----
 #content
 Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. Un voyage sur mesure au Pérou permet de découvrir ces trésors cachés tout en vivant des aventures authentiques et immersives. Plongeons ensemble dans les régions emblématiques du Pérou et les expériences hors des sentiers battus qui vous attendent.
 
@@ -145,3 +147,47 @@ alt: Jour par Jour Chaman Pérou.jpg
 
 Avec Odysway, chaque voyage est conçu pour offrir une expérience unique, authentique et respectueuse des cultures locales. Notre approche sur mesure vous permet de découvrir le Pérou à votre rythme, en profitant de l'expertise et de la passion de notre équipe pour vous offrir des souvenirs inoubliables.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

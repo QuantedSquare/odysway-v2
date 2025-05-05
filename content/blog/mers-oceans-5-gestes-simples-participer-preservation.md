@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Mers et océans : 5 gestes simples pour participer a leur préservation !"
   description: "Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-12-19 14:50:00+00:00"
 tags: "Animaux, Developpement personnel, Famille, Grands espaces"
 categories: "Nature et grands espaces, Benefices locaux"
 displayedImg: "/images/blogs/mers-oceans-5-gestes-simples-participer-preservation/bVtqys4SQoCgxd0xUytJ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/mers-oceans-5-gestes-simples-participer-preservation/bVtqys4SQoCgxd0xUytJ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-19 décembre 2019
-
 #title
 Mers et océans : 5 gestes simples pour participer a leur préservation !
 
 #introduction
-   
+Les mers et océans recouvrent 77,2 % de la superficie totale de notre planète . Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/mers-oceans-5-gestes-simples-participer-preservation/bVtqys4SQoCgxd0xUytJ.jpg"
----
 #content
 Les mers et océans recouvrent **77,2 % de la superficie totale de notre** **planète**. Cette dernière est constituée a 70 % d'eau. L'eau est la principale source d'oxygène des espèces vivantes sur Terre. Pourtant, la **biodiversité est menacée par les activités humaines et par le réchauffement climatique d'origine anthropique**. Des tonnes de déchets plastiques et chimiques sont déversées chaque jour dans les mers et les océans. Par surcroit, les émissions de gaz à effet de serre, le réchauffement climatique et la fonte des pôles menacent l'habitât et la survie de très nombreuses espèces vivantes. Vous voulez, a votre modeste échelle, contribuer à préserver les mers et océans ? Odysway a pense a un top 5 des gestes simples à faire pour y parvenir !
 
@@ -72,3 +74,47 @@ Vous pouvez poursuivre votre lecture en consultant notre article [sur les 5 faç
 
 [L'écotourisme](https://odysway.com/thematiques/ecotourisme) vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

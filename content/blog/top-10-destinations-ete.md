@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Top 10 des destinations pour l'été"
   description: "Les vacances d'été arrivent et vous ne savez toujours pas ou partir. À la mer, à la montagne ou à la campagne ? En France ou à l'étranger ? Vacances farniente ou sportives ? Pourtant ce n'est pas le choix qui manque ! Pour vous aider a trouver vos ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-06-25 08:03:00+00:00"
 tags: "Amerique du Nord, Amerique du Sud, Animaux, Asie, Brésil, Communautés locales, Developpement personnel, Etats Unis, Europe, Famille, France, Grands espaces, Made in France, Thailande, Transports insolites"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/top-10-destinations-ete/3ScjZz5yRbK5yAViEvti.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/top-10-destinations-ete/3ScjZz5yRbK5yAViEvti.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-25 juin 2019
-
 #title
 Top 10 des destinations pour l'été
 
 #introduction
-
+Les vacances d'été arrivent et vous ne savez toujours pas ou partir. À la mer, à la montagne ou à la campagne ? En France ou à l'étranger ? Vacances farniente ou sportives ? Pourtant ce n'est pas le choix qui manque ! Pour vous aider a trouver vos ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/top-10-destinations-ete/3ScjZz5yRbK5yAViEvti.jpg"
----
 #content
   
   
@@ -175,3 +177,47 @@ alt:
 
 Pour poursuivre votre lecture, nous vous invitons à consulter [notre article sur le voyage solitaire.](https://odysway.com/comment-voyager-seul)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

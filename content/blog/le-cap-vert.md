@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le Cap-Vert"
   description: "Le Cap-Vert est une ancienne colonie portugaise, posée au large des côtes sénégalaises. C’est encore un diamant à l’état brut. Longtemps méconnu du grand public, c’est grâce à Cesaria Evora que le « petit pays » est apparu sur le devant de la scène. Le calme et la douceur des ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-20 10:19:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/le-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/le-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 avril 2020
-
 #title
 Le Cap-Vert
 
 #introduction
-Le Cap-Vert est une ancienne colonie portugaise, posée au large des côtes sénégalaises. C’est encore un diamant à l’état brut.
+Le Cap-Vert est une ancienne colonie portugaise, posée au large des côtes sénégalaises. C’est encore un diamant à l’état brut. Longtemps méconnu du grand public, c’est grâce à Cesaria Evora que le « petit pays » est apparu sur le devant de la scène. Le calme et la douceur des ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg"
----
 #content
 Le Cap-Vert est une ancienne colonie portugaise, posée au large des côtes sénégalaises. C’est encore un diamant à l’état brut.
 
@@ -49,3 +51,47 @@ alt: cap-vert-santiago.jpeg
 
 Ces îles d’origines volcaniques sont habitées par une population et une culture tout aussi colorées que son paysage. Ce métissage vient de l’Afrique, de l'Europe et du Brésil. Partez avec Odysway à la rencontre de ce peuple si attachant et [vivez comme un capverdien sur l'île de Santiago](https://odysway.com/voyages/immersion-cap-vert). Adoptez leur rythme de vie et revenez un peu différents. Prenez du recul en découvrant des activités uniques sur ces îles incroyables.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

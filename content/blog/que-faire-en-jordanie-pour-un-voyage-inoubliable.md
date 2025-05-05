@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Que faire lors d'un voyage en Jordanie ?"
   description: "Vous rêvez d'un voyage en Jordanie riche en aventures et découvertes ? Dans cet article, nous vous dévoilerons un itinéraire inoubliable pour savoir que faire en Jordanie. Des trésors antiques de Petra aux immensités désertiques de Wadi Rum, en passant par des rencontres authentiques avec les Bédouins, chaque étape de ce voyage vous promet des moments magiques et marquants. Embarquez avec nous pour un voyage unique et mémorable au cœur de la Jordanie !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-07-27 14:17:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/9FmOJSj0Q9uxqFQEjIYt.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/9FmOJSj0Q9uxqFQEjIYt.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-27 juillet 2023
-
 #title
 Que faire lors d'un voyage en Jordanie ?
 
 #introduction
-La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une destination de choix pour les voyageurs en quête d'aventure et de découvertes. Des ruines majestueuses de Petra aux vastes déserts de Wadi Rum, en passant par les rencontres chaleureuses avec les Bédouins, ce voyage en Jordanie vous promet une expérience unique et mémorable. Dans cet article, nous vous dévoilons un itinéraire captivant pour savoir que faire en Jordanie et profiter pleinement de votre voyage dans ce joyau du Moyen-Orient.
+Vous rêvez d'un voyage en Jordanie riche en aventures et découvertes ? Dans cet article, nous vous dévoilerons un itinéraire inoubliable pour savoir que faire en Jordanie. Des trésors antiques de Petra aux immensités désertiques de Wadi Rum, en passant par des rencontres authentiques avec les Bédouins, chaque étape de ce voyage vous promet des moments magiques et marquants. Embarquez avec nous pour un voyage unique et mémorable au cœur de la Jordanie !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/que-faire-en-jordanie-pour-un-voyage-inoubliable/9FmOJSj0Q9uxqFQEjIYt.jpg"
----
 #content
 La Jordanie, pays riche en histoire et en paysages à couper le souffle, est une destination de choix pour les voyageurs en quête d'aventure et de découvertes. Des ruines majestueuses de Petra aux vastes déserts de Wadi Rum, en passant par les rencontres chaleureuses avec les Bédouins, ce voyage en Jordanie vous promet une expérience unique et mémorable. Dans cet article, nous vous dévoilons un itinéraire captivant pour savoir que faire en Jordanie et profiter pleinement de votre voyage dans ce joyau du Moyen-Orient.
 
@@ -95,3 +97,47 @@ Avec ces quelques idées, vous savez maintenant que faire en Jordanie pour un vo
 
 Chez Odysway, nous sommes passionnés par la création de voyages uniques et mémorables. Si vous souhaitez vivre cette expérience exceptionnelle, notre [voyage en immersion chez les Bédouins en Jordanie](https://odysway.com/voyages/jordanie-bedouins-petra-wadirum) vous offrira une expérience authentique et des souvenirs durables. Embarquez avec nous pour découvrir la Jordanie sous un nouveau jour et plongez-vous dans une aventure extraordinaire !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

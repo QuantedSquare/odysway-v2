@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Informations COVID-19 - Où peut-on voyager ?"
   description: "INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-07-27 10:54:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/informations-covid-19/CQoX3aWGTSyihPNHBsyu.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/informations-covid-19/CQoX3aWGTSyihPNHBsyu.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-27 juillet 2021
-
 #title
 Informations COVID-19 - Où peut-on voyager ?
 
 #introduction
-mise à jour le 04/02/2022
+INFORMATIONS COVID-19 - ODYSWAY - toutes les informations concernant l'impact de la Covid-19 sur vos séjours Odysway
 ::
 
 ::section-container
----
-image-src: "/images/blogs/informations-covid-19/CQoX3aWGTSyihPNHBsyu.jpg"
----
 #content
 mise à jour le 04/02/2022
 
@@ -506,3 +508,47 @@ L’Union européenne a mis en ligne un site permettant de suivre l’évolution
 
 Pour chaque pays, nous vous conseillons de visiter le site France Diplomatie qui résume la situation sur place, tant d’un point de vue sanitaire que plus général : [https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/.](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Qui sont les hommes-fleurs, ce peuple d'Indonésie ?"
   description: "Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-12-19 11:54:00+00:00"
 tags: "Asie, Communautés locales, Famille, Indonesie"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/hommes-fleurs-peuple-authentique-dindonesie/r7YanmKLRp2Hfk0X6Ik8.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/hommes-fleurs-peuple-authentique-dindonesie/r7YanmKLRp2Hfk0X6Ik8.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-19 décembre 2019
-
 #title
 Qui sont les hommes-fleurs, ce peuple d'Indonésie ?
 
 #introduction
-       
+Sur une petite ile en Indonesie, au coeur d'une foret primaire preservee, se trouve un peuple authentique, eloigne de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/hommes-fleurs-peuple-authentique-dindonesie/r7YanmKLRp2Hfk0X6Ik8.jpg"
----
 #content
 Sur une petite île en Indonésie, au coeur d'une foret primaire préservée, se trouve un peuple authentique, éloigné de toute civilisation. Ce sont les Mentawai. Loin du monde moderne, ils vivent selon des traditions ancestrales en parfaite harmonie avec la nature. Quel est leur mode de vie ? Quelle est leur relation avec la nature et le monde moderne ? **Partons a la rencontre de ce peuple d'Indonésie, surnommés les hommes-fleurs.**
 
@@ -84,3 +86,47 @@ alt:
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

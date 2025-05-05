@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le jour où Odysway est née.."
   description: "Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. \" Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-02-05 16:10:00+00:00"
 tags: "Developpement personnel, Grands espaces"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/le-jour-ou-odysway-est-nee/kFaiVIN1RAyPsnqMRmt9.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/le-jour-ou-odysway-est-nee/kFaiVIN1RAyPsnqMRmt9.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-5 février 2019
-
 #title
 Le jour où Odysway est née..
 
 #introduction
-       
+Je m'appelle Romain Masina et je suis le fondateur d'Odysway. A 18 ans, mon parcours semblait tout ecrit. Aucun nuage a l'horizon, une autoroute, toute tracee, s'etendait devant moi. Pourtant quelque chose me manquait. " Ce n'est que dans l'aventure que certaines personnes reussissent a se connaitre - a se ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-jour-ou-odysway-est-nee/kFaiVIN1RAyPsnqMRmt9.jpg"
----
 #content
 Je m'appelle Romain Masina et je suis le fondateur d'Odysway.  
 A 18 ans, mon parcours semblait tout écrit. Aucun nuage à l'horizon, une autoroute, toute tracée, s'étendait devant moi.  
@@ -100,3 +102,47 @@ Intensément,
   
 **Romain**
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

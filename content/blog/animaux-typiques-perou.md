@@ -13,32 +13,36 @@ navigation:
     Vous avez prévu de partir au Pérou ? Vous souhaitez rencontrer la faune locale ? Bonne nouvelle, le pays des Incas regorge d’animaux ! Les trois grandes régions du pays (la côte, les Andes et l’Amazonie) possèdent chacune une faune qui leur est propre. 
     
     Que ce soit sur le célèbre Machu Picchu ou encore dans la forêt amazonienne, vous pourrez rencontrer des milliers d’espèces : des animaux emblématiques comme le lama ou d’autres plus atypiques tels que le dauphin rose. Découvrez ci-dessous une sélection de 8 animaux que vous serez susceptibles de croiser pendant votre séjour au Pérou.
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-01-13 10:39:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/animaux-typiques-perou/lb9EjNnURKOYjuoUT3So.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/animaux-typiques-perou/lb9EjNnURKOYjuoUT3So.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-13 janvier 2021
-
 #title
 Animaux typiques du Pérou : du lama au condor des Andes
 
 #introduction
-Vous avez prévu de partir au Pérou ? Vous souhaitez rencontrer la faune locale ? Bonne nouvelle, le pays des Incas regorge d’animaux ! Les trois grandes régions du pays (la côte, les Andes et l’Amazonie) possèdent chacune une faune qui leur est propre. Que ce soit sur le célèbre Machu Picchu ou encore dans la forêt amazonienne, vous pourrez rencontrer des milliers d’espèces : des animaux emblématiques comme le lama ou d’autres plus atypiques tels que le dauphin rose. Découvrez ci-dessous une sélection de 8 animaux que vous serez susceptibles de croiser pendant votre séjour au Pérou.
+Vous avez prévu de partir au Pérou ? Vous souhaitez rencontrer la faune locale ? Bonne nouvelle, le pays des Incas regorge d’animaux ! Les trois grandes régions du pays (la côte, les Andes et l’Amazonie) possèdent chacune une faune qui leur est propre. 
+
+Que ce soit sur le célèbre Machu Picchu ou encore dans la forêt amazonienne, vous pourrez rencontrer des milliers d’espèces : des animaux emblématiques comme le lama ou d’autres plus atypiques tels que le dauphin rose. Découvrez ci-dessous une sélection de 8 animaux que vous serez susceptibles de croiser pendant votre séjour au Pérou.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/animaux-typiques-perou/lb9EjNnURKOYjuoUT3So.jpg"
----
 #content
 ## Les animaux à observer durant votre séjour au Pérou
 
@@ -131,3 +135,47 @@ alt: undefined
 
  Poursuivez votre lecture avec [notre article de blog sur l'empire inca.](https://odysway.com/empire-inca-origine-apogee-declin)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

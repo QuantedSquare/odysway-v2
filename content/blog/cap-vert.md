@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "À la découverte du Cap-Vert"
   description: "Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2023-05-02 07:15:00+00:00"
 tags: "Cap Vert"
 categories: "Blog"
 displayedImg: "/images/blogs/cap-vert/26Kpn8MpRjiowEM0vTHF.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/cap-vert/26Kpn8MpRjiowEM0vTHF.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-2 mai 2023
-
 #title
 À la découverte du Cap-Vert
 
 #introduction
-       
+Un voyage au Cap-Vert, c’est un voyage authentique au cœur de paysages naturels d’exception, d’une culture unique et d’une hospitalité incomparable.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/cap-vert/26Kpn8MpRjiowEM0vTHF.jpg"
----
 #content
 Au large des côtes du Sénégal, **le Cap-Vert** est un archipel encore préservé du tourisme de masse. Les paysages naturels d’exception, une culture métissée et l’hospitalité des habitants font d’un [**voyage au Cap-Vert**](https://odysway.com/voyages/immersion-culturelle-cap-vert) un séjour sous le signe de l’authenticité.
 
@@ -171,3 +173,47 @@ Partir au Cap-Vert est une expérience unique qui permet de découvrir une cultu
 
 À bientôt pour votre prochaine destination !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

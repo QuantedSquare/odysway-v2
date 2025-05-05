@@ -17,32 +17,38 @@ navigation:
     Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
     Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
     Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-24 09:24:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 novembre 2020
-
 #title
 Séjour à la ferme : une immersion à la campagne
 
 #introduction
 Le séjour à la ferme est une façon insolite et ludique de découvrir le quotidien des fermiers et agriculteurs de nos régions.
+Faire un séjour immersif dans une ferme c’est également la possibilité d’explorer les différentes régions de France de manière écoresponsable.
+Le séjour à la ferme est une excellente opportunité pour comprendre les enjeux auxquels font face ces hommes et ces femmes qui travaillent la terre et sont au contact de bêtes, 365 jours par an.
+Que vous partiez seul, avec des amis ou avec vos enfants, le séjour à la ferme est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
+Réveillez vos souvenirs d’enfance en partant avec nous en immersion à la ferme pour gambader dans la nature, travailler la terre ou encore prendre soin d’animaux adorables !
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Le **séjour à la ferme** est une façon **insolite et ludique** de découvrir le quotidien des fermiers et agriculteurs de nos régions.
 
@@ -136,3 +142,47 @@ Entre amis, en famille ou solo, nous vous emmenons **en immersion** dans les cam
 *   découvrir du Bordelais et [**vous initier à la viticulture**](https://odysway.com/voyages/sejour-oenologie-vignoble-bordeaux?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme) ;
 *   [**apprendre à murmurer à l’oreille des chevaux**](https://odysway.com/voyages/equicie-cheval-cotentin-normandie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=sejouralaferme) dans le Cotentin pour les fans d’équidés.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

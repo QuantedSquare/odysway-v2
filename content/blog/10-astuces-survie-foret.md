@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "10 astuces de survie en forêt qui peuvent vous sauver la vie"
   description: "Lors d'une balade en forêt, personne n'est a l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-12-12 14:15:00+00:00"
 tags: "Amerique du Sud, Brésil, Communautés locales, Famille, Grands espaces"
 categories: "Depassement de soi, Nature et grands espaces, Apprentissage"
 displayedImg: "/images/blogs/10-astuces-survie-foret/E2I3z2q6SOmZPotV0NL7.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/10-astuces-survie-foret/E2I3z2q6SOmZPotV0NL7.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-12 décembre 2019
-
 #title
 10 astuces de survie en forêt qui peuvent vous sauver la vie
 
 #introduction
-Lors d'une balade en foret, personne n'est à l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie mine d'or pour vous sortir de nombreuses impasses. Mais aussi faut-il savoir comment faire... Nous vous livrons 10 astuces de survie bien utiles si vous êtes en foret.
+Lors d'une balade en forêt, personne n'est a l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/10-astuces-survie-foret/E2I3z2q6SOmZPotV0NL7.jpg"
----
 #content
 Lors d'une balade en foret, personne n'est à l'abri de rencontrer un pépin. Etre pris dans les intempéries, ne pas retrouver son chemin ou devoir passer la nuit dans la foret, voila ce qui peut vous arriver. Surtout, première chose, ne pas paniquer ! La foret est une vraie mine d'or pour vous sortir de nombreuses impasses. Mais aussi faut-il savoir comment faire... **Nous vous livrons 10 astuces de survie bien utiles si vous êtes en foret**.
 
@@ -120,3 +122,47 @@ Vous avez envie de tester ces astuces en situation réelle ? Odysway vous propos
 
 [Si vous êtes intéressés par le mode de vie d'autres populations, découvrez nos voyages chez l'habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

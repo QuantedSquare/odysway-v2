@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyager en conscience : Le Tourisme responsable et ses enjeux"
   description: "Le tourisme responsable est bien plus qu'une simple tendance. C'est une approche de voyage qui vise à minimiser les impacts négatifs sur l'environnement, la culture et l'économie des destinations visitées, tout en maximisant les bénéfices pour les communautés locales et les voyageurs eux-mêmes. Dans cet article, nous explorerons les principes ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-06-07 13:55:55.603000+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/voyager-en-conscience-le-tourisme-responsable-et-ses-enjeux/AIp1s6JNSfuw6VEMV7JY.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/voyager-en-conscience-le-tourisme-responsable-et-ses-enjeux/AIp1s6JNSfuw6VEMV7JY.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-7 juin 2024
-
 #title
 Voyager en conscience : Le Tourisme responsable et ses enjeux
 
 #introduction
- 
+Le tourisme responsable est bien plus qu'une simple tendance. C'est une approche de voyage qui vise à minimiser les impacts négatifs sur l'environnement, la culture et l'économie des destinations visitées, tout en maximisant les bénéfices pour les communautés locales et les voyageurs eux-mêmes. Dans cet article, nous explorerons les principes ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyager-en-conscience-le-tourisme-responsable-et-ses-enjeux/AIp1s6JNSfuw6VEMV7JY.jpg"
----
 #content
 Le tourisme responsable est bien plus qu'une simple tendance. C'est une approche de voyage qui vise à minimiser les impacts négatifs sur l'environnement, la culture et l'économie des destinations visitées, tout en maximisant les bénéfices pour les communautés locales et les voyageurs eux-mêmes. Dans cet article, nous explorerons les principes du tourisme responsable, ses enjeux, et comment vous pouvez voyager en conscience pour faire une différence positive.
 
@@ -153,3 +155,47 @@ En réduisant votre empreinte carbone, en minimisant vos déchets et en respecta
 
 Voyager en conscience est une démarche qui demande de la réflexion et de la planification, mais qui offre des bénéfices immenses pour les voyageurs, les communautés locales et l'environnement. En adoptant des pratiques de tourisme responsable, vous pouvez explorer le monde de manière plus enrichissante et durable, tout en contribuant positivement aux lieux que vous visitez. Pour une aventure unique et respectueuse de l'environnement, [découvrez les séjours proposés en France par Odysway](https://odysway.com/destinations/france). Alors, la prochaine fois que vous planifiez un voyage, pensez à l'impact de vos choix et faites le pas vers un tourisme plus responsable et conscient.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

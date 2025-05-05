@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Qui sommes-nous ?"
   description: "Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-04-09 15:42:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/qui-sommes-nous/lOMxqvh4TiGPhzPkQTJf.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/qui-sommes-nous/lOMxqvh4TiGPhzPkQTJf.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-9 avril 2021
-
 #title
 Qui sommes-nous ?
 
 #introduction
-   
+Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/qui-sommes-nous/lOMxqvh4TiGPhzPkQTJf.jpg"
----
 #content
 ## Une équipe de voyageurs passionnés 
 
@@ -125,3 +127,47 @@ alt: undefined
 
 (Salomé, en kayak dans une mangrove, à Unawatuna)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

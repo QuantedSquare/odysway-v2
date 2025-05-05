@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où découvrir de nouvelles cultures avec le tourisme ?"
   description: "Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-05-25 15:15:00+00:00"
 tags: "Communautés locales, Ethiopie, Famille, Mongolie, Ouzbekistan, Perou, Roumanie"
 categories: ""
 displayedImg: "/images/blogs/ou-decouvrir-nouvelles-cultures-tourisme/l25KOUXzRoyiSa45GbvF.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/ou-decouvrir-nouvelles-cultures-tourisme/l25KOUXzRoyiSa45GbvF.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-25 mai 2020
-
 #title
 Où découvrir de nouvelles cultures avec le tourisme ?
 
 #introduction
-     
+Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-decouvrir-nouvelles-cultures-tourisme/l25KOUXzRoyiSa45GbvF.jpg"
----
 #content
 Lors d’un voyage, qu’aimez-vous le plus ? Est-ce que vous préférez observer de nouveaux paysages, apprendre une langue, faire des rencontres, découvrir un mode de vie différent ? Lorsque nous visitons un pays que nous ne connaissons pas, nous pouvons vivre toutes ces nouvelles expériences en étant au plus proche des populations locales. Il existe de nombreuses destinations qui permettent de sortir de sa zone de confort et de se confronter à de nouvelles croyances et à des habitudes différentes. Où découvrir de nouvelles cultures avec le tourisme ? Cap sur des lieux coups de cœur qui permettent de s’immerger dans d’autres mondes.
 
@@ -133,3 +135,47 @@ Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec l
 
   Afin de poursuivre votre lecture, nous vous invitons à découvrir [notre article sur les rencontres en voyage, une vraie source d'enrichissement](https://odysway.com/rencontres-voyage-vraie-source-denrichissement)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le top 10 des pays à visiter en 2020"
   description: "Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-09 07:49:00+00:00"
 tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Cap Vert, Communautés locales, Costa Rica, Europe, Famille, Grands espaces, Guatemala, Kirghizistan, Maroc, Mongolie"
 categories: ""
 displayedImg: "/images/blogs/le-top-10-des-pays-a-visiter-en-2020/ri6lsSePSQ6Ae2luUUNN.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/le-top-10-des-pays-a-visiter-en-2020/ri6lsSePSQ6Ae2luUUNN.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-9 mars 2020
-
 #title
 Le top 10 des pays à visiter en 2020
 
 #introduction
-   
+Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un petit tour d’horizon du top 10 des pays à visiter en 2020.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-top-10-des-pays-a-visiter-en-2020/ri6lsSePSQ6Ae2luUUNN.jpg"
----
 #content
 Une nouvelle année se profile avec son lot de destinations qui réservent de belles surprises aux voyageurs. Evénements culturels, destinations éco-responsables ou bien des vacances axées nature, vous aurez l’embarras du choix. Odysway vous propose un **petit tour d’horizon du top 10 des pays à visiter en 2020**.
 
@@ -158,3 +160,47 @@ Amateurs de grands espaces, direction **la Macédoine du nord**. Arpentez les p
 
 [Découvrez notre thématique de road trips organisés](https://odysway.com/thematiques/road-trip-organise) ! Le road trip et l’AVENTURE permettant de vous sentir libre. Le chemin n’est jamais entièrement tracé et pleins de rencontres et de découverte vous attendent.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

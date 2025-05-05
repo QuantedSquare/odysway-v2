@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes"
   description: "Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps."
-author: "contact@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-05-31 14:50:00+00:00"
 tags: "cheval, équitation, France, immersion, nature, paysage, ranch, randonnée, tourisme équestre, Vercors, western"
 categories: "Blog"
 displayedImg: "/images/blogs/interview-immersion-vercors/6k6RiG5MTLOJgdfIduEC.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/interview-immersion-vercors/6k6RiG5MTLOJgdfIduEC.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-31 mai 2021
-
 #title
 Interview – Rencontre avec Marion, accompagnatrice de tourisme équestre dans les Alpes
 
 #introduction
- 
+Vivre un séjour en immersion dans un ranch en France, c’est possible ! Odysway vous emmène dans le Parc naturel régional du Vercors, où Marion vous attend avec ses chevaux pour un voyage dans le temps.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/interview-immersion-vercors/6k6RiG5MTLOJgdfIduEC.jpg"
----
 #content
 **Vivre un séjour en immersion dans un ranch en France, c’est possible ! Dans le Parc naturel régional du Vercors, Marion vous attend avec ses chevaux pour un voyage dans le temps.**
 
@@ -71,3 +73,47 @@ link: https://odysway.com/voyages/itinerance-cheval-vercors?utm_source=Blog&utm_
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

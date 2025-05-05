@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 destinations du sud de la France à visiter"
   description: "Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-05-15 15:44:00+00:00"
 tags: "Europe, Famille, France, Grands espaces, Made in France"
 categories: ""
 displayedImg: "/images/blogs/5-destinations-sud-france-a-visiter/RsDDclWT4OuGJUunENzQ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-destinations-sud-france-a-visiter/RsDDclWT4OuGJUunENzQ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-15 mai 2020
-
 #title
 5 destinations du sud de la France à visiter
 
 #introduction
-    
+Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-destinations-sud-france-a-visiter/RsDDclWT4OuGJUunENzQ.jpg"
----
 #content
 Avec un climat plutôt agréable, le sud de la France fait partie des destinations fétiches de nombreux vacanciers. Mais le soleil n'est pas la seule raison de cet engouement. En effet, avec une très belle diversité de paysages, de cultures et de traditions – et de spécialités gastronomiques – le sud de la France a beaucoup à offrir. **Du Pays Basque à la Provence-Alpes-Côte-d'Azur, en passant par l'Occitanie, la Camargue et la Corse, découvrons tout le charme et les attraits de ces cinq belles régions.**
 
@@ -119,3 +121,47 @@ _Bonifacio, situé à la pointe sud de l'ïle de Beauté_
 
 Aller à la ferme est une façon insolite et intéressante de découvrir la vie quotidienne des agriculteurs et agriculteurs de notre région. Le voyage en immersion à la ferme est aussi l'occasion d'explorer différentes régions de France de manière écologiquement responsable.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

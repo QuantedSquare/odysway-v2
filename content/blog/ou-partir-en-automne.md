@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où partir en automne pour un été indien réussi ?"
   description: "partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-30 12:08:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 novembre 2020
-
 #title
 Où partir en automne pour un été indien réussi ?
 
 #introduction
-Partir en automne est un bon moyen de faire perdurer cette douce sensation d’été indien et de liberté, tout en profitant de l’arrière saison en toute sérénité.
+partir en voyage en automne est un excellent moyen de prolonger votre teint halé et de s’offrir des vacances bien méritées si vous avez travaillé tout l'été.
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 **Partir en automne** est un bon moyen de faire perdurer cette douce sensation d’été indien et de liberté, tout en profitant de l’arrière saison en toute sérénité.
 
@@ -118,3 +120,47 @@ Partez en toute liberté et en immersion au quatre coins du monde :
 
 L’automne n’a pas fini de vous surprendre avec nos voyages en immersion !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

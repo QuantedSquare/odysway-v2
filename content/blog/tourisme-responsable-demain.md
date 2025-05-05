@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le tourisme responsable de demain"
   description: "À l'heure ou notre planète rencontre de nombreuses difficultés d'ordre écologique notamment, le tourisme est loin d'y être étranger. Modes de transport polluants, surconsommation des ressources naturelles ou augmentation des déchets, le secteur fait face a certains problèmes éthiques. Pour y remédier, de plus en plus d'acteurs du voyage ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-09-26 13:26:00+00:00"
 tags: "Animaux, Communautés locales, Famille, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte, Benefices locaux"
 displayedImg: "/images/blogs/tourisme-responsable-demain/XUKgYnaJTaiEPUCnPI8A.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/tourisme-responsable-demain/XUKgYnaJTaiEPUCnPI8A.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 septembre 2019
-
 #title
 Le tourisme responsable de demain
 
 #introduction
-À l’heure où notre planète rencontre de nombreuses difficultés d’ordre écologique notamment, le tourisme est loin d’y être étranger. Modes de transport polluants, surconsommation des ressources naturelles ou augmentation des déchets, le secteur fait face à certains problèmes éthiques. Pour y remédier, de plus en plus d’acteurs du voyage privilégient un tourisme basé sur le respect des hommes et de la nature : c’est le tourisme responsable. Mais à quoi correspond-il plus précisément et comment faire pour l’appliquer à chacun de vos voyages ?
+À l'heure ou notre planète rencontre de nombreuses difficultés d'ordre écologique notamment, le tourisme est loin d'y être étranger. Modes de transport polluants, surconsommation des ressources naturelles ou augmentation des déchets, le secteur fait face a certains problèmes éthiques. Pour y remédier, de plus en plus d'acteurs du voyage ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/tourisme-responsable-demain/XUKgYnaJTaiEPUCnPI8A.jpg"
----
 #content
 À l’heure où notre planète rencontre de nombreuses difficultés d’ordre écologique notamment, le tourisme est loin d’y être étranger. Modes de transport polluants, surconsommation des ressources naturelles ou augmentation des déchets, le secteur fait face à certains problèmes éthiques. Pour y remédier, de plus en plus d’acteurs du voyage privilégient un tourisme basé sur le respect des hommes et de la nature : **c’est le tourisme responsable**. Mais à quoi correspond-il plus précisément et comment faire pour l’appliquer à chacun de vos voyages ?
 
@@ -110,3 +112,47 @@ Parce qu’ils n’ont pas l’argent pour, certains villages peinent à constru
 
 [Découvrez notre thématique de voyages solidaires](https://odysway.com/thematiques/voyage-solidaire): Voyager [solidaire](https://odysway.com/thematiques/voyage-solidaire) signifie vivre le partage, le dévouement et la joie de vivre avec les communautés locales, et comprendre les défis auxquels ils sont confrontés chaque jour.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

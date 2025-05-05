@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment préserver notre environnement en voyage ?"
   description: "Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-06-29 12:11:00+00:00"
 tags: "Communautés locales"
 categories: "Benefices locaux, Blog"
 displayedImg: "/images/blogs/comment-preserver-environnement-voyage/F9V22mrTnerMx4zx79VA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/comment-preserver-environnement-voyage/F9V22mrTnerMx4zx79VA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 juin 2020
-
 #title
 Comment préserver notre environnement en voyage ?
 
 #introduction
-         
+Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-preserver-environnement-voyage/F9V22mrTnerMx4zx79VA.jpg"
----
 #content
 **Parce qu'il accentue la pollution de notre environnement, le voyage est de plus en plus décrié. Pourtant, il est une manne économique pour de nombreux pays et pour certains, il serait impensable de ne plus accueillir de voyageurs. Heureusement, grâce à la prise de conscience des professionnels du secteur mais aussi des voyageurs eux-mêmes, il est possible de combiner les deux. On vous explique comment préserver notre environnement pendant un voyage.**
 
@@ -103,3 +105,47 @@ De même, si vous possédez un smartphone, privilégiez les applications pour st
 
 Voyager [solidaire](https://odysway.com/thematiques/voyage-solidaire) signifie vivre le partage, le dévouement et la joie de vivre avec les communautés locales, et comprendre les défis auxquels ils sont confrontés chaque jour.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

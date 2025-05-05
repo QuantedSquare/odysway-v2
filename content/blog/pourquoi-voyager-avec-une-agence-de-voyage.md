@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Pourquoi voyager avec une agence de voyage ?"
   description: "Voyager est une activité enrichissante qui permet de découvrir de nouveaux horizons, de rencontrer des personnes différentes et de vivre des expériences uniques. Toutefois, l'organisation d'un voyage peut s'avérer complexe et stressante. C'est là qu'interviennent les agences de voyage, des professionnelles du secteur touristique qui offrent une multitude d'avantages pour ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-05-28 07:45:32.423000+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/pourquoi-voyager-avec-une-agence-de-voyage/9riCPDocQD2kETAiEidU.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/pourquoi-voyager-avec-une-agence-de-voyage/9riCPDocQD2kETAiEidU.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-28 mai 2024
-
 #title
 Pourquoi voyager avec une agence de voyage ?
 
 #introduction
- 
+Voyager est une activité enrichissante qui permet de découvrir de nouveaux horizons, de rencontrer des personnes différentes et de vivre des expériences uniques. Toutefois, l'organisation d'un voyage peut s'avérer complexe et stressante. C'est là qu'interviennent les agences de voyage, des professionnelles du secteur touristique qui offrent une multitude d'avantages pour ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/pourquoi-voyager-avec-une-agence-de-voyage/9riCPDocQD2kETAiEidU.jpg"
----
 #content
 Voyager est une activité enrichissante qui permet de découvrir de nouveaux horizons, de rencontrer des personnes différentes et de vivre des expériences uniques. Toutefois, l'organisation d'un voyage peut s'avérer complexe et stressante. C'est là qu'interviennent les agences de voyage, des professionnelles du secteur touristique qui offrent une multitude d'avantages pour rendre votre expérience de voyage inoubliable. Dans cet article, nous allons explorer les principales raisons de voyager avec une agence de voyage, en mettant en avant les bénéfices spécifiques que vous pouvez obtenir en faisant appel à une agence telle qu'Odysway.
 
@@ -103,3 +105,47 @@ Voyager avec une agence de voyage présente de nombreux avantages, allant de la 
 
 Pour en savoir plus sur les voyages immersifs proposés par Odysway, consultez la page de tous ses voyages : [https://odysway.com/destinations.](https://odysway.com/destinations)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

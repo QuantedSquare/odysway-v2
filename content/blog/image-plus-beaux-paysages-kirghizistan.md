@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "En images : les plus beaux paysages du Kirghizistan"
   description: "Pays d'Asie Centrale, le Kirghizistan est encore peu connu des voyageurs. Pourtant, ses paysages grandioses ont de quoi ravir les amateurs de grands espaces et de nature. Steppes, pics enneiges, lacs de montagne, rivières sauvages ou encore canyons, voici ce qui vous attend là-bas. Odysway a décidé de vous ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-11-07 16:31:00+00:00"
 tags: "Asie, Communautés locales, Famille, Grands espaces, Kirghizistan"
 categories: "Nature et grands espaces, Culture et decouverte"
 displayedImg: "/images/blogs/image-plus-beaux-paysages-kirghizistan/X1cLh2aSEmq9WggtGMVT.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/image-plus-beaux-paysages-kirghizistan/X1cLh2aSEmq9WggtGMVT.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-7 novembre 2019
-
 #title
 En images : les plus beaux paysages du Kirghizistan
 
 #introduction
-      
+Pays d'Asie Centrale, le Kirghizistan est encore peu connu des voyageurs. Pourtant, ses paysages grandioses ont de quoi ravir les amateurs de grands espaces et de nature. Steppes, pics enneiges, lacs de montagne, rivières sauvages ou encore canyons, voici ce qui vous attend là-bas. Odysway a décidé de vous ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/image-plus-beaux-paysages-kirghizistan/X1cLh2aSEmq9WggtGMVT.jpg"
----
 #content
 Pays d’Asie Centrale, le Kirghizistan est encore peu connu des voyageurs. Pourtant, ses paysages grandioses ont de quoi ravir les amateurs de grands espaces et de nature. Steppes, pics enneigés, lacs de montagne, rivières sauvages ou encore canyons, voici ce qui vous attend là-bas. Odysway a décidé de vous montrer les plus beaux endroits. Et vous, **quels seront donc vos paysages coup de cœur du Kirghizistan ?**
 
@@ -176,3 +178,47 @@ alt:
 
 Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

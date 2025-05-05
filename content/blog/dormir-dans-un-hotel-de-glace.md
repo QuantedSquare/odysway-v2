@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Dormir dans un hôtel de glace"
   description: "En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d'un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-02-15 08:10:00+00:00"
 tags: "Europe"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/dormir-dans-un-hotel-de-glace/Hhf2xZj5R7i6bDBV3g8o.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/dormir-dans-un-hotel-de-glace/Hhf2xZj5R7i6bDBV3g8o.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-15 février 2019
-
 #title
 Dormir dans un hôtel de glace
 
 #introduction
-     
+En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d'un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/dormir-dans-un-hotel-de-glace/Hhf2xZj5R7i6bDBV3g8o.jpg"
----
 #content
 En hiver, les neiges font leur apparition dans certains pays. Comme chaque année à cette période, des centaines de personnes mettent en route des chantiers pas comme les autres : la construction d’un hôtel composé de neige et de glace. Hébergement insolite par excellence, il attire de plus en plus de curieux tentés une expérience originale. Si vous n’avez pas froid aux yeux, **dormir dans un hôtel de glace** peut s’avérer plus chaleureux qu’il n’en paraît.
 
@@ -89,3 +91,47 @@ Et vous ? Tenté pour dormir dans un hôtel de glace ? Si le froid vous rebute, 
 
 Le voyage en lui-même est une aventure, car les changements de décor provoqueront des émotions, des rencontres, des découvertes et des souvenirs. Faire des voyages aventureux est une autre occasion d'élargir l'éventail des possibilités. Si vous rêvez d'excitation, de déracinement, de rencontres insolites, de traditions ancestrales et de voyages de manière écologiquement responsable et éthique, alors nous vous conseillons de découvrir nos incroyables [voyages aventure](https://odysway.com/thematiques/voyage-aventure).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

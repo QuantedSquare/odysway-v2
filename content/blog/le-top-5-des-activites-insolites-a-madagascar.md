@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le top 5 des activités insolites à Madagascar"
   description: "Madagascar, surnommée l'ile rouge en raison de la couleur de sa terre, est probablement l'une des iles les plus singulières qui soit. Avec un écosystème unique, une faune et une flore endémiques, Madagascar regorge de panoramas époustouflants. Entre paysages et traditions, voici 5 activités insolites pour découvrir Madagascar. Faire un ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-12-07 10:48:00+00:00"
 tags: "Afrique, Grands espaces, Madagascar"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/1PMbIeGDSzm6kU7JzDIQ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/1PMbIeGDSzm6kU7JzDIQ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-7 décembre 2018
-
 #title
 Le top 5 des activités insolites à Madagascar
 
 #introduction
-   
+Madagascar, surnommée l'ile rouge en raison de la couleur de sa terre, est probablement l'une des iles les plus singulières qui soit. Avec un écosystème unique, une faune et une flore endémiques, Madagascar regorge de panoramas époustouflants. Entre paysages et traditions, voici 5 activités insolites pour découvrir Madagascar. Faire un ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-top-5-des-activites-insolites-a-madagascar/1PMbIeGDSzm6kU7JzDIQ.jpg"
----
 #content
 Madagascar, surnommée l’île rouge en raison de la couleur de sa terre, est probablement l’une des îles les plus singulières qui soit. Avec un écosystème unique, une faune et une flore endémiques, Madagascar regorge de panoramas époustouflants. Entre paysages et traditions, voici 5 activités insolites pour découvrir Madagascar.
 
@@ -123,3 +125,47 @@ alt:
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

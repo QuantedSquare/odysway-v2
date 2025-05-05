@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le Pérou, un territoire mythique et mystique"
   description: "Quelles sont les formalités pour partir au Pérou ? Comment se déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi voyager au Pérou ? Berceau de civilisations légendaires, des paysages à couper ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-17 13:07:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/tHEfnbwiTtC11DaEb6z8.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/tHEfnbwiTtC11DaEb6z8.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-17 avril 2020
-
 #title
 Le Pérou, un territoire mythique et mystique
 
 #introduction
-Berceau de civilisations légendaires, des paysages à couper le souffle, une population avenante, il existe mille et une raisons pour voyager au Pérou. Un séjour dans ce pays d’Amérique du Sud ne peut pas être envisagé sans s’intéresser à la civilisation des Incas. Ce peuple mythique a laissé derrière lui de nombreuses traces de ses constructions inégalées à ce jour, comme le Machu Picchu. Vous pouvez admirer l’incroyable ingéniosité des Incas en visitant les nombreux sites archéologiques formant un formidable musée à ciel ouvert.
+Quelles sont les formalités pour partir au Pérou ? Comment se déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi voyager au Pérou ? Berceau de civilisations légendaires, des paysages à couper ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/tHEfnbwiTtC11DaEb6z8.jpg"
----
 #content
 # Voyager au Pérou
 
@@ -198,3 +200,47 @@ alt: undefined
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

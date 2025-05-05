@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Séjour hiver Laponie 2024 : L'expérience nordique inoubliable"
   description: "Lorsque l'hiver étend son voile sur la Laponie, cette partie de la Finlande devient le théâtre d'un spectacle éblouissant. Située au nord du cercle polaire arctique, la Laponie se transforme en une terre de rêve. Si vous rêvez d'une aventure unique en 2024, le séjour hiver proposé par Odysway en ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-09-18 15:53:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/sejour-hiver-laponie-2024/Xtf3qHexSW2Pb3kRg0cY.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/sejour-hiver-laponie-2024/Xtf3qHexSW2Pb3kRg0cY.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-18 septembre 2023
-
 #title
 Séjour hiver Laponie 2024 : L'expérience nordique inoubliable
 
 #introduction
-Lorsque l'hiver étend son voile sur la Laponie, cette partie de la Finlande devient le théâtre d'un spectacle éblouissant. Située au nord du cercle polaire arctique, la Laponie se transforme en une terre de rêve. Si vous rêvez d'une aventure unique en 2024, le séjour hiver proposé par Odysway en Laponie est votre billet pour l'émerveillement.
+Lorsque l'hiver étend son voile sur la Laponie, cette partie de la Finlande devient le théâtre d'un spectacle éblouissant. Située au nord du cercle polaire arctique, la Laponie se transforme en une terre de rêve. Si vous rêvez d'une aventure unique en 2024, le séjour hiver proposé par Odysway en ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/sejour-hiver-laponie-2024/Xtf3qHexSW2Pb3kRg0cY.jpg"
----
 #content
 Lorsque l'hiver étend son voile sur la Laponie, cette partie de la Finlande devient le théâtre d'un spectacle éblouissant. Située au nord du cercle polaire arctique, la Laponie se transforme en une terre de rêve. Si vous rêvez d'une aventure unique en 2024, le séjour hiver proposé par Odysway en Laponie est votre billet pour l'émerveillement.
 
@@ -74,3 +76,47 @@ Le séjour Laponie 2024 d'Odysway est une invitation à découvrir une terre d'u
 
 Tentés par l'expérience ? Partez vivre cette [aventure hivernale lors notre voyage en Laponie Finlandaise](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=Blog&utm_medium=SEO&utm_campaign=Article_Top10_Voyage_Hiver) !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

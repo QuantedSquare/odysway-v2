@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Tourisme durable : développement économique et protection de l'environnement"
   description: "Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2023-01-20 13:45:00+00:00"
 tags: ""
 categories: "tourisme durable"
 displayedImg: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/pNWi582GS8eMtd3VqTld.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/pNWi582GS8eMtd3VqTld.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 janvier 2023
-
 #title
 Tourisme durable : développement économique et protection de l'environnement
 
 #introduction
-Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux aspects. Dans cet article, nous allons explorer les différentes manières de promouvoir un tourisme durable, qui permette de protéger l'environnement tout en stimulant l'économie locale.
+Le tourisme durable est devenu un enjeu majeur pour les destinations touristiques du monde entier. Il s'agit d'une approche globale qui vise à concilier le développement économique lié au tourisme avec la protection de l'environnement et la préservation des cultures locales. Cependant, il n'est pas toujours facile d'équilibrer ces deux ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/tourisme-durable-comment-equilibrer-le-developpement-economique-et-la-protection-de-lenvironnement/pNWi582GS8eMtd3VqTld.jpg"
----
 #content
 ## Les activités écotouristiques : une solution pour promouvoir un tourisme durable
 
@@ -68,3 +70,47 @@ alt: Child_Protection-MongolianGer-600x600...
 
 Retrouvez tous nos voyages ici : [https://odysway.com/destinations](https://odysway.com/destinations)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

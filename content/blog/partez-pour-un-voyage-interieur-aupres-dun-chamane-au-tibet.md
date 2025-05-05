@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Partez pour un voyage intérieur auprès d'un chamane au Tibet"
   description: "Région autonome de l'ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité . Et c'est auprès d'un chamane que certains decident de vivre quelques jours ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-09-22 08:38:00+00:00"
 tags: "Communautés locales, Developpement personnel, Grands espaces"
 categories: "Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel"
 displayedImg: "/images/blogs/partez-pour-un-voyage-interieur-aupres-dun-chamane-au-tibet/ODNMJJ1KRM2piHVd2jPe.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/partez-pour-un-voyage-interieur-aupres-dun-chamane-au-tibet/ODNMJJ1KRM2piHVd2jPe.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-22 septembre 2018
-
 #title
 Partez pour un voyage intérieur auprès d'un chamane au Tibet
 
 #introduction
-   
+Région autonome de l'ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalai Lama, le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité . Et c'est auprès d'un chamane que certains decident de vivre quelques jours ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/partez-pour-un-voyage-interieur-aupres-dun-chamane-au-tibet/ODNMJJ1KRM2piHVd2jPe.jpg"
----
 #content
 Région autonome de l’ouest de la Chine, le Tibet est réputé pour ses immenses espaces et ses sommets majestueux. Pays du Dalaï Lama, **le Tibet est une destination particulièrement inspirante pour les voyageurs en quête de spiritualité**. Et c’est auprès d’un **chamane** que certains décident de vivre quelques jours pour aller plus loin dans leur démarche spirituelle. Plus qu’un retour sur soi, c’est un véritable voyage intérieur qui vous est proposé.
 
@@ -60,3 +62,47 @@ Ce type de **voyage en immersion** va vous permettre de vous accorder du temps a
 
 Pour poursuivre votre lecture, nous vous invitons à consulter notre article [sur les temples au Népal.](https://odysway.com/temples-nepal-lesquels-visiter)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

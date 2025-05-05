@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway"
   description: "L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2023-09-19 15:37:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/voyage-en-immersion-plongez-au-coeur-des-cultures-avec-odysway/9BHXSniTSuiTaZlckrt0.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/voyage-en-immersion-plongez-au-coeur-des-cultures-avec-odysway/9BHXSniTSuiTaZlckrt0.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-19 septembre 2023
-
 #title
 Voyage en Immersion : Plongez au Cœur des Cultures avec Odysway
 
 #introduction
-  
+L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-en-immersion-plongez-au-coeur-des-cultures-avec-odysway/9BHXSniTSuiTaZlckrt0.jpg"
----
 #content
 L'ère du tourisme de masse semble révolue pour bon nombre de globe-trotters. Aujourd'hui, l'appétit pour l'authenticité et les rencontres vraies mène la danse. Entrez dans le monde du voyage en immersion, une aventure où chaque expérience est riche de sens, d'authenticité et d'émotions. Avec Odysway, partez à la découverte de ce nouveau mode de voyage, en plongeant au cœur des cultures locales.
 
@@ -140,3 +142,47 @@ Odysway est une agence de voyage créée en 2018, qui créé et organise des sé
 
 Si vous êtes interessés par le voyage en immersion, rendez-vous sur la page de nos voyages : [https://odysway.com/destinations](https://odysway.com/destinations)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

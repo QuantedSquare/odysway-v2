@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Pass sanitaire : tout savoir pour son prochain voyage en 5 points"
   description: "Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-08-26 08:37:00+00:00"
 tags: "Actualités, Covid"
 categories: "Blog"
 displayedImg: "/images/blogs/pass-sanitaire-voyage/HtahVuSATO6xMU1sOEMr.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/pass-sanitaire-voyage/HtahVuSATO6xMU1sOEMr.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 août 2021
-
 #title
 Pass sanitaire : tout savoir pour son prochain voyage en 5 points
 
 #introduction
-
+Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Odysway vous explique tout en 5 points !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/pass-sanitaire-voyage/HtahVuSATO6xMU1sOEMr.jpg"
----
 #content
 **Pour voyager en France ou à l’étranger, il est désormais obligatoire de posséder un pass sanitaire. Vaccination ou test de dépistage, quels sont les critères pour obtenir ce fameux sésame afin d’explorer les mille richesses de notre territoire et d’ailleurs ? Sans compter que chaque pays – la France comprise – a mis en place ses propres modalités d’entrée. Pour y voir plus clair, Odysway fait le point sur le pass sanitaire afin que vous puissiez partir en voyage dans les meilleures conditions.**
 
@@ -147,3 +149,47 @@ Le site [France Diplomatie](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyag
 
 Contactez-nous au 01 84 80 79 75 ou [prenez rdv avec un conseiller Odysway](https://calendly.com/odysway/demande-information) selon vos disponibilités !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

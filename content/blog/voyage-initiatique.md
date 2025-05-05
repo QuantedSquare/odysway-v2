@@ -17,32 +17,38 @@ navigation:
     En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
     Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
     Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-19 16:53:00+00:00"
 tags: "Communautés locales"
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-19 novembre 2020
-
 #title
 Se recentrer grâce au voyage initiatique
 
 #introduction
-Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment. Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant.
+Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment.
+Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant car soudainement, toutes vos certitudes s’envolent pour laisser place au doute et au questionnement.
+En soi, c’est une très bonne chose car cela veut dire que vous êtes prêt à écrire le nouveau chapitre de votre vie mais c’est un cap à passer.
+Pour passer ce cap en douceur, beaucoup de voyageurs se tournent vers le voyage initiatique afin de trouver des réponses à leurs questions.
+Un voyage initiatique en immersion va vous permettre de vous accorder du temps, de faire le point, d’amorcer le changement en sortant de votre zone de confort et de vivre au contact des populations locales, gardiennes de savoirs ancestraux. Découvrez comment le voyage initiatique peut vous aider dans votre quête !
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Il est des moments dans notre vie où nous avons besoin de faire le point, de nous recentrer, de nous reconnecter à qui nous sommes vraiment. Ces moments peuvent arriver n’importe quand, à n’importe quel âge et peuvent parfois être déroutant.
 
@@ -138,3 +144,47 @@ Privilégiez un retour  à soi par le biais de  marches conscientes ou de renc
 
 Que vous rêviez de découvrir le [**chamanisme mongol**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique) et de parcourir les steppes en train, de [**vivre en immersion dans la jungle péruvienne**](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique) au sein de la Vallée des Incas, ou encore de [**partager le quotidien de jeunes moines dans une école bouddhiste au Népal**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageinitiatique), l'équipe d’Odysway se fera un plaisir de vous guider pas à pas dans votre quête d’absolu.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

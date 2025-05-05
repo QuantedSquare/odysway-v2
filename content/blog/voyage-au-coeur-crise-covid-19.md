@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le voyage : au cœur de la crise du Covid-19"
   description: "Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie de Covid-19 a changé la donne . Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-14 16:42:00+00:00"
 tags: "Europe, France"
 categories: "Blog"
 displayedImg: "/images/blogs/voyage-au-coeur-crise-covid-19/BweucfsHQOuqlyVTHugj.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/voyage-au-coeur-crise-covid-19/BweucfsHQOuqlyVTHugj.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-14 avril 2020
-
 #title
 Le voyage : au cœur de la crise du Covid-19
 
 #introduction
-   
+Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie de Covid-19 a changé la donne . Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-au-coeur-crise-covid-19/BweucfsHQOuqlyVTHugj.jpg"
----
 #content
 **Le voyage, voilà un secteur qui, d'habitude, ne connaît pas (trop) la crise. Mais la pandémie** **de Covid-19 a changé la donne**. Avec la fermeture de nombreuses frontières à travers le monde, le tourisme est désormais à l'arrêt. Voyages annulés et vacances de printemps confinées, la patience est de mise pour bon nombre d'entre nous. Mais qu'en est-il de votre voyage annulé à cause du Covid-19 ? Pourrez-vous partir cet été ? Retour sur une crise qui a ébranlé le monde du tourisme.
 
@@ -74,3 +76,47 @@ Toute l'équipe Odysway se tient à disposition pour tous ceux qui ont réservé
 
 Et n'oubliez pas, #restezchezvous
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

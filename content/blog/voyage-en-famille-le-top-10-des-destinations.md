@@ -9,32 +9,34 @@ seo:
 navigation:
   title: "Voyage en famille : le top 10 des destinations"
   description: "Vous aimeriez partir en voyage en famille ? Trop compliqué, trop de contraintes ou d’appréhension, des raisons qui pourraient vous pousser à ne pas voyager avec vos enfants ? Pourtant, ce sont bien eux qui s’acclimatent le plus facilement ! Mais une fois la décision prise de partir en voyage ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 09:20:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique Centrale, Amerique du Sud, Animaux, Asie, Communautés locales, Costa Rica, Developpement personnel, Famille, Grands espaces, Inde, Kirghizistan, Made in France, Perou, Sport, Sri Lanka, Thailande, Transports insolites"
 categories: "Apprentissage, Blog"
 displayedImg: "/images/blogs/voyage-en-famille-le-top-10-des-destinations/bqjBdByfSLO3YirCApi4.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/voyage-en-famille-le-top-10-des-destinations/bqjBdByfSLO3YirCApi4.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 Voyage en famille : le top 10 des destinations
 
 #introduction
-     
+Vous aimeriez partir en voyage en famille ? Trop compliqué, trop de contraintes ou d’appréhension, des raisons qui pourraient vous pousser à ne pas voyager avec vos enfants ? Pourtant, ce sont bien eux qui s’acclimatent le plus facilement ! Mais une fois la décision prise de partir en voyage ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-en-famille-le-top-10-des-destinations/bqjBdByfSLO3YirCApi4.jpg"
----
 #content
 Vous aimeriez partir en voyage en famille ? Trop compliqué, trop de contraintes ou d’appréhension, des raisons qui pourraient vous pousser à ne pas voyager avec vos enfants ? Pourtant, ce sont bien eux qui s’acclimatent le plus facilement ! Mais une fois la décision prise de partir en voyage en famille, quelle destination privilégier ? Il y en a tellement qu’il est souvent difficile de faire un choix. Pour vous aider, voici **notre top 10 des destinations pour un voyage en famille inoubliable**.
 
@@ -162,3 +164,47 @@ alt: thailande blog.jpg
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

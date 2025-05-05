@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Offre de stage"
   description: "Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2022-01-28 13:08:00+00:00"
 tags: "Actualités"
 categories: ""
 displayedImg: "/images/blogs/offre-de-stage-voyages/tRbRx6RbRBe3qJYw6fQI.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/offre-de-stage-voyages/tRbRx6RbRBe3qJYw6fQI.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-28 janvier 2022
-
 #title
 Offre de stage
 
 #introduction
-À propos    
+Nous recrutons notre concepteur de voyages sur-mesure France & Corse (H/F) en stage. Découvrez le détail de l'offre et rejoignez-nous !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/offre-de-stage-voyages/tRbRx6RbRBe3qJYw6fQI.jpg"
----
 #content
 ## **Stage - Concepteur de voyages sur-mesure France & Corse (H/F)**
 
@@ -97,3 +99,47 @@ Au-delà de tes compétences, nous recherchons surtout quelqu’un qui sera forc
 
 Envie de rejoindre l’aventure ? Envoie ton CV à [contact@odysway.com](mailto:romain.masina@odysway.com) et dis-nous pourquoi c’est toi que nous devons recruter !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

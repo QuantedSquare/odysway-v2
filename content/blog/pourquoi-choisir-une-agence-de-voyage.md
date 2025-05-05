@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Pourquoi Choisir une Agence de Voyage pour Vos Prochaines Vacances ?"
   description: "Voyager est une expérience enrichissante qui permet de découvrir de nouvelles cultures, de se détendre et de créer des souvenirs inoubliables. Cependant, la planification d'un voyage peut être complexe et stressante. C'est là qu'une agence de voyage entre en jeu. Collaborer avec une agence de voyage offre de nombreux avantages ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-06-07 14:13:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/pourquoi-choisir-une-agence-de-voyage/lOMxqvh4TiGPhzPkQTJf.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage/lOMxqvh4TiGPhzPkQTJf.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-7 juin 2024
-
 #title
 Pourquoi Choisir une Agence de Voyage pour Vos Prochaines Vacances ?
 
 #introduction
- 
+Voyager est une expérience enrichissante qui permet de découvrir de nouvelles cultures, de se détendre et de créer des souvenirs inoubliables. Cependant, la planification d'un voyage peut être complexe et stressante. C'est là qu'une agence de voyage entre en jeu. Collaborer avec une agence de voyage offre de nombreux avantages ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage/lOMxqvh4TiGPhzPkQTJf.jpg"
----
 #content
 Voyager est une expérience enrichissante qui permet de découvrir de nouvelles cultures, de se détendre et de créer des souvenirs inoubliables. Cependant, la planification d'un voyage peut être complexe et stressante. C'est là qu'une agence de voyage entre en jeu. Collaborer avec une agence de voyage offre de nombreux avantages qui peuvent transformer votre expérience de voyage. Dans cet article, nous allons explorer les raisons pour lesquelles choisir une agence de voyage, en mettant en avant des points tels que les conseils personnalisés, l'écoute attentive, les prix négociés, la dimension durable, le suivi en cas de problème et le gain de temps. Odysway, une agence spécialisée dans les voyages immersifs et responsables, vous présente ces avantages !
 
@@ -128,3 +130,47 @@ Grâce à leur expertise, les agents de voyage peuvent optimiser votre itinérai
 
 Choisir une agence de voyage pour organiser vos vacances présente de nombreux avantages. Vous bénéficiez de conseils personnalisés, de prix négociés, d'un suivi en cas de problème, d'une dimension durable et d'un gain de temps considérable. Les agences de voyage, comme Odysway, s'engagent à offrir des expériences de voyage enrichissantes, responsables et adaptées à vos attentes. Pour votre prochain voyage, faites confiance à une agence de voyage pour vivre une aventure sans stress et pleine de découvertes. [Prenez rendez-vous avec un conseiller de voyage](https://calendly.com/odysway/15min?month=2024-06) Odysway pour échanger sur votre prochain séjour !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

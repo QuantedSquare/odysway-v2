@@ -24,32 +24,40 @@ navigation:
     En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
     
     Pour cela, regardez bien le calendrier de cette année prometteuse !
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-01-10 15:13:00+00:00"
 tags: "2023, repos, rêve, vacances, voyage"
 categories: "vacances, voyager, 2023"
 displayedImg: "/images/blogs/jours-feries-une-annee-propice-aux-voyages-encore-faut-il-poser-les-bons-jours-de-conges/g3okAcIFRDObiz4S4J4o.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/jours-feries-une-annee-propice-aux-voyages-encore-faut-il-poser-les-bons-jours-de-conges/g3okAcIFRDObiz4S4J4o.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-10 janvier 2023
-
 #title
 Jours fériés 2023 : une année propice aux voyages
 
 #introduction
+Reprise difficile ? Déjà envie d’être en congés ? 😎
 
+Et si vous planifiez vos prochaines vacances ? Vous pourrez maximiser vos jours de repos ! 🤪
+
+En effet, 9 jours fériés sur 11 tomberont en semaine : en posant 25 jours off, il sera possible d’obtenir une cinquantaine de jours de repos.
+
+Pour cela, regardez bien le calendrier de cette année prometteuse !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/jours-feries-une-annee-propice-aux-voyages-encore-faut-il-poser-les-bons-jours-de-conges/g3okAcIFRDObiz4S4J4o.jpg"
----
 #content
 Reprise difficile ? Déjà envie d'être en congés ?
 
@@ -92,3 +100,47 @@ Alors, on va où ?
 
 Chez Odysway nous avons créé plus de 30 séjours pour vous, en France et à l'étranger. Découvrez nos [voyages en immersion](https://odysway.com/destinations?utm_source=Blog&utm_medium=S%C3%A9jours&utm_campaign=Noss%C3%A9jours) au plus près des locaux pour découvrir le monde sous un autre regard et voyager autrement. C'est parti ?
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

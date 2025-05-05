@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 façons de lutter contre la déforestation en Amazonie"
   description: "L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?"
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-02-03 17:37:00+00:00"
 tags: "Amerique du Sud, Brésil, Famille, Grands espaces"
 categories: ""
 displayedImg: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/PLfFp1uATy2c7uzTBdw7.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/PLfFp1uATy2c7uzTBdw7.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-3 février 2020
-
 #title
 5 façons de lutter contre la déforestation en Amazonie
 
 #introduction
-      
+L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Comment lutter contre celle-ci ?
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-facons-lutter-contre-deforestation-amazonie/PLfFp1uATy2c7uzTBdw7.jpg"
----
 #content
 L’Amazonie, un immense territoire de plus de 5 millions de km², aujourd’hui au cœur de l’un des plus importants désastres écologiques de notre planète : la déforestation. Qu’elle soit d’origine naturelle ou majoritairement humaine, la **déforestation de l’Amazonie** ne cesse de croître au fil des années. Il faut savoir que depuis 50 ans, 17 % de sa surface a été détruite, entraînant la disparition et la migration de certaines espèces animales, ainsi que de tribus indigènes. À ce rythme, la forêt amazonienne aura disparu en 2030… Pourtant, les forêts sont essentielles pour notre planète et notre santé. Face à cette tragédie, il est possible d’apporter individuellement son aide. Voici **5 façons de lutter contre la déforestation en Amazonie**.
 
@@ -107,3 +109,47 @@ Lire davantage sur la [démarche responsable d'Odysway](https://odysway.com/dema
 
 Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturels exceptionnelles.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Vivez la Camargue autrement avec les gardians"
   description: "Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-30 16:50:00+00:00"
 tags: "Animaux, Europe, Famille, France, Grands espaces, Made in France"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/vivez-camargue-autrement-gardians/19MwadjxSuaO5EQqBll3.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/vivez-camargue-autrement-gardians/19MwadjxSuaO5EQqBll3.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 avril 2020
-
 #title
 Vivez la Camargue autrement avec les gardians
 
 #introduction
-    
+Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vivez-camargue-autrement-gardians/19MwadjxSuaO5EQqBll3.jpg"
----
 #content
 Territoire naturel doté d'un patrimoine très riche, la Camargue est une région sauvage et mystérieuse. Flamants roses, chevaux et taureaux se côtoient au milieu d'un environnement unique. Derrière ces paysages extraordinaires, des hommes perpétuent des traditions qui, aujourd'hui, ont forgé l'identité de la Camargue. Il s'agit des gardians, des cow-boys bien de chez nous qui veillent sur les manades. Si vous êtes en quête de **découvrir autrement une Camargue insoupçonnée et envoûtante,** rien de tel que de partir à leur rencontre.
 
@@ -79,3 +81,47 @@ Précisons par ailleurs que cette course n'a rien de commun avec la corrida car 
 
 De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

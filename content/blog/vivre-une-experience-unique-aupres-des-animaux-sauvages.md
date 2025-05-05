@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Partir à la rencontre des animaux sauvages"
   description: "Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-29 14:29:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 avril 2020
-
 #title
 Partir à la rencontre des animaux sauvages
 
 #introduction
-Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées dans votre mémoire. Que diriez-vous donc de partir à la rencontre des animaux sauvages qui peuplent notre planète ? Éléphants, ours, lions, tortues ou orangs-outans, approchez-les en toute sécurité au cours d'une expérience unique. Mais ce que nous proposons est bien plus qu'une simple rencontre, c'est un véritable moment de partage et d'échange. Une expérience que vous ne vivrez peut-être qu'une seule fois dans votre vie. Bien sûr, toutes nos expériences se font dans le respect le plus total des animaux et de l'environnement. Dans des centres de réhabilitation ou dans leur habitat naturel, observez, admirez, approchez ces animaux en toute humilité.Aujourd'hui, de nombreux animaux sauvages sont en danger dont beaucoup en voie de disparition. En effet, réchauffement climatique, déforestation, braconnage, pollution ou tourisme animalier douteux sont les principales raisons de la disparition de certaines espèces. Heureusement, des associations et des bénévoles leur viennent en aide, les soignent et les aident à retourner à la vie sauvage quand cela est possible. Odysway a décidé de soutenir ces actions et par la même occasion de vous faire participer ! Seul, à deux, entre amis et même en famille, lancez-vous dans une œuvre durable et solidaire.
+Partir à la rencontre des animaux sauvages Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Partir en voyage, c'est partir à l'aventure, faire de nouvelles découvertes et de belles rencontres. Et ces rencontres sont d'autant plus marquantes lorsqu'elles sont uniques et chargées d'émotions. Chez Odysway, nous avons envie de vous faire vivre des expériences qui resteront longtemps gravées dans votre mémoire. Que diriez-vous donc **de partir à la rencontre des animaux sauvages** qui peuplent notre planète ? Éléphants, ours, lions, tortues ou orangs-outans, approchez-les en toute sécurité au cours d'une expérience unique. Mais ce que nous proposons est bien plus qu'une simple rencontre, c'est un véritable moment de partage et d'échange. Une expérience que vous ne vivrez peut-être qu'une seule fois dans votre vie. Bien sûr, **toutes nos expériences se font dans le respect le plus total des animaux et de l'environnement**. Dans des centres de réhabilitation ou dans leur habitat naturel, observez, admirez, approchez ces animaux en toute humilité.  
   
@@ -62,3 +64,47 @@ alt: undefined
 
 **Vous souhaitez rencontrer des animaux sauvages lors d'une expérience solidaire tournée vers un tourisme responsable ?** Mais vous ne savez pas comment ? Ni où ? N'attendez plus et consultez sans plus tarder nos différents voyages. Parmi eux, [protéger les animaux au Sri Lanka](https://odysway.com/voyages/protection-animaux-sri-lanka), [soigner les animaux de la jungle au Costa Rica](https://odysway.com/voyages/refuge-animaux-costa-rica) ou bien [s'occuper des félins en Afrique du Sud](https://odysway.com/voyages/felins-afrique-du-sud). Vers quoi votre cœur va-t-il pencher ? N'hésitez pas non plus à nous contacter pour en savoir plus.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

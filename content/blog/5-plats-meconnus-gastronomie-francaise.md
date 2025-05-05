@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 plats méconnus de la gastronomie française"
   description: "Outre son histoire et son riche patrimoine, la France se caractérise par son nombre incalculable de spécialités culinaires. Du nord au sud et de l'ouest à l'est, nos régions pullulent de mets tous plus appétissants les uns que les autres. Mais entre la quiche lorraine, les escargots de Bourgogne, l'aligot et les canelés bordelais, d'autres spécialités bien moins célèbres font pourtant le régal des amateurs de bonne chère. Partons stimuler nos papilles avec 5 plats méconnus de la gastronomie française."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-07-30 12:00:00+00:00"
 tags: "Europe, France, Made in France"
 categories: "Culture et decouverte, Blog"
 displayedImg: "/images/blogs/5-plats-meconnus-gastronomie-francaise/VdrTBt3YTdC9emMWsFyw.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/VdrTBt3YTdC9emMWsFyw.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 juillet 2020
-
 #title
 5 plats méconnus de la gastronomie française
 
 #introduction
-   
+Outre son histoire et son riche patrimoine, la France se caractérise par son nombre incalculable de spécialités culinaires. Du nord au sud et de l'ouest à l'est, nos régions pullulent de mets tous plus appétissants les uns que les autres. Mais entre la quiche lorraine, les escargots de Bourgogne, l'aligot et les canelés bordelais, d'autres spécialités bien moins célèbres font pourtant le régal des amateurs de bonne chère. Partons stimuler nos papilles avec 5 plats méconnus de la gastronomie française.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-plats-meconnus-gastronomie-francaise/VdrTBt3YTdC9emMWsFyw.jpg"
----
 #content
 **Outre son histoire et son riche patrimoine, la France se caractérise par son nombre incalculable de spécialités culinaires. Du nord au sud et de l'ouest à l'est, nos régions pullulent de mets tous plus appétissants les uns que les autres. Mais entre la quiche lorraine, les escargots de Bourgogne, l'aligot et les canelés bordelais, d'autres spécialités bien moins célèbres font pourtant le régal des amateurs de bonne chère. Partons stimuler nos papilles avec 5 plats méconnus de la gastronomie française.**  
 
@@ -103,3 +105,47 @@ Un voyage culturel immersif est une façon de voyager de manière solidaire, éc
 
 Pour poursuivre votre lecture, nous vous invitons à découvrir [notre article sur la découverte de la côte Ouest de la France.](https://odysway.com/decouvrir-france-fil-cote-ouest-partie-1)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

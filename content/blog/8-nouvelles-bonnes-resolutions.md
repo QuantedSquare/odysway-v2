@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "8 “nouvelles” bonnes résolutions"
   description: "Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 15:46:00+00:00"
 tags: "Animaux, Communautés locales, Sport"
 categories: ""
 displayedImg: "/images/blogs/8-nouvelles-bonnes-resolutions/Ha2CnLmRSpCZikYxenEE.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/8-nouvelles-bonnes-resolutions/Ha2CnLmRSpCZikYxenEE.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 8 “nouvelles” bonnes résolutions
 
 #introduction
-  
+Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/8-nouvelles-bonnes-resolutions/Ha2CnLmRSpCZikYxenEE.jpg"
----
 #content
 Chaque début d’année, nous sommes nombreux à dresser des listes interminables de bonnes résolutions que nous espérons tenir tant bien que mal. Celles-ci sont souvent similaires et rébarbatives : se remettre au sport, lire davantage, être moins accro à son téléphone… Par conséquent, peu d’entre elles résistent à l’épreuve du temps. Mais il est possible de remettre ces bonnes résolutions au goût du jour pour les rendre plus attrayantes et réussir, pour certaines, à les inclure dans nos habitudes quotidiennes. Voici 8 « nouvelles » bonnes résolutions à mettre en œuvre dès le 1er janvier 2020 !
 
@@ -102,3 +104,47 @@ Le voyage, souvent réalisé pendant les périodes de vacances, est généraleme
 
 Contrairement à leurs aînées, ces résolutions ne sont nullement contraignantes ; elles visent à augmenter votre bonheur et votre confiance en vous. Le voyage est cité à de nombreuses reprises car il permet à la fois de s’enrichir, de s’épanouir et de grandir ! [Odysway vous propose des voyages élaborés autour de plusieurs thématiques](https://odysway.com) : nul doute que certains d’entre eux vous permettront de réaliser certaines de vos résolutions 2020 !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

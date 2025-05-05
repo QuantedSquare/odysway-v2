@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "L’Inde, terre de contraste"
   description: "L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-17 13:49:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-17 avril 2020
-
 #title
 L’Inde, terre de contraste
 
 #introduction
-L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer.
+L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer. Veau dans la ville d’Udaipur dans le Rajasthan En ce ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 L’Inde est un pays étonnant. Étonnant par sa population, plus d’un milliard d’habitants, et sa culture qui reconnaît 18 langues officielles et quelques centaines officieuses. Pourtant, ce pays d’Asie possède sa propre identité dont les traditions continuent de se perpétuer.
 
@@ -56,3 +58,47 @@ Avec une nature généreuse et des immenses espaces, l’Inde est une destinatio
 
 Odysway vous propose également de [partir à la découverte de l'Arunachal Pradesh](https://odysway.com/voyages/inde-arunachal-pradesh), une région encore méconnue au nord-est du pays.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

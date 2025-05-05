@@ -16,32 +16,36 @@ navigation:
     Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
     
     Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2022-10-18 12:33:00+00:00"
 tags: "Inde"
 categories: "voyage, immersion, inde"
 displayedImg: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/dfnJUW9hRYuvjrGOYuxg.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/dfnJUW9hRYuvjrGOYuxg.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-18 octobre 2022
-
 #title
 Interview – Rencontre avec Laurige, notre guide en Inde
 
 #introduction
-       Vivre un séjour en immersion en Inde, c'est possible ! Découvrez ces territoires lointains, habités par des communautés ethniques fascinantes et où la biodiversité est d'une richesse surprenante. Laurige n'attend que vous ! 
+Vous souhaitez voyager en Inde à la rencontre des tribus d'Arunachal Pradesh ? C'est exactement ce que nous vous proposons !
+
+Direction l'Inde, à la rencontre de Laurige, notre agent local qui vous accueille avec bonne humeur pour découvrir les secrets de l'Inde.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/interview-rencontre-avec-laurige-notre-guide-en-inde/dfnJUW9hRYuvjrGOYuxg.jpg"
----
 #content
        ****Vivre un séjour en [immersion en Inde](https://odysway.com/voyages/inde-arunachal-pradesh "Vivez une immersion en Inde"), c'est possible ! Découvrez ces territoires lointains, habités par des communautés ethniques fascinantes et où la biodiversité est d'une richesse surprenante. Laurige n'attend que vous !****
 
@@ -132,3 +136,47 @@ Odysway vous propose aujourd'hui 2 voyages en Inde :
 
 Deux séjours hors du temps, différents de ce que vous avez vécu jusqu'à présent !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

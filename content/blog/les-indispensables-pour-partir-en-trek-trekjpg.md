@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les indispensables pour partir en trek !"
   description: "Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 14:42:00+00:00"
 tags: "Brésil, Grands espaces, Nepal, Perou, Sport"
 categories: "Depassement de soi, Nature et grands espaces, Blog"
 displayedImg: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/sccFp6UQYO3qJoAalG1f.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/sccFp6UQYO3qJoAalG1f.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 Les indispensables pour partir en trek !
 
 #introduction
-   
+Vous cherchez quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/les-indispensables-pour-partir-en-trek-trekjpg/sccFp6UQYO3qJoAalG1f.jpg"
----
 #content
 Vous cherchez **quels sont les indispensables du trek auxquels il faut penser pour partir à l’aventure** ? Pour réussir son trek, fouler des terres isolées ou arpenter les montagnes, il est essentiel d’être bien équipé. Il n’y a rien de pire, en randonnée, que de manquer d’eau ou de nourriture, d’avoir oublié un répulsif anti-moustique, un duvet ou un vêtement chaud. Le contenu de votre sac va logiquement dépendre de la destination, de la météo, du dénivelé et du relief et de la durée du trek. Quels que soient ces paramètres, il reste des accessoires qu’il faudra toujours avoir sur soi. Voici notre liste des indispensables du trek auxquels il faudra toujours penser.
 
@@ -80,3 +82,47 @@ Vous souhaitez partir à l’aventure ? Odysway vous propose une [expérience 
 
 Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor ! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

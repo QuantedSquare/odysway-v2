@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les 10 plus grands aventuriers"
   description: "Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-06-21 09:49:00+00:00"
 tags: "Communautés locales, Grands espaces, Sport, Transports insolites"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/dix-plus-grands-aventuriers/HnliEDHSLCkRzi4H0B3X.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/dix-plus-grands-aventuriers/HnliEDHSLCkRzi4H0B3X.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-21 juin 2019
-
 #title
 Les 10 plus grands aventuriers
 
 #introduction
-
+Un aventurier est une personne en quête d'aventure, avec en toile de fond l'inconnu et le danger. Depuis des siècles, des aventuriers parcourent la planète . Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d'émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/dix-plus-grands-aventuriers/HnliEDHSLCkRzi4H0B3X.jpg"
----
 #content
 Un aventurier est une personne en quête d’aventure, avec en toile de fond l’inconnu et le danger. **Depuis des siècles, des aventuriers parcourent la planète**. Voyageurs et explorateurs, ils sont en quête de découvertes, de sensations, d’émotions et de rencontres inattendues. De Marco Polo à Mike Horn, découvrez les 10 plus grands aventuriers qui ont marqué l’histoire.
 
@@ -174,3 +176,47 @@ Si vous aussi, vous avez soif d’aventure et de grands espaces, Odysway vous pr
 
 [Découvrez nos voyages sur le thème de l'aventure !](https://odysway.com/thematiques/voyage-aventure)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

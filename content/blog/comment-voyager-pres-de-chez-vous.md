@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment voyager près de chez vous?"
   description: "Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous . Ici un ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-05-22 15:30:00+00:00"
 tags: "Europe, Famille, France, Made in France"
 categories: ""
 displayedImg: "/images/blogs/comment-voyager-pres-de-chez-vous/dw4SdGYjRajX3HX5Azlg.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/comment-voyager-pres-de-chez-vous/dw4SdGYjRajX3HX5Azlg.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-22 mai 2020
-
 #title
 Comment voyager près de chez vous?
 
 #introduction
-    
+Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous . Ici un ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-voyager-pres-de-chez-vous/dw4SdGYjRajX3HX5Azlg.jpg"
----
 #content
 Voyager ne signifie pas uniquement partir loin. Voyager, c'est découvrir un lieu, un édifice, une culture, un mode de vie différent du sien. Et pour cela, nul besoin de parcourir des milliers de km. **Ouvrez simplement vos yeux et observez ce qu'il y a autour de vous**. Ici un monument historique, là une jolie balade à faire ou bien un panorama à découvrir. Voyager est avant tout un état d'esprit et non une quête aux tampons sur le passeport. **Nous vous donnons quelques pistes pour faire le plus beau des voyages tout près de chez vous**.
 
@@ -86,3 +88,47 @@ _Découvrez le savoir-faire des gardians en Camargue !_
 
 Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

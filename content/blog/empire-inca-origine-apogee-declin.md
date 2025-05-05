@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "L'Empire inca : origine, apogée et déclin"
   description: "La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-09-13 16:55:00+00:00"
 tags: "Amerique du Sud, Communautés locales, Developpement personnel, Famille, Perou"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/empire-inca-origine-apogee-declin/bEFHnrRJRsKbLQd36M2w.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/empire-inca-origine-apogee-declin/bEFHnrRJRsKbLQd36M2w.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-13 septembre 2019
-
 #title
 L'Empire inca : origine, apogée et déclin
 
 #introduction
-      
+La région de Cuzco au Pérou a vu naître les Incas . Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu'à être le plus grand empire de l'Amérique précolombienne. Mais avec l'arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/empire-inca-origine-apogee-declin/bEFHnrRJRsKbLQd36M2w.jpg"
----
 #content
 **La région de Cuzco au Pérou a vu naître les Incas**. Guerriers avérés et bâtisseurs hors pair, ils ont progressivement étendu leur territoire jusqu’à être le plus grand empire de l’Amérique précolombienne. Mais avec l’arrivée des Espagnols et leur soif de conquête encore plus grande, et de maladies qui ont décimé la population, **l’Empire inca** s’est effondré. Découvrons son histoire.
 
@@ -109,3 +111,47 @@ Si vous souhaitez vivre comme au temps des Incas et partir vivre dans une commun
 
 Ce voyage immersif vous donnera le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

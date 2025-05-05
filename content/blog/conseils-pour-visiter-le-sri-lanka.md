@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Conseils pour visiter le Sri Lanka"
   description: "Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-07-17 07:11:00+00:00"
 tags: "partir seul, Sri Lanka, voyage"
 categories: "voyage, conseil, préparer"
 displayedImg: "/images/blogs/conseils-pour-visiter-le-sri-lanka/x3B0rriAQGmcMLDfKJ1B.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/x3B0rriAQGmcMLDfKJ1B.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-17 juillet 2023
-
 #title
 Conseils pour visiter le Sri Lanka
 
 #introduction
-Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine variée, sa faune diversifiée et son long littoral parsemé de plages d'un blanc nacré. Il y a donc de nombreuses possibilités pour un voyage immersif sur l'île. Cependant, la plupart des voyageurs ne séjournent que dans une partie limitée de l'île : le sud ou le sud-ouest. Bien sûr, tout le monde ne peut pas rester éternellement au Sri Lanka, mais il est également dommage de passer à côté des beautés des autres parties de l'île.
+Le Sri Lanka est connu pour la diversité de ses paysages et sa culture unique. Lisez ici tous les conseils pour un voyage autour du Sri Lanka bien réussi.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/conseils-pour-visiter-le-sri-lanka/x3B0rriAQGmcMLDfKJ1B.jpg"
----
 #content
 Le Sri Lanka, la plus grande perle de l'océan Indien, est connu pour sa cuisine variée, sa faune diversifiée et son long littoral parsemé de plages d'un blanc nacré. Il y a donc de nombreuses possibilités pour un voyage immersif sur l'île. Cependant, la plupart des voyageurs ne séjournent que dans une partie limitée de l'île : le sud ou le sud-ouest. Bien sûr, tout le monde ne peut pas rester éternellement au Sri Lanka, mais il est également dommage de passer à côté des beautés des autres parties de l'île.
 
@@ -109,3 +111,47 @@ Qu'il s'agisse d'une escapade romantique, d'une aventure en plein air ou d'une i
 
 Créez votre projet maintenant : [https://tally.so/r/wQM8g](https://tally.so/r/wQM8g1?fbclid=IwAR0LD73MS9eh9V6gsfd3pk_PX3qTbStFZr5yvvB5AQyj9AOZbikHfWFG6CM)1
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

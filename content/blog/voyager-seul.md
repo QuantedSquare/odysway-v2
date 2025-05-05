@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyager seul : nos conseils pour partir en toute sérénité"
   description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2022-07-01 12:49:00+00:00"
 tags: "conseils, voyager seul"
 categories: "Blog"
 displayedImg: "/images/blogs/voyager-seul/h2oYQVSSte9ZbEuqz9qE.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/voyager-seul/h2oYQVSSte9ZbEuqz9qE.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-1 juillet 2022
-
 #title
 Voyager seul : nos conseils pour partir en toute sérénité
 
 #introduction
-       
+Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyager-seul/h2oYQVSSte9ZbEuqz9qE.jpg"
----
 #content
 Vous aimez voyager ? Alors rien alors ne doit vous empêcher de partir même pas la peur de vous retrouver tout seul. **Voyager seul** est une véritable expérience qui vous permettra de mieux vous connaître et de vivre ce que vous avez réellement envie de vivre. Pour en profiter à 100 %, voici quelques conseils pour des vacances solo réussies.
 
@@ -114,3 +116,47 @@ Si de votre côté, **voyager seul** ne vous pose pas de problème, il n’en es
 
 Même si vous partez à l’étranger, il est aujourd’hui très facile de communiquer. **Internet** et le **wifi** se sont largement développés et permettent de rester en contact 7/7 et H24. Vous avez ainsi accès à votre boîte mail ou aux réseaux sociaux pour envoyer un message, un mail, une photo... Vous pouvez également **acheter une carte SIM locale**. Celle-ci vous sera très utile dans des lieux sans connexion (ou très mauvaise) pour appeler ou envoyer un SMS à moindres frais.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

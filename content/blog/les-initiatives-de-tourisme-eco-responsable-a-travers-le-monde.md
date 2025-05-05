@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les Initiatives de Tourisme Éco-responsable à Travers le Monde"
   description: "Le tourisme écoresponsable est devenu une priorité pour les voyageurs soucieux de leur impact sur l'environnement et les communautés locales. Cette approche du voyage vise à minimiser l'empreinte écologique tout en maximisant les bénéfices pour les populations locales. De nombreuses initiatives de tourisme écoresponsable se développent à travers le monde, ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-05-28 07:22:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/pJpCh7nSrGPZBsXQa4zA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/pJpCh7nSrGPZBsXQa4zA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-28 mai 2024
-
 #title
 Les Initiatives de Tourisme Éco-responsable à Travers le Monde
 
 #introduction
- 
+Le tourisme écoresponsable est devenu une priorité pour les voyageurs soucieux de leur impact sur l'environnement et les communautés locales. Cette approche du voyage vise à minimiser l'empreinte écologique tout en maximisant les bénéfices pour les populations locales. De nombreuses initiatives de tourisme écoresponsable se développent à travers le monde, ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/les-initiatives-de-tourisme-eco-responsable-a-travers-le-monde/pJpCh7nSrGPZBsXQa4zA.jpg"
----
 #content
 Le tourisme écoresponsable est devenu une priorité pour les voyageurs soucieux de leur impact sur l'environnement et les communautés locales. Cette approche du voyage vise à minimiser l'empreinte écologique tout en maximisant les bénéfices pour les populations locales. De nombreuses initiatives de tourisme écoresponsable se développent à travers le monde, offrant des solutions innovantes et durables. Voici un tour d'horizon des meilleures pratiques et des initiatives inspirantes en matière de tourisme éco-responsable.
 
@@ -149,3 +151,47 @@ L'initiative Slow Travel encourage les voyageurs à explorer des destinations pr
 
 Le tourisme éco-responsable est en pleine expansion et de nombreuses initiatives à travers le monde montrent la voie vers des voyages plus durables et respectueux de l'environnement. En choisissant des hébergements écologiques, en soutenant les communautés locales, en utilisant des moyens de transport durables, en participant à des activités respectueuses de l'environnement, en privilégiant une gastronomie durable, en s'engageant dans des programmes de sensibilisation et en optant pour des expériences locales sans avion, les voyageurs peuvent contribuer à un avenir plus vert et plus équitable.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où se ressourcer en pleine nature pendant ses vacances ?"
   description: "Le temps avance à toute allure ? Vous avez une vie professionnelle trépidante, mais fatigante ? Ou simplement une envie de nature ? Parfois, le rythme de notre quotidien est un peu rapide, on se lève, on travaille, on se couche et on s’oublie un peu, quelques jours ou quelques ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-05-25 10:16:00+00:00"
 tags: "Etats Unis, Famille, Finlande, France, Grands espaces, Nepal"
 categories: ""
 displayedImg: "/images/blogs/ou-ressourcer-pleine-nature-vacances/swBsBj5LTeOBe4uy7oGz.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/swBsBj5LTeOBe4uy7oGz.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-25 mai 2020
-
 #title
 Où se ressourcer en pleine nature pendant ses vacances ?
 
 #introduction
-     
+Le temps avance à toute allure ? Vous avez une vie professionnelle trépidante, mais fatigante ? Ou simplement une envie de nature ? Parfois, le rythme de notre quotidien est un peu rapide, on se lève, on travaille, on se couche et on s’oublie un peu, quelques jours ou quelques ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-ressourcer-pleine-nature-vacances/swBsBj5LTeOBe4uy7oGz.jpg"
----
 #content
 Le temps avance à toute allure ? Vous avez une vie professionnelle trépidante, mais fatigante ? Ou simplement une envie de nature ? Parfois, le rythme de notre quotidien est un peu rapide, on se lève, on travaille, on se couche et on s’oublie un peu, quelques jours ou quelques semaines. Stop ! Si on s’arrêtait un peu et on respirait à nouveau ? Rien de tel que de partir au vert pour prendre l’air. Nous vous invitons à vivre un séjour loin de l’agitation et de la pollution des villes. Où se ressourcer en pleine nature pendant ses vacances ? Voici quelques destinations avec de grands espaces où la nature a gardé ses droits. Vous pouvez vous reconnecter à l’environnement et apprécier des paysages grandioses. Allez, on se détend et on se laisse porter par ces idées de voyages.
 
@@ -120,3 +122,47 @@ _Profitez du calme de la nature dans votre canoë._
 
 En attendant, vous pouvez consulter [notre article sur comment découvrir les pays scandinaves !](https://odysway.com/comment-decouvrir-pays-scandinaves)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

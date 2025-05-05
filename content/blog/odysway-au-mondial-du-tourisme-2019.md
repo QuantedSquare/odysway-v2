@@ -7,21 +7,26 @@ seo:
 navigation:
   title: "Odysway au Mondial du tourisme 2019 !"
   description: "Toute l’équipe d’Odysway sera présente lors du mondial du tourisme 2019. L’événement aura lieu à Paris (Porte de Versailles) du jeudi 14 au Dimanche 17 Mars 2019 !"
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-02-06 20:02:00+00:00"
 tags: "Presse, Salon"
 categories: "Depassement de soi, News Odysway"
 displayedImg: "/images/blogs/odysway-au-mondial-du-tourisme-2019/Kn1MimizSFCRyDE63ayX.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/odysway-au-mondial-du-tourisme-2019/Kn1MimizSFCRyDE63ayX.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 février 2019
-
 #title
 Odysway au Mondial du tourisme 2019 !
 
@@ -30,9 +35,6 @@ Toute l’équipe d’Odysway sera présente lors du mondial du tourisme 2019. L
 ::
 
 ::section-container
----
-image-src: "/images/blogs/odysway-au-mondial-du-tourisme-2019/Kn1MimizSFCRyDE63ayX.jpg"
----
 #content
 Toute l’équipe d’Odysway sera présente lors du mondial du tourisme 2019. L’événement aura lieu à Paris (Porte de Versailles) du jeudi 14 au Dimanche 17 Mars 2019 !
 
@@ -50,3 +52,47 @@ Intensément
 
 Romain
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

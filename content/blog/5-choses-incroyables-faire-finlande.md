@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 choses incroyables à faire en Finlande"
   description: "A quelques heures d'avion de la France, la Finlande vous ouvre ses portes pour un voyage pas comme les autres. De par sa position géographique et sa nature qui prédomine sur près de 1 160 km du nord au sud, ce pays scandinave possède bien des trésors qui en font un territoire à part entière. Afin de comprendre pourquoi la Finlande est si fascinante, nous avons sélectionné pour vous 5 choses incroyables à faire là-bas."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-06-05 11:00:00+00:00"
 tags: "Animaux, Europe, Finlande, Grands espaces"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/5-choses-incroyables-faire-finlande/D11y2TnhRdSc97RsCpPI.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/5-choses-incroyables-faire-finlande/D11y2TnhRdSc97RsCpPI.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-5 juin 2023
-
 #title
 5 choses incroyables à faire en Finlande
 
 #introduction
-       
+A quelques heures d'avion de la France, la Finlande vous ouvre ses portes pour un voyage pas comme les autres. De par sa position géographique et sa nature qui prédomine sur près de 1 160 km du nord au sud, ce pays scandinave possède bien des trésors qui en font un territoire à part entière. Afin de comprendre pourquoi la Finlande est si fascinante, nous avons sélectionné pour vous 5 choses incroyables à faire là-bas.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-choses-incroyables-faire-finlande/D11y2TnhRdSc97RsCpPI.jpg"
----
 #content
 **A quelques heures d'avion de la France, la Finlande vous ouvre ses portes pour un voyage pas comme les autres. De par sa position géographique et sa nature qui prédomine sur près de 1 160 km du nord au sud, ce pays scandinave possède bien des trésors qui en font un territoire à part entière. Afin de comprendre pourquoi la Finlande est si fascinante, nous avons sélectionné pour vous 5 choses incroyables à faire là-bas.**
 
@@ -100,3 +102,47 @@ Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion
 
 Pour continuer votre lecture, nous vous invitons à lire [notre article dédié aux voyages en Europe](https://odysway.com/ou-voyager-europe)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

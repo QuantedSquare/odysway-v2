@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le sport en voyage : s'évader tout en gardant la forme"
   description: "Le sport c'est la santé, en voyage aussi ! On le sait tous, il faut pratiquer une activité physique régulière pour rester en forme et garder la santé. Mais pas que. Le sport est un excellent moyen pour évacuer le stress, garder le contrôle de soi et vivre des sensations ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-29 16:10:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 avril 2020
-
 #title
 Le sport en voyage : s'évader tout en gardant la forme
 
 #introduction
-On le sait tous, il faut pratiquer une activité physique régulière pour rester en forme et garder la santé. Mais pas que. Le sport est un excellent moyen pour évacuer le stress, garder le contrôle de soi et vivre des sensations fortes qui stimulent notre quotidien. Et pourquoi, cela ne serait-il valable que dans notre vie de tous les jours ? En voyage aussi gardez la forme tout en vous évadant. Et c'est peut-être justement en vacances que l'on a de plus de facilité à faire du sport car on a plus de temps et moins de contraintes. Et puis, avouons-le, c'est quand même plus stimulant (et plus sympa) de faire un footing sur la plage au coucher du soleil ou de faire du vélo au cœur de paysages à couper le souffle.Venez vous évader avec Odysway pour vivre des expériences sportives authentiques aux quatre coins du monde. Votre objectif est de stimuler votre corps et votre esprit ? D'améliorer votre force et votre endurance ? D'évacuer votre stress et de retrouver votre calme intérieur ? Grâce à nos séjours sport, atteignez votre but dans une approche différente. Une approche qui vous permettra de vous dépasser et de vous évader en même temps.
+Le sport c'est la santé, en voyage aussi ! On le sait tous, il faut pratiquer une activité physique régulière pour rester en forme et garder la santé. Mais pas que. Le sport est un excellent moyen pour évacuer le stress, garder le contrôle de soi et vivre des sensations ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 ## Le sport c'est la santé, en voyage aussi !
 
@@ -68,3 +70,47 @@ alt: Thaïlande voyage sportif.jpg
 
 Vous souhaitez découvrir un nouveau sport ? Ou au contraire vous voulez vous entraîner pour vous perfectionner ? Pas de problème ! **Nous proposons des expériences pour tous les types de sportifs et cela dans plusieurs disciplines**. Débutant, expérimenté ou même simple curieux, un seul mot d'ordre : oser pour un résultat qui dépassera toutes vos attentes. Boxe, vélo, art martial, vous avez l'embarras du choix. Et si vous avez la moindre question, contactez-nous, nous serons ravis de vous aider.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Surfez sur le volcan Cerro Negro au Nicaragua"
   description: "Au centre de l'Amérique Centrale, le Nicaragua se démarque par un relief particulièrement prononce, notamment due a la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le Cerro Negro , situe a 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-09-22 08:32:00+00:00"
 tags: "Amerique Centrale, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
 displayedImg: "/images/blogs/surfez-sur-le-volcan-cerro-negro-au-nicaragua/4rnwUHndRBC1DN3bTEQA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/surfez-sur-le-volcan-cerro-negro-au-nicaragua/4rnwUHndRBC1DN3bTEQA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-22 septembre 2018
-
 #title
 Surfez sur le volcan Cerro Negro au Nicaragua
 
 #introduction
-    
+Au centre de l'Amérique Centrale, le Nicaragua se démarque par un relief particulièrement prononce, notamment due a la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le Cerro Negro , situe a 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/surfez-sur-le-volcan-cerro-negro-au-nicaragua/4rnwUHndRBC1DN3bTEQA.jpg"
----
 #content
 Au centre de l’Amérique Centrale, le **Nicaragua** se démarque par un relief particulièrement prononcé, notamment due à la présence de 26 volcans. Parmi eux, 6 sont encore en activité dont le **Cerro Negro**, situé à 25 km au nord-ouest de Leon. Il est devenu une étape incontournable pour tous les visiteurs à la recherche de sensations extrêmes. Le **volcano** **boarding**, ou le **surf** **sur** **un** **volcan**, est probablement l’une des activités les plus insolites à faire lorsque vous voyagez au Nicaragua.
 
@@ -58,3 +60,47 @@ Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en p
 
 Odysway vous propose [un voyage en immersion en Amérique centrale.](https://odysway.com/destinations/amerique-centrale)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

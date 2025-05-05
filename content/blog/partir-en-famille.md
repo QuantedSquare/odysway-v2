@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Partir en Famille"
   description: "Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-01-19 09:19:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-19 janvier 2021
-
 #title
 Partir en Famille
 
 #introduction
-Le temps des vacances est un moment merveilleux pour toute la famille ! Se retrouver enfin tous ensemble, prendre le temps, découvrir et passer des moments de qualité parents-enfants, ça n’a pas de prix !
+Partir en groupe est une expérience enrichissante et elle permet de rencontrer des passionnés de voyage comme vous. Partez en petit groupe avec Odysway !
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Le temps des vacances est un moment merveilleux pour toute la famille ! Se retrouver enfin tous ensemble, prendre le temps, découvrir et passer des moments de qualité parents-enfants, ça n’a pas de prix !
 
@@ -134,3 +136,47 @@ Que vous souhaitiez :
 
 Toute l'équipe d’Odysway est à votre service pour que vous passiez un séjour en famille inoubliable !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

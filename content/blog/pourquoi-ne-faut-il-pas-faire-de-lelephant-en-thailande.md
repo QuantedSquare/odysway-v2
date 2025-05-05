@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Pourquoi ne faut-il pas faire de l'éléphant en Thaïlande ?"
   description: "Dans toute destination touristique, il y a toujours une attraction phare qui caractérise le pays. Monuments historiques, sites culturels ou nature exceptionnelle, ces centres d'intérêt attirent la curiosité des voyageurs. Tel est le cas en Thaïlande ou la balade a dos d'éléphant est l'une de ces attractions majeures du pays. ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-01-15 10:00:00+00:00"
 tags: "Animaux, Asie, Thailande"
 categories: "Apprentissage, Culture et decouverte, Benefices locaux"
 displayedImg: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/exy4r7dpRfqBdYNMYuug.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/exy4r7dpRfqBdYNMYuug.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-15 janvier 2019
-
 #title
 Pourquoi ne faut-il pas faire de l'éléphant en Thaïlande ?
 
 #introduction
-  
+Dans toute destination touristique, il y a toujours une attraction phare qui caractérise le pays. Monuments historiques, sites culturels ou nature exceptionnelle, ces centres d'intérêt attirent la curiosité des voyageurs. Tel est le cas en Thaïlande ou la balade a dos d'éléphant est l'une de ces attractions majeures du pays. ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/pourquoi-ne-faut-il-pas-faire-de-lelephant-en-thailande/exy4r7dpRfqBdYNMYuug.jpg"
----
 #content
 Dans toute destination touristique, il y a toujours une attraction phare qui caractérise le pays. Monuments historiques, sites culturels ou nature exceptionnelle, ces centres d’intérêts attirent la curiosité des voyageurs. Tel est le cas en Thaïlande où la balade à dos d’éléphant est l’une de ces attractions majeures du pays. En réalité, nous sommes loin de l’image insolite qu’elle peut renvoyer. Entre maltraitance et business lucratif, voici pourquoi il ne faut pas faire de l’éléphant en Thaïlande.
 
@@ -132,3 +134,47 @@ alt:
 
 Poursuivez votre lecture avec [notre article de blog dédié à la Thaïlande.](https://odysway.com/la-thailande-le-pays-du-sourire)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

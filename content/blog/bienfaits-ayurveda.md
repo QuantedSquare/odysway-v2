@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les bienfaits de l'Ayurveda"
   description: "Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-07-12 10:28:00+00:00"
 tags: "Developpement personnel"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/bienfaits-ayurveda/IEKA1nKPSFeaE5m6H39P.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/bienfaits-ayurveda/IEKA1nKPSFeaE5m6H39P.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-12 juillet 2019
-
 #title
 Les bienfaits de l'Ayurveda
 
 #introduction
-   
+Médecine traditionnelle indienne, l'Ayurveda propose une approche différente dans la guérison des maux. Qu'ils soient d'ordres physiques ou psychologiques, l'Ayurveda va d'abord rechercher les causes de ces désequilibres a l'origine du mal-être . Réduction du stress, apaisement des douleurs, lutte contre l'insomnie, découvrons les bienfaits de l'Ayurveda à travers ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/bienfaits-ayurveda/IEKA1nKPSFeaE5m6H39P.jpg"
----
 #content
 Médecine traditionnelle indienne, **l’Ayurveda** propose une approche différente dans la guérison des maux. Qu’ils soient d’ordres physiques ou psychologiques, **l’Ayurveda va d’abord rechercher les causes de ces déséquilibres à l’origine du mal-être**. Réduction du stress, apaisement des douleurs, lutte contre l’insomnie, découvrons les bienfaits de l’Ayurveda à travers différentes pratiques.
 
@@ -117,3 +119,47 @@ Envie de retrouver un meilleur équilibre ? [Découvrez notre thématique "voyag
 
 Pendant la journée, partez en trek et randonnée en marchant doucement tout en profitant des paysages mythiques du Népal. Le matin et le soir, prenez part à des cours de yoga face à l'Himalaya, dans un décor de rêve.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

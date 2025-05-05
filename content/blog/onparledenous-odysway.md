@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "#Onparledenous #Odysway"
   description: "Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-10-30 07:30:00+00:00"
 tags: ""
 categories: "News Odysway"
 displayedImg: "/images/blogs/onparledenous-odysway/xteGDJlRQQiIzq94QnKg.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
 ::hero-section-blog
 ---
-image-src: "/images/blogs/onparledenous-odysway/xteGDJlRQQiIzq94QnKg.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 octobre 2018
-
 #title
 #Onparledenous #Odysway
 
 #introduction
-    
+Odysway a participe en tant que startup invitée au 40eme salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu a la porte de Versailles a Paris. Ayant lieu chaque année, ce salon rassemble les professionnels du tourisme. Regroupant des agents de voyages, des tours-opérateurs, offices de ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/onparledenous-odysway/xteGDJlRQQiIzq94QnKg.jpg"
----
 #content
 Odysway a participé en tant que startup invitée au 40ème salon IFTM Top Resa, du 25 au 28 septembre. Ce salon avait lieu à la porte de Versailles à Paris.
 
@@ -46,3 +48,47 @@ Bonne journée à tous,
 
 L’équipe Odysway.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::
