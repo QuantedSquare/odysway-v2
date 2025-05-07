@@ -10,9 +10,16 @@
       <v-row>
         <v-col
           cols="12"
-          class="d-flex ga-2 align-center mb-1"
+          md="auto"
+          class="d-flex align-center"
         >
           <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages} voyages` }}</span>
+        </v-col>
+        <v-col
+          cols="12"
+          md="auto"
+          class="d-flex align-center ga-2"
+        >
           <v-chip
             v-if="routeQuery.destination"
             variant="flat"
@@ -20,7 +27,7 @@
             color="secondary-light-2"
             density="comfortable"
           >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3">
               {{ routeQuery.destination }}
             </span>
           </v-chip>
@@ -31,7 +38,7 @@
             color="secondary-light-2"
             density="comfortable"
           >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3">
               {{ routeQuery.travelType }}
             </span>
           </v-chip>
@@ -42,29 +49,57 @@
             color="secondary-light-2"
             density="comfortable"
           >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
-              {{ routeQuery.dateRange }}
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3">
+              {{ parsedDateRange }}
             </span>
           </v-chip>
         </v-col>
+        <v-spacer />
         <v-col
-          v-if="voyages?.length > 0"
+          cols="12"
+          md="auto"
+          class="d-flex justify-end"
+        >
+          <v-btn
+            color="primary"
+            variant="outlined"
+            size="large"
+            class="text-subtitle-2"
+            @click="reinitiliazeFilter"
+          >
+            Réinitialiser
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          v-if="voyagesWithCta?.length > 0"
           cols="12"
         >
           <v-row>
             <v-col
-              v-for="voyage in voyages"
+              v-for="voyage in voyagesWithCta"
               :key="voyage.id"
               cols="12"
               sm="6"
               lg="4"
+              xl="3"
             >
-              <SearchVoyageCard :voyage="voyage" />
+              <CtaColCard v-if="voyage.isCta" />
+              <SearchVoyageCard
+                v-else
+                :voyage="voyage"
+              />
             </v-col>
           </v-row>
         </v-col>
-        <v-col v-else>
-          Modifiez vos critères de recherche
+        <v-col
+          v-else
+          cols="12"
+        >
+          <p class="text-body-1">
+            Modifiez vos critères de recherche
+          </p>
         </v-col>
       </v-row>
     </v-container>
@@ -76,8 +111,15 @@ import dayjs from 'dayjs'
 import { useDisplay } from 'vuetify'
 
 const { lgAndUp } = useDisplay()
+
+const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
+
+const parsedDateRange = computed(() => {
+  const [start, end] = routeQuery.value.dateRange.split('-') || []
+  return `${dayjs(start).format('MMMM YYYY')} - ${dayjs(end).format('MMMM YYYY')}`
+})
 
 const { data: voyages } = useAsyncData(
   `search-${JSON.stringify(route.query)}`,
@@ -104,9 +146,21 @@ const { data: voyages } = useAsyncData(
 
     const getFilteredByDate = (allVoyages, dateRange) => {
       const [start, end] = dateRange?.split('-') || []
-      const capStartMonth = dayjs(start).format('MMMM').charAt(0).toUpperCase() + dayjs(start).format('MMMM').slice(1)
-      const capEndMonth = dayjs(end).format('MMMM').charAt(0).toUpperCase() + dayjs(end).format('MMMM').slice(1)
-      return allVoyages.filter(v => v.monthlyAvailability?.includes(capStartMonth) || v.monthlyAvailability?.includes(capEndMonth))
+      const startDate = dayjs(start)
+      const endDate = dayjs(end)
+      const monthsInRange = []
+
+      let current = startDate.startOf('month')
+      while (current.isBefore(endDate) || current.isSame(endDate, 'month')) {
+        const month = current.format('MMMM')
+        const capitalized = month.charAt(0).toUpperCase() + month.slice(1)
+        monthsInRange.push(capitalized)
+        current = current.add(1, 'month')
+      }
+
+      return allVoyages.filter(v =>
+        v.monthlyAvailability?.some(m => monthsInRange.includes(m)),
+      )
     }
 
     // CASE 1: Only destination
@@ -159,4 +213,30 @@ const { data: voyages } = useAsyncData(
 const nbVoyages = computed(() => {
   return voyages.value?.length
 })
+
+const voyagesWithCta = computed(() => {
+  const original = voyages.value || []
+  const result = [...original]
+  const cta = { id: 'cta', isCta: true }
+
+  if (original.length >= 2) {
+    result.splice(2, 0, cta)
+  }
+  else {
+    result.push(cta)
+  }
+
+  return result
+})
+
+function reinitiliazeFilter() {
+  router.push({
+    path: '/search',
+    query: {
+      destination: null,
+      travelType: null,
+      dateRange: null,
+    },
+  })
+}
 </script>
