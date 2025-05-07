@@ -10,9 +10,9 @@
       <v-row>
         <v-col
           cols="12"
-          class="d-flex ga-2 align-center"
+          class="d-flex ga-2 align-center mb-1"
         >
-          <span class="text-h3 font-weight-bold">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages} voyages` }}</span>
+          <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages} voyages` }}</span>
           <v-chip
             v-if="routeQuery.destination"
             variant="flat"
