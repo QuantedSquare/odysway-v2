@@ -30,8 +30,12 @@ console.log('destinationChoices', destinationChoices)
 // TODO
 const experienceChoices = ['Dans la peau de...', 'En immersion chez...', 'Dans l\'objectif de...'] as const
 
-const categoriesChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/categories/categories.json'), 'utf-8')) as Array<{ slug: string }>)
-  .map(category => category.slug) as [string, ...string[]]
+// Modifit
+const categoriesDir = path.resolve(__dirname, 'content/categories')
+const categoriesFiles = fs.readdirSync(categoriesDir)
+const categoriesChoices = categoriesFiles
+  .map(file => file.replace('.json', ''))
+  .filter(Boolean) as [string, ...string[]]
 console.log('categoriesChoices', categoriesChoices)
 
 const regionChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/destinations/regions.json'), 'utf-8')) as Array<{ nom: string }>)
