@@ -30,9 +30,9 @@
 
     <ReviewCarousel />
 
-    <!-- <FaqVoyagesContainer /> -->
+    <FaqVoyagesContainer />
 
-    <!-- <WhySection /> -->
+    <WhySection />
   </v-container>
 </template>
 

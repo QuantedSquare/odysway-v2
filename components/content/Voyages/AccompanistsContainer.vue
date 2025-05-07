@@ -10,7 +10,6 @@
         </div>
         <AccompanistCard
           v-for="item, index in voyage.accompanistsList"
-
           :key="index"
           v-bind="item"
         />
@@ -22,6 +21,11 @@
 <script setup>
 const voyage = inject('voyage')
 const page = inject('page')
+
+if (voyage.accompanistsList.length > 0 && !voyage.accompanistsList[0].description) {
+  voyage.accompanistsList[0].description = voyage.accompanistsDescription
+  delete voyage.accompanistsDescription
+}
 </script>
 
 <style scoped>

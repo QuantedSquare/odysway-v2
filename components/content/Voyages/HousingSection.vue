@@ -121,6 +121,7 @@
                       </h2>
                     </v-col>
                     <v-col
+                      v-if="housing.housingType"
                       cols="12"
                       class="housing-text"
                     >
@@ -130,6 +131,7 @@
                       {{ housing.housingType }}
                     </v-col>
                     <v-col
+                      v-if="housing.housingMood"
                       cols="12"
                       class="housing-text"
                     >

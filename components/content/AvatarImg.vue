@@ -9,7 +9,7 @@
       :src="img(avatarImg, { format: 'webp', quality: 70, height: 340, width: 640 })"
       :lazy-src="img(avatarImg, { format: 'webp', quality: 10, height: 340, width: 640 })"
     />
-    <span v-else> {{ name[0].toUpperCase() }}</span>
+    <span v-else> {{ name ? name[0].toUpperCase() : '' }}</span>
   </v-avatar>
 </template>
 
@@ -27,7 +27,7 @@ defineProps({
   },
   name: {
     type: String,
-    default: '',
+    default: null,
   },
 })
 

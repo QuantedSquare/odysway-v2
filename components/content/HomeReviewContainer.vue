@@ -41,7 +41,7 @@
             v-for="i in 5"
             :key="i"
             :icon="mdiStar"
-            color="secondary"
+            :color="i <= review.rating ? 'secondary' : 'grey'"
             size="20"
           />
         </v-card-subtitle>

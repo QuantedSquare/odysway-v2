@@ -32,6 +32,7 @@
           </p>
           <div>
             <v-btn
+              v-if="description"
               variant="text"
               slim
               class="text-h5 text-decoration-underline text-start"
