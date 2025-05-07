@@ -1,66 +1,73 @@
 <template>
-  <v-container>
-    <SearchField />
-    <v-row>
-      <v-col
-        cols="12"
-        class="d-flex ga-2 align-center"
-      >
-        <span class="text-h3 font-weight-bold">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages} voyages` }}</span>
-        <v-chip
-          v-if="routeQuery.destination"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          color="secondary-light-2"
-          density="comfortable"
+  <v-container
+    class="py-0 my-0"
+    fluid
+  >
+    <SearchHeroSection>
+      <SearchField />
+    </SearchHeroSection>
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          class="d-flex ga-2 align-center"
         >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
-            {{ routeQuery.destination }}
-          </span>
-        </v-chip>
-        <v-chip
-          v-if="routeQuery.travelType"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          color="secondary-light-2"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
-            {{ routeQuery.travelType }}
-          </span>
-        </v-chip>
-        <v-chip
-          v-if="routeQuery.dateRange"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          color="secondary-light-2"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
-            {{ routeQuery.dateRange }}
-          </span>
-        </v-chip>
-      </v-col>
-      <v-col
-        v-if="voyages?.length > 0"
-        cols="12"
-      >
-        <v-row>
-          <v-col
-            v-for="voyage in voyages"
-            :key="voyage.id"
-            cols="12"
-            sm="6"
-            lg="4"
+          <span class="text-h3 font-weight-bold">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages} voyages` }}</span>
+          <v-chip
+            v-if="routeQuery.destination"
+            variant="flat"
+            :size="lgAndUp ? 'x-large' : 'large'"
+            color="secondary-light-2"
+            density="comfortable"
           >
-            <SearchVoyageCard :voyage="voyage" />
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col v-else>
-        Modifiez vos critères de recherche
-      </v-col>
-    </v-row>
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
+              {{ routeQuery.destination }}
+            </span>
+          </v-chip>
+          <v-chip
+            v-if="routeQuery.travelType"
+            variant="flat"
+            :size="lgAndUp ? 'x-large' : 'large'"
+            color="secondary-light-2"
+            density="comfortable"
+          >
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
+              {{ routeQuery.travelType }}
+            </span>
+          </v-chip>
+          <v-chip
+            v-if="routeQuery.dateRange"
+            variant="flat"
+            :size="lgAndUp ? 'x-large' : 'large'"
+            color="secondary-light-2"
+            density="comfortable"
+          >
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1  px-3">
+              {{ routeQuery.dateRange }}
+            </span>
+          </v-chip>
+        </v-col>
+        <v-col
+          v-if="voyages?.length > 0"
+          cols="12"
+        >
+          <v-row>
+            <v-col
+              v-for="voyage in voyages"
+              :key="voyage.id"
+              cols="12"
+              sm="6"
+              lg="4"
+            >
+              <SearchVoyageCard :voyage="voyage" />
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col v-else>
+          Modifiez vos critères de recherche
+        </v-col>
+      </v-row>
+    </v-container>
   </v-container>
 </template>
 
@@ -92,7 +99,7 @@ const { data: voyages } = useAsyncData(
 
     const getFilteredByType = (allVoyages, travelType) => {
       const groupeType = travelType === 'Voyage en groupe'
-      return allVoyages.filter(v => v.pricing?.groupeAvailable === groupeType)
+      return allVoyages.filter(v => v.pricing?.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
     }
 
     const getFilteredByDate = (allVoyages, dateRange) => {
@@ -150,6 +157,6 @@ const { data: voyages } = useAsyncData(
 )
 
 const nbVoyages = computed(() => {
-  return voyages.value.length
+  return voyages.value?.length
 })
 </script>
