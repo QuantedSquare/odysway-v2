@@ -5,15 +5,17 @@
   >
     <v-row>
       <v-col
-        cols="4"
-        class="d-flex align-center"
+        cols="12"
+        md="4"
+        class="d-flex align-center justify-center"
       >
         <h1 class="custom-hero-title">
-          ADD TEXT HERE
+          Trouvez votre voyage
         </h1>
       </v-col>
       <v-col
-        cols="8"
+        cols="12"
+        md="8"
       >
         <v-img
           :src="img('/images/homeHero.jpeg', { format: 'webp', quality: 70, height: 900, width: 1536 })"
@@ -58,6 +60,10 @@ const img = useImage()
   .relative-hero-section {
     height: 70vh;
     margin-bottom:300px!important;
+  }
+  .custom-hero-title {
+    font-size: 42px!important;
+    line-height: 42px!important;
   }
 }
 .custom-hero-title {

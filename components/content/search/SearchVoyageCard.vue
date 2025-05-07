@@ -1,6 +1,7 @@
 <template>
   <v-card
     elevation="0"
+    height="100%"
   >
     <NuxtLink
       :to="`/voyages/${voyage.slug}`"
@@ -97,7 +98,7 @@
               v-else
               block
               color="secondary"
-              class="text-decoration-none font-weight-bold text-body-1"
+              class="text-decoration-none font-weight-bold text-body-1 d-flex align-center "
               :to="`/calendly?travelTitle=${voyage.title}`"
             >
               <div class="mb-1 mr-2">
