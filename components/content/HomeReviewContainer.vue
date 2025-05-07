@@ -12,12 +12,14 @@
     />
   </v-col>
   <v-col
-    v-else-if="status === 'success' && review"
+    v-for="review, index in reviews"
+    v-else-if="status === 'success' && reviews"
+    :key="review.id + index"
     cols="12"
     sm="6"
     md="4"
   >
-    <!-- <v-sheet elevation="0">
+    <v-sheet elevation="0">
       <v-card-item>
         <v-card-title class="d-flex align-center ga-2">
           <AvatarImg
@@ -27,7 +29,11 @@
           />
           <div class="d-flex flex-column">
             <span class="text-h5"> {{ review.author }}</span>
-            <span class="text-h6 text-grey text-truncate"> {{ review.voyageTitle }}</span>
+            <NuxtLink
+              v-if="review.voyageTitle && review.voyageSlug"
+              :to="`/voyages/${review.voyageSlug}`"
+              class="text-h6 text-grey text-truncate"
+            > {{ review.voyageTitle }}</NuxtLink>
           </div>
         </v-card-title>
         <v-card-subtitle class="mt-4 ">
@@ -40,29 +46,21 @@
           />
         </v-card-subtitle>
       </v-card-item>
-      <v-card-text class="text-h5 font-weight-bold text-primary">
+      <v-card-text
+        class="text-h5 font-weight-bold text-primary max-lines"
+      >
         "{{ review.text }}
       </v-card-text>
-    </v-sheet> -->
+    </v-sheet>
   </v-col>
 </template>
 
 <script setup>
 import { mdiStar } from '@mdi/js'
-import { useImage } from '#imports'
 
-const props = defineProps({
-  slug: {
-    type: String,
-    required: true,
-  },
-})
-const { data: reviews, status } = useAsyncData('reviews' + props.slug, () => {
+const { data: reviews, status } = useAsyncData('reviews-home', () => {
   return queryCollection('reviews').where('isOnHome', '=', true).all()
 })
-
-console.log('reviews', reviews.value)
-const img = useImage()
 </script>
 
 <style scoped>
@@ -77,5 +75,12 @@ const img = useImage()
 }
 .sub-headline{
   font-size: 0.6rem !important;
+}
+.max-lines{
+ line-clamp: 3!important;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>

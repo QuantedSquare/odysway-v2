@@ -101,28 +101,20 @@ color: soft-blush
   text-color: primary
   ---
   #title
-  [Coups de coeur voyageurs]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos voyages signatures en France]{style="color: rgba(43, 76, 82, 1)"}
 
   #carousel-item
-    :::voyage-col-card{voyage-slug="açores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
     :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="bivouac-montagne-pyrenees"}
     :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="decouvrez-photo-animaliere-jura"}
     :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="immersion-observatoire-astronomique"}
     :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
     :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
     :::
   ::
 ::

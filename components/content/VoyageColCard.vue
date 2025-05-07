@@ -148,7 +148,7 @@ const img = useImage()
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
-console.log('voyage', voyage.value)
+// console.log('voyage', voyage.value)
 </script>
 
 <style scoped>
