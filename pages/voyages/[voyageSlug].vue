@@ -5,7 +5,7 @@
     <HeroVoyageSection />
     <BottomAppBar />
 
-    <ChipsContainer />
+    <!-- <ChipsContainer /> -->
 
     <StickyContainer>
       <template #left-side>
@@ -41,26 +41,24 @@ definePageMeta({
   layout: 'voyage',
 })
 const route = useRoute()
-console.log('route', route.params.voyageSlug)
-const [{ data: page }, { data: dates }, { data: voyagesTextes }, { data: voyagesv2Data }] = await Promise.all([
-  useAsyncData(route.path, () => {
-    return queryCollection('voyages').path(route.path).first()
-  }),
-  useAsyncData('deal', () => {
-    return queryCollection('dates').where('path', 'LIKE', `/dates/${route.params.voyageSlug}%`).all()
-  }),
+
+const [{ data: voyagesTextes }, { data: voyagesData }, { data: dates }] = await Promise.all([
+
   // NEW VERSION
   useAsyncData('voyages-textes', () => {
     return queryCollection('page_voyage_fr').first()
   }),
-  useAsyncData('voyagesv2', () => {
-    return queryCollection('voyagesv2').where('slug', '=', route.params.voyageSlug).first()
+  useAsyncData('voyages', () => {
+    return queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first()
+  }),
+  useAsyncData('deal', () => {
+    return queryCollection('dates').where('path', 'LIKE', `/dates/${route.params.voyageSlug}%`).all()
   }),
 ])
 
-if (voyagesv2Data.value) {
-  console.log('voyagesv2Data', voyagesv2Data.value)
-  provide('voyage', voyagesv2Data.value)
+if (voyagesData.value) {
+  console.log('voyagesv2Data', voyagesData.value)
+  provide('voyage', voyagesData.value)
 }
 if (voyagesTextes.value) {
   console.log('voyages-textes', voyagesTextes.value)
@@ -71,12 +69,13 @@ if (dates.value) {
   provide('dates', dates.value)
 }
 
-if (page.value) {
-  defineOgImageComponent(page.value?.ogImage?.component, {
-    title: page.value.ogImage?.props.title,
-    description: page.value.ogImage?.props.description,
-  })
-  useHead(page.value.head || {}) // <-- Nuxt Schema.org
-  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
-}
+// if (page.value) {
+//   defineOgImageComponent(page.value?.ogImage?.component, {
+//     title: page.value.ogImage?.props.title,
+//     description: page.value.ogImage?.props.description,
+//   })
+//   useHead(page.value.head || {}) // <-- Nuxt Schema.org
+//   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+// }
+console.log('voyagesData', voyagesData.value)
 </script>

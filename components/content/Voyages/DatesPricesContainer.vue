@@ -29,6 +29,7 @@
       </TransitionGroup>
     </v-row>
     <v-row
+      v-if="dates.length > 4"
       justify="center"
       align="center"
       class="flex-column"
@@ -41,6 +42,7 @@
 
 <script setup>
 import { useGoTo, useDisplay } from 'vuetify'
+import dayjs from 'dayjs'
 
 const goTo = useGoTo()
 const isExpanded = ref(false)
@@ -59,7 +61,10 @@ watch(isExpanded, (newValue) => {
 })
 
 const limitedDatesList = computed(() => {
-  return dates.slice(0, isExpanded.value ? dates.length : 4)
+  const sortedByDates = dates
+    .filter(date => dayjs(date.departureDate).isAfter(dayjs()))
+    .sort((a, b) => dayjs(a.departureDate).diff(dayjs(b.departureDate)))
+  return sortedByDates.slice(0, isExpanded.value ? sortedByDates.length : 4)
 })
 </script>
 

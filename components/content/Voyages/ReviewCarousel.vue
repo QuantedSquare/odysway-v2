@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container v-show="reviews.length > 0">
     <v-row
       align="center"
     >
@@ -64,10 +64,15 @@
                 <AvatarImg
                   :avatar-img="review.photo"
                   avatar-size="62"
+                  :name="review.author"
                 />
                 <div class="d-flex flex-column">
                   <span class="text-h5"> {{ review.author }}</span>
-                  <span class="text-h6 text-grey text-wrap">{{ review.voyageTitle }}</span>
+                  <NuxtLink
+                    v-if="review.voyageTitle && review.voyageSlug"
+                    :to="`/voyages/${review.voyageSlug}`"
+                    class="text-h6 text-grey text-truncate"
+                  > {{ review.voyageTitle }}</NuxtLink>
                 </div>
               </v-card-title>
               <v-card-subtitle class="mt-4 ">

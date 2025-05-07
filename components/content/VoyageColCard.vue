@@ -25,8 +25,8 @@
         class="text-decoration-none position-relative text-white"
       >
         <v-img
-          :src="img(voyage.imgSrc1.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
-          :alt="voyage.imgSrc1.alt"
+          :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
+          :alt="voyage.image.alt"
           height="228px"
           class="hover-scale"
           cover
@@ -66,7 +66,7 @@
               <v-row>
                 <v-col cols="4">
                   <div class="text-grey font-weight-bold"> Type </div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
                 </v-col>
                 <v-divider
                   inset
@@ -76,10 +76,10 @@
                   cols="4"
                   class="text-center"
                 >
-                  <div class="text-h6 font-weight-bold text-primary">(todo)
-                    <!-- {{ voyage.duration }} -->
+                  <div class="text-h6 font-weight-bold text-primary">
+                    {{ voyage.duration }}
                   </div>
-                  <div class="text-grey font-weight-bold">Jours </div>
+                  <div class="text-grey font-weight-bold">Jours</div>
                 </v-col>
                 <v-divider
                   inset
@@ -90,7 +90,7 @@
                   class="text-right"
                 >
                   <div class="text-grey font-weight-bold text-no-wrap"> À partir de </div>
-                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.startingPrice }}€</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.startingPrice }}€</div>
                 </v-col>
               </v-row>
             </v-container>
@@ -99,7 +99,7 @@
           <v-card-actions class="justify-center">
             <client-only>
               <v-btn
-                v-if="voyage.dates?.length > 0"
+                v-if="voyage.pricing.groupeAvailable"
                 block
                 color="primary"
                 class="font-weight-bold text-body-1"
@@ -146,8 +146,9 @@ const props = defineProps({
 const img = useImage()
 
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
-  return queryCollection('deals').where('slug', '=', props.voyageSlug).first()
+  return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
+// console.log('voyage', voyage.value)
 </script>
 
 <style scoped>

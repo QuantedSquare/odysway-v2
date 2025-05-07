@@ -1,0 +1,50 @@
+[
+  {
+    "nom": "Afrique",
+    "meta_description": "Plongez dans la beauté sauvage de l'Afrique avec nos voyages uniques. Safari, savane, cultures ancestrales... Embarquez pour une aventure inoubliable !",
+    "interjection": "en",
+    "slug": "afrique"
+  },
+  {
+    "nom": "Amérique Centrale",
+    "meta_description": "Partez en Amérique Centrale où vous attendent forêts luxuriantes, sites mayas, eaux turquoises... Découvrez nos voyages hors des sentiers battus !",
+    "interjection": "en",
+    "slug": "amerique-centrale"
+  },
+  {
+    "nom": "Amérique du Nord",
+    "meta_description": "",
+    "interjection": "en",
+    "slug": "amerique-du-nord"
+  },
+  {
+    "nom": "Amérique du Sud",
+    "meta_description": "Partez en Amérique du Sud, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+    "interjection": "en",
+    "slug": "amerique-du-sud"
+  },
+  {
+    "nom": "Asie",
+    "meta_description": "Dotée de multiples facettes, l'Asie vous fera un vivre un voyage dépaysant et riche en émotions. Découvrez nos voyages en immersion !",
+    "interjection": "en",
+    "slug": "asie"
+  },
+  {
+    "nom": "Europe",
+    "meta_description": "L'Europe n'a pas fini de vous surprendre ! Partez avec Odysway, à la découverte des somptueux paysages et des traditions ancestrales du Vieux Continent !",
+    "interjection": "en",
+    "slug": "europe"
+  },
+  {
+    "nom": "France",
+    "meta_description": "Envie de découvrir la France autrement ? Avec Odysway, (re)découvrez le patrimoine culturel, vivez des expériences uniques et éthiques au cœur des plus belles régions de France ! ",
+    "interjection": "en",
+    "slug": "sejours-france"
+  },
+  {
+    "nom": "Moyen-Orient",
+    "meta_description": "Voyagez au cœur du Moyen-Orient, terre d'histoire, de culture et d'aventure. Plongez au cœur de la culture locale et découvrez un monde fascinant !",
+    "interjection": "au ",
+    "slug": "moyen-orient"
+  }
+]

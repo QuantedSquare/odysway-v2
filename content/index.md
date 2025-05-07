@@ -101,28 +101,20 @@ color: soft-blush
   text-color: primary
   ---
   #title
-  [Coups de coeur voyageurs]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos voyages signatures en France]{style="color: rgba(43, 76, 82, 1)"}
 
   #carousel-item
     :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
     :::
-    :::voyage-col-card{voyage-slug="decouverte-merveilles-rajasthan-bishnoi"}
+    :::voyage-col-card{voyage-slug="bivouac-montagne-pyrenees"}
     :::
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    :::voyage-col-card{voyage-slug="decouvrez-photo-animaliere-jura"}
     :::
-    :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
+    :::voyage-col-card{voyage-slug="immersion-observatoire-astronomique"}
     :::
-    :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+    :::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
     :::
-    :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
-    :::
-    :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-    :::
-    :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
-    :::
-    :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
-    :::
-    :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
+    :::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
     :::
   ::
 ::
@@ -270,13 +262,13 @@ color: grey-light
 [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 ::
 ::
@@ -289,16 +281,16 @@ color: white
 #title
 [Partir au printemps]{style="color: rgba(43, 76, 82, 1)"}
 #carousel-item
-  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 ::
 ::
@@ -326,19 +318,19 @@ color: grey-light
 [Voyages inoubliables]{style="color: rgba(43, 76, 82, 1)"}
 
 #carousel-item
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="voyage-immersion-culturelle-japon"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="kung-fu-temple-shaolin-chine"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 
-  :::voyage-col-card{voyage-slug="voyage-hiver-laponie-finlande"}
+  :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 ::
 ::
@@ -356,19 +348,7 @@ color: white
   [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
 
   #carousel-item
-    :::review-col-card{slug="florence"}
-    :::
-
-    :::review-col-card{slug="francois"}
-    :::
-
-    :::review-col-card{slug="test2"}
-    :::
-
-    :::review-col-card{slug="test3"}
-    :::
-
-    :::review-col-card{slug="test4"}
+    :::home-review-container
     :::
     
   #cta

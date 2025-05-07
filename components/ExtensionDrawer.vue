@@ -6,17 +6,15 @@
     class="zIndex nav-height"
   >
     <TransitionGroup name="slide-fade">
-      <DestinationsDrawerContent
+      <!-- <DestinationsDrawerContent
         v-if="extension === 'destinations'"
         :destinations="destinationsItems"
       />
       <ProposDrawerContent
         v-else-if="extension === 'propos'"
         :propos="proposItems.propos"
-      />
-      <DefaultDrawerContent
-        v-else
-      />
+      /> -->
+      <DefaultDrawerContent />
     </TransitionGroup>
   </v-navigation-drawer>
 </template>
@@ -26,13 +24,13 @@ defineProps({
   extension: String,
 })
 const model = defineModel()
-const [
-  { data: destinationsItems },
-  { data: proposItems },
-] = await Promise.all([
-  useAsyncData('destinations', () => queryCollection('destinations').all()),
-  useAsyncData('propos', () => queryCollection('propos').first()),
-])
+// const [
+//   { data: destinationsItems },
+//   { data: proposItems },
+// ] = await Promise.all([
+//   useAsyncData('destinations', () => queryCollection('destinations').all()),
+//   useAsyncData('propos', () => queryCollection('propos').first()),
+// ])
 </script>
 
 <style scoped>
