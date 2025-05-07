@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les causes de la disparition des animaux"
   description: "Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-06-04 14:02:00+00:00"
 tags: "Animaux, Famille"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/causes-disparition-animaux/LIsRVhl5Tl2b1hKvlHcJ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/causes-disparition-animaux/LIsRVhl5Tl2b1hKvlHcJ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-4 juin 2019
-
 #title
 Les causes de la disparition des animaux
 
 #introduction
-
+Notre planète serait-elle en train de connaitre sa sixième extinction massive de sa biodiversité ? C'est ce que confirment nombre d'experts qui, depuis quelques années, tirent la sonnette d'alarme sur la sante de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/causes-disparition-animaux/LIsRVhl5Tl2b1hKvlHcJ.jpg"
----
 #content
 Notre planète serait-elle en train de connaître sa sixième extinction massive de sa biodiversité ? C’est ce que confirment nombre d’experts qui, depuis quelques années, tirent la sonnette d’alarme sur la santé de la Terre et de ses habitants, notamment les animaux. Mais contrairement aux précédentes (la dernière date de la disparition des dinosaures), celle-ci aurait une origine tout autre : l’Homme. **Déforestation, réchauffement climatique ou pollution**, son empreinte est visible partout provoquant l’extinction progressive de nombreuses espèces parmi les mammifères, les poissons, les reptiles, les oiseaux… **Mais quelles sont donc les causes de la disparition des animaux ?** Voici plusieurs raisons majeures.
 
@@ -116,3 +118,47 @@ Si vous souhaitez vivre une expérience autour des animaux, n’hésitez pas à 
 
 [Découvrez nos voyages sur le thème des animaux 🐯](https://odysway.com/thematiques/voyage-animalier)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

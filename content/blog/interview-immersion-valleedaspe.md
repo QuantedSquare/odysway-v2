@@ -7,21 +7,26 @@ seo:
 navigation:
   title: "Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées"
   description: "Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe."
-author: "contact@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-05-31 09:14:00+00:00"
 tags: "auberge, berger, France, gîte, immersion, Pyrénées, randonnée, terroir, Vallée d'Aspe"
 categories: "Blog"
 displayedImg: "/images/blogs/interview-immersion-valleedaspe/qhAwUYRBQCWR9XqG05Wq.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/interview-immersion-valleedaspe/qhAwUYRBQCWR9XqG05Wq.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-31 mai 2021
-
 #title
 Interview – La Maison Despourrins : un gîte accueillant les voyageurs Odysway dans les Pyrénées
 
@@ -30,9 +35,6 @@ Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyag
 ::
 
 ::section-container
----
-image-src: "/images/blogs/interview-immersion-valleedaspe/qhAwUYRBQCWR9XqG05Wq.jpg"
----
 #content
 **Lors de notre séjour en immersion auprès d'un berger des Pyrénées, les voyageurs ont le plaisir de loger dans le gîte d'étape La Maison Despourrins. Sandrine, l'une des gérantes, nous parle de l'établissement situé dans la vallée d'Aspe.**
 
@@ -77,3 +79,47 @@ link: https://odysway.com/voyages/sejour-berger-bearn
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

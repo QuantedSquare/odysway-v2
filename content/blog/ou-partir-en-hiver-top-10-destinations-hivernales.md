@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où Partir en Hiver : Découvrez notre TOP 10 des meilleures destinations hivernales !"
   description: "L'hiver est une saison qui peut être à la fois féerique et pleine d'aventures pour les voyageurs intrépides. Si vous cherchez à échapper à la routine quotidienne et à explorer de nouveaux horizons, vous êtes au bon endroit. Dans cet article, nous vous emmènerons à travers les 10 meilleures destinations ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-09-08 11:12:00+00:00"
 tags: "Grands espaces, nature"
 categories: "Nature et grands espaces, Culture et decouverte, conseil"
 displayedImg: "/images/blogs/ou-partir-en-hiver-top-10-destinations-hivernales/fmI40QuQuWGpjQz8zvxt.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/ou-partir-en-hiver-top-10-destinations-hivernales/fmI40QuQuWGpjQz8zvxt.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-8 septembre 2023
-
 #title
 Où Partir en Hiver : Découvrez notre TOP 10 des meilleures destinations hivernales !
 
 #introduction
-L'hiver est une saison qui peut être à la fois féerique et pleine d'aventures pour les voyageurs intrépides. Si vous cherchez à échapper à la routine quotidienne et à explorer de nouveaux horizons, vous êtes au bon endroit. Dans cet article, nous vous emmènerons à travers les 10 meilleures destinations hivernales à explorer pour une expérience inoubliable.
+L'hiver est une saison qui peut être à la fois féerique et pleine d'aventures pour les voyageurs intrépides. Si vous cherchez à échapper à la routine quotidienne et à explorer de nouveaux horizons, vous êtes au bon endroit. Dans cet article, nous vous emmènerons à travers les 10 meilleures destinations ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-partir-en-hiver-top-10-destinations-hivernales/fmI40QuQuWGpjQz8zvxt.jpg"
----
 #content
 L'hiver est une saison qui peut être à la fois féerique et pleine d'aventures pour les voyageurs intrépides. Si vous cherchez à échapper à la routine quotidienne et à explorer de nouveaux horizons, vous êtes au bon endroit. Dans cet article, nous vous emmènerons à travers les 10 meilleures destinations hivernales à explorer pour une expérience inoubliable.
 
@@ -192,3 +194,47 @@ Préparez-vous à explorer de nouveaux horizons, vivre des aventures exceptionne
 
 **Alors, où partirez-vous cet hiver ?**
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

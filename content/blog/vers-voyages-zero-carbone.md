@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Vers des voyages zéro-carbone"
   description: "Nous vivons dans une société à présent capable de reconnaître les impacts néfastes des émissions de gaz sur notre environnement. Ainsi, c'est à nous, en tant qu'êtres humains, de prendre des mesures et de changer nos pratiques. En somme, nous devons parvenir à un juste équilibre afin que les actions de chacun aient un impact positif et efficace sur le monde de demain. Dire que l'on voyage «zéro-carbone» n'est donc pas 100% adéquat mais on peut s'en rapprocher au maximum en réduisant nos émissions de carbone."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-04-28 18:00:00+00:00"
 tags: "conseils, éco-responsable, nature, transports"
 categories: "Blog"
 displayedImg: "/images/blogs/vers-voyages-zero-carbone/vR3ApDrmQF6C2fIbovf0.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/vers-voyages-zero-carbone/vR3ApDrmQF6C2fIbovf0.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-28 avril 2021
-
 #title
 Vers des voyages zéro-carbone
 
 #introduction
-
+Nous vivons dans une société à présent capable de reconnaître les impacts néfastes des émissions de gaz sur notre environnement. Ainsi, c'est à nous, en tant qu'êtres humains, de prendre des mesures et de changer nos pratiques. En somme, nous devons parvenir à un juste équilibre afin que les actions de chacun aient un impact positif et efficace sur le monde de demain. Dire que l'on voyage «zéro-carbone» n'est donc pas 100% adéquat mais on peut s'en rapprocher au maximum en réduisant nos émissions de carbone.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vers-voyages-zero-carbone/vR3ApDrmQF6C2fIbovf0.jpg"
----
 #content
 ## Une prise de conscience
 
@@ -114,3 +116,47 @@ alt: comme-forestier.jpg
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

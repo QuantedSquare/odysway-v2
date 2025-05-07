@@ -7,7 +7,9 @@ seo:
 navigation:
   title: "Voyage insolite en 2025 : nos idées d’évasion pour tous"
   description: "Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2025-01-20 06:28:00+00:00"
 tags: "conseils, insolite"
@@ -15,26 +17,24 @@ categories: "Blog"
 displayedImg: "/images/blogs/voyage-insolite-nos-idees-devasion-pour-tous/WgDfxwTASsqxDDagGtjL.jpg"
 blogType: "Actu"
 badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/voyage-insolite-nos-idees-devasion-pour-tous/WgDfxwTASsqxDDagGtjL.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 janvier 2025
-
 #title
 Voyage insolite en 2025 : nos idées d’évasion pour tous
 
 #introduction
-        
+Pour découvrir un pays autrement, rien de tel qu’un voyage insolite. Si vous ne savez pas où partir, voici plusieurs idées d’évasion pour tous.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-insolite-nos-idees-devasion-pour-tous/WgDfxwTASsqxDDagGtjL.jpg"
----
 #content
 Poussés par l’envie de découvrir un pays autrement, beaucoup misent sur le **voyage insolite**. Mais qu’entend-on par là ? C’est tout simplement un voyage qui sort de l’ordinaire tant sur la façon de se déplacer, de se loger ou de prendre part à des activités. Meilleure connexion à la nature, retrouver une certaine authenticité, telles sont les attentes de celles et ceux en quête d’évasion originale. Et si c’était à votre tour de tenter l’expérience ? À deux, en famille ou entre amis, on vous partage nos idées de voyages insolites !
 
@@ -103,3 +103,47 @@ Envie de frissons ? Envolez-vous pour l’Écosse et passez une **nuit insolite
 
 Et vous ? Quel sera votre prochain voyage insolite et avec qui ?
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

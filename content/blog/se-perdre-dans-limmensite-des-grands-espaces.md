@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Se perdre dans l'immensité des grands espaces"
   description: "Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-29 15:50:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 avril 2020
-
 #title
 Se perdre dans l'immensité des grands espaces
 
 #introduction
-Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, de vous retrouver loin de tout au milieu de grands espaces ? Vous évadez oui, mais ce n'est pas la seule chose que vous recherchez. Ce que vous voulez aussi, c'est ressentir des émotions et des sensations. Bref, faire un voyage qui vous transporte aussi bien physiquement qu'émotionnellement. Votre objectif : en prendre plein la vue et revenir avec des souvenirs inoubliables. Mais aussi rentrer chez vous complètement reboosté avec une seule envie : repartir très vite pour une nouvelle aventure.Sachez que nous avons exactement ce qu'il vous faut ! Grâce à nos voyages Grands Espaces, partez aux quatre coins du monde au milieu de paysages époustouflants où la nature n'aura de cesse de vous surprendre et de vous émerveiller.
+Se déconnecter du quotidien Métro, boulot, dodo, la foule, les embouteillages, la pollution, le bruit… STOP ! Et si vous décidiez de vous échapper quelque temps de votre train-train quotidien afin de vous aérer l'esprit ? Il ne vous vient pas là, comme une envie de respirer à plein poumon, ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 ## Se déconnecter du quotidien
 
@@ -68,3 +70,47 @@ alt: kirghizistan blog.jpg
 
 [Partez à travers les steppes infinies et les lacs de montagnes du Kirghizistan.](https://odysway.com/voyages/immersion-steppes-kirghizistan)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

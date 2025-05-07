@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage au Sikkim : Joyau de l'Himalaya"
   description: "Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2023-09-20 15:34:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/voyage-au-sikkim-joyau-de-lhimalaya/c4J4EvqZTEqf5QmYsbBS.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/voyage-au-sikkim-joyau-de-lhimalaya/c4J4EvqZTEqf5QmYsbBS.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 septembre 2023
-
 #title
 Voyage au Sikkim : Joyau de l'Himalaya
 
 #introduction
-Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité incomparable. Avec ses monastères perchés, ses forêts denses et ses sommets majestueux, le Sikkim est un appel à l'aventure et à la sérénité.
+Voyager au Sikkim : Un paradis préservé Le Sikkim, niché entre le Népal à l'ouest, le Bhoutan à l'est, et le Tibet (Chine) au nord, est un joyau méconnu de l'Inde. Un voyage Sikkim offre une expérience inoubliable, mélangeant des paysages himalayens époustouflants, une riche culture bouddhiste et une hospitalité ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-au-sikkim-joyau-de-lhimalaya/c4J4EvqZTEqf5QmYsbBS.jpg"
----
 #content
 ## **Voyager au Sikkim : Un paradis préservé**
 
@@ -181,3 +183,47 @@ alt: AdobeStock_363106119.webp
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

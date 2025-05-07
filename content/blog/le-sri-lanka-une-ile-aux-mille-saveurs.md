@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le Sri Lanka, une île aux mille saveurs"
   description: "Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-17 14:22:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-17 avril 2020
-
 #title
 Le Sri Lanka, une île aux mille saveurs
 
 #introduction
-Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil.
+Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil. Doté d’un environnement diversifié, le Sri Lanka regorge de lieux exceptionnels. Au cœur du pays, la province montagneuse est un entrelacement de plantations de ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Situé dans l’Océan indien, au sud-est de l’Inde, le Sri Lanka vous immerge dans une histoire et une culture où tous vos sens seront en éveil.
 
@@ -51,3 +53,47 @@ Que vous ayez envie de vous ressourcer ou de vivre des expériences insolites, O
 
 Partez avec Odysway, en [découvrant le Sri Lanka à deux-roues](https://odysway.com/voyages/voyage-velo-sri-lanka) ou pour [protéger les animaux du Sri Lanka](https://odysway.com/voyages/protection-animaux-sri-lanka).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

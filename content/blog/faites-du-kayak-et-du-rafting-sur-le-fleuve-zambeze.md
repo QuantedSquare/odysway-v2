@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Faites du kayak et du rafting sur le fleuve Zambèze"
   description: "Le fleuve Zambèze est le 4e plus grand fleuve d'Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l'Ocean Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-09-18 17:30:00+00:00"
 tags: "Afrique, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
 displayedImg: "/images/blogs/faites-du-kayak-et-du-rafting-sur-le-fleuve-zambeze/3IABCPWQ1SLq2DgALMqc.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/faites-du-kayak-et-du-rafting-sur-le-fleuve-zambeze/3IABCPWQ1SLq2DgALMqc.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-18 septembre 2018
-
 #title
 Faites du kayak et du rafting sur le fleuve Zambèze
 
 #introduction
-   
+Le fleuve Zambèze est le 4e plus grand fleuve d'Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l'Ocean Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/faites-du-kayak-et-du-rafting-sur-le-fleuve-zambeze/3IABCPWQ1SLq2DgALMqc.jpg"
----
 #content
 Le fleuve Zambèze est le 4è plus grand fleuve d’Afrique. Long de 2 750 km, il prend sa source en Zambie pour se jeter dans les eaux de l’Océan Indien au niveau du Mozambique. Et pendant sa longue route, il croise la route des impressionnantes Chutes Victoria. Pour se rendre compte de la puissance de ce fleuve et de sa faune, quoi de mieux que de parcourir le Zambèze en kayak ou en rafting.
 
@@ -56,3 +58,47 @@ Et pour prolonger cette expérience, pourquoi ne pas partir plusieurs jours ? Un
 
 Si vous aimez les voyages sportifs, voici notre [thématique de voyage sportif en immersion !](https://odysway.com/thematiques/voyage-sportif)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

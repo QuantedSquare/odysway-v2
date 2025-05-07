@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment gagner en sérénité en vacances ?"
   description: "Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter du quotidien. Mais il arrive fréquemment que beaucoup d'entre nous éprouvent des difficultés à être totalement détendu et serein. Odysway vous donne les clés pour gagner en sérénité pendant vos vacances."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-04-16 09:47:00+00:00"
 tags: "Developpement personnel"
 categories: "Culture et decouverte, Developpement Personnel, Blog"
 displayedImg: "/images/blogs/comment-gagner-serenite-vacances/gBrJzHbRFuGhmkAAjgAa.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/comment-gagner-serenite-vacances/gBrJzHbRFuGhmkAAjgAa.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-16 avril 2023
-
 #title
 Comment gagner en sérénité en vacances ?
 
 #introduction
-       
+Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter du quotidien. Mais il arrive fréquemment que beaucoup d'entre nous éprouvent des difficultés à être totalement détendu et serein. Odysway vous donne les clés pour gagner en sérénité pendant vos vacances.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-gagner-serenite-vacances/gBrJzHbRFuGhmkAAjgAa.jpg"
----
 #content
 Les vacances… ce moment tant espéré pour enfin souffler et se déconnecter du quotidien. Mais il arrive fréquemment que beaucoup d'entre nous éprouvent des difficultés à être totalement détendu et serein. **Odysway vous donne les clés pour gagner en sérénité pendant vos vacances.**
 
@@ -90,3 +92,47 @@ Pour poursuivre votre lecture, nous vous invitons à consulter [notre article su
 
 [](https://odysway.com/voyages/immersion-steppes-kirghizistan?utm_source=Blog&utm_medium=SEO&utm_campaign=ou_partir_pour_voyage_en_immersion_totale)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

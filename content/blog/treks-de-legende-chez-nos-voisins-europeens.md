@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "3 Treks de légende chez nos voisins européens"
   description: "Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers boers de la colonie du Cap vers l’intérieur des terres sud-africaines au XIXème siècle. Les treks les plus célèbres ont conféré au trekking une dimension sportive qui n’est toutefois ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-09-15 14:44:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/treks-de-legende-chez-nos-voisins-europeens/wtVe2pMyQVisy3FDzYMY.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/treks-de-legende-chez-nos-voisins-europeens/wtVe2pMyQVisy3FDzYMY.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-15 septembre 2021
-
 #title
 3 Treks de légende chez nos voisins européens
 
 #introduction
-
+Le terme “trek” est aujourd’hui utilisé pour désigner le voyage à pied. Étymologiquement, “trek” fait référence à la migration des fermiers boers de la colonie du Cap vers l’intérieur des terres sud-africaines au XIXème siècle. Les treks les plus célèbres ont conféré au trekking une dimension sportive qui n’est toutefois ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/treks-de-legende-chez-nos-voisins-europeens/wtVe2pMyQVisy3FDzYMY.jpg"
----
 #content
 Le terme « **trek** » est aujourd'hui utilisé pour désigner le **voyage à pied**. Étymologiquement, « trek » fait référence à la migration des fermiers boers de la colonie du Cap vers l'intérieur des terres sud-africaines au XIXème siècle. 
 
@@ -142,3 +144,47 @@ alt: indéfini
 
 Conscients de l'impact positif de la **randonnée** ; la découverte de **paysages à couper le souffle** qui sont difficilement accessibles en transports, les **rencontres et partages authentiques avec les locaux** et la **liberté d'être dans un cadre naturel magique**, nous avons plusieurs séjours en France et à l'étranger pour découvrir une région , un pays, tout en profitant des bienfaits de la marche. Voici un exemple de voyage "randonnée" : [Randonnez sur le mythique lac Baïkal gelé en Sibérie](https://odysway.com/voyages/randonnee-baikal-hiver?utm_source=article&utm_medium=blog&utm_campaign=trek+l%C3%A9gende+europ%C3%A9ens) . Vous trouverez tous les autres [ici](https://odysway.com/thematiques/trek-et-randonnee) !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

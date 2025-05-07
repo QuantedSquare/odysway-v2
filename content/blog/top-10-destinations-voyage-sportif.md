@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le top 10 des destinations pour un voyage sportif"
   description: "Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-03-24 15:31:00+00:00"
 tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Brésil, Chine, Costa Rica, Ethiopie, Europe, Finlande, Nepal, Perou, Sport, Sri Lanka, Thailande, Transports insolites"
 categories: "Depassement de soi, Culture et decouverte"
 displayedImg: "/images/blogs/top-10-destinations-voyage-sportif/u4OjaR4cQomgQUMtvNcy.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/top-10-destinations-voyage-sportif/u4OjaR4cQomgQUMtvNcy.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 mars 2020
-
 #title
 Le top 10 des destinations pour un voyage sportif
 
 #introduction
-  
+Il existe mille et une façons de découvrir et profiter une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/top-10-destinations-voyage-sportif/u4OjaR4cQomgQUMtvNcy.jpg"
----
 #content
 Il existe mille et une façons de découvrir et profiter d'une destination lorsque l'on part en voyage et le sport en fait partie. Que vous soyez un sportif aguerri ou juste occasionnel, dépensez-vous au milieu de paysages spectaculaires. Randonnées dans la jungle, treks dans les plus hautes montagnes du monde, vélo au milieu des plantations de thé ou pratique des arts martiaux, vous avez l'embarras du choix. **Nous vous présentons notre top 10 des destinations pour un voyage sportif aux quatre coins du monde.**
 
@@ -172,3 +174,47 @@ _Entraînez-vous au muay-thaï en Thaïlande !_
 
 Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en plein essor! Il combine activités sportives, découverte d'un pays et intégration dans la culture locale par l'exercice physique chez les amateurs de sport. Il ne fait aucun doute que vous êtes habitué à faire du sport en ville, mais que diriez-vous de combiner voyage immersif et exercice physique dans un environnement idyllique? Que vous soyez un athlète amateur ou un athlète expérimenté, vous pouvez être sûr que vous voudrez profiter de ces vraies expériences sportives partout dans le monde.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

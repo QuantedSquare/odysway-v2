@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où partir en été pour garder l'esprit tranquille ?"
   description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-26 17:41:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 novembre 2020
-
 #title
 Où partir en été pour garder l'esprit tranquille ?
 
 #introduction
-Bien que les modes de voyage soient en pleine évolution et que de plus en plus de personnes décident de partir hors saison, chaque année pour bon nombre de français, la seule option possible est de partir en été.
+Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Bien que les modes de voyage soient en pleine évolution et que de plus en plus de personnes décident de partir hors saison, chaque année pour bon nombre de français, la seule option possible est de **partir en été**.
 
@@ -138,3 +140,47 @@ Partir en été pour :
 
 Tout cela devient possible avec les séjours en immersion d’Odysway !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

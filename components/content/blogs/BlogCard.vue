@@ -32,7 +32,7 @@
       <v-container class="pb-0">
         <v-row>
           <v-col cols="12">
-            <div class="text-primary text-h3 font-weight-bold py-1 px-0 no-white-space ">
+            <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space ">
               <div
                 class="line-clamp-2"
               >
@@ -56,7 +56,7 @@
           >
             <div
               v-if="readingTime"
-              class="d-flex align-center gaNumber"
+              class="d-flex align-center ga-2"
             >
               <v-icon size="small">
                 {{ mdiClockTimeThreeOutline }}
@@ -66,8 +66,8 @@
                 {{ readingTime }} min
               </span>
             </div>
-            <div class="text-grey">
-              {{ formatDate(publishedAt, 'DD MMMM, YYYY') }}
+            <div class="text-grey text-right">
+              {{ formatDate(publishedAt, 'DD MMMM YYYY') }}
             </div>
           </v-col>
         </v-row>
@@ -115,8 +115,8 @@ defineProps({
     default: 'secondary',
   },
   readingTime: {
-    type: Number,
-    default: 3,
+    type: String,
+    default: '3',
   },
 })
 

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Responsable Voyageurs - CDI - H/F"
   description: "Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2022-02-28 15:36:00+00:00"
 tags: "Actualités"
 categories: ""
 displayedImg: "/images/blogs/offre_responsable_voyageurs_cdi/GWp2YHouScG2ZOv9ytJr.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/offre_responsable_voyageurs_cdi/GWp2YHouScG2ZOv9ytJr.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-28 février 2022
-
 #title
 Responsable Voyageurs - CDI - H/F
 
 #introduction
-À propos    
+Nous recrutons notre Responsable Voyageurs en CDI (H/F). Découvrez le détail de l'offre et rejoignez-nous !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/offre_responsable_voyageurs_cdi/GWp2YHouScG2ZOv9ytJr.jpg"
----
 #content
 **À propos**
 
@@ -102,3 +104,47 @@ Au-delà de tes compétences, nous recherchons surtout quelqu’un qui sera forc
 
 Envie de rejoindre l’aventure ? Envoie ton CV à [romain.masina@odysway.com](mailto:romain.masina@odysway.com) et dis-nous pourquoi c’est toi que nous devrions recruter !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

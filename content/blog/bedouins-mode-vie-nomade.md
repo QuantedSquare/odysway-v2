@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Bédouins : un mode de vie nomade"
   description: "Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-03-24 13:15:00+00:00"
 tags: "Afrique, Communautés locales, Developpement personnel, Famille, Grands espaces, Maroc"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/bedouins-mode-vie-nomade/gpcwnLt6REWLOQok0Wrf.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/bedouins-mode-vie-nomade/gpcwnLt6REWLOQok0Wrf.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 mars 2020
-
 #title
 Bédouins : un mode de vie nomade
 
 #introduction
-  
+Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/bedouins-mode-vie-nomade/gpcwnLt6REWLOQok0Wrf.jpg"
----
 #content
 Qui sont les Bédouins ? D’où viennent-ils ? Comment vivent-ils ? La vision qui surgit en premier dans l’imaginaire collectif est celle d’hommes, accompagnés de leurs dromadaires et de leur bétail, marchant dans le désert. On ressent presque le soleil brûlant sur leurs visages, l'assèchement de leurs gorges, la lourdeur de leurs jambes. Et puis on éprouve un soulagement lorsqu’ils aperçoivent au loin l’oasis qu’ils sont venus chercher. Cliché me direz-vous ? Cette vision romancée n’est pourtant pas si loin de la vérité. Allons à la rencontre des Bédouins et découvrons leur mode de vie nomade dans un environnement hostile.
 
@@ -79,3 +81,47 @@ Comme tous les peuples qui vivent au plus près de la nature, les Bédouins ont 
 
 Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

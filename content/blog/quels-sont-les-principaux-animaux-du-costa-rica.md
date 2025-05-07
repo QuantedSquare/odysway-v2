@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Quels sont les principaux animaux du Costa Rica ?"
   description: "Vous partez observer les animaux du Costa Rica ? Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 14:14:00+00:00"
 tags: "Amerique Centrale, Animaux, Costa Rica, Famille"
 categories: "Nature et grands espaces, Apprentissage, Blog"
 displayedImg: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/tDlmE2ZiSq2tTm3uEd4s.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/tDlmE2ZiSq2tTm3uEd4s.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 Quels sont les principaux animaux du Costa Rica ?
 
 #introduction
-     
+Vous partez observer les animaux du Costa Rica ? Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/quels-sont-les-principaux-animaux-du-costa-rica/tDlmE2ZiSq2tTm3uEd4s.jpg"
----
 #content
 **Vous partez observer les animaux du Costa Rica ?** Amateurs et amatrices de nature, vous serez comblé(e)s ! Ce pays tropical d’Amérique Centrale abrite une faune et une flore exceptionnelles. Plus de 25 % de son territoire est en effet recouvert de parcs nationaux. De surcroît, le Costa Rica abrite 6% de la biodiversité mondiale. Selon l’Institut national de la biodiversité, 160 nouvelles espèces y sont découvertes chaque année.            
 
@@ -116,3 +118,47 @@ De nos jours, de nombreuses espèces animales sont menacées d'extinction et son
 
 Pour poursuivre votre lecture, [découvrez notre articles sur 10 animaux de la jungle amazonienne.](https://odysway.com/les-10-animaux-de-la-jungle-amazonienne)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

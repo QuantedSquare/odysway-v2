@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment donner du sens à son voyage ?"
   description: "En voyage, on oublie tout, on profite, on fait le vide. Mais parfois, il ne suffit pas de partir à l'autre bout du monde pour se ressourcer, il faut donner un sens à ce que l'on fait. Aujourd'hui, ce constat devient de plus en plus un réel besoin chez certains ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-03-24 13:03:00+00:00"
 tags: "Animaux, Communautés locales, Developpement personnel"
 categories: "Apprentissage, Benefices locaux"
 displayedImg: "/images/blogs/comment-donner-sens-voyage/yPQpThoSCqwYbazAKPQ4.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/comment-donner-sens-voyage/yPQpThoSCqwYbazAKPQ4.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 mars 2020
-
 #title
 Comment donner du sens à son voyage ?
 
 #introduction
-En voyage, on oublie tout, on profite, on fait le vide. Mais parfois, il ne suffit pas de partir à l'autre bout du monde pour se ressourcer, il faut donner un sens à ce que l'on fait. Aujourd'hui, ce constat devient de plus en plus un réel besoin chez certains voyageurs. Ce qu'ils veulent vraiment ? Devenir acteur de leur voyage, et non plus être simple spectateur. Mais alors, comment faire pour donner du sens à son voyage ? Voici quelques idées.
+En voyage, on oublie tout, on profite, on fait le vide. Mais parfois, il ne suffit pas de partir à l'autre bout du monde pour se ressourcer, il faut donner un sens à ce que l'on fait. Aujourd'hui, ce constat devient de plus en plus un réel besoin chez certains ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-donner-sens-voyage/yPQpThoSCqwYbazAKPQ4.jpg"
----
 #content
 En voyage, on oublie tout, on profite, on fait le vide. Mais parfois, il ne suffit pas de partir à l'autre bout du monde pour se ressourcer, il faut donner un sens à ce que l'on fait. Aujourd'hui, ce constat devient de plus en plus un réel besoin chez certains voyageurs. Ce qu'ils veulent vraiment ? Devenir acteur de leur voyage, et non plus être simple spectateur. Mais alors, **comment faire pour donner du sens à son voyage ? Voici quelques idées**.
 
@@ -85,3 +87,47 @@ Il existe bien d'autres façons de **donner du sens à son voyage**. Par exemple
 *   vivre des expériences insolites,
 *   devenir bénévole dans des associations pendant quelques mois…
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

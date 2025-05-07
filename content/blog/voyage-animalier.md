@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage Animalier : découvrez les animaux sauvages autrement"
   description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-24 12:24:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 novembre 2020
-
 #title
 Voyage Animalier : découvrez les animaux sauvages autrement
 
 #introduction
-Aujourd’hui de nombreuses espèces animales sont menacées d’extinction et sont en danger notamment à cause  du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou d'un tourisme animalier douteux.
+S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie.
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Aujourd’hui de nombreuses espèces animales sont menacées d’extinction et sont en danger notamment à cause  du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou d'un tourisme animalier douteux.
 
@@ -124,3 +126,47 @@ Si vous rêvez de faire un **voyage animalier** solidaire et éco-responsable, O
 *   [**découvrir l'art de la photo animalière dans le Jura**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) ;
 *   [**faire connaissance avec les chiens de traîneau**](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) grâce à une aventure au cœur de la Laponie finlandaise**.**
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

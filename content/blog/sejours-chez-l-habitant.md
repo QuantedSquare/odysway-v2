@@ -19,32 +19,39 @@ navigation:
     Ce besoin d’immersion est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs, briser les barrières et les idées reçues, sentir que nous faisons partie d’un tout - d’une seule et même tribu : celle des humains.
     Si il est un mode de voyage qui vous offre tout cela, c’est bien le voyage chez l’habitant.
     “Le bonheur n'est réel que lorsqu'il est partagé” -  Into the Wild.
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-05 11:04:00+00:00"
 tags: "Communautés locales"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/sejours-chez-l-habitant/a0wVxSQR5uLpZLCk54DO.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/sejours-chez-l-habitant/a0wVxSQR5uLpZLCk54DO.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-5 novembre 2020
-
 #title
 Séjours chez l'habitant : une immersion totale
 
 #introduction
-Les modes de voyage ont considérablement évolué ces 10 dernières années. Plateformes de couchsurfing, échange de maisons, volontariat éco-responsable, location d’appartements ou séjour chez l’habitant, le choix est vaste. S’inviter chez l’autre le temps d’une nuit ou d’une semaine est devenu monnaie courante et on comprend pourquoi ! Quoi de plus sympa que d’arriver en terre inconnue et être accueilli par des hôtes locaux ! Sachez que ce bonheur est partagé car vos hôtes se font une joie de vous faire découvrir leur quotidien, leur environnement et leurs coutumes. Ce besoin d’immersion est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne pas s’en tenir aux idées reçues et sentir que nous faisons partie d’un tout,d’une seule et même tribu : celle des humains. S’il est un mode de voyage qui vous offre tout cela, c’est bien le voyage chez l’habitant.
+Les modes de voyage ont considérablement évolué ces 10 dernières années - plateformes de couchsurfing, échange de maisons, volontariat éco-responsable, location d’appartements ou séjour chez l’habitant, le choix est vaste.
+S’inviter chez l’autre, le temps d’une nuit ou d’une semaine est devenu monnaie courante et on comprend pourquoi, car quoi de plus sympa que d’arriver en terre inconnue et d’être accueilli par des hôtes locaux !
+Sachez que le bonheur est partagé, car vos hôtes se font une joie de vous faire découvrir leur quotidien, leur environnement et leurs coutumes.
+Ce besoin d’immersion est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs, briser les barrières et les idées reçues, sentir que nous faisons partie d’un tout - d’une seule et même tribu : celle des humains.
+Si il est un mode de voyage qui vous offre tout cela, c’est bien le voyage chez l’habitant.
+“Le bonheur n'est réel que lorsqu'il est partagé” -  Into the Wild.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/sejours-chez-l-habitant/a0wVxSQR5uLpZLCk54DO.jpg"
----
 #content
 Les modes de voyage ont considérablement évolué ces 10 dernières années. Plateformes de couchsurfing, échange de maisons, volontariat **éco-responsable**, location d’appartements ou [**séjour chez l’habitant**](https://odysway.com/thematiques/voyage-chez-l-habitant), le choix est vaste. S’inviter chez l’autre le temps d’une nuit ou d’une semaine est devenu monnaie courante et on comprend pourquoi ! Quoi de plus sympa que d’arriver en terre inconnue et être accueilli par des hôtes locaux ! Sachez que ce bonheur est partagé car vos hôtes se font une joie de vous faire découvrir leur quotidien, leur environnement et leurs coutumes. Ce besoin d**’immersion** est à l’image de notre évolution : bouger, communiquer avec l’autre, découvrir sa culture, ses petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne pas s’en tenir aux idées reçues et sentir que nous faisons partie d’un tout,d’une seule et même tribu : celle des humains. S’il est un mode de voyage qui vous offre tout cela, c’est bien le [**voyage chez l’habitant**.](https://odysway.com/thematiques/voyage-chez-l-habitant)
 
@@ -122,3 +129,47 @@ Partir avec Odysway, c'est faire le choix de sortir du tourisme de masse pour vo
 
 Notre démarche de concevoir et proposer des **séjours responsables** s’inscrit complètement dans la vision et valeurs d’**Odysway,** et ce depuis son origine : proposer un tourisme différent à nos voyageurs en limitant son impact sur l’environnement et les populations locales.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

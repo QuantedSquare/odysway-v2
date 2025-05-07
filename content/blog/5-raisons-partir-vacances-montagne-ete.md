@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 raisons de partir en vacances à la montagne cet été"
   description: "Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-07-06 12:40:00+00:00"
 tags: "Animaux, Europe, France, Grands espaces, Made in France, Sports"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/5-raisons-partir-vacances-montagne-ete/PzUPz5CdS7W8im3J5ltx.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/5-raisons-partir-vacances-montagne-ete/PzUPz5CdS7W8im3J5ltx.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 juillet 2020
-
 #title
 5 raisons de partir en vacances à la montagne cet été
 
 #introduction
-    
+Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-raisons-partir-vacances-montagne-ete/PzUPz5CdS7W8im3J5ltx.jpg"
----
 #content
 **Surpeuplée en hiver, la montagne est un véritable havre de paix pendant l'été. Encore (trop) peu sollicitée par les vacanciers qui préfèrent le bord de mer, elle possède pourtant de nombreux attraits. Une nature préservée, un patrimoine riche et diversifié ou encore un large choix d'activités, impossible de s'ennuyer et de ne pas tomber sous le charme. Nous vous présentons 5 bonnes raisons de partir en vacances à la montagne cet été.**
 
@@ -98,3 +100,47 @@ Le choix du trekking ou de la randonnée accompagné d'un guide avec une expéri
 
 Poursuivez votre lecture avec [notre article dédié sur les 5 bonnes raisons de voyager en France.](https://odysway.com/5-bonnes-raisons-voyager-france)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Communiqué de Presse"
   description: "L’agence de voyage en ligne, qui proposait exclusivement des séjours immersifs et responsables à l’étranger, a su se réinventer pour créer des voyages en France, en gardant le même concept. Comme de nombreux acteurs du tourisme, Odysway a été impactée par la crise sanitaire de la Covid-19 dès février. Dès ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-09-24 14:06:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 septembre 2020
-
 #title
 Communiqué de Presse
 
 #introduction
-L’agence de voyage en ligne, qui proposait exclusivement des séjours immersifs et responsables à l’étranger, a su se réinventer pour créer des voyages en France, en gardant le même concept.
+L’agence de voyage en ligne, qui proposait exclusivement des séjours immersifs et responsables à l’étranger, a su se réinventer pour créer des voyages en France, en gardant le même concept. Comme de nombreux acteurs du tourisme, Odysway a été impactée par la crise sanitaire de la Covid-19 dès février. Dès ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg"
----
 #content
 ## Comment Odysway - l’agence spécialiste du voyage en immersion - a décidé de faire face à la Covid-19 ?
 
@@ -66,3 +68,47 @@ Romain Masina - Fondateur
 Romain.masina@odysway.com  
 +336 67 38 56 55
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

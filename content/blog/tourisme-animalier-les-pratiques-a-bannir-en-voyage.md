@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Tourisme animalier : les pratiques à bannir en voyage"
   description: "Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 09:59:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique Centrale, Amerique du Nord, Animaux, Asie, Costa Rica, Etats Unis, Europe, Famille, France, Sri Lanka"
 categories: "Nature et grands espaces, Blog"
 displayedImg: "/images/blogs/tourisme-animalier-les-pratiques-a-bannir-en-voyage/JBYgcoBQx6Z4ERgjTyWA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/tourisme-animalier-les-pratiques-a-bannir-en-voyage/JBYgcoBQx6Z4ERgjTyWA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 Tourisme animalier : les pratiques à bannir en voyage
 
 #introduction
-    
+Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un must to do pour ceux qui ne ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/tourisme-animalier-les-pratiques-a-bannir-en-voyage/JBYgcoBQx6Z4ERgjTyWA.jpg"
----
 #content
 Parce qu’ils sont sauvages, en voie de disparition ou simplement parce qu’ils sont mignons, les animaux ont de plus en plus la cote auprès des voyageurs. Approcher un éléphant ou un tigre, faire un câlin à un paresseux sont des pratiques populaires. Un _must to do_ pour ceux qui ne connaissent pas l’envers du décor. En effet, **derrière ces belles images se cachent maltraitance et souffrance**. [Consultez notre article sur la cause des disparitions des animaux.](https://odysway.com/causes-disparition-animaux) Battus, drogués, enlevés à leur milieu naturel, des animaux sont exploités pour satisfaire des touristes en quête de quelque chose d’inédit. **Plein phare sur le tourisme animalier et ses dérives.**
 
@@ -110,3 +112,47 @@ Lorsque vous êtes en présence d’animaux sauvages en captivité, posez-vous l
 
 Parce que nous prônons **un tourisme responsable**, chez Odysway **nous proposons des séjours inoubliables et éthiques auprès d’animaux sauvages.** N’hésitez pas à consulter tous [nos séjours sur le thème du tourisme animalier](https://odysway.com/thematiques?category=Animaux).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

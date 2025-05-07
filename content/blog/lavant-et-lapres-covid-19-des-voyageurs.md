@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "L'avant et l'après Covid-19 des voyageurs"
   description: "Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crainte à l'heure du Covid. Dresser en quelque sorte un bilan de cette année 2020, de comment les voyageurs imaginent le tourisme aujourd'hui. Environ 850 personnes ont répondu ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-12-10 06:53:00+00:00"
 tags: ""
 categories: "News Odysway"
 displayedImg: "/images/blogs/lavant-et-lapres-covid-19-des-voyageurs/l8e1EclXReG0f7YXsSmw.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/lavant-et-lapres-covid-19-des-voyageurs/l8e1EclXReG0f7YXsSmw.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-10 décembre 2020
-
 #title
 L'avant et l'après Covid-19 des voyageurs
 
 #introduction
- 
+Fin octobre 2020, Odysway lancé un sondage en ligne ayant pour but d'interroger les internautes sur leurs habitudes de voyages et leur crainte à l'heure du Covid. Dresser en quelque sorte un bilan de cette année 2020, de comment les voyageurs imaginent le tourisme aujourd'hui. Environ 850 personnes ont répondu ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/lavant-et-lapres-covid-19-des-voyageurs/l8e1EclXReG0f7YXsSmw.jpg"
----
 #content
 **F**in octobre 2020\*, Odysway a lancé un sondage en ligne avec pour objectif de mieux comprendre l'impact du Covid-19 sur les habitudes de voyage des Français et des éventuelles craintes engendrées. Dresser en quelque sorte un bilan de cette année 2020, et voir de quelle façon les voyageurs imaginent le tourisme d'aujourd'hui et de demain.
 
@@ -178,3 +180,47 @@ Il est aujourd'hui d'autant plus crucial de mettre un point d'attention au servi
 
 Enfin, le dernier enseignement est celui de programmes et itinéraire trop peu personnalisés au regard de nombreux voyageurs. Il apparait ainsi aujourd'hui important pour les agences de proposer des variantes dans leur programmes, en réponse au retour obtenus des voyageurs ayant effectués le séjour. Une option est aussi de laisser plus de temps libre sur place, sans imposer des visites au pas de course.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

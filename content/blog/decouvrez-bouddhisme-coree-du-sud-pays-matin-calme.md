@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud"
   description: "En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-05-03 14:56:00+00:00"
 tags: "Asie, Developpement personnel, Sports"
 categories: "Culture et decouverte, Developpement Personnel"
 displayedImg: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/UJkcS3KS9qzUuHvVWLX7.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/UJkcS3KS9qzUuHvVWLX7.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-3 mai 2019
-
 #title
 Découvrez le bouddhisme au Pays du Matin Calme : la Corée du Sud
 
 #introduction
-En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d’y trouver de nouvelles expériences. C’est dans ce cadre que nous avons pu découvrir les trésors cachés et encore méconnus du tourisme de masse de cette fascinante Terre de Contrastes.
+En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d'y trouver de nouvelles expériences. C'est dans ce cadre que nous avons pu découvrir les trésors  encore méconnus du tourisme de masse.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/decouvrez-bouddhisme-coree-du-sud-pays-matin-calme/UJkcS3KS9qzUuHvVWLX7.jpg"
----
 #content
 En juin 2019, Odysway a été invité au salon international du tourisme de Séoul au Pays du Matin Calme, dans le but d’y trouver de nouvelles expériences. C’est dans ce cadre que nous avons pu découvrir les trésors cachés et encore méconnus du tourisme de masse de cette fascinante Terre de Contrastes.
 
@@ -250,3 +252,47 @@ _Recueillement d'un croyant dans l'enceinte principale du temple Jogyesa_
 
 Si vous êtes fan de ce types d'expériences, mêlant immersion et pratique sportive, jetez un œil à [nos voyages centrés autour de la thématique "Sport" sur le site d'Odysway !](https://odysway.com/experiences?date=&categorie=Sport&destination=)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

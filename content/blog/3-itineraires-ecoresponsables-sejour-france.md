@@ -7,21 +7,26 @@ seo:
 navigation:
   title: "3 Itinéraires écoresponsables pour (re)découvrir la France"
   description: "Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-07-30 09:54:00+00:00"
 tags: "éco-responsable, France, nature, slow tourisme"
 categories: ""
 displayedImg: "/images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 juillet 2021
-
 #title
 3 Itinéraires écoresponsables pour (re)découvrir la France
 
@@ -30,9 +35,6 @@ Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à 
 ::
 
 ::section-container
----
-image-src: "/images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg"
----
 #content
 Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à pied ! Partez pour un week-end, quelques jours ou une semaine pour profitez de petits coins de France en voyageant d'une nouvelle façon, écoresponsable et riche en aventures ! Voici trois itinéraires le long de la côte Atlantique, en Normandie de Pont-l'Evêque à Cabourg, au Pays Basque de Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin d'Arcachon.
 
@@ -103,3 +105,47 @@ Pour le retour, rejoignez Arcachon par la Vélodyssée (15km) pour rendre les v�
 
 [Découvrez nos voyages nature !](https://odysway.com/thematiques/voyage-nature)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

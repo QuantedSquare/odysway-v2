@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où voyager en Europe ?"
   description: "Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-05-12 15:31:00+00:00"
 tags: "Europe, Famille, Finlande, France, Grands espaces, Roumanie, Sport, Transports insolites"
 categories: ""
 displayedImg: "/images/blogs/ou-voyager-europe/CQoX3aWGTSyihPNHBsyu.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/ou-voyager-europe/CQoX3aWGTSyihPNHBsyu.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-12 mai 2020
-
 #title
 Où voyager en Europe ?
 
 #introduction
-   
+Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-voyager-europe/CQoX3aWGTSyihPNHBsyu.jpg"
----
 #content
 Avec 50 pays qui la composent, l'Europe est un continent riche de traditions, de différentes cultures et de paysages tous plus époustouflants les uns que les autres. Montagnes, volcans, lacs, mers aux eaux limpides, villages authentiques, édifices spectaculaires, jonglez entre villes animées et nature sauvage pour un périple dont vous vous souviendrez longtemps. **Mais où voyager en Europe ?** Il existe une telle diversité de destinations qu'il est souvent difficile de faire un choix. Odysway a sélectionné pour vous une liste de sept pays coups de cœur.
 
@@ -137,3 +139,47 @@ Pour voyager en France autrement, Odysway vous propose de [partager la vie d'un 
 
 L'écotourisme vise à protéger la biodiversité et les ressources culturelles des espaces naturels. En faisant le choix d’un voyage écologiquement responsable, vous deviendrez un acteur de la sensibilisation aux enjeux sociaux et environnementaux des populations. Découvrez l'[**écotourisme**](https://odysway.com/thematiques/ecotourisme) à travers les voyages que nous concevons pour vous.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

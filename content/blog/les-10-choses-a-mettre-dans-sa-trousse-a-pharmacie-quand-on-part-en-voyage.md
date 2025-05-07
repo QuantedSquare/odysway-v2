@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage"
   description: "Votre départ en voyage est proche et c'est avec enthousiasme que vous commencez a préparer votre sac a dos. Le voyage a déjà commencé ! Parmi les affaires que vous allez emporter, la trousse à pharmacie est un indispensable à mettre dans votre valise. En effet, quelle que soit votre ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-01-06 11:00:00+00:00"
 tags: ""
 categories: "Culture et decouverte, News Odysway"
 displayedImg: "/images/blogs/les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage/UZZrwK4pTRK77sC26pWW.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage/UZZrwK4pTRK77sC26pWW.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 janvier 2019
-
 #title
 Les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage
 
 #introduction
-  
+Votre départ en voyage est proche et c'est avec enthousiasme que vous commencez a préparer votre sac a dos. Le voyage a déjà commencé ! Parmi les affaires que vous allez emporter, la trousse à pharmacie est un indispensable à mettre dans votre valise. En effet, quelle que soit votre ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/les-10-choses-a-mettre-dans-sa-trousse-a-pharmacie-quand-on-part-en-voyage/UZZrwK4pTRK77sC26pWW.jpg"
----
 #content
 #### Votre départ en voyage est proche et c’est avec enthousiasme que vous commencez à préparer votre sac à dos. Le voyage a déjà commencé ! Parmi les affaires que vous allez emporter, la trousse à pharmacie est un indispensable à mettre dans votre valise. En effet, quelle que soit votre destination, vous devez pouvoir faire face aux premiers soins. Voici donc les 10 choses à mettre dans sa trousse à pharmacie quand on part en voyage.
 
@@ -135,3 +137,47 @@ Les équipes d’Odysway sont elles-mêmes parties dans la jungle, afin de crée
 
 Poursuivez votre lecture [avec notre article sur les 5 raisons de partir à la montagne cet été.](https://odysway.com/5-raisons-partir-vacances-montagne-ete)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

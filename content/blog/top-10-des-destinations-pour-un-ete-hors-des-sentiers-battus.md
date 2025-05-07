@@ -7,9 +7,9 @@ seo:
 navigation:
   title: "Top 10 des destinations 2025 pour un été hors des sentiers battus"
   description: "Envie de vacances loin du tourisme de masse ? Voici notre top 10 des destinations pour un été hors des sentiers battus."
-author: "Romain Masina"
-authorPhoto: "/images/team/romain.webp"
-authorRole: "Fondateur Odysway"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2025-01-24 12:27:00+00:00"
 tags: "conseils"
@@ -17,28 +17,24 @@ categories: "Blog"
 displayedImg: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 blogType: "Actu"
 badgeColor: "secondary"
-readingTime: "3 min"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
 background-color: soft-blush
 title-color: primary
 introduction-color: grey
 avatar-size: '60'
-image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
 ---
 #title
 Top 10 des destinations 2025 pour un été hors des sentiers battus
 
 #introduction
-Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend nullam eros, nulla erat magnis inceptos aptent hac odio pretium montes, fames.
+Envie de vacances loin du tourisme de masse ? Voici notre top 10 des destinations pour un été hors des sentiers battus.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/top-10-des-destinations-pour-un-ete-hors-des-sentiers-battus/V9sN55wBRp65NFwgtBJi.jpg"
----
 #content
 L’été approche à grands pas et vous ne savez pas encore où partir en vacances. En revanche, une chose est sûre : vous misez sur un voyage estival en dehors des sentiers touristiques. Vous n’avez qu’une seule envie, celle de vous immerger au cœur de l’authenticité de votre future destination, loin de la foule et des grands classiques. Voici pour vous notre top 10 des destinations pour un été hors des sentiers battus.
 
@@ -170,7 +166,6 @@ Oui ! Il est possible de **visiter le Sri Lanka en dehors des sentiers touristi
 
 Pour aller plus loin, découvrez notre article sur comment voyager en Asie autrement en 2025 : [https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques](https://odysway.com/ou-voyager-en-asie-loin-des-pays-touristiques)
 ::
-
 ::color-container
 ---
 color: soft-blush
@@ -179,7 +174,7 @@ color: soft-blush
   #title
   Découvrir les voyages coups de coeur
   #description
-  Lorem ipsum dolor sit amet consectetur adipiscing elit et sed lectus vulputate nisi donec sed sit volutpat id.
+  Partez à la découverte de destinations qui nous ont conquis.
   #bottom
   ::cta-button
   ---
@@ -190,25 +185,6 @@ color: soft-blush
   Découvrir
   ::
   ::
-::
-
-::color-container
----
-color: primary
-whiteText: true
----
-  ::raw-text
-  #text
-  “Nisi quis eleifend quam adipiscing vitae aliquet bibendum enim facilisis gravida neque velit euismod in pellentesque massa placerat.”
-  ::
-::
-
-::blog-author-card
----
-avatar-size: '86'
----
-#text
-Lorem ipsum dolor sit amet consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit viverra sit semper lorem eu cursus vel ndrerit.
 ::
 
 ::color-container
@@ -234,4 +210,3 @@ color: grey-light-2
     Tous les  articles
     ::
   ::
-::

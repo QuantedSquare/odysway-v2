@@ -21,32 +21,40 @@ navigation:
     Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
     
     De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-24 08:59:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 novembre 2020
-
 #title
 Trek et Randonnée : une découverte de sites uniques
 
 #introduction
-Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi !
+Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi ! Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région.
+
+Cette forme de tourisme alternatif vous offre la possibilité de séjourner en immersion au sein de communautés locales tout en voyageant de manière éco-responsable.
+
+Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
+
+De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Le **Trek et la randonnée** ont le vent en poupe et on comprend pourquoi !
 
@@ -133,3 +141,47 @@ alt: undefined
 
 Que vous rêviez de [**partager le quotidien d’un musher**](https://odysway.com/voyages/sejour-survie-musher?utm_source=SEO&utm_medium=BlogPost&utm_campaign=trek%26randonnee) sur les traces de Jack London, de vous [**reconnecter à la nature en Finlande**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=trek%26randonnee), ou encore de [**randonner avec des lamas**](https://odysway.com/voyages/trek-lamas-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=trek%26randonnee) jusqu’au Machu Picchu, l'équipe d’Odysway se fera un plaisir de vous guider pas à pas dans votre projet de trek ou de randonnée.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

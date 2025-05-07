@@ -9,32 +9,34 @@ seo:
 navigation:
   title: "Le slow tourisme : un mode de voyage de plus en plus en vogue"
   description: "Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 13:51:00+00:00"
 tags: "Communautés locales, Grands espaces, Sport"
 categories: "Benefices locaux"
 displayedImg: "/images/blogs/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue/yofM2WkORbitnz8VrtLh.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue/yofM2WkORbitnz8VrtLh.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 Le slow tourisme : un mode de voyage de plus en plus en vogue
 
 #introduction
-Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un tourisme authentique. Focus sur un mode de voyage de plus en plus en vogue.
+Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue/yofM2WkORbitnz8VrtLh.jpg"
----
 #content
 Dans un monde qui va de plus en plus vite, le slow tourisme commence à se faire sa place dans le paysage des voyages. Envie de se déconnecter, de retrouver le goût des choses simples et de découvrir le monde autrement, telles sont les envies de voyageurs en quête d’un tourisme authentique. Focus sur un mode de voyage de plus en plus en vogue.
 
@@ -87,3 +89,47 @@ Tout le monde peut pratiquer le slow tourisme. Seul, à deux, entre amis ou en f
 
 Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

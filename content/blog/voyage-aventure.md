@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage Aventure : de belles sensations au programme"
   description: "Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-26 10:44:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 novembre 2020
-
 #title
 Voyage Aventure : de belles sensations au programme
 
 #introduction
-Partir en voyage est déjà une aventure en soi, car le dépaysement est créateur d’émotions, de rencontres, de découvertes et de souvenirs.
+Partez à l’aventure avec Odysway, dépaysement garanti ! Expériences uniques et immersion avec les populations locales, c’est possible avec nos voyages aventure.
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Partir en voyage est déjà une aventure en soi, car le dépaysement est créateur d’émotions, de rencontres, de découvertes et de souvenirs.
 
@@ -126,3 +128,47 @@ Odysway vous accompagne dans le choix de votre futur **voyage aventure** :
 
 Notre équipe est là pour vous aider à partir à l’aventure !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le Népal, le pays du trek et de la spiritualité"
   description: "Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays spirituel par excellence, il est également le pays phare pour le trekking. L’Himalaya. Voilà le premier mot qui nous vient à l’esprit lorsque l’on désigne le site le plus exceptionnel du Népal. Cette ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-20 10:13:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 avril 2020
-
 #title
 Le Népal, le pays du trek et de la spiritualité
 
 #introduction
-Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays spirituel par excellence, il est également le pays phare pour le trekking.
+Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays spirituel par excellence, il est également le pays phare pour le trekking. L’Himalaya. Voilà le premier mot qui nous vient à l’esprit lorsque l’on désigne le site le plus exceptionnel du Népal. Cette ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Niché entre l’Inde et la Chine, le Népal est la terre qui a vu naître Bouddha. Pays spirituel par excellence, il est également le pays phare pour le trekking.
 
@@ -49,3 +51,47 @@ Les randonneurs feront cap vers le nord du Népal pour arpenter les nombreux sen
 
 Odysway vous propose deux voyages pour découvrir le Népal autrement. Loin des sentiers touristiques, partez faire un [Yoga-trek au cœur de l'Himalaya](https://odysway.com/voyages/yoga-trek-himalaya), l'occasion de prendre du temps pour vous tout en profitant des paysages magnifiques du Népal. Vous pouvez également partir vivre en [immersion dans une école bouddhiste](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal), un voyage qui vous permettra de participer à l'éducation des jeunes moines tout en partageant leur mode de vie, en apprenant à les connaitre et en découvrant leur culture.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

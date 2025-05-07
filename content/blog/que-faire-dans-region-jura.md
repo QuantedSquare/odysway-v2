@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Que faire dans la région du Jura?"
   description: "Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-06-11 11:54:00+00:00"
 tags: "France, Grands espaces"
 categories: "Nature et grands espaces, Blog"
 displayedImg: "/images/blogs/que-faire-dans-region-jura/TNxew1EjTfyaUwqLYRO1.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/que-faire-dans-region-jura/TNxew1EjTfyaUwqLYRO1.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-11 juin 2020
-
 #title
 Que faire dans la région du Jura?
 
 #introduction
-   
+Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/que-faire-dans-region-jura/TNxew1EjTfyaUwqLYRO1.jpg"
----
 #content
 **Région naturelle qui borde la Suisse, le Jura allie à la fois un patrimoine naturel et historique de toute beauté. Entre les plaines et les massifs montagneux se nichent des cités de caractère et des paysages insoupçonnés. Avis à tous les voyageurs, le Jura vous accueille pour un séjour sous le signe de la découverte, de la détente, des émotions fortes mais aussi de la gourmandise. Suivez le guide !**
 
@@ -102,3 +104,47 @@ Vous avez désormais comme une furieuse envie de partir dans le Jura ? **Odysway
 
 Afin de poursuivre votre lecture, découvrez [notre article sur les 5 raisons de partir à la montagne en été.](https://odysway.com/5-raisons-partir-vacances-montagne-ete)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Un séminaire insolite à Tenerife"
   description: "Au printemps 2019, Odysway a eu l'occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C'est dans le cadre de l'organisation d'un séminaire pour entreprise que Tenerife a été choisi. L’île a en effet de nombreux atouts a faire valoir. Très bien ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-04-30 14:37:00+00:00"
 tags: "Europe, Grands espaces, Séminaire"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/un-seminaire-insolite-a-tenerife/3GP1UTdTDGDNUiYyOxXy.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/3GP1UTdTDGDNUiYyOxXy.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 avril 2019
-
 #title
 Un séminaire insolite à Tenerife
 
 #introduction
-        
+Au printemps 2019, Odysway a eu l'occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C'est dans le cadre de l'organisation d'un séminaire pour entreprise que Tenerife a été choisi. L’île a en effet de nombreux atouts a faire valoir. Très bien ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/un-seminaire-insolite-a-tenerife/3GP1UTdTDGDNUiYyOxXy.jpg"
----
 #content
 Au printemps 2019, Odysway a eu l’occasion de découvrir l’île de Tenerife, qui compose avec 6 autres îles un archipel appelé Les Canaries. C’est dans le cadre de l’organisation d’un séminaire pour entreprise que Tenerife a été choisi.
 
@@ -130,3 +132,47 @@ Si vous êtes un groupe ou une entreprise, n’hésitez pas à nous contacter vi
 
 Pour poursuivre votre lecture, nous vous invitions à regarder notre article [sur le Workation, où quand le travail et les vacances font qu'un.](https://odysway.com/workation-travail-vacances)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

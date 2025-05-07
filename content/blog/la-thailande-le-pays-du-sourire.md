@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "La Thaïlande, le pays du sourire"
   description: "Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement. Le ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-04-20 09:43:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/la-thailande-le-pays-du-sourire/UXogh4S9RQKhUqYOXbQ0.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/UXogh4S9RQKhUqYOXbQ0.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 avril 2020
-
 #title
 La Thaïlande, le pays du sourire
 
 #introduction
-Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement. Le coût de la vie est aussi très avantageux. Vous pouvez loger dans des hôtels tout confort sans vous ruiner !
+Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement. Le ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/UXogh4S9RQKhUqYOXbQ0.jpg"
----
 #content
 # Pourquoi partir en voyage en Thaïlande ?
 
@@ -194,3 +196,47 @@ alt:
 
 Un **voyage en Thaïlande**, c’est aussi avoir l’opportunité de découvrir le sport emblématique du pays : le **muay-thaï**. Odysway vous propose une expérience unique, celle de [boxer dans les rizières en Thaïlande](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=article&utm_medium=blog&utm_campaign=thailande+pays+du+sourire) et de vivre une véritable immersion dans la culture locale. Pendant une semaine, recevez le meilleur entraînement de boxe thaïe avec un combattant professionnel dans les forêts du nord du pays.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

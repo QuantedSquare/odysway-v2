@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage au Cap Vert : Explorez l'Archipel Hors des Sentiers Battus"
   description: "Le Cap-Vert, un archipel volcanique au large des côtes de l'Afrique de l'Ouest, est une destination de rêve pour les voyageurs en quête d'authenticité et d'aventure. Composé de dix îles principales, le Cap Vert offre une diversité de paysages, de cultures et d'expériences inégalées. Dans cet article, nous allons explorer ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-05-31 13:59:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/voyage-au-cap-vert-explorez-larchipel-hors-des-sentiers-battus/ZL9INonQSg2TteCvIA0m.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/voyage-au-cap-vert-explorez-larchipel-hors-des-sentiers-battus/ZL9INonQSg2TteCvIA0m.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-31 mai 2024
-
 #title
 Voyage au Cap Vert : Explorez l'Archipel Hors des Sentiers Battus
 
 #introduction
- 
+Le Cap-Vert, un archipel volcanique au large des côtes de l'Afrique de l'Ouest, est une destination de rêve pour les voyageurs en quête d'authenticité et d'aventure. Composé de dix îles principales, le Cap Vert offre une diversité de paysages, de cultures et d'expériences inégalées. Dans cet article, nous allons explorer ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-au-cap-vert-explorez-larchipel-hors-des-sentiers-battus/ZL9INonQSg2TteCvIA0m.jpg"
----
 #content
 Le Cap-Vert, un archipel volcanique au large des côtes de l'Afrique de l'Ouest, est une destination de rêve pour les voyageurs en quête d'authenticité et d'aventure. Composé de dix îles principales, le Cap Vert offre une diversité de paysages, de cultures et d'expériences inégalées. Dans cet article, nous allons explorer trois des îles les plus fascinantes du Cap-Vert : Santiago, Fogo et Santo Antão. Nous mentionnerons également les autres îles de l'archipel, qui ont chacune leur propre charme et leurs propres attractions. Préparez-vous à découvrir des trésors cachés à vivre des aventures inoubliables et à plonger dans la richesse culturelle de cet archipel hors des sentiers battus.
 
@@ -165,3 +167,47 @@ alt: undefined
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

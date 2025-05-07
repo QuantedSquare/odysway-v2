@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Qu'est-ce que la tarabita en Equateur?"
   description: "Parmi les modes de transport insolites qui existent de par la planète, la tarabita est probablement l'un des plus anciens. C'est en Equateur , situe entre la Colombie et le Pérou, que vous pourrez tester ce mode de transport plutôt original. Semblable a un téléphérique, les Incas l'utilisaient déjà pour ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-11-29 07:59:00+00:00"
 tags: "Amerique du Sud, Transports insolites"
 categories: "Depassement de soi, Developpement Personnel"
 displayedImg: "/images/blogs/quest-ce-que-la-tarabita-en-equateur/wjgbNs6TSa6hAfBnw0xW.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/quest-ce-que-la-tarabita-en-equateur/wjgbNs6TSa6hAfBnw0xW.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 novembre 2018
-
 #title
 Qu'est-ce que la tarabita en Equateur?
 
 #introduction
-  
+Parmi les modes de transport insolites qui existent de par la planète, la tarabita est probablement l'un des plus anciens. C'est en Equateur , situe entre la Colombie et le Pérou, que vous pourrez tester ce mode de transport plutôt original. Semblable a un téléphérique, les Incas l'utilisaient déjà pour ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/quest-ce-que-la-tarabita-en-equateur/wjgbNs6TSa6hAfBnw0xW.jpg"
----
 #content
 Parmi les modes de transport insolites qui existent de par la planète, **la tarabita** est probablement l’un des plus anciens. C’est en **Equateur**, situé entre la Colombie et le Pérou, que vous pourrez tester ce mode de transport plutôt original. Semblable à un téléphérique, les Incas l’utilisaient déjà pour se déplacer d’une montagne à une autre. A vous d’essayer !
 
@@ -56,3 +58,47 @@ Ne manquez pas non plus **le Mariposario, la ferme aux papillons**. Ici aussi p
 
 Découvrez nos voyages en [Amérique du Sud.](https://odysway.com/destinations/amerique-du-sud)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

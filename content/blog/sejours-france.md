@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Nos séjours en France"
   description: "Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-02-22 13:16:00+00:00"
 tags: "Europe, France, Grands espaces"
 categories: "Nature et grands espaces"
 displayedImg: "/images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-22 février 2021
-
 #title
 Nos séjours en France
 
 #introduction
- Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion.
+Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg"
----
 #content
  Avec une richesse extraordinaire dans de très nombreux domaines, **partir en vacances en France** est la promesse d’un voyage tout en émotion.
 
@@ -175,3 +177,47 @@ Par la multiplicité de ses régions, la France regorge de **traditions** et d�
 
 Une richesse se retrouve également dans des modes de vie traditionnels que certains font encore perdurer. Tel est le cas dans les Pyrénées où les bergers sont encore nombreux à parcourir les pâturages avec leurs troupeaux. Odysway vous emmène à leur rencontre grâce à un [séjour dans le Béarn](https://odysway.com/voyages/sejour-berger-bearn) afin de partager leur quotidien. Transhumance, fabrication du fromage et nuit dans une cabane typique, un voyage tout en intensité et en émotion.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

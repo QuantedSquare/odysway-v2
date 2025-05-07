@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage sur Mesure au Népal : Aventure Personnalisée et Immersive dans l'Himalaya"
   description: "Le Népal, avec ses paysages époustouflants et sa culture riche, est une destination incontournable pour les amateurs de trek. Odysway propose une expérience unique, alliant immersion culturelle et respect de l'environnement. En optant pour un trek chez l'habitant, vous découvrez le Népal sous un angle authentique et enrichissant. Voici pourquoi ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-05-27 07:11:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/voyage-sur-mesure-nepal/UvFW94qlQLmskEQkHlub.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/voyage-sur-mesure-nepal/UvFW94qlQLmskEQkHlub.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-27 mai 2024
-
 #title
 Voyage sur Mesure au Népal : Aventure Personnalisée et Immersive dans l'Himalaya
 
 #introduction
-Le Népal, un pays niché au cœur de l'Himalaya, est une destination de choix pour les voyageurs en quête d'aventures authentiques et immersives. Entre ses montagnes majestueuses, ses vallées verdoyantes et ses villages pittoresques, le Népal offre un cadre idéal pour des voyages sur mesure. Que vous soyez un randonneur chevronné, un passionné de culture ou simplement en quête de sérénité, un voyage sur mesure au Népal avec Odysway vous promet une expérience unique et inoubliable.
+Le Népal, avec ses paysages époustouflants et sa culture riche, est une destination incontournable pour les amateurs de trek. Odysway propose une expérience unique, alliant immersion culturelle et respect de l'environnement. En optant pour un trek chez l'habitant, vous découvrez le Népal sous un angle authentique et enrichissant. Voici pourquoi ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyage-sur-mesure-nepal/UvFW94qlQLmskEQkHlub.jpg"
----
 #content
 Le Népal, un pays niché au cœur de l'Himalaya, est une destination de choix pour les voyageurs en quête d'aventures authentiques et immersives. Entre ses montagnes majestueuses, ses vallées verdoyantes et ses villages pittoresques, le Népal offre un cadre idéal pour des voyages sur mesure. Que vous soyez un randonneur chevronné, un passionné de culture ou simplement en quête de sérénité, un voyage sur mesure au Népal avec Odysway vous promet une expérience unique et inoubliable.
 
@@ -106,3 +108,47 @@ Un voyage sur mesure au Népal avec Odysway est bien plus qu'un simple voyage. C
 
 Pour en savoir plus et organiser votre voyage sur mesure au Népal, prenez rendez-vous [via ce lien](https://calendly.com/odysway/15min) avec l'un de nos conseillers.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "COP 25 : changements climatiques et tourisme durable"
   description: "Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-12-09 08:20:00+00:00"
 tags: "Grands espaces, Transports insolites"
 categories: "Culture et decouverte, Benefices locaux"
 displayedImg: "/images/blogs/cop25-changements-climatiques-tourisme-durable/rPCANZITSFOg6QhCGyfV.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/cop25-changements-climatiques-tourisme-durable/rPCANZITSFOg6QhCGyfV.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-9 décembre 2019
-
 #title
 COP 25 : changements climatiques et tourisme durable
 
 #introduction
-    
+Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 États dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/cop25-changements-climatiques-tourisme-durable/rPCANZITSFOg6QhCGyfV.jpg"
----
 #content
 Depuis quelques jours déjà, une foule fourmille tout autour de la Feria de Madrid. La raison ? Le parc des expositions madrilène accueille du 2 au 13 décembre les représentants de 193 Etats dans le cadre de la Conférence des Nations Unies sur les changements climatiques COP25. Contrairement à de nombreux secteurs d’activité, le tourisme qui représente 12% du PIB mondial, est globalement épargné. Plus précisément, c’est le secteur des transports qui ne cesse d’être montré du doigt. Pourtant, la seule idée de pouvoir parcourir le monde sans transport paraît inconcevable : comment poser le pied sur le sol Australien ou admirer les chutes d’Iguaçu en Argentine sans aucun moyen de locomotion ? D’où l’importance du tourisme durable…
 
@@ -72,3 +74,47 @@ alt:
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

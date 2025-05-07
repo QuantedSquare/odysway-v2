@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les félins d'Afrique"
   description: "Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-12-17 16:24:00+00:00"
 tags: "Afrique, Afrique du Sud, Animaux, Famille, Grands espaces"
 categories: "Nature et grands espaces, Blog"
 displayedImg: "/images/blogs/felins-afrique/zOz0Rd2rQ0elVYXphjit.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/felins-afrique/zOz0Rd2rQ0elVYXphjit.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-17 décembre 2019
-
 #title
 Les félins d'Afrique
 
 #introduction
-
+Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de nombreux prédateurs sauvages : les félins d'Afrique . Parmi ces félidés, on trouve bien ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/felins-afrique/zOz0Rd2rQ0elVYXphjit.jpg"
----
 #content
 Avec une superficie de 30,4 millions de km2, le continent africain est le troisième plus grand de la planète. Du Sahara a l'Afrique du Sud en passant par les jungles équatoriales et tropicales, vivent de **nombreux prédateurs sauvages : les félins d'Afrique**. Parmi ces félidés, on trouve bien sur le lion, le leopard et le guépard, mais également d'autres espèces moins connues, qui sont parfois menacées. Odysway vous présente **une sélection des félins d'Afrique, des grands aux plus petits**.
 
@@ -120,3 +122,47 @@ Odysway vous propose une incroyable [expérience de volontariat, en immersion da
 
 De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

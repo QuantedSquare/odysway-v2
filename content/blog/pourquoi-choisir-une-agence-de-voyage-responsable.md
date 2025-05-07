@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Pourquoi choisir une agence de voyage responsable ?"
   description: "Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux voyageurs des opportunités infinies de découvrir de nouveaux horizons, cultures et paysages. Cependant, cette quête d'aventure et de dépaysement peut parfois avoir un coût élevé pour l'environnement et les communautés locales. C'est là qu'intervient le concept de ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-05-26 18:09:45.148000+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/DVxiTc6fRDKGjoituMFq.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/DVxiTc6fRDKGjoituMFq.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 mai 2024
-
 #title
 Pourquoi choisir une agence de voyage responsable ?
 
 #introduction
-Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux voyageurs des opportunités infinies de découvrir de nouveaux horizons, cultures et paysages. Cependant, cette quête d'aventure et de dépaysement peut parfois avoir un coût élevé pour l'environnement et les communautés locales. C'est là qu'intervient le concept de voyage responsable. Choisir une agence de voyage responsable, comme Odysway, présente de nombreux avantages non seulement pour les voyageurs, mais aussi pour la planète et ses habitants. Voici pourquoi vous devriez envisager de faire appel à une telle agence pour vos prochaines aventures.
+Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux voyageurs des opportunités infinies de découvrir de nouveaux horizons, cultures et paysages. Cependant, cette quête d'aventure et de dépaysement peut parfois avoir un coût élevé pour l'environnement et les communautés locales. C'est là qu'intervient le concept de ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/pourquoi-choisir-une-agence-de-voyage-responsable/DVxiTc6fRDKGjoituMFq.jpg"
----
 #content
 Le tourisme est l'une des industries les plus dynamiques au monde, offrant aux voyageurs des opportunités infinies de découvrir de nouveaux horizons, cultures et paysages. Cependant, cette quête d'aventure et de dépaysement peut parfois avoir un coût élevé pour l'environnement et les communautés locales. C'est là qu'intervient le concept de voyage responsable. Choisir une agence de voyage responsable, comme Odysway, présente de nombreux avantages non seulement pour les voyageurs, mais aussi pour la planète et ses habitants. Voici pourquoi vous devriez envisager de faire appel à une telle agence pour vos prochaines aventures.
 
@@ -96,3 +98,47 @@ Enfin, choisir une agence de voyage responsable, c'est s'assurer de vivre des ex
 
 Opter pour une agence de voyage responsable comme Odysway, c'est faire un choix conscient pour des voyages qui respectent l'environnement, soutiennent les économies locales, et favorisent des échanges culturels authentiques. C'est aussi une manière de contribuer positivement au monde tout en vivant des aventures uniques et enrichissantes. En tant que voyageurs, nous avons le pouvoir de faire des choix qui comptent. En choisissant le voyage responsable, nous pouvons explorer le monde tout en le préservant pour les générations futures.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::
