@@ -104,12 +104,12 @@
       </v-btn>
     </div>
   </v-app-bar>
-  <ExtensionDrawer
+  <!-- <ExtensionDrawer
     v-model="testModel"
     :extension="extensionName"
     class="d-md-and-down-none"
     @mouseleave="resetExtension()"
-  />
+  /> -->
 </template>
 
 <script setup>
@@ -118,6 +118,7 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const { header } = useAppConfig()
+
 // #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
 const { mdAndUp } = useDisplay()
 const { user, signOut, isConnected } = useUser()

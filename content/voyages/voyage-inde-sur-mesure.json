@@ -1,0 +1,82 @@
+{
+  "published": false,
+  "title": "Voyage en Inde sur mesure",
+  "slug": "voyage-inde-sur-mesure",
+  "rating": 0,
+  "comments": 0,
+  "description": "",
+  "emailDescription": "",
+  "metaDescription": "",
+  "interjection": "en",
+  "destinations": [
+    "Inde"
+  ],
+  "categories": [],
+  "duration": 0,
+  "nights": 0,
+  "experienceType": "",
+  "level": "",
+  "idealPeriods": [],
+  "monthlyAvailability": [],
+  "miniatureDisplay": "Note moyenne",
+  "image": {
+    "src": "",
+    "alt": "image principale du voyage Voyage en Inde sur mesure"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage Voyage en Inde sur mesure"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "badgeSection": {},
+  "authorNote": {
+    "text": "",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "programmeBlock": [],
+  "accompanistsList": [],
+  "accompanistsDescription": "",
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      }
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1980,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 0,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 0,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "privatisationAvailable": false,
+    "groupeAvailable": false,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "minAge": 8,
+    "airportCode": []
+  }
+}

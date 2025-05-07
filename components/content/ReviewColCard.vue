@@ -23,6 +23,7 @@
           <AvatarImg
             :avatar-img="review.photo"
             avatar-size="62"
+            :name="review.author"
           />
           <div class="d-flex flex-column">
             <span class="text-h5"> {{ review.author }}</span>

@@ -58,7 +58,7 @@
         >
           <v-card
             variant="text"
-            max-width="770"
+            :max-width="770"
           >
             <v-card-text class="text-body-1 text-grey-darken-3 ">
               <v-row>

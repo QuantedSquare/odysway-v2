@@ -3,6 +3,7 @@ import path from 'path'
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { asSeoCollection } from '@nuxtjs/seo/content'
 
+// -----------------------------TYPING-------------------------------
 // #TODO: Move to content.schema.ts
 const teamDir = path.resolve(__dirname, 'content/team')
 const teamFiles = fs.readdirSync(teamDir)
@@ -14,7 +15,7 @@ console.log('teamChoices', teamChoices)
 const voyageDir = path.resolve(__dirname, 'content/voyages')
 const voyageFiles = fs.readdirSync(voyageDir)
 const voyageChoices = voyageFiles
-  .map(file => file.replace('.md', ''))
+  .map(file => file.replace('.json', ''))
   .filter(Boolean) as [string, ...string[]]
 console.log('voyageChoices', voyageChoices)
 
@@ -22,7 +23,20 @@ const paysChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content
   .map(country => country.slug) as [string, ...string[]]
 console.log('paysChoices', paysChoices)
 
+const destinationChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/destinations/destinations.json'), 'utf-8')) as Array<{ nom: string }>)
+  .map(destination => destination.nom) as [string, ...string[]]
+console.log('destinationChoices', destinationChoices)
+
+// TODO
 const experienceChoices = ['Dans la peau de...', 'En immersion chez...', 'Dans l\'objectif de...'] as const
+
+const categoriesChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/categories/categories.json'), 'utf-8')) as Array<{ slug: string }>)
+  .map(category => category.slug) as [string, ...string[]]
+console.log('categoriesChoices', categoriesChoices)
+
+const regionChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/destinations/regions.json'), 'utf-8')) as Array<{ nom: string }>)
+  .map(region => region.nom) as [string, ...string[]]
+console.log('regionChoices', regionChoices)
 
 const colorChoices = [
   'primary',
@@ -55,6 +69,7 @@ const colorChoices = [
   'grey-light-3',
 ] as const
 
+// ------------------------------------------------------------
 export default defineContentConfig({
   collections: {
     content: defineCollection(
@@ -89,34 +104,21 @@ export default defineContentConfig({
         }),
       }),
     ),
-    voyages: defineCollection(
-      asSeoCollection({
-        type: 'page',
-        source: 'voyages/*.md',
-        schema: z.object({
-          slug: z.string(),
-          title: z.string(),
-          duration: z.string(),
-          departureDate: z.date(),
-          returnDate: z.date(),
-          iso: z.string(),
-          startingPrice: z.number(),
-          rating: z.number(),
-          comments: z.number(),
-          imgSrc: z.string(),
-          country: z.string(),
-          programme: z.string(),
-        }),
-      }),
-    ),
-
     categories: defineCollection({
       type: 'data',
-      source: 'categories/**.json',
+      source: {
+        include: 'categories/**.json',
+        exclude: ['categories/categories.json'],
+      },
       schema: z.object({
-        slug: z.string(),
         title: z.string(),
-        image: z.string(),
+        slug: z.string(),
+        titre_seo: z.string(),
+        image: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }),
+        showOnHome: z.boolean(),
       }),
     }),
     tops: defineCollection({
@@ -155,59 +157,6 @@ export default defineContentConfig({
         isOnHome: z.boolean(),
       }),
     }),
-    deals: defineCollection({
-      type: 'data',
-      source: 'deals/**.json',
-      schema: z.object({
-        draft: z.boolean().default(false),
-        slug: z.string(),
-        title: z.string(),
-        country: z.string(),
-        iso: z.string(),
-        zoneChapka: z.number(),
-        duration: z.string(),
-        startingPrice: z.number(),
-        rating: z.number(),
-        comments: z.number(),
-        indivRoom: z.boolean().optional(),
-        privatisationAvailable: z.boolean(),
-        groupeAvailable: z.boolean(),
-        imgSrc1: z.object({
-          src: z.string().editor({ input: 'media' }),
-          alt: z.string(),
-        }),
-        imgSrc2: z.object({
-          src: z.string().editor({ input: 'media' }),
-          alt: z.string(),
-        }),
-        tooltipChild: z.string(),
-        tooltipGroup: z.string(),
-        interjection: z.string(),
-        dates: z.array(z.object({
-          departureDate: z.date(),
-          returnDate: z.date(),
-          startingPrice: z.number(),
-          indivRoomPrice: z.number(),
-          maxTravellers: z.number(),
-          bookedPlaces: z.number(),
-          earlyBird: z.boolean(),
-          promoEarlyBird: z.number(),
-          lastMinute: z.boolean(),
-          promoLastMinute: z.number(),
-          promo: z.number(),
-          privatized: z.boolean(),
-          flyTicketPrice: z.number(),
-        })),
-      }),
-    }),
-    travelList: defineCollection({
-      type: 'data',
-      source: 'travel-list/**.json',
-      schema: z.object({
-        slug: z.string(),
-        title: z.string(),
-      }),
-    }),
     dates: defineCollection({
       type: 'page',
       source: 'dates/*/**.json',
@@ -232,61 +181,34 @@ export default defineContentConfig({
       type: 'data',
       source: 'reviews/**.json',
       schema: z.object({
-        slug: z.string().describe('Slug du voyage'),
-        author: z.string().describe('Nom du voyageur'),
-        authorAge: z.string().describe('Age du voyageur'),
-        photo: z.string().describe('Photo du voyageur'),
-        voyagePhoto: z.string().describe('Photo du voyage'),
-        rating: z.number().describe('Note attribuée au voyage ou à Odysway'),
-        text: z.string().describe('Texte de la review'),
-        voyageSlug: z.enum(voyageChoices).describe('Slug du voyage'),
-        voyageTitle: z.string().describe('Titre du voyage'),
-        isOnHome: z.boolean().describe('Afficher sur la page d\'accueil'),
-      }),
-    }),
-    avisVoyageurs: defineCollection({
-      type: 'data',
-      source: 'avis-voyageurs/**.json',
-      schema: z.object({
-        author: z.string(),
-        photo: z.string(),
-        text: z.string(),
-        voyageSlug: z.string(),
-        voyageTitle: z.string(),
-        isDisplayed: z.boolean(),
-        note: z.number(),
-        date: z.string(),
-      }),
-    }),
-    propos: defineCollection({
-      type: 'data',
-      source: 'top-bar/propos.json',
-      schema: z.object({
-        propos: z.array(z.object({
-          title: z.string(),
-          image: z.string(),
-          slug: z.string(),
-        })),
+        author: z.string().describe('Nom du voyageur').optional(),
+        authorAge: z.string().describe('Age du voyageur').optional(),
+        date: z.date().describe('Date de la review').optional(),
+        photo: z.string().describe('Photo du voyageur').optional(),
+        rating: z.number().describe('Note attribuée au voyage ou à Odysway').optional(),
+        text: z.string().describe('Texte de la review').optional(),
+        voyageSlug: z.enum(voyageChoices).describe('Slug du voyage').optional(),
+        voyageTitle: z.string().describe('Titre du voyage').optional(),
+        isOnHome: z.boolean().describe('Afficher sur la page d\'accueil').optional(),
       }),
     }),
     destinations: defineCollection({
       type: 'data',
-      source: 'destinations/**.json',
+      source: {
+        include: 'destinations/*.json',
+        exclude: ['destinations/regions.json'],
+      },
       schema: z.object({
-        title: z.string(),
+        titre: z.string(),
         slug: z.string(),
+        chapka: z.string(),
+        iso: z.string(),
+        interjection: z.string(),
         metaDescription: z.string(),
         visible: z.boolean(),
-        countries: z.array(z.object({
-          country: z.string(),
-          image: z.string(),
-          slug: z.string(),
-          metaDescription: z.string(),
-          visible: z.boolean(),
-        })),
+        regions: z.array(z.enum(regionChoices)),
       }),
     }),
-    // ======================V2======================
     page_voyage_fr: defineCollection({
       type: 'data',
       source: 'textes/fr/voyage.json', // #Todo, modifier par voyages.json
@@ -401,19 +323,28 @@ export default defineContentConfig({
         otherIdeas: z.string().describe('Titre de la section carousel propositions de voyages'),
       }),
     }),
-    voyagesv2: defineCollection({
+    voyages: defineCollection({
       type: 'page',
-      source: 'voyagesv2/**.json',
+      source: 'voyages/*.json',
       schema: z.object({
+        published: z.boolean().describe('Indique si le voyage est publié'),
         title: z.string().describe('Titre du voyage'),
         slug: z.string().describe('Slug du voyage'),
         rating: z.number().describe('Note du voyage sur 5'),
         comments: z.number().describe('Nombre de commentaires'),
         description: z.string().describe('Description du voyage'),
-        interjection: z.string(),
-        country: z.enum(paysChoices).describe('Pays du voyage'),
-        continent: z.enum(['Europe', 'Afrique', 'Asie', 'Amérique du Nord', 'Amérique du Sud', 'Océanie']).describe('Continent du voyage'),
+        emailDescription: z.string().describe('Description du voyage pour l\'email'),
+        metaDescription: z.string().describe('Meta Description du voyage'),
+        interjection: z.string().describe('Mot de liaison avec la destination (ex: "voyage **EN** France")'),
+        destinations: z.array(z.enum(destinationChoices)).describe('Destinations du voyage'),
+        categories: z.array(z.enum(categoriesChoices)).describe('Categories du voyage'),
         duration: z.number().describe('Durée du voyage en jours'),
+        nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1
+        experienceType: z.string().describe('Type d\'experience'), // Leave empty
+        level: z.string().describe('Niveau de difficulté'), // Leave empty
+        idealPeriods: z.array(z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'])).describe('Périodes idéales pour le voyage'), // it's the periode_ideale_search key, which is an array of string numbers. Map the number to month name
+        monthlyAvailability: z.array(z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'])).describe('Disponibilité mensuelle du voyage'), // Use the same values as idealPeriods for now
+        miniatureDisplay: z.enum(['Note moyenne', 'Nouveau', 'Last minute', 'Early bird']).describe('Type de badge affiché sur miniature, (aucun si vide)'),
         // ==========================================
         image: z.object({
           src: z.string().editor({ input: 'media' }).describe('Image principale du voyage'),
@@ -442,16 +373,17 @@ export default defineContentConfig({
         }).describe('Liste de Badges sous la section photo'),
         authorNote: z.object({
           text: z.string().describe('Texte de la note de auteur'),
-          author: z.enum(teamChoices).describe('Auteur de la note defini dans le fichier team.json'),
+          author: z.enum(teamChoices).describe('Auteur de la note defini dans le fichier team.json'), // use nom_auteur_description
           affixeAuthor: z.string().describe('Texte apres le poste de auteur, ex: "et amoureux de la vallee d\'Aspe"'),
         }).describe('Note de auteur sous le hero/section photo, defini dans le dossier team'),
         // Ce qui vous attend
-        experiencesBlock: z.array(z.string()).describe('Liste des points de ce qui vous attend sur le voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
+        experiencesBlock: z.array(z.string()).describe('Liste des points de ce qui vous attend sur le voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
         programmeBlock: z.array(z.object({
           title: z.string().describe('Titre de la journée'),
           badgeText: z.string().describe('Texte du badge, ex: "Jour 1"'),
           description: z.string().describe('Description de la journée'),
           photo: z.string().editor({ input: 'media' }).describe('Photo de la journée'),
+          denivellation: z.string().describe('Denivellation de la journée'), // Leave empty
         })).describe('Programme du voyage, liste des activités par jour ou journées'),
         // ==========================================
         accompanistsList: z.array(z.object({
@@ -489,9 +421,6 @@ export default defineContentConfig({
           earlyBirdReduction: z.number().describe('Valeur de réduction promo early bird'),
           maxTravelers: z.number().describe('Nombre de personnes maximum'),
           minTravelersToConfirm: z.number().describe('Nombre de personnes minimum pour confirmer le voyage'),
-          zoneChapka: z.number().describe('Zone du chapka'),
-          iso: z.string().describe('ISO du voyage'),
-
           indivRoom: z.boolean().describe('Indique si le voyage est disponible en chambre individuelle'),
           forcedIndivRoom: z.boolean().describe('Indique si le voyageur est contraint de prendre une chambre individuelle'),
           indivRoomPrice: z.number().describe('Prix de la chambre individuelle'),
@@ -501,6 +430,8 @@ export default defineContentConfig({
           cseAvailable: z.boolean().describe('Indique si le voyage est disponible en CSE'),
           childrenPromo: z.number().describe('Valeur de réduction promo enfant'),
           childrenAge: z.number().describe('Age maximum pour beneficier de la réduction promo enfant').default(12),
+          minAge: z.number().describe('Age minimum pour participer au voyage').default(8),
+          airportCode: z.array(z.string()).describe('Liste des codes aéroport du voyage'),
         }).describe('Section gestion du prix du voyage, commun à toutes les dates'),
       }),
     }),
