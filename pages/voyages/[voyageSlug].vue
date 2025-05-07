@@ -57,15 +57,12 @@ const [{ data: voyagesTextes }, { data: voyagesData }, { data: dates }] = await 
 ])
 
 if (voyagesData.value) {
-  console.log('voyagesv2Data', voyagesData.value)
   provide('voyage', voyagesData.value)
 }
 if (voyagesTextes.value) {
-  console.log('voyages-textes', voyagesTextes.value)
   provide('page', voyagesTextes.value)
 }
 if (dates.value) {
-  console.log('dates', dates.value)
   provide('dates', dates.value)
 }
 

@@ -10,7 +10,7 @@
             <v-autocomplete
               v-model="destinationChoice"
               label="Destinations"
-              :items="destinations"
+              :items="destinationsList"
               clearable
               :prepend-inner-icon="mdiMapMarkerOutline"
               hide-details
@@ -100,12 +100,12 @@ const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => null)
 
-const { data: destinationsv2 } = await useAsyncData('destinationsv2', () => {
-  return queryCollection('destinationsv2').first()
+const { data: destinations } = await useAsyncData('destinations', () => {
+  return queryCollection('destinations').where('id', '=', 'destinations/destinations/destinations.json').first()
 })
 
-const destinations = computed(() => {
-  return destinationsv2.value.meta.body.map(d => d.name.charAt(0).toUpperCase() + d.name.slice(1))
+const destinationsList = computed(() => {
+  return destinations.value.meta.body.map(d => d.nom.charAt(0).toUpperCase() + d.nom.slice(1))
 })
 
 const travelTypes = ref([
