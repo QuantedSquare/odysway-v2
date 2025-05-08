@@ -1,0 +1,114 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col cols="8">
+        <h1>Gestion des voyages</h1>
+        <p>
+          Gérer les voyages et les dates associées. Ne sont affichés que les voyages possédant au minimum une date.
+        </p>
+      </v-col>
+      <v-col
+        cols="4"
+        class="d-flex justify-end align-center"
+      >
+        <v-btn @click="goToAddDate">
+          + Ajouter une date
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12">
+        <v-autocomplete
+          v-model="search"
+          :items="travelesList"
+          label="Rechercher un voyage"
+          item-title="title"
+          item-value="slug"
+          clearable
+        />
+      </v-col>
+      <v-col
+        v-if="loading"
+        cols="12"
+        md="4"
+      >
+        <v-skeleton-loader type="card" />
+      </v-col>
+      <v-col
+        v-for="travel in filteredTravels"
+        v-else-if="filteredTravels.length > 0"
+        :key="travel.travel_slug"
+        cols="12"
+        md="4"
+      >
+        <v-card
+          class="mb-4"
+          hover
+          @click="goToTravel(travel.travel_slug)"
+        >
+          <v-card-title>{{ travel.travel_slug || 'Sans nom' }}</v-card-title>
+          <v-card-text>
+            Status: {{ travel.status }}<br>
+            Nombre de dates: {{ travel.nb_dates }}
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col
+        v-else
+        cols="12"
+      >
+        <v-alert color="secondary">
+          Aucun voyage trouvé
+        </v-alert>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
+const search = ref(null)
+const loading = ref(false)
+const travelesList = await queryCollection('voyages').select('slug', 'title').all()
+console.log('travelesList', travelesList)
+
+definePageMeta({
+  layout: 'booking',
+  middleware: 'booking-management',
+})
+const travels = ref([])
+const router = useRouter()
+
+const fetchTravels = async () => {
+  loading.value = true
+  const res = await fetch('/api/v1/booking/travels')
+  const data = await res.json()
+  travels.value = data
+  console.log('travels', travels.value)
+  loading.value = false
+}
+
+const goToTravel = (slug) => {
+  console.log('goToTravel', slug)
+  router.push(`/booking-management/${slug}`)
+}
+
+const goToAddDate = () => {
+  router.push('/booking-management/add-date')
+}
+
+const filteredTravels = computed(() => {
+  if (search.value) {
+    return travels.value?.filter(travel => travel.travel_slug.includes(search.value))
+  }
+  return travels.value
+})
+console.log('filteredTravels', filteredTravels.value)
+onMounted(fetchTravels)
+</script>
+
+<style scoped>
+
+</style>

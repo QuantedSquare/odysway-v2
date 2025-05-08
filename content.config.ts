@@ -114,6 +114,7 @@ export default defineContentConfig({
         include: 'categories/**.json',
         exclude: ['categories/categories.json'],
       },
+      // AJOUT TEXT
       schema: z.object({
         title: z.string(),
         slug: z.string(),
@@ -210,7 +211,9 @@ export default defineContentConfig({
         interjection: z.string(),
         metaDescription: z.string(),
         visible: z.boolean(),
-        regions: z.array(z.enum(regionChoices)),
+        regions: z.array(z.object({
+          nom: z.enum(regionChoices),
+        })),
       }),
     }),
     page_voyage_fr: defineCollection({
@@ -340,14 +343,23 @@ export default defineContentConfig({
         emailDescription: z.string().describe('Description du voyage pour l\'email'),
         metaDescription: z.string().describe('Meta Description du voyage'),
         interjection: z.string().describe('Mot de liaison avec la destination (ex: "voyage **EN** France")'),
-        destinations: z.array(z.enum(destinationChoices)).describe('Destinations du voyage'),
-        categories: z.array(z.enum(categoriesChoices)).describe('Categories du voyage'),
+        destinations: z.array(z.object({
+          nom: z.enum(destinationChoices),
+        })).describe('Destinations du voyage'),
+        categories: z.array(z.object({
+          nom: z.enum(categoriesChoices),
+        })).describe('Categories du voyage'),
         duration: z.number().describe('Durée du voyage en jours'),
         nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1
         experienceType: z.string().describe('Type d\'experience'), // Leave empty
         level: z.string().describe('Niveau de difficulté'), // Leave empty
-        idealPeriods: z.array(z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'])).describe('Périodes idéales pour le voyage'), // it's the periode_ideale_search key, which is an array of string numbers. Map the number to month name
-        monthlyAvailability: z.array(z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'])).describe('Disponibilité mensuelle du voyage'), // Use the same values as idealPeriods for now
+        idealPeriods: z.array(z.object({
+
+          month: z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']).describe('Mois de la période idéale'),
+        })).describe('Périodes idéales pour le voyage'), // it's the periode_ideale_search key, which is an array of string numbers. Map the number to month name
+        monthlyAvailability: z.array(z.object({
+          month: z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']).describe('Mois de la période idéale'),
+        })).describe('Disponibilité mensuelle du voyage'), // Use the same values as idealPeriods for now
         miniatureDisplay: z.enum(['Note moyenne', 'Nouveau', 'Last minute', 'Early bird']).describe('Type de badge affiché sur miniature, (aucun si vide)'),
         // ==========================================
         image: z.object({

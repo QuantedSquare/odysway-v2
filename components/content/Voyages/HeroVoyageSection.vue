@@ -111,7 +111,6 @@ import { useImage } from '#imports'
 
 const voyage = inject('voyage')
 
-console.log('injected voyage', voyage)
 const { mdAndUp } = useDisplay()
 const img = useImage()
 const route = useRoute()
@@ -119,6 +118,7 @@ const snackbar = ref(false)
 
 function copyUrl() {
   // TODO: change to the dynamic url
+  //  use runtime config
   const copiedUrl = `https://localhost:3000/${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true

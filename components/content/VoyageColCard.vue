@@ -19,6 +19,7 @@
   >
     <v-card
       elevation="0"
+      hover
     >
       <NuxtLink
         :to="`/voyages/${voyage.slug}`"

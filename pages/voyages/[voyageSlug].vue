@@ -18,13 +18,13 @@
         <AccompanistsContainer />
       </template>
       <template #right-side>
-        <InfoCard />
+        <!-- <InfoCard /> -->
       </template>
     </StickyContainer>
 
     <HousingSection />
 
-    <DatesPricesContainer />
+    <!-- <DatesPricesContainer /> -->
 
     <PriceDetailsContainer />
 
@@ -41,27 +41,22 @@ definePageMeta({
   layout: 'voyage',
 })
 const route = useRoute()
-
-const [{ data: voyagesTextes }, { data: voyagesData }, { data: dates }] = await Promise.all([
-
-  // NEW VERSION
-  useAsyncData('voyages-textes', () => {
-    return queryCollection('page_voyage_fr').first()
-  }),
-  useAsyncData('voyages', () => {
-    return queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first()
-  }),
-  useAsyncData('deal', () => {
-    return queryCollection('dates').where('path', 'LIKE', `/dates/${route.params.voyageSlug}%`).all()
-  }),
+const { data: dates } = await useAsyncData('dates', async () => {
+  const res = await fetch(`/api/v1/booking/${route.params.voyageSlug}/dates`)
+  return await res.json()
+})
+const [{ data: voyagesTextes }, { data: voyagesData }] = await Promise.all([
+  useAsyncData('voyages-textes', () => queryCollection('page_voyage_fr').first()),
+  useAsyncData('voyages', () => queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first()),
 ])
 
+console.log('DATES', dates.value)
 if (voyagesData.value) {
-  console.log('voyagesv2Data', voyagesData.value)
+  // console.log('voyagesv2Data', voyagesData.value)
   provide('voyage', voyagesData.value)
 }
 if (voyagesTextes.value) {
-  console.log('voyages-textes', voyagesTextes.value)
+  // console.log('voyages-textes', voyagesTextes.value)
   provide('page', voyagesTextes.value)
 }
 if (dates.value) {
@@ -77,5 +72,5 @@ if (dates.value) {
 //   useHead(page.value.head || {}) // <-- Nuxt Schema.org
 //   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
 // }
-console.log('voyagesData', voyagesData.value)
+// console.log('voyagesData', voyagesData.value)
 </script>
