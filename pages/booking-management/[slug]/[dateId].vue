@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-if="!loading">
       <v-col
         cols="12"
         md="8"
@@ -11,6 +11,7 @@
             <v-form @submit.prevent="onSave">
               <v-switch
                 v-model="form.published"
+                color="green-light"
                 label="Publié"
               />
               <v-text-field
@@ -40,6 +41,13 @@
                 label="Date de retour"
                 type="date"
               />
+
+              <v-text-field
+                v-model="form.starting_price"
+                label="Prix de départ"
+                type="number"
+              />
+
               <v-text-field
                 v-model="form.max_travelers"
                 label="Voyageurs max"
@@ -55,24 +63,60 @@
                 label="Places réservées"
                 type="number"
               />
-              <v-switch
-                v-model="form.include_flight"
-                label="Inclut vol"
-              />
-              <v-text-field
-                v-model="form.flight_price"
-                label="Prix du vol"
-                type="number"
-              />
-              <v-text-field
-                v-model="form.badges"
-                label="Badges (séparés par virgule)"
-              />
-              <v-text-field
-                v-model="form.starting_price"
-                label="Prix de départ"
-                type="number"
-              />
+              <v-divider class="my-2" />
+              <v-row>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.early_bird"
+                    color="green-light"
+                    label="Early Bird disponible pour cette date"
+                  />
+                </v-col>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.last_minute"
+                    color="green-light"
+                    label="Last minute disponible pour cette date"
+                  />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="includeCustomEvent"
+                    color="green-light"
+                    label="Événement personnalisé (optionnel)"
+                  />
+                </v-col>
+                <v-col cols="6">
+                  <Transition name="slide-fade">
+                    <v-text-field
+                      v-if="includeCustomEvent"
+                      v-model="form.badges"
+                      label="Texte du badge"
+                    />
+                  </Transition>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.include_flight"
+                    color="green-light"
+                    label="Vol inclus (optionnel)"
+                  />
+                </v-col>
+                <v-col cols="5">
+                  <Transition name="slide-fade">
+                    <v-text-field
+                      v-if="form.include_flight"
+                      v-model="form.flight_price"
+                      label="Prix du vol"
+                      type="number"
+                    />
+                  </Transition>
+                </v-col>
+              </v-row>
               <v-alert
                 v-if="saveSuccess"
                 type="success"
@@ -100,7 +144,7 @@
                 class="mt-4 ml-2"
                 @click="onCancel"
               >
-                Annuler
+                Retour
               </v-btn>
             </v-form>
           </v-card-text>
@@ -208,6 +252,31 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <v-divider class="my-4" />
+      <h2>
+        Prévisualisation
+      </h2>
+      <v-col cols="12">
+        <v-chip
+          v-if="form.published"
+          color="green-light"
+        >
+          Publié
+        </v-chip>
+        <v-chip
+          v-else
+          color="red"
+        >
+          Non publié
+        </v-chip>
+      </v-col>
+      <v-col
+        v-if="form"
+        cols="12"
+        class="mb-16"
+      >
+        <DatesPricesItem :date="form" />
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -226,16 +295,19 @@ const router = useRouter()
 const slug = route.params.slug
 const dateId = route.params.dateId
 
+const includeCustomEvent = ref(false)
 const form = ref({})
 const bookedTravelers = ref([])
+const loading = ref(true)
+
 const totalValue = ref(0)
 const saving = ref(false)
 const saveError = ref('')
 const saveSuccess = ref(false)
 const statuses = ref([
-  { value: 'confirmed', label: 'Confirmé' },
-  { value: 'guaranteed', label: 'Garanti' },
   { value: 'soon_confirmed', label: 'Bientôt confirmé' },
+  { value: 'confirmed', label: 'Confirmé' },
+  { value: 'guaranteed', label: 'Garanti (Complet)' },
 ])
 const dealUrl = ref('')
 const assigningDeal = ref(false)
@@ -246,15 +318,20 @@ const fetchDetails = async () => {
   // Fetch travel_date details
   const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`)
   const data = await res.json()
-  form.value = { ...data, badges: (data.badges || []).join(',') }
-
+  form.value = { ...data, index: 0 }
+  console.log('=======form RETRIEVED=======', form.value)
   // Fetch booked travelers
   const res2 = await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked`)
   const data2 = await res2.json()
   bookedTravelers.value = data2
-
+  loading.value = false
   console.log('=======bookedTravelers RETRIEVED=======', bookedTravelers.value)
 }
+watch(includeCustomEvent, (newVal) => {
+  if (!newVal) {
+    form.value.badges = ''
+  }
+})
 
 const onSave = async () => {
   saveError.value = ''
@@ -333,3 +410,19 @@ const deleteTraveler = async (id) => {
 
 onMounted(fetchDetails)
 </script>
+
+<style scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(100px);
+  opacity: 0;
+}
+</style>

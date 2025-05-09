@@ -3,12 +3,16 @@
     <v-row justify="center">
       <v-col
         cols="12"
-        md="8"
       >
         <v-card>
           <v-card-title>Ajouter une date de voyage</v-card-title>
           <v-card-text>
             <v-form @submit.prevent="onSave">
+              <v-switch
+                v-model="form.published"
+                color="green-light"
+                label="Publié"
+              />
               <v-autocomplete
                 v-model="form.travel_slug"
                 :items="travelesList"
@@ -22,6 +26,8 @@
                 v-model="form.displayed_status"
                 label="Statut affiché"
                 :items="statuses"
+                item-title="label"
+                item-value="value"
               />
               <v-text-field
                 v-model="form.departure_date"
@@ -34,6 +40,11 @@
                 type="date"
               />
               <v-text-field
+                v-model="form.starting_price"
+                label="Prix de départ"
+                type="number"
+              />
+              <v-text-field
                 v-model="form.max_travelers"
                 label="Voyageurs max"
                 type="number"
@@ -43,30 +54,66 @@
                 label="Voyageurs min"
                 type="number"
               />
-              <v-switch
-                v-model="form.include_flight"
-                label="Inclut vol"
-              />
-              <v-text-field
-                v-model="form.flight_price"
-                label="Prix du vol"
-                type="number"
-              />
-              <v-text-field
-                v-model="form.badges"
-                label="Badges (séparés par virgule)"
-              />
-              <v-text-field
-                v-model="form.starting_price"
-                label="Prix de départ"
-                type="number"
-              />
+              <v-divider class="my-2" />
+              <v-row>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.early_bird"
+                    color="green-light"
+                    label="Early Bird disponible pour cette date"
+                  />
+                </v-col>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.last_minute"
+                    color="green-light"
+                    label="Last minute disponible pour cette date"
+                  />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="includeCustomEvent"
+                    color="green-light"
+                    label="Événement personnalisé (optionnel)"
+                  />
+                </v-col>
+                <v-col cols="6">
+                  <Transition name="slide-fade">
+                    <v-text-field
+                      v-if="includeCustomEvent"
+                      v-model="form.badges"
+                      label="Texte du badge"
+                    />
+                  </Transition>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.include_flight"
+                    color="green-light"
+                    label="Vol inclus (optionnel)"
+                  />
+                </v-col>
+                <v-col cols="5">
+                  <Transition name="slide-fade">
+                    <v-text-field
+                      v-if="form.include_flight"
+                      v-model="form.flight_price"
+                      label="Prix du vol"
+                      type="number"
+                    />
+                  </Transition>
+                </v-col>
+              </v-row>
               <v-btn
                 type="submit"
                 color="primary"
                 class="mt-4"
                 :loading="saving"
-                :disabled="saving"
+                :disabled="!form.travel_slug"
               >
                 Valider
               </v-btn>
@@ -74,7 +121,7 @@
                 class="mt-4 ml-2"
                 @click="onCancel"
               >
-                Annuler
+                Retour
               </v-btn>
               <v-alert
                 v-if="saveSuccess"
@@ -93,14 +140,38 @@
             </v-form>
           </v-card-text>
         </v-card>
+        <v-divider class="my-4" />
+        <h2>Prévisualisation</h2>
+        <v-col cols="12">
+          <v-chip
+            v-if="form.published"
+            color="green-light"
+          >
+            Publié
+          </v-chip>
+          <v-chip
+            v-else
+            color="red"
+          >
+            Non publié
+          </v-chip>
+        </v-col>
+        <v-col
+          v-if="form"
+          cols="12"
+          class="mb-16"
+        >
+          <DatesPricesItem :date="form" />
+        </v-col>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import dayjs from 'dayjs'
 
 definePageMeta({
   layout: 'booking',
@@ -110,23 +181,29 @@ const router = useRouter()
 const route = useRoute()
 const slugFromQuery = route.query.slug
 
+const includeCustomEvent = ref(false)
 const form = ref({
+  index: 0,
   travel_slug: slugFromQuery || '',
-  displayed_status: '',
-  departure_date: '',
-  return_date: '',
-  max_travelers: '',
-  min_travelers: '',
+  published: false,
+  displayed_status: 'soon_confirmed',
+  departure_date: dayjs().format('YYYY-MM-DD'),
+  return_date: dayjs().add(1, 'day').format('YYYY-MM-DD'),
+  starting_price: 0,
+  max_travelers: 6,
+  min_travelers: 1,
+  early_bird: false,
+  last_minute: false,
   include_flight: false,
-  flight_price: '',
+  booked_seat: 0,
+  flight_price: 0,
   badges: '',
-  starting_price: '',
 })
 
 const statuses = ref([
-  { value: 'available', label: 'Disponible' },
-  { value: 'unavailable', label: 'Indisponible' },
-  { value: 'sold_out', label: 'Complet' },
+  { value: 'soon_confirmed', label: 'Bientôt confirmé' },
+  { value: 'confirmed', label: 'Confirmé' },
+  { value: 'guaranteed', label: 'Garanti (Complet)' },
 ])
 const saving = ref(false)
 const saveError = ref('')
@@ -138,7 +215,6 @@ const fetchTravels = async () => {
   // Nuxt Studio queryCollection
   const list = await queryCollection('voyages').select().all()
   travelesList.value = list
-  console.log('travelesList', travelesList.value)
   travelesMap.value = Object.fromEntries(list.map(t => [t.slug, t]))
 }
 
@@ -149,6 +225,12 @@ const onTravelSelect = (slug) => {
     form.value.max_travelers = travel.maxTravelers || ''
   }
 }
+
+watch(includeCustomEvent, (newVal) => {
+  if (!newVal) {
+    form.value.badges = ''
+  }
+})
 
 const onSave = async () => {
   saveError.value = ''
@@ -188,3 +270,19 @@ const onCancel = () => {
 onMounted(fetchTravels)
 if (slugFromQuery) onTravelSelect(slugFromQuery)
 </script>
+
+<style scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(100px);
+  opacity: 0;
+}
+</style>

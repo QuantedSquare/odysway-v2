@@ -24,6 +24,7 @@
       <NuxtLink
         :to="`/voyages/${voyage.slug}`"
         class="text-decoration-none position-relative text-white"
+        @click="scrollToTop"
       >
         <v-img
           :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
@@ -43,6 +44,7 @@
         <NuxtLink
           :to="`/voyages/${voyage.slug}`"
           class="text-decoration-none"
+          @click="scrollToTop"
         >
           <v-card-text class="py-1 px-2">
             <v-container>
@@ -149,6 +151,9 @@ const img = useImage()
 const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () => {
   return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
 })
+const scrollToTop = () => {
+  window.scrollTo(0, 0)
+}
 // console.log('voyage', voyage.value)
 </script>
 

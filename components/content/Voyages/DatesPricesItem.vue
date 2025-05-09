@@ -28,7 +28,7 @@
             >
               {{ mdiArrowRight }}
             </v-icon>
-            {{ dayjs(enrichedDate.return_date).format('dddd') }}&nbsp;
+            {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
             <span class=" font-weight-bold ">
               {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
             </span>
@@ -39,7 +39,7 @@
           :booked-places="enrichedDate.booked_seat"
           :max-travellers="enrichedDate.max_travelers"
         />
-        <div class="d-none d-md-flex align-center ga-3">
+        <v-row class="d-none d-md-flex align-center ga-2 mx-1">
           <v-chip
             color="primary"
           >
@@ -47,20 +47,11 @@
               <v-icon>
                 {{ mdiAccountGroupOutline }}
               </v-icon>
-              Groupe de <strong>3 à 8 personnes</strong>
+              Groupe de <strong>{{ enrichedDate.min_travelers }} à {{ enrichedDate.max_travelers }} personnes</strong>
             </span>
           </v-chip>
           <v-chip
-            color="primary"
-          >
-            <span class="d-flex align-center ga-1">
-              <v-icon>
-                {{ mdiCalendarOutline }}
-              </v-icon>
-              <strong>7 nuits</strong> sur place
-            </span>
-          </v-chip>
-          <v-chip
+            v-if="enrichedDate.include_flight"
             color="primary"
           >
             <span class="d-flex align-center ga-1">
@@ -70,7 +61,40 @@
               <strong>Vol</strong> compris
             </span>
           </v-chip>
-        </div>
+          <v-chip
+            v-if="enrichedDate.early_bird"
+            color="blue"
+          >
+            <span class="d-flex align-center ga-1">
+              <v-icon>
+                {{ mdiBird }}
+              </v-icon>
+              <strong>Early Bird</strong>
+            </span>
+          </v-chip>
+          <v-chip
+            v-if="enrichedDate.last_minute"
+            color="yellow"
+          >
+            <span class="d-flex align-center ga-1">
+              <v-icon>
+                {{ mdiClockStarFourPointsOutline }}
+              </v-icon>
+              <strong>Last Minute</strong>
+            </span>
+          </v-chip>
+          <v-chip
+            v-if="enrichedDate.badges.length > 0"
+            color="green-light"
+          >
+            <span class="d-flex align-center ga-1">
+              <v-icon>
+                {{ mdiCalendarHeart }}
+              </v-icon>
+              <strong>{{ enrichedDate.badges }}</strong>
+            </span>
+          </v-chip>
+        </v-row>
       </v-col>
       <v-col
         cols="5"
@@ -144,7 +168,7 @@
 <script setup>
 import dayjs from 'dayjs'
 import { capitalize } from 'lodash'
-import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarOutline, mdiCheckCircleOutline } from '@mdi/js'
+import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarHeart, mdiCheckCircleOutline, mdiBird, mdiClockStarFourPointsOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import BookingStatus from './BookingStatus.vue'
 
@@ -164,15 +188,15 @@ const enrichedDate = computed(() => {
 })
 
 const getStatus = (date) => {
-  if (date.booked_seat < date.min_travelers) {
+  if (date.displayed_status === 'soon_confirmed') {
     return {
-      status: 'pending',
+      status: 'soon_confirmed',
       text: `Bientôt confirmé`,
       color: 'yellow',
     }
   }
   else {
-    if (date.booked_seat >= date.max_travelers) {
+    if (date.displayed_status === 'guaranteed') {
       return {
         status: 'full',
         text: 'Complet',

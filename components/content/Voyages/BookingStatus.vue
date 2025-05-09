@@ -41,7 +41,7 @@ defineProps({
     type: Object,
     required: true,
     validator: (value) => {
-      return ['pending', 'confirmed', 'full'].includes(value.status)
+      return ['soon_confirmed', 'confirmed', 'guaranteed'].includes(value.status)
         && typeof value.text === 'string'
         && typeof value.color === 'string'
     },
