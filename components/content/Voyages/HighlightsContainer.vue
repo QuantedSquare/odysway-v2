@@ -46,7 +46,6 @@
 
 <script setup>
 import { mdiHeartOutline } from '@mdi/js'
-import HighlightListItem from './HighlightListItem.vue'
 
 defineProps({
   experiencesBlock: {

@@ -79,10 +79,12 @@ definePageMeta({
   layout: 'voyage',
 })
 const route = useRoute()
-const [{ data: page }, { data: voyage }] = await Promise.all([
-  useAsyncData('voyages-textes', () => queryCollection('page_voyage_fr').first()),
-  useAsyncData('voyages', () => queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first()),
-])
+const { data: page } = useAsyncData('voyages-textes', () =>
+  queryCollection('page_voyage_fr').first(),
+)
+const { data: voyage } = useAsyncData('voyages', () =>
+  queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
+)
 
 // if (page.value) {
 //   defineOgImageComponent(page.value?.ogImage?.component, {

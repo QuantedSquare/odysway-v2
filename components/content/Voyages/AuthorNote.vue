@@ -39,5 +39,5 @@ const props = defineProps({
     required: true,
   },
 })
-const author = await queryCollection('team').where('name', '==', props.authorNote.author).first()
+const author = await queryCollection('team').where('name', '=', props.authorNote.author).first()
 </script>
