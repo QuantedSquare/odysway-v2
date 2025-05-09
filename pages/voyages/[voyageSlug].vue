@@ -49,6 +49,8 @@
 
       <DatesPricesContainer
         :date-sections="page.dateSections"
+        :indiv-section="page.indivSection"
+        :indiv-available="!voyage.pricing.privatisationAvailable"
       />
 
       <PriceDetailsContainer

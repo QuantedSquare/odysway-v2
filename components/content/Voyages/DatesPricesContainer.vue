@@ -37,6 +37,18 @@
       <span>Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
+    <v-row v-if="indivAvailable">
+      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-4 my-5 py-10">
+        <div class="text-h4 font-weight-bold text-primary">
+          {{ indivSection.title }}
+        </div>
+        <v-btn height="54">
+          <div class="text-h6">
+            {{ indivSection.textButton }}
+          </div>
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -48,8 +60,16 @@ const goTo = useGoTo()
 const { dates } = useDates()
 const isExpanded = ref(false)
 const { width } = useDisplay()
-const { dateSections } = defineProps({
+const { dateSections, indivAvailable, indivSection } = defineProps({
   dateSections: {
+    type: Object,
+    required: true,
+  },
+  indivAvailable: {
+    type: Boolean,
+    required: true,
+  },
+  indivSection: {
     type: Object,
     required: true,
   },

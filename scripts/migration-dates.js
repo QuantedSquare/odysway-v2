@@ -19,7 +19,7 @@ async function migrateDatesToSupabase() {
     return_date: date.date_fin,
     starting_price: date.prix_voyage || 0,
     max_travelers: date.voyage.number_catchline_tab_group || 6,
-    min_travelers: +date.nb_confirmation > 0 ? +date.nb_confirmation : 0,
+    min_travelers: +date.nb_confirmation > 0 ? +date.nb_confirmation : 2,
     early_bird: date.voyage.got_earlybird,
     last_minute: date.last_minute_disponible,
     include_flight: date.voyage.vol_inclus || false,

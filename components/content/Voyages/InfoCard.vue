@@ -243,15 +243,15 @@ const { stickyBlock, voyage } = defineProps({
 })
 
 const getStatus = (date) => {
-  if (date.booked_seat < 2) {
+  if (date.displayed_status === 'soon_confirmed') {
     return {
-      status: 'pending',
+      status: 'soon_confirmed',
       text: `Bientôt confirmé`,
       color: 'yellow',
     }
   }
   else {
-    if (date.booked_seat >= date.max_travelers) {
+    if (date.displayed_status === 'guaranteed') {
       return {
         status: 'full',
         text: 'Complet',
@@ -261,7 +261,7 @@ const getStatus = (date) => {
     else {
       return {
         status: 'confirmed',
-        text: 'Départ confirmé',
+        text: 'Départ Garanti',
         color: 'green',
       }
     }

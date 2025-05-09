@@ -36,7 +36,7 @@
         </div>
         <BookingStatus
           :status="enrichedDate.status"
-          :booked-places="enrichedDate.booked_seat"
+          :booked-places="enrichedDate.status.status === 'full' ? enrichedDate.max_travelers : enrichedDate.booked_seat"
           :max-travellers="enrichedDate.max_travelers"
         />
         <v-row class="d-none d-md-flex align-center ga-2 mx-1">
