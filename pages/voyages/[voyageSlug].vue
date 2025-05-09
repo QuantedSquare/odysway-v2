@@ -2,37 +2,73 @@
   <v-container
     fluid
   >
-    <HeroVoyageSection />
-    <BottomAppBar />
+    <template v-if="voyage && page">
+      <HeroVoyageSection :voyage="voyage" />
+      <BottomAppBar
+        :date-sections="page.dateSections"
+        :pricing="voyage.pricing"
+      />
 
-    <!-- <ChipsContainer /> -->
+      <!-- <ChipsContainer /> -->
 
-    <StickyContainer>
-      <template #left-side>
-        <AuthorNote />
+      <StickyContainer>
+        <template #left-side>
+          <AuthorNote
+            :author-note="voyage.authorNote"
+            :page="page"
+          />
 
-        <HighlightsContainer />
+          <HighlightsContainer
+            :experiences-block="voyage.experiencesBlock"
+            :page="page.experiencesBlock"
+          />
 
-        <ProgrammeContainer />
+          <ProgrammeContainer
+            :programme-block="voyage.programmeBlock"
+          />
 
-        <AccompanistsContainer />
-      </template>
-      <template #right-side>
-        <!-- <InfoCard /> -->
-      </template>
-    </StickyContainer>
+          <AccompanistsContainer
+            :voyage="voyage"
+            :title="page.accompanistsTitle"
+          />
+        </template>
+        <template #right-side>
+          <InfoCard
+            :sticky-block="page.stickyBlock"
+            :voyage="voyage"
+          />
+        </template>
+      </StickyContainer>
 
-    <HousingSection />
+      <HousingSection
+        :housing-block="voyage.housingBlock"
+        :housing-title="page.housingTitle"
+        :housing-type-title="page.housingTypeTitle"
+        :housing-mood-title="page.housingMoodTitle"
+      />
 
-    <!-- <DatesPricesContainer /> -->
+      <DatesPricesContainer
+        :date-sections="page.dateSections"
+      />
 
-    <PriceDetailsContainer />
+      <PriceDetailsContainer
+        :pricing-details-block="voyage.pricingDetailsBlock"
+      />
 
-    <ReviewCarousel />
+      <ReviewCarousel
+        :reviews-section="page.reviewsSection"
+      />
 
-    <FaqVoyagesContainer />
+      <FaqVoyagesContainer
+        :faq-block="voyage.faqBlock"
+      />
 
-    <WhySection />
+      <WhySection :why-section="page.whySection" />
+    </template>
+    <v-skeleton-loader
+      v-else
+      type="card-avatar, article"
+    />
   </v-container>
 </template>
 
@@ -41,28 +77,10 @@ definePageMeta({
   layout: 'voyage',
 })
 const route = useRoute()
-const { data: dates } = await useAsyncData('dates', async () => {
-  const res = await fetch(`/api/v1/booking/${route.params.voyageSlug}/dates`)
-  return await res.json()
-})
-const [{ data: voyagesTextes }, { data: voyagesData }] = await Promise.all([
+const [{ data: page }, { data: voyage }] = await Promise.all([
   useAsyncData('voyages-textes', () => queryCollection('page_voyage_fr').first()),
   useAsyncData('voyages', () => queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first()),
 ])
-
-console.log('DATES', dates.value)
-if (voyagesData.value) {
-  // console.log('voyagesv2Data', voyagesData.value)
-  provide('voyage', voyagesData.value)
-}
-if (voyagesTextes.value) {
-  // console.log('voyages-textes', voyagesTextes.value)
-  provide('page', voyagesTextes.value)
-}
-if (dates.value) {
-  console.log('dates', dates.value)
-  provide('dates', dates.value)
-}
 
 // if (page.value) {
 //   defineOgImageComponent(page.value?.ogImage?.component, {

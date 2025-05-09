@@ -162,6 +162,22 @@ defineProps({
     type: String,
     default: 'primary',
   },
+  housingBlock: {
+    type: Object,
+    required: true,
+  },
+  housingTitle: {
+    type: String,
+    required: true,
+  },
+  housingTypeTitle: {
+    type: String,
+    required: true,
+  },
+  housingMoodTitle: {
+    type: String,
+    required: true,
+  },
 })
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
@@ -203,8 +219,6 @@ const scrollAmount = computed(() => {
     return scrollContainerWidth?.value || 0
   }
 })
-const { housingBlock } = inject('voyage')
-const { housingTitle, housingTypeTitle, housingMoodTitle } = inject('page')
 </script>
 
 <style scoped>

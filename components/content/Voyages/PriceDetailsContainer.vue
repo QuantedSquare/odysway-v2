@@ -57,5 +57,10 @@
 </template>
 
 <script setup>
-const { pricingDetailsBlock } = inject('voyage')
+defineProps({
+  pricingDetailsBlock: {
+    type: Object,
+    required: true,
+  },
+})
 </script>

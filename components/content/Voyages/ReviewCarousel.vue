@@ -110,6 +110,10 @@ defineProps({
     type: String,
     default: 'primary',
   },
+  reviewsSection: {
+    type: Object,
+    required: true,
+  },
 })
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
@@ -154,8 +158,6 @@ const scrollAmount = computed(() => {
 const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
 })
-const { reviewsSection } = inject('page')
-// #TODO REVOIR CE COMPOSANT POUR ajouter faire le lien avec le voyage en plus
 </script>
 
 <style scoped>

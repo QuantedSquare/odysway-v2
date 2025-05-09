@@ -29,8 +29,15 @@
 </template>
 
 <script setup>
-const { authorNote } = inject('voyage')
-const page = inject('page')
-const author = await queryCollection('team').where('name', '==', authorNote.author).first()
-console.log('author', author)
+const props = defineProps({
+  authorNote: {
+    type: Object,
+    required: true,
+  },
+  page: {
+    type: Object,
+    required: true,
+  },
+})
+const author = await queryCollection('team').where('name', '==', props.authorNote.author).first()
 </script>

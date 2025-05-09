@@ -40,7 +40,7 @@
           </v-col>
         </v-row>
         <v-row
-          v-if="dates.length > 0"
+          v-if="displayedDates.length > 0 "
           justify-md="center"
           class="text-center"
         >
@@ -128,7 +128,7 @@
             <v-divider />
           </v-col>
         </v-row>
-        <template v-if="dates.length > 0">
+        <template v-if="displayedDates.length > 0">
           <v-row
             justify-md="center"
             class="text-center"
@@ -227,13 +227,23 @@ import dayjs from 'dayjs'
 
 const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
+const { dates } = useDates()
+
 const displayedDates = ref([])
-const dates = inject('dates')
-const { stickyBlock } = inject('page')
-const voyage = inject('voyage')
+
+const { stickyBlock, voyage } = defineProps({
+  stickyBlock: {
+    type: Object,
+    required: true,
+  },
+  voyage: {
+    type: Object,
+    required: true,
+  },
+})
 
 const getStatus = (date) => {
-  if (date.bookedTravelers < 2) {
+  if (date.booked_seat < 2) {
     return {
       status: 'pending',
       text: `Bientôt confirmé`,
@@ -241,7 +251,7 @@ const getStatus = (date) => {
     }
   }
   else {
-    if (date.bookedTravelers === date.maxTravellers) {
+    if (date.booked_seat >= date.max_travelers) {
       return {
         status: 'full',
         text: 'Complet',
@@ -258,22 +268,23 @@ const getStatus = (date) => {
   }
 }
 
-if (dates.length > 0) {
-  const sortedByDates = dates
-    .filter(date => dayjs(date.departureDate).isAfter(dayjs()))
-    .sort((a, b) => dayjs(a.departureDate).diff(dayjs(b.departureDate)))
-  displayedDates.value = sortedByDates.slice(0, 3).map((date) => {
-    const in30days = dayjs().add(30, 'day')
-    const checkoutType = dayjs(date.departureDate).isBefore(in30days) ? 'full' : 'deposit'
-    return {
-      departureDate: date.departureDate,
-      returnDate: date.returnDate,
-      status: getStatus(date),
-      link: `/checkout?slug=${voyage.slug}&departure_date=${dayjs(date.departureDate).format('YYYY-MM-DD')}&return_date=${dayjs(date.returnDate).format('YYYY-MM-DD')}&type=${checkoutType}`,
-    }
-  })
-  console.log('displayedDates', displayedDates.value)
-}
+watch(dates, () => {
+  if (dates.value.length > 0) {
+    const sortedByDates = dates.value
+      .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
+      .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
+    displayedDates.value = sortedByDates.slice(0, 3).map((date) => {
+      const in30days = dayjs().add(30, 'day')
+      const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
+      return {
+        departureDate: date.departure_date,
+        returnDate: date.return_date,
+        status: getStatus(date),
+        link: `/checkout?slug=${voyage.slug}&departure_date=${dayjs(date.departure_date).format('YYYY-MM-DD')}&return_date=${dayjs(date.return_date).format('YYYY-MM-DD')}&type=${checkoutType}`,
+      }
+    })
+  }
+}, { immediate: true })
 </script>
 
 <style scoped>

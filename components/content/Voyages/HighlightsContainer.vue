@@ -23,7 +23,7 @@
                 <!-- {{ experiencesBlockTextes.icon }} -->
               </v-avatar>
               <h4 class="text-h4 font-weight-bold">
-                {{ experiencesBlockTextes.title }}
+                {{ page.title }}
               </h4>
             </div>
             <v-list
@@ -48,6 +48,14 @@
 import { mdiHeartOutline } from '@mdi/js'
 import HighlightListItem from './HighlightListItem.vue'
 
-const { experiencesBlock } = inject('voyage')
-const { experiencesBlock: experiencesBlockTextes } = inject('page')
+defineProps({
+  experiencesBlock: {
+    type: Array,
+    required: true,
+  },
+  page: {
+    type: Object,
+    required: true,
+  },
+})
 </script>

@@ -109,7 +109,13 @@ import { mdiExportVariant } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-const voyage = inject('voyage')
+const config = useRuntimeConfig()
+defineProps({
+  voyage: {
+    type: Object,
+    required: true,
+  },
+})
 
 const { mdAndUp } = useDisplay()
 const img = useImage()
@@ -119,7 +125,8 @@ const snackbar = ref(false)
 function copyUrl() {
   // TODO: change to the dynamic url
   //  use runtime config
-  const copiedUrl = `https://localhost:3000/${route.fullPath}`
+  console.log('config', config)
+  const copiedUrl = `${config.public.appUrl}/${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true
 }

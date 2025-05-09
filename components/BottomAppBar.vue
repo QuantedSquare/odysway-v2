@@ -44,8 +44,17 @@
 import { useGoTo } from 'vuetify'
 
 const goTo = useGoTo()
-const { dateSections } = inject('page')
-const { pricing } = inject('voyage')
+
+defineProps({
+  dateSections: {
+    type: Object,
+    required: true,
+  },
+  pricing: {
+    type: Object,
+    required: true,
+  },
+})
 </script>
 
 <style scoped>

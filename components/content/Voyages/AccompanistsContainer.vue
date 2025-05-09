@@ -1,15 +1,15 @@
 <template>
-  <v-container v-if="voyage.accompanistsList">
+  <v-container v-if="voyageRef.accompanistsList">
     <h4 class="text-h4 font-weight-bold mb-4">
-      {{ page.accompanistsTitle }}
+      {{ title }}
     </h4>
     <v-row>
       <v-col class="text-grey-darken-3">
-        <div v-if="voyage.accompanistsDescription">
-          {{ voyage.accompanistsDescription }}
+        <div v-if="voyageRef.accompanistsDescription">
+          {{ voyageRef.accompanistsDescription }}
         </div>
         <AccompanistCard
-          v-for="item, index in voyage.accompanistsList"
+          v-for="item, index in voyageRef.accompanistsList"
           :key="index"
           v-bind="item"
         />
@@ -19,12 +19,21 @@
 </template>
 
 <script setup>
-const voyage = inject('voyage')
-const page = inject('page')
+const props = defineProps({
+  voyage: {
+    type: Object,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+})
+const voyageRef = toRef(props, 'voyage')
 
-if (voyage.accompanistsList.length > 0 && !voyage.accompanistsList[0].description) {
-  voyage.accompanistsList[0].description = voyage.accompanistsDescription
-  delete voyage.accompanistsDescription
+if (voyageRef.value.accompanistsList.length > 0 && !voyageRef.value.accompanistsList[0].description) {
+  voyageRef.value.accompanistsList[0].description = voyageRef.value.accompanistsDescription
+  delete voyageRef.value.accompanistsDescription
 }
 </script>
 

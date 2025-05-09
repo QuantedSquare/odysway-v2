@@ -45,11 +45,15 @@ import { useGoTo, useDisplay } from 'vuetify'
 import dayjs from 'dayjs'
 
 const goTo = useGoTo()
+const { dates } = useDates()
 const isExpanded = ref(false)
 const { width } = useDisplay()
-
-const dates = inject('dates')
-const { dateSections } = inject('page')
+const { dateSections } = defineProps({
+  dateSections: {
+    type: Object,
+    required: true,
+  },
+})
 
 watch(isExpanded, (newValue) => {
   console.log('isExpanded', newValue)
@@ -61,9 +65,9 @@ watch(isExpanded, (newValue) => {
 })
 
 const limitedDatesList = computed(() => {
-  const sortedByDates = dates
-    .filter(date => dayjs(date.departureDate).isAfter(dayjs()))
-    .sort((a, b) => dayjs(a.departureDate).diff(dayjs(b.departureDate)))
+  const sortedByDates = dates.value
+    .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
+    .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
   return sortedByDates.slice(0, isExpanded.value ? sortedByDates.length : 4)
 })
 </script>
@@ -71,7 +75,6 @@ const limitedDatesList = computed(() => {
 <style scoped>
 .relative {
   position: relative;
-
 }
 
 .list-move, /* apply transition to moving elements */

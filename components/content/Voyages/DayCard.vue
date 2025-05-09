@@ -23,16 +23,10 @@
       >
         <v-card-title class="no-white-space">
           <div class="d-flex align-center ga-3">
-            <v-chip
-              variant="flat"
-              color="secondary"
-              rounded="lg"
-              size="small"
-            >
-              <span class="text-subtitle-2 font-weight-bold text-white px-1">
-                {{ badgeText }}
-              </span>
-            </v-chip>
+            <span class="d-flex align-center bg-secondary rounded-lg text-subtitle-2 font-weight-bold text-white px-2 pt-1 text-no-wrap">
+              {{ badgeText }}
+            </span>
+
             <span class="text-primary text-h5 font-weight-bold ">{{ title }}</span>
           </div>
         </v-card-title>

@@ -7,7 +7,7 @@
     <v-row>
       <v-col
         cols="12"
-        md="6"
+        md="5"
         class="d-flex flex-column align-start ga-4"
       >
         <div class="d-flex align-center ga-2">
@@ -18,9 +18,9 @@
             :content="+enrichedDate.index +1"
           />
           <span class="text-body-2 d-flex align-center">
-            {{ capitalize(dayjs(enrichedDate.departureDate).format('dddd')) }}&nbsp;
+            {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
             <span class=" font-weight-bold">
-              {{ dayjs(enrichedDate.departureDate).format('DD MMM YYYY') }}
+              {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
             </span>
             <v-icon
               size="x-small"
@@ -28,16 +28,16 @@
             >
               {{ mdiArrowRight }}
             </v-icon>
-            {{ dayjs(enrichedDate.returnDate).format('dddd') }}&nbsp;
+            {{ dayjs(enrichedDate.return_date).format('dddd') }}&nbsp;
             <span class=" font-weight-bold ">
-              {{ dayjs(enrichedDate.returnDate).format('DD MMM YYYY') }}
+              {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
             </span>
           </span>
         </div>
         <BookingStatus
           :status="enrichedDate.status"
-          :booked-places="enrichedDate.bookedTravelers"
-          :max-travellers="enrichedDate.maxTravelers"
+          :booked-places="enrichedDate.booked_seat"
+          :max-travellers="enrichedDate.max_travelers"
         />
         <div class="d-none d-md-flex align-center ga-3">
           <v-chip
@@ -74,11 +74,11 @@
       </v-col>
       <v-col
         cols="5"
-        md="2"
-        class="d-flex flex-column align-start ga-1"
+        md="3"
+        class="d-flex flex-column align-center"
       >
-        <span class="text-h2 font-weight-black ">
-          {{ enrichedDate.startingPrice }}€<span class="text-body-2 font-weight-bold">/pers</span>
+        <span class="text-h2 font-weight-black">
+          {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
         </span>
       </v-col>
       <v-col
@@ -162,8 +162,9 @@ const enrichedDate = computed(() => {
     status: getStatus(date),
   }
 })
+
 const getStatus = (date) => {
-  if (date.bookedTravelers < 2) {
+  if (date.booked_seat < date.min_travelers) {
     return {
       status: 'pending',
       text: `Bientôt confirmé`,
@@ -171,7 +172,7 @@ const getStatus = (date) => {
     }
   }
   else {
-    if (date.bookedTravelers === date.maxTravelers) {
+    if (date.booked_seat >= date.max_travelers) {
       return {
         status: 'full',
         text: 'Complet',

@@ -93,6 +93,9 @@ defineProps({
     type: String,
     default: 'rgba(43, 76, 82, 0.8)',
   },
+  faqBlock: {
+    type: Object,
+    required: true,
+  },
 })
-const { faqBlock } = inject('voyage')
 </script>

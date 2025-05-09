@@ -33,10 +33,12 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
-const { lgAndUp } = useDisplay()
-const { whySection } = inject('page')
+defineProps({
+  whySection: {
+    type: Object,
+    required: true,
+  },
+})
 </script>
 
 <style scoped>

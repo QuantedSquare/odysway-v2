@@ -24,5 +24,10 @@
 </template>
 
 <script setup>
-const { programmeBlock } = inject('voyage')
+defineProps({
+  programmeBlock: {
+    type: Array,
+    required: true,
+  },
+})
 </script>
