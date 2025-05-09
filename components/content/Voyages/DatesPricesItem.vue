@@ -167,7 +167,6 @@
 
 <script setup>
 import dayjs from 'dayjs'
-import { capitalize } from 'lodash'
 import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarHeart, mdiCheckCircleOutline, mdiBird, mdiClockStarFourPointsOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import BookingStatus from './BookingStatus.vue'
@@ -211,6 +210,9 @@ const getStatus = (date) => {
       }
     }
   }
+}
+const capitalize = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1)
 }
 </script>
 
