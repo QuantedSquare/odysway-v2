@@ -1,10 +1,10 @@
 <template>
   <v-app-bar
     elevation="0"
-    class="px-4"
-    :class="mdAndUp ? '' : 'app-bar-shadow mt-2'"
+    mobile
+    height="90"
+    class="px-4 app-bar-shadow"
     rounded="lg"
-    :height="mdAndUp ? '90' : '52'"
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"
   >
@@ -198,6 +198,11 @@ const handleSignOut = async () => {
     padding: 0 24px !important;
 }
 .app-bar-shadow:deep(){
-  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
+  box-shadow: none!important;
+}
+@media screen and (max-width: 960px) {
+  .app-bar-shadow:deep(){
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
+  }
 }
 </style>
