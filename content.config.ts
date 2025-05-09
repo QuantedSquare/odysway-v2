@@ -285,7 +285,7 @@ export default defineContentConfig({
               color: z.enum(colorChoices).describe('Couleur du badge quand le voyage est completement reserve'),
             }),
             open: z.object({
-              title: z.string().describe('Titre du status').default('**Bientot confirme**'),
+              title: z.string().describe('Titre du status').default('**Bientôt confirmé**'),
               text: z.string().describe('Texte quand le voyage est ouvert a la reservation, ex: "**X inscrits**"').default('**X inscrits**'),
               color: z.enum(colorChoices).describe('Couleur du badge quand le voyage est ouvert a la reservation'),
             }),
@@ -336,34 +336,110 @@ export default defineContentConfig({
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),
         title: z.string().describe('Titre du voyage'),
-        slug: z.string().describe('Slug du voyage'),
+        destinations: z.array(z.enum(destinationChoices),
+        ).describe('Destinations du voyage'),
+        groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
+        privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
+        customAvailable: z.boolean().describe('Indique si le voyage est disponible en sur-mesure'),
+        experienceType: z.string().describe('Type d\'experience'), // Leave empty
+        level: z.enum(['1', '2', '3']).describe('Niveau de difficulté'), // Leave empty
+        categories: z.array(z.enum(categoriesChoices),
+        ).describe('Categories du voyage'),
+        duration: z.number().describe('Durée du voyage en jours'),
+        nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1
+        includeFlight: z.boolean().describe('Indique si le voyage inclut un vol'),
+        housingType: z.string().describe('Type de logement'),
+        idealPeriods: z.array(z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']).describe('Mois de la période idéale'),
+        ).describe('Périodes idéales pour le voyage'), // it's the periode_ideale_search key, which is an array of string numbers. Map the number to month name
+        monthlyAvailability: z.array(z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']).describe('Mois de la période idéale'),
+        ).describe('Disponibilité mensuelle du voyage'), // Use the same values as idealPeriods for now
+        minAge: z.number().describe('Age minimum pour participer au voyage').default(8),
+        // Insurance spécifique, to be done depending on the new insurance choice
         rating: z.number().describe('Note du voyage sur 5'),
-        comments: z.number().describe('Nombre de commentaires'),
+        comments: z.number().describe('Nombre de commentaires, (si différent des avis affichés en bas de page)'),
+        miniatureDisplay: z.enum(['Note moyenne', 'Nouveau', 'Last minute', 'Early bird']).describe('Type de badge affiché sur miniature, (aucun si vide)'),
+        // ==========================================
+        authorNote: z.object({
+          text: z.string().describe('Texte de la note de auteur'),
+          author: z.enum(teamChoices).describe('Auteur de la note defini dans le fichier team.json'), // use nom_auteur_description
+          affixeAuthor: z.string().describe('Texte/Rôle apres le poste de auteur, ex: "et amoureux de la vallee d\'Aspe"'),
+        }).describe('Note de auteur sous le hero/section photo, defini dans le dossier team'),
+        // Ce qui vous attend
+        experiencesBlock: z.array(z.string()).describe('Liste des plus du voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
+        // ==========================================
+        // SEO
+        slug: z.string().describe('Slug du voyage'),
         description: z.string().describe('Description du voyage'),
         emailDescription: z.string().describe('Description du voyage pour l\'email'),
         metaDescription: z.string().describe('Meta Description du voyage'),
         interjection: z.string().describe('Mot de liaison avec la destination (ex: "voyage **EN** France")'),
-        destinations: z.array(z.object({
-          nom: z.enum(destinationChoices),
-        })).describe('Destinations du voyage'),
-        categories: z.array(z.object({
-          nom: z.enum(categoriesChoices),
-        })).describe('Categories du voyage'),
-        duration: z.number().describe('Durée du voyage en jours'),
-        nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1
-        experienceType: z.string().describe('Type d\'experience'), // Leave empty
-        level: z.string().describe('Niveau de difficulté'), // Leave empty
-        idealPeriods: z.array(z.object({
+        // ==========================================
+        // Redo with fixed choice
+        badgeSection: z.object({
+          experienceBadge: z.object({
+            text: z.enum(experienceChoices).describe('Texte du badge experience placé en premier'),
+            color: z.enum(colorChoices).describe('Couleur du premier badge'),
+          }),
+          otherBadges: z.array(z.object({
+            text: z.string().describe('Texte du badge, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
+            color: z.enum(colorChoices).describe('Couleur du badge'),
+            icon: z.string().editor({ input: 'icon' }).describe('Icone du badge'),
+          })).describe('Liste des autres badges'),
+        }).describe('Liste de Badges sous la section photo'),
 
-          month: z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']).describe('Mois de la période idéale'),
-        })).describe('Périodes idéales pour le voyage'), // it's the periode_ideale_search key, which is an array of string numbers. Map the number to month name
-        monthlyAvailability: z.array(z.object({
-          month: z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']).describe('Mois de la période idéale'),
-        })).describe('Disponibilité mensuelle du voyage'), // Use the same values as idealPeriods for now
-        miniatureDisplay: z.enum(['Note moyenne', 'Nouveau', 'Last minute', 'Early bird']).describe('Type de badge affiché sur miniature, (aucun si vide)'),
+        programmeBlock: z.array(z.object({
+          title: z.string().describe('Titre de la journée'),
+          badgeText: z.string().describe('Texte du badge, ex: "Jour 1"'),
+          description: z.string().describe('Description de la journée'),
+          photo: z.string().editor({ input: 'media' }).describe('Photo de la journée'),
+          denivellation: z.string().describe('Denivellation de la journée'), // Leave empty
+          road: z.string().describe('Description du temps de trajet'),
+          night: z.string().describe('Description de la nuitée'),
+        })).describe('Programme du voyage, liste des activités par jour ou journées'),
+        // ==========================================
+        pricingDetailsBlock: z.object({
+          include: z.array(z.string()).describe('Liste des prix inclus, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
+          exclude: z.array(z.string()).describe('Liste des prix non inclus, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
+        }).describe('Section détails du prix, ce qui est inclus / exclus'),
+        pricing: z.object({
+          startingPrice: z.number().describe('Prix d\'appel du voyage, à partir de...'),
+          lastMinuteAvailable: z.boolean().describe('Indique si le voyage est disponible en dernière minute'),
+          lastMinuteReduction: z.number().describe('Valeur de réduction promo last minute'),
+          earlyBirdAvailable: z.boolean().describe('Indique si le voyage est disponible en early bird'),
+          earlyBirdReduction: z.number().describe('Valeur de réduction promo early bird'),
+          maxTravelers: z.number().describe('Nombre de personnes maximum'),
+          minTravelersToConfirm: z.number().describe('Nombre de personnes minimum pour confirmer le voyage'),
+          indivRoom: z.boolean().describe('Indique si le voyage est disponible en chambre individuelle'),
+          forcedIndivRoom: z.boolean().describe('Indique si le voyageur est contraint de prendre une chambre individuelle'),
+          indivRoomPrice: z.number().describe('Prix de la chambre individuelle'),
+          cseReduction: z.number().describe('Valeur de réduction promo CSE'),
+          cseAvailable: z.boolean().describe('Indique si le voyage est disponible en CSE'),
+          childrenPromo: z.number().describe('Valeur de réduction promo enfant'),
+          childrenAge: z.number().describe('Age maximum pour beneficier de la réduction promo enfant').default(12),
+          airportCode: z.array(z.string()).describe('Liste des codes aéroport du voyage'),
+        }).describe('Section gestion du prix du voyage, commun à toutes les dates'),
+
+        // ==========================================
+        accompanistsDescription: z.string().describe('Description globale des accompagnateurs, affichée au dessus de la liste'),
+        accompanistsList: z.array(z.object({
+          name: z.string().describe('Nom de accompagnateur'),
+          description: z.string().describe('Description de accompagnateur'),
+          role: z.string().describe('Role de accompagnateur'),
+          image: z.string().editor({ input: 'media' }).describe('Image de accompagnateur'),
+        })).describe('Liste des accompagnateurs'),
+        // ==========================================
+        housingBlock: z.array(z.object({
+          title: z.string().describe('Titre de la section'),
+          housingType: z.string().describe('Type de logement'),
+          housingMood: z.string().describe('Ambiance du logement'),
+          image: z.array(z.object({
+            src: z.string().editor({ input: 'media' }).describe('Image de la section'),
+            alt: z.string().describe('Texte descriptif de la photo'),
+          })).describe('Liste de photos de l\'hébergement'),
+        })).describe('Section logements'),
         // ==========================================
         image: z.object({
-          src: z.string().editor({ input: 'media' }).describe('Image principale du voyage'),
+          src: z.string().editor({ input: 'media' }).describe('Image principale du voyage, utilisée en miniature et hero'),
           alt: z.string().describe('Texte descriptif de l\'image principale'),
         }).describe('Image principale du voyage'),
         imageSecondary: z.object({
@@ -376,52 +452,6 @@ export default defineContentConfig({
         })).describe('Liste des photos du voyage, présents dans le hero en haut de page'),
         videoLinks: z.array(z.string()).describe('Liste des liens de videos du voyage, ex: ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"]'),
         // ==========================================
-        badgeSection: z.object({
-          experienceBadge: z.object({
-            text: z.enum(experienceChoices).describe('Texte du badge experience placé en premier'),
-            color: z.enum(colorChoices).describe('Couleur du premier badge'),
-          }),
-          otherBadges: z.array(z.object({
-            text: z.string().describe('Texte du badge, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
-            color: z.enum(colorChoices).describe('Couleur du badge'),
-            icon: z.string().editor({ input: 'icon' }).describe('Icone du badge'),
-          })).describe('Liste des autres badges'),
-        }).describe('Liste de Badges sous la section photo'),
-        authorNote: z.object({
-          text: z.string().describe('Texte de la note de auteur'),
-          author: z.enum(teamChoices).describe('Auteur de la note defini dans le fichier team.json'), // use nom_auteur_description
-          affixeAuthor: z.string().describe('Texte apres le poste de auteur, ex: "et amoureux de la vallee d\'Aspe"'),
-        }).describe('Note de auteur sous le hero/section photo, defini dans le dossier team'),
-        // Ce qui vous attend
-        experiencesBlock: z.array(z.string()).describe('Liste des points de ce qui vous attend sur le voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
-        programmeBlock: z.array(z.object({
-          title: z.string().describe('Titre de la journée'),
-          badgeText: z.string().describe('Texte du badge, ex: "Jour 1"'),
-          description: z.string().describe('Description de la journée'),
-          photo: z.string().editor({ input: 'media' }).describe('Photo de la journée'),
-          denivellation: z.string().describe('Denivellation de la journée'), // Leave empty
-        })).describe('Programme du voyage, liste des activités par jour ou journées'),
-        // ==========================================
-        accompanistsList: z.array(z.object({
-          name: z.string().describe('Nom de accompagnateur'),
-          description: z.string().describe('Description de accompagnateur'),
-          role: z.string().describe('Role de accompagnateur'),
-          image: z.string().editor({ input: 'media' }).describe('Image de accompagnateur'),
-        })).describe('Liste des accompagnateurs'),
-        accompanistsDescription: z.string().describe('Description des accompagnateurs'),
-        housingBlock: z.array(z.object({
-          title: z.string().describe('Titre de la section'),
-          housingType: z.string().describe('Type de logement'),
-          housingMood: z.string().describe('Ambiance du logement'),
-          image: z.array(z.object({
-            src: z.string().editor({ input: 'media' }).describe('Image de la section'),
-            alt: z.string().describe('Texte descriptif de la photo'),
-          })).describe('Liste de photos de l\'hébergement'),
-        })).describe('Section logements'),
-        pricingDetailsBlock: z.object({
-          include: z.array(z.string()).describe('Liste des prix inclus, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
-          exclude: z.array(z.string()).describe('Liste des prix non inclus, utiliser des "**" pour afficher du texte en gras (ex: "**15 jours** pour changer d\'avis")'),
-        }).describe('Section détails du prix, ce qui est inclus / exclus'),
         faqBlock: z.object({
           faqList: z.array(z.object({
             question: z.string().describe('Question'),
@@ -429,26 +459,6 @@ export default defineContentConfig({
           })).describe('Liste des questions / réponses'),
         }).describe('Section FAQ'),
         // ==========================================
-        pricing: z.object({
-          startingPrice: z.number().describe('Prix d\'appel du voyage'),
-          lastMinuteAvailable: z.boolean().describe('Indique si le voyage est disponible en dernière minute'),
-          lastMinuteReduction: z.number().describe('Valeur de réduction promo last minute'),
-          earlyBirdAvailable: z.boolean().describe('Indique si le voyage est disponible en early bird'),
-          earlyBirdReduction: z.number().describe('Valeur de réduction promo early bird'),
-          maxTravelers: z.number().describe('Nombre de personnes maximum'),
-          minTravelersToConfirm: z.number().describe('Nombre de personnes minimum pour confirmer le voyage'),
-          indivRoom: z.boolean().describe('Indique si le voyage est disponible en chambre individuelle'),
-          forcedIndivRoom: z.boolean().describe('Indique si le voyageur est contraint de prendre une chambre individuelle'),
-          indivRoomPrice: z.number().describe('Prix de la chambre individuelle'),
-          privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
-          groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
-          cseReduction: z.number().describe('Valeur de réduction promo CSE'),
-          cseAvailable: z.boolean().describe('Indique si le voyage est disponible en CSE'),
-          childrenPromo: z.number().describe('Valeur de réduction promo enfant'),
-          childrenAge: z.number().describe('Age maximum pour beneficier de la réduction promo enfant').default(12),
-          minAge: z.number().describe('Age minimum pour participer au voyage').default(8),
-          airportCode: z.array(z.string()).describe('Liste des codes aéroport du voyage'),
-        }).describe('Section gestion du prix du voyage, commun à toutes les dates'),
       }),
     }),
   },
