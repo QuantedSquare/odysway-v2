@@ -26,9 +26,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      script: [
-        { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
-      ],
+      // script: [
+      //   { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
+      // ],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
 

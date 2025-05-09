@@ -42,9 +42,7 @@
     </v-img>
 
     <div class="absolute">
-      <slot
-        name="component-slot-1"
-      />
+      <SearchField />
     </div>
   </div>
 </template>

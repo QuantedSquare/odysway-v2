@@ -14,6 +14,7 @@
       <v-img
         :min-width="mdAndUp ? '150px' : '100px'"
         height="38"
+        alt="Logo principale d'Odysway"
         :src="img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })"
       />
     </NuxtLink>

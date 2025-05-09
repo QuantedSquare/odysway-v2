@@ -154,7 +154,6 @@ const { data: voyage, status } = useAsyncData(`voyage-${props.voyageSlug}`, () =
 const scrollToTop = () => {
   window.scrollTo(0, 0)
 }
-// console.log('voyage', voyage.value)
 </script>
 
 <style scoped>

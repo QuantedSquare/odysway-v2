@@ -45,9 +45,6 @@ La rencontre
 
 au coeur du voyage
 
-#component-slot-1
-  :::search-field
-  :::
 ::
 
 ::horizontal-carousel

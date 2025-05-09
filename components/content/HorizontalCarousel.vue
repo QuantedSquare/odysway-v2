@@ -95,7 +95,7 @@ defineProps({
     default: 'primary',
   },
 })
-const { mdAndUp, sm, width } = useDisplay()
+const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
