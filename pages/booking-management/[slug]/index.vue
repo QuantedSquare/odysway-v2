@@ -14,61 +14,74 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col
-        v-for="date in dates"
-        :key="date.id"
-        cols="12"
-        md="6"
-      >
-        <v-card
-          class="mb-4"
+      <v-col cols="12">
+        <v-data-table
+          :headers="headers"
+          :items="dates"
           hover
-          @click="goToDate(date.id)"
+          :sort-by="[{ key: 'departure_date', order: 'asc' }]"
+          class="elevation-1"
+          item-key="id"
+          :items-per-page="10"
+          :item-class="(item) => getRowClass(item)"
         >
-          <v-card-title class="d-flex justify-space-between align-center">
-            <span
-              style="cursor:pointer"
+          <template #item="{ item }">
+            <tr
+              :class="getRowClass(item)"
+              class="cursor-pointer"
+              @click="goToDate(item.id)"
             >
-              {{ dayjs(date.departure_date).format('DD/MM/YYYY') }} au {{ dayjs(date.return_date).format('DD/MM/YYYY') }}
-            </span>
-            <v-menu>
-              <template #activator="{ props }">
-                <v-btn
-                  :icon="mdiDotsVertical"
-                  variant="text"
-                  v-bind="props"
-                />
-              </template>
-              <v-list>
-                <v-list-item
-                  icon
-                  @click.stop="duplicateDate(date)"
-                >
-                  Duppliquer
-                  <v-icon>
-                    {{ mdiContentCopy }}
-                  </v-icon>
-                </v-list-item>
-                <v-list-item
-                  icon
-                  @click.stop="deleteDate(date)"
-                >
-                  Supprimer
-                  <v-icon>
-                    {{ mdiDelete }}
-                  </v-icon>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </v-card-title>
-          <v-card-text
-            style="cursor:pointer"
-            @click="goToDate(date.id)"
-          >
-            Status: {{ date.displayed_status || 'Statut inconnu' }}<br>
-            Places réservées: {{ date.booked_seat || 0 }} / {{ date.max_travelers || '?' }}
-          </v-card-text>
-        </v-card>
+              <td>{{ dayjs(item.departure_date).format('DD/MM/YYYY') }}</td>
+              <td>{{ dayjs(item.return_date).format('DD/MM/YYYY') }}</td>
+              <td>
+                <span>
+                  {{ statuses.find(s => s.value === item.displayed_status)?.label || 'Statut inconnu' }}
+                  <v-badge
+                    v-if="isOngoing(item)"
+                    color="green"
+                    class="ml-2"
+                    content="En cours"
+                    inline
+                  />
+                </span>
+              </td>
+              <td>{{ item.booked_seat || 0 }} / {{ item.max_travelers || '?' }}</td>
+              <td>
+                <div class="text-right">
+                  <v-menu>
+                    <template #activator="{ props }">
+                      <v-btn
+                        :icon="mdiDotsVertical"
+                        size="x-small"
+                        v-bind="props"
+                      />
+                    </template>
+                    <v-list>
+                      <v-list-item @click="goToDate(item.id)">
+                        <v-icon>{{ mdiEye }}</v-icon>
+                        Modifier
+                      </v-list-item>
+                      <v-list-item @click="duplicateDate(item)">
+                        <v-icon>{{ mdiContentCopy }}</v-icon>
+                        Dupliquer
+                      </v-list-item>
+                      <v-list-item @click="deleteDate(item)">
+                        <v-icon>{{ mdiDelete }}</v-icon>
+                        Supprimer
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </div>
+              </td>
+            </tr>
+          </template>
+
+          <template #no-data>
+            <div class="text-center py-4">
+              Aucune date trouvée
+            </div>
+          </template>
+        </v-data-table>
       </v-col>
     </v-row>
   </v-container>
@@ -77,8 +90,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiContentCopy, mdiDotsVertical, mdiDelete } from '@mdi/js'
 import dayjs from 'dayjs'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
+import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye } from '@mdi/js'
+
+dayjs.extend(isSameOrAfter)
+dayjs.extend(isSameOrBefore)
 
 definePageMeta({ layout: 'booking', middleware: 'booking-management' })
 
@@ -87,11 +105,25 @@ const router = useRouter()
 const slug = route.params.slug
 const dates = ref([])
 
+const headers = [
+  { title: 'Date de départ', key: 'departure_date', sortable: true },
+  { title: 'Date de retour', key: 'return_date', sortable: true },
+  { title: 'Statut', key: 'displayed_status', sortable: true },
+  { title: 'Voyageurs', key: 'travelers', sortable: false },
+  { title: '', key: 'actions', sortable: false },
+]
+
 const fetchDates = async () => {
   const res = await fetch(`/api/v1/booking/${slug}/dates`)
   const data = await res.json()
   dates.value = data
 }
+
+const statuses = ref([
+  { value: 'soon_confirmed', label: 'Bientôt confirmé' },
+  { value: 'confirmed', label: 'Confirmé' },
+  { value: 'guaranteed', label: 'Garanti (Complet)' },
+])
 
 const goToDate = (id) => {
   router.push(`/booking-management/${slug}/${id}`)
@@ -127,5 +159,36 @@ const deleteDate = async (date) => {
     alert('Erreur lors de la suppression')
   }
 }
+
+// Logic for row styling
+const isOngoing = (item) => {
+  const today = dayjs().startOf('day')
+  const dep = dayjs(item.departure_date)
+  const ret = dayjs(item.return_date)
+  return today.isSameOrAfter(dep) && today.isSameOrBefore(ret)
+}
+
+const isPast = (item) => {
+  const today = dayjs().startOf('day')
+  const ret = dayjs(item.return_date)
+  return ret.isBefore(today)
+}
+
+const getRowClass = (item) => {
+  if (isOngoing(item)) return 'ongoing-row'
+  if (isPast(item)) return 'past-row'
+  return ''
+}
+
 onMounted(fetchDates)
 </script>
+
+<style scoped>
+.ongoing-row {
+  background-color: rgba(var(--v-theme-green-light), 0.3) !important; /* light green */
+}
+.past-row {
+  background-color: rgba(var(--v-theme-grey-light-3)) !important; /* light grey */
+  color: #aaa !important;
+}
+</style>

@@ -238,9 +238,7 @@ const onSave = async () => {
   saving.value = true
   try {
     const payload = { ...form.value }
-    if (typeof payload.badges === 'string') {
-      payload.badges = payload.badges.split(',').map(b => b.trim()).filter(Boolean)
-    }
+    delete payload.index
     const res = await fetch('/api/v1/booking/add-date', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

@@ -164,7 +164,7 @@ function getCategories() {
 }
 
 // getVoyages()
-// getDatesVoyagesGroups()
+getDatesVoyagesGroups()
 // getCategories()
 
 function getReviews() {
@@ -198,4 +198,4 @@ function getReviews() {
     })
     .catch(error => console.error(error))
 }
-getReviews()
+// getReviews()
