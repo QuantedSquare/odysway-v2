@@ -41,10 +41,9 @@
         </v-container>
       </div>
     </v-img>
-
-    <div class="absolute">
-      <SearchField />
-    </div>
+  </div>
+  <div class="searchfield-overlap">
+    <SearchField />
   </div>
 </template>
 
@@ -99,13 +98,6 @@ const img = useImage()
     linear-gradient(311.34deg, v-bind(tertiaryColor) 12.5%, rgba(240, 179, 72, 0) 29.18%);
   pointer-events: none;
 }
-.absolute {
-  position: absolute;
-  left:0;
-  right: 0;
-  bottom: -60px;
-}
-
 .relative-hero-section {
  position:relative;
  height: 80vh;
@@ -113,15 +105,12 @@ const img = useImage()
 }
 
 @media (max-width: 960px) {
-    .absolute {
-    bottom: -250px;
-  }
   .relative-hero-section {
     height: 70vh;
-    margin-bottom:300px!important;
+    /* margin-bottom:300px!important; */
   }
   .custom-hero-title {
-    font-size: 42px!important;
+    font-size: 60px!important;
     line-height: 42px!important;
   }
 }
@@ -129,5 +118,17 @@ const img = useImage()
 font-weight: 700;
 font-size: 78px;
 line-height: 80px;
+}
+
+.searchfield-overlap {
+  max-width: 1070px;
+  margin: -125px auto 0 auto;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 960px) {
+  .searchfield-overlap {
+    margin: -150px auto 0 auto;
+  }
 }
 </style>

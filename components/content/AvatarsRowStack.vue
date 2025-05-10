@@ -19,10 +19,10 @@
         }"
       >
         <v-img
-          :src="img(avatar.image, { format: 'webp', quality: 70, width: 640 })"
-          :lazy-src="img(avatar.image, { format: 'webp', quality: 10, width: 640 })"
-          :srcset="`${img(avatar.image, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(avatar.image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-          sizes="(max-width: 600px) 480px, 1024px"
+          :src="img(avatar.image, { format: 'webp', quality: 70, width: 320 })"
+          :lazy-src="img(avatar.image, { format: 'webp', quality: 10, width: 320 })"
+          :srcset="`${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
+          sizes="(max-width: 600px) 70px, 100px"
           rounded="circle"
           loading="lazy"
           :alt="avatar.name || 'Avatar de l\'équipe'"

@@ -40,25 +40,25 @@
         >
           <h3
             key="title"
-            class="text-h4 text-lg-h2 text-center text-shadow text-line-space mx-2"
+            class="text-h3 font-weight-bold text-lg-h2 text-center text-shadow text-line-space mx-2"
           >
             {{ title }}
           </h3>
           <p
-            v-if="isHovered || isMobile"
+            v-if="isHovered "
             key="description"
             class="description text-shadow text-center mx-2"
           >
             Cliquez pour en apprendre plus à propos des {{ title }}
             <client-only>
-              <v-btn
+              <!-- <v-btn
                 v-if="isMobile"
                 class="explore-btn mt-4"
                 :to="`/thematiques/${slug}`"
                 @click.stop
               >
                 Explorez
-              </v-btn>
+              </v-btn> -->
             </client-only>
           </p>
         </TransitionGroup>

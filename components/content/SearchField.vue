@@ -149,19 +149,8 @@ const search = () => {
 const isSearchPage = computed(() => {
   return route.name === 'search'
 })
-// console.log(isSearchPage.value)
 </script>
 
-<!-- <style lang="css" scoped>
-.inner-textfield:deep(.v-field__overlay) {
-  background-color: rgba(255, 255, 255, 0.214)!important;
-  backdrop-filter: blur(8px);
-  box-shadow: 2px 2px 5px  rgba(255, 255, 255, 0.3);
-}
-.inner-textfield:deep(.v-field__field){
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.554);
-}
-</style> -->
 <style scoped>
 :deep(.v-icon__svg) {
   color: rgb(var(--v-theme-primary)) !important;
