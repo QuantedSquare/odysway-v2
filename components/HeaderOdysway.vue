@@ -16,6 +16,9 @@
         height="38"
         alt="Logo principale d'Odysway"
         :src="img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })"
+        :lazy-src="img(header.logo.desktop, { format: 'webp', quality: 70, width: 320 })"
+        :srcset="`${img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })} 320w, ${img(header.logo.desktop, { format: 'webp', quality: 100, width: 640 })} 640w`"
+        :sizes="mdAndUp ? '150px' : '100px'"
       />
     </NuxtLink>
     <v-spacer />

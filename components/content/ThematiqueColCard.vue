@@ -5,7 +5,7 @@
     md="3"
   >
     <v-lazy
-      :min-height="228"
+      :min-height="415"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
     >
@@ -110,6 +110,7 @@ onMounted(() => {
   cursor: pointer;
   overflow: hidden;
   border-radius: 1rem;
+  aspect-ratio: 4/5; /* Ensures stable card size regardless of image/content */
 }
 
 .blur-overlay {
@@ -206,6 +207,7 @@ onMounted(() => {
 @media screen and (max-width: 600px) {
   .image-wrapper {
     height: 16rem;
+    /* Optionally adjust aspect-ratio for mobile if needed */
   }
 }
 

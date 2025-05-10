@@ -4,7 +4,10 @@
       v-model="drawer"
     />
     <ClientOnly>
-      <Drawer v-model="drawer" />
+      <AsyncDrawer
+        v-if="width < 960"
+        v-model="drawer"
+      />
     </ClientOnly>
 
     <v-main style="--v-layout-top: 90px; --v-layout-bottom: 0px;">
@@ -23,6 +26,10 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
+
+const AsyncDrawer = defineAsyncComponent(() => import('~/components/content/Drawer.vue'))
+const { width } = useDisplay()
 const drawer = ref(false)
 </script>
 
