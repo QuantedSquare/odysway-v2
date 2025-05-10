@@ -28,15 +28,18 @@
                 <v-icon color="#ffc658">
                   {{ mdiStar }}
                 </v-icon>
-                {{ review.note }}/{{ maxNote }} - {{ formatedDate }}
+                {{ review.rating }}/{{ maxNote }} - {{ formatedDate }}
               </span>
-              <span class="mt-6"> Son voyage : </span>
-              <NuxtLink
-                :to="`voyages/${review.voyageSlug}`"
-                class="text-center text-decoration-none text-primary hover-decoration"
-              >
-                <span class="hover-decoration">{{ review.voyageTitle }}</span>
-              </NuxtLink>
+              <template v-if="review.voyageTitle">
+                <span class="mt-6"> Son voyage : </span>
+                <NuxtLink
+                  v-if="review.voyageSlug"
+                  :to="`voyages/${review.voyageSlug}`"
+                  class="text-center text-decoration-none text-primary hover-decoration"
+                >
+                  <span class="hover-decoration">{{ review.voyageTitle }}</span>
+                </NuxtLink>
+              </template>
             </v-card-subtitle>
           </v-card-item>
         </v-col>
@@ -64,7 +67,15 @@
               cols="12"
               sm="10"
             >
-              <p class="text-center px-4">
+              <p
+                v-if="review.text.startsWith('<')"
+                v-dompurify-html="review.text"
+                class="text-center px-4"
+              />
+              <p
+                v-else
+                class="text-center px-4"
+              >
                 {{ review.text }}
               </p>
             </v-col>
@@ -99,9 +110,8 @@ const props = defineProps({
     default: 5,
   },
 })
-
 const formatedDate = computed(() => {
-  return dayjs(props.review.date, 'DD/MM/YYYY').format('DD MMMM YYYY')
+  return dayjs(props.review.date).format('DD MMMM YYYY')
 })
 </script>
 

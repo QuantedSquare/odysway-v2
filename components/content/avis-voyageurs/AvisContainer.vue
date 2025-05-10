@@ -14,7 +14,7 @@
             {{ mdiStar }}
           </v-icon>
           <span>
-            {{ averageNote }}/{{ maxNote }}
+            {{ averageNote.toFixed(1) }}/{{ maxNote }}
             <slot
               name="first-phrase"
               mdc-unwrap="p"
@@ -44,33 +44,37 @@
             cols="12"
             sm="6"
           >
-            <v-autocomplete
-              v-model="autocompleteVoyage.selectedVoyage"
-              :items="autocompleteVoyage.items"
-              label="Rechercher par voyage"
-              density="comfortable"
-              clearable
-              class="text-center mt-4"
-            >
-              <template #prepend-inner>
-                <v-icon icon>
-                  {{ mdiMagnify }}
-                </v-icon>
-              </template>
-            </v-autocomplete>
+            <ClientOnly>
+              <v-autocomplete
+                v-model="autocompleteVoyage.selectedVoyage"
+                :items="autocompleteVoyage.items"
+                label="Rechercher par voyage"
+                density="comfortable"
+                clearable
+                class="text-center mt-4"
+              >
+                <template #prepend-inner>
+                  <v-icon icon>
+                    {{ mdiMagnify }}
+                  </v-icon>
+                </template>
+              </v-autocomplete>
+            </ClientOnly>
           </v-col>
           <v-col
             cols="12"
             sm="6"
           >
-            <v-select
-              v-model="reviewFilter.selectedFilter"
-              :items="reviewFilter.items"
-              density="comfortable"
-              label="Trier"
-              hide-details
-              :prepend-inner-icon="mdiFilterVariant"
-            />
+            <ClientOnly>
+              <v-select
+                v-model="reviewFilter.selectedFilter"
+                :items="reviewFilter.items"
+                density="comfortable"
+                label="Trier"
+                hide-details
+                :prepend-inner-icon="mdiFilterVariant"
+              />
+            </ClientOnly>
           </v-col>
         </v-row>
       </v-col>
@@ -114,8 +118,8 @@
 import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
 import { useGoTo } from 'vuetify'
 
-const { data: reviews } = await useAsyncData('avisVoyageurs', () => {
-  return queryCollection('avisVoyageurs').all()
+const { data: reviews } = await useAsyncData('reviews-home', () => {
+  return queryCollection('reviews').all()
 })
 
 const scrollTarget = useTemplateRef('scroll-target')
@@ -145,12 +149,18 @@ const pagination = ref({
 })
 
 const displayedReviews = computed(() => {
-  return reviews.value.filter(a => a.isDisplayed)
+  return reviews.value.map((a) => {
+    return {
+      ...a,
+      date: a.date ? a.date : new Date(Date.now() - 1000 * 60 * 60 * 24 * 60),
+      rating: a.rating ? a.rating : 5,
+    }
+  }).filter(a => !a.text.includes('Lorem'))
 })
 
 const averageNote = computed(() => {
   return displayedReviews.value.length
-    ? displayedReviews.value.reduce((acc, cur) => acc + cur.note, 0) / displayedReviews.value.length
+    ? displayedReviews.value.reduce((acc, cur) => acc + cur.rating, 0) / displayedReviews.value.length
     : 0
 })
 
@@ -184,19 +194,19 @@ const sortedReviews = computed(() => {
     })
   }
   else if (reviewFilter.value.selectedFilter === 'best') {
-    return [...filteredReviews.value].filter(review => review.note >= 4).sort((a, b) => {
+    return [...filteredReviews.value].filter(review => review.rating >= 4).sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
     })
   }
   else if (reviewFilter.value.selectedFilter === 'worst') {
     return [...filteredReviews.value].sort((a, b) => {
-      return a.note - b.note
+      return a.rating - b.rating
     })
   }
   else {
     return [...filteredReviews.value].sort((a, b) => {
       return new Date(b.date) - new Date(a.date)
-    }).filter(review => review.note >= 3 && review.text.length >= 70)
+    }).filter(review => review.rating >= 3 && review.text.length >= 70)
   }
 })
 

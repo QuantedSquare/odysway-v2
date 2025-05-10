@@ -20,8 +20,12 @@
       >
         <v-img
           :src="img(avatar.image, { format: 'webp', quality: 70, width: 640 })"
+          :lazy-src="img(avatar.image, { format: 'webp', quality: 10, width: 640 })"
+          :srcset="`${img(avatar.image, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(avatar.image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+          sizes="(max-width: 600px) 480px, 1024px"
           rounded="circle"
-          :alt="avatar.name"
+          loading="lazy"
+          :alt="avatar.name || 'Avatar de l\'équipe'"
         />
       </v-avatar>
     </div>

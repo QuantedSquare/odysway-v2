@@ -4,56 +4,66 @@
     sm="4"
     md="3"
   >
-    <NuxtLink
-      :to="`/thematiques/${slug}`"
-      class="image-wrapper"
-      :class="{
-        'default-expanded': isMobile,
-      }"
-      @mouseenter="isHovered = true"
-      @mouseleave="isHovered = false"
+    <v-lazy
+      :min-height="228"
+      :options="{ threshold: 0.5 }"
+      transition="fade-transition"
     >
-      <v-img
-        v-if="image"
-        :src="imgComp(image, { format: 'webp', quality: 70, width: 1024 })"
-        width="100%"
-        :alt="title"
-        cover
-      />
-
-      <div class="blur-overlay" />
-      <div class="image-overlay" />
-
-      <TransitionGroup
-        name="slide"
-        class="content-wrapper"
-        tag="div"
+      <NuxtLink
+        :to="`/thematiques/${slug}`"
+        class="image-wrapper"
+        :class="{
+          'default-expanded': isMobile,
+        }"
+        @mouseenter="isHovered = true"
+        @mouseleave="isHovered = false"
       >
-        <h3
-          key="title"
-          class="text-h4 text-lg-h2 text-center text-shadow text-line-space mx-2"
+        <v-img
+          v-if="image"
+          :src="imgComp(image, { format: 'webp', quality: 70, width: 1024 })"
+          :lazy-src="imgComp(image, { format: 'webp', quality: 10, width: 1024 })"
+          :srcset="`${imgComp(image, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(image, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          loading="lazy"
+          width="100%"
+          :alt="title || 'Image de la thématique'"
+          cover
+        />
+
+        <div class="blur-overlay" />
+        <div class="image-overlay" />
+
+        <TransitionGroup
+          name="slide"
+          class="content-wrapper"
+          tag="div"
         >
-          {{ title }}
-        </h3>
-        <p
-          v-if="isHovered || isMobile"
-          key="description"
-          class="description text-shadow text-center mx-2"
-        >
-          Cliquez pour en apprendre plus à propos des {{ title }}
-          <client-only>
-            <v-btn
-              v-if="isMobile"
-              class="explore-btn mt-4"
-              :to="`/thematiques/${slug}`"
-              @click.stop
-            >
-              Explorez
-            </v-btn>
-          </client-only>
-        </p>
-      </TransitionGroup>
-    </NuxtLink>
+          <h3
+            key="title"
+            class="text-h4 text-lg-h2 text-center text-shadow text-line-space mx-2"
+          >
+            {{ title }}
+          </h3>
+          <p
+            v-if="isHovered || isMobile"
+            key="description"
+            class="description text-shadow text-center mx-2"
+          >
+            Cliquez pour en apprendre plus à propos des {{ title }}
+            <client-only>
+              <v-btn
+                v-if="isMobile"
+                class="explore-btn mt-4"
+                :to="`/thematiques/${slug}`"
+                @click.stop
+              >
+                Explorez
+              </v-btn>
+            </client-only>
+          </p>
+        </TransitionGroup>
+      </NuxtLink>
+    </v-lazy>
   </v-col>
 </template>
 

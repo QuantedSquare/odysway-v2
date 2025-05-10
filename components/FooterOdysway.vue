@@ -15,7 +15,12 @@
         >
           <v-img
             :src="img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })"
+            :lazy-src="img(footer.logo.image, { format: 'webp', quality: 10, width: 640 })"
+            :srcset="`${img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(footer.logo.image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+            sizes="(max-width: 600px) 480px, 640px"
+            loading="lazy"
             width="200"
+            alt="Logo d'Odysway"
           />
           <span class="text-h5 text-grey">
             {{ footer.logo.description }}
@@ -33,7 +38,12 @@
             rounded="lg"
             cover
             max-height="270"
-            :src="img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })"
+            :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
+            :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
+            :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
+            sizes="(max-width: 600px) 480px, 320px"
+            loading="lazy"
+            alt="Image de l'équipe"
           />
         </v-col>
         <v-col

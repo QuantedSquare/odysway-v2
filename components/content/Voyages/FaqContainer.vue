@@ -5,6 +5,11 @@
   >
     <v-img
       :src="img(backgroundImage, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :lazy-src="img(backgroundImage, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      :srcset="`${img(backgroundImage, { format: 'webp', quality: 70, width: 1536 })} 1536w, ${img(backgroundImage, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+      sizes="(max-width: 600px) 480px, 1536px"
+      loading="lazy"
+      alt="Image de fond de la section FAQ"
       cover
       rounded="xl"
       :gradient="`to top, ${secondaryColor}, ${primaryColor}`"

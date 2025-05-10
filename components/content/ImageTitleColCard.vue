@@ -4,42 +4,52 @@
     sm="4"
     md="3"
   >
-    <NuxtLink
-      :to="link"
-      class="image-wrapper"
-      :class="{ 'default-expanded': isMobile }"
+    <v-lazy
+      :min-height="228"
+      :options="{ threshold: 0.5 }"
+      transition="fade-transition"
     >
-      <v-img
-        v-if="image"
-        :src="imgComp(image, { format: 'webp', quality: 70, width: 640 })"
-        :alt="title"
-        cover
-        height="228"
-      />
+      <NuxtLink
+        :to="link"
+        class="image-wrapper"
+        :class="{ 'default-expanded': isMobile }"
+      >
+        <v-img
+          v-if="image"
+          :src="imgComp(image, { format: 'webp', quality: 70, width: 640 })"
+          :lazy-src="imgComp(image, { format: 'webp', quality: 10, width: 640 })"
+          :srcset="`${imgComp(image, { format: 'webp', quality: 70, width: 640 })} 640w, ${imgComp(image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+          :alt="'Image section ' + title"
+          sizes="(max-width: 600px) 266px, 228px"
+          cover
+          height="228"
+          loading="lazy"
+        />
 
-      <div class="blur-overlay" />
-      <div class="image-overlay" />
-      <div class="content-overlay">
-        <div class="w-100 d-flex flex-column align-center justify-center">
-          <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
-          <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
-            <span class="text-center">
-              Cliquez pour en apprendre plus à propos des {{ title }}
-            </span>
-            <client-only>
-              <v-btn
-                v-if="isMobile"
-                class="explore-btn"
-                :to="link"
-                @click.stop
-              >
-                Explorez
-              </v-btn>
-            </client-only>
-          </p>
+        <div class="blur-overlay" />
+        <div class="image-overlay" />
+        <div class="content-overlay">
+          <div class="w-100 d-flex flex-column align-center justify-center">
+            <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
+            <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
+              <span class="text-center">
+                Cliquez pour en apprendre plus à propos des {{ title }}
+              </span>
+              <client-only>
+                <v-btn
+                  v-if="isMobile"
+                  class="explore-btn"
+                  :to="link"
+                  @click.stop
+                >
+                  Explorez
+                </v-btn>
+              </client-only>
+            </p>
+          </div>
         </div>
-      </div>
-    </NuxtLink>
+      </NuxtLink>
+    </v-lazy>
   </v-col>
 </template>
 

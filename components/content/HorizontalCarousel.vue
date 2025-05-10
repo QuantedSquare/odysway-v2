@@ -111,6 +111,12 @@ const gotCtaSlot = computed(() => {
   return ctaContainer.value?.children[0]
 })
 
+// watch(itemsList, () => {
+//   if (itemsList.value) {
+//     itemsList.value.children[0].children = itemsList.value.children[0].children.slice(0, 3)
+//   }
+// })
+
 const childrenCount = computed(() => {
   return itemsList.value?.children[0]?.children.length
 })

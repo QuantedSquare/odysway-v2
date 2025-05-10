@@ -6,6 +6,7 @@
       size="(max-width: 600) 480px, 1500px"
       :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
       height="80vh"
+      alt="Image principale Hero d'Odysway"
       class="rounded-xl"
       cover
     >
