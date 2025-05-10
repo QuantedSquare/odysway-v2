@@ -8,6 +8,9 @@ ogImage:
 sitemap:
   lastmod: 2025-01-01
 robots: index, nofollow
+seo:
+  title: "Accueil Odysway"
+  description: "La rencontre au cœur du voyage"
 schemaOrg:
   - "@type": "TravelAgency"
     headline: "Odysway, agence de voyage"

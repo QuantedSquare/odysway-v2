@@ -338,7 +338,6 @@ export default defineContentConfig({
         title: z.string().describe('Titre du voyage'),
         destinations: z.array(z.object({
           name: z.enum(destinationChoices),
-          slug: z.string(),
         })).describe('Destinations du voyage'),
         groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
         privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
@@ -347,7 +346,6 @@ export default defineContentConfig({
         level: z.enum(['1', '2', '3']).describe('Niveau de difficulté'), // Leave empty
         categories: z.array(z.object({
           name: z.enum(categoriesChoices),
-          slug: z.string(),
         })).describe('Categories du voyage'),
         duration: z.number().describe('Durée du voyage en jours'),
         nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1
