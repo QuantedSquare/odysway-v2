@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "La vie d'un moine bouddhiste"
   description: "Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie ou les moines en sont la parfaite représentation. Particulièrement respecte par la population, le moine bouddhiste mène une vie simple ou la méditation tient une place importante. Découvrons en détail..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-12-06 11:01:00+00:00"
 tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/vie-moine-bouddhiste/PmZIISCHRhieDCWIHGSU.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/vie-moine-bouddhiste/PmZIISCHRhieDCWIHGSU.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 décembre 2019
-
 #title
 La vie d'un moine bouddhiste
 
 #introduction
-
+Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie ou les moines en sont la parfaite représentation. Particulièrement respecte par la population, le moine bouddhiste mène une vie simple ou la méditation tient une place importante. Découvrons en détail...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vie-moine-bouddhiste/PmZIISCHRhieDCWIHGSU.jpg"
----
 #content
 Le bouddhisme est la quatrième religion la plus importante dans le monde. On la trouve essentiellement en Asie où les moines en sont la parfaite représentation. Particulièrement respecté par la population, **le moine bouddhiste mène une vie simple où la méditation tient une place importante**. Découvrons en détail la vie de ces moines.
 
@@ -95,3 +97,47 @@ Odysway vous propose de vivre en immersion dans un [monastère au Népal, pour 
 
 Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

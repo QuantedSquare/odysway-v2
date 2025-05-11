@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voile sur glace en Lituanie"
   description: "Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-10-29 10:41:00+00:00"
 tags: "Europe, Sports"
 categories: "Depassement de soi, Nature et grands espaces, Apprentissage"
 displayedImg: "/images/blogs/voile-sur-glace-en-lituanie/XnnGSpDPQFKtZXLQByic.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/voile-sur-glace-en-lituanie/XnnGSpDPQFKtZXLQByic.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 octobre 2018
-
 #title
 Voile sur glace en Lituanie
 
 #introduction
-       
+Bordée par la mer Baltique sur sa cote ouest, la Lituanie est l'une des trois nations qui compose les pays baltes. Riche d'un passe historique mouvemente, la Lituanie recèle de nombreux attraits dont une nature omniprésente aux milliers de lacs et de rivières . Ces plans d'eau repartis dans tout ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voile-sur-glace-en-lituanie/XnnGSpDPQFKtZXLQByic.jpg"
----
 #content
 Bordée par la mer Baltique sur sa côte ouest, la Lituanie est l’une des trois nations qui compose les pays baltes. Riche d’un passé historique mouvementé, la Lituanie recèle de nombreux attraits dont **une nature omniprésente aux milliers de lacs et de rivières**. Ces plans d’eau répartis dans tout le pays permettent de pratiquer diverses activités. Une est particulièrement prisée par les amateurs d’adrénaline : **la** **voile** **sur** **glace**.
 
@@ -62,3 +64,47 @@ Les [voyages sportifs](https://odysway.com/thematiques/voyage-sportif) sont en p
 
 Pour poursuivre votre lecture, nous vous invitons à consulter [notre article sur le top 10 des destinations pour un voyage sportif.](https://odysway.com/top-10-destinations-voyage-sportif)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

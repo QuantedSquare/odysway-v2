@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où partir entre amis ?"
   description: "Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-08-06 11:51:00+00:00"
 tags: "Europe, Finlande, France, Grands espaces, Made in France"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/ou-partir-entre-amis/QNuT7bmCSqaVvGpyxAkj.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/ou-partir-entre-amis/QNuT7bmCSqaVvGpyxAkj.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 août 2020
-
 #title
 Où partir entre amis ?
 
 #introduction
-      
+Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-partir-entre-amis/QNuT7bmCSqaVvGpyxAkj.jpg"
----
 #content
 **Ça y est ! Après plusieurs semaines d'organisation, vous et vos amis avez enfin trouvé un créneau pour vous retrouver tous ensemble quelques jours. Au programme : découvertes, balades, farniente, apéros, bonnes tables, virées nocturnes, complicité, fous rires et bien plus encore. Mais où partir entre amis ? Voici 8 idées de destinations, en France et ailleurs, pour un séjour sous le signe de la bonne humeur.**
 
@@ -129,3 +131,47 @@ Au contraire, si vous préférez vous retrouver entre amis loin du monde, la Bul
 
 Partir [en groupe](https://odysway.com/thematiques/voyage-en-groupe) avec Odysway c’est : Profitez de l'activité à votre rythme et voyagez de manière éthique et écologiquement responsable à 8 maximum. C'est aussi la garantie d'un bon moment avec les communautés locales, car il est plus conviviale de vous accueillir lorsque vous voyagez en petit groupe.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

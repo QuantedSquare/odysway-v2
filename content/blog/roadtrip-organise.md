@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Road Trip Organisé : une totale liberté"
   description: "Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-26 16:13:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 novembre 2020
-
 #title
 Road Trip Organisé : une totale liberté
 
 #introduction
-Lorsque l’on pense road trip, on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66.
+Lorsque l’on pense road trip , on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66. C’est en effet une version du road trip et c’est la beauté de ce type de voyage, c’est qu’il existe ...
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Lorsque l’on pense **road trip**, on imagine des kilomètres de route asphaltée, les décors arides de l’Arizona, une radio locale jouant un vieux blues et la fameuse route 66.
 
@@ -133,3 +135,47 @@ Toute l'équipe d’Odysway est là pour vous aider à construire le road trip d
 
 Nous sommes à votre écoute pour rester au plus proche de vos rêves les plus fous !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

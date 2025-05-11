@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Immersion chez les populations du Grand Rift Africain"
   description: "A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d'une région ou d'un pays. En Afrique de l'est, de nombreuses tribus se sont installées aux abords du ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-02-04 08:55:00+00:00"
 tags: "Afrique, Communautés locales, Ethiopie, Grands espaces"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/Z9XchvcjQZya7dwBFrrt.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/Z9XchvcjQZya7dwBFrrt.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-4 février 2019
-
 #title
 Immersion chez les populations du Grand Rift Africain
 
 #introduction
-   
+A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d'une région ou d'un pays. En Afrique de l'est, de nombreuses tribus se sont installées aux abords du ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/immersion-chez-les-populations-du-grand-rift-africain/Z9XchvcjQZya7dwBFrrt.jpg"
----
 #content
 A travers le monde, des tribus continuent de vivre selon des us et coutumes ancestrales. Loin de toute civilisation et des tentations modernes, elles perpétuent leurs traditions et font toute la richesse d’une région ou d’un pays. En Afrique de l’est, de nombreuses tribus se sont installées aux abords du Grand Rift. Ce profond fossé long de plusieurs milliers de km offre des paysages comme nulle part ailleurs ainsi qu’un faune et flore diversifiées. Entrons en immersion chez ces populations du Grand Rift Africain.
 
@@ -136,3 +138,47 @@ _Les Hadzabé, partis pour la chasse_
 
 Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

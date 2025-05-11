@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Une immersion authentique avec une tribu Embera au Panama"
   description: "En mars 2019, l'équipe d'Odysway est partie à la recherche de nouvelles expériences de voyage au Panama. L'objectif était de trouver des expériences authentiques, en immersion avec la tribu Embera du Panama. L'histoire de la tribu Embera au Panama Le Panama abrite trois communautés amérindiennes ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-05-03 13:33:00+00:00"
 tags: "Amerique Centrale, Communautés locales, Panama"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/tribu-embera-au-panama/Io5NKYJQwyuU5xa2nYWA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/tribu-embera-au-panama/Io5NKYJQwyuU5xa2nYWA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-3 mai 2019
-
 #title
 Une immersion authentique avec une tribu Embera au Panama
 
 #introduction
-   
+En mars 2019, l'équipe d'Odysway est partie à la recherche de nouvelles expériences de voyage au Panama. L'objectif était de trouver des expériences authentiques, en immersion avec la tribu Embera du Panama. L'histoire de la tribu Embera au Panama Le Panama abrite trois communautés amérindiennes ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/tribu-embera-au-panama/Io5NKYJQwyuU5xa2nYWA.jpg"
----
 #content
 En mars 2019, l’équipe d’Odysway est partie à la recherche de nouvelles expériences de voyage au Panama. L’objectif était de trouver des expériences authentiques, en immersion avec la tribu Embera du Panama.
 
@@ -193,3 +195,47 @@ Avec le chef du village, nous avons décidé ensemble qu’il y aurait au maximu
 
 Découvrez nos [voyages en immersion auprès de communautés locales.](https://odysway.com/thematiques/sejours-chez-l-habitant "Découvrez nos voyages en immersions auprès des communautés locales.")
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

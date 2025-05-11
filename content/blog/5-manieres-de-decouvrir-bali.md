@@ -13,32 +13,36 @@ navigation:
     Havre de paix posé au milieu de l’archipel indonésieni, l’île des Dieux, évoque liberté, spiritualité et art de vivre.
     
     Laissez-vous porter par la beauté de cette terre d’hindouisme et savourez les plages de l'océan Indien aux damiers des rizières, aux plantations de girofliers et caféiers, aux rituels sur la crête ...
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-02-19 12:00:00+00:00"
 tags: "bali, vacances, voyage"
 categories: "vacances, voyager, Indonésie"
 displayedImg: "/images/blogs/5-manieres-de-decouvrir-bali/p4bvpWT5QViD9BBQzg1F.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/5-manieres-de-decouvrir-bali/p4bvpWT5QViD9BBQzg1F.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-19 février 2023
-
 #title
 5 idées pour voyager à Bali autrement
 
 #introduction
-Havre de paix posé au milieu de l'archipel indonésien, l'île des Dieux, évoque liberté, spiritualité et art de vivre. Laissez vous porter par la beauté de cette terre d'hindouisme et savourez les plages de l'océan Indien aux damiers des rizières, aux plantations de girofliers et caféiers, aux rituels sur la crête des volcans. Un voyage à Bali, perle de l'Indonésie, est le meilleur moyen pour retrouver la paix et la sérénité intérieures, à la rencontre d'une spiritualité présente en toute chose et d'un peuple d'une infinie gentillesse.
+Havre de paix posé au milieu de l’archipel indonésieni, l’île des Dieux, évoque liberté, spiritualité et art de vivre.
+
+Laissez-vous porter par la beauté de cette terre d’hindouisme et savourez les plages de l'océan Indien aux damiers des rizières, aux plantations de girofliers et caféiers, aux rituels sur la crête ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-manieres-de-decouvrir-bali/p4bvpWT5QViD9BBQzg1F.jpg"
----
 #content
 Havre de paix posé au milieu de l'archipel indonésien, l'île des Dieux, évoque liberté, spiritualité et art de vivre. Laissez vous porter par la beauté de cette terre d'hindouisme et savourez les plages de l'océan Indien aux damiers des rizières, aux plantations de girofliers et caféiers, aux rituels sur la crête des volcans. Un voyage à Bali, perle de l'Indonésie, est le meilleur moyen pour retrouver la paix et la sérénité intérieures, à la rencontre d'une spiritualité présente en toute chose et d'un peuple d'une infinie gentillesse.
 
@@ -101,3 +105,47 @@ Immergez-vous dans la culture et les traditions balinaises en passant du temps a
 
 Chez Odysway nous indiquons un séjour en Indonésie, plus précisément [Bali d'Ouest en Est](https://odysway.com/voyages/bali-menjangan-sidemen?utm_source=Article+blog&utm_medium=Article+blog&utm_campaign=Bali) : un voyage dépaysant vous attend, hors des sentiers battus, en parcourant des régions aux paysages divers idylliques !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

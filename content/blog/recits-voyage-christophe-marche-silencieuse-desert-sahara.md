@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara"
   description: "Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !"
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-12-01 14:01:00+00:00"
 tags: "Animaux, Communautés locales, France, Grands espaces, Made in France, Thailande"
 categories: "Nature et grands espaces, Blog"
 displayedImg: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-1 décembre 2020
-
 #title
 Récit de Voyage - Christophe Audoire  Marchez dans le Silence du Sahara
 
 #introduction
-Partir à la découverte du Sahara, rencontrer les bédouins, se retrouver face à soi-même au milieu de la plus grande étendue de sable au monde... C'est le voyage au coeur du Sahara que Christophe a décidé de faire en septembre 2019 ! 
+Parti à la découverte du Sahara, se retrouver face à soi-même au milieu de la plus grand étendue de sable au monde, rencontrez les bédouins... C'est le voyage au coeur du Sahara qu'a décidé de faire Christophe en octobre 2019 !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/recits-voyage-christophe-marche-silencieuse-desert-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg"
----
 #content
 [Partir à la découverte du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=Blog&utm_medium=Post&utm_campaign=Recit_Christophe), rencontrer les bédouins, se retrouver face à soi-même au milieu de la plus grande étendue de sable au monde... C'est le voyage au coeur du Sahara que Christophe a décidé de faire en septembre 2019 ! 
 
@@ -104,3 +106,47 @@ alt: Christophe_VoyageSahara9.jpeg
 ---
 ::**
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

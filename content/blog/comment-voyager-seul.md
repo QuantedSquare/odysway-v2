@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment voyager seul ?"
   description: "Mais c'est dangereux !\", \"Tu vas t'ennuyer\", \"Comment vas-tu faire s'il t'arrive un pépin ?\", \"En voilà une drôle d'idée !\". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-07-23 11:00:00+00:00"
 tags: "Developpement personnel, France, Made in France, Roumanie"
 categories: "Depassement de soi, Culture et decouverte, Developpement Personnel, Blog"
 displayedImg: "/images/blogs/comment-voyager-seul/Lw1Vb0hVRZy2DyXA7wn1.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/comment-voyager-seul/Lw1Vb0hVRZy2DyXA7wn1.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-23 juillet 2020
-
 #title
 Comment voyager seul ?
 
 #introduction
-    
+Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-voyager-seul/Lw1Vb0hVRZy2DyXA7wn1.jpg"
----
 #content
 **"Mais c'est dangereux !", "Tu vas t'ennuyer", "Comment vas-tu faire s'il t'arrive un pépin ?", "En voilà une drôle d'idée !". Des phrases qui, parmi tant d'autres, ne cessent de tinter aux oreilles du voyageur solo. Pourtant, voyager seul ne relève pas de l'inconscience, bien au contraire. Par choix ou parce que l'occasion se présentait, partir en voyage sans autre compagnon que soi-même permet de se découvrir pleinement, de se fixer de nouvelles limites mais aussi, et surtout, s'ouvrir davantage aux autres. Halte donc aux idées reçues et voyons que voyager seul est finalement à la portée de tout un chacun.**
 
@@ -108,3 +110,47 @@ Si vraiment la solitude vous pèse à certains moments de la journée, **essayez
 
 Le road trip est l’AVENTURE permettant de vous sentir libre. Le chemin n’est jamais entièrement tracé et pleins de rencontres et de découverte vous attendent. Découvrez nos [road trip](https://odysway.com/thematiques/road-trip-organise) organisés.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

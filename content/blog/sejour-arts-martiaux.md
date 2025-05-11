@@ -7,34 +7,34 @@ seo:
 navigation:
   title: "Voyage et pratique des Arts Martiaux à travers le monde"
   description: "Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2024-05-31 14:34:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/sejour-arts-martiaux/q726xyrFTOe76K2LVung.jpg"
-blogType: "Récit du voyage"
-badgeColor: primary
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/sejour-arts-martiaux/q726xyrFTOe76K2LVung.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-31 mai 2024
-
 #title
 Voyage et pratique des Arts Martiaux à travers le monde
 
 #introduction
- 
+Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/sejour-arts-martiaux/q726xyrFTOe76K2LVung.jpg"
----
 #content
 Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent non seulement perfectionner leurs compétences, mais aussi explorer les cultures et les traditions qui les entourent. Dans cet article, nous plongerons dans cette aventure fascinante, allant de la boxe thaïlandaise en Thaïlande au kung-fu en Chine, en passant par le jiu-jitsu brésilien au Brésil, et bien d'autres encore.
 
@@ -119,3 +119,47 @@ Les arts martiaux offrent une fenêtre fascinante sur la diversité culturelle e
 
 Odysway est l'agence spécialisée des voyages en immersion ! Combinez sport et voyage pour une découverte approfondie du pays !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

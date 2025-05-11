@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où partir pour un voyage en immersion totale ?"
   description: "Ça y est ! Le moment est venu de choisir votre destination ! Vous connaissez vos dates de vacances. Maintenant, il va falloir choisir où partir. Vous avez une idée plutôt claire du type de voyage que vous souhaitez vivre. Certes, vous avez besoin de sortir de votre quotidien, mais vous n’avez pas envie de vacances farniente. Ce qui vous plairait, c’est une vraie aventure, immersive et authentique, au plus proche de la population locale. Une véritable plongée dans les profondeurs d’un pays. Où partir pour un voyage en immersion totale ? Voici quelques idées qui devraient vous plaire."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-06-18 11:38:00+00:00"
 tags: "Cap Vert, Chine, Communautés locales, France, Grands espaces, Kirghizistan, Made in France, Perou"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/ou-partir-voyage-immersion-totale/m77FVqOVQDmW73xVL1sL.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/ou-partir-voyage-immersion-totale/m77FVqOVQDmW73xVL1sL.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-18 juin 2020
-
 #title
 Où partir pour un voyage en immersion totale ?
 
 #introduction
-     
+Ça y est ! Le moment est venu de choisir votre destination ! Vous connaissez vos dates de vacances. Maintenant, il va falloir choisir où partir. Vous avez une idée plutôt claire du type de voyage que vous souhaitez vivre. Certes, vous avez besoin de sortir de votre quotidien, mais vous n’avez pas envie de vacances farniente. Ce qui vous plairait, c’est une vraie aventure, immersive et authentique, au plus proche de la population locale. Une véritable plongée dans les profondeurs d’un pays. Où partir pour un voyage en immersion totale ? Voici quelques idées qui devraient vous plaire.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-partir-voyage-immersion-totale/m77FVqOVQDmW73xVL1sL.jpg"
----
 #content
 **Ça y est ! Le moment est venu de choisir votre destination ! Vous connaissez vos dates de vacances. Maintenant, il va falloir choisir où partir. Vous avez une idée plutôt claire du type de voyage que vous souhaitez vivre. Certes, vous avez besoin de sortir de votre quotidien, mais vous n’avez pas envie de vacances farniente. Ce qui vous plairait, c’est une vraie aventure, immersive et authentique, au plus proche de la population locale. Une véritable plongée dans les profondeurs d’un pays. Où partir pour un voyage en immersion totale ? Voici quelques idées qui devraient vous plaire.**
 
@@ -136,3 +138,47 @@ Aller à la ferme est une façon insolite et intéressante de découvrir la vie 
 
    Poursuivez votre lecture en consultant [notre article dédié sur les rencontres en voyage, une vraie source d'enrichissement](https://odysway.com/rencontres-voyage-vraie-source-denrichissement)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

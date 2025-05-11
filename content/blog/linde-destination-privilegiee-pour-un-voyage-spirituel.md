@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "L'Inde, destination privilégiée pour un voyage spirituel ?"
   description: "Depuis toujours, l'Inde est considérée comme l'un des pays les plus spirituels au monde. Pays aux multiples divinités, pays d'exil du Dalaï-lama, présence de nombreux lieux spirituels, expliquent notamment l'engouement des visiteurs pour l'Inde. Et sur place, votre voyage intérieur peut prendre différentes formes. Méditation, yoga, médecine ayurvédique, a ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-12-27 09:50:00+00:00"
 tags: "Asie, Developpement personnel, Inde"
 categories: "Developpement Personnel"
 displayedImg: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/1xSgoyv1Qx6BshXwGbdb.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/1xSgoyv1Qx6BshXwGbdb.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-27 décembre 2018
-
 #title
 L'Inde, destination privilégiée pour un voyage spirituel ?
 
 #introduction
-   
+Depuis toujours, l'Inde est considérée comme l'un des pays les plus spirituels au monde. Pays aux multiples divinités, pays d'exil du Dalaï-lama, présence de nombreux lieux spirituels, expliquent notamment l'engouement des visiteurs pour l'Inde. Et sur place, votre voyage intérieur peut prendre différentes formes. Méditation, yoga, médecine ayurvédique, a ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/linde-destination-privilegiee-pour-un-voyage-spirituel/1xSgoyv1Qx6BshXwGbdb.jpg"
----
 #content
 Depuis toujours, l’Inde est considérée comme l’un des pays les plus spirituels au monde. Pays aux multiples divinités, pays d’exil du Dalaï-lama, présence de nombreux lieux spirituels, expliquent notamment l’engouement des visiteurs pour l’Inde. Et sur place, votre voyage intérieur peut prendre différentes formes. Méditation, yoga, médecine ayurvédique, à vous de voir celle qui correspond le plus à vos attentes. Qu’est-ce qui fait de l’Inde une destination privilégiée pour un voyage spirituel ?
 
@@ -70,3 +72,47 @@ Ceux qui viennent en Inde pour un voyage spirituel ont plusieurs solutions pour 
 
 Odysway vous propose de nombreuses expériences autour du thème du [voyage initiatique](https://odysway.com/thematiques/voyage-initiatique) ainsi que des [voyages en immersion pour découvrir l'Inde](https://odysway.com/destinations/inde) et sa spiritualité.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

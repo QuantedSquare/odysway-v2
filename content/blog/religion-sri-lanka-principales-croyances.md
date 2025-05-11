@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Religion au Sri Lanka : quelles sont les principales croyances?"
   description: "Depuis des centaines voire des milliers d'années, la religion tient une place importante au Sri Lanka . Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural... On ne compte plus non plus le nombre d'édifices religieux qui parsèment le territoire ! Il existe aujourd'hui..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-07-05 11:15:00+00:00"
 tags: "Asie, Developpement personnel, Sri Lanka"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/religion-sri-lanka-principales-croyances/FTlcfvvRIuDB47DFEYWA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/religion-sri-lanka-principales-croyances/FTlcfvvRIuDB47DFEYWA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-5 juillet 2019
-
 #title
 Religion au Sri Lanka : quelles sont les principales croyances?
 
 #introduction
-   
+Depuis des centaines voire des milliers d'années, la religion tient une place importante au Sri Lanka . Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural... On ne compte plus non plus le nombre d'édifices religieux qui parsèment le territoire ! Il existe aujourd'hui...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/religion-sri-lanka-principales-croyances/FTlcfvvRIuDB47DFEYWA.jpg"
----
 #content
 Depuis des centaines voire des milliers d’années, **la religion tient une place importante au Sri Lanka**. Elle influence au quotidien les habitants, que ce soit au niveau culturel, politique, architectural… On ne compte plus non plus le nombre d’édifices religieux qui parsèment le territoire ! Il existe aujourd’hui 4 principales religions : **le bouddhisme, l’hindouisme, l’islam et le christianisme**. Découvrons leur origine et leur place dans la société sri-lankaise.
 
@@ -97,3 +99,47 @@ Dernière religion principale du Sri Lanka, **le christianisme regroupe 7% de l
 
 Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité à travers nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

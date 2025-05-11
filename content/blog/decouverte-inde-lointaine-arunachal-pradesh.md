@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "À la découverte d'une Inde lointaine : l'Arunachal Pradesh"
   description: "L'Arunachal Pradesh est l’état indien qui est situe le plus au nord-est du pays.  D'abord considéré comme un territoire de l'Union indienne, il devint un véritable état en 1987. L'Arunachal Pradesh a ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-05-29 16:58:00+00:00"
 tags: "Asie, Communautés locales, Grands espaces, Inde"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/decouverte-inde-lointaine-arunachal-pradesh/RtJ2BdXRQCq43yjaYo6R.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/decouverte-inde-lointaine-arunachal-pradesh/RtJ2BdXRQCq43yjaYo6R.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 mai 2019
-
 #title
 À la découverte d'une Inde lointaine : l'Arunachal Pradesh
 
 #introduction
-      
+L'Arunachal Pradesh est l’état indien qui est situe le plus au nord-est du pays.  D'abord considéré comme un territoire de l'Union indienne, il devint un véritable état en 1987. L'Arunachal Pradesh a ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/decouverte-inde-lointaine-arunachal-pradesh/RtJ2BdXRQCq43yjaYo6R.jpg"
----
 #content
 ::image-container
 ---
@@ -195,3 +197,47 @@ alt:
 
 _[Partez vivre des expériences incroyables en Arunachal Pradesh avec Odysway](https://odysway.com/voyages/inde-arunachal-pradesh?utm_source=Blog&utm_medium=SEO&utm_campaign=Inde_Lointaine_ArunachalPradesh)_
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

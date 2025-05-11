@@ -9,32 +9,34 @@ seo:
 navigation:
   title: "Le Maroc"
   description: "Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-06-29 09:16:00+00:00"
 tags: ""
 categories: ""
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 juin 2020
-
 #title
 Le Maroc
 
 #introduction
-Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger.
+Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger.
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 ## Pourquoi voyager au Maroc ?
 
@@ -216,3 +218,47 @@ alt: undefined
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

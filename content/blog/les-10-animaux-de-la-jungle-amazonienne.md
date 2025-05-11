@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les 10 animaux de la jungle amazonienne"
   description: "Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-12-20 08:25:00+00:00"
 tags: "Amerique du Sud, Animaux, Brésil, Grands espaces"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/RBKcpa1FQMK6XlASNr2Q.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/RBKcpa1FQMK6XlASNr2Q.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 décembre 2018
-
 #title
 Les 10 animaux de la jungle amazonienne
 
 #introduction
-      
+Avec une surface de 5,5 millions de km2, la forêt amazonienne est l'une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité ou des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/les-10-animaux-de-la-jungle-amazonienne/RBKcpa1FQMK6XlASNr2Q.jpg"
----
 #content
 Avec une surface de 5,5 millions de km², la forêt amazonienne est l’une des plus grandes de notre planète. Cette forêt majestueuse abrite une riche biodiversité où des milliers d’espèces, certaines endémiques, cohabitent. Oiseaux, mammifères, reptiles ou encore amphibiens peuplent cet immense espace de plus en plus menacé par la déforestation. Odysway vous fait découvrir un panel de 10 animaux de la jungle amazonienne.
 
@@ -177,3 +179,47 @@ Le voyage en lui-même est une aventure, car les changements de décor provoquer
 
 Pour poursuivre votre lecture, vous pouvez consulter notre article de blog [sur la faune au Sri Lanka.](https://odysway.com/faune-sri-lanka)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

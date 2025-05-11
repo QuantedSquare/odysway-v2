@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le vipassana au Sri Lanka"
   description: "Il existe plusieurs techniques de méditation a travers le monde et chacune d'elles apporte ses propres bienfaits. Parmi elles, il y a le vipassana, que l'on retrouve au Sri Lanka notamment , et qui aide a trouver la paix intérieure. D'où vient cette technique et comment se pratique-t-elle ? ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-08-02 12:27:00+00:00"
 tags: "Asie, Developpement personnel, Sri Lanka"
 categories: "Depassement de soi, Apprentissage, Developpement Personnel"
 displayedImg: "/images/blogs/vipassana-sri-lanka/HRcic4FaSOvwA31f6d5Q.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/vipassana-sri-lanka/HRcic4FaSOvwA31f6d5Q.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-2 août 2019
-
 #title
 Le vipassana au Sri Lanka
 
 #introduction
-       
+Il existe plusieurs techniques de méditation a travers le monde et chacune d'elles apporte ses propres bienfaits. Parmi elles, il y a le vipassana, que l'on retrouve au Sri Lanka notamment , et qui aide a trouver la paix intérieure. D'où vient cette technique et comment se pratique-t-elle ? ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vipassana-sri-lanka/HRcic4FaSOvwA31f6d5Q.jpg"
----
 #content
 Il existe plusieurs techniques de méditation à travers le monde et chacune d’elles apporte ses propres bienfaits. Parmi elles, il y a **le vipassana, que l’on retrouve au Sri Lanka notamment**, et qui aide à trouver la paix intérieure. D’où vient cette technique et comment se pratique-t-elle ? Quels en sont les bienfaits et où en faire ? Réponse dans ce nouvel article de blog. 
 
@@ -88,3 +90,47 @@ alt:
 
 Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité. Découvrez nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

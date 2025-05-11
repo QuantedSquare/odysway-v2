@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Comment découvrir les pays scandinaves ?"
   description: "Regroupant le Danemark, la Suède, la Finlande et la Norvège, la Scandinavie est une région du nord de l'Europe réputée pour ses paysages à couper le souffle et pour son mode de vie respectueux de la nature. Voyager dans les pays scandinaves, c'est découvrir une culture, une histoire et un environnement comme nulle part ailleurs. Pour profiter au maximum de tous les attraits scandinaves, voici les clés pour que votre séjour soit des plus enrichissants."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-08-27 11:00:00+00:00"
 tags: "Europe, Finlande, Grands espaces"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/comment-decouvrir-pays-scandinaves/1v7QrvsORZi4EoCLlJg6.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/1v7QrvsORZi4EoCLlJg6.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-27 août 2020
-
 #title
 Comment découvrir les pays scandinaves ?
 
 #introduction
-    
+Regroupant le Danemark, la Suède, la Finlande et la Norvège, la Scandinavie est une région du nord de l'Europe réputée pour ses paysages à couper le souffle et pour son mode de vie respectueux de la nature. Voyager dans les pays scandinaves, c'est découvrir une culture, une histoire et un environnement comme nulle part ailleurs. Pour profiter au maximum de tous les attraits scandinaves, voici les clés pour que votre séjour soit des plus enrichissants.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/comment-decouvrir-pays-scandinaves/1v7QrvsORZi4EoCLlJg6.jpg"
----
 #content
 **Regroupant le Danemark, la Suède, la Finlande et la Norvège, la Scandinavie est une région du nord de l'Europe réputée pour ses paysages à couper le souffle et pour son mode de vie respectueux de la nature. Voyager dans les pays scandinaves, c'est découvrir une culture, une histoire et un environnement comme nulle part ailleurs. Pour profiter au maximum de tous les attraits scandinaves, voici les clés pour que votre séjour soit des plus enrichissants.**
 
@@ -96,3 +98,47 @@ Découvrir un pays, et les pays scandinaves ne font pas exception, c'est aussi *
 
 [Accédez à ce lien pour découvrir les voyages en Europe made in Odysway.](https://odysway.com/destinations/europe)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

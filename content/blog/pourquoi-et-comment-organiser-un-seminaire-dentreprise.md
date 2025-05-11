@@ -20,32 +20,38 @@ navigation:
     Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
     
     Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2022-12-20 14:01:00+00:00"
 tags: "cohésion, équipe, relation, Séminaire, vacances"
 categories: "séminaire, entreprise, cohésion"
 displayedImg: "/images/blogs/pourquoi-et-comment-organiser-un-seminaire-dentreprise/RwIxQcQs6geqT3wbh4jA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/pourquoi-et-comment-organiser-un-seminaire-dentreprise/RwIxQcQs6geqT3wbh4jA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 décembre 2022
-
 #title
 Pourquoi et comment organiser un séminaire d’entreprise ?
 
 #introduction
-La petite sœur d'Odysway est une agence d'évènementielle spécialisée dans l'organisation des séminaires en entreprise sur-mesure. Durant cette accompagnement, TRIBUS est à vos côtés pour répondre aux besoins et valeurs de l'entreprise.
+Connaissez vous la signification du terme séminaire ?
+
+Le séminaire d’entreprise permet de faire passer des messages importants dans un cadre plus convivial et de remotiver les collaborateurs.
+
+Chez TRIBUS, l'organisation de vos séminaires sont pris en charge et sont sur mesure : en France ou en Europe.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/pourquoi-et-comment-organiser-un-seminaire-dentreprise/RwIxQcQs6geqT3wbh4jA.jpg"
----
 #content
 ## Pourquoi parler de séminaire ? C'est très simple, Odysway s'est agrandie !
 
@@ -95,3 +101,47 @@ Dernier point non négligeable, le coût financier. Parce que, oui ! organiser 
 
 Avec **Tribus**, vous avez la possibilité de créer votre propre **séminaire insolite**. Il suffit de nous faire part du type d’événement que vous souhaitez, du nombre de collaborateurs prévus, la durée et le lieu, et nous vous recontactons pour connaître plus en détail vos besoins et ainsi affiner votre demande. Chaque activité, chaque hébergement est sélectionné avec vous. Notre objectif est bel et bien d’organiser un séminaire d’entreprise original qui restera longtemps gravé dans la mémoire de chacun de vos collaborateurs. Avec notre expertise fondée sur notre métier, qui est la **création de voyages insolites,** vous pouvez être certain que votre objectif sera atteint.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

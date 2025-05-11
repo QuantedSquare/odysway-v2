@@ -7,34 +7,34 @@ seo:
 navigation:
   title: "Le vin ou comment découvrir la France à travers son patrimoine viticole"
   description: "De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-07-15 10:35:00+00:00"
 tags: "France, Made in France"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/UpVYom2QRtWwdnhBBbWT.jpg"
-blogType: "Playbook"
-badgeColor: yellow
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/UpVYom2QRtWwdnhBBbWT.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-15 juillet 2020
-
 #title
 Le vin ou comment découvrir la France à travers son patrimoine viticole
 
 #introduction
-     
+De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vin-ou-comment-decouvrir-france-patrimoine-viticole/UpVYom2QRtWwdnhBBbWT.jpg"
----
 #content
 **De la Bourgogne au Bordelais en passant par l'Alsace et le Rhône, la France recèle des vignobles de renom, chacun avec leur propre identité. Et c'est ce qui fait la richesse de ce patrimoine. Certains grands vins sont mêmes classés au Patrimoine mondial de l'Unesco comme le Saint-Emilion ou les Climats de Bourgogne. Nombreux sont les voyageurs, de France et d'ailleurs, qui viennent s'adonner aux plaisirs de l'œnotourisme dans nos belles régions. Nichés au cœur de paysages bucoliques et historiques, nos vignobles sont l'occasion de découvrir un fabuleux patrimoine viticole. Un voyage à savourer avec modération.**  
 
@@ -132,3 +132,47 @@ Pour terminer ce tour de France des vignobles, arrêtons-nous dans **le Jura**. 
 
 Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

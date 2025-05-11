@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais"
   description: "Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-10-16 10:46:00+00:00"
 tags: "Developpement personnel, Europe, Famille"
 categories: "Developpement Personnel"
 displayedImg: "/images/blogs/5-moyens-detre-plus-heureux-en-sinspirant-du-mode-de-vie-neerlandais/bC5T9kZCR4ynIwMsvF3Y.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/5-moyens-detre-plus-heureux-en-sinspirant-du-mode-de-vie-neerlandais/bC5T9kZCR4ynIwMsvF3Y.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-16 octobre 2020
-
 #title
 5 moyens d'être plus heureux en s'inspirant du mode de vie néerlandais
 
 #introduction
-    
+Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-moyens-detre-plus-heureux-en-sinspirant-du-mode-de-vie-neerlandais/bC5T9kZCR4ynIwMsvF3Y.jpg"
----
 #content
 #### **Il y a les pays les plus verts ou les plus froids. Et puis il y a les pays les plus heureux du monde. Dans le top 10, on retrouve neuf pays européens dont les Pays-Bas. Mais quelle en est la raison ? Est-ce leur capacité à équilibrer parfaitement vie personnelle et professionnelle ? A moins que ce ne soit leur éducation si spécifique qui se transmet au fil des générations ? Ou bien la pratique quotidienne du vélo, l'une des clés pour accéder au bonheur ? Dans différents domaines, les Pays-Bas représentent un modèle à suivre. Découvrez comment être plus heureux en s'inspirant du mode de vie néerlandais.**
 
@@ -99,3 +101,47 @@ Les Pays-Bas, un pays où **le vélo est roi** ! C'est le moyen de transport le 
 
 Poursuivez votre lecture avec [notre article sur les 5 bienfaits du vélo en voyage.](https://odysway.com/5-bienfaits-velo-voyage)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

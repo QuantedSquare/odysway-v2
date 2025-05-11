@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Découvrir la France au fil de la côte ouest - première partie"
   description: "Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-08-13 11:00:00+00:00"
 tags: "Europe, Famille, France, Grands espaces, Made in France, Sport, Transports insolites"
 categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-1/3LKFJHucQjqF3WAeolLd.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-1/3LKFJHucQjqF3WAeolLd.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-13 août 2020
-
 #title
 Découvrir la France au fil de la côte ouest - première partie
 
 #introduction
-     
+Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/decouvrir-france-fil-cote-ouest-partie-1/3LKFJHucQjqF3WAeolLd.jpg"
----
 #content
 **Avec plus de 3 000 km de littoral (hors Corse), la France offre une très belle diversité de côtes. De la Normandie au Pays Basque, falaises, côtes rocheuses et plages se succèdent offrant des paysages spectaculaires. Un environnement qui oscille entre la quiétude des sites naturels, le tumulte des vagues et le brouhaha tranquille des villages. Commençons notre périple en Normandie et en Bretagne pour un voyage au fil de la côte ouest de la France, rythmé par une nature généreuse, une histoire riche ainsi qu'un fabuleux patrimoine.**
 
@@ -89,3 +91,47 @@ Aller à la ferme est une façon insolite et intéressante de découvrir la vie 
 
 Pour poursuivre votre lecture, nous vous invitons à découvrir [notre article sur la découverte de la France Partie 2](https://odysway.com/decouvrir-france-fil-cote-ouest-partie-2)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

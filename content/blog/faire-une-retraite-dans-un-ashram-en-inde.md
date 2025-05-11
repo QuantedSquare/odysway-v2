@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Faire une retraite dans un ashram en Inde"
   description: "Opérer une césure dans sa vie quotidienne est un besoin ressenti par un grand nombre d'entre nous. Les raisons sont généralement d'ordre personnel ou professionnel et l'envie première est de se retrouver et se recentrer sur des choses essentielles. Faire une retraite dans un ashram est un excellent moyen pour ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-12-13 17:18:00+00:00"
 tags: "Asie, Developpement personnel, Inde"
 categories: "Depassement de soi, Developpement Personnel"
 displayedImg: "/images/blogs/faire-une-retraite-dans-un-ashram-en-inde/TZeHLay1RTenSQZknP12.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/faire-une-retraite-dans-un-ashram-en-inde/TZeHLay1RTenSQZknP12.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-13 décembre 2018
-
 #title
 Faire une retraite dans un ashram en Inde
 
 #introduction
-   
+Opérer une césure dans sa vie quotidienne est un besoin ressenti par un grand nombre d'entre nous. Les raisons sont généralement d'ordre personnel ou professionnel et l'envie première est de se retrouver et se recentrer sur des choses essentielles. Faire une retraite dans un ashram est un excellent moyen pour ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/faire-une-retraite-dans-un-ashram-en-inde/TZeHLay1RTenSQZknP12.jpg"
----
 #content
 Opérer une césure dans sa vie quotidienne est un besoin ressenti par un grand nombre d'entre nous. Les raisons sont généralement d'ordre personnel ou professionnel et l'envie première est de se retrouver et se recentrer sur des choses essentielles. Faire une retraite dans un ashram est un excellent moyen pour apaiser son corps et son esprit. Direction l'Inde pour un voyage sous le signe du bien-être intérieur.
 
@@ -62,3 +64,47 @@ Le nombre d'ashrams en Inde est probablement proportionnel à la taille du pays.
 
 Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité. C’est les [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

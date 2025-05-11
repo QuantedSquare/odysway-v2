@@ -1,5 +1,5 @@
 ---
-title: "Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande"
+title: "Récits de Voyage - Loïc Dauphin : Boxez dans les rizières en Thaïlande"
 description: |
     La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
     Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
@@ -7,36 +7,39 @@ seo:
   title: "Récits de Voyage de Loïc Dauphin | Blog Odysway"
   description: "Partez vivre une immersion dans un camp de boxe en Thaïlande pour vous initier à l'art du Muay-Thaï ! Découvrez le témoignage de Loïc !"
 navigation:
-  title: "Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande"
+  title: "Récits de Voyage - Loïc Dauphin : Boxez dans les rizières en Thaïlande"
   description: |
     La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
     Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-10-29 15:14:00+00:00"
 tags: "Asie, Sports, Thailande"
 categories: "Nature et grands espaces, Developpement Personnel, Blog"
 displayedImg: "/images/blogs/recits-de-voyage-de-loic-dauphin-boxe-thai/WdMaLkdsRJyIJ73QaG7I.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/recits-de-voyage-de-loic-dauphin-boxe-thai/WdMaLkdsRJyIJ73QaG7I.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 octobre 2020
-
 #title
-Récits de Voyage - Loïc Dauphin   "Boxez dans les rizières en Thaïlande
+Récits de Voyage - Loïc Dauphin : Boxez dans les rizières en Thaïlande
 
 #introduction
-
+La Boxe Thaïlandaise ou Muay-Thaï est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai camp de boxe en Thaïlande, loin des nombreux circuits touristiques…
+Loïc, un voyageur de 27 ans originaire d’Ajaccio a décidé de s’essayer à ce sport traditionnel dans la ville de Paï avec Odysway !
 ::
 
 ::section-container
----
-image-src: "/images/blogs/recits-de-voyage-de-loic-dauphin-boxe-thai/WdMaLkdsRJyIJ73QaG7I.jpg"
----
 #content
 La **Boxe Thaïlandaise** ou **_Muay-Thaï_** est un art martial extrêmement populaire en Thaïlande. Connu partout dans le monde, il a depuis longtemps suscité un grand engouement chez les amateurs de sport. Pourtant, peu ont la possibilité de s’entrainer dans un vrai **camp de boxe en Thaïlande**, loin des nombreux circuits touristiques…
 
@@ -76,3 +79,47 @@ Pour rester sur le thème du sport, j’aimerai faire un voyage de judo au Japon
 
 Envie vous aussi de découvrir la **Boxe thaï en Thaïlande** ? [Cliquez ici](https://odysway.com/voyages/stage-boxe-thai-nord-thailande) !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le Sahara, ou le plus grand désert du monde"
   description: "Il s'agit du plus grand désert de sable du monde . Le Sahara représente environ 14 fois la superficie de la France. Un territoire immense ou les conditions de vie sont extrêmes mais où les paysages font partie des plus beaux du continent africain."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-06-10 08:32:00+00:00"
 tags: "Afrique, Communautés locales, Developpement personnel, Grands espaces, Maroc"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/sahara-plus-grand-desert-du-monde/GuTUM1N3QXqx8PSGPFj6.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/sahara-plus-grand-desert-du-monde/GuTUM1N3QXqx8PSGPFj6.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-10 juin 2019
-
 #title
 Le Sahara, ou le plus grand désert du monde
 
 #introduction
-
+Il s'agit du plus grand désert de sable du monde . Le Sahara représente environ 14 fois la superficie de la France. Un territoire immense ou les conditions de vie sont extrêmes mais où les paysages font partie des plus beaux du continent africain.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/sahara-plus-grand-desert-du-monde/GuTUM1N3QXqx8PSGPFj6.jpg"
----
 #content
 **Il s’agit du plus grand désert de sable du monde**. Le Sahara représente environ 14 fois la superficie de la France. Un territoire immense où les conditions de vie sont extrêmes mais où les paysages font partie des plus beaux du continent africain. **Il inspire à la fois crainte, respect, curiosité mais aussi réflexion**. En effet, face à cet environnement parfois vierge de toutes traces, il n’est pas rare d’éprouver le besoin de faire le point sur soi. Il n’en fallait pas plus à Odysway pour proposer une expérience unique au cœur de ce désert mythique.
 
@@ -104,3 +106,47 @@ alt: Capture d’écran 2021-01-12 à 09.24.55...
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

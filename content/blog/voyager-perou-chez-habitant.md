@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyager au Pérou en séjournant chez l'habitant"
   description: "Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie."
-author: "contact@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2021-01-04 10:03:00+00:00"
 tags: "Amerique du Sud, Communautés locales, Grands espaces, Perou"
 categories: "Blog"
 displayedImg: "/images/blogs/voyager-perou-chez-habitant/3wDPI1TNWjJbrUXMjBA0.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/voyager-perou-chez-habitant/3wDPI1TNWjJbrUXMjBA0.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-4 janvier 2021
-
 #title
 Voyager au Pérou en séjournant chez l'habitant
 
 #introduction
-
+Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/voyager-perou-chez-habitant/3wDPI1TNWjJbrUXMjBA0.jpg"
----
 #content
 Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie. [Découvrez nos voyages au Pérou.](https://odysway.com/destinations/perou)
 
@@ -73,3 +75,47 @@ Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec l
 
 Poursuivez votre lecture avec [notre article sur les animaux typiques du Pérou.](https://odysway.com/animaux-typiques-perou)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le top 5 des destinations pour un voyage spirituel"
   description: "Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-03-24 16:05:00+00:00"
 tags: "Afrique, Amerique du Sud, Asie, Developpement personnel, Grands espaces, Inde, Maroc, Mongolie, Perou"
 categories: "Depassement de soi, Apprentissage, Culture et decouverte"
 displayedImg: "/images/blogs/top-5-destinations-voyage-spirituel/3C0q1Q6MRw21BLdoylKK.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/top-5-destinations-voyage-spirituel/3C0q1Q6MRw21BLdoylKK.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 mars 2020
-
 #title
 Le top 5 des destinations pour un voyage spirituel
 
 #introduction
-         
+Depuis quelques années, le développement personnel est en plein essor . L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/top-5-destinations-voyage-spirituel/3C0q1Q6MRw21BLdoylKK.jpg"
----
 #content
 Depuis quelques années, **le développement personnel est en plein essor**. L'envie de se recentrer sur des choses essentielles, guérir de ses maux ou mieux se connaître fait partie de ces besoins pour se sentir mieux. Pour ce faire, nombre de personnes partent explorer leur moi intérieur aux quatre coins du monde. Méditation, yoga, relaxation ou bien rituels chamaniques, il existe maintes solutions pour retrouver la paix intérieure. Découvrons **le top 5 des destinations pour un voyage spirituel** qui changera votre vie.
 
@@ -119,3 +121,47 @@ Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez 
 
 Pour poursuivre votre lecture, nous vous invitons à consulter [notre article sur les Bédouins, un mode de vie nomade.](https://odysway.com/bedouins-mode-vie-nomade)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

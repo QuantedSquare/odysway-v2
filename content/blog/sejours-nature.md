@@ -17,32 +17,38 @@ navigation:
     Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
     Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
     La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-16 17:36:00+00:00"
 tags: "Communautés locales"
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-16 novembre 2020
-
 #title
 Séjour Nature : se déconnecter du quotidien
 
 #introduction
-Le bruit permanent, la pollution, les embouteillages, le stress… Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
+Le bruit permanent, la pollution, les embouteillages, le stress...Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
+La vie en ville offre bon nombre d’avantages mais nous payons souvent un prix assez lourd afin de vivre une vie citadine - fatigue, stress, dépression, insatisfaction, perte de motivation, la liste est longue.
+Un séjour nature - loin de tout, dans des espaces immenses, où les arbres, les fleurs, les montagnes et les animaux sont roi, où rien d’autre ne compte que de se connecter à l'environnement et à soi.
+Le séjour nature en immersion peut vous faire vivre une belle expérience, qui vous fera prendre un peu de recul et de faire le point sur ce dont vous avez vraiment besoin.
+La nature à tant à nous offrir, elle nous rappelle à quel point nous sommes une goutte d’eau dans l’océan, à quel point tout est connecté, qu’il existe des havres de paix où nous pouvons nous accorder ce break bien mérité et surtout, qu’il en faut peu pour être heureux !
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Le bruit permanent, la pollution, les embouteillages, le stress… Ça vous rappelle quelque chose ? Si vous avez répondu les grandes villes, bravo !
 
@@ -123,3 +129,47 @@ Notre équipe est à votre écoute pour vous aider à réaliser votre rêve.
 
 Chez **Odysway**, vous l’aurez compris, on aime la nature, et pour compenser l'empreinte carbone du transport aérien, nous finançons des projets de reforestation.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

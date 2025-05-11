@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Le saut du Gol, un rituel ancestral du Vanuatu"
   description: "Au large de l'Australie, en plein océan Pacifique, le Vanuatu a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoises et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l'île de Pentecôte est reputée pour son rituel ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2018-09-29 16:28:00+00:00"
 tags: "Communautés locales, Océanie"
 categories: "Nature et grands espaces, Apprentissage, Culture et decouverte, Developpement Personnel"
 displayedImg: "/images/blogs/le-saut-du-gol-un-rituel-ancestral-du-vanuatu/U8sTfsKjSya215YZq1ws.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/le-saut-du-gol-un-rituel-ancestral-du-vanuatu/U8sTfsKjSya215YZq1ws.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 septembre 2018
-
 #title
 Le saut du Gol, un rituel ancestral du Vanuatu
 
 #introduction
-   
+Au large de l'Australie, en plein océan Pacifique, le Vanuatu a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoises et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l'île de Pentecôte est reputée pour son rituel ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/le-saut-du-gol-un-rituel-ancestral-du-vanuatu/U8sTfsKjSya215YZq1ws.jpg"
----
 #content
 Au large de l’Australie, en plein océan Pacifique, **le Vanuatu** a comme un air de bout du monde. Le cadre est un enchantement pour les yeux entre les eaux turquoise et la végétation luxuriante. Parmi les 83 îles qui composent le Vanuatu, l’île de Pentecôte est réputée pour son rituel initiatique : **le saut du Gol**.
 
@@ -65,3 +67,47 @@ alt:
 
 Pour poursuivre votre lecture, nous vous invitons à consulter notre article sur [la tribu des sentinelles, le peuple le plus isolé au monde](https://odysway.com/tout-savoir-sur-la-tribu-des-sentinelles-le-peuple-le-plus-isole-au-monde).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

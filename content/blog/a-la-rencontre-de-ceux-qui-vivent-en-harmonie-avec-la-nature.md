@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "À la rencontre de ceux qui vivent en harmonie avec la nature"
   description: "À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-09-18 09:57:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/JmPnIcuRoKsPEtASvzAQ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/JmPnIcuRoKsPEtASvzAQ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-18 septembre 2020
-
 #title
 À la rencontre de ceux qui vivent en harmonie avec la nature
 
 #introduction
-    
+À la rencontre de ceux qui vivent en harmonie avec la nature De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/a-la-rencontre-de-ceux-qui-vivent-en-harmonie-avec-la-nature/JmPnIcuRoKsPEtASvzAQ.jpg"
----
 #content
 **De par leur mode de vie ou leur métier, des hommes et des femmes ont fait le choix de cohabiter avec la nature. Besoin d'être au grand air, de fuir une vie urbaine bien trop stressante, de préserver les ressources d'une nature de plus en plus fragilisée, telles sont les raisons qui poussent de plus en plus de personnes à vouloir une existence plus proche de la terre. Mais qui sont-ils ? Partons ensemble à la rencontre de ceux qui vivent en harmonie avec la nature.**
 
@@ -116,3 +118,47 @@ alt: undefined
 
 Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

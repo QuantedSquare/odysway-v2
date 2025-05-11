@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Où voyager en Asie en 2025 loin des pays touristiques ?"
   description: "L’Asie est une destination qui attire de très nombreux voyageurs. Voici 6 destinations qui permettent de voyager en Asie loin des pays touristiques."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2022-06-21 06:57:00+00:00"
 tags: "Asie"
 categories: "Blog"
 displayedImg: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/JFt5h1VTWGx86P8neiR4.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/JFt5h1VTWGx86P8neiR4.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-21 juin 2022
-
 #title
 Où voyager en Asie en 2025 loin des pays touristiques ?
 
 #introduction
-       
+L’Asie est une destination qui attire de très nombreux voyageurs. Voici 6 destinations qui permettent de voyager en Asie loin des pays touristiques.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-voyager-en-asie-loin-des-pays-touristiques/JFt5h1VTWGx86P8neiR4.jpg"
----
 #content
 Par la diversité de ses paysages, de son patrimoine et de ses cultures, l’Asie est une destination qui attire de très nombreux voyageurs. Or, aujourd’hui, certains pays connaissent une affluence telle que l’authenticité et le dépaysement se font moins ressentir. Heureusement, il existe encore des lieux où le tourisme de masse n’a pas fait son apparition. Plein phare sur 6 destinations qui permettent de **voyager en Asie loin des pays touristiques**.
 
@@ -120,3 +122,47 @@ alt: undefined
 
 Bienvenue dans le plus petit pays d’Asie centrale ! Recouvert majoritairement de montagnes aux multiples sommets enneigés, le Tadjikistan offre de **magnifiques treks** aux randonneurs qui désirent **voyager en Asie loin des pays touristiques**. Venez explorer les monts Fan et rejoignez ses superbes lacs aux eaux turquoise ou encore le joyau historique qu’est la ville sogdienne en ruine de **Pendjikent**. Sillonnez la **route du Pamir**, qui emprunte la mythique route de la Soie, et découvrez sa très belle vallée et ses petits villages pittoresques où l’accueil sera plus que chaleureux. **Le Tadjikistan** vous réserve donc de belles surprises.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Orang-outan Indonésie : une espèce endémique de l’île de Sumatra"
   description: "Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-10-30 17:46:00+00:00"
 tags: "Animaux, Asie, Famille, Indonesie"
 categories: "Nature et grands espaces, Culture et decouverte"
 displayedImg: "/images/blogs/orang-outan-indonesie-espece-endemique-sumatra/ufOd50erRHuCHOs48iba.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/orang-outan-indonesie-espece-endemique-sumatra/ufOd50erRHuCHOs48iba.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-30 octobre 2019
-
 #title
 Orang-outan Indonésie : une espèce endémique de l’île de Sumatra
 
 #introduction
-    
+Autrefois, il peuplait toute l'Asie jusqu'au nord de la Chine. Aujourd'hui, il ne se trouve qu'a deux seuls endroits sur terre : sur l'île de Sumatra en Indonésie et sur l'île de Bornéo. L'orang-outan est aujourd'hui en voie de disparition a cause de la déforestation et du braconnage. Animal ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/orang-outan-indonesie-espece-endemique-sumatra/ufOd50erRHuCHOs48iba.jpg"
----
 #content
 Autrefois, il peuplait toute l’Asie jusqu’au nord de la Chine. Aujourd’hui, il ne se trouve qu’à deux seuls endroits sur terre : sur l’île de Sumatra en Indonésie et sur l’île de Bornéo. L’orang-outan est aujourd’hui en voie de disparition à cause de la déforestation et du braconnage. Animal discret et particulièrement intelligent, partons sur les traces de **l’orang-outan d’Indonésie** pour en savoir plus.
 
@@ -79,3 +81,47 @@ Partez dans un centre de conservation pour orangs-outans en Indonésie et partic
 
 De nos jours, de nombreuses espèces animales sont menacées d'extinction et sont en danger, notamment en raison du braconnage, de la déforestation, du réchauffement climatique, de la pollution ou du tourisme animalier suspect.  Vous pouvez participer à aider ces animaux sauvages à vivre paisiblement dans un environnement protégé d'une manière écologiquement responsable, juste et solidaire. Vous en apprendrez plus sur eux, mais aussi sur vous-même. Les animaux ont cette merveilleuse capacité à nous aimer et n'attendent aucun retour. Découvrez nos [voyages animaliers](https://odysway.com/thematiques/voyage-animalier).
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

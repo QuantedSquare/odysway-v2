@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "5 bienfaits du vélo en voyage"
   description: "De nos jours, il n'est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport a part entière. En plus de ne pas nuire à l'environnement, il permet une tout autre approche du voyage. Découvrons 5 ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-05-20 15:50:00+00:00"
 tags: "Asie, Grands espaces, Sri Lanka, Transports insolites"
 categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte"
 displayedImg: "/images/blogs/5-bienfaits-velo-voyage/6plbi2gNQI6cTmtfAKZX.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/5-bienfaits-velo-voyage/6plbi2gNQI6cTmtfAKZX.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-20 mai 2019
-
 #title
 5 bienfaits du vélo en voyage
 
 #introduction
-    
+De nos jours, il n'est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport a part entière. En plus de ne pas nuire à l'environnement, il permet une tout autre approche du voyage. Découvrons 5 ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/5-bienfaits-velo-voyage/6plbi2gNQI6cTmtfAKZX.jpg"
----
 #content
 De nos jours, il n’est plus rare de croiser des vacanciers à vélo. En solo, à deux ou en famille, le vélo est devenu un mode de transport à part entière. En plus de ne pas nuire à l’environnement, il permet une tout autre approche du voyage. **Découvrons 5 bienfaits du vélo en voyage.**
 
@@ -136,3 +138,47 @@ Chez Odysway, nous pensons que la magie du voyage s’opère quand on prend son 
 
 Les [voyages nature](https://odysway.com/thematiques/voyage-nature) en immersion peuvent vous apporter une grande expérience qui vous permettra de vous rendre compte des choses dont vous avez vraiment besoin. Le bonheur est juste là tout proche de vous, il vous suffit de vous laisser guider par Odysway et nous vous guiderons jusqu’à des merveilles naturelles exceptionnelles.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

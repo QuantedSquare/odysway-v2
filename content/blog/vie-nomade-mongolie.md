@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "La vie nomade en Mongolie"
   description: "Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-07-01 10:59:00+00:00"
 tags: "Asie, Communautés locales, Famille, Grands espaces, Mongolie, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte"
 displayedImg: "/images/blogs/vie-nomade-mongolie/da2hg829QHuUVPQ0O2Z8.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/vie-nomade-mongolie/da2hg829QHuUVPQ0O2Z8.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-1 juillet 2019
-
 #title
 La vie nomade en Mongolie
 
 #introduction
-         
+Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face a des conditions climatiques...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/vie-nomade-mongolie/da2hg829QHuUVPQ0O2Z8.jpg"
----
 #content
 Vaste territoire entre la Russie et la Chine, la Mongolie fascine. Autant pour ses paysages sauvages à perte de vue que pour les peuples qui y habitent. Ces peuples au mode de vie nomade perpétuent encore des traditions ancestrales tout en essayant de survivre face à des conditions climatiques de plus en plus rudes, à la pression de la sédentarisation et de la modernisation. **Mais comment se déroule une vie de nomade en Mongolie ?** Qui sont ces peuples qui se déplacent à travers les steppes ?
 
@@ -115,3 +117,47 @@ En outre, le chamanisme fait partie des rituels et de la culture des nomades. En
 
 Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec les autres, découvrir leur culture, leurs petites habitudes, goûter de nouvelles saveurs et briser les barrières. Ne vous accrochez pas à des idées préconçues et sentez que nous sommes un tout, une même tribu: les humains. S'il y a un moyen de voyager qui peut vous offrir tout cela, c'est les [voyages chez l’habitant.](https://odysway.com/thematiques/sejours-chez-l-habitant)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

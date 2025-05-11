@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Escalade sur glace en Argentine"
   description: "Second plus grand pays d'Amérique du Sud, l'Argentine s'étire sur près de 3 700 km jusqu'à la Terre de Feu et sa ville mythique, Ushuaia. Au sud-ouest du pays, en Patagonie, a la frontière avec le Chili, le parc national Los Glaciares est probablement le parc plus emblématique du pays. ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-03-11 15:31:00+00:00"
 tags: "Amerique du Sud, Argentine, Grands espaces, Sports"
 categories: "Depassement de soi, Nature et grands espaces"
 displayedImg: "/images/blogs/escalade-sur-glace-en-argentine/ITufAeu6QZWrVuit9uAi.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/escalade-sur-glace-en-argentine/ITufAeu6QZWrVuit9uAi.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-11 mars 2019
-
 #title
 Escalade sur glace en Argentine
 
 #introduction
-         
+Second plus grand pays d'Amérique du Sud, l'Argentine s'étire sur près de 3 700 km jusqu'à la Terre de Feu et sa ville mythique, Ushuaia. Au sud-ouest du pays, en Patagonie, a la frontière avec le Chili, le parc national Los Glaciares est probablement le parc plus emblématique du pays. ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/escalade-sur-glace-en-argentine/ITufAeu6QZWrVuit9uAi.jpg"
----
 #content
 Second plus grand pays d’[Amérique du Sud](https://odysway.com/destinations/amerique-du-sud), l’Argentine s’étire sur près de 3 700 km jusqu’à la Terre de Feu et sa ville mythique, Ushuaia. Au sud-ouest du pays, en Patagonie, à la frontière avec le Chili, le parc national Los Glaciares est probablement le parc plus emblématique du pays. La nature y est époustouflante de par ses glaciers qui attirent de nombreux visiteurs en quête de sensations fortes. L’un d’eux, le Viedma, est propice à une activité plutôt insolite : l’escalade sur glace. À vos crampons !
 
@@ -76,3 +78,47 @@ Découvrez nos derniers voyages aventures ajoutées en cliquant [ici](https://o
 
 Vivez plus fort avec Odysway !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

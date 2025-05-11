@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Temples au Népal : lesquels visiter ?"
   description: "Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2019-10-07 13:08:00+00:00"
 tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
 categories: "Depassement de soi, Culture et decouverte"
 displayedImg: "/images/blogs/temples-nepal-lesquels-visiter/5wiuZaoQ2GAiEoKWRcQJ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/temples-nepal-lesquels-visiter/5wiuZaoQ2GAiEoKWRcQJ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-7 octobre 2019
-
 #title
 Temples au Népal : lesquels visiter ?
 
 #introduction
-         
+Quand on pense au Népal, la première image qui nous traverse l'esprit est celle de l'Himalaya. Mais le Népal, ce n'est pas que des sommets vertigineux que les voyageurs arpentent lors de treks a couper le souffle. Il est le pays de naissance de Bouddha et possède de ce ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/temples-nepal-lesquels-visiter/5wiuZaoQ2GAiEoKWRcQJ.jpg"
----
 #content
 Quand on pense au Népal, la première image qui nous traverse l’esprit est celle de l’Himalaya. Mais le Népal, ce n’est pas que des sommets vertigineux que les voyageurs arpentent lors de treks à couper le souffle. Il est le pays de naissance de Bouddha et possède de ce fait un patrimoine religieux riche. Stupas et temples bouddhistes parsèment le territoire, vous en croiserez forcément un sur votre route. Sans oublier bien sûr les temples hindous qui, rappelons-le, font partie de la première religion du pays. **Mais quels sont les temples incontournables à visiter au Népal ?** Voici une liste des temples à ne pas manquer lors de votre voyage.
 
@@ -138,3 +140,47 @@ Vous aimez transmettre vos connaissances ou êtes autodidacte dans un domaine pa
 
 Les voyages initiatiques vous donneront le temps de faire le point. Vous pouvez sortir de votre zone de confort et rester en contact avec les populations locales (gardiens du savoir ancestral) pour amorcer le changement. Découvrez comment démarrer l'aventure peut vous aider à accomplir la sérénité avec nos [voyages initiatiques.](https://odysway.com/thematiques/voyage-initiatique)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -327,37 +327,82 @@ seo:
 navigation:
   title: "${post.title}"
   description: ${formatYamlString(post.summary)}
-author: "${post.author}"
+author: "${post.author === 'romain.masina@odysway.com' ? 'Romain Masina' : 'Linda Tran'}"
+authorPhoto: ${post.author === 'romain.masina@odysway.com' ? '/images/team/romain.webp' : '/images/team/linda.jpeg'}
+authorRole: ${post.author === 'romain.masina@odysway.com' ? 'Fondateur Odysway' : 'Co-fondatrice Odysway'}
 published: ${post.published === 'published'}
 publishedAt: "${post.published}"
 tags: ${formatTags}
 categories: ${formatCategories}
 displayedImg: "${featuredImagePath}"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "${featuredImagePath}"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-${new Date(post.published).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
-
 #title
 ${post.title}
 
 #introduction
-${introduction}
+${post.summary}
 ::
 
 ::section-container
----
-image-src: "${featuredImagePath}"
----
 #content
 ${markdown}
 ::
-`
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
 
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::
+`
   return formattedMarkdown
 }
 
@@ -415,7 +460,6 @@ async function processPostWithImages(post, outputDir) {
   }
 }
 
-// Example usage
 const inputFile = './butter-data/blogposts.json'
 const outputDir = '../content/blog'
 

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "TOP 10 des voyages à vivre cet hiver"
   description: "L’hiver est une période propice pour voyager et partir à la découverte de paysages différents. Que vous soyez adepte des pays chauds ou froids, vous serez tout aussi émerveillé. La Sibérie, le Cap-Vert, l'Afrique du sud ou encore la Laponie finlandaise ne sont qu’un aperçu des quelques magnifiques endroits à ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2021-10-27 06:25:00+00:00"
 tags: ""
 categories: ""
 displayedImg: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/5aOMAxbHR6JgmYJKw4AQ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/5aOMAxbHR6JgmYJKw4AQ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-27 octobre 2021
-
 #title
 TOP 10 des voyages à vivre cet hiver
 
 #introduction
-
+L’hiver est une période propice pour voyager et partir à la découverte de paysages différents. Que vous soyez adepte des pays chauds ou froids, vous serez tout aussi émerveillé. La Sibérie, le Cap-Vert, l'Afrique du sud ou encore la Laponie finlandaise ne sont qu’un aperçu des quelques magnifiques endroits à ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/les-10-voyages-a-vivre-cet-hiver/5aOMAxbHR6JgmYJKw4AQ.jpg"
----
 #content
 L’hiver est une période propice pour voyager et partir à la découverte de paysages différents. Que vous soyez adepte des pays chauds ou froids, vous serez tout aussi émerveillé. La Sibérie, le Cap-Vert, l'Afrique du sud ou encore la Laponie finlandaise ne sont qu’un aperçu des quelques magnifiques endroits à (re)découvrir en hiver. Pour vous, Odysway a dressé une liste des 10 voyages à vivre cet hiver. Et vous, quel sera votre coup de cœur ?
 
@@ -166,3 +168,47 @@ Au cœur de l’océan Indien, le **Sri Lanka** est un joyau, avec ses plages de
 
 Envie de vivre une belle expérience ? [Découvrez notre séjour pour voyager autrement au Sri Lanka.](https://odysway.com/voyages/voyage-immersion-culturelle-sri-lanka)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

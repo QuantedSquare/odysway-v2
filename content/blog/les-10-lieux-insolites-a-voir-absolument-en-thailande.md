@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les 10 lieux insolites à voir absolument en Thaïlande"
   description: "Des plages paradisiaques, des paysages sublimes, un riche patrimoine culturel, des us et coutumes ancestrales, la Thaïlande est une destination surprenante. Parmi tous ses attraits, il y en a certains qui sortent de l'ordinaire et qui méritent le détour. Voici le top 10 des lieux insolites à voir absolument..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-05-02 19:57:00+00:00"
 tags: "Asie, Grands espaces, Sports, Thailande"
 categories: "Depassement de soi"
 displayedImg: "/images/blogs/les-10-lieux-insolites-a-voir-absolument-en-thailande/OW3sxkKDTiG6Zsj0SAuj.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/les-10-lieux-insolites-a-voir-absolument-en-thailande/OW3sxkKDTiG6Zsj0SAuj.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-2 mai 2019
-
 #title
 Les 10 lieux insolites à voir absolument en Thaïlande
 
 #introduction
-    
+Des plages paradisiaques, des paysages sublimes, un riche patrimoine culturel, des us et coutumes ancestrales, la Thaïlande est une destination surprenante. Parmi tous ses attraits, il y en a certains qui sortent de l'ordinaire et qui méritent le détour. Voici le top 10 des lieux insolites à voir absolument...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/les-10-lieux-insolites-a-voir-absolument-en-thailande/OW3sxkKDTiG6Zsj0SAuj.jpg"
----
 #content
 Des plages paradisiaques, des paysages sublimes, un riche patrimoine culturel, des us et coutumes ancestrales, la Thaïlande est une destination surprenante. Parmi tous ses attraits, il y en a certains qui sortent de l’ordinaire et qui méritent le détour. Voici **le top 10 des lieux insolites à voir absolument en Thaïlande**.
 
@@ -183,3 +185,47 @@ alt:
 ---
 ::
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

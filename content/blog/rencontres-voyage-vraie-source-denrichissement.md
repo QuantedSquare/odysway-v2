@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les rencontres en voyage, une vraie source d'enrichissement"
   description: "Les rencontres, ces petits événements spontanés qui transforment le voyage . Vous ne pouvez pas imaginer partir sans penser interagir avec ceux que vous allez rencontrer. Sinon votre voyage ne serait pas complet. Qu'importe l'endroit où vous vous rendez, chaque rencontre sera forcément signe de richesse et votre voyage aura ..."
-author: "romain.masina@odysway.com"
+author: "Romain Masina"
+authorPhoto: /images/team/romain.webp
+authorRole: Fondateur Odysway
 published: false
 publishedAt: "2020-03-24 15:07:00+00:00"
 tags: "Communautés locales, Famille"
 categories: "Apprentissage, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/rencontres-voyage-vraie-source-denrichissement/OpfamDsTTqxKDqWbpsoo.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/rencontres-voyage-vraie-source-denrichissement/OpfamDsTTqxKDqWbpsoo.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-24 mars 2020
-
 #title
 Les rencontres en voyage, une vraie source d'enrichissement
 
 #introduction
-    
+Les rencontres, ces petits événements spontanés qui transforment le voyage . Vous ne pouvez pas imaginer partir sans penser interagir avec ceux que vous allez rencontrer. Sinon votre voyage ne serait pas complet. Qu'importe l'endroit où vous vous rendez, chaque rencontre sera forcément signe de richesse et votre voyage aura ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/rencontres-voyage-vraie-source-denrichissement/OpfamDsTTqxKDqWbpsoo.jpg"
----
 #content
 **Les rencontres, ces petits événements spontanés qui transforment le voyage**. Vous ne pouvez pas imaginer partir sans penser interagir avec ceux que vous allez rencontrer. Sinon votre voyage ne serait pas complet. **Qu'importe l'endroit où vous vous rendez, chaque rencontre sera forcément signe de richesse** et votre voyage aura une tout autre saveur.
 
@@ -62,3 +64,47 @@ Parce que vous n'aimez pas voyager seul ou bien parce que vous préférez béné
 
 Si vous voyagez seul, vous pouvez tout à fait intégrer un groupe n'importe quand durant votre voyage. En effet, certaines activités ne sont possibles ou plus intéressantes. Le temps de quelques heures ou d'une journée, vous allez côtoyer d'autres voyageurs qui auront la même envie que vous de vivre telle ou telle expérience. Rien que ce désir commun permet d'engager la conversation plus facilement et d'échanger sur divers sujets. **Chacune de vos rencontres vous apportera un petit quelque chose qui donnera à votre voyage une saveur encore plus spéciale**.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

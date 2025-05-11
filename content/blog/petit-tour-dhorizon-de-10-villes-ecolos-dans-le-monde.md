@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Petit tour d’horizon de 10 villes écolos dans le monde"
   description: "A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ..."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-03-06 10:55:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique du Nord, Amerique du Sud, Brésil, Etats Unis, Famille, Transports insolites"
 categories: "Apprentissage, Culture et decouverte, Blog"
 displayedImg: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/G2ScnNh8TiKfWKcRJvXJ.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/G2ScnNh8TiKfWKcRJvXJ.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-6 mars 2020
-
 #title
 Petit tour d’horizon de 10 villes écolos dans le monde
 
 #introduction
-   
+A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/petit-tour-dhorizon-de-10-villes-ecolos-dans-le-monde/G2ScnNh8TiKfWKcRJvXJ.jpg"
----
 #content
 A l’heure où la protection de notre planète est sur toutes les lèvres, des villes ont mis en place des programmes environnementaux pour limiter et réduire leurs émissions de gaz à effet de serre. Utilisation d’énergies renouvelables, développement de transports non polluants ou bien recyclage des déchets, tels sont leurs engagements pour agir. **Faisons un petit tour d’horizon de 10 villes écolos dans le monde pour voir quelles sont leurs actions au quotidien.**  
 
@@ -156,3 +158,47 @@ Un voyage culturel immersif est une façon de voyager de manière solidaire, éc
 
 Poursuivez votre lecture en découvrant notre article [sur la façon limiter son empreinte carbone en voyage !](https://odysway.com/comment-limiter-mon-empreinte-carbone-en-voyage)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

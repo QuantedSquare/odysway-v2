@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les grands recits de voyage"
   description: "Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-02-03 17:44:00+00:00"
 tags: "Afrique, Amerique du Nord, Communautés locales, Developpement personnel, Etats Unis, Grands espaces, Maroc, Transports insolites"
 categories: ""
 displayedImg: "/images/blogs/grands-recits-voyage/jLuEAvzOQ4ee5RJb50Cn.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/grands-recits-voyage/jLuEAvzOQ4ee5RJb50Cn.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-3 février 2020
-
 #title
 Les grands recits de voyage
 
 #introduction
-   
+Qu'ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. Pour s'évader sans forcément bouger de chez soi, ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/grands-recits-voyage/jLuEAvzOQ4ee5RJb50Cn.jpg"
----
 #content
 Qu’ils soient autobiographiques ou issus de fiction, les récits de voyage nous emmènent aux quatre coins du monde. Entre découvertes de paysages extraordinaires, immersion dans des peuples autochtones ou encore réflexion sur leur vie personnelle, voilà où nous font voyager les auteurs. **Pour s’évader sans forcément bouger de chez soi, voici une sélection des grands récits de voyage.**
 
@@ -204,3 +206,47 @@ Si vous aussi vous désirez faire un voyage marquant, pour lequel vous pourriez,
 
 Éveillez votre Indiana Jones intérieur et découvrez vos talents cachés à travers nos voyages de survie. Vivez une expérience extraordinaire accompagnée de guides et d'experts locaux qui vous dévoileront leurs secrets de survie! Découvrez nos [voyages de survie.](https://odysway.com/thematiques/survie)
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

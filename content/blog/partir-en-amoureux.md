@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Partir en Amoureux : un voyage hors du temps"
   description: "Partir en amoureux rime souvent avec hôtel de luxe et dîner aux chandelles. Offrez-vous un voyage hors des sentiers battus en immersion pour fêter votre amour."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-26 16:47:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 novembre 2020
-
 #title
 Partir en Amoureux : un voyage hors du temps
 
 #introduction
-Partir en vacances en amoureux est l’opportunité de vous retrouver en tête à tête avec votre tendre moitié
+Partir en amoureux rime souvent avec hôtel de luxe et dîner aux chandelles. Offrez-vous un voyage hors des sentiers battus en immersion pour fêter votre amour.
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 **Partir en vacances en amoureux** est l’opportunité de vous retrouver en tête à tête avec votre tendre moitié
 
@@ -124,3 +126,47 @@ Passer des moments de qualité tous les deux, en pleine nature, vivre l’immers
 
 Odysway vous accompagne dans vos **séjours en amoureux** aux quatre coins du monde, que vous rêviez de [**partir dans le désert du Sahara à la rencontre des Bédouins**](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=SEO&utm_medium=thematique&utm_campaign=en_amoureux), de faire [**un break loin de tout dans la forêt finlandaise**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=thematique&utm_campaign=en_amoureux) ou de vous lancer dans [**la photo animalière dans le Jura**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO&utm_medium=thematique&utm_campaign=en_amoureux), nous sommes à votre écoute afin de vous aider à réaliser le plus beau et le plus insolite des voyages en amoureux !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Quelle faune voir au Sri Lanka ?"
   description: "Pays dote d'une grande biodiversité, le Sri Lanka héberge une faune riche et variée . Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette faune incroyable présente au Sri Lanka . La faune ..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-07-29 11:00:00+00:00"
 tags: "Animaux, Asie, Famille, Sri Lanka"
 categories: "Culture et decouverte"
 displayedImg: "/images/blogs/faune-sri-lanka/NvdlJEdmQUOtMgESoavv.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/faune-sri-lanka/NvdlJEdmQUOtMgESoavv.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-29 juillet 2019
-
 #title
 Quelle faune voir au Sri Lanka ?
 
 #introduction
-     
+Pays dote d'une grande biodiversité, le Sri Lanka héberge une faune riche et variée . Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette faune incroyable présente au Sri Lanka . La faune ...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/faune-sri-lanka/NvdlJEdmQUOtMgESoavv.jpg"
----
 #content
 Pays doté d’une grande biodiversité, **le Sri Lanka héberge une faune riche et variée**. Éléphants, tortues marines, léopards, oiseaux et reptiles font partie des animaux que vous pourrez croiser lors de votre voyage. Odysway vous présente cette **faune incroyable présente au Sri Lanka**.
 
@@ -142,3 +144,47 @@ Animal plutôt discret, **le léopard**, aussi appelée panthère de Ceylan, n�
 
 Il existe encore bien d’autres animaux qui composent la faune du Sri Lanka. **Buffles, cerfs, mangoustes, ours bruns**, cette destination est un véritable paradis pour les amoureux de la nature et des animaux. N’hésitez pas à partir en randonnée dans les parcs et les réserves, à opter pour un safari à pied ou en 4×4 et vous ferez de magnifiques rencontres.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

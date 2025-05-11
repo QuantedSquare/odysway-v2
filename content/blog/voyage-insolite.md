@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Voyage Insolite avec Odysway"
   description: "Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2020-11-26 15:15:00+00:00"
 tags: ""
 categories: "Culture et decouverte"
 displayedImg: ""
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: ""
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-26 novembre 2020
-
 #title
 Voyage Insolite avec Odysway
 
 #introduction
-Lorsque nous voyageons, nous avons envie de dépaysement, de nouveautés, de sentir que nous marchons hors des sentiers battus.
+Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite.
 ::
 
 ::section-container
----
-image-src: ""
----
 #content
 Lorsque nous voyageons, nous avons envie de dépaysement, de nouveautés, de sentir que nous marchons hors des sentiers battus.
 
@@ -134,3 +136,47 @@ Dites-nous tout et nous nous ferons plaisir de vous aider - [**apprendre le Muay
 
 Ou encore [**partager le quotidien d’une musheuse dans les Pays de la Loire**](https://odysway.com/voyages/immersion-musheuse-PaysdelaLoire?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite), c’est possible avec Odysway !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Ou partir cet été ?"
   description: "Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Que vous soyez à la recherche d'aventures, de détente, de voyages authentiques ou spirituel ou d'une combinaison des trois, voici 5 destinations à ne pas manquer cet été."
-author: "linda.tran@odysway.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2023-04-10 14:53:00+00:00"
 tags: "été, séjour, vacances, voyage"
 categories: "ou partir cet été, vacances d'été"
 displayedImg: "/images/blogs/ou-partir-cet-ete/xRfwvIltTLGRyX38iFUE.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/ou-partir-cet-ete/xRfwvIltTLGRyX38iFUE.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-10 avril 2023
-
 #title
 Ou partir cet été ?
 
 #introduction
- 
+Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons. Que vous soyez à la recherche d'aventures, de détente, de voyages authentiques ou spirituel ou d'une combinaison des trois, voici 5 destinations à ne pas manquer cet été.
 ::
 
 ::section-container
----
-image-src: "/images/blogs/ou-partir-cet-ete/xRfwvIltTLGRyX38iFUE.jpg"
----
 #content
 ## Les vacances d’été approchent à grands pas et avec elles, l'envie de partir explorer de nouveaux horizons.
 
@@ -97,3 +99,47 @@ Que vous soyez à la recherche de vacances ensoleillées, de destinations aventu
 
 Contactez notre agence de voyage [Odysway](https://odysway.com/?utm_source=Article+Blog&utm_medium=Article+de+blog+%2F+ou+partir+cet+%C3%A9t%C3%A9&utm_campaign=acceuil) pour planifier votre prochaine aventure et profitez au maximum de votre été !
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::

@@ -7,32 +7,34 @@ seo:
 navigation:
   title: "Les 10 paysages incontournables à voir en Irlande"
   description: "Réputée pour son sens de l'accueil et pour sa convivialité, l'Irlande l'est aussi pour ses paysages a couper le souffle. Falaises vertigineuses, formations géologiques uniques au monde, plaines verdoyantes ou plateaux calcaires, il n'est pas étonnant que l'Irlande ait servi de décor pour bon nombre de films. Cette diversité..."
-author: "julien@quantedsquare.com"
+author: "Linda Tran"
+authorPhoto: /images/team/linda.jpeg
+authorRole: Co-fondatrice Odysway
 published: false
 publishedAt: "2019-10-16 13:05:00+00:00"
 tags: "Europe, Famille, Grands espaces, Irlande, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte"
 displayedImg: "/images/blogs/10-paysages-incontournables-a-voir-irlande/v3wE8BoERcNA7o4KhqJA.jpg"
+blogType: "Actu"
+badgeColor: "secondary"
+readingTime: "3"
 ---
 
-::hero-section-blog
+::blog-hero-section
 ---
-image-src: "/images/blogs/10-paysages-incontournables-a-voir-irlande/v3wE8BoERcNA7o4KhqJA.jpg"
+background-color: soft-blush
+title-color: primary
+introduction-color: grey
+avatar-size: '60'
 ---
-#publication-date
-16 octobre 2019
-
 #title
 Les 10 paysages incontournables à voir en Irlande
 
 #introduction
-    
+Réputée pour son sens de l'accueil et pour sa convivialité, l'Irlande l'est aussi pour ses paysages a couper le souffle. Falaises vertigineuses, formations géologiques uniques au monde, plaines verdoyantes ou plateaux calcaires, il n'est pas étonnant que l'Irlande ait servi de décor pour bon nombre de films. Cette diversité...
 ::
 
 ::section-container
----
-image-src: "/images/blogs/10-paysages-incontournables-a-voir-irlande/v3wE8BoERcNA7o4KhqJA.jpg"
----
 #content
 Réputée pour son sens de l’accueil et pour sa convivialité, l’Irlande l’est aussi pour ses paysages à couper le souffle. Falaises vertigineuses, formations géologiques uniques au monde, plaines verdoyantes ou plateaux calcaires, il n’est pas étonnant que l’Irlande ait servi de décor pour bon nombre de films. Cette diversité invite les voyageurs à ne pas faire seulement un voyage mais plusieurs. **Découvrons ensemble les 10 paysages incontournables à voir en Irlande.**
 
@@ -147,3 +149,47 @@ alt:
 
 Envie de découverte et exploration en pleine nature? Découvrez [nos voyages sur la thématique "voyage nature"](https://odysway.com/thematiques/voyage-nature) et libérez l'aventurier qui est en vous, ainsi que [nos voyages en Europe](https://odysway.com/destinations/europe) pour se dépayser sans partir au bout du monde.
 ::
+::color-container
+---
+color: soft-blush
+---
+  ::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  #bottom
+  ::cta-button
+  ---
+  link: /
+  color: secondary
+  ---
+  #text
+  Découvrir
+  ::
+  ::
+::
+
+::color-container
+---
+color: grey-light-2
+---
+  ::blog-cards-container
+  ---
+  blogCardSlug1: '/blog/sejour-arts-martiaux' 
+  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
+  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  ---
+  #title
+  Ça devrait vous plaire
+  #cta-button
+    ::cta-button
+    ---
+    color: white
+    textColor: primary
+    link: '/blog'
+    ---
+    #text
+    Tous les  articles
+    ::
+  ::
