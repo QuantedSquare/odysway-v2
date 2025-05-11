@@ -11,8 +11,9 @@
       height="250"
     />
   </v-col>
+
   <v-col
-    v-for="review, index in displayReviews"
+    v-for="review, index in reviews"
     v-else-if="status === 'success' && reviews"
     :key="review.id + index"
     cols="12"
@@ -21,7 +22,7 @@
   >
     <v-lazy
       :min-height="200"
-      :options="{ threshold: 0.5 }"
+      :options="{ threshold: 0.3 }"
       transition="fade-transition"
     >
       <v-sheet elevation="0">
@@ -56,9 +57,10 @@
           </v-card-subtitle>
         </v-card-item>
         <v-card-text
-          class="text-h5 font-weight-bold text-primary max-lines"
+          class="text-h5 font-weight-bold text-primary max-lines overflow-y-auto mb-10 mb-md-0"
+          style="max-height: 250px;"
         >
-          "{{ review.text }}
+          "{{ review.text }}"
         </v-card-text>
       </v-sheet>
     </v-lazy>
@@ -70,9 +72,6 @@ import { mdiStar } from '@mdi/js'
 
 const { data: reviews, status } = useAsyncData('reviews-home', () => {
   return queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
-})
-const displayReviews = computed(() => {
-  return reviews.value
 })
 </script>
 
@@ -92,7 +91,7 @@ const displayReviews = computed(() => {
 .max-lines{
  line-clamp: 3!important;
   display: -webkit-box;
-  -webkit-line-clamp: 10;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

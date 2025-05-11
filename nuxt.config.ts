@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     { path: '~/components/content', pathPrefix: false },
   ],
   devtools: { enabled: true },
-
   app: {
     head: {
       link: [
@@ -98,6 +97,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  calendly: {
+    enabled: false,
+  },
   eslint: {
     config: {
       stylistic: true,
@@ -106,6 +108,7 @@ export default defineNuxtConfig({
   gtag: {
     enabled: true, // process.env.NUXT_SITE_ENV === 'production',
     id: process.env.GTAG_ID || '',
+    initMode: 'manual',
     initCommands: [
       // Setup up consent mode
       ['consent', 'default', {

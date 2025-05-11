@@ -76,9 +76,6 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
-const { width } = useDisplay()
 const currentTab = ref(0)
 
 const tops = await queryCollection('tops').all()

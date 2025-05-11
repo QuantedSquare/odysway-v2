@@ -20,7 +20,7 @@
       id="Smallchat"
       class="d-none d-lg-block"
     /> -->
-    <TopTravelsTabs />
+    <LazyTopTravelsTabs />
     <FooterOdysway />
   </v-app>
 </template>
@@ -33,10 +33,10 @@ const drawer = ref(false)
 </script>
 
 <style scoped>
-.whatsapp-button {
+/* .whatsapp-button {
   position: fixed;
   bottom: 10px;
   right: 10px;
   z-index: 1000;
-}
+} */
 </style>

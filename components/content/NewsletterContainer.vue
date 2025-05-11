@@ -116,6 +116,7 @@ const subscribeToNewsletter = async () => {
         event_action: 'subscribe',
         event_label: `Newsletter Subscription`,
         event_value: 1,
+        debug_mode: true,
       })
   }
 }

@@ -3,11 +3,12 @@
     <div>
       {{ text }}
     </div>
-    <div
+    <!-- <div
       class="calendly-inline-widget"
       data-url="https://calendly.com/odysway/15min?hide_gdpr_banner=1"
       style="min-width: 320px; height: 700px;"
-    />
+    /> -->
+    <CalendlyInlineWidget v-bind="options" />
   </v-container>
 </template>
 
@@ -22,12 +23,15 @@ const props = defineProps({
     default: '',
   },
 })
+const options = {
+  url: 'https://calendly.com/odysway/15min?hide_gdpr_banner=1',
+}
 
-const calendly = useCalendly()
-onMounted(() => {
-  calendly.initInlineWidget()
-  console.log(props.travelTitle)
-})
+// const calendly = useCalendly()
+// onMounted(() => {
+//   calendly.initInlineWidget()
+//   console.log(props.travelTitle)
+// })
 useCalendlyEventListener({
   onEventScheduled: (event) => {
     console.log('Event scheduled:', event)
@@ -35,4 +39,7 @@ useCalendlyEventListener({
     // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: travelTitle })
   },
 })
+// onUnmounted(() => {
+//   calendly.destroyInlineWidget()
+// })
 </script>

@@ -176,24 +176,6 @@ const img = useImage()
 </script>
 
 <style scoped>
-.expanding-search {
-  border-radius: 25px;
-}
-
-.expanding-search.closed {
-  max-width: 60px;
-  border: 1px solid #9e9e9e;
-  transition: 0.5s;
-}
-
-.expanding-search.expanded {
-  max-width: 300px;
-  border: 2px solid #2e8b57;
-  transition: 0.5s;
-}
-.v-text-field--rounded>.v-input__control>.v-input__slot {
-    padding: 0 24px !important;
-}
 .app-bar-shadow:deep(){
   box-shadow: none!important;
 }

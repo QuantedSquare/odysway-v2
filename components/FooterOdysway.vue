@@ -8,7 +8,7 @@
       sizes="(max-width: 600px) 480px, 1024px"
       cover
       loading="lazy"
-      alt="Odysway texte en bas de page"
+      alt="Odysway texte en fond, en bas de page"
       width="100%"
       height="400"
     />
@@ -216,20 +216,20 @@ console.log('footer', footer)
 
 const img = useImage()
 
-const policies = ref([
-  { name: 'FAQ',
-    link: '/faq',
-  },
-  { name: 'Mentions légales',
-    link: '/mentions-legales',
-  },
-  { name: 'CGV',
-    link: '/conditions-generales-de-vente',
-  },
-  { name: 'Données personnelles',
-    link: '/politique-de-confidentialite',
-  },
-])
+// const policies = ref([
+//   { name: 'FAQ',
+//     link: '/faq',
+//   },
+//   { name: 'Mentions légales',
+//     link: '/mentions-legales',
+//   },
+//   { name: 'CGV',
+//     link: '/conditions-generales-de-vente',
+//   },
+//   { name: 'Données personnelles',
+//     link: '/politique-de-confidentialite',
+//   },
+// ])
 </script>
 
 <style scoped>
@@ -252,5 +252,4 @@ const policies = ref([
   position: relative;
   overflow: hidden;
 }
-/* Removed .bg-cover-odysway background-image rule */
 </style>

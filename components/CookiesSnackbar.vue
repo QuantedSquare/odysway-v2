@@ -46,6 +46,18 @@ onMounted (() => {
   }
   else {
     initialize()
+    useTrackEvent('page_view')
+
+    gtag('event',
+      'page_view',
+      {
+        event_category: 'Newsletter',
+        event_action: 'subscribe',
+        event_label: `Newsletter Subscription`,
+        event_value: 1,
+        debug_mode: true,
+      })
+
     consentBar.value = false
   }
 
