@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
-    // 'nuxt-calendly',
+    'nuxt-calendly',
     'nuxt-gtag',
     'nuxt-meta-pixel',
     (_options, nuxt) => {
