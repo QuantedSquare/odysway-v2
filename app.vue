@@ -5,6 +5,34 @@
   </NuxtLayout>
 </template>
 
+<script setup>
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      href: '/fonts/Gordita-Font/gordita-regular.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
+      href: '/fonts/Gordita-Font/gordita-medium.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
+    {
+      rel: 'preload',
+      href: '/fonts/Gordita-Font/gordita-bold.woff2',
+      as: 'font',
+      crossorigin: '',
+      type: 'font/woff2',
+    },
+  ],
+})
+</script>
+
 <style>
 .page-enter-active,
 .page-leave-active {
