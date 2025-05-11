@@ -78,11 +78,12 @@ const loading = computed(() => {
 
 const parsedPages = computed(() => {
   const parsedPages = pages.value?.map((page) => {
+    console.log('page', page)
     return {
       title: page.title,
       publishedAt: page.publishedAt,
       displayedImg: page.displayedImg,
-      path: page.path,
+      path: page.path.replace('/blog/', ''),
       published: page.published,
       blogType: page.blogType,
       badgeColor: page.badgeColor,

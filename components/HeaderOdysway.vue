@@ -16,7 +16,6 @@
         height="38"
         alt="Logo principale d'Odysway"
         :src="img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })"
-        :lazy-src="img(header.logo.desktop, { format: 'webp', quality: 70, width: 320 })"
         :srcset="`${img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })} 320w, ${img(header.logo.desktop, { format: 'webp', quality: 100, width: 640 })} 640w`"
         :sizes="mdAndUp ? '150px' : '100px'"
       />
@@ -108,16 +107,10 @@
       </v-btn>
     </div>
   </v-app-bar>
-  <!-- <ExtensionDrawer
-    v-model="testModel"
-    :extension="extensionName"
-    class="d-md-and-down-none"
-    @mouseleave="resetExtension()"
-  /> -->
 </template>
 
 <script setup>
-import { mdiMagnify, mdiAccountCircle, mdiPhone, mdiMenu } from '@mdi/js'
+import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
@@ -125,10 +118,10 @@ const { header } = useAppConfig()
 
 // #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
 const { mdAndUp } = useDisplay()
-const { user, signOut, isConnected } = useUser()
+// const { user, signOut, isConnected } = useUser()
 const router = useRouter()
-const testModel = ref(false)
-const searchOpen = ref(false)
+// const testModel = ref(false)
+// const searchOpen = ref(false)
 const model = defineModel()
 defineProps({
   scrollBehavior: {
@@ -142,42 +135,42 @@ defineProps({
 })
 const img = useImage()
 
-const showExtension = ref(false)
-const extensionName = ref('')
+// const showExtension = ref(false)
+// const extensionName = ref('')
 
-const items = ref([
-  { title: 'destinations',
-    link: '/destinations',
-    extension: 'destinations',
-  },
-  { title: 'prochains départs',
-    link: '/prochains-departs',
-  },
-  { title: 'à propos',
-    link: '/concept',
-    extension: 'propos',
-  },
-])
-watch([showExtension, extensionName], () => {
-  testModel.value = !!(showExtension.value && extensionName.value)
-})
+// const items = ref([
+//   { title: 'destinations',
+//     link: '/destinations',
+//     extension: 'destinations',
+//   },
+//   { title: 'prochains départs',
+//     link: '/prochains-departs',
+//   },
+//   { title: 'à propos',
+//     link: '/concept',
+//     extension: 'propos',
+//   },
+// ])
+// watch([showExtension, extensionName], () => {
+//   testModel.value = !!(showExtension.value && extensionName.value)
+// })
 
-function displayExtension(item) {
-  if (item.extension) {
-    showExtension.value = true
-    extensionName.value = item.extension
-  }
-}
+// function displayExtension(item) {
+//   if (item.extension) {
+//     showExtension.value = true
+//     extensionName.value = item.extension
+//   }
+// }
 
-function resetExtension() {
-  showExtension.value = false
-  extensionName.value = ''
-}
+// function resetExtension() {
+//   showExtension.value = false
+//   extensionName.value = ''
+// }
 
-const handleSignOut = async () => {
-  await signOut()
-  router.push('/signin')
-}
+// const handleSignOut = async () => {
+//   await signOut()
+//   router.push('/signin')
+// }
 
 // TODO : add google analytics
 </script>

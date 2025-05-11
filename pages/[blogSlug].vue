@@ -12,9 +12,9 @@
 
 <script setup>
 const route = useRoute()
-
+console.log('route', route.path)
 const { data } = await useAsyncData(route.path, () => {
-  return queryCollection('blog').path('/blog/' + route.path).first()
+  return queryCollection('blog').path('/blog' + route.path).first()
 })
 
 provide('page', data)
