@@ -42,6 +42,7 @@
           :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
           sizes="(max-width: 600px) 480px, 1024px"
           alt="Image section voyager autrement"
+          loading="lazy"
           height="100%"
           cover
           rounded="xl"

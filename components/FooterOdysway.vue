@@ -1,5 +1,17 @@
 <template>
-  <v-footer class="bg-cover-odysway">
+  <v-footer class="position-relative">
+    <v-img
+      class="footer-bg-img"
+      :src="img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 1024, height: 400 })"
+      :lazy-src="img('/logos/odysway-text.png', { format: 'webp', quality: 10, width: 1024, height: 400 })"
+      :srcset="`${img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 1024, height: 400 })} 1024w, ${img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 640, height: 400 })} 640w`"
+      sizes="(max-width: 600px) 480px, 1024px"
+      cover
+      loading="lazy"
+      alt="Odysway texte en bas de page"
+      width="100%"
+      height="400"
+    />
     <v-container
       v-if="footer"
       :fluid="width < 1440"
@@ -221,16 +233,24 @@ const policies = ref([
 </script>
 
 <style scoped>
-.bg-cover-odysway {
-  background-image: url('/logos/odysway-text.png');
-  background-size: 100% 400px;
-    background-position: center;
-  background-repeat: no-repeat;
+.footer-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 400px !important;
+  z-index: 0;
+  object-fit: cover;
+  pointer-events: none;
 }
 @media screen and (max-width: 768px) {
-  .bg-cover-odysway {
-    background-size: 100% 130px;
-    background-image: url('/logos/odysway-text.png');
+  .footer-bg-img {
+    height: 130px !important;
   }
 }
+.v-footer.position-relative {
+  position: relative;
+  overflow: hidden;
+}
+/* Removed .bg-cover-odysway background-image rule */
 </style>
