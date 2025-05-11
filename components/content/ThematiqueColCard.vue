@@ -5,7 +5,7 @@
     md="3"
   >
     <v-lazy
-      :min-height="415"
+      :min-height="width <= 960 ? 300 : 415"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
     >
@@ -13,7 +13,7 @@
         :to="`/thematiques/${slug}`"
         class="image-wrapper"
         :class="{
-          'default-expanded': isMobile,
+          'default-expanded': width <= 960,
         }"
         @mouseenter="isHovered = true"
         @mouseleave="isHovered = false"
@@ -68,9 +68,11 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
+const { width } = useDisplay()
 const isMobile = ref(false)
 const isHovered = ref(false)
 defineProps({
@@ -86,18 +88,6 @@ defineProps({
     type: String,
     required: true,
   },
-})
-onMounted(() => {
-  const checkMobile = () => {
-    isMobile.value = window.innerWidth <= 960
-  }
-
-  checkMobile()
-  window.addEventListener('resize', checkMobile)
-
-  onUnmounted(() => {
-    window.removeEventListener('resize', checkMobile)
-  })
 })
 </script>
 

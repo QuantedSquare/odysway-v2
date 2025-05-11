@@ -12,10 +12,9 @@
       <NuxtLink
         :to="link"
         class="image-wrapper"
-        :class="{ 'default-expanded': isMobile }"
+        :class="{ 'default-expanded': width <= 960 }"
       >
         <v-img
-          v-if="image"
           :src="imgComp(image, { format: 'webp', quality: 70, width: 640 })"
           :lazy-src="imgComp(image, { format: 'webp', quality: 10, width: 640 })"
           :srcset="`${imgComp(image, { format: 'webp', quality: 70, width: 640 })} 640w, ${imgComp(image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
@@ -35,7 +34,7 @@
               <span class="text-center">
                 Cliquez pour en apprendre plus à propos des {{ title }}
               </span>
-              <client-only>
+              <!-- <client-only>
                 <v-btn
                   v-if="isMobile"
                   class="explore-btn"
@@ -44,7 +43,7 @@
                 >
                   Explorez
                 </v-btn>
-              </client-only>
+              </client-only> -->
             </p>
           </div>
         </div>
@@ -54,10 +53,11 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
-const isMobile = ref(false)
+const { width } = useDisplay()
 
 defineProps({
   image: {
@@ -70,20 +70,8 @@ defineProps({
   },
   link: {
     type: String,
-    // default: '/search',
+    default: '/',
   },
-})
-onMounted(() => {
-  const checkMobile = () => {
-    isMobile.value = window.innerWidth <= 960
-  }
-
-  checkMobile()
-  window.addEventListener('resize', checkMobile)
-
-  onUnmounted(() => {
-    window.removeEventListener('resize', checkMobile)
-  })
 })
 </script>
 

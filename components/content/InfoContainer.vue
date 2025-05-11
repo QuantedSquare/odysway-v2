@@ -15,7 +15,7 @@
         md="8"
       >
         <h5
-          class="text-h5 mt-2"
+          class="text-body-2"
           :class="whiteText ? 'text-white' : 'text-grey'"
         >
           <slot name="description" />

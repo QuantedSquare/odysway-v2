@@ -4,7 +4,7 @@
       v-model="drawer"
     />
     <ClientOnly>
-      <AsyncDrawer
+      <LazyDrawer
         v-if="width < 960"
         v-model="drawer"
       />
@@ -28,7 +28,6 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
-const AsyncDrawer = defineAsyncComponent(() => import('~/components/content/Drawer.vue'))
 const { width } = useDisplay()
 const drawer = ref(false)
 </script>

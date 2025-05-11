@@ -37,8 +37,12 @@
               <NuxtLink
                 v-if="review.voyageTitle && review.voyageSlug"
                 :to="`/voyages/${review.voyageSlug}`"
-                class="text-h6 text-grey text-truncate"
-              > {{ review.voyageTitle }}</NuxtLink>
+                class="text-body-2 text-primary"
+              >
+                <span class="text-truncate">
+                  {{ review.voyageTitle }}
+                </span>
+              </NuxtLink>
             </div>
           </v-card-title>
           <v-card-subtitle class="mt-4 ">
@@ -65,7 +69,7 @@
 import { mdiStar } from '@mdi/js'
 
 const { data: reviews, status } = useAsyncData('reviews-home', () => {
-  return queryCollection('reviews').where('isOnHome', '=', true).all()
+  return queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
 })
 const displayReviews = computed(() => {
   return reviews.value
