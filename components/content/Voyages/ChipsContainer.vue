@@ -49,56 +49,6 @@ import { useDisplay } from 'vuetify'
 
 const { badgeSection } = inject('voyage')
 const { lgAndUp } = useDisplay()
-
-// const chips = {
-//   experience: {
-//     text: badgeSection.experience,
-//     color: badgeSection.experienceColor,
-//   },
-//   minMaxTravellers: '3 à 8',
-//   nbNights: 7,
-//   flightIncluded: true,
-//   hotelStars: 4,
-//   bestSeason: 'Printemps-été',
-// }
-
-// const chipData = [
-//   {
-//     text: `Groupe ${chips.minMaxTravellers} personnes`,
-//     iconProps: {
-//       src: '/icons/business-team.svg',
-//       iconSize: iconSize.value,
-//     },
-//   },
-//   {
-//     text: `${chips.nbNights} nuits sur place`,
-//     iconProps: {
-//       src: '/icons/calendar.svg',
-//       iconSize: iconSize.value,
-//     },
-//   },
-//   {
-//     text: `Vol ${chips.flightIncluded ? 'compris' : 'non compris'}`,
-//     iconProps: {
-//       src: '/icons/airplane.svg',
-//       iconSize: iconSize.value,
-//     },
-//   },
-//   {
-//     text: `Hôtel ${chips.hotelStars} étoiles`,
-//     iconProps: {
-//       src: '/icons/bed.svg',
-//       iconSize: iconSize.value,
-//     },
-//   },
-//   {
-//     text: chips.bestSeason,
-//     iconProps: {
-//       src: '/icons/sun.svg',
-//       iconSize: iconSize.value,
-//     },
-//   },
-// ]
 </script>
 
 <style scoped>

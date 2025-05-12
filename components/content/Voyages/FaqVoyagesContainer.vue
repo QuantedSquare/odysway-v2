@@ -42,33 +42,7 @@
             cols="12"
             md="4"
           >
-            <v-sheet
-              class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6 py-10 d-flex flex-column justify-start "
-            >
-              <v-avatar size="80">
-                <v-img
-                  :src="img(backgroundImage, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-                />
-              </v-avatar>
-
-              <span class="text-h3 text-md-h4 text-lg-h3 font-weight-bold my-6">
-                Autres questions ?
-                Notre équipe est là pour vous renseigner
-              </span>
-              <span class="text-h6 text-lg-h5 mb-8">
-                Texte sous le titre
-                <br>lorem
-              </span>
-              <v-btn-secondary
-                height="62px"
-                rounded="md"
-                width="66%"
-              >
-                <span class="text-h6 text-lg-h5 text-wrap">
-                  Contactez-nous
-                </span>
-              </v-btn-secondary>
-            </v-sheet>
+            <CtaColCard />
           </v-col>
         </v-row>
       </v-container>
