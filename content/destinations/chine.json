@@ -1,0 +1,18 @@
+{
+  "titre": "Chine",
+  "slug": "chine-culture-et-patrimoine",
+  "chapka": "2",
+  "iso": "CN",
+  "interjection": "en",
+  "metaDescription": "Riche d'une culture forte et intrigante, la Chine regorge de nombreux trésors à découvrir. Avec Odysway, partez à la rencontre de sa culture authentique et de son patrimoine culturel !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Asie"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/jSdT9NVTz6j9h4LvhI7k.jpg",
+    "alt": "Image de la destination \"Chine\""
+  }
+}

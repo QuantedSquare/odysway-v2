@@ -1,11 +1,18 @@
 {
-  "nom": "Cap-Vert",
-  "chapkaZone": 2,
+  "titre": "Cap-Vert",
+  "slug": "cap-vert",
+  "chapka": "2",
   "iso": "CV",
   "interjection": "au",
-  "meta_description": "Longtemps méconnu du grand public le Cap-Vert est une ancienne colonie portugaise : un diamant encore à l'état brut. Découvrez nos voyages uniques et authentiques au Cap-Vert !",
-  "content_slug": "cap-vert",
+  "metaDescription": "Longtemps méconnu du grand public le Cap-Vert est une ancienne colonie portugaise : un diamant encore à l'état brut. Découvrez nos voyages uniques et authentiques au Cap-Vert !",
+  "visible": true,
   "regions": [
-    "Afrique"
-  ]
-} 
+    {
+      "nom": "Afrique"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/ffytz87TqGZQ0o6dzjGp.jpg",
+    "alt": "Image de la destination \"Cap-Vert\""
+  }
+}

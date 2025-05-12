@@ -1,9 +1,21 @@
 {
-  "nom": "Bretagne",
-  "chapkaZone": 1,
-  "iso": "",
+  "titre": "Bretagne",
+  "slug": "bretagne-cotes-et-legendes",
+  "chapka": "1",
+  "iso": "FR-BRE",
   "interjection": "",
-  "meta_description": "",
-  "content_slug": "",
-  "regions": ["Europe", "France"]
-} 
+  "metaDescription": "Découvrez la Bretagne, terre de légendes, de côtes sauvages et de traditions maritimes. Vivez une immersion authentique à l'ouest de la France !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/Lq5ZhJwdSg6saVQy4ez6.jpg",
+    "alt": "Image de la destination \"Bretagne\""
+  }
+}

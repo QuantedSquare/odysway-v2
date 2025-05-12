@@ -1,11 +1,18 @@
 {
-  "nom": "Canada",
-  "chapkaZone": 3,
+  "titre": "Canada",
+  "slug": "canada-grands-espaces-et-aventure",
+  "chapka": "3",
   "iso": "CAN",
   "interjection": "au",
-  "meta_description": "",
-  "content_slug": "",
+  "metaDescription": "Explorez le Canada, pays de grands espaces, de forêts et de lacs majestueux. Vivez une aventure authentique en Amérique du Nord !",
+  "visible": true,
   "regions": [
-    "Amérique du Nord"
-  ]
-} 
+    {
+      "nom": "Amérique du Nord"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/6gquOf0jStlnEkXHeat4.jpg",
+    "alt": "Image de la destination \"Canada\""
+  }
+}

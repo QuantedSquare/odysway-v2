@@ -1,0 +1,21 @@
+{
+  "titre": "Jura",
+  "slug": "jura-savoir-faire-et-terroir",
+  "chapka": "1",
+  "iso": "FR",
+  "interjection": "dans le",
+  "metaDescription": "Partez explorer la région du Jura avec Oysway ! Découvrez la richesse de savoir faire et du terroir de la région.",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/Yx1zY7OQQDOtynI9cOUp.jpg",
+    "alt": "Image de la destination \"Jura\""
+  }
+}

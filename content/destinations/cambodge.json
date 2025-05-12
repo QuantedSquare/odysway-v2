@@ -1,9 +1,18 @@
 {
-  "nom": "Cambodge",
-  "chapkaZone": 2,
+  "titre": "Cambodge",
+  "slug": "cambodge-temples-et-traditions",
+  "chapka": "2",
   "iso": "KHM",
   "interjection": "au",
-  "meta_description": "",
-  "content_slug": "",
-  "regions": ["Asie"]
-} 
+  "metaDescription": "Découvrez le Cambodge, pays des temples d'Angkor, de rivières et de traditions vivantes. Vivez une immersion authentique en Asie du Sud-Est !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Asie"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/ep07kBZURmfcxnq56UiH.jpg",
+    "alt": "Image de la destination \"Cambodge\""
+  }
+}

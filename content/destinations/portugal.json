@@ -1,0 +1,18 @@
+{
+  "titre": "Portugal",
+  "slug": "portugal-entre-ocean-et-traditions",
+  "chapka": "1",
+  "iso": "PRT",
+  "interjection": "au",
+  "metaDescription": "Découvrez le Portugal autrement : villages authentiques, paysages côtiers et traditions vous attendent pour une immersion unique en Europe !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Europe"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/Q8VyEBGMSrXotEzo2bus.jpg",
+    "alt": "Image de la destination \"Portugal\""
+  }
+}

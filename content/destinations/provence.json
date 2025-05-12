@@ -1,0 +1,21 @@
+{
+  "titre": "Provence",
+  "slug": "provence-entre-camargue-et-french-riviera",
+  "chapka": "1",
+  "iso": "FR",
+  "interjection": "en",
+  "metaDescription": "Partez explorer la région Provence-Alpes-Côte d'Azur avec Oysway ! De la Camargue à la French Riviera, vivez de belles aventures dans la région et découvrez la richesse de son savoir faire et son terroir.",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/bRA5U5kTISqNQxHydGLe.jpg",
+    "alt": "Image de la destination \"Provence\""
+  }
+}

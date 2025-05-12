@@ -1,0 +1,18 @@
+{
+  "titre": "Tibet",
+  "slug": "tibet-terre-de-spiritualite",
+  "chapka": "2",
+  "iso": "CN",
+  "interjection": "au ",
+  "metaDescription": "Partez à la découverte du Tibet, terre de spiritualité et de paysages grandioses. Vivez une expérience unique entre montagnes sacrées et traditions ancestrales !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Asie"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/viNSNoK6Ta2G6MTZ7f4B.jpg",
+    "alt": "Image de la destination \"Tibet\""
+  }
+}

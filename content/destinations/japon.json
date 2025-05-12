@@ -1,0 +1,18 @@
+{
+  "titre": "Japon",
+  "slug": "japon-traditions-et-modernite",
+  "chapka": "2",
+  "iso": "JPN",
+  "interjection": "au",
+  "metaDescription": "Partez à la découverte du Japon : traditions ancestrales, paysages variés et modernité fascinante vous attendent pour une immersion unique en Asie !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Asie"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/IqgfsH1yRTWrwIxz75PQ.jpg",
+    "alt": "Image de la destination \"Japon\""
+  }
+}

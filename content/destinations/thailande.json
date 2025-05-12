@@ -1,0 +1,18 @@
+{
+  "titre": "Thaïlande",
+  "slug": "la-thailande-le-pays-du-sourire",
+  "chapka": "2",
+  "iso": "TH",
+  "interjection": "en",
+  "metaDescription": "Vous souhaitez découvrir la Thaïlande autrement, hors des sentiers battus et  loin des touristes ? Découvrez nos séjours uniques et plongez dans la Thaïlande authentique !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Asie"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/FEjgVmnQLmFo74t7fMSx.jpg",
+    "alt": "Image de la destination \"Thaïlande\""
+  }
+}

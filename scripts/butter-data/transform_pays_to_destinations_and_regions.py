@@ -1,5 +1,7 @@
 import json
 from collections import defaultdict
+from slugify import slugify
+import os
 
 # Load pays.json
 data_path = 'scripts/butter-data/pays.json'
@@ -60,19 +62,25 @@ def get_regions_for_destination(p):
     return sorted(regions)
 
 destinations_out = []
+output_dir = 'scripts/butter-data/destinations'
+os.makedirs(output_dir, exist_ok=True)
 for p in pays:
+    nom = p.get('nom')
+    slug = slugify(nom, lowercase=True)
     obj = {
-        'nom': p.get('nom'),
+        'nom': nom,
         'chapkaZone': p.get('zone_chapka'),
         'iso': p.get('iso'),
         'interjection': p.get('interjection'),
         'meta_description': p.get('meta_description'),
         'content_slug': p.get('content_slug'),
-        'regions': get_regions_for_destination(p)
+        'regions': get_regions_for_destination(p),
+        'image': {
+            'src': f'/images/destinations/{slug}.jpg',
+            'alt': f'Image de la destination "{nom}"'
+        }
     }
-    destinations_out.append(obj)
-
-with open('scripts/butter-data/destination.json', 'w', encoding='utf-8') as f:
-    json.dump(destinations_out, f, ensure_ascii=False, indent=2)
+    with open(f'{output_dir}/{slug}.json', 'w', encoding='utf-8') as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2)
 
 print('Done! Wrote region.json and destination.json.') 

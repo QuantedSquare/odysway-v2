@@ -1,0 +1,18 @@
+{
+  "titre": "Suède",
+  "slug": "suède",
+  "chapka": "1",
+  "iso": "SWE",
+  "interjection": "en",
+  "metaDescription": "Explorez la Suède, pays de forêts, de lacs et de traditions nordiques. Vivez une immersion authentique au cœur de la nature scandinave !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Europe"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/CSWPoZooTJCk0GHQsOnU.jpg",
+    "alt": "Image de la destination \"Suède\""
+  }
+}

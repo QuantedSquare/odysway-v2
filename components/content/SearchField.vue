@@ -101,37 +101,33 @@ const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => null)
 
 const { data: destinations } = await useAsyncData('destinations', () => {
-  return queryCollection('destinations').where('id', '=', 'destinations/destinations/destinations.json').first()
+  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image').all()
 })
 
 const destinationsList = computed(() => {
-  return destinations.value.meta.body.map(d => d.nom.charAt(0).toUpperCase() + d.nom.slice(1))
+  return destinations.value.map(d => d.titre)
 })
 
-const travelTypes = ref([
+const travelTypes = [
   'Voyage individuel', 'Voyage en groupe',
-])
+]
 
 const formattedDate = computed(() => {
   return date.value ? dayjs(date.value[0]).format('DD/MM') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM') : ''
 })
 
-const search = () => {
-  if (destinationsChoices.value?.length > 0) {
-    console.log('destinationsChoices.value', destinationsChoices.value)
+function search() {
+  if (destinationChoice.value) {
     router.push({
       path: '/search',
       query: {
-        destination: slugify(destinationsChoices.value, { lower: true }),
-        travelTypes: travelTypeChoices.value,
-        date: date.value ? `${dayjs(date.value[0]).format('YYYY-MM-DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY-MM-DD')}` : '',
+        destination: destinationChoice.value ? destinationChoice.value : null,
+        travelType: travelTypeChoice.value ? travelTypeChoice.value : null,
+        dateRange: date.value.length > 0 ? `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}` : null,
       },
     })
   }
 }
-const isSearchPage = computed(() => {
-  return route.name === 'search'
-})
 </script>
 
 <style scoped>

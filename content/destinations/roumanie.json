@@ -1,0 +1,18 @@
+{
+  "titre": "Roumanie",
+  "slug": "roumanie-chateaux-et-carpates",
+  "chapka": "1",
+  "iso": "ROU",
+  "interjection": "en",
+  "metaDescription": "Découvrez la Roumanie : châteaux mystérieux, paysages montagneux et riche héritage. Explorez Dracula à Bran et la beauté des Carpates.",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Europe"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/VACjMvgQDaMAIVL8rWCn.jpg",
+    "alt": "Image de la destination \"Roumanie\""
+  }
+}

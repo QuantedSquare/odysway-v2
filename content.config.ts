@@ -23,8 +23,11 @@ const paysChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content
   .map(country => country.slug) as [string, ...string[]]
 // console.log('paysChoices', paysChoices)
 
-const destinationChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/destinations/destinations.json'), 'utf-8')) as Array<{ nom: string }>)
-  .map(destination => destination.nom) as [string, ...string[]]
+const destinationDir = path.resolve(__dirname, 'content/destinations')
+const destinationFiles = fs.readdirSync(destinationDir)
+const destinationChoices = destinationFiles
+  .filter(file => file.endsWith('.json') && !file.startsWith('regions'))
+  .map(file => JSON.parse(fs.readFileSync(path.join(destinationDir, file), 'utf-8')).nom) as [string, ...string[]]
 console.log('destinationChoices', destinationChoices)
 
 // TODO
@@ -204,16 +207,20 @@ export default defineContentConfig({
         exclude: ['destinations/regions.json'],
       },
       schema: z.object({
-        titre: z.string(),
-        slug: z.string(),
-        chapka: z.string(),
-        iso: z.string(),
-        interjection: z.string(),
-        metaDescription: z.string(),
-        visible: z.boolean(),
+        titre: z.string().describe('Titre de la destination'),
+        slug: z.string().describe('Slug de la destination'),
+        chapka: z.string().describe('Chapka de la destination'),
+        iso: z.string().describe('ISO de la destination'),
+        interjection: z.string().describe('Interjection de la destination'),
+        metaDescription: z.string().describe('Meta description de la destination'),
+        visible: z.boolean().default(true).describe('Indique si la destination est visible'),
         regions: z.array(z.object({
           nom: z.enum(regionChoices),
-        })),
+        })).default([]).describe('Regions de la destination, définie dans le fichier regions'),
+        image: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }).describe('Image de la destination'),
       }),
     }),
     page_voyage_fr: defineCollection({

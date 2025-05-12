@@ -1,0 +1,18 @@
+{
+  "titre": "Guatemala",
+  "slug": "guatemala-volcans-et-traditions",
+  "chapka": "2",
+  "iso": "GTM",
+  "interjection": "au",
+  "metaDescription": "Découvrez le Guatemala, pays de volcans, de cités mayas et de traditions colorées. Vivez une immersion authentique en Amérique Centrale !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Amérique Centrale"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/R98uZsOUTrCmQzpY07D8.jpg",
+    "alt": "Image de la destination \"Guatemala\""
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "titre": "Jordanie",
+  "slug": "jordanie-petra-et-desert",
+  "chapka": "2",
+  "iso": "JOR",
+  "interjection": "",
+  "metaDescription": "Explorez la Jordanie, terre de merveilles antiques et de paysages désertiques. Vivez une aventure unique entre histoire et hospitalité bédouine !",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Moyen-Orient"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/I1AtzHTPyqLSTl9jKDZA.jpg",
+    "alt": "Image de la destination \"Jordanie\""
+  }
+}

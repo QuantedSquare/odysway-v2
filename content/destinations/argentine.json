@@ -1,11 +1,18 @@
 {
-  "nom": "Argentine",
-  "chapkaZone": 2,
+  "titre": "Argentine",
+  "slug": "argentine-grands-espaces-et-culture",
+  "chapka": "2",
   "iso": "ARG",
   "interjection": "en",
-  "meta_description": "Envie de découvrir l'Argentine autrement ? Découvrez nos séjours uniques : découvrez sa culture locale, parcourez ses grands espaces et prenez un grand bain de nature !",
-  "content_slug": "",
+  "metaDescription": "Envie de découvrir l'Argentine autrement ? Découvrez nos séjours uniques : découvrez sa culture locale, parcourez ses grands espaces et prenez un grand bain de nature !",
+  "visible": true,
   "regions": [
-    "Amérique du Sud"
-  ]
-} 
+    {
+      "nom": "Amérique du Sud"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/ap4lUTGbTbyuJxcUyDtM.jpg",
+    "alt": "Image de la destination \"Argentine\""
+  }
+}

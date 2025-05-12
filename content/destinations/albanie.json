@@ -1,11 +1,18 @@
 {
-  "nom": "Albanie",
-  "chapkaZone": 1,
+  "titre": "Albanie",
+  "slug": "",
+  "chapka": "1",
   "iso": "AL",
   "interjection": "en",
-  "meta_description": "",
-  "content_slug": "",
+  "metaDescription": "",
+  "visible": true,
   "regions": [
-    "Europe"
-  ]
-} 
+    {
+      "nom": "Europe"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/f2D01domReaHbUMtfSiF.jpg",
+    "alt": "Image de la destination \"Albanie\""
+  }
+}

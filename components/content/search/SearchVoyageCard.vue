@@ -6,10 +6,15 @@
     <NuxtLink
       :to="`/voyages/${voyage.slug}`"
       class="text-decoration-none position-relative text-white"
+      @click="scrollToTop"
     >
       <v-img
         :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
-        :alt="voyage.image.alt"
+        :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
+        :alt="voyage.image.alt || voyage.title"
+        :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+        sizes="(max-width: 600px) 480px, 1024px"
+        loading="lazy"
         height="228px"
         class="hover-scale"
         cover
@@ -126,6 +131,9 @@ defineProps({
 })
 
 const img = useImage()
+const scrollToTop = () => {
+  window.scrollTo(0, 0)
+}
 </script>
 
 <style scoped>

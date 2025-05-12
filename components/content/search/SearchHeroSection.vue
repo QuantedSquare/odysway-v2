@@ -10,7 +10,7 @@
         class="d-flex align-center justify-center"
       >
         <h1 class="custom-hero-title">
-          Trouvez votre voyage
+          {{ destination ? `Nos voyages ${destination.interjection} ${destination.titre}` : 'Trouvez votre prochain voyage' }}
         </h1>
       </v-col>
       <v-col
@@ -39,6 +39,12 @@
 import { useImage } from '#imports'
 
 const img = useImage()
+defineProps({
+  destination: {
+    type: Object,
+    default: null,
+  },
+})
 </script>
 
 <style scoped>

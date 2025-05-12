@@ -1,11 +1,18 @@
 {
-  "nom": "Bénin",
-  "chapkaZone": 2,
-  "iso": "",
+  "titre": "Bénin",
+  "slug": "benin-traditions-et-vaudou",
+  "chapka": "2",
+  "iso": "BJ",
   "interjection": "",
-  "meta_description": "",
-  "content_slug": "",
+  "metaDescription": "Découvrez le Bénin, berceau du vaudou, de traditions vivantes et de paysages variés. Vivez une immersion authentique en Afrique de l'Ouest !",
+  "visible": true,
   "regions": [
-    "Afrique"
-  ]
-} 
+    {
+      "nom": "Afrique"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/nWATq01ETfacc5Kvamyc.jpg",
+    "alt": "Image de la destination \"Bénin\""
+  }
+}

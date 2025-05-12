@@ -1,11 +1,18 @@
 {
-  "nom": "Bolivie",
-  "chapkaZone": 2,
+  "titre": "Bolivie",
+  "slug": "bolivie-plateaux-et-cultures-andines",
+  "chapka": "2",
   "iso": "BOL",
   "interjection": "",
-  "meta_description": "",
-  "content_slug": "",
+  "metaDescription": "Découvrez la Bolivie, pays de hauts plateaux, de cultures andines et de paysages à couper le souffle. Vivez une immersion authentique en Amérique du Sud !",
+  "visible": true,
   "regions": [
-    "Amérique du Sud"
-  ]
-} 
+    {
+      "nom": "Amérique du Sud"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/0hJyalh5TQ620yIh3aeP.jpg",
+    "alt": "Image de la destination \"Bolivie\""
+  }
+}

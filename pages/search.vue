@@ -3,7 +3,7 @@
     class="py-0 my-0"
     fluid
   >
-    <SearchHeroSection>
+    <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
     <v-container>
@@ -116,6 +116,8 @@ const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
 
+const fetchedDestination = ref(null)
+
 const parsedDateRange = computed(() => {
   const [start, end] = routeQuery.value.dateRange.split('-') || []
   return `${dayjs(start).format('MMMM YYYY')} - ${dayjs(end).format('MMMM YYYY')}`
@@ -130,10 +132,13 @@ const { data: voyages } = useAsyncData(
 
     if (!destination && !travelType && !dateRange) {
       console.log('Aucun filtre — retour vide')
+      fetchedDestination.value = null
       return []
     }
 
     const allVoyages = await queryCollection('voyages').all()
+    fetchedDestination.value = await queryCollection('destinations').where('titre', '==', route.query.destination).select('titre', 'interjection').first()
+    // console.log('destination found', destinations)
 
     const getFilteredByDestination = (allVoyages, destination) => {
       return allVoyages.filter(v => v.destinations?.includes(destination))
@@ -202,7 +207,7 @@ const { data: voyages } = useAsyncData(
       const filteredByType = getFilteredByType(filteredByDestination, travelType)
       return getFilteredByDate(filteredByType, dateRange)
     }
-
+    fetchedDestination.value = null
     return []
   },
   {
