@@ -1,0 +1,18 @@
+{
+  "titre": "Algérie",
+  "slug": "algerie",
+  "chapka": "2",
+  "iso": "DZA",
+  "interjection": "en",
+  "metaDescription": "",
+  "visible": true,
+  "regions": [
+    {
+      "nom": "Afrique"
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/RKy5I9j0TtiK5k7zzqJr.jpg",
+    "alt": "Image de la destination \"Algérie\""
+  }
+}

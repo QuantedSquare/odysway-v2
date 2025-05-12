@@ -19,15 +19,19 @@ const voyageChoices = voyageFiles
   .filter(Boolean) as [string, ...string[]]
 // console.log('voyageChoices', voyageChoices)
 
-const paysChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/pays/countriesList.json'), 'utf-8')) as Array<{ slug: string }>)
-  .map(country => country.slug) as [string, ...string[]]
-// console.log('paysChoices', paysChoices)
-
 const destinationDir = path.resolve(__dirname, 'content/destinations')
-const destinationFiles = fs.readdirSync(destinationDir)
-const destinationChoices = destinationFiles
-  .filter(file => file.endsWith('.json') && !file.startsWith('regions'))
-  .map(file => JSON.parse(fs.readFileSync(path.join(destinationDir, file), 'utf-8')).nom) as [string, ...string[]]
+const destinationFolders = fs.readdirSync(destinationDir).filter(
+  name => fs.statSync(path.join(destinationDir, name)).isDirectory(),
+)
+const destinationChoices = destinationFolders
+  .map((folder) => {
+    const jsonPath = path.join(destinationDir, folder, `${folder}.json`)
+    if (fs.existsSync(jsonPath)) {
+      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).titre
+    }
+    return null
+  })
+  .filter(Boolean) as [string, ...string[]]
 console.log('destinationChoices', destinationChoices)
 
 // TODO
@@ -203,7 +207,7 @@ export default defineContentConfig({
     destinations: defineCollection({
       type: 'data',
       source: {
-        include: 'destinations/*.json',
+        include: 'destinations/*/**.json',
         exclude: ['destinations/regions.json'],
       },
       schema: z.object({
@@ -223,6 +227,32 @@ export default defineContentConfig({
         }).describe('Image de la destination'),
       }),
     }),
+    destinationsContent: defineCollection(
+      asSeoCollection({
+        type: 'page',
+        source: 'destinations/*/**.md',
+        schema: z.object({
+          tags: z.array(z.string()),
+          image: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
+          date: z.date(),
+          author: z.string(),
+          authorPhoto: z.string(),
+          authorRole: z.string(),
+          published: z.boolean(),
+          publishedAt: z.date(),
+          displayedImg: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
+          blogType: z.string(),
+          badgeColor: z.string(),
+          readingTime: z.string(),
+        }),
+      }),
+    ),
     page_voyage_fr: defineCollection({
       type: 'data',
       source: 'textes/fr/voyage.json', // #Todo, modifier par voyages.json

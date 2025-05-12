@@ -11,6 +11,8 @@
               v-model="destinationChoice"
               label="Destinations"
               :items="destinationsList"
+              :item-title="item => item.title"
+              :item-value="item => item.value"
               clearable
               :prepend-inner-icon="mdiMapMarkerOutline"
               hide-details
@@ -93,22 +95,28 @@ import { mdiMapMarkerOutline, mdiTargetAccount, mdiCalendarBlankOutline } from '
 import dayjs from 'dayjs'
 
 const router = useRouter()
+const route = useRoute()
 const dateMenu = ref(false)
 
 // Replace individual refs with useState
 const date = useState('searchDate', () => [])
 
 const travelTypeChoice = useState('searchTravelType', () => null)
-const destinationChoice = useState('searchDestination', () => null)
+const destinationChoice = useState('searchDestination', () => route.query.destination || null)
 
 const { data: destinations, status } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image').all()
+  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image', 'stem').all()
 })
-
 const destinationsList = computed(() => {
-  return destinations.value?.map(d => d.titre)
+  return destinations.value?.map((d) => {
+    return {
+      title: d.titre,
+      value: d.stem.split('/')[1],
+    }
+  })
 })
 
+//
 const travelTypes = [
   'Voyage individuel', 'Voyage en groupe',
 ]

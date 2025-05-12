@@ -103,6 +103,14 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-container>
+      <v-row v-if="fetchedDestinationContentStatus === 'success'">
+        <ContentRenderer
+          v-if="fetchedDestinationContent"
+          :value="fetchedDestinationContent"
+        />
+      </v-row>
+    </v-container>
   </v-container>
 </template>
 
@@ -118,12 +126,23 @@ const routeQuery = computed(() => route.query)
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('titre', '==', route.query.destination).select('titre', 'interjection').first()
+    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).select('titre', 'interjection').first()
   }
   return null
 }, {
   watch: [routeQuery],
 })
+const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
+  if (route.query.destination) {
+    return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '=', true).first()
+  }
+  return null
+}, {
+  watch: [routeQuery],
+
+})
+console.log('fetchedDestinationContent', fetchedDestinationContent.value)
+provide('page', fetchedDestinationContent)
 
 const parsedDateRange = computed(() => {
   const [start, end] = routeQuery.value.dateRange.split('-') || []
@@ -133,7 +152,12 @@ const parsedDateRange = computed(() => {
 const { data: voyages } = useAsyncData(
   `search-${JSON.stringify(route.query)}`,
   async () => {
-    const destination = route.query.destination || null
+    let destination = null
+
+    if (route.query.destination) {
+      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).select('titre').first()
+      destination = titre
+    }
     const travelType = route.query.travelType || null
     const dateRange = route.query.dateRange || null
 
@@ -143,8 +167,8 @@ const { data: voyages } = useAsyncData(
       return allVoyages
     }
 
-    const getFilteredByDestination = (allVoyages, destination) => {
-      return allVoyages.filter(v => v.destinations?.includes(destination))
+    const getFilteredByDestination = (allVoyages, destinationParam) => {
+      return allVoyages.filter(v => v.destinations?.includes(destinationParam))
     }
 
     const getFilteredByType = (allVoyages, travelType) => {
@@ -214,6 +238,7 @@ const { data: voyages } = useAsyncData(
   },
   {
     watch: [routeQuery],
+
   },
 )
 

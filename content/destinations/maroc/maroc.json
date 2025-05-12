@@ -1,0 +1,16 @@
+{
+  "titre": "Maroc",
+  "chapka": 2,
+  "iso": "MA",
+  "interjection": "au",
+  "metaDescription": "Envie de découvrir le Maroc autrement ? Découvrez nos voyages uniques : plongez au coeur de sa culture, parcourez ses paysages... Vivez l'expérience authentique du Maroc !",
+  "visible": true,
+  "content_slug": "maroc",
+  "regions": [
+    "Afrique"
+  ],
+  "image": {
+    "src": "/images/destinations/aDHTZbgDQHGx1q3davZC.jpg",
+    "alt": "Image de la destination \"Maroc\""
+  }
+}

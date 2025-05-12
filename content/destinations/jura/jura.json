@@ -1,0 +1,17 @@
+{
+  "titre": "Jura",
+  "chapka": 1,
+  "iso": "FR",
+  "interjection": "dans le",
+  "metaDescription": "Partez explorer la région du Jura avec Oysway ! Découvrez la richesse de savoir faire et du terroir de la région.",
+  "visible": false,
+  "content_slug": "",
+  "regions": [
+    "Europe",
+    "France"
+  ],
+  "image": {
+    "src": "/images/destinations/Yx1zY7OQQDOtynI9cOUp.jpg",
+    "alt": "Image de la destination \"Jura\""
+  }
+}

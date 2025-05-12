@@ -63,16 +63,31 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true })
 }
 
+// Helper to find the first non-empty content_slug (root or destinations)
+function getFirstContentSlug(p) {
+  if (p.content_slug && p.content_slug.trim()) return p.content_slug.trim()
+  if (Array.isArray(p.destinations)) {
+    for (const dest of p.destinations) {
+      if (dest.content_slug && dest.content_slug.trim()) return dest.content_slug.trim()
+    }
+  }
+  return ''
+}
+
+const blogDir = path.resolve(__dirname, '../../content/blog')
+const templatePath = path.resolve(__dirname, '../template.md')
+
 pays.forEach((p) => {
   const nom = p.nom
   const slug = slugify(nom, { lower: true })
   const imageFilename = generateImageFilename(p.image, slug)
   const obj = {
-    nom: nom,
-    chapkaZone: p.zone_chapka,
+    titre: nom,
+    chapka: p.zone_chapka,
     iso: p.iso,
     interjection: p.interjection,
-    meta_description: p.meta_description,
+    metaDescription: p.meta_description,
+    visible: p.top,
     content_slug: p.content_slug,
     regions: getRegionsForDestination(p),
     image: {
@@ -80,7 +95,29 @@ pays.forEach((p) => {
       alt: `Image de la destination "${nom}"`,
     },
   }
-  fs.writeFileSync(path.join(outputDir, `${slug}.json`), JSON.stringify(obj, null, 2), 'utf-8')
+
+  // Create the country folder
+  const countryDir = path.join(outputDir, slug)
+  if (!fs.existsSync(countryDir)) {
+    fs.mkdirSync(countryDir, { recursive: true })
+  }
+
+  // Write the JSON file inside the country folder
+  fs.writeFileSync(path.join(countryDir, `${slug}.json`), JSON.stringify(obj, null, 2), 'utf-8')
+
+  // Find the content_slug (root or destinations)
+  const contentSlug = getFirstContentSlug(p)
+  let mdName = contentSlug ? `${contentSlug}.md` : `${slug}.md`
+  let blogMdPath = contentSlug ? path.join(blogDir, `${contentSlug}.md`) : null
+  let destMdPath = path.join(countryDir, mdName)
+
+  // Copy the blog file if it exists, otherwise copy the template
+  if (blogMdPath && fs.existsSync(blogMdPath)) {
+    fs.renameSync(blogMdPath, destMdPath)
+  }
+  else {
+    fs.copyFileSync(templatePath, destMdPath)
+  }
 })
 
-console.log('Done! Wrote region.json and per-destination JSON files.')
+console.log('Done! Wrote region.json and per-destination folders with JSON and markdown files.')
