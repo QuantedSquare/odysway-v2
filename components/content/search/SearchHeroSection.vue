@@ -9,8 +9,17 @@
         md="4"
         class="d-flex align-center justify-center"
       >
-        <h1 class="custom-hero-title">
-          {{ destination ? `Nos voyages ${destination.interjection} ${destination.titre}` : 'Trouvez votre prochain voyage' }}
+        <h1
+          v-if="isHydrated && destination"
+          class="custom-hero-title"
+        >
+          {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+        </h1>
+        <h1
+          v-else
+          class="custom-hero-title"
+        >
+          Trouvez votre prochain voyage
         </h1>
       </v-col>
       <v-col
@@ -44,6 +53,10 @@ defineProps({
     type: Object,
     default: null,
   },
+})
+const isHydrated = ref(false)
+onMounted(() => {
+  isHydrated.value = true
 })
 </script>
 

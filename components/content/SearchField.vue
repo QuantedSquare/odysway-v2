@@ -74,6 +74,7 @@
             <v-btn
               height="56"
               block
+              :loading="status === 'pending'"
               color="secondary"
               class="text-none text-body-1"
               @click="search"
@@ -100,12 +101,12 @@ const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => null)
 
-const { data: destinations } = await useAsyncData('destinations', () => {
+const { data: destinations, status } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image').all()
 })
 
 const destinationsList = computed(() => {
-  return destinations.value.map(d => d.titre)
+  return destinations.value?.map(d => d.titre)
 })
 
 const travelTypes = [
@@ -117,16 +118,14 @@ const formattedDate = computed(() => {
 })
 
 function search() {
-  if (destinationChoice.value) {
-    router.push({
-      path: '/search',
-      query: {
-        destination: destinationChoice.value ? destinationChoice.value : null,
-        travelType: travelTypeChoice.value ? travelTypeChoice.value : null,
-        dateRange: date.value.length > 0 ? `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}` : null,
-      },
-    })
-  }
+  router.push({
+    path: '/search',
+    query: {
+      destination: destinationChoice.value ? destinationChoice.value : null,
+      travelType: travelTypeChoice.value ? travelTypeChoice.value : null,
+      dateRange: date.value.length > 0 ? `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}` : null,
+    },
+  })
 }
 </script>
 
