@@ -27,7 +27,7 @@
             color="secondary-light-2"
             density="comfortable"
           >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3">
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
               {{ routeQuery.destination }}
             </span>
           </v-chip>
@@ -38,7 +38,7 @@
             color="secondary-light-2"
             density="comfortable"
           >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3">
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
               {{ routeQuery.travelType }}
             </span>
           </v-chip>
@@ -49,7 +49,7 @@
             color="secondary-light-2"
             density="comfortable"
           >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3">
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
               {{ parsedDateRange }}
             </span>
           </v-chip>
@@ -126,7 +126,7 @@ const routeQuery = computed(() => route.query)
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).select('titre', 'interjection').first()
+    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).select('titre', 'interjection', 'image').first()
   }
   return null
 }, {
