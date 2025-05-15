@@ -133,6 +133,24 @@ export default defineContentConfig({
         showOnHome: z.boolean().describe('Indique si la catégorie doit être affichée sur la page d\'accueil'),
       }),
     }),
+    experiences: defineCollection({
+      type: 'data',
+      source: {
+        include: 'experiences/**.json',
+        exclude: ['experiences/experiences.json'],
+      },
+      schema: z.object({
+        title: z.string().describe('Titre de l\'experience'),
+        slug: z.string().describe('Slug de l\'experience'),
+        discoveryTitle: z.string().describe('Titre de l\'experience pour la page de découverte'),
+        seoTitle: z.string().describe('Titre de l\'experience pour le SEO'),
+        image: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }).describe('Image de l\'experience'),
+        showOnHome: z.boolean().describe('Indique si l\'experience doit être affichée sur la page d\'accueil'),
+      }),
+    }),
     tops: defineCollection({
       type: 'data',
       source: 'tops/**.json',

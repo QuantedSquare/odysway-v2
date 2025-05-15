@@ -44,6 +44,7 @@
           alt="Image section voyager autrement"
           loading="lazy"
           height="100%"
+          max-height="550"
           cover
           rounded="xl"
         />

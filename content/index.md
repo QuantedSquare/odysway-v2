@@ -50,47 +50,12 @@ au coeur du voyage
 
 ::
 
-::horizontal-carousel
+::experience-carousel
 #title
 [Laissez-vous inspirer]{style="color: rgba(43, 76, 82, 1)"}
-
-#carousel-item
-  :::thematique-col-card
-  ---
-  slug: chemins-vers-soi
-  image: /images/Maroc-voyage-spirituel.jpg
-  title: Plongée dans la culture Indienne
-  ---
-  :::
-  :::thematique-col-card
-  ---
-  slug: echappees-sauvages
-  image: /images/montagne.jpg
-  title: Échapées sauvages
-  ---
-  :::
-  :::thematique-col-card
-  ---
-  slug: immersions-locales
-  image: /images/Pérou-voyage-spirituel.jpg
-  title: Immersions locales
-  ---
-  :::
-  :::thematique-col-card
-  ---
-  slug: regard-faune
-  image: /images/AdobeStock_175948238.webp
-  title: Regard sur la faune
-  ---
-  :::
-  :::thematique-col-card
-  ---
-  slug: sentiers-aventures
-  image: /images/Laponie-(1).webp
-  title: Sentiers d'aventure
-  ---
-  :::
 ::
+
+
 
 ::color-container
 ---
@@ -194,7 +159,7 @@ color: white
 ---
   ::text-image-container
   ---
-  imageSrc: /images/voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg
+  imageSrc: /images/categories/a5ddc6b9296e008a9a0912e359a10e8bd5c16a02.jpg
   imageDesktopRight: true
   displayImageMobile: true
   displayCtaButton: true
@@ -271,6 +236,11 @@ color: grey-light
   :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 ::
+::
+
+::thematique-carousel
+#title
+Toutes nos thématiques
 ::
 
 ::color-container

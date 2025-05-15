@@ -10,7 +10,7 @@
       transition="fade-transition"
     >
       <NuxtLink
-        :to="`/thematiques/${slug}`"
+        :to="`/${type}/${slug}`"
         class="image-wrapper"
         :class="{
           'default-expanded': width <= 960,
@@ -80,6 +80,10 @@ defineProps({
   description: {
     type: String,
     default: 'Cliquez pour en apprendre plus',
+  },
+  type: {
+    type: String,
+    required: true,
   },
 })
 </script>

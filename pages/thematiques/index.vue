@@ -11,6 +11,7 @@
           :slug="category.slug"
           :image="category.image.src"
           :title="category.title"
+          type="categories"
           :description="category.discoveryTitle"
         />
       </template>
