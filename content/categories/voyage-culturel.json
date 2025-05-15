@@ -1,10 +1,11 @@
 {
   "title": "Séjour culturel",
   "slug": "sejours-culturels",
-  "titre_seo": "Nos voyages culturels",
+  "discoveryTitle": "Découvrez nos voyages culturels",
+  "seoTitle": "Nos voyages culturels",
   "image": {
     "src": "/images/categories/TMDs5ihqSuabZD5sWfzg.jpg",
     "alt": "Séjour culturel"
   },
   "showOnHome": false
-} 
+}

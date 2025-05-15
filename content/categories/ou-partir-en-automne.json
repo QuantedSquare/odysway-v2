@@ -1,10 +1,11 @@
 {
   "title": "En automne",
   "slug": "ou-partir-en-automne",
-  "titre_seo": "Où partir en automne ?",
+  "discoveryTitle": "Découvrez nos voyages à vivre en automne",
+  "seoTitle": "Où partir en automne ?",
   "image": {
     "src": "/images/categories/xdFuasCrT1aoI91NTL2y.jpg",
     "alt": "En automne"
   },
   "showOnHome": false
-} 
+}

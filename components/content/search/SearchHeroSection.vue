@@ -10,10 +10,16 @@
         class="d-flex align-center justify-center"
       >
         <h1
-          v-if="isHydrated && destination"
+          v-if="isHydrated && destination && !isCategory"
           class="custom-hero-title"
         >
           {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+        </h1>
+        <h1
+          v-else-if="isHydrated && destination && isCategory"
+          class="custom-hero-title"
+        >
+          {{ destination.discoveryTitle }}
         </h1>
         <h1
           v-else
@@ -61,31 +67,19 @@
 import { useImage } from '#imports'
 
 const img = useImage()
-const { destination } = defineProps({
+const { destination, isCategory } = defineProps({
   destination: {
     type: Object,
     default: null,
+  },
+  isCategory: {
+    type: Boolean,
+    default: false,
   },
 })
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true
-})
-
-const displayedImg = computed(() => {
-  console.log('destination', destination)
-  if (destination && isHydrated.value) {
-    return {
-      src: destination.image.src,
-      alt: destination.image.alt,
-    }
-  }
-  else {
-    return {
-      src: '/images/homeHero.jpeg',
-      alt: 'Trouvez votre prochain voyage',
-    }
-  }
 })
 </script>
 
@@ -116,7 +110,7 @@ const displayedImg = computed(() => {
 }
 .custom-hero-title {
 font-weight: 700;
-font-size: 58px;
-line-height: 60px;
+font-size: 50px;
+line-height: 50px;
 }
 </style>

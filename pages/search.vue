@@ -264,11 +264,7 @@ const voyagesWithCta = computed(() => {
 function reinitiliazeFilter() {
   router.push({
     path: '/search',
-    query: {
-      destination: null,
-      travelType: null,
-      dateRange: null,
-    },
+    query: null,
   })
 }
 </script>

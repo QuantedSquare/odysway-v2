@@ -145,27 +145,32 @@ function getCategories() {
         const imagePath = path.join(IMAGE_DOWNLOAD_DIR, imageFilename)
         downloadImage(imageUrl, imagePath)
         return {
-          title: category.titre,
-          slug: category.content_slug,
-          discoverTitle: category.titre_discover,
-          titre_seo: category.titre_seo,
-          image: {
-            src: imagePath,
-            alt: category.titre,
+          slug: category.slug,
+          content: {
+            title: category.titre,
+            slug: category.content_slug,
+            discoveryTitle: turndown.turndown(category.discover_title).replace(/\n-+$/, ''),
+            seoTitle: category.titre_seo,
+            image: {
+              src: imagePath.replace('../public', ''),
+              alt: category.titre,
+            },
+            showOnHome: category.show_on_home,
           },
-          showOnHome: category.show_on_home,
         }
       })
       console.log('Categories json read result ===> ', data)
-      fs.writeFileSync('./butter-data/categories.json', JSON.stringify(data, null, 2))
+      data.forEach((category) => {
+        fs.writeFileSync(`./butter-data/categories/${slugify(category.slug, { lower: true })}.json`, JSON.stringify(category.content, null, 2))
+      })
       return data
     })
     .catch(error => console.error(error))
 }
 
 // getVoyages()
-getDatesVoyagesGroups()
-// getCategories()
+// getDatesVoyagesGroups()
+getCategories()
 
 function getReviews() {
   axios.get(`https://api.buttercms.com/v2/pages/*/avis/?&auth_token=${token}`)

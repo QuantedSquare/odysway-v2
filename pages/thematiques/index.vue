@@ -1,5 +1,5 @@
 <template>
   <div>
-    hello from thematiques
+    <h1>Thematiques</h1>
   </div>
 </template>

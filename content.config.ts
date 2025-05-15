@@ -121,16 +121,16 @@ export default defineContentConfig({
         include: 'categories/**.json',
         exclude: ['categories/categories.json'],
       },
-      // AJOUT TEXT
       schema: z.object({
-        title: z.string(),
-        slug: z.string(),
-        titre_seo: z.string(),
+        title: z.string().describe('Titre de la catégorie'),
+        slug: z.string().describe('Slug de la catégorie'),
+        discoveryTitle: z.string().describe('Titre de la catégorie pour la page de découverte'),
+        seoTitle: z.string().describe('Titre de la catégorie pour le SEO'),
         image: z.object({
           src: z.string().editor({ input: 'media' }),
           alt: z.string(),
-        }),
-        showOnHome: z.boolean(),
+        }).describe('Image de la catégorie'),
+        showOnHome: z.boolean().describe('Indique si la catégorie doit être affichée sur la page d\'accueil'),
       }),
     }),
     tops: defineCollection({

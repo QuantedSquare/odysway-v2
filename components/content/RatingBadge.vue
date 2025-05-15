@@ -6,7 +6,7 @@
     :height="mdAndUp ? 46 : 36"
     class="btn-shadow"
   >
-    <div class="d-flex align-center mt-1">
+    <div class="d-flex align-center">
       <v-icon
         :icon="mdiStar"
         color="yellow-rating"
@@ -25,7 +25,7 @@
     rounded="pill"
     :height="mdAndUp ? 46 : 36"
   >
-    <span class="mt-1">
+    <span>
       Nouveau
     </span>
   </v-btn>

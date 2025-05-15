@@ -126,13 +126,19 @@ const formattedDate = computed(() => {
 })
 
 function search() {
+  const query = {}
+  if (destinationChoice.value) {
+    query.destination = destinationChoice.value
+  }
+  if (travelTypeChoice.value) {
+    query.travelType = travelTypeChoice.value
+  }
+  if (date.value.length > 0) {
+    query.dateRange = `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}`
+  }
   router.push({
     path: '/search',
-    query: {
-      destination: destinationChoice.value ? destinationChoice.value : null,
-      travelType: travelTypeChoice.value ? travelTypeChoice.value : null,
-      dateRange: date.value.length > 0 ? `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}` : null,
-    },
+    query,
   })
 }
 </script>

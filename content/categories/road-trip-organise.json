@@ -1,10 +1,11 @@
 {
   "title": "Road trip",
   "slug": "roadtrip-organise",
-  "titre_seo": "Nos road trips organisés",
+  "discoveryTitle": "Découvrez nos voyages en road-trip",
+  "seoTitle": "Nos road trips organisés",
   "image": {
     "src": "/images/categories/xPv8ono8ToKBgiwWIL53.jpg",
     "alt": "Road trip"
   },
   "showOnHome": false
-} 
+}

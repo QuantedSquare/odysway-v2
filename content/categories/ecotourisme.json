@@ -1,10 +1,11 @@
 {
-  "title": "Écotourisme",
+  "title": " Écotourisme",
   "slug": "ecotourisme",
-  "titre_seo": "Écotourisme",
+  "discoveryTitle": "Découvrez nos voyages éco-touristiques",
+  "seoTitle": "Écotourisme",
   "image": {
     "src": "/images/categories/wn39B2U4QYSlrXxIcW6e.jpg",
-    "alt": "Écotourisme"
+    "alt": " Écotourisme"
   },
   "showOnHome": false
-} 
+}

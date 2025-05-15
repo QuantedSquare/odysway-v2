@@ -1,10 +1,11 @@
 {
   "title": "Solidaire",
   "slug": "voyage-solidaire",
-  "titre_seo": "Nos voyages solidaires",
+  "discoveryTitle": "Découvrez nos voyages solidaires",
+  "seoTitle": "Nos voyages solidaires",
   "image": {
     "src": "/images/categories/oc8MJq0wSGieXa9WNA6t.jpg",
     "alt": "Solidaire"
   },
   "showOnHome": false
-} 
+}

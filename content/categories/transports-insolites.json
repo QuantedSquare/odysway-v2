@@ -1,10 +1,11 @@
 {
   "title": "Transports insolites",
-  "slug": "",
-  "titre_seo": "Découvrez nos voyages avec transports insolites",
+  "slug": "transports-insolites",
+  "discoveryTitle": "Découvrez nos voyages aux transports insolites",
+  "seoTitle": "Découvrez nos voyages avec transports insolites",
   "image": {
     "src": "/images/categories/3WxkfEuVSe2aX16R4lsk.jpg",
     "alt": "Transports insolites"
   },
   "showOnHome": false
-} 
+}

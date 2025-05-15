@@ -1,10 +1,11 @@
 {
   "title": "Séjour à la ferme",
   "slug": "sejour-ferme",
-  "titre_seo": "Nos voyages en immersion dans une ferme",
+  "discoveryTitle": "Découvrez nos voyages en immersion à la ferme",
+  "seoTitle": "Nos voyages en immersion dans une ferme",
   "image": {
     "src": "/images/categories/3NkKStL1QbK1GHDoorMY.jpg",
     "alt": "Séjour à la ferme"
   },
   "showOnHome": false
-} 
+}
