@@ -49,17 +49,7 @@
             key="description"
             class="description text-shadow text-center mx-2"
           >
-            Cliquez pour en apprendre plus à propos des {{ title }}
-            <client-only>
-              <!-- <v-btn
-                v-if="isMobile"
-                class="explore-btn mt-4"
-                :to="`/thematiques/${slug}`"
-                @click.stop
-              >
-                Explorez
-              </v-btn> -->
-            </client-only>
+            {{ description }}
           </p>
         </TransitionGroup>
       </NuxtLink>
@@ -73,7 +63,6 @@ import { useImage } from '#imports'
 
 const imgComp = useImage()
 const { width } = useDisplay()
-const isMobile = ref(false)
 const isHovered = ref(false)
 defineProps({
   slug: {
@@ -87,6 +76,10 @@ defineProps({
   title: {
     type: String,
     required: true,
+  },
+  description: {
+    type: String,
+    default: 'Cliquez pour en apprendre plus',
   },
 })
 </script>

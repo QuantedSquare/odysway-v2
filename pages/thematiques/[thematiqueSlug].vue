@@ -2,6 +2,7 @@
   <v-container>
     <v-row>
       <SearchHeroSection
+        v-if="category"
         :destination="category"
         :is-category="true"
       />
@@ -16,7 +17,6 @@
         xl="3"
       >
         <SearchVoyageCard
-
           :voyage="voyage"
         />
       </v-col>
