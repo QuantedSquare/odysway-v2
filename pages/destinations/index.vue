@@ -2,7 +2,7 @@
   <div>
     <HorizontalCarousel v-if="categories">
       <template #title>
-        <h1>Toutes nos thématiques</h1>
+        <h1>Toutes nos destinations</h1>
       </template>
       <template #carousel-item>
         <ThematiqueColCard
@@ -11,14 +11,14 @@
           :slug="category.slug"
           :image="category.image.src"
           :title="category.title"
-          type="thematiques"
+          type="destinations"
           :description="category.discoveryTitle"
         />
       </template>
     </HorizontalCarousel>
 
     <v-divider thickness="2" />
-    <div v-if="categoriesWithVoyages">
+    <!-- <div v-if="categoriesWithVoyages">
       <HorizontalCarousel
         v-for="category in categoriesWithVoyages"
         v-show="category.voyages.length > 0"
@@ -53,13 +53,13 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
-const { data: categories } = useAsyncData('categories', () => {
-  return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
+const { data: destinations } = useAsyncData('destinations', () => {
+  return queryCollection('destinations').select('id', 'titre', 'content_slug', 'discoveryTitle', 'image').all()
 })
 
 const { data: voyages } = useAsyncData('voyages', () => {

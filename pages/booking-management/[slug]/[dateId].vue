@@ -60,8 +60,9 @@
               />
               <v-text-field
                 v-model="form.booked_seat"
-                label="Places réservées"
+                label="Places réservées (Non modifiable)"
                 type="number"
+                readonly
               />
               <v-divider class="my-2" />
               <v-row>
@@ -196,11 +197,22 @@
                   </v-icon>
                 </NuxtLink>
                 <v-spacer />
+
+                <v-btn
+                  icon
+                  color="primary"
+                  size="x-small"
+                  class="mx-2"
+                  @click="openPaymentDialog(traveler)"
+                >
+                  <v-icon>
+                    {{ mdiLinkEdit }}
+                  </v-icon>
+                </v-btn>
                 <v-btn
                   icon
                   color="error"
                   size="x-small"
-
                   @click="deleteTraveler(traveler.id)"
                 >
                   <v-icon>
@@ -260,12 +272,14 @@
         <v-chip
           v-if="form.published"
           color="green-light"
+          class="pb-1"
         >
           Publié
         </v-chip>
         <v-chip
           v-else
           color="red"
+          class="pb-1"
         >
           Non publié
         </v-chip>
@@ -278,13 +292,66 @@
         <DatesPricesItem :date="form" />
       </v-col>
     </v-row>
+
+    <!-- Payment Link Dialog -->
+    <v-dialog
+      v-model="paymentDialog"
+      max-width="400"
+    >
+      <v-card>
+        <v-card-title>Générer un lien de paiement</v-card-title>
+        <v-card-text>
+          <div v-if="selectedTraveler">
+            <div><b>Voyageur:</b> {{ selectedTraveler.name || selectedTraveler.email }}</div>
+            <v-select
+              v-model="paymentType"
+              :items="paymentTypes"
+              label="Type de paiement"
+              item-title="label"
+              item-value="value"
+            />
+            <v-text-field
+              v-if="paymentType === 'custom'"
+              v-model="customAmount"
+              label="Montant personnalisé (€)"
+              type="number"
+            />
+            <v-divider class="my-2" />
+            <div v-if="generatedLink">
+              <b>Lien généré :</b>
+              <v-text-field
+                v-model="generatedLink"
+                readonly
+                append-icon="mdi-content-copy"
+                @click:append="copyLink"
+              />
+            </div>
+          </div>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="primary"
+            @click="generateLink"
+          >
+            Générer
+          </v-btn>
+          <v-btn
+            text
+            @click="closePaymentDialog"
+          >
+            Fermer
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit } from '@mdi/js'
 
 definePageMeta({
   layout: 'booking',
@@ -294,7 +361,8 @@ const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug
 const dateId = route.params.dateId
-
+const config = useRuntimeConfig()
+console.log('=======config=======', config.public.siteURL)
 const includeCustomEvent = ref(false)
 const form = ref({})
 const bookedTravelers = ref([])
@@ -313,6 +381,18 @@ const dealUrl = ref('')
 const assigningDeal = ref(false)
 const assignDealError = ref('')
 const assignDealSuccess = ref(false)
+
+const paymentDialog = ref(false)
+const selectedTraveler = ref(null)
+const paymentType = ref('full')
+const customAmount = ref('')
+const generatedLink = ref('')
+const paymentTypes = [
+  { value: 'full', label: 'Faire payer entièrement' },
+  { value: 'deposit', label: 'Paiement de l\'acompte' },
+  { value: 'custom', label: 'Paiement custom' },
+  { value: 'balance', label: 'Paiement du solde' },
+]
 
 const fetchDetails = async () => {
   // Fetch travel_date details
@@ -406,6 +486,42 @@ const deleteTraveler = async (id) => {
     method: 'DELETE',
   })
   await fetchDetails()
+}
+
+function openPaymentDialog(traveler) {
+  selectedTraveler.value = traveler
+  paymentType.value = 'full'
+  customAmount.value = ''
+  generatedLink.value = ''
+  paymentDialog.value = true
+}
+function closePaymentDialog() {
+  paymentDialog.value = false
+  selectedTraveler.value = null
+  generatedLink.value = ''
+}
+function generateLink() {
+  if (!selectedTraveler.value) return
+  const dealId = selectedTraveler.value.deal_id
+  let amountParam = ''
+  if (paymentType.value === 'custom') {
+    if (!customAmount.value) return
+    amountParam = `&amount=${customAmount.value}`
+  }
+  else {
+    amountParam = ''
+  }
+  let typeParam = `&type=${paymentType.value}`
+  if (paymentType.value === 'full') typeParam = '&type=full'
+  if (paymentType.value === 'deposit') typeParam = '&type=deposit'
+  if (paymentType.value === 'balance') typeParam = '&type=balance'
+  if (paymentType.value === 'custom') typeParam = '&type=custom'
+  generatedLink.value = `${config.public.siteURL}/checkout?&dealId=${dealId}${amountParam}${typeParam}`
+}
+function copyLink() {
+  if (generatedLink.value) {
+    navigator.clipboard.writeText(generatedLink.value)
+  }
 }
 
 onMounted(fetchDetails)

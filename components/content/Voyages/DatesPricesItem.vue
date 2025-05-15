@@ -43,7 +43,7 @@
           <v-chip
             color="primary"
           >
-            <span class="d-flex align-center ga-1">
+            <span class="d-flex align-center ga-1 mb-1">
               <v-icon>
                 {{ mdiAccountGroupOutline }}
               </v-icon>
@@ -54,7 +54,7 @@
             v-if="enrichedDate.include_flight"
             color="primary"
           >
-            <span class="d-flex align-center ga-1">
+            <span class="d-flex align-center ga-1 mb-1">
               <v-icon>
                 {{ mdiAirplane }}
               </v-icon>
@@ -65,7 +65,7 @@
             v-if="enrichedDate.early_bird"
             color="blue"
           >
-            <span class="d-flex align-center ga-1">
+            <span class="d-flex align-center ga-1 mb-1">
               <v-icon>
                 {{ mdiBird }}
               </v-icon>
@@ -76,7 +76,7 @@
             v-if="enrichedDate.last_minute"
             color="yellow"
           >
-            <span class="d-flex align-center ga-1">
+            <span class="d-flex align-center ga-1 mb-1">
               <v-icon>
                 {{ mdiClockStarFourPointsOutline }}
               </v-icon>
@@ -87,7 +87,7 @@
             v-if="enrichedDate.badges.length > 0"
             color="green-light"
           >
-            <span class="d-flex align-center ga-1">
+            <span class="d-flex align-center ga-1 mb-1">
               <v-icon>
                 {{ mdiCalendarHeart }}
               </v-icon>

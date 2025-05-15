@@ -4,8 +4,7 @@ export function useDates() {
 
   const getDates = async () => {
     const res = await apiRequest(`/booking/${route.params.voyageSlug}/dates`)
-    console.log('dates fetched', res)
-    dates.value = res
+    dates.value = res.filter(date => date.published)
   }
 
   watch(route, () => {

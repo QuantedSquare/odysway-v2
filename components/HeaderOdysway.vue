@@ -3,8 +3,9 @@
     elevation="0"
     mobile
     height="90"
-    class="px-4 app-bar-shadow"
-    rounded="lg"
+    class="px-4"
+    :class="!model ? 'app-bar-shadow' : ''"
+
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"
   >

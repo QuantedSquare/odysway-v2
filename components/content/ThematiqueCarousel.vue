@@ -13,7 +13,7 @@
           :image="category.image.src"
           :title="category.title"
           :description="category.discoveryTitle"
-          type="categories"
+          type="thematiques"
         />
       </template>
     </HorizontalCarousel>

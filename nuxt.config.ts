@@ -5,6 +5,7 @@ import { defineOrganization } from 'nuxt-schema-org/schema'
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
+    '@nuxtjs/mdc',
     '@nuxt/fonts',
     '@nuxtjs/seo',
     '@nuxt/content',

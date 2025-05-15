@@ -33,16 +33,14 @@
               avatar-size="62"
               :name="review.author"
             />
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column text-truncate">
               <span class="text-h5"> {{ review.author }}</span>
               <NuxtLink
                 v-if="review.voyageTitle && review.voyageSlug"
                 :to="`/voyages/${review.voyageSlug}`"
-                class="text-body-2 text-primary"
+                class="text-body-2 text-primary text-truncate pb-2"
               >
-                <span class="text-truncate">
-                  {{ review.voyageTitle }}
-                </span>
+                {{ review.voyageTitle }}
               </NuxtLink>
             </div>
           </v-card-title>
@@ -60,7 +58,10 @@
           class="text-h5 font-weight-bold text-primary max-lines overflow-y-auto mb-10 mb-md-0"
           style="max-height: 250px;"
         >
-          "{{ review.text }}"
+          <MDC
+            :value="formatReviewText(review.text)"
+            tag="article"
+          />
         </v-card-text>
       </v-sheet>
     </v-lazy>
@@ -73,6 +74,9 @@ import { mdiStar } from '@mdi/js'
 const { data: reviews, status } = useAsyncData('reviews-home', () => {
   return queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
 })
+function formatReviewText(text) {
+  return text.replace(/\\n|\n/g, '<br>')
+}
 </script>
 
 <style scoped>

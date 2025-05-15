@@ -16,9 +16,6 @@ export default defineEventHandler(async (event) => {
     if (body[key] !== undefined) updateFields[key] = body[key]
   }
   // Convert badges from string to array if needed
-  if (typeof updateFields.badges === 'string') {
-    updateFields.badges = updateFields.badges.split(',').map(b => b.trim()).filter(Boolean)
-  }
 
   const { data, error } = await supabase
     .from('travel_dates')

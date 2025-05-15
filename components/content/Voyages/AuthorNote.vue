@@ -4,7 +4,10 @@
       {{ page.authorNote.title }}
     </h4>
     <p class="text-subtitle-1 text-md-h5 font-weight-regular">
-      {{ authorNote.text }}
+      <MDC
+        :value="authorNote.text"
+        tag="article"
+      />
     </p>
 
     <div

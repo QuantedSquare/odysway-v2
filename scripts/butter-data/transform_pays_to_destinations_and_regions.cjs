@@ -22,7 +22,9 @@ function getRegionsForDestination(p) {
   if (regions.has('France')) {
     regions.add('Europe')
   }
-  return Array.from(regions).sort()
+  return Array.from(regions).sort().map(region => ({
+    nom: region,
+  }))
 }
 
 // Use the same logic as generateImageFilename from migration-pays.js

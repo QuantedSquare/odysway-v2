@@ -64,16 +64,17 @@
                     du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMMM ') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMMM') }} {{ dayjs(date.returnDate).format('YYYY') }}</span>
                   </span>
                 </div>
-
-                <v-chip
-                  variant="flat"
-                  :color="date.status.color"
-                  rounded="lg"
-                >
-                  <span class="text-caption font-weight-bold  text-white mb-1 px-1">
-                    {{ date.status.text }}
-                  </span>
-                </v-chip>
+                <div>
+                  <v-chip
+                    variant="flat"
+                    :color="date.status.color"
+                    rounded="lg"
+                  >
+                    <span class="text-caption font-weight-bold  text-white mb-1 px-1">
+                      {{ date.status.text }}
+                    </span>
+                  </v-chip>
+                </div>
               </div>
             </v-btn>
           </v-col>

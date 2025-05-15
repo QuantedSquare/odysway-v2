@@ -7,7 +7,14 @@
       >
         <slot name="title" />
       </v-col>
-      <slot name="cards" />
+      <ImageTitleColCard
+        v-for="category in categories"
+        :key="category.id"
+        :title="category.title"
+        :subtitle="category.discoveryTitle"
+        :image="category.image"
+        :link="'/thematiques/' + category.slug"
+      />
     </v-row>
   </v-container>
 </template>
@@ -16,4 +23,8 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
+const { data: categories } = useAsyncData('categories', () => {
+  return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '==', true).all()
+})
+console.log(categories.value)
 </script>

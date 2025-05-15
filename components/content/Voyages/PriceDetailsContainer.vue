@@ -12,7 +12,7 @@
               color="green"
               density="compact"
             >
-              <span class="font-weight-bold px-1">
+              <span class="font-weight-bold px-1 pb-1">
                 Le prix comprend
               </span>
             </v-chip>
@@ -38,7 +38,7 @@
               color="secondary"
               density="compact"
             >
-              <span class="font-weight-bold px-1">
+              <span class="font-weight-bold px-1 pb-1">
                 Le prix ne comprend pas
               </span>
             </v-chip>

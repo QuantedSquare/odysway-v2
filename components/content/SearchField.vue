@@ -16,7 +16,24 @@
               clearable
               :prepend-inner-icon="mdiMapMarkerOutline"
               hide-details
-            />
+              :menu-props="{ scrim: true, scrollStrategy: 'close', contentClass: 'rounded-md' }"
+            >
+              <!-- <template #item="{ props, item }">
+                  <v-img
+                    v-bind="props"
+                    :src="item.raw.image.src"
+                    width="120"
+                    height="120"
+                    cover
+                    rounded="lg"
+                    class="d-flex align-end pb-5 justify-center text-center"
+                  >
+                    <div class="text-white text-shadow font-weight-bold text-body-1">
+                      {{ item.raw.title }}
+                    </div>
+                  </v-img>
+                </template> -->
+            </v-autocomplete>
           </v-col>
           <v-col
             cols="12"
@@ -105,13 +122,15 @@ const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
 
 const { data: destinations, status } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image', 'stem').all()
+  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image', 'stem').where('visible', '=', true).all()
 })
 const destinationsList = computed(() => {
   return destinations.value?.map((d) => {
     return {
       title: d.titre,
       value: d.stem.split('/')[1],
+      image: d.image,
+      group: d.regions.map(r => r.nom).join(', '),
     }
   })
 })

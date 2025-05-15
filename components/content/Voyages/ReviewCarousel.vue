@@ -66,12 +66,12 @@
                   avatar-size="62"
                   :name="review.author"
                 />
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column text-truncate">
                   <span class="text-h5"> {{ review.author }}</span>
                   <NuxtLink
                     v-if="review.voyageTitle && review.voyageSlug"
                     :to="`/voyages/${review.voyageSlug}`"
-                    class="text-h6 text-grey text-truncate"
+                    class="text-h6 text-grey text-truncate pb-2"
                   > {{ review.voyageTitle }}</NuxtLink>
                 </div>
               </v-card-title>
@@ -85,8 +85,14 @@
                 />
               </v-card-subtitle>
             </v-card-item>
-            <v-card-text class="text-h5 font-weight-bold text-primary">
-              "{{ review.text }}
+            <v-card-text
+              class="text-h5 font-weight-bold text-primary max-lines overflow-y-auto mb-10 mb-md-0"
+              style="max-height: 250px;"
+            >
+              <MDC
+                :value="formatReviewText(review.text)"
+                tag="article"
+              />
             </v-card-text>
           </v-sheet>
         </v-col>
@@ -158,6 +164,10 @@ const scrollAmount = computed(() => {
 const { data: reviews } = await useAsyncData('reviews', () => {
   return queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
 })
+
+function formatReviewText(text) {
+  return text.replace(/\\n|\n/g, '<br>')
+}
 </script>
 
 <style scoped>

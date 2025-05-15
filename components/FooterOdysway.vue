@@ -69,13 +69,15 @@
           <div class="d-flex flex-column flex-md-row justify-start align-center align-md-center ga-2">
             <v-chip
               :text="footer.contact.phone"
-              color="primary"
-              class="font-weight-bold"
+              color="grey-light"
+              variant="flat"
+              class="font-weight-bold text-primary pb-1"
             />
             <v-chip
               :text="footer.contact.email"
-              color="primary"
-              class="font-weight-bold"
+              color="grey-light"
+              variant="flat"
+              class="font-weight-bold text-primary pb-1"
             />
           </div>
           <v-btn

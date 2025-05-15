@@ -4,7 +4,7 @@
     location="right"
     disable-resize-watcher
     mobile
-    class="zIndex mt-2"
+    class="zIndex "
   >
     <div>
       <!-- <v-btn
@@ -45,6 +45,11 @@ const drawerItems = ref([
     title: 'Nos Destinations',
     value: 'Nos Destinations',
     link: '/destinations',
+  },
+  {
+    title: 'Nos Experiences',
+    value: 'Nos Experiences',
+    link: '/experiences',
   },
   {
     title: 'Prochains départs',

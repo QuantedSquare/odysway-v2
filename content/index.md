@@ -91,64 +91,6 @@ color: primary
   ::card-grid
   #title
   Suivez vos envies
-
-  #cards
-      :::image-title-col-card
-      ---
-      image: /images/nature.jpeg
-      title: Nature
-      link: /thematiques/chemins-vers-soi
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/animals.jpeg
-      title: Animaux
-      link: /thematiques/echappees-sauvages
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/immersion.jpeg
-      title: Immersion
-      link: /thematiques/immersions-locales
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/culture.jpeg
-      title: Culture
-      link: /thematiques/regard-faune
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/animals.jpeg
-      title: Animaux
-      link: /thematiques/chemins-vers-soi
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/culture.jpeg
-      title: Culture
-      link: /thematiques/echappees-sauvages
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/nature.jpeg
-      title: Nature
-      link: /thematiques/immersions-locales
-      ---
-      :::
-      :::image-title-col-card
-      ---
-      image: /images/immersion.jpeg
-      title: Immersion
-      link: /thematiques/regard-faune
-      ---
-      :::
   ::
 ::
 
@@ -236,11 +178,6 @@ color: grey-light
   :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
   :::
 ::
-::
-
-::thematique-carousel
-#title
-Toutes nos thématiques
 ::
 
 ::color-container

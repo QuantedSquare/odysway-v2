@@ -2,7 +2,13 @@
   <v-container>
     <v-row>
       <v-col cols="8">
-        <h2>Dates pour le voyage: {{ slug }}</h2>
+        <NuxtLink
+          :to="`/voyages/${slug}`"
+          class="text-primary"
+        >
+          <h2>Dates pour le voyage: {{ slug }}<v-icon size="x-small">{{ mdiArrowRight }}</v-icon></h2>
+
+        </NuxtLink>
       </v-col>
       <v-col
         cols="4"
@@ -18,6 +24,7 @@
         <v-data-table
           :headers="headers"
           :items="dates"
+          :loading="loading"
           hover
           :sort-by="[{ key: 'departure_date', order: 'asc' }]"
           class="elevation-1"
@@ -31,6 +38,14 @@
               class="cursor-pointer"
               @click="goToDate(item.id)"
             >
+              <td>
+                <v-chip
+                  :color="item.published ? 'green-light' : 'red'"
+                  class="pb-1"
+                >
+                  {{ item.published ? 'Publiée' : 'Non publiée' }}
+                </v-chip>
+              </td>
               <td>{{ dayjs(item.departure_date).format('DD/MM/YYYY') }}</td>
               <td>{{ dayjs(item.return_date).format('DD/MM/YYYY') }}</td>
               <td>
@@ -93,8 +108,9 @@ import { useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye } from '@mdi/js'
+import { mdiContentCopy, mdiDotsVertical, mdiDelete, mdiEye, mdiArrowRight } from '@mdi/js'
 
+const loading = ref(false)
 dayjs.extend(isSameOrAfter)
 dayjs.extend(isSameOrBefore)
 
@@ -106,6 +122,7 @@ const slug = route.params.slug
 const dates = ref([])
 
 const headers = [
+  { title: 'Statut publication', key: 'published', sortable: true },
   { title: 'Date de départ', key: 'departure_date', sortable: true },
   { title: 'Date de retour', key: 'return_date', sortable: true },
   { title: 'Statut', key: 'displayed_status', sortable: true },
@@ -114,9 +131,11 @@ const headers = [
 ]
 
 const fetchDates = async () => {
+  loading.value = true
   const res = await fetch(`/api/v1/booking/${slug}/dates`)
   const data = await res.json()
   dates.value = data
+  loading.value = false
 }
 
 const statuses = ref([

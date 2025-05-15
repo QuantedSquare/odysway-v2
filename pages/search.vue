@@ -1,5 +1,6 @@
 <template>
   <v-container
+    v-if="fetchedDestination"
     class="py-0 my-0"
     fluid
   >
@@ -112,6 +113,15 @@
       </v-row>
     </v-container>
   </v-container>
+  <v-container v-else>
+    <v-row>
+      <v-col>
+        <h1>
+          Destination non trouvée
+        </h1>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup>
@@ -126,7 +136,7 @@ const routeQuery = computed(() => route.query)
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).select('titre', 'interjection', 'image').first()
+    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('visible', '=', true).select('titre', 'interjection', 'image').first()
   }
   return null
 }, {
@@ -155,13 +165,13 @@ const { data: voyages } = useAsyncData(
     let destination = null
 
     if (route.query.destination) {
-      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).select('titre').first()
+      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('visible', '=', true).select('titre').first()
       destination = titre
     }
     const travelType = route.query.travelType || null
     const dateRange = route.query.dateRange || null
 
-    const allVoyages = await queryCollection('voyages').all()
+    const allVoyages = await queryCollection('voyages').where('published', '=', true).all()
     if (!destination && !travelType && !dateRange) {
       console.log('Aucun filtre — retour vide')
       return allVoyages
