@@ -3,10 +3,13 @@
     <h4 class="text-h4 font-weight-bold">
       {{ page.authorNote.title }}
     </h4>
-    <p class="text-subtitle-1 text-md-h5 font-weight-regular">
+    <p
+      v-if="isHydrated && authorNote.text"
+      class="text-subtitle-1 text-md-h5 font-weight-regular"
+    >
       <MDC
-        :value="authorNote.text"
         tag="article"
+        :value="authorNote.text"
       />
     </p>
 
@@ -42,5 +45,9 @@ const props = defineProps({
     required: true,
   },
 })
+const isHydrated = ref(false)
 const author = await queryCollection('team').where('name', '=', props.authorNote.author).first()
+onMounted(() => {
+  isHydrated.value = true
+})
 </script>

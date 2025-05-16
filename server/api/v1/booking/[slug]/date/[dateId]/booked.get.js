@@ -14,8 +14,12 @@ export default defineEventHandler(async (event) => {
   // Enrich each traveler with contact info from ActiveCampaign
   const travelers = await Promise.all((data || []).map(async (row) => {
     let contact = {}
+    let customFields = {}
     try {
       const deal = await activecampaign.getDealById(row.deal_id)
+      customFields = await activecampaign.getDealCustomFields(row.deal_id)
+      customFields.price = deal.deal.value
+      console.log('=======customFields=======', customFields)
       if (deal && deal.deal && deal.deal.contact) {
         const contactId = deal.deal.contact
         let contactData = null
@@ -40,6 +44,9 @@ export default defineEventHandler(async (event) => {
     return {
       ...row,
       ...contact,
+      alreadyPaid: customFields.alreadyPaid,
+      restToPay: customFields.restToPay,
+      price: +customFields.price,
     }
   }))
 

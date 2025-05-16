@@ -1,12 +1,12 @@
 <template>
   <div>
-    <HorizontalCarousel v-if="categories">
+    <HorizontalCarousel v-if="destinations">
       <template #title>
         <h1>Toutes nos destinations</h1>
       </template>
       <template #carousel-item>
         <ThematiqueColCard
-          v-for="category in categories"
+          v-for="category in destinations"
           :key="category.id"
           :slug="category.slug"
           :image="category.image.src"

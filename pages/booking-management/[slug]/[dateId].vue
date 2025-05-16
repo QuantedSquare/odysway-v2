@@ -1,6 +1,23 @@
 <template>
   <v-container>
-    <v-row v-if="!loading">
+    <v-row
+      v-if="loading"
+      justify="center"
+      align="center"
+      style="min-height: 400px;"
+    >
+      <v-col
+        cols="12"
+        class="text-center"
+      >
+        <v-progress-circular
+          indeterminate
+          color="primary"
+          size="64"
+        />
+      </v-col>
+    </v-row>
+    <v-row v-else>
       <v-col
         cols="12"
         md="8"
@@ -162,63 +179,80 @@
               <li
                 v-for="traveler in bookedTravelers"
                 :key="traveler.id"
-                class="d-flex"
+                class="d-flex flex-column"
                 style="list-style: none; margin-bottom: 8px;"
               >
-                <NuxtLink
-                  :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
-                  target="_blank"
-                  style="display: flex; align-items: center; color: inherit;"
-                >
-                  <span style="font-weight: 500;">
-                    {{ traveler.name?.trim() ? traveler.name : traveler.email }}
-                  </span>
-                  <span>
-                    &nbsp;|&nbsp;Voyageurs:
-                  </span>
-                  <v-badge
-                    :content="traveler.booked_places"
-                    color="primary"
-                    inline
-                    class="ml-2"
-                    style="margin-left: 8px;"
-                  />
-                  <v-badge
-                    v-if="traveler.is_option"
-                    color="blue"
-                    class="ml-2"
-                    style="margin-left: 8px;"
-                    label
+                <div class="d-flex">
+                  <NuxtLink
+                    :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
+                    target="_blank"
+                    style="display: flex; align-items: center; color: inherit;"
                   >
-                    Option, expire le {{ traveler.expiracy_date }}
-                  </v-badge>
-                  <v-icon>
-                    {{ mdiArrowRight }}
-                  </v-icon>
-                </NuxtLink>
-                <v-spacer />
+                    <span style="font-weight: 500;">
+                      {{ traveler.name?.trim() ? traveler.name : traveler.email }}
+                    </span>
+                    <span>
+                      &nbsp;|&nbsp;Voyageurs:
+                    </span>
+                    <v-badge
+                      :content="traveler.booked_places"
+                      color="primary"
+                      inline
+                      class="ml-2"
+                      style="margin-left: 8px;"
+                    />
+                    <v-badge
+                      v-if="traveler.is_option"
+                      color="blue"
+                      class="ml-2"
+                      style="margin-left: 8px;"
+                      label
+                    >
+                      Option, expire le {{ traveler.expiracy_date }}
+                    </v-badge>
+                    <v-icon>
+                      {{ mdiArrowRight }}
+                    </v-icon>
+                  </NuxtLink>
+                  <v-spacer />
 
-                <v-btn
-                  icon
-                  color="primary"
-                  size="x-small"
-                  class="mx-2"
-                  @click="openPaymentDialog(traveler)"
-                >
-                  <v-icon>
-                    {{ mdiLinkEdit }}
-                  </v-icon>
-                </v-btn>
-                <v-btn
-                  icon
-                  color="error"
-                  size="x-small"
-                  @click="deleteTraveler(traveler.id)"
-                >
-                  <v-icon>
-                    {{ mdiDelete }}
-                  </v-icon>
-                </v-btn>
+                  <v-btn
+                    icon
+                    color="primary"
+                    size="x-small"
+                    class="mx-2"
+                    @click="openPaymentDialog(traveler)"
+                  >
+                    <v-icon>
+                      {{ mdiLinkEdit }}
+                    </v-icon>
+                  </v-btn>
+                  <v-btn
+                    icon
+                    color="error"
+                    size="x-small"
+                    @click="deleteTraveler(traveler.id)"
+                  >
+                    <v-icon>
+                      {{ mdiDelete }}
+                    </v-icon>
+                  </v-btn>
+                </div>
+                <div class="text-caption">
+                  <div>
+                    <span>
+                      <b>Prix payé:</b> {{ formatNumber(traveler.alreadyPaid) }} €
+                    </span>
+                    <span>
+                      <b>Reste à payer:</b> {{ formatNumber(traveler.restToPay) }} €
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <b>Prix total:</b> {{ formatNumber(traveler.price) }} €
+                    </span>
+                  </div>
+                </div>
               </li>
             </ul>
             <v-divider class="my-2" />
@@ -258,8 +292,10 @@
                 </v-expansion-panel-text>
               </v-expansion-panel>
             </v-expansion-panels>
-            <div class="mt-2">
-              Total value: {{ totalValue }}
+            <div class="mt-2 d-flex flex-column">
+              <span>Valeur totale: {{ formatNumber(totalValue) }} €</span>
+              <span>Total payé: {{ formatNumber(totalPaid) }} €</span>
+              <span>Total restant: {{ formatNumber(totalRestToPay) }} €</span>
             </div>
           </v-card-text>
         </v-card>
@@ -368,7 +404,6 @@ const form = ref({})
 const bookedTravelers = ref([])
 const loading = ref(true)
 
-const totalValue = ref(0)
 const saving = ref(false)
 const saveError = ref('')
 const saveSuccess = ref(false)
@@ -403,6 +438,7 @@ const fetchDetails = async () => {
   // Fetch booked travelers
   const res2 = await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked`)
   const data2 = await res2.json()
+  console.log('=======data2=======', data2)
   bookedTravelers.value = data2
   loading.value = false
   console.log('=======bookedTravelers RETRIEVED=======', bookedTravelers.value)
@@ -523,6 +559,16 @@ function copyLink() {
     navigator.clipboard.writeText(generatedLink.value)
   }
 }
+
+const totalPaid = computed(() => {
+  return bookedTravelers.value.reduce((acc, traveler) => acc + traveler.alreadyPaid, 0)
+})
+const totalRestToPay = computed(() => {
+  return bookedTravelers.value.reduce((acc, traveler) => acc + traveler.restToPay, 0)
+})
+const totalValue = computed(() => {
+  return bookedTravelers.value.reduce((acc, traveler) => acc + traveler.price, 0)
+})
 
 onMounted(fetchDetails)
 </script>

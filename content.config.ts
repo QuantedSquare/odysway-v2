@@ -451,7 +451,7 @@ export default defineContentConfig({
           badgeText: z.string().describe('Texte du badge, ex: "Jour 1"'),
           description: z.string().describe('Description de la journée'),
           photo: z.string().editor({ input: 'media' }).describe('Photo de la journée'),
-          denivellation: z.string().describe('Denivellation de la journée'), // Leave empty
+          denivellation: z.string().describe('Denivellation de la journée'),
           road: z.string().describe('Description du temps de trajet'),
           night: z.string().describe('Description de la nuitée'),
         })).describe('Programme du voyage, liste des activités par jour ou journées'),

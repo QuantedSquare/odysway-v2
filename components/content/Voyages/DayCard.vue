@@ -23,7 +23,7 @@
       >
         <v-card-title class="no-white-space">
           <div class="d-flex align-center ga-3">
-            <span class="d-flex align-center bg-secondary rounded-lg text-subtitle-2 font-weight-bold text-white px-2 pt-1 text-no-wrap">
+            <span class="d-flex align-center bg-secondary rounded-lg text-subtitle-2 font-weight-bold text-white px-2 py-1 text-no-wrap">
               {{ badgeText }}
             </span>
 
@@ -40,7 +40,21 @@
             :class="{ truncated: !isExpanded }"
             :style="contentStyle"
           >
-            {{ description }}
+            <span>{{ description }}</span>
+            <div class="d-flex flex-column px-8 mt-4">
+              <div v-if="denivellation">
+                <span class="font-weight-bold">Dénivelé:&nbsp;</span>
+                <span>{{ denivellation }}</span>
+              </div>
+              <div v-if="road">
+                <span class="font-weight-bold">Temps de trajet:&nbsp;</span>
+                <span>{{ road }}</span>
+              </div>
+              <div v-if="night">
+                <span class="font-weight-bold">Nuit:&nbsp;</span>
+                <span>{{ night }}</span>
+              </div>
+            </div>
           </div>
         </v-card-text>
 
@@ -68,7 +82,7 @@ import { mdiArrowRight } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { ref, watch, nextTick } from 'vue'
 
-defineProps({
+const props = defineProps({
   photo: {
     type: String,
     required: true,
@@ -85,8 +99,21 @@ defineProps({
     type: String,
     required: true,
   },
+  denivellation: {
+    type: String,
+    default: '',
+  },
+  road: {
+    type: String,
+    default: '',
+  },
+  night: {
+    type: String,
+    default: '',
+  },
 })
 
+console.log('props', props)
 const img = useImage()
 const { xs, width } = useDisplay()
 
