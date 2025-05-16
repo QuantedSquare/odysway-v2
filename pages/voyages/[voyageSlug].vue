@@ -9,7 +9,7 @@
         :pricing="voyage.pricing"
       />
 
-      <!-- <ChipsContainer /> -->
+      <ChipsContainer :badge-section="voyage.badgeSection" />
 
       <StickyContainer>
         <template #left-side>
@@ -85,7 +85,7 @@ const { data: page } = useAsyncData('voyages-textes', () =>
 const { data: voyage } = useAsyncData('voyages', () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
-
+console.log('voyage', voyage.value)
 // if (page.value) {
 //   defineOgImageComponent(page.value?.ogImage?.component, {
 //     title: page.value.ogImage?.props.title,

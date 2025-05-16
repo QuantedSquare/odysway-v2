@@ -188,6 +188,15 @@ async function processVoyage(voyage) {
   const out = {
     published: voyage.disponible, // Default to true, adjust if you have a field for this
     title: voyage.titre || '',
+    destinations: voyage.pays.map((p) => {
+      return {
+        name: p.nom,
+        slug: slugify(p.nom, { lower: true }),
+      }
+    }),
+    groupeAvailable: voyage.groupe,
+    privatisationAvailable: voyage.individuel,
+
     slug: slugify(voyage.slug, { lower: true }) || '',
     rating: voyage.note || 0,
     comments: voyage.nombre_avis || 0,
@@ -195,7 +204,7 @@ async function processVoyage(voyage) {
     emailDescription: voyage.description_email, // Not present in source, fill as needed
     metaDescription: voyage.meta_description || '',
     interjection: voyage.pays.length > 0 ? voyage.pays[0].interjection : '', // Not present in source, fill as needed
-    destinations: voyage.pays.map(p => p.nom), // Adjust if mapping needed
+    // Adjust if mapping needed
     categories: voyage.categorie.map(c => c.content_slug), // Not present in source, fill as needed
     duration,
     nights,
@@ -217,7 +226,33 @@ async function processVoyage(voyage) {
       alt: 'image de la liste de photos du voyage ' + voyage.titre || '',
     })),
     videoLinks: getVideoLinks(voyage),
-    badgeSection: {}, // Not present in source, fill as needed
+    badgeSection: {
+      experienceBadge: {
+        text: 'En immersion chez...',
+        color: 'yellow',
+        visible: true,
+      },
+      groupeBadge: {
+        text: `Groupe de **${voyage.nombre_de_voyageurs_pour_privatiser} à ${voyage.nombre_catchline_tab_group + 1} personnes**`,
+        visible: voyage.groupe,
+      },
+      durationBadge: {
+        text: `**${nights > 0 ? nights : duration} nuits sur place**`,
+        visible: nights > 0 || duration > 0,
+      },
+      includeFlightBadge: {
+        text: '**Vol** compris',
+        visible: voyage.vol_inclus,
+      },
+      housingBadge: {
+        text: voyage.tooltip_hebergement,
+        visible: voyage.tooltip_hebergement.length > 0,
+      },
+      periodBadge: {
+        text: voyage.periode_ideale,
+        visible: voyage.periode_ideale.length > 0,
+      },
+    },
     authorNote: {
       text: turndown.turndown(voyage.description || ''),
       author: voyage.nom_auteur_description || '',
@@ -277,8 +312,8 @@ async function processVoyage(voyage) {
       indivRoom: voyage.indiv_room, // Not present in source
       forcedIndivRoom: voyage.forced_indiv_room, // Not present in source
       indivRoomPrice: voyage.indiv_room_price, // Not present in source
-      privatisationAvailable: voyage.individuel, // Not present in source
-      groupeAvailable: voyage.groupe, // Not present in source
+      // Not present in source
+      // Not present in source
       cseReduction: voyage.reduction_code_promo.length > 0 ? voyage.reduction_code_promo : 0, // Not present in source
       cseAvailable: voyage.reduction_code_promo.length > 0, // Not present in source
       childrenPromo: voyage.reduction_enfant || 0, // Not present in source

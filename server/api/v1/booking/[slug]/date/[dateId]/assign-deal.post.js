@@ -1,5 +1,6 @@
 import { defineEventHandler, readBody } from 'h3'
 import supabase from '~/server/utils/supabase'
+import activecampaign from '~/server/utils/activecampaign'
 
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params
@@ -34,5 +35,18 @@ export default defineEventHandler(async (event) => {
     .select('*')
     .single()
   if (error) return { error: error.message }
+
+  // Update travel_dates.booked_seat
+  const { data: allBooked, error: sumError } = await supabase
+    .from('booked_dates')
+    .select('booked_places')
+    .eq('travel_date_id', dateId)
+  if (sumError) return { error: sumError.message }
+  const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+  await supabase
+    .from('travel_dates')
+    .update({ booked_seat: totalBooked })
+    .eq('id', dateId)
+
   return data
 })

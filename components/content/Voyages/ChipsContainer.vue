@@ -11,7 +11,7 @@
         cols="12"
         class="d-flex flex-nowrap ga-4 flex-md-wrap min-width"
       >
-        <v-chip
+        <!-- <v-chip
           variant="flat"
           :size="lgAndUp ? 'x-large' : 'large'"
           :color="badgeSection.experienceBadge.color"
@@ -20,14 +20,14 @@
           <span class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3">
             <div v-dompurify-html="parseBoldText(badgeSection.experienceBadge.text)" />
           </span>
-        </v-chip>
+        </v-chip> -->
 
-        <v-chip
+        <!-- <v-chip
           v-for="(chip, index) in badgeSection.otherBadges"
           :key="index"
           variant="flat"
           :size="lgAndUp ? 'x-large' : 'large'"
-          :color="chip.color"
+          :color="chip.color || 'grey'"
         >
           <span class="d-flex text-primary text-caption text-sm-subtitle-2  px-2">
             <v-img
@@ -38,7 +38,7 @@
             />
             <div v-dompurify-html="parseBoldText(chip.text)" />
           </span>
-        </v-chip>
+        </v-chip> -->
       </v-col>
     </v-row>
   </v-container>
@@ -47,7 +47,13 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
-const { badgeSection } = inject('voyage')
+const props = defineProps({
+  badgeSection: {
+    type: Object,
+    required: true,
+  },
+})
+console.log(props.badgeSection)
 const { lgAndUp } = useDisplay()
 </script>
 

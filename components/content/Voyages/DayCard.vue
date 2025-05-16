@@ -113,7 +113,6 @@ const props = defineProps({
   },
 })
 
-console.log('props', props)
 const img = useImage()
 const { xs, width } = useDisplay()
 

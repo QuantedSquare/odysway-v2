@@ -433,17 +433,32 @@ export default defineContentConfig({
         metaDescription: z.string().describe('Meta Description du voyage'),
         interjection: z.string().describe('Mot de liaison avec la destination (ex: "voyage **EN** France")'),
         // ==========================================
-        // Redo with fixed choice
         badgeSection: z.object({
           experienceBadge: z.object({
             text: z.enum(experienceChoices).describe('Texte du badge experience placé en premier'),
             color: z.enum(colorChoices).describe('Couleur du premier badge'),
+            visible: z.boolean().describe('Indique si le badge est visible'),
           }),
-          otherBadges: z.array(z.object({
-            text: z.string().describe('Texte du badge, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
-            color: z.enum(colorChoices).describe('Couleur du badge'),
-            icon: z.string().editor({ input: 'media' }).describe('Icone du badge'),
-          })).describe('Liste des autres badges'),
+          groupeBadge: z.object({
+            text: z.string().describe('Texte du badge groupe'),
+            visible: z.boolean().describe('Indique si le badge est visible'),
+          }),
+          durationBadge: z.object({
+            text: z.string().describe('Texte du badge durée'),
+            visible: z.boolean().describe('Indique si le badge est visible'),
+          }),
+          includeFlightBadge: z.object({
+            text: z.string().describe('Texte du badge vol'),
+            visible: z.boolean().describe('Indique si le badge est visible'),
+          }),
+          housingBadge: z.object({
+            text: z.string().describe('Texte du badge logement'),
+            visible: z.boolean().describe('Indique si le badge est visible'),
+          }),
+          periodBadge: z.object({
+            text: z.string().describe('Texte du badge période'),
+            visible: z.boolean().describe('Indique si le badge est visible'),
+          }),
         }).describe('Liste de Badges sous la section photo'),
 
         programmeBlock: z.array(z.object({
