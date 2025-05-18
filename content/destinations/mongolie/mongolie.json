@@ -4,8 +4,9 @@
   "iso": "MN",
   "interjection": "en",
   "metaDescription": "Avec ses steppes à perte de vue, ses habitants chaleureux et ses traditions ancestrales, la Mongolie est un pays fascinant. Découvrez nos voyages authentiques et en totale immersion ! ",
-  "visible": true,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "mongolie",
   "regions": [
     "Asie"
   ],

@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "CN",
   "interjection": "au ",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs au Tibet !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "tibet",
   "regions": [
     "Asie"
   ],

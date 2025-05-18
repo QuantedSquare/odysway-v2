@@ -4,8 +4,9 @@
   "iso": "PE",
   "interjection": "au",
   "metaDescription": "Envie de découvrir le Pérou autrement et loin des touristes ? Découvrez nos séjours uniques : visitez ses lieux mythiques et prenez le temps de vous imprégner des traditions préservées !",
-  "visible": true,
-  "content_slug": "le-perou-un-territoire-mythique-et-mystique",
+  "published": true,
+  "showOnHome": false,
+  "slug": "perou",
   "regions": [
     "Amérique du Sud"
   ],

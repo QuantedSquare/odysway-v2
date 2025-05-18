@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "NAM",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Namibie !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "namibie",
   "regions": [
     "Afrique"
   ],

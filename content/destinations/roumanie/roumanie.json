@@ -4,8 +4,9 @@
   "iso": "ROU",
   "interjection": "en",
   "metaDescription": "Découvrez la Roumanie : châteaux mystérieux, paysages montagneux et riche héritage. Explorez Dracula à Bran et la beauté des Carpates.",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "roumanie",
   "regions": [
     "Europe"
   ],

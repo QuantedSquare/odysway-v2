@@ -4,8 +4,9 @@
   "iso": "CR",
   "interjection": "au",
   "metaDescription": "Riche d’une biodiversité unique, le Costa Rica est un pays qui regorge de paysages sublimes et d'une faune incroyable. Découvrez nos séjours au plus près de la nature et des animaux ! ",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "costa-rica",
   "regions": [
     "Amérique Centrale"
   ],

@@ -4,8 +4,9 @@
   "iso": "FI",
   "interjection": "en",
   "metaDescription": "Envie de prendre un bain de sérénité en Finlande ? Avec les voyages Odysway, plongez au coeur de l'immensité de la nature finlandaise : apaisante et vivifiante !",
-  "visible": true,
-  "content_slug": "finlande",
+  "published": true,
+  "showOnHome": false,
+  "slug": "finlande",
   "regions": [
     "Europe"
   ],

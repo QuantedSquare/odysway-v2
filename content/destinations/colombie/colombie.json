@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "COL",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": true,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Colombie !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "colombie",
   "regions": [
     "Amérique du Sud"
   ],

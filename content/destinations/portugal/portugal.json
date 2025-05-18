@@ -3,9 +3,10 @@
   "chapka": 1,
   "iso": "PRT",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs au Portugal !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "portugal",
   "regions": [
     "Europe"
   ],

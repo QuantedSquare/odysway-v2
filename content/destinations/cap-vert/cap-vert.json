@@ -4,8 +4,9 @@
   "iso": "CV",
   "interjection": "au",
   "metaDescription": "Longtemps méconnu du grand public le Cap-Vert est une ancienne colonie portugaise : un diamant encore à l'état brut. Découvrez nos voyages uniques et authentiques au Cap-Vert !",
-  "visible": true,
-  "content_slug": "cap-vert",
+  "published": true,
+  "showOnHome": false,
+  "slug": "cap-vert",
   "regions": [
     "Afrique"
   ],

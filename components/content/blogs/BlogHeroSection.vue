@@ -51,8 +51,9 @@
             />
           </h1>
           <div
-            class="text-h6 text-lg-h5 font-weight-medium"
+            class="text-h6 text-lg-h5 font-weight-medium max-lines overflow-y-auto"
             :class="`text-${introductionColor}`"
+            style="max-height: 320px;"
           >
             <slot name="introduction" />
           </div>
@@ -120,6 +121,7 @@ defineProps({
 const { smAndDown } = useDisplay()
 const img = useImage()
 const page = inject('page')
+console.log('page', page)
 </script>
 
 <style scoped>

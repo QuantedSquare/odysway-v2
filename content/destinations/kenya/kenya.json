@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "KEN",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Kenya !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "kenya",
   "regions": [
     "Afrique"
   ],

@@ -6,36 +6,38 @@
       </template>
       <template #carousel-item>
         <ThematiqueColCard
-          v-for="category in destinations"
-          :key="category.id"
-          :slug="category.slug"
-          :image="category.image.src"
-          :title="category.title"
+          v-for="destination in destinations"
+          :key="destination.id"
+          :slug="destination.slug"
+          :image="destination.image.src"
+          :title="destination.titre"
           type="destinations"
-          :description="category.discoveryTitle"
+          :description="destination.discoveryTitle"
         />
       </template>
     </HorizontalCarousel>
 
     <v-divider thickness="2" />
-    <!-- <div v-if="categoriesWithVoyages">
+    <div v-if="destinationsWithVoyages">
       <HorizontalCarousel
-        v-for="category in categoriesWithVoyages"
-        v-show="category.voyages.length > 0"
-        :key="category.id"
-        :slug="category.slug"
-        :image="category.image.src"
-        :title="category.title"
-        :description="category.discoveryTitle"
+        v-for="destination in destinationsWithVoyages"
+        v-show="destination.voyages.length > 0"
+        :key="destination.id"
+        :slug="destination.slug"
+        :image="destination.image.src"
+        :title="destination.titre"
+        :description="destination.titre"
       >
         <template #title>
-          <h3>
-            {{ category.discoveryTitle }}
-          </h3>
+          <NuxtLink :to="`/destinations/${destination.slug}`">
+            <h3 class="text-primary text-decoration-none">
+              {{ destination.titre }}
+            </h3>
+          </NuxtLink>
         </template>
         <template #carousel-item>
           <v-col
-            v-for="voyage in category.voyages"
+            v-for="voyage in destination.voyages"
             :key="voyage.id"
             cols="12"
             sm="6"
@@ -53,25 +55,25 @@
           </v-col>
         </template>
       </HorizontalCarousel>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script setup>
 const { data: destinations } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').select('id', 'titre', 'content_slug', 'discoveryTitle', 'image').all()
+  return queryCollection('destinations').where('published', '==', true).all()
 })
-
+console.log(destinations.value)
 const { data: voyages } = useAsyncData('voyages', () => {
-  return queryCollection('voyages').all()
+  return queryCollection('voyages').where('published', '==', true).all()
 })
-const categoriesWithVoyages = computed(() => {
-  if (!categories.value || !voyages.value) return []
+const destinationsWithVoyages = computed(() => {
+  if (!destinations.value || !voyages.value) return []
 
-  return categories.value.map(category => ({
-    ...category,
+  return destinations.value.map(destination => ({
+    ...destination,
     voyages: voyages.value.filter(voyage =>
-      voyage.categories && voyage.categories.includes(category.slug),
+      voyage.destinations && voyage.destinations.includes(destination.titre),
     ),
   }))
 })

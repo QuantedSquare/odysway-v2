@@ -118,7 +118,7 @@ export default defineContentConfig({
     categories: defineCollection({
       type: 'data',
       source: {
-        include: 'categories/**.json',
+        include: 'categories/*/**.json',
         exclude: ['categories/categories.json'],
       },
       schema: z.object({
@@ -133,10 +133,36 @@ export default defineContentConfig({
         showOnHome: z.boolean().describe('Indique si la catégorie doit être affichée sur la page d\'accueil'),
       }),
     }),
+    categoriesContent: defineCollection(
+      asSeoCollection({
+        type: 'page',
+        source: 'categories/*/**.md',
+        schema: z.object({
+          tags: z.array(z.string()),
+          image: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
+          date: z.date(),
+          author: z.string(),
+          authorPhoto: z.string(),
+          authorRole: z.string(),
+          published: z.boolean(),
+          publishedAt: z.date(),
+          displayedImg: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }),
+          // blogType: z.string(),
+          badgeColor: z.string(),
+          readingTime: z.string(),
+        }),
+      }),
+    ),
     experiences: defineCollection({
       type: 'data',
       source: {
-        include: 'experiences/**.json',
+        include: 'experiences/*/**.json',
         exclude: ['experiences/experiences.json'],
       },
       schema: z.object({
@@ -187,26 +213,6 @@ export default defineContentConfig({
         isOnHome: z.boolean(),
       }),
     }),
-    dates: defineCollection({
-      type: 'page',
-      source: 'dates/*/**.json',
-      schema: z.object({
-        published: z.boolean().default(false),
-        badges: z.array(z.object({
-          text: z.string().describe('Texte du badge, utiliser des "*" pour afficher du texte en gras (ex: "**7 nuits** sur place")'),
-          icon: z.string().editor({ input: 'icon' }),
-        })),
-        displayedStatus: z.enum(['Bientôt confirmé', 'Départ garanti', 'Complet']).describe('Status de la date, en affichage uniquement'),
-        departureDate: z.date().describe('Date de départ du voyage'),
-        returnDate: z.date().describe('Date de retour du voyage'),
-        startingPrice: z.number().describe('Prix de départ du voyage'),
-        maxTravelers: z.number().describe('Nombre de personnes maximum'),
-        minTravelers: z.number().describe('Nombre de personnes minimum').default(2),
-        bookedTravelers: z.number().describe('Nombre de personnes réservées'),
-        includeFlight: z.boolean().describe('Inclure un vol'),
-        flightPrice: z.number().describe('Prix du vol si inclus'),
-      }),
-    }),
     reviews: defineCollection({
       type: 'data',
       source: 'reviews/**.json',
@@ -235,7 +241,8 @@ export default defineContentConfig({
         iso: z.string().describe('ISO de la destination'),
         interjection: z.string().describe('Interjection de la destination'),
         metaDescription: z.string().describe('Meta description de la destination'),
-        visible: z.boolean().default(true).describe('Indique si la destination est visible'),
+        published: z.boolean().default(true).describe('Indique si la destination est publiée'),
+        showOnHome: z.boolean().default(false).describe('Indique si la destination est affichée sur la page d\'accueil'),
         regions: z.array(z.object({
           nom: z.enum(regionChoices),
         })).default([]).describe('Regions de la destination, définie dans le fichier regions'),
@@ -397,7 +404,7 @@ export default defineContentConfig({
         groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
         privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
         customAvailable: z.boolean().describe('Indique si le voyage est disponible en sur-mesure'),
-        experienceType: z.string().describe('Type d\'experience'), // Leave empty
+        experienceType: z.enum(experienceChoices).describe('Type d\'experience'), // Leave empty
         level: z.enum(['1', '2', '3']).describe('Niveau de difficulté'), // Leave empty
         categories: z.array(z.object({
           name: z.enum(categoriesChoices),
@@ -532,6 +539,23 @@ export default defineContentConfig({
             answer: z.string().describe('Réponse'),
           })).describe('Liste des questions / réponses'),
         }).describe('Section FAQ'),
+        seo: z.object({
+          metaTitle: z.string().describe('Meta Title for SEO'),
+          canonicalUrl: z.string().describe('Canonical URL'),
+          ogTitle: z.string().describe('Open Graph Title'),
+          ogDescription: z.string().describe('Open Graph Description'),
+          ogImage: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }).describe('Image de l\'og, utilise la photo principale si vide'),
+          twitterTitle: z.string().describe('Twitter Card Title'),
+          twitterDescription: z.string().describe('Twitter Card Description'),
+          twitterImage: z.object({
+            src: z.string().editor({ input: 'media' }),
+            alt: z.string(),
+          }).describe('Image de l\'og, utilise la photo principale si vide'),
+          twitterCard: z.enum(['summary', 'summary_large_image', 'app', 'player']).describe('Twitter Card Type'),
+        }).describe('SEO'),
         // ==========================================
       }),
     }),

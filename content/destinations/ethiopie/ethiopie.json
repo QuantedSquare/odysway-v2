@@ -4,9 +4,12 @@
   "iso": "ET",
   "interjection": "en",
   "metaDescription": "L’Éthiopie, considérée comme un berceau de l’humanité possède une culture intacte et fascinante. Découvrez nos séjours, à la rencontre de ses habitants et de ses fabuleux paysages !",
-  "visible": false,
-  "content_slug": "lethiopie-berceau-de-lhumanite",
-  "regions": [],
+  "published": true,
+  "showOnHome": false,
+  "slug": "ethiopie",
+  "regions": [
+    "Afrique"
+  ],
   "image": {
     "src": "/images/destinations/pQsXQdPwS560EtOqei1G.jpg",
     "alt": "Image de la destination \"Ethiopie\""

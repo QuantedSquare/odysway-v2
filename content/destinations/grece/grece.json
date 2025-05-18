@@ -4,8 +4,9 @@
   "iso": "GR",
   "interjection": "en",
   "metaDescription": "Découvrez nos voyages en Grèce",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "grece",
   "regions": [
     "Europe"
   ],

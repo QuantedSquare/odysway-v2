@@ -2,10 +2,11 @@
   "titre": "Bolivie",
   "chapka": 2,
   "iso": "BOL",
-  "interjection": "",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "interjection": "en",
+  "metaDescription": "Partez en Bolivie, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "bolivie",
   "regions": [
     "Amérique du Sud"
   ],

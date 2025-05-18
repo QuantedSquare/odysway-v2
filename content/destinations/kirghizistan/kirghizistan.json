@@ -4,8 +4,9 @@
   "iso": "KG",
   "interjection": "au",
   "metaDescription": "Entre lacs, vallées et cascades, le Kirghizistan offre des paysages à couper le souffle. Découvrez nos séjours uniques et plongez dans un environnement encore à l'état sauvage !",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "kirghizistan",
   "regions": [
     "Asie"
   ],

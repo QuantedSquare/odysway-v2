@@ -2,10 +2,11 @@
   "titre": "Islande",
   "chapka": 2,
   "iso": "ISL",
-  "interjection": "",
-  "metaDescription": "",
-  "visible": true,
-  "content_slug": "",
+  "interjection": "en",
+  "metaDescription": "Découvrez nos séjours immersifs en Islande !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "islande",
   "regions": [
     "Europe"
   ],

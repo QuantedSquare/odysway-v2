@@ -4,8 +4,9 @@
   "iso": "NP",
   "interjection": "au",
   "metaDescription": "Depuis l'ouverture de ses frontières, le Népal suscite fascination et mystère. Avez nos séjours authentiques, prenez le temps de découvrir et vivre votre propre expérience du Népal !  ",
-  "visible": true,
-  "content_slug": "le-nepal-pour-un-voyage-entre-ciel-et-terre",
+  "published": true,
+  "showOnHome": false,
+  "slug": "nepal",
   "regions": [
     "Asie"
   ],

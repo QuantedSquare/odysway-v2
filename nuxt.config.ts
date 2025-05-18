@@ -27,6 +27,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      titleTemplate: '%s • Odysway',
       link: [
         // Google Analytics
         { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
@@ -234,7 +235,7 @@ export default defineNuxtConfig({
       ogDescription: 'Odysway est une agence de voyage en ligne, qui propose des expériences de voyage différentes, loin des circuits touristiques classiques.',
       twitterCreator: '@odysway',
       twitterSite: '@odysway',
-      author: 'Quanted Square',
+      author: 'Romain Masina',
       colorScheme: 'light',
       applicationName: 'Odysway',
       google: 'nopagereadaloud',

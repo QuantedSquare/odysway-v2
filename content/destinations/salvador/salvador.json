@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "SLV",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs à Salvador !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "salvador",
   "regions": [
     "Amérique Centrale"
   ],

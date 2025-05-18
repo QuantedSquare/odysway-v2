@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "VNM",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs au Vietnam !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "vietnam",
   "regions": [
     "Asie"
   ],

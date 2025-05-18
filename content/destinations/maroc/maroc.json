@@ -4,8 +4,9 @@
   "iso": "MA",
   "interjection": "au",
   "metaDescription": "Envie de découvrir le Maroc autrement ? Découvrez nos voyages uniques : plongez au coeur de sa culture, parcourez ses paysages... Vivez l'expérience authentique du Maroc !",
-  "visible": true,
-  "content_slug": "maroc",
+  "published": true,
+  "showOnHome": false,
+  "slug": "maroc",
   "regions": [
     "Afrique"
   ],

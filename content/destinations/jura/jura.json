@@ -4,8 +4,9 @@
   "iso": "FR",
   "interjection": "dans le",
   "metaDescription": "Partez explorer la région du Jura avec Oysway ! Découvrez la richesse de savoir faire et du terroir de la région.",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "jura",
   "regions": [
     "Europe",
     "France"

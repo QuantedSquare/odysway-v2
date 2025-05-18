@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "GTM",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Guatemala !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "guatemala",
   "regions": [
     "Amérique Centrale"
   ],

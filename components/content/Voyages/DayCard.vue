@@ -82,7 +82,7 @@ import { mdiArrowRight } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { ref, watch, nextTick } from 'vue'
 
-const props = defineProps({
+defineProps({
   photo: {
     type: String,
     required: true,

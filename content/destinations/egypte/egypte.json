@@ -2,10 +2,11 @@
   "titre": "Égypte",
   "chapka": 2,
   "iso": "EGY",
-  "interjection": "",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "interjection": "en",
+  "metaDescription": "Découvrez nos séjours immersifs en Égypte !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "egypte",
   "regions": [
     "Afrique"
   ],

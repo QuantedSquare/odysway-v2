@@ -4,8 +4,9 @@
   "iso": "MDG",
   "interjection": "à",
   "metaDescription": "Envie d'un séjour authentique à Madagascar ? Avec les voyages Odysway, plongez dans la culture malagasy par les rencontres et immersions chez l'habitant ! ",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "madagascar",
   "regions": [
     "Afrique"
   ],

@@ -3,9 +3,10 @@
   "chapka": 1,
   "iso": "FR",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Ile de France !",
+  "published": false,
+  "showOnHome": false,
+  "slug": "ile-de-france",
   "regions": [
     "Europe",
     "France"

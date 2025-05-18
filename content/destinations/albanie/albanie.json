@@ -3,9 +3,10 @@
   "chapka": 1,
   "iso": "AL",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Albanie !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "albanie",
   "regions": [
     "Europe"
   ],

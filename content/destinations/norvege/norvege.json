@@ -3,9 +3,10 @@
   "chapka": 1,
   "iso": "NO",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Norvège !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "norvege",
   "regions": [
     "Europe"
   ],

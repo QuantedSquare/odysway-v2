@@ -4,8 +4,9 @@
   "iso": "TH",
   "interjection": "en",
   "metaDescription": "Vous souhaitez découvrir la Thaïlande autrement, hors des sentiers battus et  loin des touristes ? Découvrez nos séjours uniques et plongez dans la Thaïlande authentique !",
-  "visible": false,
-  "content_slug": "la-thailande-le-pays-du-sourire",
+  "published": true,
+  "showOnHome": false,
+  "slug": "thailande",
   "regions": [
     "Asie"
   ],

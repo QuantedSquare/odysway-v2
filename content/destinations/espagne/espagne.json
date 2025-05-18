@@ -3,9 +3,10 @@
   "chapka": 1,
   "iso": "ESP",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Espagne !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "espagne",
   "regions": [
     "Europe"
   ],

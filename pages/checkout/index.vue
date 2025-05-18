@@ -28,6 +28,10 @@ import { useImage } from '#imports'
 definePageMeta({
   layout: 'funnel',
 })
+useSeoMeta({
+  robots: 'noindex, follow',
+  canonical: 'https://www.odysway.com/',
+})
 
 const route = useRoute()
 

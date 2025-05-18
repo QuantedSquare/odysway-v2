@@ -122,7 +122,7 @@ const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
 
 const { data: destinations, status } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'visible', 'regions', 'image', 'stem').where('visible', '=', true).all()
+  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem').where('published', '==', true).all()
 })
 const destinationsList = computed(() => {
   return destinations.value?.map((d) => {

@@ -99,7 +99,7 @@
 <script setup>
 import dayjs from 'dayjs'
 import { mdiStar } from '@mdi/js'
-
+// #TODO Check si on delete ce composant
 const props = defineProps({
   review: {
     type: Object,

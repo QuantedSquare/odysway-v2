@@ -1,12 +1,16 @@
 {
   "titre": "Bretagne",
   "chapka": 1,
-  "iso": "",
-  "interjection": "",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
-  "regions": [],
+  "iso": "FR",
+  "interjection": "en",
+  "metaDescription": "Découvrez nos séjours immersifs en Bretagne !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "bretagne",
+  "regions": [
+    "France",
+    "Europe"
+  ],
   "image": {
     "src": "/images/destinations/Lq5ZhJwdSg6saVQy4ez6.jpg",
     "alt": "Image de la destination \"Bretagne\""

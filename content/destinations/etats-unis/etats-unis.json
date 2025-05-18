@@ -4,9 +4,12 @@
   "iso": "US",
   "interjection": "aux",
   "metaDescription": "Les États-Unis : un pays fascinant, aux multiples facettes à découvrir. Avec Odysway, voyagez en immersion, découvrez des modes de vies uniques et vivez des moments forts en émotions ! ",
-  "visible": false,
-  "content_slug": "",
-  "regions": [],
+  "published": true,
+  "showOnHome": false,
+  "slug": "etats-unis",
+  "regions": [
+    "Amérique du Nord"
+  ],
   "image": {
     "src": "/images/destinations/ApNAsaUpRwmUa7eDFE3g.jpg",
     "alt": "Image de la destination \"États-Unis\""

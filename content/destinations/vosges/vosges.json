@@ -4,8 +4,9 @@
   "iso": "FR",
   "interjection": "dans les ",
   "metaDescription": "Il y a 12 000 ans, au sud-ouest du Massif des Vosges, la fonte des glaciers a façonné un paysage unique : le Plateau des 1000 Etangs. Des landes, des prés et des forêts entremêlés de ruisseaux et de plans d'eau en font une région fascinante surnommée la Petite Finlande.",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "vosges",
   "regions": [
     "Europe",
     "France"

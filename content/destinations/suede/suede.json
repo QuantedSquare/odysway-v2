@@ -3,9 +3,10 @@
   "chapka": 1,
   "iso": "SWE",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "suède",
+  "metaDescription": "Découvrez nos séjours immersifs en Suède !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "suède",
   "regions": [
     "Europe"
   ],

@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "DZA",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": true,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Algérie !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "algerie",
   "regions": [
     "Afrique"
   ],

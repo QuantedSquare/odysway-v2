@@ -4,8 +4,9 @@
   "iso": "LK",
   "interjection": "",
   "metaDescription": "Le Sri Lanka, une île exceptionnelle qui regorge de paysages sublimes. Découvrez nos séjours et immergez-vous dans une histoire et une culture où tous vos sens seront en éveil !",
-  "visible": true,
-  "content_slug": "sri-lanka",
+  "published": true,
+  "showOnHome": false,
+  "slug": "sri-lanka",
   "regions": [
     "Asie"
   ],

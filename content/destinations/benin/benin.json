@@ -1,11 +1,12 @@
 {
   "titre": "Bénin",
   "chapka": 2,
-  "iso": "",
-  "interjection": "",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "iso": "BEN",
+  "interjection": "au",
+  "metaDescription": "Découvrez nos séjours immersifs en Bénin !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "benin",
   "regions": [
     "Afrique"
   ],

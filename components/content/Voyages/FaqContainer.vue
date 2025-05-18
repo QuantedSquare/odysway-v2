@@ -19,7 +19,7 @@
         rounded="xl"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
-        <h2 class="text-center position-relative">
+        <h2 class="text-center position-relative text-white">
           <slot name="section-title" />
         </h2>
         <v-container

@@ -2,10 +2,11 @@
   "titre": "Chili",
   "chapka": 2,
   "iso": "CHL",
-  "interjection": "",
+  "interjection": "au",
   "metaDescription": "Envie de découvrir le Chili autrement ? Découvrez nos séjours uniques : découvrez sa culture locale, parcourez ses grands espaces et prenez un grand bain de nature !",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "chili",
   "regions": [
     "Amérique du Sud"
   ],

@@ -1,12 +1,16 @@
 {
   "titre": "Normandie",
   "chapka": 1,
-  "iso": "",
+  "iso": "FR",
   "interjection": "en",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
-  "regions": [],
+  "metaDescription": "Découvrez nos séjours immersifs en Normandie !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "normandie",
+  "regions": [
+    "Europe",
+    "France"
+  ],
   "image": {
     "src": "/images/destinations/AwSyUH38Spqlx24YOEPC.jpg",
     "alt": "Image de la destination \"Normandie\""

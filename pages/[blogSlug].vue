@@ -18,5 +18,4 @@ const { data } = await useAsyncData(route.path, () => {
 })
 
 provide('page', data)
-// # NEED TO WORK ON SEO
 </script>

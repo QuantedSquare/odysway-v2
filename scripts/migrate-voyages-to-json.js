@@ -196,36 +196,31 @@ async function processVoyage(voyage) {
     }),
     groupeAvailable: voyage.groupe,
     privatisationAvailable: voyage.individuel,
-
-    slug: slugify(voyage.slug, { lower: true }) || '',
-    rating: voyage.note || 0,
-    comments: voyage.nombre_avis || 0,
-    description: turndown.turndown(voyage.description || ''),
-    emailDescription: voyage.description_email, // Not present in source, fill as needed
-    metaDescription: voyage.meta_description || '',
-    interjection: voyage.pays.length > 0 ? voyage.pays[0].interjection : '', // Not present in source, fill as needed
-    // Adjust if mapping needed
-    categories: voyage.categorie.map(c => c.content_slug), // Not present in source, fill as needed
+    customAvailable: undefined, // Not present in source
+    experienceType: 'En immersion chez...', // Not present in source
+    level: '1', // Not present in source
+    categories: voyage.categorie.map(c => ({ name: c.slug })),
     duration,
     nights,
-    experienceType: '', // Not present in source
-    level: '', // Not present in source
-    idealPeriods: mapMonths(voyage.periode_ideale_search),
-    monthlyAvailability: mapMonths(voyage.periode_ideale_search),
-    miniatureDisplay: 'Note moyenne', // Not present in source
-    image: {
-      src: imageUrlMap.get(voyage.image_principale) || voyage.image_principale || '',
-      alt: 'image principale du voyage ' + voyage.titre || '',
+    includeFlight: voyage.vol_inclus,
+    housingType: voyage.hebergement,
+    idealPeriods: mapMonths(voyage.periode_ideale_search).map(month => ({ month })),
+    monthlyAvailability: mapMonths(voyage.periode_ideale_search).map(month => ({ month })),
+    minAge: 8,
+    rating: voyage.note || 5,
+    comments: voyage.nombre_avis || 10,
+    miniatureDisplay: 'Note moyenne',
+    authorNote: {
+      text: turndown.turndown(voyage.description || ''),
+      author: voyage.nom_auteur_description || '',
+      affixeAuthor: voyage.role_auteur_description || '',
     },
-    imageSecondary: {
-      src: imageUrlMap.get(voyage.image_secondaire) || voyage.image_secondaire || '',
-      alt: 'image secondaire du voyage ' + voyage.titre || '',
-    },
-    photosList: (voyage.images || []).map(img => ({
-      src: imageUrlMap.get(img.image) || img.image || '',
-      alt: 'image de la liste de photos du voyage ' + voyage.titre || '',
-    })),
-    videoLinks: getVideoLinks(voyage),
+    experiencesBlock: htmlListToArray(voyage.plus),
+    slug: slugify(voyage.slug, { lower: true }) || '',
+    description: turndown.turndown(voyage.description || ''),
+    emailDescription: voyage.description_email,
+    metaDescription: voyage.meta_description || '',
+    interjection: '',
     badgeSection: {
       experienceBadge: {
         text: 'En immersion chez...',
@@ -253,30 +248,46 @@ async function processVoyage(voyage) {
         visible: voyage.periode_ideale.length > 0,
       },
     },
-    authorNote: {
-      text: turndown.turndown(voyage.description || ''),
-      author: voyage.nom_auteur_description || '',
-      affixeAuthor: voyage.role_auteur_description || '',
-    },
-    experiencesBlock: htmlListToArray(voyage.plus),
     programmeBlock: (voyage.programme || []).map(day => ({
       title: day.titre || '',
       badgeText: day.jours || '',
       description: day.contenu || '',
       photo: imageUrlMap.get(day.image) || day.image || '',
-      denivellation: '', // Not present in source
+      denivellation: '',
+      road: '',
+      night: '',
     })),
+    pricingDetailsBlock: {
+      include: htmlListToArray(voyage.price_include),
+      exclude: htmlListToArray(voyage.price_not_include),
+    },
+    pricing: {
+      startingPrice: voyage.prix || 0,
+      lastMinuteAvailable: false,
+      lastMinuteReduction: 0,
+      earlyBirdAvailable: voyage.got_earlybird,
+      earlyBirdReduction: voyage.reduction_earlybird,
+      maxTravelers: voyage.number_catchline_tab_group,
+      minTravelersToConfirm: voyage.nombre_de_voyageurs_pour_privatiser > 0 ? voyage.nombre_de_voyageurs_pour_privatiser : 2,
+      indivRoom: voyage.indiv_room,
+      forcedIndivRoom: voyage.forced_indiv_room,
+      indivRoomPrice: voyage.indiv_room_price,
+      cseReduction: voyage.reduction_code_promo.length > 0 ? voyage.reduction_code_promo : 0, // Not present in source
+      cseAvailable: voyage.reduction_code_promo.length > 0, // Not present in source
+      childrenPromo: voyage.reduction_enfant || 0, // Not present in source
+      childrenAge: 12, // Default
+      airportCode: Array.from({ length: 2 }, (_, i) => i + 1).map(i => voyage[`airport_code_${i}`] || '').filter(Boolean),
+    },
+    accompanistsDescription: turndown.turndown(voyage.description_accompagnateurs || ''),
     accompanistsList: Array.from({ length: 4 }, (_, i) => i + 1).map((i) => {
       if (!voyage[`accompagnateur_${i}_nom`]) return null
       return {
         name: voyage[`accompagnateur_${i}_nom`] || '',
-        // the description is in html format, we need to convert it to a string
         description: turndown.turndown(voyage[`accompagnateur_${i}_description`] || ''),
         role: voyage[`accompagnateur_${i}_role`] || '',
         image: imageUrlMap.get(voyage[`accompagnateur_${i}_photo`]) || voyage[`accompagnateur_${i}_photo`] || '',
       }
     }).filter(Boolean),
-    accompanistsDescription: turndown.turndown(voyage.description_accompagnateurs || ''),
     housingBlock: [
       {
         title: voyage.hebergement,
@@ -291,35 +302,41 @@ async function processVoyage(voyage) {
         }).filter(Boolean),
       },
     ],
-    pricingDetailsBlock: {
-      include: htmlListToArray(voyage.price_include),
-      exclude: htmlListToArray(voyage.price_not_include),
+    image: {
+      src: imageUrlMap.get(voyage.image_principale) || voyage.image_principale || '',
+      alt: 'image principale du voyage ' + voyage.titre || '',
     },
+    imageSecondary: {
+      src: imageUrlMap.get(voyage.image_secondaire) || voyage.image_secondaire || '',
+      alt: 'image secondaire du voyage ' + voyage.titre || '',
+    },
+    photosList: (voyage.images || []).map(img => ({
+      src: imageUrlMap.get(img.image) || img.image || '',
+      alt: 'image de la liste de photos du voyage ' + voyage.titre || '',
+    })),
+    videoLinks: getVideoLinks(voyage),
     faqBlock: {
       faqList: (voyage.faq || []).map(f => ({
         question: f.question || '',
         answer: turndown.turndown(f.reponse || ''),
       })),
     },
-    pricing: {
-      startingPrice: voyage.prix || 0,
-      lastMinuteAvailable: false, // Not present in source
-      lastMinuteReduction: 0, // Not present in source
-      earlyBirdAvailable: voyage.got_earlybird, // Not present in source
-      earlyBirdReduction: voyage.reduction_earlybird, // Not present in source
-      maxTravelers: voyage.number_catchline_tab_group, // Not present in source
-      minTravelersToConfirm: 0, // Not present in source
-      indivRoom: voyage.indiv_room, // Not present in source
-      forcedIndivRoom: voyage.forced_indiv_room, // Not present in source
-      indivRoomPrice: voyage.indiv_room_price, // Not present in source
-      // Not present in source
-      // Not present in source
-      cseReduction: voyage.reduction_code_promo.length > 0 ? voyage.reduction_code_promo : 0, // Not present in source
-      cseAvailable: voyage.reduction_code_promo.length > 0, // Not present in source
-      childrenPromo: voyage.reduction_enfant || 0, // Not present in source
-      childrenAge: 12, // Default
-      minAge: 8, // Default
-      airportCode: Array.from({ length: 2 }, (_, i) => i + 1).map(i => voyage[`airport_code_${i}`] || '').filter(Boolean),
+    seo: {
+      metaTitle: voyage.titre || '',
+      canonicalUrl: `https://www.odysway.com/voyages/${voyage.slug}`,
+      ogTitle: voyage.titre || '',
+      ogDescription: voyage.meta_description || '',
+      ogImage: {
+        src: imageUrlMap.get(voyage.image_principale) || voyage.image_principale || '',
+        alt: 'image principale du voyage ' + voyage.titre || '',
+      },
+      twitterTitle: voyage.titre || '',
+      twitterDescription: voyage.meta_description || '',
+      twitterImage: {
+        src: imageUrlMap.get(voyage.image_principale) || voyage.image_principale || '',
+        alt: 'image principale du voyage ' + voyage.titre || '',
+      },
+      twitterCard: 'summary_large_image',
     },
   }
   return out

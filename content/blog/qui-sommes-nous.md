@@ -28,7 +28,7 @@ introduction-color: grey
 avatar-size: '60'
 ---
 #title
-Qui sommes-nous ?
+Qui sommes-nous?
 
 #introduction
 Une équipe de voyageurs passionnés Romain Romain Masina, 30 ans est le fondateur d'Odysway. Il voyage depuis son plus jeune âge, avec passion et émotion. Il souhaite multiplier les moments de vie, les expériences vécues et se forger des souvenirs magiques en chaque endroit. En 2015, entre son apprentissage et ...

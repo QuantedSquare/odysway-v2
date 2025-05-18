@@ -4,8 +4,9 @@
   "iso": "FR",
   "interjection": "dans le",
   "metaDescription": "Découvrez la richesse de la Nouvelle-Aquitaine avec Odysway ! De la Charente-Maritime aux Pyrénées,  prenez le temps de vous immerger au cœur de cette belle région, entre mer et montagne.",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "sud-ouest",
   "regions": [
     "Europe",
     "France"

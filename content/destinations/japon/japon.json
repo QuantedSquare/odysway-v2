@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "JPN",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Japon !  ",
+  "published": true,
+  "showOnHome": false,
+  "slug": "japon",
   "regions": [
     "Asie"
   ],

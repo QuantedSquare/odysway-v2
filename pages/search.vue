@@ -105,9 +105,9 @@
       </v-row>
     </v-container>
     <v-container>
-      <v-row v-if="fetchedDestinationContentStatus === 'success'">
+      <v-row>
         <ContentRenderer
-          v-if="fetchedDestinationContent"
+          v-if="fetchedDestinationContentStatus === 'success' && fetchedDestinationContent"
           :value="fetchedDestinationContent"
         />
       </v-row>
@@ -129,14 +129,17 @@ import dayjs from 'dayjs'
 import { useDisplay } from 'vuetify'
 
 const { lgAndUp } = useDisplay()
-
+useSeoMeta({
+  robots: 'noindex, follow',
+  canonical: 'https://www.odysway.com/search',
+})
 const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('visible', '=', true).select('titre', 'interjection', 'image').first()
+    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre', 'interjection', 'image').first()
   }
   return null
 }, {
@@ -144,14 +147,13 @@ const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
 })
 const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
   if (route.query.destination) {
-    return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '=', true).first()
+    return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '==', true).first()
   }
   return null
 }, {
   watch: [routeQuery],
 
 })
-console.log('fetchedDestinationContent', fetchedDestinationContent.value)
 provide('page', fetchedDestinationContent)
 
 const parsedDateRange = computed(() => {
@@ -165,7 +167,7 @@ const { data: voyages } = useAsyncData(
     let destination = null
 
     if (route.query.destination) {
-      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('visible', '=', true).select('titre').first()
+      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '==', true).select('titre').first()
       destination = titre
     }
     const travelType = route.query.travelType || null

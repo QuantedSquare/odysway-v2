@@ -1,12 +1,16 @@
 {
   "titre": "Bourgogne",
   "chapka": 1,
-  "iso": "",
+  "iso": "FR",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Bourgogne ! Formez-vous à la permaculture, découvrez l'art du vin... Partez avec Odysway !",
-  "visible": false,
-  "content_slug": "",
-  "regions": [],
+  "published": false,
+  "showOnHome": false,
+  "slug": "bourgogne",
+  "regions": [
+    "France",
+    "Europe"
+  ],
   "image": {
     "src": "/images/destinations/Mqz97cvbT5qFYdluW99n.jpg",
     "alt": "Image de la destination \"Bourgogne\""

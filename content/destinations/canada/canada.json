@@ -3,9 +3,10 @@
   "chapka": 3,
   "iso": "CAN",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": false,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs au Canada !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "canada",
   "regions": [
     "Amérique du Nord"
   ],

@@ -4,8 +4,9 @@
   "iso": "IN",
   "interjection": "en",
   "metaDescription": "L'Inde est un pays fascinant avec une forte identité dont les traditions continuent de se perpétuer. Découvrez nos voyages uniques et authentiques pour vivre l'Inde autrement !",
-  "visible": true,
-  "content_slug": "linde-terre-de-contraste",
+  "published": true,
+  "showOnHome": false,
+  "slug": "inde",
   "regions": [
     "Asie"
   ],

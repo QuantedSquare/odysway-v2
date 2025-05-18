@@ -4,8 +4,9 @@
   "iso": "ARG",
   "interjection": "en",
   "metaDescription": "Envie de découvrir l'Argentine autrement ? Découvrez nos séjours uniques : découvrez sa culture locale, parcourez ses grands espaces et prenez un grand bain de nature !",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "argentine",
   "regions": [
     "Amérique du Sud"
   ],

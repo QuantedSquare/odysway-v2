@@ -4,8 +4,9 @@
   "iso": "FR",
   "interjection": "dans les",
   "metaDescription": "Partez découvrir la région Auvergne-Rhône-Alpes avec Oysway ! Des volcans auvergnats à la chaîne des Alpes en passant par l'Ardèche, explorer une région magnifique, connue pour ses montagnes et son terroir.",
-  "visible": false,
-  "content_slug": "",
+  "published": false,
+  "showOnHome": false,
+  "slug": "alpes",
   "regions": [
     "Europe",
     "France"

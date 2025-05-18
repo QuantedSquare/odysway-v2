@@ -4,8 +4,9 @@
   "iso": "BR",
   "interjection": "au",
   "metaDescription": "Avec ses plages, sa musique et sa culture, le Brésil n'est plus à présenter. Avec Odysway, ressentez l'essence de ce pays au travers d'expériences au contact des locaux et de la nature ! ",
-  "visible": false,
-  "content_slug": "",
+  "published": true,
+  "showOnHome": false,
+  "slug": "bresil",
   "regions": [
     "Amérique du Sud"
   ],

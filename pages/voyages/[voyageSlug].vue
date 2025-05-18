@@ -86,13 +86,93 @@ const { data: voyage } = useAsyncData('voyages', () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
 console.log('voyage', voyage.value)
-// if (page.value) {
-//   defineOgImageComponent(page.value?.ogImage?.component, {
-//     title: page.value.ogImage?.props.title,
-//     description: page.value.ogImage?.props.description,
-//   })
-//   useHead(page.value.head || {}) // <-- Nuxt Schema.org
-//   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
-// }
-// console.log('voyagesData', voyagesData.value)
+
+watchEffect(() => {
+  if (!voyage.value) return
+
+  // SEO Meta Tags
+  useSeoMeta({
+    title: voyage.value.seo?.metaTitle || voyage.value.title,
+    description: voyage.value.seo?.ogDescription || voyage.value.metaDescription || voyage.value.description,
+    ogTitle: voyage.value.seo?.ogTitle || voyage.value.title,
+    ogDescription: voyage.value.seo?.ogDescription || voyage.value.metaDescription || voyage.value.description,
+    ogImage: voyage.value.seo?.ogImage?.src || voyage.value.image?.src,
+    ogType: 'website',
+    twitterTitle: voyage.value.seo?.twitterTitle || voyage.value.title,
+    twitterDescription: voyage.value.seo?.twitterDescription || voyage.value.metaDescription || voyage.value.description,
+    twitterImage: voyage.value.seo?.twitterImage?.src || voyage.value.image?.src,
+    twitterCard: voyage.value.seo?.twitterCard || 'summary_large_image',
+    canonical: voyage.value.seo?.canonicalUrl || `https://odysway.com/voyages/${voyage.value.slug}`,
+  })
+
+  // Structured Data (TouristTrip)
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    'name': voyage.value.title,
+    'description': voyage.value.metaDescription || voyage.value.description,
+    'image': voyage.value.image?.src ? [`https://odysway.com${voyage.value.image.src}`] : [],
+    'touristType': 'Adventure',
+    'offers': {
+      '@type': 'Offer',
+      'price': voyage.value.pricing?.startingPrice,
+      'priceCurrency': 'EUR',
+      'availability': 'https://schema.org/InStock',
+    },
+    'url': `https://odysway.com/voyages/${voyage.value.slug}`,
+    'provider': {
+      '@type': 'Organization',
+      'name': 'Odysway',
+      'url': 'https://odysway.com',
+    },
+    'itinerary': voyage.value.programmeBlock?.map(day => ({
+      '@type': 'TouristAttraction',
+      'name': day.title,
+      'description': day.description,
+      'image': day.photo ? [`https://odysway.com${day.photo}`] : [],
+    })),
+    ...(voyage.value.rating && voyage.value.comments
+      ? {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            'ratingValue': voyage.value.rating,
+            'reviewCount': voyage.value.comments,
+          },
+        }
+      : {}),
+  }
+
+  // BreadcrumbList structured data
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Voyages',
+        'item': 'https://odysway.com/voyages',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': voyage.value.title,
+        'item': `https://odysway.com/voyages/${voyage.value.slug}`,
+      },
+    ],
+  }
+
+  useHead({
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify(structuredData),
+      },
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify(breadcrumbs),
+      },
+    ],
+  })
+})
 </script>

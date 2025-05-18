@@ -3,9 +3,10 @@
   "chapka": 2,
   "iso": "LAO",
   "interjection": "au",
-  "metaDescription": "",
-  "visible": true,
-  "content_slug": "",
+  "metaDescription": "Découvrez nos séjours immersifs en Laos !",
+  "published": true,
+  "showOnHome": false,
+  "slug": "laos",
   "regions": [
     "Asie"
   ],
