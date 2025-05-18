@@ -1,44 +1,262 @@
 {
   "published": true,
   "title": "Séjour multi-activités en Laponie finlandaise",
-  "slug": "voyage-hiver-laponie-finlande",
-  "rating": 5,
-  "comments": 78,
-  "description": "Visiter la Laponie en hiver, c'est pour beaucoup un rêve d'enfance. Les grandes étendues blanches, les aurores boréales, le réconfort d'un feu de bois dans un chalet typique après une journée d'aventure en pleine nature... Chez Odysway, nous proposons de faire de ce rêve une réalité.\n\nPlongez au cœur d'une féerie hivernale, où chaque jour est une aventure exceptionnelle. Enfilez vos raquettes pour explorer les forêts enneigées, laissant vos empreintes dans la poudreuse, laissez vous glisser sur la neige, portés par votre attelage en traîneaux à chiens, participez à une initiation à la survie en pleine nature..., des moments de connexion avec l'essence même de la vie nordique. Le crépitement d'un feu de camp vous accueillera après une journée d'aventures, offrant une soirée chaleureuse et conviviale.\n\nCe séjour offre une expérience où l'action, la nature et la détente se mêlent pour créer des souvenirs mémorables !",
-  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir voyager en Laponie finlandaise, ce voyage est fait pour vous !",
-  "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature finlandaise. Au programme : balades en chien de traineau, en motoneige et en raquettes, apprentissage du mode de vie de trappeur et chasse aux aurores boréales !",
-  "interjection": "en",
   "destinations": [
-    "Finlande"
+    {
+      "name": "Finlande",
+      "slug": "finlande"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "ecotourisme",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "partir-en-famille",
-    "partir-en-amoureux",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": true,
+  "housingType": "Ecolodge",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 78,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Visiter la Laponie en hiver, c'est pour beaucoup un rêve d'enfance. Les grandes étendues blanches, les aurores boréales, le réconfort d'un feu de bois dans un chalet typique après une journée d'aventure en pleine nature... Chez Odysway, nous proposons de faire de ce rêve une réalité.\n\nPlongez au cœur d'une féerie hivernale, où chaque jour est une aventure exceptionnelle. Enfilez vos raquettes pour explorer les forêts enneigées, laissant vos empreintes dans la poudreuse, laissez vous glisser sur la neige, portés par votre attelage en traîneaux à chiens, participez à une initiation à la survie en pleine nature..., des moments de connexion avec l'essence même de la vie nordique. Le crépitement d'un feu de camp vous accueillera après une journée d'aventures, offrant une soirée chaleureuse et conviviale.\n\nCe séjour offre une expérience où l'action, la nature et la détente se mêlent pour créer des souvenirs mémorables !",
+    "author": "Lucie",
+    "affixeAuthor": "Responsable voyageurs"
+  },
+  "experiencesBlock": [
+    "Partez en mars/avril et profiter de la meilleure période pour les aurores boréales, des journées plus longues et moins de touristes !",
+    "Explorez les étendues sauvages aux airs de bout du monde",
+    "Profitez d'un hébergement en écolodge en bordure d'un lac avec vue sur les paysages enneigés",
+    "Vivez des journées complètes d'activités en pleine nature : chiens de traîneaux, balade en raquettes, motoneige...",
+    "Partagez des moments de convivialité avec les autres voyageurs lors de soirées au coin du feu",
+    "Partez en toute sérénité, les vols sont inclus !",
+    "Bénéficiez d'une réduction exclusive pour nos dates fin mars / début avril"
+  ],
+  "slug": "voyage-hiver-laponie-finlande",
+  "description": "Visiter la Laponie en hiver, c'est pour beaucoup un rêve d'enfance. Les grandes étendues blanches, les aurores boréales, le réconfort d'un feu de bois dans un chalet typique après une journée d'aventure en pleine nature... Chez Odysway, nous proposons de faire de ce rêve une réalité.\n\nPlongez au cœur d'une féerie hivernale, où chaque jour est une aventure exceptionnelle. Enfilez vos raquettes pour explorer les forêts enneigées, laissant vos empreintes dans la poudreuse, laissez vous glisser sur la neige, portés par votre attelage en traîneaux à chiens, participez à une initiation à la survie en pleine nature..., des moments de connexion avec l'essence même de la vie nordique. Le crépitement d'un feu de camp vous accueillera après une journée d'aventures, offrant une soirée chaleureuse et conviviale.\n\nCe séjour offre une expérience où l'action, la nature et la détente se mêlent pour créer des souvenirs mémorables !",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir voyager en Laponie finlandaise, ce voyage est fait pour vous !",
+  "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature finlandaise. Au programme : balades en chien de traineau, en motoneige et en raquettes, apprentissage du mode de vie de trappeur et chasse aux aurores boréales !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "Ecolodge",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Dec à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DÉPART ET ARRIVÉE EN FINLANDE",
+      "badgeText": "JOUR 1",
+      "description": "Après votre vol aller à destination de Kuusamo (ou Oulu selon votre date de départ), vous serez accueillis à l'aéroport par notre équipe locale puis rejoindrez le camp de base situé en pleine nature, près de la ville d'Hossa. Le soir, premier dîner tout ensemble et préparation des activités de la semaine avec votre guide, un avant-goût de ce beau voyage qui débutera dès le lendemain matin ! ",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/nQgO69x3RMmTeTBnokDS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPÉDITION EN CHIEN DE TRAINEAU",
+      "badgeText": "JOUR 2",
+      "description": "Votre semaine débute par une journée d'expédition en chiens de traîneaux. Après la rencontre avec votre attelage et une initiation auprès d'un musher, vous êtes prêts à partir à travers les pistes forestières et les lacs gelés pour découvrir la beauté de la nature qui vous entoure. Partagez votre premier repas autour d'un feu de camp avant de repartir arpenter les chemins enneigés. Votre retour au camp aura lieu en fin d'après-midi, l'occasion de se détendre dans un typique sauna finlandais. ",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/BvynkVFnRx282Cbha0Qy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE EN MOTONEIGE",
+      "badgeText": "JOUR 3",
+      "description": "En compagnie d'un guide local spécialiste de la région lapone, partez aujourd'hui en motoneige pour une balade loin de toute civilisation. Découvrez la magie des forêts immaculées et des étendues gelées, où chaque instant offre une dose de sensations fortes et de liberté ! Votre pause déjeuner aura lieu en pleine nature au cours de votre balade. ",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/tEFQKwAKTM27HCkRy5Ru.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN COMPAGNIE DES HUSKIES ",
+      "badgeText": "JOUR 4",
+      "description": "Vivez une journée auprès des huskies, ces compagnons fidèles et attachants. Vous partirez pour une balade accompagnée par un chien d'attelage. Cette pratique, où l'homme est tracté par le chien à la ceinture, est une coutume ancestrale des esquimaux que vous aurez la chance de découvrir. Un moment fort de partage entre l'homme et l'animal, dans un décor de rêve !",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/zr2G33SES3KwBSnDg6BD.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "INITIATION AU MODE DE VIE TRAPPEUR",
+      "badgeText": "JOUR 5",
+      "description": "Vivez une journée dans la peau d'un trappeur en découvrant les techniques de survie des plus grands explorateurs polaires ! Pistage d'animaux sauvages, construction d'abris, technique pour faire du feu sur la neige... Une journée riche d'apprentissage et de moments de partage et d'entraide entre chaque voyageur.",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/DR5hE5WcS7q5YGDAW85I.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BALADE EN RAQUETTE",
+      "badgeText": "JOUR 6",
+      "description": "Votre guide, spécialiste de l'Arctique, vous emmène à la découverte des paysages immaculés de la Finlande. Chaussez vos raquettes et aventurez-vous dans les endroits les plus sauvages de la région, où il est possible d'observer de nombreux animaux du grand Nord comme des élans ou encore des ours !",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/sHULfpYqQh14tjz6yalA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE AU CAMP DE BASE",
+      "badgeText": "JOUR 7",
+      "description": "Profitez d'une journée libre au camp de base, l'occasion de vous reposer, profiter du sauna, ou réserver une activité à la journée (ski de randonnée nordique, motoneige, raquettes, pêche...). Le soir, profitez d'un dîner traditionnel finlandais : le Poronkäristys, repas typiques des éleveurs de rennes pour profiter jusqu'aux derniers instants des traditions locales. ",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/0t7liOiIRd2v1acTB5k5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES ADIEUX ET LE RETOUR",
+      "badgeText": "JOUR 8",
+      "description": "Votre voyage en Finlande touche à sa fin ! Faites vos adieux à vos guides et à ce magnifique havre de paix. Après un dernier lever de soleil sur le lac, nos équipes vous emmèneront à l'aéroport de Kuusamo où vous prendrez votre vol retour à destination de Paris.",
+      "photo": "/images/voyages/voyage-hiver-laponie-finlande/8CcC6pDaTC6xZyQfqYZS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Le transport aérien avec escale entre Paris et Kuusamo ou Oulu et les taxes d'aéroport",
+      "L’accueil à l'aéroport",
+      "Les transferts aller/retour de l'aéroport au camp de base",
+      "L'hébergement en chambre double au sein de l'écolodge",
+      "La pension complète durant la durée du séjour",
+      "L'encadrement par des guides francophones spécialistes du milieu polaire",
+      "Le prêt pour la semaine d'un équipement grand froid"
+    ],
+    "exclude": [
+      "Les activités durant la journée libre",
+      "L'assurance annulation ou multirisques",
+      "Les boissons alcoolisées",
+      "Les dépenses personnelles",
+      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2435,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 300,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "KAO"
+    ]
+  },
+  "accompanistsDescription": "Le jour de l'arrivée, vous serez réceptionnés à l'aéroport par un de nos guides locaux. Chaque activité sera encadrée par un guide francophone spécialiste des régions polaires et du Grand Nord qui vous emmènera à la découverte des lieux les plus intimes de la Finlande.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Ecolodge",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous serez logés en écolodge, au cœur de la forêt finlandaise.  Les écolodges bénéficient d'une grande baie vitrée avec vue sur le lac glacé, pour un émerveillement dès votre réveil. Les repas se prennent en communauté, au sein d'un plus grand bâtiment. Pour améliorer votre confort, nous vous proposons de profiter d'un bain nordique et d'un sauna pour des moments de détente après vos journées d'activités. ",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-hiver-laponie-finlande/NLjHAh8LRirtjG8Rky25.jpg",
+          "alt": "image de l'hébergement Séjour multi-activités en Laponie finlandaise"
+        },
+        {
+          "src": "/images/voyages/voyage-hiver-laponie-finlande/v6M0I39wQAOlZMc2h35t.jpg",
+          "alt": "image de l'hébergement Séjour multi-activités en Laponie finlandaise"
+        },
+        {
+          "src": "/images/voyages/voyage-hiver-laponie-finlande/mHf8T4v8SbGzjqTcx5FU.jpg",
+          "alt": "image de l'hébergement Séjour multi-activités en Laponie finlandaise"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-hiver-laponie-finlande/1lWuqjgCSJGybM9aeudB.jpg",
     "alt": "image principale du voyage Séjour multi-activités en Laponie finlandaise"
@@ -114,121 +332,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Visiter la Laponie en hiver, c'est pour beaucoup un rêve d'enfance. Les grandes étendues blanches, les aurores boréales, le réconfort d'un feu de bois dans un chalet typique après une journée d'aventure en pleine nature... Chez Odysway, nous proposons de faire de ce rêve une réalité.\n\nPlongez au cœur d'une féerie hivernale, où chaque jour est une aventure exceptionnelle. Enfilez vos raquettes pour explorer les forêts enneigées, laissant vos empreintes dans la poudreuse, laissez vous glisser sur la neige, portés par votre attelage en traîneaux à chiens, participez à une initiation à la survie en pleine nature..., des moments de connexion avec l'essence même de la vie nordique. Le crépitement d'un feu de camp vous accueillera après une journée d'aventures, offrant une soirée chaleureuse et conviviale.\n\nCe séjour offre une expérience où l'action, la nature et la détente se mêlent pour créer des souvenirs mémorables !",
-    "author": "Lucie",
-    "affixeAuthor": "Responsable voyageurs"
-  },
-  "experiencesBlock": [
-    "Partez en mars/avril et profiter de la meilleure période pour les aurores boréales, des journées plus longues et moins de touristes !",
-    "Explorez les étendues sauvages aux airs de bout du monde",
-    "Profitez d'un hébergement en écolodge en bordure d'un lac avec vue sur les paysages enneigés",
-    "Vivez des journées complètes d'activités en pleine nature : chiens de traîneaux, balade en raquettes, motoneige...",
-    "Partagez des moments de convivialité avec les autres voyageurs lors de soirées au coin du feu",
-    "Partez en toute sérénité, les vols sont inclus !",
-    "Bénéficiez d'une réduction exclusive pour nos dates fin mars / début avril"
-  ],
-  "programmeBlock": [
-    {
-      "title": "DÉPART ET ARRIVÉE EN FINLANDE",
-      "badgeText": "JOUR 1",
-      "description": "Après votre vol aller à destination de Kuusamo (ou Oulu selon votre date de départ), vous serez accueillis à l'aéroport par notre équipe locale puis rejoindrez le camp de base situé en pleine nature, près de la ville d'Hossa. Le soir, premier dîner tout ensemble et préparation des activités de la semaine avec votre guide, un avant-goût de ce beau voyage qui débutera dès le lendemain matin ! ",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/nQgO69x3RMmTeTBnokDS.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPÉDITION EN CHIEN DE TRAINEAU",
-      "badgeText": "JOUR 2",
-      "description": "Votre semaine débute par une journée d'expédition en chiens de traîneaux. Après la rencontre avec votre attelage et une initiation auprès d'un musher, vous êtes prêts à partir à travers les pistes forestières et les lacs gelés pour découvrir la beauté de la nature qui vous entoure. Partagez votre premier repas autour d'un feu de camp avant de repartir arpenter les chemins enneigés. Votre retour au camp aura lieu en fin d'après-midi, l'occasion de se détendre dans un typique sauna finlandais. ",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/BvynkVFnRx282Cbha0Qy.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RANDONNÉE EN MOTONEIGE",
-      "badgeText": "JOUR 3",
-      "description": "En compagnie d'un guide local spécialiste de la région lapone, partez aujourd'hui en motoneige pour une balade loin de toute civilisation. Découvrez la magie des forêts immaculées et des étendues gelées, où chaque instant offre une dose de sensations fortes et de liberté ! Votre pause déjeuner aura lieu en pleine nature au cours de votre balade. ",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/tEFQKwAKTM27HCkRy5Ru.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN COMPAGNIE DES HUSKIES ",
-      "badgeText": "JOUR 4",
-      "description": "Vivez une journée auprès des huskies, ces compagnons fidèles et attachants. Vous partirez pour une balade accompagnée par un chien d'attelage. Cette pratique, où l'homme est tracté par le chien à la ceinture, est une coutume ancestrale des esquimaux que vous aurez la chance de découvrir. Un moment fort de partage entre l'homme et l'animal, dans un décor de rêve !",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/zr2G33SES3KwBSnDg6BD.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "INITIATION AU MODE DE VIE TRAPPEUR",
-      "badgeText": "JOUR 5",
-      "description": "Vivez une journée dans la peau d'un trappeur en découvrant les techniques de survie des plus grands explorateurs polaires ! Pistage d'animaux sauvages, construction d'abris, technique pour faire du feu sur la neige... Une journée riche d'apprentissage et de moments de partage et d'entraide entre chaque voyageur.",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/DR5hE5WcS7q5YGDAW85I.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BALADE EN RAQUETTE",
-      "badgeText": "JOUR 6",
-      "description": "Votre guide, spécialiste de l'Arctique, vous emmène à la découverte des paysages immaculés de la Finlande. Chaussez vos raquettes et aventurez-vous dans les endroits les plus sauvages de la région, où il est possible d'observer de nombreux animaux du grand Nord comme des élans ou encore des ours !",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/sHULfpYqQh14tjz6yalA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE AU CAMP DE BASE",
-      "badgeText": "JOUR 7",
-      "description": "Profitez d'une journée libre au camp de base, l'occasion de vous reposer, profiter du sauna, ou réserver une activité à la journée (ski de randonnée nordique, motoneige, raquettes, pêche...). Le soir, profitez d'un dîner traditionnel finlandais : le Poronkäristys, repas typiques des éleveurs de rennes pour profiter jusqu'aux derniers instants des traditions locales. ",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/0t7liOiIRd2v1acTB5k5.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES ADIEUX ET LE RETOUR",
-      "badgeText": "JOUR 8",
-      "description": "Votre voyage en Finlande touche à sa fin ! Faites vos adieux à vos guides et à ce magnifique havre de paix. Après un dernier lever de soleil sur le lac, nos équipes vous emmèneront à l'aéroport de Kuusamo où vous prendrez votre vol retour à destination de Paris.",
-      "photo": "/images/voyages/voyage-hiver-laponie-finlande/8CcC6pDaTC6xZyQfqYZS.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Le jour de l'arrivée, vous serez réceptionnés à l'aéroport par un de nos guides locaux. Chaque activité sera encadrée par un guide francophone spécialiste des régions polaires et du Grand Nord qui vous emmènera à la découverte des lieux les plus intimes de la Finlande.",
-  "housingBlock": [
-    {
-      "title": "Ecolodge",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage, vous serez logés en écolodge, au cœur de la forêt finlandaise.  Les écolodges bénéficient d'une grande baie vitrée avec vue sur le lac glacé, pour un émerveillement dès votre réveil. Les repas se prennent en communauté, au sein d'un plus grand bâtiment. Pour améliorer votre confort, nous vous proposons de profiter d'un bain nordique et d'un sauna pour des moments de détente après vos journées d'activités. ",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-hiver-laponie-finlande/NLjHAh8LRirtjG8Rky25.jpg",
-          "alt": "image de l'hébergement Séjour multi-activités en Laponie finlandaise"
-        },
-        {
-          "src": "/images/voyages/voyage-hiver-laponie-finlande/v6M0I39wQAOlZMc2h35t.jpg",
-          "alt": "image de l'hébergement Séjour multi-activités en Laponie finlandaise"
-        },
-        {
-          "src": "/images/voyages/voyage-hiver-laponie-finlande/mHf8T4v8SbGzjqTcx5FU.jpg",
-          "alt": "image de l'hébergement Séjour multi-activités en Laponie finlandaise"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le transport aérien avec escale entre Paris et Kuusamo ou Oulu et les taxes d'aéroport",
-      "L’accueil à l'aéroport",
-      "Les transferts aller/retour de l'aéroport au camp de base",
-      "L'hébergement en chambre double au sein de l'écolodge",
-      "La pension complète durant la durée du séjour",
-      "L'encadrement par des guides francophones spécialistes du milieu polaire",
-      "Le prêt pour la semaine d'un équipement grand froid"
-    ],
-    "exclude": [
-      "Les activités durant la journée libre",
-      "L'assurance annulation ou multirisques",
-      "Les boissons alcoolisées",
-      "Les dépenses personnelles",
-      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -285,27 +388,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2430,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 300,
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "KAO"
-    ]
+  "seo": {
+    "metaTitle": "Séjour multi-activités en Laponie finlandaise",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-hiver-laponie-finlande",
+    "ogTitle": "Séjour multi-activités en Laponie finlandaise",
+    "ogDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature finlandaise. Au programme : balades en chien de traineau, en motoneige et en raquettes, apprentissage du mode de vie de trappeur et chasse aux aurores boréales !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-hiver-laponie-finlande/1lWuqjgCSJGybM9aeudB.jpg",
+      "alt": "image principale du voyage Séjour multi-activités en Laponie finlandaise"
+    },
+    "twitterTitle": "Séjour multi-activités en Laponie finlandaise",
+    "twitterDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature finlandaise. Au programme : balades en chien de traineau, en motoneige et en raquettes, apprentissage du mode de vie de trappeur et chasse aux aurores boréales !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-hiver-laponie-finlande/1lWuqjgCSJGybM9aeudB.jpg",
+      "alt": "image principale du voyage Séjour multi-activités en Laponie finlandaise"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

@@ -1,40 +1,258 @@
 {
   "published": true,
   "title": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
-  "slug": "immersion-steppes-kirghizistan",
-  "rating": 5,
-  "comments": 9,
-  "description": "Partez à la rencontre des chasseurs à l’aigle, apprenez l'art de la construction des yourtes traditionnelles et découvrez la gastronomie locale... Pendant plusieurs jours, vous aurez l'opportunité de vivre chez l'habitant et de partager leur quotidien, tout en étant entouré de paysages à couper le souffle. Ce voyage est une véritable immersion au cœur de la culture kirghize, offrant une expérience riche en rencontres et découvertes.\n\nPréparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement total !",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature, découvrir des paysages à couper le souffle et partager des moments d'exception avec les locaux, ce voyage est fait pour vous  ! ",
-  "metaDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
-  "interjection": "au",
   "destinations": [
-    "Kirghizistan"
+    {
+      "name": "Kirghizistan",
+      "slug": "kirghizistan"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-chez-l-habitant",
-    "sejours-culturels",
-    "roadtrip-organise",
-    "ou-partir-au-printemps",
-    "partir-en-famille"
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "road-trip-organise"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-en-famille"
+    }
   ],
   "duration": 10,
   "nights": 9,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "  Maison d'hôtes, yourtes",
   "idealPeriods": [
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 9,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez à la rencontre des chasseurs à l’aigle, apprenez l'art de la construction des yourtes traditionnelles et découvrez la gastronomie locale... Pendant plusieurs jours, vous aurez l'opportunité de vivre chez l'habitant et de partager leur quotidien, tout en étant entouré de paysages à couper le souffle. Ce voyage est une véritable immersion au cœur de la culture kirghize, offrant une expérience riche en rencontres et découvertes.\n\nPréparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement total !",
+    "author": "Linda",
+    "affixeAuthor": "co-fondatrice d'Odysway"
+  },
+  "experiencesBlock": [
+    "Les steppes infinies et les lacs de montagne",
+    "La fabrication de yourtes avec les Kirghizes",
+    "La rencontre avec les chasseurs à l'aigle",
+    "Un voyage chez l'habitant, au sein de familles locales",
+    "Un chauffeur francophone expérimenté"
+  ],
+  "slug": "immersion-steppes-kirghizistan",
+  "description": "Partez à la rencontre des chasseurs à l’aigle, apprenez l'art de la construction des yourtes traditionnelles et découvrez la gastronomie locale... Pendant plusieurs jours, vous aurez l'opportunité de vivre chez l'habitant et de partager leur quotidien, tout en étant entouré de paysages à couper le souffle. Ce voyage est une véritable immersion au cœur de la culture kirghize, offrant une expérience riche en rencontres et découvertes.\n\nPréparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement total !",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature, découvrir des paysages à couper le souffle et partager des moments d'exception avec les locaux, ce voyage est fait pour vous  ! ",
+  "metaDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Juin à Sep",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE AU KIRGHIZISTAN",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à Bishkek, capitale vivante du Kirghizistan, accueil francophone par nos équipes et transfert privatif à votre hôtel. Premières explorations de la ville, d'Ala Too au bazar d'Och.",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/jLp7A7iCRmyKQXoriDGp.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU VILLAGE KYZYL OY",
+      "badgeText": "JOURS 2 ET 3",
+      "description": "Début de l'aventure ! Vous filez à travers routes sinueuses et cols vertigineux jusqu'aux vastes étendues de la vallée de Suussamyr, ponctuée de yourtes de nomades. A votre arrivée au village, vous participez à la préparation du pain beignet traditionnel. Profitez de votre journée libre le lendemain pour découvrir les alentours à pied, à cheval, ou à la nage dans la rivière Kokomeren. ",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/JqOOdFxPSJSD4PKa6BF5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU BORD DU LAC SON KOUL",
+      "badgeText": "JOURS 4 ET 5",
+      "description": "Après le passage d'un col, vous arrivez sur les rives du lac Son Koul où vous faites connaissance des bergers nomades kirghizes. Profitez de ce cadre idyllique pour une randonnée, ou une balade à cheval. Vous pourrez voir le processus de traite des juments et gouterez la cuisine nationale. Nuit sous une yourte kirghize traditionnelle.",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/wdTWqwQHSoGJPIieHQsV.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHEZ L'HABITANT À KOTCHKOR",
+      "badgeText": "JOUR 6",
+      "description": "Après le passage du col Kalmak Achou à 3400 mètres, vous arrivez dans votre famille d'accueil. Au programme : atelier fabrication des objets traditionnels en feutre avec les femmes kirghizes du village. Moment d'échange et de convivialité assuré avant le repas en famille !",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/0mmyx0FTCiysKv5Ff8Sw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AVEC LES FABRICANTS DE YOURTES",
+      "badgeText": "JOURS 7 ET 8",
+      "description": "Vous passerez 2 jours dans le village de Kyzyl Tou, au sein d’une famille kirghize, qui vous révélera les secrets de la production de yourtes entre fabrication de la charpente et décoration intérieure ! Cette famille est engagée dans cet art unique depuis des générations. Lors de votre immersion, vous irez également randonner au canyon d'Ak Say qui débouche sur le lac Issyk Koul et sa plage sauvage. ",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/7PpOSFC7TWiFTA6qpfOQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA CHASSE À L'AIGLE",
+      "badgeText": "JOURS 9 ET 10",
+      "description": "Vous ferez la connaissance du chasseur à l’aigle dans le village de Bokonbaevo. Vous en apprendrez plus sur cet art ancestral perpétué par les nomades kirghizes et les relations que les hommes ont établies avec cet oiseau. Le lendemain, randonnée au panorama du lac pour s'émerveiller des étendues kirghizes. ",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/1quIZFubQM2Xu8iwInYE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VALLÉE CHON KEMIN",
+      "badgeText": "JOUR 11",
+      "description": "Vous quittez le lac Issyk Koul pour aller au village Tar Sou situé dans la vallée Chon Kemin connue pour sa biodiversité très riche. Au programme : promenade dans le village, randonnée dans une gorge à flanc de montagne et partage avec les propriétaires de la maison d'hôtes. \r\n\r\n",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/0lG4QRAmTvaoWk1QcWVi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FIN DE VOTRE AVENTURE",
+      "badgeText": "JOURS 12 ET 13",
+      "description": "Après votre petit-déjeuner dans la maison d’hôtes, votre chauffeur viendra vous chercher pour vous ramener à Bishkek. Sur la route, vous visitez la Tour Bourana, vestige de l'ancienne ville Balasagyn. A votre arrivée à Bishkek, achat de souvenirs au marché local. Le lendemain, après les adieux avec votre guide, vous serez accompagnés à l'aéroport où vous prendrez votre vol.",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/3HP7BvreTZylNyRBAmT4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport",
+      "Tous les transferts en véhicule privé confortable et climatisé",
+      "L'accompagnement par un chauffeur expérimenté anglophone à partir de 2 voyageurs",
+      "L'accompagnement par un guide francophone à partir de 4 voyageurs",
+      "L'accompagnement de guides locaux à Kysyl Oy et Bokonbaevo à partir de 2 voyageurs",
+      "Les hébergements indiqués dans le programme",
+      "La pension complète",
+      "Les visites indiquées dans le programme",
+      "Les activités suivantes : la préparation du pain beignet à Kyzyl Oy, la fabrication de produits en feutre à Kotchkor, la balade à cheval à Son Koul, la fabrication de yourtes à Kysyl Tou, l'expérience de chasse à l’aigle à Bokonbaevo, et la charrette tirée à Chon Kemin."
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Bishkek et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Les activités lors des journées libres",
+      "Le guide francophone pour les groupes de moins de 4 voyageurs",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles et les pourboires",
+      "Les boissons alcoolisées"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1770,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 165,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "FRU"
+    ]
+  },
+  "accompanistsDescription": "Votre voyage au Kirghizistan est encadré par un chauffeur francophone spécialiste de la région. Le transport est assuré en véhicule privé confortable et climatisé. Si le groupe est constitué de 4 personnes, vous serez accompagnés par un guide francophone en plus du chauffeur. Lors des différentes immersions, vous aurez des guides locaux sur place qui vous expliqueront leur savoir-faire. Lors de votre voyage, vous bénéficiez de l'assistance personnalisée avec un conseiller Odysway, disponible 7 jours sur 7.",
+  "accompanistsList": [
+    {
+      "name": "Danil",
+      "description": "Spécialiste du Kirghizistan, Daniel exerce depuis plus de 10 ans comme guide et a parcouru presque tous les recoins du pays. Son credo ? \"Mieux vaut voir une fois, que d'entendre cent fois\"",
+      "role": "Guide francophone",
+      "image": "/images/voyages/immersion-steppes-kirghizistan/7LNliSwITMOlyKnUZxQs.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "  Maison d'hôtes, yourtes",
+      "housingType": "",
+      "housingMood": "Les hébergements sur ce voyage varient entre des nuits en hôtel simples mais confortables, en maison d'hôtes chez différentes familles kirghizes et en yourte près du lac Son Koul.",
+      "image": [
+        {
+          "src": "/images/voyages/immersion-steppes-kirghizistan/NdR9eY6BSlOhXrHNg2Di.jpg",
+          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+        },
+        {
+          "src": "/images/voyages/immersion-steppes-kirghizistan/qgVamOpPRtSBT26FG3FY.jpg",
+          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+        },
+        {
+          "src": "/images/voyages/immersion-steppes-kirghizistan/RnCgfxq2RX6bAco4oPNj.jpg",
+          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg",
     "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
@@ -112,130 +330,6 @@
   "videoLinks": [
     "https://www.youtube.com/embed/fEuw4Hl04hU"
   ],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Partez à la rencontre des chasseurs à l’aigle, apprenez l'art de la construction des yourtes traditionnelles et découvrez la gastronomie locale... Pendant plusieurs jours, vous aurez l'opportunité de vivre chez l'habitant et de partager leur quotidien, tout en étant entouré de paysages à couper le souffle. Ce voyage est une véritable immersion au cœur de la culture kirghize, offrant une expérience riche en rencontres et découvertes.\n\nPréparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement total !",
-    "author": "Linda",
-    "affixeAuthor": "co-fondatrice d'Odysway"
-  },
-  "experiencesBlock": [
-    "Les steppes infinies et les lacs de montagne",
-    "La fabrication de yourtes avec les Kirghizes",
-    "La rencontre avec les chasseurs à l'aigle",
-    "Un voyage chez l'habitant, au sein de familles locales",
-    "Un chauffeur francophone expérimenté"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVEE AU KIRGHIZISTAN",
-      "badgeText": "JOUR 1",
-      "description": "À votre arrivée à Bishkek, capitale vivante du Kirghizistan, accueil francophone par nos équipes et transfert privatif à votre hôtel. Premières explorations de la ville, d'Ala Too au bazar d'Och.",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/jLp7A7iCRmyKQXoriDGp.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU VILLAGE KYZYL OY",
-      "badgeText": "JOURS 2 ET 3",
-      "description": "Début de l'aventure ! Vous filez à travers routes sinueuses et cols vertigineux jusqu'aux vastes étendues de la vallée de Suussamyr, ponctuée de yourtes de nomades. A votre arrivée au village, vous participez à la préparation du pain beignet traditionnel. Profitez de votre journée libre le lendemain pour découvrir les alentours à pied, à cheval, ou à la nage dans la rivière Kokomeren. ",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/JqOOdFxPSJSD4PKa6BF5.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU BORD DU LAC SON KOUL",
-      "badgeText": "JOURS 4 ET 5",
-      "description": "Après le passage d'un col, vous arrivez sur les rives du lac Son Koul où vous faites connaissance des bergers nomades kirghizes. Profitez de ce cadre idyllique pour une randonnée, ou une balade à cheval. Vous pourrez voir le processus de traite des juments et gouterez la cuisine nationale. Nuit sous une yourte kirghize traditionnelle.",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/wdTWqwQHSoGJPIieHQsV.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CHEZ L'HABITANT À KOTCHKOR",
-      "badgeText": "JOUR 6",
-      "description": "Après le passage du col Kalmak Achou à 3400 mètres, vous arrivez dans votre famille d'accueil. Au programme : atelier fabrication des objets traditionnels en feutre avec les femmes kirghizes du village. Moment d'échange et de convivialité assuré avant le repas en famille !",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/0mmyx0FTCiysKv5Ff8Sw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AVEC LES FABRICANTS DE YOURTES",
-      "badgeText": "JOURS 7 ET 8",
-      "description": "Vous passerez 2 jours dans le village de Kyzyl Tou, au sein d’une famille kirghize, qui vous révélera les secrets de la production de yourtes entre fabrication de la charpente et décoration intérieure ! Cette famille est engagée dans cet art unique depuis des générations. Lors de votre immersion, vous irez également randonner au canyon d'Ak Say qui débouche sur le lac Issyk Koul et sa plage sauvage. ",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/7PpOSFC7TWiFTA6qpfOQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA CHASSE À L'AIGLE",
-      "badgeText": "JOURS 9 ET 10",
-      "description": "Vous ferez la connaissance du chasseur à l’aigle dans le village de Bokonbaevo. Vous en apprendrez plus sur cet art ancestral perpétué par les nomades kirghizes et les relations que les hommes ont établies avec cet oiseau. Le lendemain, randonnée au panorama du lac pour s'émerveiller des étendues kirghizes. ",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/1quIZFubQM2Xu8iwInYE.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA VALLÉE CHON KEMIN",
-      "badgeText": "JOUR 11",
-      "description": "Vous quittez le lac Issyk Koul pour aller au village Tar Sou situé dans la vallée Chon Kemin connue pour sa biodiversité très riche. Au programme : promenade dans le village, randonnée dans une gorge à flanc de montagne et partage avec les propriétaires de la maison d'hôtes. \r\n\r\n",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/0lG4QRAmTvaoWk1QcWVi.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FIN DE VOTRE AVENTURE",
-      "badgeText": "JOURS 12 ET 13",
-      "description": "Après votre petit-déjeuner dans la maison d’hôtes, votre chauffeur viendra vous chercher pour vous ramener à Bishkek. Sur la route, vous visitez la Tour Bourana, vestige de l'ancienne ville Balasagyn. A votre arrivée à Bishkek, achat de souvenirs au marché local. Le lendemain, après les adieux avec votre guide, vous serez accompagnés à l'aéroport où vous prendrez votre vol.",
-      "photo": "/images/voyages/immersion-steppes-kirghizistan/3HP7BvreTZylNyRBAmT4.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Danil",
-      "description": "Spécialiste du Kirghizistan, Daniel exerce depuis plus de 10 ans comme guide et a parcouru presque tous les recoins du pays. Son credo ? \"Mieux vaut voir une fois, que d'entendre cent fois\"",
-      "role": "Guide francophone",
-      "image": "/images/voyages/immersion-steppes-kirghizistan/7LNliSwITMOlyKnUZxQs.jpg"
-    }
-  ],
-  "accompanistsDescription": "Votre voyage au Kirghizistan est encadré par un chauffeur francophone spécialiste de la région. Le transport est assuré en véhicule privé confortable et climatisé. Si le groupe est constitué de 4 personnes, vous serez accompagnés par un guide francophone en plus du chauffeur. Lors des différentes immersions, vous aurez des guides locaux sur place qui vous expliqueront leur savoir-faire. Lors de votre voyage, vous bénéficiez de l'assistance personnalisée avec un conseiller Odysway, disponible 7 jours sur 7.",
-  "housingBlock": [
-    {
-      "title": "  Maison d'hôtes, yourtes",
-      "housingType": "",
-      "housingMood": "Les hébergements sur ce voyage varient entre des nuits en hôtel simples mais confortables, en maison d'hôtes chez différentes familles kirghizes et en yourte près du lac Son Koul.",
-      "image": [
-        {
-          "src": "/images/voyages/immersion-steppes-kirghizistan/NdR9eY6BSlOhXrHNg2Di.jpg",
-          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
-        },
-        {
-          "src": "/images/voyages/immersion-steppes-kirghizistan/qgVamOpPRtSBT26FG3FY.jpg",
-          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
-        },
-        {
-          "src": "/images/voyages/immersion-steppes-kirghizistan/RnCgfxq2RX6bAco4oPNj.jpg",
-          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil à l'aéroport",
-      "Tous les transferts en véhicule privé confortable et climatisé",
-      "L'accompagnement par un chauffeur expérimenté anglophone à partir de 2 voyageurs",
-      "L'accompagnement par un guide francophone à partir de 4 voyageurs",
-      "L'accompagnement de guides locaux à Kysyl Oy et Bokonbaevo à partir de 2 voyageurs",
-      "Les hébergements indiqués dans le programme",
-      "La pension complète",
-      "Les visites indiquées dans le programme",
-      "Les activités suivantes : la préparation du pain beignet à Kyzyl Oy, la fabrication de produits en feutre à Kotchkor, la balade à cheval à Son Koul, la fabrication de yourtes à Kysyl Tou, l'expérience de chasse à l’aigle à Bokonbaevo, et la charrette tirée à Chon Kemin.",
-      ""
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Bishkek et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Les activités lors des journées libres",
-      "Le guide francophone pour les groupes de moins de 4 voyageurs",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles et les pourboires",
-      "Les boissons alcoolisées"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -276,27 +370,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2243,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 165,
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "FRU"
-    ]
+  "seo": {
+    "metaTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+    "canonicalUrl": "https://www.odysway.com/voyages/immersion-steppes-kirghizistan",
+    "ogTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+    "ogDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
+    "ogImage": {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg",
+      "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    "twitterTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+    "twitterDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
+    "twitterImage": {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg",
+      "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

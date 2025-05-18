@@ -66,9 +66,9 @@ const { data: categorieContent, status: categorieContentStatus } = useAsyncData(
 provide('page', categorieContent)
 
 const { data: voyages } = useAsyncData('voyages', async () => {
-  const travelList = await queryCollection('voyages').all()
+  const travelList = await queryCollection('voyages').where('published', '==', true).all()
   console.log('travelList', travelList)
-  return travelList.filter(v => v.categories.includes(slug.value))
+  return travelList.filter(v => v.categories.some(c => c.name.includes(slug.value)))
 })
 
 const limitedVoyages = computed(() => {

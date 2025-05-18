@@ -1,45 +1,245 @@
 {
   "published": true,
   "title": "Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise",
-  "slug": "immersion-culture-albanie",
-  "rating": 4.5,
-  "comments": 3,
-  "description": "Préparez-vous à vivre une immersion totale au sein de la fascinante culture albanaise. Entre des paysages à couper le souffle, des lacs étincelants, des cascades majestueuses, une mer turquoise et des montagnes imposantes, chaque étape de votre voyage vous réserve des découvertes incroyables.\n\nDécouvrez des villes traditionnelles aux charmes envoûtants, où l'histoire millénaire se mêle harmonieusement à une atmosphère authentique. Rencontrez des habitants chaleureux qui vous accueilleront à bras ouverts, partageant avec vous leurs traditions, leur cuisine savoureuse et leur hospitalité légendaire.\n\nPréparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Partagerez des moments forts avec une famille de fermiers locaux, vous plongeant ainsi dans leur quotidien et leur mode de vie. Si vous recherchez le paradis perdu en Europe, vous l'avez trouvé : l'Albanie vous réserve des trésors insoupçonnés !",
-  "emailDescription": "👉 Si vous souhaitez partir en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie, découvrir ses paysages fabuleux entre mer et montage et partir à la rencontre de sa population, ce voyage est fait pour vous ! ",
-  "metaDescription": "Partez en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie. Découvrez ses paysages fabuleux entre mer et montage et partez à la rencontre de sa population.",
-  "interjection": "en",
   "destinations": [
-    "Albanie"
+    {
+      "name": "Albanie",
+      "slug": "albanie"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "ou-partir-au-printemps",
-    "sejours-chez-l-habitant",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, chez l'habitant",
   "idealPeriods": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.5,
+  "comments": 3,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Préparez-vous à vivre une immersion totale au sein de la fascinante culture albanaise. Entre des paysages à couper le souffle, des lacs étincelants, des cascades majestueuses, une mer turquoise et des montagnes imposantes, chaque étape de votre voyage vous réserve des découvertes incroyables.\n\nDécouvrez des villes traditionnelles aux charmes envoûtants, où l'histoire millénaire se mêle harmonieusement à une atmosphère authentique. Rencontrez des habitants chaleureux qui vous accueilleront à bras ouverts, partageant avec vous leurs traditions, leur cuisine savoureuse et leur hospitalité légendaire.\n\nPréparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Partagerez des moments forts avec une famille de fermiers locaux, vous plongeant ainsi dans leur quotidien et leur mode de vie. Si vous recherchez le paradis perdu en Europe, vous l'avez trouvé : l'Albanie vous réserve des trésors insoupçonnés !",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Vivez un voyage 100% immersif à chaque étape",
+    "Rencontrez les locaux et partagez le quotidien de fermiers dans la campagne albanaise",
+    "Voyagez dans des endroits isolés et peu connus des touristes",
+    "Dégustez des plats traditionnels albanais chez l'habitant",
+    "Visitez de villes et villages magnifiques comme Berat et Gjirokastra"
+  ],
+  "slug": "immersion-culture-albanie",
+  "description": "Préparez-vous à vivre une immersion totale au sein de la fascinante culture albanaise. Entre des paysages à couper le souffle, des lacs étincelants, des cascades majestueuses, une mer turquoise et des montagnes imposantes, chaque étape de votre voyage vous réserve des découvertes incroyables.\n\nDécouvrez des villes traditionnelles aux charmes envoûtants, où l'histoire millénaire se mêle harmonieusement à une atmosphère authentique. Rencontrez des habitants chaleureux qui vous accueilleront à bras ouverts, partageant avec vous leurs traditions, leur cuisine savoureuse et leur hospitalité légendaire.\n\nPréparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Partagerez des moments forts avec une famille de fermiers locaux, vous plongeant ainsi dans leur quotidien et leur mode de vie. Si vous recherchez le paradis perdu en Europe, vous l'avez trouvé : l'Albanie vous réserve des trésors insoupçonnés !",
+  "emailDescription": "👉 Si vous souhaitez partir en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie, découvrir ses paysages fabuleux entre mer et montage et partir à la rencontre de sa population, ce voyage est fait pour vous ! ",
+  "metaDescription": "Partez en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie. Découvrez ses paysages fabuleux entre mer et montage et partez à la rencontre de sa population.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Hôtel, chez l'habitant",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Avr à Dec",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "PREMIER JOUR EN ALBANIE",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée à l’aéroport international de Tirana, rencontre avec votre guide local et route vers Berat, ville typique de la période ottomane. ",
+      "photo": "/images/voyages/immersion-culture-albanie/1NKFAqt9R9Wb8FmKbAPP.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CASCADE ET CANYON",
+      "badgeText": "JOUR 2",
+      "description": "C'est parti pour une excursion incroyable jusqu'à la cascade Bogova et dans le canyon Osum ! Petite pause au village de Bogova pour déguster des boissons traditionnelles avec le couple Fatos & Margarita. Profitez des piscines naturelles de la rivière Osum avant un bon déjeuner de produits locaux.",
+      "photo": "/images/voyages/immersion-culture-albanie/39jIViRjSMydEBEXuxVI.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BALADE A CHEVAL",
+      "badgeText": "JOUR 3",
+      "description": "La journée commence au village « Asim Zeneli » pour préparer votre balade à cheval et apprivoiser votre monture. Vous partez 3h à la découverte des ruines du château de Santa Triada et de la ville ottomane Gjirokastra. Vous aurez la possibilité de rencontrer des artisans locaux, tailleur de pierres ou sculpteur sur bois.",
+      "photo": "/images/voyages/immersion-culture-albanie/ykAvVrnSaSfCJq5aaB8X.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RAFTING SUR LA RIVIERE VJOSA",
+      "badgeText": "JOUR 4",
+      "description": "Ce matin, vous partez pour 2h de navigation en rafting sur la rivière Vjosa, sensations fortes garanties ! Vous pourrez profiter de votre après midi pour rejoindre les thermes « Benja » de Permët avant de prendre la route pour le village de Këlcyrë et rejoindre la petite ferme d'Elona, une albanaise francophone. ",
+      "photo": "/images/voyages/immersion-culture-albanie/Cf5F3Sm0SiGGoPRX02mK.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION A LA FERME",
+      "badgeText": "JOURS 5 ET 6",
+      "description": "Pendant deux jours, partagez le quotidien d'Elona. Au programme, préparation des repas à base des cueillettes du jour, traite des vaches le matin, balade jusqu'à un lac où vous pourrez vous baigner, cours de Pogonishta, danse traditionnelle du sud de l’Albanie... Une immersion unique, reposante et loin de la foule, pour une approche différente de l'Albanie.",
+      "photo": "/images/voyages/immersion-culture-albanie/vVE1zhAbQPutBeWza1bA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS",
+      "badgeText": "JOURS 7 ET 8",
+      "description": "Après le petit-déjeuner, visite guidée de Tirana. Autrefois terne et grise, la ville a connu un essor, devenant une métropole animée, colorée et très vivante grâce à son ambiance singulière. Fascinante, Tirana vous fera ressentir à la fois le passé et l’avenir de l’Albanie. Nuit à Tirana puis route le lendemain vers l'aéroport.",
+      "photo": "/images/voyages/immersion-culture-albanie/Ph38bUdMRBuROMYJZ5Lb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts entre l’aéroport et la ville de Tirana",
+      "Le guide-chauffeur francophone du jour 1 au jour 4 puis le jour 7 à Tirana",
+      "Les nuitées dans des hôtels 3 et 4\\* et en maison d’hôtes en base double",
+      "La pension complète du jour 1 jusqu’au petit-déjeuner du jour 8",
+      "Les entrées dans les monuments visités, toutes les activités mentionnées dans le programme",
+      "La rencontre de plusieurs artisans locaux",
+      "L’Immersion dans une ferme Albanaise avec votre hôte francophone"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Tirana et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les boissons",
+      "Les pourboires",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1590,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 90,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "TIA"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage est encadré et accompagné par un guide / chauffeur francophone du jour 1 à 4 et le jour 7 à Tirana. Sur les jours 5 et 6, vous serez avec la famille d'Elona, albanaise qui parle français. La famille vit dans une petite ferme isolée dans la campagne. Votre hôte Elona vous présentera l’histoire de sa ferme et vous fera vivre son quotidien, entre préparation des repas à base de produits naturels, traite des vaches, randonnées et yoga !",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtel, chez l'habitant",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage de 8 jours et 7 nuits, vous dormirez dans des hôtels à Kruje et Tirana, en maison d'hôtes à Berat et à Gjirokastra, et chez l'habitant lors de l'immersion à la ferme qui se situe dans le village de Këlcyrë.",
+      "image": [
+        {
+          "src": "/images/voyages/immersion-culture-albanie/kL7fWqeCTuayflKxP6KT.jpg",
+          "alt": "image de l'hébergement Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
+        },
+        {
+          "src": "/images/voyages/immersion-culture-albanie/4hripbOoTm6l9HX3I7Rt.jpg",
+          "alt": "image de l'hébergement Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
+        },
+        {
+          "src": "/images/voyages/immersion-culture-albanie/kLlV1IoRaWKEpLSltk2A.jpg",
+          "alt": "image de l'hébergement Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/immersion-culture-albanie/Wh7DjgWCSsaYsCyGCJFH.jpg",
     "alt": "image principale du voyage Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
@@ -111,105 +311,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Préparez-vous à vivre une immersion totale au sein de la fascinante culture albanaise. Entre des paysages à couper le souffle, des lacs étincelants, des cascades majestueuses, une mer turquoise et des montagnes imposantes, chaque étape de votre voyage vous réserve des découvertes incroyables.\n\nDécouvrez des villes traditionnelles aux charmes envoûtants, où l'histoire millénaire se mêle harmonieusement à une atmosphère authentique. Rencontrez des habitants chaleureux qui vous accueilleront à bras ouverts, partageant avec vous leurs traditions, leur cuisine savoureuse et leur hospitalité légendaire.\n\nPréparez-vous à vivre un voyage hors des sentiers battus, hors du temps. Partagerez des moments forts avec une famille de fermiers locaux, vous plongeant ainsi dans leur quotidien et leur mode de vie. Si vous recherchez le paradis perdu en Europe, vous l'avez trouvé : l'Albanie vous réserve des trésors insoupçonnés !",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Vivez un voyage 100% immersif à chaque étape",
-    "Rencontrez les locaux et partagez le quotidien de fermiers dans la campagne albanaise",
-    "Voyagez dans des endroits isolés et peu connus des touristes",
-    "Dégustez des plats traditionnels albanais chez l'habitant",
-    "Visitez de villes et villages magnifiques comme Berat et Gjirokastra"
-  ],
-  "programmeBlock": [
-    {
-      "title": "PREMIER JOUR EN ALBANIE",
-      "badgeText": "JOUR 1",
-      "description": "Arrivée à l’aéroport international de Tirana, rencontre avec votre guide local et route vers Berat, ville typique de la période ottomane. ",
-      "photo": "/images/voyages/immersion-culture-albanie/1NKFAqt9R9Wb8FmKbAPP.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CASCADE ET CANYON",
-      "badgeText": "JOUR 2",
-      "description": "C'est parti pour une excursion incroyable jusqu'à la cascade Bogova et dans le canyon Osum ! Petite pause au village de Bogova pour déguster des boissons traditionnelles avec le couple Fatos & Margarita. Profitez des piscines naturelles de la rivière Osum avant un bon déjeuner de produits locaux.",
-      "photo": "/images/voyages/immersion-culture-albanie/39jIViRjSMydEBEXuxVI.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BALADE A CHEVAL",
-      "badgeText": "JOUR 3",
-      "description": "La journée commence au village « Asim Zeneli » pour préparer votre balade à cheval et apprivoiser votre monture. Vous partez 3h à la découverte des ruines du château de Santa Triada et de la ville ottomane Gjirokastra. Vous aurez la possibilité de rencontrer des artisans locaux, tailleur de pierres ou sculpteur sur bois.",
-      "photo": "/images/voyages/immersion-culture-albanie/ykAvVrnSaSfCJq5aaB8X.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RAFTING SUR LA RIVIERE VJOSA",
-      "badgeText": "JOUR 4",
-      "description": "Ce matin, vous partez pour 2h de navigation en rafting sur la rivière Vjosa, sensations fortes garanties ! Vous pourrez profiter de votre après midi pour rejoindre les thermes « Benja » de Permët avant de prendre la route pour le village de Këlcyrë et rejoindre la petite ferme d'Elona, une albanaise francophone. ",
-      "photo": "/images/voyages/immersion-culture-albanie/Cf5F3Sm0SiGGoPRX02mK.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION A LA FERME",
-      "badgeText": "JOURS 5 ET 6",
-      "description": "Pendant deux jours, partagez le quotidien d'Elona. Au programme, préparation des repas à base des cueillettes du jour, traite des vaches le matin, balade jusqu'à un lac où vous pourrez vous baigner, cours de Pogonishta, danse traditionnelle du sud de l’Albanie... Une immersion unique, reposante et loin de la foule, pour une approche différente de l'Albanie.",
-      "photo": "/images/voyages/immersion-culture-albanie/vVE1zhAbQPutBeWza1bA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS INSTANTS",
-      "badgeText": "JOURS 7 ET 8",
-      "description": "Après le petit-déjeuner, visite guidée de Tirana. Autrefois terne et grise, la ville a connu un essor, devenant une métropole animée, colorée et très vivante grâce à son ambiance singulière. Fascinante, Tirana vous fera ressentir à la fois le passé et l’avenir de l’Albanie. Nuit à Tirana puis route le lendemain vers l'aéroport.",
-      "photo": "/images/voyages/immersion-culture-albanie/Ph38bUdMRBuROMYJZ5Lb.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Ce voyage est encadré et accompagné par un guide / chauffeur francophone du jour 1 à 4 et le jour 7 à Tirana. Sur les jours 5 et 6, vous serez avec la famille d'Elona, albanaise qui parle français. La famille vit dans une petite ferme isolée dans la campagne. Votre hôte Elona vous présentera l’histoire de sa ferme et vous fera vivre son quotidien, entre préparation des repas à base de produits naturels, traite des vaches, randonnées et yoga !",
-  "housingBlock": [
-    {
-      "title": "Hôtel, chez l'habitant",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage de 8 jours et 7 nuits, vous dormirez dans des hôtels à Kruje et Tirana, en maison d'hôtes à Berat et à Gjirokastra, et chez l'habitant lors de l'immersion à la ferme qui se situe dans le village de Këlcyrë.",
-      "image": [
-        {
-          "src": "/images/voyages/immersion-culture-albanie/kL7fWqeCTuayflKxP6KT.jpg",
-          "alt": "image de l'hébergement Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
-        },
-        {
-          "src": "/images/voyages/immersion-culture-albanie/4hripbOoTm6l9HX3I7Rt.jpg",
-          "alt": "image de l'hébergement Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
-        },
-        {
-          "src": "/images/voyages/immersion-culture-albanie/kLlV1IoRaWKEpLSltk2A.jpg",
-          "alt": "image de l'hébergement Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les transferts entre l’aéroport et la ville de Tirana",
-      "Le guide-chauffeur francophone du jour 1 au jour 4 puis le jour 7 à Tirana",
-      "Les nuitées dans des hôtels 3 et 4\\* et en maison d’hôtes en base double",
-      "La pension complète du jour 1 jusqu’au petit-déjeuner du jour 8",
-      "Les entrées dans les monuments visités, toutes les activités mentionnées dans le programme",
-      "La rencontre de plusieurs artisans locaux",
-      "L’Immersion dans une ferme Albanaise avec votre hôte francophone"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Tirana et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Toutes les dépenses supplémentaires non mentionnées",
-      "Les boissons",
-      "Les pourboires",
-      "L'assurance annulation ou multirisques"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -254,27 +355,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1590,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 90,
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "TIA"
-    ]
+  "seo": {
+    "metaTitle": "Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise",
+    "canonicalUrl": "https://www.odysway.com/voyages/immersion-culture-albanie",
+    "ogTitle": "Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise",
+    "ogDescription": "Partez en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie. Découvrez ses paysages fabuleux entre mer et montage et partez à la rencontre de sa population.",
+    "ogImage": {
+      "src": "/images/voyages/immersion-culture-albanie/Wh7DjgWCSsaYsCyGCJFH.jpg",
+      "alt": "image principale du voyage Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
+    },
+    "twitterTitle": "Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise",
+    "twitterDescription": "Partez en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie. Découvrez ses paysages fabuleux entre mer et montage et partez à la rencontre de sa population.",
+    "twitterImage": {
+      "src": "/images/voyages/immersion-culture-albanie/Wh7DjgWCSsaYsCyGCJFH.jpg",
+      "alt": "image principale du voyage Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

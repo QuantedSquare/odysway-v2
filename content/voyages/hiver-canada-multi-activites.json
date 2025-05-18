@@ -1,38 +1,251 @@
 {
   "published": true,
   "title": "Séjour multiactivités dans les fjords canadiens",
-  "slug": "hiver-canada-multi-activites",
-  "rating": 5,
-  "comments": 3,
-  "description": "Plongez au cœur du fjord du Saguenay, majestueux et enneigé, bordé de falaises boisées. Au cœur de ces grands espaces glacés par l’hiver, partagez des moments chaleureux avec les Canadiens en participant à des activités locales. Rencontrez trappeurs, chansonniers, mushers... Des âmes vibrantes qui animent l'hiver de couleurs.\n\nSur un traîneau tiré par les chiens ou à raquettes, arpentez le Saguenay, émerveillez vous devant ses couchers de soleil sur le fjord figé, ses sapins enneigés, et pendant les veillées, la tête dans les étoiles sous un ciel d'une pureté rare.\n\nExplorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hivernaux majestueux et savourez sa cuisine locale !",
-  "emailDescription": "",
-  "metaDescription": "Explorez le magnifique Fjord du Saguenay au Canada lors d'une aventure hivernale en réalisant de multiples activités au cœur de paysages enneigés",
-  "interjection": "au",
   "destinations": [
-    "Canada"
+    {
+      "name": "Canada",
+      "slug": "canada"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ou-partir-en-hiver",
-    "partir-en-famille",
-    "sejours-nature"
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel et pourvoirie",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 3,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Plongez au cœur du fjord du Saguenay, majestueux et enneigé, bordé de falaises boisées. Au cœur de ces grands espaces glacés par l’hiver, partagez des moments chaleureux avec les Canadiens en participant à des activités locales. Rencontrez trappeurs, chansonniers, mushers... Des âmes vibrantes qui animent l'hiver de couleurs.\n\nSur un traîneau tiré par les chiens ou à raquettes, arpentez le Saguenay, émerveillez vous devant ses couchers de soleil sur le fjord figé, ses sapins enneigés, et pendant les veillées, la tête dans les étoiles sous un ciel d'une pureté rare.\n\nExplorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hivernaux majestueux et savourez sa cuisine locale !",
+    "author": "Lucie",
+    "affixeAuthor": "Responsable voyageurs"
+  },
+  "experiencesBlock": [
+    "Découvrez le Fjord du Saguenay, une merveille de la nature canadienne",
+    "Vivez des expériences authentiques et locales pour une immersion totale",
+    "Admirez la vue imprenable sur le Saguenay depuis votre hébergement dans une pourvoirie typique",
+    "Partagez des moments de convivialité dans un esprit chaleureux"
+  ],
+  "slug": "hiver-canada-multi-activites",
+  "description": "Plongez au cœur du fjord du Saguenay, majestueux et enneigé, bordé de falaises boisées. Au cœur de ces grands espaces glacés par l’hiver, partagez des moments chaleureux avec les Canadiens en participant à des activités locales. Rencontrez trappeurs, chansonniers, mushers... Des âmes vibrantes qui animent l'hiver de couleurs.\n\nSur un traîneau tiré par les chiens ou à raquettes, arpentez le Saguenay, émerveillez vous devant ses couchers de soleil sur le fjord figé, ses sapins enneigés, et pendant les veillées, la tête dans les étoiles sous un ciel d'une pureté rare.\n\nExplorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hivernaux majestueux et savourez sa cuisine locale !",
+  "emailDescription": "",
+  "metaDescription": "Explorez le magnifique Fjord du Saguenay au Canada lors d'une aventure hivernale en réalisant de multiples activités au cœur de paysages enneigés",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Dec à Mar",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE A MONTREAL",
+      "badgeText": "JOUR 1",
+      "description": "Après avoir survolé les étendues blanches qui s’étirent depuis l’Atlantique, votre avion entame sa descente vers Montréal. Accueil à l’aéroport puis transfert à l’hôtel et fin de journée libre pour découvrir la capitale économique et culturelle du Québec. Première nuit dans un hôtel situé en plein centre de Montréal. ",
+      "photo": "/images/voyages/hiver-canada-multi-activites/g8A0y9ckS9q2A0i4Tx6E.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DE MONTREAL AU SAGUENAY",
+      "badgeText": "JOUR 2",
+      "description": "Vous suivrez aujourd’hui le cours du Saint-Laurent en direction d’une érablière pour une visite et un repas traditionnel dans une cabane à sucre. Puis route vers le nord-est pour atteindre la région du Saguenay. Installation pour 5 nuits à la Pourvoirie du Cap au Leste qui offre une vue imprenable sur le fjord.",
+      "photo": "/images/voyages/hiver-canada-multi-activites/o9Ah5hKRdC6ratzey5OA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A LA DECOUVERTE DU FJORD",
+      "badgeText": "JOUR 3",
+      "description": "Le petit village au nom chantant de Sainte-Rose-du- Nord est une ouverture sur le fjord. Vous explorerez aujourd’hui ses environs au guidon de votre motoneige (70 km env.). Vous profiterez d'un déjeuner au village. Au retour, les vues sur le fjord sont encore plus impressionnantes au fur et à mesure que vous progressez vers la pourvoirie. Soirée feu de camp à la belle étoile. ",
+      "photo": "/images/voyages/hiver-canada-multi-activites/xjg6uwaNS66PyK0rqNAC.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RAQUETTES EN PLEINE NATURE",
+      "badgeText": "JOUR 4",
+      "description": "Ce matin une balade en raquettes vous mène dans des paysages témoins de la diversité des écosystèmes de la région. Après votre déjeuner, l’après-midi sera consacré à des activités locales : découvrez le hockey sur glace... sans patins et sur la neige ! Essayez également les glissades sur tube. Pour ceux qui le souhaitent, participez à une marche aux flambeaux dans l’obscurité de la nuit.",
+      "photo": "/images/voyages/hiver-canada-multi-activites/rK2lVvEHS9i8DiQlaWmL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AVENTURE EN CHIEN DE TRAINEAU",
+      "badgeText": "JOUR 5",
+      "description": "En matinée, participez à une balade en traîneau à chiens. Alors que vous approchez du chenil, les chiens donnent de la voix. Après les conseils de conduite et de sécurité dispensés par le musher, vous vous élancez sur les sentiers montagneux de cette région sauvage. L'après-midi, prélassez vous dans les eaux chaudes du sauna avec vue sur le fjord. Dîner à la pourvoirie.",
+      "photo": "/images/voyages/hiver-canada-multi-activites/Hfnr3wNzQz6TxRyJNbeh.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "INITIATION A LA SURVIE COMME UN TRAPPEUR",
+      "badgeText": "JOUR 6",
+      "description": "Depuis le haut des falaises jusqu’au phare qui trône sur la rive du fjord, la balade en raquettes que vous entreprendrez ce matin vous offrira des panoramas inoubliables. Après le déjeuner, direction le Lac Louise, pour un après-midi sur le thème de la survie. Apprenez à pêcher sous la glace, faire un feu sur la neige... L’ultime soirée sera festive et animée par vos guides dans une ambiance Pur Québec !",
+      "photo": "/images/voyages/hiver-canada-multi-activites/OqsmVRQBRjS9lHJl8yG7.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPLOREZ LA VILLE DE QUEBEC",
+      "badgeText": "JOUR 7",
+      "description": "Votre séjour au sein de la communauté du Saguenay s’achève aujourd’hui. Votre bus vous amènera en direction de la ville de Québec. Arrêt aux célèbres Chutes Montmorency, 30 mètres plus hautes que les chutes du Niagara! Le déjeuner et le reste de la journée sont libres. Profitez en pour découvrir cette perle d’architecture et d’histoire classée au patrimoine mondial par l’UNESCO.",
+      "photo": "/images/voyages/hiver-canada-multi-activites/P39Om6kHT9iFweKLjL7u.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERES HEURES AU CANADA",
+      "badgeText": "JOUR 8",
+      "description": "Pour cette dernière journée, vous prendrez la route en direction de l’aéroport de Montréal. Vous profiterez des quelques heures qu’il vous reste pour visiter la grande métropole, son quartier historique, son vieux port ou magasiner vos souvenirs sur la rue Sainte Catherine, la plus commerçante. Vol de nuit vers Paris. ",
+      "photo": "/images/voyages/hiver-canada-multi-activites/ug5gXMnGQ5ey7BVxrHQy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’accueil à l’aéroport et le transfert groupé aéroport/hôtel à Montréal",
+      "Les transferts regroupés aller-retour Montréal/Québec/Cap au Leste : J2 - J7 - J8",
+      "Tous les repas du petit déjeuner du jour 2 au petit déjeuner du jour 7, et petit déjeuner J8",
+      "2 nuits en hébergement 3\\* et 4\\* base double : 1 nuit à Montréal le jour 1 et 1 nuit à Québec le jour 8",
+      "5 nuits en pourvoirie en pleine nature, base double du jour 2 au jour 7, avec sauna et piscine",
+      "1 jour de motoneige (1 personne/moto - 6 à 7h) accompagné par un guide professionnel - déjeuner inclus",
+      "1/2 journée d’activité de traîneau à chiens à 2 personnes/traîneau",
+      "Excursion en raquettes",
+      "Apprentissage de la survie en forêt et démonstration de la pêche blanche",
+      "Visite d'une érablière et déjeuner typique dans une cabane à sucre",
+      "Activités offertes sur place : glissade, street-hockey, feu de camp, randonnée au flambeau...",
+      "Un accompagnateur francophone tout au long du séjour",
+      "Des guides locaux afin d’encadrer chacune des activités, pendant le jour et en soirée",
+      "Les équipements grand froid : veste, salopette et bottes"
+    ],
+    "exclude": [
+      "Le transport aérien international depuis Paris/Montréal aller/retour et les taxes aéroport",
+      "Les déjeuners et dîners du J1, J7 et J8",
+      "Les activités optionnelles non mentionnées au programme",
+      "Les dépenses personnelles et boissons (autres que le thé ou le café régulier toujours inclus avec les repas inclus)",
+      "Les pourboires (au bon vouloir selon votre degré de satisfaction) aux guides (6-10$ par jour et par personne) et aux chauffeurs (4$ par jour et par personne)",
+      "Le supplément \"chambre individuelle\"",
+      "Le supplément \"motoneige individuelle\" (177€)",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1760,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "YUL"
+    ]
+  },
+  "accompanistsDescription": "A votre arrivée à l'aéroport, vous serez accueilli par votre chauffeur francophone qui réalisera l'ensemble des trajets du séjour. Lors de vos journées à la Pourvoirie, chaque activité sera encadré par un accompagnateur francophone spécialisé.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtel et pourvoirie",
+      "housingType": "",
+      "housingMood": "Arrivée à Montréal, vous logerez une nuit dans un hôtel 4* puis partirez le lendemain pour une pourvoirie en bordure du Saguenay pour 5 nuits en pleine nature, un véritable havre de paix. Pour la dernière nuit, direction la ville de Québec, où vous logerez en hôtel 4*",
+      "image": [
+        {
+          "src": "/images/voyages/hiver-canada-multi-activites/LuOuWUtSXGUGURFEQtxH.jpg",
+          "alt": "image de l'hébergement Séjour multiactivités dans les fjords canadiens"
+        },
+        {
+          "src": "/images/voyages/hiver-canada-multi-activites/QmKhdjRbRbGtgLtj7bDD.jpg",
+          "alt": "image de l'hébergement Séjour multiactivités dans les fjords canadiens"
+        },
+        {
+          "src": "/images/voyages/hiver-canada-multi-activites/4UsBfq4URgehoDbSadIT.jpg",
+          "alt": "image de l'hébergement Séjour multiactivités dans les fjords canadiens"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/hiver-canada-multi-activites/OM6tLNR3i6v2PuQZLKxA.jpg",
     "alt": "image principale du voyage Séjour multiactivités dans les fjords canadiens"
@@ -68,128 +281,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Plongez au cœur du fjord du Saguenay, majestueux et enneigé, bordé de falaises boisées. Au cœur de ces grands espaces glacés par l’hiver, partagez des moments chaleureux avec les Canadiens en participant à des activités locales. Rencontrez trappeurs, chansonniers, mushers... Des âmes vibrantes qui animent l'hiver de couleurs.\n\nSur un traîneau tiré par les chiens ou à raquettes, arpentez le Saguenay, émerveillez vous devant ses couchers de soleil sur le fjord figé, ses sapins enneigés, et pendant les veillées, la tête dans les étoiles sous un ciel d'une pureté rare.\n\nExplorez le Canada, découvrez son accueil chaleureux, admirez ses paysages hivernaux majestueux et savourez sa cuisine locale !",
-    "author": "Lucie",
-    "affixeAuthor": "Responsable voyageurs"
-  },
-  "experiencesBlock": [
-    "Découvrez le Fjord du Saguenay, une merveille de la nature canadienne",
-    "Vivez des expériences authentiques et locales pour une immersion totale",
-    "Admirez la vue imprenable sur le Saguenay depuis votre hébergement dans une pourvoirie typique",
-    "Partagez des moments de convivialité dans un esprit chaleureux"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVEE A MONTREAL",
-      "badgeText": "JOUR 1",
-      "description": "Après avoir survolé les étendues blanches qui s’étirent depuis l’Atlantique, votre avion entame sa descente vers Montréal. Accueil à l’aéroport puis transfert à l’hôtel et fin de journée libre pour découvrir la capitale économique et culturelle du Québec. Première nuit dans un hôtel situé en plein centre de Montréal. ",
-      "photo": "/images/voyages/hiver-canada-multi-activites/g8A0y9ckS9q2A0i4Tx6E.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DE MONTREAL AU SAGUENAY",
-      "badgeText": "JOUR 2",
-      "description": "Vous suivrez aujourd’hui le cours du Saint-Laurent en direction d’une érablière pour une visite et un repas traditionnel dans une cabane à sucre. Puis route vers le nord-est pour atteindre la région du Saguenay. Installation pour 5 nuits à la Pourvoirie du Cap au Leste qui offre une vue imprenable sur le fjord.",
-      "photo": "/images/voyages/hiver-canada-multi-activites/o9Ah5hKRdC6ratzey5OA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "A LA DECOUVERTE DU FJORD",
-      "badgeText": "JOUR 3",
-      "description": "Le petit village au nom chantant de Sainte-Rose-du- Nord est une ouverture sur le fjord. Vous explorerez aujourd’hui ses environs au guidon de votre motoneige (70 km env.). Vous profiterez d'un déjeuner au village. Au retour, les vues sur le fjord sont encore plus impressionnantes au fur et à mesure que vous progressez vers la pourvoirie. Soirée feu de camp à la belle étoile. ",
-      "photo": "/images/voyages/hiver-canada-multi-activites/xjg6uwaNS66PyK0rqNAC.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RAQUETTES EN PLEINE NATURE",
-      "badgeText": "JOUR 4",
-      "description": "Ce matin une balade en raquettes vous mène dans des paysages témoins de la diversité des écosystèmes de la région. Après votre déjeuner, l’après-midi sera consacré à des activités locales : découvrez le hockey sur glace... sans patins et sur la neige ! Essayez également les glissades sur tube. Pour ceux qui le souhaitent, participez à une marche aux flambeaux dans l’obscurité de la nuit.",
-      "photo": "/images/voyages/hiver-canada-multi-activites/rK2lVvEHS9i8DiQlaWmL.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AVENTURE EN CHIEN DE TRAINEAU",
-      "badgeText": "JOUR 5",
-      "description": "En matinée, participez à une balade en traîneau à chiens. Alors que vous approchez du chenil, les chiens donnent de la voix. Après les conseils de conduite et de sécurité dispensés par le musher, vous vous élancez sur les sentiers montagneux de cette région sauvage. L'après-midi, prélassez vous dans les eaux chaudes du sauna avec vue sur le fjord. Dîner à la pourvoirie.",
-      "photo": "/images/voyages/hiver-canada-multi-activites/Hfnr3wNzQz6TxRyJNbeh.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "INITIATION A LA SURVIE COMME UN TRAPPEUR",
-      "badgeText": "JOUR 6",
-      "description": "Depuis le haut des falaises jusqu’au phare qui trône sur la rive du fjord, la balade en raquettes que vous entreprendrez ce matin vous offrira des panoramas inoubliables. Après le déjeuner, direction le Lac Louise, pour un après-midi sur le thème de la survie. Apprenez à pêcher sous la glace, faire un feu sur la neige... L’ultime soirée sera festive et animée par vos guides dans une ambiance Pur Québec !",
-      "photo": "/images/voyages/hiver-canada-multi-activites/OqsmVRQBRjS9lHJl8yG7.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPLOREZ LA VILLE DE QUEBEC",
-      "badgeText": "JOUR 7",
-      "description": "Votre séjour au sein de la communauté du Saguenay s’achève aujourd’hui. Votre bus vous amènera en direction de la ville de Québec. Arrêt aux célèbres Chutes Montmorency, 30 mètres plus hautes que les chutes du Niagara! Le déjeuner et le reste de la journée sont libres. Profitez en pour découvrir cette perle d’architecture et d’histoire classée au patrimoine mondial par l’UNESCO.",
-      "photo": "/images/voyages/hiver-canada-multi-activites/P39Om6kHT9iFweKLjL7u.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERES HEURES AU CANADA",
-      "badgeText": "JOUR 8",
-      "description": "Pour cette dernière journée, vous prendrez la route en direction de l’aéroport de Montréal. Vous profiterez des quelques heures qu’il vous reste pour visiter la grande métropole, son quartier historique, son vieux port ou magasiner vos souvenirs sur la rue Sainte Catherine, la plus commerçante. Vol de nuit vers Paris. ",
-      "photo": "/images/voyages/hiver-canada-multi-activites/ug5gXMnGQ5ey7BVxrHQy.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "A votre arrivée à l'aéroport, vous serez accueilli par votre chauffeur francophone qui réalisera l'ensemble des trajets du séjour. Lors de vos journées à la Pourvoirie, chaque activité sera encadré par un accompagnateur francophone spécialisé.",
-  "housingBlock": [
-    {
-      "title": "Hôtel et pourvoirie",
-      "housingType": "",
-      "housingMood": "Arrivée à Montréal, vous logerez une nuit dans un hôtel 4* puis partirez le lendemain pour une pourvoirie en bordure du Saguenay pour 5 nuits en pleine nature, un véritable havre de paix. Pour la dernière nuit, direction la ville de Québec, où vous logerez en hôtel 4*",
-      "image": [
-        {
-          "src": "/images/voyages/hiver-canada-multi-activites/LuOuWUtSXGUGURFEQtxH.jpg",
-          "alt": "image de l'hébergement Séjour multiactivités dans les fjords canadiens"
-        },
-        {
-          "src": "/images/voyages/hiver-canada-multi-activites/QmKhdjRbRbGtgLtj7bDD.jpg",
-          "alt": "image de l'hébergement Séjour multiactivités dans les fjords canadiens"
-        },
-        {
-          "src": "/images/voyages/hiver-canada-multi-activites/4UsBfq4URgehoDbSadIT.jpg",
-          "alt": "image de l'hébergement Séjour multiactivités dans les fjords canadiens"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L’accueil à l’aéroport et le transfert groupé aéroport/hôtel à Montréal",
-      "Les transferts regroupés aller-retour Montréal/Québec/Cap au Leste : J2 - J7 - J8",
-      "Tous les repas du petit déjeuner du jour 2 au petit déjeuner du jour 7, et petit déjeuner J8",
-      "2 nuits en hébergement 3\\* et 4\\* base double : 1 nuit à Montréal le jour 1 et 1 nuit à Québec le jour 8",
-      "5 nuits en pourvoirie en pleine nature, base double du jour 2 au jour 7, avec sauna et piscine",
-      "1 jour de motoneige (1 personne/moto - 6 à 7h) accompagné par un guide professionnel - déjeuner inclus",
-      "1/2 journée d’activité de traîneau à chiens à 2 personnes/traîneau",
-      "Excursion en raquettes",
-      "Apprentissage de la survie en forêt et démonstration de la pêche blanche",
-      "Visite d'une érablière et déjeuner typique dans une cabane à sucre",
-      "Activités offertes sur place : glissade, street-hockey, feu de camp, randonnée au flambeau...",
-      "Un accompagnateur francophone tout au long du séjour",
-      "Des guides locaux afin d’encadrer chacune des activités, pendant le jour et en soirée",
-      "Les équipements grand froid : veste, salopette et bottes"
-    ],
-    "exclude": [
-      "Le transport aérien international depuis Paris/Montréal aller/retour et les taxes aéroport",
-      "Les déjeuners et dîners du J1, J7 et J8",
-      "Les activités optionnelles non mentionnées au programme",
-      "Les dépenses personnelles et boissons (autres que le thé ou le café régulier toujours inclus avec les repas inclus)",
-      "Les pourboires (au bon vouloir selon votre degré de satisfaction) aux guides (6-10$ par jour et par personne) et aux chauffeurs (4$ par jour et par personne)",
-      "Le supplément \"chambre individuelle\"",
-      "Le supplément \"motoneige individuelle\" (177€)",
-      "L'assurance annulation ou multirisques"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -230,27 +321,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2230,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "YUL"
-    ]
+  "seo": {
+    "metaTitle": "Séjour multiactivités dans les fjords canadiens",
+    "canonicalUrl": "https://www.odysway.com/voyages/hiver-canada-multi-activites",
+    "ogTitle": "Séjour multiactivités dans les fjords canadiens",
+    "ogDescription": "Explorez le magnifique Fjord du Saguenay au Canada lors d'une aventure hivernale en réalisant de multiples activités au cœur de paysages enneigés",
+    "ogImage": {
+      "src": "/images/voyages/hiver-canada-multi-activites/OM6tLNR3i6v2PuQZLKxA.jpg",
+      "alt": "image principale du voyage Séjour multiactivités dans les fjords canadiens"
+    },
+    "twitterTitle": "Séjour multiactivités dans les fjords canadiens",
+    "twitterDescription": "Explorez le magnifique Fjord du Saguenay au Canada lors d'une aventure hivernale en réalisant de multiples activités au cœur de paysages enneigés",
+    "twitterImage": {
+      "src": "/images/voyages/hiver-canada-multi-activites/OM6tLNR3i6v2PuQZLKxA.jpg",
+      "alt": "image principale du voyage Séjour multiactivités dans les fjords canadiens"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

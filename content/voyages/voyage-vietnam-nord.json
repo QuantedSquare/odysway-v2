@@ -1,46 +1,274 @@
 {
   "published": true,
   "title": "Le Vietnam du Nord, un voyage à la rencontre des populations ethniques",
-  "slug": "voyage-vietnam-nord",
-  "rating": 4.5,
-  "comments": 9,
-  "description": "Envie de partir à la découverte du Vietnam authentique, de parcourir les villages situés dans les régions préservées du tourisme de masse et rencontrer les minorités ethniques ? \n\nDirection le Vietnam du Nord pour un voyage inoubliable, au cœur de paysages à couper le souffle !\n\nAu départ de Hanoï, vous partirez pour un voyage en itinérance à travers la magnifique région du Nord, plus sauvage et authentique que le reste du pays. Vous randonnerez à travers ses paysages typiques, de villages en villages à travers rizières, chutes d'eau, plantations de thé et même forêt de cannelle ! \n\nTout au long de votre voyage, vous aurez la chance de rencontrer les minorités ethniques Hmong, Tay, Nungs, Dzaos et Mongs et découvrir leur modes de vie uniques, rythmés par les traditions ancestrales.",
-  "emailDescription": "👉 Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
-  "metaDescription": "Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
-  "interjection": "au",
   "destinations": [
-    "Vietnam"
+    {
+      "name": "Vietnam",
+      "slug": "vietnam"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ou-partir-en-automne",
-    "partir-en-amoureux",
-    "sejours-nature",
-    "sejours-chez-l-habitant"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    }
   ],
   "duration": 10,
   "nights": 9,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chambres d'hôtes, hôtel",
   "idealPeriods": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    }
   ],
   "monthlyAvailability": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.5,
+  "comments": 9,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Envie de partir à la découverte du Vietnam authentique, de parcourir les villages situés dans les régions préservées du tourisme de masse et rencontrer les minorités ethniques ? \n\nDirection le Vietnam du Nord pour un voyage inoubliable, au cœur de paysages à couper le souffle !\n\nAu départ de Hanoï, vous partirez pour un voyage en itinérance à travers la magnifique région du Nord, plus sauvage et authentique que le reste du pays. Vous randonnerez à travers ses paysages typiques, de villages en villages à travers rizières, chutes d'eau, plantations de thé et même forêt de cannelle ! \n\nTout au long de votre voyage, vous aurez la chance de rencontrer les minorités ethniques Hmong, Tay, Nungs, Dzaos et Mongs et découvrir leur modes de vie uniques, rythmés par les traditions ancestrales.",
+    "author": "Linda Tran",
+    "affixeAuthor": "Responsable Asie"
+  },
+  "experiencesBlock": [
+    "La découverte d'une région encore préservée du tourisme de masse",
+    "La rencontre et le partage avec les minorités ethniques",
+    "La randonnées à travers les paysages sublimes de la région",
+    "L'immersion dans les villages au cœur des régions reculées",
+    "La pension complète durant tout le voyage"
+  ],
+  "slug": "voyage-vietnam-nord",
+  "description": "Envie de partir à la découverte du Vietnam authentique, de parcourir les villages situés dans les régions préservées du tourisme de masse et rencontrer les minorités ethniques ? \n\nDirection le Vietnam du Nord pour un voyage inoubliable, au cœur de paysages à couper le souffle !\n\nAu départ de Hanoï, vous partirez pour un voyage en itinérance à travers la magnifique région du Nord, plus sauvage et authentique que le reste du pays. Vous randonnerez à travers ses paysages typiques, de villages en villages à travers rizières, chutes d'eau, plantations de thé et même forêt de cannelle ! \n\nTout au long de votre voyage, vous aurez la chance de rencontrer les minorités ethniques Hmong, Tay, Nungs, Dzaos et Mongs et découvrir leur modes de vie uniques, rythmés par les traditions ancestrales.",
+  "emailDescription": "👉 Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
+  "metaDescription": "Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE À HANOI",
+      "badgeText": "JOUR 1 ",
+      "description": "À votre arrivée à Hanoi, accueil et transfert à votre hôtel par votre chauffeur. Partez ensuite à la découverte des incontournables suivie d'une ballade en cyclo-pousse (alternative écologique au tuk-tuk) à travers les ruelles animées de l’ancien quartier des guildes. Dîner dans un restaurant local où vous pourrez déguster un plat traditionnel : le Cha Ca !",
+      "photo": "/images/voyages/voyage-vietnam-nord/OoJqtC5fRluVQopFCf6B.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DIRECTION LE NORD DU VIETNAM",
+      "badgeText": "JOUR 2 ",
+      "description": "Réveil matinal pour un petit-déjeuner typique : la fameuse soupe de vermicelle \"Pho\" ! Puis, route vers la province de Thai Nguyen, réputée pour son délicieux thé vert. Installation, puis déjeuner local cuisiné par votre famille d'accueil. Vous pourrez ensuite participer aux activités quotidiennes : tissage de linge, tressage de panier en bambou, fabrication du gâteau de riz ou encore dégustation d'alcool de riz gluant ! \r\n",
+      "photo": "/images/voyages/voyage-vietnam-nord/CXNykGwPT27YTgPyaYAA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION AU VILLAGE DE XUAN HOA",
+      "badgeText": "JOURS 3 ET 4",
+      "description": "Aujourd'hui, route vers un village habité par l'ethnie Tay, au cœur d'une plantation... de canelle ! Découverte et participation aux activités quotidiennes. Le lendemain, c'est parti pour une randonnée entres rizières, chutes d’eau, ponts suspendus et fermes de manioc jusqu'au village Doi Chin ou vivent différentes ethnies entre les Tays, Hmongs, Phu La et Nung !",
+      "photo": "/images/voyages/voyage-vietnam-nord/gVMneR7mRvKvVPBf4fSK.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHEZ L'HABITANT À BAC HA",
+      "badgeText": "JOUR 5",
+      "description": "Direction le village de Bac Ha ! Baladez-vous à travers le village et découvrez le palais royal, construit par le roi des H'mong. Installez-vous chez votre hôte dans une maison traditionnelle sur pilotis puis profitez d'un déjeuner local cuisiné par les membres de votre famille d'accueil. Profitez du temps libre pour explorer les environs !\r\n",
+      "photo": "/images/voyages/voyage-vietnam-nord/JzPTr2AMQ32BYZmypC0I.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MARCHÉ TRADITIONNEL",
+      "badgeText": "JOUR 6",
+      "description": "Ce matin, découvrez le traditionnel marché de Bac Ha : un RDV hebdomadaire pour les minorités locales des alentours ! Une véritable plongée au cœur de la culture où vous rencontrerez de nombreux locaux vêtues de leurs costumes traditionnels multicolores. Déjeuner puis route vers Hoang Su Phi et ses magnifiques rizières où vous passerez la nuit.",
+      "photo": "/images/voyages/voyage-vietnam-nord/Hl2FkgRaTbyLHgw8EFq3.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES RIZIÈRES DE HOANG SU PHI",
+      "badgeText": "JOUR 7",
+      "description": "C'est parti pour une journée de randonnée à travers les villages ethniques jusqu'au hameau reculé de Nam Khoa, où habitent les Dzaos rouges. Émerveillez-vous devant le panorama sublime qui se dessine au fil de la journée, entre rizières, plantations de thé et rencontre avec les femmes travaillant dans les champs, portant leurs costumes traditionnels.\r\n",
+      "photo": "/images/voyages/voyage-vietnam-nord/tTrNo8PgRqel8llgqa7Z.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR VERS HANOI",
+      "badgeText": "JOUR 8",
+      "description": "Retour à Hanoi par une magnifique route longeant la rivière et serpentant de col en col à travers montagnes et vallées de la région. Arrêtez-vous en chemin pour admirer les points de vues à couper le souffle et profiter encore un peu de cette ambiance typique du Nord !",
+      "photo": "/images/voyages/voyage-vietnam-nord/Fr8E9vBxSoikFD9zLhKq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LA BAIE DE LAN HA",
+      "badgeText": "JOUR 9 ",
+      "description": "Terminez votre voyage en beauté avec cette excursion sur la baie de Lan Ha ! Bien moins touristique que la célèbre baie d'Halong, Lan Ha n'a pourtant rien à lui envier avec pas moins de 400 îles et ses 139 plages, quasi désertes. Après la visite d'une grotte naturelle, place au coucher de soleil spectaculaire à bord de votre jonque où vous passerez la nuit !\r\n",
+      "photo": "/images/voyages/voyage-vietnam-nord/9fClVYRp20YsYxW4Im5w.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR À HANOI",
+      "badgeText": "JOUR 10",
+      "description": "Au petit matin, profitez de la magnifique vue que vous offre le lever du soleil ! Profitez ensuite d'un délicieux brunch sur la baie de Lan Ha, toujours à bord de votre jonque. Sur le chemin du retour vers Hanoï, visitez la célèbre pagode But Thap dans le village de Bac Ninh avant de rejoindre l'aéroport, selon votre horaire de vol.\r\n",
+      "photo": "/images/voyages/voyage-vietnam-nord/TcOmeRmBS9qIA1zzkLsC.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Le guide francophone et chauffeur privé",
+      "Les nuitées dans des hôtels 3\\*, en chambre d'hôtes et chez l'habitant en base double avec petit-déjeuner",
+      "La pension complète durant tout le séjour",
+      "Les entrées sur les différents sites",
+      "Toutes les activités mentionnées dans le programme",
+      "La rencontre avec les minorités ethniques"
+    ],
+    "exclude": [
+      "Les vols internationaux et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les repas et boissons non mentionnés",
+      "Les pourboires",
+      "L'assurance voyage multirisques ou annulation"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1950,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 130,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "HAN",
+      "HAN"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par un guide francophone qui saura vous dévoiler tous les secrets historiques et culturelles du Vietnam avec passion !",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Chambres d'hôtes, hôtel",
+      "housingType": "",
+      "housingMood": "Lors des différentes étapes de votre voyage dans le Vietnam du Nord vous aurez l'occasion de dormir dans différents types d'hébergements : écolodges au cœur de la nature, hôtel 3*, chez l'habitant dans une maison sur pilotis ou encore à bord d'une jonque traditionnelle ! ",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-vietnam-nord/SAzog25RjWGDhlLD8pmw.jpg",
+          "alt": "image de l'hébergement Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
+        },
+        {
+          "src": "/images/voyages/voyage-vietnam-nord/46J3pdoRBqlUiXQJSGQ4.jpg",
+          "alt": "image de l'hébergement Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
+        },
+        {
+          "src": "/images/voyages/voyage-vietnam-nord/FIZhmJqQsCLxxwYZxS5e.jpg",
+          "alt": "image de l'hébergement Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-vietnam-nord/1jmKyz0Q1q2Aypl75Cwf.jpg",
     "alt": "image principale du voyage Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
@@ -96,125 +324,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Envie de partir à la découverte du Vietnam authentique, de parcourir les villages situés dans les régions préservées du tourisme de masse et rencontrer les minorités ethniques ? \n\nDirection le Vietnam du Nord pour un voyage inoubliable, au cœur de paysages à couper le souffle !\n\nAu départ de Hanoï, vous partirez pour un voyage en itinérance à travers la magnifique région du Nord, plus sauvage et authentique que le reste du pays. Vous randonnerez à travers ses paysages typiques, de villages en villages à travers rizières, chutes d'eau, plantations de thé et même forêt de cannelle ! \n\nTout au long de votre voyage, vous aurez la chance de rencontrer les minorités ethniques Hmong, Tay, Nungs, Dzaos et Mongs et découvrir leur modes de vie uniques, rythmés par les traditions ancestrales.",
-    "author": "Linda Tran",
-    "affixeAuthor": "Responsable Asie"
-  },
-  "experiencesBlock": [
-    "La découverte d'une région encore préservée du tourisme de masse",
-    "La rencontre et le partage avec les minorités ethniques",
-    "La randonnées à travers les paysages sublimes de la région",
-    "L'immersion dans les villages au cœur des régions reculées",
-    "La pension complète durant tout le voyage"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE À HANOI",
-      "badgeText": "JOUR 1 ",
-      "description": "À votre arrivée à Hanoi, accueil et transfert à votre hôtel par votre chauffeur. Partez ensuite à la découverte des incontournables suivie d'une ballade en cyclo-pousse (alternative écologique au tuk-tuk) à travers les ruelles animées de l’ancien quartier des guildes. Dîner dans un restaurant local où vous pourrez déguster un plat traditionnel : le Cha Ca !",
-      "photo": "/images/voyages/voyage-vietnam-nord/OoJqtC5fRluVQopFCf6B.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DIRECTION LE NORD DU VIETNAM",
-      "badgeText": "JOUR 2 ",
-      "description": "Réveil matinal pour un petit-déjeuner typique : la fameuse soupe de vermicelle \"Pho\" ! Puis, route vers la province de Thai Nguyen, réputée pour son délicieux thé vert. Installation, puis déjeuner local cuisiné par votre famille d'accueil. Vous pourrez ensuite participer aux activités quotidiennes : tissage de linge, tressage de panier en bambou, fabrication du gâteau de riz ou encore dégustation d'alcool de riz gluant ! \r\n",
-      "photo": "/images/voyages/voyage-vietnam-nord/CXNykGwPT27YTgPyaYAA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION AU VILLAGE DE XUAN HOA",
-      "badgeText": "JOURS 3 ET 4",
-      "description": "Aujourd'hui, route vers un village habité par l'ethnie Tay, au cœur d'une plantation... de canelle ! Découverte et participation aux activités quotidiennes. Le lendemain, c'est parti pour une randonnée entres rizières, chutes d’eau, ponts suspendus et fermes de manioc jusqu'au village Doi Chin ou vivent différentes ethnies entre les Tays, Hmongs, Phu La et Nung !",
-      "photo": "/images/voyages/voyage-vietnam-nord/gVMneR7mRvKvVPBf4fSK.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CHEZ L'HABITANT À BAC HA",
-      "badgeText": "JOUR 5",
-      "description": "Direction le village de Bac Ha ! Baladez-vous à travers le village et découvrez le palais royal, construit par le roi des H'mong. Installez-vous chez votre hôte dans une maison traditionnelle sur pilotis puis profitez d'un déjeuner local cuisiné par les membres de votre famille d'accueil. Profitez du temps libre pour explorer les environs !\r\n",
-      "photo": "/images/voyages/voyage-vietnam-nord/JzPTr2AMQ32BYZmypC0I.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MARCHÉ TRADITIONNEL",
-      "badgeText": "JOUR 6",
-      "description": "Ce matin, découvrez le traditionnel marché de Bac Ha : un RDV hebdomadaire pour les minorités locales des alentours ! Une véritable plongée au cœur de la culture où vous rencontrerez de nombreux locaux vêtues de leurs costumes traditionnels multicolores. Déjeuner puis route vers Hoang Su Phi et ses magnifiques rizières où vous passerez la nuit.",
-      "photo": "/images/voyages/voyage-vietnam-nord/Hl2FkgRaTbyLHgw8EFq3.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES RIZIÈRES DE HOANG SU PHI",
-      "badgeText": "JOUR 7",
-      "description": "C'est parti pour une journée de randonnée à travers les villages ethniques jusqu'au hameau reculé de Nam Khoa, où habitent les Dzaos rouges. Émerveillez-vous devant le panorama sublime qui se dessine au fil de la journée, entre rizières, plantations de thé et rencontre avec les femmes travaillant dans les champs, portant leurs costumes traditionnels.\r\n",
-      "photo": "/images/voyages/voyage-vietnam-nord/tTrNo8PgRqel8llgqa7Z.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR VERS HANOI",
-      "badgeText": "JOUR 8",
-      "description": "Retour à Hanoi par une magnifique route longeant la rivière et serpentant de col en col à travers montagnes et vallées de la région. Arrêtez-vous en chemin pour admirer les points de vues à couper le souffle et profiter encore un peu de cette ambiance typique du Nord !",
-      "photo": "/images/voyages/voyage-vietnam-nord/Fr8E9vBxSoikFD9zLhKq.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DANS LA BAIE DE LAN HA",
-      "badgeText": "JOUR 9 ",
-      "description": "Terminez votre voyage en beauté avec cette excursion sur la baie de Lan Ha ! Bien moins touristique que la célèbre baie d'Halong, Lan Ha n'a pourtant rien à lui envier avec pas moins de 400 îles et ses 139 plages, quasi désertes. Après la visite d'une grotte naturelle, place au coucher de soleil spectaculaire à bord de votre jonque où vous passerez la nuit !\r\n",
-      "photo": "/images/voyages/voyage-vietnam-nord/9fClVYRp20YsYxW4Im5w.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIER JOUR À HANOI",
-      "badgeText": "JOUR 10",
-      "description": "Au petit matin, profitez de la magnifique vue que vous offre le lever du soleil ! Profitez ensuite d'un délicieux brunch sur la baie de Lan Ha, toujours à bord de votre jonque. Sur le chemin du retour vers Hanoï, visitez la célèbre pagode But Thap dans le village de Bac Ninh avant de rejoindre l'aéroport, selon votre horaire de vol.\r\n",
-      "photo": "/images/voyages/voyage-vietnam-nord/TcOmeRmBS9qIA1zzkLsC.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par un guide francophone qui saura vous dévoiler tous les secrets historiques et culturelles du Vietnam avec passion !",
-  "housingBlock": [
-    {
-      "title": "Chambres d'hôtes, hôtel",
-      "housingType": "",
-      "housingMood": "Lors des différentes étapes de votre voyage dans le Vietnam du Nord vous aurez l'occasion de dormir dans différents types d'hébergements : écolodges au cœur de la nature, hôtel 3*, chez l'habitant dans une maison sur pilotis ou encore à bord d'une jonque traditionnelle ! ",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-vietnam-nord/SAzog25RjWGDhlLD8pmw.jpg",
-          "alt": "image de l'hébergement Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
-        },
-        {
-          "src": "/images/voyages/voyage-vietnam-nord/46J3pdoRBqlUiXQJSGQ4.jpg",
-          "alt": "image de l'hébergement Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
-        },
-        {
-          "src": "/images/voyages/voyage-vietnam-nord/FIZhmJqQsCLxxwYZxS5e.jpg",
-          "alt": "image de l'hébergement Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le guide francophone et chauffeur privé",
-      "Les nuitées dans des hôtels 3\\*, en chambre d'hôtes et chez l'habitant en base double avec petit-déjeuner",
-      "La pension complète durant tout le séjour",
-      "Les entrées sur les différents sites",
-      "Toutes les activités mentionnées dans le programme",
-      "La rencontre avec les minorités ethniques"
-    ],
-    "exclude": [
-      "Les vols internationaux et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Toutes les dépenses supplémentaires non mentionnées",
-      "Les repas et boissons non mentionnés",
-      "Les pourboires",
-      "L'assurance voyage multirisques ou annulation"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -255,27 +364,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1950,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 130,
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "HAN",
-      "HAN"
-    ]
+  "seo": {
+    "metaTitle": "Le Vietnam du Nord, un voyage à la rencontre des populations ethniques",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-vietnam-nord",
+    "ogTitle": "Le Vietnam du Nord, un voyage à la rencontre des populations ethniques",
+    "ogDescription": "Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
+    "ogImage": {
+      "src": "/images/voyages/voyage-vietnam-nord/1jmKyz0Q1q2Aypl75Cwf.jpg",
+      "alt": "image principale du voyage Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
+    },
+    "twitterTitle": "Le Vietnam du Nord, un voyage à la rencontre des populations ethniques",
+    "twitterDescription": "Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-vietnam-nord/1jmKyz0Q1q2Aypl75Cwf.jpg",
+      "alt": "image principale du voyage Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

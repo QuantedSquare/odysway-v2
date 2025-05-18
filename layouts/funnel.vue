@@ -6,7 +6,7 @@
     <ClientOnly>
       <Drawer v-model="drawer" />
     </ClientOnly>
-    <v-main>
+    <v-main style="--v-layout-top: 90px; --v-layout-bottom: 0px;">
       <slot />
     </v-main>
   </v-app>

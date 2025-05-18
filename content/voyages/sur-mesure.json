@@ -1,24 +1,96 @@
 {
   "published": false,
   "title": "Voyage sur-mesure en Jordanie",
-  "slug": "sur-mesure",
-  "rating": 0,
-  "comments": 0,
-  "description": "",
-  "emailDescription": "",
-  "metaDescription": "",
-  "interjection": "",
   "destinations": [
-    "Jordanie"
+    {
+      "name": "Jordanie",
+      "slug": "jordanie"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "",
   "idealPeriods": [],
   "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "sur-mesure",
+  "description": "",
+  "emailDescription": "",
+  "metaDescription": "",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "",
+      "visible": false
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 1500,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
   "image": {
     "src": "/images/voyages/sur-mesure/I1AtzHTPyqLSTl9jKDZA.jpg",
     "alt": "image principale du voyage Voyage sur-mesure en Jordanie"
@@ -29,28 +101,6 @@
   },
   "photosList": [],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "",
-    "author": "",
-    "affixeAuthor": ""
-  },
-  "experiencesBlock": [],
-  "programmeBlock": [],
-  "accompanistsList": [],
-  "accompanistsDescription": "",
-  "housingBlock": [
-    {
-      "title": "",
-      "housingType": "",
-      "housingMood": "",
-      "image": []
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [],
-    "exclude": []
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -59,24 +109,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1500,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Voyage sur-mesure en Jordanie",
+    "canonicalUrl": "https://www.odysway.com/voyages/sur-mesure",
+    "ogTitle": "Voyage sur-mesure en Jordanie",
+    "ogDescription": "",
+    "ogImage": {
+      "src": "/images/voyages/sur-mesure/I1AtzHTPyqLSTl9jKDZA.jpg",
+      "alt": "image principale du voyage Voyage sur-mesure en Jordanie"
+    },
+    "twitterTitle": "Voyage sur-mesure en Jordanie",
+    "twitterDescription": "",
+    "twitterImage": {
+      "src": "/images/voyages/sur-mesure/I1AtzHTPyqLSTl9jKDZA.jpg",
+      "alt": "image principale du voyage Voyage sur-mesure en Jordanie"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

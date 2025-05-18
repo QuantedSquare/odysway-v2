@@ -1,63 +1,99 @@
 {
   "published": false,
   "title": "Vivez le Queyras entre rencontres et traditions",
-  "slug": "sejour-pnr-queyras-artisanat-bois",
-  "rating": 4.8,
-  "comments": 0,
-  "description": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Vous séjournerez dans une jolie maison d'hôtes tenue par Chantal et François, propriétaires d'une ferme familiale pratiquant une agriculture raisonnée. Vous vous y régalerez chaque soir autour de délicieuses recettes à base de produits de la ferme.\n\nCe séjour sera avant tout l'occasion de mettre en lumière un territoire méconnu : le Queyras. Le travail du bois, matériau noble cher aux Queyrassiens, sera mis à l'honneur à travers la rencontre d'artisans locaux. Vous réaliserez un atelier avec Floranne, jeune sculpteuse sur bois passionnée, qui vous initiera à son art, avant de visiter une fabrique de jouets traditionnels, tenue exclusivement par des femmes. Enfin, vous partirez explorer les paysages silencieux du Queyras lors d'une randonnée au cœur des alpages, avec un guide amoureux de son territoire.\n\nL’occasion de vous immerger dans un Queyras encore sauvage et préservé, au plus près des acteurs locaux.",
-  "emailDescription": "👉 Si vous avez envie de découvrir l'artisanat du bois dans les montagnes du Qeyras, ce séjour est fait pour vous ! 🤗",
-  "metaDescription": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Chantal et François vous y ouvriront les portes de leur jolie maison d’hôtes.",
-  "interjection": "dans les",
   "destinations": [
-    "Alpes"
+    {
+      "name": "Alpes",
+      "slug": "alpes"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ecotourisme"
+    {
+      "name": "ecotourisme"
+    }
   ],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chambre d'hôtes",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/sejour-pnr-queyras-artisanat-bois/RXJS0dQLSSOT7nvYyKc6.jpg",
-    "alt": "image principale du voyage Vivez le Queyras entre rencontres et traditions"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/sejour-pnr-queyras-artisanat-bois/XJYgg05kQAqSXsfvFUKZ.jpg",
-    "alt": "image secondaire du voyage Vivez le Queyras entre rencontres et traditions"
-  },
-  "photosList": [],
-  "videoLinks": [
-    "https://www.youtube.com/embed/MyISXi_sXjQ"
-  ],
-  "badgeSection": {},
   "authorNote": {
     "text": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Vous séjournerez dans une jolie maison d'hôtes tenue par Chantal et François, propriétaires d'une ferme familiale pratiquant une agriculture raisonnée. Vous vous y régalerez chaque soir autour de délicieuses recettes à base de produits de la ferme.\n\nCe séjour sera avant tout l'occasion de mettre en lumière un territoire méconnu : le Queyras. Le travail du bois, matériau noble cher aux Queyrassiens, sera mis à l'honneur à travers la rencontre d'artisans locaux. Vous réaliserez un atelier avec Floranne, jeune sculpteuse sur bois passionnée, qui vous initiera à son art, avant de visiter une fabrique de jouets traditionnels, tenue exclusivement par des femmes. Enfin, vous partirez explorer les paysages silencieux du Queyras lors d'une randonnée au cœur des alpages, avec un guide amoureux de son territoire.\n\nL’occasion de vous immerger dans un Queyras encore sauvage et préservé, au plus près des acteurs locaux.",
     "author": "Agnès",
@@ -70,36 +106,97 @@
     "Les dîners à base de bons produits de la ferme",
     "Les nuits dans un calme absolu, au cœur d’un village typique de montagne"
   ],
+  "slug": "sejour-pnr-queyras-artisanat-bois",
+  "description": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Vous séjournerez dans une jolie maison d'hôtes tenue par Chantal et François, propriétaires d'une ferme familiale pratiquant une agriculture raisonnée. Vous vous y régalerez chaque soir autour de délicieuses recettes à base de produits de la ferme.\n\nCe séjour sera avant tout l'occasion de mettre en lumière un territoire méconnu : le Queyras. Le travail du bois, matériau noble cher aux Queyrassiens, sera mis à l'honneur à travers la rencontre d'artisans locaux. Vous réaliserez un atelier avec Floranne, jeune sculpteuse sur bois passionnée, qui vous initiera à son art, avant de visiter une fabrique de jouets traditionnels, tenue exclusivement par des femmes. Enfin, vous partirez explorer les paysages silencieux du Queyras lors d'une randonnée au cœur des alpages, avec un guide amoureux de son territoire.\n\nL’occasion de vous immerger dans un Queyras encore sauvage et préservé, au plus près des acteurs locaux.",
+  "emailDescription": "👉 Si vous avez envie de découvrir l'artisanat du bois dans les montagnes du Qeyras, ce séjour est fait pour vous ! 🤗",
+  "metaDescription": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Chantal et François vous y ouvriront les portes de leur jolie maison d’hôtes.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Chambre d'hôtes",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "LES ARTISANS DU BOIS",
       "badgeText": "JOUR 2",
       "description": "Matinée avec Floranne, sculptrice sur bois qui vous initiera à son métier au sein même de son atelier. Vous repartirez avec vos propres créations ! Découverte d'une utilisation différente du bois avec la visite d'un atelier de fabrication de jouets traditionnels. Reste de la journée libre pour explorer les environs.",
       "photo": "/images/voyages/sejour-pnr-queyras-artisanat-bois/zsozk0UQgWGFeg9rONMw.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "ARRIVÉE EN MONTAGNE",
       "badgeText": "JOUR 1",
       "description": "Direction le cœur du Parc naturel régional du Queyras, dans un petit village de montagne aux airs de bout du monde. Installation dans la maison traditionnelle de Chantal et François. Dîner partagé avec les propriétaires à base des produits de la ferme. Première nuit en montagne.",
       "photo": "/images/voyages/sejour-pnr-queyras-artisanat-bois/gnrWJaQkQfmVihXrgT1Y.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "RANDONNEE ET CHALETS D’ALPAGE",
       "badgeText": "JOUR 3",
       "description": "Randonnée à la découverte de l’un des sites les plus remarquables du territoire : les Chalets de Clapeyto, véritable havre de paix aux paysages bucoliques. Yves, votre guide, vous expliquera l’importance du bois et de l’alpage dans la vie de la vallée. Pique-nique dans la nature et dégustation de bons produits le soir autour de la table d’hôtes !",
       "photo": "/images/voyages/sejour-pnr-queyras-artisanat-bois/kmy5TSp1QHdbmZzC8at2.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "AU REVOIR, QUEYRAS !",
       "badgeText": "JOUR 4",
       "description": "Après un bon petit-déjeuner, il est temps de dire au revoir à vos hôtes ! Avant votre départ, nous vous proposons de faire un tour à la Maison des Artisans, où sont exposées les créations d’une quarantaine d’artisans locaux.",
       "photo": "/images/voyages/sejour-pnr-queyras-artisanat-bois/yBSHh0m5Qua5VHPRoNzb.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 355,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
   "accompanistsList": [
     {
       "name": "Floranne",
@@ -120,7 +217,6 @@
       "image": "/images/voyages/sejour-pnr-queyras-artisanat-bois/nMikRQs5RS214ZsdE7zw.jpg"
     }
   ],
-  "accompanistsDescription": "",
   "housingBlock": [
     {
       "title": "Chambre d'hôtes",
@@ -129,10 +225,18 @@
       "image": []
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [],
-    "exclude": []
+  "image": {
+    "src": "/images/voyages/sejour-pnr-queyras-artisanat-bois/RXJS0dQLSSOT7nvYyKc6.jpg",
+    "alt": "image principale du voyage Vivez le Queyras entre rencontres et traditions"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-pnr-queyras-artisanat-bois/XJYgg05kQAqSXsfvFUKZ.jpg",
+    "alt": "image secondaire du voyage Vivez le Queyras entre rencontres et traditions"
+  },
+  "photosList": [],
+  "videoLinks": [
+    "https://www.youtube.com/embed/MyISXi_sXjQ"
+  ],
   "faqBlock": {
     "faqList": [
       {
@@ -177,24 +281,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 355,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Vivez le Queyras entre rencontres et traditions",
+    "canonicalUrl": "https://www.odysway.com/voyages/sejour-pnr-queyras-artisanat-bois",
+    "ogTitle": "Vivez le Queyras entre rencontres et traditions",
+    "ogDescription": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Chantal et François vous y ouvriront les portes de leur jolie maison d’hôtes.",
+    "ogImage": {
+      "src": "/images/voyages/sejour-pnr-queyras-artisanat-bois/RXJS0dQLSSOT7nvYyKc6.jpg",
+      "alt": "image principale du voyage Vivez le Queyras entre rencontres et traditions"
+    },
+    "twitterTitle": "Vivez le Queyras entre rencontres et traditions",
+    "twitterDescription": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Chantal et François vous y ouvriront les portes de leur jolie maison d’hôtes.",
+    "twitterImage": {
+      "src": "/images/voyages/sejour-pnr-queyras-artisanat-bois/RXJS0dQLSSOT7nvYyKc6.jpg",
+      "alt": "image principale du voyage Vivez le Queyras entre rencontres et traditions"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

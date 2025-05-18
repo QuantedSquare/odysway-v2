@@ -169,8 +169,8 @@ function getCategories() {
 }
 
 // getVoyages()
-// getDatesVoyagesGroups()
-getCategories()
+getDatesVoyagesGroups()
+// getCategories()
 
 function getReviews() {
   axios.get(`https://api.buttercms.com/v2/pages/*/avis/?&auth_token=${token}`)

@@ -1,59 +1,350 @@
 {
   "published": false,
   "title": "Explorez les incontournables de Bali entre plages, rizières et volcan ",
-  "slug": "voyage-bali-immersion-incontournables",
-  "rating": 4.4,
-  "comments": 16,
-  "description": "Ce voyage à Bali est une invitation à plonger dans un monde de merveilles, où culture et nature se mêlent pour créer une expérience inoubliable. \n\nChaque jour, vous partirez à la découverte d'un nouveau trésor entre les temples millénaires, les rizières aux allures de tableaux vivants, les villages de pêcheurs ou encore les magnifiques plages que vous offre cette île. Au cours de ce voyage, vous allez découvrir les incontournables de Bali tout en vivant des expériences inoubliables : gravissez les sommets majestueux du volcan Batur pour toucher le ciel, explorez la beauté des fonds marins de Candidasa et ressentez l'atmosphère vibrante de la vie locale !\n\nUn voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers des horizons lointains où la magie de l'île se révèle au fur et à mesure de votre séjour...",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage à la découverte des incontournable tout en vivant une expérience authentique, ce voyage est fait pour vous ! ",
-  "metaDescription": "Voyagez avec Odysway et découvrez les multiples facettes de Bali, entre richesse culturelle et paysages enchanteurs !",
-  "interjection": "",
   "destinations": [
-    "Indonésie"
+    {
+      "name": "Indonésie",
+      "slug": "indonesie"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "sejours-nature",
-    "ou-partir-en-automne",
-    "sejour-trek-randonnee"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "trek-et-randonnee"
+    }
   ],
   "duration": 13,
   "nights": 12,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtels",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.4,
+  "comments": 16,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Ce voyage à Bali est une invitation à plonger dans un monde de merveilles, où culture et nature se mêlent pour créer une expérience inoubliable. \n\nChaque jour, vous partirez à la découverte d'un nouveau trésor entre les temples millénaires, les rizières aux allures de tableaux vivants, les villages de pêcheurs ou encore les magnifiques plages que vous offre cette île. Au cours de ce voyage, vous allez découvrir les incontournables de Bali tout en vivant des expériences inoubliables : gravissez les sommets majestueux du volcan Batur pour toucher le ciel, explorez la beauté des fonds marins de Candidasa et ressentez l'atmosphère vibrante de la vie locale !\n\nUn voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers des horizons lointains où la magie de l'île se révèle au fur et à mesure de votre séjour...",
+    "author": "Linda",
+    "affixeAuthor": "Responsable Asie"
+  },
+  "experiencesBlock": [
+    "L'ascension mythique du volcan Batur, au dessus des nuages",
+    "L'exploration des mystérieux fonds marins en snorkelling",
+    "Les balades et randonnées au milieu des rizières emblématiques",
+    "Les plages aux eaux cristallines qui font la réputation de Bali",
+    "Les temps libres pour découvrir Bali à votre rythme et selon vos envies"
+  ],
+  "slug": "voyage-bali-immersion-incontournables",
+  "description": "Ce voyage à Bali est une invitation à plonger dans un monde de merveilles, où culture et nature se mêlent pour créer une expérience inoubliable. \n\nChaque jour, vous partirez à la découverte d'un nouveau trésor entre les temples millénaires, les rizières aux allures de tableaux vivants, les villages de pêcheurs ou encore les magnifiques plages que vous offre cette île. Au cours de ce voyage, vous allez découvrir les incontournables de Bali tout en vivant des expériences inoubliables : gravissez les sommets majestueux du volcan Batur pour toucher le ciel, explorez la beauté des fonds marins de Candidasa et ressentez l'atmosphère vibrante de la vie locale !\n\nUn voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers des horizons lointains où la magie de l'île se révèle au fur et à mesure de votre séjour...",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage à la découverte des incontournable tout en vivant une expérience authentique, ce voyage est fait pour vous ! ",
+  "metaDescription": "Voyagez avec Odysway et découvrez les multiples facettes de Bali, entre richesse culturelle et paysages enchanteurs !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avril à Octobre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE A SEMINYAK",
+      "badgeText": "JOUR 1",
+      "description": "Dès votre arrivée, vous serez accueillis par votre chauffeur qui vous conduira à votre hôtel. Une fois installés, partez à la découverte des ruelles animées de Seminyak où vous serez immédiatement plongés dans l'ambiance envoûtante de Bali entre les scènes de vie locale et les parfums enivrants. En fin de journée, profitez de la plage pour contempler paisiblement le coucher de soleil.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/v6dd2vMIQu6TjXFbnjEc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DES RIZIÈRES AU TEMPLE DE TANAH LOT",
+      "badgeText": "JOUR 2",
+      "description": "Accompagnés par votre guide, vous emprunterez des petits chemins de terre au milieu du paysage verdoyant des rizières jusqu'à Tanah Lot. Ce célèbre temple, perché sur un promontoire rocheux et entouré par les vagues, crée une atmosphère mystique. Suivez les sentiers pittoresques le long des falaises et émerveillez-vous devant cette vue spectaculaire sur l'océan qui se dessine devant vous.\r\n",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/x6H0o1h2T5mQNlX88XqQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES SOURCES CHAUDES DE BANJAR",
+      "badgeText": "JOUR 3",
+      "description": "Aujourd'hui, route vers Pemuteran ! Admirez le paysage haut en couleurs qui défile devant vous alors que vous parcourez les étendues infinies de rizières de Pupuan. Arrêtez-vous aux sources chaudes de Banjar, nichées au cœur d'un cadre luxuriant. Profitez d'une parenthèse bien-être dans ces bassins naturellement chauffés par la terre, réputés pour leurs propriétés apaisantes et médicinales.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/flUJay9bR6mVwe3yWpsl.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À PEMUTERAN",
+      "badgeText": "JOUR 4",
+      "description": "Aujourd'hui, profitez d'une journée libre pour explorer les merveilles sous-marines lors d'une séance de snorkeling ou de plongée, car vous vous trouvez ici dans l'un des plus beaux spots de Bali. Vous pouvez également vous détendre à la plage, au bord de la piscine, ou encore partir pour une balade à pied ou à vélo à travers le parc national de Bali Barat.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/JNuwAjRwTBKIKik9TLkh.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DE PEMUTERAN À UBUD",
+      "badgeText": "JOUR 5",
+      "description": "Vous quittez les rivages de sable noir de Pemuteran pour vous rendre à Ubud, le cœur culturel de Bali. En chemin, admirez les magnifiques paysages et découvrez le temple d'Ulun Danu, qui trône sur une île au milieu du lac Bratan. Promenez-vous au milieu des célèbres rizières de Jatiluwih, classées au patrimoine mondial de l'UNESCO, où vous serez émerveillés par la beauté de ses paysages préservés.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/m02JGtFmRo6FV00wZ4uQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UBUD ET SES ENVIRONS",
+      "badgeText": "JOUR 6",
+      "description": "Aujourd'hui, partez à la découverte des environs d'Ubud entre paysages verdoyants, villages ruraux pittoresques et cascades bucoliques. Vous découvrirez la célèbre rue des artisans à Tegalalang qui vous mèneront jusqu'au impressionnantes rizières en terrasses. Route ensuite vers Kintamani et son imposante caldeira, où se dresse le majestueux volcan Batur.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/85uXJNFkSDun3vM7cGID.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À UBUD",
+      "badgeText": "JOUR 7",
+      "description": "Aujourd'hui, profitez d'une journée de détente ou d'exploration à votre propre rythme. Que ce soit en profitant des superbes installations de votre hôtel, en visitant les galeries et musées de la ville, ou en flânant dans les rues animées, cette journée libre vous permet de découvrir Ubud selon vos envies. ",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/ckvFhiYUQhWpRh7hcivQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ASCENSION DU VOLCAN BATUR",
+      "badgeText": "JOUR 8",
+      "description": "Lever matinal ce matin pour l'ascension du volcan Batur à pied ! Vous atteindrez le sommet, à plus de 1 700 mètres d'altitude, avant que le soleil ne se lève au-dessus de la mer. Admirez cette splendide vue sur le lac Batur et les volcans environnants et prenez le temps pour savourer cet instant magique, la tête dans les nuages... ",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/N7Kaa1f9RrGaPwxLNqjc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES FONDS MARINS DE CANDIDASA",
+      "badgeText": "JOUR 9",
+      "description": "Aujourd'hui, partez pour une excursion en snorkelling avec un guide expérimenté pour explorer les merveilles sous-marines de Bali. Vous plongez depuis une petite baie paisible et abritée, vous permettant d'admirer la beauté des fonds marins de cette région préservée en toute tranquillité.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/bE8YJgnS72GEtZmALL8Q.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES TEMPLES ET PALAIS AQUATIQUES ",
+      "badgeText": "JOUR 10",
+      "description": "Embarquez pour une journée le long de la côte Est de Bali ! Faites une escale dans un palais aquatique à l'architecture unique, découvrez les bains royaux de Tirta gangga et explorez les temples de Pura Lempuyang où vous profiterez d'une vue imprenable sur le mont Agung ! Vous pourrez suivre les pèlerins balinais pour attendre d'autres temples et aurez, peut-être, la chance d'assister à une cérémonie traditionnelle dans ce cadre grandiose...",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/7YqDuQpWSxSN0a6sBAt2.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ESCAPADE À SIDEMEN",
+      "badgeText": "JOUR 11",
+      "description": "Vous commencez la journée tôt en explorant la campagne pittoresque aux alentours de Sidemen, à travers rizières en terrasses et plantations. En chemin, vous rencontrerez des agriculteurs cultivant une variété de produits : du riz aux fruits exotiques, tels que le clou de girofle, le salak (fruit du serpent), le cacao, et bien d'autres, qui contribuent à la luxuriante végétation de Bali. ",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/nTl7VuWZThMvjsZONuAo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE VILLAGE DE KUSAMBA ",
+      "badgeText": "JOUR 12",
+      "description": "Vous quittez la côte Est de Bali pour rejoindre la pointe Sud de l'île, également appelée le \"Bukit\". Vous découvrirez la grotte de Goa Lawah, surnommée \"Grotte aux chauves-souris\" puis partirez à la rencontre des habitants du village de Kusamba pour découvrir les techniques traditionnelles de récolte du sel. Après-midi libre pour profiter de la plage ou explorer les environs, à votre rythme.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/llfqdUCbTyu8gk2bCCJz.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS À BALI",
+      "badgeText": "JOUR 13",
+      "description": "Le jour du départ est arrivé ! Savourez une dernière baignade dans les eaux de la mer, dégustez vos plats préférés ou sirotez une dernière noix de coco puis, route vers l'aéroport de Denpasar en fonction de l'heure de votre vol de départ.",
+      "photo": "/images/voyages/voyage-bali-immersion-incontournables/HfAXsN6jQLmIIwT7F6Gd.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "13 nuits en hôtel, en base double, triple ou familiale",
+      "Tous les petits-déjeuners",
+      "Déjeuner du Jour 9",
+      "Les services d’un guide francophone du jour 2 au jour 12, excepté les jours 4 & 7 qui est sont des journées libres sans guide, ni chauffeur.",
+      "Les transferts en véhicule privé avec chauffeur.",
+      "Le chauffeur est disponible jusqu'à 8h par jour et au plus tard jusqu'à la tombée de la nuit. Lors des journées activités, seuls les transferts sont inclus, sauf mention contraire.",
+      "Activités durant le voyage (telles que décrites)"
+    ],
+    "exclude": [
+      "Les vols internationaux A/R (possibilité de devis avec vols inclus sur demande)",
+      "Les déjeuners et dîners non mentionnés dans \"le prix comprend\" (comptez entre 2 à 3€ dans un restaurant local pour un repas, et de 8 à 20 € dans un restaurant par repas/personne)",
+      "Les boissons et dépenses personnelles",
+      "Les pourboires pour les guides et les chauffeurs",
+      "L'assurance annulation ou multirisques",
+      "Tout ce qui n'est pas mentionné dans la section \"le prix comprend\""
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1400,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": true,
+    "indivRoomPrice": 270,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "DPS",
+      "DPS"
+    ]
+  },
+  "accompanistsDescription": "Vous serez accompagnés tout au long de votre voyage (excepté le jour 7 qui est une journée libre) par un chauffeur ainsi qu'un guide francophone, passionné par le partage et la découverte de Bali, pour un séjour des plus mémorables.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtels",
+      "housingType": "",
+      "housingMood": "Pendant toute la durée de ce voyage, vous séjournerez dans des hébergements charmants, empreints de tradition et nichés dans des cadres idylliques. Vos chambres, spacieuses et confortables, sont prévues en occupation double ou twin (avec la possibilité d'une chambre individuelle moyennant un supplément).",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-bali-immersion-incontournables/dqmjwQ5LREOJ5z0RwPtI.jpg",
+          "alt": "image de l'hébergement Explorez les incontournables de Bali entre plages, rizières et volcan "
+        },
+        {
+          "src": "/images/voyages/voyage-bali-immersion-incontournables/ugS62ExkSlSfM2HXMkhP.jpg",
+          "alt": "image de l'hébergement Explorez les incontournables de Bali entre plages, rizières et volcan "
+        },
+        {
+          "src": "/images/voyages/voyage-bali-immersion-incontournables/EQk5wwuTayAj1UhcSRd2.jpg",
+          "alt": "image de l'hébergement Explorez les incontournables de Bali entre plages, rizières et volcan "
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-bali-immersion-incontournables/b7PckcBQCe7UeHMhXBZr.jpg",
     "alt": "image principale du voyage Explorez les incontournables de Bali entre plages, rizières et volcan "
@@ -105,154 +396,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Ce voyage à Bali est une invitation à plonger dans un monde de merveilles, où culture et nature se mêlent pour créer une expérience inoubliable. \n\nChaque jour, vous partirez à la découverte d'un nouveau trésor entre les temples millénaires, les rizières aux allures de tableaux vivants, les villages de pêcheurs ou encore les magnifiques plages que vous offre cette île. Au cours de ce voyage, vous allez découvrir les incontournables de Bali tout en vivant des expériences inoubliables : gravissez les sommets majestueux du volcan Batur pour toucher le ciel, explorez la beauté des fonds marins de Candidasa et ressentez l'atmosphère vibrante de la vie locale !\n\nUn voyage immersif au cœur de l'âme véritable de Bali, vous transportant vers des horizons lointains où la magie de l'île se révèle au fur et à mesure de votre séjour...",
-    "author": "Linda",
-    "affixeAuthor": "Responsable Asie"
-  },
-  "experiencesBlock": [
-    "L'ascension mythique du volcan Batur, au dessus des nuages",
-    "L'exploration des mystérieux fonds marins en snorkelling",
-    "Les balades et randonnées au milieu des rizières emblématiques",
-    "Les plages aux eaux cristallines qui font la réputation de Bali",
-    "Les temps libres pour découvrir Bali à votre rythme et selon vos envies"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE A SEMINYAK",
-      "badgeText": "JOUR 1",
-      "description": "Dès votre arrivée, vous serez accueillis par votre chauffeur qui vous conduira à votre hôtel. Une fois installés, partez à la découverte des ruelles animées de Seminyak où vous serez immédiatement plongés dans l'ambiance envoûtante de Bali entre les scènes de vie locale et les parfums enivrants. En fin de journée, profitez de la plage pour contempler paisiblement le coucher de soleil.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/v6dd2vMIQu6TjXFbnjEc.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DES RIZIÈRES AU TEMPLE DE TANAH LOT",
-      "badgeText": "JOUR 2",
-      "description": "Accompagnés par votre guide, vous emprunterez des petits chemins de terre au milieu du paysage verdoyant des rizières jusqu'à Tanah Lot. Ce célèbre temple, perché sur un promontoire rocheux et entouré par les vagues, crée une atmosphère mystique. Suivez les sentiers pittoresques le long des falaises et émerveillez-vous devant cette vue spectaculaire sur l'océan qui se dessine devant vous.\r\n",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/x6H0o1h2T5mQNlX88XqQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES SOURCES CHAUDES DE BANJAR",
-      "badgeText": "JOUR 3",
-      "description": "Aujourd'hui, route vers Pemuteran ! Admirez le paysage haut en couleurs qui défile devant vous alors que vous parcourez les étendues infinies de rizières de Pupuan. Arrêtez-vous aux sources chaudes de Banjar, nichées au cœur d'un cadre luxuriant. Profitez d'une parenthèse bien-être dans ces bassins naturellement chauffés par la terre, réputés pour leurs propriétés apaisantes et médicinales.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/flUJay9bR6mVwe3yWpsl.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE À PEMUTERAN",
-      "badgeText": "JOUR 4",
-      "description": "Aujourd'hui, profitez d'une journée libre pour explorer les merveilles sous-marines lors d'une séance de snorkeling ou de plongée, car vous vous trouvez ici dans l'un des plus beaux spots de Bali. Vous pouvez également vous détendre à la plage, au bord de la piscine, ou encore partir pour une balade à pied ou à vélo à travers le parc national de Bali Barat.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/JNuwAjRwTBKIKik9TLkh.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DE PEMUTERAN À UBUD",
-      "badgeText": "JOUR 5",
-      "description": "Vous quittez les rivages de sable noir de Pemuteran pour vous rendre à Ubud, le cœur culturel de Bali. En chemin, admirez les magnifiques paysages et découvrez le temple d'Ulun Danu, qui trône sur une île au milieu du lac Bratan. Promenez-vous au milieu des célèbres rizières de Jatiluwih, classées au patrimoine mondial de l'UNESCO, où vous serez émerveillés par la beauté de ses paysages préservés.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/m02JGtFmRo6FV00wZ4uQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "UBUD ET SES ENVIRONS",
-      "badgeText": "JOUR 6",
-      "description": "Aujourd'hui, partez à la découverte des environs d'Ubud entre paysages verdoyants, villages ruraux pittoresques et cascades bucoliques. Vous découvrirez la célèbre rue des artisans à Tegalalang qui vous mèneront jusqu'au impressionnantes rizières en terrasses. Route ensuite vers Kintamani et son imposante caldeira, où se dresse le majestueux volcan Batur.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/85uXJNFkSDun3vM7cGID.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE À UBUD",
-      "badgeText": "JOUR 7",
-      "description": "Aujourd'hui, profitez d'une journée de détente ou d'exploration à votre propre rythme. Que ce soit en profitant des superbes installations de votre hôtel, en visitant les galeries et musées de la ville, ou en flânant dans les rues animées, cette journée libre vous permet de découvrir Ubud selon vos envies. ",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/ckvFhiYUQhWpRh7hcivQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ASCENSION DU VOLCAN BATUR",
-      "badgeText": "JOUR 8",
-      "description": "Lever matinal ce matin pour l'ascension du volcan Batur à pied ! Vous atteindrez le sommet, à plus de 1 700 mètres d'altitude, avant que le soleil ne se lève au-dessus de la mer. Admirez cette splendide vue sur le lac Batur et les volcans environnants et prenez le temps pour savourer cet instant magique, la tête dans les nuages... ",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/N7Kaa1f9RrGaPwxLNqjc.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES FONDS MARINS DE CANDIDASA",
-      "badgeText": "JOUR 9",
-      "description": "Aujourd'hui, partez pour une excursion en snorkelling avec un guide expérimenté pour explorer les merveilles sous-marines de Bali. Vous plongez depuis une petite baie paisible et abritée, vous permettant d'admirer la beauté des fonds marins de cette région préservée en toute tranquillité.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/bE8YJgnS72GEtZmALL8Q.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES TEMPLES ET PALAIS AQUATIQUES ",
-      "badgeText": "JOUR 10",
-      "description": "Embarquez pour une journée le long de la côte Est de Bali ! Faites une escale dans un palais aquatique à l'architecture unique, découvrez les bains royaux de Tirta gangga et explorez les temples de Pura Lempuyang où vous profiterez d'une vue imprenable sur le mont Agung ! Vous pourrez suivre les pèlerins balinais pour attendre d'autres temples et aurez, peut-être, la chance d'assister à une cérémonie traditionnelle dans ce cadre grandiose...",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/7YqDuQpWSxSN0a6sBAt2.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ESCAPADE À SIDEMEN",
-      "badgeText": "JOUR 11",
-      "description": "Vous commencez la journée tôt en explorant la campagne pittoresque aux alentours de Sidemen, à travers rizières en terrasses et plantations. En chemin, vous rencontrerez des agriculteurs cultivant une variété de produits : du riz aux fruits exotiques, tels que le clou de girofle, le salak (fruit du serpent), le cacao, et bien d'autres, qui contribuent à la luxuriante végétation de Bali. ",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/nTl7VuWZThMvjsZONuAo.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE VILLAGE DE KUSAMBA ",
-      "badgeText": "JOUR 12",
-      "description": "Vous quittez la côte Est de Bali pour rejoindre la pointe Sud de l'île, également appelée le \"Bukit\". Vous découvrirez la grotte de Goa Lawah, surnommée \"Grotte aux chauves-souris\" puis partirez à la rencontre des habitants du village de Kusamba pour découvrir les techniques traditionnelles de récolte du sel. Après-midi libre pour profiter de la plage ou explorer les environs, à votre rythme.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/llfqdUCbTyu8gk2bCCJz.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS INSTANTS À BALI",
-      "badgeText": "JOUR 13",
-      "description": "Le jour du départ est arrivé ! Savourez une dernière baignade dans les eaux de la mer, dégustez vos plats préférés ou sirotez une dernière noix de coco puis, route vers l'aéroport de Denpasar en fonction de l'heure de votre vol de départ.",
-      "photo": "/images/voyages/voyage-bali-immersion-incontournables/HfAXsN6jQLmIIwT7F6Gd.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Vous serez accompagnés tout au long de votre voyage (excepté le jour 7 qui est une journée libre) par un chauffeur ainsi qu'un guide francophone, passionné par le partage et la découverte de Bali, pour un séjour des plus mémorables.",
-  "housingBlock": [
-    {
-      "title": "Hôtels",
-      "housingType": "",
-      "housingMood": "Pendant toute la durée de ce voyage, vous séjournerez dans des hébergements charmants, empreints de tradition et nichés dans des cadres idylliques. Vos chambres, spacieuses et confortables, sont prévues en occupation double ou twin (avec la possibilité d'une chambre individuelle moyennant un supplément).",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-bali-immersion-incontournables/dqmjwQ5LREOJ5z0RwPtI.jpg",
-          "alt": "image de l'hébergement Explorez les incontournables de Bali entre plages, rizières et volcan "
-        },
-        {
-          "src": "/images/voyages/voyage-bali-immersion-incontournables/ugS62ExkSlSfM2HXMkhP.jpg",
-          "alt": "image de l'hébergement Explorez les incontournables de Bali entre plages, rizières et volcan "
-        },
-        {
-          "src": "/images/voyages/voyage-bali-immersion-incontournables/EQk5wwuTayAj1UhcSRd2.jpg",
-          "alt": "image de l'hébergement Explorez les incontournables de Bali entre plages, rizières et volcan "
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "13 nuits en hôtel, en base double, triple ou familiale",
-      "Tous les petits-déjeuners",
-      "Déjeuner du Jour 9",
-      "Les services d’un guide francophone du jour 2 au jour 12, excepté les jours 4 & 7 qui est sont des journées libres sans guide, ni chauffeur.",
-      "Les transferts en véhicule privé avec chauffeur.",
-      "Le chauffeur est disponible jusqu'à 8h par jour et au plus tard jusqu'à la tombée de la nuit. Lors des journées activités, seuls les transferts sont inclus, sauf mention contraire.",
-      "Activités durant le voyage (telles que décrites)"
-    ],
-    "exclude": [
-      "Les vols internationaux A/R (possibilité de devis avec vols inclus sur demande)",
-      "Les déjeuners et dîners non mentionnés dans \"le prix comprend\" (comptez entre 2 à 3€ dans un restaurant local pour un repas, et de 8 à 20 € dans un restaurant par repas/personne)",
-      "Les boissons et dépenses personnelles",
-      "Les pourboires pour les guides et les chauffeurs",
-      "L'assurance annulation ou multirisques",
-      "Tout ce qui n'est pas mentionné dans la section \"le prix comprend\""
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -293,27 +436,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1400,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": true,
-    "indivRoomPrice": 270,
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "DPS",
-      "DPS"
-    ]
+  "seo": {
+    "metaTitle": "Explorez les incontournables de Bali entre plages, rizières et volcan ",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-bali-immersion-incontournables",
+    "ogTitle": "Explorez les incontournables de Bali entre plages, rizières et volcan ",
+    "ogDescription": "Voyagez avec Odysway et découvrez les multiples facettes de Bali, entre richesse culturelle et paysages enchanteurs !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-bali-immersion-incontournables/b7PckcBQCe7UeHMhXBZr.jpg",
+      "alt": "image principale du voyage Explorez les incontournables de Bali entre plages, rizières et volcan "
+    },
+    "twitterTitle": "Explorez les incontournables de Bali entre plages, rizières et volcan ",
+    "twitterDescription": "Voyagez avec Odysway et découvrez les multiples facettes de Bali, entre richesse culturelle et paysages enchanteurs !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-bali-immersion-incontournables/b7PckcBQCe7UeHMhXBZr.jpg",
+      "alt": "image principale du voyage Explorez les incontournables de Bali entre plages, rizières et volcan "
+    },
+    "twitterCard": "summary_large_image"
   }
 }

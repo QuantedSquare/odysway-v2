@@ -63,7 +63,7 @@ const { data: categories } = useAsyncData('categories', () => {
 })
 
 const { data: voyages } = useAsyncData('voyages', () => {
-  return queryCollection('voyages').all()
+  return queryCollection('voyages').where('published', '==', true).all()
 })
 const categoriesWithVoyages = computed(() => {
   if (!categories.value || !voyages.value) return []
@@ -71,7 +71,7 @@ const categoriesWithVoyages = computed(() => {
   return categories.value.map(category => ({
     ...category,
     voyages: voyages.value.filter(voyage =>
-      voyage.categories && voyage.categories.includes(category.slug),
+      voyage.categories && voyage.categories.some(c => c.name.includes(category.slug)),
     ),
   }))
 })

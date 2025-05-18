@@ -1,37 +1,276 @@
 {
   "published": true,
   "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-  "slug": "voyage-immersion-culturelle-japon",
-  "rating": 4.8,
-  "comments": 5,
-  "description": "Vous faire vivre le Japon comme si vous étiez Japonais le temps d’un séjour, voici notre promesse ! Nous vous invitons pour une évasion, une ouverture unique sur un autre monde, une découverte faite d’expériences, de ravissements et de plaisirs simples. \n\nLe Japon autrement a été créé avec à l’esprit une philosophie de la rencontre – des rencontres simples et intimes avec le Japon. Ce voyage accompagné va vous séduire par son déroulé qui laisse autant la place à la légèreté nécessaire au voyageur qu’aux connaissances partagées par votre guide pour en savoir plus sur ce pays fascinant.   \n\nTout au long de notre voyage, nous prendrons le temps pour rencontrer « les différents Japon » et nous rencontrer, car tout voyage est aussi l’occasion d’un dialogue avec soi-même. Sans courir d’une ville à une autre, nous irons de Kyoto à Tokyo, avec un programme qui vous laissera du temps aussi du temps pour vous. De cette densité, nous allons extraire la beauté, le quotidien, l’histoire et les réalités d’un Japon contemporain qui a su conserver ses traditions tout en créant les technologies les plus avancées.",
-  "emailDescription": "👉 Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions séculaires, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
-  "metaDescription": "Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
-  "interjection": "au",
   "destinations": [
-    "Japon"
+    {
+      "name": "Japon",
+      "slug": "japon"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "partir-en-groupe"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-en-groupe"
+    }
   ],
   "duration": 12,
   "nights": 11,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel et Ryokan",
   "idealPeriods": [
-    "Mai",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
   "monthlyAvailability": [
-    "Mai",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 5,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Vous faire vivre le Japon comme si vous étiez Japonais le temps d’un séjour, voici notre promesse ! Nous vous invitons pour une évasion, une ouverture unique sur un autre monde, une découverte faite d’expériences, de ravissements et de plaisirs simples. \n\nLe Japon autrement a été créé avec à l’esprit une philosophie de la rencontre – des rencontres simples et intimes avec le Japon. Ce voyage accompagné va vous séduire par son déroulé qui laisse autant la place à la légèreté nécessaire au voyageur qu’aux connaissances partagées par votre guide pour en savoir plus sur ce pays fascinant.   \n\nTout au long de notre voyage, nous prendrons le temps pour rencontrer « les différents Japon » et nous rencontrer, car tout voyage est aussi l’occasion d’un dialogue avec soi-même. Sans courir d’une ville à une autre, nous irons de Kyoto à Tokyo, avec un programme qui vous laissera du temps aussi du temps pour vous. De cette densité, nous allons extraire la beauté, le quotidien, l’histoire et les réalités d’un Japon contemporain qui a su conserver ses traditions tout en créant les technologies les plus avancées.",
+    "author": "Régis Defurnaux",
+    "affixeAuthor": "Votre accompagnateur pour ce voyage au Japon"
+  },
+  "experiencesBlock": [
+    "Découvrez le Japon avec Régis Defurnaux, votre guide conférencier, l’un des rares anthropologues occidentaux autorisés à suivre la formation des Geishas",
+    "Vivez un voyage unique, au rythme doux et dans un petit groupe, avec des moments libres pour apprécier pleinement chaque instant",
+    "Apprenez-en plus sur les traditions nippones lors des nombreuses visites et des explorations de Tokyo et Kyoto",
+    "Participez à des activités et des expériences qui marqueront votre voyage : bain dans un onsen, pratique de la calligraphie…",
+    "Déplacez-vous tout au long du voyage comme les japonais, à pied ou en utilisant les transports publics, pour une plus grande immersion avec les locaux"
+  ],
+  "slug": "voyage-immersion-culturelle-japon",
+  "description": "Vous faire vivre le Japon comme si vous étiez Japonais le temps d’un séjour, voici notre promesse ! Nous vous invitons pour une évasion, une ouverture unique sur un autre monde, une découverte faite d’expériences, de ravissements et de plaisirs simples. \n\nLe Japon autrement a été créé avec à l’esprit une philosophie de la rencontre – des rencontres simples et intimes avec le Japon. Ce voyage accompagné va vous séduire par son déroulé qui laisse autant la place à la légèreté nécessaire au voyageur qu’aux connaissances partagées par votre guide pour en savoir plus sur ce pays fascinant.   \n\nTout au long de notre voyage, nous prendrons le temps pour rencontrer « les différents Japon » et nous rencontrer, car tout voyage est aussi l’occasion d’un dialogue avec soi-même. Sans courir d’une ville à une autre, nous irons de Kyoto à Tokyo, avec un programme qui vous laissera du temps aussi du temps pour vous. De cette densité, nous allons extraire la beauté, le quotidien, l’histoire et les réalités d’un Japon contemporain qui a su conserver ses traditions tout en créant les technologies les plus avancées.",
+  "emailDescription": "👉 Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions séculaires, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
+  "metaDescription": "Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**11 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Hôtels 3*",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Mai et Novembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE AU PAYS DU SOLEIL LEVANT",
+      "badgeText": "JOUR 1",
+      "description": "Vous avez survolé nombre de pays et vous voilà enfin arrivé à destination ! Notre équipe locale vous accueillera et vous conduira à Kyoto, en plein cœur de Gion, l’un des quartiers historiques de la ville. Vous disposerez d’un temps libre pour explorer les alentours avant de retrouver votre guide-conférencier pour une première balade à travers la ville. Et pas n’importe laquelle : une découverte nocturne sous les lumières de Kyoto pour vous imprégner d’une ambiance singulière, miroir de la vie kyotoïte. Premiers repas japonais, et peut-être premier Rāmen ! Nuit à Kyoto.\r\n",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/dRggKvTiuhjjVqtzO2Ug.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES BEAUTÉS SECRÈTES DU JAPON TRADITIONNEL",
+      "badgeText": "JOUR 2",
+      "description": "Après Kyoto de nuit, Kyoto de jour ! Aujourd’hui, place au Japon traditionnel. Et le quartier de Gion est, sans conteste, l’un des endroits les plus propices pour découvrir l’authenticité nippone. En effet, c’est dans ce quartier que demeurent les geishas, ces femmes maîtrisant l’art de la musique et de la danse. Rencontre exceptionnelle possible avec ces dernières (En option, voir FAQ). L'après-midi se déroulera au sanctuaire Yasaka-jinja, où l'envoûtante atmosphère est créée par les lanternes flottantes et les cloches. Le parc de Maruyama révélera ensuite la symbiose unique entre les Japonais et la nature, pour finalement nous conduire au Kennin-ji, le plus ancien temple bouddhiste Zen, offrant une expérience méditative au cœur de jardins impeccables. Nuit à Kyoto.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/fReZiIzVQViCAdvqnoJL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BALADE À L’OMBRE DES CERISIERS",
+      "badgeText": "JOUR 3",
+      "description": "Parmi les emblèmes du Japon, il y a bien sûr les cerisiers, les sakura. Au printemps, leur floraison est une explosion de senteurs et en automne, leur couleur jaune orangé est un ravissement pour les yeux. C’est dans cette ambiance florale que se déroulera cette nouvelle journée. Vous emprunterez le chemin de la philosophie, un sentier propice à la méditation. Long de 2 km, il borde un canal où l’eau s’écoule paisiblement. Une ambiance zen et spirituelle qui mène jusqu’au Ginkaku-ji, un temple bouddhiste bordé d’une somptueuse allée de bambous. Nuit à Kyoto.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/CzXy6TfTTIKtOKZWB91j.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SYMBOLES DU JAPON ET VISITE SPIRITUELLE",
+      "badgeText": "JOUR 4",
+      "description": "Ils font partie de l’architecture traditionnelle du Japon et sont de véritables symboles. Ils, ce sont les toris, ces portails édifiés généralement à l’entrée d’un sanctuaire. Ils représentent la porte d’accès au monde spirituel et sont donc sacrés. Au Sanctuaire de Fushimi Inari, vous tomberez nez à nez avec une succession de près de 10 000 toris, parfaitement alignés. Une visite mystique qui vous permettra d’en savoir un peu plus sur les dieux et croyances japonaises. Vous partez ensuite en direction du palais des shoguns du clan Tokugawa. À la fois imposant et riche en détails décoratifs, le \"Nijo-jo\" est reconnu comme un véritable chef-d’œuvre par l'UNESCO. Entre le sol chantant et les pièces cachées, vous découvrirez tous les secrets de ces murs imprenables. Nuit à Kyoto.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/MJrijzGERIG1n9oqXElL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MOMENT DE DÉTENTE DANS UN ONSEN",
+      "badgeText": "JOUR 5",
+      "description": "Découverte ce matin du Kinkaku-ji, surnommé le \"pavillon d'or\". Dès l'entrée, le billet calligraphié et l'alignement de pins et d'érables nous plongent dans une atmosphère poétique. L'étang reflète la lumière dorée du pavillon, le rendant encore plus majestueux. Bien que conçu selon les principes de l'esthétique zen, ce temple se distingue par son éclat, loin de la simplicité habituelle des temples bouddhiques. L'après-midi, vous vivez une expérience de détente à la japonaise : Le territoire japonais est jalonné d’environ 27 000 onsens, des sources d’eau chaude sulfureuses aux vertus thérapeutiques. Se baigner dans un onsen est un véritable rituel dans le pays et les Japonais en sont très friands ! Avec une température qui frise les 40 °C, l’entrée dans l’eau se fera en douceur. Mais dès que votre corps sera habitué, vous apprécierez grandement les bienfaits de cette tradition nippone. Nuit à Kyoto.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/tcOWLjjWRpyN69xoYqQz.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UNE NATURE EXTRAORDINAIRE",
+      "badgeText": "JOUR 6",
+      "description": "Éloignez-vous du centre de Kyoto et plongez dans une nature époustouflante loin de l'agitation urbaine. La bambouseraie d’Arashiyama offre une expérience unique, où d'immenses bambous s'élèvent à plusieurs dizaines de mètres de haut, vous faisant sentir minuscule face à leur majesté. Promenez-vous au cœur de cette forêt envoûtante, imprégnée d'une atmosphère reposante et presque magique. Sous le vert intense des bambous, les rayons de soleil filtrent par beau temps, et le vent produit un concert harmonieux de sifflements. L'après-midi, découverte du temple zen Tenryu-ji, premier des cinq grands temples de Kyoto et célèbre pour ses jardins. Entre mousses sèches, gravier blanc, érables et pins, les jardins ont véritablement été pensés pour exhaler leur beauté à chaque saison. Nuit à Kyoto.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/4VSIIE5NQ16QalmcfUTy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TRADITIONS JAPONAISES ET NUITS EN RYOKAN AU PIED DU MONT FUJI",
+      "badgeText": "JOURS 7 & 8",
+      "description": "Quittez Kyoto pour explorer le Japon rural à bord du Shinkansen. Direction Hakone, où la nature luxuriante vous entoure de montagnes majestueuses et de lacs paisibles. La vue imprenable sur le Mont Fuji, souvent voilé de nuages, offre une connexion unique avec la beauté sauvage du Japon. Non loin, la côte dévoile des villages de pêcheurs authentiques, témoins de traditions ancestrales.\r\nPour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge traditionnelle. Derrière les portes en bois coulissantes, les sols en tatami dégagent un parfum apaisant, invitant à ralentir et savourer chaque instant.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/vIvAf0hmSkKpEyHrOu35.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SHINKANSEN VERS TOKYO",
+      "badgeText": "JOUR 9",
+      "description": "Aujourd’hui, départ pour Tokyo à bord du Shinkansen, la version nippone du TGV ! Vous ferez vos premiers pas dans la capitale japonaise dans le quartier de Shinjuku, célèbre pour ses enseignes lumineuses géantes. Puis changement de décor pour un quartier plus authentique, celui de Golden Gai, pour une expérience plus immersive dans la vie tokyoïte. Comme nombre de Japonais après le travail, vous pourrez prendre place à l’un des bars. Leur particularité ? Ils sont si petits que seules quelques personnes peuvent prendre place ! Un lieu propice aux rencontres et aux échanges. Nuit à Tokyo.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/P4JAclcQNmdy3GOr6WYX.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU CŒUR DE LA VIE DE TOKYO",
+      "badgeText": "JOUR 10",
+      "description": "Tokyo recèle bien des contrastes et cette nouvelle journée en sera la preuve. Direction tout d’abord le sanctuaire shinto Meiji-Jingu. Ce lieu symbolique, véritable oasis de tranquillité au sein de la bouillonnante mégalopole. Vous explorerez ensuite le quartier d’Harakuju, antre du cosplay, cette pratique qui consiste à s’habiller comme un personnage de manga, d’animé ou de jeu vidéo. Vous serez ici au cœur de l’excentricité de la jeunesse de Tokyo, dans une atmosphère étonnante, mais étrangement attirante. Puis, vous terminerez cette journée en apothéose au Tochomae pour apercevoir le mont Fuji. Il parait que seul ceux qui s’y rendent peuvent comprendre l’intensité de la vue. Tokyo s’étend à perte de vue jusqu’aux pentes du Mont Fuji qui domine la baie. Nuit à Tokyo.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/9oVkJFP5Q3CQASjeACgT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TOKYO ENTRE EFFERVESCENCE ET QUIÉTUDE",
+      "badgeText": "JOUR 11",
+      "description": "Impossible de venir à Tokyo sans passer par les fameux passages piétons du carrefour de Shibuya  ! Une expérience insolite, mais incontournable, puisque vous marcherez sur les traces des centaines de Japonais qui vont et viennent dans la capitale. Ensuite, changement d’ambiance dans le très calme quartier de Merugo où vous apprécierez prendre du temps et marcher le long de la rivière bordée de cerisiers. Une balade sous le signe de la zénitude pour vous imprégner une toute dernière fois de l’essence de Tokyo. Nuit à Tokyo.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/9mDo1RE7S2qFL07TJyB3.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SAYŌNARA !",
+      "badgeText": "JOUR 12",
+      "description": "En fonction de l’heure de votre vol de retour, vous aurez la possibilité de déambuler une dernière fois dans les rues de Tokyo. Empruntez les ruelles, entrez dans les petites échoppes, testez votre japonais appris tout au long de votre séjour et recevez en retour de grands sourires ! Sayōnara, yoi tabi o !",
+      "photo": "/images/voyages/voyage-immersion-culturelle-japon/tUBTUzODRQmLYJyhmNfK.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts entre les aéroports et les hôtels",
+      "Le train Shinkansen pour relier Kyoto, Hakone et Tokyo",
+      "6 nuitées dans l'hôtel 3\\* [_Kyoto Inn Gion the Second_](https://www.kyotoinngion.com/room/) , 2 nuitées au Ryokan 3\\*  [_Mount View Hakone_](https://www.mvhakone.jp/lg_en/)  et 3 nuitées dans l'hôtel 3\\* [_Tokyo Via Inn Shinjuku_](https://www.viainn.com/en/shinjuku/)",
+      "Une chambre individuelle  _(réduction possible pour chambre double ou twin, montant disponible sur demande)_",
+      "La demi-pension  _(petits-déjeuners et déjeuners)_  hors boissons",
+      "Les trajets en transport en commun et les entrées aux sites mentionnés dans le programme",
+      "L'accès au Onsen au Ryokan et à l'atelier de calligraphie",
+      "Une carte SIM pour votre smartphone",
+      "L'accompagnement de votre guide conférencier pendant tout votre séjour",
+      "Les frais de service et la taxe de séjour touristique"
+    ],
+    "exclude": [
+      "Les vols internationaux pour se rendre au Japon et les taxes afférentes. Par exemple, pour des vols Paris-Osaka et Tokyo-Paris avec Air France, il faut compter +/- 950 € par personne, bagage en soute inclus.",
+      "Les diners, compter entre 15 € et 35 € par personne par dîner",
+      "Les boissons",
+      "Vos dépenses personnelles : nous vous conseillons de prévoir entre 300 € et 500 € par personne afin de couvrir les repas du soir et les éventuels souvenirs que vous pourriez ramener du Japon).",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 3990,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": [
+      "KIX",
+      "HND"
+    ]
+  },
+  "accompanistsDescription": "Durant ce voyage pour découvrir le Japon autrement, vous serez entre les mains d’un accompagnateur hors pair, Régis Defurnaux. Cet amoureux du Japon est à la fois guide-conférencier, anthropologue, photographe documentaire, enseignant et historien. Ses nombreux voyages au pays du Soleil-Levant lui confèrent aujourd’hui une parfaite connaissance de l’histoire et de la philosophie du pays. Il vous entraînera sur les traces du lointain passé de ce territoire plutôt discret, mais vous invitera aussi à vous immerger dans le présent pour une vision hétéroclite de ce pays surprenant. Explorer le Japon avec Régis offre également l'opportunité de connecter plus aisément avec les locaux, de découvrir des lieux secrets et méconnus, de savourer la cuisine dans des restaurants fréquentés exclusivement par les autochtones, de se déplacer comme les locaux… Voyager avec Régis, c'est voyager en immersion !",
+  "accompanistsList": [
+    {
+      "name": "Régis Defurnaux",
+      "description": "",
+      "role": "Votre accompagnateur pour ce voyage au Japon",
+      "image": "/images/voyages/voyage-immersion-culturelle-japon/uIFMXNX6S4ughf6X871F.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel et Ryokan",
+      "housingType": "",
+      "housingMood": "Parce qu’un tel voyage ne se vit (peut-être) qu’une fois, nous avons sélectionné des hébergements en cœur de ville afin que vous puissiez être au plus près du quotidien des habitants et un logement plus tradtionnel pour votre escapade au pied du Mont Fuji. À Kyoto, vous serez logé dans un hôtel dans le quartier de Gion, un quartier traditionnel où demeurent les splendides et énigmatiques geishas. Découvrez la quiétude d'un Ryokan, auberge tradtionnelle japonaise, lors de vos nuits à Hakone. Tout autre cadre à Tokyo où votre hôtel sera situé dans Shinjuku, là où l’activité diurne et nocturne bat son plein. Deux lieux, deux ambiances, mais un seul maître mot : une immersion 100 % japonaise. ",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-immersion-culturelle-japon/uxXwV9TdSOSOKD759PUF.jpg",
+          "alt": "image de l'hébergement Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-culturelle-japon/vVzjq2GvST6psQDg6Han.jpg",
+          "alt": "image de l'hébergement Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-culturelle-japon/q8SFnvNT7iDtpu1q6M9r.jpg",
+          "alt": "image de l'hébergement Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-immersion-culturelle-japon/zvLsa1w8QCaf6WaWc3of.jpg",
     "alt": "image principale du voyage Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
@@ -97,150 +336,6 @@
   "videoLinks": [
     "https://www.youtube.com/embed/smxELaAq8Ic"
   ],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Vous faire vivre le Japon comme si vous étiez Japonais le temps d’un séjour, voici notre promesse ! Nous vous invitons pour une évasion, une ouverture unique sur un autre monde, une découverte faite d’expériences, de ravissements et de plaisirs simples. \n\nLe Japon autrement a été créé avec à l’esprit une philosophie de la rencontre – des rencontres simples et intimes avec le Japon. Ce voyage accompagné va vous séduire par son déroulé qui laisse autant la place à la légèreté nécessaire au voyageur qu’aux connaissances partagées par votre guide pour en savoir plus sur ce pays fascinant.   \n\nTout au long de notre voyage, nous prendrons le temps pour rencontrer « les différents Japon » et nous rencontrer, car tout voyage est aussi l’occasion d’un dialogue avec soi-même. Sans courir d’une ville à une autre, nous irons de Kyoto à Tokyo, avec un programme qui vous laissera du temps aussi du temps pour vous. De cette densité, nous allons extraire la beauté, le quotidien, l’histoire et les réalités d’un Japon contemporain qui a su conserver ses traditions tout en créant les technologies les plus avancées.",
-    "author": "Régis Defurnaux",
-    "affixeAuthor": "Votre accompagnateur pour ce voyage au Japon"
-  },
-  "experiencesBlock": [
-    "Découvrez le Japon avec Régis Defurnaux, votre guide conférencier, l’un des rares anthropologues occidentaux autorisés à suivre la formation des Geishas",
-    "Vivez un voyage unique, au rythme doux et dans un petit groupe, avec des moments libres pour apprécier pleinement chaque instant",
-    "Apprenez-en plus sur les traditions nippones lors des nombreuses visites et des explorations de Tokyo et Kyoto",
-    "Participez à des activités et des expériences qui marqueront votre voyage : bain dans un onsen, pratique de la calligraphie…",
-    "Déplacez-vous tout au long du voyage comme les japonais, à pied ou en utilisant les transports publics, pour une plus grande immersion avec les locaux"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE AU PAYS DU SOLEIL LEVANT",
-      "badgeText": "JOUR 1",
-      "description": "Vous avez survolé nombre de pays et vous voilà enfin arrivé à destination ! Notre équipe locale vous accueillera et vous conduira à Kyoto, en plein cœur de Gion, l’un des quartiers historiques de la ville. Vous disposerez d’un temps libre pour explorer les alentours avant de retrouver votre guide-conférencier pour une première balade à travers la ville. Et pas n’importe laquelle : une découverte nocturne sous les lumières de Kyoto pour vous imprégner d’une ambiance singulière, miroir de la vie kyotoïte. Premiers repas japonais, et peut-être premier Rāmen ! Nuit à Kyoto.\r\n",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/dRggKvTiuhjjVqtzO2Ug.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES BEAUTÉS SECRÈTES DU JAPON TRADITIONNEL",
-      "badgeText": "JOUR 2",
-      "description": "Après Kyoto de nuit, Kyoto de jour ! Aujourd’hui, place au Japon traditionnel. Et le quartier de Gion est, sans conteste, l’un des endroits les plus propices pour découvrir l’authenticité nippone. En effet, c’est dans ce quartier que demeurent les geishas, ces femmes maîtrisant l’art de la musique et de la danse. Rencontre exceptionnelle possible avec ces dernières (En option, voir FAQ). L'après-midi se déroulera au sanctuaire Yasaka-jinja, où l'envoûtante atmosphère est créée par les lanternes flottantes et les cloches. Le parc de Maruyama révélera ensuite la symbiose unique entre les Japonais et la nature, pour finalement nous conduire au Kennin-ji, le plus ancien temple bouddhiste Zen, offrant une expérience méditative au cœur de jardins impeccables. Nuit à Kyoto.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/fReZiIzVQViCAdvqnoJL.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BALADE À L’OMBRE DES CERISIERS",
-      "badgeText": "JOUR 3",
-      "description": "Parmi les emblèmes du Japon, il y a bien sûr les cerisiers, les sakura. Au printemps, leur floraison est une explosion de senteurs et en automne, leur couleur jaune orangé est un ravissement pour les yeux. C’est dans cette ambiance florale que se déroulera cette nouvelle journée. Vous emprunterez le chemin de la philosophie, un sentier propice à la méditation. Long de 2 km, il borde un canal où l’eau s’écoule paisiblement. Une ambiance zen et spirituelle qui mène jusqu’au Ginkaku-ji, un temple bouddhiste bordé d’une somptueuse allée de bambous. Nuit à Kyoto.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/CzXy6TfTTIKtOKZWB91j.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SYMBOLES DU JAPON ET VISITE SPIRITUELLE",
-      "badgeText": "JOUR 4",
-      "description": "Ils font partie de l’architecture traditionnelle du Japon et sont de véritables symboles. Ils, ce sont les toris, ces portails édifiés généralement à l’entrée d’un sanctuaire. Ils représentent la porte d’accès au monde spirituel et sont donc sacrés. Au Sanctuaire de Fushimi Inari, vous tomberez nez à nez avec une succession de près de 10 000 toris, parfaitement alignés. Une visite mystique qui vous permettra d’en savoir un peu plus sur les dieux et croyances japonaises. Vous partez ensuite en direction du palais des shoguns du clan Tokugawa. À la fois imposant et riche en détails décoratifs, le \"Nijo-jo\" est reconnu comme un véritable chef-d’œuvre par l'UNESCO. Entre le sol chantant et les pièces cachées, vous découvrirez tous les secrets de ces murs imprenables. Nuit à Kyoto.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/MJrijzGERIG1n9oqXElL.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MOMENT DE DÉTENTE DANS UN ONSEN",
-      "badgeText": "JOUR 5",
-      "description": "Découverte ce matin du Kinkaku-ji, surnommé le \"pavillon d'or\". Dès l'entrée, le billet calligraphié et l'alignement de pins et d'érables nous plongent dans une atmosphère poétique. L'étang reflète la lumière dorée du pavillon, le rendant encore plus majestueux. Bien que conçu selon les principes de l'esthétique zen, ce temple se distingue par son éclat, loin de la simplicité habituelle des temples bouddhiques. L'après-midi, vous vivez une expérience de détente à la japonaise : Le territoire japonais est jalonné d’environ 27 000 onsens, des sources d’eau chaude sulfureuses aux vertus thérapeutiques. Se baigner dans un onsen est un véritable rituel dans le pays et les Japonais en sont très friands ! Avec une température qui frise les 40 °C, l’entrée dans l’eau se fera en douceur. Mais dès que votre corps sera habitué, vous apprécierez grandement les bienfaits de cette tradition nippone. Nuit à Kyoto.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/tcOWLjjWRpyN69xoYqQz.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "UNE NATURE EXTRAORDINAIRE",
-      "badgeText": "JOUR 6",
-      "description": "Éloignez-vous du centre de Kyoto et plongez dans une nature époustouflante loin de l'agitation urbaine. La bambouseraie d’Arashiyama offre une expérience unique, où d'immenses bambous s'élèvent à plusieurs dizaines de mètres de haut, vous faisant sentir minuscule face à leur majesté. Promenez-vous au cœur de cette forêt envoûtante, imprégnée d'une atmosphère reposante et presque magique. Sous le vert intense des bambous, les rayons de soleil filtrent par beau temps, et le vent produit un concert harmonieux de sifflements. L'après-midi, découverte du temple zen Tenryu-ji, premier des cinq grands temples de Kyoto et célèbre pour ses jardins. Entre mousses sèches, gravier blanc, érables et pins, les jardins ont véritablement été pensés pour exhaler leur beauté à chaque saison. Nuit à Kyoto.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/4VSIIE5NQ16QalmcfUTy.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TRADITIONS JAPONAISES ET NUITS EN RYOKAN AU PIED DU MONT FUJI",
-      "badgeText": "JOURS 7 & 8",
-      "description": "Quittez Kyoto pour explorer le Japon rural à bord du Shinkansen. Direction Hakone, où la nature luxuriante vous entoure de montagnes majestueuses et de lacs paisibles. La vue imprenable sur le Mont Fuji, souvent voilé de nuages, offre une connexion unique avec la beauté sauvage du Japon. Non loin, la côte dévoile des villages de pêcheurs authentiques, témoins de traditions ancestrales.\r\nPour parfaire cette immersion, séjournez deux nuits dans un ryokan, une auberge traditionnelle. Derrière les portes en bois coulissantes, les sols en tatami dégagent un parfum apaisant, invitant à ralentir et savourer chaque instant.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/vIvAf0hmSkKpEyHrOu35.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SHINKANSEN VERS TOKYO",
-      "badgeText": "JOUR 9",
-      "description": "Aujourd’hui, départ pour Tokyo à bord du Shinkansen, la version nippone du TGV ! Vous ferez vos premiers pas dans la capitale japonaise dans le quartier de Shinjuku, célèbre pour ses enseignes lumineuses géantes. Puis changement de décor pour un quartier plus authentique, celui de Golden Gai, pour une expérience plus immersive dans la vie tokyoïte. Comme nombre de Japonais après le travail, vous pourrez prendre place à l’un des bars. Leur particularité ? Ils sont si petits que seules quelques personnes peuvent prendre place ! Un lieu propice aux rencontres et aux échanges. Nuit à Tokyo.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/P4JAclcQNmdy3GOr6WYX.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU CŒUR DE LA VIE DE TOKYO",
-      "badgeText": "JOUR 10",
-      "description": "Tokyo recèle bien des contrastes et cette nouvelle journée en sera la preuve. Direction tout d’abord le sanctuaire shinto Meiji-Jingu. Ce lieu symbolique, véritable oasis de tranquillité au sein de la bouillonnante mégalopole. Vous explorerez ensuite le quartier d’Harakuju, antre du cosplay, cette pratique qui consiste à s’habiller comme un personnage de manga, d’animé ou de jeu vidéo. Vous serez ici au cœur de l’excentricité de la jeunesse de Tokyo, dans une atmosphère étonnante, mais étrangement attirante. Puis, vous terminerez cette journée en apothéose au Tochomae pour apercevoir le mont Fuji. Il parait que seul ceux qui s’y rendent peuvent comprendre l’intensité de la vue. Tokyo s’étend à perte de vue jusqu’aux pentes du Mont Fuji qui domine la baie. Nuit à Tokyo.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/9oVkJFP5Q3CQASjeACgT.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TOKYO ENTRE EFFERVESCENCE ET QUIÉTUDE",
-      "badgeText": "JOUR 11",
-      "description": "Impossible de venir à Tokyo sans passer par les fameux passages piétons du carrefour de Shibuya  ! Une expérience insolite, mais incontournable, puisque vous marcherez sur les traces des centaines de Japonais qui vont et viennent dans la capitale. Ensuite, changement d’ambiance dans le très calme quartier de Merugo où vous apprécierez prendre du temps et marcher le long de la rivière bordée de cerisiers. Une balade sous le signe de la zénitude pour vous imprégner une toute dernière fois de l’essence de Tokyo. Nuit à Tokyo.",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/9mDo1RE7S2qFL07TJyB3.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SAYŌNARA !",
-      "badgeText": "JOUR 12",
-      "description": "En fonction de l’heure de votre vol de retour, vous aurez la possibilité de déambuler une dernière fois dans les rues de Tokyo. Empruntez les ruelles, entrez dans les petites échoppes, testez votre japonais appris tout au long de votre séjour et recevez en retour de grands sourires ! Sayōnara, yoi tabi o !",
-      "photo": "/images/voyages/voyage-immersion-culturelle-japon/tUBTUzODRQmLYJyhmNfK.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Régis Defurnaux",
-      "description": "",
-      "role": "Votre accompagnateur pour ce voyage au Japon",
-      "image": "/images/voyages/voyage-immersion-culturelle-japon/uIFMXNX6S4ughf6X871F.jpg"
-    }
-  ],
-  "accompanistsDescription": "Durant ce voyage pour découvrir le Japon autrement, vous serez entre les mains d’un accompagnateur hors pair, Régis Defurnaux. Cet amoureux du Japon est à la fois guide-conférencier, anthropologue, photographe documentaire, enseignant et historien. Ses nombreux voyages au pays du Soleil-Levant lui confèrent aujourd’hui une parfaite connaissance de l’histoire et de la philosophie du pays. Il vous entraînera sur les traces du lointain passé de ce territoire plutôt discret, mais vous invitera aussi à vous immerger dans le présent pour une vision hétéroclite de ce pays surprenant. Explorer le Japon avec Régis offre également l'opportunité de connecter plus aisément avec les locaux, de découvrir des lieux secrets et méconnus, de savourer la cuisine dans des restaurants fréquentés exclusivement par les autochtones, de se déplacer comme les locaux… Voyager avec Régis, c'est voyager en immersion !",
-  "housingBlock": [
-    {
-      "title": "Hôtel et Ryokan",
-      "housingType": "",
-      "housingMood": "Parce qu’un tel voyage ne se vit (peut-être) qu’une fois, nous avons sélectionné des hébergements en cœur de ville afin que vous puissiez être au plus près du quotidien des habitants et un logement plus tradtionnel pour votre escapade au pied du Mont Fuji. À Kyoto, vous serez logé dans un hôtel dans le quartier de Gion, un quartier traditionnel où demeurent les splendides et énigmatiques geishas. Découvrez la quiétude d'un Ryokan, auberge tradtionnelle japonaise, lors de vos nuits à Hakone. Tout autre cadre à Tokyo où votre hôtel sera situé dans Shinjuku, là où l’activité diurne et nocturne bat son plein. Deux lieux, deux ambiances, mais un seul maître mot : une immersion 100 % japonaise. ",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-immersion-culturelle-japon/uxXwV9TdSOSOKD759PUF.jpg",
-          "alt": "image de l'hébergement Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
-        },
-        {
-          "src": "/images/voyages/voyage-immersion-culturelle-japon/vVzjq2GvST6psQDg6Han.jpg",
-          "alt": "image de l'hébergement Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
-        },
-        {
-          "src": "/images/voyages/voyage-immersion-culturelle-japon/q8SFnvNT7iDtpu1q6M9r.jpg",
-          "alt": "image de l'hébergement Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les transferts entre les aéroports et les hôtels",
-      "Le train Shinkansen pour relier Kyoto, Hakone et Tokyo",
-      "6 nuitées dans l'hôtel 3\\* [_Kyoto Inn Gion the Second_](https://www.kyotoinngion.com/room/) , 2 nuitées au Ryokan 3\\*  [_Mount View Hakone_](https://www.mvhakone.jp/lg_en/)  et 3 nuitées dans l'hôtel 3\\* [_Tokyo Via Inn Shinjuku_](https://www.viainn.com/en/shinjuku/)",
-      "Une chambre individuelle  _(réduction possible pour chambre double ou twin, montant disponible sur demande)_",
-      "La demi-pension  _(petits-déjeuners et déjeuners)_  hors boissons",
-      "Les trajets en transport en commun et les entrées aux sites mentionnés dans le programme",
-      "L'accès au Onsen au Ryokan et à l'atelier de calligraphie",
-      "Une carte SIM pour votre smartphone",
-      "L'accompagnement de votre guide conférencier pendant tout votre séjour",
-      "Les frais de service et la taxe de séjour touristique"
-    ],
-    "exclude": [
-      "Les vols internationaux pour se rendre au Japon et les taxes afférentes. Par exemple, pour des vols Paris-Osaka et Tokyo-Paris avec Air France, il faut compter +/- 950 € par personne, bagage en soute inclus.",
-      "Les diners, compter entre 15 € et 35 € par personne par dîner",
-      "Les boissons",
-      "Vos dépenses personnelles : nous vous conseillons de prévoir entre 300 € et 500 € par personne afin de couvrir les repas du soir et les éventuels souvenirs que vous pourriez ramener du Japon).",
-      "L'assurance annulation ou multirisques"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -297,27 +392,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 3990,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 100,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "KIX",
-      "HND"
-    ]
+  "seo": {
+    "metaTitle": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-culturelle-japon",
+    "ogTitle": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+    "ogDescription": "Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-immersion-culturelle-japon/zvLsa1w8QCaf6WaWc3of.jpg",
+      "alt": "image principale du voyage Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
+    },
+    "twitterTitle": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+    "twitterDescription": "Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-immersion-culturelle-japon/zvLsa1w8QCaf6WaWc3of.jpg",
+      "alt": "image principale du voyage Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

@@ -1,64 +1,108 @@
 {
   "published": true,
   "title": "Séjour au cœur d'un observatoire astronomique",
-  "slug": "sejour-observatoire-astronomique",
-  "rating": 5,
-  "comments": 0,
-  "description": "Plus qu'une simple visite ou soirée observation des étoiles, nous vous proposons une véritable immersion au cœur de la vie d'un observatoire astronomique dans les alpes. Le temps d'un week-end, vous allez suivre le quotidien des astronomes et astrophysiciens du centre et mener, vous aussi, vos propres expériences scientifiques.\n\nL'observatoire astronomique est spécialisé dans la détection d'exoplanètes, les planètes en dehors du système solaire. Vous apprendrez à manier un télescope, vous repérer dans le ciel et analyser les données obtenues.\n\nCe séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est requis, alors levez les yeux au ciel, et laissez vous porter...",
-  "emailDescription": "👉 Si vous souhaitez en savoir plus sur les constellations, suivre le quotidien d'astronomes et astrophysiciens et apprendre à manier les instruments comme un pro, ce voyage est fait pour vous ! ",
-  "metaDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
-  "interjection": "dans les",
   "destinations": [
-    "Alpes"
+    {
+      "name": "Alpes",
+      "slug": "alpes"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejour-astronomie",
-    "partir-en-amoureux",
-    "partir-en-famille",
-    "sejours-nature"
+    {
+      "name": "astronomie"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 3,
   "nights": 2,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Observatoire",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
-    "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/sejour-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
-    "alt": "image secondaire du voyage Séjour au cœur d'un observatoire astronomique"
-  },
-  "photosList": [],
-  "videoLinks": [],
-  "badgeSection": {},
   "authorNote": {
     "text": "Plus qu'une simple visite ou soirée observation des étoiles, nous vous proposons une véritable immersion au cœur de la vie d'un observatoire astronomique dans les alpes. Le temps d'un week-end, vous allez suivre le quotidien des astronomes et astrophysiciens du centre et mener, vous aussi, vos propres expériences scientifiques.\n\nL'observatoire astronomique est spécialisé dans la détection d'exoplanètes, les planètes en dehors du système solaire. Vous apprendrez à manier un télescope, vous repérer dans le ciel et analyser les données obtenues.\n\nCe séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est requis, alors levez les yeux au ciel, et laissez vous porter...",
     "author": "Lucie",
@@ -70,29 +114,102 @@
     "Vivez des échanges passionnants avec les astronomes et astrophysiciens",
     "Garder ses propres photos du ciel, qui vous seront transmises par e-mail"
   ],
+  "slug": "sejour-observatoire-astronomique",
+  "description": "Plus qu'une simple visite ou soirée observation des étoiles, nous vous proposons une véritable immersion au cœur de la vie d'un observatoire astronomique dans les alpes. Le temps d'un week-end, vous allez suivre le quotidien des astronomes et astrophysiciens du centre et mener, vous aussi, vos propres expériences scientifiques.\n\nL'observatoire astronomique est spécialisé dans la détection d'exoplanètes, les planètes en dehors du système solaire. Vous apprendrez à manier un télescope, vous repérer dans le ciel et analyser les données obtenues.\n\nCe séjour est dédié à tous les amateurs d'astronomie, aucun niveau n'est requis, alors levez les yeux au ciel, et laissez vous porter...",
+  "emailDescription": "👉 Si vous souhaitez en savoir plus sur les constellations, suivre le quotidien d'astronomes et astrophysiciens et apprendre à manier les instruments comme un pro, ce voyage est fait pour vous ! ",
+  "metaDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**2 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Observatoire",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "ARRIVÉE À L'OBSERVATOIRE",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre à l'observatoire astronomique dans l'après midi. Accueil, visite du site et installation dans les chambres d'hôtes. Vous prendrez votre premier dîner en compagnie des membres de l'équipe et ferez connaissance avec les autres participants du séjour.",
       "photo": "/images/voyages/sejour-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "COMPRENDRE LE CIEL",
       "badgeText": "JOUR 2",
       "description": "Cette première journée d'immersion est consacrée à la compréhension du ciel étoilé. Vous apprendrez à reconnaître les planètes, étoiles, nébuleuses et galaxies, ainsi qu'à manier les magnitudes et coordonnées du ciel. La nuit venue, vous repérerez les constellations, reconnaîtrez les étoiles et planètes au télescope. À la nuit tombée, vous participerez à une première observation astronomique avec un télescope T400. ",
       "photo": "/images/voyages/sejour-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "VOTRE MISSION D'ASTRONOME",
       "badgeText": "JOUR 3",
       "description": "C'est le grand jour ! Aujourd'hui le staff de l'observatoire vous confiera une mission (détection d'exoplanète, suivi d'astéroïde, ...). Avec l'aide de votre équipe, vous mènerez la mission de bout en bout, en immersion sous la coupole du grand télescope T820. Fin de votre séjour en tant qu'astronome dans l'après-midi. Vous ne partez cependant pas les mains vides : vous avez maintenant votre passeport en astronomie niveau 1, et vos magnifiques clichés du ciel qui vous seront transmis par e-mail !",
       "photo": "/images/voyages/sejour-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "2 nuitées en chambre d'hôte au sein de l'observatoire astronomique",
+      "La pension complète : les repas du midi et du soir sont pris avec les scientifiques de l'observatoire",
+      "Toutes les activités liées à l'astronomie mentionnées dans le programme",
+      "L'accompagnement durant ces activités",
+      "L'envoi de vos photos du ciel prises lors du séjour par e-mail",
+      "Les taxes touristiques",
+      "La participation au projet solidaire d'Odysway \"Immersion pour tous\" : un voyage de sensibilisation au développement durable pour des jeunes prévu chaque année"
+    ],
+    "exclude": [
+      "Le transfert de la gare à l'observatoire (supplément)",
+      "Le supplément single (55€/nuit)",
+      "Les boissons non mentionnées",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 630,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 40,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 330,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Ce voyage est encadré par Marc, le fondateur de l'observatoire. Au cours de ce séjour astronomique, vous aurez l'occasion de rencontrer tous les membres de l'équipe de l'observatoire. Les repas sont pris en commun, vous pourrez donc, au cours d'un dîner, échanger avec un astronome ou encore un astrophysicien. Des rencontres inoubliables !",
   "accompanistsList": [
     {
       "name": "Marc",
@@ -101,7 +218,6 @@
       "image": "/images/voyages/sejour-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg"
     }
   ],
-  "accompanistsDescription": "Ce voyage est encadré par Marc, le fondateur de l'observatoire. Au cours de ce séjour astronomique, vous aurez l'occasion de rencontrer tous les membres de l'équipe de l'observatoire. Les repas sont pris en commun, vous pourrez donc, au cours d'un dîner, échanger avec un astronome ou encore un astrophysicien. Des rencontres inoubliables !",
   "housingBlock": [
     {
       "title": "Observatoire",
@@ -123,24 +239,16 @@
       ]
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "2 nuitées en chambre d'hôte au sein de l'observatoire astronomique",
-      "La pension complète : les repas du midi et du soir sont pris avec les scientifiques de l'observatoire",
-      "Toutes les activités liées à l'astronomie mentionnées dans le programme",
-      "L'accompagnement durant ces activités",
-      "L'envoi de vos photos du ciel prises lors du séjour par e-mail",
-      "Les taxes touristiques",
-      "La participation au projet solidaire d'Odysway \"Immersion pour tous\" : un voyage de sensibilisation au développement durable pour des jeunes prévu chaque année"
-    ],
-    "exclude": [
-      "Le transfert de la gare à l'observatoire (supplément)",
-      "Le supplément single (55€/nuit)",
-      "Les boissons non mentionnées",
-      "L'assurance annulation ou multirisques"
-    ]
+  "image": {
+    "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+    "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
+    "alt": "image secondaire du voyage Séjour au cœur d'un observatoire astronomique"
+  },
+  "photosList": [],
+  "videoLinks": [],
   "faqBlock": {
     "faqList": [
       {
@@ -181,24 +289,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 630,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 40,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 330,
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Séjour au cœur d'un observatoire astronomique",
+    "canonicalUrl": "https://www.odysway.com/voyages/sejour-observatoire-astronomique",
+    "ogTitle": "Séjour au cœur d'un observatoire astronomique",
+    "ogDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
+    "ogImage": {
+      "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+      "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
+    },
+    "twitterTitle": "Séjour au cœur d'un observatoire astronomique",
+    "twitterDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
+    "twitterImage": {
+      "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+      "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

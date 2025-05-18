@@ -1,63 +1,313 @@
 {
   "published": true,
   "title": "Immersion brésilienne et survie dans la jungle amazonienne",
-  "slug": "survie-jungle-amazonienne",
-  "rating": 4.8,
-  "comments": 18,
-  "description": "Vivez une aventure inoubliable au Brésil, entre immersion culturelle et défis en pleine jungle.\n\nCommencez par une rencontre authentique avec une famille locale qui vous accueillera chaleureusement. Vous découvrirez leur quotidien, leurs traditions et participerez à des activités telles que la pêche traditionnelle, l’exploration des plantes médicinales, et des randonnées pour admirer la richesse unique de la forêt amazonienne.\n\nPoursuivez avec une expérience de survie en pleine jungle : guidé(e) par des experts, vous apprendrez à construire un abri, trouver de l’eau potable, et vous nourrir en vous adaptant à cet environnement sauvage et fascinant. Une aventure intense, rythmée par les sons envoûtants et la magie de la nature.\n\nPour compléter votre séjour, vous avez la possibilité en option, de passer quelques jours à Rio, entre plages mythiques, samba et panoramas spectaculaires, ou d’explorer d’autres régions emblématiques du Brésil ou d'Amérique du Sud.\n\nUn voyage riche en émotions, en rencontres et en défis, conçu pour un dépaysement total.",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la jungle, découvrir la culture de la population locale et expérimenter leur mode de vie, ce voyage est fait pour vous !",
-  "metaDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
-  "interjection": "au",
   "destinations": [
-    "Brésil"
+    {
+      "name": "Brésil",
+      "slug": "bresil"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-nature",
-    "sejours-chez-l-habitant",
-    "sejour-survie",
-    "ou-partir-en-ete",
-    "partir-en-famille",
-    "ou-partir-en-hiver",
-    "ou-partir-au-printemps",
-    "ou-partir-en-automne",
-    "voyage-insolite",
-    "voyage-solidaire",
-    "sejour-trek-randonnee",
-    "voyage-aventure"
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "survie"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "voyage-solidaire"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-aventure"
+    }
   ],
   "duration": 10,
   "nights": 9,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chez l'habitant ",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 18,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Vivez une aventure inoubliable au Brésil, entre immersion culturelle et défis en pleine jungle.\n\nCommencez par une rencontre authentique avec une famille locale qui vous accueillera chaleureusement. Vous découvrirez leur quotidien, leurs traditions et participerez à des activités telles que la pêche traditionnelle, l’exploration des plantes médicinales, et des randonnées pour admirer la richesse unique de la forêt amazonienne.\n\nPoursuivez avec une expérience de survie en pleine jungle : guidé(e) par des experts, vous apprendrez à construire un abri, trouver de l’eau potable, et vous nourrir en vous adaptant à cet environnement sauvage et fascinant. Une aventure intense, rythmée par les sons envoûtants et la magie de la nature.\n\nPour compléter votre séjour, vous avez la possibilité en option, de passer quelques jours à Rio, entre plages mythiques, samba et panoramas spectaculaires, ou d’explorer d’autres régions emblématiques du Brésil ou d'Amérique du Sud.\n\nUn voyage riche en émotions, en rencontres et en défis, conçu pour un dépaysement total.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Une immersion au sein d'une famille brésilienne en pleine forêt amazonienne",
+    "L'exploration de la jungle, la découverte de sa flore et faune uniques au monde",
+    "L'apprentissage des techniques de survie avec un guide expert de la jungle",
+    "La découverte des pratiques traditionnelles locales",
+    "La possibilité, en option, de découvrir Rio ou d’explorer d’autres régions emblématiques du Brésil"
+  ],
+  "slug": "survie-jungle-amazonienne",
+  "description": "Vivez une aventure inoubliable au Brésil, entre immersion culturelle et défis en pleine jungle.\n\nCommencez par une rencontre authentique avec une famille locale qui vous accueillera chaleureusement. Vous découvrirez leur quotidien, leurs traditions et participerez à des activités telles que la pêche traditionnelle, l’exploration des plantes médicinales, et des randonnées pour admirer la richesse unique de la forêt amazonienne.\n\nPoursuivez avec une expérience de survie en pleine jungle : guidé(e) par des experts, vous apprendrez à construire un abri, trouver de l’eau potable, et vous nourrir en vous adaptant à cet environnement sauvage et fascinant. Une aventure intense, rythmée par les sons envoûtants et la magie de la nature.\n\nPour compléter votre séjour, vous avez la possibilité en option, de passer quelques jours à Rio, entre plages mythiques, samba et panoramas spectaculaires, ou d’explorer d’autres régions emblématiques du Brésil ou d'Amérique du Sud.\n\nUn voyage riche en émotions, en rencontres et en défis, conçu pour un dépaysement total.",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la jungle, découvrir la culture de la population locale et expérimenter leur mode de vie, ce voyage est fait pour vous !",
+  "metaDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 6 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE À MANAUS",
+      "badgeText": "JOUR 1",
+      "description": "Rendez-vous à l'aéroport de Manaus où nos équipes vous accueillent pour vous conduire à votre hôtel. Profitez de la soirée pour vous reposer et vous remettre du décalage horaire car le lendemain, l’aventure amazonienne commence !",
+      "photo": "/images/voyages/survie-jungle-amazonienne/UO43DsM3SuuWwlv0pr3Q.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION DANS LA FAMILLE ",
+      "badgeText": "JOUR 2",
+      "description": "Départ en bateau sur l'Amazone, à la jonction avec et le Rio Negro. En fin de matinée, vous arriverez au camp de base familial, en immersion dans la jungle. Vous prendrez votre repas de bienvenue préparé par Christiane, la mère de famille, puis partirez découvrir les environs.",
+      "photo": "/images/voyages/survie-jungle-amazonienne/vf3CwGBTEa5Xg3Y0V295.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPÉDITIONS À LA JOURNÉE",
+      "badgeText": "JOURS 3 À 4",
+      "description": "Aujourd’hui, débutent les excursions à la demi-journée. Vous aurez l'occasion de partir randonner dans la jungle, observer les animaux sauvages en pirogue, pêcher le piranha, observer les caïmans de nuit ou encore les dauphins roses de rivière… Le soir vous dînerez avec vos guides et la famille, au camp de base.",
+      "photo": "/images/voyages/survie-jungle-amazonienne/tUEh5LYbQlyuthjm5Xae.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RENCONTRE AVEC LES LOCAUX",
+      "badgeText": "JOUR 5",
+      "description": "Aujourd'hui, vous pourrez rencontrer les locaux et partager une conversation, un repas ou même une soirée avec eux. Visitez les écoles de la région et profitez de votre visite pour éventuellement faire des dons de fournitures scolaires, de vêtements ou de jeux. Une vraie expérience, c’est aussi voyager utile.",
+      "photo": "/images/voyages/survie-jungle-amazonienne/vvODBgreTOXB00W4vrt6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SURVIE DANS LA JUNGLE",
+      "badgeText": "JOURS 6 À 8",
+      "description": "En compagnie de vos guides locaux, vous partez pour trois jours en immersion dans la jungle amazonienne ! Vous apprendrez les rudiments de la survie, construirez votre campement et mangerez le fruit de votre pêche. Émotions et souvenirs à vie garantis !",
+      "photo": "/images/voyages/survie-jungle-amazonienne/8PG2yGc7S7WZie1reuZ9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR VERS MANAUS",
+      "badgeText": "JOUR 9",
+      "description": "Après un dernier petit-déjeuner au camp de base, vous prenez un bateau et retournez à Manaus avec vos guides. Profitez du confort fraîchement retrouvé pour prendre une bonne douche et enfiler des vêtements propres !",
+      "photo": "/images/voyages/survie-jungle-amazonienne/QMob5l5LSxyxDuvFZLa4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR EN AMAZONIE",
+      "badgeText": "JOUR 10",
+      "description": "Profitez de la matinée pour faire un tour dans la vieille ville de Manaus, afin d’acheter de beaux souvenirs de la capitale de l’Amazonie. Vous revenez chez vous avec des souvenirs impérissables !",
+      "photo": "/images/voyages/survie-jungle-amazonienne/CgeWwa2GTEaaaxrOZEkb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts entre l'aéroport et votre hôtel à Manaus",
+      "Le transport privé aller/retour de Manaus jusqu'au camp de base dans la jungle (2 bateaux + voiture)",
+      "2 nuits en hôtel à Manaus (à l'arrivée et au retour)",
+      "L'immersion dans la famille au camp de base, avec excursions à la demi-journée",
+      "Les jours de survie dans la jungle",
+      "L'accompagnement par un guide natif professionnel et expérimenté (bilingue anglais ou accompagné d'un traducteur bilingue) + un accompagnant pour aider/assister le guide",
+      "Tous les hébergements au camp de base et dans la jungle",
+      "Tous les repas au camp de base et dans la jungle"
+    ],
+    "exclude": [
+      "Le transport aérien international à destination de et au retour de Manaus (possibilité de devis avec vols inclus sur demande)",
+      "Les pré-voyages et extensions",
+      "Les activités ou repas non compris dans la section \"le prix comprend\"",
+      "La visite de Manaus (option en FAQ)",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles et les pourboires (au bon vouloir, selon votre degré de satisfaction)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1480,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "MAO"
+    ]
+  },
+  "accompanistsDescription": "En Amazonie, vous serez accompagné par un guide natif professionnel et expérimenté, ainsi que d'un accompagnant pour aider/assister le guide.\n\nUn accompagnement francophone est possible sur-demande pendant le séjour, mais il est préférable d'avoir des notions d'anglais et/ou de portugais.",
+  "accompanistsList": [
+    {
+      "name": "Alciney",
+      "description": "",
+      "role": "Expert en survie",
+      "image": "/images/voyages/survie-jungle-amazonienne/ATfKD8gIS8qq0TWg0INd.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Chez l'habitant ",
+      "housingType": "",
+      "housingMood": "Vous serez hébergés en Amazonie au sein même de la famille de Max, dans des maisons annexes avec salle de bain afin de vous assurer une totale autonomie. Lors des immersions de plusieurs jours dans la jungle, vous dormirez dans des hamacs munis d'une moustiquaire et d'un toit. ",
+      "image": [
+        {
+          "src": "/images/voyages/survie-jungle-amazonienne/AfXwboBrTZKsKXd8bVVw.jpg",
+          "alt": "image de l'hébergement Immersion brésilienne et survie dans la jungle amazonienne"
+        },
+        {
+          "src": "/images/voyages/survie-jungle-amazonienne/GiSNtKibRAeHqHqvMr0o.jpg",
+          "alt": "image de l'hébergement Immersion brésilienne et survie dans la jungle amazonienne"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
     "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
@@ -123,117 +373,6 @@
   "videoLinks": [
     "https://www.youtube.com/embed/lo61W3QIX4M"
   ],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Vivez une aventure inoubliable au Brésil, entre immersion culturelle et défis en pleine jungle.\n\nCommencez par une rencontre authentique avec une famille locale qui vous accueillera chaleureusement. Vous découvrirez leur quotidien, leurs traditions et participerez à des activités telles que la pêche traditionnelle, l’exploration des plantes médicinales, et des randonnées pour admirer la richesse unique de la forêt amazonienne.\n\nPoursuivez avec une expérience de survie en pleine jungle : guidé(e) par des experts, vous apprendrez à construire un abri, trouver de l’eau potable, et vous nourrir en vous adaptant à cet environnement sauvage et fascinant. Une aventure intense, rythmée par les sons envoûtants et la magie de la nature.\n\nPour compléter votre séjour, vous avez la possibilité en option, de passer quelques jours à Rio, entre plages mythiques, samba et panoramas spectaculaires, ou d’explorer d’autres régions emblématiques du Brésil ou d'Amérique du Sud.\n\nUn voyage riche en émotions, en rencontres et en défis, conçu pour un dépaysement total.",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Une immersion au sein d'une famille brésilienne en pleine forêt amazonienne",
-    "L'exploration de la jungle, la découverte de sa flore et faune uniques au monde",
-    "L'apprentissage des techniques de survie avec un guide expert de la jungle",
-    "La découverte des pratiques traditionnelles locales",
-    "La possibilité, en option, de découvrir Rio ou d’explorer d’autres régions emblématiques du Brésil"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE À MANAUS",
-      "badgeText": "JOUR 1",
-      "description": "Rendez-vous à l'aéroport de Manaus où nos équipes vous accueillent pour vous conduire à votre hôtel. Profitez de la soirée pour vous reposer et vous remettre du décalage horaire car le lendemain, l’aventure amazonienne commence !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/UO43DsM3SuuWwlv0pr3Q.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION DANS LA FAMILLE ",
-      "badgeText": "JOUR 2",
-      "description": "Départ en bateau sur l'Amazone, à la jonction avec et le Rio Negro. En fin de matinée, vous arriverez au camp de base familial, en immersion dans la jungle. Vous prendrez votre repas de bienvenue préparé par Christiane, la mère de famille, puis partirez découvrir les environs.",
-      "photo": "/images/voyages/survie-jungle-amazonienne/vf3CwGBTEa5Xg3Y0V295.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPÉDITIONS À LA JOURNÉE",
-      "badgeText": "JOURS 3 À 4",
-      "description": "Aujourd’hui, débutent les excursions à la demi-journée. Vous aurez l'occasion de partir randonner dans la jungle, observer les animaux sauvages en pirogue, pêcher le piranha, observer les caïmans de nuit ou encore les dauphins roses de rivière… Le soir vous dînerez avec vos guides et la famille, au camp de base.",
-      "photo": "/images/voyages/survie-jungle-amazonienne/tUEh5LYbQlyuthjm5Xae.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RENCONTRE AVEC LES LOCAUX",
-      "badgeText": "JOUR 5",
-      "description": "Aujourd'hui, vous pourrez rencontrer les locaux et partager une conversation, un repas ou même une soirée avec eux. Visitez les écoles de la région et profitez de votre visite pour éventuellement faire des dons de fournitures scolaires, de vêtements ou de jeux. Une vraie expérience, c’est aussi voyager utile.",
-      "photo": "/images/voyages/survie-jungle-amazonienne/vvODBgreTOXB00W4vrt6.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SURVIE DANS LA JUNGLE",
-      "badgeText": "JOURS 6 À 8",
-      "description": "En compagnie de vos guides locaux, vous partez pour trois jours en immersion dans la jungle amazonienne ! Vous apprendrez les rudiments de la survie, construirez votre campement et mangerez le fruit de votre pêche. Émotions et souvenirs à vie garantis !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/8PG2yGc7S7WZie1reuZ9.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR VERS MANAUS",
-      "badgeText": "JOUR 9",
-      "description": "Après un dernier petit-déjeuner au camp de base, vous prenez un bateau et retournez à Manaus avec vos guides. Profitez du confort fraîchement retrouvé pour prendre une bonne douche et enfiler des vêtements propres !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/QMob5l5LSxyxDuvFZLa4.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIER JOUR EN AMAZONIE",
-      "badgeText": "JOUR 10",
-      "description": "Profitez de la matinée pour faire un tour dans la vieille ville de Manaus, afin d’acheter de beaux souvenirs de la capitale de l’Amazonie. Vous revenez chez vous avec des souvenirs impérissables !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/CgeWwa2GTEaaaxrOZEkb.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Alciney",
-      "description": "",
-      "role": "Expert en survie",
-      "image": "/images/voyages/survie-jungle-amazonienne/ATfKD8gIS8qq0TWg0INd.jpg"
-    }
-  ],
-  "accompanistsDescription": "En Amazonie, vous serez accompagné par un guide natif professionnel et expérimenté, ainsi que d'un accompagnant pour aider/assister le guide.\n\nUn accompagnement francophone est possible sur-demande pendant le séjour, mais il est préférable d'avoir des notions d'anglais et/ou de portugais.",
-  "housingBlock": [
-    {
-      "title": "Chez l'habitant ",
-      "housingType": "",
-      "housingMood": "Vous serez hébergés en Amazonie au sein même de la famille de Max, dans des maisons annexes avec salle de bain afin de vous assurer une totale autonomie. Lors des immersions de plusieurs jours dans la jungle, vous dormirez dans des hamacs munis d'une moustiquaire et d'un toit. ",
-      "image": [
-        {
-          "src": "/images/voyages/survie-jungle-amazonienne/AfXwboBrTZKsKXd8bVVw.jpg",
-          "alt": "image de l'hébergement Immersion brésilienne et survie dans la jungle amazonienne"
-        },
-        {
-          "src": "/images/voyages/survie-jungle-amazonienne/GiSNtKibRAeHqHqvMr0o.jpg",
-          "alt": "image de l'hébergement Immersion brésilienne et survie dans la jungle amazonienne"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les transferts entre l'aéroport et votre hôtel à Manaus",
-      "Le transport privé aller/retour de Manaus jusqu'au camp de base dans la jungle (2 bateaux + voiture)",
-      "2 nuits en hôtel à Manaus (à l'arrivée et au retour)",
-      "L'immersion dans la famille au camp de base, avec excursions à la demi-journée",
-      "Les jours de survie dans la jungle",
-      "L'accompagnement par un guide natif professionnel et expérimenté (bilingue anglais ou accompagné d'un traducteur bilingue) + un accompagnant pour aider/assister le guide",
-      "Tous les hébergements au camp de base et dans la jungle",
-      "Tous les repas au camp de base et dans la jungle"
-    ],
-    "exclude": [
-      "Le transport aérien international à destination de et au retour de Manaus (possibilité de devis avec vols inclus sur demande)",
-      "Les pré-voyages et extensions",
-      "Les activités ou repas non compris dans la section \"le prix comprend\"",
-      "La visite de Manaus (option en FAQ)",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles et les pourboires (au bon vouloir, selon votre degré de satisfaction)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -298,27 +437,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1245,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 6,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "MAO"
-    ]
+  "seo": {
+    "metaTitle": "Immersion brésilienne et survie dans la jungle amazonienne",
+    "canonicalUrl": "https://www.odysway.com/voyages/survie-jungle-amazonienne",
+    "ogTitle": "Immersion brésilienne et survie dans la jungle amazonienne",
+    "ogDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
+    "ogImage": {
+      "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
+      "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
+    },
+    "twitterTitle": "Immersion brésilienne et survie dans la jungle amazonienne",
+    "twitterDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
+    "twitterImage": {
+      "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
+      "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

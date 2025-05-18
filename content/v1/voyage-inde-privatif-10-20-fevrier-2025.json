@@ -1,0 +1,85 @@
+{
+  "published": false,
+  "title": "Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin",
+  "slug": "voyage-inde-privatif-10-20-fevrier-2025",
+  "rating": 0,
+  "comments": 0,
+  "description": "",
+  "emailDescription": "",
+  "metaDescription": "",
+  "interjection": "en",
+  "destinations": [
+    "Inde"
+  ],
+  "categories": [],
+  "duration": 0,
+  "nights": 0,
+  "experienceType": "",
+  "level": "",
+  "idealPeriods": [],
+  "monthlyAvailability": [],
+  "miniatureDisplay": "Note moyenne",
+  "image": {
+    "src": "",
+    "alt": "image principale du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "badgeSection": {},
+  "authorNote": {
+    "text": "",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "programmeBlock": [
+    {
+      "title": "test",
+      "badgeText": "test",
+      "description": "test",
+      "photo": "",
+      "denivellation": ""
+    }
+  ],
+  "accompanistsList": [],
+  "accompanistsDescription": "",
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "faqBlock": {
+    "faqList": []
+  },
+  "pricing": {
+    "startingPrice": 2950,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 0,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 0,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 450,
+    "privatisationAvailable": true,
+    "groupeAvailable": true,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "minAge": 8,
+    "airportCode": []
+  }
+}

@@ -1,54 +1,279 @@
 {
   "published": true,
   "title": "Vivez comme un nomade du Sahara au Maroc",
-  "slug": "immersion-nomade-sahara",
-  "rating": 4.6,
-  "comments": 39,
-  "description": "C'est à Ouarzazate au Maroc que votre aventure commencera, avant de prendre la direction du sud, au delà de Zagora et M'Hamid. Partez vivre une immersion dans le désert, découvrez le quotidien des Sahraouis, les nomades du désert.\n\nAu rythme de la marche en méharée (avec dromadaires), vous découvrez le Sahara sous un angle différent des voyages classiques, souvent motorisés. Apprécier le désert, c'est aussi prendre le temps la sérénité qui s'en dégage. Au programme : marche dans le désert à votre rythme, partage avec vos guides nomades, repas délicieux cuisinés au feu de bois, levers et couchers de soleil magnifiques dans le désert, bivouac la tête dans les étoiles en sirotant un thé à la menthe.\n\nUn voyage unique, qui fait du bien, à la découverte de la culture des nomades, sans oublier votre confort dans le désert.",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage initiatique à travers le Sahara dans un cadre de paix et sérénité; et partager des moments uniques avec les nomades du désert, ce voyage est fait pour vous ! 🐪",
-  "metaDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
-  "interjection": "au",
   "destinations": [
-    "Maroc"
+    {
+      "name": "Maroc",
+      "slug": "maroc"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-nature",
-    "voyage-aventure",
-    "sejour-trek-randonnee",
-    "sejours-culturels",
-    "ou-partir-en-automne",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "partir-en-amoureux",
-    "partir-en-famille",
-    "voyage-initiatique",
-    "ecotourisme",
-    "sejour-astronomie",
-    "ou-partir-au-printemps"
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "astronomie"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    }
   ],
   "duration": 11,
   "nights": 10,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": true,
+  "housingType": "Hôtel, bivouac",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 39,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "C'est à Ouarzazate au Maroc que votre aventure commencera, avant de prendre la direction du sud, au delà de Zagora et M'Hamid. Partez vivre une immersion dans le désert, découvrez le quotidien des Sahraouis, les nomades du désert.\n\nAu rythme de la marche en méharée (avec dromadaires), vous découvrez le Sahara sous un angle différent des voyages classiques, souvent motorisés. Apprécier le désert, c'est aussi prendre le temps la sérénité qui s'en dégage. Au programme : marche dans le désert à votre rythme, partage avec vos guides nomades, repas délicieux cuisinés au feu de bois, levers et couchers de soleil magnifiques dans le désert, bivouac la tête dans les étoiles en sirotant un thé à la menthe.\n\nUn voyage unique, qui fait du bien, à la découverte de la culture des nomades, sans oublier votre confort dans le désert.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "L'immersion dans les grandes étendues du Sahara dans le sud marocain",
+    "La rencontre avec les nomades, leur culture et la simplicité de leur vie",
+    "La marche dans le désert, ressourçante",
+    "Les repas délicieux cuisinés au feu de bois et le bivouac sous le ciel étoilé",
+    "La visite de Ouarzazate et d'Aït Ben Haddou"
+  ],
+  "slug": "immersion-nomade-sahara",
+  "description": "C'est à Ouarzazate au Maroc que votre aventure commencera, avant de prendre la direction du sud, au delà de Zagora et M'Hamid. Partez vivre une immersion dans le désert, découvrez le quotidien des Sahraouis, les nomades du désert.\n\nAu rythme de la marche en méharée (avec dromadaires), vous découvrez le Sahara sous un angle différent des voyages classiques, souvent motorisés. Apprécier le désert, c'est aussi prendre le temps la sérénité qui s'en dégage. Au programme : marche dans le désert à votre rythme, partage avec vos guides nomades, repas délicieux cuisinés au feu de bois, levers et couchers de soleil magnifiques dans le désert, bivouac la tête dans les étoiles en sirotant un thé à la menthe.\n\nUn voyage unique, qui fait du bien, à la découverte de la culture des nomades, sans oublier votre confort dans le désert.",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage initiatique à travers le Sahara dans un cadre de paix et sérénité; et partager des moments uniques avec les nomades du désert, ce voyage est fait pour vous ! 🐪",
+  "metaDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**10 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "Hôtel, bivouac",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Oct à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DÉPART ET ARRIVÉE À OUARZAZATE",
+      "badgeText": "JOUR 1",
+      "description": "Arrivé dans la matinée, vous serez accueilli par nos représentants locaux qui vous amèneront jusqu'à votre hôtel où vous pourrez vous détendre avant de visiter la ville.",
+      "photo": "/images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AIT BEN HADDOU",
+      "badgeText": "JOUR 2",
+      "description": "Vous prenez la route du désert et découvrez Ait Ben Haddou et ses environs entre montagnes colorées et petites oasis. Vous vous arrêterez également dans d'autres villages typiques.\r\n",
+      "photo": "/images/voyages/immersion-nomade-sahara/UhDcUySnTHKZKJdlVPvo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIÈRE NUIT DANS LE DÉSERT",
+      "badgeText": "JOUR 3",
+      "description": "Vous continuez votre chemin vers le désert en suivant la magnifique route le long de la vallée du Draa. Le soir, vous arriverez aux portes du Sahara, où vous dégusterez un plat local typique avant une première nuitée en bivouac dans le désert.",
+      "photo": "/images/voyages/immersion-nomade-sahara/1WGKKDFASyyJiWzE8FJW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA MARCHE DANS LE SAHARA",
+      "badgeText": "JOURS 4 À 9",
+      "description": "Votre voyage initiatique commence ! Vous serez en immersion dans l’infini du Sahara pendant 6 jours complets, en compagnie de vos guides et de leurs dromadaires. Marche en conscience silencieuse, méditation, bivouac sous les étoiles, rencontres… ",
+      "photo": "/images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIÈRES VISITES",
+      "badgeText": "JOUR 10",
+      "description": "Vient le moment de doucement quitter le désert. Vous prenez la route pour remonter jusqu'à Ouarzazate. Pour prendre soin de votre corps qui vous aura bien porté durant ces journées de marche, vous profiterez d'une séance de hammam traditionnel. ",
+      "photo": "/images/voyages/immersion-nomade-sahara/c8u6R0D8SxSssKicpiKy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES ADIEUX ",
+      "badgeText": "JOUR 11",
+      "description": "Votre voyage initiatique dans le Sahara touche à sa fin ! Et c'est avec un esprit serein et des souvenirs pleins la tête que vous repartez. ",
+      "photo": "/images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Le transport aérien international jusqu'à Ouarzazate et les taxes d’aéroport",
+      "L'accueil à l'aéroport par votre guide et le transfert à l'hôtel",
+      "L'hébergement en hôtel à Ouarzazate",
+      "L'hébergement en bivouac dans le désert (tente) et les couvertures",
+      "Les repas dans le désert (à base de produits frais et cuisinés au feu de bois) et la demi-pension à Ouarzazate (petit-déjeuner et dîner)",
+      "L'eau pour votre marche, thés à la menthe et collations (dattes, noix, fruits secs)",
+      "L'excursion à Aït Ben Haddou et les excursions mentionnées dans le programme",
+      "L'accompagnement par les guides locaux, nomades sahraouis et leurs dromadaires qui porteront vos sacs, couettes, couvertures, eau et nourriture."
+    ],
+    "exclude": [
+      "Les activités ou soins non compris dans la section \"le prix comprend\"",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles et pourboires",
+      "Un duvet / Sac à viande"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1240,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "ORY",
+      "OZZ"
+    ]
+  },
+  "accompanistsDescription": "Vous serez accueilli à l'aéroport par votre guide qui vous conduira jusqu'à votre hôtel, puis dans le sud du Maroc jusqu'à M'Hamid (4 heures de routes). D'ici, vous partirez pour la marche dans le désert avec des guides qui sont aussi nomades dans le désert, les sahraouis. Ils seront en charge de vous guider dans le désert, de votre aider en cas de besoin (ampoules, crampes..), de cuisiner pour vous et vous aider à monter votre tente chaque soir. Vous partagerez sans doute des moments forts avec eux, en journée à la découverte de la faune et flore du Sahara, et le soir les yeux dans le ciel éclatant d'étoiles et de planètes.\n\nVos guides connaissent le désert comme leur poche, ils y sont nés, vous serez donc en parfaite sécurité avec eux.",
+  "accompanistsList": [
+    {
+      "name": "Ali",
+      "description": "",
+      "role": "Nomade",
+      "image": "/images/voyages/immersion-nomade-sahara/vPcfCixxQJyCX61Xe82i.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel, bivouac",
+      "housingType": "",
+      "housingMood": "Pendant ce séjour, vous dormirez à Ouarzazate dans un hôtel 2*/3* du centre ville, en base double. Vous dormirez en bivouac (sous tente et sur un matelas) pendant les nuits dans le désert, cette fois avec des millions d'étoiles (dans le ciel !). Ne vous en faîtes pas, vous dormirez bien , les nuits sont fraiches mais des couvertures vous seront données. Et rien de mieux que le calme du désert pour vous ressourcer !",
+      "image": [
+        {
+          "src": "/images/voyages/immersion-nomade-sahara/ZJBc8wSraRnGCcjTDeAm.jpg",
+          "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
+        },
+        {
+          "src": "/images/voyages/immersion-nomade-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg",
+          "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
+        },
+        {
+          "src": "/images/voyages/immersion-nomade-sahara/LKNyFjoRQi3MZFvQ5383.jpg",
+          "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
     "alt": "image principale du voyage Vivez comme un nomade du Sahara au Maroc"
@@ -124,112 +349,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "C'est à Ouarzazate au Maroc que votre aventure commencera, avant de prendre la direction du sud, au delà de Zagora et M'Hamid. Partez vivre une immersion dans le désert, découvrez le quotidien des Sahraouis, les nomades du désert.\n\nAu rythme de la marche en méharée (avec dromadaires), vous découvrez le Sahara sous un angle différent des voyages classiques, souvent motorisés. Apprécier le désert, c'est aussi prendre le temps la sérénité qui s'en dégage. Au programme : marche dans le désert à votre rythme, partage avec vos guides nomades, repas délicieux cuisinés au feu de bois, levers et couchers de soleil magnifiques dans le désert, bivouac la tête dans les étoiles en sirotant un thé à la menthe.\n\nUn voyage unique, qui fait du bien, à la découverte de la culture des nomades, sans oublier votre confort dans le désert.",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "L'immersion dans les grandes étendues du Sahara dans le sud marocain",
-    "La rencontre avec les nomades, leur culture et la simplicité de leur vie",
-    "La marche dans le désert, ressourçante",
-    "Les repas délicieux cuisinés au feu de bois et le bivouac sous le ciel étoilé",
-    "La visite de Ouarzazate et d'Aït Ben Haddou"
-  ],
-  "programmeBlock": [
-    {
-      "title": "DÉPART ET ARRIVÉE À OUARZAZATE",
-      "badgeText": "JOUR 1",
-      "description": "Arrivé dans la matinée, vous serez accueilli par nos représentants locaux qui vous amèneront jusqu'à votre hôtel où vous pourrez vous détendre avant de visiter la ville.",
-      "photo": "/images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AIT BEN HADDOU",
-      "badgeText": "JOUR 2",
-      "description": "Vous prenez la route du désert et découvrez Ait Ben Haddou et ses environs entre montagnes colorées et petites oasis. Vous vous arrêterez également dans d'autres villages typiques.\r\n",
-      "photo": "/images/voyages/immersion-nomade-sahara/UhDcUySnTHKZKJdlVPvo.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIÈRE NUIT DANS LE DÉSERT",
-      "badgeText": "JOUR 3",
-      "description": "Vous continuez votre chemin vers le désert en suivant la magnifique route le long de la vallée du Draa. Le soir, vous arriverez aux portes du Sahara, où vous dégusterez un plat local typique avant une première nuitée en bivouac dans le désert.",
-      "photo": "/images/voyages/immersion-nomade-sahara/1WGKKDFASyyJiWzE8FJW.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA MARCHE DANS LE SAHARA",
-      "badgeText": "JOURS 4 À 9",
-      "description": "Votre voyage initiatique commence ! Vous serez en immersion dans l’infini du Sahara pendant 6 jours complets, en compagnie de vos guides et de leurs dromadaires. Marche en conscience silencieuse, méditation, bivouac sous les étoiles, rencontres… ",
-      "photo": "/images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIÈRES VISITES",
-      "badgeText": "JOUR 10",
-      "description": "Vient le moment de doucement quitter le désert. Vous prenez la route pour remonter jusqu'à Ouarzazate. Pour prendre soin de votre corps qui vous aura bien porté durant ces journées de marche, vous profiterez d'une séance de hammam traditionnel. ",
-      "photo": "/images/voyages/immersion-nomade-sahara/c8u6R0D8SxSssKicpiKy.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES ADIEUX ",
-      "badgeText": "JOUR 11",
-      "description": "Votre voyage initiatique dans le Sahara touche à sa fin ! Et c'est avec un esprit serein et des souvenirs pleins la tête que vous repartez. ",
-      "photo": "/images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Ali",
-      "description": "",
-      "role": "Nomade",
-      "image": "/images/voyages/immersion-nomade-sahara/vPcfCixxQJyCX61Xe82i.jpg"
-    }
-  ],
-  "accompanistsDescription": "Vous serez accueilli à l'aéroport par votre guide qui vous conduira jusqu'à votre hôtel, puis dans le sud du Maroc jusqu'à M'Hamid (4 heures de routes). D'ici, vous partirez pour la marche dans le désert avec des guides qui sont aussi nomades dans le désert, les sahraouis. Ils seront en charge de vous guider dans le désert, de votre aider en cas de besoin (ampoules, crampes..), de cuisiner pour vous et vous aider à monter votre tente chaque soir. Vous partagerez sans doute des moments forts avec eux, en journée à la découverte de la faune et flore du Sahara, et le soir les yeux dans le ciel éclatant d'étoiles et de planètes.\n\nVos guides connaissent le désert comme leur poche, ils y sont nés, vous serez donc en parfaite sécurité avec eux.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, bivouac",
-      "housingType": "",
-      "housingMood": "Pendant ce séjour, vous dormirez à Ouarzazate dans un hôtel 2*/3* du centre ville, en base double. Vous dormirez en bivouac (sous tente et sur un matelas) pendant les nuits dans le désert, cette fois avec des millions d'étoiles (dans le ciel !). Ne vous en faîtes pas, vous dormirez bien , les nuits sont fraiches mais des couvertures vous seront données. Et rien de mieux que le calme du désert pour vous ressourcer !",
-      "image": [
-        {
-          "src": "/images/voyages/immersion-nomade-sahara/ZJBc8wSraRnGCcjTDeAm.jpg",
-          "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
-        },
-        {
-          "src": "/images/voyages/immersion-nomade-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg",
-          "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
-        },
-        {
-          "src": "/images/voyages/immersion-nomade-sahara/LKNyFjoRQi3MZFvQ5383.jpg",
-          "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le transport aérien international jusqu'à Ouarzazate et les taxes d’aéroport",
-      "L'accueil à l'aéroport par votre guide et le transfert à l'hôtel",
-      "L'hébergement en hôtel à Ouarzazate",
-      "L'hébergement en bivouac dans le désert (tente) et les couvertures",
-      "Les repas dans le désert (à base de produits frais et cuisinés au feu de bois) et la demi-pension à Ouarzazate (petit-déjeuner et dîner)",
-      "L'eau pour votre marche, thés à la menthe et collations (dattes, noix, fruits secs)",
-      "L'excursion à Aït Ben Haddou et les excursions mentionnées dans le programme",
-      "L'accompagnement par les guides locaux, nomades sahraouis et leurs dromadaires qui porteront vos sacs, couettes, couvertures, eau et nourriture."
-    ],
-    "exclude": [
-      "Les activités ou soins non compris dans la section \"le prix comprend\"",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles et pourboires",
-      "Un duvet / Sac à viande"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -278,27 +397,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1390,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "ORY",
-      "OZZ"
-    ]
+  "seo": {
+    "metaTitle": "Vivez comme un nomade du Sahara au Maroc",
+    "canonicalUrl": "https://www.odysway.com/voyages/immersion-nomade-sahara",
+    "ogTitle": "Vivez comme un nomade du Sahara au Maroc",
+    "ogDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
+    "ogImage": {
+      "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
+      "alt": "image principale du voyage Vivez comme un nomade du Sahara au Maroc"
+    },
+    "twitterTitle": "Vivez comme un nomade du Sahara au Maroc",
+    "twitterDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
+    "twitterImage": {
+      "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
+      "alt": "image principale du voyage Vivez comme un nomade du Sahara au Maroc"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

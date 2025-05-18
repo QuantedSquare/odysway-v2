@@ -18,6 +18,7 @@
       id="Smallchat"
       class="d-none d-lg-inline"
     />
+    <LazyTopTravelsTabs />
     <FooterOdysway />
   </v-app>
 </template>

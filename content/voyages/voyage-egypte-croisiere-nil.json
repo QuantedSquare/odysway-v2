@@ -1,48 +1,281 @@
 {
   "published": true,
   "title": "Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte",
-  "slug": "voyage-egypte-croisiere-nil",
-  "rating": 0,
-  "comments": 0,
-  "description": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil ...\n\nAccompagnés d'un guide-égyptologue francophone, commencez votre périple à Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre a une histoire à raconter. Vous visiterez le majestueux Temple d'Horus, le mieux conservé d'Égypte, ainsi que celui de Karnak avec ses colonnes imposantes, tout en bénéficiant des explications expertes de votre guide.\n\nVotre voyage se prolonge sur le Nil : dans une ambiance traditionnelle, vous plongerez dans un bain de culture et de civilisation le long du Dieu-Fleuve. Votre navigation sera ponctuée de courtes marches et de visites, les « incontournables » : Edfou, Kom Ombo, Philae, Karnak … mais aussi, à votre gré, balades dans les villages et les oasis, incursions dans le désert, découverte de sites pharaoniques où seul votre voilier peut accéder. Un voyage entre la douceur de soirées inoubliables et, à la belle saison, nuits à la belle étoile sur le pont... En famille ou entre amis, laissez-vous aller, poussé par le vent, à la contemplation sereine de cette Égypte millénaire …\n\nCe circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette étape, nous vous invitons à consulter notre voyage en 10 jours : [cliquez ici](https://odysway.com/voyages/voyage-egypte-caire-croisiere-nil)",
-  "emailDescription": "👉 Si vous souhaitez découvrir les sites majeurs de l'Egypte, ce voyage est fait pour vous !",
-  "metaDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Louxor, la Vallée des Rois et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
-  "interjection": "",
   "destinations": [
-    "Égypte"
+    {
+      "name": "Égypte",
+      "slug": "egypte"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "partir-en-famille",
-    "partir-en-amoureux",
-    "partir-en-groupe",
-    "sejours-nature"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Croisière, hôtel & train",
   "idealPeriods": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    }
   ],
   "monthlyAvailability": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil ...\n\nAccompagnés d'un guide-égyptologue francophone, commencez votre périple à Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre a une histoire à raconter. Vous visiterez le majestueux Temple d'Horus, le mieux conservé d'Égypte, ainsi que celui de Karnak avec ses colonnes imposantes, tout en bénéficiant des explications expertes de votre guide.\n\nVotre voyage se prolonge sur le Nil : dans une ambiance traditionnelle, vous plongerez dans un bain de culture et de civilisation le long du Dieu-Fleuve. Votre navigation sera ponctuée de courtes marches et de visites, les « incontournables » : Edfou, Kom Ombo, Philae, Karnak … mais aussi, à votre gré, balades dans les villages et les oasis, incursions dans le désert, découverte de sites pharaoniques où seul votre voilier peut accéder. Un voyage entre la douceur de soirées inoubliables et, à la belle saison, nuits à la belle étoile sur le pont... En famille ou entre amis, laissez-vous aller, poussé par le vent, à la contemplation sereine de cette Égypte millénaire …\n\nCe circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette étape, nous vous invitons à consulter notre voyage en 10 jours : [cliquez ici](https://odysway.com/voyages/voyage-egypte-caire-croisiere-nil)",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Visitez l'Egypte autrement : entre sites mythiques et escales hors des sentiers battus avec un guide égyptologue francophone",
+    "Vivez au rythme des levers et couchers de soleil sur le Nil lors d'une croisière de 5 jours en bateau à voile traditionnel, loin du tourisme de masse",
+    "Profitez des espaces chaleureux à bord pour vous retrouver ou déguster un bon karkadé au coucher de soleil",
+    "Promenez-vous sur des chemins cachés au cœur de la vie rurale, sur les berges du Nil",
+    "Partez à la rencontre des égyptiens et vivez des moments de partages sincères au fil des villages nubiens",
+    "Bénéficiez de notre service exclusif de visas : pas d'attente, remis directement à la sortie de l'avion"
+  ],
+  "slug": "voyage-egypte-croisiere-nil",
+  "description": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil ...\n\nAccompagnés d'un guide-égyptologue francophone, commencez votre périple à Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre a une histoire à raconter. Vous visiterez le majestueux Temple d'Horus, le mieux conservé d'Égypte, ainsi que celui de Karnak avec ses colonnes imposantes, tout en bénéficiant des explications expertes de votre guide.\n\nVotre voyage se prolonge sur le Nil : dans une ambiance traditionnelle, vous plongerez dans un bain de culture et de civilisation le long du Dieu-Fleuve. Votre navigation sera ponctuée de courtes marches et de visites, les « incontournables » : Edfou, Kom Ombo, Philae, Karnak … mais aussi, à votre gré, balades dans les villages et les oasis, incursions dans le désert, découverte de sites pharaoniques où seul votre voilier peut accéder. Un voyage entre la douceur de soirées inoubliables et, à la belle saison, nuits à la belle étoile sur le pont... En famille ou entre amis, laissez-vous aller, poussé par le vent, à la contemplation sereine de cette Égypte millénaire …\n\nCe circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette étape, nous vous invitons à consulter notre voyage en 10 jours : [cliquez ici](https://odysway.com/voyages/voyage-egypte-caire-croisiere-nil)",
+  "emailDescription": "👉 Si vous souhaitez découvrir les sites majeurs de l'Egypte, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Louxor, la Vallée des Rois et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à mai",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE À LOUXOR",
+      "badgeText": "JOUR 1",
+      "description": "Atterrissage à l'aéroport de Louxor. À votre arrivée, accueil par notre équipe et transfert privatif à votre hôtel. Il est temps pour vous de prendre le pouls de cette ancienne capitale égyptienne !",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/unow4SIxQCW2xtWG02pe.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TEMPLE DE KARNAK ET D'HORUS",
+      "badgeText": "JOUR 2",
+      "description": "Votre guide francophone vous attend pour aller parcourir l'ancienne capitale égyptienne. Il s'agit d'un véritable musée à ciel ouvert qui vous attend, dont la renommée n’est plus à faire. Visite du célèbre temple de Karnak. Des générations de pharaons travaillèrent à l’embellir. Nous serons émerveillés par cet ensemble architectural dont la construction s’étala sur plus de 2000 ans ! Cap ensuite sur Edfou pour la visite du temple d’Horus dédié au Dieu faucon. Il s’agit du temple le mieux conservé d’Égypte ! Vous rejoignez ensuite le débarcadère où vous attend votre sandal ou dahabieh, les fameux bateaux à voiles typiques du Nil égyptien. Soirée chaleureuse et nuit à bord.",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/HJkGTHJhTcy0ZPnVf61b.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "À LA RENCONTRE DES LOCAUX",
+      "badgeText": "JOUR 3",
+      "description": "Matinée de navigation : belle marche à Ramadi autour du marais et dans les cultures à la rencontre des paysans travaillant dans leurs champs de luzerne, de canne à sucre ou les dattiers. Après un bon déjeuner à bord, ou en fin de journée, balade dans le charmant et très accueillant village de Bassaw. Escale du soir à Bassaw ou au pied du spéos d’Horemheb (selon les possibilités du moment)",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/A47eItzQ7UDmyhSm6nyA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE LONG DES CARRIÈRES DE SILSILEH",
+      "badgeText": "JOUR 4",
+      "description": "La navigation vous permet de découvrir la vie des bords du Nil et les haltes dans les villages sont l'occasion de rencontres avec la population locale. Aujourd’hui, arrêt aux carrières pharaoniques du Gebel Silsileh ayant servi à construire les principaux temples d’Égypte. Le Gebel Silsileh commença à être exploité au Nouvel Empire comme carrière de grès, et devint la source la plus importante de ce matériau en Égypte. Courte navigation et marche d'environ 2h jusqu'à Farès dans les palmeraies : une grande variété d'arbres fruitiers et de plantes se trouveront sur votre chemin (palmiers doum, palmiers dattiers, etc.) . Retour à bord et relaxation pendant que le bateau navigue en douceur pour l’escale du soir à Maniha.",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/RtL5K2inTRS9hjl1Lxqj.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "KOM OMBRO ET MARCHÉ POPULAIRE DE DARAW",
+      "badgeText": "JOUR 5",
+      "description": "Poursuite de votre navigation jusqu'au au site de Kôm Ombo, pour la visite de son temple majestueux, dont la vision nous réservera une agréable surprise. Unique dans le pays, ce temple est dédié à deux divinités : Sobek, le dieu-crocodile, et Haroëris, le Dieu-faucon. Prenez le temps d’admirer tant de beauté ! Par la suite, dépaysement garanti au village de Daraw, assurément l'un des moments très forts du voyage. Vous déambulerez dans le fouillis du marché populaire où couleurs, parfums d’orient et d’Afrique mêlés sont autant de symphonies pour les yeux et les narines !",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/qXtRZccuRdur6QuFpMtD.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ASSOUAN ET TEMPLE DE PHILAE",
+      "badgeText": "JOUR 6",
+      "description": "Votre promenade en bateau continue afin de rejoindre Assouan, porte de la Nubie et ancien fief du royaume de la Haute-Égypte. À Assouan, c'est en barque que nous atteindrons le Temple de Philae, dédié à la déesse de la fertilité, Isis, unique en son genre. Nuit à bord du bateau.",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/msXtvh2CTv6rAgKJH5Mh.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MAJESTÉ DE LA VALLÉE DES ROIS",
+      "badgeText": "JOUR 7",
+      "description": "Vous quitterez le bateau pour prendre la route retour vers Louxor, où vous débuterez les visites par de la Vallée des Rois, lieu de repos éternel et de prédilection des pharaons. Nous rejoindrons ensuite le majestueux temple destiné à la Reine Hatchepsout, seule femme à être monter sur le trône pharaonique et unique en son genre. En poursuivant, deux géants de pierre assis émergeront devant nous : ce sont les célèbres colosses de Memnon qui « trônent » au milieu de terres cultivées.",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/ILiEvjAxT8ycQhKlh2Tl.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR À LA MAISON",
+      "badgeText": "JOUR 8",
+      "description": "Après un bon petit-déjeuner, transfert dans la matinée vers l’aéroport de Louxor pour prendre votre vol retour.\r\nDe belles images plein la tête !",
+      "photo": "/images/voyages/voyage-egypte-croisiere-nil/mDQDhLtcQ9avKVX56aLf.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'hébergement : hôtel, train-couchette ou cabine double sur la bateau selon les étapes (base double)",
+      "La croisière à bord d'un bateau traditionnel (dahabieh ou sandal) intimiste",
+      "Tous les transferts privatifs durant le séjour",
+      "Un guide égyptologue francophone à Louxor et lors de la croisière",
+      "Tous les repas et l'eau en bouteille lors de la croisière",
+      "Les entrées des sites visités",
+      "Notre service d'obtention du visa (remis directement à votre arrivée à l'aéroport)"
+    ],
+    "exclude": [
+      "Les vols internationaux (devis sur demande)",
+      "Le dîner à Louxor",
+      "Les dépenses personnelles",
+      "Les pourboires (45€ par personne)",
+      "Facultatif : le supplément chambre individuelle (450€ par personne)",
+      "Facultatif : l'assurance voyage (devis sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1695,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 0,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 450,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": [
+      "LXR",
+      "LXR"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage est accompagné par un guide égyptologue francophone passionné. Aux petits soins durant votre voyage, il veillera à votre confort, vous apportera des éclairages sur la culture locale et vous révélera les secrets captivants des sites archéologiques visités. Une occasion pour petits et grands de poser toutes leurs questions !",
+  "accompanistsList": [
+    {
+      "name": "Guide égyptologue francophone",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/voyage-egypte-croisiere-nil/jMPqLheWQzulsSPPLbXA.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Croisière, hôtel & train",
+      "housingType": "",
+      "housingMood": "Selon les étapes, vous alternerez entre des nuits en hôtel, en train-couchette et en cabine double à bord du bateau lors de la croisière sur le Nil (bateau darabieh ou sandal de 6 à 10 cabines selon la composition du groupe). Nous veillons à sélectionner uniquement des hébergements esprit \"petite structure\" simples mais confortables.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-egypte-croisiere-nil/t7mlhqOAQIGggDK9LjAA.jpg",
+          "alt": "image de l'hébergement Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
+        },
+        {
+          "src": "/images/voyages/voyage-egypte-croisiere-nil/XSwtAQrSoe46tnGQcgsP.jpg",
+          "alt": "image de l'hébergement Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
+        },
+        {
+          "src": "/images/voyages/voyage-egypte-croisiere-nil/GHXbGQtQQEeHMhnA24d3.jpg",
+          "alt": "image de l'hébergement Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-egypte-croisiere-nil/lWOcVmIeRxyfTtKHbxrR.jpg",
     "alt": "image principale du voyage Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
@@ -82,128 +315,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil ...\n\nAccompagnés d'un guide-égyptologue francophone, commencez votre périple à Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre a une histoire à raconter. Vous visiterez le majestueux Temple d'Horus, le mieux conservé d'Égypte, ainsi que celui de Karnak avec ses colonnes imposantes, tout en bénéficiant des explications expertes de votre guide.\n\nVotre voyage se prolonge sur le Nil : dans une ambiance traditionnelle, vous plongerez dans un bain de culture et de civilisation le long du Dieu-Fleuve. Votre navigation sera ponctuée de courtes marches et de visites, les « incontournables » : Edfou, Kom Ombo, Philae, Karnak … mais aussi, à votre gré, balades dans les villages et les oasis, incursions dans le désert, découverte de sites pharaoniques où seul votre voilier peut accéder. Un voyage entre la douceur de soirées inoubliables et, à la belle saison, nuits à la belle étoile sur le pont... En famille ou entre amis, laissez-vous aller, poussé par le vent, à la contemplation sereine de cette Égypte millénaire …\n\nCe circuit en 8 jours n'inclut pas Le Caire. Si vous tenez à effectuer cette étape, nous vous invitons à consulter notre voyage en 10 jours : [cliquez ici](https://odysway.com/voyages/voyage-egypte-caire-croisiere-nil)",
-    "author": "Salomé",
-    "affixeAuthor": "Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "Visitez l'Egypte autrement : entre sites mythiques et escales hors des sentiers battus avec un guide égyptologue francophone",
-    "Vivez au rythme des levers et couchers de soleil sur le Nil lors d'une croisière de 5 jours en bateau à voile traditionnel, loin du tourisme de masse",
-    "Profitez des espaces chaleureux à bord pour vous retrouver ou déguster un bon karkadé au coucher de soleil",
-    "Promenez-vous sur des chemins cachés au cœur de la vie rurale, sur les berges du Nil",
-    "Partez à la rencontre des égyptiens et vivez des moments de partages sincères au fil des villages nubiens",
-    "Bénéficiez de notre service exclusif de visas : pas d'attente, remis directement à la sortie de l'avion"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE À LOUXOR",
-      "badgeText": "JOUR 1",
-      "description": "Atterrissage à l'aéroport de Louxor. À votre arrivée, accueil par notre équipe et transfert privatif à votre hôtel. Il est temps pour vous de prendre le pouls de cette ancienne capitale égyptienne !",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/unow4SIxQCW2xtWG02pe.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TEMPLE DE KARNAK ET D'HORUS",
-      "badgeText": "JOUR 2",
-      "description": "Votre guide francophone vous attend pour aller parcourir l'ancienne capitale égyptienne. Il s'agit d'un véritable musée à ciel ouvert qui vous attend, dont la renommée n’est plus à faire. Visite du célèbre temple de Karnak. Des générations de pharaons travaillèrent à l’embellir. Nous serons émerveillés par cet ensemble architectural dont la construction s’étala sur plus de 2000 ans ! Cap ensuite sur Edfou pour la visite du temple d’Horus dédié au Dieu faucon. Il s’agit du temple le mieux conservé d’Égypte ! Vous rejoignez ensuite le débarcadère où vous attend votre sandal ou dahabieh, les fameux bateaux à voiles typiques du Nil égyptien. Soirée chaleureuse et nuit à bord.",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/HJkGTHJhTcy0ZPnVf61b.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "À LA RENCONTRE DES LOCAUX",
-      "badgeText": "JOUR 3",
-      "description": "Matinée de navigation : belle marche à Ramadi autour du marais et dans les cultures à la rencontre des paysans travaillant dans leurs champs de luzerne, de canne à sucre ou les dattiers. Après un bon déjeuner à bord, ou en fin de journée, balade dans le charmant et très accueillant village de Bassaw. Escale du soir à Bassaw ou au pied du spéos d’Horemheb (selon les possibilités du moment)",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/A47eItzQ7UDmyhSm6nyA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE LONG DES CARRIÈRES DE SILSILEH",
-      "badgeText": "JOUR 4",
-      "description": "La navigation vous permet de découvrir la vie des bords du Nil et les haltes dans les villages sont l'occasion de rencontres avec la population locale. Aujourd’hui, arrêt aux carrières pharaoniques du Gebel Silsileh ayant servi à construire les principaux temples d’Égypte. Le Gebel Silsileh commença à être exploité au Nouvel Empire comme carrière de grès, et devint la source la plus importante de ce matériau en Égypte. Courte navigation et marche d'environ 2h jusqu'à Farès dans les palmeraies : une grande variété d'arbres fruitiers et de plantes se trouveront sur votre chemin (palmiers doum, palmiers dattiers, etc.) . Retour à bord et relaxation pendant que le bateau navigue en douceur pour l’escale du soir à Maniha.",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/RtL5K2inTRS9hjl1Lxqj.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "KOM OMBRO ET MARCHÉ POPULAIRE DE DARAW",
-      "badgeText": "JOUR 5",
-      "description": "Poursuite de votre navigation jusqu'au au site de Kôm Ombo, pour la visite de son temple majestueux, dont la vision nous réservera une agréable surprise. Unique dans le pays, ce temple est dédié à deux divinités : Sobek, le dieu-crocodile, et Haroëris, le Dieu-faucon. Prenez le temps d’admirer tant de beauté ! Par la suite, dépaysement garanti au village de Daraw, assurément l'un des moments très forts du voyage. Vous déambulerez dans le fouillis du marché populaire où couleurs, parfums d’orient et d’Afrique mêlés sont autant de symphonies pour les yeux et les narines !",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/qXtRZccuRdur6QuFpMtD.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ASSOUAN ET TEMPLE DE PHILAE",
-      "badgeText": "JOUR 6",
-      "description": "Votre promenade en bateau continue afin de rejoindre Assouan, porte de la Nubie et ancien fief du royaume de la Haute-Égypte. À Assouan, c'est en barque que nous atteindrons le Temple de Philae, dédié à la déesse de la fertilité, Isis, unique en son genre. Nuit à bord du bateau.",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/msXtvh2CTv6rAgKJH5Mh.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MAJESTÉ DE LA VALLÉE DES ROIS",
-      "badgeText": "JOUR 7",
-      "description": "Vous quitterez le bateau pour prendre la route retour vers Louxor, où vous débuterez les visites par de la Vallée des Rois, lieu de repos éternel et de prédilection des pharaons. Nous rejoindrons ensuite le majestueux temple destiné à la Reine Hatchepsout, seule femme à être monter sur le trône pharaonique et unique en son genre. En poursuivant, deux géants de pierre assis émergeront devant nous : ce sont les célèbres colosses de Memnon qui « trônent » au milieu de terres cultivées.",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/ILiEvjAxT8ycQhKlh2Tl.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR À LA MAISON",
-      "badgeText": "JOUR 8",
-      "description": "Après un bon petit-déjeuner, transfert dans la matinée vers l’aéroport de Louxor pour prendre votre vol retour.\r\nDe belles images plein la tête !",
-      "photo": "/images/voyages/voyage-egypte-croisiere-nil/mDQDhLtcQ9avKVX56aLf.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Guide égyptologue francophone",
-      "description": "",
-      "role": "",
-      "image": "/images/voyages/voyage-egypte-croisiere-nil/jMPqLheWQzulsSPPLbXA.jpg"
-    }
-  ],
-  "accompanistsDescription": "Ce voyage est accompagné par un guide égyptologue francophone passionné. Aux petits soins durant votre voyage, il veillera à votre confort, vous apportera des éclairages sur la culture locale et vous révélera les secrets captivants des sites archéologiques visités. Une occasion pour petits et grands de poser toutes leurs questions !",
-  "housingBlock": [
-    {
-      "title": "Croisière, hôtel & train",
-      "housingType": "",
-      "housingMood": "Selon les étapes, vous alternerez entre des nuits en hôtel, en train-couchette et en cabine double à bord du bateau lors de la croisière sur le Nil (bateau darabieh ou sandal de 6 à 10 cabines selon la composition du groupe). Nous veillons à sélectionner uniquement des hébergements esprit \"petite structure\" simples mais confortables.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-egypte-croisiere-nil/t7mlhqOAQIGggDK9LjAA.jpg",
-          "alt": "image de l'hébergement Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
-        },
-        {
-          "src": "/images/voyages/voyage-egypte-croisiere-nil/XSwtAQrSoe46tnGQcgsP.jpg",
-          "alt": "image de l'hébergement Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
-        },
-        {
-          "src": "/images/voyages/voyage-egypte-croisiere-nil/GHXbGQtQQEeHMhnA24d3.jpg",
-          "alt": "image de l'hébergement Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'hébergement : hôtel, train-couchette ou cabine double sur la bateau selon les étapes (base double)",
-      "La croisière à bord d'un bateau traditionnel (dahabieh ou sandal) intimiste",
-      "Tous les transferts privatifs durant le séjour",
-      "Un guide égyptologue francophone à Louxor et lors de la croisière",
-      "Tous les repas et l'eau en bouteille lors de la croisière",
-      "Les entrées des sites visités",
-      "Notre service d'obtention du visa (remis directement à votre arrivée à l'aéroport)"
-    ],
-    "exclude": [
-      "Les vols internationaux (devis sur demande)",
-      "Le dîner à Louxor",
-      "Les dépenses personnelles",
-      "Les pourboires (45€ par personne)",
-      "Facultatif : le supplément chambre individuelle (450€ par personne)",
-      "Facultatif : l'assurance voyage (devis sur demande)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -248,27 +359,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1695,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": 0,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 450,
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 100,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "LXR",
-      "LXR"
-    ]
+  "seo": {
+    "metaTitle": "Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-egypte-croisiere-nil",
+    "ogTitle": "Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte",
+    "ogDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Louxor, la Vallée des Rois et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-egypte-croisiere-nil/lWOcVmIeRxyfTtKHbxrR.jpg",
+      "alt": "image principale du voyage Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
+    },
+    "twitterTitle": "Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte",
+    "twitterDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Louxor, la Vallée des Rois et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-egypte-croisiere-nil/lWOcVmIeRxyfTtKHbxrR.jpg",
+      "alt": "image principale du voyage Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

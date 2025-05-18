@@ -175,7 +175,7 @@ function getReviews(voyage) {
       downloadImage(imageUrl, imagePath)
       review.photo = imagePath
     }
-    fs.writeFileSync(`./butter-data/reviews/${slugify(review.voyageSlug + '-' + review.author, { lower: true })}.json`, JSON.stringify(review, null, 2))
+    // fs.writeFileSync(`./butter-data/reviews/${slugify(review.voyageSlug + '-' + review.author, { lower: true })}.json`, JSON.stringify(review, null, 2))
   })
   return reviews
 }
@@ -184,7 +184,7 @@ async function processVoyage(voyage) {
   const imageUrlMap = await processAndDownloadImages(voyage)
   const { duration, nights } = parseDuration(voyage.duree || '')
   // Map fields according to schema
-  getReviews(voyage)
+  // getReviews(voyage)
   const out = {
     published: voyage.disponible, // Default to true, adjust if you have a field for this
     title: voyage.titre || '',
@@ -199,7 +199,7 @@ async function processVoyage(voyage) {
     customAvailable: undefined, // Not present in source
     experienceType: 'En immersion chez...', // Not present in source
     level: '1', // Not present in source
-    categories: voyage.categorie.map(c => ({ name: c.slug })),
+    categories: voyage.categorie.map(c => ({ name: c.slug.trim() })),
     duration,
     nights,
     includeFlight: voyage.vol_inclus,
@@ -220,7 +220,6 @@ async function processVoyage(voyage) {
     description: turndown.turndown(voyage.description || ''),
     emailDescription: voyage.description_email,
     metaDescription: voyage.meta_description || '',
-    interjection: '',
     badgeSection: {
       experienceBadge: {
         text: 'En immersion chez...',
@@ -228,7 +227,7 @@ async function processVoyage(voyage) {
         visible: true,
       },
       groupeBadge: {
-        text: `Groupe de **${voyage.nombre_de_voyageurs_pour_privatiser} à ${voyage.nombre_catchline_tab_group + 1} personnes**`,
+        text: `Groupe de **${voyage.nombre_de_voyageurs_pour_privatiser || 2} à ${voyage.number_catchline_tab_group || 8} personnes**`,
         visible: voyage.groupe,
       },
       durationBadge: {
@@ -264,7 +263,7 @@ async function processVoyage(voyage) {
     pricing: {
       startingPrice: voyage.prix || 0,
       lastMinuteAvailable: false,
-      lastMinuteReduction: 0,
+      lastMinuteReduction: 80,
       earlyBirdAvailable: voyage.got_earlybird,
       earlyBirdReduction: voyage.reduction_earlybird,
       maxTravelers: voyage.number_catchline_tab_group,

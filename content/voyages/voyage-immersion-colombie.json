@@ -1,44 +1,298 @@
 {
   "published": true,
   "title": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
-  "slug": "voyage-immersion-colombie",
-  "rating": 5,
-  "comments": 12,
-  "description": "Loin des sentiers touristiques, c'est un voyage hors du temps que vous vivrez au cœur de la Colombie ! Vous commencerez votre immersion dans la célèbre région du triangle du café aux côtés de producteurs locaux qui vous feront découvrir leurs secrets de fabrication et partageront avec vous, leur quotidien. Une opportunité unique de découvrir des villages pas comme les autres, là où le temps semble s'être arrêté.\n\nVous gagnerez ensuite en intensité en vous imprégnant de l'ambiance de Medellín, ville vibrante en pleine transformation, à travers la rencontre avec ses habitants, avant de rejoindre la province du Chocó, pour une immersion riche en émotions. Cette région peu accessible est un véritable paradis terrestre qui regorge de ressources naturelles insoupçonnées entre plages, cours d’eau, cascades, jungle... Cerise sur le gâteau, vous pourrez même apercevoir des baleines à bosses jaillir hors de l'eau à certaines périodes de l'année !\n\nUn voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la Colombie, un pays aux multiples facettes empreinte de traditions.",
-  "emailDescription": "👉 Si vous souhaitez découvrir la Colombie d'une façon différente, ce voyage est fait pour vous ! ",
-  "metaDescription": "Vivez un voyage différent en Colombie, à la découverte de la province du Choco, riche de jungles, rivières, cascades, sources thermales et plages incroyables.",
-  "interjection": "en",
   "destinations": [
-    "Colombie"
+    {
+      "name": "Colombie",
+      "slug": "colombie"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-ete",
-    "sejours-chez-l-habitant",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 14,
   "nights": 13,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, gîte, chez l’habitant",
   "idealPeriods": [
-    "Février",
-    "Mars",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Février",
-    "Mars",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 12,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Loin des sentiers touristiques, c'est un voyage hors du temps que vous vivrez au cœur de la Colombie ! Vous commencerez votre immersion dans la célèbre région du triangle du café aux côtés de producteurs locaux qui vous feront découvrir leurs secrets de fabrication et partageront avec vous, leur quotidien. Une opportunité unique de découvrir des villages pas comme les autres, là où le temps semble s'être arrêté.\n\nVous gagnerez ensuite en intensité en vous imprégnant de l'ambiance de Medellín, ville vibrante en pleine transformation, à travers la rencontre avec ses habitants, avant de rejoindre la province du Chocó, pour une immersion riche en émotions. Cette région peu accessible est un véritable paradis terrestre qui regorge de ressources naturelles insoupçonnées entre plages, cours d’eau, cascades, jungle... Cerise sur le gâteau, vous pourrez même apercevoir des baleines à bosses jaillir hors de l'eau à certaines périodes de l'année !\n\nUn voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la Colombie, un pays aux multiples facettes empreinte de traditions.",
+    "author": "Romain",
+    "affixeAuthor": "fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Découvrez la région du café pour vivre la Colombie traditionnelle",
+    "Ressentez l’histoire et vivez le présent de Medellín en rencontrant ses habitants",
+    "Ressourcez-vous dans la région reculée du chocó en passant plusieurs jours avec une communauté",
+    "Voyagez à travers plusieurs régions entre villes, montagnes, jungle et océan",
+    "Profitez de l'accompagnement d'un guide local tout au long de votre voyage"
+  ],
+  "slug": "voyage-immersion-colombie",
+  "description": "Loin des sentiers touristiques, c'est un voyage hors du temps que vous vivrez au cœur de la Colombie ! Vous commencerez votre immersion dans la célèbre région du triangle du café aux côtés de producteurs locaux qui vous feront découvrir leurs secrets de fabrication et partageront avec vous, leur quotidien. Une opportunité unique de découvrir des villages pas comme les autres, là où le temps semble s'être arrêté.\n\nVous gagnerez ensuite en intensité en vous imprégnant de l'ambiance de Medellín, ville vibrante en pleine transformation, à travers la rencontre avec ses habitants, avant de rejoindre la province du Chocó, pour une immersion riche en émotions. Cette région peu accessible est un véritable paradis terrestre qui regorge de ressources naturelles insoupçonnées entre plages, cours d’eau, cascades, jungle... Cerise sur le gâteau, vous pourrez même apercevoir des baleines à bosses jaillir hors de l'eau à certaines périodes de l'année !\n\nUn voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la Colombie, un pays aux multiples facettes empreinte de traditions.",
+  "emailDescription": "👉 Si vous souhaitez découvrir la Colombie d'une façon différente, ce voyage est fait pour vous ! ",
+  "metaDescription": "Vivez un voyage différent en Colombie, à la découverte de la province du Choco, riche de jungles, rivières, cascades, sources thermales et plages incroyables.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 6 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**13 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Hôtel, gîte, chez l’habitant",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Fév, Mars, Juillet à septembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE EN COLOMBIE",
+      "badgeText": "JOURS 1  ET 2",
+      "description": "Accueil à l'aéroport et transfert à votre hôtel le premier jour. Le lendemain, partez visitez le marché de Paloquemao, le plus grand marché de Bogota, où vous découvrirez fruits et légumes exotiques avant de manger un plat typique de la région.",
+      "photo": "/images/voyages/voyage-immersion-colombie/BlusygzLSsiA3LfkT2JT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION DANS LE TRIANGLE DU CAFÉ",
+      "badgeText": "JOUR 3",
+      "description": "Vol à destination d'Armenia. Accueil et rencontre de votre guide local, avant de prendre la route vers les plantations de café pour découvrir le processus de fabrication du café colombien, de la graine à la tasse, découvrez toutes les étapes pour obtenir un délicieux café. Vous êtes désormais dans le \"triangle du café, zone réputée pour ses nombreuses plantations de café et ses petits villages colorés. Vous y rencontrerez des habitants chaleureux, connus pour leur accueil et leur authenticité.",
+      "photo": "/images/voyages/voyage-immersion-colombie/s56kBiJKRPSdE3Ukk6id.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA MAGIE DE COCORA",
+      "badgeText": "JOURS 4 ET 5",
+      "description": "La vallée de Cocora vous laissera un souvenir mémorable. Vous tomberez sans aucun doute sous le charme de cette vallée emplie de magie, connue pour ses palmiers qui peuvent atteindre jusqu’à 60 mètres de hauteur ! Le lendemain, départ pour la Finca Romelia, petit paradis dont Marisa et José sont propriétaires, qui vous partageront leur passion pour les orchidées !",
+      "photo": "/images/voyages/voyage-immersion-colombie/icZrKgv3TniMpJRQ7Axc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VILLE DU PRINTEMPS ETERNEL",
+      "badgeText": "JOURS 6 ET 7",
+      "description": "Sur la route vers Medellin (le jour 6), le trajet vous offrira des panoramas magnifiques sur la région ! Arrivée dans une ville à l’Histoire difficile mais qui se transforme à une vitesse impressionnante. Visite des incontournables de la ville, de la Plaza Botero-Salon Malaga au Parque Berrio en terminant par la Comuna 13, quartier autrefois sensible qui nous dévoile toute la transformation effectuée.",
+      "photo": "/images/voyages/voyage-immersion-colombie/pKsCNrMaSWuI7I5kl1Vw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES ARTISANS DE GUATAPÉ",
+      "badgeText": "JOUR 8",
+      "description": "Journée à Guatapé, qui se trouve près de la réserve d'eau la plus importante de la région. La ville revêt de couleurs vives grâce aux fresques sur ses maisons appelées \"zócalos\". La visite continue avec la rencontre de Nacho, célèbre artisan réalisant les zócalos, qui vous racontera son histoire et la tradition des fresques.",
+      "photo": "/images/voyages/voyage-immersion-colombie/ScvnZtUSmCNsKh0ZFggl.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ARRIVÉE EN TERRE INCONNUE",
+      "badgeText": "JOUR 9",
+      "description": "Depuis Medellín, vol vers Nuquí dans la province reculée du Chocó, une des zones les plus préservées du pays ! À l'arrivée, vous embarquez pour un trajet de 40 minutes à bord d'une barque qui vous mènera jusqu'à la zone de votre immersion, à la rencontre de la communauté Jovi. Premières images du Chocó, de la jungle épaisse se jetant dans la mer, des plages au sable noire désertes, des villages qui se camouflent dans cette nature sauvage. Vous allez découvrir une autre Colombie, cachée, protégée, brute. Première nuit au bout du monde.",
+      "photo": "/images/voyages/voyage-immersion-colombie/J8otk45aTU2Eob2w0G20.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN IMMERSION DANS LE CHOCO",
+      "badgeText": "JOURS 10 A 12",
+      "description": "Passez quatre jours en immersion dans le Chocó, au cœur de la chaleureuse communauté Jovi, entre jungle et océan. Plusieurs activités vous seront proposées : cours de cuisine, découverte du jardin et plantes cultivées, balade en canoë sur la rivière Jovi ou encore, observation des baleines de juillet à octobre. Vous aurez également des moments libres pour explorer le Chocó, vous baigner dans des rivières, plonger dans des cascades, vous ressourcer dans des sources chaudes et partager le quotidien de la communauté Jovi.",
+      "photo": "/images/voyages/voyage-immersion-colombie/WGHEFIJlSgiPbhAWmrbz.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES GEANTS DE MERS",
+      "badgeText": "JOURS 10 A 12",
+      "description": "Une sortie sera organisée le jour 10,11 ou 12 selon les conditions climatiques pour l’observation des baleines. Sortie d’environ 2 h 30 pour tenter de découvrir les baleines à bosse venant se reproduire de juillet à octobre dans les eaux chaudes du pacifique. Émotions fortes garanties, si vous avez la chance de les apercevoir (de loin, car votre bateau ne s'approchera à pas plus de 100 mètres pour le respect des baleines) ! ",
+      "photo": "/images/voyages/voyage-immersion-colombie/F4tmm9eTOyhMMizXZ8oo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR VERS MEDELLÍN",
+      "badgeText": "JOUR 13",
+      "description": "C'est le jour des au-revoirs, derniers moments au sein de la communauté. Dans la matinée, vous prendrez la direction de l’aéroport de Nuqui pour atteindre Medellín vers midi, une escale avant atterrir à la ville de Bogotá. Soirée libre dans la capitale colombienne, avant de se reposer pour votre vol international le lendemain. Nuit à Bogotá.\r\n",
+      "photo": "/images/voyages/voyage-immersion-colombie/sgeLuv1TZehEE1G9mYQY.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FIN DE VOTRE VOYAGE",
+      "badgeText": "JOUR 14",
+      "description": "Après une nuit à Bogotá après le trajet depuis Medellín, petit-déjeuner à votre hôtel, puis route vers l'aéroport de Bogotá, avant d'embarquer pour votre vol retour.",
+      "photo": "/images/voyages/voyage-immersion-colombie/p4RdLU1rRoOFSLE0gRYB.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport de Bogota, les transferts terrestres du jour 1 à 9 et 13 à 14",
+      "Le guide francophone du jour 2 à 8, le guide anglophone du jour 9 à 13",
+      "Les nuitées dans des hôtels 3\\* et en maison d'hôtes en base double avec petit déjeuner",
+      "La pension complète du jour 9 à 13",
+      "Les entrées sur les différents sites",
+      "Les vols domestiques (Bogota-Arménie, Medellin-Nuqui, Medellin-Bogota)",
+      "Toutes les activités indiquées dans le programme",
+      "La rencontre de plusieurs artisans locaux et l'immersion au sein de la communauté Jovi"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Bogota et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les repas et boissons non mentionnés",
+      "Les pourboires",
+      "L'assurance voyage multirisques ou annulation (optionnel)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2240,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "BOG"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage sera accompagné tout le long par des guides qui encadreront vos visites et activités. Votre guide parlera français du jour 1 au jour 9, et espagnol lors de votre immersion dans la communauté dans la province du Choco. Nous avons fait le choix de vous proposer des guides différents à chaque grande étape du séjour. Des guides qui connaissent parfaitement leur région et qui vous donneront à chaque fois une autre vision et idée de la Colombie. Dans le Choco, votre guide ne parle qu'espagnol, mais ce ne sera pas un soucis pour échanger, nous vous fournirons des supports pour appréhender au mieux la vie dans la communauté Jovi.",
+  "accompanistsList": [
+    {
+      "name": "Viviana",
+      "description": "Viviana est guide dans la région du café, depuis 8 ans elle exerce cette activité comme passionnée de sa région et sa population.",
+      "role": "",
+      "image": "/images/voyages/voyage-immersion-colombie/bRfKGMZQQSdM6IDwqVpg.jpg"
+    },
+    {
+      "name": "Diana",
+      "description": "Diana est franco-colombienne, elle possède une racine forte sur la ville de Medellín qui en fait une experte de sa région.",
+      "role": "",
+      "image": "/images/voyages/voyage-immersion-colombie/JmGAjlT9QoSS72jU7NTq.jpg"
+    },
+    {
+      "name": "Laura",
+      "description": "Laura est la fondatrice du tourisme communautaire de Jovi, elle est tombée amoureuse de ce territoire en dédiant toute son énergie à la région du Chocó.",
+      "role": "",
+      "image": "/images/voyages/voyage-immersion-colombie/Ywo0CrjzTSqyaLb42Ygy.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel, gîte, chez l’habitant",
+      "housingType": "",
+      "housingMood": "Pendant ce voyage, vous logerez en hôtel à Bogotá et chez l'habitant dans la région du Café et à Medellín. Dans la province du Choco, vous dormirez dans une cabane privative en bord de mer, au sein de la communauté Jovi.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-immersion-colombie/s7NcA6VlQveCtRs9PhwT.jpg",
+          "alt": "image de l'hébergement Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-colombie/DhoSm0IjQOucrG9IkgS6.jpg",
+          "alt": "image de l'hébergement Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-colombie/fdWuG1MpQXKF2L0QjWuv.jpg",
+          "alt": "image de l'hébergement Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg",
     "alt": "image principale du voyage Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
@@ -118,153 +372,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Loin des sentiers touristiques, c'est un voyage hors du temps que vous vivrez au cœur de la Colombie ! Vous commencerez votre immersion dans la célèbre région du triangle du café aux côtés de producteurs locaux qui vous feront découvrir leurs secrets de fabrication et partageront avec vous, leur quotidien. Une opportunité unique de découvrir des villages pas comme les autres, là où le temps semble s'être arrêté.\n\nVous gagnerez ensuite en intensité en vous imprégnant de l'ambiance de Medellín, ville vibrante en pleine transformation, à travers la rencontre avec ses habitants, avant de rejoindre la province du Chocó, pour une immersion riche en émotions. Cette région peu accessible est un véritable paradis terrestre qui regorge de ressources naturelles insoupçonnées entre plages, cours d’eau, cascades, jungle... Cerise sur le gâteau, vous pourrez même apercevoir des baleines à bosses jaillir hors de l'eau à certaines périodes de l'année !\n\nUn voyage idéal pour tous ceux qui rêvent de ressentir l'essence-même de la Colombie, un pays aux multiples facettes empreinte de traditions.",
-    "author": "Romain",
-    "affixeAuthor": "fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Découvrez la région du café pour vivre la Colombie traditionnelle",
-    "Ressentez l’histoire et vivez le présent de Medellín en rencontrant ses habitants",
-    "Ressourcez-vous dans la région reculée du chocó en passant plusieurs jours avec une communauté",
-    "Voyagez à travers plusieurs régions entre villes, montagnes, jungle et océan",
-    "Profitez de l'accompagnement d'un guide local tout au long de votre voyage"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVEE EN COLOMBIE",
-      "badgeText": "JOURS 1  ET 2",
-      "description": "Accueil à l'aéroport et transfert à votre hôtel le premier jour. Le lendemain, partez visitez le marché de Paloquemao, le plus grand marché de Bogota, où vous découvrirez fruits et légumes exotiques avant de manger un plat typique de la région.",
-      "photo": "/images/voyages/voyage-immersion-colombie/BlusygzLSsiA3LfkT2JT.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION DANS LE TRIANGLE DU CAFÉ",
-      "badgeText": "JOUR 3",
-      "description": "Vol à destination d'Armenia. Accueil et rencontre de votre guide local, avant de prendre la route vers les plantations de café pour découvrir le processus de fabrication du café colombien, de la graine à la tasse, découvrez toutes les étapes pour obtenir un délicieux café. Vous êtes désormais dans le \"triangle du café, zone réputée pour ses nombreuses plantations de café et ses petits villages colorés. Vous y rencontrerez des habitants chaleureux, connus pour leur accueil et leur authenticité.",
-      "photo": "/images/voyages/voyage-immersion-colombie/s56kBiJKRPSdE3Ukk6id.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA MAGIE DE COCORA",
-      "badgeText": "JOURS 4 ET 5",
-      "description": "La vallée de Cocora vous laissera un souvenir mémorable. Vous tomberez sans aucun doute sous le charme de cette vallée emplie de magie, connue pour ses palmiers qui peuvent atteindre jusqu’à 60 mètres de hauteur ! Le lendemain, départ pour la Finca Romelia, petit paradis dont Marisa et José sont propriétaires, qui vous partageront leur passion pour les orchidées !",
-      "photo": "/images/voyages/voyage-immersion-colombie/icZrKgv3TniMpJRQ7Axc.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA VILLE DU PRINTEMPS ETERNEL",
-      "badgeText": "JOURS 6 ET 7",
-      "description": "Sur la route vers Medellin (le jour 6), le trajet vous offrira des panoramas magnifiques sur la région ! Arrivée dans une ville à l’Histoire difficile mais qui se transforme à une vitesse impressionnante. Visite des incontournables de la ville, de la Plaza Botero-Salon Malaga au Parque Berrio en terminant par la Comuna 13, quartier autrefois sensible qui nous dévoile toute la transformation effectuée.",
-      "photo": "/images/voyages/voyage-immersion-colombie/pKsCNrMaSWuI7I5kl1Vw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES ARTISANS DE GUATAPÉ",
-      "badgeText": "JOUR 8",
-      "description": "Journée à Guatapé, qui se trouve près de la réserve d'eau la plus importante de la région. La ville revêt de couleurs vives grâce aux fresques sur ses maisons appelées \"zócalos\". La visite continue avec la rencontre de Nacho, célèbre artisan réalisant les zócalos, qui vous racontera son histoire et la tradition des fresques.",
-      "photo": "/images/voyages/voyage-immersion-colombie/ScvnZtUSmCNsKh0ZFggl.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ARRIVÉE EN TERRE INCONNUE",
-      "badgeText": "JOUR 9",
-      "description": "Depuis Medellín, vol vers Nuquí dans la province reculée du Chocó, une des zones les plus préservées du pays ! À l'arrivée, vous embarquez pour un trajet de 40 minutes à bord d'une barque qui vous mènera jusqu'à la zone de votre immersion, à la rencontre de la communauté Jovi. Premières images du Chocó, de la jungle épaisse se jetant dans la mer, des plages au sable noire désertes, des villages qui se camouflent dans cette nature sauvage. Vous allez découvrir une autre Colombie, cachée, protégée, brute. Première nuit au bout du monde.",
-      "photo": "/images/voyages/voyage-immersion-colombie/J8otk45aTU2Eob2w0G20.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN IMMERSION DANS LE CHOCO",
-      "badgeText": "JOURS 10 A 12",
-      "description": "Passez quatre jours en immersion dans le Chocó, au cœur de la chaleureuse communauté Jovi, entre jungle et océan. Plusieurs activités vous seront proposées : cours de cuisine, découverte du jardin et plantes cultivées, balade en canoë sur la rivière Jovi ou encore, observation des baleines de juillet à octobre. Vous aurez également des moments libres pour explorer le Chocó, vous baigner dans des rivières, plonger dans des cascades, vous ressourcer dans des sources chaudes et partager le quotidien de la communauté Jovi.",
-      "photo": "/images/voyages/voyage-immersion-colombie/WGHEFIJlSgiPbhAWmrbz.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES GEANTS DE MERS",
-      "badgeText": "JOURS 10 A 12",
-      "description": "Une sortie sera organisée le jour 10,11 ou 12 selon les conditions climatiques pour l’observation des baleines. Sortie d’environ 2 h 30 pour tenter de découvrir les baleines à bosse venant se reproduire de juillet à octobre dans les eaux chaudes du pacifique. Émotions fortes garanties, si vous avez la chance de les apercevoir (de loin, car votre bateau ne s'approchera à pas plus de 100 mètres pour le respect des baleines) ! ",
-      "photo": "/images/voyages/voyage-immersion-colombie/F4tmm9eTOyhMMizXZ8oo.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR VERS MEDELLÍN",
-      "badgeText": "JOUR 13",
-      "description": "C'est le jour des au-revoirs, derniers moments au sein de la communauté. Dans la matinée, vous prendrez la direction de l’aéroport de Nuqui pour atteindre Medellín vers midi, une escale avant atterrir à la ville de Bogotá. Soirée libre dans la capitale colombienne, avant de se reposer pour votre vol international le lendemain. Nuit à Bogotá.\r\n",
-      "photo": "/images/voyages/voyage-immersion-colombie/sgeLuv1TZehEE1G9mYQY.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FIN DE VOTRE VOYAGE",
-      "badgeText": "JOUR 14",
-      "description": "Après une nuit à Bogotá après le trajet depuis Medellín, petit-déjeuner à votre hôtel, puis route vers l'aéroport de Bogotá, avant d'embarquer pour votre vol retour.",
-      "photo": "/images/voyages/voyage-immersion-colombie/p4RdLU1rRoOFSLE0gRYB.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Viviana",
-      "description": "Viviana est guide dans la région du café, depuis 8 ans elle exerce cette activité comme passionnée de sa région et sa population.",
-      "role": "",
-      "image": "/images/voyages/voyage-immersion-colombie/bRfKGMZQQSdM6IDwqVpg.jpg"
-    },
-    {
-      "name": "Diana",
-      "description": "Diana est franco-colombienne, elle possède une racine forte sur la ville de Medellín qui en fait une experte de sa région.",
-      "role": "",
-      "image": "/images/voyages/voyage-immersion-colombie/JmGAjlT9QoSS72jU7NTq.jpg"
-    },
-    {
-      "name": "Laura",
-      "description": "Laura est la fondatrice du tourisme communautaire de Jovi, elle est tombée amoureuse de ce territoire en dédiant toute son énergie à la région du Chocó.",
-      "role": "",
-      "image": "/images/voyages/voyage-immersion-colombie/Ywo0CrjzTSqyaLb42Ygy.jpg"
-    }
-  ],
-  "accompanistsDescription": "Ce voyage sera accompagné tout le long par des guides qui encadreront vos visites et activités. Votre guide parlera français du jour 1 au jour 9, et espagnol lors de votre immersion dans la communauté dans la province du Choco. Nous avons fait le choix de vous proposer des guides différents à chaque grande étape du séjour. Des guides qui connaissent parfaitement leur région et qui vous donneront à chaque fois une autre vision et idée de la Colombie. Dans le Choco, votre guide ne parle qu'espagnol, mais ce ne sera pas un soucis pour échanger, nous vous fournirons des supports pour appréhender au mieux la vie dans la communauté Jovi.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, gîte, chez l’habitant",
-      "housingType": "",
-      "housingMood": "Pendant ce voyage, vous logerez en hôtel à Bogotá et chez l'habitant dans la région du Café et à Medellín. Dans la province du Choco, vous dormirez dans une cabane privative en bord de mer, au sein de la communauté Jovi.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-immersion-colombie/s7NcA6VlQveCtRs9PhwT.jpg",
-          "alt": "image de l'hébergement Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
-        },
-        {
-          "src": "/images/voyages/voyage-immersion-colombie/DhoSm0IjQOucrG9IkgS6.jpg",
-          "alt": "image de l'hébergement Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
-        },
-        {
-          "src": "/images/voyages/voyage-immersion-colombie/fdWuG1MpQXKF2L0QjWuv.jpg",
-          "alt": "image de l'hébergement Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil à l'aéroport de Bogota, les transferts terrestres du jour 1 à 9 et 13 à 14",
-      "Le guide francophone du jour 2 à 8, le guide anglophone du jour 9 à 13",
-      "Les nuitées dans des hôtels 3\\* et en maison d'hôtes en base double avec petit déjeuner",
-      "La pension complète du jour 9 à 13",
-      "Les entrées sur les différents sites",
-      "Les vols domestiques (Bogota-Arménie, Medellin-Nuqui, Medellin-Bogota)",
-      "Toutes les activités indiquées dans le programme",
-      "La rencontre de plusieurs artisans locaux et l'immersion au sein de la communauté Jovi"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Bogota et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Toutes les dépenses supplémentaires non mentionnées",
-      "Les repas et boissons non mentionnés",
-      "Les pourboires",
-      "L'assurance voyage multirisques ou annulation (optionnel)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -321,27 +428,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1965,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 6,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "BOG"
-    ]
+  "seo": {
+    "metaTitle": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-colombie",
+    "ogTitle": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
+    "ogDescription": "Vivez un voyage différent en Colombie, à la découverte de la province du Choco, riche de jungles, rivières, cascades, sources thermales et plages incroyables.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg",
+      "alt": "image principale du voyage Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
+    },
+    "twitterTitle": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
+    "twitterDescription": "Vivez un voyage différent en Colombie, à la découverte de la province du Choco, riche de jungles, rivières, cascades, sources thermales et plages incroyables.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-immersion-colombie/UeAQzWrBSA6rs8EyNeeJ.jpg",
+      "alt": "image principale du voyage Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

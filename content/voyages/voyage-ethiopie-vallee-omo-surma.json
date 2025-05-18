@@ -1,51 +1,232 @@
 {
   "published": false,
   "title": "Voyagez sur la terre des premiers hommes en Éthiopie",
-  "slug": "voyage-ethiopie-vallee-omo-surma",
-  "rating": 5,
-  "comments": 3,
-  "description": "Partez près de Kibish au sud de l'Éthiopie, là où les plus anciens restes fossilisés d’Homo sapiens ont été retrouvés. Odysway vous propose ce voyage en Ethiopie hors du temps, à la rencontre des Surmas et d’autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo. \n\nPartez découvrir leur mode de vie, qui n’a que très peu changé depuis des millénaires. Les modifications corporelles font partie des pratiques courantes de ces groupes comme les rites initiatiques.",
-  "emailDescription": "👉 Si vous souhaitez vivre une expérience hors du temps, vivre en immersion avec les Surmas et partager leur quotidien, ce voyage est fait pour vous !",
-  "metaDescription": "Vivez une expérience hors du temps lors de ce voyage en Ethiopie avec Odsyway. Accompagnés d'un guide francophone, vivez en immersion dans les tribus et découvrez leurs coutumes ancestrales !",
-  "interjection": "en",
   "destinations": [
-    "Ethiopie"
+    {
+      "name": "Ethiopie",
+      "slug": "ethiopie"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ecotourisme",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-ete",
-    "voyage-insolite",
-    "partir-en-groupe",
-    "sejours-chez-l-habitant"
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    }
   ],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, bivouac",
   "idealPeriods": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    }
   ],
   "monthlyAvailability": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 3,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez près de Kibish au sud de l'Éthiopie, là où les plus anciens restes fossilisés d’Homo sapiens ont été retrouvés. Odysway vous propose ce voyage en Ethiopie hors du temps, à la rencontre des Surmas et d’autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo. \n\nPartez découvrir leur mode de vie, qui n’a que très peu changé depuis des millénaires. Les modifications corporelles font partie des pratiques courantes de ces groupes comme les rites initiatiques.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "La rencontre avec les tribus du fleuve Omo",
+    "L'immersion chez les Surmas pendant 4 jours",
+    "Les paysages somptueux et variés du sud de l’Éthiopie",
+    "Les nuits en bivouac",
+    "L'accompagnement francophone"
+  ],
+  "slug": "voyage-ethiopie-vallee-omo-surma",
+  "description": "Partez près de Kibish au sud de l'Éthiopie, là où les plus anciens restes fossilisés d’Homo sapiens ont été retrouvés. Odysway vous propose ce voyage en Ethiopie hors du temps, à la rencontre des Surmas et d’autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo. \n\nPartez découvrir leur mode de vie, qui n’a que très peu changé depuis des millénaires. Les modifications corporelles font partie des pratiques courantes de ces groupes comme les rites initiatiques.",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience hors du temps, vivre en immersion avec les Surmas et partager leur quotidien, ce voyage est fait pour vous !",
+  "metaDescription": "Vivez une expérience hors du temps lors de ce voyage en Ethiopie avec Odsyway. Accompagnés d'un guide francophone, vivez en immersion dans les tribus et découvrez leurs coutumes ancestrales !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Oct à Mai",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DÉBUT DU VOYAGE EN ÉTHIOPIE",
+      "badgeText": "JOUR 1 ",
+      "description": "Vous prendrez un vol de nuit en semaine. Nuit dans l’avion. ",
+      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/MlprHYR8TraSk0EqoG2P.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ARRIVÉE EN ÉTHIOPIE",
+      "badgeText": "JOUR 2",
+      "description": "Arrivée à Addis Abeba en début de matinée et départ vers Jimma, en direction sud-ouest du pays. Belle journée de rencontre de plusieurs tribus, dont les Gouragués, réputés pour la culture du faux-bananier depuis 5 millénaires. Nuit à Jimma. ",
+      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/iLbxgoWJTZrJDvjQG8UA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE VERS LE PAYS SURMA",
+      "badgeText": "JOURS 4 ET 5",
+      "description": "Première étape de rencontre avec des tribus dont les Meenits, Dizis, Anuaks de Dima sur l’Akobo et en fin de journée, les Surma. Nuit bivouac à Tulgi. Le lendemain, journée de marche vers Kibish. Rencontre de villages les moins visités pour avoir cette unique sensation de rencontre de l’inconnue.\r\n",
+      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/qOX8ToghTn6vYOjloJpq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION EN PAYS SURMA",
+      "badgeText": "JOURS 6 A 9 ",
+      "description": "Vivez 4 jours en immersion, à la découverte et partage du mode de vie Surma. Nous passons les journées à observer la vie au sein d’un village se trouvant après le cours d’eau qui traverse la sortie sud de Kibish. Les Surma vous accueillent chez eux, vous participerez à la tresse des colliers et aux peintures corporelles que vous allez vous laisser enduire. Des moments riches en émotions. \r\nNuits bivouac à Kibish.\r\n",
+      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/olbsMkWwScqttAfA6x6p.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE RETOUR ",
+      "badgeText": "JOURS 10 ET 11",
+      "description": "Route de retour vers Jimma, avec  arrêts photos, rencontres et visites de  marché. Arrivée en fin de journée à Jimma. Le lendemain, dernière journée de votre expédition qui nous ramène à Addis Abeba pour les achats de souvenirs. Dîner dans un restaurant traditionnel. ",
+      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/7kZhIlcBRPuhTnI47Px1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOL RETOUR",
+      "badgeText": "JOUR 12",
+      "description": "Votre voyage en Éthiopie touche à sa fin ! Votre guide vous emmènera à l'aéroport où vous prendrez votre vol retour vers l'aéroport de votre choix. Vol retour de Nuit et arrivée le 12ème jour. ",
+      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/QfRKOHZT629OSiVKLjVi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 2735,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Lors de ce voyage en Éthiopie, vous serez accompagnés par un guide francophone de votre arrivée à votre dernier jour. En fonction des étapes et pendant l'immersion avec les Surmas, des guides locaux seront également présents.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtel, bivouac",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-ethiopie-vallee-omo-surma/56OAQsCQRIC0V59UpIaA.jpg",
     "alt": "image principale du voyage Voyagez sur la terre des premiers hommes en Éthiopie"
@@ -75,77 +256,6 @@
   "videoLinks": [
     "https://www.youtube.com/embed/8UwFNAF-Jvk?start=13\""
   ],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Partez près de Kibish au sud de l'Éthiopie, là où les plus anciens restes fossilisés d’Homo sapiens ont été retrouvés. Odysway vous propose ce voyage en Ethiopie hors du temps, à la rencontre des Surmas et d’autres tribus, habitants du sud de l'Éthiopie vivant dans la vallée de l'Omo. \n\nPartez découvrir leur mode de vie, qui n’a que très peu changé depuis des millénaires. Les modifications corporelles font partie des pratiques courantes de ces groupes comme les rites initiatiques.",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "La rencontre avec les tribus du fleuve Omo",
-    "L'immersion chez les Surmas pendant 4 jours",
-    "Les paysages somptueux et variés du sud de l’Éthiopie",
-    "Les nuits en bivouac",
-    "L'accompagnement francophone"
-  ],
-  "programmeBlock": [
-    {
-      "title": "DÉBUT DU VOYAGE EN ÉTHIOPIE",
-      "badgeText": "JOUR 1 ",
-      "description": "Vous prendrez un vol de nuit en semaine. Nuit dans l’avion. ",
-      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/MlprHYR8TraSk0EqoG2P.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ARRIVÉE EN ÉTHIOPIE",
-      "badgeText": "JOUR 2",
-      "description": "Arrivée à Addis Abeba en début de matinée et départ vers Jimma, en direction sud-ouest du pays. Belle journée de rencontre de plusieurs tribus, dont les Gouragués, réputés pour la culture du faux-bananier depuis 5 millénaires. Nuit à Jimma. ",
-      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/iLbxgoWJTZrJDvjQG8UA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ROUTE VERS LE PAYS SURMA",
-      "badgeText": "JOURS 4 ET 5",
-      "description": "Première étape de rencontre avec des tribus dont les Meenits, Dizis, Anuaks de Dima sur l’Akobo et en fin de journée, les Surma. Nuit bivouac à Tulgi. Le lendemain, journée de marche vers Kibish. Rencontre de villages les moins visités pour avoir cette unique sensation de rencontre de l’inconnue.\r\n",
-      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/qOX8ToghTn6vYOjloJpq.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION EN PAYS SURMA",
-      "badgeText": "JOURS 6 A 9 ",
-      "description": "Vivez 4 jours en immersion, à la découverte et partage du mode de vie Surma. Nous passons les journées à observer la vie au sein d’un village se trouvant après le cours d’eau qui traverse la sortie sud de Kibish. Les Surma vous accueillent chez eux, vous participerez à la tresse des colliers et aux peintures corporelles que vous allez vous laisser enduire. Des moments riches en émotions. \r\nNuits bivouac à Kibish.\r\n",
-      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/olbsMkWwScqttAfA6x6p.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ROUTE RETOUR ",
-      "badgeText": "JOURS 10 ET 11",
-      "description": "Route de retour vers Jimma, avec  arrêts photos, rencontres et visites de  marché. Arrivée en fin de journée à Jimma. Le lendemain, dernière journée de votre expédition qui nous ramène à Addis Abeba pour les achats de souvenirs. Dîner dans un restaurant traditionnel. ",
-      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/7kZhIlcBRPuhTnI47Px1.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VOL RETOUR",
-      "badgeText": "JOUR 12",
-      "description": "Votre voyage en Éthiopie touche à sa fin ! Votre guide vous emmènera à l'aéroport où vous prendrez votre vol retour vers l'aéroport de votre choix. Vol retour de Nuit et arrivée le 12ème jour. ",
-      "photo": "/images/voyages/voyage-ethiopie-vallee-omo-surma/QfRKOHZT629OSiVKLjVi.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Lors de ce voyage en Éthiopie, vous serez accompagnés par un guide francophone de votre arrivée à votre dernier jour. En fonction des étapes et pendant l'immersion avec les Surmas, des guides locaux seront également présents.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, bivouac",
-      "housingType": "",
-      "housingMood": "",
-      "image": []
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [],
-    "exclude": []
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -158,24 +268,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2735,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Voyagez sur la terre des premiers hommes en Éthiopie",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-ethiopie-vallee-omo-surma",
+    "ogTitle": "Voyagez sur la terre des premiers hommes en Éthiopie",
+    "ogDescription": "Vivez une expérience hors du temps lors de ce voyage en Ethiopie avec Odsyway. Accompagnés d'un guide francophone, vivez en immersion dans les tribus et découvrez leurs coutumes ancestrales !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-ethiopie-vallee-omo-surma/56OAQsCQRIC0V59UpIaA.jpg",
+      "alt": "image principale du voyage Voyagez sur la terre des premiers hommes en Éthiopie"
+    },
+    "twitterTitle": "Voyagez sur la terre des premiers hommes en Éthiopie",
+    "twitterDescription": "Vivez une expérience hors du temps lors de ce voyage en Ethiopie avec Odsyway. Accompagnés d'un guide francophone, vivez en immersion dans les tribus et découvrez leurs coutumes ancestrales !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-ethiopie-vallee-omo-surma/56OAQsCQRIC0V59UpIaA.jpg",
+      "alt": "image principale du voyage Voyagez sur la terre des premiers hommes en Éthiopie"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

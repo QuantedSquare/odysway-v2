@@ -66,6 +66,35 @@
       />
 
       <WhySection :why-section="page.whySection" />
+
+      <HorizontalCarousel
+        v-show="voyagePropositions.length > 0"
+      >
+        <template #title>
+          <h4 class="text-primary ">
+            D'autres idées de voyages
+          </h4>
+        </template>
+        <template #carousel-item>
+          <v-col
+            v-for="voyageProp in voyagePropositions"
+            :key="voyageProp.id"
+            cols="12"
+            sm="6"
+            lg="4"
+          >
+            <v-lazy
+              :min-height="228"
+              :options="{ threshold: 0.5 }"
+              transition="fade-transition"
+            >
+              <SearchVoyageCard
+                :voyage="voyageProp"
+              />
+            </v-lazy>
+          </v-col>
+        </template>
+      </HorizontalCarousel>
     </template>
     <v-skeleton-loader
       v-else
@@ -85,8 +114,12 @@ const { data: page } = useAsyncData('voyages-textes', () =>
 const { data: voyage } = useAsyncData('voyages', () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
-console.log('voyage', voyage.value)
 
+const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
+  return queryCollection('voyages').where('published', '==', true).limit(10).all()
+})
+console.log('voyage', voyage.value)
+console.log('voyagePropositions', voyagePropositions.value)
 watchEffect(() => {
   if (!voyage.value) return
 

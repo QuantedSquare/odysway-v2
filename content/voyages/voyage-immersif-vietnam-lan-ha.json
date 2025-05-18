@@ -1,58 +1,332 @@
 {
   "published": false,
   "title": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",
-  "slug": "voyage-immersif-vietnam-lan-ha",
-  "rating": 4.3,
-  "comments": 18,
-  "description": "Plongez au cœur d'un voyage unique à la découverte des joyaux cachés du Vietnam !\n\nPlus qu’un voyage, c'est une expérience immersive qui vous entraînera à la découverte des traditions et coutumes du pays, du Nord au Sud. Vous partirez explorer la véritable essence du Vietnam, des ruelles animées de Hanoi jusqu'au Delta du Mékong, en passant par les villages du Nord.\n\nPlongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux multiples facettes. Des randonnées dans les rizières aux promenades en bateau le long des magnifiques côtes de baie de Lan Ha jusqu’aux paisibles rives du Mékong, ce voyage riche en découvertes et en émotions restera gravé dans vos mémoires.",
-  "emailDescription": "👉 Si vous souhaitez découvrir le Vietnam à travers une expérience unique, ce voyage est fait pour vous ! ",
-  "metaDescription": "Vivez un voyage unique du Nord au Sud du Vietnam, entre rencontres locales et découvertes culturelles !",
-  "interjection": "au",
   "destinations": [
-    "Vietnam"
+    {
+      "name": "Vietnam",
+      "slug": "vietnam"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "partir-en-famille"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-famille"
+    }
   ],
   "duration": 13,
   "nights": 12,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, auberge, jonque ",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.3,
+  "comments": 18,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Plongez au cœur d'un voyage unique à la découverte des joyaux cachés du Vietnam !\n\nPlus qu’un voyage, c'est une expérience immersive qui vous entraînera à la découverte des traditions et coutumes du pays, du Nord au Sud. Vous partirez explorer la véritable essence du Vietnam, des ruelles animées de Hanoi jusqu'au Delta du Mékong, en passant par les villages du Nord.\n\nPlongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux multiples facettes. Des randonnées dans les rizières aux promenades en bateau le long des magnifiques côtes de baie de Lan Ha jusqu’aux paisibles rives du Mékong, ce voyage riche en découvertes et en émotions restera gravé dans vos mémoires.",
+    "author": "Linda",
+    "affixeAuthor": "Responsable Asie"
+  },
+  "experiencesBlock": [
+    "La journée de croisière en jonque sur la Baie de Lanh Ha",
+    "La découverte du pays du nord au sud à travers la richesse de ses paysages",
+    "La nuit dans un train transvietnamien et la nuit chez l'habitant",
+    "La journée libre à la découverte de Hoi An \"perle d'Asie\" à votre rythme",
+    "La possibilité de combiner ce voyage avec notre voyage au Laos et Cambodge"
+  ],
+  "slug": "voyage-immersif-vietnam-lan-ha",
+  "description": "Plongez au cœur d'un voyage unique à la découverte des joyaux cachés du Vietnam !\n\nPlus qu’un voyage, c'est une expérience immersive qui vous entraînera à la découverte des traditions et coutumes du pays, du Nord au Sud. Vous partirez explorer la véritable essence du Vietnam, des ruelles animées de Hanoi jusqu'au Delta du Mékong, en passant par les villages du Nord.\n\nPlongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux multiples facettes. Des randonnées dans les rizières aux promenades en bateau le long des magnifiques côtes de baie de Lan Ha jusqu’aux paisibles rives du Mékong, ce voyage riche en découvertes et en émotions restera gravé dans vos mémoires.",
+  "emailDescription": "👉 Si vous souhaitez découvrir le Vietnam à travers une expérience unique, ce voyage est fait pour vous ! ",
+  "metaDescription": "Vivez un voyage unique du Nord au Sud du Vietnam, entre rencontres locales et découvertes culturelles !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 15 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE À HANOI",
+      "badgeText": "JOUR 1",
+      "description": "Dès votre arrivée à Hanoi, vous serez accueilli par notre chauffeur qui vous conduira à votre hôtel. Profitez de votre temps libre pour vous remettre du décalage horaire ou pour partir à la découverte des environs à pied ! En fin de journée, retrouvez votre guide à l'hôtel, puis direction un restaurant local pour votre première immersion culinaire avec le plat emblématique \"Cha Ca\".",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/0GeZeuPFSRiGgc1ejXtJ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU CŒUR D'UN VILLAGE DE MONTAGNE",
+      "badgeText": "JOURS 2 ET 3",
+      "description": "Échappez au tumulte de la ville pour une immersion totale dans la nature et la culture vietnamiennes, au cœur de la région de Pa Co. Plongez dans l'atmosphère unique de son marché dominical, véritable point de rencontre des minorités ethniques de la région. Randonnez à travers ses paysages pittoresques, essayez-vous à l'artisanat local et passez la nuit en auberge traditionnelle. Le lendemain, explorez une autre facette de la région, entre ses rizières, sa rivière et les traditionnelles maisons sur pilotis des villages Hmong. Retour vers Hanoi dans l'après-midi.",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/aCf2KmmBTxqg3An8CaM1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CROISIERE ET NUIT SUR LA BAIE DE LAN HA",
+      "badgeText": "JOURS 4 ET 5",
+      "description": "Aujourd'hui, embarquez sur une jonque pour explorer la baie de Lan Ha, la petite sœur d'Halong, moins connue et mieux préservée. Explorez une grotte naturelle, essayez-vous à la pêche aux calamars et pagayez en kayak au cœur de ses paysages époustouflants ! Vous passerez la nuit à bord de la jonque, bercés par le clapotis des vagues... Le lendemain, contemplez le lever de soleil magique tout en profitant d'une initiation au Tai Chi ! Débarquement vers midi puis route vers Ninh Binh.",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/0ZGKTGsLQumnbOHtfvDR.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA RÉSERVE NATURELLE DE THUNG NHAM",
+      "badgeText": "JOUR 6",
+      "description": "Ce matin, partez à la découverte du village de Tam Côc. Glissez le long des roches karstiques lors d'une balade en barque dans la réserve naturelle de Thung Nham  Explorez un sanctuaire niché au cœur de la roche avant de vous diriger vers Hoa Lu, une ancienne citadelle construite pour marquer la fin de la domination chinoise sur le Vietnam. Le soir, vous rejoindrez la gare pour prendre votre train de nuit en direction de Hue.",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/qlpt5y0T7uDKutelao5A.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "L'ANCIENNE CITÉ IMPÉRIALE DE HUE",
+      "badgeText": "JOUR 7",
+      "description": "Arrivée tôt le matin à Hue, l'ancienne capitale classée au Patrimoine mondial de l'UNESCO. Après un petit déjeuner local, partez à la découverte de ses ruelles à vélo, explorant les chemins bordés de légumes, de fleurs et de rizières, ainsi que ses architectures en bois uniques ! L'après-midi, visitez la Citadelle et plongez au cœur de son histoire à travers ses pagodes et tombeaux royaux. \r\n",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/ijZJ6N4jQJWuxPHIOEDA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LES RUES TYPIQUES DE HOI AN",
+      "badgeText": "JOUR 8",
+      "description": "Aujourd'hui, prenez la route en direction de Hoi An, l'une des villes les plus charmantes du Vietnam. Explorez la vieille ville à pied, découvrez ses sanctuaires, pagodes et maisons en bois anciennes sans oublier son célèbre pont japonais ! Laissez-vous tenter par les délicieuses spécialités locales et imprégnez-vous de son atmosphère typique en vous promenant le long de la rivière à votre rythme.",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/HIVJuFMuT1m26qLFRQAs.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À HOI AN",
+      "badgeText": "JOUR 9",
+      "description": "Aujourd'hui, visitez Hoi An au gré de vos envies ! Vous pourriez choisir de vous détendre sur les plages dorées de la côte, de vous aventurer à vélo dans les magnifiques paysages de campagne, ou encore de vous perdre dans les rues pittoresques de la vieille ville pour une séance de shopping parmi les échoppes d'artisans locaux. Profitez de cette journée pour déguster la délicieuse cuisine vietnamienne dans les charmants restaurants de la ville ! ",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/gdJchAjSKWCTsQzY5HQs.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE VILLAGE ANCIEN DE DONG HOA",
+      "badgeText": "JOUR 10",
+      "description": "Profitez d'une matinée libre avant de prendre un vol vers Can Tho. À votre arrivée, votre guide vous accueillera et vous conduira en ville pour savourer un déjeuner local. Ensuite, embarquez pour une balade en bateau sur la rivière qui vous mènera au village Dong Hoa, où vous pourrez la communauté Kh'mer et découvrir la pagode Phu Ly. De retour sur la terre ferme, promenez-vous le long de la rivière avant de rejoindre votre hôtel. ",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/xpTvHCoCSQu4de6eHfoA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE MARCHÉ FLOTTANT DE CAI RANG",
+      "badgeText": "JOUR 11",
+      "description": "Après un réveil matinal, partez pour une balade en bateau vers le marché flottant Cai Rang, le plus grand et le plus animé du delta du Mékong. Vous découvrirez des jonques remplies de marchandises changeant de main en main, vous imprégnant de l'atmosphère vibrante et typique du marché ! Dans l'après-midi, rendez-vous à la réserve naturelle de Tra Su, où vous embarquerez pour une balade en barque, au cœur des paisibles mangroves.",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/e9iUp7wBQJKnt1AI3EF6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VILLE FLEURIE DE SA DEC",
+      "badgeText": "JOUR 12",
+      "description": "Ce matin, mettez le cap sur Ho Chi Minh, avec un arrêt à Sa Dec, où Marguerite Duras a passé son enfance. Sa Dec est célèbre pour ses fermes de pépinières fournissant des fleurs tropicales au Vietnam et à l'étranger. Visitez une pépinière avant de savourer un déjeuner aux saveurs locales. En fin d'après-midi, vous atteindrez Ho Chi Minh , anciennement appelée \"la perle de l'Orient\" et \"le Paris de l'Asie\" à l'époque de Saigon. Profitez de votre soirée libre pour visiter les environs à votre rythme.",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/mk6hVwdRCudmAqjTQYzA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS MOMENTS À SAIGON",
+      "badgeText": "JOUR 13",
+      "description": "Ce matin, partez pour une balade à pied à travers le centre-ville pour découvrir les monuments emblématiques de Saigon, tels que le Palais de Réunification, la Poste, la Cathédrale, l'Opéra et ses rues piétonnes ! Profitez de votre temps libre pour effectuer vos derniers achats avant de vous rendre à l'aéroport en fonction de l'horaire de votre vol de retour",
+      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/pOoU4VrvTZGANPs2nRuM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "Les transferts, excursions et visites",
+      "Le vol domestique vers Can Tho",
+      "Le guide francophone et chauffeur privé",
+      "Les nuitées en base double avec petit-déjeuner",
+      "Tous les repas sauf ceux mentionnés dans la section \"le prix ne comprend pas\"",
+      "Toutes les activités indiquées dans le programme",
+      "La croisière en jonque partagée sur la baie de Lan Ha (guide anglophone à bord)",
+      "L'assistance Odysway 24h/24 et 7j/7"
+    ],
+    "exclude": [
+      "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
+      "Les boissons et les dépenses à caractères personnels",
+      "Les repas mentionnés ici :\n\n*   Déjeuner du Jour 9\n*   Diners des Jours 3, 7, 8 et 9",
+      "Déjeuner du Jour 9",
+      "Diners des Jours 3, 7, 8 et 9",
+      "Les pourboires",
+      "L'assurance voyage multirisques ou annulation",
+      "Toutes les prestations non mentionnées dans le programme"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1580,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 15,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 370,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "HAN",
+      "SGN"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage sera accompagné tout le long par des chauffeurs privés et des guides francophones qui encadreront vos visites et activités.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtel, auberge, jonque ",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous serez logés dans des hébergements de charme en hôtel 3* ou 4* ainsi que chez l'habitant, en auberge traditionnelle pour une expérience en totale immersion !",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/cIxZcqlGQNmUaO8k9EvT.jpg",
+          "alt": "image de l'hébergement Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
+        },
+        {
+          "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/tlhWT1EOSauLxtVthRom.jpg",
+          "alt": "image de l'hébergement Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
+        },
+        {
+          "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/M3CGMRnQIeTdNBAI7XUD.jpg",
+          "alt": "image de l'hébergement Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/4Mzpj2CWQmaEINIcvsif.jpg",
     "alt": "image principale du voyage Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
@@ -100,143 +374,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Plongez au cœur d'un voyage unique à la découverte des joyaux cachés du Vietnam !\n\nPlus qu’un voyage, c'est une expérience immersive qui vous entraînera à la découverte des traditions et coutumes du pays, du Nord au Sud. Vous partirez explorer la véritable essence du Vietnam, des ruelles animées de Hanoi jusqu'au Delta du Mékong, en passant par les villages du Nord.\n\nPlongez dans l’ambiance locale et vivez une immersion au cœur de ce pays aux multiples facettes. Des randonnées dans les rizières aux promenades en bateau le long des magnifiques côtes de baie de Lan Ha jusqu’aux paisibles rives du Mékong, ce voyage riche en découvertes et en émotions restera gravé dans vos mémoires.",
-    "author": "Linda",
-    "affixeAuthor": "Responsable Asie"
-  },
-  "experiencesBlock": [
-    "La journée de croisière en jonque sur la Baie de Lanh Ha",
-    "La découverte du pays du nord au sud à travers la richesse de ses paysages",
-    "La nuit dans un train transvietnamien et la nuit chez l'habitant",
-    "La journée libre à la découverte de Hoi An \"perle d'Asie\" à votre rythme",
-    "La possibilité de combiner ce voyage avec notre voyage au Laos et Cambodge"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVEE À HANOI",
-      "badgeText": "JOUR 1",
-      "description": "Dès votre arrivée à Hanoi, vous serez accueilli par notre chauffeur qui vous conduira à votre hôtel. Profitez de votre temps libre pour vous remettre du décalage horaire ou pour partir à la découverte des environs à pied ! En fin de journée, retrouvez votre guide à l'hôtel, puis direction un restaurant local pour votre première immersion culinaire avec le plat emblématique \"Cha Ca\".",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/0GeZeuPFSRiGgc1ejXtJ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU CŒUR D'UN VILLAGE DE MONTAGNE",
-      "badgeText": "JOURS 2 ET 3",
-      "description": "Échappez au tumulte de la ville pour une immersion totale dans la nature et la culture vietnamiennes, au cœur de la région de Pa Co. Plongez dans l'atmosphère unique de son marché dominical, véritable point de rencontre des minorités ethniques de la région. Randonnez à travers ses paysages pittoresques, essayez-vous à l'artisanat local et passez la nuit en auberge traditionnelle. Le lendemain, explorez une autre facette de la région, entre ses rizières, sa rivière et les traditionnelles maisons sur pilotis des villages Hmong. Retour vers Hanoi dans l'après-midi.",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/aCf2KmmBTxqg3An8CaM1.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CROISIERE ET NUIT SUR LA BAIE DE LAN HA",
-      "badgeText": "JOURS 4 ET 5",
-      "description": "Aujourd'hui, embarquez sur une jonque pour explorer la baie de Lan Ha, la petite sœur d'Halong, moins connue et mieux préservée. Explorez une grotte naturelle, essayez-vous à la pêche aux calamars et pagayez en kayak au cœur de ses paysages époustouflants ! Vous passerez la nuit à bord de la jonque, bercés par le clapotis des vagues... Le lendemain, contemplez le lever de soleil magique tout en profitant d'une initiation au Tai Chi ! Débarquement vers midi puis route vers Ninh Binh.",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/0ZGKTGsLQumnbOHtfvDR.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA RÉSERVE NATURELLE DE THUNG NHAM",
-      "badgeText": "JOUR 6",
-      "description": "Ce matin, partez à la découverte du village de Tam Côc. Glissez le long des roches karstiques lors d'une balade en barque dans la réserve naturelle de Thung Nham  Explorez un sanctuaire niché au cœur de la roche avant de vous diriger vers Hoa Lu, une ancienne citadelle construite pour marquer la fin de la domination chinoise sur le Vietnam. Le soir, vous rejoindrez la gare pour prendre votre train de nuit en direction de Hue.",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/qlpt5y0T7uDKutelao5A.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "L'ANCIENNE CITÉ IMPÉRIALE DE HUE",
-      "badgeText": "JOUR 7",
-      "description": "Arrivée tôt le matin à Hue, l'ancienne capitale classée au Patrimoine mondial de l'UNESCO. Après un petit déjeuner local, partez à la découverte de ses ruelles à vélo, explorant les chemins bordés de légumes, de fleurs et de rizières, ainsi que ses architectures en bois uniques ! L'après-midi, visitez la Citadelle et plongez au cœur de son histoire à travers ses pagodes et tombeaux royaux. \r\n",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/ijZJ6N4jQJWuxPHIOEDA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DANS LES RUES TYPIQUES DE HOI AN",
-      "badgeText": "JOUR 8",
-      "description": "Aujourd'hui, prenez la route en direction de Hoi An, l'une des villes les plus charmantes du Vietnam. Explorez la vieille ville à pied, découvrez ses sanctuaires, pagodes et maisons en bois anciennes sans oublier son célèbre pont japonais ! Laissez-vous tenter par les délicieuses spécialités locales et imprégnez-vous de son atmosphère typique en vous promenant le long de la rivière à votre rythme.",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/HIVJuFMuT1m26qLFRQAs.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE À HOI AN",
-      "badgeText": "JOUR 9",
-      "description": "Aujourd'hui, visitez Hoi An au gré de vos envies ! Vous pourriez choisir de vous détendre sur les plages dorées de la côte, de vous aventurer à vélo dans les magnifiques paysages de campagne, ou encore de vous perdre dans les rues pittoresques de la vieille ville pour une séance de shopping parmi les échoppes d'artisans locaux. Profitez de cette journée pour déguster la délicieuse cuisine vietnamienne dans les charmants restaurants de la ville ! ",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/gdJchAjSKWCTsQzY5HQs.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE VILLAGE ANCIEN DE DONG HOA",
-      "badgeText": "JOUR 10",
-      "description": "Profitez d'une matinée libre avant de prendre un vol vers Can Tho. À votre arrivée, votre guide vous accueillera et vous conduira en ville pour savourer un déjeuner local. Ensuite, embarquez pour une balade en bateau sur la rivière qui vous mènera au village Dong Hoa, où vous pourrez la communauté Kh'mer et découvrir la pagode Phu Ly. De retour sur la terre ferme, promenez-vous le long de la rivière avant de rejoindre votre hôtel. ",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/xpTvHCoCSQu4de6eHfoA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE MARCHÉ FLOTTANT DE CAI RANG",
-      "badgeText": "JOUR 11",
-      "description": "Après un réveil matinal, partez pour une balade en bateau vers le marché flottant Cai Rang, le plus grand et le plus animé du delta du Mékong. Vous découvrirez des jonques remplies de marchandises changeant de main en main, vous imprégnant de l'atmosphère vibrante et typique du marché ! Dans l'après-midi, rendez-vous à la réserve naturelle de Tra Su, où vous embarquerez pour une balade en barque, au cœur des paisibles mangroves.",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/e9iUp7wBQJKnt1AI3EF6.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LA VILLE FLEURIE DE SA DEC",
-      "badgeText": "JOUR 12",
-      "description": "Ce matin, mettez le cap sur Ho Chi Minh, avec un arrêt à Sa Dec, où Marguerite Duras a passé son enfance. Sa Dec est célèbre pour ses fermes de pépinières fournissant des fleurs tropicales au Vietnam et à l'étranger. Visitez une pépinière avant de savourer un déjeuner aux saveurs locales. En fin d'après-midi, vous atteindrez Ho Chi Minh , anciennement appelée \"la perle de l'Orient\" et \"le Paris de l'Asie\" à l'époque de Saigon. Profitez de votre soirée libre pour visiter les environs à votre rythme.",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/mk6hVwdRCudmAqjTQYzA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS MOMENTS À SAIGON",
-      "badgeText": "JOUR 13",
-      "description": "Ce matin, partez pour une balade à pied à travers le centre-ville pour découvrir les monuments emblématiques de Saigon, tels que le Palais de Réunification, la Poste, la Cathédrale, l'Opéra et ses rues piétonnes ! Profitez de votre temps libre pour effectuer vos derniers achats avant de vous rendre à l'aéroport en fonction de l'horaire de votre vol de retour",
-      "photo": "/images/voyages/voyage-immersif-vietnam-lan-ha/pOoU4VrvTZGANPs2nRuM.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Ce voyage sera accompagné tout le long par des chauffeurs privés et des guides francophones qui encadreront vos visites et activités.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, auberge, jonque ",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage, vous serez logés dans des hébergements de charme en hôtel 3* ou 4* ainsi que chez l'habitant, en auberge traditionnelle pour une expérience en totale immersion !",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/cIxZcqlGQNmUaO8k9EvT.jpg",
-          "alt": "image de l'hébergement Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
-        },
-        {
-          "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/tlhWT1EOSauLxtVthRom.jpg",
-          "alt": "image de l'hébergement Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
-        },
-        {
-          "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/M3CGMRnQIeTdNBAI7XUD.jpg",
-          "alt": "image de l'hébergement Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "Les transferts, excursions et visites",
-      "Le vol domestique vers Can Tho",
-      "Le guide francophone et chauffeur privé",
-      "Les nuitées en base double avec petit-déjeuner",
-      "Tous les repas sauf ceux mentionnés dans la section \"le prix ne comprend pas\"",
-      "Toutes les activités indiquées dans le programme",
-      "La croisière en jonque partagée sur la baie de Lan Ha (guide anglophone à bord)",
-      "L'assistance Odysway 24h/24 et 7j/7"
-    ],
-    "exclude": [
-      "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
-      "Les boissons et les dépenses à caractères personnels",
-      "Les repas mentionnés ici :\n\n*   Déjeuner du Jour 9\n*   Diners des Jours 3, 7, 8 et 9",
-      "Déjeuner du Jour 9",
-      "Diners des Jours 3, 7, 8 et 9",
-      "Les pourboires",
-      "L'assurance voyage multirisques ou annulation",
-      "Toutes les prestations non mentionnées dans le programme"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -285,27 +422,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1580,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 15,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 370,
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "HAN",
-      "SGN"
-    ]
+  "seo": {
+    "metaTitle": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersif-vietnam-lan-ha",
+    "ogTitle": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",
+    "ogDescription": "Vivez un voyage unique du Nord au Sud du Vietnam, entre rencontres locales et découvertes culturelles !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/4Mzpj2CWQmaEINIcvsif.jpg",
+      "alt": "image principale du voyage Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
+    },
+    "twitterTitle": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",
+    "twitterDescription": "Vivez un voyage unique du Nord au Sud du Vietnam, entre rencontres locales et découvertes culturelles !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-immersif-vietnam-lan-ha/4Mzpj2CWQmaEINIcvsif.jpg",
+      "alt": "image principale du voyage Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

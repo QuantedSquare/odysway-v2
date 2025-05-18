@@ -1,90 +1,186 @@
 {
   "published": true,
   "title": "Initiation au bivouac en montagne dans les Pyrénées",
-  "slug": "bivouac-montagne-pyrenees",
-  "rating": 0,
-  "comments": 0,
-  "description": "_Partez à la découverte des montagnes béarnaises et laissez-vous porter par la simplicité d’une nuit en bivouac, loin de tout. Installez votre campement dans les vallées ou au bord des lacs d’altitude, là où l’air est pur, le vent murmure doucement, et les gaves chantent en écho. La nuit en altitude devient une symphonie naturelle, sous un ciel étoilé comme vous n’en avez peut-être jamais vu._\n\n_Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une immersion dans la vie de la montagne, une expérience où chaque moment est une invitation à ralentir. En chemin, guidé par un accompagnateur passionné, apprenez à reconnaître la faune et la flore, et laissez-vous inspirer par les rencontres avec les bergers et gardiens du parc. Que vous bivouaquiez pour la première fois ou que vous soyez déjà familier de cette aventure, cette escapade est une invitation à renouer avec l’essentiel, au cœur des Pyrénées._",
-  "emailDescription": "👉  Si vous souhaitez découvrir le bivouac en montagne, ce séjour est fait pour vous ! Vivez une immersion en pleine nature dans le Parc National des Pyrénées !",
-  "metaDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
-  "interjection": "dans le",
   "destinations": [
-    "Sud Ouest"
+    {
+      "name": "Sud Ouest",
+      "slug": "sud-ouest"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejour-trek-randonnee",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "sejour-survie",
-    "voyage-sportif",
-    "sejours-nature"
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "survie"
+    },
+    {
+      "name": "voyage-sportif"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 3,
   "nights": 2,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Bivouac sous tente",
   "idealPeriods": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
-    "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/bivouac-montagne-pyrenees/IuMvK6q7QfqjlvnT7C6L.jpg",
-    "alt": "image secondaire du voyage Initiation au bivouac en montagne dans les Pyrénées"
-  },
-  "photosList": [],
-  "videoLinks": [],
-  "badgeSection": {},
   "authorNote": {
-    "text": "_Partez à la découverte des montagnes béarnaises et laissez-vous porter par la simplicité d’une nuit en bivouac, loin de tout. Installez votre campement dans les vallées ou au bord des lacs d’altitude, là où l’air est pur, le vent murmure doucement, et les gaves chantent en écho. La nuit en altitude devient une symphonie naturelle, sous un ciel étoilé comme vous n’en avez peut-être jamais vu._\n\n_Ce séjour, c’est bien plus qu’une nuit sous les étoiles – c’est une immersion dans la vie de la montagne, une expérience où chaque moment est une invitation à ralentir. En chemin, guidé par un accompagnateur passionné, apprenez à reconnaître la faune et la flore, et laissez-vous inspirer par les rencontres avec les bergers et gardiens du parc. Que vous bivouaquiez pour la première fois ou que vous soyez déjà familier de cette aventure, cette escapade est une invitation à renouer avec l’essentiel, au cœur des Pyrénées._",
+    "text": "_Partez à la découverte des montagnes béarnaises et laissez-vous porter par la simplicité du bivouac, loin de tout. Installez votre campement dans les vallées ou au bord des lacs d’altitude, là où l’air est pur, le vent murmure doucement, et les gaves chantent en écho._\n\n_Ce séjour, c’est bien plus qu’une nuit sous les étoiles, c’est une immersion dans la vie de la montagne, une expérience où chaque moment est une invitation à ralentir. En chemin, guidé par un accompagnateur passionné, apprenez à reconnaître la faune et la flore, et laissez-vous inspirer par les rencontres avec les bergers et gardiens du parc. Que vous bivouaquiez pour la première fois ou que vous soyez déjà familier de cette aventure, cette escapade est une invitation à renouer avec l’essentiel, au cœur des Pyrénées._",
     "author": "Romain",
     "affixeAuthor": "fondateur d'Odysway et amoureux de la vallée d'Aspe"
   },
   "experiencesBlock": [
     "Vivez une expérience de déconnexion unique en pleine nature",
-    "Initiez-vous au trekking et au bivouac en pleine montagne avec deux nuits sous tente 🏕️",
+    "Initiez-vous au trekking et au bivouac en pleine montagne avec deux nuits sous tente",
     "Participez au montage du bivouac chaque soir avec votre groupe",
-    "Partagez des moments conviviaux et hors du temps au coin du feu",
-    "Explorez les sentiers et sommets de la vallée d'Aspe, en plein cœur du magnifique Parc National des Pyrénées 🌄",
+    "Partagez des moments conviviaux et hors du temps",
+    "Explorez les sentiers et sommets de la vallée d'Aspe, en plein cœur du magnifique Parc National des Pyrénées",
     "Observez les isards et le gypaète barbu grâce à un accompagnateur en montagne passionné"
   ],
+  "slug": "bivouac-montagne-pyrenees",
+  "description": "_Partez à la découverte des montagnes béarnaises et laissez-vous porter par la simplicité du bivouac, loin de tout. Installez votre campement dans les vallées ou au bord des lacs d’altitude, là où l’air est pur, le vent murmure doucement, et les gaves chantent en écho._\n\n_Ce séjour, c’est bien plus qu’une nuit sous les étoiles, c’est une immersion dans la vie de la montagne, une expérience où chaque moment est une invitation à ralentir. En chemin, guidé par un accompagnateur passionné, apprenez à reconnaître la faune et la flore, et laissez-vous inspirer par les rencontres avec les bergers et gardiens du parc. Que vous bivouaquiez pour la première fois ou que vous soyez déjà familier de cette aventure, cette escapade est une invitation à renouer avec l’essentiel, au cœur des Pyrénées._",
+  "emailDescription": "👉  Si vous souhaitez découvrir le bivouac en montagne, ce séjour est fait pour vous ! Vivez une immersion en pleine nature dans le Parc National des Pyrénées !",
+  "metaDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**2 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mai à Oct",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "MARCHE D'APPROCHE ET PREMIER BIVOUAC",
       "badgeText": "JOUR 1",
-      "description": "Le rendez-vous est donné à 9h en vallée d'Aspe, vous êtes attendus par votre accompagnateur à Bedous, avant d'entamer la marche. Dénivelé positif ce matin, avant d'arriver sur les premiers plateaux pour l'heure du déjeuner, où vous pourrez bénéficier d'un panorama exceptionnel sur toute la vallée d'Aspe. Ouvrez les yeux, vous observerez peut-être des Isards et le fameux gypaète barbu ! Poursuite de la marche avant d'arriver à un lieu de bivouac situé à proximité d'un lac d'altitude. Vous montez le campement en installant vos tentes et préparez le repas avec le reste du groupe ! Première soirée autour du feu et nuit en bivouac sous les étoiles.",
-      "photo": "/images/voyages/bivouac-montagne-pyrenees/uNZVlAbQSMG8lgQlUVra.jpg",
-      "denivellation": ""
+      "description": "Le rendez-vous est donné à 9h en vallée d'Aspe, vous êtes attendus par votre accompagnateur à Bedous, avant d'entamer la marche. Dénivelé positif ce matin, avant d'arriver sur les premiers plateaux pour l'heure du déjeuner, où vous pourrez bénéficier d'un panorama exceptionnel sur toute la vallée d'Aspe. Ouvrez les yeux, vous observerez peut-être des Isards et le fameux gypaète barbu ! Poursuite de la marche avant d'arriver à un lieu de bivouac situé à proximité d'un lac d'altitude. Vous montez le campement en installant vos tentes et préparez le repas avec le reste du groupe ! Première soirée dans la vallée d'Aspe et nuit en bivouac sous les étoiles.",
+      "photo": "/images/voyages/bivouac-montagne-pyrenees/mJ9DEMRN6cEI1T0maQm3.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "BIVOUAC SUR LES SOMMETS",
       "badgeText": "JOUR 2",
       "description": "Lever à la fraiche et éveil en admirant le lever du soleil sur les monts pyrénéens. Bain, également à la fraiche dans un lac ou gave d'altitude. Préparation du petit-déjeuner avec votre groupe puis départ pour la marche du jour. Vous passerez des cols, plateaux et parties de forêts. Votre guide vous initiera aussi à l'observation de la nature, de la flore aux traces d'animaux, soyez donc attentifs et… Discrets ! Ce soir, deuxième bivouac avec un nouveau panorama ! Préparation du camp et nouvelle nuit sous tente.",
       "photo": "/images/voyages/bivouac-montagne-pyrenees/BFjLftKoTIW9HPAkpxZV.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "REDESCENTE VERS LA VALLÉE",
       "badgeText": "JOUR 3",
       "description": "Dernier jour en montagne après avoir bivouaqué deux jours d'affilée ! Après cette parenthèse en pleine nature, vous vous sentez complètement déconnecté. Marche pour redescendre vers la vallée d'Aspe, environ 5h de randonnée. Vous arrivez dans la vallée autour de 15h, derniers moments avec votre guide, qui vous conseillera des endroits pour acheter du fromage de brebis du Béarn, à ramener en souvenir de cette expérience pyrénéenne. Retour en train ou voiture, ou possibilité de poursuivre votre séjour sur place (nuit en gîte).",
       "photo": "/images/voyages/bivouac-montagne-pyrenees/WhN39AaSkWCTX9srA68M.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à la gare de Bedous dans la vallée d'Aspe (si arrivée en train) et transfert jusqu'au départ de la marche.",
+      "La pension complète : petits déjeuners, paniers repas faits de bons produits locaux et dîner copieux le soir",
+      "Les services d'un  accompagnateur en moyenne montagne certifié sur 3 jours",
+      "Le matériel pour le bivouac : tente, matelas"
+    ],
+    "exclude": [
+      "Les activités non comprises dans la section \"le prix comprend\"",
+      "L'assurance annulation ou multirisques",
+      "Le petit-déjeuner du jour 1 et déjeuner du jour 3",
+      "Le transport pour vous rendre sur place (voiture ou train jusqu'à Bedous)",
+      "Le duvet (location possible pour 10€)",
+      "Les dépenses personnelles"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 350,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 40,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 50,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Lors de ce séjour de trois jours en vallée d'Aspe, vous serez guidé lors des randonnées par un accompagnateur en moyenne montagne diplômé d'état. Ce passionné vous initiera au bivouac et à la survie en montagne, vous apprenant les bases essentielles pour monter un campement et évoluer en toute sécurité. De plus, son savoir approfondi sur la faune locale enrichira vos randonnées en vous permettant d'observer et de comprendre la vie sauvage des Pyrénées.",
   "accompanistsList": [
     {
       "name": "Accompagnateur en moyenne montagne",
@@ -93,7 +189,6 @@
       "image": "/images/voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg"
     }
   ],
-  "accompanistsDescription": "Lors de ce séjour de trois jours en vallée d'Aspe, vous serez guidé lors des randonnées par un accompagnateur en moyenne montagne diplômé d'état. Ce passionné vous initiera au bivouac et à la survie en montagne, vous apprenant les bases essentielles pour monter un campement et évoluer en toute sécurité. De plus, son savoir approfondi sur la faune locale enrichira vos randonnées en vous permettant d'observer et de comprendre la vie sauvage des Pyrénées.",
   "housingBlock": [
     {
       "title": "Bivouac sous tente",
@@ -115,23 +210,16 @@
       ]
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil à la gare de Bedous dans la vallée d'Aspe (si arrivée en train) et transfert jusqu'au départ de la marche.",
-      "La pension complète : petits déjeuners, paniers repas faits de bons produits locaux et dîner copieux le soir",
-      "Les services d'un  accompagnateur en moyenne montagne certifié sur 3 jours",
-      "Le matériel pour le bivouac : tente, matelas"
-    ],
-    "exclude": [
-      "Les activités non comprises dans la section \"le prix comprend\"",
-      "L'assurance annulation ou multirisques",
-      "Le petit-déjeuner du jour 1 et déjeuner du jour 3",
-      "Le transport pour vous rendre sur place (voiture ou train jusqu'à Bedous)",
-      "Le duvet (location possible pour 10€)",
-      "Les dépenses personnelles"
-    ]
+  "image": {
+    "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
+    "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/bivouac-montagne-pyrenees/IuMvK6q7QfqjlvnT7C6L.jpg",
+    "alt": "image secondaire du voyage Initiation au bivouac en montagne dans les Pyrénées"
+  },
+  "photosList": [],
+  "videoLinks": [],
   "faqBlock": {
     "faqList": [
       {
@@ -168,24 +256,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 350,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": 40,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 50,
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Initiation au bivouac en montagne dans les Pyrénées",
+    "canonicalUrl": "https://www.odysway.com/voyages/bivouac-montagne-pyrenees",
+    "ogTitle": "Initiation au bivouac en montagne dans les Pyrénées",
+    "ogDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
+    "ogImage": {
+      "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
+      "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
+    },
+    "twitterTitle": "Initiation au bivouac en montagne dans les Pyrénées",
+    "twitterDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
+    "twitterImage": {
+      "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
+      "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

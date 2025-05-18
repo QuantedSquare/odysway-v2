@@ -1,56 +1,339 @@
 {
   "published": true,
   "title": "Voyagez hors des sentiers battus au Sri Lanka (été)",
-  "slug": "voyage-ete-sri-lanka",
-  "rating": 4.6,
-  "comments": 0,
-  "description": "Nous vous invitons à vivre un voyage pensé pour vivre le Sri Lanka différemment : au travers de rencontres, d’expériences atypiques que seuls les initiés connaissent et d’immersions dans la culture locale, sans oublier les incontournables !\n\nEn chemin : vivez une rencontre exclusive avec des pêcheurs sri-lankais dans leur quotidien, voyagez en train au cœur des plantations de thé, observez les éléphants sauvages, délectez-vous d'une coco sur la plage, régalez-vous de _rice & curry_ chez l'habitant, rafraîchissez-vous dans une cascade connue uniquement des locaux ou écoutez le silence face aux rizières.\n\nLe Sri Lanka, c'est avant tout le pays des rencontres authentiques, des sourires chaleureux, des cultures qui se mêlent et des religions qui cohabitent. Un pays où les temples bouddhistes avoisinent les divinités hindous, où les mosquées partagent la rue des églises, où l'on passe en une journée des plantations de thé aux plages tropicales, des montagnes à la jungle humide.\n\nL'occasion de faire le plein de sourires et d'émotion fortes sur une île aux mille facettes, loin des autoroutes touristiques.\n\nLe présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dates hiver (décembre à avril), rendez-vous ici : [cliquez ici](https://odysway.com/voyages/voyage-insolite-sri-lanka)",
-  "emailDescription": "👉 Si vous souhaitez découvrir le Sri Lanka d'une façon différente, ce voyage est fait pour vous !",
-  "metaDescription": "Vivez un voyage insolite et proche des locaux au Sri Lanka, entre rencontres, plages et plantations de thé !",
-  "interjection": "",
   "destinations": [
-    "Sri Lanka"
+    {
+      "name": "Sri Lanka",
+      "slug": "sri-lanka"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "sejour-trek-randonnee",
-    "sejours-culturels",
-    "ecotourisme",
-    "voyage-insolite",
-    "ou-partir-en-ete",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "partir-en-groupe",
-    "partir-en-amoureux",
-    "partir-en-famille",
-    "",
-    "sejours-chez-l-habitant",
-    "voyage-animalier",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": ""
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 12,
   "nights": 11,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtels 2-3* et chez l'habitant",
   "idealPeriods": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
   "monthlyAvailability": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Nous vous invitons à vivre un voyage pensé pour vivre le Sri Lanka différemment : au travers de rencontres, d’expériences atypiques que seuls les initiés connaissent et d’immersions dans la culture locale, sans oublier les incontournables !\n\nEn chemin : vivez une rencontre exclusive avec des pêcheurs sri-lankais dans leur quotidien, voyagez en train au cœur des plantations de thé, observez les éléphants sauvages, délectez-vous d'une coco sur la plage, régalez-vous de _rice & curry_ chez l'habitant, rafraîchissez-vous dans une cascade connue uniquement des locaux ou écoutez le silence face aux rizières.\n\nLe Sri Lanka, c'est avant tout le pays des rencontres authentiques, des sourires chaleureux, des cultures qui se mêlent et des religions qui cohabitent. Un pays où les temples bouddhistes avoisinent les divinités hindous, où les mosquées partagent la rue des églises, où l'on passe en une journée des plantations de thé aux plages tropicales, des montagnes à la jungle humide.\n\nL'occasion de faire le plein de sourires et d'émotion fortes sur une île aux mille facettes, loin des autoroutes touristiques.\n\nLe présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dates hiver (décembre à avril), rendez-vous ici : [cliquez ici](https://odysway.com/voyages/voyage-insolite-sri-lanka)",
+    "author": "Salomé",
+    "affixeAuthor": " Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Vivez un voyage vraiment atypique et au plus près des locaux au Sri Lanka, sans oublier les incontournables!",
+    "Appréciez la beauté des plantations de thé et du travail minutieux de cueilleuses : en train local, à pied et en tuk-tuk",
+    "Vivez une rencontre exclusive avec les pêcheurs à Negombo et traversez de petits villages locaux à pied",
+    "Observez les éléphants sauvages dans une réserve écologique",
+    "Traversez des environnements contrastés, loin des autoroutes touristiques : entre jungle, cascade, plage et plantations de thé",
+    "Relaxez-vous en fin de voyage sur les plages tropicales de l'île"
+  ],
+  "slug": "voyage-ete-sri-lanka",
+  "description": "Nous vous invitons à vivre un voyage pensé pour vivre le Sri Lanka différemment : au travers de rencontres, d’expériences atypiques que seuls les initiés connaissent et d’immersions dans la culture locale, sans oublier les incontournables !\n\nEn chemin : vivez une rencontre exclusive avec des pêcheurs sri-lankais dans leur quotidien, voyagez en train au cœur des plantations de thé, observez les éléphants sauvages, délectez-vous d'une coco sur la plage, régalez-vous de _rice & curry_ chez l'habitant, rafraîchissez-vous dans une cascade connue uniquement des locaux ou écoutez le silence face aux rizières.\n\nLe Sri Lanka, c'est avant tout le pays des rencontres authentiques, des sourires chaleureux, des cultures qui se mêlent et des religions qui cohabitent. Un pays où les temples bouddhistes avoisinent les divinités hindous, où les mosquées partagent la rue des églises, où l'on passe en une journée des plantations de thé aux plages tropicales, des montagnes à la jungle humide.\n\nL'occasion de faire le plein de sourires et d'émotion fortes sur une île aux mille facettes, loin des autoroutes touristiques.\n\nLe présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dates hiver (décembre à avril), rendez-vous ici : [cliquez ici](https://odysway.com/voyages/voyage-insolite-sri-lanka)",
+  "emailDescription": "👉 Si vous souhaitez découvrir le Sri Lanka d'une façon différente, ce voyage est fait pour vous !",
+  "metaDescription": "Vivez un voyage insolite et proche des locaux au Sri Lanka, entre rencontres, plages et plantations de thé !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**11 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mai à novembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE AU SRI LANKA",
+      "badgeText": "JOUR 1",
+      "description": "Accueil à l'aéroport et transfert vers le village de pêcheurs de Negombo. Connu pour son marché aux poissons très local et la profusion de ses noix de coco dites \"royales\", elle est un lieu idéal pour vous reposer à votre arrivée. Détendez-vous sur la plage où se retrouvent des familles sri-lankaises, baladez-vous au fil des vieilles maisons coloniales et commencez à vous imprégner de l'ambiance si particulière de l'île.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/y4pNi9atTneHgQXJpaXD.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "À LA RENCONTRE DE PÊCHEURS",
+      "badgeText": "JOUR 2",
+      "description": "Ce matin, sortie en mer authentique avec des pêcheurs de Negombo. Embarquez à bord de leur catamaran de pêche pour une balade au large des côtes. L'occasion de mieux connaître leur quotidien et de vivre une belle rencontre. Direction ensuite Kandy, capitale spirituelle de l'île. Après-midi libre pour visiter le temple de Bahirawakanda au bouddha géant ou le marché central fréquenté par les locaux pour une immersion totale dans le quotidien des sri lankais.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/Z1TlgskTSxWfsrTqrXFu.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "KANDY ENTRE VILLAGES ET RIZIÈRES",
+      "badgeText": "JOUR 3",
+      "description": "C'est parti ce matin pour une randonnée inoubliable dans les alentours de Kandy ! Vous relierez 3 temples à pied à travers villages et rizières. Du temple de Gadaladeniya, datant de 1344, vous prendrez la route vers le temple de Lankathilaka qui offre une vue panoramique sur les collines et rizières. Vous terminerez par le temple d’Embekke et ses sculptures en bois d'une très grande finesse. L'occasion de rencontrer les sri-lankais et de vivre une véritable expérience hors des sentiers battus. ",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/8eYDo0MmRuWVvqhOLLs9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TRAIN DANS LES PLANTATIONS",
+      "badgeText": "JOUR 4",
+      "description": "Direction les fameuses plantations de thé du Sri Lanka ! Vous prendrez la direction de Nuwara Eliya, station d'altitude très prisée des colons britanniques. Départ en train local au fil des plantations de thé. Pendant le trajet, vous pourrez admirer les splendides paysages de la région. A votre arrivée, installez-vous chez une famille sri-lankaise et découvrez les étapes de préparation du rice & curry lors d'un cours de cuisine. Nuit chez l'habitant",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/uzFKilSnQoWdOdTfSJGt.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TUK-TUK DANS LES PLANTATIONS DE THÉ",
+      "badgeText": "JOUR 5",
+      "description": "Ce matin, un tuk-tuk vous attendra pour prendre la route vers les plantations verdoyantes du Lipton Seat. Vous traverserez un petit village de cueilleuses et en apprendrez plus sur la culture du thé au Sri Lanka. Vous pourrez profiter au sommet d'une vue époustouflante sur les plantations avec un petit pique-nique préparé et une tasse de thé. Direction ensuite une région rurale peu fréquentée du Sri Lanka. En fin de journée, embarquez à bord d'un bateau de pêcheurs jusqu'à l'une des berges du lac : une surprise vous y attend.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/sT7w6fDTRaJ8TVJLqjPV.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BAIGNADE DANS UNE CASCADE",
+      "badgeText": "JOUR 6",
+      "description": "Ce matin, départ à pied pour une randonnée-aventure entre paysages ruraux, rizières et jungle jusqu'à une immense cascade de 100 mètres de haut. Connue uniquement des locaux et difficile d'accès, elle est très peu fréquentée. Baignade pour vous rafraîchir à l'arrivée ! Après un délicieux déjeuner traditionnel, départ vers le Triangle Culturel qui rassemble les plus beaux sites archéologiques de l'île.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/Ktfgq8NSSgS1gfAWXEaM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CITÉ ANCIENNE À VÉLO & ÉLÉPHANTS",
+      "badgeText": "JOUR 7",
+      "description": "Ce matin, découverte à vélo du site archéologique d’Anuradhapura classé au patrimoine mondial de l’UNESCO. Le meilleur moyen de découvrir les trésors du lieu ! L'après-midi, partez explorer en 4x4 la réserve écologique de Kaudulla, véritable couloir pour éléphants sauvages de 6600 hectares.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/04q3UgynTk2YpC1LppZ1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DE SIRIGIYA AUX PLAGES TROPICALES",
+      "badgeText": "JOUR 8",
+      "description": "Ascension de la 8e Merveille du monde à Sigiriya. Site captivant, il offre une vue exceptionnelle sur la jungle environnante. L'occasion de croiser des familles sri-lankaises et d'observer les singes sauvages qui peuplent le site. Direction ensuite la côte est du Sri Lanka pour vous installer sur ses plages tropicales !",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/I7uwzVsTZCj2rU6zubQJ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU BORD DE L'OCÉAN INDIEN",
+      "badgeText": "JOURS 9 ET 10",
+      "description": "Réveil sur les plages tropicales de l'est du Sri Lanka où vous profiterez de 2 journées libres. Laissez-vous aller au gré de vos envies : relaxez-vous sur la plage, partez explorer les fonds marins en catamaran, faites du stand-up paddle ou du snorkelling au milieu des poissons multicolores ... le tout autour de cocos bien fraîches !",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/PpD525A7TKOGSdb8azNR.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TEMPLE COLORÉ DE DAMBULLA",
+      "badgeText": "JOUR 11",
+      "description": "Transfert privatif vers Colombo. Vous vous arrêterez en route pour visiter le Temple de Dambulla. Ses grottes sanctuaires, entièrement peintes de rouge et d’or, sont classées à l'UNESCO. Une vraie pépite ! De nombreux singes sont établis sur place. Nuit à Colombo.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/tpNq46v4RsFncCrCXdyw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 12",
+      "description": "Il est temps de rentrer ! Transfert privatif à l'aéroport de Colombo pour prendre votre vol retour vers la France, de belles images plein la tête.",
+      "photo": "/images/voyages/voyage-ete-sri-lanka/6ybeHrHVQCi3y7kRyqjo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'hébergement 2-3\\* (base : chambre double ou twin)",
+      "Le transfert aéroport privatif A/R (J1 et J12)",
+      "Le transport privatif en véhicule climatisé avec un chauffeur-guide francophone (J2 au J11)",
+      "L'essence, les taxes routières, les stationnements et les assurances",
+      "Le salaire du chauffeur, son logement et ses repas",
+      "Tous les petits-déjeuners",
+      "Tous les déjeuners _(hors boissons)_ (du J2 au J12)",
+      "Tous les dîners _(hors boissons)_ (du J1 au J11)",
+      "Les activités : immersion avec les pêcheurs (J2), cours de cuisine (J4), plantations de thé du Lipton Seat en tuk-tuk (J5), balade en bateau et BBQ sur le Lac Sorabora (J5), randonnée vers la cascade et déjeuner traditionnel (J6), découverte d'Anuradhapura en vélo (J7), safari dans la réserve (J7)",
+      "Entrée des sites (temples Kandy (J3), Anuradhapura (J7), réserve pour safari (J7), Sigiriya (J8), Dambulla (J11)",
+      "Le trajet en train local (2ème classe) _\\- places assises non garanties_",
+      "Les taxes locales",
+      "La participation au projet solidaire d'Odysway \"Immersion pour tous\" : un voyage de sensibilisation au développement durable pour des jeunes prévu chaque année !"
+    ],
+    "exclude": [
+      "Le vol international A/R (France - Colombo) (possibilité de devis avec vols inclus sur demande)",
+      "Le visa (45€)",
+      "Les boissons aux repas",
+      "Les pourboires (voir FAQ ci-dessous)",
+      "Facultatif : le supplément \"chambre individuelle\" (si vous ne souhaitez pas partager votre chambre avec un second voyageur)",
+      "Facultatif : le supplément \"early check-in\" (pour avoir accès à votre chambre dès le matin le jour de votre arrivée, selon votre horaire de vol)",
+      "Facultatif : l'assurance annulation ou multi-risques avec notre partenaire Chapka (devis sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1695,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 462,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "Colombo"
+    ]
+  },
+  "accompanistsDescription": "Durant ce voyage, vous serez accompagnés par un chauffeur-guide francophone. Fin connaisseur de l'île, il saura vous conseiller et faciliter votre contact avec les locaux qui parlent l'anglais et/ou le cinghalais (notamment dans les régions rurales).",
+  "accompanistsList": [
+    {
+      "name": "Un guide local francophone dédié",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/voyage-ete-sri-lanka/AUxdLPwhQXapSyVzxff8.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtels 2-3* et chez l'habitant",
+      "housingType": "",
+      "housingMood": "Vous séjournerez dans des hôtels 2/3* esprit « petite structure » charmants et bien situés. Certains disposent d'une piscine.\r\nA Bandarawella, vous serez hébergés chez l'habitant dans une maison d'hôtes tenue par une famille sri-lankaise.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-ete-sri-lanka/5YIFQFiT7iCsnuWshihA.jpg",
+          "alt": "image de l'hébergement Voyagez hors des sentiers battus au Sri Lanka (été)"
+        },
+        {
+          "src": "/images/voyages/voyage-ete-sri-lanka/zIRXfcwZQOu2KcjlIgvk.jpg",
+          "alt": "image de l'hébergement Voyagez hors des sentiers battus au Sri Lanka (été)"
+        },
+        {
+          "src": "/images/voyages/voyage-ete-sri-lanka/MbRZy1vMRrqXGwtilpGz.jpg",
+          "alt": "image de l'hébergement Voyagez hors des sentiers battus au Sri Lanka (été)"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-ete-sri-lanka/dQS8VWGAQIe3DVaBqlyP.jpg",
     "alt": "image principale du voyage Voyagez hors des sentiers battus au Sri Lanka (été)"
@@ -110,156 +393,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Nous vous invitons à vivre un voyage pensé pour vivre le Sri Lanka différemment : au travers de rencontres, d’expériences atypiques que seuls les initiés connaissent et d’immersions dans la culture locale, sans oublier les incontournables !\n\nEn chemin : vivez une rencontre exclusive avec des pêcheurs sri-lankais dans leur quotidien, voyagez en train au cœur des plantations de thé, observez les éléphants sauvages, délectez-vous d'une coco sur la plage, régalez-vous de _rice & curry_ chez l'habitant, rafraîchissez-vous dans une cascade connue uniquement des locaux ou écoutez le silence face aux rizières.\n\nLe Sri Lanka, c'est avant tout le pays des rencontres authentiques, des sourires chaleureux, des cultures qui se mêlent et des religions qui cohabitent. Un pays où les temples bouddhistes avoisinent les divinités hindous, où les mosquées partagent la rue des églises, où l'on passe en une journée des plantations de thé aux plages tropicales, des montagnes à la jungle humide.\n\nL'occasion de faire le plein de sourires et d'émotion fortes sur une île aux mille facettes, loin des autoroutes touristiques.\n\nLe présent itinéraire est adapté pour l'été (mai à novembre). Pour nos dates hiver (décembre à avril), rendez-vous ici : [cliquez ici](https://odysway.com/voyages/voyage-insolite-sri-lanka)",
-    "author": "Salomé",
-    "affixeAuthor": " Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "Vivez un voyage vraiment atypique et au plus près des locaux au Sri Lanka, sans oublier les incontournables!",
-    "Appréciez la beauté des plantations de thé et du travail minutieux de cueilleuses : en train local, à pied et en tuk-tuk",
-    "Vivez une rencontre exclusive avec les pêcheurs à Negombo et traversez de petits villages locaux à pied",
-    "Observez les éléphants sauvages dans une réserve écologique",
-    "Traversez des environnements contrastés, loin des autoroutes touristiques : entre jungle, cascade, plage et plantations de thé",
-    "Relaxez-vous en fin de voyage sur les plages tropicales de l'île"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE AU SRI LANKA",
-      "badgeText": "JOUR 1",
-      "description": "Accueil à l'aéroport et transfert vers le village de pêcheurs de Negombo. Connu pour son marché aux poissons très local et la profusion de ses noix de coco dites \"royales\", elle est un lieu idéal pour vous reposer à votre arrivée. Détendez-vous sur la plage où se retrouvent des familles sri-lankaises, baladez-vous au fil des vieilles maisons coloniales et commencez à vous imprégner de l'ambiance si particulière de l'île.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/y4pNi9atTneHgQXJpaXD.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "À LA RENCONTRE DE PÊCHEURS",
-      "badgeText": "JOUR 2",
-      "description": "Ce matin, sortie en mer authentique avec des pêcheurs de Negombo. Embarquez à bord de leur catamaran de pêche pour une balade au large des côtes. L'occasion de mieux connaître leur quotidien et de vivre une belle rencontre. Direction ensuite Kandy, capitale spirituelle de l'île. Après-midi libre pour visiter le temple de Bahirawakanda au bouddha géant ou le marché central fréquenté par les locaux pour une immersion totale dans le quotidien des sri lankais.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/Z1TlgskTSxWfsrTqrXFu.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "KANDY ENTRE VILLAGES ET RIZIÈRES",
-      "badgeText": "JOUR 3",
-      "description": "C'est parti ce matin pour une randonnée inoubliable dans les alentours de Kandy ! Vous relierez 3 temples à pied à travers villages et rizières. Du temple de Gadaladeniya, datant de 1344, vous prendrez la route vers le temple de Lankathilaka qui offre une vue panoramique sur les collines et rizières. Vous terminerez par le temple d’Embekke et ses sculptures en bois d'une très grande finesse. L'occasion de rencontrer les sri-lankais et de vivre une véritable expérience hors des sentiers battus. ",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/8eYDo0MmRuWVvqhOLLs9.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TRAIN DANS LES PLANTATIONS",
-      "badgeText": "JOUR 4",
-      "description": "Direction les fameuses plantations de thé du Sri Lanka ! Vous prendrez la direction de Nuwara Eliya, station d'altitude très prisée des colons britanniques. Départ en train local au fil des plantations de thé. Pendant le trajet, vous pourrez admirer les splendides paysages de la région. A votre arrivée, installez-vous chez une famille sri-lankaise et découvrez les étapes de préparation du rice & curry lors d'un cours de cuisine. Nuit chez l'habitant",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/uzFKilSnQoWdOdTfSJGt.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TUK-TUK DANS LES PLANTATIONS DE THÉ",
-      "badgeText": "JOUR 5",
-      "description": "Ce matin, un tuk-tuk vous attendra pour prendre la route vers les plantations verdoyantes du Lipton Seat. Vous traverserez un petit village de cueilleuses et en apprendrez plus sur la culture du thé au Sri Lanka. Vous pourrez profiter au sommet d'une vue époustouflante sur les plantations avec un petit pique-nique préparé et une tasse de thé. Direction ensuite une région rurale peu fréquentée du Sri Lanka. En fin de journée, embarquez à bord d'un bateau de pêcheurs jusqu'à l'une des berges du lac : une surprise vous y attend.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/sT7w6fDTRaJ8TVJLqjPV.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BAIGNADE DANS UNE CASCADE",
-      "badgeText": "JOUR 6",
-      "description": "Ce matin, départ à pied pour une randonnée-aventure entre paysages ruraux, rizières et jungle jusqu'à une immense cascade de 100 mètres de haut. Connue uniquement des locaux et difficile d'accès, elle est très peu fréquentée. Baignade pour vous rafraîchir à l'arrivée ! Après un délicieux déjeuner traditionnel, départ vers le Triangle Culturel qui rassemble les plus beaux sites archéologiques de l'île.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/Ktfgq8NSSgS1gfAWXEaM.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CITÉ ANCIENNE À VÉLO & ÉLÉPHANTS",
-      "badgeText": "JOUR 7",
-      "description": "Ce matin, découverte à vélo du site archéologique d’Anuradhapura classé au patrimoine mondial de l’UNESCO. Le meilleur moyen de découvrir les trésors du lieu ! L'après-midi, partez explorer en 4x4 la réserve écologique de Kaudulla, véritable couloir pour éléphants sauvages de 6600 hectares.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/04q3UgynTk2YpC1LppZ1.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DE SIRIGIYA AUX PLAGES TROPICALES",
-      "badgeText": "JOUR 8",
-      "description": "Ascension de la 8e Merveille du monde à Sigiriya. Site captivant, il offre une vue exceptionnelle sur la jungle environnante. L'occasion de croiser des familles sri-lankaises et d'observer les singes sauvages qui peuplent le site. Direction ensuite la côte est du Sri Lanka pour vous installer sur ses plages tropicales !",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/I7uwzVsTZCj2rU6zubQJ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU BORD DE L'OCÉAN INDIEN",
-      "badgeText": "JOURS 9 ET 10",
-      "description": "Réveil sur les plages tropicales de l'est du Sri Lanka où vous profiterez de 2 journées libres. Laissez-vous aller au gré de vos envies : relaxez-vous sur la plage, partez explorer les fonds marins en catamaran, faites du stand-up paddle ou du snorkelling au milieu des poissons multicolores ... le tout autour de cocos bien fraîches !",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/PpD525A7TKOGSdb8azNR.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TEMPLE COLORÉ DE DAMBULLA",
-      "badgeText": "JOUR 11",
-      "description": "Transfert privatif vers Colombo. Vous vous arrêterez en route pour visiter le Temple de Dambulla. Ses grottes sanctuaires, entièrement peintes de rouge et d’or, sont classées à l'UNESCO. Une vraie pépite ! De nombreux singes sont établis sur place. Nuit à Colombo.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/tpNq46v4RsFncCrCXdyw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR EN FRANCE",
-      "badgeText": "JOUR 12",
-      "description": "Il est temps de rentrer ! Transfert privatif à l'aéroport de Colombo pour prendre votre vol retour vers la France, de belles images plein la tête.",
-      "photo": "/images/voyages/voyage-ete-sri-lanka/6ybeHrHVQCi3y7kRyqjo.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Un guide local francophone dédié",
-      "description": "",
-      "role": "",
-      "image": "/images/voyages/voyage-ete-sri-lanka/AUxdLPwhQXapSyVzxff8.jpg"
-    }
-  ],
-  "accompanistsDescription": "Durant ce voyage, vous serez accompagnés par un chauffeur-guide francophone. Fin connaisseur de l'île, il saura vous conseiller et faciliter votre contact avec les locaux qui parlent l'anglais et/ou le cinghalais (notamment dans les régions rurales).",
-  "housingBlock": [
-    {
-      "title": "Hôtels 2-3* et chez l'habitant",
-      "housingType": "",
-      "housingMood": "Vous séjournerez dans des hôtels 2/3* esprit « petite structure » charmants et bien situés. Certains disposent d'une piscine.\r\nA Bandarawella, vous serez hébergés chez l'habitant dans une maison d'hôtes tenue par une famille sri-lankaise.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-ete-sri-lanka/5YIFQFiT7iCsnuWshihA.jpg",
-          "alt": "image de l'hébergement Voyagez hors des sentiers battus au Sri Lanka (été)"
-        },
-        {
-          "src": "/images/voyages/voyage-ete-sri-lanka/zIRXfcwZQOu2KcjlIgvk.jpg",
-          "alt": "image de l'hébergement Voyagez hors des sentiers battus au Sri Lanka (été)"
-        },
-        {
-          "src": "/images/voyages/voyage-ete-sri-lanka/MbRZy1vMRrqXGwtilpGz.jpg",
-          "alt": "image de l'hébergement Voyagez hors des sentiers battus au Sri Lanka (été)"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'hébergement 2-3\\* (base : chambre double ou twin)",
-      "Le transfert aéroport privatif A/R (J1 et J12)",
-      "Le transport privatif en véhicule climatisé avec un chauffeur-guide francophone (J2 au J11)",
-      "L'essence, les taxes routières, les stationnements et les assurances",
-      "Le salaire du chauffeur, son logement et ses repas",
-      "Tous les petits-déjeuners",
-      "Tous les déjeuners _(hors boissons)_ (du J2 au J12)",
-      "Tous les dîners _(hors boissons)_ (du J1 au J11)",
-      "Les activités : immersion avec les pêcheurs (J2), cours de cuisine (J4), plantations de thé du Lipton Seat en tuk-tuk (J5), balade en bateau et BBQ sur le Lac Sorabora (J5), randonnée vers la cascade et déjeuner traditionnel (J6), découverte d'Anuradhapura en vélo (J7), safari dans la réserve (J7)",
-      "Entrée des sites (temples Kandy (J3), Anuradhapura (J7), réserve pour safari (J7), Sigiriya (J8), Dambulla (J11)",
-      "Le trajet en train local (2ème classe) _\\- places assises non garanties_",
-      "Les taxes locales",
-      "La participation au projet solidaire d'Odysway \"Immersion pour tous\" : un voyage de sensibilisation au développement durable pour des jeunes prévu chaque année !"
-    ],
-    "exclude": [
-      "Le vol international A/R (France - Colombo) (possibilité de devis avec vols inclus sur demande)",
-      "Le visa (45€)",
-      "Les boissons aux repas",
-      "Les pourboires (voir FAQ ci-dessous)",
-      "Facultatif : le supplément \"chambre individuelle\" (si vous ne souhaitez pas partager votre chambre avec un second voyageur)",
-      "Facultatif : le supplément \"early check-in\" (pour avoir accès à votre chambre dès le matin le jour de votre arrivée, selon votre horaire de vol)",
-      "Facultatif : l'assurance annulation ou multi-risques avec notre partenaire Chapka (devis sur demande)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -304,27 +437,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1695,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 462,
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 100,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "Colombo"
-    ]
+  "seo": {
+    "metaTitle": "Voyagez hors des sentiers battus au Sri Lanka (été)",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-ete-sri-lanka",
+    "ogTitle": "Voyagez hors des sentiers battus au Sri Lanka (été)",
+    "ogDescription": "Vivez un voyage insolite et proche des locaux au Sri Lanka, entre rencontres, plages et plantations de thé !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-ete-sri-lanka/dQS8VWGAQIe3DVaBqlyP.jpg",
+      "alt": "image principale du voyage Voyagez hors des sentiers battus au Sri Lanka (été)"
+    },
+    "twitterTitle": "Voyagez hors des sentiers battus au Sri Lanka (été)",
+    "twitterDescription": "Vivez un voyage insolite et proche des locaux au Sri Lanka, entre rencontres, plages et plantations de thé !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-ete-sri-lanka/dQS8VWGAQIe3DVaBqlyP.jpg",
+      "alt": "image principale du voyage Voyagez hors des sentiers battus au Sri Lanka (été)"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

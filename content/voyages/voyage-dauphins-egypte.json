@@ -1,54 +1,78 @@
 {
   "published": true,
   "title": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
-  "slug": "voyage-dauphins-egypte",
-  "rating": 0,
-  "comments": 0,
-  "description": "Plongez dans les eaux cristallines de la mer Rouge pour une immersion inoubliable au cœur de la vie marine.\n\nChaque jour, nagez aux côtés des dauphins à long bec dans leur habitat naturel, guidé par une éthologue passionnée. Bien plus qu’une simple observation, cette expérience unique vous invite à établir un lien authentique avec ces animaux fascinants, dans le respect de leur bien-être et de leur environnement.\n\nExplorez des lagons préservés et d’une beauté rare, certains encore à l’abri du tourisme, offrant une tranquillité précieuse. Grâce à une visibilité parfaite, émerveillez-vous devant un écosystème vibrant : tortues marines, récifs coralliens éclatants et une multitude de poissons multicolores dans un décor enchanteur.\n\nÀ bord d’un bateau confortable, qui sera également votre lieu de résidence durant tout le séjour, profitez d’une ambiance chaleureuse et conviviale, parfaite pour vivre pleinement cette aventure en harmonie avec la nature.\n\nVous apprendrez à interagir de manière consciente et respectueuse avec les dauphins et participerez activement à une étude scientifique sur l’impact du tourisme. Votre contribution à la collecte de données et aux prises de vues sous-marines soutiendra les efforts de préservation des dauphins et de leur habitat naturel.\n\nLaissez-vous porter par la magie de la mer Rouge et vivez une expérience mémorable au contact des dauphins sauvages, alliant émerveillement et engagement pour la nature.",
-  "emailDescription": "👉 Si vous avez toujours rêvé de nager avec des dauphins dans leur habitat naturel, ce voyage est fait pour vous ! ",
-  "metaDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
-  "interjection": "",
   "destinations": [
-    "Égypte"
+    {
+      "name": "Égypte",
+      "slug": "egypte"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ecotourisme",
-    "ou-partir-en-ete",
-    "ou-partir-au-printemps",
-    "partir-en-groupe",
-    "partir-en-famille",
-    "voyage-animalier"
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-animalier"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "A bord d'un bateau",
   "idealPeriods": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
-    "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/voyage-dauphins-egypte/R3IigocTQvyVLNZgKknl.jpg",
-    "alt": "image secondaire du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
-  },
-  "photosList": [],
-  "videoLinks": [],
-  "badgeSection": {},
   "authorNote": {
     "text": "Plongez dans les eaux cristallines de la mer Rouge pour une immersion inoubliable au cœur de la vie marine.\n\nChaque jour, nagez aux côtés des dauphins à long bec dans leur habitat naturel, guidé par une éthologue passionnée. Bien plus qu’une simple observation, cette expérience unique vous invite à établir un lien authentique avec ces animaux fascinants, dans le respect de leur bien-être et de leur environnement.\n\nExplorez des lagons préservés et d’une beauté rare, certains encore à l’abri du tourisme, offrant une tranquillité précieuse. Grâce à une visibilité parfaite, émerveillez-vous devant un écosystème vibrant : tortues marines, récifs coralliens éclatants et une multitude de poissons multicolores dans un décor enchanteur.\n\nÀ bord d’un bateau confortable, qui sera également votre lieu de résidence durant tout le séjour, profitez d’une ambiance chaleureuse et conviviale, parfaite pour vivre pleinement cette aventure en harmonie avec la nature.\n\nVous apprendrez à interagir de manière consciente et respectueuse avec les dauphins et participerez activement à une étude scientifique sur l’impact du tourisme. Votre contribution à la collecte de données et aux prises de vues sous-marines soutiendra les efforts de préservation des dauphins et de leur habitat naturel.\n\nLaissez-vous porter par la magie de la mer Rouge et vivez une expérience mémorable au contact des dauphins sauvages, alliant émerveillement et engagement pour la nature.",
     "author": "Romain",
@@ -61,43 +85,126 @@
     "Participez à des conférences passionnantes animées par une éthologue, pour découvrir les secrets des dauphins et mieux comprendre leur comportement.",
     "Savourez un séjour tout inclus, avec un équipage attentionné, des buffets délicieux et une ambiance conviviale à bord."
   ],
+  "slug": "voyage-dauphins-egypte",
+  "description": "Plongez dans les eaux cristallines de la mer Rouge pour une immersion inoubliable au cœur de la vie marine.\n\nChaque jour, nagez aux côtés des dauphins à long bec dans leur habitat naturel, guidé par une éthologue passionnée. Bien plus qu’une simple observation, cette expérience unique vous invite à établir un lien authentique avec ces animaux fascinants, dans le respect de leur bien-être et de leur environnement.\n\nExplorez des lagons préservés et d’une beauté rare, certains encore à l’abri du tourisme, offrant une tranquillité précieuse. Grâce à une visibilité parfaite, émerveillez-vous devant un écosystème vibrant : tortues marines, récifs coralliens éclatants et une multitude de poissons multicolores dans un décor enchanteur.\n\nÀ bord d’un bateau confortable, qui sera également votre lieu de résidence durant tout le séjour, profitez d’une ambiance chaleureuse et conviviale, parfaite pour vivre pleinement cette aventure en harmonie avec la nature.\n\nVous apprendrez à interagir de manière consciente et respectueuse avec les dauphins et participerez activement à une étude scientifique sur l’impact du tourisme. Votre contribution à la collecte de données et aux prises de vues sous-marines soutiendra les efforts de préservation des dauphins et de leur habitat naturel.\n\nLaissez-vous porter par la magie de la mer Rouge et vivez une expérience mémorable au contact des dauphins sauvages, alliant émerveillement et engagement pour la nature.",
+  "emailDescription": "👉 Si vous avez toujours rêvé de nager avec des dauphins dans leur habitat naturel, ce voyage est fait pour vous ! ",
+  "metaDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "A bord d'un bateau",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Avril à Août",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "BIENVENUE A BORD ",
       "badgeText": "JOUR 1",
       "description": "À votre arrivée en Égypte, un transfert en minibus vous conduira à la marina, où vous embarquerez à bord d’un bateau de 35 mètres, votre cocon flottant pour cette aventure. Une fois installé dans votre cabine et après une présentation du groupe, nous vous proposerons un atelier palmes, masque et tuba. Ce moment pratique et convivial vous permettra de vous familiariser avec votre équipement et de perfectionner une nage fluide et silencieuse, idéale pour approcher les dauphins en toute discrétion. Une première immersion qui donne le ton à cette expérience unique.",
       "photo": "/images/voyages/voyage-dauphins-egypte/VbJMFmLYRs6fkaUBjeRJ.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "NAGE AVEC LES DAUPHINS",
       "badgeText": "JOURS 2 A 7 : LE MATIN",
       "description": "Vivez une expérience inoubliable en nageant avec des dauphins sauvages dans leur habitat naturel, au cœur du lagon. Dans ces eaux cristallines, vous aurez l’opportunité de nager avec des groupes de dauphins (Stenella longirostris et parfois Tursiops aduncus), célèbres pour leurs sauts en vrille et leur curiosité envers l’humain. Ces rencontres magiques, qui ont lieu tôt le matin, se déroulent dans le respect total des dauphins, libres de choisir la durée de l’interaction. Vous participerez également à la collecte de vidéos et à des relevés scientifiques sur le tourisme et les dauphins, avec une contribution d’environ 45 minutes. Une immersion unique où émerveillement et sensibilisation se conjuguent.",
       "photo": "/images/voyages/voyage-dauphins-egypte/0EPSuUOtQIe8GDwmFDyt.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "EXPLORATIONS PALMEES ",
       "badgeText": "JOURS 2 A 7 : LE DEBUT D'APRES-MIDI",
       "description": "L’après-midi, les dauphins seront à nouveau au cœur des priorités, si leur présence et leur disposition le permettent. \r\nEmbarquez en zodiac pour explorer les merveilles du lagon en palmes, masque et tuba, ou optez pour une plongée sous-marine (en option). Chaque site offre un spectacle unique : les récifs intérieurs dévoilent des coraux colorés abritant murènes, raies pastenagues, poissons-clowns et autres joyaux marins, tandis que les canyons de corail éclatants mènent à un site mystérieux parsemé d’anciennes amphores. Plus loin, les pitons et patates de corail, entourés de poissons multicolores, émerveillent par leur splendeur. Près de la barrière de corail, vous croiserez peut-être des tortues imbriquées, et, avec un peu de chance, des raies mantas ou pastenagues. Pour conclure cette exploration, plongez dans des eaux peu profondes aux nuances turquoise. Chaque instant est une invitation à l’émerveillement et à la découverte d’un écosystème fascinant.",
       "photo": "/images/voyages/voyage-dauphins-egypte/kG5ZnLItSNKxJuzIMFIR.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "LES MYSTÈRES DES DAUPHINS DÉCRYPTÉS",
       "badgeText": "JOURS 2 A 7 : LA FIN D'APRES-MIDI",
       "description": "Chaque fin d’après-midi, assistez à des échanges et formations captivants d’environ 45 minutes dédiées à l’écologie et à l’éthologie des dauphins. Vous découvrirez leur mode de vie, leurs structures sociales, leurs comportements et les subtilités de leur communication. Ces présentations incluront également des techniques d’approche respectueuses et des méthodes d’interaction adaptées, vous offrant les clés pour observer ces animaux emblématiques tout en préservant leur bien-être. Une occasion unique d’enrichir vos connaissances et de donner une nouvelle profondeur à votre expérience en mer.\r\nSauf le jour 7 où l'après-midi sera consacré à la navigation retour près des côtes.",
       "photo": "/images/voyages/voyage-dauphins-egypte/rvGIg6jwQzugA3vfCsaS.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "RETOUR À BON PORT : UNE MER ROUGE DE SOUVENIRS ",
       "badgeText": "JOUR 8 ",
       "description": "Le dernier jour marque la fin de cette incroyable aventure au cœur de la Mer Rouge. Si le temps le permet, une ultime nage avec les dauphins sera proposée, un dernier moment magique pour graver ces instants dans votre mémoire. Ensuite, le bateau entamera sa navigation de retour vers le port, où un transfert vous conduira à l’aéroport. Vous repartirez le cœur rempli d’émerveillement, avec des souvenirs inoubliables de cette immersion unique aux côtés des dauphins.",
       "photo": "/images/voyages/voyage-dauphins-egypte/mdeqeiT6yzo4XQgkReQM.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "La croisière en cabine double partagée",
+      "La pension complète avec boissons non alcoolisées à volonté (eau minérale, soda, jus de fruits, café, thé, tisane)",
+      "L'accompagnement par un éthologue spécialiste des cétacés",
+      "Les présentations sur les dauphins et les techniques d'interaction",
+      "L'exploration en zodiacs des plus beaux spots de snorkeling",
+      "La participation à l'étude des dauphins"
+    ],
+    "exclude": [
+      "Les vols internationaux pour se rendre en Egypte",
+      "Les transferts aéroport/bateau",
+      "Le visa : 25 $ (payable sur place en €) pour les Français, Belges et Suisses",
+      "Les boissons alcoolisées",
+      "120 € pour la taxe d’entrée du parc maritime et la taxe de séjour, à régler à bord",
+      "Les pourboires pour l’équipage, les dépenses personnelles aux aéroports",
+      "L’adhésion à l’association Splendeur Nature (20€) pour soutenir le projet de préservation des dauphins en Égypte",
+      "L’assurance voyage Assistance Rapatriement (obligatoire) ou multirisques",
+      "Les activités proposées en option dans la FAQ"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1890,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG"
+    ]
+  },
+  "accompanistsDescription": "Durant ce voyage, vous serez accompagné(e) par Valérie Valton, une experte passionnée. Éthologue spécialisée dans les interactions avec les mammifères marins, Valérie a consacré plus de 12 ans à explorer les océans, à la rencontre des dauphins et autres créatures fascinantes. Ses recherches en éthologie animale et en médiation Homme-Animal lui ont permis de développer une approche unique et respectueuse, favorisant une véritable connexion avec ces animaux emblématiques.\n\nChaque jour, Valérie vous ouvrira les portes du monde des dauphins, partageant ses connaissances et ses techniques pour décrypter leur comportement et interagir avec eux en harmonie. Plus qu’une rencontre, elle vous invite à une immersion totale dans leur univers, où émerveillement et compréhension se conjuguent pour vivre un échange inter-espèces unique, tout en respectant leur liberté.\n\nVoyager aux côtés de Valérie, c’est bien plus qu’un simple séjour : c’est une expérience enrichissante et inoubliable, alliant apprentissage et respect de la vie marine.\n\n_Note : L’accompagnateur peut être remplacé pour des raisons techniques ou de force majeure par un professionnel de compétence équivalente._",
   "accompanistsList": [
     {
       "name": "Valérie Valton",
@@ -106,7 +213,6 @@
       "image": "/images/voyages/voyage-dauphins-egypte/YcsFvmSBTcGZtu2SaK5S.jpg"
     }
   ],
-  "accompanistsDescription": "Durant ce voyage, vous serez accompagné(e) par Valérie Valton, une experte passionnée. Éthologue spécialisée dans les interactions avec les mammifères marins, Valérie a consacré plus de 12 ans à explorer les océans, à la rencontre des dauphins et autres créatures fascinantes. Ses recherches en éthologie animale et en médiation Homme-Animal lui ont permis de développer une approche unique et respectueuse, favorisant une véritable connexion avec ces animaux emblématiques.\n\nChaque jour, Valérie vous ouvrira les portes du monde des dauphins, partageant ses connaissances et ses techniques pour décrypter leur comportement et interagir avec eux en harmonie. Plus qu’une rencontre, elle vous invite à une immersion totale dans leur univers, où émerveillement et compréhension se conjuguent pour vivre un échange inter-espèces unique, tout en respectant leur liberté.\n\nVoyager aux côtés de Valérie, c’est bien plus qu’un simple séjour : c’est une expérience enrichissante et inoubliable, alliant apprentissage et respect de la vie marine.\n\n_Note : L’accompagnateur peut être remplacé pour des raisons techniques ou de force majeure par un professionnel de compétence équivalente._",
   "housingBlock": [
     {
       "title": "A bord d'un bateau",
@@ -132,28 +238,16 @@
       ]
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "La croisière en cabine double partagée",
-      "La pension complète avec boissons non alcoolisées à volonté (eau minérale, soda, jus de fruits, café, thé, tisane)",
-      "L'accompagnement par un éthologue spécialiste des cétacés",
-      "Les présentations sur les dauphins et les techniques d'interaction",
-      "L'exploration en zodiacs des plus beaux spots de snorkeling",
-      "La participation à l'étude des dauphins"
-    ],
-    "exclude": [
-      "Les vols internationaux pour se rendre en Egypte",
-      "Les transferts aéroport/bateau",
-      "Le visa : 25 $ (payable sur place en €) pour les Français, Belges et Suisses",
-      "Les boissons alcoolisées",
-      "120 € pour la taxe d’entrée du parc maritime et la taxe de séjour, à régler à bord",
-      "Les pourboires pour l’équipage, les dépenses personnelles aux aéroports",
-      "L’adhésion à l’association Splendeur Nature (20€) pour soutenir le projet de préservation des dauphins en Égypte",
-      "L’assurance voyage Assistance Rapatriement (obligatoire) ou multirisques",
-      "Les activités proposées en option dans la FAQ"
-    ]
+  "image": {
+    "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
+    "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-dauphins-egypte/R3IigocTQvyVLNZgKknl.jpg",
+    "alt": "image secondaire du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
+  },
+  "photosList": [],
+  "videoLinks": [],
   "faqBlock": {
     "faqList": [
       {
@@ -218,26 +312,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1890,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": 80,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG"
-    ]
+  "seo": {
+    "metaTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-dauphins-egypte",
+    "ogTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
+    "ogDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
+      "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
+    },
+    "twitterTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
+    "twitterDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
+      "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

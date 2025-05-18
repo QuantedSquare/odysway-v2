@@ -1,48 +1,279 @@
 {
   "published": true,
   "title": "Observez les aurores boréales en Laponie Norvégienne",
-  "slug": "aurores-boreales-randonnees-norvege",
-  "rating": 4.6,
-  "comments": 14,
-  "description": "Pour ce voyage, nous vous proposons de vivre une expérience rare : partir observer les aurores boréales au-dessus du cercle polaire, en Laponie norvégienne !\n\nChaque hiver, la région se couvre de neige et le ciel s'embrase à la nuit tombée de lumières iréelles. Spot d'observation privilégié, il permet de profiter de ciels purs sous de grandes étendues sauvages. C'est aussi le paradis des activités en pleine nature : randonnée, raquettes, chiens de traîneaux, skis nordiques habillent les paysages, souvent encore vierges.\n\nLors de ce voyage, vos journées seront rythmées par des randonnées accessibles (à pied ou en raquettes), avant de revêtir votre casquette de chasseur d'aurores boréales le soir ! Goûtez au silence absolu, sentez le craquement de la neige sous vos pieds et laissez-vous guider par les éclairages précieux de votre accompagnateur, spécialiste de la Norvège et de ce phénomène si particulier. Chaque soir, profitez d'un hébergement confortable, réchauffez-vous autour d'un bon chocolat chaud et partagez des moments conviviaux.\n\nUn voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels mythiques et faune fascinante : la Norvège va vous émerveiller !",
-  "emailDescription": "👉 Si vous rêvez d'aurores boréales et de vues à couper le souffle, ce voyage en Norvège du nord est fait pour vous !",
-  "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature norvégienne. Au programme : randonnées au bord de magnifiques fjords et chasse aux aurores boréales !",
-  "interjection": "en",
   "destinations": [
-    "Norvège"
+    {
+      "name": "Norvège",
+      "slug": "norvege"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "sejour-trek-randonnee",
-    "voyage-insolite",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "partir-en-amoureux",
-    "partir-en-famille",
-    "sejours-nature",
-    "voyage-sportif"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-sportif"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel et gîte",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 14,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Pour ce voyage, nous vous proposons de vivre une expérience rare : partir observer les aurores boréales au-dessus du cercle polaire, en Laponie norvégienne !\n\nChaque hiver, la région se couvre de neige et le ciel s'embrase à la nuit tombée de lumières iréelles. Spot d'observation privilégié, il permet de profiter de ciels purs sous de grandes étendues sauvages. C'est aussi le paradis des activités en pleine nature : randonnée, raquettes, chiens de traîneaux, skis nordiques habillent les paysages, souvent encore vierges.\n\nLors de ce voyage, vos journées seront rythmées par des randonnées accessibles (à pied ou en raquettes), avant de revêtir votre casquette de chasseur d'aurores boréales le soir ! Goûtez au silence absolu, sentez le craquement de la neige sous vos pieds et laissez-vous guider par les éclairages précieux de votre accompagnateur, spécialiste de la Norvège et de ce phénomène si particulier. Chaque soir, profitez d'un hébergement confortable, réchauffez-vous autour d'un bon chocolat chaud et partagez des moments conviviaux.\n\nUn voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels mythiques et faune fascinante : la Norvège va vous émerveiller !",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Partez à la chasse aux aurores boréales dans des spots privilégiés",
+    "Écoutez la neige craquer sous vos pieds dans le paradis blanc des Alpes Norvégiennes",
+    "Reposez-vous le soir dans des hébergements cosy et chaleureux",
+    "Profitez de l'expérience d'un guide francophone tout au long du voyage",
+    "Vivez l'effervescence de Tromsø, porte d'entrée de la Laponie norvégienne"
+  ],
+  "slug": "aurores-boreales-randonnees-norvege",
+  "description": "Pour ce voyage, nous vous proposons de vivre une expérience rare : partir observer les aurores boréales au-dessus du cercle polaire, en Laponie norvégienne !\n\nChaque hiver, la région se couvre de neige et le ciel s'embrase à la nuit tombée de lumières iréelles. Spot d'observation privilégié, il permet de profiter de ciels purs sous de grandes étendues sauvages. C'est aussi le paradis des activités en pleine nature : randonnée, raquettes, chiens de traîneaux, skis nordiques habillent les paysages, souvent encore vierges.\n\nLors de ce voyage, vos journées seront rythmées par des randonnées accessibles (à pied ou en raquettes), avant de revêtir votre casquette de chasseur d'aurores boréales le soir ! Goûtez au silence absolu, sentez le craquement de la neige sous vos pieds et laissez-vous guider par les éclairages précieux de votre accompagnateur, spécialiste de la Norvège et de ce phénomène si particulier. Chaque soir, profitez d'un hébergement confortable, réchauffez-vous autour d'un bon chocolat chaud et partagez des moments conviviaux.\n\nUn voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels mythiques et faune fascinante : la Norvège va vous émerveiller !",
+  "emailDescription": "👉 Si vous rêvez d'aurores boréales et de vues à couper le souffle, ce voyage en Norvège du nord est fait pour vous !",
+  "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature norvégienne. Au programme : randonnées au bord de magnifiques fjords et chasse aux aurores boréales !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Hôtel et gîte",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Oct à Mars",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE À TROMSØ",
+      "badgeText": "JOUR 1",
+      "description": "Bienvenue à Tromsø, au nord de cercle polaire. Débordante d'énergie, la cité scandinave est la porte d'entrée de la Laponie norvégienne, entre montagnes majestueuses et aux fjords scintillants. Sur place, découvrez l'histoire des explorations polaires dans son musée, visitez sa cathédrale arctique ou profitez d'une vue panoramique depuis son téléphérique. L'occasion de vous imprégner de l'histoire si particulière de la région, avant la déconnexion totale des prochains jours ! Briefing de votre guide et dîner libre dans les restaurants typiques de la ville.\r\n",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/bTYrWKDQOytTTYv1Lgsg.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU COEUR DES ALPES NORVÉGIENNES",
+      "badgeText": "JOUR 2",
+      "description": "On déconnecte ! Départ en direction des Alpes de Lyngen, montagnes immaculées abritant d'immenses glaciers. Vous partez pour une belle randonnée avec votre guide dans le paradis blanc des vallées glaciaires, typiques de la Norvège du Nord. En fin de journée, installation dans votre confortable hébergement pour deux nuits. Soirée au chaud et dîner typique. Si le temps le permet, observation à la nuit tombée des aurores boréales dans ces paysages uniques !",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/oBJNgOJRGS4jpObBypFt.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FJORD ET ÉLANS",
+      "badgeText": "JOUR 3",
+      "description": "Exploration à pied avec votre guide de la péninsule de Lyngspollen. Vous évoluerez dans des paysages vierges avec une vue imprenable sur le fjord et les sommets glaciaires environnants. Peut-être croiserez-vous un élan en cours de route ? Une belle journée 100% oxygénation, dont seules les Alpes de Lyngen ont le secret !",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/koVLyPkbRvWrsUJHBE8g.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "L'ILE DE SENJA",
+      "badgeText": "JOUR 4",
+      "description": "Direction votre nouvel hébergement des prochains jours sur l'île de Senja. Confortable et chaleureux, il est idéalement situé en bord de mer. Dans l'après-midi, départ pour une nouvelle randonnée d'exception vers le lac sauvage de Storvatnet. En chemin, étendues bleues de la mer de Norvège, fjord et centaines d'îlots se succèdent dans une ambiance surnaturelle.",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/BHpGQa8uS8Kt1AjXuk7y.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PANORAMAS ET PURETÉ",
+      "badgeText": "JOUR 5",
+      "description": "Votre randonnée du jour vers le Mefjorddalen vous réservera de belles surprises : panorama majestueux depuis le mont Knuten, ambiance des fjords et traversée du charmant village de pêcheurs de Mefjord, aux allures de bout du monde. Retour au chaud et dîner convivial tous ensemble. En soirée, nouvelle sortie pour chasser les aurores boréales !",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/09Q4FkkPQLi0YbcWeQLq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIÈRE SOIRÉE D'OBSERVATION",
+      "badgeText": "JOUR 6 ",
+      "description": "Votre dernière journée de randonnée vous offrira des vues spectaculaires (et toujours différentes de la veille !) dans un calme absolu. Retour à votre hébergement pour la nuit et ultime soirée à la recherche des aurores boréales. Toute une ambiance !\r\n",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/BKj61UPGSCaWA5UmAeuM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR À TROMSØ",
+      "badgeText": "JOUR 7",
+      "description": "Après toutes ces aventures, il fait bon de rentrer à Tromsø ! Traversée une dernière fois de l’île de Senja. Vous pourrez faire des pauses photos le long de ces routes si photogéniques et débriefer sur votre voyage. Arrivée dans l'après-midi. Soirée libre pour passer un moment hygge autour d'un chocolat chaud ou vous régaler de spécialités norvégiennes.",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/Z0XBGEK7TIOANQUJkSTH.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 8 ",
+      "description": "Après ces découvertes magiques, il est temps de repartir avec des étoiles plein les yeux. Transfert privatif à l'aéroport pour prendre votre vol retour vers la France.",
+      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/FzqTo1l2SPaRPlA8bnGy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "7 nuits en hébergements confortables (auberge, rorbu, sjøhus)",
+      "Tous les transferts sur place en mini-bus privatisé",
+      "Tous les repas (sauf les dîners du J1 et J7 à Tromsø)",
+      "Le transport de vos bagages durant le voyage",
+      "L'encadrement par un guide accompagnateur francophone",
+      "Le prêt de raquettes à neige et de bâtons et du matériel de sécurité (en cas de neige abondante)",
+      "Pour les dates \"spécial réveillon\" (20/12 et 27/12) : un repas de fête au restaurant sur l'île de Senja."
+    ],
+    "exclude": [
+      "Les vols Paris / Tromsø / Paris (vols réguliers) (possibilité de devis avec vols inclus sur demande)",
+      "Les dîners du J1 et J7 à Tromsø (comptez 30 à 40 euros par repas)",
+      "Les boissons aux repas",
+      "Facultatif : les pourboires selon votre envie (à titre indicatif, comptez entre 30€ et 50€ par personne)",
+      "Facultatif : les activités proposées en option dans la FAQ (chiens de traîneaux, nuit supp. à Trømso et/ou Oslo)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2020,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "TOS",
+      "CDG"
+    ]
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [
+    {
+      "name": "Un guide francophone dédié",
+      "description": "Installée dans les îles Lofoten depuis de nombreuses années, notre équipe sur place vous garantit une expérience inoubliable, au plus proche de la culture norvégienne. Pendant votre voyage, vous êtes accompagnés par un guide expérimenté, mobilisé à 100% pour vous faire découvrir des endroits insolites en pleine nature. Spécialistes de la région et du phénomène des aurores boréales, il est une source de savoir précieux pour comprendre ce phénomène peu commun.",
+      "role": "Spécialiste de la Norvège et des aurores boréales",
+      "image": "/images/voyages/aurores-boreales-randonnees-norvege/WLoElBSlQe2Th1lVwd4m.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel et gîte",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous serez hébergés à l’hôtel et en gîte de type appartement privatif (chambre double ou twin). Une chambre individuelle peut être prévue sur demande, sous réserve de disponibilité. Les hébergements sont choisis avec soin : ils sont confortables et chaleureux, dans un cadre unique.",
+      "image": [
+        {
+          "src": "/images/voyages/aurores-boreales-randonnees-norvege/jAFVIzWQxmdLesqMxq6E.jpg",
+          "alt": "image de l'hébergement Observez les aurores boréales en Laponie Norvégienne"
+        },
+        {
+          "src": "/images/voyages/aurores-boreales-randonnees-norvege/Sk3RozAnRTGwL7GIKsAC.jpg",
+          "alt": "image de l'hébergement Observez les aurores boréales en Laponie Norvégienne"
+        },
+        {
+          "src": "/images/voyages/aurores-boreales-randonnees-norvege/QSXqqNgOQWCtixMUnQZi.jpg",
+          "alt": "image de l'hébergement Observez les aurores boréales en Laponie Norvégienne"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/aurores-boreales-randonnees-norvege/z0Yeoy5OTf2rlaqzA13f.jpg",
     "alt": "image principale du voyage Observez les aurores boréales en Laponie Norvégienne"
@@ -82,126 +313,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Pour ce voyage, nous vous proposons de vivre une expérience rare : partir observer les aurores boréales au-dessus du cercle polaire, en Laponie norvégienne !\n\nChaque hiver, la région se couvre de neige et le ciel s'embrase à la nuit tombée de lumières iréelles. Spot d'observation privilégié, il permet de profiter de ciels purs sous de grandes étendues sauvages. C'est aussi le paradis des activités en pleine nature : randonnée, raquettes, chiens de traîneaux, skis nordiques habillent les paysages, souvent encore vierges.\n\nLors de ce voyage, vos journées seront rythmées par des randonnées accessibles (à pied ou en raquettes), avant de revêtir votre casquette de chasseur d'aurores boréales le soir ! Goûtez au silence absolu, sentez le craquement de la neige sous vos pieds et laissez-vous guider par les éclairages précieux de votre accompagnateur, spécialiste de la Norvège et de ce phénomène si particulier. Chaque soir, profitez d'un hébergement confortable, réchauffez-vous autour d'un bon chocolat chaud et partagez des moments conviviaux.\n\nUn voyage rafraîchissant 100% oxygénation entre fjords majestueux, archipels mythiques et faune fascinante : la Norvège va vous émerveiller !",
-    "author": "Salomé",
-    "affixeAuthor": "Créatrice de voyages immersifs (fan de paysages polaires depuis son jacuzzi 😉)"
-  },
-  "experiencesBlock": [
-    "Partez à la chasse aux aurores boréales dans des spots privilégiés",
-    "Écoutez la neige craquer sous vos pieds dans le paradis blanc des Alpes Norvégiennes",
-    "Reposez-vous le soir dans des hébergements cosy et chaleureux",
-    "Profitez de l'expérience d'un guide francophone tout au long du voyage",
-    "Vivez l'effervescence de Tromsø, porte d'entrée de la Laponie norvégienne"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE À TROMSØ",
-      "badgeText": "JOUR 1",
-      "description": "Bienvenue à Tromsø, au nord de cercle polaire. Débordante d'énergie, la cité scandinave est la porte d'entrée de la Laponie norvégienne, entre montagnes majestueuses et aux fjords scintillants. Sur place, découvrez l'histoire des explorations polaires dans son musée, visitez sa cathédrale arctique ou profitez d'une vue panoramique depuis son téléphérique. L'occasion de vous imprégner de l'histoire si particulière de la région, avant la déconnexion totale des prochains jours ! Briefing de votre guide et dîner libre dans les restaurants typiques de la ville.\r\n",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/bTYrWKDQOytTTYv1Lgsg.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU COEUR DES ALPES NORVÉGIENNES",
-      "badgeText": "JOUR 2",
-      "description": "On déconnecte ! Départ en direction des Alpes de Lyngen, montagnes immaculées abritant d'immenses glaciers. Vous partez pour une belle randonnée avec votre guide dans le paradis blanc des vallées glaciaires, typiques de la Norvège du Nord. En fin de journée, installation dans votre confortable hébergement pour deux nuits. Soirée au chaud et dîner typique. Si le temps le permet, observation à la nuit tombée des aurores boréales dans ces paysages uniques !",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/oBJNgOJRGS4jpObBypFt.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FJORD ET ÉLANS",
-      "badgeText": "JOUR 3",
-      "description": "Exploration à pied avec votre guide de la péninsule de Lyngspollen. Vous évoluerez dans des paysages vierges avec une vue imprenable sur le fjord et les sommets glaciaires environnants. Peut-être croiserez-vous un élan en cours de route ? Une belle journée 100% oxygénation, dont seules les Alpes de Lyngen ont le secret !",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/koVLyPkbRvWrsUJHBE8g.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "L'ILE DE SENJA",
-      "badgeText": "JOUR 4",
-      "description": "Direction votre nouvel hébergement des prochains jours sur l'île de Senja. Confortable et chaleureux, il est idéalement situé en bord de mer. Dans l'après-midi, départ pour une nouvelle randonnée d'exception vers le lac sauvage de Storvatnet. En chemin, étendues bleues de la mer de Norvège, fjord et centaines d'îlots se succèdent dans une ambiance surnaturelle.",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/BHpGQa8uS8Kt1AjXuk7y.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PANORAMAS ET PURETÉ",
-      "badgeText": "JOUR 5",
-      "description": "Votre randonnée du jour vers le Mefjorddalen vous réservera de belles surprises : panorama majestueux depuis le mont Knuten, ambiance des fjords et traversée du charmant village de pêcheurs de Mefjord, aux allures de bout du monde. Retour au chaud et dîner convivial tous ensemble. En soirée, nouvelle sortie pour chasser les aurores boréales !",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/09Q4FkkPQLi0YbcWeQLq.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIÈRE SOIRÉE D'OBSERVATION",
-      "badgeText": "JOUR 6 ",
-      "description": "Votre dernière journée de randonnée vous offrira des vues spectaculaires (et toujours différentes de la veille !) dans un calme absolu. Retour à votre hébergement pour la nuit et ultime soirée à la recherche des aurores boréales. Toute une ambiance !\r\n",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/BKj61UPGSCaWA5UmAeuM.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR À TROMSØ",
-      "badgeText": "JOUR 7",
-      "description": "Après toutes ces aventures, il fait bon de rentrer à Tromsø ! Traversée une dernière fois de l’île de Senja. Vous pourrez faire des pauses photos le long de ces routes si photogéniques et débriefer sur votre voyage. Arrivée dans l'après-midi. Soirée libre pour passer un moment hygge autour d'un chocolat chaud ou vous régaler de spécialités norvégiennes.",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/Z0XBGEK7TIOANQUJkSTH.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR EN FRANCE",
-      "badgeText": "JOUR 8 ",
-      "description": "Après ces découvertes magiques, il est temps de repartir avec des étoiles plein les yeux. Transfert privatif à l'aéroport pour prendre votre vol retour vers la France.",
-      "photo": "/images/voyages/aurores-boreales-randonnees-norvege/FzqTo1l2SPaRPlA8bnGy.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Un guide francophone dédié",
-      "description": "Installée dans les îles Lofoten depuis de nombreuses années, notre équipe sur place vous garantit une expérience inoubliable, au plus proche de la culture norvégienne. Pendant votre voyage, vous êtes accompagnés par un guide expérimenté, mobilisé à 100% pour vous faire découvrir des endroits insolites en pleine nature. Spécialistes de la région et du phénomène des aurores boréales, il est une source de savoir précieux pour comprendre ce phénomène peu commun.",
-      "role": "Spécialiste de la Norvège et des aurores boréales",
-      "image": "/images/voyages/aurores-boreales-randonnees-norvege/WLoElBSlQe2Th1lVwd4m.jpg"
-    }
-  ],
-  "accompanistsDescription": "",
-  "housingBlock": [
-    {
-      "title": "Hôtel et gîte",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage, vous serez hébergés à l’hôtel et en gîte de type appartement privatif (chambre double ou twin). Une chambre individuelle peut être prévue sur demande, sous réserve de disponibilité. Les hébergements sont choisis avec soin : ils sont confortables et chaleureux, dans un cadre unique.",
-      "image": [
-        {
-          "src": "/images/voyages/aurores-boreales-randonnees-norvege/jAFVIzWQxmdLesqMxq6E.jpg",
-          "alt": "image de l'hébergement Observez les aurores boréales en Laponie Norvégienne"
-        },
-        {
-          "src": "/images/voyages/aurores-boreales-randonnees-norvege/Sk3RozAnRTGwL7GIKsAC.jpg",
-          "alt": "image de l'hébergement Observez les aurores boréales en Laponie Norvégienne"
-        },
-        {
-          "src": "/images/voyages/aurores-boreales-randonnees-norvege/QSXqqNgOQWCtixMUnQZi.jpg",
-          "alt": "image de l'hébergement Observez les aurores boréales en Laponie Norvégienne"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "7 nuits en hébergements confortables (auberge, rorbu, sjøhus)",
-      "Tous les transferts sur place en mini-bus privatisé",
-      "Tous les repas (sauf les dîners du J1 et J7 à Tromsø)",
-      "Le transport de vos bagages durant le voyage",
-      "L'encadrement par un guide accompagnateur francophone",
-      "Le prêt de raquettes à neige et de bâtons et du matériel de sécurité (en cas de neige abondante)",
-      "Pour les dates \"spécial réveillon\" (20/12 et 27/12) : un repas de fête au restaurant sur l'île de Senja."
-    ],
-    "exclude": [
-      "Les vols Paris / Tromsø / Paris (vols réguliers) (possibilité de devis avec vols inclus sur demande)",
-      "Les dîners du J1 et J7 à Tromsø (comptez 30 à 40 euros par repas)",
-      "Les boissons aux repas",
-      "Facultatif : les pourboires selon votre envie (à titre indicatif, comptez entre 30€ et 50€ par personne)",
-      "Facultatif : les activités proposées en option dans la FAQ (chiens de traîneaux, nuit supp. à Trømso et/ou Oslo)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -246,27 +357,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1958,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "TOS",
-      "CDG"
-    ]
+  "seo": {
+    "metaTitle": "Observez les aurores boréales en Laponie Norvégienne",
+    "canonicalUrl": "https://www.odysway.com/voyages/aurores-boreales-randonnees-norvege",
+    "ogTitle": "Observez les aurores boréales en Laponie Norvégienne",
+    "ogDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature norvégienne. Au programme : randonnées au bord de magnifiques fjords et chasse aux aurores boréales !",
+    "ogImage": {
+      "src": "/images/voyages/aurores-boreales-randonnees-norvege/z0Yeoy5OTf2rlaqzA13f.jpg",
+      "alt": "image principale du voyage Observez les aurores boréales en Laponie Norvégienne"
+    },
+    "twitterTitle": "Observez les aurores boréales en Laponie Norvégienne",
+    "twitterDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature norvégienne. Au programme : randonnées au bord de magnifiques fjords et chasse aux aurores boréales !",
+    "twitterImage": {
+      "src": "/images/voyages/aurores-boreales-randonnees-norvege/z0Yeoy5OTf2rlaqzA13f.jpg",
+      "alt": "image principale du voyage Observez les aurores boréales en Laponie Norvégienne"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

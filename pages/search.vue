@@ -173,14 +173,14 @@ const { data: voyages } = useAsyncData(
     const travelType = route.query.travelType || null
     const dateRange = route.query.dateRange || null
 
-    const allVoyages = await queryCollection('voyages').where('published', '=', true).all()
+    const allVoyages = await queryCollection('voyages').where('published', '==', true).all()
     if (!destination && !travelType && !dateRange) {
       console.log('Aucun filtre — retour vide')
       return allVoyages
     }
 
     const getFilteredByDestination = (allVoyages, destinationParam) => {
-      return allVoyages.filter(v => v.destinations?.includes(destinationParam))
+      return allVoyages.filter(v => v.destinations?.some(d => d.name.includes(destinationParam)))
     }
 
     const getFilteredByType = (allVoyages, travelType) => {

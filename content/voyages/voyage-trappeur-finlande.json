@@ -1,31 +1,223 @@
 {
   "published": true,
   "title": "Voyagez comme un trappeur en Finlande",
-  "slug": "voyage-trappeur-finlande",
-  "rating": 4.9,
-  "comments": 11,
-  "description": "Dans les pas des anciens explorateurs, randonnez à travers la majestueuse forêt boréale du parc de Hossa en raquette. Laissez-vous porter par cette ambiance unique en avançant sur le manteau neigeux de la Laponie Finlandaise.\n\nAprès une initiation en douceur, lancez-vous pour une expédition de 4 jours en pleine autonomie accompagnés d'un guide spécialiste des milieux polaires et de la survie. Les nuits passées dans des cabanes isolées vous immergeront dans le monde des trappeurs. Embrassez cette odyssée nordique, tracez votre chemin dans la neige vierge et ressentez la nature dans toute sa splendeur.",
-  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir découvrir la Finlande comme un véritable trappeur, cette immersion est faite pour vous !",
-  "metaDescription": "Explorez le parc Naturel de Hossa en raquettes, à l'image des premiers nordiques. Semaine autonome avec pulkas. Immergez-vous dans la nature pure.",
-  "interjection": "en",
   "destinations": [
-    "Finlande"
+    {
+      "name": "Finlande",
+      "slug": "finlande"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "sejour-trek-randonnee",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "sejour-survie",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "survie"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": true,
+  "housingType": "Chalet et cabane de trappeur",
   "idealPeriods": [],
   "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 4.9,
+  "comments": 11,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Dans les pas des anciens explorateurs, randonnez à travers la majestueuse forêt boréale du parc de Hossa en raquette. Laissez-vous porter par cette ambiance unique en avançant sur le manteau neigeux de la Laponie Finlandaise.\n\nAprès une initiation en douceur, lancez-vous pour une expédition de 4 jours en pleine autonomie accompagnés d'un guide spécialiste des milieux polaires et de la survie. Les nuits passées dans des cabanes isolées vous immergeront dans le monde des trappeurs. Embrassez cette odyssée nordique, tracez votre chemin dans la neige vierge et ressentez la nature dans toute sa splendeur.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Plongez au cœur de la forêt boréale de Hossa accompagné d'un guide spécialiste de la région.",
+    "Déplacez-vous en raquettes tel un trappeur à travers la neige fraîche",
+    "Vivez une aventure en autonomie et découvrez la survie en milieu polaire",
+    "Dormez dans des cabanes isolées et détendez-vous le soir dans des saunas",
+    "Observez des aurores boréales et le ciel étoilé"
+  ],
+  "slug": "voyage-trappeur-finlande",
+  "description": "Dans les pas des anciens explorateurs, randonnez à travers la majestueuse forêt boréale du parc de Hossa en raquette. Laissez-vous porter par cette ambiance unique en avançant sur le manteau neigeux de la Laponie Finlandaise.\n\nAprès une initiation en douceur, lancez-vous pour une expédition de 4 jours en pleine autonomie accompagnés d'un guide spécialiste des milieux polaires et de la survie. Les nuits passées dans des cabanes isolées vous immergeront dans le monde des trappeurs. Embrassez cette odyssée nordique, tracez votre chemin dans la neige vierge et ressentez la nature dans toute sa splendeur.",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir découvrir la Finlande comme un véritable trappeur, cette immersion est faite pour vous !",
+  "metaDescription": "Explorez le parc Naturel de Hossa en raquettes, à l'image des premiers nordiques. Semaine autonome avec pulkas. Immergez-vous dans la nature pure.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Jan à Avr",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE EN FINLANDE",
+      "badgeText": "JOUR 1",
+      "description": "Après votre vol aller à destination de Kuusamo (ou Hossa selon votre date de départ), nos équipes vous accueillent à l'aéroport et vous emmènent au camp de base, près de la ville d'Hossa. Le soir, dîner tous ensemble, rencontre avec votre guide et présentation du programme de la semaine.",
+      "photo": "/images/voyages/voyage-trappeur-finlande/kqrCLj5uQy236nvVu7vk.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNEE DE DECOUVERTE",
+      "badgeText": "JOUR 2",
+      "description": "Première journée d’appréhension du milieu polaire, avec une première randonnée à la journée. Vous vous habituez en toute tranquillité à l’environnement qui sera le votre pour le reste du séjour. En fin de journée, retour à l’auberge puis préparation du matériel nécessaire pour votre départ itinérant dès le lendemain. Nuit en chalet.\r\n",
+      "photo": "/images/voyages/voyage-trappeur-finlande/HfToZQcSL6OQsGP1cfhT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DEPART POUR L'AVENTURE",
+      "badgeText": "JOUR 3",
+      "description": "C'est le grand départ pour une randonnée itinérante de 4 jours dans le parc de Hossa, tel un trappeur. Vous serez accompagnés d'un guide spécialisé des milieux polaires et de deux chiens. Le groupe tirera à tour de rôle deux pulkas qui transporteront tout ce qu'il vous faut pour être en autonomie pendant 4 jours ! 6h de randonnée par jour en moyenne. Première nuit en cabane de trappeur.",
+      "photo": "/images/voyages/voyage-trappeur-finlande/3ttFEr80Rhq9ZTb5WH5x.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN PLEIN APPRENTISSAGE",
+      "badgeText": "JOUR 4",
+      "description": "Après une première journée, vous poursuivez la marche en ouvrant des traces sur la neige fraiche. A tour de rôle, vous pourrez ouvrir la route, participer à l'orientation à travers les différents écosystèmes du parc : le long des crêtes, au-dessus des lacs et rivières. Les paysages sont tantôt aériens sur les crêtes, tantôt en immersion dans les passages sous-bois. Deuxième nuit en cabane de trappeur.",
+      "photo": "/images/voyages/voyage-trappeur-finlande/VDQ6F94bQaOsP8f5ukFI.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE MODE DE VIE TRAPPEUR",
+      "badgeText": "JOUR 5",
+      "description": "Tout au long du séjour, votre guide vous fera découvrir les secrets du mode de vie trappeur : allumage du feu, pêche sous glace, techniques du fumage de poisson préparé sur un feu de bois... Profitez de ces moments magiques en pleine nature, et revenez fort de ces apprentissages de techniques de survie en milieu polaire. Troisième nuit en cabane de trappeur.",
+      "photo": "/images/voyages/voyage-trappeur-finlande/YUEp47fRUi0tXGxYR9Tw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERE NUIT",
+      "badgeText": "JOUR 6",
+      "description": "Dernière nuit inoubliable et conviviale dans une les chaleureuses cabanes du parc, dernière nuit aussi dans la peau d'un trappeur. Profitez bien de ces derniers instants en immersion, et qui sait, peut être aurez vous la chance de voir des aurores boréales pour terminer en apothéose. Retour à Hossa en fin d'après midi pour un sauna bien mérité ! Dernière nuit en cabane de trappeur.",
+      "photo": "/images/voyages/voyage-trappeur-finlande/QPpaSAc2SiStn9cGaUT5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNEE LIBRE",
+      "badgeText": "JOUR 7",
+      "description": "Profitez d'une journée libre au camp de base sans activité de prévue. Vous pourrez vous reposer, profiter du sauna, ou réserver une activité à la journée (ski de randonnée nordique, motoneige, raquettes, pêche, élevage de rennes...). Le soir dîner d'adieu traditionnel finlandais : le Poronkäristys, repas typiques des éleveurs de rennes. Nuit en chalet.",
+      "photo": "/images/voyages/voyage-trappeur-finlande/fV1PkadoR5GOSFtjOB1V.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOL RETOUR",
+      "badgeText": "JOUR 8",
+      "description": "Votre voyage en Finlande touche à sa fin ! Derniers instants avec votre guide, dites au revoir à ce magnifique havre de paix. Après un dernier lever de soleil sur le lac, nos équipes vous emmèneront à l'aéroport de Kuusamo où vous prendrez votre vol retour à destination de Paris.\r\n",
+      "photo": "/images/voyages/voyage-trappeur-finlande/yJ0CvRxGRaKZtSc8VIkt.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Le vol A/R entre Paris et Kuusamo",
+      "L'accueil et les transferts aéroport Kuusamo / Hossa (le samedi ou dimanche)",
+      "L'Hébergement : 4 nuits en chalet en base double et 3 nuits en cabanes de trappeur (chambres de 4 ou 6 selon la cabane)",
+      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 8",
+      "Le transport des bagages",
+      "L'encadrement par des guides francophones spécialistes du milieu polaire",
+      "Le prêt de l’équipement grand froid comprenant bottes grand froid (type Sorel), une veste grand froid et des moufles (pour la semaine). Merci de nous prévenir en amont pour les pointures en dessous de 34  et au-dessus de 50 s'il vous plaît."
+    ],
+    "exclude": [
+      "Les activités en option sur la journée libre",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles sur place",
+      "Le supplément chambre simple sur le camp de base : 300 euros/personne (soumis à disponibilité selon la date choisie)",
+      "La caution pour le matériel par empreinte de votre carte bancaire : 50 euros pour les bottes, 50 euros pour la veste grand froid",
+      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2115,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "L'un des points forts de cette aventure polaire est l'encadrement par des guides spécialistes de la région : votre guide francophone qui maîtrise parfaitement les spécificités et les défis du milieu polaire et les guides accompagnateurs pendant la journée libre.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Chalet et cabane de trappeur",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous passerez 4 nuits dans le camp de base et 3 nuits en cabane de trappeur :\r\n \r\nLes nuits des jours 1, 2,6 et 7 : Camp de base : Vous serez logés dans un chalet traditionnel. \r\n \r\nLes nuits des jours 3, 4 et 5 : Cabanes de trappeur : Elles s'apparentent aux refuges que l'on trouve en France. Ces cabanes en bois sont simples mais charmantes. Elles disposent d’un espace dortoir ou d'une chambre pouvant accueillir 4 à 6 personnes, agrémentées d’une pièce à vivre. Certaines sont équipées d'un sauna pour une détente optimale. Nichées au bord d'un lac et entourées par la forêt, ces cabanes offrent un panorama idéal pour contempler le coucher du soleil !",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-trappeur-finlande/WbWPvxiR2u4ggVYI8jIQ.jpg",
+          "alt": "image de l'hébergement Voyagez comme un trappeur en Finlande"
+        },
+        {
+          "src": "/images/voyages/voyage-trappeur-finlande/vIslyiZNQ6G2ZcmY0HMI.jpg",
+          "alt": "image de l'hébergement Voyagez comme un trappeur en Finlande"
+        },
+        {
+          "src": "/images/voyages/voyage-trappeur-finlande/GeVABfyhRqbVOfcrxXjN.jpg",
+          "alt": "image de l'hébergement Voyagez comme un trappeur en Finlande"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-trappeur-finlande/jD8zYMQBiXna5zdtqrnw.jpg",
     "alt": "image principale du voyage Voyagez comme un trappeur en Finlande"
@@ -73,120 +265,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Dans les pas des anciens explorateurs, randonnez à travers la majestueuse forêt boréale du parc de Hossa en raquette. Laissez-vous porter par cette ambiance unique en avançant sur le manteau neigeux de la Laponie Finlandaise.\n\nAprès une initiation en douceur, lancez-vous pour une expédition de 4 jours en pleine autonomie accompagnés d'un guide spécialiste des milieux polaires et de la survie. Les nuits passées dans des cabanes isolées vous immergeront dans le monde des trappeurs. Embrassez cette odyssée nordique, tracez votre chemin dans la neige vierge et ressentez la nature dans toute sa splendeur.",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Plongez au cœur de la forêt boréale de Hossa accompagné d'un guide spécialiste de la région.",
-    "Déplacez-vous en raquettes tel un trappeur à travers la neige fraîche",
-    "Vivez une aventure en autonomie et découvrez la survie en milieu polaire",
-    "Dormez dans des cabanes isolées et détendez-vous le soir dans des saunas",
-    "Observez des aurores boréales et le ciel étoilé"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE EN FINLANDE",
-      "badgeText": "JOUR 1",
-      "description": "Après votre vol aller à destination de Kuusamo (ou Hossa selon votre date de départ), nos équipes vous accueillent à l'aéroport et vous emmènent au camp de base, près de la ville d'Hossa. Le soir, dîner tous ensemble, rencontre avec votre guide et présentation du programme de la semaine.",
-      "photo": "/images/voyages/voyage-trappeur-finlande/kqrCLj5uQy236nvVu7vk.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNEE DE DECOUVERTE",
-      "badgeText": "JOUR 2",
-      "description": "Première journée d’appréhension du milieu polaire, avec une première randonnée à la journée. Vous vous habituez en toute tranquillité à l’environnement qui sera le votre pour le reste du séjour. En fin de journée, retour à l’auberge puis préparation du matériel nécessaire pour votre départ itinérant dès le lendemain. Nuit en chalet.\r\n",
-      "photo": "/images/voyages/voyage-trappeur-finlande/HfToZQcSL6OQsGP1cfhT.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DEPART POUR L'AVENTURE",
-      "badgeText": "JOUR 3",
-      "description": "C'est le grand départ pour une randonnée itinérante de 4 jours dans le parc de Hossa, tel un trappeur. Vous serez accompagnés d'un guide spécialisé des milieux polaires et de deux chiens. Le groupe tirera à tour de rôle deux pulkas qui transporteront tout ce qu'il vous faut pour être en autonomie pendant 4 jours ! 6h de randonnée par jour en moyenne. Première nuit en cabane de trappeur.",
-      "photo": "/images/voyages/voyage-trappeur-finlande/3ttFEr80Rhq9ZTb5WH5x.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN PLEIN APPRENTISSAGE",
-      "badgeText": "JOUR 4",
-      "description": "Après une première journée, vous poursuivez la marche en ouvrant des traces sur la neige fraiche. A tour de rôle, vous pourrez ouvrir la route, participer à l'orientation à travers les différents écosystèmes du parc : le long des crêtes, au-dessus des lacs et rivières. Les paysages sont tantôt aériens sur les crêtes, tantôt en immersion dans les passages sous-bois. Deuxième nuit en cabane de trappeur.",
-      "photo": "/images/voyages/voyage-trappeur-finlande/VDQ6F94bQaOsP8f5ukFI.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE MODE DE VIE TRAPPEUR",
-      "badgeText": "JOUR 5",
-      "description": "Tout au long du séjour, votre guide vous fera découvrir les secrets du mode de vie trappeur : allumage du feu, pêche sous glace, techniques du fumage de poisson préparé sur un feu de bois... Profitez de ces moments magiques en pleine nature, et revenez fort de ces apprentissages de techniques de survie en milieu polaire. Troisième nuit en cabane de trappeur.",
-      "photo": "/images/voyages/voyage-trappeur-finlande/YUEp47fRUi0tXGxYR9Tw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERE NUIT",
-      "badgeText": "JOUR 6",
-      "description": "Dernière nuit inoubliable et conviviale dans une les chaleureuses cabanes du parc, dernière nuit aussi dans la peau d'un trappeur. Profitez bien de ces derniers instants en immersion, et qui sait, peut être aurez vous la chance de voir des aurores boréales pour terminer en apothéose. Retour à Hossa en fin d'après midi pour un sauna bien mérité ! Dernière nuit en cabane de trappeur.",
-      "photo": "/images/voyages/voyage-trappeur-finlande/QPpaSAc2SiStn9cGaUT5.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNEE LIBRE",
-      "badgeText": "JOUR 7",
-      "description": "Profitez d'une journée libre au camp de base sans activité de prévue. Vous pourrez vous reposer, profiter du sauna, ou réserver une activité à la journée (ski de randonnée nordique, motoneige, raquettes, pêche, élevage de rennes...). Le soir dîner d'adieu traditionnel finlandais : le Poronkäristys, repas typiques des éleveurs de rennes. Nuit en chalet.",
-      "photo": "/images/voyages/voyage-trappeur-finlande/fV1PkadoR5GOSFtjOB1V.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VOL RETOUR",
-      "badgeText": "JOUR 8",
-      "description": "Votre voyage en Finlande touche à sa fin ! Derniers instants avec votre guide, dites au revoir à ce magnifique havre de paix. Après un dernier lever de soleil sur le lac, nos équipes vous emmèneront à l'aéroport de Kuusamo où vous prendrez votre vol retour à destination de Paris.\r\n",
-      "photo": "/images/voyages/voyage-trappeur-finlande/yJ0CvRxGRaKZtSc8VIkt.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "L'un des points forts de cette aventure polaire est l'encadrement par des guides spécialistes de la région : votre guide francophone qui maîtrise parfaitement les spécificités et les défis du milieu polaire et les guides accompagnateurs pendant la journée libre.",
-  "housingBlock": [
-    {
-      "title": "Chalet et cabane de trappeur",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage, vous passerez 4 nuits dans le camp de base et 3 nuits en cabane de trappeur :\r\n \r\nLes nuits des jours 1, 2,6 et 7 : Camp de base : Vous serez logés dans un chalet traditionnel. \r\n \r\nLes nuits des jours 3, 4 et 5 : Cabanes de trappeur : Elles s'apparentent aux refuges que l'on trouve en France. Ces cabanes en bois sont simples mais charmantes. Elles disposent d’un espace dortoir ou d'une chambre pouvant accueillir 4 à 6 personnes, agrémentées d’une pièce à vivre. Certaines sont équipées d'un sauna pour une détente optimale. Nichées au bord d'un lac et entourées par la forêt, ces cabanes offrent un panorama idéal pour contempler le coucher du soleil !",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-trappeur-finlande/WbWPvxiR2u4ggVYI8jIQ.jpg",
-          "alt": "image de l'hébergement Voyagez comme un trappeur en Finlande"
-        },
-        {
-          "src": "/images/voyages/voyage-trappeur-finlande/vIslyiZNQ6G2ZcmY0HMI.jpg",
-          "alt": "image de l'hébergement Voyagez comme un trappeur en Finlande"
-        },
-        {
-          "src": "/images/voyages/voyage-trappeur-finlande/GeVABfyhRqbVOfcrxXjN.jpg",
-          "alt": "image de l'hébergement Voyagez comme un trappeur en Finlande"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le vol A/R entre Paris et Kuusamo",
-      "L'accueil et les transferts aéroport Kuusamo / Hossa (le samedi ou dimanche)",
-      "L'Hébergement : 4 nuits en chalet en base double et 3 nuits en cabanes de trappeur (chambres de 4 ou 6 selon la cabane)",
-      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 8",
-      "Le transport des bagages",
-      "L'encadrement par des guides francophones spécialistes du milieu polaire",
-      "Le prêt de l’équipement grand froid comprenant bottes grand froid (type Sorel), une veste grand froid et des moufles (pour la semaine). Merci de nous prévenir en amont pour les pointures en dessous de 34  et au-dessus de 50 s'il vous plaît."
-    ],
-    "exclude": [
-      "Les activités en option sur la journée libre",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles sur place",
-      "Le supplément chambre simple sur le camp de base : 300 euros/personne (soumis à disponibilité selon la date choisie)",
-      "La caution pour le matériel par empreinte de votre carte bancaire : 50 euros pour les bottes, 50 euros pour la veste grand froid",
-      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -235,24 +313,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2150,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Voyagez comme un trappeur en Finlande",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-trappeur-finlande",
+    "ogTitle": "Voyagez comme un trappeur en Finlande",
+    "ogDescription": "Explorez le parc Naturel de Hossa en raquettes, à l'image des premiers nordiques. Semaine autonome avec pulkas. Immergez-vous dans la nature pure.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-trappeur-finlande/jD8zYMQBiXna5zdtqrnw.jpg",
+      "alt": "image principale du voyage Voyagez comme un trappeur en Finlande"
+    },
+    "twitterTitle": "Voyagez comme un trappeur en Finlande",
+    "twitterDescription": "Explorez le parc Naturel de Hossa en raquettes, à l'image des premiers nordiques. Semaine autonome avec pulkas. Immergez-vous dans la nature pure.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-trappeur-finlande/jD8zYMQBiXna5zdtqrnw.jpg",
+      "alt": "image principale du voyage Voyagez comme un trappeur en Finlande"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

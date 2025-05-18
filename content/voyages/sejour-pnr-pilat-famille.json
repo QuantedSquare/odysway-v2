@@ -1,58 +1,85 @@
 {
   "published": false,
   "title": "Goutez l'aventure Pilat en famille",
-  "slug": "sejour-pnr-pilat-famille",
-  "rating": 0,
-  "comments": 0,
-  "description": "Un week-end en famille dans le Pilat, à la découverte du monde agricole, des produits locaux, des panoramas à couper le souffle, et surtout de ses habitants amoureux de leur territoire et impliqués dans son développement.\n\nAu programme : immersion à la ferme chez la famille Linossier, agriculteurs implantés sur la commune depuis 3 générations, traite des vaches, balade avec les ânes et jeu de piste insolite. Le village de Burdignes, haut perché sur la montagne, s’étend de 500 m à plus de 1300 m d’altitude, offrant des points de vue splendides comme depuis la table d’orientation de la Croix de Chirol.\n\nCe “Bourg du Feu” a le charme tranquille d’un village authentique de moyenne montagne. Pourtant, vous serez surpris par les actions écologiques et engagées qui s’y développent, comme son éco-hameau. Une expérience qui mêle découverte et aventure et qui donnera le goût de la nature aux petits et aux grands.",
-  "emailDescription": "Vous souhaitez passer un week-end en famille dans le Pilat et donner le gout de l'aventure à vos enfants ? Alors ce séjour est fait pour vous !",
-  "metaDescription": "Venez passer un week-end en famille dans le Pilat, à la découverte de ses paysages variés, ses produits locaux, ses panoramas à couper le souffle, et surtout ses habitants amoureux de leur territoire.",
-  "interjection": "",
   "destinations": [],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "sejour-trek-randonnee"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    }
   ],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Ferme auberge",
   "idealPeriods": [
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
   "monthlyAvailability": [
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/sejour-pnr-pilat-famille/ZgNk3FrIQaq4lV1ggLAA.jpg",
-    "alt": "image principale du voyage Goutez l'aventure Pilat en famille"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/sejour-pnr-pilat-famille/eOqhJGw8TQu64n6LVIfR.jpg",
-    "alt": "image secondaire du voyage Goutez l'aventure Pilat en famille"
-  },
-  "photosList": [],
-  "videoLinks": [
-    "https://www.youtube.com/embed/j47ZCVB-cXo"
-  ],
-  "badgeSection": {},
   "authorNote": {
     "text": "Un week-end en famille dans le Pilat, à la découverte du monde agricole, des produits locaux, des panoramas à couper le souffle, et surtout de ses habitants amoureux de leur territoire et impliqués dans son développement.\n\nAu programme : immersion à la ferme chez la famille Linossier, agriculteurs implantés sur la commune depuis 3 générations, traite des vaches, balade avec les ânes et jeu de piste insolite. Le village de Burdignes, haut perché sur la montagne, s’étend de 500 m à plus de 1300 m d’altitude, offrant des points de vue splendides comme depuis la table d’orientation de la Croix de Chirol.\n\nCe “Bourg du Feu” a le charme tranquille d’un village authentique de moyenne montagne. Pourtant, vous serez surpris par les actions écologiques et engagées qui s’y développent, comme son éco-hameau. Une expérience qui mêle découverte et aventure et qui donnera le goût de la nature aux petits et aux grands.",
     "author": "Nicolas",
@@ -64,50 +91,64 @@
     "La découverte du village de Burdignes et de ses actions durables, ruines du château de Montchal et baignoire des gaulois",
     "Un séjour qui mêle découverte, aventure et rencontre avec les animaux avec en toile de fond des panoramas grandioses"
   ],
+  "slug": "sejour-pnr-pilat-famille",
+  "description": "Un week-end en famille dans le Pilat, à la découverte du monde agricole, des produits locaux, des panoramas à couper le souffle, et surtout de ses habitants amoureux de leur territoire et impliqués dans son développement.\n\nAu programme : immersion à la ferme chez la famille Linossier, agriculteurs implantés sur la commune depuis 3 générations, traite des vaches, balade avec les ânes et jeu de piste insolite. Le village de Burdignes, haut perché sur la montagne, s’étend de 500 m à plus de 1300 m d’altitude, offrant des points de vue splendides comme depuis la table d’orientation de la Croix de Chirol.\n\nCe “Bourg du Feu” a le charme tranquille d’un village authentique de moyenne montagne. Pourtant, vous serez surpris par les actions écologiques et engagées qui s’y développent, comme son éco-hameau. Une expérience qui mêle découverte et aventure et qui donnera le goût de la nature aux petits et aux grands.",
+  "emailDescription": "Vous souhaitez passer un week-end en famille dans le Pilat et donner le gout de l'aventure à vos enfants ? Alors ce séjour est fait pour vous !",
+  "metaDescription": "Venez passer un week-end en famille dans le Pilat, à la découverte de ses paysages variés, ses produits locaux, ses panoramas à couper le souffle, et surtout ses habitants amoureux de leur territoire.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Ferme auberge",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Mars à Nov",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "ARRIVÉE DANS LE PILAT",
       "badgeText": "JOUR 1",
       "description": "L'aventure commence ! Vous arrivez dans le Pilat en fin d'après-midi et faites la rencontre de vos hôtes, à la Ferme Auberge de Burdignes. Le soir, vous profiterez d'un repas à la table d'hôtes, composée de produits locaux.",
       "photo": "/images/voyages/sejour-pnr-pilat-famille/mQRFrOaFTQ215koah4jL.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "AVENTURES EN FAMILLE",
       "badgeText": "JOUR 2",
       "description": "Le matin, vous partirez pour un jeu de piste en pleine nature, en famille, sur les traces de \"Tiluss et le village des étoiles\". L'après-midi, vous partagerez le quotidien des agriculteurs et participerez aux activités de la ferme. Dîner à la table d'hôtes le soir.",
       "photo": "/images/voyages/sejour-pnr-pilat-famille/hXeqlVHwQ1qOnZDtbQdl.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "EN COMPAGNIE DES ÂNES ",
       "badgeText": "JOUR 3",
       "description": "Après le petit-déjeuner, vous ferez vos adieux à vos hôtes et prendrez la direction de Véranne. L’aventure se poursuit avec une randonnée insolite en compagnie d'un âne pour visiter le site de Saint-Sabin. Puis vous prendrez la route du retour, des souvenirs plein la tête !",
       "photo": "/images/voyages/sejour-pnr-pilat-famille/OazJQPUXR7i1d6pxMoBP.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "La famille Linossier",
-      "description": "La famille Linossier, une vraie saga familiale agricole ! Au début du XXe siècle, les arrière-grands-parents étaient paysans, forgerons et cafetiers. Depuis la fin du XIXe siècle, la famille perpétue une tradition : la pluri-activité montagnarde, agriculture et accueil touristique. En 1975, Pierre et Thérèse (les grands-parents) sont précurseurs et élargirent l'activité en ouvrant des chambres d'hôtes et gîtes ruraux.",
-      "role": "Les hôtes du séjour",
-      "image": "/images/voyages/sejour-pnr-pilat-famille/FblFzCvjSOSSXJIcvm0n.jpg"
-    },
-    {
-      "name": "Véronique et Olivier",
-      "description": "Aujourd’hui, l’activité reste familiale et permet à deux générations et trois familles de vivre et travailler au village. C’est Véronique, la petite fille, qui vous accueillera avec son conjoint Olivier.",
-      "role": "Vos hôtes",
-      "image": "/images/voyages/sejour-pnr-pilat-famille/vdl5WyqBQs6ta7QUfyyg.jpg"
-    }
-  ],
-  "accompanistsDescription": "",
-  "housingBlock": [
-    {
-      "title": "Ferme auberge",
-      "housingType": "",
-      "housingMood": "",
-      "image": []
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
   "pricingDetailsBlock": {
@@ -129,6 +170,58 @@
       "Les dépenses personnelles et pourboires"
     ]
   },
+  "pricing": {
+    "startingPrice": 145,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [
+    {
+      "name": "La famille Linossier",
+      "description": "La famille Linossier, une vraie saga familiale agricole ! Au début du XXe siècle, les arrière-grands-parents étaient paysans, forgerons et cafetiers. Depuis la fin du XIXe siècle, la famille perpétue une tradition : la pluri-activité montagnarde, agriculture et accueil touristique. En 1975, Pierre et Thérèse (les grands-parents) sont précurseurs et élargirent l'activité en ouvrant des chambres d'hôtes et gîtes ruraux.",
+      "role": "Les hôtes du séjour",
+      "image": "/images/voyages/sejour-pnr-pilat-famille/FblFzCvjSOSSXJIcvm0n.jpg"
+    },
+    {
+      "name": "Véronique et Olivier",
+      "description": "Aujourd’hui, l’activité reste familiale et permet à deux générations et trois familles de vivre et travailler au village. C’est Véronique, la petite fille, qui vous accueillera avec son conjoint Olivier.",
+      "role": "Vos hôtes",
+      "image": "/images/voyages/sejour-pnr-pilat-famille/vdl5WyqBQs6ta7QUfyyg.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Ferme auberge",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/sejour-pnr-pilat-famille/ZgNk3FrIQaq4lV1ggLAA.jpg",
+    "alt": "image principale du voyage Goutez l'aventure Pilat en famille"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-pnr-pilat-famille/eOqhJGw8TQu64n6LVIfR.jpg",
+    "alt": "image secondaire du voyage Goutez l'aventure Pilat en famille"
+  },
+  "photosList": [],
+  "videoLinks": [
+    "https://www.youtube.com/embed/j47ZCVB-cXo"
+  ],
   "faqBlock": {
     "faqList": [
       {
@@ -149,24 +242,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 145,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Goutez l'aventure Pilat en famille",
+    "canonicalUrl": "https://www.odysway.com/voyages/sejour-pnr-pilat-famille",
+    "ogTitle": "Goutez l'aventure Pilat en famille",
+    "ogDescription": "Venez passer un week-end en famille dans le Pilat, à la découverte de ses paysages variés, ses produits locaux, ses panoramas à couper le souffle, et surtout ses habitants amoureux de leur territoire.",
+    "ogImage": {
+      "src": "/images/voyages/sejour-pnr-pilat-famille/ZgNk3FrIQaq4lV1ggLAA.jpg",
+      "alt": "image principale du voyage Goutez l'aventure Pilat en famille"
+    },
+    "twitterTitle": "Goutez l'aventure Pilat en famille",
+    "twitterDescription": "Venez passer un week-end en famille dans le Pilat, à la découverte de ses paysages variés, ses produits locaux, ses panoramas à couper le souffle, et surtout ses habitants amoureux de leur territoire.",
+    "twitterImage": {
+      "src": "/images/voyages/sejour-pnr-pilat-famille/ZgNk3FrIQaq4lV1ggLAA.jpg",
+      "alt": "image principale du voyage Goutez l'aventure Pilat en famille"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

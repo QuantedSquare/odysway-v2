@@ -1,36 +1,270 @@
 {
   "published": true,
   "title": "En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara",
-  "slug": "voyage-kenya-safari-immersion-communaute-locale",
-  "rating": 0,
-  "comments": 0,
-  "description": "Partez pour une immersion au cœur du Kenya, à la découverte des villages traditionnels et de leurs savoir-faire. Ce voyage vous mènera des plaines du Masai Mara aux plages de Mombasa, en passant par les villages bantous, pour des rencontres et expériences inoubliables.\n\nPartagez le quotidien des habitants en participant à leurs activités : sports locaux, récolte du thé, préparation de repas traditionnels. Initiez-vous à l’artisanat masaï, apprenez les techniques agricoles locales et découvrez le mode de vie des familles qui vous accueilleront.\n\nAu Masai Mara, plongez dans la culture masaï en assistant à leurs danses, chants et cérémonies. Profitez de safaris immersifs pour observer la faune sauvage et comprendre le lien profond entre ces communautés et leur environnement.\n\nEnfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontres avec les pêcheurs et exploration du patrimoine swahili. Un voyage où chaque moment est une porte ouverte sur la richesse culturelle et naturelle du Kenya.",
-  "emailDescription": "👉 Si vous rêvez d’un voyage authentique au Kenya, entre safaris immersifs, partage du quotidien des communautés masaï et bantoues, et détente sur les plages paradisiaques de Mombasa, ce séjour unique de 12 jours est fait pour vous !",
-  "metaDescription": "Voyage au Kenya : safaris immersifs, immersion masaï et bantoue, conservation des éléphants, plages de Mombasa et rencontres authentiques inoubliables.",
-  "interjection": "au",
   "destinations": [
-    "Kenya"
+    {
+      "name": "Kenya",
+      "slug": "kenya"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "partir-en-groupe",
-    "ou-partir-en-ete",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-automne",
-    "voyage-aventure",
-    "sejours-chez-l-habitant",
-    "voyage-animalier",
-    "sejours-nature",
-    "partir-en-famille",
-    "partir-en-amoureux"
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-couple"
+    }
   ],
   "duration": 12,
   "nights": 11,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chez l’habitant, lodges et hôtels",
   "idealPeriods": [],
   "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez pour une immersion au cœur du Kenya, à la découverte des villages traditionnels et de leurs savoir-faire. Ce voyage vous mènera des plaines du Masai Mara aux plages de Mombasa, en passant par les villages bantous, pour des rencontres et expériences inoubliables.\n\nPartagez le quotidien des habitants en participant à leurs activités : sports locaux, récolte du thé, préparation de repas traditionnels. Initiez-vous à l’artisanat masaï, apprenez les techniques agricoles locales et découvrez le mode de vie des familles qui vous accueilleront.\n\nAu Masai Mara, plongez dans la culture masaï en assistant à leurs danses, chants et cérémonies. Profitez de safaris immersifs pour observer la faune sauvage et comprendre le lien profond entre ces communautés et leur environnement.\n\nEnfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontres avec les pêcheurs et exploration du patrimoine swahili. Un voyage où chaque moment est une porte ouverte sur la richesse culturelle et naturelle du Kenya.",
+    "author": "Coralie",
+    "affixeAuthor": "Experte Kenya"
+  },
+  "experiencesBlock": [
+    "Plongez au cœur des traditions bantoues en partageant le quotidien des habitants d’un village traditionnel",
+    "Séjournez chez les Masaïs, assistez à leurs danses et rituels et écoutez leurs récits ancestraux",
+    "Vivez des rencontres inoubliables avec la faune sauvage lors de safaris immersifs dans les réserves du Lac Nakuru et du Masai Mara",
+    "Approchez de près les éléphants orphelins et les girafes en participant aux programmes de conservation à Nairobi",
+    "Explorez les grottes Mau Mau, témoignages historiques de la lutte pour l’indépendance du Kenya",
+    "Terminez votre voyage sur les plages paradisiaques de Mombasa, entre rencontres avec les pêcheurs locaux et détente au bord de l’océan Indien"
+  ],
+  "slug": "voyage-kenya-safari-immersion-communaute-locale",
+  "description": "Partez pour une immersion au cœur du Kenya, à la découverte des villages traditionnels et de leurs savoir-faire. Ce voyage vous mènera des plaines du Masai Mara aux plages de Mombasa, en passant par les villages bantous, pour des rencontres et expériences inoubliables.\n\nPartagez le quotidien des habitants en participant à leurs activités : sports locaux, récolte du thé, préparation de repas traditionnels. Initiez-vous à l’artisanat masaï, apprenez les techniques agricoles locales et découvrez le mode de vie des familles qui vous accueilleront.\n\nAu Masai Mara, plongez dans la culture masaï en assistant à leurs danses, chants et cérémonies. Profitez de safaris immersifs pour observer la faune sauvage et comprendre le lien profond entre ces communautés et leur environnement.\n\nEnfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontres avec les pêcheurs et exploration du patrimoine swahili. Un voyage où chaque moment est une porte ouverte sur la richesse culturelle et naturelle du Kenya.",
+  "emailDescription": "👉 Si vous rêvez d’un voyage authentique au Kenya, entre safaris immersifs, partage du quotidien des communautés masaï et bantoues, et détente sur les plages paradisiaques de Mombasa, ce séjour unique de 12 jours est fait pour vous !",
+  "metaDescription": "Voyage au Kenya : safaris immersifs, immersion masaï et bantoue, conservation des éléphants, plages de Mombasa et rencontres authentiques inoubliables.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**11 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Janvier à mars et juin à octobre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE A NAIROBI, PORTE D'ENTREE DE L'AVENTURE",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à l’aéroport international Jomo Kenyatta, vous êtes accueillis par notre équipe locale et transférés à votre hôtel. Profitez de cette première soirée pour vous reposer ou explorer librement la ville et vous imprégner de son atmosphère vibrante. ",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/IDYl968tQFeDoVmzC7fk.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RENCONTRE AVEC LES ELEPHANTS ET LES GIRAFES ",
+      "badgeText": "JOUR 2",
+      "description": "Démarrez votre voyage avec une matinée placée sous le signe de la conservation animale. Assistez au nourrissage des éléphanteaux orphelins au Sheldrick Wildlife Trust, un centre dédié à leur réhabilitation. Puis, direction le Giraffe Conservation Center pour une rencontre privilégiée avec ces majestueux animaux. Après un déjeuner aux saveurs locales, vous pourrez flâner dans les boutiques d’artisanat de Nairobi avant de retourner à votre hôtel.\r\n\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/TZgJXbXrRE6FHYXGOy7B.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION DANS LA CULTURE KENYANE AU VILLAGE THINGIRA",
+      "badgeText": "JOUR 3",
+      "description": "Ce matin, cap vers le centre du Kenya pour une immersion totale dans la culture bantoue au Thingira Cultural Village.  Ici, les tribus Gikuyu, Aembu et Akamba vous partagent leurs coutumes à travers des danses, des chants et des récits captivants. Autour d’un repas typique, vous dégustez les saveurs locales et échangez avec les habitants. \r\nL’après-midi vous réserve une initiation aux techniques agricoles traditionnelles. \r\nEn fin de journée, direction le village de Kianjogu, niché au pied du Mont Kenya, où une famille locale vous ouvre les portes de son foyer pour une nuit en totale immersion.\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/aiurI941ST6xGOpkcQsF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPERIENCE IMMERSIVE AGRICOLE ET DECOUVERTE DES GROTTES MAU MAU",
+      "badgeText": "JOUR 4",
+      "description": "Réveil au chant des oiseaux et départ pour une expérience immersive dans une ferme locale. Vous participerez à la récolte du thé aux côtés des agriculteurs, un savoir-faire transmis de génération en génération, et découvrirez le processus de tri avant la vente aux usines. Direction, ensuite vers les potagers, où vous découvrirez les secrets des cultures maraîchères locales et apprendrez les techniques locales de culture et d’irrigation avant de partager un déjeuner convivial. \r\nL’après-midi, cap sur les grottes Mau Mau, témoins de la lutte des résistants kenyans contre la colonisation. \r\nDe retour au village, la journée se conclut par un repas traditionnel en famille, ponctué d’histoires et d’anecdotes sur la vie quotidienne.",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/h0kQ2gh7S3ubaTqKybll.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CASCADES MAJESTUEUSES ET ROUTE VERS LE LAC NAKURU",
+      "badgeText": "JOUR 5",
+      "description": "Après un petit-déjeuner aux saveurs locales, départ pour le spectaculaire lac Nakuru ! \r\nUne pause s’impose aux impressionnantes chutes Thomson, l’une des plus impressionnantes cascades du pays, où l’eau gronde dans un décor spectaculaire. Vous pourrez admirer la puissance de l’eau et capturer des clichés mémorables de cette merveille naturelle. \r\nL’après-midi, vous pénétrez dans le Parc National du Lac Nakuru, connu pour être le sanctuaire de milliers de flamants roses et d'une faune exceptionnelle. \r\nInstallation dans votre lodge en pleine nature et dîner aux saveurs locales avec vue sur le parc.",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/sFkjwWBTPSg8TAkkgo1f.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SAFARI AU LAC NAKURU ET ROUTE VERS LE MYTHIQUE MASAI MARA",
+      "badgeText": "JOUR 6",
+      "description": "Le soleil se lève sur le lac Nakuru et vous partez pour un safari au Lac Nakuru, sanctuaire de nombreuses espèces d’oiseaux et refuge des rhinocéros noirs et blancs. Vous aurez peut-être la chance d’apercevoir des lions en chasse ou des girafes élégantes se déplaçant entre les acacias. Après un déjeuner pique-nique en pleine nature, direction le légendaire Masai Mara, l’une des plus belles réserves animalières d’Afrique. Vous passez la nuit dans un campement au cœur de la savane, sous un ciel constellé d’étoiles.\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/0UZitsecTk2Da5G03EXS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SAFARI INOUBLIABLE ET NUIT DANS UN VILLAGE MASAI",
+      "badgeText": "JOUR 7",
+      "description": "Une journée entière de safari vous attend, au fil des plaines infinies du Masai Mara. Un moment exceptionnel pour observer la faune sauvage dans son élément naturel : lions, éléphants, guépards, antilopes et bien d'autres peuplent ces terres mythiques. \r\nPause déjeuner au bord de la rivière Mara, célèbre pour ses crocodiles et hippopotames. \r\nEn fin de journée, rejoignez un village masaï pour une nuit immersion unique. Participez à un atelier de perlage avec les femmes masaï et assistez à une soirée rythmée par les chants et danses tribales autour du feu.\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/nfOXR1uURS29KvRon0NJ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ECOLE MASAI ET PARC NATIONAL DE HELL'S GATE",
+      "badgeText": "JOUR 8",
+      "description": "Ce matin, vous visitez une école locale pour échanger avec les enfants et enseignants de la communauté masaï. Puis, cap sur le Lac Naivasha, un véritable havre de paix. \r\nVous aurez l’opportunité de faire du vélo ou d’explorer à pied le Parc National de Hell’s Gate, réputé pour ses formations volcaniques, ses gorges spectaculaires et ses sources chaudes naturelles. Installation et nuit au bord du lac, bercés par les bruits de la nature environnante.\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/86b3NMujSjuYUJzvjOSN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DETENTE AU LAC NAIVASHA ET TRAIN VERS MOMBASA",
+      "badgeText": "JOUR 9",
+      "description": "Profitez d’un réveil en douceur face au lac avant d’embarquer pour une balade en bateau à la découverte des hippopotames et des oiseaux exotiques. Après un dernier déjeuner en pleine nature, retour à Nairobi pour embarquer à bord du train de nuit direction Mombasa, une aventure ferroviaire mythique au rythme des paysages kenyans qui défilent.\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/W8hNik0XQiabiudyEJGi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FARNIENTE SUR LES PLAGES DE MOMBASA",
+      "badgeText": "JOURS 10 A 11",
+      "description": "Place à la douceur de l’océan : posez vos valises sur les plages idylliques de Mombasa. Profitez-en pour vous baigner dans des eaux cristallines, explorer les récifs coralliens en plongée ou snorkeling, et partir à la découverte des sites historiques comme le Fort Jesus.\r\nCes journées de temps libre seront placées sous le signe de la relaxation et de la découverte.\r\n\r\nPossibilité en option d’une croisière en dhow au coucher du soleil ou d’une visite des marchés aux épices.\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/WblIOkX2RBFviB4WO0Vf.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR A NAIROBI ET VOL RETOUR",
+      "badgeText": "JOUR 12",
+      "description": "Après un dernier réveil face à la mer, transfert vers l’aéroport pour un vol retour vers Nairobi. Départ avec des souvenirs inoubliables de cette immersion kényane, entre nature sauvage, rencontres humaines et plages paradisiaques.\r\n\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/tdRpawuSBOdrXwBcP7wi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage",
+      "11 nuits en chambre twin ou triple",
+      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 12",
+      "L’accompagnement par un guide francophone du jour 2 au jour 9 (sans guide sur la partie balnéaire)",
+      "Les excursions et activités mentionnées",
+      "Toutes les entrées aux parcs et sites",
+      "Le transport en 4x4 landcruiser pour les safaris et en van sur le reste du voyage",
+      "Le train (place assise) de Nairobi à Mombasa",
+      "L’eau minérale"
+    ],
+    "exclude": [
+      "Les vols internationaux pour se rendre au Kenya",
+      "Les boissons alcoolisées",
+      "Les pourboires (prévoir 10$/jour/personne)",
+      "Les activités lors du séjour balnéaire libre à Mombasa",
+      "Les dépenses personnelles",
+      "Les excursions en option",
+      "L’assurance voyage Assistance Rapatriement (obligatoire)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2190,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG"
+    ]
+  },
+  "accompanistsDescription": "Bénéficiez d'une expérience enrichissante grâce à l'accompagnement d'un guide francophone expérimenté. Il vous fera découvrir chaque lieu avec passion, en partageant des anecdotes captivantes, des explications détaillées et des conseils personnalisés pour une immersion culturelle complète.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Chez l’habitant, lodges et hôtels",
+      "housingType": "",
+      "housingMood": "Tout au long du voyage, vous alternerez entre immersion chez l’habitant, lodges en pleine nature et séjour balnéaire pour une expérience variée et authentique.\r\nDans un village traditionnel, vous partagerez le quotidien d’une famille locale pour une immersion culturelle unique. Près des lacs Nakuru et Naivasha, vous logerez dans des hébergements confortables, parfaits pour se ressourcer après vos journées d’exploration.\r\nAu Masai Mara, vivez l’expérience d’un campement en pleine savane, où soirées autour du feu et sons de la nature viendront rythmer vos nuits. Enfin, terminez votre voyage en douceur avec un séjour balnéaire sur la côte kényane, entre plages paradisiaques et océan turquoise.\r\nDes hébergements pensés pour allier confort, authenticité et aventure, au plus près de la nature et des cultures locales.\r\n",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/BmCbwJEiRAioWYpwhkR3.jpg",
+          "alt": "image de l'hébergement En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
+        },
+        {
+          "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/IpHvxy8SQziyvhPLIOXf.jpg",
+          "alt": "image de l'hébergement En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
+        },
+        {
+          "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/7ZvXT7VQ8m9LiIV1O0bt.jpg",
+          "alt": "image de l'hébergement En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/R0zRiThdQBmWFVAhC8y5.jpg",
     "alt": "image principale du voyage En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
@@ -66,144 +300,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Partez pour une immersion au cœur du Kenya, à la découverte des villages traditionnels et de leurs savoir-faire. Ce voyage vous mènera des plaines du Masai Mara aux plages de Mombasa, en passant par les villages bantous, pour des rencontres et expériences inoubliables.\n\nPartagez le quotidien des habitants en participant à leurs activités : sports locaux, récolte du thé, préparation de repas traditionnels. Initiez-vous à l’artisanat masaï, apprenez les techniques agricoles locales et découvrez le mode de vie des familles qui vous accueilleront.\n\nAu Masai Mara, plongez dans la culture masaï en assistant à leurs danses, chants et cérémonies. Profitez de safaris immersifs pour observer la faune sauvage et comprendre le lien profond entre ces communautés et leur environnement.\n\nEnfin, terminez votre voyage sur les plages de Mombasa, entre détente, rencontres avec les pêcheurs et exploration du patrimoine swahili. Un voyage où chaque moment est une porte ouverte sur la richesse culturelle et naturelle du Kenya.",
-    "author": "Coralie",
-    "affixeAuthor": "Experte Kenya"
-  },
-  "experiencesBlock": [
-    "Plongez au cœur des traditions bantoues en partageant le quotidien des habitants d’un village traditionnel",
-    "Séjournez chez les Masaïs, assistez à leurs danses et rituels et écoutez leurs récits ancestraux",
-    "Vivez des rencontres inoubliables avec la faune sauvage lors de safaris immersifs dans les réserves du Lac Nakuru et du Masai Mara",
-    "Approchez de près les éléphants orphelins et les girafes en participant aux programmes de conservation à Nairobi",
-    "Explorez les grottes Mau Mau, témoignages historiques de la lutte pour l’indépendance du Kenya",
-    "Terminez votre voyage sur les plages paradisiaques de Mombasa, entre rencontres avec les pêcheurs locaux et détente au bord de l’océan Indien"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE A NAIROBI, PORTE D'ENTREE DE L'AVENTURE",
-      "badgeText": "JOUR 1",
-      "description": "À votre arrivée à l’aéroport international Jomo Kenyatta, vous êtes accueillis par notre équipe locale et transférés à votre hôtel. Profitez de cette première soirée pour vous reposer ou explorer librement la ville et vous imprégner de son atmosphère vibrante. ",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/IDYl968tQFeDoVmzC7fk.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RENCONTRE AVEC LES ELEPHANTS ET LES GIRAFES ",
-      "badgeText": "JOUR 2",
-      "description": "Démarrez votre voyage avec une matinée placée sous le signe de la conservation animale. Assistez au nourrissage des éléphanteaux orphelins au Sheldrick Wildlife Trust, un centre dédié à leur réhabilitation. Puis, direction le Giraffe Conservation Center pour une rencontre privilégiée avec ces majestueux animaux. Après un déjeuner aux saveurs locales, vous pourrez flâner dans les boutiques d’artisanat de Nairobi avant de retourner à votre hôtel.\r\n\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/TZgJXbXrRE6FHYXGOy7B.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION DANS LA CULTURE KENYANE AU VILLAGE THINGIRA",
-      "badgeText": "JOUR 3",
-      "description": "Ce matin, cap vers le centre du Kenya pour une immersion totale dans la culture bantoue au Thingira Cultural Village.  Ici, les tribus Gikuyu, Aembu et Akamba vous partagent leurs coutumes à travers des danses, des chants et des récits captivants. Autour d’un repas typique, vous dégustez les saveurs locales et échangez avec les habitants. \r\nL’après-midi vous réserve une initiation aux techniques agricoles traditionnelles. \r\nEn fin de journée, direction le village de Kianjogu, niché au pied du Mont Kenya, où une famille locale vous ouvre les portes de son foyer pour une nuit en totale immersion.\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/aiurI941ST6xGOpkcQsF.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPERIENCE IMMERSIVE AGRICOLE ET DECOUVERTE DES GROTTES MAU MAU",
-      "badgeText": "JOUR 4",
-      "description": "Réveil au chant des oiseaux et départ pour une expérience immersive dans une ferme locale. Vous participerez à la récolte du thé aux côtés des agriculteurs, un savoir-faire transmis de génération en génération, et découvrirez le processus de tri avant la vente aux usines. Direction, ensuite vers les potagers, où vous découvrirez les secrets des cultures maraîchères locales et apprendrez les techniques locales de culture et d’irrigation avant de partager un déjeuner convivial. \r\nL’après-midi, cap sur les grottes Mau Mau, témoins de la lutte des résistants kenyans contre la colonisation. \r\nDe retour au village, la journée se conclut par un repas traditionnel en famille, ponctué d’histoires et d’anecdotes sur la vie quotidienne.",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/h0kQ2gh7S3ubaTqKybll.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CASCADES MAJESTUEUSES ET ROUTE VERS LE LAC NAKURU",
-      "badgeText": "JOUR 5",
-      "description": "Après un petit-déjeuner aux saveurs locales, départ pour le spectaculaire lac Nakuru ! \r\nUne pause s’impose aux impressionnantes chutes Thomson, l’une des plus impressionnantes cascades du pays, où l’eau gronde dans un décor spectaculaire. Vous pourrez admirer la puissance de l’eau et capturer des clichés mémorables de cette merveille naturelle. \r\nL’après-midi, vous pénétrez dans le Parc National du Lac Nakuru, connu pour être le sanctuaire de milliers de flamants roses et d'une faune exceptionnelle. \r\nInstallation dans votre lodge en pleine nature et dîner aux saveurs locales avec vue sur le parc.",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/sFkjwWBTPSg8TAkkgo1f.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SAFARI AU LAC NAKURU ET ROUTE VERS LE MYTHIQUE MASAI MARA",
-      "badgeText": "JOUR 6",
-      "description": "Le soleil se lève sur le lac Nakuru et vous partez pour un safari au Lac Nakuru, sanctuaire de nombreuses espèces d’oiseaux et refuge des rhinocéros noirs et blancs. Vous aurez peut-être la chance d’apercevoir des lions en chasse ou des girafes élégantes se déplaçant entre les acacias. Après un déjeuner pique-nique en pleine nature, direction le légendaire Masai Mara, l’une des plus belles réserves animalières d’Afrique. Vous passez la nuit dans un campement au cœur de la savane, sous un ciel constellé d’étoiles.\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/0UZitsecTk2Da5G03EXS.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SAFARI INOUBLIABLE ET NUIT DANS UN VILLAGE MASAI",
-      "badgeText": "JOUR 7",
-      "description": "Une journée entière de safari vous attend, au fil des plaines infinies du Masai Mara. Un moment exceptionnel pour observer la faune sauvage dans son élément naturel : lions, éléphants, guépards, antilopes et bien d'autres peuplent ces terres mythiques. \r\nPause déjeuner au bord de la rivière Mara, célèbre pour ses crocodiles et hippopotames. \r\nEn fin de journée, rejoignez un village masaï pour une nuit immersion unique. Participez à un atelier de perlage avec les femmes masaï et assistez à une soirée rythmée par les chants et danses tribales autour du feu.\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/nfOXR1uURS29KvRon0NJ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ECOLE MASAI ET PARC NATIONAL DE HELL'S GATE",
-      "badgeText": "JOUR 8",
-      "description": "Ce matin, vous visitez une école locale pour échanger avec les enfants et enseignants de la communauté masaï. Puis, cap sur le Lac Naivasha, un véritable havre de paix. \r\nVous aurez l’opportunité de faire du vélo ou d’explorer à pied le Parc National de Hell’s Gate, réputé pour ses formations volcaniques, ses gorges spectaculaires et ses sources chaudes naturelles. Installation et nuit au bord du lac, bercés par les bruits de la nature environnante.\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/86b3NMujSjuYUJzvjOSN.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DETENTE AU LAC NAIVASHA ET TRAIN VERS MOMBASA",
-      "badgeText": "JOUR 9",
-      "description": "Profitez d’un réveil en douceur face au lac avant d’embarquer pour une balade en bateau à la découverte des hippopotames et des oiseaux exotiques. Après un dernier déjeuner en pleine nature, retour à Nairobi pour embarquer à bord du train de nuit direction Mombasa, une aventure ferroviaire mythique au rythme des paysages kenyans qui défilent.\r\n\r\n\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/W8hNik0XQiabiudyEJGi.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FARNIENTE SUR LES PLAGES DE MOMBASA",
-      "badgeText": "JOURS 10 A 11",
-      "description": "Place à la douceur de l’océan : posez vos valises sur les plages idylliques de Mombasa. Profitez-en pour vous baigner dans des eaux cristallines, explorer les récifs coralliens en plongée ou snorkeling, et partir à la découverte des sites historiques comme le Fort Jesus.\r\nCes journées de temps libre seront placées sous le signe de la relaxation et de la découverte.\r\n\r\nPossibilité en option d’une croisière en dhow au coucher du soleil ou d’une visite des marchés aux épices.\r\n\r\n\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/WblIOkX2RBFviB4WO0Vf.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR A NAIROBI ET VOL RETOUR",
-      "badgeText": "JOUR 12",
-      "description": "Après un dernier réveil face à la mer, transfert vers l’aéroport pour un vol retour vers Nairobi. Départ avec des souvenirs inoubliables de cette immersion kényane, entre nature sauvage, rencontres humaines et plages paradisiaques.\r\n\r\n\r\n\r\n",
-      "photo": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/tdRpawuSBOdrXwBcP7wi.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Bénéficiez d'une expérience enrichissante grâce à l'accompagnement d'un guide francophone expérimenté. Il vous fera découvrir chaque lieu avec passion, en partageant des anecdotes captivantes, des explications détaillées et des conseils personnalisés pour une immersion culturelle complète.",
-  "housingBlock": [
-    {
-      "title": "Chez l’habitant, lodges et hôtels",
-      "housingType": "",
-      "housingMood": "Tout au long du voyage, vous alternerez entre immersion chez l’habitant, lodges en pleine nature et séjour balnéaire pour une expérience variée et authentique.\r\nDans un village traditionnel, vous partagerez le quotidien d’une famille locale pour une immersion culturelle unique. Près des lacs Nakuru et Naivasha, vous logerez dans des hébergements confortables, parfaits pour se ressourcer après vos journées d’exploration.\r\nAu Masai Mara, vivez l’expérience d’un campement en pleine savane, où soirées autour du feu et sons de la nature viendront rythmer vos nuits. Enfin, terminez votre voyage en douceur avec un séjour balnéaire sur la côte kényane, entre plages paradisiaques et océan turquoise.\r\nDes hébergements pensés pour allier confort, authenticité et aventure, au plus près de la nature et des cultures locales.\r\n",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/BmCbwJEiRAioWYpwhkR3.jpg",
-          "alt": "image de l'hébergement En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
-        },
-        {
-          "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/IpHvxy8SQziyvhPLIOXf.jpg",
-          "alt": "image de l'hébergement En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
-        },
-        {
-          "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/7ZvXT7VQ8m9LiIV1O0bt.jpg",
-          "alt": "image de l'hébergement En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage",
-      "11 nuits en chambre twin ou triple",
-      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 12",
-      "L’accompagnement par un guide francophone du jour 2 au jour 9 (sans guide sur la partie balnéaire)",
-      "Les excursions et activités mentionnées",
-      "Toutes les entrées aux parcs et sites",
-      "Le transport en 4x4 landcruiser pour les safaris et en van sur le reste du voyage",
-      "Le train (place assise) de Nairobi à Mombasa",
-      "L’eau minérale"
-    ],
-    "exclude": [
-      "Les vols internationaux pour se rendre au Kenya",
-      "Les boissons alcoolisées",
-      "Les pourboires (prévoir 10$/jour/personne)",
-      "Les activités lors du séjour balnéaire libre à Mombasa",
-      "Les dépenses personnelles",
-      "Les excursions en option",
-      "L’assurance voyage Assistance Rapatriement (obligatoire)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -256,26 +352,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2090,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG"
-    ]
+  "seo": {
+    "metaTitle": "En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-kenya-safari-immersion-communauté-locale",
+    "ogTitle": "En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara",
+    "ogDescription": "Voyage au Kenya : safaris immersifs, immersion masaï et bantoue, conservation des éléphants, plages de Mombasa et rencontres authentiques inoubliables.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/R0zRiThdQBmWFVAhC8y5.jpg",
+      "alt": "image principale du voyage En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
+    },
+    "twitterTitle": "En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara",
+    "twitterDescription": "Voyage au Kenya : safaris immersifs, immersion masaï et bantoue, conservation des éléphants, plages de Mombasa et rencontres authentiques inoubliables.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-kenya-safari-immersion-communaute-locale/R0zRiThdQBmWFVAhC8y5.jpg",
+      "alt": "image principale du voyage En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

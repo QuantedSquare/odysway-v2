@@ -1,62 +1,362 @@
 {
   "published": true,
   "title": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
-  "slug": "voyage-chamanique-perou",
-  "rating": 4.6,
-  "comments": 31,
-  "description": "Plus qu'un simple voyage, nous vous proposons une véritable immersion au cœur du Pérou, tel qu'on l'imagine.\n\nCe voyage est avant tout centré sur la rencontre : celle d'un chamane traditionnel de la respectée communauté Q'ero établie dans les Andes, et de communautés andines qui vous accueilleront au fil des étapes. En itinérance à travers la Vallée Sacrée et le Lac Titicaca, vous vivrez en complète immersion dans trois communautés quechuas. Une expérience exclusive et hors sentiers battus pour vivre une complète déconnexion, ralentir et découvrir le mode de vie andin. Au bord du plus haut lac du monde ou en plein cœur des Andes, profitez d'un cadre exceptionnel, goûtez au silence des grands espaces et prenez le temps de vivre pleinement vos journées en profitant de chaque instant.\n\nCe voyage sera également l'occasion de découvrir une dimension méconnue et fascinante de la culture locale au travers de la rencontre avec le chamane : la cosmologie et les croyances pré-colombiennes, basées sur le profond respect de la nature et l'harmonie du vivant. Une rencontre à dimension avant tout culturelle et permettant de s'ouvrir à un aspect passionnant de la culture locale.\n\nUn voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une fois !",
-  "emailDescription": "👉 Si vous souhaitez faire un voyage initiatique auprès d'un véritable chaman et vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
-  "metaDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein d'une famille quechua.",
-  "interjection": "au",
   "destinations": [
-    "Pérou"
+    {
+      "name": "Pérou",
+      "slug": "perou"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-chez-l-habitant",
-    "voyage-initiatique",
-    "partir-en-famille",
-    "partir-en-groupe",
-    "ou-partir-en-hiver",
-    "ou-partir-au-printemps",
-    "ou-partir-en-automne",
-    "sejours-culturels",
-    "voyage-insolite",
-    "voyage-solidaire",
-    "voyage-aventure"
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "voyage-solidaire"
+    },
+    {
+      "name": "voyage-aventure"
+    }
   ],
   "duration": 13,
   "nights": 12,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, chez l'habitant",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 31,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Plus qu'un simple voyage, nous vous proposons une véritable immersion au cœur du Pérou, tel qu'on l'imagine.\n\nCe voyage est avant tout centré sur la rencontre : celle d'un chamane traditionnel de la respectée communauté Q'ero établie dans les Andes, et de communautés andines qui vous accueilleront au fil des étapes. En itinérance à travers la Vallée Sacrée et le Lac Titicaca, vous vivrez en complète immersion dans trois communautés quechuas. Une expérience exclusive et hors sentiers battus pour vivre une complète déconnexion, ralentir et découvrir le mode de vie andin. Au bord du plus haut lac du monde ou en plein cœur des Andes, profitez d'un cadre exceptionnel, goûtez au silence des grands espaces et prenez le temps de vivre pleinement vos journées en profitant de chaque instant.\n\nCe voyage sera également l'occasion de découvrir une dimension méconnue et fascinante de la culture locale au travers de la rencontre avec le chamane : la cosmologie et les croyances pré-colombiennes, basées sur le profond respect de la nature et l'harmonie du vivant. Une rencontre à dimension avant tout culturelle et permettant de s'ouvrir à un aspect passionnant de la culture locale.\n\nUn voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une fois !",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "La rencontre privilégiée avec un chamane de la respectée communauté Q'ero",
+    "La découverte de deux régions mythiques : la Vallée Sacrée des Incas et le Lac Titicaca",
+    "L'immersion dans des communautés quechuas reculées, complètement hors sentiers battus",
+    "L'accompagnement d'un guide francophone pour faciliter votre échange avec les familles",
+    "Le déjeuner insolite face au majestueux site inca de Moray",
+    "L'expérience en voilier traditionnel sur le Lac Titicaca, plus haut lac navigable au monde"
+  ],
+  "slug": "voyage-chamanique-perou",
+  "description": "Plus qu'un simple voyage, nous vous proposons une véritable immersion au cœur du Pérou, tel qu'on l'imagine.\n\nCe voyage est avant tout centré sur la rencontre : celle d'un chamane traditionnel de la respectée communauté Q'ero établie dans les Andes, et de communautés andines qui vous accueilleront au fil des étapes. En itinérance à travers la Vallée Sacrée et le Lac Titicaca, vous vivrez en complète immersion dans trois communautés quechuas. Une expérience exclusive et hors sentiers battus pour vivre une complète déconnexion, ralentir et découvrir le mode de vie andin. Au bord du plus haut lac du monde ou en plein cœur des Andes, profitez d'un cadre exceptionnel, goûtez au silence des grands espaces et prenez le temps de vivre pleinement vos journées en profitant de chaque instant.\n\nCe voyage sera également l'occasion de découvrir une dimension méconnue et fascinante de la culture locale au travers de la rencontre avec le chamane : la cosmologie et les croyances pré-colombiennes, basées sur le profond respect de la nature et l'harmonie du vivant. Une rencontre à dimension avant tout culturelle et permettant de s'ouvrir à un aspect passionnant de la culture locale.\n\nUn voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une fois !",
+  "emailDescription": "👉 Si vous souhaitez faire un voyage initiatique auprès d'un véritable chaman et vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein d'une famille quechua.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mars à novembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE AU PEROU",
+      "badgeText": "JOUR 1",
+      "description": "Accueil francophone par nos équipes et transfert à votre hôtel, au cœur du centre historique de Cuzco. Premières explorations de la mythique capitale Inca, nichée au cœur des Andes. Perdez-vous dans ses ruelles escarpées, goûtez un jus de maracuja sur un marché ou contemplez simplement les lumières changeantes de la ville !",
+      "photo": "/images/voyages/voyage-chamanique-perou/BCLpHjwsT5W78hX2ddQo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIERS MOMENTS A CUZCO",
+      "badgeText": "JOUR 2",
+      "description": "Journée libre pour vous acclimater et vous balader librement dans la charmante ville impériale. Classée au patrimoine du l'UNESCO, elle offre un cadre sublime entouré de montagnes. Le dépaysement est déjà là !",
+      "photo": "/images/voyages/voyage-chamanique-perou/M8ym1nS8OLMo7uQ4XGHw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "INTRODUCTION AU CHAMANISME",
+      "badgeText": "JOUR 3",
+      "description": "Rencontre avec notre chamane de la communauté Q’ero. Introduction à la spiritualité et au mysticisme andin, basé sur le respect profond de la nature. Rendez-vous ensuite sur les hauteurs pour une cérémonie d'offrandes à la terre et la visite du site majestueux de Saqsayhuaman.",
+      "photo": "/images/voyages/voyage-chamanique-perou/A75W5dH1SQSisDj6Wx2V.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VALLEE SACRÉE DES INCAS",
+      "badgeText": "JOUR 4",
+      "description": "C'est parti pour une journée avec votre guide au fil des sites incas de la Vallée Sacrée. Découverte des mythiques Salines de Maras et leurs 3000 bassins de sel qui datent de l’époque pré-inca et continuent d’être exploitées par les habitants de la communauté. Rendez-vous ensuite à Moray, ancien laboratoire agricole qui permettait autrefois aux incas de simuler une vingtaine de microclimats afin de mener à bien leurs expériences. Direction ensuite Ollantaytambo, l’un des villages les plus importants de l’empire. En fin d’après-midi, vous monterez à bord de l’emblématique train péruvien en direction d’Aguas Calientes, village situé au pied du Machu Picchu. Briefing de votre guide Machu Picchu pour votre visite du lendemain.",
+      "photo": "/images/voyages/voyage-chamanique-perou/rnqFutE0RkObREntfaEG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MYSTÈRES DU MACHU PICCHU",
+      "badgeText": "JOUR 5",
+      "description": "Vivez un moment fort en émotions : la découverte du Machu Picchu, accroché aux flancs de la montagne en pleine végétation tropicale. Un guide spécialiste vous partagera des anecdotes et vous expliquera son importance dans la cosmovision andine. Retour pittoresque en train.",
+      "photo": "/images/voyages/voyage-chamanique-perou/8vZhHs71SWiCHP9pZUCd.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION DANS UNE COMMUNAUTÉ",
+      "badgeText": "JOURS 6, 7 ET 8",
+      "description": "Durant 3 jours, vivez une expérience unique dans l’une des communautés les plus reculées du Pérou. Accueillis chez une famille, vous participerez à la vie quotidienne du village : participation à l'agriculture dans les champs, initiation au tissage, rencontre avec les bergers ... une expérience au plus près du mode de vie ancestral andin, dans un cadre exceptionnel. Retour à Cuzco et après-midi libre.",
+      "photo": "/images/voyages/voyage-chamanique-perou/xVWiB1bfSLeoSKhGxwH3.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À CUZCO",
+      "badgeText": "JOUR 9",
+      "description": "Journée libre dans la capitale des Incas pour visiter, déambuler ou encore acheter de l’artisanat pour ramener vos souvenirs du Pérou. Selon vos envies, nous pourrons également vous proposer une activité supplémentaire pour compléter votre voyage. L'occasion de vous détendre à votre rythme avant de poursuivre vers le Lac Titicaca !",
+      "photo": "/images/voyages/voyage-chamanique-perou/92rP0Y2Rcyp13742OLq7.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE LAC TITICACA, LOIN DES RADARS",
+      "badgeText": "JOUR 10",
+      "description": "Direction le Lac Titicaca, plus haut lac navigable du monde à 4000 mètres d’altitude. Arrivée sur la discrète péninsule de Capachica, où vous vivrez une expérience en immersion totale dans les communautés les plus recluses de la région ! Nuit au sein d’une attachante famille avec une vue imprenable sur l’étendue silencieuse du lac.\r\n",
+      "photo": "/images/voyages/voyage-chamanique-perou/6aXjPwCQAGwLFBlhwwwL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOILIER TRADITIONNEL SUR LE LAC",
+      "badgeText": "JOUR 11",
+      "description": "Après un bon petit-déjeuner, balade intimiste le long des plages silencieuses du Lac Titicaca. Départ ensuite pour expérience que seuls les initiés connaissent : la navigation à bord d’un petit voilier traditionnel de la région. Vous rallierez une minuscule île où se trouvent des maisons circulaires surprenantes. En récompense ? Une vue à 360°C qui vous fera sentir tout petit ! Retour dans la communauté et fin de journée libre pour vous détendre dans cet endroit hors du temps.",
+      "photo": "/images/voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉCOUVERTE LIMA",
+      "badgeText": "JOUR 12",
+      "description": "Réveil sur la péninsule avec un sublime lever de soleil sur le lac. Ce sont vos derniers moments dans ce cadre majestueux. Après le petit déjeuner, vous serez conduits à l’aéroport de Juliaca pour prendre votre vol en direction de la capitale du pays (et capitale gastronomique !), Lima. Transfert privatif à votre hôtel et fin de journée libre.",
+      "photo": "/images/voyages/voyage-chamanique-perou/MsL2XM6Rpi40UtBwIbdw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 13",
+      "description": "Des belles images plein la tête, il est temps de rentrer ! Transfert rapide à l’aéroport de Lima pour prendre votre vol retour.",
+      "photo": "/images/voyages/voyage-chamanique-perou/oEZoRV7TQV66yK2r4iNt.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "7 nuits en hôtels 2-3\\* (base double)",
+      "4 nuits chez l'habitant",
+      "1 nuit en bus de nuit (siège confort inclinable 160°C)",
+      "Tous les petits-déjeuners",
+      "Déjeuners (J4, J6, J7, J10, J11)",
+      "Déjeuners pique-nique (J3,  J12)",
+      "Dîners (J6, J7, J9, J10, J11)",
+      "Guide francophone spirituel privé (J3 à J11)",
+      "Présence du chamane Q'ero (J3, J4)",
+      "Activités durant le voyage (telles que décrites)",
+      "Tickets d'entrée (Saqsayhuaman, Maras, Moray)",
+      "L'entrée au Machu Picchu",
+      "Cérémonies chamaniques durant le voyage",
+      "Transfert privatif A/R : aéroport Cuzco - hôtel (J1 et J13)",
+      "Transferts privatifs durant le voyage (tels que décrits)",
+      "Bus de ligne Cusco – Juliaca (en journée à l'aller, de nuit en siège confort 160°C au retour)",
+      "Train A/R Ollantaytambo - Aguas Calientes (non accompagné)",
+      "Bus navette montée / descente au Machu Picchu",
+      "Voyage en voilier traditionnel sur le Lac Titicaca"
+    ],
+    "exclude": [
+      "Le vol international A/R (devis sur demande)",
+      "Le vol Juliaca / Lima le J12 (devis sur demande)",
+      "Les déjeuners et dîners non inclus dans \"le prix comprend\"",
+      "Les pourboires (guides et chauffeurs)",
+      "Facultatif : l'assurance annulation ou multi-risques (devis sur demande)",
+      "Facultatif : le supplément chambre individuelle (160€)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2015,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 160,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "CUZ"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage est encadré par deux guides francophones privatifs, chacun spécialiste de sa région et attaché à vous faire découvrir un Pérou authentique. Le premier (Vallée Sacrée) sera présent des jours 3 à 8. Le second guide (Lac Titicaca) sera à vos côtés des jours 9 à 11. Le chaman, membre de la respectée communauté Q'eros, sera présent à vos côtés les jours 3 et 4.",
+  "accompanistsList": [
+    {
+      "name": "Des guides francophones dédiés",
+      "description": "",
+      "role": "",
+      "image": ""
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel, chez l'habitant",
+      "housingType": "",
+      "housingMood": "Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3* et des nuits chez l'habitant.\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-chamanique-perou/SbzNCziSLuUEKI6Us9Xu.jpg",
+          "alt": "image de l'hébergement Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
+        },
+        {
+          "src": "/images/voyages/voyage-chamanique-perou/NwlZC9pnTOKFrtKv6SrQ.jpg",
+          "alt": "image de l'hébergement Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
+        },
+        {
+          "src": "/images/voyages/voyage-chamanique-perou/CPgtoFO1QCmhp1gyiw9Z.jpg",
+          "alt": "image de l'hébergement Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-chamanique-perou/kKjnz57eQS7NLDd0AnsS.jpg",
     "alt": "image principale du voyage Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
@@ -124,161 +424,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Plus qu'un simple voyage, nous vous proposons une véritable immersion au cœur du Pérou, tel qu'on l'imagine.\n\nCe voyage est avant tout centré sur la rencontre : celle d'un chamane traditionnel de la respectée communauté Q'ero établie dans les Andes, et de communautés andines qui vous accueilleront au fil des étapes. En itinérance à travers la Vallée Sacrée et le Lac Titicaca, vous vivrez en complète immersion dans trois communautés quechuas. Une expérience exclusive et hors sentiers battus pour vivre une complète déconnexion, ralentir et découvrir le mode de vie andin. Au bord du plus haut lac du monde ou en plein cœur des Andes, profitez d'un cadre exceptionnel, goûtez au silence des grands espaces et prenez le temps de vivre pleinement vos journées en profitant de chaque instant.\n\nCe voyage sera également l'occasion de découvrir une dimension méconnue et fascinante de la culture locale au travers de la rencontre avec le chamane : la cosmologie et les croyances pré-colombiennes, basées sur le profond respect de la nature et l'harmonie du vivant. Une rencontre à dimension avant tout culturelle et permettant de s'ouvrir à un aspect passionnant de la culture locale.\n\nUn voyage saisissant dans deux régions mythiques du Pérou qu'on ne vit qu'une fois !",
-    "author": "Salomé",
-    "affixeAuthor": "Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "La rencontre privilégiée avec un chamane de la respectée communauté Q'ero",
-    "La découverte de deux régions mythiques : la Vallée Sacrée des Incas et le Lac Titicaca",
-    "L'immersion dans des communautés quechuas reculées, complètement hors sentiers battus",
-    "L'accompagnement d'un guide francophone pour faciliter votre échange avec les familles",
-    "Le déjeuner insolite face au majestueux site inca de Moray",
-    "L'expérience en voilier traditionnel sur le Lac Titicaca, plus haut lac navigable au monde"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE AU PEROU",
-      "badgeText": "JOUR 1",
-      "description": "Accueil francophone par nos équipes et transfert à votre hôtel, au cœur du centre historique de Cuzco. Premières explorations de la mythique capitale Inca, nichée au cœur des Andes. Perdez-vous dans ses ruelles escarpées, goûtez un jus de maracuja sur un marché ou contemplez simplement les lumières changeantes de la ville !",
-      "photo": "/images/voyages/voyage-chamanique-perou/BCLpHjwsT5W78hX2ddQo.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIERS MOMENTS A CUZCO",
-      "badgeText": "JOUR 2",
-      "description": "Journée libre pour vous acclimater et vous balader librement dans la charmante ville impériale. Classée au patrimoine du l'UNESCO, elle offre un cadre sublime entouré de montagnes. Le dépaysement est déjà là !",
-      "photo": "/images/voyages/voyage-chamanique-perou/M8ym1nS8OLMo7uQ4XGHw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "INTRODUCTION AU CHAMANISME",
-      "badgeText": "JOUR 3",
-      "description": "Rencontre avec notre chamane de la communauté Q’ero. Introduction à la spiritualité et au mysticisme andin, basé sur le respect profond de la nature. Rendez-vous ensuite sur les hauteurs pour une cérémonie d'offrandes à la terre et la visite du site majestueux de Saqsayhuaman.",
-      "photo": "/images/voyages/voyage-chamanique-perou/A75W5dH1SQSisDj6Wx2V.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VALLEE SACRÉE DES INCAS",
-      "badgeText": "JOUR 4",
-      "description": "C'est parti pour une journée avec votre guide au fil des sites incas de la Vallée Sacrée. Découverte des mythiques Salines de Maras et leurs 3000 bassins de sel qui datent de l’époque pré-inca et continuent d’être exploitées par les habitants de la communauté. Rendez-vous ensuite à Moray, ancien laboratoire agricole qui permettait autrefois aux incas de simuler une vingtaine de microclimats afin de mener à bien leurs expériences. Direction ensuite Ollantaytambo, l’un des villages les plus importants de l’empire. En fin d’après-midi, vous monterez à bord de l’emblématique train péruvien en direction d’Aguas Calientes, village situé au pied du Machu Picchu. Briefing de votre guide Machu Picchu pour votre visite du lendemain.",
-      "photo": "/images/voyages/voyage-chamanique-perou/rnqFutE0RkObREntfaEG.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MYSTÈRES DU MACHU PICCHU",
-      "badgeText": "JOUR 5",
-      "description": "Vivez un moment fort en émotions : la découverte du Machu Picchu, accroché aux flancs de la montagne en pleine végétation tropicale. Un guide spécialiste vous partagera des anecdotes et vous expliquera son importance dans la cosmovision andine. Retour pittoresque en train.",
-      "photo": "/images/voyages/voyage-chamanique-perou/8vZhHs71SWiCHP9pZUCd.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION DANS UNE COMMUNAUTÉ",
-      "badgeText": "JOURS 6, 7 ET 8",
-      "description": "Durant 3 jours, vivez une expérience unique dans l’une des communautés les plus reculées du Pérou. Accueillis chez une famille, vous participerez à la vie quotidienne du village : participation à l'agriculture dans les champs, initiation au tissage, rencontre avec les bergers ... une expérience au plus près du mode de vie ancestral andin, dans un cadre exceptionnel. Retour à Cuzco et après-midi libre.",
-      "photo": "/images/voyages/voyage-chamanique-perou/xVWiB1bfSLeoSKhGxwH3.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE À CUZCO",
-      "badgeText": "JOUR 9",
-      "description": "Journée libre dans la capitale des Incas pour visiter, déambuler ou encore acheter de l’artisanat pour ramener vos souvenirs du Pérou. Selon vos envies, nous pourrons également vous proposer une activité supplémentaire pour compléter votre voyage. L'occasion de vous détendre à votre rythme avant de poursuivre vers le Lac Titicaca !",
-      "photo": "/images/voyages/voyage-chamanique-perou/92rP0Y2Rcyp13742OLq7.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE LAC TITICACA, LOIN DES RADARS",
-      "badgeText": "JOUR 10",
-      "description": "Direction le Lac Titicaca, plus haut lac navigable du monde à 4000 mètres d’altitude. Arrivée sur la discrète péninsule de Capachica, où vous vivrez une expérience en immersion totale dans les communautés les plus recluses de la région ! Nuit au sein d’une attachante famille avec une vue imprenable sur l’étendue silencieuse du lac.\r\n",
-      "photo": "/images/voyages/voyage-chamanique-perou/6aXjPwCQAGwLFBlhwwwL.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VOILIER TRADITIONNEL SUR LE LAC",
-      "badgeText": "JOUR 11",
-      "description": "Après un bon petit-déjeuner, balade intimiste le long des plages silencieuses du Lac Titicaca. Départ ensuite pour expérience que seuls les initiés connaissent : la navigation à bord d’un petit voilier traditionnel de la région. Vous rallierez une minuscule île où se trouvent des maisons circulaires surprenantes. En récompense ? Une vue à 360°C qui vous fera sentir tout petit ! Retour dans la communauté et fin de journée libre pour vous détendre dans cet endroit hors du temps.",
-      "photo": "/images/voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉCOUVERTE LIMA",
-      "badgeText": "JOUR 12",
-      "description": "Réveil sur la péninsule avec un sublime lever de soleil sur le lac. Ce sont vos derniers moments dans ce cadre majestueux. Après le petit déjeuner, vous serez conduits à l’aéroport de Juliaca pour prendre votre vol en direction de la capitale du pays (et capitale gastronomique !), Lima. Transfert privatif à votre hôtel et fin de journée libre.",
-      "photo": "/images/voyages/voyage-chamanique-perou/MsL2XM6Rpi40UtBwIbdw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR EN FRANCE",
-      "badgeText": "JOUR 13",
-      "description": "Des belles images plein la tête, il est temps de rentrer ! Transfert rapide à l’aéroport de Lima pour prendre votre vol retour.",
-      "photo": "/images/voyages/voyage-chamanique-perou/oEZoRV7TQV66yK2r4iNt.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Des guides francophones dédiés",
-      "description": "",
-      "role": "",
-      "image": ""
-    }
-  ],
-  "accompanistsDescription": "Ce voyage est encadré par deux guides francophones privatifs, chacun spécialiste de sa région et attaché à vous faire découvrir un Pérou authentique. Le premier (Vallée Sacrée) sera présent des jours 3 à 8. Le second guide (Lac Titicaca) sera à vos côtés des jours 9 à 11. Le chaman, membre de la respectée communauté Q'eros, sera présent à vos côtés les jours 3 et 4.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, chez l'habitant",
-      "housingType": "",
-      "housingMood": "Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3* et des nuits chez l'habitant.\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-chamanique-perou/SbzNCziSLuUEKI6Us9Xu.jpg",
-          "alt": "image de l'hébergement Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
-        },
-        {
-          "src": "/images/voyages/voyage-chamanique-perou/NwlZC9pnTOKFrtKv6SrQ.jpg",
-          "alt": "image de l'hébergement Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
-        },
-        {
-          "src": "/images/voyages/voyage-chamanique-perou/CPgtoFO1QCmhp1gyiw9Z.jpg",
-          "alt": "image de l'hébergement Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "7 nuits en hôtels 2-3\\* (base double)",
-      "4 nuits chez l'habitant",
-      "1 nuit en bus de nuit (siège confort inclinable 160°C)",
-      "Tous les petits-déjeuners",
-      "Déjeuners (J4, J6, J7, J10, J11)",
-      "Déjeuners pique-nique (J3,  J12)",
-      "Dîners (J6, J7, J9, J10, J11)",
-      "Guide francophone spirituel privé (J3 à J11)",
-      "Présence du chamane Q'ero (J3, J4)",
-      "Activités durant le voyage (telles que décrites)",
-      "Tickets d'entrée (Saqsayhuaman, Maras, Moray)",
-      "L'entrée au Machu Picchu",
-      "Cérémonies chamaniques durant le voyage",
-      "Transfert privatif A/R : aéroport Cuzco - hôtel (J1 et J13)",
-      "Transferts privatifs durant le voyage (tels que décrits)",
-      "Bus de ligne Cusco – Juliaca (en journée à l'aller, de nuit en siège confort 160°C au retour)",
-      "Train A/R Ollantaytambo - Aguas Calientes (non accompagné)",
-      "Bus navette montée / descente au Machu Picchu",
-      "Voyage en voilier traditionnel sur le Lac Titicaca"
-    ],
-    "exclude": [
-      "Le vol international A/R (devis sur demande)",
-      "Le vol Juliaca / Lima le J12 (devis sur demande)",
-      "Les déjeuners et dîners non inclus dans \"le prix comprend\"",
-      "Les pourboires (guides et chauffeurs)",
-      "Facultatif : l'assurance annulation ou multi-risques (devis sur demande)",
-      "Facultatif : le supplément chambre individuelle (160€)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -335,27 +480,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2060,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 160,
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "CUZ"
-    ]
+  "seo": {
+    "metaTitle": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-chamanique-perou",
+    "ogTitle": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
+    "ogDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein d'une famille quechua.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-chamanique-perou/kKjnz57eQS7NLDd0AnsS.jpg",
+      "alt": "image principale du voyage Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
+    },
+    "twitterTitle": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
+    "twitterDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein d'une famille quechua.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-chamanique-perou/kKjnz57eQS7NLDd0AnsS.jpg",
+      "alt": "image principale du voyage Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

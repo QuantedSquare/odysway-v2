@@ -1,62 +1,382 @@
 {
   "published": true,
   "title": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",
-  "slug": "voyage-perou",
-  "rating": 4.6,
-  "comments": 4,
-  "description": "Nous vous proposons un voyage unique et très contrasté au Pérou, du Machu Picchu à l'immensité bleue du Lac Titicaca, en passant par le grandiose Canyon de Colca. Vous découvrirez également Lima, classée capitale gastronomique d'Amérique du Sud, au travers d'une expérience gustative exclusive. A chaque journée son lot d'émotions : écoutez le silence au milieu de paysages à perte de vue, vivez au rythme de communautés rurales et laissez-vous transporter par la riche histoire de ce pays hors-norme. En chemin, plusieurs familles vous ouvriront leurs portes au sein de communautés reculées.\n\nTrois régions, trois identités culturelles. L'occasion de découvrir l'essentiel du Pérou de façon intimiste, de plonger dans une culture fascinante et de ressentir véritablement l'âme d'un pays mythique.\n\nCe voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (dates de votre choix).",
-  "emailDescription": "👉 Si vous souhaitez vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
-  "metaDescription": "Odysway vous propose un voyage unique à la découverte d'un Pérou véritablement authentique. Explorez la Vallée Sacrée des Incas, le Lac Titicaca et vivez en immersion au sein de familles quechua.",
-  "interjection": "au",
   "destinations": [
-    "Pérou"
+    {
+      "name": "Pérou",
+      "slug": "perou"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-chez-l-habitant",
-    "voyage-initiatique",
-    "partir-en-famille",
-    "partir-en-groupe",
-    "ou-partir-en-hiver",
-    "ou-partir-au-printemps",
-    "ou-partir-en-automne",
-    "sejours-culturels",
-    "voyage-insolite",
-    "voyage-solidaire",
-    "voyage-aventure"
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "voyage-solidaire"
+    },
+    {
+      "name": "voyage-aventure"
+    }
   ],
   "duration": 13,
   "nights": 12,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, chez l'habitant",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 4,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Nous vous proposons un voyage unique et très contrasté au Pérou, du Machu Picchu à l'immensité bleue du Lac Titicaca, en passant par le grandiose Canyon de Colca. Vous découvrirez également Lima, classée capitale gastronomique d'Amérique du Sud, au travers d'une expérience gustative exclusive. A chaque journée son lot d'émotions : écoutez le silence au milieu de paysages à perte de vue, vivez au rythme de communautés rurales et laissez-vous transporter par la riche histoire de ce pays hors-norme. En chemin, plusieurs familles vous ouvriront leurs portes au sein de communautés reculées.\n\nTrois régions, trois identités culturelles. L'occasion de découvrir l'essentiel du Pérou de façon intimiste, de plonger dans une culture fascinante et de ressentir véritablement l'âme d'un pays mythique.\n\nCe voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (dates de votre choix).",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "La découverte des essentiels du Pérou",
+    "Les expériences intimistes et choisies avec soin",
+    "Les plus beaux sites de la Vallée Sacrée (véritables coups de coeur Odysway)",
+    "L'expérience culinaire exclusive à Lima, classée capitale gastronomique",
+    "La navigation en voilier traditionnel privé sur le Lac Titicaca",
+    "Des guides francophones attentifs et passionnés",
+    "L'immersion dans des communautés quechuas reculées"
+  ],
+  "slug": "voyage-perou",
+  "description": "Nous vous proposons un voyage unique et très contrasté au Pérou, du Machu Picchu à l'immensité bleue du Lac Titicaca, en passant par le grandiose Canyon de Colca. Vous découvrirez également Lima, classée capitale gastronomique d'Amérique du Sud, au travers d'une expérience gustative exclusive. A chaque journée son lot d'émotions : écoutez le silence au milieu de paysages à perte de vue, vivez au rythme de communautés rurales et laissez-vous transporter par la riche histoire de ce pays hors-norme. En chemin, plusieurs familles vous ouvriront leurs portes au sein de communautés reculées.\n\nTrois régions, trois identités culturelles. L'occasion de découvrir l'essentiel du Pérou de façon intimiste, de plonger dans une culture fascinante et de ressentir véritablement l'âme d'un pays mythique.\n\nCe voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (dates de votre choix).",
+  "emailDescription": "👉 Si vous souhaitez vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage unique à la découverte d'un Pérou véritablement authentique. Explorez la Vallée Sacrée des Incas, le Lac Titicaca et vivez en immersion au sein de familles quechua.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mars à novembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE À LIMA",
+      "badgeText": "JOUR 1",
+      "description": "A votre arrivée à l'aéroport de Lima, accueil de votre chauffeur et transfert privatif à votre hôtel, au coeur de Lima. Soirée libre dans les quartiers animés de la capitale, véritable capitale gastronomique d'Amérique du Sud. L'occasion de déguster votre premier ceviche, accompagné d'un délicieux cocktail au pisco !",
+      "photo": "/images/voyages/voyage-perou/sSDtyLJRI6zP3hfVdSDA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPÉRIENCE GUSTATIVE À LIMA, CAPITALE GASTRONOMIQUE",
+      "badgeText": "JOUR 2",
+      "description": "C'est parti pour un feu d'artifice gustatif ! Départ avec votre guide pour une demi-journée sur le thème de la gastronomie de rue péruvienne : l'occasion de déambuler dans les ruelles du centre-ville au fil des anecdotes du quartier, tout en dégustant pas moins de 10 spécialités locales ! Vous passerez des « carretillas » à des petits commerces locaux, dans lesquels vous pourrez échanger avec artisans et petits entrepreneurs. L'occasion de plonger à chaque bouchée dans l'histoire et la culture péruvienne. L'après-midi, vol domestique pour la jolie ville coloniale d'Arequipa, entourée de volcans.\r\n",
+      "photo": "/images/voyages/voyage-perou/KOuHTNOJT8OVJf7D6igG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AREQUIPA, LA BELLE DU SUD",
+      "badgeText": "JOUR 3",
+      "description": "Journée libre pour découvrir Arequipa à votre rythme. Nichée entre majestueux volcans, la \"Ville Blanche\" du Pérou séduit par son architecture coloniale en sillar, ses places animées et son charme intemporel. Explorez le monastère aux couleurs ocres de Santa Catalina, véritable ville dans la ville, savourez la cuisine locale et imprégnez-vous des vues spectaculaires sur le volcan Misti.",
+      "photo": "/images/voyages/voyage-perou/64ampJ7SRFKU69ygm1mp.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CANYON DE COLCA",
+      "badgeText": "JOUR 4",
+      "description": "Découverte aujourd'hui du majestueux Canyon de Colca, considéré comme l’un des plus profonds au monde (jusqu’à 3000m de profondeur par endroits). Vous observerez en chemin des lamas, alpagas et vigognes dans leur habitat naturel et franchirez en véhicule l'impressionnant col de Patapampa à 4900 mètres d'altitude, point culminant de votre voyage. L'après-midi, partez explorer le passé pré-inca avec une balade aux ruines Uyo Uyo. Voyage dans un monde antique, à la découverte des mystères de cette ancienne cité. Sur le chemin, vous aurez le droit à des vues panoramiques à couper le souffle sur les montagnes environnantes. Nuit à Colca.",
+      "photo": "/images/voyages/voyage-perou/GCdVvwxS5uwC6GSu2BMq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE LAC TITICACA, HORS DES SENTIERS TOURISTIQUES",
+      "badgeText": "JOUR 5",
+      "description": "Après le petit-déjeuner, direction le mirador \"Croix du Condor\" qui vous offrira un panorama extraordinaire sur le Canyon de Colca. Avec un brin de chance, vous pourrez observer des condors, véritable symbole de la Cordillère des Andes, voler dans leur habitat naturel. Vous continuerez par une courte balade à pied qui vous offrira de belles perspectives sur le canyon. Départ ensuite en bus confortable vers le Lac Titicaca, plus haut lac navigable du monde à 4000 mètres d’altitude. Installation sur la discrète péninsule de Capachica, où vous vivrez une expérience loin de tout dans les communautés les plus recluses de la région ! Nuit au sein d’une attachante famille avec une vue imprenable sur l’étendue silencieuse du lac.",
+      "photo": "/images/voyages/voyage-perou/z0tyEIGSMa4jtoqCqXaz.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOILIER TRADITIONNEL SUR LE LAC",
+      "badgeText": "JOUR 6",
+      "description": "Départ pour une balade intimiste que seuls les initiés connaissent le long des plages du lac Titicaca. L'occasion de sentir la vie locale et de profiter de vues saisissantes sur le lac. Vous embarquerez ensuite à bord d'un petit voilier traditionnel de la région. Vous rallierez une minuscule île où se trouvent des maisons circulaires surprenantes. En récompense ? Une vue à 360°C sur le lac qui vous fera sentir tout petit ! Fin de journée libre dans le cadre paisible de la communauté.",
+      "photo": "/images/voyages/voyage-perou/EjdtkWGLQRCBeyXKg26l.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PACHAMANCA AVEC LA COMMUNAUTÉ",
+      "badgeText": "JOUR 7",
+      "description": "Réveil sur la péninsule avec un sublime lever de soleil sur le lac. Après un petit-déjeuner traditionnel, vos hôtes vous partageront une activité ludique,\r\nen se plongeant dans leur quotidien afin d'en apprendre plus sur leur mode de vie. À l’heure du déjeuner, vous attend une traditionnelle Pachamanca. Technique \r\nconsistant à cuire les denrées à l'étouffée, à même la terre avec l'aide de pierres chaudes posées par-dessus. Une expérience intrigante et succulente pour un moment de partage avec les membres de la famille. Nuit à Puno.",
+      "photo": "/images/voyages/voyage-perou/Lqn4xfOSb6KR4afEZpmY.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU COEUR DES ANDES À CUZCO",
+      "badgeText": "JOUR 8",
+      "description": "Ce matin, départ en bus confortable vers votre prochaine destination par la célèbre route du Soleil : Cuzco au coeur de la Vallée Sacrée. Vous traverserez l’Altiplano et vous profiterez pleinement des paysages andins jusqu’à la capitale des Incas. Classée patrimoine mondial de l’humanité par l’UNESCO, Cusco abrite une grande diversité culturelle et historique qui en fait une ville majeure et incontournable du Pérou.",
+      "photo": "/images/voyages/voyage-perou/oVTlEfuQsSyPCUil4ZhU.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE AU COEUR DES ANDES",
+      "badgeText": "JOUR 9",
+      "description": "Journée libre pour vous acclimater et vous balader librement dans la mythique capitale inca de Cuzco, nichée au cœur des Andes. Classée au patrimoine du l'UNESCO, elle offre un cadre sublime entouré de montagnes. Perdez-vous dans ses ruelles escarpées, goûtez un jus de maracuja sur un marché ou contemplez simplement les lumières changeantes de la ville ! Le dépaysement est déjà là !",
+      "photo": "/images/voyages/voyage-perou/m3mkV742RLuTVUQjEbYi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VALLEE SACRÉE DES INCAS",
+      "badgeText": "JOUR 10",
+      "description": "C'est parti pour une journée avec votre guide au fil des sites incas de la Vallée Sacrée. Découverte des mythiques Salines de Maras et leurs 3000 bassins de sel qui datent de l’époque pré-inca et continuent d’être exploitées par les habitants de la communauté. Rendez-vous ensuite à Moray, ancien laboratoire agricole qui permettait autrefois aux incas de simuler une vingtaine de microclimats afin de mener à bien leurs expériences. Direction ensuite Ollantaytambo, l’un des villages les plus importants de l’empire. En fin d’après-midi, vous monterez à bord de l’emblématique train péruvien en direction d’Aguas Calientes, village situé au pied du Machu Picchu. Briefing de votre guide Machu Picchu pour votre visite du lendemain.",
+      "photo": "/images/voyages/voyage-perou/pUPNvWRSbS7JeNpGVyoO.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MYSTÈRES DU MACHU PICCHU",
+      "badgeText": "JOUR 11",
+      "description": "Vivez un moment fort en émotions : la découverte du Machu Picchu, accroché aux flancs de la montagne en pleine végétation tropicale. Un guide spécialiste vous partagera des anecdotes et vous expliquera son importance dans la cosmovision andine. Retour en train jusqu'à Cuzco pour profiter d'une soirée libre.",
+      "photo": "/images/voyages/voyage-perou/IAwPxjjITF6PDF0oy3Sw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À CUZCO",
+      "badgeText": "JOUR 12",
+      "description": "Journée libre dans la capitale des Incas pour explorer la capitale inca, monter sur ses hauteurs et faire vos derniers achats pour vos proches. De nombreuses excursions sont possibles sur demande : randonnée sur la montagne arc-en-ciel de Palcoyyo, marche jusqu'au site inca de Waqrapukara, atelier avec un chocolatier passionné, randonnée aux 7 lacs glaciaires de l'Ausangate, dîner dans une bonne table en ville ...",
+      "photo": "/images/voyages/voyage-perou/xNbaqYTWSnBi1eA1i6QA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 13",
+      "description": "Des belles images plein la tête, il est temps de rentrer ! Transfert rapide à l’aéroport de Cuzco pour prendre votre vol retour vers la France (devis sur demande)",
+      "photo": "/images/voyages/voyage-perou/X06tVQ3fSGqVq2zoQkZ0.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "10 nuits en hôtel 3\\* (base double)",
+      "2 nuits chez l'habitant",
+      "Tous les petits-déjeuners",
+      "Déjeuners (J2, J4, J6, J7, J8, J10)",
+      "Dîners (J5, J6)",
+      "Street-food tour dans le centre de (Lima) avec guide francophone privé (J2)",
+      "Guide francophone collectif max. 15 personnes dans le Canyon de Colca (J4, J5)",
+      "Guide francophone privé (J5, J6, J7, J10)",
+      "Assistance et briefing francophone à l’arrivée à Cusco (J8)",
+      "Guide francophone privé au Machu Picchu (J11)",
+      "Activités durant le voyage (telles que décrites)",
+      "Tickets d'entrée des sites archéologiques prévus au programme",
+      "L'entrée au Machu Picchu",
+      "Transferts privatifs",
+      "Transport collectif pour la visite du canyon de Colca (max. 15 personnes) (J4, J5)",
+      "Bus Chivay - Juliaca (J5)",
+      "Bus de ligne confort Puno - Cusco (J8)",
+      "Train Ollantaytambo / Aguas Calientes (non-accompagné) (J10)",
+      "Train Aguas Calientes / Cuzco (non-accompagné) (J11)",
+      "Bus navette montée / descente au Machu Picchu (J11)"
+    ],
+    "exclude": [
+      "Les vols internationaux (devis sur demande)",
+      "Les vols intérieurs (devis sur demande)",
+      "Les déjeuners et dîners non mentionnés dans \"Le prix comprend\"",
+      "Les pourboires aux guides et chauffeurs",
+      "Facultatif : le supplément chambre individuelle (200€)",
+      "Facultatif : L'assurance annulation ou multi-risques (devis sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1830,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 145,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "CUZ"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage est encadré par des guides francophones privatifs, chacun spécialiste de sa région et attaché à vous faire découvrir un Pérou authentique. Ils vous apporteront des éclairages sur la culture locale, pourront répondre à vos questions et faciliteront les échanges avec vos hôtes.",
+  "accompanistsList": [
+    {
+      "name": "Des guides francophones dédiés",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/voyage-perou/AGvLK5ohSf2ggSIFbNMx.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel, chez l'habitant",
+      "housingType": "",
+      "housingMood": "Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3* et des nuits chez l'habitant.\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-perou/UoHOrzmdQKqvJUAjWChR.jpg",
+          "alt": "image de l'hébergement Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
+        },
+        {
+          "src": "/images/voyages/voyage-perou/SlyImqsRuqdHWfHXECU5.jpg",
+          "alt": "image de l'hébergement Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
+        },
+        {
+          "src": "/images/voyages/voyage-perou/swxS4jWLQ3usjTb8Qtd6.jpg",
+          "alt": "image de l'hébergement Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-perou/id91ylw7SN2395ZGSRck.jpg",
     "alt": "image principale du voyage Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
@@ -96,177 +416,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Nous vous proposons un voyage unique et très contrasté au Pérou, du Machu Picchu à l'immensité bleue du Lac Titicaca, en passant par le grandiose Canyon de Colca. Vous découvrirez également Lima, classée capitale gastronomique d'Amérique du Sud, au travers d'une expérience gustative exclusive. A chaque journée son lot d'émotions : écoutez le silence au milieu de paysages à perte de vue, vivez au rythme de communautés rurales et laissez-vous transporter par la riche histoire de ce pays hors-norme. En chemin, plusieurs familles vous ouvriront leurs portes au sein de communautés reculées.\n\nTrois régions, trois identités culturelles. L'occasion de découvrir l'essentiel du Pérou de façon intimiste, de plonger dans une culture fascinante et de ressentir véritablement l'âme d'un pays mythique.\n\nCe voyage est disponible en petit groupe (dates ci-dessous) ou en privatif (dates de votre choix).",
-    "author": "Salomé",
-    "affixeAuthor": "Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "La découverte des essentiels du Pérou",
-    "Les expériences intimistes et choisies avec soin",
-    "Les plus beaux sites de la Vallée Sacrée (véritables coups de coeur Odysway)",
-    "L'expérience culinaire exclusive à Lima, classée capitale gastronomique",
-    "La navigation en voilier traditionnel privé sur le Lac Titicaca",
-    "Des guides francophones attentifs et passionnés",
-    "L'immersion dans des communautés quechuas reculées"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE À LIMA",
-      "badgeText": "JOUR 1",
-      "description": "A votre arrivée à l'aéroport de Lima, accueil de votre chauffeur et transfert privatif à votre hôtel, au coeur de Lima. Soirée libre dans les quartiers animés de la capitale, véritable capitale gastronomique d'Amérique du Sud. L'occasion de déguster votre premier ceviche, accompagné d'un délicieux cocktail au pisco !",
-      "photo": "/images/voyages/voyage-perou/sSDtyLJRI6zP3hfVdSDA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPÉRIENCE GUSTATIVE À LIMA, CAPITALE GASTRONOMIQUE",
-      "badgeText": "JOUR 2",
-      "description": "C'est parti pour un feu d'artifice gustatif ! Départ avec votre guide pour une demi-journée sur le thème de la gastronomie de rue péruvienne : l'occasion de déambuler dans les ruelles du centre-ville au fil des anecdotes du quartier, tout en dégustant pas moins de 10 spécialités locales ! Vous passerez des « carretillas » à des petits commerces locaux, dans lesquels vous pourrez échanger avec artisans et petits entrepreneurs. L'occasion de plonger à chaque bouchée dans l'histoire et la culture péruvienne. L'après-midi, vol domestique pour la jolie ville coloniale d'Arequipa, entourée de volcans.\r\n",
-      "photo": "/images/voyages/voyage-perou/KOuHTNOJT8OVJf7D6igG.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AREQUIPA, LA BELLE DU SUD",
-      "badgeText": "JOUR 3",
-      "description": "Journée libre pour découvrir Arequipa à votre rythme. Nichée entre majestueux volcans, la \"Ville Blanche\" du Pérou séduit par son architecture coloniale en sillar, ses places animées et son charme intemporel. Explorez le monastère aux couleurs ocres de Santa Catalina, véritable ville dans la ville, savourez la cuisine locale et imprégnez-vous des vues spectaculaires sur le volcan Misti.",
-      "photo": "/images/voyages/voyage-perou/64ampJ7SRFKU69ygm1mp.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CANYON DE COLCA",
-      "badgeText": "JOUR 4",
-      "description": "Découverte aujourd'hui du majestueux Canyon de Colca, considéré comme l’un des plus profonds au monde (jusqu’à 3000m de profondeur par endroits). Vous observerez en chemin des lamas, alpagas et vigognes dans leur habitat naturel et franchirez en véhicule l'impressionnant col de Patapampa à 4900 mètres d'altitude, point culminant de votre voyage. L'après-midi, partez explorer le passé pré-inca avec une balade aux ruines Uyo Uyo. Voyage dans un monde antique, à la découverte des mystères de cette ancienne cité. Sur le chemin, vous aurez le droit à des vues panoramiques à couper le souffle sur les montagnes environnantes. Nuit à Colca.",
-      "photo": "/images/voyages/voyage-perou/GCdVvwxS5uwC6GSu2BMq.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE LAC TITICACA, HORS DES SENTIERS TOURISTIQUES",
-      "badgeText": "JOUR 5",
-      "description": "Après le petit-déjeuner, direction le mirador \"Croix du Condor\" qui vous offrira un panorama extraordinaire sur le Canyon de Colca. Avec un brin de chance, vous pourrez observer des condors, véritable symbole de la Cordillère des Andes, voler dans leur habitat naturel. Vous continuerez par une courte balade à pied qui vous offrira de belles perspectives sur le canyon. Départ ensuite en bus confortable vers le Lac Titicaca, plus haut lac navigable du monde à 4000 mètres d’altitude. Installation sur la discrète péninsule de Capachica, où vous vivrez une expérience loin de tout dans les communautés les plus recluses de la région ! Nuit au sein d’une attachante famille avec une vue imprenable sur l’étendue silencieuse du lac.",
-      "photo": "/images/voyages/voyage-perou/z0tyEIGSMa4jtoqCqXaz.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VOILIER TRADITIONNEL SUR LE LAC",
-      "badgeText": "JOUR 6",
-      "description": "Départ pour une balade intimiste que seuls les initiés connaissent le long des plages du lac Titicaca. L'occasion de sentir la vie locale et de profiter de vues saisissantes sur le lac. Vous embarquerez ensuite à bord d'un petit voilier traditionnel de la région. Vous rallierez une minuscule île où se trouvent des maisons circulaires surprenantes. En récompense ? Une vue à 360°C sur le lac qui vous fera sentir tout petit ! Fin de journée libre dans le cadre paisible de la communauté.",
-      "photo": "/images/voyages/voyage-perou/EjdtkWGLQRCBeyXKg26l.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PACHAMANCA AVEC LA COMMUNAUTÉ",
-      "badgeText": "JOUR 7",
-      "description": "Réveil sur la péninsule avec un sublime lever de soleil sur le lac. Après un petit-déjeuner traditionnel, vos hôtes vous partageront une activité ludique,\r\nen se plongeant dans leur quotidien afin d'en apprendre plus sur leur mode de vie. À l’heure du déjeuner, vous attend une traditionnelle Pachamanca. Technique \r\nconsistant à cuire les denrées à l'étouffée, à même la terre avec l'aide de pierres chaudes posées par-dessus. Une expérience intrigante et succulente pour un moment de partage avec les membres de la famille. Nuit à Puno.",
-      "photo": "/images/voyages/voyage-perou/Lqn4xfOSb6KR4afEZpmY.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU COEUR DES ANDES À CUZCO",
-      "badgeText": "JOUR 8",
-      "description": "Ce matin, départ en bus confortable vers votre prochaine destination par la célèbre route du Soleil : Cuzco au coeur de la Vallée Sacrée. Vous traverserez l’Altiplano et vous profiterez pleinement des paysages andins jusqu’à la capitale des Incas. Classée patrimoine mondial de l’humanité par l’UNESCO, Cusco abrite une grande diversité culturelle et historique qui en fait une ville majeure et incontournable du Pérou.",
-      "photo": "/images/voyages/voyage-perou/oVTlEfuQsSyPCUil4ZhU.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE AU COEUR DES ANDES",
-      "badgeText": "JOUR 9",
-      "description": "Journée libre pour vous acclimater et vous balader librement dans la mythique capitale inca de Cuzco, nichée au cœur des Andes. Classée au patrimoine du l'UNESCO, elle offre un cadre sublime entouré de montagnes. Perdez-vous dans ses ruelles escarpées, goûtez un jus de maracuja sur un marché ou contemplez simplement les lumières changeantes de la ville ! Le dépaysement est déjà là !",
-      "photo": "/images/voyages/voyage-perou/m3mkV742RLuTVUQjEbYi.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VALLEE SACRÉE DES INCAS",
-      "badgeText": "JOUR 10",
-      "description": "C'est parti pour une journée avec votre guide au fil des sites incas de la Vallée Sacrée. Découverte des mythiques Salines de Maras et leurs 3000 bassins de sel qui datent de l’époque pré-inca et continuent d’être exploitées par les habitants de la communauté. Rendez-vous ensuite à Moray, ancien laboratoire agricole qui permettait autrefois aux incas de simuler une vingtaine de microclimats afin de mener à bien leurs expériences. Direction ensuite Ollantaytambo, l’un des villages les plus importants de l’empire. En fin d’après-midi, vous monterez à bord de l’emblématique train péruvien en direction d’Aguas Calientes, village situé au pied du Machu Picchu. Briefing de votre guide Machu Picchu pour votre visite du lendemain.",
-      "photo": "/images/voyages/voyage-perou/pUPNvWRSbS7JeNpGVyoO.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MYSTÈRES DU MACHU PICCHU",
-      "badgeText": "JOUR 11",
-      "description": "Vivez un moment fort en émotions : la découverte du Machu Picchu, accroché aux flancs de la montagne en pleine végétation tropicale. Un guide spécialiste vous partagera des anecdotes et vous expliquera son importance dans la cosmovision andine. Retour en train jusqu'à Cuzco pour profiter d'une soirée libre.",
-      "photo": "/images/voyages/voyage-perou/IAwPxjjITF6PDF0oy3Sw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE À CUZCO",
-      "badgeText": "JOUR 12",
-      "description": "Journée libre dans la capitale des Incas pour explorer la capitale inca, monter sur ses hauteurs et faire vos derniers achats pour vos proches. De nombreuses excursions sont possibles sur demande : randonnée sur la montagne arc-en-ciel de Palcoyyo, marche jusqu'au site inca de Waqrapukara, atelier avec un chocolatier passionné, randonnée aux 7 lacs glaciaires de l'Ausangate, dîner dans une bonne table en ville ...",
-      "photo": "/images/voyages/voyage-perou/xNbaqYTWSnBi1eA1i6QA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR EN FRANCE",
-      "badgeText": "JOUR 13",
-      "description": "Des belles images plein la tête, il est temps de rentrer ! Transfert rapide à l’aéroport de Cuzco pour prendre votre vol retour vers la France (devis sur demande)",
-      "photo": "/images/voyages/voyage-perou/X06tVQ3fSGqVq2zoQkZ0.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Des guides francophones dédiés",
-      "description": "",
-      "role": "",
-      "image": "/images/voyages/voyage-perou/AGvLK5ohSf2ggSIFbNMx.jpg"
-    }
-  ],
-  "accompanistsDescription": "Ce voyage est encadré par des guides francophones privatifs, chacun spécialiste de sa région et attaché à vous faire découvrir un Pérou authentique. Ils vous apporteront des éclairages sur la culture locale, pourront répondre à vos questions et faciliteront les échanges avec vos hôtes.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, chez l'habitant",
-      "housingType": "",
-      "housingMood": "Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3* et des nuits chez l'habitant.\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-perou/UoHOrzmdQKqvJUAjWChR.jpg",
-          "alt": "image de l'hébergement Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
-        },
-        {
-          "src": "/images/voyages/voyage-perou/SlyImqsRuqdHWfHXECU5.jpg",
-          "alt": "image de l'hébergement Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
-        },
-        {
-          "src": "/images/voyages/voyage-perou/swxS4jWLQ3usjTb8Qtd6.jpg",
-          "alt": "image de l'hébergement Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "10 nuits en hôtel 3\\* (base double)",
-      "2 nuits chez l'habitant",
-      "Tous les petits-déjeuners",
-      "Déjeuners (J2, J4, J6, J7, J8, J10)",
-      "Dîners (J5, J6)",
-      "Street-food tour dans le centre de (Lima) avec guide francophone privé (J2)",
-      "Guide francophone collectif max. 15 personnes dans le Canyon de Colca (J4, J5)",
-      "Guide francophone privé (J5, J6, J7, J10)",
-      "Assistance et briefing francophone à l’arrivée à Cusco (J8)",
-      "Guide francophone privé au Machu Picchu (J11)",
-      "Activités durant le voyage (telles que décrites)",
-      "Tickets d'entrée des sites archéologiques prévus au programme",
-      "L'entrée au Machu Picchu",
-      "Transferts privatifs",
-      "Transport collectif pour la visite du canyon de Colca (max. 15 personnes) (J4, J5)",
-      "Bus Chivay - Juliaca (J5)",
-      "Bus de ligne confort Puno - Cusco (J8)",
-      "Train Ollantaytambo / Aguas Calientes (non-accompagné) (J10)",
-      "Train Aguas Calientes / Cuzco (non-accompagné) (J11)",
-      "Bus navette montée / descente au Machu Picchu (J11)"
-    ],
-    "exclude": [
-      "Les vols internationaux (devis sur demande)",
-      "Les vols intérieurs (devis sur demande)",
-      "Les déjeuners et dîners non mentionnés dans \"Le prix comprend\"",
-      "Les pourboires aux guides et chauffeurs",
-      "Facultatif : le supplément chambre individuelle (200€)",
-      "Facultatif : L'assurance annulation ou multi-risques (devis sur demande)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -319,27 +468,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1880,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 145,
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "CUZ"
-    ]
+  "seo": {
+    "metaTitle": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-perou",
+    "ogTitle": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",
+    "ogDescription": "Odysway vous propose un voyage unique à la découverte d'un Pérou véritablement authentique. Explorez la Vallée Sacrée des Incas, le Lac Titicaca et vivez en immersion au sein de familles quechua.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-perou/id91ylw7SN2395ZGSRck.jpg",
+      "alt": "image principale du voyage Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
+    },
+    "twitterTitle": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",
+    "twitterDescription": "Odysway vous propose un voyage unique à la découverte d'un Pérou véritablement authentique. Explorez la Vallée Sacrée des Incas, le Lac Titicaca et vivez en immersion au sein de familles quechua.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-perou/id91ylw7SN2395ZGSRck.jpg",
+      "alt": "image principale du voyage Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

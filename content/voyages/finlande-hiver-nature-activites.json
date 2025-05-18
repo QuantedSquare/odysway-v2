@@ -1,42 +1,256 @@
 {
   "published": true,
   "title": "Aventures hivernales en Laponie Finlandaise",
-  "slug": "finlande-hiver-nature-activites",
-  "rating": 0,
-  "comments": 0,
-  "description": "Plongez au cœur de la nature immaculée de la Finlande en arpentant le parc national de Hossa. Guidés par les techniques ancestrales des explorateurs polaires, vous débuterez votre aventure par une randonnée tractée par des chiens. Partez ensuite au milieu de la forêt boréale pour un raid en traîneau à chiens, vos compagnons de voyages pour 2 jours. Vous découvrirez également les secrets de survie des trappeurs d'autrefois avant de vous aventurer dans un raid, cette fois-ci, itinérant au cœur de la Taïga, chaussés de raquettes à neige pour une exploration intime de la nature sauvage. \n\nTout au long de ce voyage, vous explorerez des sentiers reculés et des paysages à couper le souffle, vous reliant à la magie brute de l'Arctique et aux traditions locales, comme une immersion dans le quotidien des finlandais !",
-  "emailDescription": "",
-  "metaDescription": "Découvrez le charme sauvage du parc national de Hossa, niché dans le Nord-Est de la Finlande, à travers une expérience authentique inspirée des traditions des explorateurs polaires. Notre programme unique combine aventures en plein air et respect de la nature pour une escapade inoubliable.",
-  "interjection": "en",
   "destinations": [
-    "Finlande"
+    {
+      "name": "Finlande",
+      "slug": "finlande"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "sejours-nature",
-    "voyage-sportif"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-sportif"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chalet et cabane de trappeur",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Plongez au cœur de la nature immaculée de la Finlande en arpentant le parc national de Hossa. Guidés par les techniques ancestrales des explorateurs polaires, vous débuterez votre aventure par une randonnée tractée par des chiens. Partez ensuite au milieu de la forêt boréale pour un raid en traîneau à chiens, vos compagnons de voyages pour 2 jours. Vous découvrirez également les secrets de survie des trappeurs d'autrefois avant de vous aventurer dans un raid, cette fois-ci, itinérant au cœur de la Taïga, chaussés de raquettes à neige pour une exploration intime de la nature sauvage. \n\nTout au long de ce voyage, vous explorerez des sentiers reculés et des paysages à couper le souffle, vous reliant à la magie brute de l'Arctique et aux traditions locales, comme une immersion dans le quotidien des finlandais !",
+    "author": "Lucie",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Explorez la pureté des paysages de la forêt boréale et de la Taïga aux côtés d'un guide spécialisé du milieu polaire",
+    "Relaxez-vous dans un sauna traditionnel, offrant une fin parfaite à chacune de vos aventures quotidiennes",
+    "Profitez de nuits en pleine nature, pour une immersion et une déconnexion totale",
+    "Partagez des moments de convivialité grâce au petit groupe"
+  ],
+  "slug": "finlande-hiver-nature-activites",
+  "description": "Plongez au cœur de la nature immaculée de la Finlande en arpentant le parc national de Hossa. Guidés par les techniques ancestrales des explorateurs polaires, vous débuterez votre aventure par une randonnée tractée par des chiens. Partez ensuite au milieu de la forêt boréale pour un raid en traîneau à chiens, vos compagnons de voyages pour 2 jours. Vous découvrirez également les secrets de survie des trappeurs d'autrefois avant de vous aventurer dans un raid, cette fois-ci, itinérant au cœur de la Taïga, chaussés de raquettes à neige pour une exploration intime de la nature sauvage. \n\nTout au long de ce voyage, vous explorerez des sentiers reculés et des paysages à couper le souffle, vous reliant à la magie brute de l'Arctique et aux traditions locales, comme une immersion dans le quotidien des finlandais !",
+  "emailDescription": "",
+  "metaDescription": "Découvrez le charme sauvage du parc national de Hossa, niché dans le Nord-Est de la Finlande, à travers une expérience authentique inspirée des traditions des explorateurs polaires. Notre programme unique combine aventures en plein air et respect de la nature pour une escapade inoubliable.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 10 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Dec à Avr",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE EN FINLANDE",
+      "badgeText": "JOUR 1",
+      "description": "Après votre vol aller à destination de Kuusamo, vous serez accueillis par notre équipe locale à l’aéroport. Vous rejoindrez ensuite le camp de base, situé au cœur de la nature près de la ville d’Hossa. Le soir, premier dîner au camp et préparation de la semaine avec votre guide.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/ofbCTKWnSEef2nmsYg5D.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CANI-RANDO DANS LE PARC NATUREL DE HOSSA",
+      "badgeText": "JOUR 2",
+      "description": "Partez à l’aventure, au cœur de la Taïga, chaussés de vos raquettes, pour une journée de cani-rando. Guidés par un fidèle chien de traîneau, vous serez menés à travers les sentiers enneigés et une véritable complicité se créera entre vous et votre compagnon à quatre pattes. Entre lacs gelés et arbres enneigés, vous vivrez cette journée dans un cadre enchanteur.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/Z5KFZArMTtClNh6ztyYy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DEBUT DE VOTRE RAID EN TRAÎNEAU A CHIENS",
+      "badgeText": "JOUR 3",
+      "description": "En compagnie de vos attelages, entamez votre parcours et laissez-vous guider par vos fidèles compagnons qui vous accompagneront pendant les deux prochains jours. Les paysages enneigés défilent sous vos yeux entre lacs et vastes étendues. Un pique-nique en pleine nature sera organisé pour votre déjeuner. Repartez ensuite sur les sentiers pendant une vingtaine de kilomètres avant d'atteindre une cabane de trappeur où vous passerez la nuit. La soirée sera l'occasion de partager des moments avec vos chiens, les autres voyageurs, mais aussi de profiter d'un coucher de soleil sur le lac attenant ou encore de vous détendre dans le sauna.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/qvlIDbAWTRaiGZtDFLjC.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU COEUR DE LA NATURE FINLANDAISE",
+      "badgeText": "JOUR 4",
+      "description": "Découvrez le nord du parc de Hossa, où vous pourrez croiser des troupeaux de rennes dans un paysage paisible. Les lacs forestiers se succèdent, entrecoupés de passages en sous-bois. Parfois large, la piste se rétrécit, vous permettant de vous faufiler avec votre attelage au cœur de la forêt primaire du parc de Hossa. En fin d'après-midi, retour à la base pour s'occuper des chiens et du matériel. La journée se termine par un repas convivial à l'auberge.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/79yn5AwNSrqSTAucC6vo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "INITIATION A LA SURVIE EN MILIEU POLAIRE",
+      "badgeText": "JOUR 5",
+      "description": "Lors de cette journée, partez à la découverte du mode de vie des trappeurs tout en ayant un regard respectueux sur l'environnement qui vous entoure. Votre guide vous montrera comment les trappeurs pistent les animaux et posent des pièges, vous initiant aux techniques de survie indispensables à tout explorateur polaire. Si les conditions météorologiques le permettent, vous apprendrez même à construire un igloo ou un autre abri de survie. Une initiation à la pêche sur glace vous sera également proposée. Une journée riche en apprentissages et en aventures, au cœur de la nature polaire.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/RGNBAaFQ7qPiVBx3OPKA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DEPART POUR VOTRE EXCURSION EN RAQUETTES",
+      "badgeText": "JOUR 6",
+      "description": "Partez pour deux jours de raid en raquettes au cœur du parc d’Hossa. Vous traverserez des espaces vierges où il n’est pas rare de croiser des troupeaux de rennes et autres animaux sauvages. Le soir, nous rejoindrons notre lieu de bivouac, où vous pourrez apprécier la chaleur d’un sauna avant de vous jeter dans la neige, à la manière traditionnelle finlandaise. Une aventure inoubliable au cœur de la nature sauvage.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/y5PfceasQFuIxQoj4ZyI.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MARCHE A TRAVERS LES PAYSAGES ENNEIGES",
+      "badgeText": "JOUR 7",
+      "description": "Poursuivez votre aventure à travers les lacs gelés et la forêt boréale. Après un déjeuner au coin du feu, nous terminerons par la traversée de Hossanjarvi avant de regagner l'auberge. Le soir, savourez un repas traditionnel des éleveurs : le Poronkäristys, un délicieux ragoût de renne aux airelles. Une expérience culinaire authentique pour clôturer cette journée d'exploration.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/0Ra8RVsQoaUGqrnk4gyc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS EN FINLANDE",
+      "badgeText": "JOUR 8",
+      "description": "Derniers instants en Finlande... Dites au revoir à votre guide et à cette nature préservée. Nous vous conduirons ensuite à l'aéroport pour votre vol retour. Fin d'une semaine riche en émotions et en souvenirs inoubliables.",
+      "photo": "/images/voyages/finlande-hiver-nature-activites/mI3ZSWrfQTKEye7rFQk1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil et les transferts aéroport aller/retour",
+      "L'hébergement : 5 nuits en auberge et 2 nuits en cabanes de trappeur (chambres de 4 ou 6 selon la cabane)",
+      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 8",
+      "Le transport des bagages",
+      "L'encadrement par des guides francophones spécialistes du milieu polaire",
+      "Le prêt de l’équipement grand froid comprenant bottes grand froid (type Sorel), une veste grand froid et des moufles (pour la semaine). Merci de nous prévenir en amont pour les pointures en dessous de 34  et au-dessus de 50 s'il vous plaît."
+    ],
+    "exclude": [
+      "Les vols aller/retour",
+      "Le supplément chambre individuelle (possible uniquement à l'auberge : 300€/personne)",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles sur place",
+      "Les boissons",
+      "La caution pour le matériel grand froid par empreinte de votre carte bancaire : 50 euros pour les bottes, 50 euros pour la veste grand froid",
+      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1990,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 10,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": [
+      "KAO"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par un guide francophone spécialiste des milieux polaires qui sera votre mentor vivre cette immersion finlandaise au travers des paysages et des pratiques ancestrales.",
+  "accompanistsList": [
+    {
+      "name": "Guide francophone spécialiste du milieu polaire",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/finlande-hiver-nature-activites/7Dl6jZ8qRLudPfevhjxW.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Chalet et cabane de trappeur",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous passerez 5 nuits dans le camp de base et 2 nuits en cabane de trappeur. Le camp de base se situe en pleine nature, au bord d'un lac gelé en hiver que vous pourrez directement admirer dès le réveil depuis votre chalet. \r\nLes cabanes de trappeur s'apparentent aux refuges que l'on trouve en France. Ces cabanes en bois sont simples mais charmantes. Elles disposent d’un espace dortoir ou d'une chambre pouvant accueillir 4 à 6 personnes, agrémentées d’une pièce à vivre. Certaines sont équipées d'un sauna pour une détente optimale.",
+      "image": [
+        {
+          "src": "/images/voyages/finlande-hiver-nature-activites/YhlJJDNuRXeKRN7thF5k.jpg",
+          "alt": "image de l'hébergement Aventures hivernales en Laponie Finlandaise"
+        },
+        {
+          "src": "/images/voyages/finlande-hiver-nature-activites/B2RTRaowRiWY4sp142A8.jpg",
+          "alt": "image de l'hébergement Aventures hivernales en Laponie Finlandaise"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/finlande-hiver-nature-activites/VyqUkN8tSI2fgngrOGDw.jpg",
     "alt": "image principale du voyage Aventures hivernales en Laponie Finlandaise"
@@ -68,122 +282,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Plongez au cœur de la nature immaculée de la Finlande en arpentant le parc national de Hossa. Guidés par les techniques ancestrales des explorateurs polaires, vous débuterez votre aventure par une randonnée tractée par des chiens. Partez ensuite au milieu de la forêt boréale pour un raid en traîneau à chiens, vos compagnons de voyages pour 2 jours. Vous découvrirez également les secrets de survie des trappeurs d'autrefois avant de vous aventurer dans un raid, cette fois-ci, itinérant au cœur de la Taïga, chaussés de raquettes à neige pour une exploration intime de la nature sauvage. \n\nTout au long de ce voyage, vous explorerez des sentiers reculés et des paysages à couper le souffle, vous reliant à la magie brute de l'Arctique et aux traditions locales, comme une immersion dans le quotidien des finlandais !",
-    "author": "Lucie",
-    "affixeAuthor": "Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "Explorez la pureté des paysages de la forêt boréale et de la Taïga aux côtés d'un guide spécialisé du milieu polaire",
-    "Relaxez-vous dans un sauna traditionnel, offrant une fin parfaite à chacune de vos aventures quotidiennes",
-    "Profitez de nuits en pleine nature, pour une immersion et une déconnexion totale",
-    "Partagez des moments de convivialité grâce au petit groupe"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE EN FINLANDE",
-      "badgeText": "JOUR 1",
-      "description": "Après votre vol aller à destination de Kuusamo, vous serez accueillis par notre équipe locale à l’aéroport. Vous rejoindrez ensuite le camp de base, situé au cœur de la nature près de la ville d’Hossa. Le soir, premier dîner au camp et préparation de la semaine avec votre guide.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/ofbCTKWnSEef2nmsYg5D.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CANI-RANDO DANS LE PARC NATUREL DE HOSSA",
-      "badgeText": "JOUR 2",
-      "description": "Partez à l’aventure, au cœur de la Taïga, chaussés de vos raquettes, pour une journée de cani-rando. Guidés par un fidèle chien de traîneau, vous serez menés à travers les sentiers enneigés et une véritable complicité se créera entre vous et votre compagnon à quatre pattes. Entre lacs gelés et arbres enneigés, vous vivrez cette journée dans un cadre enchanteur.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/Z5KFZArMTtClNh6ztyYy.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DEBUT DE VOTRE RAID EN TRAÎNEAU A CHIENS",
-      "badgeText": "JOUR 3",
-      "description": "En compagnie de vos attelages, entamez votre parcours et laissez-vous guider par vos fidèles compagnons qui vous accompagneront pendant les deux prochains jours. Les paysages enneigés défilent sous vos yeux entre lacs et vastes étendues. Un pique-nique en pleine nature sera organisé pour votre déjeuner. Repartez ensuite sur les sentiers pendant une vingtaine de kilomètres avant d'atteindre une cabane de trappeur où vous passerez la nuit. La soirée sera l'occasion de partager des moments avec vos chiens, les autres voyageurs, mais aussi de profiter d'un coucher de soleil sur le lac attenant ou encore de vous détendre dans le sauna.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/qvlIDbAWTRaiGZtDFLjC.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU COEUR DE LA NATURE FINLANDAISE",
-      "badgeText": "JOUR 4",
-      "description": "Découvrez le nord du parc de Hossa, où vous pourrez croiser des troupeaux de rennes dans un paysage paisible. Les lacs forestiers se succèdent, entrecoupés de passages en sous-bois. Parfois large, la piste se rétrécit, vous permettant de vous faufiler avec votre attelage au cœur de la forêt primaire du parc de Hossa. En fin d'après-midi, retour à la base pour s'occuper des chiens et du matériel. La journée se termine par un repas convivial à l'auberge.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/79yn5AwNSrqSTAucC6vo.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "INITIATION A LA SURVIE EN MILIEU POLAIRE",
-      "badgeText": "JOUR 5",
-      "description": "Lors de cette journée, partez à la découverte du mode de vie des trappeurs tout en ayant un regard respectueux sur l'environnement qui vous entoure. Votre guide vous montrera comment les trappeurs pistent les animaux et posent des pièges, vous initiant aux techniques de survie indispensables à tout explorateur polaire. Si les conditions météorologiques le permettent, vous apprendrez même à construire un igloo ou un autre abri de survie. Une initiation à la pêche sur glace vous sera également proposée. Une journée riche en apprentissages et en aventures, au cœur de la nature polaire.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/RGNBAaFQ7qPiVBx3OPKA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DEPART POUR VOTRE EXCURSION EN RAQUETTES",
-      "badgeText": "JOUR 6",
-      "description": "Partez pour deux jours de raid en raquettes au cœur du parc d’Hossa. Vous traverserez des espaces vierges où il n’est pas rare de croiser des troupeaux de rennes et autres animaux sauvages. Le soir, nous rejoindrons notre lieu de bivouac, où vous pourrez apprécier la chaleur d’un sauna avant de vous jeter dans la neige, à la manière traditionnelle finlandaise. Une aventure inoubliable au cœur de la nature sauvage.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/y5PfceasQFuIxQoj4ZyI.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MARCHE A TRAVERS LES PAYSAGES ENNEIGES",
-      "badgeText": "JOUR 7",
-      "description": "Poursuivez votre aventure à travers les lacs gelés et la forêt boréale. Après un déjeuner au coin du feu, nous terminerons par la traversée de Hossanjarvi avant de regagner l'auberge. Le soir, savourez un repas traditionnel des éleveurs : le Poronkäristys, un délicieux ragoût de renne aux airelles. Une expérience culinaire authentique pour clôturer cette journée d'exploration.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/0Ra8RVsQoaUGqrnk4gyc.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS INSTANTS EN FINLANDE",
-      "badgeText": "JOUR 8",
-      "description": "Derniers instants en Finlande... Dites au revoir à votre guide et à cette nature préservée. Nous vous conduirons ensuite à l'aéroport pour votre vol retour. Fin d'une semaine riche en émotions et en souvenirs inoubliables.",
-      "photo": "/images/voyages/finlande-hiver-nature-activites/mI3ZSWrfQTKEye7rFQk1.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Guide francophone spécialiste du milieu polaire",
-      "description": "",
-      "role": "",
-      "image": "/images/voyages/finlande-hiver-nature-activites/7Dl6jZ8qRLudPfevhjxW.jpg"
-    }
-  ],
-  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par un guide francophone spécialiste des milieux polaires qui sera votre mentor vivre cette immersion finlandaise au travers des paysages et des pratiques ancestrales.",
-  "housingBlock": [
-    {
-      "title": "Chalet et cabane de trappeur",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage, vous passerez 5 nuits dans le camp de base et 2 nuits en cabane de trappeur. Le camp de base se situe en pleine nature, au bord d'un lac gelé en hiver que vous pourrez directement admirer dès le réveil depuis votre chalet. \r\nLes cabanes de trappeur s'apparentent aux refuges que l'on trouve en France. Ces cabanes en bois sont simples mais charmantes. Elles disposent d’un espace dortoir ou d'une chambre pouvant accueillir 4 à 6 personnes, agrémentées d’une pièce à vivre. Certaines sont équipées d'un sauna pour une détente optimale.",
-      "image": [
-        {
-          "src": "/images/voyages/finlande-hiver-nature-activites/YhlJJDNuRXeKRN7thF5k.jpg",
-          "alt": "image de l'hébergement Aventures hivernales en Laponie Finlandaise"
-        },
-        {
-          "src": "/images/voyages/finlande-hiver-nature-activites/B2RTRaowRiWY4sp142A8.jpg",
-          "alt": "image de l'hébergement Aventures hivernales en Laponie Finlandaise"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil et les transferts aéroport aller/retour",
-      "L'hébergement : 5 nuits en auberge et 2 nuits en cabanes de trappeur (chambres de 4 ou 6 selon la cabane)",
-      "La pension complète du dîner du jour 1 au petit-déjeuner du jour 8",
-      "Le transport des bagages",
-      "L'encadrement par des guides francophones spécialistes du milieu polaire",
-      "Le prêt de l’équipement grand froid comprenant bottes grand froid (type Sorel), une veste grand froid et des moufles (pour la semaine). Merci de nous prévenir en amont pour les pointures en dessous de 34  et au-dessus de 50 s'il vous plaît."
-    ],
-    "exclude": [
-      "Les vols aller/retour",
-      "Le supplément chambre individuelle (possible uniquement à l'auberge : 300€/personne)",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles sur place",
-      "Les boissons",
-      "La caution pour le matériel grand froid par empreinte de votre carte bancaire : 50 euros pour les bottes, 50 euros pour la veste grand froid",
-      "Les pourboires (montant conseillé : 20 à 30€ par personne)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -224,26 +322,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1990,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": 10,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 100,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "KAO"
-    ]
+  "seo": {
+    "metaTitle": "Aventures hivernales en Laponie Finlandaise",
+    "canonicalUrl": "https://www.odysway.com/voyages/finlande-hiver-nature-activités",
+    "ogTitle": "Aventures hivernales en Laponie Finlandaise",
+    "ogDescription": "Découvrez le charme sauvage du parc national de Hossa, niché dans le Nord-Est de la Finlande, à travers une expérience authentique inspirée des traditions des explorateurs polaires. Notre programme unique combine aventures en plein air et respect de la nature pour une escapade inoubliable.",
+    "ogImage": {
+      "src": "/images/voyages/finlande-hiver-nature-activites/VyqUkN8tSI2fgngrOGDw.jpg",
+      "alt": "image principale du voyage Aventures hivernales en Laponie Finlandaise"
+    },
+    "twitterTitle": "Aventures hivernales en Laponie Finlandaise",
+    "twitterDescription": "Découvrez le charme sauvage du parc national de Hossa, niché dans le Nord-Est de la Finlande, à travers une expérience authentique inspirée des traditions des explorateurs polaires. Notre programme unique combine aventures en plein air et respect de la nature pour une escapade inoubliable.",
+    "twitterImage": {
+      "src": "/images/voyages/finlande-hiver-nature-activites/VyqUkN8tSI2fgngrOGDw.jpg",
+      "alt": "image principale du voyage Aventures hivernales en Laponie Finlandaise"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

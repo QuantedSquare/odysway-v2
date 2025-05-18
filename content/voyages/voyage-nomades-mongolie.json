@@ -1,43 +1,262 @@
 {
   "published": true,
   "title": "Partagez le quotidien des nomades des steppes mongoles",
-  "slug": "voyage-nomades-mongolie",
-  "rating": 4.8,
-  "comments": 12,
-  "description": "Envie de découvrir la Mongolie autrement, au rythme de ses habitants ? Ce voyage hors du temps vous emmène au cœur des steppes légendaires, où vous aurez le privilège de partager plusieurs jours avec une famille nomade.\n\nVotre aventure vous mènera dans la vallée de l’Orkhon, l’une des plus belles régions du pays. Chaque soir, vous logerez en yourte traditionnelle, chez l’habitant, pour une immersion complète et des moments de partage uniques. Traite des vaches et des juments, conduite du troupeau à cheval vers les pâturages, préparation des repas… Vous vivrez le quotidien des éleveurs nomades et découvrirez un mode de vie ancestral, profondément lié à la nature.\n\nAprès cette immersion, vous explorerez les merveilles de la vallée de l’Orkhon, une terre chargée d’histoire, abritant des vestiges archéologiques uniques et considérée comme le berceau du peuple nomade.",
-  "emailDescription": "👉 Si vous souhaitez plonger au cœur de la Mongolie,  parcourir ses paysages de rêves et partager des moments uniques avec les nomades pour vous imprégner de leur culture, ce voyage est fait pour vous ! ",
-  "metaDescription": "Partez en Mongolie pour une immersion de plusieurs jours au sein d’une famille nomade, partagez leur quotidien et découvrez les steppes et la culture mongole",
-  "interjection": "en",
   "destinations": [
-    "Mongolie"
+    {
+      "name": "Mongolie",
+      "slug": "mongolie"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-nature",
-    "sejours-chez-l-habitant",
-    "partir-en-famille",
-    "partir-en-groupe",
-    "ou-partir-en-ete",
-    "ou-partir-au-printemps"
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    }
   ],
   "duration": 11,
   "nights": 10,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel, yourte",
   "idealPeriods": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 12,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Envie de découvrir la Mongolie autrement, au rythme de ses habitants ? Ce voyage hors du temps vous emmène au cœur des steppes légendaires, où vous aurez le privilège de partager plusieurs jours avec une famille nomade.\n\nVotre aventure vous mènera dans la vallée de l’Orkhon, l’une des plus belles régions du pays. Chaque soir, vous logerez en yourte traditionnelle, chez l’habitant, pour une immersion complète et des moments de partage uniques. Traite des vaches et des juments, conduite du troupeau à cheval vers les pâturages, préparation des repas… Vous vivrez le quotidien des éleveurs nomades et découvrirez un mode de vie ancestral, profondément lié à la nature.\n\nAprès cette immersion, vous explorerez les merveilles de la vallée de l’Orkhon, une terre chargée d’histoire, abritant des vestiges archéologiques uniques et considérée comme le berceau du peuple nomade.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Vivez une immersion de plusieurs jours avec une famille nomade, partageant leurs activités quotidiennes.",
+    "Explorez les vastes steppes mongoles et les sites naturels emblématiques.",
+    "Séjournez en yourte traditionnelle, au cœur d’une nature préservée.",
+    "Découvrez Karakorum, l’ancienne capitale de Gengis Khan.",
+    "Partagez des moments authentiques et simples, rythmés par les rencontres."
+  ],
+  "slug": "voyage-nomades-mongolie",
+  "description": "Envie de découvrir la Mongolie autrement, au rythme de ses habitants ? Ce voyage hors du temps vous emmène au cœur des steppes légendaires, où vous aurez le privilège de partager plusieurs jours avec une famille nomade.\n\nVotre aventure vous mènera dans la vallée de l’Orkhon, l’une des plus belles régions du pays. Chaque soir, vous logerez en yourte traditionnelle, chez l’habitant, pour une immersion complète et des moments de partage uniques. Traite des vaches et des juments, conduite du troupeau à cheval vers les pâturages, préparation des repas… Vous vivrez le quotidien des éleveurs nomades et découvrirez un mode de vie ancestral, profondément lié à la nature.\n\nAprès cette immersion, vous explorerez les merveilles de la vallée de l’Orkhon, une terre chargée d’histoire, abritant des vestiges archéologiques uniques et considérée comme le berceau du peuple nomade.",
+  "emailDescription": "👉 Si vous souhaitez plonger au cœur de la Mongolie,  parcourir ses paysages de rêves et partager des moments uniques avec les nomades pour vous imprégner de leur culture, ce voyage est fait pour vous ! ",
+  "metaDescription": "Partez en Mongolie pour une immersion de plusieurs jours au sein d’une famille nomade, partagez leur quotidien et découvrez les steppes et la culture mongole",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 5 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**10 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mai à Sept",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE EN MONGOLIE",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à l’aéroport de Oulan Bator, nos équipes vous accueillent et vous emmènent à votre hôtel. L'après-midi, vous pourrez visiter la ville et ses monastères bouddhistes.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/9O3g3OVRgu6mjlczSOwR.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DEPART VERS LES STEPPES",
+      "badgeText": "JOUR 2",
+      "description": "Après le petit-déjeuner, vous partez vers le campement de la famille nomade avec qui vous partagerez les prochains jours, dans la région Tov.\r\nSur la route vous découvrez les premières images mongoles : grandes steppes vertes, troupeaux en liberté, yourtes isolées et cavaliers sur des chevaux robustes au galop...Arrivée dans votre famille d’accueil, cérémonie du thé au lait salé mongol en guise de bienvenue. Après-midi aux alentours du camp et premier aperçu de l’organisation de la vie nomade. Dîner et soirée avec la famille.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/DICLnnUHQouBgmKobGLb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN IMMERSION AVEC LES NOMADES",
+      "badgeText": "JOURS 3 ET 4",
+      "description": "Vous découvrez et adoptez le mode de vie nomade, vous mettant dans la peau d'un éleveur mongol. Traite des vaches et des juments, conduire les moutons et les chèvres aux pâturages à cheval, collecter les bouses de vaches pour le feu, chercher de l'eau en chariot, préparer le thé mongol et des plats régionaux, fabriquer des produits laitiers tels que l'airag (lait de jument fermenté), le tarag (yaourt), l'aruul (fromage sec et sucré), etc. En apprenant les gestes quotidiens de la vie de vos hôtes, vous réalisez que l'élevage est une activité à plein temps, soulignant l'interdépendance forte entre la survie des éleveurs et le bien-être de leurs troupeaux. Vous observez également une organisation et une distribution bien établies des tâches au sein de la famille.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/Cmgzlx2SciABYZ0cWOtL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES CHEVAUX SAUVAGES",
+      "badgeText": "JOUR 5",
+      "description": "Votre immersion dans la famille nomade touche à sa fin. Après des au-revoirs et un petit-déjeuner partagé, vous partez en direction de Khustain Nuruu dans l’après-midi. Cette réserve naturelle est réputée pour la réintroduction réussie des mythiques chevaux de Prjevalski. Promenade et observation de ces chevaux lors de leur pâturage le soir.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/1qlvLdlrRzS5iczx7sdr.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "KARAKORUM, CITÉ LÉGENDAIRE DE GENGIS KHAN",
+      "badgeText": "JOURS 6 ET 7",
+      "description": "Une journée de route à travers les vastes steppes vertes vous mène à Karakorum, la cité légendaire érigée au XIIIe siècle de Gengis Khan. Karakorum incarne la grandeur et l'héritage impérial de l'Empire mongol. Elle est aussi le berceau du peuple nomade. L'après-midi, explorez le monastère bouddhiste Erdene Zuu, entouré de 108 stupas, construit sur les ruines de l'ancienne capitale impériale. Le lendemain, journée riche en exploration et histoire avec une randonnée de 4 heures et une visite à Khangai Ovoo.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/PZ5HsErRTDyWomILZK0X.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LA VALLÉE D'ORKHON",
+      "badgeText": "JOUR 8",
+      "description": "Tôt le matin, quittant Karakorum, vous explorez l'Ermitage bouddhiste de Tuvkhun, du XVIIe siècle, sur les contreforts boisés du massif du Khangaï. Une montée d'une heure à pied offre une vue imprenable. Vous traversez la Mongolie pittoresque : plaines verdoyantes, yourtes disséminées, roches basaltiques, troupeaux en liberté, nomades galopant sur leurs petits chevaux. La vallée d'Orkhon, fertile, est animée par des scènes de vie rurale. Vous visitez les fameuses chutes d'eau et profitez d'une promenade à pied sur le site.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/VkYs2mO3SX2NrgJ0Aqpr.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU MILIEU DES DUNES",
+      "badgeText": "JOUR 9",
+      "description": "Votre voyage se poursuit en direction de la magnifique réserve de Khugnu Khan. Une randonnée mémorable (accessible à tous) à travers les dunes de sable du \"Petit Gobi\" s'offre à vous, s'élevant au cœur des vastes plaines. Là, un écosystème unique se déploie, marquant la rencontre harmonieuse de la steppe avec le désert.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/BC9lNQciRv60UQS75TeN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR A LA CAPITALE",
+      "badgeText": "JOURS 10 ET 11",
+      "description": "C'est votre dernier jour en immersion dans les steppes mongoles ! Vous prenez la route du retour vers Oulan Bator, la capitale. Possibilités d'achats dans les magasins et boutiques de souvenir et de cachemire l’après midi. Spectacle de chants et danses traditionnels mongols. Dîner d’adieu avec votre interprète et chauffeur dans un restaurant mongol. Nuit à Oulan Bator. Vol retour le jour 11.",
+      "photo": "/images/voyages/voyage-nomades-mongolie/9BHXSniTSuiTaZlckrt0.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "La prise en charge dès votre arrivée à l'aéroport",
+      "Le transport durant tout le voyage en véhicule privatisé et confortable",
+      "Tous les hébergements en hôtel ou en yourte",
+      "La pension complète (petit-déjeuner, déjeuner, dîner)",
+      "L'accompagnement par un guide professionnel francophone",
+      "Les entrées des parcs naturels et sites"
+    ],
+    "exclude": [
+      "Les vols internationaux (devis sur demande | depuis Paris ou autre aéroport)",
+      "Les dépenses personnelles",
+      "Les pourboires pour le chauffeur et guide",
+      "Facultatif : assurance voyage annulation ou multi-risques (devis sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1715,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 50,
+    "maxTravelers": 5,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "UBN"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par un chauffeur expérimenté et un guide francophone passionné. Parmi eux, Tuya, surnommée ‘Zen Tuya’ pour son calme et sa bienveillance, vous fera découvrir les richesses de la Mongolie avec une connaissance approfondie du terrain, assurant une expérience unique !.",
+  "accompanistsList": [
+    {
+      "name": "Tuya",
+      "description": "Tuya est une accompagnatrice locale francophone. Toujours attentive aux besoins des voyageurs, elle est calme et réfléchie, si bien que les autres guides l’ont surnommée “zen Tuya”. Grâce à son excellente connaissance du terrain, Tuya vous fera passer un séjour inoubliable !",
+      "role": "Accompagnatrice francophone",
+      "image": "/images/voyages/voyage-nomades-mongolie/Lgg1wmSmRBSw4g5qhnKl.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel, yourte",
+      "housingType": "",
+      "housingMood": "À Oulan-Bator, vous séjournerez dans un hôtel confortable, idéalement situé près du centre-ville. Lors des autres étapes, vous vivrez l’expérience nomade en dormant dans des yourtes traditionnelles, chez l’habitant ou en camps de yourtes. Selon la composition du groupe, certains logements pourront être partagés.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-nomades-mongolie/9HBqGQccTxKS2Hn8IzhE.jpg",
+          "alt": "image de l'hébergement Partagez le quotidien des nomades des steppes mongoles"
+        },
+        {
+          "src": "/images/voyages/voyage-nomades-mongolie/LoQ04wBQTmhog7BKfjew.jpg",
+          "alt": "image de l'hébergement Partagez le quotidien des nomades des steppes mongoles"
+        },
+        {
+          "src": "/images/voyages/voyage-nomades-mongolie/NBXjhOqTim52s9fMMPSx.jpg",
+          "alt": "image de l'hébergement Partagez le quotidien des nomades des steppes mongoles"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-nomades-mongolie/v8XkfTxQbaDymiR6UKdW.jpg",
     "alt": "image principale du voyage Partagez le quotidien des nomades des steppes mongoles"
@@ -77,124 +296,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Envie de découvrir la Mongolie autrement, au rythme de ses habitants ? Ce voyage hors du temps vous emmène au cœur des steppes légendaires, où vous aurez le privilège de partager plusieurs jours avec une famille nomade.\n\nVotre aventure vous mènera dans la vallée de l’Orkhon, l’une des plus belles régions du pays. Chaque soir, vous logerez en yourte traditionnelle, chez l’habitant, pour une immersion complète et des moments de partage uniques. Traite des vaches et des juments, conduite du troupeau à cheval vers les pâturages, préparation des repas… Vous vivrez le quotidien des éleveurs nomades et découvrirez un mode de vie ancestral, profondément lié à la nature.\n\nAprès cette immersion, vous explorerez les merveilles de la vallée de l’Orkhon, une terre chargée d’histoire, abritant des vestiges archéologiques uniques et considérée comme le berceau du peuple nomade.",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Vivez une immersion de plusieurs jours avec une famille nomade, partageant leurs activités quotidiennes.",
-    "Explorez les vastes steppes mongoles et les sites naturels emblématiques.",
-    "Séjournez en yourte traditionnelle, au cœur d’une nature préservée.",
-    "Découvrez Karakorum, l’ancienne capitale de Gengis Khan.",
-    "Partagez des moments authentiques et simples, rythmés par les rencontres."
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE EN MONGOLIE",
-      "badgeText": "JOUR 1",
-      "description": "À votre arrivée à l’aéroport de Oulan Bator, nos équipes vous accueillent et vous emmènent à votre hôtel. L'après-midi, vous pourrez visiter la ville et ses monastères bouddhistes.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/9O3g3OVRgu6mjlczSOwR.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DEPART VERS LES STEPPES",
-      "badgeText": "JOUR 2",
-      "description": "Après le petit-déjeuner, vous partez vers le campement de la famille nomade avec qui vous partagerez les prochains jours, dans la région Tov.\r\nSur la route vous découvrez les premières images mongoles : grandes steppes vertes, troupeaux en liberté, yourtes isolées et cavaliers sur des chevaux robustes au galop...Arrivée dans votre famille d’accueil, cérémonie du thé au lait salé mongol en guise de bienvenue. Après-midi aux alentours du camp et premier aperçu de l’organisation de la vie nomade. Dîner et soirée avec la famille.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/DICLnnUHQouBgmKobGLb.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN IMMERSION AVEC LES NOMADES",
-      "badgeText": "JOURS 3 ET 4",
-      "description": "Vous découvrez et adoptez le mode de vie nomade, vous mettant dans la peau d'un éleveur mongol. Traite des vaches et des juments, conduire les moutons et les chèvres aux pâturages à cheval, collecter les bouses de vaches pour le feu, chercher de l'eau en chariot, préparer le thé mongol et des plats régionaux, fabriquer des produits laitiers tels que l'airag (lait de jument fermenté), le tarag (yaourt), l'aruul (fromage sec et sucré), etc. En apprenant les gestes quotidiens de la vie de vos hôtes, vous réalisez que l'élevage est une activité à plein temps, soulignant l'interdépendance forte entre la survie des éleveurs et le bien-être de leurs troupeaux. Vous observez également une organisation et une distribution bien établies des tâches au sein de la famille.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/Cmgzlx2SciABYZ0cWOtL.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES CHEVAUX SAUVAGES",
-      "badgeText": "JOUR 5",
-      "description": "Votre immersion dans la famille nomade touche à sa fin. Après des au-revoirs et un petit-déjeuner partagé, vous partez en direction de Khustain Nuruu dans l’après-midi. Cette réserve naturelle est réputée pour la réintroduction réussie des mythiques chevaux de Prjevalski. Promenade et observation de ces chevaux lors de leur pâturage le soir.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/1qlvLdlrRzS5iczx7sdr.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "KARAKORUM, CITÉ LÉGENDAIRE DE GENGIS KHAN",
-      "badgeText": "JOURS 6 ET 7",
-      "description": "Une journée de route à travers les vastes steppes vertes vous mène à Karakorum, la cité légendaire érigée au XIIIe siècle de Gengis Khan. Karakorum incarne la grandeur et l'héritage impérial de l'Empire mongol. Elle est aussi le berceau du peuple nomade. L'après-midi, explorez le monastère bouddhiste Erdene Zuu, entouré de 108 stupas, construit sur les ruines de l'ancienne capitale impériale. Le lendemain, journée riche en exploration et histoire avec une randonnée de 4 heures et une visite à Khangai Ovoo.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/PZ5HsErRTDyWomILZK0X.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DANS LA VALLÉE D'ORKHON",
-      "badgeText": "JOUR 8",
-      "description": "Tôt le matin, quittant Karakorum, vous explorez l'Ermitage bouddhiste de Tuvkhun, du XVIIe siècle, sur les contreforts boisés du massif du Khangaï. Une montée d'une heure à pied offre une vue imprenable. Vous traversez la Mongolie pittoresque : plaines verdoyantes, yourtes disséminées, roches basaltiques, troupeaux en liberté, nomades galopant sur leurs petits chevaux. La vallée d'Orkhon, fertile, est animée par des scènes de vie rurale. Vous visitez les fameuses chutes d'eau et profitez d'une promenade à pied sur le site.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/VkYs2mO3SX2NrgJ0Aqpr.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU MILIEU DES DUNES",
-      "badgeText": "JOUR 9",
-      "description": "Votre voyage se poursuit en direction de la magnifique réserve de Khugnu Khan. Une randonnée mémorable (accessible à tous) à travers les dunes de sable du \"Petit Gobi\" s'offre à vous, s'élevant au cœur des vastes plaines. Là, un écosystème unique se déploie, marquant la rencontre harmonieuse de la steppe avec le désert.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/BC9lNQciRv60UQS75TeN.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR A LA CAPITALE",
-      "badgeText": "JOURS 10 ET 11",
-      "description": "C'est votre dernier jour en immersion dans les steppes mongoles ! Vous prenez la route du retour vers Oulan Bator, la capitale. Possibilités d'achats dans les magasins et boutiques de souvenir et de cachemire l’après midi. Spectacle de chants et danses traditionnels mongols. Dîner d’adieu avec votre interprète et chauffeur dans un restaurant mongol. Nuit à Oulan Bator. Vol retour le jour 11.",
-      "photo": "/images/voyages/voyage-nomades-mongolie/9BHXSniTSuiTaZlckrt0.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Tuya",
-      "description": "Tuya est une accompagnatrice locale francophone. Toujours attentive aux besoins des voyageurs, elle est calme et réfléchie, si bien que les autres guides l’ont surnommée “zen Tuya”. Grâce à son excellente connaissance du terrain, Tuya vous fera passer un séjour inoubliable !",
-      "role": "Accompagnatrice francophone",
-      "image": "/images/voyages/voyage-nomades-mongolie/Lgg1wmSmRBSw4g5qhnKl.jpg"
-    }
-  ],
-  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par un chauffeur expérimenté et un guide francophone passionné. Parmi eux, Tuya, surnommée ‘Zen Tuya’ pour son calme et sa bienveillance, vous fera découvrir les richesses de la Mongolie avec une connaissance approfondie du terrain, assurant une expérience unique !.",
-  "housingBlock": [
-    {
-      "title": "Hôtel, yourte",
-      "housingType": "",
-      "housingMood": "À Oulan-Bator, vous séjournerez dans un hôtel confortable, idéalement situé près du centre-ville. Lors des autres étapes, vous vivrez l’expérience nomade en dormant dans des yourtes traditionnelles, chez l’habitant ou en camps de yourtes. Selon la composition du groupe, certains logements pourront être partagés.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-nomades-mongolie/9HBqGQccTxKS2Hn8IzhE.jpg",
-          "alt": "image de l'hébergement Partagez le quotidien des nomades des steppes mongoles"
-        },
-        {
-          "src": "/images/voyages/voyage-nomades-mongolie/LoQ04wBQTmhog7BKfjew.jpg",
-          "alt": "image de l'hébergement Partagez le quotidien des nomades des steppes mongoles"
-        },
-        {
-          "src": "/images/voyages/voyage-nomades-mongolie/NBXjhOqTim52s9fMMPSx.jpg",
-          "alt": "image de l'hébergement Partagez le quotidien des nomades des steppes mongoles"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "La prise en charge dès votre arrivée à l'aéroport",
-      "Le transport durant tout le voyage en véhicule privatisé et confortable",
-      "Tous les hébergements en hôtel ou en yourte",
-      "La pension complète (petit-déjeuner, déjeuner, dîner)",
-      "L'accompagnement par un guide professionnel francophone",
-      "Les entrées des parcs naturels et sites"
-    ],
-    "exclude": [
-      "Les vols internationaux (devis sur demande | depuis Paris ou autre aéroport)",
-      "Les dépenses personnelles",
-      "Les pourboires pour le chauffeur et guide",
-      "Facultatif : assurance voyage annulation ou multi-risques (devis sur demande)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -231,27 +332,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1715,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 50,
-    "maxTravelers": 5,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "UBN"
-    ]
+  "seo": {
+    "metaTitle": "Partagez le quotidien des nomades des steppes mongoles",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-nomades-mongolie",
+    "ogTitle": "Partagez le quotidien des nomades des steppes mongoles",
+    "ogDescription": "Partez en Mongolie pour une immersion de plusieurs jours au sein d’une famille nomade, partagez leur quotidien et découvrez les steppes et la culture mongole",
+    "ogImage": {
+      "src": "/images/voyages/voyage-nomades-mongolie/v8XkfTxQbaDymiR6UKdW.jpg",
+      "alt": "image principale du voyage Partagez le quotidien des nomades des steppes mongoles"
+    },
+    "twitterTitle": "Partagez le quotidien des nomades des steppes mongoles",
+    "twitterDescription": "Partez en Mongolie pour une immersion de plusieurs jours au sein d’une famille nomade, partagez leur quotidien et découvrez les steppes et la culture mongole",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-nomades-mongolie/v8XkfTxQbaDymiR6UKdW.jpg",
+      "alt": "image principale du voyage Partagez le quotidien des nomades des steppes mongoles"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

@@ -1,50 +1,286 @@
 {
   "published": true,
   "title": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
-  "slug": "route-soie-ouzbekistan",
-  "rating": 5,
-  "comments": 1,
-  "description": "Partez à la découverte de l’Ouzbékistan, un pays encore peu visité des touristes. Arpentez les rues des grandes villes mythiques que sont Khiva, Boukhara et Samarkand, considérées comme symboles de la Route de la soie. Laissez-vous porter par les rencontres inspirantes au fil de votre voyage et expérimentez différents aspects de la culture ouzbek à travers plusieurs expériences immersives chez l'habitant.\n\nUn voyage culturel au plus proche des locaux, alliant traditions et paysages enchanteurs !",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage unique en Ouzbékistan, partager le quotidien des locaux et découvrir ses magnifiques paysages et monuments, ce voyage est fait pour vous ! Un voyage rempli d'histoire et de partages qui restera gravé dans vos mémoires ❤️",
-  "metaDescription": "Un voyage unique en Ouzbékistan entre histoire, immersion en pleine nature et partage du quotidien des locaux qui vivent entre montagne, désert et steppe. Découvrez notre itinéraire de 2 semaines sur la route de la soie !\r\n",
-  "interjection": "en",
   "destinations": [
-    "Ouzbékistan"
+    {
+      "name": "Ouzbékistan",
+      "slug": "ouzbekistan"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "sejours-culturels",
-    "ou-partir-au-printemps",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "partir-en-amoureux",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 14,
   "nights": 13,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Yourte, maison d'hôtes",
   "idealPeriods": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 1,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez à la découverte de l’Ouzbékistan, entre grandes cités chargées d’histoire et campagnes paisibles. À Khiva, Boukhara et Samarkand, vous déambulez dans les ruelles anciennes, entre médersas, marchés et mosaïques, au cœur de villes emblématiques de la Route de la Soie.\n\nAu-delà de leur beauté, ce voyage vous invite à vivre une expérience différente, portée par les rencontres. Tout au long du parcours, des familles vous accueillent chez elles pour partager un moment de vie : un repas, une conversation, une activité du quotidien... Une manière simple et sincère de découvrir la culture locale à travers ceux qui la font vivre.\n\nEntre vie nomade dans les steppes, immersion dans les villages et soirées sous les étoiles, ce voyage prend le temps : celui de découvrir, d’échanger, de s’imprégner. Un équilibre entre patrimoine et rencontres, pour découvrir l’Ouzbékistan autrement, au plus près de ses habitants.",
+    "author": "Linda",
+    "affixeAuthor": "passionnée de cuisine du monde et responsable marketing"
+  },
+  "experiencesBlock": [
+    "Le trajet en train à travers des paysages à couper le souffle",
+    "La découverte des villes mythiques de la Route de la soie : Samarkand, Boukhara et Khiva",
+    "La rencontre avec les villageois des montagnes",
+    "L'immersion et nuits en yourte chez les nomades des steppes",
+    "La nuit dans une medersa, ancienne école coranique"
+  ],
+  "slug": "route-soie-ouzbekistan",
+  "description": "Partez à la découverte de l’Ouzbékistan, entre grandes cités chargées d’histoire et campagnes paisibles. À Khiva, Boukhara et Samarkand, vous déambulez dans les ruelles anciennes, entre médersas, marchés et mosaïques, au cœur de villes emblématiques de la Route de la Soie.\n\nAu-delà de leur beauté, ce voyage vous invite à vivre une expérience différente, portée par les rencontres. Tout au long du parcours, des familles vous accueillent chez elles pour partager un moment de vie : un repas, une conversation, une activité du quotidien... Une manière simple et sincère de découvrir la culture locale à travers ceux qui la font vivre.\n\nEntre vie nomade dans les steppes, immersion dans les villages et soirées sous les étoiles, ce voyage prend le temps : celui de découvrir, d’échanger, de s’imprégner. Un équilibre entre patrimoine et rencontres, pour découvrir l’Ouzbékistan autrement, au plus près de ses habitants.",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage unique en Ouzbékistan, partager le quotidien des locaux et découvrir ses magnifiques paysages et monuments, ce voyage est fait pour vous ! Un voyage rempli d'histoire et de partages qui restera gravé dans vos mémoires ❤️",
+  "metaDescription": "Un voyage unique en Ouzbékistan entre histoire, immersion en pleine nature et partage du quotidien des locaux qui vivent entre montagne, désert et steppe. Découvrez notre itinéraire de 2 semaines sur la route de la soie !\r\n",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**13 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avr à Oct",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE EN OUZBÉKISTAN ",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée à Tachkent au petit matin. Votre guide vous accueille à l’aéroport, direction l’hôtel pour poser vos valises. La journée commence en douceur autour d’un petit-déjeuner, puis cap sur une première rencontre locale avec un boulanger artisanal. Déjeuner dans un bistrot de quartier, flânerie dans l’ambiance animée d’un marché, avant de clore cette première journée par une soirée à l’opéra.\r\n",
+      "photo": "/images/voyages/route-soie-ouzbekistan/WyacsaHnTMaWuMZksuA4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHEZ L'HABITANT AU CŒUR DES MONTAGNES",
+      "badgeText": "JOURS 2 ET 3",
+      "description": "Après le petit-déjeuner, vous prenez le train en direction de Samarkand, le temps d’un trajet tranquille à travers les paysages ouzbeks. Puis cap vers les montagnes du sud.  En chemin, pause gourmande dans une cuisine où l’on prépare le méchoui à l’ancienne, suivie d’un arrêt dans une mosquée de village, lieu de rencontres et de silence. À l’arrivée, une famille vous accueille dans son quotidien tourné vers l’élevage. Autour d’un verre ou lors d’une balade dans les environs, les échanges s’installent simplement : on parle de la vie ici, on découvre des cépages locaux, on prend le temps...",
+      "photo": "/images/voyages/route-soie-ouzbekistan/NX71WsnqQRKSTAahW7AT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "À LA DÉCOUVERTE DES MERVEILLES DE SAMARKAND",
+      "badgeText": "JOURS 4 ET 5",
+      "description": "Retour à Samarkand, ancienne capitale timouride, carrefour des civilisations et étape emblématique de la Route de la Soie. Pendant ces deux jours, vous découvrez des sites culturels majeurs, explorez le marché Siyob et ses étals colorés, échangez avec de jeunes étudiants francophones et profitez de temps libre pour flâner à votre rythme, entre ruelles paisibles et trésors cachés.\r\n\r\n",
+      "photo": "/images/voyages/route-soie-ouzbekistan/wttH8HIYSayPYhGDLRio.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION DANS LES STEPPES, AU RYTHME DU DÉSERT",
+      "badgeText": "JOURS 6 ET 7",
+      "description": "Route vers Nourata, à travers les steppes bordées de montagnes. À l’arrivée, partez pour une balade sur les dunes aux abords du camp et  profiter de la lumière du soir. Partagez le dîner autour du feu, dans une ambiance conviviale, avec les mélodies d’un troubadour kazakh pour accompagner cette soirée inoubliable. Le lendemain matin, départ à dos de chameau pour explorer les environs du lac Aydarkoul, avant de reprendre la route vers le village de Vobkent, dans les plaines. ",
+      "photo": "/images/voyages/route-soie-ouzbekistan/WvxqcGC7SN2Vw5v8we1z.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHEZ L'HABITANT, AU CŒUR D'UN VILLAGE DE PLAINE",
+      "badgeText": "JOURS 8 ET 9",
+      "description": "Pendant ces deux jours, vous découvrirez une vie de village différente de celle des bergers du désert. Vous serez invités à partager le quotidien d'une famille locale, à écouter leurs histoires, à vous immerger dans leurs cultures et traditions, où l’agriculture rythme chaque journée...",
+      "photo": "/images/voyages/route-soie-ouzbekistan/2B5z3DgxQPKigqo0ca4g.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BOUKHARA, PERLE DE LA ROUTE DE LE SOIE",
+      "badgeText": "JOURS 10 ET 11",
+      "description": "Après un petit-déjeuner, route vers Boukhara, la noble. Cette étape incontournable sur la route de la soie, qui reliait l'Orient à l'Occident, vous plonge dans un passé fascinant. En deux jours, vous découvrirez ses mosquées, médersas, bazars et caravansérails, remarquablement préservés, et vivrez l'atmosphère unique de cette ville chargée d’histoire.\r\n",
+      "photo": "/images/voyages/route-soie-ouzbekistan/qouIKLn2S0K7kC2ZvkNG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "KHIVA, LA CITÉ DU DÉSERT ROUGE",
+      "badgeText": "JOURS 12 ET 13",
+      "description": "Départ pour Khiva, véritable musée à ciel ouvert et troisième étape majeure de la Route de la Soie, nichée au cœur du désert de sable rouge du Kyzylkoum. Dès le matin, profitez du lever du soleil sur les anciennes fortifications, puis laissez-vous guider au fil de vos balades à travers cette ville mythique. En soirée, terminez la journée en beauté avec un apéritif face au coucher du soleil, offrant une vue imprenable sur les monuments emblématiques...\r\n",
+      "photo": "/images/voyages/route-soie-ouzbekistan/fcATVd8KQXqerdNToRqr.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE TEMPS DES AU REVOIR",
+      "badgeText": "JOUR 14",
+      "description": "Votre voyage en Ouzbékistan touche à sa fin ! Après des moments de rencontres uniques et des souvenirs pleins la tête, il est temps de repartir. Transfert vers l’aéroport international d'Urgench et vol retour.\r\n\r\n\r\n",
+      "photo": "/images/voyages/route-soie-ouzbekistan/11g4686pTvGRaYAlDlNl.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Votre hébergement en base double (hôtel, yourte ou maison)",
+      "La pension complète pendant toute la durée de votre voyage",
+      "Tous les déplacements locaux en voiture privée ou minibus selon la taille du groupe",
+      "Le billet de train pour le trajet entre Tachkent et Samarkand",
+      "Le guide accompagnateur local francophone pour toute la durée du voyage",
+      "Les droits d’entrée sur les sites et les activités mentionnées dans le programme"
+    ],
+    "exclude": [
+      "Le transport aérien international Paris-Tachkent et Urgench-Paris et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Les boissons et dépenses à caractère personnel",
+      "Les activités ou soins non inclus dans la section « le prix comprend »",
+      "Les pourboires pour votre guide (10€ par jour et par personne) et conducteur (5€ par jour et par personne)",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2300,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 155,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "TAS"
+    ]
+  },
+  "accompanistsDescription": "Tout au long du séjour, vous serez accompagné par un guide francophone, dès votre arrivée le premier jour à Tachkent jusqu'au dernier jour à Ourguentch. En plus de cet accompagnement, vous rencontrez, à chaque étape, des locaux. Qu'ils soient artisans, cuisiniers, étudiants, apiculteurs, ces moments seront riches d'échanges sur la culture ouzbek.",
+  "accompanistsList": [
+    {
+      "name": "Bek",
+      "description": "Passionné par le français et les voyages, Bek exerce deux métiers de passion : enseignant de français et guide accompagnateur. Curieux et attentif, il aime transmettre les us et coutumes de son pays et prend son temps lors des échanges avec les Ouzbeks pour réduire les barrières de la langue et rendre ces moments de partages magiques !",
+      "role": "Guide-accompagnateur francophone",
+      "image": "/images/voyages/route-soie-ouzbekistan/EZsxdND8QLCtxtt1LPkW.jpg"
+    },
+    {
+      "name": "Ilyos",
+      "description": "Passionné par le sport, Ilyos a pendant longtemps pratiqué le _Kourach_ (sport national de lutte ouzbèke) avant de se tourner vers sa deuxième passion : le voyage. Toujours aux petits soins et avec un humour éternel, il partage les valeurs et traditions de son pays avec passion et ne rate jamais une occasion de raconter des histoires du peuple ouzbek !",
+      "role": "Guide-accompagnateur francophone",
+      "image": "/images/voyages/route-soie-ouzbekistan/h4VVuobqRiadNq9UvgMU.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Yourte, maison d'hôtes",
+      "housingType": "",
+      "housingMood": "Vous logerez en hôtel dans les villes à Tachkent, Samarkand et Boukhara ; en maison d'hôtes lors des immersions chez l'habitant à Yakkabog et Vobkent ; et en yourte dans le désert.",
+      "image": [
+        {
+          "src": "/images/voyages/route-soie-ouzbekistan/6tr4nO9PQ0aJQe6n0J0i.jpg",
+          "alt": "image de l'hébergement À la rencontre des habitants de la route de la soie en Ouzbékistan"
+        },
+        {
+          "src": "/images/voyages/route-soie-ouzbekistan/Od47BItBSlywiP3JCyFS.jpg",
+          "alt": "image de l'hébergement À la rencontre des habitants de la route de la soie en Ouzbékistan"
+        },
+        {
+          "src": "/images/voyages/route-soie-ouzbekistan/t21E07EyRHSHXhT2eyuW.jpg",
+          "alt": "image de l'hébergement À la rencontre des habitants de la route de la soie en Ouzbékistan"
+        }
+      ]
+    }
+  ],
   "image": {
-    "src": "/images/voyages/route-soie-ouzbekistan/o08YedTuTO2GxYxdml4H.jpg",
+    "src": "/images/voyages/route-soie-ouzbekistan/Wqppk55ISIWngukG1S1g.jpg",
     "alt": "image principale du voyage À la rencontre des habitants de la route de la soie en Ouzbékistan"
   },
   "imageSecondary": {
@@ -106,131 +342,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Partez à la découverte de l’Ouzbékistan, un pays encore peu visité des touristes. Arpentez les rues des grandes villes mythiques que sont Khiva, Boukhara et Samarkand, considérées comme symboles de la Route de la soie. Laissez-vous porter par les rencontres inspirantes au fil de votre voyage et expérimentez différents aspects de la culture ouzbek à travers plusieurs expériences immersives chez l'habitant.\n\nUn voyage culturel au plus proche des locaux, alliant traditions et paysages enchanteurs !",
-    "author": "Linda",
-    "affixeAuthor": "passionnée de cuisine du monde et responsable marketing"
-  },
-  "experiencesBlock": [
-    "Le trajet en train à travers des paysages à couper le souffle",
-    "La découverte des villes mythiques de la Route de la soie : Samarkand, Boukhara et Khiva",
-    "La rencontre avec les villageois des montagnes",
-    "L'immersion et nuits en yourte chez les nomades des steppes",
-    "La nuit dans une medersa, ancienne école coranique"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE EN OUZBÉKISTAN ",
-      "badgeText": "JOUR 1",
-      "description": "Arrivée à Tachkent au petit matin après un vol de nuit. Vous êtes accueillis à l'aéroport par votre guide et conduits à votre hôtel. Premiers moments dans la capitale ouzbek autour d'un petit-déjeuner, rencontre avec un boulanger, déjeuner dans un bistrot local, visite d'un marché et soirée à l'opéra ! \r\n\r\n",
-      "photo": "/images/voyages/route-soie-ouzbekistan/ts7PvdbcSH2yukIu4S8j.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CHEZ L'HABITANT EN MONTAGNE ",
-      "badgeText": "JOURS 2 À 3",
-      "description": "Après le petit-déjeuner, voyage en train à destination de Samarkand, puis direction vers les montagnes du sud du pays ! Sur la route, visite d'une cuisine fabriquant du méchoui et d'une mosquée. Installation chez la famille dont le quotidien est basé autour de l’élevage. Echanges sur la vie du village, découverte de cépages typiquement ouzbek et balade dans les villages voisins. ",
-      "photo": "/images/voyages/route-soie-ouzbekistan/NX71WsnqQRKSTAahW7AT.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SAMARKAND LA MAGIQUE",
-      "badgeText": "JOURS 4 ET 5",
-      "description": "Retour sur la capitale timouride Samarkand, autrefois fréquentée par les caravaniers des quatre coins du monde. Au cours de ces 2 jours, visite de sites culturels d'exception, visite du marché Siyob, rencontre avec des étudiants francophones et temps libre pour flâner à votre rythme au gré des petites ruelles.\r\n\r\n\r\n",
-      "photo": "/images/voyages/route-soie-ouzbekistan/MIlPRzZcRkaycrIHPGag.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN PLEIN DÉSERT",
-      "badgeText": "JOURS 6 ET 7",
-      "description": "Route vers Nourata à travers des steppes entourées de montagnes puis balade sur les dunes autour du camp pour profiter d’un magnifique coucher de soleil. Dîner et concert autour du feu avec un troubadour kazakh. Le lendemain, vous partez à dos de chameau visiter les alentours du Lac Aydarkoul et rejoignez le village Vobkent dans les plaines.",
-      "photo": "/images/voyages/route-soie-ouzbekistan/WvxqcGC7SN2Vw5v8we1z.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AVEC LES HABITANTS DES PLAINES",
-      "badgeText": "JOURS 8 ET 9",
-      "description": "Durant ces 2 jours, vous allez découvrir une vie de village différente de celle des bergers du désert. Partez à la rencontre des villageois qui vous partageront leurs expériences de vie et découvrez leur quotidien, rythmé autour de l'activité agricole !\r\n\r\n\r\n",
-      "photo": "/images/voyages/route-soie-ouzbekistan/c3N8IXozSmW4yxuTDtez.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BOUKHARA, LA NOBLE",
-      "badgeText": "JOURS 10 ET 11",
-      "description": "Petit-déjeuner puis route vers Boukhara, la noble. Étape incontournable sur la route de la soie reliant l'Orient et l'Occident, la ville possède encore des centaines de mosquées, de médersas, de bazars et de caravansérails bien préservés, que vous découvrirez sur 2 jours.\r\n\r\n",
-      "photo": "/images/voyages/route-soie-ouzbekistan/BGT6u2NlRsH1M8BpaT0C.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "KHIVA, LA MYSTÉRIEUSE",
-      "badgeText": "JOURS 12 ET 13",
-      "description": "Départ pour Khiva, véritable musée à ciel ouvert et 3ème ville importante de la Route de la soie, située dans le désert de sable rouge du Kyzylkoum. Réveil pour admirer le lever du soleil sur les fortifications. Découvrez cette ville mythique au fil de vos balades et terminez la journée en beauté avec un apéro pris devant le coucher de soleil avec une vue imprenable sur les monuments. \r\n\r\n",
-      "photo": "/images/voyages/route-soie-ouzbekistan/Nqvf30FQvaX6urGAqnco.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE TEMPS DES AU REVOIR",
-      "badgeText": "JOUR 14",
-      "description": "Votre voyage en Ouzbékistan touche à sa fin ! Après des moments de rencontres uniques et des souvenirs pleins la tête, il est temps de repartir. Transfert vers l’aéroport international d'Urgench et vol retour.\r\n\r\n\r\n",
-      "photo": "/images/voyages/route-soie-ouzbekistan/11g4686pTvGRaYAlDlNl.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Bek",
-      "description": "Passionné par le français et les voyages, Bek exerce deux métiers de passion : enseignant de français et guide accompagnateur. Curieux et attentif, il aime transmettre les us et coutumes de son pays et prend son temps lors des échanges avec les Ouzbeks pour réduire les barrières de la langue et rendre ces moments de partages magiques !",
-      "role": "Guide-accompagnateur francophone",
-      "image": "/images/voyages/route-soie-ouzbekistan/EZsxdND8QLCtxtt1LPkW.jpg"
-    },
-    {
-      "name": "Ilyos",
-      "description": "Passionné par le sport, Ilyos a pendant longtemps pratiqué le _Kourach_ (sport national de lutte ouzbèke) avant de se tourner vers sa deuxième passion : le voyage. Toujours aux petits soins et avec un humour éternel, il partage les valeurs et traditions de son pays avec passion et ne rate jamais une occasion de raconter des histoires du peuple ouzbek !",
-      "role": "Guide-accompagnateur francophone",
-      "image": "/images/voyages/route-soie-ouzbekistan/h4VVuobqRiadNq9UvgMU.jpg"
-    }
-  ],
-  "accompanistsDescription": "Tout au long du séjour, vous serez accompagné par un guide francophone, dès votre arrivée le premier jour à Tachkent jusqu'au dernier jour à Ourguentch. En plus de cet accompagnement, vous rencontrez, à chaque étape, des locaux. Qu'ils soient artisans, cuisiniers, étudiants, apiculteurs, ces moments seront riches d'échanges sur la culture ouzbek.",
-  "housingBlock": [
-    {
-      "title": "Yourte, maison d'hôtes",
-      "housingType": "",
-      "housingMood": "Vous logerez en hôtel dans les villes à Tachkent, Samarkand et Boukhara ; en maison d'hôtes lors des immersions chez l'habitant à Yakkabog et Vobkent ; et en yourte dans le désert.",
-      "image": [
-        {
-          "src": "/images/voyages/route-soie-ouzbekistan/6tr4nO9PQ0aJQe6n0J0i.jpg",
-          "alt": "image de l'hébergement À la rencontre des habitants de la route de la soie en Ouzbékistan"
-        },
-        {
-          "src": "/images/voyages/route-soie-ouzbekistan/Od47BItBSlywiP3JCyFS.jpg",
-          "alt": "image de l'hébergement À la rencontre des habitants de la route de la soie en Ouzbékistan"
-        },
-        {
-          "src": "/images/voyages/route-soie-ouzbekistan/t21E07EyRHSHXhT2eyuW.jpg",
-          "alt": "image de l'hébergement À la rencontre des habitants de la route de la soie en Ouzbékistan"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Votre hébergement en base double (hôtel, yourte ou maison)",
-      "La pension complète pendant toute la durée de votre voyage",
-      "Tous les déplacements locaux en voiture privée ou minibus selon la taille du groupe",
-      "Le billet de train pour le trajet entre Tachkent et Samarkand",
-      "Le guide accompagnateur local francophone pour toute la durée du voyage",
-      "Les droits d’entrée sur les sites et les activités mentionnées dans le programme"
-    ],
-    "exclude": [
-      "Le transport aérien international Paris-Tachkent et Urgench-Paris et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Les boissons et dépenses à caractère personnel",
-      "Les activités ou soins non inclus dans la section « le prix comprend »",
-      "Les pourboires pour votre guide (10€ par jour et par personne) et conducteur (5€ par jour et par personne)",
-      "L'assurance annulation ou multirisques"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -267,27 +378,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1710,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 155,
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "TAS"
-    ]
+  "seo": {
+    "metaTitle": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
+    "canonicalUrl": "https://www.odysway.com/voyages/route-soie-ouzbekistan",
+    "ogTitle": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
+    "ogDescription": "Un voyage unique en Ouzbékistan entre histoire, immersion en pleine nature et partage du quotidien des locaux qui vivent entre montagne, désert et steppe. Découvrez notre itinéraire de 2 semaines sur la route de la soie !\r\n",
+    "ogImage": {
+      "src": "/images/voyages/route-soie-ouzbekistan/Wqppk55ISIWngukG1S1g.jpg",
+      "alt": "image principale du voyage À la rencontre des habitants de la route de la soie en Ouzbékistan"
+    },
+    "twitterTitle": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
+    "twitterDescription": "Un voyage unique en Ouzbékistan entre histoire, immersion en pleine nature et partage du quotidien des locaux qui vivent entre montagne, désert et steppe. Découvrez notre itinéraire de 2 semaines sur la route de la soie !\r\n",
+    "twitterImage": {
+      "src": "/images/voyages/route-soie-ouzbekistan/Wqppk55ISIWngukG1S1g.jpg",
+      "alt": "image principale du voyage À la rencontre des habitants de la route de la soie en Ouzbékistan"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

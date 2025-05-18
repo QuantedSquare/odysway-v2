@@ -1,54 +1,66 @@
 {
   "published": false,
   "title": "Eveillez vos sens dans les forêts des Vosges du Nord",
-  "slug": "immersion-sylvotherapie-parc-naturel-vosges",
-  "rating": 0,
-  "comments": 0,
-  "description": "Nous avons créé un séjour qui est une invitation à l’éveil de vos sens, au contact des forêts du Parc naturel régional des Vosges du Nord.\n\nVous ferez la rencontre avec Manuela, qui vous accompagnera à aiguiser votre sensibilité au vivant via des immersions silencieuses et respectueuses de l’environnement. Prendre du temps pour soi, ralentir, s’émerveiller, se retrouver. Des moments uniques à vivre pour votre bien-être et votre équilibre au quotidien.\n\nLe cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somptueuses forêts, classées réserve mondiale de la Biosphère par l’UNESCO, idéal pour une expérience pleine de sensations.",
-  "emailDescription": "👉  Si vous souhaitez vivre un séjour axé autour de découverte des forêts du Parc naturel des Vosges du Nord, ce séjour est fait pour vous ! ",
-  "metaDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
-  "interjection": "dans les ",
   "destinations": [
-    "Vosges"
+    {
+      "name": "Vosges",
+      "slug": "vosges"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejour-trek-randonnee",
-    "ou-partir-au-printemps",
-    "partir-en-groupe",
-    "sejours-nature",
-    "voyage-initiatique",
-    "ou-partir-en-automne"
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    }
   ],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Gite",
   "idealPeriods": [
-    "Avril",
-    "Juin",
-    "Septembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Juin",
-    "Septembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
-    "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/EjxhDwGVTq6gRfWfvDCZ.jpg",
-    "alt": "image secondaire du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
-  },
-  "photosList": [],
-  "videoLinks": [
-    "https://www.youtube.com/embed/wDxKCyf3TcA",
-    "https://www.youtube.com/embed/Jr_E8lgOgBs",
-    "https://www.youtube.com/embed/WLftw0EyLZM"
-  ],
-  "badgeSection": {},
   "authorNote": {
     "text": "Nous avons créé un séjour qui est une invitation à l’éveil de vos sens, au contact des forêts du Parc naturel régional des Vosges du Nord.\n\nVous ferez la rencontre avec Manuela, qui vous accompagnera à aiguiser votre sensibilité au vivant via des immersions silencieuses et respectueuses de l’environnement. Prendre du temps pour soi, ralentir, s’émerveiller, se retrouver. Des moments uniques à vivre pour votre bien-être et votre équilibre au quotidien.\n\nLe cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somptueuses forêts, classées réserve mondiale de la Biosphère par l’UNESCO, idéal pour une expérience pleine de sensations.",
     "author": "Louise",
@@ -60,29 +72,88 @@
     "Vivez des moments privilégiés et hors du temps avec Manuela, sophrologue et sylvothérapeute",
     "Rencontrez des acteurs engagés et passionnés"
   ],
+  "slug": "immersion-sylvotherapie-parc-naturel-vosges",
+  "description": "Nous avons créé un séjour qui est une invitation à l’éveil de vos sens, au contact des forêts du Parc naturel régional des Vosges du Nord.\n\nVous ferez la rencontre avec Manuela, qui vous accompagnera à aiguiser votre sensibilité au vivant via des immersions silencieuses et respectueuses de l’environnement. Prendre du temps pour soi, ralentir, s’émerveiller, se retrouver. Des moments uniques à vivre pour votre bien-être et votre équilibre au quotidien.\n\nLe cadre naturel dans lequel se déroule ce séjour vous fera découvrir de somptueuses forêts, classées réserve mondiale de la Biosphère par l’UNESCO, idéal pour une expérience pleine de sensations.",
+  "emailDescription": "👉  Si vous souhaitez vivre un séjour axé autour de découverte des forêts du Parc naturel des Vosges du Nord, ce séjour est fait pour vous ! ",
+  "metaDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avr à Sept",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "ARRIVEE CHEZ SANDRINE",
       "badgeText": "JOUR 1",
       "description": "Arrivée dans le Parc naturel régional des Vosges du Nord. Vous êtes accueillis à partir de 16h au gîte les Cigognes par Sandrine. N’hésitez pas à lui poser des questions sur le territoire, Sandrine se fera une joie de pouvoir y répondre. Le gîte est une maison à colombages entièrement rénovée située au calme à l’écart du village de Neuwiller-lès-Saverne. Dîner libre.",
       "photo": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "IMMERSION EN FORET",
       "badgeText": "JOUR 2",
       "description": "Réveil puis petit-déjeuner au gîte les Cigognes. Vous êtes ensuite attendus par Manuela, qui sera votre guide en forêt. Vous vivrez votre premier \"bain de forêt\" au coeur de la forêt des Vosges du Nord. Une véritable immersion sensorielle. L'après-midi est libre, nous vous suggérerons des possibilités de visites et ballades. Dîner libre. ",
       "photo": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/Vu5dL7KaT2KhbK89jhtK.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "CHUUUT, LA FORET SE REVELE",
       "badgeText": "JOUR 3",
       "description": "Aujourd'hui, Manuela vous propose une immersion différente : une marche silencieuse en forêt ! Ecoutez les sons de la nature, des oiseaux, du bruissement des feuilles, de vos pas. Tous vos sens seront en éveil, même le goût puisque vous déjeunerez aussi en silence ! Une expérience unique à vivre dans un cadre enchanteur. Retour au point de départ vers 14h.\n",
       "photo": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/7J0hRtadTaOsEVwEOmD7.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 210,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
   "accompanistsList": [
     {
       "name": "Sandrine",
@@ -97,7 +168,6 @@
       "image": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/MO2OmtjjQTqnBjytg9zn.jpg"
     }
   ],
-  "accompanistsDescription": "",
   "housingBlock": [
     {
       "title": "Gite",
@@ -106,10 +176,20 @@
       "image": []
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [],
-    "exclude": []
+  "image": {
+    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+    "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/EjxhDwGVTq6gRfWfvDCZ.jpg",
+    "alt": "image secondaire du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
+  },
+  "photosList": [],
+  "videoLinks": [
+    "https://www.youtube.com/embed/wDxKCyf3TcA",
+    "https://www.youtube.com/embed/Jr_E8lgOgBs",
+    "https://www.youtube.com/embed/WLftw0EyLZM"
+  ],
   "faqBlock": {
     "faqList": [
       {
@@ -142,24 +222,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 210,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",
+    "canonicalUrl": "https://www.odysway.com/voyages/immersion-sylvotherapie-parc-naturel-vosges",
+    "ogTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",
+    "ogDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
+    "ogImage": {
+      "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+      "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
+    },
+    "twitterTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",
+    "twitterDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
+    "twitterImage": {
+      "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+      "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

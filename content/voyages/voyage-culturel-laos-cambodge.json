@@ -1,56 +1,317 @@
 {
   "published": false,
   "title": "Du Laos au Cambodge, voyage à la croisée des cultures",
-  "slug": "voyage-culturel-laos-cambodge",
-  "rating": 4.5,
-  "comments": 37,
-  "description": "Plongez au cœur d'un voyage inoubliable qui marie le charme mystique du Cambodge et la quiétude du Laos méconnu. Explorez les ruelles ancestrales de Luang Prabang, goûtez aux délices culinaires locaux et laissez-vous émerveiller par les magnifiques temples d'Angkor Wat. Découvrez la vie quotidienne des habitants, embarquez pour des croisières pittoresques le long des rivières et imprégnez-vous de la richesse culturelle et historique de ces deux pays fascinants.\n\nChaque moment de ce voyage vous rapprochera des traditions authentiques et vous offrira des expériences uniques, que ce soit en explorant les marchés locaux animés, en rencontrant des artisans talentueux ou en admirant des panoramas naturels à couper le souffle. Partez à la découverte de l'âme authentique du Cambodge et du Laos, où les sourires chaleureux des habitants se mêlent à l'architecture emblématique et aux paysages sublimes. \n\nPréparez-vous à être émerveillés et à revenir chez vous avec des souvenirs qui resteront gravés à jamais dans vos mémoires !",
-  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable hors des frontières à la découverte du Laos et du Cambodge, ce voyage est fait pour vous ! ",
-  "metaDescription": "Explorez le charme mystique Cambodge et la tranquillité Laos. Découvrez Luang Prabang, dégustez cuisine locale et admirez temples Angkor Wat. Une aventure inoubliable à vivre en solo, en famille, en couple ou entre amis ! ",
-  "interjection": "au",
   "destinations": [
-    "Cambodge",
-    "Laos"
+    {
+      "name": "Cambodge",
+      "slug": "cambodge"
+    },
+    {
+      "name": "Laos",
+      "slug": "laos"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-ete",
-    "partir-en-groupe"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    }
   ],
   "duration": 10,
   "nights": 9,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtels",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.5,
+  "comments": 37,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Plongez au cœur d'un voyage inoubliable qui marie le charme mystique du Cambodge et la quiétude du Laos méconnu. Explorez les ruelles ancestrales de Luang Prabang, goûtez aux délices culinaires locaux et laissez-vous émerveiller par les magnifiques temples d'Angkor Wat. Découvrez la vie quotidienne des habitants, embarquez pour des croisières pittoresques le long des rivières et imprégnez-vous de la richesse culturelle et historique de ces deux pays fascinants.\n\nChaque moment de ce voyage vous rapprochera des traditions authentiques et vous offrira des expériences uniques, que ce soit en explorant les marchés locaux animés, en rencontrant des artisans talentueux ou en admirant des panoramas naturels à couper le souffle. Partez à la découverte de l'âme authentique du Cambodge et du Laos, où les sourires chaleureux des habitants se mêlent à l'architecture emblématique et aux paysages sublimes. \n\nPréparez-vous à être émerveillés et à revenir chez vous avec des souvenirs qui resteront gravés à jamais dans vos mémoires !",
+    "author": "Linda",
+    "affixeAuthor": "Responsable Asie"
+  },
+  "experiencesBlock": [
+    "Vivez les plus belles expériences du Laos et du Cambodge en un seul voyage",
+    "Plongez dans la sérénité du Laos, avec ses paysages préservés et les fascinantes chutes de Kouang Si",
+    "Contemplez la splendeur du mythique site archéologique d'Angkor Wat",
+    "Naviguez au cœur des villages flottants, sur le lac de Tonlé Sap",
+    "Combinez cet itinéraire à [notre voyage en immersion au Vietnam](https://odysway.com/voyages/voyage-immersif-vietnam \"Voyage en immersion au Vietnam, du nord au sud\")"
+  ],
+  "slug": "voyage-culturel-laos-cambodge",
+  "description": "Plongez au cœur d'un voyage inoubliable qui marie le charme mystique du Cambodge et la quiétude du Laos méconnu. Explorez les ruelles ancestrales de Luang Prabang, goûtez aux délices culinaires locaux et laissez-vous émerveiller par les magnifiques temples d'Angkor Wat. Découvrez la vie quotidienne des habitants, embarquez pour des croisières pittoresques le long des rivières et imprégnez-vous de la richesse culturelle et historique de ces deux pays fascinants.\n\nChaque moment de ce voyage vous rapprochera des traditions authentiques et vous offrira des expériences uniques, que ce soit en explorant les marchés locaux animés, en rencontrant des artisans talentueux ou en admirant des panoramas naturels à couper le souffle. Partez à la découverte de l'âme authentique du Cambodge et du Laos, où les sourires chaleureux des habitants se mêlent à l'architecture emblématique et aux paysages sublimes. \n\nPréparez-vous à être émerveillés et à revenir chez vous avec des souvenirs qui resteront gravés à jamais dans vos mémoires !",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable hors des frontières à la découverte du Laos et du Cambodge, ce voyage est fait pour vous ! ",
+  "metaDescription": "Explorez le charme mystique Cambodge et la tranquillité Laos. Découvrez Luang Prabang, dégustez cuisine locale et admirez temples Angkor Wat. Une aventure inoubliable à vivre en solo, en famille, en couple ou entre amis ! ",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 15 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Hôtels",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Jan à nov",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "PREMIERS MOMENTS AU LAOS",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à Vientiane, accueil et transfert privatif à votre hôtel. Profitez de votre temps libre pour vous reposer ou partir à la découverte des alentours. Le soir, savourez un dîner dans un restaurant local pour votre première immersion laotienne.",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/1cxOpBFSTEqSR0K2ZLvi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPLOREZ VANG VIENG AU FIL DE L'EAU",
+      "badgeText": "JOUR 2",
+      "description": "Ce matin, partez à la découverte de Vientiane à travers ses sites emblématiques et temples traditionnels. Puis, route vers Vang Vieng, réputée pour ses magnifiques paysages karstiques : vous explorerez une célèbre grotte avant d'embarquer sur une pirogue pour une balade le long de la rivière ! Terminez la journée en contemplant le coucher du soleil sur l'un des plus beaux lacs du Laos, puis profitez d'un délicieux repas au restaurant de l'hôtel.",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/Saj1SVQXuESTNagBn5hg.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉCOUVERTE DU LAOS EN TRAIN",
+      "badgeText": "JOUR 3",
+      "description": "Aujourd'hui, partez à la découverte du Laos en train, de Vang Vieng à Luang Prabang, et profitez-en pour admirer ses paysages montagneux à couper le souffle ! Installez-vous à l'hôtel, puis partez à pied avec votre guide pour votre première exploration de Luang Prabang, ce joyau culturel classé au patrimoine mondial par l'UNESCO. Le soir, profitez d'un dîner \"Sindad\" : un barbecue d'inspiration coréenne.",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/c69pzfa6S64nHDMM05PG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION À LUANG PRABANG",
+      "badgeText": "JOUR 4",
+      "description": "Pour les lèves-tôt, rendez-vous aux premières lueurs du jour pour observer le rituel matinal de Tak Bak, un rituel d'offrandes quotidienne faite par les fidèles aux moines qui parcourent les rues en longues processions silencieuses. Ensuite, partez à la découverte de la ville en tuk-tuk et imprégnez-vous de l'ambiance locale. Après un déjeuner local, montez à bord d'un bateau traditionnel pour une croisière privée. De retour à Luang Prabang, profitez de votre temps libre et dîner à votre guise, selon vos envies.",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/MXzyzlKDQJGIXJNjiebR.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU CŒUR DES CHUTES DE KOUANG SI ",
+      "badgeText": "JOUR 5",
+      "description": "Ce matin, cap sur les chutes de Kouang Si ! En route, faites une halte dans une ferme solidaire où les buffles des villageois trouvent refuge, et apprenez-en plus sur leur vie. Une fois arrivés aux cascades, profitez-en pour vous baigner dans ces eaux turquoises. Déjeuner pittoresque dans un restaurant local avec vue sur les chutes, puis retour vers Luang Prabang en passant par des villages de tisserands et d'artisans. En soirée, profitez d'un temps libre pour dîner et explorer Luang Prabang à votre rythme.",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/2hKaQQATMqrP7AoP6uw2.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉPART VERS LE CAMBODGE",
+      "badgeText": "JOUR 6",
+      "description": "Aujourd'hui, envolez-vous en direction de Siem Reap, où l'histoire riche de ce village symbolise une renaissance pour les Cambodgiens. Après le déjeuner, plongez-vous dans l'artisanat local et découvrez le processus de fabrication du chocolat, suivi d'une séance de dégustation. Le soir, profitez d'un dîner savoureux et authentique dans un restaurant typique. ",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/pVG0BpmeTFGbmIIFx3HG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "COUCHER DE SOLEIL À ANGKOR",
+      "badgeText": "JOUR 7",
+      "description": "Ce matin, partez pour un voyage à travers la campagne en direction d'un temple hindouiste. Admirez la splendeur du temple en grès rose de Banteay Srei, avant de savourer un déjeuner local dans une charmante maison traditionnelle en bois. En fin d'après-midi, direction Angkor pour profiter de son magnifique coucher de soleil, puis terminez cette journée par un authentique dîner khmer au cœur d'un village typique.",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/ng52DBmRRZugsN8umrHv.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "À TRAVERS LES LÉGENDES D'ANGKOR",
+      "badgeText": "JOUR 8",
+      "description": "Ce matin, embarquez à bord d'un tuk-tuk en direction d'Angkor Wat et son architecture impressionnante ! Plongez-vous dans l'histoire de la cité royale et découvrez le mystérieux Ta Prohm, partiellement laissé à l'état naturel afin de préserver le souvenir des premières découvertes. Pour le dîner, assistez à un spectacle de danses Apsara, aux traditions millénaire, particulièrement appréciées par les rois et les cours khmères d'autrefois. ",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/OdOBzPT5yCV81MV3XdAs.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU MILIEU DES VILLAGES FLOTTANTS",
+      "badgeText": "JOUR 9",
+      "description": "Ce matin, explorez la campagne à vélo entre cocotiers, bambous, temples et habitations traditionnelles khmères. Profitez d'un repas typique avec les explications d'un chef local, puis partez à la découverte du fameux lac Tonlé Sap ! Vous explorerez le village flottant de Metchrey et vous imprégnerez du mode de vie de ses habitants. Le soir, immersion dans la street food locale au cœur du plus grand marché nocturne de Siem Reap, et plongez dans l'atmosphère si caractéristique et conviviale de la culture khmère.\r\n",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/Tz2okeA2S8SUvxvGDSDC.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS AU CAMBODGE",
+      "badgeText": "JOUR 10",
+      "description": "Aujourd'hui, partez à la découverte des ateliers des Artisans d'Angkor, où vous pourrez admirer les techniques de sculpture, de laque et de peinture sur soie. Puis, route vers l'aéroport pour votre vol retour ou continuer avec notre voyage au Vietnam pour une véritable immersion en Indochine ! \r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-culturel-laos-cambodge/CLmZUgDCRWiDxuZQzUAN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’accueil à l'aéroport",
+      "Le vol de Luang Prabang à Siem Reap",
+      "Les transferts, les excursions et visites mentionnés au programme",
+      "L’hébergement en chambre et cabine double/twin avec le petit-déjeuner dans les établissements prévus au programme (selon la liste d’hôtels définitive validée à la confirmation définitive du circuit et de ses dates)",
+      "Tous les repas sauf les dîners du J04, du J05, le déjeuner du J06",
+      "L'encadrement par un guide francophone sauf le pendant le transfert aérien du Jour 6",
+      "Une bouteille d’eau par jour et par personne",
+      "L'assistance Odysway 24h/24 et 7j/7"
+    ],
+    "exclude": [
+      "Les vols internationaux, les taxes d'aéroport et les frais de visa (possibilité de devis avec vols inclus sur demande)",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les repas et boissons non mentionnés",
+      "Les pourboires et dépenses à caractère personnel",
+      "Les « early check-in » ou « late check-out » dans les hôtels sélectionnés et les consommations mini bar ou autres, non prévues au programme,",
+      "Toutes les prestations non mentionnées dans le programme : visites, services, les frais d’autorisation pour l’utilisation des caméras et appareils photos sur certains sites,",
+      "L'assurance voyage multirisques ou annulation -"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1510,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 15,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "VTE",
+      "REP"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par des guides francophones qui sauront vous dévoiler tous les secrets historiques et culturelles du Laos et du Cambodge avec passion !",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtels",
+      "housingType": "",
+      "housingMood": "Lors de votre voyage, vous serez hébergés dans des établissements de charme, en hôtels 3* ou 4*, en chambre double. Ces hébergements tout confort vous offriront l'occasion de vous détendre dans un cadre luxuriant et apaisant après vos journées de visites !",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-culturel-laos-cambodge/NLiyOv7gQKaCIqGQwSsV.jpg",
+          "alt": "image de l'hébergement Du Laos au Cambodge, voyage à la croisée des cultures"
+        },
+        {
+          "src": "/images/voyages/voyage-culturel-laos-cambodge/olfEsckCQy5GlTBVMMym.jpg",
+          "alt": "image de l'hébergement Du Laos au Cambodge, voyage à la croisée des cultures"
+        },
+        {
+          "src": "/images/voyages/voyage-culturel-laos-cambodge/MalbMjrRIiFGqkyCJYts.jpg",
+          "alt": "image de l'hébergement Du Laos au Cambodge, voyage à la croisée des cultures"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-culturel-laos-cambodge/MaEtuo11TVyAUs0BmJtL.jpg",
     "alt": "image principale du voyage Du Laos au Cambodge, voyage à la croisée des cultures"
@@ -122,135 +383,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Plongez au cœur d'un voyage inoubliable qui marie le charme mystique du Cambodge et la quiétude du Laos méconnu. Explorez les ruelles ancestrales de Luang Prabang, goûtez aux délices culinaires locaux et laissez-vous émerveiller par les magnifiques temples d'Angkor Wat. Découvrez la vie quotidienne des habitants, embarquez pour des croisières pittoresques le long des rivières et imprégnez-vous de la richesse culturelle et historique de ces deux pays fascinants.\n\nChaque moment de ce voyage vous rapprochera des traditions authentiques et vous offrira des expériences uniques, que ce soit en explorant les marchés locaux animés, en rencontrant des artisans talentueux ou en admirant des panoramas naturels à couper le souffle. Partez à la découverte de l'âme authentique du Cambodge et du Laos, où les sourires chaleureux des habitants se mêlent à l'architecture emblématique et aux paysages sublimes. \n\nPréparez-vous à être émerveillés et à revenir chez vous avec des souvenirs qui resteront gravés à jamais dans vos mémoires !",
-    "author": "Linda",
-    "affixeAuthor": "Responsable Asie"
-  },
-  "experiencesBlock": [
-    "Vivez les plus belles expériences du Laos et du Cambodge en un seul voyage",
-    "Plongez dans la sérénité du Laos, avec ses paysages préservés et les fascinantes chutes de Kouang Si",
-    "Contemplez la splendeur du mythique site archéologique d'Angkor Wat",
-    "Naviguez au cœur des villages flottants, sur le lac de Tonlé Sap",
-    "Combinez cet itinéraire à [notre voyage en immersion au Vietnam](https://odysway.com/voyages/voyage-immersif-vietnam \"Voyage en immersion au Vietnam, du nord au sud\")"
-  ],
-  "programmeBlock": [
-    {
-      "title": "PREMIERS MOMENTS AU LAOS",
-      "badgeText": "JOUR 1",
-      "description": "À votre arrivée à Vientiane, accueil et transfert privatif à votre hôtel. Profitez de votre temps libre pour vous reposer ou partir à la découverte des alentours. Le soir, savourez un dîner dans un restaurant local pour votre première immersion laotienne.",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/1cxOpBFSTEqSR0K2ZLvi.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPLOREZ VANG VIENG AU FIL DE L'EAU",
-      "badgeText": "JOUR 2",
-      "description": "Ce matin, partez à la découverte de Vientiane à travers ses sites emblématiques et temples traditionnels. Puis, route vers Vang Vieng, réputée pour ses magnifiques paysages karstiques : vous explorerez une célèbre grotte avant d'embarquer sur une pirogue pour une balade le long de la rivière ! Terminez la journée en contemplant le coucher du soleil sur l'un des plus beaux lacs du Laos, puis profitez d'un délicieux repas au restaurant de l'hôtel.",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/Saj1SVQXuESTNagBn5hg.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉCOUVERTE DU LAOS EN TRAIN",
-      "badgeText": "JOUR 3",
-      "description": "Aujourd'hui, partez à la découverte du Laos en train, de Vang Vieng à Luang Prabang, et profitez-en pour admirer ses paysages montagneux à couper le souffle ! Installez-vous à l'hôtel, puis partez à pied avec votre guide pour votre première exploration de Luang Prabang, ce joyau culturel classé au patrimoine mondial par l'UNESCO. Le soir, profitez d'un dîner \"Sindad\" : un barbecue d'inspiration coréenne.",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/c69pzfa6S64nHDMM05PG.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION À LUANG PRABANG",
-      "badgeText": "JOUR 4",
-      "description": "Pour les lèves-tôt, rendez-vous aux premières lueurs du jour pour observer le rituel matinal de Tak Bak, un rituel d'offrandes quotidienne faite par les fidèles aux moines qui parcourent les rues en longues processions silencieuses. Ensuite, partez à la découverte de la ville en tuk-tuk et imprégnez-vous de l'ambiance locale. Après un déjeuner local, montez à bord d'un bateau traditionnel pour une croisière privée. De retour à Luang Prabang, profitez de votre temps libre et dîner à votre guise, selon vos envies.",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/MXzyzlKDQJGIXJNjiebR.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU CŒUR DES CHUTES DE KOUANG SI ",
-      "badgeText": "JOUR 5",
-      "description": "Ce matin, cap sur les chutes de Kouang Si ! En route, faites une halte dans une ferme solidaire où les buffles des villageois trouvent refuge, et apprenez-en plus sur leur vie. Une fois arrivés aux cascades, profitez-en pour vous baigner dans ces eaux turquoises. Déjeuner pittoresque dans un restaurant local avec vue sur les chutes, puis retour vers Luang Prabang en passant par des villages de tisserands et d'artisans. En soirée, profitez d'un temps libre pour dîner et explorer Luang Prabang à votre rythme.",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/2hKaQQATMqrP7AoP6uw2.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉPART VERS LE CAMBODGE",
-      "badgeText": "JOUR 6",
-      "description": "Aujourd'hui, envolez-vous en direction de Siem Reap, où l'histoire riche de ce village symbolise une renaissance pour les Cambodgiens. Après le déjeuner, plongez-vous dans l'artisanat local et découvrez le processus de fabrication du chocolat, suivi d'une séance de dégustation. Le soir, profitez d'un dîner savoureux et authentique dans un restaurant typique. ",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/pVG0BpmeTFGbmIIFx3HG.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "COUCHER DE SOLEIL À ANGKOR",
-      "badgeText": "JOUR 7",
-      "description": "Ce matin, partez pour un voyage à travers la campagne en direction d'un temple hindouiste. Admirez la splendeur du temple en grès rose de Banteay Srei, avant de savourer un déjeuner local dans une charmante maison traditionnelle en bois. En fin d'après-midi, direction Angkor pour profiter de son magnifique coucher de soleil, puis terminez cette journée par un authentique dîner khmer au cœur d'un village typique.",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/ng52DBmRRZugsN8umrHv.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "À TRAVERS LES LÉGENDES D'ANGKOR",
-      "badgeText": "JOUR 8",
-      "description": "Ce matin, embarquez à bord d'un tuk-tuk en direction d'Angkor Wat et son architecture impressionnante ! Plongez-vous dans l'histoire de la cité royale et découvrez le mystérieux Ta Prohm, partiellement laissé à l'état naturel afin de préserver le souvenir des premières découvertes. Pour le dîner, assistez à un spectacle de danses Apsara, aux traditions millénaire, particulièrement appréciées par les rois et les cours khmères d'autrefois. ",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/OdOBzPT5yCV81MV3XdAs.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU MILIEU DES VILLAGES FLOTTANTS",
-      "badgeText": "JOUR 9",
-      "description": "Ce matin, explorez la campagne à vélo entre cocotiers, bambous, temples et habitations traditionnelles khmères. Profitez d'un repas typique avec les explications d'un chef local, puis partez à la découverte du fameux lac Tonlé Sap ! Vous explorerez le village flottant de Metchrey et vous imprégnerez du mode de vie de ses habitants. Le soir, immersion dans la street food locale au cœur du plus grand marché nocturne de Siem Reap, et plongez dans l'atmosphère si caractéristique et conviviale de la culture khmère.\r\n",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/Tz2okeA2S8SUvxvGDSDC.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS INSTANTS AU CAMBODGE",
-      "badgeText": "JOUR 10",
-      "description": "Aujourd'hui, partez à la découverte des ateliers des Artisans d'Angkor, où vous pourrez admirer les techniques de sculpture, de laque et de peinture sur soie. Puis, route vers l'aéroport pour votre vol retour ou continuer avec notre voyage au Vietnam pour une véritable immersion en Indochine ! \r\n\r\n\r\n",
-      "photo": "/images/voyages/voyage-culturel-laos-cambodge/CLmZUgDCRWiDxuZQzUAN.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagnés par des guides francophones qui sauront vous dévoiler tous les secrets historiques et culturelles du Laos et du Cambodge avec passion !",
-  "housingBlock": [
-    {
-      "title": "Hôtels",
-      "housingType": "",
-      "housingMood": "Lors de votre voyage, vous serez hébergés dans des établissements de charme, en hôtels 3* ou 4*, en chambre double. Ces hébergements tout confort vous offriront l'occasion de vous détendre dans un cadre luxuriant et apaisant après vos journées de visites !",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-culturel-laos-cambodge/NLiyOv7gQKaCIqGQwSsV.jpg",
-          "alt": "image de l'hébergement Du Laos au Cambodge, voyage à la croisée des cultures"
-        },
-        {
-          "src": "/images/voyages/voyage-culturel-laos-cambodge/olfEsckCQy5GlTBVMMym.jpg",
-          "alt": "image de l'hébergement Du Laos au Cambodge, voyage à la croisée des cultures"
-        },
-        {
-          "src": "/images/voyages/voyage-culturel-laos-cambodge/MalbMjrRIiFGqkyCJYts.jpg",
-          "alt": "image de l'hébergement Du Laos au Cambodge, voyage à la croisée des cultures"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’accueil à l'aéroport",
-      "Le vol de Luang Prabang à Siem Reap",
-      "Les transferts, les excursions et visites mentionnés au programme",
-      "L’hébergement en chambre et cabine double/twin avec le petit-déjeuner dans les établissements prévus au programme (selon la liste d’hôtels définitive validée à la confirmation définitive du circuit et de ses dates)",
-      "Tous les repas sauf les dîners du J04, du J05, le déjeuner du J06",
-      "L'encadrement par un guide francophone sauf le pendant le transfert aérien du Jour 6",
-      "Une bouteille d’eau par jour et par personne",
-      "L'assistance Odysway 24h/24 et 7j/7"
-    ],
-    "exclude": [
-      "Les vols internationaux, les taxes d'aéroport et les frais de visa (possibilité de devis avec vols inclus sur demande)",
-      "Toutes les dépenses supplémentaires non mentionnées",
-      "Les repas et boissons non mentionnés",
-      "Les pourboires et dépenses à caractère personnel",
-      "Les « early check-in » ou « late check-out » dans les hôtels sélectionnés et les consommations mini bar ou autres, non prévues au programme,",
-      "Toutes les prestations non mentionnées dans le programme : visites, services, les frais d’autorisation pour l’utilisation des caméras et appareils photos sur certains sites,",
-      "L'assurance voyage multirisques ou annulation -"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -295,27 +427,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1510,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 15,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "VTE",
-      "REP"
-    ]
+  "seo": {
+    "metaTitle": "Du Laos au Cambodge, voyage à la croisée des cultures",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-culturel-laos-cambodge",
+    "ogTitle": "Du Laos au Cambodge, voyage à la croisée des cultures",
+    "ogDescription": "Explorez le charme mystique Cambodge et la tranquillité Laos. Découvrez Luang Prabang, dégustez cuisine locale et admirez temples Angkor Wat. Une aventure inoubliable à vivre en solo, en famille, en couple ou entre amis ! ",
+    "ogImage": {
+      "src": "/images/voyages/voyage-culturel-laos-cambodge/MaEtuo11TVyAUs0BmJtL.jpg",
+      "alt": "image principale du voyage Du Laos au Cambodge, voyage à la croisée des cultures"
+    },
+    "twitterTitle": "Du Laos au Cambodge, voyage à la croisée des cultures",
+    "twitterDescription": "Explorez le charme mystique Cambodge et la tranquillité Laos. Découvrez Luang Prabang, dégustez cuisine locale et admirez temples Angkor Wat. Une aventure inoubliable à vivre en solo, en famille, en couple ou entre amis ! ",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-culturel-laos-cambodge/MaEtuo11TVyAUs0BmJtL.jpg",
+      "alt": "image principale du voyage Du Laos au Cambodge, voyage à la croisée des cultures"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

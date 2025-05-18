@@ -1,59 +1,326 @@
 {
   "published": true,
   "title": "Immersion culturelle à travers les paysages spectaculaires de Madagascar",
-  "slug": "madagascar-immersion-culturelle",
-  "rating": 0,
-  "comments": 0,
-  "description": "Partez 16 jours en immersion dans la culture malagasy en sillonnant la mythique Route Nationale 7, qui vous mènera de la capitale Antananarivo vers le sud de l’île Rouge à Ifaty !\n\nVous y découvrirez une incroyable biodiversité et partirez à la rencontre de la population locale qui partagera avec vous ses savoir-faire ancestraux.\n\nAu programme : visites d'ateliers locaux, danse et chant autour du feu, cours de percussions, préparation de plats traditionnels, randonnées dans les parcs naturels et animaliers, et moments de partage dans les associations et ONG...  \n\nCe séjour est fait pour vous si vous souhaitez faire des rencontres inoubliables avec les peuples locaux au cœur de paysages grandioses !",
-  "emailDescription": "👉 Si vous souhaitez faire de belles rencontres et découvrir la culture malagasy tout en sillonnant les magnifiques paysages du sud de Madagascar, ce voyage est fait pour vous !",
-  "metaDescription": "Vivez un incroyable voyage authentique de 18 jours à Madagascar ! Au programme :  rencontres avec les peuples locaux, visites d’ateliers artisanaux , immersion dans un village Zafimaniry, préparation de plats typiques, randonnées à travers les villages traditionnels et les parcs nationaux, visites d’ONG et d’associations en aide aux personnes défavorisées, et séjour balnéaire à Ifaty.",
-  "interjection": "à",
   "destinations": [
-    "Madagascar"
+    {
+      "name": "Madagascar",
+      "slug": "madagascar"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejour-trek-randonnee",
-    "sejours-culturels",
-    "roadtrip-organise",
-    "ecotourisme",
-    "voyage-insolite",
-    "voyage-solidaire",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "partir-en-amoureux",
-    "partir-en-famille",
-    "sejours-chez-l-habitant",
-    "sejours-nature"
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "road-trip-organise"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "voyage-solidaire"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 16,
   "nights": 15,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Gîte, chez l’habitant",
   "idealPeriods": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez 16 jours en immersion dans la culture malagasy en sillonnant la mythique Route Nationale 7, qui vous mènera de la capitale Antananarivo vers le sud de l’île Rouge à Ifaty !\n\nVous y découvrirez une incroyable biodiversité et partirez à la rencontre de la population locale qui partagera avec vous ses savoir-faire ancestraux.\n\nAu programme : visites d'ateliers locaux, danse et chant autour du feu, cours de percussions, préparation de plats traditionnels, randonnées dans les parcs naturels et animaliers, et moments de partage dans les associations et ONG...  \n\nCe séjour est fait pour vous si vous souhaitez faire des rencontres inoubliables avec les peuples locaux au cœur de paysages grandioses !",
+    "author": "Mathilde",
+    "affixeAuthor": "Créatrice de voyages immersifs chez Odysway"
+  },
+  "experiencesBlock": [
+    "Rencontrez les peuples locaux et immergez-vous dans un village Zafimaniry",
+    "Visitez des ateliers artisanaux et participez à des activités villageoises",
+    "Randonnez à travers les villages traditionnels et les parcs nationaux",
+    "Détendez-vous au bord de l'océan indien à Ifaty",
+    "Profitez d'un accompagnement de plusieurs guides locaux"
+  ],
+  "slug": "madagascar-immersion-culturelle",
+  "description": "Partez 16 jours en immersion dans la culture malagasy en sillonnant la mythique Route Nationale 7, qui vous mènera de la capitale Antananarivo vers le sud de l’île Rouge à Ifaty !\n\nVous y découvrirez une incroyable biodiversité et partirez à la rencontre de la population locale qui partagera avec vous ses savoir-faire ancestraux.\n\nAu programme : visites d'ateliers locaux, danse et chant autour du feu, cours de percussions, préparation de plats traditionnels, randonnées dans les parcs naturels et animaliers, et moments de partage dans les associations et ONG...  \n\nCe séjour est fait pour vous si vous souhaitez faire des rencontres inoubliables avec les peuples locaux au cœur de paysages grandioses !",
+  "emailDescription": "👉 Si vous souhaitez faire de belles rencontres et découvrir la culture malagasy tout en sillonnant les magnifiques paysages du sud de Madagascar, ce voyage est fait pour vous !",
+  "metaDescription": "Vivez un incroyable voyage authentique de 18 jours à Madagascar ! Au programme :  rencontres avec les peuples locaux, visites d’ateliers artisanaux , immersion dans un village Zafimaniry, préparation de plats typiques, randonnées à travers les villages traditionnels et les parcs nationaux, visites d’ONG et d’associations en aide aux personnes défavorisées, et séjour balnéaire à Ifaty.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 6 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**15 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Gîte, chez l’habitant",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Avr à déc",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "TONGOSAO ! BIENVENUE !",
+      "badgeText": "JOUR 1 ",
+      "description": "Arrivée dans l'après-midi, nos équipes vous accueillent et vous emmènent à votre hôtel. Profitez de votre après-midi libre pour découvrir l'architecture authentique de la ville et les divers marchés à fleurs d'Antananarivo. ",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/EhYGbTsKQzuHfa3FGjhO.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ARTISANAT ET MUSIQUE",
+      "badgeText": "JOUR 2",
+      "description": "Vous commencez votre aventure malagasy par la visite de l'atelier de ferronnerie de Violette et Dieudonné. Après quelques heures de route sur la fameuse Nationale 7, vous arrivez à Antsirabe où vous faites la rencontre de musiciens avec lesquels vous partagez un moment unique, en vous initiant aux percussions !",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/ywneiWPRU6Zxcf2m8RZH.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LA PEAU D’UN MALAGASY",
+      "badgeText": "JOURS 3 ET 4",
+      "description": "Lors de ces 2 journées, partez à la découverte des villages environnants, de l’agriculture locale et de l’art culinaire. Vous partagerez des moments uniques avec les villageois entre danse et chant autour du feu, et préparation de plats typiques ! ",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/AWrAFWYSMebhSpt2D8z4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU PAYS DES ZAFIMANIRY",
+      "badgeText": "JOURS 5 À 6",
+      "description": "Partez à la journée pour 7h de randonnées à travers les villages Zafimaniry où vous pourrez observer les maisons typiques classées au Patrimoine Culturel Mondial par l’Unesco. Le lendemain, immergez-vous dans le quotidien des habitants de Sakaivo où vous serez initiés à la sculpture et à la marqueterie. ",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/5vnoSZUvS6m8oCO6Ubu7.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A TRAVERS LES VILLAGES TYPIQUES",
+      "badgeText": "JOUR 7",
+      "description": "Ca matin, prenez de la hauteur sur la colline qui domine le village de Sakaivo. Lors de votre randonnée, profitez des paysages de carte postale, découvrez d’intéressantes plantes comme les Aloes et les Kalanchoes et rencontrez des habitants sur le chemin. Une fois arrivés à Antoetra, vous prenez la route à travers les villages typiques pour rejoindre Fianarantsoa. ",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/3lERjuDJQieUdG9l65La.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ARTISANATS ET PARCS",
+      "badgeText": "JOURS 8 A 10",
+      "description": "Vivez des moments de partage dans un village de potiers et dans l’atelier de fabrication du papier Antaimoro, puis découvrez une biodiversité unique dans le parc privé d’Anja avec ses lémuriens et le parc national de l’Isalo avec ses oasis !",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/hTcK7frmSHep7ENDl5yL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ASSOCIATION ET PARC RENIALA",
+      "badgeText": "JOUR 11",
+      "description": "Après des échanges avec l’ONG Bel Avenir qui aide les populations défavorisées, vous visiterez la forêt épineuse du Parc Reniala. Là-bas se côtoient tortues, caméléons, oiseaux et baobabs de plus de 1000 ans !",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/2X6Lw8lmTTipfEqX3NUA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNEES LIBRES A IFATY",
+      "badgeText": "JOURS 12 ET 13",
+      "description": "Profitez de vos deux journées libres à Ifaty : farniente à la plage, pêche au gros dans les villages de pêcheur, kitesurf, randonnée en quad, plongée, snorkeling... De juillet à mi-septembre, il est possible de partir en mer pour observer les baleines !",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/IvGhUweTmSwfvRos3BcT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR A ANTANANARIVO",
+      "badgeText": "JOUR 14 ET 15",
+      "description": "Après un vol intérieur, vous serez de retour dans la capitale. Pour vos derniers instants à Madagascar, vous visiterez les incontournables comme le Palais de la reine, le marché artisanal, le Palais d’Ambohimanga, et le centre avec ses maisons en brique. Enfin, vous partagerez des moments d'échange avec l’Association humanitaire Akamasoa qui aide les personnes défavorisées.",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/3Z9mrZnPQLqJB25M8bou.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ADIEUX ET RETOUR",
+      "badgeText": "JOUR 16",
+      "description": "Votre voyage se termine après 16 jours d’immersion au pays Malagasy. Vous repartez avec des images et des souvenirs pleins les yeux ! Nos équipes vous emmèneront à l’aéroport d’Ivato pour votre vol retour dans l'après-midi vers votre pays de destination. Arrivée le lendemain matin.",
+      "photo": "/images/voyages/madagascar-immersion-culturelle/1DfgVndyRiOvyiOAA0xg.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport",
+      "L’hébergement en demi-pension durant le circuit",
+      "Les déjeuners à partir du Jour 3 jusqu’au Jour 6 et le Jour 8",
+      "Le transport en voiture privée climatisée avec chauffeur accompagnateur durant le circuit sauf à Ifaty",
+      "Les guides locaux durant les séjours chez l’habitant et les visites",
+      "Le vol domestique Toliara - Antananarivo",
+      "Les billets d’entrées dans les parcs et réserves mentionnés au programme"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Antananarivo avec les taxes d'aéroport  (possibilité de devis avec vols inclus sur demande)",
+      "Les activités durant les journées libres à Ifaty",
+      "Les repas non-mentionnés au programme",
+      "Le Visa de 35€",
+      "L'assurance annulation ou multirisques",
+      "Les boissons",
+      "Les pourboires",
+      "Tout extra d’ordre personnel"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2135,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "TNR"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage à Madagascar est encadré par un chauffeur francophone qui sera le lien entre les guides locaux de chaque lieux visités ou les habitants des villages dans lesquels vous séjournerez. Le transport est assuré en véhicule privé confortable et climatisé. Durant votre voyage, vous bénéficiez de l'assistance personnalisée avec un conseiller Odysway, disponible 7 jours sur 7.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Gîte, chez l’habitant",
+      "housingType": "",
+      "housingMood": "Vous logerez en chambre double au sein d'hôtels confortables, de gîtes villageois ou chez l'habitant. Un accueil chaleureux vous sera réservé par vos hôtes. Vous pourrez profiter de moments de détente au bord de l'eau.",
+      "image": [
+        {
+          "src": "/images/voyages/madagascar-immersion-culturelle/2RKMvbG0SMeCIaLHVNWg.jpg",
+          "alt": "image de l'hébergement Immersion culturelle à travers les paysages spectaculaires de Madagascar"
+        },
+        {
+          "src": "/images/voyages/madagascar-immersion-culturelle/qWzTOg2NRCmklSP6K5xH.jpg",
+          "alt": "image de l'hébergement Immersion culturelle à travers les paysages spectaculaires de Madagascar"
+        },
+        {
+          "src": "/images/voyages/madagascar-immersion-culturelle/ZgefkdhRRNuwIAV3FIqg.jpg",
+          "alt": "image de l'hébergement Immersion culturelle à travers les paysages spectaculaires de Madagascar"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/madagascar-immersion-culturelle/S7qbvJEtSjKkMue8ZhGV.jpg",
     "alt": "image principale du voyage Immersion culturelle à travers les paysages spectaculaires de Madagascar"
@@ -153,136 +420,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Partez 16 jours en immersion dans la culture malagasy en sillonnant la mythique Route Nationale 7, qui vous mènera de la capitale Antananarivo vers le sud de l’île Rouge à Ifaty !\n\nVous y découvrirez une incroyable biodiversité et partirez à la rencontre de la population locale qui partagera avec vous ses savoir-faire ancestraux.\n\nAu programme : visites d'ateliers locaux, danse et chant autour du feu, cours de percussions, préparation de plats traditionnels, randonnées dans les parcs naturels et animaliers, et moments de partage dans les associations et ONG...  \n\nCe séjour est fait pour vous si vous souhaitez faire des rencontres inoubliables avec les peuples locaux au cœur de paysages grandioses !",
-    "author": "Mathilde",
-    "affixeAuthor": "Créatrice de voyages immersifs chez Odysway"
-  },
-  "experiencesBlock": [
-    "Rencontrez les peuples locaux et immergez-vous dans un village Zafimaniry",
-    "Visitez des ateliers artisanaux et participez à des activités villageoises",
-    "Randonnez à travers les villages traditionnels et les parcs nationaux",
-    "Détendez-vous au bord de l'océan indien à Ifaty",
-    "Profitez d'un accompagnement de plusieurs guides locaux"
-  ],
-  "programmeBlock": [
-    {
-      "title": "TONGOSAO ! BIENVENUE !",
-      "badgeText": "JOUR 1 ",
-      "description": "Arrivée dans l'après-midi, nos équipes vous accueillent et vous emmènent à votre hôtel. Profitez de votre après-midi libre pour découvrir l'architecture authentique de la ville et les divers marchés à fleurs d'Antananarivo. ",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/EhYGbTsKQzuHfa3FGjhO.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ARTISANAT ET MUSIQUE",
-      "badgeText": "JOUR 2",
-      "description": "Vous commencez votre aventure malagasy par la visite de l'atelier de ferronnerie de Violette et Dieudonné. Après quelques heures de route sur la fameuse Nationale 7, vous arrivez à Antsirabe où vous faites la rencontre de musiciens avec lesquels vous partagez un moment unique, en vous initiant aux percussions !",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/ywneiWPRU6Zxcf2m8RZH.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DANS LA PEAU D’UN MALAGASY",
-      "badgeText": "JOURS 3 ET 4",
-      "description": "Lors de ces 2 journées, partez à la découverte des villages environnants, de l’agriculture locale et de l’art culinaire. Vous partagerez des moments uniques avec les villageois entre danse et chant autour du feu, et préparation de plats typiques ! ",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/AWrAFWYSMebhSpt2D8z4.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU PAYS DES ZAFIMANIRY",
-      "badgeText": "JOURS 5 À 6",
-      "description": "Partez à la journée pour 7h de randonnées à travers les villages Zafimaniry où vous pourrez observer les maisons typiques classées au Patrimoine Culturel Mondial par l’Unesco. Le lendemain, immergez-vous dans le quotidien des habitants de Sakaivo où vous serez initiés à la sculpture et à la marqueterie. ",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/5vnoSZUvS6m8oCO6Ubu7.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "A TRAVERS LES VILLAGES TYPIQUES",
-      "badgeText": "JOUR 7",
-      "description": "Ca matin, prenez de la hauteur sur la colline qui domine le village de Sakaivo. Lors de votre randonnée, profitez des paysages de carte postale, découvrez d’intéressantes plantes comme les Aloes et les Kalanchoes et rencontrez des habitants sur le chemin. Une fois arrivés à Antoetra, vous prenez la route à travers les villages typiques pour rejoindre Fianarantsoa. ",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/3lERjuDJQieUdG9l65La.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ARTISANATS ET PARCS",
-      "badgeText": "JOURS 8 A 10",
-      "description": "Vivez des moments de partage dans un village de potiers et dans l’atelier de fabrication du papier Antaimoro, puis découvrez une biodiversité unique dans le parc privé d’Anja avec ses lémuriens et le parc national de l’Isalo avec ses oasis !",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/hTcK7frmSHep7ENDl5yL.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ASSOCIATION ET PARC RENIALA",
-      "badgeText": "JOUR 11",
-      "description": "Après des échanges avec l’ONG Bel Avenir qui aide les populations défavorisées, vous visiterez la forêt épineuse du Parc Reniala. Là-bas se côtoient tortues, caméléons, oiseaux et baobabs de plus de 1000 ans !",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/2X6Lw8lmTTipfEqX3NUA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNEES LIBRES A IFATY",
-      "badgeText": "JOURS 12 ET 13",
-      "description": "Profitez de vos deux journées libres à Ifaty : farniente à la plage, pêche au gros dans les villages de pêcheur, kitesurf, randonnée en quad, plongée, snorkeling... De juillet à mi-septembre, il est possible de partir en mer pour observer les baleines !",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/IvGhUweTmSwfvRos3BcT.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR A ANTANANARIVO",
-      "badgeText": "JOUR 14 ET 15",
-      "description": "Après un vol intérieur, vous serez de retour dans la capitale. Pour vos derniers instants à Madagascar, vous visiterez les incontournables comme le Palais de la reine, le marché artisanal, le Palais d’Ambohimanga, et le centre avec ses maisons en brique. Enfin, vous partagerez des moments d'échange avec l’Association humanitaire Akamasoa qui aide les personnes défavorisées.",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/3Z9mrZnPQLqJB25M8bou.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ADIEUX ET RETOUR",
-      "badgeText": "JOUR 16",
-      "description": "Votre voyage se termine après 16 jours d’immersion au pays Malagasy. Vous repartez avec des images et des souvenirs pleins les yeux ! Nos équipes vous emmèneront à l’aéroport d’Ivato pour votre vol retour dans l'après-midi vers votre pays de destination. Arrivée le lendemain matin.",
-      "photo": "/images/voyages/madagascar-immersion-culturelle/1DfgVndyRiOvyiOAA0xg.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Ce voyage à Madagascar est encadré par un chauffeur francophone qui sera le lien entre les guides locaux de chaque lieux visités ou les habitants des villages dans lesquels vous séjournerez. Le transport est assuré en véhicule privé confortable et climatisé. Durant votre voyage, vous bénéficiez de l'assistance personnalisée avec un conseiller Odysway, disponible 7 jours sur 7.",
-  "housingBlock": [
-    {
-      "title": "Gîte, chez l’habitant",
-      "housingType": "",
-      "housingMood": "Vous logerez en chambre double au sein d'hôtels confortables, de gîtes villageois ou chez l'habitant. Un accueil chaleureux vous sera réservé par vos hôtes. Vous pourrez profiter de moments de détente au bord de l'eau.",
-      "image": [
-        {
-          "src": "/images/voyages/madagascar-immersion-culturelle/2RKMvbG0SMeCIaLHVNWg.jpg",
-          "alt": "image de l'hébergement Immersion culturelle à travers les paysages spectaculaires de Madagascar"
-        },
-        {
-          "src": "/images/voyages/madagascar-immersion-culturelle/qWzTOg2NRCmklSP6K5xH.jpg",
-          "alt": "image de l'hébergement Immersion culturelle à travers les paysages spectaculaires de Madagascar"
-        },
-        {
-          "src": "/images/voyages/madagascar-immersion-culturelle/ZgefkdhRRNuwIAV3FIqg.jpg",
-          "alt": "image de l'hébergement Immersion culturelle à travers les paysages spectaculaires de Madagascar"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil à l'aéroport",
-      "L’hébergement en demi-pension durant le circuit",
-      "Les déjeuners à partir du Jour 3 jusqu’au Jour 6 et le Jour 8",
-      "Le transport en voiture privée climatisée avec chauffeur accompagnateur durant le circuit sauf à Ifaty",
-      "Les guides locaux durant les séjours chez l’habitant et les visites",
-      "Le vol domestique Toliara - Antananarivo",
-      "Les billets d’entrées dans les parcs et réserves mentionnés au programme"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Antananarivo avec les taxes d'aéroport  (possibilité de devis avec vols inclus sur demande)",
-      "Les activités durant les journées libres à Ifaty",
-      "Les repas non-mentionnés au programme",
-      "Le Visa de 35€",
-      "L'assurance annulation ou multirisques",
-      "Les boissons",
-      "Les pourboires",
-      "Tout extra d’ordre personnel"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -327,27 +464,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2135,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 6,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "TNR"
-    ]
+  "seo": {
+    "metaTitle": "Immersion culturelle à travers les paysages spectaculaires de Madagascar",
+    "canonicalUrl": "https://www.odysway.com/voyages/madagascar-immersion-culturelle",
+    "ogTitle": "Immersion culturelle à travers les paysages spectaculaires de Madagascar",
+    "ogDescription": "Vivez un incroyable voyage authentique de 18 jours à Madagascar ! Au programme :  rencontres avec les peuples locaux, visites d’ateliers artisanaux , immersion dans un village Zafimaniry, préparation de plats typiques, randonnées à travers les villages traditionnels et les parcs nationaux, visites d’ONG et d’associations en aide aux personnes défavorisées, et séjour balnéaire à Ifaty.",
+    "ogImage": {
+      "src": "/images/voyages/madagascar-immersion-culturelle/S7qbvJEtSjKkMue8ZhGV.jpg",
+      "alt": "image principale du voyage Immersion culturelle à travers les paysages spectaculaires de Madagascar"
+    },
+    "twitterTitle": "Immersion culturelle à travers les paysages spectaculaires de Madagascar",
+    "twitterDescription": "Vivez un incroyable voyage authentique de 18 jours à Madagascar ! Au programme :  rencontres avec les peuples locaux, visites d’ateliers artisanaux , immersion dans un village Zafimaniry, préparation de plats typiques, randonnées à travers les villages traditionnels et les parcs nationaux, visites d’ONG et d’associations en aide aux personnes défavorisées, et séjour balnéaire à Ifaty.",
+    "twitterImage": {
+      "src": "/images/voyages/madagascar-immersion-culturelle/S7qbvJEtSjKkMue8ZhGV.jpg",
+      "alt": "image principale du voyage Immersion culturelle à travers les paysages spectaculaires de Madagascar"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

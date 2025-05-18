@@ -1,0 +1,409 @@
+{
+  "published": true,
+  "title": "La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar",
+  "destinations": [
+    {
+      "name": "Tanzanie",
+      "slug": "tanzanie"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 10,
+  "nights": 9,
+  "includeFlight": false,
+  "housingType": "Chez l’habitant, lodges et hôtels",
+  "idealPeriods": [],
+  "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez pour une aventure en trois temps au cœur de la Tanzanie : immersion culturelle et rencontres humaines, nature sauvage safaris d’exception et pour finir détente à Zanzibar sur des plages paradisiaques.\n\nPlongez d’abord dans la vie quotidienne du village de Tlawi, accueillis chaleureusement par Mama et Baba Peter. Vous partagerez le quotidien des habitants, entre visites de l’école, ateliers de poterie, moments d’échange et de complicité. Une immersion rare et profonde dans une culture riche, où chaque geste a du sens.\n\nPuis, cap sur les plus beaux parcs tanzaniens pour deux safaris inoubliables. Explorez le parc national du Tarangire, royaume des éléphants et des baobabs, puis le spectaculaire Cratère du Ngorongoro, véritable sanctuaire de la faune sauvage. Vous y observerez une biodiversité exceptionnelle, dans des décors à couper le souffle.\n\nEnfin, terminez en douceur sur les plages de Zanzibar, à Jambiani. Entre eaux turquoise, cocotiers et ambiance insulaire, offrez-vous un moment de repos bien mérité, entre farniente et découvertes locales.\n\nUn voyage pensé comme une expérience riche et équilibrée, entre culture vivante, aventure naturelle et évasion tropicale.",
+    "author": "Coralie",
+    "affixeAuthor": "Experte Afrique"
+  },
+  "experiencesBlock": [
+    "Partagez le quotidien de Mama et Baba Peter dans le village de Tlawi, entre poterie, école et vie locale.",
+    "Partez en safari dans le parc national du Tarangire, à la rencontre des éléphants et baobabs.",
+    "Découvrez le Cratère du Ngorongoro, refuge d’une faune incroyable, des lions aux rhinocéros noirs.",
+    "Randonnez jusqu’aux cascades de Hhaynu pour une baignade rafraîchissante en pleine nature.",
+    "Embarquez avec les pêcheurs locaux pour une session de pêche traditionnelle sur le lac Tlawi.",
+    "Terminez sur les plages immaculées de Zanzibar, entre baignades, détente et ambiance insulaire."
+  ],
+  "slug": "voyage-tanzanie-safari-immersion-communaute-locale",
+  "description": "Partez pour une aventure en trois temps au cœur de la Tanzanie : immersion culturelle et rencontres humaines, nature sauvage safaris d’exception et pour finir détente à Zanzibar sur des plages paradisiaques.\n\nPlongez d’abord dans la vie quotidienne du village de Tlawi, accueillis chaleureusement par Mama et Baba Peter. Vous partagerez le quotidien des habitants, entre visites de l’école, ateliers de poterie, moments d’échange et de complicité. Une immersion rare et profonde dans une culture riche, où chaque geste a du sens.\n\nPuis, cap sur les plus beaux parcs tanzaniens pour deux safaris inoubliables. Explorez le parc national du Tarangire, royaume des éléphants et des baobabs, puis le spectaculaire Cratère du Ngorongoro, véritable sanctuaire de la faune sauvage. Vous y observerez une biodiversité exceptionnelle, dans des décors à couper le souffle.\n\nEnfin, terminez en douceur sur les plages de Zanzibar, à Jambiani. Entre eaux turquoise, cocotiers et ambiance insulaire, offrez-vous un moment de repos bien mérité, entre farniente et découvertes locales.\n\nUn voyage pensé comme une expérience riche et équilibrée, entre culture vivante, aventure naturelle et évasion tropicale.",
+  "emailDescription": "👉 Si vous rêvez d’un voyage authentique en Tanzanie, entre immersion dans la vie d’un village Iraqw, safaris au cœur des plus beaux parcs du pays, pêche traditionnelle sur un lac paisible et détente sur les plages idylliques de Zanzibar, ce séjour complet de 10 jours est fait pour vous !",
+  "metaDescription": "Voyage en Tanzanie : immersion chez les Iraqw, safaris au Tarangire et Ngorongoro, pêche traditionnelle, cascades et détente sur les plages de Zanzibar.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 7 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "",
+      "visible": false
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE EN TANZANIE",
+      "badgeText": "JOUR 1",
+      "description": "Après votre arrivée à l’aéroport international du Kilimanjaro, vous serez accueilli par votre guide-chauffeur. Un trajet d’environ 1h30 vous conduira jusqu’à votre hébergement à Arusha, où vous pourrez vous installer et vous reposer.",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/nJyLBjNSTV2xwIki2k2G.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SAFARI GRANDEUR NATURE DANS LE PARC DU TARANGIRE",
+      "badgeText": "JOUR 2",
+      "description": "Accompagné de votre guide, vous partez explorer les terres sauvages du parc national du Tarangire pour une journée de safari inoubliable. Ancien domaine des Massaï, ce sanctuaire naturel, étendu sur plus de 2 600 km², dévoile des paysages vallonnés parsemés d’acacias et de majestueux baobabs, emblèmes de l’Afrique éternelle. Ici, la nature règne en maître : éléphants, zèbres, girafes et impalas se retrouvent au bord des rivières et des marécages pour s’abreuver et se prélasser. À l'heure du déjeuner, vous savourez un pique-nique en pleine nature, au cœur du parc. En fin de journée, vous vous installez aux portes du Tarangire pour une nuit au plus près de la vie sauvage.\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/ioFQrqYARCSyLrpmJCGF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RENCONTRE ET IMMERSION CHEZ LES IRAQW",
+      "badgeText": "JOUR 3",
+      "description": "Après avoir quitté votre lodge, vous prenez la route en direction des terres Iraqw, où Mama Peter et sa famille vous ouvrent les portes de leur quotidien pour trois jours d’immersion authentique.\r\nAu bout d’environ deux heures de voyage, vous atteignez le petit village de Tlawi, où un déjeuner vous attend, simple et généreux.\r\nL’après-midi est dédiée à la découverte : vous parcourez le village, plongez dans les traditions locales, visitez l’atelier de fabrication de tuiles et explorez les maisons traditionnelles Iraqw, témoins d’un savoir-faire ancestral.\r\nEn soirée, vous rejoignez Mama Peter pour partager un dîner familial avant de vous installer pour la nuit dans leur maison modeste mais pleine de chaleur humaine.\r\n\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/evW96mG3RnuUDCiYAgBV.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE D'AVENTURE À TLAWI, ENTRE CASCADES ET TRADITIONS",
+      "badgeText": "JOUR 4",
+      "description": "Ce matin, vous partez pour une belle randonnée d’environ deux heures à travers les paysages vallonnés jusqu’aux cascades de Hhaynu. Là, une baignade rafraîchissante vous attend au pied des chutes, récompense bien méritée après l'effort !\r\nAprès le déjeuner, vous retrouvez Filmin et ses amis pêcheurs. À bord de leurs petits canoës traditionnels, vous glissez sur les eaux paisibles du lac Tlawi pour découvrir les secrets de leur pêche artisanale.\r\nEn fin de journée, vous retrouvez Mama et Baba Peter pour partager un moment convivial et admirer un somptueux coucher de soleil sur le lac, dans une atmosphère empreinte de douceur et d’authenticité.\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/k8B0rtqKSFyx5pgCIW8l.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION DANS LE VILLAGE DE TLAWI ",
+      "badgeText": "JOUR 5",
+      "description": "Ce matin, vous continuez votre immersion à Tlawi avec la visite de l’école du village et un atelier de poterie animé par les mamas locales. Si vous le souhaitez, vous pouvez aussi profiter d'un temps libre pour flâner ou simplement vous imprégner de l’ambiance du village.\r\nAprès un dernier déjeuner partagé sur place, vous prenez la route en début d’après-midi pour rejoindre Karatu, charmante étape située aux portes des grands parcs tanzaniens.\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/JXzqqRseRty8ajUcAAvA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SAFARI D'EXCEPTION AU CŒUR DU CRATÈRE DU NGORONGORO",
+      "badgeText": "JOUR 6",
+      "description": "Préparez-vous à vivre une journée inoubliable : cap sur l’extraordinaire Cratère du Ngorongoro, souvent surnommé la « huitième merveille du monde ».\r\nDans ce décor grandiose, vous partez à la rencontre d’une faune incroyable : zèbres en procession, buffles imposants, lions veillant sur leurs lionceaux, sans oublier les hippopotames paisiblement installés dans leur mare.\r\nAvec un peu de chance, vous aurez peut-être l’immense privilège d’apercevoir le très rare rhinocéros noir...\r\nÀ l’heure du déjeuner, vous savourez un pique-nique au cœur du parc, entouré par cette nature époustouflante.\r\nEn fin de journée, vous regagnez Karatu pour une soirée de repos bien méritée.\r\n\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/geSqbWprSvOEpy9Wn4cg.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CAP SUR ZANZIBAR : DÉTENTE SUR LES PLAGES DE JAMBIANI",
+      "badgeText": "JOURS 7 A 9",
+      "description": "Après votre petit-déjeuner, vous prenez la route en direction de l’aéroport d’Arusha pour rejoindre l’île paradisiaque de Zanzibar. À votre arrivée, un transfert vous conduit jusqu’au paisible village de Jambiani, niché sur la côte sud-est. Vous vous installez à votre hébergement les pieds dans le sable, pour trois nuits.\r\nCes trois journées sont placées sous le signe de la détente et de la découverte à votre rythme. Baignades dans les eaux turquoise, promenades sur la plage au lever ou au coucher du soleil, instants de farniente à l’ombre des palmiers… Zanzibar vous offre un cadre idyllique pour vous ressourcer. Si le cœur vous en dit, des excursions culturelles ou nautiques peuvent être organisées pour explorer les merveilles de l’île.\r\n\r\n\r\n\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/XqIoeFr0THWLojo35qEZ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "KWAHERI TANZANIE – RETOUR VERS L’AÉROPORT",
+      "badgeText": "JOUR 10",
+      "description": "Selon l’heure de votre vol retour, vous profitez encore de quelques instants de tranquillité au lodge avant d’être transféré vers l’aéroport de Zanzibar. Vous repartez le cœur rempli de souvenirs, entre safaris inoubliables, rencontres chaleureuses et douceur insulaire.\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/CSwv8K2XTUqqxwOmnrDb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance 24h/24 et 7j/7 par notre équipe locale et francophone, joignable à tout moment pour vous accompagner en cas de besoin",
+      "Tous les trajets en véhicule privé, en Toyota LandCruiser équipé pour le safari (radio, toit ouvrant, fenêtres et sièges individuels), avec kilométrage illimité",
+      "9 nuits dans des hébergements variés, en chambres doubles ou triples, selon le programme (confort simple chez l'habitant)",
+      "La pension complète durant toute la partie continentale (jusqu’au jour 7), puis petits-déjeuners à Zanzibar",
+      "L’eau minérale pendant les trajets en Tanzanie continentale (hors repas dans les lodges)",
+      "Toutes les excursions, safaris et visites prévues au programme",
+      "Une contribution solidaire de 60€ par voyageur pour soutenir nos projets de développement locaux"
+    ],
+    "exclude": [
+      "Les vols internationaux et le vol interne vers Zanzibar",
+      "Le visa d’entrée en Tanzanie (50 USD par personne)",
+      "L’assurance obligatoire pour Zanzibar (à souscrire sur [visitzanzibar.go.tz](https://visitzanzibar.go.tz/))",
+      "Les pourboires recommandés (guide safari : 30 USD/jour, hébergement village : 20 USD/jour - pour l'ensemble du groupe)",
+      "Les frais d'entrées dans les parcs naturels : 250€ par personne. Le prix des entrées dans les parcs vous sera automatiquement facturé à l'inscription",
+      "Les boissons non incluses (eau minérale pendant les repas, sodas, alcools)",
+      "Les dépenses personnelles",
+      "L’assurance assistance/annulation (optionnelle via notre partenaire Chapka)",
+      "Toute évolution des taxes ou tarifs d’entrée décidée par les autorités tanzaniennes après la réservation"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1990,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 7,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG"
+    ]
+  },
+  "accompanistsDescription": "Bénéficiez d'une expérience enrichissante grâce à l'accompagnement d'un guide francophone expérimenté. Il vous fera découvrir chaque lieu avec passion, en partageant des anecdotes captivantes, des explications détaillées et des conseils personnalisés pour une immersion culturelle complète.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Chez l’habitant, lodges et hôtels",
+      "housingType": "",
+      "housingMood": "Pendant ce voyage, vous dormirez dans des hébergements confortables et pleins de charme, entre lodges en pleine nature et petits hôtels chaleureux. Le moment fort du séjour : trois jours chez l’habitant dans le village de Tlawi, au cœur des terres Iraqw. Vous partagerez la vie de mama et baba Peter, dans une maison simple mais accueillante, avec tout le confort nécessaire. C’est l’occasion de découvrir la culture locale de l’intérieur, entre balades, pêche sur le lac, cuisine partagée et vrais moments d’échange. Et pour finir en beauté, direction Zanzibar, dans un lodge les pieds dans le sable, parfait pour se détendre face à l’océan.\r\n\r\n",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/7AAeSWy5SE2hcM9cxZMu.jpg",
+          "alt": "image de l'hébergement La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+        },
+        {
+          "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/hACbjcNQte70HvnVsusE.jpg",
+          "alt": "image de l'hébergement La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+        },
+        {
+          "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/rPrfFCjxQSOWRsW8FUQI.jpg",
+          "alt": "image de l'hébergement La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/QgzE8qUjTEymTTNHRQMP.jpg",
+    "alt": "image principale du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/0UPRDDATSqSPBWnE8seD.jpg",
+    "alt": "image secondaire du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/lRhuw4dS2WwhjnNuA2kg.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/geSqbWprSvOEpy9Wn4cg.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/OPcTXQYRT5yFAygnV1Vn.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/U7h8R33Q1iPmDBlrdyJj.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/6R18lZ7EQvmtU6WeffmU.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/N0otabWdRde7T3pTWi3P.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/Jb8v97shQLaw4nB8xQ2m.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/9YI96A1ISNW4lIMuL6UA.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/azyTXWhLQBmGd7tgjmxQ.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/yNLHJL8vQYSmPbHIVOuK.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/AfCyAXLiQuKWyMKQxjfu.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/tD3o6r4tRHera8qwiiW4.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/koXvJZSGRUmvpYxSJurr.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/q6lqRnQ5SsCsqpb62iW4.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/FnXvwMQDRHm8mHohSXcK.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/54yymgzyQZVMMZYz42Ji.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/HlA4x9eRW6rYFhmQxUHQ.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/8WtzyakVTEyvOSOHCFvX.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/LsTw5AWRTaUQV2WeFqSg.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/sQ1kEYyTAOsu3JtImi6g.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/NkUX517kTfCghZHTDBTo.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/FjfRBSVyTW2PUtq1BS9i.jpg",
+      "alt": "image de la liste de photos du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je dormir ?",
+        "answer": "Vous serez logé dans des hébergements confortables et soigneusement sélectionnés (ou similaires) :\n\n*   À **Arusha** : Moivaro Lodge ou équivalent (chambre double, dîner inclus).\n*   Au **Tarangire** : Sangaiwe Lodge ou équivalent, aux portes du parc (pension complète).  \n    À **Tlawi** : chez l’habitant, dans une maison traditionnelle Iraqw (chambre double avec salle de bain et toilettes séparées, ou sous tente selon le nombre de voyageurs - pension complète).\n*   À **Karatu** : Baghayo Garden Suites ou équivalent (pension complète).\n*   À **Zanzibar** : Blue Oyster Lodge ou équivalent, sur la plage de Jambiani (chambre double avec petit-déjeuner)."
+      },
+      {
+        "question": "Ce voyage est-il fait pour moi ?",
+        "answer": "Ce voyage est idéal si vous cherchez :\n\n*   Un **mélange de safari et d’immersion culturelle authentique**.\n*   Un **contact direct avec les habitants** (séjour chez l’habitant à Tlawi).\n*   Un bon **équilibre entre découverte active et moments de détente**, notamment à Zanzibar.\n*   Un confort simple à correct, avec une touche de charme local.\n\nIl convient aux voyageurs curieux, aimant la nature, la culture, et prêts à s’adapter à un certain dépaysement."
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "La Tanzanie est une destination **accessible presque toute l’année**, avec des avantages différents selon la saison :\n\n*   **De juin à octobre** : saison sèche, températures agréables, très bonne période pour les safaris. C’est aussi la **haute saison touristique**.\n    \n*   **De décembre à février** : la saison verte (avec quelques pluies), période idéale pour combiner safaris et plages à Zanzibar.\n    \n*   **De mars à mai** : saison des pluies (principalement pluies d'orage le soir et la nuit), mais aussi **basse saison**, avec **moins de visiteurs et des tarifs plus avantageux**. Les paysages sont superbes, très verts, et l’expérience est plus intime. \n    \n\n👉 En résumé, **il est possible de partir toute l’année**, avec une expérience différente selon vos préférences (budget, affluence, météo)."
+      },
+      {
+        "question": "Quels sont les temps de route ?",
+        "answer": "Voici une estimation des trajets principaux :\n\n*   Aéroport du Kilimanjaro → Arusha : **1h30**Arusha → Parc du Tarangire : **2h30**\n*   Tarangire → Tlawi : **2h**\n*   Tlawi → Karatu : **2h**\n*   Karatu → Cratère du Ngorongoro : **1h**\n*   Karatu → Aéroport d’Arusha : **3h**\n\n Les trajets se font en **4x4 privatif**, confortables mais parfois sur des pistes. Ils sont ponctués de pauses et d’étapes intéressantes."
+      },
+      {
+        "question": "Comment fonctionnent les pourboires ?",
+        "answer": "Les pourboires ne sont pas obligatoires mais fortement recommandés en Tanzanie, où ils représentent une part importante du revenu des guides et du personnel.\n\n*   Pour le guide : prévoir 30 USD par jour et par groupe.\n*   Chez l’habitant : un petit cadeau et/ou une enveloppe (env. 20 USD par jour/famille/groupe) est un geste apprécié."
+      },
+      {
+        "question": "Quelles sont les formalités d’entrée en Tanzanie",
+        "answer": "**Passeport** : valide au moins **6 mois après la date de retour**.\n\n**Visa** : obligatoire pour les ressortissants français. Il peut être **Pré-demandé en ligne** via le site de l’immigration tanzanienne : [https://visa.immigration.go.tz](https://visa.immigration.go.tz)   ou obtenu à l’arrivée à l’aéroport (50 USD en espèces obligatoirement)."
+      },
+      {
+        "question": "Quels sont les vaccins et précautions en matière de santé ?",
+        "answer": "*   Vaccin obligatoire : la **fièvre jaune.**\n*   Vaccins recommandés : tétanos, hépatite A, typhoïde, hépatite B.\n*   Prévention contre le paludisme conseillée (voir avec votre médecin).\n\nPlus d'informations sur le site de France Diplomatie - Onglet Santé."
+      },
+      {
+        "question": "Mon départ est-il garanti et combien de temps avant le voyage serai-je informé(e) ?",
+        "answer": "Le départ de chaque voyage est conditionné à un nombre minimum de participants, qui varie selon les séjours. En règle générale, un minimum de 2 à 4 voyageurs est requis pour garantir le départ. Cette information est précisée sur la fiche descriptive de chaque voyage."
+      },
+      {
+        "question": "Quand mon départ sera-t-il confirmé ?",
+        "answer": "Nous mettons tout en œuvre pour confirmer le départ au plus tard un mois avant la date prévue. Si le nombre minimum de participants est atteint plus tôt, la confirmation peut être envoyée avant ce délai.\n\nSi le quota minimum d'inscrits n'est pas atteint à l'approche du départ, nous vous contacterons pour vous proposer différentes alternatives :\n\n*   Maintenir le départ avec un supplément :\n    \n    *   Si vous souhaitez partir même en dessous du nombre minimum requis, nous pouvons garantir le départ en appliquant un ajustement tarifaire pour couvrir les coûts.\n        \n    *   Le montant du supplément varie en fonction du voyage et du nombre de participants confirmés.\n        \n*   Opter pour un départ avec un accompagnement anglophone :\n    \n    *   Dans certains cas, nous pouvons proposer le voyage avec un guide anglophone au lieu d’un guide francophone.\n        \n    *   Cette option est envisageable uniquement si elle ne compromet pas l’expérience et la qualité du voyage.\n        \n*   Reporter ou choisir un autre voyage :\n    \n    *   Si nous ne sommes pas en mesure de garantir votre départ, nous vous proposerons de reporter votre voyage à une date ultérieure ou d’opter pour un voyage alternatif similaire.\n        \n*   Remboursement en dernier recours :\n    \n    *   Si aucune des options proposées ne vous convient, nous pourrons procéder à un remboursement intégral du voyage (sur la partie terrestre uniquement). Cependant, nous privilégions toujours une solution qui vous permette de vivre l’expérience prévue.\n        \n\nDans tous les cas, nous vous tiendrons informé(e) dès que possible, afin de vous offrir la meilleure solution et vous permettre d’organiser sereinement votre voyage."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n    \n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Qu’est-ce que l’esprit Odysway ?",
+        "answer": "Voyager avec Odysway, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un e-mail de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les sept jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact étroit avec un conseiller dédié. Vous pourrez le joindre par e-mail, téléphone, SMS ou WhatsApp, selon ce qui vous convient le mieux. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au + 33 [01 84 80 79 75](https://www.google.com/search?q=odysway&oq=odysway&gs_lcrp=EgZjaHJvbWUqDAgAEAAYExjjAhiABDIMCAAQABgTGOMCGIAEMg8IARAuGBMYrwEYxwEYgAQyBggCEEUYQTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8) ou au + 33 6 67 38 56 55."
+      }
+    ]
+  },
+  "seo": {
+    "metaTitle": "La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-tanzanie-safari-immersion-communauté-locale",
+    "ogTitle": "La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar",
+    "ogDescription": "Voyage en Tanzanie : immersion chez les Iraqw, safaris au Tarangire et Ngorongoro, pêche traditionnelle, cascades et détente sur les plages de Zanzibar.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/QgzE8qUjTEymTTNHRQMP.jpg",
+      "alt": "image principale du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    "twitterTitle": "La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar",
+    "twitterDescription": "Voyage en Tanzanie : immersion chez les Iraqw, safaris au Tarangire et Ngorongoro, pêche traditionnelle, cascades et détente sur les plages de Zanzibar.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-tanzanie-safari-immersion-communaute-locale/QgzE8qUjTEymTTNHRQMP.jpg",
+      "alt": "image principale du voyage La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

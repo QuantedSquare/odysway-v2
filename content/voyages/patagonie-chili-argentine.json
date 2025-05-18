@@ -1,44 +1,335 @@
 {
   "published": false,
   "title": "Au bout du monde en Patagonie, terre de feu et de glace",
-  "slug": "patagonie-chili-argentine",
-  "rating": 4.6,
-  "comments": 4,
-  "description": "Rendez-vous en Patagonie pour un voyage mythique ! De l'Argentine au Chili, vivez des moments forts en émotion et immergez-vous dans des régions sauvages aux allures de bout du monde.\n\nEn chemin : vivez le spectacle saisissant du glacier Perito Monero, observez les colonies foisonnantes de lions de mer à Ushuaïa, préparez un dîner typiquement patagone dans une estancia familiale, baladez-vous à cheval face à la majesteuse Cordillère des Andes. Ajoutez en option la découverte du tango argentin ou la préparation d'un _ceviche_ chez un cuisiner local. Un voyage qui se termine en douceur dans les ruelles colorées de Valparaiso et autour des meilleurs vins chiliens de la région. \n\nL'occasion de déconnecter et de vivre une aventure inoubliable aux confins du monde.",
-  "emailDescription": "👉 Si vous souhaitez parcourir la Patagonie entre glaciers et grands espaces, ce voyage est fait pour vous !",
-  "metaDescription": "Odysway vous propose un voyage mythique en Argentine et au Chili à la découverte des plus beaux parcs nationaux de Patagonie.",
-  "interjection": "en",
   "destinations": [
-    "Argentine",
-    "Chili"
+    {
+      "name": "Argentine",
+      "slug": "argentine"
+    },
+    {
+      "name": "Chili",
+      "slug": "chili"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "partir-en-famille",
-    "partir-en-groupe",
-    "sejours-culturels",
-    "voyage-aventure"
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-aventure"
+    }
   ],
   "duration": 14,
   "nights": 13,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 4,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Rendez-vous en Patagonie pour un voyage mythique ! De l'Argentine au Chili, vivez des moments forts en émotion et immergez-vous dans des régions sauvages aux allures de bout du monde.\n\nEn chemin : vivez le spectacle saisissant du glacier Perito Monero, observez les colonies foisonnantes de lions de mer à Ushuaïa, préparez un dîner typiquement patagone dans une estancia familiale, baladez-vous à cheval face à la majesteuse Cordillère des Andes. Ajoutez en option la découverte du tango argentin ou la préparation d'un _ceviche_ chez un cuisiner local. Un voyage qui se termine en douceur dans les ruelles colorées de Valparaiso et autour des meilleurs vins chiliens de la région. \n\nL'occasion de déconnecter et de vivre une aventure inoubliable aux confins du monde.",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Explorez la Patagonie : de l'Argentine au Chili",
+    "Parcourez les parcs mythiques de Tierras del Fuego et Torres del Paine",
+    "Partagez le quotidien d'un _gaucho_ dans un ranch face à la Cordillère des Andes",
+    "Baladez-vous à cheval au milieu de steppes à perte de vue",
+    "Observez le plus \"vivant\" des glaciers de Patagonie",
+    "Dégustez de savoureux vins chiliens près de Valparaiso"
+  ],
+  "slug": "patagonie-chili-argentine",
+  "description": "Rendez-vous en Patagonie pour un voyage mythique ! De l'Argentine au Chili, vivez des moments forts en émotion et immergez-vous dans des régions sauvages aux allures de bout du monde.\n\nEn chemin : vivez le spectacle saisissant du glacier Perito Monero, observez les colonies foisonnantes de lions de mer à Ushuaïa, préparez un dîner typiquement patagone dans une estancia familiale, baladez-vous à cheval face à la majesteuse Cordillère des Andes. Ajoutez en option la découverte du tango argentin ou la préparation d'un _ceviche_ chez un cuisiner local. Un voyage qui se termine en douceur dans les ruelles colorées de Valparaiso et autour des meilleurs vins chiliens de la région. \n\nL'occasion de déconnecter et de vivre une aventure inoubliable aux confins du monde.",
+  "emailDescription": "👉 Si vous souhaitez parcourir la Patagonie entre glaciers et grands espaces, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage mythique en Argentine et au Chili à la découverte des plus beaux parcs nationaux de Patagonie.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**13 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à mars",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE EN ARGENTINE",
+      "badgeText": "JOUR 1",
+      "description": "Accueil francophone par nos équipes et transfert à votre hôtel, au coeur de Buenos Aires. Premières explorations de la capitale argentine, là où le temps s'est arrêté. Perdez-vous dans ses quartiers bohèmes, assistez à un tango de rue à La Boca ou contemplez les belles américaines vintage garées au pied des façades coloniales de San Telmo.",
+      "photo": "/images/voyages/patagonie-chili-argentine/ZkyBeZ24Tr6CCHGhJkT4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIERS MOMENTS À BUENOS AIRES",
+      "badgeText": "JOUR 2",
+      "description": "Journée libre pour vous acclimater et vous balader librement dans la charmante ville de Buenos Aires. Nous pouvons vous réserver sur demande une soirée tango argentin dans une pulperia typique, ou une visite des quartiers anciens avec un guide passionné. Le dépaysement est déjà là !",
+      "photo": "/images/voyages/patagonie-chili-argentine/j122ssd8QgOQN0yZ0jvJ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIERS FRISSONS À USHUAÏA",
+      "badgeText": "JOUR 3",
+      "description": "Vous avez rêvé d'y poser le pied ? Bienvenue à Ushuaïa, capitale de la Terre de Feu et ville la plus australe du globe. Dernier port avant l'Antarctique, on y sent un fort contraste avec Buenos Aires. Journée libre pour boire un chocolat chaud, s'initier à l'histoire de la région dans l'un de ses musées ou contempler les maisons colorées des hauteurs du canal de Beagle.",
+      "photo": "/images/voyages/patagonie-chili-argentine/WJitzKeEQLOcKTFqifD1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN TERRE DE FEU",
+      "badgeText": "JOUR 4",
+      "description": "Départ pour le Parc National Tierra del Fuego. Profitez de vues à 360° sur des paysages immaculés, observez un étonnant barrage de castors, naviguez en petit catamaran sur le canal de Beagle et passez devant le \"Phare du Bout du Monde\" où vivent des colonies de lion de mer à l'état sauvage. En haute-saison, vous ferez peut-être la connaissance du \"postier du bout du monde\" pour envoyer un courrier à vos proches du bureau de poste le plus austral de la planète.",
+      "photo": "/images/voyages/patagonie-chili-argentine/ecTqnHNTQ6EPY1YqCX9A.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "REPOS À EL CALAFATE",
+      "badgeText": "JOUR 5",
+      "description": "Vol pour El Calafate. Après-midi libre pour vous balader autour du lac Argentino, goûter au cordero patagónico (LA spécialité de Patagonie) ou visiter le Musée des Glaciers pour préparer votre visite du lendemain.",
+      "photo": "/images/voyages/patagonie-chili-argentine/f1kz94HfRgmGjebGSsia.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "GLACIER ET SOIRÉE EN ESTANCIA",
+      "badgeText": "JOUR 6",
+      "description": "Direction le Parc National des Glaciers pour observer le fabuleux Perito Moreno, inscrit à l'UNESCO. Frémissez en entendant le fracas des blocs de glace dans les eaux turquoises. Départ ensuite vers la magnifique estancia d'Esteban, nichée au milieu de 7000 hectares de plaines. Vous profiterez d’une randonnée à cheval face à la majestueuse Cordillère des Andes. L'occasion de vous immerger dans cette atmosphère si particulière. Dîner traditionnel patagone et soirée de partage avec les gauchos. Nuit à l'hôtel.",
+      "photo": "/images/voyages/patagonie-chili-argentine/YMDHcAogRBG8JhfDxuN7.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À EL CALAFATE",
+      "badgeText": "JOUR 7",
+      "description": "Journée libre pour découvrir la ville d'El Calafate. Nous pouvons vous réserver sur demande une navigation vers les glaciers les plus fascinants de la région. Laissez-vous surprendre par cette ville patagone !",
+      "photo": "/images/voyages/patagonie-chili-argentine/sd2IdCUoTIqaAwa6R0UB.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN ROUTE VERS LE CHILI",
+      "badgeText": "JOUR 8",
+      "description": "Après un bon petit-déjeuner, départ en bus confortable vers Puerto Natales au Chili. Petite ville aux allures de bout du monde, elle est la porte d'entrée vers le Parc National Torres del Paine. On s'y réfugie bien volontiers dans l'un de ses nombreux cafés et restaurants de spécialités typiques. Fin de journée libre pour profiter sur place.",
+      "photo": "/images/voyages/patagonie-chili-argentine/PRG0zMu2R2CqwR3iMn6k.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉMESURE À TORRES DEL PAINE",
+      "badgeText": "JOUR 9",
+      "description": "La Patagonie telle qu'on l'imagine : explorez le Parc National Torres del Paine avec votre guide privé. En chemin, découvrez une grotte où les restes intacts d'un milodon ont été retrouvés, admirez les tours de granite qui ont donné leur nom au parc, faites une courte marche jusqu'à une puissante cascade et profitez d'une vue imprenable sur des icebergs flottants, le glacier Grey comme toile de fond.\r\n",
+      "photo": "/images/voyages/patagonie-chili-argentine/c3Fke2AeSBScy1u0Jr6s.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PUERTO NATALES",
+      "badgeText": "JOUR 10",
+      "description": "Profitez d'une journée libre à Puerto Natales. Nous pouvons vous réserver sur demande une excursion pour naviguer à travers le fjord jusqu'à deux impressionnants glaciers. Vous pourrez vous rendre au pied de l'un d'eux pour immortaliser ce moment, admirer des colonies de phoques et profiter d'un déjeuner local dans une estancia.",
+      "photo": "/images/voyages/patagonie-chili-argentine/uClpx6LLSyemD9nV9u2S.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHANGEMENT DE DÉCOR À VALPARAISO",
+      "badgeText": "JOUR 11",
+      "description": "Transfert à l'aéroport pour prendre votre vol vers Santiago de Chili. Départ de là vers Valparaiso, petite ville mythique surnommée le \"joyau du Pacifique\". Ses ruelles pavées, ses escaliers, ses ascenseurs en bois, ses maisons colorées et ses petites placettes en font une ville pleine de charme.",
+      "photo": "/images/voyages/patagonie-chili-argentine/ZxMm4yrHQN2BFu74CpL5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SECRETS D'UNE VILLE COLORÉE",
+      "badgeText": "JOUR 12",
+      "description": "Visite de Valparaiso à pied avec votre guide privé. Son architecture singulière lui a valu une reconnaissance prestigieuse à l'UNESCO. Reconnue pour son street-art, ses murs sont couverts de couleurs vives, d'humour et de revendications politiques. Nous pouvons vous réserver sur demande un atelier cuisine chez Mauricio : partez au marché, préparez ensemble un ceviche et dégustez-le depuis sa terrasse.",
+      "photo": "/images/voyages/patagonie-chili-argentine/fX2UlKNpS1WX2UqWDgCd.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉGUSTATION DE VINS CHILIENS",
+      "badgeText": "JOUR 13",
+      "description": "Embarquez pour une immersion au coeur de la Vallée de Casablanca, célèbre pour son terroir et ses vignobles luxuriants. Visitez un vignoble ancré dans la région depuis trois décennies et dégustez les savoureux vins de la propriété. Nuit à Santiago.",
+      "photo": "/images/voyages/patagonie-chili-argentine/UbZVWQm6SWCEzWLfOvGV.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 14",
+      "description": "Des belles images plein la tête, il est temps de rentrer ! Transfert à l’aéroport de Santiago pour prendre votre vol retour vers la France.",
+      "photo": "/images/voyages/patagonie-chili-argentine/fQZ9GHXeTzeNWK9REF0T.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "13 nuits en hôtels 3\\* (base chambre double)",
+      "Tous les petits-déjeuners (J2 au J14)",
+      "Déjeuners (J4, J9, J13)",
+      "Déjeuners pique-nique (J8)",
+      "Dîners (J3, J5, J6)",
+      "**J4** : Excursion au Parc National Tierra Del Fuego (4h) en service privé avec guide francophone (entrée au parc inclus)",
+      "**J4** : Croisière (4h) sur le canal du Beagle en service partagé avec guide hispano-anglophone (incluant la taxe portuaire)",
+      "**J6** : Excursion au Glacier du Perito Moreno en service privé avec guide francophone (entrée au parc inclus)",
+      "**J6** : Balade à cheval (ou à pied)",
+      "**J9** : Excursion au Parc National Torres del Paine avec guide francophone privé (incluant les entrées des sites visités)",
+      "**J12** : Visite guidée de Valparaiso avec un guide francophone privé (incluant les tickets des funiculaires nécessaires à la visite)",
+      "**J13** : Visite guidée d'un vignoble + dégustation de 4 vins accompagnés d'un guide francophone privé",
+      "Les transferts privatifs tels que mentionnés (chauffeur hispano-anglophone) (sans guide pour le transfert du J11 à Valparaiso)",
+      "Les vols domestiques (classe éco, bagage en soute 15 kgs inclus / 23 kgs pour le vol du J11)",
+      "Le transport privé pour l'excursion au Parc National Torres del Paine (J9)"
+    ],
+    "exclude": [
+      "Le vol international A/R (aller vers Buenos Aires - retour depuis Santiago du Chili) (possibilité de devis avec vols inclus sur demande)",
+      "Les déjeuners suivants : J1, J2, J3, J6, J10, J11, J12 (compter env. 20 à 30 USD par repas. Il est possible de manger sur le pouce pour moins cher)",
+      "Les dîners suivants : J1, J2, J4, J8, J9, J10, J11, J12, J13",
+      "Les pourboires (à discrétion : 10% de la note dans les bars, restaurants, cafés / 1 USD par jour et par personne par chauffeur / 2 USD par jour et par personne par guide)",
+      "Facultatif : l'assurance annulation ou multi-risques avec notre partenaire Chapka (sur demande)",
+      "Facultatif : le supplément chambre individuelle (tarif sur demande)",
+      "Facultatif : le supplément de poids \"bagages\" sur les vols domestiques (inclus : franchise de 15 kgs en soute + 8 kgs bagage cabine)",
+      "Facultatif : le early check-in le J1 (pour avoir accès à votre chambre dès le matin selon l'heure d'arrivée de votre vol)",
+      "Facultatif : les activités optionelles (tarif sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 4690,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 1265,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": [
+      "EZE",
+      "SCL"
+    ]
+  },
+  "accompanistsDescription": "Vous serez accompagnés par des guides francophones à chaque étape de votre voyage. Attachés à vous faire découvrir une Patagonie authentique, ils pourront répondre à toutes vos questions et vous permettront de mieux saisir la richesse de la culture locale.",
+  "accompanistsList": [
+    {
+      "name": "Des guides francophones dédiés",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/patagonie-chili-argentine/Z4AWJoGTgycEpiiE7VeN.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel",
+      "housingType": "",
+      "housingMood": "Vous logerez dans des hôtels 3* (base chambre double)\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
+      "image": [
+        {
+          "src": "/images/voyages/patagonie-chili-argentine/vCegnTXStWeLbqdeYNXw.jpg",
+          "alt": "image de l'hébergement Au bout du monde en Patagonie, terre de feu et de glace"
+        },
+        {
+          "src": "/images/voyages/patagonie-chili-argentine/dtze6WH4QpKF1wYaqwxW.jpg",
+          "alt": "image de l'hébergement Au bout du monde en Patagonie, terre de feu et de glace"
+        },
+        {
+          "src": "/images/voyages/patagonie-chili-argentine/3pMOrHYySHuWt9waw82n.jpg",
+          "alt": "image de l'hébergement Au bout du monde en Patagonie, terre de feu et de glace"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/patagonie-chili-argentine/u0chLDHNQGO30EvASBFn.jpg",
     "alt": "image principale du voyage Au bout du monde en Patagonie, terre de feu et de glace"
@@ -90,181 +381,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Rendez-vous en Patagonie pour un voyage mythique ! De l'Argentine au Chili, vivez des moments forts en émotion et immergez-vous dans des régions sauvages aux allures de bout du monde.\n\nEn chemin : vivez le spectacle saisissant du glacier Perito Monero, observez les colonies foisonnantes de lions de mer à Ushuaïa, préparez un dîner typiquement patagone dans une estancia familiale, baladez-vous à cheval face à la majesteuse Cordillère des Andes. Ajoutez en option la découverte du tango argentin ou la préparation d'un _ceviche_ chez un cuisiner local. Un voyage qui se termine en douceur dans les ruelles colorées de Valparaiso et autour des meilleurs vins chiliens de la région. \n\nL'occasion de déconnecter et de vivre une aventure inoubliable aux confins du monde.",
-    "author": "Salomé",
-    "affixeAuthor": "Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "Explorez la Patagonie : de l'Argentine au Chili",
-    "Parcourez les parcs mythiques de Tierras del Fuego et Torres del Paine",
-    "Partagez le quotidien d'un _gaucho_ dans un ranch face à la Cordillère des Andes",
-    "Baladez-vous à cheval au milieu de steppes à perte de vue",
-    "Observez le plus \"vivant\" des glaciers de Patagonie",
-    "Dégustez de savoureux vins chiliens près de Valparaiso"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE EN ARGENTINE",
-      "badgeText": "JOUR 1",
-      "description": "Accueil francophone par nos équipes et transfert à votre hôtel, au coeur de Buenos Aires. Premières explorations de la capitale argentine, là où le temps s'est arrêté. Perdez-vous dans ses quartiers bohèmes, assistez à un tango de rue à La Boca ou contemplez les belles américaines vintage garées au pied des façades coloniales de San Telmo.",
-      "photo": "/images/voyages/patagonie-chili-argentine/ZkyBeZ24Tr6CCHGhJkT4.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIERS MOMENTS À BUENOS AIRES",
-      "badgeText": "JOUR 2",
-      "description": "Journée libre pour vous acclimater et vous balader librement dans la charmante ville de Buenos Aires. Nous pouvons vous réserver sur demande une soirée tango argentin dans une pulperia typique, ou une visite des quartiers anciens avec un guide passionné. Le dépaysement est déjà là !",
-      "photo": "/images/voyages/patagonie-chili-argentine/j122ssd8QgOQN0yZ0jvJ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIERS FRISSONS À USHUAÏA",
-      "badgeText": "JOUR 3",
-      "description": "Vous avez rêvé d'y poser le pied ? Bienvenue à Ushuaïa, capitale de la Terre de Feu et ville la plus australe du globe. Dernier port avant l'Antarctique, on y sent un fort contraste avec Buenos Aires. Journée libre pour boire un chocolat chaud, s'initier à l'histoire de la région dans l'un de ses musées ou contempler les maisons colorées des hauteurs du canal de Beagle.",
-      "photo": "/images/voyages/patagonie-chili-argentine/WJitzKeEQLOcKTFqifD1.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN TERRE DE FEU",
-      "badgeText": "JOUR 4",
-      "description": "Départ pour le Parc National Tierra del Fuego. Profitez de vues à 360° sur des paysages immaculés, observez un étonnant barrage de castors, naviguez en petit catamaran sur le canal de Beagle et passez devant le \"Phare du Bout du Monde\" où vivent des colonies de lion de mer à l'état sauvage. En haute-saison, vous ferez peut-être la connaissance du \"postier du bout du monde\" pour envoyer un courrier à vos proches du bureau de poste le plus austral de la planète.",
-      "photo": "/images/voyages/patagonie-chili-argentine/ecTqnHNTQ6EPY1YqCX9A.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "REPOS À EL CALAFATE",
-      "badgeText": "JOUR 5",
-      "description": "Vol pour El Calafate. Après-midi libre pour vous balader autour du lac Argentino, goûter au cordero patagónico (LA spécialité de Patagonie) ou visiter le Musée des Glaciers pour préparer votre visite du lendemain.",
-      "photo": "/images/voyages/patagonie-chili-argentine/f1kz94HfRgmGjebGSsia.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "GLACIER ET SOIRÉE EN ESTANCIA",
-      "badgeText": "JOUR 6",
-      "description": "Direction le Parc National des Glaciers pour observer le fabuleux Perito Moreno, inscrit à l'UNESCO. Frémissez en entendant le fracas des blocs de glace dans les eaux turquoises. Départ ensuite vers la magnifique estancia d'Esteban, nichée au milieu de 7000 hectares de plaines. Vous profiterez d’une randonnée à cheval face à la majestueuse Cordillère des Andes. L'occasion de vous immerger dans cette atmosphère si particulière. Dîner traditionnel patagone et soirée de partage avec les gauchos. Nuit à l'hôtel.",
-      "photo": "/images/voyages/patagonie-chili-argentine/YMDHcAogRBG8JhfDxuN7.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "JOURNÉE LIBRE À EL CALAFATE",
-      "badgeText": "JOUR 7",
-      "description": "Journée libre pour découvrir la ville d'El Calafate. Nous pouvons vous réserver sur demande une navigation vers les glaciers les plus fascinants de la région. Laissez-vous surprendre par cette ville patagone !",
-      "photo": "/images/voyages/patagonie-chili-argentine/sd2IdCUoTIqaAwa6R0UB.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN ROUTE VERS LE CHILI",
-      "badgeText": "JOUR 8",
-      "description": "Après un bon petit-déjeuner, départ en bus confortable vers Puerto Natales au Chili. Petite ville aux allures de bout du monde, elle est la porte d'entrée vers le Parc National Torres del Paine. On s'y réfugie bien volontiers dans l'un de ses nombreux cafés et restaurants de spécialités typiques. Fin de journée libre pour profiter sur place.",
-      "photo": "/images/voyages/patagonie-chili-argentine/PRG0zMu2R2CqwR3iMn6k.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉMESURE À TORRES DEL PAINE",
-      "badgeText": "JOUR 9",
-      "description": "La Patagonie telle qu'on l'imagine : explorez le Parc National Torres del Paine avec votre guide privé. En chemin, découvrez une grotte où les restes intacts d'un milodon ont été retrouvés, admirez les tours de granite qui ont donné leur nom au parc, faites une courte marche jusqu'à une puissante cascade et profitez d'une vue imprenable sur des icebergs flottants, le glacier Grey comme toile de fond.\r\n",
-      "photo": "/images/voyages/patagonie-chili-argentine/c3Fke2AeSBScy1u0Jr6s.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PUERTO NATALES",
-      "badgeText": "JOUR 10",
-      "description": "Profitez d'une journée libre à Puerto Natales. Nous pouvons vous réserver sur demande une excursion pour naviguer à travers le fjord jusqu'à deux impressionnants glaciers. Vous pourrez vous rendre au pied de l'un d'eux pour immortaliser ce moment, admirer des colonies de phoques et profiter d'un déjeuner local dans une estancia.",
-      "photo": "/images/voyages/patagonie-chili-argentine/uClpx6LLSyemD9nV9u2S.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CHANGEMENT DE DÉCOR À VALPARAISO",
-      "badgeText": "JOUR 11",
-      "description": "Transfert à l'aéroport pour prendre votre vol vers Santiago de Chili. Départ de là vers Valparaiso, petite ville mythique surnommée le \"joyau du Pacifique\". Ses ruelles pavées, ses escaliers, ses ascenseurs en bois, ses maisons colorées et ses petites placettes en font une ville pleine de charme.",
-      "photo": "/images/voyages/patagonie-chili-argentine/ZxMm4yrHQN2BFu74CpL5.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "SECRETS D'UNE VILLE COLORÉE",
-      "badgeText": "JOUR 12",
-      "description": "Visite de Valparaiso à pied avec votre guide privé. Son architecture singulière lui a valu une reconnaissance prestigieuse à l'UNESCO. Reconnue pour son street-art, ses murs sont couverts de couleurs vives, d'humour et de revendications politiques. Nous pouvons vous réserver sur demande un atelier cuisine chez Mauricio : partez au marché, préparez ensemble un ceviche et dégustez-le depuis sa terrasse.",
-      "photo": "/images/voyages/patagonie-chili-argentine/fX2UlKNpS1WX2UqWDgCd.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉGUSTATION DE VINS CHILIENS",
-      "badgeText": "JOUR 13",
-      "description": "Embarquez pour une immersion au coeur de la Vallée de Casablanca, célèbre pour son terroir et ses vignobles luxuriants. Visitez un vignoble ancré dans la région depuis trois décennies et dégustez les savoureux vins de la propriété. Nuit à Santiago.",
-      "photo": "/images/voyages/patagonie-chili-argentine/UbZVWQm6SWCEzWLfOvGV.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR EN FRANCE",
-      "badgeText": "JOUR 14",
-      "description": "Des belles images plein la tête, il est temps de rentrer ! Transfert à l’aéroport de Santiago pour prendre votre vol retour vers la France.",
-      "photo": "/images/voyages/patagonie-chili-argentine/fQZ9GHXeTzeNWK9REF0T.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Des guides francophones dédiés",
-      "description": "",
-      "role": "",
-      "image": "/images/voyages/patagonie-chili-argentine/Z4AWJoGTgycEpiiE7VeN.jpg"
-    }
-  ],
-  "accompanistsDescription": "Vous serez accompagnés par des guides francophones à chaque étape de votre voyage. Attachés à vous faire découvrir une Patagonie authentique, ils pourront répondre à toutes vos questions et vous permettront de mieux saisir la richesse de la culture locale.",
-  "housingBlock": [
-    {
-      "title": "Hôtel",
-      "housingType": "",
-      "housingMood": "Vous logerez dans des hôtels 3* (base chambre double)\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
-      "image": [
-        {
-          "src": "/images/voyages/patagonie-chili-argentine/vCegnTXStWeLbqdeYNXw.jpg",
-          "alt": "image de l'hébergement Au bout du monde en Patagonie, terre de feu et de glace"
-        },
-        {
-          "src": "/images/voyages/patagonie-chili-argentine/dtze6WH4QpKF1wYaqwxW.jpg",
-          "alt": "image de l'hébergement Au bout du monde en Patagonie, terre de feu et de glace"
-        },
-        {
-          "src": "/images/voyages/patagonie-chili-argentine/3pMOrHYySHuWt9waw82n.jpg",
-          "alt": "image de l'hébergement Au bout du monde en Patagonie, terre de feu et de glace"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "13 nuits en hôtels 3\\* (base chambre double)",
-      "Tous les petits-déjeuners (J2 au J14)",
-      "Déjeuners (J4, J9, J13)",
-      "Déjeuners pique-nique (J8)",
-      "Dîners (J3, J5, J6)",
-      "**J4** : Excursion au Parc National Tierra Del Fuego (4h) en service privé avec guide francophone (entrée au parc inclus)",
-      "**J4** : Croisière (4h) sur le canal du Beagle en service partagé avec guide hispano-anglophone (incluant la taxe portuaire)",
-      "**J6** : Excursion au Glacier du Perito Moreno en service privé avec guide francophone (entrée au parc inclus)",
-      "**J6** : Balade à cheval (ou à pied)",
-      "**J9** : Excursion au Parc National Torres del Paine avec guide francophone privé (incluant les entrées des sites visités)",
-      "**J12** : Visite guidée de Valparaiso avec un guide francophone privé (incluant les tickets des funiculaires nécessaires à la visite)",
-      "**J13** : Visite guidée d'un vignoble + dégustation de 4 vins accompagnés d'un guide francophone privé",
-      "Les transferts privatifs tels que mentionnés (chauffeur hispano-anglophone) (sans guide pour le transfert du J11 à Valparaiso)",
-      "Les vols domestiques (classe éco, bagage en soute 15 kgs inclus / 23 kgs pour le vol du J11)",
-      "Le transport privé pour l'excursion au Parc National Torres del Paine (J9)"
-    ],
-    "exclude": [
-      "Le vol international A/R (aller vers Buenos Aires - retour depuis Santiago du Chili) (possibilité de devis avec vols inclus sur demande)",
-      "Les déjeuners suivants : J1, J2, J3, J6, J10, J11, J12 (compter env. 20 à 30 USD par repas. Il est possible de manger sur le pouce pour moins cher)",
-      "Les dîners suivants : J1, J2, J4, J8, J9, J10, J11, J12, J13",
-      "Les pourboires (à discrétion : 10% de la note dans les bars, restaurants, cafés / 1 USD par jour et par personne par chauffeur / 2 USD par jour et par personne par guide)",
-      "Facultatif : l'assurance annulation ou multi-risques avec notre partenaire Chapka (sur demande)",
-      "Facultatif : le supplément chambre individuelle (tarif sur demande)",
-      "Facultatif : le supplément de poids \"bagages\" sur les vols domestiques (inclus : franchise de 15 kgs en soute + 8 kgs bagage cabine)",
-      "Facultatif : le early check-in le J1 (pour avoir accès à votre chambre dès le matin selon l'heure d'arrivée de votre vol)",
-      "Facultatif : les activités optionelles (tarif sur demande)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -329,27 +445,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 4690,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 1265,
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 100,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "EZE",
-      "SCL"
-    ]
+  "seo": {
+    "metaTitle": "Au bout du monde en Patagonie, terre de feu et de glace",
+    "canonicalUrl": "https://www.odysway.com/voyages/patagonie-chili-argentine",
+    "ogTitle": "Au bout du monde en Patagonie, terre de feu et de glace",
+    "ogDescription": "Odysway vous propose un voyage mythique en Argentine et au Chili à la découverte des plus beaux parcs nationaux de Patagonie.",
+    "ogImage": {
+      "src": "/images/voyages/patagonie-chili-argentine/u0chLDHNQGO30EvASBFn.jpg",
+      "alt": "image principale du voyage Au bout du monde en Patagonie, terre de feu et de glace"
+    },
+    "twitterTitle": "Au bout du monde en Patagonie, terre de feu et de glace",
+    "twitterDescription": "Odysway vous propose un voyage mythique en Argentine et au Chili à la découverte des plus beaux parcs nationaux de Patagonie.",
+    "twitterImage": {
+      "src": "/images/voyages/patagonie-chili-argentine/u0chLDHNQGO30EvASBFn.jpg",
+      "alt": "image principale du voyage Au bout du monde en Patagonie, terre de feu et de glace"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

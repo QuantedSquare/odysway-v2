@@ -1,53 +1,75 @@
 {
   "published": true,
   "title": "Initiation à l'observation astronomique en Corse",
-  "slug": "sejour-astronomie-corse",
-  "rating": 5,
-  "comments": 2,
-  "description": "Partez vivre cinq jours uniques, en immersion dans un gîte astronomique, idéalement nichée dans les montagnes du parc naturel régional de Corse. Dirigé par un passionné d'astronomie et animé par des spécialistes les soirs d'été, ce séjour vous invite à partager des moments d'observation et échanges sur les planètes, galaxies, nébuleuses, la lune et bien d'autres mystères célestes. La Corse, et plus précisément cette zone, est réputée pour avoir un ciel pur et est donc un des meilleurs endroits en France pour observer les étoiles.\n\nEn journée, partez explorer les alentours de Corte, savourez les délices de la gastronomie corse agrémentée de ses fromages emblématiques, plongez dans des piscines naturelles et des rivières aux eaux cristallines, et marchez en plein air sur des sentiers offrant des panoramas à couper le souffle. Faites une pause pour manger ou boire un café, et plongez-vous dans la vie d'un village corse en échangeant des mots avec les habitants.\n\nUn séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'ils soient petits ou grands. Rejoignez-nous et plongez dans une expérience où la découverte de l'astronomie se mêle à la beauté naturelle de la Corse.",
-  "emailDescription": "",
-  "metaDescription": "Vivez un séjour insolite en Corse, au sein d'un gite astronomique, idéalement placé au cœur d'un panorama grandiose, idéal pour observer le ciel, guidés par des spécialistes de l'astronomie.",
-  "interjection": "en",
   "destinations": [
-    "Corse"
+    {
+      "name": "Corse",
+      "slug": "corse"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ou-partir-au-printemps",
-    "ou-partir-en-automne",
-    "partir-en-amoureux",
-    "sejour-astronomie",
-    "sejour-ferme"
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "astronomie"
+    },
+    {
+      "name": "sejour-a-la-ferme"
+    }
   ],
   "duration": 5,
   "nights": 4,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Gîte",
   "idealPeriods": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 2,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/sejour-astronomie-corse/Vqy5esbLTrWRlRY73ozi.jpg",
-    "alt": "image principale du voyage Initiation à l'observation astronomique en Corse"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/sejour-astronomie-corse/V6SjIPGSTHmNN71o2e6U.jpg",
-    "alt": "image secondaire du voyage Initiation à l'observation astronomique en Corse"
-  },
-  "photosList": [],
-  "videoLinks": [],
-  "badgeSection": {},
   "authorNote": {
     "text": "Partez vivre cinq jours uniques, en immersion dans un gîte astronomique, idéalement nichée dans les montagnes du parc naturel régional de Corse. Dirigé par un passionné d'astronomie et animé par des spécialistes les soirs d'été, ce séjour vous invite à partager des moments d'observation et échanges sur les planètes, galaxies, nébuleuses, la lune et bien d'autres mystères célestes. La Corse, et plus précisément cette zone, est réputée pour avoir un ciel pur et est donc un des meilleurs endroits en France pour observer les étoiles.\n\nEn journée, partez explorer les alentours de Corte, savourez les délices de la gastronomie corse agrémentée de ses fromages emblématiques, plongez dans des piscines naturelles et des rivières aux eaux cristallines, et marchez en plein air sur des sentiers offrant des panoramas à couper le souffle. Faites une pause pour manger ou boire un café, et plongez-vous dans la vie d'un village corse en échangeant des mots avec les habitants.\n\nUn séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'ils soient petits ou grands. Rejoignez-nous et plongez dans une expérience où la découverte de l'astronomie se mêle à la beauté naturelle de la Corse.",
     "author": "Romain",
@@ -61,43 +83,116 @@
     "S'initier à l'utilisation des principaux instruments d’observation",
     "Approfondir ses connaissances sur la structure et composition de l’univers"
   ],
+  "slug": "sejour-astronomie-corse",
+  "description": "Partez vivre cinq jours uniques, en immersion dans un gîte astronomique, idéalement nichée dans les montagnes du parc naturel régional de Corse. Dirigé par un passionné d'astronomie et animé par des spécialistes les soirs d'été, ce séjour vous invite à partager des moments d'observation et échanges sur les planètes, galaxies, nébuleuses, la lune et bien d'autres mystères célestes. La Corse, et plus précisément cette zone, est réputée pour avoir un ciel pur et est donc un des meilleurs endroits en France pour observer les étoiles.\n\nEn journée, partez explorer les alentours de Corte, savourez les délices de la gastronomie corse agrémentée de ses fromages emblématiques, plongez dans des piscines naturelles et des rivières aux eaux cristallines, et marchez en plein air sur des sentiers offrant des panoramas à couper le souffle. Faites une pause pour manger ou boire un café, et plongez-vous dans la vie d'un village corse en échangeant des mots avec les habitants.\n\nUn séjour inoubliable vous attend, conçu pour les amateurs d'astronomie, qu'ils soient petits ou grands. Rejoignez-nous et plongez dans une expérience où la découverte de l'astronomie se mêle à la beauté naturelle de la Corse.",
+  "emailDescription": "",
+  "metaDescription": "Vivez un séjour insolite en Corse, au sein d'un gite astronomique, idéalement placé au cœur d'un panorama grandiose, idéal pour observer le ciel, guidés par des spécialistes de l'astronomie.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**4 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avr à Sept",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "DÉBUT DE L'IMMERSION",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre dans l’après-midi au gite astronomique, idéalement situé près d'un village dans le centre de la Corse, à 20 km de Corte et 750 m d’altitude. Accueil par votre hôte Stéphane qui vous fera visiter et présentera votre chambre “astro”. Profitez de la piscine pour aller vous détendre avant d’aller dîner à proximité du village. Première soirée astronomique, première nuit au gîte.",
       "photo": "/images/voyages/sejour-astronomie-corse/Rma3nPKtSfefNZXnpTzw.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "COMPRENDRE LE CIEL",
       "badgeText": "JOUR 2",
       "description": "Profitez d'une journée libre. Profitez-en pour aller visiter les environs du gîte, en commençant par Corte, sa vie de village typique. L'après-midi, partez pour une marche douce sur les sentiers corses jusqu’à la cathédrale du Bozio, à 15 minutes à pied du gîte ou la chapelle Saint-Joseph, à une petite heure de marche depuis Erbajolo. Vous revenez en fin de journée ou après votre dîner pour entamer votre seconde soirée astronomique avec un spécialiste, avec qui vous approfondissez l'observation du ciel, ses objets célestes...",
       "photo": "/images/voyages/sejour-astronomie-corse/zemH57ZFQW6fV90b13m3.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "S'INITIER AUX INSTRUMENTS",
       "badgeText": "JOUR 3",
       "description": "Journée libre. Vous pouvez aujourd’hui aller randonner pour découvrir les lacs situés au-dessus de Corte, et explorer les gorges de la Restonica où vous pourrez vous baigner dans des piscines naturelles aux eaux fraiches et cristallines. Une route sinueuse permet d'atteindre les bergeries de Grotelle qui sont le départ vers les lacs de Melo et Capitello. Le soir, troisième soirée astronomique, vous utilisez les instruments à disposition sur le gîte, qui vous permettent d'observer le ciel en profondeur.",
       "photo": "/images/voyages/sejour-astronomie-corse/le48d3a8RxKFbnSqiTIs.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "DERNIÈRE NUIT SOUS LES ÉTOILES",
       "badgeText": "JOUR 4",
       "description": "Après un petit-déjeuner, profitez d'une journée libre. Découverte de la côte près de Calvi, à 40 minutes de route du village. Possibilités d’autres balades dans les terres également. Le soir, atelier et échanges, approfondissement des observations faites au télescope. Dernière nuit au gîte.",
       "photo": "/images/voyages/sejour-astronomie-corse/gCCC1rQeSM2iqtnkDBnl.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "FIN DE VOTRE SÉJOUR ",
       "badgeText": "JOUR 5",
       "description": "Dernier réveil avec cette vue sur les montagnes corses. Petit déjeuner servi dans votre chambre puis journée libre. Départ en fin de matinée après avoir fait un dernier saut dans la piscine ! Vous repartez avec une photographie d'observations faites au gîte, en souvenir de votre séjour astronomique en terre et dans le ciel corse. Poursuite de votre séjour en Corse ou retour.",
       "photo": "/images/voyages/sejour-astronomie-corse/ctoEhaNWRvOWO0xDNNdo.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les 4 nuitées dans une chambre double au sein d'un gîte ou maison d'hôtes (à partir de 3 voyageurs)",
+      "Les soirées \"ateliers\" animées par des spécialistes passionnés de l'astronomie"
+    ],
+    "exclude": [
+      "Les transferts jusqu'au gite astronomique",
+      "Les petits-déjeuners, déjeuners et dîners",
+      "Les activités non comprises dans la section \"le prix comprend\"",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles sur place"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 295,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Stéphane, votre hôte à Erbajolo, est un passionné d’astronomie. Depuis 2017, il partage son amour des étoiles avec ses invités, offrant des soirées d’observation enrichissantes. Aux côtés de spécialistes chevronnés, il vous guidera dans l’exploration du ciel corse, réputé pour sa pureté et sa clarté.",
   "accompanistsList": [
     {
       "name": "Stéphane",
@@ -106,7 +201,6 @@
       "image": "/images/voyages/sejour-astronomie-corse/LVgr85GXTgGEEneLa7Ie.jpg"
     }
   ],
-  "accompanistsDescription": "Stéphane, votre hôte à Erbajolo, est un passionné d’astronomie. Depuis 2017, il partage son amour des étoiles avec ses invités, offrant des soirées d’observation enrichissantes. Aux côtés de spécialistes chevronnés, il vous guidera dans l’exploration du ciel corse, réputé pour sa pureté et sa clarté.",
   "housingBlock": [
     {
       "title": "Gîte",
@@ -128,20 +222,16 @@
       ]
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les 4 nuitées dans une chambre double au sein d'un gîte ou maison d'hôtes (à partir de 3 voyageurs)",
-      "Les soirées \"ateliers\" animées par des spécialistes passionnés de l'astronomie"
-    ],
-    "exclude": [
-      "Les transferts jusqu'au gite astronomique",
-      "Les petits-déjeuners, déjeuners et dîners",
-      "Les activités non comprises dans la section \"le prix comprend\"",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles sur place"
-    ]
+  "image": {
+    "src": "/images/voyages/sejour-astronomie-corse/Vqy5esbLTrWRlRY73ozi.jpg",
+    "alt": "image principale du voyage Initiation à l'observation astronomique en Corse"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-astronomie-corse/V6SjIPGSTHmNN71o2e6U.jpg",
+    "alt": "image secondaire du voyage Initiation à l'observation astronomique en Corse"
+  },
+  "photosList": [],
+  "videoLinks": [],
   "faqBlock": {
     "faqList": [
       {
@@ -174,24 +264,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 295,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Initiation à l'observation astronomique en Corse",
+    "canonicalUrl": "https://www.odysway.com/voyages/sejour-astronomie-corse",
+    "ogTitle": "Initiation à l'observation astronomique en Corse",
+    "ogDescription": "Vivez un séjour insolite en Corse, au sein d'un gite astronomique, idéalement placé au cœur d'un panorama grandiose, idéal pour observer le ciel, guidés par des spécialistes de l'astronomie.",
+    "ogImage": {
+      "src": "/images/voyages/sejour-astronomie-corse/Vqy5esbLTrWRlRY73ozi.jpg",
+      "alt": "image principale du voyage Initiation à l'observation astronomique en Corse"
+    },
+    "twitterTitle": "Initiation à l'observation astronomique en Corse",
+    "twitterDescription": "Vivez un séjour insolite en Corse, au sein d'un gite astronomique, idéalement placé au cœur d'un panorama grandiose, idéal pour observer le ciel, guidés par des spécialistes de l'astronomie.",
+    "twitterImage": {
+      "src": "/images/voyages/sejour-astronomie-corse/Vqy5esbLTrWRlRY73ozi.jpg",
+      "alt": "image principale du voyage Initiation à l'observation astronomique en Corse"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

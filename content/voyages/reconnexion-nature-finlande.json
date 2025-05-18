@@ -1,41 +1,242 @@
 {
   "published": true,
   "title": "Aventure éco responsable et reconnexion à la nature en Finlande",
-  "slug": "reconnexion-nature-finlande",
-  "rating": 4.4,
-  "comments": 18,
-  "description": "Partez en famille pour une escapade estivale inoubliable en Laponie finlandaise, l'occasion parfaite de se reconnecter à la nature. Notre voyage vous offre un mélange parfait d'activités en pleine nature et de moments de détente au camp de base, avec sauna et baignades dans le lac. Embarquez pour une exploration en canoë à travers la magnifique forêt boréale ou laissez-vous tracter par les chiens de traîneau. Immergez-vous dans la vie de trappeur avec une nuit en bivouac sous les étoiles et des repas conviviaux autour du feu. Soyez à l'affût du seigneur des lieux, l'ours brun, depuis votre poste d'observation. Des expériences variées, des journées pleines d'émotions, parfaites pour créer des souvenirs en famille !",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature,  prendre le temps de vous ressourcer pleinement et revenir aux choses simples de la vie, ce voyage est fait pour vous !",
-  "metaDescription": "Plongez dans l'immensité de la nature finlandaise lors de ce voyage éco-responsable avec au programme : immersion en pleine nature, navigation sur les lacs, observation des ours. Une expérience authentique pour renouer avec la nature !",
-  "interjection": "en",
   "destinations": [
-    "Finlande"
+    {
+      "name": "Finlande",
+      "slug": "finlande"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-nature",
-    "voyage-sportif",
-    "partir-en-famille",
-    "partir-en-amoureux",
-    "ou-partir-en-ete",
-    "ou-partir-au-printemps",
-    "ecotourisme",
-    "sejour-trek-randonnee",
-    "voyage-aventure",
-    "sejour-survie"
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-sportif"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "survie"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Auberge, bivouac",
   "idealPeriods": [
-    "Juillet",
-    "Août"
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    }
   ],
   "monthlyAvailability": [
-    "Juillet",
-    "Août"
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.4,
+  "comments": 18,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez en famille pour une escapade estivale inoubliable en Laponie finlandaise, l'occasion parfaite de se reconnecter à la nature. Notre voyage vous offre un mélange parfait d'activités en pleine nature et de moments de détente au camp de base, avec sauna et baignades dans le lac. Embarquez pour une exploration en canoë à travers la magnifique forêt boréale ou laissez-vous tracter par les chiens de traîneau. Immergez-vous dans la vie de trappeur avec une nuit en bivouac sous les étoiles et des repas conviviaux autour du feu. Soyez à l'affût du seigneur des lieux, l'ours brun, depuis votre poste d'observation. Des expériences variées, des journées pleines d'émotions, parfaites pour créer des souvenirs en famille !",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Un voyage éco-responsable au coeur de la nature",
+    "Une déconnexion totale pour un retour aux choses simples",
+    "L'observation des animaux de la forêt, dont les ours bruns",
+    "L'expédition en canoë",
+    "La détente au sein d'une auberge au bord d'un lac"
+  ],
+  "slug": "reconnexion-nature-finlande",
+  "description": "Partez en famille pour une escapade estivale inoubliable en Laponie finlandaise, l'occasion parfaite de se reconnecter à la nature. Notre voyage vous offre un mélange parfait d'activités en pleine nature et de moments de détente au camp de base, avec sauna et baignades dans le lac. Embarquez pour une exploration en canoë à travers la magnifique forêt boréale ou laissez-vous tracter par les chiens de traîneau. Immergez-vous dans la vie de trappeur avec une nuit en bivouac sous les étoiles et des repas conviviaux autour du feu. Soyez à l'affût du seigneur des lieux, l'ours brun, depuis votre poste d'observation. Des expériences variées, des journées pleines d'émotions, parfaites pour créer des souvenirs en famille !",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature,  prendre le temps de vous ressourcer pleinement et revenir aux choses simples de la vie, ce voyage est fait pour vous !",
+  "metaDescription": "Plongez dans l'immensité de la nature finlandaise lors de ce voyage éco-responsable avec au programme : immersion en pleine nature, navigation sur les lacs, observation des ours. Une expérience authentique pour renouer avec la nature !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Auberge, bivouac",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Juillet à Août",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DÉPART ET ARRIVÉE EN FINLANDE",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée à l'aéroport, nos équipes vous accueillent à l'aéroport et vous emmènent au camp de base, près de la ville d'Hossa (compter environ 1 heure depuis Kuusamo et 3h depuis Oulu).\r\nPremière journée d'installation et d'exploration des environs ! ",
+      "photo": "/images/voyages/reconnexion-nature-finlande/6rHYwmEGSYqkZaPiuGEQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PERCER LES MYSTÈRES DE LA NATURE FINLANDAISE",
+      "badgeText": "JOUR 2",
+      "description": "Partez à la découverte des merveilles de la nature finlandaise en explorant le lac canyon de Julma Ölkky, le plus grand des trois lacs canyons du pays. Surplombez ses gorges depuis un pont suspendu et laissez-vous surprendre par les secrets de ce paysage majestueux. Une journée d'immersion en pleine nature agrémentée d'un pique-nique au coin du feu. En fin de journée, n'hésitez pas à profiter du sauna face au lac pour vous relaxer !",
+      "photo": "/images/voyages/reconnexion-nature-finlande/OhzhMl6wTVSCsFUSqVts.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "L’EXPÉDITION EN CANOË",
+      "badgeText": "JOURS 3 ET 4",
+      "description": "C'est parti pour l'expédition (accessible à tous) sur les eaux calmes des lacs reliés par des petits cours d'eau ! Vous vous retrouverez en pleine nature, prêt à vous mettre à l'eau. À bord de vos canoës, avec votre matériel de camping, votre carte et votre nourriture, vous prendrez le large pour vous enfoncer dans la beauté de la nature finlandaise... Nuit en bivouac au coin du feu à écouter des récits sur les trappeurs et autres histoires finlandaises relatées par votre guide.",
+      "photo": "/images/voyages/reconnexion-nature-finlande/e5BbH6cKTmXdFGT3NLOW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A LA RENCONTRE DES CHIENS DE TRAINEAU ET DE L'OURS BRUN",
+      "badgeText": "JOUR 5",
+      "description": "Aujourd'hui, vous partirez à la rencontre des chiens de traîneau. Grâce à cette visite, vous en apprendrez davantage sur leur mode de vie et surtout, vous partagerez un moment privilégié avec nos amis à quatre pattes. \r\nAprès cette visite, nous vous proposons de découvrir l'animal emblématique de ces lieux : l'ours brun. Installés dans un affût, vous y passerez la soirée. Les possibilités d'observation sont très bonnes mais la patience est nécessaire pour pouvoir rencontrer cet animal emblématique. Le retour à l'auberge se fait en fin de soirée.",
+      "photo": "/images/voyages/reconnexion-nature-finlande/igPBzZMThtkDfMR4TJiw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CANI-RANDO DANS LE PARC DE HOSSA",
+      "badgeText": "JOUR 6",
+      "description": "Aujourd'hui, participez à une aventure unique : la cani-rando ! Cette méthode ancestrale de déplacement nordique vous permettra de tisser des liens uniques avec nos compagnons canins. Guidés par votre chien attelé à un harnais spécial, explorez les sentiers du parc en toute liberté. Préparez-vous à être charmé par nos adorables boules de poils !",
+      "photo": "/images/voyages/reconnexion-nature-finlande/9oszkzZQlyXdWmTTKSup.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LA PEAU D'UN TRAPPEUR",
+      "badgeText": "JOUR 7",
+      "description": "Découvrez l'univers captivant des trappeurs et explorez leurs techniques ancestrales pour se déplacer, se nourrir et se loger. Une journée d'apprentissage ludique et enrichissante pour tous ! Ensuite, embarquez pour une séance de pêche sur le lac en canoë ou depuis la berge. Qui attrapera le premier poisson ? De retour sur la terre ferme, découvrez l'art de faire un feu. Une expérience qui vous transformera en de véritables aventuriers !",
+      "photo": "/images/voyages/reconnexion-nature-finlande/elYi7UQTROSqgGkaIv7Q.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR EN FINLANDE",
+      "badgeText": "JOUR 8",
+      "description": "Votre voyage en Finlande touche à sa fin ! Faites vos adieux à vos guides et à ce magnifique havre de paix. Après un dernier lever de soleil sur le lac, nos équipes vous emmèneront à l'aéroport où vous prendrez votre vol retour.",
+      "photo": "/images/voyages/reconnexion-nature-finlande/G3XDy3vaR5SGwdRhg5Wu.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’accueil à l'aéroport",
+      "Les transferts aller/retour de l'aéroport au camp de base",
+      "L'hébergement en chambre double en auberge (5 nuits)",
+      "L'hébergement en tente pendant l'expédition en canoë (1 nuit)",
+      "La pension complète au camp de base et durant l'expédition (du dîner du J1 au petit-déjeuner du J8)",
+      "L'encadrement par un accompagnateur francophone et finlandais anglophone pour l'observation des ours",
+      "Le prêt du matériel de canoë et de bivouac (canoë, pagaie, gilet de sauvetage, carte, une tente ultra-light  \npour 2 pers + matelas ultra-light + sac de couchage + matériel de cuisine : réchaud + popote)"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Kuusamo ou Oulu et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Les activités durant les journées libres",
+      "L'assurance annulation ou multirisques",
+      "Les boissons et dépenses personnelles",
+      "Les pourboires"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1765,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "KAO"
+    ]
+  },
+  "accompanistsDescription": "À votre arrivée, vous serez accueillis à l'aéroport par l'un de nos guides locaux. Chaque activité sera dirigée par un guide francophone expert des régions polaires et du Grand Nord, vous invitant à explorer les recoins les plus authentiques de la Finlande.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Auberge, bivouac",
+      "housingType": "",
+      "housingMood": "Durant les nuits au camp de base, vous logerez dans une chambre double de l'écolodge écoresponsable ou dans un petit chalet selon disponibilité. Durant l'expédition en canoë, vous logerez en tente, en bivouac sur les berges du lac. ",
+      "image": [
+        {
+          "src": "/images/voyages/reconnexion-nature-finlande/GHlQkgJrRTGo1pgnO4zh.jpg",
+          "alt": "image de l'hébergement Aventure éco responsable et reconnexion à la nature en Finlande"
+        },
+        {
+          "src": "/images/voyages/reconnexion-nature-finlande/bQSg6bh1TBmLMjJV03fG.jpg",
+          "alt": "image de l'hébergement Aventure éco responsable et reconnexion à la nature en Finlande"
+        },
+        {
+          "src": "/images/voyages/reconnexion-nature-finlande/OcsmgCqcQIKxsGIqYnQv.jpg",
+          "alt": "image de l'hébergement Aventure éco responsable et reconnexion à la nature en Finlande"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/reconnexion-nature-finlande/d6kQEqcLRtKXyKL3v5ax.jpg",
     "alt": "image principale du voyage Aventure éco responsable et reconnexion à la nature en Finlande"
@@ -87,112 +288,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Partez en famille pour une escapade estivale inoubliable en Laponie finlandaise, l'occasion parfaite de se reconnecter à la nature. Notre voyage vous offre un mélange parfait d'activités en pleine nature et de moments de détente au camp de base, avec sauna et baignades dans le lac. Embarquez pour une exploration en canoë à travers la magnifique forêt boréale ou laissez-vous tracter par les chiens de traîneau. Immergez-vous dans la vie de trappeur avec une nuit en bivouac sous les étoiles et des repas conviviaux autour du feu. Soyez à l'affût du seigneur des lieux, l'ours brun, depuis votre poste d'observation. Des expériences variées, des journées pleines d'émotions, parfaites pour créer des souvenirs en famille !",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Un voyage éco-responsable au coeur de la nature",
-    "Une déconnexion totale pour un retour aux choses simples",
-    "L'observation des animaux de la forêt, dont les ours bruns",
-    "L'expédition en canoë",
-    "La détente au sein d'une auberge au bord d'un lac"
-  ],
-  "programmeBlock": [
-    {
-      "title": "DÉPART ET ARRIVÉE EN FINLANDE",
-      "badgeText": "JOUR 1",
-      "description": "Arrivée à l'aéroport, nos équipes vous accueillent à l'aéroport et vous emmènent au camp de base, près de la ville d'Hossa (compter environ 1 heure depuis Kuusamo et 3h depuis Oulu).\r\nPremière journée d'installation et d'exploration des environs ! ",
-      "photo": "/images/voyages/reconnexion-nature-finlande/6rHYwmEGSYqkZaPiuGEQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PERCER LES MYSTÈRES DE LA NATURE FINLANDAISE",
-      "badgeText": "JOUR 2",
-      "description": "Partez à la découverte des merveilles de la nature finlandaise en explorant le lac canyon de Julma Ölkky, le plus grand des trois lacs canyons du pays. Surplombez ses gorges depuis un pont suspendu et laissez-vous surprendre par les secrets de ce paysage majestueux. Une journée d'immersion en pleine nature agrémentée d'un pique-nique au coin du feu. En fin de journée, n'hésitez pas à profiter du sauna face au lac pour vous relaxer !",
-      "photo": "/images/voyages/reconnexion-nature-finlande/OhzhMl6wTVSCsFUSqVts.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "L’EXPÉDITION EN CANOË",
-      "badgeText": "JOURS 3 ET 4",
-      "description": "C'est parti pour l'expédition (accessible à tous) sur les eaux calmes des lacs reliés par des petits cours d'eau ! Vous vous retrouverez en pleine nature, prêt à vous mettre à l'eau. À bord de vos canoës, avec votre matériel de camping, votre carte et votre nourriture, vous prendrez le large pour vous enfoncer dans la beauté de la nature finlandaise... Nuit en bivouac au coin du feu à écouter des récits sur les trappeurs et autres histoires finlandaises relatées par votre guide.",
-      "photo": "/images/voyages/reconnexion-nature-finlande/e5BbH6cKTmXdFGT3NLOW.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "A LA RENCONTRE DES CHIENS DE TRAINEAU ET DE L'OURS BRUN",
-      "badgeText": "JOUR 5",
-      "description": "Aujourd'hui, vous partirez à la rencontre des chiens de traîneau. Grâce à cette visite, vous en apprendrez davantage sur leur mode de vie et surtout, vous partagerez un moment privilégié avec nos amis à quatre pattes. \r\nAprès cette visite, nous vous proposons de découvrir l'animal emblématique de ces lieux : l'ours brun. Installés dans un affût, vous y passerez la soirée. Les possibilités d'observation sont très bonnes mais la patience est nécessaire pour pouvoir rencontrer cet animal emblématique. Le retour à l'auberge se fait en fin de soirée.",
-      "photo": "/images/voyages/reconnexion-nature-finlande/igPBzZMThtkDfMR4TJiw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CANI-RANDO DANS LE PARC DE HOSSA",
-      "badgeText": "JOUR 6",
-      "description": "Aujourd'hui, participez à une aventure unique : la cani-rando ! Cette méthode ancestrale de déplacement nordique vous permettra de tisser des liens uniques avec nos compagnons canins. Guidés par votre chien attelé à un harnais spécial, explorez les sentiers du parc en toute liberté. Préparez-vous à être charmé par nos adorables boules de poils !",
-      "photo": "/images/voyages/reconnexion-nature-finlande/9oszkzZQlyXdWmTTKSup.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DANS LA PEAU D'UN TRAPPEUR",
-      "badgeText": "JOUR 7",
-      "description": "Découvrez l'univers captivant des trappeurs et explorez leurs techniques ancestrales pour se déplacer, se nourrir et se loger. Une journée d'apprentissage ludique et enrichissante pour tous ! Ensuite, embarquez pour une séance de pêche sur le lac en canoë ou depuis la berge. Qui attrapera le premier poisson ? De retour sur la terre ferme, découvrez l'art de faire un feu. Une expérience qui vous transformera en de véritables aventuriers !",
-      "photo": "/images/voyages/reconnexion-nature-finlande/elYi7UQTROSqgGkaIv7Q.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIER JOUR EN FINLANDE",
-      "badgeText": "JOUR 8",
-      "description": "Votre voyage en Finlande touche à sa fin ! Faites vos adieux à vos guides et à ce magnifique havre de paix. Après un dernier lever de soleil sur le lac, nos équipes vous emmèneront à l'aéroport où vous prendrez votre vol retour.",
-      "photo": "/images/voyages/reconnexion-nature-finlande/G3XDy3vaR5SGwdRhg5Wu.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "À votre arrivée, vous serez accueillis à l'aéroport par l'un de nos guides locaux. Chaque activité sera dirigée par un guide francophone expert des régions polaires et du Grand Nord, vous invitant à explorer les recoins les plus authentiques de la Finlande.",
-  "housingBlock": [
-    {
-      "title": "Auberge, bivouac",
-      "housingType": "",
-      "housingMood": "Durant les nuits au camp de base, vous logerez dans une chambre double de l'écolodge écoresponsable ou dans un petit chalet selon disponibilité. Durant l'expédition en canoë, vous logerez en tente, en bivouac sur les berges du lac. ",
-      "image": [
-        {
-          "src": "/images/voyages/reconnexion-nature-finlande/GHlQkgJrRTGo1pgnO4zh.jpg",
-          "alt": "image de l'hébergement Aventure éco responsable et reconnexion à la nature en Finlande"
-        },
-        {
-          "src": "/images/voyages/reconnexion-nature-finlande/bQSg6bh1TBmLMjJV03fG.jpg",
-          "alt": "image de l'hébergement Aventure éco responsable et reconnexion à la nature en Finlande"
-        },
-        {
-          "src": "/images/voyages/reconnexion-nature-finlande/OcsmgCqcQIKxsGIqYnQv.jpg",
-          "alt": "image de l'hébergement Aventure éco responsable et reconnexion à la nature en Finlande"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L’accueil à l'aéroport",
-      "Les transferts aller/retour de l'aéroport au camp de base",
-      "L'hébergement en chambre double en auberge (5 nuits)",
-      "L'hébergement en tente pendant l'expédition en canoë (1 nuit)",
-      "La pension complète au camp de base et durant l'expédition (du dîner du J1 au petit-déjeuner du J8)",
-      "L'encadrement par un accompagnateur francophone et finlandais anglophone pour l'observation des ours",
-      "Le prêt du matériel de canoë et de bivouac (canoë, pagaie, gilet de sauvetage, carte, une tente ultra-light  \npour 2 pers + matelas ultra-light + sac de couchage + matériel de cuisine : réchaud + popote)"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Kuusamo ou Oulu et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Les activités durant les journées libres",
-      "L'assurance annulation ou multirisques",
-      "Les boissons et dépenses personnelles",
-      "Les pourboires"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -245,27 +340,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1480,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "KAO"
-    ]
+  "seo": {
+    "metaTitle": "Aventure éco responsable et reconnexion à la nature en Finlande",
+    "canonicalUrl": "https://www.odysway.com/voyages/reconnexion-nature-finlande",
+    "ogTitle": "Aventure éco responsable et reconnexion à la nature en Finlande",
+    "ogDescription": "Plongez dans l'immensité de la nature finlandaise lors de ce voyage éco-responsable avec au programme : immersion en pleine nature, navigation sur les lacs, observation des ours. Une expérience authentique pour renouer avec la nature !",
+    "ogImage": {
+      "src": "/images/voyages/reconnexion-nature-finlande/d6kQEqcLRtKXyKL3v5ax.jpg",
+      "alt": "image principale du voyage Aventure éco responsable et reconnexion à la nature en Finlande"
+    },
+    "twitterTitle": "Aventure éco responsable et reconnexion à la nature en Finlande",
+    "twitterDescription": "Plongez dans l'immensité de la nature finlandaise lors de ce voyage éco-responsable avec au programme : immersion en pleine nature, navigation sur les lacs, observation des ours. Une expérience authentique pour renouer avec la nature !",
+    "twitterImage": {
+      "src": "/images/voyages/reconnexion-nature-finlande/d6kQEqcLRtKXyKL3v5ax.jpg",
+      "alt": "image principale du voyage Aventure éco responsable et reconnexion à la nature en Finlande"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

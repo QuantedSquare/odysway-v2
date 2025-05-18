@@ -1,28 +1,213 @@
 {
   "published": true,
   "title": "Islande sauvage : Terre de feu et de glace",
-  "slug": "islande-nature-aurores-boreales",
-  "rating": 0,
-  "comments": 0,
-  "description": "L’Islande, le pays des grands espaces, vous accueille en ses terres encore brutes et préservées pour une immersion hors du temps, une déconnexion totale là où les vastes étendues sauvages dévoilent leurs secrets. Ressentez la puissance de la nature islandaise à travers ses terres contrastées et grandioses. \n\nVous vivrez ce sentiment de se sentir si petit face à ces vastes espaces, de se rendre compte de la puissance de la nature, créant ses paysages si diversifiés sur une seule et même île : geyser, cascades, sources d'eau chaude, glaciers et autres sites volcaniques ne manqueront pas de vous surprendre tout au long de ce voyage !\n\nLaissez-vous emporter par la sérénité locale où le tumulte de la vie quotidienne s'estompe, laissant place à la paix profonde des fjords isolés, des sources chaudes et des aurores boréales enchanteresses.\n\nAssurément, l'Islande est un autre espace-temps !",
-  "emailDescription": "",
-  "metaDescription": "Envie d'un voyage aux milles contrastes? Cap vers le Nord, direction l'Islande. La richesse des terres crée d’étonnants lieux naturels à explorer qui ne laissent pas indifférents. ",
-  "interjection": "",
   "destinations": [
-    "Islande"
+    {
+      "name": "Islande",
+      "slug": "islande"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "partir-en-groupe",
-    "sejours-nature",
-    "ou-partir-en-hiver"
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Guest house et ferme-auberge",
   "idealPeriods": [],
   "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "L’Islande, le pays des grands espaces, vous accueille en ses terres encore brutes et préservées pour une immersion hors du temps, une déconnexion totale là où les vastes étendues sauvages dévoilent leurs secrets. Ressentez la puissance de la nature islandaise à travers ses terres contrastées et grandioses. \n\nVous vivrez ce sentiment de se sentir si petit face à ces vastes espaces, de se rendre compte de la puissance de la nature, créant ses paysages si diversifiés sur une seule et même île : geyser, cascades, sources d'eau chaude, glaciers et autres sites volcaniques ne manqueront pas de vous surprendre tout au long de ce voyage !\n\nLaissez-vous emporter par la sérénité locale où le tumulte de la vie quotidienne s'estompe, laissant place à la paix profonde des fjords isolés, des sources chaudes et des aurores boréales enchanteresses.\n\nAssurément, l'Islande est un autre espace-temps !",
+    "author": "Lucie",
+    "affixeAuthor": "Responsable voyageurs"
+  },
+  "experiencesBlock": [
+    "Vivez l'intensité des paysages : glaciers, volcans, plages de sable noir...",
+    "Observez la magie des aurores boréales",
+    "Détendez-vous dans les sources d'eau chaude naturelles",
+    "Laissez-vous porter par la quiétude des grands espaces",
+    "Partagez des moments de convivialité avec le guide et les autres voyageurs"
+  ],
+  "slug": "islande-nature-aurores-boreales",
+  "description": "L’Islande, le pays des grands espaces, vous accueille en ses terres encore brutes et préservées pour une immersion hors du temps, une déconnexion totale là où les vastes étendues sauvages dévoilent leurs secrets. Ressentez la puissance de la nature islandaise à travers ses terres contrastées et grandioses. \n\nVous vivrez ce sentiment de se sentir si petit face à ces vastes espaces, de se rendre compte de la puissance de la nature, créant ses paysages si diversifiés sur une seule et même île : geyser, cascades, sources d'eau chaude, glaciers et autres sites volcaniques ne manqueront pas de vous surprendre tout au long de ce voyage !\n\nLaissez-vous emporter par la sérénité locale où le tumulte de la vie quotidienne s'estompe, laissant place à la paix profonde des fjords isolés, des sources chaudes et des aurores boréales enchanteresses.\n\nAssurément, l'Islande est un autre espace-temps !",
+  "emailDescription": "",
+  "metaDescription": "Envie d'un voyage aux milles contrastes? Cap vers le Nord, direction l'Islande. La richesse des terres crée d’étonnants lieux naturels à explorer qui ne laissent pas indifférents. ",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Nov à Avr",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE EN ISLANDE",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée en Islande, \"pays du feu et de glace\". Accueil par notre équipe francophone à l'aéroport international de Keflavik et transfert jusqu'à la capitale islandaise, Reykjavik. Installation à votre hébergement pour les deux prochaines nuits. Visite libre de la ville, le temps de flâner, s'imprégner de l'ambiance locale et choisir le lieu de votre dîner.",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/htXzHbSeQbCtPuMhXIoX.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PAYSAGES UNIQUES DU CERCLE D'OR",
+      "badgeText": "JOUR 2",
+      "description": "Départ matinal vers le Cercle d'Or pour profiter des lieux encore peu fréquentés. Commencez par Thingvellir où une randonnée vous guide entre cascades et canyons. Poursuivez avec le spectacle du geyser Strokkur et admirez la puissante cascade Gullfoss, se jetant dans un ravin orné de formations volcaniques. En après-midi, détendez vous dans les sources d'eaux chaudes du \"Secret Lagoon\" au milieu de la nature.",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/Vc2VkysHQp2vP0baPKop.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPLORATION DES TERRES VOLCANIQUES",
+      "badgeText": "JOUR 3",
+      "description": "Ce matin, suivez votre guide dans les profondeurs de la Terre ! Vous explorerez Raufarhólshellir, l'un des plus longs tunnels de lave d'Islande. Votre aventure le long de la côte sud islandaise se poursuit avec l'éblouissante cascade de Skogafoss et la découverte du village de Vik, avec ses plages de sable noir et ses formations de basalte sculptées par les vagues. En soirée, gardez les yeux ouverts, car vous pourriez être témoin des aurores boréales qui illuminent le ciel.",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/qxDKimRz6U2FA3oxH8LQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CAP VERS LES GLACIERS",
+      "badgeText": "JOUR 4",
+      "description": "Voyage vers l'est, jusqu'au majestueux Vatnajökull, le plus grand glacier d'Europe. Suivez le sentier sinueux, grimpant vers des points de vue spectaculaires sur les glaciers et les sommets islandais.  Installation dans votre hébergement pour deux nuits. Comme chaque soir, scrutez le ciel attentivement ; si les étoiles brillent et l'activité solaire est haute, l'extraordinaire spectacle des aurores boréales vous attend dehors.",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/bCplgRG0QZWBCpUB0c3Z.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MAGIE DES PAYSAGES GLACÉS",
+      "badgeText": "JOUR 5",
+      "description": "Explorez la calotte glaciaire du Vatnajökull, crampons aux pieds, une grotte de glace féerique, éphémère et scintillante. Déjeunez au chaud avant de passer l'après-midi près des icebergs à Jökulsárlón, où ces géants bleus et blancs s'animent, se brisent. Enfin, les icebergs translucides sur la plage de sable noir de Diamond Beach créent un spectacle photogénique. Une journée inoubliable sous le règne de la glace vous attend !",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/7fSZXWADR8GV9UrG3ZtT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BAIGNADE DANS LES SOURCES D'EAU CHAUDE",
+      "badgeText": "JOUR 6",
+      "description": "Il est temps de dire au revoir aux glaciers et aux icebergs pour reprendre la route. Une escale à Hvolsvöllur vous permet de découvrir le musée de la lave qui dévoile les mystères des phénomènes volcaniques islandais. Vous traversez ensuite les landes et les paysages volcaniques de Hveragerdi avant de revenir à la capitale nordique. Pour conclure cette journée en beauté, rien de tel qu'une immersion dans une piscine islandaise, au rythme de la vie des locaux.",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/5PY9OVctSlSlZPdSxiOD.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "REYKJAVIK ET SA NATURE ENVIRONNANTE",
+      "badgeText": "JOUR 7",
+      "description": "Le matin, choisissez entre flâner dans Reykjavík, observer les baleines ou faire une balade équestre (options en supplément). Après le déjeuner, partez explorer la péninsule de Reykjanes, marquée par l'éruption de 2023 du Litli Hrutur, offrant des paysages de laves noires et fumantes. Fin de journée au Blue Lagoon, une expérience dans des eaux turquoises à 39°C. Dîner libre, l'occasion de s'initier à la gastronomie locale. ",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/fyfnJy69TBmXCO1DWFy6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS EN ISLANDE",
+      "badgeText": "JOUR 8",
+      "description": "Après une semaine pleine de découvertes et une dernière nuit à Reykjavik, un transfert vous conduira de l'hôtel à l'aéroport afin de prendre votre vol retour. ",
+      "photo": "/images/voyages/islande-nature-aurores-boreales/vnqWa1JRR2ZdkzZO7yf9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts aéroport et déplacements selon le programme",
+      "L'hébergement base double en Guest House ou en auberge (hors nuit du J3 en dortoir non mixte de 6 voyageurs maximum. Pas de dortoir partagés avec des voyageurs ne faisant pas partie du groupe)",
+      "La pension complète (hors dîners du jour 1, 2, 6, 7)",
+      "L'encadrement par un guide accompagnateur francophone spécialiste de la destination",
+      "Le prêt des raquettes / bâtons",
+      "Les activités suivantes : visite d'un tunnel de lave; marche sur le glacier et visite d'une grotte de glace; entrée au  \nBlue Lagoon; entrée au bain \"Secret Lagoon\"; entrée au musée : \"the Lava centre\""
+    ],
+    "exclude": [
+      "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
+      "Les activités optionnelles au choix",
+      "Les repas non inclus (20 à 60€ par personne et par repas non inclus)",
+      "Les dépenses personnelles et boissons (autres que le thé ou le café toujours inclus avec les repas inclus)",
+      "Le pourboire aux guides et aux chauffeurs",
+      "Le supplément \"chambre individuelle\" (possible uniquement à Reykjavik - 75€ par nuit et par personne)",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2970,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "KEF"
+    ]
+  },
+  "accompanistsDescription": "A votre arrivée à l'aéroport de Reykjavik, vous serez accueillis par votre guide accompagnateur islandais francophone qui vous accompagnera pendant toute la durée du voyage. Le guide est polyvalent, pouvant à la fois s'occuper de l'encadrement du séjour, de la conduite ainsi que de la cuisine afin d'assurer dans les meilleures conditions le déroulement et de rendre possible le voyage que nous vous proposons.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Guest house et ferme-auberge",
+      "housingType": "",
+      "housingMood": "Vous découvrirez, pendant cet itinéraire, les différents hébergements sélectionnés dans cet esprit de partage et de respect de la nature islandaise. Vous débuterez votre séjour par Reykjavik où vous serez accueillis dans une Guest House, avant de vous aventurer en pleine nature pour quelques nuits dans une ferme-auberge perdue au milieu des grands espaces, loin de toute agitation. Un retour à l'essentiel qui vous permettra d'apprécier pleinement la découverte de cet état insulaire. ",
+      "image": [
+        {
+          "src": "/images/voyages/islande-nature-aurores-boreales/4tfObeYuT9GJ6STQTBQU.jpg",
+          "alt": "image de l'hébergement Islande sauvage : Terre de feu et de glace"
+        },
+        {
+          "src": "/images/voyages/islande-nature-aurores-boreales/GCOIprMxTTuR4aCNsMoG.jpg",
+          "alt": "image de l'hébergement Islande sauvage : Terre de feu et de glace"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/islande-nature-aurores-boreales/2ESIsFijT9q3P4xUjuPs.jpg",
     "alt": "image principale du voyage Islande sauvage : Terre de feu et de glace"
@@ -58,116 +243,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "L’Islande, le pays des grands espaces, vous accueille en ses terres encore brutes et préservées pour une immersion hors du temps, une déconnexion totale là où les vastes étendues sauvages dévoilent leurs secrets. Ressentez la puissance de la nature islandaise à travers ses terres contrastées et grandioses. \n\nVous vivrez ce sentiment de se sentir si petit face à ces vastes espaces, de se rendre compte de la puissance de la nature, créant ses paysages si diversifiés sur une seule et même île : geyser, cascades, sources d'eau chaude, glaciers et autres sites volcaniques ne manqueront pas de vous surprendre tout au long de ce voyage !\n\nLaissez-vous emporter par la sérénité locale où le tumulte de la vie quotidienne s'estompe, laissant place à la paix profonde des fjords isolés, des sources chaudes et des aurores boréales enchanteresses.\n\nAssurément, l'Islande est un autre espace-temps !",
-    "author": "Lucie",
-    "affixeAuthor": "Responsable voyageurs"
-  },
-  "experiencesBlock": [
-    "Vivez l'intensité des paysages : glaciers, volcans, plages de sable noir...",
-    "Observez la magie des aurores boréales",
-    "Détendez-vous dans les sources d'eau chaude naturelles",
-    "Laissez-vous porter par la quiétude des grands espaces",
-    "Partagez des moments de convivialité avec le guide et les autres voyageurs"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE EN ISLANDE",
-      "badgeText": "JOUR 1",
-      "description": "Arrivée en Islande, \"pays du feu et de glace\". Accueil par notre équipe francophone à l'aéroport international de Keflavik et transfert jusqu'à la capitale islandaise, Reykjavik. Installation à votre hébergement pour les deux prochaines nuits. Visite libre de la ville, le temps de flâner, s'imprégner de l'ambiance locale et choisir le lieu de votre dîner.",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/htXzHbSeQbCtPuMhXIoX.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PAYSAGES UNIQUES DU CERCLE D'OR",
-      "badgeText": "JOUR 2",
-      "description": "Départ matinal vers le Cercle d'Or pour profiter des lieux encore peu fréquentés. Commencez par Thingvellir où une randonnée vous guide entre cascades et canyons. Poursuivez avec le spectacle du geyser Strokkur et admirez la puissante cascade Gullfoss, se jetant dans un ravin orné de formations volcaniques. En après-midi, détendez vous dans les sources d'eaux chaudes du \"Secret Lagoon\" au milieu de la nature.",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/Vc2VkysHQp2vP0baPKop.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EXPLORATION DES TERRES VOLCANIQUES",
-      "badgeText": "JOUR 3",
-      "description": "Ce matin, suivez votre guide dans les profondeurs de la Terre ! Vous explorerez Raufarhólshellir, l'un des plus longs tunnels de lave d'Islande. Votre aventure le long de la côte sud islandaise se poursuit avec l'éblouissante cascade de Skogafoss et la découverte du village de Vik, avec ses plages de sable noir et ses formations de basalte sculptées par les vagues. En soirée, gardez les yeux ouverts, car vous pourriez être témoin des aurores boréales qui illuminent le ciel.",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/qxDKimRz6U2FA3oxH8LQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CAP VERS LES GLACIERS",
-      "badgeText": "JOUR 4",
-      "description": "Voyage vers l'est, jusqu'au majestueux Vatnajökull, le plus grand glacier d'Europe. Suivez le sentier sinueux, grimpant vers des points de vue spectaculaires sur les glaciers et les sommets islandais.  Installation dans votre hébergement pour deux nuits. Comme chaque soir, scrutez le ciel attentivement ; si les étoiles brillent et l'activité solaire est haute, l'extraordinaire spectacle des aurores boréales vous attend dehors.",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/bCplgRG0QZWBCpUB0c3Z.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MAGIE DES PAYSAGES GLACÉS",
-      "badgeText": "JOUR 5",
-      "description": "Explorez la calotte glaciaire du Vatnajökull, crampons aux pieds, une grotte de glace féerique, éphémère et scintillante. Déjeunez au chaud avant de passer l'après-midi près des icebergs à Jökulsárlón, où ces géants bleus et blancs s'animent, se brisent. Enfin, les icebergs translucides sur la plage de sable noir de Diamond Beach créent un spectacle photogénique. Une journée inoubliable sous le règne de la glace vous attend !",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/7fSZXWADR8GV9UrG3ZtT.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BAIGNADE DANS LES SOURCES D'EAU CHAUDE",
-      "badgeText": "JOUR 6",
-      "description": "Il est temps de dire au revoir aux glaciers et aux icebergs pour reprendre la route. Une escale à Hvolsvöllur vous permet de découvrir le musée de la lave qui dévoile les mystères des phénomènes volcaniques islandais. Vous traversez ensuite les landes et les paysages volcaniques de Hveragerdi avant de revenir à la capitale nordique. Pour conclure cette journée en beauté, rien de tel qu'une immersion dans une piscine islandaise, au rythme de la vie des locaux.",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/5PY9OVctSlSlZPdSxiOD.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "REYKJAVIK ET SA NATURE ENVIRONNANTE",
-      "badgeText": "JOUR 7",
-      "description": "Le matin, choisissez entre flâner dans Reykjavík, observer les baleines ou faire une balade équestre (options en supplément). Après le déjeuner, partez explorer la péninsule de Reykjanes, marquée par l'éruption de 2023 du Litli Hrutur, offrant des paysages de laves noires et fumantes. Fin de journée au Blue Lagoon, une expérience dans des eaux turquoises à 39°C. Dîner libre, l'occasion de s'initier à la gastronomie locale. ",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/fyfnJy69TBmXCO1DWFy6.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS INSTANTS EN ISLANDE",
-      "badgeText": "JOUR 8",
-      "description": "Après une semaine pleine de découvertes et une dernière nuit à Reykjavik, un transfert vous conduira de l'hôtel à l'aéroport afin de prendre votre vol retour. ",
-      "photo": "/images/voyages/islande-nature-aurores-boreales/vnqWa1JRR2ZdkzZO7yf9.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "A votre arrivée à l'aéroport de Reykjavik, vous serez accueillis par votre guide accompagnateur islandais francophone qui vous accompagnera pendant toute la durée du voyage. Le guide est polyvalent, pouvant à la fois s'occuper de l'encadrement du séjour, de la conduite ainsi que de la cuisine afin d'assurer dans les meilleures conditions le déroulement et de rendre possible le voyage que nous vous proposons.",
-  "housingBlock": [
-    {
-      "title": "Guest house et ferme-auberge",
-      "housingType": "",
-      "housingMood": "Vous découvrirez, pendant cet itinéraire, les différents hébergements sélectionnés dans cet esprit de partage et de respect de la nature islandaise. Vous débuterez votre séjour par Reykjavik où vous serez accueillis dans une Guest House, avant de vous aventurer en pleine nature pour quelques nuits dans une ferme-auberge perdue au milieu des grands espaces, loin de toute agitation. Un retour à l'essentiel qui vous permettra d'apprécier pleinement la découverte de cet état insulaire. ",
-      "image": [
-        {
-          "src": "/images/voyages/islande-nature-aurores-boreales/4tfObeYuT9GJ6STQTBQU.jpg",
-          "alt": "image de l'hébergement Islande sauvage : Terre de feu et de glace"
-        },
-        {
-          "src": "/images/voyages/islande-nature-aurores-boreales/GCOIprMxTTuR4aCNsMoG.jpg",
-          "alt": "image de l'hébergement Islande sauvage : Terre de feu et de glace"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les transferts aéroport et déplacements selon le programme",
-      "L'hébergement base double en Guest House ou en auberge (hors nuit du J3 en dortoir non mixte de 6 voyageurs maximum. Pas de dortoir partagés avec des voyageurs ne faisant pas partie du groupe)",
-      "La pension complète (hors dîners du jour 1, 2, 6, 7)",
-      "L'encadrement par un guide accompagnateur francophone spécialiste de la destination",
-      "Le prêt des raquettes / bâtons",
-      "Les activités suivantes : visite d'un tunnel de lave; marche sur le glacier et visite d'une grotte de glace; entrée au  \nBlue Lagoon; entrée au bain \"Secret Lagoon\"; entrée au musée : \"the Lava centre\""
-    ],
-    "exclude": [
-      "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
-      "Les activités optionnelles au choix",
-      "Les repas non inclus (20 à 60€ par personne et par repas non inclus)",
-      "Les dépenses personnelles et boissons (autres que le thé ou le café toujours inclus avec les repas inclus)",
-      "Le pourboire aux guides et aux chauffeurs",
-      "Le supplément \"chambre individuelle\" (possible uniquement à Reykjavik - 75€ par nuit et par personne)",
-      "L'assurance annulation ou multirisques"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -208,27 +283,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2865,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "KEF"
-    ]
+  "seo": {
+    "metaTitle": "Islande sauvage : Terre de feu et de glace",
+    "canonicalUrl": "https://www.odysway.com/voyages/islande-nature-aurores-boreales",
+    "ogTitle": "Islande sauvage : Terre de feu et de glace",
+    "ogDescription": "Envie d'un voyage aux milles contrastes? Cap vers le Nord, direction l'Islande. La richesse des terres crée d’étonnants lieux naturels à explorer qui ne laissent pas indifférents. ",
+    "ogImage": {
+      "src": "/images/voyages/islande-nature-aurores-boreales/2ESIsFijT9q3P4xUjuPs.jpg",
+      "alt": "image principale du voyage Islande sauvage : Terre de feu et de glace"
+    },
+    "twitterTitle": "Islande sauvage : Terre de feu et de glace",
+    "twitterDescription": "Envie d'un voyage aux milles contrastes? Cap vers le Nord, direction l'Islande. La richesse des terres crée d’étonnants lieux naturels à explorer qui ne laissent pas indifférents. ",
+    "twitterImage": {
+      "src": "/images/voyages/islande-nature-aurores-boreales/2ESIsFijT9q3P4xUjuPs.jpg",
+      "alt": "image principale du voyage Islande sauvage : Terre de feu et de glace"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

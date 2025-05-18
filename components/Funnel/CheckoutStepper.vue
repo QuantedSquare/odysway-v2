@@ -191,6 +191,17 @@ provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
 // ================== Page ==================
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 // console.log('page', page.value)
+const date = ref(null)
+
+const fetchDetails = async () => {
+  // Fetch travel_date details
+  const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`)
+  const data = await res.json()
+  date.value = data
+  console.log('=======form RETRIEVED=======', date.value)
+
+  loading.value = false
+}
 
 // ================== Voyage ==================
 // If slug, you're coming from travel page, otherwise, coming from custom link
@@ -200,7 +211,8 @@ const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + rou
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (slug) {
     console.log('slug', slug)
-    const query = await queryCollection('deals').where('slug', '=', slug).first()
+    const query = await queryCollection('voyages').where('slug', '==', slug).first()
+    fetchDetails(query)
     if (!query) {
       throw new Error('Deal not found.')
     }

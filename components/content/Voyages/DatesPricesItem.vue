@@ -121,7 +121,7 @@
               block
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
-              @click="goTo('#dates-container', { offset: -200 })"
+              :to="formatLink(enrichedDate)"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Réserver
@@ -213,6 +213,12 @@ const getStatus = (date) => {
 }
 const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+const formatLink = (date) => {
+  const in30days = dayjs().add(30, 'day')
+  const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
+  return `/checkout?slug=${date.travel_slug}&date_id=${date.id}&departure_date=${dayjs(date.departure_date).format('YYYY-MM-DD')}&return_date=${dayjs(date.return_date).format('YYYY-MM-DD')}&type=${checkoutType}`
 }
 </script>
 

@@ -29,8 +29,11 @@
         :description="destination.titre"
       >
         <template #title>
-          <NuxtLink :to="`/destinations/${destination.slug}`">
-            <h3 class="text-primary text-decoration-none">
+          <NuxtLink
+            :to="`/destinations/${destination.slug}`"
+            class="text-primary"
+          >
+            <h3 class="text-primary ">
               {{ destination.titre }}
             </h3>
           </NuxtLink>
@@ -73,7 +76,7 @@ const destinationsWithVoyages = computed(() => {
   return destinations.value.map(destination => ({
     ...destination,
     voyages: voyages.value.filter(voyage =>
-      voyage.destinations && voyage.destinations.includes(destination.titre),
+      voyage.destinations && voyage.destinations.some(d => d.name.includes(destination.titre)),
     ),
   }))
 })

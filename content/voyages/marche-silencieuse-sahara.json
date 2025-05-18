@@ -1,47 +1,261 @@
 {
   "published": true,
   "title": "Marche silencieuse et immersion nomade dans le sahara marocain",
-  "slug": "marche-silencieuse-sahara",
-  "rating": 5,
-  "comments": 4,
-  "description": "Odysway vous propose de vivre une aventure immersive au cœur du Sahara marocain, là où le silence et les dunes infinies façonnent un décor époustouflant. Ce voyage vous plonge dans le quotidien des nomades du désert, vous permettant de découvrir un mode de vie empreint de simplicité et de sagesse ancestrale. Conçu pour ceux qui cherchent à se déconnecter du rythme de la vie moderne, ce périple dévoile un Sahara méconnu, où chaque moment devient une opportunité de se reconnecter à soi-même.\n\nÀ la tombée de la nuit, installez-vous sous un ciel étoilé à couper le souffle, tandis que le bivouac, érigé à même le sable, devient votre refuge pour la nuit. Pour enrichir cette expérience, une sophrologue, Pascale, vous accompagnera, en vous initiant à des techniques de relaxation et de pleine conscience, vous permettant ainsi une immersion totale dans cet environnement unique.\n\nVivez au rythme des nomades, en partageant des moments authentiques et en savourant la tranquillité des vastes étendues de sable. Ce voyage est une véritable invitation à ralentir, à contempler la beauté brute du Sahara et à écouter les histoires des habitants du désert qui partageront avec vous leur héritage et leurs traditions.",
-  "emailDescription": "👉 Si vous souhaitez vivre un voyage initiatique à travers le Sahara dans un cadre de paix et sérénité; et partager des moments uniques avec les nomades du désert, ce voyage est fait pour vous ! 🐪",
-  "metaDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
-  "interjection": "au",
   "destinations": [
-    "Maroc"
+    {
+      "name": "Maroc",
+      "slug": "maroc"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "voyage-initiatique"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-initiatique"
+    }
   ],
   "duration": 8,
   "nights": 7,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": true,
+  "housingType": "Bivouac, hôtel",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 4,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Odysway vous propose de vivre une aventure immersive au cœur du Sahara marocain, là où le silence et les dunes infinies façonnent un décor époustouflant. Ce voyage vous plonge dans le quotidien des nomades du désert, vous permettant de découvrir un mode de vie empreint de simplicité et de sagesse ancestrale. Conçu pour ceux qui cherchent à se déconnecter du rythme de la vie moderne, ce périple dévoile un Sahara méconnu, où chaque moment devient une opportunité de se reconnecter à soi-même.\n\nÀ la tombée de la nuit, installez-vous sous un ciel étoilé à couper le souffle, tandis que le bivouac, érigé à même le sable, devient votre refuge pour la nuit. Pour enrichir cette expérience, une sophrologue, Pascale, vous accompagnera, en vous initiant à des techniques de relaxation et de pleine conscience, vous permettant ainsi une immersion totale dans cet environnement unique.\n\nVivez au rythme des nomades, en partageant des moments authentiques et en savourant la tranquillité des vastes étendues de sable. Ce voyage est une véritable invitation à ralentir, à contempler la beauté brute du Sahara et à écouter les histoires des habitants du désert qui partageront avec vous leur héritage et leurs traditions.",
+    "author": "Romain",
+    "affixeAuthor": "fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Une retraite au rythme du désert, alternant marches silencieuses et moments d'introspection. Lisez, méditez, contemplez, et laissez-vous imprégner par la quiétude des dunes",
+    "Environ 5 heures de marche par jour et des pratiques de détente au lever ou au coucher du soleil pour éveiller votre corps en douceur",
+    "La rencontre avec les nomades, vos guides pendant la marche, ainsi qu'avec Pascale, votre accompagnatrice sophrologue",
+    "La dégustation de repas cuisinés au feu de bois et des encas gourmands lors de vos haltes",
+    "Les nuits sous le ciel étoilé lors des bivouacs"
+  ],
+  "slug": "marche-silencieuse-sahara",
+  "description": "Odysway vous propose de vivre une aventure immersive au cœur du Sahara marocain, là où le silence et les dunes infinies façonnent un décor époustouflant. Ce voyage vous plonge dans le quotidien des nomades du désert, vous permettant de découvrir un mode de vie empreint de simplicité et de sagesse ancestrale. Conçu pour ceux qui cherchent à se déconnecter du rythme de la vie moderne, ce périple dévoile un Sahara méconnu, où chaque moment devient une opportunité de se reconnecter à soi-même.\n\nÀ la tombée de la nuit, installez-vous sous un ciel étoilé à couper le souffle, tandis que le bivouac, érigé à même le sable, devient votre refuge pour la nuit. Pour enrichir cette expérience, une sophrologue, Pascale, vous accompagnera, en vous initiant à des techniques de relaxation et de pleine conscience, vous permettant ainsi une immersion totale dans cet environnement unique.\n\nVivez au rythme des nomades, en partageant des moments authentiques et en savourant la tranquillité des vastes étendues de sable. Ce voyage est une véritable invitation à ralentir, à contempler la beauté brute du Sahara et à écouter les histoires des habitants du désert qui partageront avec vous leur héritage et leurs traditions.",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage initiatique à travers le Sahara dans un cadre de paix et sérénité; et partager des moments uniques avec les nomades du désert, ce voyage est fait pour vous ! 🐪",
+  "metaDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 4 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "Hôtel, bivouac",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Oct à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVÉE À OUARZAZATE",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée en matinée, vous serez chaleureusement accueilli par votre guide francophone qui vous accompagnera jusqu'à votre hôtel pour que vous puissiez vous installer et vous détendre. Après votre repos, notre guide vous emmènera pour une visite immersive d'Ait Ben Haddou et de ses environs. Vous découvrirez ce site spectaculaire, célèbre pour ses montagnes aux couleurs fascinantes et ses oasis.",
+      "photo": "/images/voyages/marche-silencieuse-sahara/5UqN13B0SISuHttVXBf9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIÈRE NUIT DANS LE DÉSERT",
+      "badgeText": "JOUR 2",
+      "description": "Vous emprunterez la route du désert en suivant la splendide vallée du Draa, un voyage ponctué de paysages à couper le souffle. En soirée, vous arriverez aux portes du Sahara, où vous serez invité à savourer un plat local authentique. Vous passerez ensuite votre première nuit sous les étoiles dans tente confortable en plein désert, offrant une immersion unique dans cette vaste étendue de sable.",
+      "photo": "/images/voyages/marche-silencieuse-sahara/1WGKKDFASyyJiWzE8FJW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉBUT DE LA MARCHE",
+      "badgeText": "JOUR 3",
+      "description": "Encadrée par les guides et leurs dromadaires et votre accompagnatrice Pascale, la caravane démarre. Nous sommes invités à marcher en silence, et laisser au désert la possibilité de faire son travail en nous. La force du paysage, essentiellement minéral et dépouillé, révèle, comme par un jeu de miroir, notre force propre, notre simplicité première, et nous conduit au silence intérieur, source de paix et de plénitude. Marcher, méditer, contempler, dans ces étendues ouvertes et vides, nous apporte calme et sérénité.",
+      "photo": "/images/voyages/marche-silencieuse-sahara/80P4qGTSSuGDzOfcXmiv.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE SILENCE DANS LE SAHARA",
+      "badgeText": "JOURS 4 À 6",
+      "description": "Pendant quatre jours, vous marcherez en silence chaque jour. Chaque matin, Pascale vous guidera dans des exercices de respiration et d’éveil corporel. L’objectif est de vivre chaque instant en pleine conscience, pour apporter sérénité et favoriser des échanges authentiques. Profitez de cette pause pour ralentir, respirer et vous éloigner du rythme quotidien. Ce séjour sera également l'occasion d'échanger avec les guides et chameliers, qui vous offriront un accueil chaleureux et partageront avec vous leurs compétences et leur présence.",
+      "photo": "/images/voyages/marche-silencieuse-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER RÉVEIL DANS LE SAHARA",
+      "badgeText": "JOUR 7",
+      "description": "Il est temps de quitter le désert, avec peut-être l'envie de revenir un jour. Nous reprenons doucement la route vers Ouarzazate pour la prochaine étape. Pour chérir notre corps après ces journées de marche, une séance de hammam est prévue. Profitez de ce moment pour vous détendre et repartir ressourcé de ce séjour.",
+      "photo": "/images/voyages/marche-silencieuse-sahara/PjCaoXw9SdSA9P69ZAV8.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FIN DE VOTRE SÉJOUR",
+      "badgeText": "JOUR 8",
+      "description": "À la fin de l’expérience, vous pourrez retourner en France ou continuer votre séjour au Maroc. N’hésitez pas à nous contacter pour organiser une extension de votre voyage selon vos souhaits.",
+      "photo": "/images/voyages/marche-silencieuse-sahara/2PHPgID9RcCW9AEGPrt6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport par votre guide et le transfert à l'hôtel",
+      "L'hébergement en hôtel à Ouarzazate",
+      "L'hébergement en bivouac dans le désert (tente) et les couvertures",
+      "Les repas dans le désert (à base de produits frais et cuisinés au feu de bois) et la demi-pension à Ouarzazate (petit-déjeuner et dîner)",
+      "L'eau pour votre marche, thés à la menthe et collations (dattes, noix, fruits secs)",
+      "L'excursion à Aït Ben Haddou et les excursions mentionnées dans le programme",
+      "L'accompagnement par Pascale, sophrologue",
+      "L'accompagnement par les guides locaux, nomades sahraouis et leurs dromadaires qui porteront vos sacs, couettes, couvertures, eau et nourriture.",
+      "La séance Hamman en fin de séjour pour vous relaxer après les jours dans le désert"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Ouarzazate et les taxes d’aéroport",
+      "Les activités ou soins non compris dans la section \"le prix comprend\"",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles et pourboires",
+      "Un duvet / Sac à viande"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1391,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 4,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Votre accompagnement sera assuré par des guides marocains francophones, véritables connaisseurs du désert, et par Pascale, sophrologue. À votre arrivée à l’aéroport, vous serez conduit à votre hôtel puis jusqu’à M’Hamid (4 heures de route), point de départ de votre marche dans le désert. Les guides sahraouis, experts du terrain, veilleront à votre confort et sécurité, en vous aidant à monter les tentes, à cuisiner et à vous soigner si besoin.",
+  "accompanistsList": [
+    {
+      "name": "Pascale",
+      "description": "Pascale propose un accompagnement par la marche contemplative, en s’appuyant sur sa formation en psychologie, sophrologie et son parcours personnel dans la ligne d'Arnaud Desjardins. Elle guide les participants vers leur intériorité par l’observation bienveillante des pensées, émotions et sensations, tout en laissant le désert inspirer ce cheminement. À travers le silence, la méditation et des discussions, chacun apprend à se familiariser avec de nouvelles clés pour vivre dans le moment présent et développer une connaissance de soi, en acquérant une autonomie durable après le séjour.",
+      "role": "Accompagnatrice sophrologue",
+      "image": "/images/voyages/marche-silencieuse-sahara/dpcBur1YRE6k1uQJ0NYp.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Bivouac, hôtel",
+      "housingType": "",
+      "housingMood": "Pendant ce séjour, vous dormirez à Ouarzazate dans un hôtel 2*/3* du centre ville, en base double. Vous dormirez en bivouac (sous tente et sur un matelas) pendant les nuits dans le désert, cette fois avec des millions d'étoiles (dans le ciel !). Ne vous en faîtes pas, vous dormirez bien , les nuits sont fraiches mais des couvertures vous seront données. Et rien de mieux que le calme du désert pour vous ressourcer !",
+      "image": [
+        {
+          "src": "/images/voyages/marche-silencieuse-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg",
+          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
+        },
+        {
+          "src": "/images/voyages/marche-silencieuse-sahara/hVDy0zpQ8yFEhVxOvw9t.jpg",
+          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
+        },
+        {
+          "src": "/images/voyages/marche-silencieuse-sahara/ItfrMkgsQlGb3vkj6NP8.jpg",
+          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
+        },
+        {
+          "src": "/images/voyages/marche-silencieuse-sahara/nHdSwJER4mqHHQx1JdTl.jpg",
+          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/marche-silencieuse-sahara/SVKLuIkSxeJ9WX0fEbrP.jpg",
     "alt": "image principale du voyage Marche silencieuse et immersion nomade dans le sahara marocain"
@@ -93,118 +307,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Odysway vous propose de vivre une aventure immersive au cœur du Sahara marocain, là où le silence et les dunes infinies façonnent un décor époustouflant. Ce voyage vous plonge dans le quotidien des nomades du désert, vous permettant de découvrir un mode de vie empreint de simplicité et de sagesse ancestrale. Conçu pour ceux qui cherchent à se déconnecter du rythme de la vie moderne, ce périple dévoile un Sahara méconnu, où chaque moment devient une opportunité de se reconnecter à soi-même.\n\nÀ la tombée de la nuit, installez-vous sous un ciel étoilé à couper le souffle, tandis que le bivouac, érigé à même le sable, devient votre refuge pour la nuit. Pour enrichir cette expérience, une sophrologue, Pascale, vous accompagnera, en vous initiant à des techniques de relaxation et de pleine conscience, vous permettant ainsi une immersion totale dans cet environnement unique.\n\nVivez au rythme des nomades, en partageant des moments authentiques et en savourant la tranquillité des vastes étendues de sable. Ce voyage est une véritable invitation à ralentir, à contempler la beauté brute du Sahara et à écouter les histoires des habitants du désert qui partageront avec vous leur héritage et leurs traditions.",
-    "author": "Romain",
-    "affixeAuthor": "fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Une retraite au rythme du désert, alternant marches silencieuses et moments d'introspection. Lisez, méditez, contemplez, et laissez-vous imprégner par la quiétude des dunes",
-    "Environ 5 heures de marche par jour et des pratiques de détente au lever ou au coucher du soleil pour éveiller votre corps en douceur",
-    "La rencontre avec les nomades, vos guides pendant la marche, ainsi qu'avec Pascale, votre accompagnatrice sophrologue",
-    "La dégustation de repas cuisinés au feu de bois et des encas gourmands lors de vos haltes",
-    "Les nuits sous le ciel étoilé lors des bivouacs"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVÉE À OUARZAZATE",
-      "badgeText": "JOUR 1",
-      "description": "À votre arrivée en matinée, vous serez chaleureusement accueilli par votre guide francophone qui vous accompagnera jusqu'à votre hôtel pour que vous puissiez vous installer et vous détendre. Après votre repos, notre guide vous emmènera pour une visite immersive d'Ait Ben Haddou et de ses environs. Vous découvrirez ce site spectaculaire, célèbre pour ses montagnes aux couleurs fascinantes et ses oasis.",
-      "photo": "/images/voyages/marche-silencieuse-sahara/5UqN13B0SISuHttVXBf9.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIÈRE NUIT DANS LE DÉSERT",
-      "badgeText": "JOUR 2",
-      "description": "Vous emprunterez la route du désert en suivant la splendide vallée du Draa, un voyage ponctué de paysages à couper le souffle. En soirée, vous arriverez aux portes du Sahara, où vous serez invité à savourer un plat local authentique. Vous passerez ensuite votre première nuit sous les étoiles dans tente confortable en plein désert, offrant une immersion unique dans cette vaste étendue de sable.",
-      "photo": "/images/voyages/marche-silencieuse-sahara/1WGKKDFASyyJiWzE8FJW.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉBUT DE LA MARCHE",
-      "badgeText": "JOUR 3",
-      "description": "Encadrée par les guides et leurs dromadaires et votre accompagnatrice Pascale, la caravane démarre. Nous sommes invités à marcher en silence, et laisser au désert la possibilité de faire son travail en nous. La force du paysage, essentiellement minéral et dépouillé, révèle, comme par un jeu de miroir, notre force propre, notre simplicité première, et nous conduit au silence intérieur, source de paix et de plénitude. Marcher, méditer, contempler, dans ces étendues ouvertes et vides, nous apporte calme et sérénité.",
-      "photo": "/images/voyages/marche-silencieuse-sahara/80P4qGTSSuGDzOfcXmiv.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE SILENCE DANS LE SAHARA",
-      "badgeText": "JOURS 4 À 6",
-      "description": "Pendant quatre jours, vous marcherez en silence chaque jour. Chaque matin, Pascale vous guidera dans des exercices de respiration et d’éveil corporel. L’objectif est de vivre chaque instant en pleine conscience, pour apporter sérénité et favoriser des échanges authentiques. Profitez de cette pause pour ralentir, respirer et vous éloigner du rythme quotidien. Ce séjour sera également l'occasion d'échanger avec les guides et chameliers, qui vous offriront un accueil chaleureux et partageront avec vous leurs compétences et leur présence.",
-      "photo": "/images/voyages/marche-silencieuse-sahara/PG4BtyQKT0VsbYQ2ReT9.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIER RÉVEIL DANS LE SAHARA",
-      "badgeText": "JOUR 7",
-      "description": "Il est temps de quitter le désert, avec peut-être l'envie de revenir un jour. Nous reprenons doucement la route vers Ouarzazate pour la prochaine étape. Pour chérir notre corps après ces journées de marche, une séance de hammam est prévue. Profitez de ce moment pour vous détendre et repartir ressourcé de ce séjour.",
-      "photo": "/images/voyages/marche-silencieuse-sahara/PjCaoXw9SdSA9P69ZAV8.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FIN DE VOTRE SÉJOUR",
-      "badgeText": "JOUR 8",
-      "description": "À la fin de l’expérience, vous pourrez retourner en France ou continuer votre séjour au Maroc. N’hésitez pas à nous contacter pour organiser une extension de votre voyage selon vos souhaits.",
-      "photo": "/images/voyages/marche-silencieuse-sahara/2PHPgID9RcCW9AEGPrt6.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Pascale",
-      "description": "Pascale propose un accompagnement par la marche contemplative, en s’appuyant sur sa formation en psychologie, sophrologie et son parcours personnel dans la ligne d'Arnaud Desjardins. Elle guide les participants vers leur intériorité par l’observation bienveillante des pensées, émotions et sensations, tout en laissant le désert inspirer ce cheminement. À travers le silence, la méditation et des discussions, chacun apprend à se familiariser avec de nouvelles clés pour vivre dans le moment présent et développer une connaissance de soi, en acquérant une autonomie durable après le séjour.",
-      "role": "Accompagnatrice sophrologue",
-      "image": "/images/voyages/marche-silencieuse-sahara/dpcBur1YRE6k1uQJ0NYp.jpg"
-    }
-  ],
-  "accompanistsDescription": "Votre accompagnement sera assuré par des guides marocains francophones, véritables connaisseurs du désert, et par Pascale, sophrologue. À votre arrivée à l’aéroport, vous serez conduit à votre hôtel puis jusqu’à M’Hamid (4 heures de route), point de départ de votre marche dans le désert. Les guides sahraouis, experts du terrain, veilleront à votre confort et sécurité, en vous aidant à monter les tentes, à cuisiner et à vous soigner si besoin.",
-  "housingBlock": [
-    {
-      "title": "Bivouac, hôtel",
-      "housingType": "",
-      "housingMood": "Pendant ce séjour, vous dormirez à Ouarzazate dans un hôtel 2*/3* du centre ville, en base double. Vous dormirez en bivouac (sous tente et sur un matelas) pendant les nuits dans le désert, cette fois avec des millions d'étoiles (dans le ciel !). Ne vous en faîtes pas, vous dormirez bien , les nuits sont fraiches mais des couvertures vous seront données. Et rien de mieux que le calme du désert pour vous ressourcer !",
-      "image": [
-        {
-          "src": "/images/voyages/marche-silencieuse-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg",
-          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
-        },
-        {
-          "src": "/images/voyages/marche-silencieuse-sahara/hVDy0zpQ8yFEhVxOvw9t.jpg",
-          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
-        },
-        {
-          "src": "/images/voyages/marche-silencieuse-sahara/ItfrMkgsQlGb3vkj6NP8.jpg",
-          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
-        },
-        {
-          "src": "/images/voyages/marche-silencieuse-sahara/nHdSwJER4mqHHQx1JdTl.jpg",
-          "alt": "image de l'hébergement Marche silencieuse et immersion nomade dans le sahara marocain"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil à l'aéroport par votre guide et le transfert à l'hôtel",
-      "L'hébergement en hôtel à Ouarzazate",
-      "L'hébergement en bivouac dans le désert (tente) et les couvertures",
-      "Les repas dans le désert (à base de produits frais et cuisinés au feu de bois) et la demi-pension à Ouarzazate (petit-déjeuner et dîner)",
-      "L'eau pour votre marche, thés à la menthe et collations (dattes, noix, fruits secs)",
-      "L'excursion à Aït Ben Haddou et les excursions mentionnées dans le programme",
-      "L'accompagnement par Pascale, sophrologue",
-      "L'accompagnement par les guides locaux, nomades sahraouis et leurs dromadaires qui porteront vos sacs, couettes, couvertures, eau et nourriture.",
-      "La séance Hamman en fin de séjour pour vous relaxer après les jours dans le désert"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Ouarzazate et les taxes d’aéroport",
-      "Les activités ou soins non compris dans la section \"le prix comprend\"",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles et pourboires",
-      "Un duvet / Sac à viande"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -245,24 +347,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1295,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 4,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Marche silencieuse et immersion nomade dans le sahara marocain",
+    "canonicalUrl": "https://www.odysway.com/voyages/marche-silencieuse-sahara",
+    "ogTitle": "Marche silencieuse et immersion nomade dans le sahara marocain",
+    "ogDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
+    "ogImage": {
+      "src": "/images/voyages/marche-silencieuse-sahara/SVKLuIkSxeJ9WX0fEbrP.jpg",
+      "alt": "image principale du voyage Marche silencieuse et immersion nomade dans le sahara marocain"
+    },
+    "twitterTitle": "Marche silencieuse et immersion nomade dans le sahara marocain",
+    "twitterDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
+    "twitterImage": {
+      "src": "/images/voyages/marche-silencieuse-sahara/SVKLuIkSxeJ9WX0fEbrP.jpg",
+      "alt": "image principale du voyage Marche silencieuse et immersion nomade dans le sahara marocain"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

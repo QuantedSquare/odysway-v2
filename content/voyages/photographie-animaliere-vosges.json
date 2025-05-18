@@ -1,38 +1,205 @@
 {
   "published": true,
   "title": "En immersion avec un photographe animalier dans les Vosges",
-  "slug": "photographie-animaliere-vosges",
-  "rating": 5,
-  "comments": 2,
-  "description": "Plongez au cœur des paysages uniques des Vosges lors d’un séjour de 4 jours entièrement dédié à la photographie animalière. Ce séjour axé débutant vous immerge au cœur de divers milieux naturels, où cerfs, renards, chats sauvages, oiseaux d'eau et guêpiers se révèlent les sujets parfaits pour vos prises de vues.\n\nCe séjour, rythmé par des marches d'approches et affût, sera une expérience inoubliable pour tous les amateurs de photographie et de nature. Vous passerez ces journées en compagnie d'Aurélien, photographe animalier passionné et amoureux des Vosges. Il a hâte de vous faire découvrir la richesse de la biodiversité des Vosges, territoire sauvage qu'il parcourt depuis son enfance, fait de forêts de sapins et cours d'eau. Un séjour pour les amoureux de photographie mais aussi et surtout de la nature et des animaux !",
-  "emailDescription": "👉 Passionné/e de photographie animalière ? Partez avec Aurélien qui vous fera découvrir ses Vosges et vous aidera à observer et photographier plusieurs espèces d'animaux.",
-  "metaDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
-  "interjection": "dans les ",
   "destinations": [
-    "Vosges"
+    {
+      "name": "Vosges",
+      "slug": "vosges"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ou-partir-au-printemps",
-    "ou-partir-en-ete",
-    "partir-en-groupe",
-    "voyage-animalier",
-    "sejours-nature"
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 4,
   "nights": 3,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Gîte",
   "idealPeriods": [
-    "Mai",
-    "Juin",
-    "Juillet"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    }
   ],
   "monthlyAvailability": [
-    "Mai",
-    "Juin",
-    "Juillet"
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 2,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez pour un séjour hors des sentiers battus dans les Vosges et les plaines de Haute-Saône. Ici, la forêt s’étend à perte de vue, traversée de ruisseaux et de sentiers discrets. C’est un coin de nature encore intact, calme, où l’on prend le temps de ralentir.\n\nC’est aussi le territoire des animaux sauvages : renards, chevreuils, chats forestiers… et bien sûr, le cerf, majestueux, dont le brame résonne à l’automne. Avec respect et discrétion, vous apprendrez à les observer sans les déranger.\n\nCe séjour, c’est aussi une rencontre : celle d’Aurélien, photographe animalier et enfant du pays. Il connaît chaque recoin de ces forêts, qu’il parcourt depuis l’enfance. Il vous fera découvrir la richesse de la faune locale, et partagera avec vous sa passion de toujours : observer et photographier les animaux dans leur environnement naturel.\n\nL’affût est au cœur de cette aventure. S’installer, se fondre dans le paysage, et attendre. Un moment de silence et de concentration, où l’on devient presque invisible. \n\nAurélien vous transmettra aussi une approche profondément respectueuse : ne pas laisser de traces derrière soi, ne jamais déranger les animaux, rester discret, invisible, et toujours à bonne distance. C’est cette éthique qui donne tout son sens à l’expérience, en vous reconnectant à la nature simplement.\n\nAvec lui, vous apprendrez à lire les signes de la forêt, à reconnaître les empreintes, à comprendre les habitudes des animaux : où ils se nourrissent, où ils dorment, comment ils élèvent leurs petits.\n\nUn séjour pour celles et ceux qui aiment la nature, les animaux sauvages, et veulent prendre le temps de les découvrir autrement - avec patience, humilité, et émerveillement.",
+    "author": "Romain",
+    "affixeAuthor": "fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Observer les animaux en affût, dans des environnements variés. Un moment de silence et de pleine attention, pour vivre des rencontres rares avec cerfs, renards, sangliers et oiseaux.",
+    "Rencontrer Aurélien, photographe animalier passionné, qui connaît ce territoire depuis l’enfance et partage sa connaissance du terrain avec simplicité et générosité.",
+    "Explorer les Vosges autrement : un territoire préservé, entre forêts de sapins, plaines tranquilles et rivières discrètes, loin des sentiers touristiques.",
+    "Expérimenter une approche respectueuse de la nature : affûts discrets, pas de dérangement des animaux, pas de traces laissées derrière soi.",
+    "Vivre un stage en petit groupe, limité à 6 participants, pour garantir calme, qualité d’observation et accompagnement personnalisé.",
+    "Écouter le brame du cerf, si vous venez à l’automne : un moment intense et inoubliable au cœur de la forêt."
+  ],
+  "slug": "photographie-animaliere-vosges",
+  "description": "Partez pour un séjour hors des sentiers battus dans les Vosges et les plaines de Haute-Saône. Ici, la forêt s’étend à perte de vue, traversée de ruisseaux et de sentiers discrets. C’est un coin de nature encore intact, calme, où l’on prend le temps de ralentir.\n\nC’est aussi le territoire des animaux sauvages : renards, chevreuils, chats forestiers… et bien sûr, le cerf, majestueux, dont le brame résonne à l’automne. Avec respect et discrétion, vous apprendrez à les observer sans les déranger.\n\nCe séjour, c’est aussi une rencontre : celle d’Aurélien, photographe animalier et enfant du pays. Il connaît chaque recoin de ces forêts, qu’il parcourt depuis l’enfance. Il vous fera découvrir la richesse de la faune locale, et partagera avec vous sa passion de toujours : observer et photographier les animaux dans leur environnement naturel.\n\nL’affût est au cœur de cette aventure. S’installer, se fondre dans le paysage, et attendre. Un moment de silence et de concentration, où l’on devient presque invisible. \n\nAurélien vous transmettra aussi une approche profondément respectueuse : ne pas laisser de traces derrière soi, ne jamais déranger les animaux, rester discret, invisible, et toujours à bonne distance. C’est cette éthique qui donne tout son sens à l’expérience, en vous reconnectant à la nature simplement.\n\nAvec lui, vous apprendrez à lire les signes de la forêt, à reconnaître les empreintes, à comprendre les habitudes des animaux : où ils se nourrissent, où ils dorment, comment ils élèvent leurs petits.\n\nUn séjour pour celles et ceux qui aiment la nature, les animaux sauvages, et veulent prendre le temps de les découvrir autrement - avec patience, humilité, et émerveillement.",
+  "emailDescription": "👉 Passionné/e de photographie animalière ? Partez avec Aurélien qui vous fera découvrir ses Vosges et vous aidera à observer et photographier plusieurs espèces d'animaux.",
+  "metaDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 6 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**3 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mai à Juin",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE DANS LES VOSGES",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée libre dans les Vosges, en train ou en voiture. À partir de 15h, Aurélien vous accueille au gîte, où vous prenez le temps de vous installer.  En fin d’après-midi, il vous présente le territoire que vous allez explorer : ses forêts, ses vallons, ses habitants discrets. Il vous parlera aussi de sa passion pour la photographie animalière, et de ce qui fait, pour lui, la magie d’un affût réussi. En fin de journée, vous partez déjà pour un premier affût, à proximité du gîte. Peut-être aurez-vous la chance d’observer un cerf ou un renard dans la lumière tombante. Retour au gîte pour une première nuit en pleine nature.",
+      "photo": "/images/voyages/photographie-animaliere-vosges/uZj2OfoiSzWKEYZcy6dE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SUR LES TRACES DU CERF, ROI DES FORÊTS",
+      "badgeText": "JOUR 2",
+      "description": "Après un petit-déjeuner au gîte, départ pour un nouvel affût matinal, avec une approche discrète au cœur des forêts. Aurélien vous guidera sur les traces de son animal fétiche : le cerf. À l’automne, vous aurez peut-être la chance d’écouter son brame, un moment saisissant qui résonne dans toute la vallée. En fin de matinée, atelier pistage : apprentissage de la lecture des indices laissés par les animaux — empreintes, restes de nourriture. Retour au gîte pour un déjeuner, suivi d’un temps de repos. L’après-midi, visionnage et échanges autour des photos prises dans la matinée. En deuxième partie de journée, atelier pratique : construction d’un affût pour préparer la sortie du lendemain soir.  En fin de journée, départ pour un nouvel affût en soirée, dans la lumière tombante. Nuit au gîte.",
+      "photo": "/images/voyages/photographie-animaliere-vosges/JuFmcHjSTl6ar1uY8pUc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "L'AFFÛT EN BORD DE RIVIERE",
+      "badgeText": "JOUR 3",
+      "description": "Après le petit-déjeuner, départ pour un affût matinal en bord de Moselle. Ce coin sauvage, où la rivière serpente entre les arbres, est propice à l’observation discrète. Vous serez installés en poste fixe, bien camouflés, pour ne pas perturber la faune. Avec un peu de chance, vous pourrez observer le guêpier d’Europe, reconnaissable à son plumage coloré, ou même apercevoir le chat sauvage, maître de la discrétion. Retour au gîte dans l’après-midi, vers 16h, pour un moment de repos. Le soir, dîner partagé avec le groupe, puis départ pour un affût nocturne à proximité du gîte. Troisième nuit au gîte.",
+      "photo": "/images/voyages/photographie-animaliere-vosges/lNaAR1WxRPOmlFSEvaAo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "L'AFFÛT PRES D'UN ETANG",
+      "badgeText": "JOUR 4",
+      "description": "Après le petit-déjeuner, départ pour un dernier affût, cette fois au bord d’un étang, au terme d’une approche à travers la plaine. Ce milieu ouvert, riche en vie, est propice à l’observation des oiseaux, et parfois même du sanglier ou du renard venus s’abreuver. Vous prenez le temps de vous poser, d’observer encore une fois le calme et les mouvements de la nature, en silence. Puis vient le moment du dernier pique-nique partagé, un temps simple pour clore le séjour ensemble.  Départ en début d’après-midi, par la route ou en train, des images plein la tête.",
+      "photo": "/images/voyages/photographie-animaliere-vosges/LL7lFkWQS0SjhzJAmox6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accompagnement par Aurélien, photographe animalier passionné pendant 3 jours",
+      "Les repas du petit-déjeuner du jour 2 au petit-déjeuner du jour 4",
+      "L'hébergement dans un gîte privatisé pour le groupe"
+    ],
+    "exclude": [
+      "Le trajet pour vous rendre sur place",
+      "La location du matériel si vous n'êtes pas équipés (tarifs des locations dans la FAQ)",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 690,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 40,
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [
+    {
+      "name": "Aurélien",
+      "description": "Aurélien est un photographe animalier amoureux des Vosges. Il est passionné de nature depuis son enfance. Ce qu'il aime avant tout c'est de parcourir les forêts et plaines à la recherche de traces et indices. Son animal favori est le cerf qu'il suit tout au long de l'année.\n\n    \nIl saura vous faire découvrir avec passion la faune ainsi que la culture vosgienne.",
+      "role": "Photographe animalier",
+      "image": "/images/voyages/photographie-animaliere-vosges/bxYqJ8ZAT2q5CnpclK1B.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Gîte",
+      "housingType": "",
+      "housingMood": "Le logement est une maison individuelle privatisée pour le groupe de participants située au milieu des champs et des forêts, et qui propose une vue dégagée sur le massif des Vosges ! La maison se situe à proximité de nombreux chemins de randonnées (GR7 à 50m). C'est le lieu idéal pour les amoureux de nature et de tranquillité.",
+      "image": [
+        {
+          "src": "/images/voyages/photographie-animaliere-vosges/rBGIpdb4QFGgwIoGRqI8.jpg",
+          "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
+        },
+        {
+          "src": "/images/voyages/photographie-animaliere-vosges/IaTwSIA1QrWy99eRN5NB.jpg",
+          "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
+        },
+        {
+          "src": "/images/voyages/photographie-animaliere-vosges/Ua8CbhSbK3rLL8Q7hGgz.jpg",
+          "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
     "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
@@ -73,96 +240,25 @@
     {
       "src": "/images/voyages/photographie-animaliere-vosges/Gh18aadnROm8NkMg38AV.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
+    },
+    {
+      "src": "/images/voyages/photographie-animaliere-vosges/r4jO2IlQ5uIEevzn784p.jpg",
+      "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
+    },
+    {
+      "src": "/images/voyages/photographie-animaliere-vosges/s9Y91IdT4KXme8W1XRol.jpg",
+      "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
+    },
+    {
+      "src": "/images/voyages/photographie-animaliere-vosges/ldouQA3bRa6h8zIgXglR.jpg",
+      "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
+    },
+    {
+      "src": "/images/voyages/photographie-animaliere-vosges/bxYqJ8ZAT2q5CnpclK1B.jpg",
+      "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Plongez au cœur des paysages uniques des Vosges lors d’un séjour de 4 jours entièrement dédié à la photographie animalière. Ce séjour axé débutant vous immerge au cœur de divers milieux naturels, où cerfs, renards, chats sauvages, oiseaux d'eau et guêpiers se révèlent les sujets parfaits pour vos prises de vues.\n\nCe séjour, rythmé par des marches d'approches et affût, sera une expérience inoubliable pour tous les amateurs de photographie et de nature. Vous passerez ces journées en compagnie d'Aurélien, photographe animalier passionné et amoureux des Vosges. Il a hâte de vous faire découvrir la richesse de la biodiversité des Vosges, territoire sauvage qu'il parcourt depuis son enfance, fait de forêts de sapins et cours d'eau. Un séjour pour les amoureux de photographie mais aussi et surtout de la nature et des animaux !",
-    "author": "Aurélien",
-    "affixeAuthor": "Photographe passionné"
-  },
-  "experiencesBlock": [
-    "La découverte des Vosges et de sa biodiversité",
-    "La rencontre avec Aurélien, photographe qui a grandi sur le territoire",
-    "Les affûts dans différents environnements pour observer une plus grande diversité d'animaux",
-    "La possibilité de vivre le brame du cerf en septembre",
-    "Le stage en petit groupe (maximum 6 participants)"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVEE DANS LES VOSGES",
-      "badgeText": "JOUR 1",
-      "description": "Arrivée libre (train ou voiture) dans les Vosges puis accueil à votre gîte par Aurélien à partir de 15 h. Installation puis présentation du territoire des Vosges et de la thématique de ce séjour : la photo animalière. C'est déjà l'heure pour votre premier affût : cervidé et renard ! L'affût durera jusqu'au soir et sera à proximité de votre logement. Première nuit au Gite.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/JywWh0rRa2y9kyj1Aok9.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LE BRAME DU CERF (AUTOMNE)",
-      "badgeText": "JOUR 2",
-      "description": "Petit-déjeuner au gite puis départ pour un second affût et approche sur la matinée. Atelier pistage des animaux en fin de matinée puis déjeuner. Temps de repos au gîte puis visionnage des photos prises le matin. Observation possible de cervidés, renards et sangliers. L'après-midi, atelier sur la construction d’un affût pour le lendemain soir. Affût en soirée. Deuxième nuit au Gite.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/JuFmcHjSTl6ar1uY8pUc.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "L'AFFÛT EN BORD DE RIVIERE",
-      "badgeText": "JOUR 3",
-      "description": "Petit-déjeuner au gîte puis départ pour l'affût du matin, en bord de la rivière Moselle. Possibilité d'observer le guêpier d'Europe et le chat sauvage. L'affût se fera en poste d'observation (camouflage) pour se faire le plus discret possible. Retour vers 16h au gîte pour un temps de repos. Dîner avec l'ensemble du groupe puis affût nocturne à proximité du gîte. Troisième nuit au gîte.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/lNaAR1WxRPOmlFSEvaAo.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "L'AFFÛT PRES D'UN ETANG",
-      "badgeText": "JOUR 4",
-      "description": "Petit-déjeuner puis route pour l'affût du jour : sanglier et renard au bord de l'eau. Affût au bord d'un étang après une approche en plaine où vous pourrez observez différentes espèces d'oiseaux. Dernier pique nique en commun avant un départ en début d'après-midi par le train ou par la route.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/LL7lFkWQS0SjhzJAmox6.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Aurélien",
-      "description": "Aurélien est un photographe animalier amoureux des Vosges. Il est passionné de nature depuis son enfance. Ce qu'il aime avant tout c'est de parcourir les forêts et plaines à la recherche de traces et indices. Son animal favori est le cerf qu'il suit tout au long de l'année.\n\n    \nIl saura vous faire découvrir avec passion la faune ainsi que la culture vosgienne.",
-      "role": "Photographe animalier",
-      "image": "/images/voyages/photographie-animaliere-vosges/UHqIymZAQ02tQckUjyT2.jpg"
-    }
-  ],
-  "accompanistsDescription": "",
-  "housingBlock": [
-    {
-      "title": "Gîte",
-      "housingType": "",
-      "housingMood": "Le logement est une maison individuelle privatisée pour le groupe de participants située au milieu des champs et des forêts, et qui propose une vue dégagée sur le massif des Vosges ! La maison se situe à proximité de nombreux chemins de randonnées (GR7 à 50m). C'est le lieu idéal pour les amoureux de nature et de tranquillité.",
-      "image": [
-        {
-          "src": "/images/voyages/photographie-animaliere-vosges/rBGIpdb4QFGgwIoGRqI8.jpg",
-          "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
-        },
-        {
-          "src": "/images/voyages/photographie-animaliere-vosges/IaTwSIA1QrWy99eRN5NB.jpg",
-          "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
-        },
-        {
-          "src": "/images/voyages/photographie-animaliere-vosges/Ua8CbhSbK3rLL8Q7hGgz.jpg",
-          "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accompagnement par un photographe animalier passionné pendant 4 jours",
-      "Les repas du petit-déjeuner du jour 2 au petit-déjeuner du jour 4",
-      "L'hébergement dans un gîte privatisé pour le groupe"
-    ],
-    "exclude": [
-      "Le trajet pour vous rendre sur place",
-      "La location du matériel si vous n'êtes pas équipés (tarifs des locations dans la FAQ)",
-      "Les boissons autres que l'eau",
-      "L'assurance annulation ou multirisques"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -191,7 +287,7 @@
       },
       {
         "question": "Quels animaux est-ce possible d'appercevoir pendant mon séjour ?",
-        "answer": "*   renard\n*   cerf\n*   Chevreuil\n*   Sanglier\n*   Lièvre\n*   martin-pêcheur\n*   cincle plongeur\n*   Guêpier d'Europe\n*   héron\n*   aigrette\n*   chevalier sylvain\n\n Lors du séjour de juillet, vous passerez une demi-journée au cœur d'une réserve naturelle où vous irez à la recherche du daim sauvage et également d'oiseaux migrateurs."
+        "answer": "Au fil du séjour et selon les saisons, vous pourrez croiser :\n\n*   Renard\n*   Cerf\n*   Chevreuil\n*   Sanglier\n*   Lièvre\n*   Chat sauvage\n*   Martin-pêcheur\n*   Cincle plongeur\n*   Guêpier d’Europe\n*   Héron\n*   Aigrette\n*   Chevalier sylvain"
       },
       {
         "question": "Comment se passe votre réservation avec Odysway ?",
@@ -199,24 +295,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 690,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 40,
-    "maxTravelers": 6,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "En immersion avec un photographe animalier dans les Vosges",
+    "canonicalUrl": "https://www.odysway.com/voyages/photographie-animaliere-vosges",
+    "ogTitle": "En immersion avec un photographe animalier dans les Vosges",
+    "ogDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
+    "ogImage": {
+      "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
+      "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
+    },
+    "twitterTitle": "En immersion avec un photographe animalier dans les Vosges",
+    "twitterDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
+    "twitterImage": {
+      "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
+      "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

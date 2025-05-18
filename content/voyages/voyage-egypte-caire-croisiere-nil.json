@@ -1,51 +1,308 @@
 {
   "published": true,
   "title": "Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil",
-  "slug": "voyage-egypte-caire-croisiere-nil",
-  "rating": 0,
-  "comments": 0,
-  "description": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil...\n\nAccompagnés d'un guide francophone, démarrez votre aventure dans la vibrante ville du Caire. Dégustez un karkadé à l'ombre des pyramides de Gizeh, étonnez-vous de leur incroyable processus d'édification et percez les secrets des hiéroglyphes qui ont habité vos rêves d'enfant, incroyablement conservés plus de 4000 ans.\n\nPoursuivez ensuite vers Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre raconte une histoire. Vous y visiterez le Temple d'Horus, le mieux conservé d'Egypte et celui de Karnak, affublé d'immenses colonnes, guidés par l'oeil expert de votre guide.\n\nVotre aventure se poursuit sur le Nil : à bord d'un bateau intimiste, laissez-vous porter au fil des villages nubiens et accostez sur des sites peu fréquentés. A chaque jour son émotion : découvrez un autre visage du pays entre villages et champs, faites des haltes à la rencontre de la population locale, parcourez des palmeraies à pied, vivez l'ambiance du marché populaire de Daraw et visitez des sites antiques à couper le souffle, incroyablement conservés. A la tombée de la nuit, les eaux se teintent de couleurs pastels : l'occasion de vivre des moments de partage en petit groupe, de se laisser aller à la contemplation et de sentir le temps s'écouler, au rythme de la vie locale.\n\nRareté, splendeur et émotion seront les maître-mot de cette aventure...",
-  "emailDescription": "👉 Si vous souhaitez découvrir les sites majeurs de l'Egypte, ce voyage est fait pour vous !",
-  "metaDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Le Caire, Louxor et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
-  "interjection": "",
   "destinations": [
-    "Égypte"
+    {
+      "name": "Égypte",
+      "slug": "egypte"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "voyage-aventure",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "partir-en-groupe",
-    "partir-en-amoureux",
-    "partir-en-famille"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    }
   ],
   "duration": 10,
   "nights": 9,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Croisière, hôtel & train",
   "idealPeriods": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    }
   ],
   "monthlyAvailability": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil...\n\nAccompagnés d'un guide francophone, démarrez votre aventure dans la vibrante ville du Caire. Dégustez un karkadé à l'ombre des pyramides de Gizeh, étonnez-vous de leur incroyable processus d'édification et percez les secrets des hiéroglyphes qui ont habité vos rêves d'enfant, incroyablement conservés plus de 4000 ans.\n\nPoursuivez ensuite vers Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre raconte une histoire. Vous y visiterez le Temple d'Horus, le mieux conservé d'Egypte et celui de Karnak, affublé d'immenses colonnes, guidés par l'oeil expert de votre guide.\n\nVotre aventure se poursuit sur le Nil : à bord d'un bateau intimiste, laissez-vous porter au fil des villages nubiens et accostez sur des sites peu fréquentés. A chaque jour son émotion : découvrez un autre visage du pays entre villages et champs, faites des haltes à la rencontre de la population locale, parcourez des palmeraies à pied, vivez l'ambiance du marché populaire de Daraw et visitez des sites antiques à couper le souffle, incroyablement conservés. A la tombée de la nuit, les eaux se teintent de couleurs pastels : l'occasion de vivre des moments de partage en petit groupe, de se laisser aller à la contemplation et de sentir le temps s'écouler, au rythme de la vie locale.\n\nRareté, splendeur et émotion seront les maître-mot de cette aventure...",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Visitez l'Egypte autrement : entre sites incontournables et découvertes hors des sentiers battus",
+    "Vivez une croisière de 5 jours en bateau à voile traditionnel pour une expérience authentique, loin du tourisme de masse",
+    "Profitez des espaces chaleureux à bord pour vous retrouver ou déguster un bon karkadé au coucher de soleil",
+    "Promenez-vous sur des chemins cachés au cœur de la vie rurale, sur les berges du Nil",
+    "Partez à la rencontre des égyptiens et vivez des moments de partages sincères au fil des villages nubiens",
+    "Emerveillez-vous des plus beaux sites historiques avec la présence exclusive d'un guide égyptologue francophone"
+  ],
+  "slug": "voyage-egypte-caire-croisiere-nil",
+  "description": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil...\n\nAccompagnés d'un guide francophone, démarrez votre aventure dans la vibrante ville du Caire. Dégustez un karkadé à l'ombre des pyramides de Gizeh, étonnez-vous de leur incroyable processus d'édification et percez les secrets des hiéroglyphes qui ont habité vos rêves d'enfant, incroyablement conservés plus de 4000 ans.\n\nPoursuivez ensuite vers Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre raconte une histoire. Vous y visiterez le Temple d'Horus, le mieux conservé d'Egypte et celui de Karnak, affublé d'immenses colonnes, guidés par l'oeil expert de votre guide.\n\nVotre aventure se poursuit sur le Nil : à bord d'un bateau intimiste, laissez-vous porter au fil des villages nubiens et accostez sur des sites peu fréquentés. A chaque jour son émotion : découvrez un autre visage du pays entre villages et champs, faites des haltes à la rencontre de la population locale, parcourez des palmeraies à pied, vivez l'ambiance du marché populaire de Daraw et visitez des sites antiques à couper le souffle, incroyablement conservés. A la tombée de la nuit, les eaux se teintent de couleurs pastels : l'occasion de vivre des moments de partage en petit groupe, de se laisser aller à la contemplation et de sentir le temps s'écouler, au rythme de la vie locale.\n\nRareté, splendeur et émotion seront les maître-mot de cette aventure...",
+  "emailDescription": "👉 Si vous souhaitez découvrir les sites majeurs de l'Egypte, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Le Caire, Louxor et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à mai",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE EN ÉGYPTE",
+      "badgeText": "JOUR 1",
+      "description": "Décollage à destination du Caire. À votre arrivée, accueil par votre chauffeur et transfert privé à votre hôtel au cœur de la ville. Métropole vibrante traversée par le Nil, Le Caire est bordée depuis des millénaires par les célèbres pyramides de Gizeh. Flânez dans ses souks animés, où les parfums d'épices et les couleurs vives vous émerveilleront. Découvrez les trésors antiques du musée égyptien, ou détendez-vous en sirotant un délicieux karkadé avec une vue imprenable sur les pyramides. Imprégnez-vous peu à peu du rythme de la vie locale et laissez-vous imprégner par l'atmosphère unique de cette cité millénaire...",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/VV26lQ5TKWZL1dYQ5R2q.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES MYSTÉRIEUSES PYRAMIDES DE GIZEH",
+      "badgeText": "JOUR 2",
+      "description": "Ce matin, début de votre aventure avec votre guide égyptologue. Direction le plateau de Gizeh, à la lisière du désert. Un site unique au monde, où vous serez captivés par le spectacle grandiose des Grandes Pyramides : Khéops, Khéphren et Mykérinos. Pour les plus aventuriers, il est possible de visiter l'intérieur de ces monuments majestueux. Poursuivez ensuite votre exploration sur le site moins connu de Sakkara, la plus grande nécropole égyptienne. Ici, découvrez le superbe tombeau funéraire du pharaon Djéser, du nom du même pharaon ! Pour le dîner, partez à la découverte d'un petit restaurant local afin de goûter aux saveurs authentiques de la cuisine égyptienne...",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/2ewkC6qVSRaUNQoZbpev.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VISITE DU MUSÉE ÉGYPTIEN, QUARTIER COPTE ET LA CITADELLE",
+      "badgeText": "JOUR 3",
+      "description": "Ce matin, visite du Musée de la civilisation égyptienne sur la Place Tahrir, incontournable pour ses antiquités égyptiennes. L’après-midi, découverte du Caire avec la vieille ville, le quartier copte et islamique. Visite de la Synagogue Ben-Ezra, de l’Église El-Moallaqah «La Suspendue», puis de la Citadelle avec la mosquée de Mehemet Ali. En fin de journée, transfert à la gare pour le train de nuit vers Louxor. Dîner inclus à bord.",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/uWqHyqgMTlm2nG5Lw6Bf.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TEMPLE DE KARNAK ET D'HORUS",
+      "badgeText": "JOUR 4",
+      "description": "Arrivée à la gare de Louxor ce matin. Un chauffeur vous conduit à la découverte de l'ancienne capitale égyptienne, avec la visite du temple de Karnak, dédié au Dieu Amon, dont la construction a duré plus de 2000 ans. Ensuite, départ pour Edfou en mini-bus pour visiter le temple d'Horus, le mieux conservé d'Égypte. Après la visite, embarquement sur votre dahabieh pour un coucher de soleil exceptionnel sur le Nil ... exceptionnel !\r\n\r\n",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/WY5Xe78GTGRfbYsnybvk.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIER JOUR SUR LE NIL ",
+      "badgeText": "JOUR 5",
+      "description": "Réveil en douceur sur les eaux silencieuses du Nil. Profitez de cette première matinée de navigation avant de faire un arrêt à Ramadi, pour une belle marche autour du marais et dans les cultures à rencontrez les paysans travaillant dans leurs champs de luzerne, de canne à sucre ou près des dattiers. Après le déjeuner ou en fin de journée, partez en balade dans le charmant et accueillant village de Bassaw. Découvrez la vie locale et les sourires chaleureux des habitants. Pour la nuit, vous accosterez soit à Bassaw, soit au pied du spéos d’Horemheb, entièrement creusé dans la roche (selon les possibilités du moment) pour une soirée paisible sous le ciel étoilé égyptien...",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/OImVDaowRH60uD5XtHqG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ASSOUAN ET TEMPLE DE PHILAE",
+      "badgeText": "JOUR 6",
+      "description": "La navigation vous permet de découvrir la vie des bords du Nil et les haltes dans les villages sont l'occasion de rencontres avec la population locale. Aujourd’hui, arrêt aux carrières pharaoniques du Gebel Silsileh ayant servi à construire les principaux temples d’Égypte. Le Gebel Silsileh commença à être exploité au Nouvel Empire comme carrière de grès, et devint la source la plus importante de ce matériau en Égypte. Courte navigation et marche d'environ 2h jusqu'à Farès dans les palmeraies : une grande variété d'arbres fruitiers et de plantes se trouveront sur votre chemin (palmiers doum, palmiers dattiers, etc.) . Retour à bord et relaxation pendant que le bateau navigue en douceur pour l’escale du soir à Maniha.",
+      "photo": "",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉPAYSEMENT À DARAW",
+      "badgeText": "JOUR 7",
+      "description": "Poursuite de votre navigation jusqu'au au site de Kôm Ombo pour la visite de son temple majestueux dédié à deux divinités : Sobek, le dieu-crocodile et Haroëris, le Dieu-faucon. Prenez le temps d’admirer tant de beauté ! Par la suite, dépaysement garanti au village de Daraw, assurément un des moments forts du voyage. Vous déambulerez dans le fouillis du marché populaire où couleurs, parfums d’orient et d’Afrique mêlés sont autant de symphonies de couleurs et de senteurs !",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/a5lvf9ELRYWcZ30GQqPX.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LE SUD DE L'ÉGYPTE",
+      "badgeText": "JOUR 8",
+      "description": "Votre promenade en bateau continue afin de rejoindre Assouan, porte de la Nubie et ancien fief du royaume de la Haute Égypte. Une fois arrivés, c'est en barque que vous atteindrez le Temple de Philae dédié à la déesse de la fertilité, Isis. Unique par son architecture, il a été sauvé des eaux par l’UNESCO dans les années 60. En option, possibilité de visiter le matin le mythique temple d'Abou Simbel et ses 6 statues colossales, sculptées à même la roche il y a 3000 ans ...",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/4W3gEGhgSV2r0X9rF3RS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MAJESTÉ DANS LA VALLÉE DES ROIS",
+      "badgeText": "JOUR 9",
+      "description": "Il est temps de mettre pied à terre ! Vous quittez le bateau et partez en direction de Louxor. Découverte de la Vallée des Rois, lieu de repos éternel et de prédilection des pharaons. Nous rejoindrons ensuite le majestueux temple destiné à la Reine Hatchepsout, seule femme à être montée sur le trône pharaonique. Vous y verrez deux géants de pierre assis devant vous : ce sont les célèbres colosses de Memnon qui « trônent » au milieu de terres cultivées.",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/Kwhu4qTzWBarpgqi7qwA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 10",
+      "description": "Après un bon petit-déjeuner, votre chauffeur vous déposera à l'aéroport de Louxor pour prendre votre vol retour. Retour en France, de belles images plein la tête !",
+      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/xDdXuvzRwi4iqxkGActp.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'hébergement : hôtel, train-couchette ou cabine double sur le bateau selon les étapes (base double)",
+      "La croisière à bord d'un bateau traditionnel (dahabieh ou sandal) intimiste",
+      "Tous les transferts privés pendant le séjour",
+      "Un guide égyptologue francophone au Caire, Louxor et lors de la croisière",
+      "Tous les repas et l'eau en bouteille lors de la croisière",
+      "Les entrées des sites visités",
+      "Notre service d'obtention du visa (remis directement à votre arrivée à l'aéroport)"
+    ],
+    "exclude": [
+      "Les vols internationaux (devis sur demande)",
+      "Le dîner au Caire et à Louxor",
+      "Les dépenses personnelles",
+      "Les pourboires (55€ par personne)",
+      "Facultatif : le supplément chambre individuelle (devis sur demande)",
+      "Facultatif : l'assurance voyage (devis sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2190,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 0,
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": [
+      "CAI",
+      "LXR"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage est accompagné par un guide égyptologue francophone passionné. Aux petits soins durant votre voyage, il veillera à votre confort, vous apportera des éclairages sur la culture locale et vous révélera les secrets captivants des sites archéologiques visités. Une occasion pour petits et grands de poser toutes leurs questions !",
+  "accompanistsList": [
+    {
+      "name": "Guide égyptologue francophone",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/voyage-egypte-caire-croisiere-nil/jMPqLheWQzulsSPPLbXA.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Croisière, hôtel & train",
+      "housingType": "",
+      "housingMood": "Selon les étapes, vous alternerez entre des nuits en hôtel, en train-couchette et en cabine double à bord du bateau lors de la croisière sur le Nil (bateau darabieh ou sandal de 6 à 10 cabines selon la composition du groupe). Nous veillons à sélectionner uniquement des hébergements esprit \"petite structure\" simples mais confortables.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/t7mlhqOAQIGggDK9LjAA.jpg",
+          "alt": "image de l'hébergement Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
+        },
+        {
+          "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/XSwtAQrSoe46tnGQcgsP.jpg",
+          "alt": "image de l'hébergement Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
+        },
+        {
+          "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/GHXbGQtQQEeHMhnA24d3.jpg",
+          "alt": "image de l'hébergement Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/D7RhGLH9RYyEGIiOdLSq.jpg",
     "alt": "image principale du voyage Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
@@ -137,142 +394,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Vivez un voyage marquant au cœur de l'Egypte ancienne : dans une ambiance traditionnelle et douce, partez à la découverte des plus beaux sites de l'Egypte antique et embarquez à bord d'un petit bateau traditionnel pour une navigation douce de 5 jours sur le Nil...\n\nAccompagnés d'un guide francophone, démarrez votre aventure dans la vibrante ville du Caire. Dégustez un karkadé à l'ombre des pyramides de Gizeh, étonnez-vous de leur incroyable processus d'édification et percez les secrets des hiéroglyphes qui ont habité vos rêves d'enfant, incroyablement conservés plus de 4000 ans.\n\nPoursuivez ensuite vers Louxor, véritable \"musée à ciel ouvert\". Ici, chaque pierre raconte une histoire. Vous y visiterez le Temple d'Horus, le mieux conservé d'Egypte et celui de Karnak, affublé d'immenses colonnes, guidés par l'oeil expert de votre guide.\n\nVotre aventure se poursuit sur le Nil : à bord d'un bateau intimiste, laissez-vous porter au fil des villages nubiens et accostez sur des sites peu fréquentés. A chaque jour son émotion : découvrez un autre visage du pays entre villages et champs, faites des haltes à la rencontre de la population locale, parcourez des palmeraies à pied, vivez l'ambiance du marché populaire de Daraw et visitez des sites antiques à couper le souffle, incroyablement conservés. A la tombée de la nuit, les eaux se teintent de couleurs pastels : l'occasion de vivre des moments de partage en petit groupe, de se laisser aller à la contemplation et de sentir le temps s'écouler, au rythme de la vie locale.\n\nRareté, splendeur et émotion seront les maître-mot de cette aventure...",
-    "author": "Salomé",
-    "affixeAuthor": "Créatrice de voyages immersifs"
-  },
-  "experiencesBlock": [
-    "Visitez l'Egypte autrement : entre sites incontournables et découvertes hors des sentiers battus",
-    "Vivez une croisière de 5 jours en bateau à voile traditionnel pour une expérience authentique, loin du tourisme de masse",
-    "Profitez des espaces chaleureux à bord pour vous retrouver ou déguster un bon karkadé au coucher de soleil",
-    "Promenez-vous sur des chemins cachés au cœur de la vie rurale, sur les berges du Nil",
-    "Partez à la rencontre des égyptiens et vivez des moments de partages sincères au fil des villages nubiens",
-    "Emerveillez-vous des plus beaux sites historiques avec la présence exclusive d'un guide égyptologue francophone"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE EN ÉGYPTE",
-      "badgeText": "JOUR 1",
-      "description": "Décollage à destination du Caire. À votre arrivée, accueil par votre chauffeur et transfert privé à votre hôtel au cœur de la ville. Métropole vibrante traversée par le Nil, Le Caire est bordée depuis des millénaires par les célèbres pyramides de Gizeh. Flânez dans ses souks animés, où les parfums d'épices et les couleurs vives vous émerveilleront. Découvrez les trésors antiques du musée égyptien, ou détendez-vous en sirotant un délicieux karkadé avec une vue imprenable sur les pyramides. Imprégnez-vous peu à peu du rythme de la vie locale et laissez-vous imprégner par l'atmosphère unique de cette cité millénaire...",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/VV26lQ5TKWZL1dYQ5R2q.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES MYSTÉRIEUSES PYRAMIDES DE GIZEH",
-      "badgeText": "JOUR 2",
-      "description": "Ce matin, début de votre aventure avec votre guide égyptologue. Direction le plateau de Gizeh, à la lisière du désert. Un site unique au monde, où vous serez captivés par le spectacle grandiose des Grandes Pyramides : Khéops, Khéphren et Mykérinos. Pour les plus aventuriers, il est possible de visiter l'intérieur de ces monuments majestueux. Poursuivez ensuite votre exploration sur le site moins connu de Sakkara, la plus grande nécropole égyptienne. Ici, découvrez le superbe tombeau funéraire du pharaon Djéser, du nom du même pharaon ! Pour le dîner, partez à la découverte d'un petit restaurant local afin de goûter aux saveurs authentiques de la cuisine égyptienne...",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/2ewkC6qVSRaUNQoZbpev.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VISITE DU MUSÉE ÉGYPTIEN, QUARTIER COPTE ET LA CITADELLE",
-      "badgeText": "JOUR 3",
-      "description": "Ce matin, visite du Musée de la civilisation égyptienne sur la Place Tahrir, incontournable pour ses antiquités égyptiennes. L’après-midi, découverte du Caire avec la vieille ville, le quartier copte et islamique. Visite de la Synagogue Ben-Ezra, de l’Église El-Moallaqah «La Suspendue», puis de la Citadelle avec la mosquée de Mehemet Ali. En fin de journée, transfert à la gare pour le train de nuit vers Louxor. Dîner inclus à bord.",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/uWqHyqgMTlm2nG5Lw6Bf.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "TEMPLE DE KARNAK ET D'HORUS",
-      "badgeText": "JOUR 4",
-      "description": "Arrivée à la gare de Louxor ce matin. Un chauffeur vous conduit à la découverte de l'ancienne capitale égyptienne, avec la visite du temple de Karnak, dédié au Dieu Amon, dont la construction a duré plus de 2000 ans. Ensuite, départ pour Edfou en mini-bus pour visiter le temple d'Horus, le mieux conservé d'Égypte. Après la visite, embarquement sur votre dahabieh pour un coucher de soleil exceptionnel sur le Nil ... exceptionnel !\r\n\r\n",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/WY5Xe78GTGRfbYsnybvk.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIER JOUR SUR LE NIL ",
-      "badgeText": "JOUR 5",
-      "description": "Réveil en douceur sur les eaux silencieuses du Nil. Profitez de cette première matinée de navigation avant de faire un arrêt à Ramadi, pour une belle marche autour du marais et dans les cultures à rencontrez les paysans travaillant dans leurs champs de luzerne, de canne à sucre ou près des dattiers. Après le déjeuner ou en fin de journée, partez en balade dans le charmant et accueillant village de Bassaw. Découvrez la vie locale et les sourires chaleureux des habitants. Pour la nuit, vous accosterez soit à Bassaw, soit au pied du spéos d’Horemheb, entièrement creusé dans la roche (selon les possibilités du moment) pour une soirée paisible sous le ciel étoilé égyptien...",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/OImVDaowRH60uD5XtHqG.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ASSOUAN ET TEMPLE DE PHILAE",
-      "badgeText": "JOUR 6",
-      "description": "La navigation vous permet de découvrir la vie des bords du Nil et les haltes dans les villages sont l'occasion de rencontres avec la population locale. Aujourd’hui, arrêt aux carrières pharaoniques du Gebel Silsileh ayant servi à construire les principaux temples d’Égypte. Le Gebel Silsileh commença à être exploité au Nouvel Empire comme carrière de grès, et devint la source la plus importante de ce matériau en Égypte. Courte navigation et marche d'environ 2h jusqu'à Farès dans les palmeraies : une grande variété d'arbres fruitiers et de plantes se trouveront sur votre chemin (palmiers doum, palmiers dattiers, etc.) . Retour à bord et relaxation pendant que le bateau navigue en douceur pour l’escale du soir à Maniha.",
-      "photo": "",
-      "denivellation": ""
-    },
-    {
-      "title": "DÉPAYSEMENT À DARAW",
-      "badgeText": "JOUR 7",
-      "description": "Poursuite de votre navigation jusqu'au au site de Kôm Ombo pour la visite de son temple majestueux dédié à deux divinités : Sobek, le dieu-crocodile et Haroëris, le Dieu-faucon. Prenez le temps d’admirer tant de beauté ! Par la suite, dépaysement garanti au village de Daraw, assurément un des moments forts du voyage. Vous déambulerez dans le fouillis du marché populaire où couleurs, parfums d’orient et d’Afrique mêlés sont autant de symphonies de couleurs et de senteurs !",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/a5lvf9ELRYWcZ30GQqPX.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DANS LE SUD DE L'ÉGYPTE",
-      "badgeText": "JOUR 8",
-      "description": "Votre promenade en bateau continue afin de rejoindre Assouan, porte de la Nubie et ancien fief du royaume de la Haute Égypte. Une fois arrivés, c'est en barque que vous atteindrez le Temple de Philae dédié à la déesse de la fertilité, Isis. Unique par son architecture, il a été sauvé des eaux par l’UNESCO dans les années 60. En option, possibilité de visiter le matin le mythique temple d'Abou Simbel et ses 6 statues colossales, sculptées à même la roche il y a 3000 ans ...",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/4W3gEGhgSV2r0X9rF3RS.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "MAJESTÉ DANS LA VALLÉE DES ROIS",
-      "badgeText": "JOUR 9",
-      "description": "Il est temps de mettre pied à terre ! Vous quittez le bateau et partez en direction de Louxor. Découverte de la Vallée des Rois, lieu de repos éternel et de prédilection des pharaons. Nous rejoindrons ensuite le majestueux temple destiné à la Reine Hatchepsout, seule femme à être montée sur le trône pharaonique. Vous y verrez deux géants de pierre assis devant vous : ce sont les célèbres colosses de Memnon qui « trônent » au milieu de terres cultivées.",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/Kwhu4qTzWBarpgqi7qwA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR EN FRANCE",
-      "badgeText": "JOUR 10",
-      "description": "Après un bon petit-déjeuner, votre chauffeur vous déposera à l'aéroport de Louxor pour prendre votre vol retour. Retour en France, de belles images plein la tête !",
-      "photo": "/images/voyages/voyage-egypte-caire-croisiere-nil/xDdXuvzRwi4iqxkGActp.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Guide égyptologue francophone",
-      "description": "",
-      "role": "",
-      "image": "/images/voyages/voyage-egypte-caire-croisiere-nil/jMPqLheWQzulsSPPLbXA.jpg"
-    }
-  ],
-  "accompanistsDescription": "Ce voyage est accompagné par un guide égyptologue francophone passionné. Aux petits soins durant votre voyage, il veillera à votre confort, vous apportera des éclairages sur la culture locale et vous révélera les secrets captivants des sites archéologiques visités. Une occasion pour petits et grands de poser toutes leurs questions !",
-  "housingBlock": [
-    {
-      "title": "Croisière, hôtel & train",
-      "housingType": "",
-      "housingMood": "Selon les étapes, vous alternerez entre des nuits en hôtel, en train-couchette et en cabine double à bord du bateau lors de la croisière sur le Nil (bateau darabieh ou sandal de 6 à 10 cabines selon la composition du groupe). Nous veillons à sélectionner uniquement des hébergements esprit \"petite structure\" simples mais confortables.",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/t7mlhqOAQIGggDK9LjAA.jpg",
-          "alt": "image de l'hébergement Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
-        },
-        {
-          "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/XSwtAQrSoe46tnGQcgsP.jpg",
-          "alt": "image de l'hébergement Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
-        },
-        {
-          "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/GHXbGQtQQEeHMhnA24d3.jpg",
-          "alt": "image de l'hébergement Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'hébergement : hôtel, train-couchette ou cabine double sur le bateau selon les étapes (base double)",
-      "La croisière à bord d'un bateau traditionnel (dahabieh ou sandal) intimiste",
-      "Tous les transferts privés pendant le séjour",
-      "Un guide égyptologue francophone au Caire, Louxor et lors de la croisière",
-      "Tous les repas et l'eau en bouteille lors de la croisière",
-      "Les entrées des sites visités",
-      "Notre service d'obtention du visa (remis directement à votre arrivée à l'aéroport)"
-    ],
-    "exclude": [
-      "Les vols internationaux (devis sur demande)",
-      "Le dîner au Caire et à Louxor",
-      "Les dépenses personnelles",
-      "Les pourboires (55€ par personne)",
-      "Facultatif : le supplément chambre individuelle (devis sur demande)",
-      "Facultatif : l'assurance voyage (devis sur demande)"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -317,27 +438,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2190,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": 0,
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 100,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CAI",
-      "LXR"
-    ]
+  "seo": {
+    "metaTitle": "Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-egypte-caire-croisiere-nil",
+    "ogTitle": "Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil",
+    "ogDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Le Caire, Louxor et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/D7RhGLH9RYyEGIiOdLSq.jpg",
+      "alt": "image principale du voyage Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
+    },
+    "twitterTitle": "Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil",
+    "twitterDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Le Caire, Louxor et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-egypte-caire-croisiere-nil/D7RhGLH9RYyEGIiOdLSq.jpg",
+      "alt": "image principale du voyage Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

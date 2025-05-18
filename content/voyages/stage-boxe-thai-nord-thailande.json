@@ -1,60 +1,289 @@
 {
   "published": true,
   "title": "Stage boxe thaï en immersion dans le nord de la Thaïlande",
-  "slug": "stage-boxe-thai-nord-thailande",
-  "rating": 4.9,
-  "comments": 16,
-  "description": "Le Muay Thaï est un art martial qui puise son origine dans les pratiques ancestrales du Muay Biran (la boxe traditionnelle) et du Krabi Krabong (la pratique des armes). Il s'agit du type de boxe le plus populaire de l’Asie du Sud-Est.\n\nLoin des centres hyper touristiques du sud du pays, nous vous proposons un séjour immersif d'entraînement avec les meilleurs entraîneurs du pays dans les montagnes du nord de la Thaïlande, à Paï. Un stage accessible aux débutants comme aux combattants confirmés, où les maîtres mots sont la convivialité, le partage et le dépassement de soi.",
-  "emailDescription": "👉 Si vous souhaitez vous initier ou vous perfectionner à la boxe Thaï auprès des meilleurs tout en vous imprégnant de la culture thaïlandaise, ce voyage est fait pour vous ! 😉  ",
-  "metaDescription": "Envie de découvrir la Thaïlande autrement ? Découvrez ou perfectionnez-vous à la Boxe thaï lors de ce séjour sportif et formez-vous parmi les meilleurs : des entraineurs professionnels dans un camp de boxe thaï !",
-  "interjection": "en",
   "destinations": [
-    "Thaïlande"
+    {
+      "name": "Thaïlande",
+      "slug": "thailande"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-sportif",
-    "voyage-insolite",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "ou-partir-en-ete",
-    "partir-en-amoureux",
-    "partir-en-groupe",
-    "sejour-arts-martiaux"
+    {
+      "name": "voyage-sportif"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-arts-martiaux"
+    }
   ],
   "duration": 15,
   "nights": 14,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hôtel",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.9,
+  "comments": 16,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Le Muay Thaï est un art martial qui puise son origine dans les pratiques ancestrales du Muay Biran (la boxe traditionnelle) et du Krabi Krabong (la pratique des armes). Il s'agit du type de boxe le plus populaire de l’Asie du Sud-Est.\n\nLoin des centres hyper touristiques du sud du pays, nous vous proposons un séjour immersif d'entraînement avec les meilleurs entraîneurs du pays dans les montagnes du nord de la Thaïlande, à Paï. Un stage accessible aux débutants comme aux combattants confirmés, où les maîtres mots sont la convivialité, le partage et le dépassement de soi.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Les entraînements de muay thaï (deux par jour) avec un ancien champion thaï",
+    "L'accueil personnalisé au camp, avec un short de muay thaï et du matériel récent.",
+    "La découverte de la ville bucolique de Pai et sa nature environnante",
+    "Les transferts privatifs et un hôtel à deux pas du camp",
+    "Le \"tout compris\" de l'aéroport à l'aéroport\" pour plus de sérénité"
+  ],
+  "slug": "stage-boxe-thai-nord-thailande",
+  "description": "Le Muay Thaï est un art martial qui puise son origine dans les pratiques ancestrales du Muay Biran (la boxe traditionnelle) et du Krabi Krabong (la pratique des armes). Il s'agit du type de boxe le plus populaire de l’Asie du Sud-Est.\n\nLoin des centres hyper touristiques du sud du pays, nous vous proposons un séjour immersif d'entraînement avec les meilleurs entraîneurs du pays dans les montagnes du nord de la Thaïlande, à Paï. Un stage accessible aux débutants comme aux combattants confirmés, où les maîtres mots sont la convivialité, le partage et le dépassement de soi.",
+  "emailDescription": "👉 Si vous souhaitez vous initier ou vous perfectionner à la boxe Thaï auprès des meilleurs tout en vous imprégnant de la culture thaïlandaise, ce voyage est fait pour vous ! 😉  ",
+  "metaDescription": "Envie de découvrir la Thaïlande autrement ? Découvrez ou perfectionnez-vous à la Boxe thaï lors de ce séjour sportif et formez-vous parmi les meilleurs : des entraineurs professionnels dans un camp de boxe thaï !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**14 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE ET NUIT A CHIANG MAI",
+      "badgeText": "JOUR 1",
+      "description": "Accueil à l'aéroport de Chiang Mai puis accueil selon votre heure d'arrivée. Transfert vers votre hôtel, avant de partir découvrir le centre-ville de Chiang Mai, ses charmantes ruelles, ses nombreux temples et ses marchés animés le soir. Repas libre. Nuit dans un hôtel du centre. Le départ pour Pai, la ville dans laquelle se trouve le camp, est le lendemain. ",
+      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/2WdIaCrOT1yoQ6kIcJng.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE VERS PAI",
+      "badgeText": "JOUR 2",
+      "description": "Petit-déjeuner à votre hôtel, puis transfert depuis votre hôtel en taxi vers la gare de Chiang Mai, où vous prenez un minibus en direction de Pai. La route dure 3h mais les paysages évoluent, quittant progressivement la ville pour suivre les lacets à travers les collines du nord de la Thaïlande. Vous traversez des forêts, champs, villages. Arrivée à Pai dans l'après-midi puis accueil au camp de boxe, situé à 10 minutes à pied du centre de Pai. Découverte de l'environnement dans lequel vous serez pendant deux semaines ! Vous récupérez ensuite les clés de votre chambre. Dîner libre et première nuit à Pai !",
+      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIER ENTRAINEMENT",
+      "badgeText": "JOUR 3",
+      "description": "Petit-déjeuner puis début de votre premier entraînement. Vous rencontrez l'entraîneur principal, Bee, ainsi que les entraîneurs assistants. L'avantage de ce camp est le nombre d'entraîneurs, qui vous permet d'être très bien encadré et d'avoir un suivi individualisé. Premier test pour évaluer votre niveau, afin que vous commenciez dans le groupe de niveau adapté. Généralement, vous débuterez par de la corde à sauter tous ensemble, avant de vous répartir sur différents ateliers (sacs). Vous travaillerez ensuite votre technique avec un entraîneur et un/e autre combattants/e. Vous terminerez la séance par un moment redouté : vingt minutes de travail physique, abdos, pompes, squats... Et enfin, étirements. Entraînement deux fois par jour, tous les jours sauf le dimanche.",
+      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/UZD9U9kuQYmersCOu3jE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN IMMERSION SUR LE CAMP",
+      "badgeText": "JOURS 4 À 14",
+      "description": "13 jours d’entraînement à la boxe-thaï, dispensés dans une bonne ambiance par les meilleurs entraîneurs du nord de la Thaïlande. Deux sessions par jour, le matin et en fin d’après midi. Repas du midi au centre de boxe avec les autres participants au stage. L'après-midi et le soir, temps libre pour profiter de la région verdoyante de Paï et de ses animations nocturnes.",
+      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/HRXtyC8RtOEbKW138zRQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR EN THAÏLANDE",
+      "badgeText": "JOUR 15",
+      "description": "Vient le moment de quitter le camp de boxe-thaï. Transfert en minibus vers Chiang Maï, et l'aéroport, pour que vous arriviez au moins 3h avant votre vol.",
+      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/RNyzSRbmoRDFsJfF0vAx.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Tous les transferts terrestres : Chiang Maï/centre de boxe thaï à Pai et centre de boxe/aéroport",
+      "L’hébergement dans une chambre privée avec air conditionné à 2' du centre de boxe thaï",
+      "Les déjeuners pris sur le camp, avec les entraîneurs et autres boxeurs",
+      "Les deux entraînements quotidiens (8-10h et 15-17h) du lundi au samedi sur le camp Charn Chai",
+      "La location du matériel de boxe en état neuf",
+      "Le short de Muay thaï inclus dans le prix du séjour",
+      "L'accès libre à la salle de sport avec de nombreux équipements (altère, barre de traction, banc de musculation, tapis, cordes à sauter)"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Chiang-Maï (possibilité de devis avec vols inclus sur demande)",
+      "Les activités ou soins non compris dans la section \"le prix comprend\"",
+      "Les petits-déjeuners et les dîners",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles et les pourboires",
+      "Un dépôt de garantie de 1000bahts en arrivant, rendu à la fin (si pas de casse, de perte des clefs, etc)."
+    ]
+  },
+  "pricing": {
+    "startingPrice": 770,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "CNX"
+    ]
+  },
+  "accompanistsDescription": "Vous serez encadrés au sein du camp par une équipe expérimentée d'entraîneurs de boxe-thaï, qui dispenseront des cours en anglais deux fois par jour.",
+  "accompanistsList": [
+    {
+      "name": "Bee",
+      "description": "Bee, l'entraîneur en chef et fondateur du camp d'entraînement, est entré pour la première fois sur le ring à l'âge de 9 ans et est vétéran de plus de 300 combats. Il a également travaillé comme entraîneur en Hollande auprès de célèbres combattants : Melvin Manhoef, Artur Kyshenko et Badr Hari. Pendant son séjour à l'étranger, Bee a acquis de l'expérience en K1 et MMA et intègre certains éléments de ces disciplines dans son programme.",
+      "role": "Entraîneur en chef",
+      "image": "/images/voyages/stage-boxe-thai-nord-thailande/Kdoc8v5ATlq5NvR6bfdH.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel",
+      "housingType": "",
+      "housingMood": "À Paï, vous séjournerez dans une guesthouse situé au cœur de la ville, un emplacement idéal pour vous balader ! Durant votre stage de boxe, à Paï, l'hôtel sera situé à deux minutes à pied du camp d'entraînement, vous permettant d'y accéder facilement.",
+      "image": [
+        {
+          "src": "/images/voyages/stage-boxe-thai-nord-thailande/pySMR6NwQLWT8VI1VPz7.jpg",
+          "alt": "image de l'hébergement Stage boxe thaï en immersion dans le nord de la Thaïlande"
+        },
+        {
+          "src": "/images/voyages/stage-boxe-thai-nord-thailande/Hyyj4HMQQqGgRiKHNnf5.jpg",
+          "alt": "image de l'hébergement Stage boxe thaï en immersion dans le nord de la Thaïlande"
+        },
+        {
+          "src": "/images/voyages/stage-boxe-thai-nord-thailande/vynMcPjnQqu9NY74yNkL.jpg",
+          "alt": "image de l'hébergement Stage boxe thaï en immersion dans le nord de la Thaïlande"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/stage-boxe-thai-nord-thailande/TAJH64DTcmuKXmD42UHs.jpg",
     "alt": "image principale du voyage Stage boxe thaï en immersion dans le nord de la Thaïlande"
@@ -120,106 +349,6 @@
   "videoLinks": [
     "https://www.youtube.com/embed/TvD0nXeOt34"
   ],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Le Muay Thaï est un art martial qui puise son origine dans les pratiques ancestrales du Muay Biran (la boxe traditionnelle) et du Krabi Krabong (la pratique des armes). Il s'agit du type de boxe le plus populaire de l’Asie du Sud-Est.\n\nLoin des centres hyper touristiques du sud du pays, nous vous proposons un séjour immersif d'entraînement avec les meilleurs entraîneurs du pays dans les montagnes du nord de la Thaïlande, à Paï. Un stage accessible aux débutants comme aux combattants confirmés, où les maîtres mots sont la convivialité, le partage et le dépassement de soi.",
-    "author": "Romain",
-    "affixeAuthor": "Fondateur d'Odysway"
-  },
-  "experiencesBlock": [
-    "Les entraînements de muay thaï (deux par jour) avec un ancien champion thaï",
-    "L'accueil personnalisé au camp, avec un short de muay thaï et du matériel récent.",
-    "La découverte de la ville bucolique de Pai et sa nature environnante",
-    "Les transferts privatifs et un hôtel à deux pas du camp",
-    "Le \"tout compris\" de l'aéroport à l'aéroport\" pour plus de sérénité"
-  ],
-  "programmeBlock": [
-    {
-      "title": "ARRIVEE ET NUIT A CHIANG MAI",
-      "badgeText": "JOUR 1",
-      "description": "Accueil à l'aéroport de Chiang Mai puis accueil selon votre heure d'arrivée. Transfert vers votre hôtel, avant de partir découvrir le centre-ville de Chiang Mai, ses charmantes ruelles, ses nombreux temples et ses marchés animés le soir. Repas libre. Nuit dans un hôtel du centre. Le départ pour Pai, la ville dans laquelle se trouve le camp, est le lendemain. ",
-      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/2WdIaCrOT1yoQ6kIcJng.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ROUTE VERS PAI",
-      "badgeText": "JOUR 2",
-      "description": "Petit-déjeuner à votre hôtel, puis transfert depuis votre hôtel en taxi vers la gare de Chiang Mai, où vous prenez un minibus en direction de Pai. La route dure 3h mais les paysages évoluent, quittant progressivement la ville pour suivre les lacets à travers les collines du nord de la Thaïlande. Vous traversez des forêts, champs, villages. Arrivée à Pai dans l'après-midi puis accueil au camp de boxe, situé à 10 minutes à pied du centre de Pai. Découverte de l'environnement dans lequel vous serez pendant deux semaines ! Vous récupérez ensuite les clés de votre chambre. Dîner libre et première nuit à Pai !",
-      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIER ENTRAINEMENT",
-      "badgeText": "JOUR 3",
-      "description": "Petit-déjeuner puis début de votre premier entraînement. Vous rencontrez l'entraîneur principal, Bee, ainsi que les entraîneurs assistants. L'avantage de ce camp est le nombre d'entraîneurs, qui vous permet d'être très bien encadré et d'avoir un suivi individualisé. Premier test pour évaluer votre niveau, afin que vous commenciez dans le groupe de niveau adapté. Généralement, vous débuterez par de la corde à sauter tous ensemble, avant de vous répartir sur différents ateliers (sacs). Vous travaillerez ensuite votre technique avec un entraîneur et un/e autre combattants/e. Vous terminerez la séance par un moment redouté : vingt minutes de travail physique, abdos, pompes, squats... Et enfin, étirements. Entraînement deux fois par jour, tous les jours sauf le dimanche.",
-      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/UZD9U9kuQYmersCOu3jE.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN IMMERSION SUR LE CAMP",
-      "badgeText": "JOURS 4 À 14",
-      "description": "13 jours d’entraînement à la boxe-thaï, dispensés dans une bonne ambiance par les meilleurs entraîneurs du nord de la Thaïlande. Deux sessions par jour, le matin et en fin d’après midi. Repas du midi au centre de boxe avec les autres participants au stage. L'après-midi et le soir, temps libre pour profiter de la région verdoyante de Paï et de ses animations nocturnes.",
-      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/HRXtyC8RtOEbKW138zRQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIER JOUR EN THAÏLANDE",
-      "badgeText": "JOUR 15",
-      "description": "Vient le moment de quitter le camp de boxe-thaï. Transfert en minibus vers Chiang Maï, et l'aéroport, pour que vous arriviez au moins 3h avant votre vol.",
-      "photo": "/images/voyages/stage-boxe-thai-nord-thailande/RNyzSRbmoRDFsJfF0vAx.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Bee",
-      "description": "Bee, l'entraîneur en chef et fondateur du camp d'entraînement, est entré pour la première fois sur le ring à l'âge de 9 ans et est vétéran de plus de 300 combats. Il a également travaillé comme entraîneur en Hollande auprès de célèbres combattants : Melvin Manhoef, Artur Kyshenko et Badr Hari. Pendant son séjour à l'étranger, Bee a acquis de l'expérience en K1 et MMA et intègre certains éléments de ces disciplines dans son programme.",
-      "role": "Entraîneur en chef",
-      "image": "/images/voyages/stage-boxe-thai-nord-thailande/Kdoc8v5ATlq5NvR6bfdH.jpg"
-    }
-  ],
-  "accompanistsDescription": "Vous serez encadrés au sein du camp par une équipe expérimentée d'entraîneurs de boxe-thaï, qui dispenseront des cours en anglais deux fois par jour.",
-  "housingBlock": [
-    {
-      "title": "Hôtel",
-      "housingType": "",
-      "housingMood": "À Paï, vous séjournerez dans une guesthouse situé au cœur de la ville, un emplacement idéal pour vous balader ! Durant votre stage de boxe, à Paï, l'hôtel sera situé à deux minutes à pied du camp d'entraînement, vous permettant d'y accéder facilement.",
-      "image": [
-        {
-          "src": "/images/voyages/stage-boxe-thai-nord-thailande/pySMR6NwQLWT8VI1VPz7.jpg",
-          "alt": "image de l'hébergement Stage boxe thaï en immersion dans le nord de la Thaïlande"
-        },
-        {
-          "src": "/images/voyages/stage-boxe-thai-nord-thailande/Hyyj4HMQQqGgRiKHNnf5.jpg",
-          "alt": "image de l'hébergement Stage boxe thaï en immersion dans le nord de la Thaïlande"
-        },
-        {
-          "src": "/images/voyages/stage-boxe-thai-nord-thailande/vynMcPjnQqu9NY74yNkL.jpg",
-          "alt": "image de l'hébergement Stage boxe thaï en immersion dans le nord de la Thaïlande"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Tous les transferts terrestres : Chiang Maï/centre de boxe thaï à Pai et centre de boxe/aéroport",
-      "L’hébergement dans une chambre privée avec air conditionné à 2' du centre de boxe thaï",
-      "Les déjeuners pris sur le camp, avec les entraîneurs et autres boxeurs",
-      "Les deux entraînements quotidiens (8-10h et 15-17h) du lundi au samedi sur le camp Charn Chai",
-      "La location du matériel de boxe en état neuf",
-      "Le short de Muay thaï inclus dans le prix du séjour",
-      "L'accès libre à la salle de sport avec de nombreux équipements (altère, barre de traction, banc de musculation, tapis, cordes à sauter)"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Chiang-Maï (possibilité de devis avec vols inclus sur demande)",
-      "Les activités ou soins non compris dans la section \"le prix comprend\"",
-      "Les petits-déjeuners et les dîners",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles et les pourboires",
-      "Un dépôt de garantie de 1000bahts en arrivant, rendu à la fin (si pas de casse, de perte des clefs, etc)."
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -244,7 +373,7 @@
       },
       {
         "question": "Quelles sont les formalités d'entrée en Thaïlande ?",
-        "answer": "Avant de voyager en Thaïlande, il convient de s’assurer, sous peine de se voir refuser systématiquement l’entrée dans le pays par la police de l’immigration :\n\n*   de la **durée de validité du passeport**, qui doit être d’au moins six mois à compter de la date d’entrée sur le territoire thaïlandais ;\n*   que le passeport ne soit pas déchiré, abîmé, ou ne comporte pas une anomalie particulière.\n\nPour les touristes français, **aucun visa n’est exigé pour un séjour inférieur à 60 jours**, dès lors que le passeport est encore valable pour six mois au moins lors de l’entrée sur le territoire.\n\nIl est recommandé de s’inscrire sur l’application [Ariane.](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html)\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/thailande/#entree)."
+        "answer": "Avant de voyager en Thaïlande, il convient de s’assurer, sous peine de se voir refuser systématiquement l’entrée dans le pays par la police de l’immigration :\n\n*   de la **durée de validité du passeport**, qui doit être d’au moins six mois à compter de la date d’entrée sur le territoire thaïlandais ;\n*   que le passeport ne soit pas déchiré, abîmé, ou ne comporte pas une anomalie particulière.\n\nPour les touristes français, **aucun visa n’est exigé pour un séjour inférieur à 60 jours**, dès lors que le passeport est encore valable pour six mois au moins lors de l’entrée sur le territoire.\n\nIl est recommandé de s’inscrire sur l’application [Ariane.](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html)\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/thailande/#entree).\n\n📌  Notez que depuis le 1er mai 2025, tous les ressortissants étrangers entrant en Thaïlande par voie aérienne, terrestre ou maritime doivent remplir électroniquement la nouvelle carte d’arrivée digitale, mise en place par les services thaïlandais de l’immigration (Thailand Digital Arrival Card - TDAC), dans les trois jours précédant leur arrivée : [https://tdac.immigration.go.th](https://tdac.immigration.go.th)\n\nCe formulaire TDAC, à remplir en ligne, est obligatoire pour tous les titulaires de passeports étrangers, y compris les touristes, les voyageurs d’affaires et les résidents de longue durée.\n\nLes seules exceptions concernent les voyageurs en transit ou en correspondance en Thaïlande sans passage par le contrôle d’immigration, ainsi que ceux entrant avec un Border Pass."
       },
       {
         "question": "Quels sont les vaccins ou précautions en matière de santé ?",
@@ -276,27 +405,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 770,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "CNX"
-    ]
+  "seo": {
+    "metaTitle": "Stage boxe thaï en immersion dans le nord de la Thaïlande",
+    "canonicalUrl": "https://www.odysway.com/voyages/stage-boxe-thai-nord-thailande",
+    "ogTitle": "Stage boxe thaï en immersion dans le nord de la Thaïlande",
+    "ogDescription": "Envie de découvrir la Thaïlande autrement ? Découvrez ou perfectionnez-vous à la Boxe thaï lors de ce séjour sportif et formez-vous parmi les meilleurs : des entraineurs professionnels dans un camp de boxe thaï !",
+    "ogImage": {
+      "src": "/images/voyages/stage-boxe-thai-nord-thailande/TAJH64DTcmuKXmD42UHs.jpg",
+      "alt": "image principale du voyage Stage boxe thaï en immersion dans le nord de la Thaïlande"
+    },
+    "twitterTitle": "Stage boxe thaï en immersion dans le nord de la Thaïlande",
+    "twitterDescription": "Envie de découvrir la Thaïlande autrement ? Découvrez ou perfectionnez-vous à la Boxe thaï lors de ce séjour sportif et formez-vous parmi les meilleurs : des entraineurs professionnels dans un camp de boxe thaï !",
+    "twitterImage": {
+      "src": "/images/voyages/stage-boxe-thai-nord-thailande/TAJH64DTcmuKXmD42UHs.jpg",
+      "alt": "image principale du voyage Stage boxe thaï en immersion dans le nord de la Thaïlande"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

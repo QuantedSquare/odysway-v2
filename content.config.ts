@@ -438,7 +438,6 @@ export default defineContentConfig({
         description: z.string().describe('Description du voyage'),
         emailDescription: z.string().describe('Description du voyage pour l\'email'),
         metaDescription: z.string().describe('Meta Description du voyage'),
-        interjection: z.string().describe('Mot de liaison avec la destination (ex: "voyage **EN** France")'),
         // ==========================================
         badgeSection: z.object({
           experienceBadge: z.object({

@@ -1,46 +1,340 @@
 {
   "published": true,
   "title": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",
-  "slug": "retraite-yoga-sikkim-inde",
-  "rating": 4.5,
-  "comments": 8,
-  "description": "Embarquez pour un voyage unique au Sikkim, premier état 100% bio et joyau spirituel de l'Inde. Connectez-vous à une culture fascinante et plongez dans la beauté naturelle de cette Inde reculée.\n\nLors de ce voyage-retraite au cœur du Sikkim, profitez de séances quotidiennes de yoga et de méditation inspirées des enseignements traditionnels bouddhistes, enseignée par des guides expérimentés et passionnés. Entourés d'une atmosphère sereine et logés dans une charmante maison, découvrez la majesté des sommets enneigés de l'Himalaya, des lacs sacrés, de la beauté des vallées et du charme des villages typiques.\n\nCe voyage est aussi l'opportunité de vivre en immersion avec les communautés locales, et découvrir le riche héritage culturel de cet État indien. Embarquez pour cette aventure au Sikkim et laissez-vous envoûter par la magie de cette terre et l'accueil chaleureux de ses habitants. Une expérience marquante, pour partir à la rencontre de soi, et des autres !",
-  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable au Sikkim, entre yoga, méditation et rencontres, ce voyage est fait pour vous !",
-  "metaDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
-  "interjection": "en",
   "destinations": [
-    "Inde"
+    {
+      "name": "Inde",
+      "slug": "inde"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-aventure",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "partir-en-groupe",
-    "voyage-initiatique",
-    "sejours-chez-l-habitant",
-    "sejours-nature"
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 16,
   "nights": 14,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": true,
+  "housingType": "Hôtel et Maison",
   "idealPeriods": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    }
   ],
   "monthlyAvailability": [
-    "Octobre",
-    "Novembre",
-    "Décembre",
-    "Janvier",
-    "Février",
-    "Mars"
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    },
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    }
   ],
+  "minAge": 8,
+  "rating": 4.5,
+  "comments": 8,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Embarquez pour un voyage unique au Sikkim, premier état 100% bio et joyau spirituel de l'Inde. Connectez-vous à une culture fascinante et plongez dans la beauté naturelle de cette Inde reculée.\n\nLors de ce voyage-retraite au cœur du Sikkim, profitez de séances quotidiennes de yoga et de méditation inspirées des enseignements traditionnels bouddhistes, enseignée par des guides expérimentés et passionnés. Entourés d'une atmosphère sereine et logés dans une charmante maison, découvrez la majesté des sommets enneigés de l'Himalaya, des lacs sacrés, de la beauté des vallées et du charme des villages typiques.\n\nCe voyage est aussi l'opportunité de vivre en immersion avec les communautés locales, et découvrir le riche héritage culturel de cet État indien. Embarquez pour cette aventure au Sikkim et laissez-vous envoûter par la magie de cette terre et l'accueil chaleureux de ses habitants. Une expérience marquante, pour partir à la rencontre de soi, et des autres !",
+    "author": "Maxime",
+    "affixeAuthor": "passionné du Sikkim et guide du voyage"
+  },
+  "experiencesBlock": [
+    "Pratiquez du yoga et de la méditation quotidiennement, guidée par des enseignants passionnés et originaires du Sikkim",
+    "Explorez la splendeur des paysages du Sikkim, État indien méconnu et préservé du tourisme, 100% Bio !",
+    "Rencontrez les communautés chaleureuses de l’Himalaya",
+    "Inspirez-vous en rencontrant des moines bouddhistes dans un monastère et des enfants dans une école",
+    "Partez en toute sérénité, les vols sont inclus !"
+  ],
+  "slug": "retraite-yoga-sikkim-inde",
+  "description": "Embarquez pour un voyage unique au Sikkim, premier état 100% bio et joyau spirituel de l'Inde. Connectez-vous à une culture fascinante et plongez dans la beauté naturelle de cette Inde reculée.\n\nLors de ce voyage-retraite au cœur du Sikkim, profitez de séances quotidiennes de yoga et de méditation inspirées des enseignements traditionnels bouddhistes, enseignée par des guides expérimentés et passionnés. Entourés d'une atmosphère sereine et logés dans une charmante maison, découvrez la majesté des sommets enneigés de l'Himalaya, des lacs sacrés, de la beauté des vallées et du charme des villages typiques.\n\nCe voyage est aussi l'opportunité de vivre en immersion avec les communautés locales, et découvrir le riche héritage culturel de cet État indien. Embarquez pour cette aventure au Sikkim et laissez-vous envoûter par la magie de cette terre et l'accueil chaleureux de ses habitants. Une expérience marquante, pour partir à la rencontre de soi, et des autres !",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable au Sikkim, entre yoga, méditation et rencontres, ce voyage est fait pour vous !",
+  "metaDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**14 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à Mars",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DEBUT DU VOYAGE",
+      "badgeText": "JOUR 1",
+      "description": "Début de votre aventure à Paris CDG, embarquement pour votre vol aller pour l'Inde avec Air India en vol direct. Vol de nuit pour une arrivée le lendemain matin à New Delhi, la capitale indienne. Premières sensations et découvertes.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/UAia8YBYSNOyOzR24ts4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOL ET ARRIVEE A SILIGURI",
+      "badgeText": "JOUR 2",
+      "description": "Arrivée le matin de votre vol international. Passage à l'immigration avant un vol domestique à destination de Bagdogra dans l'après-midi (durée de 2h). Dîner et nuit dans un hôtel 4* à Siliguri. Vous êtes dans l'État indien du Bengale-Occidental, carrefour de plusieurs routes vers le Sikkim, le Népal et le Boutan. C'est déja une \"autre\" Inde dans laquelle vous vous trouvez, avec une langue, culture et nourriture différente.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/fL7ObLMWQRarzaQqDo7H.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN ROUTE POUR LE SIKKIM",
+      "badgeText": "JOUR 3",
+      "description": "Après votre petit-déjeuner, route en jeep pour entamer l'ascension depuis les plaines du Bengale vers les montagnes du Sikkim. Un trajet haut en couleur sur lequel vous vous arrêterez pour admirer les premières vallées qui se dessinent. Arrivée en début de soirée au centre de retraite au Sikkim (maison).",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/OUBJ3elCT22UzZlNFoJp.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DEBUT DE VOTRE RETRAITE",
+      "badgeText": "JOUR 4",
+      "description": "Début du séjour au Sikkim par 5 jours de pratique de yoga couplés à des visites et rencontres. Les séances seront le matin et en fin de journée et les excursions et rencontres l'après-midi ((programme en FAQ) . Ce jour 4, rencontre avec les femmes moines du monastère Ani Gumpa, une des rares écoles de moniales bouddhistes au Sikkim. Participation à un de leur rituel.\r\n",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/sBEjMxtxQJGqt1NzRnwx.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A LA RENCONTRE DE BOUDDHA",
+      "badgeText": "JOUR 5",
+      "description": "Après la pratique du yoga du matin, puis balade à pied vers la ville de Ravangla. Visite du lieu de pèlerinage Tathagata Tsal plus connu sous le nom de Buddha Park en raison de sa statue de 87 mètres de haut qui surplombe la vallée. Redescente ensuite sur la ville où une petite visite libre est prévue.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/wPrg3AXtTkWy2yXWK2CO.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VISITE D'UNE ECOLE SIKKIMAISE",
+      "badgeText": "JOUR 6",
+      "description": "Après votre séance matinale, découverte de la « Demazong English School ». Cette charmante école de village des vallées de l'Himalaya se trouve en face du centre. Elle participe à un projet qui permet aux enfants défavorisés d'être scolarisés, grâce à des dons provenant de l'étranger. Rencontre avec les enfants, découverte de leur quotidien, échanges et jeux. Pour terminer cette journée, vous pourrez profiter d'une agréable promenade pour découvrir le village de Lingdam et son petit Temple Doling Gumpa.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/x9Do1AlFSWaP1mDXjDlx.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHAMPS DE THÉ AVEC PANORAMA",
+      "badgeText": "JOUR 7",
+      "description": "Départ après le petit-déjeuner pour les champs de thé du jardin de thé Temi vers 10 heures. Nous ferons une promenade dans les champs de thé avant de déjeuner au Cherry Resort, situé au cœur des champs de thé et offrant une vue incroyable sur la vallée. Ensuite, nous visiterons l'usine de thé biologique Temi. Le retour est prévu vers 16 heures à la maison.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/x0DPt7MTSkyaM9qeuNoj.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION AU MONASTERE",
+      "badgeText": "JOUR 8",
+      "description": "Après le brunch, départ pour le monastère de Ralong. Ce monastère appartient à l'Ordre Kagyu du Bouddhisme Tibétain sous la direction de Gyaltsap Rinpoche. Environ 100 moines y résident. La vue qu'offre le monastère sur la chaîne himalayenne y est magnifique. Vous découvrirez le mode de vie de ces moines, leur routine quotidienne et échangerez avec eux. Retour en fin d'après-midi avant votre session de yoga quotidienne !",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/KdmC5UVETzKj8wdqEtpf.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "COUCHER DE SOLEIL SUR LA VALLÉE",
+      "badgeText": "JOUR 9",
+      "description": "Fin de votre retraite ! Nous prendrons la route après votre petit-déjeuner pour Tarey Bhir une corniche située à 1675 mètres d’altitude qui offre une vue imprenable sur les vallées du Sikkim. Le coucher de soleil est un moment propice pour marcher en silence, méditer, se retrouver et, offre à ce lieu, une atmosphère très spirituelle.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/GlBdkkFlS5aM0eltcQfJ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CAP VERS L'OUEST",
+      "badgeText": "JOUR 10",
+      "description": "Le matin, vous ferez votre sac pour partir en immersion deux nuits dans l’Ouest du Sikkim. Vous débuterez par la visite du monastère de Pemayangtse, un des plus anciens du Sikkim. Installation ensuite à l’hôtel vers midi. Après le déjeuner, visite des ruines de Rabdentse, l’ancienne capitale du Sikkim !\r\n",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/c4J4EvqZTEqf5QmYsbBS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES PREMIERS HABITANTS DU SIKKIM",
+      "badgeText": "JOUR 11",
+      "description": "Pour les plus motivés, possibilité de voir le lever de soleil à 5h du matin sur le Mont Kanchenjunga, 3ᵉ plus haut sommet du monde, visible depuis l’hôtel. Rencontre ensuite avec les communautés Lepchas et les Bhutias qui sont les premiers habitants du Sikkim. Au cours d’une promenade à travers le village, vous découvrirez leur authentique style de vie et comment ils coexistent avec un environnement naturel vierge.\r\n",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/6xb6i7YOSVGRTVRFIeHQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE VERS LE LAC SACRÉ",
+      "badgeText": "JOUR 12",
+      "description": "Après le petit-déjeuner, route vers le lac sacré de Khecheopalri, connu comme étant le lac des vœux. Ce lac exceptionnellement tranquille, entouré d'une forêt verdoyante, est considéré comme un des lacs sacrés du Sikkim, tant par les Bouddhistes que les Hindous. Balade autour du lac en prenant votre temps. Le retour au centre est prévu dans la soirée.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/Fe9CWhrTTFaOijL0Are2.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DESCENTE DANS LES GORGES",
+      "badgeText": "JOUR 13",
+      "description": "Après le petit-déjeuner, départ pour les magnifiques sources de Borong. qui se trouvent en bord de rivière. Les familles séjournent plusieurs jours pendant la bonne saison pour profiter des vertus des bains de soufre. Vous descendrez dans les gorges pour rejoindre cette station et profiter sur les berges. Le midi, nous mangerons sur place dans un petit restaurant local. Cette journée n'aura pas lieu sur la date d'octobre/novembre. ",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/DcURZfgPTpWc3gFSngLQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR AU SIKKIM",
+      "badgeText": "JOUR 14",
+      "description": "La dernière journée au Sikkim est dédiée à la détente à la maison. Dernière séance de yoga et de méditation. L’occasion de faire quelques achats souvenirs à Ravangla ou de profiter des bains traditionnels. Dernière nuit sikkimaise.",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/px3AsqvuRFG85S0nwLOi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FIN DE VOTRE RETRAITE ET RETOUR",
+      "badgeText": "JOURS 15 ET 16",
+      "description": "La retraite prend fin, départ du Sikkim tôt le matin vers l'aéroport de Bagdogra, avant d'embarquer pour un vol domestique Bagdogra/Delhi. Transfert de l'aéroport de Delhi vers un hôtel afin de passer une nuit confortable avant le vol retour, le lendemain (jour 16). Vol Delhi - Paris, arrivée la même journée dans l'après-midi à Paris.\r\n",
+      "photo": "/images/voyages/retraite-yoga-sikkim-inde/vAuHu6FoQ836nQ2i1ANs.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Le transport aérien international entre Paris CDG et New Delhi (aller-retour)",
+      "Le transport aérien domestique entre New Delhi et Bagdogra (aller-retour)",
+      "L'accueil à l'aéroport",
+      "Les transferts en véhicule privatisé",
+      "Le logement en hôtel 4\\* (Delhi et Siliguri) et dans un centre de retraite privatif",
+      "La pension complète (petit-déjeuner, déjeuner, dîner) sur la durée du séjour",
+      "Les différentes visites telles que décrites dans le programme",
+      "L'accompagnement par Maxime et Chookela de Karma Yoga",
+      "Les sessions de yoga quotidiennes",
+      "L’accompagnement francophone pendant toute la durée du voyage"
+    ],
+    "exclude": [
+      "Les activités non compris dans la section \"le prix comprend\"",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles sur place"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 3550,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Cette retraite est coorganisée avec Maxime et Chookela, un couple basé en Belgique, créateurs de Karma Yoga. Karma Yoga gère aussi le centre de retraite en yoga et méditation au Sikkim, sur les terres de Chookela. Ils organisent des voyages depuis près de 10 ans dans la région et sont très heureux de pouvoir collaborer avec l’agence Odysway pour ce voyage entre retraite et immersion.",
+  "accompanistsList": [
+    {
+      "name": "Chookela",
+      "description": "Enseignante d’expérience originaire du Sikkim, Karma guidera vos pratiques (Hatha, Yin et Pranayama) sur sa terre natale. Établie en Belgique depuis 2009 et co-fondatrice de Karma Yoga, ses enseignements allient la tradition, la modernité et sont empreints de la philosophie des “paramitas” du bouddhisme tibétain. Une inspiration qu’elle a puisée dans les enseignements de son frère maître bouddhiste, le Lama Zeupa.",
+      "role": "Enseignante yoga",
+      "image": "/images/voyages/retraite-yoga-sikkim-inde/RJ6YZcQ5RO66Rbu5evyM.jpg"
+    },
+    {
+      "name": "Maxime",
+      "description": "Co-fondateur de Karma Yoga en Belgique et en Inde, enseignant de yoga et coordinateur des retraites et formations, Maxime sera votre accompagnateur principal tout au long du voyage. Amoureux du Sikkim où il aime se ressourcer, Maxime est toujours heureux de pouvoir faire découvrir cet “autre monde” aux européens. Il est connu pour son sens de l’humour et sa positivité en toutes circonstances.",
+      "role": "Accompagnant et enseignant yoga",
+      "image": "/images/voyages/retraite-yoga-sikkim-inde/O4KKw4ApSKBZVdK8bxpK.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel et Maison",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous logerez dans des hôtels 4* hôtel avant et après l'immersion dans le Sikkim. Pendant la retraite, vous serez accueillis dans une maison privatisée et très confortable, idéalement localisée. Le détail ci-dessous : \r\n— Une nuit dans un hôtel 4* à Siliguri (Bengale) - 10 nuits dans une maison durant votre retraite dans le Sikkim (Voir photos). Une nuit dans le village d’une communauté locale — une nuit dans un Resort dans l’ouest du Sikkim et une nuit à Delhi dans un hôtel 4 ou 5* sur le retour.",
+      "image": [
+        {
+          "src": "/images/voyages/retraite-yoga-sikkim-inde/iyZxJdnMSJaqkcnDRkhB.jpg",
+          "alt": "image de l'hébergement Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
+        },
+        {
+          "src": "/images/voyages/retraite-yoga-sikkim-inde/LJnltTGkRXuzAFF0geVg.jpg",
+          "alt": "image de l'hébergement Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
+        },
+        {
+          "src": "/images/voyages/retraite-yoga-sikkim-inde/VulhaqIFSoCwQ1DIt2WY.jpg",
+          "alt": "image de l'hébergement Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/retraite-yoga-sikkim-inde/VQgiR4CREWR0nTGN0mbc.jpg",
     "alt": "image principale du voyage Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
@@ -90,182 +384,6 @@
   "videoLinks": [
     "https://www.youtube.com/embed/3aH6CsMkLGA"
   ],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Embarquez pour un voyage unique au Sikkim, premier état 100% bio et joyau spirituel de l'Inde. Connectez-vous à une culture fascinante et plongez dans la beauté naturelle de cette Inde reculée.\n\nLors de ce voyage-retraite au cœur du Sikkim, profitez de séances quotidiennes de yoga et de méditation inspirées des enseignements traditionnels bouddhistes, enseignée par des guides expérimentés et passionnés. Entourés d'une atmosphère sereine et logés dans une charmante maison, découvrez la majesté des sommets enneigés de l'Himalaya, des lacs sacrés, de la beauté des vallées et du charme des villages typiques.\n\nCe voyage est aussi l'opportunité de vivre en immersion avec les communautés locales, et découvrir le riche héritage culturel de cet État indien. Embarquez pour cette aventure au Sikkim et laissez-vous envoûter par la magie de cette terre et l'accueil chaleureux de ses habitants. Une expérience marquante, pour partir à la rencontre de soi, et des autres !",
-    "author": "Maxime",
-    "affixeAuthor": "passionné du Sikkim et guide du voyage"
-  },
-  "experiencesBlock": [
-    "Pratiquez du yoga et de la méditation quotidiennement, guidée par des enseignants passionnés et originaires du Sikkim",
-    "Explorez la splendeur des paysages du Sikkim, État indien méconnu et préservé du tourisme, 100% Bio !",
-    "Rencontrez les communautés chaleureuses de l’Himalaya",
-    "Inspirez-vous en rencontrant des moines bouddhistes dans un monastère et des enfants dans une école",
-    "Partez en toute sérénité, les vols sont inclus !"
-  ],
-  "programmeBlock": [
-    {
-      "title": "DEBUT DU VOYAGE",
-      "badgeText": "JOUR 1",
-      "description": "Début de votre aventure à Paris CDG, embarquement pour votre vol aller pour l'Inde avec Air India en vol direct. Vol de nuit pour une arrivée le lendemain matin à New Delhi, la capitale indienne. Premières sensations et découvertes.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/UAia8YBYSNOyOzR24ts4.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VOL ET ARRIVEE A SILIGURI",
-      "badgeText": "JOUR 2",
-      "description": "Arrivée le matin de votre vol international. Passage à l'immigration avant un vol domestique à destination de Bagdogra dans l'après-midi (durée de 2h). Dîner et nuit dans un hôtel 4* à Siliguri. Vous êtes dans l'État indien du Bengale-Occidental, carrefour de plusieurs routes vers le Sikkim, le Népal et le Boutan. C'est déja une \"autre\" Inde dans laquelle vous vous trouvez, avec une langue, culture et nourriture différente.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/fL7ObLMWQRarzaQqDo7H.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "EN ROUTE POUR LE SIKKIM",
-      "badgeText": "JOUR 3",
-      "description": "Après votre petit-déjeuner, route en jeep pour entamer l'ascension depuis les plaines du Bengale vers les montagnes du Sikkim. Un trajet haut en couleur sur lequel vous vous arrêterez pour admirer les premières vallées qui se dessinent. Arrivée en début de soirée au centre de retraite au Sikkim (maison).",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/OUBJ3elCT22UzZlNFoJp.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DEBUT DE VOTRE RETRAITE",
-      "badgeText": "JOUR 4",
-      "description": "Début du séjour au Sikkim par 5 jours de pratique de yoga couplés à des visites et rencontres. Les séances seront le matin et en fin de journée et les excursions et rencontres l'après-midi ((programme en FAQ) . Ce jour 4, rencontre avec les femmes moines du monastère Ani Gumpa, une des rares écoles de moniales bouddhistes au Sikkim. Participation à un de leur rituel.\r\n",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/sBEjMxtxQJGqt1NzRnwx.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "A LA RENCONTRE DE BOUDDHA",
-      "badgeText": "JOUR 5",
-      "description": "Après la pratique du yoga du matin, puis balade à pied vers la ville de Ravangla. Visite du lieu de pèlerinage Tathagata Tsal plus connu sous le nom de Buddha Park en raison de sa statue de 87 mètres de haut qui surplombe la vallée. Redescente ensuite sur la ville où une petite visite libre est prévue.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/wPrg3AXtTkWy2yXWK2CO.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "VISITE D'UNE ECOLE SIKKIMAISE",
-      "badgeText": "JOUR 6",
-      "description": "Après votre séance matinale, découverte de la « Demazong English School ». Cette charmante école de village des vallées de l'Himalaya se trouve en face du centre. Elle participe à un projet qui permet aux enfants défavorisés d'être scolarisés, grâce à des dons provenant de l'étranger. Rencontre avec les enfants, découverte de leur quotidien, échanges et jeux. Pour terminer cette journée, vous pourrez profiter d'une agréable promenade pour découvrir le village de Lingdam et son petit Temple Doling Gumpa.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/x9Do1AlFSWaP1mDXjDlx.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CHAMPS DE THÉ AVEC PANORAMA",
-      "badgeText": "JOUR 7",
-      "description": "Départ après le petit-déjeuner pour les champs de thé du jardin de thé Temi vers 10 heures. Nous ferons une promenade dans les champs de thé avant de déjeuner au Cherry Resort, situé au cœur des champs de thé et offrant une vue incroyable sur la vallée. Ensuite, nous visiterons l'usine de thé biologique Temi. Le retour est prévu vers 16 heures à la maison.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/x0DPt7MTSkyaM9qeuNoj.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "IMMERSION AU MONASTERE",
-      "badgeText": "JOUR 8",
-      "description": "Après le brunch, départ pour le monastère de Ralong. Ce monastère appartient à l'Ordre Kagyu du Bouddhisme Tibétain sous la direction de Gyaltsap Rinpoche. Environ 100 moines y résident. La vue qu'offre le monastère sur la chaîne himalayenne y est magnifique. Vous découvrirez le mode de vie de ces moines, leur routine quotidienne et échangerez avec eux. Retour en fin d'après-midi avant votre session de yoga quotidienne !",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/KdmC5UVETzKj8wdqEtpf.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "COUCHER DE SOLEIL SUR LA VALLÉE",
-      "badgeText": "JOUR 9",
-      "description": "Fin de votre retraite ! Nous prendrons la route après votre petit-déjeuner pour Tarey Bhir une corniche située à 1675 mètres d’altitude qui offre une vue imprenable sur les vallées du Sikkim. Le coucher de soleil est un moment propice pour marcher en silence, méditer, se retrouver et, offre à ce lieu, une atmosphère très spirituelle.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/GlBdkkFlS5aM0eltcQfJ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CAP VERS L'OUEST",
-      "badgeText": "JOUR 10",
-      "description": "Le matin, vous ferez votre sac pour partir en immersion deux nuits dans l’Ouest du Sikkim. Vous débuterez par la visite du monastère de Pemayangtse, un des plus anciens du Sikkim. Installation ensuite à l’hôtel vers midi. Après le déjeuner, visite des ruines de Rabdentse, l’ancienne capitale du Sikkim !\r\n",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/c4J4EvqZTEqf5QmYsbBS.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES PREMIERS HABITANTS DU SIKKIM",
-      "badgeText": "JOUR 11",
-      "description": "Pour les plus motivés, possibilité de voir le lever de soleil à 5h du matin sur le Mont Kanchenjunga, 3ᵉ plus haut sommet du monde, visible depuis l’hôtel. Rencontre ensuite avec les communautés Lepchas et les Bhutias qui sont les premiers habitants du Sikkim. Au cours d’une promenade à travers le village, vous découvrirez leur authentique style de vie et comment ils coexistent avec un environnement naturel vierge.\r\n",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/6xb6i7YOSVGRTVRFIeHQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ROUTE VERS LE LAC SACRÉ",
-      "badgeText": "JOUR 12",
-      "description": "Après le petit-déjeuner, route vers le lac sacré de Khecheopalri, connu comme étant le lac des vœux. Ce lac exceptionnellement tranquille, entouré d'une forêt verdoyante, est considéré comme un des lacs sacrés du Sikkim, tant par les Bouddhistes que les Hindous. Balade autour du lac en prenant votre temps. Le retour au centre est prévu dans la soirée.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/Fe9CWhrTTFaOijL0Are2.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DESCENTE DANS LES GORGES",
-      "badgeText": "JOUR 13",
-      "description": "Après le petit-déjeuner, départ pour les magnifiques sources de Borong. qui se trouvent en bord de rivière. Les familles séjournent plusieurs jours pendant la bonne saison pour profiter des vertus des bains de soufre. Vous descendrez dans les gorges pour rejoindre cette station et profiter sur les berges. Le midi, nous mangerons sur place dans un petit restaurant local. Cette journée n'aura pas lieu sur la date d'octobre/novembre. ",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/DcURZfgPTpWc3gFSngLQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIER JOUR AU SIKKIM",
-      "badgeText": "JOUR 14",
-      "description": "La dernière journée au Sikkim est dédiée à la détente à la maison. Dernière séance de yoga et de méditation. L’occasion de faire quelques achats souvenirs à Ravangla ou de profiter des bains traditionnels. Dernière nuit sikkimaise.",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/px3AsqvuRFG85S0nwLOi.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FIN DE VOTRE RETRAITE ET RETOUR",
-      "badgeText": "JOURS 15 ET 16",
-      "description": "La retraite prend fin, départ du Sikkim tôt le matin vers l'aéroport de Bagdogra, avant d'embarquer pour un vol domestique Bagdogra/Delhi. Transfert de l'aéroport de Delhi vers un hôtel afin de passer une nuit confortable avant le vol retour, le lendemain (jour 16). Vol Delhi - Paris, arrivée la même journée dans l'après-midi à Paris.\r\n",
-      "photo": "/images/voyages/retraite-yoga-sikkim-inde/vAuHu6FoQ836nQ2i1ANs.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [
-    {
-      "name": "Chookela",
-      "description": "Enseignante d’expérience originaire du Sikkim, Karma guidera vos pratiques (Hatha, Yin et Pranayama) sur sa terre natale. Établie en Belgique depuis 2009 et co-fondatrice de Karma Yoga, ses enseignements allient la tradition, la modernité et sont empreints de la philosophie des “paramitas” du bouddhisme tibétain. Une inspiration qu’elle a puisée dans les enseignements de son frère maître bouddhiste, le Lama Zeupa.",
-      "role": "Enseignante yoga",
-      "image": "/images/voyages/retraite-yoga-sikkim-inde/RJ6YZcQ5RO66Rbu5evyM.jpg"
-    },
-    {
-      "name": "Maxime",
-      "description": "Co-fondateur de Karma Yoga en Belgique et en Inde, enseignant de yoga et coordinateur des retraites et formations, Maxime sera votre accompagnateur principal tout au long du voyage. Amoureux du Sikkim où il aime se ressourcer, Maxime est toujours heureux de pouvoir faire découvrir cet “autre monde” aux européens. Il est connu pour son sens de l’humour et sa positivité en toutes circonstances.",
-      "role": "Accompagnant et enseignant yoga",
-      "image": "/images/voyages/retraite-yoga-sikkim-inde/O4KKw4ApSKBZVdK8bxpK.jpg"
-    }
-  ],
-  "accompanistsDescription": "Cette retraite est coorganisée avec Maxime et Chookela, un couple basé en Belgique, créateurs de Karma Yoga. Karma Yoga gère aussi le centre de retraite en yoga et méditation au Sikkim, sur les terres de Chookela. Ils organisent des voyages depuis près de 10 ans dans la région et sont très heureux de pouvoir collaborer avec l’agence Odysway pour ce voyage entre retraite et immersion.",
-  "housingBlock": [
-    {
-      "title": "Hôtel et Maison",
-      "housingType": "",
-      "housingMood": "Lors de ce voyage, vous logerez dans des hôtels 4* hôtel avant et après l'immersion dans le Sikkim. Pendant la retraite, vous serez accueillis dans une maison privatisée et très confortable, idéalement localisée. Le détail ci-dessous : \r\n— Une nuit dans un hôtel 4* à Siliguri (Bengale) - 10 nuits dans une maison durant votre retraite dans le Sikkim (Voir photos). Une nuit dans le village d’une communauté locale — une nuit dans un Resort dans l’ouest du Sikkim et une nuit à Delhi dans un hôtel 4 ou 5* sur le retour.",
-      "image": [
-        {
-          "src": "/images/voyages/retraite-yoga-sikkim-inde/iyZxJdnMSJaqkcnDRkhB.jpg",
-          "alt": "image de l'hébergement Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
-        },
-        {
-          "src": "/images/voyages/retraite-yoga-sikkim-inde/LJnltTGkRXuzAFF0geVg.jpg",
-          "alt": "image de l'hébergement Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
-        },
-        {
-          "src": "/images/voyages/retraite-yoga-sikkim-inde/VulhaqIFSoCwQ1DIt2WY.jpg",
-          "alt": "image de l'hébergement Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le transport aérien international entre Paris CDG et New Delhi (aller-retour)",
-      "Le transport aérien domestique entre New Delhi et Bagdogra (aller-retour)",
-      "L'accueil à l'aéroport",
-      "Les transferts en véhicule privatisé",
-      "Le logement en hôtel 4\\* (Delhi et Siliguri) et dans un centre de retraite privatif",
-      "La pension complète (petit-déjeuner, déjeuner, dîner) sur la durée du séjour",
-      "Les différentes visites telles que décrites dans le programme",
-      "L'accompagnement par Maxime et Chookela de Karma Yoga",
-      "Les sessions de yoga quotidiennes",
-      "L’accompagnement francophone pendant toute la durée du voyage"
-    ],
-    "exclude": [
-      "Les activités non compris dans la section \"le prix comprend\"",
-      "L'assurance annulation ou multirisques",
-      "Les dépenses personnelles sur place"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -318,24 +436,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 3550,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": 12,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",
+    "canonicalUrl": "https://www.odysway.com/voyages/retraite-yoga-sikkim-inde",
+    "ogTitle": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",
+    "ogDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
+    "ogImage": {
+      "src": "/images/voyages/retraite-yoga-sikkim-inde/VQgiR4CREWR0nTGN0mbc.jpg",
+      "alt": "image principale du voyage Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
+    },
+    "twitterTitle": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",
+    "twitterDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
+    "twitterImage": {
+      "src": "/images/voyages/retraite-yoga-sikkim-inde/VQgiR4CREWR0nTGN0mbc.jpg",
+      "alt": "image principale du voyage Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

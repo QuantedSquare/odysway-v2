@@ -46,10 +46,19 @@
           hover
           @click="goToTravel(travel.travel_slug)"
         >
-          <v-card-title>{{ travel.travel_slug || 'Sans nom' }}</v-card-title>
+          <v-img
+            v-if="travel.image"
+            :src="travel.image"
+            height="100"
+            cover
+          />
+          <v-card-title class="text-h5">
+            {{ travel.title || travel.travel_slug }}
+          </v-card-title>
           <v-card-text>
-            Status: {{ travel.status }}<br>
             Nombre de dates: {{ travel.nb_dates }}
+            <br>
+            Nombre de places réservées: {{ travel.booked_seats }}
           </v-card-text>
         </v-card>
       </v-col>
@@ -71,7 +80,7 @@ import { useRouter } from 'vue-router'
 
 const search = ref(null)
 const loading = ref(false)
-const travelesList = await queryCollection('voyages').select('slug', 'title').all()
+const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').all()
 console.log('travelesList', travelesList)
 
 definePageMeta({
@@ -100,10 +109,18 @@ const goToAddDate = () => {
 }
 
 const filteredTravels = computed(() => {
+  const enrichedTravelsDate = travels.value?.map((travel) => {
+    const correspondingTravel = travelesList.find(t => t.slug === travel.travel_slug)
+    return {
+      ...travel,
+      image: correspondingTravel?.image?.src,
+      title: correspondingTravel?.title,
+    }
+  })
   if (search.value) {
-    return travels.value?.filter(travel => travel.travel_slug.includes(search.value))
+    return enrichedTravelsDate?.filter(travel => travel.travel_slug.includes(search.value))
   }
-  return travels.value
+  return enrichedTravelsDate
 })
 console.log('filteredTravels', filteredTravels.value)
 onMounted(fetchTravels)

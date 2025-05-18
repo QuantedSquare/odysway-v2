@@ -1,29 +1,267 @@
 {
   "published": true,
   "title": "Voyage au Laos : rencontres avec les éléphants et communautés locales",
-  "slug": "voyage-immersion-laos-elephants",
-  "rating": 4.8,
-  "comments": 9,
-  "description": "Bienvenue au Laos, l'ancien royaume du million d'éléphants pour un voyage hors du temps !\n\nLors de ce voyage, vous aurez le privilège rare de partager la vie des cornacs et de leur éléphants. Les cornacs sont ces \"gardiens d'éléphants\" qui consacrent leur vie à leur éléphant, loin de l'image négative véhiculée par certains établissements peu scrupuleux. Vous découvrirez ainsi la réalité de ce métier emprunt d'amour et de bienveillance, qui se transmet de génération en génération, et ce, dès le plus jeune âge.\n\nVous parcourrez ensuite le Nord du Laos, un véritable joyau naturel préservé, où les montagnes se mêlent aux forêts luxuriantes. Vous découvrirez des villages authentiques nichés au creux des vallées verdoyantes où le temps semble s'être arrêté... Une occasion unique pour vous imprégner de la vie quotidienne des habitants, découvrir leurs traditions millénaires et échanger avec des artisans locaux.\n\nUn voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moments riches en émotions à chaque étape de votre voyage...",
-  "emailDescription": "👉 Si vous souhaitez découvrir le Laos à travers une expérience unique, ce voyage est fait pour vous ! ",
-  "metaDescription": "Vivez un voyage unique au Laos, à la rencontre de ses habitants et en immersion chez des Cornacs et leurs éléphants.",
-  "interjection": "au",
   "destinations": [
-    "Laos"
+    {
+      "name": "Laos",
+      "slug": "laos"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "voyage-animalier",
-    "sejours-chez-l-habitant",
-    "partir-en-groupe",
-    "sejours-nature"
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 13,
   "nights": 12,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chez l'habitant, hôtel",
   "idealPeriods": [],
   "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 9,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Bienvenue au Laos, l'ancien royaume du million d'éléphants pour un voyage hors du temps !\n\nLors de ce voyage, vous aurez le privilège rare de partager la vie des cornacs et de leur éléphants. Les cornacs sont ces \"gardiens d'éléphants\" qui consacrent leur vie à leur éléphant, loin de l'image négative véhiculée par certains établissements peu scrupuleux. Vous découvrirez ainsi la réalité de ce métier emprunt d'amour et de bienveillance, qui se transmet de génération en génération, et ce, dès le plus jeune âge.\n\nVous parcourrez ensuite le Nord du Laos, un véritable joyau naturel préservé, où les montagnes se mêlent aux forêts luxuriantes. Vous découvrirez des villages authentiques nichés au creux des vallées verdoyantes où le temps semble s'être arrêté... Une occasion unique pour vous imprégner de la vie quotidienne des habitants, découvrir leurs traditions millénaires et échanger avec des artisans locaux.\n\nUn voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moments riches en émotions à chaque étape de votre voyage...",
+    "author": "Linda",
+    "affixeAuthor": "Responsable Asie"
+  },
+  "experiencesBlock": [
+    "La journée de croisière sur le Mékong sur un bateau familial traditionnel",
+    "L'occasion rare de vivre une immersion chez les Cornacs",
+    "La possibilité d'être au plus prêt des éléphants, dans leur milieu naturel",
+    "La rencontre avec les habitants et minorités ethniques du Laos",
+    "La découverte de paysages sublimes et encore préservés"
+  ],
+  "slug": "voyage-immersion-laos-elephants",
+  "description": "Bienvenue au Laos, l'ancien royaume du million d'éléphants pour un voyage hors du temps !\n\nLors de ce voyage, vous aurez le privilège rare de partager la vie des cornacs et de leur éléphants. Les cornacs sont ces \"gardiens d'éléphants\" qui consacrent leur vie à leur éléphant, loin de l'image négative véhiculée par certains établissements peu scrupuleux. Vous découvrirez ainsi la réalité de ce métier emprunt d'amour et de bienveillance, qui se transmet de génération en génération, et ce, dès le plus jeune âge.\n\nVous parcourrez ensuite le Nord du Laos, un véritable joyau naturel préservé, où les montagnes se mêlent aux forêts luxuriantes. Vous découvrirez des villages authentiques nichés au creux des vallées verdoyantes où le temps semble s'être arrêté... Une occasion unique pour vous imprégner de la vie quotidienne des habitants, découvrir leurs traditions millénaires et échanger avec des artisans locaux.\n\nUn voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moments riches en émotions à chaque étape de votre voyage...",
+  "emailDescription": "👉 Si vous souhaitez découvrir le Laos à travers une expérience unique, ce voyage est fait pour vous ! ",
+  "metaDescription": "Vivez un voyage unique au Laos, à la rencontre de ses habitants et en immersion chez des Cornacs et leurs éléphants.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Octobre à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE À CHIANG MAI",
+      "badgeText": "JOUR 1 ",
+      "description": "Bienvenue en Thaïlande ! À votre arrivée à Chiang Mai, accueil et transfert privatif à votre hôtel par un chauffeur. Profitez de sa localisation idéale pour découvrir les environs ou vous détendre avec un agréable message thaï. ",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/ZIlG4F8CQCKuJDKq5smF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DIRECTION CHIANG RAI",
+      "badgeText": "JOUR 2",
+      "description": "Après une matinée libre à Chiang Mai, partez pour le Triangle d'Or, où se rejoignent la Birmanie, le Laos et la Thaïlande. Installez-vous dans votre hôtel en fin d'après-midi et profitez du temps libre pour explorer les environs, déguster la cuisine locale ou simplement vous reposer.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/q6RQwtP5QyCdxn7IGozQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CROISIÈRE SUR LE MÉKONG",
+      "badgeText": "JOUR 3",
+      "description": "Ce matin, vous embarquez sur un bateau familial traditionnel pour une croisière sur le Mékong au cœur de paysages somptueux et préservées ! En chemin, vous ferez une halte pour découvrir la vie locale d'un village au bord du fleuve. Arrivée et installation en fin d'après-midi dans votre lodge avec vue sur le Mékong.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/PS2JpKo7TIik0Ax2nqjl.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RENCONTRE AVEC LES ÉLÉPHANTS ET CORNACS",
+      "badgeText": "JOUR 4",
+      "description": "Votre immersion commence dès maintenant ! Traversez le Mékong à bord d'une pirogue pour rejoindre l'Elephant Park. Après une brève présentation générale, installez-vous dans l'une des maisons des Cornacs et partez à la rencontre des éléphants du parc. Selon le jour de votre arrivée, vous pourrez assister à un check vétérinaire ou même au bain des éléphants. En soirée, préparez votre dîner avec les Cornacs. Profitez de cet instant privilégié pour vivre une expérience de partage unique et enrichissante.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/oS1TK2J7Se3Yu5VKiQXm.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE AUX CÔTÉS D'UN ÉLÉPHANT",
+      "badgeText": "JOUR 5",
+      "description": "Ce matin, plongez au cœur de l'immersion en faisant la rencontre de l'éléphant Mae Kham et en participant à la préparation de son petit déjeuner. Ensuite, laissez-vous guider lors d'une randonnée dans la jungle, accompagné par son Cornac et votre guide. Savourez un déjeuner sur les crêtes, contemplez la vue imprenable sur les paysages environnants et vivez pleinement ce moment privilégié, une expérience rare et unique en totale harmonie avec la nature.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/58DdwrFeTzWvpKkSW8By.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AUX CÔTÉS DES ARTISANS DU PARC",
+      "badgeText": "JOUR 6",
+      "description": "Ce matin, partez à la rencontre des autres éléphants vivant près des maisons des cornacs puis dirigez-vous vers les rives du Mékong où vous pourrez les observer en toute tranquillité. Après votre déjeuner, plongez-vous dans la culture locale en participant à une activité de tissage de bambou ou de forge aux côtés des artisans du parc. Avant de quitter ce petit coin de paradis, profitez d'un dernier moment pour observer les éléphants puis embarquez sur votre pirogue pour le retour au lodge.\r\n\r\n",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/DdbC60djT0iQMZPOH0aS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU CŒUR DE LA NATURE LAOTIENNE",
+      "badgeText": "JOUR 7",
+      "description": "Après une matinée libre, vous prendrez la route vers le parc ressourçant de Namkat Yorlapa. En chemin, vous aurez l'occasion de passer à travers de nombreux villages, n'hésitez pas à vous y arrêter et découvrir la vie locale ! Arrivée en fin d'après-midi et installation dans votre chambre.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/nJu57AbRS1aWfnIa56Hd.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "NATURE, CASCADE ET DÉTENTE",
+      "badgeText": "JOUR 8",
+      "description": "Découvrez la forêt environnante en voiture puis à pied jusqu'à une superbe cascade, parfaite pour une baignade rafraîchissante. En chemin, ne manquez pas les Sky Bridges pour des vues à couper le souffle ! Après une matinée bien remplie, retournez à l'hôtel pour vous détendre. Profitez de votre fin de journée libre pour vous reposer ou explorer davantage les activités offertes dans le parc.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/gz5Tk77iQIyprKyQGeoX.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU CŒUR DES VILLAGES DE TISSERANDS",
+      "badgeText": "JOUR 9",
+      "description": "Départ matinal vers Nong Khiaw. Sur la route, découvrez les paysages montagneux et les villages Hmong animés. Faites un petit détour par un petit village réputé pour ses maisons traditionnelles, témoins d'un temps révolu... Après le déjeuner, embarquez pour une croisière pittoresque jusqu'au charmant village de Ban Sop Chaem. Explorez ses ruelles tranquilles et imprégnez-vous de l'atmosphère unique du tissage, une tradition bien ancrée. Sur le retour, laissez-vous envoûter par les somptueux paysages de falaises karstiques, et faite un arrêt à Muang Ngoi si le temps le permet.\r\n\r\n\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/r3W9DqajReuYMTY5eFZe.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE ET VUE PANORAMIQUE",
+      "badgeText": "JOUR 10",
+      "description": "Ce matin, vous partirez pour une randonnée jusqu'au point de vue de Phou Pha Daeng pour profiter d’une vue panoramique exceptionnelle sur Nong Khiaw, sa vallée et ses massifs karstiques ! Après un déjeuner dans un restaurant local, vous irez vers la dernière étape de votre voyage : Luang Prabang. \r\n",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/nldttJzgSQ2qBNfGEwbH.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES SECRETS DU RIZ",
+      "badgeText": "JOUR 11",
+      "description": "Pour les lève-tôt, possibilité d'observer le Tak Bak dans les rues de la ville : un rituel quotidien où les fidèles font leurs offrandes aux moines. Après un petit-déjeuner, vous participerez à un projet communautaire au cœur des rizières. Vous y découvrirez les secrets de la culture du riz, du semis à la récolte, tout en contribuant à un projet de soutien aux familles agricoles locales et à l'éducation des jeunes à travers des cours d'anglais.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/k0ttJdrGSwilKEa6vvTw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES CHUTES DE KUANG SI ",
+      "badgeText": "JOUR 12",
+      "description": "Découvrez les magnifiques chutes de Kuang Si, l'un des trésors naturels du Laos ! Après un déjeuner au bord des bassins, profitez d'un après-midi libre pour vous détendre, vous baigner ou grimper jusqu'au sommet de la cascade principale. Terminez cette journée en beauté avec une croisière privatisée sur le Mékong jusqu'à Luang Prabang au milieu des paysages préservés.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/jRkbBMjSB6zLKh0Hs3bb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS AU LAOS",
+      "badgeText": "JOUR 13",
+      "description": "Comme toutes bonnes choses ont une fin, votre voyage arrive à son terme. Après une dernière visite des principaux centres d'intérêts en tuk-tuk en compagnie de votre guide, il est l'heure de lui faire vos adieux ainsi qu'à votre chauffeur.",
+      "photo": "/images/voyages/voyage-immersion-laos-elephants/ENApXU9WQ2CqnHAJLs2H.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts en bateau et voiture",
+      "Le guide francophone et chauffeur privé",
+      "Les nuitées dans des hôtels 3\\* et chez l'habitant en base double avec petit-déjeuner",
+      "Les repas suivants :\n\n*   Pension complète des jours : 3, 4, 5, 9 et 11\n*   Petit-déjeuner et déjeuner des jours : 6, 10 et 12\n*   Petit-déjeuner des jours : 2, 7, 8 et 13",
+      "Pension complète des jours : 3, 4, 5, 9 et 11",
+      "Petit-déjeuner et déjeuner des jours : 6, 10 et 12",
+      "Petit-déjeuner des jours : 2, 7, 8 et 13",
+      "Les entrées sur les différents sites",
+      "Toutes les activités indiquées dans le programme",
+      "La rencontre de plusieurs artisans locaux"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Chiang Mai et depuis l'aéroport de Luang Prabang au retour et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les repas suivants :\n\n*   Les déjeuners et dîner des jours : 2, 7, 8 et 13\n*   Le diner des jours : 6, 10 et 12",
+      "Les déjeuners et dîner des jours : 2, 7, 8 et 13",
+      "Le diner des jours : 6, 10 et 12",
+      "Les boissons non mentionnés",
+      "Les pourboires (à titre indicatif : $4/jour/pers pour les guides, $2/jour/pers pour les chauffeurs et $1/pers pour les serveurs)",
+      "L'assurance voyage multirisques ou annulation"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2425,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 370,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Ce voyage sera accompagné tout le long par des chauffeurs privés et d'un guide anglophone (francophone à partir de 4 personnes) qui sauront vous faire plonger dans l'histoire du Laos, vous parler au mieux de son patrimoine culturel et partager avec vous leur passion !",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Chez l'habitant, hôtel",
+      "housingType": "",
+      "housingMood": "Pendant ce séjour, vous logerez en hôtel 3* lors des différentes étapes de votre voyage au Laos et chez l'habitant lors de votre immersion chez les Cornacs les jours 3 à 5. \r\n",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-immersion-laos-elephants/xYoxQuYHRWacPYgapxhy.jpg",
+          "alt": "image de l'hébergement Voyage au Laos : rencontres avec les éléphants et communautés locales"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-laos-elephants/7Ut7130fSCOvfiQYdTh2.jpg",
+          "alt": "image de l'hébergement Voyage au Laos : rencontres avec les éléphants et communautés locales"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-laos-elephants/JgAykyRmRGSriJsdPKdm.jpg",
+          "alt": "image de l'hébergement Voyage au Laos : rencontres avec les éléphants et communautés locales"
+        }
+      ]
+    }
+  ],
   "image": {
     "src": "/images/voyages/voyage-immersion-laos-elephants/7UF5O3PnTSOSHDMOcLCB.jpg",
     "alt": "image principale du voyage Voyage au Laos : rencontres avec les éléphants et communautés locales"
@@ -79,160 +317,6 @@
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Bienvenue au Laos, l'ancien royaume du million d'éléphants pour un voyage hors du temps !\n\nLors de ce voyage, vous aurez le privilège rare de partager la vie des cornacs et de leur éléphants. Les cornacs sont ces \"gardiens d'éléphants\" qui consacrent leur vie à leur éléphant, loin de l'image négative véhiculée par certains établissements peu scrupuleux. Vous découvrirez ainsi la réalité de ce métier emprunt d'amour et de bienveillance, qui se transmet de génération en génération, et ce, dès le plus jeune âge.\n\nVous parcourrez ensuite le Nord du Laos, un véritable joyau naturel préservé, où les montagnes se mêlent aux forêts luxuriantes. Vous découvrirez des villages authentiques nichés au creux des vallées verdoyantes où le temps semble s'être arrêté... Une occasion unique pour vous imprégner de la vie quotidienne des habitants, découvrir leurs traditions millénaires et échanger avec des artisans locaux.\n\nUn voyage en totale immersion, qui vous plonge au cœur du Laos, avec des moments riches en émotions à chaque étape de votre voyage...",
-    "author": "Linda",
-    "affixeAuthor": "Responsable Asie"
-  },
-  "experiencesBlock": [
-    "La journée de croisière sur le Mékong sur un bateau familial traditionnel",
-    "L'occasion rare de vivre une immersion chez les Cornacs",
-    "La possibilité d'être au plus prêt des éléphants, dans leur milieu naturel",
-    "La rencontre avec les habitants et minorités ethniques du Laos",
-    "La découverte de paysages sublimes et encore préservés"
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE À CHIANG MAI",
-      "badgeText": "JOUR 1 ",
-      "description": "Bienvenue en Thaïlande ! À votre arrivée à Chiang Mai, accueil et transfert privatif à votre hôtel par un chauffeur. Profitez de sa localisation idéale pour découvrir les environs ou vous détendre avec un agréable message thaï. ",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/ZIlG4F8CQCKuJDKq5smF.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DIRECTION CHIANG RAI",
-      "badgeText": "JOUR 2",
-      "description": "Après une matinée libre à Chiang Mai, partez pour le Triangle d'Or, où se rejoignent la Birmanie, le Laos et la Thaïlande. Installez-vous dans votre hôtel en fin d'après-midi et profitez du temps libre pour explorer les environs, déguster la cuisine locale ou simplement vous reposer.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/q6RQwtP5QyCdxn7IGozQ.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "CROISIÈRE SUR LE MÉKONG",
-      "badgeText": "JOUR 3",
-      "description": "Ce matin, vous embarquez sur un bateau familial traditionnel pour une croisière sur le Mékong au cœur de paysages somptueux et préservées ! En chemin, vous ferez une halte pour découvrir la vie locale d'un village au bord du fleuve. Arrivée et installation en fin d'après-midi dans votre lodge avec vue sur le Mékong.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/PS2JpKo7TIik0Ax2nqjl.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RENCONTRE AVEC LES ÉLÉPHANTS ET CORNACS",
-      "badgeText": "JOUR 4",
-      "description": "Votre immersion commence dès maintenant ! Traversez le Mékong à bord d'une pirogue pour rejoindre l'Elephant Park. Après une brève présentation générale, installez-vous dans l'une des maisons des Cornacs et partez à la rencontre des éléphants du parc. Selon le jour de votre arrivée, vous pourrez assister à un check vétérinaire ou même au bain des éléphants. En soirée, préparez votre dîner avec les Cornacs. Profitez de cet instant privilégié pour vivre une expérience de partage unique et enrichissante.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/oS1TK2J7Se3Yu5VKiQXm.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RANDONNÉE AUX CÔTÉS D'UN ÉLÉPHANT",
-      "badgeText": "JOUR 5",
-      "description": "Ce matin, plongez au cœur de l'immersion en faisant la rencontre de l'éléphant Mae Kham et en participant à la préparation de son petit déjeuner. Ensuite, laissez-vous guider lors d'une randonnée dans la jungle, accompagné par son Cornac et votre guide. Savourez un déjeuner sur les crêtes, contemplez la vue imprenable sur les paysages environnants et vivez pleinement ce moment privilégié, une expérience rare et unique en totale harmonie avec la nature.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/58DdwrFeTzWvpKkSW8By.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AUX CÔTÉS DES ARTISANS DU PARC",
-      "badgeText": "JOUR 6",
-      "description": "Ce matin, partez à la rencontre des autres éléphants vivant près des maisons des cornacs puis dirigez-vous vers les rives du Mékong où vous pourrez les observer en toute tranquillité. Après votre déjeuner, plongez-vous dans la culture locale en participant à une activité de tissage de bambou ou de forge aux côtés des artisans du parc. Avant de quitter ce petit coin de paradis, profitez d'un dernier moment pour observer les éléphants puis embarquez sur votre pirogue pour le retour au lodge.\r\n\r\n",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/DdbC60djT0iQMZPOH0aS.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU CŒUR DE LA NATURE LAOTIENNE",
-      "badgeText": "JOUR 7",
-      "description": "Après une matinée libre, vous prendrez la route vers le parc ressourçant de Namkat Yorlapa. En chemin, vous aurez l'occasion de passer à travers de nombreux villages, n'hésitez pas à vous y arrêter et découvrir la vie locale ! Arrivée en fin d'après-midi et installation dans votre chambre.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/nJu57AbRS1aWfnIa56Hd.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "NATURE, CASCADE ET DÉTENTE",
-      "badgeText": "JOUR 8",
-      "description": "Découvrez la forêt environnante en voiture puis à pied jusqu'à une superbe cascade, parfaite pour une baignade rafraîchissante. En chemin, ne manquez pas les Sky Bridges pour des vues à couper le souffle ! Après une matinée bien remplie, retournez à l'hôtel pour vous détendre. Profitez de votre fin de journée libre pour vous reposer ou explorer davantage les activités offertes dans le parc.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/gz5Tk77iQIyprKyQGeoX.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "AU CŒUR DES VILLAGES DE TISSERANDS",
-      "badgeText": "JOUR 9",
-      "description": "Départ matinal vers Nong Khiaw. Sur la route, découvrez les paysages montagneux et les villages Hmong animés. Faites un petit détour par un petit village réputé pour ses maisons traditionnelles, témoins d'un temps révolu... Après le déjeuner, embarquez pour une croisière pittoresque jusqu'au charmant village de Ban Sop Chaem. Explorez ses ruelles tranquilles et imprégnez-vous de l'atmosphère unique du tissage, une tradition bien ancrée. Sur le retour, laissez-vous envoûter par les somptueux paysages de falaises karstiques, et faite un arrêt à Muang Ngoi si le temps le permet.\r\n\r\n\r\n\r\n\r\n",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/r3W9DqajReuYMTY5eFZe.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RANDONNÉE ET VUE PANORAMIQUE",
-      "badgeText": "JOUR 10",
-      "description": "Ce matin, vous partirez pour une randonnée jusqu'au point de vue de Phou Pha Daeng pour profiter d’une vue panoramique exceptionnelle sur Nong Khiaw, sa vallée et ses massifs karstiques ! Après un déjeuner dans un restaurant local, vous irez vers la dernière étape de votre voyage : Luang Prabang. \r\n",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/nldttJzgSQ2qBNfGEwbH.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES SECRETS DU RIZ",
-      "badgeText": "JOUR 11",
-      "description": "Pour les lève-tôt, possibilité d'observer le Tak Bak dans les rues de la ville : un rituel quotidien où les fidèles font leurs offrandes aux moines. Après un petit-déjeuner, vous participerez à un projet communautaire au cœur des rizières. Vous y découvrirez les secrets de la culture du riz, du semis à la récolte, tout en contribuant à un projet de soutien aux familles agricoles locales et à l'éducation des jeunes à travers des cours d'anglais.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/k0ttJdrGSwilKEa6vvTw.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LES CHUTES DE KUANG SI ",
-      "badgeText": "JOUR 12",
-      "description": "Découvrez les magnifiques chutes de Kuang Si, l'un des trésors naturels du Laos ! Après un déjeuner au bord des bassins, profitez d'un après-midi libre pour vous détendre, vous baigner ou grimper jusqu'au sommet de la cascade principale. Terminez cette journée en beauté avec une croisière privatisée sur le Mékong jusqu'à Luang Prabang au milieu des paysages préservés.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/jRkbBMjSB6zLKh0Hs3bb.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DERNIERS INSTANTS AU LAOS",
-      "badgeText": "JOUR 13",
-      "description": "Comme toutes bonnes choses ont une fin, votre voyage arrive à son terme. Après une dernière visite des principaux centres d'intérêts en tuk-tuk en compagnie de votre guide, il est l'heure de lui faire vos adieux ainsi qu'à votre chauffeur.",
-      "photo": "/images/voyages/voyage-immersion-laos-elephants/ENApXU9WQ2CqnHAJLs2H.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Ce voyage sera accompagné tout le long par des chauffeurs privés et d'un guide anglophone (francophone à partir de 4 personnes) qui sauront vous faire plonger dans l'histoire du Laos, vous parler au mieux de son patrimoine culturel et partager avec vous leur passion !",
-  "housingBlock": [
-    {
-      "title": "Chez l'habitant, hôtel",
-      "housingType": "",
-      "housingMood": "Pendant ce séjour, vous logerez en hôtel 3* lors des différentes étapes de votre voyage au Laos et chez l'habitant lors de votre immersion chez les Cornacs les jours 3 à 5. \r\n",
-      "image": [
-        {
-          "src": "/images/voyages/voyage-immersion-laos-elephants/xYoxQuYHRWacPYgapxhy.jpg",
-          "alt": "image de l'hébergement Voyage au Laos : rencontres avec les éléphants et communautés locales"
-        },
-        {
-          "src": "/images/voyages/voyage-immersion-laos-elephants/7Ut7130fSCOvfiQYdTh2.jpg",
-          "alt": "image de l'hébergement Voyage au Laos : rencontres avec les éléphants et communautés locales"
-        },
-        {
-          "src": "/images/voyages/voyage-immersion-laos-elephants/JgAykyRmRGSriJsdPKdm.jpg",
-          "alt": "image de l'hébergement Voyage au Laos : rencontres avec les éléphants et communautés locales"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Les transferts en bateau et voiture",
-      "Le guide francophone et chauffeur privé",
-      "Les nuitées dans des hôtels 3\\* et chez l'habitant en base double avec petit-déjeuner",
-      "Les repas suivants :\n\n*   Pension complète des jours : 3, 4, 5, 9 et 11\n*   Petit-déjeuner et déjeuner des jours : 6, 10 et 12\n*   Petit-déjeuner des jours : 2, 7, 8 et 13",
-      "Pension complète des jours : 3, 4, 5, 9 et 11",
-      "Petit-déjeuner et déjeuner des jours : 6, 10 et 12",
-      "Petit-déjeuner des jours : 2, 7, 8 et 13",
-      "Les entrées sur les différents sites",
-      "Toutes les activités indiquées dans le programme",
-      "La rencontre de plusieurs artisans locaux"
-    ],
-    "exclude": [
-      "Le transport aérien international jusqu'à Chiang Mai et depuis l'aéroport de Luang Prabang au retour et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
-      "Toutes les dépenses supplémentaires non mentionnées",
-      "Les repas suivants :\n\n*   Les déjeuners et dîner des jours : 2, 7, 8 et 13\n*   Le diner des jours : 6, 10 et 12",
-      "Les déjeuners et dîner des jours : 2, 7, 8 et 13",
-      "Le diner des jours : 6, 10 et 12",
-      "Les boissons non mentionnés",
-      "Les pourboires (à titre indicatif : $4/jour/pers pour les guides, $2/jour/pers pour les chauffeurs et $1/pers pour les serveurs)",
-      "L'assurance voyage multirisques ou annulation"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -273,24 +357,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 2425,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": true,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": 370,
-    "privatisationAvailable": true,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Voyage au Laos : rencontres avec les éléphants et communautés locales",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-laos-elephants",
+    "ogTitle": "Voyage au Laos : rencontres avec les éléphants et communautés locales",
+    "ogDescription": "Vivez un voyage unique au Laos, à la rencontre de ses habitants et en immersion chez des Cornacs et leurs éléphants.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-immersion-laos-elephants/7UF5O3PnTSOSHDMOcLCB.jpg",
+      "alt": "image principale du voyage Voyage au Laos : rencontres avec les éléphants et communautés locales"
+    },
+    "twitterTitle": "Voyage au Laos : rencontres avec les éléphants et communautés locales",
+    "twitterDescription": "Vivez un voyage unique au Laos, à la rencontre de ses habitants et en immersion chez des Cornacs et leurs éléphants.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-immersion-laos-elephants/7UF5O3PnTSOSHDMOcLCB.jpg",
+      "alt": "image principale du voyage Voyage au Laos : rencontres avec les éléphants et communautés locales"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

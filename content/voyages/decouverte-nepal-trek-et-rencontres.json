@@ -1,56 +1,352 @@
 {
   "published": true,
   "title": "A la découverte du Népal : randonnées accessibles et immersion locale",
-  "slug": "decouverte-nepal-trek-et-rencontres",
-  "rating": 0,
-  "comments": 0,
-  "description": "Bien plus qu'un simple voyage, nous vous invitons à explorer le Népal sous toutes ses facettes, entre trek accessible, immersion chez l’habitant et découvertes des lieux emblématiques.\n\nVotre aventure débutera à Katmandou, où vous flânerez dans ses ruelles animées, entre marchés colorés et temples anciens, pour vous imprégner de l'ambiance locale. Vous découvrirez également les cités historiques de Bhaktapur et Patan, avant de partir pour un mini-trek de quatre jours au cœur de la vallée de Katmandou. Accompagnés de votre guide local francophone, vous avancerez à votre rythme à travers rizières et villages traditionnels, avec en toile de fond les impressionnants sommets himalayens...\n\nEn chemin, vous ferez étape à Namo Buddha, l’un des sites bouddhistes les plus sacrés du pays. Un moment privilégié pour découvrir la vie monastique, assister aux prières des moines et ressentir l'atmosphère si paisible de ce lieu spirituel.\n\nVous aurez aussi l'opportunité de partager le quotidien des habitants, d’abord à Panauti, un village niché dans la vallée de Katmandou, puis à Pokhara, au sein d’une communauté tibétaine. Deux expériences uniques riches en partage et en émotion, pour vous immerger pleinement au cœur des traditions et des modes de vie locaux.\n\nCe voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à travers la beauté de ses paysages, la richesse des rencontres et la spiritualité, tout en bénéficiant d’un confort adapté pour une première approche du pays.",
-  "emailDescription": "",
-  "metaDescription": "Voyagez à la découverte du Népal autrement : entre trek accessible, immersion dans un monastère et rencontre avec les locaux.",
-  "interjection": "au",
   "destinations": [
-    "Népal"
+    {
+      "name": "Népal",
+      "slug": "nepal"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ecotourisme",
-    "ou-partir-en-automne",
-    "ou-partir-au-printemps",
-    "ou-partir-en-hiver",
-    "sejour-trek-randonnee",
-    "partir-en-groupe",
-    "sejours-nature",
-    "sejours-chez-l-habitant"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    }
   ],
   "duration": 13,
   "nights": 12,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Hotel, lodge, chez l'habitant",
   "idealPeriods": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
   "monthlyAvailability": [
-    "Janvier",
-    "Février",
-    "Mars",
-    "Avril",
-    "Mai",
-    "Septembre",
-    "Octobre",
-    "Novembre",
-    "Décembre"
+    {
+      "month": "Janvier"
+    },
+    {
+      "month": "Février"
+    },
+    {
+      "month": "Mars"
+    },
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    },
+    {
+      "month": "Décembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Bien plus qu'un simple voyage, nous vous invitons à explorer le Népal sous toutes ses facettes, entre trek accessible, immersion chez l’habitant et découvertes des lieux emblématiques.\n\nVotre aventure débutera à Katmandou, où vous flânerez dans ses ruelles animées, entre marchés colorés et temples anciens, pour vous imprégner de l'ambiance locale. Vous découvrirez également les cités historiques de Bhaktapur et Patan, avant de partir pour un mini-trek de quatre jours au cœur de la vallée de Katmandou. Accompagnés de votre guide local francophone, vous avancerez à votre rythme à travers rizières et villages traditionnels, avec en toile de fond les impressionnants sommets himalayens...\n\nEn chemin, vous ferez étape à Namo Buddha, l’un des sites bouddhistes les plus sacrés du pays. Un moment privilégié pour découvrir la vie monastique, assister aux prières des moines et ressentir l'atmosphère si paisible de ce lieu spirituel.\n\nVous aurez aussi l'opportunité de partager le quotidien des habitants, d’abord à Panauti, un village niché dans la vallée de Katmandou, puis à Pokhara, au sein d’une communauté tibétaine. Deux expériences uniques riches en partage et en émotion, pour vous immerger pleinement au cœur des traditions et des modes de vie locaux.\n\nCe voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à travers la beauté de ses paysages, la richesse des rencontres et la spiritualité, tout en bénéficiant d’un confort adapté pour une première approche du pays.",
+    "author": "Linda",
+    "affixeAuthor": "Responsable Asie"
+  },
+  "experiencesBlock": [
+    "**Profitez d'un mini-trek accessible de 4 jours**, à travers rizières en terrasses, villages traditionnels et monastères, au cœur de la vallée de Katmandou",
+    "**Vivez une** **immersion unique au cœur de la culture locale**, avec des rencontres inoubliables et des moments de partage riches en émotions lors de vos **nuits chez l'habitant**",
+    "**Plongez dans la spiritualité de Namo Buddha**, l'un des sites bouddhistes les plus sacrés du Népal",
+    "**Explorez les villes emblématiques de Katmandou, Bhaktapur, Patan et Pokhara,** et imprégnez-vous de leur histoire et de leur architecture unique",
+    "**Voyagez en toute sérénité, accompagné par un** **guide local francophone passionné,** qui s’adapte à votre rythme et partage avec vous l’histoire et les traditions du pays."
+  ],
+  "slug": "decouverte-nepal-trek-et-rencontres",
+  "description": "Bien plus qu'un simple voyage, nous vous invitons à explorer le Népal sous toutes ses facettes, entre trek accessible, immersion chez l’habitant et découvertes des lieux emblématiques.\n\nVotre aventure débutera à Katmandou, où vous flânerez dans ses ruelles animées, entre marchés colorés et temples anciens, pour vous imprégner de l'ambiance locale. Vous découvrirez également les cités historiques de Bhaktapur et Patan, avant de partir pour un mini-trek de quatre jours au cœur de la vallée de Katmandou. Accompagnés de votre guide local francophone, vous avancerez à votre rythme à travers rizières et villages traditionnels, avec en toile de fond les impressionnants sommets himalayens...\n\nEn chemin, vous ferez étape à Namo Buddha, l’un des sites bouddhistes les plus sacrés du pays. Un moment privilégié pour découvrir la vie monastique, assister aux prières des moines et ressentir l'atmosphère si paisible de ce lieu spirituel.\n\nVous aurez aussi l'opportunité de partager le quotidien des habitants, d’abord à Panauti, un village niché dans la vallée de Katmandou, puis à Pokhara, au sein d’une communauté tibétaine. Deux expériences uniques riches en partage et en émotion, pour vous immerger pleinement au cœur des traditions et des modes de vie locaux.\n\nCe voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à travers la beauté de ses paysages, la richesse des rencontres et la spiritualité, tout en bénéficiant d’un confort adapté pour une première approche du pays.",
+  "emailDescription": "",
+  "metaDescription": "Voyagez à la découverte du Népal autrement : entre trek accessible, immersion dans un monastère et rencontre avec les locaux.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mars à mai, sept à nov",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE A KATMANDOU !",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à l’aéroport de Katmandou, notre guide vous accueille et vous accompagne pour un transfert rapide vers votre hôtel, idéalement situé au cœur de la capitale. Installez-vous et profitez d’un moment de repos après votre voyage. Si vous le souhaitez, partez pour une première immersion dans l’effervescence de Katmandou : ruelles animées, marchés colorés et temples anciens vous plongent immédiatement dans l’atmosphère unique du Népal.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/9riCPDocQD2kETAiEidU.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIERS PAS AU CŒUR DE KATMANDOU",
+      "badgeText": "JOUR 2",
+      "description": "Votre aventure débute au cœur de Katmandou, une ville où traditions et spiritualité se mêlent au quotidien. Accompagné de votre guide, vous explorez Swayambhunath, l’un des plus anciens sites bouddhistes du Népal. Perché sur une colline, ce stupa sacré, surnommé le Temple des Singes, offre une vue panoramique imprenable sur la vallée. Vous redescendez ensuite vers Asan, un quartier historique vibrant où les ruelles sont animées par des marchés colorés et des échoppes d’artisans. En fin de journée, direction le quartier emblématique de Thamel, avec ses ruelles sinueuses remplies de boutiques, de librairies et de petits restaurants où résonne la musique népalaise. Nuit en hôtel à Katmandou.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/nn4w0Ek2TnYJpKq2uE7c.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BHAKTAPUR ET PATAN, JOYAUX CULTURELS DU NÉPAL",
+      "badgeText": "JOUR 3",
+      "description": "Ce matin, vous prenez la route pour Bhaktapur, l’une des anciennes cités royales de la vallée de Katmandou, classée au patrimoine mondial de l’UNESCO. Flanez au milieu de ses ruellees pavées, laissant entrevoir le Népal d’un autre temps, où le rythme est plus calme et les traditions toujours bien ancrées. Après le déjeuner, direction Patan, également connue sous le nom de Lalitpur, la \"ville de la beauté\" réputée pour son incroyable richesse artistique et architecturale. Prenez le temps d’explorer ses temples, ses palais et ses ruelles bordées d’ateliers d’artisans. Ici, la sculpture sur bronze et cuivre est un art transmis depuis des siècles. En fin de journée, retour à Katmandou et nuit en hôtel.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/dZOuU0URTfO5kZ1QIKFX.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DE KATMANDOU À NAGARKOT : DEBUT DE VOTRE TREK",
+      "badgeText": "JOUR 4",
+      "description": "Aujourd’hui, vous quittez l’effervescence de Katmandou pour rejoindre Nagarkot, un village perché à 2 175 mètres d’altitude, réputé pour ses vues dégagées sur la chaîne de l’Himalaya. Après un court trajet en véhicule, vous partez pour une balade d’environ 45 minutes à travers les paysages paisibles des collines népalaises. Les rizières en terrasses s’étendent à perte de vue, et les petits hameaux que vous traversez offrent un aperçu du quotidien des habitants. L’après-midi, installation à votre hébergement et moment de détente face aux montagnes. Si le temps est clair, vous pourrez admirer un magnifique coucher de soleil sur les sommets enneigés, un spectacle privilégié depuis Nagarkot. Randonnée : 3-4h - Dénivelé + 400m / - 150m.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/0wGIPSqQZSVSmmmGJyuF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE VERS DHULIKHEL : VILLAGES TRADITIONNELS ET PAYSAGES VERDOYANTS",
+      "badgeText": "JOUR 5",
+      "description": "Au lever du jour, profitez d’un spectacle saisissant avec le soleil illuminant progressivement les sommets de l’Himalaya. Après le petit déjeuner, vous partez pour une randonnée de Nagarkot à Dhulikhel, un itinéraire accessible qui traverse de petits villages, des forêts paisibles et des cultures en terrasses. En chemin, vous aurez l’occasion d’observer la vie locale : des artisans au travail, des paysans s’occupant de leurs rizières, et des enfants jouant dans les ruelles des villages. Arrivée à Dhulikhel, installation à votre hébergement et temps libre pour apprécier l’atmosphère paisible du lieu. Randonnée : 5-6h - Dénivelé + 500m / - 400m.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/hEAXv1IyR5WCdJN2CAvO.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "NAMO BUDDHA : ENTRE SPIRITUALITÉ ET VIE MONASTIQUE",
+      "badgeText": "JOUR 6",
+      "description": "Ce matin, vous partez à pied pour rejoindre Namo Buddha, l’un des sites bouddhistes les plus sacrés du Népal. À votre arrivée, vous découvrez le monastère Thrangu Tashi Yangtse, un lieu de spiritualité où résident de nombreux moines. Ici, l’atmosphère est empreinte de sérénité : les moulins à prières tournent lentement, les chants des moines résonnent dans les halls, et les drapeaux de prières flottent au vent... Prenez le temps d’explorer le site, d’observer les rituels et, si vous le souhaitez, d’échanger avec les moines sur leur quotidien. Randonnée : 4 hrs - Dénivelé + 350m / - 200m. \r\n\r\n\r\n",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/Oy5e9qMfTSOvox7obz0u.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "BALTHALI ET PANAUTI : ENTRE VILLAGES ET RIZIÈRES ET NUIT CHEZ L'HABITANT",
+      "badgeText": "JOUR 7",
+      "description": "Ce matin, vous quittez Namo Buddha pour une randonnée à travers collines, rizières en terrasses et villages, où la vie suit son cours au rythme des saisons. En chemin, vous croisez des habitants vaquant à leurs occupations, des enfants jouant près des maisons et des paysages qui s’ouvrent progressivement sur la vallée. Vous atteignez Balthali, un village paisible au cœur des collines, avant de rejoindre Panauti, une ville historique aux ruelles pavées et temples préservés. En fin de journée, vous êtes accueillis chez l’habitant. Autour d’un repas préparé ensemble, les échanges se font naturellement, entre sourires, récits de vie et découvertes culinaires... Une immersion simple et sincère dans le quotidien népalais. Randonnée : Environ 3h. Dénivelé : +250m / -400m.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/8jYjuOMuQIyWRnlDLA2S.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE VERS BANDIPUR : UN VILLAGE AU CHARME INTEMPOREL",
+      "badgeText": "JOUR 8",
+      "description": "Après un dernier moment d’échange avec vos hôtes, vous prenez la route pour Bandipur, un village perché à 1 030 mètres d’altitude, considéré comme l’un des plus beaux du Népal. À votre arrivée, vous êtes immédiatement séduit par l’architecture préservée, ses ruelles pavées et son atmosphère paisible. Ancien carrefour commercial, Bandipur a su conserver son charme authentique, avec ses maisons en bois sculpté et ses balcons fleuris. L’après-midi, partez à la découverte du village : balade au fil des ruelles, rencontre avec les habitants et vue panoramique imprenable sur les Annapurnas et le Manaslu. Laissez-vous porter par l’ambiance paisible de ce lieu hors du temps et savourez pleinement cet instant de sérénité... Transport privé : Environ 5-6h de route (145 km).",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/4NjU8VGpQWWcd1qaoDML.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE VERS RAMKOT ET IMMERSION À POKHARA CHEZ UNE FAMILLE TIBÉTAINE",
+      "badgeText": "JOUR 9",
+      "description": "Ce matin, vous partez pour une randonnée jusqu’au village de Ramkot, un hameau traditionnel perché sur les hauteurs, offrant une vue panoramique sur la chaîne des Annapurnas, du Manaslu et du Dhaulagiri. Vous prenez ensuite la route vers le village de Tashi Ling, à Pokhara, l’un des principaux camps de réfugiés tibétains du Népal. Ici, vous découvrez un monastère bouddhiste où résonnent les chants de prières des moines, ainsi que des ateliers d’artisanat où les habitants perpétuent l’art du tissage de tapis, de la peinture thangka et de la fabrication de bijoux en argent. En soirée, vivez un moment privilégié avec une famille tibétaine qui vous accueille chez elle pour une immersion unique. Ensemble, vous préparez le dîner et apprenez à confectionner des momos, ces délicieux raviolis tibétains cuits à la vapeur ou frits. Nuit chez l’habitant. Randonnée : Environ 3h. Dénivelé : +250m / -250m. Transport privé : Environ 3h de route (75 km).",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/YyqwnHOZQAqQSpmFMG6u.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE DE NAUDANDA À SARANGKOT : ENTRE VALLÉES ET SOMMETS",
+      "badgeText": "JOUR 10",
+      "description": "Tôt le matin, vous prenez la route vers Naudanda, un village perché à 1 650 mètres d’altitude, point de départ de votre randonnée. Le sentier serpente à travers forêts de rhododendrons, cultures en terrasses et hameaux gurungs, où les habitants perpétuent un mode de vie ancestral. En chemin, les panoramas se dévoilent progressivement : la vallée de Pokhara en contrebas, et face à vous, les sommets majestueux du Machapuchare et des Annapurnas. Vous rejoignez Sarangkot, un site privilégié pour observer la montagne dans toute sa splendeur. Installation dans un lodge simple, où vous profitez d’une fin de journée paisible. L’occasion de contempler les derniers rayons du soleil illuminant les sommets, avant de savourer un moment de calme en pleine nature. Randonnée : 3-4h. Dénivelé : +200m / -200m. Transport privé : Environ 3h de route (31 km).",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/XMYddKIZSLu3mky8vVZx.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LEVER DE SOLEIL À SARANGKOT ET RETOUR À POKHARA",
+      "badgeText": "JOUR 11",
+      "description": "Réveil matinal pour assister à un lever de soleil exceptionnel sur l’Himalaya. Depuis Sarangkot, les sommets des Annapurnas, du Dhaulagiri et du Machapuchare se parent de teintes dorées à mesure que le jour se lève, un moment suspendu où la nature dévoile toute sa grandeur. Après le petit-déjeuner, vous entamez une descente douce vers Pokhara à travers villages traditionnels et sentiers forestiers, une marche agréable permettant de profiter une dernière fois des paysages himalayens. De retour à Pokhara, vous avez l’après-midi libre pour flâner au bord du lac Phewa, explorer la ville ou simplement vous détendre face aux montagnes. Pour ceux qui le souhaitent, possibilité de faire une balade en bateau, une manière paisible d’apprécier l’atmosphère sereine de cette ville au pied des géants himalayens. Randonnée : Environ 3h. Dénivelé : -800m.",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/XPlMzB3TSKuKCf3TwIFf.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR À KATMANDOU : DERNIERS INSTANTS AU NÉPAL",
+      "badgeText": "JOUR 12",
+      "description": "Après le petit-déjeuner, vous prenez la route pour Katmandou, un dernier trajet à travers les vallées népalaises où les rizières en terrasses et les villages traditionnels défilent sous vos yeux. En chemin, vous longez la rivière Trishuli, dont les eaux tumultueuses accompagnent votre voyage. Pause déjeuner en cours de route, puis arrivée dans l’après-midi à Katmandou, où vous vous installez à votre hôtel. Selon votre envie, profitez d’un dernier tour dans le quartier de Thamel, idéal pour flâner, acheter des souvenirs ou simplement savourer l’atmosphère unique de la capitale népalaise. Transport en bus 6-7h (env. 200km)",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/l6bjesxlS32llPbv4Wgq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FIN DU VOYAGE ET VOL RETOUR",
+      "badgeText": "JOUR 13",
+      "description": "Selon l’horaire de votre vol, profitez d’un dernier moment à Katmandou pour savourer l’ambiance de la ville. Une dernière promenade dans les ruelles animées, un chai fumant en terrasse, quelques emplettes… Un instant pour revenir sur les rencontres, les paysages et les émotions qui ont marqué ce voyage. Votre chauffeur vous conduit ensuite à l’aéroport pour votre vol retour.\r\n\r\n",
+      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/hNYpOGgTJkMDmGvtrbGQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’accueil à l'aéroport",
+      "L'encadrement par un guide népalais francophone pour l'intégralité du voyage",
+      "L’assistance d’une équipe locale durant le trekking (assistant guide, porteurs)",
+      "Les transferts et les excursions mentionnés au programme",
+      "L’hébergement en hôtels, lodges, chez l'habitant tels que décrits dans le programme, base chambre double ou twin (selon disponibilité au moment de la réservation)",
+      "La demi-pension, à l'exception des repas indiqués comme \"libres\" dans le programme,",
+      "Les différents permis de trekking et parcs nationaux",
+      "Pour l'équipe locale : Assurance et les frais de recherche-secours, le rapatriement et les frais médicaux"
+    ],
+    "exclude": [
+      "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
+      "Les repas non mentionnés",
+      "Les pourboires et dépenses à caractère personnel",
+      "Les « early check-in » ou « late check-out » dans les hôtels sélectionnés",
+      "Les frais d’entrée aux sites à visiter",
+      "Toutes les prestations non mentionnées dans le programme",
+      "L'assurance voyage multirisque ou annulation"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1410,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "KTM",
+      "KTM"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagné par un guide local francophone expérimenté, passionné par son pays et soucieux de vous faire découvrir le Népal sous son véritable visage. Il partagera avec vous ses connaissances sur la culture, les traditions et les paysages traversés, tout en s’adaptant au rythme et aux attentes du groupe. Lors du trek, une équipe locale composée de porteurs et d’assistants veillera à votre confort et à la bonne organisation de chaque étape",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hotel, lodge, chez l'habitant",
+      "housingType": "",
+      "housingMood": "Lors de votre voyage au Népal, vous serez logés en hôtels confortables à Katmandou et Pokhara, en guesthouse, chez l’habitant et au sein d’un monastère. Pendant le trek, vous dormirez dans des lodges simples mais accueillants, offrant une immersion authentique au plus près des villages traversés. Les chambres sont en base double ou twin. Le confort varie selon les étapes, mais l’hospitalité népalaise et la beauté des lieux compensent largement la simplicité des hébergements.",
+      "image": [
+        {
+          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/Ftrug5EQSTy7NwAanKCC.jpg",
+          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
+        },
+        {
+          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/9dalX59jQVuAv2cPMW41.jpg",
+          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
+        },
+        {
+          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/WN79f8FUSG0hEpTzfKNk.jpg",
+          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
+        },
+        {
+          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/GXLh8L8CSxuJebh2etqb.jpg",
+          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
+        },
+        {
+          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/Wjf5QqJRam1mrIvb0FFY.jpg",
+          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
+        },
+        {
+          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/lqGXCRWmSauyLbYr51pr.jpg",
+          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
+        }
+      ]
+    }
+  ],
   "image": {
-    "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/gBTEFLBSRrGnQ5XcFrau.jpg",
+    "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/tTpkwmzlSuWG4SRxCNmK.jpg",
     "alt": "image principale du voyage A la découverte du Népal : randonnées accessibles et immersion locale"
   },
   "imageSecondary": {
@@ -89,171 +385,17 @@
     {
       "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/zWivo6fSiJMic49CjNCA.jpg",
       "alt": "image de la liste de photos du voyage A la découverte du Népal : randonnées accessibles et immersion locale"
+    },
+    {
+      "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/JZclHOyQDSY3jbOIMX1F.jpg",
+      "alt": "image de la liste de photos du voyage A la découverte du Népal : randonnées accessibles et immersion locale"
+    },
+    {
+      "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/tl8tsxm6RRt2EgDRh4On.jpg",
+      "alt": "image de la liste de photos du voyage A la découverte du Népal : randonnées accessibles et immersion locale"
     }
   ],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "Bien plus qu'un simple voyage, nous vous invitons à explorer le Népal sous toutes ses facettes, entre trek accessible, immersion chez l’habitant et découvertes des lieux emblématiques.\n\nVotre aventure débutera à Katmandou, où vous flânerez dans ses ruelles animées, entre marchés colorés et temples anciens, pour vous imprégner de l'ambiance locale. Vous découvrirez également les cités historiques de Bhaktapur et Patan, avant de partir pour un mini-trek de quatre jours au cœur de la vallée de Katmandou. Accompagnés de votre guide local francophone, vous avancerez à votre rythme à travers rizières et villages traditionnels, avec en toile de fond les impressionnants sommets himalayens...\n\nEn chemin, vous ferez étape à Namo Buddha, l’un des sites bouddhistes les plus sacrés du pays. Un moment privilégié pour découvrir la vie monastique, assister aux prières des moines et ressentir l'atmosphère si paisible de ce lieu spirituel.\n\nVous aurez aussi l'opportunité de partager le quotidien des habitants, d’abord à Panauti, un village niché dans la vallée de Katmandou, puis à Pokhara, au sein d’une communauté tibétaine. Deux expériences uniques riches en partage et en émotion, pour vous immerger pleinement au cœur des traditions et des modes de vie locaux.\n\nCe voyage s’adresse à ceux qui souhaitent découvrir le Népal en douceur, à travers la beauté de ses paysages, la richesse des rencontres et la spiritualité, tout en bénéficiant d’un confort adapté pour une première approche du pays.",
-    "author": "Linda",
-    "affixeAuthor": "Responsable Asie"
-  },
-  "experiencesBlock": [
-    "**Profitez d'un mini-trek accessible de 4 jours**, à travers rizières en terrasses, villages traditionnels et monastères, au cœur de la vallée de Katmandou",
-    "**Vivez une** **immersion unique au cœur de la culture locale**, avec des rencontres inoubliables et des moments de partage riches en émotions lors de vos **nuits chez l'habitant**",
-    "**Plongez dans la spiritualité de Namo Buddha**, l'un des sites bouddhistes les plus sacrés du Népal",
-    "**Explorez les villes emblématiques de Katmandou, Bhaktapur, Patan et Pokhara,** et imprégnez-vous de leur histoire et de leur architecture unique",
-    "**Voyagez en toute sérénité, accompagné par un** **guide local francophone passionné,** qui s’adapte à votre rythme et partage avec vous l’histoire et les traditions du pays."
-  ],
-  "programmeBlock": [
-    {
-      "title": "BIENVENUE A KATMANDOU !",
-      "badgeText": "JOUR 1",
-      "description": "À votre arrivée à l’aéroport de Katmandou, notre guide vous accueille et vous accompagne pour un transfert rapide vers votre hôtel, idéalement situé au cœur de la capitale. Installez-vous et profitez d’un moment de repos après votre voyage. Si vous le souhaitez, partez pour une première immersion dans l’effervescence de Katmandou : ruelles animées, marchés colorés et temples anciens vous plongent immédiatement dans l’atmosphère unique du Népal.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/Iv90XMSTICgo9nKnBELA.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "PREMIERS PAS AU CŒUR DE KATMANDOU",
-      "badgeText": "JOUR 2",
-      "description": "Votre aventure débute au cœur de Katmandou, une ville où traditions et spiritualité se mêlent au quotidien. Accompagné de votre guide, vous explorez Swayambhunath, l’un des plus anciens sites bouddhistes du Népal. Perché sur une colline, ce stupa sacré, surnommé le Temple des Singes, offre une vue panoramique imprenable sur la vallée. Vous redescendez ensuite vers Asan, un quartier historique vibrant où les ruelles sont animées par des marchés colorés et des échoppes d’artisans. En fin de journée, direction le quartier emblématique de Thamel, avec ses ruelles sinueuses remplies de boutiques, de librairies et de petits restaurants où résonne la musique népalaise. Nuit en hôtel à Katmandou.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/VQkOemZTySDQTWqLqOEu.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BHAKTAPUR ET PATAN, JOYAUX CULTURELS DU NÉPAL",
-      "badgeText": "JOUR 3",
-      "description": "Ce matin, vous prenez la route pour Bhaktapur, l’une des anciennes cités royales de la vallée de Katmandou, classée au patrimoine mondial de l’UNESCO. Flanez au milieu de ses ruellees pavées, laissant entrevoir le Népal d’un autre temps, où le rythme est plus calme et les traditions toujours bien ancrées. Après le déjeuner, direction Patan, également connue sous le nom de Lalitpur, la \"ville de la beauté\" réputée pour son incroyable richesse artistique et architecturale. Prenez le temps d’explorer ses temples, ses palais et ses ruelles bordées d’ateliers d’artisans. Ici, la sculpture sur bronze et cuivre est un art transmis depuis des siècles. En fin de journée, retour à Katmandou et nuit en hôtel.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/dZOuU0URTfO5kZ1QIKFX.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "DE KATMANDOU À NAGARKOT : DEBUT DE VOTRE TREK",
-      "badgeText": "JOUR 4",
-      "description": "Aujourd’hui, vous quittez l’effervescence de Katmandou pour rejoindre Nagarkot, un village perché à 2 175 mètres d’altitude, réputé pour ses vues dégagées sur la chaîne de l’Himalaya. Après un court trajet en véhicule, vous partez pour une balade d’environ 45 minutes à travers les paysages paisibles des collines népalaises. Les rizières en terrasses s’étendent à perte de vue, et les petits hameaux que vous traversez offrent un aperçu du quotidien des habitants. L’après-midi, installation à votre hébergement et moment de détente face aux montagnes. Si le temps est clair, vous pourrez admirer un magnifique coucher de soleil sur les sommets enneigés, un spectacle privilégié depuis Nagarkot. Randonnée : 3-4h - Dénivelé + 400m / - 150m.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/0wGIPSqQZSVSmmmGJyuF.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RANDONNÉE VERS DHULIKHEL : VILLAGES TRADITIONNELS ET PAYSAGES VERDOYANTS",
-      "badgeText": "JOUR 5",
-      "description": "Au lever du jour, profitez d’un spectacle saisissant avec le soleil illuminant progressivement les sommets de l’Himalaya. Après le petit déjeuner, vous partez pour une randonnée de Nagarkot à Dhulikhel, un itinéraire accessible qui traverse de petits villages, des forêts paisibles et des cultures en terrasses. En chemin, vous aurez l’occasion d’observer la vie locale : des artisans au travail, des paysans s’occupant de leurs rizières, et des enfants jouant dans les ruelles des villages. Arrivée à Dhulikhel, installation à votre hébergement et temps libre pour apprécier l’atmosphère paisible du lieu. Randonnée : 5-6h - Dénivelé + 500m / - 400m.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/2Tin1cpsRPe2NKSCiSj2.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "NAMO BUDDHA : ENTRE SPIRITUALITÉ ET VIE MONASTIQUE",
-      "badgeText": "JOUR 6",
-      "description": "Ce matin, vous partez à pied pour rejoindre Namo Buddha, l’un des sites bouddhistes les plus sacrés du Népal. À votre arrivée, vous découvrez le monastère Thrangu Tashi Yangtse, un lieu de spiritualité où résident de nombreux moines. Ici, l’atmosphère est empreinte de sérénité : les moulins à prières tournent lentement, les chants des moines résonnent dans les halls, et les drapeaux de prières flottent au vent... Prenez le temps d’explorer le site, d’observer les rituels et, si vous le souhaitez, d’échanger avec les moines sur leur quotidien. Randonnée : 4 hrs - Dénivelé + 350m / - 200m. \r\n\r\n\r\n",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/Oy5e9qMfTSOvox7obz0u.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "BALTHALI ET PANAUTI : ENTRE VILLAGES ET RIZIÈRES ET NUIT CHEZ L'HABITANT",
-      "badgeText": "JOUR 7",
-      "description": "Ce matin, vous quittez Namo Buddha pour une randonnée à travers collines, rizières en terrasses et villages, où la vie suit son cours au rythme des saisons. En chemin, vous croisez des habitants vaquant à leurs occupations, des enfants jouant près des maisons et des paysages qui s’ouvrent progressivement sur la vallée. Vous atteignez Balthali, un village paisible au cœur des collines, avant de rejoindre Panauti, une ville historique aux ruelles pavées et temples préservés. En fin de journée, vous êtes accueillis chez l’habitant. Autour d’un repas préparé ensemble, les échanges se font naturellement, entre sourires, récits de vie et découvertes culinaires... Une immersion simple et sincère dans le quotidien népalais. Randonnée : Environ 3h. Dénivelé : +250m / -400m.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/z4lwonPCSCObUp3D55UV.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "ROUTE VERS BANDIPUR : UN VILLAGE AU CHARME INTEMPOREL",
-      "badgeText": "JOUR 8",
-      "description": "Après un dernier moment d’échange avec vos hôtes, vous prenez la route pour Bandipur, un village perché à 1 030 mètres d’altitude, considéré comme l’un des plus beaux du Népal. À votre arrivée, vous êtes immédiatement séduit par l’architecture préservée, ses ruelles pavées et son atmosphère paisible. Ancien carrefour commercial, Bandipur a su conserver son charme authentique, avec ses maisons en bois sculpté et ses balcons fleuris. L’après-midi, partez à la découverte du village : balade au fil des ruelles, rencontre avec les habitants et vue panoramique imprenable sur les Annapurnas et le Manaslu. Laissez-vous porter par l’ambiance paisible de ce lieu hors du temps et savourez pleinement cet instant de sérénité... Transport privé : Environ 5-6h de route (145 km).",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/amWKtjUTmWFdIBGECY2Q.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RANDONNÉE VERS RAMKOT ET IMMERSION À POKHARA CHEZ UNE FAMILLE TIBÉTAINE",
-      "badgeText": "JOUR 9",
-      "description": "Ce matin, vous partez pour une randonnée jusqu’au village de Ramkot, un hameau traditionnel perché sur les hauteurs, offrant une vue panoramique sur la chaîne des Annapurnas, du Manaslu et du Dhaulagiri. Vous prenez ensuite la route vers le village de Tashi Ling, à Pokhara, l’un des principaux camps de réfugiés tibétains du Népal. Ici, vous découvrez un monastère bouddhiste où résonnent les chants de prières des moines, ainsi que des ateliers d’artisanat où les habitants perpétuent l’art du tissage de tapis, de la peinture thangka et de la fabrication de bijoux en argent. En soirée, vivez un moment privilégié avec une famille tibétaine qui vous accueille chez elle pour une immersion unique. Ensemble, vous préparez le dîner et apprenez à confectionner des momos, ces délicieux raviolis tibétains cuits à la vapeur ou frits. Nuit chez l’habitant. Randonnée : Environ 3h. Dénivelé : +250m / -250m. Transport privé : Environ 3h de route (75 km).",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/YyqwnHOZQAqQSpmFMG6u.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RANDONNÉE DE NAUDANDA À SARANGKOT : ENTRE VALLÉES ET SOMMETS",
-      "badgeText": "JOUR 10",
-      "description": "Tôt le matin, vous prenez la route vers Naudanda, un village perché à 1 650 mètres d’altitude, point de départ de votre randonnée. Le sentier serpente à travers forêts de rhododendrons, cultures en terrasses et hameaux gurungs, où les habitants perpétuent un mode de vie ancestral. En chemin, les panoramas se dévoilent progressivement : la vallée de Pokhara en contrebas, et face à vous, les sommets majestueux du Machapuchare et des Annapurnas. Vous rejoignez Sarangkot, un site privilégié pour observer la montagne dans toute sa splendeur. Installation dans un lodge simple, où vous profitez d’une fin de journée paisible. L’occasion de contempler les derniers rayons du soleil illuminant les sommets, avant de savourer un moment de calme en pleine nature. Randonnée : 3-4h. Dénivelé : +200m / -200m. Transport privé : Environ 3h de route (31 km).",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/aOc9WKoRxiw3Yc7NKv8w.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "LEVER DE SOLEIL À SARANGKOT ET RETOUR À POKHARA",
-      "badgeText": "JOUR 11",
-      "description": "Réveil matinal pour assister à un lever de soleil exceptionnel sur l’Himalaya. Depuis Sarangkot, les sommets des Annapurnas, du Dhaulagiri et du Machapuchare se parent de teintes dorées à mesure que le jour se lève, un moment suspendu où la nature dévoile toute sa grandeur. Après le petit-déjeuner, vous entamez une descente douce vers Pokhara à travers villages traditionnels et sentiers forestiers, une marche agréable permettant de profiter une dernière fois des paysages himalayens. De retour à Pokhara, vous avez l’après-midi libre pour flâner au bord du lac Phewa, explorer la ville ou simplement vous détendre face aux montagnes. Pour ceux qui le souhaitent, possibilité de faire une balade en bateau, une manière paisible d’apprécier l’atmosphère sereine de cette ville au pied des géants himalayens. Randonnée : Environ 3h. Dénivelé : -800m.",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/XPlMzB3TSKuKCf3TwIFf.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "RETOUR À KATMANDOU : DERNIERS INSTANTS AU NÉPAL",
-      "badgeText": "JOUR 12",
-      "description": "Après le petit-déjeuner, vous prenez la route pour Katmandou, un dernier trajet à travers les vallées népalaises où les rizières en terrasses et les villages traditionnels défilent sous vos yeux. En chemin, vous longez la rivière Trishuli, dont les eaux tumultueuses accompagnent votre voyage. Pause déjeuner en cours de route, puis arrivée dans l’après-midi à Katmandou, où vous vous installez à votre hôtel. Selon votre envie, profitez d’un dernier tour dans le quartier de Thamel, idéal pour flâner, acheter des souvenirs ou simplement savourer l’atmosphère unique de la capitale népalaise. Transport en bus 6-7h (env. 200km)",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/l6bjesxlS32llPbv4Wgq.jpg",
-      "denivellation": ""
-    },
-    {
-      "title": "FIN DU VOYAGE ET VOL RETOUR",
-      "badgeText": "JOUR 13",
-      "description": "Selon l’horaire de votre vol, profitez d’un dernier moment à Katmandou pour savourer l’ambiance de la ville. Une dernière promenade dans les ruelles animées, un chai fumant en terrasse, quelques emplettes… Un instant pour revenir sur les rencontres, les paysages et les émotions qui ont marqué ce voyage. Votre chauffeur vous conduit ensuite à l’aéroport pour votre vol retour.\r\n\r\n",
-      "photo": "/images/voyages/decouverte-nepal-trek-et-rencontres/hNYpOGgTJkMDmGvtrbGQ.jpg",
-      "denivellation": ""
-    }
-  ],
-  "accompanistsList": [],
-  "accompanistsDescription": "Tout au long de votre voyage, vous serez accompagné par un guide local francophone expérimenté, passionné par son pays et soucieux de vous faire découvrir le Népal sous son véritable visage. Il partagera avec vous ses connaissances sur la culture, les traditions et les paysages traversés, tout en s’adaptant au rythme et aux attentes du groupe. Lors du trek, une équipe locale composée de porteurs et d’assistants veillera à votre confort et à la bonne organisation de chaque étape",
-  "housingBlock": [
-    {
-      "title": "Hotel, lodge, chez l'habitant",
-      "housingType": "",
-      "housingMood": "Lors de votre voyage au Népal, vous serez logés en hôtels confortables à Katmandou et Pokhara, en guesthouse, chez l’habitant et au sein d’un monastère. Pendant le trek, vous dormirez dans des lodges simples mais accueillants, offrant une immersion authentique au plus près des villages traversés. Les chambres sont en base double ou twin. Le confort varie selon les étapes, mais l’hospitalité népalaise et la beauté des lieux compensent largement la simplicité des hébergements.",
-      "image": [
-        {
-          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/Ftrug5EQSTy7NwAanKCC.jpg",
-          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
-        },
-        {
-          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/9dalX59jQVuAv2cPMW41.jpg",
-          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
-        },
-        {
-          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/WN79f8FUSG0hEpTzfKNk.jpg",
-          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
-        },
-        {
-          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/GXLh8L8CSxuJebh2etqb.jpg",
-          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
-        },
-        {
-          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/Wjf5QqJRam1mrIvb0FFY.jpg",
-          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
-        },
-        {
-          "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/lqGXCRWmSauyLbYr51pr.jpg",
-          "alt": "image de l'hébergement A la découverte du Népal : randonnées accessibles et immersion locale"
-        }
-      ]
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L’accueil à l'aéroport",
-      "L'encadrement par un guide népalais francophone pour l'intégralité du voyage",
-      "L’assistance d’une équipe locale durant le trekking (assistant guide, porteurs)",
-      "Les transferts, les excursions et visites mentionnés au programme",
-      "L’hébergement en hôtels, lodges, chez l'habitant tels que décrits dans le programme, base chambre double ou twin (selon disponibilité au moment de la réservation)",
-      "La demi-pension, à l'exception des repas indiqués comme \"libres\" dans le programme,",
-      "Les différents permis de trekking et parcs nationaux",
-      "Pour l'équipe locale : Assurance et les frais de recherche-secours, le rapatriement et les frais médicaux"
-    ],
-    "exclude": [
-      "Les vols internationaux (possibilité de devis avec vols inclus sur demande)",
-      "Les repas non mentionnés",
-      "Les pourboires et dépenses à caractère personnel",
-      "Les « early check-in » ou « late check-out » dans les hôtels sélectionnés",
-      "Toutes les prestations non mentionnées dans le programme",
-      "L'assurance voyage multirisque ou annulation"
-    ]
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -314,27 +456,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1410,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": 8,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "KTM",
-      "KTM"
-    ]
+  "seo": {
+    "metaTitle": "A la découverte du Népal : randonnées accessibles et immersion locale",
+    "canonicalUrl": "https://www.odysway.com/voyages/decouverte-nepal-trek-et-rencontres",
+    "ogTitle": "A la découverte du Népal : randonnées accessibles et immersion locale",
+    "ogDescription": "Voyagez à la découverte du Népal autrement : entre trek accessible, immersion dans un monastère et rencontre avec les locaux.",
+    "ogImage": {
+      "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/tTpkwmzlSuWG4SRxCNmK.jpg",
+      "alt": "image principale du voyage A la découverte du Népal : randonnées accessibles et immersion locale"
+    },
+    "twitterTitle": "A la découverte du Népal : randonnées accessibles et immersion locale",
+    "twitterDescription": "Voyagez à la découverte du Népal autrement : entre trek accessible, immersion dans un monastère et rencontre avec les locaux.",
+    "twitterImage": {
+      "src": "/images/voyages/decouverte-nepal-trek-et-rencontres/tTpkwmzlSuWG4SRxCNmK.jpg",
+      "alt": "image principale du voyage A la découverte du Népal : randonnées accessibles et immersion locale"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

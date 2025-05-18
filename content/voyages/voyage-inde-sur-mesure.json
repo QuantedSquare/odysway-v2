@@ -1,24 +1,96 @@
 {
   "published": false,
   "title": "Voyage en Inde sur mesure",
-  "slug": "voyage-inde-sur-mesure",
-  "rating": 0,
-  "comments": 0,
-  "description": "",
-  "emailDescription": "",
-  "metaDescription": "",
-  "interjection": "en",
   "destinations": [
-    "Inde"
+    {
+      "name": "Inde",
+      "slug": "inde"
+    }
   ],
+  "groupeAvailable": false,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "",
   "idealPeriods": [],
   "monthlyAvailability": [],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "voyage-inde-sur-mesure",
+  "description": "",
+  "emailDescription": "",
+  "metaDescription": "",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "",
+      "visible": false
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 1980,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
   "image": {
     "src": "",
     "alt": "image principale du voyage Voyage en Inde sur mesure"
@@ -29,28 +101,6 @@
   },
   "photosList": [],
   "videoLinks": [],
-  "badgeSection": {},
-  "authorNote": {
-    "text": "",
-    "author": "",
-    "affixeAuthor": ""
-  },
-  "experiencesBlock": [],
-  "programmeBlock": [],
-  "accompanistsList": [],
-  "accompanistsDescription": "",
-  "housingBlock": [
-    {
-      "title": "",
-      "housingType": "",
-      "housingMood": "",
-      "image": []
-    }
-  ],
-  "pricingDetailsBlock": {
-    "include": [],
-    "exclude": []
-  },
   "faqBlock": {
     "faqList": [
       {
@@ -59,24 +109,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1980,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": false,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Voyage en Inde sur mesure",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-inde-sur-mesure",
+    "ogTitle": "Voyage en Inde sur mesure",
+    "ogDescription": "",
+    "ogImage": {
+      "src": "",
+      "alt": "image principale du voyage Voyage en Inde sur mesure"
+    },
+    "twitterTitle": "Voyage en Inde sur mesure",
+    "twitterDescription": "",
+    "twitterImage": {
+      "src": "",
+      "alt": "image principale du voyage Voyage en Inde sur mesure"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

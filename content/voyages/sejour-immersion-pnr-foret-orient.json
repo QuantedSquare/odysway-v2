@@ -1,50 +1,58 @@
 {
   "published": false,
   "title": "Immergez-vous dans le Parc naturel de la Forêt d'Orient",
-  "slug": "sejour-immersion-pnr-foret-orient",
-  "rating": 0,
-  "comments": 0,
-  "description": "Aux portes de Troyes s’étend une contrée mystérieuse, où lacs et forêts ont donné naissance à un territoire unique : le Parc naturel régional de la Forêt d’Orient.\n\nC'est ici que nous vous proposons de vivre un séjour différent, en pleine nature et à la rencontre des habitants passionnés qui font vivre le Parc.\n\nPagayer sur le lac d'Orient en slalomant entre les arbres au coeur de la forêt immergée, faire son propre pain sur un site d'exception en compagnie de Grégory, gardien du Moulin de Dosches. Se ressourcer au Château de Brantigny en compagnie de Gildas, qui vous révélera les ressources insoupçonnées de son domaine. Contempler les nombreuses espèces d'oiseaux qui ont pour terrain de jeux les lacs et forêts du Parc, en compagnie de Clément, votre guide nature.\n\nAutant d'expériences qui vous feront découvrir les richesses d'un territoire unique et rencontrer des acteurs engagés pour leur territoire, qu'ils font vivre à travers leur activité et passion.",
-  "emailDescription": "👉 Si vous souhaitez en savoir plus sur la forêt et les arbres accompagné d'un ancien garde forestier passionné, ce voyage est fait pour vous ! ",
-  "metaDescription": "Un séjour où vous partirez à la rencontre des arbres accompagné d'un ancien garde forestier passionné, dans les belles forêts du Parc naturel régional de la Forêt d’Orient, riche de son histoire et de son patrimoine naturel. Lors de ce séjour, vous apprendrez également à réaliser vous-même des repas sains et gourmands selon les principes de l’alimentation vivante.\r\n\r\nCe séjour est idéal pour tous ceux qui souhaitent prendre un temps pour soi et vivre de nouvelles expériences. Un séjour pour vivre au naturel et découvrir une vie plus saine.",
-  "interjection": "",
   "destinations": [],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "sejours-culturels",
-    "ou-partir-au-printemps",
-    "ou-partir-en-automne",
-    "partir-en-groupe",
-    "sejours-nature"
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    }
   ],
   "duration": 0,
   "nights": 0,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "Chambre d'hôte",
   "idealPeriods": [
-    "Avril",
-    "Juin",
-    "Septembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Juin",
-    "Septembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Septembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/sejour-immersion-pnr-foret-orient/bW2jUoUBSzaYyTPGAiPy.jpg",
-    "alt": "image principale du voyage Immergez-vous dans le Parc naturel de la Forêt d'Orient"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/sejour-immersion-pnr-foret-orient/TsKJqWVS5R18HTm6Jg9w.jpg",
-    "alt": "image secondaire du voyage Immergez-vous dans le Parc naturel de la Forêt d'Orient"
-  },
-  "photosList": [],
-  "videoLinks": [
-    "https://www.youtube.com/embed/ZNdYg9xFchA",
-    "https://www.youtube.com/embed/Htd2auXXGmw"
-  ],
-  "badgeSection": {},
   "authorNote": {
     "text": "Aux portes de Troyes s’étend une contrée mystérieuse, où lacs et forêts ont donné naissance à un territoire unique : le Parc naturel régional de la Forêt d’Orient.\n\nC'est ici que nous vous proposons de vivre un séjour différent, en pleine nature et à la rencontre des habitants passionnés qui font vivre le Parc.\n\nPagayer sur le lac d'Orient en slalomant entre les arbres au coeur de la forêt immergée, faire son propre pain sur un site d'exception en compagnie de Grégory, gardien du Moulin de Dosches. Se ressourcer au Château de Brantigny en compagnie de Gildas, qui vous révélera les ressources insoupçonnées de son domaine. Contempler les nombreuses espèces d'oiseaux qui ont pour terrain de jeux les lacs et forêts du Parc, en compagnie de Clément, votre guide nature.\n\nAutant d'expériences qui vous feront découvrir les richesses d'un territoire unique et rencontrer des acteurs engagés pour leur territoire, qu'ils font vivre à travers leur activité et passion.",
     "author": "Benjamin",
@@ -57,29 +65,88 @@
     "Expérimentez la vie de château à Brantigny et rencontrez ses hôtes engagés",
     "Naviguer en Kayak dans la forêt immergée du lac d'orient"
   ],
+  "slug": "sejour-immersion-pnr-foret-orient",
+  "description": "Aux portes de Troyes s’étend une contrée mystérieuse, où lacs et forêts ont donné naissance à un territoire unique : le Parc naturel régional de la Forêt d’Orient.\n\nC'est ici que nous vous proposons de vivre un séjour différent, en pleine nature et à la rencontre des habitants passionnés qui font vivre le Parc.\n\nPagayer sur le lac d'Orient en slalomant entre les arbres au coeur de la forêt immergée, faire son propre pain sur un site d'exception en compagnie de Grégory, gardien du Moulin de Dosches. Se ressourcer au Château de Brantigny en compagnie de Gildas, qui vous révélera les ressources insoupçonnées de son domaine. Contempler les nombreuses espèces d'oiseaux qui ont pour terrain de jeux les lacs et forêts du Parc, en compagnie de Clément, votre guide nature.\n\nAutant d'expériences qui vous feront découvrir les richesses d'un territoire unique et rencontrer des acteurs engagés pour leur territoire, qu'ils font vivre à travers leur activité et passion.",
+  "emailDescription": "👉 Si vous souhaitez en savoir plus sur la forêt et les arbres accompagné d'un ancien garde forestier passionné, ce voyage est fait pour vous ! ",
+  "metaDescription": "Un séjour où vous partirez à la rencontre des arbres accompagné d'un ancien garde forestier passionné, dans les belles forêts du Parc naturel régional de la Forêt d’Orient, riche de son histoire et de son patrimoine naturel. Lors de ce séjour, vous apprendrez également à réaliser vous-même des repas sains et gourmands selon les principes de l’alimentation vivante.\r\n\r\nCe séjour est idéal pour tous ceux qui souhaitent prendre un temps pour soi et vivre de nouvelles expériences. Un séjour pour vivre au naturel et découvrir une vie plus saine.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avr à Sept",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "LA FORET IMMERGEE",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre en début d’après midi vers 14h à la Maison des Lacs de Mesnil-Saint-Père. Vous serez accueillis vers 15h par Clément, votre guide nature, qui vous fera découvrir le kayak d'une façon unique, en forêt immergée sur les lacs, suivi d'un apéro à base de produits locaux ! En fin de journée, accueil au Château de Brantigny et mise à disposition de vos chambres.",
       "photo": "/images/voyages/sejour-immersion-pnr-foret-orient/g1t5Ao3iTcugGoeS3pkK.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "COMME UN MEUNIER",
       "badgeText": "JOUR 2",
       "description": "Réveil en douceur au château. Ce matin, vous êtes attendus par Grégory au moulin de Dosches. Au programme, un atelier de fabrication farine et pain, dans un four à pain traditionnel. Profitez de votre après midi libre, plusieurs possibilités de balades seront possibles à partir de la maison du Parc ou à l'espace faune. Dîner libre.",
       "photo": "/images/voyages/sejour-immersion-pnr-foret-orient/3vNTFlT1TBGpTGN4iYBQ.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "TERRE D'OISEAUX",
       "badgeText": "JOUR 3",
       "description": "Petit-déjeuner au château puis départ pour une sortie en pleine nature axée ornithologie. Pour les novices comme pour les amateurs, il n’y a pas meilleur endroit pour observer les oiseaux. Clément, votre guide, vous emmenera sur les plus beaux points de vue pour tenter d'apercevoir de nombreuses espèces d’oiseaux !",
       "photo": "/images/voyages/sejour-immersion-pnr-foret-orient/hDyRYYDFTTXVKnbtTk6s.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 385,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Lors de ce séjour de 3 jours et 2 nuits au coeur du Parc naturel de la Forêt d'Orient, vous rencontrerez des personnes qui font vivre ce territoire grâce à leur passion : Gildas et sa famille au Château de Brantigny, Grégory, gérant du site du Moulin de Dosches et Clément, guide nature du Parc naturel.",
   "accompanistsList": [
     {
       "name": "Clément",
@@ -100,7 +167,6 @@
       "image": "/images/voyages/sejour-immersion-pnr-foret-orient/v4GDrL2TXqLCiwRIUJuT.jpg"
     }
   ],
-  "accompanistsDescription": "Lors de ce séjour de 3 jours et 2 nuits au coeur du Parc naturel de la Forêt d'Orient, vous rencontrerez des personnes qui font vivre ce territoire grâce à leur passion : Gildas et sa famille au Château de Brantigny, Grégory, gérant du site du Moulin de Dosches et Clément, guide nature du Parc naturel.",
   "housingBlock": [
     {
       "title": "Chambre d'hôte",
@@ -122,10 +188,19 @@
       ]
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [],
-    "exclude": []
+  "image": {
+    "src": "/images/voyages/sejour-immersion-pnr-foret-orient/bW2jUoUBSzaYyTPGAiPy.jpg",
+    "alt": "image principale du voyage Immergez-vous dans le Parc naturel de la Forêt d'Orient"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-immersion-pnr-foret-orient/TsKJqWVS5R18HTm6Jg9w.jpg",
+    "alt": "image secondaire du voyage Immergez-vous dans le Parc naturel de la Forêt d'Orient"
+  },
+  "photosList": [],
+  "videoLinks": [
+    "https://www.youtube.com/embed/ZNdYg9xFchA",
+    "https://www.youtube.com/embed/Htd2auXXGmw"
+  ],
   "faqBlock": {
     "faqList": [
       {
@@ -162,24 +237,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 385,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": false,
-    "earlyBirdReduction": "",
-    "maxTravelers": "",
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": false,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": []
+  "seo": {
+    "metaTitle": "Immergez-vous dans le Parc naturel de la Forêt d'Orient",
+    "canonicalUrl": "https://www.odysway.com/voyages/sejour-immersion-pnr-foret-orient",
+    "ogTitle": "Immergez-vous dans le Parc naturel de la Forêt d'Orient",
+    "ogDescription": "Un séjour où vous partirez à la rencontre des arbres accompagné d'un ancien garde forestier passionné, dans les belles forêts du Parc naturel régional de la Forêt d’Orient, riche de son histoire et de son patrimoine naturel. Lors de ce séjour, vous apprendrez également à réaliser vous-même des repas sains et gourmands selon les principes de l’alimentation vivante.\r\n\r\nCe séjour est idéal pour tous ceux qui souhaitent prendre un temps pour soi et vivre de nouvelles expériences. Un séjour pour vivre au naturel et découvrir une vie plus saine.",
+    "ogImage": {
+      "src": "/images/voyages/sejour-immersion-pnr-foret-orient/bW2jUoUBSzaYyTPGAiPy.jpg",
+      "alt": "image principale du voyage Immergez-vous dans le Parc naturel de la Forêt d'Orient"
+    },
+    "twitterTitle": "Immergez-vous dans le Parc naturel de la Forêt d'Orient",
+    "twitterDescription": "Un séjour où vous partirez à la rencontre des arbres accompagné d'un ancien garde forestier passionné, dans les belles forêts du Parc naturel régional de la Forêt d’Orient, riche de son histoire et de son patrimoine naturel. Lors de ce séjour, vous apprendrez également à réaliser vous-même des repas sains et gourmands selon les principes de l’alimentation vivante.\r\n\r\nCe séjour est idéal pour tous ceux qui souhaitent prendre un temps pour soi et vivre de nouvelles expériences. Un séjour pour vivre au naturel et découvrir une vie plus saine.",
+    "twitterImage": {
+      "src": "/images/voyages/sejour-immersion-pnr-foret-orient/bW2jUoUBSzaYyTPGAiPy.jpg",
+      "alt": "image principale du voyage Immergez-vous dans le Parc naturel de la Forêt d'Orient"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

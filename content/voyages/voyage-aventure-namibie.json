@@ -1,64 +1,108 @@
 {
   "published": true,
   "title": "Namibie sauvage : entre aventure et protection des animaux",
-  "slug": "voyage-aventure-namibie",
-  "rating": 0,
-  "comments": 0,
-  "description": "En Namibie, tout comme dans de nombreux pays africains, la faune est confrontée à des menaces importantes, notamment des conflits armés et du braconnage qui sévissent dans les vastes réserves. Nous vous proposons une expérience exceptionnelle : plonger au cœur de la conservation de la faune africaine en rencontrant les femmes et les hommes dévoués à cette cause et engagés pour la protection des lions, guépards, rhinocéros et des autres animaux qui vivent sur ces vastes terres.\n\nÀ proximité de Windhoek, la capitale namibienne, votre première semaine se déroulera au sein d'un camp de conservation, dont l'objectif est de réintroduire les animaux dans leur habitat naturel. Vous y découvrirez les diverses tâches qui aident à la préservation des animaux blessés, orphelins et victimes de conflits.\n\nLa deuxième semaine sera riche d’aventures. Vous serez plongé au cœur de la nature et émerveillé par les magnifiques paysages qu’offre la région d’Hardap. Au programme : randonnées, dégustation de vins, nuit à la belle étoile, participation à la protection des guépards…\n\nUn séjour immersif entre nature, aventure et protection dans l'un des plus beaux paysages du monde.",
-  "emailDescription": "👉 Découvrez la Namibie autrement : un séjour immersif entre nature, aventure et protection dans l'un des plus beaux paysages du monde. ",
-  "metaDescription": " Partez en Namibie pour un voyage entre aventure et conservation. Protégez la faune sauvage, explorez le désert et vivez une immersion unique !",
-  "interjection": "en",
   "destinations": [
-    "Namibie"
+    {
+      "name": "Namibie",
+      "slug": "namibie"
+    }
   ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "experienceType": "En immersion chez...",
+  "level": "1",
   "categories": [
-    "ecotourisme",
-    "voyage-solidaire",
-    "partir-en-famille",
-    "partir-en-amoureux",
-    "partir-en-groupe",
-    "ou-partir-en-ete",
-    "ou-partir-au-printemps",
-    "ou-partir-en-automne",
-    "voyage-animalier",
-    "voyage-sportif"
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "voyage-solidaire"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "voyage-sportif"
+    }
   ],
   "duration": 14,
   "nights": 13,
-  "experienceType": "",
-  "level": "",
+  "includeFlight": false,
+  "housingType": "tente",
   "idealPeriods": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
   "monthlyAvailability": [
-    "Avril",
-    "Mai",
-    "Juin",
-    "Juillet",
-    "Août",
-    "Septembre",
-    "Octobre",
-    "Novembre"
+    {
+      "month": "Avril"
+    },
+    {
+      "month": "Mai"
+    },
+    {
+      "month": "Juin"
+    },
+    {
+      "month": "Juillet"
+    },
+    {
+      "month": "Août"
+    },
+    {
+      "month": "Septembre"
+    },
+    {
+      "month": "Octobre"
+    },
+    {
+      "month": "Novembre"
+    }
   ],
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
   "miniatureDisplay": "Note moyenne",
-  "image": {
-    "src": "/images/voyages/voyage-aventure-namibie/VBcFhIQWTLhEDBEEyEBg.jpg",
-    "alt": "image principale du voyage Namibie sauvage : entre aventure et protection des animaux"
-  },
-  "imageSecondary": {
-    "src": "/images/voyages/voyage-aventure-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg",
-    "alt": "image secondaire du voyage Namibie sauvage : entre aventure et protection des animaux"
-  },
-  "photosList": [],
-  "videoLinks": [],
-  "badgeSection": {},
   "authorNote": {
     "text": "En Namibie, tout comme dans de nombreux pays africains, la faune est confrontée à des menaces importantes, notamment des conflits armés et du braconnage qui sévissent dans les vastes réserves. Nous vous proposons une expérience exceptionnelle : plonger au cœur de la conservation de la faune africaine en rencontrant les femmes et les hommes dévoués à cette cause et engagés pour la protection des lions, guépards, rhinocéros et des autres animaux qui vivent sur ces vastes terres.\n\nÀ proximité de Windhoek, la capitale namibienne, votre première semaine se déroulera au sein d'un camp de conservation, dont l'objectif est de réintroduire les animaux dans leur habitat naturel. Vous y découvrirez les diverses tâches qui aident à la préservation des animaux blessés, orphelins et victimes de conflits.\n\nLa deuxième semaine sera riche d’aventures. Vous serez plongé au cœur de la nature et émerveillé par les magnifiques paysages qu’offre la région d’Hardap. Au programme : randonnées, dégustation de vins, nuit à la belle étoile, participation à la protection des guépards…\n\nUn séjour immersif entre nature, aventure et protection dans l'un des plus beaux paysages du monde.",
     "author": "Romain",
@@ -72,94 +116,188 @@
     "Rencontrez et partagez des moments uniques avec des personnes passionnées et engagées.",
     "Donnez vie aux projets de la réserve et inscrivez votre empreinte dans l’histoire de sa préservation."
   ],
+  "slug": "voyage-aventure-namibie",
+  "description": "En Namibie, tout comme dans de nombreux pays africains, la faune est confrontée à des menaces importantes, notamment des conflits armés et du braconnage qui sévissent dans les vastes réserves. Nous vous proposons une expérience exceptionnelle : plonger au cœur de la conservation de la faune africaine en rencontrant les femmes et les hommes dévoués à cette cause et engagés pour la protection des lions, guépards, rhinocéros et des autres animaux qui vivent sur ces vastes terres.\n\nÀ proximité de Windhoek, la capitale namibienne, votre première semaine se déroulera au sein d'un camp de conservation, dont l'objectif est de réintroduire les animaux dans leur habitat naturel. Vous y découvrirez les diverses tâches qui aident à la préservation des animaux blessés, orphelins et victimes de conflits.\n\nLa deuxième semaine sera riche d’aventures. Vous serez plongé au cœur de la nature et émerveillé par les magnifiques paysages qu’offre la région d’Hardap. Au programme : randonnées, dégustation de vins, nuit à la belle étoile, participation à la protection des guépards…\n\nUn séjour immersif entre nature, aventure et protection dans l'un des plus beaux paysages du monde.",
+  "emailDescription": "👉 Découvrez la Namibie autrement : un séjour immersif entre nature, aventure et protection dans l'un des plus beaux paysages du monde. ",
+  "metaDescription": " Partez en Namibie pour un voyage entre aventure et conservation. Protégez la faune sauvage, explorez le désert et vivez une immersion unique !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **1 à 7 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**13 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avril à novembre",
+      "visible": true
+    }
+  },
   "programmeBlock": [
     {
       "title": "PREMIER JOUR EN NAMIBIE",
       "badgeText": "JOUR 1",
       "description": "Arrivée à Windhoek, la capitale namibienne, vous faites la rencontre de votre chauffeur qui vous conduit directement vers le sanctuaire, qui sera votre camp de base pour les prochains jours. Après une heure de route durant laquelle les paysages changeant de la Namibie défilent sous vos yeux, vous atteignez votre destination. À votre arrivée, un responsable du sanctuaire vous réserve un accueil chaleureux, vous présentant le sanctuaire et sa mission. Première nuit sur place empreinte d'anticipation, avant de commencer votre expérience auprès des animaux le lendemain.",
       "photo": "/images/voyages/voyage-aventure-namibie/nf1iKt0eQ6aGjk47peJj.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "PREMIÈRES MISSIONS",
       "badgeText": "JOUR 2",
       "description": "C'est le grand jour ! Votre première journée au sanctuaire commence ce matin, avec une formation sur les règles essentielles assurant votre sécurité et celle des animaux. Selon les besoins du jour, une mission vous sera attribuée, comme préparer la nourriture des carnivores de la réserve. Au cours de votre séjour au centre, vous aurez la chance quotidienne de vous impliquer activement dans le nourrissage des animaux, les soins, la recherche sur la faune, ainsi que dans l'entretien général du sanctuaire.",
       "photo": "/images/voyages/voyage-aventure-namibie/VLb1RJBrTh2qntF5S3ch.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "OBSERVATION ET DÉCOMPTE DES ANIMAUX",
       "badgeText": "JOURS 3 À 5",
       "description": "Sur le reste de la première semaine, vous découvrez le rôle de volontaire sur le sanctuaire. Les activités comprennent l'observation des guépards lorsqu'ils poursuivent un leurre, la participation à la recherche de traces d'animaux dans la réserve aux côtés des pisteurs, la surveillance des éléphants et des rhinocéros, le décompte des animaux sauvages, le nourrissage des carnivores, la préparation de la nourriture pour les autres animaux l'entretien de la réserve et bien plus encore !",
       "photo": "/images/voyages/voyage-aventure-namibie/WbH8SRcKQ7CgEHR9mu2P.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "PARTEZ POUR UNE SEMAINE D'AVENTURE",
       "badgeText": "JOUR 6",
       "description": "Cap sur Neuras, un havre de nature et de mystère au cœur du désert namibien. Après un road trip à travers des paysages grandioses, vous découvrirez cette oasis unique, où sources naturelles et canyons sculptent un décor à couper le souffle.\r\nNeuras, c’est aussi un vignoble improbable et un refuge pour les guépards rescapés des conflits entre l’homme et la faune. Peut-être aurez-vous la chance d’assister à leur nourrissage, un moment rare et intense.\r\nAprès une journée riche en découvertes, détendez-vous et laissez-vous imprégner par la magie du lieu, entre ciel étoilé et rencontres inoubliables.\r\n",
       "photo": "/images/voyages/voyage-aventure-namibie/Go5Imn23Sxy8QvVjA83j.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "A LA DECOUVERTE DES VIGNOBLES DE NEURAS",
       "badgeText": "JOUR 7",
       "description": "Participez à une promenade guidée à travers les vignobles et visitez les sources d'eau naturelles. En chemin, vous découvrirez l'origine et l'histoire de la ferme ainsi que la gestion annuelle des vignes. Une fois à la cave, plongez dans les secrets de la vinification, du raisin à la bouteille, et laissez-vous surprendre par l’art de produire du vin en plein désert. Pour clôturer cette expérience sensorielle, savourez une dégustation complète des vins Neuras, sublimée par un plateau de fromages, dans l’ambiance chaleureuse du restaurant du lodge.",
       "photo": "/images/voyages/voyage-aventure-namibie/qi9E1fCScaAxmGceRFZv.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "ENTRE RANDONNEE, OBSERVATION ET RENCONTRE AVEC LES GUEPARDS",
       "badgeText": "JOUR 8",
       "description": "Commencez la journée en douceur avec un petit-déjeuner au lever du soleil, baigné par les premières lueurs dorées du désert. Partez ensuite en randonnée parmi les quivertrees, ces arbres emblématiques aux silhouettes majestueuses, tout en explorant la faune locale à travers l'installation de pièges photographiques et la collecte de données. Si l’occasion se présente, vivez un moment unique en participant au nourrissage des guépards, une expérience inoubliable au plus près de ces félins fascinants.",
       "photo": "/images/voyages/voyage-aventure-namibie/ilPsoaTARh2K32l7iACe.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "ENTRE ENGAGEMENT ET DETENTE",
       "badgeText": "JOUR 9",
       "description": "Plongez au cœur de la nature en consacrant votre matinée à des missions de conservation essentielles. Entre observation de la faune, suivi des espèces ou participation à la préservation des écosystèmes, chaque action compte et vous connecte un peu plus à cette terre sauvage.\r\nAprès l’effort, offrez-vous une parenthèse de douceur à Hauchabfontein. Niché au creux d’un décor aride, ce havre secret dévoile des sources naturelles où l’eau cristalline invite à une baignade rafraîchissante (selon la saison). Laissez-vous porter par la sérénité des lieux, où le murmure de l’eau contraste avec l’immensité du désert environnant. Un moment suspendu, hors du temps.\r\n\r\n",
       "photo": "/images/voyages/voyage-aventure-namibie/vkbtAXSbS3m6E9NIZ0qo.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "ASCENSION AU COEUR DE SOSSUSVLEI",
       "badgeText": "JOUR 10",
       "description": "Partez pour une excursion inoubliable à Sossusvlei, un site emblématique du désert du Namib. Relevez le défi de l’ascension de Big Daddy, la plus haute dune de Namibie, où chaque pas dans le sable profond mettra votre endurance à l’épreuve. Une randonnée exigeante, mais récompensée par une vue à couper le souffle sur l’immensité dorée des dunes. Une aventure à savourer pleinement pour les amateurs de paysages grandioses et de défis physiques.",
       "photo": "/images/voyages/voyage-aventure-namibie/aKh8SwPYRsS9Z0e7OpPc.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "AU COEUR DE LA PROTECTION DES ANIMAUX",
       "badgeText": "JOUR 11",
       "description": "Cette journée est consacrée au projet de protection des animaux, notamment le tri des pièges photographiques, essentiel pour étudier la faune locale et suivre l’évolution des espèces dans la région. Participez ensuite au nourrissage des guépards (selon besoin de la réserve), une occasion rare d’en apprendre plus sur ces félins fascinants, leur histoire, ainsi que les défis qu'ils rencontrent pour subsister dans la nature namibienne.\r\nTerminez la journée avec une soirée conviviale, parfaite pour partager vos impressions sur cette expérience immersive.\r\n",
       "photo": "/images/voyages/voyage-aventure-namibie/UMuqpDqT9eSp38XjJeGf.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "RANDONNEE AU COEUR DU PARC NAUKLUFT",
       "badgeText": "JOUR 12",
       "description": "Aujourd’hui, partez à l’aventure sur le célèbre sentier Olive Trail au cœur du parc Namib Naukluft, une randonnée entre paysages arides, gorges rocheuses et panoramas à couper le souffle. Ensuite, détendez-vous aux sources naturelles du Parc de Naukluft, un véritable havre de fraîcheur niché dans ce décor sauvage. \r\nTerminez cette journée immersive par un braai (barbecue) convivial.\r\n\r\n",
       "photo": "/images/voyages/voyage-aventure-namibie/A7rH3H9Q4CIsCzqnO0y5.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "RETOUR AU SANCTUAIRE",
       "badgeText": "JOUR 13",
       "description": "C’est l’heure des derniers instants en Namibie, une journée pour savourer chaque moment. Profitez de cette pause pour échanger avec les autres volontaires, partager vos expériences et revivre ensemble les moments forts de cette aventure.\r\nEnvie de détente ? Laissez-vous aller à un instant de repos bien mérité au bord de la piscine, bercé par le calme de la réserve et la chaleur du soleil namibien. Si votre cœur vous pousse encore vers la nature, pourquoi ne pas consacrer vos dernières heures à une ultime mission auprès des animaux ? \r\nPuis, il sera temps de prendre la route vers le sanctuaire principal, un dernier voyage à travers ces paysages grandioses qui resteront gravés à jamais.",
       "photo": "/images/voyages/voyage-aventure-namibie/lCSgpqA0QdOJRQPizkfC.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     },
     {
       "title": "FIN DU VOYAGE ET VOL RETOUR ",
       "badgeText": "JOUR 14",
       "description": "Avant de vous envoler, prenez un moment pour profiter une dernière fois de cette terre sauvage qui vous aura tant offert. Le cœur empli de souvenirs, vous embarquez pour votre vol retour, portant avec vous les images des paysages grandioses, des rencontres marquantes et des moments d’émotion partagés. Une expérience qui restera gravée à jamais dans votre mémoire, un lien indéfectible avec la Namibie et ses merveilles.\r\n",
       "photo": "/images/voyages/voyage-aventure-namibie/vrUWq1IYQgCqwCvSEQvg.jpg",
-      "denivellation": ""
+      "denivellation": "",
+      "road": "",
+      "night": ""
     }
   ],
-  "accompanistsList": [],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport de Windhoek à votre arrivée",
+      "Le transfert vers les camps",
+      "L'accompagnement et le suivi par l'équipe de la réserve pendant les deux semaines",
+      "L'uniforme que vous porterez pendant les missions sur le terrain",
+      "Tous les repas, du dîner du premier jour au petit-déjeuner du jour 14",
+      "Les nuits en tente partagée (individuelle avec supplément) et la nuit à la belle étoile (selon la saison)",
+      "La participation financière pour le sanctuaire",
+      "Toutes les activités indiquées dans le programme"
+    ],
+    "exclude": [
+      "Les vols internationaux",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les repas et boissons non mentionnés",
+      "L'assurance voyage multirisque ou annulation"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1515,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 7,
+    "minTravelersToConfirm": 1,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "WDH"
+    ]
+  },
   "accompanistsDescription": "Dès votre arrivée, vous serez accueillis par un responsable du sanctuaire, qui vous fera une présentation avec toutes les informations, le travail de la fondation, les missions, les différents projets, ainsi que des informations pratiques et liées à la sécurité. Sur votre seconde semaine, vous serez aussi avec les responsables de la réserve. À tout instant, vous serez encadrés, que ce soit un responsable du sanctuaire ou gardes de la réserve.",
+  "accompanistsList": [],
   "housingBlock": [
     {
       "title": "tente",
@@ -189,25 +327,16 @@
       ]
     }
   ],
-  "pricingDetailsBlock": {
-    "include": [
-      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "L'accueil à l'aéroport de Windhoek à votre arrivée",
-      "Le transfert vers les camps",
-      "L'accompagnement et le suivi par l'équipe de la réserve pendant les deux semaines",
-      "L'uniforme que vous porterez pendant les missions sur le terrain",
-      "Tous les repas, du dîner du premier jour au petit-déjeuner du jour 14",
-      "Les nuits en tente partagée (individuelle avec supplément) et la nuit à la belle étoile (selon la saison)",
-      "La participation financière pour le sanctuaire",
-      "Toutes les activités indiquées dans le programme"
-    ],
-    "exclude": [
-      "Les vols internationaux",
-      "Toutes les dépenses supplémentaires non mentionnées",
-      "Les repas et boissons non mentionnés",
-      "L'assurance voyage multirisque ou annulation"
-    ]
+  "image": {
+    "src": "/images/voyages/voyage-aventure-namibie/VBcFhIQWTLhEDBEEyEBg.jpg",
+    "alt": "image principale du voyage Namibie sauvage : entre aventure et protection des animaux"
   },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-aventure-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg",
+    "alt": "image secondaire du voyage Namibie sauvage : entre aventure et protection des animaux"
+  },
+  "photosList": [],
+  "videoLinks": [],
   "faqBlock": {
     "faqList": [
       {
@@ -276,27 +405,21 @@
       }
     ]
   },
-  "pricing": {
-    "startingPrice": 1585,
-    "lastMinuteAvailable": false,
-    "lastMinuteReduction": 0,
-    "earlyBirdAvailable": true,
-    "earlyBirdReduction": 80,
-    "maxTravelers": 7,
-    "minTravelersToConfirm": 0,
-    "indivRoom": false,
-    "forcedIndivRoom": false,
-    "indivRoomPrice": "",
-    "privatisationAvailable": true,
-    "groupeAvailable": true,
-    "cseReduction": 0,
-    "cseAvailable": false,
-    "childrenPromo": 0,
-    "childrenAge": 12,
-    "minAge": 8,
-    "airportCode": [
-      "CDG",
-      "WDH"
-    ]
+  "seo": {
+    "metaTitle": "Namibie sauvage : entre aventure et protection des animaux",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-aventure-namibie",
+    "ogTitle": "Namibie sauvage : entre aventure et protection des animaux",
+    "ogDescription": " Partez en Namibie pour un voyage entre aventure et conservation. Protégez la faune sauvage, explorez le désert et vivez une immersion unique !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-aventure-namibie/VBcFhIQWTLhEDBEEyEBg.jpg",
+      "alt": "image principale du voyage Namibie sauvage : entre aventure et protection des animaux"
+    },
+    "twitterTitle": "Namibie sauvage : entre aventure et protection des animaux",
+    "twitterDescription": " Partez en Namibie pour un voyage entre aventure et conservation. Protégez la faune sauvage, explorez le désert et vivez une immersion unique !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-aventure-namibie/VBcFhIQWTLhEDBEEyEBg.jpg",
+      "alt": "image principale du voyage Namibie sauvage : entre aventure et protection des animaux"
+    },
+    "twitterCard": "summary_large_image"
   }
 }

@@ -4,12 +4,12 @@
     class="relative"
   >
     <v-img
-      v-if="deal"
-      :src="img(deal.imgSrc2.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-      :lazy-src="img(deal.imgSrc2.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      v-if="travel"
+      :src="img(travel.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :lazy-src="img(travel.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
-      :srcset="`${img(deal.imgSrc2.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(deal.imgSrc2.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
-      :alt="deal.imgSrc2.alt"
+      :srcset="`${img(travel.image.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(travel.image.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+      :alt="travel.image.alt"
       height="350px"
       cover
       class="absolute"
@@ -35,7 +35,7 @@ useSeoMeta({
 
 const route = useRoute()
 
-const deal = await queryCollection('deals').where('slug', '=', route.query.slug).first()
+const travel = await queryCollection('voyages').where('slug', '=', route.query.slug).first()
 
 const img = useImage()
 </script>
