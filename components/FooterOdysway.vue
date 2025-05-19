@@ -214,7 +214,7 @@ import { useImage } from '#imports'
 
 const { width } = useDisplay()
 const { footer } = useAppConfig()
-console.log('footer', footer)
+// console.log('footer', footer)
 
 const img = useImage()
 

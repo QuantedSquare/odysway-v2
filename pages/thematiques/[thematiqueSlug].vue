@@ -26,7 +26,7 @@
       </TransitionGroup>
     </v-row>
     <v-row
-      v-if="voyages.length > 9"
+      v-if="limitedVoyages && limitedVoyages.length > 9"
       justify="center"
       align="center"
       class="flex-column my-10"
@@ -72,7 +72,7 @@ const { data: voyages } = useAsyncData('voyages', async () => {
 })
 
 const limitedVoyages = computed(() => {
-  return voyages.value.slice(0, isExpanded.value ? voyages.value.length : 9)
+  return voyages.value?.slice(0, isExpanded.value ? voyages.value.length : 9)
 })
 
 console.log('voyages', voyages.value)

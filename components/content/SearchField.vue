@@ -173,6 +173,7 @@ function search() {
   max-width: 1070px;
 }
 .search-field-shadow {
+  min-height: 88px!important;
   box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
 }
 </style>

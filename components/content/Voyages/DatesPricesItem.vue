@@ -218,7 +218,7 @@ const capitalize = (string) => {
 const formatLink = (date) => {
   const in30days = dayjs().add(30, 'day')
   const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
-  return `/checkout?slug=${date.travel_slug}&date_id=${date.id}&departure_date=${dayjs(date.departure_date).format('YYYY-MM-DD')}&return_date=${dayjs(date.return_date).format('YYYY-MM-DD')}&type=${checkoutType}`
+  return `/checkout?date_id=${date.id}&type=${checkoutType}`
 }
 </script>
 

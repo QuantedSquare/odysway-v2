@@ -107,7 +107,7 @@
               />
               <v-checkbox
                 v-model="optinNewsletter"
-                :class="optinNewsletter && 'text-primary'"
+                :class="optinNewsletter ? 'text-primary' : ''"
               >
                 <template #label>
                   <div class="text-caption text-no-wrap">
@@ -120,8 +120,8 @@
               cols="12"
               md="6"
             >
-              <CustomPhoneField
-                v-model="phoneNumber"
+              <PhoneTextField
+                v-model="phone"
               />
             </v-col>
           </v-row>
@@ -266,7 +266,7 @@ const submitStepData = async () => {
         slug: voyage.slug,
         basePricePerTraveler: voyage.startingPrice,
         promoChildren: voyage.promoChildren,
-        maxChildrenAge: voyage.maxChildrenAge, // no need multiplying by 100 here
+        maxChildrenAge: voyage.maxChildrenAge,
         promoTeen: voyage.promoTeen,
         maxTeenAge: voyage.maxTeenAge,
         source: 'Devis',

@@ -181,7 +181,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-const { step, dealId, slug, departure_date, return_date, plan } = route.query
+const { step, date_id, booked_id, type } = route.query
 
 const pricePerTraveler = ref(0)
 function updatePricePerTraveler(price) {
@@ -191,90 +191,80 @@ provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
 // ================== Page ==================
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 // console.log('page', page.value)
+
 const date = ref(null)
 
 const fetchDetails = async () => {
   // Fetch travel_date details
-  const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`)
-  const data = await res.json()
-  date.value = data
+  const res = await apiRequest(`/booking/date/${date_id}`)
+  date.value = res
   console.log('=======form RETRIEVED=======', date.value)
-
-  loading.value = false
+  return date.value
 }
 
 // ================== Voyage ==================
-// If slug, you're coming from travel page, otherwise, coming from custom link
-// Voyage are all the statics data of the travel
-// Only deal manage the dynamic values
-// We generate dealId after first step and don't need statics values from voyage anymore
-const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
-  if (slug) {
-    console.log('slug', slug)
-    const query = await queryCollection('voyages').where('slug', '==', slug).first()
-    fetchDetails(query)
-    if (!query) {
-      throw new Error('Deal not found.')
+const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(`voyage-${step}`, async () => {
+  if (date_id) {
+    console.log('date_id', date_id)
+    const fetchedDate = await fetchDetails()
+    const travel = await queryCollection('voyages').where('slug', '==', fetchedDate.travel_slug).first()
+    console.log('travel', travel)
+    const destinations = await queryCollection('destinations').where('titre', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
+    console.log('destinations', destinations)
+    if (!travel) {
+      throw new Error('Travel not found.')
     }
-    function parseDeal(deal, departureDate, returnDate) {
-      const filteredDates = deal.dates.find((date) => {
-        return dayjs(date.departureDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === departureDate && dayjs(date.returnDate, 'YYYY-MM-DD').format('YYYY-MM-DD') === returnDate
-      })
-      if (!filteredDates) {
-        console.log(filteredDates)
-        throw new Error('Invalid or no matching dates found.')
-      }
-      console.log('filteredDates', filteredDates)
-      updatePricePerTraveler(filteredDates.startingPrice)
-      console.log('image check', deal.imgSrc1.src)
-      return {
-        title: deal.title,
-        imgSrc: deal.imgSrc1.src,
-        country: deal.country,
-        slug: deal.slug,
-        iso: deal.iso,
-        zoneChapka: deal.zoneChapka,
-        indivRoom: deal.indivRoom,
-        privatisation: deal.privatisation,
-        startingPrice: filteredDates.startingPrice * 100,
-        indivRoomPrice: filteredDates.indivRoomPrice * 100,
-        gotEarlybird: filteredDates.earlyBird ? 'Oui' : 'Non',
-        promoEarlybird: filteredDates.promoEarlyBird * 100,
-        gotLastMinute: filteredDates.lastMinute ? 'Oui' : 'Non',
-        promoLastMinute: filteredDates.promoLastMinute * 100,
-      }
-    }
-    const deal = parseDeal(query, departure_date, return_date)
+    console.log('TRAVEL QUERY', travel)
 
-    Object.assign(deal, { ...deal }, {
-      departureDate: departure_date, // check dates in active campaign
-      returnDate: return_date,
-      // ===== Temporary values below until it is replaced in nuxt studio =====
-      // ===== Or travel manager =====
-      depositPrice: deal.startingPrice * 0.3 || 500,
-      promoChildren: 800,
-      promoTeen: 800,
-      maxChildrenAge: 12,
-      maxTeenAge: 18,
+    updatePricePerTraveler(fetchedDate.starting_price)
+
+    const deal = {
+      departureDate: fetchedDate.departure_date,
+      returnDate: fetchedDate.return_date,
+      title: travel.title,
+      imgSrc: travel.image.src,
+      country: destinations.map(d => d.iso).join(','),
+      slug: travel.slug,
+      iso: destinations.map(d => d.iso).join(','),
+      zoneChapka: +destinations[0]?.chapka || 0,
+      indivRoom: travel.pricing.indivRoom,
+      privatisation: travel.privatisationAvailable,
+      startingPrice: fetchedDate.starting_price * 100,
+      indivRoomPrice: travel.pricing.indivRoomPrice * 100,
+      gotEarlybird: fetchedDate.early_bird ? 'Oui' : 'Non',
+      promoEarlybird: travel.pricing.earlyBirdReduction * 100,
+      gotLastMinute: fetchedDate.last_minute ? 'Oui' : 'Non',
+      promoLastMinute: travel.pricing.lastMinuteReduction * 100,
+      depositPrice: fetchedDate.startingPrice * 0.3 || 500,
+      promoChildren: travel.pricing.childrenPromo * 100,
+      maxChildrenAge: travel.pricing.childrenAge,
       source: 'Devis',
-      forcedIndivRoom: 'Non',
-      travelType: 'Groupe',
-    })
-    console.log('deal post assign', deal)
-
+      forcedIndivRoom: travel.pricing.forcedIndivRoom,
+      travelType: 'Groupe', // TODO: check comment le rendre dynamique
+    }
+    console.log('!!!!!deal post assign!!!', deal)
+    loading.value = false
     return deal
   }
   else {
+    console.log('booked_id', booked_id)
+    const { deal_id } = await apiRequest(`/booking/booked_date/${booked_id}`)
     // Voyage = Toutes les valeurs fixes
-    const deal = await apiRequest(`/ac/deals/${dealId}`)
+    console.log('fetched deal_id', deal_id)
+    const deal = await apiRequest(`/ac/deals/${deal_id}`)
+    console.log('deal', deal)
+
     updatePricePerTraveler(deal.basePricePerTraveler)
-    return { title: deal.title,
-      startingPrice: deal.basePricePerTraveler,
+    return {
+      departureDate: deal.departureDate,
+      returnDate: deal.returnDate,
+      title: deal.title,
       imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
       country: deal.country,
-      iso: deal.iso,
-      zoneChapka: +deal.zoneChapka,
       slug: deal.slug,
+      iso: deal.iso,
+      startingPrice: deal.basePricePerTraveler,
+      zoneChapka: +deal.zoneChapka,
       depositPrice: deal.depositPrice, // #Todo faire sauter
       promoChildren: deal.promoChildren / 100,
       promoTeen: deal.promoTeen / 100,
@@ -287,14 +277,12 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       promoLastMinute: deal.promoLastMinute / 100,
       gotLastMinute: deal.gotLastMinute === 'Oui',
       gotEarlybird: deal.gotEarlybid === 'Oui',
-      departureDate: deal.departureDate,
-      returnDate: deal.returnDate,
       travelType: deal.travelType,
       // {... COMPLETER}
     }
   }
 })
-console.log('voyage', voyage.value)
+console.log('voyage', voyageStatus.value, voyageError.value)
 
 // ================== Stepper Management ==================
 const validForm = ref(true)
