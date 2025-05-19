@@ -78,7 +78,7 @@
                 <v-row>
                   <v-col cols="4">
                     <div class="text-grey font-weight-bold"> Type </div>
-                    <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+                    <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
                   </v-col>
                   <v-divider
                     inset
@@ -111,7 +111,7 @@
             <v-card-actions class="justify-center">
               <client-only>
                 <v-btn
-                  v-if="voyage.pricing.groupeAvailable"
+                  v-if="voyage.groupeAvailable"
                   block
                   color="primary"
                   class="font-weight-bold text-body-1"

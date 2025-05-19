@@ -54,7 +54,7 @@
             <v-row>
               <v-col cols="4">
                 <div class="text-grey font-weight-bold"> Type </div>
-                <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+                <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
               </v-col>
               <v-divider
                 inset

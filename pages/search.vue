@@ -113,7 +113,14 @@
       </v-row>
     </v-container>
   </v-container>
-  <v-container v-else>
+  <v-container
+    v-else
+    class="py-0 my-0"
+    fluid
+  >
+    <SearchHeroSection>
+      <SearchField />
+    </SearchHeroSection>
     <v-row>
       <v-col>
         <h1>
@@ -185,7 +192,7 @@ const { data: voyages } = useAsyncData(
 
     const getFilteredByType = (allVoyages, travelType) => {
       const groupeType = travelType === 'Voyage en groupe'
-      return allVoyages.filter(v => v.pricing?.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
+      return allVoyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
     }
 
     const getFilteredByDate = (allVoyages, dateRange) => {
