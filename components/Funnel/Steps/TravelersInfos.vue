@@ -45,7 +45,7 @@
             v-show="!ageValidation.isValid"
             class="text-error text-right"
           >
-            Les voyageurs âgés de {{ Number(deal?.maxTeenAge) }} ans au moment du départ sont considérés comme des
+            Les voyageurs âgés de {{ Number(deal?.maxChildrenAge) }} ans au moment du départ sont considérés comme des
             adultes.
           </p>
         </v-col>
@@ -87,7 +87,6 @@ const isLoading = ref(true)
 
 // Form model
 const model = defineModel()
-
 // Add computed properties for age validation
 const computedAges = computed(() => {
   const now = dayjs()

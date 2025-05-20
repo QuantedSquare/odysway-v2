@@ -21,6 +21,7 @@
       height="62px"
       rounded="md"
       width="66%"
+      @click="redirectToCalendly"
     >
       <span class="text-h6 text-lg-h5 text-wrap">
         Contactez-nous
@@ -33,5 +34,17 @@
 import { useImage } from '#imports'
 
 const route = useRoute()
+const router = useRouter()
 const img = useImage()
+
+function redirectToCalendly() {
+  trackPixel('trackCustom', 'ClickRDV')
+
+  if (route.name === 'search') {
+    router.push('/calendly?fromSearch')
+  }
+  else {
+    router.push(`/calendly?travelTitle=${route.params.voyageSlug}`)
+  }
+}
 </script>

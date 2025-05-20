@@ -128,7 +128,7 @@ const stripePay = async () => {
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {
-      amout: +route.query.amount * 100,
+      amout: +route.query.amount * 100, // typo here on amout
     })
   }
   console.log('dataForStripeSession', dataForStripeSession)
@@ -140,8 +140,17 @@ const stripePay = async () => {
     },
     body: JSON.stringify(dataForStripeSession),
   })
+
   if (checkoutLink) {
-    console.log('checkoutLink', checkoutLink)
+    console.log('checkoutLink =====> ', checkoutLink)
+
+    trackPixel('trackCustom', 'ClickCB', { voyage: props.voyage.title })
+    if (localStorage.getItem('consent') === 'granted') {
+      trackPixel('track', 'InitiateCheckout', {
+        currency: 'EUR',
+        amount: +route.query.amount * 100,
+      })
+    }
     await navigateTo(checkoutLink, {
       external: true,
     })
@@ -170,6 +179,7 @@ const book = async () => {
     },
     body: JSON.stringify(dealData),
   })
+  trackPixel('trackCustom', 'PoseOption', { voyage: props.voyage.title })
   await navigateTo(`/confirmation?voyage=${props.voyage.slug}&isoption=true`)
 }
 

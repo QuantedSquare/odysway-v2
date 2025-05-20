@@ -74,7 +74,10 @@
         variant="tonal"
         height="54"
         class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => trackPixel('trackCustom', 'ClickAppel')"
       >
+        <!-- TODO -->
+        <!-- href="tel: +33184807975" on click start phone call -->
         {{ header.textButton2 }}
       </v-btn>
       <v-btn
@@ -84,7 +87,7 @@
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => router.push('/calendly')"
+        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV') }"
       >
         {{ header.textButton3 }}
       </v-btn>
