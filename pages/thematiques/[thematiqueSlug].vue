@@ -72,10 +72,9 @@ const { data: voyages } = useAsyncData('voyages', async () => {
 })
 
 const limitedVoyages = computed(() => {
-  return voyages.value?.slice(0, isExpanded.value ? voyages.value.length : 9)
+  if (!voyages.value || !Array.isArray(voyages.value)) return []
+  return voyages.value.slice(0, isExpanded.value ? voyages.value.length : 9)
 })
-
-console.log('voyages', voyages.value)
 </script>
 
 <style scoped>

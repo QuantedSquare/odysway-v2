@@ -13,19 +13,18 @@
           <v-col
             v-if="voyage"
             cols="12"
-            sm="6"
-            md="3"
           >
             <v-img
               rounded="xl"
-              class="position-relative"
-              :src="voyage.imgSrc1.src"
-              :alt="voyage.imgSrc1.alt"
+              class="d-flex align-end"
+              :src="voyage.image.src"
+              :alt="voyage.image.alt"
+              cover
             >
-              <div class="d-flex justify-end mt-4 mr-1 position-absolute  right-0">
+              <div class="d-flex align-center justify-center ">
                 <h3
                   v-if="voyage"
-                  class="text-white mb-4 ml-3 text-shadow"
+                  class="text-white  text-h3 pa-10 text-shadow"
                 >
                   {{ voyage.title }}
                 </h3>
@@ -97,7 +96,7 @@
           name="error"
         />
         <NuxtLink
-          to="/thematiques"
+          to="/"
         >
           Retour aux voyages
         </NuxtLink>
@@ -108,9 +107,9 @@
 
 <script setup>
 const route = useRoute()
-const isOption = ref(route.query.isOption === 'true')
+const isOption = ref(route.query.isoption === 'true')
 const { data: voyage, status } = useAsyncData(route.query.voyage, async () => {
-  const query = await queryCollection('deals').where('slug', '=', route.query.voyage).first()
+  const query = await queryCollection('voyages').where('slug', '==', route.query.voyage).first()
   return query
 })
 

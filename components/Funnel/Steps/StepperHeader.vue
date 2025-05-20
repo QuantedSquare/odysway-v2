@@ -4,7 +4,7 @@
     v-model="model"
     alt-labels
     show-actions
-    class="text-caption "
+    class="text-caption"
   >
     <v-stepper-header
       v-if="props.skipperMode !== 'summary'"

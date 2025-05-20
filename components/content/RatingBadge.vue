@@ -11,10 +11,15 @@
         :icon="mdiStar"
         color="yellow-rating"
         :size="mdAndUp ? 20 : 16"
-        class="mb-1"
       />
       <span class="text-body-2 font-weight-bold text-primary">
         {{ `${rating.toString().replace('.', ',')}/5` }}
+      </span>
+      <span
+        v-if="comments > 0"
+        class="text-subtitle-2 font-weight-bold text-primary"
+      >
+        {{ `&nbsp;( ${comments} )` }}
       </span>
     </div>
   </v-btn>
@@ -44,6 +49,10 @@ defineProps({
   elevation: {
     type: String,
     default: '0',
+  },
+  comments: {
+    type: Number,
+    default: 0,
   },
 })
 </script>

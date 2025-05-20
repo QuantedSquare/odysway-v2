@@ -6,7 +6,6 @@
     <NuxtLink
       :to="`/voyages/${voyage.slug}`"
       class="text-decoration-none position-relative text-white"
-      @click="scrollToTop"
     >
       <v-img
         :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
@@ -87,7 +86,7 @@
         <v-card-actions class="justify-center">
           <client-only>
             <v-btn
-              v-if="voyage.pricing.groupeAvailable"
+              v-if="voyage.groupeAvailable"
               block
               color="primary"
               class="font-weight-bold text-body-1"
@@ -131,9 +130,6 @@ defineProps({
 })
 
 const img = useImage()
-const scrollToTop = () => {
-  window.scrollTo(0, 0)
-}
 </script>
 
 <style scoped>

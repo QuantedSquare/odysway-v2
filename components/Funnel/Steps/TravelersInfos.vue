@@ -21,6 +21,7 @@
             colored-border
             color="primary"
             elevation="2"
+            class="text-subtitle-2"
           >
             Les informations ci-dessous doivent être identiques à celles qui sont écrites sur les documents d'identité utilisés pour ce voyage.
             <!-- {{ page.rappel_informations_voyageurs }} -->
@@ -45,7 +46,7 @@
             v-show="!ageValidation.isValid"
             class="text-error text-right"
           >
-            Les voyageurs âgés de {{ Number(deal?.maxTeenAge) }} ans au moment du départ sont considérés comme des
+            Les voyageurs âgés de {{ Number(deal?.maxChildrenAge) }} ans au moment du départ sont considérés comme des
             adultes.
           </p>
         </v-col>

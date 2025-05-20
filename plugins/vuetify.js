@@ -113,7 +113,7 @@ export default defineNuxtPlugin((app) => {
         elevation: 0,
       },
       VSwitch: {
-        color: 'primary',
+        color: 'secondary',
         baseColor: 'grey',
         inset: true,
         hideDetails: true,

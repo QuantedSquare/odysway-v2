@@ -8,22 +8,21 @@
       <v-card-text>
         <v-row>
           <v-col
-            v-if="route.query.type === 'deposit'"
             cols="12"
           >
             <template v-if="isBooking">
-              <div class="text-center">
+              <div class="text-start">
                 Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
               </div>
             </template>
-            <template v-else>
+            <template v-else-if="route.query.type === 'deposit'">
               <v-switch
                 v-model="checkedOption"
                 inset
                 hide-details
               >
                 <template #label>
-                  <div class="text-caption text-md-body-1 pl-1">
+                  <div class="text-body-2 pl-1">
                     Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
                   </div>
                 </template>
@@ -44,7 +43,7 @@
               >
                 <template #label>
                   <div
-                    class="text-caption text-md-body-1 pl-1"
+                    class="text-body-2 pl-1"
                     @click.stop=""
                     v-html="page.phrase_dacceptation"
                   />
@@ -56,13 +55,22 @@
                 hide-details
               >
                 <template #label>
-                  <div class="text-caption text-md-body-1 pl-1">
+                  <div class="text-body-2 pl-1">
                     Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
                   </div>
                 </template>
               </v-switch>
             </v-col>
           </template>
+          <Transition name="list">
+            <v-alert
+              v-if="alreadyPlacedAnOption"
+              color="error"
+              variant="tonal"
+            >
+              Vous avez déjà posé une option pour cette date.
+            </v-alert>
+          </Transition>
           <!-- Replace btn "Suivant" in parent -->
           <ClientOnly>
             <Teleport
@@ -76,7 +84,7 @@
                   color="info"
                   class="ml-4"
                   large
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                  :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
                   @click="book"
                 >
                   Poser une option gratuitement
@@ -104,16 +112,18 @@ const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
 console.log('props', props.voyage)
 const route = useRoute()
-
+const runtimeConfig = useRuntimeConfig()
+const alreadyPlacedAnOption = ref(false)
+console.log('runtimeConfig', runtimeConfig)
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
-const isBooking = ref(false)
-const checkedOption = ref(false)
-const switch_accept_data_privacy = ref(false)
-const switch_accept_country = ref(false)
+const isBooking = ref(route.query.type === 'booking')
+const checkedOption = ref(route.query.type === 'booking')
+const switch_accept_data_privacy = ref(route.query.type === 'booking')
+const switch_accept_country = ref(route.query.type === 'booking')
 
 const loadingStripeSession = ref(false)
 
@@ -149,27 +159,48 @@ const stripePay = async () => {
   loadingStripeSession.value = false
 }
 
+watch(checkedOption, (value) => {
+  if (!value) {
+    alreadyPlacedAnOption.value = false
+  }
+})
 const book = async () => {
   loadingStripeSession.value = true
+
+  const res = await fetch(`/api/v1/booking/booked_date/option`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id: route.query.booked_id }),
+  })
+  const data = await res.json()
+  console.log('data', data)
+  if (data.error && data.error === 'La date est déjà réservée') {
+    alreadyPlacedAnOption.value = true
+    loadingStripeSession.value = false
+    return
+  }
+
   const dealData = {
     dealId: dealId.value,
     stage: '27',
     currentStep: 'A posé une option',
     title: props.voyage.title,
-    nbTravelers: deal.value.nbTravelers,
+    nbTravelers: +deal.value.nbTravelers,
     firstName: deal.value.contact.firstName,
     lastName: deal.value.contact.lastName,
   }
+  await updateDeal(dealData)
   // Check si on ajoute le payment link ici
 
-  await updateDeal(dealData)
-  await $fetch('/api/v1/slack/notification', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(dealData),
-  })
+  if (runtimeConfig.public.env === 'production') {
+    await $fetch('/api/v1/slack/notification', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dealData),
+    })
+  }
   await navigateTo(`/confirmation?voyage=${props.voyage.slug}&isoption=true`)
 }
 

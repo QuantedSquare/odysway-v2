@@ -14,7 +14,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width relative w-md-75 w-lg-50 w-xl-33 no-margin-window "
+            class="border-width relative  w-md-75 w-lg-50 w-xl-33 no-margin-window"
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -37,6 +37,7 @@
               />
             </Transition>
             <v-stepper-window
+              :class="currentStep === 5 ? 'mt-0 mx-0' : ''"
               :model-value="currentStep"
             >
               <v-stepper-window-item>
@@ -90,6 +91,7 @@
                 <FunnelStepsOptions
                   :ref="(component) => registerStepComponent(component, 3)"
                   v-model="validForm"
+                  :voyage="voyage"
                   :current-step="currentStep"
                   :page="page"
                   :own-step="3"
@@ -105,6 +107,7 @@
                 />
               </v-stepper-window-item>
               <v-stepper-window-item
+
                 :value="5"
               >
                 <FunnelStepsSummary
@@ -231,6 +234,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       privatisation: travel.privatisationAvailable,
       startingPrice: fetchedDate.starting_price * 100,
       indivRoomPrice: travel.pricing.indivRoomPrice * 100,
+      gotIndivRoomAvailable: travel.pricing.indivRoom,
       gotEarlybird: fetchedDate.early_bird ? 'Oui' : 'Non',
       promoEarlybird: travel.pricing.earlyBirdReduction * 100,
       gotLastMinute: fetchedDate.last_minute ? 'Oui' : 'Non',
@@ -277,6 +281,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       promoLastMinute: deal.promoLastMinute / 100,
       gotLastMinute: deal.gotLastMinute === 'Oui',
       gotEarlybird: deal.gotEarlybid === 'Oui',
+      gotIndivRoomAvailable: deal.indivRoom === 'Oui',
       travelType: deal.travelType,
       // {... COMPLETER}
     }
@@ -339,7 +344,7 @@ const isPreviousButtonDisabled = computed(() => {
   }
   .funnel-stepper{
     min-height: 50vh!important;
-    padding: 2em;
+    /* padding: 2em; */
   }
   .no-margin-window .v-stepper-window {
  margin-left:0!important;

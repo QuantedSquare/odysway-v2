@@ -34,5 +34,6 @@ export function useParams() {
     addMultipleParams,
     addSingleParam,
     removeParam,
+
   }
 }

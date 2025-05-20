@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <v-container>
+    <v-row>
+      <SearchHeroSection />
+    </v-row>
     <HorizontalCarousel v-if="categories">
       <template #title>
         <h1>Toutes nos thématiques</h1>
@@ -54,7 +57,7 @@
         </template>
       </HorizontalCarousel>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script setup>
@@ -66,12 +69,12 @@ const { data: voyages } = useAsyncData('voyages', () => {
   return queryCollection('voyages').where('published', '==', true).all()
 })
 const categoriesWithVoyages = computed(() => {
-  if (!categories.value || !voyages.value) return []
-
-  return categories.value.map(category => ({
+  if (!categories.value || voyages.value.length === 0) return []
+  console.log('voyages', voyages.value)
+  return categories.value?.map(category => ({
     ...category,
-    voyages: voyages.value.filter(voyage =>
-      voyage.categories && voyage.categories.some(c => c.name.includes(category.slug)),
+    voyages: voyages.value?.filter(voyage =>
+      voyage.categories && voyage.categories?.some(c => c.name.includes(category.slug)),
     ),
   }))
 })

@@ -54,7 +54,7 @@ const createCheckoutSession = async (order) => {
         price_data: {
           currency: 'eur',
           product_data: {
-            name: deal.insurance,
+            name: 'Assurance ' + deal.insurance,
             images: [order.insuranceImg],
           },
           unit_amount: +deal.insuranceCommissionPrice,
@@ -330,6 +330,30 @@ const handlePaymentSession = async (session, paymentType) => {
   const reponse = await activecampaign.getDealById(order.dealId)
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
   const deal = { ...reponse.deal, ...customFields }
+
+  // BOOKING MANAGEMENT SUPABASE
+  const { data: bookedDate, error } = await supabase
+    .from('booked_dates')
+    .update({ is_option: false, expiracy_date: null })
+    .eq('deal_id', order.dealId)
+    .select()
+    .single()
+  if (error) {
+    console.error('Error updating booked_dates', error)
+  }
+  else {
+    console.log('booked_dates updated', bookedDate)
+    // Update the travel_dates.booked_seat
+    const { data: travelDate, error: sumError } = await supabase
+      .from('travel_dates')
+      .select('*')
+      .eq('id', bookedDate.travel_date_id)
+      .single()
+    console.log('travel_dates updated', travelDate)
+    if (sumError) return { error: sumError.message }
+    const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+  }
+
   //   // Fetch Deal Data
   console.log('Passed deal retrieving', deal)
 

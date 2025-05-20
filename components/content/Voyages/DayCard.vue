@@ -3,7 +3,7 @@
     variant="text"
     class="shadow-none"
   >
-    <v-row>
+    <v-row v-if="isHydrated">
       <v-col
         cols="12"
         sm="5"
@@ -40,7 +40,7 @@
             :class="{ truncated: !isExpanded }"
             :style="contentStyle"
           >
-            <span>{{ description }}</span>
+            <span v-if="description">{{ description }}</span>
             <div class="d-flex flex-column px-8 mt-4">
               <div v-if="denivellation">
                 <span class="font-weight-bold">Dénivelé:&nbsp;</span>
@@ -137,6 +137,10 @@ watch(isExpanded, async (newVal) => {
     // Collapsing: animate to 3 lines
     contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
   }
+})
+const isHydrated = ref(false)
+onMounted(() => {
+  isHydrated.value = true
 })
 </script>
 
