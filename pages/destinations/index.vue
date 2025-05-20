@@ -73,7 +73,7 @@ const { data: voyages } = useAsyncData('voyages', () => {
 const destinationsWithVoyages = computed(() => {
   if (!destinations.value || !voyages.value) return []
 
-  return destinations.value.map(destination => ({
+  return destinations.value?.map(destination => ({
     ...destination,
     voyages: voyages.value.filter(voyage =>
       voyage.destinations && voyage.destinations.some(d => d.name.includes(destination.titre)),

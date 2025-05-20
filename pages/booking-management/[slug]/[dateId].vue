@@ -431,7 +431,7 @@ const paymentTypes = [
 
 const fetchDetails = async () => {
   // Fetch travel_date details
-  const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`)
+  const res = await fetch(`/api/v1/booking/date/${dateId}`)
   const data = await res.json()
   form.value = { ...data, index: 0 }
   console.log('=======form RETRIEVED=======', form.value)

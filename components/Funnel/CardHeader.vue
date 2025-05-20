@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="height-title bg-primary px-6"
+    class="height-title bg-primary-light px-6"
     fluid
   >
     <div class="d-flex align-center justify-start ga-4 flex-md-row ">

@@ -7,6 +7,7 @@
         :rules="[rules.name]"
         label="Indicatif *"
         hide-details
+        @change="changeAttr('phone'); saveToLocalStorage(phoneCode)"
       >
         <template #item="{ props }">
           <v-list-item
@@ -135,6 +136,7 @@ const loadFromLocalStorage = () => {
   }
 }
 const saveToLocalStorage = () => {
+  console.log('saveToLocalStorage', phoneCode.value, phoneNumber.value)
   const dataToStore = {
     phoneCode: phoneCode.value,
     phoneNumber: phoneNumber.value,
@@ -162,6 +164,9 @@ const extractPhoneDetails = (fullPhone, phonesList) => {
     number: fullPhone,
   }
 }
+watch(phoneCode, () => {
+  saveToLocalStorage()
+})
 
 const changeAttr = (dataAttribute) => {
   // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled

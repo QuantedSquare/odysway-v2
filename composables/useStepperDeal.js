@@ -4,7 +4,7 @@ export function useStepperDeal(componentStep) {
   const deal = ref(null)
   const dealId = ref(null)
   const route = useRoute()
-  const { addSingleParam } = useParams()
+  const { addSingleParam, removeParam } = useParams()
 
   const currentStepRef = ref(1)
 
@@ -24,8 +24,18 @@ export function useStepperDeal(componentStep) {
 
   const createDeal = async (body) => {
     const res = await apiRequest('/ac/deals', 'post', body)
-    dealId.value = res
-    addSingleParam('dealId', dealId.value)
+    const date_id = route.query.date_id
+    const addedBookedDate = await apiRequest(`/booking/${body.slug}/date/${date_id}/assign-deal`, 'post', {
+      dealId: res,
+      booked_places: 0, // this value is update after a payment
+    })
+    dealId.value = addedBookedDate.deal_id
+    localStorage.setItem(date_id, JSON.stringify({
+      booked_id: addedBookedDate.id,
+      deal_id: addedBookedDate.deal_id,
+    }))
+    addSingleParam('booked_id', addedBookedDate.id)
+    removeParam('date_id')
     return true
   }
 
@@ -36,15 +46,21 @@ export function useStepperDeal(componentStep) {
     return true
   }
 
-  watch(route, () => {
-    dealId.value = route.query.dealId || dealId.value
+  watch(route, async () => {
+    // dealId.value = route.query.dealId || dealId.value
     if (route.query.step) {
       currentStepRef.value = route.query.step
     }
+    if (route.query.booked_id) {
+      console.log('route.query.booked_id', route.query.booked_id)
+      const { deal_id } = await apiRequest(`/booking/booked_date/${route.query.booked_id}`)
+      console.log('deal_id in composable', deal_id)
+      dealId.value = deal_id
+    }
   }, { immediate: true })
 
+  // #TODO CHECK SI CA FONCTIONNE SANS REFETCH
   watch([dealId, currentStepRef], async () => {
-    dealId.value = route.query.dealId || dealId.value
     if (dealId.value && +componentStep === +currentStepRef.value) {
       await fetchDeal()
       console.log('Deal fetched:', deal.value)

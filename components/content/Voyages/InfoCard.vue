@@ -40,7 +40,7 @@
           </v-col>
         </v-row>
         <v-row
-          v-if="displayedDates.length > 0 "
+          v-if="displayedDates.length > 0 && !isLoading"
           justify-md="center"
           class="text-center"
         >
@@ -92,6 +92,13 @@
                 {{ stickyBlock.dateButtonText }}
               </span>
             </v-btn>
+          </v-col>
+        </v-row>
+        <v-row v-else-if="isLoading">
+          <v-col cols="12">
+            <v-skeleton-loader
+              type="article"
+            />
           </v-col>
         </v-row>
         <v-row v-else>
@@ -230,7 +237,7 @@ import dayjs from 'dayjs'
 
 const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
-const { dates } = useDates()
+const { dates, isLoading } = useDates()
 
 const displayedDates = ref([])
 

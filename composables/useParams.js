@@ -24,9 +24,15 @@ export function useParams() {
   function addSingleParam(paramName, paramValue) {
     return addMultipleParams({ [paramName]: paramValue })
   }
+  function removeParam(paramName) {
+    const currentParams = { ...route.query }
+    delete currentParams[paramName]
+    return addMultipleParams(currentParams)
+  }
 
   return {
     addMultipleParams,
     addSingleParam,
+    removeParam,
   }
 }

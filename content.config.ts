@@ -555,6 +555,7 @@ export default defineContentConfig({
           }).describe('Image de l\'og, utilise la photo principale si vide'),
           twitterCard: z.enum(['summary', 'summary_large_image', 'app', 'player']).describe('Twitter Card Type'),
         }).describe('SEO'),
+        // navigation: z.object({
         // ==========================================
       }),
     }),

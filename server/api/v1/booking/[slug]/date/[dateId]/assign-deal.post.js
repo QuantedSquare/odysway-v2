@@ -4,7 +4,7 @@ import activecampaign from '~/server/utils/activecampaign'
 
 export default defineEventHandler(async (event) => {
   const { dateId } = event.context.params
-  const { dealId } = await readBody(event)
+  const { dealId, booked_places, is_option, expiracy_date } = await readBody(event)
   if (!dealId) return { error: 'dealId requis' }
 
   // Fetch deal from ActiveCampaign
@@ -22,15 +22,16 @@ export default defineEventHandler(async (event) => {
   const nbTravelers = +deal.nbTravelers
   if (!nbTravelers) return { error: 'Le deal ne contient pas le nombre de voyageurs (nbTravelers)' }
 
+  console.log('??????booked_places??????', booked_places)
   // Insert into booked_dates
   const { data, error } = await supabase
     .from('booked_dates')
     .insert([{
       travel_date_id: dateId,
       deal_id: dealId,
-      booked_places: Number(nbTravelers),
-      is_option: null,
-      expiracy_date: null,
+      booked_places: booked_places || Number(nbTravelers),
+      is_option: is_option || null,
+      expiracy_date: expiracy_date || null,
     }])
     .select('*')
     .single()

@@ -27,7 +27,7 @@
         </v-col>
       </TransitionGroup>
     </v-row>
-    <v-row v-if="voyages.length === 0">
+    <v-row v-if="limitedVoyages.length === 0">
       <v-col
         cols="12"
         class="text-center my-10"
@@ -36,7 +36,7 @@
       </v-col>
     </v-row>
     <v-row
-      v-if="voyages.length > 9"
+      v-if="limitedVoyages.length > 9"
       justify="center"
       align="center"
       class="flex-column my-10"
