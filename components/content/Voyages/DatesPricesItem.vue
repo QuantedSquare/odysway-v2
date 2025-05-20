@@ -122,6 +122,7 @@
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
               :to="formatLink(enrichedDate)"
+              @click="trackPixel('track', 'AddToWishlist')"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Réserver

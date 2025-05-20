@@ -57,7 +57,6 @@ onMounted (() => {
         event_value: 1,
         debug_mode: true,
       })
-
     consentBar.value = false
   }
 
@@ -83,6 +82,7 @@ onMounted (() => {
 
 function acceptCookies() {
   consentBar.value = false
+
   initialize()
   gtag('consent', 'update', {
     ad_user_data: 'granted',
@@ -90,18 +90,22 @@ function acceptCookies() {
     ad_storage: 'granted',
     analytics_storage: 'granted',
   })
-  localStorage.setItem('consent', 'agree')
+
+  trackPixel('track', 'PageView')
+  localStorage.setItem('consent', 'granted')
 }
 
 function refuseCookies() {
   consentBar.value = false
+
   gtag('consent', 'update', {
     ad_user_data: 'denied',
     ad_personalization: 'denied',
     ad_storage: 'denied',
     analytics_storage: 'denied',
   })
-  localStorage.setItem('consent', 'false')
+
+  localStorage.setItem('consent', 'denied')
 }
 
 // TODO: add pixels and ga

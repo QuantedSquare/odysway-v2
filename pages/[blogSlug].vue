@@ -17,5 +17,9 @@ const { data } = await useAsyncData(route.path, () => {
   return queryCollection('blog').path('/blog' + route.path).first()
 })
 
+onMounted(() => {
+  trackPixel('trackCustom', 'BlogView', { titre: data.value.title })
+})
+
 provide('page', data)
 </script>

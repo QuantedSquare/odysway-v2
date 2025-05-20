@@ -59,4 +59,12 @@ const items = useBreadcrumbItems() // uses the current route
 const { header } = useAppConfig()
 const { mdAndUp } = useDisplay()
 const img = useImage()
+
+onMounted(() => {
+  const isConsent = localStorage.getItem('consent') === 'granted'
+
+  if (isConsent) {
+    trackPixel('track', 'PageView')
+  }
+})
 </script>

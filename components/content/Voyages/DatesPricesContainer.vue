@@ -42,7 +42,10 @@
         <div class="text-h4 font-weight-bold text-primary">
           {{ indivSection.title }}
         </div>
-        <v-btn height="54">
+        <v-btn
+          height="54"
+          :to="`/calendly?travelTitle=${route.params.voyageSlug}`"
+        >
           <div class="text-h6">
             {{ indivSection.textButton }}
           </div>
@@ -60,6 +63,8 @@ const goTo = useGoTo()
 const { dates } = useDates()
 const isExpanded = ref(false)
 const { width } = useDisplay()
+const route = useRoute()
+
 const { dateSections, indivAvailable, indivSection } = defineProps({
   dateSections: {
     type: Object,
