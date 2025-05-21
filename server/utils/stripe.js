@@ -263,8 +263,10 @@ const createCheckoutSession = async (order) => {
   console.log('order before session', order)
 
   // Ensure URLs are properly encoded
-  const successUrl = encodeURI(`${origin}/confirmation?voyage=${deal.slug}`)
-  const cancelUrl = encodeURI(`${origin}${order.currentUrl}`)
+  // #TODO: remove this forced origin
+  let forcedOrigin = 'https://odysway-v2.vercel.app'
+  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}`)
+  const cancelUrl = encodeURI(`${forcedOrigin}${order.currentUrl}`)
 
   console.log('Final URLs:', {
     successUrl,
@@ -334,24 +336,28 @@ const handlePaymentSession = async (session, paymentType) => {
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
     .from('booked_dates')
-    .update({ is_option: false, expiracy_date: null })
+    .update({ is_option: false, expiracy_date: null, booked_places: deal.nbTravelers })
     .eq('deal_id', order.dealId)
-    .select()
+    .select('*')
     .single()
   if (error) {
     console.error('Error updating booked_dates', error)
   }
   else {
     console.log('booked_dates updated', bookedDate)
-    // Update the travel_dates.booked_seat
-    const { data: travelDate, error: sumError } = await supabase
-      .from('travel_dates')
-      .select('*')
-      .eq('id', bookedDate.travel_date_id)
-      .single()
-    console.log('travel_dates updated', travelDate)
-    if (sumError) return { error: sumError.message }
+
+    const { data: allBooked, error: sumAllBookedError } = await supabase
+      .from('booked_dates')
+      .select('booked_places')
+      .eq('travel_date_id', bookedDate.travel_date_id)
+    if (sumAllBookedError) return { error: sumAllBookedError.message }
+
     const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+    // Update the travel_dates.booked_seat
+    await supabase
+      .from('travel_dates')
+      .update({ booked_seat: totalBooked })
+      .eq('id', bookedDate.travel_date_id)
   }
 
   //   // Fetch Deal Data

@@ -20,16 +20,18 @@ export default defineEventHandler(async (event) => {
 
   // Extract nbTravelers from deal
   const nbTravelers = +deal.nbTravelers
+  const alreadyPaid = +deal.alreadyPaid
   if (!nbTravelers) return { error: 'Le deal ne contient pas le nombre de voyageurs (nbTravelers)' }
 
-  console.log('??????booked_places??????', booked_places)
+  // If user placed an option or already paid, he is counted as a booked traveler, otherwise he is just assigned to the deal temporarily
+  const bookedPlaceCount = (alreadyPaid > 0 || is_option === true) ? (booked_places || Number(nbTravelers)) : 0
   // Insert into booked_dates
   const { data, error } = await supabase
     .from('booked_dates')
     .insert([{
       travel_date_id: dateId,
       deal_id: dealId,
-      booked_places: booked_places || Number(nbTravelers),
+      booked_places: bookedPlaceCount,
       is_option: is_option || null,
       expiracy_date: expiracy_date || null,
     }])

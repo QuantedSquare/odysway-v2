@@ -5,7 +5,7 @@
       type="card"
     />
     <!-- v-else -->
-    <template v-else-if="!isLoadingInsurance && !isEmpty(insurances)">
+    <template v-else-if="!isLoadingInsurance && !_.isEmpty(insurances)">
       <v-row>
         <v-col
           class="d-flex align-center"
@@ -139,7 +139,7 @@
 </template>
 
 <script setup>
-import { isEmpty } from 'lodash'
+import _ from 'lodash'
 
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const model = defineModel()
