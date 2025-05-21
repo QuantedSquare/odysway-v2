@@ -66,7 +66,7 @@
         color="primary"
         height="54"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => router.push('/concept')"
+        @click="() => { router.push('/concept'); captureOutboundLink(header.textButton1) }"
       >
         {{ header.textButton1 }}
       </v-btn>
@@ -75,10 +75,8 @@
         variant="tonal"
         height="54"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => trackPixel('trackCustom', 'ClickAppel')"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
       >
-        <!-- TODO -->
-        <!-- href="tel: +33184807975" on click start phone call -->
         {{ header.textButton2 }}
       </v-btn>
       <v-btn
@@ -88,7 +86,7 @@
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV') }"
+        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
       >
         {{ header.textButton3 }}
       </v-btn>
@@ -139,7 +137,7 @@ defineProps({
   },
 })
 const img = useImage()
-
+const { gtag } = useGtag()
 // const showExtension = ref(false)
 // const extensionName = ref('')
 
@@ -178,6 +176,9 @@ const img = useImage()
 // }
 
 // TODO : add google analytics
+function captureOutboundLink(btn) {
+  gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
+}
 </script>
 
 <style scoped>

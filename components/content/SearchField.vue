@@ -114,7 +114,7 @@ import dayjs from 'dayjs'
 const router = useRouter()
 const route = useRoute()
 const dateMenu = ref(false)
-
+const { gtag } = useGtag()
 // Replace individual refs with useState
 const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
@@ -154,6 +154,7 @@ function search() {
   if (date.value.length > 0) {
     query.dateRange = `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}`
   }
+  gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, dateRange: `${date.value}` })
   router.push({
     path: '/search',
     query,

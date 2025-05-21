@@ -132,6 +132,7 @@ const { page } = defineProps({
     required: true,
   },
 })
+const { gtag } = useGtag()
 const model = defineModel()
 
 const gotDates = ref(true)
@@ -152,6 +153,16 @@ watch([selectedDates, includeFlight], () => {
     model.value.returnDate = dayjs(selectedDates.value[selectedDates.value.length - 1]).format('YYYY-MM-DD')
   }
   model.value.includeFlight = includeFlight.value
+})
+
+// TODO: TEST this
+watch(() => [model.value.nbAdults, model.value.nbChildren], ([newAdults, newChildren], [oldAdults, oldChildren]) => {
+  console.log(newAdults)
+  gtag('event', {
+    eventCategory: 'Devis',
+    eventAction: 'Select',
+    eventLabel: 'Groupe Info - Sélection nombre voyageurs',
+  })
 })
 </script>
 

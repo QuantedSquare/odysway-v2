@@ -12,13 +12,17 @@
 
 <script setup>
 const route = useRoute()
-console.log('route', route.path)
+const { gtag } = useGtag()
 const { data } = await useAsyncData(route.path, () => {
   return queryCollection('blog').path('/blog' + route.path).first()
 })
 
 onMounted(() => {
   trackPixel('trackCustom', 'BlogView', { titre: data.value.title })
+  gtag('event', 'page_view', {
+    eventCategory: 'Blog',
+    eventAction: 'View',
+    eventLabel: data.value.title })
 })
 
 provide('page', data)
