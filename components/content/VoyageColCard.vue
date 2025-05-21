@@ -151,6 +151,8 @@
 import { mdiPlusCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
+const loading = ref(false)
+
 const props = defineProps({
   voyageSlug: {
     type: String,
@@ -159,18 +161,13 @@ const props = defineProps({
 })
 const img = useImage()
 
-const { data: voyage, status, refresh } = await useAsyncData(
-  `voyage-${props.voyageSlug}`,
-  () => {
-    console.log('voyageSlug', props.voyageSlug)
-    return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
-  },
-)
-
-console.log('voyage', voyage.value)
-watch(() => props.voyageSlug, () => {
-  refresh()
-})
+const loadVoyage = async () => {
+  loading.value = true
+  const voyage = await queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
+  loading.value = false
+  return voyage
+}
+const voyage = await loadVoyage()
 </script>
 
 <style scoped>

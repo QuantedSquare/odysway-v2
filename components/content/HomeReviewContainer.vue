@@ -72,13 +72,11 @@
 import { mdiStar } from '@mdi/js'
 
 const loading = ref(false)
-// const { data: reviews, status } = useAsyncData('reviews-home', () => {
-//   return queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
-// })
+
 const loadReviews = async () => {
   loading.value = true
   const reviews = await queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
-  console.log('reviews', reviews)
+
   loading.value = false
   return reviews
 }
