@@ -69,7 +69,7 @@ export default defineNuxtConfig({
       environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
       metapixel: {
-        default: { id: process.env.NUXT_PUBLIC_METAPIXEL_ID || '', pageView: 'false' },
+        default: { id: process.env.METAPIXEL_ID || '', pageView: 'false' },
       },
     },
   },

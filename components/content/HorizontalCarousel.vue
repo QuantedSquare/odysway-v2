@@ -102,21 +102,18 @@ const scrollElement = ref(null)
 const itemsList = useTemplateRef('items-list')
 const ctaContainer = useTemplateRef('cta-container')
 
-onMounted(() => {
+watch(scrollContainer, () => {
   nextTick(() => {
-    scrollElement.value = scrollContainer.value.$el
-    console.log('scrollElement', scrollElement.value)
+    if (scrollContainer.value) {
+      scrollElement.value = scrollContainer.value.$el
+      console.log('scrollElement', scrollElement.value)
+    }
   })
-})
+}, { immediate: true, deep: true })
+
 const gotCtaSlot = computed(() => {
   return ctaContainer.value?.children[0]
 })
-
-// watch(itemsList, () => {
-//   if (itemsList.value) {
-//     itemsList.value.children[0].children = itemsList.value.children[0].children.slice(0, 3)
-//   }
-// })
 
 const childrenCount = computed(() => {
   return itemsList.value?.children[0]?.children.length
