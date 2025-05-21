@@ -31,6 +31,14 @@ useHead({
     },
   ],
 })
+
+onMounted(() => {
+  const isConsent = localStorage.getItem('consent') === 'granted'
+
+  if (isConsent) {
+    trackPixel('track', 'PageView')
+  }
+})
 </script>
 
 <style>

@@ -37,7 +37,6 @@
 <script setup>
 const consentBar = ref(true)
 const { gtag, initialize } = useGtag()
-const { $fbq } = useNuxtApp()
 
 onMounted (() => {
   if (!localStorage.getItem('consent')) {

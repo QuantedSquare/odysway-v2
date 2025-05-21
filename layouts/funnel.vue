@@ -18,12 +18,4 @@ const drawer = ref(false)
 function toggleDrawer() {
   drawer.value = !drawer.value
 }
-
-onMounted(() => {
-  const isConsent = localStorage.getItem('consent') === 'granted'
-
-  if (isConsent) {
-    trackPixel('track', 'PageView')
-  }
-})
 </script>

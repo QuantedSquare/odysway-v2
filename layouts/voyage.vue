@@ -28,14 +28,6 @@ import { useDisplay } from 'vuetify'
 
 const drawer = ref(false)
 const { smAndDown } = useDisplay()
-
-onMounted(() => {
-  const isConsent = localStorage.getItem('consent') === 'granted'
-
-  if (isConsent) {
-    trackPixel('track', 'PageView')
-  }
-})
 </script>
 
 <style scoped>

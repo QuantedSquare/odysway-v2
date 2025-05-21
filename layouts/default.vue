@@ -30,14 +30,6 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const drawer = ref(false)
-
-onMounted(() => {
-  const isConsent = localStorage.getItem('consent') === 'granted'
-
-  if (isConsent) {
-    trackPixel('track', 'PageView')
-  }
-})
 </script>
 
 <style scoped>
