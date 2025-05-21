@@ -195,11 +195,17 @@
                       &nbsp;|&nbsp;Voyageurs:
                     </span>
                     <v-badge
+                      v-if="traveler.booked_places > 0"
                       :content="traveler.booked_places"
                       color="primary"
                       inline
                       class="ml-2"
                       style="margin-left: 8px;"
+                    />
+                    <v-badge
+                      v-else
+                      color="red"
+                      content="Pas de paiement effectué sur cette date"
                     />
                     <v-badge
                       v-if="traveler.is_option"
