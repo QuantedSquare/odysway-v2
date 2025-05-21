@@ -357,7 +357,7 @@ const handlePaymentSession = async (session, paymentType) => {
     await supabase
       .from('travel_dates')
       .update({ booked_seat: totalBooked })
-      .eq('id', bookedDate.dateId)
+      .eq('id', bookedDate.travel_date_id)
   }
 
   //   // Fetch Deal Data
