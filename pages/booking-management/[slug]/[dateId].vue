@@ -545,6 +545,7 @@ const deleteTraveler = async (id) => {
 
 function openPaymentDialog(traveler) {
   selectedTraveler.value = traveler
+  console.log('selectedTraveler', selectedTraveler.value)
   paymentType.value = 'full'
   customAmount.value = ''
   generatedLink.value = ''
@@ -557,7 +558,6 @@ function closePaymentDialog() {
 }
 function generateLink() {
   if (!selectedTraveler.value) return
-  const dealId = selectedTraveler.value.deal_id
   let amountParam = ''
   if (paymentType.value === 'custom') {
     if (!customAmount.value) return
@@ -571,7 +571,7 @@ function generateLink() {
   if (paymentType.value === 'deposit') typeParam = '&type=deposit'
   if (paymentType.value === 'balance') typeParam = '&type=balance'
   if (paymentType.value === 'custom') typeParam = '&type=custom'
-  generatedLink.value = `${config.public.siteURL}/checkout?&dealId=${dealId}${amountParam}${typeParam}`
+  generatedLink.value = `${config.public.siteURL}/checkout?&booked_id=${selectedTraveler.value.id}${amountParam}${typeParam}`
 }
 function copyLink() {
   if (generatedLink.value) {

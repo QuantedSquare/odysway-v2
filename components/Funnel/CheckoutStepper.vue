@@ -344,7 +344,6 @@ const isPreviousButtonDisabled = computed(() => {
   }
   .funnel-stepper{
     min-height: 50vh!important;
-    /* padding: 2em; */
   }
   .no-margin-window .v-stepper-window {
  margin-left:0!important;
