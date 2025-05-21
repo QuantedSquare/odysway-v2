@@ -117,7 +117,6 @@ const dateMenu = ref(false)
 
 // Replace individual refs with useState
 const date = useState('searchDate', () => [])
-
 const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
 

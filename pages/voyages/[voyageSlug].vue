@@ -50,7 +50,7 @@
       <DatesPricesContainer
         :date-sections="page.dateSections"
         :indiv-section="page.indivSection"
-        :indiv-available="!voyage.pricing.privatisationAvailable"
+        :indiv-available="!voyage.privatisationAvailable"
       />
 
       <PriceDetailsContainer
@@ -68,6 +68,7 @@
       <WhySection :why-section="page.whySection" />
 
       <HorizontalCarousel
+        v-if="voyagePropositions"
         v-show="voyagePropositions.length > 0"
       >
         <template #title>

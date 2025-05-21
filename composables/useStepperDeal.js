@@ -4,7 +4,7 @@ export function useStepperDeal(componentStep) {
   const deal = ref(null)
   const dealId = ref(null)
   const route = useRoute()
-  const { addSingleParam, removeParam } = useParams()
+  const { addMultipleParams } = useParams()
 
   const currentStepRef = ref(1)
 
@@ -23,20 +23,31 @@ export function useStepperDeal(componentStep) {
   })
 
   const createDeal = async (body) => {
-    const res = await apiRequest('/ac/deals', 'post', body)
-    const date_id = route.query.date_id
-    const addedBookedDate = await apiRequest(`/booking/${body.slug}/date/${date_id}/assign-deal`, 'post', {
-      dealId: res,
-      booked_places: 0, // this value is update after a payment
-    })
-    dealId.value = addedBookedDate.deal_id
-    localStorage.setItem(date_id, JSON.stringify({
-      booked_id: addedBookedDate.id,
-      deal_id: addedBookedDate.deal_id,
-    }))
-    addSingleParam('booked_id', addedBookedDate.id)
-    removeParam('date_id')
-    return true
+    try {
+      const res = await apiRequest('/ac/deals', 'post', body)
+      const date_id = route.query.date_id
+      const addedBookedDate = await apiRequest(`/booking/${body.slug}/date/${date_id}/assign-deal`, 'post', {
+        dealId: res,
+        booked_places: 0, // this value is update after a payment
+      })
+      dealId.value = addedBookedDate.deal_id
+      localStorage.setItem(date_id, JSON.stringify({
+        booked_id: addedBookedDate.id,
+        deal_id: addedBookedDate.deal_id,
+      }))
+
+      // Update both parameters at once to avoid race conditions
+      await addMultipleParams({
+        booked_id: addedBookedDate.id,
+        date_id: undefined, // This will remove the date_id parameter
+      })
+
+      return true
+    }
+    catch (error) {
+      console.error('Error creating deal:', error)
+      return false
+    }
   }
 
   const updateDeal = async (body) => {

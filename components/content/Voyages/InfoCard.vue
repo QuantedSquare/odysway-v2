@@ -290,7 +290,7 @@ watch(dates, () => {
         departureDate: date.departure_date,
         returnDate: date.return_date,
         status: getStatus(date),
-        link: `/checkout?slug=${voyage.slug}&departure_date=${dayjs(date.departure_date).format('YYYY-MM-DD')}&return_date=${dayjs(date.return_date).format('YYYY-MM-DD')}&type=${checkoutType}`,
+        link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
       }
     })
   }

@@ -47,6 +47,7 @@
     </v-row>
     <div ref="items-list">
       <v-row
+        v-if="isHydrated"
         ref="scrollContainer"
         class="flex-nowrap overflow-auto hidden-scroll"
       >
@@ -184,8 +185,9 @@ const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
 const itemsList = useTemplateRef('items-list')
-
+const isHydrated = ref(false)
 onMounted(() => {
+  isHydrated.value = true
   nextTick(() => {
     scrollElement.value = scrollContainer.value.$el
   })

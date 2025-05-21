@@ -5,12 +5,15 @@
   />
   <v-container v-else>
     <!-- <v-row v-if="voyage.indiv_room && !forcedIndivRoom"> -->
-    <v-row>
+    <v-row v-if="props.voyage && props.voyage.gotIndivRoomAvailable && indivRoomPrice > 0">
       <v-col cols="12">
         <h2>{{ page.room_indiv_title }}</h2>
       </v-col>
       <!-- :label="$t('stepperDevisGroup.roomIndivLabel')" -->
-      <v-col cols="12">
+      <v-col
+        cols="8"
+        :class="indivRoom ? 'text-primary' : 'text-grey'"
+      >
         <v-switch
           v-model="indivRoom"
           label="Je souhaite bénéficier d'une chambre individuelle"
@@ -19,6 +22,12 @@
           :btn-text="page.room_indiv_accroche"
           :dialog-text="page.room_indiv_text"
         />
+      </v-col>
+      <v-col
+        class="d-flex justify-end align-start text-body-1 "
+        :class="indivRoom ? 'text-primary' : 'text-grey'"
+      >
+        + {{ formatNumber(indivRoomPrice, 'currency', '€') }} / pers.
       </v-col>
     </v-row>
 
@@ -65,7 +74,7 @@
             v-if="otherFoodOption"
             v-model="specialRequest"
             variant="outlined"
-            label="Précisez"
+            label="Précisez..."
           />
         </Transition>
       </v-col>
@@ -77,7 +86,7 @@
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
-
+console.log('props.voyage', props.voyage)
 const specialRequest = ref('')
 const indivRoom = ref(false)
 const indivRoomPrice = ref(0) // Checker si on veut afficher ce prix

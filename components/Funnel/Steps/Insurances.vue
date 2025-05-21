@@ -31,7 +31,7 @@
             value="rapatriement"
           >
             <template #label>
-              <div class="text-body-1">
+              <div class="text-body-1 d-flex align-center">
                 {{ page.preference_assurance_multirisque }}
                 <v-badge
                   color="secondary"
@@ -43,10 +43,13 @@
           </v-switch>
         </v-col>
 
-        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
+        <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
           + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
         </v-col>
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="px-16"
+        >
           <FunnelStepsDialogLearnMore
             v-if="deal"
             :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.accroche_assurance_perou_nepal:page.accroche_assurance_medicale "
@@ -69,10 +72,13 @@
             :label="page.preference_assurance_annulation"
           />
         </v-col>
-        <v-col class="d-flex justify-end text-body-1 font-weight-bold">
+        <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
           + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
         </v-col>
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="px-16"
+        >
           <FunnelStepsDialogLearnMore
             :btn-text="page.accroche_assurance_annulation"
             :dialog-text="page.details_assurance_annulation"

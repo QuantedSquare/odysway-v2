@@ -21,6 +21,7 @@
             colored-border
             color="primary"
             elevation="2"
+            class="text-subtitle-2"
           >
             Les informations ci-dessous doivent être identiques à celles qui sont écrites sur les documents d'identité utilisés pour ce voyage.
             <!-- {{ page.rappel_informations_voyageurs }} -->

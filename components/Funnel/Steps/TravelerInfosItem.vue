@@ -11,7 +11,9 @@
         class="d-md-none"
         :icon="mdiBagPersonal"
       />
-      <h3>Voyageur {{ id }}</h3>
+      <h3 class="text-body-1 text-md-body-2 font-weight-bold">
+        Voyageur {{ id }}
+      </h3>
     </v-col>
     <v-col
       cols="12"
@@ -43,27 +45,57 @@
       cols="12"
       md="4"
     >
-      <v-text-field
+      <!-- <v-text-field
         v-model="displayedDate"
         label="Date de naissance *"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
         type="date"
         @change="dataUpdated"
-      />
+      /> -->
+      <v-menu
+        v-model="dateMenu"
+        :close-on-content-click="false"
+        location="end"
+      >
+        <template #activator="{ props }">
+          <v-text-field
+            v-bind="props"
+            :value="formattedDate"
+            class="font-weight-bold text-primary"
+            hide-details
+            :append-inner-icon="mdiCalendarBlankOutline"
+            @change="dataUpdated"
+          />
+        </template>
+
+        <v-card
+          min-width="300"
+          elevation="6"
+        >
+          <v-locale-provider locale="fr">
+            <v-date-picker
+              v-model="date"
+              format="dd/mm/YYYY"
+              :max="new Date()"
+              show-adjacent-months
+              @update:model-value="dataUpdated"
+            />
+          </v-locale-provider>
+        </v-card>
+      </v-menu>
     </v-col>
   </v-row>
 </template>
 
 <script setup>
 import dayjs from 'dayjs'
-import localizedFormat from 'dayjs/plugin/localizedFormat'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
+import { mdiBagPersonal, mdiCalendarBlankOutline } from '@mdi/js'
 
-import { mdiBagPersonal } from '@mdi/js'
+const dateMenu = ref(false)
 
 dayjs.extend(customParseFormat)
-dayjs.extend(localizedFormat)
 
 const props = defineProps({
   id: { type: [String, Number], required: true },
@@ -75,16 +107,18 @@ const props = defineProps({
 // Refs
 const i_firstname = ref(props.firstname)
 const i_lastname = ref(props.lastname)
-const displayedDate = ref('')
-
+const date = ref(props.birthdate ? dayjs(props.birthdate, 'DD/MM/YYYY', true) : dayjs())
 const emit = defineEmits(['change'])
+
+const formattedDate = computed(() => {
+  return date.value ? date.value.format('DD/MM/YYYY') : ''
+})
 
 // Initialize birthdate
 onMounted(() => {
   if (props.birthdate) {
-    // Convert from DD/MM/YYYY to YYYY-MM-DD for the input
-    const [day, month, year] = props.birthdate.split('/')
-    displayedDate.value = `${year}-${month}-${day}`
+    const parsed = dayjs(props.birthdate, 'DD/MM/YYYY', true)
+    date.value = parsed.isValid() ? parsed : null
   }
 })
 
@@ -106,36 +140,18 @@ const rules = {
 }
 
 const dataUpdated = () => {
-  if (!displayedDate.value) return
+  if (!date.value) return
 
   // Convert from YYYY-MM-DD to DD/MM/YYYY for emission
-  const dateObj = dayjs(displayedDate.value)
+  // const dateObj = dayjs(displayedDate.value)
+  console.log('date', date.value)
   emit('change', {
     id: props.id,
     firstname: i_firstname.value,
     lastname: i_lastname.value,
-    birthdate: dateObj.format('DD/MM/YYYY'),
+    birthdate: date.value.format('DD/MM/YYYY'),
   })
 }
-
-// const formatDateInput = (event) => {
-//   // Get only digits from input
-//   const value = displayedDate.value.replace(/\D/g, '')
-
-//   // Auto add slashes
-//   if (value.length > 0) {
-//     let formattedDate = ''
-
-//     for (let i = 0; i < value.length && i < 8; i++) {
-//       if (i === 2 || i === 4) {
-//         formattedDate += '/'
-//       }
-//       formattedDate += value[i]
-//     }
-
-//     displayedDate.value = formattedDate
-//   }
-// }
 
 // Watch for prop changes
 watch(() => props.firstname, (newVal) => {
@@ -149,9 +165,20 @@ watch(() => props.lastname, (newVal) => {
 // Watch for birthdate prop changes
 watch(() => props.birthdate, (newVal) => {
   if (newVal) {
-    // Convert from DD/MM/YYYY to YYYY-MM-DD for the input
-    const [day, month, year] = newVal.split('/')
-    displayedDate.value = `${year}-${month}-${day}`
+    const parsed = dayjs(newVal, 'DD/MM/YYYY', true)
+    date.value = parsed.isValid() ? parsed : null
+  }
+  else {
+    date.value = null
   }
 })
 </script>
+
+<style scoped>
+:deep(.v-icon__svg) {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+:deep(.v-field__input) {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+</style>

@@ -178,10 +178,18 @@ defineProps({
 
 @media screen and (max-width: 600px) {
   .category-title {
-    margin: 0 !important;
+    margin: -2rem 0 0 0 !important;
+
+    font-size: 1.2rem !important;
   }
   .image-wrapper {
     height: 16rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .category-title {
+    font-size: 1rem !important;
+    line-height: 1.4rem !important;
   }
 }
 </style>

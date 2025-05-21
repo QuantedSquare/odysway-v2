@@ -57,6 +57,7 @@
         </v-col>
         <v-spacer />
         <v-col
+          v-if="route.fullPath !== '/search'"
           cols="12"
           md="auto"
           class="d-flex justify-end"
@@ -145,13 +146,15 @@ const route = useRoute()
 const routeQuery = computed(() => route.query)
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
-  if (route.query.destination) {
-    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre', 'interjection', 'image').first()
-  }
-  return null
+  // if (route.query.destination) {
+  //   return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre', 'interjection', 'image').first()
+  // }
+  return queryCollection('voyages').all()
+  // return null
 }, {
   watch: [routeQuery],
 })
+
 const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
   if (route.query.destination) {
     return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '==', true).first()
@@ -208,9 +211,10 @@ const { data: voyages } = useAsyncData(
         monthsInRange.push(capitalized)
         current = current.add(1, 'month')
       }
-
       return allVoyages.filter(v =>
-        v.monthlyAvailability?.some(m => monthsInRange.includes(m)),
+        v.monthlyAvailability?.some((m) => {
+          return monthsInRange.includes(m.month)
+        }),
       )
     }
 
@@ -281,6 +285,9 @@ const voyagesWithCta = computed(() => {
 })
 
 function reinitiliazeFilter() {
+  useState('searchDate').value = []
+  useState('searchTravelType').value = null
+  useState('searchDestination').value = null
   router.push({
     path: '/search',
     query: null,

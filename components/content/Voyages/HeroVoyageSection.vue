@@ -15,6 +15,7 @@
       <v-col class="d-flex align-start justify-md-end ga-4">
         <RatingBadge
           :rating="voyage.rating"
+          :comments="voyage.comments"
           elevation="2"
         />
         <v-btn

@@ -1,21 +1,24 @@
 <template>
-  <v-container>
+  <v-container
+    fluid
+    class="pa-0 ma-0"
+  >
     <v-card
       elevation="0"
       rounded="xl"
-      class="border-style text-grey-darken-2 pb-6"
+      class="text-grey-darken-2 pb-6"
     >
       <Transition name="fade">
         <v-img
           v-if="voyage.imgSrc"
           color="surface-variant"
           class="blur"
-          height="100"
+          height="150"
           :src="voyage.imgSrc"
           :lazy-src="voyage.imgSrc"
           cover
         >
-          <div class="pa-5  d-flex flex-column align-start">
+          <div class="pa-8  d-flex flex-column align-start">
             <span class="text-h5 text-shadow-2">{{ voyage.title }}</span>
             <span class="text-body-1 text-shadow-2">{{ deal?.travelType }}</span>
           </div>
@@ -341,15 +344,6 @@ const appliedPrice = computed(() => {
 </script>
 
 <style scoped>
-.border-style{
-  border: 1px solid rgb(var(--v-theme-grey));
-}
-@media screen and (max-width: 600px) {
-  .border-style {
-    border: none;
-  }
-
-}
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;
 }
