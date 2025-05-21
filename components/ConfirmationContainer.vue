@@ -110,8 +110,8 @@
 <script setup>
 const route = useRoute()
 const isOption = ref(route.query.isoption === 'true')
-const { data: voyage, status } = useAsyncData(route.query.voyage, () => {
-  return queryCollection('voyages').where('slug', '==', route.query.voyage).first()
+const { data: voyage, status } = await useAsyncData(route.query.voyage, () => {
+  return queryCollection('voyages').where('slug', '=', route.query.voyage).first()
 })
 
 onMounted(() => {

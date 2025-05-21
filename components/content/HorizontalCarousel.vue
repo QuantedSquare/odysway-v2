@@ -105,6 +105,7 @@ const ctaContainer = useTemplateRef('cta-container')
 onMounted(() => {
   nextTick(() => {
     scrollElement.value = scrollContainer.value.$el
+    console.log('scrollElement', scrollElement.value)
   })
 })
 const gotCtaSlot = computed(() => {
