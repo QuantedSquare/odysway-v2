@@ -159,11 +159,15 @@ const props = defineProps({
 })
 const img = useImage()
 
-const { data: voyage, status, refresh } = useAsyncData(
-  () => `voyage-${props.voyageSlug}`,
-  () => queryCollection('voyages').where('slug', '=', props.voyageSlug).first(),
+const { data: voyage, status, refresh } = await useAsyncData(
+  `voyage-${props.voyageSlug}`,
+  () => {
+    console.log('voyageSlug', props.voyageSlug)
+    return queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
+  },
 )
 
+console.log('voyage', voyage.value)
 watch(() => props.voyageSlug, () => {
   refresh()
 })
