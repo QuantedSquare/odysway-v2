@@ -202,20 +202,22 @@
                       class="ml-2"
                       style="margin-left: 8px;"
                     />
-                    <v-badge
-                      v-else
-                      color="red"
-                      content="Pas de paiement effectué sur cette date"
-                    />
-                    <v-badge
-                      v-if="traveler.is_option"
-                      color="blue"
-                      class="ml-2"
-                      style="margin-left: 8px;"
-                      label
+
+                    <v-tooltip
+                      v-else-if="!traveler.is_option && traveler.booked_places === 0"
+                      text="Pas de paiement effectué sur cette date"
                     >
-                      Option, expire le {{ traveler.expiracy_date }}
-                    </v-badge>
+                      <template #activator="{ props }">
+                        <v-badge
+                          v-bind="props"
+                          :icon="mdiInformationOutline"
+                          inline
+                          text-color="white"
+                          color="red"
+                        />
+                      </template>
+                    </v-tooltip>
+
                     <v-icon>
                       {{ mdiArrowRight }}
                     </v-icon>
@@ -243,6 +245,16 @@
                       {{ mdiDelete }}
                     </v-icon>
                   </v-btn>
+                </div>
+                <div v-if="traveler.is_option">
+                  <v-chip
+                    inline
+                    color="red"
+                    label
+                    size="small"
+                  >
+                    Option, expire le {{ dayjs(traveler.expiracy_date).format('DD/MM/YYYY') }}
+                  </v-chip>
                 </div>
                 <div class="text-caption">
                   <div>
@@ -393,7 +405,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformation, mdiInformationOutline } from '@mdi/js'
+import dayjs from 'dayjs'
 
 definePageMeta({
   layout: 'booking',
