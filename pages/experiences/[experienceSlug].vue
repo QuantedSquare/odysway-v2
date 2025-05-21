@@ -1,15 +1,18 @@
 <template>
   <v-container>
     <v-row>
-      <SearchHeroSection
-        v-if="category"
-        :destination="category"
-      />
+      <ExperienceCarousel />
     </v-row>
     <v-row
       v-if="voyages.length > 0"
-      class="relative"
+      class="position-relative"
     >
+      <v-col
+        cols="12"
+        class="my-10"
+      >
+        <h1>Voyages trouvés: {{ voyages.length }}</h1>
+      </v-col>
       <TransitionGroup
         name="list"
       >
@@ -47,53 +50,25 @@
         class="text-secondary"
       />
     </v-row>
-    <v-container>
-      <v-row v-if="categorieContentStatus === 'success' && categorieContent">
-        <ContentRenderer
-          v-if="categorieContent"
-          :value="categorieContent"
-        />
-      </v-row>
-    </v-container>
   </v-container>
 </template>
 
 <script setup>
 const route = useRoute()
-const slug = computed(() => route.params.thematiqueSlug)
+const slug = computed(() => route.params.experienceSlug)
 const isExpanded = ref(false)
 
-// #TODO Remplacer catégorie par expérience
-const { data: category } = useAsyncData('category', async () => {
-  const category = await queryCollection('categories').where('stem', 'LIKE', `categories/${slug.value}/%`).first()
-  console.log('category', category)
-  return category
-})
-const { data: categorieContent, status: categorieContentStatus } = useAsyncData('categorieContent', () => {
-  return queryCollection('categoriesContent').where('stem', 'LIKE', `categories/${slug.value}/%`).where('published', '==', true).first()
-}, {
-  watch: [slug],
-})
-provide('page', categorieContent)
-
 const { data: voyages } = useAsyncData('voyages', async () => {
-  const travelList = await queryCollection('voyages').where('published', '==', true).all()
-  console.log('travelList', travelList)
-  return travelList.filter(v => v.categories.some(c => c.name.includes(slug.value)))
+  const travelList = await queryCollection('voyages').where('published', '==', true).where('experienceType', '=', slug.value).all()
+  return travelList
 })
 
 const limitedVoyages = computed(() => {
   return voyages.value.slice(0, isExpanded.value ? voyages.value.length : 9)
 })
-
-console.log('voyages', voyages.value)
 </script>
 
 <style scoped>
-.relative {
-  position: relative;
-}
-
 .list-move, /* apply transition to moving elements */
 .list-enter-active,
 .list-leave-active {
