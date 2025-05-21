@@ -148,7 +148,8 @@
                 height="60"
                 block
                 rounded="md"
-                :to="stickyBlock.ctaCall.link"
+                :to="`/calendly?travelTitle=${voyage.title}`"
+                @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
               >
                 <div class="d-flex align-center ga-2">
                   <v-avatar
@@ -211,6 +212,7 @@
         width="100%"
         class="text-primary text-break d-flex align-center justify-center ga-3"
         :to="`/calendly?travelTitle=${voyage.slug}`"
+        @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
       >
 
         <v-icon

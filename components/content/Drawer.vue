@@ -16,6 +16,21 @@
           {{ mdiAccountCircle }}
         </v-icon>
       </v-btn> -->
+      <v-list nav>
+        <v-list-item
+          density="compact"
+          @click="model = false"
+        >
+          <v-btn-secondary
+            block
+            href="tel: +33184807975"
+            class="text-white text-decoration-none"
+            @click="trackPixel('trackCustom', 'AppelPixel')"
+          >
+            +33 1 84 80 79 75
+          </v-btn-secondary>
+        </v-list-item>
+      </v-list>
       <v-list
         v-for="item, index in drawerItems"
         :key="`Drawer item ${index}`"

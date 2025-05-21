@@ -215,9 +215,11 @@ const submit = async () => {
   console.log('dealBody', dealBody)
   await apiRequest('/ac/deals', 'post', dealBody)
   if (skipperChoice.value === 'devis') {
+    trackPixel('track', 'Lead')
     router.push('/devis/success?slug=' + deal.slug)
   }
   else if (skipperChoice.value === 'call') {
+    trackPixel('trackCustom', 'CalendlyRDV')
     showCalendly.value = true
   }
   isLoading.value = false

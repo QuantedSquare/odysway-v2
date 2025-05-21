@@ -283,7 +283,7 @@ const submitStepData = async () => {
         lastname: lastName.value,
         optinNewsletter: optinNewsletter.value,
       }
-
+      trackPixel('track', 'AddToCart')
       return await createDeal(flattenedDeal)
     }
     return true

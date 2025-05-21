@@ -138,13 +138,12 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
-const props = defineProps({
+defineProps({
   badgeSection: {
     type: Object,
     required: true,
   },
 })
-console.log(props.badgeSection)
 const { lgAndUp } = useDisplay()
 </script>
 

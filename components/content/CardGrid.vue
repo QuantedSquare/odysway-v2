@@ -26,5 +26,4 @@ const { width } = useDisplay()
 const { data: categories } = useAsyncData('categories', () => {
   return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '==', true).all()
 })
-console.log(categories.value)
 </script>

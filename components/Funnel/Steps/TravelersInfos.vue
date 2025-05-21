@@ -88,7 +88,6 @@ const isLoading = ref(true)
 
 // Form model
 const model = defineModel()
-
 // Add computed properties for age validation
 const computedAges = computed(() => {
   const now = dayjs()

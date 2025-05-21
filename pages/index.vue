@@ -17,7 +17,6 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path('/').first()
 })
 if (page.value) {
-  console.log(page.value)
   defineOgImageComponent(page.value?.ogImage?.component, {
     title: page.value.ogImage?.props.title,
     description: page.value.ogImage?.props.description,

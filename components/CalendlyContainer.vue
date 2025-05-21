@@ -35,8 +35,7 @@ const options = {
 useCalendlyEventListener({
   onEventScheduled: (event) => {
     console.log('Event scheduled:', event)
-    // Pixel à mettre en place
-    // this.$fb.query('trackCustom', 'RDVCalendlyPris', { voyage: travelTitle })
+    trackPixel('trackCustom', 'RDVCalendlyPris', { voyage: `RDVCalendlyPris: ${props.travelTitle}` })
   },
 })
 // onUnmounted(() => {

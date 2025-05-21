@@ -120,16 +120,14 @@ onMounted(() => {
   //       value: +route.query.amount
   //     }
 
-  //     if (this.$fb.isEnabled) {
-  //       this.$fb.track('Purchase', purchaseData)
-  //     } else {
-  //       // This could be a nextTick maybe.
-  //       // It's to counter the fact that this mounted happend after
-  //       // the default layout monted that enable facebook.
-  //       setTimeout(() => {
-  //         this.$fb.track('Purchase', purchaseData)
-  //       }, 100)
-  //     }
+  if (!route.query.isoption && localStorage.getItem('consent') === 'granted') {
+    // This could be a nextTick maybe.
+    // It's to counter the fact that this mounted happend after
+    // the default layout monted that enable facebook.
+    setTimeout(() => {
+      trackPixel('track', 'Purchase')
+    }, 100)
+  }
 
   //     // if (this.$route.query.amount) {
   //     this.$ga.event({

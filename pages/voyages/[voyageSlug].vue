@@ -119,8 +119,7 @@ const { data: voyage } = useAsyncData('voyages', () =>
 const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
   return queryCollection('voyages').where('published', '==', true).limit(10).all()
 })
-console.log('voyage', voyage.value)
-console.log('voyagePropositions', voyagePropositions.value)
+
 watchEffect(() => {
   if (!voyage.value) return
 

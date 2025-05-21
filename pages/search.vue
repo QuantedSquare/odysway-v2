@@ -182,7 +182,6 @@ const { data: voyages } = useAsyncData(
     const dateRange = route.query.dateRange || null
 
     const allVoyages = await queryCollection('voyages').where('published', '==', true).all()
-    console.log(allVoyages)
     if (!destination && !travelType && !dateRange) {
       console.log('Aucun filtre — retour vide')
       return allVoyages
