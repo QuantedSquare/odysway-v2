@@ -349,7 +349,7 @@ const handlePaymentSession = async (session, paymentType) => {
     const { data: allBooked, error: sumAllBookedError } = await supabase
       .from('booked_dates')
       .select('booked_places')
-      .eq('travel_date_id', bookedDate.dateId)
+      .eq('travel_date_id', bookedDate.travel_date_id)
     if (sumAllBookedError) return { error: sumAllBookedError.message }
 
     const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
