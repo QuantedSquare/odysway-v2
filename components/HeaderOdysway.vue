@@ -66,6 +66,7 @@
         color="primary"
         height="54"
         class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => router.push('/concept')"
       >
         {{ header.textButton1 }}
       </v-btn>

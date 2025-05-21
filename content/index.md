@@ -150,7 +150,7 @@ color: white
   #cta-button
     :::cta-button
     ---
-    link: /
+    link: /concept
     color: secondary
     ---
     #text
