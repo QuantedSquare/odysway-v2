@@ -106,7 +106,7 @@ watch(scrollContainer, () => {
   nextTick(() => {
     if (scrollContainer.value) {
       scrollElement.value = scrollContainer.value.$el
-      console.log('scrollElement', scrollElement.value)
+      // console.log('scrollElement', scrollElement.value)
     }
   })
 }, { immediate: true, deep: true })
