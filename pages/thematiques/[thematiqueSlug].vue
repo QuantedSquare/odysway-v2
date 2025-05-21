@@ -59,14 +59,14 @@ const { data: category } = useAsyncData('category', async () => {
   return category
 })
 const { data: categorieContent, status: categorieContentStatus } = useAsyncData('categorieContent', () => {
-  return queryCollection('categoriesContent').where('stem', 'LIKE', `categories/${slug.value}/%`).where('published', '==', true).first()
+  return queryCollection('categoriesContent').where('stem', 'LIKE', `categories/${slug.value}/%`).where('published', '=', true).first()
 }, {
   watch: [slug],
 })
 provide('page', categorieContent)
 
 const { data: voyages } = useAsyncData('voyages', async () => {
-  const travelList = await queryCollection('voyages').where('published', '==', true).all()
+  const travelList = await queryCollection('voyages').where('published', '=', true).all()
   console.log('travelList', travelList)
   return travelList.filter(v => v.categories.some(c => c.name.includes(slug.value)))
 })

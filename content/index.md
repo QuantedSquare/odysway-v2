@@ -55,9 +55,6 @@ au coeur du voyage
 [Laissez-vous inspirer]{style="color: rgba(43, 76, 82, 1)"}
 ::
 
-:::voyage-col-card{voyage-slug="sejour-berger-bearn"}
-:::
-
 ::color-container
 ---
 color: soft-blush

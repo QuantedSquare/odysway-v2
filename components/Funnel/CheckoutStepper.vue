@@ -210,7 +210,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
   if (date_id) {
     console.log('date_id', date_id)
     const fetchedDate = await fetchDetails()
-    const travel = await queryCollection('voyages').where('slug', '==', fetchedDate.travel_slug).first()
+    const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
     console.log('travel', travel)
     const destinations = await queryCollection('destinations').where('titre', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
     console.log('destinations', destinations)

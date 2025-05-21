@@ -63,11 +63,11 @@ const slug = computed(() => route.params.destinationSlug)
 const isExpanded = ref(false)
 
 const { data: destinations } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').where('stem', 'LIKE', `destinations/${slug.value}/%`).where('published', '==', true).first()
+  return queryCollection('destinations').where('stem', 'LIKE', `destinations/${slug.value}/%`).where('published', '=', true).first()
 })
 console.log('destinations', destinations.value)
 const { data: destinationsContent, status: destinationsContentStatus } = useAsyncData('categorieContent', () => {
-  return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${slug.value}/%`).where('published', '==', true).first()
+  return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${slug.value}/%`).where('published', '=', true).first()
 }, {
   watch: [slug],
 })
@@ -75,7 +75,7 @@ console.log('destinationsContent', destinationsContent.value)
 provide('page', destinationsContent)
 
 const { data: voyages } = useAsyncData('voyages', async () => {
-  const travelList = await queryCollection('voyages').where('published', '==', true).all()
+  const travelList = await queryCollection('voyages').where('published', '=', true).all()
   console.log('travelList', destinations.value)
   return travelList.filter(v => v.destinations.some(d => d.name.includes(destinations.value?.titre)))
 }, {
