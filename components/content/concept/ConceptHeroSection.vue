@@ -10,15 +10,6 @@
       class="rounded-xl "
       cover
     >
-      <template #placeholder>
-        <div class="d-flex align-center justify-center fill-height">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-          />
-        </div>
-      </template>
-
       <div class="h-100 d-flex align-center position-relative">
         <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
           <v-row

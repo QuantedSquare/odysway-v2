@@ -9,7 +9,7 @@ sitemap:
   lastmod: 2025-01-01
 robots: index, nofollow
 seo:
-  title: "Le concept d'Odysway"
+  title: "Le concept"
   description: "Notre vision du voyage Odysway"
 schemaOrg:
   - "@type": "TravelAgency"

@@ -12,16 +12,16 @@
 
 <script setup>
 const route = useRoute()
-const { data: page } = useAsyncData(route.path, () => {
+const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
-// if (page.value) {
-//   defineOgImageComponent(page.value?.ogImage?.component, {
-//     title: page.value.ogImage?.props.title,
-//     description: page.value.ogImage?.props.description,
-//     image: page.value.ogImage?.props.image,
-//   })
-//   useHead(page.value.head || {}) // <-- Nuxt Schema.org
-//   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
-// }
+if (page.value) {
+  defineOgImageComponent(page.value?.ogImage?.component, {
+    title: page.value.ogImage?.props.title,
+    description: page.value.ogImage?.props.description,
+    image: page.value.ogImage?.props.image,
+  })
+  useHead(page.value.head || {}) // <-- Nuxt Schema.org
+  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+}
 </script>
