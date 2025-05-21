@@ -1,6 +1,42 @@
-::hero-section
 ---
-image-src: /images/Vélo.jpg
+ogImage:
+  component: "default"
+  props:
+    title: "Le concept d'Odysway"
+    description: "Notre vision du voyage Odysway"
+    image: "/images/concept/Vélo.jpg"
+sitemap:
+  lastmod: 2025-01-01
+robots: index, nofollow
+seo:
+  title: "Le concept d'Odysway"
+  description: "Notre vision du voyage Odysway"
+schemaOrg:
+  - "@type": "TravelAgency"
+    headline: "Odysway, agence de voyage"
+    author:
+      type: "Person"
+      name: "Alexandre Ottmann"
+    datePublished: "2025-21-05"
+    "@context": "http://schema.org"
+    address:
+      "@type": "PostalAddress"
+      addressLocality: "Le Plessis Trévise"
+      addressCountry: "France"
+      postalCode: "94420"
+      streetAddress: "27 avenue Nicolas Boileau"
+    description: "Odysway est l'agence spécialiste des voyages en immersion. Nous proposons un tourisme authentique et responsable qui vous fera voyager différemment."
+    name: "ODYSWAY"
+    legalName: "ODYSWAY SAS"
+    priceRange: "€€"
+    telephone: "+ 33 (0) 1 84 80 79 75"
+    email: "contact@odysway.com"
+    image: "https://odysway.com/logos/logo_noir.png"
+---
+
+::concept-hero-section
+---
+image-src: /images/concept/Vélo.jpg
 ---
 #title
 Voyager autrement, en plaçant l’humain au cœur de chaque aventure
@@ -10,6 +46,7 @@ Voyager autrement, en plaçant l’humain au cœur de chaque aventure
 #title
 Le concept d'Odysway
 ::
+
 
 ::concept-container
 ---
@@ -39,7 +76,7 @@ Une agence de voyage à taille humaine
 
 ::company-overview-container
 ---
-image-src: /images/Capture d’écran 2025-01-08 à 09.41.11.webp
+image-src: /images/team/team-photo.webp
 ---
 #text
 Chez Odysway, notre véritable différence, au-delà de notre concept d'immersion, réside dans notre attention personnalisée à chaque voyageur. Dès notre premier appel ou notre première visio, jusqu'à votre retour de voyage, vous êtes en contact direct avec un membre de notre équipe. Nous nous efforçons d'être réactifs et disponibles pour répondre à toutes vos questions ou pour vous conseiller sur votre voyage. Cette approche est au cœur de la création d'Odysway : offrir une belle expérience non seulement pendant votre aventure, mais aussi à travers nos échanges. Nous prenons le temps de vous écouter et de comprendre votre projet de voyage pour vous offrir les meilleurs conseils possibles.
