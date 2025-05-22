@@ -71,7 +71,7 @@ const { data: categories } = useAsyncData('categories', () => {
 })
 
 const { data: voyages } = useAsyncData('voyages', () => {
-  return queryCollection('voyages').where('published', '==', true).all()
+  return queryCollection('voyages').where('published', '=', true).all()
 })
 const categoriesWithVoyages = computed(() => {
   if (!categories.value || !voyages.value) return []

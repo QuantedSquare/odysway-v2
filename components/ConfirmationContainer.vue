@@ -95,11 +95,13 @@
         <slot
           name="error"
         />
-        <NuxtLink
+        <v-btn-secondary
           to="/"
+          nuxt
+          size="x-large"
         >
           Retour aux voyages
-        </NuxtLink>
+        </v-btn-secondary>
       </v-col>
     </v-row>
   </v-container>
@@ -108,9 +110,8 @@
 <script setup>
 const route = useRoute()
 const isOption = ref(route.query.isoption === 'true')
-const { data: voyage, status } = useAsyncData(route.query.voyage, async () => {
-  const query = await queryCollection('voyages').where('slug', '==', route.query.voyage).first()
-  return query
+const { data: voyage, status } = await useAsyncData(route.query.voyage, () => {
+  return queryCollection('voyages').where('slug', '=', route.query.voyage).first()
 })
 
 onMounted(() => {

@@ -24,6 +24,6 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const { data: categories } = useAsyncData('categories', () => {
-  return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '==', true).all()
+  return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '=', true).all()
 })
 </script>

@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="status === 'pending'"
+    v-if="loading"
     cols="12"
     sm="6"
     md="4"
@@ -14,7 +14,7 @@
 
   <v-col
     v-for="review, index in reviews"
-    v-else-if="status === 'success' && reviews"
+    v-else-if="reviews"
     :key="review.id + index"
     cols="12"
     sm="6"
@@ -71,9 +71,17 @@
 <script setup>
 import { mdiStar } from '@mdi/js'
 
-const { data: reviews, status } = useAsyncData('reviews-home', () => {
-  return queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
-})
+const loading = ref(false)
+
+const loadReviews = async () => {
+  loading.value = true
+  const reviews = await queryCollection('reviews').where('isOnHome', '=', true).limit(10).all()
+
+  loading.value = false
+  return reviews
+}
+const reviews = await loadReviews()
+
 function formatReviewText(text) {
   return text.replace(/\\n|\n/g, '<br>')
 }

@@ -210,7 +210,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
   if (date_id) {
     console.log('date_id', date_id)
     const fetchedDate = await fetchDetails()
-    const travel = await queryCollection('voyages').where('slug', '==', fetchedDate.travel_slug).first()
+    const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
     console.log('travel', travel)
     const destinations = await queryCollection('destinations').where('titre', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
     console.log('destinations', destinations)
@@ -344,7 +344,6 @@ const isPreviousButtonDisabled = computed(() => {
   }
   .funnel-stepper{
     min-height: 50vh!important;
-    /* padding: 2em; */
   }
   .no-margin-window .v-stepper-window {
  margin-left:0!important;

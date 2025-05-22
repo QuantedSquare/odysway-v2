@@ -155,7 +155,7 @@ const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
 
 const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
   if (route.query.destination) {
-    return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '==', true).first()
+    return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '=', true).first()
   }
   return null
 }, {
@@ -175,13 +175,13 @@ const { data: voyages } = useAsyncData(
     let destination = null
 
     if (route.query.destination) {
-      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '==', true).select('titre').first()
+      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre').first()
       destination = titre
     }
     const travelType = route.query.travelType || null
     const dateRange = route.query.dateRange || null
 
-    const allVoyages = await queryCollection('voyages').where('published', '==', true).all()
+    const allVoyages = await queryCollection('voyages').where('published', '=', true).all()
     if (!destination && !travelType && !dateRange) {
       console.log('Aucun filtre — retour vide')
       return allVoyages

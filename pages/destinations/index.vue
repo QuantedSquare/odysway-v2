@@ -64,11 +64,11 @@
 
 <script setup>
 const { data: destinations } = useAsyncData('destinations', () => {
-  return queryCollection('destinations').where('published', '==', true).all()
+  return queryCollection('destinations').where('published', '=', true).all()
 })
 console.log(destinations.value)
 const { data: voyages } = useAsyncData('voyages', () => {
-  return queryCollection('voyages').where('published', '==', true).all()
+  return queryCollection('voyages').where('published', '=', true).all()
 })
 const destinationsWithVoyages = computed(() => {
   if (!destinations.value || !voyages.value) return []
