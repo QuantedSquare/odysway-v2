@@ -111,7 +111,8 @@
               >
                 <template #label>
                   <div class="text-caption text-no-wrap">
-                    Je souhaite recevoir des inspirations et des idées pour voyager autrement
+                    Je souhaite recevoir des inspirations et des idées pour voyager autrement...
+                    <br> S'inscrire à la Newsletter
                   </div>
                 </template>
               </v-checkbox>

@@ -3,7 +3,7 @@
 # Nous vous confirmons la pose de votre Option ✅ !
 
 #title_default
-# Votre voyage en immersion peut commencer 🎒😊 !
+# Votre voyage en immersion peut commencer 🎒😊 !
 
 #error
 # Une erreur est servenue
@@ -14,4 +14,8 @@ Odysway vous remercie ! Votre participation à ce voyage est bloquée pendant 7 
 
 #accroche_default
 Odysway vous remercie de votre confiance ! Nous vous contacterons prochainement par email pour vous envoyer votre Contrat voyageur et ainsi que toutes les informations pour préparer au mieux votre départ.
+
+#accroche_devis
+Odysway vous remercie pour votre demande de devis ! Notre équipe va étudier votre demande et reviendra vers vous dans les plus brefs délais avec une proposition personnalisée pour votre voyage.
+
 ::
