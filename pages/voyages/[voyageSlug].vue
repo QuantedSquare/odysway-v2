@@ -50,7 +50,8 @@
       <DatesPricesContainer
         :date-sections="page.dateSections"
         :indiv-section="page.indivSection"
-        :indiv-available="!voyage.privatisationAvailable"
+        :is-groupe-available="voyage.groupeAvailable"
+        :is-privatisation-available="voyage.privatisationAvailable"
       />
 
       <PriceDetailsContainer
@@ -122,7 +123,9 @@ const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => 
 
 watchEffect(() => {
   if (!voyage.value) return
-
+  console.log('voyage', voyage.value)
+  console.log('page', page.value)
+  console.log('voyagePropositions', voyagePropositions.value)
   // SEO Meta Tags
   useSeoMeta({
     title: voyage.value.seo?.metaTitle || voyage.value.title,
