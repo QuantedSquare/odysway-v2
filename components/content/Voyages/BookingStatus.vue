@@ -28,7 +28,7 @@
       v-else
       class="font-weight-regular"
     >
-      (dès 2 inscrits)
+      (dès {{ minTravellers }} inscrits)
     </div>
   </div>
 </template>
@@ -48,6 +48,10 @@ defineProps({
   maxTravellers: {
     type: Number,
     required: true,
+  },
+  minTravellers: {
+    type: Number,
+    default: 2,
   },
 })
 </script>

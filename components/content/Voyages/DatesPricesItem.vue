@@ -1,7 +1,7 @@
 <template>
   <v-container
     class="subtle-shadow rounded-lg text-primary d-flex align-center"
-    :height="xs ? 275 : 190"
+    :height="xs ? 250 : 190"
     fluid
   >
     <v-row>
@@ -17,14 +17,14 @@
             text-color="white"
             :content="+enrichedDate.index +1"
           />
-          <span class="text-body-2 d-flex align-center">
+          <span class="text-body-2 d-flex align-center flex-direction-custo">
             {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
-            <span class=" font-weight-bold">
+            <span class="font-weight-bold">
               {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
             </span>
             <v-icon
               size="x-small"
-              class="mx-1"
+              class=""
             >
               {{ mdiArrowRight }}
             </v-icon>
@@ -99,7 +99,7 @@
       <v-col
         cols="5"
         md="3"
-        class="d-flex flex-column align-center"
+        class="d-flex flex-column align-start"
       >
         <span class="text-h2 font-weight-black">
           {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
@@ -124,7 +124,7 @@
               :to="formatLink(enrichedDate)"
               @click="trackPixel('track', 'AddToWishlist')"
             >
-              <span class="text-body-2 font-weight-bold text-decoration-none">
+              <span class="text-body-1 font-weight-bold text-decoration-none">
                 Réserver
               </span>
             </v-btn-secondary>
@@ -229,5 +229,14 @@ const formatLink = (date) => {
   }
   .text-size-14 {
   font-size: 14px!important;
+  }
+
+  .flex-direction-custom{
+    flex-direction: column;
+  }
+  @media (min-width: 400px) {
+    .flex-direction-custom{
+      flex-direction: row;
+    }
   }
 </style>
