@@ -109,14 +109,14 @@ definePageMeta({
   layout: 'voyage',
 })
 const route = useRoute()
-const { data: page } = useAsyncData('voyages-textes', () =>
+const { data: page } = await useAsyncData('voyages-textes', () =>
   queryCollection('page_voyage_fr').first(),
 )
-const { data: voyage } = useAsyncData('voyages', () =>
+const { data: voyage } = await useAsyncData('voyages', () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
 
-const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
+const { data: voyagePropositions } = await useAsyncData('voyages-propositions', () => {
   return queryCollection('voyages').where('published', '=', true).limit(10).all()
 })
 

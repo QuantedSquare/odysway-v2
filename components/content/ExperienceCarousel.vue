@@ -1,6 +1,8 @@
 <template>
   <div>
-    <HorizontalCarousel v-if="experiences">
+    <HorizontalCarousel
+      v-if="experiences"
+    >
       <template #title>
         <slot name="title" />
       </template>
@@ -21,7 +23,7 @@
 </template>
 
 <script setup>
-const { data: experiences } = useAsyncData('experiences', () => {
+const { data: experiences } = await useAsyncData('experiences', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').all()
 })
 </script>

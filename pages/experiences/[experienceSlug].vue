@@ -1,21 +1,47 @@
 <template>
   <v-container>
     <v-row>
-      <ExperienceCarousel />
+      <!-- <SearchHeroSection
+        v-if="experience"
+        :destination="experience"
+        :is-experience="true"
+      /> -->
+      <HorizontalCarousel
+        v-if="experiences"
+      >
+        <template #title>
+          <h1>Toutes nos expériences</h1>
+        </template>
+        <template #carousel-item>
+          <ThematiqueColCard
+            v-for="experience in experiences"
+            :key="experience.id"
+            :slug="experience.slug"
+            :image="experience.image.src"
+            :title="experience.title"
+            type="experiences"
+            :description="experience.discoveryTitle"
+          />
+        </template>
+      </HorizontalCarousel>
     </v-row>
+    <v-divider
+      class="my-4"
+      thickness="2"
+    />
     <v-row
       v-if="voyages.length > 0"
       class="position-relative"
     >
-      <v-col
-        cols="12"
-        class="my-10"
-      >
-        <h1>Voyages trouvés: {{ voyages.length }}</h1>
-      </v-col>
       <TransitionGroup
         name="list"
       >
+        <v-col
+          :key="experienceChoice.id"
+          cols="12"
+        >
+          <h1>{{ experienceChoice.discoveryTitle || experienceChoice.title }}</h1>
+        </v-col>
         <v-col
           v-for="voyage in limitedVoyages"
           :key="voyage.id"
@@ -30,12 +56,20 @@
         </v-col>
       </TransitionGroup>
     </v-row>
-    <v-row v-if="voyages.length === 0">
+    <v-row v-if="voyages.length === 0 && slug">
       <v-col
         cols="12"
         class="text-center my-10"
       >
-        <h1>Aucun voyage trouvé pour cette expérience</h1>
+        <h1>Aucun voyage trouvé pour expérience "{{ experienceChoice.title }}" </h1>
+      </v-col>
+    </v-row>
+    <v-row v-if="voyages.length === 0 && !slug">
+      <v-col
+        cols="12"
+        class="text-center my-10"
+      >
+        <h1>Choisissez une expérience</h1>
       </v-col>
     </v-row>
     <v-row
@@ -58,8 +92,16 @@ const route = useRoute()
 const slug = computed(() => route.params.experienceSlug)
 const isExpanded = ref(false)
 
-const { data: voyages } = useAsyncData('voyages', async () => {
-  const travelList = await queryCollection('voyages').where('published', '==', true).where('experienceType', '=', slug.value).all()
+const { data: experiences } = await useAsyncData('experiences', () => {
+  return queryCollection('experiences').all()
+})
+
+const experienceChoice = computed(() => {
+  return experiences.value.find(e => e.slug === slug.value)
+})
+
+const { data: voyages } = await useAsyncData('voyages', async () => {
+  const travelList = await queryCollection('voyages').where('published', '==', true).where('experienceType', '=', experienceChoice.value.title).all()
   return travelList
 })
 

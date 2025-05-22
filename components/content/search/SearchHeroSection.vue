@@ -10,13 +10,19 @@
         class="d-flex align-center justify-center"
       >
         <h1
-          v-if="isHydrated && destination && !isCategory"
+          v-if="destination && !isCategory && !isExperience"
           class="custom-hero-title"
         >
           {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
         </h1>
         <h1
-          v-else-if="isHydrated && destination && isCategory"
+          v-else-if="destination && isCategory"
+          class="custom-hero-title"
+        >
+          {{ destination.discoveryTitle || destination.titre }}
+        </h1>
+        <h1
+          v-else-if="destination && isExperience"
           class="custom-hero-title"
         >
           {{ destination.discoveryTitle || destination.titre }}
@@ -33,7 +39,7 @@
         md="8"
       >
         <v-img
-          v-if="isHydrated && destination"
+          v-if="destination"
           :src="img(destination.image?.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(destination.image?.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           size="(max-width: 600) 480px, 1500px"
@@ -76,11 +82,15 @@ const { destination, isCategory } = defineProps({
     type: Boolean,
     default: false,
   },
+  isExperience: {
+    type: Boolean,
+    default: false,
+  },
 })
-const isHydrated = ref(false)
-onMounted(() => {
-  isHydrated.value = true
-})
+// const isHydrated = ref(false)
+// onMounted(() => {
+//   isHydrated.value = true
+// })
 </script>
 
 <style scoped>
