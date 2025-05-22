@@ -22,6 +22,7 @@
         </v-row>
         <v-row>
           <v-col
+            v-if="faqBlock"
             cols="12"
             md="8"
           >
@@ -29,14 +30,7 @@
               v-for="item, index in faqBlock.faqList"
               :key="index"
               :item="item"
-            >
-              <template #question>
-                {{ item.question }}
-              </template>
-              <template #answer>
-                <div v-dompurify-html="parseBoldText(item.answer)" />
-              </template>
-            </QuestionPanel>
+            />
           </v-col>
           <v-col
             cols="12"
