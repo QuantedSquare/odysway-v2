@@ -2,8 +2,8 @@
   <v-container>
     <v-row>
       <!-- <SearchHeroSection
-        v-if="experience"
-        :destination="experience"
+        v-if="experienceChoice"
+        :destination="experienceChoice"
         :is-experience="true"
       /> -->
       <HorizontalCarousel

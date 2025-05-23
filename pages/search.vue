@@ -113,22 +113,6 @@
       </v-row>
     </v-container>
   </v-container>
-  <!-- <v-container
-    v-else
-    class="py-0 my-0"
-    fluid
-  >
-    <SearchHeroSection>
-      <SearchField />
-    </SearchHeroSection>
-    <v-row>
-      <v-col>
-        <h1>
-          Destination non trouvée
-        </h1>
-      </v-col>
-    </v-row>
-  </v-container> -->
 </template>
 
 <script setup>

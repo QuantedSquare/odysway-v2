@@ -7,5 +7,6 @@
       Formulaire de contact
     </h2>
     <ContactForm />
+    <!-- TODO: GDPR/Privacy link + agreement checkbox -->
   </v-container>
 </template>
