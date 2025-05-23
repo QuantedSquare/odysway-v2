@@ -19,7 +19,7 @@ import { useImage } from '#imports'
 defineProps({
   avatarImg: {
     type: String,
-    required: true,
+    required: false,
   },
   avatarSize: {
     type: String,
