@@ -13,7 +13,8 @@
       <v-col
         v-for="item in whySection.list"
         :key="item.id"
-        cols="6"
+        cols="12"
+        sm="6"
         md="3"
       >
         <div class="d-flex flex-column align-start ga-2 justify-start rounded-lg item-bg-color pa-4 py-10">

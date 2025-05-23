@@ -1,7 +1,7 @@
 <template>
   <v-container
     class="subtle-shadow rounded-lg text-primary d-flex align-center"
-    :height="xs ? 275 : 190"
+    :height="xs ? 250 : 220"
     fluid
   >
     <v-row>
@@ -17,21 +17,25 @@
             text-color="white"
             :content="+enrichedDate.index +1"
           />
-          <span class="text-body-2 d-flex align-center">
-            {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
-            <span class=" font-weight-bold">
-              {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
-            </span>
+          <span class="text-body-2 d-flex align-center ga-2">
+            <div>
+              {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
+              <span class="font-weight-bold">
+                {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
+              </span>
+            </div>
             <v-icon
               size="x-small"
-              class="mx-1"
+              class=""
             >
               {{ mdiArrowRight }}
             </v-icon>
-            {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
-            <span class=" font-weight-bold ">
-              {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
-            </span>
+            <div>
+              {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
+              <span class=" font-weight-bold ">
+                {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
+              </span>
+            </div>
           </span>
         </div>
         <BookingStatus
@@ -99,7 +103,7 @@
       <v-col
         cols="5"
         md="3"
-        class="d-flex flex-column align-center"
+        class="d-flex flex-column align-start"
       >
         <span class="text-h2 font-weight-black">
           {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
@@ -117,14 +121,14 @@
             cols="12"
           >
             <v-btn-secondary
-              height="60"
-              block
+              :height="width < 500 ? 50 : 60"
+              :block="width > 440"
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
               :to="formatLink(enrichedDate)"
               @click="trackPixel('track', 'AddToWishlist')"
             >
-              <span class="text-body-2 font-weight-bold text-decoration-none">
+              <span class="text-body-1 font-weight-bold text-decoration-none">
                 Réserver
               </span>
             </v-btn-secondary>
@@ -172,7 +176,7 @@ import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarHeart, m
 import { useDisplay } from 'vuetify'
 import BookingStatus from './BookingStatus.vue'
 
-const { xs } = useDisplay()
+const { xs, width } = useDisplay()
 const { date } = defineProps({
   date: {
     type: Object,
@@ -229,5 +233,14 @@ const formatLink = (date) => {
   }
   .text-size-14 {
   font-size: 14px!important;
+  }
+
+  .flex-direction-custom{
+    flex-direction: column;
+  }
+  @media (min-width: 400px) {
+    .flex-direction-custom{
+      flex-direction: row;
+    }
   }
 </style>

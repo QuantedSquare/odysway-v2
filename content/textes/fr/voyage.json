@@ -8,7 +8,7 @@
     "icon": "mdiCameraOutline"
   },
   "stickyBlock": {
-    "pricePrefix": "à partir de",
+    "pricePrefix": "À partir de",
     "priceSuffix": "/pers",
     "dateText": "Dates disponibles",
     "dateButtonText": "Voir tous les départs +",
@@ -47,7 +47,7 @@
     "title": "Quel départ vous intéresse ?",
     "pricePrefix": "à partir de",
     "priceSuffix": "/pers",
-    "bookingButtonText": "Réserver",
+    "bookingButtonText": "Voir tous les départs",
     "bookingButtonColor": "secondary",
     "optionButtonText": "Poser une option",
     "optionButtonColor": "blue",

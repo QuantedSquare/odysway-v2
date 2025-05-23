@@ -4,12 +4,14 @@
     id="dates-container"
     :fluid="width < 1600"
   >
+    <v-divider class="my-6" />
     <v-row
+      v-if="isGroupeAvailable"
       justify="center"
       align="center"
     >
       <v-col
-        class=" font-weight-black text-h4 my-4"
+        class="font-weight-black text-h4 my-4"
       >
         {{ dateSections.title }}
       </v-col>
@@ -37,7 +39,7 @@
       <span>Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
-    <v-row v-if="indivAvailable">
+    <v-row v-if="isPrivatisationAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-4 my-5 py-10">
         <div class="text-h4 font-weight-bold text-primary">
           {{ indivSection.title }}
@@ -47,7 +49,7 @@
           :to="`/calendly?travelTitle=${route.params.voyageSlug}`"
         >
           <div class="text-h6">
-            {{ indivSection.textButton }}
+            {{ isGroupeAvailable && isPrivatisationAvailable ? indivSection.textButton : "Demander un devis" }}
           </div>
         </v-btn>
       </v-col>
@@ -65,18 +67,22 @@ const isExpanded = ref(false)
 const { width } = useDisplay()
 const route = useRoute()
 
-const { dateSections, indivAvailable, indivSection } = defineProps({
+const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable } = defineProps({
   dateSections: {
     type: Object,
-    required: true,
-  },
-  indivAvailable: {
-    type: Boolean,
     required: true,
   },
   indivSection: {
     type: Object,
     required: true,
+  },
+  isGroupeAvailable: {
+    type: Boolean,
+    default: true,
+  },
+  isPrivatisationAvailable: {
+    type: Boolean,
+    default: false,
   },
 })
 

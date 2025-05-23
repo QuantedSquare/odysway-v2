@@ -129,7 +129,7 @@ const model = defineModel()
 defineProps({
   scrollBehavior: {
     type: String,
-    default: '',
+    default: 'elevate',
   },
   scrollThreshold: {
     type: Number,

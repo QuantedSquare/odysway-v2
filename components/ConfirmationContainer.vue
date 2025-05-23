@@ -58,6 +58,10 @@
               name="accroche_option"
             />
             <slot
+              v-else-if="isDevis"
+              name="accroche_devis"
+            />
+            <slot
               v-else
               name="accroche_default"
             />
@@ -110,6 +114,7 @@
 <script setup>
 const route = useRoute()
 const isOption = ref(route.query.isoption === 'true')
+const isDevis = ref(route.query.devis === 'true')
 const { data: voyage, status } = await useAsyncData(route.query.voyage, () => {
   return queryCollection('voyages').where('slug', '=', route.query.voyage).first()
 })

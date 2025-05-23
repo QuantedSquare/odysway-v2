@@ -1,5 +1,8 @@
 <template>
-  <div class="d-flex align-center ga-3 font-weight-bold">
+  <v-row
+    no-gutters
+    class="align-center ga-3 font-weight-bold"
+  >
     <div>
       <CustomBadge :color="status.color" />
       {{ status.text }}
@@ -19,7 +22,7 @@
       {{ bookedPlaces }} inscrit{{ bookedPlaces > 1 ? 's' : '' }}
       <span
         v-if="status.status === 'confirmed'"
-        class="font-weight-regular"
+        class="font-weight-regular text-body-2"
       >
         - Reste {{ maxTravellers - bookedPlaces }} places
       </span>
@@ -28,9 +31,9 @@
       v-else
       class="font-weight-regular"
     >
-      (dès 2 inscrits)
+      (dès {{ minTravellers }} inscrits)
     </div>
-  </div>
+  </v-row>
 </template>
 
 <script setup>
@@ -48,6 +51,10 @@ defineProps({
   maxTravellers: {
     type: Number,
     required: true,
+  },
+  minTravellers: {
+    type: Number,
+    default: 2,
   },
 })
 </script>

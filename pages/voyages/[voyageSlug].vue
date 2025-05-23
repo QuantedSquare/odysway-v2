@@ -50,7 +50,8 @@
       <DatesPricesContainer
         :date-sections="page.dateSections"
         :indiv-section="page.indivSection"
-        :indiv-available="!voyage.privatisationAvailable"
+        :is-groupe-available="voyage.groupeAvailable"
+        :is-privatisation-available="voyage.privatisationAvailable"
       />
 
       <PriceDetailsContainer
@@ -116,13 +117,15 @@ const { data: voyage } = await useAsyncData('voyages', () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
 
-const { data: voyagePropositions } = await useAsyncData('voyages-propositions', () => {
-  return queryCollection('voyages').where('published', '=', true).limit(10).all()
+const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
+  return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).limit(10).all()
 })
 
 watchEffect(() => {
   if (!voyage.value) return
-
+  console.log('voyage', voyage.value)
+  console.log('page', page.value)
+  console.log('voyagePropositions', voyagePropositions.value)
   // SEO Meta Tags
   useSeoMeta({
     title: voyage.value.seo?.metaTitle || voyage.value.title,

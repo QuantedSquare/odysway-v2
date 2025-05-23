@@ -1,9 +1,15 @@
 <template>
-  <v-container v-if="voyageRef.accompanistsList">
-    <h4 class="text-h4 font-weight-bold mb-4">
-      {{ title }}
-    </h4>
+  <v-container
+    v-if="voyageRef.accompanistsList"
+    fluid
+    class="px-0"
+  >
     <v-row>
+      <v-col cols="12">
+        <h4 class="font-weight-black text-h4 my-4 pb-0 pb-md-4">
+          {{ title }}
+        </h4>
+      </v-col>
       <v-col class="text-grey-darken-3">
         <div v-if="voyageRef.accompanistsDescription">
           {{ voyageRef.accompanistsDescription }}

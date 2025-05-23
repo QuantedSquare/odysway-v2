@@ -109,14 +109,16 @@
                   md="7"
                 >
                   <v-row>
-                    <v-col cols="12">
-                      <h2 class="text-h5 text-center text-md-left pb-3 d-flex align-center ga-2">
+                    <v-col
+                      cols="12"
+                      class="pb-0"
+                    >
+                      <h2 class="text-h5 text-center text-md-left d-flex align-center ga-2">
                         <v-badge
                           color="yellow"
                           inline
                           :content="index + 1"
                           text-color="white"
-                          class="mb-1"
                         />
                         {{ housing.title }}
                       </h2>
@@ -124,7 +126,7 @@
                     <v-col
                       v-if="housing.housingType"
                       cols="12"
-                      class="housing-text"
+                      class="housing-text pb-0"
                     >
                       <span class="font-weight-bold text-no-wrap">
                         {{ housingTypeTitle }}: &nbsp;

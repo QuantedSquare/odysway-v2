@@ -4,11 +4,12 @@
     class="mt-10 relative"
   >
     <v-img
-      :src="img(deal.imgSrc2.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-      :lazy-src="img(deal.imgSrc2.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      v-if="voyage && voyage.imageSecondary"
+      :src="img(voyage.imageSecondary.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+      :lazy-src="img(voyage.imageSecondary.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
       size="(max-width: 600) 480px, 1500px"
-      :srcset="`${img(deal.imgSrc2.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(deal.imgSrc2.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
-      :alt="deal.imgSrc2.alt"
+      :srcset="`${img(voyage.imageSecondary.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(voyage.imageSecondary.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+      :alt="voyage.imageSecondary.alt"
       height="350px"
       cover
       class="absolute"
@@ -35,12 +36,12 @@
                 <v-img
                   color="surface-variant"
                   height="100"
-                  :src="deal.imgSrc1.src"
+                  :src="voyage.image.src"
                   cover
                   class="align-center"
                 >
                   <div class="text-center text-body-1 text-shadow">
-                    {{ deal.title }}
+                    {{ voyage.title }}
                   </div>
                 </v-img>
                 <v-stepper-window :model-value="currentStep">
@@ -63,7 +64,7 @@
                     />
                     <CalendlyContainer
                       v-else-if="skipperChoice === 'call' && showCalendly"
-                      :travel-title="deal.title"
+                      :travel-title="voyage.title"
                       :text="page.calendly.text"
                     />
                     <FunnelTallyForm v-if="skipperChoice === 'tally'" />
@@ -152,8 +153,10 @@ const validateInfos = computed(() => {
   return userInfo.value.firstname && userInfo.value.lastname && userInfo.value.email && userInfo.value.phone && userInfo.value.acceptTerms
 })
 
-const deal = await queryCollection('deals').where('slug', '=', route.query.slug).first()
-
+const voyage = await queryCollection('voyages').where('slug', '=', route.query.slug).first()
+console.log('voyage', voyage)
+const destination = await queryCollection('destinations').where('slug', '=', voyage.destinations[0].slug).first()
+console.log('destination', destination)
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 console.log('page', page)
 
@@ -172,39 +175,38 @@ const displaySubmit = computed(() => {
 })
 const submit = async () => {
   isLoading.value = true
-  const dealBody = {
-    value: deal.startingPrice * 100,
-    title: deal.title,
+  const voyageBody = {
+    value: voyage.pricing.startingPrice * 100,
+    title: voyage.title,
     currency: 'eur',
     group: '1',
     owner: '1',
     stage: config.public.environment === 'development' ? '48' : '2',
     // CustomFields
     specialRequest: details.value.comment + (details.value.includeFlight ? `- Aéroport de départ : ${details.value.departureAirport}` : ''),
-    departureDate: details.value.departureDate.length > 0 ? details.value.departureDate : deal.dates[0].departureDate,
-    returnDate: details.value.returnDate.length > 0 ? details.value.returnDate : deal.dates[0].returnDate,
-    travelType: deal.travelType || 'Individuel',
+    departureDate: details.value.departureDate.length > 0 ? details.value.departureDate : '',
+    returnDate: details.value.returnDate.length > 0 ? details.value.returnDate : '',
+    travelType: voyage.travelType || 'Individuel',
     nbTravelers: +details.value.nbAdults + +details.value.nbChildren,
     nbChildren: +details.value.nbChildren,
     nbAdults: +details.value.nbAdults,
     nbTeen: 0,
     nbUnderAge: +details.value.nbChildren,
-    country: deal.country,
-    iso: deal.iso,
-    zoneChapka: deal.zoneChapka,
-    image: deal.imgSrc1.src || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+    country: destination.titre,
+    iso: destination.iso,
+    zoneChapka: +destination.chapka,
+    image: voyage.image.src || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
     currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
     alreadyPaid: 0,
     restToPay: 0,
     utm: route.query.utm || '',
-    slug: deal.slug,
-    basePricePerTraveler: deal.startingPrice * 100,
+    slug: voyage.slug,
+    basePricePerTraveler: voyage.pricing.startingPrice * 100,
     flightTickets: details.value.includeFlight ? 'Oui' : 'Non',
-    promoChildren: deal.promoChildren || 0,
-    depositPrice: deal.startingPrice * 100 * 0.3,
-    maxChildrenAge: deal.maxChildrenAge || 12,
-    promoTeen: deal.promoTeen || 0,
-    maxTeenAge: deal.maxTeenAge || 18,
+    depositPrice: voyage.pricing.startingPrice * 100 * 0.3,
+    maxChildrenAge: voyage.pricing.childrenAge || 12,
+    promoChildren: voyage.pricing.childrenPromo || 0,
+    // maxTeenAge: voyage.maxTeenAge || 18,
     source: 'Demande d\'infos',
     // Contacts
     email: userInfo.value.email,
@@ -212,11 +214,11 @@ const submit = async () => {
     firstname: userInfo.value.firstname,
     lastname: userInfo.value.lastname,
   }
-  console.log('dealBody', dealBody)
-  await apiRequest('/ac/deals', 'post', dealBody)
+  console.log('voyageBody', voyageBody)
+  await apiRequest('/ac/deals', 'post', voyageBody)
   if (skipperChoice.value === 'devis') {
     trackPixel('track', 'Lead')
-    router.push('/devis/success?slug=' + deal.slug)
+    router.push('/confirmation?voyage=' + voyage.slug + '&devis=true')
   }
   else if (skipperChoice.value === 'call') {
     trackPixel('trackCustom', 'CalendlyRDV')

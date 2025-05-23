@@ -34,7 +34,10 @@
 
         <v-row class="mt-0">
           <v-col cols="12">
-            <span class="text-h4 font-weight-bold text-primary">
+            <span
+              v-if="voyage.groupeAvailable && !voyage.privatisationAvailable"
+              class="text-h4 font-weight-bold text-primary"
+            >
               {{ stickyBlock.dateText }}
             </span>
           </v-col>
@@ -103,6 +106,7 @@
         </v-row>
         <v-row v-else>
           <v-col
+            v-if="voyage.groupeAvailable && !voyage.privatisationAvailable"
             cols="12"
           >
             <v-alert

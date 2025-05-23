@@ -15,7 +15,7 @@
           <span class="text-caption text-grey">
             {{ dateSections.pricePrefix }}
           </span>
-          <span class="text-body-2 font-weight-bold text-primary">
+          <span class="text-h4 font-weight-bold text-primary">
             {{ pricing.startingPrice }}€<span class="text-caption">{{ dateSections.priceSuffix }}</span>
           </span>
         </v-col>
@@ -29,7 +29,7 @@
             height="50"
             rounded="md"
             color="primary"
-            class="text-caption font-weight-bold text-decoration-none"
+            class="text-body-2 font-weight-bold text-decoration-none"
             @click="goTo('#dates-container', { offset: -200 })"
           >
             {{ dateSections.bookingButtonText }}

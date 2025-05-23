@@ -51,12 +51,13 @@
     height="455"
     class="d-flex align-center position-relative"
   >
-    <v-row>
+    <v-row class="d-none d-md-flex">
       <v-col
         cols="12"
         sm="9"
       >
         <v-img
+          v-if="voyage.image"
           :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
@@ -86,8 +87,32 @@
         />
       </v-col>
     </v-row>
+    <v-row class="d-flex d-md-none">
+      <v-col cols="12">
+        <v-carousel
+          hide-delimiters
+          class="custom-btn"
+        >
+          <v-carousel-item
+            v-for="photo in voyage.photosList"
+            :key="photo.src"
+          >
+            <v-img
+              :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+              :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+              cover
+              height="455"
+              rounded="lg"
+            />
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
     <v-row class="media-btns-position">
-      <v-col cols="auto">
+      <v-col
+        cols="auto"
+        class="hidden-md-and-down"
+      >
         <PhotoGalleryDialog
           v-if="voyage.photosList.length > 0"
           :photos-list="voyage.photosList"
@@ -146,5 +171,13 @@ function copyUrl() {
   bottom: 21px;
   left: 42px;
 }
+}
+.custom-btn:deep(button){
+  background-color: transparent!important;
+  color: rgb(var(--v-theme-primary-light-1))!important;
+}
+.custom-btn:deep(svg){
+border-radius: 100%;
+background-color: rgba(255, 255, 255, 0.3);
 }
 </style>
