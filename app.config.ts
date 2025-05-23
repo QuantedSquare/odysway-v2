@@ -42,7 +42,7 @@ export default defineAppConfig({
       email: 'contact@odysway.com',
       buttonContact: {
         text: 'contact',
-        lien: '/calendly',
+        lien: '/contact',
       },
     },
     social: {

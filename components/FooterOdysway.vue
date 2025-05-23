@@ -85,7 +85,7 @@
             height="62"
             width="360"
             class="font-weight-bold"
-            :to="footer.contact.buttonContact.link"
+            :to="footer.contact.buttonContact.lien"
           >
             {{ footer.contact.buttonContact.text }}
           </v-btn>
