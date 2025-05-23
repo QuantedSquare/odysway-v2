@@ -83,7 +83,10 @@
           </v-container>
         </v-card-text>
         <v-divider />
-        <v-card-actions class="justify-center">
+        <v-card-actions
+          class="justify-center"
+          :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
+        >
           <client-only>
             <v-btn
               v-if="voyage.groupeAvailable"
@@ -123,13 +126,15 @@
 import { mdiPlusCircle } from '@mdi/js'
 import { useImage } from '#imports'
 
-defineProps({
+const { voyage } = defineProps({
   voyage: {
     type: Object,
-    required: true },
+    required: true,
+  },
 })
 
 const img = useImage()
+const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>
 
 <style scoped>
@@ -158,5 +163,14 @@ const img = useImage()
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+}
+.hover-primary:hover{
+  background-color: v-bind(actionColor);
+}
+.hover-secondary:hover{
+  background-color: v-bind(actionColor);
+}
+:deep(.v-btn--variant-text .v-btn__overlay){
+  background-color: v-bind(actionColor);
 }
 </style>

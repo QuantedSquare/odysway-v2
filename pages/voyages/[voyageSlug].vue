@@ -118,7 +118,7 @@ const { data: voyage } = await useAsyncData('voyages', () =>
 )
 
 const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
-  return queryCollection('voyages').where('published', '=', true).limit(10).all()
+  return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).limit(10).all()
 })
 
 watchEffect(() => {

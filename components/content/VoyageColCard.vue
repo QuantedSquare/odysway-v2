@@ -109,7 +109,10 @@
               </v-container>
             </v-card-text>
             <v-divider />
-            <v-card-actions class="justify-center">
+            <v-card-actions
+              class="justify-center"
+              :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
+            >
               <client-only>
                 <v-btn
                   v-if="voyage.groupeAvailable"
@@ -129,7 +132,6 @@
                   block
                   color="secondary"
                   class="text-decoration-none font-weight-bold text-body-1"
-                  :to="`/calendly?travelTitle=${voyage.title}`"
                 >
                   <div class="mb-1 mr-2">
                     Demander un devis
@@ -168,6 +170,7 @@ const loadVoyage = async () => {
   return voyage
 }
 const voyage = await loadVoyage()
+const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>
 
 <style scoped>
@@ -196,5 +199,14 @@ const voyage = await loadVoyage()
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+}
+.hover-primary:hover{
+  background-color: v-bind(actionColor);
+}
+.hover-secondary:hover{
+  background-color: v-bind(actionColor);
+}
+:deep(.v-btn--variant-text .v-btn__overlay){
+  background-color: v-bind(actionColor);
 }
 </style>
