@@ -1,39 +1,49 @@
 <template>
   <div class="d-flex justify-space-around">
     <v-btn
-      :icon="mdiFacebook"
+      icon
       rounded="circle"
-      size="small"
-      color="primary"
+      size="38"
       href="https://www.facebook.com/odysway/"
-    />
-    <v-btn
-      :icon="mdiInstagram"
-      rounded="circle"
-      size="small"
-      color="primary"
-      href="https://www.instagram.com/odysway_travel/"
-    />
+    >
+      <v-img
+        :src="img('/icons/IcFacebook.svg', { format: 'webp', quality: 70, width: 640 })"
+        width="9"
+        height="17"
+        alt="Facebook icon"
+      />
+    </v-btn>
     <v-btn
       icon
-      size="small"
       rounded="circle"
-      color="primary"
+      size="38"
       href="https://www.tiktok.com/@odyswaytravel"
     >
       <v-img
-        :src="img('/icons/IcRoundTiktok.svg', { format: 'webp', quality: 70, width: 640 })"
-        width="24px"
-        height="24px"
-        contain
+        :src="img('/icons/IcTiktok.svg', { format: 'webp', quality: 70, width: 640 })"
+        width="20"
+        height="17"
         alt="TikTok icon"
+      />
+    </v-btn>
+    <v-btn
+      icon
+      rounded="circle"
+      size="38"
+      href="https://www.instagram.com/odysway_travel/"
+    >
+      <v-img
+        :src="img('/icons/IcInstagram.svg', { format: 'webp', quality: 70, width: 640 })"
+        width="17"
+        height="17"
+        contain
+        alt="Instagram icon"
       />
     </v-btn>
   </div>
 </template>
 
 <script setup>
-import { mdiFacebook, mdiInstagram } from '@mdi/js'
 import { useImage } from '#imports'
 
 const img = useImage()

@@ -111,7 +111,7 @@
     <v-row class="media-btns-position">
       <v-col
         cols="auto"
-        class="hidden-md-and-down"
+        class="hidden-sm-and-down"
       >
         <PhotoGalleryDialog
           v-if="voyage.photosList.length > 0"
@@ -136,7 +136,7 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
-defineProps({
+const props = defineProps({
   voyage: {
     type: Object,
     required: true,
@@ -149,13 +149,11 @@ const route = useRoute()
 const snackbar = ref(false)
 
 function copyUrl() {
-  // TODO: change to the dynamic url
-  //  use runtime config
-  console.log('config', config)
   const copiedUrl = `${config.public.appUrl}/${route.fullPath}`
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true
 }
+console.log('photos =========+>s', props.voyage.photosList.length)
 </script>
 
 <style scoped>

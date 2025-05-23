@@ -27,6 +27,7 @@ logs
 mcp.json
 
 # Cursor
+.cursor/
 cursor/
 
 .vscode/

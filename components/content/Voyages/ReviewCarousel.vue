@@ -76,13 +76,16 @@
                 </div>
               </v-card-title>
               <v-card-subtitle class="mt-4 ">
-                <v-icon
-                  v-for="i in 5"
-                  :key="i"
-                  :icon="mdiStar"
-                  :color="i <= review.rating ? reviewsSection.ratingColor : 'grey'"
-                  size="20"
-                />
+                <div class="d-inline-flex ga-1">
+                  <v-img
+                    v-for="i in 5"
+                    :key="i"
+                    :src="img('/icons/orange-star.svg', { format: 'webp', quality: 70, width: 640 })"
+                    alt="Rating stars"
+                    height="20"
+                    width="20"
+                  />
+                </div>
               </v-card-subtitle>
             </v-card-item>
             <v-card-text
@@ -102,10 +105,12 @@
 </template>
 
 <script setup>
-import { mdiChevronLeft, mdiChevronRight, mdiStar } from '@mdi/js'
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
 
+const img = useImage()
 const route = useRoute()
 defineProps({
   centerTitle: {

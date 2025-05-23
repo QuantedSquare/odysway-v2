@@ -19,8 +19,6 @@
                   size="22"
                   :icon="mdiHeartOutline"
                 />
-                <!-- //#TODO: replace this icon by the one from the textes, import svg -->
-                <!-- {{ experiencesBlockTextes.icon }} -->
               </v-avatar>
               <h4 class="text-h4 font-weight-bold">
                 {{ page.title }}

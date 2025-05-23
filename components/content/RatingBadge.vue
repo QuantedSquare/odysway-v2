@@ -6,20 +6,21 @@
     :height="mdAndUp ? 46 : 36"
     class="btn-shadow"
   >
-    <div class="d-flex align-center">
-      <v-icon
-        :icon="mdiStar"
-        color="yellow-rating"
-        :size="mdAndUp ? 20 : 16"
+    <div class="d-flex align-center ga-1">
+      <v-img
+        :src="img('/icons/yellow-star.svg', { format: 'webp', quality: 70, width: 640 })"
+        alt="Rating star"
+        :width="mdAndUp ? 18: 16"
+        :height="mdAndUp ? 18 : 16"
       />
       <span class="text-body-2 font-weight-bold text-primary">
         {{ `${rating.toString().replace('.', ',')}/5` }}
       </span>
       <span
         v-if="comments > 0"
-        class="text-subtitle-2 font-weight-bold text-primary"
+        class="text-body-2 font-weight-bold text-primary"
       >
-        {{ `&nbsp;( ${comments} )` }}
+        {{ `( ${comments} )` }}
       </span>
     </div>
   </v-btn>
@@ -37,9 +38,10 @@
 </template>
 
 <script setup>
-import { mdiStar } from '@mdi/js'
 import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
 
+const img = useImage()
 const { mdAndUp } = useDisplay()
 
 defineProps({

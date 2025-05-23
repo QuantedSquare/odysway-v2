@@ -120,7 +120,7 @@
                   color="primary"
                   class="font-weight-bold text-body-1"
                 >
-                  <div class="mb-1 mr-2">
+                  <div class="mb-md-1 mr-2">
                     Découvrir les dates
                   </div>
                   <v-icon
@@ -133,7 +133,7 @@
                   color="secondary"
                   class="text-decoration-none font-weight-bold text-body-1"
                 >
-                  <div class="mb-1 mr-2">
+                  <div class="mb-md-1 mr-2">
                     Demander un devis
                   </div>
                   <v-icon

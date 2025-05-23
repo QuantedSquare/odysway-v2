@@ -14,10 +14,6 @@
     <div class="whatsapp-button d-lg-none mb-16">
       <WhatsAppBtn />
     </div>
-    <div
-      id="Smallchat"
-      class="d-none d-lg-inline"
-    />
     <LazyTopTravelsTabs />
     <FooterOdysway />
   </v-app>

@@ -11,28 +11,18 @@
               v-model="destinationChoice"
               label="Destinations"
               :items="destinationsList"
-              :item-title="item => item.title"
-              :item-value="item => item.value"
               clearable
-              :prepend-inner-icon="mdiMapMarkerOutline"
               hide-details
-              :menu-props="{ scrim: true, scrollStrategy: 'close', contentClass: 'rounded-md' }"
+              :menu-props="{ scrollStrategy: 'close', contentClass: 'rounded-md' }"
             >
-              <!-- <template #item="{ props, item }">
-                  <v-img
-                    v-bind="props"
-                    :src="item.raw.image.src"
-                    width="120"
-                    height="120"
-                    cover
-                    rounded="lg"
-                    class="d-flex align-end pb-5 justify-center text-center"
-                  >
-                    <div class="text-white text-shadow font-weight-bold text-body-1">
-                      {{ item.raw.title }}
-                    </div>
-                  </v-img>
-                </template> -->
+              <template #prepend-inner>
+                <v-img
+                  :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640 })"
+                  alt="Pin marker"
+                  width="24"
+                  height="24"
+                />
+              </template>
             </v-autocomplete>
           </v-col>
           <v-col
@@ -45,8 +35,16 @@
               hide-details
               label="Type de voyage"
               clearable
-              :prepend-inner-icon="mdiTargetAccount"
-            />
+            >
+              <template #prepend-inner>
+                <v-img
+                  :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640 })"
+                  alt="Team icon"
+                  width="24"
+                  height="24"
+                />
+              </template>
+            </v-select>
           </v-col>
           <v-col
             :cols="12"
@@ -64,8 +62,16 @@
                   readonly
                   class="font-weight-bold text-primary"
                   hide-details
-                  :prepend-inner-icon="mdiCalendarBlankOutline"
-                />
+                >
+                  <template #prepend-inner>
+                    <v-img
+                      :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                      alt="Calendar icon"
+                      width="24"
+                      height="24"
+                    />
+                  </template>
+                </v-text-field>
               </template>
 
               <v-card
@@ -108,9 +114,10 @@
 </template>
 
 <script setup>
-import { mdiMapMarkerOutline, mdiTargetAccount, mdiCalendarBlankOutline } from '@mdi/js'
 import dayjs from 'dayjs'
+import { useImage } from '#imports'
 
+const img = useImage()
 const router = useRouter()
 const route = useRoute()
 const dateMenu = ref(false)

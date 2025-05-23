@@ -14,11 +14,13 @@
         color="white"
         class="btn-shadow"
       >
-        <v-icon
-          :icon="mdiCameraOutline"
-          color="primary"
-          :size="lgAndUp ? 22 : 19"
+        <v-img
+          :src="img('/icons/Camera.svg', { format: 'webp', quality: 70, width: 640 })"
+          alt="Rating star"
+          :width="lgAndUp ? 22 : 19"
+          :height="lgAndUp ? 22 : 19"
         />
+
         <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>
         <span class="d-block d-sm-none text-caption text-md-subtitle-2 text-primary font-weight-bold ml-2">Photos</span>
       </v-btn>
@@ -52,9 +54,11 @@
 </template>
 
 <script setup>
-import { mdiClose, mdiCameraOutline } from '@mdi/js'
+import { mdiClose } from '@mdi/js'
 import { useDisplay } from 'vuetify'
+import { useImage } from '#imports'
 
+const img = useImage()
 defineProps({
   photosList: {
     type: Array,

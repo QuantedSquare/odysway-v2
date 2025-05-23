@@ -2,6 +2,7 @@
   <v-btn
     href="https://wa.me/+33780919540"
     icon
+    rounded="circle"
     height="58"
     width="58"
     color="white"
