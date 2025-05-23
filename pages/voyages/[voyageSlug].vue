@@ -113,7 +113,7 @@ const route = useRoute()
 const { data: page } = useAsyncData('voyages-textes', () =>
   queryCollection('page_voyage_fr').first(),
 )
-const { data: voyage } = useAsyncData('voyages', () =>
+const { data: voyage } = await useAsyncData('voyages', () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
 
