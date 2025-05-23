@@ -92,6 +92,7 @@ const brevo = {
   // Clients: 14,
   // Perdu: 13,
   // 'Optin Newsletter': 18,
+  // 'CONTACT FORM' : 250
 
   // CHeck if useless
   async updateContactListId(email, listId) {
@@ -114,16 +115,42 @@ const brevo = {
     }
   },
 
-  // UNUSED FOR NOW
-  sendEmail(template, order, travel) {
-    return apiRequest('/smtp/email', 'post', {
-      templateId: template,
-      to: [{
-        name: order.firstname || order.client,
-        email: order.email,
-      }],
-      params: { ...order, ...travel },
-    })
+  async sendContactEmail(res) {
+    console.log('========res=======', res)
+
+    const data = {
+      sender: { name: res.civility === 'Autre' ? '' : res.civility + ' ' + res.firstName + ' ' + res.lastName, email: res.email },
+      to: [{ email: 'contact@odysway.com', name: 'Odysway' }],
+      subject: res.subject,
+      htmlContent: '<p>' + res.message + '</p>',
+    }
+    console.log('========data=======', data)
+
+    try {
+      const response = await apiRequest('/smtp/email', 'post', data, {
+        headers: brevoHeaders,
+      })
+      console.log('Email sent:', response)
+      return response
+    }
+    catch (error) {
+      console.error('Error sending email:', error.response?.data || error.message)
+    }
+  },
+  async sendConfirmationEmail(res) {
+    const data = {
+      sender: { name: 'Odysway', email: 'contact@odysway.com' },
+      to: [{ email: res.email, name: res.firstName + ' ' + res.lastName }],
+      subject: 'Nous avons bien reçu votre message',
+      templateId: 250,
+    }
+    try {
+      const response = await apiRequest('/smtp/email', 'post', data)
+      return response
+    }
+    catch (error) {
+      console.error('Error sending confirmation email:', error.response?.data || error.message)
+    }
   },
 }
 export default brevo

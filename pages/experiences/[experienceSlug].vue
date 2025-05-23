@@ -1,11 +1,11 @@
 <template>
   <v-container>
     <v-row>
-      <!-- <SearchHeroSection
+      <SearchHeroSection
         v-if="experienceChoice"
         :destination="experienceChoice"
         :is-experience="true"
-      /> -->
+      />
       <HorizontalCarousel
         v-if="experiences"
       >

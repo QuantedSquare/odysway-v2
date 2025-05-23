@@ -42,8 +42,15 @@
 <script setup>
 import { z } from 'zod'
 
+const { required } = defineProps({
+  required: {
+    type: Boolean,
+    default: true,
+  },
+})
+
 const schemaToRule = useZodSchema()
-const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
+const nameSchema = z.string().min(required ? 1 : 0, { message: 'Cette information est requise.' })
 const phoneSchema = z.string().min(9, { message: 'Numéro de téléphone invalide' })
 
 const rules = {

@@ -1,16 +1,21 @@
-// UNUSED FOR NOW
+import brevo from '~/server/utils/brevo'
+
 export default defineEventHandler(async (event) => {
-  console.log('========event=======', event)
   const data = await readBody(event)
   try {
-    const res = await brevo.sendEmail(data.template, data.order, data.travel)
-    return res.data
+    // 1. Send the contact email to yourself
+    await brevo.sendContactEmail(data)
+
+    // 2. Send confirmation email to the user
+    await brevo.sendConfirmationEmail(data)
+
+    return { success: true }
   }
   catch (err) {
-    console.log('Error brevo update', err)
     throw createError({
       statusCode: 400,
-      statusMessage: 'Error sending slack notification', err,
+      statusMessage: 'Error sending brevo email',
+      err,
     })
   }
 })

@@ -7,22 +7,27 @@
           v-model="formIsValid"
           @submit.prevent="submit"
         >
-          <v-row class="contact-form-shadow rounded-md pa-4">
+          <v-row
+            class="rounded-md pa-4 subtle-shadow"
+          >
             <v-col
-              cols="5"
+              cols="12"
             >
               <div>
                 Civilité *
               </div>
               <v-select
                 v-model="civility"
+                max-width="350"
                 :items="status"
+                placeholder="Choisissez une civilité"
                 item-title="title"
                 item-value="value"
                 :rules="[rules.civility]"
                 required
               />
             </v-col>
+
             <v-col
               cols="12"
               md="6"
@@ -56,9 +61,9 @@
               <div>
                 Numéro de téléphone
               </div>
-              <v-text-field
+              <PhoneTextField
                 v-model="phone"
-                placeholder="Votre numéro de téléphone"
+                :required="true"
               />
             </v-col>
             <v-col
@@ -76,7 +81,6 @@
             </v-col>
             <v-col
               cols="12"
-              md="6"
             >
               <div>
                 Objet de message *
@@ -123,17 +127,18 @@
 import { z } from 'zod'
 import { ref } from 'vue'
 
-const civility = ref('Choisissez une civilité')
+const civility = ref('M.')
 const status = [
   { title: 'M.', value: 'M.' },
   { title: 'Mme.', value: 'Mme.' },
+  { title: 'Autre', value: 'Autre' },
 ]
-const firstName = ref('test')
-const lastName = ref('test')
-const email = ref('test@test.com')
-const phone = ref('06 06 06 06 06')
-const message = ref('test test test test t')
-const subject = ref('test ')
+const firstName = ref('')
+const lastName = ref('')
+const email = ref('')
+const phone = ref('')
+const message = ref('')
+const subject = ref('')
 
 const formIsValid = ref(false)
 const form = ref(null)
@@ -155,8 +160,18 @@ const rules = {
   message: schemaToRule(messageSchema),
 }
 
-function submit() {
-  console.log('submitted ')
+async function submit() {
+  const data = {
+    civility: civility.value,
+    firstName: firstName.value,
+    lastName: lastName.value,
+    email: email.value,
+    phone: phone.value,
+    subject: subject.value,
+    message: message.value,
+  }
+  const check = await apiRequest('/brevo/email', 'post', data)
+  console.log('========check=======', check)
 }
 </script>
 
