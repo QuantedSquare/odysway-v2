@@ -1,7 +1,7 @@
 <template>
   <v-container
     class="subtle-shadow rounded-lg text-primary d-flex align-center"
-    :height="xs ? 250 : 190"
+    :height="xs ? 250 : 220"
     fluid
   >
     <v-row>
@@ -17,21 +17,25 @@
             text-color="white"
             :content="+enrichedDate.index +1"
           />
-          <span class="text-body-2 d-flex align-center flex-direction-custo">
-            {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
-            <span class="font-weight-bold">
-              {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
-            </span>
+          <span class="text-body-2 d-flex align-center ga-2">
+            <div>
+              {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
+              <span class="font-weight-bold">
+                {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
+              </span>
+            </div>
             <v-icon
               size="x-small"
               class=""
             >
               {{ mdiArrowRight }}
             </v-icon>
-            {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
-            <span class=" font-weight-bold ">
-              {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
-            </span>
+            <div>
+              {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
+              <span class=" font-weight-bold ">
+                {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
+              </span>
+            </div>
           </span>
         </div>
         <BookingStatus
@@ -117,8 +121,8 @@
             cols="12"
           >
             <v-btn-secondary
-              height="60"
-              block
+              :height="width < 500 ? 50 : 60"
+              :block="width > 440"
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
               :to="formatLink(enrichedDate)"
@@ -172,7 +176,7 @@ import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarHeart, m
 import { useDisplay } from 'vuetify'
 import BookingStatus from './BookingStatus.vue'
 
-const { xs } = useDisplay()
+const { xs, width } = useDisplay()
 const { date } = defineProps({
   date: {
     type: Object,
