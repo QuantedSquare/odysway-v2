@@ -136,7 +136,7 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
-const props = defineProps({
+defineProps({
   voyage: {
     type: Object,
     required: true,
@@ -153,7 +153,6 @@ function copyUrl() {
   navigator.clipboard.writeText(copiedUrl)
   snackbar.value = true
 }
-console.log('photos =========+>s', props.voyage.photosList.length)
 </script>
 
 <style scoped>
