@@ -1,5 +1,8 @@
 <template>
-  <v-container v-show="reviews.length > 0">
+  <v-container
+    v-show="reviews.length > 0"
+    id="reviews-container"
+  >
     <v-row
       align="center"
     >

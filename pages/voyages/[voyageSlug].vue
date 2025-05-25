@@ -1,67 +1,70 @@
 <template>
   <v-container
     fluid
+    class="pt-md-0"
   >
     <template v-if="voyage && page">
-      <HeroVoyageSection :voyage="voyage" />
-      <BottomAppBar
-        :date-sections="page.dateSections"
-        :pricing="voyage.pricing"
-      />
+      <div class="mx-md-16">
+        <HeroVoyageSection :voyage="voyage" />
+        <BottomAppBar
+          :date-sections="page.dateSections"
+          :pricing="voyage.pricing"
+        />
 
-      <ChipsContainer :badge-section="voyage.badgeSection" />
+        <ChipsContainer :badge-section="voyage.badgeSection" />
 
-      <StickyContainer>
-        <template #left-side>
-          <AuthorNote
-            :author-note="voyage.authorNote"
-            :page="page"
-          />
+        <StickyContainer>
+          <template #left-side>
+            <AuthorNote
+              :author-note="voyage.authorNote"
+              :page="page"
+            />
 
-          <HighlightsContainer
-            :experiences-block="voyage.experiencesBlock"
-            :page="page.experiencesBlock"
-          />
+            <HighlightsContainer
+              :experiences-block="voyage.experiencesBlock"
+              :page="page.experiencesBlock"
+            />
 
-          <ProgrammeContainer
-            :programme-block="voyage.programmeBlock"
-          />
+            <ProgrammeContainer
+              :programme-block="voyage.programmeBlock"
+            />
 
-          <AccompanistsContainer
-            :voyage="voyage"
-            :title="page.accompanistsTitle"
-          />
-        </template>
-        <template #right-side>
-          <InfoCard
-            :sticky-block="page.stickyBlock"
-            :voyage="voyage"
-          />
-        </template>
-      </StickyContainer>
+            <AccompanistsContainer
+              :voyage="voyage"
+              :title="page.accompanistsTitle"
+            />
+          </template>
+          <template #right-side>
+            <InfoCard
+              :sticky-block="page.stickyBlock"
+              :voyage="voyage"
+            />
+          </template>
+        </StickyContainer>
 
-      <HousingSection
-        :housing-block="voyage.housingBlock"
-        :housing-title="page.housingTitle"
-        :housing-type-title="page.housingTypeTitle"
-        :housing-mood-title="page.housingMoodTitle"
-      />
+        <HousingSection
+          :housing-block="voyage.housingBlock"
+          :housing-title="page.housingTitle"
+          :housing-type-title="page.housingTypeTitle"
+          :housing-mood-title="page.housingMoodTitle"
+        />
 
-      <DatesPricesContainer
-        :date-sections="page.dateSections"
-        :indiv-section="page.indivSection"
-        :is-groupe-available="voyage.groupeAvailable"
-        :is-privatisation-available="voyage.privatisationAvailable"
-      />
+        <DatesPricesContainer
+          :date-sections="page.dateSections"
+          :indiv-section="page.indivSection"
+          :is-groupe-available="voyage.groupeAvailable"
+          :is-privatisation-available="voyage.privatisationAvailable"
+        />
 
-      <PriceDetailsContainer
-        :pricing-details-block="voyage.pricingDetailsBlock"
-      />
+        <PriceDetailsContainer
+          :pricing-details-block="voyage.pricingDetailsBlock"
+          :price-details-section="page.priceDetailsSection"
+        />
 
-      <ReviewCarousel
-        :reviews-section="page.reviewsSection"
-      />
-
+        <ReviewCarousel
+          :reviews-section="page.reviewsSection"
+        />
+      </div>
       <FaqVoyagesContainer
         :faq-block="voyage.faqBlock"
       />

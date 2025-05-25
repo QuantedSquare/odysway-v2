@@ -18,21 +18,21 @@
               hide-details
               :menu-props="{ scrim: true, scrollStrategy: 'close', contentClass: 'rounded-md' }"
             >
-              <!-- <template #item="{ props, item }">
-                  <v-img
-                    v-bind="props"
-                    :src="item.raw.image.src"
-                    width="120"
-                    height="120"
-                    cover
-                    rounded="lg"
-                    class="d-flex align-end pb-5 justify-center text-center"
-                  >
-                    <div class="text-white text-shadow font-weight-bold text-body-1">
-                      {{ item.raw.title }}
-                    </div>
-                  </v-img>
-                </template> -->
+              <template #item="{ props, item }">
+                <v-img
+                  v-bind="props"
+                  :src="item.raw.image.src"
+                  width="120"
+                  height="120"
+                  cover
+                  rounded="lg"
+                  class="d-flex align-end pb-5 justify-center text-center"
+                >
+                  <div class="text-white text-shadow font-weight-bold text-body-1">
+                    {{ item.raw.title }}
+                  </div>
+                </v-img>
+              </template>
             </v-autocomplete>
           </v-col>
           <v-col

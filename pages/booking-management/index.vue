@@ -1,15 +1,29 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="8">
+      <v-col
+        cols="12"
+        md="6"
+      >
         <h1>Gestion des voyages</h1>
         <p>
           Gérer les voyages et les dates associées. Ne sont affichés que les voyages possédant au minimum une date.
         </p>
       </v-col>
       <v-col
-        cols="4"
-        class="d-flex justify-end align-center"
+        cols="3"
+        class="d-flex justify-end align-start"
+      >
+        <v-btn
+          color="secondary"
+          @click="goToCustomTravels"
+        >
+          Voyages Custom
+        </v-btn>
+      </v-col>
+      <v-col
+        cols="3"
+        class="d-flex justify-end align-start"
       >
         <v-btn @click="goToAddDate">
           + Ajouter une date

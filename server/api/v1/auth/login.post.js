@@ -1,4 +1,5 @@
-import { defineEventHandler, readBody } from 'h3'
+import { defineEventHandler, readBody, setCookie } from 'h3'
+import jwt from 'jsonwebtoken'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -6,10 +7,18 @@ export default defineEventHandler(async (event) => {
 
   const validId = process.env.BOOKINGID
   const validPassword = process.env.BOOKINGPASSWORD
+  const jwtSecret = process.env.BOOKING_JWT_SECRET || 'supersecret'
 
   if (id === validId && password === validPassword) {
-    // For now, return a static token. Replace with JWT if needed.
-    return { token: 'booking-backoffice-token' }
+    const token = jwt.sign({ id }, jwtSecret, { expiresIn: '1h' })
+    setCookie(event, 'booking_token', token, {
+      httpOnly: true,
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 60 * 60, // 1 hour
+      secure: process.env.NODE_ENV === 'production',
+    })
+    return { success: true }
   }
   else {
     return {

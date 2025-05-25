@@ -37,7 +37,7 @@
         class="text-secondary"
       />
     </v-row>
-    <v-container>
+    <v-container class="mt-10">
       <v-row v-if="categorieContentStatus === 'success' && categorieContent">
         <ContentRenderer
           v-if="categorieContent"

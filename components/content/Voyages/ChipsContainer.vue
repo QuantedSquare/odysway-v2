@@ -5,11 +5,11 @@
   >
     <v-row
       v-if="badgeSection"
-      class="flex-nowrap overflow-auto hidden-scroll flex-md-wrap"
+      class="d-flex  flex-wrap"
     >
       <v-col
         cols="12"
-        class="d-flex flex-nowrap ga-4 flex-md-wrap min-width"
+        class="d-flex  ga-4 flex-wrap"
       >
         <v-chip
           v-if="badgeSection.experienceBadge.visible"
@@ -18,7 +18,7 @@
           :color="badgeSection.experienceBadge.color"
           density="comfortable"
         >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3 mb-1">
+          <span class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold">
             <div v-dompurify-html="parseBoldText(badgeSection.experienceBadge.text)" />
           </span>
         </v-chip>
@@ -102,7 +102,7 @@
           color="grey-light"
           density="comfortable"
         >
-          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
+          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold">
             <v-img
               :src="'/icons/sun.svg'"
               :height="lgAndUp ? 20 : 18"
@@ -112,24 +112,6 @@
             <div v-dompurify-html="parseBoldText(badgeSection.periodBadge.text)" />
           </span>
         </v-chip>
-
-        <!-- <v-chip
-          v-for="(chip, index) in badgeSection.otherBadges"
-          :key="index"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          :color="chip.color || 'grey'"
-        >
-          <span class="d-flex text-primary text-caption text-sm-subtitle-2  px-2">
-            <v-img
-              :src="'/icons/' + chip.icon + '.svg'"
-              :height="lgAndUp ? 20 : 18"
-              :width="lgAndUp ? 20 : 18"
-              class="mr-3"
-            />
-            <div v-dompurify-html="parseBoldText(chip.text)" />
-          </span>
-        </v-chip> -->
       </v-col>
     </v-row>
   </v-container>
@@ -146,17 +128,3 @@ defineProps({
 })
 const { lgAndUp } = useDisplay()
 </script>
-
-<style scoped>
-.hidden-scroll {
-  -webkit-overflow-scrolling: touch;
-}
-.hidden-scroll::-webkit-scrollbar {
-  display: none;
-}
-@media screen and (max-width: 960px) {
-  .min-width {
-    min-width: max-content;
-  }
-}
-</style>

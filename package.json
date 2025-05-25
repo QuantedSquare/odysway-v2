@@ -26,6 +26,7 @@
     "dayjs": "^1.11.13",
     "eslint": "^9.18.0",
     "jsdom": "^26.0.0",
+    "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "nuxt": "^3.15.1",
     "nuxt-calendly": "^0.1.21",

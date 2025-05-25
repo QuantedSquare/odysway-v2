@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="4">
+    <v-col cols="3">
       <v-select
         v-model="phoneCode"
         :items="phonesSelect"
@@ -27,7 +27,7 @@
         </template>
       </v-select>
     </v-col>
-    <v-col cols="8">
+    <v-col cols="">
       <v-text-field
         v-model="phoneNumber"
         :label="'Téléphone *'"
