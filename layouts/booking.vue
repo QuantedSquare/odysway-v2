@@ -34,7 +34,7 @@
 
       <v-btn
         variant="text"
-        prepend-icon="mdi-logout"
+        :prepend-icon="mdiLogout"
         @click="logout"
       >
         Se déconnecter
@@ -48,7 +48,7 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
-import { mdiHome } from '@mdi/js'
+import { mdiHome, mdiLogout } from '@mdi/js'
 import { useImage } from '#imports'
 
 const items = useBreadcrumbItems() // uses the current route

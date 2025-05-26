@@ -22,7 +22,7 @@ const apiRequest = async (path, method = 'get', data = null) => {
     }
     console.log('========options=======', options)
     const response = await axios.request(options).then((res) => {
-      console.log('========response=======', res)
+      // console.log('========response=======', res)
       return res
     })
     return response
@@ -79,7 +79,7 @@ const brevo = {
 
     try {
       const response = await apiRequest('/contacts', 'post', contactData)
-      console.log('========response=======', response)
+      // console.log('========response=======', response)
       return response
     }
     catch (err) {
@@ -101,8 +101,8 @@ const brevo = {
         email,
         listIds: [listId],
       })
-      console.log('========response=======', response)
-      return response
+      // console.log('========response=======', response.data)
+      return response.data
     }
     catch (err) {
       console.log('========err=======', err)

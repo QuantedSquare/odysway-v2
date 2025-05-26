@@ -13,20 +13,19 @@
       <v-col
         cols="3"
         class="d-flex justify-end align-start"
+      />
+      <v-col
+        cols="3"
+        class="d-flex flex-column ga-2 justify-end align-right"
       >
+        <v-btn @click="goToAddDate">
+          + Ajouter une date
+        </v-btn>
         <v-btn
           color="secondary"
           @click="goToCustomTravels"
         >
           Voyages Custom
-        </v-btn>
-      </v-col>
-      <v-col
-        cols="3"
-        class="d-flex justify-end align-start"
-      >
-        <v-btn @click="goToAddDate">
-          + Ajouter une date
         </v-btn>
       </v-col>
     </v-row>

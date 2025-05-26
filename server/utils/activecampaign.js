@@ -150,7 +150,6 @@ const transformDealForAPI = (flatDeal) => {
 
 // API Request Method
 const apiRequest = async (endpoint, method = 'get', data = null) => {
-  // console.log('API Request to', endpoint, method, data, baseUrl)
   try {
     const response = await axios({
       url: `${baseUrl}${endpoint}`,
@@ -158,11 +157,10 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
-    // console.log(`API Response from ${endpoint}:`, response.data)
     return response.data
   }
   catch (error) {
-    console.error(`API Error in ${endpoint}:`, error.message)
+    console.error(`API Error in ${endpoint}:`, error)
     throw error
   }
 }
@@ -235,13 +233,14 @@ const createDeal = async (data) => {
       phone: `${data.phone}`,
     },
   }
-
+  console.log('===========client in activecampaign.js===========', client)
   const contact = await upsertContact(client)
 
   const brevoData = {
     email: data.email,
     firstName: data.firstName,
     lastName: data.lastname,
+    // #TODO CHECK IF THE 2 FIELDS BELLOW ARE NEEEDED
     listName: 'Optin Newsletter',
     state: 'Optin Newsletter',
     // 18: Optin Newsletter, 12: Prospect
@@ -262,12 +261,14 @@ const createDeal = async (data) => {
   }
 
   formatedDeal.deal.contact = contact.id
-
+  console.log('===========formatedDeal in activecampaign.js===========', formatedDeal)
   delete formatedDeal.optinNewsletter
   delete formatedDeal.firstname
   delete formatedDeal.lastname
   delete formatedDeal.email
   delete formatedDeal.phone
+  console.log('===========formatedDeal after delete in activecampaign.js===========', formatedDeal)
+  console.log('===========formatedDeal after delete in customfields===========', formatedDeal.deal.fields)
 
   const response = await apiRequest('/deals', 'post', formatedDeal)
   if (response.deal.id) {
@@ -395,7 +396,18 @@ const recalculatTotalValues = async (dealId) => {
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
 
-  console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
+  // console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
+
+  console.log('Base price total:', basePrice * nbTravelers)
+  console.log('Individual room total:', indivRoomPrice * nbTravelers)
+  console.log('Flight price total:', flightPrice * nbTravelers)
+  console.log('Extension price total:', extensionPrice * nbTravelers)
+  console.log('Insurance price total:', insurancePrice * nbTravelers)
+  console.log('Promo value total:', promoValue * nbTravelers)
+  console.log('Children promo total:', promoChildren * nbChildren)
+  console.log('Teen promo total:', promoTeen * nbTeens)
+  console.log('Early bird promo:', promoEarlybird)
+  console.log('Last minute promo:', promoLastMinute)
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers
@@ -408,16 +420,17 @@ const recalculatTotalValues = async (dealId) => {
     - promoEarlybird
     - promoLastMinute
 
-  // console.log('======== totalValue:', value, '========')
+  console.log('======== totalValue:', value, '========')
 
   const restToPay = value - customFields.alreadyPaid
 
-  // console.log('===========rest to pay', restToPay, '========')
+  console.log('===========rest to pay', restToPay, '========')
 
   const formatedDeal = transformDealForAPI({
     value,
     restToPay,
   })
+  console.log('===========formatedDeal in activecampaign.js===========', formatedDeal)
   return await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
 }
 

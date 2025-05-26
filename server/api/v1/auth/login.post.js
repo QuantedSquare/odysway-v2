@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
 
   const validId = process.env.BOOKINGID
   const validPassword = process.env.BOOKINGPASSWORD
-  const jwtSecret = process.env.BOOKING_JWT_SECRET || 'supersecret'
+  const jwtSecret = process.env.BOOKING_JWT_SECRET
 
   if (id === validId && password === validPassword) {
     const token = jwt.sign({ id }, jwtSecret, { expiresIn: '1h' })
