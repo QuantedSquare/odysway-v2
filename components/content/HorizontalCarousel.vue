@@ -13,7 +13,7 @@
         <slot name="title" />
       </v-col>
       <v-col
-        v-show="displayButton"
+        v-show="displayButton && showButtons"
         cols="auto"
         class="position-absolute right-0"
       >
@@ -81,7 +81,7 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
-defineProps({
+const props = defineProps({
   centerTitle: {
     type: Boolean,
     default: false,
@@ -95,6 +95,7 @@ defineProps({
     default: 'primary',
   },
 })
+
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
@@ -121,13 +122,13 @@ const childrenCount = computed(() => {
 
 const displayButton = computed(() => {
   if (mdAndUp.value) {
-    return childrenCount.value > 3
+    return childrenCount.value > 3 && props.showButtons
   }
   else if (sm.value) {
-    return childrenCount.value > 2
+    return childrenCount.value > 2 && props.showButtons
   }
   else {
-    return childrenCount.value > 1
+    return childrenCount.value > 1 && props.showButtons
   }
 })
 

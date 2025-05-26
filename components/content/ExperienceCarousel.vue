@@ -2,6 +2,7 @@
   <div>
     <HorizontalCarousel
       v-if="experiences"
+      :show-buttons="experiences.length > 4"
     >
       <template #title>
         <slot name="title" />
@@ -26,4 +27,5 @@
 const { data: experiences } = await useAsyncData('experiences', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').all()
 })
+console.log(experiences.value.length)
 </script>
