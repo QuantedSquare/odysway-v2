@@ -83,9 +83,9 @@
                     v-model="date"
                     multiple="range"
                     width="400"
-                    format="dd/mm/YYYY"
                     :min="new Date()"
                     show-adjacent-months
+                    @update:model-value="() => { date.length > 1 ? dateMenu = false : '' } "
                   />
                 </v-locale-provider>
               </v-card>
@@ -141,7 +141,6 @@ const destinationsList = computed(() => {
   })
 })
 
-//
 const travelTypes = [
   'Voyage individuel', 'Voyage en groupe',
 ]
@@ -159,9 +158,12 @@ function search() {
     query.travelType = travelTypeChoice.value
   }
   if (date.value.length > 0) {
-    query.dateRange = `${dayjs(date.value[0]).format('YYYY/MM/DD')}-${dayjs(date.value[date.value.length - 1]).format('YYYY/MM/DD')}`
+    query.from = `${dayjs(date.value[0]).format('YYYY-MM-DD')}`
+    query.to = `${dayjs(date.value[date.value.length - 1]).format('YYYY-MM-DD')}`
   }
-  gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, dateRange: `${date.value}` })
+
+  gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
+
   router.push({
     path: '/search',
     query,

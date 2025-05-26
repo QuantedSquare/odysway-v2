@@ -4,7 +4,7 @@
     fluid
   >
     <SearchHeroSection :destination="fetchedDestination">
-      <SearchField />
+      <SearchContainer />
     </SearchHeroSection>
     <v-container>
       <v-row>
@@ -13,13 +13,15 @@
           md="auto"
           class="d-flex align-center"
         >
-          <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages} voyages` }}</span>
+          <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages}
+            voyages` }}</span>
         </v-col>
         <v-col
           cols="12"
           md="auto"
           class="d-flex align-center ga-2"
         >
+          <!-- Add closable props & logic -->
           <v-chip
             v-if="routeQuery.destination"
             variant="flat"
@@ -28,29 +30,34 @@
             density="comfortable"
           >
             <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ routeQuery.destination }}
+              {{ capitalizeFirstLetter(routeQuery.destination) }}
             </span>
           </v-chip>
+          <!-- Add closable props & logic -->
+
           <v-chip
             v-if="routeQuery.travelType"
             variant="flat"
             :size="lgAndUp ? 'x-large' : 'large'"
             color="secondary-light-2"
             density="comfortable"
+            @click:close="chip = false"
           >
             <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
               {{ routeQuery.travelType }}
             </span>
           </v-chip>
+          <!-- Add closable props & logic -->
+
           <v-chip
-            v-if="routeQuery.dateRange"
+            v-if="routeQuery.from && routeQuery.to"
             variant="flat"
             :size="lgAndUp ? 'x-large' : 'large'"
             color="secondary-light-2"
             density="comfortable"
           >
             <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ parsedDateRange }}
+              {{ parsedDates }}
             </span>
           </v-chip>
         </v-col>
@@ -87,6 +94,7 @@
               xl="3"
             >
               <CtaColCard v-if="voyage.isCta" />
+              <!-- TODO : refactor voyage card -->
               <SearchVoyageCard
                 v-else
                 :voyage="voyage"
@@ -118,6 +126,7 @@
 <script setup>
 import dayjs from 'dayjs'
 import { useDisplay } from 'vuetify'
+import SearchContainer from '~/components/content/SearchContainer.vue'
 
 const { lgAndUp } = useDisplay()
 useSeoMeta({
@@ -148,9 +157,17 @@ const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus
 })
 provide('page', fetchedDestinationContent)
 
-const parsedDateRange = computed(() => {
-  const [start, end] = routeQuery.value.dateRange.split('-') || []
-  return `${dayjs(start).format('MMMM YYYY')} - ${dayjs(end).format('MMMM YYYY')}`
+const capitalizeFirstLetter = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+const parsedDates = computed(() => {
+  const start = dayjs(routeQuery.value.from).format('MMMM YYYY')
+  const end = dayjs(routeQuery.value.to).format('MMMM YYYY')
+  if (start === end) {
+    return capitalizeFirstLetter(start)
+  }
+  return `${capitalizeFirstLetter(start)} - ${capitalizeFirstLetter(end)}`
 })
 
 const { data: voyages } = useAsyncData(
@@ -162,14 +179,12 @@ const { data: voyages } = useAsyncData(
       const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre').first()
       destination = titre
     }
+
     const travelType = route.query.travelType || null
-    const dateRange = route.query.dateRange || null
+    const fromDate = route.query.from || null
+    const toDate = route.query.to || null
 
     const allVoyages = await queryCollection('voyages').where('published', '=', true).all()
-    if (!destination && !travelType && !dateRange) {
-      console.log('Aucun filtre — retour vide')
-      return allVoyages
-    }
 
     const getFilteredByDestination = (allVoyages, destinationParam) => {
       return allVoyages.filter(v => v.destinations?.some(d => d.name.includes(destinationParam)))
@@ -180,16 +195,15 @@ const { data: voyages } = useAsyncData(
       return allVoyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
     }
 
-    const getFilteredByDate = (allVoyages, dateRange) => {
-      const [start, end] = dateRange?.split('-') || []
-      const startDate = dayjs(start)
-      const endDate = dayjs(end)
+    const getFilteredByDate = (allVoyages, fromDate, toDate) => {
+      const startDate = dayjs(fromDate)
+      const endDate = dayjs(toDate)
       const monthsInRange = []
 
       let current = startDate.startOf('month')
       while (current.isBefore(endDate) || current.isSame(endDate, 'month')) {
         const month = current.format('MMMM')
-        const capitalized = month.charAt(0).toUpperCase() + month.slice(1)
+        const capitalized = capitalizeFirstLetter(month)
         monthsInRange.push(capitalized)
         current = current.add(1, 'month')
       }
@@ -200,46 +214,21 @@ const { data: voyages } = useAsyncData(
       )
     }
 
-    // CASE 1: Only destination
-    if (destination && !travelType && !dateRange) {
-      return getFilteredByDestination(allVoyages, destination)
+    let searchResult = [...allVoyages]
+
+    if (destination) {
+      searchResult = [...getFilteredByDestination(searchResult, destination)]
     }
 
-    // CASE 2: Only travel type
-    if (!destination && travelType && !dateRange) {
-      return getFilteredByType(allVoyages, travelType)
+    if (travelType) {
+      searchResult = [...getFilteredByType(searchResult, travelType)]
     }
 
-    // CASE 3: Only date range
-    if (!destination && !travelType && dateRange) {
-      return getFilteredByDate(allVoyages, dateRange)
+    if (fromDate && toDate) {
+      searchResult = [...getFilteredByDate(searchResult, fromDate, toDate)]
     }
 
-    // CASE 4: Destination + travel type
-    if (destination && travelType && !dateRange) {
-      const filteredByDestination = getFilteredByDestination(allVoyages, destination)
-      return getFilteredByType(filteredByDestination, travelType)
-    }
-
-    // CASE 5: Destination + date
-    if (destination && !travelType && dateRange) {
-      const filteredByDestination = getFilteredByDestination(allVoyages, destination)
-      return getFilteredByDate(filteredByDestination, dateRange)
-    }
-
-    // CASE 6: Travel type + date
-    if (!destination && travelType && dateRange) {
-      const filteredByType = getFilteredByType(allVoyages, travelType)
-      return getFilteredByDate(filteredByType, dateRange)
-    }
-
-    // CASE 7: All filters
-    if (destination && travelType && dateRange) {
-      const filteredByDestination = getFilteredByDestination(allVoyages, destination)
-      const filteredByType = getFilteredByType(filteredByDestination, travelType)
-      return getFilteredByDate(filteredByType, dateRange)
-    }
-    return []
+    return searchResult
   },
   {
     watch: [routeQuery],
@@ -267,9 +256,9 @@ const voyagesWithCta = computed(() => {
 })
 
 function reinitiliazeFilter() {
-  useState('searchDate').value = []
-  useState('searchTravelType').value = null
   useState('searchDestination').value = null
+  useState('searchTravelType').value = null
+  useState('searchDate').value = []
   router.push({
     path: '/search',
     query: null,

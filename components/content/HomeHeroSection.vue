@@ -1,49 +1,51 @@
 <template>
-  <div class="relative-hero-section mb-16 rounded-xl">
-    <v-img
-      :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-      :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-      size="(max-width: 600) 480px, 1500px"
-      :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
-      height="80vh"
-      alt="Image principale Hero d'Odysway"
-      class="rounded-xl"
-      cover
-    >
-      <template #placeholder>
-        <div class="d-flex align-center justify-center fill-height">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-          />
-        </div>
-      </template>
+  <div>
+    <div class="relative-hero-section mb-16 rounded-xl">
+      <v-img
+        :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+        :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+        size="(max-width: 600) 480px, 1500px"
+        :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+        height="80vh"
+        alt="Image principale Hero d'Odysway"
+        class="rounded-xl"
+        cover
+      >
+        <template #placeholder>
+          <div class="d-flex align-center justify-center fill-height">
+            <v-progress-circular
+              indeterminate
+              color="primary"
+            />
+          </div>
+        </template>
 
-      <!-- Gradient overlay -->
-      <div class="gradient-overlay" />
+        <!-- Gradient overlay -->
+        <div class="gradient-overlay" />
 
-      <div class="h-100 d-flex align-center position-relative">
-        <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
-          <v-row
-            justify="center"
-            align="center"
-          >
-            <v-col
-              cols="12"
-              md="auto"
+        <div class="h-100 d-flex align-center position-relative">
+          <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+            <v-row
+              justify="center"
+              align="center"
             >
-              <h1 class="custom-hero-title">
-                <slot name="title" />
-              </h1>
-              <slot name="subtitle" />
-            </v-col>
-          </v-row>
-        </v-container>
-      </div>
-    </v-img>
-  </div>
-  <div class="searchfield-overlap">
-    <SearchField />
+              <v-col
+                cols="12"
+                md="auto"
+              >
+                <h1 class="custom-hero-title">
+                  <slot name="title" />
+                </h1>
+                <slot name="subtitle" />
+              </v-col>
+            </v-row>
+          </v-container>
+        </div>
+      </v-img>
+    </div>
+    <div class="searchfield-overlap">
+      <SearchContainer />
+    </div>
   </div>
 </template>
 
