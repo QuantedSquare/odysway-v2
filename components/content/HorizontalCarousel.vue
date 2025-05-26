@@ -4,15 +4,11 @@
       align="center"
     >
       <v-col
-        cols="6"
-        xs="7"
-        sm="9"
-        class="text-h2 my-4"
+        class=" flex-grow-1 text-h2 my-4"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
         <slot name="title" />
       </v-col>
-      <v-spacer />
       <v-col
         v-show="displayButton"
         cols="auto"
