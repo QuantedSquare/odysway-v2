@@ -2,9 +2,12 @@
   <v-container>
     <v-row
       align="center"
+      class="position-relative"
     >
       <v-col
-        class=" flex-grow-1 text-h2 my-4"
+        cols="6"
+        md="12"
+        class="text-h2 my-4"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
         <slot name="title" />
@@ -12,6 +15,7 @@
       <v-col
         v-show="displayButton"
         cols="auto"
+        class="position-absolute right-0"
       >
         <v-btn
           icon
