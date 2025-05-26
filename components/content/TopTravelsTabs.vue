@@ -1,9 +1,6 @@
 <template>
-  <div class="mx-4 my-7">
-    <v-container
-      v-if="tops"
-      class="bg-primary rounded-lg"
-    >
+  <ColorContainer color="primary">
+    <v-container v-if="tops">
       <v-row
         align="center"
       >
@@ -50,7 +47,7 @@
                   v-for="top, f in tops[currentTab].contenuOnglet"
                   :key="`${top.title}-${f}`"
                   cols="6"
-                  md="2"
+                  md="3"
                 >
                   <h5 class="text-h4 font-weight-bold mb-10 ">
                     {{ top.title }}
@@ -72,7 +69,7 @@
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </ColorContainer>
 </template>
 
 <script setup>

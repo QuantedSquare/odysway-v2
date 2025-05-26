@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <v-container
+    class="rounded-lg py-4 bg-white"
+  >
     <HorizontalCarousel
       v-if="experiences"
       :show-buttons="experiences.length > 4"
@@ -20,7 +22,7 @@
         />
       </template>
     </HorizontalCarousel>
-  </div>
+  </v-container>
 </template>
 
 <script setup>

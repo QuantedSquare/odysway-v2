@@ -1,6 +1,6 @@
 <template>
-  <v-container class="search-field-container">
-    <div class="rounded-lg bg-white pa-4 search-field-shadow">
+  <v-container class="search-field-container py-0">
+    <div class="rounded-lg bg-white pa-4 pb-0 search-field-shadow">
       <ClientOnly>
         <v-row align="center">
           <v-col

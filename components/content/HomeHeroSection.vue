@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 rounded-xl">
       <v-img
         :src="img(imageSrc, { format: 'webp', quality: 80, height: 900, width: 1536 })"

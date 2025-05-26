@@ -23,7 +23,7 @@
             v-if="displayCtaButton"
             cols="12"
             sm="auto"
-            class="my-8 mt-md-16 text-center"
+            class="my-8 mt-md-10 text-center"
           >
             <slot name="cta-button" />
           </v-col>

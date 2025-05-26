@@ -24,7 +24,7 @@
         </h2>
         <v-container
           max-width="900px"
-          class="position-relative"
+          class="position-relative px-8"
         >
           <v-row>
             <v-col>
