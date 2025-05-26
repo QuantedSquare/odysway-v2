@@ -20,7 +20,7 @@
         v-if="comments > 0"
         class="text-body-2 font-weight-bold text-primary"
       >
-        {{ `( ${comments} )` }}
+        {{ `(${comments})` }}
       </span>
     </div>
   </v-btn>
