@@ -50,9 +50,15 @@ au coeur du voyage
 
 ::
 
+::color-container
+---
+color: white
+---
+
 ::experience-carousel
 #title
 [Laissez-vous inspirer]{style="color: rgba(43, 76, 82, 1)"}
+::
 ::
 
 ::color-container
