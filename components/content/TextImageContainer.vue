@@ -30,11 +30,9 @@
         </v-row>
       </v-col>
       <v-col
-        :class="{
-          'd-none': smAndDown && !displayImageMobile,
-        }"
         cols="12"
         sm="6"
+        :class="{ 'd-none': xs }"
       >
         <v-img
           :src="img(imageSrc, { format: 'webp', quality: 70, height: 640, width: 640 })"
@@ -77,5 +75,5 @@ defineProps({
 })
 
 const img = useImage()
-const { width, smAndDown } = useDisplay()
+const { width, xs } = useDisplay()
 </script>
