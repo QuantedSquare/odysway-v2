@@ -27,5 +27,4 @@
 const { data: experiences } = await useAsyncData('experiences', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').all()
 })
-console.log(experiences.value.length)
 </script>
