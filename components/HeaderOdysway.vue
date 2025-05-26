@@ -64,7 +64,7 @@
       </template> -->
       <v-btn
         color="primary"
-        height="54"
+        height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
         @click="() => { router.push('/concept'); captureOutboundLink(header.textButton1) }"
       >
@@ -73,7 +73,7 @@
       <v-btn
         color="primary"
         variant="tonal"
-        height="54"
+        height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
         @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
       >
@@ -82,7 +82,7 @@
       <v-btn
         density="compact"
         size="x-large"
-        height="54"
+        height="45"
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"

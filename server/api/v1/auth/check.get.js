@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 
 export default defineEventHandler((event) => {
   const token = getCookie(event, 'booking_token')
-  const jwtSecret = process.env.BOOKING_JWT_SECRET || 'supersecret'
+  const jwtSecret = process.env.BOOKING_JWT_SECRET
   if (!token) {
     return { statusCode: 401, message: 'Non authentifié.' }
   }

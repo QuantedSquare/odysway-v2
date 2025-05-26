@@ -108,7 +108,7 @@ const fetchTravels = async () => {
   loading.value = true
   const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
-  travels.value = data
+  travels.value = data.filter(travel => !travel.is_custom_travel)
   console.log('travels', travels.value)
   loading.value = false
 }
@@ -120,6 +120,10 @@ const goToTravel = (slug) => {
 
 const goToAddDate = () => {
   router.push('/booking-management/add-date')
+}
+
+const goToCustomTravels = () => {
+  router.push('/booking-management/custom-travels')
 }
 
 const filteredTravels = computed(() => {

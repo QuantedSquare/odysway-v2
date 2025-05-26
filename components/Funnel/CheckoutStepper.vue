@@ -107,13 +107,13 @@
                 />
               </v-stepper-window-item>
               <v-stepper-window-item
-
                 :value="5"
               >
                 <FunnelStepsSummary
                   :current-step="currentStep"
                   :page="page"
                   :voyage="voyage"
+                  :own-step="5"
                 />
 
                 <FunnelStepsPaymentRedirect

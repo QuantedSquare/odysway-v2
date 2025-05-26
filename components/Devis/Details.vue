@@ -157,7 +157,7 @@ watch([selectedDates, includeFlight], () => {
 
 // TODO: TEST this
 watch(() => [model.value.nbAdults, model.value.nbChildren], ([newAdults, newChildren], [oldAdults, oldChildren]) => {
-  console.log(newAdults)
+  // console.log(newAdults)
   gtag('event', {
     eventCategory: 'Devis',
     eventAction: 'Select',

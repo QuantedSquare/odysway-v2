@@ -31,7 +31,7 @@
 
             class="text-no-wrap text-left text-md-right "
           >
-            À partir de : {{ formatNumber(price, 'currency', '€') }}/pers.
+            {{ formatNumber(price, 'currency', '€') }}/pers.
           </v-col>
         </v-row>
       </div>

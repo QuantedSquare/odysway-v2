@@ -42,7 +42,7 @@
                 readonly
               />
               <v-select
-                v-model="form.displayed_status"
+                v-model="form.status"
                 label="Statut affiché"
                 :items="statuses"
                 item-title="label"
@@ -135,6 +135,140 @@
                   </Transition>
                 </v-col>
               </v-row>
+              <v-divider />
+              <v-row>
+                <v-col cols="12">
+                  <v-switch
+                    v-model="form.custom_display"
+                    color="green-light"
+                    label="Affichage custom de la section date"
+                  />
+                </v-col>
+                <v-col
+                  cols="12"
+                  class="pa-8"
+                >
+                  <Transition name="slide-fade">
+                    <div v-if="form.custom_display">
+                      <v-card
+                        class="pa-6 mb-4"
+                        color="#f5f7fa"
+                        elevation="2"
+                        style="border: 1px solid #d1e3f8;"
+                      >
+                        <div
+                          class="text-h6 font-weight-bold mb-4"
+                          style="color: #1976d2;"
+                        >
+                          Affichage personnalisé (section date)
+                        </div>
+                        <v-row dense>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-select
+                              v-model="form.displayed_status"
+                              label="Statut affiché (custom)"
+                              :items="statuses"
+                              item-title="label"
+                              item-value="value"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-text-field
+                              v-model="form.displayed_starting_price"
+                              label="Prix de départ (custom)"
+                              type="number"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-text-field
+                              v-model="form.displayed_min_travelers"
+                              label="Voyageurs min (custom)"
+                              type="number"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-text-field
+                              v-model="form.displayed_max_travelers"
+                              label="Voyageurs max (custom)"
+                              type="number"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-text-field
+                              v-model="form.displayed_booked_seat"
+                              label="Places réservées (custom)"
+                              type="number"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-text-field
+                              v-model="form.displayed_badges"
+                              label="Badge (custom)"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-switch
+                              v-model="form.displayed_include_flight"
+                              color="green-light"
+                              label="Vol inclus (custom)"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-switch
+                              v-model="form.displayed_last_minute"
+                              color="green-light"
+                              label="Last minute (custom)"
+                              class="mb-2"
+                            />
+                          </v-col>
+                          <v-col
+                            cols="12"
+                            md="6"
+                          >
+                            <v-switch
+                              v-model="form.displayed_early_bird"
+                              color="green-light"
+                              label="Early bird (custom)"
+                              class="mb-2"
+                            />
+                          </v-col>
+                        </v-row>
+                      </v-card>
+                    </div>
+                  </Transition>
+                </v-col>
+              </v-row>
               <v-alert
                 v-if="saveSuccess"
                 type="success"
@@ -202,21 +336,6 @@
                       class="ml-2"
                       style="margin-left: 8px;"
                     />
-
-                    <v-tooltip
-                      v-else-if="!traveler.is_option && traveler.booked_places === 0"
-                      text="Pas de paiement effectué sur cette date"
-                    >
-                      <template #activator="{ props }">
-                        <v-badge
-                          v-bind="props"
-                          :icon="mdiInformationOutline"
-                          inline
-                          text-color="white"
-                          color="red"
-                        />
-                      </template>
-                    </v-tooltip>
 
                     <v-icon>
                       {{ mdiArrowRight }}
@@ -317,6 +436,76 @@
             </div>
           </v-card-text>
         </v-card>
+        <v-card
+          v-if="prospectTravelers.length > 0"
+          class="mb-4 pa-2"
+        >
+          <v-card-title class="text-body-1">
+            Voyageurs/Prospects en attente
+          </v-card-title>
+          <v-card-text>
+            <ul>
+              <li
+                v-for="traveler in prospectTravelers"
+                :key="traveler.id"
+                class="d-flex justify-space-between"
+                style="list-style: none; margin-bottom: 8px;"
+              >
+                <NuxtLink
+                  :to="`https://odysway90522.activehosted.com/app/deals/${traveler.deal_id}`"
+                  target="_blank"
+                  style="display: flex; align-items: center; color: inherit;"
+                >
+                  <span style="font-weight: 500;">
+                    {{ traveler.name?.trim() ? traveler.name : traveler.email }}
+                  </span>
+                  <span>
+                    &nbsp;|&nbsp;Voyageurs: {{ traveler.nbTravelers }}
+                  </span>
+
+                  <v-tooltip
+                    text="Pas de paiement effectué sur cette date"
+                  >
+                    <template #activator="{ props }">
+                      <v-badge
+                        v-bind="props"
+                        :icon="mdiInformationOutline"
+                        inline
+                        text-color="white"
+                        color="red"
+                      />
+                    </template>
+                  </v-tooltip>
+
+                  <v-icon>
+                    {{ mdiArrowRight }}
+                  </v-icon>
+                </NuxtLink>
+                <v-btn
+                  icon
+                  color="primary"
+                  size="x-small"
+                  class="mx-2"
+                  @click="openPaymentDialog(traveler)"
+                >
+                  <v-icon>
+                    {{ mdiLinkEdit }}
+                  </v-icon>
+                </v-btn>
+                <v-btn
+                  icon
+                  color="error"
+                  size="x-small"
+                  @click="deleteTraveler(traveler.id)"
+                >
+                  <v-icon>
+                    {{ mdiDelete }}
+                  </v-icon>
+                </v-btn>
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
       </v-col>
       <v-divider class="my-4" />
       <h2>
@@ -405,7 +594,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformation, mdiInformationOutline } from '@mdi/js'
+import { mdiArrowRight, mdiDelete, mdiLinkEdit, mdiInformationOutline } from '@mdi/js'
 import dayjs from 'dayjs'
 
 definePageMeta({
@@ -421,6 +610,7 @@ console.log('=======config=======', config.public.siteURL)
 const includeCustomEvent = ref(false)
 const form = ref({})
 const bookedTravelers = ref([])
+const prospectTravelers = ref([])
 const loading = ref(true)
 
 const saving = ref(false)
@@ -457,8 +647,10 @@ const fetchDetails = async () => {
   // Fetch booked travelers
   const res2 = await fetch(`/api/v1/booking/${slug}/date/${dateId}/booked`)
   const data2 = await res2.json()
+  includeCustomEvent.value = data.badges.length > 0
   console.log('=======data2=======', data2)
-  bookedTravelers.value = data2
+  bookedTravelers.value = data2.filter(traveler => traveler.booked_places > 0)
+  prospectTravelers.value = data2.filter(traveler => traveler.booked_places === 0)
   loading.value = false
   console.log('=======bookedTravelers RETRIEVED=======', bookedTravelers.value)
 }
@@ -473,6 +665,7 @@ const onSave = async () => {
   saveSuccess.value = false
   saving.value = true
   try {
+    console.log('=======form.value=======', form.value)
     const res = await fetch(`/api/v1/booking/${slug}/date/${dateId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },

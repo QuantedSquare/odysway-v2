@@ -11,6 +11,16 @@ export default defineEventHandler(async (event) => {
     'published', 'displayed_status', 'departure_date', 'return_date',
     'max_travelers', 'min_travelers', 'booked_seat', 'include_flight',
     'flight_price', 'badges', 'starting_price',
+    // Custom display fields
+    'custom_display',
+    'displayed_min_travelers',
+    'displayed_max_travelers',
+    'displayed_booked_seat',
+    'displayed_include_flight',
+    'displayed_badges',
+    'displayed_starting_price',
+    'displayed_last_minute',
+    'displayed_early_bird',
   ]
   for (const key of allowed) {
     if (body[key] !== undefined) updateFields[key] = body[key]

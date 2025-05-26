@@ -378,7 +378,7 @@ const handlePaymentSession = async (session, paymentType) => {
   console.log('totalPaid', totalPaid, restToPay)
   const dealData = {
     group: '2',
-    stage: totalPaid >= +deal.value ? '33' : '6',
+    stage: +customFields.alreadyPaid > 0 ? '33' : '6',
     paiementLink: totalPaid >= +deal.value ? 'Paiement OK' : `https://odysway.com/checkout?dealId=${order.dealId}&type=balance`,
     alreadyPaid: totalPaid,
     restToPay: restToPay,

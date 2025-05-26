@@ -101,7 +101,7 @@ color: white
   ---
   imageSrc: /images/categories/a5ddc6b9296e008a9a0912e359a10e8bd5c16a02.jpg
   imageDesktopRight: true
-  displayImageMobile: true
+  displayImageMobile: false
   displayCtaButton: true
   ---
   
