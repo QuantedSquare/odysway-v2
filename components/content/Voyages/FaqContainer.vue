@@ -1,7 +1,7 @@
 <template>
   <v-container
     id="faq-container"
-    class="rounded-xl py-8 mt-8 position-relative"
+    class="rounded-xl pa-0 mt-8 position-relative"
   >
     <v-lazy
       :min-height="415"

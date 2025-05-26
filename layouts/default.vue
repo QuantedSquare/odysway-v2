@@ -15,7 +15,7 @@
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">
       <WhatsAppBtn />
-    </div> -->
+    </div>
     <LazyTopTravelsTabs />
     <FooterOdysway />
   </v-app>
