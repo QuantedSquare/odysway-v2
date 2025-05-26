@@ -2,10 +2,10 @@
   <div>
     <div class="relative-hero-section mb-16 rounded-xl">
       <v-img
-        :src="img(imageSrc, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+        :src="img(imageSrc, { format: 'webp', quality: 80, height: 900, width: 1536 })"
         :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
         size="(max-width: 600) 480px, 1500px"
-        :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+        :srcset="`${img(imageSrc, { format: 'webp', quality: 80, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 80, width: 1024 })} 1500w`"
         height="80vh"
         alt="Image principale Hero d'Odysway"
         class="rounded-xl"
