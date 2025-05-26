@@ -217,11 +217,11 @@ color: soft-blush
 
 ::color-container
 ---
-color: grey-light
+color: primary
 ---
 ::horizontal-carousel
 #title
-[Voyages inoubliables]{style="color: rgba(43, 76, 82, 1)"}
+[Voyages inoubliables]{style="color: rgba(255, 255, 255, 1)"}
 
 #carousel-item
   :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
