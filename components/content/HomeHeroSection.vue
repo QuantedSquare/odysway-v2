@@ -106,29 +106,26 @@ const img = useImage()
  width: 100%;
 }
 
-@media (max-width: 960px) {
-  .relative-hero-section {
-    height: 70vh;
-    /* margin-bottom:300px!important; */
-  }
-  .custom-hero-title {
-    font-size: 60px!important;
-    line-height: 42px!important;
-  }
-}
 .custom-hero-title {
 font-weight: 700;
 font-size: 78px;
-line-height: 80px;
+line-height: 80px!important;
 }
 
 .searchfield-overlap {
   max-width: 1070px;
-  margin: -125px auto 0 auto;
+  margin: -110px auto 0 auto;
   position: relative;
   z-index: 2000!important;
 }
 @media (max-width: 960px) {
+  .relative-hero-section {
+    height: 70vh;
+  }
+  .custom-hero-title {
+    font-size: 60px!important;
+    line-height: 55px!important;
+  }
   .searchfield-overlap {
     margin: -150px auto 0 auto;
   }
