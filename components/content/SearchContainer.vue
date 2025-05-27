@@ -1,7 +1,10 @@
 <template>
-  <v-container class="search-field-container py-0">
+  <v-container
+    ref="searchField"
+    class="search-field-container py-0"
+  >
     <div
-      ref="searchField"
+
       class="rounded-md bg-white pa-4 pb-0  search-field-min-height"
       :class="{ 'search-field-shadow': !showDestinationsCarousel }"
     >
@@ -48,7 +51,7 @@
               @click:outside="showDestinationsCarousel = false"
             >
               <div
-                class="destination-carousel rounded-lg bg-white pa-4 mt-2"
+                class="destination-carousel rounded-md bg-white pa-4 mt-2 "
                 :style="{ '--carousel-width': widthValue }"
               >
                 <v-slide-group
@@ -190,7 +193,7 @@ import dayjs from 'dayjs'
 import { ref, computed } from 'vue'
 import { mdiMenuDown } from '@mdi/js'
 import { useElementSize } from '@vueuse/core'
-import { useDisplay } from 'vuetify'
+// import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const img = useImage()
@@ -207,7 +210,10 @@ const search = ref('')
 
 const searchFieldRef = useTemplateRef('searchField')
 const { width: searchFieldWidth } = useElementSize(searchFieldRef)
-const { width } = useDisplay()
+// const { width } = useDisplay()
+watch(showDestinationsCarousel, (newVal) => {
+  console.log('searchFieldWidth', searchFieldWidth.value)
+})
 
 const { data: destinations, status } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem').where('published', '=', true).all()
@@ -291,12 +297,15 @@ function clearDestination() {
 }
 .search-field-min-height {
   min-height: 88px!important;
+  box-sizing: border-box;
+
   /* box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5); */
 }
 .destination-carousel {
+  box-sizing: border-box;
   max-width: var(--carousel-width, 0);
   min-width: var(--carousel-width, 0);
-  margin: 0 auto;
+  margin-left:-3px;
   box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.15);
   z-index: 2002!important;
 
