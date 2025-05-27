@@ -115,8 +115,6 @@ line-height: 80px!important;
 .searchfield-overlap {
   max-width: 1070px;
   margin: -110px auto 0 auto;
-  position: relative;
-  z-index: 2000!important;
 }
 @media (max-width: 960px) {
   .relative-hero-section {
