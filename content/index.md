@@ -255,7 +255,7 @@ au cœur du voyage
   Notre équipe est là pour vous renseigner
   
   #description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Échangez avec un conseiller pour parler de votre voyage.
   
   #bottom
     ::::cta-button
