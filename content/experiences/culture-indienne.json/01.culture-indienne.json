@@ -1,10 +1,10 @@
 {
-  "title": "Plongée dans la culture Indienne",
-  "slug": "culture-indienne",
-  "discoveryTitle": "Découvrez la culture Indienne",
-  "seoTitle": "Culture Indienne",
+  "title": "Partager le quotidien",
+  "slug": "en-immersion",
+  "discoveryTitle": "Partager le quotidien",
+  "seoTitle": "Partager le quotidien",
   "image": {
-    "src": "/images/experiences/2db5a59937cf2363624ca1e45800e25a87d2b819.jpg",
+    "src": "images/Home/20250501-130525.jpg",
     "alt": "Culture Indienne"
   },
   "showOnHome": true
