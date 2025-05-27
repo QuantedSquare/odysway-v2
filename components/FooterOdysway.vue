@@ -23,7 +23,7 @@
         <v-col
           cols="12"
           md="3"
-          class="d-flex flex-column align-center align-md-start justify-space-between ga-6"
+          class="d-flex flex-column align-start align-md-start justify-space-between ga-6"
         >
           <v-img
             :src="img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })"
@@ -31,7 +31,8 @@
             :srcset="`${img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(footer.logo.image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
             sizes="(max-width: 600px) 480px, 640px"
             loading="lazy"
-            width="200"
+            width="160"
+            height="44px"
             alt="Logo d'Odysway"
           />
           <span class="text-h5 text-grey">
@@ -61,12 +62,12 @@
         <v-col
           cols="12"
           md="4"
-          class="d-flex flex-column align-center align-md-start justify-space-between ga-6"
+          class="d-flex flex-column align-center align-md-start justify-space-between ga-6 ga-md-14"
         >
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
           </h5>
-          <div class="d-flex flex-column flex-md-row justify-start align-center align-md-center ga-2">
+          <div class="d-flex justify-start align-center align-md-center ga-2">
             <v-chip
               :text="footer.contact.phone"
               color="grey-light"
@@ -236,7 +237,7 @@ const img = useImage()
 <style scoped>
 .footer-bg-img {
   position: absolute;
-  top: 0;
+  top: 20%;
   left: 0;
   width: 100% !important;
   height: 400px !important;

@@ -1,9 +1,12 @@
 <template>
   <v-sheet
-    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6 py-10 d-flex flex-column justify-start"
+    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6  d-flex flex-column justify-start"
     :class="route.name === 'search' ? 'h-100' : ''"
   >
-    <v-avatar size="80">
+    <v-avatar
+      size="80"
+      class="mt-6"
+    >
       <v-img
         :src="img('/images/team/romain.webp', { format: 'webp', quality: 70, height: 640, width: 640 })"
       />

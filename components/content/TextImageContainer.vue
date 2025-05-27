@@ -5,7 +5,7 @@
     >
       <v-col
         cols="12"
-        sm="6"
+        md="6"
       >
         <v-row>
           <v-col
@@ -22,17 +22,19 @@
           <v-col
             v-if="displayCtaButton"
             cols="12"
-            sm="auto"
-            class="my-8 mt-md-10 text-center"
+            md="auto"
+            class="my-8 mt-md-16 text-center"
           >
             <slot name="cta-button" />
           </v-col>
         </v-row>
       </v-col>
       <v-col
+        :class="{
+          'd-none': smAndDown && !displayImageMobile,
+        }"
         cols="12"
-        sm="6"
-        :class="{ 'd-none': xs }"
+        md="6"
       >
         <v-img
           :src="img(imageSrc, { format: 'webp', quality: 70, height: 640, width: 640 })"
@@ -75,5 +77,5 @@ defineProps({
 })
 
 const img = useImage()
-const { width, xs } = useDisplay()
+const { width, smAndDown } = useDisplay()
 </script>

@@ -25,7 +25,9 @@
               class="text-body-2 font-weight-bold px-5"
               :class="`bg-${page.badgeColor}`"
             >
-              {{ page.blogType }}
+              <div class="mb-1">
+                {{ page.blogType }}
+              </div>
             </v-chip>
             <div
               v-if="page.readingTime"

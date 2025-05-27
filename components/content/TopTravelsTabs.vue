@@ -5,8 +5,7 @@
         align="center"
       >
         <v-col
-          cols="8"
-          sm="10"
+          cols="12"
           class="text-h3 font-weight-bold my-4"
         >
           Des idées pour vos prochains voyages

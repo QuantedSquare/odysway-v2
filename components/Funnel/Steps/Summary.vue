@@ -279,10 +279,10 @@
 import dayjs from 'dayjs'
 import { mdiInformationOutline } from '@mdi/js'
 
-const props = defineProps(['page', 'voyage', 'currentStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
-const { deal } = useStepperDeal(route.query.step)
+const { deal } = useStepperDeal(props.ownStep)
 
 function travelerText(nbTraveler, type) {
   const text = {

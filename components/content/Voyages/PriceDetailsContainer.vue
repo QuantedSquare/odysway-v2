@@ -1,5 +1,15 @@
 <template>
   <v-container>
+    <v-row
+      justify="center"
+      align="center"
+    >
+      <v-col
+        class="font-weight-black text-h4"
+      >
+        {{ priceDetailsSection.title }}
+      </v-col>
+    </v-row>
     <v-row>
       <v-col
         cols="12"
@@ -13,7 +23,7 @@
               density="compact"
             >
               <span class="font-weight-bold px-1 pb-1">
-                Le prix comprend
+                {{ priceDetailsSection.priceInclude }}
               </span>
             </v-chip>
           </v-list-subheader>
@@ -39,7 +49,7 @@
               density="compact"
             >
               <span class="font-weight-bold px-1 pb-1">
-                Le prix ne comprend pas
+                {{ priceDetailsSection.priceExclude }}
               </span>
             </v-chip>
           </v-list-subheader>
@@ -59,6 +69,10 @@
 <script setup>
 defineProps({
   pricingDetailsBlock: {
+    type: Object,
+    required: true,
+  },
+  priceDetailsSection: {
     type: Object,
     required: true,
   },

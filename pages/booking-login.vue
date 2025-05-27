@@ -63,10 +63,10 @@ const onLogin = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: id.value, password: password.value }),
+      credentials: 'include',
     })
     const data = await res.json()
-    if (res.ok && data.token) {
-      localStorage.setItem('booking_token', data.token)
+    if (res.ok && data.success) {
       router.push('/booking-management')
     }
     else {

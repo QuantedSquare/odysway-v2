@@ -94,7 +94,7 @@
               color="primary"
               class="font-weight-bold text-body-1"
             >
-              <div class="mb-1 mr-2">
+              <div class="mr-2">
                 Découvrir les dates
               </div>
               <v-icon
@@ -108,7 +108,7 @@
               class="text-decoration-none font-weight-bold text-body-1 d-flex align-center "
               :to="`/calendly?travelTitle=${voyage.title}`"
             >
-              <div class="mb-1 mr-2">
+              <div class="mr-2">
                 Demander un devis
               </div>
               <v-icon

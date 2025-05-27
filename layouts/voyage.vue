@@ -8,7 +8,9 @@
     <ClientOnly>
       <Drawer v-model="drawer" />
     </ClientOnly>
-    <v-main style="--v-layout-top: 90px; --v-layout-bottom: 0px;">
+    <v-main
+      style="--v-layout-top: 90px; --v-layout-bottom: 0px;"
+    >
       <slot />
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">

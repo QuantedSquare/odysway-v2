@@ -29,34 +29,40 @@
           />
         </template>
       </v-breadcrumbs>
-      <!-- <div class="d-flex align-center px-4 py-2">
-        <NuxtLink
-          class="text-decoration-none"
-          @click="router.back()"
-        >
-          <v-btn
-            variant="text"
-            prepend-icon="mdi-arrow-left"
-          >
-            Retour
-          </v-btn>
-        </NuxtLink>
-      </div> -->
+
+      <v-spacer />
+
+      <v-btn
+        variant="text"
+        :prepend-icon="mdiLogout"
+        @click="logout"
+      >
+        Se déconnecter
+      </v-btn>
     </v-app-bar>
     <v-main>
       <slot />
     </v-main>
-    <!-- <FooterOdysway /> -->
   </v-app>
 </template>
 
 <script setup>
 import { useDisplay } from 'vuetify'
-import { mdiHome } from '@mdi/js'
+import { mdiHome, mdiLogout } from '@mdi/js'
 import { useImage } from '#imports'
 
 const items = useBreadcrumbItems() // uses the current route
 const { header } = useAppConfig()
 const { mdAndUp } = useDisplay()
 const img = useImage()
+const router = useRouter()
+
+const logout = async () => {
+  await fetch('/api/v1/auth/logout', {
+    method: 'POST',
+    credentials: 'include', // important to include cookies
+  })
+  // Then redirect to login or home page
+  router.push('/booking-login')
+}
 </script>

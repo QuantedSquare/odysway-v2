@@ -193,8 +193,7 @@ defineProps({
 
 @media screen and (max-width: 600px) {
   .image-wrapper {
-    height: 100%;
-    /* Optionally adjust aspect-ratio for mobile if needed */
+    height: 16rem;    /* Optionally adjust aspect-ratio for mobile if needed */
   }
 }
 

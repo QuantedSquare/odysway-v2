@@ -37,7 +37,7 @@
             :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
             sizes="(max-width: 600px) 480px, 1024px"
             loading="lazy"
-            height="228px"
+            :height="width < 600 ? '150px' : '228px'"
             class="hover-scale"
             cover
           >
@@ -151,8 +151,10 @@
 
 <script setup>
 import { mdiPlusCircle } from '@mdi/js'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+const { width } = useDisplay()
 const loading = ref(false)
 
 const props = defineProps({

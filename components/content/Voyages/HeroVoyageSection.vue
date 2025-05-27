@@ -6,13 +6,35 @@
       <v-col
         cols="12"
         md="8"
-        class="mb-md-5"
       >
-        <h1 class="text-primary text-h2 font-weight-bold">
+        <h1 class="text-primary text-h1 text-md-h2 font-weight-bold mb-4 mb-md-0">
           {{ voyage.title }}
+          <RatingBadge
+            :rating="voyage.rating"
+            :comments="voyage.comments"
+            elevation="2"
+            class="mx-3 d-md-none"
+          />
+          <v-btn
+            ref="shareBtn"
+            color="white"
+            rounded="pill"
+            class="btn-shadow d-md-none"
+            :height="mdAndUp ? 46 : 36"
+            @click="copyUrl"
+          >
+            <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-2">
+              <v-icon
+                :icon="mdiExportVariant"
+                :size="mdAndUp ? 20 : 16"
+                color="primary"
+              />
+              <span class="mt-1">Partager</span>
+            </div>
+          </v-btn>
         </h1>
       </v-col>
-      <v-col class="d-flex align-start justify-md-end ga-4">
+      <v-col class="d-none d-md-flex align-start justify-end ga-4 mb-3 mb-md-0">
         <RatingBadge
           :rating="voyage.rating"
           :comments="voyage.comments"

@@ -126,7 +126,6 @@
 <script setup>
 import dayjs from 'dayjs'
 import { useDisplay } from 'vuetify'
-import SearchContainer from '~/components/content/SearchContainer.vue'
 
 const { lgAndUp } = useDisplay()
 useSeoMeta({
@@ -170,13 +169,42 @@ const parsedDates = computed(() => {
   return `${capitalizeFirstLetter(start)} - ${capitalizeFirstLetter(end)}`
 })
 
+function filterByDestination(voyages, destination) {
+  if (!destination) return voyages
+  return voyages.filter(v => v.destinations?.some(d => d.name.includes(destination)))
+}
+
+function filterByType(voyages, travelType) {
+  if (!travelType) return voyages
+  const groupeType = travelType === 'Voyage en groupe'
+  return voyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
+}
+
+function filterByDate(voyages, fromDate, toDate) {
+  if (!fromDate || !toDate) return voyages
+  const startDate = dayjs(fromDate)
+  const endDate = dayjs(toDate)
+  const monthsInRange = []
+  let current = startDate.startOf('month')
+  while (current.isBefore(endDate) || current.isSame(endDate, 'month')) {
+    monthsInRange.push(capitalizeFirstLetter(current.format('MMMM')))
+    current = current.add(1, 'month')
+  }
+  return voyages.filter(v =>
+    v.monthlyAvailability?.some(m => monthsInRange.includes(m.month)),
+  )
+}
+
 const { data: voyages } = useAsyncData(
   `search-${JSON.stringify(route.query)}`,
   async () => {
     let destination = null
-
     if (route.query.destination) {
-      const { titre } = await queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre').first()
+      const { titre } = await queryCollection('destinations')
+        .where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`)
+        .where('published', '=', true)
+        .select('titre')
+        .first()
       destination = titre
     }
 
@@ -184,56 +212,15 @@ const { data: voyages } = useAsyncData(
     const fromDate = route.query.from || null
     const toDate = route.query.to || null
 
-    const allVoyages = await queryCollection('voyages').where('published', '=', true).all()
+    let voyages = await queryCollection('voyages').where('published', '=', true).all()
 
-    const getFilteredByDestination = (allVoyages, destinationParam) => {
-      return allVoyages.filter(v => v.destinations?.some(d => d.name.includes(destinationParam)))
-    }
+    voyages = filterByDestination(voyages, destination)
+    voyages = filterByType(voyages, travelType)
+    voyages = filterByDate(voyages, fromDate, toDate)
 
-    const getFilteredByType = (allVoyages, travelType) => {
-      const groupeType = travelType === 'Voyage en groupe'
-      return allVoyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
-    }
-
-    const getFilteredByDate = (allVoyages, fromDate, toDate) => {
-      const startDate = dayjs(fromDate)
-      const endDate = dayjs(toDate)
-      const monthsInRange = []
-
-      let current = startDate.startOf('month')
-      while (current.isBefore(endDate) || current.isSame(endDate, 'month')) {
-        const month = current.format('MMMM')
-        const capitalized = capitalizeFirstLetter(month)
-        monthsInRange.push(capitalized)
-        current = current.add(1, 'month')
-      }
-      return allVoyages.filter(v =>
-        v.monthlyAvailability?.some((m) => {
-          return monthsInRange.includes(m.month)
-        }),
-      )
-    }
-
-    let searchResult = [...allVoyages]
-
-    if (destination) {
-      searchResult = [...getFilteredByDestination(searchResult, destination)]
-    }
-
-    if (travelType) {
-      searchResult = [...getFilteredByType(searchResult, travelType)]
-    }
-
-    if (fromDate && toDate) {
-      searchResult = [...getFilteredByDate(searchResult, fromDate, toDate)]
-    }
-
-    return searchResult
+    return voyages
   },
-  {
-    watch: [routeQuery],
-
-  },
+  { watch: [routeQuery] },
 )
 
 const nbVoyages = computed(() => {
@@ -256,9 +243,9 @@ const voyagesWithCta = computed(() => {
 })
 
 function reinitiliazeFilter() {
-  useState('searchDestination').value = null
-  useState('searchTravelType').value = null
-  useState('searchDate').value = []
+  searchDestination.value = null
+  searchTravelType.value = null
+  searchDate.value = []
   router.push({
     path: '/search',
     query: null,

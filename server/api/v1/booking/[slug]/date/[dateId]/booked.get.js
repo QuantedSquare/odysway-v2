@@ -44,6 +44,7 @@ export default defineEventHandler(async (event) => {
     return {
       ...row,
       ...contact,
+      nbTravelers: customFields.nbTravelers,
       alreadyPaid: customFields.alreadyPaid,
       restToPay: customFields.restToPay,
       price: +customFields.price,

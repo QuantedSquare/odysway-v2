@@ -174,7 +174,6 @@
 import dayjs from 'dayjs'
 import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarHeart, mdiCheckCircleOutline, mdiBird, mdiClockStarFourPointsOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
-import BookingStatus from './BookingStatus.vue'
 
 const { xs, width } = useDisplay()
 const { date } = defineProps({
@@ -187,12 +186,21 @@ const { date } = defineProps({
 const enrichedDate = computed(() => {
   return {
     ...date,
+    min_travelers: date.custom_display ? date.displayed_min_travelers : date.min_travelers,
+    max_travelers: date.custom_display ? date.displayed_max_travelers : date.max_travelers,
+    booked_seat: date.custom_display ? date.displayed_booked_seat : date.booked_seat,
+    include_flight: date.custom_display ? date.displayed_include_flight : date.include_flight,
+    badges: date.custom_display ? (date.displayed_badges || '') : (date.badges || ''),
+    starting_price: date.custom_display ? date.displayed_starting_price : date.starting_price,
+    early_bird: date.custom_display ? date.displayed_early_bird : date.early_bird,
+    last_minute: date.custom_display ? date.displayed_last_minute : date.last_minute,
     status: getStatus(date),
   }
 })
 
 const getStatus = (date) => {
-  if (date.displayed_status === 'soon_confirmed') {
+  const status = date.custom_display ? date.displayed_status : date.status
+  if (status === 'soon_confirmed') {
     return {
       status: 'soon_confirmed',
       text: `Bientôt confirmé`,
@@ -200,7 +208,7 @@ const getStatus = (date) => {
     }
   }
   else {
-    if (date.displayed_status === 'guaranteed') {
+    if (status === 'guaranteed') {
       return {
         status: 'full',
         text: 'Complet',
