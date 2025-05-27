@@ -5,7 +5,9 @@
         v-if="experienceChoice"
         :destination="experienceChoice"
         :is-experience="true"
-      />
+      >
+        <SearchContainer />
+      </SearchHeroSection>
       <HorizontalCarousel
         v-if="experiences"
       >

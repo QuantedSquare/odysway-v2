@@ -126,7 +126,7 @@ line-height: 80px;
   max-width: 1070px;
   margin: -125px auto 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 2000!important;
 }
 @media (max-width: 960px) {
   .searchfield-overlap {
