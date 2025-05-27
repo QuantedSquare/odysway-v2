@@ -35,6 +35,6 @@ const drawer = ref(false)
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 1000;
+  z-index: 10000;
 }
 </style>

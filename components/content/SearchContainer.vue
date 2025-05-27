@@ -1,15 +1,18 @@
 <template>
   <v-container
     ref="searchField"
-    class="search-field-container py-0"
+    class="search-field-container py-0 z-index-2003"
   >
     <div
-
-      class="rounded-md bg-white pa-4 pb-0  search-field-min-height"
+      ref="container"
+      class="rounded-md bg-white pa-4 pb-0  search-field-min-height "
       :class="{ 'search-field-shadow': !showDestinationsCarousel }"
     >
       <ClientOnly>
-        <v-row align="center">
+        <v-row
+          align="center"
+          class="relative"
+        >
           <v-col
             cols="12"
             md="3"
@@ -18,13 +21,14 @@
             <v-text-field
               v-model="search"
               class="z-index-2003"
+              :class="showDestinationsCarousel ? 'text-field-bg-white' : ''"
               label="Destinations"
               clearable
               hide-details
               :readonly="false"
               @click="showDestinationsCarousel = !showDestinationsCarousel"
+              @click:outside="showDestinationsCarousel = false"
               @click:clear="clearDestination"
-              @keydown.enter.prevent
             >
               <template #prepend-inner>
                 <v-img
@@ -45,18 +49,21 @@
             </v-text-field>
             <v-overlay
               activator="parent"
+              :attach="containerRef"
               location-strategy="connected"
+              :location="width <= 650 ? 'top' : 'bottom'"
               scroll-strategy="close"
               class="z-index-responsive"
               @click:outside="showDestinationsCarousel = false"
             >
               <div
-                class="destination-carousel rounded-md bg-white pa-4 mt-2 "
+                class="destination-carousel rounded-md bg-white py-3 pa-md-4 mt-2 "
                 :style="{ '--carousel-width': widthValue }"
               >
                 <v-slide-group
                   v-if="filteredDestinations.length > 0"
                   show-arrows
+                  class="slide-group"
                 >
                   <v-slide-group-item
                     v-for="item in filteredDestinations"
@@ -67,7 +74,7 @@
                       @click="selectDestination(item)"
                     >
                       <v-lazy
-                        :min-height="120"
+                        :min-height="width <= 960 ? 90 : 120"
                         :options="{ threshold: 0.5 }"
                         transition="fade-transition"
                       >
@@ -76,9 +83,9 @@
                           :lazy-src="img(item.image.src, { format: 'webp', quality: 10, width: 1024 })"
                           :srcset="`${img(item.image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${img(item.image.src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
                           sizes="(max-width: 600px) 480px, 1024px"
-                          width="120"
+                          :width="width <= 960 ? 90 : 120"
                           :alt="item.title"
-                          height="120"
+                          :height="width <= 960 ? 90 : 120"
                           cover
                           rounded="lg"
                           class="d-flex align-end pb-5 justify-center text-center ml-1a"
@@ -190,10 +197,10 @@
 
 <script setup>
 import dayjs from 'dayjs'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { mdiMenuDown } from '@mdi/js'
 import { useElementSize } from '@vueuse/core'
-// import { useDisplay } from 'vuetify'
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const img = useImage()
@@ -209,9 +216,13 @@ const showDestinationsCarousel = ref(false)
 const search = ref('')
 
 const searchFieldRef = useTemplateRef('searchField')
+const containerRef = useTemplateRef('container')
+onMounted(() => {
+  console.log('containerRef', containerRef.value)
+})
 const { width: searchFieldWidth } = useElementSize(searchFieldRef)
-// const { width } = useDisplay()
-watch(showDestinationsCarousel, (newVal) => {
+const { width } = useDisplay()
+watch(showDestinationsCarousel, (_) => {
   console.log('searchFieldWidth', searchFieldWidth.value)
 })
 
@@ -277,6 +288,24 @@ function clearDestination() {
   destinationChoice.value = null
   search.value = ''
 }
+
+onMounted(() => {
+  const closeCarousel = () => {
+    if (showDestinationsCarousel.value) {
+      showDestinationsCarousel.value = false
+    }
+  }
+  window.addEventListener('scroll', closeCarousel, true)
+  window.addEventListener('touchmove', closeCarousel, { passive: true })
+  window.addEventListener('mousemove', closeCarousel, { passive: true })
+
+  // Clean up
+  onUnmounted(() => {
+    window.removeEventListener('scroll', closeCarousel, true)
+    window.removeEventListener('touchmove', closeCarousel)
+    window.removeEventListener('mousemove', closeCarousel)
+  })
+})
 </script>
 
 <style scoped>
@@ -289,7 +318,7 @@ function clearDestination() {
 .search-field-container {
   max-width: 1070px;
   position: relative;
-  z-index: 2001!important;
+  z-index: 2003!important;
 }
 
 .search-field-shadow {
@@ -340,26 +369,43 @@ function clearDestination() {
   z-index: 0!important;
 }
 .relative {
-  position: relative;
+  position: relative!important;
 }
-.z-index-parent {
-  position: relative;
-}
+
 .z-index-2003 {
   z-index: 2003 !important;
   position: relative;
 }
+.slide-group:deep(.v-slide-group__prev),
+.slide-group:deep(.v-slide-group__next) {
+  min-width: 54px!important;
+}
 @media screen and (max-width: 960px) {
+  :deep(.v-overlay__scrim) {
+    z-index: 2001 !important;
+  }
+  :deep(.v-overlay__content) {
+    z-index: 2002 !important;
+  }
+  .search-field-container {
+    z-index: 2001 !important;
+  }
   .z-index-2003 {
     z-index: 2003 !important;
     position: relative;
   }
   .z-index-parent {
-    z-index: 2001 !important;
-    position: relative;
-  }
-  .z-index-responsive {
     z-index: 2000 !important;
   }
+  .z-index-responsive {
+    z-index: 1999 !important;
+  }
+  .slide-group:deep(.v-slide-group__prev),
+  .slide-group:deep(.v-slide-group__next) {
+    min-width: 30px!important;
+  }
+}
+.text-field-bg-white:deep(.v-field) {
+  background-color: white!important;
 }
 </style>

@@ -19,7 +19,7 @@
     >
       <v-avatar
         :image="author.image"
-        size="40"
+        size="80"
         :alt="author.description"
       />
       <div class="text-subtitle-2 d-flex flex-column justify-center">

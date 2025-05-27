@@ -1,8 +1,9 @@
 <template>
   <v-col
-    cols="12"
+    cols="6"
     sm="4"
     md="3"
+    class="mx-0 px-1 px-md-auto"
   >
     <v-lazy
       :min-height="width <= 960 ? 300 : 415"
@@ -40,7 +41,7 @@
         >
           <h3
             key="title"
-            class="text-h3 font-weight-bold text-lg-h2 text-center text-shadow text-line-space mx-2"
+            class="text-body-1 font-weight-bold text-lg-h2 text-center text-shadow text-line-space mx-2"
           >
             {{ title }}
           </h3>
@@ -193,7 +194,12 @@ defineProps({
 
 @media screen and (max-width: 600px) {
   .image-wrapper {
-    height: 16rem;    /* Optionally adjust aspect-ratio for mobile if needed */
+    height: 300px;
+    width: 100%;
+    /* Optionally adjust aspect-ratio for mobile if needed */
+  }
+  h3 {
+    font-size: 1.1rem !important;
   }
 }
 

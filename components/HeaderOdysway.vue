@@ -184,6 +184,7 @@ function captureOutboundLink(btn) {
 <style scoped>
 .app-bar-shadow:deep(){
   box-shadow: none!important;
+  z-index: 10000!important;
 }
 @media screen and (max-width: 960px) {
   .app-bar-shadow:deep(){
