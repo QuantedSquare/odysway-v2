@@ -106,7 +106,6 @@
               block
               color="secondary"
               class="text-decoration-none font-weight-bold text-body-1 d-flex align-center "
-              :to="`/calendly?travelTitle=${voyage.title}`"
             >
               <div class="mr-2">
                 Demander un devis

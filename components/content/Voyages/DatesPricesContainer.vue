@@ -36,19 +36,19 @@
       align="center"
       class="flex-column"
     >
-      <span>Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
+      <span class="text-h6 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
     <v-row v-if="isPrivatisationAvailable">
-      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-4 my-5 py-10">
+      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
         <div class="text-h4 font-weight-bold text-primary">
           {{ indivSection.title }}
         </div>
         <v-btn
           height="54"
-          :to="`/calendly?travelTitle=${route.params.voyageSlug}`"
+          :to="`/devis?slug=${route.params.voyageSlug}`"
         >
-          <div class="text-h6">
+          <div class="text-h6 font-weight-bold">
             {{ isGroupeAvailable && isPrivatisationAvailable ? indivSection.textButton : "Demander un devis" }}
           </div>
         </v-btn>

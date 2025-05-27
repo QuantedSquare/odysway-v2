@@ -42,6 +42,22 @@
         </v-chip>
 
         <v-chip
+          v-if="+level >= 1"
+          variant="flat"
+          :size="lgAndUp ? 'x-large' : 'large'"
+          color="grey-light"
+          density="comfortable"
+        >
+          <span class="d-flex align-center text-primary text-caption text-sm-subtitle-2  px-3 mb-1">
+            <v-icon
+              :icon="level === '1' ? mdiSignalCellular1 : level === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
+              class="mr-3"
+            />
+
+            <span class="font-weight-bold">Niveau {{ level }}</span>
+          </span>
+        </v-chip>
+        <v-chip
           v-if="badgeSection.durationBadge.visible"
           variant="flat"
           :size="lgAndUp ? 'x-large' : 'large'"
@@ -119,10 +135,15 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
+import { mdiSignalCellular1, mdiSignalCellular2, mdiSignalCellular3 } from '@mdi/js'
 
 defineProps({
   badgeSection: {
     type: Object,
+    required: true,
+  },
+  level: {
+    type: String,
     required: true,
   },
 })

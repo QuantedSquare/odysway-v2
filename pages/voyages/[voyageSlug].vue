@@ -11,7 +11,10 @@
           :pricing="voyage.pricing"
         />
 
-        <ChipsContainer :badge-section="voyage.badgeSection" />
+        <ChipsContainer
+          :badge-section="voyage.badgeSection"
+          :level="voyage.level"
+        />
 
         <StickyContainer>
           <template #left-side>
@@ -60,7 +63,6 @@
           :pricing-details-block="voyage.pricingDetailsBlock"
           :price-details-section="page.priceDetailsSection"
         />
-
         <ReviewCarousel
           :reviews-section="page.reviewsSection"
         />

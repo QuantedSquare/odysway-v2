@@ -21,6 +21,7 @@
       <br>lorem
     </span>
     <v-btn-secondary
+      class="mb-6"
       height="62px"
       rounded="md"
       width="66%"

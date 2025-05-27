@@ -1,17 +1,15 @@
 <template>
   <v-row>
-    <v-col cols="3">
+    <v-col cols="5">
       <v-select
         v-model="phoneCode"
         :items="phonesSelect"
         :rules="[rules.name]"
-        label="Indicatif *"
         hide-details
         @change="changeAttr('phone'); saveToLocalStorage(phoneCode)"
       >
         <template #item="{ props }">
           <v-list-item
-
             v-bind="props"
             :title="props.title"
             :prepend-avatar="props.flagSrc"

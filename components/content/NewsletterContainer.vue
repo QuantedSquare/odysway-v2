@@ -23,8 +23,8 @@
         :lg="isOnVoyage ? 12 : 5"
       >
         <div
-          class="d-flex flex-column flex-md-row align-center rounded-md px-3 pt-2"
-          :class="isOnVoyage ? 'bg-grey-light' : 'bg-white'"
+          class="d-flex flex-column  align-center rounded-md px-3 pt-2"
+          :class="isOnVoyage ? 'bg-grey-light' : 'bg-white flex-md-row'"
         >
           <v-text-field
             id="newsletter"
@@ -43,32 +43,45 @@
             type="email"
           />
           <v-btn-secondary
-            :height="mdAndUp ? 62 : 40"
-            :width="mdAndUp ? 161 : 100"
-            class="my-3 text-body-1 font-weight-bold "
+            v-if="isOnVoyage"
+            :height="40"
+            :width="100"
+            class="my-3 text-body-1 font-weight-bold"
             rounded="md"
-            :block="!mdAndUp"
+            :disabled="emailSentToBrevo"
+            block
             @click="subscribeToNewsletter"
           >
             S'inscrire
           </v-btn-secondary>
-          <v-dialog
-            v-model="dialogEmailSent"
-            width="auto"
+          <v-btn-secondary
+            v-else
+            :height="mdAndUp ? 62 : 40"
+            :width="mdAndUp ? 161 : 100"
+            class="my-3 text-body-1 font-weight-bold"
+            rounded="md"
+            :block="!mdAndUp"
+            :disabled="emailSentToBrevo"
+            @click="subscribeToNewsletter"
           >
-            <v-card
-              max-width="300px"
-              text="Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍"
-            >
-              <template #actions>
-                <v-btn
-                  class="ms-auto"
-                  text="Ok"
-                  @click="dialogEmailSent = false"
-                />
-              </template>
-            </v-card>
-          </v-dialog>
+            S'inscrire
+          </v-btn-secondary>
+          <v-snackbar
+            v-model="dialogEmailSent"
+            :timeout="2000"
+          >
+            Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍
+
+            <template #actions>
+              <v-btn
+                color="blue"
+                variant="text"
+                @click="dialogEmailSent = false"
+              >
+                Close
+              </v-btn>
+            </template>
+          </v-snackbar>
         </div>
       </v-col>
     </v-row>
@@ -105,7 +118,6 @@ const subscribeToNewsletter = async () => {
   }
   if (validEmail.value) {
     await apiRequest('/brevo/optin', 'post', newsletterData)
-    email.value = ''
     validEmail.value = false
     emailSentToBrevo.value = true
     dialogEmailSent.value = true

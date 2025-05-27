@@ -40,7 +40,7 @@ $border-radius-root: 10px !default;
       "text-transform": none,
     ),
     "h4": (
-      "size": 22px,
+      "size": 24px,
       "weight": 700,
       "line-height": 30px,
       "letter-spacing": normal,
@@ -197,7 +197,7 @@ $border-radius-root: 10px !default;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .3) !important;
 }
 .subtle-shadow{
-  box-shadow: 0px 3px 5px 0px rgba(34, 34, 35, 0.06)!important;
+  box-shadow: 0px 3px 20px 0px rgba(34, 34, 35, 0.06)!important;
 }
 .btn-shadow {
   box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;

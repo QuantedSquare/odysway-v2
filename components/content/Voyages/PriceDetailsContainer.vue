@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container :fluid="width < 1600">
     <v-row
       justify="center"
       align="center"
@@ -63,10 +63,15 @@
         </v-list>
       </v-col>
     </v-row>
+    <v-divider class="my-6" />
   </v-container>
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
+
+const { width } = useDisplay()
+
 defineProps({
   pricingDetailsBlock: {
     type: Object,

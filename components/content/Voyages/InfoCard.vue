@@ -126,6 +126,7 @@
               height="60"
               block
               rounded="md"
+              @click="goTo('#dates-container', { offset: -200 })"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Demander un devis
@@ -220,8 +221,7 @@
       >
 
         <v-icon
-          size="small"
-          color="x-small"
+          size="24"
           class="bg-primary rounded-lg pa-1"
         >
           {{ mdiArrowRight }}

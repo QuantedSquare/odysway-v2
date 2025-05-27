@@ -2,14 +2,14 @@
   <v-container
     v-show="reviews.length > 0"
     id="reviews-container"
+    :fluid="width < 1600"
   >
     <v-row
       align="center"
+      justify="center"
     >
       <v-col
-        cols="6"
-        xs="7"
-        sm="9"
+
         class="text-h4 my-4 font-weight-bold"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
@@ -88,7 +88,7 @@ defineProps({
     required: true,
   },
 })
-const { mdAndUp, sm } = useDisplay()
+const { mdAndUp, sm, width } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
