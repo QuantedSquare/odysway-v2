@@ -19,6 +19,7 @@
             class="relative z-index-parent"
           >
             <v-text-field
+              ref="textfield"
               v-model="search"
               class="z-index-2003"
               :class="showDestinationsCarousel ? 'text-field-bg-white' : ''"
@@ -26,9 +27,10 @@
               clearable
               hide-details
               :readonly="false"
-              @click="showDestinationsCarousel = !showDestinationsCarousel"
+              @click="handleTextfieldClick"
               @click:outside="showDestinationsCarousel = false"
               @click:clear="clearDestination"
+              @scroll.passive="showDestinationsCarousel = false"
             >
               <template #prepend-inner>
                 <v-img
@@ -47,6 +49,7 @@
                 </v-icon>
               </template>
             </v-text-field>
+
             <v-overlay
               activator="parent"
               :attach="containerRef"
@@ -63,14 +66,14 @@
                 <v-slide-group
                   v-if="filteredDestinations.length > 0"
                   show-arrows
-                  class="slide-group"
+                  class="slide-group "
                 >
                   <v-slide-group-item
                     v-for="item in filteredDestinations"
                     :key="item.value"
                   >
                     <div
-                      class="carousel-item"
+                      class="carousel-item mr-0"
                       @click="selectDestination(item)"
                     >
                       <v-lazy
@@ -88,7 +91,7 @@
                           :height="width <= 960 ? 90 : 120"
                           cover
                           rounded="lg"
-                          class="d-flex align-end pb-5 justify-center text-center ml-1a"
+                          class="d-flex align-end pb-5 justify-center text-center ml-1"
                         >
                           <div class="text-white text-shadow font-weight-bold text-body-1">
                             {{ item.title }}
@@ -135,7 +138,7 @@
             <v-menu
               v-model="dateMenu"
               :close-on-content-click="false"
-              location="end"
+              location="top"
             >
               <template #activator="{ props }">
                 <v-text-field
@@ -199,7 +202,7 @@
 import dayjs from 'dayjs'
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { mdiMenuDown } from '@mdi/js'
-import { useElementSize } from '@vueuse/core'
+import { useElementSize, onClickOutside } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
@@ -208,7 +211,7 @@ const router = useRouter()
 const route = useRoute()
 const dateMenu = ref(false)
 const { gtag } = useGtag()
-// Replace individual refs with useState
+
 const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
@@ -217,14 +220,13 @@ const search = ref('')
 
 const searchFieldRef = useTemplateRef('searchField')
 const containerRef = useTemplateRef('container')
-onMounted(() => {
-  console.log('containerRef', containerRef.value)
+const textfieldRef = useTemplateRef('textfield')
+onClickOutside(textfieldRef, () => {
+  showDestinationsCarousel.value = false
 })
+
 const { width: searchFieldWidth } = useElementSize(searchFieldRef)
 const { width } = useDisplay()
-watch(showDestinationsCarousel, (_) => {
-  console.log('searchFieldWidth', searchFieldWidth.value)
-})
 
 const { data: destinations, status } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem').where('published', '=', true).all()
@@ -287,6 +289,16 @@ function selectDestination(item) {
 function clearDestination() {
   destinationChoice.value = null
   search.value = ''
+}
+
+function handleTextfieldClick() {
+  if (showDestinationsCarousel.value) {
+    showDestinationsCarousel.value = false
+    if (window.innerWidth <= 960 && textfieldRef.value?.$el) {
+      const input = textfieldRef.value.$el.querySelector('input')
+      if (input) input.blur()
+    }
+  }
 }
 
 onMounted(() => {
@@ -403,6 +415,9 @@ onMounted(() => {
   .slide-group:deep(.v-slide-group__prev),
   .slide-group:deep(.v-slide-group__next) {
     min-width: 30px!important;
+  }
+  .no-data-found{
+    height: 93px;
   }
 }
 .text-field-bg-white:deep(.v-field) {
