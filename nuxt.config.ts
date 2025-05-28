@@ -91,6 +91,9 @@ export default defineNuxtConfig({
         'server/utils/**',
       ],
     },
+    prerender: {
+      routes: ['/'],
+    },
   },
   vite: {
     vue: {
