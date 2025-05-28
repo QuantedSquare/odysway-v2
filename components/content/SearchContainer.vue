@@ -1,201 +1,204 @@
 <template>
-  <v-container
-    ref="searchField"
-    class="search-field-container py-0 z-index-2003"
-  >
-    <div
-      ref="container"
-      class="rounded-md bg-white pa-4 pb-0  search-field-min-height "
-      :class="{ 'search-field-shadow': !showDestinationsCarousel }"
+  <div class="z-index-max">
+    <v-container
+      ref="searchField"
+      class="search-field-container py-0 z-index-2003"
     >
-      <ClientOnly>
-        <v-row
-          align="center"
-          class="relative"
-        >
-          <v-col
-            cols="12"
-            md="3"
-            class="relative z-index-parent"
+      <div
+        ref="container"
+        class="rounded-md bg-white pa-4 pb-0  search-field-min-height "
+        :class="{ 'search-field-shadow': !showDestinationsCarousel }"
+      >
+        <ClientOnly>
+          <v-row
+            align="center"
+            class="relative"
           >
-            <v-text-field
-              ref="textfield"
-              v-model="search"
-              class="z-index-2003"
-              :class="showDestinationsCarousel ? 'text-field-bg-white' : ''"
-              label="Destinations"
-              clearable
-              hide-details
-              :readonly="false"
-              @click="handleTextfieldClick"
-              @click:outside="showDestinationsCarousel = false"
-              @click:clear="clearDestination"
-              @scroll.passive="showDestinationsCarousel = false"
+            <v-col
+              cols="12"
+              md="3"
+              class="relative z-index-parent"
             >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Pin marker"
-                  width="24"
-                  height="24"
-                />
-              </template>
-              <template #append-inner>
-                <v-icon
-                  :class="{ 'rotate-arrow': showDestinationsCarousel }"
-                  transition="rotate-transition"
-                >
-                  {{ mdiMenuDown }}
-                </v-icon>
-              </template>
-            </v-text-field>
-
-            <v-overlay
-              activator="parent"
-              :attach="containerRef"
-              location-strategy="connected"
-              :location="width <= 650 ? 'top' : 'bottom'"
-              scroll-strategy="close"
-              class="z-index-responsive"
-              @click:outside="showDestinationsCarousel = false"
-            >
-              <div
-                class="destination-carousel rounded-md bg-white py-3 pa-md-4 mt-2 "
-                :style="{ '--carousel-width': widthValue }"
+              <v-text-field
+                ref="textfield"
+                v-model="search"
+                class="z-index-2003"
+                :class="showDestinationsCarousel ? 'text-field-bg-white' : ''"
+                label="Destinations"
+                clearable
+                hide-details
+                :readonly="false"
+                @click="handleTextfieldClick"
+                @click:outside="showDestinationsCarousel = false"
+                @click:clear="clearDestination"
+                @scroll.passive="showDestinationsCarousel = false"
               >
-                <v-slide-group
-                  v-if="filteredDestinations.length > 0"
-                  show-arrows
-                  class="slide-group "
-                >
-                  <v-slide-group-item
-                    v-for="item in filteredDestinations"
-                    :key="item.value"
-                  >
-                    <div
-                      class="carousel-item mr-0"
-                      @click="selectDestination(item)"
-                    >
-                      <v-lazy
-                        :min-height="width <= 960 ? 90 : 120"
-                        :options="{ threshold: 0.5 }"
-                        transition="fade-transition"
-                      >
-                        <v-img
-                          :src="img(item.image.src, { format: 'webp', quality: 70, width: 1024 })"
-                          :lazy-src="img(item.image.src, { format: 'webp', quality: 10, width: 1024 })"
-                          :srcset="`${img(item.image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${img(item.image.src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-                          sizes="(max-width: 600px) 480px, 1024px"
-                          :width="width <= 960 ? 90 : 120"
-                          :alt="item.title"
-                          :height="width <= 960 ? 90 : 120"
-                          cover
-                          rounded="lg"
-                          class="d-flex align-end pb-5 justify-center text-center ml-1"
-                        >
-                          <div class="text-white text-shadow font-weight-bold text-body-1">
-                            {{ item.title }}
-                          </div>
-                        </v-img>
-                      </v-lazy>
-                    </div>
-                  </v-slide-group-item>
-                </v-slide-group>
-                <div
-                  v-else
-                  class="text-center text-body-1 no-data-found"
-                >
-                  Aucune destination trouvée
-                </div>
-              </div>
-            </v-overlay>
-          </v-col>
-          <v-col
-            cols="12"
-            md="3"
-          >
-            <v-select
-              v-model="travelTypeChoice"
-              :items="travelTypes"
-              hide-details
-              label="Type de voyage"
-              clearable
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Team icon"
-                  width="24"
-                  height="24"
-                />
-              </template>
-            </v-select>
-          </v-col>
-          <v-col
-            :cols="12"
-            md="3"
-          >
-            <v-menu
-              v-model="dateMenu"
-              :close-on-content-click="false"
-              location="top"
-            >
-              <template #activator="{ props }">
-                <v-text-field
-                  v-bind="props"
-                  :value="formattedDate"
-                  readonly
-                  class="font-weight-bold text-primary"
-                  hide-details
-                >
-                  <template #prepend-inner>
-                    <v-img
-                      :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                      alt="Calendar icon"
-                      width="24"
-                      height="24"
-                    />
-                  </template>
-                </v-text-field>
-              </template>
-
-              <v-card
-                min-width="300"
-                elevation="6"
-              >
-                <v-locale-provider locale="fr">
-                  <v-date-picker
-                    v-model="date"
-                    multiple="range"
-                    width="400"
-                    :min="new Date()"
-                    show-adjacent-months
-                    @update:model-value="() => { date.length > 1 ? dateMenu = false : '' } "
+                <template #prepend-inner>
+                  <v-img
+                    :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640 })"
+                    alt="Pin marker"
+                    width="24"
+                    height="24"
                   />
-                </v-locale-provider>
-              </v-card>
-            </v-menu>
-          </v-col>
-          <v-col
-            cols="12"
-            md="3"
-            class=" h-100"
-          >
-            <v-btn
-              height="56"
-              block
-              :loading="status === 'pending'"
-              color="secondary"
-              class="text-none text-body-1"
-              @click="searchFn"
+                </template>
+                <template #append-inner>
+                  <v-icon
+                    :class="{ 'rotate-arrow': showDestinationsCarousel }"
+                    transition="rotate-transition"
+                  >
+                    {{ mdiMenuDown }}
+                  </v-icon>
+                </template>
+              </v-text-field>
+
+              <v-overlay
+                activator="parent"
+                :attach="containerRef"
+                location-strategy="connected"
+                :location="width <= 650 ? 'top' : 'bottom'"
+                scroll-strategy="close"
+                class="z-index-responsive"
+                @click:outside="showDestinationsCarousel = false"
+              >
+                <div
+                  class="destination-carousel rounded-md bg-white py-3 pa-md-4 mt-2 "
+                  :style="{ '--carousel-width': widthValue }"
+                >
+                  <v-slide-group
+                    v-if="filteredDestinations.length > 0"
+                    show-arrows
+                    class="slide-group "
+                  >
+                    <v-slide-group-item
+                      v-for="item in filteredDestinations"
+                      :key="item.value"
+                    >
+                      <div
+                        class="carousel-item mr-0"
+                        @click="selectDestination(item)"
+                      >
+                        <v-lazy
+                          :min-height="width <= 960 ? 90 : 120"
+                          :options="{ threshold: 0.5 }"
+                          transition="fade-transition"
+                        >
+                          <v-img
+                            :src="img(item.image.src, { format: 'webp', quality: 70, width: 1024 })"
+                            :lazy-src="img(item.image.src, { format: 'webp', quality: 10, width: 1024 })"
+                            :srcset="`${img(item.image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${img(item.image.src, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+                            sizes="(max-width: 600px) 480px, 1024px"
+                            :width="width <= 960 ? 90 : 120"
+                            :alt="item.title"
+                            :height="width <= 960 ? 90 : 120"
+                            cover
+                            rounded="lg"
+                            class="d-flex align-end pb-5 justify-center text-center ml-1"
+                          >
+                            <div class="text-white text-shadow font-weight-bold text-body-1">
+                              {{ item.title }}
+                            </div>
+                          </v-img>
+                        </v-lazy>
+                      </div>
+                    </v-slide-group-item>
+                  </v-slide-group>
+                  <div
+                    v-else
+                    class="text-center text-body-1 no-data-found"
+                  >
+                    Aucune destination trouvée
+                  </div>
+                </div>
+              </v-overlay>
+            </v-col>
+            <v-col
+              cols="12"
+              md="3"
             >
-              Découvrir les voyages
-            </v-btn>
-          </v-col>
-        </v-row>
-      </ClientOnly>
-    </div>
-  </v-container>
+              <v-select
+                v-model="travelTypeChoice"
+                :items="travelTypes"
+                hide-details
+                label="Type de voyage"
+                clearable
+              >
+                <template #prepend-inner>
+                  <v-img
+                    :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640 })"
+                    alt="Team icon"
+                    width="24"
+                    height="24"
+                  />
+                </template>
+              </v-select>
+            </v-col>
+            <v-col
+              :cols="12"
+              md="3"
+            >
+              <v-menu
+                v-model="dateMenu"
+                :close-on-content-click="false"
+                location="top"
+              >
+                <template #activator="{ props }">
+                  <v-text-field
+                    v-bind="props"
+                    :value="formattedDate"
+                    readonly
+                    class="font-weight-bold text-primary"
+                    hide-details
+                  >
+                    <template #prepend-inner>
+                      <v-img
+                        :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                        alt="Calendar icon"
+                        width="24"
+                        height="24"
+                      />
+                    </template>
+                  </v-text-field>
+                </template>
+
+                <v-card
+                  min-width="300"
+                  elevation="6"
+                  class="z-index-max"
+                >
+                  <v-locale-provider locale="fr">
+                    <v-date-picker
+                      v-model="date"
+                      multiple="range"
+                      width="400"
+                      :min="new Date()"
+                      show-adjacent-months
+                      @update:model-value="() => { date.length > 1 ? dateMenu = false : '' } "
+                    />
+                  </v-locale-provider>
+                </v-card>
+              </v-menu>
+            </v-col>
+            <v-col
+              cols="12"
+              md="3"
+              class=" h-100"
+            >
+              <v-btn
+                height="56"
+                block
+                :loading="status === 'pending'"
+                color="secondary"
+                class="text-none text-body-1"
+                @click="searchFn"
+              >
+                Découvrir les voyages
+              </v-btn>
+            </v-col>
+          </v-row>
+        </ClientOnly>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <script setup>
@@ -351,7 +354,10 @@ onMounted(() => {
   z-index: 2002!important;
 
 }
-
+.z-index-max{
+  position: relative!important;
+  z-index: 1!important;
+}
 .carousel-item {
   cursor: pointer;
   margin-right: 16px;
