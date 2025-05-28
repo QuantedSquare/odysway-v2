@@ -1,9 +1,10 @@
 <template>
   <v-container
+    v-if="isHydrated"
     fluid
     class="relative-hero-section mb-16 rounded-md bg-primary d-flex align-center"
   >
-    <v-row>
+    <v-row v-if="width > 960">
       <v-col
         cols="12"
         md="4"
@@ -62,6 +63,69 @@
         />
       </v-col>
     </v-row>
+    <v-img
+      v-else
+      :src="img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, height: 900, width: 1536 })"
+      :lazy-src="img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 10, height: 900, width: 1536 })"
+      size="(max-width: 600) 480px, 1500px"
+      :srcset="`${img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 640 })} 480w, ${img(destination ? destination.image?.src : '/images/homeHero.jpeg', { format: 'webp', quality: 80, width: 1024 })} 1500w`"
+      height="50vh"
+      :alt="destination ? destination.image?.alt : 'Image principale Hero d\'Odysway'"
+      class="rounded-xl"
+      cover
+    >
+      <template #placeholder>
+        <div class="d-flex align-center justify-center fill-height">
+          <v-progress-circular
+            indeterminate
+            color="primary"
+          />
+        </div>
+      </template>
+
+      <!-- Gradient overlay -->
+      <div class="gradient-overlay" />
+
+      <div class="h-100 d-flex align-center position-relative">
+        <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
+          <v-row
+            justify="center"
+            align="center"
+          >
+            <v-col
+              cols="12"
+              md="auto"
+            >
+              <h1
+                v-if="destination && !isCategory && !isExperience"
+                class="custom-hero-title"
+              >
+                {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+              </h1>
+              <h1
+                v-else-if="destination && isCategory"
+                class="custom-hero-title"
+              >
+                {{ destination.discoveryTitle || destination.titre }}
+              </h1>
+              <h1
+                v-else-if="destination && isExperience"
+                class="custom-hero-title"
+              >
+                {{ destination.discoveryTitle || destination.titre }}
+              </h1>
+              <h1
+                v-else
+                class="custom-hero-title ml-3"
+              >
+                Trouvez votre prochain voyage
+              </h1>
+              <slot name="subtitle" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </div>
+    </v-img>
 
     <div class="absolute">
       <slot />
@@ -70,9 +134,11 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const img = useImage()
+const { width } = useDisplay()
 const { destination, isCategory } = defineProps({
   destination: {
     type: Object,
@@ -87,10 +153,10 @@ const { destination, isCategory } = defineProps({
     default: false,
   },
 })
-// const isHydrated = ref(false)
-// onMounted(() => {
-//   isHydrated.value = true
-// })
+const isHydrated = ref(false)
+onMounted(() => {
+  isHydrated.value = true
+})
 </script>
 
 <style scoped>
@@ -104,8 +170,39 @@ const { destination, isCategory } = defineProps({
   right: 0;
   bottom: -60px;
 }
+.custom-hero-title {
+font-weight: 700;
+font-size: 50px;
+line-height: 50px;
+}
 
 @media (max-width: 960px) {
+    .absolute {
+    bottom: -200px;
+  }
+  .relative-hero-section {
+    height: 50vh;
+    margin-bottom:250px!important;
+  }
+  .custom-hero-title {
+    font-size: 42px!important;
+    line-height: 42px!important;
+  }
+}
+@media (max-width: 400px) {
+    .absolute {
+    bottom: -200px;
+  }
+  .relative-hero-section {
+    height: 50vh;
+    margin-bottom:240px!important;
+  }
+  .custom-hero-title {
+    font-size: 35px!important;
+    line-height: 30px!important;
+  }
+}
+/* @media (max-width: 960px) {
     .absolute {
     bottom: -250px;
   }
@@ -117,10 +214,5 @@ const { destination, isCategory } = defineProps({
     font-size: 42px!important;
     line-height: 42px!important;
   }
-}
-.custom-hero-title {
-font-weight: 700;
-font-size: 50px;
-line-height: 50px;
-}
+} */
 </style>

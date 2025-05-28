@@ -9,7 +9,7 @@
     <v-container>
       <v-row>
         <v-col
-          cols="12"
+          cols=""
           md="auto"
           class="d-flex align-center"
         >
@@ -17,7 +17,7 @@
             voyages` }}</span>
         </v-col>
         <v-col
-          cols="12"
+          cols=""
           md="auto"
           class="d-flex align-center ga-2"
         >
@@ -64,7 +64,7 @@
         <v-spacer />
         <v-col
           v-if="route.fullPath !== '/search'"
-          cols="12"
+          cols=""
           md="auto"
           class="d-flex justify-end"
         >
@@ -224,7 +224,7 @@ const { data: voyages } = useAsyncData(
 )
 
 const nbVoyages = computed(() => {
-  return voyages.value?.length
+  return voyages.value?.length || 0
 })
 
 const voyagesWithCta = computed(() => {
@@ -243,9 +243,6 @@ const voyagesWithCta = computed(() => {
 })
 
 function reinitiliazeFilter() {
-  searchDestination.value = null
-  searchTravelType.value = null
-  searchDate.value = []
   router.push({
     path: '/search',
     query: null,
