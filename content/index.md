@@ -38,7 +38,7 @@ schemaOrg:
 
 ::home-hero-section
 ---
-image-src: /images/homeHero.jpeg
+image-src: public/images/AdobeStock_218029671 (1).webp
 primary-color: "#2B4C52"
 secondary-color: "#DB6644"
 tertiary-color: "#F0B348"
@@ -53,8 +53,6 @@ au cœur du voyage
 #title
 [Laissez-vous inspirer]{style="color: rgba(43, 76, 82, 1)"}
 ::
-
-
 
 ::color-container{color="soft-blush"}
   :::horizontal-carousel
@@ -96,7 +94,7 @@ au cœur du voyage
   :::text-image-container
   ---
   displayCtaButton: true
-  displayImageMobile: false
+  displayImageMobile: true
   imageDesktopRight: true
   imageSrc: /images/categories/a5ddc6b9296e008a9a0912e359a10e8bd5c16a02.jpg
   ---
@@ -200,30 +198,27 @@ au cœur du voyage
   :::
 ::
 
-::color-container
----
-color: primary
----
-  ::horizontal-carousel
+::color-container{color="grey-light"}
+  :::horizontal-carousel
   #title
-  [Voyages inoubliables]{style="color: rgba(255, 255, 255, 1)"}
-
+  [Voyages inoubliables]{style="color: rgba(43, 76, 82, 1)"}
+  
   #carousel-item
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-
-    :::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
-    :::
-  ::
+    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::
+  :::
 ::
 
 ::color-container{color="white"}
