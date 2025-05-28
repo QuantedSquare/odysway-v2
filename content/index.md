@@ -38,7 +38,7 @@ schemaOrg:
 
 ::home-hero-section
 ---
-image-src: public/images/AdobeStock_218029671 (1).webp
+image-src: images/AdobeStock_218029671 (1).webp
 primary-color: "#2B4C52"
 secondary-color: "#DB6644"
 tertiary-color: "#F0B348"
