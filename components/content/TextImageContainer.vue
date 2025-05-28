@@ -36,18 +36,24 @@
         cols="12"
         md="6"
       >
-        <v-img
-          :src="img(imageSrc, { format: 'webp', quality: 70, height: 640, width: 640 })"
-          :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 640, width: 640 })"
-          :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-          sizes="(max-width: 600px) 480px, 1024px"
-          alt="Image section voyager autrement"
-          loading="lazy"
-          height="100%"
-          max-height="550"
-          cover
-          rounded="xl"
-        />
+        <v-lazy
+          :min-height="640"
+          :options="{ threshold: 0.5 }"
+          transition="fade-transition"
+        >
+          <v-img
+            :src="img(imageSrc, { format: 'webp', quality: 70, height: 640, width: 640 })"
+            :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 640, width: 640 })"
+            :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+            sizes="(max-width: 600px) 480px, 1024px"
+            alt="Image section voyager autrement"
+            loading="lazy"
+            height="100%"
+            max-height="550"
+            cover
+            rounded="xl"
+          />
+        </v-lazy>
       </v-col>
     </v-row>
   </v-container>

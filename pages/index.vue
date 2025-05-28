@@ -11,18 +11,18 @@
 </template>
 
 <script setup>
-const route = useRoute()
-
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path('/').first()
-})
-if (page.value) {
-  defineOgImageComponent(page.value?.ogImage?.component, {
-    title: page.value.ogImage?.props.title,
-    description: page.value.ogImage?.props.description,
-    image: page.value.ogImage?.props.image,
+const page = await queryCollection('content').path('/').first()
+console.log(page)
+// const { data: page } = await useAsyncData(route.path, () => {
+//   return queryCollection('content').path('/').first()
+// })
+if (page) {
+  defineOgImageComponent(page.ogImage?.component, {
+    title: page.ogImage?.props.title,
+    description: page.ogImage?.props.description,
+    image: page.ogImage?.props.image,
   })
-  useHead(page.value.head || {}) // <-- Nuxt Schema.org
-  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+  useHead(page.head || {}) // <-- Nuxt Schema.org
+  useSeoMeta(page.seo || {}) // <-- Nuxt Robots
 }
 </script>

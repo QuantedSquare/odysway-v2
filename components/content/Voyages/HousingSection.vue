@@ -1,5 +1,7 @@
 <template>
-  <v-container fluid>
+  <v-container
+    fluid
+  >
     <v-row
       align="center"
     >
@@ -61,7 +63,7 @@
             variant="text"
             :max-width="770"
           >
-            <v-card-text class="text-body-1 text-grey-darken-3 ">
+            <v-card-text class="text-body-1 text-grey-darken-3 pa-6">
               <v-row>
                 <v-col
                   cols="12"
@@ -108,7 +110,7 @@
                   cols="12"
                   md="7"
                 >
-                  <v-row>
+                  <v-row class="max-height-container">
                     <v-col
                       cols="12"
                       class="pb-0"
@@ -160,7 +162,7 @@ import { mdiArrowLeft, mdiArrowRight, mdiChevronLeft, mdiChevronRight } from '@m
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
-defineProps({
+const { housingBlock } = defineProps({
   color: {
     type: String,
     default: 'primary',
@@ -196,12 +198,14 @@ onMounted(() => {
 })
 
 const childrenCount = computed(() => {
-  return itemsList.value?.children[0]?.children.length
+  console.log(itemsList.value?.children)
+  return housingBlock.length
 })
 
 const displayButton = computed(() => {
   if (mdAndUp.value) {
-    return childrenCount.value > 3
+    console.log(childrenCount.value)
+    return childrenCount.value >= 2
   }
   else if (sm.value) {
     return childrenCount.value > 2
@@ -250,5 +254,9 @@ line-height: 30px;
 
 .hidden-scroll::-webkit-scrollbar {
   display: none;
+}
+.max-height-container{
+  max-height: 230px;
+  overflow-y: auto;
 }
 </style>

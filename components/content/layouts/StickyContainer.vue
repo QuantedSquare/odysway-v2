@@ -7,7 +7,7 @@
         :class="leftSticky ? 'd-none d-md-block' : '' "
       >
         <div
-          class="sticky-top"
+          class="sticky-top pr-md-10"
           :class="leftSticky ? 'position-sticky ': '' "
         >
           <slot name="left-side" />
@@ -16,10 +16,10 @@
       <v-col
         cols="12"
         :md="rightSpace"
-        :class="rightSticky ? 'd-none d-md-block' : '' "
+        :class="rightSticky ? 'd-none d-md-block ' : '' "
       >
         <div
-          class="sticky-top"
+          class="sticky-top-right"
           :class="rightSticky ? 'position-sticky': '' "
         >
           <slot name="right-side" />
@@ -59,5 +59,8 @@ defineProps({
 <style scoped>
 .sticky-top{
   top: 64px;
+}
+.sticky-top-right{
+  top: 100px;
 }
 </style>
