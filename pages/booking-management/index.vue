@@ -122,7 +122,7 @@ const goToAddDate = () => {
 }
 
 const goToCustomTravels = () => {
-  router.push('/booking-management/custom-travels')
+  router.push('/booking-management/custom-travel')
 }
 
 const filteredTravels = computed(() => {
