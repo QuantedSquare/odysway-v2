@@ -2,9 +2,9 @@
   <v-footer class="position-relative">
     <v-img
       class="footer-bg-img"
-      :src="img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 1024, height: 400 })"
-      :lazy-src="img('/logos/odysway-text.png', { format: 'webp', quality: 10, width: 1024, height: 400 })"
-      :srcset="`${img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 1024, height: 400 })} 1024w, ${img('/logos/odysway-text.png', { format: 'webp', quality: 70, width: 640, height: 400 })} 640w`"
+      :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"
+      :lazy-src="img(OdyswayFooter, { format: 'webp', quality: 10, width: 1024, height: 400 })"
+      :srcset="`${img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })} 1024w, ${img(OdyswayFooter, { format: 'webp', quality: 70, width: 640, height: 400 })} 640w`"
       sizes="(max-width: 600px) 480px, 1024px"
       cover
       loading="lazy"
@@ -26,9 +26,9 @@
           class="d-flex flex-column align-start align-md-start justify-space-between ga-6"
         >
           <v-img
-            :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 640 })"
-            :lazy-src="img(OdyswayFooter, { format: 'webp', quality: 10, width: 640 })"
-            :srcset="`${img(OdyswayFooter, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+            :src="img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })"
+            :lazy-src="img(OdyswayFooterBleu, { format: 'webp', quality: 10, width: 640 })"
+            :srcset="`${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
             sizes="(max-width: 600px) 480px, 640px"
             loading="lazy"
             width="160"
@@ -47,17 +47,23 @@
           cols="12"
           md="4"
         >
-          <v-img
-            rounded="lg"
-            cover
-            max-height="270"
-            :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
-            :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
-            :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
-            sizes="(max-width: 600px) 480px, 320px"
-            loading="lazy"
-            alt="Image de l'équipe"
-          />
+          <v-lazy
+            :min-height="270"
+            :options="{ threshold: 0.5 }"
+            transition="fade-transition"
+          >
+            <v-img
+              rounded="lg"
+              cover
+              max-height="270"
+              :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
+              :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
+              :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
+              sizes="(max-width: 600px) 480px, 320px"
+              loading="lazy"
+              alt="Image de l'équipe"
+            />
+          </v-lazy>
         </v-col>
         <v-col
           cols="12"
@@ -208,6 +214,7 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 import OdyswayFooter from '~/assets/img/odysway-text.png'
+import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const { width } = useDisplay()
 const { footer } = useAppConfig()

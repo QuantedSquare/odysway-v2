@@ -3,32 +3,38 @@
     v-if="avatars && avatars.length > 0"
     justify="center"
   >
-    <div
-      class="avatar-stack d-flex justify-center"
-      :style="{
-        width: `${(avatars.length - 1) * 60 + 100}px`,
-      }"
+    <v-lazy
+      :min-height="mdAndUp ? 100 : 70"
+      :options="{ threshold: 0.5 }"
+      transition="fade-transition"
     >
-      <v-avatar
-        v-for="(avatar, index) in avatars"
-        :key="index"
-        :size="mdAndUp ? 100 : 70"
-        :class="`avatar-${index + 1}`"
+      <div
+        class="avatar-stack d-flex justify-center"
         :style="{
-          zIndex: avatars.length - index,
+          width: `${(avatars.length - 1) * 60 + 100}px`,
         }"
       >
-        <v-img
-          :src="img(avatar.image, { format: 'webp', quality: 70, width: 320 })"
-          :lazy-src="img(avatar.image, { format: 'webp', quality: 10, width: 320 })"
-          :srcset="`${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
-          sizes="(max-width: 600px) 70px, 100px"
-          rounded="circle"
-          loading="lazy"
-          :alt="avatar.name || 'Avatar de l\'équipe'"
-        />
-      </v-avatar>
-    </div>
+        <v-avatar
+          v-for="(avatar, index) in avatars"
+          :key="index"
+          :size="mdAndUp ? 100 : 70"
+          :class="`avatar-${index + 1}`"
+          :style="{
+            zIndex: avatars.length - index,
+          }"
+        >
+          <v-img
+            :src="img(avatar.image, { format: 'webp', quality: 70, width: 320 })"
+            :lazy-src="img(avatar.image, { format: 'webp', quality: 10, width: 320 })"
+            :srcset="`${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(avatar.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
+            sizes="(max-width: 600px) 70px, 100px"
+            rounded="circle"
+            loading="lazy"
+            :alt="avatar.name || 'Avatar de l\'équipe'"
+          />
+        </v-avatar>
+      </div>
+    </v-lazy>
   </v-row>
 </template>
 

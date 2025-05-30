@@ -37,7 +37,7 @@
         md="6"
       >
         <v-lazy
-          :min-height="640"
+          :min-height="550"
           :options="{ threshold: 0.5 }"
           transition="fade-transition"
         >

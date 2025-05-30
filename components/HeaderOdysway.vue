@@ -12,14 +12,12 @@
     <NuxtLink
       :to="header.to"
     >
-      <v-img
+      <img
+        :src="LogoOdyswayBleu"
         :min-width="mdAndUp ? '150px' : '100px'"
         height="38"
         alt="Logo principale d'Odysway"
-        :src="img(LogoOdyswayBleu, { format: 'webp', quality: 100, width: 320 })"
-        :srcset="`${img(LogoOdyswayBleu, { format: 'webp', quality: 100, width: 320 })} 320w, ${img(LogoOdyswayBleu, { format: 'webp', quality: 100, width: 640 })} 640w`"
-        :sizes="mdAndUp ? '150px' : '100px'"
-      />
+      >
     </NuxtLink>
     <v-spacer />
     <div class="d-flex align-center ga-4">
@@ -115,7 +113,6 @@
 <script setup>
 import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
-import { useImage } from '#imports'
 import LogoOdyswayBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const { header } = useAppConfig()
@@ -137,7 +134,6 @@ defineProps({
     default: 5,
   },
 })
-const img = useImage()
 const { gtag } = useGtag()
 // const showExtension = ref(false)
 // const extensionName = ref('')
