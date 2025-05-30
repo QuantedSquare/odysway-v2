@@ -10,13 +10,6 @@ useHead({
   link: [
     {
       rel: 'preload',
-      href: '/fonts/Gordita-Font/subset-Gordita-Regular.woff2',
-      as: 'font',
-      crossorigin: '',
-      type: 'font/woff2',
-    },
-    {
-      rel: 'preload',
       href: '/fonts/Gordita-Font/subset-Gordita-Medium.woff2',
       as: 'font',
       crossorigin: '',

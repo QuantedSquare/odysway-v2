@@ -5,10 +5,10 @@
         :src="img(imageSrc, { format: 'webp', quality: 80, height: 900, width: 1536 })"
         :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
         size="(max-width: 600) 480px, 1500px"
-        :srcset="`${img(imageSrc, { format: 'webp', quality: 80, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 80, width: 1024 })} 1500w`"
-        :height="width > 600 ? '80vh' : '50vh'"
+        :srcset="`${img(imageSrc, { format: 'webp', quality: 80, width: 640, height: 900 })} 480w, ${img(imageSrc, { format: 'webp', quality: 80, width: 1024, height: 900 })} 1500w`"
+        height="100%"
         alt="Image principale Hero d'Odysway"
-        class="rounded-xl"
+        class="rounded-xl hero-height"
         cover
       >
         <template #placeholder>
@@ -50,10 +50,7 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
-
-const { width } = useDisplay()
 
 defineProps({
   imageSrc: {
@@ -119,10 +116,14 @@ line-height: 80px!important;
   max-width: 1070px;
   margin: -110px auto 0 auto;
 }
+.hero-height {
+  height: 80vh;
+}
 @media (max-width: 960px) {
   .relative-hero-section {
     height: 70vh;
   }
+
   .custom-hero-title {
     font-size: 60px!important;
     line-height: 55px!important;
@@ -133,6 +134,9 @@ line-height: 80px!important;
 }
 @media (max-width: 600px) {
   .relative-hero-section {
+    height: 50vh;
+  }
+  .hero-height {
     height: 50vh;
   }
   .custom-hero-title {

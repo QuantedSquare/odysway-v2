@@ -26,9 +26,9 @@
           class="d-flex flex-column align-start align-md-start justify-space-between ga-6"
         >
           <v-img
-            :src="img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })"
-            :lazy-src="img(footer.logo.image, { format: 'webp', quality: 10, width: 640 })"
-            :srcset="`${img(footer.logo.image, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(footer.logo.image, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+            :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 640 })"
+            :lazy-src="img(OdyswayFooter, { format: 'webp', quality: 10, width: 640 })"
+            :srcset="`${img(OdyswayFooter, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
             sizes="(max-width: 600px) 480px, 640px"
             loading="lazy"
             width="160"
@@ -68,18 +68,12 @@
             {{ footer.contact.ctaText }}
           </h5>
           <div class="d-flex justify-start align-center align-md-center ga-2">
-            <v-chip
-              :text="footer.contact.phone"
-              color="grey-light"
-              variant="flat"
-              class="font-weight-bold text-primary pb-1"
-            />
-            <v-chip
-              :text="footer.contact.email"
-              color="grey-light"
-              variant="flat"
-              class="font-weight-bold text-primary pb-1"
-            />
+            <div class="custom-chip font-weight-bold text-primary text-no-wrap">
+              {{ footer.contact.phone }}
+            </div>
+            <div class="custom-chip font-weight-bold text-primary text-no-wrap">
+              {{ footer.contact.email }}
+            </div>
           </div>
           <v-btn
             color="secondary"
@@ -213,6 +207,8 @@
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
+import OdyswayFooter from '~/assets/img/odysway-text.png'
+
 const { width } = useDisplay()
 const { footer } = useAppConfig()
 
@@ -253,5 +249,11 @@ const img = useImage()
 .v-footer.position-relative {
   position: relative;
   overflow: hidden;
+}
+.custom-chip {
+  background-color: rgba(var(--v-theme-grey-light-2));
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
 }
 </style>

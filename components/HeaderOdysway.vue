@@ -16,8 +16,8 @@
         :min-width="mdAndUp ? '150px' : '100px'"
         height="38"
         alt="Logo principale d'Odysway"
-        :src="img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })"
-        :srcset="`${img(header.logo.desktop, { format: 'webp', quality: 100, width: 320 })} 320w, ${img(header.logo.desktop, { format: 'webp', quality: 100, width: 640 })} 640w`"
+        :src="img(LogoOdyswayBleu, { format: 'webp', quality: 100, width: 320 })"
+        :srcset="`${img(LogoOdyswayBleu, { format: 'webp', quality: 100, width: 320 })} 320w, ${img(LogoOdyswayBleu, { format: 'webp', quality: 100, width: 640 })} 640w`"
         :sizes="mdAndUp ? '150px' : '100px'"
       />
     </NuxtLink>
@@ -116,6 +116,7 @@
 import { mdiMenu } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
+import LogoOdyswayBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const { header } = useAppConfig()
 

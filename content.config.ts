@@ -166,7 +166,9 @@ export default defineContentConfig({
         exclude: ['experiences/experiences.json'],
       },
       schema: z.object({
+        published: z.boolean().describe('Indique si l\'experience est publiée'),
         title: z.string().describe('Titre de l\'experience'),
+        badgeTitle: z.string().describe('Titre du badge de l\'experience'),
         slug: z.string().describe('Slug de l\'experience'),
         discoveryTitle: z.string().describe('Titre de l\'experience pour la page de découverte'),
         seoTitle: z.string().describe('Titre de l\'experience pour le SEO'),
