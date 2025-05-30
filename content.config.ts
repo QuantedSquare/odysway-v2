@@ -45,8 +45,11 @@ const categoriesChoices = categoriesFiles
   .filter(Boolean) as [string, ...string[]]
 console.log('categoriesChoices', categoriesChoices)
 
-const regionChoices = (JSON.parse(fs.readFileSync(path.resolve(__dirname, 'content/destinations/regions.json'), 'utf-8')) as Array<{ nom: string }>)
-  .map(region => region.nom) as [string, ...string[]]
+const regionDir = path.resolve(__dirname, 'content/regions')
+const regionFiles = fs.readdirSync(regionDir)
+const regionChoices = regionFiles
+  .map(file => JSON.parse(fs.readFileSync(path.join(regionDir, file), 'utf-8')).nom)
+  .filter(Boolean) as [string, ...string[]]
 console.log('regionChoices', regionChoices)
 
 const colorChoices = [
@@ -119,7 +122,6 @@ export default defineContentConfig({
       type: 'data',
       source: {
         include: 'categories/*/**.json',
-        exclude: ['categories/categories.json'],
       },
       schema: z.object({
         title: z.string().describe('Titre de la catégorie'),
@@ -163,7 +165,6 @@ export default defineContentConfig({
       type: 'data',
       source: {
         include: 'experiences/*/**.json',
-        exclude: ['experiences/experiences.json'],
       },
       schema: z.object({
         published: z.boolean().describe('Indique si l\'experience est publiée'),
@@ -230,11 +231,24 @@ export default defineContentConfig({
         isOnHome: z.boolean().describe('Afficher sur la page d\'accueil').optional(),
       }),
     }),
+    regions: defineCollection({
+      type: 'data',
+      source: 'regions/*.json',
+      schema: z.object({
+        nom: z.string(),
+        meta_description: z.string(),
+        slug: z.string(),
+        interjection: z.string(),
+        image: z.object({
+          src: z.string().editor({ input: 'media' }),
+          alt: z.string(),
+        }).describe('Image de la région'),
+      }),
+    }),
     destinations: defineCollection({
       type: 'data',
       source: {
         include: 'destinations/*/**.json',
-        exclude: ['destinations/regions.json'],
       },
       schema: z.object({
         titre: z.string().describe('Titre de la destination'),
@@ -252,6 +266,7 @@ export default defineContentConfig({
           src: z.string().editor({ input: 'media' }),
           alt: z.string(),
         }).describe('Image de la destination'),
+        isTopDestination: z.boolean().default(false).describe('Indique si la destination est un top destination'),
       }),
     }),
     destinationsContent: defineCollection(

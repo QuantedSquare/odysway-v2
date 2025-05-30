@@ -13,5 +13,6 @@
   "image": {
     "src": "/images/destinations/MIlPRzZcRkaycrIHPGag.jpg",
     "alt": "Image de la destination \"Ouzbékistan\""
-  }
+  },
+  "isTopDestination": false
 }

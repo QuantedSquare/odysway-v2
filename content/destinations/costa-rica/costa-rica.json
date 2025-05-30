@@ -3,7 +3,7 @@
   "chapka": 2,
   "iso": "CR",
   "interjection": "au",
-  "metaDescription": "Riche d’une biodiversité unique, le Costa Rica est un pays qui regorge de paysages sublimes et d'une faune incroyable. Découvrez nos séjours au plus près de la nature et des animaux ! ",
+  "metaDescription": "Riche d'une biodiversité unique, le Costa Rica est un pays qui regorge de paysages sublimes et d'une faune incroyable. Découvrez nos séjours au plus près de la nature et des animaux ! ",
   "published": true,
   "showOnHome": false,
   "slug": "costa-rica",
@@ -13,5 +13,6 @@
   "image": {
     "src": "/images/destinations/E6y6OnhT1WWv9oFKdMYE.jpg",
     "alt": "Image de la destination \"Costa Rica\""
-  }
+  },
+  "isTopDestination": false
 }
