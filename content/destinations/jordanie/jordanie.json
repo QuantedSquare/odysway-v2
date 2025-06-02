@@ -1,6 +1,6 @@
 {
   "titre": "Jordanie",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "JOR",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Jordanie !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "jordanie",
   "regions": [
-    "Moyen-Orient"
+    {
+      "nom": "Moyen-Orient"
+    }
   ],
   "image": {
     "src": "/images/destinations/I1AtzHTPyqLSTl9jKDZA.jpg",

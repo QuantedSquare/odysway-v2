@@ -1,6 +1,6 @@
 {
   "titre": "Pérou",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "PE",
   "interjection": "au",
   "metaDescription": "Envie de découvrir le Pérou autrement et loin des touristes ? Découvrez nos séjours uniques : visitez ses lieux mythiques et prenez le temps de vous imprégner des traditions préservées !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "perou",
   "regions": [
-    "Amérique du Sud"
+    {
+      "nom": "Amérique du Sud"
+    }
   ],
   "image": {
     "src": "/images/destinations/Gw72QyhsTYaK4EHDWQLo.jpg",

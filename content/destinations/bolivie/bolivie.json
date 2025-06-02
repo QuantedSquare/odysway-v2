@@ -1,6 +1,6 @@
 {
   "titre": "Bolivie",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "BOL",
   "interjection": "en",
   "metaDescription": "Partez en Bolivie, avec son patrimoine exceptionnel, sa nature fabuleuse et ses cultures ancestrales. Découvrez nos séjours uniques !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "bolivie",
   "regions": [
-    "Amérique du Sud"
+    {
+      "nom": "Amérique du Sud"
+    }
   ],
   "image": {
     "src": "/images/destinations/0hJyalh5TQ620yIh3aeP.jpg",

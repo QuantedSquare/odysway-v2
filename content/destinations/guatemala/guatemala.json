@@ -1,6 +1,6 @@
 {
   "titre": "Guatemala",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "GTM",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs en Guatemala !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "guatemala",
   "regions": [
-    "Amérique Centrale"
+    {
+      "nom": "Amérique Centrale"
+    }
   ],
   "image": {
     "src": "/images/destinations/R98uZsOUTrCmQzpY07D8.jpg",

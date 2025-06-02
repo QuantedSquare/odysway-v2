@@ -1,6 +1,6 @@
 {
   "titre": "Cambodge",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "KHM",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs en Cambodge !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "cambodge",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/ep07kBZURmfcxnq56UiH.jpg",

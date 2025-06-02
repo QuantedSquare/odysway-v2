@@ -1,6 +1,6 @@
 {
   "titre": "Norvège",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "NO",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Norvège !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "norvege",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/LjqLK2X9TEOkcuPrWMpS.jpg",

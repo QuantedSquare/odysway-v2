@@ -1,6 +1,6 @@
 {
   "titre": "Islande",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "ISL",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Islande !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "islande",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/h6nOKytR36QadpIDsaRw.jpg",

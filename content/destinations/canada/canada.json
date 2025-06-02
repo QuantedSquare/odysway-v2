@@ -1,6 +1,6 @@
 {
   "titre": "Canada",
-  "chapka": 3,
+  "chapka": "3",
   "iso": "CAN",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs au Canada !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "canada",
   "regions": [
-    "Amérique du Nord"
+    {
+      "nom": "Amérique du Nord"
+    }
   ],
   "image": {
     "src": "/images/destinations/6gquOf0jStlnEkXHeat4.jpg",

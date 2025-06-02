@@ -1,6 +1,6 @@
 {
   "titre": "Vietnam",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "VNM",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs au Vietnam !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "vietnam",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/S3Lv80MmRy63uZabtgnh.jpg",

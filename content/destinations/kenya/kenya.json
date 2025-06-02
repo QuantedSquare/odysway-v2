@@ -1,6 +1,6 @@
 {
   "titre": "Kenya",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "KEN",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs en Kenya !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "kenya",
   "regions": [
-    "Afrique"
+    {
+      "nom": "Afrique"
+    }
   ],
   "image": {
     "src": "/images/destinations/JrrP2ZAQeiFnSwQ75RIS.jpg",

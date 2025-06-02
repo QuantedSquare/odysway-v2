@@ -1,6 +1,6 @@
 {
   "titre": "Algérie",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "DZA",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Algérie !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "algerie",
   "regions": [
-    "Afrique"
+    {
+      "nom": "Afrique"
+    }
   ],
   "image": {
     "src": "/images/destinations/RKy5I9j0TtiK5k7zzqJr.jpg",

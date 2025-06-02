@@ -1,6 +1,6 @@
 {
   "titre": "Salvador",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "SLV",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs à Salvador !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "salvador",
   "regions": [
-    "Amérique Centrale"
+    {
+      "nom": "Amérique Centrale"
+    }
   ],
   "image": {
     "src": "/images/destinations/uhE3Uc3ITFSMWcgEaz9F.jpg",

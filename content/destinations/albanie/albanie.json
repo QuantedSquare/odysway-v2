@@ -1,6 +1,6 @@
 {
   "titre": "Albanie",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "AL",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Albanie !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "albanie",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/f2D01domReaHbUMtfSiF.jpg",

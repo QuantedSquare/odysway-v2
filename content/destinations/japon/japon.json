@@ -1,6 +1,6 @@
 {
   "titre": "Japon",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "JPN",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs en Japon !  ",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "japon",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/IqgfsH1yRTWrwIxz75PQ.jpg",

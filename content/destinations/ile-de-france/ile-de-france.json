@@ -1,6 +1,6 @@
 {
   "titre": "Ile de France",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "FR",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Ile de France !",
@@ -8,8 +8,12 @@
   "showOnHome": false,
   "slug": "ile-de-france",
   "regions": [
-    "Europe",
-    "France"
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
   ],
   "image": {
     "src": "/images/destinations/nFLyl4RzTECeX7l5rb21.jpg",

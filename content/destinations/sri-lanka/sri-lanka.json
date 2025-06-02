@@ -1,6 +1,6 @@
 {
   "titre": "Sri Lanka",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "LK",
   "interjection": "",
   "metaDescription": "Le Sri Lanka, une île exceptionnelle qui regorge de paysages sublimes. Découvrez nos séjours et immergez-vous dans une histoire et une culture où tous vos sens seront en éveil !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "sri-lanka",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/vFLMk0BRnm4ForgdUXec.jpg",

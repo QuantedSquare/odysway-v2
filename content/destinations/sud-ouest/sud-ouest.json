@@ -1,6 +1,6 @@
 {
   "titre": "Sud Ouest",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "FR",
   "interjection": "dans le",
   "metaDescription": "Découvrez la richesse de la Nouvelle-Aquitaine avec Odysway ! De la Charente-Maritime aux Pyrénées,  prenez le temps de vous immerger au cœur de cette belle région, entre mer et montagne.",
@@ -8,8 +8,12 @@
   "showOnHome": false,
   "slug": "sud-ouest",
   "regions": [
-    "Europe",
-    "France"
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
   ],
   "image": {
     "src": "/images/destinations/GhsiuK4RTba0t2f0egV4.jpg",

@@ -1,6 +1,6 @@
 {
   "titre": "Ouzbékistan",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "UZ",
   "interjection": "en",
   "metaDescription": "Au coeur de l'Asie centrale, l'Ouzbékistan est un pays unique en son genre. Avec Odysway, partez à la découverte de son histoire, ses mystères et vivez des expériences authentiques !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "ouzbekistan",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/MIlPRzZcRkaycrIHPGag.jpg",

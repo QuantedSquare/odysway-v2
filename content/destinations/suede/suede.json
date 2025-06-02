@@ -1,6 +1,6 @@
 {
   "titre": "Suède",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "SWE",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Suède !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "suède",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/CSWPoZooTJCk0GHQsOnU.jpg",

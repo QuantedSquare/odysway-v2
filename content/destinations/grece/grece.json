@@ -1,6 +1,6 @@
 {
   "titre": "Grèce",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "GR",
   "interjection": "en",
   "metaDescription": "Découvrez nos voyages en Grèce",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "grece",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/PTSydAluR3WEFhO8NujG.jpg",

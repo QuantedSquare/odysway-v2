@@ -1,6 +1,6 @@
 {
   "titre": "Madagascar",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "MDG",
   "interjection": "à",
   "metaDescription": "Envie d'un séjour authentique à Madagascar ? Avec les voyages Odysway, plongez dans la culture malagasy par les rencontres et immersions chez l'habitant ! ",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "madagascar",
   "regions": [
-    "Afrique"
+    {
+      "nom": "Afrique"
+    }
   ],
   "image": {
     "src": "/images/destinations/iyixOsdRiGgJTyOQWFmE.jpg",

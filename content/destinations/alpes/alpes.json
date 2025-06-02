@@ -1,6 +1,6 @@
 {
   "titre": "Alpes",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "FR",
   "interjection": "dans les",
   "metaDescription": "Partez découvrir la région Auvergne-Rhône-Alpes avec Oysway ! Des volcans auvergnats à la chaîne des Alpes en passant par l'Ardèche, explorer une région magnifique, connue pour ses montagnes et son terroir.",
@@ -8,8 +8,12 @@
   "showOnHome": false,
   "slug": "alpes",
   "regions": [
-    "Europe",
-    "France"
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
   ],
   "image": {
     "src": "/images/destinations/Jhs8ssZrSKmFtXNU4bIR.jpg",

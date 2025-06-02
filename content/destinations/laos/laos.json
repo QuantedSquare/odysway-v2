@@ -1,6 +1,6 @@
 {
   "titre": "Laos",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "LAO",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs en Laos !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "laos",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/rf5aeAyUSaWO31IcXRbC.jpg",

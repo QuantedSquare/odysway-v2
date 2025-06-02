@@ -1,6 +1,6 @@
 {
   "titre": "Espagne",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "ESP",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Espagne !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "espagne",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/I0Rb50xaQJ6E6SRnZJN4.jpg",

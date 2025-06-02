@@ -1,6 +1,6 @@
 {
   "titre": "Kirghizistan",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "KG",
   "interjection": "au",
   "metaDescription": "Entre lacs, vallées et cascades, le Kirghizistan offre des paysages à couper le souffle. Découvrez nos séjours uniques et plongez dans un environnement encore à l'état sauvage !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "kirghizistan",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/DceF8Jw3SSOIojoA6F49.jpg",

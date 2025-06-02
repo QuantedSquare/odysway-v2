@@ -1,6 +1,6 @@
 {
   "titre": "Népal",
-  "chapka": 3,
+  "chapka": "3",
   "iso": "NP",
   "interjection": "au",
   "metaDescription": "Depuis l'ouverture de ses frontières, le Népal suscite fascination et mystère. Avez nos séjours authentiques, prenez le temps de découvrir et vivre votre propre expérience du Népal !  ",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "nepal",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/QNDXpRTyKYX5HbK6HKQH.jpg",

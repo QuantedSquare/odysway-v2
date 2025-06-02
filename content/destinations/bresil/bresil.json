@@ -1,6 +1,6 @@
 {
   "titre": "Brésil",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "BR",
   "interjection": "au",
   "metaDescription": "Avec ses plages, sa musique et sa culture, le Brésil n'est plus à présenter. Avec Odysway, ressentez l'essence de ce pays au travers d'expériences au contact des locaux et de la nature ! ",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "bresil",
   "regions": [
-    "Amérique du Sud"
+    {
+      "nom": "Amérique du Sud"
+    }
   ],
   "image": {
     "src": "/images/destinations/9dpfaZhTT6G4zTJDGGOQ.jpg",

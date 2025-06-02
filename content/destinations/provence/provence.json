@@ -1,6 +1,6 @@
 {
   "titre": "Provence",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "FR",
   "interjection": "en",
   "metaDescription": "Partez explorer la région Provence-Alpes-Côte d'Azur avec Oysway ! De la Camargue à la French Riviera, vivez de belles aventures dans la région et découvrez la richesse de son savoir faire et son terroir.",
@@ -8,8 +8,12 @@
   "showOnHome": false,
   "slug": "provence",
   "regions": [
-    "Europe",
-    "France"
+    {
+      "nom": "Europe"
+    },
+    {
+      "nom": "France"
+    }
   ],
   "image": {
     "src": "/images/destinations/bRA5U5kTISqNQxHydGLe.jpg",

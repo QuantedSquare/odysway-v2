@@ -1,6 +1,6 @@
 {
   "titre": "Namibie",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "NAM",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Namibie !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "namibie",
   "regions": [
-    "Afrique"
+    {
+      "nom": "Afrique"
+    }
   ],
   "image": {
     "src": "/images/destinations/UMSwQy9nQvGDplpQ8gRP.jpg",

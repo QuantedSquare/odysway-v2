@@ -1,6 +1,6 @@
 {
   "titre": "Indonésie",
-  "chapka": 2,
+  "chapka": "2",
   "iso": "IDN",
   "interjection": "en",
   "metaDescription": "Découvrez nos séjours immersifs en Indonésie !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "indonesie",
   "regions": [
-    "Asie"
+    {
+      "nom": "Asie"
+    }
   ],
   "image": {
     "src": "/images/destinations/gHfOr4J2RiSftiRgHDzP.jpg",

@@ -1,6 +1,6 @@
 {
   "titre": "Portugal",
-  "chapka": 1,
+  "chapka": "1",
   "iso": "PRT",
   "interjection": "au",
   "metaDescription": "Découvrez nos séjours immersifs au Portugal !",
@@ -8,7 +8,9 @@
   "showOnHome": false,
   "slug": "portugal",
   "regions": [
-    "Europe"
+    {
+      "nom": "Europe"
+    }
   ],
   "image": {
     "src": "/images/destinations/Q8VyEBGMSrXotEzo2bus.jpg",
