@@ -202,7 +202,7 @@ export default defineContentConfig({
       schema: z.object({
         slug: z.string(),
         name: z.string().optional(),
-        image: z.string().optional(),
+        image: z.string().editor({ input: 'media' }).optional(),
         description: z.string().optional(),
         linkedin: z.string().optional(),
         position: z.string().optional(),
@@ -212,7 +212,7 @@ export default defineContentConfig({
       type: 'data',
       source: 'partenaires/**.json',
       schema: z.object({
-        imgSrc: z.string(),
+        imgSrc: z.string().editor({ input: 'media' }),
         description: z.string(),
         isOnHome: z.boolean(),
       }),
@@ -224,7 +224,7 @@ export default defineContentConfig({
         author: z.string().describe('Nom du voyageur').optional(),
         authorAge: z.string().describe('Age du voyageur').optional(),
         date: z.date().describe('Date de la review').optional(),
-        photo: z.string().describe('Photo du voyageur').optional(),
+        photo: z.string().editor({ input: 'media' }).describe('Photo du voyageur').optional(),
         rating: z.number().describe('Note attribuée au voyage ou à Odysway').optional(),
         text: z.string().describe('Texte de la review').optional(),
         voyageSlug: z.enum(voyageChoices).describe('Slug du voyage').optional(),
