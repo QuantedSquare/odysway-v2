@@ -2,23 +2,26 @@
   <v-app-bar
     elevation="0"
     mobile
-    :height="mdAndUp ? '90' : '60'"
-    class="px-4"
+    class="px-4 d-flex align-center height-app-bar"
     :class="!model ? 'app-bar-shadow' : ''"
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"
   >
     <NuxtLink
       :to="header.to"
+      class="header-logo-link"
     >
-      <img
+      <NuxtImg
+        :preload="{ fetchPriority: 'high' }"
+        format="webp"
+        quality="100"
         :src="LogoOdyswayBleu"
-        :min-width="mdAndUp ? '150px' : '100px'"
-        :height="mdAndUp ? '38' : '25'"
-        :width="mdAndUp ? '150' : '100'"
+        width="320"
         alt="Logo principale d'Odysway"
-      >
+        class="header-logo"
+      />
     </NuxtLink>
+
     <v-spacer />
     <div class="d-flex align-center ga-4">
       <!-- <template v-if="isConnected && user">
@@ -183,9 +186,35 @@ function captureOutboundLink(btn) {
   box-shadow: none!important;
   z-index: 10000!important;
 }
-@media screen and (max-width: 960px) {
+.height-app-bar{
+  height: 90px;
+}
+.header-logo-link {
+  display: flex;
+  align-items: center;
+}
+:deep(.v-toolbar__content){
+  height: 100%!important;
+}
+.header-logo {
+  width: 150px;
+  min-width: 100px;
+  max-width: 100%;
+  height: auto;
+  transition: width 0.2s;
+  display: block;
+}
+@media (max-width: 960px) {
   .app-bar-shadow:deep(){
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
   }
+  .header-logo {
+    width: 100px;
+    min-width: 60px;
+  }
+  .height-app-bar{
+  height: 60px;
+}
+
 }
 </style>

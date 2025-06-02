@@ -2,7 +2,7 @@
   <div class="mt-8 mt-md-0">
     <div class="relative-hero-section mb-16 rounded-xl">
       <v-img
-        :src="img(imageSrc, { format: 'webp', quality: 80, height: 900, width: 1536 })"
+        :src="img(imageSrc, { format: 'webp', quality: 100, height: 900, width: 1536 })"
         :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
         size="(max-width: 600) 480px, 1500px"
         :srcset="`${img(imageSrc, { format: 'webp', quality: 80, width: 640, height: 900 })} 480w, ${img(imageSrc, { format: 'webp', quality: 80, width: 1024, height: 900 })} 1500w`"
