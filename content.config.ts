@@ -140,7 +140,7 @@ export default defineContentConfig({
     categories: defineCollection({
       type: 'data',
       source: {
-        include: 'categories/*/**.json',
+        include: 'categories/*/*.json',
       },
       schema: z.object({
         title: z.string().describe('Titre de la catégorie'),
@@ -157,7 +157,7 @@ export default defineContentConfig({
     categoriesContent: defineCollection(
       asSeoCollection({
         type: 'page',
-        source: 'categories/*/**.md',
+        source: 'categories/*/*.md',
         schema: z.object({
           author: z.string(),
           authorPhoto: z.string(),
@@ -176,7 +176,7 @@ export default defineContentConfig({
     experiences: defineCollection({
       type: 'data',
       source: {
-        include: 'experiences/*/**.json',
+        include: 'experiences/*/*.json',
       },
       schema: z.object({
         published: z.boolean().describe('Indique si l\'experience est publiée'),
@@ -194,7 +194,7 @@ export default defineContentConfig({
     }),
     tops: defineCollection({
       type: 'data',
-      source: 'tops/**.json',
+      source: 'tops/*.json',
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
@@ -209,7 +209,7 @@ export default defineContentConfig({
     }),
     team: defineCollection({
       type: 'data',
-      source: 'team/**.json',
+      source: 'team/*.json',
       schema: z.object({
         slug: z.string(),
         name: z.string().optional(),
@@ -328,7 +328,7 @@ export default defineContentConfig({
           privatisationText: z.string().describe('Texte du bouton de privatisation sous le composant').default('Demander une privatisation de ce voyage'),
         }).describe('Section sticky a droite ou se trouvent les 3 premieres dates et CTAs'),
         authorNote: z.object({
-          title: z.string().describe('Titre de la note de auteur').default('En deux mots'),
+          title: z.string().optional().describe('Titre de la note de auteur').default('En deux mots'),
         }).describe('Note de auteur sous le hero/section photo, defini dans le dossier team'),
         experiencesBlock: z.object({
           title: z.string().describe('Titre de la section').default('Ce qui vous attend'),
@@ -426,7 +426,7 @@ export default defineContentConfig({
         groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
         privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
         customAvailable: z.boolean().describe('Indique si le voyage est disponible en sur-mesure'),
-        experienceType: z.enum(experienceChoices).describe('Type d\'experience'), // Leave empty
+        experienceType: z.enum(experienceChoices).optional().describe('Type d\'experience'), // Leave empty
         level: z.enum(['1', '2', '3']).describe('Niveau de difficulté'), // Leave empty
         categories: z.array(z.object({
           name: z.enum(categoriesChoices),
@@ -448,9 +448,9 @@ export default defineContentConfig({
         miniatureDisplay: z.enum(['Note moyenne', 'Nouveau', 'Last minute', 'Early bird']).describe('Type de badge affiché sur miniature, (aucun si vide)'),
         // ==========================================
         authorNote: z.object({
-          text: z.string().describe('Texte de la note de auteur'),
-          author: z.enum(teamChoices).describe('Auteur de la note defini dans le fichier team.json'), // use nom_auteur_description
-          affixeAuthor: z.string().describe('Texte/Rôle apres le poste de auteur, ex: "et amoureux de la vallee d\'Aspe"'),
+          text: z.string().optional().describe('Texte de la note de auteur'),
+          author: z.enum(teamChoices).optional().describe('Auteur de la note defini dans le fichier team.json'), // use nom_auteur_description
+          affixeAuthor: z.string().optional().describe('Texte/Rôle apres le poste de auteur, ex: "et amoureux de la vallee d\'Aspe"'),
         }).describe('Note de auteur sous le hero/section photo, defini dans le dossier team'),
         // Ce qui vous attend
         experiencesBlock: z.array(z.string()).describe('Liste des plus du voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
@@ -463,7 +463,7 @@ export default defineContentConfig({
         // ==========================================
         badgeSection: z.object({
           experienceBadge: z.object({
-            text: z.enum(experienceBadgeChoices).describe('Texte du badge experience placé en premier'),
+            text: z.enum(experienceBadgeChoices).optional().describe('Texte du badge experience placé en premier'),
             color: z.enum(colorChoices).describe('Couleur du premier badge'),
             visible: z.boolean().describe('Indique si le badge est visible'),
           }),
