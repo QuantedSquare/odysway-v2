@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -480,7 +480,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-chamanique-perou",
     "ogTitle": "Rencontre avec un chamane et immersion dans la vallée sacrée des Incas au Pérou",

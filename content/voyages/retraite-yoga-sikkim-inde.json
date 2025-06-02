@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -436,7 +436,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",
     "canonicalUrl": "https://www.odysway.com/voyages/retraite-yoga-sikkim-inde",
     "ogTitle": "Retraite Himalayenne : méditation et yoga au cœur du Sikkim",

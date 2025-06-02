@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -381,7 +381,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyagez en terre chamane en Mongolie",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-chamane-mongolie",
     "ogTitle": "Voyagez en terre chamane en Mongolie",

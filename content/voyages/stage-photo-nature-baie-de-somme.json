@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -267,7 +267,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Stage photo en baie de Somme pour immortaliser la vie sauvage",
     "canonicalUrl": "https://www.odysway.com/voyages/stage-photo-nature-baie-de-somme",
     "ogTitle": "Stage photo en baie de Somme pour immortaliser la vie sauvage",

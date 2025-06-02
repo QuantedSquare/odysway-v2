@@ -4,7 +4,7 @@
   "destinations": [],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -345,7 +345,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Occupez-vous des félins en Afrique du Sud",
     "canonicalUrl": "https://www.odysway.com/voyages/felins-afrique-du-sud",
     "ogTitle": "Occupez-vous des félins en Afrique du Sud",

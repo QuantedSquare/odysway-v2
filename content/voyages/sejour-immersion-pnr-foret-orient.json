@@ -4,7 +4,7 @@
   "destinations": [],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -237,7 +237,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Immergez-vous dans le Parc naturel de la Forêt d'Orient",
     "canonicalUrl": "https://www.odysway.com/voyages/sejour-immersion-pnr-foret-orient",
     "ogTitle": "Immergez-vous dans le Parc naturel de la Forêt d'Orient",

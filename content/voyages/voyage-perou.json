@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -468,7 +468,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-perou",
     "ogTitle": "Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca",

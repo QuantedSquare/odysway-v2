@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -454,7 +454,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Trek au Népal : Tour des Annapurnas et Lac Tilicho ",
     "canonicalUrl": "https://www.odysway.com/voyages/trek-tour-annapurna-nepal",
     "ogTitle": "Trek au Népal : Tour des Annapurnas et Lac Tilicho ",

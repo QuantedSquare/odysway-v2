@@ -17,7 +17,7 @@
       <WhatsAppBtn />
     </div>
 
-    <LazyTopTravelsTabs />
+    <LazyTopTravelsTabs class="px-2" />
 
     <FooterOdysway />
   </v-app>

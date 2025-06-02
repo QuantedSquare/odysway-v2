@@ -13,7 +13,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -427,7 +427,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Du Laos au Cambodge, voyage à la croisée des cultures",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-culturel-laos-cambodge",
     "ogTitle": "Du Laos au Cambodge, voyage à la croisée des cultures",

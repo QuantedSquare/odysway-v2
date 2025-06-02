@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -429,7 +429,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",
     "canonicalUrl": "https://www.odysway.com/voyages/inde-arunachal-pradesh",
     "ogTitle": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",

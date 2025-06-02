@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -320,7 +320,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
     "canonicalUrl": "https://www.odysway.com/voyages/randonnee-baikal-hiver",
     "ogTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",

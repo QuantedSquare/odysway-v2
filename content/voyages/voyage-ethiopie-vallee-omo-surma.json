@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -268,7 +268,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyagez sur la terre des premiers hommes en Éthiopie",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-ethiopie-vallee-omo-surma",
     "ogTitle": "Voyagez sur la terre des premiers hommes en Éthiopie",

@@ -35,7 +35,22 @@ const destinationChoices = destinationFolders
 console.log('destinationChoices', destinationChoices)
 
 // TODO
-const experienceChoices = ['Dans la peau de...', 'En immersion chez...', 'Dans l\'objectif de...'] as const
+const experienceDir = path.resolve(__dirname, 'content/experiences')
+const experienceFolders = fs.readdirSync(experienceDir).filter(
+  name => fs.statSync(path.join(experienceDir, name)).isDirectory(),
+)
+const experienceChoices = experienceFolders.flatMap((folder) => {
+  const folderPath = path.join(experienceDir, folder)
+  const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.json'))
+  return files.map((file) => {
+    const jsonPath = path.join(folderPath, file)
+    if (fs.existsSync(jsonPath)) {
+      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).title
+    }
+    return null
+  })
+}).filter(Boolean) as [string, ...string[]]
+console.log('experienceChoices', experienceChoices)
 
 // Modifit
 const categoriesDir = path.resolve(__dirname, 'content/categories')
@@ -555,7 +570,7 @@ export default defineContentConfig({
             answer: z.string().describe('Réponse'),
           })).describe('Liste des questions / réponses'),
         }).describe('Section FAQ'),
-        seo: z.object({
+        seoSection: z.object({
           metaTitle: z.string().describe('Meta Title for SEO'),
           canonicalUrl: z.string().describe('Canonical URL'),
           ogTitle: z.string().describe('Open Graph Title'),
@@ -572,7 +587,14 @@ export default defineContentConfig({
           }).describe('Image de l\'og, utilise la photo principale si vide'),
           twitterCard: z.enum(['summary', 'summary_large_image', 'app', 'player']).describe('Twitter Card Type'),
         }).describe('SEO'),
-        // navigation: z.object({
+        seo: z.object({
+          title: z.string().describe('Titre de la page'),
+        }).editor({ hidden: true }),
+        navigation: z.object({
+          title: z.string().describe('Titre de la section'),
+          description: z.string().describe('Description de la section'),
+          icon: z.string().describe('Icone de la section'),
+        }).describe('Section navigation').editor({ hidden: true }),
         // ==========================================
       }),
     }),

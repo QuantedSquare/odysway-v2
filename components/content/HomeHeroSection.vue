@@ -21,7 +21,7 @@
         </template>
 
         <!-- Gradient overlay -->
-        <div class="gradient-overlay" />
+        <!-- <div class="gradient-overlay" /> -->
 
         <div class="h-100 d-flex align-center position-relative">
           <v-container class="text-white text-h4 text-md-h2 font-weight-bold text-shadow text-center">
@@ -89,7 +89,7 @@ const img = useImage()
   font-size: 10.9cqw;
   text-align: start;
 }
-.gradient-overlay {
+/* .gradient-overlay {
   position: absolute;
   top: -600px;
   left: -100px;
@@ -100,7 +100,7 @@ const img = useImage()
     linear-gradient(227.83deg, rgba(219, 102, 68, 0) 72.77%, v-bind(secondaryColor) 97.79%),
     linear-gradient(311.34deg, v-bind(tertiaryColor) 12.5%, rgba(240, 179, 72, 0) 29.18%);
   pointer-events: none;
-}
+} */
 .relative-hero-section {
  position:relative;
  height: 80vh;

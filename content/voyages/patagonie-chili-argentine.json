@@ -13,7 +13,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -445,7 +445,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Au bout du monde en Patagonie, terre de feu et de glace",
     "canonicalUrl": "https://www.odysway.com/voyages/patagonie-chili-argentine",
     "ogTitle": "Au bout du monde en Patagonie, terre de feu et de glace",

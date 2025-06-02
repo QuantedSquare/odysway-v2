@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -264,7 +264,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Initiation à l'observation astronomique en Corse",
     "canonicalUrl": "https://www.odysway.com/voyages/sejour-astronomie-corse",
     "ogTitle": "Initiation à l'observation astronomique en Corse",

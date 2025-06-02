@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -306,7 +306,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "La Grande aventure : Challenge solidaire en immersion au Maroc",
     "canonicalUrl": "https://www.odysway.com/voyages/competition-solidaire-maroc",
     "ogTitle": "La Grande aventure : Challenge solidaire en immersion au Maroc",

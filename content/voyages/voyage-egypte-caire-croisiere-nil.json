@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -438,7 +438,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-egypte-caire-croisiere-nil",
     "ogTitle": "Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil",

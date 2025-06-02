@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -390,7 +390,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersif-vietnam",
     "ogTitle": "Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale",

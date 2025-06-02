@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -415,7 +415,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Karen et plages de rêve",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersif-thailande",
     "ogTitle": "Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Karen et plages de rêve",

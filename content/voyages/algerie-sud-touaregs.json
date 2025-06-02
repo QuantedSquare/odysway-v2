@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -355,7 +355,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie",
     "canonicalUrl": "https://www.odysway.com/voyages/algerie-sud-touaregs",
     "ogTitle": "Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie",

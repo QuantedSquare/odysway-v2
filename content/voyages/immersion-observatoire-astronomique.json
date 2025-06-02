@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -388,7 +388,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Immersion au cœur d'un observatoire astronomique",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-observatoire-astronomique",
     "ogTitle": "Immersion au cœur d'un observatoire astronomique",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -313,7 +313,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyagez comme un trappeur en Finlande",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-trappeur-finlande",
     "ogTitle": "Voyagez comme un trappeur en Finlande",

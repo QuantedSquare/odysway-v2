@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -364,7 +364,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Trek chez l'habitant sur l'île de Santo Antão au Cap-Vert",
     "canonicalUrl": "https://www.odysway.com/voyages/trek-chez-lhabitant-cap-vert",
     "ogTitle": "Trek chez l'habitant sur l'île de Santo Antão au Cap-Vert",

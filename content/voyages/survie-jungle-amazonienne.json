@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -437,7 +437,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Immersion brésilienne et survie dans la jungle amazonienne",
     "canonicalUrl": "https://www.odysway.com/voyages/survie-jungle-amazonienne",
     "ogTitle": "Immersion brésilienne et survie dans la jungle amazonienne",

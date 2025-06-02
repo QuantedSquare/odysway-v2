@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -464,7 +464,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Immersion culturelle à travers les paysages spectaculaires de Madagascar",
     "canonicalUrl": "https://www.odysway.com/voyages/madagascar-immersion-culturelle",
     "ogTitle": "Immersion culturelle à travers les paysages spectaculaires de Madagascar",

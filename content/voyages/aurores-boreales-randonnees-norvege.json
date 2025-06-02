@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -357,7 +357,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Observez les aurores boréales en Laponie Norvégienne",
     "canonicalUrl": "https://www.odysway.com/voyages/aurores-boreales-randonnees-norvege",
     "ogTitle": "Observez les aurores boréales en Laponie Norvégienne",

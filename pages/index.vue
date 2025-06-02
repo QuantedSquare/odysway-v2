@@ -12,10 +12,7 @@
 
 <script setup>
 const page = await queryCollection('content').path('/').first()
-console.log(page)
-// const { data: page } = await useAsyncData(route.path, () => {
-//   return queryCollection('content').path('/').first()
-// })
+
 if (page) {
   defineOgImageComponent(page.ogImage?.component, {
     title: page.ogImage?.props.title,

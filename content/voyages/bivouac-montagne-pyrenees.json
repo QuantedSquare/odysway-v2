@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "2",
   "categories": [
     {
@@ -256,7 +256,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Initiation au bivouac en montagne dans les Pyrénées",
     "canonicalUrl": "https://www.odysway.com/voyages/bivouac-montagne-pyrenees",
     "ogTitle": "Initiation au bivouac en montagne dans les Pyrénées",

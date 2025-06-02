@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -295,7 +295,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "En immersion avec un photographe animalier dans les Vosges",
     "canonicalUrl": "https://www.odysway.com/voyages/photographie-animaliere-vosges",
     "ogTitle": "En immersion avec un photographe animalier dans les Vosges",

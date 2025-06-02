@@ -1,74 +1,64 @@
 <template>
-  <ColorContainer color="primary">
-    <v-container v-if="tops">
-      <v-row
-        align="center"
-      >
-        <v-col
-          cols="12"
-          class="text-h3 font-weight-bold my-4"
-        >
-          Des idées pour vos prochains voyages
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <v-tabs
-            v-model="currentTab"
-            class="text-grey position-relative mb-6"
-            color="white"
-          >
-            <v-divider
-              class="absolute-divider"
-              thickness="2"
-            />
+  <v-container
+    class="custom-rounded rounded-lg  px-8 py-md-8 mt-4 mt-md-8 bg-primary"
+  >
+    <div class="text-h3 font-weight-bold my-4">
+      Des idées pour vos prochains voyages
+    </div>
 
-            <v-tab
-              v-for="top, index in tops"
-              :key="index"
-              :value="index"
-            >
-              <span class="font-weight-bold">
-                {{ top.title }}
-              </span>
-            </v-tab>
-          </v-tabs>
-          <v-tabs-window
-            v-model="currentTab"
+    <v-tabs
+      v-model="currentTab"
+      class="text-grey position-relative mb-6"
+      color="white"
+    >
+      <v-divider
+        class="absolute-divider"
+        thickness="2"
+      />
+
+      <v-tab
+        v-for="top, index in tops"
+        :key="index"
+        :value="index"
+      >
+        <span class="font-weight-bold">
+          {{ top.title }}
+        </span>
+      </v-tab>
+    </v-tabs>
+    <v-tabs-window
+      v-model="currentTab"
+    >
+      <v-tabs-window-item
+        v-for="tab, index in tops[currentTab].contenuOnglet"
+        :key="`${tab.title}-${index}`"
+        :value="index"
+      >
+        <v-row class="mb-16 pb-16">
+          <v-col
+            v-for="top, f in tops[currentTab].contenuOnglet"
+            :key="`${top.title}-${f}`"
+            cols="6"
+            md="3"
           >
-            <v-tabs-window-item
-              v-for="tab, index in tops[currentTab].contenuOnglet"
-              :key="`${tab.title}-${index}`"
-              :value="index"
-            >
-              <v-row class="mb-16 pb-16">
-                <v-col
-                  v-for="top, f in tops[currentTab].contenuOnglet"
-                  :key="`${top.title}-${f}`"
-                  cols="6"
-                  md="3"
-                >
-                  <h5 class="text-h4 font-weight-bold mb-10 ">
-                    {{ top.title }}
-                  </h5>
-                  <div class="d-flex flex-column ga-2">
-                    <NuxtLink
-                      v-for="link, i in top.linksList"
-                      :key="`${link.slug}-${i}`"
-                      :to="`/voyages/${link.slug}`"
-                      class="text-grey line-clamp-2"
-                    >
-                      {{ link.title }}
-                    </NuxtLink>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-tabs-window-item>
-          </v-tabs-window>
-        </v-col>
-      </v-row>
-    </v-container>
-  </ColorContainer>
+            <h5 class="text-h4 font-weight-bold mb-10 ">
+              {{ top.title }}
+            </h5>
+            <div class="d-flex flex-column ga-2">
+              <NuxtLink
+                v-for="link, i in top.linksList"
+                :key="`${link.slug}-${i}`"
+                :to="`/voyages/${link.slug}`"
+                class="text-grey line-clamp-2"
+              >
+                {{ link.title }}
+              </NuxtLink>
+            </div>
+          </v-col>
+        </v-row>
+      </v-tabs-window-item>
+    </v-tabs-window>
+  </v-container>
 </template>
 
 <script setup>
@@ -90,5 +80,10 @@ const tops = await queryCollection('tops').all()
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+}
+@media (max-width: 960px) {
+  .custom-rounded {
+    border-radius: 0px!important;
+  }
 }
 </style>

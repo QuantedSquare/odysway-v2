@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -407,7 +407,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wadi Rum",
     "canonicalUrl": "https://www.odysway.com/voyages/jordanie-bedouins-petra-wadirum",
     "ogTitle": "Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wadi Rum",

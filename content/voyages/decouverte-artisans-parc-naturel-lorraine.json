@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -269,7 +269,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Viticultrice et souffleur de verre, rencontrez les artisans lorrains",
     "canonicalUrl": "https://www.odysway.com/voyages/decouverte-artisans-parc-naturel-lorraine",
     "ogTitle": "Viticultrice et souffleur de verre, rencontrez les artisans lorrains",

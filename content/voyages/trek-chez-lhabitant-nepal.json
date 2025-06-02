@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -521,7 +521,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Trek chez l'habitant au Népal, au fil des villages Sherpas",
     "canonicalUrl": "https://www.odysway.com/voyages/trek-chez-lhabitant-nepal",
     "ogTitle": "Trek chez l'habitant au Népal, au fil des villages Sherpas",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -274,7 +274,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Immersion hivernale en terre béarnaise",
     "canonicalUrl": "https://www.odysway.com/voyages/sejour-hiver-pyrenees",
     "ogTitle": "Immersion hivernale en terre béarnaise",

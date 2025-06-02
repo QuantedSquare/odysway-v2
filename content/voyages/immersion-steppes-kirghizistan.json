@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -389,7 +389,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-steppes-kirghizistan",
     "ogTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",

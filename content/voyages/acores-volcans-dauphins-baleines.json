@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -369,7 +369,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "L’appel des Açores entre volcans, dauphins, baleines et cachalots ",
     "canonicalUrl": "https://www.odysway.com/voyages/acores-volcans-dauphins-baleines",
     "ogTitle": "L’appel des Açores entre volcans, dauphins, baleines et cachalots ",

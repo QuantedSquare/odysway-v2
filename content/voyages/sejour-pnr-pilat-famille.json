@@ -4,7 +4,7 @@
   "destinations": [],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -242,7 +242,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Goutez l'aventure Pilat en famille",
     "canonicalUrl": "https://www.odysway.com/voyages/sejour-pnr-pilat-famille",
     "ogTitle": "Goutez l'aventure Pilat en famille",

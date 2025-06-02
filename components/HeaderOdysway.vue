@@ -16,6 +16,7 @@
         :src="LogoOdyswayBleu"
         :min-width="mdAndUp ? '150px' : '100px'"
         height="38"
+        width="150"
         alt="Logo principale d'Odysway"
       >
     </NuxtLink>

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -355,7 +355,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-culture-albanie",
     "ogTitle": "Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise",

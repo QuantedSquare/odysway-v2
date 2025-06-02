@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -422,7 +422,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersif-vietnam-lan-ha",
     "ogTitle": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",

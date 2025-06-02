@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -303,7 +303,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "En vélo électrique, à la rencontre des producteurs locaux dans le Vexin",
     "canonicalUrl": "https://www.odysway.com/voyages/velo-electrique-rencontre-producteurs-vexin",
     "ogTitle": "En vélo électrique, à la rencontre des producteurs locaux dans le Vexin",

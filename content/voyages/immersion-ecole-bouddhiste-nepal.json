@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -390,7 +390,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Au cœur du Népal entre randonnées et immersion dans un monastère",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-ecole-bouddhiste-nepal",
     "ogTitle": "Au cœur du Népal entre randonnées et immersion dans un monastère",

@@ -179,7 +179,6 @@
 import dayjs from 'dayjs'
 import { ref, computed } from 'vue'
 import { mdiEarth, mdiMapMarker, mdiThumbUpOutline } from '@mdi/js'
-import { useDisplay } from 'vuetify'
 import _ from 'lodash'
 import { useImage } from '#imports'
 
@@ -193,7 +192,7 @@ const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
 const showDestinationsCarousel = ref(false)
-const search = ref('')
+const search = useState('search', () => route.query.destination || null)
 
 const { data: destinations, status } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
@@ -201,8 +200,7 @@ const { data: destinations, status } = useAsyncData('destinations', () => {
 const { data: regions, status: regionsStatus } = useAsyncData('regions', () => {
   return queryCollection('regions').select('nom', 'slug', 'meta_description').all()
 })
-console.log('regions', regions.value)
-console.log('destinations', destinations.value)
+
 const mappedDestinationsToRegions = computed(() => {
   if (!regions.value || !destinations.value) return []
   // Create Top destination pseudo-region
@@ -222,11 +220,9 @@ const mappedDestinationsToRegions = computed(() => {
       destinations: destinations.value.filter(d => d.regions.some(r => r === region.nom)),
     }
   })
-  console.log('topRegion', topRegion)
   // Prepend Top destination region if there are any
   return topDestinations.length > 0 ? [topRegion, ...regionGroups] : regionGroups
 })
-console.log('mappedDestinationsToRegions', mappedDestinationsToRegions.value)
 
 const travelTypes = [
   'Voyage individuel', 'Voyage en groupe',
@@ -287,7 +283,6 @@ function aggregateDestinations(mappedRegions, query) {
 }
 
 function filteredDestinationsForRegion(region, query, item) {
-  console.log('region', region, 'item', item)
   // Only show destinations that match the query, deduplicated and aggregated
   const searchText = normalize(query)
   if (!query || normalize(region.title).includes(searchText)) {
@@ -351,8 +346,10 @@ const filteredRegions = computed(() => {
 
 function searchFn() {
   const query = {}
+
   if (destinationChoice.value) {
-    query.destination = search.value
+    const value = destinations.value.find(d => d.titre === destinationChoice.value).slug
+    query.destination = value
   }
   if (travelTypeChoice.value) {
     query.travelType = travelTypeChoice.value
@@ -373,11 +370,11 @@ function searchFn() {
 function selectDestination(item) {
   destinationChoice.value = item.titre
   search.value = item.slug
+  console.log('item', item.slug)
   setTimeout(() => {
     const input = document.querySelector(`#${id}`)
     if (input) input.blur()
   }, 0)
-  console.log('destinationChoice', destinationChoice.value)
 }
 
 function clearDestination() {

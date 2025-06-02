@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -312,7 +312,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-dauphins-egypte",
     "ogTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",

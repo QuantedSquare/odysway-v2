@@ -73,7 +73,7 @@
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
           </h5>
-          <div class="d-flex justify-start align-center align-md-center ga-2">
+          <div class="d-flex flex-column flex-md-row justify-start align-center align-md-center ga-2">
             <div class="custom-chip font-weight-bold text-primary text-no-wrap">
               {{ footer.contact.phone }}
             </div>

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -405,7 +405,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Stage boxe thaï en immersion dans le nord de la Thaïlande",
     "canonicalUrl": "https://www.odysway.com/voyages/stage-boxe-thai-nord-thailande",
     "ogTitle": "Stage boxe thaï en immersion dans le nord de la Thaïlande",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -332,7 +332,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Partagez le quotidien des nomades des steppes mongoles",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-nomades-mongolie",
     "ogTitle": "Partagez le quotidien des nomades des steppes mongoles",

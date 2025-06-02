@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [],
   "duration": 0,
@@ -325,7 +325,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Awaken your own nature - BaseQamp",
     "canonicalUrl": "https://www.odysway.com/voyages/trip-awaken-base-qamp-india",
     "ogTitle": "Awaken your own nature - BaseQamp",

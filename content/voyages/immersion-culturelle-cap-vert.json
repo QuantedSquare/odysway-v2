@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -448,7 +448,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-culturelle-cap-vert",
     "ogTitle": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",

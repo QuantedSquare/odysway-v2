@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -430,7 +430,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
     "canonicalUrl": "https://www.odysway.com/voyages/bali-menjangan-sidemen",
     "ogTitle": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",

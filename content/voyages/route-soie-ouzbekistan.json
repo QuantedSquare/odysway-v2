@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -378,7 +378,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "À la rencontre des habitants de la route de la soie en Ouzbékistan",
     "canonicalUrl": "https://www.odysway.com/voyages/route-soie-ouzbekistan",
     "ogTitle": "À la rencontre des habitants de la route de la soie en Ouzbékistan",

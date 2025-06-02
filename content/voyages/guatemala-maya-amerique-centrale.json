@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -386,7 +386,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Mystères de la culture Maya au Guatemala",
     "canonicalUrl": "https://www.odysway.com/voyages/guatemala-maya-amerique-centrale",
     "ogTitle": "Mystères de la culture Maya au Guatemala",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -379,7 +379,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Découvrez l'art de la photo animalière dans le Jura",
     "canonicalUrl": "https://www.odysway.com/voyages/decouvrez-photo-animaliere-jura",
     "ogTitle": "Découvrez l'art de la photo animalière dans le Jura",

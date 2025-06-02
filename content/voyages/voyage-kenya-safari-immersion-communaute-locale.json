@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -352,7 +352,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-kenya-safari-immersion-communauté-locale",
     "ogTitle": "En immersion dans les villages traditionnels du Kenya et safari dans le Masai Mara",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -428,7 +428,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-colombie",
     "ogTitle": "Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó",

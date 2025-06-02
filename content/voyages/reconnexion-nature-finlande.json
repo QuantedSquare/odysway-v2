@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -340,7 +340,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Aventure éco responsable et reconnexion à la nature en Finlande",
     "canonicalUrl": "https://www.odysway.com/voyages/reconnexion-nature-finlande",
     "ogTitle": "Aventure éco responsable et reconnexion à la nature en Finlande",

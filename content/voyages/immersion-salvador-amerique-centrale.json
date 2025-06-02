@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -355,7 +355,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Au cœur de la vie locale du Salvador",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-salvador-amerique-centrale",
     "ogTitle": "Au cœur de la vie locale du Salvador",

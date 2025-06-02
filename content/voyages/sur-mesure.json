@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [],
   "duration": 0,
@@ -109,7 +109,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyage sur-mesure en Jordanie",
     "canonicalUrl": "https://www.odysway.com/voyages/sur-mesure",
     "ogTitle": "Voyage sur-mesure en Jordanie",

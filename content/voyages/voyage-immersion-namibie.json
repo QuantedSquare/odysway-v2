@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -398,7 +398,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Dans la peau d’un Ranger : immersion au cœur d’une réserve en Namibie",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-namibie",
     "ogTitle": "Dans la peau d’un Ranger : immersion au cœur d’une réserve en Namibie",

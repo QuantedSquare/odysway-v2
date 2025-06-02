@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -399,7 +399,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Partez à la rencontre des berbères dans le Sud du Maroc",
     "canonicalUrl": "https://www.odysway.com/voyages/rencontre-berberes-sud-maroc",
     "ogTitle": "Partez à la rencontre des berbères dans le Sud du Maroc",

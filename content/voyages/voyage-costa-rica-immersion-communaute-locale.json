@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -371,7 +371,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-costa-rica-immersion-communauté-locale",
     "ogTitle": "Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri",

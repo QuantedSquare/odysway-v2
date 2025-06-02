@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -392,7 +392,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-culturelle-japon",
     "ogTitle": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -437,7 +437,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyagez hors des sentiers battus au Sri Lanka (été)",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-ete-sri-lanka",
     "ogTitle": "Voyagez hors des sentiers battus au Sri Lanka (été)",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -295,7 +295,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Séjour multi-activités en Laponie suédoise",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-hiver-activités-suède",
     "ogTitle": "Séjour multi-activités en Laponie suédoise",

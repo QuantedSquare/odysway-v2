@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -359,7 +359,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-egypte-croisiere-nil",
     "ogTitle": "Louxor, Vallée des Rois et croisière intimiste sur le Nil en Égypte",

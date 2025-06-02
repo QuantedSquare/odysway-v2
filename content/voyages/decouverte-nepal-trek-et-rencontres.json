@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -456,7 +456,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "A la découverte du Népal : randonnées accessibles et immersion locale",
     "canonicalUrl": "https://www.odysway.com/voyages/decouverte-nepal-trek-et-rencontres",
     "ogTitle": "A la découverte du Népal : randonnées accessibles et immersion locale",

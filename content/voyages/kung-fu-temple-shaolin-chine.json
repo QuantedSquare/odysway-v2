@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -387,7 +387,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Initiez-vous au Kung Fu dans un temple Shaolin",
     "canonicalUrl": "https://www.odysway.com/voyages/kung-fu-temple-shaolin-chine",
     "ogTitle": "Initiez-vous au Kung Fu dans un temple Shaolin",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -440,7 +440,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les rencontres authentiques (hiver)",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-insolite-sri-lanka",
     "ogTitle": "Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les rencontres authentiques (hiver)",

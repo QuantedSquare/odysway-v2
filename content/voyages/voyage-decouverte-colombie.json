@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -391,7 +391,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Découvrez la Colombie au cœur des traditions et des rencontres",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-decouverte-colombie",
     "ogTitle": "Découvrez la Colombie au cœur des traditions et des rencontres",

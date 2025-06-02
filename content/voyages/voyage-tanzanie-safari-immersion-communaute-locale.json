@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -389,7 +389,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-tanzanie-safari-immersion-communauté-locale",
     "ogTitle": "La Tanzanie entre immersion culturelle, safaris et évasion à Zanzibar",

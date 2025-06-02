@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -419,7 +419,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Occupez-vous des animaux de la jungle au Costa Rica",
     "canonicalUrl": "https://www.odysway.com/voyages/refuge-animaux-costa-rica",
     "ogTitle": "Occupez-vous des animaux de la jungle au Costa Rica",

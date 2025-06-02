@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -393,7 +393,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-trek-sikkim-himalaya",
     "ogTitle": "Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya",

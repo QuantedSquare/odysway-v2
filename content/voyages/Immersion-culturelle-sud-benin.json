@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -467,7 +467,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Bénin, rencontres et traditions au pays vodoun",
     "canonicalUrl": "https://www.odysway.com/voyages/Immersion-culturelle-sud-benin",
     "ogTitle": "Bénin, rencontres et traditions au pays vodoun",

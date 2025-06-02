@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -436,7 +436,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Explorez les incontournables de Bali entre plages, rizières et volcan ",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-bali-immersion-incontournables",
     "ogTitle": "Explorez les incontournables de Bali entre plages, rizières et volcan ",

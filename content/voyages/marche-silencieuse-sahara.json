@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -347,7 +347,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Marche silencieuse et immersion nomade dans le sahara marocain",
     "canonicalUrl": "https://www.odysway.com/voyages/marche-silencieuse-sahara",
     "ogTitle": "Marche silencieuse et immersion nomade dans le sahara marocain",

@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -343,7 +343,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Expédition sauvage en Roumanie : sur les traces des ours des Carpates",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-ours-roumanie",
     "ogTitle": "Expédition sauvage en Roumanie : sur les traces des ours des Carpates",

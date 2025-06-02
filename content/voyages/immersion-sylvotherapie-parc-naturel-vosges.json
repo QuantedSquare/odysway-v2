@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -222,7 +222,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",
     "canonicalUrl": "https://www.odysway.com/voyages/immersion-sylvotherapie-parc-naturel-vosges",
     "ogTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",

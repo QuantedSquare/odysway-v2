@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -373,7 +373,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Observez dauphins et baleines sur les îles Canaries",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-dauphins-baleines-espagne",
     "ogTitle": "Observez dauphins et baleines sur les îles Canaries",

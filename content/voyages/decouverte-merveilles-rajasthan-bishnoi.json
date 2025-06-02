@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -416,7 +416,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Au fil du Rajasthan : découverte et immersion chez les Bishnoïs",
     "canonicalUrl": "https://www.odysway.com/voyages/decouverte-merveilles-rajasthan-bishnoi",
     "ogTitle": "Au fil du Rajasthan : découverte et immersion chez les Bishnoïs",

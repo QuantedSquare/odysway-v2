@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -357,7 +357,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Voyage au Laos : rencontres avec les éléphants et communautés locales",
     "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-laos-elephants",
     "ogTitle": "Voyage au Laos : rencontres avec les éléphants et communautés locales",

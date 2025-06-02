@@ -9,7 +9,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "experienceType": "En immersion chez...",
+  "experienceType": "",
   "level": "1",
   "categories": [
     {
@@ -281,7 +281,7 @@
       }
     ]
   },
-  "seo": {
+  "seoSection": {
     "metaTitle": "Vivez le Queyras entre rencontres et traditions",
     "canonicalUrl": "https://www.odysway.com/voyages/sejour-pnr-queyras-artisanat-bois",
     "ogTitle": "Vivez le Queyras entre rencontres et traditions",
