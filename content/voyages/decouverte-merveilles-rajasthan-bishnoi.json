@@ -112,7 +112,7 @@
   "metaDescription": "",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -432,5 +432,6 @@
       "alt": "image principale du voyage Au fil du Rajasthan : découverte et immersion chez les Bishnoïs"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

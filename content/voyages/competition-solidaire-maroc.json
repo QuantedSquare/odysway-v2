@@ -73,7 +73,7 @@
   "metaDescription": "Vivez une aventure unique au Maroc, entre compétition, rencontres locales et solidarité. Un tourisme engagé pour des souvenirs inoubliables.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -201,7 +201,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -322,5 +322,6 @@
       "alt": "image principale du voyage La Grande aventure : Challenge solidaire en immersion au Maroc"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

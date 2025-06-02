@@ -131,7 +131,7 @@
   "metaDescription": "Plongez au cœur de la Thaïlande authentique avec notre voyage immersif. Découvrez des trésors cachés, vivez la culture locale et explorez des paysages époustouflants loin des sentiers battus. ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -278,7 +278,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -431,5 +431,6 @@
       "alt": "image principale du voyage Thaïlande originelle : sagesse bouddhiste des Moines, traditions de la tribu Karen et plages de rêve"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

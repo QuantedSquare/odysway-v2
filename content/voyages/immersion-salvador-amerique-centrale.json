@@ -59,7 +59,7 @@
   "metaDescription": "Plongez au cœur du Salvador : Explorez l'histoire des Mayas, côtoyez des âmes chaleureuses et découvrez l'authenticité de leur mode de vie. Des souvenirs inoubliables vous attendent !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -236,7 +236,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -371,5 +371,6 @@
       "alt": "image principale du voyage Au cœur de la vie locale du Salvador"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

@@ -82,7 +82,7 @@
   "metaDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -405,5 +405,6 @@
       "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

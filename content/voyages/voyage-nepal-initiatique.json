@@ -34,7 +34,7 @@
   "metaDescription": "",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -125,5 +125,6 @@
       "alt": "image principale du voyage Retour au partage et à la pleine présence - initiation à la méditation sonore au Népal - avec Lauriane Sornette"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

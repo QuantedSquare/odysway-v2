@@ -133,7 +133,7 @@
   "metaDescription": "Vivez une immersion unique et authentique au coeur d'un monastère bouddhiste au Népal. Partagez le quotidien de jeunes moines apprentis et découvrez leur mode de vie traditionnel lors de ce voyage solidaire !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -406,5 +406,6 @@
       "alt": "image principale du voyage Au cœur du Népal entre randonnées et immersion dans un monastère"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

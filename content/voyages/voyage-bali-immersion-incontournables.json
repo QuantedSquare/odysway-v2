@@ -139,7 +139,7 @@
   "metaDescription": "Voyagez avec Odysway et découvrez les multiples facettes de Bali, entre richesse culturelle et paysages enchanteurs !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -452,5 +452,6 @@
       "alt": "image principale du voyage Explorez les incontournables de Bali entre plages, rizières et volcan "
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

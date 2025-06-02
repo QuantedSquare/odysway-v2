@@ -82,7 +82,7 @@
   "metaDescription": "Percez les mystères de la culture Maya et des traditions guatémaltèques. Sillonnez les routes et prenez part au récit des locaux pour une immersion riche en émotions.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -267,7 +267,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -402,5 +402,6 @@
       "alt": "image principale du voyage Mystères de la culture Maya au Guatemala"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

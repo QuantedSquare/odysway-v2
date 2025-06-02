@@ -113,7 +113,7 @@
   "metaDescription": "Vivez un séjour immersif en Inde du Nord ! Explorez des villages traditionnels, le désert du Thar, découvrez la cuisine locale et contemplez le Taj Mahal au lever du soleil. Une expérience inoubliable vous attend !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -396,5 +396,6 @@
       "alt": "image principale du voyage Voyage au Rajasthan : éveil des sens au cœur de l'Inde"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

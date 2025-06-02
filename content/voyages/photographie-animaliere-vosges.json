@@ -77,7 +77,7 @@
   "metaDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -163,7 +163,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -311,5 +311,6 @@
       "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

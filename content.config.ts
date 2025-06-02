@@ -34,7 +34,6 @@ const destinationChoices = destinationFolders
   .filter(Boolean) as [string, ...string[]]
 console.log('destinationChoices', destinationChoices)
 
-// TODO
 const experienceDir = path.resolve(__dirname, 'content/experiences')
 const experienceFolders = fs.readdirSync(experienceDir).filter(
   name => fs.statSync(path.join(experienceDir, name)).isDirectory(),
@@ -46,6 +45,18 @@ const experienceChoices = experienceFolders.flatMap((folder) => {
     const jsonPath = path.join(folderPath, file)
     if (fs.existsSync(jsonPath)) {
       return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).title
+    }
+    return null
+  })
+}).filter(Boolean) as [string, ...string[]]
+
+const experienceBadgeChoices = experienceFolders.flatMap((folder) => {
+  const folderPath = path.join(experienceDir, folder)
+  const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.json'))
+  return files.map((file) => {
+    const jsonPath = path.join(folderPath, file)
+    if (fs.existsSync(jsonPath)) {
+      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).badgeTitle
     }
     return null
   })
@@ -249,7 +260,7 @@ export default defineContentConfig({
     destinations: defineCollection({
       type: 'data',
       source: {
-        include: 'destinations/*/**.json',
+        include: 'destinations/*/*.json',
       },
       schema: z.object({
         titre: z.string().describe('Titre de la destination'),
@@ -273,23 +284,16 @@ export default defineContentConfig({
     destinationsContent: defineCollection(
       asSeoCollection({
         type: 'page',
-        source: 'destinations/*/**.md',
+        source: 'destinations/*/*.md',
         schema: z.object({
-          tags: z.array(z.string()),
-          image: z.object({
-            src: z.string().editor({ input: 'media' }),
-            alt: z.string(),
-          }),
-          date: z.date(),
           author: z.string(),
           authorPhoto: z.string(),
           authorRole: z.string(),
           published: z.boolean(),
           publishedAt: z.date(),
-          displayedImg: z.object({
-            src: z.string().editor({ input: 'media' }),
-            alt: z.string(),
-          }),
+          tags: z.string(), // TODO: change to array
+          categories: z.string(), // TODO: change to array
+          displayedImg: z.string().editor({ input: 'media' }),
           blogType: z.string(),
           badgeColor: z.string(),
           readingTime: z.string(),
@@ -459,7 +463,7 @@ export default defineContentConfig({
         // ==========================================
         badgeSection: z.object({
           experienceBadge: z.object({
-            text: z.enum(experienceChoices).describe('Texte du badge experience placé en premier'),
+            text: z.enum(experienceBadgeChoices).describe('Texte du badge experience placé en premier'),
             color: z.enum(colorChoices).describe('Couleur du premier badge'),
             visible: z.boolean().describe('Indique si le badge est visible'),
           }),

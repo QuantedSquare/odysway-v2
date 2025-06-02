@@ -91,7 +91,7 @@
   "metaDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -195,7 +195,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -328,5 +328,6 @@
       "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

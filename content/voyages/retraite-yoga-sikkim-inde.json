@@ -100,7 +100,7 @@
   "metaDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -292,7 +292,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -452,5 +452,6 @@
       "alt": "image principale du voyage Retraite Himalayenne : méditation et yoga au cœur du Sikkim"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

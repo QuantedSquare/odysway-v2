@@ -136,7 +136,7 @@
   "metaDescription": "Vivez une immersion unique au cœur d'une observatoire astronomique dans les Alpes. Devenez astronome amateur aux côtés d'astronomes et d'astrophysicien lors de ce séjour insolite et hors du temps.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -404,5 +404,6 @@
       "alt": "image principale du voyage Immersion au cœur d'un observatoire astronomique"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

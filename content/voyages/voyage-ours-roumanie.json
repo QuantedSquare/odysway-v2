@@ -109,7 +109,7 @@
   "metaDescription": "Vivez une aventure extraordinaire au cœur de la Transylvanie. Partez à la rencontre des ours sauvages dans leur habitat naturel. Randonnées en forêt, observation depuis un affût et rencontre avec les locaux.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -206,7 +206,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -359,5 +359,6 @@
       "alt": "image principale du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

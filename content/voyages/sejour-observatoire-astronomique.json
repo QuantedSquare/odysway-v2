@@ -120,7 +120,7 @@
   "metaDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -305,5 +305,6 @@
       "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

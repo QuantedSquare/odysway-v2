@@ -125,7 +125,7 @@
   "metaDescription": "Vivez une expérience immersive inoubliable lors de notre voyage de conservation des baleines et des dauphins aux Canaries, accompagné d'un biologiste marin. Explorez les eaux cristallines des côtes de Lanzarote tout en apprenant sur les cétacés !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -225,7 +225,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -389,5 +389,6 @@
       "alt": "image principale du voyage Observez dauphins et baleines sur les îles Canaries"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

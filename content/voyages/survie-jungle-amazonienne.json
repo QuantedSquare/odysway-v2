@@ -151,7 +151,7 @@
   "metaDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -272,7 +272,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -453,5 +453,6 @@
       "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

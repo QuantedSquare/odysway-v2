@@ -53,7 +53,7 @@
   "metaDescription": "Vivez un voyage unique au Laos, à la rencontre de ses habitants et en immersion chez des Cornacs et leurs éléphants.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -373,5 +373,6 @@
       "alt": "image principale du voyage Voyage au Laos : rencontres avec les éléphants et communautés locales"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

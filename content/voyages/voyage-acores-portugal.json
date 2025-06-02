@@ -88,7 +88,7 @@
   "metaDescription": "Découvrez l'enchantement naturel de Sao Miguel, l'île verte des Açores. Volcans, forêts, villages pittoresques : une aventure authentique vous attend !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -219,7 +219,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -323,5 +323,6 @@
       "alt": "image principale du voyage Trek immersif sur l’île de Sao Miguel aux Açores"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

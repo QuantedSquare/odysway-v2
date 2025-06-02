@@ -96,7 +96,7 @@
   "metaDescription": "Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -224,7 +224,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -311,5 +311,6 @@
       "alt": "image principale du voyage Séjour multi-activités en Laponie suédoise"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

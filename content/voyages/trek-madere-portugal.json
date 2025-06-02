@@ -93,7 +93,7 @@
   "metaDescription": "Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -255,7 +255,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -359,5 +359,6 @@
       "alt": "image principale du voyage Randonnées inoubliables à la découverte des joyaux naturels de Madère"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

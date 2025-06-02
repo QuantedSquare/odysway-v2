@@ -115,7 +115,7 @@
   "metaDescription": "Vivez une expérience hors du temps lors de ce voyage en Ethiopie avec Odsyway. Accompagnés d'un guide francophone, vivez en immersion dans les tribus et découvrez leurs coutumes ancestrales !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -210,7 +210,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -284,5 +284,6 @@
       "alt": "image principale du voyage Voyagez sur la terre des premiers hommes en Éthiopie"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

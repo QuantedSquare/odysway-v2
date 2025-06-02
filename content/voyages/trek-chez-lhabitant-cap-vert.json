@@ -110,7 +110,7 @@
   "metaDescription": "Découvrez la magie du Cap-Vert sur l'île de Santo Antao. Vivez des treks inoubliables et rencontrez des habitants chaleureux pour une immersion authentique dans la culture capverdienne !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -228,7 +228,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -380,5 +380,6 @@
       "alt": "image principale du voyage Trek chez l'habitant sur l'île de Santo Antão au Cap-Vert"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

@@ -87,7 +87,7 @@
   "metaDescription": "Découvrez le charme sauvage du parc national de Hossa, niché dans le Nord-Est de la Finlande, à travers une expérience authentique inspirée des traditions des explorateurs polaires. Notre programme unique combine aventures en plein air et respect de la nature pour une escapade inoubliable.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -216,7 +216,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -338,5 +338,6 @@
       "alt": "image principale du voyage Aventures hivernales en Laponie Finlandaise"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

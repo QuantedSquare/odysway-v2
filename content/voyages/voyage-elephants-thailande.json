@@ -130,7 +130,7 @@
   "metaDescription": "Explorez la Thaïlande en harmonie avec les éléphants. Vivez une aventure inoubliable mêlant nature, découverte et engagement pour la conservation des éléphants et de la nature thaïlandaise.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -266,7 +266,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -403,5 +403,6 @@
       "alt": "image principale du voyage Observer les éléphants, explorer les temples et s'évader sur les plages de Thaïlande"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

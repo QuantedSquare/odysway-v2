@@ -89,7 +89,7 @@
   "metaDescription": "Vivez un séjour insolite en Corse, au sein d'un gite astronomique, idéalement placé au cœur d'un panorama grandiose, idéal pour observer le ciel, guidés par des spécialistes de l'astronomie.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -185,7 +185,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -280,5 +280,6 @@
       "alt": "image principale du voyage Initiation à l'observation astronomique en Corse"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

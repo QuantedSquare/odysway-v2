@@ -148,7 +148,7 @@
   "metaDescription": "Plus qu'un simple stage photo, partez découvrir ou approfondir l'art de la photographie animalière. Accompagné d'un expert, vous apprendrez toutes les techniques à savoir lors de ce séjour insolite au coeur de la nature !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -257,7 +257,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -395,5 +395,6 @@
       "alt": "image principale du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

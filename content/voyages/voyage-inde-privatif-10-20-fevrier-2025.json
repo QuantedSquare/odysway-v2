@@ -34,7 +34,7 @@
   "metaDescription": "",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -130,5 +130,6 @@
       "alt": "image principale du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

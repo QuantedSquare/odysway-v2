@@ -97,7 +97,7 @@
   "metaDescription": "👉 Envie de découvrir le Népal à travers des randonnées accessibles à tous et vivre une immersion au sein d'un ashram ? Ce voyage est fait pour vous !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -258,7 +258,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -398,5 +398,6 @@
       "alt": "image principale du voyage Séjour trek, yoga et immersion chez l'habitant au Népal"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

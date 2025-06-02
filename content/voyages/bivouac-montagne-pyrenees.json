@@ -92,7 +92,7 @@
   "metaDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -272,5 +272,6 @@
       "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

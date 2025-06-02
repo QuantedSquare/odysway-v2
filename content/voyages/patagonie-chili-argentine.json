@@ -96,7 +96,7 @@
   "metaDescription": "Odysway vous propose un voyage mythique en Argentine et au Chili à la découverte des plus beaux parcs nationaux de Patagonie.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -461,5 +461,6 @@
       "alt": "image principale du voyage Au bout du monde en Patagonie, terre de feu et de glace"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

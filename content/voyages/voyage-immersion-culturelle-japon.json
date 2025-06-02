@@ -73,7 +73,7 @@
   "metaDescription": "Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -231,7 +231,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -408,5 +408,6 @@
       "alt": "image principale du voyage Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

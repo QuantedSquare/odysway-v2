@@ -150,7 +150,7 @@
   "metaDescription": "Découvrez le Népal authentique en séjournant chez l'habitant. Une expérience unique pour explorer la culture népalaise",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -325,7 +325,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -537,5 +537,6 @@
       "alt": "image principale du voyage Trek chez l'habitant au Népal, au fil des villages Sherpas"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

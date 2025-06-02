@@ -96,7 +96,7 @@
   "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature finlandaise. Au programme : balades en chien de traineau, en motoneige et en raquettes, apprentissage du mode de vie de trappeur et chasse aux aurores boréales !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -404,5 +404,6 @@
       "alt": "image principale du voyage Séjour multi-activités en Laponie finlandaise"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

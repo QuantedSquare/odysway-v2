@@ -118,7 +118,7 @@
   "metaDescription": "Partez à la découverte des terres lointaines de l'Arunachal Pradesh lors de ce voyage en Inde du Nord. Rencontrez ses tribus fascinantes, ses villages isolés et admirez sa biodiversité, une des plus riches au monde.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -445,5 +445,6 @@
       "alt": "image principale du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

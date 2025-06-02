@@ -140,7 +140,7 @@
   "metaDescription": "Découvrez le Vietnam entre les essentiels et expériences hors des sentiers battus ! ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -406,5 +406,6 @@
       "alt": "image principale du voyage Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

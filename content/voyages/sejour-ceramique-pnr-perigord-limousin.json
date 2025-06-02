@@ -118,7 +118,7 @@
   "metaDescription": "Vivez un séjour en pleine nature avec une initiation à la poterie artisanale au cœur du parc naturel régional du Périgord limousin !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -197,7 +197,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -277,5 +277,6 @@
       "alt": "image principale du voyage Initiez-vous à l'art de la poterie artisanale dans le Limousin"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

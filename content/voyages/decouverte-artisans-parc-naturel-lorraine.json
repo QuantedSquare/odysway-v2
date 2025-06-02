@@ -76,7 +76,7 @@
   "metaDescription": "Vivez un voyage en immersion au coeur de la nature. Partez en randonnées accompagné d'un âne et dormez en bivouac. Un séjour immersif  idéal pour vous reconnecte.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -158,7 +158,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -285,5 +285,6 @@
       "alt": "image principale du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

@@ -94,7 +94,7 @@
   "metaDescription": "Quel meilleur moyen pour découvrir la Mongolie que d'utiliser le mode de transport de référence dans le pays : le cheval ! Un séjour unique à la rencontre des nomades.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -233,7 +233,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -385,5 +385,6 @@
       "alt": "image principale du voyage A cheval, à la rencontre des nomades en Mongolie"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

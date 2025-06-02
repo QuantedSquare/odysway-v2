@@ -34,7 +34,7 @@
   "metaDescription": "",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -125,5 +125,6 @@
       "alt": "image principale du voyage Voyage initiatique en Inde Himalaya"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

@@ -71,7 +71,7 @@
   "metaDescription": "Voyage au Pérou : trek en immersion dans les Andes, découvertes inoubliables et rencontres authentiques.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -244,7 +244,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -375,5 +375,6 @@
       "alt": "image principale du voyage Trek et immersion chez l'habitant au Pérou"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

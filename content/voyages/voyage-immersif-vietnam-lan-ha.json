@@ -136,7 +136,7 @@
   "metaDescription": "Vivez un voyage unique du Nord au Sud du Vietnam, entre rencontres locales et découvertes culturelles !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -438,5 +438,6 @@
       "alt": "image principale du voyage Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

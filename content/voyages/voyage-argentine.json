@@ -101,7 +101,7 @@
   "metaDescription": "Odysway vous propose un voyage mythique en Argentine à la découverte de ses grands espaces, de la Patagonie au nord-ouest argentin.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -305,7 +305,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -460,5 +460,6 @@
       "alt": "image principale du voyage Contrastes et grands espaces en Argentine"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

@@ -94,7 +94,7 @@
   "metaDescription": "Vivez un voyage différent en Colombie, à la découverte de la province du Choco, riche de jungles, rivières, cascades, sources thermales et plages incroyables.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -241,7 +241,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -444,5 +444,6 @@
       "alt": "image principale du voyage Échappée sauvage en Colombie : Du triangle du café aux baleines du Chocó"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

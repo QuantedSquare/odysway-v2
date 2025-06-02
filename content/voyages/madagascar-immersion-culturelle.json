@@ -139,7 +139,7 @@
   "metaDescription": "Vivez un incroyable voyage authentique de 18 jours à Madagascar ! Au programme :  rencontres avec les peuples locaux, visites d’ateliers artisanaux , immersion dans un village Zafimaniry, préparation de plats typiques, randonnées à travers les villages traditionnels et les parcs nationaux, visites d’ONG et d’associations en aide aux personnes défavorisées, et séjour balnéaire à Ifaty.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -288,7 +288,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -480,5 +480,6 @@
       "alt": "image principale du voyage Immersion culturelle à travers les paysages spectaculaires de Madagascar"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

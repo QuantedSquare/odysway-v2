@@ -118,7 +118,7 @@
   "metaDescription": "Odysway vous propose un voyage unique à la découverte de la Bolivie véritablement authentique. Explorez le Sud Lipez en 4x4, écoutez le silence dans le plus grand désert au monde au Salar de Uyuni et vivez des moments au plus proche des locaux.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -299,7 +299,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": true,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -467,5 +467,6 @@
       "alt": "image principale du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

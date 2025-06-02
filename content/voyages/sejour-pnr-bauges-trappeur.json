@@ -115,7 +115,7 @@
   "metaDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -199,7 +199,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -339,5 +339,6 @@
       "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

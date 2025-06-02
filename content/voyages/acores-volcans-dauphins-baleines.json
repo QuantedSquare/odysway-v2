@@ -140,7 +140,7 @@
   "metaDescription": "Découvrez un séjour unique aux Açores, mêlant exploration volcanique, rencontres inoubliables avec les dauphins, baleines et cachalots, et randonnées spectaculaires. De Faial, l'île bleue, jusqu'à Pico et ses paysages viticoles classés à l’UNESCO, vivez une immersion nature inégalée au cœur de l’Atlantique.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -273,7 +273,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -385,5 +385,6 @@
       "alt": "image principale du voyage L’appel des Açores entre volcans, dauphins, baleines et cachalots "
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

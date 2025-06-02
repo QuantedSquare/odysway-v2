@@ -121,7 +121,7 @@
   "metaDescription": "Sensible à la cause animale, vous souhaitez participer à leur protection lors d'un voyage solidaire ? Vivez une expérience inoubliable dans un véritable sanctuaire pour félins au cœur de la nature sud africaine !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -221,7 +221,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -361,5 +361,6 @@
       "alt": "image principale du voyage Occupez-vous des félins en Afrique du Sud"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

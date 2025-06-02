@@ -103,7 +103,7 @@
   "metaDescription": "Un voyage unique et responsable en Ouzbékistan, rencontres avec les locaux, exploration des villes mythiques et déplacements en train pour voyager autrement !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -371,5 +371,6 @@
       "alt": "image principale du voyage À bord du train de la Route de la Soie : expériences immersives et nuits en yourte en Ouzbékistan"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

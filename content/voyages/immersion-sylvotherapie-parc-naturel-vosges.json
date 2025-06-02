@@ -78,7 +78,7 @@
   "metaDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -146,7 +146,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -238,5 +238,6 @@
       "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

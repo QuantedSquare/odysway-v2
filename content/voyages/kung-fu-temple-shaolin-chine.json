@@ -130,7 +130,7 @@
   "metaDescription": "Envie de vivre une aventure unique ? Partez en Chine pour vivre un voyage sportif unique : apprendre le Kung-Fu traditionnel en immersion avec les moines Shaolin !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -403,5 +403,6 @@
       "alt": "image principale du voyage Initiez-vous au Kung Fu dans un temple Shaolin"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

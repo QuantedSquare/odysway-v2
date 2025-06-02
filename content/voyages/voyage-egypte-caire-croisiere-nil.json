@@ -116,7 +116,7 @@
   "metaDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Le Caire, Louxor et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -263,7 +263,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 100,
@@ -454,5 +454,6 @@
       "alt": "image principale du voyage Au fil de l'Egypte : Le Caire, Louxor et croisière intimiste sur le Nil"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

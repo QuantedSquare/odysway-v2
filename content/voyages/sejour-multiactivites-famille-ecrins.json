@@ -74,7 +74,7 @@
   "metaDescription": "Ce séjour est une immersion de 7 jours en famille au cœur du massif des Écrins.\r\nAu programme : cani-randonnée, via ferrata, rafting sur la Durance, ateliers de trappeur, grimpe d’arbres, géocaching et soirées sous tipi !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -202,7 +202,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -327,5 +327,6 @@
       "alt": "image principale du voyage Séjour multi-activités en famille dans les Ecrins"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

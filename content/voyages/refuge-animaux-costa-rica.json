@@ -139,7 +139,7 @@
   "metaDescription": "Vous souhaitez vivre un voyage solidaire en participant à la protection des animaux ? Découvrez notre voyage au Costa Rica dans un refuge animalier pour vous occuper des animaux de la forêt tropicale, avant de vous détendre au bord de la mer des Caraïbes.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -435,5 +435,6 @@
       "alt": "image principale du voyage Occupez-vous des animaux de la jungle au Costa Rica"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

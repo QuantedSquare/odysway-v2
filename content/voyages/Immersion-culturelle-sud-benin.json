@@ -145,7 +145,7 @@
   "metaDescription": "Avec un guide local passionné, parcourez le sud du Bénin au fil de l'eau : de la cité lacustre de Ganvié à la rivière d'Adjarra, et du Lac Ahémé au fleuve Mono, tout en longeant la côte Atlantique, entre culture vodoun, activités authentiques, visites de lieux historiques et rencontres locales ! ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -483,5 +483,6 @@
       "alt": "image principale du voyage Bénin, rencontres et traditions au pays vodoun"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

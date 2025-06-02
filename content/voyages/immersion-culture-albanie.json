@@ -97,7 +97,7 @@
   "metaDescription": "Partez en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie. Découvrez ses paysages fabuleux entre mer et montage et partez à la rencontre de sa population.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -371,5 +371,6 @@
       "alt": "image principale du voyage Plongez au cœur des Balkans : Une immersion inoubliable dans la culture traditionnelle albanaise"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

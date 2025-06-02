@@ -142,7 +142,7 @@
   "metaDescription": "Envie de découvrir la Thaïlande autrement ? Découvrez ou perfectionnez-vous à la Boxe thaï lors de ce séjour sportif et formez-vous parmi les meilleurs : des entraineurs professionnels dans un camp de boxe thaï !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -244,7 +244,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -421,5 +421,6 @@
       "alt": "image principale du voyage Stage boxe thaï en immersion dans le nord de la Thaïlande"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

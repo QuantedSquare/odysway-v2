@@ -72,7 +72,7 @@
   "metaDescription": "Voyage au Costa Rica : immersion avec la communauté Bribri, jungles luxuriantes, volcans, plages paradisiaques et rencontres authentiques inoubliables.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -226,7 +226,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -387,5 +387,6 @@
       "alt": "image principale du voyage Pura Vida au Costa Rica : aventure tropicale et immersion dans la communauté Bribri"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

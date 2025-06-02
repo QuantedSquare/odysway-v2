@@ -109,7 +109,7 @@
   "metaDescription": "Découvrez la Jordanie et ses merveilles : l'ancienne ville de Petra, le désert de Wadi Rum, la mer Morte et bien plus encore. Un voyage inoubliable !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -423,5 +423,6 @@
       "alt": "image principale du voyage Sur les traces des Bédouins en Jordanie : un voyage inoubliable de Pétra à Wadi Rum"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

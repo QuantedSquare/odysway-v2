@@ -119,7 +119,7 @@
   "metaDescription": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc Naturel Régional du Vexin Français en vélo électrique !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -178,7 +178,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -319,5 +319,6 @@
       "alt": "image principale du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

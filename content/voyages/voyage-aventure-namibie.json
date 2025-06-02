@@ -122,7 +122,7 @@
   "metaDescription": " Partez en Namibie pour un voyage entre aventure et conservation. Protégez la faune sauvage, explorez le désert et vivez une immersion unique !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -286,7 +286,7 @@
     "minTravelersToConfirm": 1,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -421,5 +421,6 @@
       "alt": "image principale du voyage Namibie sauvage : entre aventure et protection des animaux"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

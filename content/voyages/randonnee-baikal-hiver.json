@@ -76,7 +76,7 @@
   "metaDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -197,7 +197,7 @@
     "minTravelersToConfirm": 4,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -336,5 +336,6 @@
       "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

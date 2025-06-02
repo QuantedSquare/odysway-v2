@@ -150,7 +150,7 @@
   "metaDescription": "Odysway vous propose un voyage unique à la découverte d'un Pérou véritablement authentique. Explorez la Vallée Sacrée des Incas, le Lac Titicaca et vivez en immersion au sein de familles quechua.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -484,5 +484,6 @@
       "alt": "image principale du voyage Découverte du Pérou : Grands sites incas et immersion sur le lac Titicaca"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

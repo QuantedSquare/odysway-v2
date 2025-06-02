@@ -91,7 +91,7 @@
   "metaDescription": "Trek au Sikkim : marchez sur les sentiers de l’Himalaya, dormez chez l’habitant et découvrez la culture locale. Une immersion unique entre nature et rencontres.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -280,7 +280,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -409,5 +409,6 @@
       "alt": "image principale du voyage Trek chez l’habitant au Sikkim, immersion au cœur de l’Himalaya"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

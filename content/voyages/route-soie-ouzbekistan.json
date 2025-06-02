@@ -106,7 +106,7 @@
   "metaDescription": "Un voyage unique en Ouzbékistan entre histoire, immersion en pleine nature et partage du quotidien des locaux qui vivent entre montagne, désert et steppe. Découvrez notre itinéraire de 2 semaines sur la route de la soie !\r\n",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -394,5 +394,6 @@
       "alt": "image principale du voyage À la rencontre des habitants de la route de la soie en Ouzbékistan"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

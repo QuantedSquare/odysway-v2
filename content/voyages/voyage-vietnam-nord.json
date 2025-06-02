@@ -100,7 +100,7 @@
   "metaDescription": "Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -380,5 +380,6 @@
       "alt": "image principale du voyage Le Vietnam du Nord, un voyage à la rencontre des populations ethniques"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

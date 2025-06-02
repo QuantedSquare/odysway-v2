@@ -50,7 +50,7 @@
   "metaDescription": "Envie d'un voyage aux milles contrastes? Cap vers le Nord, direction l'Islande. La richesse des terres crée d’étonnants lieux naturels à explorer qui ne laissent pas indifférents. ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -179,7 +179,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -299,5 +299,6 @@
       "alt": "image principale du voyage Islande sauvage : Terre de feu et de glace"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

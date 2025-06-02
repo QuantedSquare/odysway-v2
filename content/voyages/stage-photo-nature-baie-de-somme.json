@@ -60,7 +60,7 @@
   "metaDescription": "Ce séjour de 4 jours en Baie de Somme est une immersion en photographie animalière.\r\nAu programme : affûts, oiseaux, mouflons, sangliers, lumières dorées, conseils pros et exploration nature entre marais et prairies.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -139,7 +139,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -283,5 +283,6 @@
       "alt": "image principale du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

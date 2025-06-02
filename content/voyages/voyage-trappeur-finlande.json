@@ -59,7 +59,7 @@
   "metaDescription": "Explorez le parc Naturel de Hossa en raquettes, à l'image des premiers nordiques. Semaine autonome avec pulkas. Immergez-vous dans la nature pure.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -188,7 +188,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -329,5 +329,6 @@
       "alt": "image principale du voyage Voyagez comme un trappeur en Finlande"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

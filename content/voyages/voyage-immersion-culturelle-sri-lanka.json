@@ -75,7 +75,7 @@
   "metaDescription": "Voyage au Sri Lanka : immersion culturelle, spiritualité, nature, safari et plages paradisiaques. Découvrez l'âme de l'île en 12 jours uniques.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -232,7 +232,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -376,5 +376,6 @@
       "alt": "image principale du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

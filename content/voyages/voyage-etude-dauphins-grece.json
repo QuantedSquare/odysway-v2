@@ -90,7 +90,7 @@
   "metaDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -355,5 +355,6 @@
       "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

@@ -62,7 +62,7 @@
   "metaDescription": "Envie d'évasion le temps d'un week-end ? RDV au cœur du parc naturel du Golfe du Morbihan pour un séjour entre terre et mer !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -139,7 +139,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -232,5 +232,6 @@
       "alt": "image principale du voyage Entre Terre et Mer dans le Golfe du Morbihan"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

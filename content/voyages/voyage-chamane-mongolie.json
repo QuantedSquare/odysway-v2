@@ -105,7 +105,7 @@
   "metaDescription": "Vivez une voyage initiatique unique au sein de familles chamanes en Mongolie : découvrez leur mode de vie authentique et participez à des cérémonies uniques au milieu d'une nature fabuleuse ! Un voyage chamanique riche en émotions !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -243,7 +243,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -397,5 +397,6 @@
       "alt": "image principale du voyage Voyagez en terre chamane en Mongolie"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

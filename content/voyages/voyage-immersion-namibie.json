@@ -127,7 +127,7 @@
   "metaDescription": "Rejoignez les gardiens de la faune en Namibie. Participez à des missions de rangers, observez les animaux sauvages, et contribuez à la préservation de la vie sauvage africaine.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -291,7 +291,7 @@
     "minTravelersToConfirm": 1,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -414,5 +414,6 @@
       "alt": "image principale du voyage Dans la peau d’un Ranger : immersion au cœur d’une réserve en Namibie"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

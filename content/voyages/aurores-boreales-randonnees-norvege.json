@@ -106,7 +106,7 @@
   "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature norvégienne. Au programme : randonnées au bord de magnifiques fjords et chasse aux aurores boréales !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -234,7 +234,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -373,5 +373,6 @@
       "alt": "image principale du voyage Observez les aurores boréales en Laponie Norvégienne"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

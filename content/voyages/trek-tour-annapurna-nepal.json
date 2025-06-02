@@ -118,7 +118,7 @@
   "metaDescription": "Partez pour une aventure unique sur le tour des Annapurnas, l'un des plus beaux treks du monde ! ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -306,7 +306,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -470,5 +470,6 @@
       "alt": "image principale du voyage Trek au Népal : Tour des Annapurnas et Lac Tilicho "
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

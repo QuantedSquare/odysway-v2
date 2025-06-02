@@ -119,7 +119,7 @@
   "metaDescription": "Vivez un voyage insolite et proche des locaux au Sri Lanka, entre rencontres, plages et plantations de thé !",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -456,5 +456,6 @@
       "alt": "image principale du voyage Au rythme du Sri Lanka : à vélo, en train et tuk-tuk vers l’aventure et les rencontres authentiques (hiver)"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

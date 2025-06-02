@@ -101,7 +101,7 @@
   "metaDescription": "Découvrez l'Algérie alternative en compagnie des Touaregs. Échappez à la foule, reconnectez-vous avec la nature et vivez des moments inoubliables.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -240,7 +240,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -371,5 +371,6 @@
       "alt": "image principale du voyage Exploration d'Alger et immersion avec les Touaregs dans le Sud de l'Algérie"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }

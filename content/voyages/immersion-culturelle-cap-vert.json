@@ -139,7 +139,7 @@
   "metaDescription": "Vivez une immersion authentique à Santiago, au Cap-Vert. Partagez le quotidien des cultivateurs et pêcheurs et découvrez un mode de vie préservé.",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "",
       "color": "yellow",
       "visible": true
     },
@@ -259,7 +259,7 @@
     "minTravelersToConfirm": 2,
     "indivRoom": false,
     "forcedIndivRoom": false,
-    "indivRoomPrice": "",
+    "indivRoomPrice": 0,
     "cseReduction": 0,
     "cseAvailable": false,
     "childrenPromo": 0,
@@ -464,5 +464,6 @@
       "alt": "image principale du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
     },
     "twitterCard": "summary_large_image"
-  }
+  },
+  "customAvailable": false
 }
