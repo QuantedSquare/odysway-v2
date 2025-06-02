@@ -116,7 +116,7 @@
           class="custom-btn"
         >
           <v-carousel-item
-            v-for="photo in voyage.photosList"
+            v-for="photo in photoCarousel"
             :key="photo.src"
           >
             <v-img
@@ -158,7 +158,7 @@ import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
-defineProps({
+const props = defineProps({
   voyage: {
     type: Object,
     required: true,
@@ -169,6 +169,9 @@ const { mdAndUp } = useDisplay()
 const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
+const photoCarousel = computed(() => {
+  return [props.voyage.image, props.voyage.imageSecondary, ...props.voyage.photosList]
+})
 
 function copyUrl() {
   const copiedUrl = `${config.public.appUrl}/${route.fullPath}`

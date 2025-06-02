@@ -3,7 +3,7 @@
     cols="6"
     sm="4"
     md="3"
-    class="mx-0 px-1 px-md-auto"
+    class=""
   >
     <v-lazy
       :min-height="width <= 960 ? 300 : 415"
@@ -41,7 +41,7 @@
         >
           <h3
             key="title"
-            class="text-body-1 font-weight-bold text-lg-h2 text-center text-shadow text-line-space mx-2"
+            class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2"
           >
             {{ title }}
           </h3>
@@ -201,9 +201,12 @@ defineProps({
   h3 {
     font-size: 1.1rem !important;
   }
+  /* .text-line-space {
+    line-height: 20px!important;
+  } */
 }
 
-.text-line-space {
+/* .text-line-space {
   line-height: 40px!important;
-}
+} */
 </style>

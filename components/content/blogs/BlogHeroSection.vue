@@ -88,6 +88,7 @@
             :lazy-src="img(page.displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
             cover
             height="100%"
+            :alt="`Image principale du blog ${page.title}`"
             :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
           />
         </v-col>

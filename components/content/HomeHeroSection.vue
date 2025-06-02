@@ -141,8 +141,9 @@ line-height: 80px!important;
     height: 50vh;
   }
   .custom-hero-title {
-    font-size: 45px!important;
+    font-size: 40px!important;
     line-height: 40px!important;
+    margin-bottom: 65px;
   }
   .searchfield-overlap {
     margin: -150px auto 0 auto;

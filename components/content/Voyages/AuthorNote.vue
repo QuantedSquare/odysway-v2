@@ -5,7 +5,7 @@
     </h4>
     <p
       v-if="isHydrated && authorNote.text"
-      class="text-subtitle-1 text-md-h5 font-weight-regular"
+      class="text-body-1 line-height-2"
     >
       <MDC
         tag="article"
@@ -51,3 +51,14 @@ onMounted(() => {
   isHydrated.value = true
 })
 </script>
+
+<style scoped>
+.line-height-2 {
+  line-height: 30px !important;
+}
+@media (max-width: 600px) {
+  .line-height-2 {
+    line-height: 25px !important;
+  }
+}
+</style>

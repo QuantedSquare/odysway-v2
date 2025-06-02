@@ -68,8 +68,8 @@
                     v-for="destination, index in filteredDestinationsForRegion(item.raw, search, item)"
                     :key="index"
                     density="compact"
-                    class="px-0 mb-0"
-                    :class="{ ' pb-2 border-b': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
+                    class="px-0 mb-0 border-b"
+                    :class="{ ' pb-2': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
                     nav
                     @click="selectDestination(destination)"
                   >
@@ -163,7 +163,7 @@
               block
               :loading="status === 'pending'"
               color="secondary"
-              class="text-none text-body-1"
+              class="text-none text-body-1 font-weight-bold"
               @click="searchFn"
             >
               Découvrir les voyages

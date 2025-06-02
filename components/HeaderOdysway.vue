@@ -2,10 +2,9 @@
   <v-app-bar
     elevation="0"
     mobile
-    height="90"
+    :height="mdAndUp ? '90' : '60'"
     class="px-4"
     :class="!model ? 'app-bar-shadow' : ''"
-
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"
   >
@@ -15,8 +14,8 @@
       <img
         :src="LogoOdyswayBleu"
         :min-width="mdAndUp ? '150px' : '100px'"
-        height="38"
-        width="150"
+        :height="mdAndUp ? '38' : '25'"
+        :width="mdAndUp ? '150' : '100'"
         alt="Logo principale d'Odysway"
       >
     </NuxtLink>

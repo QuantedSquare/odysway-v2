@@ -10,7 +10,7 @@
       />
     </ClientOnly>
 
-    <v-main style="--v-layout-top: 90px; --v-layout-bottom: 0px;">
+    <v-main :style="`--v-layout-top: ${mdAndUp ? '90px' : '60px'}; --v-layout-bottom: 0px;`">
       <slot />
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">
@@ -26,7 +26,7 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 
-const { width } = useDisplay()
+const { width, mdAndUp } = useDisplay()
 const drawer = ref(false)
 </script>
 

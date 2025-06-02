@@ -27,7 +27,7 @@
               {{ badgeText }}
             </span>
 
-            <span class="text-primary text-h5 font-weight-bold ">{{ title }}</span>
+            <span class="text-primary text-h6 font-weight-bold ">{{ title }}</span>
           </div>
         </v-card-title>
 

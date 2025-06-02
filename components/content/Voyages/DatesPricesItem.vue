@@ -17,7 +17,7 @@
             text-color="white"
             :content="+enrichedDate.index +1"
           />
-          <span class="text-body-2 d-flex align-center ga-2">
+          <span class="text-body-2 d-flex align-center ga-2 line-height-2">
             <div>
               {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
               <span class="font-weight-bold">
@@ -241,6 +241,9 @@ const formatLink = (date) => {
   }
   .text-size-14 {
   font-size: 14px!important;
+  }
+  .line-height-2 {
+    line-height: 20px !important;
   }
 
   .flex-direction-custom{

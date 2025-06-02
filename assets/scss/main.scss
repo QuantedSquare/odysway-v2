@@ -76,14 +76,14 @@ $border-radius-root: 10px !default;
     ),
     "body-1": (
       "size": 18px,
-      "weight": 500,
+      "weight": 400,
       "line-height": 20px,
       "letter-spacing": normal,
       "text-transform": none,
     ),
     "body-2": (
       "size": 16px,
-      "weight": 500,
+      "weight": 400,
       "line-height": 14px,
       "letter-spacing": normal,
       "text-transform": none,
@@ -123,7 +123,7 @@ $border-radius-root: 10px !default;
 
   .text-h2 {
     font-size: 28px !important;
-    line-height: 42px !important;
+    line-height: 35px !important;
   }
 
   .text-h3 {
@@ -132,7 +132,7 @@ $border-radius-root: 10px !default;
   }
 
   .text-h4 {
-    font-size: 18px !important;
+    font-size: 20px !important;
     line-height: 27px !important;
   }
 
@@ -151,21 +151,21 @@ $border-radius-root: 10px !default;
 @media (max-width: 600px) {
   .text-h1 {
     font-size: 28px !important;
-    line-height: 42px !important;
+    line-height: 35px !important;
   }
 
   .text-h2 {
     font-size: 24px !important;
-    line-height: 36px !important;
+    line-height: 25px !important;
   }
 
   .text-h3 {
     font-size: 20px !important;
-    line-height: 30px !important;
+    line-height: 23px !important;
   }
 
   .text-h4 {
-    font-size: 16px !important;
+    font-size: 20px !important;
     line-height: 24px !important;
   }
 

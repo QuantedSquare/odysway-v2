@@ -1,6 +1,8 @@
 {
+  "published": true,
   "title": "Partager le quotidien",
-  "slug": "en-immersion",
+  "badgeTitle": "Partager...",
+  "slug": "partager-le-quotidien",
   "discoveryTitle": "Partager le quotidien",
   "seoTitle": "Partager le quotidien",
   "image": {

@@ -133,17 +133,17 @@ watchEffect(() => {
   console.log('voyagePropositions', voyagePropositions.value)
   // SEO Meta Tags
   useSeoMeta({
-    title: voyage.value.seo?.metaTitle || voyage.value.title,
-    description: voyage.value.seo?.ogDescription || voyage.value.metaDescription || voyage.value.description,
-    ogTitle: voyage.value.seo?.ogTitle || voyage.value.title,
-    ogDescription: voyage.value.seo?.ogDescription || voyage.value.metaDescription || voyage.value.description,
-    ogImage: voyage.value.seo?.ogImage?.src || voyage.value.image?.src,
+    title: voyage.value.seoSection?.metaTitle || voyage.value.title,
+    description: voyage.value.seoSection?.ogDescription || voyage.value.metaDescription || voyage.value.description,
+    ogTitle: voyage.value.seoSection?.ogTitle || voyage.value.title,
+    ogDescription: voyage.value.seoSection?.ogDescription || voyage.value.metaDescription || voyage.value.description,
+    ogImage: voyage.value.seoSection?.ogImage?.src || voyage.value.image?.src,
     ogType: 'website',
-    twitterTitle: voyage.value.seo?.twitterTitle || voyage.value.title,
-    twitterDescription: voyage.value.seo?.twitterDescription || voyage.value.metaDescription || voyage.value.description,
-    twitterImage: voyage.value.seo?.twitterImage?.src || voyage.value.image?.src,
-    twitterCard: voyage.value.seo?.twitterCard || 'summary_large_image',
-    canonical: voyage.value.seo?.canonicalUrl || `https://odysway.com/voyages/${voyage.value.slug}`,
+    twitterTitle: voyage.value.seoSection?.twitterTitle || voyage.value.title,
+    twitterDescription: voyage.value.seoSection?.twitterDescription || voyage.value.metaDescription || voyage.value.description,
+    twitterImage: voyage.value.seoSection?.twitterImage?.src || voyage.value.image?.src,
+    twitterCard: voyage.value.seoSection?.twitterCard || 'summary_large_image',
+    canonical: voyage.value.seoSection?.canonicalUrl || `https://odysway.com/voyages/${voyage.value.slug}`,
   })
 
   // Structured Data (TouristTrip)

@@ -112,21 +112,14 @@ export default defineContentConfig({
         type: 'page',
         source: 'blog/*.md',
         schema: z.object({
-          tags: z.array(z.string()),
-          image: z.object({
-            src: z.string().editor({ input: 'media' }),
-            alt: z.string(),
-          }),
-          date: z.date(),
           author: z.string(),
           authorPhoto: z.string(),
           authorRole: z.string(),
           published: z.boolean(),
           publishedAt: z.date(),
-          displayedImg: z.object({
-            src: z.string().editor({ input: 'media' }),
-            alt: z.string(),
-          }),
+          tags: z.string(), // TODO: change to array
+          categories: z.string(), // TODO: change to array
+          displayedImg: z.string().editor({ input: 'media' }),
           blogType: z.string(),
           badgeColor: z.string(),
           readingTime: z.string(),
@@ -155,22 +148,15 @@ export default defineContentConfig({
         type: 'page',
         source: 'categories/*/**.md',
         schema: z.object({
-          tags: z.array(z.string()),
-          image: z.object({
-            src: z.string().editor({ input: 'media' }),
-            alt: z.string(),
-          }),
-          date: z.date(),
           author: z.string(),
           authorPhoto: z.string(),
           authorRole: z.string(),
           published: z.boolean(),
           publishedAt: z.date(),
-          displayedImg: z.object({
-            src: z.string().editor({ input: 'media' }),
-            alt: z.string(),
-          }),
-          // blogType: z.string(),
+          tags: z.string(), // TODO: change to array
+          categories: z.string(), // TODO: change to array
+          displayedImg: z.string().editor({ input: 'media' }),
+          blogType: z.string(),
           badgeColor: z.string(),
           readingTime: z.string(),
         }),
