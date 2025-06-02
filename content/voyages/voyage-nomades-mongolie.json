@@ -3,8 +3,7 @@
   "title": "Partagez le quotidien des nomades des steppes mongoles",
   "destinations": [
     {
-      "name": "Mongolie",
-      "slug": "mongolie"
+      "name": "Mongolie"
     }
   ],
   "groupeAvailable": true,

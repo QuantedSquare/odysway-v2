@@ -3,8 +3,7 @@
   "title": "La Grande aventure : Challenge solidaire en immersion au Maroc",
   "destinations": [
     {
-      "name": "Maroc",
-      "slug": "maroc"
+      "name": "Maroc"
     }
   ],
   "groupeAvailable": true,

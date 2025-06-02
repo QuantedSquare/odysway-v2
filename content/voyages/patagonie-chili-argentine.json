@@ -3,12 +3,10 @@
   "title": "Au bout du monde en Patagonie, terre de feu et de glace",
   "destinations": [
     {
-      "name": "Argentine",
-      "slug": "argentine"
+      "name": "Argentine"
     },
     {
-      "name": "Chili",
-      "slug": "chili"
+      "name": "Chili"
     }
   ],
   "groupeAvailable": true,

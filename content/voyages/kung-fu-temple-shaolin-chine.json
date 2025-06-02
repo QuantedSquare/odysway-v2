@@ -3,8 +3,7 @@
   "title": "Initiez-vous au Kung Fu dans un temple Shaolin",
   "destinations": [
     {
-      "name": "Chine",
-      "slug": "chine"
+      "name": "Chine"
     }
   ],
   "groupeAvailable": false,

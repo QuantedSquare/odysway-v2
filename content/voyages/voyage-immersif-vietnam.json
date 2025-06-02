@@ -3,8 +3,7 @@
   "title": "Voyage au Vietnam : de la baie d'Halong à Hoi an, entre incontournables et immersion locale",
   "destinations": [
     {
-      "name": "Vietnam",
-      "slug": "vietnam"
+      "name": "Vietnam"
     }
   ],
   "groupeAvailable": true,

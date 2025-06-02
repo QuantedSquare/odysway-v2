@@ -45,8 +45,23 @@ fs.readdirSync(voyagesDir).forEach((file) => {
     changed = true
   }
 
+  // 5. Remove 'slug' from destinations array
+  if (Array.isArray(data.destinations)) {
+    let destinationsChanged = false
+    data.destinations = data.destinations.map((dest) => {
+      if (typeof dest === 'object' && dest !== null && 'name' in dest) {
+        if (Object.keys(dest).length !== 1 || !('name' in dest)) {
+          destinationsChanged = true
+        }
+        return { name: dest.name }
+      }
+      return dest
+    })
+    if (destinationsChanged) changed = true
+  }
+
   if (changed) {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8')
-    console.log(`Fixed: ${file}`, data)
+    console.log(`Fixed: ${file}`)
   }
 })

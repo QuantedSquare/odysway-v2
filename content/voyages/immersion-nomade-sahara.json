@@ -3,8 +3,7 @@
   "title": "Vivez comme un nomade du Sahara au Maroc",
   "destinations": [
     {
-      "name": "Maroc",
-      "slug": "maroc"
+      "name": "Maroc"
     }
   ],
   "groupeAvailable": true,

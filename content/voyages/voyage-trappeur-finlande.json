@@ -3,8 +3,7 @@
   "title": "Voyagez comme un trappeur en Finlande",
   "destinations": [
     {
-      "name": "Finlande",
-      "slug": "finlande"
+      "name": "Finlande"
     }
   ],
   "groupeAvailable": true,

@@ -5,7 +5,7 @@
     </h4>
     <p
       v-if="isHydrated && authorNote.text"
-      class="text-body-1 line-height-2"
+      class="text-body-2 line-height-2"
     >
       <MDC
         tag="article"

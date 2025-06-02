@@ -3,8 +3,7 @@
   "title": "Eveillez vos sens dans les forêts des Vosges du Nord",
   "destinations": [
     {
-      "name": "Vosges",
-      "slug": "vosges"
+      "name": "Vosges"
     }
   ],
   "groupeAvailable": true,

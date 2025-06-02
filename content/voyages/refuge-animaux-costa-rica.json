@@ -3,8 +3,7 @@
   "title": "Occupez-vous des animaux de la jungle au Costa Rica",
   "destinations": [
     {
-      "name": "Costa Rica",
-      "slug": "costa-rica"
+      "name": "Costa Rica"
     }
   ],
   "groupeAvailable": true,

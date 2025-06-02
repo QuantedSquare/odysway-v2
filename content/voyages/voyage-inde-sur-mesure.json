@@ -3,8 +3,7 @@
   "title": "Voyage en Inde sur mesure",
   "destinations": [
     {
-      "name": "Inde",
-      "slug": "inde"
+      "name": "Inde"
     }
   ],
   "groupeAvailable": false,

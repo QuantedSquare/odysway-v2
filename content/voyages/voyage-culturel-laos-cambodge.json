@@ -3,12 +3,10 @@
   "title": "Du Laos au Cambodge, voyage à la croisée des cultures",
   "destinations": [
     {
-      "name": "Cambodge",
-      "slug": "cambodge"
+      "name": "Cambodge"
     },
     {
-      "name": "Laos",
-      "slug": "laos"
+      "name": "Laos"
     }
   ],
   "groupeAvailable": true,

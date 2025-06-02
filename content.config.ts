@@ -415,7 +415,7 @@ export default defineContentConfig({
       }),
     }),
     voyages: defineCollection({
-      type: 'page',
+      type: 'data',
       source: 'voyages/*.json',
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),

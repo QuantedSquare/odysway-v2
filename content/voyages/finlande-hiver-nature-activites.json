@@ -3,8 +3,7 @@
   "title": "Aventures hivernales en Laponie Finlandaise",
   "destinations": [
     {
-      "name": "Finlande",
-      "slug": "finlande"
+      "name": "Finlande"
     }
   ],
   "groupeAvailable": true,

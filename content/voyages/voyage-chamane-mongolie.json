@@ -3,8 +3,7 @@
   "title": "Voyagez en terre chamane en Mongolie",
   "destinations": [
     {
-      "name": "Mongolie",
-      "slug": "mongolie"
+      "name": "Mongolie"
     }
   ],
   "groupeAvailable": true,

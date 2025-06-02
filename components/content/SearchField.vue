@@ -20,7 +20,7 @@
             class="relative z-index-parent"
           >
             <v-autocomplete
-              :id="id"
+              :id="destinationId"
               v-model="destinationChoice"
               v-model:search="search"
               :items="filteredRegions"
@@ -89,7 +89,7 @@
             md="3"
           >
             <v-select
-              :id="id"
+              :id="travelTypeId"
               v-model="travelTypeChoice"
               :items="travelTypes"
               hide-details
@@ -117,7 +117,7 @@
             >
               <template #activator="{ props }">
                 <v-text-field
-                  :id="id"
+                  :id="dateId"
                   v-bind="props"
                   :value="formattedDate"
                   readonly
@@ -187,7 +187,9 @@ const router = useRouter()
 const route = useRoute()
 const dateMenu = ref(false)
 const { gtag } = useGtag()
-const id = useId()
+const destinationId = useId()
+const travelTypeId = useId()
+const dateId = useId()
 const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
@@ -217,7 +219,7 @@ const mappedDestinationsToRegions = computed(() => {
       title: region.nom,
       value: region.slug,
       image: region.image,
-      destinations: destinations.value.filter(d => d.regions.some(r => r === region.nom)),
+      destinations: destinations.value.filter(d => d.regions.some(r => r.nom === region.nom)),
     }
   })
   // Prepend Top destination region if there are any
@@ -372,7 +374,7 @@ function selectDestination(item) {
   search.value = item.slug
   console.log('item', item.slug)
   setTimeout(() => {
-    const input = document.querySelector(`#${id}`)
+    const input = document.querySelector(`#${destinationId}`)
     if (input) input.blur()
   }, 0)
 }

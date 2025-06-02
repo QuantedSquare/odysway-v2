@@ -12,7 +12,7 @@
         class="d-flex  ga-4 flex-wrap"
       >
         <v-chip
-          v-if="badgeSection.experienceBadge.visible"
+          v-if="badgeSection.experienceBadge.visible && badgeSection.experienceBadge.text"
           variant="flat"
           :size="lgAndUp ? 'x-large' : 'large'"
           :color="badgeSection.experienceBadge.color"

@@ -3,8 +3,7 @@
   "title": "Explorez le Vietnam du Nord au Sud, de la baie de Lan Ha au delta du Mékong",
   "destinations": [
     {
-      "name": "Vietnam",
-      "slug": "vietnam"
+      "name": "Vietnam"
     }
   ],
   "groupeAvailable": true,

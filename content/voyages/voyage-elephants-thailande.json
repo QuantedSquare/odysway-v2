@@ -3,8 +3,7 @@
   "title": "Observer les éléphants, explorer les temples et s'évader sur les plages de Thaïlande",
   "destinations": [
     {
-      "name": "Thaïlande",
-      "slug": "thailande"
+      "name": "Thaïlande"
     }
   ],
   "groupeAvailable": false,

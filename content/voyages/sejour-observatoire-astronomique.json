@@ -3,8 +3,7 @@
   "title": "Séjour au cœur d'un observatoire astronomique",
   "destinations": [
     {
-      "name": "Alpes",
-      "slug": "alpes"
+      "name": "Alpes"
     }
   ],
   "groupeAvailable": false,
