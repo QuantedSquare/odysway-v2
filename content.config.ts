@@ -15,7 +15,7 @@ const teamChoices = teamFiles
 const voyageDir = path.resolve(__dirname, 'content/voyages')
 const voyageFiles = fs.readdirSync(voyageDir)
 const voyageChoices = voyageFiles
-  .map(file => file.replace('.json', ''))
+  .map(file => JSON.parse(fs.readFileSync(path.join(voyageDir, file), 'utf-8')).slug)
   .filter(Boolean) as [string, ...string[]]
 // console.log('voyageChoices', voyageChoices)
 

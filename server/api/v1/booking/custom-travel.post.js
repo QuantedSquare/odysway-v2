@@ -37,59 +37,91 @@ export default defineEventHandler(async (event) => {
   let dealId
   try {
     delete body.destination
-    // Compose deal data for ActiveCampaign, inspired by Details.vue flattenedDeal
-    const dealData = {
-      value: Number(body.starting_price) * 100,
-      title: body.title,
-      currency: 'eur',
-      group: '1',
-      owner: '1',
-      stage: config.public.environment === 'development' ? '48' : '2',
-
-      departureDate: body.departure_date,
-      returnDate: body.return_date,
-      travelType: 'Groupe',
-      nbTravelers: 1,
-      nbChildren: 0,
-      nbAdults: 1,
-      country,
-      iso,
-      zoneChapka,
-      image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
-      currentStep: 'Création du Deal sur mesure',
-      alreadyPaid: 0,
-      restToPay: 0,
-      utm: '',
-      slug: 'custom',
-      basePricePerTraveler: Number(body.starting_price),
-      promoChildren: 0,
-      maxChildrenAge: 0,
-      promoTeen: 0,
-      nbTeen: 0,
-      maxTeenAge: 0,
-      gotEarlybird: 'Non',
-      promoEarlybird: 0,
-      gotLastMinute: 'Non',
-      promoLastMinute: 0,
-      forcedIndivRoom: 'Non',
-      indivRoomPrice: 0,
-      flightPrice: 0,
-      extensionPrice: 0,
-      // contacts
-      email: body.email,
-      firstname: acContact.contact.firstName || '',
-      lastname: acContact.contact.lastName || '',
-      phone: acContact.contact.phone || '',
-
-      // destination: destinationTitles,
-      // ...body, // allow extra fields (extension, reduction, etc.)
+    // Compose deal data for ActiveCampaign
+    let dealData
+    if (body.ac_link) {
+      // Only update fields provided by the frontend (payload), plus derived fields
+      dealData = {
+        ...body, // all fields from the payload (title, description, etc.)
+        country,
+        iso,
+        zoneChapka,
+        title: body.title,
+        basePricePerTraveler: Number(body.starting_price),
+        departureDate: body.departure_date,
+        returnDate: body.return_date,
+        firstname: acContact.contact.firstName || '',
+        lastname: acContact.contact.lastName || '',
+        phone: acContact.contact.phone || '',
+        email: body.email,
+      }
+      // Remove ac_link from dealData if present
+      delete dealData.ac_link
+    }
+    else {
+      // Full object for creation
+      dealData = {
+        value: Number(body.starting_price) * 100,
+        title: body.title,
+        currency: 'eur',
+        group: '1',
+        owner: '1',
+        stage: config.public.environment === 'development' ? '48' : '2',
+        departureDate: body.departure_date,
+        returnDate: body.return_date,
+        travelType: ['Voyage sur-mesure'],
+        nbTravelers: 1,
+        nbChildren: 0,
+        nbAdults: 1,
+        country,
+        iso,
+        zoneChapka,
+        image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+        currentStep: 'Création du Deal sur mesure',
+        alreadyPaid: 0,
+        restToPay: 0,
+        utm: '',
+        slug: 'custom',
+        basePricePerTraveler: Number(body.starting_price),
+        promoChildren: 0,
+        maxChildrenAge: 0,
+        promoTeen: 0,
+        nbTeen: 0,
+        maxTeenAge: 0,
+        gotEarlybird: 'Non',
+        promoEarlybird: 0,
+        gotLastMinute: 'Non',
+        promoLastMinute: 0,
+        forcedIndivRoom: 'Non',
+        indivRoomPrice: 0,
+        flightPrice: 0,
+        extensionPrice: 0,
+        // contacts
+        email: body.email,
+        firstname: acContact.contact.firstName || '',
+        lastname: acContact.contact.lastName || '',
+        phone: acContact.contact.phone || '',
+      }
     }
     console.log('===========dealData in custom-travel.post.js===========', dealData)
-    dealId = await activecampaign.createDeal(dealData)
-    console.log('===========dealId in custom-travel.post.js===========', dealId)
+    if (body.ac_link) {
+      // Try to extract dealId from the URL
+      const match = body.ac_link.match(/deals\/(\d+)/)
+      if (match && match[1]) {
+        dealId = await activecampaign.updateDeal(match[1], dealData)
+        console.log('===========dealId (updated) in custom-travel.post.js===========', dealId)
+      }
+      else {
+        return { error: 'Lien ActiveCampaign invalide (dealId non trouvé)' }
+      }
+    }
+    else {
+      dealId = await activecampaign.createDeal(dealData)
+      console.log('===========dealId (created) in custom-travel.post.js===========', dealId)
+    }
   }
   catch (err) {
-    return { error: 'Erreur lors de la création du deal ActiveCampaign', details: err.message || err }
+    return { error: 'Erreur lors de la création/mise à jour du deal ActiveCampaign', details: err.message || err }
   }
 
   // 2. Insert into travel_dates
@@ -110,13 +142,6 @@ export default defineEventHandler(async (event) => {
       starting_price: Number(body.starting_price),
       travel_slug: 'custom',
       is_custom_travel: true,
-      // title: body.title,
-      // description: body.description || '',
-      // destination: destinationTitles,
-      // user_email: body.email,
-      // iso,
-      // zone_chapka: zoneChapka,
-      // country,
     }
     const { data, error } = await supabase
       .from('travel_dates')

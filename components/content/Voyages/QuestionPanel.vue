@@ -5,15 +5,13 @@
   >
     <v-expansion-panel
       eager
-      class="my-2 py-6 "
-      :class="{ 'hover-bg': hover }"
+      class="my-2 py-6"
     >
       <v-expansion-panel-title
         class="text-subtitle-1 font-weight-bold text-md-h6 "
         :class="'text-'+ questionColor"
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
       >
+        <!-- {{ item.question }} -->
         <div v-if="question">
           <MDCRenderer
             :body="question.body"
@@ -37,6 +35,7 @@
         eager
         class="text-subtitle-2 text-md-subtitle-1 text-grey pl-6 bg-white"
       >
+        <!-- {{ item.answer }} -->
         <MDCRenderer
           v-if="answer"
           :body="answer.body"
@@ -71,7 +70,6 @@ const { item } = defineProps({
     default: null,
   },
 })
-const hover = ref(false)
 const question = ref(null)
 const answer = ref(null)
 if (item) {
@@ -85,14 +83,8 @@ if (item) {
     border-top-left-radius: 16px !important;
     border-top-right-radius: 16px !important;
 }
-.v-expansion-panel-text {
-  overflow: hidden!important;
-  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1)!important;
-}
-.hover-bg {
-  background-color: rgb(230, 233, 234, 1)!important;
-}
+
 :deep(.v-expansion-panel-title__overlay ) {
-  background-color: rgb(230, 233, 234, 1)!important;
+  background-color: rgba(255, 255, 255, 0)!important;
 }
 </style>

@@ -23,6 +23,19 @@
                 type="email"
               />
 
+              Deal activecampaign si déjà existant
+              <v-alert
+                v-if="form.ac_link"
+                type="warning"
+                class="mt-2"
+              >
+                Attention cela viendra remplacer certaines des informations du deal
+              </v-alert>
+              <v-text-field
+                v-model="form.ac_link"
+                label="Lien du deal ActiveCampaign"
+              />
+
               <v-text-field
                 v-model="form.departure_date"
                 label="Date de départ"
@@ -121,6 +134,7 @@ const destinationsList = ref([])
 
 const form = ref({
   title: '',
+  ac_link: '',
   description: '',
   email: '',
   departure_date: '',
@@ -153,13 +167,14 @@ const onSave = async () => {
   // Prepare payload
   const payload = {
     ...form.value,
+    ac_link: form.value.ac_link ? form.value.ac_link : undefined,
     destination: Array.isArray(form.value.destination)
       ? form.value.destination
       : [form.value.destination],
-    starting_price: Number(form.value.starting_price),
-    flight_price: form.value.flight_price ? Number(form.value.flight_price) : undefined,
-    extension_price: form.value.extension_price ? Number(form.value.extension_price) : undefined,
-    reduction_price: form.value.reduction_price ? Number(form.value.reduction_price) : undefined,
+    starting_price: Number(form.value.starting_price) * 100,
+    flight_price: form.value.flight_price ? Number(form.value.flight_price) * 100 : undefined,
+    extension_price: form.value.extension_price ? Number(form.value.extension_price) * 100 : undefined,
+    reduction_price: form.value.reduction_price ? Number(form.value.reduction_price) * 100 : undefined,
   }
   try {
     console.log('===========payload in add-custom-travel.vue===========', payload)

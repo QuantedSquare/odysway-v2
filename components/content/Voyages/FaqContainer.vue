@@ -27,7 +27,7 @@
           class="position-relative px-8"
         >
           <v-row>
-            <v-col>
+            <v-col class="max-height-with-overflow">
               <slot name="faq" />
             </v-col>
           </v-row>
@@ -80,3 +80,31 @@ defineProps({
 
 const route = useRoute()
 </script>
+
+<style scoped>
+.max-height-with-overflow {
+  max-height: 800px;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border: 7px solid white;
+  background: #C5C7C9;
+  height:10px;
+  border-radius: 9px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #0808b6;
+    border: 6px solid lightgrey;
+    border-radius: 9px;
+    background-clip: content-box;
+    height:10px;
+    width:10px;
+  }
+</style>

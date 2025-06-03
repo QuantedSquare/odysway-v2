@@ -124,17 +124,27 @@ function getPaymentStatus(item) {
   else {
     const total = item.booked_dates.reduce((acc, date) => acc + date.deal.value, 0)
     const alreadyPaid = item.booked_dates.reduce((acc, date) => acc + date.deal.alreadyPaid, 0)
-    return formatNumber(alreadyPaid * 100, 'currency', '€') + ' / ' + formatNumber(total * 100, 'currency', '€')
+    return formatNumber(alreadyPaid, 'currency', '€') + ' / ' + formatNumber(total, 'currency', '€')
   }
 }
 function goToAddCustomTravel() {
   router.push('/booking-management/add-custom-travel')
 }
 function goToDate(item) {
-  router.push(`/booking-management/custom-travel/${item.id}`)
+  router.push(`/booking-management/custom-travels/${item.id}`)
 }
-function deleteDate(item) {
-  console.log('===========item in deleteDate===========', item)
+
+async function deleteDate(item) {
+  if (!confirm('Supprimer ce voyage personnalisé ?')) return
+  try {
+    const res = await fetch(`/api/v1/booking/custom-travel/${item.id}`, { method: 'DELETE' })
+    if (res.ok) {
+      await fetchCustomTravels()
+    }
+  }
+  catch (err) {
+    console.error('Error deleting custom travel:', err)
+  }
 }
 
 onMounted(fetchCustomTravels)
