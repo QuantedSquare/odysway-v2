@@ -108,16 +108,6 @@
           </template>
         </FunnelStepsSummaryLine>
 
-        <!-- Teen Travelers -->
-        <!-- <FunnelStepsSummaryLine v-if="deal.nbTeen > 0">
-          <template #left>
-            {{ travelerText(+deal.nbTeen, 'child') }}
-          </template>
-          <template #right>
-            {{ formatNumber((+deal.basePricePerTraveler - deal.promoTeen - (deal.gotEarlybird === 'Oui' ? deal.promoEarlybird : (deal.gotLastMinute === 'Oui' ? deal.promoLastMinute : 0))) * deal.nbTeen, 'currency', 'EUR') }}
-          </template>
-        </FunnelStepsSummaryLine> -->
-
         <v-divider
           v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0"
           class="my-6"
