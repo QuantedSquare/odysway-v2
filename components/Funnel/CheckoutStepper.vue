@@ -26,16 +26,16 @@
                 cover
               />
             </Transition>
-            <Transition name="fade">
-              <FunnelCardHeader
-                v-if=" currentStep !== 0 && currentStep < 5 "
-                :titre="voyage.title"
-                :travel-type="voyage.travelType"
-                :image="voyage.imgSrc"
-                :date="`Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`"
-                :price="voyage.startingPrice"
-              />
-            </Transition>
+
+            <FunnelCardHeader
+              v-if=" currentStep !== 0 && currentStep < 5 "
+              :titre="voyage.title"
+              :travel-type="voyage.travelType"
+              :image="voyage.imgSrc"
+              :date="`Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`"
+              :price="voyage.startingPrice"
+            />
+
             <v-stepper-window
               :class="currentStep === 5 ? 'mt-0 mx-0' : ''"
               :model-value="currentStep"
@@ -235,9 +235,9 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       startingPrice: fetchedDate.starting_price * 100,
       indivRoomPrice: travel.pricing.indivRoomPrice * 100,
       gotIndivRoomAvailable: travel.pricing.indivRoom,
-      gotEarlybird: fetchedDate.early_bird ? 'Oui' : 'Non',
+      gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')) ? 'Oui' : 'Non',
       promoEarlybird: travel.pricing.earlyBirdReduction * 100,
-      gotLastMinute: fetchedDate.last_minute ? 'Oui' : 'Non',
+      gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')) ? 'Oui' : 'Non',
       promoLastMinute: travel.pricing.lastMinuteReduction * 100,
       depositPrice: fetchedDate.startingPrice * 0.3 || 500,
       promoChildren: travel.pricing.childrenPromo * 100,
@@ -271,9 +271,9 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       zoneChapka: +deal.zoneChapka,
       depositPrice: deal.depositPrice, // #Todo faire sauter
       promoChildren: deal.promoChildren / 100,
-      promoTeen: deal.promoTeen / 100,
-      maxChildrenAge: 12,
-      maxTeenAge: 18,
+      // promoTeen: deal.promoTeen / 100,
+      maxChildrenAge: deal.maxChildrenAge || 12,
+      // maxTeenAge: 18,
       source: 'Devis', // Possible que ça change
       forcedIndivRoom: deal.forcedIndivRoom,
       indivRoomPrice: deal.indivRoomPrice,

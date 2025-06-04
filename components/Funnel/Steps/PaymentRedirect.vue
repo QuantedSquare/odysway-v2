@@ -84,6 +84,7 @@
                   color="info"
                   class="ml-4"
                   large
+                  :loading="loadingStripeSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
                   @click="book"
                 >
@@ -179,7 +180,7 @@ const book = async () => {
   const res = await fetch(`/api/v1/booking/booked_date/option`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id: route.query.booked_id }),
+    body: JSON.stringify({ id: route.query.booked_id, booked_places: +deal.value.nbTravelers }),
   })
   const data = await res.json()
   console.log('data', data)

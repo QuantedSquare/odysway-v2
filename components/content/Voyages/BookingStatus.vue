@@ -24,7 +24,7 @@
         v-if="status.status === 'confirmed'"
         class="font-weight-regular text-body-2"
       >
-        - Reste {{ maxTravellers - bookedPlaces }} places
+        - Reste {{ maxTravellers - bookedPlaces > 0 ? maxTravellers - bookedPlaces : 0 }} places
       </span>
     </div>
     <div

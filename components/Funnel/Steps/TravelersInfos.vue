@@ -49,6 +49,13 @@
             Les voyageurs âgés de {{ Number(deal?.maxChildrenAge) }} ans au moment du départ sont considérés comme des
             adultes.
           </p>
+          <!-- New: Error message for missing fields -->
+          <p
+            v-show="!allFieldsFilled"
+            class="text-error text-right"
+          >
+            Tous les champs doivent être remplis pour chaque voyageur.
+          </p>
         </v-col>
       </v-row>
 
@@ -81,7 +88,7 @@ const { addSingleParam } = useParams()
 const isCouple = ref(false)
 const nbTravelers = ref(1)
 const dealNbChildren = ref(0)
-const dealNbTeenagers = ref(0)
+// const dealNbTeenagers = ref(0)
 const dealNbAdults = ref(0)
 const travelers = ref([])
 const isLoading = ref(true)
@@ -90,50 +97,60 @@ const isLoading = ref(true)
 const model = defineModel()
 // Add computed properties for age validation
 const computedAges = computed(() => {
-  const now = dayjs()
+  const departureDate = dayjs(deal.value?.departureDate)
   const children = []
-  const teenagers = []
+  // const teenagers = []
   const adults = []
 
   travelers.value.forEach((traveler) => {
     if (!traveler.birthdate) return
 
     const birthdate = dayjs(traveler.birthdate, 'DD/MM/YYYY')
-    const age = now.diff(birthdate, 'year')
+    const age = departureDate.diff(birthdate, 'year')
+    console.log('age', age)
+    console.log('maxTeenAge', deal.value?.maxTeenAge)
+    console.log('maxChildrenAge', deal.value?.maxChildrenAge)
 
-    if (age < +deal.value?.maxChildrenAge) {
+    if (age <= +deal.value?.maxChildrenAge) {
       children.push(traveler)
-    }
-    else if (age < +deal.value?.maxTeenAge) {
-      teenagers.push(traveler)
     }
     else {
       adults.push(traveler)
     }
+    console.log('children', children)
+    // console.log('teenagers', teenagers)
+    console.log('adults', adults)
   })
 
   return {
     children,
-    teenagers,
+    // teenagers,
     adults,
   }
 })
 
 const ageValidation = computed(() => {
-  const { children, teenagers, adults } = computedAges.value
+  const { children, adults } = computedAges.value
   return {
     isValid: children.length === dealNbChildren.value
-      && teenagers.length === dealNbTeenagers.value
+      // && teenagers.length === dealNbTeenagers.value
       && adults.length === dealNbAdults.value,
     childrenCount: children.length,
-    teenagersCount: teenagers.length,
+    // teenagersCount: teenagers.length,
     adultsCount: adults.length,
   }
 })
-watch(ageValidation, (newVal) => {
-  if (!newVal.isValid) {
-    model.value = false
-  }
+
+// New: Check that all traveler fields are filled
+const allFieldsFilled = computed(() => {
+  return travelers.value.every(
+    t => t.firstname && t.lastname && t.birthdate,
+  )
+})
+
+// Update watcher to check both validations
+watch([ageValidation, allFieldsFilled], ([ageValid, fieldsFilled]) => {
+  model.value = ageValid.isValid && fieldsFilled
 })
 
 // Data Initialization
@@ -143,7 +160,7 @@ const initializeTravelersData = () => {
     nbTravelers.value = deal.value?.nbTravelers || 1
 
     dealNbChildren.value = +deal.value?.nbUnderAge || 0
-    dealNbTeenagers.value = +deal.value?.nbTeen || 0
+    // dealNbTeenagers.value = +deal.value?.nbTeen || 0
     dealNbAdults.value = +deal.value?.nbAdults || 0
     // Max children age : +deal.value?.maxChildrenAge
     // Max teenagers age : +deal.value?.maxTeenAge
@@ -207,12 +224,12 @@ const submitStepData = async () => {
     console.error('Age validation failed:', {
       expected: {
         children: dealNbChildren.value,
-        teenagers: dealNbTeenagers.value,
+        // teenagers: dealNbTeenagers.value,
         adults: dealNbAdults.value,
       },
       actual: {
         children: ageValidation.value.childrenCount,
-        teenagers: ageValidation.value.teenagersCount,
+        // teenagers: ageValidation.value.teenagersCount,
         adults: ageValidation.value.adultsCount,
       },
     })

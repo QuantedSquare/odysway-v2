@@ -19,7 +19,6 @@
             class="relative z-index-parent"
           >
             <v-text-field
-
               :id="id"
               ref="textfield"
               v-model="search"
@@ -170,7 +169,9 @@
               class="text-none text-body-1"
               @click="searchFn"
             >
-              Découvrir les voyages
+              <div class="text-body-2 font-weight-bold">
+                Découvrir les voyages
+              </div>
             </v-btn>
           </v-col>
         </v-row>

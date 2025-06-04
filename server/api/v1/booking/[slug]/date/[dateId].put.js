@@ -11,6 +11,7 @@ export default defineEventHandler(async (event) => {
     'published', 'displayed_status', 'departure_date', 'return_date',
     'max_travelers', 'min_travelers', 'booked_seat', 'include_flight',
     'flight_price', 'badges', 'starting_price',
+    'early_bird', 'last_minute',
     // Custom display fields
     'custom_display',
     'displayed_min_travelers',

@@ -1,7 +1,7 @@
 <template>
   <v-container
-    class="subtle-shadow rounded-lg text-primary d-flex align-center"
-    :height="xs ? 250 : 220"
+    class="subtle-shadow rounded-lg text-primary d-flex align-center py-8"
+    height="100%"
     fluid
   >
     <v-row>
@@ -43,7 +43,7 @@
           :booked-places="enrichedDate.status.status === 'full' ? enrichedDate.max_travelers : enrichedDate.booked_seat"
           :max-travellers="enrichedDate.max_travelers"
         />
-        <v-row class="d-none d-md-flex align-center ga-2 mx-1">
+        <v-row class="d-flex align-center ga-2 mx-1 text-custom">
           <v-chip
             color="primary"
           >
@@ -103,7 +103,7 @@
       <v-col
         cols="5"
         md="3"
-        class="d-flex flex-column align-start"
+        class="d-flex flex-column justify-center align-center justify-md-start align-sm-start"
       >
         <span class="text-h2 font-weight-black">
           {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
@@ -175,7 +175,8 @@ import dayjs from 'dayjs'
 import { mdiArrowRight, mdiAccountGroupOutline, mdiAirplane, mdiCalendarHeart, mdiCheckCircleOutline, mdiBird, mdiClockStarFourPointsOutline } from '@mdi/js'
 import { useDisplay } from 'vuetify'
 
-const { xs, width } = useDisplay()
+const today = dayjs()
+const { width } = useDisplay()
 const { date } = defineProps({
   date: {
     type: Object,
@@ -192,8 +193,8 @@ const enrichedDate = computed(() => {
     include_flight: date.custom_display ? date.displayed_include_flight : date.include_flight,
     badges: date.custom_display ? (date.displayed_badges || '') : (date.badges || ''),
     starting_price: date.custom_display ? date.displayed_starting_price : date.starting_price,
-    early_bird: date.custom_display ? date.displayed_early_bird : date.early_bird,
-    last_minute: date.custom_display ? date.displayed_last_minute : date.last_minute,
+    early_bird: date.custom_display ? date.displayed_early_bird : today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
+    last_minute: date.custom_display ? date.displayed_last_minute : dayjs(date.departure_date).diff(today, 'month') <= 1 ? date.last_minute : false,
     status: getStatus(date),
   }
 })
@@ -242,8 +243,11 @@ const formatLink = (date) => {
   .text-size-14 {
   font-size: 14px!important;
   }
+
   .line-height-2 {
     line-height: 20px !important;
+  } .text-custom:deep(.v-chip){
+    font-size: 11px!important;
   }
 
   .flex-direction-custom{
@@ -253,5 +257,8 @@ const formatLink = (date) => {
     .flex-direction-custom{
       flex-direction: row;
     }
+    .text-custom:deep(.v-chip){
+    font-size: 14px!important;
+  }
   }
 </style>

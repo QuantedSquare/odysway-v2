@@ -354,7 +354,7 @@ function searchFn() {
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
   console.log('route.path', route.path)
   router.push({
-    path: route.path === '/' ? '/search' : route.path,
+    path: '/search',
     query,
   })
 }

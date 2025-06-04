@@ -56,7 +56,6 @@
       <v-menu
         v-model="dateMenu"
         :close-on-content-click="false"
-        location="end"
       >
         <template #activator="{ props }">
           <v-text-field
@@ -76,6 +75,7 @@
           <v-locale-provider locale="fr">
             <v-date-picker
               v-model="date"
+              width="100%"
               format="dd/mm/YYYY"
               :max="new Date()"
               show-adjacent-months
@@ -143,8 +143,7 @@ const dataUpdated = () => {
   if (!date.value) return
 
   // Convert from YYYY-MM-DD to DD/MM/YYYY for emission
-  // const dateObj = dayjs(displayedDate.value)
-  console.log('date', date.value)
+
   emit('change', {
     id: props.id,
     firstname: i_firstname.value,

@@ -1,6 +1,6 @@
 <template>
   <v-skeleton-loader
-    v-if="!dealId"
+    v-if="loadingDeal"
     type="card"
   />
   <v-container v-else>
@@ -84,7 +84,7 @@
 
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
-const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
+const { deal, dealId, updateDeal, loadingDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 console.log('props.voyage', props.voyage)
 const specialRequest = ref('')

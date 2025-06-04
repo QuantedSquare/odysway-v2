@@ -125,7 +125,6 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: defineOrganization({
       '@type': ['Organization', 'TravelAgency', 'OnlineStore'],
-
       // Basic Information
       'name': 'ODYSWAY',
       'alternateName': 'Odysway - Voyages en immersion',

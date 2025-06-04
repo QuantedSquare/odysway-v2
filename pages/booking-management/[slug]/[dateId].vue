@@ -84,6 +84,7 @@
               <v-divider class="my-2" />
               <v-row>
                 <v-col cols="6">
+                  <span class="text-info text-caption"> Le badge EarlyBird ne sera visible que si la date de départ est supérieure à 7 mois</span>
                   <v-switch
                     v-model="form.early_bird"
                     color="green-light"
@@ -91,6 +92,7 @@
                   />
                 </v-col>
                 <v-col cols="6">
+                  <span class="text-info text-caption"> Le badge LastMinute ne sera visible que si la date de départ est inférieure à 1 mois</span>
                   <v-switch
                     v-model="form.last_minute"
                     color="green-light"

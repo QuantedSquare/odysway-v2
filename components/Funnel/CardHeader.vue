@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="height-title bg-primary-light px-6"
+    class="height-title bg-primary-light px-6 d-none d-md-block"
     fluid
   >
     <div class="d-flex align-center justify-start ga-4 flex-md-row ">
@@ -37,6 +37,40 @@
       </div>
     </div>
   </v-container>
+  <v-img
+    :src="props.image || 'https://odysway.com/logos/logo_noir.png'"
+    height="120"
+    width="100%"
+    cover
+    class="d-block d-md-none text-white d-flex text-shadow"
+  >
+    <v-container class="h-100 d-flex flex-column justify-center h-100">
+      <span class="font-weight-bold text-body-1">
+        {{ titre }}
+      </span>
+      <v-row
+        v-if="travelType"
+        class="text-body-2 align-end"
+        no-gutters
+      >
+        <v-col cols="8">
+          <span
+            v-if="date"
+            class="text-caption"
+          >
+            {{ date }}
+          </span>
+        </v-col>
+
+        <v-col
+
+          class="text-no-wrap text-right font-weight-bold text-body-1"
+        >
+          {{ formatNumber(price, 'currency', '€') }}/pers.
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-img>
 </template>
 
 <script setup>

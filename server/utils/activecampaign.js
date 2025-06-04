@@ -383,11 +383,11 @@ const recalculatTotalValues = async (dealId) => {
 
   const nbTravelers = customFields.nbTravelers
   const nbChildren = customFields.nbChildren
-  const nbTeens = customFields.nbTeen
+  // const nbTeens = customFields.nbTeen
 
   const promoValue = customFields.promoCode ? customFields.promoValue : 0
   const promoChildren = customFields.promoChildren || 0
-  const promoTeen = customFields.promoTeen || 0
+  // const promoTeen = customFields.promoTeen || 0
   const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
   const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
 
@@ -396,18 +396,16 @@ const recalculatTotalValues = async (dealId) => {
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
 
-  // console.log('each values', basePrice, nbTravelers, promoValue, promoChildren, promoTeen, promoEarlybird, promoLastMinute, indivRoomPrice, flightPrice, extensionPrice, insurancePrice)
-
-  console.log('Base price total:', basePrice * nbTravelers)
-  console.log('Individual room total:', indivRoomPrice * nbTravelers)
-  console.log('Flight price total:', flightPrice * nbTravelers)
-  console.log('Extension price total:', extensionPrice * nbTravelers)
-  console.log('Insurance price total:', insurancePrice * nbTravelers)
-  console.log('Promo value total:', promoValue * nbTravelers)
-  console.log('Children promo total:', promoChildren * nbChildren)
-  console.log('Teen promo total:', promoTeen * nbTeens)
-  console.log('Early bird promo:', promoEarlybird)
-  console.log('Last minute promo:', promoLastMinute)
+  // console.log('Base price total:', basePrice * nbTravelers)
+  // console.log('Individual room total:', indivRoomPrice * nbTravelers)
+  // console.log('Flight price total:', flightPrice * nbTravelers)
+  // console.log('Extension price total:', extensionPrice * nbTravelers)
+  // console.log('Insurance price total:', insurancePrice * nbTravelers)
+  // console.log('Promo value total:', promoValue * nbTravelers)
+  // console.log('Children promo total:', promoChildren * nbChildren)
+  // console.log('Teen promo total:', promoTeen * nbTeens)
+  // console.log('Early bird promo:', promoEarlybird)
+  // console.log('Last minute promo:', promoLastMinute)
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers
@@ -416,15 +414,14 @@ const recalculatTotalValues = async (dealId) => {
     + insurancePrice * nbTravelers
     - (promoValue * nbTravelers)
     - (promoChildren * nbChildren)
-    - (promoTeen * nbTeens)
-    - promoEarlybird
-    - promoLastMinute
+    - (promoEarlybird * nbTravelers)
+    - (promoLastMinute * nbTravelers)
 
-  console.log('======== totalValue:', value, '========')
+  // console.log('======== totalValue:', value, '========')
 
   const restToPay = value - customFields.alreadyPaid
 
-  console.log('===========rest to pay', restToPay, '========')
+  // console.log('===========rest to pay', restToPay, '========')
 
   const formatedDeal = transformDealForAPI({
     value,

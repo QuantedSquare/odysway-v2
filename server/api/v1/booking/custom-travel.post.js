@@ -87,7 +87,7 @@ export default defineEventHandler(async (event) => {
         maxChildrenAge: 0,
         promoTeen: 0,
         nbTeen: 0,
-        maxTeenAge: 0,
+        // maxTeenAge: 0,
         gotEarlybird: 'Non',
         promoEarlybird: 0,
         gotLastMinute: 'Non',

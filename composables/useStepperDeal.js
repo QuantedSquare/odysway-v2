@@ -3,14 +3,17 @@ import determinePaymentOptions from '@/utils/determinePaymentOptions'
 export function useStepperDeal(componentStep) {
   const deal = ref(null)
   const dealId = ref(null)
+  const loadingDeal = ref(false)
   const route = useRoute()
   const { addMultipleParams } = useParams()
 
   const currentStepRef = ref(1)
 
   const fetchDeal = async (id = dealId.value) => {
+    loadingDeal.value = true
     const res = await apiRequest(`/ac/deals/${id}`)
     deal.value = res
+    loadingDeal.value = false
   }
 
   const checkoutType = computed(() => {
@@ -64,9 +67,11 @@ export function useStepperDeal(componentStep) {
     }
     if (route.query.booked_id) {
       console.log('route.query.booked_id', route.query.booked_id)
+      loadingDeal.value = true
       const { deal_id } = await apiRequest(`/booking/booked_date/${route.query.booked_id}`)
       console.log('deal_id in composable', deal_id)
       dealId.value = deal_id
+      loadingDeal.value = false
     }
   }, { immediate: true })
 
@@ -78,5 +83,5 @@ export function useStepperDeal(componentStep) {
     }
   }, { immediate: true })
 
-  return { deal, dealId, fetchDeal, createDeal, updateDeal, checkoutType }
+  return { deal, dealId, fetchDeal, createDeal, updateDeal, checkoutType, loadingDeal }
 }
