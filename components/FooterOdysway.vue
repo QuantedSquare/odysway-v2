@@ -30,13 +30,11 @@
             :srcset="`${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
             sizes="(max-width: 600px) 480px, 640px"
             loading="lazy"
-            width="160"
-            height="44px"
             alt="Logo d'Odysway"
+            class="footer-logo"
           />
           <span class="text-h5 text-grey">
             {{ footer.logo.description }}
-
           </span>
           <div>
             <SocialsContainerButtons class="ga-4" />
@@ -47,14 +45,13 @@
           md="4"
         >
           <v-lazy
-            :min-height="270"
             :options="{ threshold: 0.5 }"
             transition="fade-transition"
           >
             <v-img
               rounded="lg"
               cover
-              max-height="270"
+              max-height="198"
               :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
               :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
               :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
@@ -67,12 +64,12 @@
         <v-col
           cols="12"
           lg="4"
-          class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-14"
+          class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-10"
         >
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
           </h5>
-          <div class="d-flex flex-row justify-start align-start align-lg-center ga-2">
+          <div class="d-flex flex-row flex-wrap justify-start align-start align-lg-center ga-6">
             <div class="custom-chip font-weight-bold text-primary text-no-wrap">
               {{ footer.contact.phone }}
             </div>
@@ -84,7 +81,7 @@
             color="secondary"
             height="62"
             width="360"
-            class="font-weight-bold align-self-center"
+            class="font-weight-bold align-self-center text-decoration-none text-body-1 text-capitalize"
             :to="footer.contact.buttonContact.lien"
           >
             {{ footer.contact.buttonContact.text }}
@@ -95,7 +92,7 @@
         thickness="2"
         class="my-16"
       />
-      <v-row class="mb-16 pb-16 text-primary">
+      <v-row class="mb-4 pb-4 text-primary">
         <v-col
           cols="6"
           md="3"
@@ -209,13 +206,11 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 import OdyswayFooter from '~/assets/img/odysway-text.png'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
-const { width } = useDisplay()
 const { footer } = useAppConfig()
 
 const img = useImage()
@@ -261,5 +256,16 @@ const img = useImage()
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 14px;
+}
+  .footer-logo{
+     width:160px;
+     height: 44px;
+  }
+
+@media (max-width: 960px) {
+  .footer-logo {
+    width: 100px;
+    height: 25px;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="custom-rounded rounded-lg  px-8 py-md-8 mt-4 mt-md-8 bg-primary"
+    class="rounded-lg px-8 py-md-8 mt-4 mt-md-8 bg-primary"
   >
     <div class="text-h3 font-weight-bold my-4">
       Des idées pour vos prochains voyages
@@ -80,10 +80,5 @@ const tops = await queryCollection('tops').all()
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
-}
-@media (max-width: 960px) {
-  .custom-rounded {
-    border-radius: 0px!important;
-  }
 }
 </style>

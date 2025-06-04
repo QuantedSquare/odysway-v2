@@ -1,9 +1,8 @@
 <template>
   <div class="z-index-max">
     <v-container
-
       ref="searchField"
-      class="search-field-container py-0 z-index-2003"
+      class="search-field-container px-0 px-md-3 py-0 z-index-2003"
     >
       <div
         ref="container"
@@ -16,6 +15,7 @@
           <v-col
             cols="12"
             md="3"
+            class="pb-1 pb-md-3"
           >
             <v-autocomplete
               :id="destinationId"
@@ -85,6 +85,7 @@
           <v-col
             cols="12"
             md="3"
+            class="pb-1 pb-md-3"
           >
             <v-select
               :id="travelTypeId"
@@ -107,6 +108,7 @@
           <v-col
             cols="12"
             md="3"
+            class="pb-1 pb-md-3"
           >
             <v-select
               :id="dateId"
@@ -130,7 +132,7 @@
           <v-col
             cols="12"
             md="3"
-            class=" h-100"
+            class="h-100 pb-4"
           >
             <v-btn
               height="56"

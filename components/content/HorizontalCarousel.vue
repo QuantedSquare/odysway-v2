@@ -2,24 +2,23 @@
   <v-container>
     <v-row
       align="center"
-      class="position-relative"
+      class="position-relative px-0"
     >
       <v-col
-        cols="9"
-        md="12"
+        cols="12"
         class="text-h2 my-4"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
         <slot name="title" />
       </v-col>
       <v-col
-        v-show="displayButton && showButtons"
+        v-show="displayButton"
         cols="auto"
-        class="position-absolute right-0"
+        class="d-none d-sm-block position-absolute right-0"
       >
         <v-btn
           icon
-          :color="color"
+          :color="arrivedState.left ? 'primary' : `${color}`"
           :disabled="arrivedState.left"
           class="mr-2"
           elevation="5"
@@ -28,12 +27,12 @@
         >
           <v-icon
             :icon="mdiChevronLeft"
-            color="white"
+            :color="arrivedState.left ? 'black' : 'white'"
           />
         </v-btn>
         <v-btn
           icon
-          :color="color"
+          :color="arrivedState.right ? 'primary' : `${color}`"
           :disabled="arrivedState.right"
           elevation="5"
           :size="mdAndUp ? 'large' : 'small'"
@@ -41,7 +40,7 @@
         >
           <v-icon
             :icon="mdiChevronRight"
-            color="white"
+            :color="arrivedState.right ? 'black' : 'white'"
           />
         </v-btn>
       </v-col>
@@ -49,7 +48,7 @@
     <div ref="items-list">
       <v-row
         ref="scrollContainer"
-        class="flex-nowrap overflow-auto hidden-scroll"
+        :class="reviews && smAndDown? 'flex-wrap' : 'flex-nowrap overflow-auto hidden-scroll'"
       >
         <slot
           name="carousel-item"
@@ -94,9 +93,13 @@ const props = defineProps({
     type: String,
     default: 'primary',
   },
+  reviews: {
+    type: Boolean,
+    default: false,
+  },
 })
 
-const { mdAndUp, sm } = useDisplay()
+const { mdAndUp, sm, smAndDown } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
 
@@ -107,7 +110,6 @@ watch(scrollContainer, () => {
   nextTick(() => {
     if (scrollContainer.value) {
       scrollElement.value = scrollContainer.value.$el
-      // console.log('scrollElement', scrollElement.value)
     }
   })
 }, { immediate: true, deep: true })

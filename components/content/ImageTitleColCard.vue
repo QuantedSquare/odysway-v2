@@ -11,8 +11,7 @@
     >
       <NuxtLink
         :to="link"
-        class="image-wrapper"
-        :class="{ 'default-expanded': width <= 960 }"
+        class="image-wrapper default-expanded"
       >
         <v-img
           :src="imgComp(image.src, { format: 'webp', quality: 70, width: 640 })"
@@ -43,11 +42,9 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
-const { width } = useDisplay()
 
 defineProps({
   image: {
@@ -133,39 +130,38 @@ defineProps({
   z-index: 1;
 }
 
-.image-wrapper:hover .content-overlay {
+/* .image-wrapper:hover .content-overlay {
   transform: translateY(0);
-}
+} */
 
 .category-title {
-  margin: -2em 0 0 0;
-  transition: transform 0.3s ease-in-out;
+  margin: -3em 0 0 0;
 }
 
 .category-description {
   margin: 0.5rem 0 0;
   font-size: 0.875rem;
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(1rem);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
-.image-wrapper:hover .category-description {
+/* .image-wrapper:hover .category-description {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
-.explore-btn {
+/* .explore-btn {
   background: rgba(255, 255, 255, 0.2) !important;
   border: 1px solid white !important;
   color: white !important;
   font-weight: bold;
-}
+} */
 
-.explore-btn:hover {
+/* .explore-btn:hover {
   background: white;
   color: black;
-}
+} */
 
 @media screen and (max-width: 1280px) {
   .text-to-wrap {

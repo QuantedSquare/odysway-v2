@@ -1,9 +1,9 @@
 <template>
   <v-col
-    cols="8"
+    cols="11"
     sm="4"
     md="3"
-    class="pl-0 pl-md-3"
+    class="pr-1 pr-md-3"
   >
     <v-lazy
       :min-height="width <= 960 ? 300 : 415"
@@ -12,12 +12,7 @@
     >
       <NuxtLink
         :to="`/${type}/${slug}`"
-        class="image-wrapper"
-        :class="{
-          'default-expanded': width <= 960,
-        }"
-        @mouseenter="isHovered = true"
-        @mouseleave="isHovered = false"
+        class="image-wrapper default-expanded"
       >
         <v-img
           v-if="image"
@@ -46,7 +41,6 @@
             {{ title }}
           </h3>
           <p
-            v-if="isHovered "
             key="description"
             class="description text-shadow text-center mx-2"
           >
@@ -64,7 +58,6 @@ import { useImage } from '#imports'
 
 const imgComp = useImage()
 const { width } = useDisplay()
-const isHovered = ref(false)
 defineProps({
   slug: {
     type: String,

@@ -6,9 +6,10 @@
       :color="color"
       height="62"
       size="large"
+      class="text-decoration-none"
     >
       <div
-        class="text-decoration-none text-body-1 font-weight-bold mx-4"
+        class="text-body-1 font-weight-bold mx-4"
         :class="`text-${textColor}`"
       >
         <slot
@@ -19,12 +20,13 @@
     </v-btn>
     <v-btn
       v-else
-      :href="link"
+      :to="link"
       :color="color"
       height="62"
       size="large"
+      class="text-decoration-none"
     >
-      <div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4">
+      <div class="text-white text-body-1 font-weight-bold mx-4">
         <slot
           mdc-unwrap="p"
           name="text"

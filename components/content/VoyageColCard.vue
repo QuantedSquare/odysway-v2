@@ -1,9 +1,10 @@
 <template>
   <v-col
     v-if="loading"
-    cols="12"
+    cols="11"
     sm="6"
     md="4"
+    class="pr-1 pr-md-3"
   >
     <v-skeleton-loader
       class="mx-auto"
@@ -13,9 +14,10 @@
   </v-col>
   <v-col
     v-else-if="voyage"
-    cols="12"
+    cols="11"
     sm="6"
     lg="4"
+    class="pr-1 pr-md-3"
   >
     <v-lazy
       :min-height="228"
@@ -38,7 +40,6 @@
             sizes="(max-width: 600px) 480px, 1024px"
             loading="lazy"
             :height="width < 600 ? '150px' : '228px'"
-            class="hover-scale"
             cover
           >
             <div class="badge-position">
@@ -176,17 +177,6 @@ const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8
 </script>
 
 <style scoped>
-.hover-scale:hover .blur-overlay {
-  height: 100%;
-}
-.hover-scale:hover{
-  transform: scale(1.01);
-  transition: transform 0.2s ease-in-out;
-}
-.hover-scale{
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-}
 .badge-position{
   position: absolute;
   top: 25px;

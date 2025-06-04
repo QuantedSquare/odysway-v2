@@ -226,6 +226,7 @@ au cœur du voyage
   ---
   center-title: true
   color: secondary
+  reviews: true
   ---
   #title
   [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
@@ -261,7 +262,7 @@ au cœur du voyage
     ::::cta-button
     ---
     color: secondary
-    link: /avis-voyageurs
+    link: /calendly
     ---
     #text
     Contactez-nous

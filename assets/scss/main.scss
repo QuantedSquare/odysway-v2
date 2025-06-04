@@ -222,3 +222,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.v-menu > .v-overlay__content{
+  border-radius: 10px !important;
+}

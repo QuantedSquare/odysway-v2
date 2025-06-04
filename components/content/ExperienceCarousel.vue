@@ -1,10 +1,10 @@
 <template>
   <v-container
-    class="rounded-lg"
+    class="rounded-lg px-0 px-md-4"
   >
     <HorizontalCarousel
       v-if="experiences"
-      :show-buttons="experiences.length > 4 || smAndDown"
+      :show-buttons="experiences.length > 4"
     >
       <template #title>
         <slot name="title" />
@@ -26,11 +26,7 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
 const { data: experiences } = await useAsyncData('experiences', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').all()
 })
-
-const { smAndDown } = useDisplay()
 </script>

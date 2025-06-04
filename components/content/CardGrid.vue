@@ -1,6 +1,9 @@
 <template>
-  <v-container :fluid="width < 1440">
-    <v-row v-if="width > 650">
+  <v-container
+    :fluid="width < 1440"
+    class="px-0 px-md-4"
+  >
+    <v-row v-if="categories.length === 8">
       <v-col
         cols="12"
         class="text-center text-h2 font-weight-bold mt-md-4 mb-md-12"
@@ -8,7 +11,6 @@
         <slot name="title" />
       </v-col>
       <ImageTitleColCard
-
         v-for="category in categories"
         :key="category.id"
         :title="category.title"
