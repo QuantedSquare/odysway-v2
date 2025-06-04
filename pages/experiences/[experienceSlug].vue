@@ -10,9 +10,10 @@
       </SearchHeroSection>
       <HorizontalCarousel
         v-if="experiences"
+        :show-buttons="experiences.length > 4"
       >
         <template #title>
-          <h1>Toutes nos expériences</h1>
+          <h3>Toutes nos expériences</h3>
         </template>
         <template #carousel-item>
           <ThematiqueColCard

@@ -1,7 +1,7 @@
 <template>
   <v-container
     id="faq-container"
-    class="rounded-xl pa-0 mt-8 position-relative"
+    class="rounded-xl pa-0 mt-8 position-relative custom-rounded"
   >
     <v-lazy
       :min-height="415"
@@ -16,7 +16,7 @@
         loading="lazy"
         alt="Image de fond de la section FAQ"
         cover
-        rounded="xl"
+        class="custom-rounded rounded-xl"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
         <h2 class="text-center position-relative text-white">
@@ -107,4 +107,9 @@ const route = useRoute()
     height:10px;
     width:10px;
   }
+  @media (max-width: 960px) {
+  .custom-rounded {
+    border-radius: 0px!important;
+  }
+}
 </style>

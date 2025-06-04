@@ -1,7 +1,6 @@
 <template>
   <div class="z-index-max">
     <v-container
-
       ref="searchField"
       class="search-field-container py-0 z-index-2003"
     >
@@ -139,48 +138,24 @@
             :cols="12"
             md="3"
           >
-            <v-menu
-              v-model="dateMenu"
-              :close-on-content-click="false"
-              location="top"
+            <v-select
+              :id="id"
+              v-model="date"
+              multiple
+              hide-details
+              :items="months"
+              label="Période"
+              class="search-field-max-height"
             >
-              <template #activator="{ props }">
-                <v-text-field
-                  :id="id"
-                  v-bind="props"
-                  :value="formattedDate"
-                  readonly
-                  class="font-weight-bold text-primary"
-                  hide-details
-                >
-                  <template #prepend-inner>
-                    <v-img
-                      :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                      alt="Calendar icon"
-                      width="24"
-                      height="24"
-                    />
-                  </template>
-                </v-text-field>
+              <template #prepend-inner>
+                <v-img
+                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                  alt="Calendar icon"
+                  width="24"
+                  height="24"
+                />
               </template>
-
-              <v-card
-                min-width="300"
-                elevation="6"
-                class="z-index-max"
-              >
-                <v-locale-provider locale="fr">
-                  <v-date-picker
-                    v-model="date"
-                    multiple="range"
-                    width="400"
-                    :min="new Date()"
-                    show-adjacent-months
-                    @update:model-value="() => { date.length > 1 ? dateMenu = false : '' } "
-                  />
-                </v-locale-provider>
-              </v-card>
-            </v-menu>
+            </v-select>
           </v-col>
           <v-col
             cols="12"
@@ -205,8 +180,7 @@
 </template>
 
 <script setup>
-import dayjs from 'dayjs'
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { mdiMenuDown } from '@mdi/js'
 import { useElementSize, onClickOutside } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
@@ -215,7 +189,6 @@ import { useImage } from '#imports'
 const img = useImage()
 const router = useRouter()
 const route = useRoute()
-const dateMenu = ref(false)
 const { gtag } = useGtag()
 const id = useId()
 const date = useState('searchDate', () => [])
@@ -223,6 +196,21 @@ const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = useState('searchDestination', () => route.query.destination || null)
 const showDestinationsCarousel = ref(false)
 const search = ref('')
+const months = [
+  { title: 'Toutes périodes', value: 0 },
+  { title: 'Janvier', value: 1 },
+  { title: 'Février', value: 2 },
+  { title: 'Mars', value: 3 },
+  { title: 'Avril', value: 4 },
+  { title: 'Mai', value: 5 },
+  { title: 'Juin', value: 6 },
+  { title: 'Juillet', value: 7 },
+  { title: 'Août', value: 8 },
+  { title: 'Septembre', value: 9 },
+  { title: 'Octobre', value: 10 },
+  { title: 'Novembre', value: 11 },
+  { title: 'Décembre', value: 12 },
+]
 
 const searchFieldRef = useTemplateRef('searchField')
 const containerRef = useTemplateRef('container')
@@ -261,10 +249,6 @@ const travelTypes = [
   'Voyage individuel', 'Voyage en groupe',
 ]
 
-const formattedDate = computed(() => {
-  return date.value ? dayjs(date.value[0]).format('DD/MM') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM') : ''
-})
-
 function searchFn() {
   const query = {}
   if (destinationChoice.value) {
@@ -273,15 +257,12 @@ function searchFn() {
   if (travelTypeChoice.value) {
     query.travelType = travelTypeChoice.value
   }
-  if (date.value.length > 0) {
-    query.from = `${dayjs(date.value[0]).format('YYYY-MM-DD')}`
-    query.to = `${dayjs(date.value[date.value.length - 1]).format('YYYY-MM-DD')}`
+  if (date.value.length > 0 && date.value[0] !== 0) {
+    query.from = date.value.join(',')
   }
-
-  gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
-
+  gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value}` })
   router.push({
-    path: '/search',
+    path: route.path,
     query,
   })
 }
@@ -334,7 +315,7 @@ onMounted(() => {
   color: rgb(var(--v-theme-primary)) !important;
 }
 .search-field-container {
-  max-width: 1070px;
+  /* max-width: 1070px; */
   position: relative;
   z-index: 2003!important;
 }

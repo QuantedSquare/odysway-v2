@@ -12,12 +12,10 @@
       >
         <v-row
           align="center"
-          class="relative"
         >
           <v-col
             cols="12"
             md="3"
-            class="relative z-index-parent"
           >
             <v-autocomplete
               :id="destinationId"
@@ -107,51 +105,27 @@
             </v-select>
           </v-col>
           <v-col
-            :cols="12"
+            cols="12"
             md="3"
           >
-            <v-menu
-              v-model="dateMenu"
-              :close-on-content-click="false"
-              location="top"
+            <v-select
+              :id="dateId"
+              v-model="date"
+              multiple
+              hide-details
+              :items="months"
+              label="Période"
+              class="search-field-max-height"
             >
-              <template #activator="{ props }">
-                <v-text-field
-                  :id="dateId"
-                  v-bind="props"
-                  :value="formattedDate"
-                  readonly
-                  class="font-weight-bold text-primary"
-                  hide-details
-                >
-                  <template #prepend-inner>
-                    <v-img
-                      :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                      alt="Calendar icon"
-                      width="24"
-                      height="24"
-                    />
-                  </template>
-                </v-text-field>
+              <template #prepend-inner>
+                <v-img
+                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                  alt="Calendar icon"
+                  width="24"
+                  height="24"
+                />
               </template>
-
-              <v-card
-                min-width="300"
-                elevation="6"
-                class="z-index-max"
-              >
-                <v-locale-provider locale="fr">
-                  <v-date-picker
-                    v-model="date"
-                    multiple="range"
-                    width="400"
-                    :min="new Date()"
-                    show-adjacent-months
-                    @update:model-value="() => { date.length > 1 ? dateMenu = false : '' } "
-                  />
-                </v-locale-provider>
-              </v-card>
-            </v-menu>
+            </v-select>
           </v-col>
           <v-col
             cols="12"
@@ -185,17 +159,31 @@ import { useImage } from '#imports'
 const img = useImage()
 const router = useRouter()
 const route = useRoute()
-const dateMenu = ref(false)
+// const dateMenu = ref(false)
 const { gtag } = useGtag()
 const destinationId = useId()
 const travelTypeId = useId()
 const dateId = useId()
 const date = useState('searchDate', () => [])
 const travelTypeChoice = useState('searchTravelType', () => null)
-const destinationChoice = useState('searchDestination', () => route.query.destination || null)
+const destinationChoice = ref(route.query.destination || null)
 const showDestinationsCarousel = ref(false)
 const search = useState('search', () => route.query.destination || null)
-
+const months = [
+  { title: 'Toutes périodes', value: 0 },
+  { title: 'Janvier', value: 1 },
+  { title: 'Février', value: 2 },
+  { title: 'Mars', value: 3 },
+  { title: 'Avril', value: 4 },
+  { title: 'Mai', value: 5 },
+  { title: 'Juin', value: 6 },
+  { title: 'Juillet', value: 7 },
+  { title: 'Août', value: 8 },
+  { title: 'Septembre', value: 9 },
+  { title: 'Octobre', value: 10 },
+  { title: 'Novembre', value: 11 },
+  { title: 'Décembre', value: 12 },
+]
 const { data: destinations, status } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
 })
@@ -230,9 +218,9 @@ const travelTypes = [
   'Voyage individuel', 'Voyage en groupe',
 ]
 
-const formattedDate = computed(() => {
-  return date.value ? dayjs(date.value[0]).format('DD/MM') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM') : ''
-})
+// const formattedDate = computed(() => {
+//   return date.value ? dayjs(date.value[0]).format('DD/MM') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM') : ''
+// })
 
 // Normalization function for accent/hyphen insensitivity
 function normalize(str) {
@@ -351,20 +339,20 @@ function searchFn() {
 
   if (destinationChoice.value) {
     const value = destinations.value.find(d => d.titre === destinationChoice.value).slug
+    console.log('value', value)
     query.destination = value
   }
   if (travelTypeChoice.value) {
     query.travelType = travelTypeChoice.value
   }
-  if (date.value.length > 0) {
-    query.from = `${dayjs(date.value[0]).format('YYYY-MM-DD')}`
-    query.to = `${dayjs(date.value[date.value.length - 1]).format('YYYY-MM-DD')}`
+  if (date.value.length > 0 && date.value[0] !== 0) {
+    query.from = date.value.join(',')
   }
 
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
-
+  console.log('route.path', route.path)
   router.push({
-    path: '/search',
+    path: route.path === '/' ? '/search' : route.path,
     query,
   })
 }
@@ -395,7 +383,6 @@ function clearDestination() {
 .search-field-container {
   max-width: 1070px;
   position: relative;
-  z-index: 2003!important;
 }
 
 .search-field-shadow {
@@ -404,101 +391,5 @@ function clearDestination() {
 .search-field-min-height {
   min-height: 88px!important;
   box-sizing: border-box;
-
-  /* box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5); */
-}
-.destination-carousel {
-  box-sizing: border-box;
-  max-width: var(--carousel-width, 0);
-  min-width: var(--carousel-width, 0);
-  margin-left:-3px;
-  box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.15);
-  z-index: 2002!important;
-
-}
-.z-index-max{
-  position: relative!important;
-  z-index: 1!important;
-}
-.carousel-item {
-  cursor: pointer;
-  margin-right: 16px;
-  transition: transform 0.2s;
-}
-.carousel-item:hover {
-  transform: scale(1.05);
-}
-.rotate-arrow {
-  transform: rotate(180deg);
-  transition: transform 0.2s;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.2s;
-}
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-.no-data-found{
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.z-index-responsive{
-  z-index: 0!important;
-}
-.relative {
-  position: relative!important;
-}
-
-.z-index-2003 {
-  z-index: 2003 !important;
-  position: relative;
-}
-.slide-group:deep(.v-slide-group__prev),
-.slide-group:deep(.v-slide-group__next) {
-  min-width: 54px!important;
-}
-@media screen and (max-width: 960px) {
-  :deep(.v-overlay__scrim) {
-    z-index: 2001 !important;
-  }
-  :deep(.v-overlay__content) {
-    z-index: 2002 !important;
-  }
-  .search-field-container {
-    z-index: 2001 !important;
-  }
-  .z-index-2003 {
-    z-index: 2003 !important;
-    position: relative;
-  }
-  .z-index-parent {
-    z-index: 2000 !important;
-  }
-  .z-index-responsive {
-    z-index: 1999 !important;
-  }
-  .slide-group:deep(.v-slide-group__prev),
-  .slide-group:deep(.v-slide-group__next) {
-    min-width: 30px!important;
-  }
-  .no-data-found{
-    height: 93px;
-  }
-}
-.text-field-bg-white:deep(.v-field) {
-  background-color: white!important;
-}
-.blur-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.752));
-  z-index: -1;
-  opacity: 0.5;
 }
 </style>

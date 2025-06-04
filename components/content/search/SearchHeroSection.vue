@@ -4,7 +4,9 @@
     fluid
     class="relative-hero-section mb-16 rounded-md bg-primary d-flex align-center"
   >
-    <v-row v-if="width > 960">
+    <v-row
+      v-if="width > 960"
+    >
       <v-col
         cols="12"
         md="4"
@@ -91,6 +93,7 @@
           <v-row
             justify="center"
             align="center"
+            no-gutters
           >
             <v-col
               cols="12"
@@ -202,17 +205,4 @@ line-height: 50px;
     line-height: 30px!important;
   }
 }
-/* @media (max-width: 960px) {
-    .absolute {
-    bottom: -250px;
-  }
-  .relative-hero-section {
-    height: 70vh;
-    margin-bottom:300px!important;
-  }
-  .custom-hero-title {
-    font-size: 42px!important;
-    line-height: 42px!important;
-  }
-} */
 </style>

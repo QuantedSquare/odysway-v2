@@ -6,7 +6,7 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchContainer />
     </SearchHeroSection>
-    <v-container>
+    <v-container class="pt-10 pt-md-16">
       <v-row>
         <v-col
           cols=""
@@ -50,7 +50,7 @@
           <!-- Add closable props & logic -->
 
           <v-chip
-            v-if="routeQuery.from && routeQuery.to"
+            v-if="routeQuery.from"
             variant="flat"
             :size="lgAndUp ? 'x-large' : 'large'"
             color="secondary-light-2"
@@ -112,19 +112,41 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container>
+    <!-- <v-container>
       <v-row>
         <ContentRenderer
           v-if="fetchedDestinationContentStatus === 'success' && fetchedDestinationContent"
           :value="fetchedDestinationContent"
         />
       </v-row>
-    </v-container>
+    </v-container> -->
+    <ColorContainer color="grey-light-2">
+      <InfoContainer>
+        <template #top>
+          <AvatarsRowStack />
+        </template>
+        <template #title>
+          Vous hésitez encore ?
+        </template>
+        <template #description>
+          Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.
+        </template>
+        <template #bottom>
+          <CtaButton
+            color="secondary"
+            link="/calendly"
+          >
+            <template #text>
+              Prendre RDV
+            </template>
+          </CtaButton>
+        </template>
+      </InfoContainer>
+    </ColorContainer>
   </v-container>
 </template>
 
 <script setup>
-import dayjs from 'dayjs'
 import { useDisplay } from 'vuetify'
 
 const { lgAndUp } = useDisplay()
@@ -145,28 +167,33 @@ const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   watch: [routeQuery],
 })
 
-const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
-  if (route.query.destination) {
-    return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '=', true).first()
-  }
-  return null
-}, {
-  watch: [routeQuery],
+// const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
+//   if (route.query.destination) {
+//     return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '=', true).first()
+//   }
+//   return null
+// }, {
+//   watch: [routeQuery],
 
-})
-provide('page', fetchedDestinationContent)
+// })
+// provide('page', fetchedDestinationContent)
 
 const capitalizeFirstLetter = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
+const monthNumberToFrench = [
+  '', // 0 index unused
+  'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre',
+]
+
 const parsedDates = computed(() => {
-  const start = dayjs(routeQuery.value.from).format('MMMM YYYY')
-  const end = dayjs(routeQuery.value.to).format('MMMM YYYY')
-  if (start === end) {
-    return capitalizeFirstLetter(start)
-  }
-  return `${capitalizeFirstLetter(start)} - ${capitalizeFirstLetter(end)}`
+  if (!routeQuery.value.from) return ''
+  const monthNumbers = routeQuery.value.from.split(',').map(Number).filter(n => n > 0 && n <= 12)
+  if (monthNumbers.length === 0) return ''
+  const monthNames = monthNumbers.map(n => monthNumberToFrench[n])
+  return monthNames.join(' - ')
 })
 
 function filterByDestination(voyages, destination) {
@@ -180,18 +207,13 @@ function filterByType(voyages, travelType) {
   return voyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
 }
 
-function filterByDate(voyages, fromDate, toDate) {
-  if (!fromDate || !toDate) return voyages
-  const startDate = dayjs(fromDate)
-  const endDate = dayjs(toDate)
-  const monthsInRange = []
-  let current = startDate.startOf('month')
-  while (current.isBefore(endDate) || current.isSame(endDate, 'month')) {
-    monthsInRange.push(capitalizeFirstLetter(current.format('MMMM')))
-    current = current.add(1, 'month')
-  }
+function filterByDate(voyages, fromList) {
+  if (!fromList) return voyages
+  const monthNumbers = fromList.split(',').map(Number).filter(n => n > 0 && n <= 12)
+  if (monthNumbers.length === 0) return voyages
+  const monthNames = monthNumbers.map(n => monthNumberToFrench[n])
   return voyages.filter(v =>
-    v.monthlyAvailability?.some(m => monthsInRange.includes(m.month)),
+    v.monthlyAvailability?.some(m => monthNames.includes(m.month)),
   )
 }
 
@@ -209,14 +231,13 @@ const { data: voyages } = useAsyncData(
     }
 
     const travelType = route.query.travelType || null
-    const fromDate = route.query.from || null
-    const toDate = route.query.to || null
+    const fromList = route.query.from || null
 
     let voyages = await queryCollection('voyages').where('published', '=', true).all()
 
     voyages = filterByDestination(voyages, destination)
     voyages = filterByType(voyages, travelType)
-    voyages = filterByDate(voyages, fromDate, toDate)
+    voyages = filterByDate(voyages, fromList)
 
     return voyages
   },

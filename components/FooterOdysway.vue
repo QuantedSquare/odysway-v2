@@ -14,7 +14,6 @@
     />
     <v-container
       v-if="footer"
-      :fluid="width < 1440"
     >
       <v-row
         align="center"
@@ -67,13 +66,13 @@
         </v-col>
         <v-col
           cols="12"
-          md="4"
-          class="d-flex flex-column align-center align-md-start justify-space-between ga-6 ga-md-14"
+          lg="4"
+          class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-14"
         >
           <h5 class="text-h4 font-weight-bold">
             {{ footer.contact.ctaText }}
           </h5>
-          <div class="d-flex flex-column flex-md-row justify-start align-center align-md-center ga-2">
+          <div class="d-flex flex-row justify-start align-start align-lg-center ga-2">
             <div class="custom-chip font-weight-bold text-primary text-no-wrap">
               {{ footer.contact.phone }}
             </div>
@@ -85,7 +84,7 @@
             color="secondary"
             height="62"
             width="360"
-            class="font-weight-bold"
+            class="font-weight-bold align-self-center"
             :to="footer.contact.buttonContact.lien"
           >
             {{ footer.contact.buttonContact.text }}

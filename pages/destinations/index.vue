@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <v-container>
+    <v-row>
+      <SearchHeroSection
+        v-if="destinations"
+        :destination="destinations"
+      />
+    </v-row>
     <HorizontalCarousel v-if="destinations">
       <template #title>
         <h1>Toutes nos destinations</h1>
@@ -59,7 +65,7 @@
         </template>
       </HorizontalCarousel>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script setup>
