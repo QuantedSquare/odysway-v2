@@ -222,28 +222,13 @@ au cœur du voyage
 ::
 
 ::color-container{color="white"}
-  :::horizontal-carousel
-  ---
-  center-title: true
-  color: secondary
-  reviews: true
-  ---
-  #title
-  [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
-  
-  #carousel-item
-    ::::home-review-container
-    ::::
-  
-  #cta
-    ::::cta-button
-    ---
-    link: /avis-voyageurs
-    ---
-    #text
+    :::home-review-container
+    #title
+    [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
+
+    #cta
     Afficher plus de témoignages
-    ::::
-  :::
+    :::
 ::
 
 ::color-container{color="grey-light-2"}

@@ -35,7 +35,7 @@
       >
         <h3
           key="title"
-          class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2 mx-md-3"
+          class="font-weight-bold text-h2 text-center text-shadow text-line-space mx-2 mx-md-3"
         >
           {{ title }}
         </h3>
@@ -52,11 +52,11 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
+// import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
-const { width } = useDisplay()
+// const { width } = useDisplay()
 defineProps({
   slug: {
     type: String,

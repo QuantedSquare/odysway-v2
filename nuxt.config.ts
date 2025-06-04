@@ -102,6 +102,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  calendly: {
+    isEnabled: true,
+    loadWidgetCSS: false,
+    loadWidgetCloseIconSvg: false,
+  },
   eslint: {
     config: {
       stylistic: true,

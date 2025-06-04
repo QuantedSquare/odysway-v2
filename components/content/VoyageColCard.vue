@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="loading"
+    v-if="loading && !voyage"
     cols="10"
     sm="6"
     md="4"
@@ -19,145 +19,147 @@
     lg="4"
     class="pr-1 pr-md-3"
   >
-    <v-lazy
+    <!-- <v-lazy
       :min-height="228"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
+    > -->
+    <v-card
+      elevation="0"
+      hover
     >
-      <v-card
-        elevation="0"
-        hover
+      <NuxtLink
+        :to="`/voyages/${voyage.slug}`"
+        class="text-decoration-none position-relative text-white"
       >
+        <v-img
+          :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
+          :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
+          :alt="voyage.image.alt || voyage.title"
+          :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          loading="lazy"
+          class="img-height"
+
+          cover
+        >
+          <div class="badge-position">
+            <RatingBadge
+              :rating="voyage.rating"
+              :comments="voyage.comments"
+              no-link
+            />
+          </div>
+        </v-img>
+      </NuxtLink>
+
+      <!--  BOTTOM TEXT -->
+      <div>
         <NuxtLink
           :to="`/voyages/${voyage.slug}`"
-          class="text-decoration-none position-relative text-white"
+          class="text-decoration-none"
         >
-          <v-img
-            :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
-            :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
-            :alt="voyage.image.alt || voyage.title"
-            :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
-            sizes="(max-width: 600px) 480px, 1024px"
-            loading="lazy"
-            :height="computedHeight"
-            cover
+          <v-card-text class="py-1">
+            <v-container class="px-2">
+              <v-row>
+                <v-col class="pt-md-3 pt-0">
+                  <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
+                    <div
+                      ref="titleRef"
+                      class="line-clamp-2"
+                    >{{ voyage.title }}</div>
+                    <v-tooltip
+                      v-if="voyage.title.length > 60"
+                      activator="parent"
+                    >
+                      <span>
+                        {{ voyage.title }}
+                      </span>
+                    </v-tooltip>
+                  </div>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="4">
+                  <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2"> Type </div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+                </v-col>
+                <v-divider
+                  inset
+                  vertical
+                />
+                <v-col
+                  cols="4"
+                  class="text-center"
+                >
+                  <div class="text-h6 font-weight-bold text-primary">
+                    {{ voyage.duration }}
+                  </div>
+                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">Jours</div>
+                </v-col>
+                <v-divider
+                  inset
+                  vertical
+                />
+                <v-col
+                  cols="4"
+                  class="text-right"
+                >
+                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold"> À partir de </div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.startingPrice }}€</div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card-text>
+          <v-divider />
+          <v-card-actions
+            class="justify-center"
+            :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
           >
-            <div class="badge-position">
-              <RatingBadge
-                :rating="voyage.rating"
-                :comments="voyage.comments"
-              />
-            </div>
-          </v-img>
+            <client-only>
+              <v-btn
+                v-if="voyage.groupeAvailable"
+                block
+                color="primary"
+                class="font-weight-bold text-body-1"
+              >
+                <div class="mb-md-1 mr-2">
+                  Découvrir les dates
+                </div>
+                <v-icon
+                  size="24px"
+                >{{ mdiPlusCircle }}</v-icon>
+              </v-btn>
+              <v-btn
+                v-else
+                block
+                color="secondary"
+                class="text-decoration-none font-weight-bold text-body-1"
+              >
+                <div class="mb-md-1 mr-2">
+                  Demander un devis
+                </div>
+                <v-icon
+                  size="24px"
+                >{{ mdiPlusCircle }}</v-icon>
+              </v-btn>
+            </client-only>
+          </v-card-actions>
         </NuxtLink>
-
-        <!--  BOTTOM TEXT -->
-        <div>
-          <NuxtLink
-            :to="`/voyages/${voyage.slug}`"
-            class="text-decoration-none"
-          >
-            <v-card-text class="py-1">
-              <v-container class="px-2">
-                <v-row>
-                  <v-col class="pt-md-3 pt-0">
-                    <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
-                      <div
-                        ref="titleRef"
-                        class="line-clamp-2"
-                      >{{ voyage.title }}</div>
-                      <v-tooltip
-                        v-if="voyage.title.length > 60"
-                        activator="parent"
-                      >
-                        <span>
-                          {{ voyage.title }}
-                        </span>
-                      </v-tooltip>
-                    </div>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col cols="4">
-                    <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2"> Type </div>
-                    <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
-                  </v-col>
-                  <v-divider
-                    inset
-                    vertical
-                  />
-                  <v-col
-                    cols="4"
-                    class="text-center"
-                  >
-                    <div class="text-h6 font-weight-bold text-primary">
-                      {{ voyage.duration }}
-                    </div>
-                    <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">Jours</div>
-                  </v-col>
-                  <v-divider
-                    inset
-                    vertical
-                  />
-                  <v-col
-                    cols="4"
-                    class="text-right"
-                  >
-                    <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold"> À partir de </div>
-                    <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.startingPrice }}€</div>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card-text>
-            <v-divider />
-            <v-card-actions
-              class="justify-center"
-              :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
-            >
-              <client-only>
-                <v-btn
-                  v-if="voyage.groupeAvailable"
-                  block
-                  color="primary"
-                  class="font-weight-bold text-body-1"
-                >
-                  <div class="mb-md-1 mr-2">
-                    Découvrir les dates
-                  </div>
-                  <v-icon
-                    size="24px"
-                  >{{ mdiPlusCircle }}</v-icon>
-                </v-btn>
-                <v-btn
-                  v-else
-                  block
-                  color="secondary"
-                  class="text-decoration-none font-weight-bold text-body-1"
-                >
-                  <div class="mb-md-1 mr-2">
-                    Demander un devis
-                  </div>
-                  <v-icon
-                    size="24px"
-                  >{{ mdiPlusCircle }}</v-icon>
-                </v-btn>
-              </client-only>
-            </v-card-actions>
-          </NuxtLink>
-        </div>
-      </v-card>
-    </v-lazy>
+      </div>
+    </v-card>
+    <!-- </v-lazy> -->
   </v-col>
 </template>
 
 <script setup>
 import { mdiPlusCircle } from '@mdi/js'
-import { useDisplay } from 'vuetify'
+// import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-const { width } = useDisplay()
+// const { width } = useDisplay()
 const loading = ref(false)
-
+const voyage = ref(null)
 const props = defineProps({
   voyageSlug: {
     type: String,
@@ -168,20 +170,12 @@ const img = useImage()
 
 const loadVoyage = async () => {
   loading.value = true
-  const voyage = await queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
+  voyage.value = await queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
   loading.value = false
-  return voyage
 }
-const computedHeight = computed(() => {
-  if (width.value < 600) {
-    return width.value < 400 ? '110px' : '150px'
-  }
-  else {
-    return '228px'
-  }
-})
-const voyage = await loadVoyage()
-const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
+
+await loadVoyage()
+const actionColor = computed(() => voyage.value?.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>
 
 <style scoped>
@@ -209,12 +203,17 @@ const actionColor = computed(() => voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8
 :deep(.v-btn--variant-text .v-btn__overlay){
   background-color: v-bind(actionColor);
 }
-
+.img-height{
+  height: 150px;
+}
 @media screen and (max-width: 600px) {
 .badge-position{
   position: absolute;
   top: 18px;
   right: 18px;
+}
+.img-height{
+  height: 110px;
 }
 }
 </style>

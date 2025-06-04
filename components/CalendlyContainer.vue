@@ -27,18 +27,10 @@ const options = {
   url: 'https://calendly.com/odysway/15min?hide_gdpr_banner=1',
 }
 
-// const calendly = useCalendly()
-// onMounted(() => {
-//   calendly.initInlineWidget()
-//   console.log(props.travelTitle)
-// })
 useCalendlyEventListener({
   onEventScheduled: (event) => {
     console.log('Event scheduled:', event)
     trackPixel('trackCustom', 'RDVCalendlyPris', { voyage: `RDVCalendlyPris: ${props.travelTitle}` })
   },
 })
-// onUnmounted(() => {
-//   calendly.destroyInlineWidget()
-// })
 </script>

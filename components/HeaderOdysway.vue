@@ -2,7 +2,7 @@
   <v-app-bar
     elevation="0"
     mobile
-    class="px-4 d-flex align-center height-app-bar"
+    class="px-4 px-md-9 d-flex align-center height-app-bar mx-0"
     :class="!model ? 'app-bar-shadow' : ''"
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"

@@ -52,8 +52,8 @@
           ref="content"
           class="text-content"
           :class="{ truncated: !isExpanded }"
-          :style="contentStyle"
         >
+          <!-- :style="contentStyle" -->
           <MDC
             :value="formatReviewText(review.text)"
             tag="article"
@@ -61,7 +61,7 @@
         </div>
       </v-card-text>
 
-      <v-card-actions class="text-decoration-underline">
+      <!-- <v-card-actions class="text-decoration-underline">
         <v-btn
           variant="text"
           class="text-h5"
@@ -74,7 +74,7 @@
             :class="isExpanded ? 'rotate-180' : ''"
           />
         </v-btn>
-      </v-card-actions>
+      </v-card-actions> -->
     </v-sheet>
   </v-lazy>
 </template>
@@ -90,16 +90,16 @@ defineProps({
     required: true,
   },
 })
-const isExpanded = ref(false)
+const isExpanded = ref(true)
 const content = ref(null)
 const lineHeight = 30 // px, match your CSS
 const clampLines = 3
 
-const contentStyle = ref({
-  maxHeight: `${lineHeight * clampLines}px`,
-  overflow: 'hidden',
-  transition: 'max-height 0.5s ease',
-})
+// const contentStyle = ref({
+//   maxHeight: `${lineHeight * clampLines}px`,
+//   overflow: 'hidden',
+//   transition: 'max-height 0.5s ease',
+// })
 
 watch(isExpanded, async (newVal) => {
   await nextTick()
