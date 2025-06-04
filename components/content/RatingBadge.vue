@@ -6,8 +6,8 @@
       v-if="rating"
       color="white"
       rounded="pill"
-      :height="mdAndUp ? 46 : 36"
-      class="btn-shadow bg-white "
+      :height="mdAndUp ? 46 : 30"
+      class="btn-shadow bg-white px-2 px-md-4"
     >
       <div class="d-flex align-center ga-1">
         <v-img
@@ -16,12 +16,12 @@
           :width="mdAndUp ? 18: 16"
           :height="mdAndUp ? 18 : 16"
         />
-        <span class="text-body-2 font-weight-bold text-primary">
+        <span class="text-body-2 mt-1 mt-md-0 font-weight-bold text-primary">
           {{ `${rating.toString().replace('.', ',')}/5` }}
         </span>
         <span
           v-if="comments > 0"
-          class="text-body-2 font-weight-bold text-primary"
+          class="text-body-2 mt-1 mt-md-0 font-weight-bold text-primary"
         >
           {{ `(${comments})` }}
         </span>

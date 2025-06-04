@@ -126,8 +126,8 @@ const drawer = ref(false)
 <style scoped>
 .whatsapp-button {
   position: fixed;
-  bottom: -63px;
-  right: 0px;
+  bottom: -60px;
+  right: 5px;
   z-index: 10000;
 }
 

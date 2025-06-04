@@ -12,7 +12,7 @@
         <slot name="title" />
       </v-col>
       <v-col
-        v-show="displayButton"
+        v-if="displayButton"
         cols="auto"
         class="d-none d-sm-block position-absolute right-0"
       >
@@ -133,7 +133,6 @@ const displayButton = computed(() => {
     return childrenCount.value > 1 && props.showButtons
   }
 })
-
 const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
 const { width: scrollContainerWidth } = useElementSize(scrollContainer)
 

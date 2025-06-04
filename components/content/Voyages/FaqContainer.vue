@@ -79,6 +79,8 @@ defineProps({
 })
 
 const route = useRoute()
+
+// TODO fetch faq collection
 </script>
 
 <style scoped>
