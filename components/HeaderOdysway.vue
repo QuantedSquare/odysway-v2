@@ -124,8 +124,6 @@ const { header } = useAppConfig()
 const { mdAndUp } = useDisplay()
 // const { user, signOut, isConnected } = useUser()
 const router = useRouter()
-// const testModel = ref(false)
-// const searchOpen = ref(false)
 const model = defineModel()
 defineProps({
   scrollBehavior: {
@@ -138,44 +136,6 @@ defineProps({
   },
 })
 const { gtag } = useGtag()
-// const showExtension = ref(false)
-// const extensionName = ref('')
-
-// const items = ref([
-//   { title: 'destinations',
-//     link: '/destinations',
-//     extension: 'destinations',
-//   },
-//   { title: 'prochains départs',
-//     link: '/prochains-departs',
-//   },
-//   { title: 'à propos',
-//     link: '/concept',
-//     extension: 'propos',
-//   },
-// ])
-// watch([showExtension, extensionName], () => {
-//   testModel.value = !!(showExtension.value && extensionName.value)
-// })
-
-// function displayExtension(item) {
-//   if (item.extension) {
-//     showExtension.value = true
-//     extensionName.value = item.extension
-//   }
-// }
-
-// function resetExtension() {
-//   showExtension.value = false
-//   extensionName.value = ''
-// }
-
-// const handleSignOut = async () => {
-//   await signOut()
-//   router.push('/signin')
-// }
-
-// TODO : add google analytics
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
 }
@@ -206,15 +166,16 @@ function captureOutboundLink(btn) {
 }
 @media (max-width: 960px) {
   .app-bar-shadow:deep(){
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.259)!important;
   }
   .header-logo {
     width: 100px;
     min-width: 60px;
+    height: 25px;
+
   }
   .height-app-bar{
   height: 60px;
 }
-
 }
 </style>

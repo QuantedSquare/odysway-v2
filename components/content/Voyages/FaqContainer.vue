@@ -1,7 +1,7 @@
 <template>
   <v-container
     id="faq-container"
-    class="rounded-xl pa-0 mt-8 position-relative custom-rounded"
+    class="rounded-lg px-4 px-md-0 py-0 mt-4 mt-md-8 position-relative"
   >
     <v-lazy
       :min-height="415"
@@ -16,7 +16,7 @@
         loading="lazy"
         alt="Image de fond de la section FAQ"
         cover
-        class="custom-rounded rounded-xl"
+        class="rounded-lg"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
         <h2 class="text-center position-relative text-white">
@@ -24,7 +24,7 @@
         </h2>
         <v-container
           max-width="900px"
-          class="position-relative px-8"
+          class="position-relative px-4"
         >
           <v-row>
             <v-col class="max-height-with-overflow">
@@ -79,6 +79,8 @@ defineProps({
 })
 
 const route = useRoute()
+
+// TODO fetch faq collection
 </script>
 
 <style scoped>
@@ -107,9 +109,9 @@ const route = useRoute()
     height:10px;
     width:10px;
   }
-  @media (max-width: 960px) {
+  /* @media (max-width: 960px) {
   .custom-rounded {
     border-radius: 0px!important;
   }
-}
+} */
 </style>

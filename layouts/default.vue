@@ -90,7 +90,10 @@
     <!-- End FAQ Section -->
 
     <!-- Info Section -->
-    <v-container :fluid="width > 600">
+    <v-container
+      :fluid="width > 600"
+      class="pt-0"
+    >
       <ColorContainer
         color="secondary"
         :white-text="true"
@@ -107,9 +110,8 @@
           </template>
         </InfoContainer>
       </ColorContainer>
+      <LazyTopTravelsTabs />
     </v-container>
-    <LazyTopTravelsTabs class="px-2" />
-
     <FooterOdysway />
   </v-app>
 </template>
@@ -124,8 +126,8 @@ const drawer = ref(false)
 <style scoped>
 .whatsapp-button {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: -60px;
+  right: 5px;
   z-index: 10000;
 }
 

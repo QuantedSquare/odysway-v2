@@ -138,8 +138,8 @@ const subscribeToNewsletter = async () => {
 /* Center placeholder */
 :deep(.v-field-label) {
   font-weight: bold !important;
-  color: rgb(var(--v-theme-grey-darken-2)) !important;
-  font-size: 14px !important;
+  color: rgb(var(--v-theme-grey)) !important;
+  font-size: 18px !important;
   width: 100% !important;
 }
 
