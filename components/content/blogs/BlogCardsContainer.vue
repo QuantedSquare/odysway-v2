@@ -1,5 +1,5 @@
 <template>
-  <v-container :fluid="width < 1440 ">
+  <v-container :fluid="width <= 1440 ">
     <v-row justify="space-between">
       <v-col
         cols="12"

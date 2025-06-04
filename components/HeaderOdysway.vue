@@ -166,7 +166,7 @@ function captureOutboundLink(btn) {
 }
 @media (max-width: 960px) {
   .app-bar-shadow:deep(){
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.259)!important;
+    box-shadow: 0px 10px 20px 0px #0000000A!important;
   }
   .header-logo {
     width: 100px;

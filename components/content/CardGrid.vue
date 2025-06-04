@@ -1,24 +1,29 @@
 <template>
   <v-container
-    :fluid="width < 1440"
-    class="px-0 px-md-4"
+    fluid
+    class="px-0 mx-0"
   >
-    <v-row v-if="categories.length === 8">
-      <v-col
-        cols="12"
-        class="text-center text-h2 font-weight-bold mt-md-4 mb-md-12"
-      >
-        <slot name="title" />
-      </v-col>
-      <ImageTitleColCard
-        v-for="category in categories"
-        :key="category.id"
-        :title="category.title"
-        :subtitle="category.discoveryTitle"
-        :image="category.image"
-        :link="'/thematiques/' + category.slug"
-      />
-    </v-row>
+    <v-container
+      v-if="categories.length % 4 === 0"
+      fluid
+    >
+      <v-row>
+        <v-col
+          cols="12"
+          class="text-center text-h2 font-weight-bold mt-md-4 mb-md-12"
+        >
+          <slot name="title" />
+        </v-col>
+        <ImageTitleColCard
+          v-for="category in categories"
+          :key="category.id"
+          :title="category.title"
+          :subtitle="category.discoveryTitle"
+          :image="category.image"
+          :link="'/thematiques/' + category.slug"
+        />
+      </v-row>
+    </v-container>
     <HorizontalCarousel v-else>
       <template #title>
         <slot name="title" />

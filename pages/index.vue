@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="py-0 my-0"
+    class="py-0 my-0 px-2 px-md-4"
     fluid
   >
     <ContentRenderer

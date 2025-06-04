@@ -1,6 +1,7 @@
 <template>
   <v-container
-    class="rounded-lg px-0 px-md-4"
+    class="rounded-lg py-4 py-md-8 px-0 px-md-8 mt-4 mt-md-8"
+    fluid
   >
     <HorizontalCarousel
       v-if="experiences"

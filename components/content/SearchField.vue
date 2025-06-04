@@ -1,5 +1,5 @@
 <template>
-  <div class="z-index-max">
+  <div>
     <v-container
       ref="searchField"
       class="search-field-container px-0 px-md-3 py-0 z-index-2003"

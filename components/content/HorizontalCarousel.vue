@@ -1,5 +1,7 @@
 <template>
-  <v-container>
+  <v-container
+    fluid
+  >
     <v-row
       align="center"
       class="position-relative px-0"

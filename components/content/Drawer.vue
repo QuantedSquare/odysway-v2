@@ -4,7 +4,7 @@
     location="right"
     disable-resize-watcher
     mobile
-    class="zIndex "
+    class="custom-padding "
   >
     <div>
       <!-- <v-btn
@@ -100,8 +100,9 @@ const drawerItems = ref([
 </script>
 
 <style scoped>
-.zIndex{
-  z-index: 1030 !important;
+.custom-padding{
+  margin-top: -4px;
+  padding-top: 10px;
 }
 .drawer-shadow{
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;

@@ -1,7 +1,6 @@
 <template>
   <v-col
     cols="8"
-    sm="4"
     md="3"
     class="pr-1 pr-md-3"
   >
@@ -36,16 +35,16 @@
       >
         <h3
           key="title"
-          class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2"
+          class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2 mx-md-3"
         >
           {{ title }}
         </h3>
-        <p
+        <!-- <p
           key="description"
           class="description text-shadow text-center mx-2"
         >
           {{ description }}
-        </p>
+        </p> -->
       </TransitionGroup>
     </NuxtLink>
     <!-- </v-lazy> -->

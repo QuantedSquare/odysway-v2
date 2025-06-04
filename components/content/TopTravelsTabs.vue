@@ -1,6 +1,7 @@
 <template>
   <v-container
-    class="rounded-lg px-8 py-md-8 mt-4 mt-md-8 bg-primary"
+    fluid
+    class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary"
   >
     <div class="text-h3 font-weight-bold my-4">
       Des idées pour vos prochains voyages

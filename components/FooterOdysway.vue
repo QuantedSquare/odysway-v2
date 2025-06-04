@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="position-relative">
+  <v-footer class="position-relative mx-5">
     <v-img
       class="footer-bg-img"
       :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"
@@ -14,6 +14,8 @@
     />
     <v-container
       v-if="footer"
+      fluid
+      class="px-0 px-md-12"
     >
       <v-row
         align="center"

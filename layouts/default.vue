@@ -10,7 +10,7 @@
       />
     </ClientOnly>
 
-    <v-main class="main-content">
+    <v-main class="main-content mx-0 mx-md-5">
       <slot />
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">
@@ -92,7 +92,7 @@
     <!-- Info Section -->
     <v-container
       :fluid="width > 600"
-      class="pt-0"
+      class="pt-0 mx-0 mx-md-5"
     >
       <ColorContainer
         color="secondary"
