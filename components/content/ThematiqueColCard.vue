@@ -1,9 +1,9 @@
 <template>
   <v-col
-    cols="6"
+    cols="8"
     sm="4"
     md="3"
-    class=""
+    class="pl-0 pl-md-3"
   >
     <v-lazy
       :min-height="width <= 960 ? 300 : 415"
