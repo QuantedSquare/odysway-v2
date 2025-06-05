@@ -1,11 +1,13 @@
 <template>
-  <v-container ref="scroll-target">
-    <v-row
-      justify="center"
-    >
+  <v-container
+    ref="scroll-target"
+    :fluid="width >= 1440"
+    class="py-0 my-4 my-md-8"
+  >
+    <v-row justify="center">
       <v-col
         cols="12"
-        class="d-flex flex-column align-center justify-center my-8"
+        class="d-flex flex-column align-center justify-center my-4 my-md-8"
       >
         <h3
           class="d-flex text-center text-h5 text-lg-h4 pb-2"
@@ -22,7 +24,7 @@
             {{ displayedReviews.length }} avis
           </span>
         </h3>
-        <p class="text-center mb-4">
+        <p class="text-center text-body-1">
           <slot
             name="second-phrase"
             mdc-unwrap="p"
@@ -51,7 +53,8 @@
                 label="Rechercher par voyage"
                 density="comfortable"
                 clearable
-                class="text-center mt-4"
+                hide-details
+                class="text-center mt-0"
               >
                 <template #prepend-inner>
                   <v-icon icon>
@@ -95,12 +98,13 @@
           />
         </ClientOnly>
       </v-col>
-      <v-col>
+      <v-col v-if="nbPages > 1">
         <v-pagination
           v-model="pagination.currentPage"
           :length="nbPages"
-          :total-visible="5"
+          :total-visible="width > 600 ? 5 : 3"
           variant="flat"
+          :size="width > 600 ? 'default' : 'small'"
           rounded="circle"
           active-color="primary"
           elevation="3"
@@ -116,7 +120,9 @@
 
 <script setup>
 import { mdiStar, mdiMagnify, mdiFilterVariant } from '@mdi/js'
-import { useGoTo } from 'vuetify'
+import { useGoTo, useDisplay } from 'vuetify'
+
+const { width } = useDisplay()
 
 const { data: reviews } = await useAsyncData('reviews-home', () => {
   return queryCollection('reviews').all()

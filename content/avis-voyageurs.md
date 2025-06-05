@@ -1,4 +1,4 @@
-::hero-section
+::common-hero-section
 ---
 image-src: /images/lPCsmaT8al25X3drCaAE.webp
 ---
