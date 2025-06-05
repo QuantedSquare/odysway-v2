@@ -10,7 +10,7 @@
       />
     </ClientOnly>
 
-    <v-main class="main-content mx-0 mx-md-5">
+    <v-main class="main-content px-2 px-md-5">
       <slot />
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">

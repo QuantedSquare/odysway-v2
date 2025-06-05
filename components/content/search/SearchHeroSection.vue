@@ -177,6 +177,7 @@ onMounted(() => {
 font-weight: 700;
 font-size: 50px;
 line-height: 50px;
+/* margin-left: 44px; */
 }
 
 @media (max-width: 960px) {

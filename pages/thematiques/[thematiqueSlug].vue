@@ -1,6 +1,9 @@
 <template>
-  <v-container>
-    <v-row>
+  <v-container
+    fluid
+    class="px-0 px-md-7"
+  >
+    <v-row class="px-2 px-md-0">
       <SearchHeroSection
         v-if="categoryChoice"
         :destination="categoryChoice"
@@ -9,7 +12,7 @@
         <SearchField />
       </SearchHeroSection>
       <HorizontalCarousel
-        v-if="categories"
+        v-if="categories && categories.length > 0"
         :show-buttons="categories.length > 4"
       >
         <template #title>
@@ -47,12 +50,8 @@
           lg="4"
           xl="3"
         >
-          <!-- <SearchVoyageCard
+          <VoyageCard
             :voyage="voyage"
-          /> -->
-          <VoyageColCard
-            :voyage-props="voyage"
-            :is-thematique="true"
           />
         </v-col>
       </TransitionGroup>
@@ -69,7 +68,7 @@
       v-if="voyages?.length > 9"
       justify="center"
       align="center"
-      class="flex-column my-10"
+      class="flex-column my-4"
     >
       <span class="text-h6 text-secondary">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
       <BouncingBtn
@@ -77,13 +76,15 @@
         class="text-secondary"
       />
     </v-row>
-    <v-container class="mt-10">
-      <v-row v-if="categorieContentStatus === 'success' && categorieContent">
-        <ContentRenderer
-          v-if="categorieContent"
-          :value="categorieContent"
-        />
-      </v-row>
+    <v-container
+      v-if="categorieContentStatus === 'success' && categorieContent"
+      fluid
+      class="mt-10 px-0"
+    >
+      <ContentRenderer
+        v-if="categorieContent"
+        :value="categorieContent"
+      />
     </v-container>
   </v-container>
 </template>

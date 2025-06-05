@@ -1,5 +1,8 @@
 <template>
-  <v-container>
+  <v-container
+    fluid
+    class="px-0 px-md-7"
+  >
     <v-row>
       <SearchHeroSection />
     </v-row>
@@ -21,7 +24,7 @@
     </HorizontalCarousel>
 
     <v-divider thickness="2" />
-    <div v-if="categoriesWithVoyages">
+    <v-row v-if="categoriesWithVoyages">
       <HorizontalCarousel
         v-for="category in categoriesWithVoyages"
         v-show="category.voyages.length > 0"
@@ -49,14 +52,14 @@
               :options="{ threshold: 0.5 }"
               transition="fade-transition"
             >
-              <SearchVoyageCard
+              <VoyageCard
                 :voyage="voyage"
               />
             </v-lazy>
           </v-col>
         </template>
       </HorizontalCarousel>
-    </div>
+    </v-row>
   </v-container>
 </template>
 
