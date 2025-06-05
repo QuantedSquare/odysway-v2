@@ -6,7 +6,7 @@
         :destination="experienceChoice"
         :is-experience="true"
       >
-        <SearchContainer />
+        <SearchField />
       </SearchHeroSection>
       <HorizontalCarousel
         v-if="experiences"
@@ -29,7 +29,7 @@
       </HorizontalCarousel>
     </v-row>
     <v-divider
-      class="my-4"
+      class="my-8"
       thickness="2"
     />
     <v-row
@@ -53,16 +53,17 @@
           lg="4"
           xl="3"
         >
-          <SearchVoyageCard
+          <!-- <SearchVoyageCard
             :voyage="voyage"
-          />
+          /> -->
+          <VoyageColCard :voyage-props="voyage" />
         </v-col>
       </TransitionGroup>
     </v-row>
     <v-row v-if="voyages.length === 0 && slug">
       <v-col
         cols="12"
-        class="text-center my-10"
+        class="text-center my-8"
       >
         <h1>Aucun voyage trouvé pour expérience "{{ experienceChoice.title }}" </h1>
       </v-col>
