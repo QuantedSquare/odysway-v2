@@ -12,19 +12,15 @@
       height="250"
     />
   </v-col>
-  <!-- <v-col
+  <v-col
     v-else-if="voyage"
-    cols="9"
-    sm="5"
-    lg="4"
-    class="pr-1 pr-md-3"
-  > -->
-  <!-- <v-lazy
+  >
+    <!-- <v-lazy
       :min-height="228"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
     > -->
-  <VoyageCard :voyage="voyage" />
+    <VoyageCard :voyage="voyage" />
     <!-- </v-lazy> -->
   </v-col>
 </template>

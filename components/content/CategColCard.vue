@@ -1,5 +1,5 @@
 <template>
-  <v-col>
+  <v-col class="mr-0 pr-0">
     <!-- <v-lazy
       :min-height="width <= 960 ? 300 : 415"
       :options="{ threshold: 0.5 }"
@@ -7,7 +7,7 @@
     > -->
     <NuxtLink
       :to="`/${type}/${slug}`"
-      class="image-wrapper default-expanded"
+      class="image-wrapper default-expanded rounded"
     >
       <v-img
         v-if="image"
@@ -25,7 +25,7 @@
       <div class="image-overlay" />
 
       <div
-        class="content-wrapper"
+        class="content-wrapper "
       >
         <h3
           key="title"
@@ -77,7 +77,6 @@ defineProps({
   width: 100%;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 1rem;
   aspect-ratio: 4/5; /* Ensures stable card size regardless of image/content */
 }
 
@@ -120,6 +119,7 @@ defineProps({
   left: 0;
   right: 0;
   padding: 2rem 0;
+  height: 100%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -134,13 +134,18 @@ defineProps({
 
 @media screen and (max-width: 600px) {
   .image-wrapper {
-    min-height: 110px;
-    max-height: 110px;
-    height: 110px;
-    width: 100%;
+    min-height: 120px;
+    max-height: 120px;
+    height: 120px;
+    width: 150px;
+
+  }
+  .content-wrapper{
+    padding: 0;
+    justify-content: center;
   }
   .custom-font-size {
-    font-size: 0.7rem!important;
+    font-size: 0.9rem!important;
     text-shadow: 10px 0 15px rgb(0, 0, 0)!important;
   }
 }

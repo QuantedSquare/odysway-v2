@@ -24,7 +24,10 @@
         />
       </v-row>
     </v-container>
-    <HorizontalCarousel v-else>
+    <HorizontalCarousel
+      v-else
+      :center-title="true"
+    >
       <template #title>
         <slot name="title" />
       </template>
