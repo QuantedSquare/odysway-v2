@@ -127,6 +127,18 @@ export default defineNuxtConfig({
       }],
     ],
   },
+  image: {
+    screens: {
+      10: 10,
+      320: 320,
+      640: 640,
+      768: 768,
+      1024: 1024,
+      1280: 1280,
+      1536: 1536,
+      3072: 3072,
+    },
+  },
   schemaOrg: {
     identity: defineOrganization({
       '@type': ['Organization', 'TravelAgency', 'OnlineStore'],
