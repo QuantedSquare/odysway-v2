@@ -588,5 +588,15 @@ export default defineContentConfig({
         // ==========================================
       }),
     }),
+    faqDefault: defineCollection({
+      type: 'data',
+      source: 'faqDefault/*.json',
+      schema: z.object({
+        content: z.array(z.object({
+          question: z.string(),
+          answer: z.string(),
+        })),
+      }),
+    }),
   },
 })

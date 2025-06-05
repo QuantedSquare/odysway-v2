@@ -2,7 +2,7 @@
   <v-container
     id="faq-container"
     fluid
-    class="rounded-lg px-4 px-md-0 py-0 px-md-8 mt-4 mt-md-8  position-relative"
+    class="rounded-lg px-4 px-md-0 py-0 px-md-8 mt-4 mt-md-8 position-relative"
   >
     <v-lazy
       :min-height="415"
@@ -20,16 +20,34 @@
         class="rounded-lg"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
-        <h2 class="text-center position-relative text-white">
-          <slot name="section-title" />
+        <h2 class="text-center text-white my-6">
+          <TitleContainer>
+            <template #title>
+              Questions fréquentes
+            </template>
+          </TitleContainer>
         </h2>
         <v-container
           max-width="900px"
-          class="position-relative px-4"
+          class="position-relative px-4 pt-0"
         >
           <v-row>
-            <v-col class="max-height-with-overflow">
-              <slot name="faq" />
+            <v-col
+              class="max-height-with-overflow pt-2 pt-md-3"
+            >
+              <template
+                v-for="faq in faqDefault.content"
+                :key="faq"
+              >
+                <QuestionPanel>
+                  <template #question>
+                    {{ faq.question }}
+                  </template>
+                  <template #answer>
+                    {{ faq.answer }}
+                  </template>
+                </QuestionPanel>
+              </template>
             </v-col>
           </v-row>
           <v-row class="mb-10">
@@ -81,10 +99,22 @@ defineProps({
 
 const route = useRoute()
 
-// TODO fetch faq collection
+const { data: faqDefault } = await useAsyncData('faq-default', () => {
+  return queryCollection('faqDefault').first()
+})
 </script>
 
 <style scoped>
+/* .custom-title-position{
+  padding-top: 15px;
+} */
+
+@media screen and (max-width: 600px) {
+  /* .custom-title-position{
+  padding-top: 12px;
+} */
+}
+
 .max-height-with-overflow {
   max-height: 800px;
   overflow: auto;
@@ -104,11 +134,11 @@ const route = useRoute()
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background-color: #0808b6;
-    border: 6px solid lightgrey;
-    border-radius: 9px;
-    background-clip: content-box;
-    height:10px;
-    width:10px;
+  border: 6px solid lightgrey;
+  border-radius: 9px;
+  background-clip: content-box;
+  height:10px;
+  width:10px;
   }
   /* @media (max-width: 960px) {
   .custom-rounded {
