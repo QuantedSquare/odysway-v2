@@ -1,6 +1,6 @@
 <template>
   <v-container
-    :fluid="width <= 1440"
+    :fluid="width <= 1600"
   >
     <v-row align="center">
       <template v-if="!isOnVoyage">

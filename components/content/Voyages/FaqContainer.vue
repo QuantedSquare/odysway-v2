@@ -2,7 +2,7 @@
   <v-container
     id="faq-container"
     fluid
-    class="rounded-lg px-4 px-md-0 py-0 px-md-8 mt-4 mt-md-8 position-relative"
+    class="rounded-lg px-4 px-md-0 py-0 px-md-9 mt-4 mt-md-8  position-relative"
   >
     <v-lazy
       :min-height="415"
