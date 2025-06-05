@@ -79,7 +79,7 @@ const drawerItems = ref([
   {
     title: 'À propos',
     value: 'À propos',
-    link: '/concept',
+    link: '/a-propos',
   },
   {
     title: 'Blog',

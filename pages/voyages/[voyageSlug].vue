@@ -128,9 +128,6 @@ const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => 
 
 watchEffect(() => {
   if (!voyage.value) return
-  console.log('voyage', voyage.value)
-  console.log('page', page.value)
-  console.log('voyagePropositions', voyagePropositions.value)
   // SEO Meta Tags
   useSeoMeta({
     title: voyage.value.seoSection?.metaTitle || voyage.value.title,

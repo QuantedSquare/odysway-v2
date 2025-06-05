@@ -34,7 +34,7 @@ schemaOrg:
     image: "https://odysway.com/logos/logo_noir.png"
 ---
 
-::concept-hero-section
+::common-hero-section
 ---
 image-src: /images/concept/Vélo.jpg
 ---

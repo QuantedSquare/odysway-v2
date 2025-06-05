@@ -4,7 +4,7 @@
     class="px-0 mx-0"
   >
     <v-container
-      v-if="categories.length % 4 === 0"
+      v-if="categories?.length % 4 === 0"
       fluid
     >
       <v-row>
