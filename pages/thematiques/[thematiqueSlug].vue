@@ -1,13 +1,44 @@
 <template>
-  <v-container>
-    <v-row>
+  <v-container
+    fluid
+    class="px-0 px-md-7"
+  >
+    <v-row class="px-2 px-md-0">
       <SearchHeroSection
-        v-if="category"
-        :destination="category"
+        v-if="categoryChoice"
+        :destination="categoryChoice"
         :is-category="true"
-      />
+      >
+        <SearchField />
+      </SearchHeroSection>
+      <HorizontalCarousel
+        v-if="categories && categories.length > 0"
+        :show-buttons="categories.length > 4"
+      >
+        <template #title>
+          <h3>Toutes nos thématiques</h3>
+        </template>
+        <template #carousel-item>
+          <ThematiqueColCard
+            v-for="categ in categories"
+            :key="categ.id"
+            :slug="categ.slug"
+            :image="categ.image.src"
+            :title="categ.title"
+            type="thematiques"
+            :description="categ.discoveryTitle"
+          />
+        </template>
+      </HorizontalCarousel>
     </v-row>
-    <v-row class="relative">
+    <v-divider
+      class="my-8"
+      thickness="2"
+    />
+    <v-row
+      v-if="limitedVoyages?.length > 0"
+      class="position-relative"
+    >
       <TransitionGroup
         name="list"
       >
@@ -19,17 +50,25 @@
           lg="4"
           xl="3"
         >
-          <SearchVoyageCard
+          <VoyageCard
             :voyage="voyage"
           />
         </v-col>
       </TransitionGroup>
     </v-row>
+    <v-row v-if="voyages?.length === 0 && slug">
+      <v-col
+        cols="12"
+        class="text-center my-10"
+      >
+        <h1>Aucun voyage trouvé pour thématique "{{ categoryChoice.title }}" </h1>
+      </v-col>
+    </v-row>
     <v-row
-      v-if="limitedVoyages && limitedVoyages.length > 9"
+      v-if="voyages?.length > 9"
       justify="center"
       align="center"
-      class="flex-column my-10"
+      class="flex-column my-4"
     >
       <span class="text-h6 text-secondary">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
       <BouncingBtn
@@ -37,13 +76,15 @@
         class="text-secondary"
       />
     </v-row>
-    <v-container class="mt-10">
-      <v-row v-if="categorieContentStatus === 'success' && categorieContent">
-        <ContentRenderer
-          v-if="categorieContent"
-          :value="categorieContent"
-        />
-      </v-row>
+    <v-container
+      v-if="categorieContentStatus === 'success' && categorieContent"
+      fluid
+      class="mt-10 px-0"
+    >
+      <ContentRenderer
+        v-if="categorieContent"
+        :value="categorieContent"
+      />
     </v-container>
   </v-container>
 </template>
@@ -53,11 +94,14 @@ const route = useRoute()
 const slug = computed(() => route.params.thematiqueSlug)
 const isExpanded = ref(false)
 
-const { data: category } = useAsyncData('category', async () => {
-  const category = await queryCollection('categories').where('stem', 'LIKE', `categories/${slug.value}/%`).first()
-  console.log('category', category)
-  return category
+const { data: categories } = await useAsyncData('categories', () => {
+  return queryCollection('categories').where('showOnHome', '=', true).all()
 })
+
+const categoryChoice = computed(() => {
+  return categories.value.find(c => c.slug === slug.value)
+})
+
 const { data: categorieContent, status: categorieContentStatus } = useAsyncData('categorieContent', () => {
   return queryCollection('categoriesContent').where('stem', 'LIKE', `categories/${slug.value}/%`).where('published', '=', true).first()
 }, {
@@ -67,7 +111,6 @@ provide('page', categorieContent)
 
 const { data: voyages } = useAsyncData('voyages', async () => {
   const travelList = await queryCollection('voyages').where('published', '=', true).all()
-  console.log('travelList', travelList)
   return travelList.filter(v => v.categories.some(c => c.name.includes(slug.value)))
 })
 
@@ -78,10 +121,6 @@ const limitedVoyages = computed(() => {
 </script>
 
 <style scoped>
-.relative {
-  position: relative;
-}
-
 .list-move, /* apply transition to moving elements */
 .list-enter-active,
 .list-leave-active {

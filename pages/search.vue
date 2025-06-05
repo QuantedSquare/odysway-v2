@@ -4,7 +4,7 @@
     fluid
   >
     <SearchHeroSection :destination="fetchedDestination">
-      <SearchContainer />
+      <SearchField />
     </SearchHeroSection>
     <v-container class="pt-10 pt-md-16">
       <v-row>
@@ -81,12 +81,12 @@
       </v-row>
       <v-row>
         <v-col
-          v-if="voyagesWithCta?.length > 0"
+          v-if="limitedVoyages?.length > 0"
           cols="12"
         >
           <v-row>
             <v-col
-              v-for="voyage in voyagesWithCta"
+              v-for="voyage in limitedVoyages"
               :key="voyage.id"
               cols="12"
               sm="6"
@@ -95,7 +95,7 @@
             >
               <CtaColCard v-if="voyage.isCta" />
               <!-- TODO : refactor voyage card -->
-              <SearchVoyageCard
+              <VoyageCard
                 v-else
                 :voyage="voyage"
               />
@@ -110,6 +110,18 @@
             Modifiez vos critères de recherche
           </p>
         </v-col>
+      </v-row>
+      <v-row
+        v-if="voyagesWithCta.length > 9"
+        justify="center"
+        align="center"
+        class="flex-column my-10"
+      >
+        <span class="text-h6 text-secondary">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
+        <BouncingBtn
+          v-model="isExpanded"
+          class="text-secondary"
+        />
       </v-row>
     </v-container>
     <!-- <v-container>
@@ -148,6 +160,7 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
+import SearchField from '~/components/content/SearchField.vue'
 
 const { lgAndUp } = useDisplay()
 useSeoMeta({
@@ -157,6 +170,7 @@ useSeoMeta({
 const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
+const isExpanded = ref(false)
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
@@ -261,6 +275,10 @@ const voyagesWithCta = computed(() => {
   }
 
   return result
+})
+
+const limitedVoyages = computed(() => {
+  return voyagesWithCta.value.slice(0, isExpanded.value ? voyagesWithCta.value.length : 9)
 })
 
 function reinitiliazeFilter() {

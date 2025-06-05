@@ -2,7 +2,7 @@
   <v-container
     v-if="isHydrated"
     fluid
-    class="relative-hero-section mb-16 rounded-md bg-primary d-flex align-center"
+    class="relative-hero-section mb-16 mt-8 mt-md-0 rounded-md bg-primary d-flex align-center"
   >
     <v-row
       v-if="width > 960"
@@ -171,12 +171,13 @@ onMounted(() => {
   position: absolute;
   left:0;
   right: 0;
-  bottom: -60px;
+  bottom: -32px;
 }
 .custom-hero-title {
 font-weight: 700;
 font-size: 50px;
 line-height: 50px;
+/* margin-left: 44px; */
 }
 
 @media (max-width: 960px) {

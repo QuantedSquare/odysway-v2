@@ -14,7 +14,7 @@
           >
             <v-img
               v-if="review.photo"
-              :src="review.photo"
+              :src="img(review.photo, { format: 'webp', quality: 70, width: 640 })"
               alt="Photo d'une personne ayant effectué le voyage"
             />
             <span v-else> {{ review.author[0].toUpperCase() }}</span>
@@ -58,7 +58,7 @@
               class="d-none d-sm-inline"
             >
               <v-img
-                src="/images/guillemet-gauche.svg"
+                :src="img('/images/guillemet-gauche.svg', { format: 'webp', quality: 70, width: 640 })"
                 height="27"
                 width="27"
               />
@@ -84,7 +84,7 @@
               class="d-none d-sm-inline"
             >
               <v-img
-                src="/images/guillemet-droite.svg"
+                :src="img('/images/guillemet-gauche.svg', { format: 'webp', quality: 70, width: 640 })"
                 height="27"
                 width="27"
               />
@@ -99,7 +99,9 @@
 <script setup>
 import dayjs from 'dayjs'
 import { mdiStar } from '@mdi/js'
+import { useImage } from '#imports'
 
+const img = useImage()
 const props = defineProps({
   review: {
     type: Object,

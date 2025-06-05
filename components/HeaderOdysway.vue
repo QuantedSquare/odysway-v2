@@ -67,7 +67,7 @@
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/concept'); captureOutboundLink(header.textButton1) }"
+        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
       >
         {{ header.textButton1 }}
       </v-btn>

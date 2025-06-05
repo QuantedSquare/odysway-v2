@@ -198,13 +198,11 @@ onMounted(() => {
 })
 
 const childrenCount = computed(() => {
-  console.log(itemsList.value?.children)
   return housingBlock.length
 })
 
 const displayButton = computed(() => {
   if (mdAndUp.value) {
-    console.log(childrenCount.value)
     return childrenCount.value >= 2
   }
   else if (sm.value) {

@@ -5,7 +5,7 @@
   >
     <v-container
       fluid
-      :height="smAndDown ? '': '682px'"
+      :height="smAndDown ? '': '750px'"
       class="pa-0"
     >
       <v-row
@@ -67,7 +67,7 @@
               :avatar-img="page.authorPhoto"
               :avatar-size="avatarSize"
             />
-            <div class="text-body-2 text-lg-body-1 d-flex flex-column justify-center align-center align-sm-start ga-4">
+            <div class="text-body-2 text-lg-body-1 d-flex flex-column justify-center align-start ga-4">
               <div class="text-primary font-weight-bold">
                 {{ page.author }}
               </div>

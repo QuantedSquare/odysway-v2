@@ -45,7 +45,6 @@
                   <v-list-item-title class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold">
                     <div v-if="item.raw.value === 'top-destination'">
                       <v-img
-
                         :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
                         width="20"
                         height="20"

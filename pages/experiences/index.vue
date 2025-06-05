@@ -1,21 +1,34 @@
 <template>
-  <v-container>
-    <HorizontalCarousel v-if="experiences">
-      <template #title>
-        <h1>Toutes nos expériences</h1>
-      </template>
-      <template #carousel-item>
-        <ThematiqueColCard
-          v-for="experience in experiences"
-          :key="experience.id"
-          :slug="experience.slug"
-          :image="experience.image.src"
-          :title="experience.title"
-          type="experiences"
-          :description="experience.discoveryTitle"
-        />
-      </template>
-    </HorizontalCarousel>
+  <v-container
+    fluid
+    class="px-0 px-md-7"
+  >
+    <v-row lass="px-2 px-md-0">
+      <SearchHeroSection
+        :is-experience="true"
+      >
+        <SearchField />
+      </SearchHeroSection>
+      <HorizontalCarousel
+        v-if="experiences"
+        :show-buttons="experiences.length > 4"
+      >
+        <template #title>
+          <h3>Toutes nos expériences</h3>
+        </template>
+        <template #carousel-item>
+          <ThematiqueColCard
+            v-for="experience in experiences"
+            :key="experience.id"
+            :slug="experience.slug"
+            :image="experience.image.src"
+            :title="experience.title"
+            type="experiences"
+            :description="experience.discoveryTitle"
+          />
+        </template>
+      </HorizontalCarousel>
+    </v-row>
 
     <v-divider
       class="my-4"
@@ -49,7 +62,7 @@
               :options="{ threshold: 0.5 }"
               transition="fade-transition"
             >
-              <SearchVoyageCard
+              <VoyageCard
                 :voyage="voyage"
               />
             </v-lazy>
@@ -63,7 +76,7 @@
           cols="12"
           class="text-center my-10"
         >
-          <h1>Aucun voyage disponible pour le moment</h1>
+          <h1>Choisissez une expérience</h1>
         </v-col>
       </v-row>
     </div>

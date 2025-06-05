@@ -1,12 +1,15 @@
 <template>
-  <v-container>
-    <v-row>
+  <v-container
+    fluid
+    class="px-0 px-md-7"
+  >
+    <v-row lass="px-2 px-md-0">
       <SearchHeroSection
         v-if="experienceChoice"
         :destination="experienceChoice"
         :is-experience="true"
       >
-        <SearchContainer />
+        <SearchField />
       </SearchHeroSection>
       <HorizontalCarousel
         v-if="experiences"
@@ -29,7 +32,7 @@
       </HorizontalCarousel>
     </v-row>
     <v-divider
-      class="my-4"
+      class="my-8"
       thickness="2"
     />
     <v-row
@@ -53,9 +56,7 @@
           lg="4"
           xl="3"
         >
-          <SearchVoyageCard
-            :voyage="voyage"
-          />
+          <VoyageCard :voyage="voyage" />
         </v-col>
       </TransitionGroup>
     </v-row>
@@ -67,14 +68,14 @@
         <h1>Aucun voyage trouvé pour expérience "{{ experienceChoice.title }}" </h1>
       </v-col>
     </v-row>
-    <v-row v-if="voyages.length === 0 && !slug">
+    <!-- <v-row v-if="voyages.length === 0 && !slug">
       <v-col
         cols="12"
         class="text-center my-10"
       >
         <h1>Choisissez une expérience</h1>
       </v-col>
-    </v-row>
+    </v-row> -->
     <v-row
       v-if="voyages.length > 9"
       justify="center"

@@ -20,7 +20,7 @@
       >
         <v-btn
           icon
-          :color="arrivedState.left ? 'primary' : `${color}`"
+          :color="color"
           :disabled="arrivedState.left"
           class="mr-2"
           elevation="5"
@@ -29,12 +29,12 @@
         >
           <v-icon
             :icon="mdiChevronLeft"
-            :color="arrivedState.left ? 'black' : 'white'"
+            color="white"
           />
         </v-btn>
         <v-btn
           icon
-          :color="arrivedState.right ? 'primary' : `${color}`"
+          :color="color"
           :disabled="arrivedState.right"
           elevation="5"
           :size="mdAndUp ? 'large' : 'small'"
@@ -42,7 +42,7 @@
         >
           <v-icon
             :icon="mdiChevronRight"
-            :color="arrivedState.right ? 'black' : 'white'"
+            color="white"
           />
         </v-btn>
       </v-col>
