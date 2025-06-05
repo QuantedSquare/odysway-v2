@@ -1,9 +1,5 @@
 <template>
-  <v-col
-    cols="4.5"
-    md="3"
-    class="mx-0 px-1 pr-md-3"
-  >
+  <v-col>
     <!-- <v-lazy
       :min-height="width <= 960 ? 300 : 415"
       :options="{ threshold: 0.5 }"

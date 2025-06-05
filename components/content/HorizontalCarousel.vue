@@ -7,7 +7,7 @@
       class="position-relative px-0"
     >
       <v-col
-        cols="12"
+        cols="10"
         class="text-h2"
         :class="{ 'text-md-center text-start': centerTitle }"
       >

@@ -1,6 +1,6 @@
 <template>
   <v-col
-    cols="8"
+    cols="7"
     md="3"
     class="pr-1 pr-md-3"
   >
@@ -35,7 +35,7 @@
       >
         <h3
           key="title"
-          class="font-weight-bold text-h2 text-center text-shadow text-line-space mx-2 mx-md-3"
+          class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2 mx-md-3"
         >
           {{ title }}
         </h3>
@@ -172,10 +172,15 @@ defineProps({
 .slide-leave-active {
   position: absolute;
 }
-
+h3{
+  font-size: 38px!important;
+  line-height: 40px!important;
+}
 @media screen and (max-width: 1280px) {
   h3 {
     font-size: 1.5rem !important;
+    line-height: 30px!important;
+
   }
 }
 

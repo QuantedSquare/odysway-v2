@@ -12,21 +12,23 @@
       height="250"
     />
   </v-col>
-  <v-col
+  <!-- <v-col
     v-else-if="voyage"
-    cols="8"
+    cols="9"
     sm="5"
     lg="4"
     class="pr-1 pr-md-3"
-  >
-    <!-- <v-lazy
+  > -->
+  <!-- <v-lazy
       :min-height="228"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
     > -->
+  <v-col v-else-if="voyage">
     <v-card
       elevation="0"
       hover
+      class="custom-card-width"
     >
       <NuxtLink
         :to="`/voyages/${voyage.slug}`"
@@ -60,9 +62,9 @@
           class="text-decoration-none"
         >
           <v-card-text class="py-1">
-            <v-container class="px-2">
+            <v-container class="px-0 px-md-2">
               <v-row>
-                <v-col class="pt-md-3 pt-0">
+                <v-col class="pt-lg-3 pt-0">
                   <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
                     <div
                       ref="titleRef"
@@ -121,7 +123,7 @@
                 v-if="voyage.groupeAvailable"
                 block
                 color="primary"
-                class="font-weight-bold text-body-1"
+                class="text-body-1"
               >
                 <div class="mb-md-1 mr-2">
                   Découvrir les dates
@@ -134,7 +136,7 @@
                 v-else
                 block
                 color="secondary"
-                class="text-decoration-none font-weight-bold text-body-1"
+                class="text-decoration-none text-body-1"
               >
                 <div class="mb-md-1 mr-2">
                   Demander un devis
@@ -148,7 +150,7 @@
         </NuxtLink>
       </div>
     </v-card>
-    <!-- </v-lazy> -->
+  <!-- </v-lazy> -->
   </v-col>
 </template>
 
@@ -193,7 +195,14 @@ const actionColor = computed(() => voyage.value?.groupeAvailable ? '#f7f8f8' : '
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+  line-height: 120%!important;
+  font-size: 28px!important;
 }
+.custom-card-width{
+  min-width:406px!important;
+  /* margin-right: 25px!important; */
+}
+
 .hover-primary:hover{
   background-color: v-bind(actionColor);
 }
@@ -206,14 +215,40 @@ const actionColor = computed(() => voyage.value?.groupeAvailable ? '#f7f8f8' : '
 .img-height{
   height: 228px;
 }
-@media screen and (max-width: 600px) {
-.badge-position{
-  position: absolute;
-  top: 18px;
-  right: 18px;
+@media screen and (max-width: 1240px) {
+  .line-clamp-2{
+    font-size: 24px!important;
+  }
+  .title-container {
+    height: 2.2em; /* This sets a fixed height equivalent to 2 lines */
+  }
+  .custom-card-width{
+  min-width:350px!important;
+  /* margin-right: 20px!important; */
 }
-.img-height{
-  height: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+.line-clamp-2{
+  font-size: 18px!important;
+}
+}
+@media screen and (max-width: 600px) {
+  .badge-position{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+  }
+  .img-height{
+    height: 150px;
+  }
+  .line-clamp-2{
+    line-height: 20px!important;
+    font-size: 16px!important;
+  }
+  .custom-card-width{
+  min-width:280px!important;
+  /* margin-right: 10px!important; */
 }
 }
 </style>
