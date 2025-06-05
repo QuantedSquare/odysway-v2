@@ -39,12 +39,7 @@
         >
           {{ title }}
         </h3>
-        <!-- <p
-          key="description"
-          class="description text-shadow text-center mx-2"
-        >
-          {{ description }}
-        </p> -->
+
       </TransitionGroup>
     </NuxtLink>
     <!-- </v-lazy> -->

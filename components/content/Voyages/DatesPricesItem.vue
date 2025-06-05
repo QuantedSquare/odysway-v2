@@ -103,10 +103,19 @@
       <v-col
         cols="5"
         md="3"
-        class="d-flex flex-column justify-center align-center justify-md-start align-sm-start"
+        class="d-flex flex-column justify-center align-center justify-lg-start align-sm-start"
       >
-        <span class="text-h2 font-weight-black">
+        <span
+          class="text-h2 font-weight-black"
+          :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"
+        >
           {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
+        </span>
+        <span
+          v-if="enrichedDate.last_minute || enrichedDate.early_bird"
+          class="text-h2 font-weight-black text-green-light"
+        >
+          {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
         </span>
       </v-col>
       <v-col
@@ -194,7 +203,7 @@ const enrichedDate = computed(() => {
     badges: date.custom_display ? (date.displayed_badges || '') : (date.badges || ''),
     starting_price: date.custom_display ? date.displayed_starting_price : date.starting_price,
     early_bird: date.custom_display ? date.displayed_early_bird : today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
-    last_minute: date.custom_display ? date.displayed_last_minute : dayjs(date.departure_date).diff(today, 'month') <= 1 ? date.last_minute : false,
+    last_minute: date.custom_display ? date.displayed_last_minute : dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,
     status: getStatus(date),
   }
 })
@@ -225,6 +234,7 @@ const getStatus = (date) => {
     }
   }
 }
+console.log('enrichedDate', enrichedDate.value)
 const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }

@@ -534,7 +534,7 @@
         cols="12"
         class="mb-16"
       >
-        <DatesPricesItem :date="form" />
+        <DatesPricesItem :date="Object.assign(form, { lastMinutePrice: voyagePricing.lastMinuteReduction, earlyBirdPrice: voyagePricing.earlyBirdReduction })" />
       </v-col>
     </v-row>
 
@@ -614,6 +614,8 @@ const form = ref({})
 const bookedTravelers = ref([])
 const prospectTravelers = ref([])
 const loading = ref(true)
+const { pricing: voyagePricing } = await queryCollection('voyages').where('slug', '=', slug).select('pricing').first()
+console.log('=======voyagePricing=======', voyagePricing)
 
 const saving = ref(false)
 const saveError = ref('')

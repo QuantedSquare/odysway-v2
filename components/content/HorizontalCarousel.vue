@@ -8,7 +8,7 @@
     >
       <v-col
         cols="12"
-        class="text-h2 my-4"
+        class="text-h2"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
         <slot name="title" />
@@ -50,6 +50,7 @@
     <div ref="items-list">
       <v-row
         ref="scrollContainer"
+        class="mt-4 mt-md-10"
         :class="reviews && smAndDown? 'flex-wrap' : 'flex-nowrap overflow-auto hidden-scroll'"
       >
         <slot

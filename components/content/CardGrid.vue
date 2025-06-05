@@ -1,10 +1,10 @@
 <template>
   <v-container
     fluid
-    class="px-0 mx-0"
+    class="pa-0 mx-0 "
   >
     <v-container
-      v-if="categories.length % 4 === 0"
+      v-if="categories.length % 4 === 0 || width > 960"
       fluid
     >
       <v-row>
@@ -29,7 +29,7 @@
         <slot name="title" />
       </template>
       <template #carousel-item>
-        <ThematiqueColCard
+        <CategColCard
           v-for="category in categories"
           v-show="category.showOnHome"
           :key="category.id"

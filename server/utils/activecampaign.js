@@ -449,6 +449,7 @@ export default {
   createDeal, // OK
   updateDeal,
   addNote,
+  recalculatTotalValues,
   // --- Notification ---
   sendSlackNotification, // OK
   optionNotification,

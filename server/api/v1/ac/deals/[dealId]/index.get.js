@@ -7,6 +7,8 @@ export default defineEventHandler(async (event) => {
     })
   }
   try {
+    // Recalculate total values before sending datas
+    await activecampaign.recalculatTotalValues(dealId)
     const reponse = await activecampaign.getDealById(dealId)
     const customFields = await activecampaign.getDealCustomFields(dealId)
     const { contact } = await activecampaign.getClientById(reponse.deal.contact)

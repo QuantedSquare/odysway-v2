@@ -175,7 +175,7 @@
     "indivRoomPrice": 50,
     "cseReduction": 0,
     "cseAvailable": false,
-    "childrenPromo": 0,
+    "childrenPromo": 50,
     "childrenAge": 12,
     "airportCode": []
   },

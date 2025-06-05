@@ -139,7 +139,7 @@ const stripePay = async () => {
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {
-      amout: +route.query.amount * 100, // typo here on amout
+      amount: +route.query.amount * 100,
     })
   }
   console.log('dataForStripeSession', dataForStripeSession)

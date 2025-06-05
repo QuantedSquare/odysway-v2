@@ -14,7 +14,7 @@
   </v-col>
   <v-col
     v-else-if="voyage"
-    cols="10"
+    cols="8"
     sm="5"
     lg="4"
     class="pr-1 pr-md-3"
@@ -204,7 +204,7 @@ const actionColor = computed(() => voyage.value?.groupeAvailable ? '#f7f8f8' : '
   background-color: v-bind(actionColor);
 }
 .img-height{
-  height: 150px;
+  height: 228px;
 }
 @media screen and (max-width: 600px) {
 .badge-position{
@@ -213,7 +213,7 @@ const actionColor = computed(() => voyage.value?.groupeAvailable ? '#f7f8f8' : '
   right: 18px;
 }
 .img-height{
-  height: 110px;
+  height: 150px;
 }
 }
 </style>

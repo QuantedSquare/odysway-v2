@@ -29,7 +29,10 @@ const createCheckoutSession = async (order) => {
     console.log('baseToCalculateDepositValue', baseToCalculateDepositValue)
     return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0) * data.nbTravelers)
   }
-
+  const gotEarlyBird = deal.gotEarlybird === 'Oui'
+  const gotLastMinute = deal.gotLastMinute === 'Oui'
+  const baseTravelerPrice = +deal.basePricePerTraveler + (deal.flightPrice > 0 ? +deal.flightPrice : 0) - (gotEarlyBird ? +deal.promoEarlybird : 0) - (gotLastMinute ? +deal.promoLastMinute : 0)
+  console.log('baseTravelerPrice', baseTravelerPrice, deal.basePricePerTraveler, deal.flightPrice, deal.promoEarlybird, deal.promoLastMinute)
   if (order.paymentType === 'deposit') {
     const depositValue = calculatDepositeValue(deal)
     lineItems.push(
@@ -93,11 +96,11 @@ const createCheckoutSession = async (order) => {
             images: [imageUrl],
             description: 'Règlement personnalisé, extension voyage',
           },
-          unit_amount: +order.amout,
+          unit_amount: +order.amount,
         },
         quantity: 1,
       })
-    paidAmount += +order.amout
+    paidAmount += +order.amount
   }
   else if (order.paymentType === 'full') {
     paidAmount += +deal.value
@@ -111,7 +114,7 @@ const createCheckoutSession = async (order) => {
             images: [imageUrl],
             description: 'Tarif Adulte ',
           },
-          unit_amount: +deal.basePricePerTraveler + (deal.flightPrice > 0 ? +deal.flightPrice : 0),
+          unit_amount: baseTravelerPrice,
         },
         quantity: +deal.nbAdults,
       })
@@ -126,7 +129,7 @@ const createCheckoutSession = async (order) => {
               images: [imageUrl],
               description: 'Tarif Enfant ',
             },
-            unit_amount: +deal.basePricePerTraveler - +deal.promoChildren + (deal.flightPrice > 0 ? +deal.flightPrice : 0),
+            unit_amount: baseTravelerPrice - +deal.promoChildren,
           },
           quantity: +deal.nbUnderAge,
         })
@@ -142,7 +145,7 @@ const createCheckoutSession = async (order) => {
               images: [imageUrl],
               description: 'Tarif Adolescent ',
             },
-            unit_amount: +deal.basePricePerTraveler - +deal.promoTeen + (deal.flightPrice > 0 ? +deal.flightPrice : 0),
+            unit_amount: baseTravelerPrice - +deal.promoTeen,
           },
           quantity: +deal.nbTeen,
         })
@@ -379,7 +382,6 @@ const handlePaymentSession = async (session, paymentType) => {
   const dealData = {
     group: '2',
     stage: +customFields.alreadyPaid > 0 ? '33' : '6',
-    paiementLink: totalPaid >= +deal.value ? 'Paiement OK' : `https://odysway.com/checkout?dealId=${order.dealId}&type=balance`,
     alreadyPaid: totalPaid,
     restToPay: restToPay,
     currentStep: totalPaid >= +deal.value
@@ -392,6 +394,9 @@ const handlePaymentSession = async (session, paymentType) => {
     // { customFieldId: 28, fieldValue: restTravelerToPay() },
     // { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler } // Solde restant par Voyageur à régler
 
+  }
+  if (totalPaid >= +deal.value) {
+    Object.assign(dealData, { paiementLink: 'Paiement OK' })
   }
 
   console.log('dealData', dealData)

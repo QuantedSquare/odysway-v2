@@ -57,6 +57,8 @@
           :indiv-section="page.indivSection"
           :is-groupe-available="voyage.groupeAvailable"
           :is-privatisation-available="voyage.privatisationAvailable"
+          :last-minute-price="voyage.pricing.lastMinuteReduction"
+          :early-bird-price="voyage.pricing.earlyBirdReduction"
         />
 
         <PriceDetailsContainer

@@ -29,11 +29,6 @@
         <div class="content-overlay">
           <div class="w-100 d-flex flex-column align-center justify-center">
             <h3 class="category-title font-weight-bold  text-h3 d-flex align-center text-center text-shadow ">{{ title }}</h3>
-            <p class="category-description text-shadow d-flex flex-column align-center justify-space-between ga-4">
-              <span class="text-center">
-                {{ subtitle }}
-              </span>
-            </p>
           </div>
         </div>
       </NuxtLink>
@@ -130,38 +125,15 @@ defineProps({
   z-index: 1;
 }
 
-/* .image-wrapper:hover .content-overlay {
-  transform: translateY(0);
-} */
-
 .category-title {
-  margin: -3em 0 0 0;
+  margin: -1.5em 0 0 0;
+  font-size: 32px!important;
 }
 
 .category-description {
   margin: 0.5rem 0 0;
   font-size: 0.875rem;
-  /* opacity: 0;
-  transform: translateY(1rem);
-  transition: all 0.3s ease-in-out; */
 }
-
-/* .image-wrapper:hover .category-description {
-  opacity: 1;
-  transform: translateY(0);
-} */
-
-/* .explore-btn {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border: 1px solid white !important;
-  color: white !important;
-  font-weight: bold;
-} */
-
-/* .explore-btn:hover {
-  background: white;
-  color: black;
-} */
 
 @media screen and (max-width: 1280px) {
   .text-to-wrap {
@@ -169,6 +141,7 @@ defineProps({
   }
   .category-title {
     margin: -60px 0 0 0 !important;
+    font-size: 28px!important;
   }
 }
 

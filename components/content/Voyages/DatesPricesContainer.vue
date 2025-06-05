@@ -26,7 +26,7 @@
           :key="index"
           cols="12"
         >
-          <DatesPricesItem :date="Object.assign(date, { index })" />
+          <DatesPricesItem :date="Object.assign(date, { index, lastMinutePrice, earlyBirdPrice })" />
         </v-col>
       </TransitionGroup>
     </v-row>
@@ -83,6 +83,14 @@ const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable 
   isPrivatisationAvailable: {
     type: Boolean,
     default: false,
+  },
+  lastMinutePrice: {
+    type: Number,
+    default: 0,
+  },
+  earlyBirdPrice: {
+    type: Number,
+    default: 0,
   },
 })
 
