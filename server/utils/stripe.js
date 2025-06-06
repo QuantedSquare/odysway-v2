@@ -266,7 +266,7 @@ const createCheckoutSession = async (order) => {
   console.log('order before session', order)
 
   // Ensure URLs are properly encoded
-  // #TODO: remove this forced origin
+  // #TODO: remove this forced origin when deployed on production
   let forcedOrigin = 'https://odysway-v2.vercel.app'
   const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}`)
   const cancelUrl = encodeURI(`${forcedOrigin}${order.currentUrl}`)
@@ -325,7 +325,18 @@ const createCheckoutSession = async (order) => {
 
 // ===== HANDLE PAYMENT SESSION =====
 const handlePaymentSession = async (session, paymentType) => {
-  console.log('In handlePaymentSession', session, paymentType)
+  let checkoutId
+  if (paymentType === 'Virement') {
+    const checkoutSession = await stripeCLI.checkout.sessions.list({
+      payment_intent: session.id,
+    })
+    checkoutId = checkoutSession.data[0].id
+    session = checkoutSession.data[0]
+  }
+  else {
+    checkoutId = session.id
+  }
+  console.log('In handlePaymentSession || paymentType:', paymentType, 'checkoutId', checkoutId, 'session', session)
 
   const isDev = config.public.environment !== 'production'
 
@@ -369,8 +380,18 @@ const handlePaymentSession = async (session, paymentType) => {
   const { contact: client } = await activecampaign.getClientById(deal.contact)
   console.log('Passed client retrieving', client)
   //   // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
-    // chapka.notify(session, deal.insurance, deal) // #TODO
+  if (deal.insurance !== 'Aucune Assurance' && isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+    const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
+    session.lineItems = lineItems
+    console.log('LineItems', lineItems)
+    const inssuranceItem = lineItems.find((item) => {
+      return [
+        'Assurance multirisques',
+        'Assurance annulation',
+      ].includes(item.description)
+    })
+    console.log('InssuranceItem', inssuranceItem)
+    chapka.notify(session, deal.insurance, deal)
     console.log('Chapka notify')
   }
 

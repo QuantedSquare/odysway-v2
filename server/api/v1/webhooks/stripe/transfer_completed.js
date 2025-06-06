@@ -1,5 +1,9 @@
 import { stripeCLI } from '@/server/utils/stripeCLI'
 
+// https://docs.stripe.com/payments/bank-transfers/accept-a-payment?payment-ui=direct-api&country=ue&lang=node&shell=true&api=true#test-your-integration
+// Use this link if you want to emulate a bank transfer. Need to be connected to stripe, on the test environnement.
+// Use the stripe cli at the bottom. Define the customer id of the transfer (need to initiate a transfer at the end of the funnel, then retrieve the id on stripe dashboard, payment will be on hold)
+
 export default defineEventHandler(async (event) => {
   const body = await readRawBody(event, false)
   console.log('Body from webhook in transfer_completed.js', body)

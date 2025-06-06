@@ -45,7 +45,7 @@
             v-show="!ageValidation.isValid"
             class="text-error text-right"
           >
-            Les voyageurs âgés de {{ Number(deal?.maxChildrenAge) }} ans au moment du départ sont considérés comme des
+            Les voyageurs âgés de {{ Number(deal?.maxChildrenAge) || 12 }} ans au moment du départ sont considérés comme des
             adultes.
           </p>
           <!-- New: Error message for missing fields -->

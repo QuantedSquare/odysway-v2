@@ -103,4 +103,60 @@ const quote = async (body) => {
   }
 }
 
-export default { quote }
+const notify = (stripeSession, insuranceItem, dealCustomFields) => {
+  const order = stripeSession.metadata
+  const isDev = process.env.NODE_ENV === 'development'
+  const insuranceType = insuranceItem.description === 'Assurance multirisques' ? 'MR' : 'AN'
+
+  const data = {
+    emetteur: isDev ? 'ODYSWAY-TEST' : 'ODYSWAY',
+    produit: order.countries.includes('NP') || order.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
+    reference: order.dealId.toString(),
+    formule: insuranceType,
+    prime: (insuranceItem.amount_total / 100).toFixed(2),
+    email: stripeSession.customer_details.email,
+    provenance: 'FR',
+    destination: order.countries,
+    nombre: insuranceItem.quantity.toString(),
+    depart: dayjs(dealCustomFields.departureDate).format('DD/MM/YYYY'),
+    retour: dayjs(dealCustomFields.returnDate).format('DD/MM/YYYY'),
+    devise: 'EUR',
+  }
+
+  const indivPrice = (+dealCustomFields.pricePerTraveler) - (insuranceItem.price.unit_amount / 100)
+
+  for (let index = 1; index < 9; index++) {
+    const traveler = dealCustomFields[`traveler${index}`]
+    if (traveler) {
+      const travelerData = traveler.split('_')
+      data[`prenom${index}`] = travelerData[0]
+      data[`nom${index}`] = travelerData[1]
+      data[`montant${index}`] = indivPrice.toFixed(2)
+    }
+  }
+
+  data.sign = getSignature(data)
+
+  console.log('send data to chapka', data)
+
+  try {
+    // const res = await axios.post(
+    //   'https://api.chapka.fr/notify/?request=create',
+    //   JSON.stringify({
+    //     message: JSON.stringify(data),
+    //     mode: 'json',
+    //   }),
+    //   {
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //   },
+    // )
+    // console.log('Notify chapka', res.status)
+  }
+  catch (err) {
+    console.log('Err notify chapka', err)
+  }
+}
+
+export default { quote, notify }
