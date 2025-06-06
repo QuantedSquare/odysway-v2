@@ -1,7 +1,7 @@
 <template>
   <v-sheet
-    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6  d-flex flex-column justify-start"
-    :class="route.name === 'search' ? 'h-100' : ''"
+    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6 d-flex flex-column justify-start"
+    :class="route.name === 'search' || route.name.includes('thematiques') || route.name.includes('experience') ? 'h-100' : ''"
   >
     <v-avatar
       size="80"
@@ -46,6 +46,13 @@ function redirectToCalendly() {
 
   if (route.name === 'search') {
     router.push('/calendly?fromSearch')
+  }
+  else if (route.name.includes('thematiques')) {
+    console.log(route.name)
+    router.push('/calendly?fromThematiques')
+  }
+  else if (route.name.includes('experiences')) {
+    router.push('/calendly?fromExperiences')
   }
   else {
     router.push(`/calendly?travelTitle=${route.params.voyageSlug}`)
