@@ -386,8 +386,9 @@ const handlePaymentSession = async (session, paymentType) => {
     console.log('LineItems', lineItems)
     const inssuranceItem = lineItems.find((item) => {
       return [
-        'Assurance multirisques',
-        'Assurance annulation',
+        'Assurance Multirisque',
+        'Assurance Annulation',
+        'Assurance Assistance',
       ].includes(item.description)
     })
     console.log('InssuranceItem', inssuranceItem)
