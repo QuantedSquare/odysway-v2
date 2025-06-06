@@ -1,107 +1,121 @@
 <template>
   <!-- Display carousel with voyages for each type experience/category  -->
-  <div v-if="availableVoyages">
-    <v-row>
-      <HorizontalCarousel
-        v-for="content in voyages"
-        v-show="content.voyages?.length > 0"
-        :key="content.id"
-        :slug="content.slug"
-        :image="content.image.src"
-        :title="content.title"
-        :description="content.discoveryTitle"
-      >
-        <template #title>
-          <h3>
-            {{ content.discoveryTitle }}
-          </h3>
-        </template>
-        <template #carousel-item>
-          <v-col
-            v-for="voyage in content.voyages"
-            :key="voyage.id"
-            cols="10"
-            sm="6"
-            lg="4"
-          >
-            <!-- <v-lazy
+  <v-row
+    v-if="availableVoyages"
+    class="px-md-12"
+  >
+    <HorizontalCarousel
+      v-for="content in voyages"
+      v-show="content.voyages?.length > 0"
+      :key="content.id"
+      :slug="content.slug"
+      :image="content.image.src"
+      :title="content.title"
+      :description="content.discoveryTitle"
+    >
+      <template #title>
+        <h3 class="custom-title">
+          {{ content.discoveryTitle }}
+        </h3>
+      </template>
+      <template #carousel-item>
+        <v-col
+          v-for="voyage in content.voyages"
+          :key="voyage.id"
+          cols="10"
+          sm="6"
+          lg="4"
+        >
+          <!-- <v-lazy
               :min-height="228"
               :options="{ threshold: 0.5 }"
               transition="fade-transition"
             > -->
-            <VoyageCard
-              :voyage="voyage"
-            />
-            <!-- </v-lazy> -->
-          </v-col>
-        </template>
-      </HorizontalCarousel>
-    </v-row>
-  </div>
+          <VoyageCard
+            :voyage="voyage"
+          />
+          <!-- </v-lazy> -->
+        </v-col>
+      </template>
+    </HorizontalCarousel>
+  </v-row>
   <!---------------------------------------------------------------------->
 
   <!-- Display search result in function of selected experience/category  -->
-  <div v-if="selectedCategory || selectedExperience || isSearch">
-    <v-row
-      v-if="voyages && voyages.length > 0"
-      class="position-relative"
+  <v-row
+    v-if="voyages && voyages.length > 0 && (selectedCategory || selectedExperience || isSearch)"
+    class="position-relative px-md-12"
+  >
+    <TransitionGroup
+      name="list"
     >
-      <TransitionGroup
-        name="list"
-      >
-        <v-col
-          v-for="voyage in limitedVoyages"
-          :key="voyage.id"
-          cols="12"
-          sm="6"
-          lg="4"
-          xl="3"
-        >
-          <CtaCardSheet v-if="voyage.isCta" />
-          <VoyageCard
-            v-else
-            :voyage="voyage"
-          />
-        </v-col>
-      </TransitionGroup>
-    </v-row>
-    <v-row v-if="voyages && voyages.length === 0 && selectedCategory">
       <v-col
+        v-for="voyage in limitedVoyages"
+        :key="voyage.id"
         cols="12"
-        class="text-center my-10"
+        sm="6"
+        lg="4"
+        xl="3"
       >
-        <h3>Aucun voyage trouvé pour thématique "{{ selectedCategory.title }}" </h3>
+        <CtaCardSheet v-if="voyage.isCta" />
+        <VoyageCard
+          v-else
+          :voyage="voyage"
+        />
       </v-col>
-    </v-row>
-    <v-row v-if="voyages && voyages.length === 0 && selectedExperience">
-      <v-col
-        cols="12"
-        class="text-center my-10"
-      >
-        <h3>Aucun voyage trouvé pour expérience "{{ selectedExperience.title }}" </h3>
-      </v-col>
-    </v-row>
-    <v-row v-if="voyages && voyages.length === 0 && isSearch">
-      <v-col
-        cols="12"
-        class="text-center my-10"
-      >
-        <h3> Modifiez vos critères de recherche </h3>
-      </v-col>
-    </v-row>
-    <v-row
-      v-if="voyages.length > 9"
-      justify="center"
-      align="center"
-      class="flex-column my-8"
+    </TransitionGroup>
+  </v-row>
+  <v-row
+    v-if="voyages && voyages.length === 0 && selectedCategory"
+    class="px-md-12"
+  >
+    <v-col
+      cols="12"
+      class="text-center my-4 my-md-10"
     >
-      <span class="text-h6 text-secondary">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
-      <BouncingBtn
-        v-model="isExpanded"
-        class="text-secondary"
-      />
-    </v-row>
-  </div>
+      <h3 class="custom-title">
+        Aucun voyage trouvé pour thématique "{{ selectedCategory.title }}"
+      </h3>
+    </v-col>
+  </v-row>
+  <v-row
+    v-if="voyages && voyages.length === 0 && selectedExperience"
+    class="px-md-12"
+  >
+    <v-col
+      cols="12"
+      class="text-center my-4 my-md-10"
+    >
+      <h3 class="custom-title">
+        Aucun voyage trouvé pour expérience "{{ selectedExperience.title }}"
+      </h3>
+    </v-col>
+  </v-row>
+  <v-row
+    v-if="voyages && voyages.length === 0 && isSearch"
+    class="px-md-12"
+  >
+    <v-col
+      cols="12"
+      class="text-center my-4 my-md-10"
+    >
+      <h3 class="custom-title">
+        Modifiez vos critères de recherche
+      </h3>
+    </v-col>
+  </v-row>
+  <v-row
+    v-if="voyages.length > 9"
+    justify="center"
+    align="center"
+    class="flex-column my-8"
+  >
+    <span class="text-h6 text-secondary">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
+    <BouncingBtn
+      v-model="isExpanded"
+      class="text-secondary"
+    />
+  </v-row>
   <!---------------------------------------------------------------------->
 </template>
 
@@ -169,5 +183,30 @@ const limitedVoyages = computed(() => {
    animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
+}
+.custom-title {
+font-weight: 700;
+font-size: 50px;
+line-height: 50px;
+}
+
+@media (min-width: 960px) {
+  .custom-title {
+    font-size: 42px!important;
+    line-height: 42px!important;
+  }
+}
+
+@media (max-width: 960px) {
+  .custom-title {
+    font-size: 42px !important;
+    line-height: 42px !important;
+  }
+}
+@media (max-width: 400px) {
+  .custom-title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
 }
 </style>

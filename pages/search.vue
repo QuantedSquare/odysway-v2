@@ -5,84 +5,82 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
-    <v-container class="pt-10 pt-md-16">
-      <v-row>
-        <v-col
-          cols=""
-          md="auto"
-          class="d-flex align-center"
-        >
-          <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages}
+    <v-row class="py-6 py-md-10">
+      <v-col
+        cols=""
+        md="auto"
+        class="d-flex align-center"
+      >
+        <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages}
             voyages` }}</span>
-        </v-col>
-        <v-col
-          cols=""
-          md="auto"
-          class="d-flex align-center ga-2"
+      </v-col>
+      <v-col
+        cols=""
+        md="auto"
+        class="d-flex align-center ga-2"
+      >
+        <!-- Add closable props & logic -->
+        <v-chip
+          v-if="routeQuery.destination"
+          variant="flat"
+          :size="lgAndUp ? 'x-large' : 'large'"
+          color="secondary-light-2"
+          density="comfortable"
         >
-          <!-- Add closable props & logic -->
-          <v-chip
-            v-if="routeQuery.destination"
-            variant="flat"
-            :size="lgAndUp ? 'x-large' : 'large'"
-            color="secondary-light-2"
-            density="comfortable"
-          >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ capitalizeFirstLetter(routeQuery.destination) }}
-            </span>
-          </v-chip>
-          <!-- Add closable props & logic -->
+          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
+            {{ capitalizeFirstLetter(routeQuery.destination) }}
+          </span>
+        </v-chip>
+        <!-- Add closable props & logic -->
 
-          <v-chip
-            v-if="routeQuery.travelType"
-            variant="flat"
-            :size="lgAndUp ? 'x-large' : 'large'"
-            color="secondary-light-2"
-            density="comfortable"
-            @click:close="chip = false"
-          >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ routeQuery.travelType }}
-            </span>
-          </v-chip>
-          <!-- Add closable props & logic -->
-
-          <v-chip
-            v-if="routeQuery.from"
-            variant="flat"
-            :size="lgAndUp ? 'x-large' : 'large'"
-            color="secondary-light-2"
-            density="comfortable"
-          >
-            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-              {{ parsedDates }}
-            </span>
-          </v-chip>
-        </v-col>
-        <v-spacer />
-        <v-col
-          v-if="route.fullPath !== '/search'"
-          cols=""
-          md="auto"
-          class="d-flex justify-end"
+        <v-chip
+          v-if="routeQuery.travelType"
+          variant="flat"
+          :size="lgAndUp ? 'x-large' : 'large'"
+          color="secondary-light-2"
+          density="comfortable"
+          @click:close="chip = false"
         >
-          <v-btn
-            color="primary"
-            variant="outlined"
-            size="large"
-            class="text-subtitle-2"
-            @click="reinitiliazeFilter"
-          >
-            Réinitialiser
-          </v-btn>
-        </v-col>
-      </v-row>
-      <DisplayVoyagesRow
-        :voyages="voyages"
-        :is-search="true"
-      />
-    </v-container>
+          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
+            {{ routeQuery.travelType }}
+          </span>
+        </v-chip>
+        <!-- Add closable props & logic -->
+
+        <v-chip
+          v-if="routeQuery.from"
+          variant="flat"
+          :size="lgAndUp ? 'x-large' : 'large'"
+          color="secondary-light-2"
+          density="comfortable"
+        >
+          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
+            {{ parsedDates }}
+          </span>
+        </v-chip>
+      </v-col>
+      <v-spacer />
+      <v-col
+        v-if="route.fullPath !== '/search'"
+        cols=""
+        md="auto"
+        class="d-flex justify-end"
+      >
+        <v-btn
+          color="primary"
+          variant="outlined"
+          size="large"
+          class="text-subtitle-2"
+          @click="reinitiliazeFilter"
+        >
+          Réinitialiser
+        </v-btn>
+      </v-col>
+    </v-row>
+    <DisplayVoyagesRow
+      :voyages="voyages"
+      :is-search="true"
+    />
     <!-- <v-container>
       <v-row>
         <ContentRenderer

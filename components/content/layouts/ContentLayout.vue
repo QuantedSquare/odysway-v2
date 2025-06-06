@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="px-3"
+    class="px-2 px-md-4 pt-0"
   >
     <SearchHeroSection
       :is-category="isCategory"
@@ -17,7 +17,9 @@
       :show-buttons="categories.length > 4"
     >
       <template #title>
-        <h3>Toutes nos thématiques</h3>
+        <h3 class="custom-title">
+          Toutes nos thématiques
+        </h3>
       </template>
       <template #carousel-item>
         <ThematiqueColCard
@@ -39,7 +41,9 @@
       :show-buttons="experiences.length > 4"
     >
       <template #title>
-        <h3>Toutes nos expériences</h3>
+        <h3 class="custom-title">
+          Toutes nos expériences
+        </h3>
       </template>
       <template #carousel-item>
         <ThematiqueColCard
@@ -57,7 +61,7 @@
 
     <v-divider
       thickness="2"
-      class="my-8"
+      class="mt-2 mb-4 mb-md-6"
     />
 
     <slot name="indexContent" />
@@ -98,3 +102,31 @@ const { data: experiences } = useAsyncData('experiences', () => {
   return null
 })
 </script>
+
+<style scoped>
+.custom-title {
+font-weight: 700;
+font-size: 50px;
+line-height: 50px;
+}
+
+@media (min-width: 960px) {
+  .custom-title {
+    font-size: 42px !important;
+    line-height: 42px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .custom-title {
+    font-size: 42px !important;
+    line-height: 42px !important;
+  }
+}
+@media (max-width: 400px) {
+  .custom-title {
+    font-size: 30px !important;
+    line-height: 30px !important;
+  }
+}
+</style>

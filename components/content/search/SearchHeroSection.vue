@@ -32,7 +32,7 @@
         </h1>
         <h1
           v-else
-          class="custom-hero-title ml-3"
+          class="custom-hero-title"
         >
           Trouvez votre prochain voyage
         </h1>
