@@ -3,7 +3,7 @@
     fluid
     class="mt-10 relative"
   >
-    <v-img
+    <!-- <v-img
       v-if="voyage && voyage.imageSecondary"
       :src="img(voyage.imageSecondary.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
       :lazy-src="img(voyage.imageSecondary.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
@@ -13,7 +13,7 @@
       height="350px"
       cover
       class="absolute"
-    />
+    /> -->
 
     <v-row justify="center">
       <v-col
@@ -155,8 +155,8 @@ const validateInfos = computed(() => {
 
 const voyage = await queryCollection('voyages').where('slug', '=', route.query.slug).first()
 console.log('voyage', voyage)
-const destination = await queryCollection('destinations').where('slug', '=', voyage.destinations[0].slug).first()
-console.log('destination', destination)
+const destinations = await queryCollection('destinations').where('titre', 'IN', voyage.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
+console.log('destinations', destinations)
 const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 console.log('page', page)
 
@@ -192,9 +192,9 @@ const submit = async () => {
     nbAdults: +details.value.nbAdults,
     nbTeen: 0,
     nbUnderAge: +details.value.nbChildren,
-    country: destination.titre,
-    iso: destination.iso,
-    zoneChapka: +destination.chapka,
+    country: destinations.map(d => d.iso).join(','),
+    iso: destinations.map(d => d.iso).join(','),
+    zoneChapka: +destinations[0]?.chapka || 0,
     image: voyage.image.src || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
     currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
     alreadyPaid: 0,

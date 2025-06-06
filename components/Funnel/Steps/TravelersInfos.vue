@@ -8,7 +8,6 @@
   >
     <v-form
       ref="formInfos"
-      v-model="model"
     >
       <v-row>
         <v-col cols="12">
@@ -134,7 +133,8 @@ const ageValidation = computed(() => {
   return {
     isValid: children.length === dealNbChildren.value
       // && teenagers.length === dealNbTeenagers.value
-      && adults.length === dealNbAdults.value,
+      && adults.length === dealNbAdults.value
+      && adults.length > 0,
     childrenCount: children.length,
     // teenagersCount: teenagers.length,
     adultsCount: adults.length,
@@ -150,8 +150,10 @@ const allFieldsFilled = computed(() => {
 
 // Update watcher to check both validations
 watch([ageValidation, allFieldsFilled], ([ageValid, fieldsFilled]) => {
+  console.log('ageValid', ageValid)
+  console.log('fieldsFilled', fieldsFilled)
   model.value = ageValid.isValid && fieldsFilled
-})
+}, { immediate: true })
 
 // Data Initialization
 const initializeTravelersData = () => {

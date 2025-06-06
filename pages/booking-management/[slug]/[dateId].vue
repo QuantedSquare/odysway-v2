@@ -26,11 +26,30 @@
           <v-card-title>Détails de la date</v-card-title>
           <v-card-text>
             <v-form @submit.prevent="onSave">
-              <v-switch
-                v-model="form.published"
-                color="green-light"
-                label="Publié"
-              />
+              <v-row class="d-flex align-center justify-space-between">
+                <v-col cols="6">
+                  <v-switch
+                    v-model="form.published"
+                    color="green-light"
+                    label="Publiée"
+                  />
+                </v-col>
+                <v-col
+                  cols="12"
+                  md="6"
+                  class="d-flex align-center"
+                >
+                  <div class="d-flex flex-column align-start justify-center text-caption">
+                    <v-switch
+                      v-model="form.is_indiv_travel"
+                      color="green-light"
+                      label="Voyage Individuel"
+                    />
+
+                    <!-- Les voyages individuels ne sont pas publiés par défaut -->
+                  </div>
+                </v-col>
+              </v-row>
               <v-text-field
                 v-model="form.travel_slug"
                 label="Slug du voyage"
@@ -515,18 +534,25 @@
       </h2>
       <v-col cols="12">
         <v-chip
-          v-if="form.published"
+          v-if="form.published && !form.is_indiv_travel"
           color="green-light"
           class="pb-1"
         >
           Publié
         </v-chip>
         <v-chip
-          v-else
+          v-else-if="!form.published && !form.is_indiv_travel"
           color="red"
           class="pb-1"
         >
           Non publié
+        </v-chip>
+        <v-chip
+          v-else-if="form.is_indiv_travel"
+          color="blue"
+          class="pb-1"
+        >
+          Voyage Individuel, la date n'apparaîtra pas sur le site
         </v-chip>
       </v-col>
       <v-col

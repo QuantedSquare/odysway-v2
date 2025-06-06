@@ -2,19 +2,22 @@ import { stripeCLI } from '@/server/utils/stripeCLI'
 
 export default defineEventHandler(async (event) => {
   const body = await readRawBody(event, false)
-  console.log('Body from webhook', body)
+  console.log('Body from webhook in transfer_completed.js', body)
 
   const stripeSignature = getHeader(event, 'stripe-signature')
-  console.log('stripeSignature', stripeSignature)
+  console.log('stripeSignature in transfer_completed.js', stripeSignature)
 
   if (!stripeSignature) {
-    return
+    throw createError({
+      statusCode: 400,
+      message: 'No stripe signature found',
+    })
   }
 
   let stripeEvent
   try {
     stripeEvent = stripeCLI.webhooks.constructEvent(
-      body, stripeSignature, process.env.STRIPE_WEBHOOK_SIGNATURE,
+      body, stripeSignature, process.env.STRIPE_WEBHOOK_TRANSFER_SIGNATURE,
     )
     console.log('=======stripeEvent=========', stripeEvent)
   }
@@ -22,7 +25,7 @@ export default defineEventHandler(async (event) => {
     console.log('Error stripeEvent', err)
     throw createError({
       statusCode: 400,
-      message: 'Error stripeEvent',
+      message: 'Error stripeEvent in transfer_completed.js',
     })
   }
 
@@ -31,10 +34,13 @@ export default defineEventHandler(async (event) => {
     console.log('!!!!! payment type !!!!!', stripeEvent.data.object.charges.data)
     console.log('???? CHECK type ????', stripeEvent.data.object.charges.data[0].payment_method_details.type)
     if (stripeEvent.data.object.charges.data[0].payment_method_details.type !== 'customer_balance') {
+      console.log('!!!!!! payment type is not a bank transfer !!!!!')
       setResponseStatus(event, 200)
     }
     else {
+      console.log('========== payment type is a bank transfer =========')
       try {
+        console.log('========== handlePaymentSession with this session object =========', stripeEvent.data.object)
         stripe.handlePaymentSession(stripeEvent.data.object, 'Virement')
         setResponseStatus(event, 200)
       }

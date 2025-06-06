@@ -184,15 +184,18 @@ const saveToLocalStorage = () => {
     firstname: firstName.value,
     lastname: lastName.value,
     email: email.value,
+    phone: phone.value,
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
 const loadFromLocalStorage = () => {
   const storedData = JSON.parse(localStorage.getItem('detailsData'))
+  console.log('storedData', storedData)
   if (storedData) {
     firstName.value = storedData.firstname
     lastName.value = storedData.lastname
     email.value = storedData.email
+    phone.value = storedData.phone
   }
 }
 onMounted(() => {

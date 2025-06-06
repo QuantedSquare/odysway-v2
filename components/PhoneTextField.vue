@@ -6,7 +6,7 @@
         :items="phonesSelect"
         :rules="[rules.name]"
         hide-details
-        @change="changeAttr('phone'); saveToLocalStorage(phoneCode)"
+        @change="changeAttr('phone')"
       >
         <template #item="{ props }">
           <v-list-item
@@ -31,7 +31,7 @@
         :label="'Téléphone *'"
         placeholder="Ex: 6 00 00 00 01"
         :rules="[rules.phone]"
-        @change="changeAttr('phone'); saveToLocalStorage()"
+        @change="changeAttr('phone')"
       />
     </v-col>
   </v-row>
@@ -125,33 +125,6 @@ const phonesSelect = [
     },
   },
 ]
-const loadFromLocalStorage = () => {
-  if (model.value.length > 0) {
-    const { code, number } = extractPhoneDetails(model.value, phonesSelect)
-    phoneCode.value = code
-    phoneNumber.value = number
-  }
-  const storedData = JSON.parse(localStorage.getItem('detailsData'))
-  if (storedData) {
-    console.log('storedData', storedData)
-    phoneCode.value = storedData.phoneCode
-    phoneNumber.value = storedData.phoneNumber
-    model.value = `${phoneCode.value}${phoneNumber.value}`
-    console.log('model', model.value, phoneCode.value, phoneNumber.value)
-  }
-}
-const saveToLocalStorage = () => {
-  console.log('saveToLocalStorage', phoneCode.value, phoneNumber.value)
-  const dataToStore = {
-    phoneCode: phoneCode.value,
-    phoneNumber: phoneNumber.value,
-  }
-  localStorage.setItem('detailsData', JSON.stringify(dataToStore))
-}
-
-onMounted(() => {
-  loadFromLocalStorage()
-})
 const extractPhoneDetails = (fullPhone, phonesList) => {
   const foundCode = phonesList.find(({ title }) =>
     fullPhone.startsWith(title),
@@ -169,8 +142,13 @@ const extractPhoneDetails = (fullPhone, phonesList) => {
     number: fullPhone,
   }
 }
-watch(phoneCode, () => {
-  saveToLocalStorage()
+watchEffect(() => {
+  if (model.value) {
+    console.log('model', model.value)
+    const { code, number } = extractPhoneDetails(model.value, phonesSelect)
+    phoneCode.value = code
+    phoneNumber.value = number
+  }
 })
 
 const changeAttr = (dataAttribute) => {

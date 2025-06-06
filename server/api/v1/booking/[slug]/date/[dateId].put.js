@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   // Only allow editable fields
   const updateFields = {}
   const allowed = [
-    'published', 'displayed_status', 'departure_date', 'return_date',
+    'published', 'is_indiv_travel', 'displayed_status', 'departure_date', 'return_date',
     'max_travelers', 'min_travelers', 'booked_seat', 'include_flight',
     'flight_price', 'badges', 'starting_price',
     'early_bird', 'last_minute',

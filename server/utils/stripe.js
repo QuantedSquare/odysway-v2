@@ -25,14 +25,14 @@ const createCheckoutSession = async (order) => {
 
   function calculatDepositeValue(data) {
     const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
-    console.log('deal test calculate', +data.value, (data.flightPrice ?? 0) * data.nbTravelers, ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers))
-    console.log('baseToCalculateDepositValue', baseToCalculateDepositValue)
+    // console.log('deal test calculate', +data.value, (data.flightPrice ?? 0) * data.nbTravelers, ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers))
+    // console.log('baseToCalculateDepositValue', baseToCalculateDepositValue)
     return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0) * data.nbTravelers)
   }
   const gotEarlyBird = deal.gotEarlybird === 'Oui'
   const gotLastMinute = deal.gotLastMinute === 'Oui'
   const baseTravelerPrice = +deal.basePricePerTraveler + (deal.flightPrice > 0 ? +deal.flightPrice : 0) - (gotEarlyBird ? +deal.promoEarlybird : 0) - (gotLastMinute ? +deal.promoLastMinute : 0)
-  console.log('baseTravelerPrice', baseTravelerPrice, deal.basePricePerTraveler, deal.flightPrice, deal.promoEarlybird, deal.promoLastMinute)
+  // console.log('baseTravelerPrice', baseTravelerPrice, deal.basePricePerTraveler, deal.flightPrice, deal.promoEarlybird, deal.promoLastMinute)
   if (order.paymentType === 'deposit') {
     const depositValue = calculatDepositeValue(deal)
     lineItems.push(
@@ -387,12 +387,6 @@ const handlePaymentSession = async (session, paymentType) => {
     currentStep: totalPaid >= +deal.value
       ? 'Solde réglé'
       : 'Acompte réglé',
-
-    // { customFieldId: 21, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 'Paiement OK' : 'https://odysway.com/paiement?orderId=' + order.dealId + '&amount=' + (Math.round(order.flatRestToPay)) + '&isSold=true' }, // Lien paiement
-    // { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
-    // { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
-    // { customFieldId: 28, fieldValue: restTravelerToPay() },
-    // { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler } // Solde restant par Voyageur à régler
 
   }
   if (totalPaid >= +deal.value) {
