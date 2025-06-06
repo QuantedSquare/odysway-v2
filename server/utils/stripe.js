@@ -391,7 +391,7 @@ const handlePaymentSession = async (session, paymentType) => {
       ].includes(item.description)
     })
     console.log('InssuranceItem', inssuranceItem)
-    chapka.notify(session, deal.insurance, deal)
+    chapka.notify(session, inssuranceItem, deal)
     console.log('Chapka notify')
   }
 
