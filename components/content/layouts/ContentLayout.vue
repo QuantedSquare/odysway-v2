@@ -12,51 +12,61 @@
     </SearchHeroSection>
 
     <!-- Categories  -->
-    <HorizontalCarousel
+    <ColorContainer
       v-if="categories"
-      :show-buttons="categories.length > 4"
+      color=""
     >
-      <template #title>
-        <h3 class="custom-title">
-          Toutes nos thématiques
-        </h3>
-      </template>
-      <template #carousel-item>
-        <ThematiqueColCard
-          v-for="category in categories"
-          :key="category.id"
-          :slug="category.slug"
-          :image="category.image.src"
-          :title="category.title"
-          type="thematiques"
-          :description="category.discoveryTitle"
-        />
-      </template>
-    </HorizontalCarousel>
+      <HorizontalCarousel
+
+        :show-buttons="categories.length > 4"
+      >
+        <template #title>
+          <h3 class="custom-title">
+            Toutes nos thématiques
+          </h3>
+        </template>
+        <template #carousel-item>
+          <ThematiqueColCard
+            v-for="category in categories"
+            :key="category.id"
+            :slug="category.slug"
+            :image="category.image.src"
+            :title="category.title"
+            type="thematiques"
+            :description="category.discoveryTitle"
+          />
+        </template>
+      </HorizontalCarousel>
+    </ColorContainer>
     <!------------------>
 
     <!-- Experiences  -->
-    <HorizontalCarousel
+    <ColorContainer
       v-if="experiences"
-      :show-buttons="experiences.length > 4"
+      color=""
     >
-      <template #title>
-        <h3 class="custom-title">
-          Toutes nos expériences
-        </h3>
-      </template>
-      <template #carousel-item>
-        <ThematiqueColCard
-          v-for="experience in experiences"
-          :key="experience.id"
-          :slug="experience.slug"
-          :image="experience.image.src"
-          :title="experience.title"
-          type="experiences"
-          :description="experience.discoveryTitle"
-        />
-      </template>
-    </HorizontalCarousel>
+      <HorizontalCarousel
+
+        :show-buttons="experiences.length > 4"
+      >
+        <template #title>
+          <h3 class="custom-title">
+            Toutes nos expériences
+          </h3>
+        </template>
+        <template #carousel-item>
+          <ThematiqueColCard
+            v-for="experience in experiences"
+            :key="experience.id"
+            :slug="experience.slug"
+            :image="experience.image.src"
+            :title="experience.title"
+            type="experiences"
+            :description="experience.discoveryTitle"
+          />
+        </template>
+      </HorizontalCarousel>
+    </ColorContainer>
     <!------------------>
 
     <v-divider

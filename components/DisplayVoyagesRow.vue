@@ -44,7 +44,7 @@
   <!-- Display search result in function of selected experience/category  -->
   <v-row
     v-if="voyages && voyages.length > 0 && (selectedCategory || selectedExperience || isSearch)"
-    class="position-relative px-md-12"
+    class="position-relative px-0 px-md-8 mx-0"
   >
     <TransitionGroup
       name="list"
@@ -67,7 +67,7 @@
   </v-row>
   <v-row
     v-if="voyages && voyages.length === 0 && selectedCategory"
-    class="px-md-12"
+    class="position-relative px-0 px-md-8 mx-0"
   >
     <v-col
       cols="12"
@@ -80,7 +80,7 @@
   </v-row>
   <v-row
     v-if="voyages && voyages.length === 0 && selectedExperience"
-    class="px-md-12"
+    class="position-relative px-0 px-md-8 mx-0"
   >
     <v-col
       cols="12"
@@ -93,7 +93,7 @@
   </v-row>
   <v-row
     v-if="voyages && voyages.length === 0 && isSearch"
-    class="px-md-12"
+    class="position-relative px-0 px-md-8 mx-0"
   >
     <v-col
       cols="12"
