@@ -130,12 +130,14 @@ const loadingStripeSession = ref(false)
 
 const stripePay = async () => {
   loadingStripeSession.value = true
+  // Defined as metadata after payment is done
   const dataForStripeSession = {
     dealId: dealId.value,
     paymentType: route.query.type,
     contact: deal.value.contact,
     currentUrl: route.fullPath,
     insuranceImg: props.page.assurance_img,
+    countries: deal.value.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {
