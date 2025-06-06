@@ -2,6 +2,7 @@ import determinePaymentOptions from '@/utils/determinePaymentOptions'
 
 export function useStepperDeal(componentStep) {
   const deal = ref(null)
+
   const dealId = ref(null)
   const loadingDeal = ref(false)
   const route = useRoute()
@@ -38,6 +39,13 @@ export function useStepperDeal(componentStep) {
         booked_id: addedBookedDate.id,
         deal_id: addedBookedDate.deal_id,
       }))
+
+      const paiementLink = `https://odysway.com/checkout?type=${route.query.type}&booked_id=${addedBookedDate.id}&step=1`
+      const bodyWithPaymentLink = {
+        dealId: addedBookedDate.deal_id,
+        paiementLink,
+      }
+      updateDeal(bodyWithPaymentLink) // Update the deal with a paiementLink
 
       // Update both parameters at once to avoid race conditions
       await addMultipleParams({

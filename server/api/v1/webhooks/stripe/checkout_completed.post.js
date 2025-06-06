@@ -2,10 +2,10 @@ import { stripeCLI } from '@/server/utils/stripeCLI'
 
 export default defineEventHandler(async (event) => {
   const body = await readRawBody(event, 'utf8')
-  console.log('Body from webhook', body)
+  console.log('Body from webhook in checkout_completed.post.js', body)
 
   const stripeSignature = getHeader(event, 'stripe-signature')
-  console.log('stripeSignature', stripeSignature)
+  console.log('stripeSignature in checkout_completed.post.js', stripeSignature)
 
   if (!stripeSignature) {
     throw createError({

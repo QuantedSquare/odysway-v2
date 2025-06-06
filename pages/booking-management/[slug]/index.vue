@@ -40,10 +40,18 @@
             >
               <td>
                 <v-chip
-                  :color="item.published ? 'green-light' : 'red'"
+                  v-if="!item.is_indiv_travel"
+                  :color="item.published ? 'green-light' : item.is_indiv_travel ? 'blue' : 'red'"
                   class="pb-1"
                 >
-                  {{ item.published ? 'Publiée' : 'Non publiée' }}
+                  {{ item.published ? 'Publiée' : item.is_indiv_travel ? 'Voyage Individuel' : 'Non publiée' }}
+                </v-chip>
+                <v-chip
+                  v-else-if="item.is_indiv_travel"
+                  color="blue"
+                  class="pb-1"
+                >
+                  Voyage Individuel
                 </v-chip>
               </td>
               <td>{{ dayjs(item.departure_date).format('DD/MM/YYYY') }}</td>

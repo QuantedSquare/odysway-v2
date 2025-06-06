@@ -13,6 +13,11 @@
                 color="green-light"
                 label="Publié"
               />
+              <v-switch
+                v-model="form.is_indiv_travel"
+                color="green-light"
+                label="Voyage Individuel"
+              />
               <v-autocomplete
                 v-model="form.travel_slug"
                 :items="travelesList"
@@ -186,6 +191,7 @@ const form = ref({
   index: 0,
   travel_slug: slugFromQuery || '',
   published: false,
+  is_indiv_travel: false,
   displayed_status: 'soon_confirmed',
   departure_date: dayjs().format('YYYY-MM-DD'),
   return_date: dayjs().add(1, 'day').format('YYYY-MM-DD'),
@@ -264,6 +270,12 @@ const onSave = async () => {
 const onCancel = () => {
   router.back()
 }
+watch(form.value, (newVal) => {
+  console.log('newVal', newVal.is_indiv_travel)
+  if (newVal.is_indiv_travel) {
+    form.value.published = false
+  }
+})
 
 onMounted(fetchTravels)
 if (slugFromQuery) onTravelSelect(slugFromQuery)
