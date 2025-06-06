@@ -106,7 +106,7 @@ const quote = async (body) => {
 const notify = (stripeSession, insuranceItem, dealCustomFields) => {
   const order = stripeSession.metadata
   const isDev = process.env.NODE_ENV === 'development'
-  const insuranceType = insuranceItem.description === 'Assurance multirisques' ? 'MR' : 'AN'
+  const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
   const data = {
     emetteur: isDev ? 'ODYSWAY-TEST' : 'ODYSWAY',
@@ -123,7 +123,7 @@ const notify = (stripeSession, insuranceItem, dealCustomFields) => {
     devise: 'EUR',
   }
 
-  const indivPrice = (+dealCustomFields.pricePerTraveler) - (insuranceItem.price.unit_amount / 100)
+  const indivPrice = (+dealCustomFields.pricePerTraveler)
 
   for (let index = 1; index < 9; index++) {
     const traveler = dealCustomFields[`traveler${index}`]

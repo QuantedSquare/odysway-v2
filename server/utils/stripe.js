@@ -347,6 +347,51 @@ const handlePaymentSession = async (session, paymentType) => {
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
   const deal = { ...reponse.deal, ...customFields }
 
+  const calculatePricePerPerson = (data) => {
+    const {
+      basePricePerTraveler,
+      nbTravelers,
+      flightPrice = 0,
+      extensionPrice = 0,
+      promoChildren = 0,
+      nbChildren = 0,
+      promoTeen = 0,
+      nbTeen = 0,
+      earlybirdAvailable = 'Non',
+      promoEarlybird = 0,
+      lastMinuteAvailable = 'Non',
+      promoLastMinute = 0,
+      promoValue = 0,
+    } = data
+
+    let price = basePricePerTraveler * nbTravelers
+
+    price += flightPrice * nbTravelers
+    price += extensionPrice * nbTravelers
+
+    if (promoChildren && nbChildren) {
+      price -= promoChildren * nbChildren
+    }
+
+    if (promoTeen && nbTeen) {
+      price -= promoTeen * nbTeen
+    }
+
+    if (earlybirdAvailable === 'Oui' && promoEarlybird) {
+      price -= earlybirdAvailable * promoEarlybird * nbTravelers
+    }
+
+    if (lastMinuteAvailable === 'Oui' && promoLastMinute) {
+      price -= lastMinuteAvailable * promoLastMinute * nbTravelers
+    }
+
+    if (promoValue) {
+      price -= promoValue * nbTravelers
+    }
+
+    return Math.ceil(price / nbTravelers)
+  }
+
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
     .from('booked_dates')
@@ -391,6 +436,7 @@ const handlePaymentSession = async (session, paymentType) => {
         'Assurance Assistance',
       ].includes(item.description)
     })
+    Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
     console.log('InssuranceItem', inssuranceItem)
     chapka.notify(session, inssuranceItem, deal)
     console.log('Chapka notify')
