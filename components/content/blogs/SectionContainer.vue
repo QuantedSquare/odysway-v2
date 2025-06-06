@@ -4,7 +4,7 @@
       <v-col
         cols="12"
         lg="8"
-        class="content-class"
+        class="content-class px-0 px-md-3"
       >
         <slot name="content" />
       </v-col>

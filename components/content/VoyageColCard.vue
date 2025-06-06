@@ -31,7 +31,7 @@ const voyage = ref(null)
 const props = defineProps({
   voyageSlug: {
     type: String,
-    required: true,
+    // required: true,
   },
 })
 

@@ -37,7 +37,7 @@
             cols="12"
             md="4"
           >
-            <CtaColCard />
+            <CtaCardSheet />
           </v-col>
         </v-row>
       </v-container>
