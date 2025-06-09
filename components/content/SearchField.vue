@@ -151,7 +151,6 @@
 </template>
 
 <script setup>
-import dayjs from 'dayjs'
 import { ref, computed } from 'vue'
 import { mdiEarth, mdiMapMarker, mdiThumbUpOutline } from '@mdi/js'
 import _ from 'lodash'
@@ -340,7 +339,6 @@ function searchFn() {
 
   if (destinationChoice.value) {
     const value = destinations.value.find(d => d.titre === destinationChoice.value).slug
-    console.log('value', value)
     query.destination = value
   }
   if (travelTypeChoice.value) {
@@ -351,7 +349,6 @@ function searchFn() {
   }
 
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
-  console.log('route.path', route.path)
   router.push({
     path: '/search',
     query,
@@ -361,7 +358,6 @@ function searchFn() {
 function selectDestination(item) {
   destinationChoice.value = item.titre
   search.value = item.slug
-  console.log('item', item.slug)
   setTimeout(() => {
     const input = document.querySelector(`#${destinationId}`)
     if (input) input.blur()

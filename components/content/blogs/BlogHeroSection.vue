@@ -124,7 +124,6 @@ defineProps({
 const { smAndDown } = useDisplay()
 const img = useImage()
 const page = inject('page')
-console.log('page', page)
 </script>
 
 <style scoped>
