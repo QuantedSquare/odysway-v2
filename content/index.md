@@ -222,13 +222,13 @@ au cœur du voyage
 ::
 
 ::color-container{color="white"}
-    :::home-review-container
-    #title
-    [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
-
-    #cta
-    Afficher plus de témoignages
-    :::
+  :::home-review-container
+  #title
+  [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
+  
+  #cta
+  Afficher plus de témoignages
+  :::
 ::
 
 ::color-container{color="grey-light-2"}

@@ -3,7 +3,8 @@
   "title": "L’appel des Açores entre volcans, dauphins, baleines et cachalots ",
   "destinations": [
     {
-      "name": "Portugal"
+      "name": "Portugal",
+      "slug": "portugal"
     }
   ],
   "groupeAvailable": true,
