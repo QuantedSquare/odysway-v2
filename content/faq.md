@@ -77,7 +77,7 @@ schemaOrg:
   Foire aux questions
   :::
 #faq
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
   Odysway est-elle une agence de voyage ?
   
@@ -85,7 +85,7 @@ schemaOrg:
 Odysway est une agence de voyage certifiée et immatriculée auprès d'Atout France, et dispose d'une garantie financière APST, ainsi qu'une d'une assurance professionelle. Avec Odysway, voyagez les yeux fermés ! Les équipes Odysway sont très réactives et vous accompagnent avant votre voyage, sur place et au retour de votre voyage.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
   En quoi Odysway se différencie des autres agences de voyage ?
   
@@ -93,7 +93,7 @@ Odysway est une agence de voyage certifiée et immatriculée auprès d'Atout Fra
 Chez Odysway, nous pensons que la vie est rythmée par les expériences que nous vivons ! Des expériences qui nous marquent, et qui nous laissent des souvenirs gravés à jamais. C'est pourquoi nous avons décidé de créer la première agence qui propose des séjours en immersion, et créés sur place par les équipes d'Odysway, afin de proposer à nos voyageurs une nouvelle façon de voyager : plus authentique, hors des sentiers battus et respectueuse de l'environnement et des populations locales.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
   Quelle est la démarche responsable d'Odysway ?
   
@@ -101,7 +101,7 @@ Chez Odysway, nous pensons que la vie est rythmée par les expériences que nous
 Vous pouvez consulter notre page démarche responsable pour plus d'informations.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
   Avec qui vais-je voyager ?
   
@@ -113,7 +113,7 @@ Chez Odysway, nous proposons deux options pour voyager :
     2. Vous choisissez de partir en groupe (maximum 8 voyageurs) sur des dates prédéfinies par Odysway, pour allier rencontres avec d'autres voyageurs et prix réduits.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
   Quelles sont les disponibilités des voyages ?
   
@@ -121,7 +121,7 @@ Chez Odysway, nous proposons deux options pour voyager :
 Pour les voyages individuels, vous choisissez vos propres dates. Un de nos conseillers vous répondra en vous indiquant le tarif et la disponibilité sur vos dates. Pour les voyages de groupes, les dates sont prédéfinies (généralement une date par mois), et vous pouvez réserver directement en ligne.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
   Que se passe t-il si il n'y a pas de suffisamment de participants pour un départ groupé ?
   
@@ -129,7 +129,7 @@ Pour les voyages individuels, vous choisissez vos propres dates. Un de nos conse
 Nous pouvons exceptionnellement être contraints d'annuler un départ si le nombre minimum de participants n'est pas atteint. Cette décision vous sera communiquée au plus tard 30 jours avant le début du voyage pour des voyages dont la durée dépasse 6 jours, ou 15 jours avant pour des voyages de 6 jours maximum. Une solution de remplacement pourra vous être proposée.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=false}
   #question
   Les voyages incluent-ils les billets de train ou d'avion pour se rendre sur place ?
   
@@ -137,7 +137,7 @@ Nous pouvons exceptionnellement être contraints d'annuler un départ si le nomb
 Sauf mention contraire, Odysway n'inclut pas les vols internationaux dans les voyages proposés. Odysway pourra, sur demande des voyageurs, acheter en leur nom des billets de train ou d'avion vers et depuis la destination du voyage. En ce qui concerne les départs groupés, les vols sont inclus dans le prix du voyage, pour les séjours hors France.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
 Comment réserver un voyage avec Odysway ?
   
@@ -145,7 +145,7 @@ Comment réserver un voyage avec Odysway ?
 Après avoir choisi le voyage qui vous intéresse, cliquez sur le bouton « Demander un devis » ou « s'inscrire pour ce voyage » pour un voyage en groupe. Vous pourrez alors choisir vos dates et procéder au règlement de l'acompte, qui confirmera votre réservation pour le voyage. Un conseiller voyage Odysway prendra alors contact avec vous par téléphone pour vous aider à préparer votre voyage.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=false}
   #question
 Le paiement en ligne est-il sécurisé ?
   
@@ -153,7 +153,7 @@ Le paiement en ligne est-il sécurisé ?
 Le paiement en ligne par carte bancaire ou par virement bancaire est entièrement sécurisé. Vous recevrez une confirmation de paiement dans les minutes qui suivent votre réservation.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=false}
   #question
 Puis-je annuler la réservation de mon voyage ?
   
@@ -161,7 +161,7 @@ Puis-je annuler la réservation de mon voyage ?
 Si vous vous trouvez dans l'obligation d'annuler votre voyage, vous devrez en informer Odysway le plus tôt possible par mail. Les frais d'annulation sont : à plus de 30 jours du départ : remboursement intégral, entre 30 jours et 15 jours avant le départ : 50% du montant du voyage, moins de 15 jours avant le départ : 100% du montant du voyage.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
 Comment Odysway m'accompagne sur place ?
   
@@ -169,7 +169,7 @@ Comment Odysway m'accompagne sur place ?
 Odysway a référencé et signé des partenariats avec des agences locales. Sélectionnées pour leur savoir-faire, leur expérience et sérieux, elles vous accompagnent sur place. Odysway reste à votre écoute pendant toute la durée de votre voyage par mail et téléphone (via Whatsapp à l'étranger), 24h/24 et 7j/7.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=false}
   #question
 Que dois-je emporter avec moi ?
   
@@ -177,7 +177,7 @@ Que dois-je emporter avec moi ?
 Vous retrouverez l'ensemble des informations pratiques relatives à votre expérience dans la FAQ du voyage, et de façon plus détaillée et complète dans votre Contrat voyageur qui vous sera envoyé dans les 24h suivant votre réservation.
   :::
 
-  :::question-panel
+  :::question-panel{:hideOnLayout=true}
   #question
 Suis-je assuré pour mon voyage avec Odysway ?
   

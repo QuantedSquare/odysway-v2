@@ -300,6 +300,7 @@ const createCheckoutSession = async (order) => {
       payment_method_types: [
         'customer_balance',
         'card',
+        'klarna',
       ],
       payment_method_options: {
         customer_balance: {

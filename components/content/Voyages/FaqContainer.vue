@@ -23,7 +23,7 @@
         <h2 class="text-center text-white my-6">
           <TitleContainer>
             <template #title>
-              Questions fréquentes
+              <slot name="section-title" />
             </template>
           </TitleContainer>
         </h2>
@@ -35,25 +35,13 @@
             <v-col
               class="max-height-with-overflow pt-2 pt-md-3"
             >
-              <template
-                v-for="faq in faqDefault.content"
-                :key="faq"
-              >
-                <QuestionPanel>
-                  <template #question>
-                    {{ faq.question }}
-                  </template>
-                  <template #answer>
-                    {{ faq.answer }}
-                  </template>
-                </QuestionPanel>
-              </template>
+              <slot name="faq" />
             </v-col>
           </v-row>
           <v-row class="mb-10">
             <v-col>
               <div
-                v-if="!route.path.includes('faq')"
+                v-if="route.path !== '/faq'"
                 class="text-center text-h5 text-white font-weight-bold"
               >
                 <span> D'autres questions? </span>
@@ -99,9 +87,9 @@ defineProps({
 
 const route = useRoute()
 
-const { data: faqDefault } = await useAsyncData('faq-default', () => {
-  return queryCollection('faqDefault').first()
-})
+// const { data: faqDefault } = await useAsyncData('faq-default', () => {
+//   return queryCollection('faqDefault').first()
+// })
 </script>
 
 <style scoped>

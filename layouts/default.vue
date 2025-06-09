@@ -17,9 +17,11 @@
       <WhatsAppBtn />
     </div>
     <!-- FAQ Section -->
-    <FaqContainer />
+    <ContentRenderer
+      v-if="faqPage"
+      :value="faqPage"
+    />
     <!-- End FAQ Section -->
-
     <!-- Info Section -->
     <v-container
       :fluid="width > 600"
@@ -52,6 +54,9 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const drawer = ref(false)
+const { data: faqPage } = useAsyncData('faq-section', () => {
+  return queryCollection('content').path('/faq').first()
+})
 </script>
 
 <style scoped>

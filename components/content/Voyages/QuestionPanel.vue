@@ -1,5 +1,6 @@
 <template>
   <v-expansion-panels
+    v-show="route.path === '/faq' || !hideOnLayout"
     eager
     variant="accordion"
   >
@@ -56,7 +57,8 @@
 import { mdiMinus, mdiPlus } from '@mdi/js'
 import { parseMarkdown } from '@nuxtjs/mdc/runtime'
 
-const { item } = defineProps({
+const route = useRoute()
+const { item, displayOnLayout } = defineProps({
   questionColor: {
     type: String,
     default: 'primary',
@@ -68,6 +70,10 @@ const { item } = defineProps({
   item: {
     type: Object,
     default: null,
+  },
+  hideOnLayout: {
+    type: Boolean,
+    default: false,
   },
 })
 const question = ref(null)

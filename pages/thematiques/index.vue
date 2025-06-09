@@ -18,7 +18,7 @@ const { data: voyages } = useAsyncData('voyages', () => {
 })
 
 const categoriesWithVoyages = computed(() => {
-  if (!categories.value || voyages.value.length === 0) return []
+  if (!categories.value || voyages.value?.length === 0) return []
   return categories.value?.map(category => ({
     ...category,
     voyages: voyages.value?.filter(voyage =>
