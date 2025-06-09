@@ -140,19 +140,18 @@ const notify = (stripeSession, insuranceItem, dealCustomFields) => {
   console.log('send data to chapka', data)
 
   try {
-    // const res = await axios.post(
-    //   'https://api.chapka.fr/notify/?request=create',
-    //   JSON.stringify({
-    //     message: JSON.stringify(data),
-    //     mode: 'json',
-    //   }),
-    //   {
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   },
-    // )
-    // console.log('Notify chapka', res.status)
+    axios.post(
+      'https://api.chapka.fr/notify/?request=create',
+      JSON.stringify({
+        message: JSON.stringify(data),
+        mode: 'json',
+      }),
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    )
   }
   catch (err) {
     console.log('Err notify chapka', err)

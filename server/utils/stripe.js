@@ -425,7 +425,7 @@ const handlePaymentSession = async (session, paymentType) => {
   const { contact: client } = await activecampaign.getClientById(deal.contact)
   console.log('Passed client retrieving', client)
   //   // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+  if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
     const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
     session.lineItems = lineItems
     console.log('LineItems', lineItems)
