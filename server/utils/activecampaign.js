@@ -385,10 +385,10 @@ const recalculatTotalValues = async (dealId) => {
   // We need to recalculte the total value of the deal and the rest to pay.
   const customFields = await getDealCustomFields(dealId)
   const { deal } = await getDealById(dealId)
-  const basePrice = customFields.basePricePerTraveler
+  const basePrice = customFields.basePricePerTraveler || 0
 
-  const nbTravelers = customFields.nbTravelers
-  const nbChildren = customFields.nbChildren
+  const nbTravelers = customFields.nbTravelers || 0
+  const nbChildren = customFields.nbChildren || 0
   // const nbTeens = customFields.nbTeen
 
   const promoValue = customFields.promoCode ? customFields.promoValue : 0

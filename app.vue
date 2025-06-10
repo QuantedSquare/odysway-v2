@@ -6,6 +6,8 @@
 </template>
 
 <script setup>
+const { initialize } = useHotjar()
+
 useHead({
   link: [
     {
@@ -37,6 +39,7 @@ onMounted(() => {
 
   if (isConsent) {
     trackPixel('track', 'PageView')
+    initialize()
   }
 })
 </script>
