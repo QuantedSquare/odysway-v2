@@ -379,6 +379,7 @@ const optionNotification = (session) => {
 const recalculatTotalValues = async (dealId) => {
   // We need to recalculte the total value of the deal and the rest to pay.
   const customFields = await getDealCustomFields(dealId)
+  const { deal } = await getDealById(dealId)
   const basePrice = customFields.basePricePerTraveler
 
   const nbTravelers = customFields.nbTravelers
@@ -421,14 +422,21 @@ const recalculatTotalValues = async (dealId) => {
 
   const restToPay = value - customFields.alreadyPaid
 
-  // console.log('===========rest to pay', restToPay, '========')
-
-  const formatedDeal = transformDealForAPI({
-    value,
-    restToPay,
-  })
-  console.log('===========formatedDeal in activecampaign.js===========', formatedDeal)
-  return await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
+  console.log('===========rest to pay', restToPay, '========')
+  console.log('===========customFields.restToPay', customFields.restToPay, '========')
+  console.log('===========value', value, '========')
+  console.log('===========deal.value', deal.value, '========')
+  if (restToPay !== customFields.restToPay || deal.value !== value) {
+    const formatedDeal = transformDealForAPI({
+      value,
+      restToPay,
+    })
+    console.log('===========formatedDeal in activecampaign.js, update total value===========', formatedDeal)
+    return await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)
+  }
+  else {
+    console.log('===========rest to pay and value are the same, no need to update rest to pay and value===========')
+  }
 }
 
 export default {

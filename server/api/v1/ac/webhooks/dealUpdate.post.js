@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
   try {
     // Extract deal data from request body
     const { deal } = await readBody(event)
-
+    console.log('===========deal body', deal, '========')
     // Validate input
     if (!deal || !deal.id) {
       throw createError({
@@ -38,8 +38,9 @@ export default defineEventHandler(async (event) => {
     }
 
     // Retrieve custom field data
-    const customData = await activecampaign.getCustomFieldData(deal.id)
-    const customFields = activecampaign.handleCustomFields(customData.dealCustomFieldData)
+    const reponse = await activecampaign.getDealById(deal.id)
+    const customFields = await activecampaign.getDealCustomFields(deal.id)
+    const fetchedDeal = { ...reponse.deal, ...customFields }
 
     // Retrieve deal owner
     const owner = await activecampaign.retrieveOwner(deal.id)
@@ -48,46 +49,46 @@ export default defineEventHandler(async (event) => {
     const upsertData = {
       id: deal.id,
       contact: contactData.data[0].id,
-      title: deal.title,
-      status: mapDealStatus(deal.status),
-      stage: deal.stage_title,
-      pipeline_id: deal.pipelineid,
-      total_value: formatPrice(deal.value),
-      price_per_traveler: +customFields.basePricePerTraveler / 100 || 0,
-      nb_traveler: +customFields.nbTravelers || 0,
-      nb_adults: +customFields.nbAdults || 0,
-      nb_children: +customFields.nbChildren || 0,
-      travel_type: customFields.travelType || null,
-      indiv_room: customFields.indivRoom === 'Oui',
-      rest_to_pay: +customFields.restToPay / 100 || 0,
-      total_paid: +customFields.alreadyPaid / 100 || 0,
-      margin_per_traveler: +customFields.marginPerTraveler / 100 || 0,
-      flight_margin: +customFields.flightMargin / 100 || 0,
-      total_margin: +customFields.totalMargin / 100 || 0,
-      insurance_commission: +customFields.insuranceCommissionPrice / 100 || 0,
-      insurance_choice: customFields.insurance || 'Aucune Assurance',
-      promo_code: customFields.promoCode || null,
-      insurance_price_per_traveler: +customFields.insuranceCommissionPerTraveler / 100 || 0,
-      country: customFields.country || 'Non renseigné',
-      is_couple: customFields.isCouple === 'Oui',
-      lost_reason: customFields.reasonLost || customFields.otherReasonLost || null,
-      applied_promo_per_traveler: +customFields.promoValue / 100 || 0,
-      children_promo: +customFields.promoChildren / 100 || 80,
-      // teen_promo: +customFields.promoTeen / 100 || 80,
-      rest_to_pay_per_traveler: +customFields.restToPayPerTraveler / 100 || 0,
-      iso: customFields.iso || null,
-      // max_teen_age: +customFields.maxTeenAge || 18,
-      max_children_age: +customFields.maxChildrenAge || 12,
-      flight_ticket_price_per_traveler: +customFields.flightPrice / 100 || 0,
-      departure_date: customFields.departureDate || null,
-      return_date: customFields.returnDate || null,
-      conversion_date: customFields.conversionDate || null,
+      title: fetchedDeal.title,
+      status: mapDealStatus(fetchedDeal.status),
+      stage: fetchedDeal.stage_title,
+      pipeline_id: fetchedDeal.pipelineid,
+      total_value: formatPrice(fetchedDeal.value),
+      price_per_traveler: +fetchedDeal.basePricePerTraveler / 100 || 0,
+      nb_traveler: +fetchedDeal.nbTravelers || 0,
+      nb_adults: +fetchedDeal.nbAdults || 0,
+      nb_children: +fetchedDeal.nbChildren || 0,
+      travel_type: fetchedDeal.travelType || null,
+      indiv_room: fetchedDeal.indivRoom === 'Oui',
+      rest_to_pay: +fetchedDeal.restToPay / 100 || 0,
+      total_paid: +fetchedDeal.alreadyPaid / 100 || 0,
+      margin_per_traveler: +fetchedDeal.marginPerTraveler / 100 || 0,
+      flight_margin: +fetchedDeal.flightMargin / 100 || 0,
+      total_margin: +fetchedDeal.totalMargin / 100 || 0,
+      insurance_commission: +fetchedDeal.insuranceCommissionPrice / 100 || 0,
+      insurance_choice: fetchedDeal.insurance || 'Aucune Assurance',
+      promo_code: fetchedDeal.promoCode || null,
+      insurance_price_per_traveler: +fetchedDeal.insuranceCommissionPerTraveler / 100 || 0,
+      country: fetchedDeal.country || 'Non renseigné',
+      is_couple: fetchedDeal.isCouple === 'Oui',
+      lost_reason: fetchedDeal.reasonLost || fetchedDeal.otherReasonLost || null,
+      applied_promo_per_traveler: +fetchedDeal.promoValue / 100 || 0,
+      children_promo: +fetchedDeal.promoChildren / 100 || 80,
+      // teen_promo: +fetchedDeal.promoTeen / 100 || 80,
+      rest_to_pay_per_traveler: +fetchedDeal.restToPayPerTraveler / 100 || 0,
+      iso: fetchedDeal.iso || null,
+      // max_teen_age: +fetchedDeal.maxTeenAge || 18,
+      max_children_age: +fetchedDeal.maxChildrenAge || 12,
+      flight_ticket_price_per_traveler: +fetchedDeal.flightPrice / 100 || 0,
+      departure_date: fetchedDeal.departureDate || null,
+      return_date: fetchedDeal.returnDate || null,
+      conversion_date: fetchedDeal.conversionDate || null,
       seller: owner,
-      source: customFields.source || null,
-      paiement_method: customFields.paiementMethod || null,
-      created_at: deal.create_date_iso.includes('2023-12-19')
-        ? (customFields.oldCreationDate || deal.create_date_iso)
-        : deal.create_date_iso,
+      source: fetchedDeal.source || null,
+      paiement_method: fetchedDeal.paiementMethod || null,
+      created_at: fetchedDeal.create_date_iso.includes('2023-12-19')
+        ? (fetchedDeal.oldCreationDate || fetchedDeal.create_date_iso)
+        : fetchedDeal.create_date_iso,
     }
 
     // Upsert deal data to Supabase
@@ -96,6 +97,7 @@ export default defineEventHandler(async (event) => {
       .upsert(upsertData)
       .select()
 
+    await activecampaign.recalculatTotalValues(deal.id)
     // Log any upsert errors
     if (error) {
       console.error('Supabase upsert error:', error)
