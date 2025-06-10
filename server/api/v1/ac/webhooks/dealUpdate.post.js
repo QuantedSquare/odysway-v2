@@ -20,18 +20,26 @@ export default defineEventHandler(async (event) => {
     // Extract deal data from request body
     const body = await readBody(event)
     console.log('===========body', body, '========')
-    const { deal } = body
-    console.log('===========deal body', deal, '========')
-    // Validate input
-    if (!deal || !deal.id) {
+
+    const dealId = body['deal[id]']
+    const contactId = body['deal[contactid]'] || body['contact[id]']
+    console.log('===========dealId', dealId, '========')
+    console.log('===========contactId', contactId, '========')
+    if (!dealId) {
       throw createError({
         statusCode: 400,
-        message: 'Invalid deal data',
+        message: 'Invalid deal data: missing deal id',
+      })
+    }
+    if (!contactId) {
+      throw createError({
+        statusCode: 400,
+        message: 'Invalid deal data: missing contact id',
       })
     }
 
     // Fetch and process contact information
-    const contactData = await activecampaign.upsertContactIntoSupabase(deal.contactid)
+    const contactData = await activecampaign.upsertContactIntoSupabase(contactId)
     if (!contactData) {
       throw createError({
         statusCode: 404,
@@ -40,16 +48,16 @@ export default defineEventHandler(async (event) => {
     }
 
     // Retrieve custom field data
-    const reponse = await activecampaign.getDealById(deal.id)
-    const customFields = await activecampaign.getDealCustomFields(deal.id)
+    const reponse = await activecampaign.getDealById(dealId)
+    const customFields = await activecampaign.getDealCustomFields(dealId)
     const fetchedDeal = { ...reponse.deal, ...customFields }
 
     // Retrieve deal owner
-    const owner = await activecampaign.retrieveOwner(deal.id)
+    const owner = await activecampaign.retrieveOwner(dealId)
 
     // Prepare upsert data with type safety and default values
     const upsertData = {
-      id: deal.id,
+      id: dealId,
       contact: contactData.data[0].id,
       title: fetchedDeal.title,
       status: mapDealStatus(fetchedDeal.status),
@@ -99,7 +107,7 @@ export default defineEventHandler(async (event) => {
       .upsert(upsertData)
       .select()
 
-    await activecampaign.recalculatTotalValues(deal.id)
+    await activecampaign.recalculatTotalValues(dealId)
     // Log any upsert errors
     if (error) {
       console.error('Supabase upsert error:', error)
