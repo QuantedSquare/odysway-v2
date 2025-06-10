@@ -7,6 +7,7 @@
 
 <script setup>
 const { initialize } = useHotjar()
+const config = useRuntimeConfig()
 
 useHead({
   link: [
@@ -36,10 +37,11 @@ useHead({
 
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
-
+  if (config.public.environment !== 'development') {
+    initialize()
+  }
   if (isConsent) {
     trackPixel('track', 'PageView')
-    initialize()
   }
 })
 </script>

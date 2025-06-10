@@ -131,8 +131,6 @@ export default defineNuxtConfig({
   hotjar: {
     hotjarId: 6430819,
     scriptVersion: 6,
-    // optionally you can turn on debug mode for development
-    debug: process.env.NUXT_SITE_ENV !== 'production',
   },
   image: {
     screens: {

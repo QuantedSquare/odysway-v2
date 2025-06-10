@@ -12,7 +12,7 @@
       class="header-logo-link"
     >
       <NuxtImg
-        :preload="{ fetchPriority: 'high' }"
+        preload
         format="webp"
         quality="100"
         :src="LogoOdyswayBleu"
@@ -115,13 +115,13 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
-import { useDisplay } from 'vuetify'
+// import { useDisplay } from 'vuetify'
 import LogoOdyswayBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const { header } = useAppConfig()
 
 // #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
-const { mdAndUp } = useDisplay()
+// const { mdAndUp } = useDisplay()
 // const { user, signOut, isConnected } = useUser()
 const router = useRouter()
 const model = defineModel()
