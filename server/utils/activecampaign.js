@@ -385,6 +385,8 @@ const recalculatTotalValues = async (dealId) => {
   // We need to recalculte the total value of the deal and the rest to pay.
   const customFields = await getDealCustomFields(dealId)
   const { deal } = await getDealById(dealId)
+  console.log('===========deal in recalculatTotalValues', deal, '========')
+  console.log('===========customFields in recalculatTotalValues', customFields, '========')
   const basePrice = customFields.basePricePerTraveler || 0
 
   const nbTravelers = customFields.nbTravelers || 0
@@ -403,15 +405,22 @@ const recalculatTotalValues = async (dealId) => {
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
   const alreadyPaid = customFields.alreadyPaid || 0
 
-  console.log('Base price total:', basePrice * nbTravelers)
-  console.log('Individual room total:', indivRoomPrice * nbTravelers)
-  console.log('Flight price total:', flightPrice * nbTravelers)
-  console.log('Extension price total:', extensionPrice * nbTravelers)
-  console.log('Insurance price total:', insurancePrice * nbTravelers)
-  console.log('Promo value total:', promoValue * nbTravelers)
-  console.log('Children promo total:', promoChildren * nbChildren)
-  console.log('Early bird promo:', promoEarlybird * nbTravelers)
-  console.log('Last minute promo:', promoLastMinute)
+  console.log('===========nbTravelers', nbTravelers, '========')
+  console.log('===========nbChildren', nbChildren, '========')
+  console.log('===========promoValue', promoValue, '========')
+  console.log('===========promoChildren', promoChildren, '========')
+  console.log('===========promoEarlybird', promoEarlybird, '========')
+  console.log('===========promoLastMinute', promoLastMinute, '========')
+  console.log('===========indivRoomPrice', indivRoomPrice, '========')
+  console.log('===========basePrice', basePrice, '========')
+  console.log('===========indivRoomPrice', indivRoomPrice, '========')
+  console.log('===========flightPrice', flightPrice, '========')
+  console.log('===========extensionPrice', extensionPrice, '========')
+  console.log('===========insurancePrice', insurancePrice, '========')
+  console.log('===========promoValue', promoValue, '========')
+  console.log('===========promoChildren', promoChildren, '========')
+  console.log('===========promoEarlybird', promoEarlybird, '========')
+  console.log('===========promoLastMinute', promoLastMinute, '========')
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers
