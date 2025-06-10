@@ -58,7 +58,7 @@ export default defineEventHandler(async (event) => {
     // Prepare upsert data with type safety and default values
     const upsertData = {
       id: dealId,
-      contact: contactData.data[0].id,
+      contact: contactId,
       title: fetchedDeal.title,
       status: mapDealStatus(fetchedDeal.status),
       stage: fetchedDeal.stage_title,
