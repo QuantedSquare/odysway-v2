@@ -18,7 +18,9 @@ const mapDealStatus = (status) => {
 export default defineEventHandler(async (event) => {
   try {
     // Extract deal data from request body
-    const { deal } = await readBody(event)
+    const body = await readBody(event)
+    console.log('===========body', body, '========')
+    const { deal } = body
     console.log('===========deal body', deal, '========')
     // Validate input
     if (!deal || !deal.id) {
