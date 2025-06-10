@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     'nuxt-calendly',
-    'nuxt-module-hotjar',
     'nuxt-gtag',
     'nuxt-meta-pixel',
     (_options, nuxt) => {
@@ -127,10 +126,6 @@ export default defineNuxtConfig({
         wait_for_update: 500,
       }],
     ],
-  },
-  hotjar: {
-    hotjarId: 6430819,
-    scriptVersion: 6,
   },
   image: {
     screens: {
