@@ -177,6 +177,11 @@ const upsertContact = async (contactData) => {
   return response.contact
 }
 
+const deleteDeal = async (dealId) => {
+  const response = await apiRequest(`/deals/${dealId}`, 'delete')
+  return response.deal.id
+}
+
 const upsertContactIntoSupabase = async (contactId) => {
   try {
     const acContact = await getClientById(contactId)
@@ -458,6 +463,7 @@ export default {
   updateDeal,
   addNote,
   recalculatTotalValues,
+  deleteDeal,
   // --- Notification ---
   sendSlackNotification, // OK
   optionNotification,

@@ -23,6 +23,9 @@ export default defineEventHandler(async (event) => {
 
     const dealId = body['deal[id]']
     const contactId = body['deal[contactid]'] || body['contact[id]']
+    const isoDate = body['deal[create_date_iso]']
+    const owner = body['deal[owner]']
+
     console.log('===========dealId', dealId, '========')
     console.log('===========contactId', contactId, '========')
     if (!dealId) {
@@ -52,8 +55,15 @@ export default defineEventHandler(async (event) => {
     const customFields = await activecampaign.getDealCustomFields(dealId)
     const fetchedDeal = { ...reponse.deal, ...customFields }
 
+    if (fetchedDeal.group === '3') {
+      await activecampaign.deleteDeal(dealId)
+      const { error, data } = await supabase.from('activecampaign_deals').delete().match({ id: dealId }).select()
+      console.log('Delete supabaseDeal OK', data)
+      return { success: true }
+    }
+
     // Retrieve deal owner
-    const owner = await activecampaign.retrieveOwner(dealId)
+    // const owner = await activecampaign.retrieveOwner(dealId)
 
     // Prepare upsert data with type safety and default values
     const upsertData = {
@@ -96,9 +106,9 @@ export default defineEventHandler(async (event) => {
       seller: owner,
       source: fetchedDeal.source || null,
       paiement_method: fetchedDeal.paiementMethod || null,
-      created_at: fetchedDeal.create_date_iso.includes('2023-12-19')
-        ? (fetchedDeal.oldCreationDate || fetchedDeal.create_date_iso)
-        : fetchedDeal.create_date_iso,
+      created_at: isoDate.includes('2023-12-19')
+        ? (fetchedDeal.oldCreationDate || isoDate)
+        : isoDate,
     }
 
     // Upsert deal data to Supabase
