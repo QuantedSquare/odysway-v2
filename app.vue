@@ -34,12 +34,14 @@ useHead({
   ],
 })
 
-if (config.public.environment !== 'development') {
-  useHead({
-    script: [
-      {
-        hid: 'hotjar',
-        innerHTML: `(function(h,o,t,j,a,r){
+console.log('===========config.public.environment', config.public.environment, '========')
+// if (config.public.environment !== 'development') {
+console.log('===========hotjar in app.vue', '========')
+useHead({
+  script: [
+    {
+      hid: 'hotjar',
+      innerHTML: `(function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
           h._hjSettings={hjid:6430819,hjsv:6};
           a=o.getElementsByTagName('head')[0];
@@ -47,15 +49,15 @@ if (config.public.environment !== 'development') {
           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
           a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-        type: 'text/javascript',
-        tagPosition: 'head',
-      },
-    ],
-    __dangerouslyDisableSanitizersByTagID: {
-      hotjar: ['innerHTML'],
+      type: 'text/javascript',
+      tagPosition: 'head',
     },
-  })
-}
+  ],
+  __dangerouslyDisableSanitizersByTagID: {
+    hotjar: ['innerHTML'],
+  },
+})
+// }
 
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
