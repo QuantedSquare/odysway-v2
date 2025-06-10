@@ -401,17 +401,17 @@ const recalculatTotalValues = async (dealId) => {
   const flightPrice = customFields.flightPrice || 0
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
+  const alreadyPaid = customFields.alreadyPaid || 0
 
-  // console.log('Base price total:', basePrice * nbTravelers)
-  // console.log('Individual room total:', indivRoomPrice * nbTravelers)
-  // console.log('Flight price total:', flightPrice * nbTravelers)
-  // console.log('Extension price total:', extensionPrice * nbTravelers)
-  // console.log('Insurance price total:', insurancePrice * nbTravelers)
-  // console.log('Promo value total:', promoValue * nbTravelers)
-  // console.log('Children promo total:', promoChildren * nbChildren)
-  // console.log('Teen promo total:', promoTeen * nbTeens)
-  // console.log('Early bird promo:', promoEarlybird)
-  // console.log('Last minute promo:', promoLastMinute)
+  console.log('Base price total:', basePrice * nbTravelers)
+  console.log('Individual room total:', indivRoomPrice * nbTravelers)
+  console.log('Flight price total:', flightPrice * nbTravelers)
+  console.log('Extension price total:', extensionPrice * nbTravelers)
+  console.log('Insurance price total:', insurancePrice * nbTravelers)
+  console.log('Promo value total:', promoValue * nbTravelers)
+  console.log('Children promo total:', promoChildren * nbChildren)
+  console.log('Early bird promo:', promoEarlybird * nbTravelers)
+  console.log('Last minute promo:', promoLastMinute)
 
   const value = (basePrice * nbTravelers)
     + indivRoomPrice * nbTravelers
@@ -425,7 +425,7 @@ const recalculatTotalValues = async (dealId) => {
 
   // console.log('======== totalValue:', value, '========')
 
-  const restToPay = value - customFields.alreadyPaid
+  const restToPay = value - alreadyPaid
 
   console.log('===========rest to pay', restToPay, '========')
   console.log('===========customFields.restToPay', customFields.restToPay, '========')
@@ -435,6 +435,7 @@ const recalculatTotalValues = async (dealId) => {
     const formatedDeal = transformDealForAPI({
       value,
       restToPay,
+      totalTravelPrice: value,
     })
     console.log('===========formatedDeal in activecampaign.js, update total value===========', formatedDeal)
     return await apiRequest(`/deals/${dealId}`, 'put', formatedDeal)

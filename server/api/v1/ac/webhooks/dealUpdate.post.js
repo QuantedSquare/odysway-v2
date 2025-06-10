@@ -111,26 +111,28 @@ export default defineEventHandler(async (event) => {
         : isoDate,
     }
 
-    // Upsert deal data to Supabase
-    const { error, data: upsertedData } = await supabase
-      .from('activecampaign_deals')
-      .upsert(upsertData)
-      .select()
-
     await activecampaign.recalculatTotalValues(dealId)
-    // Log any upsert errors
-    if (error) {
-      console.error('Supabase upsert error:', error)
-      throw createError({
-        statusCode: 500,
-        message: 'Failed to upsert deal data',
-      })
+    if (contactData.data && contactData.data.length > 0 && contactData.contact.email !== 'ottmann.alex@gmail.com' && contactData.contact.email !== 'test@gmail.com') {
+    // Upsert deal data to Supabase
+      const { error, data: upsertedData } = await supabase
+        .from('activecampaign_deals')
+        .upsert(upsertData)
+        .select()
+
+      // Log any upsert errors
+      if (error) {
+        console.error('Supabase upsert error:', error)
+        throw createError({
+          statusCode: 500,
+          message: 'Failed to upsert deal data',
+        })
+      }
+
+      // Log successful upsert
+      console.log('Deal upserted successfully:', upsertedData)
+
+      return { success: true }
     }
-
-    // Log successful upsert
-    console.log('Deal upserted successfully:', upsertedData)
-
-    return { success: true }
   }
   catch (err) {
     console.error('DealUpdate webhook error:', err)
