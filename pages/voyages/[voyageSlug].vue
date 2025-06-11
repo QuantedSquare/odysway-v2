@@ -1,50 +1,53 @@
 <template>
   <v-container
     fluid
-    class="pt-md-0"
+    class="py-0 my-0 px-2 px-md-4"
   >
     <template v-if="voyage && page">
-      <div class="mx-md-16">
-        <HeroVoyageSection :voyage="voyage" />
-        <BottomAppBar
-          :date-sections="page.dateSections"
-          :pricing="voyage.pricing"
-        />
+      <HeroVoyageSection :voyage="voyage" />
+      <BottomAppBar
+        :date-sections="page.dateSections"
+        :pricing="voyage.pricing"
+      />
 
-        <ChipsContainer
-          :badge-section="voyage.badgeSection"
-          :level="voyage.level"
-        />
+      <ChipsContainer
+        :badge-section="voyage.badgeSection"
+        :level="voyage.level"
+      />
 
-        <StickyContainer>
-          <template #left-side>
-            <AuthorNote
-              :author-note="voyage.authorNote"
-              :page="page"
-            />
+      <StickyContainer>
+        <template #left-side>
+          <AuthorNote
+            :author-note="voyage.authorNote"
+            :page="page"
+          />
 
-            <HighlightsContainer
-              :experiences-block="voyage.experiencesBlock"
-              :page="page.experiencesBlock"
-            />
+          <HighlightsContainer
+            :experiences-block="voyage.experiencesBlock"
+            :page="page.experiencesBlock"
+          />
 
-            <ProgrammeContainer
-              :programme-block="voyage.programmeBlock"
-            />
+          <ProgrammeContainer
+            :programme-block="voyage.programmeBlock"
+          />
 
-            <AccompanistsContainer
-              :voyage="voyage"
-              :title="page.accompanistsTitle"
-            />
-          </template>
-          <template #right-side>
-            <InfoCard
-              :sticky-block="page.stickyBlock"
-              :voyage="voyage"
-            />
-          </template>
-        </StickyContainer>
+          <AccompanistsContainer
+            :voyage="voyage"
+            :title="page.accompanistsTitle"
+          />
+        </template>
+        <template #right-side>
+          <InfoCard
+            :sticky-block="page.stickyBlock"
+            :voyage="voyage"
+          />
+        </template>
+      </StickyContainer>
 
+      <v-container
+        fluid
+        class="px-0"
+      >
         <HousingSection
           :housing-block="voyage.housingBlock"
           :housing-title="page.housingTitle"
@@ -68,42 +71,35 @@
         <ReviewCarousel
           :reviews-section="page.reviewsSection"
         />
-      </div>
-      <FaqVoyagesContainer
-        :faq-block="voyage.faqBlock"
-      />
 
-      <WhySection :why-section="page.whySection" />
+        <FaqVoyagesContainer
+          :faq-block="voyage.faqBlock"
+        />
 
-      <HorizontalCarousel
-        v-if="voyagePropositions"
-        v-show="voyagePropositions.length > 0"
-      >
-        <template #title>
-          <h4 class="text-primary ">
-            D'autres idées de voyages
-          </h4>
-        </template>
-        <template #carousel-item>
-          <v-col
-            v-for="voyageProp in voyagePropositions"
-            :key="voyageProp.id"
-            cols="12"
-            sm="6"
-            lg="4"
-          >
-            <v-lazy
-              :min-height="228"
-              :options="{ threshold: 0.5 }"
-              transition="fade-transition"
+        <WhySection :why-section="page.whySection" />
+
+        <HorizontalCarousel
+          v-if="voyagePropositions"
+          v-show="voyagePropositions.length > 0"
+        >
+          <template #title>
+            <h4 class="text-primary text-custom-size">
+              D'autres idées de voyages
+            </h4>
+          </template>
+          <template #carousel-item>
+            <v-col
+              v-for="voyageProp in voyagePropositions"
+              :key="voyageProp.id"
+              class="pt-0"
             >
-              <SearchVoyageCard
+              <VoyageCard
                 :voyage="voyageProp"
               />
-            </v-lazy>
-          </v-col>
-        </template>
-      </HorizontalCarousel>
+            </v-col>
+          </template>
+        </HorizontalCarousel>
+      </v-container>
     </template>
     <v-skeleton-loader
       v-else
@@ -125,7 +121,8 @@ const { data: voyage } = await useAsyncData('voyages', () =>
 )
 
 const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
-  return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).limit(10).all()
+  console.log('===========voyage before query', voyage.value, '========')
+  return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).where('experienceType', '=', voyage.value.experienceType).limit(10).all()
 })
 
 watchEffect(() => {
@@ -216,3 +213,11 @@ watchEffect(() => {
   })
 })
 </script>
+
+<style scoped>
+@media (min-width: 1000px) {
+.text-custom-size{
+    font-size: 2.5rem!important;
+  }
+}
+</style>

@@ -105,7 +105,7 @@
     </v-col>
   </v-row>
   <v-row
-    v-if="voyages.length > 9"
+    v-if="voyages && voyages.length > 9"
     justify="center"
     align="center"
     class="flex-column my-8"
@@ -143,7 +143,7 @@ const availableVoyages = computed(() => {
   if (route.name === 'experiences') {
     return props.voyages.map(experience => experience.voyages?.length).reduce((a, b) => a + b, 0) > 0
   }
-  return props.voyages.length
+  return props.voyages?.length || 0
 })
 
 const voyagesWithCta = computed(() => {

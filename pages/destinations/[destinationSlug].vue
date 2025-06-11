@@ -16,12 +16,8 @@
         <v-col
           v-for="voyage in limitedVoyages"
           :key="voyage.id"
-          cols="12"
-          sm="6"
-          lg="4"
-          xl="3"
         >
-          <SearchVoyageCard
+          <VoyageCard
             :voyage="voyage"
           />
         </v-col>

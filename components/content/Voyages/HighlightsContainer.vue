@@ -1,5 +1,5 @@
 <template>
-  <div class="my-8 mt-md-12 mb-md-5 ">
+  <div class="my-md-8 mt-md-12 mb-md-5 ">
     <ColorContainer
       color="yellow-light-2"
     >
@@ -9,14 +9,14 @@
             cols="12"
             class="text-primary d-flex flex-column justify-lg-center"
           >
-            <div class="d-flex align-center ga-4">
+            <div class=" d-flex align-center ga-4">
               <v-avatar
                 color="yellow"
                 size="40"
               >
                 <v-icon
                   color="white"
-                  size="22"
+                  size="28"
                   :icon="mdiHeartOutline"
                 />
               </v-avatar>
@@ -27,7 +27,7 @@
             <v-list
               slim
               bg-color="yellow-light-2"
-              class="px-3"
+              class=""
             >
               <HighlightListItem
                 v-for="highlight in experiencesBlock"

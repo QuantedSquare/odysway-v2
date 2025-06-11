@@ -1,7 +1,7 @@
 <template>
-  <v-footer class="position-relative mx-2 mx-md-5">
+  <v-footer class="position-relative ">
     <v-img
-      class="footer-bg-img"
+      class="footer-bg-img "
       :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"
       :lazy-src="img(OdyswayFooter, { format: 'webp', quality: 10, width: 1024, height: 400 })"
       :srcset="`${img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })} 1024w, ${img(OdyswayFooter, { format: 'webp', quality: 70, width: 640, height: 400 })} 640w`"
@@ -12,164 +12,165 @@
       width="100%"
       height="400"
     />
-    <v-container
-      v-if="footer"
-      fluid
-      class="px-0 px-md-12"
-    >
-      <v-row
-        align="center"
-        justify="space-between"
+    <div class="mx-2 mx-md-5">
+      <v-container
+        v-if="footer"
+        fluid
+        class="px-0 px-md-12"
       >
-        <v-col
-          cols="12"
-          md="3"
-          class="d-flex flex-column align-start align-md-start justify-space-between ga-6"
+        <v-row
+          align="center"
+          justify="space-between"
         >
-          <v-img
-            :src="img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })"
-            :lazy-src="img(OdyswayFooterBleu, { format: 'webp', quality: 10, width: 640 })"
-            :srcset="`${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-            sizes="(max-width: 600px) 480px, 640px"
-            loading="lazy"
-            alt="Logo d'Odysway"
-            class="footer-logo"
-          />
-          <span class="text-h5 text-grey">
-            {{ footer.logo.description }}
-          </span>
-          <div>
-            <SocialsContainerButtons class="ga-4" />
-          </div>
-        </v-col>
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-lazy
-            :options="{ threshold: 0.5 }"
-            transition="fade-transition"
+          <v-col
+            cols="12"
+            md="3"
+            class="d-flex flex-column align-start align-md-start justify-space-between ga-6"
           >
             <v-img
-              rounded="lg"
-              cover
-              max-height="198"
-              :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
-              :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
-              :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
-              sizes="(max-width: 600px) 480px, 320px"
+              :src="img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })"
+              :lazy-src="img(OdyswayFooterBleu, { format: 'webp', quality: 10, width: 640 })"
+              :srcset="`${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+              sizes="(max-width: 600px) 480px, 640px"
               loading="lazy"
-              alt="Image de l'équipe"
+              alt="Logo d'Odysway"
+              class="footer-logo"
             />
-          </v-lazy>
-        </v-col>
-        <v-col
-          cols="12"
-          lg="4"
-          class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-10"
-        >
-          <h5 class="text-h4 font-weight-bold">
-            {{ footer.contact.ctaText }}
-          </h5>
-          <div class="d-flex flex-row flex-wrap justify-start align-start align-lg-center ga-6">
-            <div class="custom-chip font-weight-bold text-primary text-no-wrap">
-              {{ footer.contact.phone }}
+            <span class="text-h5 text-grey">
+              {{ footer.logo.description }}
+            </span>
+            <div>
+              <SocialsContainerButtons class="ga-4" />
             </div>
-            <div class="custom-chip font-weight-bold text-primary text-no-wrap">
-              {{ footer.contact.email }}
-            </div>
-          </div>
-          <v-btn
-            color="secondary"
-            height="62"
-            width="360"
-            class="font-weight-bold align-self-center text-decoration-none text-body-1 text-capitalize"
-            :to="footer.contact.buttonContact.lien"
+          </v-col>
+          <v-col
+            cols="12"
+            md="4"
           >
-            {{ footer.contact.buttonContact.text }}
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-divider
-        thickness="2"
-        class="my-16"
-      />
-      <v-row class="mb-4 pb-4 text-primary">
-        <v-col
-          cols="6"
-          md="3"
-        >
-          <h5 class="text-h4 font-weight-bold mb-10">
-            {{ footer.linksList.colonne1.title }}
-          </h5>
-          <div class="d-flex flex-column ga-2">
-            <NuxtLink
-              v-for="link, index in footer.linksList.colonne1.links"
-              :key="`${link.label}-${index}`"
-              :to="link.to"
-              class="text-grey"
+            <v-lazy
+              :options="{ threshold: 0.5 }"
+              transition="fade-transition"
             >
-              {{ link.label }}
-            </NuxtLink>
-          </div>
-        </v-col>
-        <v-col
-          cols="6"
-          md="3"
-        >
-          <h5 class="text-h4 font-weight-bold mb-10">
-            {{ footer.linksList.colonne1.title }}
-          </h5>
-          <div class="d-flex flex-column ga-2">
-            <NuxtLink
-              v-for="link, index in footer.linksList.colonne1.links"
-              :key="`${link.label}-${index}`"
-              :to="link.to"
-              class="text-grey"
+              <v-img
+                rounded="lg"
+                cover
+                max-height="198"
+                :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
+                :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
+                :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
+                sizes="(max-width: 600px) 480px, 320px"
+                loading="lazy"
+                alt="Image de l'équipe"
+              />
+            </v-lazy>
+          </v-col>
+          <v-col
+            cols="12"
+            lg="4"
+            class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-10"
+          >
+            <h5 class="text-h4 font-weight-bold">
+              {{ footer.contact.ctaText }}
+            </h5>
+            <div class="d-flex flex-row flex-wrap justify-start align-start align-lg-center ga-6">
+              <div class="custom-chip font-weight-bold text-primary text-no-wrap">
+                {{ footer.contact.phone }}
+              </div>
+              <div class="custom-chip font-weight-bold text-primary text-no-wrap">
+                {{ footer.contact.email }}
+              </div>
+            </div>
+            <v-btn
+              color="secondary"
+              height="62"
+              width="360"
+              class="font-weight-bold align-self-center text-decoration-none text-body-1 text-capitalize"
+              :to="footer.contact.buttonContact.lien"
             >
-              {{ link.label }}
-            </NuxtLink>
-          </div>
-        </v-col>
-        <v-divider class="my-8 d-md-none" />
-        <v-col
-          cols="6"
-          md="3"
-        >
-          <h5 class="text-h4 font-weight-bold mb-10">
-            {{ footer.linksList.colonne2.title }}
-          </h5>
-          <div class="d-flex flex-column ga-2">
-            <NuxtLink
-              v-for="link, index in footer.linksList.colonne2.links"
-              :key="`${link.label}-${index}`"
-              :to="link.to"
-              class="text-grey"
-            >
-              {{ link.label }}
-            </NuxtLink>
-          </div>
-        </v-col>
-        <v-col
-          cols="6"
-          md="3"
-        >
-          <h5 class="text-h4 font-weight-bold mb-10">
-            {{ footer.linksList.colonne4.title }}
-          </h5>
-          <div class="d-flex flex-column">
-            <p class="mb-3 font-weight-bold">
-              {{ footer.linksList.colonne4.name }}
-            </p>
-            <p class="text-grey">
-              {{ footer.linksList.colonne4.address }}
-            </p>
-            <p class="text-grey">
-              {{ footer.linksList.colonne4.city }}
-            </p>
-          </div>
-        </v-col>
-      </v-row>
+              {{ footer.contact.buttonContact.text }}
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-divider
+          thickness="2"
+          class="my-16"
+        />
+        <v-row class="mb-4 pb-4 text-primary">
+          <v-col
+            cols="6"
+            md="3"
+          >
+            <h5 class="text-h4 font-weight-bold mb-10">
+              {{ footer.linksList.colonne1.title }}
+            </h5>
+            <div class="d-flex flex-column ga-2">
+              <NuxtLink
+                v-for="link, index in footer.linksList.colonne1.links"
+                :key="`${link.label}-${index}`"
+                :to="link.to"
+                class="text-grey"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </div>
+          </v-col>
+          <v-col
+            cols="6"
+            md="3"
+          >
+            <h5 class="text-h4 font-weight-bold mb-10">
+              {{ footer.linksList.colonne1.title }}
+            </h5>
+            <div class="d-flex flex-column ga-2">
+              <NuxtLink
+                v-for="link, index in footer.linksList.colonne1.links"
+                :key="`${link.label}-${index}`"
+                :to="link.to"
+                class="text-grey"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </div>
+          </v-col>
+          <v-divider class="my-8 d-md-none" />
+          <v-col
+            cols="6"
+            md="3"
+          >
+            <h5 class="text-h4 font-weight-bold mb-10">
+              {{ footer.linksList.colonne2.title }}
+            </h5>
+            <div class="d-flex flex-column ga-2">
+              <NuxtLink
+                v-for="link, index in footer.linksList.colonne2.links"
+                :key="`${link.label}-${index}`"
+                :to="link.to"
+                class="text-grey"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </div>
+          </v-col>
+          <v-col
+            cols="6"
+            md="3"
+          >
+            <h5 class="text-h4 font-weight-bold mb-10">
+              {{ footer.linksList.colonne4.title }}
+            </h5>
+            <div class="d-flex flex-column">
+              <p class="mb-3 font-weight-bold">
+                {{ footer.linksList.colonne4.name }}
+              </p>
+              <p class="text-grey">
+                {{ footer.linksList.colonne4.address }}
+              </p>
+              <p class="text-grey">
+                {{ footer.linksList.colonne4.city }}
+              </p>
+            </div>
+          </v-col>
+        </v-row>
       <!-- <v-row align="center">
         <v-col
           cols="12"
@@ -203,7 +204,8 @@
           </v-btn>
         </v-col>
       </v-row> -->
-    </v-container>
+      </v-container>
+    </div>
   </v-footer>
 </template>
 

@@ -1,5 +1,8 @@
 <template>
-  <v-container fluid>
+  <v-container
+    fluid
+    class="px-0"
+  >
     <v-row>
       <v-col
         cols="12"

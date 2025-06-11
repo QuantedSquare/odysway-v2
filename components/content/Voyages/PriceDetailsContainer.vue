@@ -1,5 +1,8 @@
 <template>
-  <v-container :fluid="width < 1600">
+  <v-container
+    fluid
+    class="px-0"
+  >
     <v-row
       justify="center"
       align="center"
@@ -68,9 +71,9 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
+// import { useDisplay } from 'vuetify'
 
-const { width } = useDisplay()
+// const { width } = useDisplay()
 
 defineProps({
   pricingDetailsBlock: {

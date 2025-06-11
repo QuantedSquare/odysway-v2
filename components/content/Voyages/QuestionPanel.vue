@@ -6,7 +6,7 @@
   >
     <v-expansion-panel
       eager
-      class="my-2 py-6"
+      class="my-1 my-md-2 py-6"
     >
       <v-expansion-panel-title
         class="text-subtitle-1 font-weight-bold text-md-h6 "
@@ -34,7 +34,7 @@
       </v-expansion-panel-title>
       <v-expansion-panel-text
         eager
-        class="text-subtitle-2 text-md-subtitle-1 text-grey pl-6 bg-white"
+        class="text-subtitle-2 text-md-subtitle-1 text-grey pl-md-6 bg-white"
       >
         <!-- {{ item.answer }} -->
         <MDCRenderer

@@ -1,8 +1,9 @@
 <template>
   <v-container
     fluid
+    class="px-0"
   >
-    <v-row>
+    <v-row no-gutters>
       <v-col
         cols="12"
         md="8"
@@ -13,7 +14,7 @@
             :rating="voyage.rating"
             :comments="voyage.comments"
             elevation="2"
-            class="mx-3 d-md-none"
+            class="mr-3 d-md-none"
           />
           <v-btn
             ref="shareBtn"
@@ -71,7 +72,7 @@
   <v-container
     fluid
     height="455"
-    class="d-flex align-center position-relative"
+    class="d-flex align-center position-relative px-0"
   >
     <v-row class="d-none d-md-flex">
       <v-col
@@ -143,6 +144,7 @@
       <v-col
         v-if="voyage.videoLinks.length > 0"
         cols="auto"
+        class="px-0"
       >
         <VideoDialog
           :videos-link="voyage.videoLinks"
@@ -190,8 +192,15 @@ function copyUrl() {
 @media screen and (max-width: 1280px) {
   .media-btns-position{
   position: absolute;
-  bottom: 21px;
+  bottom: 30px;
   left: 42px;
+}
+}
+@media screen and (max-width: 600px) {
+  .media-btns-position{
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 }
 }
 .custom-btn:deep(button){

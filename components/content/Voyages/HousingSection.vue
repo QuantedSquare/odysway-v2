@@ -1,15 +1,16 @@
 <template>
   <v-container
     fluid
+    class="px-0"
   >
     <v-row
       align="center"
     >
       <v-col
-        cols="6"
+        cols="12"
         xs="7"
         sm="9"
-        class="text-h4 my-4 font-weight-bold"
+        class="text-h4 my-md-4 font-weight-bold"
       >
         {{ housingTitle }}
       </v-col>

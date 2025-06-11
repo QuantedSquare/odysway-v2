@@ -1,7 +1,8 @@
 <template>
   <v-container
     id="faq-container"
-    class="position-relative"
+    fluid
+    class="position-relative px-0"
   >
     <v-img
       :src="img(backgroundImage, { format: 'webp', quality: 70, height: 900, width: 1536 })"
@@ -36,6 +37,7 @@
           <v-col
             cols="12"
             md="4"
+            class="px-0 pl-md-4"
           >
             <CtaCardSheet />
           </v-col>

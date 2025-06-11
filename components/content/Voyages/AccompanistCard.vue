@@ -24,7 +24,7 @@
           </v-list-item-subtitle>
           <p
             ref="content"
-            class="my-4 text-grey text-h5 font-weight-regular text-content "
+            class="my-2 my-md-4 text-grey text-h5 font-weight-regular text-content "
             :class="{ truncated: !isExpanded }"
             :style="contentStyle"
           >

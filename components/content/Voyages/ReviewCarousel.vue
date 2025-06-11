@@ -3,13 +3,14 @@
     v-show="reviews.length > 0"
     id="reviews-container"
     :fluid="width < 1600"
+    class="px-0"
   >
     <v-row
       align="center"
       justify="center"
     >
       <v-col
-
+        cols="12"
         class="text-h4 my-4 font-weight-bold"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
@@ -18,7 +19,8 @@
       <v-spacer />
       <v-col
         v-show="displayButton"
-        cols="auto"
+        cols="12"
+        md="auto"
       >
         <v-btn
           icon
@@ -57,7 +59,7 @@
         <v-col
           v-for="review in reviews"
           :key="review.id"
-          cols="12"
+          cols="10"
           sm="6"
           md="4"
         >
@@ -112,7 +114,7 @@ const displayButton = computed(() => {
     return childrenCount.value > 2
   }
   else {
-    return childrenCount.value > 1
+    return false
   }
 })
 

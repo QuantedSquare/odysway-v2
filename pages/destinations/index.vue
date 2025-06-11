@@ -57,7 +57,7 @@
               :options="{ threshold: 0.5 }"
               transition="fade-transition"
             >
-              <SearchVoyageCard
+              <VoyageCard
                 :voyage="voyage"
               />
             </v-lazy>

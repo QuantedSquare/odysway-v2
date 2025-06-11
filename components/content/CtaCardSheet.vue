@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-6 d-flex flex-column justify-start"
+    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-4 px-lg-6 d-flex flex-column justify-start"
     :class="route.name === 'search' || route.name.includes('thematiques') || route.name.includes('experience') ? 'h-100' : ''"
   >
     <v-avatar
@@ -21,7 +21,7 @@
       <br>lorem
     </span>
     <v-btn-secondary
-      class="mb-6"
+      class="mb-6 align-self-center align-self-md-start"
       height="62px"
       rounded="md"
       width="66%"

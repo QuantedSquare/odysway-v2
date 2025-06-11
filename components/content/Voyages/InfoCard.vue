@@ -1,7 +1,10 @@
 <template>
   <v-card>
     <v-card-text>
-      <v-container fluid>
+      <v-container
+        fluid
+        class="pa-6"
+      >
         <v-row>
           <v-col
             cols="5"

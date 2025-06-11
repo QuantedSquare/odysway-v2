@@ -14,11 +14,6 @@
 const page = await queryCollection('content').path('/').first()
 
 if (page) {
-  defineOgImageComponent(page.ogImage?.component, {
-    title: page.ogImage?.props.title,
-    description: page.ogImage?.props.description,
-    image: page.ogImage?.props.image,
-  })
   useHead(page.head || {}) // <-- Nuxt Schema.org
   useSeoMeta(page.seo || {}) // <-- Nuxt Robots
 }

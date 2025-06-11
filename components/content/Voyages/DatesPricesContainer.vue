@@ -2,7 +2,8 @@
   <v-container
     v-if="dates"
     id="dates-container"
-    :fluid="width < 1600"
+    fluid
+    class="px-0"
   >
     <v-divider class="my-6" />
     <v-row
