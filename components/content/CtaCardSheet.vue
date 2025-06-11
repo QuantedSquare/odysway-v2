@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-xl px-4 px-lg-6 d-flex flex-column justify-start"
+    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-lg px-4 px-lg-6 d-flex flex-column justify-start mt-2"
     :class="route.name === 'search' || route.name.includes('thematiques') || route.name.includes('experience') ? 'h-100' : ''"
   >
     <v-avatar

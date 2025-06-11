@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="py-0 my-0 px-2 px-md-4"
+    class="py-0 my-0 px-3 px-md-4"
   >
     <template v-if="voyage && page">
       <HeroVoyageSection :voyage="voyage" />

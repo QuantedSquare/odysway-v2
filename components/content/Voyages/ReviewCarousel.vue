@@ -11,6 +11,7 @@
     >
       <v-col
         cols="12"
+        md="10"
         class="text-h4 my-4 font-weight-bold"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
@@ -111,7 +112,7 @@ const displayButton = computed(() => {
     return childrenCount.value > 3
   }
   else if (sm.value) {
-    return childrenCount.value > 2
+    return false
   }
   else {
     return false
