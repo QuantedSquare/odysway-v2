@@ -22,15 +22,34 @@
 </template>
 
 <script setup>
+import _ from 'lodash'
+
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
 
 const { data: destinations } = await useAsyncData('destinations', () => {
   return queryCollection('destinations').where('published', '=', true).all()
 })
+const { data: regions } = await useAsyncData('regions', () => {
+  return queryCollection('regions').all()
+})
 
 const selectedDestination = computed(() => {
   return destinations.value.find(d => d.slug === slug.value)
+})
+
+const selectedRegion = computed(() => {
+  return regions.value.find(r => r.slug === slug.value)
+})
+
+const isRegion = computed(() => !!selectedRegion.value)
+const isDestination = computed(() => !!selectedDestination.value)
+
+const destinationsInRegion = computed(() => {
+  if (!isRegion.value) return []
+  return destinations.value.filter(dest =>
+    dest.regions && dest.regions.some(r => r.nom === selectedRegion.value.nom),
+  )
 })
 
 const { data: destinationContent, status: destinationContentStatus } = useAsyncData('destinationContent', () => {
@@ -42,8 +61,18 @@ provide('page', destinationContent)
 
 const { data: voyages } = useAsyncData('voyages', async () => {
   const travelList = await queryCollection('voyages').where('published', '=', true).all()
-  console.log('voyages', travelList)
-  const destinationName = selectedDestination.value.titre
-  return travelList.filter(v => v.destinations?.some(d => d.name.includes(destinationName)))
+  let filtered = []
+  if (isDestination.value) {
+    const destinationName = selectedDestination.value.titre
+    filtered = travelList.filter(v => v.destinations?.some(d => d.name.includes(destinationName)))
+  }
+  else if (isRegion.value) {
+    const destinationNames = destinationsInRegion.value.map(d => d.titre)
+    filtered = travelList.filter(v =>
+      v.destinations?.some(d => destinationNames.includes(d.name)),
+    )
+  }
+  console.log('filtered', filtered)
+  return _.uniqBy(filtered, 'slug')
 })
 </script>
