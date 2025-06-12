@@ -1,0 +1,148 @@
+<template>
+  <div
+    class="rounded-xl"
+    :class="`bg-${backgroundColor}`"
+  >
+    <v-container
+      fluid
+      :height="smAndDown ? '' : '750px'"
+      class="pa-0"
+    >
+      <v-row
+        class="ma-0 h-100 flex-column-reverse flex-md-row"
+      >
+        <v-col
+          cols="12"
+          md="5"
+          class="d-flex flex-column justify-center ga-6 ga-md-8 pl-md-8"
+        >
+          <div
+            v-if="blogType || badgeColor || readingTime || publishedAt"
+            class="text-body-2 text-lg-body-1 d-flex align-center ga-3"
+          >
+            <v-chip
+              v-if="blogType && badgeColor"
+              size="x-large"
+              class="text-body-2 font-weight-bold px-5"
+              :class="`bg-${badgeColor}`"
+            >
+              <div class="mb-1">
+                {{ blogType }}
+              </div>
+            </v-chip>
+            <div
+              v-if="readingTime && badgeColor"
+              class="d-flex align-center ga-2 font-weight-2"
+              :class="`text-${badgeColor ?? 'primary'}`"
+            >
+              <v-icon size="24px">
+                {{ mdiClockTimeThreeOutline }}
+              </v-icon>
+              {{ readingTime }} min
+            </div>
+            <div
+              v-if="publishedAt"
+              class="text-grey"
+            >
+              {{ formatDate(publishedAt) }}
+            </div>
+          </div>
+          <h1
+            class="text-h4 text-lg-h1 font-weight-bold"
+            :class="`text-${titleColor}`"
+          >
+            <slot name="title" />
+          </h1>
+          <div
+            class="text-h6 text-lg-h5 font-weight-medium max-lines overflow-y-auto"
+            :class="`text-${introductionColor}`"
+            style="max-height: 320px;"
+          >
+            <slot name="introduction" />
+          </div>
+          <div
+            v-if="author || authorPhoto || authorRole"
+            class="d-flex align-center ga-4"
+          >
+            <AvatarImg
+              v-if="authorPhoto"
+              :avatar-img="authorPhoto"
+              :avatar-size="avatarSize"
+            />
+            <div class="text-body-2 text-lg-body-1 d-flex flex-column justify-center align-start ga-4">
+              <div
+                v-if="author"
+                class="text-primary font-weight-bold"
+              >
+                {{ author }}
+              </div>
+              <div
+                v-if="authorRole"
+                class="text-grey"
+              >
+                {{ authorRole }}
+              </div>
+            </div>
+          </div>
+        </v-col>
+        <v-spacer />
+        <v-col
+          cols="12"
+          md="6"
+          class="pa-0 h-100"
+        >
+          <v-img
+            v-if="displayedImg"
+            :src="img(displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+            :lazy-src="img(displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+            cover
+            height="100%"
+            :alt="`Image principale du blog ${title || ''}`"
+            :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+
+<script setup>
+import { mdiClockTimeThreeOutline } from '@mdi/js'
+import { useDisplay } from 'vuetify'
+import dayjs from 'dayjs'
+import { useImage } from '#imports'
+
+defineProps({
+  backgroundColor: { type: String, default: 'primary' },
+  titleColor: { type: String, default: 'white' },
+  introductionColor: { type: String, default: 'grey' },
+  avatarSize: { type: String, default: '60' },
+  // Blog info
+  blogType: String,
+  badgeColor: String,
+  readingTime: [String, Number],
+  publishedAt: String,
+  // Author info
+  author: String,
+  authorPhoto: String,
+  authorRole: String,
+  // Image
+  displayedImg: String,
+  // Title (for alt)
+  title: String,
+})
+
+const { smAndDown } = useDisplay()
+const img = useImage()
+
+function formatDate(date) {
+  if (!date) return ''
+  return dayjs(date).format('DD MMMM YYYY')
+}
+</script>
+
+<style scoped>
+.font-weight-2{
+  font-weight: 500;
+}
+</style>

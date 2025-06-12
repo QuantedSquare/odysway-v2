@@ -22,6 +22,8 @@
           :style="{
             zIndex: avatars.length - index,
           }"
+          @mouseenter="hoveredIndex = index"
+          @mouseleave="hoveredIndex = null"
         >
           <v-img
             :src="img(avatar.image, { format: 'webp', quality: 70, width: 320 })"
@@ -36,15 +38,87 @@
       </div>
     </v-lazy>
   </v-row>
+  <div class="avatar-info-wrapper">
+    <div
+      ref="infoAnim"
+      class="avatar-info-anim"
+      :style="infoAnimStyle"
+    >
+      <transition
+        name="avatar-info-fade"
+      >
+        <div
+          v-if="showText && hoveredIndex !== null"
+          key="info"
+          class="avatar-info text-center"
+        >
+          <div class="avatar-name">
+            {{ avatars[hoveredIndex]?.name }}
+          </div>
+          <div
+            v-if="avatars[hoveredIndex]?.description"
+            class="avatar-description mt-1"
+          >
+            {{ avatars[hoveredIndex]?.description }}
+          </div>
+        </div>
+        <div
+          v-else
+          key="empty"
+          class="avatar-info-empty"
+        />
+      </transition>
+    </div>
+  </div>
 </template>
 
 <script setup>
+import { ref, watch, nextTick } from 'vue'
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const { mdAndUp } = useDisplay()
 const avatars = await queryCollection('team').all()
 const img = useImage()
+const hoveredIndex = ref(null)
+
+// Animated height for info section
+const infoAnim = ref(null)
+const infoAnimStyle = ref({
+  maxHeight: '0px',
+  overflow: 'hidden',
+  opacity: 0,
+  transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s',
+})
+
+const showText = ref(false)
+let heightTimeout = null
+
+watch(hoveredIndex, async (val) => {
+  await nextTick()
+  clearTimeout(heightTimeout)
+  if (val !== null) {
+    if (!showText.value) {
+      showText.value = true
+      await nextTick()
+    }
+    if (infoAnim.value) {
+      const content = infoAnim.value.querySelector('.avatar-info')
+      if (content) {
+        infoAnimStyle.value.maxHeight = content.scrollHeight + 'px'
+        infoAnimStyle.value.opacity = 1
+      }
+    }
+  }
+  else {
+    // Animate height, then hide text after transition
+    infoAnimStyle.value.maxHeight = '0px'
+    infoAnimStyle.value.opacity = 0
+    heightTimeout = setTimeout(() => {
+      showText.value = false
+    }, 500) // match the max-height transition duration
+  }
+})
 </script>
 
 <style scoped lang="scss">
@@ -101,5 +175,54 @@ const img = useImage()
     --avatar-index: #{$i - 1};
     --total-avatars: v-bind(avatars.length); /* Update this number based on max possible avatars */
   }
+}
+
+.avatar-info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.avatar-info {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.avatar-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+  transition: color 0.3s;
+}
+
+.avatar-description {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  opacity: 0.85;
+  transition: color 0.3s;
+}
+
+.avatar-info-fade-enter-active,
+.avatar-info-fade-leave-active {
+  transition: opacity 0.3s, transform 0.3s;
+}
+.avatar-info-fade-enter-from,
+.avatar-info-fade-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.avatar-info-fade-enter-to,
+.avatar-info-fade-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.avatar-info-anim {
+  width: 100%;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+  overflow: hidden;
 }
 </style>

@@ -34,12 +34,14 @@ schemaOrg:
     image: "https://odysway.com/logos/logo_noir.png"
 ---
 
-::common-hero-section
+::generic-hero-section
 ---
-image-src: /images/concept/Vélo.jpg
+displayed-img: /images/concept/Vélo.jpg
+title-color: "white"
 ---
 #title
-Voyager autrement, en plaçant l’humain au cœur de chaque aventure
+Voyager autrement, en plaçant l'humain au cœur de chaque aventure
+
 ::
 
 ::title-container
@@ -92,7 +94,7 @@ Les valeurs d'Odysway
 
 ::text-container
 #text
-Chez Odysway, quatre valeurs guident notre vision du voyage. Elles sont au cœur de tout ce que nous faisons : elles influencent notre façon d’imaginer et de concevoir de nouveaux séjours, notre relation avec les voyageurs, nos échanges au sein de l’équipe, ainsi que nos partenariats avec les acteurs locaux.
+Chez Odysway, quatre valeurs guident notre vision du voyage. Elles sont au cœur de tout ce que nous faisons : elles influencent notre façon d'imaginer et de concevoir de nouveaux séjours, notre relation avec les voyageurs, nos échanges au sein de l'équipe, ainsi que nos partenariats avec les acteurs locaux.
 
 :br
 
@@ -100,9 +102,9 @@ Chez Odysway, quatre valeurs guident notre vision du voyage. Elles sont au cœur
 
 :br
 
-Nous croyons au pouvoir du voyage en immersion : prendre le temps de s’imprégner des lieux, de se laisser porter par l’instant présent et de tisser des liens avec les populations locales. Chaque rencontre, chaque échange est une source d’émotion et d’apprentissage, rendant votre séjour unique et inoubliable.
+Nous croyons au pouvoir du voyage en immersion : prendre le temps de s'imprégner des lieux, de se laisser porter par l'instant présent et de tisser des liens avec les populations locales. Chaque rencontre, chaque échange est une source d'émotion et d'apprentissage, rendant votre séjour unique et inoubliable.
 
-Voyager en immersion, c’est s’ouvrir à de nouvelles cultures, découvrir un pays ou une région autrement et vivre une aventure profondément humaine.
+Voyager en immersion, c'est s'ouvrir à de nouvelles cultures, découvrir un pays ou une région autrement et vivre une aventure profondément humaine.
 
 :br
 
@@ -120,11 +122,11 @@ Votre sérénité est notre priorité. Nous sommes à vos côtés à chaque éta
 
 :br
 
-Odysway, c’est avant tout une équipe de passionnés de voyage et d’aventure, animés par l’envie de vous faire vivre des moments exceptionnels. Chaque itinéraire est imaginé, conçu et testé avec soin pour vous offrir des expériences singulières et inoubliables.
+Odysway, c'est avant tout une équipe de passionnés de voyage et d'aventure, animés par l'envie de vous faire vivre des moments exceptionnels. Chaque itinéraire est imaginé, conçu et testé avec soin pour vous offrir des expériences singulières et inoubliables.
 
 :br
 
-Notre passion du voyage, nous la transmettons à travers chaque séjour… et c’est grâce à vous qu’elle prend tout son sens !
+Notre passion du voyage, nous la transmettons à travers chaque séjour… et c'est grâce à vous qu'elle prend tout son sens !
 
 :br
 
@@ -132,7 +134,7 @@ Notre passion du voyage, nous la transmettons à travers chaque séjour… et c�
 
 :br
 
-Parce que voyager doit aussi être un acte responsable, nous mettons un point d’honneur à minimiser notre impact. Nous favorisons des échanges respectueux avec les communautés locales et veillons à un tourisme plus équitable en collaborant directement avec guides et habitants lorsque cela est possible.
+Parce que voyager doit aussi être un acte responsable, nous mettons un point d'honneur à minimiser notre impact. Nous favorisons des échanges respectueux avec les communautés locales et veillons à un tourisme plus équitable en collaborant directement avec guides et habitants lorsque cela est possible.
 
 :br
 
@@ -146,7 +148,7 @@ Des séjours créés avec passion
 
 ::text-container
 #text
-Chez Odysway, nous créons nous-mêmes chacun de nos voyages, directement sur le terrain. Concrètement, cela signifie qu’un membre de notre équipe se rend sur place pour rencontrer les guides, choisir les bons partenaires et s’assurer que chaque expérience soit unique, authentique et bien organisée.
+Chez Odysway, nous créons nous-mêmes chacun de nos voyages, directement sur le terrain. Concrètement, cela signifie qu'un membre de notre équipe se rend sur place pour rencontrer les guides, choisir les bons partenaires et s'assurer que chaque expérience soit unique, authentique et bien organisée.
 
 :br
 

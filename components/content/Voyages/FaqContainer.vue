@@ -2,7 +2,7 @@
   <v-container
     id="faq-container"
     fluid
-    class="rounded-lg px-2 px-md-9 py-0 mt-4 mt-md-8"
+    class="rounded-lg px-2 px-md-9 py-0 mt-4 mt-md-8 max-container-width"
   >
     <v-lazy
       :min-height="415"
@@ -57,7 +57,7 @@
                 <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
                   <NuxtLink
                     :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
-                    class="text-secondary font-weight-bold"
+                    class="text-secondary"
                   >{{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}</NuxtLink>
                 </span>
               </div>
@@ -98,14 +98,8 @@ console.log('faqTextes', faqTextes.value)
 </script>
 
 <style scoped>
-/* .custom-title-position{
-  padding-top: 15px;
-} */
-
-@media screen and (max-width: 600px) {
-  /* .custom-title-position{
-  padding-top: 12px;
-} */
+.max-container-width{
+  max-width: 1440px;
 }
 
 .max-height-with-overflow {
@@ -133,9 +127,4 @@ console.log('faqTextes', faqTextes.value)
   height:10px;
   width:10px;
   }
-  /* @media (max-width: 960px) {
-  .custom-rounded {
-    border-radius: 0px!important;
-  }
-} */
 </style>

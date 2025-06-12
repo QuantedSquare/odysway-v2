@@ -37,7 +37,7 @@
               </div>
               <v-text-field
                 v-model="lastName"
-                placeholder="Votre nom"
+                placeholder="Jones"
                 :rules="[rules.lastname]"
               />
             </v-col>
@@ -50,7 +50,7 @@
               </div>
               <v-text-field
                 v-model="firstName"
-                placeholder="Votre prénom"
+                placeholder="Indiana"
                 :rules="[rules.firstname]"
               />
             </v-col>
@@ -83,12 +83,12 @@
               cols="12"
             >
               <div>
-                Objet de message *
+                Objet de votre message *
               </div>
               <v-text-field
                 v-model="subject"
                 :rules="[rules.subject]"
-                placeholder="Votre objet de message"
+                placeholder="J'ai besoin d'aide pour partir au Japon..."
                 :counter="1"
               />
             </v-col>
@@ -100,7 +100,7 @@
                 v-model="message"
                 variant="outlined"
                 :rules="[rules.message]"
-                placeholder="Votre message"
+                placeholder="Votre message..."
                 :counter="20"
               />
             </v-col>
