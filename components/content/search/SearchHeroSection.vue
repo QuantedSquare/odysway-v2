@@ -155,7 +155,12 @@ const { destination, isCategory, isExperience } = defineProps({
     type: Boolean,
     default: false,
   },
+  isDestination: {
+    type: Boolean,
+    default: false,
+  },
 })
+console.log('in hero', destination)
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true

@@ -58,7 +58,7 @@ import { mdiMinus, mdiPlus } from '@mdi/js'
 import { parseMarkdown } from '@nuxtjs/mdc/runtime'
 
 const route = useRoute()
-const { item, displayOnLayout } = defineProps({
+const { item } = defineProps({
   questionColor: {
     type: String,
     default: 'primary',

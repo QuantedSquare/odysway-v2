@@ -61,40 +61,36 @@
   "nights": 11,
   "includeFlight": false,
   "housingType": "Hôtels 2-3*",
-  "idealPeriods": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": true
+  },
   "minAge": 8,
   "rating": 4.6,
   "comments": 10,

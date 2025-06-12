@@ -104,6 +104,7 @@
                   :current-step="currentStep"
                   :page="page"
                   :own-step="4"
+                  @skip-step="nextStep"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item

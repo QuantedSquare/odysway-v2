@@ -1,140 +1,141 @@
 <template>
-  <v-container>
-    <v-skeleton-loader
-      v-if="isLoadingInsurance"
-      type="card"
-    />
-    <!-- v-else -->
-    <template v-else-if="!isLoadingInsurance && !_.isEmpty(insurances)">
-      <v-row>
-        <v-col
-          class="d-flex align-center"
-          cols="12"
-        >
-          <!-- <h2>{{ $t('stepperDevisGroup.insurances') }}</h2> -->
-          <h2>Garanties <span class="text-body-1">avec</span></h2>
-          <img
-            width="90"
-            class="ml-2"
-            :src="page.assurance_img"
-          >
-        </v-col>
-      </v-row>
-      <!-- Multirisque Insurance -->
-      <v-row :class="selectedInsurance === 'rapatriement' ? 'text-primary' : 'text-grey'">
-        <v-col
-          v-if="insurances.rapatriement"
-          cols="8"
-        >
-          <v-switch
-            v-model="selectedInsurance"
-            value="rapatriement"
-          >
-            <template #label>
-              <div class="text-body-1 d-flex align-center">
-                {{ page.preference_assurance_multirisque }}
-                <v-badge
-                  color="secondary"
-                  inline
-                  content="Conseillé"
-                />
-              </div>
-            </template>
-          </v-switch>
-        </v-col>
-
-        <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
-          + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
-        </v-col>
-        <v-col
-          cols="12"
-          class="px-16"
-        >
-          <FunnelStepsDialogLearnMore
-            v-if="deal"
-            :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.accroche_assurance_perou_nepal:page.accroche_assurance_medicale "
-            :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.details_assurance_medicale_perou_nepal:page.details_assurance_medicale "
-          />
-        </v-col>
-      </v-row>
-
-      <!-- Cancellation Insurance -->
-      <v-row
-        v-if="insurances.cancel"
-        :class="selectedInsurance === 'cancel' ? 'text-primary' : 'text-grey'"
+  <v-skeleton-loader
+    v-if="isLoadingInsurance"
+    type="card"
+  />
+  <!-- v-else -->
+  <v-container v-else-if="!isLoadingInsurance && !_.isEmpty(insurances)">
+    <v-row>
+      <v-col
+        class="d-flex align-center"
+        cols="12"
       >
-        <v-col
-          cols="8"
+        <!-- <h2>{{ $t('stepperDevisGroup.insurances') }}</h2> -->
+        <h2>Garanties <span class="text-body-1">avec</span></h2>
+        <img
+          width="90"
+          class="ml-2"
+          :src="page.assurance_img"
         >
-          <v-switch
-            v-model="selectedInsurance"
-            value="cancel"
-            :label="page.preference_assurance_annulation"
-          />
-        </v-col>
-        <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
-          + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
-        </v-col>
-        <v-col
-          cols="12"
-          class="px-16"
+      </v-col>
+    </v-row>
+    <!-- Multirisque Insurance -->
+    <v-row :class="selectedInsurance === 'rapatriement' ? 'text-primary' : 'text-grey'">
+      <v-col
+        v-if="insurances.rapatriement"
+        cols="8"
+      >
+        <v-switch
+          v-model="selectedInsurance"
+          value="rapatriement"
         >
-          <FunnelStepsDialogLearnMore
-            :btn-text="page.accroche_assurance_annulation"
-            :dialog-text="page.details_assurance_annulation"
-          />
-        </v-col>
-      </v-row>
+          <template #label>
+            <div class="text-body-1 d-flex align-center">
+              {{ page.preference_assurance_multirisque }}
+              <v-badge
+                color="secondary"
+                inline
+                content="Conseillé"
+              />
+            </div>
+          </template>
+        </v-switch>
+      </v-col>
 
-      <v-divider class="mt-4" />
-      <!-- No Insurance -->
-      <v-row :class="selectedInsurance === 'none' ? '' : 'text-grey'">
-        <v-col
-          v-if="insurances.cancel || insurances.rapatriement"
-          cols="12"
-        >
-          <!-- :label="$t('stepperDevisGroup.noInsurance')" -->
-          <v-switch
-            v-model="selectedInsurance"
-            value="none"
-            label="Je ne souhaite pas d'assurance"
-          />
-        </v-col>
-      </v-row>
-      <!-- Insurance Unavailable Message -->
+      <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
+        + {{ formatNumber(insurances.rapatriement * 100, 'currency', '€') }} / pers.
+      </v-col>
+      <v-col
+        cols="12"
+        class="px-16"
+      >
+        <FunnelStepsDialogLearnMore
+          v-if="deal"
+          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.accroche_assurance_perou_nepal:page.accroche_assurance_medicale "
+          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.details_assurance_medicale_perou_nepal:page.details_assurance_medicale "
+        />
+      </v-col>
+    </v-row>
 
-      <v-row class="text-caption text-primary">
-        <v-col>
-          <v-alert
-            border="start"
-            colored-border
-            color="secondary"
-            elevation="2"
-          >
-            <span class="font-weight-bold">
-              Assurance applicable à tous les voyageurs. <br>
-              Le calcul du prix de votre voyage se fera à la prochaine étape.
-            </span>
-          </v-alert>
-        </v-col>
-      </v-row>
-    </template>
-    <template v-else>
-      <v-row>
-        <v-col>
-          <v-alert
-            border="start"
-            colored-border
-            color="secondary"
-            elevation="2"
-          >
-            <span class="font-weight-bold">
-              L'assurance n'est pas disponible pour votre voyage.
-            </span>
-          </v-alert>
-        </v-col>
-      </v-row>
-    </template>
+    <!-- Cancellation Insurance -->
+    <v-row
+      v-if="insurances.cancel"
+      :class="selectedInsurance === 'cancel' ? 'text-primary' : 'text-grey'"
+    >
+      <v-col
+        cols="8"
+      >
+        <v-switch
+          v-model="selectedInsurance"
+          value="cancel"
+          :label="page.preference_assurance_annulation"
+        />
+      </v-col>
+      <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
+        + {{ formatNumber(insurances.cancel * 100, 'currency', '€') }} / pers.
+      </v-col>
+      <v-col
+        cols="12"
+        class="px-16"
+      >
+        <FunnelStepsDialogLearnMore
+          :btn-text="page.accroche_assurance_annulation"
+          :dialog-text="page.details_assurance_annulation"
+        />
+      </v-col>
+    </v-row>
+
+    <v-divider class="mt-4" />
+    <!-- No Insurance -->
+    <v-row :class="selectedInsurance === 'none' ? '' : 'text-grey'">
+      <v-col
+        v-if="insurances.cancel || insurances.rapatriement"
+        cols="12"
+      >
+        <!-- :label="$t('stepperDevisGroup.noInsurance')" -->
+        <v-switch
+          v-model="selectedInsurance"
+          value="none"
+          label="Je ne souhaite pas d'assurance"
+        />
+      </v-col>
+    </v-row>
+    <!-- Insurance Unavailable Message -->
+
+    <v-row class="text-caption text-primary">
+      <v-col>
+        <v-alert
+          border="start"
+          colored-border
+          color="secondary"
+          elevation="2"
+        >
+          <span class="font-weight-bold">
+            Assurance applicable à tous les voyageurs. <br>
+            Le calcul du prix de votre voyage se fera à la prochaine étape.
+          </span>
+        </v-alert>
+      </v-col>
+    </v-row>
+  </v-container>
+  <v-container
+    v-else
+    fluid
+  >
+    <v-row>
+      <v-col>
+        <v-alert
+          border="start"
+          colored-border
+          color="secondary"
+          elevation="2"
+        >
+          <span class="font-weight-bold ">
+            L'assurance n'est pas disponible pour votre voyage.
+          </span>
+        </v-alert>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -147,6 +148,8 @@ const isLoadingInsurance = ref(true)
 const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)
+
+const emit = defineEmits(['skip-step'])
 
 // Data
 const insurances = ref({
@@ -192,6 +195,9 @@ const fetchInsuranceQuote = async (retrievedDeal) => {
 const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
 
 watch([deal, () => props.currentStep], async () => {
+  // Only run if we're on the insurance step
+  if (props.currentStep !== props.ownStep) return
+
   isLoadingInsurance.value = true
 
   if (props.currentStep === props.ownStep) {
@@ -201,6 +207,12 @@ watch([deal, () => props.currentStep], async () => {
     model.value = true
     console.log('dealId fetched', deal.value)
     insurances.value = await fetchInsuranceQuote(deal.value)
+
+    // If insurance is not available, emit skipStep to parent
+    if (!insurances.value || (!insurances.value.rapatriement && !insurances.value.cancel)) {
+      emit('skip-step')
+      return
+    }
 
     if (deal.value?.insurance) {
       const insuranceType = deal.value.insurance?.toLowerCase()

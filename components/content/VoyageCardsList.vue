@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="dealsLastminute.length > 0">
+  <v-row v-if="dealsLastMinute.length > 0">
     <v-col
       cols="8"
       sm="10"
@@ -8,8 +8,8 @@
       <p>Profitez d'une réduction sur nos voyages de <span class="text-secondary">dernière minute</span></p>
     </v-col>
     <v-col
-      v-for="deal in dealsLastminute"
-      :key="`${deal.slug}-${deal.departureDate}`"
+      v-for="deal in dealsLastMinute"
+      :key="`${deal.slug}-${deal.dates[0]?.departure_date}`"
       cols="12"
       sm="6"
       md="4"
@@ -31,12 +31,7 @@
     </v-col>
     <v-col
       v-for="deal in paginatedDeals"
-      :key="`${deal.slug}-${deal.departureDate}`"
-      cols="12"
-      sm="6"
-      md="4"
-      lg="3"
-      class="py-md-6"
+      :key="`${deal.slug}-${deal.dates[0]?.departure_date}`"
     >
       <NextVoyageCard
         :deal="deal"
@@ -66,10 +61,10 @@ import { useGoTo } from 'vuetify'
 
 const props = defineProps({
   filteredDeals: {
-    type: Object,
-    default: () => {},
+    type: Array,
+    default: () => [],
   },
-  dealsLastminute: {
+  dealsLastMinute: {
     type: Array,
     default: () => [],
   },

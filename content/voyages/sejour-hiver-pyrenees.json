@@ -19,28 +19,36 @@
   "nights": 4,
   "includeFlight": false,
   "housingType": "Gîte dans un village",
-  "idealPeriods": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 10,

@@ -95,6 +95,7 @@ const img = useImage()
 font-weight: 700;
 font-size: 78px;
 line-height: 80px!important;
+margin-bottom: 45px;
 }
 
 .searchfield-overlap {
@@ -112,6 +113,7 @@ line-height: 80px!important;
   .custom-hero-title {
     font-size: 60px!important;
     line-height: 55px!important;
+    margin-bottom: 85px;
   }
   .searchfield-overlap {
     margin: -150px auto 0 auto;
@@ -127,7 +129,7 @@ line-height: 80px!important;
   .custom-hero-title {
     font-size: 40px!important;
     line-height: 40px!important;
-    margin-bottom: 65px;
+    margin-bottom: 90px;
   }
   .searchfield-overlap {
     margin: -150px auto 0 auto;

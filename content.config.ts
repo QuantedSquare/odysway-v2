@@ -10,14 +10,11 @@ const teamFiles = fs.readdirSync(teamDir)
 const teamChoices = teamFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(teamDir, file), 'utf-8')).name)
   .filter(Boolean) as [string, ...string[]]
-// console.log('teamChoices', teamChoices)
 
 const voyageDir = path.resolve(__dirname, 'content/voyages')
 const voyageFiles = fs.readdirSync(voyageDir)
 const voyageChoices = voyageFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(voyageDir, file), 'utf-8')).slug)
-  .filter(Boolean) as [string, ...string[]]
-// console.log('voyageChoices', voyageChoices)
 
 const destinationDir = path.resolve(__dirname, 'content/destinations')
 const destinationFolders = fs.readdirSync(destinationDir).filter(
@@ -32,7 +29,6 @@ const destinationChoices = destinationFolders
     return null
   })
   .filter(Boolean) as [string, ...string[]]
-console.log('destinationChoices', destinationChoices)
 
 const experienceDir = path.resolve(__dirname, 'content/experiences')
 const experienceFolders = fs.readdirSync(experienceDir).filter(
@@ -61,7 +57,6 @@ const experienceBadgeChoices = experienceFolders.flatMap((folder) => {
     return null
   })
 }).filter(Boolean) as [string, ...string[]]
-console.log('experienceChoices', experienceChoices)
 
 // Modifit
 const categoriesDir = path.resolve(__dirname, 'content/categories')
@@ -69,14 +64,12 @@ const categoriesFiles = fs.readdirSync(categoriesDir)
 const categoriesChoices = categoriesFiles
   .map(file => file.replace('.json', ''))
   .filter(Boolean) as [string, ...string[]]
-console.log('categoriesChoices', categoriesChoices)
 
 const regionDir = path.resolve(__dirname, 'content/regions')
 const regionFiles = fs.readdirSync(regionDir)
 const regionChoices = regionFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(regionDir, file), 'utf-8')).nom)
   .filter(Boolean) as [string, ...string[]]
-console.log('regionChoices', regionChoices)
 
 const colorChoices = [
   'primary',
@@ -435,12 +428,36 @@ export default defineContentConfig({
         nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1
         includeFlight: z.boolean().describe('Indique si le voyage inclut un vol'),
         housingType: z.string().describe('Type de logement'),
-        idealPeriods: z.array(z.object({
-          month: z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']),
-        })).describe('Périodes idéales pour le voyage'), // it's the periode_ideale_search key, which is an array of string numbers. Map the number to month name
-        monthlyAvailability: z.array(z.object({
-          month: z.enum(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']),
-        })).describe('Disponibilité mensuelle du voyage'), // Use the same values as idealPeriods for now
+        idealPeriods: z.object({
+          toutePeriodes: z.boolean().describe('Disponible toute l\'année'),
+          janvier: z.boolean().describe('Disponible en janvier'),
+          fevrier: z.boolean().describe('Disponible en février'),
+          mars: z.boolean().describe('Disponible en mars'),
+          avril: z.boolean().describe('Disponible en avril'),
+          mai: z.boolean().describe('Disponible en mai'),
+          juin: z.boolean().describe('Disponible en juin'),
+          juillet: z.boolean().describe('Disponible en juillet'),
+          aout: z.boolean().describe('Disponible en août'),
+          septembre: z.boolean().describe('Disponible en septembre'),
+          octobre: z.boolean().describe('Disponible en octobre'),
+          novembre: z.boolean().describe('Disponible en novembre'),
+          decembre: z.boolean().describe('Disponible en décembre'),
+        }).describe('Périodes idéales pour le voyage'),
+        monthlyAvailability: z.object({
+          toutePeriodes: z.boolean().describe('Disponible toute l\'année'),
+          janvier: z.boolean().describe('Disponible en janvier'),
+          fevrier: z.boolean().describe('Disponible en février'),
+          mars: z.boolean().describe('Disponible en mars'),
+          avril: z.boolean().describe('Disponible en avril'),
+          mai: z.boolean().describe('Disponible en mai'),
+          juin: z.boolean().describe('Disponible en juin'),
+          juillet: z.boolean().describe('Disponible en juillet'),
+          aout: z.boolean().describe('Disponible en août'),
+          septembre: z.boolean().describe('Disponible en septembre'),
+          octobre: z.boolean().describe('Disponible en octobre'),
+          novembre: z.boolean().describe('Disponible en novembre'),
+          decembre: z.boolean().describe('Disponible en décembre'),
+        }).describe('Disponibilité mensuelle du voyage'),
         minAge: z.number().describe('Age minimum pour participer au voyage').default(8),
         // Insurance spécifique, to be done depending on the new insurance choice
         rating: z.number().describe('Note du voyage sur 5'),

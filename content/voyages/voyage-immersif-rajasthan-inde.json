@@ -31,64 +31,36 @@
   "nights": 12,
   "includeFlight": false,
   "housingType": "Havelis, chez l'habitant",
-  "idealPeriods": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 4.9,
   "comments": 41,

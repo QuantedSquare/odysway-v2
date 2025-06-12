@@ -1,5 +1,5 @@
 <template>
-  <v-card class="d-flex flex-column align-center">
+  <div class="d-flex flex-column align-center">
     <v-row class="py-0">
       <v-col>
         <h2 class="my-0">
@@ -24,7 +24,7 @@
         </v-radio-group>
       </v-col>
     </v-row>
-  </v-card>
+  </div>
 </template>
 
 <script setup>

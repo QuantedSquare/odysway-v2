@@ -6,7 +6,8 @@
     <SearchHeroSection
       :is-category="isCategory"
       :is-experience="isExperience"
-      :destination="selectedCategory || selectedExperience"
+      :is-destination="isDestination"
+      :destination="selectedCategory || selectedExperience || selectedDestination"
     >
       <SearchField />
     </SearchHeroSection>
@@ -17,7 +18,6 @@
       color=""
     >
       <HorizontalCarousel
-
         :show-buttons="categories.length > 4"
       >
         <template #title>
@@ -67,7 +67,6 @@
         </template>
       </HorizontalCarousel>
     </ColorContainer>
-    <!------------------>
 
     <v-divider
       thickness="2"
@@ -81,7 +80,7 @@
 </template>
 
 <script setup>
-const { isCategory, isExperience } = defineProps({
+const { isCategory, isExperience, isDestination } = defineProps({
   isCategory: {
     type: Boolean,
     default: false,
@@ -92,9 +91,19 @@ const { isCategory, isExperience } = defineProps({
   },
   selectedCategory: {
     type: Object,
+    default: () => null,
   },
   selectedExperience: {
     type: Object,
+    default: () => null,
+  },
+  selectedDestination: {
+    type: Object,
+    default: () => null,
+  },
+  isDestination: {
+    type: Boolean,
+    default: false,
   },
 })
 
@@ -108,6 +117,13 @@ const { data: categories } = useAsyncData('categories', () => {
 const { data: experiences } = useAsyncData('experiences', () => {
   if (isExperience) {
     return queryCollection('experiences').all()
+  }
+  return null
+})
+
+const { data: destinations } = useAsyncData('destinations', () => {
+  if (isDestination && selectedDestination) {
+    return queryCollection('destinations').where('published', '=', true).select('id', 'titre', 'slug', 'metaDescription', 'image').all()
   }
   return null
 })

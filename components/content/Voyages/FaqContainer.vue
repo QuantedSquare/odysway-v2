@@ -104,7 +104,7 @@ const route = useRoute()
 }
 
 .max-height-with-overflow {
-  max-height: 800px;
+  max-height: 500px;
   overflow: auto;
 }
 ::-webkit-scrollbar {

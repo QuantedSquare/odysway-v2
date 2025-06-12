@@ -181,10 +181,21 @@ function filterByDate(voyages, fromList) {
   if (!fromList) return voyages
   const monthNumbers = fromList.split(',').map(Number).filter(n => n > 0 && n <= 12)
   if (monthNumbers.length === 0) return voyages
-  const monthNames = monthNumbers.map(n => monthNumberToFrench[n])
-  return voyages.filter(v =>
-    v.monthlyAvailability?.some(m => monthNames.includes(m.month)),
-  )
+
+  // Map month numbers to keys used in the object
+  const monthKeys = [
+    '', // 0 index unused
+    'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin',
+    'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre',
+  ]
+  const selectedKeys = monthNumbers.map(n => monthKeys[n])
+
+  return voyages.filter((v) => {
+    const avail = v.monthlyAvailability
+    if (!avail || typeof avail !== 'object') return false
+    if (avail.toutePeriodes) return true
+    return selectedKeys.some(key => avail[key])
+  })
 }
 
 const { data: voyages } = await useAsyncData(

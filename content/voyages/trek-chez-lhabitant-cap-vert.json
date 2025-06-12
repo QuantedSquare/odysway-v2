@@ -40,52 +40,36 @@
   "nights": 6,
   "includeFlight": false,
   "housingType": "Hôtel, chez l'habitant",
-  "idealPeriods": [
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    },
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    },
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 10,

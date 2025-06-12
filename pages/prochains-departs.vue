@@ -69,14 +69,10 @@ import 'dayjs/locale/fr'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-
-const toggledBtn = ref('')
-const selectedFilter = ref(capitalizeFirstLetter(dayjs().locale('fr').format('MMMM YYYY')))
-
-const { data: deals } = await useAsyncData(() => {
-  return queryCollection('deals').all()
-})
-
+const loading = ref(false)
+const travels = ref([])
+const toggledBtn = ref('all')
+const selectedFilter = ref('Toutes périodes')
 const toggleBtns = ref([
   { value: 'all',
     path: '/prochains-departs',
@@ -92,106 +88,103 @@ const toggleBtns = ref([
   },
 ])
 
+const fetchTravels = async () => {
+  loading.value = true
+  const res = await fetch('/api/v1/booking/travels-by-date')
+  const data = await res.json()
+  travels.value = data
+  console.log('travels', travels.value)
+  loading.value = false
+}
+fetchTravels()
+
 onMounted(() => {
   nextTick(() => {
     toggledBtn.value = route.query?.type || 'all'
   })
 })
 
-const filteredDeals = computed(() => {
+const filteredTravels = computed(() => {
   const franceDealIso = 'FR'
-  const queryType = route.query.type
-
-  return deals.value.filter((deal) => {
+  const queryType = toggledBtn.value
+  return travels.value.filter((travel) => {
+    const iso = Array.isArray(travel.iso) ? travel.iso[0] : travel.iso
     if (queryType === 'france') {
-      return deal.iso === franceDealIso && deal.dates.length > 0
+      return iso === franceDealIso && travel.dates.length > 0
     }
     else if (queryType === 'other') {
-      return deal.iso !== franceDealIso && deal.dates.length > 0
+      return iso !== franceDealIso && travel.dates.length > 0
     }
     else {
-      return deal.dates.length > 0
+      return travel.dates.length > 0
     }
   })
 })
 
 const groupByMonth = computed(() => {
   const today = dayjs()
-
-  // Step 1: Create separate objects for each deal-date combination and group by month
   const unsortedResult = {}
-
-  filteredDeals.value.forEach((deal) => {
-    deal.dates.forEach((dateInfo) => {
-      // Check if the departure date has not passed already
-      const departureDate = dayjs(dateInfo.departureDate)
+  filteredTravels.value.forEach((travel) => {
+    travel.dates.forEach((dateInfo) => {
+      const departureDate = dayjs(dateInfo.departure_date)
       if (departureDate.isBefore(today)) {
         return
       }
-
       const monthYear = capitalizeFirstLetter(departureDate.locale('fr').format('MMMM YYYY'))
-
       if (!unsortedResult[monthYear]) {
         unsortedResult[monthYear] = []
       }
-
-      // Create a new object that combines the deal and this specific date
-      const dealWithSingleDate = {
-        ...deal,
-        dates: [dateInfo], // Include only this specific date
-        departureDate: dateInfo.departureDate,
+      const travelWithSingleDate = {
+        ...travel,
+        dates: [dateInfo],
+        departureDate: dateInfo.departure_date,
       }
-
-      // Add this deal-date combination to the month
-      unsortedResult[monthYear].push(dealWithSingleDate)
+      unsortedResult[monthYear].push(travelWithSingleDate)
     })
   })
-
-  // Step 2: Sort the months chronologically and the deals within each month by departure date
   const monthsArray = Object.keys(unsortedResult).map((monthYear) => {
-    // Create a date for sorting (first day of the month)
     const date = dayjs(`01 ${monthYear.toLowerCase()}`, 'DD MMMM YYYY', 'fr')
-
-    // Sort the deals within this month by departure date
-    const sortedDeals = unsortedResult[monthYear].sort((a, b) => {
+    const sortedTravels = unsortedResult[monthYear].sort((a, b) => {
       return dayjs(a.departureDate).valueOf() - dayjs(b.departureDate).valueOf()
     })
-
     return {
       monthYear,
       date,
-      deals: sortedDeals,
+      travels: sortedTravels,
     }
   })
-
-  // Sort months chronologically
   monthsArray.sort((a, b) => a.date.valueOf() - b.date.valueOf())
-
-  // Step 3: Convert back to an object with chronologically sorted keys
   const sortedResult = {}
   monthsArray.forEach((item) => {
-    sortedResult[item.monthYear] = item.deals
+    sortedResult[item.monthYear] = item.travels
   })
-
+  console.log('sortedResult', sortedResult)
   return sortedResult
 })
 
 const sortedMonths = computed(() => {
-  return Object.keys(groupByMonth.value)
+  const sort = Object.keys(groupByMonth.value)
+  sort.unshift('Toutes périodes')
+  return sort
 })
 
 const groupByMonthFiltered = computed(() => {
-  return groupByMonth.value[selectedFilter.value]
+  if (selectedFilter.value === 'Toutes périodes') {
+    return filteredTravels.value
+  }
+  else {
+    return groupByMonth.value[selectedFilter.value]
+  }
 })
 
 const dealsLastMinuteFiltered = computed(() => {
-  const filteredDeals = []
+  const filteredTravels = []
   for (const month in groupByMonth.value) {
-    for (const deal of groupByMonth.value[month]) {
-      if (deal.dates[0].lastMinute) filteredDeals.push(deal)
+    for (const travel of groupByMonth.value[month]) {
+      if (travel.dates[0].last_minute) filteredTravels.push(travel)
     }
   }
-  return filteredDeals
+  return filteredTravels
 })
 
 function capitalizeFirstLetter(string) {

@@ -1,177 +1,154 @@
 <template>
   <v-card
     elevation="0"
+    hover
+    class="custom-card-width"
   >
     <NuxtLink
-      :key="`Voyage ${deal.slug}`"
       :to="`/voyages/${deal.slug}`"
       class="text-decoration-none position-relative text-white"
     >
       <v-img
-        :src="img(deal.imgSrc1.src, { format: 'webp', quality: 90, height: 350, width: 640 })"
-        :alt="deal.imgSrc1.alt"
-        rounded="xl"
-        height="250px"
-        class="hover-scale"
+        :src="img(deal.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
+        :lazy-src="img(deal.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
+        :alt="deal.image.alt || deal.title"
+        :srcset="`${img(deal.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(deal.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+        sizes="(max-width: 600px) 480px, 1024px"
+        class="img-height"
         cover
       >
-        <client-only>
-          <div class="d-flex justify-end mt-4 mr-1 position-absolute top-0 right-0">
-            <v-tooltip
-              v-if="voyageTooltips.group"
-              location="bottom"
-              :text="voyageTooltips.group"
-            >
-              <template #activator="{ props }">
-                <v-btn
-                  v-bind="props"
-                  icon
-                  size="x-small"
-                  color="rgba(0, 0, 0, 0.32)"
-                >
-                  <v-icon
-                    :icon="mdiAccountGroup"
-                    color="white"
-                  />
-                </v-btn>
-              </template>
-            </v-tooltip>
-            <v-tooltip
-              v-if="voyageTooltips.child"
-              location="bottom"
-              :text="voyageTooltips.child"
-            >
-              <template #activator="{ props }">
-                <v-btn
-                  v-bind="props"
-                  icon
-                  size="x-small"
-                  color="rgba(0, 0, 0, 0.32)"
-                >
-                  <v-img
-                    src="/icons/child.svg"
-                    alt="Child icon"
-                    class="svg-child-icon"
-                  />
-                </v-btn>
-              </template>
-            </v-tooltip>
-          </div>
-          <div class="display-mobile">
-            <div class="blur-overlay" />
-            <div class="position-absolute bottom-text text-shadow text-white bottom-0">
-              <v-card-title class="font-weight-bold py-1 px-0 text-h6 text-sm-h5 no-white-space">
-                {{ deal.title }}
-              </v-card-title>
-              <v-card-text class="font-weight-bold px-0 d-flex flex-column align-start ga-2 mt-4">
-                <span>
-                  <span class="hover-underline">{{ deal.country }} - </span><span class="text-caption font-weight-bold"><v-icon>{{ mdiCalendar }}</v-icon>{{
-                    dayjs(deal.dates[0].departureDate).format('DD/MM/YYYY') }} - {{ dayjs(deal.dates[0].returnDate).format('DD/MM/YYYY') }} </span>
-                </span>
-                <div
-                  v-if="deal.dates[0].earlyBird"
-                >
-                  À partir de
-                  <span class="text-decoration-line-through">{{ deal.dates[0].startingPrice }} € </span>
-                  <span class="text-primary"> {{ deal.dates[0].startingPrice - deal.dates[0].promoEarlyBird }} €</span>
-                </div>
-                <div
-                  v-else-if="deal.dates[0].lastMinute "
-                >
-                  À partir de
-                  <span class="text-decoration-line-through">{{ deal.dates[0].startingPrice }} €</span>
-                  <span class="text-secondary"> {{ deal.dates[0].startingPrice - deal.dates[0].promoLastMinute }} €</span>
-                </div>
-                <span
-                  v-else
-                >À partir de {{ deal.dates[0].startingPrice }} €</span>
-                <client-only>
-                  <div
-                    v-if="deal.comments > 0"
-                    class="d-flex align-center text-caption"
-                  >
-                    <v-rating
-                      :key="`rating-${deal.slug}`"
-                      half-increments
-                      size="small"
-                      readonly
-                      :model-value="deal.rating"
-                      color="orange-lighten-1"
-                      density="compact"
-                    />
-                    <span class="text-caption">({{ deal.comments }})</span>
-                  </div>
-                </client-only>
-              </v-card-text>
-            </div>
-          </div>
-        </client-only>
-      </v-img>
-
-    </NuxtLink>
-
-    <!--  BOTTOM TEXT -->
-    <div class="d-none d-sm-block ">
-      <NuxtLink
-        :to="`/destinations/${deal.country}`"
-        class="text-decoration-none"
-      >
-        <v-card-text class="font-weight-bold py-1 px-0 d-flex align-center">
-          <span>
-            <span class="text-primary hover-underline">{{ deal.country }} - </span><span class="text-secondary text-caption font-weight-bold"><v-icon>{{ mdiCalendar }}</v-icon>{{
-              dayjs(deal.dates[0].departureDate).format('DD/MM/YYYY') }} - {{ dayjs(deal.dates[0].returnDate).format('DD/MM/YYYY') }} </span>
-          </span>
-        </v-card-text>
-      </NuxtLink>
-      <NuxtLink
-        :to="`/voyages/${deal.slug}`"
-        class="text-decoration-none"
-      >
-        <v-card-title class="text-body-1 font-weight-bold py-1 px-0  no-white-space">
-          {{ deal.title }}
-        </v-card-title>
-        <v-card-text class="text-body-2 font-weight-bold  py-1 px-0">
-          <div
-            v-if="deal.dates[0].earlyBird"
-          >
-            À partir de
-            <span class="text-decoration-line-through">{{ deal.dates[0].startingPrice }} € </span>
-            <span class="text-primary">{{ deal.dates[0].startingPrice - deal.dates[0].promoEarlyBird }} €</span>
-          </div>
-          <div
-            v-else-if="deal.dates[0].lastMinute"
-          >
-            À partir de
-            <span class="text-decoration-line-through">{{ deal.dates[0].startingPrice }} €</span>
-            <span class="text-secondary">{{ deal.dates[0].startingPrice - deal.dates[0].promoLastMinute }} €</span>
-          </div>
-          <span
-            v-else
-          >À partir de {{ deal.dates[0].startingPrice }} €</span>
-        </v-card-text>
-        <div
-          v-if="deal.comments > 0"
-          class="d-flex align-center "
-        >
+        <div class="badge-position">
           <client-only>
             <v-rating
               :key="`rating-${deal.slug}`"
               half-increments
-              :size="24"
-              :model-value="deal.rating"
+              size="small"
               readonly
+              :model-value="deal.rating"
               color="orange-lighten-1"
+              density="compact"
             />
-            <span>({{ deal.comments }})</span>
+            <span class="text-caption ml-1">({{ deal.comments }})</span>
           </client-only>
         </div>
+      </v-img>
+    </NuxtLink>
+    <!--  BOTTOM TEXT -->
+    <div>
+      <NuxtLink
+        :to="`/voyages/${deal.slug}`"
+        class="text-decoration-none"
+      >
+        <v-card-text class="py-1">
+          <v-container class="px-0 px-md-2">
+            <v-row>
+              <v-col class="pt-lg-3 pt-0">
+                <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
+                  <div class="line-clamp-2">{{ deal.title }}</div>
+                  <v-tooltip
+                    v-if="deal.title.length > 60"
+                    activator="parent"
+                  >
+                    <span>
+                      {{ deal.title }}
+                    </span>
+                  </v-tooltip>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col cols="4">
+                <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2"> Type </div>
+                <div class="text-h6 font-weight-bold text-primary">{{ deal.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+              </v-col>
+              <v-divider
+                inset
+                vertical
+              />
+              <v-col
+                cols="4"
+                class="text-center"
+              >
+                <div class="text-h6 font-weight-bold text-primary">
+                  {{ deal.duration || (deal.dates[0]?.duration || '-') }}
+                </div>
+                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">Jours</div>
+              </v-col>
+              <v-divider
+                inset
+                vertical
+              />
+              <v-col
+                cols="4"
+                class="text-right"
+              >
+                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold"> À partir de </div>
+                <div class="text-h6 font-weight-bold text-primary">
+                  <template v-if="deal.dates[0]?.early_bird">
+                    <span class="text-decoration-line-through">{{ deal.dates[0]?.starting_price }}€</span>
+                    <span class="text-primary ml-1">{{ deal.dates[0]?.starting_price - (deal.dates[0]?.promoEarlyBird || 0) }}€</span>
+                  </template>
+                  <template v-else-if="deal.dates[0]?.last_minute">
+                    <span class="text-decoration-line-through">{{ deal.dates[0]?.starting_price }}€</span>
+                    <span class="text-secondary ml-1">{{ deal.dates[0]?.starting_price - (deal.dates[0]?.promoLastMinute || 0) }}€</span>
+                  </template>
+                  <template v-else>
+                    {{ deal.dates[0]?.starting_price }}€
+                  </template>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col
+                cols="12"
+                class="pt-0"
+              >
+                <div class="text-caption text-grey-darken-1">
+                  <v-icon size="18">{{ mdiCalendar }}</v-icon>
+                  {{ deal.dates[0]?.departure_date ? dayjs(deal.dates[0]?.departure_date).format('DD/MM/YYYY') : '-' }}
+                  <span v-if="deal.dates[0]?.return_date"> - {{ dayjs(deal.dates[0]?.return_date).format('DD/MM/YYYY') }}</span>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card-text>
+        <v-divider />
+        <v-card-actions
+          class="justify-center"
+          :class="deal.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
+        >
+          <client-only>
+            <v-btn
+              v-if="deal.groupeAvailable"
+              block
+              color="primary"
+              class="text-body-1"
+            >
+              <div class="mb-md-1 mr-2">
+                Découvrir les dates
+              </div>
+              <v-icon size="24px">{{ mdiPlusCircle }}</v-icon>
+            </v-btn>
+            <v-btn
+              v-else
+              block
+              color="secondary"
+              class="text-decoration-none text-body-1"
+            >
+              <div class="mb-md-1 mr-2">
+                Demander un devis
+              </div>
+              <v-icon size="24px">{{ mdiPlusCircle }}</v-icon>
+            </v-btn>
+          </client-only>
+        </v-card-actions>
       </NuxtLink>
     </div>
   </v-card>
 </template>
 
 <script setup>
-import { mdiAccountGroup, mdiCalendar } from '@mdi/js'
+import { mdiPlusCircle, mdiCalendar } from '@mdi/js'
 import dayjs from 'dayjs'
 import { useImage } from '#imports'
 
@@ -181,71 +158,73 @@ const props = defineProps({
   },
 })
 const img = useImage()
-
-const voyageTooltips = computed(() => {
-  return {
-    child: props.deal.tooltipChild,
-    group: props.deal.tooltipGroup,
-  }
-})
+const actionColor = computed(() => props.deal.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>
 
 <style scoped>
-.hover-underline:hover{
-  text-decoration: underline;
+.badge-position{
+  position: absolute;
+  top: 25px;
+  right: 28px;
 }
-.svg-child-icon {
-    width: 1rem;
-    height: 1rem;
+.title-container {
+  height: 2.4em; /* This sets a fixed height equivalent to 2 lines */
 }
-.display-mobile{
-  display:none;
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  line-height: 120%!important;
+  font-size: 28px!important;
 }
-@media screen and (max-width: 600px) {
-  .display-mobile{
-    display:block;
+.custom-card-width{
+  min-width:406px!important;
+}
+.hover-primary:hover{
+  background-color: v-bind(actionColor);
+}
+.hover-secondary:hover{
+  background-color: v-bind(actionColor);
+}
+:deep(.v-btn--variant-text .v-btn__overlay){
+  background-color: v-bind(actionColor);
+}
+.img-height{
+  height: 228px;
+}
+@media screen and (max-width: 1240px) {
+  .line-clamp-2{
+    font-size: 24px!important;
+  }
+  .title-container {
+    height: 2.2em; /* This sets a fixed height equivalent to 2 lines */
+  }
+  .custom-card-width{
+    min-width:350px!important;
   }
 }
-.bottom-text{
-  padding-top:1em;
-  padding-left:1em;
-}
-.blur-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  border-radius: 24px;
-  mask: linear-gradient(transparent, rgb(0, 0, 0), black);
-  backdrop-filter: blur(4px);
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.752));
-  transition: all 0.5s ease-in-out;
-}
-
-.position-absolute{
-  position:absolute;
-  bottom:0;
-}
-
-.hover-scale:hover .blur-overlay {
-  height: 100%;
-}
-.hover-scale:hover{
-  transform: scale(1.01);
-  transition: transform 0.2s ease-in-out;
-}
-.hover-scale{
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-}
-.min-height-img{
-  height: 225px;
+@media screen and (max-width: 1024px) {
+  .line-clamp-2{
+    font-size: 18px!important;
+  }
 }
 @media screen and (max-width: 600px) {
-  .min-height-img{
-    min-height: 300px!important;
-    min-width:300px;
+  .badge-position{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+  }
+  .img-height{
+    height: 150px;
+  }
+  .line-clamp-2{
+    line-height: 20px!important;
+    font-size: 16px!important;
+  }
+  .custom-card-width{
+    min-width:280px!important;
   }
 }
 </style>

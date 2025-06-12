@@ -22,76 +22,36 @@
   "nights": 0,
   "includeFlight": false,
   "housingType": "Tipi",
-  "idealPeriods": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
   "minAge": 8,
   "rating": 4.8,
   "comments": 1,

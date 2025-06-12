@@ -40,16 +40,36 @@
   "nights": 7,
   "includeFlight": true,
   "housingType": "Chez l'habitant et en hôtels",
-  "idealPeriods": [
-    {
-      "month": "Février"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Février"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": true,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": true,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 1,

@@ -37,22 +37,36 @@
   "nights": 0,
   "includeFlight": false,
   "housingType": "Hôtel, camp sur glace",
-  "idealPeriods": [
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 10,

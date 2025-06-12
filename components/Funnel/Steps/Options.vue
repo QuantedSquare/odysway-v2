@@ -1,6 +1,6 @@
 <template>
   <v-skeleton-loader
-    v-if="loadingDeal"
+    v-if="!dealId"
     type="card"
   />
   <v-container v-else>
@@ -95,21 +95,25 @@ const vegeOption = ref(false)
 const otherFoodOption = ref(false)
 
 const model = defineModel()
+model.value = false
 
-watch([deal, () => props.currentStep], () => {
-  model.value = false
-  if (dealId.value && deal.value) {
-    model.value = true
-    if (deal.value && deal.value.nbTravelers) {
-      indivRoomPrice.value = +deal.value.indivRoomPrice //
-
-      indivRoom.value = deal.value.indivRoom?.includes('Oui')
-      vegeOption.value = deal.value.specialRequest?.includes('Régimes alimentaires spécifiques')
-      otherFoodOption.value = deal.value.specialRequest?.includes('Autres demandes particulières')
-      specialRequest.value = deal.value.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim()
-    }
+watch([loadingDeal, deal, () => props.currentStep], ([loading, dealVal, currentStep]) => {
+  if (loading) {
+    model.value = false
+    return
   }
-  if (props.currentStep === props.ownStep) {
+  if (dealId.value && dealVal) {
+    indivRoomPrice.value = +dealVal.indivRoomPrice
+    indivRoom.value = dealVal.indivRoom?.includes('Oui')
+    vegeOption.value = dealVal.specialRequest?.includes('Régimes alimentaires spécifiques')
+    otherFoodOption.value = dealVal.specialRequest?.includes('Autres demandes particulières')
+    specialRequest.value = dealVal.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim()
+    model.value = true
+  }
+  else {
+    model.value = false
+  }
+  if (currentStep === props.ownStep) {
     addSingleParam('step', props.ownStep)
   }
 }, { immediate: true })

@@ -40,34 +40,36 @@
   "nights": 0,
   "includeFlight": false,
   "housingType": "Maison",
-  "idealPeriods": [
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Septembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Septembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 4.5,
   "comments": 2,

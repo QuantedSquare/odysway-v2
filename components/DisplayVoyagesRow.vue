@@ -135,7 +135,8 @@ const props = defineProps({
     default: false,
   },
   voyages: {
-    type: Object,
+    type: Array,
+    default: () => [],
   },
 })
 

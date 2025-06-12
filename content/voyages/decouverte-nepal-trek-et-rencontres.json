@@ -43,64 +43,36 @@
   "nights": 12,
   "includeFlight": false,
   "housingType": "Hotel, lodge, chez l'habitant",
-  "idealPeriods": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Février"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 10,

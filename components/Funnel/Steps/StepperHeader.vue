@@ -8,7 +8,7 @@
   >
     <v-stepper-header
       v-if="props.skipperMode !== 'summary'"
-      class="elevation-0 d-flex justify-center text-shadow"
+      class="d-none elevation-0 d-md-flex justify-center text-shadow"
     >
       <template
         v-for="(step, index) in stepDefinitions"

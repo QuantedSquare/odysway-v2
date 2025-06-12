@@ -31,28 +31,36 @@
   "nights": 3,
   "includeFlight": false,
   "housingType": "Gîte",
-  "idealPeriods": [
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 2,

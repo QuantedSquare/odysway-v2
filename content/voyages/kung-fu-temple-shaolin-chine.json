@@ -37,76 +37,36 @@
   "nights": 10,
   "includeFlight": false,
   "housingType": "Temple Shaolin, hôtel",
-  "idealPeriods": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Janvier"
-    },
-    {
-      "month": "Mars"
-    },
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    },
-    {
-      "month": "Septembre"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    },
-    {
-      "month": "Décembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": false,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": false,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 4,

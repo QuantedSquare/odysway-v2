@@ -34,28 +34,36 @@
   "nights": 0,
   "includeFlight": false,
   "housingType": "Gite",
-  "idealPeriods": [
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Septembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Avril"
-    },
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Septembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": true,
+    "mai": false,
+    "juin": true,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": true,
+    "mai": false,
+    "juin": true,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 10,

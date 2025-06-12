@@ -28,28 +28,36 @@
   "nights": 7,
   "includeFlight": false,
   "housingType": "Chalet",
-  "idealPeriods": [
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Juin"
-    },
-    {
-      "month": "Juillet"
-    },
-    {
-      "month": "Août"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 5,
   "comments": 10,

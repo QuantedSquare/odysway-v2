@@ -28,28 +28,36 @@
   "nights": 11,
   "includeFlight": false,
   "housingType": "Hôtel et Ryokan",
-  "idealPeriods": [
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    }
-  ],
-  "monthlyAvailability": [
-    {
-      "month": "Mai"
-    },
-    {
-      "month": "Octobre"
-    },
-    {
-      "month": "Novembre"
-    }
-  ],
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
   "minAge": 8,
   "rating": 4.8,
   "comments": 5,

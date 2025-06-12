@@ -344,7 +344,7 @@ function searchFn() {
   if (travelTypeChoice.value) {
     query.travelType = travelTypeChoice.value
   }
-  if (date.value.length > 0 && date.value[0] !== 0) {
+  if (date.value.length > 0 && !date.value.includes(0)) {
     query.from = date.value.join(',')
   }
 

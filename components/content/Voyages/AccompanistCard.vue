@@ -16,10 +16,10 @@
           />
         </v-col>
         <v-col class="d-flex flex-column justify-center align-center align-sm-start">
-          <v-list-item-title class="text-h5 font-weight-bold text-center text-sm-start no-white-space mb-2">
+          <v-list-item-title class="text-h5 font-weight-bold text-center text-sm-start no-white-space mb-2 ">
             {{ name }}
           </v-list-item-title>
-          <v-list-item-subtitle class="no-white-space text-h5">
+          <v-list-item-subtitle class="no-white-space text-h5 pb-1">
             {{ role }}
           </v-list-item-subtitle>
           <p
