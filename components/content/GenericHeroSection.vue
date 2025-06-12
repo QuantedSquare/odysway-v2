@@ -48,7 +48,7 @@
             </div>
           </div>
           <h1
-            class="text-h4 text-lg-h1 font-weight-bold"
+            class="text-center text-md-left text-h4 text-lg-h1 font-weight-bold"
             :class="`text-${titleColor}`"
           >
             <slot name="title" />

@@ -5,9 +5,9 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
-    <v-row class="py-6 py-md-10">
+    <v-row class="py-6 pt-md-10 px-12">
       <v-col
-        cols=""
+        cols="auto"
         md="auto"
         class="d-flex align-center"
       >
@@ -70,7 +70,9 @@
           color="primary"
           variant="outlined"
           size="large"
-          class="text-subtitle-2"
+          class="text-body-1"
+          height="62px"
+          width="172px"
           @click="reinitiliazeFilter"
         >
           Réinitialiser
