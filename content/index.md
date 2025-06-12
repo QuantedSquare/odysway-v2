@@ -69,7 +69,7 @@ au cœur du voyage
     ::::voyage-col-card{voyage-slug="bivouac-montagne-pyrenees"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="decouvrez-photo-animaliere-jura"}
+    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
     ::::
   
     ::::voyage-col-card{voyage-slug="immersion-observatoire-astronomique"}
