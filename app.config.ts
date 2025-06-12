@@ -1,18 +1,4 @@
 export default defineAppConfig({
-  ui: {
-    colors: {
-      primary: 'green',
-      neutral: 'slate',
-    },
-    icons: {
-      search: 'i-lucide-search',
-      dark: 'i-lucide-moon',
-      light: 'i-lucide-sun',
-      external: 'i-lucide-external-link',
-      chevron: 'i-lucide-chevron-down',
-      hash: 'i-lucide-hash',
-    },
-  },
   seo: {
     siteName: 'Odysway',
   },

@@ -119,11 +119,11 @@
             md="3"
           >
             <h5 class="text-h4 font-weight-bold mb-10">
-              {{ footer.linksList.colonne1.title }}
+              {{ footer.linksList.colonne2.title }}
             </h5>
             <div class="d-flex flex-column ga-2">
               <NuxtLink
-                v-for="link, index in footer.linksList.colonne1.links"
+                v-for="link, index in footer.linksList.colonne2.links"
                 :key="`${link.label}-${index}`"
                 :to="link.to"
                 class="text-grey"
@@ -138,11 +138,11 @@
             md="3"
           >
             <h5 class="text-h4 font-weight-bold mb-10">
-              {{ footer.linksList.colonne2.title }}
+              {{ footer.linksList.colonne3.title }}
             </h5>
             <div class="d-flex flex-column ga-2">
               <NuxtLink
-                v-for="link, index in footer.linksList.colonne2.links"
+                v-for="link, index in footer.linksList.colonne3.links"
                 :key="`${link.label}-${index}`"
                 :to="link.to"
                 class="text-grey"

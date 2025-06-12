@@ -73,6 +73,7 @@
         />
 
         <FaqVoyagesContainer
+          :background-image="voyage.image?.src"
           :faq-block="voyage.faqBlock"
         />
 

@@ -15,6 +15,7 @@ const voyageDir = path.resolve(__dirname, 'content/voyages')
 const voyageFiles = fs.readdirSync(voyageDir)
 const voyageChoices = voyageFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(voyageDir, file), 'utf-8')).slug)
+  .filter(Boolean) as [string, ...string[]]
 
 const destinationDir = path.resolve(__dirname, 'content/destinations')
 const destinationFolders = fs.readdirSync(destinationDir).filter(
@@ -295,7 +296,7 @@ export default defineContentConfig({
     ),
     page_voyage_fr: defineCollection({
       type: 'data',
-      source: 'textes/fr/voyage.json', // #Todo, modifier par voyages.json
+      source: 'textes/fr/voyage.json',
       schema: z.object({
         shareButton: z.object({
           text: z.string(),
@@ -406,6 +407,60 @@ export default defineContentConfig({
         }).describe('Section pourquoi, defini dans le dossier voyagesv2'),
         otherIdeas: z.string().describe('Titre de la section carousel propositions de voyages'),
       }),
+    }),
+    ctas: defineCollection({
+      type: 'data',
+      source: {
+        include: 'textes/fr/ctas.json',
+      },
+      schema: z.object({
+        faqSection: z.object({
+          ctaCard: z.object({
+            avatar: z.string().editor({ input: 'media' }).describe('avatar en haut de la card'),
+            title: z.string().describe('Titre de la card'),
+            subtitle: z.string().describe('Sous-titre de la card'),
+            button: z.object({
+              text: z.string().describe('Texte du bouton'),
+              to: z.string().describe('Lien du bouton'),
+            }).describe('Bouton de la card'),
+          }),
+          faqHomeSubText: z.object({
+            question: z.string().describe('Texte de la section'),
+            text: z.string().describe('Texte de la section'),
+            linkOnText: z.string().describe('Lien du bouton'),
+            subtitle: z.string().describe('Sous-titre de la section'),
+            text2: z.string().describe('Texte de la section'),
+            linkOnText2: z.string().describe('Lien du bouton'),
+          }).describe('Card FAQ, defini dans le dossier voyagesv2'),
+        }),
+        partenairesSection: z.object({
+          title: z.string().describe('Titre de la section'),
+          subtitle: z.string().describe('Sous-titre de la section'),
+        }).describe('Section partenaires, defini dans le dossier voyagesv2'),
+      }),
+    }),
+    // TODO: add schema for funnel (check the page.json from backend, some fields are already filled)
+    funnel: defineCollection({
+      type: 'data',
+      source: 'textes/fr/funnel.json',
+      schema: z.object({
+        checkout: z.object({
+          title: z.string().describe('Titre de la section'),
+          subtitle: z.string().describe('Sous-titre de la section'),
+          button: z.object({
+            text: z.string().describe('Texte du bouton'),
+            to: z.string().describe('Lien du bouton'),
+          }).describe('Bouton de la section'),
+        }).describe('Section checkout, defini dans le dossier voyagesv2'),
+        indivDev: z.object({
+          title: z.string().describe('Titre de la section'),
+          subtitle: z.string().describe('Sous-titre de la section'),
+          button: z.object({
+            text: z.string().describe('Texte du bouton'),
+            to: z.string().describe('Lien du bouton'),
+          }).describe('Bouton de la section'),
+        }).describe('Section indivDev, defini dans le dossier voyagesv2'),
+      }).describe('Section funnel, defini dans le dossier voyagesv2'),
     }),
     voyages: defineCollection({
       type: 'data',

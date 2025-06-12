@@ -18,6 +18,7 @@
             v-if="review.voyageTitle && review.voyageSlug"
             :to="`/voyages/${review.voyageSlug}`"
             class="text-body-2 text-primary text-truncate pb-2"
+            :class="{ 'd-none': isTravelPage }"
           >
             {{ review.voyageTitle }}
           </NuxtLink>
@@ -88,6 +89,10 @@ defineProps({
   review: {
     type: Object,
     required: true,
+  },
+  isTravelPage: {
+    type: Boolean,
+    default: false,
   },
 })
 const isExpanded = ref(true)

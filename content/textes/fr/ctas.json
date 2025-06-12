@@ -1,0 +1,25 @@
+{
+  "faqSection": {
+    "ctaCard": {
+      "avatar": "/images/team/romain.webp",
+      "title": "Autres questions ? Notre équipe est là pour vous renseigner",
+      "subtitle": "Un membre de l'équipe vous répondra dans les plus brefs délais",
+      "button": {
+        "text": "Contactez-nous",
+        "to": "/calendly"
+        }
+    },
+    "faqHomeSubText": {
+      "question": "D'autres questions ?",
+      "text": "Consulter notre FAQ",
+      "linkOnText": "/faq",
+      "subtitle": "Si vous ne trouvez pas la réponse que vous cherchez n'hésitez pas à",
+      "text2": "nous contacter.",
+      "linkOnText2": "/calendly"
+    }
+  },
+  "partenairesSection": {
+    "title": "Une agence fiable et engagée",
+    "subtitle": "Découvrez nos partenaires qui nous font confiance"
+    }
+}

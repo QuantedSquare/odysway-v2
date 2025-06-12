@@ -20,7 +20,7 @@
         class="rounded-lg"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
-        <h2 class="text-center text-white my-6">
+        <h2 class="text-center text-white">
           <TitleContainer>
             <template #title>
               <slot name="section-title" />
@@ -38,24 +38,28 @@
               <slot name="faq" />
             </v-col>
           </v-row>
-          <v-row class="mb-10">
-            <v-col>
+          <v-row
+            class="mb-10 text-shadow"
+            justify="center"
+          >
+            <v-col cols="7">
               <div
                 v-if="route.path !== '/faq'"
                 class="text-center text-h5 text-white font-weight-bold"
               >
-                <span> D'autres questions? </span>
+                <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
                 <NuxtLink
                   to="/faq"
                   class="text-secondary font-weight-bold"
-                >Consulter notre FAQ</NuxtLink>
+                > {{ faqTextes?.faqSection?.faqHomeSubText?.text }} </NuxtLink>
               </div>
-              <div class="text-center text-subtitle-1 text-white font-weight-bold d-flex flex-column mt-6">
-                <span>Si vous ne trouvez pas la réponse que vous cherchez</span>
-                <span>n'hésitez pas à <NuxtLink
-                  to="/calendly"
-                  class="text-secondary font-weight-bold"
-                >nous contacter.</NuxtLink></span>
+              <div class="text-center text-h5 text-white font-weight-regular d-flex flex-column mt-6">
+                <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
+                  <NuxtLink
+                    :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
+                    class="text-secondary font-weight-bold"
+                  >{{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}</NuxtLink>
+                </span>
               </div>
             </v-col>
           </v-row>
@@ -87,9 +91,10 @@ defineProps({
 
 const route = useRoute()
 
-// const { data: faqDefault } = await useAsyncData('faq-default', () => {
-//   return queryCollection('faqDefault').first()
-// })
+const { data: faqTextes } = await useAsyncData('faq-textes', () => {
+  return queryCollection('ctas').select('faqSection').first()
+})
+console.log('faqTextes', faqTextes.value)
 </script>
 
 <style scoped>

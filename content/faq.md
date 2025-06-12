@@ -130,7 +130,7 @@ schemaOrg:
 #section-title
   :::title-container
   #title
-  Foire aux questions
+  Questions fréquentes
   :::
 
 #faq

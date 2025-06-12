@@ -42,28 +42,34 @@
                   lines="one"
                   select-strategy="classic"
                 >
-                  <v-list-item-title
-                    style="cursor:pointer"
-                    class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold"
-                    @click.stop="selectRegion(item.raw)"
-                  >
-                    <div v-if="item.raw.value === 'top-destination'">
-                      <v-img
-                        :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
-                        width="20"
-                        height="20"
-                        class="align-self-end"
-                      />
-                    </div>
-                    <v-icon
-                      v-else
-                      :icon="mdiEarth"
-                      class="svg-white"
-                      size="24"
-                    />
+                  <v-hover>
+                    <template #default="{ isHovering, props }">
+                      <v-list-item-title
+                        v-bind="props"
+                        style="cursor:pointer"
+                        class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold hover-bg-primary"
+                        :class="{ 'bg-grey-light text-primary': isHovering }"
+                        @click.stop="selectRegion(item.raw)"
+                      >
+                        <div v-if="item.raw.value === 'top-destination'">
+                          <v-img
+                            :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
+                            width="20"
+                            height="20"
+                            class="align-self-end"
+                          />
+                        </div>
+                        <v-icon
+                          v-else
+                          :icon="mdiEarth"
+                          class="svg-white"
+                          size="24"
+                        />
 
-                    {{ item.title }}
-                  </v-list-item-title>
+                        {{ item.title }}
+                      </v-list-item-title>
+                    </template>
+                  </v-hover>
 
                   <v-list-item
                     v-for="destination, index in filteredDestinationsForRegion(item.raw, search, item)"

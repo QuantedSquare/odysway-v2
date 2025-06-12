@@ -64,7 +64,10 @@
           sm="6"
           md="4"
         >
-          <ReviewTraveller :review="review" />
+          <ReviewTraveller
+            :review="review"
+            :is-travel-page="true"
+          />
         </v-col>
       </v-row>
     </div>

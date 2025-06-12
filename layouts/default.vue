@@ -28,15 +28,16 @@
       class="py-0 my-0 px-2 px-md-9"
     >
       <ColorContainer
+        v-if="status === 'success'"
         color="secondary"
         :white-text="true"
       >
         <InfoContainer :white-text="true">
           <template #title>
-            Une agence fiable et engagée
+            {{ partenairesTextes?.partenairesSection?.title }}
           </template>
           <template #description>
-            Fringilla ut morbi tincidunt augue interdum velit euismod cursus vitae congue mauris rhoncus aenean.
+            {{ partenairesTextes?.partenairesSection?.subtitle }}
           </template>
           <template #bottom>
             <PartenairesContainer />
@@ -56,6 +57,9 @@ const { width } = useDisplay()
 const drawer = ref(false)
 const { data: faqPage } = useAsyncData('faq-section', () => {
   return queryCollection('content').path('/faq').first()
+})
+const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
+  return queryCollection('ctas').select('partenairesSection').first()
 })
 </script>
 

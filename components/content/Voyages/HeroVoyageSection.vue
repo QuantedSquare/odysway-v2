@@ -101,7 +101,7 @@
           rounded="lg"
         />
         <v-img
-          v-if="voyage.photosList.length > 0"
+          v-if="voyage.photosList?.length > 0"
           :src="img(voyage.photosList[0].src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(voyage.photosList[0].src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
@@ -137,12 +137,12 @@
         class="hidden-sm-and-down"
       >
         <PhotoGalleryDialog
-          v-if="voyage.photosList.length > 0"
+          v-if="voyage.photosList?.length > 0"
           :photos-list="voyage.photosList"
         />
       </v-col>
       <v-col
-        v-if="voyage.videoLinks.length > 0"
+        v-if="voyage.videoLinks?.length > 0"
         cols="auto"
         class="px-0"
       >
