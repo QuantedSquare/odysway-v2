@@ -37,12 +37,16 @@
                   height="24"
                 />
               </template>
-              <template #item="{ props, item }">
+              <template #item="{ item }">
                 <v-list
                   lines="one"
                   select-strategy="classic"
                 >
-                  <v-list-item-title class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold">
+                  <v-list-item-title
+                    style="cursor:pointer"
+                    class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold"
+                    @click.stop="selectRegion(item.raw)"
+                  >
                     <div v-if="item.raw.value === 'top-destination'">
                       <v-img
                         :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
@@ -65,8 +69,8 @@
                     v-for="destination, index in filteredDestinationsForRegion(item.raw, search, item)"
                     :key="index"
                     density="compact"
-                    class="px-0 mb-0 border-b"
-                    :class="{ ' pb-2': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
+                    class="px-0 mb-0 "
+                    :class="{ ' pb-2 border-b': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
                     nav
                     @click="selectDestination(destination)"
                   >
@@ -159,6 +163,7 @@ import { useImage } from '#imports'
 const img = useImage()
 const router = useRouter()
 const route = useRoute()
+const isSelectionARegion = ref(false)
 // const dateMenu = ref(false)
 const { gtag } = useGtag()
 const destinationId = useId()
@@ -272,7 +277,7 @@ function aggregateDestinations(mappedRegions, query) {
   return Object.values(destinationMap)
 }
 
-function filteredDestinationsForRegion(region, query, item) {
+function filteredDestinationsForRegion(region, query, _item) {
   // Only show destinations that match the query, deduplicated and aggregated
   const searchText = normalize(query)
   if (!query || normalize(region.title).includes(searchText)) {
@@ -326,7 +331,9 @@ const filteredRegions = computed(() => {
   // Group by region label
   const regionGroups = {}
   Object.values(destinationMap).forEach((dest) => {
-    const regionLabel = dest.regions.length > 1 ? dest.regions.join(' & ') : dest.regions[0]
+    const processedRegions = _.uniq(dest.regions.map(r => typeof r === 'string' ? r : r.nom))
+
+    const regionLabel = processedRegions.length > 1 ? processedRegions.join(' & ') : processedRegions[0]
     if (!regionGroups[regionLabel]) regionGroups[regionLabel] = []
     regionGroups[regionLabel].push(dest)
   })
@@ -334,12 +341,22 @@ const filteredRegions = computed(() => {
   return Object.entries(regionGroups).map(([title, destinations]) => ({ title, destinations }))
 })
 
+const selectedRegionSlug = ref(null)
+
 function searchFn() {
   const query = {}
 
   if (destinationChoice.value) {
-    const value = destinations.value.find(d => d.titre === destinationChoice.value).slug
-    query.destination = value
+    if (isSelectionARegion.value) {
+      // Use the stored region slug
+      query.destination = selectedRegionSlug.value
+    }
+    else {
+      const found = destinations.value.find(d => d.titre === destinationChoice.value)
+      if (found) {
+        query.destination = found.slug
+      }
+    }
   }
   if (travelTypeChoice.value) {
     query.travelType = travelTypeChoice.value
@@ -356,6 +373,7 @@ function searchFn() {
 }
 
 function selectDestination(item) {
+  isSelectionARegion.value = false
   destinationChoice.value = item.titre
   search.value = item.slug
   setTimeout(() => {
@@ -363,11 +381,35 @@ function selectDestination(item) {
     if (input) input.blur()
   }, 0)
 }
-
+function selectRegion(region) {
+  isSelectionARegion.value = true
+  destinationChoice.value = region.title
+  selectedRegionSlug.value = region.value
+  search.value = region.title
+  setTimeout(() => {
+    const input = document.querySelector(`#${destinationId}`)
+    if (input) input.blur()
+  }, 0)
+}
 function clearDestination() {
   destinationChoice.value = null
   search.value = ''
 }
+
+onMounted(() => {
+  if (route.query.destination) {
+    const region = regions.value.find(r => r.slug === route.query.destination)
+    if (region) {
+      selectRegion(region)
+    }
+    else {
+      const destination = destinations.value.find(d => d.slug === route.query.destination)
+      if (destination) {
+        selectDestination(destination)
+      }
+    }
+  }
+})
 </script>
 
 <style scoped>

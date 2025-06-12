@@ -117,6 +117,7 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
+import _ from 'lodash'
 import SearchField from '~/components/content/SearchField.vue'
 
 const { lgAndUp } = useDisplay()
@@ -198,17 +199,37 @@ function filterByDate(voyages, fromList) {
   })
 }
 
+const { data: regions } = await useAsyncData('regions', () => {
+  return queryCollection('regions').all()
+})
+const { data: destinations } = await useAsyncData('destinations', () => {
+  return queryCollection('destinations').where('published', '=', true).all()
+})
+
 const { data: voyages } = await useAsyncData(
   `search-${JSON.stringify(route.query)}`,
   async () => {
     let destination = null
+    let regionSlug = null
+    let isRegionSearch = false
+    let isTopDestinations = false
+
     if (route.query.destination) {
-      const { titre } = await queryCollection('destinations')
-        .where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`)
-        .where('published', '=', true)
-        .select('titre')
-        .first()
-      destination = titre
+      // Check if the destination param matches a region slug
+      const region = regions.value.find(r => r.slug === route.query.destination)
+      if (region) {
+        isRegionSearch = true
+        regionSlug = region.slug
+      }
+      else if (route.query.destination === 'top-destination') {
+        isRegionSearch = true
+        isTopDestinations = true
+      }
+      else {
+        // Otherwise, treat as destination slug
+        const found = destinations.value.find(d => d.slug === route.query.destination)
+        if (found) destination = found.titre
+      }
     }
 
     const travelType = route.query.travelType || null
@@ -216,13 +237,34 @@ const { data: voyages } = await useAsyncData(
 
     let voyages = await queryCollection('voyages').where('published', '=', true).all()
 
-    voyages = filterByDestination(voyages, destination)
+    if (isRegionSearch) {
+      let destinationList = []
+      if (isTopDestinations) {
+        destinationList = destinations.value.filter(d => d.isTopDestination)
+      }
+      else {
+        const region = regions.value.find(r => r.slug === regionSlug)
+        if (region) {
+          destinationList = destinations.value.filter(dest =>
+            dest.regions && dest.regions.some(r => r.nom === region.nom),
+          )
+        }
+      }
+      const destinationNames = destinationList.map(d => d.titre)
+      voyages = voyages.filter(v =>
+        v.destinations?.some(d => destinationNames.includes(d.name)),
+      )
+    }
+    else {
+      voyages = filterByDestination(voyages, destination)
+    }
+
     voyages = filterByType(voyages, travelType)
     voyages = filterByDate(voyages, fromList)
 
-    return voyages
+    return _.uniqBy(voyages, 'slug')
   },
-  { watch: [routeQuery] },
+  { watch: [routeQuery, regions, destinations] },
 )
 
 const nbVoyages = computed(() => {
