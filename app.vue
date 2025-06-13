@@ -59,7 +59,7 @@ if (config.public.environment === 'production') {
 
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
-  if (isConsent) {
+  if (isConsent && config.public.environment === 'production') {
     trackPixel('track', 'PageView')
   }
 })

@@ -57,10 +57,10 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
       dev: true,
     },
-    database: {
-      type: 'postgres',
-      url: process.env.POSTGRES_URL || 'postgres://localhost:5432/nuxt',
-    },
+    // database: {
+    //   type: 'postgres',
+    //   url: process.env.POSTGRES_URL || 'postgres://localhost:5432/nuxt',
+    // },
   },
   runtimeConfig: {
     public: {
