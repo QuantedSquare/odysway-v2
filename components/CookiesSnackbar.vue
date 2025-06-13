@@ -37,7 +37,6 @@
 <script setup>
 const consentBar = ref(true)
 const { gtag, initialize } = useGtag()
-
 onMounted (() => {
   if (!localStorage.getItem('consent')) {
     setTimeout(() => {
@@ -90,7 +89,6 @@ function acceptCookies() {
     ad_storage: 'granted',
     analytics_storage: 'granted',
   })
-
   trackPixel('track', 'PageView')
   localStorage.setItem('consent', 'granted')
 }

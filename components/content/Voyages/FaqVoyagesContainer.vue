@@ -39,7 +39,7 @@
             md="4"
             class="px-0 pl-md-4"
           >
-            <CtaCardSheet />
+            <CtaCardSheet class="mt-2" />
           </v-col>
         </v-row>
       </v-container>
