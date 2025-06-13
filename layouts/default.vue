@@ -66,8 +66,8 @@ const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', ()
 <style scoped>
 .whatsapp-button {
   position: fixed;
-  bottom: -60px;
-  right: 5px;
+  bottom: -55px;
+  right: 15px;
   z-index: 10000;
 }
 

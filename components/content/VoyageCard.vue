@@ -147,20 +147,6 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
 .title-container {
   height: 2.4em; /* This sets a fixed height equivalent to 2 lines */
 }
-.line-clamp-2{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  line-height: 120%!important;
-  font-size: 28px!important;
-}
-.custom-card-width{
-  min-width:406px!important;
-  /* margin-right: 25px!important; */
-}
-
 .hover-primary:hover{
   background-color: v-bind(actionColor);
 }
@@ -173,6 +159,30 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
 .img-height{
   height: 228px;
 }
+
+.line-clamp-2{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  line-height: 120%!important;
+  font-size: 28px!important;
+}
+.custom-card-width{
+  min-width:406px!important;
+}
+@media screen and (max-width: 1280px) {
+  .custom-card-width{
+  min-width:406px!important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .custom-card-width{
+  min-width:350px!important;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .line-clamp-2{
     font-size: 24px!important;
@@ -182,14 +192,18 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
   }
   .custom-card-width{
   min-width:350px!important;
-  /* margin-right: 20px!important; */
-}
+  }
 }
 
 @media screen and (max-width: 1024px) {
 .line-clamp-2{
   font-size: 18px!important;
+  }
 }
+@media screen and (max-width: 750px) {
+  .custom-card-width{
+  min-width:280px!important;
+  }
 }
 @media screen and (max-width: 600px) {
   .badge-position{
@@ -206,7 +220,6 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
   }
   .custom-card-width{
   min-width:280px!important;
-  /* margin-right: 10px!important; */
-}
+  }
 }
 </style>

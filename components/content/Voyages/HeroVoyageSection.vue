@@ -172,7 +172,12 @@ const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
 const photoCarousel = computed(() => {
-  return [props.voyage.image, props.voyage.imageSecondary, ...props.voyage.photosList]
+  if (!props.voyage) return []
+  const photos = []
+  if (props.voyage.image) photos.push(props.voyage.image)
+  if (props.voyage.imageSecondary) photos.push(props.voyage.imageSecondary)
+  if (props.voyage.photosList?.length) photos.push(...props.voyage.photosList)
+  return photos
 })
 
 function copyUrl() {

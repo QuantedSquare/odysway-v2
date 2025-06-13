@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-lg  mx-4 mx-md-0 px-8 py-md-5 d-flex flex-column justify-start mt-2"
+    class="text-start text-h5 text-white font-weight-bold bg-primary rounded-lg  mx-0 px-8 py-md-5 d-flex flex-column justify-start mt-2"
     :class="route.name === 'search' || route.name.includes('thematiques') || route.name.includes('experience') ? 'h-100' : ''"
   >
     <v-avatar
@@ -20,7 +20,7 @@
       {{ faqTextes?.faqSection?.ctaCard?.subtitle }}
     </span>
     <v-btn-secondary
-      class="align-self-center align-self-md-start mb-4"
+      class="align-self-center align-self-md-start mb-6 mb-md-4"
       height="62"
       rounded="md"
       width="220"

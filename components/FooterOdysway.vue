@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="position-relative ">
+  <v-footer class="position-relative">
     <v-img
       class="footer-bg-img "
       :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"
@@ -12,7 +12,7 @@
       width="100%"
       height="400"
     />
-    <div class="mx-2 mx-md-5">
+    <div class="mx-md-5">
       <v-container
         v-if="footer"
         fluid
@@ -20,7 +20,8 @@
       >
         <v-row
           align="center"
-          justify="space-between"
+          justify-md="space-between"
+          justify="center"
         >
           <v-col
             cols="12"
@@ -44,7 +45,7 @@
             </div>
           </v-col>
           <v-col
-            cols="12"
+            cols="11"
             md="4"
           >
             <v-lazy
@@ -67,7 +68,7 @@
           <v-col
             cols="12"
             lg="4"
-            class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-10"
+            class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-8 px-8"
           >
             <h5 class="text-h4 font-weight-bold">
               {{ footer.contact.ctaText }}
@@ -83,8 +84,8 @@
             <v-btn
               color="secondary"
               height="62"
-              width="360"
-              class="font-weight-bold align-self-center text-decoration-none text-body-1 text-capitalize"
+
+              class="custom-btn-width font-weight-bold align-self-center text-decoration-none text-body-1 text-capitalize"
               :to="footer.contact.buttonContact.lien"
             >
               {{ footer.contact.buttonContact.text }}
@@ -93,7 +94,7 @@
         </v-row>
         <v-divider
           thickness="2"
-          class="my-16"
+          class="my-10 my-md-16"
         />
         <v-row class="mb-4 pb-4 text-primary">
           <v-col
@@ -171,39 +172,30 @@
             </div>
           </v-col>
         </v-row>
-      <!-- <v-row align="center">
-        <v-col
-          cols="12"
-          md="5"
-          class="d-flex justify-start text-grey"
-        >
-          <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
-        </v-col>
-        <v-col
-          cols="12"
-          md="7"
-          class="text-center text-md-right"
-        >
-          <v-btn
-            variant="text"
+        <v-row align="center">
+          <v-col
+            cols="12"
+            md="5"
+            class="d-flex justify-start text-grey"
           >
-            <v-img
-              :src="img('/icons/gb.svg', { format: 'webp', quality: 70, width: 640 })"
-              width="20px"
-              contain
-            />
-          </v-btn>
-          <v-btn
-            v-for="policy in policies"
-            :key="policy.name"
-            :to="policy.link"
-            variant="text"
-            class="text-overline"
+            <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
+          </v-col>
+          <v-col
+            cols="12"
+            md="7"
+            class="text-center text-md-right"
           >
-            {{ policy.name }}
-          </v-btn>
-        </v-col>
-      </v-row> -->
+            <v-btn
+              v-for="policy in policies"
+              :key="policy.name"
+              :to="policy.link"
+              variant="text"
+              class="text-overline"
+            >
+              {{ policy.name }}
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-container>
     </div>
   </v-footer>
@@ -219,20 +211,20 @@ const { footer } = useAppConfig()
 
 const img = useImage()
 
-// const policies = ref([
-//   { name: 'FAQ',
-//     link: '/faq',
-//   },
-//   { name: 'Mentions légales',
-//     link: '/mentions-legales',
-//   },
-//   { name: 'CGV',
-//     link: '/conditions-generales-de-vente',
-//   },
-//   { name: 'Données personnelles',
-//     link: '/politique-de-confidentialite',
-//   },
-// ])
+const policies = ref([
+  { name: 'FAQ',
+    link: '/faq',
+  },
+  { name: 'Mentions légales',
+    link: '/mentions-legales',
+  },
+  { name: 'CGV',
+    link: '/conditions-generales-de-vente',
+  },
+  { name: 'Données personnelles',
+    link: '/politique-de-confidentialite',
+  },
+])
 </script>
 
 <style scoped>
@@ -246,10 +238,20 @@ const img = useImage()
   object-fit: cover;
   pointer-events: none;
 }
+.custom-btn-width{
+  width: 360px;
+}
 @media screen and (max-width: 768px) {
   .footer-bg-img {
     height: 130px !important;
+
   }
+  .footer-logo{
+    width:160px;
+  }
+  .custom-btn-width{
+  width: 100%;
+}
 }
 .v-footer.position-relative {
   position: relative;

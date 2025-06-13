@@ -59,13 +59,12 @@
 </template>
 
 <script setup>
-import { useGoTo, useDisplay } from 'vuetify'
+import { useGoTo } from 'vuetify'
 import dayjs from 'dayjs'
 
 const goTo = useGoTo()
 const { dates } = useDates()
 const isExpanded = ref(false)
-const { width } = useDisplay()
 const route = useRoute()
 
 const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable } = defineProps({
