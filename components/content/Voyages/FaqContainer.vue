@@ -94,7 +94,6 @@ const route = useRoute()
 const { data: faqTextes } = await useAsyncData('faq-textes', () => {
   return queryCollection('ctas').select('faqSection').first()
 })
-console.log('faqTextes', faqTextes.value)
 </script>
 
 <style scoped>

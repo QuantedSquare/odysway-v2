@@ -13,7 +13,7 @@
         class="d-flex align-center"
       >
         <h1
-          v-if="destination && !isCategory && !isExperience"
+          v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
           {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
@@ -29,6 +29,12 @@
           class="custom-hero-title"
         >
           {{ destination.discoveryTitle || destination.titre }}
+        </h1>
+        <h1
+          v-else-if="destination && isNextDepartures"
+          class="custom-hero-title"
+        >
+          {{ destination.periodFilter && destination.periodFilter !== 'Toutes périodes' ? `Partez avec un groupe en en ${destination.periodFilter}`:'Découvrez nos voyages de groupe' }}
         </h1>
         <h1
           v-else
@@ -100,7 +106,7 @@
               md="auto"
             >
               <h1
-                v-if="destination && !isCategory && !isExperience"
+                v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
                 {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
@@ -116,6 +122,12 @@
                 class="custom-hero-title"
               >
                 {{ destination.discoveryTitle || destination.titre }}
+              </h1>
+              <h1
+                v-else-if="destination && isNextDepartures"
+                class="custom-hero-title"
+              >
+                {{ destination.periodFilter && destination.periodFilter !== 'Toutes périodes' ? `Partez avec un groupe en ${destination.periodFilter}`:'Découvrez nos voyages de groupe' }}
               </h1>
               <h1
                 v-else
@@ -159,8 +171,11 @@ const { destination, isCategory, isExperience } = defineProps({
     type: Boolean,
     default: false,
   },
+  isNextDepartures: {
+    type: Boolean,
+    default: false,
+  },
 })
-console.log('in hero', destination)
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true

@@ -1,50 +1,68 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <h1><span>Découvrez nos voyages</span> <span class="text-primary"> de groupe </span></h1>
-        <p>Réservez un voyage groupé et rejoignez un petit groupe de 8 voyageurs maximum.</p>
-      </v-col>
-    </v-row>
-    <v-row
-      align="center"
+  <v-container
+    fluid
+    class="px-2 px-md-4 pt-0"
+  >
+    <SearchHeroSection
+      :is-next-departures="true"
+      :destination="{ periodFilter: selectedFilter }"
     >
-      <v-col
-        cols="12"
-        sm="auto"
-        class="bg-secondary rounded-lg my-4"
-      >
-        <v-btn-toggle
-          v-model="toggledBtn"
-          mandatory
-          color="secondary"
-          density="compact"
-          class="d-flex justify-center ga-2"
+      <v-container class="d-flex justify-center">
+        <v-row
+          justify="center"
+          align="center"
+          class="rounded-md bg-white filter-wrapper"
         >
-          <v-btn
-            v-for="btn of toggleBtns"
-            :key="btn.text"
-            :value="btn.value"
-            :to="btn.path"
-            selected-class="bg-white"
-            class="text-decoration-none rounded-lg"
+          <v-col
+            cols="12"
+            sm="auto"
           >
-            <span class="text-subtitle-1"> {{ btn.text }}</span>
-          </v-btn>
-        </v-btn-toggle>
-      </v-col>
-      <v-col
-        cols="12"
-        sm="4"
-      >
-        <v-select
-          v-model="selectedFilter"
-          :items="sortedMonths"
-          density="comfortable"
-          label="Trier"
-          hide-details
-          :prepend-inner-icon="mdiFilterVariant"
-        />
+            <v-btn-toggle
+              v-model="toggledBtn"
+              mandatory
+              density="compact"
+              class="d-flex justify-center ga-2"
+            >
+              <v-btn
+                v-for="btn of toggleBtns"
+                :key="btn.text"
+                :value="btn.value"
+                :to="btn.path"
+                selected-class="bg-secondary"
+                class="text-decoration-none rounded-lg"
+              >
+                <span class="text-subtitle-1"> {{ btn.text }}</span>
+              </v-btn>
+            </v-btn-toggle>
+          </v-col>
+          <v-col
+            cols="12"
+            sm="4"
+            class="pt-0 pt-md-3"
+          >
+            <v-select
+              :id="periodId"
+              v-model="selectedFilter"
+              hide-details
+              :items="sortedMonths"
+              label="Période"
+            >
+              <template #prepend-inner>
+                <v-img
+                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                  alt="Calendar icon"
+                  width="24"
+                  height="24"
+                />
+              </template>
+            </v-select>
+          </v-col>
+        </v-row>
+      </v-container>
+    </SearchHeroSection>
+    <v-row class="my-md-4">
+      <v-col cols="12">
+        <p>Réservez un voyage groupé et rejoignez un petit groupe de 8 voyageurs maximum.</p>
       </v-col>
     </v-row>
     <v-row>
@@ -61,17 +79,19 @@
 </template>
 
 <script setup>
-import { mdiFilterVariant } from '@mdi/js'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import 'dayjs/locale/fr'
+import { useImage } from '#imports'
 
 dayjs.extend(customParseFormat)
 
+const img = useImage()
 const route = useRoute()
 const loading = ref(false)
 const travels = ref([])
 const toggledBtn = ref('all')
+const periodId = useId()
 const selectedFilter = ref('Toutes périodes')
 const toggleBtns = ref([
   { value: 'all',
@@ -89,12 +109,17 @@ const toggleBtns = ref([
 ])
 
 const fetchTravels = async () => {
-  loading.value = true
-  const res = await fetch('/api/v1/booking/travels-by-date')
-  const data = await res.json()
-  travels.value = data
-  console.log('travels', travels.value)
-  loading.value = false
+  try {
+    loading.value = true
+    const res = await fetch('/api/v1/booking/travels-by-date')
+    const data = await res.json()
+    travels.value = data
+    loading.value = false
+  }
+  catch (error) {
+    console.error(error)
+    loading.value = false
+  }
 }
 fetchTravels()
 
@@ -110,20 +135,20 @@ const filteredTravels = computed(() => {
   return travels.value.filter((travel) => {
     const iso = Array.isArray(travel.iso) ? travel.iso[0] : travel.iso
     if (queryType === 'france') {
-      return iso === franceDealIso && travel.dates.length > 0
+      return iso === franceDealIso && travel.dates.length > 0 && travel.groupeAvailable
     }
     else if (queryType === 'other') {
-      return iso !== franceDealIso && travel.dates.length > 0
+      return iso !== franceDealIso && travel.dates.length > 0 && travel.groupeAvailable
     }
     else {
-      return travel.dates.length > 0
+      return travel.dates.length > 0 && travel.groupeAvailable
     }
   })
 })
 
 const groupByMonth = computed(() => {
   const today = dayjs()
-  const unsortedResult = {}
+  const unsrotedTravels = {}
   filteredTravels.value.forEach((travel) => {
     travel.dates.forEach((dateInfo) => {
       const departureDate = dayjs(dateInfo.departure_date)
@@ -131,20 +156,20 @@ const groupByMonth = computed(() => {
         return
       }
       const monthYear = capitalizeFirstLetter(departureDate.locale('fr').format('MMMM YYYY'))
-      if (!unsortedResult[monthYear]) {
-        unsortedResult[monthYear] = []
+      if (!unsrotedTravels[monthYear]) {
+        unsrotedTravels[monthYear] = []
       }
       const travelWithSingleDate = {
         ...travel,
         dates: [dateInfo],
         departureDate: dateInfo.departure_date,
       }
-      unsortedResult[monthYear].push(travelWithSingleDate)
+      unsrotedTravels[monthYear].push(travelWithSingleDate)
     })
   })
-  const monthsArray = Object.keys(unsortedResult).map((monthYear) => {
+  const monthsArray = Object.keys(unsrotedTravels).map((monthYear) => {
     const date = dayjs(`01 ${monthYear.toLowerCase()}`, 'DD MMMM YYYY', 'fr')
-    const sortedTravels = unsortedResult[monthYear].sort((a, b) => {
+    const sortedTravels = unsrotedTravels[monthYear].sort((a, b) => {
       return dayjs(a.departureDate).valueOf() - dayjs(b.departureDate).valueOf()
     })
     return {
@@ -154,27 +179,30 @@ const groupByMonth = computed(() => {
     }
   })
   monthsArray.sort((a, b) => a.date.valueOf() - b.date.valueOf())
-  const sortedResult = {}
+  const sortedTravels = {}
   monthsArray.forEach((item) => {
-    sortedResult[item.monthYear] = item.travels
+    sortedTravels[item.monthYear] = item.travels
   })
-  console.log('sortedResult', sortedResult)
-  return sortedResult
+  return sortedTravels
 })
 
 const sortedMonths = computed(() => {
-  const sort = Object.keys(groupByMonth.value)
-  sort.unshift('Toutes périodes')
-  return sort
+  const months = Object.keys(groupByMonth.value)
+  months.unshift('Toutes périodes')
+  return months
 })
 
 const groupByMonthFiltered = computed(() => {
   if (selectedFilter.value === 'Toutes périodes') {
-    return filteredTravels.value
+    return groupByMonth.value
   }
-  else {
-    return groupByMonth.value[selectedFilter.value]
+  const monthName = selectedFilter.value
+  const dealsForSelectedMonth = groupByMonth.value[monthName] || []
+
+  const singleMonthObject = {
+    [monthName]: dealsForSelectedMonth,
   }
+  return singleMonthObject
 })
 
 const dealsLastMinuteFiltered = computed(() => {
@@ -191,3 +219,14 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 </script>
+
+<style scoped>
+.filter-wrapper{
+  max-width: 700px;
+  position: relative;
+  box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
+}
+.selected-destination{
+  background-color: black;
+}
+</style>

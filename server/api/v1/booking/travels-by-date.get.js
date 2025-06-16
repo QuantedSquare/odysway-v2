@@ -35,6 +35,7 @@ export default defineEventHandler(async (event) => {
       startingPrice: travel.pricing.startingPrice,
       iso: travel.destinations.map(destination => destinations.find(d => d.titre === destination.name)?.iso),
       dates,
+      duration: travel.duration,
     }
   })
   return travelWithDates
