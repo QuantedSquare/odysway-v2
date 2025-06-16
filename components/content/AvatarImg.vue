@@ -8,6 +8,9 @@
       v-if="avatarImg.length > 0"
       :src="img(avatarImg, { format: 'webp', quality: 70, height: 340, width: 640 })"
       :lazy-src="img(avatarImg, { format: 'webp', quality: 10, height: 340, width: 640 })"
+      :alt="name + ' avatar'"
+      height="100%"
+      width="100%"
     />
     <span v-else> {{ name ? name[0].toUpperCase() : '' }}</span>
   </v-avatar>

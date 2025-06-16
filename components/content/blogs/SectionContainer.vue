@@ -38,4 +38,10 @@ defineProps({
 .content-class:deep(h3){
  margin-bottom: 1em;
 }
+
+  .content-class:deep(h3){
+    display: flex!important;
+    justify-content: center!important;
+    text-align: center!important;
+  }
 </style>
