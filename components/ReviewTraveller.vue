@@ -27,7 +27,7 @@
       <v-card-subtitle class="mt-4 ">
         <div class="d-inline-flex ga-1">
           <v-img
-            v-for="i in 5"
+            v-for="i in +review.rating"
             :key="i"
             :src="img('/icons/orange-star.svg', { format: 'webp', quality: 70, width: 640 })"
             alt="Rating stars"

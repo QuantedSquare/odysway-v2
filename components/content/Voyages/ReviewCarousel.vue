@@ -78,6 +78,7 @@
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
+import _ from 'lodash'
 
 const route = useRoute()
 defineProps({
@@ -134,8 +135,10 @@ const scrollAmount = computed(() => {
     return scrollContainerWidth?.value || 0
   }
 })
-const { data: reviews } = await useAsyncData('reviews', () => {
-  return queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
+const { data: reviews } = await useAsyncData('reviews', async () => {
+  const collection = await queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
+  console.log('collection', collection)
+  return _.uniqBy(collection, 'text')
 })
 </script>
 
