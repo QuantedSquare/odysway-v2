@@ -166,7 +166,8 @@ function normalize(str) {
 }
 
 const parsedPages = computed(() => {
-  const parsedPages = pages.value?.map((page) => {
+  if (!pages.value) return []
+  const parsedPages = pages.value.map((page) => {
     // Parse tags and categories as arrays
     const tags = typeof page.tags === 'string' ? page.tags.split(',').map(t => t.trim()).filter(Boolean) : (page.tags || [])
     const categories = typeof page.categories === 'string' ? page.categories.split(',').map(c => c.trim()).filter(Boolean) : (page.categories || [])
@@ -237,6 +238,11 @@ const nbPages = computed(() => {
   return Math.ceil(filteredBlogs.value.length / pagination.value.itemsPerPage)
 })
 
+const pagination = ref({
+  currentPage: 1,
+  itemsPerPage: 12,
+})
+
 // Reset to page 1 when filters change
 watch([filteredBlogs], () => {
   pagination.value.currentPage = 1
@@ -244,11 +250,6 @@ watch([filteredBlogs], () => {
 
 const goTo = useGoTo()
 const scrollTarget = useTemplateRef('scroll-target')
-
-const pagination = ref({
-  currentPage: 1,
-  itemsPerPage: 12,
-})
 </script>
 
 <style scoped>
