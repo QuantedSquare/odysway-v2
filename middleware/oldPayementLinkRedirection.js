@@ -23,7 +23,7 @@ export default defineNuxtRouteMiddleware(async () => {
   // No existing booked date, fetch deal
   const deal = await apiRequest(`/ac/deals/${route.query.orderId}`)
   if (!deal) {
-    console.error('Deal not found')
+    console.error('Forbidden')
     return // Optionally, redirect to an error page
   }
 
