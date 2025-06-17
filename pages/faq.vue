@@ -10,6 +10,9 @@
 <script setup>
 const route = useRoute()
 
+definePageMeta({
+  layout: 'no-faq',
+})
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })

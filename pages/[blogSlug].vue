@@ -68,6 +68,7 @@ watchEffect(() => {
       '@type': 'WebPage',
       '@id': `https://odysway.com${route.path}`,
     },
+    'keywords': Array.isArray(data.value.tags) ? data.value.tags.join(', ') : data.value.tags.split(', '),
   }
 
   // BreadcrumbList structured data

@@ -164,12 +164,18 @@ function formatDate(date) {
     height:100%;
   }
   .fixed-height {
-    min-height: 30vh;
+    min-height: 20vh;
   }
   .hero-img-wrapper {
     aspect-ratio: 3/2;
     min-height: 180px;
     max-height: 350px;
   }
+}
+@media (max-width: 400px) {
+  .fixed-height {
+    min-height: 10vh;
+  }
+
 }
 </style>
