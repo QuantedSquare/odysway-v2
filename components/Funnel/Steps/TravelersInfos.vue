@@ -11,7 +11,7 @@
     >
       <v-row>
         <v-col cols="12">
-          <h2>Informations voyageurs</h2>
+          <h2>{{ travelersInfos.title }}</h2>
           <!-- <h2>{{ $t('stepperDevisGroup.travellersDetails') }}</h2> -->
         </v-col>
         <v-col cols="12">
@@ -67,7 +67,7 @@
           <v-switch
             v-model="isCouple"
             style="margin-bottom : 5px"
-            :label="page.preference_couple"
+            :label="travelersInfos.preference_couple"
           />
           <!-- page.preference_couple" -->
           <!-- <div v-html="page.preference_couple_details" /> -->
@@ -80,7 +80,7 @@
 <script setup>
 import dayjs from 'dayjs'
 
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep', 'travelersInfos'])
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 

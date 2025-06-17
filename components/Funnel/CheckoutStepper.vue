@@ -46,6 +46,7 @@
                     :current-step="currentStep"
                     :page="page"
                     :voyage="voyage"
+                    :summary="funnelTexts.summary"
                   />
 
                   <FunnelStepsPaymentRedirect
@@ -71,6 +72,7 @@
                   :current-step="currentStep"
                   :voyage="voyage"
                   :own-step="1"
+                  :details="funnelTexts.details"
                 />
                 <CalendlyContainer
                   v-else
@@ -85,6 +87,7 @@
                   :current-step="currentStep"
                   :page="page"
                   :own-step="2"
+                  :travelers-infos="funnelTexts.travelers_infos"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -95,6 +98,7 @@
                   :current-step="currentStep"
                   :page="page"
                   :own-step="3"
+                  :options="funnelTexts.options"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -104,6 +108,7 @@
                   :current-step="currentStep"
                   :page="page"
                   :own-step="4"
+                  :insurances="funnelTexts.insurances"
                   @skip-step="nextStep"
                 />
               </v-stepper-window-item>
@@ -115,6 +120,7 @@
                   :page="page"
                   :voyage="voyage"
                   :own-step="5"
+                  :summary="funnelTexts.summary"
                 />
 
                 <FunnelStepsPaymentRedirect
@@ -124,6 +130,7 @@
                   :current-step="currentStep"
                   :own-step="5"
                   :voyage="voyage"
+                  :summary="funnelTexts.summary"
                 />
               </v-stepper-window-item>
             </v-stepper-window>
@@ -206,6 +213,14 @@ const fetchDetails = async () => {
   return date.value
 }
 
+// ================== Funnel texts ==================
+const { data: funnelTexts } = useAsyncData('funnel-texts', async () => {
+  const funnel = await queryCollection('funnel').first()
+  console.log('funnel query', funnel.meta.body[0].fields)
+  return funnel.meta.body[0].fields
+})
+
+console.log('funnel', funnelTexts.value)
 // ================== Voyage ==================
 const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {

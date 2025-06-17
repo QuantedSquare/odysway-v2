@@ -35,7 +35,7 @@
         <!-- Dates Section -->
         <FunnelStepsSummaryLine v-if="deal.departureDate && deal.returnDate">
           <template #left>
-            <span class="text-h6 ">Dates confirmées</span>
+            <span class="text-h6 ">{{ summary.dates_confirmed }}</span>
           </template>
           <template #right>
             {{ dayjs(deal.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(deal.returnDate).format('DD/MM/YYYY') }}
@@ -254,7 +254,7 @@
         <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
           <template #left>
             <!-- #TODO Remplacer par cms -->
-            <span class="font-italic text-body-2 ">Le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l’intégralité de la somme, sans acompte.</span>
+            <span class="font-italic text-body-2 ">Le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l'intégralité de la somme, sans acompte.</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -269,7 +269,7 @@
 import dayjs from 'dayjs'
 import { mdiInformationOutline } from '@mdi/js'
 
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep', 'summary'])
 const route = useRoute()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
 const { deal } = useStepperDeal(props.ownStep)

@@ -142,7 +142,7 @@
 <script setup>
 import _ from 'lodash'
 
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep', 'insurances'])
 const model = defineModel()
 const isLoadingInsurance = ref(true)
 const { addSingleParam } = useParams()

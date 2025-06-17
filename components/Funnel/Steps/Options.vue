@@ -44,13 +44,12 @@
       >
         <v-switch
           v-model="vegeOption"
-          sub-label="Végétarien, Végan, Allergies..."
+          :sub-label="options.vege_sub_label"
         >
           <template #label>
             <div class="d-flex flex-column align-start">
-              <!-- <span>{{ $t('stepperDevisGroup.foodOptions.vege') }}</span> -->
-              <span>Régimes alimentaires spécifiques</span>
-              <span class="text-caption">Végétarien, Végan, Allergies...</span>
+              <span>{{ options.food_prefs_label }}</span>
+              <span class="text-caption">{{ options.vege_sub_label }}</span>
             </div>
           </template>
         </v-switch>
@@ -62,7 +61,7 @@
         <!-- :label="$t('stepperDevisGroup.foodOptions.other')" -->
         <v-switch
           v-model="otherFoodOption"
-          label="Autres demandes particulières"
+          :label="options.other_food_label"
         />
       </v-col>
       <v-col
@@ -74,7 +73,7 @@
             v-if="otherFoodOption"
             v-model="specialRequest"
             variant="outlined"
-            label="Précisez..."
+            :label="options.special_request_label"
           />
         </Transition>
       </v-col>
@@ -83,7 +82,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep', 'options'])
 const { deal, dealId, updateDeal, loadingDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 console.log('props.voyage', props.voyage)

@@ -38,7 +38,7 @@
       "select_travelers_title": "Sélectionnez le nombre de voyageurs à régler",
       "nb_travelers_title": "Nombre de voyageurs",
       "nb_adults_label": "Nombre d'adultes",
-      "nb_children_label": "Nombre d'enfants (0-{{maxAge}} ans)",
+      "nb_children_label": "Nombre d'enfants",
       "contact_title": "Vos coordonnées",
       "firstname_label": "Prénom *",
       "lastname_label": "Nom *",
