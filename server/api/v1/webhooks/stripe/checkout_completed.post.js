@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   if (!stripeSignature) {
     throw createError({
       statusCode: 400,
-      message: 'No stripe signature found',
+      message: 'Unauthorized',
     })
   }
 
