@@ -12,7 +12,7 @@
           >
             <template v-if="isBooking">
               <div class="text-start">
-                Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                {{ page.payment.ask_for_option_text }}
               </div>
             </template>
             <template v-else-if="route.query.type === 'deposit'">
@@ -23,7 +23,7 @@
               >
                 <template #label>
                   <div class="text-body-2 pl-1">
-                    Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).
+                    {{ page.payment.ask_for_option_text }}
                   </div>
                 </template>
               </v-switch>
@@ -45,7 +45,7 @@
                   <div
                     class="text-body-2 pl-1"
                     @click.stop=""
-                    v-html="page.phrase_dacceptation"
+                    v-html="page.payment.phrase_dacceptation"
                   />
                 </template>
               </v-switch>
@@ -56,7 +56,7 @@
               >
                 <template #label>
                   <div class="text-body-2 pl-1">
-                    Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage
+                    {{ page.payment.accept_country_conditions_text }}
                   </div>
                 </template>
               </v-switch>
@@ -68,7 +68,7 @@
               color="error"
               variant="tonal"
             >
-              Vous avez déjà posé une option pour cette date.
+              {{ page.payment.option_already_placed_error }}
             </v-alert>
           </Transition>
           <!-- Replace btn "Suivant" in parent -->
@@ -88,7 +88,7 @@
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
                   @click="book"
                 >
-                  Poser une option gratuitement
+                  {{ page.payment.place_option_button }}
                 </v-btn>
                 <v-btn
                   v-else
@@ -97,7 +97,7 @@
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                   @click="stripePay"
                 >
-                  Payer
+                  {{ page.payment.pay_button }}
                 </v-btn>
               </Transition>
             </Teleport>

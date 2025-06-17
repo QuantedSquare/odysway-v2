@@ -8,11 +8,11 @@
         <v-col cols="12">
           <h2 v-if="!isAdvance">
             <!-- {{ $t('stepperDevisPerso.nbTravellersSold') }} -->
-            {{ details.select_travelers_title }}
+            {{ page.details.select_travelers_title }}
           </h2>
           <h2 v-else>
             <!-- {{ $t('stepperDevisPerso.nbTravellers') }} -->
-            {{ details.nb_travelers_title }}
+            {{ page.details.nb_travelers_title }}
           </h2>
         </v-col>
         <v-col cols="12">
@@ -22,7 +22,7 @@
               md="4"
             >
               <div class="text-caption">
-                {{ details.nb_adults_label }}
+                {{ page.details.nb_adults_label }}
               </div>
               <v-select
                 v-model="nbAdults"
@@ -37,7 +37,7 @@
               md="4"
             >
               <div class="text-caption text-truncate">
-                {{ details.nb_children_label }} (0-{{ +voyage.maxChildrenAge }} ans)
+                {{ childrenLabel }}
               </div>
               <v-select
                 v-model="nbChildren"
@@ -66,7 +66,7 @@
             <v-col cols="12">
               <!-- <h2>{{ $t('stepperDevisGroup.contactDetails') }}</h2> -->
               <h2>
-                {{ details.contact_title }}
+                {{ page.details.contact_title }}
               </h2>
             </v-col>
             <v-col
@@ -75,8 +75,8 @@
             >
               <v-text-field
                 v-model="firstName"
-                :label="details.firstname_label"
-                :placeholder="details.firstname_placeholder"
+                :label="page.details.firstname_label"
+                :placeholder="page.details.firstname_placeholder"
                 :rules="[rules.name]"
                 @change="changeAttr('firstname'); saveToLocalStorage()"
               />
@@ -87,8 +87,8 @@
             >
               <v-text-field
                 v-model="lastName"
-                :label="details.lastname_label"
-                :placeholder="details.lastname_placeholder"
+                :label="page.details.lastname_label"
+                :placeholder="page.details.lastname_placeholder"
                 :rules="[rules.name]"
                 @change="changeAttr('lastname'); saveToLocalStorage()"
               />
@@ -100,8 +100,8 @@
               <v-text-field
                 v-model="email"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :label="details.email_label"
-                :placeholder="details.email_placeholder"
+                :label="page.details.email_label"
+                :placeholder="page.details.email_placeholder"
                 :rules="[rules.email]"
                 @change="saveToLocalStorage()"
               />
@@ -111,8 +111,8 @@
               >
                 <template #label>
                   <div class="text-caption text-no-wrap">
-                    {{ details.newsletter_text }}
-                    <br> {{ details.newsletter_label }}
+                    {{ page.details.newsletter_text }}
+                    <br> {{ page.details.newsletter_label }}
                   </div>
                 </template>
               </v-checkbox>
@@ -138,8 +138,9 @@
 
 <script setup>
 import { z } from 'zod'
+import { computed } from 'vue'
 
-const { currentStep, ownStep, voyage, details } = defineProps(['currentStep', 'ownStep', 'voyage', 'details'])
+const { currentStep, ownStep, voyage, page } = defineProps(['currentStep', 'ownStep', 'voyage', 'page'])
 const config = useRuntimeConfig()
 
 const { deal, dealId, createDeal, updateDeal, checkoutType, loadingDeal } = useStepperDeal(ownStep)
@@ -159,6 +160,13 @@ const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const phone = ref('')
+
+const childrenLabel = computed(() => {
+  if (page?.details?.nb_children_label && voyage?.maxChildrenAge) {
+    return page.details.nb_children_label.replace('{{maxAge}}', Number(voyage.maxChildrenAge))
+  }
+  return 'Nombre d\'enfants'
+})
 
 watch(() => currentStep, (value) => {
   if (value === ownStep) {

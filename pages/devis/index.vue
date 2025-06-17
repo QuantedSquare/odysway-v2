@@ -22,7 +22,7 @@
       >
         <FunnelStepsStepperHeader
           v-model="currentStep"
-          :page="page"
+          :page="pageTexts"
           :skipper-mode="skipperChoice"
         >
           <v-row class="funnel-stepper d-flex justify-center">
@@ -36,7 +36,11 @@
                 <v-img
                   color="surface-variant"
                   height="100"
-                  :src="voyage.image.src"
+                  :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+                  :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+                  size="(max-width: 600) 480px, 1500px"
+                  :srcset="`${img(voyage.image.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(voyage.image.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+                  :alt="voyage.image.alt"
                   cover
                   class="align-center"
                 >
@@ -48,24 +52,24 @@
                   <v-stepper-window-item :value="1">
                     <DevisSkipper
                       v-model="skipperChoice"
-                      :page="page.first_step"
+                      :page="pageTexts"
                     />
                   </v-stepper-window-item>
                   <v-stepper-window-item :value="2">
                     <DevisDetails
                       v-if="skipperChoice === 'devis'"
                       v-model="details"
-                      :page="page.second_step"
+                      :page="pageTexts"
                     />
                     <DevisUserInfoForm
                       v-if="skipperChoice === 'call' && !showCalendly"
                       v-model="userInfo"
-                      :page="page.third_step"
+                      :page="pageTexts"
                     />
                     <CalendlyContainer
                       v-else-if="skipperChoice === 'call' && showCalendly"
                       :travel-title="voyage.title"
-                      :text="page.calendly.text"
+                      :text="pageTexts.calendly.text"
                     />
                     <FunnelTallyForm v-if="skipperChoice === 'tally'" />
                   </v-stepper-window-item>
@@ -75,14 +79,14 @@
                   >
                     <DevisUserInfoForm
                       v-model="userInfo"
-                      :page="page.third_step"
+                      :page="pageTexts"
                     />
                   </v-stepper-window-item>
                 </v-stepper-window>
                 <v-card-actions>
                   <v-stepper-actions
-                    next-text="Suivant"
-                    :prev-text="currentStep !== 0 ?'Précédent' : ''"
+                    :next-text="pageTexts.buttons.next"
+                    :prev-text="currentStep !== 0 ? pageTexts.buttons.previous : ''"
                     @click:next="nextStep()"
                     @click:prev="previousStep()"
                   >
@@ -95,14 +99,14 @@
                           :loading="isLoading"
                           @click="submit"
                         >
-                          {{ skipperChoice === 'devis' ? 'Envoyer ma demande de devis' : 'Prendre rendez-vous' }}
+                          {{ skipperChoice === 'devis' ? pageTexts.buttons.send_devis_request : pageTexts.buttons.take_appointment }}
                         </v-btn>
                         <v-btn
                           v-else-if="!showCalendly"
                           color="secondary"
                           @click="nextStep"
                         >
-                          Suivant
+                          {{ pageTexts.buttons.next }}
                         </v-btn>
                       </div>
                     </template>
@@ -157,8 +161,11 @@ const voyage = await queryCollection('voyages').where('slug', '=', route.query.s
 console.log('voyage', voyage)
 const destinations = await queryCollection('destinations').where('titre', 'IN', voyage.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
 console.log('destinations', destinations)
-const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
-console.log('page', page)
+// const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
+const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts', () =>
+  queryCollection('devis').first(),
+)
+console.log('page', pageTexts)
 
 const nextStep = () => {
   currentStep.value++

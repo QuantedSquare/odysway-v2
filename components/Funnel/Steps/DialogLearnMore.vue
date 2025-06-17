@@ -18,7 +18,7 @@
             class="pl-0 text-caption"
             v-bind="activatorProps"
           >
-            {{ funnelTexts.dialogs.learn_more_btn }}
+            {{ page.dialogs.learn_more_btn }}
           <!-- {{ $t('stepperDevisGroup.learnMore') }} -->
           </v-btn>
         </v-col>
@@ -29,7 +29,7 @@
     >
       <v-card-title class="d-flex justify-space-between align-center">
         <div>
-          {{ funnelTexts.dialogs.learn_more_title }}
+          {{ page.dialogs.learn_more_title }}
         </div>
         <v-btn
           :icon="mdiClose"
@@ -52,5 +52,5 @@
 import { mdiClose } from '@mdi/js'
 
 const dialog = ref(false)
-const props = defineProps(['dialogText', 'btnText', 'funnelTexts'])
+defineProps(['dialogText', 'btnText', 'page'])
 </script>

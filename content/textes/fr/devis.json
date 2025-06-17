@@ -1,0 +1,54 @@
+{
+ "fil_dariane_devis": {
+      "step_1": "Infos",
+      "step_2": "Détails",
+      "step_3": "Confirmation",
+      "step_4": "Questionnaire",
+      "step_final_rdv": "Rendez-vous"
+    },
+    "first_step": {
+      "title": "Où en êtes vous dans votre projet de voyage ?",
+      "option_1": "Je souhaite faire une demande de devis sur mes dates",
+      "option_2": "Je souhaite une proposition sur-mesure sur cette destination",
+      "option_3": "Je souhaite prendre un RDV téléphonique avec un de nos conseillers voyages"
+    },
+    "second_step": {
+      "title": "Pour personnaliser au mieux votre expérience et vous donner le meilleur tarif possible, veuillez répondre à ce questionnaire :",
+      "sub_1": "Qui vient ?",
+      "sub_2": "Quand ?",
+      "sub_3": "Souhaitez vous inclure le vol dans votre offre ?",
+      "option_1": "Je ne sais pas encore...",
+      "option_2": "J'ai mes dates !",
+      "comment_title": "Un commentaire à partager avec votre conseiller ?"
+    },
+    "third_step": {
+      "title": "Vos informations",
+      "sub_1": "J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.",
+      "sub_2": "Je souhaite recevoir des inspirations et des idées pour voyager autrement"
+    },
+    "calendly": {
+      "title": "Vos informations",
+      "text": "Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage."
+    },
+    "buttons": {
+      "send_devis_request": "Envoyer ma demande de devis",
+      "take_appointment": "Prendre rendez-vous",
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "form_labels": {
+      "nb_adults": "Nombre d'adultes",
+      "nb_children": "Nombre d'enfants (0-18ans)",
+      "select_period": "Séléctionnez une période",
+      "date_placeholder": "DD/MM/YYYY - DD/MM/YYYY",
+      "departure_airport_question": "Depuis quel aéroport souhaitez-vous partir ?",
+      "departure_airport_label": "Aéroport de départ",
+      "firstname": "Prénom*",
+      "lastname": "Nom*",
+      "email": "Email*"
+    },
+    "options": {
+      "yes": "Oui",
+      "no": "Non"
+    }
+}

@@ -5,7 +5,7 @@
   >
     <FunnelStepsStepperHeader
       v-model="currentStep"
-      :page="page"
+      :page="pageTexts"
       :skipper-mode="skipperMode"
     >
       <v-row class="funnel-stepper d-flex justify-center">
@@ -44,15 +44,14 @@
                 <template v-if="skipperMode === 'summary'">
                   <FunnelStepsSummary
                     :current-step="currentStep"
-                    :page="page"
+                    :page="pageTexts"
                     :voyage="voyage"
-                    :summary="funnelTexts.summary"
                   />
 
                   <FunnelStepsPaymentRedirect
                     :ref="(component) => registerStepComponent(component, 5)"
                     v-model="validForm"
-                    :page="page"
+                    :page="pageTexts"
                     :current-step="currentStep"
                     :own-step="5"
                     :voyage="voyage"
@@ -61,7 +60,7 @@
                 <FunnelStepsSkipper
                   v-else
                   v-model="skipperMode"
-                  :page="page"
+                  :page="pageTexts"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -72,12 +71,12 @@
                   :current-step="currentStep"
                   :voyage="voyage"
                   :own-step="1"
-                  :details="funnelTexts.details"
+                  :page="pageTexts"
                 />
                 <CalendlyContainer
                   v-else
                   :travel-title="voyage.title"
-                  :text="page.calendly"
+                  :text="pageTexts.calendly"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -85,9 +84,8 @@
                   :ref="(component) => registerStepComponent(component, 2)"
                   v-model="validForm"
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :own-step="2"
-                  :travelers-infos="funnelTexts.travelers_infos"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -96,9 +94,8 @@
                   v-model="validForm"
                   :voyage="voyage"
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :own-step="3"
-                  :options="funnelTexts.options"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -106,9 +103,8 @@
                   :ref="(component) => registerStepComponent(component, 4)"
                   v-model="validForm"
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :own-step="4"
-                  :insurances="funnelTexts.insurances"
                   @skip-step="nextStep"
                 />
               </v-stepper-window-item>
@@ -117,28 +113,26 @@
               >
                 <FunnelStepsSummary
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :voyage="voyage"
                   :own-step="5"
-                  :summary="funnelTexts.summary"
                 />
 
                 <FunnelStepsPaymentRedirect
                   :ref="(component) => registerStepComponent(component, 5)"
                   v-model="validForm"
-                  :page="page"
+                  :page="pageTexts"
                   :current-step="currentStep"
                   :own-step="5"
                   :voyage="voyage"
-                  :summary="funnelTexts.summary"
                 />
               </v-stepper-window-item>
             </v-stepper-window>
 
             <v-card-actions>
               <v-stepper-actions
-                next-text="Suivant"
-                :prev-text="skipperMode !== 'summary' ?'Précédent' : ''"
+                :next-text="pageTexts.navigation.next_button"
+                :prev-text="skipperMode !== 'summary' ? pageTexts.navigation.prev_button : ''"
                 @click:next="nextStep()"
                 @click:prev="previousStep()"
               >
@@ -151,7 +145,7 @@
                       :loading="loading"
                       @click="nextStep"
                     >
-                      Suivant
+                      {{ pageTexts.navigation.next_button }}
                     </v-btn>
                     <div
                       v-if="currentStep === 5"
@@ -165,7 +159,7 @@
                     :disabled="isPreviousButtonDisabled"
                     @click="previousStep"
                   >
-                    Précédent
+                    {{ pageTexts.navigation.prev_button }}
                   </v-btn>
                 </template>
               </v-stepper-actions>
@@ -192,16 +186,18 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-const { step, date_id, booked_id, type } = route.query
+const { step, date_id, booked_id } = route.query
 
 const pricePerTraveler = ref(0)
 function updatePricePerTraveler(price) {
   pricePerTraveler.value = price
 }
 provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
-// ================== Page ==================
-const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
-// console.log('page', page.value)
+// ================== Page Texts ==================
+// const { data: pageTexts, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
+const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-texts', () =>
+  queryCollection('checkout').first(),
+)
 
 const date = ref(null)
 
@@ -213,14 +209,6 @@ const fetchDetails = async () => {
   return date.value
 }
 
-// ================== Funnel texts ==================
-const { data: funnelTexts } = useAsyncData('funnel-texts', async () => {
-  const funnel = await queryCollection('funnel').first()
-  console.log('funnel query', funnel.meta.body[0].fields)
-  return funnel.meta.body[0].fields
-})
-
-console.log('funnel', funnelTexts.value)
 // ================== Voyage ==================
 const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {
