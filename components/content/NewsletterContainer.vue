@@ -39,7 +39,7 @@
             density="compact"
             :bg-color="isOnVoyage ? 'grey-light' : 'white'"
             class="w-100"
-            label="Entrez votre adresse email"
+            :label="newsletterContent?.emailPlaceholder || 'Entrez votre adresse email'"
             type="email"
           />
           <v-btn-secondary
@@ -52,7 +52,7 @@
             block
             @click="subscribeToNewsletter"
           >
-            S'inscrire
+            {{ newsletterContent?.subscribeButton || "S'inscrire" }}
           </v-btn-secondary>
           <v-btn-secondary
             v-else
@@ -64,13 +64,13 @@
             :disabled="emailSentToBrevo"
             @click="subscribeToNewsletter"
           >
-            S'inscrire
+            {{ newsletterContent?.subscribeButton || "S'inscrire" }}
           </v-btn-secondary>
           <v-snackbar
             v-model="dialogEmailSent"
             :timeout="2000"
           >
-            Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍
+            {{ newsletterContent?.successMessage || 'Merci pour votre inscription à notre newsletter, vous recevrez bientôt nos inspirations et idées pour voyager autrement 🌍' }}
 
             <template #actions>
               <v-btn
@@ -78,7 +78,7 @@
                 variant="text"
                 @click="dialogEmailSent = false"
               >
-                Close
+                {{ newsletterContent?.closeButton || 'Close' }}
               </v-btn>
             </template>
           </v-snackbar>
@@ -98,6 +98,10 @@ defineProps({
     default: false,
   },
 })
+
+const { data: newsletterContent } = await useAsyncData('newsletter-content', () =>
+  queryCollection('newsletter').first(),
+)
 const { gtag } = useGtag()
 
 const { width, mdAndUp } = useDisplay()

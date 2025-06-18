@@ -28,10 +28,10 @@
       >
         <InfoContainer :white-text="true">
           <template #title>
-            {{ partenairesTextes?.partenairesSection?.title }}
+            {{ partenairesTextes?.layoutInfoContainer?.title }}
           </template>
           <template #description>
-            {{ partenairesTextes?.partenairesSection?.subtitle }}
+            {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
           </template>
           <template #bottom>
             <PartenairesContainer />
@@ -50,7 +50,7 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const drawer = ref(false)
 const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
-  return queryCollection('ctas').select('partenairesSection').first()
+  return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
 })
 </script>
 

@@ -10,7 +10,7 @@
           ref="scroll-target"
           class="font-weight-black text-h2 my-4"
         >
-          Blog
+          {{ blogContent?.pageTitle || 'Blog' }}
         </v-col>
       </v-row>
     </v-container>
@@ -23,7 +23,7 @@
           <v-text-field
             :id="searchId"
             v-model="search"
-            label="Rechercher par mot clé"
+            :label="blogContent?.searchPlaceholder || 'Rechercher par mot clé'"
             :prepend-inner-icon="mdiMagnify"
             clearable
             density="comfortable"
@@ -37,7 +37,7 @@
             :id="categoryId"
             v-model="selectedCategory"
             :items="categoriesList"
-            label="Filtrer par catégorie"
+            :label="blogContent?.categoryFilter || 'Filtrer par catégorie'"
             :item-title="item => item.charAt(0).toUpperCase() + item.slice(1)"
             clearable
             density="comfortable"
@@ -52,7 +52,7 @@
             :id="sortId"
             v-model="sortOrder"
             :items="sortOptions"
-            label="Trier par date"
+            :label="blogContent?.sortByDate || 'Trier par date'"
             density="comfortable"
             clearable
           />
@@ -83,7 +83,7 @@
             {{ mdiMagnifyClose }}
           </v-icon>
           <div class="text-h6 mt-2 mb-4">
-            Aucun article trouvé
+            {{ blogContent?.noArticlesFound || 'Aucun article trouvé' }}
           </div>
           <v-btn
             v-if="search || selectedCategory"
@@ -91,7 +91,7 @@
             variant="outlined"
             @click="() => { search = ''; selectedCategory = null; }"
           >
-            Réinitialiser les filtres
+            {{ blogContent?.resetFilters || 'Réinitialiser les filtres' }}
           </v-btn>
         </v-col>
       </v-row>
@@ -145,6 +145,10 @@ const { data: pages, status } = useAsyncData(route.path, () => {
   return queryCollection('blog').all()
 })
 
+const { data: blogContent } = await useAsyncData('blog-content', () =>
+  queryCollection('page_blog').first(),
+)
+
 const loading = computed(() => {
   return status.value !== 'success'
 })
@@ -152,12 +156,12 @@ const loading = computed(() => {
 const search = ref('')
 const selectedCategory = ref(null)
 const sortOrder = ref('desc')
-const sortOptions = [
-  { title: 'Plus récent', value: 'desc' },
-  { title: 'Plus ancien', value: 'asc' },
-  { title: 'Plus court', value: 'readingTimeAsc' },
-  { title: 'Plus long', value: 'readingTimeDesc' },
-]
+const sortOptions = computed(() => [
+  { title: blogContent.value?.sortOptions?.newest || 'Plus récent', value: 'desc' },
+  { title: blogContent.value?.sortOptions?.oldest || 'Plus ancien', value: 'asc' },
+  { title: blogContent.value?.sortOptions?.shortest || 'Plus court', value: 'readingTimeAsc' },
+  { title: blogContent.value?.sortOptions?.longest || 'Plus long', value: 'readingTimeDesc' },
+])
 
 function normalize(str) {
   return str

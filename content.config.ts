@@ -408,6 +408,38 @@ export default defineContentConfig({
         otherIdeas: z.string().describe('Titre de la section carousel propositions de voyages'),
       }),
     }),
+    page_search: defineCollection({
+      type: 'data',
+      source: 'textes/fr/search.json',
+      schema: z.object({
+        oneTrip: z.string().describe('Texte pour un seul voyage'),
+        multipleTrips: z.string().describe('Texte pour plusieurs voyages'),
+        resetButton: z.string().describe('Texte du bouton réinitialiser'),
+        infoContainer: z.object({
+          title: z.string().describe('Titre de la section InfoContainer'),
+          description: z.string().describe('Description de la section InfoContainer'),
+          buttonText: z.string().describe('Texte du bouton InfoContainer'),
+        }).describe('Section InfoContainer de la page de recherche'),
+      }).describe('Textes pour la page de recherche'),
+    }),
+    page_blog: defineCollection({
+      type: 'data',
+      source: 'textes/fr/blog.json',
+      schema: z.object({
+        pageTitle: z.string().describe('Titre de la page blog'),
+        searchPlaceholder: z.string().describe('Placeholder du champ de recherche'),
+        categoryFilter: z.string().describe('Label du filtre par catégorie'),
+        sortByDate: z.string().describe('Label du tri par date'),
+        noArticlesFound: z.string().describe('Message quand aucun article trouvé'),
+        resetFilters: z.string().describe('Texte du bouton réinitialiser les filtres'),
+        sortOptions: z.object({
+          newest: z.string().describe('Option tri plus récent'),
+          oldest: z.string().describe('Option tri plus ancien'),
+          shortest: z.string().describe('Option tri plus court'),
+          longest: z.string().describe('Option tri plus long'),
+        }).describe('Options de tri'),
+      }).describe('Textes pour la page blog'),
+    }),
     ctas: defineCollection({
       type: 'data',
       source: {
@@ -437,6 +469,10 @@ export default defineContentConfig({
           title: z.string().describe('Titre de la section'),
           subtitle: z.string().describe('Sous-titre de la section'),
         }).describe('Section partenaires, defini dans le dossier voyagesv2'),
+        layoutInfoContainer: z.object({
+          title: z.string().describe('Titre de la section InfoContainer dans les layouts'),
+          subtitle: z.string().describe('Sous-titre de la section InfoContainer dans les layouts'),
+        }).describe('Section InfoContainer utilisée dans les layouts default et no-faq'),
       }),
     }),
     checkout: defineCollection({
@@ -619,6 +655,29 @@ export default defineContentConfig({
           group: z.string(),
         }).describe('Types de voyage'),
       }).describe('Textes pour le composant SearchField'),
+    }),
+    voyage_card: defineCollection({
+      type: 'data',
+      source: 'textes/fr/voyage-card.json',
+      schema: z.object({
+        type: z.string().describe('Label pour le type de voyage'),
+        groupType: z.string().describe('Texte pour voyage en groupe'),
+        soloType: z.string().describe('Texte pour voyage solo'),
+        days: z.string().describe('Label pour la durée en jours'),
+        startingFrom: z.string().describe('Texte "À partir de" pour le prix'),
+        discoverDates: z.string().describe('Texte du bouton découvrir les dates'),
+        requestQuote: z.string().describe('Texte du bouton demander un devis'),
+      }).describe('Textes pour le composant VoyageCard'),
+    }),
+    newsletter: defineCollection({
+      type: 'data',
+      source: 'textes/fr/newsletter.json',
+      schema: z.object({
+        emailPlaceholder: z.string().describe('Placeholder du champ email'),
+        subscribeButton: z.string().describe('Texte du bouton s\'inscrire'),
+        successMessage: z.string().describe('Message de succès inscription'),
+        closeButton: z.string().describe('Texte du bouton fermer'),
+      }).describe('Textes pour le composant NewsletterContainer'),
     }),
     voyages: defineCollection({
       type: 'data',

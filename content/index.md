@@ -143,7 +143,7 @@ au cœur du voyage
     ::::cta-button
     ---
     color: secondary
-    link: /concept
+    link: /a-propos
     ---
     #text
     Notre vision du voyage

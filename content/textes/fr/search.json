@@ -1,0 +1,10 @@
+{
+  "oneTrip": "voyage",
+  "multipleTrips": "voyages",
+  "resetButton": "Réinitialiser",
+  "infoContainer": {
+    "title": "Vous hésitez encore ?",
+    "description": "Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.",
+    "buttonText": "Prendre RDV"
+  }
+} 
