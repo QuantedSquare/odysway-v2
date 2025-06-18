@@ -1,80 +1,76 @@
 <template>
   <v-container
     fluid
-    class="px-2 px-md-4 pt-0"
+    class="px-2 px-md-4 pt-0 position-relative"
   >
-    <SearchHeroSection
-      :is-next-departures="true"
-      :destination="{ periodFilter: selectedFilter }"
-    >
-      <v-container class="d-flex justify-center">
-        <v-row
-          justify="center"
-          align="center"
-          class="rounded-md bg-white filter-wrapper"
+    <div class="mb-16">
+      <SearchHeroSection
+        :is-next-departures="true"
+        :destination="{
+          periodFilter: selectedPeriod,
+          image: {
+            src: '/images/homeHero.jpeg',
+            alt: 'Découvrez nos voyages de groupe',
+          },
+        }"
+        :no-margin-bottom="true"
+      />
+    </div>
+
+    <v-container class="bg-white rounded-md filter-wrapper absolute">
+      <v-row>
+        <v-col
+          cols="12"
+          md="auto"
         >
-          <v-col
-            cols="12"
-            sm="auto"
+          <v-btn-toggle
+            v-model="toggledBtn"
+            mandatory
+            class="d-flex justify-center ga-3 btn-height"
           >
-            <v-btn-toggle
-              v-model="toggledBtn"
-              mandatory
-              density="compact"
-              class="d-flex justify-center ga-2"
+            <v-btn
+              v-for="btn of toggleBtns"
+              :key="btn.text"
+              :value="btn.value"
+              height="100%"
+              selected-class="bg-primary"
+              class="text-decoration-none rounded-lg"
             >
-              <v-btn
-                v-for="btn of toggleBtns"
-                :key="btn.text"
-                :value="btn.value"
-                :to="btn.path"
-                selected-class="bg-secondary"
-                class="text-decoration-none rounded-lg"
-              >
-                <span class="text-subtitle-1"> {{ btn.text }}</span>
-              </v-btn>
-            </v-btn-toggle>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-            class="pt-0 pt-md-3"
+              <span class="text-subtitle-1"> {{ btn.text }}</span>
+            </v-btn>
+          </v-btn-toggle>
+        </v-col>
+        <v-col
+          cols="12"
+          md="auto"
+          class="pl-md-0 pt-0 pt-md-3"
+        >
+          <v-select
+            :id="periodId"
+            v-model="selectedPeriod"
+            hide-details
+            :items="sortedMonths"
+            label="Période"
           >
-            <v-select
-              :id="periodId"
-              v-model="selectedFilter"
-              hide-details
-              :items="sortedMonths"
-              label="Période"
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Calendar icon"
-                  width="24"
-                  height="24"
-                />
-              </template>
-            </v-select>
-          </v-col>
-        </v-row>
-      </v-container>
-    </SearchHeroSection>
-    <v-row class="my-md-4">
-      <v-col cols="12">
-        <p>Réservez un voyage groupé et rejoignez un petit groupe de 8 voyageurs maximum.</p>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12">
-        <VoyageCardsList
-          :filtered-deals="groupByMonthFiltered"
-          :deals-lastminute="dealsLastMinuteFiltered"
-          :selected-filter="selectedFilter"
-          :toggled-btn="toggledBtn"
-        />
-      </v-col>
-    </v-row>
+            <template #prepend-inner>
+              <v-img
+                :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                alt="Calendar icon"
+                width="24"
+                height="24"
+              />
+            </template>
+          </v-select>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <VoyageCardsList
+      :filtered-deals="groupByMonthFiltered"
+      :deals-lastminute="dealsLastMinuteFiltered"
+      :selected-period="selectedPeriod"
+      :toggled-btn="toggledBtn"
+    />
   </v-container>
 </template>
 
@@ -92,18 +88,18 @@ const loading = ref(false)
 const travels = ref([])
 const toggledBtn = ref('all')
 const periodId = useId()
-const selectedFilter = ref('Toutes périodes')
+const selectedPeriod = ref(route.query?.periode || 'Toutes périodes')
 const toggleBtns = ref([
-  { value: 'all',
-    path: '/prochains-departs',
+  {
+    value: 'all',
     text: 'Tous',
   },
-  { value: 'france',
-    path: 'prochains-departs?type=france',
+  {
+    value: 'france',
     text: 'En France',
   },
-  { value: 'other',
-    path: 'prochains-departs?type=other',
+  {
+    value: 'other',
     text: 'À l\'étranger',
   },
 ])
@@ -127,6 +123,52 @@ onMounted(() => {
   nextTick(() => {
     toggledBtn.value = route.query?.type || 'all'
   })
+})
+
+watch(selectedPeriod, (newPeriod) => {
+  const query = { ...route.query }
+
+  delete query.periode
+
+  if (newPeriod !== 'Toutes périodes') {
+    query.periode = newPeriod
+  }
+
+  navigateTo({
+    path: route.path,
+    query: Object.keys(query).length > 0 ? query : undefined,
+  })
+})
+
+watch(toggledBtn, (newType) => {
+  const query = { ...route.query }
+
+  if (newType === 'all') {
+    delete query.type
+  }
+  else {
+    query.type = newType
+  }
+
+  const currentPeriode = query.periode
+  delete query.periode
+
+  if (currentPeriode && selectedPeriod.value !== 'Toutes périodes') {
+    query.periode = currentPeriode
+  }
+
+  navigateTo({
+    path: route.path,
+    query: Object.keys(query).length > 0 ? query : undefined,
+  })
+})
+
+watch(() => route.query.periode, (newPeriode) => {
+  selectedPeriod.value = newPeriode || 'Toutes périodes'
+})
+
+watch(() => route.query.type, (newType) => {
+  toggledBtn.value = newType || 'all'
 })
 
 const filteredTravels = computed(() => {
@@ -193,10 +235,10 @@ const sortedMonths = computed(() => {
 })
 
 const groupByMonthFiltered = computed(() => {
-  if (selectedFilter.value === 'Toutes périodes') {
+  if (selectedPeriod.value === 'Toutes périodes') {
     return groupByMonth.value
   }
-  const monthName = selectedFilter.value
+  const monthName = selectedPeriod.value
   const dealsForSelectedMonth = groupByMonth.value[monthName] || []
 
   const singleMonthObject = {
@@ -222,11 +264,37 @@ function capitalizeFirstLetter(string) {
 
 <style scoped>
 .filter-wrapper{
-  max-width: 700px;
-  position: relative;
+  width: fit-content;
+  height: fit-content;
   box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
 }
-.selected-destination{
-  background-color: black;
+.absolute {
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 300px;
+}
+.btn-height{
+  height: 56px;
+}
+
+@media (min-width: 960px) {
+  .absolute {
+    top: 305px;
+  }
+}
+
+@media (max-width: 960px) {
+  .absolute {
+    top: 400px;
+  }
+  .filter-wrapper{
+    max-width: calc(100% - 16px);
+    width: auto;
+    margin: 0 auto;
+  }
+  .btn-height{
+    height: 48px;
+  }
 }
 </style>

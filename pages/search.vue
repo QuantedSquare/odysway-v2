@@ -5,7 +5,7 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
-    <v-row class="py-6 pt-md-10 px-12">
+    <v-row class="py-4 mt-md-12 px-4 px-md-12">
       <v-col
         cols="auto"
         md="auto"

@@ -1,71 +1,80 @@
 <template>
-  <div>
-    <v-row v-if="dealsLastMinute.length > 0">
-      <v-col
-        cols="8"
-        sm="10"
-        class="font-weight-black my-4"
-      >
-        <p>
-          Profitez d'une réduction sur nos voyages de
-          <span class="text-secondary">dernière minute</span>
-        </p>
-      </v-col>
-      <v-col
-        v-for="deal in dealsLastMinute"
-        :key="`${deal.slug}-${deal.dates[0]?.departure_date}`"
-        cols="12"
-        sm="6"
-        md="4"
-      >
-        <VoyageCard :voyage="deal" />
-      </v-col>
-    </v-row>
-    <v-row>
-      <template
-        v-for="monthName in paginatedMonthNames"
-        :key="monthName"
-      >
-        <v-col cols="12">
-          <h3
-            v-if="selectedFilter === 'Toutes périodes'"
-            class="text-secondary text-h5 text-md-h4 font-weight-bold mt-6 mb-2"
-          >
-            {{ monthName }}
-          </h3>
+  <v-row>
+    <v-col cols="12">
+      <v-row v-if="dealsLastMinute.length > 0">
+        <v-col
+          cols="8"
+          sm="10"
+          class="font-weight-black custom-title my-4"
+        >
+          <p>
+            Profitez d'une réduction sur nos voyages de
+            <span class="text-secondary">dernière minute</span>
+          </p>
         </v-col>
         <v-col
-          v-for="(deal, i) in dealsToDisplayInMonth(monthName)"
-          :key="`${deal.slug}-${deal.dates[0]?.departure_date}-${i}`"
+          v-for="deal in dealsLastMinute"
+          :key="`${deal.slug}-${deal.dates[0]?.departure_date}`"
           cols="12"
           sm="6"
           md="4"
         >
           <VoyageCard :voyage="deal" />
         </v-col>
-      </template>
+      </v-row>
+    </v-col>
+    <v-col cols="12">
+      <v-row>
+        <template
+          v-for="monthName in paginatedMonthNames"
+          :key="monthName"
+        >
+          <v-col cols="12">
+            <h3
+              v-if="selectedPeriod === 'Toutes périodes'"
+              class="custom-title font-weight-bold mt-6 mb-2"
+            >
+              {{ monthName }}
+            </h3>
+          </v-col>
+          <v-col
+            v-for="(deal, i) in dealsToDisplayInMonth(monthName)"
+            :key="`${deal.slug}-${deal.dates[0]?.departure_date}-${i}`"
+            cols="12"
+            sm="6"
+            md="4"
+          >
+            <VoyageCard :voyage="deal" />
+          </v-col>
+          <v-col>
+            <p v-if="dealsToDisplayInMonth(monthName).length === 0">
+              Aucun voyage disponible pour le mois de {{ monthName }}
+            </p>
+          </v-col>
+        </template>
 
-      <v-col
-        v-if="nbPages > 1"
-        cols="12"
-      >
-        <v-pagination
-          v-model="pagination.currentPage"
-          :length="nbPages"
-          :total-visible="5"
-          variant="flat"
-          density="comfortable"
-          rounded="circle"
-          active-color="primary"
-          elevation="3"
-          class="my-4"
-          @click="goTo(scrollTarget, { offset: -50 })"
-          @next="pagination.currentPage = pagination.currentPage++"
-          @prev="pagination.currentPage = pagination.currentPage-- "
-        />
-      </v-col>
-    </v-row>
-  </div>
+        <v-col
+          v-if="nbPages > 1"
+          cols="12"
+        >
+          <v-pagination
+            v-model="pagination.currentPage"
+            :length="nbPages"
+            :total-visible="5"
+            variant="flat"
+            density="comfortable"
+            rounded="circle"
+            active-color="primary"
+            elevation="3"
+            class="my-4"
+            @click="goTo(scrollTarget, { offset: -50 })"
+            @next="pagination.currentPage = pagination.currentPage++"
+            @prev="pagination.currentPage = pagination.currentPage-- "
+          />
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup>
@@ -81,7 +90,7 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
-  selectedFilter: {
+  selectedPeriod: {
     type: String,
   },
   toggledBtn: {
@@ -100,7 +109,7 @@ const pagination = ref({
 const paginatedMonthNames = computed(() => {
   const monthNames = Object.keys(props.filteredDeals)
 
-  if (props.selectedFilter === 'Toutes périodes') {
+  if (props.selectedPeriod === 'Toutes périodes') {
     // When 'Toutes périodes', we show exactly one month per "page" in the UI.
     const start = (pagination.value.currentPage - 1)
     const end = start + 1 // Always show only one month
@@ -112,7 +121,7 @@ const paginatedMonthNames = computed(() => {
 
 const dealsToDisplayInMonth = (monthName) => {
   const allDealsInSelectedMonth = props.filteredDeals[monthName] || []
-  if (props.selectedFilter === 'Toutes périodes') {
+  if (props.selectedPeriod === 'Toutes périodes') {
     return allDealsInSelectedMonth
   }
 
@@ -122,7 +131,7 @@ const dealsToDisplayInMonth = (monthName) => {
 }
 
 const nbPages = computed(() => {
-  if (props.selectedFilter === 'Toutes périodes' && Object.keys(props.filteredDeals).length > 1) {
+  if (props.selectedPeriod === 'Toutes périodes' && Object.keys(props.filteredDeals).length > 1) {
     return Object.keys(props.filteredDeals).length
   }
 
@@ -132,7 +141,7 @@ const nbPages = computed(() => {
 })
 
 watch(
-  () => props.selectedFilter,
+  () => props.selectedPeriod,
   (newVal, oldVal) => {
     if (newVal !== oldVal) {
       pagination.value.currentPage = 1
@@ -149,3 +158,31 @@ watch(
   },
 )
 </script>
+
+<style scoped>
+.custom-title {
+font-weight: 700;
+font-size: 50px;
+line-height: 50px;
+}
+
+@media (min-width: 960px) {
+  .custom-title {
+    font-size: 42px!important;
+    line-height: 42px!important;
+  }
+}
+
+@media (max-width: 960px) {
+  .custom-title {
+    font-size: 42px !important;
+    line-height: 42px !important;
+  }
+}
+@media (max-width: 400px) {
+  .custom-title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+}
+</style>
