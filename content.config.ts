@@ -604,6 +604,22 @@ export default defineContentConfig({
         }).describe('Options génériques'),
       }).describe('Section devis, defini dans le dossier voyagesv2'),
     }),
+    search_field: defineCollection({
+      type: 'data',
+      source: 'textes/fr/search-field.json',
+      schema: z.object({
+        destination: z.string().describe('Label pour le champ destination'),
+        travelType: z.string().describe('Label pour le champ type de voyage'),
+        period: z.string().describe('Label pour le champ période'),
+        discoverTrips: z.string().describe('Texte du bouton découvrir les voyages'),
+        topDestinations: z.string().describe('Titre pour la section top destinations'),
+        allPeriods: z.string().describe('Option pour toutes périodes'),
+        travelTypes: z.object({
+          individual: z.string(),
+          group: z.string(),
+        }).describe('Types de voyage'),
+      }).describe('Textes pour le composant SearchField'),
+    }),
     voyages: defineCollection({
       type: 'data',
       source: 'voyages/*.json',

@@ -1,176 +1,178 @@
 <template>
-  <div>
-    <v-container
-      ref="searchField"
-      class="search-field-container px-0 px-md-3 py-0 z-index-2003"
+  <v-container
+    ref="searchField"
+    class="search-field-container px-0 px-md-3 py-0 z-index-2003"
+  >
+    <div
+      ref="container"
+      class="rounded-md bg-white pa-4 pb-0  search-field-min-height "
+      :class="{ 'search-field-shadow': !showDestinationsCarousel }"
     >
-      <div
-        ref="container"
-        class="rounded-md bg-white pa-4 pb-0  search-field-min-height "
-        :class="{ 'search-field-shadow': !showDestinationsCarousel }"
+      <v-row
+        align="center"
       >
-        <v-row
-          align="center"
+        <v-col
+          cols="12"
+          md="3"
+          class="pb-1 pb-md-3"
         >
-          <v-col
-            cols="12"
-            md="3"
-            class="pb-1 pb-md-3"
+          <v-autocomplete
+            :id="destinationId"
+            v-model="destinationChoice"
+            v-model:search="search"
+            :items="filteredRegions"
+            :custom-filter="customFilter"
+            :loading="regionsStatus === 'pending'"
+            hide-details
+            :label="searchFieldContent?.destination || 'Destination'"
+            clearable
+            @update:model-value="clearDestination"
           >
-            <v-autocomplete
-              :id="destinationId"
-              v-model="destinationChoice"
-              v-model:search="search"
-              :items="filteredRegions"
-              :custom-filter="customFilter"
-              :loading="regionsStatus === 'pending'"
-              hide-details
-              label="Destination"
-              clearable
-              @update:model-value="clearDestination"
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Pin marker"
-                  width="24"
-                  height="24"
-                />
-              </template>
-              <template #item="{ item }">
-                <v-list
-                  lines="one"
-                  select-strategy="classic"
-                >
-                  <v-hover>
-                    <template #default="{ isHovering, props }">
-                      <v-list-item-title
-                        v-bind="props"
-                        style="cursor:pointer"
-                        class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold hover-bg-primary"
-                        :class="{ 'bg-grey-light text-primary': isHovering }"
-                        @click.stop="selectRegion(item.raw)"
-                      >
-                        <div v-if="item.raw.value === 'top-destination'">
-                          <v-img
-                            :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
-                            width="20"
-                            height="20"
-                            class="align-self-end"
-                          />
-                        </div>
-                        <v-icon
-                          v-else
-                          :icon="mdiEarth"
-                          class="svg-white"
-                          size="24"
-                        />
-
-                        {{ item.title }}
-                      </v-list-item-title>
-                    </template>
-                  </v-hover>
-
-                  <v-list-item
-                    v-for="destination, index in filteredDestinationsForRegion(item.raw, search, item)"
-                    :key="index"
-                    density="compact"
-                    class="px-0 mb-0 "
-                    :class="{ ' pb-2 border-b': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
-                    nav
-                    @click="selectDestination(destination)"
-                  >
+            <template #prepend-inner>
+              <v-img
+                :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640 })"
+                alt="Pin marker"
+                width="24"
+                height="24"
+              />
+            </template>
+            <template #item="{ item }">
+              <v-list
+                lines="one"
+                select-strategy="classic"
+              >
+                <v-hover>
+                  <template #default="{ isHovering, props }">
                     <v-list-item-title
-                      class="text-subtitle-2 d-flex align-center justify-start ga-2 px-3"
+                      v-bind="props"
+                      style="cursor:pointer"
+                      class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold hover-bg-primary"
+                      :class="{ 'bg-grey-light text-primary': isHovering }"
+                      @click.stop="selectRegion(item.raw)"
                     >
-                      <v-icon :icon="item.raw.value === 'top-destination' ? mdiThumbUpOutline : mdiMapMarker" />
-                      {{ destination.titre }}
+                      <div v-if="item.raw.value === 'top-destination'">
+                        <v-img
+                          :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
+                          width="20"
+                          height="20"
+                          class="align-self-end"
+                        />
+                      </div>
+                      <v-icon
+                        v-else
+                        :icon="mdiEarth"
+                        class="svg-white"
+                        size="24"
+                      />
+
+                      {{ item.title }}
                     </v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </template>
-            </v-autocomplete>
-          </v-col>
-          <v-col
-            cols="12"
-            md="3"
-            class="pb-1 pb-md-3"
+                  </template>
+                </v-hover>
+
+                <v-list-item
+                  v-for="destination, index in filteredDestinationsForRegion(item.raw, search, item)"
+                  :key="index"
+                  density="compact"
+                  class="px-0 mb-0 "
+                  :class="{ ' pb-2 border-b': index !== filteredDestinationsForRegion(item.raw, search, item).length - 1 }"
+                  nav
+                  @click="selectDestination(destination)"
+                >
+                  <v-list-item-title
+                    class="text-subtitle-2 d-flex align-center justify-start ga-2 px-3"
+                  >
+                    <v-icon :icon="item.raw.value === 'top-destination' ? mdiThumbUpOutline : mdiMapMarker" />
+                    {{ destination.titre }}
+                  </v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </template>
+          </v-autocomplete>
+        </v-col>
+        <v-col
+          cols="12"
+          md="3"
+          class="pb-1 pb-md-3"
+        >
+          <v-select
+            :id="travelTypeId"
+            v-model="travelTypeChoice"
+            :items="travelTypes"
+            hide-details
+            :label="searchFieldContent?.travelType || 'Type de voyage'"
+            clearable
           >
-            <v-select
-              :id="travelTypeId"
-              v-model="travelTypeChoice"
-              :items="travelTypes"
-              hide-details
-              label="Type de voyage"
-              clearable
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Team icon"
-                  width="24"
-                  height="24"
-                />
-              </template>
-            </v-select>
-          </v-col>
-          <v-col
-            cols="12"
-            md="3"
-            class="pb-1 pb-md-3"
+            <template #prepend-inner>
+              <v-img
+                :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640 })"
+                alt="Team icon"
+                width="24"
+                height="24"
+              />
+            </template>
+          </v-select>
+        </v-col>
+        <v-col
+          cols="12"
+          md="3"
+          class="pb-1 pb-md-3"
+        >
+          <v-select
+            :id="dateId"
+            v-model="date"
+            multiple
+            hide-details
+            :items="months"
+            :label="searchFieldContent?.period || 'Période'"
+            class="search-field-max-height"
           >
-            <v-select
-              :id="dateId"
-              v-model="date"
-              multiple
-              hide-details
-              :items="months"
-              label="Période"
-              class="search-field-max-height"
-            >
-              <template #prepend-inner>
-                <v-img
-                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                  alt="Calendar icon"
-                  width="24"
-                  height="24"
-                />
-              </template>
-            </v-select>
-          </v-col>
-          <v-col
-            cols="12"
-            md="3"
-            class="h-100 pb-4"
+            <template #prepend-inner>
+              <v-img
+                :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                alt="Calendar icon"
+                width="24"
+                height="24"
+              />
+            </template>
+          </v-select>
+        </v-col>
+        <v-col
+          cols="12"
+          md="3"
+          class="h-100 pb-4"
+        >
+          <v-btn
+            height="56"
+            block
+            :loading="status === 'pending'"
+            color="secondary"
+            class="text-none text-body-1 font-weight-bold"
+            @click="searchFn"
           >
-            <v-btn
-              height="56"
-              block
-              :loading="status === 'pending'"
-              color="secondary"
-              class="text-none text-body-1 font-weight-bold"
-              @click="searchFn"
-            >
-              Découvrir les voyages
-            </v-btn>
-          </v-col>
-        </v-row>
-      </div>
-    </v-container>
-  </div>
+            {{ searchFieldContent?.discoverTrips || 'Découvrir les voyages' }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </div>
+  </v-container>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { mdiEarth, mdiMapMarker, mdiThumbUpOutline } from '@mdi/js'
-import _ from 'lodash'
+import { uniqBy, uniq } from 'lodash'
 import { useImage } from '#imports'
 
 const img = useImage()
 const router = useRouter()
 const route = useRoute()
+
+const { data: searchFieldContent } = await useAsyncData('search-field-content', () =>
+  queryCollection('search_field').first(),
+)
+
 const isSelectionARegion = ref(false)
-// const dateMenu = ref(false)
 const { gtag } = useGtag()
 const destinationId = useId()
 const travelTypeId = useId()
@@ -180,21 +182,30 @@ const travelTypeChoice = useState('searchTravelType', () => null)
 const destinationChoice = ref(route.query.destination || null)
 const showDestinationsCarousel = ref(false)
 const search = useState('search', () => route.query.destination || null)
-const months = [
-  { title: 'Toutes périodes', value: 0 },
-  { title: 'Janvier', value: 1 },
-  { title: 'Février', value: 2 },
-  { title: 'Mars', value: 3 },
-  { title: 'Avril', value: 4 },
-  { title: 'Mai', value: 5 },
-  { title: 'Juin', value: 6 },
-  { title: 'Juillet', value: 7 },
-  { title: 'Août', value: 8 },
-  { title: 'Septembre', value: 9 },
-  { title: 'Octobre', value: 10 },
-  { title: 'Novembre', value: 11 },
-  { title: 'Décembre', value: 12 },
-]
+
+const months = computed(() => {
+  const locale = 'fr-FR'
+
+  // Generate months using Intl.DateTimeFormat
+  const monthNames = Array.from({ length: 12 }, (_, i) => {
+    const date = new Date(2025, i, 1) // Use any year, month index, day 1
+    return new Intl.DateTimeFormat(locale, { month: 'long' }).format(date)
+  })
+
+  // Capitalize first letter of each month
+  const capitalizedMonths = monthNames.map(month =>
+    month.charAt(0).toUpperCase() + month.slice(1),
+  )
+
+  return [
+    { title: searchFieldContent.value?.allPeriods || 'Toutes périodes', value: 0 },
+    ...capitalizedMonths.map((month, index) => ({
+      title: month,
+      value: index + 1,
+    })),
+  ]
+})
+
 const { data: destinations, status } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
 })
@@ -207,7 +218,7 @@ const mappedDestinationsToRegions = computed(() => {
   // Create Top destination pseudo-region
   const topDestinations = destinations.value.filter(d => d.isTopDestination)
   const topRegion = {
-    title: 'Top destinations',
+    title: searchFieldContent.value?.topDestinations || 'Top destinations',
     value: 'top-destination',
     image: null,
     destinations: topDestinations,
@@ -225,13 +236,10 @@ const mappedDestinationsToRegions = computed(() => {
   return topDestinations.length > 0 ? [topRegion, ...regionGroups] : regionGroups
 })
 
-const travelTypes = [
-  'Voyage individuel', 'Voyage en groupe',
-]
-
-// const formattedDate = computed(() => {
-//   return date.value ? dayjs(date.value[0]).format('DD/MM') + ' - ' + dayjs(date.value[date.value.length - 1]).format('DD/MM') : ''
-// })
+const travelTypes = computed(() => [
+  searchFieldContent.value?.travelTypes?.individual || 'Voyage individuel',
+  searchFieldContent.value?.travelTypes?.group || 'Voyage en groupe',
+])
 
 // Normalization function for accent/hyphen insensitivity
 function normalize(str) {
@@ -314,7 +322,7 @@ const filteredRegions = computed(() => {
   const nameAggregated = aggregateDestinations(mappedDestinationsToRegions.value, search.value)
   // Combine both sets, deduplicate by slug or titre
   const allDestinations = [...regionDestinations, ...nameAggregated]
-  const uniqDestinations = _.uniqBy(allDestinations, dest => dest.slug || dest.titre)
+  const uniqDestinations = uniqBy(allDestinations, dest => dest.slug || dest.titre)
   // Aggregate region labels for each destination
   const destinationMap = {}
   uniqDestinations.forEach((dest) => {
@@ -337,7 +345,7 @@ const filteredRegions = computed(() => {
   // Group by region label
   const regionGroups = {}
   Object.values(destinationMap).forEach((dest) => {
-    const processedRegions = _.uniq(dest.regions.map(r => typeof r === 'string' ? r : r.nom))
+    const processedRegions = uniq(dest.regions.map(r => typeof r === 'string' ? r : r.nom))
 
     const regionLabel = processedRegions.length > 1 ? processedRegions.join(' & ') : processedRegions[0]
     if (!regionGroups[regionLabel]) regionGroups[regionLabel] = []
