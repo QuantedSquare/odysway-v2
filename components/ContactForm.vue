@@ -14,13 +14,13 @@
               cols="12"
             >
               <div>
-                Civilité *
+                {{ contactContent?.contactForm?.fields?.civility?.label || 'Civilité *' }}
               </div>
               <v-select
                 v-model="civility"
                 max-width="350"
-                :items="status"
-                placeholder="Choisissez une civilité"
+                :items="statusOptions"
+                :placeholder="contactContent?.contactForm?.fields?.civility?.placeholder || 'Choisissez une civilité'"
                 item-title="title"
                 item-value="value"
                 :rules="[rules.civility]"
@@ -33,11 +33,11 @@
               md="6"
             >
               <div>
-                Nom *
+                {{ contactContent?.contactForm?.fields?.lastName?.label || 'Nom *' }}
               </div>
               <v-text-field
                 v-model="lastName"
-                placeholder="Jones"
+                :placeholder="contactContent?.contactForm?.fields?.lastName?.placeholder || 'Jones'"
                 :rules="[rules.lastname]"
               />
             </v-col>
@@ -46,11 +46,11 @@
               md="6"
             >
               <div>
-                Prenom *
+                {{ contactContent?.contactForm?.fields?.firstName?.label || 'Prenom *' }}
               </div>
               <v-text-field
                 v-model="firstName"
-                placeholder="Indiana"
+                :placeholder="contactContent?.contactForm?.fields?.firstName?.placeholder || 'Indiana'"
                 :rules="[rules.firstname]"
               />
             </v-col>
@@ -59,7 +59,7 @@
               md="6"
             >
               <div>
-                Numéro de téléphone
+                {{ contactContent?.contactForm?.fields?.phone?.label || 'Numéro de téléphone' }}
               </div>
               <PhoneTextField
                 v-model="phone"
@@ -71,38 +71,58 @@
               md="6"
             >
               <div>
-                Adresse email *
+                {{ contactContent?.contactForm?.fields?.email?.label || 'Adresse email *' }}
               </div>
               <v-text-field
                 v-model="email"
                 :rules="[rules.email]"
-                placeholder="Votre adresse email"
+                :placeholder="contactContent?.contactForm?.fields?.email?.placeholder || 'Votre adresse email'"
               />
             </v-col>
             <v-col
               cols="12"
             >
               <div>
-                Objet de votre message *
+                {{ contactContent?.contactForm?.fields?.subject?.label || 'Objet de votre message *' }}
               </div>
               <v-text-field
                 v-model="subject"
                 :rules="[rules.subject]"
-                placeholder="J'ai besoin d'aide pour partir au Japon..."
+                :placeholder="contactContent?.contactForm?.fields?.subject?.placeholder || 'J\'ai besoin d\'aide pour partir au Japon...'"
                 :counter="1"
               />
             </v-col>
             <v-col cols="12">
               <div>
-                Message *
+                {{ contactContent?.contactForm?.fields?.message?.label || 'Message *' }}
               </div>
               <v-textarea
                 v-model="message"
                 variant="outlined"
                 :rules="[rules.message]"
-                placeholder="Votre message..."
+                :placeholder="contactContent?.contactForm?.fields?.message?.placeholder || 'Votre message...'"
                 :counter="20"
               />
+            </v-col>
+            <v-col cols="12">
+              <v-checkbox
+                v-model="gdprAccepted"
+                required
+              >
+                <template #label>
+                  <div class="text-body-2">
+                    {{ contactContent?.contactForm?.gdprSection?.agreementText || "J'accepte la" }}
+                    <NuxtLink
+                      :to="contactContent?.contactForm?.gdprSection?.privacyLinkUrl || '/politique-de-confidentialite'"
+                      class="text-primary text-decoration-underline"
+                      target="_blank"
+                    >
+                      {{ contactContent?.contactForm?.gdprSection?.privacyLinkText || 'politique de confidentialité' }}
+                    </NuxtLink>
+                    {{ contactContent?.contactForm?.gdprSection?.agreementSuffix || 'et consens au traitement de mes données personnelles.' }}
+                  </div>
+                </template>
+              </v-checkbox>
             </v-col>
             <v-col
               cols="12"
@@ -111,9 +131,9 @@
               <v-btn-secondary
                 class="me-4"
                 type="submit"
-                :disabled="!formIsValid"
+                :disabled="!isFormComplete"
               >
-                Envoyer
+                {{ contactContent?.contactForm?.submitButton || 'Envoyer' }}
               </v-btn-secondary>
             </v-col>
           </v-row>
@@ -127,38 +147,84 @@
 import { z } from 'zod'
 import { ref } from 'vue'
 
+const { contactContent } = defineProps({
+  contactContent: {
+    type: Object,
+    default: () => ({}),
+  },
+})
+
 const civility = ref('M.')
-const status = [
-  { title: 'M.', value: 'M.' },
-  { title: 'Mme.', value: 'Mme.' },
-  { title: 'Autre', value: 'Autre' },
-]
+const statusOptions = computed(() => [
+  {
+    title: contactContent?.contactForm?.fields?.civility?.options?.mr || 'M.',
+    value: 'M.',
+  },
+  {
+    title: contactContent?.contactForm?.fields?.civility?.options?.mrs || 'Mme.',
+    value: 'Mme.',
+  },
+  {
+    title: contactContent?.contactForm?.fields?.civility?.options?.other || 'Autre',
+    value: 'Autre',
+  },
+])
 const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const phone = ref('')
 const message = ref('')
 const subject = ref('')
+const gdprAccepted = ref(false)
 
 const formIsValid = ref(false)
 const form = ref(null)
 
-const schemaToRule = useZodSchema()
-const civilitySchema = z.enum(['M.', 'Mme.'], { errorMap: () => ({ message: 'Veuillez choisir une civilité.' }) })
-const firstnameSchema = z.string().min(1, 'Cette information est requise.')
-const lastnameSchema = z.string().min(1, 'Cette information est requise.')
-const emailSchema = z.string().email('Adresse email invalide')
-const subjectSchema = z.string().min(1, 'Au moins un caractère est requis')
-const messageSchema = z.string().min(20, 'Au moins 20 caractères sont requis')
+const isFormComplete = computed(() => {
+  return formIsValid.value && gdprAccepted.value
+})
 
-const rules = {
-  civility: schemaToRule(civilitySchema),
-  firstname: schemaToRule(firstnameSchema),
-  lastname: schemaToRule(lastnameSchema),
-  email: schemaToRule(emailSchema),
-  subject: schemaToRule(subjectSchema),
-  message: schemaToRule(messageSchema),
-}
+// Save GDPR acceptance to localStorage when user accepts
+watch(gdprAccepted, (newValue) => {
+  localStorage.setItem('contact-form-agreement', JSON.stringify(newValue))
+  if (newValue) {
+    localStorage.setItem('contact-form-agreement-date', new Date().toISOString())
+  }
+})
+
+const schemaToRule = useZodSchema()
+
+const rules = computed(() => {
+  const civilitySchema = z.enum(['M.', 'Mme.'], {
+    errorMap: () => ({
+      message: contactContent?.contactForm?.validationMessages?.civilityRequired || 'Veuillez choisir une civilité.',
+    }),
+  })
+  const firstnameSchema = z.string().min(1,
+    contactContent?.contactForm?.validationMessages?.fieldRequired || 'Cette information est requise.',
+  )
+  const lastnameSchema = z.string().min(1,
+    contactContent?.contactForm?.validationMessages?.fieldRequired || 'Cette information est requise.',
+  )
+  const emailSchema = z.string().email(
+    contactContent?.contactForm?.validationMessages?.invalidEmail || 'Adresse email invalide',
+  )
+  const subjectSchema = z.string().min(1,
+    contactContent?.contactForm?.validationMessages?.minOneCharacter || 'Au moins un caractère est requis',
+  )
+  const messageSchema = z.string().min(20,
+    contactContent?.contactForm?.validationMessages?.minTwentyCharacters || 'Au moins 20 caractères sont requis',
+  )
+
+  return {
+    civility: schemaToRule(civilitySchema),
+    firstname: schemaToRule(firstnameSchema),
+    lastname: schemaToRule(lastnameSchema),
+    email: schemaToRule(emailSchema),
+    subject: schemaToRule(subjectSchema),
+    message: schemaToRule(messageSchema),
+  }
+})
 
 async function submit() {
   const data = {
@@ -169,9 +235,15 @@ async function submit() {
     phone: phone.value,
     subject: subject.value,
     message: message.value,
+    gdprAccepted: gdprAccepted.value,
+    gdprAcceptedDate: gdprAccepted.value ? localStorage.getItem('contact-form-agreement-date') : null,
   }
-  const check = await apiRequest('/brevo/email', 'post', data)
-  console.log('========check=======', check)
+  try {
+    await apiRequest('/brevo/email', 'post', data)
+  }
+  catch (error) {
+    console.error('Error submitting form:', error)
+  }
 }
 </script>
 

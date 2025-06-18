@@ -440,6 +440,68 @@ export default defineContentConfig({
         }).describe('Options de tri'),
       }).describe('Textes pour la page blog'),
     }),
+    page_contact: defineCollection({
+      type: 'data',
+      source: 'textes/fr/contact.json',
+      schema: z.object({
+        formTitle: z.string().describe('Titre du formulaire de contact'),
+        heroSection: z.object({
+          title: z.string().describe('Titre de la section hero'),
+          teamImageAlt: z.string().describe('Texte alternatif de l\'image équipe'),
+        }).describe('Section hero'),
+        contactForm: z.object({
+          fields: z.object({
+            civility: z.object({
+              label: z.string().describe('Label du champ civilité'),
+              placeholder: z.string().describe('Placeholder du champ civilité'),
+              options: z.object({
+                mr: z.string().describe('Option Monsieur'),
+                mrs: z.string().describe('Option Madame'),
+                other: z.string().describe('Option Autre'),
+              }).describe('Options de civilité'),
+            }).describe('Champ civilité'),
+            lastName: z.object({
+              label: z.string().describe('Label du champ nom'),
+              placeholder: z.string().describe('Placeholder du champ nom'),
+            }).describe('Champ nom'),
+            firstName: z.object({
+              label: z.string().describe('Label du champ prénom'),
+              placeholder: z.string().describe('Placeholder du champ prénom'),
+            }).describe('Champ prénom'),
+            phone: z.object({
+              label: z.string().describe('Label du champ téléphone'),
+            }).describe('Champ téléphone'),
+            email: z.object({
+              label: z.string().describe('Label du champ email'),
+              placeholder: z.string().describe('Placeholder du champ email'),
+            }).describe('Champ email'),
+            subject: z.object({
+              label: z.string().describe('Label du champ objet'),
+              placeholder: z.string().describe('Placeholder du champ objet'),
+            }).describe('Champ objet'),
+            message: z.object({
+              label: z.string().describe('Label du champ message'),
+              placeholder: z.string().describe('Placeholder du champ message'),
+            }).describe('Champ message'),
+          }).describe('Champs du formulaire'),
+          submitButton: z.string().describe('Texte du bouton soumettre'),
+          gdprSection: z.object({
+            agreementText: z.string().describe('Texte avant le lien'),
+            privacyLinkText: z.string().describe('Texte du lien politique de confidentialité'),
+            privacyLinkUrl: z.string().describe('URL de la politique de confidentialité'),
+            agreementSuffix: z.string().describe('Texte après le lien'),
+          }).describe('Section RGPD'),
+          validationMessages: z.object({
+            civilityRequired: z.string().describe('Message validation civilité requise'),
+            fieldRequired: z.string().describe('Message validation champ requis'),
+            invalidEmail: z.string().describe('Message validation email invalide'),
+            minOneCharacter: z.string().describe('Message validation un caractère minimum'),
+            minMessageCharacters: z.string().describe('Message validation vingt caractères minimum'),
+            gdprRequired: z.string().describe('Message validation RGPD requis'),
+          }).describe('Messages de validation'),
+        }).describe('Formulaire de contact'),
+      }).describe('Textes pour la page contact'),
+    }),
     ctas: defineCollection({
       type: 'data',
       source: {
