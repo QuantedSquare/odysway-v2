@@ -22,7 +22,7 @@
             v-model:search="search"
             :items="filteredRegions"
             :custom-filter="customFilter"
-            :loading="regionsStatus === 'pending'"
+            :loading="regionsStatus === 'pending' || destinationsStatus === 'pending' || searchFieldContentStatus === 'pending'"
             hide-details
             :label="searchFieldContent?.destination || 'Destination'"
             clearable
@@ -30,7 +30,7 @@
           >
             <template #prepend-inner>
               <v-img
-                :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640 })"
+                :src="img('/icons/two-pin-marker.svg', { format: 'webp', quality: 70, width: 640, height: 640 })"
                 alt="Pin marker"
                 width="24"
                 height="24"
@@ -52,7 +52,7 @@
                     >
                       <div v-if="item.raw.value === 'top-destination'">
                         <v-img
-                          :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640 })"
+                          :src="img('/favicon.png', { format: 'webp', quality: 70, width: 640, height: 640 })"
                           width="20"
                           height="20"
                           class="align-self-end"
@@ -98,6 +98,7 @@
           <v-select
             :id="travelTypeId"
             v-model="travelTypeChoice"
+            :loading="searchFieldContentStatus === 'pending'"
             :items="travelTypes"
             hide-details
             :label="searchFieldContent?.travelType || 'Type de voyage'"
@@ -105,7 +106,7 @@
           >
             <template #prepend-inner>
               <v-img
-                :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640 })"
+                :src="img('/icons/business-team.svg', { format: 'webp', quality: 70, width: 640, height: 640 })"
                 alt="Team icon"
                 width="24"
                 height="24"
@@ -124,12 +125,13 @@
             multiple
             hide-details
             :items="months"
+            :loading="searchFieldContentStatus === 'pending'"
             :label="searchFieldContent?.period || 'Période'"
             class="search-field-max-height"
           >
             <template #prepend-inner>
               <v-img
-                :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640, height: 640 })"
                 alt="Calendar icon"
                 width="24"
                 height="24"
@@ -145,7 +147,7 @@
           <v-btn
             height="56"
             block
-            :loading="status === 'pending'"
+            :loading="destinationsStatus === 'pending' || regionsStatus === 'pending' || searchFieldContentStatus === 'pending'"
             color="secondary"
             class="text-none text-body-1 font-weight-bold"
             @click="searchFn"
@@ -168,7 +170,7 @@ const img = useImage()
 const router = useRouter()
 const route = useRoute()
 
-const { data: searchFieldContent } = await useAsyncData('search-field-content', () =>
+const { data: searchFieldContent, status: searchFieldContentStatus } = useAsyncData('search-field-content', () =>
   queryCollection('search_field').first(),
 )
 
@@ -206,7 +208,7 @@ const months = computed(() => {
   ]
 })
 
-const { data: destinations, status } = useAsyncData('destinations', () => {
+const { data: destinations, destinationsStatus } = useAsyncData('destinations', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
 })
 const { data: regions, status: regionsStatus } = useAsyncData('regions', () => {
