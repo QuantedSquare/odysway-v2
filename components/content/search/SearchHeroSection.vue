@@ -16,7 +16,7 @@
           v-if="destination && !isCategory && !isExperience"
           class="custom-hero-title"
         >
-          {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+          {{ `${contentLayout?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
@@ -34,7 +34,7 @@
           v-else
           class="custom-hero-title"
         >
-          Trouvez votre prochain voyage
+          {{ contentLayout?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
         </h1>
       </v-col>
       <v-col
@@ -103,7 +103,7 @@
                 v-if="destination && !isCategory && !isExperience"
                 class="custom-hero-title"
               >
-                {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+                {{ `${contentLayout?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
               </h1>
               <h1
                 v-else-if="destination && isCategory"
@@ -121,7 +121,7 @@
                 v-else
                 class="custom-hero-title ml-3"
               >
-                Trouvez votre prochain voyage
+                {{ contentLayout?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
               </h1>
               <slot name="subtitle" />
             </v-col>
@@ -139,6 +139,10 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
+
+const { data: contentLayout } = await useAsyncData('page-content-layout-search-hero', () =>
+  queryCollection('page_content_layout').first(),
+)
 
 const img = useImage()
 const { width } = useDisplay()
@@ -160,7 +164,7 @@ const { destination, isCategory, isExperience } = defineProps({
     default: false,
   },
 })
-console.log('in hero', destination)
+// console.log('in hero', destination)
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true

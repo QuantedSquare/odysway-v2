@@ -744,6 +744,46 @@ export default defineContentConfig({
         closeButton: z.string().describe('Texte du bouton fermer'),
       }).describe('Textes pour le composant NewsletterContainer'),
     }),
+    page_experiences: defineCollection({
+      type: 'data',
+      source: 'textes/fr/experiences.json',
+      schema: z.object({
+        index: z.object({
+          pageTitle: z.string().describe('Titre de la page expériences'),
+          metaDescription: z.string().describe('Meta description de la page expériences'),
+        }).describe('Textes pour la page index des expériences'),
+        slug: z.object({
+          noVoyagesFound: z.string().describe('Message quand aucun voyage trouvé pour une expérience'),
+          modifySearchCriteria: z.string().describe('Message pour modifier les critères de recherche'),
+        }).describe('Textes pour les pages slug des expériences'),
+        common: z.object({
+          expandButton: z.object({
+            showMore: z.string().describe('Texte du bouton voir plus'),
+            showLess: z.string().describe('Texte du bouton voir moins'),
+          }).describe('Bouton d\'expansion'),
+        }).describe('Textes communs aux pages d\'expériences'),
+      }).describe('Textes pour les pages d\'expériences'),
+    }),
+    page_thematiques: defineCollection({
+      type: 'data',
+      source: 'textes/fr/thematiques.json',
+      schema: z.object({
+        index: z.object({
+          pageTitle: z.string().describe('Titre de la page thématiques'),
+          metaDescription: z.string().describe('Meta description de la page thématiques'),
+        }).describe('Textes pour la page index des thématiques'),
+        slug: z.object({
+          noVoyagesFound: z.string().describe('Message quand aucun voyage trouvé pour une thématique'),
+          modifySearchCriteria: z.string().describe('Message pour modifier les critères de recherche'),
+        }).describe('Textes pour les pages slug des thématiques'),
+        common: z.object({
+          expandButton: z.object({
+            showMore: z.string().describe('Texte du bouton voir plus'),
+            showLess: z.string().describe('Texte du bouton voir moins'),
+          }).describe('Bouton d\'expansion'),
+        }).describe('Textes communs aux pages de thématiques'),
+      }).describe('Textes pour les pages de thématiques'),
+    }),
     voyages: defineCollection({
       type: 'data',
       source: 'voyages/*.json',

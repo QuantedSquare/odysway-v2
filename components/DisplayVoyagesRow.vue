@@ -74,7 +74,7 @@
       class="text-center my-4 my-md-10"
     >
       <h3 class="custom-title">
-        Aucun voyage trouvé pour thématique "{{ selectedCategory.title }}"
+        {{ noVoyagesFoundCategoryText }}
       </h3>
     </v-col>
   </v-row>
@@ -87,7 +87,7 @@
       class="text-center my-4 my-md-10"
     >
       <h3 class="custom-title">
-        Aucun voyage trouvé pour expérience "{{ selectedExperience.title }}"
+        {{ noVoyagesFoundExperienceText }}
       </h3>
     </v-col>
   </v-row>
@@ -100,7 +100,7 @@
       class="text-center my-4 my-md-10"
     >
       <h3 class="custom-title">
-        Modifiez vos critères de recherche
+        {{ props.pageContent?.slug?.modifySearchCriteria || 'Modifiez vos critères de recherche' }}
       </h3>
     </v-col>
   </v-row>
@@ -110,7 +110,7 @@
     align="center"
     class="flex-column my-8"
   >
-    <span class="text-h6 text-secondary">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
+    <span class="text-h6 text-secondary">{{ expandButtonText }}</span>
     <BouncingBtn
       v-model="isExpanded"
       class="text-secondary"
@@ -137,6 +137,10 @@ const props = defineProps({
   voyages: {
     type: Array,
     default: () => [],
+  },
+  pageContent: {
+    type: Object,
+    default: () => {},
   },
 })
 
@@ -165,6 +169,27 @@ const voyagesWithCta = computed(() => {
 const limitedVoyages = computed(() => {
   if (!voyagesWithCta.value || !Array.isArray(voyagesWithCta.value)) return []
   return voyagesWithCta.value.slice(0, isExpanded.value ? voyagesWithCta.value.length : 9)
+})
+
+const noVoyagesFoundCategoryText = computed(() => {
+  if (props.pageContent?.slug?.noVoyagesFound && props.selectedCategory?.title) {
+    return props.pageContent.slug.noVoyagesFound.replace('{{title}}', props.selectedCategory.title)
+  }
+  return `Aucun voyage trouvé pour thématique "${props.selectedCategory?.title || ''}"`
+})
+
+const noVoyagesFoundExperienceText = computed(() => {
+  if (props.pageContent?.slug?.noVoyagesFound && props.selectedExperience?.title) {
+    return props.pageContent.slug.noVoyagesFound.replace('{{title}}', props.selectedExperience.title)
+  }
+  return `Aucun voyage trouvé pour expérience "${props.selectedExperience?.title || ''}"`
+})
+
+const expandButtonText = computed(() => {
+  if (isExpanded.value) {
+    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins'
+  }
+  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus'
 })
 </script>
 

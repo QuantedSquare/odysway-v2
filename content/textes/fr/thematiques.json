@@ -1,0 +1,16 @@
+{
+  "index": {
+    "pageTitle": "Toutes nos thématiques",
+    "metaDescription": "Découvrez toutes nos thématiques de voyage"
+  },
+  "slug": {
+    "noVoyagesFound": "Aucun voyage trouvé pour thématique \"{{title}}\"",
+    "modifySearchCriteria": "Modifiez vos critères de recherche"
+  },
+  "common": {
+    "expandButton": {
+      "showMore": "Voir plus",
+      "showLess": "Voir moins"
+    }
+  }
+} 

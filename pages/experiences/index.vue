@@ -1,12 +1,22 @@
 <template>
-  <ContentLayout :is-experience="true">
+  <ContentLayout
+    :is-experience="true"
+    :page-content="pageContent"
+  >
     <template #indexContent>
-      <DisplayVoyagesRow :voyages="experiencesWithVoyages" />
+      <DisplayVoyagesRow
+        :voyages="experiencesWithVoyages"
+        :page-content="pageContent"
+      />
     </template>
   </ContentLayout>
 </template>
 
 <script setup>
+const { data: pageContent } = await useAsyncData('page-experiences', () => {
+  return queryCollection('page_experiences').first()
+})
+
 const { data: experiences } = useAsyncData('experiences', () => {
   return queryCollection('experiences').all()
 })
@@ -14,6 +24,7 @@ const { data: experiences } = useAsyncData('experiences', () => {
 const { data: voyages } = useAsyncData('voyages', () => {
   return queryCollection('voyages').where('published', '=', true).all()
 })
+
 const experiencesWithVoyages = computed(() => {
   if (!experiences.value || !voyages.value) return []
 

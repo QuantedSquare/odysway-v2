@@ -40,11 +40,10 @@
 </template>
 
 <script setup>
-// import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
-// const { width } = useDisplay()
+
 defineProps({
   slug: {
     type: String,
