@@ -55,9 +55,13 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const drawer = ref(false)
-const { data: faqPage } = useAsyncData('faq-section', () => {
-  return queryCollection('content').path('/faq').first()
+
+const { data: faqPage } = await useAsyncData('faq-section', () => {
+  return queryCollection('content')
+    .path('/faq')
+    .first()
 })
+
 const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
   return queryCollection('ctas').select('partenairesSection').first()
 })

@@ -110,14 +110,16 @@
 
 <script setup>
 const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
-const model = defineModel()
-console.log('props', props.voyage)
 const route = useRoute()
 const runtimeConfig = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
 console.log('runtimeConfig', runtimeConfig)
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
+
+// New: Local validation state
+const isValid = ref(false)
+const emit = defineEmits(['validity-changed'])
 
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
@@ -127,6 +129,20 @@ const switch_accept_data_privacy = ref(route.query.type === 'booking')
 const switch_accept_country = ref(route.query.type === 'booking')
 
 const loadingStripeSession = ref(false)
+
+// New: Form validation logic
+const formValidation = computed(() => {
+  if (isBooking.value) {
+    return true // Booking mode is always valid
+  }
+  return switch_accept_data_privacy.value && switch_accept_country.value && !alreadyPlacedAnOption.value
+})
+
+// New: Watch validation and emit changes
+watch(formValidation, (isFormValid) => {
+  isValid.value = isFormValid
+  emit('validity-changed', props.ownStep, isFormValid)
+}, { immediate: true })
 
 const stripePay = async () => {
   loadingStripeSession.value = true
@@ -176,6 +192,14 @@ watch(checkedOption, (value) => {
     alreadyPlacedAnOption.value = false
   }
 })
+
+// Watch form fields for validation updates
+watch([switch_accept_data_privacy, switch_accept_country, alreadyPlacedAnOption], () => {
+  if (formValidation.value) {
+    emit('validity-changed', props.ownStep, true)
+  }
+})
+
 const book = async () => {
   loadingStripeSession.value = true
 
@@ -221,7 +245,6 @@ watch([dealId, () => props.currentStep], () => {
   if (props.currentStep === props.ownStep) {
     addSingleParam('step', props.ownStep)
   }
-  model.value = true
   if (dealId.value) {
     return
   }
@@ -237,7 +260,7 @@ watch(checkedOption, (value) => {
 
 const submitStepData = async () => {
   // Validate form
-  if (!dealId.value || !model.value) return false
+  if (!dealId.value || !isValid.value) return false
   const dealData = {
     dealId: dealId.value,
     // #TODO Add data

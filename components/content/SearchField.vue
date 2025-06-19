@@ -41,13 +41,14 @@
                 <v-list
                   lines="one"
                   select-strategy="classic"
+                  class="px-4"
                 >
                   <v-hover>
                     <template #default="{ isHovering, props }">
                       <v-list-item-title
                         v-bind="props"
                         style="cursor:pointer"
-                        class="d-flex align-center  mb-2 py-2 justify-center ga-2 text-uppercase text-subtitle-2 font-weight-bold hover-bg-primary"
+                        class="d-flex align-center  py-2 justify-start ga-2 text-uppercase text-subtitle-2 font-weight-bold hover-bg-primary border-b "
                         :class="{ 'bg-grey-light text-primary': isHovering }"
                         @click.stop="selectRegion(item.raw)"
                       >
@@ -175,8 +176,14 @@ const { gtag } = useGtag()
 const destinationId = useId()
 const travelTypeId = useId()
 const dateId = useId()
-const date = useState('searchDate', () => [])
-const travelTypeChoice = useState('searchTravelType', () => null)
+const date = useState('searchDate', () => {
+  // Parse the 'from' query parameter to convert comma-separated string back to array
+  if (route.query.from) {
+    return route.query.from.split(',').map(Number).filter(num => num > 0)
+  }
+  return []
+})
+const travelTypeChoice = ref(route.query.travelType || null)
 const destinationChoice = ref(route.query.destination || null)
 const showDestinationsCarousel = ref(false)
 const search = useState('search', () => route.query.destination || null)
@@ -403,6 +410,7 @@ function clearDestination() {
 }
 
 onMounted(() => {
+  // Handle destination parameter
   if (route.query.destination) {
     const region = regions.value.find(r => r.slug === route.query.destination)
     if (region) {
@@ -414,6 +422,17 @@ onMounted(() => {
         selectDestination(destination)
       }
     }
+  }
+
+  // Handle travelType parameter
+  if (route.query.travelType) {
+    console.log('travelType', route.query.travelType)
+    travelTypeChoice.value = route.query.travelType
+  }
+
+  // Handle date parameter (from)
+  if (route.query.from) {
+    date.value = route.query.from.split(',').map(Number).filter(num => num > 0)
   }
 })
 </script>

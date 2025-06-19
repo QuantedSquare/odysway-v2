@@ -6,7 +6,6 @@
   >
     <template #activator="{ props: activatorProps } ">
       <v-row>
-        <!-- eslint-disable-next-line vue/no-v-html -->
         <v-col cols="12">
           <div
             v-if="btnText"
@@ -15,7 +14,7 @@
           <v-btn
             x-small
             variant="text"
-            class="pl-0 text-caption"
+            class="px-0 text-caption"
             v-bind="activatorProps"
           >
             EN SAVOIR PLUS
