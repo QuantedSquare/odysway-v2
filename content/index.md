@@ -198,10 +198,14 @@ au cœur du voyage
   :::
 ::
 
-::color-container{color="grey-light"}
+::color-container
+---
+  color: primary
+  whiteText: true
+---
   :::horizontal-carousel
   #title
-  [Voyages inoubliables]{style="color: rgba(43, 76, 82, 1)"}
+  [Voyages inoubliables]{style="color: rgb(255, 255, 255)"}
   
   #carousel-item
     ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
