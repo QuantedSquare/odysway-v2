@@ -37,7 +37,7 @@
       align="center"
       class="flex-column"
     >
-      <span class="text-h6 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }}</span>
+      <span class="text-h4 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }} de dates</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
     <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">
