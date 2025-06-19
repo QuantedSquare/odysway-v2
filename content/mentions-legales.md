@@ -13,9 +13,9 @@ Odysway pourra faire parvenir à ses utilisateurs de façon régulière des mess
 
 Vous disposez d'un droit d'accès, de rectification, d'opposition, d'effacement, de portabilité et de limitation du traitement des données qui vous concernent (Texte RGPD du 25/05/2018). Ces données sont destinées à Odysway, mais elles peuvent être transmises à des tiers.
 
-Pour exercer vos droits ou si vous ne souhaitez pas que les données vous concernant soient transmises, écrivez à Odysway – **Service clients, 61 rue de Lyon, 75012 Paris ou par email** à l'adresse suivante : contact@odysway.com.
+Pour exercer vos droits ou si vous ne souhaitez pas que les données vous concernant soient transmises, écrivez à Odysway – **Service clients, 61 rue de Lyon, 75012 Paris ou par email** à l'adresse suivante : <contact@odysway.com>.
 
-Pour toutes les questions techniques liées à ce site, vous pouvez vous adresser au webmaster à l'adresse suivante : contact@odysway.com
+Pour toutes les questions techniques liées à ce site, vous pouvez vous adresser au webmaster à l'adresse suivante : <contact@odysway.com>
 
 Ce site est hébergé par Google App Engine. Le site odysway.com est développé et maintenu par [Quanted Square](https://www.quantedsquare.com/).
 

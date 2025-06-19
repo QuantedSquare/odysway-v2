@@ -175,7 +175,7 @@ schemaOrg:
   Avec qui vais-je voyager ?
   
   #answer
-  Chez Odysway, nous proposons deux options pour voyager : :br:br
+  Chez Odysway, nous proposons deux options pour voyager : \:br\:br
   
   1. Vous choisissez vos propres dates, pour vivre le voyage seul, en couple, en famille, ou encore entre amis. Le séjour est alors privatisé pour vous et votre groupe.
   2. Vous choisissez de partir en groupe (maximum 8 voyageurs) sur des dates prédéfinies par Odysway, pour allier rencontres avec d'autres voyageurs et prix réduits.
