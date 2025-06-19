@@ -19,9 +19,6 @@
 const { data: destinations } = useAsyncData('destinations', () => {
   return queryCollection('destinations').where('published', '=', true).all()
 })
-const { data: voyages } = useAsyncData('voyages', () => {
-  return queryCollection('voyages').where('published', '=', true).all()
-})
 
 const page = await queryCollection('content').path('/destinations').first()
 </script>
