@@ -370,9 +370,11 @@ export default defineContentConfig({
           }).describe('Status des dates du voyage'),
         }).describe('Section de dates, defini dans le dossier dates'),
         indivSection: z.object({
-          title: z.string().describe('Titre de la section').default('Vous preferez partir seul? C\'est aussi possible.'),
+          titleOnlyPrivatisationAvailable: z.string().describe('Titre de la section quand uniquement privatisation disponible').default('Ce voyage vous intéresse mais pas de dates proposées ?'),
+          title: z.string().describe('Titre de la section quand privatisation et groupe disponible').default('Vous preferez partir seul? C\'est aussi possible.'),
           backgroundColor: z.enum(colorChoices).describe('Couleur de fond de la section'),
           textButton: z.string().describe('Texte du bouton').default('Je privatise ce voyage'),
+          textButtonDevis: z.string().describe('Texte du bouton quand uniquement privatisation disponible').default('Demander un devis'),
           buttonColor: z.enum(colorChoices).describe('Couleur du bouton'),
         }).describe('Section individuelle, defini dans le dossier voyagesv2'),
         priceDetailsSection: z.object({

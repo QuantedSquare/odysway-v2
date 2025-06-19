@@ -17,7 +17,7 @@ const createCheckoutSession = async (order) => {
   console.log('======Config======', config.public)
   console.log('======Success URL======', `${origin}/success`)
   console.log('======Cancel URL======', `${origin}${order.currentUrl}`)
-  const imageUrl = 'https://odysway.com/logos/logo_noir.png'// CHeck si on peut remplacer par quelque chose
+  const imageUrl = '~/assets/img/Logo-Odysway-Bleu.png'
 
   const lineItems = []
   let paidAmount = 0

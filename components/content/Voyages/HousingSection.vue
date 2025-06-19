@@ -16,7 +16,7 @@
       </v-col>
       <v-spacer />
       <v-col
-        v-show="displayButton"
+        v-if="displayButton"
         cols="auto"
       >
         <v-btn
@@ -57,7 +57,7 @@
         <v-col
           v-for="housing, index in housingBlock"
           :key="index"
-          cols="12"
+          :cols="housingBlock.length > 1 ? 11 : 12"
           sm="auto"
         >
           <v-card
@@ -188,8 +188,6 @@ const { housingBlock } = defineProps({
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
-
-const itemsList = useTemplateRef('items-list')
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true
@@ -209,9 +207,7 @@ const displayButton = computed(() => {
   else if (sm.value) {
     return childrenCount.value > 2
   }
-  else {
-    return childrenCount.value > 1
-  }
+  return false
 })
 
 const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })

@@ -4,7 +4,7 @@
     location="right"
     disable-resize-watcher
     mobile
-    class="custom-padding "
+    class="custom-padding"
   >
     <div>
       <!-- <v-btn
@@ -18,20 +18,41 @@
       </v-btn> -->
       <v-list nav>
         <v-list-item
-          density="compact"
           @click="model = false"
         >
           <v-btn-secondary
-            block
             href="tel: +33184807975"
-            class="text-white text-decoration-none"
-            @click="trackPixel('trackCustom', 'AppelPixel')"
+            color="primary"
+            block
+            class="text-caption text-sm-subtitle-2"
+            @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
           >
-            +33 1 84 80 79 75
+            {{ header.textButton1 }}
+          </v-btn-secondary>
+        </v-list-item>
+        <v-list-item>
+          <v-btn-secondary
+            color="primary"
+            variant="tonal"
+            block
+            class="text-caption text-sm-subtitle-2"
+            @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
+          >
+            {{ header.textButton2 }}
+          </v-btn-secondary>
+        </v-list-item>
+        <v-list-item>
+          <v-btn-secondary
+            block
+            class="text-caption text-sm-subtitle-2"
+            color="white"
+            @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
+          >
+            {{ header.textButton3 }}
           </v-btn-secondary>
         </v-list-item>
       </v-list>
-      <v-list
+      <!-- <v-list
         v-for="item, index in drawerItems"
         :key="`Drawer item ${index}`"
         nav
@@ -47,56 +68,20 @@
             {{ item.title }}
           </NuxtLink>
         </v-list-item>
-      </v-list>
+      </v-list> -->
     </div>
   </v-navigation-drawer>
 </template>
 
 <script setup>
 const model = defineModel()
+const { header } = useAppConfig()
+const router = useRouter()
+const { gtag } = useGtag()
 
-const drawerItems = ref([
-  {
-    title: 'Nos Destinations',
-    value: 'Nos Destinations',
-    link: '/destinations',
-  },
-  {
-    title: 'Nos Experiences',
-    value: 'Nos Experiences',
-    link: '/experiences',
-  },
-  {
-    title: 'Prochains départs',
-    value: 'Prochains départs',
-    link: '/prochains-departs',
-  },
-  {
-    title: 'Prendre RDV avec un conseiller',
-    value: 'Prendre RDV avec un conseiller',
-    link: '/calendly',
-  },
-  {
-    title: 'À propos',
-    value: 'À propos',
-    link: '/a-propos',
-  },
-  {
-    title: 'Blog',
-    value: 'Blog',
-    link: '/blog',
-  },
-  {
-    title: 'Avis',
-    value: 'Avis',
-    link: '/avis-voyageurs',
-  },
-  // {
-  //   title: 'Carte cadeau',
-  //   value: 'Carte cadeau',
-  // // link: '/offre-cadeau',
-  // },
-])
+function captureOutboundLink(btn) {
+  gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })
+}
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@
     <template #slugContent>
       <DisplayVoyagesRow
         :selected-experience="selectedExperience"
-        :voyages="voyages"
+        :voyages="filteredVoyages"
       />
     </template>
   </ContentLayout>
@@ -24,7 +24,7 @@ const selectedExperience = computed(() => {
   return experiences.value.find(e => e.slug === slug.value)
 })
 
-const { data: voyages } = await useAsyncData('voyages', async () => {
+const { data: filteredVoyages } = await useAsyncData('filtered-voyages', async () => {
   const travelList = await queryCollection('voyages').where('published', '==', true).where('experienceType', '=', selectedExperience.value.title).all()
   return travelList
 })
