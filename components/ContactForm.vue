@@ -1,10 +1,13 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-if="!isMessageSent">
       <v-col cols="12">
+        <h2 class="text-h2 text-center my-8">
+          {{ contactContent?.contactForm?.formTitle || 'Formulaire de contact' }}
+        </h2>
         <v-form
           ref="form"
-          v-model="formIsValid"
+          v-model="isValidForm"
           @submit.prevent="submit"
         >
           <v-row
@@ -140,6 +143,16 @@
         </v-form>
       </v-col>
     </v-row>
+    <v-row v-else>
+      <v-col cols="12">
+        <h3 class="text-h3 text-center my-8">
+          {{ contactContent?.contactForm?.successMessage || 'Message envoyé avec succès !' }}
+        </h3>
+        <p class="text-body-1 text-center my-8">
+          {{ contactContent?.contactForm?.successDescription || 'Nous vous répondrons dans les plus brefs délais.' }}
+        </p>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -176,12 +189,13 @@ const phone = ref('')
 const message = ref('')
 const subject = ref('')
 const gdprAccepted = ref(false)
+const isMessageSent = ref(false)
 
-const formIsValid = ref(false)
+const isValidForm = ref(false)
 const form = ref(null)
 
 const isFormComplete = computed(() => {
-  return formIsValid.value && gdprAccepted.value
+  return isValidForm.value && gdprAccepted.value
 })
 
 // Save GDPR acceptance to localStorage when user accepts
@@ -240,6 +254,7 @@ async function submit() {
   }
   try {
     await apiRequest('/brevo/email', 'post', data)
+    isMessageSent.value = true
   }
   catch (error) {
     console.error('Error submitting form:', error)

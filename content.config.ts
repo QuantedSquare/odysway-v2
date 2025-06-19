@@ -485,6 +485,9 @@ export default defineContentConfig({
             }).describe('Champ message'),
           }).describe('Champs du formulaire'),
           submitButton: z.string().describe('Texte du bouton soumettre'),
+          formTitle: z.string().describe('Titre du formulaire'),
+          successMessage: z.string().describe('Message de succès après envoi'),
+          successDescription: z.string().describe('Description du message de succès'),
           gdprSection: z.object({
             agreementText: z.string().describe('Texte avant le lien'),
             privacyLinkText: z.string().describe('Texte du lien politique de confidentialité'),

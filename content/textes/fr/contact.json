@@ -40,6 +40,9 @@
       }
     },
     "submitButton": "Envoyer",
+    "formTitle": "Formulaire de contact",
+    "successMessage": "Message envoyé avec succès !",
+    "successDescription": "Nous vous répondrons dans les plus brefs délais.",
     "gdprSection": {
       "agreementText": "J'accepte la",
       "privacyLinkText": "politique de confidentialité",
