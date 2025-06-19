@@ -8,7 +8,7 @@
       <v-col
         cols="12"
         md="5"
-        class="d-flex flex-column align-start ga-4"
+        class="d-flex flex-column align-start ga-1 ga-md-4"
       >
         <div class="d-flex align-center ga-2">
           <v-badge
@@ -17,9 +17,11 @@
             text-color="white"
             :content="+enrichedDate.index +1"
           />
-          <span class="text-body-2 d-flex align-center ga-2 line-height-2">
-            <div>
-              {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
+          <span class="text-body-2 d-flex align-center line-height-2 ga-2">
+            <div class="d-flex align-center">
+              <span class="d-none d-lg-block">
+                {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
+              </span>
               <span class="font-weight-bold">
                 {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
               </span>
@@ -30,12 +32,16 @@
             >
               {{ mdiArrowRight }}
             </v-icon>
-            <div>
-              {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
+
+            <div class="d-flex align-center">
+              <span class="d-none d-lg-block">
+                {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
+              </span>
               <span class=" font-weight-bold ">
                 {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
               </span>
             </div>
+
           </span>
         </div>
         <BookingStatus
