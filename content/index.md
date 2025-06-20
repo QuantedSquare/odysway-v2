@@ -198,11 +198,7 @@ au cœur du voyage
   :::
 ::
 
-::color-container
----
-  color: primary
-  whiteText: true
----
+::color-container{whiteText color="primary"}
   :::horizontal-carousel
   #title
   [Voyages inoubliables]{style="color: rgb(255, 255, 255)"}
