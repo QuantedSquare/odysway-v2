@@ -28,8 +28,8 @@
 <script setup>
 const loading = ref(false)
 const voyage = ref(null)
-const props = defineProps({
-  voyageSlug: {
+const { slug } = defineProps({
+  slug: {
     type: String,
     // required: true,
   },
@@ -37,7 +37,7 @@ const props = defineProps({
 
 const loadVoyage = async () => {
   loading.value = true
-  voyage.value = await queryCollection('voyages').where('slug', '=', props.voyageSlug).first()
+  voyage.value = await queryCollection('voyages').where('slug', '=', slug).first()
   loading.value = false
 }
 

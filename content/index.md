@@ -67,22 +67,22 @@ au cœur du voyage
   [Nos voyages signatures en France]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+    ::::voyage-col-card{slug="sejour-berger-bearn"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="bivouac-montagne-pyrenees"}
+    ::::voyage-col-card{slug="bivouac-montagne-pyrenees"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
+    ::::voyage-col-card{slug="sejour-astronomie-corse"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="immersion-observatoire-astronomique"}
+    ::::voyage-col-card{slug="immersion-observatoire-astronomique"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
+    ::::voyage-col-card{slug="photographie-animaliere-vosges"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
+    ::::voyage-col-card{slug="sejour-astronomie-corse"}
     ::::
   :::
 ::
@@ -160,13 +160,13 @@ au cœur du voyage
   [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{voyage-slug="sejour-berger-bearn"}
+    ::::voyage-col-card{slug="sejour-berger-bearn"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="decouvrez-photo-animaliere-jura"}
+    ::::voyage-col-card{slug="decouvrez-photo-animaliere-jura"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
+    ::::voyage-col-card{slug="photographie-animaliere-vosges"}
     ::::
   :::
 ::
@@ -177,16 +177,16 @@ au cœur du voyage
   [Partir au printemps]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   :::
 ::
@@ -207,19 +207,19 @@ au cœur du voyage
   [Voyages inoubliables]{style="color: rgb(255, 255, 255)"}
   
   #carousel-item
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
     ::::
   :::
 ::
