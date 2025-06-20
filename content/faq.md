@@ -157,10 +157,16 @@ schemaOrg:
   hide-on-layout: true
   ---
   #question
-  Quelle est la démarche responsable d'Odysway ?
+  Comment sont sélectionnées les expériences proposées par Odysway ?
   
   #answer
-  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  Chaque expérience proposée par Odysway fait l’objet d’une sélection rigoureuse. Tous les séjours sont construits en lien direct avec des partenaires locaux de confiance : guides, familles d’accueil, artisans, experts de leur région.
+  
+  Avant d’être proposés, les itinéraires sont testés, ajustés et validés par l’équipe Odysway. L’objectif est de garantir à chaque voyageur une expérience authentique, sécurisée, et respectueuse des populations et des environnements traversés.
+  
+  Les partenaires locaux sont choisis pour leur sérieux, leur engagement humain, leur sens de l’accueil, et leur volonté de partager leur culture avec bienveillance.
+  
+  Un soin particulier est apporté à la conception des séjours afin de limiter leur impact écologique : groupes de taille réduite, transports locaux privilégiés, choix d’hébergements engagés et sensibilisation des voyageurs aux bonnes pratiques sur place.
   :::
 
   :::question-panel
@@ -168,13 +174,16 @@ schemaOrg:
   hide-on-layout: true
   ---
   #question
-  Avec qui vais-je voyager ?
+  Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
   
   #answer
-  Chez Odysway, nous proposons deux options pour voyager : \:br\:br
+  Odysway propose trois formats de voyage, selon les envies et les besoins :
   
-  1. Vous choisissez vos propres dates, pour vivre le voyage seul, en couple, en famille, ou encore entre amis. Le séjour est alors privatisé pour vous et votre groupe.
-  2. Vous choisissez de partir en groupe (maximum 8 voyageurs) sur des dates prédéfinies par Odysway, pour allier rencontres avec d'autres voyageurs et prix réduits.
+  - **Le petit groupe** : la majorité des séjours rassemblent entre 2 et 8 voyageurs partageant les mêmes valeurs d’authenticité, de respect et d’ouverture. Ce format favorise une dynamique conviviale et humaine, sans pression.
+  - **Le format privatif** : certains voyages peuvent être réalisés uniquement avec vos proches (en couple, en famille ou entre amis), à partir d’une expérience déjà présente sur le site.
+  - **Le sur-mesure** : pour celles et ceux qui souhaitent créer un voyage personnalisé, dans un esprit Odysway, à partir d’un projet ou d’un rêve de destination.
+  
+  Dans tous les cas, les séjours sont accompagnés par des guides locaux triés sur le volet, et pensés pour garantir confort, sécurité et immersion.
   :::
 
   :::question-panel
