@@ -64,25 +64,25 @@ au cœur du voyage
   text-color: primary
   ---
   #title
-  [Nos voyages signatures Odysway]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos voyages signatures en France]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
     ::::voyage-col-card{voyage-slug="sejour-berger-bearn"}
     ::::
   
+    ::::voyage-col-card{voyage-slug="bivouac-montagne-pyrenees"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
+    ::::
+  
     ::::voyage-col-card{voyage-slug="immersion-observatoire-astronomique"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="trek-chez-lhabitant-cap-vert"}
+    ::::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="voyage-chamanique-perou"}
-    ::::
-  
-    ::::voyage-col-card{voyage-slug="survie-jungle-amazonienne"}
-    ::::
-  
-    ::::voyage-col-card{voyage-slug="voyage-aventure-namibie"}
+    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
     ::::
   :::
 ::
@@ -100,7 +100,7 @@ au cœur du voyage
   displayCtaButton: true
   displayImageMobile: true
   imageDesktopRight: true
-  imageSrc: public/images/voyages/trek-chez-lhabitant-nepal/9ri-cp-doc-qd-2k-et-ai-eid-u.png
+  imageSrc: images/voyages/trek-chez-lhabitant-nepal/9ri-cp-doc-qd-2k-et-ai-eid-u.png
   ---
   #title
   [Voyager autrement]{style="color: rgba(43, 76, 82, 1)"}
@@ -160,13 +160,13 @@ au cœur du voyage
   [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{voyage-slug="sejour-berger-bearn"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{voyage-slug="decouvrez-photo-animaliere-jura"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
     ::::
   :::
 ::
