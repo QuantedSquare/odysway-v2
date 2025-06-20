@@ -94,9 +94,9 @@ au cœur du voyage
   :::text-image-container
   ---
   displayCtaButton: true
-  displayImageMobile: false
   imageDesktopRight: true
-  imageSrc: /images/categories/a5ddc6b9296e008a9a0912e359a10e8bd5c16a02.jpg
+  displayImageMobile: false
+  imageSrc: /images/blogs/pourquoi-choisir-une-agence-de-voyage/9riCPDocQD2kETAiEidU.jpg
   ---
   #title
   [Voyager autrement]{style="color: rgba(43, 76, 82, 1)"}
@@ -108,8 +108,7 @@ au cœur du voyage
     icon: /icons/globe.svg
     ---
     #text
-    Des séjours immersifs 
-    conçus avec soin
+    Des séjours immersifs conçus avec soin
     ::::
   
     ::::icon-text-col
@@ -198,10 +197,10 @@ au cœur du voyage
   :::
 ::
 
-::color-container{color="grey-light"}
+::color-container{white-text color="primary"}
   :::horizontal-carousel
   #title
-  [Voyages inoubliables]{style="color: rgba(43, 76, 82, 1)"}
+  [Voyages inoubliables]{style="color: rgb(255, 255, 255)"}
   
   #carousel-item
     ::::voyage-col-card{voyage-slug="acores-volcans-dauphins-baleines"}

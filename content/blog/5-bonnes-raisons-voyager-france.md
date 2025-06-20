@@ -1,31 +1,47 @@
 ---
-title: "5 bonnes raisons de voyager en France"
-description: "Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement ..."
+title: 5 bonnes raisons de voyager en France
+description: Depuis plus de 20 ans, la France est le pays qui accueille le plus
+  de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce
+  qui attire donc autant les voyageurs ? La diversité du patrimoine, une
+  histoire qui a façonné les régions, la gastronomie ? Probablement ...
 seo:
-  title: "5 bonnes raisons de voyager en France"
-  description: "Pourquoi voyager en France ? Qu'est-ce qui attire autant les voyageurs en France ? Découvrez-le dans notre article !"
+  title: 5 bonnes raisons de voyager en France
+  description: Pourquoi voyager en France ? Qu'est-ce qui attire autant les
+    voyageurs en France ? Découvrez-le dans notre article !
 navigation:
-  title: "5 bonnes raisons de voyager en France"
-  description: "Depuis plus de 20 ans, la France est le pays qui accueille le plus de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine, une histoire qui a façonné les régions, la gastronomie ? Probablement ..."
-author: "Romain Masina"
+  title: 5 bonnes raisons de voyager en France
+  description: Depuis plus de 20 ans, la France est le pays qui accueille le plus
+    de visiteurs étrangers au monde. Près de 91 millions en 2019 ! Mais
+    qu'est-ce qui attire donc autant les voyageurs ? La diversité du patrimoine,
+    une histoire qui a façonné les régions, la gastronomie ? Probablement ...
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
 published: false
-publishedAt: "2023-04-04 12:43:00+00:00"
-tags: "Animaux, Communautés locales, Europe, Famille, France, Grands espaces, Made in France, Sport"
-categories: "Nature et grands espaces, Culture et decouverte, Benefices locaux"
-displayedImg: "/images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+publishedAt: 2023-04-04 12:43:00+00:00
+tags: Animaux, Communautés locales, Europe, Famille, France, Grands espaces,
+  Made in France, Sport
+categories: Nature et grands espaces, Culture et decouverte, Benefices locaux
+displayedImg: /images/blogs/5-bonnes-raisons-voyager-france/RTyhpDgQ6Wbwgj21fVAA.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 5 bonnes raisons de voyager en France
@@ -46,12 +62,12 @@ Fortement pointé du doigt à cause de son effet néfaste sur l'environnement, l
 
 Les normes écologiques sont identiques sur tout le territoire, donc **pas de difficulté particulière pour continuer à trier et à recycler vos déchets** pendant votre voyage. Agissez pour un tourisme responsable et de proximité en optant pour des produits locaux et de saison. Un bon moyen d'éveiller ses papilles à de nouvelles saveurs tout en donnant un coup de pouce aux producteurs du coin. De même, avant de réserver une excursion ou une activité, vérifiez le bon respect de l'environnement. Comme il n'y a pas le problème de la barrière de la langue, c'est plus facile de poser les bonnes questions.
 
-::image-container
----
-image-src: "/images/blogs/5-bonnes-raisons-voyager-france/5CSzEkt3RxqauH7XgMgC.jpg"
-alt: 
----
-::
+  :::image-container
+  ---
+  alt: null
+  image-src: /images/blogs/5-bonnes-raisons-voyager-france/5CSzEkt3RxqauH7XgMgC.jpg
+  ---
+  :::
 
 Les falaises d'Étretat
 
@@ -67,14 +83,14 @@ Sachez que **quarante-cinq sites français sont aujourd'hui classés à l'Unesco
 
 Aviez-vous l'habitude de partir à l'étranger et de programmer plusieurs étapes pendant votre voyage afin de voir un maximum de choses ? La langue et la culture différentes vous empêchaient-elles d'aller vers les autres ? **Et si voyager en France vous permettait** justement de passer outre ces difficultés et **de concevoir vos vacances différemment ?** Essayez-vous dans ce cas au [slow tourisme](https://odysway.com/le-slow-tourisme-un-mode-de-voyage-de-plus-en-plus-en-vogue) ! Partez sur les routes de France pour en découvrir toutes ses richesses naturelles et culturelles. Notre pays possède pas moins de **60 000 km de sentiers de randonnées, plus de 20 000 km de voies vertes ou véloroutes et environ 6 700 km de voies navigables**. Il y a de quoi faire ! De plus, le slow tourisme s'adapte à tous : en famille, à deux ou entre amis, chacun y trouvera son compte. Un excellent moyen aussi d'aller au plus près des habitants et de faire de belles rencontres souvent inattendues.
 
-Et pourquoi ne pas partir à la rencontre de celles et ceux qui détiennent des savoirs-faire français. Odysway vous propose de [partir dans les Pyrénées partager la vie d'un berger](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article&utm_medium=blog&utm_campaign=5+bonnes+raisons+de+voyager+en+France). Vous vivrez une immersion en terre sauvage au cœur de somptueux paysages, à la découverte des traditions, entre transhumance, traite de brebis, fabrication de fromages et bien d'autres.
+Et pourquoi ne pas partir à la rencontre de celles et ceux qui détiennent des savoirs-faire français. Odysway vous propose de [partir dans les Pyrénées partager la vie d'un berger](https://odysway.com/voyages/sejour-berger-bearn?utm_source=article\&utm_medium=blog\&utm_campaign=5+bonnes+raisons+de+voyager+en+France). Vous vivrez une immersion en terre sauvage au cœur de somptueux paysages, à la découverte des traditions, entre transhumance, traite de brebis, fabrication de fromages et bien d'autres.
 
-::image-container
----
-image-src: "/images/blogs/5-bonnes-raisons-voyager-france/OtaozpDXTsGswuiAt8fX.jpg"
-alt: 
----
-::
+  :::image-container
+  ---
+  alt: null
+  image-src: /images/blogs/5-bonnes-raisons-voyager-france/OtaozpDXTsGswuiAt8fX.jpg
+  ---
+  :::
 
 Lac de Gaube, Pyrénées
 
@@ -94,47 +110,46 @@ Accordons une mention spéciale à la Bourgogne qui multiplie les mets très gou
 
 Un voyage culturel immersif est une façon de voyager de manière solidaire, écologiquement responsable et éthique, dans le respect des autres et de la terre tout en découvrant les différentes cultures des autres pays : c'est un véritable enrichissement personnel. Voici les meilleures expériences de [voyages culturels](https://odysway.com/thematiques/voyage-culturel) proposés par Odysway.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

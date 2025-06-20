@@ -2,7 +2,6 @@
   <v-container v-if="!loadingDeal">
     <v-form
       ref="form"
-      v-model="model"
     >
       <v-row>
         <v-col cols="12">
@@ -144,8 +143,12 @@ const config = useRuntimeConfig()
 
 const { deal, dealId, createDeal, updateDeal, checkoutType, loadingDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-const model = defineModel()
 const route = useRoute()
+
+// New: Local validation state
+const isValid = ref(false)
+const emit = defineEmits(['validity-changed'])
+
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
 }
@@ -159,6 +162,21 @@ const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const phone = ref('')
+
+// New: Form validation logic
+const formValidation = computed(() => {
+  const hasValidName = firstName.value && lastName.value
+  const hasValidEmail = email.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
+  const hasValidTravelers = nbAdults.value > 0 && nbAdults.value + nbChildren.value > 0
+
+  return hasValidName && hasValidEmail && hasValidTravelers
+})
+
+// New: Watch validation and emit changes
+watch(formValidation, (isFormValid) => {
+  isValid.value = isFormValid
+  emit('validity-changed', ownStep, isFormValid)
+}, { immediate: true })
 
 watch(() => currentStep, (value) => {
   if (value === ownStep) {
@@ -180,6 +198,7 @@ watch(deal, () => {
 })
 
 const saveToLocalStorage = () => {
+  console.log('saveToLocalStorage')
   const dataToStore = {
     firstname: firstName.value,
     lastname: lastName.value,
@@ -215,7 +234,7 @@ const nbTravelers = computed(() => nbAdults.value + nbChildren.value)
 
 const submitStepData = async () => {
   // Validate form
-  if (!model.value) return false
+  if (!isValid.value) return false
   //  #todo soustraire la réduction s'il y en a une
 
   try {
@@ -302,7 +321,12 @@ const submitStepData = async () => {
     return false
   }
 }
-const changeAttr = (dataAttribute) => {
+
+watch(phone, () => {
+  saveToLocalStorage()
+})
+
+const changeAttr = (_dataAttribute) => {
   // #TODO: Uncomment this when the dataAttribute is not empty and google analytics enabled
   // const EVENTS = {
   //   lastname: { eventLabel: 'Groupe Info - Indique prénom' },

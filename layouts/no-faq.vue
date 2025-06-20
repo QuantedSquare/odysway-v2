@@ -16,13 +16,7 @@
     <div class="whatsapp-button d-lg-none mb-16">
       <WhatsAppBtn />
     </div>
-    <!-- FAQ Section -->
-    <ContentRenderer
-      v-if="faqPage"
-      :value="faqPage"
-    />
-    <!-- End FAQ Section -->
-    <!-- Info Section -->
+    <!-- End FAQ Section -->    <!-- Info Section -->
     <v-container
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
@@ -55,13 +49,6 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const drawer = ref(false)
-
-const { data: faqPage } = await useAsyncData('faq-section', () => {
-  return queryCollection('content')
-    .path('/faq')
-    .first()
-})
-
 const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
   return queryCollection('ctas').select('partenairesSection').first()
 })

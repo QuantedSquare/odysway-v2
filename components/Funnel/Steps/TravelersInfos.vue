@@ -84,6 +84,10 @@ const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 
+// New: Local validation state
+const isValid = ref(false)
+const emit = defineEmits(['validity-changed'])
+
 const isCouple = ref(false)
 const nbTravelers = ref(1)
 const dealNbChildren = ref(0)
@@ -92,8 +96,6 @@ const dealNbAdults = ref(0)
 const travelers = ref([])
 const isLoading = ref(true)
 
-// Form model
-const model = defineModel()
 // Add computed properties for age validation
 const computedAges = computed(() => {
   const departureDate = dayjs(deal.value?.departureDate)
@@ -148,11 +150,15 @@ const allFieldsFilled = computed(() => {
   )
 })
 
-// Update watcher to check both validations
-watch([ageValidation, allFieldsFilled], ([ageValid, fieldsFilled]) => {
-  console.log('ageValid', ageValid)
-  console.log('fieldsFilled', fieldsFilled)
-  model.value = ageValid.isValid && fieldsFilled
+// New: Combined validation logic
+const formValidation = computed(() => {
+  return ageValidation.value.isValid && allFieldsFilled.value
+})
+
+// New: Watch validation and emit changes
+watch(formValidation, (isFormValid) => {
+  isValid.value = isFormValid
+  emit('validity-changed', props.ownStep, isFormValid)
 }, { immediate: true })
 
 // Data Initialization
@@ -235,6 +241,12 @@ const submitStepData = async () => {
         adults: ageValidation.value.adultsCount,
       },
     })
+    return false
+  }
+
+  // Validate all fields are filled
+  if (!allFieldsFilled.value) {
+    console.error('Not all traveler fields are filled')
     return false
   }
 

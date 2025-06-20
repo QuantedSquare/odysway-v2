@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="position-relative">
+  <v-footer class="position-relative d-flex justify-center">
     <v-img
       class="footer-bg-img "
       :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"

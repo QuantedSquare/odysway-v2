@@ -124,9 +124,19 @@ schemaOrg:
           Il est important d'y réfléchir dès la réservation car vous n'aurez
           qu'un délai de 48h maximum à partir de votre règlement pour y
           souscrire.
+ogImage:
+  props: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::faq-container
+---
+backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
+---
 #section-title
   :::title-container
   #title
@@ -136,54 +146,56 @@ schemaOrg:
 #faq
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
-  Odysway est-elle une agence de voyage ?
+  Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
   
   #answer
-  Odysway est une agence de voyage certifiée et immatriculée auprès d'Atout France, et dispose d'une garantie financière APST, ainsi qu'une d'une assurance professionelle. Avec Odysway, voyagez les yeux fermés ! Les équipes Odysway sont très réactives et vous accompagnent avant votre voyage, sur place et au retour de votre voyage.
+  Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
+  
+  L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
+  
+  Pas d’itinéraires touristiques figés, mais des voyages pensés pour favoriser les rencontres, la découverte en profondeur d’un lieu, et une vraie déconnexion. Le confort, la sécurité et la qualité de l’accompagnement sont assurés à chaque étape.
   :::
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
-  En quoi Odysway se différencie des autres agences de voyage ?
+  Comment sont sélectionnées les expériences proposées par Odysway ?
   
   #answer
-  Chez Odysway, nous pensons que la vie est rythmée par les expériences que nous vivons ! Des expériences qui nous marquent, et qui nous laissent des souvenirs gravés à jamais. C'est pourquoi nous avons décidé de créer la première agence qui propose des séjours en immersion, et créés sur place par les équipes d'Odysway, afin de proposer à nos voyageurs une nouvelle façon de voyager : plus authentique, hors des sentiers battus et respectueuse de l'environnement et des populations locales.
+  Chaque expérience proposée par Odysway fait l’objet d’une sélection rigoureuse. Tous les séjours sont construits en lien direct avec des partenaires locaux de confiance : guides, familles d’accueil, artisans, experts de leur région.
+  
+  Avant d’être proposés, les itinéraires sont testés, ajustés et validés par l’équipe Odysway. L’objectif est de garantir à chaque voyageur une expérience authentique, sécurisée, et respectueuse des populations et des environnements traversés.
+  
+  Les partenaires locaux sont choisis pour leur sérieux, leur engagement humain, leur sens de l’accueil, et leur volonté de partager leur culture avec bienveillance.
+  
+  Un soin particulier est apporté à la conception des séjours afin de limiter leur impact écologique : groupes de taille réduite, transports locaux privilégiés, choix d’hébergements engagés et sensibilisation des voyageurs aux bonnes pratiques sur place.
   :::
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
-  Quelle est la démarche responsable d'Odysway ?
+  Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
   
   #answer
-  Vous pouvez consulter notre page démarche responsable pour plus d'informations.
+  Odysway propose trois formats de voyage, selon les envies et les besoins :
+  
+  - **Le petit groupe** : la majorité des séjours rassemblent entre 2 et 8 voyageurs partageant les mêmes valeurs d’authenticité, de respect et d’ouverture. Ce format favorise une dynamique conviviale et humaine, sans pression.
+  - **Le format privatif** : certains voyages peuvent être réalisés uniquement avec vos proches (en couple, en famille ou entre amis), à partir d’une expérience déjà présente sur le site.
+  - **Le sur-mesure** : pour celles et ceux qui souhaitent créer un voyage personnalisé, dans un esprit Odysway, à partir d’un projet ou d’un rêve de destination.
+  
+  Dans tous les cas, les séjours sont accompagnés par des guides locaux triés sur le volet, et pensés pour garantir confort, sécurité et immersion.
   :::
 
   :::question-panel
   ---
-  hide-on-layout: true
-  ---
-  #question
-  Avec qui vais-je voyager ?
-  
-  #answer
-  Chez Odysway, nous proposons deux options pour voyager : :br:br
-  
-  1. Vous choisissez vos propres dates, pour vivre le voyage seul, en couple, en famille, ou encore entre amis. Le séjour est alors privatisé pour vous et votre groupe.
-  2. Vous choisissez de partir en groupe (maximum 8 voyageurs) sur des dates prédéfinies par Odysway, pour allier rencontres avec d'autres voyageurs et prix réduits.
-  :::
-
-  :::question-panel
-  ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Quelles sont les disponibilités des voyages ?
@@ -194,7 +206,7 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Que se passe t-il si il n'y a pas de suffisamment de participants pour un départ groupé ?
@@ -205,7 +217,7 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: true
   ---
   #question
   Les voyages incluent-ils les billets de train ou d'avion pour se rendre sur place ?
@@ -216,7 +228,7 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Comment réserver un voyage avec Odysway ?
@@ -227,7 +239,7 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Le paiement en ligne est-il sécurisé ?
@@ -238,7 +250,7 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Puis-je annuler la réservation de mon voyage ?
@@ -249,29 +261,39 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: false
   ---
   #question
-  Comment Odysway m'accompagne sur place ?
+  Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
   
   #answer
-  Odysway a référencé et signé des partenariats avec des agences locales. Sélectionnées pour leur savoir-faire, leur expérience et sérieux, elles vous accompagnent sur place. Odysway reste à votre écoute pendant toute la durée de votre voyage par mail et téléphone (via Whatsapp à l'étranger), 24h/24 et 7j/7.
+  Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
+  
+  L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
+  
+  Pas d’itinéraires touristiques figés, mais des voyages pensés pour favoriser les rencontres, la découverte en profondeur d’un lieu, et une vraie déconnexion. Le confort, la sécurité et la qualité de l’accompagnement sont assurés à chaque étape.
   :::
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
-  Que dois-je emporter avec moi ?
+  Comment sont sélectionnées les expériences proposées par Odysway ?
   
   #answer
-  Vous retrouverez l'ensemble des informations pratiques relatives à votre expérience dans la FAQ du voyage, et de façon plus détaillée et complète dans votre Contrat voyageur qui vous sera envoyé dans les 24h suivant votre réservation.
+  Chaque expérience proposée par Odysway fait l’objet d’une sélection rigoureuse. Tous les séjours sont construits en lien direct avec des partenaires locaux de confiance : guides, familles d’accueil, artisans, experts de leur région.
+  
+  Avant d’être proposés, les itinéraires sont testés, ajustés et validés par l’équipe Odysway. L’objectif est de garantir à chaque voyageur une expérience authentique, sécurisée, et respectueuse des populations et des environnements traversés.
+  
+  Les partenaires locaux sont choisis pour leur sérieux, leur engagement humain, leur sens de l’accueil, et leur volonté de partager leur culture avec bienveillance.
+  
+  Un soin particulier est apporté à la conception des séjours afin de limiter leur impact écologique : groupes de taille réduite, transports locaux privilégiés, choix d’hébergements engagés et sensibilisation des voyageurs aux bonnes pratiques sur place.
   :::
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Suis-je assuré pour mon voyage avec Odysway ?

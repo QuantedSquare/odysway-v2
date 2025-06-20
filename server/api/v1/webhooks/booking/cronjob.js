@@ -5,6 +5,12 @@ import activecampaign from '~/server/utils/activecampaign'
 
 export default defineEventHandler(async (event) => {
   // Get all booked_dates with is_option == true and expiracy_date < today
+  const cronSecret = process.env.CRON_SECRET
+  const headerSecret = getHeader(event, 'x-cron-secret')
+  if (!headerSecret || headerSecret !== cronSecret) {
+    return { error: 'Unauthorized' }
+  }
+  console.log('Cronjob started')
   const today = new Date()
   today.setHours(0, 0, 0, 0)
   const { data, error } = await supabase

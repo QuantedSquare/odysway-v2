@@ -16,6 +16,10 @@ const mapDealStatus = (status) => {
 }
 
 export default defineEventHandler(async (event) => {
+  const { token } = getQuery(event)
+  if (!token || token !== process.env.ACTIVECAMPAIGN_WEBHOOK_TOKEN) {
+    return { error: 'Unauthorized' }
+  }
   try {
     // Extract deal data from request body
     const body = await readBody(event)

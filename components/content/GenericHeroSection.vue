@@ -5,8 +5,7 @@
   >
     <v-container
       fluid
-      :height="smAndDown ? '' : '750px'"
-      class="pa-0"
+      class="pa-0 custom-hero-height"
     >
       <v-row
         class="ma-0 h-100 flex-column-reverse flex-md-row"
@@ -89,17 +88,17 @@
         <v-col
           cols="12"
           md="6"
-          class="pa-0 h-100"
+          class="pa-0 fixed-height"
         >
-          <v-img
-            v-if="displayedImg"
-            :src="img(displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-            :lazy-src="img(displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-            cover
-            height="100%"
-            :alt="`Image principale du blog ${title || ''}`"
-            :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
-          />
+          <div class="hero-img-wrapper">
+            <v-img
+              :src="img(displayedImg, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+              :lazy-src="img(displayedImg, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+              cover
+              :alt="`Image principale du blog ${title || ''}`"
+              :class="smAndDown ? 'rounded-t-lg' : 'rounded-e-lg'"
+            />
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -144,5 +143,39 @@ function formatDate(date) {
 <style scoped>
 .font-weight-2{
   font-weight: 500;
+}
+.fixed-height {
+  height: 100%;
+}
+.custom-hero-height {
+  height: 682px;
+}
+.hero-img-wrapper {
+
+  height: 100%;
+  width: 100%;
+  min-height: 220px;
+  max-height: 682px;
+  overflow: hidden;
+  display: flex;
+}
+@media (max-width: 960px) {
+  .custom-hero-height {
+    height:100%;
+  }
+  .fixed-height {
+    min-height: 20vh;
+  }
+  .hero-img-wrapper {
+    aspect-ratio: 3/2;
+    min-height: 180px;
+    max-height: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .fixed-height {
+    min-height: 10vh;
+  }
+
 }
 </style>

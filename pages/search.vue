@@ -173,11 +173,16 @@ function filterByDestination(voyages, destination) {
   if (!destination) return voyages
   return voyages.filter(v => v.destinations?.some(d => d.name.includes(destination)))
 }
-
 function filterByType(voyages, travelType) {
   if (!travelType) return voyages
-  const groupeType = travelType === 'Voyage en groupe'
-  return voyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
+
+  const typeFilters = {
+    'Voyage en groupe': voyage => voyage.groupeAvailable === true,
+    'Voyage individuel': voyage => voyage.privatisationAvailable === true,
+  }
+
+  const filterFn = typeFilters[travelType]
+  return filterFn ? voyages.filter(filterFn) : voyages
 }
 
 function filterByDate(voyages, fromList) {

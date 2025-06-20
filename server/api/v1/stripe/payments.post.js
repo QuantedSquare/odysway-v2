@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
     // Récupéré le dealId dans les metadata (On passe l'order dedans)
     try {
       stripe.handlePaymentSession(body.data.object)
-      sendinBlue.updateContactListId(body.data.object.customer_details.email, 14) // Payé
+      brevo.updateContactListId(body.data.object.customer_details.email, 14) // Payé
       setResponseStatus(event, 200)
     }
     catch (err) {

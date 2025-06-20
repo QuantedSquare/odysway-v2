@@ -32,7 +32,6 @@
   :::
 ::
 
-
 ::color-container{color="grey-light"}
   :::horizontal-carousel
   #title
@@ -50,8 +49,6 @@
   :::
 ::
 
-
-
 ::color-container{color="grey-light"}
   :::horizontal-carousel
   #title
@@ -68,7 +65,6 @@
     ::::
   :::
 ::
-
 
 ::color-container{color="grey-light"}
   :::horizontal-carousel

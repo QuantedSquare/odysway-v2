@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="subtle-shadow rounded-lg text-primary d-flex align-center py-8"
+    class="subtle-shadow rounded-lg text-primary d-flex align-center pa-8"
     height="100%"
     fluid
   >
@@ -8,7 +8,7 @@
       <v-col
         cols="12"
         md="5"
-        class="d-flex flex-column align-start ga-4"
+        class="d-flex flex-column align-start ga-1 ga-md-0"
       >
         <div class="d-flex align-center ga-2">
           <v-badge
@@ -17,9 +17,11 @@
             text-color="white"
             :content="+enrichedDate.index +1"
           />
-          <span class="text-body-2 d-flex align-center ga-2 line-height-2">
-            <div>
-              {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
+          <span class="text-body-2 d-flex align-center line-height-2 ga-2">
+            <div class="d-flex align-center">
+              <span class="d-none d-lg-block">
+                {{ capitalize(dayjs(enrichedDate.departure_date).format('dddd')) }}&nbsp;
+              </span>
               <span class="font-weight-bold">
                 {{ dayjs(enrichedDate.departure_date).format('DD MMM YYYY') }}
               </span>
@@ -30,12 +32,16 @@
             >
               {{ mdiArrowRight }}
             </v-icon>
-            <div>
-              {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
+
+            <div class="d-flex align-center">
+              <span class="d-none d-lg-block">
+                {{ capitalize(dayjs(enrichedDate.return_date).format('dddd')) }}&nbsp;
+              </span>
               <span class=" font-weight-bold ">
                 {{ dayjs(enrichedDate.return_date).format('DD MMM YYYY') }}
               </span>
             </div>
+
           </span>
         </div>
         <BookingStatus
@@ -47,7 +53,7 @@
           <v-chip
             color="primary"
           >
-            <span class="d-flex align-center ga-1 mb-1">
+            <span class="d-flex align-center ga-1 mb-1 px-1">
               <v-icon>
                 {{ mdiAccountGroupOutline }}
               </v-icon>
@@ -103,8 +109,9 @@
       <v-col
         cols="5"
         md="3"
-        class="d-flex flex-column justify-center align-center justify-lg-start align-sm-start"
+        class="d-flex flex-column justify-center align-start  justify-lg-start"
       >
+        <span class="d-none d-sm-block text-body-1 font-size-custom text-grey">À partir de</span>
         <span
           class="text-h2 font-weight-black"
           :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"
@@ -253,7 +260,9 @@ const formatLink = (date) => {
   .text-size-14 {
   font-size: 14px!important;
   }
-
+  .font-size-custom {
+    font-weight: 500!important;
+  }
   .line-height-2 {
     line-height: 20px !important;
   } .text-custom:deep(.v-chip){

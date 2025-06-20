@@ -33,7 +33,7 @@ defineProps({
   color: #3e3e3e;
   background-size: cover;
   /* TODO: change to local image */
-  background-image: url(https://cdn.buttercms.com/GSxhfo1dStuceDJGS27T);
+  /* background-image: url(https://cdn.buttercms.com/GSxhfo1dStuceDJGS27T); */
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: screen;
 }
