@@ -142,10 +142,14 @@ schemaOrg:
   hide-on-layout: true
   ---
   #question
-  En quoi Odysway se différencie des autres agences de voyage ?
+  Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
   
   #answer
-  Chez Odysway, nous pensons que la vie est rythmée par les expériences que nous vivons ! Des expériences qui nous marquent, et qui nous laissent des souvenirs gravés à jamais. C'est pourquoi nous avons décidé de créer la première agence qui propose des séjours en immersion, et créés sur place par les équipes d'Odysway, afin de proposer à nos voyageurs une nouvelle façon de voyager : plus authentique, hors des sentiers battus et respectueuse de l'environnement et des populations locales.
+  Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
+  
+  L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
+  
+  Pas d’itinéraires touristiques figés, mais des voyages pensés pour favoriser les rencontres, la découverte en profondeur d’un lieu, et une vraie déconnexion. Le confort, la sécurité et la qualité de l’accompagnement sont assurés à chaque étape.
   :::
 
   :::question-panel
