@@ -84,6 +84,9 @@ au cœur du voyage
   
     ::::voyage-col-card{slug="sejour-astronomie-corse"}
     ::::
+  
+    ::::voyage-col-card{slug="sejour-astronomie-corse"}
+    ::::
   :::
 ::
 
@@ -98,7 +101,6 @@ au cœur du voyage
   :::text-image-container
   ---
   displayCtaButton: true
-  displayImageMobile: false
   imageDesktopRight: true
   imageSrc: images/voyages/trek-chez-lhabitant-nepal/9ri-cp-doc-qd-2k-et-ai-eid-u.png
   ---
