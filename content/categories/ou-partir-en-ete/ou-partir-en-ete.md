@@ -75,14 +75,11 @@ De retour au camp de base, profitez de la fin de votre séjour en vous relaxant 
 
 ## 2. Loin des lumières de la ville en plein été
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/ou-partir-en-ete/N1wp37n7SnCkgWfa17OF.jpg"
-alt: Séjour Astronomie Sud-Ouest
---------------------------------
-::
+  :::image-container
+  ---
+  imageSrc: /images/blogs/ou-partir-en-ete/N1wp37n7SnCkgWfa17OF.jpg
+  ---
+  :::
 
 S'éloigner de la ville et de son brouhaha pour vivre une expérience **en immersion** au sein d’un observatoire astronomique en plein cœur des Alpes, ça vous tente ?
 
@@ -100,12 +97,12 @@ Vous aurez donc la mission d’aider l'équipe à suivre un astéroïde ou à d�
 
 ## 3. S'approprier les grands espaces même en été
 
-::image-container
----
-alt: Grands espaces dans le Yukon
-image-src: /images/blogs/ou-partir-en-ete/8fWg9ByTTIadFgr9Xup1.jpg
----
-::
+  :::image-container
+  ---
+  alt: Grands espaces dans le Yukon
+  image-src: /images/blogs/ou-partir-en-ete/8fWg9ByTTIadFgr9Xup1.jpg
+  ---
+  :::
 
 Si l’idée de **partir en été** vous rend claustrophobe, on vous comprend et c’est pour cela que nous avons conçu LE voyage parfait pour respirer en toute sérénité.
 
@@ -123,12 +120,12 @@ Vivez en pleine immensité grâce à ce **séjour en immersion** "into the wild"
 
 ## 4. Partir en été avec Odysway
 
-::image-container
----
-alt: undefined
-image-src: /images/blogs/ou-partir-en-ete/yWaabJ9vR7Cdaq5hzAXc.jpg
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/ou-partir-en-ete/yWaabJ9vR7Cdaq5hzAXc.jpg
+  ---
+  :::
 
 Chez Odysway, nous savons que partir en été peut être un vrai challenge !
 
@@ -147,7 +144,7 @@ Partir en été pour :
 - découvrir la magnifique région du Jura et [**faire connaissance avec les plantes médicinales**](https://odysway.com/voyages/plantes-medicinales-jura?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete). 
 
 Tout cela devient possible avec les séjours en immersion d’Odysway !
-\::
+::
 
 ::color-container{color="soft-blush"}
   :::info-container
