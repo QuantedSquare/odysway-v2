@@ -136,7 +136,7 @@ schemaOrg:
 #faq
   :::question-panel
   ---
-  hide-on-layout: false
+  hide-on-layout: true
   ---
   #question
   Odysway est-elle une agence de voyage ?
