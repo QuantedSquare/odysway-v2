@@ -163,7 +163,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { mdiEarth, mdiMapMarker, mdiThumbUpOutline } from '@mdi/js'
-import { uniqBy, uniq } from 'lodash'
+import _ from 'lodash'
 import { useImage } from '#imports'
 
 const img = useImage()
@@ -324,7 +324,7 @@ const filteredRegions = computed(() => {
   const nameAggregated = aggregateDestinations(mappedDestinationsToRegions.value, search.value)
   // Combine both sets, deduplicate by slug or titre
   const allDestinations = [...regionDestinations, ...nameAggregated]
-  const uniqDestinations = uniqBy(allDestinations, dest => dest.slug || dest.titre)
+  const uniqDestinations = _.uniqBy(allDestinations, dest => dest.slug || dest.titre)
   // Aggregate region labels for each destination
   const destinationMap = {}
   uniqDestinations.forEach((dest) => {
@@ -347,7 +347,7 @@ const filteredRegions = computed(() => {
   // Group by region label
   const regionGroups = {}
   Object.values(destinationMap).forEach((dest) => {
-    const processedRegions = uniq(dest.regions.map(r => typeof r === 'string' ? r : r.nom))
+    const processedRegions = _.uniq(dest.regions.map(r => typeof r === 'string' ? r : r.nom))
 
     const regionLabel = processedRegions.length > 1 ? processedRegions.join(' & ') : processedRegions[0]
     if (!regionGroups[regionLabel]) regionGroups[regionLabel] = []

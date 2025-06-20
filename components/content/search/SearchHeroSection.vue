@@ -16,7 +16,7 @@
           v-if="destination && !isCategory && !isExperience"
           class="custom-hero-title"
         >
-          {{ `${contentLayout?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
+          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
@@ -34,7 +34,7 @@
           v-else
           class="custom-hero-title"
         >
-          {{ contentLayout?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
+          {{ contentText?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
         </h1>
       </v-col>
       <v-col
@@ -103,7 +103,7 @@
                 v-if="destination && !isCategory && !isExperience"
                 class="custom-hero-title"
               >
-                {{ `${contentLayout?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
+                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
               </h1>
               <h1
                 v-else-if="destination && isCategory"
@@ -121,7 +121,7 @@
                 v-else
                 class="custom-hero-title ml-3"
               >
-                {{ contentLayout?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
+                {{ contentText?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
               </h1>
               <slot name="subtitle" />
             </v-col>
@@ -140,8 +140,8 @@
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-const { data: contentLayout } = await useAsyncData('page-content-layout-search-hero', () =>
-  queryCollection('page_content_layout').first(),
+const { data: contentText } = await useAsyncData('page-search-search-hero', () =>
+  queryCollection('page_search').first(),
 )
 
 const img = useImage()

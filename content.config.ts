@@ -415,6 +415,10 @@ export default defineContentConfig({
         oneTrip: z.string().describe('Texte pour un seul voyage'),
         multipleTrips: z.string().describe('Texte pour plusieurs voyages'),
         resetButton: z.string().describe('Texte du bouton réinitialiser'),
+        searchHero: z.object({
+          voyagePrefix: z.string().describe('Préfixe pour les voyages dans le titre hero (ex: "Nos voyages")'),
+          defaultTitle: z.string().describe('Titre par défaut du hero de recherche'),
+        }).describe('Section hero de la page de recherche'),
         infoContainer: z.object({
           title: z.string().describe('Titre de la section InfoContainer'),
           description: z.string().describe('Description de la section InfoContainer'),
