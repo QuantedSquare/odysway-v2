@@ -95,6 +95,7 @@ au cœur du voyage
   ---
   displayCtaButton: true
   imageDesktopRight: true
+  displayImageMobile: false
   imageSrc: /images/blogs/pourquoi-choisir-une-agence-de-voyage/9riCPDocQD2kETAiEidU.jpg
   ---
   #title

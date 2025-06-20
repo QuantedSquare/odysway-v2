@@ -146,7 +146,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 #faq
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
@@ -161,7 +161,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Comment sont sélectionnées les expériences proposées par Odysway ?
@@ -178,7 +178,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
@@ -195,7 +195,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Quelles sont les disponibilités des voyages ?
@@ -206,7 +206,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Que se passe t-il si il n'y a pas de suffisamment de participants pour un départ groupé ?
@@ -217,7 +217,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Les voyages incluent-ils les billets de train ou d'avion pour se rendre sur place ?
@@ -228,7 +228,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Comment réserver un voyage avec Odysway ?
@@ -239,7 +239,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Le paiement en ligne est-il sécurisé ?
@@ -250,7 +250,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Puis-je annuler la réservation de mon voyage ?
@@ -261,7 +261,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
@@ -276,7 +276,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Comment sont sélectionnées les expériences proposées par Odysway ?
@@ -293,7 +293,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Suis-je assuré pour mon voyage avec Odysway ?
