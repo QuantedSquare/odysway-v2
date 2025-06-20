@@ -21,29 +21,30 @@
       >
         <v-btn
           icon
-          :color="color"
+          :color="arrivedState.left ? 'white' : color"
           :disabled="arrivedState.left"
-          class="mr-2"
+          class="mr-2 carousel-nav-btn"
           elevation="5"
           :size="mdAndUp ? 'large' : 'small'"
           @click="x -= scrollAmount"
         >
           <v-icon
             :icon="mdiChevronLeft"
-            color="white"
+            :color="arrivedState.left ? color : 'white'"
           />
         </v-btn>
         <v-btn
           icon
-          :color="color"
+          :color="arrivedState.right ? 'white' : color"
           :disabled="arrivedState.right"
+          class="carousel-nav-btn"
           elevation="5"
           :size="mdAndUp ? 'large' : 'small'"
           @click="x += scrollAmount"
         >
           <v-icon
             :icon="mdiChevronRight"
-            color="white"
+            :color="arrivedState.right ? color : 'white'"
           />
         </v-btn>
       </v-col>
@@ -158,5 +159,9 @@ const scrollAmount = computed(() => {
 
 .hidden-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.carousel-nav-btn:disabled {
+  color: white !important;
 }
 </style>
