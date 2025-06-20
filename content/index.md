@@ -108,8 +108,7 @@ au cœur du voyage
     icon: /icons/globe.svg
     ---
     #text
-    Des séjours immersifs 
-    conçus avec soin
+    Des séjours immersifs conçus avec soin
     ::::
   
     ::::icon-text-col
@@ -198,7 +197,7 @@ au cœur du voyage
   :::
 ::
 
-::color-container{whiteText color="primary"}
+::color-container{white-text color="primary"}
   :::horizontal-carousel
   #title
   [Voyages inoubliables]{style="color: rgb(255, 255, 255)"}
