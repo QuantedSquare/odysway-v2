@@ -23,7 +23,7 @@
             v-if="displayCtaButton"
             cols="12"
             md="auto"
-            class="my-8 mt-md-16 text-center"
+            class="mt-8 mt-md-16 text-center"
           >
             <slot name="cta-button" />
           </v-col>
@@ -36,7 +36,6 @@
         cols="12"
         md="6"
       >
-        {{ displayImageMobile }}
         <v-lazy
           :min-height="550"
           :options="{ threshold: 0.5 }"
@@ -75,7 +74,7 @@ defineProps({
   },
   displayImageMobile: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   displayCtaButton: {
     type: Boolean,

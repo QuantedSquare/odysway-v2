@@ -82,7 +82,7 @@
                 <v-btn
                   v-if="checkedOption"
                   color="info"
-                  class="ml-4"
+                  class="ml-md-4 text-caption text-uppercase font-weight-bold text-md-body-1"
                   large
                   :loading="loadingStripeSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"

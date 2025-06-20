@@ -14,7 +14,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width relative  w-md-75 w-lg-50 w-xl-33 no-margin-window"
+            class="border-width relative  w-md-75 w-lg-50 w-xl-33 no-margin-window mb-4"
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -377,5 +377,16 @@ const isPreviousButtonDisabled = computed(() => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
+}
+@media screen and (max-width: 600px) {
+  div:deep(.v-stepper-actions){
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>

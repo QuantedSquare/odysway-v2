@@ -29,7 +29,7 @@
           value="rapatriement"
         >
           <template #label>
-            <div class="text-body-1 d-flex align-center">
+            <div class="text-body-1 d-flex flex-column ga-2 align-start flex-md-row align-md-center">
               {{ page.insurances.preference_assurance_multirisque }}
               <v-badge
                 color="secondary"
@@ -144,7 +144,7 @@
 import _ from 'lodash'
 
 const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
-const model = defineModel()
+
 const isLoadingInsurance = ref(true)
 const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
