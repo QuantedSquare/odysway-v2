@@ -249,8 +249,6 @@ async function submit() {
     phone: phone.value,
     subject: subject.value,
     message: message.value,
-    gdprAccepted: gdprAccepted.value,
-    gdprAcceptedDate: gdprAccepted.value ? localStorage.getItem('contact-form-agreement-date') : null,
   }
   try {
     await apiRequest('/brevo/email', 'post', data)

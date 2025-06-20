@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="mb-16 mt-8 mt-md-0 rounded-md bg-primary d-flex align-center"
+    class="mb-016 mt-8 mt-md-0 rounded-md bg-primary d-flex align-center"
   >
     <v-row>
       <v-col
@@ -48,13 +48,19 @@ const img = useImage()
 <style scoped>
   .custom-hero-title {
   font-weight: 700;
-  font-size: 68px;
-  line-height: 80px;
+  font-size: 50px;
+  line-height: 50px;
   }
 @media (max-width: 960px) {
   .custom-hero-title {
-    font-size: 60px!important;
+    font-size: 42px!important;
     line-height: 42px!important;
+  }
+}
+@media (max-width: 400px) {
+  .custom-hero-title {
+    font-size: 35px!important;
+    line-height: 30px!important;
   }
 }
 </style>
