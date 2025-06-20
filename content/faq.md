@@ -124,9 +124,19 @@ schemaOrg:
           Il est important d'y réfléchir dès la réservation car vous n'aurez
           qu'un délai de 48h maximum à partir de votre règlement pour y
           souscrire.
+ogImage:
+  props: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::faq-container
+---
+backgroundImage: public/images/FAQ/vallee-aspe-lescun.jpeg
+---
 #section-title
   :::title-container
   #title
@@ -134,9 +144,6 @@ schemaOrg:
   :::
 
 #faq
-  :::question-panel{:hide-on-layout='false'}
-  :::
-
   :::question-panel
   ---
   hide-on-layout: true
