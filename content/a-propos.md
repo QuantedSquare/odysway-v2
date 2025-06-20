@@ -1,54 +1,54 @@
 ---
 ogImage:
-  component: "default"
+  component: default
   props:
-    title: "Le concept d'Odysway"
-    description: "Notre vision du voyage Odysway"
-    image: "/images/concept/Vélo.jpg"
+    title: Le concept d'Odysway
+    description: Notre vision du voyage Odysway
+    image: /images/concept/Vélo.jpg
 sitemap:
   lastmod: 2025-01-01
 robots: index, nofollow
 seo:
-  title: "Le concept"
-  description: "Notre vision du voyage Odysway"
+  title: Le concept
+  description: Notre vision du voyage Odysway
 schemaOrg:
-  - "@type": "TravelAgency"
-    headline: "Odysway, agence de voyage"
+  - "@type": TravelAgency
+    headline: Odysway, agence de voyage
     author:
-      type: "Person"
-      name: "Alexandre Ottmann"
-    datePublished: "2025-21-05"
-    "@context": "http://schema.org"
+      type: Person
+      name: Alexandre Ottmann
+    datePublished: 2025-21-05
+    "@context": http://schema.org
     address:
-      "@type": "PostalAddress"
-      addressLocality: "Le Plessis Trévise"
-      addressCountry: "France"
+      "@type": PostalAddress
+      addressLocality: Le Plessis Trévise
+      addressCountry: France
       postalCode: "94420"
-      streetAddress: "27 avenue Nicolas Boileau"
-    description: "Odysway est l'agence spécialiste des voyages en immersion. Nous proposons un tourisme authentique et responsable qui vous fera voyager différemment."
-    name: "ODYSWAY"
-    legalName: "ODYSWAY SAS"
-    priceRange: "€€"
-    telephone: "+ 33 (0) 1 84 80 79 75"
-    email: "contact@odysway.com"
-    image: "https://odysway.com/logos/logo_noir.png"
+      streetAddress: 27 avenue Nicolas Boileau
+    description: Odysway est l'agence spécialiste des voyages en immersion. Nous
+      proposons un tourisme authentique et responsable qui vous fera voyager
+      différemment.
+    name: ODYSWAY
+    legalName: ODYSWAY SAS
+    priceRange: €€
+    telephone: + 33 (0) 1 84 80 79 75
+    email: contact@odysway.com
+    image: https://odysway.com/logos/logo_noir.png
 ---
 
 ::generic-hero-section
 ---
 displayed-img: /images/concept/Vélo.jpg
-title-color: "white"
+title-color: white
 ---
 #title
 Voyager autrement, en plaçant l'humain au cœur de chaque aventure
-
 ::
 
 ::title-container
 #title
 Le concept d'Odysway
 ::
-
 
 ::concept-container
 ---
