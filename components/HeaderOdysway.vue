@@ -1,8 +1,70 @@
 <template>
+  <div
+    class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar bg-white"
+    :class="!model ? 'app-bar-shadow' : ''"
+  >
+    <NuxtLink
+      :to="header.to"
+      class="header-logo-link"
+    >
+      <NuxtImg
+        preload
+        format="webp"
+        quality="100"
+        :src="LogoOdyswayBleu"
+        width="320"
+        alt="Logo principale d'Odysway"
+        class="header-logo"
+      />
+    </NuxtLink>
+
+    <v-spacer />
+    <div class="d-flex align-center ga-4">
+      <v-btn
+        color="primary"
+        height="45"
+        class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
+      >
+        {{ header.textButton1 }}
+      </v-btn>
+      <v-btn
+        color="primary"
+        variant="tonal"
+        height="45"
+        class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
+      >
+        {{ header.textButton2 }}
+      </v-btn>
+      <v-btn
+        density="compact"
+        size="x-large"
+        height="45"
+        color="white"
+        rounded="default"
+        class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
+        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
+      >
+        {{ header.textButton3 }}
+      </v-btn>
+      <v-btn
+        class="d-inline d-md-none "
+        icon
+        height="35"
+        variant="text"
+        @click.stop="model = !model"
+      >
+        <v-icon>
+          {{ mdiMenu }}
+        </v-icon>
+      </v-btn>
+    </div>
+  </div>
   <v-app-bar
     elevation="0"
     mobile
-    class="px-4 px-md-9 d-flex align-center height-app-bar mx-0"
+    class="d-header-desktop px-4 px-md-9 d-flex align-center height-app-bar mx-0"
     :class="!model ? 'app-bar-shadow' : ''"
     :scroll-behavior="scrollBehavior"
     :scroll-threshold="scrollThreshold"
@@ -24,45 +86,6 @@
 
     <v-spacer />
     <div class="d-flex align-center ga-4">
-      <!-- <template v-if="isConnected && user">
-        <v-menu location="bottom end">
-          <template #activator="{ props }">
-            <v-btn
-              icon
-              class="hidden-xs"
-              v-bind="props"
-            >
-              <v-icon>{{ mdiAccountCircle }}</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item>
-              <v-list-item-title>{{ user.email }}</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="handleSignOut">
-              <v-list-item-title>Sign Out</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </template>
-      <template v-else>
-        <div class="d-flex align-center ga-2">
-          <v-btn
-            variant="text"
-            class="hidden-xs text-uppercase"
-            @click="router.push('/signin')"
-          >
-            Sign In
-          </v-btn>
-          <v-btn
-            color="primary"
-            class="hidden-xs text-uppercase"
-            @click="router.push('/signup')"
-          >
-            Sign Up
-          </v-btn>
-        </div>
-      </template> -->
       <v-btn
         color="primary"
         height="45"
@@ -92,12 +115,6 @@
         {{ header.textButton3 }}
       </v-btn>
 
-      <!-- <v-btn
-        icon
-        class="hidden-xs"
-      >
-        <v-icon>{{ mdiAccountCircle }}</v-icon>
-      </v-btn> -->
       <v-btn
         class="d-inline d-md-none "
         icon
@@ -142,6 +159,24 @@ function captureOutboundLink(btn) {
 </script>
 
 <style scoped>
+.d-header-desktop{
+  display: none!important;
+}
+@media (min-width: 600px) {
+  .d-header-desktop{
+    display: block!important;
+  }
+}
+.custom-app-bar{
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: calc(100% - 36px);
+  right: 0;
+  z-index: 10000;
+}
 .app-bar-shadow:deep(){
   box-shadow: none!important;
   z-index: 10000!important;
@@ -177,5 +212,13 @@ function captureOutboundLink(btn) {
   .height-app-bar{
   height: 60px;
 }
+}
+@media (max-width: 600px) {
+  .height-app-bar{
+    height:52px;
+    margin-top: 18px;
+    border-radius: 12px!important;
+    box-shadow: 0px 10px 20px 0px #0000000A!important;
+  }
 }
 </style>
