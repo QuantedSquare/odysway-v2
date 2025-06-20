@@ -7,7 +7,7 @@
       <HeroVoyageSection :voyage="voyage" />
       <BottomAppBar
         :date-sections="page.dateSections"
-        :pricing="voyage.pricing"
+        :starting-price="voyage.pricing.startingPrice"
       />
 
       <ChipsContainer
@@ -61,7 +61,7 @@
           :is-groupe-available="voyage.groupeAvailable"
           :is-privatisation-available="voyage.privatisationAvailable"
           :last-minute-price="voyage.pricing.lastMinuteReduction"
-          :early-bird-price="voyage.pricing.earlyBirdReduction"
+          :early-bird-price="voyage.pricing.earlyBirdReduction || 0"
         />
 
         <PriceDetailsContainer
@@ -73,7 +73,7 @@
         />
 
         <FaqVoyagesContainer
-          :background-image="voyage.image?.src"
+          :background-image="voyage.image.src"
           :faq-block="voyage.faqBlock"
         />
 
@@ -117,7 +117,7 @@ const route = useRoute()
 const { data: page } = await useAsyncData('voyages-textes', () =>
   queryCollection('page_voyage_fr').first(),
 )
-const { data: voyage } = await useAsyncData('voyages', () =>
+const { data: voyage } = await useAsyncData(`voyages-${route.params.voyageSlug}`, () =>
   queryCollection('voyages').where('slug', '=', route.params.voyageSlug).first(),
 )
 
