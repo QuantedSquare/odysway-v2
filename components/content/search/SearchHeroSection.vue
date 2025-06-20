@@ -2,7 +2,8 @@
   <v-container
     v-if="isHydrated"
     fluid
-    class="relative-hero-section mb-16 mt-8 mt-md-0 rounded-md bg-primary d-flex align-center"
+    class="relative-hero-section mt-8 rounded-md bg-primary d-flex align-center"
+    :class="{ 'no-margin-bottom': noMarginBottom }"
   >
     <v-row
       v-if="width > 960"
@@ -13,7 +14,7 @@
         class="d-flex align-center"
       >
         <h1
-          v-if="destination && !isCategory && !isExperience"
+          v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
           {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
@@ -31,6 +32,12 @@
           {{ destination.discoveryTitle || destination.titre }}
         </h1>
         <h1
+          v-else-if="destination && isNextDepartures"
+          class="custom-hero-title"
+        >
+          {{ destination.periodFilter === null || destination.periodFilter === 'Toutes périodes' ? 'Découvrez nos voyages de groupe' : `Partez avec un groupe de 8 voyageurs maximum en ${destination.periodFilter.toLowerCase()}` }}
+        </h1>
+        <h1
           v-else
           class="custom-hero-title"
         >
@@ -42,9 +49,9 @@
         md="8"
       >
         <v-img
-          v-if="destination"
-          :src="img(destination.image?.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(destination.image?.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          v-if="destination.image?.src"
+          :src="img(destination.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(destination.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           size="(max-width: 600) 480px, 1500px"
           :srcset="`${img(destination.image?.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(destination.image?.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
           height="302"
@@ -100,7 +107,7 @@
               md="auto"
             >
               <h1
-                v-if="destination && !isCategory && !isExperience"
+                v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
                 {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
@@ -116,6 +123,12 @@
                 class="custom-hero-title"
               >
                 {{ destination.discoveryTitle || destination.titre }}
+              </h1>
+              <h1
+                v-else-if="destination && isNextDepartures"
+                class="custom-hero-title"
+              >
+                {{ destination.periodFilter === null || destination.periodFilter === 'Toutes périodes' ? 'Découvrez nos voyages de groupe' : `Partez avec un groupe de 8 voyageurs maximum en ${destination.periodFilter.toLowerCase()}` }}
               </h1>
               <h1
                 v-else
@@ -146,7 +159,7 @@ const { data: contentText } = await useAsyncData('page-search-search-hero', () =
 
 const img = useImage()
 const { width } = useDisplay()
-const { destination, isCategory, isExperience } = defineProps({
+const { destination, isCategory, isExperience, isNextDepartures, noMarginBottom } = defineProps({
   destination: {
     type: Object,
     default: null,
@@ -163,8 +176,15 @@ const { destination, isCategory, isExperience } = defineProps({
     type: Boolean,
     default: false,
   },
+  isNextDepartures: {
+    type: Boolean,
+    default: false,
+  },
+  noMarginBottom: {
+    type: Boolean,
+    default: false,
+  },
 })
-// console.log('in hero', destination)
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true
@@ -176,6 +196,11 @@ onMounted(() => {
  position:relative;
  height: 348px;
 }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
 .absolute {
   position: absolute;
   left:0;
@@ -186,7 +211,6 @@ onMounted(() => {
 font-weight: 700;
 font-size: 50px;
 line-height: 50px;
-/* margin-left: 44px; */
 }
 
 @media (min-width: 960px) {
@@ -209,19 +233,25 @@ line-height: 50px;
     height: 50vh;
     margin-bottom:250px!important;
   }
+  .relative-hero-section.no-margin-bottom {
+    margin-bottom: 0 !important;
+  }
   .custom-hero-title {
     font-size: 42px!important;
     line-height: 42px!important;
     margin-bottom: 82px;
   }
 }
+
 @media (max-width: 400px) {
   .absolute {
     bottom: -200px;
   }
   .relative-hero-section {
     height: 50vh;
-    margin-bottom:240px!important;
+  }
+  .relative-hero-section.no-margin-bottom {
+    margin-bottom: 0 !important;
   }
   .custom-hero-title {
     margin-bottom: 85px !important;

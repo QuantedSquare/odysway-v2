@@ -4,7 +4,7 @@
     location="right"
     disable-resize-watcher
     mobile
-    class="custom-padding "
+    class="custom-padding"
   >
     <div>
       <!-- <v-btn
@@ -101,8 +101,16 @@ const drawerItems = ref([
 
 <style scoped>
 .custom-padding{
-  margin-top: -4px;
+  margin-top: -10px;
   padding-top: 10px;
+  padding-bottom: 100px;
+  height: 100vh!important;
+}
+@media (max-width: 600px) {
+  .custom-padding{
+    margin-top: -46px;
+    padding-top: 60px;
+  }
 }
 .drawer-shadow{
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.259)!important;

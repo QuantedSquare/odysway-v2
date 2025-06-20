@@ -55,6 +55,7 @@
                     :current-step="currentStep"
                     :own-step="5"
                     :voyage="voyage"
+                    @validity-changed="onStepValidityChanged"
                   />
                 </template>
                 <FunnelStepsSkipper
@@ -67,11 +68,11 @@
                 <FunnelStepsDetails
                   v-if="skipperMode === 'normal'"
                   :ref="(component) => registerStepComponent(component, 1)"
-                  v-model="validForm"
                   :current-step="currentStep"
                   :voyage="voyage"
                   :own-step="1"
                   :page="pageTexts"
+                  @validity-changed="onStepValidityChanged"
                 />
                 <CalendlyContainer
                   v-else
@@ -82,30 +83,30 @@
               <v-stepper-window-item>
                 <FunnelStepsTravelersInfos
                   :ref="(component) => registerStepComponent(component, 2)"
-                  v-model="validForm"
                   :current-step="currentStep"
                   :page="pageTexts"
                   :own-step="2"
+                  @validity-changed="onStepValidityChanged"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
                 <FunnelStepsOptions
                   :ref="(component) => registerStepComponent(component, 3)"
-                  v-model="validForm"
                   :voyage="voyage"
                   :current-step="currentStep"
                   :page="pageTexts"
                   :own-step="3"
+                  @validity-changed="onStepValidityChanged"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
                 <FunnelStepsInsurances
                   :ref="(component) => registerStepComponent(component, 4)"
-                  v-model="validForm"
                   :current-step="currentStep"
                   :page="pageTexts"
                   :own-step="4"
                   @skip-step="nextStep"
+                  @validity-changed="onStepValidityChanged"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item
@@ -120,11 +121,11 @@
 
                 <FunnelStepsPaymentRedirect
                   :ref="(component) => registerStepComponent(component, 5)"
-                  v-model="validForm"
                   :page="pageTexts"
                   :current-step="currentStep"
                   :own-step="5"
                   :voyage="voyage"
+                  @validity-changed="onStepValidityChanged"
                 />
               </v-stepper-window-item>
             </v-stepper-window>
@@ -294,7 +295,6 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
 console.log('voyage', voyageStatus.value, voyageError.value)
 
 // ================== Stepper Management ==================
-const validForm = ref(true)
 const stepComponents = reactive(new Map())
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
@@ -303,13 +303,25 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = 5
   skipperMode.value = 'summary'
 }
+
+// New: Per-step validation state
+const stepValidation = reactive(new Map())
+
 const enablingNextButton = computed(() => {
-  return currentStep.value === 0 || validForm.value
+  console.log('currentStep', currentStep.value, 'stepValidation', stepValidation.get(currentStep.value))
+  return currentStep.value === 0 || stepValidation.get(currentStep.value) === true
 })
 
 const registerStepComponent = (component, step) => {
   stepComponents.set(step, component)
 }
+
+// New: Handle step validity changes
+const onStepValidityChanged = (stepIndex, isValid) => {
+  stepValidation.set(stepIndex, isValid)
+  console.log('Step validity changed:', stepIndex, isValid, 'All steps:', Object.fromEntries(stepValidation))
+}
+
 const nextStep = async () => {
   const currentComponent = stepComponents.get(currentStep.value)
 
@@ -319,7 +331,6 @@ const nextStep = async () => {
     if (isValid) {
       currentStep.value++
       loading.value = false
-      validForm.value = false
     }
   }
   else {
@@ -329,7 +340,6 @@ const nextStep = async () => {
 }
 const previousStep = () => {
   currentStep.value--
-  validForm.value = true
 }
 const showNextButton = computed(() => {
   return (skipperMode.value === 'normal' && currentStep.value < 5) || (skipperMode.value === 'quick' && currentStep.value !== 1)

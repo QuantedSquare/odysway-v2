@@ -87,6 +87,11 @@ const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
 const { deal, dealId, updateDeal, loadingDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 console.log('props.voyage', props.voyage)
+
+// New: Local validation state
+const isValid = ref(false)
+const emit = defineEmits(['validity-changed'])
+
 const specialRequest = ref('')
 const indivRoom = ref(false)
 const indivRoomPrice = ref(0) // Checker si on veut afficher ce prix
@@ -94,12 +99,20 @@ const indivRoomPrice = ref(0) // Checker si on veut afficher ce prix
 const vegeOption = ref(false)
 const otherFoodOption = ref(false)
 
-const model = defineModel()
-model.value = false
+// New: Form validation logic - Options step is always valid once loaded
+const formValidation = computed(() => {
+  return !loadingDeal.value && !!dealId.value
+})
+
+// New: Watch validation and emit changes
+watch(formValidation, (isFormValid) => {
+  console.log('isFormValid', isFormValid, loadingDeal.value, dealId.value)
+  isValid.value = isFormValid
+  emit('validity-changed', props.ownStep, isFormValid)
+}, { immediate: true })
 
 watch([loadingDeal, deal, () => props.currentStep], ([loading, dealVal, currentStep]) => {
   if (loading) {
-    model.value = false
     return
   }
   if (dealId.value && dealVal) {
@@ -108,10 +121,6 @@ watch([loadingDeal, deal, () => props.currentStep], ([loading, dealVal, currentS
     vegeOption.value = dealVal.specialRequest?.includes('Régimes alimentaires spécifiques')
     otherFoodOption.value = dealVal.specialRequest?.includes('Autres demandes particulières')
     specialRequest.value = dealVal.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim()
-    model.value = true
-  }
-  else {
-    model.value = false
   }
   if (currentStep === props.ownStep) {
     addSingleParam('step', props.ownStep)
@@ -128,7 +137,7 @@ const foodPreferences = computed(() => {
 
 const submitStepData = async () => {
   // Validate form
-  if (!dealId.value || !deal.value || !model.value) return false
+  if (!dealId.value || !deal.value || !isValid.value) return false
   const dealData = {
     dealId: dealId.value,
     specialRequest: `Préférence alimentaire: ${foodPreferences.value}`,

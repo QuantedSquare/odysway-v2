@@ -5,7 +5,7 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
-    <v-row class="py-6 pt-md-10 px-12">
+    <v-row class="py-4 mt-md-12 px-4 px-md-12">
       <v-col
         cols="auto"
         md="auto"
@@ -159,11 +159,16 @@ function filterByDestination(voyages, destination) {
   if (!destination) return voyages
   return voyages.filter(v => v.destinations?.some(d => d.name.includes(destination)))
 }
-
 function filterByType(voyages, travelType) {
   if (!travelType) return voyages
-  const groupeType = travelType === 'Voyage en groupe'
-  return voyages.filter(v => v.groupeAvailable === groupeType && v.monthlyAvailability?.length > 0)
+
+  const typeFilters = {
+    'Voyage en groupe': voyage => voyage.groupeAvailable === true,
+    'Voyage individuel': voyage => voyage.privatisationAvailable === true,
+  }
+
+  const filterFn = typeFilters[travelType]
+  return filterFn ? voyages.filter(filterFn) : voyages
 }
 
 function filterByDate(voyages, fromList) {

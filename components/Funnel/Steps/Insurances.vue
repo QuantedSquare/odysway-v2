@@ -150,7 +150,9 @@ const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { pricePerTraveler } = usePricePerTraveler(deal)
 
-const emit = defineEmits(['skip-step'])
+// New: Local validation state
+const isValid = ref(false)
+const emit = defineEmits(['validity-changed', 'skip-step'])
 
 // Data
 const insurances = ref({
@@ -195,6 +197,17 @@ const fetchInsuranceQuote = async (retrievedDeal) => {
 // Values
 const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
 
+// New: Form validation logic
+const formValidation = computed(() => {
+  return !isLoadingInsurance.value && !!dealId.value
+})
+
+// New: Watch validation and emit changes
+watch(formValidation, (isFormValid) => {
+  isValid.value = isFormValid
+  emit('validity-changed', props.ownStep, isFormValid)
+}, { immediate: true })
+
 watch([deal, () => props.currentStep], async () => {
   // Only run if we're on the insurance step
   if (props.currentStep !== props.ownStep) return
@@ -205,7 +218,6 @@ watch([deal, () => props.currentStep], async () => {
     addSingleParam('step', props.ownStep)
   }
   if (deal.value) {
-    model.value = true
     console.log('dealId fetched', deal.value)
     insurances.value = await fetchInsuranceQuote(deal.value)
 
@@ -245,8 +257,11 @@ const handleGAEvent = (event) => {
   //   eventLabel: EVENTS[event].eventLabel,
   // })
 }
-watch(selectedInsurance, (value) => {
-  model.value = !!value
+watch(selectedInsurance, (_value) => {
+  // Update validation when insurance selection changes
+  if (formValidation.value) {
+    emit('validity-changed', props.ownStep, true)
+  }
 })
 
 const insuranceChoice = computed(() => {
@@ -265,7 +280,7 @@ const insuranceChoice = computed(() => {
 
 const submitStepData = async () => {
   // Validate form
-  if (!dealId.value || !model.value) return false
+  if (!dealId.value || !isValid.value) return false
   const dealData = {
     dealId: dealId.value,
     insurance: [insuranceChoice.value.name],

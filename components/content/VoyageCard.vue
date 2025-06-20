@@ -80,7 +80,7 @@
                 class="text-right"
               >
                 <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.startingFrom || 'À partir de' }}</div>
-                <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.startingPrice }}€</div>
+                <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice ?? voyage.startingPrice }}€</div>
               </v-col>
             </v-row>
           </v-container>
