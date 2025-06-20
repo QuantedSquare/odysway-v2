@@ -2,11 +2,13 @@
   <v-container
     fluid
   >
-    <ContactHeroSection />
-    <h2 class="text-h2 text-center my-8">
-      Formulaire de contact
-    </h2>
-    <ContactForm />
-    <!-- TODO: GDPR/Privacy link + agreement checkbox -->
+    <ContactHeroSection :contact-content="contactContent" />
+    <ContactForm :contact-content="contactContent" />
   </v-container>
 </template>
+
+<script setup>
+const { data: contactContent } = await useAsyncData('contact-content', () =>
+  queryCollection('page_contact').first(),
+)
+</script>

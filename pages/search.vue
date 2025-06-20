@@ -11,8 +11,8 @@
         md="auto"
         class="d-flex align-center"
       >
-        <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? '1 voyage' : `${nbVoyages}
-            voyages` }}</span>
+        <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? `1 ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
+            ${searchContent?.multipleTrips || 'voyages'}` }}</span>
       </v-col>
       <v-col
         cols=""
@@ -75,7 +75,7 @@
           width="172px"
           @click="reinitiliazeFilter"
         >
-          Réinitialiser
+          {{ searchContent?.resetButton || 'Réinitialiser' }}
         </v-btn>
       </v-col>
     </v-row>
@@ -83,24 +83,17 @@
       :voyages="voyages"
       :is-search="true"
     />
-    <!-- <v-container>
-      <v-row>
-        <ContentRenderer
-          v-if="fetchedDestinationContentStatus === 'success' && fetchedDestinationContent"
-          :value="fetchedDestinationContent"
-        />
-      </v-row>
-    </v-container> -->
+
     <ColorContainer color="grey-light-2">
       <InfoContainer>
         <template #top>
           <AvatarsRowStack />
         </template>
         <template #title>
-          Vous hésitez encore ?
+          {{ searchContent?.infoContainer?.title || 'Vous hésitez encore ?' }}
         </template>
         <template #description>
-          Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.
+          {{ searchContent?.infoContainer?.description || 'Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.' }}
         </template>
         <template #bottom>
           <CtaButton
@@ -108,7 +101,7 @@
             link="/calendly"
           >
             <template #text>
-              Prendre RDV
+              {{ searchContent?.infoContainer?.buttonText || 'Prendre RDV' }}
             </template>
           </CtaButton>
         </template>
@@ -131,6 +124,10 @@ const router = useRouter()
 const route = useRoute()
 const routeQuery = computed(() => route.query)
 
+const { data: searchContent } = await useAsyncData('search-content', () =>
+  queryCollection('page_search').first(),
+)
+
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
     return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre', 'interjection', 'image').first()
@@ -139,17 +136,6 @@ const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
 }, {
   watch: [routeQuery],
 })
-
-// const { data: fetchedDestinationContent, status: fetchedDestinationContentStatus } = useAsyncData('fetchedDestinationContent', () => {
-//   if (route.query.destination) {
-//     return queryCollection('destinationsContent').where('stem', 'LIKE', `destinations/${route.query.destination}/%`).where('published', '=', true).first()
-//   }
-//   return null
-// }, {
-//   watch: [routeQuery],
-
-// })
-// provide('page', fetchedDestinationContent)
 
 const capitalizeFirstLetter = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1)

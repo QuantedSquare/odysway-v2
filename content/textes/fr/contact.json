@@ -1,0 +1,61 @@
+{
+  "formTitle": "Formulaire de contact",
+  "heroSection": {
+    "title": "Contactez nous",
+    "teamImageAlt": "Équipe Odysway"
+  },
+  "contactForm": {
+    "fields": {
+      "civility": {
+        "label": "Civilité *",
+        "placeholder": "Choisissez une civilité",
+        "options": {
+          "mr": "M.",
+          "mrs": "Mme.",
+          "other": "Autre"
+        }
+      },
+      "lastName": {
+        "label": "Nom *",
+        "placeholder": "Jones"
+      },
+      "firstName": {
+        "label": "Prenom *",
+        "placeholder": "Indiana"
+      },
+      "phone": {
+        "label": "Numéro de téléphone"
+      },
+      "email": {
+        "label": "Adresse email *",
+        "placeholder": "Votre adresse email"
+      },
+      "subject": {
+        "label": "Objet de votre message *",
+        "placeholder": "J'ai besoin d'aide pour partir au Japon..."
+      },
+      "message": {
+        "label": "Message *",
+        "placeholder": "Votre message..."
+      }
+    },
+    "submitButton": "Envoyer",
+    "formTitle": "Formulaire de contact",
+    "successMessage": "Message envoyé avec succès !",
+    "successDescription": "Nous vous répondrons dans les plus brefs délais.",
+    "gdprSection": {
+      "agreementText": "J'accepte la",
+      "privacyLinkText": "politique de confidentialité",
+      "privacyLinkUrl": "/politique-de-confidentialite",
+      "agreementSuffix": "et consens au traitement de mes données personnelles."
+    },
+    "validationMessages": {
+      "civilityRequired": "Veuillez choisir une civilité.",
+      "fieldRequired": "Cette information est requise.",
+      "invalidEmail": "Adresse email invalide",
+      "minOneCharacter": "Au moins un caractère est requis",
+      "minMessageCharacters": "Au moins 20 caractères sont requis",
+      "gdprRequired": "Vous devez accepter la politique de confidentialité."
+    }
+  }
+} 

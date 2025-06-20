@@ -11,7 +11,7 @@
     >
       <v-row>
         <v-col cols="12">
-          <h2>Informations voyageurs</h2>
+          <h2>{{ page.travelers_infos.title }}</h2>
           <!-- <h2>{{ $t('stepperDevisGroup.travellersDetails') }}</h2> -->
         </v-col>
         <v-col cols="12">
@@ -22,8 +22,7 @@
             elevation="2"
             class="text-subtitle-2"
           >
-            Les informations ci-dessous doivent être identiques à celles qui sont écrites sur les documents d'identité utilisés pour ce voyage.
-            <!-- {{ page.rappel_informations_voyageurs }} -->
+            {{ page.travelers_infos.alert }}
           </v-alert>
         </v-col>
         <v-col cols="12">
@@ -45,15 +44,14 @@
             v-show="!ageValidation.isValid"
             class="text-error text-right"
           >
-            Les voyageurs âgés de {{ Number(deal?.maxChildrenAge) || 12 }} ans au moment du départ sont considérés comme des
-            adultes.
+            {{ ageValidationMessage }}
           </p>
           <!-- New: Error message for missing fields -->
           <p
             v-show="!allFieldsFilled"
             class="text-error text-right"
           >
-            Tous les champs doivent être remplis pour chaque voyageur.
+            {{ page.travelers_infos.all_fields_required }}
           </p>
         </v-col>
       </v-row>
@@ -67,10 +65,8 @@
           <v-switch
             v-model="isCouple"
             style="margin-bottom : 5px"
-            :label="page.preference_couple"
+            :label="page.travelers_infos.preference_couple"
           />
-          <!-- page.preference_couple" -->
-          <!-- <div v-html="page.preference_couple_details" /> -->
         </v-col>
       </v-row>
     </v-form>
@@ -80,7 +76,7 @@
 <script setup>
 import dayjs from 'dayjs'
 
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 
@@ -128,6 +124,11 @@ const computedAges = computed(() => {
     // teenagers,
     adults,
   }
+})
+
+const ageValidationMessage = computed(() => {
+  const maxAge = Number(deal.value?.maxChildrenAge) || 12
+  return props.page.travelers_infos.age_validation.replace('{{maxAge}}', maxAge)
 })
 
 const ageValidation = computed(() => {

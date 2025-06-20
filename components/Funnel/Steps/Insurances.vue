@@ -10,12 +10,11 @@
         class="d-flex align-center"
         cols="12"
       >
-        <!-- <h2>{{ $t('stepperDevisGroup.insurances') }}</h2> -->
-        <h2>Garanties <span class="text-body-1">avec</span></h2>
+        <h2>{{ page.insurances.title }}</h2>
         <img
           width="90"
           class="ml-2"
-          :src="page.assurance_img"
+          :src="page.insurances.assurance_img"
         >
       </v-col>
     </v-row>
@@ -30,12 +29,12 @@
           value="rapatriement"
         >
           <template #label>
-            <div class="text-body-1 d-flex align-center">
-              {{ page.preference_assurance_multirisque }}
+            <div class="text-body-1 d-flex flex-column ga-2 align-start flex-md-row align-md-center">
+              {{ page.insurances.preference_assurance_multirisque }}
               <v-badge
                 color="secondary"
                 inline
-                content="Conseillé"
+                :content="page.insurances.conseille_badge"
               />
             </div>
           </template>
@@ -51,8 +50,9 @@
       >
         <FunnelStepsDialogLearnMore
           v-if="deal"
-          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.accroche_assurance_perou_nepal:page.accroche_assurance_medicale "
-          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.details_assurance_medicale_perou_nepal:page.details_assurance_medicale "
+          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
+          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
+          :page="page"
         />
       </v-col>
     </v-row>
@@ -68,7 +68,7 @@
         <v-switch
           v-model="selectedInsurance"
           value="cancel"
-          :label="page.preference_assurance_annulation"
+          :label="page.insurances.preference_assurance_annulation"
         />
       </v-col>
       <v-col class="d-flex justify-end align-center text-body-1 font-weight-bold">
@@ -79,8 +79,9 @@
         class="px-16"
       >
         <FunnelStepsDialogLearnMore
-          :btn-text="page.accroche_assurance_annulation"
-          :dialog-text="page.details_assurance_annulation"
+          :btn-text="page.insurances.accroche_assurance_annulation"
+          :dialog-text="page.insurances.details_assurance_annulation"
+          :page="page"
         />
       </v-col>
     </v-row>
@@ -96,7 +97,7 @@
         <v-switch
           v-model="selectedInsurance"
           value="none"
-          label="Je ne souhaite pas d'assurance"
+          :label="page.insurances.no_insurance_label"
         />
       </v-col>
     </v-row>
@@ -110,10 +111,10 @@
           color="secondary"
           elevation="2"
         >
-          <span class="font-weight-bold">
-            Assurance applicable à tous les voyageurs. <br>
-            Le calcul du prix de votre voyage se fera à la prochaine étape.
-          </span>
+          <span
+            class="font-weight-bold"
+            v-html="page.insurances.alert"
+          />
         </v-alert>
       </v-col>
     </v-row>
@@ -131,7 +132,7 @@
           elevation="2"
         >
           <span class="font-weight-bold ">
-            L'assurance n'est pas disponible pour votre voyage.
+            {{ page.insurances.unavailable }}
           </span>
         </v-alert>
       </v-col>
@@ -142,7 +143,8 @@
 <script setup>
 import _ from 'lodash'
 
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
+
 const isLoadingInsurance = ref(true)
 const { addSingleParam } = useParams()
 const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)

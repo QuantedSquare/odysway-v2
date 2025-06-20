@@ -1,5 +1,4 @@
 {
-  "devis_rdv_text": "<p>Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.</p>",
   "fil_dariane_devis": {
     "step_1": "Votre voyage",
     "step_2": "Détails",
@@ -10,25 +9,11 @@
     "title": "Où en êtes vous dans la préparation de ce voyage ?",
     "option_1": "Je souhaite poser une option / réserver ce voyage",
     "option_2": "Poser une option sur ce voyage",
-    "option_3": "Je souhaite prendre un rendez-vous avec un conseiller voyage",
-    "option_4": "Je ne sais pas encore"
+    "option_3": "Je souhaite prendre un rendez-vous avec un conseiller voyage"
   },
   "calendly": "Merci de votre confiance ! L'aventure peut commencer ! Si vous le souhaitez, vous avez la possibilité de prendre un rendez-vous téléphonique avec l'un de nos conseillers. Nous répondrons à toutes vos questions sur le voyage.",
-  "room_indiv_title": "Souhaitez-vous une chambre individuelle ?",
-  "food_details_title": "Avez-vous des demandes particulières ou des besoins spécifiques ?",
   "room_indiv_accroche": "Si vous partez seul, vous ne partagerez pas votre chambre avec d'autres voyageurs.",
   "room_indiv_text": "Si vous partez seul et que vous ne sélectionnez pas cette option, vous pourrez partager votre chambre avec un autre voyageur du même sexe.",
-  "assurance_img": "https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW",
-  "preference_assurance_multirisque": "Assurance Multirisque",
-  "accroche_assurance_perou_nepal": "accroche_assurance_perou_nepal",
-  "details_assurance_medicale_perou_nepal": "details_assurance_medicale_perou_nepal",
-  "details_assurance_medicale": "details_assurance_medicale",
-  "preference_assurance_annulation": "Assurance Annulation",
-  "accroche_assurance_annulation": "<div>\n        <ul>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vous couvre avant, pendant et après votre voyage</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Annulation pour toutes causes justifiées (événement extérieur, soudain, justifié et indépendant de votre volonté)</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Frais médicaux et hospitalisation</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vol de bagages</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Téléconsultation gratuite</span></li>\n        </ul>\n      </div>",
-  "accroche_assurance_medicale": "<div>\n        <ul>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vous couvre avant, pendant et après votre voyage</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Annulation pour toutes causes justifiées (événement extérieur, soudain, justifié et indépendant de votre volonté)</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Frais médicaux et hospitalisation</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vol de bagages</span></li>\n          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Téléconsultation gratuite</span></li>\n        </ul>\n      </div>",
-  "details_assurance_annulation": "details_assurance_annulation",
-  "insurances_unavailable": "insurances_unavailable",
-  "phrase_dacceptation": "<p>J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.</p>",
   "forced_indiv_room_text": "Texte chambre individuelle forcée",
   "cancel_text": "Vous pouvez annuler gratuitement jusqu'à 30 jours avant le départ. Vous serez remboursé sous 7 jours (sans aucun frais retenu).",
   "details": {
@@ -54,7 +39,9 @@
     "preference_couple": "Je voyage en couple"
   },
   "options": {
+    "room_indiv_title": "Souhaitez-vous une chambre individuelle ?",
     "indiv_room_label": "Je souhaite bénéficier d'une chambre individuelle",
+    "food_details_title": "Avez-vous des demandes particulières ou des besoins spécifiques ?",
     "food_prefs_label": "Régimes alimentaires spécifiques",
     "vege_label": "Régimes alimentaires spécifiques",
     "vege_sub_label": "Végétarien, Végan, Allergies...",
@@ -66,7 +53,17 @@
     "no_insurance_label": "Je ne souhaite pas d'assurance",
     "alert": "Assurance applicable à tous les voyageurs. Le calcul du prix de votre voyage se fera à la prochaine étape.",
     "unavailable": "L'assurance n'est pas disponible pour votre voyage.",
-    "conseille_badge": "Conseillé"
+    "conseille_badge": "Conseillé",
+    "assurance_img": "https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW",
+    "preference_assurance_multirisque": "Assurance Multirisque",
+    "accroche_assurance_perou_nepal": "accroche_assurance_perou_nepal",
+    "details_assurance_medicale_perou_nepal": "details_assurance_medicale_perou_nepal",
+    "details_assurance_medicale": "details_assurance_medicale",
+    "preference_assurance_annulation": "Assurance Annulation",
+    "accroche_assurance_annulation": "<div><ul><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vous couvre avant, pendant et après votre voyage</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Annulation pour toutes causes justifiées (événement extérieur, soudain, justifié et indépendant de votre volonté)</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Frais médicaux et hospitalisation</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vol de bagages</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Téléconsultation gratuite</span></li></ul></div>",
+    "accroche_assurance_medicale": "<div><ul><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vous couvre avant, pendant et après votre voyage</span></li>          <li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Annulation pour toutes causes justifiées (événement extérieur, soudain, justifié et indépendant de votre volonté)</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Frais médicaux et hospitalisation</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Vol de bagages</span></li><li style=\"color: #34495e;\"><span style=\"color: #34495e;\">Téléconsultation gratuite</span></li></ul></div>",
+    "details_assurance_annulation": "details_assurance_annulation",
+    "insurances_unavailable": "insurances_unavailable"
   },
   "summary": {
     "dates_confirmed": "Dates confirmées",
@@ -85,39 +82,22 @@
     "forced_indiv_room_text": "Texte chambre individuelle forcée",
     "options_title": "Options",
     "early_bird_badge": "EarlyBird: -",
-    "last_minute_badge": "LastMinute: -",
-    "traveler_text": {
-      "adult": {
-        "single": "Voyageur Adulte",
-        "multiple": "Voyageurs Adultes"
-      },
-      "child": {
-        "single": "Voyageur Adolescent",
-        "multiple": "Voyageurs Adolescents"
-      },
-      "baby": {
-        "single": "Voyageur Enfant",
-        "multiple": "Voyageurs Enfants"
-      },
-      "indivRoom": {
-        "single": "Chambre Individuelle",
-        "multiple": "Chambres Individuelles"
-      },
-      "insurance": {
-        "single": "Assurance ",
-        "multiple": "Assurance "
-      }
-    }
+    "last_minute_badge": "LastMinute: -"
   },
   "dialogs": {
     "learn_more_btn": "EN SAVOIR PLUS",
     "learn_more_title": "En savoir plus"
   },
   "payment": {
+    "phrase_dacceptation": "<p>J'ai lu et j'accepte la <a href=\"/politique-de-confidentialite\" title=\"Politique de confidentialité\" rel=\"follow noopener\" target=\"_blank\"><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\">police d'utilisation des données </span></a>, les <a href=\"/conditions-generales-de-vente\" rel=\"follow noopener\" target=\"_blank\">conditions générales de ventes</a>, les <a href=\"https://cdn.buttercms.com/jE3QWYKRQWxSbNL39kuF\" rel=\"follow noopener\" target=\"_blank\">conditions générales d'assurance</a> et la <a href=\"https://cdn.buttercms.com/u1ntC4Tfm5uOkEH2eqgR\" rel=\"follow noopener\" target=\"_blank\">fiche d'information</a>.</p>",
     "ask_for_option_text": "Souhaitez-vous poser une option gratuitement ? (Celle-ci est valable 7 jours).",
     "accept_country_conditions_text": "Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage",
     "option_already_placed_error": "Vous avez déjà posé une option pour cette date.",
     "place_option_button": "Poser une option gratuitement",
     "pay_button": "Payer"
+  },
+  "navigation": {
+    "next_button": "Suivant",
+    "prev_button": "Précédent"
   }
 }

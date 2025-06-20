@@ -1,21 +1,25 @@
 <template>
   <v-app>
     <HeaderOdysway
-      @show-drawer="toggleDrawer()"
+      v-model="drawer"
     />
     <ClientOnly>
-      <Drawer v-model="drawer" />
+      <LazyDrawer
+        v-if="width < 960"
+        v-model="drawer"
+      />
     </ClientOnly>
-    <v-main style="--v-layout-top: 90px; --v-layout-bottom: 0px;">
+
+    <v-main class="main-content mx-0 mx-md-5">
       <slot />
     </v-main>
+    <FooterOdysway />
   </v-app>
 </template>
 
 <script setup>
-const drawer = ref(false)
+import { useDisplay } from 'vuetify'
 
-function toggleDrawer() {
-  drawer.value = !drawer.value
-}
+const { width } = useDisplay()
+const drawer = ref(false)
 </script>

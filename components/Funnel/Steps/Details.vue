@@ -7,11 +7,11 @@
         <v-col cols="12">
           <h2 v-if="!isAdvance">
             <!-- {{ $t('stepperDevisPerso.nbTravellersSold') }} -->
-            Sélectionnez le nombre de voyageurs à régler
+            {{ page.details.select_travelers_title }}
           </h2>
           <h2 v-else>
             <!-- {{ $t('stepperDevisPerso.nbTravellers') }} -->
-            Nombre de voyageurs
+            {{ page.details.nb_travelers_title }}
           </h2>
         </v-col>
         <v-col cols="12">
@@ -21,7 +21,7 @@
               md="4"
             >
               <div class="text-caption">
-                Nombre d'adultes
+                {{ page.details.nb_adults_label }}
               </div>
               <v-select
                 v-model="nbAdults"
@@ -36,7 +36,7 @@
               md="4"
             >
               <div class="text-caption text-truncate">
-                Nombre d'enfants (0-{{ +voyage.maxChildrenAge }} ans)
+                {{ childrenLabel }}
               </div>
               <v-select
                 v-model="nbChildren"
@@ -65,7 +65,7 @@
             <v-col cols="12">
               <!-- <h2>{{ $t('stepperDevisGroup.contactDetails') }}</h2> -->
               <h2>
-                Vos coordonnées
+                {{ page.details.contact_title }}
               </h2>
             </v-col>
             <v-col
@@ -74,8 +74,8 @@
             >
               <v-text-field
                 v-model="firstName"
-                label="Prénom *"
-                placeholder="Ex: Indiana"
+                :label="page.details.firstname_label"
+                :placeholder="page.details.firstname_placeholder"
                 :rules="[rules.name]"
                 @change="changeAttr('firstname'); saveToLocalStorage()"
               />
@@ -86,8 +86,8 @@
             >
               <v-text-field
                 v-model="lastName"
-                :label="'Nom *'"
-                placeholder="Ex: Jones"
+                :label="page.details.lastname_label"
+                :placeholder="page.details.lastname_placeholder"
                 :rules="[rules.name]"
                 @change="changeAttr('lastname'); saveToLocalStorage()"
               />
@@ -99,8 +99,8 @@
               <v-text-field
                 v-model="email"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                label="Email *"
-                placeholder="Ex: indiana@jones.com"
+                :label="page.details.email_label"
+                :placeholder="page.details.email_placeholder"
                 :rules="[rules.email]"
                 @change="saveToLocalStorage()"
               />
@@ -110,8 +110,8 @@
               >
                 <template #label>
                   <div class="text-caption text-no-wrap">
-                    Je souhaite recevoir des inspirations et des idées pour voyager autrement...
-                    <br> S'inscrire à la Newsletter
+                    {{ page.details.newsletter_text }}
+                    <br> {{ page.details.newsletter_label }}
                   </div>
                 </template>
               </v-checkbox>
@@ -137,8 +137,9 @@
 
 <script setup>
 import { z } from 'zod'
+import { computed } from 'vue'
 
-const { currentStep, ownStep, voyage } = defineProps(['currentStep', 'ownStep', 'voyage'])
+const { currentStep, ownStep, voyage, page } = defineProps(['currentStep', 'ownStep', 'voyage', 'page'])
 const config = useRuntimeConfig()
 
 const { deal, dealId, createDeal, updateDeal, checkoutType, loadingDeal } = useStepperDeal(ownStep)
@@ -162,6 +163,13 @@ const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const phone = ref('')
+
+const childrenLabel = computed(() => {
+  if (page?.details?.nb_children_label && voyage?.maxChildrenAge) {
+    return page.details.nb_children_label.replace('{{maxAge}}', Number(voyage.maxChildrenAge))
+  }
+  return 'Nombre d\'enfants'
+})
 
 // New: Form validation logic
 const formValidation = computed(() => {

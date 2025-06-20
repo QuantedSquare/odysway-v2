@@ -55,8 +55,8 @@
             </v-row>
             <v-row>
               <v-col cols="4">
-                <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2"> Type </div>
-                <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? 'Groupe' : 'Solo' }}</div>
+                <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type || 'Type' }}</div>
+                <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
               </v-col>
               <v-divider
                 inset
@@ -69,7 +69,7 @@
                 <div class="text-h6 font-weight-bold text-primary">
                   {{ voyage.duration }}
                 </div>
-                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">Jours</div>
+                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.days || 'Jours' }}</div>
               </v-col>
               <v-divider
                 inset
@@ -79,7 +79,7 @@
                 cols="4"
                 class="text-right"
               >
-                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold"> À partir de </div>
+                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.startingFrom || 'À partir de' }}</div>
                 <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice ?? voyage.startingPrice }}€</div>
               </v-col>
             </v-row>
@@ -98,7 +98,7 @@
               class="text-body-1"
             >
               <div class="mb-md-1 mr-2">
-                Découvrir les dates
+                {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
               </div>
               <v-icon
                 size="24px"
@@ -111,7 +111,7 @@
               class="text-decoration-none text-body-1"
             >
               <div class="mb-md-1 mr-2">
-                Demander un devis
+                {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
               </div>
               <v-icon
                 size="24px"
@@ -135,6 +135,11 @@ const props = defineProps({
 })
 
 const img = useImage()
+
+const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
+  queryCollection('voyage_card').first(),
+)
+
 const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>
 

@@ -5,7 +5,7 @@
   >
     <FunnelStepsStepperHeader
       v-model="currentStep"
-      :page="page"
+      :page="pageTexts"
       :skipper-mode="skipperMode"
     >
       <v-row class="funnel-stepper d-flex justify-center">
@@ -14,7 +14,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width relative  w-md-75 w-lg-50 w-xl-33 no-margin-window"
+            class="border-width relative  w-md-75 w-lg-50 w-xl-33 no-margin-window mb-4"
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -44,13 +44,14 @@
                 <template v-if="skipperMode === 'summary'">
                   <FunnelStepsSummary
                     :current-step="currentStep"
-                    :page="page"
+                    :page="pageTexts"
                     :voyage="voyage"
                   />
 
                   <FunnelStepsPaymentRedirect
                     :ref="(component) => registerStepComponent(component, 5)"
-                    :page="page"
+                    v-model="validForm"
+                    :page="pageTexts"
                     :current-step="currentStep"
                     :own-step="5"
                     :voyage="voyage"
@@ -60,7 +61,7 @@
                 <FunnelStepsSkipper
                   v-else
                   v-model="skipperMode"
-                  :page="page"
+                  :page="pageTexts"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
@@ -70,19 +71,20 @@
                   :current-step="currentStep"
                   :voyage="voyage"
                   :own-step="1"
+                  :page="pageTexts"
                   @validity-changed="onStepValidityChanged"
                 />
                 <CalendlyContainer
                   v-else
                   :travel-title="voyage.title"
-                  :text="page.calendly"
+                  :text="pageTexts.calendly"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
                 <FunnelStepsTravelersInfos
                   :ref="(component) => registerStepComponent(component, 2)"
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :own-step="2"
                   @validity-changed="onStepValidityChanged"
                 />
@@ -92,7 +94,7 @@
                   :ref="(component) => registerStepComponent(component, 3)"
                   :voyage="voyage"
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :own-step="3"
                   @validity-changed="onStepValidityChanged"
                 />
@@ -101,7 +103,7 @@
                 <FunnelStepsInsurances
                   :ref="(component) => registerStepComponent(component, 4)"
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :own-step="4"
                   @skip-step="nextStep"
                   @validity-changed="onStepValidityChanged"
@@ -112,14 +114,14 @@
               >
                 <FunnelStepsSummary
                   :current-step="currentStep"
-                  :page="page"
+                  :page="pageTexts"
                   :voyage="voyage"
                   :own-step="5"
                 />
 
                 <FunnelStepsPaymentRedirect
                   :ref="(component) => registerStepComponent(component, 5)"
-                  :page="page"
+                  :page="pageTexts"
                   :current-step="currentStep"
                   :own-step="5"
                   :voyage="voyage"
@@ -130,8 +132,8 @@
 
             <v-card-actions>
               <v-stepper-actions
-                next-text="Suivant"
-                :prev-text="skipperMode !== 'summary' ?'Précédent' : ''"
+                :next-text="pageTexts.navigation.next_button"
+                :prev-text="skipperMode !== 'summary' ? pageTexts.navigation.prev_button : ''"
                 @click:next="nextStep()"
                 @click:prev="previousStep()"
               >
@@ -144,7 +146,7 @@
                       :loading="loading"
                       @click="nextStep"
                     >
-                      Suivant
+                      {{ pageTexts.navigation.next_button }}
                     </v-btn>
                     <div
                       v-if="currentStep === 5"
@@ -158,7 +160,7 @@
                     :disabled="isPreviousButtonDisabled"
                     @click="previousStep"
                   >
-                    Précédent
+                    {{ pageTexts.navigation.prev_button }}
                   </v-btn>
                 </template>
               </v-stepper-actions>
@@ -185,16 +187,18 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-const { step, date_id, booked_id, type } = route.query
+const { step, date_id, booked_id } = route.query
 
 const pricePerTraveler = ref(0)
 function updatePricePerTraveler(price) {
   pricePerTraveler.value = price
 }
 provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
-// ================== Page ==================
-const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
-// console.log('page', page.value)
+// ================== Page Texts ==================
+// const { data: pageTexts, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
+const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-texts', () =>
+  queryCollection('checkout').first(),
+)
 
 const date = ref(null)
 
@@ -373,5 +377,16 @@ const isPreviousButtonDisabled = computed(() => {
 }
 .bg-img-filter{
   filter: brightness(0.5);
+}
+@media screen and (max-width: 600px) {
+  div:deep(.v-stepper-actions){
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
 }
 </style>

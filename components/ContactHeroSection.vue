@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="rounded-md bg-primary"
+    class="mb-016 mt-8 mt-md-0 rounded-md bg-primary d-flex align-center"
   >
     <v-row>
       <v-col
@@ -10,7 +10,7 @@
         class="d-flex align-center justify-center"
       >
         <h1 class="custom-hero-title text-center text-md-left">
-          Contactez nous
+          {{ contactContent?.heroSection?.title || 'Contactez nous' }}
         </h1>
       </v-col>
       <v-col
@@ -25,7 +25,7 @@
           height="302"
           class="rounded-md"
           cover
-          alt="Équipe Odysway"
+          :alt="contactContent?.heroSection?.teamImageAlt || 'Équipe Odysway'"
         />
       </v-col>
     </v-row>
@@ -35,19 +35,32 @@
 <script setup>
 import { useImage } from '#imports'
 
+const { contactContent } = defineProps({
+  contactContent: {
+    type: Object,
+    default: () => ({}),
+  },
+})
+
 const img = useImage()
 </script>
 
 <style scoped>
   .custom-hero-title {
   font-weight: 700;
-  font-size: 68px;
-  line-height: 80px;
+  font-size: 50px;
+  line-height: 50px;
   }
 @media (max-width: 960px) {
   .custom-hero-title {
-    font-size: 60px!important;
+    font-size: 42px!important;
     line-height: 42px!important;
+  }
+}
+@media (max-width: 400px) {
+  .custom-hero-title {
+    font-size: 35px!important;
+    line-height: 30px!important;
   }
 }
 </style>

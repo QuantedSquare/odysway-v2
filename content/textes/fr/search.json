@@ -1,0 +1,14 @@
+{
+  "oneTrip": "voyage",
+  "multipleTrips": "voyages",
+  "resetButton": "Réinitialiser",
+  "searchHero": {
+    "voyagePrefix": "Nos voyages",
+    "defaultTitle": "Trouvez votre prochain voyage"
+  },
+  "infoContainer": {
+    "title": "Vous hésitez encore ?",
+    "description": "Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.",
+    "buttonText": "Prendre RDV"
+  }
+} 

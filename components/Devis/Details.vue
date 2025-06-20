@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <h2 class="text-body-2">
-          {{ page.title }}
+          {{ page.second_step.title }}
         </h2>
       </v-col>
     </v-row>
@@ -11,7 +11,7 @@
     <v-row>
       <v-col cols="12">
         <h3>
-          {{ page.sub_1 }}
+          {{ page.second_step.sub_1 }}
         </h3>
       </v-col>
       <v-col
@@ -20,7 +20,7 @@
       >
         <v-select
           v-model="model.nbAdults"
-          label="Nombre d'adultes"
+          :label="page.form_labels.nb_adults"
           :items="selectOptions(0, 9)"
         />
       </v-col>
@@ -30,7 +30,7 @@
       >
         <v-select
           v-model="model.nbChildren"
-          label="Nombre d'enfants (0-18ans)"
+          :label="page.form_labels.nb_children"
           :items="selectOptions(0, 9)"
         />
       </v-col>
@@ -38,7 +38,7 @@
     <v-row>
       <v-col cols="12">
         <h3>
-          {{ page.sub_2 }}
+          {{ page.second_step.sub_2 }}
         </h3>
       </v-col>
       <v-col
@@ -47,11 +47,11 @@
       >
         <v-radio-group v-model="gotDates">
           <v-radio
-            :label="page.option_1"
+            :label="page.second_step.option_1"
             :value="false"
           />
           <v-radio
-            :label="page.option_2"
+            :label="page.second_step.option_2"
             :value="true"
           />
         </v-radio-group>
@@ -64,11 +64,11 @@
         >
           <VDateInput
             v-model="selectedDates"
-            label="Séléctionnez une période"
+            :label="page.form_labels.select_period"
             multiple="range"
             :format-display="displayFormat"
             :min="dayjs().add(1, 'day').toDate()"
-            placeholder="DD/MM/YYYY - DD/MM/YYYY"
+            :placeholder="page.form_labels.date_placeholder"
           />
         </v-col>
       </Transition>
@@ -76,7 +76,7 @@
     <v-row>
       <v-col cols="12">
         <h3>
-          {{ page.sub_3 }}
+          {{ page.second_step.sub_3 }}
         </h3>
       </v-col>
       <v-col
@@ -87,11 +87,11 @@
           v-model="includeFlight"
         >
           <v-radio
-            label="Oui"
+            :label="page.options.yes"
             :value="true"
           />
           <v-radio
-            label="Non"
+            :label="page.options.no"
             :value="false"
           />
         </v-radio-group>
@@ -103,11 +103,11 @@
           md="6"
         >
           <div class="text-caption">
-            Depuis quel aéroport souhaitez-vous partir ?
+            {{ page.form_labels.departure_airport_question }}
           </div>
           <v-text-field
             v-model="model.departureAirport"
-            label="Aéroport de départ"
+            :label="page.form_labels.departure_airport_label"
           />
         </v-col>
       </Transition>
@@ -115,7 +115,7 @@
       <v-col cols="12">
         <v-textarea
           v-model="model.comment"
-          :label="page.comment_title"
+          :label="page.second_step.comment_title"
         />
       </v-col>
     </v-row>

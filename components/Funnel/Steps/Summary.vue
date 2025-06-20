@@ -35,7 +35,7 @@
         <!-- Dates Section -->
         <FunnelStepsSummaryLine v-if="deal.departureDate && deal.returnDate">
           <template #left>
-            <span class="text-h6 ">Dates confirmées</span>
+            <span class="text-h6 ">{{ page.summary.dates_confirmed }}</span>
           </template>
           <template #right>
             {{ dayjs(deal.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(deal.returnDate).format('DD/MM/YYYY') }}
@@ -45,7 +45,7 @@
         <!-- Base Price Section -->
         <FunnelStepsSummaryLine v-if="deal.value">
           <template #left>
-            Prix de base par voyageur
+            {{ page.summary.base_price }}
           </template>
           <template #right>
             <div v-if="deal.gotEarlybird !== 'Oui' && deal.gotLastMinute !== 'Oui'">
@@ -57,7 +57,7 @@
                   <v-badge
                     inline
                     color="info"
-                    :content="deal.gotEarlybird == 'Oui' ? 'EarlyBird: -' + formatNumber(deal.promoEarlybird, 'currency', '€') : 'LastMinute: -' + formatNumber(deal.promoLastMinute, 'currency', '€')"
+                    :content="deal.gotEarlybird == 'Oui' ? page.summary.early_bird_badge + formatNumber(deal.promoEarlybird, 'currency', '€') : page.summary.last_minute_badge + formatNumber(deal.promoLastMinute, 'currency', '€')"
                   />
                   {{ formatNumber(deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
                 </span>
@@ -72,7 +72,7 @@
         <!-- Extension Price Section -->
         <FunnelStepsSummaryLine v-if="deal.extensionPrice > 0">
           <template #left>
-            Prix extension voyage
+            {{ page.summary.extension_price }}
           </template>
           <template #right>
             {{ formatNumber(deal.extensionPrice, 'currency', 'EUR') }}
@@ -84,7 +84,7 @@
         <!-- Travelers Details Header -->
         <FunnelStepsSummaryLine>
           <template #left>
-            <span class="text-h6 ">Détails Voyageurs(s)</span>
+            <span class="text-h6 ">{{ page.summary.travelers_details }}</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -116,7 +116,7 @@
         <!--  Options -->
         <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0">
           <template #left>
-            <span class="text-h6 ">Options</span>
+            <span class="text-h6 ">{{ page.summary.options_title }}</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -139,7 +139,7 @@
                 </div>
               </template>
               <div>
-                {{ page.forced_indiv_room_text }}
+                {{ page.summary.forced_indiv_room_text }}
               </div>
             </v-tooltip>
             <span v-else>
@@ -169,8 +169,7 @@
         <!-- Promo -->
         <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
           <template #left>
-            <!-- #TODO Remplacer par back -->
-            Réduction totale appliquée
+            {{ page.summary.total_discount }}
           </template>
           <template #right>
             -{{ formatNumber(deal.promoValue * deal.nbTravelers, 'currency', 'EUR') }}
@@ -182,8 +181,7 @@
         <!-- Somme déjà réglé -->
         <FunnelStepsSummaryLine v-if="deal.alreadyPaid > 0">
           <template #left>
-            <!-- #TODO Remplacer par back -->
-            Montant déjà réglé
+            {{ page.summary.already_paid }}
           </template>
           <template #right>
             <span class="font-weight-bold ">
@@ -196,12 +194,10 @@
         <!-- Prix Total -->
         <FunnelStepsSummaryLine>
           <template #left>
-            <!-- #TODO Remplacer par back -->
-            Prix total
+            {{ page.summary.total_price }}
           </template>
           <template #right>
             <span class="font-weight-bold ">
-              <!-- #TODO  S'assurer que le total soit correct avec tous les ajouts / réductions -->
               {{ formatNumber(deal.value, 'currency', 'EUR') }}
             </span>
           </template>
@@ -220,9 +216,9 @@
                     class="d-flex align-center ga-2 text-primary"
                   >
                     <!-- #Todo Passer en computed les textes -->
-                    <span v-if="route.query.type === 'deposit'"> Accompte à régler</span>
-                    <span v-else-if="route.query.type === 'balance'"> Solde à régler</span>
-                    <span v-else>Montant à régler</span>
+                    <span v-if="route.query.type === 'deposit'">{{ page.summary.deposit_due }}</span>
+                    <span v-else-if="route.query.type === 'balance'">{{ page.summary.balance_due }}</span>
+                    <span v-else>{{ page.summary.amount_due }}</span>
                     <v-icon
                       size="x-small"
                       v-bind="props"
@@ -231,11 +227,11 @@
                     </v-icon>
                   </div>
                   <div v-else>
-                    Le voyage est déjà entièrement réglé
+                    {{ page.summary.already_paid_full }}
                   </div>
                 </template>
                 <div>
-                  {{ page.cancel_text }}
+                  {{ page.summary.cancel_text }}
                 </div>
               </v-tooltip>
             </template>
@@ -253,8 +249,7 @@
         <!--  #Todo Checker s'il faut ajouter le checking sur la date, si le type "full" est uniquement sur les voyages sous 30jours -->
         <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
           <template #left>
-            <!-- #TODO Remplacer par cms -->
-            <span class="font-italic text-body-2 ">Le départ du voyage a lieu dans moins de 30 jours, nous vous demandons de régler l’intégralité de la somme, sans acompte.</span>
+            <span class="font-italic text-body-2 ">{{ page.summary.full_payment_required }}</span>
           </template>
         </FunnelStepsSummaryLine>
 
@@ -269,7 +264,7 @@
 import dayjs from 'dayjs'
 import { mdiInformationOutline } from '@mdi/js'
 
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
 const route = useRoute()
 const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
 const { deal } = useStepperDeal(props.ownStep)

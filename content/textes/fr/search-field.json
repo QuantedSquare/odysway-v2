@@ -1,0 +1,12 @@
+{
+  "destination": "Destination",
+  "travelType": "Type de voyage",
+  "period": "Période",
+  "discoverTrips": "Découvrir les voyages",
+  "topDestinations": "Top destinations",
+  "allPeriods": "Toutes périodes",
+  "travelTypes": {
+    "individual": "Voyage individuel",
+    "group": "Voyage en groupe"
+  }
+} 

@@ -22,7 +22,7 @@
       >
         <template #title>
           <h3 class="custom-title">
-            Toutes nos thématiques
+            {{ pageContent?.index?.pageTitle || 'Toutes nos thématiques' }}
           </h3>
         </template>
         <template #carousel-item>
@@ -46,12 +46,11 @@
       color=""
     >
       <HorizontalCarousel
-
         :show-buttons="experiences.length > 4"
       >
         <template #title>
           <h3 class="custom-title">
-            Toutes nos expériences
+            {{ pageContent?.index?.pageTitle || 'Toutes nos expériences' }}
           </h3>
         </template>
         <template #carousel-item>
@@ -80,7 +79,7 @@
 </template>
 
 <script setup>
-const { isCategory, isExperience, isDestination } = defineProps({
+const { isCategory, isExperience, isDestination, pageContent } = defineProps({
   isCategory: {
     type: Boolean,
     default: false,
@@ -104,6 +103,10 @@ const { isCategory, isExperience, isDestination } = defineProps({
   isDestination: {
     type: Boolean,
     default: false,
+  },
+  pageContent: {
+    type: Object,
+    default: () => {},
   },
 })
 

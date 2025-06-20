@@ -47,11 +47,10 @@
 </template>
 
 <script setup>
-// import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const imgComp = useImage()
-// const { width } = useDisplay()
+
 defineProps({
   slug: {
     type: String,
@@ -193,12 +192,5 @@ h3{
   h3 {
     font-size: 1.1rem !important;
   }
-  /* .text-line-space {
-    line-height: 20px!important;
-  } */
 }
-
-/* .text-line-space {
-  line-height: 40px!important;
-} */
 </style>

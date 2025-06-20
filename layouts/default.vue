@@ -34,10 +34,10 @@
       >
         <InfoContainer :white-text="true">
           <template #title>
-            {{ partenairesTextes?.partenairesSection?.title }}
+            {{ partenairesTextes?.layoutInfoContainer?.title }}
           </template>
           <template #description>
-            {{ partenairesTextes?.partenairesSection?.subtitle }}
+            {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
           </template>
           <template #bottom>
             <PartenairesContainer />
@@ -63,7 +63,7 @@ const { data: faqPage } = await useAsyncData('faq-section', () => {
 })
 
 const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
-  return queryCollection('ctas').select('partenairesSection').first()
+  return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
 })
 </script>
 

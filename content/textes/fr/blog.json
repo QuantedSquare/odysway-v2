@@ -1,0 +1,14 @@
+{
+  "pageTitle": "Blog",
+  "searchPlaceholder": "Rechercher par mot clé",
+  "categoryFilter": "Filtrer par catégorie",
+  "sortByDate": "Trier par date",
+  "noArticlesFound": "Aucun article trouvé",
+  "resetFilters": "Réinitialiser les filtres",
+  "sortOptions": {
+    "newest": "Plus récent",
+    "oldest": "Plus ancien",
+    "shortest": "Plus court",
+    "longest": "Plus long"
+  }
+} 

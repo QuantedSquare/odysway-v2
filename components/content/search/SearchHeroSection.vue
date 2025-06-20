@@ -17,7 +17,7 @@
           v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
-          {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
@@ -41,7 +41,7 @@
           v-else
           class="custom-hero-title"
         >
-          Trouvez votre prochain voyage
+          {{ contentText?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
         </h1>
       </v-col>
       <v-col
@@ -110,7 +110,7 @@
                 v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
-                {{ `Nos voyages ${destination.interjection} ${destination.titre}` }}
+                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
               </h1>
               <h1
                 v-else-if="destination && isCategory"
@@ -134,7 +134,7 @@
                 v-else
                 class="custom-hero-title ml-3"
               >
-                Trouvez votre prochain voyage
+                {{ contentText?.searchHero?.defaultTitle || 'Trouvez votre prochain voyage' }}
               </h1>
               <slot name="subtitle" />
             </v-col>
@@ -152,6 +152,10 @@
 <script setup>
 import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
+
+const { data: contentText } = await useAsyncData('page-search-search-hero', () =>
+  queryCollection('page_search').first(),
+)
 
 const img = useImage()
 const { width } = useDisplay()

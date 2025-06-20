@@ -3,7 +3,7 @@
     <v-row>
       <v-col>
         <h3>
-          {{ page.title }}
+          {{ page.third_step.title }}
         </h3>
       </v-col>
     </v-row>
@@ -15,7 +15,7 @@
         >
           <v-text-field
             v-model="model.firstname"
-            label="Prénom*"
+            :label="page.form_labels.firstname"
             required
             :rules="[rules.name]"
           />
@@ -26,7 +26,7 @@
         >
           <v-text-field
             v-model="model.lastname"
-            label="Nom*"
+            :label="page.form_labels.lastname"
             required
             :rules="[rules.name]"
           />
@@ -37,7 +37,7 @@
         >
           <v-text-field
             v-model="model.email"
-            label="Email*"
+            :label="page.form_labels.email"
             required
             :rules="[rules.email]"
           />
@@ -60,14 +60,14 @@
             <template #label>
               <div
                 class="text-body-2"
-                v-html="page.sub_1"
+                v-html="page.third_step.sub_1"
               />
             </template>
           </v-checkbox>
           <v-checkbox
             v-model="model.subscribeToNewsletter"
             required
-            :label="page.sub_2"
+            :label="page.third_step.sub_2"
           />
         </v-col>
       </v-row>

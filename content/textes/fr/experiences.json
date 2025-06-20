@@ -1,0 +1,16 @@
+{
+  "index": {
+    "pageTitle": "Toutes nos expériences",
+    "metaDescription": "Découvrez toutes nos expériences de voyage"
+  },
+  "slug": {
+    "noVoyagesFound": "Aucun voyage trouvé pour expérience \"{{title}}\"",
+    "modifySearchCriteria": "Modifiez vos critères de recherche"
+  },
+  "common": {
+    "expandButton": {
+      "showMore": "Voir plus",
+      "showLess": "Voir moins"
+    }
+  }
+} 

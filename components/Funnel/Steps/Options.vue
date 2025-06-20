@@ -7,7 +7,7 @@
     <!-- <v-row v-if="voyage.indiv_room && !forcedIndivRoom"> -->
     <v-row v-if="props.voyage && props.voyage.gotIndivRoomAvailable && indivRoomPrice > 0">
       <v-col cols="12">
-        <h2>{{ page.room_indiv_title }}</h2>
+        <h2>{{ page.options.indiv_room_title }}</h2>
       </v-col>
       <!-- :label="$t('stepperDevisGroup.roomIndivLabel')" -->
       <v-col
@@ -16,11 +16,12 @@
       >
         <v-switch
           v-model="indivRoom"
-          label="Je souhaite bénéficier d'une chambre individuelle"
+          :label="page.options.indiv_room_label"
         />
         <FunnelStepsDialogLearnMore
           :btn-text="page.room_indiv_accroche"
           :dialog-text="page.room_indiv_text"
+          :page="page"
         />
       </v-col>
       <v-col
@@ -34,7 +35,7 @@
     <v-row>
       <v-col cols="12">
         <h2 class="h2-option">
-          {{ page.food_details_title }}
+          {{ page.options.food_details_title }}
         </h2>
       </v-col>
       <v-col
@@ -44,13 +45,12 @@
       >
         <v-switch
           v-model="vegeOption"
-          sub-label="Végétarien, Végan, Allergies..."
+          :sub-label="page.options.vege_sub_label"
         >
           <template #label>
             <div class="d-flex flex-column align-start">
-              <!-- <span>{{ $t('stepperDevisGroup.foodOptions.vege') }}</span> -->
-              <span>Régimes alimentaires spécifiques</span>
-              <span class="text-caption">Végétarien, Végan, Allergies...</span>
+              <span>{{ page.options.food_prefs_label }}</span>
+              <span class="text-caption">{{ page.options.vege_sub_label }}</span>
             </div>
           </template>
         </v-switch>
@@ -62,7 +62,7 @@
         <!-- :label="$t('stepperDevisGroup.foodOptions.other')" -->
         <v-switch
           v-model="otherFoodOption"
-          label="Autres demandes particulières"
+          :label="page.options.other_food_label"
         />
       </v-col>
       <v-col
@@ -74,7 +74,7 @@
             v-if="otherFoodOption"
             v-model="specialRequest"
             variant="outlined"
-            label="Précisez..."
+            :label="page.options.special_request_label"
           />
         </Transition>
       </v-col>
@@ -83,7 +83,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
 const { deal, dealId, updateDeal, loadingDeal } = useStepperDeal(props.ownStep)
 const { addSingleParam } = useParams()
 console.log('props.voyage', props.voyage)
