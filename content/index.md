@@ -64,25 +64,25 @@ au cœur du voyage
   text-color: primary
   ---
   #title
-  [Nos voyages signatures en France]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos voyages signatures Odysway]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
     ::::voyage-col-card{voyage-slug="sejour-berger-bearn"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="bivouac-montagne-pyrenees"}
-    ::::
-  
-    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
-    ::::
-  
     ::::voyage-col-card{voyage-slug="immersion-observatoire-astronomique"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="photographie-animaliere-vosges"}
+    ::::voyage-col-card{voyage-slug="trek-chez-lhabitant-cap-vert"}
     ::::
   
-    ::::voyage-col-card{voyage-slug="sejour-astronomie-corse"}
+    ::::voyage-col-card{voyage-slug="voyage-chamanique-perou"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="survie-jungle-amazonienne"}
+    ::::
+  
+    ::::voyage-col-card{voyage-slug="voyage-aventure-namibie"}
     ::::
   :::
 ::
