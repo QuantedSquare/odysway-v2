@@ -7,6 +7,8 @@ ogImage:
     image: /images/AdobeStock_124472096.jpeg
 sitemap:
   lastmod: 2025-01-01
+  videos: []
+  images: []
 robots: index, nofollow
 seo:
   title: Accueil Odysway
@@ -34,6 +36,8 @@ schemaOrg:
     telephone: + 33 (0) 1 84 80 79 75
     email: contact@odysway.com
     image: https://odysway.com/logos/logo_noir.png
+head:
+  script: []
 ---
 
 ::home-hero-section
@@ -94,9 +98,9 @@ au cœur du voyage
   :::text-image-container
   ---
   displayCtaButton: true
+  displayImageMobile: true
   imageDesktopRight: true
-  displayImageMobile: false
-  imageSrc: /images/blogs/pourquoi-choisir-une-agence-de-voyage/9riCPDocQD2kETAiEidU.jpg
+  imageSrc: public/images/voyages/trek-chez-lhabitant-nepal/9ri-cp-doc-qd-2k-et-ai-eid-u.png
   ---
   #title
   [Voyager autrement]{style="color: rgba(43, 76, 82, 1)"}
