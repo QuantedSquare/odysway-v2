@@ -17,7 +17,7 @@ const createCheckoutSession = async (order) => {
   console.log('======Config======', config.public)
   console.log('======Success URL======', `${origin}/success`)
   console.log('======Cancel URL======', `${origin}${order.currentUrl}`)
-  const imageUrl = '~/assets/img/Logo-Odysway-Bleu.png'
+  const imageUrl = 'https://odysway-v2.vercel.app/logos/Logo-Odysway-Bleu.png'
 
   const lineItems = []
   let paidAmount = 0
