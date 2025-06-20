@@ -131,9 +131,19 @@ head:
 sitemap:
   videos: []
   images: []
+ogImage:
+  props: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::faq-container
+---
+backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
+---
 ---
 backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 ---
@@ -146,12 +156,18 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 #faq
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
+  Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
   
   #answer
+  Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
+  
+  L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
+  
+  Pas d’itinéraires touristiques figés, mais des voyages pensés pour favoriser les rencontres, la découverte en profondeur d’un lieu, et une vraie déconnexion. Le confort, la sécurité et la qualité de l’accompagnement sont assurés à chaque étape.
   Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
   
   L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
@@ -161,7 +177,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Comment sont sélectionnées les expériences proposées par Odysway ?
@@ -178,7 +194,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
@@ -195,7 +211,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Quelles sont les disponibilités des voyages ?
@@ -206,7 +222,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Que se passe t-il si il n'y a pas de suffisamment de participants pour un départ groupé ?
@@ -217,7 +233,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Les voyages incluent-ils les billets de train ou d'avion pour se rendre sur place ?
@@ -228,7 +244,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Comment réserver un voyage avec Odysway ?
@@ -239,7 +255,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Le paiement en ligne est-il sécurisé ?
@@ -250,7 +266,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Puis-je annuler la réservation de mon voyage ?
@@ -261,7 +277,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
@@ -276,7 +292,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hideOnLayout: false
   ---
   #question
   Comment sont sélectionnées les expériences proposées par Odysway ?
@@ -293,7 +309,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide-on-layout: true
+  hideOnLayout: true
   ---
   #question
   Suis-je assuré pour mon voyage avec Odysway ?

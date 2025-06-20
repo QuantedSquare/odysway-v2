@@ -36,6 +36,7 @@
         cols="12"
         md="6"
       >
+        {{ displayImageMobile }}
         <v-lazy
           :min-height="550"
           :options="{ threshold: 0.5 }"

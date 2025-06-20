@@ -80,7 +80,7 @@
                 class="text-right"
               >
                 <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold"> À partir de </div>
-                <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing.startingPrice }}€</div>
+                <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice ?? voyage.startingPrice }}€</div>
               </v-col>
             </v-row>
           </v-container>
@@ -126,7 +126,6 @@
 
 <script setup>
 import { mdiPlusCircle } from '@mdi/js'
-
 import { useImage } from '#imports'
 
 const props = defineProps({
@@ -134,6 +133,7 @@ const props = defineProps({
     type: Object,
   },
 })
+
 const img = useImage()
 const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#fef9f8')
 </script>
