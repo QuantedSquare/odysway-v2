@@ -37,15 +37,19 @@
               {{ monthName }}
             </h3>
           </v-col>
-          <v-col
-            v-for="(deal, i) in dealsToDisplayInMonth(monthName)"
-            :key="`${deal.slug}-${deal.dates[0]?.departure_date}-${i}`"
-            cols="12"
-            sm="6"
-            md="4"
+          <TransitionGroup
+            name="list"
           >
-            <VoyageCard :voyage="deal" />
-          </v-col>
+            <v-col
+              v-for="(deal, i) in dealsToDisplayInMonth(monthName)"
+              :key="`${deal.slug}-${deal.dates[0]?.departure_date}-${i}`"
+              cols="12"
+              sm="6"
+              md="4"
+            >
+              <VoyageCard :voyage="deal" />
+            </v-col>
+          </TransitionGroup>
           <v-col>
             <p v-if="dealsToDisplayInMonth(monthName).length === 0">
               Aucun voyage disponible pour le mois de {{ monthName }}
@@ -164,6 +168,22 @@ watch(
 font-weight: 700;
 font-size: 50px;
 line-height: 50px;
+}
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to{
+  opacity: 0;
+  transform: translateY(-30px);
+}
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
 }
 
 @media (min-width: 960px) {

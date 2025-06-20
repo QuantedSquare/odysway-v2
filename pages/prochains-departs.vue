@@ -1,9 +1,9 @@
 <template>
   <v-container
     fluid
-    class="px-2 px-md-4 pt-0 position-relative"
+    class="pt-0 position-relative"
   >
-    <div class="mb-16">
+    <div class="mb-6">
       <SearchHeroSection
         :is-next-departures="true"
         :destination="{
@@ -15,55 +15,58 @@
         }"
         :no-margin-bottom="true"
       />
-    </div>
-
-    <v-container class="bg-white rounded-md filter-wrapper absolute">
-      <v-row>
-        <v-col
-          cols="12"
-          md="auto"
+      <v-container class="bg-white rounded-md filter-wrapper">
+        <v-row
+          align="center"
+          justify="center"
         >
-          <v-btn-toggle
-            v-model="toggledBtn"
-            mandatory
-            class="d-flex justify-center ga-3 btn-height"
+          <v-col
+            cols="12"
+            sm="7"
           >
-            <v-btn
-              v-for="btn of toggleBtns"
-              :key="btn.text"
-              :value="btn.value"
-              height="100%"
-              selected-class="bg-primary"
-              class="text-decoration-none rounded-lg"
+            <v-btn-toggle
+              v-model="toggledBtn"
+              mandatory
+              class="d-flex justify-center ga-sm-3 btn-height"
             >
-              <span class="text-subtitle-1"> {{ btn.text }}</span>
-            </v-btn>
-          </v-btn-toggle>
-        </v-col>
-        <v-col
-          cols="12"
-          md="auto"
-          class="pl-md-0 pt-0 pt-md-3"
-        >
-          <v-select
-            :id="periodId"
-            v-model="selectedPeriod"
-            hide-details
-            :items="sortedMonths"
-            label="Période"
+              <v-btn
+                v-for="btn of toggleBtns"
+                :key="btn.text"
+                :value="btn.value"
+                height="100%"
+                selected-class="bg-primary"
+                class="text-decoration-none rounded-lg"
+              >
+                <span class="text-caption text-sm-subtitle-1"> {{ btn.text }}</span>
+              </v-btn>
+            </v-btn-toggle>
+          </v-col>
+          <v-col
+            cols="12"
+            sm="4"
+            class="pl-md-0 "
           >
-            <template #prepend-inner>
-              <v-img
-                :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
-                alt="Calendar icon"
-                width="24"
-                height="24"
-              />
-            </template>
-          </v-select>
-        </v-col>
-      </v-row>
-    </v-container>
+            <v-select
+              :id="periodId"
+              v-model="selectedPeriod"
+              hide-details
+              :items="sortedMonths"
+              label="Période"
+              clearable
+            >
+              <template #prepend-inner>
+                <v-img
+                  :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640 })"
+                  alt="Calendar icon"
+                  width="24"
+                  height="24"
+                />
+              </template>
+            </v-select>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
 
     <VoyageCardsList
       :filtered-deals="groupByMonthFiltered"
@@ -88,7 +91,7 @@ const loading = ref(false)
 const travels = ref([])
 const toggledBtn = ref('all')
 const periodId = useId()
-const selectedPeriod = ref(route.query?.periode || 'Toutes périodes')
+const selectedPeriod = ref(route.query?.periode || null)
 const toggleBtns = ref([
   {
     value: 'all',
@@ -109,6 +112,7 @@ const fetchTravels = async () => {
     loading.value = true
     const res = await fetch('/api/v1/booking/travels-by-date')
     const data = await res.json()
+    console.log('check', data)
     travels.value = data
     loading.value = false
   }
@@ -130,7 +134,7 @@ watch(selectedPeriod, (newPeriod) => {
 
   delete query.periode
 
-  if (newPeriod !== 'Toutes périodes') {
+  if (newPeriod !== null && newPeriod !== 'Toutes périodes') {
     query.periode = newPeriod
   }
 
@@ -153,7 +157,7 @@ watch(toggledBtn, (newType) => {
   const currentPeriode = query.periode
   delete query.periode
 
-  if (currentPeriode && selectedPeriod.value !== 'Toutes périodes') {
+  if (currentPeriode && selectedPeriod.value !== null && selectedPeriod.value !== 'Toutes périodes') {
     query.periode = currentPeriode
   }
 
@@ -164,7 +168,7 @@ watch(toggledBtn, (newType) => {
 })
 
 watch(() => route.query.periode, (newPeriode) => {
-  selectedPeriod.value = newPeriode || 'Toutes périodes'
+  selectedPeriod.value = newPeriode === 'Toutes périodes' ? null : (newPeriode || null)
 })
 
 watch(() => route.query.type, (newType) => {
@@ -235,7 +239,7 @@ const sortedMonths = computed(() => {
 })
 
 const groupByMonthFiltered = computed(() => {
-  if (selectedPeriod.value === 'Toutes périodes') {
+  if (selectedPeriod.value === null || selectedPeriod.value === 'Toutes périodes') {
     return groupByMonth.value
   }
   const monthName = selectedPeriod.value
@@ -264,9 +268,12 @@ function capitalizeFirstLetter(string) {
 
 <style scoped>
 .filter-wrapper{
-  width: fit-content;
+  position: relative;
+  width: 700px;
   height: fit-content;
   box-shadow: 5px 5px 100px 0px rgba(43, 76, 82, 0.5);
+  margin: -45px auto 0 auto;
+  z-index: 1000!important;
 }
 .absolute {
   position: absolute;
@@ -278,23 +285,19 @@ function capitalizeFirstLetter(string) {
   height: 56px;
 }
 
-@media (min-width: 960px) {
-  .absolute {
-    top: 305px;
-  }
-}
-
 @media (max-width: 960px) {
-  .absolute {
-    top: 400px;
-  }
   .filter-wrapper{
     max-width: calc(100% - 16px);
+    margin: -100px auto 0 auto;
     width: auto;
-    margin: 0 auto;
   }
   .btn-height{
     height: 48px;
+  }
+}
+@media (max-width: 600px) {
+  .filter-wrapper{
+    margin: -110px auto 0 auto;
   }
 }
 </style>
