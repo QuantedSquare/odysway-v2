@@ -43,7 +43,6 @@ const img = useImage()
 const { data: faqTextes } = await useAsyncData('faq-textes', () => {
   return queryCollection('ctas').select('faqSection').first()
 })
-console.log('faqTextes', faqTextes.value)
 
 function redirectToCalendly() {
   trackPixel('trackCustom', 'ClickRDV')

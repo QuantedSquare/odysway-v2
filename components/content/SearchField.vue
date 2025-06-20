@@ -2,7 +2,7 @@
   <div>
     <v-container
       ref="searchField"
-      class="search-field-container px-0 px-md-3 py-0 z-index-2003"
+      class="search-field-container px-0 px-md-3 py-0"
     >
       <div
         ref="container"
