@@ -135,7 +135,7 @@ sitemap:
 
 ::faq-container
 ---
-backgroundImage: public/images/FAQ/vallee-aspe-lescun.jpeg
+backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 ---
 #section-title
   :::title-container
