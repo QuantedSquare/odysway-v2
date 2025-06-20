@@ -131,13 +131,6 @@ head:
 sitemap:
   videos: []
   images: []
-ogImage:
-  props: {}
-head:
-  script: []
-sitemap:
-  videos: []
-  images: []
 ---
 
 ::faq-container
