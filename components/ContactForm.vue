@@ -198,12 +198,20 @@ const isFormComplete = computed(() => {
   return isValidForm.value && gdprAccepted.value
 })
 
-// Save GDPR acceptance to localStorage when user accepts
-watch(gdprAccepted, (newValue) => {
-  localStorage.setItem('contact-form-agreement', JSON.stringify(newValue))
-  if (newValue) {
-    localStorage.setItem('contact-form-agreement-date', new Date().toISOString())
+onMounted(() => {
+  // Load saved GDPR acceptance on client-side
+  const savedAcceptance = localStorage.getItem('contact-form-agreement')
+  if (savedAcceptance) {
+    gdprAccepted.value = JSON.parse(savedAcceptance)
   }
+
+  // Watch for changes only after component is mounted
+  watch(gdprAccepted, (newValue) => {
+    localStorage.setItem('contact-form-agreement', JSON.stringify(newValue))
+    if (newValue) {
+      localStorage.setItem('contact-form-agreement-date', new Date().toISOString())
+    }
+  })
 })
 
 const schemaToRule = useZodSchema()
