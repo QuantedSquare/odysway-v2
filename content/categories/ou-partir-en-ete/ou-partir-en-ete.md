@@ -1,31 +1,37 @@
 ---
-title: "Où partir en été pour garder l'esprit tranquille ?"
-description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
+title: Où partir en été pour garder l'esprit tranquille ?
+description: Partir en voyage en été peut relever du défi car c’est la période
+  la plus prisée de bon nombre de vacanciers. Découvrez où partir en été
+  l’esprit tranquille !
 seo:
-  title: "Où partir en été pour garder l'esprit tranquille ?"
-  description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
+  title: Où partir en été pour garder l'esprit tranquille ?
+  description: Partir en voyage en été peut relever du défi car c’est la période
+    la plus prisée de bon nombre de vacanciers. Découvrez où partir en été
+    l’esprit tranquille !
 navigation:
-  title: "Où partir en été pour garder l'esprit tranquille ?"
-  description: "Partir en voyage en été peut relever du défi car c’est la période la plus prisée de bon nombre de vacanciers. Découvrez où partir en été l’esprit tranquille !"
-author: "Linda Tran"
+  title: Où partir en été pour garder l'esprit tranquille ?
+  description: Partir en voyage en été peut relever du défi car c’est la période
+    la plus prisée de bon nombre de vacanciers. Découvrez où partir en été
+    l’esprit tranquille !
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
 published: false
-publishedAt: "2020-11-26 17:41:00+00:00"
+publishedAt: 2020-11-26 17:41:00+00:00
 tags: ""
-categories: "Culture et decouverte"
+categories: Culture et decouverte
 displayedImg: ""
-blogType: "Actu"
-badgeColor: "secondary"
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Où partir en été pour garder l'esprit tranquille ?
@@ -46,20 +52,20 @@ Alors, où **partir en été** pour éviter les hordes de touristes, profiter de
 
 Suivez-nous, on vous guide !
 
-## **1\. La Finlande en toute liberté en été**
+## **1. La Finlande en toute liberté en été**
 
-::image-container
----
-image-src: "/images/blogs/ou-partir-en-ete/G3XDy3vaR5SGwdRhg5Wu.jpg"
-alt: Partir en été en Finlande
----
-::
+  :::image-container
+  ---
+  alt: Partir en été en Finlande
+  image-src: /images/blogs/ou-partir-en-ete/G3XDy3vaR5SGwdRhg5Wu.jpg
+  ---
+  :::
 
 Faites-vous partie de celles et ceux qui rêvent de déconnecter totalement durant l'été, de profiter des choses simples de la vie et de partir à l’aventure ?
 
 Savez-vous que la Finlande jouit d’un climat extrêmement agréable durant les mois d’été ?  **Partir en été** dans ce pays magnifique, loin des plages bondées est une vraie opportunité pour faire un break bien mérité !
 
-En Finlande, vous pourrez [**vous reconnecter à vous-même et à la nature**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) durant un voyage aventure éco-responsable au cœur de la forêt finlandaise.
+En Finlande, vous pourrez [**vous reconnecter à vous-même et à la nature**](https://odysway.com/voyages/reconnexion-nature-finlande?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete) durant un voyage aventure éco-responsable au cœur de la forêt finlandaise.
 
 Vous partirez en expédition de plusieurs jours en canoë, en totale autonomie, à la découverte des merveilles alentour et bivouaquerez sous le ciel finlandais.
 
@@ -67,18 +73,20 @@ Vous aurez également l’opportunité d'observer les animaux de la forêt, dont
 
 De retour au camp de base, profitez de la fin de votre séjour en vous relaxant dans votre **chalet éco-responsable** en pleine nature et équipé d’un sauna.
 
-## 2\. Loin des lumières de la ville en plein été
+## 2. Loin des lumières de la ville en plein été
 
 ## ::image-container
+
 ---
+
 image-src: "/images/blogs/ou-partir-en-ete/N1wp37n7SnCkgWfa17OF.jpg"
 alt: Séjour Astronomie Sud-Ouest
----
+--------------------------------
 ::
 
 S'éloigner de la ville et de son brouhaha pour vivre une expérience **en immersion** au sein d’un observatoire astronomique en plein cœur des Alpes, ça vous tente ?
 
-Si vous voulez **partir en été** et vous retrouver dans un environnement calme et hors du temps, ce **séjour astronomie** vous offre la possibilité de [**partager le quotidien d’astronomes et d'astrophysiciens**](https://odysway.com/voyages/immersion-observatoire-astronomique?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete).
+Si vous voulez **partir en été** et vous retrouver dans un environnement calme et hors du temps, ce **séjour astronomie** vous offre la possibilité de [**partager le quotidien d’astronomes et d'astrophysiciens**](https://odysway.com/voyages/immersion-observatoire-astronomique?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete).
 
 Vous discuterez avec eux de sujets passionnants autour d’un bon repas, et pourrez également mener vos propres expériences scientifiques.
 
@@ -90,12 +98,12 @@ Vous aurez donc la mission d’aider l'équipe à suivre un astéroïde ou à d�
 
 **La saison estivale** dans les Alpes est une formidable opportunité pour vous relaxer dans une des plus belles régions de France, et profiter d’un ciel étoilé loin de la ville et de ses tumultes.
 
-## 3\. S'approprier les grands espaces même en été
+## 3. S'approprier les grands espaces même en été
 
 ::image-container
 ---
-image-src: "/images/blogs/ou-partir-en-ete/8fWg9ByTTIadFgr9Xup1.jpg"
 alt: Grands espaces dans le Yukon
+image-src: /images/blogs/ou-partir-en-ete/8fWg9ByTTIadFgr9Xup1.jpg
 ---
 ::
 
@@ -105,20 +113,20 @@ Le Grand Nord canadien et le Yukon ça vous dit quelque chose ? Ce territoire im
 
 Imaginez que vous puissiez: 
 
-*   [**partir en expédition en canoë sur le fleuve Yukon**](https://odysway.com/voyages/voyage-nature-canada-yukon?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) et découvrir les arts et traditions des peuples Kwanlin Dun ; 
-*   visiter des lieux historiques datant de l'époque de la ruée vers l'or ; 
-*   découvrir le Parc National et Réserve de Kluane.
+- [**partir en expédition en canoë sur le fleuve Yukon**](https://odysway.com/voyages/voyage-nature-canada-yukon?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete) et découvrir les arts et traditions des peuples Kwanlin Dun ; 
+- visiter des lieux historiques datant de l'époque de la ruée vers l'or ; 
+- découvrir le Parc National et Réserve de Kluane.
 
 **La belle saison** dans le Yukon, c’est la promesse de longues marches, de nature immaculée et de rencontres avec des peuples qui ont su préserver leurs traditions.
 
 Vivez en pleine immensité grâce à ce **séjour en immersion** "into the wild" à travers le Yukon.
 
-## 4\. Partir en été avec Odysway
+## 4. Partir en été avec Odysway
 
 ::image-container
 ---
-image-src: "/images/blogs/ou-partir-en-ete/yWaabJ9vR7Cdaq5hzAXc.jpg"
 alt: undefined
+image-src: /images/blogs/ou-partir-en-ete/yWaabJ9vR7Cdaq5hzAXc.jpg
 ---
 ::
 
@@ -134,53 +142,52 @@ Près de chez vous ou à l’autre bout du monde, nos séjours vont vous ravir, 
 
 Partir en été pour :
 
-*   [**apprendre la permaculture dans un éco-centre en Bourgogne**](https://odysway.com/voyages/formation-permaculture-bourgogne?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) ;
-*   un [**voyage initiatique en Mongolie**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete) à la rencontre des chamanes ;
-*   découvrir la magnifique région du Jura et [**faire connaissance avec les plantes médicinales**](https://odysway.com/voyages/plantes-medicinales-jura?utm_source=SEO&utm_medium=thematique&utm_campaign=partir_en_ete). 
+- [**apprendre la permaculture dans un éco-centre en Bourgogne**](https://odysway.com/voyages/formation-permaculture-bourgogne?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete) ;
+- un [**voyage initiatique en Mongolie**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete) à la rencontre des chamanes ;
+- découvrir la magnifique région du Jura et [**faire connaissance avec les plantes médicinales**](https://odysway.com/voyages/plantes-medicinales-jura?utm_source=SEO\&utm_medium=thematique\&utm_campaign=partir_en_ete). 
 
 Tout cela devient possible avec les séjours en immersion d’Odysway !
-::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+\::
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::
