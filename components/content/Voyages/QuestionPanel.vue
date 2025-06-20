@@ -1,6 +1,6 @@
 <template>
   <v-expansion-panels
-    v-show="route.path === '/faq' || !hideOnLayout"
+    v-show="route.path === '/faq' || !hide"
     eager
     variant="accordion"
   >
@@ -71,7 +71,7 @@ const { item } = defineProps({
     type: Object,
     default: null,
   },
-  hideOnLayout: {
+  hide: {
     type: Boolean,
     default: false,
   },
