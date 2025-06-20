@@ -205,7 +205,7 @@ schemaOrg:
 
   :::question-panel
   ---
-  hide-on-layout: false
+  hide-on-layout: true
   ---
   #question
   Les voyages incluent-ils les billets de train ou d'avion pour se rendre sur place ?
