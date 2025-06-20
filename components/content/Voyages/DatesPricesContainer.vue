@@ -40,7 +40,7 @@
       <span class="text-h4 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }} de dates</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
-    <v-row v-if="isPrivatisationAvailable">
+    <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
         <div class="text-h4 font-weight-bold text-primary">
           {{ indivSection.title }}
@@ -50,7 +50,22 @@
           :to="`/devis?slug=${route.params.voyageSlug}`"
         >
           <div class="text-h6 font-weight-bold">
-            {{ isGroupeAvailable && isPrivatisationAvailable ? indivSection.textButton : "Demander un devis" }}
+            {{ indivSection.textButton }}
+          </div>
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row v-if="isPrivatisationAvailable && !isGroupeAvailable">
+      <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
+        <div class="text-h4 font-weight-bold text-primary">
+          {{ indivSection.titleOnlyPrivatisationAvailable }}
+        </div>
+        <v-btn
+          height="54"
+          :to="`/devis?slug=${route.params.voyageSlug}`"
+        >
+          <div class="text-h6 font-weight-bold">
+            {{ indivSection.textButtonDevis }}
           </div>
         </v-btn>
       </v-col>

@@ -121,12 +121,12 @@ const fetchTravels = async () => {
     loading.value = false
   }
 }
-fetchTravels()
 
 onMounted(() => {
   nextTick(() => {
     toggledBtn.value = route.query?.type || 'all'
   })
+  fetchTravels()
 })
 
 watch(selectedPeriod, (newPeriod) => {

@@ -16,7 +16,7 @@
             {{ dateSections.pricePrefix }}
           </span>
           <span class="text-h4 font-weight-bold text-primary">
-            {{ pricing.startingPrice }}€<span class="text-caption">{{ dateSections.priceSuffix }}</span>
+            {{ startingPrice }}€<span class="text-caption">{{ dateSections.priceSuffix }}</span>
           </span>
         </v-col>
         <v-spacer class="d-block" />
@@ -50,8 +50,8 @@ defineProps({
     type: Object,
     required: true,
   },
-  pricing: {
-    type: Object,
+  startingPrice: {
+    type: Number,
     required: true,
   },
 })

@@ -137,6 +137,9 @@ sitemap:
 ---
 backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 ---
+---
+backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
+---
 #section-title
   :::title-container
   #title
@@ -150,8 +153,14 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   ---
   #question
   Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
+  Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
   
   #answer
+  Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
+  
+  L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
+  
+  Pas d’itinéraires touristiques figés, mais des voyages pensés pour favoriser les rencontres, la découverte en profondeur d’un lieu, et une vraie déconnexion. Le confort, la sécurité et la qualité de l’accompagnement sont assurés à chaque étape.
   Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
   
   L’objectif : permettre de vivre une expérience forte de sens, au rythme du pays, en petit groupe, et toujours en lien avec les habitants.
