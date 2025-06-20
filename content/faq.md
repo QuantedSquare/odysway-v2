@@ -142,7 +142,7 @@ schemaOrg:
   Odysway est-elle une agence de voyage ?
   
   #answer
-  Odysway est une agence de voyage certifiée et immatriculée auprès d'Atout France, et dispose d'une garantie financière APST, ainsi qu'une d'une assurance professionelle. Avec Odysway, voyagez les yeux fermés ! Les équipes Odysway sont très réactives et vous accompagnent avant votre voyage, sur place et au retour de votre voyage.
+  Odysway est une agence de voyage certifiée et immatriculée auprès d'Atout France, et dispose d'une garantie financière APST, ainsi qu'une d'une assurance professionnelle. Avec Odysway, voyagez les yeux fermés ! Les équipes Odysway sont très réactives et vous accompagnent avant votre voyage, sur place et au retour de votre voyage.
   :::
 
   :::question-panel
