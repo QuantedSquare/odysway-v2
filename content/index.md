@@ -64,7 +64,7 @@ au cœur du voyage
   text-color: primary
   ---
   #title
-  [Nos voyages signatures en France]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
     ::::voyage-col-card{slug="sejour-berger-bearn"}
@@ -82,10 +82,10 @@ au cœur du voyage
     ::::voyage-col-card{slug="photographie-animaliere-vosges"}
     ::::
   
-    ::::voyage-col-card{slug="sejour-astronomie-corse"}
+    ::::voyage-col-card{slug="decouvrez-photo-animaliere-jura"}
     ::::
   
-    ::::voyage-col-card{slug="sejour-astronomie-corse"}
+    ::::voyage-col-card{slug="sejour-hiver-pyrenees"}
     ::::
   :::
 ::
@@ -176,19 +176,19 @@ au cœur du voyage
 ::color-container{color="white"}
   :::horizontal-carousel
   #title
-  [Partir au printemps]{style="color: rgba(43, 76, 82, 1)"}
+  [Voyager cet été]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="sejour-berger-bearn"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="voyage-nomades-mongolie"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="immersion-culturelle-cap-vert"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="reconnexion-nature-finlande"}
     ::::
   :::
 ::
@@ -199,7 +199,7 @@ au cœur du voyage
   [Nos bonnes idées 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
   
   #subtitle
-  [2 fois par mois, nos inspirations et idées pour voyager autrement]{style="color: #BDBDBD; font-weight: 500"}
+  [1 fois par mois, nos inspirations et idées pour voyager autrement]{style="color: #BDBDBD; font-weight: 500"}
   :::
 ::
 
