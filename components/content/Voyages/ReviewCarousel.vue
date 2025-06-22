@@ -78,7 +78,7 @@
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
-import { uniqBy } from 'lodash'
+import _ from 'lodash'
 
 const route = useRoute()
 defineProps({
@@ -137,7 +137,7 @@ const scrollAmount = computed(() => {
 })
 const { data: reviews } = await useAsyncData('reviews', async () => {
   const collection = await queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
-  return uniqBy(collection, 'text')
+  return _.uniqBy(collection, 'text')
 })
 </script>
 
