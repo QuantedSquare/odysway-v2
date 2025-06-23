@@ -49,15 +49,15 @@
         md="8"
       >
         <v-img
-          v-if="destination.image?.src"
-          :src="img(destination.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-          :lazy-src="img(destination.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          v-if="destination?.image?.src"
+          :src="img(destination?.image?.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+          :lazy-src="img(destination?.image?.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           size="(max-width: 600) 480px, 1500px"
-          :srcset="`${img(destination.image?.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(destination.image?.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
+          :srcset="`${img(destination?.image?.src, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(destination?.image?.src, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
           height="302"
           class="rounded-md"
           cover
-          :alt="destination.image?.alt"
+          :alt="destination?.image?.alt"
         />
         <v-img
           v-else
@@ -189,6 +189,7 @@ const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true
 })
+console.log('is hydrated ', isHydrated.value)
 </script>
 
 <style scoped>
