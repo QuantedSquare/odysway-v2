@@ -1,5 +1,6 @@
 import axios from 'axios'
-
+// https://docs.almapay.com/reference/payment
+// https://github.com/QuantedSquare/odysway-v2/tree/a4faa65862d98ead284e632d6e8a23b8be4c0f1c/server/api/v1/alma
 const isDev = process.env.NODE_ENV === 'development'
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000'
