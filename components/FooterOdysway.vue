@@ -190,7 +190,7 @@
               :key="policy.name"
               :to="policy.link"
               variant="text"
-              class="text-overline"
+              class="text-overline text-decoration-none"
             >
               {{ policy.name }}
             </v-btn>

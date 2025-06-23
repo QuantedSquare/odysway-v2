@@ -189,7 +189,6 @@ const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true
 })
-console.log('is hydrated ', isHydrated.value)
 </script>
 
 <style scoped>

@@ -40,7 +40,7 @@
               <v-list
                 lines="one"
                 select-strategy="classic"
-                  class="px-4"
+                class="px-4"
               >
                 <v-hover>
                   <template #default="{ isHovering, props }">
@@ -232,6 +232,9 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     destinations: topDestinations,
   }
+  console.log('destinations', destinations.value)
+  console.log('regions', regions.value)
+
   // Normal region mapping
   const regionGroups = regions.value.map((region) => {
     return {
