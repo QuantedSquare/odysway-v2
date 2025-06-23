@@ -31,14 +31,11 @@
           </div>
         </v-card-title>
 
-        <v-card-text
-          class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height text-wrapper"
-        >
-          <div
-            ref="content"
-            class="text-content"
-            :class="{ truncated: !isExpanded }"
-            :style="contentStyle"
+        <v-card-text class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height">
+          <ExpandableText
+            :clamp-lines="3"
+            :line-height="30"
+            button-class="text-h5"
           >
             <span v-if="description">{{ description }}</span>
             <div class="d-flex flex-column px-8 mt-4">
@@ -55,32 +52,15 @@
                 <span>{{ night }}</span>
               </div>
             </div>
-          </div>
+          </ExpandableText>
         </v-card-text>
-
-        <v-card-actions class="text-decoration-underline">
-          <v-btn
-            variant="text"
-            class="text-h5"
-            @click="() => isExpanded = !isExpanded"
-          >
-            {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
-            <v-icon
-              :icon="mdiArrowRight"
-              color="primary"
-              :class="isExpanded ? 'rotate-180' : ''"
-            />
-          </v-btn>
-        </v-card-actions>
       </v-col>
     </v-row>
   </v-card>
 </template>
 
 <script setup>
-import { mdiArrowRight } from '@mdi/js'
 import { useDisplay } from 'vuetify'
-import { ref, watch, nextTick } from 'vue'
 
 defineProps({
   photo: {
@@ -116,28 +96,6 @@ defineProps({
 const img = useImage()
 const { xs, width } = useDisplay()
 
-const isExpanded = ref(false)
-const content = ref(null)
-const lineHeight = 30 // px, match your CSS
-const clampLines = 3
-
-const contentStyle = ref({
-  maxHeight: `${lineHeight * clampLines}px`,
-  overflow: 'hidden',
-  transition: 'max-height 0.5s ease',
-})
-
-watch(isExpanded, async (newVal) => {
-  await nextTick()
-  if (newVal) {
-    // Expanding: animate to full height
-    contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
-  }
-  else {
-    // Collapsing: animate to 3 lines
-    contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
-  }
-})
 const isHydrated = ref(false)
 onMounted(() => {
   isHydrated.value = true
@@ -150,30 +108,5 @@ onMounted(() => {
 }
 .line-height{
   line-height: 30px !important;
-}
-.text-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.text-content {
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  position: relative;
-}
-
-.text-content.truncated::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2em;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
-}
-
-.rotate-180 {
-  transform: rotate(180deg);
 }
 </style>
