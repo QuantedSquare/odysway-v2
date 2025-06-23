@@ -35,7 +35,6 @@
           <ExpandableText
             :clamp-lines="3"
             :line-height="30"
-            button-class="text-h5"
           >
             <span v-if="description">{{ description }}</span>
             <div class="d-flex flex-column px-8 mt-4">

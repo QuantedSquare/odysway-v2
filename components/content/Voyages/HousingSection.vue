@@ -137,7 +137,6 @@
                         :clamp-lines="4"
                         :line-height="30"
                         wrapper-class="housing-description"
-                        button-class="text-body-2 pa-0 mt-2"
                       >
                         <div v-if="housing.housingType">
                           <span class="font-weight-bold">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
