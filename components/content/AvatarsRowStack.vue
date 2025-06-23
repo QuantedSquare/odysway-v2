@@ -20,7 +20,7 @@
           :size="mdAndUp ? 100 : 70"
           :class="`avatar-${index + 1}`"
           :style="{
-            zIndex: avatars.length - index,
+            zIndex: hoveredIndex === index ? 1000 : avatars.length - index,
           }"
           @mouseenter="hoveredIndex = index"
           @mouseleave="hoveredIndex = null"

@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="rounded-lg px-0 my-8 bg-color "
+    class="rounded-lg px-0 mt-5 bg-color "
     fluid
   >
     <div class="pa-10">
@@ -19,14 +19,14 @@
           sm="6"
           md="3"
         >
-          <div class="d-flex flex-column align-start ga-2 justify-start rounded-lg item-bg-color pa-4 py-10 fill-height">
+          <div class="d-flex flex-column align-center align-md-start ga-2 justify-start rounded-lg item-bg-color pa-4 py-10 fill-height">
             <v-img
               :src="item.icon"
               :height="40"
               :width="40"
               class="mr-3 text-primary"
             />
-            <p class="font-weight-bold text-h5">
+            <p class="font-weight-bold text-h5 text-center text-md-start">
               {{ item.text }}
             </p>
           </div>

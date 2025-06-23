@@ -47,10 +47,12 @@
             :col-width="getColWidth(index)"
             :alt="photo.alt"
           /> -->
-        <v-col cols="12">
+        <v-col
+          cols="12"
+          class="px-0 "
+        >
           <v-carousel
-
-            class="custom-btn bg-odysway-2 rounded-lg"
+            class="custom-btn bg-odysway-2 rounded-lg "
           >
             <v-carousel-item
               v-for="photo in photosList"
@@ -59,9 +61,8 @@
               <v-img
                 :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
                 :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-
                 width="100%"
-                rounded="lg"
+                class="rounded-md-lg"
               />
             </v-carousel-item>
           </v-carousel>
@@ -85,11 +86,6 @@ defineProps({
 })
 const { lgAndUp } = useDisplay()
 const dialog = ref(false)
-
-// const getColWidth = (index) => {
-//   const pattern = [7, 5, 4, 8, 5, 7, 7, 5, 4, 8, 5, 7, 7, 5, 4, 8, 5, 7, 7, 5, 4]
-//   return pattern[index % pattern.length].toString()
-// }
 </script>
 
 <style scoped>
@@ -98,7 +94,11 @@ const dialog = ref(false)
   color: rgb(var(--v-theme-primary-light-1))!important;
 }
 .custom-btn:deep(svg){
-border-radius: 100%;
-background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.custom-btn:deep(.v-responsive__content){
+display: flex;
+align-items: center;
 }
 </style>

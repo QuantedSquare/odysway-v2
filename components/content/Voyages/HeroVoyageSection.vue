@@ -8,7 +8,7 @@
         cols="12"
         md="8"
       >
-        <h1 class="text-primary text-h1 text-md-h2 font-weight-bold mb-4 mb-md-0">
+        <h1 class="text-primary text-h1 text-md-h2 font-weight-bold  mb-md-0">
           {{ voyage.title }}
           <RatingBadge
             :rating="voyage.rating"
@@ -71,10 +71,9 @@
   </v-container>
   <v-container
     fluid
-    height="455"
-    class="d-flex align-center position-relative px-0"
+    class="d-flex align-start align-md-center position-relative px-0 custom-height mb-2 mb-md-0 pt-0 pt-md-4"
   >
-    <v-row class="d-none d-md-flex">
+    <v-row class="align-start ">
       <v-col
         cols="12"
         sm="9"
@@ -84,7 +83,7 @@
           :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
           cover
-          height="455"
+          class="custom-height"
           rounded="lg"
         />
       </v-col>
@@ -110,11 +109,11 @@
         />
       </v-col>
     </v-row>
-    <v-row class="d-flex d-md-none">
+    <!-- <v-row class="d-flex d-md-none">
       <v-col cols="12">
         <v-carousel
           hide-delimiters
-          class="custom-btn"
+          class="custom-btn  rounded-lg"
         >
           <v-carousel-item
             v-for="photo in photoCarousel"
@@ -123,22 +122,20 @@
             <v-img
               :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
               :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              cover
-              height="455"
+              width="100%"
               rounded="lg"
             />
           </v-carousel-item>
         </v-carousel>
       </v-col>
-    </v-row>
+    </v-row> -->
     <v-row class="media-btns-position">
       <v-col
         cols="auto"
-        class="hidden-sm-and-down"
       >
         <PhotoGalleryDialog
           v-if="voyage.photosList?.length > 0"
-          :photos-list="voyage.photosList"
+          :photos-list="photoCarousel"
         />
       </v-col>
       <v-col
@@ -193,7 +190,9 @@ function copyUrl() {
   bottom: 9%;
   left: 4%;
 }
-
+.custom-height{
+  height: 455px;
+}
 @media screen and (max-width: 1280px) {
   .media-btns-position{
   position: absolute;
@@ -204,8 +203,11 @@ function copyUrl() {
 @media screen and (max-width: 600px) {
   .media-btns-position{
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 15px;
+  left: 20px;
+}
+.custom-height{
+  height: 270px;
 }
 }
 .custom-btn:deep(button){
@@ -215,5 +217,9 @@ function copyUrl() {
 .custom-btn:deep(svg){
 border-radius: 100%;
 background-color: rgba(255, 255, 255, 0.3);
+}
+.custom-btn:deep(.v-responsive__content){
+display: flex;
+align-items: center;
 }
 </style>

@@ -21,9 +21,9 @@
         cols="12"
         sm="7"
       >
-        <v-card-title class="no-white-space">
+        <v-card-title class="no-white-space px-0 pb-1">
           <div class="d-flex align-center ga-3">
-            <span class="d-flex align-center bg-secondary rounded-lg text-subtitle-2 font-weight-bold text-white px-2 py-1 text-no-wrap">
+            <span class="d-flex align-center bg-secondary rounded-lg text-caption text-sm-subtitle-2 font-weight-bold text-white px-2 py-1 text-no-wrap">
               {{ badgeText }}
             </span>
 
