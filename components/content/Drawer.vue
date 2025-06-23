@@ -21,7 +21,6 @@
           @click="model = false"
         >
           <v-btn-secondary
-            href="tel: +33184807975"
             color="primary"
             block
             class="text-caption text-sm-subtitle-2"
@@ -32,6 +31,7 @@
         </v-list-item>
         <v-list-item>
           <v-btn-secondary
+            href="tel: +33184807975"
             color="primary"
             variant="tonal"
             block
