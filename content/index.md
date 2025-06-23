@@ -85,6 +85,9 @@ au cœur du voyage
     ::::voyage-col-card{slug="decouvrez-photo-animaliere-jura"}
     ::::
   
+    ::::voyage-col-card{slug="sejour-multiactivites-famille-ecrins"}
+    ::::
+  
     ::::voyage-col-card{slug="sejour-hiver-pyrenees"}
     ::::
   :::
@@ -123,7 +126,7 @@ au cœur du voyage
     icon: /icons/business-team.svg
     ---
     #text
-    Des départs en petits groupes ou privatifs
+    Des départs en petits groupes ou en privatif
     ::::
   
     ::::icon-text-col
@@ -132,7 +135,7 @@ au cœur du voyage
     icon: /icons/love-flag.svg
     ---
     #text
-    Des voyages conscients et porteurs de sens
+    Des voyages engagés et porteurs de sens
     ::::
   
     ::::icon-text-col
@@ -141,7 +144,7 @@ au cœur du voyage
     icon: /icons/user-friends.svg
     ---
     #text
-    Une agence proche de vous
+    Une agence proche de vous, vraiment
     ::::
   
   #cta-button
@@ -199,7 +202,7 @@ au cœur du voyage
   [Nos bonnes idées 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
   
   #subtitle
-  [1 fois par mois, nos inspirations et idées pour voyager autrement]{style="color: #BDBDBD; font-weight: 500"}
+  [1 fois par mois, nos inspirations et idées pour voyager autrement]{style="color: #BDBDBD; font-weight: 500"}.
   :::
 ::
 
