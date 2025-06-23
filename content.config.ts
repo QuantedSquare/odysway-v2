@@ -224,7 +224,7 @@ export default defineContentConfig({
     }),
     reviews: defineCollection({
       type: 'data',
-      source: 'reviews/**.json',
+      source: 'avis/**.json',
       schema: z.object({
         author: z.string().describe('Nom du voyageur').optional(),
         authorAge: z.string().describe('Age du voyageur').optional(),
@@ -239,7 +239,7 @@ export default defineContentConfig({
     }),
     regions: defineCollection({
       type: 'data',
-      source: 'regions/*.json',
+      source: 'continents/*.json',
       schema: z.object({
         nom: z.string(),
         meta_description: z.string(),
@@ -792,7 +792,7 @@ export default defineContentConfig({
     }),
     voyages: defineCollection({
       type: 'data',
-      source: 'voyages/*.json',
+      source: 'voyages/**.json',
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),
         title: z.string().describe('Titre du voyage'),

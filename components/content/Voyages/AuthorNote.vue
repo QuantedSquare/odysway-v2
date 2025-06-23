@@ -9,8 +9,8 @@
     >
       <div
         ref="content"
-        :class="{ 'truncated': !isExpanded && authorNote.text.length > 900, 'text-content': authorNote.text.length > 900 }"
-        :style="authorNote.text.length > 900 ? contentStyle : {}"
+        :class="{ 'truncated': !isExpanded && authorNote?.text.length > 700, 'text-content': authorNote?.text.length > 700 }"
+        :style="authorNote?.text.length > 700 ? contentStyle : {}"
       >
         <MDC
           tag="article"
@@ -20,7 +20,7 @@
     </div>
 
     <v-btn
-      v-if="authorNote.text.length > 900"
+      v-if="authorNote?.text.length > 700"
       variant="text"
       class="text-h5"
       @click="() => isExpanded = !isExpanded"

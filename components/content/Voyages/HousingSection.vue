@@ -139,10 +139,10 @@
                         wrapper-class="housing-description"
                       >
                         <div v-if="housing.housingType">
-                          <span class="font-weight-bold">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
+                          <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
                         </div>
                         <div v-if="housing.housingMood">
-                          <span class="font-weight-bold">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
+                          <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
                         </div>
                       </ExpandableText>
                     </v-col>
@@ -228,6 +228,12 @@ const scrollAmount = computed(() => {
 .housing-text{
 font-size: 16px;
 line-height: 30px;
+}
+@media (max-width: 600px) {
+  .housing-text{
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .custom-btn-style:deep(.v-icon__svg){
   fill: white;

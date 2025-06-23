@@ -5,6 +5,7 @@
   >
     <v-row v-if="isHydrated">
       <v-col
+        ref="colContainer"
         cols="12"
         sm="5"
         lg="auto"
@@ -13,7 +14,7 @@
           rounded="lg"
           :src="img(photo, { format: 'webp', quality: 70, width: 640 })"
           cover
-          :width="xs ? width : 298"
+          :width="imageWidth"
           height="214"
         />
       </v-col>
@@ -31,7 +32,7 @@
           </div>
         </v-card-title>
 
-        <v-card-text class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height">
+        <v-card-text class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height px-0 pb-0">
           <ExpandableText
             :clamp-lines="3"
             :line-height="30"
@@ -60,6 +61,7 @@
 
 <script setup>
 import { useDisplay } from 'vuetify'
+import { useElementSize } from '@vueuse/core'
 
 defineProps({
   photo: {
@@ -96,8 +98,32 @@ const img = useImage()
 const { xs, width } = useDisplay()
 
 const isHydrated = ref(false)
+const colContainer = ref(null)
+
+// Use element size only after hydration
+const { width: colContainerWidth } = useElementSize(colContainer, {
+  initialSize: { width: 0, height: 0 },
+})
+
+// Computed width for the image
+const imageWidth = computed(() => {
+  if (xs.value) {
+    return width.value
+  }
+  // Use conso if available, otherwise fallback to a reasonable default
+  return colContainerWidth.value > 0 ? colContainerWidth.value : 300
+})
+
 onMounted(() => {
   isHydrated.value = true
+  // Wait for next tick to ensure the element is rendered
+  nextTick(() => {
+    // Force a resize observation if needed
+    if (colContainer.value) {
+      // Trigger a resize event to update the size
+      window.dispatchEvent(new Event('resize'))
+    }
+  })
 })
 </script>
 
@@ -107,5 +133,10 @@ onMounted(() => {
 }
 .line-height{
   line-height: 30px !important;
+}
+@media (max-width: 600px) {
+  .line-height{
+    line-height: 23px !important;
+  }
 }
 </style>

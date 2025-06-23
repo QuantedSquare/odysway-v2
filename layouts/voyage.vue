@@ -62,8 +62,6 @@ const drawer = ref(false)
 
 :deep(.v-main) {
   padding-top: var(--v-layout-top)!important;
-  /* padding-bottom: var(--v-layout-bottom)!important; */
-
 }
 @media (min-width: 1600px) {
 .custom-margin-x{

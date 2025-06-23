@@ -17,9 +17,10 @@
       <v-col
         cols="12"
         md="6"
+        class="py-0"
       >
         <v-list>
-          <v-list-subheader class="text-subtitle-1 pt-md-4 custom-padding">
+          <v-list-subheader class="text-subtitle-1 pt-md-4 d-flex justify-center justify-md-start custom-padding">
             <v-chip
               variant="flat"
               color="green"
@@ -43,9 +44,10 @@
       <v-col
         cols="12"
         md="6"
+        class="py-0"
       >
         <v-list class="pl-md-4">
-          <v-list-subheader class="text-subtitle-1 pt-md-4 custom-padding">
+          <v-list-subheader class="text-subtitle-1 pt-md-4 d-flex justify-center justify-md-start custom-padding">
             <v-chip
               variant="flat"
               color="secondary"
