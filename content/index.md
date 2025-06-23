@@ -55,7 +55,7 @@ au cœur du voyage
 
 ::experience-carousel
 #title
-[Laissez-vous inspirer]{style="color: rgba(43, 76, 82, 1)"}
+[Expériences à vivre]{style="color: rgba(43, 76, 82, 1)"}
 ::
 
 ::color-container{color="soft-blush"}
@@ -232,7 +232,7 @@ au cœur du voyage
 ::color-container{color="white"}
   :::home-review-container
   #title
-  [Des voyageurs épanouis]{style="color: rgba(43, 76, 82, 1)"}
+  [Ils en parlent mieux que nous]{style="color: rgba(43, 76, 82, 1)"}
   
   #cta
   Afficher plus de témoignages

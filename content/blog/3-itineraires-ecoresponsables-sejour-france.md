@@ -51,13 +51,6 @@ Lors de ces vacances d'été, (re)découvrez la France en train, à vélo ou à 
 
 ## 🥾 **Bijoux normands à pied et à vélo** 🚲
 
-  :::image-container
-  ---
-  alt: undefined
-  image-src: /images/blogs/3-itineraires-ecoresponsables-sejour-france/dRKXdMRsSjaWNFYVUA1L.jpg
-  ---
-  :::
-
 Commencez par vous rendre à **Pont-l'Evêque** en train (à 2h de Paris-Saint-Lazare). Capitale du pays d'Auge, déambulez dans les petites ruelles et sur les placettes bordées de maisons à colombages... 
 
 Poursuivez à vélo par la voie balisée Vélo Maritime qui débute par une piste cyclable jusqu'à St-André-d'Hébertot et se poursuit sur des petites routes jusqu'à Honfleur. 
