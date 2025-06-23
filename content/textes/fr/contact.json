@@ -10,8 +10,8 @@
         "label": "Civilité *",
         "placeholder": "Choisissez une civilité",
         "options": {
-          "mr": "M.",
-          "mrs": "Mme.",
+          "mr": "Mme",
+          "mrs": "M.",
           "other": "Autre"
         }
       },
@@ -32,7 +32,7 @@
       },
       "subject": {
         "label": "Objet de votre message *",
-        "placeholder": "J'ai besoin d'aide pour partir au Japon..."
+        "placeholder": "Je vous présente mon projet de voyage entre amis pour mars 2026."
       },
       "message": {
         "label": "Message *",
@@ -58,4 +58,4 @@
       "gdprRequired": "Vous devez accepter la politique de confidentialité."
     }
   }
-} 
+}
