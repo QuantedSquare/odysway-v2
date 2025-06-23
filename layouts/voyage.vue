@@ -44,7 +44,7 @@ const drawer = ref(false)
 
 .main-content {
   --v-layout-top: 90px!important;
-  --v-layout-bottom: 0px;
+  --v-layout-bottom: 0px !important;
   max-width: 1440px;
 }
 @media (max-width: 960px) {

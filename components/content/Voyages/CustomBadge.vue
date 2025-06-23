@@ -3,6 +3,7 @@
     inline
     :color="color"
     class="custom"
+    dot
   />
 </template>
 

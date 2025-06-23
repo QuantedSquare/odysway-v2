@@ -19,7 +19,7 @@
         md="6"
       >
         <v-list>
-          <v-list-subheader class="text-subtitle-1  pt-md-4 ">
+          <v-list-subheader class="text-subtitle-1 pt-md-4 custom-padding">
             <v-chip
               variant="flat"
               color="green"
@@ -30,7 +30,7 @@
               </span>
             </v-chip>
           </v-list-subheader>
-          <v-container>
+          <v-container class="px-0">
             <PriceDetailsItem
               v-for="item, index in pricingDetailsBlock.include"
               :key="index"
@@ -45,7 +45,7 @@
         md="6"
       >
         <v-list class="pl-md-4">
-          <v-list-subheader class="text-subtitle-1  pt-md-4 ">
+          <v-list-subheader class="text-subtitle-1 pt-md-4 custom-padding">
             <v-chip
               variant="flat"
               color="secondary"
@@ -56,7 +56,7 @@
               </span>
             </v-chip>
           </v-list-subheader>
-          <v-container>
+          <v-container class="px-0">
             <PriceDetailsItem
               v-for="item, index in pricingDetailsBlock.exclude"
               :key="index"
@@ -86,3 +86,9 @@ defineProps({
   },
 })
 </script>
+
+<style scoped>
+.custom-padding {
+  padding-left: 0 !important;
+}
+</style>

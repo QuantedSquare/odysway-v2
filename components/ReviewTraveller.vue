@@ -5,7 +5,7 @@
     transition="fade-transition"
   > -->
   <v-sheet elevation="0">
-    <v-card-item>
+    <v-card-item class="px-2">
       <v-card-title class="d-flex align-center ga-2">
         <AvatarImg
           :avatar-img="review?.photo"
@@ -47,7 +47,7 @@
         />
       </v-card-text> -->
     <v-card-text
-      class="text-h5 font-weight-bold text-primary max-lines mb-0 mb-md-0 pb-0 line-height text-wrapper"
+      class="text-h5 font-weight-bold text-primary max-lines mb-0 mb-md-0 pb-0 line-height text-wrapper px-2"
     >
       <div
         ref="content"

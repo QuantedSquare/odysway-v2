@@ -3,15 +3,34 @@
     <h4 class="text-h4 font-weight-bold">
       {{ page.authorNote.title }}
     </h4>
-    <p
+    <div
       v-if="isHydrated && authorNote.text"
-      class="text-body-2 line-height-2"
+      class="text-body-2 line-height-2 text-wrapper"
     >
-      <MDC
-        tag="article"
-        :value="authorNote.text"
-      />
-    </p>
+      <div
+        ref="content"
+        class="text-content"
+        :class="{ truncated: !isExpanded }"
+        :style="contentStyle"
+      >
+        <MDC
+          tag="article"
+          :value="authorNote.text"
+        />
+      </div>
+      <v-btn
+        variant="text"
+        class="text-h5 pa-0 mt-2"
+        @click="() => isExpanded = !isExpanded"
+      >
+        {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
+        <v-icon
+          :icon="mdiArrowRight"
+          color="primary"
+          :class="isExpanded ? 'rotate-180' : ''"
+        />
+      </v-btn>
+    </div>
 
     <div
       v-if="author"
@@ -35,6 +54,8 @@
 </template>
 
 <script setup>
+import { mdiArrowRight } from '@mdi/js'
+
 const props = defineProps({
   authorNote: {
     type: Object,
@@ -45,8 +66,34 @@ const props = defineProps({
     required: true,
   },
 })
+
 const isHydrated = ref(false)
+const isExpanded = ref(false)
+const content = ref(null)
+
+const lineHeight = 30
+const clampLines = 5
+
+const contentStyle = ref({
+  maxHeight: `${lineHeight * clampLines}px`,
+  overflow: 'hidden',
+  transition: 'max-height 0.5s ease',
+})
+
 const author = await queryCollection('team').where('name', '=', props.authorNote.author).first()
+
+watch(isExpanded, async (newVal) => {
+  await nextTick()
+  if (newVal) {
+    // Expanding: animate to full height
+    contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
+  }
+  else {
+    // Collapsing: animate to 5 lines
+    contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
+  }
+})
+
 onMounted(() => {
   isHydrated.value = true
 })
@@ -60,5 +107,31 @@ onMounted(() => {
   .line-height-2 {
     line-height: 25px !important;
   }
+}
+
+.text-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.text-content {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  position: relative;
+}
+
+.text-content.truncated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2em;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
 }
 </style>

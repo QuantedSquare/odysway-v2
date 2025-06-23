@@ -11,7 +11,10 @@
         </h4>
       </v-col>
       <v-col class="text-grey-darken-3">
-        <div v-if="voyageRef.accompanistsDescription">
+        <div
+          v-if="voyageRef.accompanistsDescription"
+          class="mb-4"
+        >
           {{ voyageRef.accompanistsDescription }}
         </div>
         <AccompanistCard

@@ -11,7 +11,7 @@
       :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
     >
       <v-container
-        class="pa-6 pa-md-16"
+        class="py-6 py-md-16 px-6 px-md-13"
         max-width="1440px"
       >
         <v-row>
