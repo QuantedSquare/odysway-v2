@@ -43,7 +43,7 @@
         :alt="author.description"
       />
       <div class="text-subtitle-2 d-flex flex-column justify-center">
-        <span class="font-weight-bold">
+        <span class="font-weight-bold mb-1">
           {{ authorNote.author }}
         </span>
         <span class="font-weight-regular">

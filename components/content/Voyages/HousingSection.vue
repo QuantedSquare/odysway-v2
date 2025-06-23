@@ -57,8 +57,8 @@
         <v-col
           v-for="housing, index in housingBlock"
           :key="index"
-          :cols="housingBlock.length > 1 ? 11 : 12"
-          sm="auto"
+          :cols="childrenCount > 1 ? 11 : 12"
+          md="auto"
         >
           <v-card
             variant="text"
@@ -116,7 +116,7 @@
                       cols="12"
                       class="pb-0"
                     >
-                      <h2 class="text-h5 text-center text-md-left d-flex align-center ga-2">
+                      <h2 class="text-h6 text-md-h5 font-weight-bold text-center text-md-left d-flex align-center ga-2">
                         <v-badge
                           color="yellow"
                           inline
@@ -131,7 +131,7 @@
                       cols="12"
                       class="housing-text pb-0"
                     >
-                      <span class="font-weight-bold text-no-wrap">
+                      <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">
                         {{ housingTypeTitle }}: &nbsp;
                       </span>
                       {{ housing.housingType }}
@@ -141,7 +141,7 @@
                       cols="12"
                       class="housing-text"
                     >
-                      <span class="font-weight-bold text-no-wrap">
+                      <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">
                         {{ housingMoodTitle }}: &nbsp;
                       </span>
                       {{ housing.housingMood }}
@@ -194,12 +194,12 @@ onMounted(() => {
   nextTick(() => {
     scrollElement.value = scrollContainer.value.$el
   })
+  console.log('childrenCount', childrenCount.value)
 })
 
 const childrenCount = computed(() => {
   return housingBlock.length
 })
-
 const displayButton = computed(() => {
   if (mdAndUp.value) {
     return childrenCount.value >= 2
@@ -229,6 +229,12 @@ const scrollAmount = computed(() => {
 font-size: 16px;
 line-height: 30px;
 }
+@media (max-width: 600px) {
+  .housing-text{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .custom-btn-style:deep(.v-icon__svg){
   fill: white;
   max-height: 20px!important;
@@ -250,6 +256,27 @@ line-height: 30px;
 .hidden-scroll::-webkit-scrollbar {
   display: none;
 }
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border: 7px solid white;
+  background: #C5C7C9;
+  height:10px;
+  border-radius: 9px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #0808b6;
+  border: 6px solid lightgrey;
+  border-radius: 9px;
+  background-clip: content-box;
+  height:10px;
+  width:10px;
+  }
 .max-height-container{
   max-height: 230px;
   overflow-y: auto;

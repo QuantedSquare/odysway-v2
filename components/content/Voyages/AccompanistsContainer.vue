@@ -6,12 +6,15 @@
   >
     <v-row>
       <v-col cols="12">
-        <h4 class="font-weight-black text-h4 my-md-4 pb-0 pb-md-4">
+        <h4 class="font-weight-black text-h4 my-md-4 pb-0">
           {{ title }}
         </h4>
       </v-col>
       <v-col class="text-grey-darken-3">
-        <div v-if="voyageRef.accompanistsDescription">
+        <div
+          v-if="voyageRef.accompanistsDescription"
+          class="mb-4"
+        >
           {{ voyageRef.accompanistsDescription }}
         </div>
         <AccompanistCard

@@ -2,7 +2,7 @@
   <v-container
     id="faq-container"
     fluid
-    class="position-relative px-0"
+    class="position-relative px-0 pt-0"
   >
     <v-img
       :src="img(backgroundImage, { format: 'webp', quality: 70, height: 900, width: 1536 })"

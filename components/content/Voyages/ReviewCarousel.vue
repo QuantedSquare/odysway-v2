@@ -3,7 +3,7 @@
     v-show="reviews.length > 0"
     id="reviews-container"
     :fluid="width < 1600"
-    class="px-0"
+    class="px-0 py-0"
   >
     <v-row
       align="center"

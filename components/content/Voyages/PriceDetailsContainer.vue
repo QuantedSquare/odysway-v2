@@ -18,8 +18,8 @@
         cols="12"
         md="6"
       >
-        <v-list>
-          <v-list-subheader class="text-subtitle-1  pt-md-4 ">
+        <v-list class="d-flex flex-column">
+          <v-list-subheader class="align-self-center align-self-md-start text-subtitle-1  pt-md-4 ">
             <v-chip
               variant="flat"
               color="green"
@@ -44,8 +44,8 @@
         cols="12"
         md="6"
       >
-        <v-list class="pl-md-4">
-          <v-list-subheader class="text-subtitle-1  pt-md-4 ">
+        <v-list class="pl-md-4 d-flex flex-column">
+          <v-list-subheader class="align-self-center align-self-md-start text-subtitle-1  pt-md-4 ">
             <v-chip
               variant="flat"
               color="secondary"
