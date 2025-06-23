@@ -68,6 +68,7 @@
             <v-icon
               :icon="mdiArrowRight"
               color="primary"
+              class="mt-1"
               :class="isExpanded ? 'rotate-180' : ''"
             />
           </v-btn>
