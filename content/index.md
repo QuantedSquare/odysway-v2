@@ -209,19 +209,19 @@ au cœur du voyage
   [Voyages inoubliables]{style="color: rgb(255, 255, 255)"}
   
   #carousel-item
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="survie-jungle-amazonienne"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="voyage-hiver-laponie-finlande"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="inde-arunachal-pradesh"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="immersion-nomade-sahara"}
     ::::
   
-    ::::voyage-col-card{slug="acores-volcans-dauphins-baleines"}
+    ::::voyage-col-card{slug="voyage-immersion-colombie"}
     ::::
   :::
 ::
@@ -243,10 +243,10 @@ au cœur du voyage
     ::::
   
   #title
-  Notre équipe est là pour vous renseigner
+  Envie de partir, mais besoin d’en parler ?
   
   #description
-  Échangez avec un conseiller pour parler de votre voyage.
+  Nos spécialistes de chaque destination sont là pour vous accompagner.
   
   #bottom
     ::::cta-button
@@ -255,7 +255,7 @@ au cœur du voyage
     link: /calendly
     ---
     #text
-    Contactez-nous
+    Planifier un échange
     ::::
   :::
 ::
