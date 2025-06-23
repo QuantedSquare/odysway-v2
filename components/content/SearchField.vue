@@ -232,8 +232,8 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     destinations: topDestinations,
   }
-  console.log('destinations', destinations.value)
-  console.log('regions', regions.value)
+  // console.log('destinations', destinations.value)
+  // console.log('regions', regions.value)
 
   // Normal region mapping
   const regionGroups = regions.value.map((region) => {
@@ -242,6 +242,13 @@ const mappedDestinationsToRegions = computed(() => {
       value: region.slug,
       image: region.image,
       destinations: destinations.value.filter(d => d.regions.some(r => r.nom === region.nom)),
+    }
+  })
+  // filter out the france destination in the Europe region
+  regionGroups.forEach((region) => {
+    console.log('region', region)
+    if (region.title === 'Europe') {
+      region.destinations = region.destinations.filter(d => !d.regions.some(r => r.nom === 'France'))
     }
   })
   // Prepend Top destination region if there are any

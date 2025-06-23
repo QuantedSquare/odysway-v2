@@ -3,17 +3,21 @@
     <h4 class="text-h4 font-weight-bold">
       {{ page.authorNote.title }}
     </h4>
-    <ExpandableText
+    <div
       v-if="isHydrated && authorNote.text"
-      :clamp-lines="5"
-      :line-height="30"
-      wrapper-class="text-body-2 line-height-2 text-wrapper"
+      class="text-body-2 line-height-2 text-wrapper"
     >
-      <MDC
-        tag="article"
-        :value="authorNote.text"
-      />
-    </ExpandableText>
+      <div
+        ref="content"
+        :class="{ 'truncated': !isExpanded && authorNote.text.length > 900, 'text-content': authorNote.text.length > 900 }"
+        :style="authorNote.text.length > 900 ? contentStyle : {}"
+      >
+        <MDC
+          tag="article"
+          :value="authorNote.text"
+        />
+      </div>
+    </div>
 
     <v-btn
       v-if="authorNote.text.length > 900"
