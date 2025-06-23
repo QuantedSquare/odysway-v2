@@ -11,11 +11,42 @@ const teamChoices = teamFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(teamDir, file), 'utf-8')).name)
   .filter(Boolean) as [string, ...string[]]
 
+// Helper function to recursively find all JSON files in a directory
+function findJsonFiles(dir: string): string[] {
+  const files: string[] = []
+  const items = fs.readdirSync(dir)
+
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+
+    if (stat.isDirectory()) {
+      // Recursively search subdirectories
+      files.push(...findJsonFiles(fullPath))
+    }
+    else if (item.endsWith('.json')) {
+      // Add JSON files from root directory
+      files.push(fullPath)
+    }
+  }
+
+  return files
+}
+
 const voyageDir = path.resolve(__dirname, 'content/voyages')
-const voyageFiles = fs.readdirSync(voyageDir)
-const voyageChoices = voyageFiles
-  .map(file => JSON.parse(fs.readFileSync(path.join(voyageDir, file), 'utf-8')).slug)
+const voyageJsonFiles = findJsonFiles(voyageDir)
+const voyageChoices = voyageJsonFiles
+  .map((filePath) => {
+    try {
+      return JSON.parse(fs.readFileSync(filePath, 'utf-8')).slug
+    }
+    catch (error) {
+      console.warn(`Error reading voyage file ${filePath}:`, error)
+      return null
+    }
+  })
   .filter(Boolean) as [string, ...string[]]
+console.log('voyageChoices', voyageChoices)
 
 const destinationDir = path.resolve(__dirname, 'content/destinations')
 const destinationFolders = fs.readdirSync(destinationDir).filter(
@@ -66,7 +97,7 @@ const categoriesChoices = categoriesFiles
   .map(file => file.replace('.json', ''))
   .filter(Boolean) as [string, ...string[]]
 
-const regionDir = path.resolve(__dirname, 'content/regions')
+const regionDir = path.resolve(__dirname, 'content/continents')
 const regionFiles = fs.readdirSync(regionDir)
 const regionChoices = regionFiles
   .map(file => JSON.parse(fs.readFileSync(path.join(regionDir, file), 'utf-8')).nom)
