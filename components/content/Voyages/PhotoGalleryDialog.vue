@@ -16,9 +16,9 @@
       >
         <v-img
           :src="img('/icons/Camera.svg', { format: 'webp', quality: 70, width: 640 })"
-          alt="Rating star"
-          :width="lgAndUp ? 22 : 19"
-          :height="lgAndUp ? 22 : 19"
+          alt="Camera icon"
+          :width="lgAndUp ? 22 : 20"
+          :height="lgAndUp ? 22 : 20"
         />
 
         <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>

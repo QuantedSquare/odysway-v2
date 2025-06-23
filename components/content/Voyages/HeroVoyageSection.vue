@@ -144,7 +144,7 @@
       <v-col
         v-if="voyage.videoLinks?.length > 0"
         cols="auto"
-        class="px-0"
+        class="px-0 px-md-3"
       >
         <VideoDialog
           :videos-link="voyage.videoLinks"
