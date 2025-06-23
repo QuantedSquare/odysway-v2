@@ -100,8 +100,9 @@
                         <v-img
                           rounded="lg"
                           cover
-                          :src="image.src"
+                          :src="img(image.src, { format: 'webp', quality: 70, width: 640 })"
                           :alt="image.alt"
+                          height="100%"
                         />
                       </template>
                     </v-carousel-item>
@@ -111,7 +112,7 @@
                   cols="12"
                   md="7"
                 >
-                  <v-row class="max-height-container">
+                  <v-row>
                     <v-col
                       cols="12"
                       class="pb-0"
@@ -126,25 +127,25 @@
                         {{ housing.title }}
                       </h2>
                     </v-col>
+
                     <v-col
-                      v-if="housing.housingType"
-                      cols="12"
-                      class="housing-text pb-0"
-                    >
-                      <span class="font-weight-bold text-no-wrap">
-                        {{ housingTypeTitle }}: &nbsp;
-                      </span>
-                      {{ housing.housingType }}
-                    </v-col>
-                    <v-col
-                      v-if="housing.housingMood"
                       cols="12"
                       class="housing-text"
                     >
-                      <span class="font-weight-bold text-no-wrap">
-                        {{ housingMoodTitle }}: &nbsp;
-                      </span>
-                      {{ housing.housingMood }}
+                      <ExpandableText
+                        v-if="housing.housingType || housing.housingMood"
+                        :clamp-lines="4"
+                        :line-height="30"
+                        wrapper-class="housing-description"
+                        button-class="text-body-2 pa-0 mt-2"
+                      >
+                        <div v-if="housing.housingType">
+                          <span class="font-weight-bold">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
+                        </div>
+                        <div v-if="housing.housingMood">
+                          <span class="font-weight-bold">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
+                        </div>
+                      </ExpandableText>
                     </v-col>
                   </v-row>
                 </v-col>
@@ -159,7 +160,6 @@
 
 <script setup>
 import { mdiArrowLeft, mdiArrowRight, mdiChevronLeft, mdiChevronRight } from '@mdi/js'
-
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 
@@ -185,6 +185,7 @@ const { housingBlock } = defineProps({
     required: true,
   },
 })
+const img = useImage()
 const { mdAndUp, sm } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
@@ -229,6 +230,7 @@ const scrollAmount = computed(() => {
 font-size: 16px;
 line-height: 30px;
 }
+
 .custom-btn-style:deep(.v-icon__svg){
   fill: white;
   max-height: 20px!important;
@@ -249,9 +251,5 @@ line-height: 30px;
 
 .hidden-scroll::-webkit-scrollbar {
   display: none;
-}
-.max-height-container{
-  max-height: 230px;
-  overflow-y: auto;
 }
 </style>

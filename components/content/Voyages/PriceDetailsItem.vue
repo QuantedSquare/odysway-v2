@@ -6,7 +6,7 @@
   >
     <v-col
       cols="12"
-      class="d-flex align-center ga-2 font-weight-regular"
+      class="d-flex ga-2 font-weight-regular"
     >
       <v-icon :class="isIncluded ? 'text-green' : 'text-secondary'">
         {{ isIncluded ? mdiCheckCircleOutline : mdiCloseCircleOutline }}
