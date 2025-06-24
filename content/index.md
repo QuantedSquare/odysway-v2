@@ -232,7 +232,7 @@ au cœur du voyage
 ::color-container{color="white"}
   :::home-review-container
   #title
-  [Ils en parlent mieux que nous]{style="color: rgba(43, 76, 82, 1)"}
+  [Ils en parlent mieux que nous]{style="color: rgba(43, 76, 82, 1)"} ❤️
   
   #cta
   Afficher plus de témoignages
