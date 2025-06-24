@@ -15,16 +15,6 @@ const headers = {
   'Authorization': ALMA_KEY,
 }
 
-const retrieveAlmaIds = async () => {
-  const { error, data } = await supabase.from('alma_ids').select()
-  if (error) {
-    console.log('Error retrieving alma ids', error)
-  }
-  else {
-    return data.map(id => id.id)
-  }
-}
-
 const createAlmaSession = async (order) => {
   if (!order.dealId) {
     throw new Error('dealId is required')
@@ -119,6 +109,32 @@ const createAlmaSession = async (order) => {
   }
 }
 
+const retrieveAlmaIds = async () => {
+  try {
+    const data = await supabase.from('alma_ids').select()
+    return data.map(id => id.id)
+  }
+  catch (error) {
+    console.error('Error retrieving alma ids', error)
+    throw new Error('Error retrieving alma ids')
+  }
+}
+
+const retrievePayment = async (paymentId) => {
+  try {
+    const res = await axios({
+      url: `${BASE_ALMA_URL}payments/${paymentId}`,
+      method: 'GET',
+      headers,
+    })
+    return res.data
+  }
+  catch (err) {
+    console.error('Error retrieving Alma payment:', err.response?.data || err.message)
+    throw new Error(`Failed to retrieve Alma payment: ${err.response?.data?.message || err.message}`)
+  }
+}
+
 const handlePaymentSession = async (session) => {
   const method = 'Alma'
   const order = session.custom_data
@@ -126,28 +142,63 @@ const handlePaymentSession = async (session) => {
 
   console.log('ALMA SESSION in stripe module', session)
 
-  const directPayment = !order.isSold && order.isPayment && !order.isAdvance
+  const directPayment = !order.isSold && order.isPayment && !order.isAdvance // check here
 
   // Fetch Deal Data
-  const customData = await activecampaign.getDealCustomFields(order.dealId)
-  const customFields = activecampaign.handleCustomFields(await customData.dealCustomFieldData)
-  const activecampaignDealData = await activecampaign.getDealById(order.dealId)
-  const { contact } = await activecampaign.getClientById(activecampaignDealData.deal.contact)
+  const fetchedDeal = await activecampaign.getDealById(order.id)
+  const customFields = await activecampaign.getDealCustomFields(order.id)
+  const deal = { ...fetchedDeal.deal, ...customFields }
+
+  // BOOKING MANAGEMENT SUPABASE
+  const { data: bookedDate, error } = await supabase
+    .from('booked_dates')
+    .update({ is_option: false, expiracy_date: null, booked_places: order.nbTravelers })
+    .eq('deal_id', order.id)
+    .select('*')
+    .single()
+  if (error) {
+    console.error('Error updating booked_dates', error)
+  }
+  else {
+    console.log('booked_dates updated', bookedDate)
+
+    const { data: allBooked, error: sumAllBookedError } = await supabase
+      .from('booked_dates')
+      .select('booked_places')
+      .eq('travel_date_id', bookedDate.travel_date_id)
+    if (sumAllBookedError) return { error: sumAllBookedError.message }
+
+    const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+    // Update the travel_dates.booked_seat
+    await supabase
+      .from('travel_dates')
+      .update({ booked_seat: totalBooked })
+      .eq('id', bookedDate.travel_date_id)
+  }
+
+  const { contact } = await activecampaign.getClientById(deal.contact)
+
   // Chapka notify
-  const inssuranceItem = order.insuranceChoice
 
-  console.log('INSSURANCE ITEM', inssuranceItem)
+  // const inssuranceItem = order.insuranceChoice
 
-  if (inssuranceItem && !isDev) {
-    chapka.notify(order, inssuranceItem, customFields,
+  // console.log('INSSURANCE ITEM', inssuranceItem)
 
-      contact.email)
+  // if (inssuranceItem && !isDev) {
+  //   chapka.notify(order, inssuranceItem, customFields)
+  // }
+
+  if (deal.insurance !== 'Aucune Assurance' && !isDev) {
+    const inssuranceItem = order.insuranceChoice
+    Object.assign(deal, { pricePerTraveler: usePricePerTraveler(deal) })
+    chapka.notify(session, inssuranceItem, deal)
+    console.log('===== Chapka notify sent =====')
   }
 
   // AC Update toutes les valeur monaitaire sont en centimes
   const totalPaid = +(customFields.alreadyPaid || 0) + +(totalAmount)
 
-  const restToPay = +activecampaignDealData.deal.value - totalPaid
+  const restToPay = +deal.value - totalPaid
 
   // FALSE UNIQUEMENT SUR PAGE PAIEMENT ET REGLEMENT SOLDE
   const isAdvance = order.isAdvance === true || order.isAdvance === 'true'
@@ -155,15 +206,15 @@ const handlePaymentSession = async (session) => {
   console.log('====CUSTOM FIELDS=====', customFields)
 
   const countUnderAge = +order.nbUnderAge || 0
-  const countTeen = +order.nbTeen || 0
+  const countTeen = +order.nbChildren || 0
 
-  const childrenReduction = countUnderAge * +order.childrenPromo * 100 * !directPayment
-  const teenReduction = countTeen * +order.teenPromo * 100 * !directPayment
+  const childrenReduction = countUnderAge * +order.promoChildren * 100 * !directPayment
+  const teenReduction = countTeen * +order.promoChildren * 100 * !directPayment // check if special promo for teen
   // childrenReduction + teenReduction UNIQUEMENT AU PREMIER CALCUL
   const restToPayPerTraveler = (restToPay + childrenReduction + teenReduction) / (isAdvance ? +order.selectedTravelersToPay : (+customFields.restTravelersToPay - +order.selectedTravelersToPay))
 
   function restTravelerToPay() {
-    if (totalPaid >= +activecampaignDealData.deal.value) {
+    if (totalPaid >= +deal.value) {
       return 0
     }
     else if (isAdvance) {
@@ -177,11 +228,11 @@ const handlePaymentSession = async (session) => {
   const dealData = {
     deal: {
       group: '2',
-      stage: totalPaid >= +activecampaignDealData.deal.value ? '8' : '6',
+      stage: totalPaid >= +deal.deal.value ? '8' : '6',
       fields: [
         {
           customFieldId: 20,
-          fieldValue: totalPaid >= +activecampaignDealData.deal.value
+          fieldValue: totalPaid >= +deal.deal.value
             ? 'Solde réglé'
             : 'Acompte réglé',
         },
@@ -189,7 +240,7 @@ const handlePaymentSession = async (session) => {
         { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
         { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
         { customFieldId: 28, fieldValue: restTravelerToPay() },
-        { customFieldId: 66, fieldValue: totalPaid >= +activecampaignDealData.deal.value ? 0 : restToPayPerTraveler }, // Solde restant par Voyageur à régler
+        { customFieldId: 66, fieldValue: totalPaid >= +deal.deal.value ? 0 : restToPayPerTraveler }, // Solde restant par Voyageur à régler
         { customFieldId: 82, fieldValue: customFields.paiementMethod ? `${customFields.paiementMethod} ${method}` : method }, // Payment method
       ],
     },
@@ -197,12 +248,12 @@ const handlePaymentSession = async (session) => {
 
   console.log('====DealDataFromWebhookStripe=====', dealData.deal.fields)
 
-  activecampaign.updateDeal(order.dealId, dealData)
+  activecampaign.updateDeal(order.id, dealData)
 
-  activecampaign.addNote(order.dealId, {
+  activecampaign.addNote(order.id, {
     note: {
       note: `Paiement CB - ${method} -  ${
-        contact.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€`,
+        deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€`,
     },
   })
 
@@ -217,27 +268,27 @@ const handlePaymentSession = async (session) => {
               type: 'section',
               text: {
                 type: 'mrkdwn',
-                text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement CB - ${method} - ${contact.firstName} ${contact.lastName} - ${order.dealId}>`,
+                text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.id}|Confirmation paiement CB - ${method} - ${contact.firstName} ${contact.lastName} - ${order.id}>`,
               },
             },
           ],
         },
     })
 
-    axios({
-      url: 'https://www.google-analytics.com/collect',
-      method: 'post',
-      params: {
-        v: 1,
-        tid: process.env.NODE_ENV === 'development' ? process.env.GOOGLE_ANALYTICS_TID_TEST : process.env.GOOGLE_ANALYTICS_TID_LIVE,
-        cid: '555',
-        t: 'event',
-        ec: 'Transaction_Server',
-        ea: 'Ping_Confirmation',
-        el: '' + +order.selectedTravelersToPay,
-        ev: +totalAmount,
-      },
-    })
+    // axios({
+    //   url: 'https://www.google-analytics.com/collect',
+    //   method: 'post',
+    //   params: {
+    //     v: 1,
+    //     tid: process.env.NODE_ENV === 'development' ? process.env.GOOGLE_ANALYTICS_TID_TEST : process.env.GOOGLE_ANALYTICS_TID_LIVE,
+    //     cid: '555',
+    //     t: 'event',
+    //     ec: 'Transaction_Server',
+    //     ea: 'Ping_Confirmation',
+    //     el: '' + +order.selectedTravelersToPay,
+    //     ev: +totalAmount,
+    //   },
+    // })
   }
 }
 
@@ -245,4 +296,5 @@ export default {
   retrieveAlmaIds,
   createAlmaSession,
   handlePaymentSession,
+  retrievePayment,
 }

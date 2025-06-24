@@ -7,15 +7,25 @@ export function usePricePerTraveler(deal) {
 
     price += extensionPrice * nbTravelers
 
-    if (promoChildren && nbChildren) { price -= promoChildren * nbChildren }
+    if (promoChildren && nbChildren) {
+      price -= promoChildren * nbChildren
+    }
 
-    if (promoTeen && nbTeen) { price -= promoTeen * nbTeen }
+    if (promoTeen && nbTeen) {
+      price -= promoTeen * nbTeen
+    }
 
-    if (earlybirdAvailable === 'Oui' && promoEarlybird) { price -= earlybirdAvailable * promoEarlybird * nbTravelers }
+    if (earlybirdAvailable === 'Oui' && promoEarlybird) {
+      price -= promoEarlybird * nbTravelers
+    }
 
-    if (lastMinuteAvailable === 'Oui' && promoLastMinute) { price -= lastMinuteAvailable * promoLastMinute * nbTravelers }
+    if (lastMinuteAvailable === 'Oui' && promoLastMinute) {
+      price -= lastMinuteAvailable * promoLastMinute * nbTravelers
+    }
 
-    if (promoValue) { price -= promoValue * nbTravelers }
+    if (promoValue) {
+      price -= promoValue * nbTravelers
+    }
 
     return Math.ceil(price / nbTravelers)
   }

@@ -104,7 +104,7 @@ const quote = async (body) => {
 }
 
 const notify = (stripeSession, insuranceItem, dealCustomFields) => {
-  const order = stripeSession.metadata
+  const order = stripeSession.metadata || stripeSession
   const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
