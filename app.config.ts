@@ -12,7 +12,7 @@ export default defineAppConfig({
     search: true,
     textButton1: 'Notre vision du voyage',
     textButton2: '+33 1 84 80 79 75',
-    textButton3: 'Faisons connaissance !',
+    textButton3: 'Faisons connaissance 👋',
   },
   footer: {
     logo: {
