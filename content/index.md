@@ -9,6 +9,7 @@ sitemap:
   lastmod: 2025-01-01
   videos: []
   images: []
+  loc: ""
 robots: index, nofollow
 seo:
   title: Accueil Odysway
@@ -38,6 +39,13 @@ schemaOrg:
     image: https://odysway.com/logos/logo_noir.png
 head:
   script: []
+title: "Odysway : Voyages en immersion humaine et responsable"
+description: Odysway propose des voyages en immersion, éthiques et humains, en
+  France et à l’étranger. Découvrez le monde autrement.
+navigation:
+  title: Accueil
+  description: "Explorez tous nos voyages et plongez dans l’univers d’Odysway :
+    immersion, rencontres."
 ---
 
 ::home-hero-section
