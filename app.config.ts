@@ -1,6 +1,6 @@
 export default defineAppConfig({
   seo: {
-    siteName: 'Odysway',
+    siteName: 'Odysway | Agence spécialiste du voyage en immersion',
   },
   header: {
     to: '/',
@@ -9,15 +9,15 @@ export default defineAppConfig({
       mobile: '/logos/Logo-Odysway-Bleu.png',
       alt: 'Odysway Logo',
     },
-    search: false,
+    search: true,
     textButton1: 'Notre vision du voyage',
     textButton2: '+33 1 84 80 79 75',
-    textButton3: 'Faisons connaissance!',
+    textButton3: 'Faisons connaissance !',
   },
   footer: {
     logo: {
       image: '/logos/Logo-Odysway-Bleu.png',
-      description: 'Découvrez le monde autrement avec Odysway, votre partenaire de voyage éthique et responsable.',
+      description: 'Odysway est le premier tour-opérateur français dédié au voyage en immersion, en France et à l’étranger. 🌍 Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
     },
     team: {
       image: '/images/team-photo.webp',
@@ -64,7 +64,7 @@ export default defineAppConfig({
         }],
       },
       colonne3: {
-        title: 'Colonne 3',
+        title: 'Types de voyages',
         links: [{
           label: 'Europe',
           to: '/destinations/europe',
@@ -77,10 +77,10 @@ export default defineAppConfig({
         }],
       },
       colonne4: {
-        title: 'Où nous trouver',
+        title: 'Où nous rencontrer',
         name: 'Odysway',
         address: '40 Rue du Louvre',
-        city: 'Paris, 75000 France',
+        city: 'Paris, 75001 France',
       },
     },
   },

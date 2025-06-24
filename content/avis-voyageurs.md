@@ -1,11 +1,10 @@
 ::generic-hero-section
 ---
 displayed-img: /images/lPCsmaT8al25X3drCaAE.webp
-title-color: "white"
+title-color: white
 ---
 #title
 Avis des voyageurs Odysway
-
 ::
 
 ::avis-container
