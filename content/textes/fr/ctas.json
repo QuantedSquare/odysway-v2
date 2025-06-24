@@ -1,13 +1,13 @@
 {
   "faqSection": {
     "ctaCard": {
-      "avatar": "/images/team/romain.webp",
-      "title": "Autres questions ? Notre équipe est là pour vous renseigner",
-      "subtitle": "Un membre de l'équipe vous répondra dans les plus brefs délais",
+      "avatar": "/images/team/lucie.webp",
+      "title": "Une question ? Parlons de votre voyage",
+      "subtitle": "Prenez quelques minutes avec une spécialiste de ce voyage pour en discuter tranquillement.",
       "button": {
-        "text": "Contactez-nous",
+        "text": "Prendre rendez-vous",
         "to": "/calendly"
-        }
+      }
     },
     "faqHomeSubText": {
       "question": "D'autres questions ?",
@@ -21,9 +21,9 @@
   "partenairesSection": {
     "title": "Une agence fiable et engagée",
     "subtitle": "Découvrez nos partenaires qui nous font confiance"
-    },
+  },
   "layoutInfoContainer": {
     "title": "Une agence fiable et engagée",
     "subtitle": "Découvrez nos partenaires qui nous font confiance"
-    }
+  }
 }
