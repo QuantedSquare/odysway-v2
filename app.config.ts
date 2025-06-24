@@ -51,7 +51,7 @@ export default defineAppConfig({
         }],
       },
       colonne2: {
-        title: 'Destinations',
+        title: 'Destinationsk',
         links: [{
           label: 'Europe',
           to: '/destinations/europe',

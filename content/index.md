@@ -42,7 +42,7 @@ head:
 
 ::home-hero-section
 ---
-image-src: images/AdobeStock_218029671.webp
+imageSrc: /images/Home/photo-groupe-odysway-nepal.jpg
 primary-color: "#2B4C52"
 secondary-color: "#DB6644"
 tertiary-color: "#F0B348"
