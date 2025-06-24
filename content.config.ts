@@ -823,7 +823,7 @@ export default defineContentConfig({
     }),
     voyages: defineCollection({
       type: 'data',
-      source: 'voyages/**.json',
+      source: 'voyages/**/*.json',
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),
         title: z.string().describe('Titre du voyage'),
