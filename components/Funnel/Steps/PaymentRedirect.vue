@@ -20,6 +20,7 @@
                 v-model="checkedOption"
                 inset
                 hide-details
+                @click.stop=""
               >
                 <template #label>
                   <div class="text-body-2 pl-1">
