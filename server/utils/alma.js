@@ -62,7 +62,7 @@ const alma = {
         installments_count: 3,
         deferred_months: 0,
         deferred_days: 0,
-        ipn_callback_url: `${IPN_URL}/api/alma/webhooks/payments`,
+        ipn_callback_url: `${IPN_URL}/api/v1/alma/webhooks/payments`,
         locale: 'fr',
         expires_after: 2880,
         capture_method: 'automatic',
