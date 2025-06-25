@@ -47,25 +47,19 @@ export default defineEventHandler(async (event) => {
       })
     }
 
-    // Only process successful payments
-    if (payment.state === 'paid') {
-      // Process payment session
-      await alma.handlePaymentSession(payment)
-      console.log('Payment session handled successfully')
+    // Process payment session
+    await alma.handlePaymentSession(payment)
+    console.log('Payment session handled successfully')
 
-      // Update contact in Brevo
-      if (payment.customer?.email) {
-        try {
-          await brevo.updateContactListId(payment.customer.email, 14) // Payé
-          console.log('Brevo contact updated successfully')
-        }
-        catch (brevoErr) {
-          console.warn('Failed to update Brevo contact:', brevoErr.message)
-        }
+    // Update contact in Brevo
+    if (payment.customer?.email) {
+      try {
+        await brevo.updateContactListId(payment.customer.email, 14) // Payé
+        console.log('Brevo contact updated successfully')
       }
-    }
-    else {
-      console.log(`Payment ${pid} state is ${payment.state}, not processing`)
+      catch (brevoErr) {
+        console.warn('Failed to update Brevo contact:', brevoErr.message)
+      }
     }
 
     setResponseStatus(event, 200)

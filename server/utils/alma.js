@@ -219,13 +219,26 @@ const handlePaymentSession = async (session) => {
   const updatedDeal = await activecampaign.updateDeal(order.id, dealData)
   console.log('updatedDeal', updatedDeal)
 
-  const addedNote = await activecampaign.addNote(order.id, {
-    note: {
-      note: `Paiement CB - ${method} -  ${
-        deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€`,
-    },
-  })
-  console.log('addedNote', addedNote)
+  if (session.processing_status === 'captured') {
+    const addedNote = await activecampaign.addNote(order.id, {
+      note: {
+        note: `Paiement CB - ${method} -  ${
+          deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€`,
+      },
+
+    })
+    console.log('addedNote', addedNote)
+  }
+  if (session.processing_status === 'canceled') {
+    const addedNote = await activecampaign.addNote(order.id, {
+      note: {
+        note: `Paiement CB - ${method} -  ${
+          deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€ - Paiement annulé`,
+      },
+
+    })
+    console.log('addedNote', addedNote)
+  }
   if (!isDev) {
     axios({
       url: process.env.SLACK_URL_PAIEMENTS,
