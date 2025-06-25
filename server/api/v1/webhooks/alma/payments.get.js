@@ -40,29 +40,32 @@ export default defineEventHandler(async (event) => {
     const payment = await alma.retrievePayment(pid)
     console.log('retrieved payment', payment)
 
-    if (payment.state === 'success') {
-      setResponseStatus(event, 200)
-    }
-    else if (!payment) {
+    if (!payment) {
       throw createError({
         statusCode: 404,
         statusMessage: 'Payment not found',
       })
     }
 
-    // Process payment session
-    const response = await alma.handlePaymentSession(payment)
-    console.log('response handle payment session', response)
+    // Only process successful payments
+    if (payment.state === 'paid') {
+      // Process payment session
+      await alma.handlePaymentSession(payment)
+      console.log('Payment session handled successfully')
 
-    // Update contact in Brevo
-    if (payment.customer?.email) {
-      try {
-        const brevoResponse = await brevo.updateContactListId(payment.customer.email, 14) // Payé
-        console.log('brevoResponse', brevoResponse)
+      // Update contact in Brevo
+      if (payment.customer?.email) {
+        try {
+          await brevo.updateContactListId(payment.customer.email, 14) // Payé
+          console.log('Brevo contact updated successfully')
+        }
+        catch (brevoErr) {
+          console.warn('Failed to update Brevo contact:', brevoErr.message)
+        }
       }
-      catch (brevoErr) {
-        console.warn('Failed to update Brevo contact:', brevoErr.message)
-      }
+    }
+    else {
+      console.log(`Payment ${pid} state is ${payment.state}, not processing`)
     }
 
     setResponseStatus(event, 200)
