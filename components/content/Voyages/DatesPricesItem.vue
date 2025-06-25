@@ -109,9 +109,8 @@
       <v-col
         cols="5"
         md="3"
-        class="d-flex flex-column justify-center align-start  justify-lg-start"
+        class="pt-1 d-flex flex-column justify-center align-start  justify-lg-start"
       >
-        <span class="d-none d-sm-block text-body-1 font-size-custom text-grey">À partir de</span>
         <span
           class="text-h2 font-weight-black"
           :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"

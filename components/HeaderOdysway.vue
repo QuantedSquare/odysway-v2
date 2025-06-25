@@ -175,11 +175,11 @@ function captureOutboundLink(btn) {
   margin-right: 16px;
   width: calc(100% - 36px);
   right: 0;
-  z-index: 10000;
+  z-index: 1999!important;
 }
 .app-bar-shadow:deep(){
   box-shadow: none!important;
-  z-index: 10000!important;
+  z-index: 1999!important;
 }
 .height-app-bar{
   height: 90px;

@@ -28,6 +28,6 @@
 
 <script setup>
 const { data: experiences } = await useAsyncData('experiences', () => {
-  return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('published', '=', true).all()
+  return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome', 'published').where('published', '=', true).all()
 })
 </script>

@@ -119,17 +119,17 @@ const { data: categories } = useAsyncData('categories', () => {
 
 const { data: experiences } = useAsyncData('experiences', () => {
   if (isExperience) {
-    return queryCollection('experiences').all()
+    return queryCollection('experiences').where('published', '=', true).all()
   }
   return null
 })
 
-const { data: destinations } = useAsyncData('destinations', () => {
-  if (isDestination && selectedDestination) {
-    return queryCollection('destinations').where('published', '=', true).select('id', 'titre', 'slug', 'metaDescription', 'image').all()
-  }
-  return null
-})
+// const { data: destinations } = useAsyncData('destinations', () => {
+//   if (isDestination && selectedDestination) {
+//     return queryCollection('destinations').where('published', '=', true).select('id', 'titre', 'slug', 'metaDescription', 'image').all()
+//   }
+//   return null
+// })
 </script>
 
 <style scoped>

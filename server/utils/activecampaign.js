@@ -2,6 +2,9 @@ import axios from 'axios'
 import dayjs from 'dayjs'
 import supabase from './supabase'
 
+const config = useRuntimeConfig()
+const isDev = config.public.environment !== 'production'
+
 const baseUrl = process.env.ACTIVE_CAMPAIGN_URL
 const headers = {
   'Api-Token': process.env.ACTIVE_CAMPAIGN_API_KEY,
@@ -266,18 +269,26 @@ const createDeal = async (data) => {
   }
 
   formatedDeal.deal.contact = contact.id
+  const formatedDealForSlackNotif = {
+    ...formatedDeal,
+    firstname: data.firstname,
+    lastname: data.lastname,
+    email: data.email,
+    phone: data.phone,
+  }
   console.log('===========formatedDeal in activecampaign.js===========', formatedDeal)
   delete formatedDeal.optinNewsletter
   delete formatedDeal.firstname
   delete formatedDeal.lastname
   delete formatedDeal.email
   delete formatedDeal.phone
+
   console.log('===========formatedDeal after delete in activecampaign.js===========', formatedDeal)
   console.log('===========formatedDeal after delete in customfields===========', formatedDeal.deal.fields)
 
   const response = await apiRequest('/deals', 'post', formatedDeal)
   if (response.deal.id) {
-    await sendSlackNotification(response.deal.id, formatedDeal)
+    await sendSlackNotification(response.deal.id, formatedDealForSlackNotif)
     await recalculatTotalValues(response.deal.id)
   }
   return response.deal.id
@@ -327,7 +338,7 @@ const retrieveOwner = async (dealId) => {
 
 // ============ Notification slack  ============
 const sendSlackNotification = (id, data) => {
-  if (process.env.NODE_ENV === 'development') return
+  if (isDev) return
   if (id && data) {
     const dealData = data.deal
     const travelType = findCustomFieldValue(dealData.fields, 9)
