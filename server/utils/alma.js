@@ -5,7 +5,7 @@ const config = useRuntimeConfig()
 
 const isDev = config.public.environment !== 'production'
 
-const BASE_URL = config.public.siteURL || 'http://localhost:3000'
+const BASE_URL = isDev ? 'https://odysway-v2-git-feat-alma-quanted-square.vercel.app' : 'https://odysway.com'
 
 const ALMA_KEY = isDev ? process.env.ALMA_KEY_DEV : process.env.ALMA_KEY_LIVE
 const BASE_ALMA_URL = isDev ? 'https://api.sandbox.getalma.eu/v1/' : 'https://api.getalma.eu/v1/'
