@@ -7,15 +7,6 @@
     class="custom-padding"
   >
     <div>
-      <!-- <v-btn
-        icon
-        class="mx-md-4 hidden-sm-and-up"
-        color="white"
-      >
-        <v-icon color="primary">
-          {{ mdiAccountCircle }}
-        </v-icon>
-      </v-btn> -->
       <v-list nav>
         <v-list-item
           @click="model = false"
@@ -52,23 +43,6 @@
           </v-btn-secondary>
         </v-list-item>
       </v-list>
-      <!-- <v-list
-        v-for="item, index in drawerItems"
-        :key="`Drawer item ${index}`"
-        nav
-      >
-        <v-list-item
-          density="compact"
-          @click="model = false"
-        >
-          <NuxtLink
-            :to="item.link"
-            class="text-primary text-decoration-none"
-          >
-            {{ item.title }}
-          </NuxtLink>
-        </v-list-item>
-      </v-list> -->
     </div>
   </v-navigation-drawer>
 </template>

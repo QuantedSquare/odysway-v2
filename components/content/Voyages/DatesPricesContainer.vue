@@ -122,7 +122,7 @@ const limitedDatesList = computed(() => {
   const sortedByDates = dates.value
     .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
     .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
-  return sortedByDates.slice(0, isExpanded.value ? sortedByDates.length : 4)
+  return sortedByDates.slice(0, isExpanded.value ? sortedByDates.length : 3)
 })
 </script>
 

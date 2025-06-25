@@ -98,7 +98,8 @@
         color="primary"
         variant="tonal"
         height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
+        href="tel: +33184807975"
+        class="text-caption text-md-body-1 d-none d-md-flex align-center"
         @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
       >
         {{ header.textButton2 }}
@@ -137,9 +138,6 @@ import LogoOdyswayBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const { header } = useAppConfig()
 
-// #TODO CHECK Les valeurs à retirer / refacto en fonction des modifications du header par ODysway
-// const { mdAndUp } = useDisplay()
-// const { user, signOut, isConnected } = useUser()
 const router = useRouter()
 const model = defineModel()
 defineProps({
