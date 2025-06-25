@@ -251,6 +251,7 @@ export default defineContentConfig({
         imgSrc: z.string().editor({ input: 'media' }),
         description: z.string(),
         isOnHome: z.boolean(),
+        whiteFilter: z.boolean().optional(),
       }),
     }),
     reviews: defineCollection({

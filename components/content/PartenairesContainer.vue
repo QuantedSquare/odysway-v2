@@ -25,7 +25,7 @@
             :srcset="`${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 320 })} 320w, ${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 640 })} 640w`"
             :alt="`logo du partenaire ${partenaire.description}`"
             height="100"
-            class="white-filter"
+            :class="partenaire.whiteFilter ? 'white-filter' : ''"
             width="150"
           />
         </v-lazy>
