@@ -11,7 +11,7 @@ const ALMA_KEY = isDev ? process.env.ALMA_KEY_DEV : process.env.ALMA_KEY_LIVE
 // const BASE_ALMA_URL = isDev ? 'https://api.sandbox.getalma.eu/v1/' : 'https://api.getalma.eu/v1/'
 const BASE_ALMA_URL = 'https://api.sandbox.getalma.eu/v1/'
 // const IPN_URL = isDev ? 'https://dev-dot-odysway-267314.ew.r.appspot.com' : 'https://odysway.com'
-const IPN_URL = isDev ? 'https://odysway-v2.vercel.app' : 'https://odysway.com'
+const IPN_URL = isDev ? 'https://odysway-v2-git-feat-alma-quanted-square.vercel.app' : 'https://odysway.com'
 
 const headers = {
   'accept': 'application/json',
