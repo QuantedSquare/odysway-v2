@@ -111,9 +111,11 @@ const createAlmaSession = async (order) => {
   }
 }
 
+// Error retrieving alma ids TypeError: data.map is not a function
 const retrieveAlmaIds = async () => {
   try {
     const data = await supabase.from('alma_ids').select()
+    console.log('data', data)
     return data.map(id => id.id)
   }
   catch (error) {
