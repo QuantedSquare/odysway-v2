@@ -72,7 +72,7 @@
   "comments": 44,
   "miniatureDisplay": "Note moyenne",
   "authorNote": {
-    "text": "_Laissez-vous porter par la douceur du Béarn et la sérénité des Pyrénées. Dans la vallée d’Aspe, les randonnées légères vous conduiront à travers les estives, ces pâturages d’altitude où les bergers vivent au rythme de leurs troupeaux et de la nature environnante. Ici, le temps semble suspendu, et chaque rencontre devient un moment privilégié._\n\n_Au fil des sentiers, découvrez les traditions vivantes des bergers : la traite des brebis, le savoir-faire ancestral du fromage, les histoires partagées au coin du feu. Passer une nuit près d’un berger, dans l’isolement apaisant des montagnes, vous offrira une expérience rare et précieuse._\n\n_Ce séjour est une invitation à ralentir, à observer et à se reconnecter profondément à la nature. Une escapade qui réveille l’essence d’une vie simple, en harmonie avec les montagnes, et laisse en vous une empreinte inoubliable de calme, à emporter dans votre quotidien ensuite !_",
+    "text": "Laissez-vous porter par la douceur du Béarn et la sérénité des Pyrénées. Dans la vallée d’Aspe, les randonnées légères vous conduiront à travers les estives, ces pâturages d’altitude où les bergers vivent au rythme de leurs troupeaux et de la nature environnante. Ici, le temps semble suspendu, et chaque rencontre devient un moment privilégié.__Au fil des sentiers, découvrez les traditions vivantes des bergers : la traite des brebis, le savoir-faire ancestral du fromage, les histoires partagées au coin du feu. Passer une nuit près d’un berger, dans l’isolement apaisant des montagnes, vous offrira une expérience rare et précieuse.__Ce séjour est une invitation à ralentir, à observer et à se reconnecter profondément à la nature. Une escapade qui réveille l’essence d’une vie simple, en harmonie avec les montagnes, et laisse en vous une empreinte inoubliable de calme, à emporter dans votre quotidien ensuite !_",
     "author": "Romain",
     "affixeAuthor": "fondateur d'Odysway et amoureux de la vallée d'Aspe"
   },
@@ -85,7 +85,7 @@
     "La participation financière pour le berger"
   ],
   "slug": "sejour-berger-bearn",
-  "description": "_Laissez-vous porter par la douceur du Béarn et la sérénité des Pyrénées. Dans la vallée d’Aspe, les randonnées légères vous conduiront à travers les estives, ces pâturages d’altitude où les bergers vivent au rythme de leurs troupeaux et de la nature environnante. Ici, le temps semble suspendu, et chaque rencontre devient un moment privilégié._\n\n_Au fil des sentiers, découvrez les traditions vivantes des bergers : la traite des brebis, le savoir-faire ancestral du fromage, les histoires partagées au coin du feu. Passer une nuit près d’un berger, dans l’isolement apaisant des montagnes, vous offrira une expérience rare et précieuse._\n\n_Ce séjour est une invitation à ralentir, à observer et à se reconnecter profondément à la nature. Une escapade qui réveille l’essence d’une vie simple, en harmonie avec les montagnes, et laisse en vous une empreinte inoubliable de calme, à emporter dans votre quotidien ensuite !_",
+  "description": "Laissez-vous porter par la douceur du Béarn et la sérénité des Pyrénées. Dans la vallée d’Aspe, les randonnées légères vous conduiront à travers les estives, ces pâturages d’altitude où les bergers vivent au rythme de leurs troupeaux et de la nature environnante. Ici, le temps semble suspendu, et chaque rencontre devient un moment privilégié.__Au fil des sentiers, découvrez les traditions vivantes des bergers : la traite des brebis, le savoir-faire ancestral du fromage, les histoires partagées au coin du feu. Passer une nuit près d’un berger, dans l’isolement apaisant des montagnes, vous offrira une expérience rare et précieuse.__Ce séjour est une invitation à ralentir, à observer et à se reconnecter profondément à la nature. Une escapade qui réveille l’essence d’une vie simple, en harmonie avec les montagnes, et laisse en vous une empreinte inoubliable de calme, à emporter dans votre quotidien ensuite !_",
   "emailDescription": "👉  Si vous souhaitez vivre une immersion authentique, découvrir le quotidien d'un berger et vous plonger dans les magnifiques paysages qu'offre la vallée d'Ossau, ce voyage est fait pour vous ! ",
   "metaDescription": "Voyagez autrement au coeur des Pyrénées et découvrez le mode de vie unique et traditionnel des bergers dans les estives . Partez en randonnée avec un guide à travers la vallée d'Aspe, vallée de France où il y a le plus de bergers ! ",
   "badgeSection": {
@@ -235,7 +235,7 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg",
+    "src": "/images/voyages/sejour-berger-bearn/photo-berger-france-odysway.jpg",
     "alt": "image principale du voyage Vis ma vie de berger dans les Pyrénées"
   },
   "imageSecondary": {
