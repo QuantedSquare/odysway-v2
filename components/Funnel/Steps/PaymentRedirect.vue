@@ -103,6 +103,7 @@
                     {{ page.payment.pay_stripe_button }}
                   </v-btn>
                   <v-btn
+                    v-if="route.query.type === 'full'"
                     class="ml-md-4 bg-secondary"
                     :loading="loadingSession"
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
@@ -204,6 +205,7 @@ const almaPay = async () => {
 
   const dataForAlmaSession = {
     dealId: dealId.value,
+    paymentType: route.query.type,
     contact: deal.value.contact,
     currentUrl: route.fullPath,
     insuranceImg: props.page.assurance_img || 'https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW"',
@@ -214,6 +216,8 @@ const almaPay = async () => {
       amount: +route.query.amount * 100,
     })
   }
+
+  console.log('deal', dataForAlmaSession)
   console.log('data for alma pay', dataForAlmaSession)
 
   const checkoutLink = await $fetch('/api/v1/alma/', {

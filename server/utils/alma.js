@@ -23,7 +23,7 @@ const createAlmaSession = async (order) => {
 
   const acDeal = await activecampaign.getDealById(order.dealId)
   const customFields = await activecampaign.getDealCustomFields(order.dealId)
-  const deal = { ...acDeal.deal, ...customFields }
+  const deal = { ...acDeal.deal, ...customFields, paymentType: order.paymentType }
   const { contact } = await activecampaign.getClientById(deal.contact)
 
   if (!deal.totalTravelPrice || deal.totalTravelPrice <= 0) {
@@ -70,7 +70,6 @@ const createAlmaSession = async (order) => {
   }
 
   const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}`)
-
   const cancelUrl = encodeURI(`${BASE_URL}${order.currentUrl}`)
 
   const paymentBody = {
@@ -143,12 +142,10 @@ const retrievePayment = async (paymentId) => {
 const handlePaymentSession = async (session) => {
   const method = 'Alma'
   const order = session.custom_data
-  const totalAmount = session.purchase_amount
+  const totalAmount = session.custom_data.totalTravelPrice
 
   console.log('ALMA SESSION in stripe module', session)
 
-  const directPayment = !order.isSold && order.isPayment && !order.isAdvance // check here
-  console.log('directPayment', directPayment)
   // Fetch Deal Data
   const fetchedDeal = await activecampaign.getDealById(order.id)
   const customFields = await activecampaign.getDealCustomFields(order.id)
@@ -192,14 +189,6 @@ const handlePaymentSession = async (session) => {
   console.log('contact', contact)
   // Chapka notify
 
-  // const inssuranceItem = order.insuranceChoice
-
-  // console.log('INSSURANCE ITEM', inssuranceItem)
-
-  // if (inssuranceItem && !isDev) {
-  //   chapka.notify(order, inssuranceItem, customFields)
-  // }
-
   if (deal.insurance !== 'Aucune Assurance' && !isDev) {
     const inssuranceItem = order.insuranceChoice
     Object.assign(deal, { pricePerTraveler: usePricePerTraveler(deal) })
@@ -207,55 +196,21 @@ const handlePaymentSession = async (session) => {
     console.log('===== Chapka notify sent =====')
   }
 
-  // AC Update toutes les valeur monaitaire sont en centimes
+  // AC Update toutes les valeurs monaitaires sont en centimes
   const totalPaid = +(customFields.alreadyPaid || 0) + +(totalAmount)
 
   const restToPay = +deal.value - totalPaid
 
-  // FALSE UNIQUEMENT SUR PAGE PAIEMENT ET REGLEMENT SOLDE
-  const isAdvance = order.isAdvance === true || order.isAdvance === 'true'
-
   console.log('====CUSTOM FIELDS=====', customFields)
 
-  const countUnderAge = +order.nbUnderAge || 0
-  const countTeen = +order.nbChildren || 0
-
-  const childrenReduction = countUnderAge * +order.promoChildren * 100 * !directPayment
-  const teenReduction = countTeen * +order.promoChildren * 100 * !directPayment // check if special promo for teen
-  // childrenReduction + teenReduction UNIQUEMENT AU PREMIER CALCUL
-  const restToPayPerTraveler = (restToPay + childrenReduction + teenReduction) / (isAdvance ? +order.selectedTravelersToPay : (+customFields.restTravelersToPay - +order.selectedTravelersToPay))
-
-  function restTravelerToPay() {
-    if (totalPaid >= +deal.value) {
-      return 0
-    }
-    else if (isAdvance) {
-      return +order.selectedTravelersToPay
-    }
-    else {
-      return +customFields.restTravelersToPay - +order.selectedTravelersToPay
-    }
-  }
-
   const dealData = {
-    deal: {
-      group: '2',
-      stage: totalPaid >= +deal.deal.value ? '8' : '6',
-      fields: [
-        {
-          customFieldId: 20,
-          fieldValue: totalPaid >= +deal.deal.value
-            ? 'Solde réglé'
-            : 'Acompte réglé',
-        },
-        { customFieldId: 21, fieldValue: 'Paiement OK' }, // Lien paiement
-        { customFieldId: 24, fieldValue: totalPaid }, // Field : AlreadyPaid
-        { customFieldId: 44, fieldValue: restToPay }, // Field : restToPay
-        { customFieldId: 28, fieldValue: restTravelerToPay() },
-        { customFieldId: 66, fieldValue: totalPaid >= +deal.deal.value ? 0 : restToPayPerTraveler }, // Solde restant par Voyageur à régler
-        { customFieldId: 82, fieldValue: customFields.paiementMethod ? `${customFields.paiementMethod} ${method}` : method }, // Payment method
-      ],
-    },
+    group: '2',
+    stage: +customFields.alreadyPaid > 0 ? '33' : '6', // check étape en cours
+    alreadyPaid: totalPaid,
+    restToPay: restToPay,
+    currentStep: totalPaid === +deal.value
+      ? 'Alma - Paiement OK'
+      : 'Alma - Paiement en cours',
   }
 
   console.log('==== Deal data =====', dealData.deal.fields)
