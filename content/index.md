@@ -116,7 +116,7 @@ au cœur du voyage
   imageSrc: images/voyages/trek-chez-lhabitant-nepal/9ri-cp-doc-qd-2k-et-ai-eid-u.png
   ---
   #title
-  [Voyager autrement]{style="color: rgba(43, 76, 82, 1)"}
+  [Voyager, autrement]{style="color: rgba(43, 76, 82, 1)"}
   
   #content-cols
     ::::icon-text-col
