@@ -120,7 +120,6 @@ const retrieveAlmaIds = async () => {
       console.error('Supabase error retrieving alma ids:', error)
       throw new Error(`Error retrieving alma ids: ${error.message}`)
     }
-    console.log('alma ids data:', data)
     return data ? data.map(row => row.id) : []
   }
   catch (error) {

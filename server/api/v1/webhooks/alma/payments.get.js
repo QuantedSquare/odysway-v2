@@ -46,7 +46,8 @@ export default defineEventHandler(async (event) => {
     }
 
     // Process payment session
-    await alma.handlePaymentSession(payment)
+    const response = await alma.handlePaymentSession(payment)
+    console.log('response', response)
 
     // Update contact in Brevo
     if (payment.customer?.email) {
