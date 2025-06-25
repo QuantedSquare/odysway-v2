@@ -1,14 +1,15 @@
 import axios from 'axios'
 // https://docs.almapay.com/reference/payment
 // https://github.com/QuantedSquare/odysway-v2/tree/a4faa65862d98ead284e632d6e8a23b8be4c0f1c/server/api/v1/alma
-const isDev = process.env.NODE_ENV !== 'production'
+const config = useRuntimeConfig()
 
-const BASE_URL = process.env.BASE_URL || 'http://localhost:3000'
+const isDev = config.public.environment !== 'production'
+
+const BASE_URL = config.public.siteURL || 'http://localhost:3000'
 
 const ALMA_KEY = isDev ? process.env.ALMA_KEY_DEV : process.env.ALMA_KEY_LIVE
-
 const BASE_ALMA_URL = isDev ? 'https://api.sandbox.getalma.eu/v1/' : 'https://api.getalma.eu/v1/'
-const IPN_URL = isDev ? 'https://odysway-v2-git-feat-alma-quanted-square.vercel.app' : 'https://odysway.com'
+const BASE_IPN_URL = isDev ? 'https://odysway-v2-git-feat-alma-quanted-square.vercel.app' : 'https://odysway.com'
 
 const headers = {
   'accept': 'application/json',
@@ -77,7 +78,7 @@ const createAlmaSession = async (order) => {
       installments_count: 3,
       deferred_months: 0,
       deferred_days: 0,
-      ipn_callback_url: `${IPN_URL}/api/v1/webhooks/alma/payments`,
+      ipn_callback_url: `${BASE_IPN_URL}/api/v1/webhooks/alma/payments`,
       locale: 'fr',
       expires_after: 2880,
       capture_method: 'automatic',
