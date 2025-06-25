@@ -170,16 +170,25 @@ au cœur du voyage
 ::color-container{color="grey-light"}
   :::horizontal-carousel
   #title
-  [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos départs garantis]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
+    ::::voyage-col-card{slug="trek-chez-lhabitant-nepal"}
+    ::::
+  
+    ::::voyage-col-card{slug="voyage-perou-trek-immersion-chez-l-habitant"}
+    ::::
+  
     ::::voyage-col-card{slug="sejour-berger-bearn"}
+    ::::
+  
+    ::::voyage-col-card{slug="voyage-hiver-laponie-finlande"}
     ::::
   
     ::::voyage-col-card{slug="decouvrez-photo-animaliere-jura"}
     ::::
   
-    ::::voyage-col-card{slug="photographie-animaliere-vosges"}
+    ::::voyage-col-card{slug="voyage-costa-rica-immersion-communaute-locale"}
     ::::
   :::
 ::
@@ -207,10 +216,10 @@ au cœur du voyage
 ::color-container{color="soft-blush"}
   :::newsletter-container
   #title
-  [Nos bonnes idées 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
+  [Nos (bonnes) idées voyage 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
   
   #subtitle
-  [1 fois par mois, nos inspirations et idées pour voyager autrement]{style="color: #BDBDBD; font-weight: 500"}
+  [1 fois par mois, inspiration, récits et bons plans pour un voyage plus conscient.]{style="color: #BDBDBD; font-weight: 500"}
   :::
 ::
 
@@ -240,7 +249,7 @@ au cœur du voyage
 ::color-container{color="white"}
   :::home-review-container
   #title
-  [Ils en parlent mieux que nous]{style="color: rgba(43, 76, 82, 1)"} ❤️
+  [Ils en parlent mieux que nous]{style="color: rgba(43, 76, 82, 1)"}
   
   #cta
   Afficher plus de témoignages

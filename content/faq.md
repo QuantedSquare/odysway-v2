@@ -139,8 +139,6 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 ---
 ---
 
-## backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
-
 #section-title
   :::title-container
   #title
@@ -167,8 +165,6 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   ---
   hide: true
   ---
-  #question
-  
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
   
@@ -205,10 +201,6 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   
   #answer
   Nous pouvons exceptionnellement être contraints d'annuler un départ si le nombre minimum de participants n'est pas atteint. Cette décision vous sera communiquée au plus tard 30 jours avant le début du voyage pour des voyages dont la durée dépasse 6 jours, ou 15 jours avant pour des voyages de 6 jours maximum. Une solution de remplacement pourra vous être proposée.
-  :::
-
-  :::question-panel
-  #question
   :::
 
   :::question-panel
@@ -295,7 +287,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   
   La demande peut être faite directement **depuis la page du voyage** concerné, via le bouton “Échanger avec un conseiller” (ou via ce lien : <https://odysway.com/calendly>). Le voyageur choisit lui-même **le créneau d’appel selon ses disponibilités**, pour un échange téléphonique ou en visio. Cet échange permet d’évaluer si le séjour correspond pleinement à ses attentes.
   
-  Il est également possible de contacter l’équipe **directement par téléphone au +33 (0) 1 84 80 79 75** pour obtenir des réponses immédiates.
+  Il est par ailleurs possible de contacter l’équipe **directement par téléphone au +33 (0) 1 84 80 79 75** pour obtenir des réponses immédiates.
   :::
 
   :::question-panel
