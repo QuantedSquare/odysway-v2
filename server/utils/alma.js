@@ -214,7 +214,7 @@ const handlePaymentSession = async (session) => {
       : 'Alma - Paiement en cours',
   }
 
-  console.log('==== Deal data =====', dealData.deal.fields)
+  console.log('==== Deal data =====', dealData)
 
   const updatedDeal = await activecampaign.updateDeal(order.id, dealData)
   console.log('updatedDeal', updatedDeal)
