@@ -3,7 +3,7 @@
     v-show="reviews.length > 0"
     id="reviews-container"
     :fluid="width < 1600"
-    class="px-0 py-0"
+    class="px-0 py-0 mb-4"
   >
     <v-row
       align="center"
@@ -19,38 +19,23 @@
       </v-col>
       <v-spacer />
       <v-col
-        v-show="displayButton"
+        v-if="displayButton"
         cols="12"
         md="auto"
+        class="d-flex ga-2"
       >
-        <v-btn
-          icon
-          :color="arrivedState.left ? 'white' : color"
-          :disabled="arrivedState.left"
-          class="mr-2 carousel-nav-btn"
-          elevation="5"
-          :size="mdAndUp ? 'large' : 'small'"
+        <CustomChevronBtn
+          :arrived-state="arrivedState.left"
+          :color="color"
+          orientation="left"
           @click="x -= scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronLeft"
-            :color="arrivedState.left ? color : 'white'"
-          />
-        </v-btn>
-        <v-btn
-          icon
-          :color="arrivedState.right ? 'white' : color"
-          :disabled="arrivedState.right"
-          class="carousel-nav-btn"
-          elevation="5"
-          :size="mdAndUp ? 'large' : 'small'"
+        />
+        <CustomChevronBtn
+          :arrived-state="arrivedState.right"
+          :color="color"
+          orientation="right"
           @click="x += scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronRight"
-            :color="arrivedState.right ? color : 'white'"
-          />
-        </v-btn>
+        />
       </v-col>
     </v-row>
     <div ref="items-list">
@@ -80,6 +65,9 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 import _ from 'lodash'
+import { useImage } from '#imports'
+
+const img = useImage()
 
 const route = useRoute()
 defineProps({
@@ -153,5 +141,8 @@ const { data: reviews } = await useAsyncData('reviews', async () => {
 
 .carousel-nav-btn:disabled {
   color: white !important;
+}
+.disabled-shadow{
+  box-shadow: 0px 6px 16px 0px #2222231A!important;
 }
 </style>

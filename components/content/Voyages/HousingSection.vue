@@ -18,34 +18,20 @@
       <v-col
         v-if="displayButton"
         cols="auto"
+        class="d-flex ga-2"
       >
-        <v-btn
-          icon
+        <CustomChevronBtn
+          :arrived-state="arrivedState.left"
           :color="color"
-          :disabled="arrivedState.left"
-          class="mr-2"
-          elevation="5"
-          :size="mdAndUp ? 'default' : 'small'"
+          orientation="left"
           @click="x -= scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronLeft"
-            color="white"
-          />
-        </v-btn>
-        <v-btn
-          icon
+        />
+        <CustomChevronBtn
+          :arrived-state="arrivedState.right"
           :color="color"
-          :disabled="arrivedState.right"
-          elevation="5"
-          :size="mdAndUp ? 'default' : 'small'"
+          orientation="right"
           @click="x += scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronRight"
-            color="white"
-          />
-        </v-btn>
+        />
       </v-col>
     </v-row>
     <div ref="items-list">

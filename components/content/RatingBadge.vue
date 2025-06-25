@@ -1,7 +1,8 @@
 <template>
-  <NuxtLink
+  <div
     v-if="!noLink"
-    :to="`#reviews-container`"
+    style="cursor: pointer;"
+    @click="scrollToReviews"
   >
     <v-btn
       v-if="rating"
@@ -39,7 +40,7 @@
         Nouveau
       </span>
     </v-btn>
-  </NuxtLink>
+  </div>
   <div v-else>
     <v-btn
       v-if="rating"
@@ -104,4 +105,18 @@ defineProps({
     default: false,
   },
 })
+
+const scrollToReviews = () => {
+  const reviewsContainer = document.getElementById('reviews-container')
+  if (reviewsContainer) {
+    // Update the URL hash
+    window.location.hash = 'reviews-container'
+
+    // Scroll to the element with smooth behavior
+    reviewsContainer.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
+}
 </script>
