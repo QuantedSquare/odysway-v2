@@ -14,9 +14,8 @@ export default defineEventHandler(async (event) => {
     const ids = await alma.retrieveAlmaIds()
 
     if (ids && ids.includes(pid)) {
-      console.log('Payment already handled:', pid)
+      console.log('Payment already handled in supabase:', pid)
       setResponseStatus(event, 200)
-      return { message: 'Payment already handled', paymentId: pid }
     }
 
     // Insert payment ID to prevent duplicate processing
@@ -41,7 +40,10 @@ export default defineEventHandler(async (event) => {
     const payment = await alma.retrievePayment(pid)
     console.log('retrieved payment', payment)
 
-    if (!payment) {
+    if (payment.state === 'success') {
+      setResponseStatus(event, 200)
+    }
+    else if (!payment) {
       throw createError({
         statusCode: 404,
         statusMessage: 'Payment not found',
