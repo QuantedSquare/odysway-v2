@@ -219,7 +219,7 @@ au cœur du voyage
   [Nos (bonnes) idées voyage 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
   
   #subtitle
-  [1 fois par mois, inspiration, récits et bons plans pour un voyage plus conscient.]{style="color: #BDBDBD; font-weight: 500"}
+  [1 fois par mois, inspirations, récits et bons plans pour un voyage plus conscient.]{style="color: #BDBDBD; font-weight: 500"}
   :::
 ::
 
