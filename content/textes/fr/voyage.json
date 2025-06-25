@@ -11,26 +11,26 @@
     "pricePrefix": "À partir de",
     "priceSuffix": "/pers",
     "dateText": "Dates disponibles",
-    "dateButtonText": "Voir tous les départs +",
+    "dateButtonText": "Voir tous les départs",
     "ctaCall": {
-      "text": "Contactez un expert en voyage",
-      "avatar": "/images/team/romain.webp",
+      "text": "Parler avec une spécialiste",
+      "avatar": "/images/team/lucie.webp",
       "to": "/calendly"
     },
     "ctaBottom": {
       "list": [
-        "**15 jours** pour changer d'avis",
-        "**Paiement en 3 fois**(Alma)",
+        "Annulation gratuite jusqu'à **30 jours** avant le départ",
+        "**Paiement en 3 fois** (Alma)",
         "Paiement par **chèque vacances** (ANCV)"
       ]
     },
-    "privatisationText": "Demander une privatisation de ce voyage"
+    "privatisationText": "Privatiser ce voyage"
   },
   "authorNote": {
-    "title": "En deux mots"
+    "title": "L’esprit du voyage"
   },
   "experiencesBlock": {
-    "title": "Ce qui vous attend",
+    "title": "Ce que vous allez vivre",
     "icon": "mdiHeart",
     "iconColor": "yellow",
     "backgroundColor": "yellow-light"
@@ -44,7 +44,7 @@
   "housingTypeTitle": "Type de logement",
   "housingMoodTitle": "L'ambiance du logement",
   "dateSections": {
-    "title": "Quel départ vous intéresse ?",
+    "title": "Prochains départs disponibles",
     "pricePrefix": "à partir de",
     "priceSuffix": "/pers",
     "bookingButtonText": "Voir tous les départs",
@@ -55,8 +55,8 @@
     "disabledButtonColor": "grey",
     "ctaList": {
       "list": [
-        "**15 jours** pour changer d'avis",
-        "**Paiement en 3 fois**(Alma)",
+        "Annulation gratuite jusqu'à **30 jours** avant le départ",
+        "**Paiement en 3 fois** (Alma)",
         "Paiement par **chèque vacances** (ANCV)"
       ]
     },
@@ -80,7 +80,7 @@
   },
   "indivSection": {
     "titleOnlyPrivatisationAvailable": "Ce voyage vous intéresse mais pas de dates proposées ?",
-    "title": "Vous préférez partir seul? C'est aussi possible.",
+    "title": "Vous préférez partir seul ? C'est possible !",
     "backgroundColor": "grey-light-2",
     "textButton": "Je privatise ce voyage",
     "textButtonDevis": "Demander un devis",
@@ -94,7 +94,7 @@
     "colorExclude": "secondary"
   },
   "reviewsSection": {
-    "title": "Des voyageurs épanouis",
+    "title": "Ils en parlent mieux que nous",
     "ratingColor": "secondary"
   },
   "faqSection": {
@@ -104,7 +104,7 @@
     "buttonColor": "secondary",
     "to": "/contact",
     "avatar": "/images/team/romain.webp",
-    "subtitle": "Autres questions? Notre équipe est là pour vous renseigner",
+    "subtitle": "Autres questions ? Notre équipe est là pour vous renseigner",
     "description": "Lorem ipsum dolor sit amet dolor consectetur adipiscing elit"
   },
   "whySection": {

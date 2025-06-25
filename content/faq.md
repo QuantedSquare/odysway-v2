@@ -168,6 +168,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   hide: true
   ---
   #question
+  
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
   
@@ -292,7 +293,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   #answer
   Oui, il est tout à fait possible d’échanger avec un conseiller Odysway avant toute réservation. Les conseillers connaissent en profondeur les voyages proposés et peuvent répondre aux questions concernant le programme, le niveau physique requis, l’hébergement ou l’organisation sur place.
   
-  La demande peut être faite directement **depuis la page du voyage** concerné, via le bouton “Échanger avec un conseiller” (ou via ce lien : https\://odysway.com/calendly). Le voyageur choisit lui-même **le créneau d’appel selon ses disponibilités**, pour un échange téléphonique ou en visio. Cet échange permet d’évaluer si le séjour correspond pleinement à ses attentes.
+  La demande peut être faite directement **depuis la page du voyage** concerné, via le bouton “Échanger avec un conseiller” (ou via ce lien : <https://odysway.com/calendly>). Le voyageur choisit lui-même **le créneau d’appel selon ses disponibilités**, pour un échange téléphonique ou en visio. Cet échange permet d’évaluer si le séjour correspond pleinement à ses attentes.
   
   Il est également possible de contacter l’équipe **directement par téléphone au +33 (0) 1 84 80 79 75** pour obtenir des réponses immédiates.
   :::
