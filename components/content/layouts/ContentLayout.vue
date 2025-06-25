@@ -110,19 +110,19 @@ const { isCategory, isExperience, isDestination, pageContent } = defineProps({
   },
 })
 
-const { data: categories } = useAsyncData('categories', () => {
+const { data: categories } = useAsyncData('categories-on-content-layout', () => {
   if (isCategory) {
     return queryCollection('categories').where('showOnHome', '=', true).select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
   }
   return null
-})
+}, { watch: [isCategory, isExperience] })
 
-const { data: experiences } = useAsyncData('experiences', () => {
+const { data: experiences } = useAsyncData('experiences-on-content-layout', () => {
   if (isExperience) {
     return queryCollection('experiences').where('published', '=', true).all()
   }
   return null
-})
+}, { watch: [isCategory, isExperience] })
 
 // const { data: destinations } = useAsyncData('destinations', () => {
 //   if (isDestination && selectedDestination) {

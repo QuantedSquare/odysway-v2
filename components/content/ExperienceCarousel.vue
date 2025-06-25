@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-const { data: experiences } = await useAsyncData('experiences', () => {
+const { data: experiences } = await useAsyncData('experiences-carousel', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome', 'published').where('published', '=', true).all()
 })
 </script>
