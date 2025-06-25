@@ -114,7 +114,7 @@ const notify = (stripeSession, insuranceItem, dealCustomFields) => {
     reference: order.dealId.toString(),
     formule: insuranceType,
     prime: (insuranceItem.amount_total / 100).toFixed(2),
-    email: stripeSession.customer_details.email,
+    email: stripeSession.customer_details.email || stripeSession.customer.email,
     provenance: 'FR',
     destination: order.countries,
     nombre: insuranceItem.quantity.toString(),

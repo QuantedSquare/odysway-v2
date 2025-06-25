@@ -1,3 +1,6 @@
+const config = useRuntimeConfig()
+const isDev = config.public.environment !== 'production'
+
 export default defineEventHandler(async (event) => {
   try {
     const query = getQuery(event)
@@ -52,13 +55,13 @@ export default defineEventHandler(async (event) => {
     console.log('Payment session handled successfully')
 
     // Update contact in Brevo
-    if (payment.customer?.email) {
+    if (!isDev && payment.customer?.email) {
       try {
         await brevo.updateContactListId(payment.customer.email, 14) // Payé
         console.log('Brevo contact updated successfully')
       }
       catch (brevoErr) {
-        console.warn('Failed to update Brevo contact:', brevoErr.message)
+        console.error('Failed to update Brevo contact:', brevoErr.message)
       }
     }
 

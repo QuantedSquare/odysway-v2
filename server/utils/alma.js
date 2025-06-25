@@ -186,10 +186,7 @@ const handlePaymentSession = async (session) => {
       .eq('id', bookedDate.travel_date_id)
   }
 
-  const { contact } = await activecampaign.getClientById(deal.contact)
-  console.log('contact', contact)
   // Chapka notify
-
   if (deal.insurance !== 'Aucune Assurance' && !isDev) {
     const inssuranceItem = order.insuranceChoice
     Object.assign(deal, { pricePerTraveler: usePricePerTraveler(deal) })
@@ -219,11 +216,14 @@ const handlePaymentSession = async (session) => {
   const updatedDeal = await activecampaign.updateDeal(order.id, dealData)
   console.log('updatedDeal', updatedDeal)
 
+  const { contact } = await activecampaign.getClientById(deal.contact)
+  console.log('contact', contact)
+
   if (session.processing_status === 'captured') {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€`,
+          deal.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€`,
       },
 
     })
@@ -233,7 +233,7 @@ const handlePaymentSession = async (session) => {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€ - Paiement annulé`,
+          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€ - Paiement annulé`,
       },
 
     })
