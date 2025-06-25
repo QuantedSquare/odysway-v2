@@ -9,11 +9,12 @@
   "slug": "vosges",
   "regions": [
     {
-      "nom": "Europe"
+      "nom": "France"
     },
     {
       "nom": "Afrique"
-    }
+    },
+    {}
   ],
   "image": {
     "src": "/images/destinations/jsDezJwRlmgBcp7vYFow.jpg",

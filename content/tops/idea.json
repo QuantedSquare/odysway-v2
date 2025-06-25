@@ -1,5 +1,5 @@
 {
-  "title": "Idée de voyage",
+  "title": "Les voyages du moment",
   "description": "Les voyages les plus populaires d'Europe",
   "contenuOnglet": [
     {
@@ -24,7 +24,7 @@
         {
           "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
           "slug": "bali-menjangan-sidemen"
-        }          
+        }
       ]
     },
     {
