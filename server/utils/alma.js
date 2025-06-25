@@ -151,11 +151,15 @@ const handlePaymentSession = async (session) => {
   console.log('ALMA SESSION in stripe module', session)
 
   const directPayment = !order.isSold && order.isPayment && !order.isAdvance // check here
-
+  console.log('directPayment', directPayment)
   // Fetch Deal Data
   const fetchedDeal = await activecampaign.getDealById(order.id)
   const customFields = await activecampaign.getDealCustomFields(order.id)
   const deal = { ...fetchedDeal.deal, ...customFields }
+
+  console.log('fetchedDeal', fetchedDeal)
+  console.log('customFields', customFields)
+  console.log('deal', deal)
 
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
@@ -164,6 +168,8 @@ const handlePaymentSession = async (session) => {
     .eq('deal_id', order.id)
     .select('*')
     .single()
+
+  console.log('bookedDate', bookedDate)
   if (error) {
     console.error('Error updating booked_dates', error)
   }
@@ -177,6 +183,7 @@ const handlePaymentSession = async (session) => {
     if (sumAllBookedError) return { error: sumAllBookedError.message }
 
     const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+    console.log('totalBooked', totalBooked)
     // Update the travel_dates.booked_seat
     await supabase
       .from('travel_dates')
@@ -185,7 +192,7 @@ const handlePaymentSession = async (session) => {
   }
 
   const { contact } = await activecampaign.getClientById(deal.contact)
-
+  console.log('contact', contact)
   // Chapka notify
 
   // const inssuranceItem = order.insuranceChoice
@@ -254,17 +261,18 @@ const handlePaymentSession = async (session) => {
     },
   }
 
-  console.log('====DealDataFromWebhookStripe=====', dealData.deal.fields)
+  console.log('==== Deal data =====', dealData.deal.fields)
 
-  activecampaign.updateDeal(order.id, dealData)
+  const updatedDeal = await activecampaign.updateDeal(order.id, dealData)
+  console.log('updatedDeal', updatedDeal)
 
-  activecampaign.addNote(order.id, {
+  const addedNote = await activecampaign.addNote(order.id, {
     note: {
       note: `Paiement CB - ${method} -  ${
         deal.firstName} ${deal.lastName} - ${deal.email} - ${totalAmount / 100}€`,
     },
   })
-
+  console.log('addedNote', addedNote)
   if (!isDev) {
     axios({
       url: process.env.SLACK_URL_PAIEMENTS,

@@ -25,6 +25,8 @@ export default defineEventHandler(async (event) => {
       .insert([{ id: pid }])
       .select()
 
+    console.log('insertion alma id in alma_ids', data)
+
     if (error) {
       console.error('Error inserting alma ID:', error)
       throw createError({
@@ -37,6 +39,7 @@ export default defineEventHandler(async (event) => {
 
     // Retrieve and process payment
     const payment = await alma.retrievePayment(pid)
+    console.log('retrieved payment', payment)
 
     if (!payment) {
       throw createError({
@@ -47,12 +50,13 @@ export default defineEventHandler(async (event) => {
 
     // Process payment session
     const response = await alma.handlePaymentSession(payment)
-    console.log('response', response)
+    console.log('response handle payment session', response)
 
     // Update contact in Brevo
     if (payment.customer?.email) {
       try {
-        await brevo.updateContactListId(payment.customer.email, 14) // Payé
+        const brevoResponse = await brevo.updateContactListId(payment.customer.email, 14) // Payé
+        console.log('brevoResponse', brevoResponse)
       }
       catch (brevoErr) {
         console.warn('Failed to update Brevo contact:', brevoErr.message)
