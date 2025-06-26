@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "server/api/v1/webhooks/alma/*.js": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/api/v1/webhooks/alma/payments",
