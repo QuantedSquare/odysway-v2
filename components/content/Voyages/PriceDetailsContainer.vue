@@ -91,6 +91,6 @@ defineProps({
 
 <style scoped>
 .custom-padding {
-  padding-left: 0 !important;
+  padding-inline: 0 !important;
 }
 </style>

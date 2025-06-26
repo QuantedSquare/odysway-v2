@@ -42,7 +42,7 @@
       <v-row
         v-if="smAndUp"
         ref="scrollContainer"
-        class="flex-nowrap overflow-auto hidden-scroll"
+        class="flex-nowrap overflow-auto hidden-scroll mb-4"
       >
         <v-col
           v-for="review in reviews"
@@ -57,11 +57,15 @@
           />
         </v-col>
       </v-row>
-      <v-row v-else>
+      <v-row
+        v-else
+        class="mb-8"
+      >
         <v-col
           v-for="review in reviews.slice(0, 3)"
           :key="review.id"
           cols="12"
+          class="pb-0"
         >
           <ReviewTraveller
             :review="review"
