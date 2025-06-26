@@ -17,12 +17,7 @@ const headers = {
   'Authorization': ALMA_KEY,
 }
 
-const testConfig = () => {
-  return config.public.environment
-}
-
 const createAlmaSession = async (order) => {
-  console.log('isDev', isDev, 'Base_ALMA_URL', BASE_ALMA_URL, 'config environment', config.public.environment)
   if (!order.dealId) {
     throw new Error('dealId is required')
   }
@@ -115,27 +110,25 @@ const createAlmaSession = async (order) => {
   }
 }
 
-const retrieveAlmaIds = async () => {
+const retrieveAlmaId = async (paymentId) => {
   try {
-    const { data, error } = await supabase.from('alma_ids').select()
+    const { data, error } = await supabase.from('alma_ids').select('id').eq('id', paymentId).maybeSingle()
     if (error) {
-      console.error('Supabase error retrieving alma ids:', error)
-      throw new Error(`Error retrieving alma ids: ${error.message}`)
+      console.error('Supabase error retrieving alma id:', error)
+      throw new Error(`Error retrieving alma id: ${error.message}`)
     }
-    return data ? data.map(row => row.id) : []
+    return data
   }
   catch (error) {
-    console.error('Error retrieving alma ids', error)
-    throw new Error('Error retrieving alma ids')
+    console.error('Error retrieving alma id', error)
+    throw new Error('Error retrieving alma id')
   }
 }
 
 const retrievePayment = async (paymentId) => {
-  console.log('isDev', isDev, 'Base_ALMA_URL', BASE_ALMA_URL)
   try {
     const res = await axios({
-      // url: `${BASE_ALMA_URL}payments/${paymentId}`,
-      url: `https://api.sandbox.getalma.eu/v1/payments/${paymentId}`,
+      url: `${BASE_ALMA_URL}payments/${paymentId}`,
       method: 'GET',
       headers,
     })
@@ -150,7 +143,7 @@ const retrievePayment = async (paymentId) => {
 const handlePaymentSession = async (session) => {
   const method = 'Alma'
   const order = session.custom_data
-  const totalAmount = session.custom_data.totalTravelPrice
+  const totalPaidAlma = session.payment_plan.reduce((acc, item) => acc + item.purchase_amount, 0)
 
   console.log('ALMA SESSION in stripe module', session)
 
@@ -158,10 +151,6 @@ const handlePaymentSession = async (session) => {
   const fetchedDeal = await activecampaign.getDealById(order.id)
   const customFields = await activecampaign.getDealCustomFields(order.id)
   const deal = { ...fetchedDeal.deal, ...customFields }
-
-  console.log('fetchedDeal', fetchedDeal)
-  console.log('customFields', customFields)
-  console.log('deal', deal)
 
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
@@ -171,13 +160,10 @@ const handlePaymentSession = async (session) => {
     .select('*')
     .single()
 
-  console.log('bookedDate', bookedDate)
   if (error) {
     console.error('Error updating booked_dates', error)
   }
   else {
-    console.log('booked_dates updated', bookedDate)
-
     const { data: allBooked, error: sumAllBookedError } = await supabase
       .from('booked_dates')
       .select('booked_places')
@@ -201,9 +187,7 @@ const handlePaymentSession = async (session) => {
     console.log('===== Chapka notify sent =====')
   }
 
-  // AC Update toutes les valeurs monaitaires sont en centimes
-  const totalPaid = +(customFields.alreadyPaid || 0) + +(totalAmount) // check how much paid (we can see it in payment_plan)
-
+  const totalPaid = +(customFields.alreadyPaid || 0) + +(totalPaidAlma)
   const restToPay = +deal.value - totalPaid
 
   console.log('====CUSTOM FIELDS=====', customFields)
@@ -214,8 +198,8 @@ const handlePaymentSession = async (session) => {
     alreadyPaid: totalPaid,
     restToPay: restToPay,
     currentStep: totalPaid === +deal.value
-      ? 'Alma - Paiement OK'
-      : 'Alma - Paiement en cours',
+      ? 'Paiement OK'
+      : 'Paiement en cours',
   }
 
   console.log('==== Deal data =====', dealData)
@@ -230,7 +214,7 @@ const handlePaymentSession = async (session) => {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€`,
+          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaid / 100}€`,
       },
 
     })
@@ -240,7 +224,7 @@ const handlePaymentSession = async (session) => {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€ - Paiement annulé`,
+          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaid / 100}€ - Paiement annulé`,
       },
 
     })
@@ -282,9 +266,8 @@ const handlePaymentSession = async (session) => {
 }
 
 export default {
-  retrieveAlmaIds,
+  retrieveAlmaId,
   createAlmaSession,
   handlePaymentSession,
   retrievePayment,
-  testConfig,
 }
