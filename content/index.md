@@ -40,12 +40,12 @@ schemaOrg:
 head:
   script: []
 title: "Odysway : Voyages en immersion humaine et responsable"
-description: Odysway propose des voyages en immersion, éthiques et humains, en
-  France et à l’étranger. Découvrez le monde autrement.
+description: Odysway est une agence qui propose des voyages en immersion,
+  éthiques et humains, en France et à l’étranger. Découvrez le monde autrement.
 navigation:
   title: Accueil
   description: "Explorez tous nos voyages et plongez dans l’univers d’Odysway :
-    immersion, rencontres."
+    immersion, rencontres, découvertes."
 ---
 
 ::home-hero-section
