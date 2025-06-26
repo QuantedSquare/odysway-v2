@@ -61,13 +61,9 @@
 </template>
 
 <script setup>
-import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 import _ from 'lodash'
-import { useImage } from '#imports'
-
-const img = useImage()
 
 const route = useRoute()
 defineProps({

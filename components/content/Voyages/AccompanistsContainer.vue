@@ -13,7 +13,7 @@
       <v-col class="text-grey-darken-3">
         <div
           v-if="voyageRef.accompanistsDescription"
-          class="mb-4"
+          class="mb-7"
         >
           {{ voyageRef.accompanistsDescription }}
         </div>

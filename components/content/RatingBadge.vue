@@ -8,7 +8,7 @@
       v-if="rating"
       color="white"
       rounded="pill"
-      :height="mdAndUp ? 46 : 30"
+      :height="mdAndUp ? 46 : 36"
       class="btn-shadow bg-white px-2 px-md-4"
     >
       <div class="d-flex align-center ga-1">
@@ -46,7 +46,7 @@
       v-if="rating"
       color="white"
       rounded="pill"
-      :height="mdAndUp ? 46 : 30"
+      :height="mdAndUp ? 46 : 36"
       class="btn-shadow bg-white px-2 px-md-4"
     >
       <div class="d-flex align-center ga-1">

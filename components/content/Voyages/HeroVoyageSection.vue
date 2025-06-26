@@ -8,13 +8,14 @@
         cols="12"
         md="8"
       >
-        <h1 class="text-primary text-h1 text-md-h2 font-weight-bold  mb-md-0">
+        <h1 class="text-primary text-h1 text-md-h2 font-weight-bold mb-md-0">
           {{ voyage.title }}
+        </h1>
+        <div class="mt-3 d-flex d-md-none align-center ga-4">
           <RatingBadge
             :rating="voyage.rating"
             :comments="voyage.comments"
             elevation="2"
-            class="mr-3 d-md-none"
           />
           <v-btn
             ref="shareBtn"
@@ -33,7 +34,7 @@
               <span class="mt-1">Partager</span>
             </div>
           </v-btn>
-        </h1>
+        </div>
       </v-col>
       <v-col class="d-none d-md-flex align-start justify-end ga-4 mb-3 mb-md-0">
         <RatingBadge
@@ -141,7 +142,7 @@
       <v-col
         v-if="voyage.videoLinks?.length > 0"
         cols="auto"
-        class="px-0 px-md-3"
+        class="pl-1"
       >
         <VideoDialog
           :videos-link="voyage.videoLinks"

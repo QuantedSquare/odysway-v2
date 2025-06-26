@@ -42,7 +42,7 @@
     </v-row>
     <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
-        <div class="text-h4 font-weight-bold text-primary">
+        <div class="text-h4 font-weight-bold text-primary text-center">
           {{ indivSection.title }}
         </div>
         <v-btn
@@ -57,7 +57,7 @@
     </v-row>
     <v-row v-if="isPrivatisationAvailable && !isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
-        <div class="text-h4 font-weight-bold text-primary">
+        <div class="text-h4 font-weight-bold text-primary text-center">
           {{ indivSection.titleOnlyPrivatisationAvailable }}
         </div>
         <v-btn

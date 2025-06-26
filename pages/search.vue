@@ -69,10 +69,9 @@
         <v-btn
           color="primary"
           variant="outlined"
-          size="large"
           class="text-body-1"
-          height="62px"
-          width="172px"
+          :height="lgAndUp ? '62px' : '46px'"
+          :width="lgAndUp ? '172px' : '142px'"
           @click="reinitiliazeFilter"
         >
           {{ searchContent?.resetButton || 'Réinitialiser' }}

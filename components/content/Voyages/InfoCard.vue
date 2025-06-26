@@ -190,7 +190,7 @@
             </v-col>
           </v-row>
         </template>
-        <template v-else>
+        <template v-else-if="!voyage.groupeAvailable">
           <v-row>
             <v-col cols="12">
               <div class="d-flex align-center ga-2">
@@ -258,7 +258,6 @@ const { stickyBlock, voyage } = defineProps({
     required: true,
   },
 })
-
 const getStatus = (date) => {
   if (date.displayed_status === 'soon_confirmed') {
     return {
