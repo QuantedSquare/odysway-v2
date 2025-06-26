@@ -3,7 +3,7 @@
     <div
       ref="content"
       class="text-content"
-      :class="{ truncated: !isExpanded }"
+      :class="{ truncated: !isExpanded && showReadMore }"
       :style="contentStyle"
     >
       <slot />

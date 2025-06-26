@@ -1,12 +1,12 @@
 {
-  "title": "Les voyages du moment",
-  "description": "Les voyages les plus populaires d'Europe",
+  "title": "Séjours en France",
+  "description": "Nos séjours en France",
   "contenuOnglet": [
     {
       "title": "Top voyages 1",
       "linksList": [
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
+          "title": "Voyages en Europe",
           "slug": "bali-menjangan-sidemen"
         },
         {

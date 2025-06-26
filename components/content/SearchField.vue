@@ -215,7 +215,7 @@ const months = computed(() => {
   ]
 })
 
-const { data: destinations, destinationsStatus } = useAsyncData('destinations', () => {
+const { data: destinations, destinationsStatus } = useAsyncData('destinations-in-search', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
 })
 const { data: regions, status: regionsStatus } = useAsyncData('regions', () => {
@@ -232,6 +232,17 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     destinations: topDestinations,
   }
+  console.log('topDestinations', topDestinations)
+
+  topRegion.destinations.push({
+    titre: 'France',
+    slug: 'france',
+    metaDescription: 'France',
+    published: true,
+    regions: ['Europe'],
+    image: null,
+    isTopDestination: true,
+  })
   // console.log('destinations', destinations.value)
   // console.log('regions', regions.value)
 
@@ -380,9 +391,13 @@ function searchFn() {
   const query = {}
 
   if (destinationChoice.value) {
+    console.log('destinationChoice', destinationChoice.value)
     if (isSelectionARegion.value) {
       // Use the stored region slug
       query.destination = selectedRegionSlug.value
+    }
+    if (destinationChoice.value === 'France') {
+      query.destination = 'france'
     }
     else {
       const found = destinations.value.find(d => d.titre === destinationChoice.value)

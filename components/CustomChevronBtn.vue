@@ -35,7 +35,6 @@ import { useTheme } from 'vuetify'
 const emit = defineEmits(['click'])
 
 const theme = useTheme()
-console.log(theme)
 
 const props = defineProps({
   arrivedState: {
@@ -61,7 +60,6 @@ const svgColor = computed(() => {
 
   // Get the actual color value from the theme
   const themeColor = theme.current.value.colors[props.color]
-  console.log('themeColor', themeColor)
   if (themeColor) {
     // Convert rgba to hex if needed, or return as is
     return themeColor
