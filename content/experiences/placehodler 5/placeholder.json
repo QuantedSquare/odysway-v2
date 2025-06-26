@@ -1,12 +1,12 @@
 {
-  "published": false,
-  "title": "Partager le quotidien",
-  "badgeTitle": "Partager...",
-  "slug": "partager-le-quotidien",
-  "discoveryTitle": "Partager le quotidien",
-  "seoTitle": "Partager le quotidien",
+  "published": true,
+  "title": "Plongée dans la culture",
+  "badgeTitle": "Plongée dans la culture",
+  "slug": "plongee-culture",
+  "discoveryTitle": "Plonger dans la culture",
+  "seoTitle": "voyages culturels",
   "image": {
-    "src": "images/Home/20250501-130525.jpg",
+    "src": "/images/voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg",
     "alt": "Culture Indienne"
   },
   "showOnHome": true
