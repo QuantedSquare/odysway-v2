@@ -17,8 +17,12 @@ const headers = {
   'Authorization': ALMA_KEY,
 }
 
+const testConfig = () => {
+  return config.public.environment
+}
+
 const createAlmaSession = async (order) => {
-  console.log('isDev', isDev, 'Base_ALMA_URL', BASE_ALMA_URL)
+  console.log('isDev', isDev, 'Base_ALMA_URL', BASE_ALMA_URL, 'config environment', config.public.environment)
   if (!order.dealId) {
     throw new Error('dealId is required')
   }
@@ -282,4 +286,5 @@ export default {
   createAlmaSession,
   handlePaymentSession,
   retrievePayment,
+  testConfig,
 }

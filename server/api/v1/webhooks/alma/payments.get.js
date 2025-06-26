@@ -104,6 +104,7 @@ export default defineEventHandler(async (event) => {
       return { error: 'Payment ID required' }
     }
 
+    console.log('test Config', alma.testConfig())
     // Just return success for now to test connectivity
     setResponseStatus(event, 200)
     return {
