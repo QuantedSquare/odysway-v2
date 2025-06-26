@@ -195,7 +195,7 @@ const handlePaymentSession = async (session) => {
   }
 
   // AC Update toutes les valeurs monaitaires sont en centimes
-  const totalPaid = +(customFields.alreadyPaid || 0) + +(totalAmount)
+  const totalPaid = +(customFields.alreadyPaid || 0) + +(totalAmount) // check how much paid (we can see it in payment_plan)
 
   const restToPay = +deal.value - totalPaid
 
@@ -223,7 +223,7 @@ const handlePaymentSession = async (session) => {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          deal.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€`,
+          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalAmount / 100}€`,
       },
 
     })

@@ -13,6 +13,17 @@ export default defineEventHandler(async (event) => {
       })
     }
 
+    // Retrieve and process payment
+    const payment = await alma.retrievePayment(pid)
+    console.log('retrieved payment', payment)
+
+    if (!payment) {
+      throw createError({
+        statusCode: 404,
+        statusMessage: 'Payment not found',
+      })
+    }
+
     // On pourrait gérér cette vérification dans retrieveAlmaIds
     const ids = await alma.retrieveAlmaIds()
 
@@ -38,17 +49,6 @@ export default defineEventHandler(async (event) => {
     }
 
     console.log('Alma Payment, inserted id in supabase:', data)
-
-    // Retrieve and process payment
-    const payment = await alma.retrievePayment(pid)
-    console.log('retrieved payment', payment)
-
-    if (!payment) {
-      throw createError({
-        statusCode: 404,
-        statusMessage: 'Payment not found',
-      })
-    }
 
     // Process payment session
     await alma.handlePaymentSession(payment)
