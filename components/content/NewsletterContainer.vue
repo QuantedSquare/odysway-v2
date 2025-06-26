@@ -143,13 +143,6 @@ const subscribeToNewsletter = async () => {
 :deep(.v-field-label) {
   font-weight: bold !important;
   color: rgb(var(--v-theme-grey)) !important;
-  font-size: 18px !important;
-  width: 100% !important;
-}
 
-@media (max-width: 500px) {
-  :deep(.v-field-label) {
-    font-size: 13px !important;
-  }
 }
 </style>
