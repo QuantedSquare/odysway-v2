@@ -232,7 +232,6 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     destinations: topDestinations,
   }
-  console.log('topDestinations', topDestinations)
 
   topRegion.destinations.push({
     titre: 'France',
@@ -243,8 +242,6 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     isTopDestination: true,
   })
-  // console.log('destinations', destinations.value)
-  // console.log('regions', regions.value)
 
   // Normal region mapping
   const regionGroups = regions.value.map((region) => {
@@ -257,7 +254,6 @@ const mappedDestinationsToRegions = computed(() => {
   })
   // filter out the france destination in the Europe region
   regionGroups.forEach((region) => {
-    console.log('region', region)
     if (region.title === 'Europe') {
       region.destinations = region.destinations.filter(d => !d.regions.some(r => r.nom === 'France'))
     }
@@ -391,7 +387,6 @@ function searchFn() {
   const query = {}
 
   if (destinationChoice.value) {
-    console.log('destinationChoice', destinationChoice.value)
     if (isSelectionARegion.value) {
       // Use the stored region slug
       query.destination = selectedRegionSlug.value
@@ -461,7 +456,6 @@ onMounted(() => {
 
   // Handle travelType parameter
   if (route.query.travelType) {
-    console.log('travelType', route.query.travelType)
     travelTypeChoice.value = route.query.travelType
   }
 

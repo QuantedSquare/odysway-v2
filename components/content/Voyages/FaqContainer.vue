@@ -57,7 +57,7 @@
                 <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
                   <NuxtLink
                     :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
-                    class="text-secondary"
+                    class="text-secondary font-weight-medium"
                   >{{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}</NuxtLink>
                 </span>
               </div>
