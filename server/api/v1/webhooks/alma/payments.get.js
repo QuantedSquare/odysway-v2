@@ -23,6 +23,7 @@ export default defineEventHandler(async (event) => {
         statusMessage: 'Payment not found',
       })
     }
+    setResponseStatus(event, 200)
 
     // On pourrait gérér cette vérification dans retrieveAlmaIds
     const ids = await alma.retrieveAlmaIds()

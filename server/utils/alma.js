@@ -18,6 +18,7 @@ const headers = {
 }
 
 const createAlmaSession = async (order) => {
+  console.log('isDev', isDev, 'Base_ALMA_URL', BASE_ALMA_URL)
   if (!order.dealId) {
     throw new Error('dealId is required')
   }
@@ -126,9 +127,11 @@ const retrieveAlmaIds = async () => {
 }
 
 const retrievePayment = async (paymentId) => {
+  console.log('isDev', isDev, 'Base_ALMA_URL', BASE_ALMA_URL)
   try {
     const res = await axios({
-      url: `${BASE_ALMA_URL}payments/${paymentId}`,
+      // url: `${BASE_ALMA_URL}payments/${paymentId}`,
+      url: `https://api.sandbox.getalma.eu/v1/payments/${paymentId}`,
       method: 'GET',
       headers,
     })
