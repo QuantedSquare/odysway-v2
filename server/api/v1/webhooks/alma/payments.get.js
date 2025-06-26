@@ -92,6 +92,7 @@ export default defineEventHandler(async (event) => {
   console.log('Method:', event.node.req.method)
   console.log('URL:', event.node.req.url)
   console.log('Headers:', JSON.stringify(event.node.req.headers, null, 2))
+  console.log('test Config', alma.testConfig())
 
   try {
     const query = getQuery(event)
@@ -104,7 +105,6 @@ export default defineEventHandler(async (event) => {
       return { error: 'Payment ID required' }
     }
 
-    console.log('test Config', alma.testConfig())
     // Just return success for now to test connectivity
     setResponseStatus(event, 200)
     return {
