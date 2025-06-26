@@ -1,9 +1,9 @@
 {
   "type": "Type",
-  "groupType": "Groupe",
+  "groupType": "Petits groupes",
   "soloType": "Solo",
   "days": "Jours",
   "startingFrom": "À partir de",
   "discoverDates": "Découvrir les dates",
   "requestQuote": "Demander un devis"
-} 
+}
