@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="px-2 px-md-4 pt-0"
+    class="px-2 px-md-4 pt-0 "
   >
     <SearchHeroSection
       :is-category="isCategory"
@@ -72,10 +72,13 @@
       thickness="2"
       class="mt-2 mb-4 mb-md-6"
     />
-
-    <slot name="indexContent" />
-    <slot name="slugContent" />
-    <slot name="blogPost" />
+    <ColorContainer
+      color=""
+    >
+      <slot name="indexContent" />
+      <slot name="slugContent" />
+      <slot name="blogPost" />
+    </ColorContainer>
   </v-container>
 </template>
 

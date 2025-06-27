@@ -12,7 +12,7 @@
       width="100%"
       height="400"
     />
-    <div class="mx-md-5">
+    <div class="mx-md-5 max-container-width">
       <v-container
         v-if="footer"
         fluid

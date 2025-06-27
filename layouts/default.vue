@@ -16,13 +16,12 @@
     <div class="whatsapp-button d-lg-none mb-16">
       <WhatsAppBtn />
     </div>
-    <!-- FAQ Section -->
+
     <ContentRenderer
       v-if="faqPage"
       :value="faqPage"
     />
-    <!-- End FAQ Section -->
-    <!-- Info Section -->
+
     <v-container
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
