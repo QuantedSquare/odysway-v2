@@ -1,16 +1,22 @@
 <template>
-  <ContentLayout>
+  <ContentLayout
+    :display-divider="false"
+  >
     <v-row>
       <SearchHeroSection
         v-if="destinations"
       />
     </v-row>
 
-    <template #indexContent>
-      <ContentRenderer
-        v-if="page"
-        :value="page"
-      />
+    <template
+      #indexContent
+    >
+      <div class=" pt-md-16">
+        <ContentRenderer
+          v-if="page"
+          :value="page"
+        />
+      </div>
     </template>
   </ContentLayout>
 </template>

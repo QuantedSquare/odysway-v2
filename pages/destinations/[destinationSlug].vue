@@ -2,21 +2,26 @@
   <ContentLayout
     :is-destination="true"
     :selected-destination="selectedDestination"
+    :display-divider="false"
   >
     <template #slugContent>
-      <DisplayVoyagesRow
-        :is-search="true"
-        :voyages="voyages"
-      />
+      <div class="pt-md-16 mt-10">
+        <DisplayVoyagesRow
+          :is-search="true"
+          :voyages="voyages"
+        />
+      </div>
     </template>
     <template
       v-if="destinationContentStatus === 'success' && destinationContent"
       #blogPost
     >
-      <ContentRenderer
-        v-if="destinationContent"
-        :value="destinationContent"
-      />
+      <div class="pt-md-16">
+        <ContentRenderer
+          v-if="destinationContent"
+          :value="destinationContent"
+        />
+      </div>
     </template>
   </ContentLayout>
 </template>

@@ -68,6 +68,7 @@
     </ColorContainer>
 
     <v-divider
+      v-if="displayDivider"
       thickness="2"
       class="mt-2 mb-4 mb-md-6"
     />
@@ -108,21 +109,28 @@ const { isCategory, isExperience, isDestination, pageContent } = defineProps({
     type: Object,
     default: () => {},
   },
+  displayDivider: {
+    type: Boolean,
+    default: true,
+  },
 })
+
+const isComputedCategory = computed(() => !!isCategory)
+const isComputedExperience = computed(() => !!isExperience)
 
 const { data: categories } = useAsyncData('categories-on-content-layout', () => {
   if (isCategory) {
     return queryCollection('categories').where('showOnHome', '=', true).select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
   }
   return null
-}, { watch: [isCategory, isExperience] })
+}, { watch: [isComputedCategory, isComputedExperience] })
 
 const { data: experiences } = useAsyncData('experiences-on-content-layout', () => {
   if (isExperience) {
     return queryCollection('experiences').where('published', '=', true).all()
   }
   return null
-}, { watch: [isCategory, isExperience] })
+}, { watch: [isComputedCategory, isComputedExperience] })
 
 // const { data: destinations } = useAsyncData('destinations', () => {
 //   if (isDestination && selectedDestination) {

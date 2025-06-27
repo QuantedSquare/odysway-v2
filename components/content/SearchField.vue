@@ -232,7 +232,6 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     destinations: topDestinations,
   }
-  console.log('topDestinations', topDestinations)
 
   topRegion.destinations.push({
     titre: 'France',
@@ -257,7 +256,6 @@ const mappedDestinationsToRegions = computed(() => {
   })
   // filter out the france destination in the Europe region
   regionGroups.forEach((region) => {
-    console.log('region', region)
     if (region.title === 'Europe') {
       region.destinations = region.destinations.filter(d => !d.regions.some(r => r.nom === 'France'))
     }
