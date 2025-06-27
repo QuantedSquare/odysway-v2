@@ -1,7 +1,6 @@
 <template>
   <v-container
-    class="subtle-shadow rounded-lg text-primary d-flex align-center pa-3 pa-sm-4 pa-md-8"
-    height="100%"
+    class="subtle-shadow rounded-lg text-primary d-flex align-center pa-3 pa-sm-4 pa-md-8 custom-height-card"
     fluid
   >
     <v-row>
@@ -28,7 +27,6 @@
             </div>
             <v-icon
               size="x-small"
-              class=""
             >
               {{ mdiArrowRight }}
             </v-icon>
@@ -49,7 +47,7 @@
           :booked-places="enrichedDate.status.status === 'full' ? enrichedDate.max_travelers : enrichedDate.booked_seat"
           :max-travellers="enrichedDate.max_travelers"
         />
-        <v-row class="d-flex align-center ga-2 mx-1 text-custom">
+        <v-row class="d-flex align-start ga-2 mx-1 text-custom  custom-chip-height">
           <v-chip
             color="primary"
           >
@@ -109,7 +107,7 @@
       <v-col
         cols="5"
         md="3"
-        class="pt-1 d-flex flex-column justify-center align-start  justify-lg-start"
+        class="pl-5 pl-md-2 pt-1 d-flex flex-column justify-center align-start  justify-lg-start"
       >
         <span
           class="text-h2 font-weight-black"
@@ -252,6 +250,14 @@ const formatLink = (date) => {
 </script>
 
 <style scoped>
+.custom-height-card{
+    height: 110%!important;
+
+  }
+  .custom-chip-height:deep(.v-chip){
+    height: 25px!important;
+  }
+
   .text-size-11 {
   font-size: 11px!important;
   }
@@ -263,19 +269,31 @@ const formatLink = (date) => {
   }
   .line-height-2 {
     line-height: 20px !important;
-  } .text-custom:deep(.v-chip){
+  }
+  .text-custom:deep(.v-chip){
     font-size: 11px!important;
   }
-
   .flex-direction-custom{
     flex-direction: column;
   }
-  @media (min-width: 400px) {
+  @media screen and  (min-width: 400px) {
     .flex-direction-custom{
       flex-direction: row;
     }
     .text-custom:deep(.v-chip){
-    font-size: 14px!important;
+    font-size: 16px!important;
   }
+  .custom-chip-height:deep(.v-chip){
+    height: 30px!important;
   }
+}
+
+@media screen and (min-width: 960px) {
+  .custom-height-card{
+    height: 100%!important;
+  }
+  .custom-chip-height:deep(.v-chip){
+    height: 46px!important;
+  }
+}
 </style>

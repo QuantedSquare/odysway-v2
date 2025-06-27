@@ -104,7 +104,7 @@
 import { useDisplay } from 'vuetify'
 
 const { smAndUp } = useDisplay()
-console.log('smAndUp', smAndUp.value)
+
 defineProps({
   rating: {
     type: Number,

@@ -189,8 +189,8 @@ function copyUrl() {
 <style scoped>
 .media-btns-position{
   position: absolute;
-  bottom: 9%;
-  left: 4%;
+  bottom: 46px;
+  left: 42px;
 }
 .custom-height{
   height: 455px;
@@ -198,7 +198,7 @@ function copyUrl() {
 @media screen and (max-width: 1280px) {
   .media-btns-position{
   position: absolute;
-  bottom: 30px;
+  bottom: 46px;
   left: 42px;
 }
 }
@@ -208,9 +208,9 @@ function copyUrl() {
   bottom: 15px;
   left: 20px;
 }
-.custom-height{
+  .custom-height{
   height: 270px;
-}
+  }
 }
 .custom-btn:deep(button){
   background-color: transparent!important;

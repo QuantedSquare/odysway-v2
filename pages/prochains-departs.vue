@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="pt-0 position-relative"
+    class="pt-0 position-relative max-container-width"
   >
     <div class="mb-6">
       <SearchHeroSection

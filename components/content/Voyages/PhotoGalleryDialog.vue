@@ -7,8 +7,8 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
-        :height="lgAndUp ? 58 : 40"
-        :width="lgAndUp ? 172: ''"
+        :height="mdAndUp ? 58 : 40"
+        :width="mdAndUp ? 172: ''"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
@@ -17,8 +17,8 @@
         <v-img
           :src="img('/icons/Camera.svg', { format: 'webp', quality: 70, width: 640 })"
           alt="Camera icon"
-          :width="lgAndUp ? 22 : 20"
-          :height="lgAndUp ? 22 : 20"
+          :width="mdAndUp ? 22 : 20"
+          :height="mdAndUp ? 22 : 20"
         />
 
         <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>
@@ -84,7 +84,7 @@ defineProps({
     required: true,
   },
 })
-const { lgAndUp } = useDisplay()
+const { mdAndUp } = useDisplay()
 const dialog = ref(false)
 </script>
 

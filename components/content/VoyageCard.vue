@@ -43,7 +43,7 @@
                     class="line-clamp-2"
                   >{{ voyage.title }}</div>
                   <v-tooltip
-                    v-if="voyage.title.length > 60"
+                    v-if="voyage.title.length > 50"
                     activator="parent"
                   >
                     <span>

@@ -231,7 +231,6 @@ const policies = ref([
     link: '/politique-de-confidentialite',
   },
 ])
-console.log(route)
 </script>
 
 <style scoped>

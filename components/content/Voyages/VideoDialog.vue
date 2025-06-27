@@ -5,8 +5,8 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
-        :height="lgAndUp ? 58 : 40"
-        :width="lgAndUp ? 172: ''"
+        :height="mdAndUp ? 58 : 40"
+        :width="mdAndUp ? 172: ''"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
@@ -15,7 +15,7 @@
         <v-icon
           :icon="mdiVideoOutline"
           color="primary"
-          :size="lgAndUp ? 22 : 20"
+          :size="mdAndUp ? 22 : 20"
         />
         <span class="d-none d-sm-block text-subtitle-2 text-primary font-weight-bold ml-2">Voir les vidéos</span>
         <span class="d-block d-sm-none text-caption text-md-subtitle-2 text-primary font-weight-bold ml-2">Vidéos</span>
@@ -91,7 +91,7 @@ defineProps({
   },
 })
 
-const { lgAndUp } = useDisplay()
+const { mdAndUp } = useDisplay()
 
 const dialog = ref(false)
 </script>

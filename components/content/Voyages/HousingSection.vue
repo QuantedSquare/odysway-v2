@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="px-0"
+    class="px-0 pt-0"
   >
     <v-row
       align="center"
@@ -10,7 +10,7 @@
         cols="12"
         xs="7"
         sm="9"
-        class="text-h4 my-md-4 font-weight-bold"
+        class="text-h4 mb-5 my-md-8 font-weight-bold"
       >
         {{ housingTitle }}
       </v-col>

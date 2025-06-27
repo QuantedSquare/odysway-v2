@@ -5,14 +5,14 @@
     fluid
     class="px-0"
   >
-    <v-divider class="my-6" />
+    <v-divider class="my-md-6" />
     <v-row
       v-if="isGroupeAvailable"
       justify="center"
       align="center"
     >
       <v-col
-        class="font-weight-black text-h4 my-4"
+        class="font-weight-black text-h4 mt-4 my-md-4"
       >
         {{ dateSections.title }}
       </v-col>

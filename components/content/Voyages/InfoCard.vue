@@ -190,7 +190,7 @@
             </v-col>
           </v-row>
         </template>
-        <template v-else-if="!voyage.groupeAvailable">
+        <template v-else-if="displayedDates.length === 0 && voyage.groupeAvailable">
           <v-row>
             <v-col cols="12">
               <div class="d-flex align-center ga-2">
