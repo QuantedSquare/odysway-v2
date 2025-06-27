@@ -103,20 +103,21 @@ const quote = async (body) => {
   }
 }
 // rename stripeSession to paymentSession + check  data stripe and alma
-const notify = (stripeSession, insuranceItem, dealCustomFields) => {
-  const order = stripeSession.metadata || stripeSession
+const notify = (paymentSession, insuranceItem, dealCustomFields) => {
   const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
+  // stripeSession.countries as an array; stripeSession.dealId; stripeSession.customer_details.email;
+
   const data = {
     emetteur: isDev ? 'ODYSWAY-TEST' : 'ODYSWAY',
-    produit: order.countries.includes('NP') || order.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
-    reference: order.dealId.toString(),
+    produit: paymentSession.countries.includes('NP') || paymentSession.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
+    reference: paymentSession.dealId.toString(),
     formule: insuranceType,
     prime: (insuranceItem.amount_total / 100).toFixed(2),
-    email: stripeSession.customer_details.email || stripeSession.customer.email, // update here regarding alma
+    email: paymentSession.customer_details.email || paymentSession.customer.email, // update here regarding alma
     provenance: 'FR',
-    destination: order.countries,
+    destination: paymentSession.countries,
     nombre: insuranceItem.quantity.toString(),
     depart: dayjs(dealCustomFields.departureDate).format('DD/MM/YYYY'),
     retour: dayjs(dealCustomFields.returnDate).format('DD/MM/YYYY'),

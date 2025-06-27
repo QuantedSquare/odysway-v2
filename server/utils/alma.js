@@ -91,13 +91,13 @@ const createAlmaSession = async (order) => {
       expires_after: 2880,
       capture_method: 'automatic',
       purchase_amount: deal.totalTravelPrice,
-      return_url: successUrl,
-      customer_cancel_url: cancelUrl,
+      return_url: successUrl || 'https://odysway.com',
+      customer_cancel_url: cancelUrl || 'https://odysway.com',
       custom_data: deal,
     },
     customer: {
-      first_name: contact.firstName,
-      last_name: contact.lastName,
+      first_name: contact.firstName || '',
+      last_name: contact.lastName || '',
       email: contact.email,
     },
   }
@@ -197,8 +197,16 @@ const handlePaymentSession = async (session) => {
   // Chapka notify
   if (deal.insurance !== 'Aucune Assurance' && isDev) { // set to !isDev for production
     const inssuranceItem = order.insuranceChoice
-    Object.assign(deal, { pricePerTraveler: Math.ceil(totalPaidAlma / order.nbTravelers) })
-    const chapkaNotify = chapka.notify(session, inssuranceItem, deal) // check session data
+    // Prepare session data for Chapka compatibility
+    const sessionForChapka = {
+      countries: [...order.country],
+      customer_details: {
+        email: contact.email,
+      },
+      dealId: order.id,
+    }
+    Object.assign(deal.customFields, { pricePerTraveler: Math.ceil(totalPaidAlma / order.nbTravelers) })
+    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, deal.customFields)
     console.log('===== Chapka notify sent =====', chapkaNotify)
   }
 
