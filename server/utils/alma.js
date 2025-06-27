@@ -197,9 +197,9 @@ const handlePaymentSession = async (session) => {
   // Chapka notify
   if (deal.insurance !== 'Aucune Assurance' && isDev) { // set to !isDev for production
     const inssuranceItem = order.insuranceChoice
-    Object.assign(deal, { pricePerTraveler: usePricePerTraveler(deal) })
-    chapka.notify(session, inssuranceItem, deal) // check session data
-    console.log('===== Chapka notify sent =====')
+    Object.assign(deal, { pricePerTraveler: Math.ceil(totalPaidAlma / order.nbTravelers) })
+    const chapkaNotify = chapka.notify(session, inssuranceItem, deal) // check session data
+    console.log('===== Chapka notify sent =====', chapkaNotify)
   }
 
   const restToPay = +deal.value - totalPaidAlma
