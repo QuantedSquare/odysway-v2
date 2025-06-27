@@ -166,6 +166,8 @@ const handlePaymentSession = async (session) => {
     activecampaign.getDealCustomFields(order.id),
   ])
   const deal = { ...fetchedDeal.deal, ...customFields }
+  const { contact } = await activecampaign.getClientById(deal.contact)
+  console.log('contact', contact)
 
   // BOOKING MANAGEMENT SUPABASE
   const { data: bookedDate, error } = await supabase
@@ -227,9 +229,6 @@ const handlePaymentSession = async (session) => {
   console.log('==== Deal data =====', dealData)
 
   activecampaign.updateDeal(order.id, dealData)
-
-  const { contact } = await activecampaign.getClientById(deal.contact)
-  console.log('contact', contact)
 
   // check if capture status before all updates
   if (session.processing_status === 'captured') {
