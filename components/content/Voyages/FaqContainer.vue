@@ -2,7 +2,7 @@
   <v-container
     id="faq-container"
     fluid
-    class="rounded-lg px-2 px-md-9 py-0 mt-4 mt-md-8 max-container-width"
+    class="rounded-lg  py-0 mt-4 mt-md-8 max-container-width px-2 px-md-9 px-xl-0"
   >
     <v-lazy
       :min-height="415"
@@ -97,10 +97,6 @@ const { data: faqTextes } = await useAsyncData('faq-textes', () => {
 </script>
 
 <style scoped>
-.max-container-width{
-  max-width: 1440px;
-}
-
 .max-height-with-overflow {
   max-height: 500px;
   overflow: auto;

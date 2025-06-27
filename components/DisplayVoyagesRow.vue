@@ -1,11 +1,9 @@
 <template>
   <!-- Display carousel with voyages for each type experience/category  -->
-  <v-row
-    v-if="availableVoyages"
-    class="px-md-12"
-  >
+  <div v-if="availableVoyages">
     <HorizontalCarousel
       v-for="content in voyages"
+
       v-show="content.voyages?.length > 0"
       :key="content.id"
       :slug="content.slug"
@@ -34,17 +32,17 @@
           <VoyageCard
             :voyage="voyage"
           />
-          <!-- </v-lazy> -->
+        <!-- </v-lazy> -->
         </v-col>
       </template>
     </HorizontalCarousel>
-  </v-row>
+  </div>
   <!---------------------------------------------------------------------->
 
   <!-- Display search result in function of selected experience/category  -->
   <v-row
     v-if="voyages && voyages.length > 0 && (selectedCategory || selectedExperience || isSearch)"
-    class="position-relative px-0 px-md-8 mx-0"
+    class="position-relative px-0 px-md-0 mx-0"
   >
     <TransitionGroup
       name="list"
@@ -55,7 +53,6 @@
         cols="12"
         sm="6"
         lg="4"
-        xl="3"
       >
         <CtaCardSheet v-if="voyage.isCta" />
         <VoyageCard

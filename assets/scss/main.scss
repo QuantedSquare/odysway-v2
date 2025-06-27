@@ -202,6 +202,13 @@ $border-radius-root: 10px !default;
 .btn-shadow {
   box-shadow: 0px 1px 6px 0px rgba(34, 34, 35, 0.09)!important;
 }
+.max-container-width {
+
+    max-width: 1440px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+
+}
 
 
 .no-white-space {

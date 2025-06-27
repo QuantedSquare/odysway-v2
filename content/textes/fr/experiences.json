@@ -4,7 +4,7 @@
     "metaDescription": "Découvrez toutes nos expériences de voyage"
   },
   "slug": {
-    "noVoyagesFound": "Aucun voyage trouvé pour expérience \"{{title}}\"",
+    "noVoyagesFound": "Aucun voyage trouvé pour l'expérience \"{{title}}\"",
     "modifySearchCriteria": "Modifiez vos critères de recherche"
   },
   "common": {
@@ -13,4 +13,4 @@
       "showLess": "Voir moins"
     }
   }
-} 
+}

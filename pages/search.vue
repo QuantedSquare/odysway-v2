@@ -5,83 +5,83 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
-    <v-row class="py-4 mt-md-12 px-4 px-md-12">
+    <v-row class=" pb-0 pt-4 mt-md-12  max-container-width">
       <v-col
-        cols="auto"
-        md="auto"
-        class="d-flex align-center"
+        cols="12"
+        class="px-md-12 d-flex ga-2 align-center"
       >
         <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? `1 ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
             ${searchContent?.multipleTrips || 'voyages'}` }}</span>
-      </v-col>
-      <v-col
-        cols=""
-        md="auto"
-        class="d-flex align-center ga-2"
-      >
-        <!-- Add closable props & logic -->
-        <v-chip
-          v-if="routeQuery.destination"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          color="secondary-light-2"
-          density="comfortable"
-        >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-            {{ capitalizeFirstLetter(routeQuery.destination) }}
-          </span>
-        </v-chip>
-        <!-- Add closable props & logic -->
 
-        <v-chip
-          v-if="routeQuery.travelType"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          color="secondary-light-2"
-          density="comfortable"
-          @click:close="chip = false"
+        <div
+          class="d-flex align-center ga-2"
         >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-            {{ routeQuery.travelType }}
-          </span>
-        </v-chip>
-        <!-- Add closable props & logic -->
+          <!-- Add closable props & logic -->
+          <v-chip
+            v-if="routeQuery.destination"
+            variant="flat"
+            :size="lgAndUp ? 'x-large' : 'large'"
+            color="secondary-light-2"
+            density="comfortable"
+          >
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-sm-3 pb-1">
+              {{ capitalizeFirstLetter(routeQuery.destination) }}
+            </span>
+          </v-chip>
+          <!-- Add closable props & logic -->
 
-        <v-chip
-          v-if="routeQuery.from"
-          variant="flat"
-          :size="lgAndUp ? 'x-large' : 'large'"
-          color="secondary-light-2"
-          density="comfortable"
+          <v-chip
+            v-if="routeQuery.travelType"
+            variant="flat"
+            :size="lgAndUp ? 'x-large' : 'large'"
+            color="secondary-light-2"
+            density="comfortable"
+            @click:close="chip = false"
+          >
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
+              {{ routeQuery.travelType }}
+            </span>
+          </v-chip>
+          <!-- Add closable props & logic -->
+
+          <v-chip
+            v-if="routeQuery.from"
+            variant="flat"
+            :size="lgAndUp ? 'x-large' : 'large'"
+            color="secondary-light-2"
+            density="comfortable"
+          >
+            <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
+              {{ parsedDates }}
+            </span>
+          </v-chip>
+        </div>
+        <v-spacer />
+        <div
+          class="d-flex justify-self-end align-self-end"
         >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-1 px-3 pb-1">
-            {{ parsedDates }}
-          </span>
-        </v-chip>
-      </v-col>
-      <v-spacer />
-      <v-col
-        v-if="route.fullPath !== '/search'"
-        cols=""
-        md="auto"
-        class="d-flex justify-end"
-      >
-        <v-btn
-          color="primary"
-          variant="outlined"
-          class="text-body-1"
-          :height="lgAndUp ? '62px' : '46px'"
-          :width="lgAndUp ? '172px' : '142px'"
-          @click="reinitiliazeFilter"
-        >
-          {{ searchContent?.resetButton || 'Réinitialiser' }}
-        </v-btn>
+          <v-btn
+            color="primary"
+            variant="outlined"
+            size="large"
+            class="text-body-1 reset-btn-size"
+
+            @click="reinitiliazeFilter"
+          >
+            {{ searchContent?.resetButton || 'Réinitialiser' }}
+          </v-btn>
+        </div>
       </v-col>
     </v-row>
-    <DisplayVoyagesRow
-      :voyages="voyages"
-      :is-search="true"
-    />
+    <v-container
+      class=" py-0 px-0 px-md-8 mt-3 max-container-width"
+      fluid
+    >
+      <DisplayVoyagesRow
+        :voyages="voyages"
+        :is-search="true"
+      />
+    </v-container>
 
     <ColorContainer color="grey-light-2">
       <InfoContainer>
@@ -114,7 +114,7 @@ import { useDisplay } from 'vuetify'
 import _ from 'lodash'
 import SearchField from '~/components/content/SearchField.vue'
 
-const { lgAndUp } = useDisplay()
+const { lgAndUp, mdAndDown } = useDisplay()
 useSeoMeta({
   robots: 'noindex, follow',
   canonical: 'https://www.odysway.com/search',
@@ -269,3 +269,22 @@ function reinitiliazeFilter() {
   })
 }
 </script>
+
+<style scoped>
+.reset-btn-size {
+  height: 62px!important;
+  width: 172px!important;
+}
+@media (max-width: 600px) {
+  .reset-btn-size {
+    height: 48px!important;
+    width: 120px!important;
+  }
+}
+@media (max-width: 400px) {
+  .reset-btn-size {
+    height: 38px!important;
+    width: 110px!important;
+  }
+}
+</style>
