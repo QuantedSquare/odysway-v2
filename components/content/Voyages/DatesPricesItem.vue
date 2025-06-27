@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="subtle-shadow rounded-lg text-primary d-flex align-center pa-8"
+    class="subtle-shadow rounded-lg text-primary d-flex align-center pa-3 pa-sm-4 pa-md-8"
     height="100%"
     fluid
   >

@@ -54,26 +54,26 @@ export default defineAppConfig({
         title: 'Destinations',
         links: [{
           label: 'Europe',
-          to: '/search?destination=europe',
+          to: '/destinations/europe',
         }, {
           label: 'Asie',
-          to: '/search?destination=asie',
+          to: '/destinations/asie',
         }, {
           label: 'Amérique du Sud',
-          to: '/search?destination=amerique-du-sud',
+          to: '/destinations/amerique-du-sud',
         }],
       },
       colonne3: {
         title: 'Types de voyages',
         links: [{
           label: 'Europe',
-          to: '/search?destination=europe',
+          to: '/destinations/europe',
         }, {
           label: 'Asie',
-          to: '/search?destination=asie',
+          to: '/destinations/asie',
         }, {
           label: 'Amérique du Sud',
-          to: '/search?destination=amerique-du-sud',
+          to: '/destinations/amerique-du-sud',
         }],
       },
       colonne4: {

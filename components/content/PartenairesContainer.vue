@@ -24,9 +24,8 @@
             :lazy-src="img(partenaire?.imgSrc, { format: 'webp', quality: 10, height: 32, width: 320 })"
             :srcset="`${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 320 })} 320w, ${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 640 })} 640w`"
             :alt="`logo du partenaire ${partenaire.description}`"
-            height="100"
+            class="partenaire-img-sizing"
             :class="partenaire.whiteFilter ? 'white-filter' : ''"
-            width="150"
           />
         </v-lazy>
       </v-col>
@@ -45,5 +44,15 @@ const { data: partenaires } = await useAsyncData('partenaires', () => {
 <style scoped>
 .white-filter {
   filter: brightness(0) invert(1);
+}
+.partenaire-img-sizing {
+  height: 100px;
+  width: 150px;
+}
+@media (max-width: 600px) {
+  .partenaire-img-sizing {
+    height: 50px;
+    width: 100px;
+  }
 }
 </style>

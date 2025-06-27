@@ -61,7 +61,6 @@
                 sizes="(max-width: 600px) 480px, 320px"
                 loading="lazy"
                 alt="Image de l'équipe"
-                class="bg-secondary"
               />
             </v-lazy>
           </v-col>
@@ -172,28 +171,30 @@
             </div>
           </v-col>
         </v-row>
-        <v-row align="center">
+        <v-row
+          align="center"
+          :class="isVoyageDetailPage ? 'pb-16 pb-md-0' : 'mb-0'"
+        >
           <v-col
             cols="12"
             md="5"
-            class="d-flex justify-start text-grey"
+            class="d-flex justify-center justify-md-start text-grey py-0"
           >
             <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
           </v-col>
           <v-col
             cols="12"
             md="7"
-            class="text-center text-md-right"
+            class="text-center text-md-right d-flex justify-space-between"
           >
-            <v-btn
+            <NuxtLink
               v-for="policy in policies"
               :key="policy.name"
               :to="policy.link"
-              variant="text"
-              class="text-overline text-decoration-none"
+              class="text-grey text-decoration-none"
             >
               {{ policy.name }}
-            </v-btn>
+            </NuxtLink>
           </v-col>
         </v-row>
       </v-container>
@@ -203,13 +204,18 @@
 
 <script setup>
 import { useImage } from '#imports'
-
 import OdyswayFooter from '~/assets/img/odysway-text.png'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
+const route = useRoute()
 const { footer } = useAppConfig()
 
 const img = useImage()
+
+// Add computed property to check if current route is a voyage detail page
+const isVoyageDetailPage = computed(() => {
+  return /^\/voyages\/[^/]+$/.test(route.path)
+})
 
 const policies = ref([
   { name: 'FAQ',
@@ -225,6 +231,7 @@ const policies = ref([
     link: '/politique-de-confidentialite',
   },
 ])
+console.log(route)
 </script>
 
 <style scoped>
