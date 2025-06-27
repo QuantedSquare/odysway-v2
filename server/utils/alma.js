@@ -17,45 +17,53 @@ const headers = {
   'Authorization': ALMA_KEY,
 }
 
+const customAxios = axios.create({
+  baseURL: BASE_ALMA_URL,
+  headers,
+})
+
+const sendSlackNotification = (message) => {
+  if (!isDev) {
+    axios({
+      url: process.env.SLACK_URL_PAIEMENTS,
+      method: 'post',
+      data: {
+        blocks: [
+          {
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: message,
+            },
+          },
+        ],
+      },
+    }).catch((slackErr) => {
+      console.warn('Failed to send Slack notification:', slackErr.message)
+    })
+  }
+}
+
 const createAlmaSession = async (order) => {
   if (!order.dealId) {
     throw new Error('dealId is required')
   }
 
-  const acDeal = await activecampaign.getDealById(order.dealId)
-  const customFields = await activecampaign.getDealCustomFields(order.dealId)
-  const deal = { ...acDeal.deal, ...customFields, paymentType: order.paymentType }
+  const [fetchedDeal, customFields] = await Promise.all([
+    activecampaign.getDealById(order.dealId),
+    activecampaign.getDealCustomFields(order.dealId),
+  ])
+  const deal = { ...fetchedDeal.deal, ...customFields }
   const { contact } = await activecampaign.getClientById(deal.contact)
 
   if (!deal.totalTravelPrice || deal.totalTravelPrice <= 0) {
     throw new Error('Invalid travel price')
   }
-  if (!contact.email || !contact.firstName || !contact.lastName) {
-    throw new Error('Missing customer information')
+  if (!contact.email) {
+    throw new Error('Missing customer email')
   }
 
-  if (!isDev) {
-    try {
-      await axios({
-        url: process.env.SLACK_URL_PAIEMENTS,
-        method: 'post',
-        data: {
-          blocks: [
-            {
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: `:eyes: <https://odysway90522.activehosted.com/app/deals/${deal.dealId}| Nouveau paiement ALMA - ${contact.firstName} ${contact.lastName} - Deal ID : ${deal.dealId}>`,
-              },
-            },
-          ],
-        },
-      })
-    }
-    catch (slackErr) {
-      console.warn('Failed to send Slack notification:', slackErr.message)
-    }
-  }
+  sendSlackNotification(`:eyes: <https://odysway90522.activehosted.com/app/deals/${deal.dealId}| Nouveau paiement ALMA - ${contact.firstName} ${contact.lastName} - Deal ID : ${deal.dealId}>`)
 
   if (deal.insurance && deal.insurance !== 'Aucune Assurance' && deal.insuranceCommissionPrice && deal.nbTravelers) {
     const insuranceItem = {
@@ -91,65 +99,72 @@ const createAlmaSession = async (order) => {
       first_name: contact.firstName,
       last_name: contact.lastName,
       email: contact.email,
-      phone: contact.phone,
     },
   }
 
-  try {
-    const res = await axios({
-      url: BASE_ALMA_URL + 'payments',
-      method: 'POST',
-      headers,
-      data: paymentBody,
-    })
-    return res.data
-  }
-  catch (err) {
+  const res = await customAxios({
+    url: 'payments',
+    method: 'POST',
+    data: paymentBody,
+  }).catch((err) => {
     console.error('Erreur création de payement Alma', err.response?.data || err.message)
     throw new Error(`Alma payment creation failed: ${err.response?.data?.message || err.message}`)
-  }
+  })
+  return res.data
 }
 
-const retrieveAlmaId = async (paymentId) => {
-  try {
-    const { data, error } = await supabase.from('alma_ids').select('id').eq('id', paymentId).maybeSingle()
-    if (error) {
-      console.error('Supabase error retrieving alma id:', error)
-      throw new Error(`Error retrieving alma id: ${error.message}`)
-    }
-    return data
+const insertAlmaId = async (paymentId) => {
+  const { data, error } = await supabase.from('alma_ids').select('id').eq('id', paymentId).maybeSingle()
+  if (error) {
+    console.error('Supabase error retrieving alma id:', error)
+    throw new Error(`Error retrieving alma id: ${error.message}`)
   }
-  catch (error) {
-    console.error('Error retrieving alma id', error)
-    throw new Error('Error retrieving alma id')
+  if (data) {
+    console.log('Payment already handled in supabase:', paymentId)
+  }
+  else {
+    const { data, error } = await supabase
+      .from('alma_ids')
+      .insert([{ id: paymentId }])
+      .select()
+    if (error) {
+      console.error('Error inserting alma ID:', error)
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'Database error',
+      })
+    }
+    console.log('Alma Paiement, inserted id in supabase:', data)
   }
 }
 
 const retrievePayment = async (paymentId) => {
-  try {
-    const res = await axios({
-      url: `${BASE_ALMA_URL}payments/${paymentId}`,
-      method: 'GET',
-      headers,
-    })
+  const res = await customAxios({
+    url: `payments/${paymentId}`,
+    method: 'GET',
+  }).catch((err) => {
+    console.error(`Payment not found for pid: ${paymentId}`, err.response?.data || err.message)
+    throw new Error(`Failed to retrieve Alma payment: ${err.response?.data?.message || err.message}`)
+  })
+  if (res.data.processing_status === 'captured') {
     return res.data
   }
-  catch (err) {
-    console.error('Error retrieving Alma payment:', err.response?.data || err.message)
-    throw new Error(`Failed to retrieve Alma payment: ${err.response?.data?.message || err.message}`)
+  else {
+    throw new Error('Payment not captured')
   }
 }
 
 const handlePaymentSession = async (session) => {
   const method = 'Alma'
   const order = session.custom_data
-  const totalPaidAlma = session.payment_plan.reduce((acc, item) => acc + item.purchase_amount, 0)
-  console.log('=========total Paid via Alma=========', totalPaidAlma)
-  console.log('=========ALMA SESSION in stripe module=========', session)
+  const totalPaidAlma = session.purchase_amount
+  console.log('=========ALMA SESSION=========', session)
+  console.log('=========TOTAL PAID VIA ALMA=========', totalPaidAlma)
 
-  // Fetch Deal Data
-  const fetchedDeal = await activecampaign.getDealById(order.id)
-  const customFields = await activecampaign.getDealCustomFields(order.id)
+  const [fetchedDeal, customFields] = await Promise.all([
+    activecampaign.getDealById(order.id),
+    activecampaign.getDealCustomFields(order.id),
+  ])
   const deal = { ...fetchedDeal.deal, ...customFields }
 
   // BOOKING MANAGEMENT SUPABASE
@@ -180,41 +195,40 @@ const handlePaymentSession = async (session) => {
   }
 
   // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && !isDev) {
+  if (deal.insurance !== 'Aucune Assurance' && isDev) { // set to !isDev for production
     const inssuranceItem = order.insuranceChoice
     Object.assign(deal, { pricePerTraveler: usePricePerTraveler(deal) })
-    chapka.notify(session, inssuranceItem, deal)
+    chapka.notify(session, inssuranceItem, deal) // check session data
     console.log('===== Chapka notify sent =====')
   }
 
-  const totalPaid = +(customFields.alreadyPaid || 0) + +(totalPaidAlma)
-  const restToPay = +deal.value - totalPaid
+  const restToPay = +deal.value - totalPaidAlma
 
   console.log('====CUSTOM FIELDS=====', customFields)
 
   const dealData = {
-    group: '2',
-    stage: +customFields.alreadyPaid > 0 ? '33' : '6', // check étape en cours
-    alreadyPaid: totalPaid,
+    group: '2', // '2'= pipeline id of "Voyageurs"
+    stage: +customFields.alreadyPaid > 0 ? '33' : '6', // first payment (full or acompte) => '33' = "Gestion résa (sales)" || '6' ="en attente de départ"
+    alreadyPaid: totalPaidAlma,
     restToPay: restToPay,
-    currentStep: totalPaid === +deal.value
+    currentStep: totalPaidAlma === +deal.value // check if use case for Alma
       ? 'Paiement OK'
       : 'Paiement en cours',
   }
 
   console.log('==== Deal data =====', dealData)
 
-  const updatedDeal = await activecampaign.updateDeal(order.id, dealData)
-  console.log('updatedDeal', updatedDeal)
+  activecampaign.updateDeal(order.id, dealData)
 
   const { contact } = await activecampaign.getClientById(deal.contact)
   console.log('contact', contact)
 
+  // check if capture status before all updates
   if (session.processing_status === 'captured') {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaid / 100}€`,
+          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€`,
       },
 
     })
@@ -224,50 +238,33 @@ const handlePaymentSession = async (session) => {
     const addedNote = await activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
-          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaid / 100}€ - Paiement annulé`,
+          contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€ - Paiement annulé`,
       },
 
     })
     console.log('addedNote', addedNote)
   }
-  if (!isDev) {
-    axios({
-      url: process.env.SLACK_URL_PAIEMENTS,
-      method: 'post',
-      data:
-        {
-          blocks: [
-            {
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.id}|Confirmation paiement CB - ${method} - ${contact.firstName} ${contact.lastName} - ${order.id}>`,
-              },
-            },
-          ],
-        },
-    })
+  sendSlackNotification(`:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.id}|Confirmation paiement CB - ${method} - ${contact.firstName} ${contact.lastName} - ${order.id}>`)
 
-    // axios({
-    //   url: 'https://www.google-analytics.com/collect',
-    //   method: 'post',
-    //   params: {
-    //     v: 1,
-    //     tid: process.env.NODE_ENV === 'development' ? process.env.GOOGLE_ANALYTICS_TID_TEST : process.env.GOOGLE_ANALYTICS_TID_LIVE,
-    //     cid: '555',
-    //     t: 'event',
-    //     ec: 'Transaction_Server',
-    //     ea: 'Ping_Confirmation',
-    //     el: '' + +order.selectedTravelersToPay,
-    //     ev: +totalAmount,
-    //   },
-    // })
-  }
+  // axios({
+  //   url: 'https://www.google-analytics.com/collect',
+  //   method: 'post',
+  //   params: {
+  //     v: 1,
+  //     tid: process.env.NODE_ENV === 'development' ? process.env.GOOGLE_ANALYTICS_TID_TEST : process.env.GOOGLE_ANALYTICS_TID_LIVE,
+  //     cid: '555',
+  //     t: 'event',
+  //     ec: 'Transaction_Server',
+  //     ea: 'Ping_Confirmation',
+  //     el: '' + +order.selectedTravelersToPay,
+  //     ev: +totalAmount,
+  //   },
+  // })
 }
 
 export default {
-  retrieveAlmaId,
   createAlmaSession,
-  handlePaymentSession,
   retrievePayment,
+  insertAlmaId,
+  handlePaymentSession,
 }
