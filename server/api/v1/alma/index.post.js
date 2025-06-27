@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     const almaSession = await alma.createAlmaSession(body)
     console.log('========ALMA SESSION=======', almaSession)
     console.log('========UPDATE THE DEAL=======')
-    activecampaign.updateDeal(body.dealId, { currentStep: 'Passage sur la page de paiement Alma' }) // no need waiting for AC update
+    await activecampaign.updateDeal(body.dealId, { currentStep: 'Passage sur la page de paiement Alma' }) // no need waiting for AC update
     setResponseStatus(event, 200)
     return almaSession
   }

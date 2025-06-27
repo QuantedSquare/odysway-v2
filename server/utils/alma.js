@@ -225,7 +225,7 @@ const handlePaymentSession = async (session) => {
 
   // check if capture status before all updates
   if (session.processing_status === 'captured') {
-    const addedNote = await activecampaign.addNote(order.id, {
+    const addedNote = activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
           contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€`,
@@ -235,7 +235,7 @@ const handlePaymentSession = async (session) => {
     console.log('addedNote', addedNote)
   }
   if (session.processing_status === 'canceled') {
-    const addedNote = await activecampaign.addNote(order.id, {
+    const addedNote = activecampaign.addNote(order.id, {
       note: {
         note: `Paiement CB - ${method} -  ${
           contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€ - Paiement annulé`,

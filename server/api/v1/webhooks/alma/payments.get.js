@@ -9,16 +9,16 @@ export default defineEventHandler(async (event) => {
     // Retrieve and process payment
     const payment = await alma.retrievePayment(pid)
 
-    alma.insertAlmaId(pid)
+    await alma.insertAlmaId(pid)
 
     // Process payment session
-    alma.handlePaymentSession(payment)
+    await alma.handlePaymentSession(payment)
     console.log('Payment session handled successfully')
 
     // Update contact in Brevo
     if (!isDev && payment.customer?.email) {
       try {
-        brevo.updateContactListId(payment.customer.email, 14) // Payé
+        await brevo.updateContactListId(payment.customer.email, 14) // Payé
         console.log('Brevo contact updated successfully')
       }
       catch (brevoErr) {
