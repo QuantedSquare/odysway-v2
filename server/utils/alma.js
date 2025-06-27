@@ -144,8 +144,8 @@ const handlePaymentSession = async (session) => {
   const method = 'Alma'
   const order = session.custom_data
   const totalPaidAlma = session.payment_plan.reduce((acc, item) => acc + item.purchase_amount, 0)
-
-  console.log('ALMA SESSION in stripe module', session)
+  console.log('=========total Paid via Alma=========', totalPaidAlma)
+  console.log('=========ALMA SESSION in stripe module=========', session)
 
   // Fetch Deal Data
   const fetchedDeal = await activecampaign.getDealById(order.id)
