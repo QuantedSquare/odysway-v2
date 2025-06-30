@@ -150,7 +150,7 @@
             block
             :loading="destinationsStatus === 'pending' || regionsStatus === 'pending' || searchFieldContentStatus === 'pending'"
             color="secondary"
-            class="text-none text-body-1 font-weight-bold"
+            class="text-body-1 font-weight-bold"
             @click="searchFn"
           >
             {{ searchFieldContent?.discoverTrips || 'Découvrir les voyages' }}

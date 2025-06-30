@@ -9,15 +9,15 @@
 
     <v-tabs
       v-model="currentTab"
-      class="text-grey position-relative mb-6"
-      color="white"
+      class="text-white-light position-relative mb-6"
+      color="white-light"
       role="tablist"
       :aria-label="`Navigation des idées de voyages`"
     >
-      <!-- <v-divider
+      <v-divider
         class="absolute-divider"
         thickness="2"
-      /> -->
+      />
 
       <v-tab
         v-for="top, index in tops"
@@ -65,7 +65,7 @@
                 v-for="link, i in top.linksList"
                 :key="`${link.slug}-${i}`"
                 :to="`/voyages/${link.slug}`"
-                class="text-grey line-clamp-2"
+                class="text-white-light line-clamp-2"
               >
                 {{ link.title }}
               </NuxtLink>

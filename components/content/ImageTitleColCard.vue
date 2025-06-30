@@ -17,7 +17,7 @@
           :src="imgComp(image.src, { format: 'webp', quality: 70, width: 640 })"
           :lazy-src="imgComp(image.src, { format: 'webp', quality: 10, width: 640 })"
           :srcset="`${imgComp(image.src, { format: 'webp', quality: 70, width: 640 })} 640w, ${imgComp(image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
-          :alt="image.alt"
+          :alt="`Image représentant ${title}`"
           sizes="(max-width: 600px) 266px, 228px"
           cover
           height="228"
