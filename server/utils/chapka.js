@@ -104,6 +104,7 @@ const quote = async (body) => {
 }
 // rename stripeSession to paymentSession + check  data stripe and alma
 const notify = (paymentSession, insuranceItem, dealCustomFields) => {
+  console.log('paymentSession', paymentSession, 'insuranceItem', insuranceItem, 'dealCustomFields', dealCustomFields)
   const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 

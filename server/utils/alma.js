@@ -200,8 +200,10 @@ const handlePaymentSession = async (session) => {
   if (deal.insurance !== 'Aucune Assurance' && isDev) { // set to !isDev for production
     const inssuranceItem = order.insuranceChoice
     // Prepare session data for Chapka compatibility
+    // check error here
+
     const sessionForChapka = {
-      countries: [...order.country],
+      countries: Array.isArray(order.country) ? [...order.country] : [order.country],
       customer_details: {
         email: contact.email,
       },
