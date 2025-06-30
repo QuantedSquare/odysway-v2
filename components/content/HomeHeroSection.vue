@@ -87,7 +87,7 @@ const img = useImage()
 }
 .relative-hero-section {
  position:relative;
- height: 80vh;
+ height: 600px;
  width: 100%;
 }
 
@@ -103,7 +103,7 @@ margin-bottom: 45px;
   margin: -110px auto 0 auto;
 }
 .hero-height {
-  height: 80vh;
+  height: 600px;
 }
 @media (max-width: 960px) {
   .relative-hero-section {
