@@ -34,4 +34,10 @@ const categoriesWithVoyages = computed(() => {
     ),
   }))
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>

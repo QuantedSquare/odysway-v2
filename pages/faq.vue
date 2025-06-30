@@ -24,7 +24,7 @@ if (page.value) {
     // author: page.value?.ogImage?.author,
     // twitter: page.value?.ogImage?.twitter,
   })
-  useHead(page.value.head || {}) // <-- Nuxt Schema.org
+  useHead(page.value.head || { htmlAttrs: { lang: 'fr' } }) // <-- Nuxt Schema.org
   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
 }
 </script>

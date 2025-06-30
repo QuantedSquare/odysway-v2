@@ -200,6 +200,9 @@ watchEffect(() => {
   }
 
   useHead({
+    htmlAttrs: {
+      lang: 'fr',
+    },
     script: [
       {
         type: 'application/ld+json',

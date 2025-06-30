@@ -270,6 +270,12 @@ watch([filteredBlogs], () => {
 
 const goTo = useGoTo()
 const scrollTarget = useTemplateRef('scroll-target')
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>
 
 <style scoped>

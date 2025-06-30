@@ -14,7 +14,9 @@
 const page = await queryCollection('content').path('/').first()
 
 if (page) {
-  useHead(page.head || {}) // <-- Nuxt Schema.org
+  useHead(page.head || { htmlAttrs: {
+    lang: 'fr',
+  } }) // <-- Nuxt Schema.org
   useSeoMeta(page.seo || {}) // <-- Nuxt Robots
 }
 </script>

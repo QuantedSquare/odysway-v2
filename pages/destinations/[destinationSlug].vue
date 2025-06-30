@@ -81,4 +81,10 @@ const { data: voyages } = useAsyncData('voyages', async () => {
 }, {
   watch: [slug, isDestination, isRegion, destinationsInRegion, selectedDestination, selectedRegion],
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>

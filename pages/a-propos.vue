@@ -21,7 +21,9 @@ if (page.value) {
     description: page.value.ogImage?.props.description,
     image: page.value.ogImage?.props.image,
   })
-  useHead(page.value.head || {}) // <-- Nuxt Schema.org
+  useHead(page.value.head || { htmlAttrs: {
+    lang: 'fr',
+  } }) // <-- Nuxt Schema .org
   useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
 }
 </script>

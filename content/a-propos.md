@@ -34,6 +34,9 @@ schemaOrg:
     telephone: + 33 (0) 1 84 80 79 75
     email: contact@odysway.com
     image: https://odysway.com/logos/logo_noir.png
+head:
+  htmlAttrs:
+    lang: fr
 ---
 
 ::generic-hero-section

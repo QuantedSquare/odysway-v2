@@ -11,4 +11,10 @@
 const { data: contactContent } = await useAsyncData('contact-content', () =>
   queryCollection('page_contact').first(),
 )
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>
