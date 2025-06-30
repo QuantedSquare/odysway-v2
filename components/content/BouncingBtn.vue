@@ -3,6 +3,8 @@
     variant="text"
     class="btn-bouncing"
     :icon="isExpanded ? mdiChevronDoubleUp : mdiChevronDoubleDown"
+    :aria-label="isExpanded ? 'Réduire la section' : 'Développer la section'"
+    :aria-expanded="isExpanded"
     @click="showHide"
   />
 </template>

@@ -14,6 +14,7 @@
           icon
           size="x-small"
           class="mr-2"
+          :aria-label="`Icône pour ${iconName}`"
         >
           <v-icon
             :icon="icon"

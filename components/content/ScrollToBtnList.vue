@@ -12,6 +12,8 @@
             :class="['nav-dot', { 'text-secondary': currentSection === index }]"
             icon
             variant="outlined"
+            :aria-label="`Aller à la section ${index + 1}`"
+            :aria-current="currentSection === index ? 'true' : 'false'"
             @click.stop="scrollToSection(index)"
           >
             <v-icon class="icon-size">

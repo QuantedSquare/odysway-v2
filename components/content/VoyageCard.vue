@@ -11,7 +11,7 @@
       <v-img
         :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
         :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
-        :alt="voyage.image.alt || voyage.title"
+        :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
         :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
         sizes="(max-width: 600px) 480px, 1024px"
         class="img-height"
@@ -47,6 +47,8 @@
                     v-if="voyage.title.length > 50"
                     :id="`tooltip-${voyage.slug}`"
                     activator="parent"
+                    role="tooltip"
+                    :aria-label="`Titre complet du voyage: ${voyage.title}`"
                   >
                     <span>
                       {{ voyage.title }}
