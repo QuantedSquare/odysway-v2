@@ -2,7 +2,7 @@
   <v-card
     elevation="0"
     hover
-    class="custom-card-width"
+    class="custom-card-width "
   >
     <NuxtLink
       :to="`/voyages/${voyage.slug}`"
@@ -87,7 +87,6 @@
         </v-card-text>
         <v-divider />
         <v-card-actions
-          class="justify-center"
           :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
         >
           <client-only>

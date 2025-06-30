@@ -10,10 +10,10 @@
             cols="5"
             class="d-flex flex-column align-start"
           >
-            <span class="text-body-2 text-grey">
+            <span class="text-caption text-lg-body-2 text-grey">
               {{ stickyBlock.pricePrefix }}
             </span>
-            <span class="text-h2 font-weight-bold text-primary">
+            <span class="text-h3 text-lg-h2 font-weight-bold text-primary">
               {{ voyage.pricing.startingPrice }}€<span class="text-body-2 font-weight-bold">{{ stickyBlock.priceSuffix }}</span>
             </span>
           </v-col>

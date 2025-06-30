@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     default: 'title',
@@ -82,8 +82,6 @@ const props = defineProps({
     default: '',
   },
 })
-
-console.log('props', props)
 </script>
 
 <style scoped>

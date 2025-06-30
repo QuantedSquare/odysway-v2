@@ -144,7 +144,6 @@ const extractPhoneDetails = (fullPhone, phonesList) => {
 }
 watchEffect(() => {
   if (model.value) {
-    console.log('model', model.value)
     const { code, number } = extractPhoneDetails(model.value, phonesSelect)
     phoneCode.value = code
     phoneNumber.value = number

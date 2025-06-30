@@ -180,7 +180,6 @@ onMounted(() => {
   nextTick(() => {
     scrollElement.value = scrollContainer.value.$el
   })
-  console.log('childrenCount', childrenCount.value)
 })
 
 const childrenCount = computed(() => {

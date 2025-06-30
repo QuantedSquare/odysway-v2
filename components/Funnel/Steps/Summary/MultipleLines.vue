@@ -14,6 +14,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['left', 'right', 'showDivider'])
-console.log(props.showDivider)
+defineProps(['left', 'right', 'showDivider'])
 </script>

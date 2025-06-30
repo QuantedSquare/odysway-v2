@@ -191,10 +191,7 @@ const travelTypeChoice = ref(route.query.travelType || null)
 const destinationChoice = ref(route.query.destination || null)
 const showDestinationsCarousel = ref(false)
 const search = useState('search', () => route.query.destination || null)
-watch([search, destinationChoice], (_newVal) => {
-  console.log('search', search.value)
-  console.log('destinationChoice', destinationChoice.value)
-})
+
 const months = computed(() => {
   const locale = 'fr-FR'
 
@@ -398,23 +395,17 @@ function searchFn() {
   const query = {}
 
   if (destinationChoice.value) {
-    console.log('destinationChoice', destinationChoice.value)
-    console.log('selectedRegionSlug', selectedRegionSlug.value)
-    console.log('isSelectionARegion', isSelectionARegion.value)
     if (isSelectionARegion.value) {
       // Use the stored region slug
       query.destination = selectedRegionSlug.value
-      console.log('Using region slug:', selectedRegionSlug.value)
     }
     else if (destinationChoice.value === 'France') {
       query.destination = 'france'
-      console.log('Using France destination')
     }
     else {
       const found = destinations.value.find(d => d.titre === destinationChoice.value)
       if (found) {
         query.destination = found.slug
-        console.log('Using destination slug:', found.slug)
       }
     }
   }
@@ -425,7 +416,6 @@ function searchFn() {
     query.from = date.value.join(',')
   }
 
-  console.log('Final query:', query)
   gtag('event', 'search', { eventAction: 'Click', destination: `${destinationChoice.value}`, travelType: `${travelTypeChoice.value}`, from: `${date.value[0]}`, to: `${date.value[1]}` })
   router.push({
     path: '/search',
@@ -434,37 +424,29 @@ function searchFn() {
 }
 
 function selectDestination(item) {
-  console.log('selectDestination called with:', item)
   isSelectionARegion.value = false
   destinationChoice.value = item.titre
   search.value = item.slug
-  console.log('After selectDestination - isSelectionARegion:', isSelectionARegion.value)
   setTimeout(() => {
     const input = document.querySelector(`#${destinationId}`)
     if (input) input.blur()
   }, 0)
 }
 function selectRegion(region) {
-  console.log('selectRegion called with:', region)
   isSelectionARegion.value = true
   destinationChoice.value = region.title
   selectedRegionSlug.value = region.value
   search.value = region.title
-  console.log('After selectRegion - isSelectionARegion:', isSelectionARegion.value)
-  console.log('After selectRegion - selectedRegionSlug:', selectedRegionSlug.value)
   setTimeout(() => {
     const input = document.querySelector(`#${destinationId}`)
     if (input) input.blur()
   }, 0)
 }
 function clearDestination() {
-  console.log('clearDestination called')
   destinationChoice.value = null
   search.value = ''
   isSelectionARegion.value = false
   selectedRegionSlug.value = null
-  console.log('After clearDestination - isSelectionARegion:', isSelectionARegion.value)
-  console.log('After clearDestination - selectedRegionSlug:', selectedRegionSlug.value)
 }
 
 onMounted(() => {

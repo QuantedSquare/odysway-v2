@@ -46,7 +46,7 @@ const voyageChoices = voyageJsonFiles
     }
   })
   .filter(Boolean) as [string, ...string[]]
-console.log('voyageChoices', voyageChoices)
+// console.log('voyageChoices', voyageChoices)
 
 const destinationDir = path.resolve(__dirname, 'content/destinations')
 const destinationFolders = fs.readdirSync(destinationDir).filter(

@@ -7,7 +7,6 @@ import { useRoute, useRouter } from 'vue-router'
 export function addMultipleParams(params) {
   const route = useRoute()
   const router = useRouter()
-  console.log('route in addMultiple', route)
   const currentParams = { ...route.query }
 
   // Merge current query with new query parameters

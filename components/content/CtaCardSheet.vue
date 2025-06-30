@@ -51,7 +51,6 @@ function redirectToCalendly() {
     router.push('/calendly?fromSearch')
   }
   else if (route.name.includes('thematiques')) {
-    console.log(route.name)
     router.push('/calendly?fromThematiques')
   }
   else if (route.name.includes('experiences')) {
