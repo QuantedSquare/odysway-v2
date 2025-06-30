@@ -78,6 +78,7 @@
       <slot name="indexContent" />
       <slot name="slugContent" />
       <slot name="blogPost" />
+      <CommonReviewContainer class="mt-8" />
     </ColorContainer>
   </v-container>
 </template>
