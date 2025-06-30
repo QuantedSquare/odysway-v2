@@ -209,8 +209,9 @@ const handlePaymentSession = async (session) => {
       },
       dealId: order.id,
     }
-    Object.assign(deal.customFields, { pricePerTraveler: Math.ceil(totalPaidAlma / order.nbTravelers) })
-    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, deal.customFields)
+
+    const customFieldsForChapka = { ...customFields, pricePerTraveler: Math.ceil(totalPaidAlma / order.nbTravelers) }
+    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, customFieldsForChapka)
     console.log('===== Chapka notify sent =====', chapkaNotify)
   }
 
