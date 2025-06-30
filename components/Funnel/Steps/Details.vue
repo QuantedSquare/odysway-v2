@@ -185,7 +185,6 @@ watch(deal, () => {
 })
 
 const saveToLocalStorage = () => {
-  console.log('saveToLocalStorage')
   const dataToStore = {
     firstname: firstName.value,
     lastname: lastName.value,
@@ -196,7 +195,6 @@ const saveToLocalStorage = () => {
 }
 const loadFromLocalStorage = () => {
   const storedData = JSON.parse(localStorage.getItem('detailsData'))
-  console.log('storedData', storedData)
   if (storedData) {
     firstName.value = storedData.firstname
     lastName.value = storedData.lastname

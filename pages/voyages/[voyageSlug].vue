@@ -122,7 +122,6 @@ const { data: voyage } = await useAsyncData(`voyages-${route.params.voyageSlug}`
 )
 
 const { data: voyagePropositions } = useAsyncData('voyages-propositions', () => {
-  console.log('===========voyage before query', voyage.value, '========')
   return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).where('experienceType', '=', voyage.value.experienceType).limit(10).all()
 })
 

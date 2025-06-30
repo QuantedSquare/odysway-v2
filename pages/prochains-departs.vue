@@ -112,7 +112,7 @@ const fetchTravels = async () => {
     loading.value = true
     const res = await fetch('/api/v1/booking/travels-by-date')
     const data = await res.json()
-    console.log('check', data)
+
     travels.value = data
     loading.value = false
   }

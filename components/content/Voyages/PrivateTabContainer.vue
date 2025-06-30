@@ -71,8 +71,6 @@ const selectOptions = function (start, end) {
 const nbAdults = ref(1)
 const nbChildren = ref(0)
 
-console.log('nb adults ', nbAdults.value)
-
 const navigateToIndivCheckout = () => {
   navigateTo({
     path: '/devis',

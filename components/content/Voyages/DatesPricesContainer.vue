@@ -110,7 +110,6 @@ const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable 
 })
 
 watch(isExpanded, (newValue) => {
-  console.log('isExpanded', newValue)
   if (!newValue) {
     goTo(`#dates-container`, {
       offset: -200,
