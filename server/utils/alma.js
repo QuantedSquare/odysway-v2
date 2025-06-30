@@ -197,10 +197,8 @@ const handlePaymentSession = async (session) => {
   }
 
   // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && isDev) { // set to !isDev for production
+  if (deal.insurance !== 'Aucune Assurance' && !isDev) {
     const inssuranceItem = order.insuranceChoice
-    // Prepare session data for Chapka compatibility
-    // check error here
 
     const sessionForChapka = {
       countries: Array.isArray(order.country) ? [...order.country] : [order.country],
@@ -224,7 +222,7 @@ const handlePaymentSession = async (session) => {
     stage: +customFields.alreadyPaid > 0 ? '33' : '6', // first payment (full or acompte) => '33' = "Gestion résa (sales)" || '6' ="en attente de départ"
     alreadyPaid: totalPaidAlma,
     restToPay: restToPay,
-    currentStep: totalPaidAlma === +deal.value // check if use case for Alma
+    currentStep: totalPaidAlma === +deal.value // check if is usefull for Alma
       ? 'Paiement OK'
       : 'Paiement en cours',
   }
