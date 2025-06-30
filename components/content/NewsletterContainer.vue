@@ -11,9 +11,9 @@
           <h2 class="text-h2 text-center text-md-left pb-3 ">
             <slot name="title" />
           </h2>
-          <h5 class="text-h5 text-center text-md-left ">
+          <h4 class="text-h5 text-center text-md-left ">
             <slot name="subtitle" />
-          </h5>
+          </h4>
         </v-col>
         <v-spacer />
       </template>

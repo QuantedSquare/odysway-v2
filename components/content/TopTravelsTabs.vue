@@ -7,38 +7,36 @@
       Des idées pour vos prochains voyages
     </div>
 
-    <v-tabs
-      v-model="currentTab"
-      class="text-white-light position-relative mb-6"
-      color="white-light"
-      role="tablist"
-      :aria-label="`Navigation des idées de voyages`"
-    >
+    <div class="tabs-container position-relative mb-6">
+      <v-tabs
+        v-model="currentTab"
+        class="text-white-light"
+        color="white-light"
+        role="tablist"
+        :aria-label="`Navigation des idées de voyages`"
+      >
+        <v-tab
+          v-for="top, index in tops"
+          :id="`tab-${index}`"
+          :key="index"
+          :value="index"
+          role="tab"
+          :aria-selected="currentTab === index"
+          :aria-controls="`tabpanel-${index}`"
+        >
+          <span class="font-weight-bold">
+            {{ top.title }}
+          </span>
+        </v-tab>
+      </v-tabs>
       <v-divider
         class="absolute-divider"
         thickness="2"
+        role="presentation"
+        aria-hidden="true"
       />
+    </div>
 
-      <v-tab
-        v-for="top, index in tops"
-        :id="`tab-${index}`"
-        :key="index"
-        :value="index"
-        role="tab"
-        :aria-selected="currentTab === index"
-        :aria-controls="`tabpanel-${index}`"
-      >
-        <span class="font-weight-bold">
-          {{ top.title }}
-        </span>
-      </v-tab>
-    </v-tabs>
-    <v-divider
-      class="absolute-divider"
-      thickness="2"
-      role="presentation"
-      aria-hidden="true"
-    />
     <v-tabs-window
       v-model="currentTab"
     >
