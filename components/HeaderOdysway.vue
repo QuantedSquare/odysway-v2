@@ -121,6 +121,8 @@
         icon
         height="35"
         variant="text"
+        aria-label="Menu"
+        :aria-expanded="model"
         @click.stop="model = !model"
       >
         <v-icon>

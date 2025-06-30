@@ -41,9 +41,11 @@
                   <div
                     ref="titleRef"
                     class="line-clamp-2"
+                    :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
                   >{{ voyage.title }}</div>
                   <v-tooltip
                     v-if="voyage.title.length > 50"
+                    :id="`tooltip-${voyage.slug}`"
                     activator="parent"
                   >
                     <span>
