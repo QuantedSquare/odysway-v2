@@ -204,7 +204,10 @@ const upsertContactIntoSupabase = async (contactId) => {
     console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
     const { error, data } = await supabase
       .from('activecampaign_clients')
-      .upsert(contactToUpsert)
+      .upsert(contactToUpsert, {
+        onConflict: 'id',
+        ignoreDuplicates: false,
+      })
       .select()
     console.log('===========data from supabase returned===========', data)
     if (error) console.error('Supabase upsert error:', error)
