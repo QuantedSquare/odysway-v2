@@ -84,6 +84,7 @@
           v-if="voyage.image"
           :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :alt="voyage.image.alt || `Image principale du voyage ${voyage.title}`"
           cover
           class="custom-height"
           rounded="lg"
@@ -97,6 +98,7 @@
           v-if="voyage.imageSecondary"
           :src="img(voyage.imageSecondary.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(voyage.imageSecondary.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :alt="voyage.imageSecondary.alt || `Image secondaire du voyage ${voyage.title}`"
           cover
           height="214"
           rounded="lg"
@@ -105,6 +107,7 @@
           v-if="voyage.photosList?.length > 0"
           :src="img(voyage.photosList[0].src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
           :lazy-src="img(voyage.photosList[0].src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+          :alt="voyage.photosList[0].alt || `Photo du voyage ${voyage.title}`"
           cover
           height="214"
           rounded="lg"
@@ -124,6 +127,7 @@
             <v-img
               :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
               :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+              :alt="photo.alt || `Photo du voyage ${voyage.title}`"
               width="100%"
               rounded="lg"
             />

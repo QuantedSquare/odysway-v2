@@ -12,6 +12,7 @@
           <v-img
             v-show="props.photo"
             :src="img(props.photo, { format: 'webp', quality: 70, width: 640 })"
+            alt="Photo de profil de l'auteur de l'avis"
           />
           <v-icon
             v-show="!props.photo"

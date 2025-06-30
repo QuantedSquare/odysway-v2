@@ -28,6 +28,8 @@
               slim
               bg-color="yellow-light-2"
               class=""
+              role="list"
+              :aria-label="`Points forts de ${page.title}`"
             >
               <HighlightListItem
                 v-for="highlight in experiencesBlock"

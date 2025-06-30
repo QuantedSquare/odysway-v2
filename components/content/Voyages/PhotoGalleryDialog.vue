@@ -55,12 +55,13 @@
             class="custom-btn bg-odysway-2 rounded-lg "
           >
             <v-carousel-item
-              v-for="photo in photosList"
-              :key="photo.src"
+              v-for="(photo, index) in photosList"
+              :key="photo.src + index"
             >
               <v-img
                 :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
                 :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
+                :alt="photo.alt || `Photo de galerie du voyage ${index}`"
                 width="100%"
                 class="rounded-md-lg"
               />
