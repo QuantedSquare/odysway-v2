@@ -205,7 +205,7 @@ const upsertContactIntoSupabase = async (contactId) => {
     const { error, data } = await supabase
       .from('activecampaign_clients')
       .upsert(contactToUpsert, {
-        onConflict: 'id',
+        onConflict: 'contact',
         ignoreDuplicates: false,
       })
       .select()
