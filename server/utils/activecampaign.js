@@ -201,12 +201,12 @@ const upsertContactIntoSupabase = async (contactId) => {
       city: findCustomFieldValue(acContact.contact.fieldValues, '4'),
       zip_code: +findCustomFieldValue(acContact.contact.fieldValues, '5') || null,
     }
-
+    console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
     const { error, data } = await supabase
       .from('activecampaign_clients')
       .upsert(contactToUpsert)
       .select()
-
+    console.log('===========data from supabase returned===========', data)
     if (error) console.error('Supabase upsert error:', error)
     return data
   }
