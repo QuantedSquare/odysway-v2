@@ -68,7 +68,7 @@ const createAlmaSession = async (order) => {
   if (deal.insurance && deal.insurance !== 'Aucune Assurance' && deal.insuranceCommissionPrice && deal.nbTravelers) {
     const insuranceItem = {
       amount_total: deal.insuranceCommissionPrice * deal.nbTravelers,
-      description: deal.insurance,
+      description: `Assurance ${deal.insurance}`,
       quantity: deal.nbTravelers,
       price: {
         unit_amount: deal.insuranceCommissionPrice,
