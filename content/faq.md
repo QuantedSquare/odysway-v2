@@ -161,15 +161,15 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   Pas d’itinéraires touristiques figés, mais des voyages pensés pour favoriser les rencontres, la découverte en profondeur d’un lieu, et une vraie déconnexion. Le confort, la sécurité et la qualité de l’accompagnement sont assurés à chaque étape.
   :::
 
+  :::question-panel{hide}
+  :::
+
   :::question-panel
   ---
   hide: true
   ---
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
-  
-    ::::question-panel{hide}
-    ::::
   
   #answer
   Odysway propose trois formats de voyage, selon les envies et les besoins :
