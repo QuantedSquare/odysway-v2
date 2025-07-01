@@ -11,14 +11,17 @@
               <v-switch
                 v-model="form.published"
                 color="green-light"
-                label="Publié"
+                label="Publiée"
               />
+
               <v-switch
+                v-if="!isCustomTravel"
                 v-model="form.is_indiv_travel"
                 color="green-light"
                 label="Voyage Individuel"
               />
               <v-autocomplete
+                v-if="!route.query.slug"
                 v-model="form.travel_slug"
                 :items="travelesList"
                 item-title="title"
@@ -27,7 +30,15 @@
                 required
                 @update:model-value="onTravelSelect"
               />
+              <div v-else>
+                <v-text-field
+                  v-model="form.travel_slug"
+                  label="Voyage"
+                  readonly
+                />
+              </div>
               <v-select
+                v-if="!isCustomTravel"
                 v-model="form.displayed_status"
                 label="Statut affiché"
                 :items="statuses"
@@ -67,6 +78,7 @@
                     color="green-light"
                     label="Early Bird disponible pour cette date"
                   />
+                  Réduction définie sur le voyage dans Nuxt Studio
                 </v-col>
                 <v-col cols="6">
                   <v-switch
@@ -74,11 +86,13 @@
                     color="green-light"
                     label="Last minute disponible pour cette date"
                   />
+                  Réduction définie sur le voyage dans Nuxt Studio
                 </v-col>
               </v-row>
               <v-row>
                 <v-col cols="6">
                   <v-switch
+                    v-if="!isCustomTravel"
                     v-model="includeCustomEvent"
                     color="green-light"
                     label="Événement personnalisé (optionnel)"
@@ -145,29 +159,31 @@
             </v-form>
           </v-card-text>
         </v-card>
-        <v-divider class="my-4" />
-        <h2>Prévisualisation</h2>
-        <v-col cols="12">
-          <v-chip
-            v-if="form.published"
-            color="green-light"
+        <template v-if="!isCustomTravel">
+          <v-divider class="my-4" />
+          <h2>Prévisualisation</h2>
+          <v-col cols="12">
+            <v-chip
+              v-if="form.published"
+              color="green-light"
+            >
+              Publié
+            </v-chip>
+            <v-chip
+              v-else
+              color="red"
+            >
+              Non publié
+            </v-chip>
+          </v-col>
+          <v-col
+            v-if="form"
+            cols="12"
+            class="mb-16"
           >
-            Publié
-          </v-chip>
-          <v-chip
-            v-else
-            color="red"
-          >
-            Non publié
-          </v-chip>
-        </v-col>
-        <v-col
-          v-if="form"
-          cols="12"
-          class="mb-16"
-        >
-          <DatesPricesItem :date="form" />
-        </v-col>
+            <DatesPricesItem :date="form" />
+          </v-col>
+        </template>
       </v-col>
     </v-row>
   </v-container>
@@ -193,6 +209,7 @@ const form = ref({
   published: false,
   is_indiv_travel: false,
   displayed_status: 'soon_confirmed',
+  status: 'soon_confirmed',
   departure_date: dayjs().format('YYYY-MM-DD'),
   return_date: dayjs().add(1, 'day').format('YYYY-MM-DD'),
   starting_price: 0,
@@ -216,19 +233,25 @@ const saveError = ref('')
 const saveSuccess = ref(false)
 const travelesList = ref([])
 const travelesMap = ref({})
+const isCustomTravel = ref(false)
 
 const fetchTravels = async () => {
   // Nuxt Studio queryCollection
   const list = await queryCollection('voyages').select().all()
   travelesList.value = list
+  // console.log('travelesList', travelesList.value)
   travelesMap.value = Object.fromEntries(list.map(t => [t.slug, t]))
+  // console.log('travelesMap', travelesMap.value)
 }
 
 const onTravelSelect = (slug) => {
+  console.log('slug', slug, travelesMap.value)
   const travel = travelesMap.value[slug]
+  console.log('travel', travel)
+  isCustomTravel.value = travel.customAvailable
   if (travel) {
-    form.value.min_travelers = travel.minTravelersToConfirm || ''
-    form.value.max_travelers = travel.maxTravelers || ''
+    form.value.min_travelers = travel.minTravelersToConfirm || 2
+    form.value.max_travelers = travel.maxTravelers || 10
   }
 }
 
@@ -245,6 +268,10 @@ const onSave = async () => {
   try {
     const payload = { ...form.value }
     delete payload.index
+    if (isCustomTravel.value) {
+      Object.assign(payload, { is_custom_travel: true })
+    }
+    console.log('payload', payload)
     const res = await fetch('/api/v1/booking/add-date', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -277,8 +304,10 @@ watch(form.value, (newVal) => {
   }
 })
 
-onMounted(fetchTravels)
-if (slugFromQuery) onTravelSelect(slugFromQuery)
+onMounted(async () => {
+  await fetchTravels()
+  if (slugFromQuery) onTravelSelect(slugFromQuery)
+})
 </script>
 
 <style scoped>
