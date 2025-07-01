@@ -3,7 +3,7 @@
     <div
       ref="content"
       class="text-content"
-      :class="{ truncated: !isExpanded }"
+      :class="{ truncated: !isExpanded && showReadMore }"
       :style="contentStyle"
     >
       <slot />
@@ -36,7 +36,7 @@ const props = defineProps({
   },
   buttonClass: {
     type: String,
-    default: 'text-h5 pa-0 mt-2',
+    default: 'text-h5 pa-0',
   },
   expandedText: {
     type: String,

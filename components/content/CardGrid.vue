@@ -4,7 +4,7 @@
     class="pa-0 mx-0 "
   >
     <v-container
-      v-if="categories?.length % 4 === 0 || width > 960"
+      v-if=" width > 960"
       fluid
     >
       <v-row>
@@ -51,7 +51,7 @@
 import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
-const { data: categories } = useAsyncData('categories', () => {
+const { data: categories } = await useAsyncData('categories', () => {
   return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '=', true).all()
 })
 </script>

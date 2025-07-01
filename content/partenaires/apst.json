@@ -1,5 +1,6 @@
 {
-  "imgSrc": "/images/APST.webp",
+  "imgSrc": "/images/Partenaires/apst-logo.png",
   "description": "APST",
-  "isOnHome": true
+  "isOnHome": true,
+  "whiteFilter": false
 }

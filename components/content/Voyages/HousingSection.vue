@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="px-0"
+    class="px-0 pt-0"
   >
     <v-row
       align="center"
@@ -10,7 +10,7 @@
         cols="12"
         xs="7"
         sm="9"
-        class="text-h4 my-md-4 font-weight-bold"
+        class="text-h4 mb-5 my-md-8 font-weight-bold"
       >
         {{ housingTitle }}
       </v-col>
@@ -18,34 +18,20 @@
       <v-col
         v-if="displayButton"
         cols="auto"
+        class="d-flex ga-2"
       >
-        <v-btn
-          icon
+        <CustomChevronBtn
+          :arrived-state="arrivedState.left"
           :color="color"
-          :disabled="arrivedState.left"
-          class="mr-2"
-          elevation="5"
-          :size="mdAndUp ? 'default' : 'small'"
+          orientation="left"
           @click="x -= scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronLeft"
-            color="white"
-          />
-        </v-btn>
-        <v-btn
-          icon
+        />
+        <CustomChevronBtn
+          :arrived-state="arrivedState.right"
           :color="color"
-          :disabled="arrivedState.right"
-          elevation="5"
-          :size="mdAndUp ? 'default' : 'small'"
+          orientation="right"
           @click="x += scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronRight"
-            color="white"
-          />
-        </v-btn>
+        />
       </v-col>
     </v-row>
     <div ref="items-list">
@@ -139,10 +125,10 @@
                         wrapper-class="housing-description"
                       >
                         <div v-if="housing.housingType">
-                          <span class="font-weight-bold">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
+                          <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
                         </div>
                         <div v-if="housing.housingMood">
-                          <span class="font-weight-bold">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
+                          <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
                         </div>
                       </ExpandableText>
                     </v-col>
@@ -194,7 +180,6 @@ onMounted(() => {
   nextTick(() => {
     scrollElement.value = scrollContainer.value.$el
   })
-  console.log('childrenCount', childrenCount.value)
 })
 
 const childrenCount = computed(() => {
@@ -228,6 +213,12 @@ const scrollAmount = computed(() => {
 .housing-text{
 font-size: 16px;
 line-height: 30px;
+}
+@media (max-width: 600px) {
+  .housing-text{
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .custom-btn-style:deep(.v-icon__svg){
   fill: white;

@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="position-relative d-flex justify-center">
+  <v-footer class="position-relative d-flex justify-center mt-md-10">
     <v-img
       class="footer-bg-img "
       :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"
@@ -12,7 +12,7 @@
       width="100%"
       height="400"
     />
-    <div class="mx-md-5">
+    <div class="mx-md-5 max-container-width">
       <v-container
         v-if="footer"
         fluid
@@ -26,7 +26,7 @@
           <v-col
             cols="12"
             md="3"
-            class="d-flex flex-column align-start align-md-start justify-space-between ga-6"
+            class="d-flex flex-column align-start align-md-start justify-space-between ga-3 ga-md-4 ga-lg-3"
           >
             <v-img
               :src="img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })"
@@ -37,7 +37,7 @@
               alt="Logo d'Odysway"
               class="footer-logo"
             />
-            <span class="text-h5 text-grey">
+            <span class="text-h6 text-grey">
               {{ footer.logo.description }}
             </span>
             <div>
@@ -45,8 +45,9 @@
             </div>
           </v-col>
           <v-col
-            cols="11"
+            cols="12"
             md="4"
+            class="rounded-lg px-md-0"
           >
             <v-lazy
               :options="{ threshold: 0.5 }"
@@ -54,8 +55,6 @@
             >
               <v-img
                 rounded="lg"
-                cover
-                max-height="198"
                 :src="img(footer.team.image, { format: 'webp', quality: 100, width: 320, height: 270 })"
                 :lazy-src="img(footer.team.image, { format: 'webp', quality: 10, width: 320, height: 270 })"
                 :srcset="`${img(footer.team.image, { format: 'webp', quality: 70, width: 320, height: 270 })} 320w, ${img(footer.team.image, { format: 'webp', quality: 70, width: 640, height: 270 })} 640w`"
@@ -67,13 +66,13 @@
           </v-col>
           <v-col
             cols="12"
-            lg="4"
-            class="d-flex flex-column align-center justify-space-between ga-6 ga-lg-8 px-8"
+            md="4"
+            class="d-flex flex-column align-center justify-space-between ga-6 px-8"
           >
             <h5 class="text-h4 font-weight-bold">
               {{ footer.contact.ctaText }}
             </h5>
-            <div class="d-flex flex-row flex-wrap justify-start align-start align-lg-center ga-6">
+            <div class="d-flex flex-row flex-wrap justify-start align-start align-lg-center ga-3">
               <div class="custom-chip font-weight-bold text-primary text-no-wrap">
                 {{ footer.contact.phone }}
               </div>
@@ -172,28 +171,30 @@
             </div>
           </v-col>
         </v-row>
-        <v-row align="center">
+        <v-row
+          align="center"
+          :class="isVoyageDetailPage ? 'pb-16 pb-md-0' : 'mb-0'"
+        >
           <v-col
             cols="12"
             md="5"
-            class="d-flex justify-start text-grey"
+            class="d-flex justify-center justify-md-start text-grey py-0"
           >
             <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
           </v-col>
           <v-col
             cols="12"
             md="7"
-            class="text-center text-md-right"
+            class="text-center text-md-right d-flex justify-space-between"
           >
-            <v-btn
+            <NuxtLink
               v-for="policy in policies"
               :key="policy.name"
               :to="policy.link"
-              variant="text"
-              class="text-overline text-decoration-none"
+              class="text-grey text-decoration-none"
             >
               {{ policy.name }}
-            </v-btn>
+            </NuxtLink>
           </v-col>
         </v-row>
       </v-container>
@@ -203,13 +204,18 @@
 
 <script setup>
 import { useImage } from '#imports'
-
 import OdyswayFooter from '~/assets/img/odysway-text.png'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
+const route = useRoute()
 const { footer } = useAppConfig()
 
 const img = useImage()
+
+// Add computed property to check if current route is a voyage detail page
+const isVoyageDetailPage = computed(() => {
+  return /^\/voyages\/[^/]+$/.test(route.path)
+})
 
 const policies = ref([
   { name: 'FAQ',

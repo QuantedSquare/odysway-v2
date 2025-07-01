@@ -23,14 +23,13 @@ const { data: pageContent } = await useAsyncData('page-experiences', () => {
 })
 
 const { data: experiences } = await useAsyncData('experiences', () => {
-  return queryCollection('experiences').all()
+  return queryCollection('experiences').where('published', '=', true).all()
 })
 
 const selectedExperience = computed(() => {
   if (!experiences.value || !slug.value) return null
   return experiences.value.find(e => e.slug === slug.value) || null
 })
-
 
 const { data: voyages } = await useAsyncData('voyages', async () => {
   if (!selectedExperience.value?.title) return []

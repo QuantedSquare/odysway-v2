@@ -11,7 +11,7 @@
       :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
     >
       <v-container
-        class="py-6 py-md-16 px-6 px-md-13"
+        class="py-sm-6 py-md-16 px-sm-6 px-md-13"
         max-width="1440px"
       >
         <v-row>
@@ -37,7 +37,7 @@
           <v-col
             cols="12"
             md="4"
-            class="px-0 pl-md-4"
+            class="px-2 px-sm-0 pl-md-4"
           >
             <CtaCardSheet class="mt-2" />
           </v-col>

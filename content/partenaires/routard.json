@@ -1,5 +1,6 @@
 {
   "imgSrc" : "/images/routard.png",
   "description" : "routard",
-  "isOnHome" : false
+  "isOnHome" : false,
+  "whiteFilter" : true
 }

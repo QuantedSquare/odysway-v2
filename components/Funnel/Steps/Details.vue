@@ -6,11 +6,9 @@
       <v-row>
         <v-col cols="12">
           <h2 v-if="!isAdvance">
-            <!-- {{ $t('stepperDevisPerso.nbTravellersSold') }} -->
             {{ page.details.select_travelers_title }}
           </h2>
           <h2 v-else>
-            <!-- {{ $t('stepperDevisPerso.nbTravellers') }} -->
             {{ page.details.nb_travelers_title }}
           </h2>
         </v-col>
@@ -45,25 +43,10 @@
                 :items="selectOptions(0, 9)"
               />
             </v-col>
-            <!-- <v-col
-              cols="12"
-              md="4"
-            >
-              <div class="text-caption text-truncate">
-                Nombre d'adolescents (12-18 ans)
-              </div>
-              <v-select
-                v-model="nbTeen"
-                :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
-                :menu-props="{ offsetY: true }"
-                :items="selectOptions(0, 9)"
-              />
-            </v-col> -->
           </v-row>
           <!--  Contact Details -->
           <v-row>
             <v-col cols="12">
-              <!-- <h2>{{ $t('stepperDevisGroup.contactDetails') }}</h2> -->
               <h2>
                 {{ page.details.contact_title }}
               </h2>
@@ -158,7 +141,6 @@ const isAdvance = ref(true)
 const optinNewsletter = ref(false)
 const nbAdults = ref(1)
 const nbChildren = ref(0)
-// const nbTeen = ref(0)
 const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
@@ -194,9 +176,6 @@ watch(() => currentStep, (value) => {
 
 watch(deal, () => {
   if (deal.value) {
-    console.log('got value in details', deal.value)
-
-    // nbTeen.value = +deal.value.nbTeen || 0
     nbAdults.value = +deal.value.nbAdults
     nbChildren.value = +deal.value.nbUnderAge || 0
     email.value = deal.value.contact.email
@@ -206,7 +185,6 @@ watch(deal, () => {
 })
 
 const saveToLocalStorage = () => {
-  console.log('saveToLocalStorage')
   const dataToStore = {
     firstname: firstName.value,
     lastname: lastName.value,
@@ -217,7 +195,6 @@ const saveToLocalStorage = () => {
 }
 const loadFromLocalStorage = () => {
   const storedData = JSON.parse(localStorage.getItem('detailsData'))
-  console.log('storedData', storedData)
   if (storedData) {
     firstName.value = storedData.firstname
     lastName.value = storedData.lastname

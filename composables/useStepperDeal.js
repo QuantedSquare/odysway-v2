@@ -93,3 +93,32 @@ export function useStepperDeal(componentStep) {
 
   return { deal, dealId, fetchDeal, createDeal, updateDeal, checkoutType, loadingDeal }
 }
+
+// try {
+//   const res = await apiRequest('/ac/deals/checkout&date_id=' + route.query.date_id, 'post', body)
+//   const date_id = route.query.date_id
+//   const addedBookedDate = await apiRequest(`/booking/${body.slug}/date/${date_id}/assign-deal`, 'post', {
+//     dealId: res,
+//     booked_places: 0, // this value is update after a payment
+//   })
+//   dealId.value = addedBookedDate.deal_id
+//   localStorage.setItem(date_id, JSON.stringify({
+//     booked_id: addedBookedDate.id,
+//     deal_id: addedBookedDate.deal_id,
+//   }))
+
+//   const paiementLink = `https://odysway.com/checkout?type=${route.query.type}&booked_id=${addedBookedDate.id}&step=1`
+//   const bodyWithPaymentLink = {
+//     dealId: addedBookedDate.deal_id,
+//     paiementLink,
+//   }
+//   updateDeal(bodyWithPaymentLink) // Update the deal with a paiementLink
+
+//   // Update both parameters at once to avoid race conditions
+//   await addMultipleParams({
+//     booked_id: addedBookedDate.id,
+//     date_id: undefined, // This will remove the date_id parameter
+//   })
+
+//   return true
+// }

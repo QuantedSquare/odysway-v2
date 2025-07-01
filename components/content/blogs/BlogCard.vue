@@ -10,7 +10,6 @@
       :src="img(displayedImg, { format: 'webp', quality: 90, height: 228, width: 640 })"
       :alt="`image de ${title}`"
       height="261px"
-      class="hover-scale"
       cover
     >
       <div
@@ -124,17 +123,6 @@ const img = useImage()
 </script>
 
 <style scoped>
- .hover-scale:hover .blur-overlay {
-  height: 100%;
-}
- .hover-scale:hover{
-  transform: scale(1.01);
-  transition: transform 0.2s ease-in-out;
-}
-.hover-scale{
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-}
 .badge-position{
   position: absolute;
   top: 25px;

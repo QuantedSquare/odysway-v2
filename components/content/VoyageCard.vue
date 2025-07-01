@@ -2,7 +2,7 @@
   <v-card
     elevation="0"
     hover
-    class="custom-card-width"
+    class="custom-card-width "
   >
     <NuxtLink
       :to="`/voyages/${voyage.slug}`"
@@ -43,7 +43,7 @@
                     class="line-clamp-2"
                   >{{ voyage.title }}</div>
                   <v-tooltip
-                    v-if="voyage.title.length > 60"
+                    v-if="voyage.title.length > 50"
                     activator="parent"
                   >
                     <span>
@@ -87,7 +87,6 @@
         </v-card-text>
         <v-divider />
         <v-card-actions
-          class="justify-center"
           :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
         >
           <client-only>
@@ -176,6 +175,7 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
 }
 .custom-card-width{
   min-width:406px!important;
+  max-width: 600px!important;
 }
 @media screen and (max-width: 1280px) {
   .custom-card-width{

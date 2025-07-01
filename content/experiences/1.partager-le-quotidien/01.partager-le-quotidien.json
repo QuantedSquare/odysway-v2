@@ -1,12 +1,12 @@
 {
-  "published": false,
+  "published": true,
   "title": "Partager le quotidien",
   "badgeTitle": "Partager...",
   "slug": "partager-le-quotidien",
   "discoveryTitle": "Partager le quotidien",
   "seoTitle": "Partager le quotidien",
   "image": {
-    "src": "images/Home/20250501-130525.jpg",
+    "src": "/images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg",
     "alt": "Culture Indienne"
   },
   "showOnHome": true

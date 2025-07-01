@@ -18,7 +18,7 @@ const { data: pageContent } = await useAsyncData('page-experiences', () => {
 })
 
 const { data: experiences } = useAsyncData('experiences', () => {
-  return queryCollection('experiences').all()
+  return queryCollection('experiences').where('published', '=', true).all()
 })
 
 const { data: voyages } = useAsyncData('voyages', () => {

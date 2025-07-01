@@ -45,8 +45,8 @@ export default defineEventHandler(async (event) => {
       console.log('========== payment type is a bank transfer =========')
       try {
         console.log('========== handlePaymentSession with this session object =========', stripeEvent.data.object)
-        await stripe.handlePaymentSession(stripeEvent.data.object, 'Virement')
         setResponseStatus(event, 200)
+        await stripe.handlePaymentSession(stripeEvent.data.object, 'Virement')
       }
       catch (err) {
         console.log('Error in payment succeeded webhook', err)

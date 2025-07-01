@@ -3,11 +3,15 @@
     class="d-flex justify-center"
     fluid
   >
-    <v-row>
+    <v-row
+      justify="center"
+      align="center"
+    >
       <v-col
         v-for="(partenaire, key) in partenaires"
         :key="key"
         cols="6"
+        class="d-flex justify-center align-center"
         :md="partenaires.length > 4 ? 2 : 3"
       >
         <v-lazy
@@ -20,8 +24,8 @@
             :lazy-src="img(partenaire?.imgSrc, { format: 'webp', quality: 10, height: 32, width: 320 })"
             :srcset="`${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 320 })} 320w, ${img(partenaire?.imgSrc, { format: 'webp', quality: 70, width: 640 })} 640w`"
             :alt="`logo du partenaire ${partenaire.description}`"
-            height="50"
-            width="150"
+            class="partenaire-img-sizing"
+            :class="partenaire.whiteFilter ? 'white-filter' : ''"
           />
         </v-lazy>
       </v-col>
@@ -36,3 +40,19 @@ const { data: partenaires } = await useAsyncData('partenaires', () => {
   return queryCollection('partenaires').all()
 })
 </script>
+
+<style scoped>
+.white-filter {
+  filter: brightness(0) invert(1);
+}
+.partenaire-img-sizing {
+  height: 100px;
+  width: 150px;
+}
+@media (max-width: 600px) {
+  .partenaire-img-sizing {
+    height: 50px;
+    width: 100px;
+  }
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="px-2 px-md-4 pt-0"
+    class="px-2 px-md-4 pt-0 "
   >
     <SearchHeroSection
       :is-category="isCategory"
@@ -68,13 +68,17 @@
     </ColorContainer>
 
     <v-divider
+      v-if="displayDivider"
       thickness="2"
       class="mt-2 mb-4 mb-md-6"
     />
-
-    <slot name="indexContent" />
-    <slot name="slugContent" />
-    <slot name="blogPost" />
+    <ColorContainer
+      color=""
+    >
+      <slot name="indexContent" />
+      <slot name="slugContent" />
+      <slot name="blogPost" />
+    </ColorContainer>
   </v-container>
 </template>
 
@@ -108,28 +112,35 @@ const { isCategory, isExperience, isDestination, pageContent } = defineProps({
     type: Object,
     default: () => {},
   },
+  displayDivider: {
+    type: Boolean,
+    default: true,
+  },
 })
 
-const { data: categories } = useAsyncData('categories', () => {
+const isComputedCategory = computed(() => !!isCategory)
+const isComputedExperience = computed(() => !!isExperience)
+
+const { data: categories } = useAsyncData('categories-on-content-layout', () => {
   if (isCategory) {
     return queryCollection('categories').where('showOnHome', '=', true).select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
   }
   return null
-})
+}, { watch: [isComputedCategory, isComputedExperience] })
 
-const { data: experiences } = useAsyncData('experiences', () => {
+const { data: experiences } = useAsyncData('experiences-on-content-layout', () => {
   if (isExperience) {
-    return queryCollection('experiences').all()
+    return queryCollection('experiences').where('published', '=', true).all()
   }
   return null
-})
+}, { watch: [isComputedCategory, isComputedExperience] })
 
-const { data: destinations } = useAsyncData('destinations', () => {
-  if (isDestination && selectedDestination) {
-    return queryCollection('destinations').where('published', '=', true).select('id', 'titre', 'slug', 'metaDescription', 'image').all()
-  }
-  return null
-})
+// const { data: destinations } = useAsyncData('destinations', () => {
+//   if (isDestination && selectedDestination) {
+//     return queryCollection('destinations').where('published', '=', true).select('id', 'titre', 'slug', 'metaDescription', 'image').all()
+//   }
+//   return null
+// })
 </script>
 
 <style scoped>

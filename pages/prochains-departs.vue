@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="pt-0 position-relative"
+    class="pt-0 position-relative max-container-width"
   >
     <div class="mb-6">
       <SearchHeroSection
@@ -112,7 +112,7 @@ const fetchTravels = async () => {
     loading.value = true
     const res = await fetch('/api/v1/booking/travels-by-date')
     const data = await res.json()
-    console.log('check', data)
+
     travels.value = data
     loading.value = false
   }

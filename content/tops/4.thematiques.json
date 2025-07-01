@@ -1,30 +1,26 @@
 {
-  "title": "Idée de voyage",
-  "description": "Les voyages les plus populaires d'Europe",
+  "title": "Thématiques",
+  "description": "Les thématiques de voyages Odysway",
   "contenuOnglet": [
     {
-      "title": "Top voyages 1",
+      "title": "Top voyages 2",
       "linksList": [
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+          "slug": "voyage-immersion-culturelle-japon"
         },
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+          "slug": "voyage-immersion-culturelle-japon"
         },
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+          "slug": "voyage-immersion-culturelle-japon"
         },
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
-        },
-        {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
-        }          
+          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
+          "slug": "voyage-immersion-culturelle-japon"
+        }
       ]
     },
     {

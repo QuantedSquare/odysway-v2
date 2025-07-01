@@ -5,14 +5,14 @@
     fluid
     class="px-0"
   >
-    <v-divider class="my-6" />
+    <v-divider class="my-md-6" />
     <v-row
       v-if="isGroupeAvailable"
       justify="center"
       align="center"
     >
       <v-col
-        class="font-weight-black text-h4 my-4"
+        class="font-weight-black text-h4 mt-4 my-md-4"
       >
         {{ dateSections.title }}
       </v-col>
@@ -42,7 +42,7 @@
     </v-row>
     <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
-        <div class="text-h4 font-weight-bold text-primary">
+        <div class="text-h4 font-weight-bold text-primary text-center">
           {{ indivSection.title }}
         </div>
         <v-btn
@@ -57,7 +57,7 @@
     </v-row>
     <v-row v-if="isPrivatisationAvailable && !isGroupeAvailable">
       <v-col class="bg-grey-light-3 rounded-lg mx-3 d-flex flex-column align-center justify-center ga-6 my-5 py-10">
-        <div class="text-h4 font-weight-bold text-primary">
+        <div class="text-h4 font-weight-bold text-primary text-center">
           {{ indivSection.titleOnlyPrivatisationAvailable }}
         </div>
         <v-btn
@@ -110,7 +110,6 @@ const { dateSections, indivSection, isGroupeAvailable, isPrivatisationAvailable 
 })
 
 watch(isExpanded, (newValue) => {
-  console.log('isExpanded', newValue)
   if (!newValue) {
     goTo(`#dates-container`, {
       offset: -200,
@@ -122,7 +121,7 @@ const limitedDatesList = computed(() => {
   const sortedByDates = dates.value
     .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
     .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
-  return sortedByDates.slice(0, isExpanded.value ? sortedByDates.length : 4)
+  return sortedByDates.slice(0, isExpanded.value ? sortedByDates.length : 3)
 })
 </script>
 

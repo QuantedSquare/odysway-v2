@@ -1,0 +1,13 @@
+{
+  "published": true,
+  "title": "Plonger dans la culture",
+  "badgeTitle": "Plong dans la culture",
+  "slug": "plongee-culture",
+  "discoveryTitle": "Plonger dans la culture",
+  "seoTitle": "voyages culturels",
+  "image": {
+    "src": "/images/voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg",
+    "alt": "Culture Indienne"
+  },
+  "showOnHome": true
+}

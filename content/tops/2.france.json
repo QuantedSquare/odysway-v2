@@ -1,12 +1,12 @@
 {
-  "title": "Populaires",
-  "description": "Les voyages les plus populaires par onglets",
+  "title": "Séjours en France",
+  "description": "Nos séjours en France",
   "contenuOnglet": [
     {
       "title": "Top voyages 1",
       "linksList": [
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
+          "title": "Voyages en Europe",
           "slug": "bali-menjangan-sidemen"
         },
         {
@@ -24,7 +24,7 @@
         {
           "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
           "slug": "bali-menjangan-sidemen"
-        }          
+        }
       ]
     },
     {

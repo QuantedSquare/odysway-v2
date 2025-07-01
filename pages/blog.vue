@@ -8,7 +8,7 @@
       >
         <v-col
           ref="scroll-target"
-          class="font-weight-black text-h2 my-4"
+          class="font-weight-black text-h2 my-4 "
         >
           {{ blogContent?.pageTitle || 'Blog' }}
         </v-col>
@@ -19,6 +19,7 @@
         <v-col
           cols="12"
           sm="6"
+          class="py-0"
         >
           <v-text-field
             :id="searchId"
@@ -32,6 +33,7 @@
         <v-col
           cols="12"
           sm="3"
+          class="py-0"
         >
           <v-select
             :id="categoryId"
@@ -47,6 +49,7 @@
         <v-col
           cols="12"
           sm="3"
+          class="py-0"
         >
           <v-select
             :id="sortId"
@@ -55,7 +58,17 @@
             :label="blogContent?.sortByDate || 'Trier par date'"
             density="comfortable"
             clearable
-          />
+          >
+            <template #prepend-inner>
+              <v-img
+                :src="img('/icons/calendar.svg', { format: 'webp', quality: 70, width: 640, height: 640 })"
+                alt="Calendar icon"
+                width="24"
+                height="24"
+                class="mr-1"
+              />
+            </template>
+          </v-select>
         </v-col>
       </v-row>
       <v-row v-if="loading">
@@ -113,7 +126,7 @@
           <v-pagination
             v-model="pagination.currentPage"
             :length="nbPages"
-            :total-visible="7"
+            :total-visible="3"
             variant="flat"
             density="comfortable"
             rounded="circle"
@@ -135,6 +148,9 @@ import dayjs from 'dayjs'
 import { useGoTo } from 'vuetify'
 import _ from 'lodash'
 import { mdiMagnify, mdiFilterOutline, mdiMagnifyClose } from '@mdi/js'
+import { useImage } from '#imports'
+
+const img = useImage()
 
 const searchId = useId()
 const categoryId = useId()
@@ -155,7 +171,7 @@ const loading = computed(() => {
 
 const search = ref('')
 const selectedCategory = ref(null)
-const sortOrder = ref('desc')
+const sortOrder = ref(null)
 const sortOptions = computed(() => [
   { title: blogContent.value?.sortOptions?.newest || 'Plus récent', value: 'desc' },
   { title: blogContent.value?.sortOptions?.oldest || 'Plus ancien', value: 'asc' },

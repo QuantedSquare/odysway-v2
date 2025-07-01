@@ -1,29 +1,29 @@
 {
   "faqSection": {
     "ctaCard": {
-      "avatar": "/images/team/romain.webp",
-      "title": "Autres questions ? Notre équipe est là pour vous renseigner",
-      "subtitle": "Un membre de l'équipe vous répondra dans les plus brefs délais",
+      "avatar": "/images/team/lucie.webp",
+      "title": "Une question ? Parlons de votre voyage",
+      "subtitle": "Prenez quelques minutes avec une spécialiste de ce voyage pour en discuter tranquillement.",
       "button": {
-        "text": "Contactez-nous",
+        "text": "Prendre rendez-vous",
         "to": "/calendly"
-        }
+      }
     },
     "faqHomeSubText": {
-      "question": "D'autres questions ?",
-      "text": "Consulter notre FAQ",
+      "question": "Vous ne trouvez pas la réponse qu’il vous faut ?",
+      "text": "Voir toutes nos réponses",
       "linkOnText": "/faq",
-      "subtitle": "Si vous ne trouvez pas la réponse que vous cherchez n'hésitez pas à",
-      "text2": "nous contacter.",
+      "subtitle": "Vous pouvez aussi",
+      "text2": "réserver un créneau.",
       "linkOnText2": "/calendly"
     }
   },
   "partenairesSection": {
-    "title": "Une agence fiable et engagée",
-    "subtitle": "Découvrez nos partenaires qui nous font confiance"
-    },
+    "title": "Une agence reconnue et recommandée",
+    "subtitle": "Membre de l’APST, agence référencée par Atout France, mise en avant par le Routard… et notée 4,9/5 par nos voyageurs !"
+  },
   "layoutInfoContainer": {
-    "title": "Une agence fiable et engagée",
-    "subtitle": "Découvrez nos partenaires qui nous font confiance"
-    }
+    "title": "Une agence reconnue et recommandée",
+    "subtitle": "Membre de l’APST, agence référencée par Atout France, mise en avant par le Routard… et notée 4,9/5 par nos voyageurs !"
+  }
 }

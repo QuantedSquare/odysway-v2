@@ -54,8 +54,6 @@ for (const file of files) {
   }
 
   if (changed) {
-    console.log('data', data)
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8')
-    console.log(`Updated ${file}`)
   }
 }

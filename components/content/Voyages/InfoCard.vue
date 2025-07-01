@@ -10,10 +10,10 @@
             cols="5"
             class="d-flex flex-column align-start"
           >
-            <span class="text-body-2 text-grey">
+            <span class="text-caption text-lg-body-2 text-grey">
               {{ stickyBlock.pricePrefix }}
             </span>
-            <span class="text-h2 font-weight-bold text-primary">
+            <span class="text-h3 text-lg-h2 font-weight-bold text-primary">
               {{ voyage.pricing.startingPrice }}€<span class="text-body-2 font-weight-bold">{{ stickyBlock.priceSuffix }}</span>
             </span>
           </v-col>
@@ -190,7 +190,7 @@
             </v-col>
           </v-row>
         </template>
-        <template v-else>
+        <template v-else-if="displayedDates.length === 0 && voyage.groupeAvailable">
           <v-row>
             <v-col cols="12">
               <div class="d-flex align-center ga-2">
@@ -258,7 +258,6 @@ const { stickyBlock, voyage } = defineProps({
     required: true,
   },
 })
-
 const getStatus = (date) => {
   if (date.displayed_status === 'soon_confirmed') {
     return {

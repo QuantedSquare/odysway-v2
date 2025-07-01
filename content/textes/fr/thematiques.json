@@ -4,7 +4,7 @@
     "metaDescription": "Découvrez toutes nos thématiques de voyage"
   },
   "slug": {
-    "noVoyagesFound": "Aucun voyage trouvé pour thématique \"{{title}}\"",
+    "noVoyagesFound": "Aucun voyage trouvé pour la thématique \"{{title}}\"",
     "modifySearchCriteria": "Modifiez vos critères de recherche"
   },
   "common": {
@@ -13,4 +13,4 @@
       "showLess": "Voir moins"
     }
   }
-} 
+}

@@ -3,7 +3,6 @@ import dayjs from 'dayjs'
 export default function (dates) {
   const today = dayjs()
   let closestTrip = null
-  console.log('tot')
   for (const trip of dates) {
     const departure = dayjs(trip.departureDate)
 

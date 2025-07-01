@@ -30,20 +30,6 @@
                 required
               />
             </v-col>
-
-            <v-col
-              cols="12"
-              md="6"
-            >
-              <div>
-                {{ contactContent?.contactForm?.fields?.lastName?.label || 'Nom *' }}
-              </div>
-              <v-text-field
-                v-model="lastName"
-                :placeholder="contactContent?.contactForm?.fields?.lastName?.placeholder || 'Jones'"
-                :rules="[rules.lastname]"
-              />
-            </v-col>
             <v-col
               cols="12"
               md="6"
@@ -55,6 +41,19 @@
                 v-model="firstName"
                 :placeholder="contactContent?.contactForm?.fields?.firstName?.placeholder || 'Indiana'"
                 :rules="[rules.firstname]"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              md="6"
+            >
+              <div>
+                {{ contactContent?.contactForm?.fields?.lastName?.label || 'Nom *' }}
+              </div>
+              <v-text-field
+                v-model="lastName"
+                :placeholder="contactContent?.contactForm?.fields?.lastName?.placeholder || 'Jones'"
+                :rules="[rules.lastname]"
               />
             </v-col>
             <v-col

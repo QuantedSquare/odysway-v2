@@ -9,6 +9,7 @@ sitemap:
   lastmod: 2025-01-01
   videos: []
   images: []
+  loc: ""
 robots: index, nofollow
 seo:
   title: Accueil Odysway
@@ -38,11 +39,18 @@ schemaOrg:
     image: https://odysway.com/logos/logo_noir.png
 head:
   script: []
+title: "Odysway : Voyages en immersion humaine et responsable"
+description: Odysway est une agence qui propose des voyages en immersion,
+  éthiques et humains, en France et à l’étranger. Découvrez le monde autrement.
+navigation:
+  title: Accueil
+  description: "Explorez tous nos voyages et plongez dans l’univers d’Odysway :
+    immersion, rencontres, découvertes."
 ---
 
 ::home-hero-section
 ---
-image-src: images/AdobeStock_218029671.webp
+imageSrc: /images/Home/photo-groupe-odysway-nepal.png
 primary-color: "#2B4C52"
 secondary-color: "#DB6644"
 tertiary-color: "#F0B348"
@@ -108,7 +116,7 @@ au cœur du voyage
   imageSrc: images/voyages/trek-chez-lhabitant-nepal/9ri-cp-doc-qd-2k-et-ai-eid-u.png
   ---
   #title
-  [Voyager autrement]{style="color: rgba(43, 76, 82, 1)"}
+  [Voyager, autrement]{style="color: rgba(43, 76, 82, 1)"}
   
   #content-cols
     ::::icon-text-col
@@ -162,16 +170,25 @@ au cœur du voyage
 ::color-container{color="grey-light"}
   :::horizontal-carousel
   #title
-  [Nos séjours en France]{style="color: rgba(43, 76, 82, 1)"}
+  [Nos départs garantis]{style="color: rgba(43, 76, 82, 1)"}
   
   #carousel-item
+    ::::voyage-col-card{slug="trek-chez-lhabitant-nepal"}
+    ::::
+  
+    ::::voyage-col-card{slug="voyage-perou-trek-immersion-chez-l-habitant"}
+    ::::
+  
     ::::voyage-col-card{slug="sejour-berger-bearn"}
+    ::::
+  
+    ::::voyage-col-card{slug="voyage-hiver-laponie-finlande"}
     ::::
   
     ::::voyage-col-card{slug="decouvrez-photo-animaliere-jura"}
     ::::
   
-    ::::voyage-col-card{slug="photographie-animaliere-vosges"}
+    ::::voyage-col-card{slug="voyage-costa-rica-immersion-communaute-locale"}
     ::::
   :::
 ::
@@ -199,10 +216,10 @@ au cœur du voyage
 ::color-container{color="soft-blush"}
   :::newsletter-container
   #title
-  [Nos bonnes idées 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
+  [Nos (bonnes) idées voyage 🌍]{style="color: rgba(43, 76, 82, 1); font-weight: 700"}
   
   #subtitle
-  [1 fois par mois, nos inspirations et idées pour voyager autrement]{style="color: #BDBDBD; font-weight: 500"} .
+  [1 fois par mois, inspirations, récits et bons plans pour un voyage plus conscient.]{style="color: #BDBDBD; font-weight: 500"}
   :::
 ::
 

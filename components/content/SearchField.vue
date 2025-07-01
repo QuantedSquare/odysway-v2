@@ -175,7 +175,7 @@ const { data: searchFieldContent, status: searchFieldContentStatus } = useAsyncD
   queryCollection('search_field').first(),
 )
 
-const isSelectionARegion = ref(false)
+const isSelectionARegion = useState('isSelectionARegion', () => false)
 const { gtag } = useGtag()
 const destinationId = useId()
 const travelTypeId = useId()
@@ -215,7 +215,7 @@ const months = computed(() => {
   ]
 })
 
-const { data: destinations, destinationsStatus } = useAsyncData('destinations', () => {
+const { data: destinations, destinationsStatus } = useAsyncData('destinations-in-search', () => {
   return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
 })
 const { data: regions, status: regionsStatus } = useAsyncData('regions', () => {
@@ -232,8 +232,16 @@ const mappedDestinationsToRegions = computed(() => {
     image: null,
     destinations: topDestinations,
   }
-  // console.log('destinations', destinations.value)
-  // console.log('regions', regions.value)
+
+  topRegion.destinations.push({
+    titre: 'France',
+    slug: 'france',
+    metaDescription: 'France',
+    published: true,
+    regions: ['Europe'],
+    image: null,
+    isTopDestination: true,
+  })
 
   // Normal region mapping
   const regionGroups = regions.value.map((region) => {
@@ -246,7 +254,6 @@ const mappedDestinationsToRegions = computed(() => {
   })
   // filter out the france destination in the Europe region
   regionGroups.forEach((region) => {
-    console.log('region', region)
     if (region.title === 'Europe') {
       region.destinations = region.destinations.filter(d => !d.regions.some(r => r.nom === 'France'))
     }
@@ -370,11 +377,19 @@ const filteredRegions = computed(() => {
     if (!regionGroups[regionLabel]) regionGroups[regionLabel] = []
     regionGroups[regionLabel].push(dest)
   })
-  // Return as array of { title, destinations }
-  return Object.entries(regionGroups).map(([title, destinations]) => ({ title, destinations }))
+  // Return as array of { title, destinations, value } - preserve the value property
+  return Object.entries(regionGroups).map(([title, destinations]) => {
+    // Find the original region object to get the value property
+    const originalRegion = mappedDestinationsToRegions.value.find(region => region.title === title)
+    return {
+      title,
+      destinations,
+      value: originalRegion ? originalRegion.value : null,
+    }
+  })
 })
 
-const selectedRegionSlug = ref(null)
+const selectedRegionSlug = useState('selectedRegionSlug', () => null)
 
 function searchFn() {
   const query = {}
@@ -383,6 +398,9 @@ function searchFn() {
     if (isSelectionARegion.value) {
       // Use the stored region slug
       query.destination = selectedRegionSlug.value
+    }
+    else if (destinationChoice.value === 'France') {
+      query.destination = 'france'
     }
     else {
       const found = destinations.value.find(d => d.titre === destinationChoice.value)
@@ -427,6 +445,8 @@ function selectRegion(region) {
 function clearDestination() {
   destinationChoice.value = null
   search.value = ''
+  isSelectionARegion.value = false
+  selectedRegionSlug.value = null
 }
 
 onMounted(() => {
@@ -446,7 +466,6 @@ onMounted(() => {
 
   // Handle travelType parameter
   if (route.query.travelType) {
-    console.log('travelType', route.query.travelType)
     travelTypeChoice.value = route.query.travelType
   }
 

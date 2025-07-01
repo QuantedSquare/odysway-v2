@@ -1,9 +1,9 @@
 <template>
   <v-container
-    v-show="reviews.length > 0"
+    v-show="reviews && reviews.length > 0"
     id="reviews-container"
     :fluid="width < 1600"
-    class="px-0 py-0"
+    class="px-0 py-0 mb-4"
   >
     <v-row
       align="center"
@@ -19,44 +19,30 @@
       </v-col>
       <v-spacer />
       <v-col
-        v-show="displayButton"
+        v-if="displayButton"
         cols="12"
         md="auto"
+        class="d-flex ga-2"
       >
-        <v-btn
-          icon
-          :color="arrivedState.left ? 'white' : color"
-          :disabled="arrivedState.left"
-          class="mr-2 carousel-nav-btn"
-          elevation="5"
-          :size="mdAndUp ? 'large' : 'small'"
+        <CustomChevronBtn
+          :arrived-state="arrivedState.left"
+          :color="color"
+          orientation="left"
           @click="x -= scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronLeft"
-            :color="arrivedState.left ? color : 'white'"
-          />
-        </v-btn>
-        <v-btn
-          icon
-          :color="arrivedState.right ? 'white' : color"
-          :disabled="arrivedState.right"
-          class="carousel-nav-btn"
-          elevation="5"
-          :size="mdAndUp ? 'large' : 'small'"
+        />
+        <CustomChevronBtn
+          :arrived-state="arrivedState.right"
+          :color="color"
+          orientation="right"
           @click="x += scrollAmount"
-        >
-          <v-icon
-            :icon="mdiChevronRight"
-            :color="arrivedState.right ? color : 'white'"
-          />
-        </v-btn>
+        />
       </v-col>
     </v-row>
-    <div ref="items-list">
+    <div ref="itemsList">
       <v-row
+        v-if="smAndUp"
         ref="scrollContainer"
-        class="flex-nowrap overflow-auto hidden-scroll"
+        class="flex-nowrap overflow-auto hidden-scroll mb-4"
       >
         <v-col
           v-for="review in reviews"
@@ -71,17 +57,33 @@
           />
         </v-col>
       </v-row>
+      <v-row
+        v-else
+        class="mb-8"
+      >
+        <v-col
+          v-for="review in reviews.slice(0, 3)"
+          :key="review.id"
+          cols="12"
+          class="pb-0"
+        >
+          <ReviewTraveller
+            :review="review"
+            :is-travel-page="true"
+          />
+        </v-col>
+      </v-row>
     </div>
   </v-container>
 </template>
 
 <script setup>
-import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { useScroll, useElementSize } from '@vueuse/core'
 import { useDisplay } from 'vuetify'
 import _ from 'lodash'
 
 const route = useRoute()
+
 defineProps({
   centerTitle: {
     type: Boolean,
@@ -96,35 +98,61 @@ defineProps({
     required: true,
   },
 })
-const { mdAndUp, sm, width } = useDisplay()
+
+const { mdAndUp, smAndUp, width } = useDisplay()
 const scrollContainer = ref(null)
 const scrollElement = ref(null)
+const itemsList = ref(null)
 
-const itemsList = useTemplateRef('items-list')
+const { data: reviews } = await useAsyncData(`reviews-${route.params.voyageSlug}`, async () => {
+  const collection = await queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
 
-onMounted(() => {
-  nextTick(() => {
-    scrollElement.value = scrollContainer.value.$el
-  })
+  return _.uniqBy(collection, 'text')
 })
 
-const childrenCount = computed(() => {
-  return itemsList.value?.children[0]?.children.length
+// Initialize scroll setup function
+const setupScrollElement = () => {
+  nextTick(() => {
+    if (scrollContainer.value) {
+      const element = scrollContainer.value.$el || scrollContainer.value
+      if (element && element.scrollWidth > element.clientWidth) {
+        scrollElement.value = element
+      }
+    }
+  })
+}
+
+// Setup scroll on mount
+onMounted(() => {
+  setupScrollElement()
+})
+
+// Re-setup when reviews data changes (important for refresh)
+watch(() => reviews.value, (newReviews) => {
+  if (newReviews && newReviews.length > 0) {
+    // DOM update with new reviews
+    nextTick()
+  }
+})
+
+// Watch for scroll container changes
+watch(() => scrollContainer.value, () => {
+  if (scrollContainer.value) {
+    setupScrollElement()
+  }
 })
 
 const displayButton = computed(() => {
-  if (mdAndUp.value) {
-    return childrenCount.value > 3
-  }
-  else if (sm.value) {
-    return false
-  }
-  else {
-    return false
-  }
+  return mdAndUp.value && reviews.value && reviews.value.length > 3
 })
 
-const { x, arrivedState } = useScroll(scrollElement, { behavior: 'smooth' })
+const { x, arrivedState } = useScroll(scrollElement, {
+  behavior: 'smooth',
+  // onScroll: () => {
+  //   nextTick()
+  // },
+})
+
 const { width: scrollContainerWidth } = useElementSize(scrollContainer)
 
 const scrollAmount = computed(() => {
@@ -132,19 +160,15 @@ const scrollAmount = computed(() => {
   if (scrollContainerWidth.value && scrollContainerWidth.value >= 892) {
     return 400
   }
-  else {
-    return scrollContainerWidth?.value || 0
-  }
-})
-const { data: reviews } = await useAsyncData('reviews', async () => {
-  const collection = await queryCollection('reviews').where('voyageSlug', '=', route.params.voyageSlug).all()
-  return _.uniqBy(collection, 'text')
+  return scrollContainerWidth?.value || 300
 })
 </script>
 
 <style scoped>
 .hidden-scroll {
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .hidden-scroll::-webkit-scrollbar {
@@ -153,5 +177,9 @@ const { data: reviews } = await useAsyncData('reviews', async () => {
 
 .carousel-nav-btn:disabled {
   color: white !important;
+}
+
+.disabled-shadow {
+  box-shadow: 0px 6px 16px 0px #2222231A!important;
 }
 </style>
