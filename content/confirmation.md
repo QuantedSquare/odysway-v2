@@ -1,3 +1,14 @@
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
+
 ::confirmation-container
 #title_option
 # Nous vous confirmons la pose de votre Option !
