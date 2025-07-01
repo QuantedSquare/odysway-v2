@@ -6,7 +6,7 @@
     "step_final_rdv": "Rendez-vous"
   },
   "first_step": {
-    "title": "Où en êtes vous dans la préparation de ce voyage ?",
+    "title": "Où en êtes-vous dans la préparation de ce voyage ?",
     "option_1": "Je souhaite poser une option / réserver ce voyage",
     "option_2": "Poser une option sur ce voyage",
     "option_3": "Je souhaite prendre un rendez-vous avec un conseiller voyage"
@@ -15,7 +15,7 @@
   "room_indiv_accroche": "Si vous partez seul, vous ne partagerez pas votre chambre avec d'autres voyageurs.",
   "room_indiv_text": "Si vous partez seul et que vous ne sélectionnez pas cette option, vous pourrez partager votre chambre avec un autre voyageur du même sexe.",
   "forced_indiv_room_text": "Texte chambre individuelle forcée",
-  "cancel_text": "Vous pouvez annuler gratuitement jusqu'à 30 jours avant le départ. Vous serez remboursé sous 7 jours (sans aucun frais retenu).",
+  "cancel_text": "Vous pouvez annuler gratuitement jusqu'à 30 jours avant le départ. Vous serez remboursé sous 7 jours sans frais (sauf frais CB). ",
   "details": {
     "select_travelers_title": "Sélectionnez le nombre de voyageurs à régler",
     "nb_travelers_title": "Nombre de voyageurs",

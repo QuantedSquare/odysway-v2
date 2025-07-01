@@ -43,7 +43,8 @@
     },
     {
       "name": "voyage-nature"
-    }
+    },
+    {}
   ],
   "duration": 14,
   "nights": 13,
@@ -132,10 +133,10 @@
     {
       "title": "ARRIVÉE À KATMANDOU",
       "badgeText": "JOUR 1",
-      "description": "Dès votre arrivée à Katmandou, vous serez accueillis par votre guide et conduit à votre hôtel où vous recevrez un briefing et une présentation de l'itinéraire de votre séjour. Si vous arrivez le matin, vous aurez la possibilité de vous reposer ou partir explorer le quartier animé de Thamel afin de plonger dans l'ambiance locale dès ce premier jour ! \r\nTransport en voiture - environ 10 km - 20 minutes de route.",
+      "description": "Dès votre arrivée à Katmandou, vous serez accueillis par votre guide et conduit à votre hôtel où vous recevrez un briefing et une présentation de l'itinéraire de votre séjour. Si vous arrivez le matin, vous aurez la possibilité de vous reposer ou partir explorer le quartier animé de Thamel afin de plonger dans l'ambiance locale dès ce premier jour ! ",
       "photo": "/images/voyages/trek-chez-lhabitant-nepal/9riCPDocQD2kETAiEidU.jpg",
       "denivellation": "",
-      "road": "",
+      "road": "Transport en voiture : env. 10 km - 20 minutes de route",
       "night": ""
     },
     {
