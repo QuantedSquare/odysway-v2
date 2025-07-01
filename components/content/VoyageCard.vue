@@ -8,7 +8,9 @@
       :to="`/voyages/${voyage.slug}`"
       class="text-decoration-none position-relative text-white"
     >
+      <!-- #TODO : WARNING IN CONSOLE ABOUT SLOT FOR V IMG -->
       <v-img
+        v-if="voyage.image?.src"
         :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
         :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
         :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
@@ -16,6 +18,7 @@
         sizes="(max-width: 600px) 480px, 1024px"
         class="img-height"
         cover
+        aspect-ratio="auto"
       >
         <div class="badge-position">
           <RatingBadge
@@ -38,11 +41,6 @@
             <v-row>
               <v-col class="pt-lg-3 pt-0">
                 <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
-                  <div
-                    ref="titleRef"
-                    class="line-clamp-2"
-                    :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
-                  >{{ voyage.title }}</div>
                   <v-tooltip
                     v-if="voyage.title.length > 50"
                     :id="`tooltip-${voyage.slug}`"
@@ -50,10 +48,26 @@
                     role="tooltip"
                     :aria-label="`Titre complet du voyage: ${voyage.title}`"
                   >
+                    <template #activator="{ props }">
+                      <div
+                        :id="`tooltip-${voyage.slug}`"
+                        ref="titleRef"
+                        class="line-clamp-2"
+                        :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
+                        role="tooltip"
+                        :aria-label="`Titre complet du voyage: ${voyage.title}`"
+                        v-bind="props"
+                      >{{ voyage.title }}</div>
+                    </template>
                     <span>
                       {{ voyage.title }}
                     </span>
                   </v-tooltip>
+                  <div
+                    v-else
+                    ref="titleRef"
+                    class="line-clamp-2"
+                  >{{ voyage.title }}</div>
                 </div>
               </v-col>
             </v-row>

@@ -17,17 +17,16 @@
       <WhatsAppBtn />
     </div>
 
-    <ContentRenderer
-      v-if="faqPage"
-      :value="faqPage"
-    />
-
     <v-container
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
+      <ContentRenderer
+        v-if="faqPage"
+        :value="faqPage"
+      />
       <ColorContainer
-        v-if="status === 'success'"
+        v-if="partenairesTextes"
         color="secondary"
         :white-text="true"
       >
@@ -61,7 +60,7 @@ const { data: faqPage } = await useAsyncData('faq-section', () => {
     .first()
 })
 
-const { data: partenairesTextes, status } = useAsyncData('partenairesTextes', () => {
+const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () => {
   return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
 })
 </script>

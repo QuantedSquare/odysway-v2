@@ -6,10 +6,10 @@
   >
     <v-expansion-panel
       eager
-      class="my-1 my-md-2 py-6"
+      class="my-1 my-md-2 py-md-6"
     >
       <v-expansion-panel-title
-        class="text-subtitle-1 font-weight-bold text-md-h6 "
+        class="text-subtitle-2 font-weight-bold text-md-h6 "
         :class="'text-'+ questionColor"
       >
         <!-- {{ item.question }} -->

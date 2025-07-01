@@ -2,7 +2,7 @@
   <v-container
     id="faq-container"
     fluid
-    class="rounded-lg  py-0 mt-4 mt-md-8 max-container-width px-2 px-md-9 px-xl-0"
+    class="rounded-lg py-4 py-md-8 px-0  mt-4 mt-md-8 max-container-width"
   >
     <v-lazy
       :min-height="415"
@@ -17,6 +17,7 @@
         loading="lazy"
         alt="Image de fond de la section FAQ"
         cover
+        width="100%"
         class="rounded-lg"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >

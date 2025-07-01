@@ -78,6 +78,7 @@
       <slot name="indexContent" />
       <slot name="slugContent" />
       <slot name="blogPost" />
+      <CommonReviewContainer class="mt-8" />
     </ColorContainer>
   </v-container>
 </template>
@@ -122,6 +123,7 @@ const isComputedCategory = computed(() => !!isCategory)
 const isComputedExperience = computed(() => !!isExperience)
 
 const { data: categories } = useAsyncData('categories-on-content-layout', () => {
+  console.log('isCategory', isCategory)
   if (isCategory) {
     return queryCollection('categories').where('showOnHome', '=', true).select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
   }
@@ -129,6 +131,7 @@ const { data: categories } = useAsyncData('categories-on-content-layout', () => 
 }, { watch: [isComputedCategory, isComputedExperience] })
 
 const { data: experiences } = useAsyncData('experiences-on-content-layout', () => {
+  console.log('isExperience', isExperience)
   if (isExperience) {
     return queryCollection('experiences').where('published', '=', true).all()
   }
