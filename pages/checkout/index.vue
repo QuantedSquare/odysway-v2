@@ -19,7 +19,8 @@
       justify="center"
     >
       <ClientOnly>
-        <FunnelCheckoutStepper />
+        <!-- <FunnelCheckoutStepper /> -->
+        <FunnelCheckoutStepper2 />
       </ClientOnly>
     </v-row>
   </v-container>
