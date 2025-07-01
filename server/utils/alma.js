@@ -121,6 +121,7 @@ const insertAlmaId = async (paymentId) => {
   }
   if (data) {
     console.log('Payment already handled in supabase:', paymentId)
+    setResponseStatus(event, 200)
   }
   else {
     const { data, error } = await supabase
@@ -208,7 +209,11 @@ const handlePaymentSession = async (session) => {
       dealId: order.id,
     }
 
-    const customFieldsForChapka = { ...customFields, pricePerTraveler: Math.ceil(totalPaidAlma / order.nbTravelers) }
+    const customFieldsForChapka = {
+      ...customFields,
+      pricePerTraveler: Math.ceil((totalPaidAlma / order.nbTravelers) - (deal.insuranceCommissionPrice * deal.nbTravelers)),
+    }
+    console.log('customFieldsForChapka', customFieldsForChapka)
     const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, customFieldsForChapka)
     console.log('===== Chapka notify sent =====', chapkaNotify)
   }
@@ -235,7 +240,7 @@ const handlePaymentSession = async (session) => {
   if (session.processing_status === 'captured') {
     const addedNote = activecampaign.addNote(order.id, {
       note: {
-        note: `Paiement CB - ${method} -  ${
+        note: `Paiement ${method} -  ${
           contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€`,
       },
 
@@ -245,7 +250,7 @@ const handlePaymentSession = async (session) => {
   if (session.processing_status === 'canceled') {
     const addedNote = activecampaign.addNote(order.id, {
       note: {
-        note: `Paiement CB - ${method} -  ${
+        note: `Paiement ${method} -  ${
           contact.firstName} ${contact.lastName} - ${contact.email} - ${totalPaidAlma / 100}€ - Paiement annulé`,
       },
 

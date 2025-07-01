@@ -7,9 +7,11 @@ const config = useRuntimeConfig()
 const createCheckoutSession = async (order) => {
   console.log('order', order)
 
-  const reponse = await activecampaign.getDealById(order.dealId)
-  const customFields = await activecampaign.getDealCustomFields(order.dealId)
-  const deal = { ...reponse.deal, ...customFields }
+  const [fetchedDeal, customFields] = await Promise.all([
+    activecampaign.getDealById(order.dealId),
+    activecampaign.getDealCustomFields(order.dealId),
+  ])
+  const deal = { ...fetchedDeal.deal, ...customFields }
 
   const isDev = config.public.environment !== 'production'
   const origin = config.public.siteURL
