@@ -1,6 +1,6 @@
 <template>
   <!-- Display carousel with voyages for each type experience/category  -->
-  <div v-if="availableVoyages">
+  <div v-if="availableVoyages > 0">
     <HorizontalCarousel
       v-for="content in voyages"
 
@@ -74,6 +74,14 @@
         {{ noVoyagesFoundCategoryText }}
       </h3>
     </v-col>
+    <v-col
+      cols="12"
+      sm="6"
+      lg="4"
+      class="mt-10"
+    >
+      <CtaCardSheet />
+    </v-col>
   </v-row>
   <v-row
     v-if="voyages && voyages.length === 0 && selectedExperience"
@@ -87,6 +95,14 @@
         {{ noVoyagesFoundExperienceText }}
       </h3>
     </v-col>
+    <v-col
+      cols="12"
+      sm="6"
+      lg="4"
+      class="mt-10"
+    >
+      <CtaCardSheet />
+    </v-col>
   </v-row>
   <v-row
     v-if="voyages && voyages.length === 0 && isSearch"
@@ -99,6 +115,14 @@
       <h3 class="custom-title">
         {{ props.pageContent?.slug?.modifySearchCriteria || 'Modifiez vos critères de recherche' }}
       </h3>
+    </v-col>
+    <v-col
+      cols="12"
+      sm="6"
+      lg="4"
+      class="mt-10"
+    >
+      <CtaCardSheet />
     </v-col>
   </v-row>
   <v-row
@@ -184,9 +208,9 @@ const noVoyagesFoundExperienceText = computed(() => {
 
 const expandButtonText = computed(() => {
   if (isExpanded.value) {
-    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins'
+    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins des dates'
   }
-  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus'
+  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus des dates'
 })
 </script>
 

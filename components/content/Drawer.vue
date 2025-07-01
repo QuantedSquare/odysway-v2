@@ -12,7 +12,7 @@
           @click="model = false"
         >
           <v-btn-secondary
-            color="primary"
+            color="white"
             block
             class="text-caption text-sm-subtitle-2"
             @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
@@ -36,7 +36,7 @@
           <v-btn-secondary
             block
             class="text-caption text-sm-subtitle-2"
-            color="white"
+            color="primary"
             @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
           >
             {{ header.textButton3 }}

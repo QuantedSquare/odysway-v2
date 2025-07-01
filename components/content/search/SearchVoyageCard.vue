@@ -35,18 +35,26 @@
             <v-row>
               <v-col class="pt-md-3 pt-0">
                 <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space title-container">
-                  <div
-                    ref="titleRef"
-                    class="line-clamp-2"
-                  >{{ voyage.title }}</div>
                   <v-tooltip
                     v-if="voyage.title.length > 60"
                     activator="parent"
                   >
+                    <template #activator="{ props }">
+                      <div
+                        ref="titleRef"
+                        class="line-clamp-2"
+                        v-bind="props"
+                      >{{ voyage.title }}</div>
+                    </template>
                     <span>
                       {{ voyage.title }}
                     </span>
                   </v-tooltip>
+                  <div
+                    v-else
+                    ref="titleRef"
+                    class="line-clamp-2"
+                  >{{ voyage.title }}</div>
                 </div>
               </v-col>
             </v-row>
