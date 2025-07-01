@@ -44,15 +44,24 @@
             <v-row>
               <v-col class="pt-lg-3 pt-0">
                 <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
-                  <div class="line-clamp-2">{{ deal.title }}</div>
                   <v-tooltip
                     v-if="deal.title.length > 60"
                     activator="parent"
                   >
+                    <template #activator="{ props }">
+                      <div
+                        class="line-clamp-2"
+                        v-bind="props"
+                      >{{ deal.title }}</div>
+                    </template>
                     <span>
                       {{ deal.title }}
                     </span>
                   </v-tooltip>
+                  <div
+                    v-else
+                    class="line-clamp-2"
+                  >{{ deal.title }}</div>
                 </div>
               </v-col>
             </v-row>

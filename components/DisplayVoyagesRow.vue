@@ -1,6 +1,6 @@
 <template>
   <!-- Display carousel with voyages for each type experience/category  -->
-  <div v-if="availableVoyages">
+  <div v-if="availableVoyages > 0">
     <HorizontalCarousel
       v-for="content in voyages"
 
