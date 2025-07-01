@@ -378,7 +378,7 @@ const isPreviousButtonDisabled = computed(() => {
 .bg-img-filter{
   filter: brightness(0.5);
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   div:deep(.v-stepper-actions){
     display: flex;
     width: 100%;
@@ -388,5 +388,5 @@ const isPreviousButtonDisabled = computed(() => {
     margin: 0;
     padding: 0;
   }
-}
+} */
 </style>

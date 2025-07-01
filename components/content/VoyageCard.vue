@@ -179,6 +179,7 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
 }
 .custom-card-width{
   min-width:406px!important;
+  max-width: 600px!important;
 }
 @media screen and (max-width: 1280px) {
   .custom-card-width{
