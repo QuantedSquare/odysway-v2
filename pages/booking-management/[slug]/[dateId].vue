@@ -57,9 +57,23 @@
               />
               <v-text-field
                 v-model="form.id"
-                label="ID (readonly)"
+                :model-value="`${config.public.siteURL}/checkout?date_id=${form.id}`"
+                label="Lien funnel"
                 readonly
-              />
+              >
+                <template #append-inner>
+                  <v-btn
+                    icon
+                    color="primary"
+                    size="x-small"
+                    @click="copyId"
+                  >
+                    <v-icon>
+                      {{ mdiLinkEdit }}
+                    </v-icon>
+                  </v-btn>
+                </template>
+              </v-text-field>
               <v-select
                 v-model="form.status"
                 label="Statut affiché"
@@ -764,6 +778,10 @@ const deleteTraveler = async (id) => {
     method: 'DELETE',
   })
   await fetchDetails()
+}
+
+const copyId = () => {
+  navigator.clipboard.writeText(`${config.public.siteURL}/checkout?date_id=${form.value.id}`)
 }
 
 function openPaymentDialog(traveler) {
