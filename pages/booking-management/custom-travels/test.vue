@@ -3,30 +3,13 @@
     <v-row>
       <v-col
         cols="12"
-        md="6"
       >
-        <h1>Gestion des voyages</h1>
+        <h1>Gestion des voyages sur-mesure</h1>
         <p>
-          Gérer les voyages et les dates associées. Ne sont affichés que les voyages possédant au minimum une date.
+          Pour créer un voyage sur mesure, s'assurer de le créer dans Nuxt Studio avant et de cocher "CustomAvailable".
+          <br>
+          Laisser le voyage en "Non Publié".
         </p>
-      </v-col>
-      <v-col
-        cols="3"
-        class="d-flex justify-end align-start"
-      />
-      <v-col
-        cols="3"
-        class="d-flex flex-column ga-2 justify-end align-right"
-      >
-        <v-btn @click="goToAddDate">
-          + Ajouter une date
-        </v-btn>
-        <v-btn
-          color="secondary"
-          @click="goToCustomTravels"
-        >
-          Voyages Custom
-        </v-btn>
       </v-col>
     </v-row>
     <v-row>
@@ -93,7 +76,7 @@ import { useRouter } from 'vue-router'
 
 const search = ref(null)
 const loading = ref(false)
-const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
+const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', true).all()
 console.log('travelesList', travelesList)
 
 definePageMeta({
@@ -107,7 +90,7 @@ const fetchTravels = async () => {
   loading.value = true
   const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
-  travels.value = data.filter(travel => !travel.is_custom_travel)
+  travels.value = data.filter(travel => travel.is_custom_travel)
   console.log('travels', travels.value)
   loading.value = false
 }
@@ -128,6 +111,7 @@ const goToCustomTravels = () => {
 const filteredTravels = computed(() => {
   const enrichedTravelsDate = travels.value?.map((travel) => {
     const correspondingTravel = travelesList.find(t => t.slug === travel.travel_slug)
+    console.log('correspondingTravel', correspondingTravel)
     return {
       ...travel,
       image: correspondingTravel?.image?.src,
