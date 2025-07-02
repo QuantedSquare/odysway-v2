@@ -5,17 +5,16 @@
     <SearchHeroSection :destination="fetchedDestination">
       <SearchField />
     </SearchHeroSection>
-    <v-row class=" pb-0 pt-4 mt-md-12  max-container-width">
+    <v-row class=" pb-0 pt-4 mt-md-12">
       <v-col
         cols="12"
-        class="px-md-12 d-flex ga-2 align-center"
+        class="px-md-12 d-flex ga-2 align-center flex-wrap"
       >
         <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? `1 ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
-            ${searchContent?.multipleTrips || 'voyages'}` }}</span>
+            ${searchContent?.multipleTrips || 'voyages'}` }}
+        </span>
 
-        <div
-          class="d-flex align-center ga-2"
-        >
+        <div class="d-flex align-center flex-wrap ga-2">
           <!-- Add closable props & logic -->
           <v-chip
             v-if="routeQuery.destination"
@@ -57,14 +56,12 @@
           </v-chip>
         </div>
         <v-spacer />
-        <div
-          class="d-flex justify-self-end align-self-end"
-        >
+        <div class="d-flex justify-end ml-auto">
           <v-btn
             color="primary"
             variant="outlined"
             size="large"
-            class="text-body-1 reset-btn-size"
+            class="text-subtitle-2 text-sm-body-1 reset-btn-size"
 
             @click="reinitiliazeFilter"
           >
@@ -74,7 +71,7 @@
       </v-col>
     </v-row>
     <v-container
-      class=" py-0 px-0 px-md-8 mt-3 max-container-width"
+      class=" py-0 px-0 px-md-8 mt-3"
       fluid
     >
       <DisplayVoyagesRow
@@ -114,7 +111,7 @@ import { useDisplay } from 'vuetify'
 import _ from 'lodash'
 import SearchField from '~/components/content/SearchField.vue'
 
-const { lgAndUp, mdAndDown } = useDisplay()
+const { lgAndUp } = useDisplay()
 useSeoMeta({
   htmlAttrs: {
     lang: 'fr',
@@ -278,13 +275,13 @@ function reinitiliazeFilter() {
   height: 62px!important;
   width: 172px!important;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .reset-btn-size {
     height: 48px!important;
     width: 120px!important;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .reset-btn-size {
     height: 38px!important;
     width: 110px!important;
