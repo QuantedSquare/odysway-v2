@@ -6,8 +6,10 @@
     rounded="md"
     :color="arrivedState ? 'white' : color"
     :disabled="arrivedState"
-    class="carousel-nav-btn elevation-0 "
+    class="carousel-nav-btn elevation-0"
     :class="{ 'disabled-shadow': arrivedState }"
+    :aria-label="buttonLabel"
+    :aria-describedby="arrivedState ? `chevron-${orientation}-disabled` : undefined"
     @click="emit('click')"
   >
     <svg
@@ -17,6 +19,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       :class="{ 'rotate-180': orientation === 'right' }"
+      aria-hidden="true"
     >
       <path
         d="M10.8086 1L1.80859 10L10.8086 19"
@@ -26,6 +29,14 @@
         stroke-linejoin="round"
       />
     </svg>
+    <!-- Screen reader only descriptions for disabled state -->
+    <span
+      v-if="arrivedState"
+      :id="`chevron-${orientation}-disabled`"
+      class="sr-only"
+    >
+      {{ orientation === 'left' ? 'Début du carrousel atteint' : 'Fin du carrousel atteinte' }}
+    </span>
   </v-btn>
 </template>
 
@@ -67,6 +78,14 @@ const svgColor = computed(() => {
 
   // Fallback to primary color if the specified color doesn't exist
   return theme.current.value.colors.primary || '#2B4C52'
+})
+
+// Computed property for accessible button label
+const buttonLabel = computed(() => {
+  const direction = props.orientation === 'left' ? 'précédent' : 'suivant'
+  return props.arrivedState
+    ? `Navigation ${direction} désactivée`
+    : `Naviguer vers l'élément ${direction}`
 })
 </script>
 

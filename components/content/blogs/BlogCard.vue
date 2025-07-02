@@ -34,11 +34,13 @@
             <div class="text-primary text-h4 font-weight-bold py-1 px-0 no-white-space ">
               <div
                 class="line-clamp-2"
+                :aria-describedby="title.length > 60 ? `tooltip-${title}` : undefined"
               >
                 {{ title }}
               </div>
               <v-tooltip
                 v-if="title.length > 60"
+                :id="`tooltip-${title}`"
                 activator="parent"
               >
                 <span>

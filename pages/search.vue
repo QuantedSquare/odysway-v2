@@ -116,6 +116,9 @@ import SearchField from '~/components/content/SearchField.vue'
 
 const { lgAndUp, mdAndDown } = useDisplay()
 useSeoMeta({
+  htmlAttrs: {
+    lang: 'fr',
+  },
   robots: 'noindex, follow',
   canonical: 'https://www.odysway.com/search',
 })

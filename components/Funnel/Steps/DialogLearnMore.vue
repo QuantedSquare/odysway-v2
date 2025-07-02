@@ -33,6 +33,7 @@
         <v-btn
           :icon="mdiClose"
           variant="text"
+          aria-label="Fermer la boîte de dialogue"
           @click="dialog = false"
         />
       </v-card-title>

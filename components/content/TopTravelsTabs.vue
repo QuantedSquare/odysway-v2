@@ -7,33 +7,46 @@
       Des idées pour vos prochains voyages
     </div>
 
-    <v-tabs
-      v-model="currentTab"
-      class="text-grey position-relative mb-6"
-      color="white"
-    >
+    <div class="tabs-container position-relative mb-6">
+      <v-tabs
+        v-model="currentTab"
+        class="text-white-light"
+        color="white-light"
+        role="tablist"
+        :aria-label="`Navigation des idées de voyages`"
+      >
+        <v-tab
+          v-for="top, index in tops"
+          :id="`tab-${index}`"
+          :key="index"
+          :value="index"
+          role="tab"
+          :aria-selected="currentTab === index"
+          :aria-controls="`tabpanel-${index}`"
+        >
+          <span class="font-weight-bold">
+            {{ top.title }}
+          </span>
+        </v-tab>
+      </v-tabs>
       <v-divider
         class="absolute-divider"
         thickness="2"
+        role="presentation"
+        aria-hidden="true"
       />
+    </div>
 
-      <v-tab
-        v-for="top, index in tops"
-        :key="index"
-        :value="index"
-      >
-        <span class="font-weight-bold">
-          {{ top.title }}
-        </span>
-      </v-tab>
-    </v-tabs>
     <v-tabs-window
       v-model="currentTab"
     >
       <v-tabs-window-item
         v-for="tab, index in tops[currentTab].contenuOnglet"
+        :id="`tabpanel-${index}`"
         :key="`${tab.title}-${index}`"
         :value="index"
+        role="tabpanel"
+        :aria-labelledby="`tab-${index}`"
       >
         <v-row class="mb-16 pb-16">
           <v-col
@@ -50,7 +63,7 @@
                 v-for="link, i in top.linksList"
                 :key="`${link.slug}-${i}`"
                 :to="`/voyages/${link.slug}`"
-                class="text-grey line-clamp-2"
+                class="text-white-light line-clamp-2"
               >
                 {{ link.title }}
               </NuxtLink>

@@ -13,7 +13,7 @@
         v-if="voyage.image?.src"
         :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
         :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
-        :alt="voyage.image.alt || voyage.title"
+        :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
         :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
         sizes="(max-width: 600px) 480px, 1024px"
         class="img-height"
@@ -43,12 +43,19 @@
                 <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
                   <v-tooltip
                     v-if="voyage.title.length > 50"
+                    :id="`tooltip-${voyage.slug}`"
                     activator="parent"
+                    role="tooltip"
+                    :aria-label="`Titre complet du voyage: ${voyage.title}`"
                   >
                     <template #activator="{ props }">
                       <div
+                        :id="`tooltip-${voyage.slug}`"
                         ref="titleRef"
                         class="line-clamp-2"
+                        :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
+                        role="tooltip"
+                        :aria-label="`Titre complet du voyage: ${voyage.title}`"
                         v-bind="props"
                       >{{ voyage.title }}</div>
                     </template>
@@ -143,24 +150,6 @@ const props = defineProps({
     type: Object,
   },
 })
-
-// Console log to debug voyage props keys used in this component
-// console.log('VoyageCard - Used voyage props keys:', {
-//   slug: props.voyage?.slug,
-//   image: {
-//     src: props.voyage?.image?.src,
-//     alt: props.voyage?.image?.alt,
-//   },
-//   rating: props.voyage?.rating,
-//   comments: props.voyage?.comments,
-//   title: props.voyage?.title,
-//   groupeAvailable: props.voyage?.groupeAvailable,
-//   duration: props.voyage?.duration,
-//   pricing: {
-//     startingPrice: props.voyage?.pricing?.startingPrice,
-//   },
-//   startingPrice: props.voyage?.startingPrice,
-// })
 
 const img = useImage()
 

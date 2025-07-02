@@ -21,7 +21,7 @@
         sizes="(max-width: 600px) 480px, 1024px"
         loading="lazy"
         width="100%"
-        :alt="title || 'Image de la thématique'"
+        :alt="`Illustration de la catégorie ${title}`"
         cover
       />
 

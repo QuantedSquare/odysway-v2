@@ -34,9 +34,9 @@ export function useReadMore(clampLines = 3, lineHeight = 30) {
 
   onMounted(() => {
     // Check if content needs "Read more" button after content is rendered
-    setTimeout(() => {
+    nextTick(() => {
       checkIfNeedsReadMore()
-    }, 100)
+    })
   })
 
   return {

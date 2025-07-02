@@ -264,6 +264,12 @@ const dealsLastMinuteFiltered = computed(() => {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>
 
 <style scoped>
