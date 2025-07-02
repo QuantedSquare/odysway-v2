@@ -61,35 +61,32 @@ export function useStepperDeal(componentStep) {
     }
   }
 
-  const updateDeal = async (body) => {
-    const res = await apiRequest('/ac/deals/' + dealId.value, 'post', body)
-    dealId.value = res
-
-    return true
+  const updateDeal = (body) => {
+    apiRequest('/ac/deals/update-with-bms?bookedId=' + route.query.booked_id, 'post', body)
   }
 
-  watch(route, async () => {
+  watch(route, () => {
     // dealId.value = route.query.dealId || dealId.value
     if (route.query.step) {
       currentStepRef.value = route.query.step
     }
-    if (route.query.booked_id) {
-      console.log('route.query.booked_id', route.query.booked_id)
-      loadingDeal.value = true
-      const { deal_id } = await apiRequest(`/booking/booked_date/${route.query.booked_id}`)
-      console.log('deal_id in composable', deal_id)
-      dealId.value = deal_id
-      loadingDeal.value = false
-    }
+    // if (route.query.booked_id) {
+    //   console.log('route.query.booked_id', route.query.booked_id)
+    //   loadingDeal.value = true
+    //   const { deal_id } = await apiRequest(`/booking/booked_date/${route.query.booked_id}`)
+    //   console.log('deal_id in composable', deal_id)
+    //   dealId.value = deal_id
+    //   loadingDeal.value = false
+    // }
   }, { immediate: true })
 
   // #TODO CHECK SI CA FONCTIONNE SANS REFETCH
-  watch([dealId, currentStepRef], async () => {
-    if (dealId.value && +componentStep === +currentStepRef.value) {
-      await fetchDeal()
-      console.log('Deal fetched:', deal.value)
-    }
-  }, { immediate: true })
+  // watch([dealId, currentStepRef], async () => {
+  //   if (dealId.value && +componentStep === +currentStepRef.value) {
+  //     await fetchDeal()
+  //     console.log('Deal fetched:', deal.value)
+  //   }
+  // }, { immediate: true })
 
   return { deal, dealId, fetchDeal, createDeal, updateDeal, checkoutType, loadingDeal }
 }

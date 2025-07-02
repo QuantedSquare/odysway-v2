@@ -1,6 +1,9 @@
 <template>
   <v-container>
-    <v-row justify="center">
+    <v-row
+      justify="center"
+      class="text-center"
+    >
       <v-col
         v-if="status === 'success' && voyage"
         cols="12"

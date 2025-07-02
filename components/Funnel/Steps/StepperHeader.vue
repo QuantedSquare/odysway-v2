@@ -2,36 +2,42 @@
   <v-stepper
     id="stepper"
     v-model="model"
+    hide-actions
+    mobile-breakpoint="md"
     alt-labels
-    show-actions
     class="text-caption"
   >
-    <v-stepper-header
-      v-if="props.skipperMode !== 'summary'"
-      class="d-none elevation-0 d-md-flex justify-center text-shadow"
+    <Teleport
+      to="#card-header"
+      defer
     >
-      <template
-        v-for="(step, index) in stepDefinitions"
-        :key="step.number"
+      <v-stepper-header
+        v-if="props.skipperMode !== 'summary'"
+        class="elevation-0 text-white d-flex justify-space-between"
       >
-        <v-stepper-item
-          :complete="model + 1 > step.number"
-          :step="step.number"
-          color="primary"
-          :value="index + 1"
+        <template
+          v-for="(step, index) in stepDefinitions"
+          :key="step.number"
         >
-          <span class="d-none d-md-block font-weight-bold bg-white rounded-lg pa-2 text-no-wrap">
-            {{ index + 1 }}.
-            {{ step.label }}
-          </span>
-        </v-stepper-item>
-        <v-divider
-          v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
-          class="text-shadow text-white"
-          opacity="0.6"
-        />
-      </template>
-    </v-stepper-header>
+          <v-stepper-item
+            :complete="model + 1 > step.number"
+            :step="step.number"
+            color="white"
+            :value="index + 1"
+          >
+            <span class="d-none d-md-block font-weight-bold  text-white text-caption">
+              <!-- {{ index + 1 }}. -->
+              {{ step.label }}
+            </span>
+          </v-stepper-item>
+          <v-divider
+            v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
+            class="text-shadow text-white"
+            opacity="0.6"
+          />
+        </template>
+      </v-stepper-header>
+    </Teleport>
     <slot />
   </v-stepper>
 </template>
@@ -46,6 +52,10 @@ const props = defineProps({
   skipperMode: {
     type: String,
     default: 'quick',
+  },
+  showInsurance: {
+    type: Boolean,
+    default: true,
   },
 })
 const stepDefinitions = computed(() => {
@@ -125,14 +135,14 @@ const stepDefinitions = computed(() => {
   // Final step
   baseSteps.push({
     number: props.skipperMode === 'normal'
-      ? 4
+      ? (props.showInsurance ? 4 : 4)
       : props.skipperMode === 'quick' ? 2 : 3,
     label: props.skipperMode === 'normal'
-      ? 'Option / Réservation'
+      ? 'Options'
       : props.page.fil_dariane_devis.step_final_rdv,
   })
 
-  if (props.skipperMode === 'normal') {
+  if (props.skipperMode === 'normal' && props.showInsurance) {
     baseSteps.push({
       number: 5,
       label: 'Assurances',
@@ -140,7 +150,7 @@ const stepDefinitions = computed(() => {
   }
   if (props.skipperMode === 'normal') {
     baseSteps.push({
-      number: baseSteps.length + 1,
+      number: props.showInsurance ? 6 : 5,
       label: 'Récapitulatif',
     })
   }
@@ -158,5 +168,8 @@ const stepDefinitions = computed(() => {
 }
 #stepper:deep(.v-stepper-item) {
   opacity:1;
+}
+#stepper:deep(.v-stepper-header) {
+  justify-items:stretch!important;
 }
 </style>
