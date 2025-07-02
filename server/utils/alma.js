@@ -236,7 +236,6 @@ const handlePaymentSession = async (session) => {
 
   activecampaign.updateDeal(order.id, dealData)
 
-  // check if capture status before all updates
   if (session.processing_status === 'captured') {
     const addedNote = activecampaign.addNote(order.id, {
       note: {

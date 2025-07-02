@@ -102,7 +102,7 @@ const quote = async (body) => {
     return { ...rapatriementQuote, ...cancelQuote }
   }
 }
-// rename stripeSession to paymentSession + check  data stripe and alma
+
 const notify = (paymentSession, insuranceItem, dealCustomFields) => {
   const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
@@ -113,7 +113,7 @@ const notify = (paymentSession, insuranceItem, dealCustomFields) => {
     reference: paymentSession.dealId.toString(),
     formule: insuranceType,
     prime: (insuranceItem.amount_total / 100).toFixed(2),
-    email: paymentSession.customer_details.email || paymentSession.customer.email, // update here regarding alma
+    email: paymentSession.customer_details.email,
     provenance: 'FR',
     destination: paymentSession.countries,
     nombre: insuranceItem.quantity.toString(),
@@ -138,23 +138,23 @@ const notify = (paymentSession, insuranceItem, dealCustomFields) => {
 
   console.log('send data to chapka', data)
 
-  try {
-    axios.post(
-      'https://api.chapka.fr/notify/?request=create',
-      JSON.stringify({
-        message: JSON.stringify(data),
-        mode: 'json',
-      }),
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      },
-    )
-  }
-  catch (err) {
-    console.log('Err notify chapka', err)
-  }
+  // try {
+  //   axios.post(
+  //     'https://api.chapka.fr/notify/?request=create',
+  //     JSON.stringify({
+  //       message: JSON.stringify(data),
+  //       mode: 'json',
+  //     }),
+  //     {
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     },
+  //   )
+  // }
+  // catch (err) {
+  //   console.log('Err notify chapka', err)
+  // }
 }
 
 export default { quote, notify }
