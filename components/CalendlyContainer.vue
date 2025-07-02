@@ -3,12 +3,9 @@
     <div>
       {{ text }}
     </div>
-    <!-- <div
-      class="calendly-inline-widget"
-      data-url="https://calendly.com/odysway/15min?hide_gdpr_banner=1"
-      style="min-width: 320px; height: 700px;"
-    /> -->
-    <CalendlyInlineWidget v-bind="options" />
+    <ClientOnly>
+      <CalendlyInlineWidget v-bind="options" />
+    </ClientOnly>
   </v-container>
 </template>
 
@@ -28,7 +25,7 @@ const options = {
 }
 
 useCalendlyEventListener({
-  onEventScheduled: (event) => {
+  onEventScheduled: (_event) => {
     trackPixel('trackCustom', 'RDVCalendlyPris', { voyage: `RDVCalendlyPris: ${props.travelTitle}` })
   },
 })
