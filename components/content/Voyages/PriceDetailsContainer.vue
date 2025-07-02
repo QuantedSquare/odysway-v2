@@ -19,7 +19,10 @@
         md="6"
         class="py-0"
       >
-        <v-list>
+        <v-list
+          role="list"
+          :aria-label="`${priceDetailsSection.priceInclude} de ${priceDetailsSection.title}`"
+        >
           <v-list-subheader class="text-subtitle-1 pt-md-4 d-flex justify-center justify-md-start custom-padding">
             <v-chip
               variant="flat"
@@ -46,7 +49,11 @@
         md="6"
         class="py-0"
       >
-        <v-list class="pl-md-4">
+        <v-list
+          class="pl-md-4"
+          role="list"
+          :aria-label="`${priceDetailsSection.priceExclude} de ${priceDetailsSection.title}`"
+        >
           <v-list-subheader class="text-subtitle-1 pt-md-4 d-flex justify-center justify-md-start custom-padding">
             <v-chip
               variant="flat"

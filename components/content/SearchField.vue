@@ -25,6 +25,7 @@
             :loading="regionsStatus === 'pending' || destinationsStatus === 'pending' || searchFieldContentStatus === 'pending'"
             hide-details
             :label="searchFieldContent?.destination || 'Destination'"
+            :aria-label="searchFieldContent?.destination || 'Rechercher une destination'"
             clearable
             @update:model-value="clearDestination"
           >
@@ -103,6 +104,7 @@
             :items="travelTypes"
             hide-details
             :label="searchFieldContent?.travelType || 'Type de voyage'"
+            :aria-label="searchFieldContent?.travelType || 'Sélectionner le type de voyage'"
             clearable
           >
             <template #prepend-inner>
@@ -128,6 +130,7 @@
             :items="months"
             :loading="searchFieldContentStatus === 'pending'"
             :label="searchFieldContent?.period || 'Période'"
+            :aria-label="searchFieldContent?.period || 'Sélectionner la période de voyage'"
             class="search-field-max-height"
           >
             <template #prepend-inner>
@@ -150,7 +153,7 @@
             block
             :loading="destinationsStatus === 'pending' || regionsStatus === 'pending' || searchFieldContentStatus === 'pending'"
             color="secondary"
-            class="text-none text-body-1 font-weight-bold"
+            class="text-body-1 font-weight-bold"
             @click="searchFn"
           >
             {{ searchFieldContent?.discoverTrips || 'Découvrir les voyages' }}

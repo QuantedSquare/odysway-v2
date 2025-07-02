@@ -6,6 +6,7 @@
         :items="phonesSelect"
         :rules="[rules.name]"
         hide-details
+        aria-label="Code téléphonique du pays"
         @change="changeAttr('phone')"
       >
         <template #item="{ props }">

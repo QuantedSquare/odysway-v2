@@ -27,6 +27,7 @@
                 item-title="title"
                 item-value="value"
                 :rules="[rules.civility]"
+                :aria-label="contactContent?.contactForm?.fields?.civility?.label || 'Sélectionner votre civilité'"
                 required
               />
             </v-col>

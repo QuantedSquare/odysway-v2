@@ -15,6 +15,7 @@
         <v-col>
           <v-img
             :src="img(imageSrc, { format: 'webp', quality: 70, width: 1536 })"
+            alt="Image de présentation de l\'entreprise"
             rounded="lg"
             class="my-8"
             cover

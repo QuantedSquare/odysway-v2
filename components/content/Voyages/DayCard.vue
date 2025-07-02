@@ -13,6 +13,7 @@
         <v-img
           rounded="lg"
           :src="img(photo, { format: 'webp', quality: 70, width: 640 })"
+          :alt="`Photo du jour: ${title}`"
           cover
           :width="imageWidth"
           height="214"

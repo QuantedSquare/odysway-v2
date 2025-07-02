@@ -27,4 +27,10 @@ const { data: destinations } = useAsyncData('destinations', () => {
 })
 
 const page = await queryCollection('content').path('/destinations').first()
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>

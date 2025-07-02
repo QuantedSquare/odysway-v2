@@ -5,6 +5,7 @@
       class="h-100"
       rounded="lg"
       cover
+      :alt="alt || `Image du carrousel ${props.image}`"
     />
   </v-carousel-item>
 </template>
@@ -14,6 +15,10 @@ import { useImage } from '#imports'
 
 const props = defineProps({
   image: {
+    type: String,
+    default: '',
+  },
+  alt: {
     type: String,
     default: '',
   },

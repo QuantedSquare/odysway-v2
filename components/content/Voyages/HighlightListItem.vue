@@ -2,6 +2,8 @@
   <v-list-item
     class="px-0 py-2 custom-alignement"
     min-height="30"
+    role="listitem"
+    :aria-label="`Point fort: ${highlight}`"
   >
     <template #prepend>
       <v-icon

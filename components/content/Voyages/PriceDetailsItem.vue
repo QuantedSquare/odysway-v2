@@ -3,6 +3,8 @@
     class="text-body-1 my-md-2 "
     align="center"
     no-gutters
+    role="listitem"
+    :aria-label="`${isIncluded ? 'Inclus' : 'Non inclus'}: ${text}`"
   >
     <v-col
       cols="12"

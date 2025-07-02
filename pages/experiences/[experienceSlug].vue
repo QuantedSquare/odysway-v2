@@ -38,4 +38,10 @@ const { data: voyages } = await useAsyncData('voyages', async () => {
 }, {
   watch: [slug],
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+})
 </script>

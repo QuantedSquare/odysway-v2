@@ -36,6 +36,7 @@
               :height="lgAndUp ? 20 : 18"
               :width="lgAndUp ? 20 : 18"
               class="mr-3"
+              alt="Icone d'un groupe de personnes"
             />
             <div v-dompurify-html="parseBoldText(badgeSection.groupeBadge.text)" />
           </span>
@@ -54,6 +55,7 @@
               :height="lgAndUp ? 20 : 18"
               :width="lgAndUp ? 20 : 18"
               class="mr-3"
+              alt="Icone d'un calendrier"
             />
             <div v-dompurify-html="parseBoldText(badgeSection.durationBadge.text)" />
           </span>
@@ -72,6 +74,7 @@
               :height="lgAndUp ? 20 : 18"
               :width="lgAndUp ? 20 : 18"
               class="mr-3"
+              alt="Icone d'un avion"
             />
             <div v-dompurify-html="parseBoldText(badgeSection.includeFlightBadge.text)" />
           </span>
@@ -90,6 +93,7 @@
               :height="lgAndUp ? 20 : 18"
               :width="lgAndUp ? 20 : 18"
               class="mr-3"
+              alt="Icone d'un lit"
             />
             <div v-dompurify-html="parseBoldText(badgeSection.housingBadge.text)" />
           </span>
@@ -108,6 +112,7 @@
               :height="lgAndUp ? 20 : 18"
               :width="lgAndUp ? 20 : 18"
               class="mr-3"
+              alt="Icone d'un soleil"
             />
             <div v-dompurify-html="parseBoldText(badgeSection.periodBadge.text)" />
           </span>
@@ -123,6 +128,7 @@
             <v-icon
               :icon="level === '1' ? mdiSignalCellular1 : level === '2' ? mdiSignalCellular2 : mdiSignalCellular3"
               class="mr-3"
+              :alt="`Icone d'un niveau de difficulté ${level}`"
             />
 
             <span class="font-weight-bold">Niveau {{ level }}</span>
