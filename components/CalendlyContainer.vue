@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="calendly-container">
     <div>
       {{ text }}
     </div>
@@ -30,3 +30,11 @@ useCalendlyEventListener({
   },
 })
 </script>
+
+<style scoped>
+@media screen and (min-width: 1440px) {
+.calendly-container {
+  width: 1440px;
+}
+}
+</style>
