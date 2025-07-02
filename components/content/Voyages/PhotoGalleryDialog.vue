@@ -10,7 +10,6 @@
     <template #activator="{ props: activatorProps }">
       <v-btn
         :height="mdAndUp ? 58 : 40"
-        :width="mdAndUp ? 172: ''"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
@@ -53,7 +52,7 @@
           class="px-0 "
         >
           <v-carousel
-            class="custom-btn bg-odysway-2 rounded-lg "
+            class="custom-btn bg-odysway-2"
             hide-delimiter-background
             :model-value="currentSlideIndex"
             @update:model-value="handleCarouselUpdate"

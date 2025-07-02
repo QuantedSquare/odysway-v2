@@ -6,7 +6,6 @@
     <template #activator="{ props: activatorProps }">
       <v-btn
         :height="mdAndUp ? 58 : 40"
-        :width="mdAndUp ? 172: ''"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
