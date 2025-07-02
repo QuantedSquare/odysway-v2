@@ -6,7 +6,7 @@
           :to="`/voyages/${slug}`"
           class="text-primary"
         >
-          <h2>Dates pour le voyage: {{ slug }}<v-icon size="x-small">{{ mdiArrowRight }}</v-icon></h2>
+          <h2 v-if="voyage">{{ voyage.title }}<v-icon size="x-small">{{ mdiArrowRight }}</v-icon></h2>
 
         </NuxtLink>
       </v-col>
@@ -128,6 +128,7 @@ const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug
 const dates = ref([])
+const voyage = ref(null)
 
 const headers = [
   { title: 'Statut publication', key: 'published', sortable: true },
@@ -141,6 +142,7 @@ const headers = [
 const fetchDates = async () => {
   loading.value = true
   const res = await fetch(`/api/v1/booking/${slug}/dates`)
+  voyage.value = await queryCollection('voyages').where('slug', '=', slug).select('title').first()
   const data = await res.json()
   dates.value = data
   loading.value = false

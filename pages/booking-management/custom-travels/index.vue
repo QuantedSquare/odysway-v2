@@ -3,81 +3,67 @@
     <v-row>
       <v-col
         cols="12"
-        class="d-flex justify-space-between align-center"
       >
-        <h1>Voyages personnalisés</h1>
-        <v-btn
-          color="primary"
-          class="mb-4"
-          @click="goToAddCustomTravel"
-        >
-          + Créer un voyage personnalisé
-        </v-btn>
+        <h1>Gestion des voyages sur-mesure</h1>
+        <p>
+          Pour créer un voyage sur mesure, s'assurer de le créer dans Nuxt Studio avant et de cocher "CustomAvailable".
+          <br>
+          Laisser le voyage en "Non Publié".
+        </p>
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="12">
-        <v-data-table
-          :headers="headers"
-          :items="travels"
-          :loading="loading"
-          class="elevation-1"
+        <v-autocomplete
+          v-model="search"
+          :items="travelesList"
+          label="Rechercher un voyage"
+          item-title="title"
+          item-value="slug"
+          clearable
+        />
+      </v-col>
+      <v-col
+        v-if="loading"
+        cols="12"
+        md="4"
+      >
+        <v-skeleton-loader type="card" />
+      </v-col>
+      <v-col
+        v-for="travel in filteredTravels"
+        v-else-if="filteredTravels.length > 0"
+        :key="travel.travel_slug"
+        cols="12"
+        md="4"
+      >
+        <v-card
+          class="mb-4"
           hover
-          item-key="id"
-          :items-per-page="10"
-          @click:row="rowClick"
+          @click="goToTravel(travel.slug)"
         >
-          <template #item.title="{ item }">
-            <span>{{ item.booked_dates[0]?.deal?.title || '-' }}</span>
-          </template>
-          <template #item.user_email="{ item }">
-            <span>{{ item.booked_dates[0]?.deal?.contact?.email || '-' }}</span>
-          </template>
-          <template #item.departure_date="{ item }">
-            <span>{{ dayjs(item.departure_date).format('DD MMMM YYYY') }}</span>
-          </template>
-          <template #item.return_date="{ item }">
-            <span>{{ dayjs(item.return_date).format('DD MMMM YYYY') }}</span>
-          </template>
-          <template #item.state="{ item }">
-            <span>{{ item.booked_seat > 0 ? 'Confirmé' : 'En attente de paiement' }}</span>
-          </template>
-          <template #item.nb_travelers="{ item }">
-            <span>{{ item.booked_dates.reduce((acc, date) => acc + +date.deal.nbTravelers, 0) || '-' }}</span>
-          </template>
-          <template #item.payment_status="{ item }">
-            <span>{{ getPaymentStatus(item) }}</span>
-          </template>
-          <template #item.actions="{ item }">
-            <div class="text-center ">
-              <v-menu>
-                <template #activator="{ props }">
-                  <v-btn
-                    :icon="mdiDotsVertical"
-                    size="x-small"
-                    v-bind="props"
-                  />
-                </template>
-                <v-list>
-                  <v-list-item @click="goToDate(item)">
-                    <v-icon>{{ mdiEye }}</v-icon>
-                    Modifier
-                  </v-list-item>
-
-                  <v-list-item @click="deleteDate(item)">
-                    <v-icon>{{ mdiDelete }}</v-icon>
-                    Supprimer
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </div>
-          </template>
-          <template #no-data>
-            <div class="text-center py-4">
-              Aucun voyage personnalisé trouvé
-            </div>
-          </template>
-        </v-data-table>
+          <v-img
+            :src="travel.image || '/images/IMG_20250101_161727_049.jpg'"
+            height="100"
+            cover
+          />
+          <v-card-title class="text-h5 py-4 text-center">
+            {{ travel.title || travel.travel_slug }}
+          </v-card-title>
+          <!-- <v-card-text>
+            Nombre de dates: {{ travel.nb_dates }}
+            <br>
+            Nombre de places réservées: {{ travel.booked_seats }}
+          </v-card-text> -->
+        </v-card>
+      </v-col>
+      <v-col
+        v-else
+        cols="12"
+      >
+        <v-alert color="secondary">
+          Aucun voyage trouvé
+        </v-alert>
       </v-col>
     </v-row>
   </v-container>
@@ -86,66 +72,58 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import dayjs from 'dayjs'
-import { mdiDotsVertical, mdiEye, mdiDelete } from '@mdi/js'
 
-definePageMeta({ layout: 'booking', middleware: 'booking-management' })
+const search = ref(null)
 const loading = ref(false)
+const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', true).all()
+console.log('travelesList', travelesList)
+
+definePageMeta({
+  layout: 'booking',
+  middleware: 'booking-management',
+})
 const travels = ref([])
 const router = useRouter()
 
-const headers = [
-  { title: 'Titre', key: 'title' },
-  { title: 'Email', key: 'user_email' },
-  { title: 'Date de départ', key: 'departure_date' },
-  { title: 'Date de retour', key: 'return_date' },
-  { title: 'Etat', key: 'state' },
-  { title: 'Nb voyageurs', key: 'nb_travelers' },
-  { title: 'Statut paiement', key: 'payment_status' },
-  { title: 'Actions', key: 'actions' },
-]
-function rowClick(_, row) {
-  goToDate(row.item)
-}
-
-const fetchCustomTravels = async () => {
+const fetchTravels = async () => {
   loading.value = true
-  const res = await fetch('/api/v1/booking/custom-travel')
+  const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
-  travels.value = data
-  console.log('===========travels in custom-travels.vue===========', travels.value)
+  travels.value = data.filter(travel => travel.is_custom_travel)
+  console.log('travels', travels.value)
   loading.value = false
 }
-function getPaymentStatus(item) {
-  console.log('===========item in getPaymentStatus===========', item)
-  if (item.booked_dates.length === 0) {
-    return '-'
-  }
-  else {
-    const total = item.booked_dates.reduce((acc, date) => acc + date.deal.value, 0)
-    const alreadyPaid = item.booked_dates.reduce((acc, date) => acc + date.deal.alreadyPaid, 0)
-    return formatNumber(alreadyPaid, 'currency', '€') + ' / ' + formatNumber(total, 'currency', '€')
-  }
-}
-function goToAddCustomTravel() {
-  router.push('/booking-management/add-custom-travel')
-}
-function goToDate(item) {
-  router.push(`/booking-management/custom-travels/${item.id}`)
+
+const goToTravel = (slug) => {
+  console.log('goToTravel', slug)
+  router.push(`/booking-management/${slug}`)
 }
 
-async function deleteDate(item) {
-  if (!confirm('Supprimer ce voyage personnalisé ?')) return
-  try {
-    const res = await fetch(`/api/v1/booking/custom-travel/${item.id}`, { method: 'DELETE' })
-    if (res.ok) {
-      await fetchCustomTravels()
+const goToAddDate = () => {
+  router.push('/booking-management/add-date')
+}
+
+const goToCustomTravels = () => {
+  router.push('/booking-management/custom-travels')
+}
+
+const filteredTravels = computed(() => {
+  const enrichedTravelsDate = travelesList.map((travel) => {
+    return {
+      image: travel?.image?.src,
+      title: travel?.title,
+      slug: travel?.slug,
     }
+  })
+  if (search.value) {
+    return enrichedTravelsDate?.filter(travel => travel.title.includes(search.value))
   }
-  catch (err) {
-    console.error('Error deleting custom travel:', err)
-  }
-}
-
-onMounted(fetchCustomTravels)
+  return enrichedTravelsDate
+})
+console.log('filteredTravels', filteredTravels.value)
+onMounted(fetchTravels)
 </script>
+
+<style scoped>
+
+</style>
