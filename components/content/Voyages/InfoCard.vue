@@ -219,10 +219,9 @@
       <NuxtLink
         width="100%"
         class="text-primary text-break d-flex align-center justify-center ga-3"
-        :to="`/calendly?travelTitle=${voyage.slug}`"
+        :to="`/devis?slug=${voyage.slug}`"
         @click="trackPixel('trackCustom', 'ClicRdv', { voyage: `${voyage.title}` })"
       >
-
         <v-icon
           size="24"
           class="bg-primary rounded-lg pa-1"
