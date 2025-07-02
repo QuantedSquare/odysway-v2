@@ -21,6 +21,7 @@
     >
       <v-text-field
         v-model="i_firstname"
+        role="textbox"
         outlined
         label="Prénom *"
         placeholder="Ex: Indiana"
@@ -34,6 +35,7 @@
     >
       <v-text-field
         v-model="i_lastname"
+        role="textbox"
         label="Nom *"
         outlined
         placeholder="Ex: Jones"
@@ -41,49 +43,21 @@
         @change="dataUpdated"
       />
     </v-col>
+
     <v-col
       cols="12"
       md="4"
     >
-      <!-- <v-text-field
-        v-model="displayedDate"
+      <v-text-field
+        v-model="date"
+        role="textbox"
         label="Date de naissance *"
+        type="text"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
-        type="date"
+        @keydown="handleKeydown"
         @change="dataUpdated"
-      /> -->
-      <v-menu
-        v-model="dateMenu"
-        :close-on-content-click="false"
-      >
-        <template #activator="{ props }">
-          <v-text-field
-            v-bind="props"
-            :value="formattedDate"
-            class="font-weight-bold text-primary"
-            hide-details
-            :append-inner-icon="mdiCalendarBlankOutline"
-            @change="dataUpdated"
-          />
-        </template>
-
-        <v-card
-          min-width="300"
-          elevation="6"
-        >
-          <v-locale-provider locale="fr">
-            <v-date-picker
-              v-model="date"
-              width="100%"
-              format="dd/mm/YYYY"
-              :max="new Date()"
-              show-adjacent-months
-              @update:model-value="dataUpdated"
-            />
-          </v-locale-provider>
-        </v-card>
-      </v-menu>
+      />
     </v-col>
   </v-row>
 </template>
@@ -91,9 +65,7 @@
 <script setup>
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import { mdiBagPersonal, mdiCalendarBlankOutline } from '@mdi/js'
-
-const dateMenu = ref(false)
+import { mdiBagPersonal } from '@mdi/js'
 
 dayjs.extend(customParseFormat)
 
@@ -104,51 +76,84 @@ const props = defineProps({
   birthdate: { type: String, default: '' },
   bgColor: { type: String, default: 'primary' },
 })
-// Refs
+
 const i_firstname = ref(props.firstname)
 const i_lastname = ref(props.lastname)
-const date = ref(props.birthdate ? dayjs(props.birthdate, 'DD/MM/YYYY', true) : dayjs())
+const date = ref(props.birthdate || '')
 const emit = defineEmits(['change'])
 
-const formattedDate = computed(() => {
-  return date.value ? date.value.format('DD/MM/YYYY') : ''
-})
-
-// Initialize birthdate
 onMounted(() => {
   if (props.birthdate) {
-    const parsed = dayjs(props.birthdate, 'DD/MM/YYYY', true)
-    date.value = parsed.isValid() ? parsed : null
+    date.value = props.birthdate
   }
 })
 
-// Rules
 const rules = {
   required: v => !!v || 'Cette information est requise.',
   dateFormat: (v) => {
     if (!v) return true
 
-    // Basic validation using dayjs
-    const dateObj = dayjs(v)
+    // Parse with specific format DD/MM/YYYY
+    const dateObj = dayjs(v, 'DD/MM/YYYY', true)
     if (!dateObj.isValid()) return 'Date invalide'
 
     const year = dateObj.year()
-    if (year < 1910 || year > new Date().getFullYear()) return 'Année invalide'
+    if (year < 1925 || year > new Date().getFullYear()) return 'Année invalide'
 
     return true
   },
 }
 
+const handleKeydown = (event) => {
+  const input = event.target
+  const key = event.key
+  const cursorPosition = input.selectionStart
+  const value = input.value
+
+  // Allow navigation and control keys
+  if (['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter'].includes(key)) {
+    return
+  }
+
+  // Only allow digits
+  if (!/^\d$/.test(key)) {
+    event.preventDefault()
+    return
+  }
+
+  // Count existing digits
+  const digitsCount = (value.replace(/\D/g, '')).length
+
+  // Limit to 8 digits
+  if (digitsCount >= 8) {
+    event.preventDefault()
+    return
+  }
+
+  // Auto-add slashes after 2nd and 4th digit
+  nextTick(() => {
+    let newValue = input.value
+    const digits = newValue.replace(/\D/g, '')
+
+    if (digits.length === 2 && cursorPosition === 2) {
+      newValue = digits.substring(0, 2) + '/' + digits.substring(2)
+      date.value = newValue
+      nextTick(() => input.setSelectionRange(3, 3))
+    }
+    else if (digits.length === 4 && cursorPosition === 5) {
+      newValue = digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
+      date.value = newValue
+      nextTick(() => input.setSelectionRange(6, 6))
+    }
+  })
+}
+
 const dataUpdated = () => {
-  if (!date.value) return
-
-  // Convert from YYYY-MM-DD to DD/MM/YYYY for emission
-
   emit('change', {
     id: props.id,
     firstname: i_firstname.value,
     lastname: i_lastname.value,
-    birthdate: date.value.format('DD/MM/YYYY'),
+    birthdate: date.value,
   })
 }
 
@@ -162,15 +167,15 @@ watch(() => props.lastname, (newVal) => {
 })
 
 // Watch for birthdate prop changes
-watch(() => props.birthdate, (newVal) => {
-  if (newVal) {
-    const parsed = dayjs(newVal, 'DD/MM/YYYY', true)
-    date.value = parsed.isValid() ? parsed : null
-  }
-  else {
-    date.value = null
-  }
-})
+// watch(() => props.birthdate, (newVal) => {
+//   if (newVal) {
+//     const parsed = dayjs(newVal, 'DD/MM/YYYY', true)
+//     date.value = parsed.isValid() ? parsed : null
+//   }
+//   else {
+//     date.value = null
+//   }
+// })
 </script>
 
 <style scoped>
