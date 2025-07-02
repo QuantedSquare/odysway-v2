@@ -57,9 +57,23 @@
               />
               <v-text-field
                 v-model="form.id"
-                label="ID (readonly)"
+                :model-value="`${config.public.siteURL}/checkout?date_id=${form.id}`"
+                label="Lien funnel"
                 readonly
-              />
+              >
+                <template #append-inner>
+                  <v-btn
+                    icon
+                    color="primary"
+                    size="x-small"
+                    @click="copyId"
+                  >
+                    <v-icon>
+                      {{ mdiLinkEdit }}
+                    </v-icon>
+                  </v-btn>
+                </template>
+              </v-text-field>
               <v-select
                 v-model="form.status"
                 label="Statut affiché"
@@ -616,6 +630,14 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-snackbar
+      v-model="snackbar"
+      location="top"
+      timeout="2000"
+      color="primary"
+    >
+      Le lien a été copié
+    </v-snackbar>
   </v-container>
 </template>
 
@@ -632,6 +654,7 @@ definePageMeta({
 const route = useRoute()
 const router = useRouter()
 const slug = route.params.slug
+const snackbar = ref(false)
 const dateId = route.params.dateId
 const config = useRuntimeConfig()
 console.log('=======config=======', config.public.siteURL)
@@ -764,6 +787,11 @@ const deleteTraveler = async (id) => {
     method: 'DELETE',
   })
   await fetchDetails()
+}
+
+const copyId = () => {
+  navigator.clipboard.writeText(`${config.public.siteURL}/checkout?date_id=${form.value.id}`)
+  snackbar.value = true
 }
 
 function openPaymentDialog(traveler) {

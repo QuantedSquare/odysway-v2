@@ -93,7 +93,7 @@ import { useRouter } from 'vue-router'
 
 const search = ref(null)
 const loading = ref(false)
-const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').all()
+const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
 console.log('travelesList', travelesList)
 
 definePageMeta({

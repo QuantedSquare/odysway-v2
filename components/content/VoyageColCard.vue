@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="loading && !voyage"
+    v-if="status === 'pending' && !voyage"
     cols="10"
     sm="6"
     md="4"
@@ -26,8 +26,6 @@
 </template>
 
 <script setup>
-const loading = ref(false)
-const voyage = ref(null)
 const { slug } = defineProps({
   slug: {
     type: String,
@@ -35,11 +33,11 @@ const { slug } = defineProps({
   },
 })
 
-const loadVoyage = async () => {
-  loading.value = true
-  voyage.value = await queryCollection('voyages').where('slug', '=', slug).first()
-  loading.value = false
-}
-
-await loadVoyage()
+const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, async () => {
+  const travel = await queryCollection('voyages')
+    .select('slug', 'image', 'rating', 'comments', 'title', 'groupeAvailable', 'duration', 'pricing')
+    .where('slug', '=', slug)
+    .first()
+  return travel
+})
 </script>

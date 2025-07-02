@@ -43,7 +43,8 @@
     },
     {
       "name": "voyage-nature"
-    }
+    },
+    {}
   ],
   "duration": 14,
   "nights": 13,
@@ -132,28 +133,28 @@
     {
       "title": "ARRIVÉE À KATMANDOU",
       "badgeText": "JOUR 1",
-      "description": "Dès votre arrivée à Katmandou, vous serez accueillis par votre guide et conduit à votre hôtel où vous recevrez un briefing et une présentation de l'itinéraire de votre séjour. Si vous arrivez le matin, vous aurez la possibilité de vous reposer ou partir explorer le quartier animé de Thamel afin de plonger dans l'ambiance locale dès ce premier jour ! \r\nTransport en voiture - environ 10 km - 20 minutes de route.",
+      "description": "Dès votre arrivée à Katmandou, vous serez accueillis par votre guide et conduit à votre hôtel où vous recevrez un briefing et une présentation de l'itinéraire de votre séjour. Si vous arrivez le matin, vous aurez la possibilité de vous reposer ou partir explorer le quartier animé de Thamel afin de plonger dans l'ambiance locale dès ce premier jour ! ",
       "photo": "/images/voyages/trek-chez-lhabitant-nepal/9riCPDocQD2kETAiEidU.jpg",
       "denivellation": "",
-      "road": "",
+      "road": "Transport en voiture : env. 10 km - 20 minutes de route",
       "night": ""
     },
     {
       "title": "DÉBUT DE VOTRE AVENTURE",
       "badgeText": "JOUR 2",
-      "description": "Dès le lever du jour, débutez votre aventure vers l'est du Népal en empruntant l'historique route transhimalayenne, autrefois le seul moyen d'accès pour une expédition vers l'Everest ! Cette traversée vous dévoilera progressivement les trésors de la vallée de Katmandou : un panorama époustouflant avec ses rizières en terrasses, ses collines verdoyantes, et les majestueuses chaînes de l'Himalaya. Après une pause déjeuner, poursuivez votre chemin jusqu'au pittoresque bourg de Jiri, où vous passerez la nuit. Altitude à Jiri : 1955m.\r\nTransport en jeep ou bus local - 185km - 7h de route",
+      "description": "Dès le lever du jour, débutez votre aventure vers l'est du Népal en empruntant l'historique route transhimalayenne, autrefois le seul moyen d'accès pour une expédition vers l'Everest ! Cette traversée vous dévoilera progressivement les trésors de la vallée de Katmandou : un panorama époustouflant avec ses rizières en terrasses, ses collines verdoyantes, et les majestueuses chaînes de l'Himalaya. Après une pause déjeuner, poursuivez votre chemin jusqu'au pittoresque bourg de Jiri, où vous passerez la nuit. Altitude à Jiri : 1955m.",
       "photo": "/images/voyages/trek-chez-lhabitant-nepal/hx8ShbmzTAe0FNnEYNgk.jpg",
       "denivellation": "",
-      "road": "",
+      "road": "Transport en jeep ou bus local : 185km - 7h de route",
       "night": ""
     },
     {
       "title": "LE VILLAGE DE SHIVALAYA",
       "badgeText": "JOUR 3",
-      "description": "Le premier jour de votre randonnée est enfin arrivé ! Cette mise en jambe vous conduira vers le paisible village de Shivalaya. Débutez votre marche par une petite montée, suivie d'une douce descente le long de la rivière Khimti Khola. À votre arrivée, laissez-vous envelopper par l'atmosphère authentique de ce village, un havre de paix peu fréquenté par les autres voyageurs, et vivez votre première immersion chez l'habitant. \r\n+/- 4h de marche. Dénivelé + 510m/ -625m. Distance 10,2km. Altitude de départ et arrivée : 1955m / 1790m.",
+      "description": "Le premier jour de votre randonnée est enfin arrivé ! Cette mise en jambe vous conduira vers le paisible village de Shivalaya. Débutez votre marche par une petite montée, suivie d'une douce descente le long de la rivière Khimti Khola. À votre arrivée, laissez-vous envelopper par l'atmosphère authentique de ce village, un havre de paix peu fréquenté par les autres voyageurs, et vivez votre première immersion chez l'habitant.",
       "photo": "/images/voyages/trek-chez-lhabitant-nepal/wFJbSGr3QCGCTwmFl0if.jpg",
-      "denivellation": "",
-      "road": "",
+      "denivellation": "+510m/-625m | Altitude de départ et arrivée : 1955m / 1790m",
+      "road": "Marche : 10,2 km, +/- 4h de marche",
       "night": ""
     },
     {

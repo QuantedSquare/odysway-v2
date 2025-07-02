@@ -241,13 +241,13 @@ au cœur du voyage
     ::::voyage-col-card{slug="immersion-nomade-sahara"}
     ::::
   
-    ::::voyage-col-card{slug="voyage-immersion-colombie"}
-    ::::
+    <!-- ::::voyage-col-card{slug="voyage-immersion-colombie"}
+    :::: -->
   :::
 ::
 
 ::color-container{color="white"}
-  :::home-review-container
+  :::common-review-container
   #title
   [Ils en parlent mieux que nous]{style="color: rgba(43, 76, 82, 1)"}
   

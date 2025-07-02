@@ -9,8 +9,8 @@
   },
   "common": {
     "expandButton": {
-      "showMore": "Voir plus",
-      "showLess": "Voir moins"
+      "showMore": "Voir plus des dates",
+      "showLess": "Voir moins des dates"
     }
   }
 }

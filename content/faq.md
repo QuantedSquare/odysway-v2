@@ -168,9 +168,6 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
   
-    ::::question-panel{hide}
-    ::::
-  
   #answer
   Odysway propose trois formats de voyage, selon les envies et les besoins :
   
