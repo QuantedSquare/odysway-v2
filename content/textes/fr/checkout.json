@@ -94,7 +94,9 @@
     "accept_country_conditions_text": "Je me suis renseigné sur les conditions d'entrée dans le pays où s'effectue le voyage",
     "option_already_placed_error": "Vous avez déjà posé une option pour cette date.",
     "place_option_button": "Poser une option gratuitement",
-    "pay_button": "Payer"
+    "pay_stripe_button": "Payer par CB ou Virement",
+    "pay_alma_button": "Payer en 3 fois avec Alma",
+    "alma_payment_info": "Le paiement en 3 fois est disponible uniquement pour les montants inférieurs à 4000€"
   },
   "navigation": {
     "next_button": "Suivant",

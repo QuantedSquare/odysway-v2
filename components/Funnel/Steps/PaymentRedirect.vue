@@ -85,21 +85,40 @@
                   color="info"
                   class="ml-md-4 text-caption text-uppercase font-weight-bold text-md-body-1"
                   large
-                  :loading="loadingStripeSession"
+                  :loading="loadingSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
                   @click="book"
                 >
                   {{ page.payment.place_option_button }}
                 </v-btn>
-                <v-btn
+                <div
                   v-else
-                  class="ml-md-4"
-                  :loading="loadingStripeSession"
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                  @click="stripePay"
+                  class="d-flex flex-column ga-2"
                 >
-                  {{ page.payment.pay_button }}
-                </v-btn>
+                  <v-btn
+                    class="ml-md-4"
+                    :loading="loadingSession"
+                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                    @click="stripePay"
+                  >
+                    {{ page.payment.pay_stripe_button }}
+                  </v-btn>
+                  <v-btn
+                    v-if="isAlmaPaymentPossible"
+                    class="ml-md-4 bg-secondary"
+                    :loading="loadingSession"
+                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+                    @click="almaPay"
+                  >
+                    {{ page.payment.pay_alma_button }}
+                  </v-btn>
+                  <div
+                    v-if="deal.totalTravelPrice > 400000"
+                    class="text-caption"
+                  >
+                    {{ page.payment.alma_payment_info }}
+                  </div>
+                </div>
               </Transition>
             </Teleport>
           </ClientOnly>
@@ -129,7 +148,7 @@ const checkedOption = ref(route.query.type === 'booking')
 const switch_accept_data_privacy = ref(route.query.type === 'booking')
 const switch_accept_country = ref(route.query.type === 'booking')
 
-const loadingStripeSession = ref(false)
+const loadingSession = ref(false)
 
 // New: Form validation logic
 const formValidation = computed(() => {
@@ -145,8 +164,22 @@ watch(formValidation, (isFormValid) => {
   emit('validity-changed', props.ownStep, isFormValid)
 }, { immediate: true })
 
+const isAlmaPaymentPossible = computed(() => {
+  if (!deal.value) return false
+
+  return route.query.type !== 'custom'
+    && deal.value.alreadyPaid === 0
+    && deal.value.totalTravelPrice < 400000
+})
+
+watch(() => deal.value, (newDeal) => {
+  if (newDeal) {
+    console.log('Deal loaded, isAlmaPaymentPossible:', isAlmaPaymentPossible.value)
+  }
+}, { immediate: true })
+
 const stripePay = async () => {
-  loadingStripeSession.value = true
+  loadingSession.value = true
   // Defined as metadata after payment is done
   const dataForStripeSession = {
     dealId: dealId.value,
@@ -185,7 +218,48 @@ const stripePay = async () => {
       external: true,
     })
   }
-  loadingStripeSession.value = false
+  loadingSession.value = false
+}
+
+const almaPay = async () => {
+  loadingSession.value = true
+
+  const dataForAlmaSession = {
+    dealId: dealId.value,
+    paymentType: route.query.type,
+    contact: deal.value.contact,
+    currentUrl: route.fullPath,
+    insuranceImg: props.page.assurance_img || 'https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW"', // replace buttercms by a default image
+    countries: deal.value.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+  }
+
+  if (route.query.type === 'custom') {
+    Object.assign(dataForAlmaSession, {
+      amount: +route.query.amount * 100,
+    })
+  }
+
+  const checkoutLink = await $fetch('/api/v1/alma/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dataForAlmaSession),
+  })
+
+  if (checkoutLink.url) {
+    trackPixel('trackCustom', 'ClickAlma', { voyage: props.voyage.title })
+    if (localStorage.getItem('consent') === 'granted') {
+      trackPixel('track', 'InitiateCheckout', {
+        currency: 'EUR',
+        amount: +route.query.amount * 100,
+      })
+    }
+    await navigateTo(checkoutLink.url, {
+      external: true,
+    })
+  }
+  loadingSession.value = false
 }
 
 watch(checkedOption, (value) => {
@@ -202,7 +276,7 @@ watch([switch_accept_data_privacy, switch_accept_country, alreadyPlacedAnOption]
 })
 
 const book = async () => {
-  loadingStripeSession.value = true
+  loadingSession.value = true
 
   const res = await fetch(`/api/v1/booking/booked_date/option`, {
     method: 'POST',
@@ -213,7 +287,7 @@ const book = async () => {
   console.log('data', data)
   if (data.error && data.error === 'La date est déjà réservée') {
     alreadyPlacedAnOption.value = true
-    loadingStripeSession.value = false
+    loadingSession.value = false
     return
   }
 

@@ -677,7 +677,9 @@ export default defineContentConfig({
           accept_country_conditions_text: z.string().describe('Texte pour accepter les conditions d\'entrée du pays'),
           option_already_placed_error: z.string().describe('Message d\'erreur si une option a déjà été posée'),
           place_option_button: z.string().describe('Texte du bouton pour poser une option'),
-          pay_button: z.string().describe('Texte du bouton pour payer'),
+          pay_stripe_button: z.string().describe('Texte du bouton pour payer par CB ou Virement'),
+          pay_alma_button: z.string().describe('Texte du bouton pour payer en 3 fois par Alma'),
+          alma_payment_info: z.string().describe('Texte pour le paiement en 3 fois avec Alma'),
         }).describe('Textes pour la section de paiement'),
         navigation: z.object({
           next_button: z.string().describe('Texte du bouton suivant'),

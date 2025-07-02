@@ -76,6 +76,7 @@
               to="/thematiques"
               nuxt
               size="x-large"
+              class="text-decoration-none"
             >
               Retour aux voyages
             </v-btn-secondary>

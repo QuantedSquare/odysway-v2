@@ -103,20 +103,19 @@ const quote = async (body) => {
   }
 }
 
-const notify = (stripeSession, insuranceItem, dealCustomFields) => {
-  const order = stripeSession.metadata
+const notify = (paymentSession, insuranceItem, dealCustomFields) => {
   const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
   const data = {
     emetteur: isDev ? 'ODYSWAY-TEST' : 'ODYSWAY',
-    produit: order.countries.includes('NP') || order.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
-    reference: order.dealId.toString(),
+    produit: paymentSession.countries.includes('NP') || paymentSession.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
+    reference: paymentSession.dealId.toString(),
     formule: insuranceType,
     prime: (insuranceItem.amount_total / 100).toFixed(2),
-    email: stripeSession.customer_details.email,
+    email: paymentSession.customer_details.email,
     provenance: 'FR',
-    destination: order.countries,
+    destination: paymentSession.countries,
     nombre: insuranceItem.quantity.toString(),
     depart: dayjs(dealCustomFields.departureDate).format('DD/MM/YYYY'),
     retour: dayjs(dealCustomFields.returnDate).format('DD/MM/YYYY'),
