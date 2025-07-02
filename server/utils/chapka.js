@@ -138,23 +138,23 @@ const notify = (paymentSession, insuranceItem, dealCustomFields) => {
 
   console.log('send data to chapka', data)
 
-  // try {
-  //   axios.post(
-  //     'https://api.chapka.fr/notify/?request=create',
-  //     JSON.stringify({
-  //       message: JSON.stringify(data),
-  //       mode: 'json',
-  //     }),
-  //     {
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //     },
-  //   )
-  // }
-  // catch (err) {
-  //   console.log('Err notify chapka', err)
-  // }
+  try {
+    axios.post(
+      'https://api.chapka.fr/notify/?request=create',
+      JSON.stringify({
+        message: JSON.stringify(data),
+        mode: 'json',
+      }),
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    )
+  }
+  catch (err) {
+    console.log('Err notify chapka', err)
+  }
 }
 
 export default { quote, notify }

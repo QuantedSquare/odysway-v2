@@ -227,7 +227,7 @@ const handlePaymentSession = async (session) => {
     stage: +customFields.alreadyPaid > 0 ? '33' : '6', // first payment (full or acompte) => '33' = "Gestion résa (sales)" || '6' ="en attente de départ"
     alreadyPaid: totalPaidAlma,
     restToPay: restToPay,
-    currentStep: totalPaidAlma === +deal.value // check if is usefull for Alma
+    currentStep: totalPaidAlma === +deal.value
       ? 'Paiement OK'
       : 'Paiement en cours',
   }
