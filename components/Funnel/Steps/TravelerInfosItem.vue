@@ -56,6 +56,7 @@
         inputmode="numeric"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
+        @blur="formatOnBlur"
         @input="handleInput"
         @change="dataUpdated"
       />
@@ -105,43 +106,36 @@ const rules = {
   },
 }
 
-// Mobile-friendly input handler
-const handleInput = (event) => {
-  const input = event.target
-  const value = input.value
+// Format date string helper
+const formatDate = (inputValue) => {
+  const digits = inputValue.replace(/\D/g, '').substring(0, 8)
 
-  // Remove all non-digits first
-  let digits = value.replace(/\D/g, '')
-
-  // Limit to 8 digits maximum
-  digits = digits.substring(0, 8)
-
-  // Format progressively based on length
-  let formatted = ''
   if (digits.length <= 2) {
-    formatted = digits
+    return digits
   }
   else if (digits.length <= 4) {
-    formatted = digits.substring(0, 2) + '/' + digits.substring(2)
+    return digits.substring(0, 2) + '/' + digits.substring(2)
   }
   else {
-    formatted = digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
+    return digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
   }
+}
 
-  // Only update if the value actually changed
-  if (formatted !== value) {
-    date.value = formatted
+// Handle input - minimal interference for mobile
+const handleInput = (event) => {
+  const value = event.target.value
+  const digits = value.replace(/\D/g, '')
 
-    // Simple cursor positioning for mobile compatibility
-    nextTick(() => {
-      try {
-        // Just put cursor at the end - simpler and more mobile-friendly
-        input.setSelectionRange(formatted.length, formatted.length)
-      }
-      catch {
-        // Mobile browsers sometimes don't support this - that's okay
-      }
-    })
+  // Only prevent too many digits
+  if (digits.length > 8) {
+    date.value = formatDate(value)
+  }
+}
+
+// Format when user finishes (more reliable on mobile)
+const formatOnBlur = () => {
+  if (date.value) {
+    date.value = formatDate(date.value)
   }
 }
 
