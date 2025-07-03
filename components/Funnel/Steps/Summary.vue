@@ -15,6 +15,7 @@
         width="100%"
         :src="voyage.imgSrc"
         :lazy-src="voyage.imgSrc"
+        :alt="`Paysage de destination pour le voyage ${voyage?.title}`"
         cover
       >
         <v-container class=" d-flex flex-column justify-center">
