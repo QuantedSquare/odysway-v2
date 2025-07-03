@@ -56,7 +56,6 @@
         inputmode="numeric"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
-        @keydown="handleKeydown"
         @input="handleInput"
         @change="dataUpdated"
       />
@@ -106,96 +105,41 @@ const rules = {
   },
 }
 
-const handleKeydown = (event) => {
-  const input = event.target
-  const key = event.key
-  const cursorPosition = input.selectionStart
-  const value = input.value
-
-  // Allow navigation and control keys
-  if (['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter'].includes(key)) {
-    return
-  }
-
-  // Only allow digits
-  if (!/^\d$/.test(key)) {
-    event.preventDefault()
-    return
-  }
-
-  // Count existing digits
-  const digitsCount = (value.replace(/\D/g, '')).length
-
-  // Limit to 8 digits
-  if (digitsCount >= 8) {
-    event.preventDefault()
-    return
-  }
-
-  // Auto-add slashes after 2nd and 4th digit
-  nextTick(() => {
-    let newValue = input.value
-    const digits = newValue.replace(/\D/g, '')
-
-    if (digits.length === 2 && cursorPosition === 2) {
-      newValue = digits.substring(0, 2) + '/' + digits.substring(2)
-      date.value = newValue
-      nextTick(() => input.setSelectionRange(3, 3))
-    }
-    else if (digits.length === 4 && cursorPosition === 5) {
-      newValue = digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
-      date.value = newValue
-      nextTick(() => input.setSelectionRange(6, 6))
-    }
-  })
-}
-
-// Fallback for mobile devices and other input methods
+// Mobile-friendly input handler
 const handleInput = (event) => {
   const input = event.target
   const value = input.value
-  const cursorPosition = input.selectionStart
 
-  // Remove all non-digits
-  const digits = value.replace(/\D/g, '')
+  // Remove all non-digits first
+  let digits = value.replace(/\D/g, '')
 
-  // Limit to 8 digits
-  const limitedDigits = digits.substring(0, 8)
+  // Limit to 8 digits maximum
+  digits = digits.substring(0, 8)
 
-  // Format with slashes
+  // Format progressively based on length
   let formatted = ''
-  for (let i = 0; i < limitedDigits.length; i++) {
-    if (i === 2 || i === 4) {
-      formatted += '/'
-    }
-    formatted += limitedDigits[i]
+  if (digits.length <= 2) {
+    formatted = digits
+  }
+  else if (digits.length <= 4) {
+    formatted = digits.substring(0, 2) + '/' + digits.substring(2)
+  }
+  else {
+    formatted = digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
   }
 
-  // Only update if different to avoid infinite loops
+  // Only update if the value actually changed
   if (formatted !== value) {
-    const oldLength = value.length
-    const newLength = formatted.length
-
     date.value = formatted
 
-    // Try to maintain cursor position
+    // Simple cursor positioning for mobile compatibility
     nextTick(() => {
-      let newPosition = cursorPosition + (newLength - oldLength)
-
-      // Adjust if cursor is on a slash
-      if (formatted[newPosition] === '/') {
-        newPosition++
-      }
-
-      // Ensure position is valid
-      newPosition = Math.max(0, Math.min(newPosition, formatted.length))
-
       try {
-        input.setSelectionRange(newPosition, newPosition)
+        // Just put cursor at the end - simpler and more mobile-friendly
+        input.setSelectionRange(formatted.length, formatted.length)
       }
-      catch (e) {
-        // Some mobile browsers don't support setSelectionRange
-        console.warn('Could not set cursor position:', e)
+      catch {
+        // Mobile browsers sometimes don't support this - that's okay
       }
     })
   }
