@@ -20,8 +20,7 @@
       align="center"
     >
       <ClientOnly>
-        <!-- <FunnelCheckoutStepper /> -->
-        <FunnelCheckoutStepper2 />
+        <FunnelCheckoutStepper />
       </ClientOnly>
     </v-row>
   </v-container>
