@@ -34,19 +34,19 @@
           />
 
           <!-- Check si c'est suffisant ou si on souhaite afficher un message particulier au nb d'enfants -->
-          <p
-            v-show="!ageValidation.isValid"
-            class="text-error text-right mt-2"
-          >
-            {{ ageValidationMessage }}
-          </p>
-          <!-- New: Error message for missing fields -->
-          <p
-            v-show="!allFieldsFilled"
-            class="text-error text-right"
-          >
-            {{ page.travelers_infos.all_fields_required }}
-          </p>
+          <div class="text-error text-right mt-6 mt-md-6 ">
+            <p
+              v-show="!ageValidation.isValid"
+            >
+              - {{ ageValidationMessage }}
+            </p>
+            <!-- New: Error message for missing fields -->
+            <p
+              v-show="!allFieldsFilled"
+            >
+              - {{ page.travelers_infos.all_fields_required }}
+            </p>
+          </div>
         </v-col>
       </v-row>
 
@@ -54,7 +54,7 @@
         <v-col
           v-if="nbTravelers > 1"
           cols="12"
-          class="py-0"
+          class="py-2"
         >
           <v-switch
             v-model="model.isCouple"
@@ -63,27 +63,28 @@
           />
         </v-col>
       </v-row>
+
+      <v-row>
+        <v-col
+          class="d-flex ga-3"
+        >
+          <v-btn
+            class="bg-grey-light font-weight-regular"
+            @click="emit('previous')"
+          >
+            Précédent
+          </v-btn>
+          <v-btn
+            :disabled="!formValidation || !isBookingLoaded"
+            color="secondary"
+            class="font-weight-bold"
+            @click="submitStepData"
+          >
+            Suivant
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-form>
-    <v-row>
-      <v-col
-        class="d-flex ga-3"
-      >
-        <v-btn
-          class="bg-grey-light font-weight-regular"
-          @click="emit('previous')"
-        >
-          Précédent
-        </v-btn>
-        <v-btn
-          :disabled="!formValidation || !isBookingLoaded"
-          color="secondary"
-          class="font-weight-bold"
-          @click="submitStepData"
-        >
-          Suivant
-        </v-btn>
-      </v-col>
-    </v-row>
   </v-container>
 </template>
 
@@ -279,21 +280,3 @@ const colorMap = {
   8: 'pink',
 }
 </script>
-
-<style scoped>
-.list-move, /* apply transition to moving elements */
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
-}
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.list-leave-active {
-  position: absolute;
-}
-</style>

@@ -8,8 +8,6 @@ export function useStepperDeal(componentStep) {
   const route = useRoute()
   const { addMultipleParams } = useParams()
 
-  const currentStepRef = ref(1)
-
   const fetchDeal = async (id = dealId.value) => {
     loadingDeal.value = true
     const res = await apiRequest(`/ac/deals/${id}`)
@@ -32,7 +30,7 @@ export function useStepperDeal(componentStep) {
       const date_id = route.query.date_id
       const addedBookedDate = await apiRequest(`/booking/${body.slug}/date/${date_id}/assign-deal`, 'post', {
         dealId: res,
-        booked_places: 0, // this value is update after a payment
+        booked_places: 0, // this value is updated after a payment
       })
       dealId.value = addedBookedDate.deal_id
       localStorage.setItem(date_id, JSON.stringify({
@@ -51,8 +49,6 @@ export function useStepperDeal(componentStep) {
       })
       updateDeal(bodyWithPaymentLink) // Update the deal with a paiementLink
 
-      // Update both parameters at once to avoid race conditions
-
       return true
     }
     catch (error) {
@@ -65,57 +61,5 @@ export function useStepperDeal(componentStep) {
     apiRequest('/ac/deals/update-with-bms?bookedId=' + route.query.booked_id, 'post', body)
   }
 
-  watch(route, () => {
-    // dealId.value = route.query.dealId || dealId.value
-    if (route.query.step) {
-      currentStepRef.value = route.query.step
-    }
-    // if (route.query.booked_id) {
-    //   console.log('route.query.booked_id', route.query.booked_id)
-    //   loadingDeal.value = true
-    //   const { deal_id } = await apiRequest(`/booking/booked_date/${route.query.booked_id}`)
-    //   console.log('deal_id in composable', deal_id)
-    //   dealId.value = deal_id
-    //   loadingDeal.value = false
-    // }
-  }, { immediate: true })
-
-  // #TODO CHECK SI CA FONCTIONNE SANS REFETCH
-  // watch([dealId, currentStepRef], async () => {
-  //   if (dealId.value && +componentStep === +currentStepRef.value) {
-  //     await fetchDeal()
-  //     console.log('Deal fetched:', deal.value)
-  //   }
-  // }, { immediate: true })
-
   return { deal, dealId, fetchDeal, createDeal, updateDeal, checkoutType, loadingDeal }
 }
-
-// try {
-//   const res = await apiRequest('/ac/deals/checkout&date_id=' + route.query.date_id, 'post', body)
-//   const date_id = route.query.date_id
-//   const addedBookedDate = await apiRequest(`/booking/${body.slug}/date/${date_id}/assign-deal`, 'post', {
-//     dealId: res,
-//     booked_places: 0, // this value is update after a payment
-//   })
-//   dealId.value = addedBookedDate.deal_id
-//   localStorage.setItem(date_id, JSON.stringify({
-//     booked_id: addedBookedDate.id,
-//     deal_id: addedBookedDate.deal_id,
-//   }))
-
-//   const paiementLink = `https://odysway.com/checkout?type=${route.query.type}&booked_id=${addedBookedDate.id}&step=1`
-//   const bodyWithPaymentLink = {
-//     dealId: addedBookedDate.deal_id,
-//     paiementLink,
-//   }
-//   updateDeal(bodyWithPaymentLink) // Update the deal with a paiementLink
-
-//   // Update both parameters at once to avoid race conditions
-//   await addMultipleParams({
-//     booked_id: addedBookedDate.id,
-//     date_id: undefined, // This will remove the date_id parameter
-//   })
-
-//   return true
-// }
