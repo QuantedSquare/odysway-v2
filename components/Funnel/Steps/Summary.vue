@@ -51,7 +51,7 @@
           </template>
           <template #right>
             <div v-if="!voyage.gotEarlybird && !voyage.gotLastMinute">
-              {{ formatNumber(+voyage.startingPrice + +voyage.flightPrice, 'currency', 'EUR') }}
+              {{ formatNumber(+voyage.startingPrice + (voyage.includeFlight ? +voyage.flightPrice : 0), 'currency', 'EUR') }}
             </div>
             <div v-else>
               <div class="d-flex flex-column align-end">

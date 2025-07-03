@@ -1,5 +1,22 @@
 export default defineEventHandler(async (event) => {
+  const { bookedId } = getQuery(event)
+  console.log('bookedId:', bookedId)
+
+  const { data, error } = await supabase
+    .from('booked_dates')
+    .select('deal_id')
+    .eq('id', bookedId)
+    .single()
+
+  if (error) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Error getting deal from booked_dates',
+    })
+  }
+  const deal_id = data.deal_id
   const body = await readBody(event)
+  Object.assign(body, { dealId: deal_id })
   console.log('========ALMA REQUEST BODY=======', body)
 
   if (!body.dealId) {

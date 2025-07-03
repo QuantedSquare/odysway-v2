@@ -189,13 +189,12 @@ const stripePay = async () => {
   loadingSession.value = true
   // Defined as metadata after payment is done
   const contact = {
-    firstName: model.value.firstname,
-    lastName: model.value.lastname,
+    firstName: model.value.firstName,
+    lastName: model.value.lastName,
     email: model.value.email,
     phone: model.value.phone,
   }
   const dataForStripeSession = {
-    dealId: 1111, // test
     paymentType: route.query.type,
     contact: contact,
     currentUrl: route.fullPath,
@@ -207,9 +206,7 @@ const stripePay = async () => {
       amount: +route.query.amount * 100,
     })
   }
-  console.log('dataForStripeSession', dataForStripeSession)
-
-  const checkoutLink = await $fetch('/api/v1/stripe/', {
+  const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${route.query.booked_id}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -218,8 +215,6 @@ const stripePay = async () => {
   })
 
   if (checkoutLink) {
-    console.log('checkoutLink =====> ', checkoutLink)
-
     trackPixel('trackCustom', 'ClickCB', { voyage: voyage.title })
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
@@ -256,7 +251,7 @@ const almaPay = async () => {
     })
   }
 
-  const checkoutLink = await $fetch('/api/v1/alma/', {
+  const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${route.query.booked_id}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
