@@ -53,9 +53,11 @@
         role="textbox"
         label="Date de naissance *"
         type="text"
+        inputmode="numeric"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
         @keydown="handleKeydown"
+        @input="handleInput"
         @change="dataUpdated"
       />
     </v-col>
@@ -146,6 +148,57 @@ const handleKeydown = (event) => {
       nextTick(() => input.setSelectionRange(6, 6))
     }
   })
+}
+
+// Fallback for mobile devices and other input methods
+const handleInput = (event) => {
+  const input = event.target
+  const value = input.value
+  const cursorPosition = input.selectionStart
+
+  // Remove all non-digits
+  const digits = value.replace(/\D/g, '')
+
+  // Limit to 8 digits
+  const limitedDigits = digits.substring(0, 8)
+
+  // Format with slashes
+  let formatted = ''
+  for (let i = 0; i < limitedDigits.length; i++) {
+    if (i === 2 || i === 4) {
+      formatted += '/'
+    }
+    formatted += limitedDigits[i]
+  }
+
+  // Only update if different to avoid infinite loops
+  if (formatted !== value) {
+    const oldLength = value.length
+    const newLength = formatted.length
+
+    date.value = formatted
+
+    // Try to maintain cursor position
+    nextTick(() => {
+      let newPosition = cursorPosition + (newLength - oldLength)
+
+      // Adjust if cursor is on a slash
+      if (formatted[newPosition] === '/') {
+        newPosition++
+      }
+
+      // Ensure position is valid
+      newPosition = Math.max(0, Math.min(newPosition, formatted.length))
+
+      try {
+        input.setSelectionRange(newPosition, newPosition)
+      }
+      catch (e) {
+        // Some mobile browsers don't support setSelectionRange
+        console.warn('Could not set cursor position:', e)
+      }
+    })
+  }
 }
 
 const dataUpdated = () => {
