@@ -121,6 +121,9 @@ Un voyage culturel immersif est une façon de voyager de manière solidaire, éc
   
   #bottom
     ::::horizontal-carousel
+    ---
+    showButtons: true
+    ---
     #title
     
     #carousel-item
