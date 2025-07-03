@@ -58,6 +58,7 @@
         :rules="[rules.required, rules.dateFormat]"
         @blur="formatOnBlur"
         @input="handleInput"
+        @keydown="handleKeydown"
         @change="dataUpdated"
       />
     </v-col>
@@ -110,14 +111,92 @@ const rules = {
 const formatDate = (inputValue) => {
   const digits = inputValue.replace(/\D/g, '').substring(0, 8)
 
-  if (digits.length <= 2) {
+  if (digits.length <= 1) {
     return digits
   }
-  else if (digits.length <= 4) {
+  else if (digits.length === 2) {
+    return digits + '/'
+  }
+  else if (digits.length === 3) {
     return digits.substring(0, 2) + '/' + digits.substring(2)
+  }
+  else if (digits.length === 4) {
+    return digits.substring(0, 2) + '/' + digits.substring(2) + '/'
   }
   else {
     return digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
+  }
+}
+
+// Handle deletion keys for better UX
+const handleKeydown = (event) => {
+  const input = event.target
+  const value = input.value
+  const cursorPosition = input.selectionStart
+  const selectionEnd = input.selectionEnd
+
+  // Handle backspace and delete
+  if (event.key === 'Backspace' || event.key === 'Delete') {
+    event.preventDefault()
+
+    let newValue = ''
+
+    if (cursorPosition !== selectionEnd) {
+      // Text is selected - delete selection
+      newValue = value.substring(0, cursorPosition) + value.substring(selectionEnd)
+
+      // If all text is selected, clear everything
+      if (cursorPosition === 0 && selectionEnd === value.length) {
+        newValue = ''
+      }
+    }
+    else if (event.key === 'Backspace' && cursorPosition > 0) {
+      // Backspace - delete character before cursor
+      let deletePos = cursorPosition - 1
+
+      // If cursor is after a slash, delete the digit before the slash
+      if (value[deletePos] === '/') {
+        deletePos = cursorPosition - 2
+      }
+
+      if (deletePos >= 0) {
+        newValue = value.substring(0, deletePos) + value.substring(cursorPosition)
+      }
+
+      // Special case: if field becomes very short, allow easy clearing
+      if (newValue.replace(/\D/g, '').length <= 1) {
+        newValue = newValue.replace(/\D/g, '')
+      }
+    }
+    else if (event.key === 'Delete' && cursorPosition < value.length) {
+      // Delete - delete character after cursor
+      let deletePos = cursorPosition + 1
+
+      // If cursor is before a slash, delete the digit after the slash
+      if (value[cursorPosition] === '/') {
+        deletePos = cursorPosition + 2
+      }
+
+      if (deletePos <= value.length) {
+        newValue = value.substring(0, cursorPosition) + value.substring(deletePos)
+      }
+    }
+
+    // Format the new value and update
+    const formatted = formatDate(newValue)
+    date.value = formatted
+
+    // Position cursor
+    nextTick(() => {
+      try {
+        const newPos = Math.min(cursorPosition, formatted.length)
+        input.setSelectionRange(newPos, newPos)
+      }
+      catch {
+        // Mobile browsers sometimes don't support setSelectionRange
+        // This is okay - the field will still work, just cursor might not be perfectly positioned
+      }
+    })
   }
 }
 
@@ -126,7 +205,6 @@ const handleInput = (event) => {
   const input = event.target
   const value = input.value
   const cursorPosition = input.selectionStart
-
   // Format the value
   const formatted = formatDate(value)
 
