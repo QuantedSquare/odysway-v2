@@ -160,7 +160,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
-    console.log('===========response in activecampaign.js===========', response.data)
+    // console.log('===========response in activecampaign.js===========', response.data)
     return response.data
   }
   catch (error) {
@@ -400,8 +400,8 @@ const recalculatTotalValues = async (dealId) => {
   // We need to recalculte the total value of the deal and the rest to pay.
   const customFields = await getDealCustomFields(dealId)
   const { deal } = await getDealById(dealId)
-  console.log('===========deal in recalculatTotalValues', deal, '========')
-  console.log('===========customFields in recalculatTotalValues', customFields, '========')
+  // console.log('===========deal in recalculatTotalValues', deal, '========')
+  // console.log('===========customFields in recalculatTotalValues', customFields, '========')
   const basePrice = customFields.basePricePerTraveler || 0
 
   const nbTravelers = customFields.nbTravelers || 0

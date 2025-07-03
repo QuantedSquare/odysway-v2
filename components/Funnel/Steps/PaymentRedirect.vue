@@ -289,7 +289,7 @@ const book = async () => {
     body: JSON.stringify({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren }),
   })
   const data = await res.json()
-  console.log('data', data)
+
   if (data.error && data.error === 'La date est déjà réservée') {
     alreadyPlacedAnOption.value = true
     loadingSession.value = false
@@ -304,7 +304,7 @@ const book = async () => {
     firstName: model.value.firstname,
     lastName: model.value.lastname,
   }
-  console.log('dealData', dealData)
+
   updateDeal(dealData)
   // Check si on ajoute le payment link ici
 

@@ -254,7 +254,7 @@ const submitStepData = () => {
     currentStep: 'A fait le choix de l\'assurance',
     insuranceCommissionPerTraveler: insuranceChoice.value.price * 30, // Commision assurnace par pax
   }
-  console.log('dealData pushed from insurance', dealData)
+
   try {
     updateDeal(dealData)
     emit('next')

@@ -84,7 +84,7 @@ const fetchInsuranceQuote = async () => {
         nbTravelers: 5,
       },
     })
-    console.log('FETCH INSURANCE QUOTE', insurance)
+
     return insurance
   }
   catch (error) {
@@ -101,7 +101,6 @@ watch([dealId, () => props.currentStep], async () => {
   if (dealId.value) {
     insurances.value = await fetchInsuranceQuote()
     await fetchDeal(dealId.value)
-    console.log('deal', deal.value)
 
     if (deal.value?.insurance) {
       const insuranceType = deal.value.insurance?.toLowerCase()
@@ -161,7 +160,7 @@ const submitStepData = async () => {
     insuranceCommissionPerTraveler: insuranceChoice.value.price * 30,
     //
   }
-  console.log('dealData', dealData)
+
   try {
     await updateDeal(dealData)
     return true

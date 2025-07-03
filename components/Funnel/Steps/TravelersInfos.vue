@@ -118,8 +118,6 @@ const computedAges = computed(() => {
 
     const birthdate = dayjs(traveler.birthdate, 'DD/MM/YYYY')
     const age = departureDate.diff(birthdate, 'year')
-    console.log('age', age)
-    console.log('maxChildrenAge', +voyage.maxChildrenAge)
 
     if (age <= +voyage.maxChildrenAge) {
       children.push(traveler)
@@ -127,8 +125,6 @@ const computedAges = computed(() => {
     else {
       adults.push(traveler)
     }
-    console.log('children', children)
-    console.log('adults', adults)
   })
 
   return {
@@ -172,7 +168,6 @@ const formValidation = computed(() => {
 // Data Initialization
 const initializeTravelersData = () => {
   if (model.value) {
-    console.log('INITIALIZE TRAVELERS DATA', model.value)
     nbTravelers.value = +model.value.nbChildren + +model.value.nbAdults || 1
 
     dealNbChildren.value = +model.value.nbChildren || 0
@@ -204,7 +199,6 @@ const initializeTravelersData = () => {
 }
 
 watch([model, () => currentStep], () => {
-  console.log('model in travelers infos', model.value)
   if (currentStep === ownStep) {
     if (model.value) {
       initializeTravelersData()
