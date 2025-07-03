@@ -226,7 +226,7 @@
                       {{ mdiInformationOutline }}
                     </v-icon>
                   </div>
-                  <div v-else>
+                  <div v-else-if="voyage.totalTravelPrice < voyage.alreadyPaid">
                     {{ page.summary.already_paid_full }}
                   </div>
                 </template>
@@ -237,6 +237,7 @@
             </template>
             <template #right>
               <span
+                v-if="voyage.totalTravelPrice < voyage.alreadyPaid"
                 class="font-weight-bold text-primary"
               >
                 {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}

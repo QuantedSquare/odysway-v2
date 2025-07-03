@@ -75,7 +75,7 @@
           Précédent
         </v-btn>
         <v-btn
-          :disabled="!formValidation"
+          :disabled="!formValidation || !isBookingLoaded"
           color="secondary"
           class="font-weight-bold"
           @click="submitStepData"
@@ -92,7 +92,7 @@ import dayjs from 'dayjs'
 
 const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page', 'initialDealValues'])
 const { updateDeal } = useStepperDeal(ownStep)
-
+const route = useRoute()
 const model = defineModel()
 
 const { addSingleParam } = useParams()
@@ -152,7 +152,9 @@ const ageValidation = computed(() => {
     adultsCount: adults.length,
   }
 })
-
+const isBookingLoaded = computed(() => {
+  return route.query.booked_id !== undefined && route.query.booked_id !== null && route.query.booked_id !== '' && route.query.date_id === undefined
+})
 // New: Check that all traveler fields are filled
 const allFieldsFilled = computed(() => {
   return travelers.value.every(

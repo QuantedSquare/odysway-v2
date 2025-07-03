@@ -261,6 +261,7 @@ const submitStepData = async () => {
         })
         buttonLoading.value = false
       }
+      emit('next')
       console.log('deal updated')
     }
     // else we update basics and create a deal with it
@@ -313,10 +314,10 @@ const submitStepData = async () => {
         optinNewsletter: model.value.optinNewsletter,
       }
       trackPixel('track', 'AddToCart')
+      emit('next')
       await createDeal(flattenedDeal)
       buttonLoading.value = false
     }
-    emit('next')
   }
   catch (error) {
     // Handle errors
