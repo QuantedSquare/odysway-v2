@@ -128,6 +128,9 @@ Un voyage culturel immersif est une façon de voyager de manière solidaire, éc
     #text
     Découvrir
     ::::
+  
+    ::::voyage-col-card{slug="photographie-animaliere-vosges"}
+    ::::
   :::
 ::
 
