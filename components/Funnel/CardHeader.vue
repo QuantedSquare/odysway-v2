@@ -39,6 +39,7 @@
   </v-container>
   <v-img
     :src="props.image || 'https://odysway.com/logos/logo_noir.png'"
+    :alt="`Paysage de destination pour le voyage ${titre}`"
     height="120"
     width="100%"
     cover
@@ -62,10 +63,7 @@
           </span>
         </v-col>
 
-        <v-col
-
-          class="text-no-wrap text-right font-weight-bold text-body-1"
-        >
+        <v-col class="text-no-wrap text-right font-weight-bold text-body-1">
           {{ formatNumber(price, 'currency', '€') }}/pers.
         </v-col>
       </v-row>

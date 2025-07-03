@@ -23,6 +23,7 @@
                 color="surface-variant"
                 height="100"
                 :src="voyage.imgSrc"
+                :alt="`Paysage de destination pour le voyage ${voyage.title}`"
                 cover
               />
             </Transition>

@@ -16,6 +16,7 @@
           height="150"
           :src="voyage.imgSrc"
           :lazy-src="voyage.imgSrc"
+          :alt="`Paysage de destination pour le voyage ${voyage.title}`"
           cover
         >
           <div class="pa-8  d-flex flex-column align-start">
@@ -126,6 +127,7 @@
             <v-tooltip
               v-if="forceIndivRoom "
               bottom
+              :aria-label="page.summary.forced_indiv_room_text"
             >
               <template #activator="{ props }">
                 <div class="d-flex align-center ga-2">
@@ -209,6 +211,7 @@
             <template #left>
               <v-tooltip
                 bottom
+                :aria-label="page.summary.cancel_text"
               >
                 <template #activator="{ props }">
                   <div
