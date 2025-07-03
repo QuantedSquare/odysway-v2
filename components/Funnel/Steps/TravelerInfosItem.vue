@@ -121,18 +121,48 @@ const formatDate = (inputValue) => {
   }
 }
 
-// Handle input - minimal interference for mobile
+// Handle input - format in real time for all devices
 const handleInput = (event) => {
-  const value = event.target.value
-  const digits = value.replace(/\D/g, '')
+  const input = event.target
+  const value = input.value
+  const cursorPosition = input.selectionStart
 
-  // Only prevent too many digits
-  if (digits.length > 8) {
-    date.value = formatDate(value)
+  // Format the value
+  const formatted = formatDate(value)
+
+  // Update if different
+  if (formatted !== value) {
+    date.value = formatted
+
+    // Try to maintain cursor position
+    nextTick(() => {
+      try {
+        // Calculate new cursor position based on added slashes
+        let newPosition = cursorPosition
+
+        // Count slashes before cursor in original vs formatted
+        const originalSlashes = (value.substring(0, cursorPosition).match(/\//g) || []).length
+        const formattedSlashes = (formatted.substring(0, cursorPosition).match(/\//g) || []).length
+        newPosition += (formattedSlashes - originalSlashes)
+
+        // Ensure cursor doesn't land on a slash
+        if (formatted[newPosition] === '/') {
+          newPosition += 1
+        }
+
+        // Keep position within bounds
+        newPosition = Math.min(newPosition, formatted.length)
+
+        input.setSelectionRange(newPosition, newPosition)
+      }
+      catch {
+        // Fallback for mobile browsers
+      }
+    })
   }
 }
 
-// Format when user finishes (more reliable on mobile)
+// Backup formatting on blur (just in case)
 const formatOnBlur = () => {
   if (date.value) {
     date.value = formatDate(date.value)
