@@ -80,11 +80,13 @@
                   @next="nextStep"
                   @previous="previousStep"
                 />
-                <!-- <CalendlyContainer
+                <CalendlyContainer
                   v-else
                   :travel-title="voyage.title"
                   :text="pageTexts.calendly"
-                /> -->
+                  :is-funnel="true"
+                  @previous="previousStep"
+                />
               </v-stepper-window-item>
               <v-stepper-window-item>
                 <FunnelStepsTravelersInfos
@@ -124,14 +126,6 @@
               <v-stepper-window-item
                 :value="5"
               >
-                <!-- <FunnelStepsSummary
-                  v-model="dynamicDealValues"
-                  :current-step="currentStep"
-                  :page="pageTexts"
-                  :voyage="voyage"
-                  :own-step="5"
-                /> -->
-
                 <FunnelStepsPaymentRedirect
                   v-model="dynamicDealValues"
                   :page="pageTexts"
@@ -146,7 +140,7 @@
         </v-col>
 
         <v-col
-          v-if="currentStep > 0"
+          v-if="currentStep > 0 && skipperMode === 'normal'"
           cols="12"
           :md="4"
           class="d-none d-md-block"
@@ -161,7 +155,7 @@
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
-        v-if="currentStep !== 0"
+        v-if="currentStep !== 0 && skipperMode === 'normal'"
         ref="summaryRef"
         :voyage="voyage"
         :page-texts="pageTexts"
@@ -271,11 +265,11 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       specialRequest: '',
       indivRoom: false,
       // Insurances
-      insurance: 'Aucune Assurance',
+      insurance: false,
       insuranceCommissionPrice: 0,
       insuranceCommissionPerTraveler: 0,
     }
-
+    await fetchInsuranceQuote(travelStaticValues, dynamicValues)
     dynamicDealValues.value = dynamicValues
     console.log('dynamicDealValues', dynamicDealValues.value)
     loading.value = false
@@ -328,7 +322,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
     console.log('dynamicDealValues', dynamicDealValues.value)
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
 
-    return {
+    const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
       title: deal.title,
@@ -357,6 +351,8 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       alreadyPaid: deal.alreadyPaid,
       totalTravelPrice: deal.value,
     }
+    await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
+    return voyageStaticValues
   }
 })
 console.log('voyage', voyage.value, voyageStatus.value, voyageError.value)
@@ -392,26 +388,27 @@ const previousStep = () => {
 
 const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
 
-const fetchInsuranceQuote = async () => {
+const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
   try {
-    if (!voyage.value || !dynamicDealValues.value) {
+    if (!voyage || !dynamicDealValues) {
       console.log('Missing voyage or dynamicDealValues for insurance quote')
       return
     }
 
-    const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues.value, voyage.value)
+    const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
 
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
         pricePerTraveler: pricePerTravelerWithoutInsurance / 100,
-        countries: voyage.value.iso,
-        zoneChapka: +voyage.value.zoneChapka || 0,
-        departureDate: voyage.value.departureDate,
-        returnDate: voyage.value.returnDate,
-        nbTravelers: +dynamicDealValues.value.nbAdults + +dynamicDealValues.value.nbChildren,
+        countries: voyage.iso,
+        zoneChapka: +voyage.zoneChapka || 0,
+        departureDate: voyage.departureDate,
+        returnDate: voyage.returnDate,
+        nbTravelers: +dynamicDealValues.nbAdults + +dynamicDealValues.nbChildren,
       },
     })
+    console.log('insurance fetched:', insurance)
     insurancesPrice.value = insurance
   }
   catch (error) {
@@ -431,12 +428,9 @@ const fetchInsuranceQuote = async () => {
 watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren], async ([newNbAdults, newNbChildren], [oldNbAdults, oldNbChildren]) => {
   if (voyage.value && dynamicDealValues.value
     && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren)) {
-    await fetchInsuranceQuote()
+    await fetchInsuranceQuote(voyage.value, dynamicDealValues.value)
   }
 }, { deep: true })
-onMounted(async () => {
-  await fetchInsuranceQuote()
-})
 
 // Computed property to determine if insurance step should be shown
 const showInsuranceStep = computed(() => {

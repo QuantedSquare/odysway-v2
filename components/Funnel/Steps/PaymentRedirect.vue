@@ -260,7 +260,7 @@ const almaPay = async () => {
   })
 
   if (checkoutLink.url) {
-    trackPixel('trackCustom', 'ClickAlma', { voyage: props.voyage.title })
+    trackPixel('trackCustom', 'ClickAlma', { voyage: voyage.title })
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
         currency: 'EUR',

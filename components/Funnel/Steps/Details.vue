@@ -15,7 +15,7 @@
         <v-col cols="12">
           <v-row>
             <v-col
-              cols="12"
+              cols="6"
               md="4"
             >
               <div class="text-caption">
@@ -30,7 +30,7 @@
             </v-col>
             <!-- children -->
             <v-col
-              cols="12"
+              cols="6"
               md="4"
             >
               <div class="text-caption text-truncate">

@@ -24,7 +24,7 @@ const customFieldsMapDeal = {
   29: 'isCouple',
   11: 'specialRequest',
   12: 'insurance',
-  13: 'insuranceCommissionPrice',
+  13: 'insuranceCommissionPrice', // Prix assurance par pax
   14: 'marginPerTraveler',
   15: 'totalMargin',
   16: 'flightMargin',
@@ -56,7 +56,7 @@ const customFieldsMapDeal = {
   44: 'restToPay',
   45: 'utm',
   46: 'includedFlight',
-  47: 'insuranceCommissionPerTraveler',
+  47: 'insuranceCommissionPerTraveler', // Commision assurnace par pax
   56: 'depositPrice',
   57: 'basePricePerTraveler',
   60: 'iso',

@@ -237,7 +237,6 @@
             </template>
             <template #right>
               <span
-                v-if="voyage.totalTravelPrice < voyage.alreadyPaid"
                 class="font-weight-bold text-primary"
               >
                 {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}
@@ -274,8 +273,7 @@ const forceIndivRoom = computed(() => {
 // Calculate prices per traveler
 const adultPricePerTraveler = computed(() => {
   if (!model.value || !voyage) return 0
-  console.log('======================SUMMARY======================')
-  console.log('voyage.startingPrice', voyage.startingPrice)
+
   let basePrice = voyage.startingPrice || 0
 
   if (voyage.extensionPrice) {
@@ -332,36 +330,27 @@ const totalValue = computed(() => {
   const nbTravelers = model.value.nbAdults + model.value.nbChildren || 0
   const nbAdults = model.value.nbAdults || 0
   const nbUnderAge = model.value.nbChildren || 0
-  console.log('nbTravelers', nbTravelers)
-  console.log('nbAdults', nbAdults)
-  console.log('nbUnderAge', nbUnderAge)
   let total = 0
 
   // Base price for adults
   total += adultPricePerTraveler.value * nbAdults
-  console.log('adultPricePerTraveler', adultPricePerTraveler.value)
   // Base price for under age travelers
   total += underAgePricePerTraveler.value * nbUnderAge
-  console.log('underAgePricePerTraveler', underAgePricePerTraveler.value)
 
   // Individual room cost
   if (model.value.indivRoom && voyage.indivRoomPrice) {
     total += voyage.indivRoomPrice * nbTravelers
   }
-  console.log('voyage.indivRoomPrice', voyage.indivRoomPrice)
 
   // Insurance cost
   if (model.value.insuranceCommissionPrice) {
     total += model.value.insuranceCommissionPrice * nbTravelers
   }
-  console.log('model.value.insuranceCommissionPrice', model.value.insuranceCommissionPrice)
 
   // Apply promo value discount
   if (voyage.promoValue) {
     total -= voyage.promoValue * nbTravelers
   }
-  console.log('voyage.promoValue', voyage.promoValue)
-  console.log('======================SUMMARY END======================')
   return total
 })
 
@@ -397,10 +386,22 @@ function travelerText(nbTraveler, type) {
   }
 }
 
+// function calculatDepositeValue(data) {
+//     // WE take the total value of the deal, we substract the flight price and the insurance price
+//     const baseToCalculateDepositValue = +data.value - ((data.includeFlight ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+//     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
+//     // Insurance is added in another line item
+//     return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * data.nbTravelers)
+//   }
+
 function calculateDepositValue(data) {
+  console.log('data', totalValue.value, data)
   const nbTravelers = data.nbAdults + data.nbChildren || 0
-  const baseToCalculateDepositValue = +totalValue.value - (voyage.flightPrice ?? 0) * nbTravelers - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
-  return Math.floor((baseToCalculateDepositValue) * 0.3 + (voyage.flightPrice ?? 0) * nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
+  console.log('nbTravelers', nbTravelers)
+  console.log('totalValue', totalValue.value)
+  console.log('data.insuranceCommission', data.insuranceCommissionPrice, data.insuranceCommissionPerTraveler)
+  const baseToCalculateDepositValue = +totalValue.value - ((data.includeFlight ? data.flightPrice : 0) * nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
+  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
 }
 
 const appliedPrice = computed(() => {

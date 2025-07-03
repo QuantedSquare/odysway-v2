@@ -134,6 +134,7 @@
         </v-btn>
         <v-btn
           color="secondary"
+          :disabled="!formValidation"
           class="font-weight-bold"
           @click="submitStepData"
         >
@@ -204,7 +205,9 @@ watch([model, () => currentStep, () => insurances], () => {
     isLoadingInsurance.value = false
   }
 }, { immediate: true })
-
+const formValidation = computed(() => {
+  return selectedInsurance.value
+})
 // Analytics
 const handleGAEvent = (event) => {
   const EVENTS = {
@@ -237,8 +240,8 @@ const insuranceChoice = computed(() => {
 watch(insuranceChoice, () => {
   if (model.value) {
     model.value.insurance = insuranceChoice.value.name
-    model.value.insuranceCommissionPrice = insuranceChoice.value.price * 100
-    model.value.insuranceCommissionPerTraveler = insuranceChoice.value.price * 30
+    model.value.insuranceCommissionPrice = insuranceChoice.value.price * 100 // Prix assurance par pax
+    model.value.insuranceCommissionPerTraveler = insuranceChoice.value.price * 30 // Commision assurnace par pax
   }
 })
 
@@ -247,9 +250,9 @@ const submitStepData = () => {
   if (!model.value) return false
   const dealData = {
     insurance: [insuranceChoice.value.name],
-    insuranceCommissionPrice: (insuranceChoice.value.price * 100),
+    insuranceCommissionPrice: (insuranceChoice.value.price * 100), // Prix assurance par pax
     currentStep: 'A fait le choix de l\'assurance',
-    insuranceCommissionPerTraveler: insuranceChoice.value.price * 30,
+    insuranceCommissionPerTraveler: insuranceChoice.value.price * 30, // Commision assurnace par pax
   }
   console.log('dealData pushed from insurance', dealData)
   try {
