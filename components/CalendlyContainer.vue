@@ -1,5 +1,5 @@
 <template>
-  <v-container class="calendly-container">
+  <v-container :class="route.path === '/devis' || route.path === '/checkout' ? '' : 'calendly-container'">
     <div>
       {{ text }}
     </div>
@@ -10,6 +10,8 @@
 </template>
 
 <script setup>
+const route = useRoute()
+
 const props = defineProps({
   travelTitle: {
     type: String,

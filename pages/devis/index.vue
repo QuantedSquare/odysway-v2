@@ -44,7 +44,7 @@
                   cover
                   class="align-center"
                 >
-                  <div class="text-center text-body-1 text-shadow">
+                  <div class="text-center text-body-1 text-shadow px-3">
                     {{ voyage.title }}
                   </div>
                 </v-img>
@@ -133,8 +133,8 @@ const currentStep = ref(1)
 const details = ref({
   departureDate: '',
   returnDate: '',
-  nbAdults: route.query.nbAdults,
-  nbChildren: route.query.nbChildren,
+  nbAdults: route.query.nbAdults || 1,
+  nbChildren: route.query.nbChildren || 0,
   includeFlight: false,
   departureAirport: '',
 })
