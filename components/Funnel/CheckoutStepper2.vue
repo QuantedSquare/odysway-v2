@@ -160,7 +160,8 @@
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
-        v-if="currentStep !== 0 && currentStep < 5"
+        v-if="currentStep !== 0"
+        ref="summaryRef"
         :voyage="voyage"
         :page-texts="pageTexts"
         :dynamic-deal-values="dynamicDealValues"
@@ -186,7 +187,12 @@ dayjs.extend(customParseFormat)
 
 const route = useRoute()
 const { step, date_id, booked_id } = route.query
-
+const summaryRef = useTemplateRef('summaryRef')
+const totalValueFromSummary = computed(() => {
+  console.log('totalValueFromSummary', summaryRef.value?.totalValueFromSummary)
+  return summaryRef.value?.totalValueFromSummary || 0
+})
+console.log('totalValueFromSummary', totalValueFromSummary.value)
 const insurancesPrice = ref(null)
 
 const pricePerTraveler = ref(0)
@@ -251,6 +257,8 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       source: 'Devis',
       forcedIndivRoom: travel.pricing.forcedIndivRoom,
       travelType: 'Groupe', // TODO: check comment le rendre dynamique
+      alreadyPaid: 0,
+      totalTravelPrice: fetchedDate.startingPrice * 100,
     }
 
     const dynamicValues = {
@@ -361,6 +369,8 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       extensionPrice: deal.extensionPrice,
       flightPrice: deal.flightPrice,
       promoValue: deal.promoValue,
+      alreadyPaid: deal.alreadyPaid,
+      totalTravelPrice: deal.value,
     }
   }
 })

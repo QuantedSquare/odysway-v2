@@ -122,6 +122,9 @@ const localDynamicDealValues = computed({
 const totalValueFromSummary = computed(() => {
   return summaryRef.value?.totalValue || 0
 })
+defineExpose({
+  totalValueFromSummary,
+})
 </script>
 
 <style scoped>

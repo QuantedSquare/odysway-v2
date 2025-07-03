@@ -112,21 +112,28 @@
         </v-col>
       </v-row>
     </v-form>
-    <div>
-      <v-btn
-        @click="emit('previous')"
+    <v-row>
+      <v-col
+        class="d-flex ga-3"
       >
-        Précédent
-      </v-btn>
-      <v-btn
-        :disabled="!isValid"
-        :loading="buttonLoading"
-        color="secondary"
-        @click="submitStepData"
-      >
-        Suivant
-      </v-btn>
-    </div>
+        <v-btn
+          class="
+        bg-grey-light font-weight-regular"
+          @click="emit('previous')"
+        >
+          Précédent
+        </v-btn>
+        <v-btn
+          :disabled="!isValid"
+          :loading="buttonLoading"
+          color="secondary"
+          class="font-weight-bold"
+          @click="submitStepData"
+        >
+          Suivant
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 
   <v-skeleton-loader

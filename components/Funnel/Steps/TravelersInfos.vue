@@ -24,15 +24,15 @@
             v-if="travelers.length === 0"
             type="card"
           />
-          <TransitionGroup name="list">
-            <FunnelStepsTravelerInfosItem
-              v-for="(traveler, i) in travelers"
-              v-bind="traveler"
-              :key="'nb_travelers_' + i"
-              :bg-color="colorMap[i]"
-              @change="travelerInfosChanged"
-            />
-          </TransitionGroup>
+
+          <FunnelStepsTravelerInfosItem
+            v-for="(traveler, i) in travelers"
+            v-bind="traveler"
+            :key="'nb_travelers_' + i"
+            :bg-color="colorMap[i]"
+            @change="travelerInfosChanged"
+          />
+
           <!-- Check si c'est suffisant ou si on souhaite afficher un message particulier au nb d'enfants -->
           <p
             v-show="!ageValidation.isValid"
@@ -64,20 +64,26 @@
         </v-col>
       </v-row>
     </v-form>
-    <div>
-      <v-btn
-        @click="emit('previous')"
+    <v-row>
+      <v-col
+        class="d-flex ga-3"
       >
-        Précédent
-      </v-btn>
-      <v-btn
-        :disabled="!formValidation"
-        color="secondary"
-        @click="submitStepData"
-      >
-        Suivant
-      </v-btn>
-    </div>
+        <v-btn
+          class="bg-grey-light font-weight-regular"
+          @click="emit('previous')"
+        >
+          Précédent
+        </v-btn>
+        <v-btn
+          :disabled="!formValidation"
+          color="secondary"
+          class="font-weight-bold"
+          @click="submitStepData"
+        >
+          Suivant
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
