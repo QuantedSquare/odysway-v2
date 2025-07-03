@@ -50,12 +50,12 @@
                   />
 
                   <FunnelStepsPaymentRedirect
-                    :ref="(component) => registerStepComponent(component, 5)"
-                    v-model="validForm"
+                    v-model="dynamicDealValues"
                     :page="pageTexts"
                     :current-step="currentStep"
-                    :own-step="5"
                     :voyage="voyage"
+                    :own-step="5"
+                    @previous="previousStep"
                   />
                 </template>
                 <FunnelStepsSkipper
@@ -123,22 +123,22 @@
               <v-stepper-window-item
                 :value="5"
               >
-                <FunnelStepsSummary
+                <!-- <FunnelStepsSummary
                   v-model="dynamicDealValues"
                   :current-step="currentStep"
                   :page="pageTexts"
                   :voyage="voyage"
                   :own-step="5"
-                />
+                /> -->
 
-                <!-- <FunnelStepsPaymentRedirect
-                  :ref="(component) => registerStepComponent(component, 5)"
+                <FunnelStepsPaymentRedirect
+                  v-model="dynamicDealValues"
                   :page="pageTexts"
                   :current-step="currentStep"
-                  :own-step="5"
                   :voyage="voyage"
-                  @validity-changed="onStepValidityChanged"
-                /> -->
+                  :own-step="5"
+                  @previous="previousStep"
+                />
               </v-stepper-window-item>
             </v-stepper-window>
           </v-card>
@@ -287,10 +287,8 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
     return travelStaticValues
   }
   else {
-    console.log('booked_id', booked_id)
     // Voyage = Toutes les valeurs fixes
     const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${booked_id}`)
-    console.log('deal in asyncdata', deal)
     // Initialize travelers data
     const travelersData = {}
     const numberOfTravelers = +deal.nbTravelers || 1
@@ -396,20 +394,6 @@ const previousStep = () => {
     currentStep.value--
   }
 }
-// const showNextButton = computed(() => {
-//   return (skipperMode.value === 'normal' && currentStep.value < 5) || (skipperMode.value === 'quick' && currentStep.value !== 1)
-// })
-
-// const isPreviousButtonDisabled = computed(() => {
-//   return currentStep.value === 0 || skipperMode.value === 'summary'
-// })
-
-// watch(dynamicDealValues, async (newVal) => {
-//   if (dynamicDealValues.value) {
-//     const insurance = await fetchInsuranceQuote(dynamicDealValues.value)
-//     console.log('insurance', insurance)
-//   }
-// })
 
 const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
 
@@ -495,15 +479,4 @@ const showInsuranceStep = computed(() => {
 .bg-img-filter{
   filter: brightness(0.5);
 }
-/* @media screen and (max-width: 600px) {
-  div:deep(.v-stepper-actions){
-    display: flex;
-    width: 100%;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-} */
 </style>

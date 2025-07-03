@@ -160,7 +160,6 @@
 import _ from 'lodash'
 
 const { insurances, currentStep, ownStep, page } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
-console.log('insurances in component', insurances)
 const isLoadingInsurance = ref(true)
 const { addSingleParam } = useParams()
 const { updateDeal } = useStepperDeal(ownStep)
@@ -182,8 +181,6 @@ watch([model, () => currentStep, () => insurances], () => {
   }
 
   if (model.value) {
-    console.log('dealId fetched', model.value)
-
     if (model.value?.insurance) {
       const insuranceType = model.value.insurance?.toLowerCase()
       if (insuranceType?.includes('multirisque')) {
@@ -228,6 +225,13 @@ const insuranceChoice = computed(() => {
     default:
       handleGAEvent('none')
       return { type: 'no_insurance', name: 'Aucune Assurance', price: 0 }
+  }
+})
+watch(insuranceChoice, () => {
+  if (model.value) {
+    model.value.insurance = insuranceChoice.value.name
+    model.value.insuranceCommissionPrice = insuranceChoice.value.price * 100
+    model.value.insuranceCommissionPerTraveler = insuranceChoice.value.price * 30
   }
 })
 

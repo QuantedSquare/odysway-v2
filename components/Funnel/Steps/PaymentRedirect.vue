@@ -1,145 +1,120 @@
 <template>
   <v-container>
     <!-- Prévoir Promo form -->
-    <v-card
-      v-if="deal && deal.alreadyPaid < deal.value"
-      variant="plain"
-    >
-      <v-card-text>
-        <v-row>
-          <v-col
-            cols="12"
-          >
-            <template v-if="isBooking">
-              <div class="text-start">
-                {{ page.payment.ask_for_option_text }}
-              </div>
-            </template>
-            <template v-else-if="route.query.type === 'deposit'">
-              <v-switch
-                v-model="checkedOption"
-                inset
-                hide-details
-                @click.stop=""
-              >
-                <template #label>
-                  <div class="text-body-2 pl-1">
-                    {{ page.payment.ask_for_option_text }}
-                  </div>
-                </template>
-              </v-switch>
-            </template>
-          </v-col>
-          <template v-if="!isBooking">
-            <v-divider
-              v-if="route.query.type === 'deposit'"
-              horizontal
-              class="ma-2"
-            />
-            <v-col cols="12">
-              <v-switch
-                v-model="switch_accept_data_privacy"
-                inset
-                hide-details
-              >
-                <template #label>
-                  <div
-                    class="text-body-2 pl-1"
-                    @click.stop=""
-                    v-html="page.payment.phrase_dacceptation"
-                  />
-                </template>
-              </v-switch>
-              <v-switch
-                v-model="switch_accept_country"
-                inset
-                hide-details
-              >
-                <template #label>
-                  <div class="text-body-2 pl-1">
-                    {{ page.payment.accept_country_conditions_text }}
-                  </div>
-                </template>
-              </v-switch>
-            </v-col>
+    <!-- && deal.alreadyPaid < deal.value -->
+
+    <v-card-text>
+      <v-row>
+        <v-col
+          cols="12"
+        >
+          <template v-if="isBooking">
+            <div class="text-start">
+              {{ page.payment.ask_for_option_text }}
+            </div>
           </template>
-          <Transition name="list">
-            <v-alert
-              v-if="alreadyPlacedAnOption"
-              color="error"
-              variant="tonal"
+          <template v-else-if="route.query.type === 'deposit'">
+            <v-switch
+              v-model="checkedOption"
+              inset
+              hide-details
+              @click.stop=""
             >
-              {{ page.payment.option_already_placed_error }}
-            </v-alert>
-          </Transition>
-          <!-- Replace btn "Suivant" in parent -->
-          <ClientOnly>
-            <Teleport
-              v-if="currentStep >= 5"
-              to="#next-btn"
-              defer
-            >
-              <Transition name="list">
-                <v-btn
-                  v-if="checkedOption"
-                  color="info"
-                  class="ml-md-4 text-caption text-uppercase font-weight-bold text-md-body-1"
-                  large
-                  :loading="loadingSession"
-                  :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
-                  @click="book"
-                >
-                  {{ page.payment.place_option_button }}
-                </v-btn>
-                <div
-                  v-else
-                  class="d-flex flex-column ga-2"
-                >
-                  <v-btn
-                    class="ml-md-4"
-                    :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                    @click="stripePay"
-                  >
-                    {{ page.payment.pay_stripe_button }}
-                  </v-btn>
-                  <v-btn
-                    v-if="isAlmaPaymentPossible"
-                    class="ml-md-4 bg-secondary"
-                    :loading="loadingSession"
-                    :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
-                    @click="almaPay"
-                  >
-                    {{ page.payment.pay_alma_button }}
-                  </v-btn>
-                  <div
-                    v-if="deal.totalTravelPrice > 400000"
-                    class="text-caption"
-                  >
-                    {{ page.payment.alma_payment_info }}
-                  </div>
+              <template #label>
+                <div class="text-body-2 pl-1">
+                  {{ page.payment.ask_for_option_text }}
                 </div>
-              </Transition>
-            </Teleport>
-          </ClientOnly>
-        </v-row>
-      </v-card-text>
-    </v-card>
+              </template>
+            </v-switch>
+          </template>
+        </v-col>
+        <template v-if="!isBooking">
+          <v-divider
+            v-if="route.query.type === 'deposit'"
+            horizontal
+            class="ma-2"
+          />
+          <v-col cols="12">
+            <v-switch
+              v-model="switch_accept_data_privacy"
+              inset
+              hide-details
+            >
+              <template #label>
+                <div
+                  class="text-body-2 pl-1"
+                  @click.stop=""
+                  v-html="page.payment.phrase_dacceptation"
+                />
+              </template>
+            </v-switch>
+            <v-switch
+              v-model="switch_accept_country"
+              inset
+              hide-details
+            >
+              <template #label>
+                <div class="text-body-2 pl-1">
+                  {{ page.payment.accept_country_conditions_text }}
+                </div>
+              </template>
+            </v-switch>
+          </v-col>
+        </template>
+        <Transition name="list">
+          <v-alert
+            v-if="alreadyPlacedAnOption"
+            color="error"
+            variant="tonal"
+          >
+            {{ page.payment.option_already_placed_error }}
+          </v-alert>
+        </Transition>
+        <!-- Replace btn "Suivant" in parent -->
+        <ClientOnly>
+          <v-btn
+            @click="emit('previous')"
+          >
+            Précédent
+          </v-btn>
+          <Transition name="list">
+            <v-btn
+              v-if="checkedOption"
+              color="info"
+              class="ml-md-4 text-caption text-uppercase font-weight-bold text-md-body-1"
+              large
+              :loading="loadingStripeSession"
+              :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
+              @click="book"
+            >
+              {{ page.payment.place_option_button }}
+            </v-btn>
+            <v-btn
+              v-else
+              class="ml-md-4"
+              :loading="loadingStripeSession"
+              :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
+              @click="stripePay"
+            >
+              {{ page.payment.pay_button }}
+            </v-btn>
+          </Transition>
+        </ClientOnly>
+      </v-row>
+    </v-card-text>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
 const runtimeConfig = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
-console.log('runtimeConfig', runtimeConfig)
-const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
-const { addSingleParam } = useParams()
 
-// New: Local validation state
-const isValid = ref(false)
-const emit = defineEmits(['validity-changed'])
+const emit = defineEmits(['previous'])
+const model = defineModel()
+const { updateDeal } = useStepperDeal(ownStep)
+const { addSingleParam } = useParams()
 
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
@@ -181,13 +156,19 @@ watch(() => deal.value, (newDeal) => {
 const stripePay = async () => {
   loadingSession.value = true
   // Defined as metadata after payment is done
+  const contact = {
+    firstName: model.value.firstname,
+    lastName: model.value.lastname,
+    email: model.value.email,
+    phone: model.value.phone,
+  }
   const dataForStripeSession = {
     dealId: dealId.value,
     paymentType: route.query.type,
-    contact: deal.value.contact,
+    contact: contact,
     currentUrl: route.fullPath,
-    insuranceImg: props.page.assurance_img,
-    countries: deal.value.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    insuranceImg: page.assurance_img,
+    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {
@@ -207,7 +188,7 @@ const stripePay = async () => {
   if (checkoutLink) {
     console.log('checkoutLink =====> ', checkoutLink)
 
-    trackPixel('trackCustom', 'ClickCB', { voyage: props.voyage.title })
+    trackPixel('trackCustom', 'ClickCB', { voyage: voyage.title })
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
         currency: 'EUR',
@@ -268,20 +249,13 @@ watch(checkedOption, (value) => {
   }
 })
 
-// Watch form fields for validation updates
-watch([switch_accept_data_privacy, switch_accept_country, alreadyPlacedAnOption], () => {
-  if (formValidation.value) {
-    emit('validity-changed', props.ownStep, true)
-  }
-})
-
 const book = async () => {
   loadingSession.value = true
 
   const res = await fetch(`/api/v1/booking/booked_date/option`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id: route.query.booked_id, booked_places: +deal.value.nbTravelers }),
+    body: JSON.stringify({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren }),
   })
   const data = await res.json()
   console.log('data', data)
@@ -295,12 +269,12 @@ const book = async () => {
     dealId: dealId.value,
     stage: '27',
     currentStep: 'A posé une option',
-    title: props.voyage.title,
-    nbTravelers: +deal.value.nbTravelers,
-    firstName: deal.value.contact.firstName,
-    lastName: deal.value.contact.lastName,
+    title: voyage.title,
+    nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+    firstName: model.value.firstname,
+    lastName: model.value.lastname,
   }
-  await updateDeal(dealData)
+  updateDeal(dealData)
   // Check si on ajoute le payment link ici
 
   if (runtimeConfig.public.env === 'production') {
@@ -312,16 +286,13 @@ const book = async () => {
       body: JSON.stringify(dealData),
     })
   }
-  trackPixel('trackCustom', 'PoseOption', { voyage: props.voyage.title })
-  await navigateTo(`/confirmation?voyage=${props.voyage.slug}&isoption=true`)
+  trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
+  await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 
-watch([dealId, () => props.currentStep], () => {
-  if (props.currentStep === props.ownStep) {
-    addSingleParam('step', props.ownStep)
-  }
-  if (dealId.value) {
-    return
+watch([() => currentStep], () => {
+  if (currentStep === ownStep) {
+    addSingleParam('step', ownStep)
   }
 }, { immediate: true })
 
@@ -331,27 +302,6 @@ watch([dealId, () => props.currentStep], () => {
 // })
 watch(checkedOption, (value) => {
   addSingleParam('isoption', value)
-})
-
-const submitStepData = async () => {
-  // Validate form
-  if (!dealId.value || !isValid.value) return false
-  const dealData = {
-    dealId: dealId.value,
-    // #TODO Add data
-    //
-  }
-  console.log('dealData', dealData)
-  try {
-    await updateDeal(dealData)
-    return true
-  }
-  catch (error) {
-    console.log('error updating Options', error)
-  }
-}
-defineExpose({
-  submitStepData,
 })
 </script>
 

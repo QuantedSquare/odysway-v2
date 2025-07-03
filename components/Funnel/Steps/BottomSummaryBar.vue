@@ -49,7 +49,7 @@
         disable-resize-watcher
         mobile
 
-        class="d-block rounded-t-lg d-md-none bg-secondary"
+        class="d-block rounded-t-lg d-md-none "
       >
         <v-container>
           <div class="pa-4  position-sticky top-0 d-flex justify-space-between align-center mb-4 z-100">
@@ -77,7 +77,7 @@
           <v-btn
             block
             color="secondary"
-            class="mt-2 text-body-2 border  border-white font-weight-bold text-decoration-none"
+            class="mt-12 text-body-2 border  border-white font-weight-bold text-decoration-none"
             @click="drawer = false"
           >
             Fermer
