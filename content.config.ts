@@ -830,6 +830,7 @@ export default defineContentConfig({
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),
         title: z.string().describe('Titre du voyage'),
+        slug: z.string().describe('Slug du voyage'),
         destinations: z.array(z.object({
           name: z.enum(destinationChoices),
         })).describe('Destinations du voyage'),
@@ -890,7 +891,7 @@ export default defineContentConfig({
         experiencesBlock: z.array(z.string()).describe('Liste des plus du voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
         // ==========================================
         // SEO
-        slug: z.string().describe('Slug du voyage'),
+
         description: z.string().describe('Description du voyage'),
         emailDescription: z.string().describe('Description du voyage pour l\'email'),
         metaDescription: z.string().describe('Meta Description du voyage'),

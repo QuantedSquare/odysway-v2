@@ -9,6 +9,15 @@
       style="min-width: 320px; height: 700px;"
     /> -->
     <CalendlyInlineWidget v-bind="options" />
+    <div v-if="isFunnel">
+      <v-btn
+        class="
+        bg-grey-light font-weight-regular"
+        @click="emit('previous')"
+      >
+        Précédent
+      </v-btn>
+    </div>
   </v-container>
 </template>
 
@@ -22,7 +31,12 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  isFunnel: {
+    type: Boolean,
+    default: false,
+  },
 })
+const emit = defineEmits(['previous'])
 const options = {
   url: 'https://calendly.com/odysway/15min?hide_gdpr_banner=1',
 }

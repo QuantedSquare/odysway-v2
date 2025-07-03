@@ -24,7 +24,7 @@ const customFieldsMapDeal = {
   29: 'isCouple',
   11: 'specialRequest',
   12: 'insurance',
-  13: 'insuranceCommissionPrice',
+  13: 'insuranceCommissionPrice', // Prix assurance par pax
   14: 'marginPerTraveler',
   15: 'totalMargin',
   16: 'flightMargin',
@@ -56,7 +56,7 @@ const customFieldsMapDeal = {
   44: 'restToPay',
   45: 'utm',
   46: 'includedFlight',
-  47: 'insuranceCommissionPerTraveler',
+  47: 'insuranceCommissionPerTraveler', // Commision assurnace par pax
   56: 'depositPrice',
   57: 'basePricePerTraveler',
   60: 'iso',
@@ -160,6 +160,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
+    console.log('===========response in activecampaign.js===========', response.data)
     return response.data
   }
   catch (error) {
@@ -412,9 +413,9 @@ const recalculatTotalValues = async (dealId) => {
   // const promoTeen = customFields.promoTeen || 0
   const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
   const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
-
+  console.log('===========customFields.includeFlight', customFields.includeFlight, '========')
   const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
-  const flightPrice = customFields.flightPrice || 0
+  const flightPrice = customFields.includeFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
   const alreadyPaid = customFields.alreadyPaid || 0

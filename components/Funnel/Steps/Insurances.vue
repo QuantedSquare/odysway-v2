@@ -1,10 +1,14 @@
 <template>
-  <v-skeleton-loader
-    v-if="isLoadingInsurance"
-    type="card"
-  />
-  <!-- v-else -->
-  <v-container v-else-if="!isLoadingInsurance && !_.isEmpty(insurances)">
+  <!-- Loading state -->
+  <v-container v-if="!insurances">
+    <v-row>
+      <v-col>
+        <v-skeleton-loader type="card" />
+      </v-col>
+    </v-row>
+  </v-container>
+  <!-- Insurance options -->
+  <v-container v-else-if="insurances && !_.isEmpty(insurances)">
     <v-row>
       <v-col
         class="d-flex align-center"
@@ -49,9 +53,9 @@
         class="px-16"
       >
         <FunnelStepsDialogLearnMore
-          v-if="deal"
-          :btn-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
-          :dialog-text="deal.iso === 'NP' || deal.iso === 'PE' ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
+          v-if="model"
+          :btn-text="model.iso === 'NP' || model.iso === 'PE' ? page.insurances.accroche_assurance_perou_nepal:page.insurances.accroche_assurance_medicale "
+          :dialog-text="model.iso === 'NP' || model.iso === 'PE' ? page.insurances.details_assurance_medicale_perou_nepal:page.insurances.details_assurance_medicale "
           :page="page"
         />
       </v-col>
@@ -93,7 +97,6 @@
         v-if="insurances.cancel || insurances.rapatriement"
         cols="12"
       >
-        <!-- :label="$t('stepperDevisGroup.noInsurance')" -->
         <v-switch
           v-model="selectedInsurance"
           value="none"
@@ -116,6 +119,27 @@
             v-html="page.insurances.alert"
           />
         </v-alert>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col
+        class="d-flex ga-3"
+      >
+        <v-btn
+          class="
+        bg-grey-light font-weight-regular"
+          @click="emit('previous')"
+        >
+          Précédent
+        </v-btn>
+        <v-btn
+          color="secondary"
+          :disabled="!formValidation"
+          class="font-weight-bold"
+          @click="submitStepData"
+        >
+          Suivant
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -143,92 +167,30 @@
 <script setup>
 import _ from 'lodash'
 
-const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
-
+const { insurances, currentStep, ownStep, page } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
 const isLoadingInsurance = ref(true)
 const { addSingleParam } = useParams()
-const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
-const { pricePerTraveler } = usePricePerTraveler(deal)
+const { updateDeal } = useStepperDeal(ownStep)
 
-// New: Local validation state
-const isValid = ref(false)
-const emit = defineEmits(['validity-changed', 'skip-step'])
-
-// Data
-const insurances = ref({
-  rapatriement: 0,
-  cancel: 0,
-})
-
-const fetchInsuranceQuote = async (retrievedDeal) => {
-  isLoadingInsurance.value = true
-  try {
-    console.log('fetch insurance with this data:', {
-      // Prix sans assurance ici
-      pricePerTraveler: pricePerTraveler.value / 100,
-      countries: retrievedDeal.iso,
-      zoneChapka: +retrievedDeal.zoneChapka || 0,
-      departureDate: retrievedDeal.departureDate,
-      returnDate: retrievedDeal.returnDate,
-      nbTravelers: +retrievedDeal.nbTravelers,
-    })
-    const insurance = await $fetch('/api/v1/chapka/quote', {
-      method: 'POST',
-      body: {
-        // Prix sans assurance ici
-        pricePerTraveler: pricePerTraveler.value / 100,
-        countries: retrievedDeal.iso,
-        zoneChapka: +retrievedDeal.zoneChapka || 0,
-        departureDate: retrievedDeal.departureDate,
-        returnDate: retrievedDeal.returnDate,
-        nbTravelers: +retrievedDeal.nbTravelers,
-      },
-    })
-    console.log('FETCH INSURANCE QUOTE', insurance)
-    isLoadingInsurance.value = false
-    return insurance
-  }
-  catch (error) {
-    console.error('Error fetching insurance quote:', error)
-    return null
-  }
-}
+const model = defineModel()
+const emit = defineEmits(['next', 'previous'])
 
 // Values
 const selectedInsurance = ref('none') // possible values: 'rapatriement', 'cancel', 'none'
 
-// New: Form validation logic
-const formValidation = computed(() => {
-  return !isLoadingInsurance.value && !!dealId.value
-})
-
-// New: Watch validation and emit changes
-watch(formValidation, (isFormValid) => {
-  isValid.value = isFormValid
-  emit('validity-changed', props.ownStep, isFormValid)
-}, { immediate: true })
-
-watch([deal, () => props.currentStep], async () => {
+watch([model, () => currentStep, () => insurances], () => {
   // Only run if we're on the insurance step
-  if (props.currentStep !== props.ownStep) return
+  if (currentStep !== ownStep) return
 
   isLoadingInsurance.value = true
 
-  if (props.currentStep === props.ownStep) {
-    addSingleParam('step', props.ownStep)
+  if (currentStep === ownStep) {
+    addSingleParam('step', ownStep)
   }
-  if (deal.value) {
-    console.log('dealId fetched', deal.value)
-    insurances.value = await fetchInsuranceQuote(deal.value)
 
-    // If insurance is not available, emit skipStep to parent
-    if (!insurances.value || (!insurances.value.rapatriement && !insurances.value.cancel)) {
-      emit('skip-step')
-      return
-    }
-
-    if (deal.value?.insurance) {
-      const insuranceType = deal.value.insurance?.toLowerCase()
+  if (model.value) {
+    if (model.value?.insurance) {
+      const insuranceType = model.value.insurance?.toLowerCase()
       if (insuranceType?.includes('multirisque')) {
         selectedInsurance.value = 'rapatriement'
       }
@@ -239,9 +201,13 @@ watch([deal, () => props.currentStep], async () => {
         selectedInsurance.value = 'none'
       }
     }
+
+    isLoadingInsurance.value = false
   }
 }, { immediate: true })
-
+const formValidation = computed(() => {
+  return selectedInsurance.value
+})
 // Analytics
 const handleGAEvent = (event) => {
   const EVENTS = {
@@ -257,47 +223,45 @@ const handleGAEvent = (event) => {
   //   eventLabel: EVENTS[event].eventLabel,
   // })
 }
-watch(selectedInsurance, (_value) => {
-  // Update validation when insurance selection changes
-  if (formValidation.value) {
-    emit('validity-changed', props.ownStep, true)
-  }
-})
 
 const insuranceChoice = computed(() => {
   switch (selectedInsurance.value) {
     case 'rapatriement':
       handleGAEvent('rapatriement')
-      return { type: 'rapatriement', name: 'Multirisque', price: insurances.value.rapatriement }
+      return { type: 'rapatriement', name: 'Multirisque', price: insurances.rapatriement }
     case 'cancel':
       handleGAEvent('cancel')
-      return { type: 'cancel', name: 'Annulation', price: insurances.value.cancel }
+      return { type: 'cancel', name: 'Annulation', price: insurances.cancel }
     default:
       handleGAEvent('none')
       return { type: 'no_insurance', name: 'Aucune Assurance', price: 0 }
   }
 })
+watch(insuranceChoice, () => {
+  if (model.value) {
+    model.value.insurance = insuranceChoice.value.name
+    model.value.insuranceCommissionPrice = insuranceChoice.value.price * 100 // Prix assurance par pax
+    model.value.insuranceCommissionPerTraveler = insuranceChoice.value.price * 30 // Commision assurnace par pax
+  }
+})
 
-const submitStepData = async () => {
+const submitStepData = () => {
   // Validate form
-  if (!dealId.value || !isValid.value) return false
+  if (!model.value) return false
   const dealData = {
-    dealId: dealId.value,
     insurance: [insuranceChoice.value.name],
-    insuranceCommissionPrice: (insuranceChoice.value.price * 100),
+    insuranceCommissionPrice: (insuranceChoice.value.price * 100), // Prix assurance par pax
     currentStep: 'A fait le choix de l\'assurance',
-    insuranceCommissionPerTraveler: insuranceChoice.value.price * 30,
+    insuranceCommissionPerTraveler: insuranceChoice.value.price * 30, // Commision assurnace par pax
   }
   console.log('dealData pushed from insurance', dealData)
   try {
-    await updateDeal(dealData)
-    return true
+    updateDeal(dealData)
+    emit('next')
   }
   catch (error) {
-    console.log('error updating Options', error)
+    console.log('error updating insurance', error)
+    return false
   }
 }
-defineExpose({
-  submitStepData,
-})
 </script>

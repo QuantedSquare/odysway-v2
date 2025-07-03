@@ -7,14 +7,16 @@
       v-model="currentStep"
       :page="pageTexts"
       :skipper-mode="skipperMode"
+      :show-insurance="!!showInsuranceStep"
     >
       <v-row class="funnel-stepper d-flex justify-center">
         <v-col
           cols="12"
+          :md="currentStep > 0 ? 7 : 12"
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width relative  w-md-75 w-lg-50 w-xl-33 no-margin-window mb-4"
+            class="border-width relative no-margin-window mb-4 "
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -29,17 +31,17 @@
             </Transition>
 
             <FunnelCardHeader
-              v-if=" currentStep !== 0 && currentStep < 5 "
               :titre="voyage.title"
               :travel-type="voyage.travelType"
               :image="voyage.imgSrc"
               :date="`Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`"
-              :price="voyage.startingPrice"
+              :current-step="currentStep"
             />
 
             <v-stepper-window
-              :class="currentStep === 5 ? 'mt-0 mx-0' : ''"
+              :class="currentStep === 5 ? ' mx-0' : ''"
               :model-value="currentStep"
+              class="px-md-6 mt-4"
             >
               <v-stepper-window-item>
                 <template v-if="skipperMode === 'summary'">
@@ -50,125 +52,117 @@
                   />
 
                   <FunnelStepsPaymentRedirect
-                    :ref="(component) => registerStepComponent(component, 5)"
-                    v-model="validForm"
+                    v-model="dynamicDealValues"
                     :page="pageTexts"
                     :current-step="currentStep"
-                    :own-step="5"
                     :voyage="voyage"
-                    @validity-changed="onStepValidityChanged"
+                    :own-step="5"
+                    @previous="previousStep"
                   />
                 </template>
                 <FunnelStepsSkipper
                   v-else
                   v-model="skipperMode"
                   :page="pageTexts"
+                  :current-step="currentStep"
+                  :own-step="0"
+                  @next="nextStep"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
                 <FunnelStepsDetails
                   v-if="skipperMode === 'normal'"
-                  :ref="(component) => registerStepComponent(component, 1)"
+                  v-model="dynamicDealValues"
+                  :checkout-type="checkoutType"
                   :current-step="currentStep"
                   :voyage="voyage"
                   :own-step="1"
                   :page="pageTexts"
-                  @validity-changed="onStepValidityChanged"
+                  @next="nextStep"
+                  @previous="previousStep"
                 />
                 <CalendlyContainer
                   v-else
                   :travel-title="voyage.title"
                   :text="pageTexts.calendly"
+                  :is-funnel="true"
+                  @previous="previousStep"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item>
                 <FunnelStepsTravelersInfos
-                  :ref="(component) => registerStepComponent(component, 2)"
+                  v-model="dynamicDealValues"
                   :current-step="currentStep"
-                  :page="pageTexts"
+                  :voyage="voyage"
                   :own-step="2"
-                  @validity-changed="onStepValidityChanged"
+                  :page="pageTexts"
+                  @next="nextStep"
+                  @previous="previousStep"
                 />
               </v-stepper-window-item>
+
               <v-stepper-window-item>
                 <FunnelStepsOptions
-                  :ref="(component) => registerStepComponent(component, 3)"
+                  v-model="dynamicDealValues"
                   :voyage="voyage"
                   :current-step="currentStep"
                   :page="pageTexts"
                   :own-step="3"
-                  @validity-changed="onStepValidityChanged"
+                  @next="nextStep"
+                  @previous="previousStep"
                 />
               </v-stepper-window-item>
-              <v-stepper-window-item>
+              <v-stepper-window-item v-if="!!showInsuranceStep">
                 <FunnelStepsInsurances
-                  :ref="(component) => registerStepComponent(component, 4)"
+                  v-model="dynamicDealValues"
+                  :voyage="voyage"
                   :current-step="currentStep"
+                  :insurances="insurancesPrice"
                   :page="pageTexts"
                   :own-step="4"
-                  @skip-step="nextStep"
-                  @validity-changed="onStepValidityChanged"
+                  @next="nextStep"
+                  @previous="previousStep"
                 />
               </v-stepper-window-item>
               <v-stepper-window-item
                 :value="5"
               >
-                <FunnelStepsSummary
-                  :current-step="currentStep"
-                  :page="pageTexts"
-                  :voyage="voyage"
-                  :own-step="5"
-                />
-
                 <FunnelStepsPaymentRedirect
-                  :ref="(component) => registerStepComponent(component, 5)"
+                  v-model="dynamicDealValues"
                   :page="pageTexts"
                   :current-step="currentStep"
-                  :own-step="5"
                   :voyage="voyage"
-                  @validity-changed="onStepValidityChanged"
+                  :own-step="5"
+                  @previous="previousStep"
                 />
               </v-stepper-window-item>
             </v-stepper-window>
-
-            <v-card-actions>
-              <v-stepper-actions
-                :next-text="pageTexts.navigation.next_button"
-                :prev-text="skipperMode !== 'summary' ? pageTexts.navigation.prev_button : ''"
-                @click:next="nextStep()"
-                @click:prev="previousStep()"
-              >
-                <template #next>
-                  <div>
-                    <v-btn
-                      v-if="showNextButton"
-                      :disabled="!enablingNextButton"
-                      color="secondary"
-                      :loading="loading"
-                      @click="nextStep"
-                    >
-                      {{ pageTexts.navigation.next_button }}
-                    </v-btn>
-                    <div
-                      v-if="currentStep === 5"
-                      id="next-btn"
-                    />
-                  </div>
-                </template>
-                <template #prev>
-                  <v-btn
-                    v-if="skipperMode !== 'summary'"
-                    :disabled="isPreviousButtonDisabled"
-                    @click="previousStep"
-                  >
-                    {{ pageTexts.navigation.prev_button }}
-                  </v-btn>
-                </template>
-              </v-stepper-actions>
-            </v-card-actions>
           </v-card>
         </v-col>
+
+        <v-col
+          v-if="currentStep > 0 && skipperMode === 'normal'"
+          cols="12"
+          :md="4"
+          class="d-none d-md-block"
+        >
+          <FunnelStepsSummary
+            v-model="dynamicDealValues"
+            :current-step="currentStep"
+            :page="pageTexts"
+            :voyage="voyage"
+            :own-step="5"
+          />
+        </v-col>
       </v-row>
+      <FunnelStepsBottomSummaryBar
+        v-if="currentStep !== 0 && skipperMode === 'normal'"
+        ref="summaryRef"
+        :voyage="voyage"
+        :page-texts="pageTexts"
+        :dynamic-deal-values="dynamicDealValues"
+        :current-step="currentStep"
+      />
     </FunnelStepsStepperHeader>
   </v-col>
   <v-col
@@ -189,45 +183,40 @@ dayjs.extend(customParseFormat)
 
 const route = useRoute()
 const { step, date_id, booked_id } = route.query
+// const summaryRef = useTemplateRef('summaryRef')
+// const totalValueFromSummary = computed(() => {
+//   return summaryRef.value?.totalValueFromSummary || 0
+// })
 
-const pricePerTraveler = ref(0)
-function updatePricePerTraveler(price) {
-  pricePerTraveler.value = price
-}
-provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
+const insurancesPrice = ref(null)
+
 // ================== Page Texts ==================
-// const { data: pageTexts, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-texts', () =>
   queryCollection('checkout').first(),
 )
-
-const date = ref(null)
-
-const fetchDetails = async () => {
-  // Fetch travel_date details
-  const res = await apiRequest(`/booking/date/${date_id}`)
-  date.value = res
-  console.log('=======form RETRIEVED=======', date.value)
-  return date.value
-}
+const checkoutType = ref(null)
+// We use those 2 ref to compare if we need a loading between steps by comparing the values
+const dynamicDealValues = ref(null)
 
 // ================== Voyage ==================
 const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {
-    console.log('date_id', date_id)
-    const fetchedDate = await fetchDetails()
+    // We fetch the date details from BMS, the price and dates
+    const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
+    console.log('========fetchedDate from BMS========', fetchedDate)
+
+    // We fetch the travel details from Nuxt, we always need to have one
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
-    console.log('travel', travel)
+
+    // We fetch the destinations details from Nuxt, used for insurance
     const destinations = await queryCollection('destinations').where('titre', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
-    console.log('destinations', destinations)
+
     if (!travel) {
       throw new Error('Travel not found.')
     }
-    console.log('TRAVEL QUERY', travel)
 
-    updatePricePerTraveler(fetchedDate.starting_price)
-
-    const deal = {
+    checkoutType.value = determinePaymentOptions(fetchedDate.departure_date, route.query)
+    const travelStaticValues = {
       departureDate: fetchedDate.departure_date,
       returnDate: fetchedDate.return_date,
       title: travel.title,
@@ -236,36 +225,105 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       slug: travel.slug,
       iso: destinations.map(d => d.iso).join(','),
       zoneChapka: +destinations[0]?.chapka || 0,
-      indivRoom: travel.pricing.indivRoom,
       privatisation: travel.privatisationAvailable,
       startingPrice: fetchedDate.starting_price * 100,
       indivRoomPrice: travel.pricing.indivRoomPrice * 100,
       gotIndivRoomAvailable: travel.pricing.indivRoom,
-      gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')) ? 'Oui' : 'Non',
+      gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')),
       promoEarlybird: travel.pricing.earlyBirdReduction * 100,
-      gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')) ? 'Oui' : 'Non',
+      gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')),
       promoLastMinute: travel.pricing.lastMinuteReduction * 100,
-      depositPrice: fetchedDate.startingPrice * 0.3 || 500,
+      depositPrice: +fetchedDate.starting_price * 0.3,
       promoChildren: travel.pricing.childrenPromo * 100,
       maxChildrenAge: travel.pricing.childrenAge,
       source: 'Devis',
       forcedIndivRoom: travel.pricing.forcedIndivRoom,
       travelType: 'Groupe', // TODO: check comment le rendre dynamique
+      flightPrice: fetchedDate.flight_price * 100 || 0,
+      includeFlight: fetchedDate.include_flight,
+      extensionPrice: 0,
+      promoValue: 0,
+      alreadyPaid: 0,
+      totalTravelPrice: +fetchedDate.starting_price * 100,
     }
-    console.log('!!!!!deal post assign!!!', deal)
+
+    const dynamicValues = {
+      // Details
+      nbTravelers: 1,
+      nbAdults: 1,
+      nbChildren: 0,
+      nbUnderAge: 0,
+      nbTeen: 0,
+      email: '',
+      phone: '',
+      firstname: '',
+      lastname: '',
+      optinNewsletter: false,
+
+      // Travelers Infos
+      isCouple: false,
+      // Options
+      specialRequest: '',
+      indivRoom: false,
+      // Insurances
+      insurance: false,
+      insuranceCommissionPrice: 0,
+      insuranceCommissionPerTraveler: 0,
+    }
+    await fetchInsuranceQuote(travelStaticValues, dynamicValues)
+    dynamicDealValues.value = dynamicValues
+    console.log('dynamicDealValues', dynamicDealValues.value)
     loading.value = false
-    return deal
+    return travelStaticValues
   }
   else {
-    console.log('booked_id', booked_id)
-    const { deal_id } = await apiRequest(`/booking/booked_date/${booked_id}`)
     // Voyage = Toutes les valeurs fixes
-    console.log('fetched deal_id', deal_id)
-    const deal = await apiRequest(`/ac/deals/${deal_id}`)
-    console.log('deal', deal)
+    const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${booked_id}`)
+    // Initialize travelers data
+    const travelersData = {}
+    const numberOfTravelers = +deal.nbTravelers || 1
 
-    updatePricePerTraveler(deal.basePricePerTraveler)
-    return {
+    // Add travelers data for up to 11 travelers
+    for (let i = 1; i <= 11; i++) {
+      const travelerKey = `traveler${i}`
+      if (deal[travelerKey]) {
+        // Use existing traveler data from ActiveCampaign
+        travelersData[travelerKey] = deal[travelerKey]
+      }
+      else if (i <= numberOfTravelers) {
+        // Initialize empty traveler data for the expected number of travelers
+        travelersData[travelerKey] = null
+      }
+    }
+
+    const dynamicValues = {
+      // Details
+      nbTravelers: +deal.nbTravelers,
+      nbAdults: +deal.nbAdults,
+      nbChildren: +deal.nbChildren,
+      nbUnderAge: +deal.nbUnderAge,
+      email: deal.contact.email,
+      phone: deal.contact.phone,
+      firstName: deal.contact.firstName,
+      lastName: deal.contact.lastName,
+      optinNewsletter: false,
+      // Travelers Infos
+      isCouple: deal.isCouple === 'Oui',
+      ...travelersData,
+      // Options
+      specialRequest: deal.specialRequest,
+      indivRoom: deal.indivRoom === 'Oui',
+      // Insurances
+      insurance: deal.insurance,
+      insuranceCommissionPrice: deal.insuranceCommissionPrice || 0,
+      insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler || 0,
+    }
+
+    dynamicDealValues.value = dynamicValues
+    console.log('dynamicDealValues', dynamicDealValues.value)
+    checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
+
+    const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
       title: deal.title,
@@ -275,28 +333,33 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       iso: deal.iso,
       startingPrice: deal.basePricePerTraveler,
       zoneChapka: +deal.zoneChapka,
-      depositPrice: deal.depositPrice, // #Todo faire sauter
-      promoChildren: deal.promoChildren / 100,
-      // promoTeen: deal.promoTeen / 100,
+      depositPrice: +deal.depositPrice, // #Todo faire sauter
+      promoChildren: deal.promoChildren,
       maxChildrenAge: deal.maxChildrenAge || 12,
-      // maxTeenAge: 18,
       source: 'Devis', // Possible que ça change
-      forcedIndivRoom: deal.forcedIndivRoom,
+      forcedIndivRoom: deal.forcedIndivRoom === 'Oui',
       indivRoomPrice: deal.indivRoomPrice,
-      promoEarlybird: deal.promoEarlybird / 100,
-      promoLastMinute: deal.promoLastMinute / 100,
+      gotIndivRoomAvailable: deal.indivRoomPrice > 0,
+      promoEarlybird: deal.promoEarlybird || 0,
+      promoLastMinute: deal.promoLastMinute || 0,
       gotLastMinute: deal.gotLastMinute === 'Oui',
       gotEarlybird: deal.gotEarlybid === 'Oui',
-      gotIndivRoomAvailable: deal.indivRoom === 'Oui',
       travelType: deal.travelType,
-      // {... COMPLETER}
+      extensionPrice: deal.extensionPrice || 0,
+      includeFlight: deal.includeFlight === 'Oui',
+      flightPrice: deal.flightPrice || 0,
+      promoValue: deal.promoValue || 0,
+      alreadyPaid: deal.alreadyPaid,
+      totalTravelPrice: deal.value,
     }
+    await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
+    return voyageStaticValues
   }
 })
-console.log('voyage', voyageStatus.value, voyageError.value)
+console.log('voyage', voyage.value, voyageStatus.value, voyageError.value)
 
 // ================== Stepper Management ==================
-const stepComponents = reactive(new Map())
+// const stepComponents = reactive(new Map())
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
 const skipperMode = ref('normal')
@@ -305,49 +368,75 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   skipperMode.value = 'summary'
 }
 
-// New: Per-step validation state
-const stepValidation = reactive(new Map())
-
-const enablingNextButton = computed(() => {
-  console.log('currentStep', currentStep.value, 'stepValidation', stepValidation.get(currentStep.value))
-  return currentStep.value === 0 || stepValidation.get(currentStep.value) === true
-})
-
-const registerStepComponent = (component, step) => {
-  stepComponents.set(step, component)
-}
-
-// New: Handle step validity changes
-const onStepValidityChanged = (stepIndex, isValid) => {
-  stepValidation.set(stepIndex, isValid)
-  console.log('Step validity changed:', stepIndex, isValid, 'All steps:', Object.fromEntries(stepValidation))
-}
-
-const nextStep = async () => {
-  const currentComponent = stepComponents.get(currentStep.value)
-
-  if (currentComponent && currentComponent.submitStepData) {
-    loading.value = true
-    const isValid = await currentComponent.submitStepData()
-    if (isValid) {
-      currentStep.value++
-      loading.value = false
-    }
+const nextStep = () => {
+  // If we're on step 3 (Options) and insurance is not available, skip to summary
+  if (currentStep.value === 3 && !showInsuranceStep.value) {
+    currentStep.value = 5 // Skip to summary
   }
   else {
     currentStep.value++
   }
-  console.log('currentStep', currentStep.value, skipperMode.value)
 }
 const previousStep = () => {
-  currentStep.value--
+  // If we're on summary step and insurance was skipped, go back to options
+  if (currentStep.value === 5 && !showInsuranceStep.value) {
+    currentStep.value = 3 // Go back to options
+  }
+  else {
+    currentStep.value--
+  }
 }
-const showNextButton = computed(() => {
-  return (skipperMode.value === 'normal' && currentStep.value < 5) || (skipperMode.value === 'quick' && currentStep.value !== 1)
-})
 
-const isPreviousButtonDisabled = computed(() => {
-  return currentStep.value === 0 || skipperMode.value === 'summary'
+const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
+
+const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
+  try {
+    if (!voyage || !dynamicDealValues) {
+      console.log('Missing voyage or dynamicDealValues for insurance quote')
+      return
+    }
+
+    const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
+
+    const insurance = await $fetch('/api/v1/chapka/quote', {
+      method: 'POST',
+      body: {
+        pricePerTraveler: pricePerTravelerWithoutInsurance / 100,
+        countries: voyage.iso,
+        zoneChapka: +voyage.zoneChapka || 0,
+        departureDate: voyage.departureDate,
+        returnDate: voyage.returnDate,
+        nbTravelers: +dynamicDealValues.nbAdults + +dynamicDealValues.nbChildren,
+      },
+    })
+    console.log('insurance fetched:', insurance)
+    insurancesPrice.value = insurance
+  }
+  catch (error) {
+    console.error('Error fetching insurance quote:', error)
+    insurancesPrice.value = null
+  }
+}
+
+// // Watch for changes in voyage and dynamicDealValues to fetch insurance
+// watch([voyage, dynamicDealValues], async ([newVoyage, newDynamicDealValues]) => {
+//   if (newVoyage && newDynamicDealValues && newDynamicDealValues.nbAdults !== undefined && newDynamicDealValues.nbChildren !== undefined) {
+//     await fetchInsuranceQuote()
+//   }
+// }, { deep: true, immediate: true })
+
+// Specific watcher for nbAdults and nbChildren changes
+watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren], async ([newNbAdults, newNbChildren], [oldNbAdults, oldNbChildren]) => {
+  if (voyage.value && dynamicDealValues.value
+    && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren)) {
+    await fetchInsuranceQuote(voyage.value, dynamicDealValues.value)
+  }
+}, { deep: true })
+
+// Computed property to determine if insurance step should be shown
+const showInsuranceStep = computed(() => {
+  return insurancesPrice.value
+    && (insurancesPrice.value.rapatriement || insurancesPrice.value.cancel)
 })
 </script>
 
@@ -379,15 +468,4 @@ const isPreviousButtonDisabled = computed(() => {
 .bg-img-filter{
   filter: brightness(0.5);
 }
-/* @media screen and (max-width: 600px) {
-  div:deep(.v-stepper-actions){
-    display: flex;
-    width: 100%;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-} */
 </style>

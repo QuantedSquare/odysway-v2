@@ -1,18 +1,26 @@
+import { defineEventHandler } from 'h3'
+import supabase from '~/server/utils/supabase'
+
 export default defineEventHandler(async (event) => {
-  const dealId = parseInt(event.context.params.dealId)
-  if (!Number.isInteger(dealId)) {
+  const { bookedId } = getQuery(event)
+
+  const { data, error } = await supabase
+    .from('booked_dates')
+    .select('deal_id')
+    .eq('id', bookedId)
+    .single()
+  if (error) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Deal ID should be an integer',
+      statusMessage: 'Error getting deal from booked_dates',
     })
   }
   try {
-    // Recalculate total values before sending datas
-    await activecampaign.recalculatTotalValues(dealId)
+    await activecampaign.recalculatTotalValues(data.deal_id)
 
     const [fetchedDeal, customFields] = await Promise.all([
-      activecampaign.getDealById(dealId),
-      activecampaign.getDealCustomFields(dealId),
+      activecampaign.getDealById(data.deal_id),
+      activecampaign.getDealCustomFields(data.deal_id),
     ])
     // const reponse = await activecampaign.getDealById(dealId)
     // const customFields = await activecampaign.getDealCustomFields(dealId)
@@ -35,10 +43,10 @@ export default defineEventHandler(async (event) => {
     }
   }
   catch (err) {
-    console.log('Error getting one deal', err, dealId)
+    console.log('Error getting deal from booked_dates', err)
     throw createError({
       statusCode: 400,
-      statusMessage: 'Error getting one deal', err,
+      statusMessage: 'Error getting deal from booked_dates',
     })
   }
 })

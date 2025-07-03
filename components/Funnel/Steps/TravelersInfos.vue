@@ -1,11 +1,5 @@
 <template>
-  <v-skeleton-loader
-    v-if="!dealId"
-    type="card"
-  />
-  <v-container
-    v-else
-  >
+  <v-container>
     <v-form
       ref="formInfos"
     >
@@ -30,19 +24,19 @@
             v-if="travelers.length === 0"
             type="card"
           />
-          <TransitionGroup name="list">
-            <FunnelStepsTravelerInfosItem
-              v-for="(traveler, i) in travelers"
-              v-bind="traveler"
-              :key="'nb_travelers_' + i"
-              :bg-color="colorMap[i]"
-              @change="travelerInfosChanged"
-            />
-          </TransitionGroup>
+
+          <FunnelStepsTravelerInfosItem
+            v-for="(traveler, i) in travelers"
+            v-bind="traveler"
+            :key="'nb_travelers_' + i"
+            :bg-color="colorMap[i]"
+            @change="travelerInfosChanged"
+          />
+
           <!-- Check si c'est suffisant ou si on souhaite afficher un message particulier au nb d'enfants -->
           <p
             v-show="!ageValidation.isValid"
-            class="text-error text-right"
+            class="text-error text-right mt-2"
           >
             {{ ageValidationMessage }}
           </p>
@@ -63,40 +57,60 @@
           class="py-0"
         >
           <v-switch
-            v-model="isCouple"
+            v-model="model.isCouple"
             style="margin-bottom : 5px"
             :label="page.travelers_infos.preference_couple"
           />
         </v-col>
       </v-row>
     </v-form>
+    <v-row>
+      <v-col
+        class="d-flex ga-3"
+      >
+        <v-btn
+          class="bg-grey-light font-weight-regular"
+          @click="emit('previous')"
+        >
+          Précédent
+        </v-btn>
+        <v-btn
+          :disabled="!formValidation || !isBookingLoaded"
+          color="secondary"
+          class="font-weight-bold"
+          @click="submitStepData"
+        >
+          Suivant
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script setup>
 import dayjs from 'dayjs'
 
-const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
-const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
+const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page', 'initialDealValues'])
+const { updateDeal } = useStepperDeal(ownStep)
+const route = useRoute()
+const model = defineModel()
+
 const { addSingleParam } = useParams()
 
 // New: Local validation state
-const isValid = ref(false)
-const emit = defineEmits(['validity-changed'])
+const emit = defineEmits(['next', 'previous'])
 
 const isCouple = ref(false)
 const nbTravelers = ref(1)
 const dealNbChildren = ref(0)
-// const dealNbTeenagers = ref(0)
 const dealNbAdults = ref(0)
 const travelers = ref([])
-const isLoading = ref(true)
 
 // Add computed properties for age validation
 const computedAges = computed(() => {
-  const departureDate = dayjs(deal.value?.departureDate)
+  const departureDate = dayjs(voyage.departureDate)
   const children = []
-  // const teenagers = []
+
   const adults = []
 
   travelers.value.forEach((traveler) => {
@@ -105,45 +119,42 @@ const computedAges = computed(() => {
     const birthdate = dayjs(traveler.birthdate, 'DD/MM/YYYY')
     const age = departureDate.diff(birthdate, 'year')
     console.log('age', age)
-    console.log('maxTeenAge', deal.value?.maxTeenAge)
-    console.log('maxChildrenAge', deal.value?.maxChildrenAge)
+    console.log('maxChildrenAge', +voyage.maxChildrenAge)
 
-    if (age <= +deal.value?.maxChildrenAge) {
+    if (age <= +voyage.maxChildrenAge) {
       children.push(traveler)
     }
     else {
       adults.push(traveler)
     }
     console.log('children', children)
-    // console.log('teenagers', teenagers)
     console.log('adults', adults)
   })
 
   return {
     children,
-    // teenagers,
     adults,
   }
 })
 
 const ageValidationMessage = computed(() => {
-  const maxAge = Number(deal.value?.maxChildrenAge) || 12
-  return props.page.travelers_infos.age_validation.replace('{{maxAge}}', maxAge)
+  const maxAge = Number(voyage.maxChildrenAge) || 12
+  return page.travelers_infos.age_validation.replace('{{maxAge}}', maxAge)
 })
 
 const ageValidation = computed(() => {
   const { children, adults } = computedAges.value
   return {
-    isValid: children.length === dealNbChildren.value
-      // && teenagers.length === dealNbTeenagers.value
-      && adults.length === dealNbAdults.value
+    isValid: children.length === +model.value.nbChildren
+      && adults.length === +model.value.nbAdults
       && adults.length > 0,
     childrenCount: children.length,
-    // teenagersCount: teenagers.length,
     adultsCount: adults.length,
   }
 })
-
+const isBookingLoaded = computed(() => {
+  return route.query.booked_id !== undefined && route.query.booked_id !== null && route.query.booked_id !== '' && route.query.date_id === undefined
+})
 // New: Check that all traveler fields are filled
 const allFieldsFilled = computed(() => {
   return travelers.value.every(
@@ -157,28 +168,20 @@ const formValidation = computed(() => {
 })
 
 // New: Watch validation and emit changes
-watch(formValidation, (isFormValid) => {
-  isValid.value = isFormValid
-  emit('validity-changed', props.ownStep, isFormValid)
-}, { immediate: true })
 
 // Data Initialization
 const initializeTravelersData = () => {
-  if (deal.value) {
-    console.log('INITIALIZE TRAVELERS DATA', deal.value)
-    nbTravelers.value = deal.value?.nbTravelers || 1
+  if (model.value) {
+    console.log('INITIALIZE TRAVELERS DATA', model.value)
+    nbTravelers.value = +model.value.nbChildren + +model.value.nbAdults || 1
 
-    dealNbChildren.value = +deal.value?.nbUnderAge || 0
-    // dealNbTeenagers.value = +deal.value?.nbTeen || 0
-    dealNbAdults.value = +deal.value?.nbAdults || 0
-    // Max children age : +deal.value?.maxChildrenAge
-    // Max teenagers age : +deal.value?.maxTeenAge
+    dealNbChildren.value = +model.value.nbChildren || 0
+    dealNbAdults.value = +model.value.nbAdults || 0
 
-    const numberOfTravelers = deal.value?.nbTravelers || 1
-    isCouple.value = deal.value?.isCouple === 'Oui'
+    isCouple.value = +model.value.isCouple
 
-    travelers.value = Array.from({ length: numberOfTravelers }, (_, index) => {
-      const storedTraveler = deal.value?.[`traveler${index + 1}`]
+    travelers.value = Array.from({ length: nbTravelers.value }, (_, index) => {
+      const storedTraveler = model.value?.[`traveler${index + 1}`]
 
       if (storedTraveler) {
         const [firstname, lastname, birthdate] = storedTraveler.split('_')
@@ -197,20 +200,16 @@ const initializeTravelersData = () => {
         birthdate: null,
       }
     })
-
-    isLoading.value = false
-  }
-  else {
-    isLoading.value = false
   }
 }
 
-watch([deal, dealId, () => props.currentStep], () => {
-  if (props.currentStep === props.ownStep && dealId.value) {
-    if (deal.value) {
+watch([model, () => currentStep], () => {
+  console.log('model in travelers infos', model.value)
+  if (currentStep === ownStep) {
+    if (model.value) {
       initializeTravelersData()
     }
-    addSingleParam('step', props.ownStep)
+    addSingleParam('step', ownStep)
   }
 }, {
   immediate: true,
@@ -220,21 +219,20 @@ const travelerInfosChanged = (updatedTraveler) => {
   const index = travelers.value.findIndex(t => t.id === updatedTraveler.id)
   if (index !== -1) {
     travelers.value.splice(index, 1, updatedTraveler)
+    model.value[`traveler${updatedTraveler.id}`] = `${updatedTraveler.firstname}_${updatedTraveler.lastname}_${updatedTraveler.birthdate}`
   }
 }
 
-const submitStepData = async () => {
+const submitStepData = () => {
   // Validate form
-  // if (!validateForm()) return false
-  if (!dealId.value) return false
+  if (!model.value) return false
 
   // Validate ages
   if (!ageValidation.value.isValid) {
     console.error('Age validation failed:', {
       expected: {
-        children: dealNbChildren.value,
-        // teenagers: dealNbTeenagers.value,
-        adults: dealNbAdults.value,
+        children: +model.value.nbChildren,
+        adults: +model.value.nbAdults,
       },
       actual: {
         children: ageValidation.value.childrenCount,
@@ -253,16 +251,15 @@ const submitStepData = async () => {
 
   try {
     const dealData = {
-      isCouple: isCouple.value ? 'Oui' : 'Non',
-      dealId: dealId.value,
+      isCouple: model.value.isCouple ? 'Oui' : 'Non',
       ...travelers.value.reduce((acc, traveler, index) => {
         acc[`traveler${index + 1}`] = `${traveler.firstname}_${traveler.lastname}_${traveler.birthdate}`
         return acc
       }, {}),
     }
 
-    await updateDeal(dealData)
-    return true
+    updateDeal(dealData)
+    emit('next')
   }
   catch (error) {
     console.error('Error updating travelers info', error)
@@ -281,11 +278,6 @@ const colorMap = {
   7: 'teal',
   8: 'pink',
 }
-
-// We need to check if the travelers info are valid and the ages respect the deal number of children/teenagers/adults
-defineExpose({
-  submitStepData,
-})
 </script>
 
 <style scoped>
