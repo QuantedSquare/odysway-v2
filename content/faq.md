@@ -127,8 +127,6 @@ schemaOrg:
 ogImage:
   props: {}
 head:
-  htmlAttrs:
-    lang: fr
   script: []
 sitemap:
   videos: []
