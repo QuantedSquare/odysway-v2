@@ -31,6 +31,7 @@
         v-model="phoneNumber"
         :label="'Téléphone *'"
         placeholder="Ex: 6 00 00 00 01"
+        inputmode="numeric"
         :rules="[rules.phone]"
         @change="changeAttr('phone')"
       />

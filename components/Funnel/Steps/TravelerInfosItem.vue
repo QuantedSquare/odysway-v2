@@ -85,12 +85,6 @@ const i_lastname = ref(props.lastname)
 const date = ref(props.birthdate || '')
 const emit = defineEmits(['change'])
 
-onMounted(() => {
-  if (props.birthdate) {
-    date.value = props.birthdate
-  }
-})
-
 const rules = {
   required: v => !!v || 'Cette information est requise.',
   dateFormat: (v) => {
@@ -125,6 +119,46 @@ const formatDate = (inputValue) => {
   }
   else {
     return digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
+  }
+}
+
+// Handle input - format in real time for all devices
+const handleInput = (event) => {
+  const input = event.target
+  const value = input.value
+  const cursorPosition = input.selectionStart
+  // Format the value
+  const formatted = formatDate(value)
+
+  // Update if different
+  if (formatted !== value) {
+    date.value = formatted
+
+    // Try to maintain cursor position
+    nextTick(() => {
+      try {
+        // Calculate new cursor position based on added slashes
+        let newPosition = cursorPosition
+
+        // Count slashes before cursor in original vs formatted
+        const originalSlashes = (value.substring(0, cursorPosition).match(/\//g) || []).length
+        const formattedSlashes = (formatted.substring(0, cursorPosition).match(/\//g) || []).length
+        newPosition += (formattedSlashes - originalSlashes)
+
+        // Ensure cursor doesn't land on a slash
+        if (formatted[newPosition] === '/') {
+          newPosition += 1
+        }
+
+        // Keep position within bounds
+        newPosition = Math.min(newPosition, formatted.length)
+
+        input.setSelectionRange(newPosition, newPosition)
+      }
+      catch {
+        // Fallback for mobile browsers
+      }
+    })
   }
 }
 
@@ -200,46 +234,6 @@ const handleKeydown = (event) => {
   }
 }
 
-// Handle input - format in real time for all devices
-const handleInput = (event) => {
-  const input = event.target
-  const value = input.value
-  const cursorPosition = input.selectionStart
-  // Format the value
-  const formatted = formatDate(value)
-
-  // Update if different
-  if (formatted !== value) {
-    date.value = formatted
-
-    // Try to maintain cursor position
-    nextTick(() => {
-      try {
-        // Calculate new cursor position based on added slashes
-        let newPosition = cursorPosition
-
-        // Count slashes before cursor in original vs formatted
-        const originalSlashes = (value.substring(0, cursorPosition).match(/\//g) || []).length
-        const formattedSlashes = (formatted.substring(0, cursorPosition).match(/\//g) || []).length
-        newPosition += (formattedSlashes - originalSlashes)
-
-        // Ensure cursor doesn't land on a slash
-        if (formatted[newPosition] === '/') {
-          newPosition += 1
-        }
-
-        // Keep position within bounds
-        newPosition = Math.min(newPosition, formatted.length)
-
-        input.setSelectionRange(newPosition, newPosition)
-      }
-      catch {
-        // Fallback for mobile browsers
-      }
-    })
-  }
-}
-
 // Backup formatting on blur (just in case)
 const formatOnBlur = () => {
   if (date.value) {
@@ -264,17 +258,6 @@ watch(() => props.firstname, (newVal) => {
 watch(() => props.lastname, (newVal) => {
   i_lastname.value = newVal
 })
-
-// Watch for birthdate prop changes
-// watch(() => props.birthdate, (newVal) => {
-//   if (newVal) {
-//     const parsed = dayjs(newVal, 'DD/MM/YYYY', true)
-//     date.value = parsed.isValid() ? parsed : null
-//   }
-//   else {
-//     date.value = null
-//   }
-// })
 </script>
 
 <style scoped>
