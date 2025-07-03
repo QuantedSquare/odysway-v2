@@ -17,6 +17,7 @@
     />
     <v-row
       justify="center"
+      align="center"
     >
       <ClientOnly>
         <!-- <FunnelCheckoutStepper /> -->

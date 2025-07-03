@@ -51,7 +51,7 @@
   "insurances": {
     "title": "Garanties avec",
     "no_insurance_label": "Je ne souhaite pas d'assurance",
-    "alert": "Assurance applicable à tous les voyageurs. Le calcul du prix de votre voyage se fera à la prochaine étape.",
+    "alert": "Assurance applicable à tous les voyageurs. Le règlement de votre voyage se fera à la prochaine étape.",
     "unavailable": "L'assurance n'est pas disponible pour votre voyage.",
     "conseille_badge": "Conseillé",
     "assurance_img": "https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW",

@@ -45,13 +45,13 @@ export function useStepperDeal(componentStep) {
         dealId: addedBookedDate.deal_id,
         paiementLink,
       }
-      updateDeal(bodyWithPaymentLink) // Update the deal with a paiementLink
-
-      // Update both parameters at once to avoid race conditions
       await addMultipleParams({
         booked_id: addedBookedDate.id,
         date_id: undefined, // This will remove the date_id parameter
       })
+      updateDeal(bodyWithPaymentLink) // Update the deal with a paiementLink
+
+      // Update both parameters at once to avoid race conditions
 
       return true
     }

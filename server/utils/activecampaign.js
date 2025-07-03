@@ -160,6 +160,7 @@ const apiRequest = async (endpoint, method = 'get', data = null) => {
       headers,
       data,
     })
+    console.log('===========response in activecampaign.js===========', response.data)
     return response.data
   }
   catch (error) {
@@ -412,9 +413,9 @@ const recalculatTotalValues = async (dealId) => {
   // const promoTeen = customFields.promoTeen || 0
   const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
   const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
-
+  console.log('===========customFields.includeFlight', customFields.includeFlight, '========')
   const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
-  const flightPrice = customFields.flightPrice || 0
+  const flightPrice = customFields.includeFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
   const alreadyPaid = customFields.alreadyPaid || 0

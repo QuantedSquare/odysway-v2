@@ -36,7 +36,7 @@
           <!-- Check si c'est suffisant ou si on souhaite afficher un message particulier au nb d'enfants -->
           <p
             v-show="!ageValidation.isValid"
-            class="text-error text-right"
+            class="text-error text-right mt-2"
           >
             {{ ageValidationMessage }}
           </p>

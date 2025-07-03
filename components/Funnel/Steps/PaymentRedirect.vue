@@ -63,15 +63,7 @@
             </v-switch>
           </v-col>
         </template>
-        <Transition name="list">
-          <v-alert
-            v-if="alreadyPlacedAnOption"
-            color="error"
-            variant="tonal"
-          >
-            {{ page.payment.option_already_placed_error }}
-          </v-alert>
-        </Transition>
+
         <!-- Replace btn "Suivant" in parent -->
         <v-row>
           <v-col
@@ -113,6 +105,7 @@
 
                   <v-btn
                     v-if="isAlmaPaymentPossible"
+                    height="50"
                     :prepend-icon="mdiCreditCardClockOutline"
                     :loading="loadingSession"
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
@@ -130,6 +123,20 @@
               </div>
             </ClientOnly>
           </v-col>
+          <Transition name="list">
+            <v-col
+              v-if="alreadyPlacedAnOption"
+              cols="12"
+            >
+              <v-alert
+                class="text-center"
+                color="error"
+                variant="tonal"
+              >
+                {{ page.payment.option_already_placed_error }}
+              </v-alert>
+            </v-col>
+          </Transition>
           <v-col
             cols="12"
             class="d-flex justify-space-between align-end"
@@ -231,7 +238,6 @@ const almaPay = async () => {
   loadingSession.value = true
 
   const dataForAlmaSession = {
-    dealId: 1111, // test
     paymentType: route.query.type,
     contact: {
       firstName: model.value.firstname,
@@ -296,7 +302,6 @@ const book = async () => {
   }
 
   const dealData = {
-    dealId: dealId.value,
     stage: '27',
     currentStep: 'A posé une option',
     title: voyage.title,
@@ -304,6 +309,7 @@ const book = async () => {
     firstName: model.value.firstname,
     lastName: model.value.lastname,
   }
+  console.log('dealData', dealData)
   updateDeal(dealData)
   // Check si on ajoute le payment link ici
 

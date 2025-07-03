@@ -13,7 +13,7 @@
     <v-main class="main-content mx-0 mx-md-5">
       <slot />
     </v-main>
-    <FooterOdysway />
+    <!-- <FooterOdysway /> -->
   </v-app>
 </template>
 

@@ -51,7 +51,7 @@
           </template>
           <template #right>
             <div v-if="!voyage.gotEarlybird && !voyage.gotLastMinute">
-              {{ formatNumber(voyage.startingPrice + voyage.flightPrice, 'currency', 'EUR') }}
+              {{ formatNumber(+voyage.startingPrice + +voyage.flightPrice, 'currency', 'EUR') }}
             </div>
             <div v-else>
               <div class="d-flex flex-column align-end">
@@ -103,7 +103,7 @@
         <!-- Under Age Travelers -->
         <FunnelStepsSummaryLine v-if="model.nbChildren > 0">
           <template #left>
-            {{ travelerText(+model.nbUnderAge, 'baby') }}
+            {{ travelerText(+model.nbChildren, 'baby') }}
           </template>
           <template #right>
             {{ formatNumber(underAgePricePerTraveler * model.nbChildren, 'currency', 'EUR') }}
@@ -273,13 +273,14 @@ const forceIndivRoom = computed(() => {
 // Calculate prices per traveler
 const adultPricePerTraveler = computed(() => {
   if (!model.value || !voyage) return 0
-
+  console.log('======================SUMMARY======================')
+  console.log('voyage.startingPrice', voyage.startingPrice)
   let basePrice = voyage.startingPrice || 0
 
   if (voyage.extensionPrice) {
     basePrice += voyage.extensionPrice
   }
-  if (voyage.flightPrice) {
+  if (voyage.includeFlight && voyage.flightPrice) {
     basePrice += voyage.flightPrice
   }
 
@@ -306,7 +307,7 @@ const underAgePricePerTraveler = computed(() => {
   if (voyage.extensionPrice) {
     basePrice += voyage.extensionPrice
   }
-  if (voyage.flightPrice) {
+  if (voyage.includeFlight && voyage.flightPrice) {
     basePrice += voyage.flightPrice
   }
 
@@ -330,30 +331,36 @@ const totalValue = computed(() => {
   const nbTravelers = model.value.nbAdults + model.value.nbChildren || 0
   const nbAdults = model.value.nbAdults || 0
   const nbUnderAge = model.value.nbChildren || 0
-
+  console.log('nbTravelers', nbTravelers)
+  console.log('nbAdults', nbAdults)
+  console.log('nbUnderAge', nbUnderAge)
   let total = 0
 
   // Base price for adults
   total += adultPricePerTraveler.value * nbAdults
-
+  console.log('adultPricePerTraveler', adultPricePerTraveler.value)
   // Base price for under age travelers
   total += underAgePricePerTraveler.value * nbUnderAge
+  console.log('underAgePricePerTraveler', underAgePricePerTraveler.value)
 
   // Individual room cost
   if (model.value.indivRoom && voyage.indivRoomPrice) {
     total += voyage.indivRoomPrice * nbTravelers
   }
+  console.log('voyage.indivRoomPrice', voyage.indivRoomPrice)
 
   // Insurance cost
   if (model.value.insuranceCommissionPrice) {
     total += model.value.insuranceCommissionPrice * nbTravelers
   }
+  console.log('model.value.insuranceCommissionPrice', model.value.insuranceCommissionPrice)
 
   // Apply promo value discount
   if (voyage.promoValue) {
     total -= voyage.promoValue * nbTravelers
   }
-
+  console.log('voyage.promoValue', voyage.promoValue)
+  console.log('======================SUMMARY END======================')
   return total
 })
 

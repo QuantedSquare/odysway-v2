@@ -16,7 +16,7 @@
           class="d-flex justify-center"
         >
           <v-card
-            class="border-width relative no-margin-window mb-4"
+            class="border-width relative no-margin-window mb-4 "
             :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
@@ -38,8 +38,9 @@
             />
 
             <v-stepper-window
-              :class="currentStep === 5 ? 'mt-0 mx-0' : ''"
+              :class="currentStep === 5 ? ' mx-0' : ''"
               :model-value="currentStep"
+              class="px-md-6 mt-4"
             >
               <v-stepper-window-item>
                 <template v-if="skipperMode === 'summary'">
@@ -187,19 +188,12 @@ dayjs.extend(customParseFormat)
 
 const route = useRoute()
 const { step, date_id, booked_id } = route.query
-const summaryRef = useTemplateRef('summaryRef')
-const totalValueFromSummary = computed(() => {
-  console.log('totalValueFromSummary', summaryRef.value?.totalValueFromSummary)
-  return summaryRef.value?.totalValueFromSummary || 0
-})
-console.log('totalValueFromSummary', totalValueFromSummary.value)
-const insurancesPrice = ref(null)
+// const summaryRef = useTemplateRef('summaryRef')
+// const totalValueFromSummary = computed(() => {
+//   return summaryRef.value?.totalValueFromSummary || 0
+// })
 
-const pricePerTraveler = ref(0)
-function updatePricePerTraveler(price) {
-  pricePerTraveler.value = price
-}
-provide('pricePerTraveler', { pricePerTraveler, updatePricePerTraveler })
+const insurancesPrice = ref(null)
 
 // ================== Page Texts ==================
 const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-texts', () =>
@@ -208,31 +202,24 @@ const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-tex
 const checkoutType = ref(null)
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
 const dynamicDealValues = ref(null)
-const initialDealValues = ref(null)
 
 // ================== Voyage ==================
 const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {
-    console.log('date_id', date_id)
-
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
-    console.log('fetchedDate from BMS', fetchedDate)
+    console.log('========fetchedDate from BMS========', fetchedDate)
 
     // We fetch the travel details from Nuxt, we always need to have one
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
-    console.log('travel', travel)
 
     // We fetch the destinations details from Nuxt, used for insurance
     const destinations = await queryCollection('destinations').where('titre', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
-    console.log('destinations', destinations)
 
     if (!travel) {
       throw new Error('Travel not found.')
     }
-    console.log('TRAVEL QUERY', travel)
 
-    updatePricePerTraveler(fetchedDate.starting_price)
     checkoutType.value = determinePaymentOptions(fetchedDate.departure_date, route.query)
     const travelStaticValues = {
       departureDate: fetchedDate.departure_date,
@@ -247,18 +234,22 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       startingPrice: fetchedDate.starting_price * 100,
       indivRoomPrice: travel.pricing.indivRoomPrice * 100,
       gotIndivRoomAvailable: travel.pricing.indivRoom,
-      gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')) ? 'Oui' : 'Non',
+      gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')),
       promoEarlybird: travel.pricing.earlyBirdReduction * 100,
-      gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')) ? 'Oui' : 'Non',
+      gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')),
       promoLastMinute: travel.pricing.lastMinuteReduction * 100,
-      depositPrice: fetchedDate.startingPrice * 0.3 || 500,
+      depositPrice: fetchedDate.starting_price * 0.3,
       promoChildren: travel.pricing.childrenPromo * 100,
       maxChildrenAge: travel.pricing.childrenAge,
       source: 'Devis',
       forcedIndivRoom: travel.pricing.forcedIndivRoom,
       travelType: 'Groupe', // TODO: check comment le rendre dynamique
+      flightPrice: fetchedDate.flight_price * 100 || 0,
+      includeFlight: fetchedDate.include_flight,
+      extensionPrice: 0,
+      promoValue: 0,
       alreadyPaid: 0,
-      totalTravelPrice: fetchedDate.startingPrice * 100,
+      totalTravelPrice: fetchedDate.starting_price * 100,
     }
 
     const dynamicValues = {
@@ -280,16 +271,12 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       specialRequest: '',
       indivRoom: false,
       // Insurances
-      insurance: [],
+      insurance: 'Aucune Assurance',
       insuranceCommissionPrice: 0,
       insuranceCommissionPerTraveler: 0,
     }
 
-    initialDealValues.value = {
-      ...travelStaticValues,
-      ...dynamicValues,
-    }
-    dynamicDealValues.value = initialDealValues.value
+    dynamicDealValues.value = dynamicValues
     console.log('dynamicDealValues', dynamicDealValues.value)
     loading.value = false
     return travelStaticValues
@@ -333,16 +320,13 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       indivRoom: deal.indivRoom === 'Oui',
       // Insurances
       insurance: deal.insurance,
-      insuranceCommissionPrice: deal.insuranceCommissionPrice,
-      insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler,
+      insuranceCommissionPrice: deal.insuranceCommissionPrice || 0,
+      insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler || 0,
     }
-    initialDealValues.value = {
-      ...dynamicValues,
-    }
+
     dynamicDealValues.value = dynamicValues
     console.log('dynamicDealValues', dynamicDealValues.value)
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-    updatePricePerTraveler(deal.basePricePerTraveler)
 
     return {
       departureDate: deal.departureDate,
@@ -361,14 +345,15 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       forcedIndivRoom: deal.forcedIndivRoom === 'Oui',
       indivRoomPrice: deal.indivRoomPrice,
       gotIndivRoomAvailable: deal.indivRoomPrice > 0,
-      promoEarlybird: deal.promoEarlybird,
-      promoLastMinute: deal.promoLastMinute,
+      promoEarlybird: deal.promoEarlybird || 0,
+      promoLastMinute: deal.promoLastMinute || 0,
       gotLastMinute: deal.gotLastMinute === 'Oui',
       gotEarlybird: deal.gotEarlybid === 'Oui',
       travelType: deal.travelType,
-      extensionPrice: deal.extensionPrice,
-      flightPrice: deal.flightPrice,
-      promoValue: deal.promoValue,
+      extensionPrice: deal.extensionPrice || 0,
+      includeFlight: deal.includeFlight === 'Oui',
+      flightPrice: deal.flightPrice || 0,
+      promoValue: deal.promoValue || 0,
       alreadyPaid: deal.alreadyPaid,
       totalTravelPrice: deal.value,
     }
@@ -413,10 +398,8 @@ const fetchInsuranceQuote = async () => {
       console.log('Missing voyage or dynamicDealValues for insurance quote')
       return
     }
-    console.log('voyage.value!!!!', voyage.value)
-    console.log('dynamicDealValues.value!!!!', dynamicDealValues.value)
+
     const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues.value, voyage.value)
-    console.log('Fetching insurance with price per traveler:', pricePerTravelerWithoutInsurance)
 
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
@@ -429,7 +412,6 @@ const fetchInsuranceQuote = async () => {
         nbTravelers: +dynamicDealValues.value.nbAdults + +dynamicDealValues.value.nbChildren,
       },
     })
-    console.log('FETCH INSURANCE QUOTE', insurance)
     insurancesPrice.value = insurance
   }
   catch (error) {
@@ -438,21 +420,23 @@ const fetchInsuranceQuote = async () => {
   }
 }
 
-// Watch for changes in voyage and dynamicDealValues to fetch insurance
-watch([voyage, dynamicDealValues], async ([newVoyage, newDynamicDealValues]) => {
-  if (newVoyage && newDynamicDealValues && newDynamicDealValues.nbAdults !== undefined && newDynamicDealValues.nbChildren !== undefined) {
-    await fetchInsuranceQuote()
-  }
-}, { deep: true, immediate: true })
+// // Watch for changes in voyage and dynamicDealValues to fetch insurance
+// watch([voyage, dynamicDealValues], async ([newVoyage, newDynamicDealValues]) => {
+//   if (newVoyage && newDynamicDealValues && newDynamicDealValues.nbAdults !== undefined && newDynamicDealValues.nbChildren !== undefined) {
+//     await fetchInsuranceQuote()
+//   }
+// }, { deep: true, immediate: true })
 
 // Specific watcher for nbAdults and nbChildren changes
 watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren], async ([newNbAdults, newNbChildren], [oldNbAdults, oldNbChildren]) => {
   if (voyage.value && dynamicDealValues.value
     && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren)) {
-    console.log('Number of travelers changed, refetching insurance...', { newNbAdults, newNbChildren, oldNbAdults, oldNbChildren })
     await fetchInsuranceQuote()
   }
 }, { deep: true })
+onMounted(async () => {
+  await fetchInsuranceQuote()
+})
 
 // Computed property to determine if insurance step should be shown
 const showInsuranceStep = computed(() => {
