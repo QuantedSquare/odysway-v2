@@ -243,7 +243,7 @@ au cœur du voyage
     ::::voyage-col-card{slug="immersion-nomade-sahara"}
     ::::
   
-    <!-- ::::voyage-col-card{slug="voyage-immersion-colombie"}
+  <!-- ::::voyage-col-card{slug="voyage-immersion-colombie"}
     :::: -->
   :::
 ::

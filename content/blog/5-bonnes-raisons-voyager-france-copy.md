@@ -112,36 +112,11 @@ Un voyage culturel immersif est une façon de voyager de manière solidaire, éc
 ::
 
 ::color-container{color="soft-blush"}
-  :::info-container
+  :::horizontal-carousel
   #title
-  Découvrir les voyages coups de coeur
+  Titre de la section
   
-  #description
-  Partez à la découverte de destinations qui nous ont conquis.
-  
-  #bottom
-    ::::horizontal-carousel
-    #title
-    
-    #carousel-item
-      :::::voyage-col-card{slug="sejour-berger-bearn"}
-      :::::
-    
-      :::::voyage-col-card{slug="photographie-animaliere-vosges"}
-      :::::
-    
-      :::::voyage-col-card{slug="immersion-observatoire-astronomique"}
-      :::::
-    ::::
-  
-    ::::cta-button
-    ---
-    color: secondary
-    link: /search?destination=france
-    ---
-    #text
-    Voir tous nos voyages en France
-    ::::
+  #carousel-item
   :::
 ::
 
