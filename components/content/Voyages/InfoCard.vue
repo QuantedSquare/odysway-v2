@@ -257,31 +257,6 @@ const { stickyBlock, voyage } = defineProps({
     required: true,
   },
 })
-const getStatus = (date) => {
-  if (date.displayed_status === 'soon_confirmed') {
-    return {
-      status: 'soon_confirmed',
-      text: `Bientôt confirmé`,
-      color: 'yellow',
-    }
-  }
-  else {
-    if (date.displayed_status === 'guaranteed') {
-      return {
-        status: 'full',
-        text: 'Complet',
-        color: 'secondary',
-      }
-    }
-    else {
-      return {
-        status: 'confirmed',
-        text: 'Départ Garanti',
-        color: 'green',
-      }
-    }
-  }
-}
 
 watch(dates, () => {
   if (dates.value.length > 0) {
@@ -294,7 +269,7 @@ watch(dates, () => {
       return {
         departureDate: date.departure_date,
         returnDate: date.return_date,
-        status: getStatus(date),
+        status: getDateStatus(date),
         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
       }
     })

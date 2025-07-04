@@ -208,36 +208,10 @@ const enrichedDate = computed(() => {
     starting_price: date.custom_display ? date.displayed_starting_price : date.starting_price,
     early_bird: date.custom_display ? date.displayed_early_bird : today.isAfter(dayjs(date.departure_date).add(7, 'month')) ? date.early_bird : false,
     last_minute: date.custom_display ? date.displayed_last_minute : dayjs(date.departure_date).diff(today, 'day') <= 31 ? date.last_minute : false,
-    status: getStatus(date),
+    status: getDateStatus(date),
   }
 })
 
-const getStatus = (date) => {
-  const status = date.custom_display ? date.displayed_status : date.status
-  if (status === 'soon_confirmed') {
-    return {
-      status: 'soon_confirmed',
-      text: `Bientôt confirmé`,
-      color: 'yellow',
-    }
-  }
-  else {
-    if (status === 'guaranteed') {
-      return {
-        status: 'full',
-        text: 'Complet',
-        color: 'secondary',
-      }
-    }
-    else {
-      return {
-        status: 'confirmed',
-        text: 'Départ Garanti',
-        color: 'green',
-      }
-    }
-  }
-}
 const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
