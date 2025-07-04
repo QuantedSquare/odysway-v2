@@ -61,13 +61,13 @@
                       v-model="details"
                       :page="pageTexts"
                     />
-                    <DevisUserInfoForm
+                    <!-- <DevisUserInfoForm
                       v-if="skipperChoice === 'call' && !showCalendly"
                       v-model="userInfo"
                       :page="pageTexts"
-                    />
+                    /> -->
                     <CalendlyContainer
-                      v-else-if="skipperChoice === 'call' && showCalendly"
+                      v-if="skipperChoice === 'call'"
                       :travel-title="voyage.title"
                       :text="pageTexts.calendly.text"
                     />
@@ -228,7 +228,7 @@ const submit = async () => {
     router.push('/confirmation?voyage=' + voyage.slug + '&devis=true')
   }
   else if (skipperChoice.value === 'call') {
-    trackPixel('trackCustom', 'CalendlyRDV')
+    trackPixel('trackCustom', 'ClickRDV')
     showCalendly.value = true
   }
   isLoading.value = false
