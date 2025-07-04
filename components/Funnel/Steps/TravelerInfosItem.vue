@@ -157,6 +157,7 @@ const handleInput = (event) => {
       }
       catch {
         // Fallback for mobile browsers
+        console.log('mobile browser')
       }
     })
   }
@@ -229,6 +230,7 @@ const handleKeydown = (event) => {
       catch {
         // Mobile browsers sometimes don't support setSelectionRange
         // This is okay - the field will still work, just cursor might not be perfectly positioned
+        console.log('mobile browser')
       }
     })
   }
