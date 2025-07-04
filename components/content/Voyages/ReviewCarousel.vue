@@ -121,7 +121,6 @@ const setupScrollElement = () => {
     }
   })
 }
-
 // Setup scroll on mount
 onMounted(() => {
   setupScrollElement()
@@ -148,9 +147,6 @@ const displayButton = computed(() => {
 
 const { x, arrivedState } = useScroll(scrollElement, {
   behavior: 'smooth',
-  // onScroll: () => {
-  //   nextTick()
-  // },
 })
 
 const { width: scrollContainerWidth } = useElementSize(scrollContainer)

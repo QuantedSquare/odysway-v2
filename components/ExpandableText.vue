@@ -1,7 +1,7 @@
 <template>
   <div :class="wrapperClass">
     <div
-      ref="content"
+      ref="textContent"
       class="text-content"
       :class="{ truncated: !isExpanded && showReadMore }"
       :style="contentStyle"
@@ -10,6 +10,7 @@
     </div>
 
     <ReadMoreButton
+      v-if="showReadMore"
       :is-expanded="isExpanded"
       :show-button="showReadMore"
       :button-class="buttonClass"
@@ -48,13 +49,35 @@ const props = defineProps({
   },
 })
 
-const {
-  isExpanded,
-  content,
-  showReadMore,
-  contentStyle,
-  toggleExpansion,
-} = useReadMore(props.clampLines, props.lineHeight)
+const isExpanded = ref(false)
+const textContent = ref(null)
+
+const showReadMore = computed(() => {
+  if (!textContent.value) return false
+  return textContent.value.scrollHeight > props.lineHeight * props.clampLines
+})
+
+const contentStyle = ref({
+  maxHeight: `${props.lineHeight * props.clampLines}px`,
+  overflow: 'hidden',
+  transition: 'max-height 0.5s ease',
+})
+
+watch(isExpanded, async (newVal) => {
+  if (!textContent.value) return
+
+  await nextTick()
+  if (newVal) {
+    contentStyle.value.maxHeight = textContent.value.scrollHeight + 'px'
+  }
+  else {
+    contentStyle.value.maxHeight = `${props.lineHeight * props.clampLines}px`
+  }
+})
+
+const toggleExpansion = () => {
+  isExpanded.value = !isExpanded.value
+}
 </script>
 
 <style scoped>
