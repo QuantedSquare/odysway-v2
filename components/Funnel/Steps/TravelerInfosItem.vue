@@ -56,7 +56,6 @@
         inputmode="numeric"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
-        @blur="formatOnBlur"
         @input="handleInput"
         @keydown="handleKeydown"
         @change="dataUpdated"
@@ -101,24 +100,28 @@ const rules = {
   },
 }
 
+// TODO: use different approach to build the date input with computed get() and set(). Ex. mui date field
+
 // Format date string helper
 const formatDate = (inputValue) => {
   const digits = inputValue.replace(/\D/g, '').substring(0, 8)
+  const day = digits.substring(0, 2)
+  const month = digits.substring(2, 4)
+  const year = digits.substring(4)
 
-  if (digits.length <= 1) {
-    return digits
-  }
-  else if (digits.length === 2) {
-    return digits + '/'
-  }
-  else if (digits.length === 3) {
-    return digits.substring(0, 2) + '/' + digits.substring(2)
-  }
-  else if (digits.length === 4) {
-    return digits.substring(0, 2) + '/' + digits.substring(2) + '/'
-  }
-  else {
-    return digits.substring(0, 2) + '/' + digits.substring(2, 4) + '/' + digits.substring(4)
+  switch (digits.length) {
+    case 0:
+      return ''
+    case 1:
+      return day
+    case 2:
+      return `${day}/`
+    case 3:
+      return `${day}/${month}`
+    case 4:
+      return `${day}/${month}/`
+    default:
+      return `${day}/${month}/${year}`
   }
 }
 
@@ -197,11 +200,6 @@ const handleKeydown = (event) => {
       if (deletePos >= 0) {
         newValue = value.substring(0, deletePos) + value.substring(cursorPosition)
       }
-
-      // Special case: if field becomes very short, allow easy clearing
-      if (newValue.replace(/\D/g, '').length <= 1) {
-        newValue = newValue.replace(/\D/g, '')
-      }
     }
     else if (event.key === 'Delete' && cursorPosition < value.length) {
       // Delete - delete character after cursor
@@ -233,13 +231,6 @@ const handleKeydown = (event) => {
         console.log('mobile browser')
       }
     })
-  }
-}
-
-// Backup formatting on blur (just in case)
-const formatOnBlur = () => {
-  if (date.value) {
-    date.value = formatDate(date.value)
   }
 }
 
