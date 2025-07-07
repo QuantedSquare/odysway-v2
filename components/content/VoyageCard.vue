@@ -71,7 +71,7 @@
                 </div>
               </v-col>
             </v-row>
-            <v-row>
+            <v-row class="custom-row-height">
               <v-col cols="4">
                 <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type || 'Type' }}</div>
                 <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
@@ -244,5 +244,8 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
   .custom-card-width{
   min-width:280px!important;
   }
+}
+.custom-row-height{
+  height: 77px!important;
 }
 </style>
