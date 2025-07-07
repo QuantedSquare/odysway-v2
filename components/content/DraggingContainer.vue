@@ -38,7 +38,6 @@ const scrollContainer = ref(null)
 const currentSection = ref(0)
 const updateCurrentSection = (index) => {
   currentSection.value = index
-  console.log('index', index)
 }
 
 const registeredComponents = ref([])

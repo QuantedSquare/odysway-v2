@@ -11,7 +11,7 @@ sitemap:
 
 ::confirmation-container
 #title_option
-# Nous vous confirmons la pose de votre Option !
+# Merci ! Votre option a bien été prise en compte 🌱
 
 #title_default
 # Votre voyage en immersion peut commencer 🎒😊 !
@@ -19,14 +19,14 @@ sitemap:
 #error
 # Une erreur est survenue
 
-Merci de re-essayer ou de prendre contact avec nous.
+Merci de re-essayer ou de prendre contact avec nous par téléphone au 01 84 80 79 75.
 
 #accroche_option
-Odysway vous remercie ! Votre participation à ce voyage est bloquée pendant sept jours. Passé ce délai, vous devrez régler un acompte pour confirmer votre participation.
+Votre place est désormais réservée pour une durée de sept jours. Passé ce délai, un acompte sera nécessaire pour confirmer définitivement votre participation au voyage.
 
 #accroche_default
-Odysway vous remercie pour votre confiance ! Nous vous contacterons prochainement par email pour vous envoyer votre carnet de voyage ainsi que toutes les informations pour préparer au mieux votre départ.
+Merci pour votre confiance ! Nous vous contacterons très prochainement par email pour vous transmettre votre carnet de voyage, ainsi que toutes les informations utiles afin de préparer votre départ dans les meilleures conditions.
 
 #accroche_devis
-Odysway vous remercie pour votre demande de devis ! Notre équipe va étudier votre demande et reviendra vers vous dans les plus brefs délais avec une proposition personnalisée pour votre voyage.
+Odysway vous remercie pour votre demande de devis ! Notre équipe vous recontactera dans les plus brefs délais avec une proposition personnalisée pour votre voyage.
 ::

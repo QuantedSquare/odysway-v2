@@ -9,6 +9,9 @@
 const config = useRuntimeConfig()
 
 useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
   link: [
     {
       rel: 'preload',
@@ -59,7 +62,8 @@ if (config.public.environment === 'production') {
 
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
-  if (isConsent && config.public.environment === 'production') {
+  // if (isConsent && config.public.environment === 'production') {
+  if (isConsent) {
     trackPixel('track', 'PageView')
   }
 })

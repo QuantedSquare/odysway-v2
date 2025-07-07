@@ -1,145 +1,172 @@
 <template>
   <v-container>
     <!-- Prévoir Promo form -->
-    <v-card
-      v-if="deal && deal.alreadyPaid < deal.value"
-      variant="plain"
-    >
-      <v-card-text>
+
+    <v-card-text v-if="model && voyage.alreadyPaid < voyage.totalTravelPrice">
+      <v-row>
+        <v-col
+          cols="12"
+        >
+          <template v-if="isBooking">
+            <div class="text-start">
+              {{ page.payment.ask_for_option_text }}
+            </div>
+          </template>
+          <template v-else-if="route.query.type === 'deposit'">
+            <v-switch
+              v-model="checkedOption"
+              inset
+              hide-details
+              class="custom-label-position"
+              @click.stop=""
+            >
+              <template #label>
+                <div class="text-body-2 pl-1">
+                  {{ page.payment.ask_for_option_text }}
+                </div>
+              </template>
+            </v-switch>
+          </template>
+        </v-col>
+        <template v-if="!isBooking">
+          <v-divider
+            v-if="route.query.type === 'deposit'"
+            horizontal
+            class="ma-2"
+          />
+          <v-col cols="12">
+            <v-switch
+              v-model="switch_accept_data_privacy"
+              inset
+              class="custom-label-position"
+              hide-details
+            >
+              <template #label>
+                <div
+                  class="text-body-2 pl-1"
+                  @click.stop=""
+                  v-html="page.payment.phrase_dacceptation"
+                />
+              </template>
+            </v-switch>
+            <v-switch
+              v-model="switch_accept_country"
+              inset
+              class="custom-label-position"
+              hide-details
+            >
+              <template #label>
+                <div class="text-body-2 pl-1">
+                  {{ page.payment.accept_country_conditions_text }}
+                </div>
+              </template>
+            </v-switch>
+          </v-col>
+        </template>
+
+        <!-- Replace btn "Suivant" in parent -->
         <v-row>
           <v-col
             cols="12"
+            class="d-flex flex-column align-center justify-center my-6"
           >
-            <template v-if="isBooking">
-              <div class="text-start">
-                {{ page.payment.ask_for_option_text }}
-              </div>
-            </template>
-            <template v-else-if="route.query.type === 'deposit'">
-              <v-switch
-                v-model="checkedOption"
-                inset
-                hide-details
-                @click.stop=""
-              >
-                <template #label>
-                  <div class="text-body-2 pl-1">
-                    {{ page.payment.ask_for_option_text }}
-                  </div>
-                </template>
-              </v-switch>
-            </template>
-          </v-col>
-          <template v-if="!isBooking">
-            <v-divider
-              v-if="route.query.type === 'deposit'"
-              horizontal
-              class="ma-2"
-            />
-            <v-col cols="12">
-              <v-switch
-                v-model="switch_accept_data_privacy"
-                inset
-                hide-details
-              >
-                <template #label>
-                  <div
-                    class="text-body-2 pl-1"
-                    @click.stop=""
-                    v-html="page.payment.phrase_dacceptation"
-                  />
-                </template>
-              </v-switch>
-              <v-switch
-                v-model="switch_accept_country"
-                inset
-                hide-details
-              >
-                <template #label>
-                  <div class="text-body-2 pl-1">
-                    {{ page.payment.accept_country_conditions_text }}
-                  </div>
-                </template>
-              </v-switch>
-            </v-col>
-          </template>
-          <Transition name="list">
-            <v-alert
-              v-if="alreadyPlacedAnOption"
-              color="error"
-              variant="tonal"
-            >
-              {{ page.payment.option_already_placed_error }}
-            </v-alert>
-          </Transition>
-          <!-- Replace btn "Suivant" in parent -->
-          <ClientOnly>
-            <Teleport
-              v-if="currentStep >= 5"
-              to="#next-btn"
-              defer
-            >
+            <ClientOnly>
               <Transition name="list">
                 <v-btn
                   v-if="checkedOption"
-                  color="info"
-                  class="ml-md-4 text-caption text-uppercase font-weight-bold text-md-body-1"
+                  class=" text-caption text-uppercase font-weight-bold text-md-body-1"
                   large
+                  height="50"
+                  :prepend-icon="mdiCalendarOutline"
                   :loading="loadingSession"
                   :disabled="(!switch_accept_data_privacy || !switch_accept_country || alreadyPlacedAnOption)"
                   @click="book"
                 >
-                  {{ page.payment.place_option_button }}
+                  <span class="text-wrap">
+                    {{ page.payment.place_option_button }}
+                  </span>
                 </v-btn>
                 <div
                   v-else
-                  class="d-flex flex-column ga-2"
+                  class="d-flex flex-column flex-md-row ga-2 flex-wrap justify-center "
                 >
                   <v-btn
-                    class="ml-md-4"
+                    height="50"
+                    :prepend-icon="mdiCreditCardOutline"
+                    class="bg-secondary "
                     :loading="loadingSession"
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                     @click="stripePay"
                   >
-                    {{ page.payment.pay_stripe_button }}
+                    <span class="text-wrap">
+                      {{ page.payment.pay_stripe_button }}
+                    </span>
                   </v-btn>
+
                   <v-btn
                     v-if="isAlmaPaymentPossible"
-                    class="ml-md-4 bg-secondary"
+                    height="50"
+                    :prepend-icon="mdiCreditCardClockOutline"
                     :loading="loadingSession"
                     :disabled="(!switch_accept_data_privacy || !switch_accept_country)"
                     @click="almaPay"
                   >
                     {{ page.payment.pay_alma_button }}
                   </v-btn>
-                  <div
-                    v-if="deal.totalTravelPrice > 400000"
-                    class="text-caption"
-                  >
-                    {{ page.payment.alma_payment_info }}
-                  </div>
                 </div>
               </Transition>
-            </Teleport>
-          </ClientOnly>
+              <div
+                v-if="voyage.totalTravelPrice > 400000 && !checkedOption"
+                class="text-caption mt-2"
+              >
+                {{ page.payment.alma_payment_info }}
+              </div>
+            </ClientOnly>
+          </v-col>
+          <Transition name="list">
+            <v-col
+              v-if="alreadyPlacedAnOption"
+              cols="12"
+            >
+              <v-alert
+                class="text-center"
+                color="error"
+                variant="tonal"
+              >
+                {{ page.payment.option_already_placed_error }}
+              </v-alert>
+            </v-col>
+          </Transition>
+          <v-col
+            cols="12"
+            class="d-flex justify-space-between align-end"
+          >
+            <v-btn
+              v-if="currentStep === 5"
+              class="bg-grey-light"
+              @click="emit('previous')"
+            >
+              Retour
+            </v-btn>
+          </v-col>
         </v-row>
-      </v-card-text>
-    </v-card>
+      </v-row>
+    </v-card-text>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
+import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } from '@mdi/js'
+
+const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
 const runtimeConfig = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
-console.log('runtimeConfig', runtimeConfig)
-const { deal, dealId, updateDeal } = useStepperDeal(props.ownStep)
-const { addSingleParam } = useParams()
 
-// New: Local validation state
-const isValid = ref(false)
-const emit = defineEmits(['validity-changed'])
+const emit = defineEmits(['previous'])
+const model = defineModel()
+const { updateDeal } = useStepperDeal(ownStep)
+const { addSingleParam } = useParams()
 
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
@@ -150,53 +177,36 @@ const switch_accept_country = ref(route.query.type === 'booking')
 
 const loadingSession = ref(false)
 
-// New: Form validation logic
-const formValidation = computed(() => {
-  if (isBooking.value) {
-    return true // Booking mode is always valid
-  }
-  return switch_accept_data_privacy.value && switch_accept_country.value && !alreadyPlacedAnOption.value
-})
-
-// New: Watch validation and emit changes
-watch(formValidation, (isFormValid) => {
-  isValid.value = isFormValid
-  emit('validity-changed', props.ownStep, isFormValid)
-}, { immediate: true })
-
 const isAlmaPaymentPossible = computed(() => {
-  if (!deal.value) return false
+  if (!model.value) return false
 
   return route.query.type !== 'custom'
-    && deal.value.alreadyPaid === 0
-    && deal.value.totalTravelPrice < 400000
+    && voyage.alreadyPaid === 0
+    && voyage.totalTravelPrice < 400000
 })
-
-watch(() => deal.value, (newDeal) => {
-  if (newDeal) {
-    console.log('Deal loaded, isAlmaPaymentPossible:', isAlmaPaymentPossible.value)
-  }
-}, { immediate: true })
 
 const stripePay = async () => {
   loadingSession.value = true
   // Defined as metadata after payment is done
+  const contact = {
+    firstName: model.value.firstName,
+    lastName: model.value.lastName,
+    email: model.value.email,
+    phone: model.value.phone,
+  }
   const dataForStripeSession = {
-    dealId: dealId.value,
     paymentType: route.query.type,
-    contact: deal.value.contact,
+    contact: contact,
     currentUrl: route.fullPath,
-    insuranceImg: props.page.assurance_img,
-    countries: deal.value.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    insuranceImg: page.assurance_img,
+    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
   if (route.query.type === 'custom') {
     Object.assign(dataForStripeSession, {
       amount: +route.query.amount * 100,
     })
   }
-  console.log('dataForStripeSession', dataForStripeSession)
-
-  const checkoutLink = await $fetch('/api/v1/stripe/', {
+  const checkoutLink = await $fetch(`/api/v1/stripe?bookedId=${route.query.booked_id}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -205,9 +215,7 @@ const stripePay = async () => {
   })
 
   if (checkoutLink) {
-    console.log('checkoutLink =====> ', checkoutLink)
-
-    trackPixel('trackCustom', 'ClickCB', { voyage: props.voyage.title })
+    trackPixel('trackCustom', 'ClickCB', { voyage: voyage.title })
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
         currency: 'EUR',
@@ -225,12 +233,16 @@ const almaPay = async () => {
   loadingSession.value = true
 
   const dataForAlmaSession = {
-    dealId: dealId.value,
     paymentType: route.query.type,
-    contact: deal.value.contact,
+    contact: {
+      firstName: model.value.firstname,
+      lastName: model.value.lastname,
+      email: model.value.email,
+      phone: model.value.phone,
+    },
     currentUrl: route.fullPath,
-    insuranceImg: props.page.assurance_img || 'https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW"', // replace buttercms by a default image
-    countries: deal.value.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
+    insuranceImg: page.assurance_img || 'https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW"', // replace buttercms by a default image
+    countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
 
   if (route.query.type === 'custom') {
@@ -239,7 +251,7 @@ const almaPay = async () => {
     })
   }
 
-  const checkoutLink = await $fetch('/api/v1/alma/', {
+  const checkoutLink = await $fetch(`/api/v1/alma?bookedId=${route.query.booked_id}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -248,7 +260,7 @@ const almaPay = async () => {
   })
 
   if (checkoutLink.url) {
-    trackPixel('trackCustom', 'ClickAlma', { voyage: props.voyage.title })
+    trackPixel('trackCustom', 'ClickAlma', { voyage: voyage.title })
     if (localStorage.getItem('consent') === 'granted') {
       trackPixel('track', 'InitiateCheckout', {
         currency: 'EUR',
@@ -268,23 +280,16 @@ watch(checkedOption, (value) => {
   }
 })
 
-// Watch form fields for validation updates
-watch([switch_accept_data_privacy, switch_accept_country, alreadyPlacedAnOption], () => {
-  if (formValidation.value) {
-    emit('validity-changed', props.ownStep, true)
-  }
-})
-
 const book = async () => {
   loadingSession.value = true
 
   const res = await fetch(`/api/v1/booking/booked_date/option`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id: route.query.booked_id, booked_places: +deal.value.nbTravelers }),
+    body: JSON.stringify({ id: route.query.booked_id, booked_places: +model.value.nbAdults + +model.value.nbChildren }),
   })
   const data = await res.json()
-  console.log('data', data)
+
   if (data.error && data.error === 'La date est déjà réservée') {
     alreadyPlacedAnOption.value = true
     loadingSession.value = false
@@ -292,15 +297,15 @@ const book = async () => {
   }
 
   const dealData = {
-    dealId: dealId.value,
     stage: '27',
     currentStep: 'A posé une option',
-    title: props.voyage.title,
-    nbTravelers: +deal.value.nbTravelers,
-    firstName: deal.value.contact.firstName,
-    lastName: deal.value.contact.lastName,
+    title: voyage.title,
+    nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+    firstName: model.value.firstname,
+    lastName: model.value.lastname,
   }
-  await updateDeal(dealData)
+
+  updateDeal(dealData)
   // Check si on ajoute le payment link ici
 
   if (runtimeConfig.public.env === 'production') {
@@ -312,16 +317,13 @@ const book = async () => {
       body: JSON.stringify(dealData),
     })
   }
-  trackPixel('trackCustom', 'PoseOption', { voyage: props.voyage.title })
-  await navigateTo(`/confirmation?voyage=${props.voyage.slug}&isoption=true`)
+  trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
+  await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 
-watch([dealId, () => props.currentStep], () => {
-  if (props.currentStep === props.ownStep) {
-    addSingleParam('step', props.ownStep)
-  }
-  if (dealId.value) {
-    return
+watch([() => currentStep], () => {
+  if (currentStep === ownStep) {
+    addSingleParam('step', ownStep)
   }
 }, { immediate: true })
 
@@ -331,27 +333,6 @@ watch([dealId, () => props.currentStep], () => {
 // })
 watch(checkedOption, (value) => {
   addSingleParam('isoption', value)
-})
-
-const submitStepData = async () => {
-  // Validate form
-  if (!dealId.value || !isValid.value) return false
-  const dealData = {
-    dealId: dealId.value,
-    // #TODO Add data
-    //
-  }
-  console.log('dealData', dealData)
-  try {
-    await updateDeal(dealData)
-    return true
-  }
-  catch (error) {
-    console.log('error updating Options', error)
-  }
-}
-defineExpose({
-  submitStepData,
 })
 </script>
 
@@ -376,5 +357,12 @@ defineExpose({
    animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
+}
+
+@media screen and (max-width: 370px) {
+  .custom-label-position:deep(.v-selection-control) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

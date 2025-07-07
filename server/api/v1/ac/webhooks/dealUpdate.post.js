@@ -63,6 +63,10 @@ export default defineEventHandler(async (event) => {
       await activecampaign.deleteDeal(dealId)
       const { error, data } = await supabase.from('activecampaign_deals').delete().match({ id: dealId }).select()
       console.log('Delete supabaseDeal OK', data)
+
+      const { error: errorBookedDates, data: dataBookedDates } = await supabase.from('booked_dates').delete().match({ deal_id: dealId }).select()
+      console.log('Delete bookedDates OK', dataBookedDates)
+
       return { success: true }
     }
 

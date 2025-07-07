@@ -8,24 +8,27 @@
       rounded="xl"
       class="text-grey-darken-2 pb-6"
     >
-      <Transition name="fade">
-        <v-img
-          v-if="voyage.imgSrc"
-          color="surface-variant"
-          class="blur"
-          height="150"
-          :src="voyage.imgSrc"
-          :lazy-src="voyage.imgSrc"
-          cover
-        >
-          <div class="pa-8  d-flex flex-column align-start">
-            <span class="text-h5 text-shadow-2">{{ voyage.title }}</span>
-            <span class="text-body-1 text-shadow-2">{{ deal?.travelType }}</span>
+      <v-img
+        v-if="voyage.imgSrc"
+        class="d-none d-md-flex text-white "
+        height="140"
+        width="100%"
+        :src="voyage.imgSrc"
+        :lazy-src="voyage.imgSrc"
+        :alt="`Paysage de destination pour le voyage ${voyage?.title}`"
+        cover
+      >
+        <v-container class=" d-flex flex-column justify-center">
+          <div class="pa-lg-2  d-flex flex-column align-start">
+            <span class="text-h5 text-shadow-2 ">Récapitulatif de votre voyage</span>
+            <span class="text-body-1 mb-2 text-shadow-2">{{ voyage.title }}</span>
+            <span class="text-body-2 text-shadow-2">{{ model?.travelType || voyage.travelType }}</span>
           </div>
-        </v-img>
-      </Transition>
+        </v-container>
+      </v-img>
+
       <v-skeleton-loader
-        v-if="!deal"
+        v-if="!model"
         type="card"
       />
       <v-card-text
@@ -33,23 +36,23 @@
         class="px-5 text-body-1"
       >
         <!-- Dates Section -->
-        <FunnelStepsSummaryLine v-if="deal.departureDate && deal.returnDate">
+        <FunnelStepsSummaryLine v-if="voyage.departureDate && voyage.returnDate">
           <template #left>
             <span class="text-h6 ">{{ page.summary.dates_confirmed }}</span>
           </template>
           <template #right>
-            {{ dayjs(deal.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(deal.returnDate).format('DD/MM/YYYY') }}
+            {{ dayjs(voyage.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(model.returnDate).format('DD/MM/YYYY') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <!-- Base Price Section -->
-        <FunnelStepsSummaryLine v-if="deal.value">
+        <FunnelStepsSummaryLine v-if="voyage.startingPrice">
           <template #left>
             {{ page.summary.base_price }}
           </template>
           <template #right>
-            <div v-if="deal.gotEarlybird !== 'Oui' && deal.gotLastMinute !== 'Oui'">
-              {{ formatNumber(deal.basePricePerTraveler, 'currency', 'EUR') }}
+            <div v-if="!voyage.gotEarlybird && !voyage.gotLastMinute">
+              {{ formatNumber(+voyage.startingPrice + (voyage.includeFlight ? +voyage.flightPrice : 0), 'currency', 'EUR') }}
             </div>
             <div v-else>
               <div class="d-flex flex-column align-end">
@@ -57,12 +60,12 @@
                   <v-badge
                     inline
                     color="info"
-                    :content="deal.gotEarlybird == 'Oui' ? page.summary.early_bird_badge + formatNumber(deal.promoEarlybird, 'currency', '€') : page.summary.last_minute_badge + formatNumber(deal.promoLastMinute, 'currency', '€')"
+                    :content="voyage.gotEarlybird ? page.summary.early_bird_badge + formatNumber(voyage.promoEarlybird, 'currency', '€') : page.summary.last_minute_badge + formatNumber(voyage.promoLastMinute, 'currency', '€')"
                   />
-                  {{ formatNumber(deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : deal.promoLastMinute), 'currency', 'EUR') }}
+                  {{ formatNumber(voyage.startingPrice + voyage.flightPrice - (voyage.gotEarlybird ? voyage.promoEarlybird : voyage.promoLastMinute), 'currency', 'EUR') }}
                 </span>
                 <span class="text-decoration-line-through">
-                  {{ formatNumber(deal.basePricePerTraveler, 'currency', 'EUR') }}
+                  {{ formatNumber(voyage.startingPrice + voyage.flightPrice, 'currency', 'EUR') }}
                 </span>
               </div>
             </div>
@@ -70,12 +73,12 @@
         </FunnelStepsSummaryLine>
 
         <!-- Extension Price Section -->
-        <FunnelStepsSummaryLine v-if="deal.extensionPrice > 0">
+        <FunnelStepsSummaryLine v-if="voyage.extensionPrice > 0">
           <template #left>
             {{ page.summary.extension_price }}
           </template>
           <template #right>
-            {{ formatNumber(deal.extensionPrice, 'currency', 'EUR') }}
+            {{ formatNumber(voyage.extensionPrice, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
@@ -89,47 +92,48 @@
         </FunnelStepsSummaryLine>
 
         <!-- Adult Travelers -->
-        <FunnelStepsSummaryLine v-if="deal.nbAdults > 0">
+        <FunnelStepsSummaryLine v-if="model.nbAdults > 0">
           <template #left>
-            {{ travelerText(+deal.nbAdults, 'adult') }}
+            {{ travelerText(+model.nbAdults, 'adult') }}
           </template>
           <template #right>
-            {{ formatNumber((deal.basePricePerTraveler - (deal.gotEarlybird == 'Oui' ? deal.promoEarlybird : (deal.gotLastMinute === 'Oui' ? deal.promoLastMinute : 0))) * deal.nbAdults, 'currency', 'EUR') }}
+            {{ formatNumber(adultPricePerTraveler * model.nbAdults, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <!-- Under Age Travelers -->
-        <FunnelStepsSummaryLine v-if="deal.nbUnderAge > 0">
+        <FunnelStepsSummaryLine v-if="model.nbChildren > 0">
           <template #left>
-            {{ travelerText(+deal.nbUnderAge, 'baby') }}
+            {{ travelerText(+model.nbChildren, 'baby') }}
           </template>
           <template #right>
-            {{ formatNumber((+deal.basePricePerTraveler - deal.promoChildren - (deal.gotEarlybird === 'Oui' ? deal.promoEarlybird : (deal.gotLastMinute === 'Oui' ? deal.promoLastMinute : 0))) * deal.nbUnderAge, 'currency', 'EUR') }}
+            {{ formatNumber(underAgePricePerTraveler * model.nbChildren, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <v-divider
-          v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0"
+          v-if="forceIndivRoom || model.indivRoom && +voyage.indivRoomPrice > 0"
           class="my-6"
         />
 
         <!--  Options -->
-        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0">
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || model.indivRoom && +voyage.indivRoomPrice > 0">
           <template #left>
             <span class="text-h6 ">{{ page.summary.options_title }}</span>
           </template>
         </FunnelStepsSummaryLine>
 
         <!-- Chambre individuelle -->
-        <FunnelStepsSummaryLine v-if="forceIndivRoom || deal.indivRoom === 'Oui' && +deal.indivRoomPrice > 0">
+        <FunnelStepsSummaryLine v-if="forceIndivRoom || model.indivRoom && +voyage.indivRoomPrice > 0">
           <template #left>
             <v-tooltip
-              v-if="forceIndivRoom "
+              v-if="forceIndivRoom"
               bottom
+              :aria-label="page.summary.forced_indiv_room_text"
             >
               <template #activator="{ props }">
                 <div class="d-flex align-center ga-2">
-                  <span>  {{ travelerText(+deal.nbTravelers, 'indivRoom') }}</span>
+                  <span>{{ travelerText(+nbTravelers, 'indivRoom') }}</span>
                   <v-icon
                     size="x-small"
                     v-bind="props"
@@ -143,50 +147,49 @@
               </div>
             </v-tooltip>
             <span v-else>
-              {{ travelerText(+deal.nbTravelers, 'indivRoom') }}
+              {{ travelerText(+nbTravelers, 'indivRoom') }}
             </span>
           </template>
           <template #right>
-            {{ formatNumber(deal.indivRoomPrice * deal.nbTravelers, 'currency', 'EUR') }}
+            {{ formatNumber(voyage.indivRoomPrice * nbTravelers, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <!-- Assurance -->
-        <FunnelStepsSummaryLine v-if="deal.insurance !== 'Aucune Assurance'">
+        <FunnelStepsSummaryLine v-if="model.insurance && model.insuranceCommissionPrice > 0 && (Array.isArray(model.insurance) ? model.insurance.length > 0 && model.insurance[0] !== 'Aucune Assurance' : model.insurance !== 'Aucune Assurance')">
           <template #left>
-            {{ travelerText(+deal.nbTravelers, 'insurance') }}
+            {{ travelerText(+nbTravelers, 'insurance') }}
           </template>
           <template #right>
-            {{ formatNumber(deal.insuranceCommissionPrice * deal.nbTravelers, 'currency', 'EUR') }}
+            {{ formatNumber(model.insuranceCommissionPrice * nbTravelers, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <v-divider
-          v-if="deal.promoValue > 0"
+          v-if="voyage.promoValue > 0"
           class="my-6"
         />
 
         <!-- Promo -->
-        <FunnelStepsSummaryLine v-if="deal.promoValue > 0">
+        <FunnelStepsSummaryLine v-if="voyage.promoValue > 0">
           <template #left>
             {{ page.summary.total_discount }}
           </template>
           <template #right>
-            -{{ formatNumber(deal.promoValue * deal.nbTravelers, 'currency', 'EUR') }}
+            -{{ formatNumber(voyage.promoValue * nbTravelers, 'currency', 'EUR') }}
           </template>
         </FunnelStepsSummaryLine>
 
         <v-divider class="my-6" />
 
         <!-- Somme déjà réglé -->
-        <FunnelStepsSummaryLine v-if="deal.alreadyPaid > 0">
+        <FunnelStepsSummaryLine v-if="model.alreadyPaid && model.alreadyPaid > 0">
           <template #left>
             {{ page.summary.already_paid }}
           </template>
           <template #right>
             <span class="font-weight-bold ">
-              <!-- #TODO  S'assurer que le total soit correct avec touts les ajouts / réductions -->
-              {{ formatNumber(deal.alreadyPaid, 'currency', 'EUR') }}
+              {{ formatNumber(model.alreadyPaid, 'currency', 'EUR') }}
             </span>
           </template>
         </FunnelStepsSummaryLine>
@@ -198,7 +201,7 @@
           </template>
           <template #right>
             <span class="font-weight-bold ">
-              {{ formatNumber(deal.value, 'currency', 'EUR') }}
+              {{ formatNumber(totalValue, 'currency', 'EUR') }}
             </span>
           </template>
         </FunnelStepsSummaryLine>
@@ -209,13 +212,13 @@
             <template #left>
               <v-tooltip
                 bottom
+                :aria-label="page.summary.cancel_text"
               >
                 <template #activator="{ props }">
                   <div
                     v-if="appliedPrice > 0"
                     class="d-flex align-center ga-2 text-primary"
                   >
-                    <!-- #Todo Passer en computed les textes -->
                     <span v-if="route.query.type === 'deposit'">{{ page.summary.deposit_due }}</span>
                     <span v-else-if="route.query.type === 'balance'">{{ page.summary.balance_due }}</span>
                     <span v-else>{{ page.summary.amount_due }}</span>
@@ -226,7 +229,7 @@
                       {{ mdiInformationOutline }}
                     </v-icon>
                   </div>
-                  <div v-else>
+                  <div v-else-if="voyage.totalTravelPrice < voyage.alreadyPaid">
                     {{ page.summary.already_paid_full }}
                   </div>
                 </template>
@@ -239,22 +242,18 @@
               <span
                 class="font-weight-bold text-primary"
               >
-                <!-- #TODO : Check si on a toujours la bonne valeur -->
                 {{ appliedPrice > 0 ? formatNumber(appliedPrice, 'currency', 'EUR') : '-' }}
               </span>
             </template>
           </FunnelStepsSummaryLine>
         </Transition>
 
-        <!--  #Todo Checker s'il faut ajouter le checking sur la date, si le type "full" est uniquement sur les voyages sous 30jours -->
+        <!-- Full payment required notice -->
         <FunnelStepsSummaryLine v-if="route.query.type === 'full'">
           <template #left>
             <span class="font-italic text-body-2 ">{{ page.summary.full_payment_required }}</span>
           </template>
         </FunnelStepsSummaryLine>
-
-        <!-- Text for no Insurance available  -->
-        <!-- Le départ est pour bientôt, nous ne pouvons pas vous proposer d'assurances pour cette réservation. -->
       </v-card-text>
     </v-card>
   </v-container>
@@ -263,11 +262,100 @@
 <script setup>
 import dayjs from 'dayjs'
 import { mdiInformationOutline } from '@mdi/js'
+import formatNumber from '@/utils/formatNumber'
 
-const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
+const { voyage, page } = defineProps(['voyage', 'page'])
 const route = useRoute()
-const forceIndivRoom = ref(false) // # TODO: Get from deal || Voyage
-const { deal } = useStepperDeal(props.ownStep)
+const model = defineModel()
+
+// Get forceIndivRoom from voyage
+const forceIndivRoom = computed(() => {
+  return voyage?.forcedIndivRoom || false
+})
+
+// Calculate prices per traveler
+const adultPricePerTraveler = computed(() => {
+  if (!model.value || !voyage) return 0
+
+  let basePrice = voyage.startingPrice || 0
+
+  if (voyage.extensionPrice) {
+    basePrice += voyage.extensionPrice
+  }
+  if (voyage.includeFlight && voyage.flightPrice) {
+    basePrice += voyage.flightPrice
+  }
+
+  // Apply early bird or last minute discounts
+  if (voyage.gotEarlybird && voyage.promoEarlybird) {
+    basePrice -= voyage.promoEarlybird
+  }
+  else if (voyage.gotLastMinute && voyage.promoLastMinute) {
+    basePrice -= voyage.promoLastMinute
+  }
+
+  return basePrice
+})
+
+const underAgePricePerTraveler = computed(() => {
+  if (!model.value || !voyage) return 0
+
+  let basePrice = voyage.startingPrice || 0
+
+  // Apply children discount
+  if (voyage.promoChildren) {
+    basePrice -= voyage.promoChildren
+  }
+  if (voyage.extensionPrice) {
+    basePrice += voyage.extensionPrice
+  }
+  if (voyage.includeFlight && voyage.flightPrice) {
+    basePrice += voyage.flightPrice
+  }
+
+  // Apply early bird or last minute discounts
+  if (voyage.gotEarlybird && voyage.promoEarlybird) {
+    basePrice -= voyage.promoEarlybird
+  }
+  else if (voyage.gotLastMinute && voyage.promoLastMinute) {
+    basePrice -= voyage.promoLastMinute
+  }
+
+  return basePrice
+})
+const nbTravelers = computed(() => {
+  return model.value.nbAdults + model.value.nbChildren || 0
+})
+// Calculate total value dynamically
+const totalValue = computed(() => {
+  if (!model.value || !voyage) return 0
+
+  const nbTravelers = model.value.nbAdults + model.value.nbChildren || 0
+  const nbAdults = model.value.nbAdults || 0
+  const nbUnderAge = model.value.nbChildren || 0
+  let total = 0
+
+  // Base price for adults
+  total += adultPricePerTraveler.value * nbAdults
+  // Base price for under age travelers
+  total += underAgePricePerTraveler.value * nbUnderAge
+
+  // Individual room cost
+  if (model.value.indivRoom && voyage.indivRoomPrice) {
+    total += voyage.indivRoomPrice * nbTravelers
+  }
+
+  // Insurance cost
+  if (model.value.insuranceCommissionPrice) {
+    total += model.value.insuranceCommissionPrice * nbTravelers
+  }
+
+  // Apply promo value discount
+  if (voyage.promoValue) {
+    total -= voyage.promoValue * nbTravelers
+  }
+  return total
+})
 
 function travelerText(nbTraveler, type) {
   const text = {
@@ -288,43 +376,56 @@ function travelerText(nbTraveler, type) {
       multiple: 'Chambres Individuelles',
     },
     insurance: {
-      single: 'Assurance ' + deal.value?.insurance,
-      multiple: 'Assurance ' + deal.value?.insurance,
+      single: 'Assurance ' + (Array.isArray(model.value?.insurance) ? model.value?.insurance[0] || '' : model.value?.insurance || ''),
+      multiple: 'Assurance ' + (Array.isArray(model.value?.insurance) ? model.value?.insurance[0] || '' : model.value?.insurance || ''),
     },
-
   }
+
   if (nbTraveler > 1) {
-    return `${nbTraveler} x ${text[type].multiple}`// this.$t('estimate.multiple' + type + 'Traveler')
+    return `${nbTraveler} x ${text[type].multiple}`
   }
   else {
-    return `${nbTraveler} x ${text[type].single}`// this.$t('estimate.' + type + 'Traveler')
+    return `${nbTraveler} x ${text[type].single}`
   }
 }
 
+// function calculatDepositeValue(data) {
+//     // WE take the total value of the deal, we substract the flight price and the insurance price
+//     const baseToCalculateDepositValue = +data.value - ((data.includeFlight ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+//     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
+//     // Insurance is added in another line item
+//     return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * data.nbTravelers)
+//   }
+
 function calculateDepositValue(data) {
-  const baseToCalculateDepositValue = +data.value - (data.flightPrice ?? 0) * data.nbTravelers - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
-  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.flightPrice ?? 0) * data.nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+  const nbTravelers = data.nbAdults + data.nbChildren || 0
+  const baseToCalculateDepositValue = +totalValue.value - ((data.includeFlight ? data.flightPrice : 0) * nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
+  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
 }
 
 const appliedPrice = computed(() => {
-  if (deal.value.alreadyPaid >= deal.value.value) {
+  if (!model.value) return 0
+
+  if (model.value.alreadyPaid >= totalValue.value) {
     return 0
   }
   else {
     if (route.query.type === 'deposit') {
-      return calculateDepositValue(deal.value)
+      return calculateDepositValue(model.value)
     }
     else if (route.query.type === 'balance') {
-      return deal.value.value - deal.value.alreadyPaid
+      return totalValue.value - model.value.alreadyPaid
     }
     else if (route.query.type === 'full') {
-      // #TODO à checker, utile au final d'avoir un full ?
-      return deal.value.value - deal.value.alreadyPaid
+      return totalValue.value - model.value.alreadyPaid
     }
     else { // type = 'custom'
       return route.query.amount * 100
     }
   }
+})
+defineExpose({
+  totalValue,
 })
 </script>
 

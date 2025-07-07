@@ -15,14 +15,14 @@
         <v-col cols="12">
           <v-row>
             <v-col
-              cols="12"
+              cols="6"
               md="4"
             >
               <div class="text-caption">
                 {{ page.details.nb_adults_label }}
               </div>
               <v-select
-                v-model="nbAdults"
+                v-model="model.nbAdults"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(isAdvance ? 1 : 0, 9)"
@@ -30,14 +30,14 @@
             </v-col>
             <!-- children -->
             <v-col
-              cols="12"
+              cols="6"
               md="4"
             >
               <div class="text-caption text-truncate">
                 {{ childrenLabel }}
               </div>
               <v-select
-                v-model="nbChildren"
+                v-model="model.nbChildren"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :menu-props="{ offsetY: true }"
                 :items="selectOptions(0, 9)"
@@ -56,7 +56,7 @@
               md="6"
             >
               <v-text-field
-                v-model="firstName"
+                v-model="model.firstName"
                 :label="page.details.firstname_label"
                 :placeholder="page.details.firstname_placeholder"
                 :rules="[rules.name]"
@@ -68,7 +68,7 @@
               md="6"
             >
               <v-text-field
-                v-model="lastName"
+                v-model="model.lastName"
                 :label="page.details.lastname_label"
                 :placeholder="page.details.lastname_placeholder"
                 :rules="[rules.name]"
@@ -80,7 +80,7 @@
               md="6"
             >
               <v-text-field
-                v-model="email"
+                v-model="model.email"
                 :disabled="route.query.type === 'balance' || route.query.type === 'custom'"
                 :label="page.details.email_label"
                 :placeholder="page.details.email_placeholder"
@@ -88,8 +88,8 @@
                 @change="saveToLocalStorage()"
               />
               <v-checkbox
-                v-model="optinNewsletter"
-                :class="optinNewsletter ? 'text-primary' : ''"
+                v-model="model.optinNewsletter"
+                :class="model.optinNewsletter ? 'text-primary' : ''"
               >
                 <template #label>
                   <div class="text-caption text-no-wrap">
@@ -104,14 +104,38 @@
               md="6"
             >
               <PhoneTextField
-                v-model="phone"
+                v-model="model.phone"
+                @validity-changed="isPhoneValid = $event"
               />
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </v-form>
+    <v-row>
+      <v-col
+        class="d-flex ga-3"
+      >
+        <v-btn
+          class="
+        bg-grey-light font-weight-regular"
+          @click="emit('previous')"
+        >
+          Précédent
+        </v-btn>
+        <v-btn
+          :disabled="!isValid"
+          :loading="buttonLoading"
+          color="secondary"
+          class="font-weight-bold"
+          @click="submitStepData"
+        >
+          Suivant
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
+
   <v-skeleton-loader
     v-else
     type="card"
@@ -122,29 +146,26 @@
 import { z } from 'zod'
 import { computed } from 'vue'
 
-const { currentStep, ownStep, voyage, page } = defineProps(['currentStep', 'ownStep', 'voyage', 'page'])
+const { currentStep, ownStep, voyage, page, checkoutType } = defineProps(['currentStep', 'ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType'])
+const emit = defineEmits(['next', 'previous', 'validity-changed'])
 const config = useRuntimeConfig()
 
-const { deal, dealId, createDeal, updateDeal, checkoutType, loadingDeal } = useStepperDeal(ownStep)
+const model = defineModel()
+
+const loadingDeal = ref(false)
+const buttonLoading = ref(false)
+
+const { createDeal, updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
 const route = useRoute()
 
 // New: Local validation state
-const isValid = ref(false)
-const emit = defineEmits(['validity-changed'])
 
 const selectOptions = function (start, end) {
   return Array.from({ length: end - start }, (_, i) => i + start)
 }
 
 const isAdvance = ref(true)
-const optinNewsletter = ref(false)
-const nbAdults = ref(1)
-const nbChildren = ref(0)
-const firstName = ref('')
-const lastName = ref('')
-const email = ref('')
-const phone = ref('')
 
 const childrenLabel = computed(() => {
   if (page?.details?.nb_children_label && voyage?.maxChildrenAge) {
@@ -152,21 +173,15 @@ const childrenLabel = computed(() => {
   }
   return 'Nombre d\'enfants'
 })
-
+const isPhoneValid = ref(false)
 // New: Form validation logic
-const formValidation = computed(() => {
-  const hasValidName = firstName.value && lastName.value
-  const hasValidEmail = email.value && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
-  const hasValidTravelers = nbAdults.value > 0 && nbAdults.value + nbChildren.value > 0
+const isValid = computed(() => {
+  const hasValidName = model.value.firstName && model.value.lastName
+  const hasValidEmail = rules.email(model.value.email) === true
+  const hasValidTravelers = model.value.nbAdults > 0 && model.value.nbAdults + model.value.nbChildren > 0
 
-  return hasValidName && hasValidEmail && hasValidTravelers
+  return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value
 })
-
-// New: Watch validation and emit changes
-watch(formValidation, (isFormValid) => {
-  isValid.value = isFormValid
-  emit('validity-changed', ownStep, isFormValid)
-}, { immediate: true })
 
 watch(() => currentStep, (value) => {
   if (value === ownStep) {
@@ -174,49 +189,42 @@ watch(() => currentStep, (value) => {
   }
 }, { immediate: true })
 
-watch(deal, () => {
-  if (deal.value) {
-    nbAdults.value = +deal.value.nbAdults
-    nbChildren.value = +deal.value.nbUnderAge || 0
-    email.value = deal.value.contact.email
-    firstName.value = deal.value.contact.firstName
-    lastName.value = deal.value.contact.lastName
-  }
-})
-
 const saveToLocalStorage = () => {
   const dataToStore = {
-    firstname: firstName.value,
-    lastname: lastName.value,
-    email: email.value,
-    phone: phone.value,
+    firstname: model.value.firstName,
+    lastname: model.value.lastName,
+    email: model.value.email,
+    phone: model.value.phone,
   }
   localStorage.setItem('detailsData', JSON.stringify(dataToStore))
 }
 const loadFromLocalStorage = () => {
   const storedData = JSON.parse(localStorage.getItem('detailsData'))
   if (storedData) {
-    firstName.value = storedData.firstname
-    lastName.value = storedData.lastname
-    email.value = storedData.email
-    phone.value = storedData.phone
+    model.value.firstName = storedData.firstname
+    model.value.lastName = storedData.lastname
+    model.value.email = storedData.email
+    model.value.phone = storedData.phone
   }
 }
 onMounted(() => {
-  loadFromLocalStorage()
+  if (!route.query.booked_id) {
+    loadFromLocalStorage()
+  }
 })
 
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
 const emailSchema = z.string().email({ message: 'Adresse email invalide' })
+const phoneSchema = z.string().min(9, { message: 'Numéro de téléphone invalide' })
 
 const rules = {
   name: schemaToRule(nameSchema),
   email: schemaToRule(emailSchema),
+  phone: schemaToRule(phoneSchema),
 }
 
-const nbTravelers = computed(() => nbAdults.value + nbChildren.value)
-
+const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
 const submitStepData = async () => {
   // Validate form
   if (!isValid.value) return false
@@ -224,33 +232,40 @@ const submitStepData = async () => {
 
   try {
     // Submit form data
-    if (dealId.value) {
+    if (route.query.booked_id) {
       // Update deal with this values only after creation.
-      // So only when checkout type is deposit or full
-      if (checkoutType.value === 'deposit' || checkoutType.value === 'full') {
-        await updateDeal({
-          nbTravelers: nbAdults.value + nbChildren.value,
-          nbChildren: nbChildren.value,
-          nbAdults: nbAdults.value,
+      // So only when checkout type is deposit or full`
+
+      if (checkoutType === 'deposit' || checkoutType === 'full') {
+        buttonLoading.value = true
+        updateDeal({
+          nbTravelers: model.value.nbAdults + model.value.nbChildren,
+          nbChildren: model.value.nbChildren,
+          nbAdults: model.value.nbAdults,
           // nbTeen: nbTeen.value,
-          nbUnderAge: nbChildren.value,
-          email: email.value,
-          phone: phone.value,
-          firstname: firstName.value,
-          lastname: lastName.value,
+          nbUnderAge: model.value.nbChildren,
+          email: model.value.email,
+          phone: model.value.phone,
+          firstname: model.value.firstName,
+          lastname: model.value.lastName,
         })
+        buttonLoading.value = false
       }
       else {
-        await updateDeal({
-          email: email.value,
-          phone: phone.value,
-          firstname: firstName.value,
-          lastname: lastName.value,
+        updateDeal({
+          email: model.value.email,
+          phone: model.value.phone,
+          firstname: model.value.firstName,
+          lastname: model.value.lastName,
         })
+        buttonLoading.value = false
       }
+      emit('next')
+      console.log('deal updated')
     }
     // else we update basics and create a deal with it
     else {
+      buttonLoading.value = true
       const flattenedDeal = {
         value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
         title: voyage.title,
@@ -262,11 +277,11 @@ const submitStepData = async () => {
         departureDate: voyage.departureDate,
         returnDate: voyage.returnDate,
         travelType: voyage.travelType, // voyage.plan, // #todo à checker
-        nbTravelers: nbAdults.value + nbChildren.value,
-        nbChildren: nbChildren.value,
-        nbAdults: nbAdults.value,
+        nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
+        nbChildren: +model.value.nbChildren,
+        nbAdults: +model.value.nbAdults,
         // nbTeen: nbTeen.value,
-        nbUnderAge: nbChildren.value,
+        nbUnderAge: +model.value.nbChildren,
         country: voyage.country,
         iso: voyage.iso,
         zoneChapka: voyage.zoneChapka,
@@ -279,26 +294,29 @@ const submitStepData = async () => {
         basePricePerTraveler: voyage.startingPrice,
         promoChildren: voyage.promoChildren,
         maxChildrenAge: voyage.maxChildrenAge,
-        // promoTeen: voyage.promoTeen,
+        promoTeen: voyage.promoChildren,
+        includeFlight: voyage.includeFlight ? 'Oui' : 'Non',
+        flightPrice: voyage.flightPrice,
         // maxTeenAge: voyage.maxTeenAge,
         source: 'Devis',
         forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',
         indivRoomPrice: voyage.indivRoomPrice,
         promoEarlybird: voyage.promoEarlybird,
-        gotEarlybird: voyage.gotEarlybird,
+        gotEarlybird: voyage.gotEarlybird ? 'Oui' : 'Non',
         promoLastMinute: voyage.promoLastMinute,
-        gotLastMinute: voyage.gotLastMinute,
+        gotLastMinute: voyage.gotLastMinute ? 'Oui' : 'Non',
         // Contacts
-        email: email.value,
-        phone: phone.value,
-        firstname: firstName.value,
-        lastname: lastName.value,
-        optinNewsletter: optinNewsletter.value,
+        email: model.value.email,
+        phone: model.value.phone,
+        firstname: model.value.firstName,
+        lastname: model.value.lastName,
+        optinNewsletter: model.value.optinNewsletter,
       }
       trackPixel('track', 'AddToCart')
-      return await createDeal(flattenedDeal)
+      emit('next')
+      await createDeal(flattenedDeal)
+      buttonLoading.value = false
     }
-    return true
   }
   catch (error) {
     // Handle errors
@@ -307,7 +325,7 @@ const submitStepData = async () => {
   }
 }
 
-watch(phone, () => {
+watch(model, () => {
   saveToLocalStorage()
 })
 
@@ -327,8 +345,4 @@ const changeAttr = (_dataAttribute) => {
   //   })
   // }
 }
-
-defineExpose({
-  submitStepData,
-})
 </script>

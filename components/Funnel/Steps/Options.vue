@@ -1,21 +1,15 @@
 <template>
-  <v-skeleton-loader
-    v-if="!dealId"
-    type="card"
-  />
-  <v-container v-else>
-    <!-- <v-row v-if="voyage.indiv_room && !forcedIndivRoom"> -->
-    <v-row v-if="props.voyage && props.voyage.gotIndivRoomAvailable && indivRoomPrice > 0">
+  <v-container>
+    <v-row v-if="voyage.gotIndivRoomAvailable && voyage.indivRoomPrice > 0">
       <v-col cols="12">
         <h2>{{ page.options.indiv_room_title }}</h2>
       </v-col>
-      <!-- :label="$t('stepperDevisGroup.roomIndivLabel')" -->
       <v-col
         cols="8"
-        :class="indivRoom ? 'text-primary' : 'text-grey'"
+        :class="model.indivRoom ? 'text-primary' : 'text-grey'"
       >
         <v-switch
-          v-model="indivRoom"
+          v-model="model.indivRoom"
           :label="page.options.indiv_room_label"
         />
         <FunnelStepsDialogLearnMore
@@ -26,9 +20,9 @@
       </v-col>
       <v-col
         class="d-flex justify-end align-start text-body-1 "
-        :class="indivRoom ? 'text-primary' : 'text-grey'"
+        :class="model.indivRoom ? 'text-primary' : 'text-grey'"
       >
-        + {{ formatNumber(indivRoomPrice, 'currency', '€') }} / pers.
+        + {{ formatNumber(voyage.indivRoomPrice, 'currency', '€') }} / pers.
       </v-col>
     </v-row>
 
@@ -59,7 +53,6 @@
         cols="12"
         md="6"
       >
-        <!-- :label="$t('stepperDevisGroup.foodOptions.other')" -->
         <v-switch
           v-model="otherFoodOption"
           :label="page.options.other_food_label"
@@ -68,7 +61,6 @@
       <v-col
         cols="12"
       >
-        <!-- :label="$t('stepperDevisGroup.foodOptions.spec')" -->
         <Transition name="slide-fade">
           <v-textarea
             v-if="otherFoodOption"
@@ -79,18 +71,37 @@
         </Transition>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col
+        class="d-flex ga-3"
+      >
+        <v-btn
+          class="bg-grey-light font-weight-regular"
+          @click="emit('previous')"
+        >
+          Précédent
+        </v-btn>
+        <v-btn
+          color="secondary"
+          class="font-weight-bold"
+          @click="submitStepData"
+        >
+          Suivant
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script setup>
-const props = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
-const { deal, dealId, updateDeal, loadingDeal } = useStepperDeal(props.ownStep)
+const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
+const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-console.log('props.voyage', props.voyage)
+
+const model = defineModel()
 
 // New: Local validation state
-const isValid = ref(false)
-const emit = defineEmits(['validity-changed'])
+const emit = defineEmits(['next', 'previous'])
 
 const specialRequest = ref('')
 const indivRoom = ref(false)
@@ -99,31 +110,16 @@ const indivRoomPrice = ref(0) // Checker si on veut afficher ce prix
 const vegeOption = ref(false)
 const otherFoodOption = ref(false)
 
-// New: Form validation logic - Options step is always valid once loaded
-const formValidation = computed(() => {
-  return !loadingDeal.value && !!dealId.value
-})
-
-// New: Watch validation and emit changes
-watch(formValidation, (isFormValid) => {
-  console.log('isFormValid', isFormValid, loadingDeal.value, dealId.value)
-  isValid.value = isFormValid
-  emit('validity-changed', props.ownStep, isFormValid)
-}, { immediate: true })
-
-watch([loadingDeal, deal, () => props.currentStep], ([loading, dealVal, currentStep]) => {
-  if (loading) {
-    return
-  }
-  if (dealId.value && dealVal) {
+watch([model, () => currentStep], ([dealVal, currentStep]) => {
+  if (model.value) {
     indivRoomPrice.value = +dealVal.indivRoomPrice
-    indivRoom.value = dealVal.indivRoom?.includes('Oui')
+    indivRoom.value = dealVal.indivRoom
     vegeOption.value = dealVal.specialRequest?.includes('Régimes alimentaires spécifiques')
     otherFoodOption.value = dealVal.specialRequest?.includes('Autres demandes particulières')
-    specialRequest.value = dealVal.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim()
+    specialRequest.value = dealVal.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim() || ''
   }
-  if (currentStep === props.ownStep) {
-    addSingleParam('step', props.ownStep)
+  if (currentStep === ownStep) {
+    addSingleParam('step', ownStep)
   }
 }, { immediate: true })
 
@@ -135,27 +131,22 @@ const foodPreferences = computed(() => {
   return `${foodPreferences.join(', ')} : ${specialRequest.value}`
 })
 
-const submitStepData = async () => {
+const submitStepData = () => {
   // Validate form
-  if (!dealId.value || !deal.value || !isValid.value) return false
   const dealData = {
-    dealId: dealId.value,
     specialRequest: `Préférence alimentaire: ${foodPreferences.value}`,
-    indivRoom: indivRoom.value ? ['Oui'] : ['Non'],
+    indivRoom: model.value.indivRoom ? ['Oui'] : ['Non'],
     currentStep: 'A choisi ses options',
   }
 
   try {
-    return await updateDeal(dealData)
+    updateDeal(dealData)
+    emit('next')
   }
   catch (error) {
     console.log('error updating Options', error)
   }
 }
-
-defineExpose({
-  submitStepData,
-})
 </script>
 
 <style scoped>

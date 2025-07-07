@@ -42,6 +42,7 @@
                 v-if="title.length > 60"
                 :id="`tooltip-${title}`"
                 activator="parent"
+                :aria-label="`Titre complet du blog: ${title}`"
               >
                 <span>
                   {{ title }}

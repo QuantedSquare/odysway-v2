@@ -18,6 +18,7 @@
     <v-col
       cols="12"
       md="4"
+      class="py-0 my-0"
     >
       <v-text-field
         v-model="i_firstname"
@@ -32,6 +33,7 @@
     <v-col
       cols="12"
       md="4"
+      class="py-0 my-0"
     >
       <v-text-field
         v-model="i_lastname"
@@ -47,6 +49,7 @@
     <v-col
       cols="12"
       md="4"
+      class="py-0 my-0"
     >
       <v-text-field
         v-model="date"

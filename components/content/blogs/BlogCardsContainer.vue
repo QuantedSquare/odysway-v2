@@ -16,13 +16,18 @@
         <slot name="cta-button" />
       </v-col>
     </v-row>
-    <v-row v-if="mergedData">
+    <v-row
+      v-if="mergedData"
+      role="list"
+      :aria-label="`Liste de ${mergedData.length} articles de blog`"
+    >
       <v-col
         v-for="(blog, index) in mergedData"
         :key="index"
         cols="12"
         sm="6"
         md="4"
+        role="listitem"
       >
         <BlogCard
           v-bind="blog"
