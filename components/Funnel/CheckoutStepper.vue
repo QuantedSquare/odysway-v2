@@ -181,6 +181,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
+const router = useRouter()
 const { step, date_id, booked_id } = route.query
 // const summaryRef = useTemplateRef('summaryRef')
 // const totalValueFromSummary = computed(() => {
@@ -366,8 +367,12 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = 5
   skipperMode.value = 'summary'
 }
-
+function updateHistory(curr) {
+  window.location.lasthash.push(window.location.hash)
+  window.location.hash = curr
+}
 const nextStep = () => {
+  updateHistory(window.location.hash)
   // If we're on step 3 (Options) and insurance is not available, skip to summary
   if (currentStep.value === 3 && !showInsuranceStep.value) {
     currentStep.value = 5 // Skip to summary
@@ -376,8 +381,11 @@ const nextStep = () => {
     currentStep.value++
   }
 }
+
 const previousStep = () => {
-  // If we're on summary step and insurance was skipped, go back to options
+  // Use router to go back to previous URL
+  updateHistory(window.location.hash)
+  // Fallback: if no history, go to previous step in the same way as before
   if (currentStep.value === 5 && !showInsuranceStep.value) {
     currentStep.value = 3 // Go back to options
   }
@@ -385,6 +393,13 @@ const previousStep = () => {
     currentStep.value--
   }
 }
+watch(() => route.query.step, (newVal) => {
+  console.log('route.query.step', newVal)
+  if (newVal) {
+    currentStep.value = parseInt(newVal)
+    console.log('currentStep', currentStep.value)
+  }
+})
 
 const { calculatePricePerPerson } = usePricePerTraveler(dynamicDealValues, voyage)
 
