@@ -56,6 +56,7 @@
         inputmode="numeric"
         placeholder="JJ/MM/AAAA"
         :rules="[rules.required, rules.dateFormat]"
+        :append-inner-icon="mdiCalendarOutline"
         @input="handleInput"
         @keydown="handleKeydown"
         @change="dataUpdated"
@@ -67,7 +68,7 @@
 <script setup>
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import { mdiBagPersonal } from '@mdi/js'
+import { mdiBagPersonal, mdiCalendarOutline } from '@mdi/js'
 
 dayjs.extend(customParseFormat)
 
@@ -105,9 +106,9 @@ const rules = {
 // Format date string helper
 const formatDate = (inputValue) => {
   const digits = inputValue.replace(/\D/g, '').substring(0, 8)
-  const day = digits.substring(0, 2)
-  const month = digits.substring(2, 4)
-  const year = digits.substring(4)
+  const day = digits.substring(0, 2) > 31 ? '31' : digits.substring(0, 2)
+  const month = digits.substring(2, 4) > 12 ? '12' : digits.substring(2, 4)
+  const year = digits.substring(4) > new Date().getFullYear() ? new Date().getFullYear() : digits.substring(4)
 
   switch (digits.length) {
     case 0:
