@@ -34,7 +34,7 @@ const createCheckoutSession = async (order) => {
   }
   const gotEarlyBird = deal.gotEarlybird === 'Oui'
   const gotLastMinute = deal.gotLastMinute === 'Oui'
-  const baseTravelerPrice = +deal.basePricePerTraveler + (deal.flightPrice > 0 ? +deal.flightPrice : 0) - (gotEarlyBird ? +deal.promoEarlybird : 0) - (gotLastMinute ? +deal.promoLastMinute : 0)
+  const baseTravelerPrice = +deal.basePricePerTraveler + ((deal.flightPrice > 0 && deal.includeFlight === 'Oui') ? +deal.flightPrice : 0) - (gotEarlyBird ? +deal.promoEarlybird : 0) - (gotLastMinute ? +deal.promoLastMinute : 0)
   // console.log('baseTravelerPrice', baseTravelerPrice, deal.basePricePerTraveler, deal.flightPrice, deal.promoEarlybird, deal.promoLastMinute)
   if (order.paymentType === 'deposit') {
     const depositValue = calculatDepositeValue(deal)
