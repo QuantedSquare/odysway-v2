@@ -182,13 +182,15 @@ const displaySubmit = computed(() => {
 })
 const submit = async () => {
   isLoading.value = true
+  const stage = (userInfo.value.email === 'test@test.com' || userInfo.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
+
   const voyageBody = {
     value: voyage.pricing.startingPrice * 100,
     title: voyage.title,
     currency: 'eur',
     group: '1',
     owner: '1',
-    stage: config.public.environment === 'development' ? '48' : '2',
+    stage: stage,
     // CustomFields
     specialRequest: details.value.comment + (details.value.includeFlight ? `- Aéroport de départ : ${details.value.departureAirport}` : ''),
     departureDate: details.value.departureDate.length > 0 ? details.value.departureDate : '',
