@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="position-relative d-flex justify-center mt-md-10">
+  <v-footer class="position-relative d-flex justify-center mt-md-10 ">
     <v-img
       class="footer-bg-img "
       :src="img(OdyswayFooter, { format: 'webp', quality: 70, width: 1024, height: 400 })"
@@ -16,7 +16,7 @@
       <v-container
         v-if="footer"
         fluid
-        class="px-0 px-md-12"
+        class="px-0 mx-0 mx-md-5"
       >
         <v-row
           align="center"
@@ -61,6 +61,7 @@
                 sizes="(max-width: 600px) 480px, 320px"
                 loading="lazy"
                 alt="Image de l'équipe"
+                class="max-height-300"
               />
             </v-lazy>
           </v-col>
@@ -279,5 +280,8 @@ const policies = ref([
     width: 100px;
     height: 25px;
   }
+}
+.max-height-300{
+  max-height: 300px;
 }
 </style>
