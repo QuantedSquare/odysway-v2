@@ -3,16 +3,35 @@
     <v-app-bar
       v-if="!drawer"
       location="bottom"
-      class="d-md-none pb-1 pb-sm-0 bottom-app-bar"
+      height="100"
+      class="d-md-none elevation-0  "
     >
-      <v-container class="py-0">
+      <v-container class="py-0 px-0 ">
         <v-row
           no-gutters
-          class="mx-4"
+        >
+          <v-col
+            cols="12"
+            class="d-flex align-center justify-center "
+          >
+            <v-btn
+              :icon="mdiChevronUp"
+              variant="outlined"
+              rounded="circle"
+              height="35"
+              width="35"
+              color="white"
+              class=" bg-secondary font-weight-bold  negative-margin"
+              @click="drawer = true"
+            />
+          </v-col>
+        </v-row>
+        <v-row
+          class="px-4 elevation-2 py-0 "
         >
           <v-col
             cols="5"
-            class="d-flex flex-column align-start justify-center"
+            class="d-flex flex-column align-start justify-center "
           >
             <span class="text-caption text-grey">
               Total:
@@ -30,9 +49,10 @@
               density="compact"
               height="50"
               width="120"
+              variant="text"
               rounded="md"
               color="secondary"
-              class="text-body-2 font-weight-bold text-decoration-none"
+              class="text-body-1 font-weight-bold text-decoration-none"
               @click="drawer = true"
             >
               Voir plus
@@ -89,7 +109,7 @@
 </template>
 
 <script setup>
-import { mdiClose } from '@mdi/js'
+import { mdiClose, mdiChevronUp } from '@mdi/js'
 import formatNumber from '@/utils/formatNumber'
 
 const summaryRef = useTemplateRef('summaryRef')
@@ -130,11 +150,12 @@ defineExpose({
 <style scoped>
 .bottom-app-bar{
   z-index: 1020 !important;
+  min-height: 80px;
 }
 .custom-height:deep(.v-navigation-drawer) {
   min-height: 75vh !important;
 }
-.z-100 {
-  z-index: 100 !important;
+.negative-margin{
+  margin-bottom: -30px;
 }
 </style>
