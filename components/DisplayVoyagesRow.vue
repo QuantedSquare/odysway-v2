@@ -196,21 +196,21 @@ const noVoyagesFoundCategoryText = computed(() => {
   if (props.pageContent?.slug?.noVoyagesFound && props.selectedCategory?.title) {
     return props.pageContent.slug.noVoyagesFound.replace('{{title}}', props.selectedCategory.title)
   }
-  return `Aucun voyage trouvé pour thématique "${props.selectedCategory?.title || ''}"`
+  return `Aucun voyage trouvé pour la thématique "${props.selectedCategory?.title || ''}"`
 })
 
 const noVoyagesFoundExperienceText = computed(() => {
   if (props.pageContent?.slug?.noVoyagesFound && props.selectedExperience?.title) {
     return props.pageContent.slug.noVoyagesFound.replace('{{title}}', props.selectedExperience.title)
   }
-  return `Aucun voyage trouvé pour expérience "${props.selectedExperience?.title || ''}"`
+  return `Aucun voyage trouvé pour l'expérience "${props.selectedExperience?.title || ''}"`
 })
 
 const expandButtonText = computed(() => {
   if (isExpanded.value) {
-    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins des dates'
+    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins de dates'
   }
-  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus des dates'
+  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de dates'
 })
 </script>
 

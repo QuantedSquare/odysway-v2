@@ -265,6 +265,7 @@ const submitStepData = async () => {
     }
     // else we update basics and create a deal with it
     else {
+      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
       buttonLoading.value = true
       const flattenedDeal = {
         value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
@@ -272,7 +273,7 @@ const submitStepData = async () => {
         currency: 'eur',
         group: '1',
         owner: '1',
-        stage: config.public.environment === 'development' ? '48' : '2',
+        stage: stage,
         // CustomFields
         departureDate: voyage.departureDate,
         returnDate: voyage.returnDate,
