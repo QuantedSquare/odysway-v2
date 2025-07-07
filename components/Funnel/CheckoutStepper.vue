@@ -364,32 +364,75 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = 5
   skipperMode.value = 'summary'
 }
-function updateHistory(curr) {
-  window.location.lasthash.push(window.location.hash)
-  window.location.hash = curr
+
+// Initialize step history for proper back button handling
+const stepHistory = ref([])
+
+// Initialize history when component mounts
+onMounted(() => {
+  // If we're starting at a specific step, add it to history
+  if (currentStep.value > 0) {
+    stepHistory.value = [0, ...Array.from({ length: currentStep.value - 1 }, (_, i) => i + 1)]
+  }
+})
+
+// Update URL and history when step changes
+const updateStepInURL = (newStep) => {
+  const newQuery = { ...route.query, step: newStep.toString() }
+  router.push({ query: newQuery })
 }
+
 const nextStep = () => {
-  updateHistory(window.location.hash)
-  // If we're on step 3 (Options) and insurance is not available, skip to summary
-  if (currentStep.value === 3 && !showInsuranceStep.value) {
-    currentStep.value = 5 // Skip to summary
+  const nextStepValue = currentStep.value === 3 && !showInsuranceStep.value ? 5 : currentStep.value + 1
+
+  // Add current step to history before moving to next
+  if (!stepHistory.value.includes(currentStep.value)) {
+    stepHistory.value.push(currentStep.value)
   }
-  else {
-    currentStep.value++
-  }
+
+  currentStep.value = nextStepValue
+  updateStepInURL(nextStepValue)
 }
 
 const previousStep = () => {
-  // Use router to go back to previous URL
-  updateHistory(window.location.hash)
-  // Fallback: if no history, go to previous step in the same way as before
-  if (currentStep.value === 5 && !showInsuranceStep.value) {
-    currentStep.value = 3 // Go back to options
+  // If we have history, go back to previous step
+  if (stepHistory.value.length > 0) {
+    const previousStepValue = stepHistory.value.pop()
+    currentStep.value = previousStepValue
+    updateStepInURL(previousStepValue)
   }
   else {
-    currentStep.value--
+    // No history available, go to previous step in sequence
+    let previousStepValue
+    if (currentStep.value === 5 && !showInsuranceStep.value) {
+      previousStepValue = 3 // Go back to options
+    }
+    else {
+      previousStepValue = Math.max(0, currentStep.value - 1)
+    }
+    currentStep.value = previousStepValue
+    updateStepInURL(previousStepValue)
   }
 }
+
+// Handle browser back button
+onMounted(() => {
+  const handlePopState = () => {
+    const urlStep = route.query.step ? parseInt(route.query.step) : 0
+    if (urlStep !== currentStep.value) {
+      currentStep.value = urlStep
+      // Update history to match URL
+      stepHistory.value = stepHistory.value.filter(step => step < urlStep)
+    }
+  }
+
+  window.addEventListener('popstate', handlePopState)
+
+  // Cleanup on unmount
+  onUnmounted(() => {
+    window.removeEventListener('popstate', handlePopState)
+  })
+})
 watch(() => route.query.step, (newVal) => {
   console.log('route.query.step', newVal)
   if (newVal) {
