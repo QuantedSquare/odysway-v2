@@ -9,6 +9,9 @@
 const config = useRuntimeConfig()
 
 useHead({
+  htmlAttrs: {
+    lang: 'fr',
+  },
   link: [
     {
       rel: 'preload',

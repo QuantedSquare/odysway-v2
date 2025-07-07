@@ -94,7 +94,6 @@ import { useRouter } from 'vue-router'
 const search = ref(null)
 const loading = ref(false)
 const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
-console.log('travelesList', travelesList)
 
 definePageMeta({
   layout: 'booking',
@@ -108,12 +107,10 @@ const fetchTravels = async () => {
   const res = await fetch('/api/v1/booking/travels')
   const data = await res.json()
   travels.value = data.filter(travel => !travel.is_custom_travel)
-  console.log('travels', travels.value)
   loading.value = false
 }
 
 const goToTravel = (slug) => {
-  console.log('goToTravel', slug)
   router.push(`/booking-management/${slug}`)
 }
 
@@ -139,7 +136,7 @@ const filteredTravels = computed(() => {
   }
   return enrichedTravelsDate
 })
-console.log('filteredTravels', filteredTravels.value)
+
 onMounted(fetchTravels)
 </script>
 

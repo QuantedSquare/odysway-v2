@@ -15,6 +15,7 @@
         width="100%"
         :src="voyage.imgSrc"
         :lazy-src="voyage.imgSrc"
+        :alt="`Paysage de destination pour le voyage ${voyage?.title}`"
         cover
       >
         <v-container class=" d-flex flex-column justify-center">
@@ -128,6 +129,7 @@
             <v-tooltip
               v-if="forceIndivRoom"
               bottom
+              :aria-label="page.summary.forced_indiv_room_text"
             >
               <template #activator="{ props }">
                 <div class="d-flex align-center ga-2">
@@ -210,6 +212,7 @@
             <template #left>
               <v-tooltip
                 bottom
+                :aria-label="page.summary.cancel_text"
               >
                 <template #activator="{ props }">
                   <div
@@ -395,11 +398,7 @@ function travelerText(nbTraveler, type) {
 //   }
 
 function calculateDepositValue(data) {
-  console.log('data', totalValue.value, data)
   const nbTravelers = data.nbAdults + data.nbChildren || 0
-  console.log('nbTravelers', nbTravelers)
-  console.log('totalValue', totalValue.value)
-  console.log('data.insuranceCommission', data.insuranceCommissionPrice, data.insuranceCommissionPerTraveler)
   const baseToCalculateDepositValue = +totalValue.value - ((data.includeFlight ? data.flightPrice : 0) * nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
   return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
 }

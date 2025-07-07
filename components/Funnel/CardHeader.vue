@@ -20,6 +20,7 @@
   <v-img
     v-if="currentStep > 0"
     :src="props.image || 'https://odysway.com/logos/logo_noir.png'"
+    :alt="`Paysage de destination pour le voyage ${titre}`"
     height="120"
     width="100%"
     cover

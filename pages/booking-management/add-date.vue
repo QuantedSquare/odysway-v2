@@ -239,15 +239,11 @@ const fetchTravels = async () => {
   // Nuxt Studio queryCollection
   const list = await queryCollection('voyages').select().all()
   travelesList.value = list
-  // console.log('travelesList', travelesList.value)
   travelesMap.value = Object.fromEntries(list.map(t => [t.slug, t]))
-  // console.log('travelesMap', travelesMap.value)
 }
 
 const onTravelSelect = (slug) => {
-  console.log('slug', slug, travelesMap.value)
   const travel = travelesMap.value[slug]
-  console.log('travel', travel)
   isCustomTravel.value = travel.customAvailable
   if (travel) {
     form.value.min_travelers = travel.minTravelersToConfirm || 2
@@ -271,7 +267,7 @@ const onSave = async () => {
     if (isCustomTravel.value) {
       Object.assign(payload, { is_custom_travel: true })
     }
-    console.log('payload', payload)
+
     const res = await fetch('/api/v1/booking/add-date', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -298,7 +294,6 @@ const onCancel = () => {
   router.back()
 }
 watch(form.value, (newVal) => {
-  console.log('newVal', newVal.is_indiv_travel)
   if (newVal.is_indiv_travel) {
     form.value.published = false
   }

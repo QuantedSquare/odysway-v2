@@ -225,7 +225,6 @@ const rules = {
 }
 
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
-console.log('checkoutType', checkoutType)
 const submitStepData = async () => {
   // Validate form
   if (!isValid.value) return false

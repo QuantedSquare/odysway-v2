@@ -21,6 +21,7 @@
         <template #selection="{ item }">
           <v-img
             :src="item.props.flagSrc"
+            :alt="`Drapeau du pays ${item.props.title}`"
             width="30px"
           />
         </template>

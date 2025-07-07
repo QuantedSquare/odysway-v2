@@ -177,7 +177,6 @@ const onSave = async () => {
     reduction_price: form.value.reduction_price ? Number(form.value.reduction_price) * 100 : undefined,
   }
   try {
-    console.log('===========payload in add-custom-travel.vue===========', payload)
     const res = await fetch('/api/v1/booking/custom-travel', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

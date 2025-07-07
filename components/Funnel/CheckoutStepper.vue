@@ -25,6 +25,7 @@
                 color="surface-variant"
                 height="100"
                 :src="voyage.imgSrc"
+                :alt="`Paysage de destination pour le voyage ${voyage.title}`"
                 cover
               />
             </Transition>
@@ -203,7 +204,6 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
   if (date_id) {
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
-    console.log('========fetchedDate from BMS========', fetchedDate)
 
     // We fetch the travel details from Nuxt, we always need to have one
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
@@ -272,7 +272,6 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
     }
     await fetchInsuranceQuote(travelStaticValues, dynamicValues)
     dynamicDealValues.value = dynamicValues
-    console.log('dynamicDealValues', dynamicDealValues.value)
     loading.value = false
     return travelStaticValues
   }
@@ -320,7 +319,6 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
     }
 
     dynamicDealValues.value = dynamicValues
-    console.log('dynamicDealValues', dynamicDealValues.value)
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
 
     const voyageStaticValues = {
@@ -356,7 +354,6 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
     return voyageStaticValues
   }
 })
-console.log('voyage', voyage.value, voyageStatus.value, voyageError.value)
 
 // ================== Stepper Management ==================
 // const stepComponents = reactive(new Map())
@@ -423,7 +420,6 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
         nbTravelers: +dynamicDealValues.nbAdults + +dynamicDealValues.nbChildren,
       },
     })
-    console.log('insurance fetched:', insurance)
     insurancesPrice.value = insurance
   }
   catch (error) {
