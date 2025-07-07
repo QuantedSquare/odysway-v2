@@ -114,27 +114,6 @@
         />
       </v-col>
     </v-row>
-    <!-- <v-row class="d-flex d-md-none">
-      <v-col cols="12">
-        <v-carousel
-          hide-delimiters
-          class="custom-btn  rounded-lg"
-        >
-          <v-carousel-item
-            v-for="photo in photoCarousel"
-            :key="photo.src"
-          >
-            <v-img
-              :src="img(photo.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
-              :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
-              :alt="photo.alt || `Photo du voyage ${voyage.title}`"
-              width="100%"
-              rounded="lg"
-            />
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
-    </v-row> -->
     <v-row class="media-btns-position">
       <v-col
         cols="auto"

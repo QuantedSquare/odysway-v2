@@ -47,14 +47,26 @@ const { data: faqTextes } = await useAsyncData('faq-textes', () => {
 function redirectToCalendly() {
   trackPixel('trackCustom', 'ClickRDV')
 
+  // if (route.name === 'search') {
+  //   router.push('/calendly?fromSearch')
+  // }
+  // else if (route.name.includes('thematiques')) {
+  //   router.push('/calendly?fromThematiques')
+  // }
+  // else if (route.name.includes('experiences')) {
+  //   router.push('/calendly?fromExperiences')
+  // }
+  // else {
+  //   router.push(`/calendly?travelTitle=${route.params.voyageSlug}`)
+  // }
   if (route.name === 'search') {
-    router.push('/calendly?fromSearch')
+    router.push('/contact')
   }
   else if (route.name.includes('thematiques')) {
-    router.push('/calendly?fromThematiques')
+    router.push('/contact')
   }
   else if (route.name.includes('experiences')) {
-    router.push('/calendly?fromExperiences')
+    router.push('/contact')
   }
   else {
     router.push(`/calendly?travelTitle=${route.params.voyageSlug}`)

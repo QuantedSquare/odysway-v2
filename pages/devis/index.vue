@@ -44,7 +44,7 @@
                   cover
                   class="align-center"
                 >
-                  <div class="text-center text-body-1 text-shadow">
+                  <div class="text-center text-body-1 text-shadow px-3">
                     {{ voyage.title }}
                   </div>
                 </v-img>
@@ -61,13 +61,13 @@
                       v-model="details"
                       :page="pageTexts"
                     />
-                    <DevisUserInfoForm
+                    <!-- <DevisUserInfoForm
                       v-if="skipperChoice === 'call' && !showCalendly"
                       v-model="userInfo"
                       :page="pageTexts"
-                    />
+                    /> -->
                     <CalendlyContainer
-                      v-else-if="skipperChoice === 'call' && showCalendly"
+                      v-if="skipperChoice === 'call'"
                       :travel-title="voyage.title"
                       :text="pageTexts.calendly.text"
                     />
@@ -133,8 +133,8 @@ const currentStep = ref(1)
 const details = ref({
   departureDate: '',
   returnDate: '',
-  nbAdults: route.query.nbAdults,
-  nbChildren: route.query.nbChildren,
+  nbAdults: route.query.nbAdults || 1,
+  nbChildren: route.query.nbChildren || 0,
   includeFlight: false,
   departureAirport: '',
 })
@@ -228,7 +228,7 @@ const submit = async () => {
     router.push('/confirmation?voyage=' + voyage.slug + '&devis=true')
   }
   else if (skipperChoice.value === 'call') {
-    trackPixel('trackCustom', 'CalendlyRDV')
+    trackPixel('trackCustom', 'ClickRDV')
     showCalendly.value = true
   }
   isLoading.value = false

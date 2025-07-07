@@ -22,6 +22,7 @@
               class="d-flex align-end"
               :src="voyage.image.src"
               :alt="voyage.image.alt"
+              :height="mdAndUp ? '500px' : '250px'"
               cover
             >
               <div class="d-flex align-center justify-center ">
@@ -116,13 +117,15 @@
 </template>
 
 <script setup>
+import { useDisplay } from 'vuetify'
+
 const route = useRoute()
 const isOption = ref(route.query.isoption === 'true')
 const isDevis = ref(route.query.devis === 'true')
 const { data: voyage, status } = await useAsyncData(route.query.voyage, () => {
   return queryCollection('voyages').where('slug', '=', route.query.voyage).first()
 })
-
+const { mdAndUp } = useDisplay()
 onMounted(() => {
   // if (route.query.amount) {
   //     const purchaseData = {

@@ -45,10 +45,7 @@
         :clamp-lines="5"
         :line-height="35"
       >
-        <MDC
-          :value="formatReviewText(review.text)"
-          tag="article"
-        />
+        {{ formatReviewText(review.text) }}
       </ExpandableText>
     </v-card-text>
   </v-sheet>
@@ -70,7 +67,7 @@ defineProps({
 })
 
 function formatReviewText(text) {
-  return text.replace(/\\n|\n/g, '<br>')
+  return text.replace(/\\n|\n/g, ' ')
 }
 </script>
 

@@ -1,13 +1,8 @@
 <template>
-  <v-container>
+  <v-container :class="route.path === '/devis' || route.path === '/checkout' ? '' : 'calendly-container'">
     <div>
       {{ text }}
     </div>
-    <!-- <div
-      class="calendly-inline-widget"
-      data-url="https://calendly.com/odysway/15min?hide_gdpr_banner=1"
-      style="min-width: 320px; height: 700px;"
-    /> -->
     <CalendlyInlineWidget v-bind="options" />
     <div v-if="isFunnel">
       <v-btn
@@ -22,6 +17,8 @@
 </template>
 
 <script setup>
+const route = useRoute()
+
 const props = defineProps({
   travelTitle: {
     type: String,
@@ -42,8 +39,16 @@ const options = {
 }
 
 useCalendlyEventListener({
-  onEventScheduled: (event) => {
+  onEventScheduled: (_event) => {
     trackPixel('trackCustom', 'RDVCalendlyPris', { voyage: `RDVCalendlyPris: ${props.travelTitle}` })
   },
 })
 </script>
+
+<style scoped>
+@media screen and (min-width: 1440px) {
+.calendly-container {
+  width: 1440px;
+}
+}
+</style>

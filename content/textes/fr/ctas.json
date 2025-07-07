@@ -5,8 +5,8 @@
       "title": "Une question ? Parlons de votre voyage",
       "subtitle": "Prenez quelques minutes avec une spécialiste de ce voyage pour en discuter tranquillement.",
       "button": {
-        "text": "Prendre rendez-vous",
-        "to": "/calendly"
+        "text": "Contactez-nous",
+        "to": "/contact"
       }
     },
     "faqHomeSubText": {

@@ -10,7 +10,6 @@
     <template #activator="{ props: activatorProps }">
       <v-btn
         :height="mdAndUp ? 58 : 40"
-        :width="mdAndUp ? 172: ''"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
@@ -28,33 +27,26 @@
       </v-btn>
     </template>
 
+    <div class="d-flex justify-end py-2">
+      <v-btn
+        :prepend-icon="mdiClose"
+        color="primary"
+        @click="dialog = false"
+      >
+        Fermer
+      </v-btn>
+    </div>
+
     <v-container fluid>
-      <v-row justify="end">
-        <v-col cols="auto">
-          <v-btn
-            :prepend-icon="mdiClose"
-            color="primary"
-            @click="dialog = false"
-          >
-            Fermer
-          </v-btn>
-        </v-col>
-      </v-row>
       <v-row>
-        <!-- <PhotoCol
-            v-for="(photo, index) in photosList"
-            :key="photo.src + index"
-            :image-src="photo.src"
-            :col-width="getColWidth(index)"
-            :alt="photo.alt"
-          /> -->
         <v-col
           cols="12"
-          class="px-0 "
+          class="px-0 py-0 py-md-3"
         >
           <v-carousel
-            class="custom-btn bg-odysway-2 rounded-lg "
+            class="custom-btn bg-odysway-2"
             hide-delimiter-background
+            :hide-delimiters="smAndDown"
             :model-value="currentSlideIndex"
             @update:model-value="handleCarouselUpdate"
           >
@@ -67,7 +59,6 @@
                 :lazy-src="img(photo.src, { format: 'webp', quality: 10, height: 900, width: 1536 })"
                 :alt="photo.alt || `Photo de galerie du voyage ${index}`"
                 width="100%"
-                class="rounded-md-lg bg-primary"
               />
             </v-carousel-item>
           </v-carousel>
@@ -89,7 +80,7 @@ const { photosList } = defineProps({
     required: true,
   },
 })
-const { mdAndUp } = useDisplay()
+const { mdAndUp, smAndDown } = useDisplay()
 const dialog = ref(false)
 const currentSlideIndex = ref(0)
 
@@ -149,5 +140,6 @@ watch(dialog, (newValue) => {
 .custom-btn:deep(.v-responsive__content){
 display: flex;
 align-items: center;
+background-color: rgba(var(--v-theme-primary));
 }
 </style>
