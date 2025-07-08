@@ -1,15 +1,15 @@
 <template>
   <v-container
     fluid
-    class="mt-1 mt-md-5 mb-1 px-0"
+    class="mt-1 mt-md-5 mb-1 px-0 pb-1 pb-md-3"
   >
     <v-row
       v-if="badgeSection"
-      class="d-flex  flex-wrap"
+      class="d-flex  flex-wrap text-custom  custom-chip-height"
     >
       <v-col
         cols="12"
-        class="d-flex  ga-4 flex-wrap"
+        class="d-flex  ga-2 ga-md-4 flex-wrap"
       >
         <v-chip
           v-if="badgeSection.experienceBadge.visible && badgeSection.experienceBadge.text"
@@ -155,3 +155,31 @@ defineProps({
 })
 const { lgAndUp } = useDisplay()
 </script>
+
+<style scoped>
+  .custom-chip-height:deep(.v-chip){
+    height: 25px!important;
+  }
+
+  .text-custom:deep(.v-chip){
+    font-size: 10px!important;
+  }
+
+  @media screen and  (min-width: 400px) {
+
+  .custom-chip-height:deep(.v-chip){
+    height: 30px!important;
+  }
+}
+  @media screen and  (min-width: 900px) {
+    .text-custom:deep(.v-chip){
+    font-size: 16px!important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .custom-chip-height:deep(.v-chip){
+    height: 46px!important;
+  }
+}
+</style>

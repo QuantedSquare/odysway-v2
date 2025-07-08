@@ -1,16 +1,17 @@
 <template>
   <v-container
     fluid
-    class="px-0 pt-0"
+    class="px-0 py-0"
   >
     <v-row
       align="center"
+      class="px-4 px-md-0"
     >
       <v-col
         cols="12"
         xs="7"
         sm="9"
-        class="text-h4 mb-5 my-md-8 font-weight-bold"
+        class="text-h4 mb-0  mt-2 mb-md-6 font-weight-bold "
       >
         {{ housingTitle }}
       </v-col>
@@ -50,7 +51,7 @@
             variant="text"
             :max-width="770"
           >
-            <v-card-text class="text-body-1 text-grey-darken-3 pa-6">
+            <v-card-text class="text-body-1 text-grey-darken-3 pa-md-6">
               <v-row>
                 <v-col
                   cols="12"
@@ -103,7 +104,7 @@
                       cols="12"
                       class="pb-0"
                     >
-                      <h2 class="text-h6 text-md-h5 font-weight-bold text-center text-md-left d-flex align-center ga-2">
+                      <h2 class="text-h5 font-weight-bold text-center text-md-left d-flex align-center ga-2">
                         <v-badge
                           color="yellow"
                           inline
@@ -125,10 +126,10 @@
                         wrapper-class="housing-description"
                       >
                         <div v-if="housing.housingType">
-                          <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
+                          <span class="font-weight-bold text-no-wrap">{{ housingTypeTitle }}:</span> {{ housing.housingType }}
                         </div>
                         <div v-if="housing.housingMood">
-                          <span class="text-h6 text-md-h5 font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
+                          <span class="font-weight-bold text-no-wrap">{{ housingMoodTitle }}:</span> {{ housing.housingMood }}
                         </div>
                       </ExpandableText>
                     </v-col>
@@ -218,6 +219,12 @@ line-height: 30px;
   .housing-text{
     font-size: 14px;
     line-height: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .housing-text{
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 .custom-btn-style:deep(.v-icon__svg){

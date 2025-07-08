@@ -1,21 +1,21 @@
 <template>
   <v-container
-    class="rounded-lg px-0 mt-5 bg-color "
+    class="rounded-lg px-0 my-5 bg-color "
     fluid
   >
-    <div class="pa-10">
+    <div class="pa-md-10">
       <v-row>
         <v-col>
-          <h2 class="text-primary text-custom-size mb-3">
+          <h2 class="text-primary text-center text-custom-size mb-md-3">
             {{ whySection.title }}
           </h2>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row justify="center">
         <v-col
           v-for="item in whySection.list"
           :key="item.id"
-          cols="12"
+          cols="11"
           sm="6"
           md="3"
         >

@@ -16,7 +16,7 @@
       >
         <v-row>
           <v-col>
-            <h2 class="text-white text-shadow">
+            <h2 class="text-md-left text-center text-white text-shadow">
               Questions fréquentes
             </h2>
           </v-col>

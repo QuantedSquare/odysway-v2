@@ -1,6 +1,6 @@
 <template>
-  <div class="text-primary d-flex flex-column ga-4">
-    <h4 class="text-h4 font-weight-bold">
+  <div class="text-primary d-flex flex-column  px-2">
+    <h4 class="text-h4 font-weight-bold mb-4">
       {{ page.authorNote.title }}
     </h4>
     <div
@@ -22,12 +22,13 @@
     <v-btn
       v-if="authorNote?.text.length > 700"
       variant="text"
-      class="text-h5"
+      width="fit-content"
+      class="text-body-2 text-md-body-1 d-flex justify-start align-center pl-0"
       @click="() => isExpanded = !isExpanded"
     >
       {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
       <v-icon
-        :icon="mdiArrowDown"
+        :icon="mdiArrowRight"
         color="primary"
         class="mt-1"
         :class="isExpanded ? 'rotate-180' : ''"
@@ -35,7 +36,7 @@
     </v-btn>
     <div
       v-if="author"
-      class="d-flex ga-3"
+      class="d-flex ga-3 mt-md-4 mt-2"
     >
       <v-avatar
         :image="author.image"
@@ -55,7 +56,7 @@
 </template>
 
 <script setup>
-import { mdiArrowDown } from '@mdi/js'
+import { mdiArrowRight } from '@mdi/js'
 
 const props = defineProps({
   authorNote: {
@@ -105,7 +106,7 @@ watch(isExpanded, async (newVal) => {
 }
 @media (max-width: 600px) {
   .line-height-2 {
-    line-height: 25px !important;
+    line-height: 20px !important;
   }
 }
 

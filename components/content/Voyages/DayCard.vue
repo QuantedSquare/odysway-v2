@@ -1,7 +1,7 @@
 <template>
   <v-card
     variant="text"
-    class="shadow-none"
+    class="shadow-none rounded-t-xl rounded-b-sm"
   >
     <v-row v-if="isHydrated">
       <v-col
@@ -9,6 +9,7 @@
         cols="12"
         sm="5"
         lg="auto"
+        class="pb-0 pb-sm-3"
       >
         <v-img
           rounded="lg"
@@ -33,7 +34,7 @@
           </div>
         </v-card-title>
 
-        <v-card-text class="text-primary text-subtitle-1 font-weight-regular pt-2 line-height px-0 pb-0">
+        <v-card-text class="text-primary text-body-2 text-md-subtitle-1 font-weight-regular pt-2 line-height px-md-0 pb-0">
           <ExpandableText
             :clamp-lines="3"
             :line-height="30"
@@ -138,6 +139,11 @@ onMounted(() => {
 @media (max-width: 600px) {
   .line-height{
     line-height: 23px !important;
+  }
+}
+@media (max-width: 400px) {
+  .line-height{
+    line-height: 20px !important;
   }
 }
 </style>

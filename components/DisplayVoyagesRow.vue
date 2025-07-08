@@ -129,12 +129,11 @@
     v-if="voyages && voyages.length > 9"
     justify="center"
     align="center"
-    class="flex-column my-8"
+    class="flex-column my-4 my-md-8"
   >
-    <span class="text-h6 text-secondary">{{ expandButtonText }}</span>
+    <span class="text-h5 text-md-h4 font-weight-bold ">{{ expandButtonText }}</span>
     <BouncingBtn
       v-model="isExpanded"
-      class="text-secondary"
     />
   </v-row>
   <!---------------------------------------------------------------------->

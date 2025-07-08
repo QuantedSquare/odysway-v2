@@ -6,10 +6,10 @@
   >
     <v-expansion-panel
       eager
-      class="my-1 my-md-2 py-md-6"
+      class="my-1 my-md-2 py-md-6 pa-1"
     >
       <v-expansion-panel-title
-        class="text-subtitle-2 font-weight-bold text-md-h6 "
+        class="text-caption text-sm-subtitle-2 font-weight-bold text-md-h6 "
         :class="'text-'+ questionColor"
       >
         <!-- {{ item.question }} -->
@@ -36,13 +36,16 @@
         eager
         class="text-subtitle-2 text-md-subtitle-1 text-grey pl-md-6 bg-white"
       >
-        <!-- {{ item.answer }} -->
         <MDCRenderer
           v-if="answer"
+          class="custom-font-size"
           :body="answer.body"
           :data="answer.data"
         />
-        <div v-if="!item">
+        <div
+          v-if="!item"
+          class="text-caption text-md-subtitle-1"
+        >
           <MDCSlot
             unwrap="p"
             name="answer"
@@ -92,5 +95,21 @@ if (item) {
 
 :deep(.v-expansion-panel-title__overlay ) {
   background-color: rgba(255, 255, 255, 0)!important;
+}
+.custom-font-size{
+  font-size: 11px!important;
+  font-weight: 300!important;
+}
+@media screen and (min-width: 600px) {
+  .custom-font-size{
+    font-size: 14px!important;
+    font-weight: 400!important;
+  }
+}
+@media screen and (min-width: 900px) {
+  .custom-font-size{
+    font-size: 16px!important;
+    font-weight: 500!important;
+  }
 }
 </style>

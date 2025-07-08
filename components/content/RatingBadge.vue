@@ -12,8 +12,8 @@
     >
       <div class="d-flex align-center">
         <svg
-          :width="smAndUp ? 18: 16"
-          :height="smAndUp ? 18 : 16"
+          :width="smAndUp ? 18 : 14"
+          :height="smAndUp ? 18 : 14"
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,12 +26,12 @@
             stroke-linejoin="round"
           />
         </svg>
-        <span class="mt-1 mt-sm-0 ml-1 text-body-2 font-weight-bold text-primary">
+        <span class="mt-0 ml-1 text-body-2 font-weight-bold text-primary">
           {{ `${rating.toString().replace('.', ',')}/5` }}
         </span>
         <span
           v-if="comments > 0"
-          class="mt-1 mt-sm-0 text-body-2 font-weight-bold text-primary"
+          class="mt-0 text-body-2 font-weight-bold text-primary"
         >
           {{ `(${comments})` }}
         </span>
@@ -42,7 +42,7 @@
       color="primary"
       class="font-weight-bold btn-shadow text-body-2 text-md-body-1"
       rounded="pill"
-      :height="smAndUp ? 46 : 36"
+      :height="smAndUp ? 46 : 30"
     >
       <span>
         Nouveau

@@ -9,7 +9,7 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
-        :height="mdAndUp ? 58 : 40"
+        :height="mdAndUp ? 58 : 30"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
@@ -18,8 +18,8 @@
         <v-img
           :src="img('/icons/Camera.svg', { format: 'webp', quality: 70, width: 640 })"
           alt="Camera icon"
-          :width="mdAndUp ? 22 : 20"
-          :height="mdAndUp ? 22 : 20"
+          :width="mdAndUp ? 22 : 14"
+          :height="mdAndUp ? 22 : 14"
         />
 
         <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>
@@ -44,7 +44,7 @@
           class="px-0 py-0 py-md-3"
         >
           <v-carousel
-            class="custom-btn bg-odysway-2"
+            class="custom-btn bg-primary"
             hide-delimiter-background
             :hide-delimiters="smAndDown"
             :model-value="currentSlideIndex"

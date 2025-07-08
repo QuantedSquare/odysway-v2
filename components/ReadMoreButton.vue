@@ -3,7 +3,8 @@
     v-if="showButton"
     variant="text"
     :class="buttonClass"
-    class="pl-0"
+    class="pl-0 text-body-2 text-md-body-1"
+    width="fit-content"
     @click="onToggle"
   >
     {{ isExpanded ? expandedText : collapsedText }}

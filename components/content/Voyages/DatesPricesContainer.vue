@@ -10,9 +10,10 @@
       v-if="isGroupeAvailable"
       justify="center"
       align="center"
+      class="px-2 px-md-0"
     >
       <v-col
-        class="font-weight-black text-h4 mt-4 my-md-4"
+        class="font-weight-black text-h4 mt-4 my-md-4 "
       >
         {{ dateSections.title }}
       </v-col>
@@ -37,7 +38,7 @@
       align="center"
       class="flex-column"
     >
-      <span class="text-h4 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }} de dates</span>
+      <span class="text-h5 text-md-h4 font-weight-bold mt-4">Voir {{ isExpanded ? 'moins' : 'plus' }} de dates</span>
       <BouncingBtn v-model="isExpanded" />
     </v-row>
     <v-row v-if="isPrivatisationAvailable && isGroupeAvailable">

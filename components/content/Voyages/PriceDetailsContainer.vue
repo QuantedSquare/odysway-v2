@@ -8,7 +8,7 @@
       align="center"
     >
       <v-col
-        class="font-weight-black text-h4"
+        class="font-weight-black text-h4 px-5 px-md-0"
       >
         {{ priceDetailsSection.title }}
       </v-col>
@@ -27,14 +27,14 @@
             <v-chip
               variant="flat"
               color="green"
-              density="compact"
+              density=""
             >
               <span class="font-weight-bold px-1 pb-1">
                 {{ priceDetailsSection.priceInclude }}
               </span>
             </v-chip>
           </v-list-subheader>
-          <v-container class="px-0">
+          <v-container class="px-md-0">
             <PriceDetailsItem
               v-for="item, index in pricingDetailsBlock.include"
               :key="index"
@@ -58,14 +58,14 @@
             <v-chip
               variant="flat"
               color="secondary"
-              density="compact"
+              density=""
             >
               <span class="font-weight-bold px-1 pb-1">
                 {{ priceDetailsSection.priceExclude }}
               </span>
             </v-chip>
           </v-list-subheader>
-          <v-container class="px-0">
+          <v-container class="px-md-0">
             <PriceDetailsItem
               v-for="item, index in pricingDetailsBlock.exclude"
               :key="index"
@@ -75,7 +75,7 @@
         </v-list>
       </v-col>
     </v-row>
-    <v-divider class="my-6" />
+    <v-divider class="my-2 my-md-6" />
   </v-container>
 </template>
 

@@ -6,8 +6,9 @@
     <v-row>
       <v-col
         cols="12"
+        sm="6"
         md="5"
-        class="d-flex flex-column align-start ga-1 ga-md-0"
+        class="d-flex flex-column align-start ga-1 ga-md-0 "
       >
         <div class="d-flex align-center ga-2">
           <v-badge
@@ -103,11 +104,25 @@
             </span>
           </v-chip>
         </v-row>
+        <v-row class="pl-5 pl-md-2 pt-1 d-none d-sm-flex d-md-none flex-column justify-center align-start  justify-lg-start">
+          <span
+            class="text-h2 font-weight-black"
+            :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"
+          >
+            {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
+          </span>
+          <span
+            v-if="enrichedDate.last_minute || enrichedDate.early_bird"
+            class="text-h2 font-weight-black text-green-light"
+          >
+            {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
+          </span>
+        </v-row>
       </v-col>
       <v-col
-        cols="5"
+        cols="6"
         md="3"
-        class="pl-5 pl-md-2 pt-1 d-flex flex-column justify-center align-start  justify-lg-start"
+        class="pl-5 pl-md-2 pt-1 d-none d-md-flex flex-column justify-center align-start  justify-lg-start"
       >
         <span
           class="text-h2 font-weight-black"
@@ -122,20 +137,37 @@
           {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
         </span>
       </v-col>
+      <v-spacer />
       <v-col
-        cols="7"
-        md="4"
+        cols="12"
+        sm="4"
       >
         <v-row
+          justify="end"
           justify-md="center"
           class="text-center"
         >
+          <v-col class="pl-5 pl-md-2 pt-1 d-flex d-sm-none flex-column justify-center align-start  justify-lg-start">
+            <span
+              class="text-h2 font-weight-black"
+              :class="enrichedDate.last_minute || enrichedDate.early_bird ? 'text-decoration-line-through text-grey text-body-2' : ''"
+            >
+              {{ formatNumber(enrichedDate.starting_price * 100) }}€<span class="text-body-2 font-weight-bold">/pers</span>
+            </span>
+            <span
+              v-if="enrichedDate.last_minute || enrichedDate.early_bird"
+              class="text-h2 font-weight-black text-green-light"
+            >
+              {{ formatNumber((enrichedDate.starting_price - (enrichedDate.last_minute ? enrichedDate.lastMinutePrice : enrichedDate.earlyBirdPrice)) * 100) }}€<span class="text-body-2 font-weight-bold  ">/pers</span>
+            </span>
+          </v-col>
           <v-col
-            cols="12"
+            cols="6"
+            sm="12"
           >
             <v-btn-secondary
               :height="width < 500 ? 50 : 60"
-              :block="width > 440"
+              block
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
               :to="formatLink(enrichedDate)"
@@ -147,7 +179,7 @@
             </v-btn-secondary>
           </v-col>
         </v-row>
-        <v-row class="text-size-14 text-grey d-none d-md-block">
+        <v-row class="text-size-14 text-grey d-none d-sm-block">
           <v-col
             cols="12"
             class="d-flex align-start flex-column "
@@ -225,8 +257,7 @@ const formatLink = (date) => {
 
 <style scoped>
 .custom-height-card{
-    height: 110%!important;
-
+    height: fit-content!important;
   }
   .custom-chip-height:deep(.v-chip){
     height: 25px!important;
@@ -236,7 +267,7 @@ const formatLink = (date) => {
   font-size: 11px!important;
   }
   .text-size-14 {
-  font-size: 14px!important;
+  font-size: 10px!important;
   }
   .font-size-custom {
     font-weight: 500!important;
@@ -245,7 +276,7 @@ const formatLink = (date) => {
     line-height: 20px !important;
   }
   .text-custom:deep(.v-chip){
-    font-size: 11px!important;
+    font-size: 10px!important;
   }
   .flex-direction-custom{
     flex-direction: column;
@@ -254,14 +285,23 @@ const formatLink = (date) => {
     .flex-direction-custom{
       flex-direction: row;
     }
-    .text-custom:deep(.v-chip){
-    font-size: 16px!important;
-  }
   .custom-chip-height:deep(.v-chip){
     height: 30px!important;
   }
 }
-
+  @media screen and  (min-width: 900px) {
+    .text-custom:deep(.v-chip){
+    font-size: 16px!important;
+  }
+  .text-size-14 {
+  font-size: 14px!important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .custom-height-card{
+    height: fit-content!important;
+  }
+}
 @media screen and (min-width: 960px) {
   .custom-height-card{
     height: 100%!important;

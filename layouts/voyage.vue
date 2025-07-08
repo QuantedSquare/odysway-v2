@@ -9,7 +9,7 @@
         v-model="drawer"
       />
     </ClientOnly>
-    <v-main class="main-content mx-0 mx-md-5 custom-margin-x mb-0">
+    <v-main class="main-content mx-0 mx-md-5 custom-margin-x mb-0 ">
       <slot />
     </v-main>
 
@@ -21,7 +21,9 @@
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
-      <LazyTopTravelsTabs />
+      <div class="mx-1">
+        <LazyTopTravelsTabs />
+      </div>
     </v-container>
     <FooterOdysway />
   </v-app>

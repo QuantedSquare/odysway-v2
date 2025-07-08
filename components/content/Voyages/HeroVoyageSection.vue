@@ -8,7 +8,7 @@
         cols="12"
         md="8"
       >
-        <h1 class="d-flex flex-column text-primary text-h2  font-weight-bold  mb-md-0">
+        <h1 class="d-flex flex-column text-primary text-h3 text-md-h2  font-weight-bold px-2 px-md-0   mb-md-0">
           {{ voyage.title }}
           <div class="d-flex align-center mt-2">
             <RatingBadge
@@ -22,16 +22,16 @@
               color="white"
               rounded="pill"
               class="btn-shadow d-md-none"
-              :height="smAndUp ? 46 : 36"
+              :height="smAndUp ? 46 : 30"
               @click="copyUrl"
             >
               <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-2">
                 <v-icon
                   :icon="mdiExportVariant"
-                  :size="smAndUp ? 20 : 16"
+                  :size="smAndUp ? 18 : 14"
                   color="primary"
                 />
-                <span class="mt-1">Partager</span>
+                <span class="mt-md-1">Partager</span>
               </div>
             </v-btn>
           </div>
@@ -51,7 +51,7 @@
           :height="smAndUp ? 46 : 36"
           @click="copyUrl"
         >
-          <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-2">
+          <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-md-2 ga-1">
             <v-icon
               :icon="mdiExportVariant"
               :size="smAndUp ? 20 : 16"

@@ -2,20 +2,21 @@
   <v-container
     v-if="voyageRef.accompanistsList"
     fluid
-    class="px-0 pb-0"
+    class="px-0 py-0"
   >
     <v-row>
       <v-col
         cols="12"
+        class="px-3 px-md-0"
       >
-        <h4 class="font-weight-black text-h4 ">
+        <h4 class="font-weight-bold text-h4 px-2 px-md-0 mb-4 mb-md-6">
           {{ title }}
         </h4>
       </v-col>
-      <v-col class="text-grey-darken-3 pb-0">
+      <v-col class="text-grey-darken-3 py-0 px-5 px-md-4">
         <div
           v-if="voyageRef.accompanistsDescription"
-          class="mb-4"
+          class="mb-4 text-body-2 text-sm-caption"
         >
           {{ voyageRef.accompanistsDescription }}
         </div>

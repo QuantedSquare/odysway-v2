@@ -1,12 +1,12 @@
 <template>
   <v-app-bar
     location="bottom"
-    class="d-md-none pb-1 pb-sm-0 bottom-app-bar"
+    class="d-md-none pb-sm-0 bottom-app-bar mx-0"
   >
-    <v-container class="py-0">
+    <v-container class="px-3">
       <v-row
         no-gutters
-        class="mx-4"
+        class="px-0 "
       >
         <v-col
           cols="5"

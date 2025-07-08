@@ -40,13 +40,13 @@
             </v-col>
           </v-row>
           <v-row
-            class="mb-10 text-shadow"
+            class="mb-4 mb-md-10 text-shadow"
             justify="center"
           >
             <v-col cols="7">
               <div
                 v-if="route.path !== '/faq'"
-                class="text-center text-h5 text-white font-weight-bold"
+                class="text-center text-h6 text-md-h5 text-white font-weight-bold"
               >
                 <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
                 <NuxtLink
@@ -54,7 +54,7 @@
                   class="text-secondary font-weight-bold"
                 > {{ faqTextes?.faqSection?.faqHomeSubText?.text }} </NuxtLink>
               </div>
-              <div class="text-center text-h5 text-white font-weight-regular d-flex flex-column mt-6">
+              <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
                 <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
                   <NuxtLink
                     :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"

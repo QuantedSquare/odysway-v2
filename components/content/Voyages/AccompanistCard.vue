@@ -1,7 +1,7 @@
 <template>
   <v-card
     variant="text"
-    class="mb-4 py-6"
+    class="mb-4 py-md-6"
   >
     <v-card-text>
       <v-row>
@@ -16,17 +16,17 @@
           />
         </v-col>
         <v-col class="d-flex flex-column justify-center align-center align-sm-start">
-          <v-list-item-title class="text-h5 font-weight-bold text-center text-sm-start no-white-space mb-2 ">
+          <v-list-item-title class="text-h5 font-weight-bold text-center text-sm-start no-white-space mb-md-2 ">
             {{ name }}
           </v-list-item-title>
-          <v-list-item-subtitle class="no-white-space text-h5 pb-1">
+          <v-list-item-subtitle class="no-white-space text-h6 pb-1">
             {{ role }}
           </v-list-item-subtitle>
           <ExpandableText
             v-if="description"
             :clamp-lines="2"
             :line-height="30"
-            wrapper-class="my-2 my-md-4 text-grey text-h5 font-weight-regular"
+            wrapper-class="my-0 my-md-4 text-grey text-body-2 text-md-h5 font-weight-regular"
             button-class="text-h5 text-decoration-underline"
           >
             {{ description }}
