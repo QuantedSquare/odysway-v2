@@ -1,6 +1,7 @@
 <template>
   <v-container
     fluid
+    class="py-md-4 py-1"
   >
     <v-row
       align="center"
@@ -9,7 +10,7 @@
       <v-col
         cols="12"
         md="10"
-        class="text-h2"
+        class="text-h2 pb-2"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
         <slot name="title" />

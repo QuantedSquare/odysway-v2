@@ -1,6 +1,7 @@
 <template>
   <v-container
     :fluid="width <= 1600"
+    class="py-1"
   >
     <v-row align="center">
       <template v-if="!isOnVoyage">
@@ -21,9 +22,10 @@
         cols="12"
         :md="isOnVoyage ? 12 : 6"
         :lg="isOnVoyage ? 12 : 5"
+        class="pb-2 "
       >
         <div
-          class="d-flex flex-column  align-center rounded-md px-3 pt-2"
+          class="d-flex flex-column  align-center rounded-md px-3 pt-md-2"
           :class="isOnVoyage ? 'bg-grey-light' : 'bg-white flex-md-row'"
         >
           <v-text-field

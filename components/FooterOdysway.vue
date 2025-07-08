@@ -68,7 +68,7 @@
           <v-col
             cols="12"
             md="4"
-            class="d-flex flex-column align-center justify-space-between ga-6 px-8"
+            class="d-flex flex-column align-md-center justify-space-between ga-6 px-3 px-md-8"
           >
             <h5 class="text-h4 font-weight-bold">
               {{ footer.contact.ctaText }}

@@ -10,7 +10,7 @@
       />
     </ClientOnly>
 
-    <v-main class="main-content mx-0 mx-md-5">
+    <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
     </v-main>
     <div class="whatsapp-button d-lg-none mb-16">
@@ -25,24 +25,26 @@
         v-if="faqPage"
         :value="faqPage"
       />
-      <ColorContainer
-        v-if="partenairesTextes"
-        color="secondary"
-        :white-text="true"
-      >
-        <InfoContainer :white-text="true">
-          <template #title>
-            {{ partenairesTextes?.layoutInfoContainer?.title }}
-          </template>
-          <template #description>
-            {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
-          </template>
-          <template #bottom>
-            <PartenairesContainer />
-          </template>
-        </InfoContainer>
-      </ColorContainer>
-      <LazyTopTravelsTabs />
+      <div class="mx-1">
+        <ColorContainer
+          v-if="partenairesTextes"
+          color="secondary"
+          :white-text="true"
+        >
+          <InfoContainer :white-text="true">
+            <template #title>
+              {{ partenairesTextes?.layoutInfoContainer?.title }}
+            </template>
+            <template #description>
+              {{ partenairesTextes?.layoutInfoContainer?.subtitle }}
+            </template>
+            <template #bottom>
+              <PartenairesContainer />
+            </template>
+          </InfoContainer>
+        </ColorContainer>
+        <LazyTopTravelsTabs />
+      </div>
     </v-container>
     <FooterOdysway />
   </v-app>

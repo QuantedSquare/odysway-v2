@@ -5,7 +5,7 @@
   >
     <div
       ref="container"
-      class="rounded-md bg-white pa-4 pb-0  search-field-min-height "
+      class="rounded-md bg-white pa-3 pa-md-4 pb-0  search-field-min-height "
       :class="{ 'search-field-shadow': !showDestinationsCarousel }"
     >
       <v-row

@@ -24,7 +24,7 @@
           :aria-selected="currentTab === index"
           :aria-controls="`tabpanel-${index}`"
         >
-          <span class="font-weight-bold">
+          <span class="font-weight-bold text-caption text-md-h6">
             {{ top.title }}
           </span>
         </v-tab>
@@ -48,14 +48,14 @@
         role="tabpanel"
         :aria-labelledby="`tab-${index}`"
       >
-        <v-row class="mb-16 pb-16">
+        <v-row class=" mb-4 mb-md-16 pb-md-16">
           <v-col
             v-for="top, f in tops[currentTab].contenuOnglet"
             :key="`${top.title}-${f}`"
             cols="6"
             md="3"
           >
-            <h5 class="text-h4 font-weight-bold mb-10 ">
+            <h5 class="text-h6 text-md-h4 font-weight-bold mb-4 mb-md-10 ">
               {{ top.title }}
             </h5>
             <div class="d-flex flex-column ga-2">
@@ -63,7 +63,7 @@
                 v-for="link, i in top.linksList"
                 :key="`${link.slug}-${i}`"
                 :to="`/voyages/${link.slug}`"
-                class="text-white-light line-clamp-2"
+                class="text-white-light line-clamp-2 text-caption text-md-body-1 font-weight-regular"
               >
                 {{ link.title }}
               </NuxtLink>
