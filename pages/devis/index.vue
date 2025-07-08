@@ -113,6 +113,14 @@
                           </div>
                         </v-btn>
                         <v-btn
+                          v-else-if="currentStep === 2 && skipperChoice === 'devis'"
+                          color="secondary"
+                          :disabled="!validateRequiredInfosOnStep2"
+                          @click="nextStep"
+                        >
+                          {{ pageTexts.buttons.next }}
+                        </v-btn>
+                        <v-btn
                           v-else-if="!showCalendly"
                           color="secondary"
                           @click="nextStep"
@@ -141,12 +149,13 @@ const router = useRouter()
 const skipperChoice = ref('devis')
 const currentStep = ref(1)
 const details = ref({
+  includeDates: false,
   departureDate: '',
   returnDate: '',
   nbAdults: route.query.nbAdults || 1,
   nbChildren: route.query.nbChildren || 0,
   includeFlight: false,
-  departureAirport: '',
+  departureAirport: null,
 })
 const isLoading = ref(false)
 
@@ -176,6 +185,15 @@ const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts'
 const nextStep = () => {
   currentStep.value++
 }
+const validateRequiredInfosOnStep2 = computed(() => {
+  if (details.value.includeFlight && !details.value.departureAirport) {
+    return false
+  }
+  else if (details.value.includeDates && (!details.value.departureDate || !details.value.returnDate)) {
+    return false
+  }
+  return true
+})
 const previousStep = () => {
   currentStep.value--
   if (showCalendly.value) {

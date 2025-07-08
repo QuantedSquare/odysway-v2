@@ -45,7 +45,7 @@
         cols="12"
         md="6"
       >
-        <v-radio-group v-model="gotDates">
+        <v-radio-group v-model="model.includeDates">
           <v-radio
             :label="page.second_step.option_1"
             :value="false"
@@ -58,7 +58,7 @@
       </v-col>
       <Transition name="slide">
         <v-col
-          v-if="gotDates"
+          v-if="model.includeDates"
           cols="12"
           md="6"
         >
@@ -69,6 +69,7 @@
             :format-display="displayFormat"
             :min="dayjs().add(1, 'day').toDate()"
             :placeholder="page.form_labels.date_placeholder"
+            :error-messages="model.includeDates && (!model.departureDate || !model.returnDate) ? 'Veuillez sélectionner une période' : ''"
           />
         </v-col>
       </Transition>
@@ -107,6 +108,7 @@
           </div>
           <v-text-field
             v-model="model.departureAirport"
+            :error-messages="model.departureAirport ? '' : 'Veuillez sélectionner un aéroport'"
             :label="page.form_labels.departure_airport_label"
           />
         </v-col>
@@ -135,7 +137,6 @@ const { page } = defineProps({
 const { gtag } = useGtag()
 const model = defineModel()
 
-const gotDates = ref(true)
 const selectedDates = ref([])
 const includeFlight = ref(false)
 
