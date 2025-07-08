@@ -38,12 +38,21 @@
             hide-details
             :readonly="emailSentToBrevo"
             persistent-hint
-            density="compact"
+            density="comfortable"
             :bg-color="isOnVoyage ? 'grey-light' : 'white'"
             class="w-100"
-            :label="newsletterContent?.emailPlaceholder || 'Entrez votre adresse email'"
             type="email"
-          />
+          >
+            <template #label>
+              <!-- Vuetify classes does not work for scaling labels -->
+              <h2 class="d-none d-md-block">
+                {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
+              </h2>
+              <h4 class="d-md-none">
+                {{ newsletterContent?.emailPlaceholder || 'Entrez votre adresse email' }}
+              </h4>
+            </template>
+          </v-text-field>
           <v-btn-secondary
             v-if="isOnVoyage"
             :height="40"
@@ -144,7 +153,6 @@ const subscribeToNewsletter = async () => {
 /* Center placeholder */
 :deep(.v-field-label) {
   font-weight: bold !important;
-  color: rgb(var(--v-theme-grey)) !important;
-
+  color: rgb(118, 118, 118, 0.7) !important;
 }
 </style>

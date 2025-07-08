@@ -27,7 +27,6 @@
             <v-chip
               variant="flat"
               color="green"
-              density=""
             >
               <span class="font-weight-bold px-1 pb-1">
                 {{ priceDetailsSection.priceInclude }}
@@ -58,7 +57,6 @@
             <v-chip
               variant="flat"
               color="secondary"
-              density=""
             >
               <span class="font-weight-bold px-1 pb-1">
                 {{ priceDetailsSection.priceExclude }}
