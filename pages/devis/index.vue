@@ -14,10 +14,9 @@
       cover
       class="absolute"
     /> -->
-
     <v-row justify="center">
       <v-col
-        v-if="pageStatus === 'success'"
+        v-if="pageStatus === 'success' && voyage"
         cols="12"
       >
         <FunnelStepsStepperHeader
@@ -33,7 +32,7 @@
               <v-card
                 class="border-width relative w-md-75 w-lg-50 w-xl-33 no-margin-window "
               >
-                <v-img
+                <!-- <v-img
                   color="surface-variant"
                   height="100"
                   :src="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
@@ -47,7 +46,16 @@
                   <div class="text-center text-body-1 text-shadow px-3">
                     {{ voyage.title }}
                   </div>
-                </v-img>
+                  <div id="card-header" />
+                </v-img> -->
+                <FunnelCardHeader
+                  :titre="voyage.title"
+                  :travel-type="'Individuel'"
+                  :image="img(voyage.image.src, { format: 'webp', quality: 70, height: 900, width: 1536 })"
+                  :date="null"
+                  :current-step="1"
+                />
+
                 <v-stepper-window :model-value="currentStep">
                   <v-stepper-window-item :value="1">
                     <DevisSkipper
@@ -153,19 +161,15 @@ const userInfo = ref({
 })
 
 const validateInfos = computed(() => {
-  console.log('userInfo', userInfo.value)
   return userInfo.value.firstname && userInfo.value.lastname && userInfo.value.email && userInfo.value.phone && userInfo.value.acceptTerms
 })
 
 const voyage = await queryCollection('voyages').where('slug', '=', route.query.slug).first()
-console.log('voyage', voyage)
 const destinations = await queryCollection('destinations').where('titre', 'IN', voyage.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
-console.log('destinations', destinations)
 // const { data: page, status: pageStatus } = await useFetch('/api/v1/pages/' + route.name)
 const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts', () =>
   queryCollection('devis').first(),
 )
-console.log('page', pageTexts)
 
 const nextStep = () => {
   currentStep.value++

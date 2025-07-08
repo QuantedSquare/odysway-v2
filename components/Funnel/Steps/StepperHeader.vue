@@ -7,37 +7,39 @@
     alt-labels
     class="text-caption"
   >
-    <Teleport
-      to="#card-header"
-      defer
-    >
-      <v-stepper-header
-        v-if="props.skipperMode !== 'summary'"
-        class="elevation-0 text-white d-flex justify-space-between"
+    <ClientOnly>
+      <Teleport
+        to="#card-header"
+        defer
       >
-        <template
-          v-for="(step, index) in stepDefinitions"
-          :key="step.number"
+        <v-stepper-header
+          v-if="props.skipperMode !== 'summary'"
+          class="elevation-0 text-white d-flex justify-space-between"
         >
-          <v-stepper-item
-            :complete="model + 1 > step.number"
-            :step="step.number"
-            color="white"
-            :value="index + 1"
+          <template
+            v-for="(step, index) in stepDefinitions"
+            :key="step.number"
           >
-            <span class="d-none d-md-block font-weight-bold  text-white text-caption">
-              <!-- {{ index + 1 }}. -->
-              {{ step.label }}
-            </span>
-          </v-stepper-item>
-          <v-divider
-            v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
-            class="text-shadow text-white"
-            opacity="0.6"
-          />
-        </template>
-      </v-stepper-header>
-    </Teleport>
+            <v-stepper-item
+              :complete="model + 1 > step.number"
+              :step="step.number"
+              color="white"
+              :value="index + 1"
+            >
+              <span class="d-none d-md-block font-weight-bold  text-white text-caption">
+                <!-- {{ index + 1 }}. -->
+                {{ step.label }}
+              </span>
+            </v-stepper-item>
+            <v-divider
+              v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
+              class="text-shadow text-white"
+              opacity="0.6"
+            />
+          </template>
+        </v-stepper-header>
+      </Teleport>
+    </ClientOnly>
     <slot />
   </v-stepper>
 </template>

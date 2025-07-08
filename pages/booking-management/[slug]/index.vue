@@ -177,10 +177,11 @@ const duplicateDate = async (date) => {
 }
 
 const deleteDate = async (date) => {
-  if (!confirm('Supprimer cette date ?')) return
+  if (!confirm('Supprimer cette date ? Attention, toutes les réservations associées à cette date seront également supprimées.')) return
   const res = await fetch(`/api/v1/booking/${slug}/date/${date.id}`, {
     method: 'DELETE',
   })
+  console.log('======res after delete date=======', res)
   if (res.ok) {
     await fetchDates()
   }

@@ -6,11 +6,11 @@
   >
     <div class="d-flex align-center justify-start  flex-md-row ">
       <v-avatar
-        :image="props.image || 'https://odysway.com/logos/logo_noir.png'"
+        :image="image || 'https://odysway.com/logos/logo_noir.png'"
         size="100"
         rounded="lg"
       />
-      <!-- //Teleport location of the stepper header -->
+      <!-- Always render the teleport target to avoid hydration issues -->
       <div
         id="card-header"
         class="text-white text-h6 text-md-h5  w-100"
@@ -19,7 +19,7 @@
   </v-container>
   <v-img
     v-if="currentStep > 0"
-    :src="props.image || 'https://odysway.com/logos/logo_noir.png'"
+    :src="image || 'https://odysway.com/logos/logo_noir.png'"
     :alt="`Paysage de destination pour le voyage ${titre}`"
     height="120"
     width="100%"
@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['titre', 'image', 'travelType', 'date', 'price', 'currentStep'])
+defineProps(['titre', 'image', 'travelType', 'date', 'price', 'currentStep'])
 </script>
 
 <style scoped>

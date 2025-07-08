@@ -36,11 +36,19 @@
 </template>
 
 <script setup>
-defineProps({
+const { page } = defineProps({
   page: {
     type: Object,
     required: true,
   },
 })
+
 const model = defineModel()
+
+// Ensure the model is properly initialized
+onMounted(() => {
+  if (!model.value) {
+    model.value = 'devis' // Set default value
+  }
+})
 </script>

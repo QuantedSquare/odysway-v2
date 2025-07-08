@@ -9,6 +9,8 @@ export default defineEventHandler(async (event) => {
     .select('travel_date_id')
     .eq('id', bookedId)
     .single()
+
+  console.log('======bookedRow=======', bookedRow, fetchError)
   if (fetchError || !bookedRow) return { error: 'Impossible de trouver la réservation à supprimer.' }
   const travel_date_id = bookedRow.travel_date_id
 
