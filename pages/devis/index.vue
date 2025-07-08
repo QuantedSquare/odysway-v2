@@ -83,7 +83,7 @@
                   </v-stepper-window-item>
                   <v-stepper-window-item
                     v-if="skipperChoice === 'devis'"
-                    :value="3 "
+                    :value="3"
                   >
                     <DevisUserInfoForm
                       v-model="userInfo"
@@ -91,10 +91,11 @@
                     />
                   </v-stepper-window-item>
                 </v-stepper-window>
-                <v-card-actions>
+                <v-card-actions class="d-flex justify-center">
                   <v-stepper-actions
                     :next-text="pageTexts.buttons.next"
                     :prev-text="currentStep !== 0 ? pageTexts.buttons.previous : ''"
+                    :class="currentStep === 3 ? 'last-step' : ''"
                     @click:next="nextStep()"
                     @click:prev="previousStep()"
                   >
@@ -107,7 +108,9 @@
                           :loading="isLoading"
                           @click="submit"
                         >
-                          {{ skipperChoice === 'devis' ? pageTexts.buttons.send_devis_request : pageTexts.buttons.take_appointment }}
+                          <div class="text-wrap">
+                            {{ skipperChoice === 'devis' ? pageTexts.buttons.send_devis_request : pageTexts.buttons.take_appointment }}
+                          </div>
                         </v-btn>
                         <v-btn
                           v-else-if="!showCalendly"
@@ -132,7 +135,6 @@
 <script setup>
 import { useImage } from '#imports'
 
-const config = useRuntimeConfig()
 const img = useImage()
 const route = useRoute()
 const router = useRouter()
@@ -239,6 +241,9 @@ const submit = async () => {
   }
   isLoading.value = false
 }
+const isLastStepCSS = computed(() => {
+  return currentStep.value === 3 ? 'column' : 'row'
+})
 </script>
 
 <style scoped>
@@ -268,6 +273,12 @@ const submit = async () => {
   .no-margin-window .v-stepper-window {
   margin-left:0!important;
   margin-right:0!important;
+  }
+  .v-stepper-actions{
+  display: flex!important;
+  flex-direction: v-bind(isLastStepCSS) !important;
+  justify-content: center!important;
+  align-items: center!important;
   }
 }
 </style>
