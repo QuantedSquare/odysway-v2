@@ -166,13 +166,14 @@ const userInfo = ref({
   lastname: '',
   email: '',
   phone: '',
+  validatePhone: false,
   acceptTerms: false,
   subscribeToNewsletter: false,
   departureAirport: '',
 })
 
 const validateInfos = computed(() => {
-  return userInfo.value.firstname && userInfo.value.lastname && userInfo.value.email && userInfo.value.phone && userInfo.value.acceptTerms
+  return userInfo.value.firstname && userInfo.value.lastname && userInfo.value.email && userInfo.value.validatePhone && userInfo.value.acceptTerms
 })
 
 const voyage = await queryCollection('voyages').where('slug', '=', route.query.slug).first()

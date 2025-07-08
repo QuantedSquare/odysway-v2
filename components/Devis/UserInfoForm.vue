@@ -48,6 +48,7 @@
         >
           <PhoneTextField
             v-model="model.phone"
+            @validity-changed="model.validatePhone = $event"
           />
         </v-col>
         <v-col
