@@ -63,7 +63,7 @@
       >
         <Transition name="slide-fade">
           <v-textarea
-            v-if="otherFoodOption"
+            v-if="otherFoodOption || vegeOption"
             v-model="specialRequest"
             variant="outlined"
             :label="page.options.special_request_label"
