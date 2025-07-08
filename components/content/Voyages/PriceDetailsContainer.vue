@@ -8,7 +8,7 @@
       align="center"
     >
       <v-col
-        class="font-weight-black text-h4 px-5 px-md-0"
+        class="font-weight-black text-h4 px-6 px-md-0"
       >
         {{ priceDetailsSection.title }}
       </v-col>

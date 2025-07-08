@@ -1,5 +1,5 @@
 <template>
-  <div class="text-primary d-flex flex-column  px-2">
+  <div class="text-primary d-flex flex-column px-2">
     <h4 class="text-h4 font-weight-bold mb-4">
       {{ page.authorNote.title }}
     </h4>
