@@ -5,7 +5,7 @@
   >
     <v-row
       align="center"
-      class="px-4 px-md-0"
+      class="px-2 px-md-0"
     >
       <v-col
         cols="12"

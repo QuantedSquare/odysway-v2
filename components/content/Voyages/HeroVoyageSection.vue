@@ -189,7 +189,7 @@ function copyUrl() {
   .media-btns-position{
   position: absolute;
   bottom: 15px;
-  left: 20px;
+  left: 15px;
 }
   .custom-height{
   height: 270px;

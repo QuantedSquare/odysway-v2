@@ -1,7 +1,7 @@
 <template>
   <v-container
     fluid
-    class="mt-1 mt-md-5 mb-1 px-0 pb-1 pb-md-3"
+    class="pt-2 mt-0 mt-md-5 mb-1 px-0 pb-1 pb-md-3"
   >
     <v-row
       v-if="badgeSection"

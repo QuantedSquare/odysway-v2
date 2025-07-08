@@ -12,7 +12,7 @@
       <v-col
         cols="12"
         md="10"
-        class="text-h4 my-4 font-weight-bold"
+        class="text-h4 my-4 font-weight-bold px-5 px-md-0"
         :class="{ 'text-md-center text-start': centerTitle }"
       >
         {{ reviewsSection.title }}

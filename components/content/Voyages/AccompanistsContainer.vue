@@ -7,7 +7,7 @@
     <v-row>
       <v-col
         cols="12"
-        class="px-3 px-md-0"
+        class="px-1 px-md-0"
       >
         <h4 class="font-weight-bold text-h4 px-4 px-md-0 mb-4 mb-md-6">
           {{ title }}

@@ -9,7 +9,7 @@
             cols="12"
             class="text-primary d-flex flex-column justify-lg-center"
           >
-            <div class=" d-flex align-center ga-4">
+            <div class="d-flex align-center ga-4">
               <v-avatar
                 color="yellow"
                 size="40"

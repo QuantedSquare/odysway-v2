@@ -24,7 +24,7 @@
         cols="12"
         sm="7"
       >
-        <v-card-title class="no-white-space px-0 pb-1">
+        <v-card-title class="no-white-space px-2 px-md-0 pb-1">
           <div class="d-flex align-center ga-3">
             <span class="d-flex align-center bg-secondary rounded-lg text-caption text-sm-subtitle-2 font-weight-bold text-white px-2 py-1 text-no-wrap">
               {{ badgeText }}
@@ -34,7 +34,7 @@
           </div>
         </v-card-title>
 
-        <v-card-text class="text-primary text-body-2 text-md-subtitle-1 font-weight-regular pt-2 line-height px-md-0 pb-0">
+        <v-card-text class="text-primary text-body-2 text-md-subtitle-1 font-weight-regular pt-2 line-height px-2 px-md-0 pb-0">
           <ExpandableText
             :clamp-lines="3"
             :line-height="30"

@@ -33,6 +33,6 @@ const { highlight } = defineProps({
 <style scoped>
 .custom-alignement:deep(.v-list-item__prepend) {
   align-self: flex-start !important;
-  margin-top: 2px !important;
+  margin-top: -2px !important;
 }
 </style>

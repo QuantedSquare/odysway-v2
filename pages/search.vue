@@ -9,9 +9,9 @@
     <v-row class=" pb-0 pt-4 mt-md-12">
       <v-col
         cols="12"
-        class="px-md-12 d-flex ga-2 align-center flex-wrap"
+        class="px-4 px-md-12 d-flex ga-2 align-center flex-wrap"
       >
-        <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages === 1 ? `1 ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
+        <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages <= 1 ? `${nbVoyages} ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
             ${searchContent?.multipleTrips || 'voyages'}` }}
         </span>
 
