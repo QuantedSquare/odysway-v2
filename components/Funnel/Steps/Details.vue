@@ -146,9 +146,9 @@
 import { z } from 'zod'
 import { computed } from 'vue'
 
-const { currentStep, ownStep, voyage, page, checkoutType } = defineProps(['currentStep', 'ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType'])
+const { ownStep, voyage, page, checkoutType } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType'])
 const emit = defineEmits(['next', 'previous', 'validity-changed'])
-const config = useRuntimeConfig()
+// const config = useRuntimeConfig()
 
 const model = defineModel()
 
@@ -156,7 +156,6 @@ const loadingDeal = ref(false)
 const buttonLoading = ref(false)
 
 const { createDeal, updateDeal } = useStepperDeal(ownStep)
-const { addSingleParam } = useParams()
 const route = useRoute()
 
 // New: Local validation state
@@ -182,12 +181,6 @@ const isValid = computed(() => {
 
   return hasValidName && hasValidEmail && hasValidTravelers && isPhoneValid.value
 })
-
-watch(() => currentStep, (value) => {
-  if (value === ownStep) {
-    addSingleParam('step', ownStep)
-  }
-}, { immediate: true })
 
 const saveToLocalStorage = () => {
   const dataToStore = {
@@ -300,6 +293,7 @@ const submitStepData = async () => {
         flightPrice: voyage.flightPrice,
         // maxTeenAge: voyage.maxTeenAge,
         source: 'Devis',
+        indivRoom: voyage.indivRoom && voyage.indivRoomPrice > 0 ? ['Oui'] : ['Non'],
         forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',
         indivRoomPrice: voyage.indivRoomPrice,
         promoEarlybird: voyage.promoEarlybird,

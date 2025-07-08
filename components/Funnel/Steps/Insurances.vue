@@ -169,7 +169,6 @@ import _ from 'lodash'
 
 const { insurances, currentStep, ownStep, page } = defineProps(['insurances', 'voyage', 'currentStep', 'ownStep', 'page'])
 const isLoadingInsurance = ref(true)
-const { addSingleParam } = useParams()
 const { updateDeal } = useStepperDeal(ownStep)
 
 const model = defineModel()
@@ -183,10 +182,6 @@ watch([model, () => currentStep, () => insurances], () => {
   if (currentStep !== ownStep) return
 
   isLoadingInsurance.value = true
-
-  if (currentStep === ownStep) {
-    addSingleParam('step', ownStep)
-  }
 
   if (model.value) {
     if (model.value?.insurance) {

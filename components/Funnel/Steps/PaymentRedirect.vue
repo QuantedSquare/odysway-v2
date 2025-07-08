@@ -166,7 +166,7 @@ const alreadyPlacedAnOption = ref(false)
 const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
-const { addSingleParam } = useParams()
+// const { addSingleParam } = useParams()
 
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
@@ -321,11 +321,11 @@ const book = async () => {
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 
-watch([() => currentStep], () => {
-  if (currentStep === ownStep) {
-    addSingleParam('step', ownStep)
-  }
-}, { immediate: true })
+// watch([() => currentStep], () => {
+//   if (currentStep === ownStep) {
+//     addSingleParam('step', ownStep)
+//   }
+// }, { immediate: true })
 
 // #TODO Add option only on certain travel ?
 // const showOptionOrPayment = computed(() => {

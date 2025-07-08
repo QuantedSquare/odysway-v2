@@ -46,7 +46,7 @@
     "vege_label": "Régimes alimentaires spécifiques",
     "vege_sub_label": "Végétarien, Végan, Allergies...",
     "other_food_label": "Autres demandes particulières",
-    "special_request_label": "Précisez..."
+    "special_request_label": "Par exemple : régimes alimentaires spécifiques, soins particuliers, etc."
   },
   "insurances": {
     "title": "Garanties avec",

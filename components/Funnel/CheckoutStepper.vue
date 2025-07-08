@@ -74,7 +74,6 @@
                   v-if="skipperMode === 'normal'"
                   v-model="dynamicDealValues"
                   :checkout-type="checkoutType"
-                  :current-step="currentStep"
                   :voyage="voyage"
                   :own-step="1"
                   :page="pageTexts"
@@ -184,6 +183,8 @@ dayjs.extend(customParseFormat)
 const route = useRoute()
 const router = useRouter()
 const { step, date_id, booked_id } = route.query
+const { addSingleParam } = useParams()
+
 // const summaryRef = useTemplateRef('summaryRef')
 // const totalValueFromSummary = computed(() => {
 //   return summaryRef.value?.totalValueFromSummary || 0
@@ -227,8 +228,8 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       zoneChapka: +destinations[0]?.chapka || 0,
       privatisation: travel.privatisationAvailable,
       startingPrice: fetchedDate.starting_price * 100,
-      indivRoomPrice: travel.pricing.indivRoomPrice * 100,
-      gotIndivRoomAvailable: travel.pricing.indivRoom,
+      indivRoomPrice: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
+      gotIndivRoomAvailable: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0,
       gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')),
       promoEarlybird: travel.pricing.earlyBirdReduction * 100,
       gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')),
@@ -246,7 +247,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
       alreadyPaid: 0,
       totalTravelPrice: +fetchedDate.starting_price * 100,
     }
-
+    console.log('travelStaticValues', travelStaticValues)
     const dynamicValues = {
       // Details
       nbTravelers: 1,
@@ -294,7 +295,7 @@ const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(
         travelersData[travelerKey] = null
       }
     }
-
+    console.log('deal', deal)
     const dynamicValues = {
       // Details
       nbTravelers: +deal.nbTravelers,
@@ -391,48 +392,54 @@ const nextStep = () => {
   }
 
   currentStep.value = nextStepValue
+  addSingleParam('step', nextStepValue.toString())
   updateStepInURL(nextStepValue)
 }
 
 const previousStep = () => {
   // If we have history, go back to previous step
-  if (stepHistory.value.length > 0) {
-    const previousStepValue = stepHistory.value.pop()
-    currentStep.value = previousStepValue
-    updateStepInURL(previousStepValue)
+  // if (stepHistory.value.length > 0) {
+  //   const previousStepValue = stepHistory.value.pop()
+  //   currentStep.value = previousStepValue
+  //   updateStepInURL(previousStepValue)
+  // }
+  // else {
+  console.log('currentStep.value in function', currentStep.value)
+  // No history available, go to previous step in sequence
+  let previousStepValue
+  if (currentStep.value === 5 && !showInsuranceStep.value) {
+    previousStepValue = 3 // Go back to options
   }
   else {
-    // No history available, go to previous step in sequence
-    let previousStepValue
-    if (currentStep.value === 5 && !showInsuranceStep.value) {
-      previousStepValue = 3 // Go back to options
-    }
-    else {
-      previousStepValue = Math.max(0, currentStep.value - 1)
-    }
-    currentStep.value = previousStepValue
-    updateStepInURL(previousStepValue)
+    previousStepValue = currentStep.value - 1
   }
+  currentStep.value = previousStepValue
+  console.log('previousStepValue', previousStepValue)
+  addSingleParam('step', previousStepValue.toString())
+  updateStepInURL(previousStepValue)
+  // }
 }
 
 // Handle browser back button
-onMounted(() => {
-  const handlePopState = () => {
-    const urlStep = route.query.step ? parseInt(route.query.step) : 0
-    if (urlStep !== currentStep.value) {
-      currentStep.value = urlStep
-      // Update history to match URL
-      stepHistory.value = stepHistory.value.filter(step => step < urlStep)
-    }
-  }
+// onMounted(() => {
+//   const handlePopState = () => {
+//     const urlStep = route.query.step ? parseInt(route.query.step) : 0
+//     console.log('urlStep', urlStep)
+//     if (urlStep !== currentStep.value) {
+//       currentStep.value = urlStep
+//       console.log('currentStep.value in popstate', currentStep.value)
+//       // Update history to match URL
+//       stepHistory.value = stepHistory.value.filter(step => step < urlStep)
+//     }
+//   }
 
-  window.addEventListener('popstate', handlePopState)
+//   window.addEventListener('popstate', handlePopState)
 
-  // Cleanup on unmount
-  onUnmounted(() => {
-    window.removeEventListener('popstate', handlePopState)
-  })
-})
+//   // Cleanup on unmount
+//   onUnmounted(() => {
+//     window.removeEventListener('popstate', handlePopState)
+//   })
+// })
 watch(() => route.query.step, (newVal) => {
   console.log('route.query.step', newVal)
   if (newVal) {

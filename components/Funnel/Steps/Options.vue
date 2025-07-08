@@ -32,43 +32,15 @@
           {{ page.options.food_details_title }}
         </h2>
       </v-col>
+
       <v-col
         cols="12"
-        md="6"
-        class="d-flex justify-start align-center"
       >
-        <v-switch
-          v-model="vegeOption"
-          :sub-label="page.options.vege_sub_label"
-        >
-          <template #label>
-            <div class="d-flex flex-column align-start">
-              <span>{{ page.options.food_prefs_label }}</span>
-              <span class="text-caption">{{ page.options.vege_sub_label }}</span>
-            </div>
-          </template>
-        </v-switch>
-      </v-col>
-      <v-col
-        cols="12"
-        md="6"
-      >
-        <v-switch
-          v-model="otherFoodOption"
-          :label="page.options.other_food_label"
+        <v-textarea
+          v-model="model.specialRequest"
+          variant="outlined"
+          :label="page.options.special_request_label"
         />
-      </v-col>
-      <v-col
-        cols="12"
-      >
-        <Transition name="slide-fade">
-          <v-textarea
-            v-if="otherFoodOption || vegeOption"
-            v-model="specialRequest"
-            variant="outlined"
-            :label="page.options.special_request_label"
-          />
-        </Transition>
       </v-col>
     </v-row>
     <v-row>
@@ -96,45 +68,17 @@
 <script setup>
 const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
 const { updateDeal } = useStepperDeal(ownStep)
-const { addSingleParam } = useParams()
+// const { addSingleParam } = useParams()
 
 const model = defineModel()
 
 // New: Local validation state
 const emit = defineEmits(['next', 'previous'])
 
-const specialRequest = ref('')
-const indivRoom = ref(false)
-const indivRoomPrice = ref(0) // Checker si on veut afficher ce prix
-
-const vegeOption = ref(false)
-const otherFoodOption = ref(false)
-
-watch([model, () => currentStep], ([dealVal, currentStep]) => {
-  if (model.value) {
-    indivRoomPrice.value = +dealVal.indivRoomPrice
-    indivRoom.value = dealVal.indivRoom
-    vegeOption.value = dealVal.specialRequest?.includes('Régimes alimentaires spécifiques')
-    otherFoodOption.value = dealVal.specialRequest?.includes('Autres demandes particulières')
-    specialRequest.value = dealVal.specialRequest?.match(/Autres demandes particulières :(.*)/)?.[1].trim() || ''
-  }
-  if (currentStep === ownStep) {
-    addSingleParam('step', ownStep)
-  }
-}, { immediate: true })
-
-const foodPreferences = computed(() => {
-  const foodPreferences = [
-    vegeOption.value ? 'Régimes alimentaires spécifiques' : '',
-    otherFoodOption.value ? 'Autres demandes particulières' : '',
-  ]
-  return `${foodPreferences.join(', ')} : ${specialRequest.value}`
-})
-
 const submitStepData = () => {
   // Validate form
   const dealData = {
-    specialRequest: `Préférence alimentaire: ${foodPreferences.value}`,
+    specialRequest: model.value.specialRequest,
     indivRoom: model.value.indivRoom ? ['Oui'] : ['Non'],
     currentStep: 'A choisi ses options',
   }
