@@ -8,6 +8,8 @@
       <BottomAppBar
         :date-sections="page.dateSections"
         :starting-price="voyage.pricing.startingPrice"
+        :no-group-travel="!voyage.groupeAvailable"
+        :slug="voyage.slug"
       />
 
       <ChipsContainer

@@ -30,9 +30,9 @@
             rounded="md"
             color="primary"
             class="text-body-2 font-weight-bold text-decoration-none"
-            @click="goTo('#dates-container', { offset: -200 })"
+            @click="noGroupTravel ? navigateTo(`/devis?slug=${slug}`) : goTo('#dates-container', { offset: -200 })"
           >
-            {{ dateSections.bookingButtonText }}
+            {{ noGroupTravel ? 'Demander un devis' : dateSections.bookingButtonText }}
           </v-btn-secondary>
         </v-col>
       </v-row>
@@ -52,6 +52,14 @@ defineProps({
   },
   startingPrice: {
     type: Number,
+    required: true,
+  },
+  noGroupTravel: {
+    type: Boolean,
+    required: true,
+  },
+  slug: {
+    type: String,
     required: true,
   },
 })

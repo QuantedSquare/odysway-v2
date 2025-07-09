@@ -31,7 +31,7 @@
           <v-col
             cols="12"
           >
-            <v-divider />
+            <v-divider v-if="!voyage.groupeAvailable && !voyage.privatisationAvailable" />
           </v-col>
         </v-row>
 
@@ -141,7 +141,7 @@
           <v-col
             cols="12"
           >
-            <v-divider />
+            <v-divider v-if="!voyage.groupeAvailable && !voyage.privatisationAvailable" />
           </v-col>
         </v-row>
         <template v-if="displayedDates.length > 0">

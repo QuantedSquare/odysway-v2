@@ -21,6 +21,34 @@
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
+      <div class="mx-1">
+        <ColorContainer
+          v-if="route.path !== '/'"
+          color="grey-light-2"
+        >
+          <InfoContainer>
+            <template #top>
+              <AvatarsRowStack />
+            </template>
+            <template #title>
+              {{ searchContent?.infoContainer?.title || 'Vous hésitez encore ?' }}
+            </template>
+            <template #description>
+              {{ searchContent?.infoContainer?.description || 'Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.' }}
+            </template>
+            <template #bottom>
+              <CtaButton
+                color="secondary"
+                link="/calendly"
+              >
+                <template #text>
+                  {{ searchContent?.infoContainer?.buttonText || 'Prendre RDV' }}
+                </template>
+              </CtaButton>
+            </template>
+          </InfoContainer>
+        </ColorContainer>
+      </div>
       <ContentRenderer
         v-if="faqPage"
         :value="faqPage"
@@ -55,7 +83,7 @@ import { useDisplay } from 'vuetify'
 
 const { width } = useDisplay()
 const drawer = ref(false)
-
+const route = useRoute()
 const { data: faqPage } = await useAsyncData('faq-section', () => {
   return queryCollection('content')
     .path('/faq')
@@ -65,6 +93,10 @@ const { data: faqPage } = await useAsyncData('faq-section', () => {
 const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () => {
   return queryCollection('ctas').select('layoutInfoContainer', 'partenairesSection').first()
 })
+
+const { data: searchContent } = await useAsyncData('search-content', () =>
+  queryCollection('page_search').first(),
+)
 </script>
 
 <style scoped>

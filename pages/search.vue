@@ -80,30 +80,6 @@
         :is-search="true"
       />
     </v-container>
-
-    <ColorContainer color="grey-light-2">
-      <InfoContainer>
-        <template #top>
-          <AvatarsRowStack />
-        </template>
-        <template #title>
-          {{ searchContent?.infoContainer?.title || 'Vous hésitez encore ?' }}
-        </template>
-        <template #description>
-          {{ searchContent?.infoContainer?.description || 'Prenez un RDV avec un spécialiste qui vous conseillera selon vos envies.' }}
-        </template>
-        <template #bottom>
-          <CtaButton
-            color="secondary"
-            link="/calendly"
-          >
-            <template #text>
-              {{ searchContent?.infoContainer?.buttonText || 'Prendre RDV' }}
-            </template>
-          </CtaButton>
-        </template>
-      </InfoContainer>
-    </ColorContainer>
   </v-container>
 </template>
 

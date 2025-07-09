@@ -191,7 +191,7 @@ watch(hoveredIndex, async (val) => {
 .avatar-name {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #333;
+  color: rgba(43, 76, 82, 1);
   letter-spacing: 0.02em;
   opacity: 0.95;
   transition: color 0.3s;
@@ -199,7 +199,7 @@ watch(hoveredIndex, async (val) => {
 
 .avatar-description {
   font-size: 1rem;
-  color: #666;
+  color: rgb(118, 118, 118);
   font-weight: 400;
   opacity: 0.85;
   transition: color 0.3s;
