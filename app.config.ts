@@ -15,10 +15,7 @@ export default defineAppConfig({
     textButton3: 'Faisons connaissance 👋',
   },
   footer: {
-    logo: {
-      image: '/logos/Logo-Odysway-Bleu.png',
-      description: 'Odysway est le premier tour-opérateur français dédié au voyage en immersion, en France et à l’étranger. Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
-    },
+    logo: 'Odysway est la première agence dédiée au voyage en immersion, en France et à l’étranger. Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
     team: {
       image: '/images/team-photo.webp',
     },
