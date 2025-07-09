@@ -71,6 +71,22 @@
             :label="page.third_step.sub_2"
           />
         </v-col>
+        <v-col
+          cols="12"
+          class="d-flex justify-center"
+        >
+          <v-btn
+            height="50"
+            :append-icon="mdiSend"
+            class="bg-secondary "
+            :disabled="(!validateInfos)"
+            @click="emit('submit')"
+          >
+            <span class="text-wrap">
+              Envoyer ma demande
+            </span>
+          </v-btn>
+        </v-col>
       </v-row>
     </v-form>
   </v-container>
@@ -78,10 +94,17 @@
 
 <script setup>
 import { z } from 'zod'
+import { mdiSend } from '@mdi/js'
 
 const schemaToRule = useZodSchema()
 const nameSchema = z.string().min(1, { message: 'Cette information est requise.' })
 const emailSchema = z.string().email({ message: 'Adresse email invalide' })
+
+const emit = defineEmits(['submit'])
+
+const validateInfos = computed(() => {
+  return model.value.firstname && model.value.lastname && model.value.email && model.value.validatePhone && model.value.acceptTerms
+})
 
 const rules = {
   name: schemaToRule(nameSchema),

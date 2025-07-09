@@ -108,7 +108,7 @@
           </div>
           <v-text-field
             v-model="model.departureAirport"
-            :error-messages="model.departureAirport ? '' : 'Veuillez sélectionner un aéroport'"
+            :error-messages="model.departureAirport ? '' : 'Veuillez définir un aéroport de départ'"
             :label="page.form_labels.departure_airport_label"
           />
         </v-col>

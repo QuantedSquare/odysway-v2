@@ -88,20 +88,20 @@
                     <DevisUserInfoForm
                       v-model="userInfo"
                       :page="pageTexts"
+                      @next="submit"
                     />
                   </v-stepper-window-item>
                 </v-stepper-window>
-                <v-card-actions class="d-flex justify-center">
+                <v-card-actions :class="currentStep === 1 ? 'd-flex justify-center' : ''">
                   <v-stepper-actions
                     :next-text="pageTexts.buttons.next"
                     :prev-text="currentStep !== 0 ? pageTexts.buttons.previous : ''"
-                    :class="currentStep === 3 ? 'last-step' : ''"
                     @click:next="nextStep()"
                     @click:prev="previousStep()"
                   >
                     <template #next>
                       <div>
-                        <v-btn
+                        <!-- <v-btn
                           v-if="displaySubmit"
                           color="secondary"
                           :disabled="!validateInfos"
@@ -111,9 +111,9 @@
                           <div class="text-wrap">
                             {{ skipperChoice === 'devis' ? pageTexts.buttons.send_devis_request : pageTexts.buttons.take_appointment }}
                           </div>
-                        </v-btn>
+                        </v-btn> -->
                         <v-btn
-                          v-else-if="currentStep === 2 && skipperChoice === 'devis'"
+                          v-if="currentStep === 2 && skipperChoice === 'devis'"
                           color="secondary"
                           :disabled="!validateRequiredInfosOnStep2"
                           @click="nextStep"
@@ -121,7 +121,7 @@
                           {{ pageTexts.buttons.next }}
                         </v-btn>
                         <v-btn
-                          v-else-if="!showCalendly"
+                          v-else-if="currentStep === 1"
                           color="secondary"
                           @click="nextStep"
                         >
@@ -170,10 +170,6 @@ const userInfo = ref({
   acceptTerms: false,
   subscribeToNewsletter: false,
   departureAirport: '',
-})
-
-const validateInfos = computed(() => {
-  return userInfo.value.firstname && userInfo.value.lastname && userInfo.value.email && userInfo.value.validatePhone && userInfo.value.acceptTerms
 })
 
 const voyage = await queryCollection('voyages').where('slug', '=', route.query.slug).first()
@@ -293,11 +289,11 @@ const isLastStepCSS = computed(() => {
   margin-left:0!important;
   margin-right:0!important;
   }
-  .v-stepper-actions{
+  /* .v-stepper-actions{
   display: flex!important;
   flex-direction: v-bind(isLastStepCSS) !important;
   justify-content: center!important;
   align-items: center!important;
-  }
+  } */
 }
 </style>
