@@ -198,13 +198,11 @@ const previousStep = () => {
     currentStep.value = 2
   }
 }
-const displaySubmit = computed(() => {
-  return !showCalendly.value && ((skipperChoice.value === 'devis' && currentStep.value === 3) || (skipperChoice.value === 'call' && currentStep.value === 2))
-})
+
 const submit = async () => {
   isLoading.value = true
   const stage = (userInfo.value.email === 'test@test.com' || userInfo.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
-
+  const utmSource = localStorage.getItem('utmSource')
   const voyageBody = {
     value: voyage.pricing.startingPrice * 100,
     title: voyage.title,
@@ -229,7 +227,7 @@ const submit = async () => {
     currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
     alreadyPaid: 0,
     restToPay: 0,
-    utm: route.query.utm || '',
+    utm: utmSource || '',
     slug: voyage.slug,
     basePricePerTraveler: voyage.pricing.startingPrice * 100,
     flightTickets: details.value.includeFlight ? 'Oui' : 'Non',
@@ -256,9 +254,6 @@ const submit = async () => {
   }
   isLoading.value = false
 }
-const isLastStepCSS = computed(() => {
-  return currentStep.value === 3 ? 'column' : 'row'
-})
 </script>
 
 <style scoped>

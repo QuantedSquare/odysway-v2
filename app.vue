@@ -7,6 +7,7 @@
 
 <script setup>
 const config = useRuntimeConfig()
+const route = useRoute()
 
 useHead({
   htmlAttrs: {
@@ -65,6 +66,19 @@ onMounted(() => {
   // if (isConsent && config.public.environment === 'production') {
   if (isConsent) {
     trackPixel('track', 'PageView')
+  }
+
+  const userUTMs = []
+
+  Object.keys(route.query).forEach((queryParam) => {
+    if (queryParam.toLowerCase().includes('utm')) {
+      userUTMs.push(queryParam + '=' + route.query[queryParam])
+    }
+  })
+
+  if (userUTMs.length) {
+    console.log('userUTMs', userUTMs)
+    localStorage.setItem('utmSource', userUTMs.join('&'))
   }
 })
 </script>

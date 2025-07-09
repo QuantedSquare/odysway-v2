@@ -47,10 +47,13 @@
                   <template #default="{ isHovering, props }">
                     <v-list-item-title
                       v-bind="props"
-                      style="cursor:pointer"
+                      :style="{ cursor: isAggregatedRegion(item) ? 'no-pointer' : 'pointer' }"
                       class="d-flex align-center  py-2 justify-start ga-2 text-uppercase text-subtitle-2 font-weight-bold hover-bg-primary border-b "
-                      :class="{ 'bg-grey-light text-primary': isHovering }"
-                      @click.stop="selectRegion(item.raw)"
+                      :class="{
+                        'bg-grey-light text-primary': isHovering && !isAggregatedRegion(item),
+                        'bg-grey-lighten-4 text-primary': isAggregatedRegion(item),
+                      }"
+                      @click.stop="!isAggregatedRegion(item) && selectRegion(item.raw)"
                     >
                       <div v-if="item.raw.value === 'top-destination'">
                         <v-img
@@ -452,31 +455,39 @@ function clearDestination() {
   selectedRegionSlug.value = null
 }
 
-onMounted(() => {
-  // Handle destination parameter
-  if (route.query.destination) {
-    const region = regions.value.find(r => r.slug === route.query.destination)
-    if (region) {
-      selectRegion(region)
-    }
-    else {
-      const destination = destinations.value.find(d => d.slug === route.query.destination)
-      if (destination) {
-        selectDestination(destination)
+function isAggregatedRegion(item) {
+  // Check if this is an aggregated region (contains ' & ' in the title)
+  return item.title && item.title.includes(' & ')
+}
+
+// Watch for when data is available and handle route parameters
+watch([regions, destinations], ([regionsData, destinationsData]) => {
+  if (regionsData && destinationsData) {
+    // Handle destination parameter
+    if (route.query.destination) {
+      const region = regionsData.find(r => r.slug === route.query.destination)
+      if (region) {
+        selectRegion(region)
+      }
+      else {
+        const destination = destinationsData.find(d => d.slug === route.query.destination)
+        if (destination) {
+          selectDestination(destination)
+        }
       }
     }
-  }
 
-  // Handle travelType parameter
-  if (route.query.travelType) {
-    travelTypeChoice.value = route.query.travelType
-  }
+    // Handle travelType parameter
+    if (route.query.travelType) {
+      travelTypeChoice.value = route.query.travelType
+    }
 
-  // Handle date parameter (from)
-  if (route.query.from) {
-    date.value = route.query.from.split(',').map(Number).filter(num => num > 0)
+    // Handle date parameter (from)
+    if (route.query.from) {
+      date.value = route.query.from.split(',').map(Number).filter(num => num > 0)
+    }
   }
-})
+}, { immediate: true })
 </script>
 
 <style scoped>
@@ -497,5 +508,8 @@ onMounted(() => {
 .search-field-min-height {
   min-height: 88px!important;
   box-sizing: border-box;
+}
+.no-pointer {
+  cursor:default!important;
 }
 </style>

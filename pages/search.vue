@@ -11,7 +11,7 @@
         cols="12"
         class="px-4 px-md-12 d-flex ga-2 align-center flex-wrap"
       >
-        <span class="text-primary text-h3 font-weight-bold mr-5">{{ nbVoyages <= 1 ? `${nbVoyages} ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
+        <span class="text-primary text-h3 font-weight-bold mr-2 mr-md-5">{{ nbVoyages <= 1 ? `${nbVoyages} ${searchContent?.oneTrip || 'voyage'}` : `${nbVoyages}
             ${searchContent?.multipleTrips || 'voyages'}` }}
         </span>
 
@@ -111,6 +111,7 @@ const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   return null
 }, {
   watch: [routeQuery],
+  immediate: true,
 })
 
 const capitalizeFirstLetter = (str) => {

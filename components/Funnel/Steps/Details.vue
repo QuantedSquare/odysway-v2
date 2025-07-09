@@ -231,6 +231,7 @@ const submitStepData = async () => {
 
       if (checkoutType === 'deposit' || checkoutType === 'full') {
         buttonLoading.value = true
+        const utmSource = localStorage.getItem('utmSource')
         updateDeal({
           nbTravelers: model.value.nbAdults + model.value.nbChildren,
           nbChildren: model.value.nbChildren,
@@ -241,6 +242,7 @@ const submitStepData = async () => {
           phone: model.value.phone,
           firstname: model.value.firstName,
           lastname: model.value.lastName,
+          utm: utmSource || '',
         })
         buttonLoading.value = false
       }
@@ -260,6 +262,7 @@ const submitStepData = async () => {
     else {
       const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
       buttonLoading.value = true
+      const utmSource = localStorage.getItem('utmSource')
       const flattenedDeal = {
         value: voyage.startingPrice, // Don't care about this value, we Calculate it in back
         title: voyage.title,
@@ -283,7 +286,7 @@ const submitStepData = async () => {
         currentStep: 'Création du Deal',
         alreadyPaid: 0,
         restToPay: 0, // Don't care about this value, we Calculate it in back
-        utm: route.query.utm || '',
+        utm: utmSource || '',
         slug: voyage.slug,
         basePricePerTraveler: voyage.startingPrice,
         promoChildren: voyage.promoChildren,
