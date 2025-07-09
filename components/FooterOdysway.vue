@@ -178,14 +178,15 @@
         >
           <v-col
             cols="12"
-            md="5"
+            md="auto"
             class="d-flex justify-center justify-md-start text-grey py-0"
           >
             <span class="text-center text-md-left">© Copyright 2025 - Tous droits réservés à Odysway</span>
           </v-col>
+          <v-spacer />
           <v-col
             cols="12"
-            md="7"
+            md="5"
             class="text-center text-md-right d-flex justify-space-between"
           >
             <NuxtLink
@@ -197,6 +198,7 @@
               {{ policy.name }}
             </NuxtLink>
           </v-col>
+          <v-spacer />
         </v-row>
       </v-container>
     </div>

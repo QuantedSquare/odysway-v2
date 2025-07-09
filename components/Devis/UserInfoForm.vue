@@ -80,6 +80,7 @@
             :append-icon="mdiSend"
             class="bg-secondary "
             :disabled="(!validateInfos)"
+            :loading="model.loading"
             @click="emit('submit')"
           >
             <span class="text-wrap">

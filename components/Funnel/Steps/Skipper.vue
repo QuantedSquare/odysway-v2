@@ -7,19 +7,21 @@
         </h2>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row class="px-2">
       <v-col>
         <v-radio-group
           v-model="model"
           :mandatory="true"
         >
           <v-radio
-            :label="page.first_step.option_3"
-            value="quick"
-          />
-          <v-radio
             :label="isBooking ? page.first_step.option_2 : page.first_step.option_1"
             value="normal"
+            class="custom-font"
+          />
+          <v-radio
+            :label="page.first_step.option_3"
+            value="quick"
+            class="mb-4 mb-sm-0 custom-font"
           />
         </v-radio-group>
       </v-col>
@@ -51,3 +53,18 @@ watch(() => currentStep, (value) => {
   }
 }, { immediate: true })
 </script>
+
+<style scoped>
+.custom-font:deep(.v-label) {
+  font-weight: 400 !important;
+  font-size: 0.8em !important;
+  line-height: 1.1 !important;
+}
+
+@media (min-width: 450px) {
+  .custom-font:deep(.v-label) {
+    font-size: 1em !important;
+    line-height: 1.1 !important;
+  }
+}
+</style>

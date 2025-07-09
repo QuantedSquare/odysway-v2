@@ -148,7 +148,7 @@ import { computed } from 'vue'
 
 const { ownStep, voyage, page, checkoutType } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType'])
 const emit = defineEmits(['next', 'previous', 'validity-changed'])
-// const config = useRuntimeConfig()
+const config = useRuntimeConfig()
 
 const model = defineModel()
 
@@ -260,6 +260,9 @@ const submitStepData = async () => {
     }
     // else we update basics and create a deal with it
     else {
+      const origin = config.public.siteURL
+      const bmsLink = `${origin}/booking-management/${voyage.slug}/${route.query.date_id}`
+      console.log('bmsLink', bmsLink) // #TODO To Add to schema
       const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
       buttonLoading.value = true
       const utmSource = localStorage.getItem('utmSource')
@@ -309,6 +312,7 @@ const submitStepData = async () => {
         firstname: model.value.firstName,
         lastname: model.value.lastName,
         optinNewsletter: model.value.optinNewsletter,
+        // BMSLink:
       }
       trackPixel('track', 'AddToCart')
       emit('next')

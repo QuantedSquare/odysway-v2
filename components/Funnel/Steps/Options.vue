@@ -39,6 +39,7 @@
         <v-textarea
           v-model="model.specialRequest"
           variant="outlined"
+
           :label="page.options.special_request_label"
         />
       </v-col>
@@ -106,5 +107,10 @@ const submitStepData = () => {
 .slide-fade-leave-to {
   transform: translateY(20px);
   opacity: 0;
+}
+
+:deep(.v-field-label) {
+  font-weight: regular !important;
+  color: rgb(118, 118, 118, 0.6) !important;
 }
 </style>

@@ -83,7 +83,6 @@
                 <CalendlyContainer
                   v-else
                   :travel-title="voyage.title"
-                  :text="pageTexts.calendly"
                   :is-funnel="true"
                   @previous="previousStep"
                 />

@@ -8,12 +8,12 @@
   >
     <div class="d-flex flex-column ga-4 pa-4">
       <v-btn-secondary
-        color="white"
         block
         class="text-caption text-sm-subtitle-2"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
+        color="primary"
+        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
       >
-        {{ header.textButton1 }}
+        {{ header.textButton3 }}
       </v-btn-secondary>
       <v-btn-secondary
         href="tel: +33184807975"
@@ -26,12 +26,12 @@
         {{ header.textButton2 }}
       </v-btn-secondary>
       <v-btn-secondary
+        color="white"
         block
         class="text-caption text-sm-subtitle-2"
-        color="primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
+        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
       >
-        {{ header.textButton3 }}
+        {{ header.textButton1 }}
       </v-btn-secondary>
     </div>
   </v-navigation-drawer>

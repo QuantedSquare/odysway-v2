@@ -129,7 +129,7 @@
     v-if="voyages && voyages.length > 9"
     justify="center"
     align="center"
-    class="flex-column my-4 my-md-8"
+    class="flex-column my-4 mb-md-6 mt-md-16"
   >
     <span class="text-h5 text-md-h4 font-weight-bold ">{{ expandButtonText }}</span>
     <BouncingBtn
@@ -207,9 +207,9 @@ const noVoyagesFoundExperienceText = computed(() => {
 
 const expandButtonText = computed(() => {
   if (isExpanded.value) {
-    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins de dates'
+    return props.pageContent?.common?.expandButton?.showLess || 'Voir moins de voyages'
   }
-  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de dates'
+  return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de voyages'
 })
 </script>
 

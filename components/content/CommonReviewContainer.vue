@@ -16,7 +16,7 @@
       <v-col
         v-else
         cols="12"
-        class="text-h2 my-md-4"
+        class="text-h2 my-md-4 text-primary"
       >
         Ils en parlent mieux que nous
       </v-col>

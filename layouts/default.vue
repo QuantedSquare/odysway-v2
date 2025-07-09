@@ -21,9 +21,12 @@
       :fluid="width > 600"
       class="py-0 my-0 px-2 px-md-9"
     >
-      <div class="mx-1">
+      <div
+        v-if="route.path !== '/'"
+        class="mx-1"
+      >
         <ColorContainer
-          v-if="route.path !== '/'"
+
           color="grey-light-2"
         >
           <InfoContainer>
@@ -47,6 +50,9 @@
               </CtaButton>
             </template>
           </InfoContainer>
+        </ColorContainer>
+        <ColorContainer color="white">
+          <CommonReviewContainer />
         </ColorContainer>
       </div>
       <ContentRenderer

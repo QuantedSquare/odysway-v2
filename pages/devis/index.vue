@@ -88,7 +88,7 @@
                     <DevisUserInfoForm
                       v-model="userInfo"
                       :page="pageTexts"
-                      @next="submit"
+                      @submit="submit"
                     />
                   </v-stepper-window-item>
                 </v-stepper-window>
@@ -101,17 +101,6 @@
                   >
                     <template #next>
                       <div>
-                        <!-- <v-btn
-                          v-if="displaySubmit"
-                          color="secondary"
-                          :disabled="!validateInfos"
-                          :loading="isLoading"
-                          @click="submit"
-                        >
-                          <div class="text-wrap">
-                            {{ skipperChoice === 'devis' ? pageTexts.buttons.send_devis_request : pageTexts.buttons.take_appointment }}
-                          </div>
-                        </v-btn> -->
                         <v-btn
                           v-if="currentStep === 2 && skipperChoice === 'devis'"
                           color="secondary"
@@ -157,7 +146,6 @@ const details = ref({
   includeFlight: false,
   departureAirport: null,
 })
-const isLoading = ref(false)
 
 const showCalendly = ref(false)
 
@@ -170,6 +158,7 @@ const userInfo = ref({
   acceptTerms: false,
   subscribeToNewsletter: false,
   departureAirport: '',
+  loading: false,
 })
 
 const voyage = await queryCollection('voyages').where('slug', '=', route.query.slug).first()
@@ -200,7 +189,7 @@ const previousStep = () => {
 }
 
 const submit = async () => {
-  isLoading.value = true
+  userInfo.value.loading = true
   const stage = (userInfo.value.email === 'test@test.com' || userInfo.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
   const utmSource = localStorage.getItem('utmSource')
   const voyageBody = {
@@ -252,7 +241,7 @@ const submit = async () => {
     trackPixel('trackCustom', 'ClickRDV')
     showCalendly.value = true
   }
-  isLoading.value = false
+  userInfo.value.loading = false
 }
 </script>
 

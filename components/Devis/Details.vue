@@ -176,4 +176,8 @@ watch(() => [model.value.nbAdults, model.value.nbChildren], ([newAdults, newChil
   opacity: 0;
   transform: translateX(-20px);
 }
+:deep(.v-field-label) {
+  font-weight: regular !important;
+  color: rgb(118, 118, 118, 0.6) !important;
+}
 </style>

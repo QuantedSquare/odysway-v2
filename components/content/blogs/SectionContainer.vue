@@ -4,7 +4,7 @@
       <v-col
         cols="12"
         lg="8"
-        class="content-class px-0 px-md-3"
+        class="content-class px-0 px-md-3 text-left"
       >
         <slot name="content" />
       </v-col>
@@ -39,7 +39,7 @@ defineProps({
  margin-bottom: 1em;
 }
 
-  .content-class:deep(h3){
+  .content-class:deep(h3), .content-class:deep(h2){
     display: flex!important;
     justify-content: center!important;
     text-align: center!important;
