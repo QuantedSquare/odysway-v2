@@ -12,7 +12,6 @@ export function usePricePerTraveler(dynamicDealValues, voyage) {
     if (promoChildren && nbChildren) {
       price -= promoChildren * nbChildren
     }
- 
 
     if (promoTeen && nbTeen) {
       price -= promoTeen * nbTeen

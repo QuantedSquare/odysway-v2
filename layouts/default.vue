@@ -26,7 +26,6 @@
         class="mx-1"
       >
         <ColorContainer
-
           color="grey-light-2"
         >
           <InfoContainer>

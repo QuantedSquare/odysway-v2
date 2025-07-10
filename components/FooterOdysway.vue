@@ -34,11 +34,11 @@
               :srcset="`${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
               sizes="(max-width: 600px) 480px, 640px"
               loading="lazy"
-              alt="Logo d'Odysway"
+              :alt="footer.logo.alt"
               class="footer-logo"
             />
             <span class="text-h6 text-grey">
-              {{ footer.logo.description }}
+              {{ footer.logo.alt }}
             </span>
             <div>
               <SocialsContainerButtons class="ga-4" />

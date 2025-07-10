@@ -18,7 +18,7 @@
         alt="Image de fond de la section FAQ"
         cover
         width="100%"
-        class="rounded-lg"
+        class="rounded-lg max-img-height"
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
         <h2 class="text-center text-white">
@@ -99,12 +99,16 @@ const { data: faqTextes } = await useAsyncData('faq-textes', () => {
 
 <style scoped>
 .max-height-with-overflow {
+  height: 100%;
   max-height: 500px;
   overflow: auto;
 }
+.max-img-height {
+  height: 100%;
+  max-height: 800px;
+}
 ::-webkit-scrollbar {
   width: 5px;
-
 }
 /* Track */
 ::-webkit-scrollbar-track {

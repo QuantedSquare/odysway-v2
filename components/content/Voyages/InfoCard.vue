@@ -31,14 +31,14 @@
           <v-col
             cols="12"
           >
-            <v-divider v-if="!voyage.groupeAvailable && !voyage.privatisationAvailable" />
+            <v-divider v-if="voyage.groupeAvailable" />
           </v-col>
         </v-row>
 
         <v-row class="mt-0">
           <v-col cols="12">
             <span
-              v-if="voyage.groupeAvailable && !voyage.privatisationAvailable"
+              v-if="voyage.groupeAvailable"
               class="text-h4 font-weight-bold text-primary"
             >
               {{ stickyBlock.dateText }}

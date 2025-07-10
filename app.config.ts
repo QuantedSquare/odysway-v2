@@ -15,7 +15,10 @@ export default defineAppConfig({
     textButton3: 'Faisons connaissance 👋',
   },
   footer: {
-    logo: 'Odysway est la première agence dédiée au voyage en immersion, en France et à l’étranger. Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
+    logo: {
+      image: '/logos/Logo-Odysway-Bleu.png',
+      alt: 'Odysway est la première agence dédiée au voyage en immersion, en France et à l’étranger. Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
+    },
     team: {
       image: '/images/team-photo.webp',
     },
