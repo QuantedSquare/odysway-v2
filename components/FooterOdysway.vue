@@ -34,11 +34,11 @@
               :srcset="`${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(OdyswayFooterBleu, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
               sizes="(max-width: 600px) 480px, 640px"
               loading="lazy"
-              :alt="footer.logo.alt"
+              :alt="footer.logo.description"
               class="footer-logo"
             />
             <span class="text-h6 text-grey">
-              {{ footer.logo.alt }}
+              {{ footer.logo.description }}
             </span>
             <div>
               <SocialsContainerButtons class="ga-4" />
@@ -106,12 +106,25 @@
             </h5>
             <div class="d-flex flex-column ga-2">
               <NuxtLink
-                v-for="link, index in footer.linksList.colonne1.links"
-                :key="`${link.label}-${index}`"
-                :to="link.to"
+                v-if="footer.linksList.colonne1.links.link1"
+                :to="footer.linksList.colonne1.links.link1.link"
                 class="text-grey"
               >
-                {{ link.label }}
+                {{ footer.linksList.colonne1.links.link1.text }}
+              </NuxtLink>
+              <NuxtLink
+                v-if="footer.linksList.colonne1.links.link2"
+                :to="footer.linksList.colonne1.links.link2.link"
+                class="text-grey"
+              >
+                {{ footer.linksList.colonne1.links.link2.text }}
+              </NuxtLink>
+              <NuxtLink
+                v-if="footer.linksList.colonne1.links.link3"
+                :to="footer.linksList.colonne1.links.link3.link"
+                class="text-grey"
+              >
+                {{ footer.linksList.colonne1.links.link3.text }}
               </NuxtLink>
             </div>
           </v-col>
@@ -124,12 +137,25 @@
             </h5>
             <div class="d-flex flex-column ga-2">
               <NuxtLink
-                v-for="link, index in footer.linksList.colonne2.links"
-                :key="`${link.label}-${index}`"
-                :to="link.to"
+                v-if="footer.linksList.colonne2.links.link1"
+                :to="footer.linksList.colonne2.links.link1.link"
                 class="text-grey"
               >
-                {{ link.label }}
+                {{ footer.linksList.colonne2.links.link1.text }}
+              </NuxtLink>
+              <NuxtLink
+                v-if="footer.linksList.colonne2.links.link2"
+                :to="footer.linksList.colonne2.links.link2.link"
+                class="text-grey"
+              >
+                {{ footer.linksList.colonne2.links.link2.text }}
+              </NuxtLink>
+              <NuxtLink
+                v-if="footer.linksList.colonne2.links.link3"
+                :to="footer.linksList.colonne2.links.link3.link"
+                class="text-grey"
+              >
+                {{ footer.linksList.colonne2.links.link3.text }}
               </NuxtLink>
             </div>
           </v-col>
@@ -143,12 +169,25 @@
             </h5>
             <div class="d-flex flex-column ga-2">
               <NuxtLink
-                v-for="link, index in footer.linksList.colonne3.links"
-                :key="`${link.label}-${index}`"
-                :to="link.to"
+                v-if="footer.linksList.colonne3.links.link1"
+                :to="footer.linksList.colonne3.links.link1.link"
                 class="text-grey"
               >
-                {{ link.label }}
+                {{ footer.linksList.colonne3.links.link1.text }}
+              </NuxtLink>
+              <NuxtLink
+                v-if="footer.linksList.colonne3.links.link2"
+                :to="footer.linksList.colonne3.links.link2.link"
+                class="text-grey"
+              >
+                {{ footer.linksList.colonne3.links.link2.text }}
+              </NuxtLink>
+              <NuxtLink
+                v-if="footer.linksList.colonne3.links.link3"
+                :to="footer.linksList.colonne3.links.link3.link"
+                class="text-grey"
+              >
+                {{ footer.linksList.colonne3.links.link3.text }}
               </NuxtLink>
             </div>
           </v-col>

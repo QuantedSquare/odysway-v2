@@ -17,7 +17,7 @@ export default defineAppConfig({
   footer: {
     logo: {
       image: '/logos/Logo-Odysway-Bleu.png',
-      alt: 'Odysway est la première agence dédiée au voyage en immersion, en France et à l’étranger. Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
+      description: 'Odysway est la première agence dédiée au voyage en immersion, en France et à l\'étranger. Notre mission : proposer un tourisme plus sobre, plus respectueux, et profondément tourné vers la rencontre.',
     },
     team: {
       image: '/images/team-photo.webp',
@@ -39,42 +39,54 @@ export default defineAppConfig({
     linksList: {
       colonne1: {
         title: 'Liens utiles',
-        links: [{
-          label: 'À propos',
-          to: '/a-propos',
-        }, {
-          label: 'Blog',
-          to: '/blog',
-        }, {
-          label: 'Contact',
-          to: '/contact',
-        }],
+        links: {
+          link1: {
+            text: 'À propos',
+            link: '/a-propos',
+          },
+          link2: {
+            text: 'Blog',
+            link: '/blog',
+          },
+          link3: {
+            text: 'Contact',
+            link: '/contact',
+          },
+        },
       },
       colonne2: {
         title: 'Destinations',
-        links: [{
-          label: 'Europe',
-          to: '/destinations/europe',
-        }, {
-          label: 'Asie',
-          to: '/destinations/asie',
-        }, {
-          label: 'Amérique du Sud',
-          to: '/destinations/amerique-du-sud',
-        }],
+        links: {
+          link1: {
+            text: 'Europe',
+            link: '/destinations/europe',
+          },
+          link2: {
+            text: 'Asie',
+            link: '/destinations/asie',
+          },
+          link3: {
+            text: 'Amérique du Sud',
+            link: '/destinations/amerique-du-sud',
+          },
+        },
       },
       colonne3: {
         title: 'Types de voyages',
-        links: [{
-          label: 'Europe',
-          to: '/destinations/europe',
-        }, {
-          label: 'Asie',
-          to: '/destinations/asie',
-        }, {
-          label: 'Amérique du Sud',
-          to: '/destinations/amerique-du-sud',
-        }],
+        links: {
+          link1: {
+            text: 'Europe',
+            link: '/destinations/europe',
+          },
+          link2: {
+            text: 'Asie',
+            link: '/destinations/asie',
+          },
+          link3: {
+            text: 'Amérique du Sud',
+            link: '/destinations/amerique-du-sud',
+          },
+        },
       },
       colonne4: {
         title: 'Où nous rencontrer',

@@ -212,12 +212,69 @@ export default defineNuxtSchema({
                   icon: 'i-mdi-title',
                   default: 'Liens utiles',
                 }),
-                links: field({
-                  type: 'array',
+                links: group({
                   title: 'Links',
                   description: 'Array of link object displayed in footer.',
                   icon: 'i-mdi-link-variant',
-                  default: [],
+                  fields: {
+                    link1: group({
+                      title: 'Link 1',
+                      description: 'Link 1',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                    link2: group({
+                      title: 'Link 2',
+                      description: 'Link 2',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                    link3: group({
+                      title: 'Link 3',
+                      description: 'Link 3',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                  },
                 }),
               },
             }),
@@ -231,14 +288,71 @@ export default defineNuxtSchema({
                   title: 'Titre',
                   description: 'Titre de la colonne',
                   icon: 'i-mdi-title',
-                  default: 'Destinations',
+                  default: 'Liens utiles',
                 }),
-                links: field({
-                  type: 'array',
+                links: group({
                   title: 'Links',
                   description: 'Array of link object displayed in footer.',
                   icon: 'i-mdi-link-variant',
-                  default: [],
+                  fields: {
+                    link1: group({
+                      title: 'Link 1',
+                      description: 'Link 1',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                    link2: group({
+                      title: 'Link 2',
+                      description: 'Link 2',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                    link3: group({
+                      title: 'Link 3',
+                      description: 'Link 3',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                  },
                 }),
               },
             }),
@@ -252,18 +366,75 @@ export default defineNuxtSchema({
                   title: 'Titre',
                   description: 'Titre de la colonne',
                   icon: 'i-mdi-title',
-                  default: 'Destinations',
+                  default: 'Liens utiles',
                 }),
-                links: field({
-                  type: 'array',
+                links: group({
                   title: 'Links',
                   description: 'Array of link object displayed in footer.',
                   icon: 'i-mdi-link-variant',
-                  default: [],
+                  fields: {
+                    link1: group({
+                      title: 'Link 1',
+                      description: 'Link 1',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                    link2: group({
+                      title: 'Link 2',
+                      description: 'Link 2',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                    link3: group({
+                      title: 'Link 3',
+                      description: 'Link 3',
+                      icon: 'i-mdi-link-variant',
+                      fields: {
+                        text: field({
+                          type: 'string',
+                          title: 'Text',
+                          description: 'Texte du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                        link: field({
+                          type: 'string',
+                          title: 'Link',
+                          description: 'URL de redirection au click du bouton',
+                          icon: 'i-mdi-link-variant',
+                        }),
+                      },
+                    }),
+                  },
                 }),
               },
             }),
-            colonne4: group({
+            ccolonne4: group({
               title: 'Où nous trouver',
               description: 'Adresse et coordonnées',
               icon: 'i-mdi-link-variant',
