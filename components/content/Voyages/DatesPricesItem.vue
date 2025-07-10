@@ -170,8 +170,8 @@
               block
               :disabled="enrichedDate.status.status === 'full'"
               rounded="md"
-              :to="formatLink(enrichedDate)"
-              @click="trackPixel('track', 'AddToWishlist')"
+              :to="checkoutLink"
+              @click="handleBookingClick"
             >
               <span class="text-body-1 font-weight-bold text-decoration-none">
                 Réserver
@@ -248,11 +248,86 @@ const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-const formatLink = (date) => {
-  const in30days = dayjs().add(30, 'day')
-  const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
-  return `/checkout?date_id=${date.id}&type=${checkoutType}`
+// Reactive state to track existing booked dates
+const existingBookedDates = ref(new Map())
+const checkoutLink = ref('')
+
+// Function to get or fetch existing booked date
+const getExistingBookedDate = async (dateId) => {
+  if (existingBookedDates.value.has(dateId)) {
+    return existingBookedDates.value.get(dateId)
+  }
+
+  try {
+    const existingBookedId = await retrieveExistingBookedDate(dateId)
+    existingBookedDates.value.set(dateId, existingBookedId)
+    return existingBookedId
+  }
+  catch (error) {
+    console.error('Error retrieving existing booked date:', error)
+    return null
+  }
 }
+
+// Function to generate checkout link
+const generateCheckoutLink = async () => {
+  if (!import.meta.client) {
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit`
+    return
+  }
+
+  try {
+    const in30days = dayjs().add(30, 'day')
+    const checkoutType = dayjs(enrichedDate.value.departure_date).isBefore(in30days) ? 'full' : 'deposit'
+
+    // Check for stored booking details
+    const storedBookingDetails = localStorage.getItem(enrichedDate.value.id)
+
+    if (storedBookingDetails) {
+      const existingBookedId = await getExistingBookedDate(enrichedDate.value.id)
+
+      if (existingBookedId) {
+        checkoutLink.value = `/checkout?booked_id=${existingBookedId}&type=${checkoutType}&step=1`
+      }
+      else {
+        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0`
+      }
+    }
+    else {
+      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0`
+    }
+  }
+  catch (error) {
+    console.error('Error generating checkout link:', error)
+    // Fallback to basic link
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=0`
+  }
+}
+
+// Function to handle booking button click
+const handleBookingClick = async () => {
+  try {
+    trackPixel('track', 'AddToWishlist')
+
+    // Generate link if not already generated
+    if (!checkoutLink.value) {
+      await generateCheckoutLink()
+    }
+
+    // Navigate to checkout
+    if (checkoutLink.value) {
+      await navigateTo(checkoutLink.value)
+    }
+  }
+  catch (error) {
+    console.error('Error handling booking click:', error)
+  }
+}
+
+// Watch for changes in enrichedDate and regenerate link
+watch(enrichedDate, async () => {
+  await generateCheckoutLink()
+}, { immediate: true })
 </script>
 
 <style scoped>

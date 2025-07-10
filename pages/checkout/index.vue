@@ -31,7 +31,6 @@ import { useImage } from '#imports'
 
 definePageMeta({
   layout: 'funnel',
-  middleware: ['retrieve-existing-booked-date'],
 })
 useSeoMeta({
   htmlAttrs: {

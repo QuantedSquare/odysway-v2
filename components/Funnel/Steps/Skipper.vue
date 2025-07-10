@@ -44,14 +44,6 @@ const { page, currentStep, ownStep } = defineProps(['page', 'currentStep', 'ownS
 const model = defineModel()
 const emit = defineEmits(['next'])
 const isBooking = route.query.free_booking === 'true'
-
-const { addSingleParam } = useParams()
-
-watch(() => currentStep, (value) => {
-  if (value === ownStep) {
-    addSingleParam('step', ownStep)
-  }
-}, { immediate: true })
 </script>
 
 <style scoped>

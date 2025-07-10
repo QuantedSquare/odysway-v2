@@ -55,34 +55,7 @@
             :key="date.departureDate + i"
             cols="12"
           >
-            <v-btn
-              :height="mdAndDown ? 80 : 52"
-              color="grey-light-3"
-              rounded="md"
-              block
-              :to="date.link"
-              class="w-100 block-btn-without-padding"
-            >
-              <div class="d-inline-flex flex-column flex-lg-row align-center  ga-2 justify-space-between w-100">
-                <div class="d-flex align-center  ga-1">
-                  <CustomBadge :color="date.status.color" />
-                  <span class="text-body-2 text-decoration-none text-primary text-size-14 text-wrap text-start">
-                    du <span class="font-weight-bold">{{ dayjs(date.departureDate).format('DD MMMM ') }}</span> au <span class="font-weight-bold">{{ dayjs(date.returnDate).format('DD MMMM') }} {{ dayjs(date.returnDate).format('YYYY') }}</span>
-                  </span>
-                </div>
-                <div>
-                  <v-chip
-                    variant="flat"
-                    :color="date.status.color"
-                    rounded="lg"
-                  >
-                    <span class="text-caption font-weight-bold  text-white mb-1 px-1">
-                      {{ date.status.text }}
-                    </span>
-                  </v-chip>
-                </div>
-              </div>
-            </v-btn>
+            <DateButton :date="date" />
           </v-col>
 
           <v-col
@@ -271,6 +244,7 @@ watch(dates, () => {
         returnDate: date.return_date,
         status: getDateStatus(date),
         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
+        id: date.id,
       }
     })
   }

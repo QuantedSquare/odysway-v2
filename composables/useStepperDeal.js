@@ -1,6 +1,6 @@
 import determinePaymentOptions from '@/utils/determinePaymentOptions'
 
-export function useStepperDeal(componentStep) {
+export function useStepperDeal() {
   const deal = ref(null)
 
   const dealId = ref(null)

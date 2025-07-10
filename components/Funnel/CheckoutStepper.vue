@@ -6,6 +6,7 @@
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
       v-model="currentStep"
+
       :page="pageTexts"
       :skipper-mode="skipperMode"
       :show-insurance="!!showInsuranceStep"
@@ -14,11 +15,12 @@
         <v-col
           cols="12"
           :md="currentStep > 0 ? 7 : 12"
-          class="d-flex justify-center"
+          class="d-flex justify-center "
         >
           <v-card
             class="border-width relative no-margin-window mb-4 "
-            :elevation=" skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
+            :class="skipperMode !== 'summary' && currentStep == 1 ? 'w-100' : ''"
+            :elevation="skipperMode !== 'summary' && currentStep < 5 ? 2 : 0"
           >
             <Transition name="fade">
               <v-img
@@ -183,14 +185,10 @@ import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 dayjs.extend(customParseFormat)
 
 const route = useRoute()
-const router = useRouter()
+// const router = useRouter()
 const { step, date_id, booked_id } = route.query
 const { addSingleParam } = useParams()
 const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
-// const summaryRef = useTemplateRef('summaryRef')
-// const totalValueFromSummary = computed(() => {
-//   return summaryRef.value?.totalValueFromSummary || 0
-// })
 
 const insurancesPrice = ref(null)
 
@@ -369,33 +367,33 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
 }
 
 // Initialize step history for proper back button handling
-const stepHistory = ref([])
+// const stepHistory = ref([])
 
 // Initialize history when component mounts
-onMounted(() => {
-  // If we're starting at a specific step, add it to history
-  if (currentStep.value > 0) {
-    stepHistory.value = [0, ...Array.from({ length: currentStep.value - 1 }, (_, i) => i + 1)]
-  }
-})
+// onMounted(() => {
+//   // If we're starting at a specific step, add it to history
+//   if (currentStep.value > 0) {
+//     stepHistory.value = [0, ...Array.from({ length: currentStep.value - 1 }, (_, i) => i + 1)]
+//   }
+// })
 
-// Update URL and history when step changes
-const updateStepInURL = (newStep) => {
-  const newQuery = { ...route.query, step: newStep.toString() }
-  router.push({ query: newQuery })
-}
+// // Update URL and history when step changes
+// const updateStepInURL = (newStep) => {
+//   const newQuery = { ...route.query, step: newStep.toString() }
+//   router.push({ query: newQuery })
+// }
 
 const nextStep = () => {
   const nextStepValue = currentStep.value === 3 && !showInsuranceStep.value ? 5 : currentStep.value + 1
 
   // Add current step to history before moving to next
-  if (!stepHistory.value.includes(currentStep.value)) {
-    stepHistory.value.push(currentStep.value)
-  }
+  // if (!stepHistory.value.includes(currentStep.value)) {
+  //   stepHistory.value.push(currentStep.value)
+  // }
 
   currentStep.value = nextStepValue
   addSingleParam('step', nextStepValue.toString())
-  updateStepInURL(nextStepValue)
+  // updateStepInURL(nextStepValue)
 }
 
 const previousStep = () => {
@@ -418,7 +416,7 @@ const previousStep = () => {
   currentStep.value = previousStepValue
   console.log('previousStepValue', previousStepValue)
   addSingleParam('step', previousStepValue.toString())
-  updateStepInURL(previousStepValue)
+  // updateStepInURL(previousStepValue)
   // }
 }
 
@@ -510,6 +508,11 @@ const showInsuranceStep = computed(() => {
   }
   .funnel-stepper{
     min-height: 50vh!important;
+    width:100%;
+
+  }
+  .no-margin-window {
+    max-width: 1440px;
   }
   .no-margin-window .v-stepper-window {
  margin-left:0!important;
