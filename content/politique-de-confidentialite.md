@@ -1,8 +1,11 @@
 ::policies-container
 #title
 [Politique de confidentialité]{style="font-weight: bold"}
+::
 
-#text
+::section-container
+#content
+
 ## ARTICLE 1 : PRÉAMBULE
 <br><br>
 

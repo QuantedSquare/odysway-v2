@@ -2,7 +2,11 @@
 #title
 [Mentions légales]{style="font-weight: bold"}
 
-#text
+::
+
+::section-container
+#content
+
 Ce site est édité par la société ODYSWAY SAS au capital social de 8 250 €, inscrite au Registre du Commerce et des Sociétés de Créteil sous le numéro 839 815 842, dont le siège social est situé au 61 rue de Lyon, 75012 Paris, représentée par son Président, Romain Masina.
 
 ODYSWAY est titulaire d'un certificat d'immatriculation (n°IM094180007) délivré par Atout France (Registre des opérateurs de voyages et de séjours, 79/81 rue de Clichy 75009 Paris) et dispose d'une garantie financière auprès de l'APST 15 Avenue Carnot 75017 Paris et d'une Responsabilité Civile et Professionnelle HISCOX, n° PRC0172947, 15/19 rue Louis Le Grand, 75002 Paris.
@@ -20,4 +24,5 @@ Pour toutes les questions techniques liées à ce site, vous pouvez vous adresse
 Ce site est hébergé par Google App Engine. Le site odysway.com est développé et maintenu par [Quanted Square](https://www.quantedsquare.com/).
 
 © Copyright 2024 – Tous droits réservés à Odysway.
+::
 ::
