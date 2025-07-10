@@ -10,11 +10,32 @@
         size="100"
         rounded="lg"
       />
-      <!-- Always render the teleport target to avoid hydration issues -->
-      <div
-        id="card-header"
-        class="text-white text-h6 text-md-h5  w-100"
-      />
+      <!-- Stepper header directly in the card header -->
+      <v-stepper-header
+        v-if="stepDefinitions && skipperMode !== 'summary'"
+        class="elevation-0 text-white d-flex justify-space-between w-100"
+      >
+        <template
+          v-for="(step, index) in stepDefinitions"
+          :key="step.number"
+        >
+          <v-stepper-item
+            :complete="currentStep + 1 > step.number"
+            :step="step.number"
+            color="white"
+            :value="index + 1"
+          >
+            <span class="d-none d-md-block font-weight-bold text-white text-caption">
+              {{ step.label }}
+            </span>
+          </v-stepper-item>
+          <v-divider
+            v-if="step.number !== stepDefinitions[stepDefinitions.length - 1].number"
+            class="text-shadow text-white"
+            opacity="0.6"
+          />
+        </template>
+      </v-stepper-header>
     </div>
   </v-container>
   <v-img
@@ -49,11 +70,23 @@
 </template>
 
 <script setup>
-defineProps(['titre', 'image', 'travelType', 'date', 'price', 'currentStep'])
+defineProps({
+  titre: String,
+  image: String,
+  travelType: String,
+  date: String,
+  price: [String, Number],
+  currentStep: Number,
+  stepDefinitions: Array,
+  skipperMode: {
+    type: String,
+    default: 'quick',
+  },
+})
 </script>
 
 <style scoped>
 .height-title {
   min-height: fit-content!important;
-  }
+}
 </style>

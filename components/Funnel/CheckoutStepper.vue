@@ -4,6 +4,7 @@
     cols="12"
   >
     <FunnelStepsStepperHeader
+      ref="stepperHeaderRef"
       v-model="currentStep"
       :page="pageTexts"
       :skipper-mode="skipperMode"
@@ -36,6 +37,8 @@
               :image="voyage.imgSrc"
               :date="`Du ${dayjs(voyage.departureDate).format('DD/MM/YYYY')} au ${dayjs(voyage.returnDate).format('DD/MM/YYYY')}`"
               :current-step="currentStep"
+              :step-definitions="stepperHeaderRef?.stepDefinitions"
+              :skipper-mode="skipperMode"
             />
 
             <v-stepper-window
@@ -183,7 +186,7 @@ const route = useRoute()
 const router = useRouter()
 const { step, date_id, booked_id } = route.query
 const { addSingleParam } = useParams()
-
+const stepperHeaderRef = useTemplateRef('stepperHeaderRef')
 // const summaryRef = useTemplateRef('summaryRef')
 // const totalValueFromSummary = computed(() => {
 //   return summaryRef.value?.totalValueFromSummary || 0
@@ -200,7 +203,7 @@ const checkoutType = ref(null)
 const dynamicDealValues = ref(null)
 
 // ================== Voyage ==================
-const { data: voyage, status: voyageStatus, error: voyageError } = useAsyncData(`voyage-${step}`, async () => {
+const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
