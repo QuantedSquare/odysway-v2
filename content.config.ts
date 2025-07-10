@@ -1023,5 +1023,91 @@ export default defineContentConfig({
         // ==========================================
       }),
     }),
+    footer: defineCollection({
+      type: 'data',
+      source: 'footer.json',
+      schema: z.object({
+        logo: z.object({
+          image: z.string().editor({ input: 'media' }).describe('Logo Odysway'),
+          description: z.string().describe('Description de Odysway placé sous le Logo'),
+        }).describe('Section Logo et description'),
+        team: z.object({
+          image: z.string().editor({ input: 'media' }).describe('Photo de groupe de l\'équipe'),
+        }).describe('Section Team'),
+        contact: z.object({
+          ctaText: z.string().describe('Texte au dessus des informations de contact'),
+          phone: z.string().describe('Phone of Odysway'),
+          email: z.string().describe('Email of Odysway'),
+          buttonContact: z.object({
+            text: z.string().describe('Texte du bouton'),
+            lien: z.string().describe('URL de redirection au click du bouton'),
+          }).describe('Bouton de contact'),
+        }).describe('Contact information and social links'),
+        social: z.object({
+          facebook: z.string().describe('Lien Facebook'),
+          instagram: z.string().describe('Lien Instagram'),
+          tiktok: z.string().describe('Lien TikTok'),
+        }).describe('Social media links'),
+        linksList: z.object({
+          colonne1: z.object({
+            title: z.string().describe('Titre de la colonne'),
+            links: z.object({
+              link1: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 1'),
+              link2: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 2'),
+              link3: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 3'),
+            }).describe('Liens de la colonne 1'),
+          }).describe('Colonne 1'),
+          colonne2: z.object({
+            title: z.string().describe('Titre de la colonne'),
+            links: z.object({
+              link1: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 1'),
+              link2: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 2'),
+              link3: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 3'),
+            }).describe('Liens de la colonne 2'),
+          }).describe('Colonne 2'),
+          colonne3: z.object({
+            title: z.string().describe('Titre de la colonne'),
+            links: z.object({
+              link1: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 1'),
+              link2: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 2'),
+              link3: z.object({
+                text: z.string().describe('Texte du lien'),
+                link: z.string().describe('URL de redirection'),
+              }).describe('Lien 3'),
+            }).describe('Liens de la colonne 3'),
+          }).describe('Colonne 3'),
+          colonne4: z.object({
+            title: z.string().describe('Titre de la colonne'),
+            name: z.string().describe('Nom de la société'),
+            address: z.string().describe('Numéro de rue, rue'),
+            city: z.string().describe('Ville, code postal, pays'),
+          }).describe('Où nous trouver'),
+        }).describe('Links list'),
+      }).describe('Configuration du Footer'),
+    }),
   },
 })

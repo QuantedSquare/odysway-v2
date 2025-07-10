@@ -250,8 +250,7 @@ import OdyswayFooter from '~/assets/img/odysway-text.png'
 import OdyswayFooterBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const route = useRoute()
-const { footer } = useAppConfig()
-
+const { data: footer } = useAsyncData('footer', () => queryCollection('footer').first())
 const img = useImage()
 
 // Add computed property to check if current route is a voyage detail page
