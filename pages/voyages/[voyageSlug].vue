@@ -127,6 +127,14 @@ const { data: voyagePropositions } = await useAsyncData(`voyages-propositions-${
   return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).where('experienceType', '=', voyage.value.experienceType).limit(10).all()
 })
 
+onMounted(() => {
+  trackPixel('track', 'PageView')
+  gtag('event', 'page_view', {
+    eventCategory: 'Voyage',
+    eventAction: 'View',
+    eventLabel: voyage.value?.title })
+})
+
 watchEffect(() => {
   if (!voyage.value) return
   // SEO Meta Tags
