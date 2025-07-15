@@ -1,0 +1,152 @@
+{
+  "published": false,
+  "title": "Séjour photographique à Yellowstone",
+  "destinations": [
+    {
+      "name": "Etats-Unis"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [],
+  "duration": 11,
+  "nights": 10,
+  "includeFlight": false,
+  "housingType": "",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Voyage photographique à Yellowstone",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "yellowstone-photo-hiver",
+  "description": "Voyage photographique à Yellowstone",
+  "emailDescription": "",
+  "metaDescription": "Partez pour un voyage photographique avec Lionel MONTICO et Benoist CLOUET, dans le Parc National de Yellowstone, en petit groupe.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 10 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**10 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "",
+      "visible": false
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 5290,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 10,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 1100,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/yellowstone-photo-hiver/83X4SsrRRyGNI6Ze5u5R.jpg",
+    "alt": "image principale du voyage Séjour photographique à Yellowstone"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage Séjour photographique à Yellowstone"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "Séjour photographique à Yellowstone",
+    "canonicalUrl": "https://www.odysway.com/voyages/yellowstone-photo-hiver",
+    "ogTitle": "Séjour photographique à Yellowstone",
+    "ogDescription": "Partez pour un voyage photographique avec Lionel MONTICO et Benoist CLOUET, dans le Parc National de Yellowstone, en petit groupe.",
+    "ogImage": {
+      "src": "/images/voyages/yellowstone-photo-hiver/83X4SsrRRyGNI6Ze5u5R.jpg",
+      "alt": "image principale du voyage Séjour photographique à Yellowstone"
+    },
+    "twitterTitle": "Séjour photographique à Yellowstone",
+    "twitterDescription": "Partez pour un voyage photographique avec Lionel MONTICO et Benoist CLOUET, dans le Parc National de Yellowstone, en petit groupe.",
+    "twitterImage": {
+      "src": "/images/voyages/yellowstone-photo-hiver/83X4SsrRRyGNI6Ze5u5R.jpg",
+      "alt": "image principale du voyage Séjour photographique à Yellowstone"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

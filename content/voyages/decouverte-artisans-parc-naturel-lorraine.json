@@ -1,0 +1,297 @@
+{
+  "published": false,
+  "title": "Viticultrice et souffleur de verre, rencontrez les artisans lorrains",
+  "destinations": [
+    {
+      "name": "Vosges"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 3,
+  "nights": 2,
+  "includeFlight": false,
+  "housingType": "Chambre d'hôtes",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": true,
+    "mai": false,
+    "juin": true,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": true,
+    "mai": false,
+    "juin": true,
+    "juillet": false,
+    "aout": false,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Découvrez les paysages bucoliques du Parc naturel régional de Lorraine, les savoir-faire artisanaux et des histoires de vie. Cheminez à pied sur les côteaux boisés d'Ancy-Dornot, à vélo dans la très jolie vallée du Rupt-de-Mad, ou le long de la vallée de la Moselle sur la Voie Bleue.\n\nArrêtez-vous chez Eve, artiste vigneronne et partagez sa passion du terroir et du vin. Prenez-en plein les yeux aux côtés de Frédéric, maître verrier passionné, et découvrez les mystères que renferme le soufflage de verre au chalumeau, un savoir-faire ancestral envoûtant. Vous façonnerez votre verre à vin, avant de déguster les cépages de différents terroirs qui constituent le vignoble lorrain. Enfin, retrouvez Logan, votre guide nature poète au milieu des vignes dans les Côtes de Toul...où quelques surprises vous attendent !\n\nUn séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants et passionnés !",
+    "author": "Jenny",
+    "affixeAuthor": "engagée pour un tourisme à la campagne au Parc"
+  },
+  "experiencesBlock": [
+    "Découvrez les richesses naturelles et les savoir-faire du Parc naturel régional de Lorraine",
+    "Fabriquez votre verre à vin avec Frédéric, Meilleur Ouvrier de France du soufflage de verre au chalumeau",
+    "Dégustez avec Eve les cépages de l'AOC Moselle accompagnés de produits locaux",
+    "Baladez vous au milieu des vignes, accompagné de Logan, guide nature passionné",
+    "Dormez dans une chambre d’hôtes « Valeurs Parc » dans un Chai au cœur du vignoble"
+  ],
+  "slug": "decouverte-artisans-parc-naturel-lorraine",
+  "description": "Découvrez les paysages bucoliques du Parc naturel régional de Lorraine, les savoir-faire artisanaux et des histoires de vie. Cheminez à pied sur les côteaux boisés d'Ancy-Dornot, à vélo dans la très jolie vallée du Rupt-de-Mad, ou le long de la vallée de la Moselle sur la Voie Bleue.\n\nArrêtez-vous chez Eve, artiste vigneronne et partagez sa passion du terroir et du vin. Prenez-en plein les yeux aux côtés de Frédéric, maître verrier passionné, et découvrez les mystères que renferme le soufflage de verre au chalumeau, un savoir-faire ancestral envoûtant. Vous façonnerez votre verre à vin, avant de déguster les cépages de différents terroirs qui constituent le vignoble lorrain. Enfin, retrouvez Logan, votre guide nature poète au milieu des vignes dans les Côtes de Toul...où quelques surprises vous attendent !\n\nUn séjour en immersion dans le Parc, à la rencontre de ses acteurs inspirants et passionnés !",
+  "emailDescription": "👉 Si vous êtes en quête de paix et de sérénité; si vous souhaitez vous recentrer sur vous et être au cœur de la nature, alors ce voyage est fait pour vous ! ",
+  "metaDescription": "Vivez un voyage en immersion au coeur de la nature. Partez en randonnées accompagné d'un âne et dormez en bivouac. Un séjour immersif  idéal pour vous reconnecte.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 4 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**2 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avr à sept",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE CHEZ EVE",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée libre en début d’après midi à partir de 15h. Rendez-vous directement au Domaine Les Béliers, tenu par Eve, viticultrice. Accueil et présentation du séjour, du domaine situé à Ancy-Dornot (AOC Moselle) et des chambres. Dîner libre le soir, première nuit dans votre chambre d'hôtes.\n",
+      "photo": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/rJeR5YABQNeiaeEJRLTv.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SOUFFLEZ VOTRE VERRE",
+      "badgeText": "JOUR 2",
+      "description": "Petit-déjeuner pris au domaine puis départ en autonomie vers Waville, où vous participerez à un atelier de 4h  durant lequel vous façonnerez un verre à pied. Déjeuner et après-midi libres. En fin de journée, dégustation de mets et vins sélectionnés par Eve. Nuit dans votre chambre d'hôtes.",
+      "photo": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/Q11MJAlbSp68gggRbAfn.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN PLEIN VIGNOBLE",
+      "badgeText": "JOUR 3",
+      "description": "Petit-déjeuner puis départ en autonomie vers le sud du Parc, direction le Toulois (comptez 1h de route), où vous êtes attendus par Logan pour un pique-nique au milieu des vignes. Logan, vous accompagnera et vous donnera des clefs de compréhension du paysage de côtes avec ses particularités : le vignoble AOC Côtes de Toul.",
+      "photo": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/pD3XyBHGTRmFuZlr5XRW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "2 nuitées en chambre d'hôtes au pied des vignes du Domaine Les Béliers à Ancy-Dornot",
+      "Les petits déjeuners délicieux et fait maison apportés sur votre terrasse",
+      "L'apéro préparé par Eve pour déguster ses vins accompagnés de produits locaux",
+      "L'accompagnement de Logan, guide nature du Parc, lors d'une ballade au milieu des vignes des côté de Toul",
+      "La participation à l'atelier de fabrication d'une jambe de verre avec Frédéric, meilleur ouvrier de France de soufflage de verre au chalumeau",
+      "Votre séjour 100% remboursé et sous 7 jours si annulation en cas de circonstances exceptionnelles et inévitables au sens du Code du tourisme."
+    ],
+    "exclude": [
+      "Les activités non comprises dans la section \"le prix comprend\"",
+      "Les repas non compris dans la section \"le prix comprend\"",
+      "Le transport pour vous rendre sur place",
+      "Les dépenses personnelles",
+      "L'assurance annulation et l'assistance médicale multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 295,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 40,
+    "maxTravelers": 4,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Lors de ce séjour dans le Parc naturel régional de Lorraine, vous rencontrerez Eve, Frédéric et Logan qui seront vos hôtes et guides passionnés.",
+  "accompanistsList": [
+    {
+      "name": "Eve",
+      "description": "Très attachée aux terres de ses ancêtres qui cultivaient et vivaient déjà de la vigne, Eve Maurice a concrétisé son rêve à 39 ans, celui d’allier sa passion pour la vigne et de sa volonté de la partager avec ses hôtes. Eve élabore ses vins biologiques comme un sculpteur façonne ses oeuvres, dans le plus pur respect du terroir et du cépage, mais aussi du millésime.",
+      "role": "Artiste vigneronne et hôte du séjour",
+      "image": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/85c5S0oXTN6p4MNaeIu8.jpg"
+    },
+    {
+      "name": "Frédéric",
+      "description": "Lorrain de naissance, Frédéric Demoisson a choisi de travailler le verre à chaud depuis l’âge de 16 ans. Cette matière, à la fois intrigante et fascinante l’envoûte et c’est ainsi qu’il se forme au métier de Souffleur de Verre à la Canne. Parallèlement, son besoin de créativité s’exprime par le biais de la verrerie artistique et il crée Mad Verrerie d’Art (MVD). Il s’installe alors en Lorraine. Il travaille le verre selon différentes techniques : verre étiré, verre soufflé pour la réalisation de pièces uniques. En 2019, il s’est vu décerner le titre de Meilleur Ouvrier de France.",
+      "role": "  Artisan d'art (Meilleur Ouvrier de France)",
+      "image": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/xJ6FaABrQuq6WxSAVsQX.jpg"
+    },
+    {
+      "name": "Logan",
+      "description": "Logan est un passionné d'Histoire et de nature. Il est aussi à l'aise au musée que dans les vignes ou à composer de la poésie. Aujourd'hui, ce guide accompagnateur souhaite développer le tourisme de nature et faire du lien entre le paysage des Côtes, les milieux naturels qui le composent et les produits locaux qui en découlent. Ce passionné aime son terroir et souhaite valoriser la terre de ses ancêtres.",
+      "role": "Guide nature du Parc",
+      "image": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/w4TSSvjuT8SC2bxgiDq3.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Chambre d'hôtes",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/1aWdKJNxSyWjXRIY9Vj0.jpg",
+    "alt": "image principale du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/Ikg4x93IRGq7TxINEizL.jpg",
+    "alt": "image secondaire du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/zI1FfMyCQ4C2sVgeWInK.jpg",
+      "alt": "image de la liste de photos du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/GbplUYHyQVeymr51VwNX.jpg",
+      "alt": "image de la liste de photos du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/iRJjmAtuSBu7xGCKlhi9.jpg",
+      "alt": "image de la liste de photos du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/DxCcRROWTS6IZoRgbJtX.jpg",
+      "alt": "image de la liste de photos du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/mqnzv56hQPexOPJMI5i7.jpg",
+      "alt": "image de la liste de photos du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/HUsn3eC5Q0i6Rxzfz3Y0.jpg",
+      "alt": "image de la liste de photos du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    }
+  ],
+  "videoLinks": [
+    "https://www.youtube.com/embed/e6WSpl5F8sI",
+    "https://www.youtube.com/embed/xioFugqVekg",
+    "https://www.youtube.com/embed/i63X1wpE-Z0"
+  ],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Vous dégusterez des petit-déjeuners gourmands et fait-maison, servis sur la terrasse de votre chambre (avec vue sur les vignes). Le vendredi soir et samedi midi, nous vous suggérerons des adresses pour déguster une cuisine locale et de saison (dans votre carnet de voyage).\n\nSamedi soir, c'est avec Ève que vous dînerez, directement sur son domaine. (C'est le moment où vous pourrez vous servir du verre à pied, que vous aurez confectionné avec Frédéric le matin). Dimanche midi, c'est au milieu des vignes, avec Logan, qu'un pique-nique de produits locaux vous sera proposé !"
+      },
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "Durant ce séjour de 3 jours et 2 nuits, vous dormirez dans une chambre d'hôtes au pied des vignes du Domaine \"Les Béliers\", situé sur la commune d'Ancy-Dornot. Vous serez accueillis par Eve, propriétaire du domaine. Les chambres d’hôtes ont été conçues avec beaucoup de goût et avec des matériaux locaux. La literie est particulièrement confortable, avec une vue sur les vignes : vous avez tout pour passer un séjour ressourçant et qui fait du bien."
+      },
+      {
+        "question": "Avec qui vais-je voyager ?",
+        "answer": "Pour ce séjour dans le Parc naturel régional de Lorraine, nous vous proposons de réserver sur une date fixe. 4 voyageurs maximum par date, pour conserver une relation privilégiée et intime avec vos hôtes. Les prochaines dates sont en avril, juin et septembre 2022."
+      },
+      {
+        "question": "Quels vêtements dois-je emporter pour ce séjour ?",
+        "answer": "Prévoyez d'apporter des vêtements pour être à l'aise en extérieur pour la balade du dimanche avec Logan (jusqu'à 5km)."
+      },
+      {
+        "question": "Comment me rendre sur place ?",
+        "answer": "Le point de rendez-vous pour ce séjour est le Domaine les Béliers, situé sur la commune d'Ancy-Dornot. L’adresse et l’horaire d’arrivée exacte vous seront communiqués dans votre carnet de voyage.\n\nSi vous souhaitez venir en train, les gares qui vous permettent d'accéder au territoire du Parc naturel de Lorraine sont : \n\n*   Louvigny (Gare Lorraine TGV)\n*   Ancy\n*   Toul\n\nRetrouvez les horaires des trains en cliquant sur ce lien : [https://www.ter.sncf.com/grand-est/depliant/recherche](https://www.ter.sncf.com/grand-est/depliant/recherche)\n\nA l'arrivée de ces gares, vous pourrez louer une voiture pour naviguer plus facilement sur le territoire du Parc. [Agences de location de voitures](https://www.ada.fr/location-voiture-pont-a-mousson.html).\n\nA vélo, c’est également possible ! le territoire est parcouru de voies cyclables.\n\n*   Axe Metz-Pont-A-Mousson : [https://www.lavoiebleue.com/itineraire/metz-pont-a-mousson](https://www.lavoiebleue.com/itineraire/metz-pont-a-mousson)\n*   Axe Pont-A-Mousson-Nancy : [https://www.lavoiebleue.com/itineraire/pont-a-mousson-nancy](https://www.lavoiebleue.com/itineraire/pont-a-mousson-nancy)"
+      },
+      {
+        "question": "Et pour prolonger mon voyage ?",
+        "answer": "Si vous souhaitez prolonger votre séjour sur place, nous vous invitons à aller sur le site du [Parc naturel régional de Lorraine](https://www.pnr-lorraine.com/), ainsi que sur celui du [guide découverte](https://www.pnr-lorraine.com/wp-content/uploads/2019/06/Pnr-Lorraine-Guide-Pratique-D%C3%A9couverte.pdf)."
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe la réservation avec Odysway ? ",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Viticultrice et souffleur de verre, rencontrez les artisans lorrains",
+    "canonicalUrl": "https://www.odysway.com/voyages/decouverte-artisans-parc-naturel-lorraine",
+    "ogTitle": "Viticultrice et souffleur de verre, rencontrez les artisans lorrains",
+    "ogDescription": "Vivez un voyage en immersion au coeur de la nature. Partez en randonnées accompagné d'un âne et dormez en bivouac. Un séjour immersif  idéal pour vous reconnecte.",
+    "ogImage": {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/1aWdKJNxSyWjXRIY9Vj0.jpg",
+      "alt": "image principale du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    "twitterTitle": "Viticultrice et souffleur de verre, rencontrez les artisans lorrains",
+    "twitterDescription": "Vivez un voyage en immersion au coeur de la nature. Partez en randonnées accompagné d'un âne et dormez en bivouac. Un séjour immersif  idéal pour vous reconnecte.",
+    "twitterImage": {
+      "src": "/images/voyages/decouverte-artisans-parc-naturel-lorraine/1aWdKJNxSyWjXRIY9Vj0.jpg",
+      "alt": "image principale du voyage Viticultrice et souffleur de verre, rencontrez les artisans lorrains"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

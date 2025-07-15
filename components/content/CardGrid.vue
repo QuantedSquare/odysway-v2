@@ -4,7 +4,7 @@
     class="pa-0 mx-0 "
   >
     <v-container
-      v-if=" width > 960"
+      v-if="width > 960"
       fluid
     >
       <v-row>

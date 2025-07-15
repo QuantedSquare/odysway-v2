@@ -1,0 +1,303 @@
+{
+  "published": false,
+  "title": "Vivez comme un trappeur dans les Bauges",
+  "destinations": [
+    {
+      "name": "Alpes"
+    }
+  ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    }
+  ],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "Tipi",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 1,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "C’est au cœur du Parc naturel régional du Massif des Bauges, labellisé Géoparc depuis 2011, que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.\n\nAu programme : repas typiquement savoyards au tipi-restaurant, feu de camp, observation des étoiles, dégustation de spécialités baujues et déjeuner insolite en milieu souterrain accompagné par Mathieu, guide-spéléologue engagé dans la valorisation du patrimoine naturel. Géo-expert en géologie, investi dans différents programmes de recherche scientifique, il vous livrera de nouvelles clés de lecture du massif et mettre en lumière son exceptionnelle diversité.\n\nVous continuerez à remonter le temps aux côtés de Véronique, accompagnatrice en montagne, qui vous emmènera sur l'un des hauts-lieux de l'histoire géologique du massif : la Tourbière des Creusates.\n\nL’occasion de vous passionner pour ce territoire d’exception, respectueux de son environnement et conscient de ses ressources, porté par des acteurs engagés pour leur territoire.",
+    "author": "Pascale Vinit",
+    "affixeAuthor": "Parc naturel régional des Bauges"
+  },
+  "experiencesBlock": [
+    "La découverte d'un patrimoine géologique d'exception, reconnu à l'UNESCO.",
+    "Une immersion insolite en pleine nature sur un véritable campement tipi !",
+    "Les repas typiquement savoyards, à la découverte de spécialités baujues.",
+    "La rencontre privilégiée avec un guide-spéléologue dans une grotte accessible et sécurisée.",
+    "Un séjour possible en été comme en hiver !"
+  ],
+  "slug": "sejour-pnr-bauges-trappeur",
+  "description": "C’est au cœur du Parc naturel régional du Massif des Bauges, labellisé Géoparc depuis 2011, que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.\n\nAu programme : repas typiquement savoyards au tipi-restaurant, feu de camp, observation des étoiles, dégustation de spécialités baujues et déjeuner insolite en milieu souterrain accompagné par Mathieu, guide-spéléologue engagé dans la valorisation du patrimoine naturel. Géo-expert en géologie, investi dans différents programmes de recherche scientifique, il vous livrera de nouvelles clés de lecture du massif et mettre en lumière son exceptionnelle diversité.\n\nVous continuerez à remonter le temps aux côtés de Véronique, accompagnatrice en montagne, qui vous emmènera sur l'un des hauts-lieux de l'histoire géologique du massif : la Tourbière des Creusates.\n\nL’occasion de vous passionner pour ce territoire d’exception, respectueux de son environnement et conscient de ses ressources, porté par des acteurs engagés pour leur territoire.",
+  "emailDescription": "👉 Si vous avez envie de découvrir les merveilles géologiques du Parc naturel régional des Bauges, classé Géoparc depuis 2011, tout en séjournant en campement tipi, ce séjour est fait pour vous ! 🤗",
+  "metaDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Tipi",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE AU CAMPEMENT TIPI",
+      "badgeText": "JOUR 1",
+      "description": "Arrivée dans le Parc naturel régional du Massif des Bauges. Courte marche d’approche jusqu’au campement, situé au cœur de la forêt. Installation dans votre tipi tout confort et apéritif de bienvenue, à déguster en pleine nature. Vous profiterez ensuite d’un bon dîner « fait maison » sous le tipi principal. L’occasion de déguster une « Matouille », plat typique à base de la traditionnelle Tome des Bauges !",
+      "photo": "/images/voyages/sejour-pnr-bauges-trappeur/iQAhe418Q6aG1EZ1i8VP.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNEE AU COEUR DES PAYSAGES BAUJUS",
+      "badgeText": "JOUR 2",
+      "description": "Réveil dans un silence absolu. Après un bon petit-déjeuner, départ depuis le campement pour une randonnée accompagnée à la journée sur le site protégé de la Tourbière de Creusates, monument naturel remarquable du Massif des Bauges. L’occasion de mieux comprendre les particularités du territoire et la façon dont les hommes ont apprivoisé les lieux. A votre retour, possibilité de profiter d’un bain nordique avec vue sur le Mont Blanc (en option). Au menu du dîner : crozets à la crème et steak de bison !",
+      "photo": "/images/voyages/sejour-pnr-bauges-trappeur/YkAsUmjHQIu4mXqW1vXN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MERVEILLES SOUTERRAINES ",
+      "badgeText": "JOUR 3",
+      "description": "Dernier réveil au campement tipi. Matinée libre, puis rendez-vous avec Matthieu, guide-spéléologue, pour un déjeuner hors du commun dans la grotte de Bange, l’un des géosites du Massif ! Dégustation de produits locaux et découverte d’un milieu souterrain d’exception. Après-midi libre pour arpenter les villages alentours, rencontrer les artisans d’art et faire vos derniers achats de fromage avant le départ !",
+      "photo": "/images/voyages/sejour-pnr-bauges-trappeur/YQCbybGSwaRYTkYgYWWQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "2 nuitées en tipi privatif tout confort",
+      "Les petits-déjeuners sur le campement",
+      "Les dîners (menus complets « fait maison » incluant entrée, plat, dessert, vin et café)",
+      "Le panier pique-nique le Jour 2 pour la randonnée",
+      "Le déjeuner-dégustation dans la grotte le Jour 3",
+      "L’encadrement par des professionnels diplômés lors des activités",
+      "Le matériel pour l’expérience dans la grotte le Jour 3",
+      "Les taxes touristiques",
+      "L'assistance Odysway 24h/24 et 7j/7",
+      "Votre séjour 100% remboursé et sous 7 jours si annulation en cas de circonstances exceptionnelles et inévitables au sens du Code du tourisme."
+    ],
+    "exclude": [
+      "Le transport pour vous rendre sur le lieu du séjour & sur place",
+      "Les pourboires",
+      "Les boissons non mentionnées",
+      "L’assurance annulation et l’assurance multirisque"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 355,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Durant ce séjour, vous serez accompagnés par Véronique (accompagnatrice en montagne) et Mathieu (guide-spéléologue) marqués  \"Valeurs Parcs\", témoignant de leur engagement au service de la préservation et la valorisation du territoire. A travers leur travail, ils participent à l'éveil des consciences et à la sensibilisation du public sur la richesse, mais aussi la fragilité de la biodiversité.",
+  "accompanistsList": [
+    {
+      "name": "Véronique",
+      "description": "Véronique, installée au cœur des Bauges dans le petit village de Doucy, exerce comme accompagnatrice en montagne depuis 2006. Amoureuse de la nature, elle s’attache à offrir une approche respectueuse, ludique et sensorielle des espaces naturels traversés. Profondément inspirée par la nature qui l’entoure, le Massif des Bauges est pour elle un espace de découverte et d’émerveillement permanent. Par la randonnée, elle met un point d'honneur à sensibiliser les jeunes générations à leur impact sur la nature et à la fragilité de la biodiversité du Massif. Une véritable actrice du changement, au service de son territoire.",
+      "role": "Accompagnatrice en montagne",
+      "image": "/images/voyages/sejour-pnr-bauges-trappeur/uSs9eKmyRNtKULuALHBm.jpg"
+    },
+    {
+      "name": "Matthieu",
+      "description": "Géo-partenaire expert en géologie sur le territoire, investi dans différents programmes de recherche scientifique, Matthieu a à cœur de mettre en lumière l’extraordinaire beauté du monde spéléologique. Amoureux du milieu karstique, de son histoire géologique et humaine, il vous guidera avec passion et générosité !",
+      "role": "Guide spéléologue",
+      "image": "/images/voyages/sejour-pnr-bauges-trappeur/HRta86kOTKOehBztcjPw.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Tipi",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
+    "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/sejour-pnr-bauges-trappeur/LcbUaJztStiqmdAUdqlp.jpg",
+    "alt": "image secondaire du voyage Vivez comme un trappeur dans les Bauges"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/cJBCgTbaRSmMzbBargUY.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/RtzFYv0TYC9zDSx1AW3m.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/wRNYWVeQS8yXy50iqE9S.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/Fgc4z5fzTVYoyhUqF3Lm.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/Y0IUCmsUSkBEvf89SpLA.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/SzRQEVGaTAmmng1ARgd4.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/75sKvM5jRoiOqWkqGSFu.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/N81WPAtBR1KwM17xUoV1.jpg",
+      "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
+    }
+  ],
+  "videoLinks": [
+    "https://www.youtube.com/embed/UTXBrU8XV_E",
+    "https://www.youtube.com/watch?v=dOzVHLqmYuQ"
+  ],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Quand ce séjour est-il réalisable ? ",
+        "answer": "Ce séjour est réalisable toute l’année, du mercredi au dimanche (le campement tipi étant fermé les dimanches, lundis et mardis soirs). La randonnée accompagnée est adaptée avec des raquettes durant la saison hiver (fournies sur demande moyennant un supplément de 10 euros par personne). La grotte est accessible toute l’année, indépendamment de la saison."
+      },
+      {
+        "question": "Comment me rendre sur place ? ",
+        "answer": "Le campement tipi est accessible facilement. Il est situé à 30 minutes de Chambéry et d’Aix Les Bains, à 45 min d’Annecy, à 1h de Genève, à 1h15 de Grenoble et à 1h30 de Lyon. Si vous souhaitez venir en train, il vous sera possible de louer une voiture directement au départ de ces différentes gares."
+      },
+      {
+        "question": "Les tipis sont-ils privatisés ? ",
+        "answer": "Oui ! Les tipis sont automatiquement privatisés pour votre couple, famille ou groupes d’amis."
+      },
+      {
+        "question": "Quelles sont les conditions de confort au sein du campement tipi ?",
+        "answer": "Les tipis sont équipés pour assurer votre confort, quelque soit la saison. Un drap housse, un oreiller avec taie d’oreiller, un plaid, un duvet grand froid (confortable jusqu’à -18°C) et un drap sac sont fournis. Chaque tipi est équipé d’un poêle à bois ou à granulés pour le chauffage. Pour les sanitaires, un chalet commun est à disposition des occupants du campement (deux douches et deux WC)."
+      },
+      {
+        "question": "Ce séjour est-il accessible aux enfants ?",
+        "answer": "Oui ! Le campement, ainsi que les tipis, sont parfaitement adaptés pour les enfants et accueillent régulièrement des familles. Notre accompagnatrice en montagne intervient très régulièrement auprès de groupes scolaires et sera en mesure d’adapter son discours et l’itinéraire de la randonnée aux plus jeunes. L’activité au sein de la grotte est accessible dès l’âge de 4 ans."
+      },
+      {
+        "question": "La grotte est-elle accessible aux personnes à tendance claustrophobique ?",
+        "answer": "Tout à fait ! Cette grotte a été spécialement choisie pour sa facilité d’accès. Le site du déjeuner (à l’intérieur de la grotte) est accessible rapidement via un itinéraire sécurisé et ouvert sur de vastes cavités. Vous n’aurez donc pas de sensation d’enfermement. Il vous sera néanmoins toujours possible de rejoindre rapidement l’extérieur si vous le désirez."
+      },
+      {
+        "question": "Comment dois-je m’habiller pour descendre dans la grotte ?",
+        "answer": "Le matériel technique est entièrement fourni pour cette activité. Il est néanmoins nécessaire d’emporter avec vous des vêtements chauds de type polaire (température de 5°C dans la grotte), un pantalon de sport et des chaussures de randonnée (à défaut, des baskets ayant des semelles avec une bonne accroche)."
+      },
+      {
+        "question": "Quel est le niveau de difficulté de la randonnée ?",
+        "answer": "A pied (de début mai à mi-novembre), il faut compter une dizaine de kilomètres avec un dénivelé positif de +200 à 250m. En raquettes (de décembre à avril), l’itinéraire s’étend entre 9 et 12 km avec un dénivelé positif de +200 à 300m de dénivelé.\n\nVotre accompagnatrice pourra adapter l’itinéraire emprunté selon les envies et le niveau de votre groupe"
+      },
+      {
+        "question": "Quels produits locaux puis-je offrir à mes proches à mon retour ?",
+        "answer": "Le cœur du Massif est essentiellement connu pour l’élevage laitier traditionnel. Vous trouverez de nombreuses fruitières (fromageries traditionnelles de montagnes), disséminées à travers le territoire. Tome des Bauges, Reblochon, fromages de chèvre et de brebis, il y en a pour tous les goûts ! Les amateurs de bons vins trouveront également leur bonheur avec plusieurs vins de Savoie AOP renommés. Le territoire offre une palette de plantes aromatiques et médicinales cultivées et cueillies dans les Bauges. Transformées en liqueurs, apéritif, tisanes, sirops ou baumes, elles reflètent toute la diversité des goûts du territoire. Vous trouverez par ailleurs, au gré des villages de montagne : miels, confitures, biscuits et charcuterie artisanale.\n\nA l’inscription, nous vous fournirons une liste de bonnes adresses afin de dénicher les meilleures pépites locales ! Vous pouvez également explorer le site internet du Parc naturel régional du Massif des Bauges, riche en informations et en bons conseils : http://www.parcdesbauges.com/fr/"
+      },
+      {
+        "question": "Et pour prolonger mon voyage ?",
+        "answer": "Il vous est possible de poursuivre votre voyage au sein même du Massif, ou bien de partir explorer l’une des six villes aux portes du Parc (Chambéry, Aix-les-Bains, Albertville, Ugine, Annecy et Rumilly) et ses deux grands lacs – le Lac du Bourget et le Lac d’Annecy - qui offrent de nombreuses possibilités d’évasion !"
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Vivez comme un trappeur dans les Bauges",
+    "canonicalUrl": "https://www.odysway.com/voyages/sejour-pnr-bauges-trappeur",
+    "ogTitle": "Vivez comme un trappeur dans les Bauges",
+    "ogDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
+    "ogImage": {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
+      "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    "twitterTitle": "Vivez comme un trappeur dans les Bauges",
+    "twitterDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
+    "twitterImage": {
+      "src": "/images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
+      "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

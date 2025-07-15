@@ -178,7 +178,7 @@ au cœur du voyage
     ::::voyage-col-card{slug="trek-chez-lhabitant-nepal"}
     ::::
   
-    ::::voyage-col-card{slug="voyage-perou-trek-immersion-chez-l-habitant"}
+    ::::voyage-col-card{slug="voyage-perou-trek-immersion-chez-lhabitant"}
     ::::
   
     ::::voyage-col-card{slug="sejour-berger-bearn"}

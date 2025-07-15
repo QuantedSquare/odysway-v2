@@ -1,0 +1,422 @@
+{
+  "published": true,
+  "title": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
+  "destinations": [
+    {
+      "name": "Cap-Vert"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-en-couple"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 10,
+  "nights": 9,
+  "includeFlight": false,
+  "housingType": "Chez l'habitant",
+  "idealPeriods": {
+    "toutePeriodes": true,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": true,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 4.5,
+  "comments": 16,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Sur l’île préservée de Santiago, nous vous invitons à vivre une immersion authentique au cœur du Cap-Vert. Loin des complexes touristiques, la plus grande île de l’archipel révèle une culture vivante et des paysages bruts, façonnés par la terre et l’océan.\n\nVous partagerez le quotidien des _camponeses_, cultivateurs passionnés qui exploitent la terre fertile de Santiago avec patience et savoir-faire. Leur mode de vie, rythmé par les saisons et les récoltes, offre un aperçu unique des traditions agricoles capverdiennes.\n\nEn bord de mer, vous rencontrerez les _pescadores_, pêcheurs locaux dont les journées sont dictées par les marées et le vent. Entre la pêche au lever du soleil et le partage d’un repas au retour du port, ces instants de vie simples vous plongeront dans la vie locale capverdienne.\n\nTout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotidien vous plongeront dans un Cap-Vert authentique, où chaque journée révèle un nouvel aspect de l’île et de ses traditions.",
+    "author": "Romain",
+    "affixeAuthor": "fondateur d'Odysway "
+  },
+  "experiencesBlock": [
+    "Plongez dans le quotidien des habitants et découvrez leurs traditions",
+    "Expérimentez l’hospitalité capverdienne et son art de vivre chaleureux",
+    "Rencontrez pêcheurs, cultivateurs et artisans pour mieux comprendre les savoir-faire locaux",
+    "Séjournez chez l’habitant à deux étapes du voyage pour une immersion complète",
+    "Célébrez la fin de votre séjour autour d’une _Despedida_, une fête traditionnelle avec votre guide et sa famille"
+  ],
+  "slug": "immersion-culturelle-cap-vert",
+  "description": "Sur l’île préservée de Santiago, nous vous invitons à vivre une immersion authentique au cœur du Cap-Vert. Loin des complexes touristiques, la plus grande île de l’archipel révèle une culture vivante et des paysages bruts, façonnés par la terre et l’océan.\n\nVous partagerez le quotidien des _camponeses_, cultivateurs passionnés qui exploitent la terre fertile de Santiago avec patience et savoir-faire. Leur mode de vie, rythmé par les saisons et les récoltes, offre un aperçu unique des traditions agricoles capverdiennes.\n\nEn bord de mer, vous rencontrerez les _pescadores_, pêcheurs locaux dont les journées sont dictées par les marées et le vent. Entre la pêche au lever du soleil et le partage d’un repas au retour du port, ces instants de vie simples vous plongeront dans la vie locale capverdienne.\n\nTout au long du séjour, l’atmosphère chaleureuse et la simplicité du quotidien vous plongeront dans un Cap-Vert authentique, où chaque journée révèle un nouvel aspect de l’île et de ses traditions.",
+  "emailDescription": "👉 Si vous souhaitez partir à la rencontre d'une culture riche et méconnue, partager des moments uniques avec des locaux et découvrir leur quotidien, ce voyage au Cap-Vert est fait pour vous ! ❤️",
+  "metaDescription": "Vivez une immersion authentique à Santiago, au Cap-Vert. Partagez le quotidien des cultivateurs et pêcheurs et découvrez un mode de vie préservé.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BEM-VINDO À CIDADE VELHA",
+      "badgeText": "JOUR 1 ",
+      "description": "Vous arrivez à Praia, la capitale du Cap-Vert. Vous êtes accueilli par nos équipes à l'aéroport et êtes conduit dans la pension familiale de Cidade Velha. Selon votre heure d'arrivée, vous pourrez commencer votre immersion dans la vie capverdienne.",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/EG0dm9oUQLmeemorDuc3.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EXPLORATION DE CIDADE VELHA",
+      "badgeText": "JOURS 2 et 3",
+      "description": "Petit-déjeuner puis profitez de deux jours pour visiter en toute liberté la ville de Cidade Velha. Une première journée d’observation pour se mettre au rythme de la vie capverdienne. Visitez le fort São Filipe construit sur ordre de Filipe Iᵉʳ, roi du Portugal et d’Espagne. Passez par le « Pelourinho », ce monument qui rappelle l’histoire de l’esclavage. Flânez sur « Rua Banana » où vous pourrez admirer les vieilles maisons en pierre. En fin de journée, détendez-vous en contemplant l’océan depuis la plage ou un bar local.",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/6tdsUV2yQOa5Lam3cWi9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION CHEZ LES CAMPONESES",
+      "badgeText": "JOURS 4 et 5",
+      "description": "Dans le canton de Santa Catarina, découvrez le mode de vie des agriculteurs et des familles rurales. En totale immersion dans une famille, vous découvrez la fabrique des plats traditionnels et du rhum. L’essentiel de la vie des camponês (cultivateurs) n’aura plus de secret pour vous. La population chaleureuse, la végétation et le panorama exceptionnel vont vous enchanter.",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/Z88pToJTy6iumcDRdxkg.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA JOURNÉE SOLIDAIRE",
+      "badgeText": "JOUR 6",
+      "description": "Vivez en immersion avec les habitants d’un petit village de Santa Catarina. Visite d’une école primaire et goûter avec les enfants sont au programme pour un moment riche en émotion. Pour cette expérience solidaire vous pourrez si vous le souhaitez laisser des donations aux enfants ( matériel scolaire, matériel sanitaire etc.)",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/jzHUxC84Qwy0eZnRXlTJ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VIE MARINE",
+      "badgeText": "JOUR 7",
+      "description": "En empruntant les routes en lacets de Santa Catarina vers le sud de l’île vous arriverez à Praia la Capitale. Il est essentiel pour être un bon capverdien de connaitre son histoire coloniale et les\r\nmonuments laissé en héritage. Vous visiterez donc Praia et Cidade Velha qui est l’ancienne capitale.",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/m424EquqQf6XSvxOiUeU.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA DESPEDIDA",
+      "badgeText": "JOURS 8 ET 9",
+      "description": "Dans le village de Porto Mosquito à l’extrémité de Santiago, vous apercevez au loin l'île de Fogo. Ces quelques jours sont l'occasion de vivre le quotidien d’un Pescadore «pêcheur» et de sa famille. En totale immersion, vous adopterez le rythme de vie paisible et chaleureux au bord de l’océan dans ce village très authentique. C’est ainsi que vous direz au revoir au Cap Vert.",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/0sqjfsRxRBCC3sX76Esc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 10",
+      "description": "L’aventure touche à sa fin. Nous avons une certitude, celle d’avoir marqué votre cœur et votre esprit grâce à ses rencontres uniques.",
+      "photo": "/images/voyages/immersion-culturelle-cap-vert/BEBLj9z1QZaIj8Q5bfRx.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts à chaque étape du voyage",
+      "Tous les hébergements, en pension et chez l'habitant",
+      "La pension complète sauf les repas indiqués dans \"le prix ne comprend pas\"",
+      "L'accompagnement par un guide francophone",
+      "La part solidaire pour les familles"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Praia et les taxes aéroportuaires (possibilité de devis avec vols inclus sur demande)",
+      "Les activités non mentionnées dans la section \"le prix comprend\"",
+      "Les repas du jour 1 et le déjeuner du jour 3",
+      "Les boissons (alcool et sodas)",
+      "Les dépenses personnelles sur place",
+      "Les pourboires",
+      "La taxe de sécurité aéroportuaire (31€)",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1520,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "RAI"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage au Cap-Vert, vous serez accompagné par Dino, un guide francophone passionné de nature. Originaire de Santiago, il partage l’histoire et les traditions de son pays avec ceux qui souhaitent découvrir un Cap-Vert authentique, loin des sentiers battus.\n\nDurant votre séjour, vous vivrez des moments uniques avec la famille de Sony, pêcheur à Porto Mosquito. Avec sa femme Elisangela et leurs trois enfants, il vous ouvrira les portes de son quotidien simple et chaleureux, où la joie et le partage sont toujours au rendez-vous.\n\nJessica, coordinatrice du séjour, est née en France, mais a découvert le Cap-Vert en 2007, un voyage qui a profondément marqué son lien avec sa terre d’origine. Depuis, elle s’attache à créer des expériences uniques, en permettant des rencontres avec des familles comme celles de Dino et Sony, pour offrir un voyage que l’on ne trouve dans aucun guide.",
+  "accompanistsList": [
+    {
+      "name": "Jessica",
+      "description": "",
+      "role": "Coordinatrice du séjour",
+      "image": "/images/voyages/immersion-culturelle-cap-vert/52W4ffeiS6yIwl4dHqyY.jpg"
+    },
+    {
+      "name": "Dino",
+      "description": "",
+      "role": "Guide accompagnateur",
+      "image": "/images/voyages/immersion-culturelle-cap-vert/dezdgU6oQtWkQhHvdVpc.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Chez l'habitant",
+      "housingType": "",
+      "housingMood": "Lors de votre séjour, vous serez hébergé dans une pension familiale à Cidade Velha, tenue par un couple de retraités capverdiens. Nichée dans un cadre bucolique, cette maison dispose de cinq chambres et d’une piscine idéale pour se détendre après vos journées de découverte. Le dîner sera pris dans un restaurant local situé à seulement cinq minutes à pied.",
+      "image": [
+        {
+          "src": "/images/voyages/immersion-culturelle-cap-vert/2qov1atQFyM82jtI60AY.jpg",
+          "alt": "image de l'hébergement Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+        },
+        {
+          "src": "/images/voyages/immersion-culturelle-cap-vert/xvtaAHtARaK1cF2rGTnv.jpg",
+          "alt": "image de l'hébergement Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+        },
+        {
+          "src": "/images/voyages/immersion-culturelle-cap-vert/ugLb1D2ITEyXopmkeGXi.jpg",
+          "alt": "image de l'hébergement Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/immersion-culturelle-cap-vert/9U8kgfJS7ORLToveeUUj.jpg",
+    "alt": "image principale du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/immersion-culturelle-cap-vert/oOeGdEvFQ0uhnzYIFNF3.jpg",
+    "alt": "image secondaire du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/RefG7s9vT9O4u2dd2Kag.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/0iASouxOSPSjsNXbminc.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/RFNpZVXXQ46EmoP39d4J.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/ENfLTNGMQfWhZ9kv7MsK.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/vhhN0yQE6nMrC1b6rCnw.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/NX0HWRhRoCrvp6ewVyRh.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/o5MVPctISPWumTNeo6nc.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/5JYWEdQ3TTWMAylAa7Ea.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/HlWn3YFkQIWkSmeI4PeF.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/SjCE9J36SdidVRY2xP7j.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/PuIe5FST6CPhZlY7iiMY.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/WRN9453RrqbjStRpILGw.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/D4Qv930RWyPuIuxxAZg3.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/K5A74q9kSOE7LY7s1N7d.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/XDPHtYnBT3qvWn87KYkb.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/sOT8T7LwRFSOQji302Gg.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/Ke5jDUS8O1byDElSPs5g.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/TCGxZeJQcegjBoAssv1Q.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/pBHhouZRG6gopFICcC9C.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/MI4tovpZSfy3XnWMTKy4.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/9U1ZyYx1RuaLGqXw6WID.jpg",
+      "alt": "image de la liste de photos du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Que vais-je manger ? ",
+        "answer": "Cette expérience se déroule chez l'habitant, en immersion. Ainsi, vous aurez l'occasion de goûter les plats consommés au quotidien par les Capverdiens, comme la traditionnelle _cachupa_. \n\nN'hésitez pas à nous indiquer vos régimes ou allergies alimentaires, nous nous adapterons à votre situation avec plaisir."
+      },
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "Lors de ce voyage, vous découvrirez trois hébergements uniques au Cap-Vert :\n\n*   **Cidade Velha** : Une pension familiale tenue par des retraités capverdiens, offrant un cadre paisible avec piscine. L’hébergement comprend le petit-déjeuner, et le dîner est pris dans un restaurant à proximité.\n*   **Achada Lem** : Une maison d’hôte chaleureuse de 4 chambres tenue par Magalie, une expatriée française. Ici, vous vivrez une immersion authentique en partageant les repas avec la famille d’accueil.\n*   **Assomada** : La pension de charme, perchée dans la montagne, offre une vue imprenable sur l’une des merveilles du Cap-Vert, l’arbre fromager de Boa Entrada. Les chambres sont élégamment décorées, offrant un séjour luxueux en pleine nature."
+      },
+      {
+        "question": "Quels sont les essentiels à apporter ? ",
+        "answer": "Vos guides ont constamment une trousse de secours à disposition. Les classiques comprimés anti-migraine, la crème solaire, et un anti-moustique sont toutefois recommandés. \n\nLes bouteilles d'eau sont fournies par vos guides tout au long du voyage."
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "La meilleure période est de janvier à juin et septembre à décembre.\n\nLes mois d'août et septembre sont légèrement plus pluvieux, sans impact sur les activités effectuées pendant cette expérience. \n\nEn février, c’est la saison de la canne à sucre et du carnaval. De juin à janvier, les températures sont agréables, c’est une saison active pour la vie agricole (semence, récoltes, désherbages, pâturage des animaux etc.). La mer est idéale pour la pêche au thon mais aussi pour la plongée, et l’observation de la ponte des œufs de tortues. Il y a des festivals et fêtes traditionnelles sur ces mois.  \nMars, avril et mai sont des périodes assez calmes avec un climat très arides."
+      },
+      {
+        "question": "Quelles sont les formalités d'entrée au Cap Vert ? ",
+        "answer": "Les autorités capverdiennes exigent que le **passeport** **ait une durée de validité au moins égale à six mois après la fin prévue du séjour dans le pays**.\n\nLe visa est remplacé par une formalité préalable de **pré-enregistrement d’entrée sur le territoire capverdien**, dont les modalités sont précisées sur la [plateforme capverdienne dédiée](http://www.ease.gov.cv/ \"lien externe\"). Vous devez également vous acquitter d'une **taxe de sécurité aéroportuaire** (~30€) dont le règlement sera effectué soit sur la même plateforme, soit à l’arrivée dans l’un des aéroports internationaux de l’archipel.\n\nIl est recommandé de s’inscrire sur l’application [Ariane](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html).\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/cap-vert/#entree)."
+      },
+      {
+        "question": "Quels sont les vaccins ou précautions en matière de santé ?",
+        "answer": "Aucun vaccin n’est obligatoire. Cependant, tout voyageur passant par le Sénégal ou le Brésil doit être vacciné contre la fièvre jaune et disposer d’un carnet de vaccinations internationales à jour.\n\nAssurez-vous d’être à jour dans vos vaccinations habituelles ainsi que celles liées à toutes les zones géographiques visitées.\n\nLa mise à jour de la vaccination diphtérie-tétanos-poliomyélite (DTP) est recommandée, ainsi que la vaccination rubéole-oreillons-rougeole (ROR) chez l’enfant. La vaccination antituberculeuse est également souhaitable.\n\nPlus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/cap-vert/#sante)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ?",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Ce voyage est-il fait pour moi ? ",
+        "answer": "Ce voyage est fait pour vous si vous cherchez un dépaysement culturel en immersion chez les locaux ! Adeptes ou non des voyages en Afrique, vous serez émerveillés par l'accueil des capverdiens, et leurs patrimoines culturel et naturel riches. Ce voyage est proposé aux enfant à partir de 5 ans pour pouvoir profiter des découvertes culturelles et naturelles et faire des rencontres enrichissantes. Le rythme est totalement adapté pour un enfant de 5 ans ou une personne en moyenne forme. Votre guide veillera a s'adapter à votre rythme, pour les plus sportifs vous pourrez profiter des randonnées, pour les moins sportifs vous  prendrez votre temps et profiterez de pauses au bord de l'eau ou dans des petits villages."
+      },
+      {
+        "question": "Comment se déroulent les deux immersions ? ",
+        "answer": "Vous vivrez tout d'abord une immersion dans la famille de votre guide accompagnateur Dino. Vous partagerez de bons repas ensemble dans la maison familiale et partagerez leur quotidien. \n\n  \nPuis, vous adopterez le rythme de vie paisible au bord de l’océan dans un village de pêcheur authentique. Avec sa femme Elisangela et ses 3 enfants, Sony, jeune pêcheur de 30 ans, vous partagera son humble quotidien. Vous partirez en mer avec lui et mangerez de bons repas à base des poissons pêchés ensemble."
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
+    "canonicalUrl": "https://www.odysway.com/voyages/immersion-culturelle-cap-vert",
+    "ogTitle": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
+    "ogDescription": "Vivez une immersion authentique à Santiago, au Cap-Vert. Partagez le quotidien des cultivateurs et pêcheurs et découvrez un mode de vie préservé.",
+    "ogImage": {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/9U8kgfJS7ORLToveeUUj.jpg",
+      "alt": "image principale du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    "twitterTitle": "Cap-Vert en immersion : partagez le quotidien des habitants de Santiago",
+    "twitterDescription": "Vivez une immersion authentique à Santiago, au Cap-Vert. Partagez le quotidien des cultivateurs et pêcheurs et découvrez un mode de vie préservé.",
+    "twitterImage": {
+      "src": "/images/voyages/immersion-culturelle-cap-vert/9U8kgfJS7ORLToveeUUj.jpg",
+      "alt": "image principale du voyage Cap-Vert en immersion : partagez le quotidien des habitants de Santiago"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

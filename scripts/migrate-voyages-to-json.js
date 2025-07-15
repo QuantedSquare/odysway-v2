@@ -7,16 +7,11 @@ import slugify from 'slugify'
 
 // Image download configuration
 const IMAGE_DOWNLOAD_DIR = '../public/images/voyages'
-const OUTPUT_DIR = 'content/voyagesv2'
+const OUTPUT_DIR = '../content/voyages'
 const INPUT_FILE = './butter-data/voyages.json'
 const DOWNLOAD_DELAY_MS = 100
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 200
-
-const MONTHS = [
-  'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
-  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre',
-]
 
 const turndown = new TurndownService()
 
@@ -59,7 +54,7 @@ function generateImageFilename(imageUrl) {
 
 async function processAndDownloadImages(voyage) {
   if (!fs.existsSync(IMAGE_DOWNLOAD_DIR)) fs.mkdirSync(IMAGE_DOWNLOAD_DIR, { recursive: true })
-  const voyageSlug = slugify(voyage.slug, { lower: true })
+  const voyageSlug = slugify(voyage.slug, { lower: true, strict: true })
   const voyageDir = path.join(IMAGE_DOWNLOAD_DIR, voyageSlug)
   if (!fs.existsSync(voyageDir)) fs.mkdirSync(voyageDir, { recursive: true })
   const imageUrlMap = new Map()
@@ -131,9 +126,27 @@ function parseDuration(duree) {
 }
 
 function mapMonths(numbers) {
-  // numbers input looks like this "1,2,3,4,12"
-  if (!numbers) return []
-  return numbers.split(',').map(n => MONTHS[parseInt(n) - 1]).filter(Boolean)
+  // Output: { toutePeriodes: false, janvier: false, ... }
+  const months = [
+    'janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin',
+    'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre',
+  ]
+  const result = { toutePeriodes: false }
+  months.forEach((month) => {
+    result[month] = false
+  })
+  if (!numbers) return result
+  const nums = numbers.split(',').map(n => parseInt(n.trim())).filter(n => !isNaN(n))
+  nums.forEach((n) => {
+    if (n >= 1 && n <= 12) {
+      result[months[n - 1]] = true
+    }
+  })
+  // Optionally, if all months are true, set toutePeriodes to true
+  if (months.every(month => result[month])) {
+    result.toutePeriodes = true
+  }
+  return result
 }
 
 function getVideoLinks(voyage) {
@@ -160,7 +173,7 @@ function getReviews(voyage) {
         rating: 5,
         text: turndown.turndown(reviewText),
         date: '2025-03-25T00:00:00',
-        voyageSlug: slugify(voyage.slug, { lower: true }),
+        voyageSlug: slugify(voyage.slug, { lower: true, strict: true }),
         voyageTitle: voyage.titre,
         isOnHome: false,
       })
@@ -191,21 +204,20 @@ async function processVoyage(voyage) {
     destinations: voyage.pays.map((p) => {
       return {
         name: p.nom,
-        slug: slugify(p.nom, { lower: true }),
       }
     }),
     groupeAvailable: voyage.groupe,
     privatisationAvailable: voyage.individuel,
-    customAvailable: undefined, // Not present in source
+    customAvailable: false, // Not present in source
     experienceType: 'En immersion chez...', // Not present in source
     level: '1', // Not present in source
     categories: voyage.categorie.map(c => ({ name: c.slug.trim() })),
     duration,
     nights,
-    includeFlight: voyage.vol_inclus,
+    includeFlight: false,
     housingType: voyage.hebergement,
-    idealPeriods: mapMonths(voyage.periode_ideale_search).map(month => ({ month })),
-    monthlyAvailability: mapMonths(voyage.periode_ideale_search).map(month => ({ month })),
+    idealPeriods: mapMonths(voyage.periode_ideale_search),
+    monthlyAvailability: mapMonths(voyage.periode_ideale_search),
     minAge: 8,
     rating: voyage.note || 5,
     comments: voyage.nombre_avis || 10,
@@ -216,7 +228,7 @@ async function processVoyage(voyage) {
       affixeAuthor: voyage.role_auteur_description || '',
     },
     experiencesBlock: htmlListToArray(voyage.plus),
-    slug: slugify(voyage.slug, { lower: true }) || '',
+    slug: slugify(voyage.slug, { lower: true, strict: true }) || '',
     description: turndown.turndown(voyage.description || ''),
     emailDescription: voyage.description_email,
     metaDescription: voyage.meta_description || '',
@@ -266,7 +278,7 @@ async function processVoyage(voyage) {
       lastMinuteReduction: 80,
       earlyBirdAvailable: voyage.got_earlybird,
       earlyBirdReduction: voyage.reduction_earlybird,
-      maxTravelers: voyage.number_catchline_tab_group,
+      maxTravelers: voyage.number_catchline_tab_group || '',
       minTravelersToConfirm: voyage.nombre_de_voyageurs_pour_privatiser > 0 ? voyage.nombre_de_voyageurs_pour_privatiser : 2,
       indivRoom: voyage.indiv_room,
       forcedIndivRoom: voyage.forced_indiv_room,
@@ -320,7 +332,7 @@ async function processVoyage(voyage) {
         answer: turndown.turndown(f.reponse || ''),
       })),
     },
-    seo: {
+    seoSection: {
       metaTitle: voyage.titre || '',
       canonicalUrl: `https://www.odysway.com/voyages/${voyage.slug}`,
       ogTitle: voyage.titre || '',
@@ -347,7 +359,7 @@ async function main() {
   const voyages = JSON.parse(raw)
   for (const voyage of Array.isArray(voyages) ? voyages : [voyages]) {
     const out = await processVoyage(voyage)
-    const outPath = path.join(OUTPUT_DIR, `${slugify(voyage.slug)}.json`)
+    const outPath = path.join(OUTPUT_DIR, `${slugify(voyage.slug, { lower: true, strict: true })}.json`)
     fs.writeFileSync(outPath, JSON.stringify(out, null, 2), 'utf8')
     console.log(`Wrote ${outPath}`)
   }

@@ -1,0 +1,277 @@
+{
+  "published": false,
+  "title": "En vélo électrique, à la rencontre des producteurs locaux dans le Vexin",
+  "destinations": [
+    {
+      "name": ""
+    }
+  ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "ecotourisme"
+    }
+  ],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "Chambre d'hôtes",
+  "idealPeriods": {
+    "toutePeriodes": true,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": true,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 4.8,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc naturel régional du Vexin Français en vélo électrique !\n\nAu programme : l’élaboration de votre propre panier à garnir de produits locaux directement chez les producteurs.  Un atelier avec un céramiste local et des visites pour découvrir les savoir-faire du Vexin. Vous rencontrerez lors de ce séjour de nombreux acteurs locaux, comme des artisans chocolatier, brasseurs, producteurs d'huiles, maraîchers...\n\nCe séjour est parfait si vous cherchez un week-end insolite, paisible et authentique, à deux pas de Paris !",
+    "author": "Nicolas Tchounikine",
+    "affixeAuthor": "Co-fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "La découverte de la richesse du Parc naturel du Vexin",
+    "Des vélos électriques haut de gamme, pour un week-end tout en détente",
+    "Les rencontres enrichissantes avec les producteurs locaux du Vexin",
+    "L'atelier d'initiation à la céramique avec un artisan local inspirant",
+    "Une expérience clef en main, vous pouvez partir serein !",
+    "Un séjour adapté aux familles avec des vélos enfants de disponibles."
+  ],
+  "slug": "velo-electrique-rencontre-producteurs-vexin",
+  "description": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc naturel régional du Vexin Français en vélo électrique !\n\nAu programme : l’élaboration de votre propre panier à garnir de produits locaux directement chez les producteurs.  Un atelier avec un céramiste local et des visites pour découvrir les savoir-faire du Vexin. Vous rencontrerez lors de ce séjour de nombreux acteurs locaux, comme des artisans chocolatier, brasseurs, producteurs d'huiles, maraîchers...\n\nCe séjour est parfait si vous cherchez un week-end insolite, paisible et authentique, à deux pas de Paris !",
+  "emailDescription": "👉  Si vous souhaitez découvrir la richesse du Parc Naturel du Vexin en vélo électrique, ce voyage est fait pour vous ! Un séjour unique qui vous permettra de rencontrer les producteurs et artisans locaux et découvrir leurs savoir-faire 👩‍🌾",
+  "metaDescription": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc Naturel Régional du Vexin Français en vélo électrique !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Chambre d'hôtes",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "AU FIL DU TERROIR",
+      "badgeText": "JOUR 1",
+      "description": "Accueil à la gare d'Us et présentation du séjour. Vous partez ensuite sur les routes du Vexin en vélo électrique à la rencontre de producteurs locaux (maraîchers, apiculteurs, brasseurs...). A chaque arrêt, vous garnirez votre panier pour vous concocter un bon dîner le soir à la chambre d'hôtes.",
+      "photo": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/wBLD3RBRgitFRRPKrbyA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU FIL DE L'ARTISANAT",
+      "badgeText": "JOUR 2",
+      "description": "Après un copieux petit déjeuner, enfourchez à nouveau votre vélo et partez à la rencontre de plusieurs artisans du Vexin. Vous profiterez d'un atelier chez un céramiste qui vous présentera l'art de la poterie artisanale. En fin de journée, vous vous rendrez à la gare d'Us pour rendre les vélos et faire vos adieux !",
+      "photo": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/PQNxtpmSSzPbbc3wIxHA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 350,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Bien que les escapades en vélos se fassent en autonomie, vous pourrez compter sur Genséric, de l'agence Vél'OFIL du Vexin. C'est lui qui vous remettra les vélos au 1er jour et qui transportera vos bagages à la chambre d'hôtes. Il vous rapportera vos bagages le dernier jour avant de reprendre les vélos.\n\nGenséric restera joignable durant l'ensemble du séjour en cas de problème !",
+  "accompanistsList": [
+    {
+      "name": "Genséric",
+      "description": "",
+      "role": "Fondateur de Vél'OFIL du Vexin",
+      "image": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/F7LBBhxFTPyfwtnTa8dK.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Chambre d'hôtes",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/IjeIN64NTY66hlF7RMeQ.jpg",
+    "alt": "image principale du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/kafZYSnsRH2YjQA5ThBO.jpg",
+    "alt": "image secondaire du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/MgdWPnvRNyfZCYET0ldQ.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/ZxVVuLM0RzqRqFC1pZsy.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/ChKS7X9tRUiyITro5cNG.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/ylz00tSGR2auh9takWkN.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/h9a6X0tSsuwxtStlpURA.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/fv1i2jmRS2Ea71aIZRoi.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/IU7D06wmTb6luRd3K6R3.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/7UmbMDHWTUKA6yForvDa.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/11d1cMqqSPGgV7Nlw2Eq.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/xD87ITO1Q1aIZy9a2ErV.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/sac0qCBlRDeU9w4kN7nL.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/blzpSsL8Q8SpMKdeQQFP.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/rm5fvyYSQwurYcJcxs44.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/OoKA8QUWTMGL5xup721Y.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/u11RArVR5miRCfXNf6OT.jpg",
+      "alt": "image de la liste de photos du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    }
+  ],
+  "videoLinks": [
+    "https://www.youtube.com/embed/wRV4SnvcHfs"
+  ],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je loger durant ce séjour ?",
+        "answer": "L'hébergement est inclus dans le prix du séjour et se fait au sein d'une chambre d'hôtes. L'hébergement retenu est le refuge Fontaine Couture mais pourra être amené à changer selon disponibilité."
+      },
+      {
+        "question": "Que vais-je manger durant ce séjour ?",
+        "answer": "Tous les repas sont inclus dans le prix du séjour.\n\nLes déjeuners seront pris sous forme de panier pique-nique chez un producteur local. Toutes les informations détaillées seront notées sur votre roadbook.\n\nLe petit déjeuner sera pris à la chambre d'hôte le matin du Jour 2.\n\nLe dîner sera à confectionner par vos soins avec le panier que vous allez garnir au fil de vos visites de producteurs locaux le Jour 1 !"
+      },
+      {
+        "question": "Et pour prolonger mon séjour sur place ?",
+        "answer": "Si vous souhaitez prolonger votre séjour sur place, nous vous proposons de vous rendre à Maison du Parc qui connaît parfaitement son territoire et saura vous orienter au mieux selon vos envies."
+      },
+      {
+        "question": "Comment me rendre sur place ?",
+        "answer": "Si vous souhaitez venir en voiture, vous pourrez vous garer directement à votre logement.\n\nVous pouvez également venir en transilien depuis Paris, et vous arrêter à la Gare d'Us sur la ligne J. Genséric vous attendra à la gare, avec vos vélos prêts à partir !"
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "En vélo électrique, à la rencontre des producteurs locaux dans le Vexin",
+    "canonicalUrl": "https://www.odysway.com/voyages/velo-electrique-rencontre-producteurs-vexin",
+    "ogTitle": "En vélo électrique, à la rencontre des producteurs locaux dans le Vexin",
+    "ogDescription": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc Naturel Régional du Vexin Français en vélo électrique !",
+    "ogImage": {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/IjeIN64NTY66hlF7RMeQ.jpg",
+      "alt": "image principale du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    "twitterTitle": "En vélo électrique, à la rencontre des producteurs locaux dans le Vexin",
+    "twitterDescription": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc Naturel Régional du Vexin Français en vélo électrique !",
+    "twitterImage": {
+      "src": "/images/voyages/velo-electrique-rencontre-producteurs-vexin/IjeIN64NTY66hlF7RMeQ.jpg",
+      "alt": "image principale du voyage En vélo électrique, à la rencontre des producteurs locaux dans le Vexin"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

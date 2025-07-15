@@ -137,7 +137,6 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
-// import { useDisplay } from 'vuetify'
 import LogoOdyswayBleu from '~/assets/img/Logo-Odysway-Bleu.png'
 
 const { header } = useAppConfig()

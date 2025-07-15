@@ -1,0 +1,162 @@
+{
+  "published": false,
+  "title": "Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin",
+  "destinations": [
+    {
+      "name": "Inde"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "voyage-inde-privatif-10-20-fevrier-2025",
+  "description": "",
+  "emailDescription": "",
+  "metaDescription": "",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "",
+      "visible": false
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "test",
+      "badgeText": "test",
+      "description": "test",
+      "photo": "",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 2950,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 450,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "",
+    "alt": "image principale du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-inde-privatif-10-20-fevrier-2025",
+    "ogTitle": "Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin",
+    "ogDescription": "",
+    "ogImage": {
+      "src": "",
+      "alt": "image principale du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
+    },
+    "twitterTitle": "Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin",
+    "twitterDescription": "",
+    "twitterImage": {
+      "src": "",
+      "alt": "image principale du voyage Voyage en Inde du 10 au 22 février 2025 - accompagné par Stéphanie Heuskin"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

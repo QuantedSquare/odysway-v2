@@ -7,13 +7,11 @@
       v-if="rating"
       color="white"
       rounded="pill"
-      :height="smAndUp ? 46 : 30"
-      class="btn-shadow bg-white px-2 px-md-4"
+      class="btn-shadow bg-white px-2 px-md-4 custom-rating-height"
     >
       <div class="d-flex align-center">
         <svg
-          :width="smAndUp ? 18 : 14"
-          :height="smAndUp ? 18 : 14"
+          class="custom-svg-size"
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -40,9 +38,8 @@
     <v-btn
       v-else
       color="primary"
-      class="font-weight-bold btn-shadow text-body-2 text-md-body-1"
+      class="font-weight-bold btn-shadow text-body-2 text-md-body-1 custom-rating-height"
       rounded="pill"
-      :height="smAndUp ? 46 : 30"
     >
       <span>
         Nouveau
@@ -52,10 +49,6 @@
 </template>
 
 <script setup>
-import { useDisplay } from 'vuetify'
-
-const { smAndUp } = useDisplay()
-
 defineProps({
   rating: {
     type: Number,
@@ -88,3 +81,22 @@ const scrollToReviews = () => {
   }
 }
 </script>
+
+<style scoped>
+.custom-rating-height {
+  height: 46px!important;
+}
+.custom-svg-size {
+  width: 18px!important;
+  height: 18px!important;
+}
+@media (max-width: 960px) {
+  .custom-rating-height {
+    height: 30px!important;
+  }
+  .custom-svg-size {
+    width: 14px!important;
+    height: 14px!important;
+  }
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <v-col
-    v-if="status === 'pending' && !voyage"
+    v-if="status === 'pending'"
     cols="10"
     sm="6"
     md="4"
@@ -13,7 +13,7 @@
     />
   </v-col>
   <v-col
-    v-else-if="voyage"
+    v-else-if="status === 'success' && voyage"
   >
     <!-- <v-lazy
       :min-height="228"
@@ -29,7 +29,7 @@
 const { slug } = defineProps({
   slug: {
     type: String,
-    // required: true,
+    required: true,
   },
 })
 

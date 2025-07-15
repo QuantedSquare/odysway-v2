@@ -1,0 +1,407 @@
+{
+  "published": true,
+  "title": "Trek et immersion chez l'habitant au Pérou",
+  "destinations": [
+    {
+      "name": "Pérou"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-été"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-sportif"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 13,
+  "nights": 12,
+  "includeFlight": false,
+  "housingType": "Hôtels et chez l'habitant",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Ce voyage vous emmène loin des sentiers classiques, pour découvrir un autre visage du Pérou.\n\nDepuis Cusco, vous partez à pied explorer les vallées secrètes, les lagunes d’altitude et les hauts plateaux andins, avec en toile de fond les sommets enneigés de la cordillère. L’itinéraire se déroule en petit groupe, accompagné de guides locaux et d’une caravane de lamas.\n\nAu fil des jours, vous traversez des villages isolés, où les familles quechuas et aymaras vous accueillent chez elles. Ces moments simples, comme partager un repas, discuter autour du feu, participer à quelques tâches quotidiennes – donnent tout leur sens au voyage.\n\nLe chemin vous conduit jusqu’au Machu Picchu, atteint à pied, à l’issue de plusieurs jours de marche. Une manière plus lente et plus juste de découvrir ce site exceptionnel.\n\nDans la deuxième partie du séjour, vous prenez de l’altitude vers le lac Titicaca. Vous explorez des îles peu connues, loin des circuits touristiques classiques, naviguez à bord d’embarcations traditionnelles et dormez chez l’habitant.\n\nPlus qu’un itinéraire, c’est une immersion dans la culture andine, à travers ses paysages, ses habitants et ses traditions toujours bien vivantes.",
+    "author": "Lucie",
+    "affixeAuthor": "experte Amérique du Sud"
+  },
+  "experiencesBlock": [
+    "Explorez des sites incas comme Sacsayhuaman et Huchuy Qosqo à travers des randonnées uniques, loin des foules, pour une expérience différente.",
+    "Séjournez chez l’habitant dans des communautés reculées pour une immersion dans la culture locale et des moments simples avec les habitants.",
+    "Atteignez le Machu Picchu à votre rythme, par un sentier confidentiel, pour une découverte paisible et intime.",
+    "Ressentez l’immensité des Andes en traversant des vallées oubliées et des paysages à couper le souffle.",
+    "Explorez les îles méconnues du lac Titicaca, en rencontrant des communautés locales préservées."
+  ],
+  "slug": "voyage-perou-trek-immersion-chez-lhabitant",
+  "description": "Ce voyage vous emmène loin des sentiers classiques, pour découvrir un autre visage du Pérou.\n\nDepuis Cusco, vous partez à pied explorer les vallées secrètes, les lagunes d’altitude et les hauts plateaux andins, avec en toile de fond les sommets enneigés de la cordillère. L’itinéraire se déroule en petit groupe, accompagné de guides locaux et d’une caravane de lamas.\n\nAu fil des jours, vous traversez des villages isolés, où les familles quechuas et aymaras vous accueillent chez elles. Ces moments simples, comme partager un repas, discuter autour du feu, participer à quelques tâches quotidiennes – donnent tout leur sens au voyage.\n\nLe chemin vous conduit jusqu’au Machu Picchu, atteint à pied, à l’issue de plusieurs jours de marche. Une manière plus lente et plus juste de découvrir ce site exceptionnel.\n\nDans la deuxième partie du séjour, vous prenez de l’altitude vers le lac Titicaca. Vous explorez des îles peu connues, loin des circuits touristiques classiques, naviguez à bord d’embarcations traditionnelles et dormez chez l’habitant.\n\nPlus qu’un itinéraire, c’est une immersion dans la culture andine, à travers ses paysages, ses habitants et ses traditions toujours bien vivantes.",
+  "emailDescription": "👉 Si vous rêvez d’un trek d’exception au cœur des Andes péruviennes, entre sentiers incas millénaires, ascensions spectaculaires et rencontres authentiques avec les communautés andines, ce séjour immersif de 12 jours est fait pour vous !",
+  "metaDescription": "Voyage au Pérou : trek en immersion dans les Andes, découvertes inoubliables et rencontres authentiques.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Janvier à dec",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE A CUSCO, LA CAPITALE DES INCAS",
+      "badgeText": "JOUR 1",
+      "description": "Vous arriverez en soirée dans l’ancienne capitale des Incas, une ville vibrante imprégnée d’histoire et de traditions. À votre arrivée, vous serez accueillis et transférés à votre hôtel, idéalement situé au cœur de Cusco. Vous pourrez vous installer confortablement et profiter d’une première soirée d’acclimatation à l’altitude dans cette ville fascinante.\r\n",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/ctjUvgqGQ9i5Zi76NodS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A LA DECOUVERTE DE CUSCO, A VOTRE RYTHME",
+      "badgeText": "JOUR 2",
+      "description": "Cette journée sera dédiée à la découverte libre de Cusco, une ville où chaque ruelle pavée raconte un pan de l’histoire inca et coloniale. Vous pourrez flâner sur la Plaza de Armas, explorer le marché coloré de San Pedro, visiter les musées et les églises historiques, ou simplement savourer l’ambiance envoûtante de la capitale impériale. Profitez-en pour vous acclimater en douceur à l’altitude, en prenant le temps de respirer et d’apprécier chaque instant.",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/nsGTgW3fRcmDeDAvh1XB.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNEE ENTRE VESTIGES ET NATURE PRESERVEE",
+      "badgeText": "JOUR 3",
+      "description": "Accompagnés de votre guide, vous commencerez la journée par la visite de Sacsayhuamán, une forteresse inca d'où vous aurez une vue sur Cusco, un moment parfait pour vous immerger dans l’histoire de la région. Vous poursuivrez ensuite avec Q’enqo, un sanctuaire ancien sculpté dans la roche, où chaque recoin invite à la réflexion. Puis, vous prendrez la direction d’Inkilltambo, un site encore préservé, accessible après une randonnée de 3h30. En chemin, vous traverserez des ruisseaux, des montagnes et des forêts d'eucalyptus, vous vous laisserez porter par la nature environnante avant d’atteindre ce lieu empreint de calme et de mystère. La journée se terminera par un transport local qui vous conduira vers votre hôtel dans les hauteurs de Cusco. (Dénivelé : ±75 m)",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/HNQBMFKKSTuLYJjNUBe8.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TRAVERSEE DES ANDES VERS LE VILLAGE DE PATABAMBA",
+      "badgeText": "JOUR 4",
+      "description": "Vous partirez tôt le matin en direction des anciens temples de Puka Pukara et Tambomachay. Après une introduction historique, vous débuterez une randonnée qui vous fera progressivement entrer dans l'univers des Andes, en direction de la communauté andine de Patabamba. Ce parcours de 5h30 vous emmènera à travers les steppes d’altitude, jusqu’au lac Q’oricocha, une étendue d’eau scintillante, nichée dans une cuvette montagneuse. En arrivant à Patabamba, un village dominant la Vallée Sacrée, vous serez accueillis par une famille locale, qui partagera avec vous son repas et son hospitalité pour la nuit, offrant une occasion unique de vivre le quotidien des habitants. (Dénivelé : +600 m / -500 m)",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/TJNYrAF0TJGtvBi2MtNL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SUR LES TRACES DES INCAS JUSQU'A HUCHUY QOSQO",
+      "badgeText": "JOUR 5",
+      "description": "Après un petit déjeuner traditionnel, vous commencerez votre randonnée en longeant les crêtes qui surplombent la Vallée Sacrée. Accompagnés de lamas, vous suivrez un ancien chemin inca faisant partie du Qhapaq Ñan, le réseau routier inca. Après un pique-nique à Pukamarca, vous continuerez votre marche jusqu’au site de Huchuy Qosqo, un ancien centre inca offrant une vue imprenable sur la vallée. Ce site est un endroit idéal pour comprendre l'ingéniosité des Incas dans l'aménagement du territoire et leur connexion avec la nature environnante. Une visite guidée vous permettra de découvrir son histoire fascinante avant de vous installer pour la nuit au sein d’une communauté locale. (Temps de marche : 5h30 ; Dénivelé : +450 m / -300 m)",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/Gk0a7aRfTNSWGZjsF6IC.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ASCENSION DU COL DU TAUCA ET IMMERSION EN TERRE ANDINE",
+      "badgeText": "JOUR 6",
+      "description": "Vous entamerez l’ascension vers le col de Tauca, point culminant de cette aventure à 4 435 mètres d’altitude. Après environ 3 heures de montée, vous serez récompensés par une vue imprenable sur la cordillère d’Urubamba. Après une pause bien méritée, vous amorcerez la descente vers la lagune Piuray, où vous passerez la nuit au sein d’une famille locale, profitant d’un moment privilégié de partage et d’échange. (Temps de marche : 6h ; Dénivelé : +700 m / -550 m)",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/I1UzmwZoRiKvbCItmc8q.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A LA DECOUVERTE DES MERVEILLES DE LA VALLEE SACREE",
+      "badgeText": "JOUR 7",
+      "description": "Cette journée sera consacrée à la découverte des trésors de la Vallée Sacrée. Vous commencerez par la visite de Chinchero, un village typique des Andes connu pour son site archéologique et son artisanat textile. Vous poursuivrez avec la découverte des Salines de Maras, un spectacle unique de 3 000 bassins de sel en terrasses exploités depuis l’époque pré-inca. Ensuite, vous explorerez Moray, un laboratoire agricole inca en forme d’amphithéâtre. Enfin, vous rejoindrez Ollantaytambo, un impressionnant site inca avant d’embarquer dans le train en direction d’Aguas Calientes, où vous passerez la nuit.",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/eUXFncWaQzSg1Z11vllP.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MACHU PICCHU, LA CITE INCA MYTHIQUE",
+      "badgeText": "JOUR 8",
+      "description": "Tôt le matin, vous entamerez l’ascension du Machu Picchu par un ancien sentier inca, gravissant 1 700 marches au cœur d’une végétation luxuriante. Après environ 1h30 de montée, vous découvrirez cette cité inca mythique, perchée entre les montagnes. Votre guide vous plongera dans l’histoire fascinante du site, révélant les secrets de l’architecture inca et de la cosmovision andine. Après la visite, vous redescendrez à pied vers Aguas Calientes avant de prendre le train pour Ollantaytambo puis un minivan pour Cusco. (Temps de marche : 3h30 ; Dénivelé : ±450 m)",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/PUpGi1B3Sp15mpcpy2US.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERS INSTANTS A CUSCO",
+      "badgeText": "JOUR 9",
+      "description": "Cette journée vous offrira une dernière immersion dans Cusco, vous laissant le temps de flâner dans ses ruelles, visiter des musées ou encore acheter de l’artisanat local. Selon vos envies, des activités optionnelles pourront être proposées, telles qu’un cours de cuisine péruvienne, un atelier de chocolat, ou encore une randonnée dans les montagnes environnantes.\r\n",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/5YpobSuSOmXmCeH5tang.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN ROUTE VERS LE MYTHIQUE LAC TITICACA",
+      "badgeText": "JOUR 10",
+      "description": "Le matin, départ en bus pour rejoindre le lac Titicaca, berceau de la civilisation inca. Vous traverserez l’Altiplano par la « Ruta del Sol », une route bordée de montagnes, de vallées et de villages traditionnels, offrant un aperçu du mode de vie local et des vestiges incas. À votre arrivée à Juliaca en fin d’après-midi, votre transport privé vous conduira jusqu’à la péninsule discrète de Capachica, au bord du lac. Vous découvrirez l’authenticité de la région et passerez la soirée en compagnie d’une famille de la communauté d’Escallani, avec une vue imprenable sur le lac Titicaca, le plus haut lac navigable du monde.\r\n\r\n",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/Ik1oOiTRoOQ6pUhmndhQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNEE ET NAVIGATION SUR LE LAC TITICACA",
+      "badgeText": "JOUR 11",
+      "description": "Partez pour une randonnée unique entre les villages d'Escallani et Chillora, perchés au-dessus du lac Titicaca. En environ 3 heures, vous traverserez des paysages de terrasses agricoles ancestrales  vues sur le lac, tout en rencontrant des habitants et découvrant leur quotidien. À Chillora, un transport privé vous conduira au village de Ccotos, situé sur une presqu'île isolée. Après un moment privilégié sur le lac à bord d'un petit voilier traditionnel, vous rejoindrez l'île de Tikonata, où vous explorerez ses ruines et maisons en adobe. Retour à Ccotos puis transfert à Llachon, où vous serez accueillis par une famille locale. Vous partagerez un repas préparé avec des produits de la région, découvrirez leurs habitudes quotidiennes et passerez la nuit dans leur maison, un véritable moment de partage pour mieux comprendre leur mode de vie.(Dénivelé : +80 m / -60 m)\r\n\r\n",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/LPUFvVBR4KTJy10mIAaY.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREPARATION DE LA PACHAMANCA ET RETOUR VERS LIMA",
+      "badgeText": "JOUR 12",
+      "description": "Réveillez-vous sur la péninsule, face au lac Titicaca, et profitez du lever de soleil. Vous participerez ensuite à une activité conviviale avec la famille locale, plongeant dans leur quotidien et découvrant leur mode de vie. Ensemble, vous préparerez la Pachamanca, un plat traditionnel inca, cuit à l’étouffée dans la terre, avant de le savourer lors d’un déjeuner chaleureux en leur compagnie.\r\nAprès ce moment de convivialité, vous serez transféré à Juliaca pour prendre votre vol (inclus) vers Lima. À votre arrivée, vous serez conduit à votre hôtel pour profiter d'une dernière soirée libre dans la capitale.\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/1HPMsQH2kLGDispZ0A7G.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIERE BALADE A LIMA ET FIN DE L'AVENTURE",
+      "badgeText": "JOUR 13",
+      "description": "Vous profiterez de votre matinée pour une dernière balade dans la capitale avant votre transfert à l’aéroport, marquant la fin de cette aventure inoubliable au Pérou.\r\n\r\n\r\n",
+      "photo": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/Yfd14MldQyicLGXeOB3y.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage",
+      "12 nuits en chambre twin ou triple en petit-déjeuner",
+      "La pension selon programme (voir le détail en FAQ)",
+      "L’accompagnement par des guides francophones (2 guides différents selon les étapes)",
+      "Les excursions et activités mentionnées",
+      "Le transport en minivan pendant tout le voyage"
+    ],
+    "exclude": [
+      "Les vols internationaux pour se rendre au Pérou",
+      "Les déjeuners et dîners non mentionnés dans le programme (compter entre 5 et 10 USD par repas), les boissons",
+      "Le supplément chambre individuelle",
+      "Les pourboires (non obligatoire)",
+      "Les excursions proposées en option",
+      "Les dépenses personnelles",
+      "L’assurance voyage assistance Rapatriement (obligatoire)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2190,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de ce voyage, vous serez accompagné par des guides locaux francophones passionnés, qui vous feront découvrir les trésors du Pérou. Du jour 3 au jour 8, un guide local de la région de Cusco vous partagera son savoir et ses anecdotes sur cette terre empreinte d’histoire. Puis, à partir de la soirée du jour 10 jusqu’au jour 12, juste avant votre vol, un autre guide francophone, expert de la région du lac Titicaca, prendra le relais pour vous offrir une immersion inoubliable au cœur de ses paysages et traditions uniques",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtels et chez l'habitant",
+      "housingType": "",
+      "housingMood": "Pendant votre voyage, vous alternerez entre hôtels confortables à Cusco, Aguas Calientes et Lima, et nuits chez l’habitant dans les Andes et au lac Titicaca. Ces séjours en maison traditionnelle vous plongeront au cœur de la culture locale, avec des repas typiques et des moments de partage. Des hébergements simples mais adaptés à chaque étape pour une expérience authentique. \r\nConsultez la FAQ pour plus de détails.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/wG4lhnOUQkqLFrApLJRR.jpg",
+          "alt": "image de l'hébergement Trek et immersion chez l'habitant au Pérou"
+        },
+        {
+          "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/H8Ue6ceQwGYBoAVzipHg.jpg",
+          "alt": "image de l'hébergement Trek et immersion chez l'habitant au Pérou"
+        },
+        {
+          "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/RgcIc3cyTRGMm0WIc7ri.jpg",
+          "alt": "image de l'hébergement Trek et immersion chez l'habitant au Pérou"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/Ek2Rf2ptTUe5IJrR6XIe.jpg",
+    "alt": "image principale du voyage Trek et immersion chez l'habitant au Pérou"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/XvI8U842QnfMf2sTah84.jpg",
+    "alt": "image secondaire du voyage Trek et immersion chez l'habitant au Pérou"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/UGfe3vTseNfbNGXiBvng.jpg",
+      "alt": "image de la liste de photos du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/DcAP7AhzTayNwcs1jJPW.jpg",
+      "alt": "image de la liste de photos du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/nPi04F9bRVywNMDu5W0D.jpg",
+      "alt": "image de la liste de photos du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/hL2ZW0B1RgWI3GLmjpqA.jpg",
+      "alt": "image de la liste de photos du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/msVvSHeaQ4CpxH8h8OUY.jpg",
+      "alt": "image de la liste de photos du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/N4xEAVbQqq3Oe2bMep6Q.jpg",
+      "alt": "image de la liste de photos du voyage Trek et immersion chez l'habitant au Pérou"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Ce voyage est-il fait pour moi ?",
+        "answer": "Si vous rêvez d’une aventure authentique, alliant nature spectaculaire, immersion culturelle et rencontres uniques, alors ce voyage est fait pour vous. Il s’adresse aux voyageurs curieux et aventureux, prêts à explorer des paysages époustouflants, à marcher sur des sentiers incas millénaires et à vivre des expériences humaines profondes. Ce voyage est également idéal pour ceux qui souhaitent s’immerger dans la culture locale, découvrir les traditions ancestrales des communautés andines et partager des moments authentiques avec les habitants. Préparez-vous à apprécier un confort simple mais chaleureux au sein de ces communautés, loin des sentiers battus, pour une aventure véritablement inoubliable."
+      },
+      {
+        "question": "Quel est le niveau physique requis ? ",
+        "answer": "Il est nécessaire d’être en bonne condition physique. Ce n’est pas un trek extrême, mais plutôt de niveau intermédiaire. Certaines étapes comportent du dénivelé et l’altitude peut être un facteur à prendre en compte. Voici un aperçu des principales étapes du voyage :\n\n*   **Jour 3** : Randonnée de 3h30, avec un dénivelé de +75 m. Vous traverserez des ruisseaux, des montagnes et des forêts de cactus et d’eucalyptus avant d’atteindre Inkilltambo.\n*   **Jour 4** : Randonnée de 5h30, dénivelé de +600 m / -500 m, avec une ascension vers le lac Q’oricocha.\n*   **Jour 5** : Marche de 5h30, dénivelé de +450 m / -300 m, en suivant un ancien chemin inca jusqu’à Huchuy Qosqo.\n*   **Jour 6** : Ascension vers le col de Tauca, avec une montée de 3 heures (dénivelé de +700 m), à 4 435 m d’altitude. Vous passerez ensuite la nuit au bord de la lagune Piuray.\n*   **Jour 7** : Exploration de la Vallée Sacrée avec des visites de sites archéologiques et une marche légère.\n*   **Jour 8** : Ascension du Machu Picchu, montée de 1h30 avec un dénivelé de ±450 m pour atteindre la cité inca mythique.\n*   **Jour 11** : Randonnée de 3 heures autour du lac Titicaca, dénivelé de +80 m / -60 m, suivie d’une navigation sur un voilier traditionnel.\n\nNous partons toujours avec un cheval de secours, à la fois pour faire face à d’éventuels accidents et pour permettre de se reposer au cours des étapes, selon les portions praticables. Vous pourrez ainsi profiter de cette aventure tout en restant à l’écoute de vos besoins."
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "La meilleure période pour partir au Pérou se situe entre mai et septembre, pendant la saison sèche, lorsque les journées sont ensoleillées et propices aux randonnées et à la découverte des sites archéologiques. C’est également la période idéale pour profiter des paysages dégagés et des températures agréables, bien qu’il puisse faire plus frais en altitude, surtout la nuit. Toutefois, il est tout à fait possible de réaliser ce voyage toute l’année. De décembre à mars, bien que ce soit la saison des pluies, les conditions restent praticables pour les randonnées. Les paysages sont plus verts, et vous pourrez profiter d’une expérience plus tranquille, loin des foules de touristes. Si vous êtes bien préparé et prêt à affronter quelques averses, cette période offre aussi une immersion unique dans le Pérou, avec des paysages magnifiques et une atmosphère plus calme."
+      },
+      {
+        "question": "Comment fonctionnent les pourboires ?",
+        "answer": "Les pourboires jouent également un rôle important lors de ce type de séjour, notamment pendant les treks et les moments passés chez l'habitant. Bien qu'ils ne soient pas obligatoires, les pourboires sont une manière d'exprimer votre gratitude pour l'accueil et les services fournis.\n\nLors des **treks et des nuits chez l'habitant**, il est courant de laisser un pourboire aux guides, aux porteurs et aux familles qui vous accueillent. Pour les **guides et les porteurs**, un pourboire d'environ **5 à 10 USD par jour et par personne** est habituel, en fonction de la qualité de l'accompagnement et de l'effort fourni.\n\nPour les **familles d'accueil**, un petit geste de remerciement, souvent entre **2 et 5 USD par nuit**, est très apprécié, surtout si vous avez été particulièrement bien traité. Cela montre votre reconnaissance pour leur hospitalité et le temps qu'ils ont consacré à vous offrir une expérience authentique et chaleureuse.\n\nLes pourboires ne sont pas inclus dans le prix du voyage et sont donc à votre discrétion, mais ils constituent un moyen de soutenir directement les communautés locales et d'encourager les services de qualité. Assurez-vous de les distribuer directement aux personnes concernées, afin que votre geste bénéficie à ceux qui vous ont accompagné tout au long de cette aventure immersive."
+      },
+      {
+        "question": "Quelles sont les formalités d’entrée au Pérou ? ",
+        "answer": "Les ressortissants français n’ont pas besoin de visa pour un séjour touristique court (moins de 90j) au Pérou. Il convient d’être en possession d’un passeport ayant une validité d’au moins 6 mois à compter de l’arrivée sur le territoire péruvien. Il est par ailleurs important de s’assurer qu’un cachet d’entrée est bien apposé sur votre passeport. Dans le cas contraire, le voyageur sera considéré en situation irrégulière.\n\nIl est recommandé de s’inscrire sur l’application [Ariane](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html) et de signaler sa présence, soit en se rendant directement au Consulat de France à Lima, soit par courriel : [france.consulat@ambafrance-pe.org](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/perou/#france.consulat#mc#ambafrance-pe.org#)\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/perou/#entree)."
+      },
+      {
+        "question": "Quels sont les vaccins et précautions en matière de santé ?",
+        "answer": "La mise à jour de la vaccination diphtérie-tétanos-poliomyélite (DTP) est recommandée, ainsi que la vaccination rubéole-oreillons-rougeole (ROR) chez l’enfant. La vaccination antituberculeuse est également souhaitable, surtout pour les séjours prolongés ou dans les zones plus isolées. La vaccination contre la fièvre jaune est obligatoire si vous prévoyez de visiter l’Amazonie péruvienne. Les vaccins contre l’hépatite A et B ainsi que la typhoïde sont également conseillés, notamment pour ceux qui consommeront des aliments de rue ou se rendront dans des zones rurales. Enfin, la prévention contre la malaria est recommandée si vous explorez l’Amazonie, et la vaccination contre la rage est à envisager pour les voyageurs en contact avec des animaux.\n\nPlus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/perou/#sante)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n    \n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Qu’est-ce que l’esprit Odysway ?",
+        "answer": "Voyager avec Odysway, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un e-mail de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les sept jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact étroit avec un conseiller dédié. Vous pourrez le joindre par e-mail, téléphone, SMS ou WhatsApp, selon ce qui vous convient le mieux. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au + 33 [01 84 80 79 75](https://www.google.com/search?q=odysway&oq=odysway&gs_lcrp=EgZjaHJvbWUqDAgAEAAYExjjAhiABDIMCAAQABgTGOMCGIAEMg8IARAuGBMYrwEYxwEYgAQyBggCEEUYQTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8) ou au + 33 6 67 38 56 55."
+      },
+      {
+        "question": "Quels sont les repas compris dans le programme ?",
+        "answer": "*   Jour 2 : petit-déjeuner\n*   Jour 3 : petit-déjeuner / déjeuner (lunchbox)\n*   Jour 4 : petit-déjeuner / déjeuner (boxlunch) /dîner\n*   Jour 5 : petit-déjeuner / déjeuner / dîner\n*   Jour 6 : petit-déjeuner / déjeuner (boxlunch) / dîner\n*   Jour 7 : Petit-déjeuner / déjeuner\n*   Jour 8 : petit-déjeuner\n*   Jour 9 : petit-déjeuner\n*   Jour 10 : petit-déjeuner / dîner (chez l’habitant)\n*   Jour 11 : petit-déjeuner / déjeuner / dîner\n*   Jour 12 : petit-déjeuner / déjeuner\n*   Jour 13 : petit-déjeuner"
+      },
+      {
+        "question": "Où vais-je dormir ? ",
+        "answer": "Tout au long de votre voyage, vous serez hébergé dans des établissements soigneusement sélectionnés, alliant confort et immersion locale. À Cusco, vous séjournerez à l’hôtel Sueños del Inka (ou similaire), un établissement de charme offrant une atmosphère chaleureuse et authentique, idéal pour vous reposer après vos journées d’exploration. Lors de votre trek dans les Andes, vous vivrez une expérience unique en dormant chez l’habitant. Chaque soir, vous serez accueilli dans des maisons traditionnelles andines, où vous partagerez le quotidien des communautés locales. Vous disposerez de chambres rustiques mais confortables, avec suffisamment de couvertures pour des nuits agréables en altitude. Ces moments privilégiés seront l’occasion de savourer des repas typiques et de découvrir les traditions péruviennes au plus près. À Aguas Calientes, aux portes du Machu Picchu, vous passerez la nuit à l’hôtel Casa de Luz (ou similaire), un lieu convivial et reposant, parfait avant votre visite du site mythique. Sur les rives du lac Titicaca, vous serez logé chez l’habitant dans des villages pittoresques, pour une immersion totale au cœur d’un cadre grandiose. L’accueil chaleureux des familles locales rendra cette expérience encore plus inoubliable. Enfin, à Lima, votre voyage se conclura à l’hôtel Allpa (ou similaire), un havre de confort avant votre retour. Chaque hébergement a été pensé pour vous offrir une expérience authentique et immersive, rythmée par des rencontres et des paysages exceptionnels."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Trek et immersion chez l'habitant au Pérou",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-perou-trek-immersion-chez-l'habitant",
+    "ogTitle": "Trek et immersion chez l'habitant au Pérou",
+    "ogDescription": "Voyage au Pérou : trek en immersion dans les Andes, découvertes inoubliables et rencontres authentiques.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/Ek2Rf2ptTUe5IJrR6XIe.jpg",
+      "alt": "image principale du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    "twitterTitle": "Trek et immersion chez l'habitant au Pérou",
+    "twitterDescription": "Voyage au Pérou : trek en immersion dans les Andes, découvertes inoubliables et rencontres authentiques.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-perou-trek-immersion-chez-lhabitant/Ek2Rf2ptTUe5IJrR6XIe.jpg",
+      "alt": "image principale du voyage Trek et immersion chez l'habitant au Pérou"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

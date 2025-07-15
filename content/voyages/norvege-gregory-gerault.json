@@ -1,0 +1,162 @@
+{
+  "published": false,
+  "title": "En immersion avec un photographe en Norvège",
+  "destinations": [
+    {
+      "name": "Norvège"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [],
+  "duration": 7,
+  "nights": 6,
+  "includeFlight": false,
+  "housingType": "",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "norvege-gregory-gerault",
+  "description": "",
+  "emailDescription": "",
+  "metaDescription": "Partez pour un voyage en Norvège accompagné de Grégory Gérault",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 4 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**6 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Du 2 au 8 février",
+      "visible": true
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [
+      "La location de voiture",
+      "Le logement du 2 au 8 février",
+      "Un accompagnateur photographe du J1 au J7",
+      "L’assistance de votre conseiller voyage 7j/7 et 24h/24"
+    ],
+    "exclude": [
+      "Les vols internationaux",
+      "Les petits déjeuners, déjeuners, dîners",
+      "Les assurances, les pourboires, les dépenses personnelles",
+      "Les entrées non mentionnées et les éventuelles taxes photo/vidéo dans les parcs"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1400,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 4,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/norvege-gregory-gerault/ynPVP7WuRD2ohHdt7Xf3.jpg",
+    "alt": "image principale du voyage En immersion avec un photographe en Norvège"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage En immersion avec un photographe en Norvège"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "En immersion avec un photographe en Norvège",
+    "canonicalUrl": "https://www.odysway.com/voyages/norvege-gregory-gerault",
+    "ogTitle": "En immersion avec un photographe en Norvège",
+    "ogDescription": "Partez pour un voyage en Norvège accompagné de Grégory Gérault",
+    "ogImage": {
+      "src": "/images/voyages/norvege-gregory-gerault/ynPVP7WuRD2ohHdt7Xf3.jpg",
+      "alt": "image principale du voyage En immersion avec un photographe en Norvège"
+    },
+    "twitterTitle": "En immersion avec un photographe en Norvège",
+    "twitterDescription": "Partez pour un voyage en Norvège accompagné de Grégory Gérault",
+    "twitterImage": {
+      "src": "/images/voyages/norvege-gregory-gerault/ynPVP7WuRD2ohHdt7Xf3.jpg",
+      "alt": "image principale du voyage En immersion avec un photographe en Norvège"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

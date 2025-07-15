@@ -4,7 +4,7 @@
     fluid
   >
     <HorizontalCarousel
-      v-if="experiences"
+      v-if="experiencesStatus === 'success'"
       :show-buttons="experiences.length > 4"
     >
       <template #title>
@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-const { data: experiences } = await useAsyncData('experiences-carousel', () => {
+const { data: experiences, status: experiencesStatus } = useAsyncData('experiences-carousel', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome', 'published').where('published', '=', true).all()
 })
 </script>

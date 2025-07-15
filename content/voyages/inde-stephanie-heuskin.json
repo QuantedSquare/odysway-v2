@@ -1,0 +1,173 @@
+{
+  "published": false,
+  "title": "En immersion à Rishikesh en Inde avec Stéphanie Heuskin",
+  "destinations": [
+    {
+      "name": "Inde"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [],
+  "duration": 16,
+  "nights": 14,
+  "includeFlight": false,
+  "housingType": "Hôtels",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Voyage en Inde",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [
+    "**Visites emblématiques** à Delhi (temples, bazars, ashrams).",
+    "**Découverte de Rishikesh**, haut lieu de la spiritualité hindoue et du yoga.",
+    "**Participation quotidienne à des rituels** (notamment la Ganga Aarti, un moment fort émotionnellement).",
+    "**Rencontres authentiques** avec des sadhus, des locaux, et des yogis."
+  ],
+  "slug": "inde-stephanie-heuskin",
+  "description": "Voyage en Inde",
+  "emailDescription": "",
+  "metaDescription": "Partez pour un voyage en Inde avec Stéphanie Heuskin, en immersion à Rishikesh en petit groupe.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 10 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**14 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Du 14 février au 1er mars 2026",
+      "visible": true
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [
+      "Le vol international aller-retour avec Etihad Airways depuis Bruxelles (30 KG de bagage en soute)",
+      "Tous les transferts et transports internes (trains, véhicules privés, auto-rickshaws)",
+      "13 nuits d’hébergement en chambre double ou twin",
+      "Les petits-déjeuners",
+      "Un accompagnateur anglophone du jour 2 au jour 11",
+      "Les entrées mentionnées dans le programme (incl. Rajaji National Park, Beatles Ashram)",
+      "Un safari en jeep dans le parc de Rajaji",
+      "L’assistance de votre conseiller voyage 7j/7 et 24h/24"
+    ],
+    "exclude": [
+      "Le visa indien",
+      "Les repas du midi et du soir",
+      "Les assurances, les pourboires, les dépenses personnelles",
+      "Les entrées non mentionnées et les éventuelles taxes photo/vidéo dans les parcs"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 3385,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 10,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "BRU"
+    ]
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtels",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/inde-stephanie-heuskin/VQgiR4CREWR0nTGN0mbc.jpg",
+    "alt": "image principale du voyage En immersion à Rishikesh en Inde avec Stéphanie Heuskin"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage En immersion à Rishikesh en Inde avec Stéphanie Heuskin"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "En immersion à Rishikesh en Inde avec Stéphanie Heuskin",
+    "canonicalUrl": "https://www.odysway.com/voyages/inde-stephanie-heuskin",
+    "ogTitle": "En immersion à Rishikesh en Inde avec Stéphanie Heuskin",
+    "ogDescription": "Partez pour un voyage en Inde avec Stéphanie Heuskin, en immersion à Rishikesh en petit groupe.",
+    "ogImage": {
+      "src": "/images/voyages/inde-stephanie-heuskin/VQgiR4CREWR0nTGN0mbc.jpg",
+      "alt": "image principale du voyage En immersion à Rishikesh en Inde avec Stéphanie Heuskin"
+    },
+    "twitterTitle": "En immersion à Rishikesh en Inde avec Stéphanie Heuskin",
+    "twitterDescription": "Partez pour un voyage en Inde avec Stéphanie Heuskin, en immersion à Rishikesh en petit groupe.",
+    "twitterImage": {
+      "src": "/images/voyages/inde-stephanie-heuskin/VQgiR4CREWR0nTGN0mbc.jpg",
+      "alt": "image principale du voyage En immersion à Rishikesh en Inde avec Stéphanie Heuskin"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

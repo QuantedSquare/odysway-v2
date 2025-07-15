@@ -1,0 +1,329 @@
+{
+  "published": false,
+  "title": "Awaken your own nature - BaseQamp",
+  "destinations": [
+    {
+      "name": "Inde"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "Hotel and retreat house",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Embark on a unique initiatory journey to Sikkim, the first 100% organic state and the spiritual jewel of India. Immerse yourself in a fascinating culture and dive into the natural beauty of this remote part of India.\n\nDuring this retreat in the heart of Sikkim, enjoy rejuvenating sessions of yoga and meditation inspired by traditional Buddhist teachings. Surrounded by a serene atmosphere, discover the majesty of the snow-capped Himalayan peaks, sacred lakes, the beauty of lush valleys, and the charm of typical villages.\n\nThis journey also offers the opportunity to live in immersion with local communities and explore the rich cultural heritage of this Indian state. Set off on this adventure in Sikkim and let yourself be enchanted by the magic of this sacred land and the warm welcome of its residents. A memorable experience to discover oneself and others !",
+    "author": "Maxime",
+    "affixeAuthor": "Karma Yoga Co-founder "
+  },
+  "experiencesBlock": [
+    "The Majesty of Sikkim's Landscapes",
+    "Meetings with the warm communities of the Himalayas",
+    "Awe-inspiring 4-day trek through the breathtaking landscapes of Sikkim",
+    "Visits and experiences for a deep exploration of Sikkim",
+    "Relaxation day at the end of your journey"
+  ],
+  "slug": "trip-awaken-base-qamp-india",
+  "description": "Embark on a unique initiatory journey to Sikkim, the first 100% organic state and the spiritual jewel of India. Immerse yourself in a fascinating culture and dive into the natural beauty of this remote part of India.\n\nDuring this retreat in the heart of Sikkim, enjoy rejuvenating sessions of yoga and meditation inspired by traditional Buddhist teachings. Surrounded by a serene atmosphere, discover the majesty of the snow-capped Himalayan peaks, sacred lakes, the beauty of lush valleys, and the charm of typical villages.\n\nThis journey also offers the opportunity to live in immersion with local communities and explore the rich cultural heritage of this Indian state. Set off on this adventure in Sikkim and let yourself be enchanted by the magic of this sacred land and the warm welcome of its residents. A memorable experience to discover oneself and others !",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable au Sikkim, entre yoga, méditation et rencontres, ce voyage est fait pour vous !",
+  "metaDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "October to April",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BEGINNING OF THE JOURNEY",
+      "badgeText": "DAY 1",
+      "description": "The start of your adventure at Amsterdam, boarding for your outbound flight to India with Air India on a non-stop flight. An overnight flight for an arrival the next morning in New Delhi, the Indian capital.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/QfRKOHZT629OSiVKLjVi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FLIGHT AND ARRIVAL IN SILIGURI",
+      "badgeText": "DAY 2",
+      "description": "You will arrive in the morning from your international flight. Afterward, there will be an immigration check before taking a domestic flight to Bagdogra in the afternoon, which has a duration of 2 hours. You will have dinner and spend the night in a 4-star hotel in Siliguri.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/EorjiMtnQ5uIRjjWfVt6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROAD TO SIKKIM",
+      "badgeText": "DAY 3",
+      "description": "Around 10 am, we will take the road by jeep to begin the ascent from the plains of Bengal to the mountains of Sikkim. A journey of 4 to 5 hours, colorful on which we will stop to admire the first valleys which take shape gently. We will arrive in the early evening at our main accommodation, the Karma Yoga Retreat Center in Sikkim.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/wVgwJmMORYClcAlYwCkq.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MONIALES, RAVANGLA & BUDDHA PARK",
+      "badgeText": "DAY 4",
+      "description": "The morning, we will meet our neighbors, women monks from one of the few monasteries of women monks in Sikkim. After lunch, we will start from our accommodation for a walk to the city of Ravangla. We will visit the Tathagata Tsal shrine better known as Buddha Park because of its 87 meter high statue which overlooks the valley. We then descend to the town for a free visit.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/vAH9v5xSDyhbopk5qAjQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RALONG MONASTERY",
+      "badgeText": "DAY 6",
+      "description": "After the brunch, depart for the monastery of Ralong at +-1h30 by road from Ravangla. This monastery belongs to the Kagyu Order of Tibetan Buddhism under the leadership of Gyaltsap Rinpoche. About 100 monks reside there. The view offered by the monastery on the Himalayan range is magnificent.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/zCNXSaTTdOFp3M0ek8bn.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PEMAYANGTSE & RUINS OF RABDENTSE",
+      "badgeText": "DAY 7",
+      "description": "In the morning, we will pack our bags for West Sikkim. We will begin with a visit to the monastery of Pemayangtse, one of the oldest in Sikkim.\r\nWe will then settle in the hotel around noon. After lunch, we will visit the ruins of Rabdentse, the ancient capital of Sikkim.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/oipJMAOTF2uH9TNNDoQS.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION IN A VILLAGE",
+      "badgeText": "DAY 8",
+      "description": "Today will be an opportunity for most of us to see the sunrise at 5 a.m. on Mount Kanchenjunga, the 3rd highest peak in the world, visible from the hotel.\r\nWe will leave for immersion to meet the indigenous populations in a village inhabited by the Lepcha and Bhutia communities who are the first inhabitants of Sikkim. We will discover their authentic lifestyle and how they coexist with a pristine natural environment and we will get our hands dirty by participating in the process of harvesting their local crops .The night is planned in a village of Yuksom to be ready to start the Trek early the next day.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/cFokIWQGROezfzEOYUVE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SIKKIM TREK EXPERIENCE",
+      "badgeText": "DAY 9 TO 13",
+      "description": "Day 9: Departure of the Yuksom > Tshoka Trek \r\nDay 10: Tshoka- Dzongri, altitude: 4250 m \r\nDay 11: Rest day at Dzongri, explore\r\nDay 12: Dzongri-Tshoka\r\nDay 13: Tshoka- Yuksam : return 2-3 p.m, return to Karma Yoga Center in the evening",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/a2bEXajMS9CLWEM3eZma.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RELAXATION DAY AT KARMA YOGA CENTER",
+      "badgeText": "DAY 14",
+      "description": "The last day in Sikkim is dedicated to relaxation in the Karma Yoga center. The opportunity to do some souvenir shopping in Ravangla or to try the traditional baths that we offer and to pack your bags to start the return trip the next day.",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/dWUiTzSQ2WAGoOtDLvIW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETURN TO DELHI",
+      "badgeText": "DAY 15",
+      "description": "Return to Delhi. Early morning departure from Sikkim to Bagdogra Airport. Domestic Flight Bagdogra/Delhi Transfer from Delhi airport to a hotel to spend a comfortable night before the return flight.\r\n",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/6Yl939USPqgHBgIWfaEQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "INTERNATIONAL FLIGHT",
+      "badgeText": "DAY 16",
+      "description": "We will be driven to the international airport to catch our flight which will take us back to Paris during the day. Arrival in Paris around 18h30",
+      "photo": "/images/voyages/trip-awaken-base-qamp-india/MlprHYR8TraSk0EqoG2P.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "international air transport between Amsterdam and New Delhi (round trip)",
+      "domestic air transport between New Delhi and Bagdogra (round trip)",
+      "reception at the airport",
+      "transfers by private vehicle",
+      "accommodation in a 4\\* hotel (Delhi and Siliguri) and in the Karma Yoga retreat center with room for your activities",
+      "accommodation in a village and a resort in West Sikkim",
+      "full board (breakfast, lunch, dinner) for the duration of the stay",
+      "5 days of trekking with a local English-speaking guide, the necessary equipment for the trek (fooding and camping)",
+      "the different visits as described in the program",
+      "accompaniment in English and Dutch (At Karma Yoga) throughout the trip",
+      "24/7 travel agency assistance"
+    ],
+    "exclude": [
+      "Cancellation or multi-risk insurance.",
+      "Personal expenses incurred on-site.",
+      "Activities not included in \"the price includes\" section"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 3888,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "This Sikkim journey will be accompanied by BASEQAMP. At BASEQAMP, we go beyond just guiding you in unpacking and repacking your metaphorical backpack. We offer an experience that can forever change your life. Our professional guides will lead you from a place of safety to the depths of yourself, where you can discover the hidden treasures of growth and personal power.\n\nWhy BASEQAMP? Because we believe in the power of the individual, the self-healing capacity, and the immense potential that lies within each of us. With our unique approach, we combine elements such as body awareness, breath sessions, and exposure to cold to amplify your curiosity and connect you with your innermost core. This empowers you to transform your trauma into an unparalleled source of wisdom, strength, and resilience.\n\nOur guides are highly experienced and dedicated to your personal growth. They will accompany you through every step of your journey, with care and attention to your specific needs. BASEQAMP is a life-changing experience that enables you to reach your true potential and live from your heart. Step into a safe environment and allow yourself to transform. Discover the authentic power and wisdom already residing within you and live a life filled with passion, confidence, purpose, and authenticity.\n\n BASEQAMP is your key to a life of boundless possibilities.",
+  "accompanistsList": [
+    {
+      "name": "BaseQamp",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/trip-awaken-base-qamp-india/ZEbgBCXeSde0CpRGAgqx.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hotel and retreat house",
+      "housingType": "",
+      "housingMood": "During this trip, you will stay in 4-star hotels both before and after the immersion in Sikkim. You will be welcomed at a conveniently located and comfortable retreat center during the retreat. The details are as follows:\r\n\r\n✓ 1 night in a hôtel 4* at Siliguri (Bengal)\r\n✓ 6 nights in our retreat center Karma Yoga\r\n✓ 1 night in a resort in the West of Sikkim\r\n✓ 1 night in a local community at Yuksom\r\n✓ 4 nights in camping during the Trek\r\n✓ 1 night in Delhi in a hôtel 4 or 5* on the return",
+      "image": [
+        {
+          "src": "/images/voyages/trip-awaken-base-qamp-india/iyZxJdnMSJaqkcnDRkhB.jpg",
+          "alt": "image de l'hébergement Awaken your own nature - BaseQamp"
+        },
+        {
+          "src": "/images/voyages/trip-awaken-base-qamp-india/LJnltTGkRXuzAFF0geVg.jpg",
+          "alt": "image de l'hébergement Awaken your own nature - BaseQamp"
+        },
+        {
+          "src": "/images/voyages/trip-awaken-base-qamp-india/VulhaqIFSoCwQ1DIt2WY.jpg",
+          "alt": "image de l'hébergement Awaken your own nature - BaseQamp"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/trip-awaken-base-qamp-india/g5ZyWzcXTpWk5Vu5U7ei.jpg",
+    "alt": "image principale du voyage Awaken your own nature - BaseQamp"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/trip-awaken-base-qamp-india/exnvCJ2uTROHZzDQktaS.jpg",
+    "alt": "image secondaire du voyage Awaken your own nature - BaseQamp"
+  },
+  "photosList": [],
+  "videoLinks": [
+    "https://www.youtube.com/embed/3aH6CsMkLGA"
+  ],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Where will I sleep ?",
+        "answer": "*   1 night in a hôtel 4\\* at Siliguri (Bengal)\n*   6 nights in our retreat center Karma Yoga\n*   1 night in a resort in the West of Sikkim\n*   1 night in a local community at Yuksom\n*   4 nights in camping during the Trek\n*   1 night in Delhi in a hôtel 4 or 5\\* on the return"
+      },
+      {
+        "question": "What will I eat ?",
+        "answer": "All meals are included in the price of your trip!\n\nSikkim is renowned as the world's first 100% organic state. In 2013, the government initiated a policy aimed at prohibiting the use of chemical fertilizers and pesticides in agriculture, and supported Sikkim's farmers in transitioning to organic farming. During your stay in Sikkim, you will have the opportunity to savor traditional, organic, and seasonal cuisine.\n\nOn the stages before and after your immersion in Sikkim, in the hotels in Delhi and Siliguri, you will enjoy a variety of Indian and international dishes."
+      },
+      {
+        "question": "What are the entry requirements for India ? ",
+        "answer": "You must possess a passport with a minimum validity of at least 6 months beyond your date of entry. A tourist visa on arrival is mandatory for Dutch and Belgian nationals. You can apply for it here: [https://indianvisaonline.gov.in/evisa/tvoa.html](https://indianvisaonline.gov.in/evisa/tvoa.html)"
+      },
+      {
+        "question": "Why a trip to Sikkim ?",
+        "answer": "Welcome to the state of Sikkim ! An iconic destination in India that seamlessly combines tradition and modernity in a unique manner. Nestled in the heart of the Himalayan mountains, Sikkim presents a landscape of breathtaking beauty, featuring snow-capped peaks, lush valleys, and sparkling waterfalls.\n\nIt's a place where serenity prevails, where ancient temples and Buddhist monasteries imbue a spiritual ambiance into the surroundings. The warm and welcoming locals add a human dimension to this land, where diverse cultures and age-old traditions coexist harmoniously.\n\nIn summary, it's the perfect place to experience a unique retreat journey, returning inspired by yoga sessions, warm encounters, and awe-inspiring landscapes !"
+      },
+      {
+        "question": "Am I insured during my trip ? ",
+        "answer": "We offer two insurance options with our partner Chapka :  \n\n1.  Cancellation Insurance: You can cancel your trip before departure for any justifiable, random, sudden, unforeseeable, and involuntary reason that prevents you from traveling (e.g., testing positive for COVID, medical quarantine with documentation, boarding refusal due to high temperature, etc.).\n2.  Multirisk Insurance: This includes Cancellation Insurance as well as on-site assistance (e.g., medical expenses, extended stay due to quarantine, medical repatriation, early return in case of government request, etc)."
+      },
+      {
+        "question": "Am I insured during my trip ? ",
+        "answer": "We offer two insurance options with our partner Chapka :  \n\n1.  Cancellation Insurance: You can cancel your trip before departure for any justifiable, random, sudden, unforeseeable, and involuntary reason that prevents you from traveling (e.g., testing positive for COVID, medical quarantine with documentation, boarding refusal due to high temperature, etc.).\n2.  Multirisk Insurance: This includes Cancellation Insurance as well as on-site assistance (e.g., medical expenses, extended stay due to quarantine, medical repatriation, early return in case of government request, etc)."
+      },
+      {
+        "question": "Who will I be traveling with ? ",
+        "answer": "For this journey, BaseQamp offer a fixed departure date. We provide a total of 12 spots for our travelers."
+      },
+      {
+        "question": "How is the Karma Yoga retreat center ?",
+        "answer": "Built around a family house called “Choda House”, the Karma Yoga Center in India is located in the middle of the lush nature of Ravangla in South Sikkim. A place conducive to relaxation, meditation and the practice of yoga.\n\nThe center has 10 comfortable rooms, each with bathroom, a small Buddhist temple and a 120m2 practice room.\n\nYou can enjoy traditional organic and seasonal cuisine, taste the traditional Sikkimese hot stones baths and take beautiful walks in the surroundings."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Awaken your own nature - BaseQamp",
+    "canonicalUrl": "https://www.odysway.com/voyages/trip-awaken-base-qamp-india",
+    "ogTitle": "Awaken your own nature - BaseQamp",
+    "ogDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
+    "ogImage": {
+      "src": "/images/voyages/trip-awaken-base-qamp-india/g5ZyWzcXTpWk5Vu5U7ei.jpg",
+      "alt": "image principale du voyage Awaken your own nature - BaseQamp"
+    },
+    "twitterTitle": "Awaken your own nature - BaseQamp",
+    "twitterDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
+    "twitterImage": {
+      "src": "/images/voyages/trip-awaken-base-qamp-india/g5ZyWzcXTpWk5Vu5U7ei.jpg",
+      "alt": "image principale du voyage Awaken your own nature - BaseQamp"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "published": false,
+  "title": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
+  "destinations": [
+    {
+      "name": "Sibérie"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-sportif"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "Hôtel, camp sur glace",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Connaissez-vous le lac Baïkal ? Ce légendaire lac situé au cœur de la Sibérie nourrit les fantasmes des aventuriers depuis la nuit des temps. L'hiver, la surface du lac gèle en une couche de glace de plus d'un mètre de large, rendant le Baïkal accessible. \n\nOdysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. Le retour se fera en train, par le mythique Transsibérien.\n\nCe voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de découvrir la Sibérie loin de la foule, au proche de la nature et des éléments.",
+    "author": "Nicolas",
+    "affixeAuthor": "co-fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Une aventure hors du temps, sur le légendaire lac Baïkal, dont vous vous souviendrez toute votre vie",
+    "La découverte de la culture sibérienne et du bouddhisme",
+    "L'opportunité de s'initier aux expéditions polaires, en toute sécurité",
+    "La chance de prendre le mythique train Transsibérien, et d'y dormir",
+    "Les rencontres et le partage avec d'autres voyageurs venus du monde entier"
+  ],
+  "slug": "randonnee-baikal-hiver",
+  "description": "Connaissez-vous le lac Baïkal ? Ce légendaire lac situé au cœur de la Sibérie nourrit les fantasmes des aventuriers depuis la nuit des temps. L'hiver, la surface du lac gèle en une couche de glace de plus d'un mètre de large, rendant le Baïkal accessible. \n\nOdysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. Le retour se fera en train, par le mythique Transsibérien.\n\nCe voyage s'adresse à toutes les personnes en quête d'aventure, désireuses de découvrir la Sibérie loin de la foule, au proche de la nature et des éléments.",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et randonner sur le lac Baïkal gelé au cœur de la taïga enneigée, ce voyage en Sibérie est fait pour vous !",
+  "metaDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **4 à 12 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Hôtel, camp sur glace",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Fév à Mars",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "PREMIERS PAS EN SIBÉRIE",
+      "badgeText": "JOURS 1&2",
+      "description": "Après un vol de 12h, avec une escale à Moscou, vous arrivez à Irkoutsk dans la matinée. Votre guide vient vous chercher directement à l'aéroport et vous emmène à votre hôtel. A 15h, rendez-vous avec le groupe pour le briefing général.",
+      "photo": "/images/voyages/randonnee-baikal-hiver/JsUvlpC5TUWr1yi3TjTT.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN ROUTE POUR LE BAÏKAL",
+      "badgeText": "JOUR 3",
+      "description": "Départ matinal pour le lac Baïkal et la mythique presqu'île d'Olkhon. Selon la tradition, nous ferons arrêt dans un lieu sacré en hommage aux esprits du lac. L'après midi, vous pourrez visiter la presqu'île et ses lieux chamaniques. ",
+      "photo": "/images/voyages/randonnee-baikal-hiver/k1TJoWhRHKGVMUkao5V1.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UN PIED SUR LE LAC",
+      "badgeText": "JOUR 4",
+      "description": "Ce matin, nous prenons le 4x4 pour nous rendre à la pointe nord de l'île, d'où nous aurons une vue imprenable sur le lac gelé. Nous commencerons alors la traversée du Baïkal et marcherons 25km jusqu'au milieu du lac, où nous installerons notre camp de base.",
+      "photo": "/images/voyages/randonnee-baikal-hiver/Zo6M8EBRkydrbsBsUxK8.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN LIBERTÉ SUR LE BAÏKAL",
+      "badgeText": "JOUR 5",
+      "description": "Aujourd'hui, journée libre au camp de base, sur une glace transparente de 1,5 mètres d'épaisseur. Vous pourrez vous promener sur la banquise, admirer le lever de soleil, vous initier aux patins à glace et même... jouer au hockey !",
+      "photo": "/images/voyages/randonnee-baikal-hiver/tFm1dV6PTUGXIlTR7nFp.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION SIBÉRIENNE",
+      "badgeText": "JOUR 6",
+      "description": "Nous reprenons la route vers la côte est du lac. Après 7 heures de marche, vous arriverez au sein de votre maison d'hôtes, chez l'habitant. Il sera grand temps de vous détendre avec un traditionnel baña russe et un repas en compagnie des locaux.",
+      "photo": "/images/voyages/randonnee-baikal-hiver/ItpNNMuQbCZy61OGpxvM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A BORD DU TRANSSIBÉRIEN",
+      "badgeText": "JOUR 7",
+      "description": "Ce matin, nous partons pour une visite d'un impressionnant monastère bouddhiste : le Datsane d’Ivolguinsk. Après la visite, nous monterons à bord du légendaire train Transsibérien où nous aurons la chance de passer la nuit.",
+      "photo": "/images/voyages/randonnee-baikal-hiver/S3PBA4v9TKKryEsTudu5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR A IRKOUTSK ET DEPART",
+      "badgeText": "JOUR 8",
+      "description": "Vous arrivez à Irkoutsk en train au petit matin. Faites vos adieux à votre guide ainsi qu'à vos compagnons de voyage, après tant d'aventures passées ensemble. Après votre transfert à l'aéroport, il sera temps de prendre votre vol retour !",
+      "photo": "/images/voyages/randonnee-baikal-hiver/Zp966Q8aMzPvvNe66uwD.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’accueil à l'aéroport",
+      "Tous les transports durant l'intégralité du voyage",
+      "Le billet de train Transsibérien",
+      "L'hébergement en chambre double en hôtel et chambre d'hôtes (3 nuits)",
+      "L'hébergement dans le train, en compartiment 4 couchettes dans le train (1 nuit)",
+      "L'hébergement en grande tente 6 places durant la traversée (2 nuits)",
+      "Le matériel de camping, les sacs de couchages grand froid, les crampons et les pulkas",
+      "Les petits-déjeuners, déjeuners et dîners sauf ceux mentionnés libres dans le programme",
+      "Toutes les les visites et entrées de sites indiquées dans le programme",
+      "L'assistance Odysway 24h/24 et 7j/7"
+    ],
+    "exclude": [
+      "Les billets d'avion",
+      "Les activités en supplément",
+      "L'assurance annulation et l'assurance multirisques",
+      "Les boissons alcoolisées",
+      "Les dépenses personnelles et pourboires"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1930,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 12,
+    "minTravelersToConfirm": 4,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "IKT",
+      "IKT"
+    ]
+  },
+  "accompanistsDescription": "Vous serez encadré par un guide local anglophone et expert de la région durant l'intégralité du voyage.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtel, camp sur glace",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
+    "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/randonnee-baikal-hiver/jZO3m0X9SmMaZWhSoMBL.jpg",
+    "alt": "image secondaire du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/z24XhZdNQ2FJfKUOKskQ.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/BWi6qZ5TuCza4AMETHzV.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/LfwiAncZSyCs0Daxi4dW.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/eOEpdh4Q062LZcUzO7sp.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/ERfYKcFHS1aNNiTXTX6W.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/mE18MClIRWq8pfxh5qaG.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/WrrxbIxbQWit0ngmmm9N.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/Z4xuSY9cRzC0KsN2oJuM.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/Tbc6xWBSYi30wdQdyzEA.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/DyN3OAZWSWqDEZSXnaOF.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/RWGBTuBQ463jwf7XLsGC.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/213nSeoBQ6eihawnMPib.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/pm7zPX3uTU69DwHPF495.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    {
+      "src": "/images/voyages/randonnee-baikal-hiver/sb6QIaBWRk6XWq58gzyy.jpg",
+      "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "Tous les hébergements sont compris dans le prix du voyage :\n\n*   Nuit du jour 1 : Vol international\n*   Nuits des jours 2 & 3 : Hôtel base chambre double \n*   Nuit des jours 4 & 5 : Tente spacieuse de 6 personnes sur la glace, en lit de camp superposé\n*   Nuit du jour 6 : Maison d'hôtes chez l'habitant base chambre double\n*   Nuit du jour 7 : Lit couchette dans le Transsibérien, en compartiment de 4 personnes"
+      },
+      {
+        "question": "Avec qui vais-je voyager ?",
+        "answer": "Odysway vous propose deux formules afin de vivre un voyage qui vous ressemble. Si vous êtes un groupe de plus de 4 personnes déjà constitué, vous pouvez choisir de réserver ce voyage sur vos propres dates. Pour cela, contactez-vous par mail à contact@odysway.com !\n\nVous pouvez également décider d’allier rencontres et voyage et de rejoindre un départ groupé (15 voyageurs maximum, à dates fixes)."
+      },
+      {
+        "question": "Que vais-je manger durant ce voyage ?",
+        "answer": "Voici les repas inclus dans le prix du voyage : \n\n*   6 petits-déjeuners\n*   5 déjeuners\n*   4 diners\n\nLes repas pris en restaurants, pendant le trek et chez l'habitant seront à base de produits frais locaux. Profitez de votre séjour pour expérimenter la cuisine russe, comme le fameux borchtch !"
+      },
+      {
+        "question": "Quel niveau en randonnée faut-il avoir ?",
+        "answer": "Lors de ce voyage, il y aura 2 jours de marche sur glace en tirant une pulka (luge contenant vos affaires personnelles). La distance parcourue au total est de 50km, soit 7-8h de marche par jour. \n\nBien qu'aucune expérience préalable ne soit nécessaire, la marche sur glace est une activité qui peut s'avérer difficile, en particulier avec de mauvaises conditions météos. Il est nécessaire d'avoir une bonne condition physique pour effectuer ce voyage."
+      },
+      {
+        "question": "Quel équipement faut-il prévoir ?",
+        "answer": "L'équipement de randonnée sur glace et de camping spécial grand froid sera fourni sur place. Si vous avez déjà un très bon duvet en plume, vous pouvez l'amener.\n\nVoici la liste du matériel à apporter : \n\n*   Un grand sac de randonnée de 70/80L (pas de valise)  \n    \n*   Un petit sac de randonnée de 30/40L que vous porterez sur le dos.  \n    \n*   Des chaussures de randonnées\n*   Des claquettes ou tongs pour le baña\n*   De grosses chaussettes de randonnée\n*   Un pantalon de randonnée\n*   Un sweat \n*   Un pull type POLARTEC\n*   Un pantalon coupe-vent et une veste coupe-vent imperméable type Gore-Tex\n*   Une doudoune ou veste polaire\n*   Des pulls chauds\n*   Un maillot de bain\n*   Une serviette de bain\n*   Une gourde isotherme ou un thermos  \n    \n*   Une cagoule  \n    \n*   Un couteau de poche  \n    \n*   Une écharpe, des gants et un bonnet  \n    \n*   Un foulard ou cache-cou  \n    \n*   Des gants ou moufles chaudes adaptés  \n    \n*   Une lampe frontale  \n    \n*   Des lingettes  \n    \n*   Des bonnes lunettes de soleil  \n    \n*   Du stick pour les lèvres  \n    \n*   De la crème solaire et de la crème hydratante  \n    \n*   Du papier toilette\n*   Une pharmacie personnelle (paracétamol, antiseptique, sparadraps, compresses)"
+      },
+      {
+        "question": "Quelle sont les formalités d'entrée en Russie ?",
+        "answer": "Un visa est nécessaire pour entrer en Russie. Nous sommes à votre disposition pour vous accompagner dans la démarche d'obtention de ce visa. Nous vous fournirons notamment le \"voucher\", la lettre d'invitation en Russe nécessaire pour obtenir le visa.\n\nAfin de simplifier la démarche, nous vous recommandons de passer par un organisme de visa comme [Action Visa](https://www.action-visas.com/visa/Russie)."
+      },
+      {
+        "question": "Suis-je remboursé en cas d'annulation liée à une cause Covid-19 ?",
+        "answer": "Votre séjour sera 100% remboursé et sous 7 jours pour toute annulation en cas de circonstances exceptionnelles et inévitables au sens du Code du tourisme. Cela inclut les causes Covid-19 suivantes : confinement du pays de départ et/ou fermeture des frontières du pays de destination.\n\n**Incidence de la pandémie de Covid-19 :**\n\nEn raison de la pandémie de Covid-19, vos pays de transit et de destination peuvent appliquer des règles sanitaires spécifiques, ainsi que d'éventuelles mesures de restriction d'accès à leur territoire. Nous vous invitons à consulter très régulièrement le site internet de France Diplomatie : [https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/)"
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
+    "canonicalUrl": "https://www.odysway.com/voyages/randonnee-baikal-hiver",
+    "ogTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
+    "ogDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
+    "ogImage": {
+      "src": "/images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
+      "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    "twitterTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
+    "twitterDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
+    "twitterImage": {
+      "src": "/images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
+      "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

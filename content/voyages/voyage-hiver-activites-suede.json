@@ -1,0 +1,299 @@
+{
+  "published": true,
+  "title": "Séjour multi-activités en Laponie suédoise",
+  "destinations": [
+    {
+      "name": "Suède"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-aventure"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 8,
+  "nights": 7,
+  "includeFlight": false,
+  "housingType": "Chalet",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 8,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Vivez une immersion inoubliable au cœur d'un paradis nordique, où aventure et sérénité se rencontrent harmonieusement. Ce séjour unique vous invite à découvrir les traditions du Grand Nord à travers des activités authentiques telles que l'initiation au traîneau à chiens, la construction d'un igloo, la pêche blanche et les balades en raquettes.\n\nChaque journée est une nouvelle occasion de se reconnecter à la nature sauvage, tandis que les soirées, confortablement installés dans votre chalet familial, vous savourerez des spécialités locales. Les enfants, guidés par un expert passionné, se transformeront en petits trappeurs, apprenant les gestes ancestraux et observant la faune environnante. Les adultes, tout aussi émerveillés, apprécieront la tranquillité de ces paysages enneigés, où le silence et la pureté de l'air apportent un sentiment de paix. Plus qu'un simple voyage, c'est une expérience enrichissante et ressourçante en totale déconnexion !",
+    "author": "Lucie",
+    "affixeAuthor": "responsable voyageurs"
+  },
+  "experiencesBlock": [
+    "Plongez au cœur de la culture nordique en profitant d'activités locales et ancestrales",
+    "Explorez les vastes étendues enneigées, où le silence et la beauté des paysages créent une atmosphère magique et apaisante",
+    "Profitez de soirées confortables dans des chalets chaleureux et dégustez des repas traditionnels préparés à base de produits locaux.",
+    "Vivez un séjour conçu pour tous, où petits et grands découvrent ensemble les merveilles de la nature arctique suédoise"
+  ],
+  "slug": "voyage-hiver-activites-suede",
+  "description": "Vivez une immersion inoubliable au cœur d'un paradis nordique, où aventure et sérénité se rencontrent harmonieusement. Ce séjour unique vous invite à découvrir les traditions du Grand Nord à travers des activités authentiques telles que l'initiation au traîneau à chiens, la construction d'un igloo, la pêche blanche et les balades en raquettes.\n\nChaque journée est une nouvelle occasion de se reconnecter à la nature sauvage, tandis que les soirées, confortablement installés dans votre chalet familial, vous savourerez des spécialités locales. Les enfants, guidés par un expert passionné, se transformeront en petits trappeurs, apprenant les gestes ancestraux et observant la faune environnante. Les adultes, tout aussi émerveillés, apprécieront la tranquillité de ces paysages enneigés, où le silence et la pureté de l'air apportent un sentiment de paix. Plus qu'un simple voyage, c'est une expérience enrichissante et ressourçante en totale déconnexion !",
+  "emailDescription": "👉 Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
+  "metaDescription": "Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": true
+    },
+    "housingBadge": {
+      "text": "Chalet",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Oct à Avril",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE EN LAPONIE SUÉDOISE",
+      "badgeText": "JOUR 1",
+      "description": "Votre aventure commence dès votre arrivée à Luleå, au cœur de la Laponie suédoise ! Après un accueil chaleureux à l'aéroport, vous serez transféré vers notre camp. Accompagné d'un guide expert, vous plongerez dans un programme riche en expériences de pleine nature : des balades en traîneau à chiens, la construction d'un igloo, des randonnées en raquettes, sans oublier la pêche blanche. Vous découvrirez également les villages traditionnels samis, qui viendront parfaire ce séjour unique. Lors de cette première soirée, votre guide vous transmettra toutes les informations et conseils nécessaires pour que vous puissiez vivre cette aventure en toute sérénité et préparer au mieux la semaine à venir.",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/QdVAI8h9Stqa3QSLKxFF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DANS LA PEAU D'UN TRAPPEUR",
+      "badgeText": "JOUR 2",
+      "description": "Votre journée au parc national du Muddus vous offre une immersion totale en pleine nature, où vous vous initiez à l'art du pistage animal et découvrez les secrets de la vie sauvage. Accompagné par un guide expert, vous observez la faune et la flore locales tout en apprenant à respecter l'équilibre délicat de la taïga. L'après-midi, vous mettez en pratique des savoir-faire ancestraux en construisant un igloo, avant de vous initier à l’art de la survie en milieu polaire, en trouvant de l’eau potable et en allumant un feu sans équipements modernes. La journée se conclut en beauté par un repas convivial préparé au feu de bois.",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/4scq3FmMRVu7NhFFv6NW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "A LA RENCONTRE DES RENNES",
+      "badgeText": "JOUR 3",
+      "description": "À Jokkmokk, vous plongez au cœur de la culture riche et ancestrale du peuple sami, autochtones de l'Arctique scandinave. Votre exploration commence par une visite au musée Sami, où vous découvrirez leur histoire, leur mode de vie, et leurs croyances à travers une collection d’artisanat traditionnel. Ensuite, vous partirez à la découverte d'une ferme de rennes gérée par une famille locale. Vous participerez à des activités authentiques, comme nourrir les rennes et conduire des traîneaux, partageant ainsi un moment privilégié dans leur quotidien. Une journée en totale immersion !",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/9z3Cm1sTT5eBVep69GBB.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RAQUETTES ET PÊCHE SOUS GLACE",
+      "badgeText": "JOUR 4",
+      "description": "Aujourd'hui, vous partez à l'aventure avec des raquettes, idéales pour vous déplacer sur la neige profonde et atteindre des lieux reculés. Votre objectif : trouver un site propice à la pêche blanche. Une fois sur place, vous percez un trou dans la glace et attendez patiemment les prises, en pleine communion avec la nature hivernale. Cette activité vous offre un moment de contemplation unique dans un cadre sauvage. Le soir venu, autour d'un feu de bois, vous dégustez les poissons que vous avez pêchés ou savourez un repas authentique, dans une ambiance féérique et chaleureuse.",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/TPGiIeJuTtuQERjevUM5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE PLUS GRAND DÉSERT BLANC D'EUROPE",
+      "badgeText": "JOUR 5",
+      "description": "Cette journée dans le parc national du Sarek, le plus grand désert blanc d'Europe continentale, offre une expérience inoubliable d'observation de la vie sauvage nordique. Vous découvrirez comment les animaux s'adaptent aux conditions extrêmes, en explorant des tourbières gelées et des lacs glacés. Vous apprendrez à reconnaître les traces des différentes espèces, avec peut-être la chance d'apercevoir un renard polaire ou un lièvre arctique. En fin de journée, direction Storforsen pour les deux dernières nuits du voyage. Signifiant \"grands rapides\", Storforsen vous offrira de belles surprises...",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/9i1yMgmxRlmVc98ZmbNn.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE EN CHIENS DE TRAÎNEAU",
+      "badgeText": "JOUR 6",
+      "description": "Cette journée riche en émotions vous offre l'occasion de vivre l'une des expériences les plus marquantes de votre voyage : une sortie en traîneau à chiens. Le matin, vous rencontrerez la meute et sous la guidance d'un musher expérimenté, vous découvrirez comment ces chiens nordiques sont entraînés et soignés, tout en vous initiant aux techniques de conduite d'un traîneau. Une fois prêt, vous prendrez les commandes pour traverser des paysages enneigés splendides, où le silence n'est brisé que par le bruit des pattes de vos fidèles compagnons et du traîneau qui glisse sur la neige. ",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/uoYUTiA2RRSBqxUE6BBG.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CAP SUR LES PLUS GRANDES CHUTES D'EUROPE",
+      "badgeText": "JOUR 7",
+      "description": "Aujourd'hui, cap vers une nouvelle aventure avec la découverte des impressionnantes chutes de Storforsen, les plus grandes d'Europe, au cœur de la Laponie suédoise. En empruntant les sentiers le long des chutes, vous aurez l'occasion d'admirer les rapides depuis divers points de vue. L'atmosphère y est envoûtante : l'air humide et le grondement puissant de l'eau créent une ambiance fascinante. Les tourbillons d'écume se mêlent aux arcs-en-ciel qui apparaissent lorsque le soleil éclaire les rapides. Un spectacle naturel unique que vous prenez le temps de savourer avant le retour à Lulea pour une soirée libre.",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/50CFxN43TL6tFocB3xUM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 8",
+      "description": "Votre aventure nordique s'achève avec le transfert vers l'aéroport de Luleå. Nous vous souhaitons un excellent voyage de retour en France, convaincus que chaque membre de votre famille repartira avec des souvenirs mémorables et des rêves de trappeur de son séjour en Suède ! ",
+      "photo": "/images/voyages/voyage-hiver-activites-suede/TQcY4SMYTOyD6Y5qZ1qu.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les vols pour rejoindre Lulea aller-retour",
+      "L'accueil à l'aéroport",
+      "Les transferts sur place en minibus privatisé entre l'aéroport et votre hébergement",
+      "L'hébergement en chalet (base double)",
+      "La pension complète",
+      "L'encadrement par un guide accompagnateur francophone",
+      "Le prêt de raquettes à neige et de bâtons et du matériel de sécurité.L'assistance Odysway 24h/24 et 7j/7"
+    ],
+    "exclude": [
+      "Le repas au restaurant à Lulea le J7 (~50 € / repas)",
+      "Les boissons",
+      "Les entrées dans les sites et musées (~ 20 euros)",
+      "Les pourboires selon votre degré de satisfaction et les dépenses personnelles",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 3140,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "LLA"
+    ]
+  },
+  "accompanistsDescription": "Odysway vous assure une aventure immersive inoubliable en Laponie suédoise, grâce à nos experts dévoués et une logistique irréprochable. Tout au long de votre séjour, nos guides passionnés vous dévoileront des lieux naturels époustouflants et vous feront vivre des expériences uniques. Laissez-vous accompagner en toute sérénité et profitez pleinement de chaque instant.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Chalet",
+      "housingType": "",
+      "housingMood": "Vous séjournerez dans des chalets chaleureux, alliant confort et authenticité. Chaque chalet propose des chambres privées avec lits jumeaux ou doubles, dans un cadre unique en pleine nature. Les espaces communs sont conviviaux, avec des sanitaires partagés pour une expérience authentique et agréable.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-hiver-activites-suede/9qZKpORfR1y3aVTCTEEc.jpg",
+          "alt": "image de l'hébergement Séjour multi-activités en Laponie suédoise"
+        },
+        {
+          "src": "/images/voyages/voyage-hiver-activites-suede/vzkuGVdLR4mYiZL5zACI.jpg",
+          "alt": "image de l'hébergement Séjour multi-activités en Laponie suédoise"
+        },
+        {
+          "src": "/images/voyages/voyage-hiver-activites-suede/4FGxhmCQ1WEAeBMVnBuY.jpg",
+          "alt": "image de l'hébergement Séjour multi-activités en Laponie suédoise"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-hiver-activites-suede/n4LPXi1QRuPsqLJDHuAe.jpg",
+    "alt": "image principale du voyage Séjour multi-activités en Laponie suédoise"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-hiver-activites-suede/52LkaPeBTCCMSZWQJ8US.jpg",
+    "alt": "image secondaire du voyage Séjour multi-activités en Laponie suédoise"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Quelles sont les formalités d'entrée en Suède ?",
+        "answer": "La Suède étant membre de l’Union européenne, les ressortissants français peuvent y entrer **librement, munis d’un passeport ou d’une carte nationale d’identité en cours de validité**.\n\nIl est recommandé de s’inscrire sur l’application [Ariane](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html).\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/suede/#entree)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas : \n\n*   **L'assurance Annulation** : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée, aléatoire, soudaine, imprévisible, indépendante de votre volonté et qui vous empêche de voyager\n*   **L'assurance Multirisque** : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Où vais-je loger durant ce voyage ?",
+        "answer": "L'hébergement se fait dans un ou plusieurs chalets de type appartements privatifs avec plusieurs chambres (lits  \njumeaux séparés ou lit double). Hébergements de bon standing et chaleureux offrant tout le confort nécessaire et  \ndans un cadre unique, en pleine nature. Sanitaires partagés."
+      },
+      {
+        "question": "Que vais-je manger durant ce voyage ?",
+        "answer": "Malgré la latitude, nous nous efforçons de proposer des fruits et des légumes frais quotidiennement. Après un petit déjeuner copieux, le pique-nique est toujours composé d'aliments locaux : sandwichs, salades, fruits, gâteaux et fruits secs... préparé par vos soins le matin. Le soir, les repas sont pris et préparés en commun avec votre accompagnateur en fonction des produits disponibles dans les magasins locaux. Pendant votre séjour, vous aurez l'occasion de goûter la truite grillée ou fumée (grillad öring), le ragout de renne (ren) et les roulées à la cannelle (Kanelbullar). L'apéritif est souvent bienvenu le soir avant le repas"
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un e-mail de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les sept jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact étroit avec un conseiller dédié. Vous pourrez le joindre par e-mail, téléphone, SMS ou WhatsApp, selon ce qui vous convient le mieux. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au + 33 [01 84 80 79 75](https://www.google.com/search?q=odysway&oq=odysway&gs_lcrp=EgZjaHJvbWUqDAgAEAAYExjjAhiABDIMCAAQABgTGOMCGIAEMg8IARAuGBMYrwEYxwEYgAQyBggCEEUYQTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8) ou au [\\+ 33 6 67 38 56 55](tel:+33667395655)."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Séjour multi-activités en Laponie suédoise",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-hiver-activités-suède",
+    "ogTitle": "Séjour multi-activités en Laponie suédoise",
+    "ogDescription": "Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-hiver-activites-suede/n4LPXi1QRuPsqLJDHuAe.jpg",
+      "alt": "image principale du voyage Séjour multi-activités en Laponie suédoise"
+    },
+    "twitterTitle": "Séjour multi-activités en Laponie suédoise",
+    "twitterDescription": "Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-hiver-activites-suede/n4LPXi1QRuPsqLJDHuAe.jpg",
+      "alt": "image principale du voyage Séjour multi-activités en Laponie suédoise"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

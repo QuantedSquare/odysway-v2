@@ -1,0 +1,208 @@
+{
+  "published": false,
+  "title": "Voyagez avec un chamane au Pérou",
+  "destinations": [],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "Hôtel, chez l'habitant",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 4.6,
+  "comments": 5,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Plus qu'un simple voyage, nous vous proposons une immersion au cœur du Pérou, où la spiritualité est très présente.\n\nAccompagnés d'un véritable chamane de la communauté Q'ero, découvrez une dimension méconnue et fascinante de la culture locale : la cosmologie et les croyances pré-colombiennes, basées sur le profond respect de la nature et l'harmonie du vivant.\n\nNous avons choisi pour vous deux régions mythiques et très contrastées : la Vallée Sacrée et le Lac Titicaca. L'occasion de vivre deux immersions exceptionnelles chez l'habitant dans des communautés reculées, totalement préservées du tourisme de masse. Un voyage marquant qu'on ne vit qu'une fois !",
+    "author": "Salomé",
+    "affixeAuthor": "Créatrice de voyages immersifs"
+  },
+  "experiencesBlock": [
+    "Les rencontres privilégiées avec un chaman de la communauté Q'ero",
+    "Une approche différente du Machu Picchu et des sites mythiques de la Vallée Sacrée",
+    "L'immersion au sein de communautés quechuas",
+    "Un guide francophone aux petits soins pour faciliter l'échange",
+    "Des expériences marquantes et insolites durant le voyage"
+  ],
+  "slug": "voyagez-avec-un-chamane-au-perou",
+  "description": "Plus qu'un simple voyage, nous vous proposons une immersion au cœur du Pérou, où la spiritualité est très présente.\n\nAccompagnés d'un véritable chamane de la communauté Q'ero, découvrez une dimension méconnue et fascinante de la culture locale : la cosmologie et les croyances pré-colombiennes, basées sur le profond respect de la nature et l'harmonie du vivant.\n\nNous avons choisi pour vous deux régions mythiques et très contrastées : la Vallée Sacrée et le Lac Titicaca. L'occasion de vivre deux immersions exceptionnelles chez l'habitant dans des communautés reculées, totalement préservées du tourisme de masse. Un voyage marquant qu'on ne vit qu'une fois !",
+  "emailDescription": "👉 Si vous souhaitez faire un voyage initiatique auprès d'un véritable chaman et vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein de familles quechuas.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **-2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mars à novembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [
+      "7 nuits en hôtels 2-3\\* (base double)",
+      "4 nuits chez l'habitant",
+      "1 nuit en bus de nuit (siège confort inclinable 160°C)",
+      "Tous les petits-déjeuners",
+      "Déjeuners (J4, J6, J7, J10, J11)",
+      "Déjeuners pique-nique (J3,  J12)",
+      "Dîners (J6, J7, J9, J10, J11)",
+      "Guide francophone spirituel privé (J3 à J11)",
+      "Présence du chamane Q'ero (J3, J4)",
+      "Activités durant le voyage (telles que décrites)",
+      "Tickets d'entrée (Saqsayhuaman, Maras, Moray, Machu Picchu)",
+      "Cérémonies chamaniques durant le voyage",
+      "Transfert privatif A/R : aéroport Cuzco - hôtel (J1 et J13)",
+      "Transferts privatifs durant le voyage (tels que décrits)",
+      "Bus de ligne Cusco – Juliaca (en journée à l'aller, de nuit en siège confort 160°C au retour)",
+      "Train A/R Ollantaytambo - Aguas Calientes (non accompagné)",
+      "Bus navette montée / descente au Machu Picchu",
+      "Voyage en voilier traditionnel sur le Lac Titicaca"
+    ],
+    "exclude": [
+      "Le supplément chambre individuelle (160€)",
+      "Les vols",
+      "Les déjeuners et dîners non mentionnés dans \"le prix comprend\" (compter entre 4 USD et 10 USD par repas)",
+      "Les boissons",
+      "Les pourboires pour les guides et les chauffeurs",
+      "L'assurance annulation ou multi-risques (sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 0,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 160,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "CUZ"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage est encadré par deux guides francophones privatifs, chacun spécialiste de sa région et attaché à vous faire découvrir un Pérou authentique. Le premier (Vallée Sacrée) sera présent des jours 3 à 8. Le second guide (Lac Titicaca) sera à vos côtés des jours 9 à 11. Le chaman, membre de la respectée communauté Q'eros, sera présent à vos côtés les jours 3 et 4.",
+  "accompanistsList": [
+    {
+      "name": "Des guides francophones dédiés",
+      "description": "",
+      "role": "",
+      "image": "/images/voyages/voyagez-avec-un-chamane-au-perou/wiLslCJRcKhbhDZTOMIs.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Hôtel, chez l'habitant",
+      "housingType": "",
+      "housingMood": "Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3* et des nuits chez l'habitant.\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
+      "image": [
+        {
+          "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/SbzNCziSLuUEKI6Us9Xu.jpg",
+          "alt": "image de l'hébergement Voyagez avec un chamane au Pérou"
+        },
+        {
+          "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/NwlZC9pnTOKFrtKv6SrQ.jpg",
+          "alt": "image de l'hébergement Voyagez avec un chamane au Pérou"
+        },
+        {
+          "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/CPgtoFO1QCmhp1gyiw9Z.jpg",
+          "alt": "image de l'hébergement Voyagez avec un chamane au Pérou"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
+    "alt": "image principale du voyage Voyagez avec un chamane au Pérou"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/gHOIbnesSrm4wF1zWMPt.jpg",
+    "alt": "image secondaire du voyage Voyagez avec un chamane au Pérou"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un e-mail de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les sept jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact étroit avec un conseiller dédié. Vous pourrez le joindre par e-mail, téléphone, SMS ou WhatsApp, selon ce qui vous convient le mieux. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au + 33 [01 84 80 79 75](https://www.google.com/search?q=odysway&oq=odysway&gs_lcrp=EgZjaHJvbWUqDAgAEAAYExjjAhiABDIMCAAQABgTGOMCGIAEMg8IARAuGBMYrwEYxwEYgAQyBggCEEUYQTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8) ou au [\\+ 33 6 67 38 56 55](tel:+33667395655)."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Voyagez avec un chamane au Pérou",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyagez-avec-un-chamane-au-perou",
+    "ogTitle": "Voyagez avec un chamane au Pérou",
+    "ogDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein de familles quechuas.",
+    "ogImage": {
+      "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
+      "alt": "image principale du voyage Voyagez avec un chamane au Pérou"
+    },
+    "twitterTitle": "Voyagez avec un chamane au Pérou",
+    "twitterDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein de familles quechuas.",
+    "twitterImage": {
+      "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
+      "alt": "image principale du voyage Voyagez avec un chamane au Pérou"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}
