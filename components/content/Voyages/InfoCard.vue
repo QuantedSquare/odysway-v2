@@ -245,6 +245,7 @@ watch(dates, () => {
         status: getDateStatus(date),
         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
         id: date.id,
+        slug: voyage.slug,
       }
     })
   }

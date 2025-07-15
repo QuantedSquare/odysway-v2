@@ -7,6 +7,7 @@
     class="text-decoration-none"
     :target="external ? '_blank' : undefined"
     :rel="external ? 'noopener noreferrer' : undefined"
+    @click="trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(link)"
   >
     <div
       class="text-body-1 font-weight-bold mx-4"
@@ -39,4 +40,9 @@ defineProps({
     default: false,
   },
 })
+const { gtag } = useGtag()
+
+function captureOutboundLink(btn) {
+  gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `CTA button "${btn}"` })
+}
 </script>

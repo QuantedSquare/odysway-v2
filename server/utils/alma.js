@@ -78,7 +78,7 @@ const createAlmaSession = async (order) => {
     Object.assign(deal, { insuranceChoice: insuranceItem })
   }
 
-  const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}`)
+  const successUrl = encodeURI(`${BASE_URL}/confirmation?voyage=${deal.slug}&purchase=true`)
   const cancelUrl = encodeURI(`${BASE_URL}${order.currentUrl}`)
 
   const paymentBody = {

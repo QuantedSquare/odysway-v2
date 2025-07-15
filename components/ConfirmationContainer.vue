@@ -137,9 +137,11 @@ onMounted(() => {
     // This could be a nextTick maybe.
     // It's to counter the fact that this mounted happend after
     // the default layout monted that enable facebook.
-    setTimeout(() => {
-      trackPixel('track', 'Purchase')
-    }, 100)
+    if (route.query.purchase === 'true') {
+      setTimeout(() => {
+        trackPixel('track', 'Purchase')
+      }, 100)
+    }
   }
 
   //     // if (this.$route.query.amount) {

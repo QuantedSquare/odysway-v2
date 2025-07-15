@@ -221,7 +221,9 @@ const submit = async () => {
     router.push('/confirmation?voyage=' + voyage.value.slug + '&devis=true')
   }
   else if (skipperChoice.value === 'call') {
-    trackPixel('trackCustom', 'ClickRDV')
+    trackPixel('trackCustom', 'ClickRDV', {
+      voyage: voyage.value.title,
+    })
     showCalendly.value = true
   }
   userInfo.value.loading = false

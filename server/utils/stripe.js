@@ -272,7 +272,7 @@ const createCheckoutSession = async (order) => {
   // Ensure URLs are properly encoded
   // #TODO: remove this forced origin when deployed on production
   let forcedOrigin = 'https://odysway-v2.vercel.app'
-  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}`)
+  const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}&purchase=true`)
   const cancelUrl = encodeURI(`${forcedOrigin}${order.currentUrl}`)
 
   console.log('Final URLs:', {

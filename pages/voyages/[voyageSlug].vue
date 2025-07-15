@@ -115,6 +115,8 @@
 definePageMeta({
   layout: 'voyage',
 })
+const { gtag } = useGtag()
+
 const route = useRoute()
 const { data: page } = await useAsyncData('voyages-textes', () =>
   queryCollection('page_voyage_fr').first(),

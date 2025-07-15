@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-calendly',
     'nuxt-gtag',
-    // 'nuxt-security',
     'nuxt-meta-pixel',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -245,87 +244,6 @@ export default defineNuxtConfig({
       ],
     }),
   },
-  // security: {
-  //   headers: {
-  //     contentSecurityPolicy: {
-  //       'default-src': ['\'self\''],
-  //       'script-src': [
-  //         '\'self\'',
-  //         '\'unsafe-inline\'',
-  //         '\'unsafe-eval\'', // Required for WebAssembly
-  //         '\'wasm-unsafe-eval\'', // Required for WebAssembly
-  //         'https://www.googletagmanager.com',
-  //         'https://www.google-analytics.com',
-  //         'https://region1.google-analytics.com',
-  //         'https://connect.facebook.net',
-  //         'https://static.hotjar.com',
-  //         'https://script.hotjar.com',
-  //         'https://assets.calendly.com',
-  //       ],
-  //       'img-src': [
-  //         '\'self\'',
-  //         'data:',
-  //         'https://www.google-analytics.com',
-  //         'https://region1.google-analytics.com',
-  //         'https://www.googletagmanager.com',
-  //         'https://connect.facebook.net',
-  //         'https://static.hotjar.com',
-  //         'https://script.hotjar.com',
-  //         'https://assets.calendly.com',
-  //       ],
-  //       'connect-src': [
-  //         '\'self\'',
-  //         'ws://localhost:4000', // Allow WebSocket connections in development
-  //         'wss://localhost:4000', // Allow secure WebSocket connections in development
-  //         'https://www.google-analytics.com',
-  //         'https://region1.google-analytics.com',
-  //         'https://www.googletagmanager.com',
-  //         'https://connect.facebook.net',
-  //         'https://static.hotjar.com',
-  //         'https://script.hotjar.com',
-  //         'https://assets.calendly.com',
-  //       ],
-  //       'frame-src': [
-  //         '\'self\'',
-  //         'https://www.googletagmanager.com',
-  //         'https://connect.facebook.net',
-  //         'https://calendly.com',
-  //       ],
-  //       'style-src': [
-  //         '\'self\'',
-  //         '\'unsafe-inline\'',
-  //         'https://assets.calendly.com',
-  //       ],
-  //       'worker-src': ['\'self\'', 'blob:'], // Required for WebAssembly workers
-  //       'child-src': ['\'self\'', 'blob:'], // Required for WebAssembly workers
-  //     },
-  //     crossOriginEmbedderPolicy: 'require-corp',
-  //     crossOriginOpenerPolicy: 'same-origin',
-  //     crossOriginResourcePolicy: 'same-origin',
-  //     xContentTypeOptions: 'nosniff',
-  //     xFrameOptions: 'SAMEORIGIN',
-  //     xXSSProtection: '1; mode=block',
-  //     referrerPolicy: 'strict-origin-when-cross-origin',
-  //     permissionsPolicy: {
-  //       camera: ['self'],
-  //       microphone: ['self'],
-  //       geolocation: ['self'],
-  //       payment: ['self'],
-  //     },
-  //   },
-  //   // csrf: {
-  //   //   https: process.env.NODE_ENV === 'production',
-  //   // },
-  //   rateLimiter: {
-  //     tokensPerInterval: 150,
-  //     interval: 'hour',
-  //   },
-  //   // cors: {
-  //   //   origin: process.env.NUXT_SITE_URL || 'https://odysway.com',
-  //   //   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-  //   //   credentials: true,
-  //   // },
-  // },
   seo: {
     meta: {
       charset: 'utf-8',

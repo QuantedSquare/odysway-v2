@@ -357,7 +357,6 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
 })
 
 // ================== Stepper Management ==================
-// const stepComponents = reactive(new Map())
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
 const skipperMode = ref('normal')
@@ -366,46 +365,23 @@ if (route.query.type === 'custom' || route.query.type === 'balance') {
   skipperMode.value = 'summary'
 }
 
-// Initialize step history for proper back button handling
-// const stepHistory = ref([])
-
-// Initialize history when component mounts
-// onMounted(() => {
-//   // If we're starting at a specific step, add it to history
-//   if (currentStep.value > 0) {
-//     stepHistory.value = [0, ...Array.from({ length: currentStep.value - 1 }, (_, i) => i + 1)]
-//   }
-// })
-
-// // Update URL and history when step changes
-// const updateStepInURL = (newStep) => {
-//   const newQuery = { ...route.query, step: newStep.toString() }
-//   router.push({ query: newQuery })
-// }
-
 const nextStep = () => {
   const nextStepValue = currentStep.value === 3 && !showInsuranceStep.value ? 5 : currentStep.value + 1
 
-  // Add current step to history before moving to next
-  // if (!stepHistory.value.includes(currentStep.value)) {
-  //   stepHistory.value.push(currentStep.value)
-  // }
-
   currentStep.value = nextStepValue
   addSingleParam('step', nextStepValue.toString())
-  // updateStepInURL(nextStepValue)
+
+  // Check if we're going on calendly step to fire pixel:
+
+  if (nextStepValue === 1 && skipperMode.value === 'quick') {
+    console.log('fire calendly pixel', voyage.value.title)
+    trackPixel('trackCustom', 'ClicRdv', {
+      voyage: voyage.value.title,
+    })
+  }
 }
 
 const previousStep = () => {
-  // If we have history, go back to previous step
-  // if (stepHistory.value.length > 0) {
-  //   const previousStepValue = stepHistory.value.pop()
-  //   currentStep.value = previousStepValue
-  //   updateStepInURL(previousStepValue)
-  // }
-  // else {
-  console.log('currentStep.value in function', currentStep.value)
-  // No history available, go to previous step in sequence
   let previousStepValue
   if (currentStep.value === 5 && !showInsuranceStep.value) {
     previousStepValue = 3 // Go back to options
@@ -416,30 +392,8 @@ const previousStep = () => {
   currentStep.value = previousStepValue
   console.log('previousStepValue', previousStepValue)
   addSingleParam('step', previousStepValue.toString())
-  // updateStepInURL(previousStepValue)
-  // }
 }
 
-// Handle browser back button
-// onMounted(() => {
-//   const handlePopState = () => {
-//     const urlStep = route.query.step ? parseInt(route.query.step) : 0
-//     console.log('urlStep', urlStep)
-//     if (urlStep !== currentStep.value) {
-//       currentStep.value = urlStep
-//       console.log('currentStep.value in popstate', currentStep.value)
-//       // Update history to match URL
-//       stepHistory.value = stepHistory.value.filter(step => step < urlStep)
-//     }
-//   }
-
-//   window.addEventListener('popstate', handlePopState)
-
-//   // Cleanup on unmount
-//   onUnmounted(() => {
-//     window.removeEventListener('popstate', handlePopState)
-//   })
-// })
 watch(() => route.query.step, (newVal) => {
   console.log('route.query.step', newVal)
   if (newVal) {
@@ -477,13 +431,6 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
     insurancesPrice.value = null
   }
 }
-
-// // Watch for changes in voyage and dynamicDealValues to fetch insurance
-// watch([voyage, dynamicDealValues], async ([newVoyage, newDynamicDealValues]) => {
-//   if (newVoyage && newDynamicDealValues && newDynamicDealValues.nbAdults !== undefined && newDynamicDealValues.nbChildren !== undefined) {
-//     await fetchInsuranceQuote()
-//   }
-// }, { deep: true, immediate: true })
 
 // Specific watcher for nbAdults and nbChildren changes
 watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren], async ([newNbAdults, newNbChildren], [oldNbAdults, oldNbChildren]) => {

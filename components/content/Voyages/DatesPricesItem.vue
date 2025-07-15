@@ -272,7 +272,7 @@ const getExistingBookedDate = async (dateId) => {
 // Function to generate checkout link
 const generateCheckoutLink = async () => {
   if (!import.meta.client) {
-    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit`
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&voyage=${date.travel_slug}`
     return
   }
 
@@ -287,20 +287,20 @@ const generateCheckoutLink = async () => {
       const existingBookedId = await getExistingBookedDate(enrichedDate.value.id)
 
       if (existingBookedId) {
-        checkoutLink.value = `/checkout?booked_id=${existingBookedId}&type=${checkoutType}&step=1`
+        checkoutLink.value = `/checkout?booked_id=${existingBookedId}&type=${checkoutType}&step=1&voyage=${date.travel_slug}`
       }
       else {
-        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0`
+        checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${date.travel_slug}`
       }
     }
     else {
-      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0`
+      checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=${checkoutType}&step=0&voyage=${date.travel_slug}`
     }
   }
   catch (error) {
     console.error('Error generating checkout link:', error)
     // Fallback to basic link
-    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=0`
+    checkoutLink.value = `/checkout?date_id=${enrichedDate.value.id}&type=deposit&step=0&voyage=${date.travel_slug}`
   }
 }
 
