@@ -41,7 +41,7 @@
       </v-img>
     </div>
     <div class="searchfield-overlap">
-      <SearchField />
+      <!-- <SearchField /> -->
     </div>
   </div>
 </template>
