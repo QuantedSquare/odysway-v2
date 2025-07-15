@@ -51,5 +51,33 @@ export default defineEventHandler(async (event) => {
     }
   }))
 
-  return travelers
+  // Filter out travelers without email and delete their booked_dates entries
+  const validTravelers = []
+  const travelersToDelete = []
+
+  for (const traveler of travelers) {
+    if (traveler.email && traveler.email.trim() !== '') {
+      validTravelers.push(traveler)
+    }
+    else {
+      travelersToDelete.push(traveler.id)
+    }
+  }
+
+  // Delete booked_dates entries for travelers without email
+  if (travelersToDelete.length > 0) {
+    const { error: deleteError } = await supabase
+      .from('booked_dates')
+      .delete()
+      .in('id', travelersToDelete)
+
+    if (deleteError) {
+      console.error('Error deleting booked_dates entries:', deleteError)
+    }
+    else {
+      console.log(`Deleted ${travelersToDelete.length} booked_dates entries without valid email`)
+    }
+  }
+
+  return validTravelers
 })

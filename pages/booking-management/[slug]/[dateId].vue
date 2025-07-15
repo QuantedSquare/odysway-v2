@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row
       v-if="loading"
       justify="center"
@@ -492,7 +492,7 @@
                   style="display: flex; align-items: center; color: inherit;"
                 >
                   <span style="font-weight: 500;">
-                    {{ traveler.name?.trim() ? traveler.name : traveler.email }}
+                    {{ traveler.email || 'DEAL AC SUPPRIMÉ' }}
                   </span>
                   <span>
                     &nbsp;|&nbsp;Voyageurs: {{ traveler.nbTravelers }}
@@ -516,7 +516,9 @@
                     {{ mdiArrowRight }}
                   </v-icon>
                 </NuxtLink>
+                <v-spacer />
                 <v-btn
+                  v-if="traveler.email"
                   icon
                   color="primary"
                   size="x-small"
