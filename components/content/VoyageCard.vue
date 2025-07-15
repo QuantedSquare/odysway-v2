@@ -1,14 +1,14 @@
 <template>
   <v-card
+    v-if="voyageCardContentStatus === 'success'"
     elevation="0"
     hover
-    class="custom-card-width "
+    class="custom-card-width"
   >
     <NuxtLink
       :to="`/voyages/${voyage.slug}`"
       class="text-decoration-none position-relative text-white"
     >
-      <!-- #TODO : WARNING IN CONSOLE ABOUT SLOT FOR V IMG -->
       <v-img
         v-if="voyage.image?.src"
         :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
@@ -153,7 +153,7 @@ const props = defineProps({
 
 const img = useImage()
 
-const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
+const { data: voyageCardContent, status: voyageCardContentStatus } = useAsyncData('voyage-card-content', () =>
   queryCollection('voyage_card').first(),
 )
 
