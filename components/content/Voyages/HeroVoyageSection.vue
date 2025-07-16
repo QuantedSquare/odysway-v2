@@ -21,14 +21,13 @@
               ref="shareBtn"
               color="white"
               rounded="pill"
-              class="btn-shadow d-md-none"
-              :height="smAndUp ? 46 : 30"
+              class="btn-shadow d-md-none custom-copy-btn-height"
               @click="copyUrl"
             >
               <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-2">
                 <v-icon
                   :icon="mdiExportVariant"
-                  :size="smAndUp ? 18 : 14"
+                  class="custom-copy-btn-icon-height"
                   color="primary"
                 />
                 <span class="mt-md-1">Partager</span>
@@ -47,14 +46,13 @@
           ref="shareBtn"
           color="white"
           rounded="pill"
-          class="btn-shadow"
-          :height="smAndUp ? 46 : 36"
+          class="btn-shadow custom-copy-btn-height-2"
           @click="copyUrl"
         >
           <div class="text-primary text-body-2 font-weight-medium d-flex align-center ga-md-2 ga-1">
             <v-icon
               :icon="mdiExportVariant"
-              :size="smAndUp ? 20 : 16"
+              class="custom-copy-btn-icon-height-2"
               color="primary"
             />
             <span class="mt-1">Partager</span>
@@ -138,7 +136,6 @@
 
 <script setup>
 import { mdiExportVariant } from '@mdi/js'
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const config = useRuntimeConfig()
@@ -149,7 +146,6 @@ const props = defineProps({
   },
 })
 
-const { smAndUp } = useDisplay()
 const img = useImage()
 const route = useRoute()
 const snackbar = ref(false)
@@ -172,7 +168,7 @@ function copyUrl() {
 <style scoped>
 .media-btns-position{
   position: absolute;
-  bottom: 46px;
+  bottom: 38px;
   left: 42px;
 }
 .custom-height{
@@ -206,5 +202,36 @@ background-color: rgba(255, 255, 255, 0.3);
 .custom-btn:deep(.v-responsive__content){
 display: flex;
 align-items: center;
+}
+
+.custom-copy-btn-height{
+  height: 46px;
+}
+.custom-copy-btn-height-2{
+  height: 46px;
+}
+.custom-copy-btn-icon-height{
+  height: 18px;
+  width: 18px;
+}
+.custom-copy-btn-icon-height-2{
+  height: 20px;
+  width: 20px;
+}
+@media screen and (max-width: 600px) {
+  .custom-copy-btn-height{
+    height: 30px;
+  }
+  .custom-copy-btn-height-2{
+    height: 36px;
+  }
+  .custom-copy-btn-icon-height{
+    height: 14px;
+    width: 14px;
+  }
+  .custom-copy-btn-icon-height-2{
+    height: 16px;
+    width: 16px;
+  }
 }
 </style>

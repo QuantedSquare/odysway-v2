@@ -24,7 +24,13 @@ export default defineNuxtConfig({
     '~/components',
     { path: '~/components/content', pathPrefix: false },
   ],
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   app: {
     head: {
       titleTemplate: '%s • Odysway',

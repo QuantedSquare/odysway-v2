@@ -9,7 +9,7 @@
     </div>
 
     <div
-      v-if="status.status !== 'pending'"
+      v-if="status.status !== 'pending' && bookedPlaces > 0"
       class="d-flex align-center ga-2"
     >
       <v-icon

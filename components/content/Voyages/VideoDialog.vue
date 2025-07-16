@@ -5,16 +5,16 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
-        :height="mdAndUp ? 58 : 30"
+
         v-bind="activatorProps"
         rounded="pill"
         color="white"
-        class="btn-shadow"
+        class="btn-shadow custom-btn-height"
       >
         <v-icon
           :icon="mdiVideoOutline"
           color="primary"
-          :size="mdAndUp ? 22 : 14"
+          class="custom-icon-size"
         />
         <span class="d-none d-sm-block text-subtitle-2 text-primary font-weight-bold ml-2">Voir les vidéos</span>
         <span class="d-block d-sm-none text-caption text-md-subtitle-2 text-primary font-weight-bold ml-2">Vidéos</span>
@@ -64,9 +64,8 @@
           :key="video"
         >
           <iframe
-            class="align-self-center rounded-lg"
+            class="align-self-center rounded-lg custom-video-size"
             width="100%"
-            :height="$vuetify.display.smAndDown ? '400': '600'"
             :src="video"
             title="YouTube video player"
             frameborder="0"
@@ -82,7 +81,6 @@
 
 <script setup>
 import { mdiClose, mdiChevronLeft, mdiChevronRight, mdiVideoOutline } from '@mdi/js'
-import { useDisplay } from 'vuetify'
 
 defineProps({
   videosLink: {
@@ -90,7 +88,32 @@ defineProps({
   },
 })
 
-const { mdAndUp } = useDisplay()
-
 const dialog = ref(false)
 </script>
+
+<style scoped>
+.custom-btn-height{
+  height: 58px!important;
+}
+.custom-icon-size{
+  width: 22px;
+  height: 22px;
+}
+.custom-video-size{
+  height: 600px;
+}
+@media screen and (max-width: 960px) {
+  .custom-btn-height{
+    height: 30px!important;
+  }
+  .custom-icon-size{
+    width: 14px;
+    height: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .custom-video-size{
+    height: 400px;
+  }
+}
+</style>
