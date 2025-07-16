@@ -417,7 +417,7 @@ const recalculatTotalValues = async (dealId) => {
   const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
   const flightPrice = customFields.includedFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
   const extensionPrice = customFields.extensionPrice || 0
-  const insurancePrice = customFields.insurance ? customFields.insuranceCommissionPrice : 0
+  const insurancePrice = (customFields.insurance && customFields.insurance !== 'Aucune Assurance') ? customFields.insuranceCommissionPrice : 0
   const alreadyPaid = customFields.alreadyPaid || 0
 
   console.log('===========nbTravelers', nbTravelers, '========')
