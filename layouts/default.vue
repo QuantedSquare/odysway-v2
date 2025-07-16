@@ -50,7 +50,10 @@
             </template>
           </InfoContainer>
         </ColorContainer>
-        <ColorContainer color="white">
+        <ColorContainer
+          v-if="route.path !== '/avis-voyageurs'"
+          color="white"
+        >
           <CommonReviewContainer />
         </ColorContainer>
       </div>
