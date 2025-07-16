@@ -200,7 +200,7 @@ function getReviews() {
     .catch(error => console.error(error))
 }
 
-getVoyages()
-// getDatesVoyagesGroups()
+// getVoyages()
+getDatesVoyagesGroups()
 // getCategories()
 // getReviews()
