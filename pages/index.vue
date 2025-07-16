@@ -11,12 +11,12 @@
 </template>
 
 <script setup>
-const page = await queryCollection('content').path('/').first()
+const { data: page } = await useAsyncData('homepage', () => queryCollection('content').path('/').first())
 
-if (page) {
-  useHead(page.head || { htmlAttrs: {
+if (page.value) {
+  useHead(page.value.head || { htmlAttrs: {
     lang: 'fr',
   } }) // <-- Nuxt Schema.org
-  useSeoMeta(page.seo || {}) // <-- Nuxt Robots
+  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
 }
 </script>

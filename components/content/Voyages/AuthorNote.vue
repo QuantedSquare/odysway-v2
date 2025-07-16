@@ -35,14 +35,23 @@
       />
     </v-btn>
     <div
-      v-if="author"
+      v-if="author && authorStatus === 'success'"
       class="d-flex ga-3 mt-md-4 mt-2"
     >
       <v-avatar
         :image="author.image"
         size="80"
-        :alt="author.description"
-      />
+        :alt="author.description || 'Photo de l\'auteur'"
+      >
+        <v-img
+          :src="img(author.image, { format: 'webp', quality: 70, width: 320 })"
+          :lazy-src="img(author.image, { format: 'webp', quality: 10, width: 320 })"
+          :srcset="`${img(author.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(author.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
+          sizes="(max-width: 600px) 70px, 100px"
+          loading="lazy"
+          :alt="author.description || 'Photo de l\'auteur'"
+        />
+      </v-avatar>
       <div class="text-subtitle-2 d-flex flex-column justify-center">
         <span class="font-weight-bold mb-1">
           {{ authorNote.author }}
@@ -52,11 +61,20 @@
         </span>
       </div>
     </div>
+    <div v-else-if="authorStatus === 'pending'">
+      <v-skeleton-loader
+        type="avatar"
+        height="80"
+        width="80"
+        class="mt-md-4 mt-2"
+      />
+    </div>
   </div>
 </template>
 
 <script setup>
 import { mdiArrowRight } from '@mdi/js'
+import { useImage } from '#imports'
 
 const props = defineProps({
   authorNote: {
@@ -68,9 +86,9 @@ const props = defineProps({
     required: true,
   },
 })
-
+const img = useImage()
 const isHydrated = ref(false)
-const author = await queryCollection('team').where('name', '=', props.authorNote.author).first()
+const { data: author, status: authorStatus } = useAsyncData(`author-${props.authorNote.author}`, () => queryCollection('team').where('name', '=', props.authorNote.author).first())
 
 onMounted(() => {
   isHydrated.value = true

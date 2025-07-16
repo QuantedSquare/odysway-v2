@@ -36,15 +36,15 @@ export default defineNuxtConfig({
       titleTemplate: '%s • Odysway',
       link: [
         // Google Analytics
-        { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-        { rel: 'preconnect', href: 'https://www.google-analytics.com' },
-        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+        // { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+        // { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+        // { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+        // { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
         // Meta Pixel
-        { rel: 'preconnect', href: 'https://connect.facebook.net' },
-        { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
-        { rel: 'preconnect', href: 'https://www.facebook.com' },
-        { rel: 'dns-prefetch', href: 'https://www.facebook.com' },
+        // { rel: 'preconnect', href: 'https://connect.facebook.net' },
+        // { rel: 'dns-prefetch', href: 'https://connect.facebook.net' },
+        // { rel: 'preconnect', href: 'https://www.facebook.com' },
+        // { rel: 'dns-prefetch', href: 'https://www.facebook.com' },
       ],
       // script: [
       //   { src: 'https://embed.small.chat/TD5UA8M5KC05K7GGNJNM.js', async: true },
