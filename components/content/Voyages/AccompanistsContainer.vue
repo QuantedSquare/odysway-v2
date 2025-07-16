@@ -7,16 +7,15 @@
     <v-row>
       <v-col
         cols="12"
-        class="px-1 px-md-0"
       >
-        <h4 class="font-weight-bold text-h4 px-4 px-md-0 mb-4 mb-md-6">
+        <h4 class="font-weight-bold text-h4 my-1 my-md-4 pb-0 pb-md-4 px-2 px-md-0">
           {{ title }}
         </h4>
       </v-col>
       <v-col class="text-grey-darken-3 py-0 px-5 px-md-4">
         <div
           v-if="voyageRef.accompanistsDescription"
-          class="mb-4 text-body-2 text-sm-caption"
+          class="mb-4 text-body-2 text-sm-subtitle-2"
         >
           {{ voyageRef.accompanistsDescription }}
         </div>

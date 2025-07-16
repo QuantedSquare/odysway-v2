@@ -90,6 +90,7 @@ const toggleExpansion = () => {
   overflow: hidden;
   transition: max-height 0.5s ease;
   position: relative;
+  line-height: 1.5;
 }
 
 .text-content.truncated::after {

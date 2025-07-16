@@ -183,7 +183,7 @@
     </v-card-text>
   </v-card>
   <v-row
-    v-if="voyage.privatisationAvailable"
+    v-if="voyage.groupeAvailable"
     class="mt-4"
   >
     <v-col
