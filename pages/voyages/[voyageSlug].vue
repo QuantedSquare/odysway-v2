@@ -1,16 +1,16 @@
 <template>
-  <v-container
-    fluid
-    class="py-0 my-0 px-3 px-md-4"
-  >
-    <template v-if="voyage && page">
+  <div>
+    <BottomAppBar
+      :date-sections="page.dateSections"
+      :starting-price="voyage.pricing.startingPrice"
+      :no-group-travel="!voyage.groupeAvailable"
+      :slug="voyage.slug"
+    />
+    <v-container
+      fluid
+      class="py-0 my-0 px-3 px-md-4"
+    >
       <HeroVoyageSection :voyage="voyage" />
-      <BottomAppBar
-        :date-sections="page.dateSections"
-        :starting-price="voyage.pricing.startingPrice"
-        :no-group-travel="!voyage.groupeAvailable"
-        :slug="voyage.slug"
-      />
 
       <ChipsContainer
         :badge-section="voyage.badgeSection"
@@ -24,16 +24,16 @@
             :page="page"
           />
 
-          <HighlightsContainer
+          <LazyHighlightsContainer
             :experiences-block="voyage.experiencesBlock"
             :page="page.experiencesBlock"
           />
 
-          <ProgrammeContainer
+          <LazyProgrammeContainer
             :programme-block="voyage.programmeBlock"
           />
 
-          <AccompanistsContainer
+          <LazyAccompanistsContainer
             :voyage="voyage"
             :title="page.accompanistsTitle"
           />
@@ -50,14 +50,14 @@
         fluid
         class="px-0"
       >
-        <HousingSection
+        <LazyHousingSection
           :housing-block="voyage.housingBlock"
           :housing-title="page.housingTitle"
           :housing-type-title="page.housingTypeTitle"
           :housing-mood-title="page.housingMoodTitle"
         />
 
-        <DatesPricesContainer
+        <LazyDatesPricesContainer
           :date-sections="page.dateSections"
           :indiv-section="page.indivSection"
           :is-groupe-available="voyage.groupeAvailable"
@@ -66,22 +66,22 @@
           :early-bird-price="voyage.pricing.earlyBirdReduction || 0"
         />
 
-        <PriceDetailsContainer
+        <LazyPriceDetailsContainer
           :pricing-details-block="voyage.pricingDetailsBlock"
           :price-details-section="page.priceDetailsSection"
         />
-        <ReviewCarousel
+        <LazyReviewCarousel
           :reviews-section="page.reviewsSection"
         />
 
-        <FaqVoyagesContainer
+        <LazyFaqVoyagesContainer
           :background-image="voyage.image.src"
           :faq-block="voyage.faqBlock"
         />
 
-        <WhySection :why-section="page.whySection" />
+        <LazyWhySection :why-section="page.whySection" />
 
-        <HorizontalCarousel
+        <LazyHorizontalCarousel
           v-if="voyagePropositions"
           v-show="voyagePropositions.length > 0"
         >
@@ -96,19 +96,15 @@
               :key="voyageProp.id"
               class="pt-0"
             >
-              <VoyageCard
+              <LazyVoyageCard
                 :voyage="voyageProp"
               />
             </v-col>
           </template>
-        </HorizontalCarousel>
+        </LazyHorizontalCarousel>
       </v-container>
-    </template>
-    <v-skeleton-loader
-      v-else
-      type="card-avatar, article"
-    />
-  </v-container>
+    </v-container>
+  </div>
 </template>
 
 <script setup>

@@ -9,17 +9,15 @@
   >
     <template #activator="{ props: activatorProps }">
       <v-btn
-        :height="mdAndUp ? 58 : 30"
         v-bind="activatorProps"
         rounded="pill"
         color="white"
-        class="btn-shadow"
+        class="btn-shadow custom-btn-height"
       >
         <v-img
           :src="img('/icons/Camera.svg', { format: 'webp', quality: 70, width: 640 })"
           alt="Camera icon"
-          :width="mdAndUp ? 22 : 14"
-          :height="mdAndUp ? 22 : 14"
+          class="custom-image-size"
         />
 
         <span class="d-none d-sm-block text-caption text-sm-subtitle-2 text-primary font-weight-bold ml-2"> Voir les {{ photosList.length }} photos</span>
@@ -46,7 +44,6 @@
           <v-carousel
             class="custom-btn bg-primary"
             hide-delimiter-background
-            :hide-delimiters="smAndDown"
             :model-value="currentSlideIndex"
             @update:model-value="handleCarouselUpdate"
           >
@@ -70,7 +67,6 @@
 
 <script setup>
 import { mdiClose } from '@mdi/js'
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
 const img = useImage()
@@ -80,7 +76,6 @@ const { photosList } = defineProps({
     required: true,
   },
 })
-const { mdAndUp, smAndDown } = useDisplay()
 const dialog = ref(false)
 const currentSlideIndex = ref(0)
 
@@ -141,5 +136,27 @@ watch(dialog, (newValue) => {
 display: flex;
 align-items: center;
 background-color: rgba(var(--v-theme-primary));
+}
+
+.custom-btn-height{
+  height: 58px;
+}
+.custom-image-size{
+  width: 22px;
+  height: 22px;
+}
+@media screen and (max-width: 600px) {
+  .custom-btn:deep(.v-carousel__controls){
+  display:none!important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .custom-btn-height{
+    height: 30px;
+  }
+  .custom-image-size{
+    width: 14px;
+    height: 14px;
+  }
 }
 </style>

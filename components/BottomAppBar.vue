@@ -6,7 +6,7 @@
     <v-container class="px-3">
       <v-row
         no-gutters
-        class="px-0 "
+        class="px-0"
       >
         <v-col
           cols="5"
@@ -68,5 +68,6 @@ defineProps({
 <style scoped>
 .bottom-app-bar{
   z-index: 1020 !important;
+  width: 100% !important;
 }
 </style>
