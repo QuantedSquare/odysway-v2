@@ -126,7 +126,6 @@ const { data: voyagePropositions } = await useAsyncData(`voyages-propositions-${
 })
 
 onMounted(() => {
-  trackPixel('track', 'PageView')
   gtag('event', 'page_view', {
     eventCategory: 'Voyage',
     eventAction: 'View',
