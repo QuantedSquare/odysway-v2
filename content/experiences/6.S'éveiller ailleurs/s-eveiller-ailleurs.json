@@ -1,13 +1,12 @@
 {
-  "published": false,
   "title": "S'éveiller ailleurs",
   "badgeTitle": "S'éveiller",
-  "slug": "veiller-ailleurs",
+  "slug": "eveil-voyage",
   "discoveryTitle": "S'éveiller ailleurs",
   "seoTitle": "S'éveiller ailleurs",
   "image": {
-    "src": "/images/blogs/voyage-initiatique/hcaXdqRBTmSljo3cep6Q.jpg",
-    "alt": "Culture Indienne"
+    "src": "/images/voyages/retraite-yoga-sikkim-inde/yyTtPoY6SrGH79ncg807.jpg",
+    "alt": "Montagne au Sikkim"
   },
   "showOnHome": true
 }
