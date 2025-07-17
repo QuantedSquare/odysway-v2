@@ -130,7 +130,7 @@ onMounted(() => {
     eventCategory: 'Voyage',
     eventAction: 'View',
     eventLabel: voyage.value?.title })
-  trackPixel('trackCustom', 'VoyageView', { titre: voyage.value?.title })
+  trackPixel('trackCustom', 'VoyageView', { titre: route.params.voyageSlug })
 })
 
 watchEffect(() => {
