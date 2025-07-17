@@ -221,12 +221,7 @@ line-height: 30px;
     line-height: 20px;
   }
 }
-@media (max-width: 400px) {
-  .housing-text{
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
+
 .custom-btn-style:deep(.v-icon__svg){
   fill: white;
   max-height: 20px!important;

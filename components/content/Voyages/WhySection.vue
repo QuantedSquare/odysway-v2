@@ -25,6 +25,7 @@
               :height="40"
               :width="40"
               class="mr-3 text-primary"
+              alt="icon de la section Pourquoi"
             />
             <p class="font-weight-bold text-h5 text-center text-md-start">
               {{ item.text }}

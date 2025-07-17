@@ -44,7 +44,7 @@
         />
         <div
           v-if="!item"
-          class="text-caption text-md-subtitle-1"
+          class="text-subtitle-2 text-md-subtitle-1"
         >
           <MDCSlot
             unwrap="p"
@@ -97,7 +97,7 @@ if (item) {
   background-color: rgba(255, 255, 255, 0)!important;
 }
 .custom-font-size{
-  font-size: 11px!important;
+  font-size: 13px!important;
   font-weight: 300!important;
 }
 @media screen and (min-width: 600px) {

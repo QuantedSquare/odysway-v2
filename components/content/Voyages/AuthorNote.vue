@@ -5,7 +5,7 @@
     </h4>
     <div
       v-if="isHydrated && authorNote.text"
-      class="text-body-2 line-height-2 text-wrapper"
+      class="text-subtitle-2 text-md-body-2 line-height-2 text-wrapper"
     >
       <div
         ref="content"

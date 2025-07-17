@@ -19,14 +19,14 @@
           <v-list-item-title class="text-h5 font-weight-bold text-center text-sm-start no-white-space ">
             {{ name }}
           </v-list-item-title>
-          <v-list-item-subtitle class="no-white-space text-h6">
+          <v-list-item-subtitle class="no-white-space text-h5">
             {{ role }}
           </v-list-item-subtitle>
           <ExpandableText
             v-if="description"
             :clamp-lines="3"
             :line-height="30"
-            wrapper-class="mt-4 my-md-2 text-grey text-body-2 text-md-h5 font-weight-regular"
+            wrapper-class="mt-4 my-md-2 text-grey text-subtitle-2 text-md-body-2 font-weight-regular"
             button-class="text-h5 text-decoration-underline"
           >
             {{ description }}

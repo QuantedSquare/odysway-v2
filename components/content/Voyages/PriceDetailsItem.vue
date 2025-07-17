@@ -1,6 +1,6 @@
 <template>
   <v-row
-    class="text-caption text-md-body-1 my-md-2 "
+    class="text-subtitle-2 text-md-body-1 my-md-2 "
     align="center"
     no-gutters
     role="listitem"

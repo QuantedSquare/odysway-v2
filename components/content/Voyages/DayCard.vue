@@ -34,7 +34,7 @@
           </div>
         </v-card-title>
 
-        <v-card-text class="text-primary text-body-2 text-md-subtitle-1 font-weight-regular pt-2 line-height px-2 px-md-0 pb-0">
+        <v-card-text class="text-primary text-subtitle-2 text-md-body-2 font-weight-regular pt-2 line-height px-2 px-md-0 pb-0">
           <ExpandableText
             :clamp-lines="4"
             :line-height="30"

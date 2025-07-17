@@ -14,7 +14,7 @@
     </template>
     <p
       v-dompurify-html="parseBoldText(highlight)"
-      class="text-body-2 text-md-body-1 text-primary"
+      class="text-subtitle-2 font-weight-regular text-md-body-2 text-primary"
     />
   </v-list-item>
 </template>
