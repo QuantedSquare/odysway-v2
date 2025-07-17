@@ -8,6 +8,7 @@
 <script setup>
 const config = useRuntimeConfig()
 const route = useRoute()
+const { gtag, initialize } = useGtag()
 
 useHead({
   htmlAttrs: {
@@ -65,6 +66,18 @@ onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
   if (isConsent && config.public.environment !== 'production') {
     trackPixel('track', 'PageView')
+    initialize()
+    useTrackEvent('page_view')
+
+    gtag('event',
+      'page_view',
+      {
+        event_category: 'Newsletter',
+        event_action: 'subscribe',
+        event_label: `Newsletter Subscription`,
+        event_value: 1,
+        debug_mode: true,
+      })
   }
 
   const userUTMs = []
