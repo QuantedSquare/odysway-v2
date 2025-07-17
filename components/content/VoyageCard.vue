@@ -5,7 +5,7 @@
     class="bg-grey-light-3 rounded-xl custom-height-lazy"
   >
     <v-card
-      v-if="voyageCardContentStatus === 'success'"
+      v-if="voyageCardContent"
       elevation="0"
       hover
       class="custom-card-width"
@@ -159,7 +159,7 @@ const props = defineProps({
 
 const img = useImage()
 
-const { data: voyageCardContent, status: voyageCardContentStatus } = useAsyncData('voyage-card-content', () =>
+const { data: voyageCardContent } = await useAsyncData('voyage-card-content', () =>
   queryCollection('voyage_card').first(),
 )
 
