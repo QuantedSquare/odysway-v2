@@ -125,10 +125,10 @@ export default defineNuxtConfig({
     initCommands: [
       // Setup up consent mode
       ['consent', 'default', {
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        ad_storage: 'denied',
-        analytics_storage: 'denied',
+        ad_user_data: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
+        ad_personalization: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
+        ad_storage: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
+        analytics_storage: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
         wait_for_update: 500,
       }],
     ],
