@@ -102,7 +102,7 @@
               height="60"
               block
               rounded="md"
-              @click="goTo('#dates-container', { offset: -200 })"
+              :to="`/devis?slug=${voyage.slug}`"
             >
               <span class="text-body-2 font-weight-bold text-decoration-none">
                 Demander un devis
