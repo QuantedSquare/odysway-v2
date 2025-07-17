@@ -217,6 +217,9 @@ $border-radius-root: 10px !default;
 
 a {
   text-decoration: none; 
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  letter-spacing: 0.01em;
   
   &:hover {
     text-decoration: underline; 
@@ -225,6 +228,10 @@ a {
 
 body {
   font-family: 'Gordita', 'Inter', 'Segoe UI', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1;
 }
 html {
   scroll-behavior: smooth;

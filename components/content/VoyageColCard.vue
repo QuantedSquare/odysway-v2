@@ -15,13 +15,7 @@
   <v-col
     v-else-if="status === 'success' && voyage"
   >
-    <!-- <v-lazy
-      :options="{ threshold: 0.5 }"
-      transition="fade-transition"
-      class="bg-grey-light-2 rounded-xl custom-height-lazy"
-    > -->
     <VoyageCard :voyage="voyage" />
-    <!-- </v-lazy> -->
   </v-col>
 </template>
 
@@ -33,12 +27,16 @@ const { slug } = defineProps({
   },
 })
 
-const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, async () => {
-  const travel = await queryCollection('voyages')
+const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
+  return queryCollection('voyages')
     .select('slug', 'image', 'rating', 'comments', 'title', 'groupeAvailable', 'duration', 'pricing')
     .where('slug', '=', slug)
     .first()
-  return travel
+}, {
+  server: true,
+  client: true,
+  default: () => null,
+  transform: data => data || null,
 })
 </script>
 

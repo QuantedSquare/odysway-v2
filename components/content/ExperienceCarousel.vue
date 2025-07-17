@@ -27,7 +27,12 @@
 </template>
 
 <script setup>
-const { data: experiences, status: experiencesStatus } = useAsyncData('experiences-carousel', () => {
+const { data: experiences, status: experiencesStatus } = await useAsyncData('experiences-carousel-homepage', () => {
   return queryCollection('experiences').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome', 'published').where('published', '=', true).all()
+}, {
+  server: true,
+  client: true,
+  default: () => [],
+  transform: data => data || [],
 })
 </script>

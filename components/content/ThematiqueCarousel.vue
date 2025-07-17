@@ -21,7 +21,12 @@
 </template>
 
 <script setup>
-const { data: categories } = useAsyncData('categories', () => {
+const { data: categories } = useAsyncData('categories-thematique-carousel', () => {
   return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').all()
+}, {
+  server: true,
+  client: true,
+  default: () => [],
+  transform: data => data || [],
 })
 </script>
