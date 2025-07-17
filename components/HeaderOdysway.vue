@@ -9,6 +9,7 @@
     >
       <NuxtImg
         preload
+        as="image"
         format="webp"
         quality="100"
         :src="LogoOdyswayBleu"
@@ -77,6 +78,7 @@
     >
       <NuxtImg
         preload
+        as="image"
         format="webp"
         quality="100"
         :src="LogoOdyswayBleu"
