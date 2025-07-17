@@ -154,7 +154,7 @@ au cœur du voyage
     icon: /icons/user-friends.svg
     ---
     #text
-    Une agence proche de vous, vraiment
+    Une agence à taille humaine, proche de vous
     ::::
   
   #cta-button

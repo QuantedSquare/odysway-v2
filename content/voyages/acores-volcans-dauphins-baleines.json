@@ -9,38 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
-    {
-      "name": "trek-et-randonnee"
-    },
-    {
-      "name": "ecotourisme"
-    },
-    {
-      "name": "voyage-solidaire"
-    },
     {
       "name": "ou-partir-au-printemps"
     },
     {
-      "name": "ou-partir-en-été"
-    },
-    {
-      "name": "ou-partir-en-automne"
-    },
-    {
-      "name": "voyage-insolite"
-    },
-    {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "voyage-animalier"
+      "name": "ou-partir-en-ete"
     },
     {
       "name": "voyage-nature"
+    },
+    {
+      "name": "voyage-animalier"
     }
   ],
   "duration": 8,
