@@ -13,7 +13,7 @@
     />
   </v-col>
   <v-col
-    v-else-if="status === 'success' && voyage"
+    v-else-if="voyage"
   >
     <VoyageCard :voyage="voyage" />
   </v-col>
@@ -27,16 +27,11 @@ const { slug } = defineProps({
   },
 })
 
-const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, () => {
+const { data: voyage, status } = await useAsyncData(`voyage-${slug}-col-card`, () => {
   return queryCollection('voyages')
     .select('slug', 'image', 'rating', 'comments', 'title', 'groupeAvailable', 'duration', 'pricing')
     .where('slug', '=', slug)
     .first()
-}, {
-  server: true,
-  client: true,
-  default: () => null,
-  transform: data => data || null,
 })
 </script>
 

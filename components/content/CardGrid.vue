@@ -53,10 +53,5 @@ import { useDisplay } from 'vuetify'
 const { width } = useDisplay()
 const { data: categories } = await useAsyncData('categories-card-grid', () => {
   return queryCollection('categories').select('id', 'title', 'slug', 'discoveryTitle', 'image', 'showOnHome').where('showOnHome', '=', true).all()
-}, {
-  server: true,
-  client: true,
-  default: () => [],
-  transform: data => data || [],
 })
 </script>

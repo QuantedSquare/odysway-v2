@@ -14,9 +14,9 @@
         class="image-wrapper default-expanded"
       >
         <v-img
-          :src="imgComp(image.src, { format: 'webp', quality: 70, width: 640 })"
-          :lazy-src="imgComp(image.src, { format: 'webp', quality: 10, width: 640 })"
-          :srcset="`${imgComp(image.src, { format: 'webp', quality: 70, width: 640 })} 640w, ${imgComp(image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
+          :src="img(image.src, { format: 'webp', quality: 70, width: 640 })"
+          :lazy-src="img(image.src, { format: 'webp', quality: 10, width: 640 })"
+          :srcset="`${img(image.src, { format: 'webp', quality: 70, width: 640 })} 640w, ${img(image.src, { format: 'webp', quality: 70, width: 1024 })} 1024w`"
           :alt="`Image représentant ${title}`"
           sizes="(max-width: 600px) 266px, 228px"
           cover
@@ -39,7 +39,7 @@
 <script setup>
 import { useImage } from '#imports'
 
-const imgComp = useImage()
+const img = useImage()
 
 defineProps({
   image: {
