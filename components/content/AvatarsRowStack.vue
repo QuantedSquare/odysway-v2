@@ -1,10 +1,10 @@
 <template>
   <v-row
-    v-if="avatars && avatars.length > 0"
+    v-if="avatars && avatars.length > 0 && avatarsStatus === 'success'"
     justify="center"
   >
     <v-lazy
-      :min-height="mdAndUp ? 100 : 70"
+      class="avatar-min-height-lazy"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
     >
@@ -17,8 +17,8 @@
         <v-avatar
           v-for="(avatar, index) in avatars"
           :key="index"
-          :size="mdAndUp ? 100 : 70"
-          :class="`avatar-${index + 1}`"
+
+          :class="`avatar-${index + 1} avatar-size-responsive`"
           :style="{
             zIndex: hoveredIndex === index ? 1000 : avatars.length - index,
           }"
@@ -74,11 +74,9 @@
 
 <script setup>
 import { ref, watch, nextTick } from 'vue'
-import { useDisplay } from 'vuetify'
 import { useImage } from '#imports'
 
-const { mdAndUp } = useDisplay()
-const avatars = await queryCollection('team').all()
+const { data: avatars, status: avatarsStatus } = useAsyncData('avatars-team', () => queryCollection('team').all())
 const img = useImage()
 const hoveredIndex = ref(null)
 
@@ -224,5 +222,24 @@ watch(hoveredIndex, async (val) => {
   width: 100%;
   transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
   overflow: hidden;
+}
+
+.avatar-min-height-lazy {
+  min-height: 100px!important;
+}
+
+.avatar-size-responsive {
+  width: 100px!important;
+  height: 100px!important;
+}
+
+@media screen and (max-width: 960px) {
+  .avatar-min-height-lazy {
+    min-height: 70px!important;
+  }
+  .avatar-size-responsive {
+    width: 70px!important;
+    height: 70px!important;
+  }
 }
 </style>

@@ -4,45 +4,45 @@
     md="3"
     class="pr-1 pr-md-3"
   >
-    <!-- <v-lazy
-      :min-height="width <= 960 ? 300 : 415"
+    <v-lazy
+      class="image-wrapper-lazy bg-grey-light-2 rounded-lg"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
-    > -->
-    <NuxtLink
-      :to="`/${type}/${slug}`"
-      class="image-wrapper default-expanded"
     >
-      <v-img
-        v-if="image"
-        :src="imgComp(image, { format: 'webp', quality: 70, width: 1024 })"
-        :lazy-src="imgComp(image, { format: 'webp', quality: 10, width: 1024 })"
-        :srcset="`${imgComp(image, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(image, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
-        sizes="(max-width: 600px) 480px, 1024px"
-        loading="lazy"
-        width="100%"
-        :alt="`Illustration de la catégorie ${title}`"
-        cover
-      />
-
-      <div class="blur-overlay" />
-      <div class="image-overlay" />
-
-      <TransitionGroup
-        name="slide"
-        class="content-wrapper"
-        tag="div"
+      <NuxtLink
+        :to="`/${type}/${slug}`"
+        class="image-wrapper default-expanded"
       >
-        <h3
-          key="title"
-          class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2 mx-md-3"
-        >
-          {{ title }}
-        </h3>
+        <v-img
+          v-if="image"
+          :src="imgComp(image, { format: 'webp', quality: 70, width: 1024 })"
+          :lazy-src="imgComp(image, { format: 'webp', quality: 10, width: 1024 })"
+          :srcset="`${imgComp(image, { format: 'webp', quality: 70, width: 1024 })} 1024w, ${imgComp(image, { format: 'webp', quality: 70, width: 1536 })} 1536w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          loading="lazy"
+          width="100%"
+          :alt="`Illustration de la catégorie ${title}`"
+          cover
+        />
 
-      </TransitionGroup>
-    </NuxtLink>
-    <!-- </v-lazy> -->
+        <div class="blur-overlay" />
+        <div class="image-overlay" />
+
+        <TransitionGroup
+          name="slide"
+          class="content-wrapper"
+          tag="div"
+        >
+          <h3
+            key="title"
+            class="font-weight-bold text-h3 text-center text-shadow text-line-space mx-2 mx-md-3"
+          >
+            {{ title }}
+          </h3>
+
+        </TransitionGroup>
+      </NuxtLink>
+    </v-lazy>
   </v-col>
 </template>
 
@@ -76,6 +76,9 @@ defineProps({
 </script>
 
 <style scoped>
+.image-wrapper-lazy{
+  min-height: 415px!important;
+}
 .image-wrapper {
   position: relative;
   display: flex;
@@ -187,7 +190,9 @@ h3{
   .image-wrapper {
     height: 300px;
     width: 100%;
-    /* Optionally adjust aspect-ratio for mobile if needed */
+  }
+  .image-wrapper-lazy{
+    min-height: 300px!important;
   }
   h3 {
     font-size: 1.1rem !important;

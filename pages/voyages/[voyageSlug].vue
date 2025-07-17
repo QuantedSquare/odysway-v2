@@ -122,7 +122,7 @@ const { data: voyage } = await useAsyncData(`voyages-${route.params.voyageSlug}`
 )
 
 const { data: voyagePropositions } = await useAsyncData(`voyages-propositions-${route.params.voyageSlug}`, () => {
-  return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).where('experienceType', '=', voyage.value.experienceType).limit(10).all()
+  return queryCollection('voyages').where('published', '=', true).where('slug', '<>', route.params.voyageSlug).where('experienceType', '=', voyage.value.experienceType).limit(5).all()
 })
 
 onMounted(() => {

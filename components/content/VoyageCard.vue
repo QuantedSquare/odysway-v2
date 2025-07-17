@@ -1,144 +1,150 @@
 <template>
-  <v-card
-    v-if="voyageCardContentStatus === 'success'"
-    elevation="0"
-    hover
-    class="custom-card-width"
+  <v-lazy
+    :options="{ threshold: 0.5 }"
+    transition="fade-transition"
+    class="bg-grey-light-3 rounded-xl custom-height-lazy"
   >
-    <NuxtLink
-      :to="`/voyages/${voyage.slug}`"
-      class="text-decoration-none position-relative text-white"
+    <v-card
+      v-if="voyageCardContentStatus === 'success'"
+      elevation="0"
+      hover
+      class="custom-card-width"
     >
-      <v-img
-        v-if="voyage.image?.src"
-        :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
-        :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
-        :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
-        :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
-        sizes="(max-width: 600px) 480px, 1024px"
-        class="img-height"
-        cover
-        aspect-ratio="auto"
-      >
-        <div class="badge-position">
-          <RatingBadge
-            :rating="voyage.rating"
-            :comments="voyage.comments"
-            no-link
-          />
-        </div>
-      </v-img>
-    </NuxtLink>
-
-    <!--  BOTTOM TEXT -->
-    <div>
       <NuxtLink
         :to="`/voyages/${voyage.slug}`"
-        class="text-decoration-none"
+        class="text-decoration-none position-relative text-white"
       >
-        <v-card-text class="py-1">
-          <v-container class="px-0 px-md-2">
-            <v-row>
-              <v-col class="pt-lg-3 pt-0">
-                <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
-                  <v-tooltip
-                    v-if="voyage.title.length > 50"
-                    :id="`tooltip-${voyage.slug}`"
-                    activator="parent"
-                    role="tooltip"
-                    :aria-label="`Titre complet du voyage: ${voyage.title}`"
-                  >
-                    <template #activator="{ props }">
-                      <div
-                        :id="`tooltip-${voyage.slug}`"
-                        ref="titleRef"
-                        class="line-clamp-2"
-                        :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
-                        role="tooltip"
-                        :aria-label="`Titre complet du voyage: ${voyage.title}`"
-                        v-bind="props"
-                      >{{ voyage.title }}</div>
-                    </template>
-                    <span>
-                      {{ voyage.title }}
-                    </span>
-                  </v-tooltip>
-                  <div
-                    v-else
-                    ref="titleRef"
-                    class="line-clamp-2"
-                  >{{ voyage.title }}</div>
-                </div>
-              </v-col>
-            </v-row>
-            <v-row class="custom-row-height">
-              <v-col cols="4">
-                <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type || 'Type' }}</div>
-                <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
-              </v-col>
-              <v-divider
-                inset
-                vertical
-              />
-              <v-col
-                cols="4"
-                class="text-center"
-              >
-                <div class="text-h6 font-weight-bold text-primary">
-                  {{ voyage.duration }}
-                </div>
-                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.days || 'Jours' }}</div>
-              </v-col>
-              <v-divider
-                inset
-                vertical
-              />
-              <v-col
-                cols="4"
-                class="text-right"
-              >
-                <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.startingFrom || 'À partir de' }}</div>
-                <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice ?? voyage.startingPrice }}€</div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card-text>
-        <v-divider />
-        <v-card-actions
-          :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
+        <v-img
+          v-if="voyage.image?.src"
+          :src="img(voyage.image.src, { format: 'webp', quality: 90, height: 228, width: 640 })"
+          :lazy-src="img(voyage.image.src, { format: 'webp', quality: 10, height: 228, width: 640 })"
+          :alt="voyage.image.alt || `Paysage de destination pour le voyage ${voyage.title}`"
+          :srcset="`${img(voyage.image.src, { format: 'webp', quality: 90, width: 640 })} 640w, ${img(voyage.image.src, { format: 'webp', quality: 90, width: 1024 })} 1024w`"
+          sizes="(max-width: 600px) 480px, 1024px"
+          class="img-height"
+          cover
+          aspect-ratio="auto"
         >
-          <client-only>
-            <v-btn
-              v-if="voyage.groupeAvailable"
-              block
-              color="primary"
-              class="text-body-1"
-            >
-              <div class="mb-md-1 mr-2">
-                {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
-              </div>
-              <v-icon
-                size="24px"
-              >{{ mdiPlusCircle }}</v-icon>
-            </v-btn>
-            <v-btn
-              v-else
-              block
-              color="secondary"
-              class="text-decoration-none text-body-1"
-            >
-              <div class="mb-md-1 mr-2">
-                {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
-              </div>
-              <v-icon
-                size="24px"
-              >{{ mdiPlusCircle }}</v-icon>
-            </v-btn>
-          </client-only>
-        </v-card-actions>
+          <div class="badge-position">
+            <RatingBadge
+              :rating="voyage.rating"
+              :comments="voyage.comments"
+              no-link
+            />
+          </div>
+        </v-img>
       </NuxtLink>
-    </div>
-  </v-card>
+
+      <!--  BOTTOM TEXT -->
+      <div>
+        <NuxtLink
+          :to="`/voyages/${voyage.slug}`"
+          class="text-decoration-none"
+        >
+          <v-card-text class="py-1">
+            <v-container class="px-0 px-md-2">
+              <v-row>
+                <v-col class="pt-lg-3 pt-0">
+                  <div class="text-primary text-h5 text-sm-h4 font-weight-bold py-1 px-0 no-white-space title-container">
+                    <v-tooltip
+                      v-if="voyage.title.length > 50"
+                      :id="`tooltip-${voyage.slug}`"
+                      activator="parent"
+                      role="tooltip"
+                      :aria-label="`Titre complet du voyage: ${voyage.title}`"
+                    >
+                      <template #activator="{ props }">
+                        <div
+                          :id="`tooltip-${voyage.slug}`"
+                          ref="titleRef"
+                          class="line-clamp-2"
+                          :aria-describedby="voyage.title.length > 50 ? `tooltip-${voyage.slug}` : undefined"
+                          role="tooltip"
+                          :aria-label="`Titre complet du voyage: ${voyage.title}`"
+                          v-bind="props"
+                        >{{ voyage.title }}</div>
+                      </template>
+                      <span>
+                        {{ voyage.title }}
+                      </span>
+                    </v-tooltip>
+                    <div
+                      v-else
+                      ref="titleRef"
+                      class="line-clamp-2"
+                    >{{ voyage.title }}</div>
+                  </div>
+                </v-col>
+              </v-row>
+              <v-row class="custom-row-height">
+                <v-col cols="4">
+                  <div class="text-grey font-weight-bold text-body-2 text-md-subtitle-2">{{ voyageCardContent?.type || 'Type' }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.groupeAvailable ? (voyageCardContent?.groupType || 'Groupe') : (voyageCardContent?.soloType || 'Solo') }}</div>
+                </v-col>
+                <v-divider
+                  inset
+                  vertical
+                />
+                <v-col
+                  cols="4"
+                  class="text-center"
+                >
+                  <div class="text-h6 font-weight-bold text-primary">
+                    {{ voyage.duration }}
+                  </div>
+                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.days || 'Jours' }}</div>
+                </v-col>
+                <v-divider
+                  inset
+                  vertical
+                />
+                <v-col
+                  cols="4"
+                  class="text-right"
+                >
+                  <div class="text-grey text-body-2 text-md-subtitle-2 font-weight-bold">{{ voyageCardContent?.startingFrom || 'À partir de' }}</div>
+                  <div class="text-h6 font-weight-bold text-primary">{{ voyage.pricing?.startingPrice ?? voyage.startingPrice }}€</div>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-card-text>
+          <v-divider />
+          <v-card-actions
+            :class="voyage.groupeAvailable ? 'hover-primary' : 'hover-secondary'"
+          >
+            <client-only>
+              <v-btn
+                v-if="voyage.groupeAvailable"
+                block
+                color="primary"
+                class="text-body-1"
+              >
+                <div class="mb-md-1 mr-2">
+                  {{ voyageCardContent?.discoverDates || 'Découvrir les dates' }}
+                </div>
+                <v-icon
+                  size="24px"
+                >{{ mdiPlusCircle }}</v-icon>
+              </v-btn>
+              <v-btn
+                v-else
+                block
+                color="secondary"
+                class="text-decoration-none text-body-1"
+              >
+                <div class="mb-md-1 mr-2">
+                  {{ voyageCardContent?.requestQuote || 'Demander un devis' }}
+                </div>
+                <v-icon
+                  size="24px"
+                >{{ mdiPlusCircle }}</v-icon>
+              </v-btn>
+            </client-only>
+          </v-card-actions>
+        </NuxtLink>
+      </div>
+    </v-card>
+  </v-lazy>
 </template>
 
 <script setup>
@@ -247,5 +253,44 @@ const actionColor = computed(() => props.voyage.groupeAvailable ? '#f7f8f8' : '#
 }
 .custom-row-height{
   height: 77px!important;
+}
+
+.custom-height-lazy{
+  min-height: 455px!important;
+  min-width: 406px!important;
+  max-width: 600px!important;
+}
+@media screen and (max-width: 1280px) {
+  .custom-height-lazy{
+    min-height: 438px!important;
+    min-width: 406px!important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .custom-height-lazy{
+    min-width: 350px!important;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .custom-height-lazy{
+    min-height: 420px!important;
+    min-width: 350px!important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .custom-height-lazy{
+    min-height: 420px!important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .custom-height-lazy{
+    min-width: 280px!important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .custom-height-lazy{
+    min-height: 343px!important;
+    min-width: 280px!important;
+  }
 }
 </style>

@@ -3,7 +3,7 @@
     class="rounded-lg py-4 py-md-8 px-0 px-md-8 mt-4 mt-md-8 max-container-width"
     fluid
   >
-    <HorizontalCarousel
+    <LazyHorizontalCarousel
       v-if="experiencesStatus === 'success'"
       :show-buttons="experiences.length > 4"
     >
@@ -22,7 +22,7 @@
           type="experiences"
         />
       </template>
-    </HorizontalCarousel>
+    </LazyHorizontalCarousel>
   </v-container>
 </template>
 

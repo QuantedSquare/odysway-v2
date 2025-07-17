@@ -16,9 +16,9 @@
     v-else-if="status === 'success' && voyage"
   >
     <!-- <v-lazy
-      :min-height="228"
       :options="{ threshold: 0.5 }"
       transition="fade-transition"
+      class="bg-grey-light-2 rounded-xl custom-height-lazy"
     > -->
     <VoyageCard :voyage="voyage" />
     <!-- </v-lazy> -->
@@ -41,3 +41,44 @@ const { data: voyage, status } = await useAsyncData(`voyage-${slug}`, async () =
   return travel
 })
 </script>
+
+<style scoped>
+.custom-height-lazy{
+  min-height: 455px!important;
+  min-width: 406px!important;
+  max-width: 600px!important;
+}
+@media screen and (max-width: 1280px) {
+  .custom-height-lazy{
+    min-height: 438px!important;
+    min-width: 406px!important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .custom-height-lazy{
+    min-width: 350px!important;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .custom-height-lazy{
+    min-height: 420px!important;
+    min-width: 350px!important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .custom-height-lazy{
+    min-height: 420px!important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .custom-height-lazy{
+    min-width: 280px!important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .custom-height-lazy{
+    min-height: 343px!important;
+    min-width: 280px!important;
+  }
+}
+</style>
