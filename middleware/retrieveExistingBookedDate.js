@@ -7,7 +7,7 @@ export default defineNuxtRouteMiddleware(async (from, to) => {
       try {
         const isBookingExisting = await apiRequest(`/booking/booking-exists?booked_id=${booking_details.booked_id}`)
         if (!isBookingExisting) {
-          console.log('navigate to checkout', from.query.date_id)
+          // console.log('navigate to checkout', from.query.date_id)
           localStorage.removeItem(from.query.date_id)
           return navigateTo({
             path: '/checkout',

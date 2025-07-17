@@ -76,7 +76,7 @@ onMounted(() => {
   })
 
   if (userUTMs.length) {
-    console.log('userUTMs', userUTMs)
+    // console.log('userUTMs', userUTMs)
     localStorage.setItem('utmSource', userUTMs.join('&'))
   }
 })

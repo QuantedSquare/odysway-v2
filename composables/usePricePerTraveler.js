@@ -1,6 +1,6 @@
 export function usePricePerTraveler(dynamicDealValues, voyage) {
   const calculatePricePerPerson = (data, voyage) => {
-    console.log('data====', data, voyage)
+    // console.log('data====', data, voyage)
     const nbTravelers = data.nbAdults + data.nbChildren
     const { startingPrice, flightPrice = 0, extensionPrice = 0, promoChildren = 0, nbChildren = 0, promoTeen = 0, nbTeen = 0, earlybirdAvailable = 'Non', promoEarlybird = 0, lastMinuteAvailable = 'Non', promoLastMinute = 0, promoValue = 0 } = voyage
     let price = (startingPrice) * nbTravelers
@@ -38,7 +38,7 @@ export function usePricePerTraveler(dynamicDealValues, voyage) {
       return 0
     }
 
-    console.log('voyage====', voyage.value, dynamicDealValues.value)
+    // console.log('voyage====', voyage.value, dynamicDealValues.value)
     return calculatePricePerPerson(dynamicDealValues.value, voyage.value)
   })
 
