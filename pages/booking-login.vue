@@ -49,6 +49,13 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+useSeoMeta({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+  robots: 'noindex, follow',
+  canonical: 'https://www.odysway.com/',
+})
 const id = ref('')
 const password = ref('')
 const error = ref('')
