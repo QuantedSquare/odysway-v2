@@ -67,17 +67,14 @@ onMounted(() => {
   if (isConsent && config.public.environment !== 'production') {
     trackPixel('track', 'PageView')
     initialize()
-    useTrackEvent('page_view')
 
-    gtag('event',
-      'page_view',
-      {
-        event_category: 'Newsletter',
-        event_action: 'subscribe',
-        event_label: `Newsletter Subscription`,
-        event_value: 1,
-        debug_mode: true,
-      })
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+    })
+    useTrackEvent('page_view')
   }
 
   const userUTMs = []
