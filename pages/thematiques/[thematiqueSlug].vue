@@ -45,6 +45,7 @@ const { data: categorieContent, status: categorieContentStatus } = useAsyncData(
 }, {
   watch: [slug],
 })
+console.log('categorieContent', categorieContent.value)
 provide('page', categorieContent)
 // #TODO OPTI THE LE CALL EN FAISANT UN SELECT DES PROPS NECESSAIRES
 const { data: voyages } = await useAsyncData('voyages', async () => {
