@@ -7,6 +7,8 @@ ogImage:
     image: /images/concept/Vélo.jpg
 sitemap:
   lastmod: 2025-01-01
+  videos: []
+  images: []
 robots: index, nofollow
 seo:
   title: Le concept
@@ -37,6 +39,7 @@ schemaOrg:
 head:
   htmlAttrs:
     lang: fr
+  script: []
 ---
 
 ::generic-hero-section

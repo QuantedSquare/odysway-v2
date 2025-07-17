@@ -3,11 +3,15 @@
   "description": "Nos séjours en France",
   "contenuOnglet": [
     {
-      "title": "Top voyages 1",
+      "title": "Séjours Pyrénées",
       "linksList": [
         {
-          "title": "Voyages en Europe",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Vis ma vie de berger",
+          "slug": "sejour-berger-bearn"
+        },
+        {
+          "title": "Séjour randonnée l'hiver",
+          "slug": "sejour-hiver-pyrenees"
         },
         {
           "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
@@ -20,31 +24,6 @@
         {
           "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
           "slug": "bali-menjangan-sidemen"
-        },
-        {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
-        }
-      ]
-    },
-    {
-      "title": "Top voyages 2",
-      "linksList": [
-        {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
-        },
-        {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
-        },
-        {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
-        },
-        {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
         }
       ]
     }
