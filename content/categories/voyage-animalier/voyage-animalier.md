@@ -1,31 +1,37 @@
 ---
 title: "Voyage Animalier : découvrez les animaux sauvages autrement"
-description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie."
+description: S'offrir un voyage animalier en immersion, c’est la promesse de
+  vivre des moments uniques au contact d’animaux sauvages au grand cœur et des
+  souvenirs à vie.
 seo:
   title: "Voyage Animalier : à la découverte des animaux sauvages"
-  description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur, et des souvenirs à vie !"
+  description: S'offrir un voyage animalier en immersion, c’est la promesse de
+    vivre des moments uniques au contact d’animaux sauvages au grand cœur, et
+    des souvenirs à vie !
 navigation:
   title: "Voyage Animalier : découvrez les animaux sauvages autrement"
-  description: "S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie."
-author: "Linda Tran"
+  description: S'offrir un voyage animalier en immersion, c’est la promesse de
+    vivre des moments uniques au contact d’animaux sauvages au grand cœur et des
+    souvenirs à vie.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
 published: false
-publishedAt: "2020-11-24 12:24:00+00:00"
+publishedAt: 2020-11-24 12:24:00+00:00
 tags: ""
-categories: "Culture et decouverte"
+categories: Culture et decouverte
 displayedImg: ""
-blogType: "Actu"
-badgeColor: "secondary"
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyage Animalier : découvrez les animaux sauvages autrement
@@ -44,39 +50,39 @@ Vous en apprendrez  plus sur eux, mais aussi sur vous-même.  Les animaux ont 
 
 Vous vivrez de magnifiques expériences où vous serez entouré de professionnels, de bénévoles et de communautés locales ; tous au service de la nature et des animaux.
 
-_“On peut juger de la grandeur d'une nation par la façon dont les animaux y sont traités”_ - Gandhi
+*“On peut juger de la grandeur d'une nation par la façon dont les animaux y sont traités”* - Gandhi
 
 Voici les meilleures expériences de **voyages animaliers** proposées par Odysway :
 
-## **1\. Un voyage animalier pour protéger les plus faibles**
+## **1. Un voyage animalier pour protéger les plus faibles**
 
-::image-container
----
-image-src: "/images/blogs/voyage-animalier/DUFDH0E3QK6umvYGhURK.jpg"
-alt: singe-costa-rica.jpeg
----
-::
+  :::image-container
+  ---
+  alt: singe-costa-rica.jpeg
+  image-src: /images/blogs/voyage-animalier/DUFDH0E3QK6umvYGhURK.jpg
+  ---
+  :::
 
 Que diriez-vous d’un **voyage animalier** au cœur de la perle de l’Océan Indien, le Sri Lanka. Cette île, qui a littéralement la forme d’une perle, est un vrai joyaux de faune, de flore et de culture. Océan, montagnes, plantations de thé, singes, tortues de mer, éléphants, oiseaux aux couleurs chatoyantes, le Sri Lanka est un petit paradis sur terre.
 
-Durant ce **séjour animalier** vous aurez l’opportunité de partir à la rencontre des populations locales de l'île, mais aussi de [**vivre en immersion dans un centre de protection pour tortues.**](https://odysway.com/voyages/protection-animaux-sri-lanka?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) Vous vous déplacerez en train à travers les plantations de thé entre Ella et Hatton, et pourrez admirer des paysages à couper le souffle.
+Durant ce **séjour animalier** vous aurez l’opportunité de partir à la rencontre des populations locales de l'île, mais aussi de [**vivre en immersion dans un centre de protection pour tortues.**](https://odysway.com/voyages/protection-animaux-sri-lanka?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyageanimalier) Vous vous déplacerez en train à travers les plantations de thé entre Ella et Hatton, et pourrez admirer des paysages à couper le souffle.
 
 Un **séjour animalier immersif** où vous serez hébergé dans le sanctuaire pour éléphants de Kegalle. Là-bas, vous contribuerez à la sauvegarde de ces géants au cœur d’or, maltraités par l’industrie touristique.
 
 Ce **voyage** au Sri Lanka est un voyage solidaire, qui a du sens, et qui vous promet des moments inoubliables au contact d’animaux sauvages.
 
-## 2\. Communiquer avec les grands fauves, un séjour animalier inoubliable
+## 2. Communiquer avec les grands fauves, un séjour animalier inoubliable
 
-::image-container
----
-image-src: "/images/blogs/voyage-animalier/8DEMkSS9Qgu9xt4yZsLx.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-animalier/8DEMkSS9Qgu9xt4yZsLx.jpg
+  ---
+  :::
 
 L’Afrique du Sud, la “rainbow nation” aux paysages et cultures si variés, possédant une grande variété d'écosystèmes ainsi qu’une faune et une flore très diversifiées, va vous enchanter durant ce **voyage animalier** hors du commun !
 
-Durant 15 jours vous aurez la possibilité de [**vivre quotidiennement en immersion avec des félins**](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier), et d’être hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
+Durant 15 jours vous aurez la possibilité de [**vivre quotidiennement en immersion avec des félins**](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyageanimalier), et d’être hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
 
 Vous participerez à un projet unique de conservation, à de petits travaux agricoles, apprendrez à communiquer avec les félins et à créer des liens forts avec eux.
 
@@ -84,18 +90,18 @@ Vous aurez également la chance de découvrir le Cap, ses magnifiques plages et 
 
 Un **séjour animalier** que vous n’oublierez pas de sitôt !
 
-## 3\. Murmurer à l'oreille des chevaux, un séjour animalier basé sur la confiance
+## 3. Murmurer à l'oreille des chevaux, un séjour animalier basé sur la confiance
 
-::image-container
----
-image-src: "/images/blogs/voyage-animalier/QX6cx1G0Tye89HysxDov.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-animalier/QX6cx1G0Tye89HysxDov.jpg
+  ---
+  :::
 
 Connaissez-vous l'équicie ? C’est une discipline qui permet d’établir une connexion émotionnelle avec les chevaux.
 
-Partez dans le Cotentin à la rencontre de Rémi, équicien diplômé et de ses chevaux. Vous pourrez y renforcer votre motivation ainsi que votre confiance en vous et [**vivre en immersion dans une magnifique ferme équestre.**](https://odysway.com/voyages/equicie-cheval-cotentin-normandie?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier)
+Partez dans le Cotentin à la rencontre de Rémi, équicien diplômé et de ses chevaux. Vous pourrez y renforcer votre motivation ainsi que votre confiance en vous et [**vivre en immersion dans une magnifique ferme équestre.**](https://odysway.com/voyages/equicie-cheval-cotentin-normandie?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyageanimalier)
 
 À travers l'équicie, Rémi, ce passionné de chevaux et de rencontres humaines, sera là pour vous guider dans cette discipline passionnante.
 
@@ -105,14 +111,14 @@ L’hébergement dans la ferme de Rémi est en pension complète où vous pourre
 
 Ce **voyage animalier** est l’opportunité d'expérimenter une approche innovante de la communication animale et de vivre une expérience unique dans un cadre magnifique.
 
-## 4\. Odysway met les animaux à l'honneur
+## 4. Odysway met les animaux à l'honneur
 
-::image-container
----
-image-src: "/images/blogs/voyage-animalier/rUuF9gYfTB6Z0iAzrd6n.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-animalier/rUuF9gYfTB6Z0iAzrd6n.jpg
+  ---
+  :::
 
 Plus qu’un simple séjour à la ferme, Odysway souhaite mettre les animaux à l’honneur.
 
@@ -122,51 +128,50 @@ Vous passerez des journées entières avec eux, apprendrez à prendre soin d’e
 
 Si vous rêvez de faire un **voyage animalier** solidaire et éco-responsable, Odysway vous propose des **séjours en immersion** tels que : 
 
-*   [**randonner au Pérou avec des lamas**](https://odysway.com/voyages/trek-lamas-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) jusqu'au Machu Picchu ;
-*   [**découvrir l'art de la photo animalière dans le Jura**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) ;
-*   [**faire connaissance avec les chiens de traîneau**](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyageanimalier) grâce à une aventure au cœur de la Laponie finlandaise**.**
-::
-::color-container
----
-color: soft-blush
----
-  ::info-container
-  #title
-  Découvrir les voyages coups de coeur
-  #description
-  Partez à la découverte de destinations qui nous ont conquis.
-  #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+- [**randonner au Pérou avec des lamas**](https://odysway.com/voyages/trek-lamas-perou?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyageanimalier) jusqu'au Machu Picchu ;
+- [**découvrir l'art de la photo animalière dans le Jura**](https://odysway.com/voyages/decouvrez-photo-animaliere-jura?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyageanimalier) ;
+- [**faire connaissance avec les chiens de traîneau**](https://odysway.com/voyages/voyage-hiver-laponie-finlande?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyageanimalier) grâce à une aventure au cœur de la Laponie finlandaise\*\*.\*\*
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="soft-blush"}
+  :::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  
+  #bottom
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
+::
+
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

@@ -1,13 +1,13 @@
 {
   "published": true,
   "title": "Partager le quotidien",
-  "badgeTitle": "Partager...",
-  "slug": "partager-le-quotidien",
+  "badgeTitle": "Partager le quotidien",
+  "slug": "partager-quotidien",
   "discoveryTitle": "Partager le quotidien",
   "seoTitle": "Partager le quotidien",
   "image": {
     "src": "/images/voyages/sejour-berger-bearn/lGYd3MVTRoaKoyEEPsjk.jpg",
-    "alt": "Culture Indienne"
+    "alt": "Berger dans les montagnes pyrénéenes"
   },
   "showOnHome": true
 }

@@ -1,13 +1,13 @@
 {
   "published": true,
   "title": "Plonger dans la culture",
-  "badgeTitle": "Plong dans la culture",
-  "slug": "plongee-culture",
+  "badgeTitle": "Plonger dans la culture",
+  "slug": "immersion-culture",
   "discoveryTitle": "Plonger dans la culture",
   "seoTitle": "voyages culturels",
   "image": {
     "src": "/images/voyages/voyage-chamanique-perou/IXFb7uTQ6OIjc1dOnkOn.jpg",
-    "alt": "Culture Indienne"
+    "alt": "Femme péruvienne proche du lac titicaca au Pérou"
   },
   "showOnHome": true
 }
