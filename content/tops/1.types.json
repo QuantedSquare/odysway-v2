@@ -1,0 +1,36 @@
+{
+  "title": "Types de voyages",
+  "description": "Les différents types de voyages Odysway",
+  "contenuOnglet": [
+    {
+      "title": "Voyages en petits groupes & privatifs",
+      "linksList": [
+        {
+          "title": "Départs en petits groupes",
+          "slug": "prochains-departs"
+        },
+        {
+          "title": "Voyages privatifs",
+          "slug": "search?travelType=Voyage+individuel"
+        },
+        {
+          "title": "Voyages sur-mesure",
+          "slug": "sur-mesure"
+        }
+      ]
+    },
+    {
+      "title": "Voyages de groupes",
+      "linksList": [
+        {
+          "title": "Groupes scolaires et associations",
+          "slug": "https://tally.so/r/n9QLo5"
+        },
+        {
+          "title": "Séminaires et team-buildings pour entreprises",
+          "slug": "https://tribus-seminaires.com/"
+        }
+      ]
+    }
+  ]
+}
