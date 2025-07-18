@@ -84,7 +84,6 @@
 const currentTab = ref(0)
 
 const tops = await queryCollection('tops').all()
-console.log(tops)
 </script>
 
 <style scoped>

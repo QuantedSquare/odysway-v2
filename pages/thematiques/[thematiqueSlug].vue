@@ -52,10 +52,14 @@ const { data: voyages } = await useAsyncData('voyages', async () => {
   const travelList = await queryCollection('voyages')
     .where('published', '=', true)
     .all()
-  return travelList.filter(v => v.categories.some(c => c.name.includes(slug.value)))
+  console.log('slug', slug.value)
+  console.log('travelList', travelList.filter(v => v.categories?.some(c => c.name?.includes(slug.value))))
+  return travelList.filter(v => v.categories?.some(c => c.name?.includes(slug.value)))
 }, {
   watch: [slug],
+  immediate: true,
 })
+console.log('voyages', voyages.value)
 
 useHead({
   htmlAttrs: {
