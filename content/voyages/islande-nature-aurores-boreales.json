@@ -21,7 +21,12 @@
     {
       "name": "au-printemps"
     },
-    {}
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "en-automne"
+    }
   ],
   "duration": 8,
   "nights": 7,

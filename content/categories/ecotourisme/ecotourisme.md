@@ -16,7 +16,7 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2020-11-26 15:42:00+00:00
 tags: ""
 categories: Culture et decouverte
@@ -24,6 +24,14 @@ displayedImg: ""
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
@@ -77,14 +85,12 @@ De retour au camp de base, profitez de la fin de votre séjour en vous relaxant 
 
 ## 2. Les grands espaces : Yukon et écotourisme
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/ecotourisme/xU7c6gnES0OtTeOl7DdA.jpg"
-alt: Yukon 1.jpg
-----------------
-::
+  :::image-container
+  ---
+  alt: Yukon 1.jpg
+  image-src: /images/blogs/ecotourisme/xU7c6gnES0OtTeOl7DdA.jpg
+  ---
+  :::
 
 Le Grand Nord canadien est une terre de rêve pour les voyageurs avides d'**écotourisme**, de longues marches, de nature immaculée et de rencontres avec des peuples qui ont su préserver leurs traditions.
 
@@ -102,15 +108,12 @@ Vivez en pleine immensité grâce à ce **séjour** "into the wild" à travers l
 
 ## 3. Écotourisme dans les Pyrénées
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/ecotourisme/BOBHYOuNSe2UQpZ9BQRQ.jpg"
-alt: ouzbekistan-photo.jpeg
----------------------------
-
-\::
+  :::image-container
+  ---
+  alt: ouzbekistan-photo.jpeg
+  image-src: /images/blogs/ecotourisme/BOBHYOuNSe2UQpZ9BQRQ.jpg
+  ---
+  :::
 
 La France regorge aussi de magnifiques écosystèmes, de sentiers de randonnées et de possibilités infinies pour les amoureux de la faune et de la flore.
 
@@ -124,12 +127,12 @@ Un **tourisme vert et durable** dans une des plus belles régions de France !
 
 ## 4. Dites oui à l'écotourisme avec Odysway
 
-::image-container
----
-alt: Odysway et l'écotourisme
-image-src: /images/blogs/ecotourisme/qEh9liIOR32xAKumOtQI.jpg
----
-::
+  :::image-container
+  ---
+  alt: Odysway et l'écotourisme
+  image-src: /images/blogs/ecotourisme/qEh9liIOR32xAKumOtQI.jpg
+  ---
+  :::
 
 Chez Odysway, nous pensons qu’**écotourisme** rime entièrement avec **voyage responsable** respectueux de l’environnement. Nous avons à cœur de le rendre accessible au plus grand nombre de voyageurs.
 
@@ -143,7 +146,7 @@ Que vous souhaitiez :
 - découvrir les joies d’une [**digital detox au cœur du rif marocain**](https://odysway.com/voyages/digital-detox-maroc?utm_source=SEO\&utm_medium=thematique\&utm_campaign=ecotourisme) ; [**partager le quotidien d’un berger dans les Pyrénées**](https://odysway.com/voyages/sejour-berger-bearn?utm_source=SEO\&utm_medium=thematique\&utm_campaign=ecotourisme). 
 
 Nous sommes là pour vous guider !
-\::
+::
 
 ::color-container{color="soft-blush"}
   :::info-container

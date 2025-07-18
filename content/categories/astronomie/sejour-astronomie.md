@@ -16,7 +16,7 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2020-11-24 11:09:00+00:00
 tags: ""
 categories: Culture et decouverte
@@ -24,6 +24,14 @@ displayedImg: ""
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section

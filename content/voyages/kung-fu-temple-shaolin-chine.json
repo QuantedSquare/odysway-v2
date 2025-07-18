@@ -9,29 +9,26 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
+    {
+      "name": "sport"
+    },
+    {
+      "name": "nature"
+    },
     {
       "name": "voyage-insolite"
     },
     {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "ou-partir-en-automne"
-    },
-    {
-      "name": "ou-partir-en-été"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-sportif"
-    },
-    {
       "name": "voyage-arts-martiaux"
+    },
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "au-printemps"
     }
   ],
   "duration": 11,

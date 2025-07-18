@@ -1,5 +1,5 @@
 ---
-title: "Voyage Animalier : découvrez les animaux sauvages autrement"
+title: Séjour sans avion
 description: S'offrir un voyage animalier en immersion, c’est la promesse de
   vivre des moments uniques au contact d’animaux sauvages au grand cœur et des
   souvenirs à vie.
@@ -16,7 +16,7 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: true
+published: false
 publishedAt: 2020-11-24 12:24:00+00:00
 tags: ""
 categories: Culture et decouverte
@@ -42,7 +42,7 @@ introduction-color: grey
 title-color: primary
 ---
 #title
-Voyage Animalier : découvrez les animaux sauvages autrement
+[Avion : Ceci est une copie d'une autre catégorie ayant pour but d'être modifié]{style="color: red;"}
 
 #introduction
 S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie.
