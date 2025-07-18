@@ -1,33 +1,41 @@
 ---
-title: "Le Maroc"
-description: "Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger."
+title: Le Maroc
+description: Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de
+  l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux
+  sont les Marocains qui parlent notre langue, ce qui permet de pouvoir
+  facilement échanger.
 seo:
-  title: "Le Maroc"
-  description: |
+  title: Le Maroc
+  description: >
     Pourquoi voyager au Maroc ?
-    Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France...
+
+    Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien
+    protectorat de la France...
 navigation:
-  title: "Le Maroc"
-  description: "Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France, nombreux sont les Marocains qui parlent notre langue, ce qui permet de pouvoir facilement échanger."
-author: "Linda Tran"
+  title: Le Maroc
+  description: Pourquoi voyager au Maroc ? Le Maroc se situe aux portes de
+    l’Afrique et à deux pas de l’Europe. Ancien protectorat de la France,
+    nombreux sont les Marocains qui parlent notre langue, ce qui permet de
+    pouvoir facilement échanger.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
 published: false
-publishedAt: "2020-06-29 09:16:00+00:00"
+publishedAt: 2020-06-29 09:16:00+00:00
 tags: ""
 categories: ""
-displayedImg: ""
-blogType: "Actu"
-badgeColor: "secondary"
+displayedImg: /images/blogs/maroc/mzruCCsZTWGdYT5SVwAp.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Le Maroc
@@ -44,12 +52,12 @@ Le Maroc se situe aux portes de l’Afrique et à deux pas de l’Europe. Ancien
 
 Les influences berbères, arabes et européennes se retrouvent dans la culture locale et offrent une importante richesse culturelle. Les villes sont d’ailleurs les témoins de cette diversité. Se promener dans les dédales des médinas de Fès, Tanger, Marrakech, Casablanca ou encore Essaouira est un véritable labyrinthe. Les palais, jardins et riads sont dissimulés derrière les portes. Uniques sont les moments où ils dévoilent leurs secrets bien gardés. Vivez à 100 % la flânerie dans les souks. Sans plan pour vous repérer, ce sont les odeurs d’épices et du thé à la menthe qui vous guideront. 
 
-::image-container
----
-image-src: "/images/blogs/maroc/mzruCCsZTWGdYT5SVwAp.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: image maroc
+  image-src: /images/blogs/maroc/mzruCCsZTWGdYT5SVwAp.jpg
+  ---
+  :::
 
 Si les villes recèlent de trésors architecturaux dans une ambiance Mille et Une Nuits, le Maroc dévoile aussi une nature préservée qui fera le bonheur des randonneurs. Les paysages sont à couper le souffle entre les côtes méditerranéenne et atlantique, les déserts parsemés d’Oasis et les montagnes aux massifs enneigés. Les grands espaces du Maroc sont idéaux pour se reconnecter à soi, pratiquer la marche méditative et s’immerger dans une nature grandiose.
 
@@ -95,17 +103,17 @@ Pour les femmes, munissez-vous d’un foulard pour couvrir vos épaules lors de 
 
 Pensez à prendre les médicaments essentiels :
 
-*   une boîte d’aspirine ;
-*   du smecta et de l’immodium ;
-*   de la crème solaire et de la Biafine ;
-*   une lotion anti-moustique et une crème pour apaiser les piqûres d’insectes.
+- une boîte d’aspirine ;
+- du smecta et de l’immodium ;
+- de la crème solaire et de la Biafine ;
+- une lotion anti-moustique et une crème pour apaiser les piqûres d’insectes.
 
 ## Est-il dangereux de voyager au Maroc ?
 
-*   Comme dans tous les pays du monde, faites attention aux pickpockets dans les villes et les sites touristiques. Restez vigilant et gardez sur vous le minimum nécessaire.
-*   Respectez les us et coutumes locaux pour ne pas provoquer de mécontentements.
-*   Les hommes peuvent interpeller les femmes dans les lieux publics et sont parfois insistants.
-*   Dans la région du Rif où le cannabis est produit, ne vous éloignez pas de la route principale et soyez prudent.
+- Comme dans tous les pays du monde, faites attention aux pickpockets dans les villes et les sites touristiques. Restez vigilant et gardez sur vous le minimum nécessaire.
+- Respectez les us et coutumes locaux pour ne pas provoquer de mécontentements.
+- Les hommes peuvent interpeller les femmes dans les lieux publics et sont parfois insistants.
+- Dans la région du Rif où le cannabis est produit, ne vous éloignez pas de la route principale et soyez prudent.
 
 ## Comment se déplacer pendant votre voyage au Maroc ?
 
@@ -113,7 +121,7 @@ Pensez à prendre les médicaments essentiels :
 
 Les lignes de bus sont développées sur l’ensemble du territoire. Les tarifs pratiqués sont raisonnables. Les bus étant contrôlés, pensez à demander votre justificatif de transport.
 
-Il existe trois importantes sociétés de bus : _CTM__, Supratours_ et _SATAS_. Concernant les plus petites compagnies, le confort sera moindre et la sécurité aussi.
+Il existe trois importantes sociétés de bus : *CTM*\_, Supratours\_ et *SATAS*. Concernant les plus petites compagnies, le confort sera moindre et la sécurité aussi.
 
 ### Se déplacer en stop
 
@@ -137,7 +145,7 @@ La conduite est réputée dangereuse. Même si un nouveau code de la route plus 
 
 ## Le coût de la vie au Maroc, quel budget prévoir ?
 
-La monnaie marocaine est le **dirham****.** Des bureaux de change et des banques se trouvent facilement dans les grandes villes. Le taux pratiqué à l’aéroport n’est pas avantageux donc changez seulement une petite somme à votre arrivée. Changer son argent est plus intéressant que de le retirer à un distributeur ou de payer directement en carte, car les commissions sont excessives.
+La monnaie marocaine est le **dirham**\*\*.\*\* Des bureaux de change et des banques se trouvent facilement dans les grandes villes. Le taux pratiqué à l’aéroport n’est pas avantageux donc changez seulement une petite somme à votre arrivée. Changer son argent est plus intéressant que de le retirer à un distributeur ou de payer directement en carte, car les commissions sont excessives.
 
 ## Comment gérer son argent au Maroc ?
 
@@ -153,12 +161,12 @@ La fourchette de prix pour une gamme moyenne se situe entre 25 et 45 euros pour
 
 Située dans les terres, au sud, Marrakech abrite la médina la plus grande du Maghreb. La vivante place Jamaa El-Fna est le décor de théâtre de rue ou « halqa ». Les charmeurs de serpents s’en donnent à cœur joie. L’effervescence y est presque étourdissante. Tout comme les souks, non loin de là, dont vous ne ressortirez certainement pas sans un souvenir artisanal. Marrakech éblouit aussi avec ses palais, medersa et minarets. Les jardins exotiques comme le Jardin Majorelle permettent de faire des pauses dans des écrins de verdure.
 
-### ::image-container
----
-image-src: "/images/blogs/maroc/u9IKVsjTvSNkQJHr1iLg.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/maroc/u9IKVsjTvSNkQJHr1iLg.jpg
+  ---
+  :::
 
 ### Les montagnes de l’Atlas
 
@@ -166,19 +174,18 @@ alt: undefined
 
 ### Taroudant
 
-Au sud, dans l’Anti-Atlas, Taroudant est considérée comme la « Petite Marrakech ». La ville est plus calme, loin de l’agitation de sa grande sœur. Sa médina et ses souks sont tout aussi agréables. Elle est entourée de remparts ocre qui changent de couleur en fonction de la luminosité et de l’heure de la journée.  
-Taroudant est aussi le départ de randonnées dans une riche nature : oasis, culture et cascades parsèment les sentiers.
+Au sud, dans l’Anti-Atlas, Taroudant est considérée comme la « Petite Marrakech ». La ville est plus calme, loin de l’agitation de sa grande sœur. Sa médina et ses souks sont tout aussi agréables. Elle est entourée de remparts ocre qui changent de couleur en fonction de la luminosité et de l’heure de la journée. :br Taroudant est aussi le départ de randonnées dans une riche nature : oasis, culture et cascades parsèment les sentiers.
 
 ### Le désert du Sahara
 
-Il faut voir au moins une fois dans sa vie un désert de sable. Mythique et magique, l’impression d’infini délivre une sensation forte face à la nature grandiose. Vous chevaucherez un dromadaire et [boirez le thé avec les Bédouins](https://bit.ly/2YMzhgd). Rien de tel pour revenir aux sources et profiter de vacances sereines. Vous vivrez à la manière des nomades et pratiquerez une [marche silencieuse dans l’immensité du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=Blog&utm_medium=SEO&utm_campaign=marche_sahara).
+Il faut voir au moins une fois dans sa vie un désert de sable. Mythique et magique, l’impression d’infini délivre une sensation forte face à la nature grandiose. Vous chevaucherez un dromadaire et [boirez le thé avec les Bédouins](https://bit.ly/2YMzhgd). Rien de tel pour revenir aux sources et profiter de vacances sereines. Vous vivrez à la manière des nomades et pratiquerez une [marche silencieuse dans l’immensité du Sahara](https://odysway.com/voyages/marche-silencieuse-sahara?utm_source=Blog\&utm_medium=SEO\&utm_campaign=marche_sahara).
 
-### ::image-container
----
-image-src: "/images/blogs/maroc/XyNR1NM4QHKBZVyVsgpE.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: Désert Sahara
+  image-src: /images/blogs/maroc/XyNR1NM4QHKBZVyVsgpE.jpg
+  ---
+  :::
 
 ### Casablanca
 
@@ -192,12 +199,12 @@ Essaouira dégage beaucoup d’authenticité. Le port de pêche rempli de barque
 
 La vallée du Drâa est longue de 200 km. Les villages disséminés çà et là profitent de cette oasis fertile et de la nature luxuriante. Les parcours de randonnées régalent les marcheurs. Le plus long fleuve du Maroc créé cet havre de paix. Ne manquez pas la visite des Kasbahs et des Ksars, les villages fortifiés construits en terre et roseaux qui participent à l’atmosphère authentique de la région.
 
-### ::image-container
----
-image-src: "/images/blogs/maroc/2mn27gl5Qz3mXLcUBfTQ.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: Vallée du Drâa
+  image-src: /images/blogs/maroc/2mn27gl5Qz3mXLcUBfTQ.jpg
+  ---
+  :::
 
 ### Fès
 
@@ -209,56 +216,55 @@ Si vous avez envie de diversifier vos découvertes, n’hésitez pas à aller vi
 
 ### La médina de Chefchaouen
 
-Les ruelles pavées peintes à la chaux sont typiques de Chefchaouen. Promenez-vous dans la ville bleue, à la découverte des portes cloutées, de tapis, d’objets artisanaux et à la rencontre des marchandes de légumes. Chefchaouen est une belle introduction à un séjour dans la vallée du Rif, loin du tourisme de masse et propice à une déconnexion totale. Et si vous jouiez complètement le jeu en partant pour un [séjour « digital detox »](https://odysway.com/voyages/digital-detox-maroc?utm_source=Blog&utm_medium=SEO&utm_campaign=digitaldetox_maroc) ?
+Les ruelles pavées peintes à la chaux sont typiques de Chefchaouen. Promenez-vous dans la ville bleue, à la découverte des portes cloutées, de tapis, d’objets artisanaux et à la rencontre des marchandes de légumes. Chefchaouen est une belle introduction à un séjour dans la vallée du Rif, loin du tourisme de masse et propice à une déconnexion totale. Et si vous jouiez complètement le jeu en partant pour un [séjour « digital detox »](https://odysway.com/voyages/digital-detox-maroc?utm_source=Blog\&utm_medium=SEO\&utm_campaign=digitaldetox_maroc) ?
 
-## ::image-container
----
-image-src: "/images/blogs/maroc/LH95GJmR8WNTqvQbft2F.jpg"
-alt: undefined
----
+  :::image-container
+  ---
+  alt: La médina de Chefchaouen
+  image-src: /images/blogs/maroc/LH95GJmR8WNTqvQbft2F.jpg
+  ---
+  :::
 ::
-::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::
