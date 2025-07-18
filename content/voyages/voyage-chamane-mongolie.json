@@ -9,32 +9,14 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "S'éveiller ailleurs",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "voyage-insolite"
-    },
-    {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "ou-partir-en-été"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-initiatique"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-nature"
+      "name": "nature"
     }
   ],
   "duration": 12,

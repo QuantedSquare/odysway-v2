@@ -42,7 +42,7 @@ introduction-color: grey
 title-color: primary
 ---
 #title
-[Photographie : Ceci est une copie d'une autre catégorie ayant pour but d'être modifié]{style="color: red;"}
+[Photographie : Ceci est une copie d'une autre catégorie ayant pour but d'être modifié]{style="color: red;"} puis publié
 
 #introduction
 S'offrir un voyage animalier en immersion, c’est la promesse de vivre des moments uniques au contact d’animaux sauvages au grand cœur et des souvenirs à vie.

@@ -9,23 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-culturel"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-hiver"
     },
     {
-      "name": "ou-partir-au-printemps"
+      "name": "en-automne"
+    },
+    {
+      "name": "voyage-culturel"
     }
   ],
   "duration": 15,

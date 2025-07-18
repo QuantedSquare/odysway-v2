@@ -9,9 +9,28 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
-  "categories": [],
+  "categories": [
+    {
+      "name": "animaux"
+    },
+    {
+      "name": "nature"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "aventure"
+    }
+  ],
   "duration": 14,
   "nights": 13,
   "includeFlight": false,

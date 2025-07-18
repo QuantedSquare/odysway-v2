@@ -1,31 +1,34 @@
 ---
 title: "Voyager seul : nos conseils pour partir en toute sérénité"
-description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
+description: Voyager seul est une expérience à part entière. Voici quelques
+  conseils pour des vacances solo réussies.
 seo:
-  title: "Nos conseils pour voyager seul"
-  description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
+  title: Nos conseils pour voyager seul
+  description: Voyager seul est une expérience à part entière. Voici quelques
+    conseils pour des vacances solo réussies.
 navigation:
   title: "Voyager seul : nos conseils pour partir en toute sérénité"
-  description: "Voyager seul est une expérience à part entière. Voici quelques conseils pour des vacances solo réussies."
-author: "Romain Masina"
+  description: Voyager seul est une expérience à part entière. Voici quelques
+    conseils pour des vacances solo réussies.
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
 published: false
-publishedAt: "2022-07-01 12:49:00+00:00"
-tags: "conseils, voyager seul"
-categories: "Blog"
-displayedImg: "/images/blogs/voyager-seul/h2oYQVSSte9ZbEuqz9qE.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+publishedAt: 2022-07-01 12:49:00+00:00
+tags: conseils, voyager seul
+categories: Blog
+displayedImg: /images/blogs/voyager-seul/h2oYQVSSte9ZbEuqz9qE.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyager seul : nos conseils pour partir en toute sérénité
@@ -40,12 +43,12 @@ Vous aimez voyager ? Alors rien alors ne doit vous empêcher de partir même pas
 
 ## Se préparer à voyager seul
 
-::image-container
----
-image-src: "/images/blogs/voyager-seul/koHtISmpSduVCo9jBuem.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-seul/koHtISmpSduVCo9jBuem.jpg
+  ---
+  :::
 
 Décider de **partir seul en voyage** doit être une décision réfléchie. Non pas que cela soit impossible, bien sûr que non, mais cela implique un minimum de préparation à la fois logistique et psychologique. Eh oui, seul, on ne voyage pas de la même façon qu’à plusieurs. Il faut penser que tout se fera en solo : visiter, manger, dormir, gérer les problèmes… Et puis, il y a aussi la question du partage. À distance avec vos proches ? Ce n’est quand même pas la même chose, car ils n’auront pas la même émotion que vous.
 
@@ -53,12 +56,12 @@ Côté logistique, prévoyez un **bagage léger** (pas de mains supplémentaires
 
 ## Se demander ce dont on a envie
 
-::image-container
----
-image-src: "/images/blogs/voyager-seul/FLLw5ItmT0emyQHROKGa.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-seul/FLLw5ItmT0emyQHROKGa.jpg
+  ---
+  :::
 
 Le fait de **partir en vacances** **seul** permet d’imaginer le voyage dont vous avez toujours rêvé. Un **voyage à votre image**. Eh oui, vous n’êtes pas obligé de prévoir en fonction du goût des autres. Vous ne programmez que ce dont vous avez envie de faire et de voir. Avant de vous envoler, posez-vous la question : « Qu’est-ce que j’attends de ce voyage seul ? »
 
@@ -66,12 +69,12 @@ De la ou les réponses découlera l’objectif de votre épopée solo. Envie de 
 
 ## Premier voyage en solo ? Choisissez la facilité !
 
-::image-container
----
-image-src: "/images/blogs/voyager-seul/rkzEVsYrQRCGPzhFFobQ.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-seul/rkzEVsYrQRCGPzhFFobQ.jpg
+  ---
+  :::
 
 Si vous êtes à votre premier coup d’essai, nul besoin de vous mettre des bâtons dans les roues pour vos **vacances seul**. Misez sur la simplicité avec une **destination proche ou réputée facile**. Bien sûr, qu’importe où vous irez, assurez-vous que votre destination est considérée comme sûre. On pense notamment à **l’Europe** qui offre une belle diversité de cultures et de paysages, et où vous vous sentirez peut-être moins dépaysé. Même monnaie dans de nombreux pays ou encore peu d’avion/de train favorisent cette destination.
 
@@ -79,25 +82,25 @@ Néanmoins, partir à l’autre bout du monde ne doit pas être un obstacle pour
 
 ## Voyager seul et rencontrer du monde       
 
-::image-container
----
-image-src: "/images/blogs/voyager-seul/IkprWvm8TSGNhIqZebBQ.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-seul/IkprWvm8TSGNhIqZebBQ.jpg
+  ---
+  :::
 
 **Voyager seul ne signifie pas rester seul !** Sauf si c’est l’objectif de votre périple bien entendu. Il existe des tas de possibilités pour **rencontrer du monde en voyage** et ainsi rendre votre séjour encore plus enrichissant. Les **auberges de jeunesse** sont idéales pour côtoyer des voyageurs venus des quatre coins de la planète. Autre idée de logement : chez l’habitant grâce au **couchsurfing** pour vivre une véritable immersion. N’ayez pas peur non plus de manger seul, osez aller dans les restaurants pour découvrir la cuisine locale. Vous y ferez aussi de belles rencontres.
 
-Pour vos **visites et excursions**, faites-en de même ponctuellement. Vous **joindre à un groupe** vous permettra de partager votre ressenti et vos émotions avec quelqu’un, ce qui est plus difficile tout seul forcément. Si vous appréhendez de vous retrouver dans un car à touristes manquant cruellement d’authenticité, sachez que chez **Odysway** nos groupes de voyageurs n’excèdent pas dix personnes. Nous proposons aussi des [destinations](https://odysway.com/destinations?utm_source=Blog&utm_medium=SEO&utm_campaign=DestinationsBlog) et des thématiques pour **partir seul en voyage** afin de vivre une expérience immersive et authentique.
+Pour vos **visites et excursions**, faites-en de même ponctuellement. Vous **joindre à un groupe** vous permettra de partager votre ressenti et vos émotions avec quelqu’un, ce qui est plus difficile tout seul forcément. Si vous appréhendez de vous retrouver dans un car à touristes manquant cruellement d’authenticité, sachez que chez **Odysway** nos groupes de voyageurs n’excèdent pas dix personnes. Nous proposons aussi des [destinations](https://odysway.com/destinations?utm_source=Blog\&utm_medium=SEO\&utm_campaign=DestinationsBlog) et des thématiques pour **partir seul en voyage** afin de vivre une expérience immersive et authentique.
 
 ## Avoir une assurance pour ses vacances solo
 
-::image-container
----
-image-src: "/images/blogs/voyager-seul/C4yeCOZnQcyv99H8WcJ1.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-seul/C4yeCOZnQcyv99H8WcJ1.jpg
+  ---
+  :::
 
 Voilà un détail qu’il ne faut surtout pas négliger lorsque l’on part en voyage et plus particulièrement pour des **vacances** **en** **solo**. En effet, une blessure, un accident ou tomber malade peut arriver n’importe quand, même si vous êtes très prudent. Avant de partir, contactez votre assurance pour connaître la couverture dont vous bénéficiez. Certaines cartes bancaires incluent également une **assurance voyage**, renseignez-vous.
 
@@ -105,58 +108,57 @@ Gardez dans un coin de votre tête que vous serez seul à gérer s’il vous arr
 
 ## Informer son entourage de son programme de voyage
 
-::image-container
----
-image-src: "/images/blogs/voyager-seul/sHIKEJrpSV8ww1nsxgAc.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-seul/sHIKEJrpSV8ww1nsxgAc.jpg
+  ---
+  :::
 
 Si de votre côté, **voyager seul** ne vous pose pas de problème, il n’en est peut-être pas de même avec vos proches. Et si en plus vous êtes une voyageuse solo, l’inquiétude est souvent plus présente… Pour rassurer votre entourage, **informez-le de votre itinéraire**. Si vous n’avez pas tout planifié avant votre départ, tenez-le au courant régulièrement une fois sur place.
 
 Même si vous partez à l’étranger, il est aujourd’hui très facile de communiquer. **Internet** et le **wifi** se sont largement développés et permettent de rester en contact 7/7 et H24. Vous avez ainsi accès à votre boîte mail ou aux réseaux sociaux pour envoyer un message, un mail, une photo... Vous pouvez également **acheter une carte SIM locale**. Celle-ci vous sera très utile dans des lieux sans connexion (ou très mauvaise) pour appeler ou envoyer un SMS à moindres frais.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

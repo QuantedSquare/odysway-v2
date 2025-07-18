@@ -9,7 +9,7 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Explorer à pied",
   "level": "1",
   "categories": [
     {
@@ -31,13 +31,10 @@
       "name": "voyage-en-groupe"
     },
     {
-      "name": "voyage-en-couple"
-    },
-    {
       "name": "voyage-nature"
     },
     {
-      "name": "voyage-sportif"
+      "name": "sport"
     }
   ],
   "duration": 14,

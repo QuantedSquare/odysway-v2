@@ -1,0 +1,92 @@
+{
+  "title": "Destinations",
+  "description": "Les destinations Odysway",
+  "contenuOnglet": [
+    {
+      "title": "Europe",
+      "linksList": [
+        {
+          "title": "Albanie",
+          "slug": "https://odysway.com/destinations/albanie"
+        },
+        {
+          "title": "Finlande",
+          "slug": "https://odysway.com/destinations/finlande"
+        },
+        {
+          "title": "Islande",
+          "slug": "https://odysway.com/destinations/islande"
+        },
+        {
+          "title": "Norvège",
+          "slug": "https://odysway.com/destinations/norvege"
+        },
+        {
+          "title": "Portugal",
+          "slug": "https://odysway.com/destinations/portugal"
+        },
+        {
+          "title": "Roumanie",
+          "slug": "https://odysway.com/destinations/roumanie"
+        },
+        {
+          "title": "Espagne",
+          "slug": "https://odysway.com/destinations/espagne"
+        },
+        {
+          "title": "Suède",
+          "slug": "https://odysway.com/destinations/suede"
+        }
+      ]
+    },
+    {
+      "title": "Asie",
+      "linksList": [
+        {
+          "title": "Chine",
+          "slug": "https://odysway.com/destinations/chine"
+        },
+        {
+          "title": "Inde",
+          "slug": "https://odysway.com/destinations/inde"
+        },
+        {
+          "title": "Indonésie",
+          "slug": "https://odysway.com/destinations/indonesie"
+        },
+        {
+          "title": "Japon",
+          "slug": "https://odysway.com/destinations/japon"
+        },
+        {
+          "slug": "https://odysway.com/destinations/kirghizistan",
+          "title": "Kirghizistan"
+        },
+        {
+          "slug": "https://odysway.com/destinations/laos",
+          "title": "Laos"
+        },
+        {
+          "slug": "https://odysway.com/destinations/mongolie",
+          "title": "Mongolie"
+        },
+        {
+          "title": "Népal",
+          "slug": "https://odysway.com/destinations/nepal"
+        },
+        {
+          "slug": "https://odysway.com/destinations/ouzbekistan",
+          "title": "Ouzbekistan"
+        },
+        {
+          "title": "Sri Lanka",
+          "slug": "https://odysway.com/destinations/sri-lanka"
+        },
+        {
+          "slug": "https://odysway.com/destinations/vietnam",
+          "title": "Vietnam"
+        }
+      ]
+    }
+  ]
+}

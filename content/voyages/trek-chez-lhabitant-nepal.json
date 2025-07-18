@@ -9,17 +9,14 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
-  "level": "1",
+  "experienceType": "Explorer à pied",
+  "level": "2",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nuits-chez-l-habitant"
     },
     {
       "name": "trek-et-randonnee"
-    },
-    {
-      "name": "voyage-culturel"
     },
     {
       "name": "ou-partir-en-automne"
@@ -31,16 +28,7 @@
       "name": "ou-partir-en-hiver"
     },
     {
-      "name": "ou-partir-en-été"
-    },
-    {
       "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
     },
     {
       "name": "voyage-nature"
