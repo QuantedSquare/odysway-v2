@@ -9,7 +9,7 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
@@ -22,10 +22,13 @@
       "name": "ou-partir-au-printemps"
     },
     {
-      "name": "voyage-en-groupe"
+      "name": "en-automne"
     },
     {
-      "name": "sejours-chez-l-habitant"
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "nuits-chez-l-habitant"
     }
   ],
   "duration": 12,

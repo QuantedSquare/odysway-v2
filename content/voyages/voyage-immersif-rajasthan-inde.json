@@ -9,7 +9,7 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
@@ -22,10 +22,10 @@
       "name": "ou-partir-en-hiver"
     },
     {
-      "name": "voyage-en-groupe"
+      "name": "sejours-chez-l-habitant"
     },
     {
-      "name": "sejours-chez-l-habitant"
+      "name": "en-automne"
     }
   ],
   "duration": 13,

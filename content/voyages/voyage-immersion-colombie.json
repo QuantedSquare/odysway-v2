@@ -9,29 +9,23 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partager le quotidien",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nature"
     },
     {
-      "name": "ou-partir-en-automne"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "ou-partir-au-printemps"
+      "name": "voyage-culturel"
     },
     {
-      "name": "ou-partir-en-hiver"
+      "name": "en-automne"
     },
     {
-      "name": "ou-partir-en-été"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-nature"
+      "name": "ou-partir-en-ete"
     }
   ],
   "duration": 14,

@@ -9,7 +9,7 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
@@ -25,13 +25,10 @@
       "name": "ou-partir-en-hiver"
     },
     {
-      "name": "ou-partir-en-été"
-    },
-    {
       "name": "voyage-en-groupe"
     },
     {
-      "name": "voyage-en-famille"
+      "name": "nature"
     }
   ],
   "duration": 13,
