@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-09-18 15:10:00+00:00"
 tags: "Asie, Chine, Famille, Grands espaces, Sport"
 categories: "Depassement de soi, Culture et decouverte"

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-03-11 15:31:00+00:00"
 tags: "Amerique du Sud, Argentine, Grands espaces, Sports"
 categories: "Depassement de soi, Nature et grands espaces"

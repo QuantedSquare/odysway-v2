@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2021-06-14 15:39:00+00:00"
 tags: "alpaga, alpagas, Animaux, Bretagne, déconnexion, élevage, Finistère, France, immersion, nature, paysage, slow tourisme"
 categories: "Blog"

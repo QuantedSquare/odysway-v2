@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-06-11 11:54:00+00:00"
 tags: "France, Grands espaces"
 categories: "Nature et grands espaces, Blog"

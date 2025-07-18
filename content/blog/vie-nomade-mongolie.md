@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-07-01 10:59:00+00:00"
 tags: "Asie, Communautés locales, Famille, Grands espaces, Mongolie, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte"

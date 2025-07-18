@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-03-09 07:49:00+00:00"
 tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Cap Vert, Communautés locales, Costa Rica, Europe, Famille, Grands espaces, Guatemala, Kirghizistan, Maroc, Mongolie"
 categories: ""

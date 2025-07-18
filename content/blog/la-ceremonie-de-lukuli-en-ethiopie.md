@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2018-11-15 08:49:00+00:00"
 tags: "Afrique, Communautés locales, Ethiopie"
 categories: "Apprentissage, Culture et decouverte"

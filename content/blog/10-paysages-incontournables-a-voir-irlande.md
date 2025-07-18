@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-10-16 13:05:00+00:00"
 tags: "Europe, Famille, Grands espaces, Irlande, Transports insolites"
 categories: "Nature et grands espaces, Culture et decouverte"

@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-03-24 15:07:00+00:00"
 tags: "Communautés locales, Famille"
 categories: "Apprentissage, Culture et decouverte, Blog"

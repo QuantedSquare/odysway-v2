@@ -13,7 +13,7 @@ navigation:
 author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: 2022-07-01 12:49:00+00:00
 tags: conseils, voyager seul
 categories: Blog

@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2019-10-07 13:08:00+00:00"
 tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
 categories: "Depassement de soi, Culture et decouverte"

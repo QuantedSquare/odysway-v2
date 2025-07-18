@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-03-24 13:15:00+00:00"
 tags: "Afrique, Communautés locales, Developpement personnel, Famille, Grands espaces, Maroc"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2023-04-16 09:47:00+00:00"
 tags: "Developpement personnel"
 categories: "Culture et decouverte, Developpement Personnel, Blog"

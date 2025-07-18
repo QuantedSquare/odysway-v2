@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-06-10 08:32:00+00:00"
 tags: "Afrique, Communautés locales, Developpement personnel, Grands espaces, Maroc"
 categories: "Culture et decouverte"

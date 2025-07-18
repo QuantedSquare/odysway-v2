@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-05-02 19:57:00+00:00"
 tags: "Asie, Grands espaces, Sports, Thailande"
 categories: "Depassement de soi"

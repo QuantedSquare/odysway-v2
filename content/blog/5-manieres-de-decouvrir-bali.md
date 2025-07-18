@@ -16,7 +16,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2023-02-19 12:00:00+00:00"
 tags: "bali, vacances, voyage"
 categories: "vacances, voyager, Indonésie"

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-07-29 11:00:00+00:00"
 tags: "Animaux, Asie, Famille, Sri Lanka"
 categories: "Culture et decouverte"

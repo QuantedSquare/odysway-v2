@@ -14,7 +14,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-10-29 15:14:00+00:00"
 tags: "Asie, Sports, Thailande"
 categories: "Nature et grands espaces, Developpement Personnel, Blog"

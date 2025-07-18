@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-01-02 10:47:00+00:00"
 tags: "Asie, Communautés locales"
 categories: "Culture et decouverte, News Odysway"

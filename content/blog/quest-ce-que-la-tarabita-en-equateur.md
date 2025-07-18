@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2018-11-29 07:59:00+00:00"
 tags: "Amerique du Sud, Transports insolites"
 categories: "Depassement de soi, Developpement Personnel"

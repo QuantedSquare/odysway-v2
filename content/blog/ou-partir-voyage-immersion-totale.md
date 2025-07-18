@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-06-18 11:38:00+00:00"
 tags: "Cap Vert, Chine, Communautés locales, France, Grands espaces, Kirghizistan, Made in France, Perou"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"

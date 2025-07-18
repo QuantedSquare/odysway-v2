@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2023-06-05 11:00:00+00:00"
 tags: "Animaux, Europe, Finlande, Grands espaces"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"

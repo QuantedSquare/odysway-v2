@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-04-30 16:50:00+00:00"
 tags: "Animaux, Europe, Famille, France, Grands espaces, Made in France"
 categories: "Culture et decouverte"

@@ -20,7 +20,7 @@ navigation:
 author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: 2024-06-07 13:55:55.603000+00:00
 tags: ""
 categories: ""
