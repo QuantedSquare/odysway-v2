@@ -94,7 +94,13 @@ import { useRouter } from 'vue-router'
 const search = ref(null)
 const loading = ref(false)
 const travelesList = await queryCollection('voyages').select('slug', 'title', 'image').where('customAvailable', '=', false).all()
-
+useSeoMeta({
+  htmlAttrs: {
+    lang: 'fr',
+  },
+  robots: 'noindex, follow',
+  canonical: 'https://www.odysway.com/',
+})
 definePageMeta({
   layout: 'booking',
   middleware: 'booking-management',

@@ -256,13 +256,13 @@ const submitStepData = async () => {
         buttonLoading.value = false
       }
       emit('next')
-      console.log('deal updated')
+      // console.log('deal updated')
     }
     // else we update basics and create a deal with it
     else {
-      const origin = config.public.siteURL
-      const bmsLink = `${origin}/booking-management/${voyage.slug}/${route.query.date_id}`
-      console.log('bmsLink', bmsLink) // #TODO To Add to schema
+      // const origin = config.public.siteURL
+      // const bmsLink = `${origin}/booking-management/${voyage.slug}/${route.query.date_id}`
+      // console.log('bmsLink', bmsLink) // #TODO To Add to schema
       const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
       buttonLoading.value = true
       const utmSource = localStorage.getItem('utmSource')

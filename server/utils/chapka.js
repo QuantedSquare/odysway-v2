@@ -2,6 +2,9 @@ import { createHash } from 'crypto'
 import axios from 'axios'
 import dayjs from 'dayjs'
 
+const config = useRuntimeConfig()
+const isDev = config.public.environment !== 'production'
+
 const getSignature = (data) => {
   const keys = Object.keys(data).sort()
 
@@ -104,7 +107,6 @@ const quote = async (body) => {
 }
 
 const notify = (paymentSession, insuranceItem, dealCustomFields) => {
-  const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
   const data = {

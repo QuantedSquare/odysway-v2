@@ -27,11 +27,6 @@ export default defineEventHandler(async (event) => {
     }
 
     setResponseStatus(event, 200)
-    // return {
-    //   message: 'Payment processed successfully',
-    //   paymentId: pid,
-    //   status: payment.processing_status,
-    // }
   }
   catch (err) {
     console.error('Alma webhook error:', err)

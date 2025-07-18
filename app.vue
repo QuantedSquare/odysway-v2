@@ -64,7 +64,7 @@ if (config.public.environment === 'production') {
 
 onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
-  if (isConsent && config.public.environment !== 'production') {
+  if (isConsent && config.public.environment === 'production') {
     trackPixel('track', 'PageView')
     initialize()
 
@@ -86,7 +86,7 @@ onMounted(() => {
   })
 
   if (userUTMs.length) {
-    console.log('userUTMs', userUTMs)
+    // console.log('userUTMs', userUTMs)
     localStorage.setItem('utmSource', userUTMs.join('&'))
   }
 })
