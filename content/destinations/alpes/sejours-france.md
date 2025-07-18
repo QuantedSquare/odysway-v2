@@ -1,31 +1,34 @@
 ---
-title: "Nos séjours en France"
-description: "Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion."
+title: Nos séjours en France
+description: Avec une richesse extraordinaire dans de très nombreux domaines,
+  partir en vacances en France est la promesse d’un voyage tout en émotion.
 seo:
-  title: "Nos séjours en France"
-  description: "Avec une richesse extraordinaire partir en vacances en France est la promesse d’un voyage tout en émotion. Découvrez nos voyages en France !"
+  title: Nos séjours en France
+  description: Avec une richesse extraordinaire partir en vacances en France est
+    la promesse d’un voyage tout en émotion. Découvrez nos voyages en France !
 navigation:
-  title: "Nos séjours en France"
-  description: "Avec une richesse extraordinaire dans de très nombreux domaines, partir en vacances en France est la promesse d’un voyage tout en émotion."
-author: "Linda Tran"
+  title: Nos séjours en France
+  description: Avec une richesse extraordinaire dans de très nombreux domaines,
+    partir en vacances en France est la promesse d’un voyage tout en émotion.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
 published: true
-publishedAt: "2021-02-22 13:16:00+00:00"
-tags: "Europe, France, Grands espaces"
-categories: "Nature et grands espaces"
-displayedImg: "/images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+publishedAt: 2021-02-22 13:16:00+00:00
+tags: Europe, France, Grands espaces
+categories: Nature et grands espaces
+displayedImg: /images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Nos séjours en France
@@ -40,12 +43,12 @@ Avec une richesse extraordinaire dans de très nombreux domaines, partir en vaca
 
 ## Pourquoi partir en vacances en France ?
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/Izh1QDk6RqsrMJdSQqHg.jpg"
-alt: France.jpg
----
-::
+  :::image-container
+  ---
+  alt: France.jpg
+  image-src: /images/blogs/sejours-france/Izh1QDk6RqsrMJdSQqHg.jpg
+  ---
+  :::
 
 Il paraîtrait que la France est le plus beau pays du monde. N’est-ce pas une raison suffisante pour envisager d’y passer ses vacances ? La France possède une longue histoire, riche et mouvementée, dont on peut encore voir les traces et les vestiges un peu partout sur le territoire. Des monuments qui ont traversé les siècles et qui montrent toute l’inventivité des peuples qui nous ont précédés.
 
@@ -57,12 +60,12 @@ Ce n’est donc pas un mais des voyages qui vous tendent les bras.
 
 ## Quand voyager en France ?
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/WpUKY1F5RpSd9mitdxnn.jpg"
-alt: France Season.jpg
----
-::**
+  :::image-container
+  ---
+  alt: France Season.jpg
+  image-src: /images/blogs/sejours-france/WpUKY1F5RpSd9mitdxnn.jpg
+  ---
+  :::
 
 La réponse est simple : toute l’année ! Par la pluralité de ses climats, la France est une destination qui se découvre à chaque saison. Le printemps et l’automne sont deux périodes idéales pour **partir en vacances en France**, car la nature change et se pare de jolies couleurs. Au printemps, la faune et la flore se réveillent et redonnent vie à l’environnement. Vous bénéficierez en plus de températures plus clémentes et vous échapperez également à la foule.
 
@@ -72,18 +75,18 @@ Avec ses nombreux massifs, la France propose un large choix de stations de monta
 
 ## Où partir en France cet été ?
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg"
-alt: France en ete.jpg
----
-::**
+  :::image-container
+  ---
+  alt: France en ete.jpg
+  image-src: /images/blogs/sejours-france/EgPLFa2TriEUArtylLII.jpg
+  ---
+  :::
 
 Tout dépend bien sûr de vos centres d’intérêt. Si vous avez besoin d’un grand bol d’air pur et de vous perdre au milieu de la nature, la montagne est l’endroit parfait pour **partir en** **vacances en France cet été**. Au programme, des randonnées, la possibilité de pratiquer des sports en eau vive et d’aller à la rencontre de ceux qui font vivre la montagne, comme les bergers. Vous pourrez même vous baigner dans les lacs, si la fraîcheur de l’eau n’est pas un problème pour vous.
 
 Si l’appel de la mer est plus fort, la France dispose d’un **très grand littoral** et tout le monde y trouvera son compte. Plages de sable ou de galets, criques paradisiaques, côtes désertes ou animées, faites votre choix. Les activités ne manquent pas non plus, autant pour les adultes que pour les enfants. Baignade, surf, vélo, pêche, détente, voile, plongée, à chacun ses vacances ! 
 
-L’intérieur des terres est aussi intéressant pour des **vacances en famille** ou des **vacances à la ferme en France,** comme par exemple [notre séjour dans une ferme des Pyrénées](https://odysway.com/voyages/sejour-vallee-ossau-berger-fromage?utm_source=SEO&utm_medium=PageDestination&utm_campaign=France). On y retrouve des traditions encore fortes, des paysages sauvages, une nature où abondent une faune et une flore riches, des trésors architecturaux qui pullulent çà et là.
+L’intérieur des terres est aussi intéressant pour des **vacances en famille** ou des **vacances à la ferme en France,** comme par exemple [notre séjour dans une ferme des Pyrénées](https://odysway.com/voyages/sejour-vallee-ossau-berger-fromage?utm_source=SEO\&utm_medium=PageDestination\&utm_campaign=France). On y retrouve des traditions encore fortes, des paysages sauvages, une nature où abondent une faune et une flore riches, des trésors architecturaux qui pullulent çà et là.
 
 Les villes et les villages de France regorgent de **richesses culturelles et historiques**. Vous pourrez admirer et visiter des monuments, des musées, des édifices religieux… Direction Paris, Avignon, Strasbourg, Lyon, Lille ou Carcassonne… Mais aussi les villages médiévaux, les châteaux ou les sites préhistoriques disséminés dans tout le pays.
 
@@ -91,12 +94,12 @@ Les villes et les villages de France regorgent de **richesses culturelles et his
 
 ### Partir sur les traces de son histoire et de son patrimoine
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/AZllOdqCTsqj7SmuMuit.jpg"
-alt: France Patrimoine.jpg
----
-::
+  :::image-container
+  ---
+  alt: France Patrimoine.jpg
+  image-src: /images/blogs/sejours-france/AZllOdqCTsqj7SmuMuit.jpg
+  ---
+  :::
 
 Depuis la période du paléolithique – 40 000 ans avant notre ère – et dans les siècles qui suivirent, nos ancêtres nous ont laissé de nombreux témoignages. Que ce soit au niveau architectural ou historique, la France possède un **patrimoine remarquable**. Voici quelques exemples de sites et monuments à voir absolument, si vous comptez **partir en vacances en France**.
 
@@ -108,12 +111,12 @@ Un large choix s’offre donc à vous, que vous décidiez de **partir en France,
 
 ### S’immerger au cœur de paysages naturels exceptionnels
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/m7V1W9RHQSHZ9GKQNohf.jpg"
-alt: Paysages France.jpg
----
-::
+  :::image-container
+  ---
+  alt: Paysages France.jpg
+  image-src: /images/blogs/sejours-france/m7V1W9RHQSHZ9GKQNohf.jpg
+  ---
+  :::
 
 La diversité de l’environnement naturel de la France en fait une destination de prédilection pour des vacances vertes. Le pays compte de nombreux parcs naturels pour des **vacances en immersion en France** au plus près de la nature.
 
@@ -125,12 +128,12 @@ Pour des **vacances originales** et/ou **en famille en France**, explorez le pay
 
 ### Découvrir son magnifique littoral
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/P2JH1W0oSCaUGpjvDFL7.jpg"
-alt: Littoral France.jpg
----
-::**
+  :::image-container
+  ---
+  alt: Littoral France.jpg
+  image-src: /images/blogs/sejours-france/P2JH1W0oSCaUGpjvDFL7.jpg
+  ---
+  :::
 
 La France compte **5 500 km de côtes**, toutes très différentes et c’est ce qui fait son charme. La côte Fleurie, la côte de Nacre, la côte d’Émeraude ou encore la côte Vermeille ne peuvent qu’être la promesse de vacances enchanteresses.
 
@@ -140,12 +143,12 @@ Terminons notre tour de France du littoral par celui de la Méditerranée. Là a
 
 ### Cap sur nos belles îles françaises
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/9ImX9rRhSMCT7HsbF8ui.jpg"
-alt: France Île.jpg
----
-::
+  :::image-container
+  ---
+  alt: France Île.jpg
+  image-src: /images/blogs/sejours-france/9ImX9rRhSMCT7HsbF8ui.jpg
+  ---
+  :::
 
 Vous rêvez de longues plages de sable fin ? D’une eau si claire que l’on peut voir les poissons nager ? De vous balader au cœur d’une nature sauvage et de paysages incroyables ? Eh bien, nul besoin de vous envoler à des milliers de kilomètres, vous trouverez votre bonheur en France. En Méditerranée, il y a bien sûr la Corse, qui porte si bien le nom d’île de beauté, les sublimes îles d’Hyères et Lérins. Sur la côte atlantique, l’île d’Oléron, l’île de Ré ou l’île de Noirmoutier sont des destinations idéales pour des **vacances en famille en France**. La Bretagne abrite aussi des perles : Belle-Île-en-Mer, l’île de Groix, l’île d’Ouessant, l’île de Bréhat ou l’archipel des Glénan.
 
@@ -153,12 +156,12 @@ Enfin, terminons par un décor paradisiaque avec l’archipel de Chausey, situé
 
 ### Se laisser tenter à la gourmandise
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/UglfdYUS6q8LLhZK1boA.jpg"
-alt: Gastronomie française.jpg
----
-::
+  :::image-container
+  ---
+  alt: Gastronomie française.jpg
+  image-src: /images/blogs/sejours-france/UglfdYUS6q8LLhZK1boA.jpg
+  ---
+  :::
 
 La France est LE **pays gastronomique** par excellence. Il est donc impensable de ne pas **partir en vacances en France** sans goûter à ses nombreuses spécialités. Plats gourmands et généreux, des recettes qui sentent bon le soleil et qui réchauffent le cœur, comment ne pas résister ? Laissez-vous tenter par un poulet basquaise, une mouclade charentaise, une galette bretonne, une potée lorraine, une ficelle picarde… En dessert, craquez pour des cannelés bordelais, des mirlitons aux framboises made in Normandie, le biscuit de Savoie ou encore le millas landais aux fruits. On en salive !
 
@@ -166,58 +169,57 @@ Sans oublier bien sûr les excellents fromages de nos terroirs. Le bleu d’Auve
 
 ### Prendre part aux traditions et aux fêtes régionales
 
-::image-container
----
-image-src: "/images/blogs/sejours-france/HHHKBP5aSMGbt0YyGl8u.jpg"
-alt: Berger tradition France.jpg
----
-::
+  :::image-container
+  ---
+  alt: Berger tradition France.jpg
+  image-src: /images/blogs/sejours-france/HHHKBP5aSMGbt0YyGl8u.jpg
+  ---
+  :::
 
 Par la multiplicité de ses régions, la France regorge de **traditions** et d’événements. Il y a bien sûr les magnifiques marchés de Noël en Alsace, la fête des Lumières à Lyon, le carnaval de Nice ou de Dunkerque. Si le sud de la **France** est votre **destination cet été**, assistez aux férias où l’ambiance est plus que survoltée. Participez à la fête du piment à Espelette, du citron à Menton ou de la mirabelle à Metz. Vous l’aurez compris, les traditions sont aussi diverses que nombreuses et permettent une **immersion** dans une **France** pleine de richesses culturelles.
 
 Une richesse se retrouve également dans des modes de vie traditionnels que certains font encore perdurer. Tel est le cas dans les Pyrénées où les bergers sont encore nombreux à parcourir les pâturages avec leurs troupeaux. Odysway vous emmène à leur rencontre grâce à un [séjour dans le Béarn](https://odysway.com/voyages/sejour-berger-bearn) afin de partager leur quotidien. Transhumance, fabrication du fromage et nuit dans une cabane typique, un voyage tout en intensité et en émotion.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

@@ -1,22 +1,22 @@
 ---
-title: "Lorem ipsum"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+title: Lorem ipsum
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 seo:
-  title: "Lorem ipsum"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  title: Lorem ipsum
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 navigation:
-  title: "Lorem ipsum"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-author: "Lorem ipsum"
+  title: Lorem ipsum
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+author: Lorem ipsum
 authorPhoto: /images/team/placeholder.webp
 authorRole: Lorem ipsum
 published: false
-publishedAt: "2023-05-02 07:15:00+00:00"
-tags: "Placeholder"
-categories: "Blog"
-displayedImg: "/images/placeholder.jpg"
-blogType: "Lorem ipsum"
-badgeColor: "secondary"
+publishedAt: 2023-05-02 07:15:00+00:00
+tags: Placeholder
+categories: Blog
+displayedImg: /images/placeholder.jpg
+blogType: Lorem ipsum
+badgeColor: secondary
 readingTime: "3"
 ---
 
@@ -26,23 +26,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 ## Lorem ipsum dolor sit amet
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ## Lorem ipsum dolor sit amet
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
@@ -50,104 +42,66 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Lorem ipsum
 
-::image-container
----
-image-src: "/images/placeholder.jpg"
-alt: "placeholder alt"
----
-::
+  :::image-container{alt="placeholder alt" image-src="/images/placeholder.jpg"}
+  :::
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ::
-
-

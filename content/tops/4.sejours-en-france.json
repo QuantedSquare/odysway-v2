@@ -1,46 +1,45 @@
 {
-  "title": "Thématiques",
-  "description": "Les thématiques de voyages Odysway",
+  "title": "Séjours en France",
+  "description": "Séjours en France",
   "contenuOnglet": [
     {
-      "title": "Top voyages 2",
+      "title": "Séjours en France",
       "linksList": [
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "Vis ma vie de berger",
+          "slug": "https://odysway.com/voyages/sejour-berger-bearn"
         },
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "Initiation au bivouac",
+          "slug": "https://odysway.com/voyages/bivouac-montagne-pyrenees"
         },
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "Immersion hivernale en terre béarnaise",
+          "slug": "https://odysway.com/voyages/sejour-hiver-pyrenees"
         },
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
-        }
-      ]
-    },
-    {
-      "title": "Top voyages 2",
-      "linksList": [
-        {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "Immersion au cœur d'un observatoire astronomique",
+          "slug": "https://odysway.com/voyages/immersion-observatoire-astronomique"
         },
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "Initiation à l'observation astronomique en Corse",
+          "slug": "https://odysway.com/voyages/sejour-astronomie-corse"
         },
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "Séjour au cœur d'un observatoire astronomique",
+          "slug": "https://odysway.com/voyages/sejour-observatoire-astronomique"
         },
         {
-          "title": "Japon autrement : Voyagez de Kyoto à Tokyo, entre tradition et modernité",
-          "slug": "voyage-immersion-culturelle-japon"
+          "title": "En immersion avec un photographe animalier dans les Vosges",
+          "slug": "https://odysway.com/voyages/photographie-animaliere-vosges"
+        },
+        {
+          "title": "Découvrez l'art de la photo animalière dans le Jura",
+          "slug": "https://odysway.com/voyages/decouvrez-photo-animaliere-jura"
+        },
+        {
+          "title": "Séjour multi-activités en famille dans les Ecrins",
+          "slug": "https://odysway.com/voyages/sejour-multiactivites-famille-ecrins"
         }
       ]
     }
