@@ -16,14 +16,22 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2020-11-26 17:18:00+00:00
 tags: ""
 categories: Culture et decouverte
-displayedImg: ""
+displayedImg: /images/blogs/partir-en-groupe/ukiK8LNCQEivfEuNNMoz.jpg
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
@@ -81,14 +89,12 @@ Des hébergements de qualité dans des endroits qui vont vous aider à déconnec
 
 ## 2. Partir en groupe pour soigner les éléphants en Thaïlande
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/partir-en-groupe/lMRA7gB6SB2CS3k3Y0Wd.jpg"
-alt: Sauver les éléphants en Thaïlande
---------------------------------------
-::
+  :::image-container
+  ---
+  alt: Sauver les éléphants en Thaïlande
+  image-src: /images/blogs/partir-en-groupe/lMRA7gB6SB2CS3k3Y0Wd.jpg
+  ---
+  :::
 
 Bon nombre de **personnes qui partent en groupe**, pensent que le tour à dos d'éléphant est un incontournable du voyage en Thaïlande et grimpent donc volontiers sur le dos de ces impressionnants pachydermes.
 
@@ -102,15 +108,12 @@ Vous aurez également l’opportunité de partager le quotidien de la communaut�
 
 ## 3. Partir en groupe pour découvrir la photo animalière dans le Jura
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/partir-en-groupe/E8YX3edGQdCgyiTxVUsQ.jpg"
-alt: Photo animalière dans le Jura
-----------------------------------
-
-\::
+  :::image-container
+  ---
+  alt: Photo animalière dans le Jura
+  image-src: /images/blogs/partir-en-groupe/E8YX3edGQdCgyiTxVUsQ.jpg
+  ---
+  :::
 
 Que diriez-vous de **partir en groupe** dans le Jura afin de vous initier à la **photo animalière** ?
 
@@ -126,12 +129,12 @@ Un **voyage en groupe** inoubliable et riche en émotions !
 
 ## 4. Odysway et le voyage en groupe
 
-::image-container
----
-alt: felix-rostig-UmV2wr-Vbq8-unsplash.jpg
-image-src: /images/blogs/partir-en-groupe/ukiK8LNCQEivfEuNNMoz.jpg
----
-::
+  :::image-container
+  ---
+  alt: felix-rostig-UmV2wr-Vbq8-unsplash.jpg
+  image-src: /images/blogs/partir-en-groupe/ukiK8LNCQEivfEuNNMoz.jpg
+  ---
+  :::
 
 La mission d’Odysway est d’offrir une alternative aux personnes désireuses de **voyager en groupe**.
 
@@ -148,7 +151,7 @@ Que vous souhaitiez : 
 - [**partir à l’aventure en Mongolie à la rencontre des chamanes des Steppes**](https://odysway.com/voyages/voyage-chamane-mongolie?utm_source=SEO\&utm_medium=thematique\&utm_campaign=en_groupe). 
 
 Nous sommes là pour vous guider dans vos choix.
-\::
+::
 
 ::color-container{color="soft-blush"}
   :::info-container

@@ -9,23 +9,20 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
-    {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "ou-partir-en-automne"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
     {
       "name": "astronomie"
     },
     {
-      "name": "sejour-a-la-ferme"
+      "name": "en-automne"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "ou-partir-en-ete"
     }
   ],
   "duration": 5,

@@ -9,20 +9,26 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
     {
       "name": "astronomie"
     },
     {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "voyage-en-famille"
-    },
-    {
       "name": "voyage-nature"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "ou-partir-en-hiver"
     }
   ],
   "duration": 3,

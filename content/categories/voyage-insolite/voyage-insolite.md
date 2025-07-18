@@ -1,31 +1,45 @@
 ---
-title: "Voyage Insolite avec Odysway"
-description: "Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite."
+title: Voyage Insolite avec Odysway
+description: Le voyage insolite est une autre façon de découvrir un pays ou une
+  région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de
+  manière insolite.
 seo:
-  title: "Top Voyage Insolite"
-  description: "Vous êtes à la recherche d’un voyage insolite ? Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite avec Odysway"
+  title: Top Voyage Insolite
+  description: Vous êtes à la recherche d’un voyage insolite ? Hors des sentiers
+    battus, en train ou en vélo, découvrez le monde de manière insolite avec
+    Odysway
 navigation:
-  title: "Voyage Insolite avec Odysway"
-  description: "Le voyage insolite est une autre façon de découvrir un pays ou une région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de manière insolite."
-author: "Linda Tran"
+  title: Voyage Insolite avec Odysway
+  description: Le voyage insolite est une autre façon de découvrir un pays ou une
+    région. Hors des sentiers battus, en train ou en vélo, découvrez le monde de
+    manière insolite.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
-publishedAt: "2020-11-26 15:15:00+00:00"
+published: true
+publishedAt: 2020-11-26 15:15:00+00:00
 tags: ""
-categories: "Culture et decouverte"
-displayedImg: ""
-blogType: "Actu"
-badgeColor: "secondary"
+categories: Culture et decouverte
+displayedImg: /images/blogs/comment-odysway-lagence-specialiste-du-voyage-en-immersion-a-decide-de-faire-face-a-la-covid-19/Yao6FvFoSjW5imiBbkEV.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyage Insolite avec Odysway
@@ -44,24 +58,24 @@ Odysway à conçu pour vous des **voyages insolites**, sur-mesure, au contact de
 
 Le **voyage insolite en immersion** c’est pour vous l’opportunité de voyager de manière éco-responsable, authentique et originale.
 
-_“L'insolite est inséparable de l'amour, il préside à sa révélation”_ - André Breton.
+*“L'insolite est inséparable de l'amour, il préside à sa révélation”* - André Breton.
 
 Voici les meilleures expériences de **voyages insolites** proposées par Odysway :
 
-## **1\. Voyage insolite - Apprenant le Kung-Fu avec des moines Shaolin**
+## **1. Voyage insolite - Apprenant le Kung-Fu avec des moines Shaolin**
 
-::image-container
----
-image-src: "/images/blogs/voyage-insolite/vSjqrIfSuml1U1714jqF.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-insolite/vSjqrIfSuml1U1714jqF.jpg
+  ---
+  :::
 
 Beaucoup d’entre nous avons grandi au rythme des films de Bruce Lee ou de mangas tels que Dragon Ball Z et ça laisse des traces !
 
 Depuis, vous rêvez d’apprendre le Kung-Fu et de faire connaissance avec les moines de Shaolin. Ne rêvez plus, c’est possible !
 
-Nous vous proposons d’[**apprendre le mythique Kung-Fu Shaolin**](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite) dans un des plus anciens temples bouddhistes de Chine.
+Nous vous proposons d’[**apprendre le mythique Kung-Fu Shaolin**](https://odysway.com/voyages/kung-fu-temple-shaolin-chine?utm_source=SEO\&utm_medium=thematique\&utm_campaign=voyageinsolite) dans un des plus anciens temples bouddhistes de Chine.
 
 Grâce à ce **voyage insolite** que nous avons concocté pour vous, vous allez pouvoir vous entraîner quotidiennement au Kung-Fu de Shaolin.
 
@@ -73,20 +87,20 @@ Durant votre **séjour insolite** vous aurez l’opportunité de découvrir la p
 
 Un **voyage insolite** unique et authentique que vous n'oublierez pas de sitôt !
 
-## 2\. Visitez un Sri-Lanka insolite à vélo
+## 2. Visitez un Sri-Lanka insolite à vélo
 
-::image-container
----
-image-src: "/images/blogs/voyage-insolite/FvfEBxuJSTe2ZPanzzrn.jpg"
-alt: undefined
----
-::  
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-insolite/FvfEBxuJSTe2ZPanzzrn.jpg
+  ---
+  :::
 
 Quoi de plus original pour vivre comme un local et découvrir des endroits peu touristiques que de monter sur un vélo ?
 
 C’est ce que nous vous proposons avec ce **voyage insolite** qui va vous emmener hors des sentiers battus.
 
-[**Découvrez à vélo la perle de l’Océan Indien**](https://odysway.com/voyages/voyage-velo-sri-lanka?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite) - le Sri Lanka, au fil d’étapes quotidiennes magnifiques et surprenantes, qui vont ravir tous vous sens. 
+[**Découvrez à vélo la perle de l’Océan Indien**](https://odysway.com/voyages/voyage-velo-sri-lanka?utm_source=SEO\&utm_medium=thematique\&utm_campaign=voyageinsolite) - le Sri Lanka, au fil d’étapes quotidiennes magnifiques et surprenantes, qui vont ravir tous vous sens. 
 
 Chaque jour, faites connaissance avec la diversité culturelle de cette petite île si généreuse, ses populations locales, sa délicieuse cuisine et changez de paysage et de tradition tous les 40 km.
 
@@ -96,31 +110,31 @@ Vous aurez l’occasion de reposer vos jambes durant un magnifique trajet en tra
 
 Durant ce **voyage insolite,** nous nous chargeons de l’accompagnement logistique complet - les vélos, les protections, et le guide, vous ne vous souciez que de pédaler à votre rythme et de passer du bon temps !
 
-## 3\. L'insolite calme de la Provence
+## 3. L'insolite calme de la Provence
 
-::image-container
----
-image-src: "/images/blogs/voyage-insolite/neSMdg8T4SFgvX2eXIeO.jpg"
-alt: ouzbekistan-photo.jpeg
----
-::
+  :::image-container
+  ---
+  alt: ouzbekistan-photo.jpeg
+  image-src: /images/blogs/voyage-insolite/neSMdg8T4SFgvX2eXIeO.jpg
+  ---
+  :::
 
 Dans ce monde où tout bouge vite, très vite et où il faut avoir quelque chose à faire en permanence, profiter du silence et d’un rythme moins soutenu sont considérés comme un luxe.
 
 **Voyage insolite** ne rime pas qu’avec aventures et jouer au baroudeur ! Savez-vous qu’il existe en France, un endroit insolite et parfait pour vous poser les questions qui vous tiennent à cœur, vivre un quotidien plus calme, plus tranquille et repartir serein ?
 
-Au cœur du Parc naturel régional de la Sainte-Baume, vous allez pouvoir [**vous immerger dans le quotidien des frères dominicains**](https://odysway.com/voyages/voyage-provence-monastique?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite), qui vivent dans une hostellerie idéalement située en pleine nature.
+Au cœur du Parc naturel régional de la Sainte-Baume, vous allez pouvoir [**vous immerger dans le quotidien des frères dominicains**](https://odysway.com/voyages/voyage-provence-monastique?utm_source=SEO\&utm_medium=thematique\&utm_campaign=voyageinsolite), qui vivent dans une hostellerie idéalement située en pleine nature.
 
 Durant ce **voyage insolite**, vous allez vous offrir un mode de vie plus simple, un échange de manière laïque, humaine avec les **frères dominicains** et un **hébergement insolite** dans un couvent au cœur de la Provence.
 
-## 4\. Osez l'insolite avec Odysway
+## 4. Osez l'insolite avec Odysway
 
-::image-container
----
-image-src: "/images/blogs/voyage-insolite/w0lsuGxlQ5qLSOL8gxaG.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-insolite/w0lsuGxlQ5qLSOL8gxaG.jpg
+  ---
+  :::
 
 Chez Odysway, nous aimons ce qui sort de l’ordinaire, ce qui ne rentre dans aucune case et vivre des aventures hors des sentiers battus.
 
@@ -132,51 +146,50 @@ Ce sont tous ces moments qui resteront gravés dans votre mémoire.
 
 Vous souhaitez **voyager de manière insolite** mais ne savez pas par où commencer ?
 
-Dites-nous tout et nous nous ferons plaisir de vous aider - [**apprendre le Muay Thai**](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite) en plein milieu de la jungle thaïlandaise, [**partir à la rencontre des premiers hommes en Ethiopie**](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite).
+Dites-nous tout et nous nous ferons plaisir de vous aider - [**apprendre le Muay Thai**](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=SEO\&utm_medium=thematique\&utm_campaign=voyageinsolite) en plein milieu de la jungle thaïlandaise, [**partir à la rencontre des premiers hommes en Ethiopie**](https://odysway.com/voyages/voyage-ethiopie-vallee-omo-surma?utm_source=SEO\&utm_medium=thematique\&utm_campaign=voyageinsolite).
 
-Ou encore [**partager le quotidien d’une musheuse dans les Pays de la Loire**](https://odysway.com/voyages/immersion-musheuse-PaysdelaLoire?utm_source=SEO&utm_medium=thematique&utm_campaign=voyageinsolite), c’est possible avec Odysway !
+Ou encore [**partager le quotidien d’une musheuse dans les Pays de la Loire**](https://odysway.com/voyages/immersion-musheuse-PaysdelaLoire?utm_source=SEO\&utm_medium=thematique\&utm_campaign=voyageinsolite), c’est possible avec Odysway !
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

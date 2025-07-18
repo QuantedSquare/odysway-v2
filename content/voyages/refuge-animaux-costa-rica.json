@@ -9,14 +9,14 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partager le quotidien",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-solidaire"
+      "name": "animaux"
     },
     {
-      "name": "ou-partir-en-été"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-hiver"
@@ -34,7 +34,10 @@
       "name": "sejours-chez-l-habitant"
     },
     {
-      "name": "voyage-animalier"
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "voyage-solidaire"
     }
   ],
   "duration": 11,

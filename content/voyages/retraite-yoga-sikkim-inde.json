@@ -9,11 +9,11 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "S'éveiller ailleurs",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-automne"
@@ -26,12 +26,6 @@
     },
     {
       "name": "voyage-initiatique"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-nature"
     }
   ],
   "duration": 16,

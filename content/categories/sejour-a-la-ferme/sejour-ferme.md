@@ -46,11 +46,11 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2020-11-24 09:24:00+00:00
-tags: ""
+tags: ferme
 categories: Culture et decouverte
-displayedImg: ""
+displayedImg: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
@@ -82,7 +82,6 @@ Faire un **séjour immersif dans une ferme** c’est également la possibilité 
 
 ::section-container
 #content
-
 Que vous partiez seul, avec des amis ou avec vos enfants, le **séjour à la ferme** est l’escapade idéale pour prendre un grand bol d’air frais et se ressourcer au contact de la nature et des animaux.
 
 Réveillez vos souvenirs d’enfance en partant avec nous pour gambader dans la nature, mettre les mains dans la terre ou encore prendre soin d’animaux adorables !

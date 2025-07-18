@@ -9,11 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Explorer à pied",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nature"
+    },
+    {
+      "name": "sans-avion"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "trek-et-randonnee"
     }
   ],
   "duration": 5,

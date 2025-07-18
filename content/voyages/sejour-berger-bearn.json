@@ -9,12 +9,9 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partager le quotidien",
   "level": "1",
   "categories": [
-    {
-      "name": "trek-et-randonnee"
-    },
     {
       "name": "ecotourisme"
     },
@@ -22,16 +19,16 @@
       "name": "ou-partir-en-été"
     },
     {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "sejour-a-la-ferme"
-    },
-    {
       "name": "voyage-en-groupe"
+    },
+    {
+      "name": "nature"
+    },
+    {
+      "name": "sans-avion"
+    },
+    {
+      "name": "trek-et-randonnee"
     }
   ],
   "duration": 5,

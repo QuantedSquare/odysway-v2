@@ -16,11 +16,11 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2021-01-19 09:19:00+00:00
 tags: ""
 categories: Culture et decouverte
-displayedImg: ""
+displayedImg: /images/blogs/partir-en-famille/zpE7H8udRhasRbHwcyCr.jpg
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
@@ -79,14 +79,12 @@ Passez un **séjour en famille** dans un cadre calme et reposant, et régalez-vo
 
 ## 2. Protection animale en famille au Sri Lanka
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/partir-en-famille/U77Q8nzaR2WxHxsnQLYk.jpg"
-alt: Protection animale en famille
-----------------------------------
-::
+  :::image-container
+  ---
+  alt: Protection animale en famille
+  image-src: /images/blogs/partir-en-famille/U77Q8nzaR2WxHxsnQLYk.jpg
+  ---
+  :::
 
 Le Sri Lanka est une merveille en termes de faune et de flore ; la perle de l’Océan Indien mérite bien son nom.
 
@@ -100,15 +98,12 @@ Offrez la chance à vos enfants de rencontrer la population locale et de faire c
 
 ## 3. Astronomie en famille dans le Sud-Ouest
 
-## ::image-container
-
----
-
-image-src: "/images/blogs/partir-en-famille/D28vrDnNTi2hRHh68zAd.jpg"
-alt: astronomie en famille
---------------------------
-
-\::
+  :::image-container
+  ---
+  alt: astronomie en famille
+  image-src: /images/blogs/partir-en-famille/D28vrDnNTi2hRHh68zAd.jpg
+  ---
+  :::
 
 L’astronomie fascine, et ce depuis la nuit des temps (ce ne sont pas les enfants qui vont dire le contraire) !
 
@@ -124,12 +119,12 @@ Un **séjour en famille** où vous aurez des étoiles plein les yeux !
 
 ## 4. Odysway et le voyage en groupe
 
-::image-container
----
-alt: voyager en famille avec Odysway
-image-src: /images/blogs/partir-en-famille/zpE7H8udRhasRbHwcyCr.jpg
----
-::
+  :::image-container
+  ---
+  alt: voyager en famille avec Odysway
+  image-src: /images/blogs/partir-en-famille/zpE7H8udRhasRbHwcyCr.jpg
+  ---
+  :::
 
 Odysway veut permettre à tous et à tout âge de découvrir des expériences uniques..
 
@@ -146,7 +141,7 @@ Que vous souhaitiez :
 - leur offrir l’opportunité de [**soigner les animaux de la jungle au Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=SEO\&utm_medium=thematique\&utm_campaign=en_famille). 
 
 Toute l'équipe d’Odysway est à votre service pour que vous passiez un séjour en famille inoubliable !
-\::
+::
 
 ::color-container{color="soft-blush"}
   :::info-container

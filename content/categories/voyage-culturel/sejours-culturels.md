@@ -33,14 +33,22 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2020-11-05 14:44:00+00:00
 tags: Communautés locales
 categories: Culture et decouverte
-displayedImg: ""
+displayedImg: /images/blogs/ou-decouvrir-nouvelles-cultures-tourisme/1fFUmy6aQequwE3cRwfQ.jpg
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section

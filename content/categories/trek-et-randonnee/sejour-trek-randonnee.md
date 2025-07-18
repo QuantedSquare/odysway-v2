@@ -48,7 +48,7 @@ navigation:
 author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: 2020-11-24 08:59:00+00:00
 tags: ""
 categories: Culture et decouverte
@@ -69,21 +69,13 @@ title-color: primary
 Trek et Randonnée : une découverte de sites uniques
 
 #introduction
-Le Trek et la randonnée ont le vent en poupe et on comprend pourquoi ! Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région.
+Le **Trek et la randonnée** ont le vent en poupe et on comprend pourquoi !
 
-Cette forme de tourisme alternatif vous offre la possibilité de séjourner en immersion au sein de communautés locales tout en voyageant de manière éco-responsable.
-
-Choisir de faire un trek ou une randonnée, accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore.
-
-De marcher en prenant le temps de découvrir ce qui vous entoure, de sortir de votre zone de confort en dépassant vos limites et d’arriver éreinté, mais ravi au bout d’un sentier et d’en prendre plein les yeux !
+Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région. Cette forme de **tourisme alternatif** vous offre la possibilité de séjourner **en immersion** au sein de communautés locales, tout en voyageant de manière **éco-responsable**.
 ::
 
 ::section-container
 #content
-Le **Trek et la randonnée** ont le vent en poupe et on comprend pourquoi !
-
-Marcher à la découverte de paysages grandioses sur des chemins de traverses est une façon merveilleuse de découvrir un pays ou une région. Cette forme de **tourisme alternatif** vous offre la possibilité de séjourner **en immersion** au sein de communautés locales, tout en voyageant de manière **éco-responsable**.
-
 Choisir de faire **un trek** ou **une randonnée** accompagné par des guides locaux et expérimentés, c’est la promesse d’explorer, d’avoir accès à des régions parfois reculées et à un écosystème riche en faune et en flore. Vous marchez en prenant le temps de découvrir ce qui vous entoure, et sortez de votre zone de confort en dépassant vos limites. Vous arrivez parfois éreinté, mais tellement ravi d’en prendre plein les yeux au bout d’un sentier !
 
 *“Si tu marches doucement, la terre te portera”* - Proverbe indien.

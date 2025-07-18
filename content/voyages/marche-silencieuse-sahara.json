@@ -9,26 +9,17 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Explorer à pied",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-automne"
     },
     {
-      "name": "ou-partir-au-printemps"
-    },
-    {
       "name": "ou-partir-en-hiver"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-initiatique"
     }
   ],
   "duration": 8,

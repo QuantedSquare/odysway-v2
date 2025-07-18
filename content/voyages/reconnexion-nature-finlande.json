@@ -9,38 +9,32 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
   "categories": [
     {
       "name": "voyage-nature"
     },
     {
-      "name": "voyage-sportif"
+      "name": "au-printemps"
     },
     {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "voyage-en-couple"
+      "name": "voyage-insolite"
     },
     {
       "name": "ou-partir-en-été"
     },
     {
-      "name": "ou-partir-au-printemps"
+      "name": "sport"
+    },
+    {
+      "name": "survie"
     },
     {
       "name": "ecotourisme"
     },
     {
       "name": "trek-et-randonnee"
-    },
-    {
-      "name": "voyage-aventure"
-    },
-    {
-      "name": "survie"
     }
   ],
   "duration": 8,

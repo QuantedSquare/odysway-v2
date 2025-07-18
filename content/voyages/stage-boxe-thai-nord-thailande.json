@@ -9,11 +9,11 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-sportif"
+      "name": "sport"
     },
     {
       "name": "voyage-insolite"
@@ -29,12 +29,6 @@
     },
     {
       "name": "ou-partir-en-été"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "voyage-en-groupe"
     },
     {
       "name": "voyage-arts-martiaux"

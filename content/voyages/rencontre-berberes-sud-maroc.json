@@ -9,44 +9,23 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
-      "name": "trek-et-randonnee"
+      "name": "nature"
     },
     {
-      "name": "ecotourisme"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "voyage-insolite"
+      "name": "au-printemps"
     },
     {
-      "name": "voyage-solidaire"
+      "name": "en-automne"
     },
     {
-      "name": "ou-partir-en-automne"
-    },
-    {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "ou-partir-en-été"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-nature"
+      "name": "ou-partir-en-hiver"
     }
   ],
   "duration": 8,

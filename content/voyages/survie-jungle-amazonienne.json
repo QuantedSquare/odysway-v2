@@ -9,23 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
   "categories": [
     {
       "name": "voyage-nature"
     },
     {
-      "name": "sejours-chez-l-habitant"
+      "name": "nuits-chez-l-habitant"
     },
     {
       "name": "survie"
     },
     {
       "name": "ou-partir-en-été"
-    },
-    {
-      "name": "voyage-en-famille"
     },
     {
       "name": "ou-partir-en-hiver"
@@ -40,13 +37,7 @@
       "name": "voyage-insolite"
     },
     {
-      "name": "voyage-solidaire"
-    },
-    {
       "name": "trek-et-randonnee"
-    },
-    {
-      "name": "voyage-aventure"
     }
   ],
   "duration": 10,

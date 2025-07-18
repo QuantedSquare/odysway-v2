@@ -9,23 +9,26 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
     {
-      "name": "ou-partir-au-printemps"
+      "name": "animaux"
     },
     {
-      "name": "ou-partir-en-été"
+      "name": "sans-avion"
     },
     {
-      "name": "voyage-en-groupe"
+      "name": "photographie"
     },
     {
-      "name": "voyage-animalier"
+      "name": "en-automne"
     },
     {
-      "name": "voyage-nature"
+      "name": "au-printemps"
+    },
+    {
+      "name": "ou-partir-en-ete"
     }
   ],
   "duration": 4,

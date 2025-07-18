@@ -1,31 +1,45 @@
 ---
 title: "Voyage Solidaire : à la découverte des autres"
-description: "Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques."
+description: Le voyage solidaire est une formidable opportunité afin de
+  découvrir l’autre, de participer à un tourisme éco-responsable et de partager
+  des moments uniques.
 seo:
   title: "Voyage Solidaire : à la découverte des autres"
-  description: "Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques."
+  description: Le voyage solidaire est une formidable opportunité afin de
+    découvrir l’autre, de participer à un tourisme éco-responsable et de
+    partager des moments uniques.
 navigation:
   title: "Voyage Solidaire : à la découverte des autres"
-  description: "Le voyage solidaire est une formidable opportunité afin de découvrir l’autre, de participer à un tourisme éco-responsable et de partager des moments uniques."
-author: "Linda Tran"
+  description: Le voyage solidaire est une formidable opportunité afin de
+    découvrir l’autre, de participer à un tourisme éco-responsable et de
+    partager des moments uniques.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
-publishedAt: "2020-11-26 11:34:00+00:00"
+published: true
+publishedAt: 2020-11-26 11:34:00+00:00
 tags: ""
-categories: "Culture et decouverte"
-displayedImg: ""
-blogType: "Actu"
-badgeColor: "secondary"
+categories: Culture et decouverte
+displayedImg: /images/blogs/voyage-solidaire/oc8MJq0wSGieXa9WNA6t.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyage Solidaire : à la découverte des autres
@@ -46,56 +60,56 @@ Chez Odysway, nous avons à cœur de vous aider à voyager de manière solidaire
 
 **Voyager solidaire**, c’est faire l’expérience du partage, du don de soi, de la joie de vivre en immersion avec les communautés locales et comprendre les enjeux auxquels ils font face au quotidien.
 
-_“Enseigner la compréhension entre les humains est la condition et le garant de la solidarité intellectuelle et morale de l'humanité”_ - Edgar Morin.
+*“Enseigner la compréhension entre les humains est la condition et le garant de la solidarité intellectuelle et morale de l'humanité”* - Edgar Morin.
 
 Voici les meilleures expériences de **voyages solidaires** proposées par Odysway :
 
-## **1\. Solidaire avec les animaux au Costa Rica**
+## **1. Solidaire avec les animaux au Costa Rica**
 
-::image-container
----
-image-src: "/images/blogs/voyage-solidaire/5heSbNTR2eVFeANk6gwt.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-solidaire/5heSbNTR2eVFeANk6gwt.jpg
+  ---
+  :::
 
 Sur les 4 continents, on constate avec dépit que de plus en plus d’espèces animales sont menacées d’extinction.
 
-Braconnage, déforestation, tourisme de masse, les dangers ne manquent pas et la liste est longue, malheureusement. Vous pouvez changer la donne à votre niveau en participant à [**un voyage solidaire au cœur de la jungle du Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) au cours duquel vous aiderez  et soignerez des animaux blessés ou orphelins.
+Braconnage, déforestation, tourisme de masse, les dangers ne manquent pas et la liste est longue, malheureusement. Vous pouvez changer la donne à votre niveau en participant à [**un voyage solidaire au cœur de la jungle du Costa Rica**](https://odysway.com/voyages/refuge-animaux-costa-rica?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyagesolidaire) au cours duquel vous aiderez  et soignerez des animaux blessés ou orphelins.
 
 C’est dans un refuge ayant pour mission de réintroduire ces animaux de la forêt tropicale dans leur habitat naturel,  que vous pourrez partager et donner votre amour à ces créatures fantastiques. Faire connaissance avec les animaux, préparer leurs repas, interagir avec eux, c’est entre autres ce qui vous attend durant ce **périple** au Costa Rica.
 
 Vous serez logé chez l’habitant afin de **vivre en immersion** au cœur de la jungle, et aurez l’opportunité de découvrir les beautés du Costa Rica : volcans, balades à cheval, rafting, sources d’eau chaudes et paysages à couper le souffle.
 
-## 2\. Solidarité et méditation au Népal
+## 2. Solidarité et méditation au Népal
 
-::image-container
----
-image-src: "/images/blogs/voyage-solidaire/GcF6LYPSPGNCJo0LULE5.jpg"
-alt: undefined
----
-::  
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-solidaire/GcF6LYPSPGNCJo0LULE5.jpg
+  ---
+  :::
 
 Offrez-vous l’opportunité de vivre comme les locaux, à leur rythme, de comprendre les enjeux auxquels ils font face au quotidien et de partager leurs joies.
 
-Au Népal par exemple, au contact de jeunes moines, vous pourrez [**vivre en immersion dans un monastère bouddhiste,**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) dans la région de Katmandou. 
+Au Népal par exemple, au contact de jeunes moines, vous pourrez [**vivre en immersion dans un monastère bouddhiste,**](https://odysway.com/voyages/immersion-ecole-bouddhiste-nepal?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyagesolidaire) dans la région de Katmandou. 
 
 Durant ce **voyage solidaire**, vous jouerez un rôle dans leur éducation et apprendrez les bases du bouddhisme tibétain à la source ; une expérience de vie unique.
 
 Vous logerez au sein même du monastère dans un environnement empreint de sérénité, et aurez également l’opportunité de découvrir Katmandou et sa vallée aux paysages à couper le souffle.
 
-## 3\. Solidarité en Afrique du Sud
+## 3. Solidarité en Afrique du Sud
 
-::image-container
----
-image-src: "/images/blogs/voyage-solidaire/MSNxhVjQVqMUr93EN4Cg.jpg"
-alt: Solidarité en Afrique du Sud
----
-::
+  :::image-container
+  ---
+  alt: Solidarité en Afrique du Sud
+  image-src: /images/blogs/voyage-solidaire/MSNxhVjQVqMUr93EN4Cg.jpg
+  ---
+  :::
 
 L’Afrique du Sud, la “rainbow nation” aux paysages et cultures si variés, possède une grande variété d'écosystèmes ainsi qu’une faune et une flore très diversifiées qui vous enchantera durant cette expérience hors du commun !
 
-C’est non loin du Cap, que vous allez [**vivrez quotidiennement en immersion avec des félins**](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) et serez hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
+C’est non loin du Cap, que vous allez [**vivrez quotidiennement en immersion avec des félins**](https://odysway.com/voyages/felins-afrique-du-sud?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyagesolidaire) et serez hébergé chez l’habitant afin de découvrir le mode de vie sud-africain.
 
 Ce **voyage solidair**e vous offre la possibilité de participer à un projet unique de conservation. Vous effectuerez de petits travaux agricoles, apprendrez à communiquer avec les félins et à créer des liens forts avec eux. Les félins de ce sanctuaire ont été sauvés du braconnage, des zoos et d’autres environnements peu amicaux pour eux. Vous apprendrez à les connaître ainsi que leur parcours parfois très triste.
 
@@ -103,14 +117,14 @@ Dans le sanctuaire, tout est fait pour qu’ils soient heureux et épanouis, ils
 
 Vous aurez également la chance de découvrir le Cap, ses magnifiques plages et ses décors époustouflants.
 
-## 4\. Odysway et le voyage solidaire
+## 4. Odysway et le voyage solidaire
 
-::image-container
----
-image-src: "/images/blogs/voyage-solidaire/oc8MJq0wSGieXa9WNA6t.jpg"
-alt: Odysway et le voyage solidaire
----
-::
+  :::image-container
+  ---
+  alt: Odysway et le voyage solidaire
+  image-src: /images/blogs/voyage-solidaire/oc8MJq0wSGieXa9WNA6t.jpg
+  ---
+  :::
 
 Chez Odysway, nous sommes sensibles à la cause animale et humaine et avons à cœur de permettre à tous ceux qui partagent ce sentiment, de donner un sens à leur voyage.
 
@@ -122,53 +136,52 @@ Toute l'équipe d’Odysway est là pour vous guider dans votre choix de **voyag
 
 Que vous souhaitiez : 
 
-*   [**vous occuper d'éléphants**](https://odysway.com/voyages/sanctuaire-%C3%A9l%C3%A9phants-thailande?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) dans leur sanctuaire en Thaïlande ; 
-*   [**soutenir les populations locales au coeur de la jungle amazonienne**](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) ;
-*   partir à la [**découverte de la culture quechua au Pérou**](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=SEO&utm_medium=BlogPost&utm_campaign=voyagesolidaire) et rencontrer un chamane. 
+- [**vous occuper d'éléphants**](https://odysway.com/voyages/sanctuaire-%C3%A9l%C3%A9phants-thailande?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyagesolidaire) dans leur sanctuaire en Thaïlande ; 
+- [**soutenir les populations locales au coeur de la jungle amazonienne**](https://odysway.com/voyages/survie-jungle-amazonienne?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyagesolidaire) ;
+- partir à la [**découverte de la culture quechua au Pérou**](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=SEO\&utm_medium=BlogPost\&utm_campaign=voyagesolidaire) et rencontrer un chamane. 
 
 Nous sommes à votre disposition pour toute question.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::
