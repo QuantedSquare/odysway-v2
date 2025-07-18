@@ -1,5 +1,6 @@
 <template>
   <v-btn
+    v-if="!external"
     :to="link"
     :color="color"
     height="62"
@@ -13,6 +14,20 @@
       class="text-body-1 font-weight-bold mx-4"
       :class="`text-${textColor}`"
     >
+      <slot
+        mdc-unwrap="p"
+        name="text"
+      />
+    </div>
+  </v-btn>
+  <v-btn
+    v-else
+    :href="link"
+    :color="color"
+    height="62"
+    size="large"
+  >
+    <div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4">
       <slot
         mdc-unwrap="p"
         name="text"
