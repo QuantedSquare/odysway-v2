@@ -1,31 +1,46 @@
 ---
-title: "Le Sri Lanka, une île aux mille saveurs"
-description: "Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ..."
+title: Le Sri Lanka, une île aux mille saveurs
+description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une
+  goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au
+  XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît
+  aujourd’hui de ses cendres après plus de trente années de ...
 seo:
-  title: "Sri Lanka"
-  description: "Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan"
+  title: Sri Lanka
+  description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une
+    goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan
 navigation:
-  title: "Le Sri Lanka, une île aux mille saveurs"
-  description: "Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît aujourd’hui de ses cendres après plus de trente années de ..."
-author: "Romain Masina"
+  title: Le Sri Lanka, une île aux mille saveurs
+  description: Pourquoi voyager au Sri Lanka ? Le Sri Lanka prend la forme d’une
+    goutte d’eau au sud de l’Inde, dans l’Océan Indien. Il était appelé Ceylan
+    au XXe siècle, du temps de la colonisation des Anglais. Le Sri Lanka renaît
+    aujourd’hui de ses cendres après plus de trente années de ...
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
-publishedAt: "2020-05-29 12:38:00+00:00"
+published: true
+publishedAt: 2020-05-29 12:38:00+00:00
 tags: ""
 categories: ""
 displayedImg: ""
-blogType: "Actu"
-badgeColor: "secondary"
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Le Sri Lanka, une île aux mille saveurs
@@ -42,12 +57,12 @@ Le Sri Lanka prend la forme d’une goutte d’eau au sud de l’Inde, dans l’
 
 Le pays possède une **forte diversité culturelle et spirituelle**. Son histoire et sa position géographique lui confèrent des influences multiples qui se retrouvent dans les lieux historiques. Sept sites sont inscrits au patrimoine mondial de l’UNESCO. Les rois du passé ont laissé leurs traces avec des cités anciennes comme Anuradhapura, Polonnaruwa, ou Sigiriya.
 
-::image-container
----
-image-src: "/images/blogs/sri-lanka/2pSWpstVQkGVDe2PQk86.jpg"
-alt: Sri Lanka Sigiriya
----
-::
+  :::image-container
+  ---
+  alt: Sri Lanka Sigiriya
+  image-src: /images/blogs/sri-lanka/2pSWpstVQkGVDe2PQk86.jpg
+  ---
+  :::
 
 Sigiriya, encore appelé Rocher du Lion.
 
@@ -71,9 +86,9 @@ Pour un **séjour entre 30 et 90 jours, une E.T.A. payante est obligatoire**. Se
 
 En plus de ce formulaire à remplir :
 
-*   votre passeport doit avoir une validité d’au moins 6 mois après la date d’entrée ;
-*   vous devez être en possession d’un billet de retour ;
-*   vous devez pouvoir justifier de vos ressources pour la durée du séjour. 
+- votre passeport doit avoir une validité d’au moins 6 mois après la date d’entrée ;
+- vous devez être en possession d’un billet de retour ;
+- vous devez pouvoir justifier de vos ressources pour la durée du séjour. 
 
 ## Climat : quand partir au Sri Lanka ?
 
@@ -99,10 +114,10 @@ N’oubliez pas vos tongs et un maillot de bain, des lunettes de soleil, un chap
 
 Prévoyez une **trousse à pharmacie** avec les médicaments essentiels :
 
-*   une boîte de doliprane ou d’aspirine ;
-*   du smecta et de l’immodium ;
-*   de la crème solaire et de la Biafine ;
-*   une lotion anti-moustique et une crème pour apaiser les piqûres d’insectes.
+- une boîte de doliprane ou d’aspirine ;
+- du smecta et de l’immodium ;
+- de la crème solaire et de la Biafine ;
+- une lotion anti-moustique et une crème pour apaiser les piqûres d’insectes.
 
 Il y a peu de paludisme au Sri Lanka, mais demandez l’avis de votre médecin.
 
@@ -126,9 +141,9 @@ Pour un voyage au plus proche de la population locale, [visitez le Sri Lanka à 
 
 Tout dépend de votre standing :
 
-*   pour les **petits budgets**, vous pouvez compter moins de 25 euros par jour. Il suffira d’emprunter les transports locaux, de dormir dans des « guesthouses », de manger local et de faire des choix de visites ;
-*   pour un **budget un peu plus confortable**, comptez entre 30 et 70 euros la journée. À ce tarif, vous aurez des chambres avec climatisation, un transport avec chauffeur, des restaurants plus diversifiés et vous visiterez l’essentiel du patrimoine ;
-*   le Sri Lanka peut aussi se visiter de façon **haut de gamme**. Vous séjournerez dans des hôtels-boutique, voyagerez avec un chauffeur et vous pourrez prévoir un budget pour des activités atypiques comme un vol de montgolfière.
+- pour les **petits budgets**, vous pouvez compter moins de 25 euros par jour. Il suffira d’emprunter les transports locaux, de dormir dans des « guesthouses », de manger local et de faire des choix de visites ;
+- pour un **budget un peu plus confortable**, comptez entre 30 et 70 euros la journée. À ce tarif, vous aurez des chambres avec climatisation, un transport avec chauffeur, des restaurants plus diversifiés et vous visiterez l’essentiel du patrimoine ;
+- le Sri Lanka peut aussi se visiter de façon **haut de gamme**. Vous séjournerez dans des hôtels-boutique, voyagerez avec un chauffeur et vous pourrez prévoir un budget pour des activités atypiques comme un vol de montgolfière.
 
 ## Comment gérer son argent au Sri Lanka ? 
 
@@ -146,12 +161,12 @@ Découvrez le top 9 des incontournables du Sri Lanka.
 
 Ce site se situe dans ce qu’on appelle le triangle culturel. Incontournable et immense, Anuradhapura a été la première capitale du Sri Lanka. C’est encore aujourd’hui un lieu de culte du bouddhisme cinghalais. De nombreux fidèles viennent s’y recueillir et cette cité antique reste extrêmement vivante. Ne manquez pas le Sri Maha Bodhi. Ce temple est construit autour de l’arbre sacré, issu d’une bouture de l’arbre sous lequel Bouddha atteignit l’éveil.
 
-::image-container
----
-image-src: "/images/blogs/sri-lanka/yJH506IQUqsFLJjRGuue.jpg"
-alt: Sri Lanka Anuradhapura
----
-::
+  :::image-container
+  ---
+  alt: Sri Lanka Anuradhapura
+  image-src: /images/blogs/sri-lanka/yJH506IQUqsFLJjRGuue.jpg
+  ---
+  :::
 
 Dans la cité antique d'Anuradhapura.
 
@@ -165,12 +180,12 @@ Autrement appelées le rocher du lion, les ruines du palais se situent sur un é
 
 Polonnaruwa fut la capitale du Sri Lanka du Xe au XIIIe siècle. Classée au patrimoine mondial de l’UNESCO, elle est plus tranquille que les deux autres sites car moins visitée. La nature y a repris ses droits depuis son déclin. Vous vous promènerez entre des ruines souvent recouvertes de végétation, ce qui procure au lieu une ambiance irréelle et magique.
 
-::image-container
----
-image-src: "/images/blogs/sri-lanka/YjO49PgzRJyRAjzEY1SX.jpg"
-alt: Sri Lanka Polonnaruwa
----
-::
+  :::image-container
+  ---
+  alt: Sri Lanka Polonnaruwa
+  image-src: /images/blogs/sri-lanka/YjO49PgzRJyRAjzEY1SX.jpg
+  ---
+  :::
 
 Les temples antiques de Polonnaruwa.
 
@@ -184,18 +199,18 @@ Pour un voyage au plus proche des animaux du Sri Lanka, [participez à la sauveg
 
 ### 5.     La ville spirituelle de Kandy 
 
-Aux portes des montagnes, Kandy fut la capitale économique du Sri Lanka avant Colombo et reste aujourd’hui la ville culturelle et spirituelle du pays. Son principal attrait touristique est le **Temple de la Dent****,** qui abrite la relique de la dent de Bouddha. Le lac est aussi agréable. Un spectacle de danse typique et la visite du jardin botanique sont aussi à faire.
+Aux portes des montagnes, Kandy fut la capitale économique du Sri Lanka avant Colombo et reste aujourd’hui la ville culturelle et spirituelle du pays. Son principal attrait touristique est le **Temple de la Dent**\*\*,\*\* qui abrite la relique de la dent de Bouddha. Le lac est aussi agréable. Un spectacle de danse typique et la visite du jardin botanique sont aussi à faire.
 
 ### 6.     Un voyage en train dans les plantations de thé
 
 Ce train est encore utilisé par les locaux pour se déplacer dans la région montagneuse. L’expérience y est insolite et authentique. Pour plus de confort et l’air conditionné, préférez la 1ère classe. Pour une expérience plus locale, choisissez la seconde. Préparez-vous à en prendre plein les yeux. L’atmosphère des hauts plateaux est plus fraîche et les paysages constitués de cascades, de plantations de thé et de forêts tropicales sont sublimes.
 
-::image-container
----
-image-src: "/images/blogs/sri-lanka/VTIgkf2HQNmEHSRH8qTC.jpg"
-alt: srilanka.jpg
----
-::
+  :::image-container
+  ---
+  alt: srilanka.jpg
+  image-src: /images/blogs/sri-lanka/VTIgkf2HQNmEHSRH8qTC.jpg
+  ---
+  :::
 
 Le célèbre train du Sri Lanka reliant Ella à Hatton.
 
@@ -205,12 +220,12 @@ Dans cette région des hauts-plateaux, la marche est de mise. Par exemple, l’a
 
 Au sommet, vous apprécierez le lever de soleil et l’empreinte de pas gravée dans la roche qui attire tant de fidèles. Selon les religions, les croyances diffèrent. Pour les bouddhistes, elle est la trace du pied de Bouddha, pour les hindous, celle de Shiva, pour les musulmans, celle d’Adam et pour les chrétiens, celle de Saint-Thomas.
 
-::image-container
----
-image-src: "/images/blogs/sri-lanka/4A8XSgFGSV2tl9XWgqJ2.jpg"
-alt: Sri Lanka Adam’s Peak
----
-::
+  :::image-container
+  ---
+  alt: Sri Lanka Adam’s Peak
+  image-src: /images/blogs/sri-lanka/4A8XSgFGSV2tl9XWgqJ2.jpg
+  ---
+  :::
 
 Vue sur l'Adam’s Peak.
 
@@ -222,56 +237,55 @@ Si vous avez besoin de repos et de vous prélasser sur la plage, cap au sud. Fai
 
 Ne manquez pas le fort de Galle et une promenade sur les remparts, inscrits au patrimoine mondial de l’UNESCO. Le charme de cette ancienne colonie portugaise puis hollandaise ne vous laissera pas de marbre. De belles architectures coloniales se mélangent aux édifices religieux (églises, mosquée et temples) qui témoignent des différentes communautés vivant à Galle.
 
-::image-container
----
-image-src: "/images/blogs/sri-lanka/Zc2zdFpjToudSN3Mdl1i.jpg"
-alt: Sri Lanka Galle
----
-::
+  :::image-container
+  ---
+  alt: Sri Lanka Galle
+  image-src: /images/blogs/sri-lanka/Zc2zdFpjToudSN3Mdl1i.jpg
+  ---
+  :::
 
 La ville de Galle avec son phare.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

@@ -16,7 +16,7 @@ navigation:
 author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: 2022-06-01 12:00:00+00:00
 tags: Asie, conseils, Nepal
 categories: Blog
@@ -24,6 +24,14 @@ displayedImg: /images/blogs/le-nepal-pour-un-voyage-entre-ciel-et-terre/0OVnDSiF
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section

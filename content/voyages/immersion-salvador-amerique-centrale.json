@@ -9,26 +9,23 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-culturel"
+      "name": "nature"
     },
     {
-      "name": "voyage-nature"
+      "name": "au-printemps"
     },
     {
-      "name": "ecotourisme"
+      "name": "ou-partir-en-ete"
     },
     {
-      "name": "ou-partir-en-automne"
+      "name": "en-automne"
     },
     {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "voyage-en-groupe"
+      "name": "ou-partir-en-hiver"
     }
   ],
   "duration": 14,

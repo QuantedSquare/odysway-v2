@@ -9,47 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Explorer à pied",
   "level": "1",
   "categories": [
     {
       "name": "voyage-nature"
     },
     {
-      "name": "voyage-aventure"
-    },
-    {
-      "name": "trek-et-randonnee"
-    },
-    {
-      "name": "voyage-culturel"
-    },
-    {
-      "name": "ou-partir-en-automne"
+      "name": "en-automne"
     },
     {
       "name": "ou-partir-en-hiver"
     },
     {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "voyage-initiatique"
-    },
-    {
-      "name": "ecotourisme"
-    },
-    {
-      "name": "astronomie"
-    },
-    {
-      "name": "ou-partir-au-printemps"
+      "name": "au-printemps"
     }
   ],
   "duration": 10,

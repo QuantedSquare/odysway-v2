@@ -9,18 +9,19 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-en-groupe"
+      "name": "nature"
     },
     {
-      "name": "voyage-nature"
+      "name": "trek-et-randonnee"
     },
     {
-      "name": "ou-partir-en-hiver"
-    }
+      "name": "au-printemps"
+    },
+    {}
   ],
   "duration": 8,
   "nights": 7,

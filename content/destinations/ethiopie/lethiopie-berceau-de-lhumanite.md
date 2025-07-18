@@ -19,7 +19,7 @@ navigation:
 author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: 2020-04-17 14:01:00+00:00
 tags: ""
 categories: ""
@@ -27,6 +27,14 @@ displayedImg: /images/blogs/lethiopie-berceau-de-lhumanite/MTQfMRnOQTKViDZAuKzZ.
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section

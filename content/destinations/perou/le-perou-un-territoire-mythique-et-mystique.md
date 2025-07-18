@@ -1,31 +1,47 @@
 ---
-title: "Le Pérou, un territoire mythique et mystique"
-description: "Quelles sont les formalités pour partir au Pérou ? Comment se déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi voyager au Pérou ? Berceau de civilisations légendaires, des paysages à couper ..."
+title: Le Pérou, un territoire mythique et mystique
+description: Quelles sont les formalités pour partir au Pérou ? Comment se
+  déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un
+  guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi voyager
+  au Pérou ? Berceau de civilisations légendaires, des paysages à couper ...
 seo:
-  title: "voyager au Pérou"
-  description: "Civilisations légendaires, paysages à couper le souffle, population avenante, il existe mille et une raisons pour voyager au Pérou."
+  title: voyager au Pérou
+  description: Civilisations légendaires, paysages à couper le souffle, population
+    avenante, il existe mille et une raisons pour voyager au Pérou.
 navigation:
-  title: "Le Pérou, un territoire mythique et mystique"
-  description: "Quelles sont les formalités pour partir au Pérou ? Comment se déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi voyager au Pérou ? Berceau de civilisations légendaires, des paysages à couper ..."
-author: "Romain Masina"
+  title: Le Pérou, un territoire mythique et mystique
+  description: Quelles sont les formalités pour partir au Pérou ? Comment se
+    déplacer une fois sur place ? Que voir absolument une fois là-bas ? Voici un
+    guide pour vous aider à préparer votre futur voyage au Pérou. Pourquoi
+    voyager au Pérou ? Berceau de civilisations légendaires, des paysages à
+    couper ...
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
-publishedAt: "2020-04-17 13:07:00+00:00"
+published: true
+publishedAt: 2020-04-17 13:07:00+00:00
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/tHEfnbwiTtC11DaEb6z8.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+displayedImg: /images/blogs/le-perou-un-territoire-mythique-et-mystique/tHEfnbwiTtC11DaEb6z8.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Le Pérou, un territoire mythique et mystique
@@ -40,12 +56,12 @@ Quelles sont les formalités pour partir au Pérou ? Comment se déplacer une fo
 
 Berceau de civilisations légendaires, des paysages à couper le souffle, une population avenante, il existe mille et une raisons pour **voyager au Pérou**. Un séjour dans ce pays d’Amérique du Sud ne peut pas être envisagé sans s’intéresser à la civilisation des Incas. Ce peuple mythique a laissé derrière lui de nombreuses traces de ses constructions inégalées à ce jour, comme le **Machu Picchu**. Vous pouvez admirer l’incroyable ingéniosité des Incas en visitant les nombreux **sites archéologiques** formant un formidable musée à ciel ouvert.
 
-::image-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/5U4T1yoeR6JMxvRAlUZw.jpg"
-alt: 1e863c3bb9-108100-machu-picchu-histoi...
----
-::
+  :::image-container
+  ---
+  alt: 1e863c3bb9-108100-machu-picchu-histoi...
+  image-src: /images/blogs/le-perou-un-territoire-mythique-et-mystique/5U4T1yoeR6JMxvRAlUZw.jpg
+  ---
+  :::
 
 Fort de son **passé historique et colonial**, le Pérou possède de très beaux monuments notamment dans les grandes villes comme Lima, Cuzco ou Arequipa. Les maisons coloniales, les rues pavées, les églises et les cathédrales font partie de ce très beau patrimoine bâti.
 
@@ -55,7 +71,7 @@ Le Pérou, c’est aussi une **nature riche et variée** allant du désert à d
 
 ## Les vaccins nécessaires
 
-**A****ucun** **vaccin** n'est obligatoire pour **voyager au Pérou**. Cependant, il est recommandé d’être protégé par les vaccinations universelles ainsi que l’hépatite A. Selon la zone où vous vous rendez, il est également fortement conseillé de se faire vacciner contre la fièvre jaune et de prendre un traitement contre le paludisme. Si vous comptez effectuer un séjour prolongé, pensez à l’hépatite B, la rage et la typhoïde.
+**A\*\*\*\*ucun** **vaccin** n'est obligatoire pour **voyager au Pérou**. Cependant, il est recommandé d’être protégé par les vaccinations universelles ainsi que l’hépatite A. Selon la zone où vous vous rendez, il est également fortement conseillé de se faire vacciner contre la fièvre jaune et de prendre un traitement contre le paludisme. Si vous comptez effectuer un séjour prolongé, pensez à l’hépatite B, la rage et la typhoïde.
 
 NB sur le mal des montagnes : il survient lorsque l’on monte trop vite en altitude et à la suite d'un manque d’oxygène en haute altitude. Il se traduit par des maux de tête, des nausées, des vertiges, de la fatigue… Pour le prévenir, il faut s’acclimater progressivement.
 
@@ -67,16 +83,16 @@ Dans le cadre d’un voyage inférieur à 183 jours, les ressortissants françai
 
 Il existe deux saisons au Pérou : la **saison** **sèche** qui correspond à l’hiver et qui va d’avril à novembre. Et la **saison** **des** **pluies**, l’été, qui dure du mois de novembre au mois de mars. Le pays s’étend sur près de 3 000 km, il existe donc des variations de climat :
 
-*   **sur** **la** **côte** **pacifique** : il fait chaud de décembre à février et froid le reste de l’année ; et la brume s’installe entre les mois de mai et septembre ;
-*   **dans** **les** **Andes** : il pleut de décembre à avril et les nuits sont plutôt fraîches ; de juin à octobre, c’est la saison sèche et il fait beau et chaud (mais les nuits restent également fraîches). La meilleure période pour **voyager au Pérou** dans cette région se situe aux mois de mai et de juin ;
-*   **en** **Amazonie** : de décembre à avril, vous ferez face à des pluies diluviennes à l’inverse de la saison sèche qui s’étend de juin à août où il fait très chaud et humide.
+- **sur** **la** **côte** **pacifique** : il fait chaud de décembre à février et froid le reste de l’année ; et la brume s’installe entre les mois de mai et septembre ;
+- **dans** **les** **Andes** : il pleut de décembre à avril et les nuits sont plutôt fraîches ; de juin à octobre, c’est la saison sèche et il fait beau et chaud (mais les nuits restent également fraîches). La meilleure période pour **voyager au Pérou** dans cette région se situe aux mois de mai et de juin ;
+- **en** **Amazonie** : de décembre à avril, vous ferez face à des pluies diluviennes à l’inverse de la saison sèche qui s’étend de juin à août où il fait très chaud et humide.
 
-::image-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/S9FgMteERziwfHKWALwK.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/le-perou-un-territoire-mythique-et-mystique/S9FgMteERziwfHKWALwK.jpg
+  ---
+  :::
 
 Infographie Climat – [Partir.com](https://www.partir.com/) ©
 
@@ -118,33 +134,33 @@ Il y a tant de choses à voir ! Voici une sélection de **14 lieux incontournab
 
 Capitale dynamique du Pérou, **Lima** est une ville coloniale où les traces du passé des conquistadors sont encore bien présentes. Flânez dans la vieille ville à la découverte des monastères, dont celui de Saint-François et ses catacombes, des églises baroques, de la cathédrale ou encore de la place d’Armes. La ville compte plusieurs très beaux musées comme l’incontournable **musée** **Larco** où sont exposées des œuvres de l’art précolombien. Sans oublier le quartier branché de **Barranco** et celui de **Miraflores** (et son parc de l’Amour) situé sur une falaise face à l’océan. Lima, c’est aussi la **capitale** **gastronomique** **d’Amérique** **du** **Sud**, ne passez pas à côté des spécialités culinaires du pays lors de votre séjour au Pérou.
 
-::image-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/MH2LTThfTJSqc10q7Gu8.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/le-perou-un-territoire-mythique-et-mystique/MH2LTThfTJSqc10q7Gu8.jpg
+  ---
+  :::
 
 ### Le Machu Picchu
 
-Comment ne pas mentionner le célèbre **Machu** **Picchu** ? C’est le site par excellence à visiter lors d'un **voyage au Pérou**. Perché à 2 430 m d’altitude, les historiens n’ont pas réussi à définir la fonction première de cette cité perdue : forteresse ? Sanctuaire ? Le mystère reste entier. En soi, ce site exceptionnel de l’Empire inca date du milieu du XVe siècle et fait partie des **sept merveilles** **du** **monde**. Inscrit au patrimoine mondial de l’Unesco**,** il offre un panorama incroyable et vous pourrez y observer notamment des temples en pierre et des cultures en terrasses.
+Comment ne pas mentionner le célèbre **Machu** **Picchu** ? C’est le site par excellence à visiter lors d'un **voyage au Pérou**. Perché à 2 430 m d’altitude, les historiens n’ont pas réussi à définir la fonction première de cette cité perdue : forteresse ? Sanctuaire ? Le mystère reste entier. En soi, ce site exceptionnel de l’Empire inca date du milieu du XVe siècle et fait partie des **sept merveilles** **du** **monde**. Inscrit au patrimoine mondial de l’Unesco\*\*,\*\* il offre un panorama incroyable et vous pourrez y observer notamment des temples en pierre et des cultures en terrasses.
 
 ### La vallée sacrée des Incas
 
 Lieu ancestral, **la vallée** **sacrée** est le berceau de la civilisation des Incas. Vous y trouverez des ruines, d’anciens postes militaires ainsi que des villages vivant de la fabrication de tissus et de la terre. Parmi les ruines, ne manquez pas celles de **Pisaq, d’Urubamba et d’Ollantaytambo**. La Vallée sacrée se prête également à différentes activités sportives comme la randonnée, le trek et le rafting.
 
-Profitez de votre présence dans cette vallée mythique pour tester les **voyages** **Odysway** qui vous feront découvrir le Pérou autrement : [Voyager avec un chamane](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article&utm_medium=blog&utm_campaign=perou+territoire+mythique) 
+Profitez de votre présence dans cette vallée mythique pour tester les **voyages** **Odysway** qui vous feront découvrir le Pérou autrement : [Voyager avec un chamane](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article\&utm_medium=blog\&utm_campaign=perou+territoire+mythique) 
 
 ### Cuzco
 
 **Cuzco** est l’ancienne capitale de l’Empire inca. Située à 3 400 m d’altitude, cette ville est un mélange entre **héritage** **inca** **et** **colonial**. On y retrouve de belles maisons coloniales au balcon de bois sculpté, une cathédrale, des églises, un temple du Soleil, des rues pavées… Le tout forme un ensemble authentique et plein de charme. Et que dire de la **vue** **sur** **la cordillère** **des** **Andes** ? Magique.
 
-::image-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/QUE03AgyQa2SnbuKE6OH.jpg"
-alt: cuzco-3-1024x683.jpg
----
-::
+  :::image-container
+  ---
+  alt: cuzco-3-1024x683.jpg
+  image-src: /images/blogs/le-perou-un-territoire-mythique-et-mystique/QUE03AgyQa2SnbuKE6OH.jpg
+  ---
+  :::
 
 ### Le canyon de Colca
 
@@ -158,12 +174,12 @@ En plein milieu désert, à 2 300 m d’altitude, **Arequipa** est la deuxièm
 
 À 3 800 m d’altitude, **le** l**ac** **Titicaca** est le plus haut lac navigable du monde. Il est connu pour ses **îles** **flottantes** **en** **roseaux** (appelées totora) où résident environ 2 000 habitants. Une véritable ville sur l’eau ! Un lieu unique au monde où vous pouvez vous immerger totalement dans la culture et le mode de vie du lac en logeant sur l’une des 40 îles.
 
-::image-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/141nGTouTEG9seNCg4ca.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/le-perou-un-territoire-mythique-et-mystique/141nGTouTEG9seNCg4ca.jpg
+  ---
+  :::
 
 ### Les lignes de Nazca
 
@@ -193,54 +209,53 @@ Voici une autre merveille de la nature. Dans la cordillère des Andes, **la mon
 
 **La cuisine péruvienne est diversifiée et très gourmande**. Que vous mangiez dans les petites échoppes de rue ou dans les restaurants, il est certain que vous ferez un bon repas. La spécialité du pays est **le ceviche**, ce plat de poisson mariné dans du jus de citron, de l’ail, de la coriandre et des piments. Il existe d’ailleurs de nombreux cevicherias, des restaurants spécialisés dans la préparation de ce plat. Vous pouvez également tenter le cuy, c’est-à-dire le cochon d’Inde, qui est le plat traditionnel du dimanche et des jours de fête. N’hésitez pas à aller flâner dans les marchés pour savourer de succulents fruits exotiques.
 
-::image-container
----
-image-src: "/images/blogs/le-perou-un-territoire-mythique-et-mystique/WXoNxQMPRc2QDYQFTvmQ.jpg"
-alt: undefined
----
-::
-::
-::color-container
----
-color: soft-blush
----
-  ::info-container
-  #title
-  Découvrir les voyages coups de coeur
-  #description
-  Partez à la découverte de destinations qui nous ont conquis.
-  #bottom
-  ::cta-button
+  :::image-container
   ---
-  link: /
-  color: secondary
+  alt: undefined
+  image-src: /images/blogs/le-perou-un-territoire-mythique-et-mystique/WXoNxQMPRc2QDYQFTvmQ.jpg
   ---
-  #text
-  Découvrir
-  ::
-  ::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="soft-blush"}
+  :::info-container
+  #title
+  Découvrir les voyages coups de coeur
+  
+  #description
+  Partez à la découverte de destinations qui nous ont conquis.
+  
+  #bottom
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
+::
+
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

@@ -121,7 +121,7 @@ Pensez à prendre les médicaments essentiels :
 
 Les lignes de bus sont développées sur l’ensemble du territoire. Les tarifs pratiqués sont raisonnables. Les bus étant contrôlés, pensez à demander votre justificatif de transport.
 
-Il existe trois importantes sociétés de bus : *CTM*\_, Supratours\_ et *SATAS*. Concernant les plus petites compagnies, le confort sera moindre et la sécurité aussi.
+Il existe trois importantes sociétés de bus : *CTM*, *Supratours* et *SATAS*. Concernant les plus petites compagnies, le confort sera moindre et la sécurité aussi.
 
 ### Se déplacer en stop
 
@@ -145,7 +145,7 @@ La conduite est réputée dangereuse. Même si un nouveau code de la route plus 
 
 ## Le coût de la vie au Maroc, quel budget prévoir ?
 
-La monnaie marocaine est le **dirham**\*\*.\*\* Des bureaux de change et des banques se trouvent facilement dans les grandes villes. Le taux pratiqué à l’aéroport n’est pas avantageux donc changez seulement une petite somme à votre arrivée. Changer son argent est plus intéressant que de le retirer à un distributeur ou de payer directement en carte, car les commissions sont excessives.
+La monnaie marocaine est le **dirham**. Des bureaux de change et des banques se trouvent facilement dans les grandes villes. Le taux pratiqué à l’aéroport n’est pas avantageux donc changez seulement une petite somme à votre arrivée. Changer son argent est plus intéressant que de le retirer à un distributeur ou de payer directement en carte, car les commissions sont excessives.
 
 ## Comment gérer son argent au Maroc ?
 

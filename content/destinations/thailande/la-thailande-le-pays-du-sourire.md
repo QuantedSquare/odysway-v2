@@ -1,37 +1,54 @@
 ---
-title: "La Thaïlande, le pays du sourire"
-description: "Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement. Le ..."
+title: La Thaïlande, le pays du sourire
+description: Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en
+  Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année
+  des dizaines de millions de voyageurs. Cet engouement s’explique notamment par
+  le fait qu’il est très facile de voyager à travers tout le pays. Mais pas
+  seulement. Le ...
 seo:
-  title: "Thaïlande, voyage au pays du sourire"
-  description: "Diversités des paysages, richesse culturelle, cuisine savoureuse, sont autant de bonnes raisons pour partir en voyage en Thaïlande."
+  title: Thaïlande, voyage au pays du sourire
+  description: Diversités des paysages, richesse culturelle, cuisine savoureuse,
+    sont autant de bonnes raisons pour partir en voyage en Thaïlande.
 navigation:
-  title: "La Thaïlande, le pays du sourire"
-  description: "Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement. Le ..."
-author: "Romain Masina"
+  title: La Thaïlande, le pays du sourire
+  description: Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en
+    Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année
+    des dizaines de millions de voyageurs. Cet engouement s’explique notamment
+    par le fait qu’il est très facile de voyager à travers tout le pays. Mais
+    pas seulement. Le ...
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
-publishedAt: "2020-04-20 09:43:00+00:00"
+published: true
+publishedAt: 2020-04-20 09:43:00+00:00
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/la-thailande-le-pays-du-sourire/UXogh4S9RQKhUqYOXbQ0.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+displayedImg: /images/blogs/la-thailande-le-pays-du-sourire/UXogh4S9RQKhUqYOXbQ0.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 La Thaïlande, le pays du sourire
 
 #introduction
-Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement. Le ...
+Pourquoi partir en voyage en Thaïlande ? Un marché fluvial en Thaïlande. Pays le plus touristique d’Asie, la Thaïlande séduit chaque année des dizaines de millions de voyageurs. Cet engouement s’explique notamment par le fait qu’il est très facile de voyager à travers tout le pays. Mais pas seulement...
 ::
 
 ::section-container
@@ -52,25 +69,25 @@ La Thaïlande n’exige **aucun vaccin obligatoire**. Outre les vaccinations uni
 
 ## Faut-il un visa pour voyager en Thaïlande ?
 
-::image-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/2017_10_26_34776_1509017989._large.jpg"
-alt: Passport stamps becoming a thing of the past - News - The Jakarta Post
----
-::
+  :::image-container
+  ---
+  alt: Passport stamps becoming a thing of the past - News - The Jakarta Post
+  image-src: /images/blogs/la-thailande-le-pays-du-sourire/2017_10_26_34776_1509017989._large.jpg
+  ---
+  :::
 
-_La chasse aux tampons sur les passeports !_
+*La chasse aux tampons sur les passeports !*
 
 Pour tous les séjours de moins de 30 jours, **aucun visa n’est nécessaire pour voyager en Thaïlande** pour les ressortissants français. Ces derniers doivent uniquement s’assurer que leur passeport est bien valable au moins 6 mois après leur entrée sur le territoire. Ils devront également justifier d’un billet A/R ne dépassant pas 30 jours sur place. Pour les voyageurs désireux de rester plus longtemps, ils doivent faire une demande de visa touristique (valable 60 jours) auprès de l’ambassade de Thaïlande à Paris.
 
 ## Quand partir en Thaïlande ? Point sur le climat.
 
-::image-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/QPPwdto1TfOEeNEOOBH8.jpg"
-alt: 
----
-::
+  :::image-container
+  ---
+  alt: null
+  image-src: /images/blogs/la-thailande-le-pays-du-sourire/QPPwdto1TfOEeNEOOBH8.jpg
+  ---
+  :::
 
 La Thaïlande jouit d’un climat tropical humide qui se caractérise principalement par une **saison des pluies** et une **saison sèche**. Les températures sont agréables tout au long de l’année, entre 25 et 30 degrés, avec un pic de chaleur vers les mois d’avril et de mai. Le pays étant très étendu, le climat n’est pas le même pour une même période, que vous soyez au nord ou au sud. Vous l’avez compris, votre **voyage en Thaïlande** dépend donc de deux facteurs : votre date de départ et votre région de destination.
 
@@ -120,12 +137,12 @@ La Thaïlande est riche en paysages, lieux culturels et traditions. Voici les 10
 
 ### Visiter la trépidante Bangkok
 
-::image-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/talad-rod-fai-market-bangkok-shopping-lead-image.jpg"
-alt: https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/Thailand/Bangkok/talad-rod-fai-market-bangkok-shopping-lead-image.jpg
----
-::
+  :::image-container
+  ---
+  alt: https://www.telegraph.co.uk/content/dam/Travel/Destinations/Asia/Thailand/Bangkok/talad-rod-fai-market-bangkok-shopping-lead-image.jpg
+  image-src: /images/blogs/la-thailande-le-pays-du-sourire/talad-rod-fai-market-bangkok-shopping-lead-image.jpg
+  ---
+  :::
 
 **Bangkok est une étape obligatoire pour tout voyage en Thaïlande**. Cette ville pleine de contrastes offre de nombreuses possibilités de visites et de découvertes. Tout d’abord, la capitale possède nombre de trésors architecturaux comme en témoignent certains temples. Citons par exemple le **Wat Arun**, le **Wat Pho** et son immense bouddha couché, ou encore le Wat Phra Kaeo et le Grand Palais.
 
@@ -139,12 +156,12 @@ Du côté du golfe de Thaïlande, trois îles se démarquent : **Koh Tao**, là 
 
 ### Se rendre dans la capitale culturelle du nord : Chiang Mai
 
-::image-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/qymTtf0LQu2LOnza1j8r.jpg"
-alt: 
----
-::
+  :::image-container
+  ---
+  alt: null
+  image-src: /images/blogs/la-thailande-le-pays-du-sourire/qymTtf0LQu2LOnza1j8r.jpg
+  ---
+  :::
 
 Ville phare du nord de la Thaïlande, **Chiang Mai** a conservé un côté très traditionnel qui fait tout son charme. Explorez les nombreux temples et flânez ensuite dans les marchés de nuit. Autour de Chiang Mai, les paysages de rizières sont un régal pour les yeux. C’est également d’ici que vous partirez pour l’un des nombreux treks afin de découvrir une **Thaïlande authentique**.
 
@@ -158,12 +175,12 @@ Autre lieu gorgé d’histoire, **Sukhothai** mérite également le détour lors
 
 ### Stimuler vos papilles avec la cuisine locale
 
-::image-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/bY5opOXBRMimiSUwq6C2.jpg"
-alt: 
----
-::
+  :::image-container
+  ---
+  alt: null
+  image-src: /images/blogs/la-thailande-le-pays-du-sourire/bY5opOXBRMimiSUwq6C2.jpg
+  ---
+  :::
 
 Goûteuse et relevée, aux saveurs multiples, **la cuisine thaïe est mondialement réputée**. Et il n’y a pas que dans les grands restaurants qu’elle se déguste, bien au contraire. Les petites gargotes sur le bord des trottoirs proposent des plats tout aussi savoureux et pour une somme dérisoire. 
 
@@ -187,56 +204,55 @@ Vous ne pouvez pas envisager un **séjour en Thaïlande** sans passer par un mas
 
 ### Le muay-thaï
 
-::image-container
----
-image-src: "/images/blogs/la-thailande-le-pays-du-sourire/A3DfoS7GSviX10ZiJAQ7.jpg"
-alt: 
----
+  :::image-container
+  ---
+  alt: null
+  image-src: /images/blogs/la-thailande-le-pays-du-sourire/A3DfoS7GSviX10ZiJAQ7.jpg
+  ---
+  :::
+
+Un **voyage en Thaïlande**, c’est aussi avoir l’opportunité de découvrir le sport emblématique du pays : le **muay-thaï**. Odysway vous propose une expérience unique, celle de [boxer dans les rizières en Thaïlande](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=article\&utm_medium=blog\&utm_campaign=thailande+pays+du+sourire) et de vivre une véritable immersion dans la culture locale. Pendant une semaine, recevez le meilleur entraînement de boxe thaïe avec un combattant professionnel dans les forêts du nord du pays.
 ::
 
-Un **voyage en Thaïlande**, c’est aussi avoir l’opportunité de découvrir le sport emblématique du pays : le **muay-thaï**. Odysway vous propose une expérience unique, celle de [boxer dans les rizières en Thaïlande](https://odysway.com/voyages/boxez-dans-les-rizieres-en-thailande?utm_source=article&utm_medium=blog&utm_campaign=thailande+pays+du+sourire) et de vivre une véritable immersion dans la culture locale. Pendant une semaine, recevez le meilleur entraînement de boxe thaïe avec un combattant professionnel dans les forêts du nord du pays.
-::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

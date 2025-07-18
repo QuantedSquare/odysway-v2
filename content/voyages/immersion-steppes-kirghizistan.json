@@ -9,23 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
-      "name": "sejours-chez-l-habitant"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "voyage-culturel"
+      "name": "nature"
     },
     {
-      "name": "road-trip-organise"
+      "name": "au-printemps"
     },
     {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "voyage-en-famille"
+      "name": "ou-partir-en-ete"
     }
   ],
   "duration": 10,

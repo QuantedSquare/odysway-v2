@@ -9,23 +9,20 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-hiver"
     },
     {
+      "name": "au-printemps"
+    },
+    {
       "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-nature"
-    },
-    {
-      "name": "voyage-sportif"
     }
   ],
   "duration": 8,

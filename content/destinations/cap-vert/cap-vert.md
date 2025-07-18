@@ -140,7 +140,7 @@ Assez isolée et uniquement accessible depuis l’île de Fogo, **l’île de Br
   ---
   :::
 
-Amateur de randonnée, faites escale sur **l’île de Santo Antão** lors de **voyage au Cap-Vert**. L’île dispose en effet de nombreux **sentiers pédestres** traversant des paysages diversifiés. Ici des montagnes et des vallées luxuriantes, là le désert et des ravins. Vous allez en prendre plein les yeux ! Point d’orgue de votre séjour : la dégustation (avec modération) du rhum local. Découvrir l'île à travers un trek immersif : <https://odysway.com/voyages/trek-chez-lhabitant-cap-vert>.
+Amateur de randonnée, faites escale sur **l’île de Santo Antão** lors de **voyage au Cap-Vert**. L’île dispose en effet de nombreux **sentiers pédestres** traversant des paysages diversifiés. Ici des montagnes et des vallées luxuriantes, là le désert et des ravins. Vous allez en prendre plein les yeux ! Point d’orgue de votre séjour : la dégustation (avec modération) du rhum local. Découvrir l'île à travers un trek immersif : [Trek chez l'habitant.](https://odysway.com/voyages/trek-chez-lhabitant-cap-vert)
 
 ### L’île de São Vicente
 

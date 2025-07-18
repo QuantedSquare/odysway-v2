@@ -9,41 +9,32 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-en-famille"
+      "name": "photographie"
     },
     {
-      "name": "voyage-en-groupe"
+      "name": "animaux"
     },
     {
-      "name": "ou-partir-en-été"
+      "name": "en-automne"
     },
     {
-      "name": "ou-partir-en-hiver"
+      "name": "au-printemps"
     },
     {
-      "name": "ou-partir-au-printemps"
+      "name": "ou-partir-en-ete"
     },
     {
-      "name": "ou-partir-en-automne"
+      "name": "ecotourisme"
     },
     {
-      "name": "trek-et-randonnee"
+      "name": "sans-avion"
     },
     {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "voyage-animalier"
-    },
-    {
-      "name": "voyage-nature"
+      "name": "nature"
     }
   ],
   "duration": 6,
