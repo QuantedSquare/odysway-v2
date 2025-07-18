@@ -9,14 +9,14 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
       "name": "voyage-culturel"
     },
     {
-      "name": "voyage-aventure"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-automne"

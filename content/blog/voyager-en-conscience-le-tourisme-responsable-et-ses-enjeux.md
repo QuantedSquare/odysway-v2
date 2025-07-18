@@ -28,6 +28,14 @@ displayedImg: /images/blogs/voyager-en-conscience-le-tourisme-responsable-et-ses
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section

@@ -9,23 +9,35 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "animaux"
     },
     {
-      "name": "voyage-insolite"
+      "name": "nature"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-famille"
     },
     {
       "name": "voyage-solidaire"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-animalier"
     }
   ],
   "duration": 14,

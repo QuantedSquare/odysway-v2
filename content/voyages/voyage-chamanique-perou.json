@@ -9,7 +9,7 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "S'éveiller ailleurs",
   "level": "1",
   "categories": [
     {
@@ -19,13 +19,7 @@
       "name": "voyage-initiatique"
     },
     {
-      "name": "voyage-en-famille"
-    },
-    {
       "name": "voyage-en-groupe"
-    },
-    {
-      "name": "ou-partir-en-hiver"
     },
     {
       "name": "ou-partir-au-printemps"
@@ -37,13 +31,10 @@
       "name": "voyage-culturel"
     },
     {
-      "name": "voyage-insolite"
+      "name": "nature"
     },
     {
-      "name": "voyage-solidaire"
-    },
-    {
-      "name": "voyage-aventure"
+      "name": "trek-et-randonnee"
     }
   ],
   "duration": 13,

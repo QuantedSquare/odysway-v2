@@ -9,18 +9,22 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
     {
-      "name": "ecotourisme"
+      "name": "nature"
     },
     {
-      "name": "voyage-animalier"
+      "name": "animaux"
     },
     {
-      "name": "voyage-nature"
-    }
+      "name": "au-printemps"
+    },
+    {
+      "name": "en-automne"
+    },
+    {}
   ],
   "duration": 8,
   "nights": 7,

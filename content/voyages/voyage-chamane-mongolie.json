@@ -17,6 +17,21 @@
     },
     {
       "name": "nature"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "ou-partir-en-ete"
     }
   ],
   "duration": 12,
