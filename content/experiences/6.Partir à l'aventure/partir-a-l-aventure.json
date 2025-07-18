@@ -1,13 +1,13 @@
 {
-  "published": false,
+  "showOnHome": true,
   "title": "Partir à l'aventure",
-  "badgeTitle": "A l'aventure",
-  "slug": "voyage-aventure",
+  "badgeTitle": "À l'aventure",
+  "slug": "immersion-aventure",
   "discoveryTitle": "Partir à l'aventure",
-  "seoTitle": "Partir à l'aventure",
+  "seoTitle": "Partir à l'aventurePartir à l'aventure",
   "image": {
-    "src": "/images/voyages/finlande-hiver-nature-activites/qvlIDbAWTRaiGZtDFLjC.jpg",
-    "alt": "chiens de traineau en Finlande"
+    "src": "/images/blogs/voyage-aventure/ebqN0SkRTulW5XPmGCn0.jpg",
+    "alt": "Homme en haut d'une montagne"
   },
-  "showOnHome": true
+  "published": true
 }

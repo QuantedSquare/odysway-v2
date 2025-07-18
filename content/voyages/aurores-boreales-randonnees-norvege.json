@@ -9,35 +9,17 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "en-automne"
     },
     {
-      "name": "trek-et-randonnee"
-    },
-    {
-      "name": "voyage-insolite"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-hiver"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "voyage-en-couple"
-    },
-    {
-      "name": "voyage-en-famille"
-    },
-    {
-      "name": "voyage-nature"
-    },
-    {
-      "name": "voyage-sportif"
     }
   ],
   "duration": 8,

@@ -9,32 +9,17 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partir à l'aventure",
   "level": "1",
   "categories": [
     {
-      "name": "voyage-aventure"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "road-trip-organise"
+      "name": "en-automne"
     },
     {
       "name": "voyage-insolite"
-    },
-    {
-      "name": "voyage-solidaire"
-    },
-    {
-      "name": "ou-partir-en-automne"
-    },
-    {
-      "name": "ou-partir-au-printemps"
-    },
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
     }
   ],
   "duration": 8,

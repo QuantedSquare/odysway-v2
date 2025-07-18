@@ -9,26 +9,23 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Explorer à pied",
   "level": "1",
   "categories": [
     {
-      "name": "trek-et-randonnee"
+      "name": "nature"
     },
     {
       "name": "ou-partir-en-été"
     },
     {
-      "name": "voyage-en-groupe"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "survie"
+      "name": "sans-avion"
     },
     {
-      "name": "voyage-sportif"
-    },
-    {
-      "name": "voyage-nature"
+      "name": "ecotourisme"
     }
   ],
   "duration": 3,
