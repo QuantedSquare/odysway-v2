@@ -7,7 +7,7 @@
       <v-row>
         <v-col>
           <h2 class="text-primary text-center text-custom-size mb-md-3">
-            a    {{ whySection.title }}
+            {{ whySection.title }}
           </h2>
         </v-col>
       </v-row>

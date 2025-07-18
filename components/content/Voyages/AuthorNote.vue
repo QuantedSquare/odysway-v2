@@ -1,75 +1,86 @@
 <template>
-  <div class="text-primary d-flex flex-column px-2">
-    <h4 class="text-h4 font-weight-bold mb-4">
-      {{ page.authorNote.title }}
-    </h4>
-    <div
-      v-if="isHydrated && authorNote.text"
-      class="text-subtitle-2 text-md-body-2 line-height-2 text-wrapper"
-    >
-      <div
-        ref="content"
-        :class="{ 'truncated': !isExpanded && authorNote?.text.length > 700, 'text-content': authorNote?.text.length > 700 }"
-        :style="authorNote?.text.length > 700 ? contentStyle : {}"
+  <ClientOnly>
+    <div class="text-primary d-flex flex-column px-2">
+      <h4
+        v-if="page?.authorNote?.title"
+        class="text-h4 font-weight-bold mb-4"
       >
-        <MDC
-          tag="article"
-          :value="authorNote.text"
-        />
-      </div>
-    </div>
+        {{ page.authorNote.title }}
+      </h4>
 
-    <v-btn
-      v-if="authorNote?.text.length > 700"
-      variant="text"
-      width="fit-content"
-      class="text-body-2 text-md-body-1 d-flex justify-start align-center pl-0"
-      @click="() => isExpanded = !isExpanded"
-    >
-      {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
-      <v-icon
-        :icon="mdiArrowRight"
-        color="primary"
-        class="mt-1"
-        :class="isExpanded ? 'rotate-180' : ''"
-      />
-    </v-btn>
-    <div
-      v-if="author && authorStatus === 'success'"
-      class="d-flex ga-3 mt-md-4 mt-2"
-    >
-      <v-avatar
-        :image="author.image"
-        size="80"
-        :alt="author.description || 'Photo de l\'auteur'"
+      <!-- Always render the content div, but handle truncation on client -->
+      <div
+        v-if="authorNote?.text"
+        class="text-subtitle-2 text-md-body-2 line-height-2 text-wrapper"
       >
-        <v-img
-          :src="img(author.image, { format: 'webp', quality: 70, width: 320 })"
-          :lazy-src="img(author.image, { format: 'webp', quality: 10, width: 320 })"
-          :srcset="`${img(author.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(author.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
-          sizes="(max-width: 600px) 70px, 100px"
-          loading="lazy"
+        <div
+          ref="content"
+          :class="{ 'truncated': shouldTruncate && !isExpanded, 'text-content': shouldTruncate }"
+          :style="shouldTruncate ? contentStyle : {}"
+        >
+          <MDC
+            tag="article"
+            :value="authorNote.text"
+          />
+        </div>
+      </div>
+
+      <!-- Expand/collapse button - render consistently but handle client-side logic -->
+      <div v-if="shouldTruncate">
+        <v-btn
+          variant="text"
+          width="fit-content"
+          class="text-body-2 text-md-body-1 d-flex justify-start align-center pl-0"
+          @click="toggleExpanded"
+        >
+          {{ isExpanded ? 'Lire moins' : 'Lire plus' }}
+          <v-icon
+            :icon="mdiArrowRight"
+            color="primary"
+            class="mt-1"
+            :class="isExpanded ? 'rotate-180' : ''"
+          />
+        </v-btn>
+      </div>
+
+      <!-- Author section with proper loading states -->
+      <div
+        v-if="author"
+        class="d-flex ga-3 mt-md-4 mt-2"
+      >
+        <v-avatar
+          :image="author.image"
+          size="80"
           :alt="author.description || 'Photo de l\'auteur'"
+        >
+          <v-img
+            :src="img(author.image, { format: 'webp', quality: 70, width: 320 })"
+            :lazy-src="img(author.image, { format: 'webp', quality: 10, width: 320 })"
+            :srcset="`${img(author.image, { format: 'webp', quality: 70, width: 320 })} 70w, ${img(author.image, { format: 'webp', quality: 70, width: 320 })} 100w`"
+            sizes="(max-width: 600px) 70px, 100px"
+            loading="lazy"
+            :alt="author.description || 'Photo de l\'auteur'"
+          />
+        </v-avatar>
+        <div class="text-subtitle-2 d-flex flex-column justify-center">
+          <span class="font-weight-bold mb-1">
+            {{ authorNote?.author }}
+          </span>
+          <span class="font-weight-regular">
+            {{ author.position }} &nbsp;{{ authorNote?.affixeAuthor }}
+          </span>
+        </div>
+      </div>
+      <div v-else-if="authorStatus === 'pending'">
+        <v-skeleton-loader
+          type="avatar"
+          height="80"
+          width="80"
+          class="mt-md-4 mt-2"
         />
-      </v-avatar>
-      <div class="text-subtitle-2 d-flex flex-column justify-center">
-        <span class="font-weight-bold mb-1">
-          {{ authorNote.author }}
-        </span>
-        <span class="font-weight-regular">
-          {{ author.position }} &nbsp;{{ authorNote.affixeAuthor }}
-        </span>
       </div>
     </div>
-    <div v-else-if="authorStatus === 'pending'">
-      <v-skeleton-loader
-        type="avatar"
-        height="80"
-        width="80"
-        class="mt-md-4 mt-2"
-      />
-    </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup>
@@ -86,33 +97,58 @@ const props = defineProps({
     required: true,
   },
 })
-const img = useImage()
-const isHydrated = ref(false)
-const { data: author, status: authorStatus } = useAsyncData(`author-${props.authorNote.author}`, () => queryCollection('team').where('name', '=', props.authorNote.author).first())
 
-onMounted(() => {
-  isHydrated.value = true
+const img = useImage()
+
+// Ensure author data is available during SSR
+const { data: author, status: authorStatus } = await useAsyncData(`author-${props.authorNote?.author}`, () => {
+  if (!props.authorNote?.author) return null
+  return queryCollection('team').where('name', '=', props.authorNote.author).first()
 })
 
+// Client-side state for expansion
 const isExpanded = ref(false)
 const content = ref(null)
 const lineHeight = 30 // px, match your CSS
 const clampLines = 4
 
+// Computed property to determine if text should be truncated
+// Ensure this is consistent between server and client
+const shouldTruncate = computed(() => {
+  return props.authorNote?.text && props.authorNote.text.length > 700
+})
+
+// Initial content style - consistent between server and client
 const contentStyle = ref({
   maxHeight: `${lineHeight * clampLines}px`,
   overflow: 'hidden',
   transition: 'max-height 0.5s ease',
 })
 
+// Toggle function for expansion
+const toggleExpanded = () => {
+  isExpanded.value = !isExpanded.value
+}
+
+// Watch for expansion changes and handle animations on client only
 watch(isExpanded, async (newVal) => {
-  await nextTick()
-  if (newVal) {
-    // Expanding: animate to full height
-    contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
+  // Only run on client side
+  if (import.meta.client && content.value) {
+    await nextTick()
+    if (newVal) {
+      // Expanding: animate to full height
+      contentStyle.value.maxHeight = content.value.scrollHeight + 'px'
+    }
+    else {
+      // Collapsing: animate to clamped height
+      contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
+    }
   }
-  else {
-    // Collapsing: animate to 3 lines
+})
+
+// Reset content style when component mounts on client
+onMounted(() => {
+  if (shouldTruncate.value && !isExpanded.value) {
     contentStyle.value.maxHeight = `${lineHeight * clampLines}px`
   }
 })
