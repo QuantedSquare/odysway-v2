@@ -21,11 +21,19 @@ navigation:
     Pau à Saint-Jean-Pied-de-Port, et en Nouvelle-Aquitaine dans le bassin
     d'Arcachon.
 author: romain.masina@odysway.com
-published: true
+published: false
 publishedAt: 2021-07-30 09:54:00+00:00
 tags: éco-responsable, France, nature, slow tourisme
 categories: ""
 displayedImg: /images/blogs/3-itineraires-ecoresponsables-sejour-france/cqEPkzG1RoqQZKzJ3uu8.jpg
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::hero-section-blog
