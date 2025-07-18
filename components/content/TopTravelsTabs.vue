@@ -47,26 +47,23 @@
       class="custom-color"
     >
       <v-tabs-window-item
-        v-for="tab, index in tops[currentTab].contenuOnglet"
-        :id="`tabpanel-${index}`"
-        :key="`${tab.title}-${index}`"
-        :value="index"
+        :value="currentTab"
         role="tabpanel"
-        :aria-labelledby="`tab-${index}`"
+        :aria-labelledby="`tab-${currentTab}`"
       >
         <v-row class=" mb-4 mb-md-10">
           <v-col
-            v-for="top, f in tops[currentTab].contenuOnglet"
-            :key="`${top.title}-${f}`"
+            v-for="section, index in tops[currentTab].contenuOnglet"
+            :key="`${section.title}-${index}`"
             cols="6"
             md="3"
           >
             <h5 class="custom-title-size  font-weight-bold mb-4 pb-md-16 ">
-              {{ top.title }}
+              {{ section.title }}
             </h5>
             <div class="d-flex flex-column ga-2">
               <NuxtLink
-                v-for="link, i in top.linksList"
+                v-for="link, i in section.linksList"
                 :key="`${link.slug}-${i}`"
                 :href="`${link.slug}`"
                 :external="link.slug.includes('http')"
@@ -87,6 +84,7 @@
 const currentTab = ref(0)
 
 const tops = await queryCollection('tops').all()
+console.log(tops)
 </script>
 
 <style scoped>
