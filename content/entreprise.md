@@ -1,3 +1,14 @@
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
+
 ::hero-section
 ---
 image-src: /images/entreprise/image bannière Tribus.webp

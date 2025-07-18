@@ -1,31 +1,114 @@
 {
-  "title": "Séjours en France",
-  "description": "Nos séjours en France",
+  "title": "Catégories",
+  "description": "Catégories Odysway",
   "contenuOnglet": [
     {
-      "title": "Séjours Pyrénées",
+      "title": "Activité",
       "linksList": [
         {
-          "title": "Vis ma vie de berger",
-          "slug": "sejour-berger-bearn"
+          "title": "Séjours chez l'habitant",
+          "slug": "sejours-chez-l-habitant"
         },
         {
-          "title": "Séjour randonnée l'hiver",
-          "slug": "sejour-hiver-pyrenees"
+          "title": "Trek et randonnée",
+          "slug": "trek-et-randonnee"
         },
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Séjour Nature",
+          "slug": "voyage-nature"
         },
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Séjour culture",
+          "slug": "voyage-culturel"
         },
         {
-          "title": "Immersion à Bali, au cœur des traditions et des paysages spectaculaires",
-          "slug": "bali-menjangan-sidemen"
+          "title": "Sport",
+          "slug": "voyage-sportif"
+        },
+        {
+          "title": "Animaux",
+          "slug": "voyage-animalier"
+        },
+        {
+          "title": "Immersion à la ferme",
+          "slug": "sejour-a-la-ferme"
+        },
+        {
+          "title": "Voyage survie",
+          "slug": "survie"
+        },
+        {
+          "title": "Astronomie",
+          "slug": "astronomie"
+        },
+        {
+          "slug": "voyage-initiatique",
+          "title": "Voyages intérieurs"
+        },
+        {
+          "title": "Aventure",
+          "slug": "voyage-aventure"
         }
       ]
+    },
+    {
+      "title": "Types de voyages",
+      "linksList": [
+        {
+          "title": "Ecotourisme",
+          "slug": "ecotourisme"
+        },
+        {
+          "title": "Insolite",
+          "slug": "voyage-insolite"
+        },
+        {
+          "title": "Road trip",
+          "slug": "road-trip-organise"
+        },
+        {
+          "slug": "voyage-solidaire",
+          "title": "Voyags solidaires"
+        }
+      ]
+    },
+    {
+      "title": "Avec qui partir ?",
+      "linksList": [
+        {
+          "title": "En famille",
+          "slug": "voyage-en-famille"
+        },
+        {
+          "title": "En couple",
+          "slug": "voyage-en-couple"
+        },
+        {
+          "title": "Voyages en groupe",
+          "slug": "voyage-en-groupe"
+        }
+      ]
+    },
+    {
+      "linksList": [
+        {
+          "slug": "ou-partir-au-printemps",
+          "title": "Printemps"
+        },
+        {
+          "title": "Eté",
+          "slug": "ou-partir-en-été"
+        },
+        {
+          "slug": "ou-partir-en-automne",
+          "title": "Automne"
+        },
+        {
+          "title": "Hiver",
+          "slug": "ou-partir-en-hiver"
+        }
+      ],
+      "title": "QUand partir ?"
     }
   ]
 }
