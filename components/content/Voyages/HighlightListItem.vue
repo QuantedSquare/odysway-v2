@@ -14,7 +14,7 @@
     </template>
     <p
       v-dompurify-html="parseBoldText(highlight)"
-      class="text-subtitle-2 font-weight-regular text-md-body-2 text-primary"
+      class="text-subtitle-2 font-weight-regular text-md-body-2 text-primary line-height-2"
     />
   </v-list-item>
 </template>
@@ -34,5 +34,8 @@ const { highlight } = defineProps({
 .custom-alignement:deep(.v-list-item__prepend) {
   align-self: flex-start !important;
   margin-top: -2px !important;
+}
+.line-height-2{
+  line-height: 1.4!important;
 }
 </style>
