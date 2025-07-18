@@ -9,7 +9,7 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
@@ -23,6 +23,9 @@
     },
     {
       "name": "voyage-en-groupe"
+    },
+    {
+      "name": "nature"
     }
   ],
   "duration": 12,

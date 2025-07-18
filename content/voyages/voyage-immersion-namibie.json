@@ -9,20 +9,32 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Partager le quotidien",
   "level": "1",
   "categories": [
-    {
-      "name": "voyage-aventure"
-    },
     {
       "name": "voyage-solidaire"
     },
     {
-      "name": "voyage-animalier"
+      "name": "animaux"
     },
     {
-      "name": "voyage-nature"
+      "name": "nature"
+    },
+    {
+      "name": "aventure"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "ou-partir-en-hiver"
     }
   ],
   "duration": 14,

@@ -9,20 +9,27 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
-  "level": "1",
+  "experienceType": "Explorer à pied",
+  "level": "2",
   "categories": [
     {
       "name": "voyage-aventure"
     },
     {
-      "name": "sejours-chez-l-habitant"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "voyage-nature"
+      "name": "nature"
     },
     {
       "name": "voyage-en-groupe"
+    },
+    {},
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "au-printemps"
     }
   ],
   "duration": 14,

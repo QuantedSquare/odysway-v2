@@ -5,9 +5,37 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "S'éveiller ailleurs",
   "level": "1",
-  "categories": [],
+  "categories": [
+    {
+      "name": "nuits-chez-l-habitant"
+    },
+    {
+      "name": "nature"
+    },
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-initiatique"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "en-automne"
+    },
+    {
+      "name": "au-printemps"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    }
+  ],
   "duration": 0,
   "nights": 0,
   "includeFlight": false,

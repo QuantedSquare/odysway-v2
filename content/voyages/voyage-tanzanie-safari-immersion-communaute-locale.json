@@ -9,41 +9,32 @@
   "groupeAvailable": true,
   "privatisationAvailable": true,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
     {
-      "name": "ecotourisme"
+      "name": "nuits-chez-l-habitant"
     },
     {
-      "name": "voyage-en-groupe"
+      "name": "voyage-culturel"
     },
     {
-      "name": "voyage-en-famille"
+      "name": "animaux"
     },
     {
-      "name": "voyage-en-couple"
+      "name": "nature"
     },
     {
-      "name": "ou-partir-en-été"
+      "name": "ou-partir-en-ete"
     },
     {
-      "name": "ou-partir-au-printemps"
+      "name": "en-automne"
     },
     {
-      "name": "ou-partir-en-automne"
+      "name": "au-printemps"
     },
     {
       "name": "ou-partir-en-hiver"
-    },
-    {
-      "name": "voyage-animalier"
-    },
-    {
-      "name": "sejours-chez-l-habitant"
-    },
-    {
-      "name": "voyage-nature"
     }
   ],
   "duration": 10,
