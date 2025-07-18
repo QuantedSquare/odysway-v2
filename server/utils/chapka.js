@@ -9,7 +9,7 @@ const getSignature = (data) => {
   const keys = Object.keys(data).sort()
 
   const hashData = keys.reduce((acc, key) => acc + (data[key] ?? ''), '')
-  const secretKey = process.env.CHAPKA_HASH // process.env.NODE_ENV !== 'development' ? process.env.CHAPKA_HASH_TEST : process.env.CHAPKA_HASH
+  const secretKey = isDev ? process.env.CHAPKA_HASH_TEST : process.env.CHAPKA_HASH
 
   return createHash('sha1').update(hashData + secretKey).digest('hex')
 }
