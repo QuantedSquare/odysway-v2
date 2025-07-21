@@ -9,6 +9,7 @@
     >
       <v-img
         :src="img(faqTextes?.faqSection?.ctaCard?.avatar, { format: 'webp', quality: 70, height: 640, width: 640 })"
+        :alt="faqTextes?.faqSection?.ctaCard?.avatar?.alt || 'Avatar de la carte de contact'"
       />
     </v-avatar>
 

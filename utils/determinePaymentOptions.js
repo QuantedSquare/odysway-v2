@@ -13,7 +13,7 @@ export default function (departureDate, queryParams) {
   const today = dayjs()
   const departureDateFormated = dayjs(departureDate)
   const daysDiff = departureDateFormated.diff(today, 'day')
-  console.log('paymentOptionType', daysDiff > 30 ? 'deposit' : 'full')
+
   // Warning check if full can be full or rest to pay
   return daysDiff > 30 ? 'deposit' : 'full'
 }

@@ -22,7 +22,7 @@
           :value="index"
           role="tab"
           class="text-decoration-none pb-md-8 "
-          :aria-selected="currentTab === index"
+          :aria-selected="(currentTab === index).toString()"
           :aria-controls="`tabpanel-${index}`"
           :class="index === 0 ? 'pl-0' : 'pl-4'"
         >
@@ -47,6 +47,7 @@
       class="custom-color"
     >
       <v-tabs-window-item
+        :id="`tabpanel-${currentTab}`"
         :value="currentTab"
         role="tabpanel"
         :aria-labelledby="`tab-${currentTab}`"
