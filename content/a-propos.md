@@ -42,7 +42,7 @@ head:
   script: []
 ---
 
-::generic-hero-section
+::simple-hero-section
 ---
 displayed-img: /images/concept/Vélo.jpg
 title-color: white
