@@ -7,35 +7,35 @@
       "linksList": [
         {
           "title": "Albanie",
-          "slug": "https://odysway.com/destinations/albanie"
+          "slug": "destinations/albanie"
         },
         {
           "title": "Finlande",
-          "slug": "https://odysway.com/destinations/finlande"
+          "slug": "destinations/finlande"
         },
         {
           "title": "Islande",
-          "slug": "https://odysway.com/destinations/islande"
+          "slug": "destinations/islande"
         },
         {
           "title": "Norvège",
-          "slug": "https://odysway.com/destinations/norvege"
+          "slug": "destinations/norvege"
         },
         {
           "title": "Portugal",
-          "slug": "https://odysway.com/destinations/portugal"
+          "slug": "destinations/portugal"
         },
         {
           "title": "Roumanie",
-          "slug": "https://odysway.com/destinations/roumanie"
+          "slug": "destinations/roumanie"
         },
         {
           "title": "Espagne",
-          "slug": "https://odysway.com/destinations/espagne"
+          "slug": "destinations/espagne"
         },
         {
           "title": "Suède",
-          "slug": "https://odysway.com/destinations/suede"
+          "slug": "destinations/suede"
         }
       ]
     },
@@ -44,47 +44,138 @@
       "linksList": [
         {
           "title": "Chine",
-          "slug": "https://odysway.com/destinations/chine"
+          "slug": "destinations/chine"
         },
         {
           "title": "Inde",
-          "slug": "https://odysway.com/destinations/inde"
+          "slug": "destinations/inde"
         },
         {
           "title": "Indonésie",
-          "slug": "https://odysway.com/destinations/indonesie"
+          "slug": "destinations/indonesie"
         },
         {
           "title": "Japon",
-          "slug": "https://odysway.com/destinations/japon"
+          "slug": "destinations/japon"
         },
         {
-          "slug": "https://odysway.com/destinations/kirghizistan",
+          "slug": "destinations/kirghizistan",
           "title": "Kirghizistan"
         },
         {
-          "slug": "https://odysway.com/destinations/laos",
+          "slug": "destinations/laos",
           "title": "Laos"
         },
         {
-          "slug": "https://odysway.com/destinations/mongolie",
+          "slug": "destinations/mongolie",
           "title": "Mongolie"
         },
         {
           "title": "Népal",
-          "slug": "https://odysway.com/destinations/nepal"
+          "slug": "destinations/nepal"
         },
         {
-          "slug": "https://odysway.com/destinations/ouzbekistan",
+          "slug": "destinations/ouzbekistan",
           "title": "Ouzbekistan"
         },
         {
           "title": "Sri Lanka",
-          "slug": "https://odysway.com/destinations/sri-lanka"
+          "slug": "destinations/sri-lanka"
         },
         {
-          "slug": "https://odysway.com/destinations/vietnam",
+          "slug": "destinations/vietnam",
           "title": "Vietnam"
+        }
+      ]
+    },
+    {
+      "title": "Amérique du sud & centrale",
+      "linksList": [
+        {
+          "title": "Argentine",
+          "slug": "destinations/argentine"
+        },
+        {
+          "title": "Bolivie",
+          "slug": "destinations/bolivie"
+        },
+        {
+          "slug": "destinations/bresil",
+          "title": "Brésil"
+        },
+        {
+          "title": "Chili",
+          "slug": "destinations/chili"
+        },
+        {
+          "title": "Colombie",
+          "slug": "destinations/colombie"
+        },
+        {
+          "title": "Costa Rica",
+          "slug": "destinations/costa-rica"
+        },
+        {
+          "slug": "destinations/guatemala",
+          "title": "uatemala"
+        },
+        {
+          "title": "Pérou",
+          "slug": "destinations/perou"
+        },
+        {
+          "slug": "destinations/salvador",
+          "title": "Salvador"
+        }
+      ]
+    },
+    {
+      "title": "Amérique du nord",
+      "linksList": [
+        {
+          "title": "Canada",
+          "slug": "destination/canada"
+        }
+      ]
+    },
+    {
+      "title": "Afrique",
+      "linksList": [
+        {
+          "title": "Algérie",
+          "slug": "destination/algerie"
+        },
+        {
+          "title": "Bénin",
+          "slug": "destination/benin"
+        },
+        {
+          "title": "Cap-Vert",
+          "slug": "destinations/cap-vert"
+        },
+        {
+          "slug": "destinations/egypte",
+          "title": "Egypte"
+        },
+        {
+          "title": "Kenya",
+          "slug": "destinations/kenya"
+        },
+        {
+          "title": "Madagascar",
+          "slug": "destinations/madagascar"
+        },
+        {
+          "title": "Maroc",
+          "slug": "destinations/maroc"
+        },
+        {
+          "title": "Namibie",
+          "slug": "destinations/namibie"
+        },
+        {
+          "title": "Tanzanie",
+          "slug": "destinations/tanzanie"
         }
       ]
     }

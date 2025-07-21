@@ -7,27 +7,27 @@
       "linksList": [
         {
           "title": "Partager le quotidien",
-          "slug": "https://odysway.com/experiences/partager-quotidien"
+          "slug": "experiences/partager-quotidien"
         },
         {
           "title": "Explorer à pied",
-          "slug": "https://odysway.com/experiences/voyage-pied"
+          "slug": "experiences/voyage-pied"
         },
         {
           "title": "Apprendre en voyage",
-          "slug": "https://odysway.com/experiences/apprentissage-voyage"
+          "slug": "experiences/apprentissage-voyage"
         },
         {
           "title": "Plongée dans la culture",
-          "slug": "https://odysway.com/experiences/immersion-culture"
+          "slug": "experiences/immersion-culture"
         },
         {
-          "title": "A l'aventure",
-          "slug": "https://odysway.com/experiences/immersion-aventure"
+          "title": "À l'aventure",
+          "slug": "experiences/immersion-aventure"
         },
         {
           "title": "S'éveiller ailleurs",
-          "slug": "https://odysway.com/experiences/eveil-voyage"
+          "slug": "experiences/eveil-voyage"
         }
       ]
     }
