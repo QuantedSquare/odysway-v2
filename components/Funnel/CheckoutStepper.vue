@@ -247,7 +247,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       alreadyPaid: 0,
       totalTravelPrice: +fetchedDate.starting_price * 100,
     }
-    console.log('travelStaticValues', travelStaticValues)
+
     const dynamicValues = {
       // Details
       nbTravelers: 1,
@@ -295,7 +295,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         travelersData[travelerKey] = null
       }
     }
-    console.log('deal', deal)
+
     const dynamicValues = {
       // Details
       nbTravelers: +deal.nbTravelers,
@@ -374,7 +374,6 @@ const nextStep = () => {
   // Check if we're going on calendly step to fire pixel:
 
   if (nextStepValue === 1 && skipperMode.value === 'quick') {
-    console.log('fire calendly pixel', voyage.value.title)
     trackPixel('trackCustom', 'ClicRdv', {
       voyage: voyage.value.title,
     })
@@ -390,15 +389,12 @@ const previousStep = () => {
     previousStepValue = currentStep.value - 1
   }
   currentStep.value = previousStepValue
-  console.log('previousStepValue', previousStepValue)
   addSingleParam('step', previousStepValue.toString())
 }
 
 watch(() => route.query.step, (newVal) => {
-  console.log('route.query.step', newVal)
   if (newVal) {
     currentStep.value = parseInt(newVal)
-    console.log('currentStep', currentStep.value)
   }
 })
 
