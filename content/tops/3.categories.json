@@ -7,7 +7,7 @@
       "linksList": [
         {
           "title": "Séjours chez l'habitant",
-          "slug": "thematiques/sejours-chez-l-habitant"
+          "slug": "sejours-chez-l-habitant"
         },
         {
           "title": "Trek et randonnée",
@@ -15,39 +15,39 @@
         },
         {
           "title": "Séjour Nature",
-          "slug": "voyage-nature"
+          "slug": "thematiques/voyage-nature"
         },
         {
           "title": "Séjour culture",
-          "slug": "voyage-culturel"
+          "slug": "thematiques/voyage-culturel"
         },
         {
           "title": "Sport",
-          "slug": "voyage-sportif"
+          "slug": "thematiques/voyage-sportif"
         },
         {
           "title": "Animaux",
-          "slug": "voyage-animalier"
+          "slug": "thematiques/voyage-animalier"
         },
         {
           "title": "Immersion à la ferme",
-          "slug": "sejour-a-la-ferme"
+          "slug": "thematiques/sejour-a-la-ferme"
         },
         {
           "title": "Voyage survie",
-          "slug": "survie"
+          "slug": "thematiques/survie"
         },
         {
           "title": "Astronomie",
-          "slug": "astronomie"
+          "slug": "thematiques/astronomie"
         },
         {
-          "slug": "voyage-initiatique",
+          "slug": "thematiques/voyage-initiatique",
           "title": "Voyages intérieurs"
         },
         {
           "title": "Aventure",
-          "slug": "voyage-aventure"
+          "slug": "thematiques/voyage-aventure"
         }
       ]
     },
@@ -56,18 +56,18 @@
       "linksList": [
         {
           "title": "Ecotourisme",
-          "slug": "ecotourisme"
+          "slug": "thematiques/ecotourisme"
         },
         {
           "title": "Insolite",
-          "slug": "voyage-insolite"
+          "slug": "thematiques/voyage-insolite"
         },
         {
           "title": "Road trip",
-          "slug": "road-trip-organise"
+          "slug": "thematiques/road-trip-organise"
         },
         {
-          "slug": "voyage-solidaire",
+          "slug": "thematiques/voyage-solidaire",
           "title": "Voyags solidaires"
         }
       ]
@@ -77,35 +77,35 @@
       "linksList": [
         {
           "title": "En famille",
-          "slug": "voyage-en-famille"
+          "slug": "thematiques/voyage-en-famille"
         },
         {
           "title": "En couple",
-          "slug": "voyage-en-couple"
+          "slug": "thematiques/voyage-en-couple"
         },
         {
           "title": "Voyages en groupe",
-          "slug": "voyage-en-groupe"
+          "slug": "thematiques/voyage-en-groupe"
         }
       ]
     },
     {
       "linksList": [
         {
-          "slug": "ou-partir-au-printemps",
+          "slug": "thematiques/ou-partir-au-printemps",
           "title": "Printemps"
         },
         {
           "title": "Eté",
-          "slug": "ou-partir-en-été"
+          "slug": "thematiques/ou-partir-en-été"
         },
         {
-          "slug": "ou-partir-en-automne",
+          "slug": "thematiques/ou-partir-en-automne",
           "title": "Automne"
         },
         {
           "title": "Hiver",
-          "slug": "ou-partir-en-hiver"
+          "slug": "thematiques/ou-partir-en-hiver"
         }
       ],
       "title": "Quand partir ?"
