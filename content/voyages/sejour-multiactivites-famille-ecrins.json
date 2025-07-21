@@ -13,16 +13,16 @@
   "level": "1",
   "categories": [
     {
-      "name": "ou-partir-en-été"
+      "name": "ou-partir-en-ete"
     },
     {
       "name": "voyage-en-famille"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
-      "name": "sans-avion"
+      "name": "voyage-sans-avion"
     }
   ],
   "duration": 8,

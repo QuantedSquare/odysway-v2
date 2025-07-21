@@ -13,16 +13,16 @@
   "level": "1",
   "categories": [
     {
-      "name": "photographie"
+      "name": "sejours-stage-photographie"
     },
     {
-      "name": "animaux"
+      "name": "voyage-animalier"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
       "name": "ou-partir-en-ete"
@@ -31,10 +31,10 @@
       "name": "ecotourisme"
     },
     {
-      "name": "sans-avion"
+      "name": "voyage-sans-avion"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     }
   ],
   "duration": 6,

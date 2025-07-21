@@ -13,18 +13,20 @@
   "level": "1",
   "categories": [
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
-      "name": "animaux"
+      "name": "voyage-animalier"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
-    {}
+    {
+      "name": "ou-partir-en-ete"
+    }
   ],
   "duration": 8,
   "nights": 7,

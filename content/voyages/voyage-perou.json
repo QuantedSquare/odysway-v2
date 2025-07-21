@@ -13,10 +13,10 @@
   "level": "1",
   "categories": [
     {
-      "name": "nuits-chez-l-habitant"
+      "name": "sejours-chez-l-habitant"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "trek-et-randonnee"
@@ -25,16 +25,16 @@
       "name": "voyage-culturel"
     },
     {
-      "name": "aventure"
+      "name": "voyage-aventure"
     },
     {
       "name": "voyage-en-groupe"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
       "name": "ou-partir-en-ete"

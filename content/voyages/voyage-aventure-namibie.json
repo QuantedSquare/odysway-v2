@@ -13,22 +13,22 @@
   "level": "1",
   "categories": [
     {
-      "name": "animaux"
+      "name": "voyage-animalier"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "ou-partir-en-ete"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "aventure"
+      "name": "voyage-aventure"
     }
   ],
   "duration": 14,

@@ -13,25 +13,25 @@
   "level": "1",
   "categories": [
     {
-      "name": "nuits-chez-l-habitant"
+      "name": "sejours-chez-l-habitant"
     },
     {
       "name": "voyage-culturel"
     },
     {
-      "name": "animaux"
+      "name": "voyage-animalier"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "ou-partir-en-ete"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
       "name": "ou-partir-en-hiver"

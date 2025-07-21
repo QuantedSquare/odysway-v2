@@ -13,10 +13,10 @@
   "level": "1",
   "categories": [
     {
-      "name": "sport"
+      "name": "voyage-sportif"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "voyage-insolite"
@@ -25,10 +25,10 @@
       "name": "voyage-arts-martiaux"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     }
   ],
   "duration": 11,

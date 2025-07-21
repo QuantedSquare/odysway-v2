@@ -13,19 +13,19 @@
   "level": "1",
   "categories": [
     {
-      "name": "animaux"
+      "name": "voyage-animalier"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "voyage-culturel"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
       "name": "ou-partir-en-ete"

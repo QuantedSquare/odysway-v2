@@ -13,22 +13,22 @@
   "level": "1",
   "categories": [
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "voyage-culturel"
     },
     {
-      "name": "nuits-chez-l-habitant"
+      "name": "sejours-chez-l-habitant"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
       "name": "ou-partir-en-ete"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
       "name": "ou-partir-en-hiver"
