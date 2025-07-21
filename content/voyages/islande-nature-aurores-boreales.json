@@ -13,19 +13,19 @@
   "level": "1",
   "categories": [
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
       "name": "trek-et-randonnee"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     }
   ],
   "duration": 8,
