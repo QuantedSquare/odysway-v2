@@ -9,15 +9,9 @@
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [
-    {
-      "name": "voyage-en-groupe"
-    },
-    {
-      "name": "ou-partir-au-printemps"
-    },
     {
       "name": "ou-partir-en-été"
     },
@@ -29,6 +23,18 @@
     },
     {
       "name": "ecotourisme"
+    },
+    {
+      "name": "voyage-en-famille"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-stage-photographie"
+    },
+    {
+      "name": "voyage-sans-avion"
     }
   ],
   "duration": 3,
