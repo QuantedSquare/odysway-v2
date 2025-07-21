@@ -65,7 +65,7 @@
               <NuxtLink
                 v-for="link, i in section.linksList"
                 :key="`${link.slug}-${i}`"
-                :href="`${link.slug}`"
+                :to="`/${link.slug}`"
                 :external="link.slug.includes('http')"
                 :target="link.slug.includes('http') ? '_blank' : undefined"
                 class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-4"
