@@ -31,8 +31,8 @@
             :slug="item.slug"
             :image="item.image.src"
             :title="item.title"
-            type="thematiques"
             :description="item.discoveryTitle"
+            :type="isCategory ? 'thematiques' : 'experiences'"
           />
         </template>
       </HorizontalCarousel>
@@ -63,8 +63,8 @@
                 :slug="item.slug"
                 :image="item.image.src"
                 :title="item.title"
-                type="thematiques"
                 :description="item.discoveryTitle"
+                :type="isCategory ? 'thematiques' : 'experiences'"
               />
             </template>
           </HorizontalCarousel>
