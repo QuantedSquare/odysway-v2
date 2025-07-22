@@ -23,7 +23,7 @@ En confirmant les termes de son contrat, le client accepte les présentes Condit
 
 En vertu de l'article L.221-28-12° du Code de la consommation, le droit de rétractation prévu en matière de vente à distance n'est pas applicable aux contrats ayant pour objet la vente de services d'hébergement, de transport, de restauration et de loisirs qui doivent être fournis à une date ou selon une périodicité déterminée. :br
 
-Lorsque ses coordonnées téléphoniques sont recueillies, le client est informé qu'il a la possibilité de s'inscrire sur une liste gratuite d'opposition au démarchage téléphonique, par exemple : <http://www.bloctel.gouv.fr/>:br
+Lorsque ses coordonnées téléphoniques sont recueillies, le client est informé qu'il a la possibilité de s'inscrire sur une liste gratuite d'opposition au démarchage téléphonique, par exemple : <http://www.bloctel.gouv.fr/>\:br
 
 Les Conditions Générales de Vente faisant foi sont celles annexées au Contrat. :br
 
@@ -111,7 +111,7 @@ Les clients devront avoir soin d'être en règle avec les formalités d'entrée 
 
 ### Sécurité
 
-Odysway conseille de consulter la fiche du Ministère des Affaires Etrangères relative à votre voyage sur le site internet [www.diplomatie.gouv.fr](http://www.diplomatie.gouv.fr):br
+Odysway conseille de consulter la fiche du Ministère des Affaires Etrangères relative à votre voyage sur le site internet [www.diplomatie.gouv.fr](http://www.diplomatie.gouv.fr)\:br
 
 Odysway attire l'attention du client sur le fait que les informations pouvant évoluer, il est vivement conseillé de les consulter régulièrement jusqu'au départ. :br
 
@@ -119,7 +119,7 @@ Il relève de la responsabilité de chaque voyageur, ou de son représentant lé
 
 ### Recommandations sanitaires
 
-Lorsqu'un voyage nécessite des recommandations sanitaires particulières obligatoires, ces dernières sont précisées sur le contrat. Pour les pays de l'Union Européenne ; il est conseillé de se munir de la carte européenne d'assurance maladie. (Se renseigner auprès de sa caisse d'assurance maladie). Odysway recommande de consulter régulièrement le site suivant avant le départ : <https://www.pasteur.fr/fr>:br
+Lorsqu'un voyage nécessite des recommandations sanitaires particulières obligatoires, ces dernières sont précisées sur le contrat. Pour les pays de l'Union Européenne ; il est conseillé de se munir de la carte européenne d'assurance maladie. (Se renseigner auprès de sa caisse d'assurance maladie). Odysway recommande de consulter régulièrement le site suivant avant le départ : <https://www.pasteur.fr/fr>\:br
 
 ## Transport aérien
 
@@ -131,7 +131,7 @@ Conformément aux articles R. 211-15 et suivants du Code du Tourisme, le client 
 
 Cette information est fournie sous la forme d'une liste de trois transporteurs maximums par tronçon. En cas de changement de transporteur, le client en sera informé par le transporteur contractuel ou par Odysway, dès lors qu'ils en auront connaissance et au plus tard lors de l'enregistrement, ou de l'embarquement pour les vols en correspondance. :br
 
-Liste noire européenne : <http://ec.europa.eu/transport/air-ban/list_fr.htm>:br
+Liste noire européenne : <http://ec.europa.eu/transport/air-ban/list_fr.htm>\:br
 
 Odysway ne retient que des transporteurs offrant toutes les garanties de sécurité selon les normes européennes et internationales en vigueur. :br
 
