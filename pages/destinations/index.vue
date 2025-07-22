@@ -8,9 +8,7 @@
       />
     </v-row>
 
-    <template
-      #indexContent
-    >
+    <template #content>
       <div class=" pt-md-16">
         <ContentRenderer
           v-if="page"

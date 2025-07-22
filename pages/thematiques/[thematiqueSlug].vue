@@ -4,22 +4,21 @@
     :selected-category="selectedCategory"
     :page-content="pageContent"
   >
-    <template #slugContent>
+    <template #content>
       <DisplayVoyagesRow
         :selected-category="selectedCategory"
         :voyages="voyages"
         :page-content="pageContent"
       />
-    </template>
-    <template
-      v-if="categorieContentStatus === 'success' && categorieContent"
-      #blogPost
-    >
-      <ContentRenderer
-        v-if="categorieContent"
-        :value="categorieContent"
-        class="mt-6"
-      />
+      <template
+        v-if="categorieContentStatus === 'success' && categorieContent"
+      >
+        <ContentRenderer
+          v-if="categorieContent"
+          :value="categorieContent"
+          class="mt-6"
+        />
+      </template>
     </template>
   </ContentLayout>
 </template>
