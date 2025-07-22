@@ -54,6 +54,6 @@ if (voyageRef.value.accompanistsList.length > 0 && !voyageRef.value.accompanists
   white-space: normal;
 }
 .line-height-2 {
-  line-height: 1.4 !important;
+  line-height: 1.5 !important;
 }
 </style>
