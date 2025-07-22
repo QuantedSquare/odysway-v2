@@ -57,9 +57,10 @@
             v-for="section, index in tops[currentTab].contenuOnglet"
             :key="`${section.title}-${index}`"
             cols="6"
-            md="3"
+            sm="4"
+            md="2"
           >
-            <h5 class="custom-title-size  font-weight-bold mb-4 pb-md-16 ">
+            <h5 class="custom-title-size font-weight-bold mb-4 pb-md-16 ">
               {{ section.title }}
             </h5>
             <div class="d-flex flex-column ga-2">
