@@ -1,45 +1,45 @@
 {
   "title": "Séjours en France",
-  "description": "Séjours en France",
+  "description": "Nos séjours en France accessibles sans avion",
   "contenuOnglet": [
     {
       "title": "Séjours en France",
       "linksList": [
         {
           "title": "Vis ma vie de berger",
-          "slug": "https://odysway.com/voyages/sejour-berger-bearn"
+          "slug": "voyages/sejour-berger-bearn"
         },
         {
           "title": "Initiation au bivouac",
-          "slug": "https://odysway.com/voyages/bivouac-montagne-pyrenees"
+          "slug": "voyages/bivouac-montagne-pyrenees"
         },
         {
           "title": "Immersion hivernale en terre béarnaise",
-          "slug": "https://odysway.com/voyages/sejour-hiver-pyrenees"
+          "slug": "voyages/sejour-hiver-pyrenees"
         },
         {
           "title": "Immersion au cœur d'un observatoire astronomique",
-          "slug": "https://odysway.com/voyages/immersion-observatoire-astronomique"
+          "slug": "voyages/immersion-observatoire-astronomique"
         },
         {
           "title": "Initiation à l'observation astronomique en Corse",
-          "slug": "https://odysway.com/voyages/sejour-astronomie-corse"
+          "slug": "voyages/sejour-astronomie-corse"
         },
         {
           "title": "Séjour au cœur d'un observatoire astronomique",
-          "slug": "https://odysway.com/voyages/sejour-observatoire-astronomique"
+          "slug": "voyages/sejour-observatoire-astronomique"
         },
         {
           "title": "En immersion avec un photographe animalier dans les Vosges",
-          "slug": "https://odysway.com/voyages/photographie-animaliere-vosges"
+          "slug": "voyages/photographie-animaliere-vosges"
         },
         {
           "title": "Découvrez l'art de la photo animalière dans le Jura",
-          "slug": "https://odysway.com/voyages/decouvrez-photo-animaliere-jura"
+          "slug": "voyages/decouvrez-photo-animaliere-jura"
         },
         {
           "title": "Séjour multi-activités en famille dans les Ecrins",
-          "slug": "https://odysway.com/voyages/sejour-multiactivites-famille-ecrins"
+          "slug": "voyages/sejour-multiactivites-famille-ecrins"
         }
       ]
     }

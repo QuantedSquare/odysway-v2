@@ -92,10 +92,24 @@ const experienceBadgeChoices = experienceFolders.flatMap((folder) => {
 
 // Modifit
 const categoriesDir = path.resolve(__dirname, 'content/categories')
-const categoriesFiles = fs.readdirSync(categoriesDir)
+const categoriesFiles = fs.readdirSync(categoriesDir).filter(
+  name => fs.statSync(path.join(categoriesDir, name)).isDirectory(),
+)
 const categoriesChoices = categoriesFiles
-  .map(file => file.replace('.json', ''))
   .filter(Boolean) as [string, ...string[]]
+
+const _categoriesSlugChoices = categoriesFiles.flatMap((dir) => {
+  const dirPath = path.join(categoriesDir, dir)
+  return fs.readdirSync(dirPath)
+    .filter(file => file.endsWith('.json'))
+    .map((file) => {
+      const jsonPath = path.join(dirPath, file)
+      if (fs.existsSync(jsonPath)) {
+        return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).slug
+      }
+      return null
+    })
+}).filter(Boolean) as [string, ...string[]]
 
 const regionDir = path.resolve(__dirname, 'content/continents')
 const regionFiles = fs.readdirSync(regionDir)
@@ -840,7 +854,7 @@ export default defineContentConfig({
         experienceType: z.enum(experienceChoices).optional().describe('Type d\'experience'), // Leave empty
         level: z.enum(['1', '2', '3']).describe('Niveau de difficulté'), // Leave empty
         categories: z.array(z.object({
-          name: z.enum(categoriesChoices),
+          name: z.enum(_categoriesSlugChoices),
         })).describe('Categories du voyage'),
         duration: z.number().describe('Durée du voyage en jours'),
         nights: z.number().describe('Nombre de nuits du voyage'), // If not found, use number of days minus 1

@@ -13,19 +13,19 @@
   "level": "1",
   "categories": [
     {
-      "name": "animaux"
+      "name": "voyage-animalier"
     },
     {
-      "name": "sans-avion"
+      "name": "voyage-sans-avion"
     },
     {
-      "name": "photographie"
+      "name": "sejours-stage-photographie"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
       "name": "ou-partir-en-ete"

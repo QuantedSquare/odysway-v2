@@ -13,16 +13,16 @@
   "level": "1",
   "categories": [
     {
-      "name": "nuits-chez-l-habitant"
+      "name": "sejours-chez-l-habitant"
     },
     {
-      "name": "nature"
+      "name": "voyage-nature"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     }
   ],
   "duration": 13,

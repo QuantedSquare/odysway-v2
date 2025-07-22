@@ -19,16 +19,19 @@
       "name": "voyage-nature"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
-      "name": "en-automne"
+      "name": "ou-partir-en-automne"
     },
     {
       "name": "ou-partir-en-ete"
     },
     {
       "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-sans-avion"
     }
   ],
   "duration": 3,

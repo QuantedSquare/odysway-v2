@@ -16,16 +16,19 @@
       "name": "voyage-nature"
     },
     {
-      "name": "nuits-chez-l-habitant"
+      "name": "sejours-chez-l-habitant"
     },
     {
-      "name": "au-printemps"
+      "name": "ou-partir-au-printemps"
     },
     {
       "name": "ou-partir-en-ete"
     },
     {
       "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-animalier"
     }
   ],
   "duration": 13,
