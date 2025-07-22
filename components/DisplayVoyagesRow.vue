@@ -3,7 +3,6 @@
   <div v-if="availableVoyages > 0">
     <HorizontalCarousel
       v-for="content in voyages"
-
       v-show="content.voyages?.length > 0"
       :key="content.id"
       :slug="content.slug"

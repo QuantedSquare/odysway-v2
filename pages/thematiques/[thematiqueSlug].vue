@@ -16,7 +16,7 @@
         <ContentRenderer
           v-if="categorieContent"
           :value="categorieContent"
-          class="mt-6"
+          class="mt-8"
         />
       </template>
     </template>

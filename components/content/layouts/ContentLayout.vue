@@ -42,15 +42,12 @@
       thickness="2"
       class="mt-2 mb-4 mb-md-6"
     />
-
     <ColorContainer color="">
       <slot name="content" />
       <template
         v-if="displayedData?.items && displayedData.showOnBottom"
       >
-        <ColorContainer
-          color=""
-        >
+        <div class="mt-8">
           <HorizontalCarousel
             :show-buttons="displayedData?.items.length > 4"
           >
@@ -71,7 +68,7 @@
               />
             </template>
           </HorizontalCarousel>
-        </ColorContainer>
+        </div>
       </template>
     </ColorContainer>
   </v-container>
