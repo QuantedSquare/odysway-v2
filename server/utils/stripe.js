@@ -19,7 +19,7 @@ const createCheckoutSession = async (order) => {
   console.log('======Config======', config.public)
   console.log('======Success URL======', `${origin}/success`)
   console.log('======Cancel URL======', `${origin}${order.currentUrl}`)
-  const imageUrl = 'https://odysway-v2.vercel.app/logos/Logo-Odysway-Bleu.png'
+  const imageUrl = 'https://dev.odysway.com/logos/Logo-Odysway-Bleu.png'
 
   const lineItems = []
   let paidAmount = 0
@@ -270,7 +270,7 @@ const createCheckoutSession = async (order) => {
   console.log('order before session', order)
 
   // Ensure URLs are properly encoded
-  let forcedOrigin = isDev ? 'https://odysway-v2.vercel.app' : config.public.siteURL
+  let forcedOrigin = isDev ? 'https://dev.odysway.com' : config.public.siteURL
   const successUrl = encodeURI(`${forcedOrigin}/confirmation?voyage=${deal.slug}&purchase=true`)
   const cancelUrl = encodeURI(`${forcedOrigin}${order.currentUrl}`)
 
