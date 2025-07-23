@@ -175,8 +175,6 @@ const getClientById = async id => await apiRequest(`/contacts/${id}`)
 const getClientByEmail = async email => await apiRequest(`/contacts?email=${email}`)
 
 const upsertContact = async (contactData) => {
-  // #TODO Checker si sendinblue encore nécessaire
-  // sendinBlue.updateContact(contactData.contact.email, contactData.contact)
   const response = await apiRequest('/contact/sync', 'post', contactData)
   return response.contact
 }
@@ -202,6 +200,7 @@ const upsertContactIntoSupabase = async (contactId) => {
       city: findCustomFieldValue(acContact.contact.fieldValues, '4'),
       zip_code: +findCustomFieldValue(acContact.contact.fieldValues, '5') || null,
     }
+    console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
     // console.log('===========contactToUpsert in activecampaign.js===========', contactToUpsert)
     const { error, data } = await supabase
       .from('activecampaign_clients')
@@ -292,6 +291,7 @@ const createDeal = async (data) => {
 
   const response = await apiRequest('/deals', 'post', formatedDeal)
   if (response.deal.id) {
+    console.log('===========response.deal.id in activecampaign.js && Deal Created===========', response.deal.id)
     await sendSlackNotification(response.deal.id, formatedDealForSlackNotif)
     await recalculatTotalValues(response.deal.id)
   }

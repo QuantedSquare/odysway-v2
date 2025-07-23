@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   try {
     // Extract contact data from request body
     const { contact } = await readBody(event)
-
+    console.log('Contact update webhook received:', contact)
     // Validate input
     if (!contact || !contact.id) {
       throw createError({
