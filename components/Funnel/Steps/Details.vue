@@ -263,7 +263,7 @@ const submitStepData = async () => {
       // const origin = config.public.siteURL
       // const bmsLink = `${origin}/booking-management/${voyage.slug}/${route.query.date_id}`
       // console.log('bmsLink', bmsLink) // #TODO To Add to schema
-      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') ? '48' : '2'
+      const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '48' : '2'
       buttonLoading.value = true
       const utmSource = localStorage.getItem('utmSource')
       const flattenedDeal = {
@@ -297,7 +297,6 @@ const submitStepData = async () => {
         promoTeen: voyage.promoChildren,
         includeFlight: voyage.includeFlight ? 'Oui' : 'Non',
         flightPrice: voyage.flightPrice,
-        // maxTeenAge: voyage.maxTeenAge,
         source: 'Devis',
         indivRoom: voyage.indivRoom && voyage.indivRoomPrice > 0 ? ['Oui'] : ['Non'],
         forcedIndivRoom: nbTravelers.value === 1 && voyage.forcedIndivRoom ? 'Oui' : 'Non',

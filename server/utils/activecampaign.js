@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import supabase from './supabase'
 
 const config = useRuntimeConfig()
-const isDev = config.public.environment !== 'production'
+const isDev = config.public.environment === 'development'
 
 const baseUrl = process.env.ACTIVE_CAMPAIGN_URL
 const headers = {
@@ -290,6 +290,7 @@ const createDeal = async (data) => {
   // console.log('===========formatedDeal after delete in customfields===========', formatedDeal.deal.fields)
 
   const response = await apiRequest('/deals', 'post', formatedDeal)
+  console.log('===========response in activecampaign.js===========', response)
   if (response.deal.id) {
     console.log('===========response.deal.id in activecampaign.js && Deal Created===========', response.deal.id)
     await sendSlackNotification(response.deal.id, formatedDealForSlackNotif)
