@@ -12,7 +12,7 @@
     >
       <template #title>
         <h3 class="custom-title">
-          {{ content.discoveryTitle }}
+          {{ content.discoveryTitle || content.title }}
         </h3>
       </template>
       <template #carousel-item>
@@ -210,6 +210,8 @@ const expandButtonText = computed(() => {
   }
   return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de voyages'
 })
+
+console.log('props.voyages ===>', props.voyages)
 </script>
 
 <style scoped>

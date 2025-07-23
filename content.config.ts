@@ -56,7 +56,7 @@ const destinationChoices = destinationFolders
   .map((folder) => {
     const jsonPath = path.join(destinationDir, folder, `${folder}.json`)
     if (fs.existsSync(jsonPath)) {
-      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).titre
+      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).title
     }
     return null
   })
@@ -303,7 +303,7 @@ export default defineContentConfig({
         include: 'destinations/*/*.json',
       },
       schema: z.object({
-        titre: z.string().describe('Titre de la destination'),
+        title: z.string().describe('Titre de la destination'),
         slug: z.string().describe('Slug de la destination'),
         chapka: z.string().describe('Chapka de la destination'),
         iso: z.string().describe('ISO de la destination'),
