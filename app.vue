@@ -1,8 +1,8 @@
 <template>
   <NuxtLayout>
-    <!-- <NuxtPage /> -->
-    <!-- <CookiesSnackbar /> -->
-    <Maintenance />
+    <NuxtPage />
+    <CookiesSnackbar />
+    <!-- <Maintenance /> -->
   </NuxtLayout>
 </template>
 
