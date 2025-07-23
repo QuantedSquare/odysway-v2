@@ -72,7 +72,7 @@ export default defineNuxtConfig({
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
-      environment: process.env.NUXT_SITE_ENV || 'development',
+      environment: process.env.VERCEL_ENV || 'development',
       siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
       metapixel: {
         default: { id: process.env.METAPIXEL_ID || '' },
@@ -119,7 +119,7 @@ export default defineNuxtConfig({
     },
   },
   gtag: {
-    enabled: process.env.NUXT_SITE_ENV === 'production',
+    enabled: process.env.VERCEL_ENV === 'production',
     id: process.env.GTAG_ID || '',
     initMode: 'manual',
     initCommands: [

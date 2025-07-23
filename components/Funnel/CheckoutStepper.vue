@@ -374,7 +374,6 @@ const nextStep = () => {
   // Check if we're going on calendly step to fire pixel:
 
   if (nextStepValue === 1 && skipperMode.value === 'quick') {
-
     trackPixel('trackCustom', 'ClicRdv', {
       voyage: voyage.value.title,
     })
@@ -410,7 +409,6 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
     }
 
     const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
-
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {

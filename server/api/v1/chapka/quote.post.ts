@@ -15,10 +15,10 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQ
       message: `Validation failed: ${parsedBody.error.message}`,
     })
   }
-
+  console.log('Chapka: quote parsed body', parsedBody.data)
   try {
     const result = await chapka.quote(parsedBody.data)
-    // console.log('Chapka: quote returned', result)
+    console.log('Chapka: quote returned', result)
     return {
       ...result,
     }
