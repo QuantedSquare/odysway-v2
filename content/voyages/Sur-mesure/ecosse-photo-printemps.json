@@ -8,7 +8,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "customAvailable": false,
+  "customAvailable": true,
   "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [],
