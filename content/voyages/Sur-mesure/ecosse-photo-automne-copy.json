@@ -1,0 +1,152 @@
+{
+  "published": false,
+  "title": "Séjour photographique en Ecosse",
+  "destinations": [
+    {
+      "name": ""
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "Apprendre en voyage",
+  "level": "1",
+  "categories": [],
+  "duration": 8,
+  "nights": 7,
+  "includeFlight": false,
+  "housingType": "",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 18,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Voyage photographique en Écosse",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "ecosse-photo-printemps",
+  "description": "Voyage photographique en Écosse",
+  "emailDescription": "",
+  "metaDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "Apprendre en voyage",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 10 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "",
+      "visible": false
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 2490,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 0,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 10,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 490,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 0,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "",
+      "housingType": "",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+    "alt": "image principale du voyage Séjour photographique en Ecosse"
+  },
+  "imageSecondary": {
+    "src": "",
+    "alt": "image secondaire du voyage Séjour photographique en Ecosse"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "Séjour photographique en Ecosse",
+    "canonicalUrl": "https://www.odysway.com/voyages/ecosse-photo-printemps",
+    "ogTitle": "Séjour photographique en Ecosse",
+    "ogDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+    "ogImage": {
+      "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+      "alt": "image principale du voyage Séjour photographique en Ecosse"
+    },
+    "twitterTitle": "Séjour photographique en Ecosse",
+    "twitterDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+    "twitterImage": {
+      "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+      "alt": "image principale du voyage Séjour photographique en Ecosse"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}
