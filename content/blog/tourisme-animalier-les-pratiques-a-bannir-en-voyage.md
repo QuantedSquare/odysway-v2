@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-03-06 09:59:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique Centrale, Amerique du Nord, Animaux, Asie, Costa Rica, Etats Unis, Europe, Famille, France, Sri Lanka"
 categories: "Nature et grands espaces, Blog"

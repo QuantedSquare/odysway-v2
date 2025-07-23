@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2018-12-07 10:48:00+00:00"
 tags: "Afrique, Grands espaces, Madagascar"
 categories: "Depassement de soi"

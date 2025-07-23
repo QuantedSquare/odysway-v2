@@ -11,7 +11,7 @@ async function migrateDatesToSupabase() {
   const datesVoyagesGroupe = readJson('./butter-data/dates-groups.json')
 
   // Map each entry to the travel_dates schema
-  const mapped = datesVoyagesGroupe.map((date) => {
+  const mapped = datesVoyagesGroupe.filter(date => date.voyage.slug).map((date) => {
     return {
       published: true,
       travel_slug: slugify(date.voyage.slug, { lower: true, strict: true }),

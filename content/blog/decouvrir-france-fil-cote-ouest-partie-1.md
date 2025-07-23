@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-08-13 11:00:00+00:00"
 tags: "Europe, Famille, France, Grands espaces, Made in France, Sport, Transports insolites"
 categories: "Depassement de soi, Nature et grands espaces, Culture et decouverte, Blog"

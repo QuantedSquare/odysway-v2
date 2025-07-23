@@ -12,7 +12,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-03-06 09:20:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique Centrale, Amerique du Sud, Animaux, Asie, Communautés locales, Costa Rica, Developpement personnel, Famille, Grands espaces, Inde, Kirghizistan, Made in France, Perou, Sport, Sri Lanka, Thailande, Transports insolites"
 categories: "Apprentissage, Blog"

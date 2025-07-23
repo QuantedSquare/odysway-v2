@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-05-29 16:58:00+00:00"
 tags: "Asie, Communautés locales, Grands espaces, Inde"
 categories: "Depassement de soi"

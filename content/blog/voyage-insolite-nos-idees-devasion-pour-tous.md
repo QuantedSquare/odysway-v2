@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2025-01-20 06:28:00+00:00"
 tags: "conseils, insolite"
 categories: "Blog"

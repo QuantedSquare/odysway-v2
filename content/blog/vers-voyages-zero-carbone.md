@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2021-04-28 18:00:00+00:00"
 tags: "conseils, éco-responsable, nature, transports"
 categories: "Blog"

@@ -3,7 +3,7 @@
     :is-experience="true"
     :page-content="pageContent"
   >
-    <template #indexContent>
+    <template #content>
       <DisplayVoyagesRow
         :voyages="experiencesWithVoyages"
         :page-content="pageContent"

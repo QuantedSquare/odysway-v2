@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-03-24 15:31:00+00:00"
 tags: "Afrique, Amerique Centrale, Amerique du Sud, Asie, Brésil, Chine, Costa Rica, Ethiopie, Europe, Finlande, Nepal, Perou, Sport, Sri Lanka, Thailande, Transports insolites"
 categories: "Depassement de soi, Culture et decouverte"

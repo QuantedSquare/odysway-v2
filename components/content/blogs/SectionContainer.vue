@@ -38,7 +38,6 @@ defineProps({
 .content-class:deep(h3){
  margin-bottom: 1em;
 }
-
   .content-class:deep(h3), .content-class:deep(h2){
     display: flex!important;
     justify-content: center!important;

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-07-23 11:00:00+00:00"
 tags: "Developpement personnel, France, Made in France, Roumanie"
 categories: "Depassement de soi, Culture et decouverte, Developpement Personnel, Blog"

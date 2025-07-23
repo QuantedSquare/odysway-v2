@@ -1,0 +1,399 @@
+{
+  "published": true,
+  "title": "Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune",
+  "destinations": [
+    {
+      "name": "Sri Lanka"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "Plonger dans la culture",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "voyage-en-famille"
+    }
+  ],
+  "duration": 12,
+  "nights": 11,
+  "includeFlight": false,
+  "housingType": "Hôtel, Temple bouddhiste",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez pour un voyage inoubliable de 12 jours au Sri Lanka, une aventure soigneusement pensée pour vous faire découvrir les multiples facettes de cette île enchanteresse.\n\nDès les premiers jours, plongez dans le quotidien des moines bouddhistes en séjournant dans un temple, une expérience à la fois spirituelle et apaisante. Continuez votre parcours en partageant le quotidien des agriculteurs à Polonnaruwa ou en contribuant à des initiatives locales à Digana.\n\nExplorez des paysages à couper le souffle en cheminant au cœur des plantations de thé, en découvrant les grottes millénaires de Dambulla ou en admirant les trésors architecturaux de Kandy et de Galle. Laissez-vous emporter par des moments uniques : un trajet en train parmi les montagnes, un safari à Udawalawe au contact de la faune sauvage, ou encore un cours de cuisine sri-lankaise chez l’habitant.\n\nEnfin, savourez la douceur de la côte sud à Unawatuna, avec ses plages de sable doré, ses rencontres avec des tortues et ses couchers de soleil mémorables.\n\nCe voyage, conçu pour capturer l’essence du Sri Lanka dans toute sa diversité, promet des rencontres marquantes et des souvenirs qui resteront gravés pour toujours.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Plongez dans la sérénité d’un temple bouddhiste et découvrez les rituels spirituels, entre méditation et mode de vie monastique",
+    "Participez à des projets communautaires d'activités agricoles ou de rénovation d'école aux côtés des habitants",
+    "Admirez les trésors culturels du Sri Lanka, des grottes ornées de Dambulla au charme colonial de Galle, en passant par le temple de la Dent à Kandy",
+    "Vivez un voyage hors du temps à bord d’un train traversant les montagnes, entre plantations de thé, ponts suspendus et tunnels, pour découvrir les paysages sri-lankais",
+    "Observez une faune fascinante lors d’un safari à Udawalawe, où éléphants et autres espèces sauvages évoluent dans leur habitat naturel",
+    "Terminez votre séjour par une escapade balnéaire et savourez la douceur de vivre sur les plages de Unawatuna"
+  ],
+  "slug": "voyage-immersion-culturelle-sri-lanka",
+  "description": "Partez pour un voyage inoubliable de 12 jours au Sri Lanka, une aventure soigneusement pensée pour vous faire découvrir les multiples facettes de cette île enchanteresse.\n\nDès les premiers jours, plongez dans le quotidien des moines bouddhistes en séjournant dans un temple, une expérience à la fois spirituelle et apaisante. Continuez votre parcours en partageant le quotidien des agriculteurs à Polonnaruwa ou en contribuant à des initiatives locales à Digana.\n\nExplorez des paysages à couper le souffle en cheminant au cœur des plantations de thé, en découvrant les grottes millénaires de Dambulla ou en admirant les trésors architecturaux de Kandy et de Galle. Laissez-vous emporter par des moments uniques : un trajet en train parmi les montagnes, un safari à Udawalawe au contact de la faune sauvage, ou encore un cours de cuisine sri-lankaise chez l’habitant.\n\nEnfin, savourez la douceur de la côte sud à Unawatuna, avec ses plages de sable doré, ses rencontres avec des tortues et ses couchers de soleil mémorables.\n\nCe voyage, conçu pour capturer l’essence du Sri Lanka dans toute sa diversité, promet des rencontres marquantes et des souvenirs qui resteront gravés pour toujours.",
+  "emailDescription": "👉 Si vous rêvez d’un voyage authentique au Sri Lanka, entre rencontres uniques avec des moines bouddhistes, safaris au plus près des éléphants et découverte de paysages sublimes, ce séjour immersif de 12 jours est fait pour vous !",
+  "metaDescription": "Voyage au Sri Lanka : immersion culturelle, spiritualité, nature, safari et plages paradisiaques. Découvrez l'âme de l'île en 12 jours uniques.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**11 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Décembre à mars",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "AYUBOWAN ET TEMPLE BOUDDHISTE",
+      "badgeText": "JOUR 1",
+      "description": "Vous êtes accueillis par votre chauffeur dès votre arrivée à l’aéroport de Colombo. La chaleur, les senteurs et la lumière tropicales marquent le début de votre aventure, avec pour première étape Kurunegala.\r\nDécouvrez le Ridi Viharaya, ou Temple d'Argent, un site bouddhiste Theravada du IIe siècle avant J.-C., lié à la légende du roi Dutugemunu et la construction du Ruwanweli Seya à Anuradhapura.\r\nPassez une nuit inoubliable au Temple Bouddhiste de Ridigama, près de Kurunegala. Plongez dans une expérience immersive au cœur du mode de vie monastique, une opportunité unique de vous recentrer tout en explorant les traditions bouddhistes dans un cadre naturel exceptionnel.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/fqwTxVTZy6hFZM0YGNYw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "SERENITE MONASTIQUE ET TRESORS DE DAMBULLA",
+      "badgeText": "JOUR 2",
+      "description": "Participez aux prières et méditations guidées par les moines, savourez des repas simples et nourrissants, et plongez dans une ambiance de sérénité.\r\nL'après-midi, explorez Dambulla, site UNESCO, et ses grottes bouddhistes ornées de peintures murales et de statues de Bouddha, offrant un panorama magnifique. Puis partez à l’ascension du mythique Rocher du Lion.\r\nFaites un détour par le marché de gros de Dambulla, une halle animée où fruits, légumes et produits locaux dévoilent la richesse agricole du Sri Lanka.\r\nTerminez la journée avec votre installation à l’hôtel de Girithale.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/KmpTXNjYS0SJ5qdjxK2L.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "IMMERSION RURALE ET DECOUVERTE HISTORIQUE A POLONNARUWA",
+      "badgeText": "JOUR 3",
+      "description": "Explorez Polonnaruwa, région phare de la production de riz, lors d'une immersion avec des agriculteurs locaux. Selon la saison, participez à la plantation, l’entretien ou la récolte, puis déjeunez sous une cabane après une baignade au canal.\r\nL’après-midi, découvrez Polonnaruwa, ancienne capitale royale, ses ruines majestueuses, le Kalu Gal Vihara et le musée archéologique. Optez pour une visite à vélo pour profiter pleinement du cadre et du lac Parakrama Samudra.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/YnWTg5RoSV69AOPxxqcZ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "KANDY, CAPITALE ROYALE ET TRADITIONS BOUDDHISTES",
+      "badgeText": "JOUR 4",
+      "description": "Direction le centre du pays pour découvrir Kandy, dernière capitale royale de l'île au charme aristocratique. Visitez le temple de la Dent, richement décoré et abritant la précieuse relique de la dent de Bouddha. Profitez d’une balade autour du lac (4 km) et explorez le marché local, animé et coloré. Selon vos envies, assistez à l’une des cérémonies du temple à 5h30, 9h30 ou 18h30 (horaires variables selon la saison). Installation à votre logement.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/oLDGXGgDQ6q3xO86AErM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RACINES DE SERENITE : JARDIN BOTANIQUE ET PLANTATION D'ARBRES",
+      "badgeText": "JOUR 5",
+      "description": "Commencez la journée par une visite du jardin botanique de Peradeniya, au bord de la rivière Mahaweli. Sur 60 hectares, admirez près de 4 000 espèces de plantes, des allées de palmiers royaux aux orchidées et parterres colorés. Une balade incontournable !\r\nRejoignez ensuite Digana pour deux nuits chez l’habitant, au cœur de la nature et des villages locaux. L’après-midi, participez à une activité de plantation d’arbres à Polwaththe. Un moment immersif pour contribuer à la préservation de l’environnement tout en profitant de la beauté naturelle environnante.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/mDeoQEgUSmD3Gddg6uFQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PROJETS COMMUNAUTAIRES ENTRE AGRICULTURE ET EDUCATION",
+      "badgeText": "JOUR 6",
+      "description": "Rencontrez Nihal, du Polwaththe Eco Lodge, et participez à l'un des deux projets communautaires selon les besoins : dans le domaine de l'agriculture, vous travaillerez sur un terrain de 5 hectares exploité en coopérative, où la production de riz et de légumes bios profite aux villageois, en prenant part aux activités agricoles selon la saison avec un équipement adapté fourni ; ou dans le domaine de l'éducation, vous contribuerez à la rénovation de l’école de Panwila en fabriquant des briques en boue et en aidant aux travaux, une opportunité unique de soutenir concrètement des initiatives locales.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/bCIMotSMTxmfI9UhWxTc.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHARME COLONIAL, VOYAGE EN TRAIN ET SAVEURS SRI LANKAISES",
+      "badgeText": "JOUR 7",
+      "description": "Ce matin, rejoignez Nuwara Eliya, surnommée \"Petite Angleterre\", célèbre pour son charme colonial, ses températures douces et ses paysages montagneux. Explorez son centre-ville, le parc Victoria et le lac Gregory, où une promenade en bateau est possible.\r\nÀ la gare de Nanu Oya, embarquez pour un trajet en train inoubliable à travers plantations de thé, tunnels et ponts suspendus, jusqu’à Bandarawela où votre chauffeur vous attend.\r\nL’après-midi, initiez-vous à la cuisine sri lankaise au sein d’une famille locale. Avec Mishra, apprenez à préparer un authentique Rice and Curry, accompagné d’un dîner convivial. Installation chez l’habitant.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/7pRIFw2QhOMUnfO354NN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "STATUES MILLENAIRES ET SAFARI A UDAWALAWE",
+      "badgeText": "JOUR 9",
+      "description": "En route vers le sud, admirez les statues de Buduruwagala, chef-d’œuvre millénaire dont un Bouddha de 17 m témoigne de l’art ancien de la taille de pierre. L’après-midi, partez en safari à Udawalawe, célèbre pour ses éléphants et sa faune variée : oiseaux, crocodiles, varans, sambars, et peut-être même des léopards. Accompagné d’un guide naturaliste, explorez ce parc créé en 1972, un sanctuaire où les animaux évoluent librement dans leur habitat naturel. Cette expérience, réalisée dans le respect strict de la faune, vous permettra d’observer les animaux de manière éthique, à distance et sans perturber leur comportement. Vous contribuez ainsi à la préservation de cet écosystème unique tout en vivant un moment inoubliable au cœur de la nature sri-lankaise.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/Rfy68QVRT8EVs8N6qT4Y.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DU PHARE DE DONDRA AUX TRESORS DE MATARA",
+      "badgeText": "JOUR 10",
+      "description": "Au point austral de l'île, découvrez le majestueux phare du Cap de Dondra, dominant l’océan Indien. Prenez un instant pour contempler le paysage et méditer sur l’histoire glorieuse de cette tour qui guidait autrefois d'innombrables navires.\r\nÀ Matara, ville commerçante du sud, une promenade à pied vous mène au fort hollandais en étoile, datant du XVIIIᵉ siècle, et à ses ruines bien préservées, témoins d’une architecture militaire remarquable. Terminez par une visite du temple Paravi Duwa, perché sur une petite île accessible par un pont.\r\nContinuation vers Unawatuna pour deux nuits en bord de mer, avec temps libre pour profiter de la plage.",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/bh676U5TOSIIkZz08FWy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ECHAPPEE BALNEAIRE A UNAWATUNA",
+      "badgeText": "JOUR 11",
+      "description": "Profitez de temps libre à Unawatuna, une baie en croissant de lune dominée par un temple bouddhiste. Flânez le long de la route bordée de restaurants et boutiques menant à la plage. À proximité, explorez Jungle Beach et Dalawella, une plage photogénique idéale pour observer les tortues dans leur habitat naturel (respectez-les, sans les toucher ni les nourrir).",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/6T4PG2w0RQKjiWTdOoGO.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "GALLE, CLAP DE FIN ",
+      "badgeText": "JOUR 12",
+      "description": "Explorez Galle, joyau colonial au charme intemporel. Son fort hollandais du XVIIᵉ siècle, paisible et déconnecté du reste de la ville, invite à la flânerie. Parcourez ses remparts, saluez le phare et admirez églises et boutiques pittoresques.\r\nC’est la fin de votre séjour sur cette île paradisiaque. En espérant que vous repartez avec des souvenirs inoubliables. Votre transfert à l’aéroport de Colombo est organisé pour un départ en toute sérénité. Bon voyage et bon retour !",
+      "photo": "/images/voyages/voyage-immersion-culturelle-sri-lanka/cCyXpFx2Qwu1HiJeskSF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'hébergement pour 11 nuits en chambre double ou triple et en demi-pension",
+      "Le transport en véhicule privé climatisé type Large Micro Van",
+      "L'accompagnement par un chauffeur-guide francophone (pour un groupe à partir de 4 personnes) ou chauffeur guide anglophone (pour un groupe de 3 personnes)",
+      "Les activités mentionnées au programme _(Journée d'activités dans les rizières (paddyfields) avec déjeuner / Journée de volontariat avec Polwaththe / Cours de cuisine suivi d'un déjeuner à Bandarawela, chez l'habitant (Deen) / Journée de trek avec Deen : de Bandarawela à Haputale avec guide spécialisé anglophone, déjeuner pique-nique / Safari en jeep d'une demi-journée dans le parc national d'Udawalawe)_",
+      "Les frais d'entrée sur les sites suivants : dambulla, polonnaruwa, temple de kandy, jardin botanique de peradeniya, buduruvagala",
+      "Le voyage en train de la gare de Nanu Oya à Bandarawela (selon les disponibilités au moment de la réservation - les places ne seront pas nécessairement côte à côte)",
+      "Les taxes gouvernementales"
+    ],
+    "exclude": [
+      "Les vols internationaux pour se rendre au Sri Lanka",
+      "Les frais de visa (obtention en ligne sur le site [https://eta.gov.lk/slvisa/](https://eta.gov.lk/slvisa/))",
+      "Les déjeuners (sauf ceux mentionnés)",
+      "Les boissons durant les repas",
+      "Les dépenses personnelles",
+      "Les pourboires",
+      "L’assurance voyage Assistance Rapatriement (obligatoire)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1850,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "CMB"
+    ]
+  },
+  "accompanistsDescription": "Tout au long de votre voyage, profitez d’un accompagnement de qualité avec un chauffeur-guide francophone expérimenté, qui vous fera découvrir les trésors du Sri Lanka dans votre langue. Sur les sites culturels majeurs, des guides locaux francophones, passionnés et experts, viendront enrichir vos visites grâce à leurs connaissances et anecdotes. Une formule idéale pour explorer l’île en toute sérénité et avec une compréhension approfondie de ses richesses.\n\nLe guide francophone est prévu pour un groupe à partir de 4 personnes. Pour un groupe de 3 personnes uniquement, le chauffeur guide sera anglophone.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtel, Temple bouddhiste",
+      "housingType": "",
+      "housingMood": "Votre séjour au Sri Lanka s’accompagne d’hébergements soigneusement sélectionnés, alliant charme, confort et authenticité. Chaque étape reflète l’esprit de la région : une nuit immersive dans un temple bouddhiste, des hôtels standards à deluxe proches des sites emblématiques, et des séjours en pleine nature favorisant la reconnexion avec l’environnement et les communautés locales.\r\nProfitez également d’un cadre colonial chaleureux dans les collines sri lankaises, d’une expérience sauvage à proximité d’un parc national, et d’une escapade balnéaire dans un lieu chargé d’histoire. Ces hébergements variés vous offrent une immersion totale et un confort adapté à chaque moment de votre voyage.\r\n",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/h5ddoNUISnidwBZituCJ.jpg",
+          "alt": "image de l'hébergement Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/eeAUoxuiRUuQtZs6tmTj.jpg",
+          "alt": "image de l'hébergement Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+        },
+        {
+          "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/olYHUABLQcKJZBKN1qIP.jpg",
+          "alt": "image de l'hébergement Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/cDq6o9JTQQeVeA71lxll.jpg",
+    "alt": "image principale du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/7Rr3RIToR3KViFxBjvRp.jpg",
+    "alt": "image secondaire du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/4Xz9ZdjQP2YsMZxUzMFX.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/dJ0jod6sSXOHTrI2SVbv.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/WMnpgOGQ6eYeVjlZXgQU.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/8mB1DDEqTmewcYneUxcI.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/92PvUt88QeSMIWFjvhUB.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/hOTdGHRwRnyRmHqxBL8m.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/DWxaz5YQqSSewuxqTv6T.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/z3MbFHJVTIaacCdAukpG.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/Xe4dPfBgRBK1Byxukwxl.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/aXwUPoQ5qzc5hV5FkLVQ.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/GErFGLUfQiWGOhEJDeuX.jpg",
+      "alt": "image de la liste de photos du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Ce voyage est-il fait pour moi ?",
+        "answer": "Ce voyage est conçu pour ceux qui recherchent une expérience immersive et authentique à partager en petit groupe. Si vous aimez découvrir de nouvelles cultures, vivre des moments uniques comme la vie dans un temple bouddhiste, participer à des projets communautaires, et explorer des sites historiques et naturels d’exception, ce séjour est fait pour vous. Le format en petit groupe favorise les échanges, les rencontres et une ambiance conviviale, tout en permettant une meilleure immersion dans la culture locale. Une bonne condition physique est recommandée pour profiter des randonnées et activités, mais le programme reste adaptable au rythme de chacun."
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "Ce voyage est faisable toute l'année, grâce à la diversité climatique du Sri Lanka. Cependant, les conditions varient selon les saisons :\n\n*   De décembre à mars, la saison sèche sur la côte ouest, le sud et les plaines centrales offre des journées ensoleillées, idéales pour explorer les sites culturels et profiter des plages, notamment à Unawatuna.\n*   D'avril à novembre, la mousson de la côte sud-ouest peut apporter des averses, souvent en fin de journée, avec des éclaircies fréquentes. Les paysages verdoyants et les températures restent agréables, mais la mer peut être plus agitée.\n\nEn résumé, le Sri Lanka est une destination accueillante toute l'année, avec des avantages spécifiques à chaque saison."
+      },
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Les repas servis lors de votre voyage sont principalement des plats typiques, dont le fameux \"Rice & Curry\" (base de riz accompagnée de différents \"curry\" à base de viande et/ou de légumes. Il y en a pour tous les goûts (les végétariens trouveront toujours une option qui leur convient !). Les currys sont plus ou moins épicés, n'hésitez pas à demander et à ajuster votre repas selon vos préférences.\n\nTous les petits déjeuners et les dîners dans les hébergements proposés sont inclus. Les déjeuners des jours 3, 7 et 8 sont également inclus."
+      },
+      {
+        "question": "Comment fonctionnent les pourboires au Sri Lanka ?",
+        "answer": "Au Sri Lanka, la pratique des pourboires est courante et attendue. Pour vous donner un ordre d’idée de ce qu’il est coutûme de donner, vous trouverez ci-dessous une liste des pourboires :\n\n*   Portier, personne qui porte vos valises à l’hôtel : 200 LKR (env. 0.6 €)\n*   Restaurant : 200 LKR à 400 LKR (env. 0.6 € à 1.2 €)\n*   Chauffeur de jeep de safari, guide à vélo : 2000 LKR (env. 6€)\n*   Chauffeur ou chauffeur-guide qui vous aura accompagné pendant le séjour : 5 à 15 € par jour en une fois à la fin du séjour (montant pour l’ensemble du groupe, en devise ou en monnaie locale)\n\nCes montants visent à vous donner une idée de ce qui se pratique mais que le montant du pourboire reste à votre entière discrétion et dépend de votre satisfaction et de vos moyens."
+      },
+      {
+        "question": "Quelles sont les formalités d’entrée au Sri Lanka ? ",
+        "answer": "Vous devez être munis d’un passeport d’une durée de validité d’au moins 6 mois après la date d’entrée. L'ETA (Electronic Travel Authorization) est obligatoire pour entrer au Sri Lanka. Il s’obtient en ligne, il est nominatif, personnel et coûte 50 USD. Il n’est pas nécessaire de présenter une copie du passeport ni de fournir une photo. Il suffit de remplir le formulaire en ligne, exclusivement sur le [site officiel](http://www.eta.gov.lk/slvisa/), quelques jours avant votre départ.\n\nIl est recommandé de s’inscrire sur l’application [Ariane](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html).\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/sri-lanka/#entree)."
+      },
+      {
+        "question": "Quels sont les vaccins et précautions en matière de santé ?",
+        "answer": "Aucune vaccination n’est obligatoire mais la mise à jour de la vaccination diphtérie-tétanos-poliomyélite (DTP) est recommandée en incluant Rubéole Oreillons et Rougeole chez l’enfant.\n\nLa vaccination antituberculeuse est également souhaitable. \n\nPlus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/sri-lanka/#sante)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n    \n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Qu’est-ce que l’esprit Odysway ?",
+        "answer": "Voyager avec Odysway, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un e-mail de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les sept jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact étroit avec un conseiller dédié. Vous pourrez le joindre par e-mail, téléphone, SMS ou WhatsApp, selon ce qui vous convient le mieux. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au + 33 [01 84 80 79 75](https://www.google.com/search?q=odysway&oq=odysway&gs_lcrp=EgZjaHJvbWUqDAgAEAAYExjjAhiABDIMCAAQABgTGOMCGIAEMg8IARAuGBMYrwEYxwEYgAQyBggCEEUYQTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8) ou au + 33 6 67 38 56 55."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-immersion-culturelle-sri-lanka",
+    "ogTitle": "Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune",
+    "ogDescription": "Voyage au Sri Lanka : immersion culturelle, spiritualité, nature, safari et plages paradisiaques. Découvrez l'âme de l'île en 12 jours uniques.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/cDq6o9JTQQeVeA71lxll.jpg",
+      "alt": "image principale du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    "twitterTitle": "Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune",
+    "twitterDescription": "Voyage au Sri Lanka : immersion culturelle, spiritualité, nature, safari et plages paradisiaques. Découvrez l'âme de l'île en 12 jours uniques.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-immersion-culturelle-sri-lanka/cDq6o9JTQQeVeA71lxll.jpg",
+      "alt": "image principale du voyage Le Sri Lanka du sacré au sauvage : voyage au fil des temples, des rencontres humaines et de la faune"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

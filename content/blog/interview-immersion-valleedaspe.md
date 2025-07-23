@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2021-05-31 09:14:00+00:00"
 tags: "auberge, berger, France, gîte, immersion, Pyrénées, randonnée, terroir, Vallée d'Aspe"
 categories: "Blog"

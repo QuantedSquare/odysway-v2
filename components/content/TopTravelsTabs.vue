@@ -1,16 +1,17 @@
 <template>
   <v-container
     fluid
-    class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width"
+    class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width "
   >
     <div class="text-h3 font-weight-bold my-4">
+      <!-- #TODO: add title from NUXT -->
       Des idées pour vos prochains voyages
     </div>
 
-    <div class="tabs-container position-relative mb-6">
+    <div class="tabs-container position-relative mb-6 mt-md-10 custom-color ">
       <v-tabs
         v-model="currentTab"
-        class="text-white-light"
+        class="text-white-light  "
         color="white-light"
         role="tablist"
         :aria-label="`Navigation des idées de voyages`"
@@ -21,10 +22,15 @@
           :key="index"
           :value="index"
           role="tab"
-          :aria-selected="currentTab === index"
+          class="text-decoration-none pb-md-8 "
+          :aria-selected="(currentTab === index).toString()"
           :aria-controls="`tabpanel-${index}`"
+          :class="index === 0 ? 'pl-0' : 'pl-4'"
         >
-          <span class="font-weight-bold text-caption text-md-h6">
+          <span
+            class="custom-title-size justify-self-start"
+            :class="currentTab === index ? 'text-white font-weight-bold' : 'custom-color font-weight-regular'"
+          >
             {{ top.title }}
           </span>
         </v-tab>
@@ -39,31 +45,32 @@
 
     <v-tabs-window
       v-model="currentTab"
+      class="custom-color"
     >
       <v-tabs-window-item
-        v-for="tab, index in tops[currentTab].contenuOnglet"
-        :id="`tabpanel-${index}`"
-        :key="`${tab.title}-${index}`"
-        :value="index"
+        :id="`tabpanel-${currentTab}`"
+        :value="currentTab"
         role="tabpanel"
-        :aria-labelledby="`tab-${index}`"
+        :aria-labelledby="`tab-${currentTab}`"
       >
-        <v-row class=" mb-4 mb-md-16 pb-md-16">
+        <v-row class=" mb-4 mb-md-10  flex-nowrap overflow-auto hidden-scroll">
           <v-col
-            v-for="top, f in tops[currentTab].contenuOnglet"
-            :key="`${top.title}-${f}`"
-            cols="6"
-            md="3"
+            v-for="section, index in tops[currentTab].contenuOnglet"
+            :key="`${section.title}-${index}`"
+
+            md="2"
           >
-            <h5 class="text-h6 text-md-h4 font-weight-bold mb-4 mb-md-10 ">
-              {{ top.title }}
+            <h5 class="custom-title-size font-weight-bold mb-4 pb-md-16 ">
+              {{ section.title }}
             </h5>
-            <div class="d-flex flex-column ga-2">
+            <div class="d-flex flex-column ga-md-2">
               <NuxtLink
-                v-for="link, i in top.linksList"
+                v-for="link, i in section.linksList"
                 :key="`${link.slug}-${i}`"
-                :to="`/voyages/${link.slug}`"
-                class="text-white-light line-clamp-2 text-caption text-md-body-1 font-weight-regular"
+                :to="`/${link.slug}`"
+                :external="link.slug.includes('http')"
+                :target="link.slug.includes('http') ? '_blank' : undefined"
+                class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
               >
                 {{ link.title }}
               </NuxtLink>
@@ -90,9 +97,25 @@ const tops = await queryCollection('tops').all()
 }
 .line-clamp-2{
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  font-weight: 500!important;
+  line-height: 1.2!important;
+}
+.custom-color:deep(a), .custom-color:deep(div){
+  color: #FFFFFF80!important;
+}
+@media (min-width: 600px) {
+  .custom-title-size {
+    font-size: 20px !important;
+    text-transform: none;
+    max-height: 50px!important;
+    line-height: 1.2!important;
+  }
+}
+
+.hidden-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+
 }
 </style>

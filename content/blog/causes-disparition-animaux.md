@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-06-04 14:02:00+00:00"
 tags: "Animaux, Famille"
 categories: "Depassement de soi"

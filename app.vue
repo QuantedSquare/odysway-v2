@@ -1,13 +1,15 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
-    <CookiesSnackbar />
+    <!-- <NuxtPage /> -->
+    <!-- <CookiesSnackbar /> -->
+    <Maintenance />
   </NuxtLayout>
 </template>
 
 <script setup>
 const config = useRuntimeConfig()
 const route = useRoute()
+const { gtag, initialize } = useGtag()
 
 useHead({
   htmlAttrs: {
@@ -65,6 +67,15 @@ onMounted(() => {
   const isConsent = localStorage.getItem('consent') === 'granted'
   if (isConsent && config.public.environment === 'production') {
     trackPixel('track', 'PageView')
+    initialize()
+
+    gtag('consent', 'update', {
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted',
+    })
+    useTrackEvent('page_view')
   }
 
   const userUTMs = []

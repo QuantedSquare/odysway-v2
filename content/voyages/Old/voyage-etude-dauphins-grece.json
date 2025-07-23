@@ -1,0 +1,361 @@
+{
+  "published": false,
+  "title": "Observez les dauphins avec un biologiste marin en Grèce",
+  "destinations": [
+    {
+      "name": "Grèce"
+    }
+  ],
+  "groupeAvailable": false,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "En immersion chez...",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-culturel"
+    },
+    {
+      "name": "ecotourisme"
+    },
+    {
+      "name": "voyage-insolite"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "voyage-en-groupe"
+    },
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "voyage-nature"
+    }
+  ],
+  "duration": 0,
+  "nights": 0,
+  "includeFlight": false,
+  "housingType": "Maison",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 4.5,
+  "comments": 2,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Connaissez-vous l'île d'Alonissos, une île paradisiaque au large des côtes grecques ? C'est sur cette île que vit Kimonas, un biologiste marin passionné par la protection des dauphins. À bord de son voilier Odysseia, il mène des expéditions en mer Egée pour observer les dauphins, les photographier et étudier leur comportement. \n\nNous vous proposons une véritable immersion dans le quotidien de Kimonas. Avec lui, vous partirez chaque matin à bord d'Odysseia pour aller à la rencontre des dauphins de la mer Égée. Le midi, vous vous arrêterez sur une île ou une crique déserte et aurez l'occasion de vous baigner dans un cadre idyllique. Le soir, vous visionnerez les photos du jour et étudierez le comportement des dauphins avec l'expertise de Kimonas.\n\nVous serez logés avec les autres participants, au sein d'une magnifique maison avec vue sur la mer.\n\nCe voyage est idéal pour les voyageurs qui souhaitent vivre une expérience différente, tout en profitant du cadre paradisiaque de l'île d'Alonissos.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Les journées à bord d'Odysseia, à observer les dauphins et à se baigner dans les criques de la mer Egée",
+    "Le cadre de vie féérique de l'île d'Alonissos, un paradis caché où tout le monde se connait",
+    "La vie en communauté au sein de la maison, avec des personnes passionnées par la protection des animaux",
+    "La rencontre avec Kimonas, un biologiste marin local inspirant, avec mille histoires à raconter"
+  ],
+  "slug": "voyage-etude-dauphins-grece",
+  "description": "Connaissez-vous l'île d'Alonissos, une île paradisiaque au large des côtes grecques ? C'est sur cette île que vit Kimonas, un biologiste marin passionné par la protection des dauphins. À bord de son voilier Odysseia, il mène des expéditions en mer Egée pour observer les dauphins, les photographier et étudier leur comportement. \n\nNous vous proposons une véritable immersion dans le quotidien de Kimonas. Avec lui, vous partirez chaque matin à bord d'Odysseia pour aller à la rencontre des dauphins de la mer Égée. Le midi, vous vous arrêterez sur une île ou une crique déserte et aurez l'occasion de vous baigner dans un cadre idyllique. Le soir, vous visionnerez les photos du jour et étudierez le comportement des dauphins avec l'expertise de Kimonas.\n\nVous serez logés avec les autres participants, au sein d'une magnifique maison avec vue sur la mer.\n\nCe voyage est idéal pour les voyageurs qui souhaitent vivre une expérience différente, tout en profitant du cadre paradisiaque de l'île d'Alonissos.",
+  "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine, ce voyage est fait pour vous.",
+  "metaDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 10 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**0 nuits sur place**",
+      "visible": false
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "Maison",
+      "visible": true
+    },
+    "periodBadge": {
+      "text": "Juin à Sept",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DÉCOUVERTE D'ATHÈNES",
+      "badgeText": "JOURS 1 & 2",
+      "description": "Vous arrivez à Athènes et êtes accueillis par notre guide. Profitez d'une première soirée à Athènes avant de partir explorer le lendemain ! La journée peut se faire en liberté, ou avec un guide qui vous fera visiter les monuments incontournables d'Athènes.",
+      "photo": "/images/voyages/voyage-etude-dauphins-grece/fLOsmjJiT4WMJUoJnqFa.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉPART POUR ALONISSOS",
+      "badgeText": "JOUR 3",
+      "description": "Votre guide vient vous chercher à l'hôtel et vous partez pour le port de Mantoudi, d'où vous prendrez le ferry jusqu'à Alonissos. Rendez-vous avec Kimonas et les autres participants à la maison, explication du programme puis première soirée tous ensemble.",
+      "photo": "/images/voyages/voyage-etude-dauphins-grece/Lh4nMNFkShu1lrJHT1Tt.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIÈRE EXPÉDITION EN MER",
+      "badgeText": "JOUR 4 ",
+      "description": "C'est parti pour votre première expédition ! Vous montez à bord d'Odysseia le matin avec comme mission de photographier les dauphins. Le midi, vous ferez une halte sur une île de la région et mangerez sur une plage déserte ! Le soir, dîner tous ensemble.",
+      "photo": "/images/voyages/voyage-etude-dauphins-grece/L7rarPY8RKa7QjghDoxL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VIE DE BIOLOGISTE MARIN",
+      "badgeText": "JOURS 5 À 8",
+      "description": "Pendant 4 jours, vous allez vivre la vie de biologiste marin. Vous partirez en mer, puis profiterez l'après-midi d'un temps libre pour vous reposer ou faire une activité (plongée, rando, ...). Le soir, vous étudierez le comportement des dauphins puis pourrez profiter des restaurants et bars d'Alonissos.",
+      "photo": "/images/voyages/voyage-etude-dauphins-grece/nGQVORg3RwqvN0U5qukN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LES ADIEUX ET LE RETOUR",
+      "badgeText": "JOUR 9",
+      "description": "C'est le jour du départ ! Faites vos adieux à Kimonas et aux autres participants. Vous prenez le ferry qui vous ramène au port, où notre guide vous attendra pour vous amener à l'aéroport d'Athènes pour le vol retour.",
+      "photo": "/images/voyages/voyage-etude-dauphins-grece/0tln2JxxTEqBegtUt3Z2.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’accueil à l'aéroport",
+      "Les transferts aller/retour de l'aéroport à l'hôtel",
+      "L'hébergement en chambre double au sein d'un hôtel à Athènes, dans le quartier d'Omonoia",
+      "Le transfert aller/retour en véhicule privé au port de Mantoudi ou de Kymi",
+      "Le trajet aller/retour en bateau jusqu'à Alonissos",
+      "L'encadrement des expéditions en mer Egée pendant 5 jours",
+      "L'hébergement en chambre partagée pendant le séjour à Alonissos",
+      "Les petits-déjeuners et déjeuner pendant le séjour à Alonissos",
+      "La participation au projet solidaire d'Odysway \"Immersion pour tous\" : un voyage de sensibilisation au développement durable pour des jeunes défavorisés prévu fin 2022",
+      "L'assistance Odysway 24h/24 et 7j/7",
+      "Votre séjour 100% remboursé et sous 7 jours si annulation en cas de circonstances exceptionnelles et inévitables au sens du Code du tourisme"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Athènes et les taxes d'aéroport",
+      "Les activités durant la journée libre à Athènes",
+      "Le supplément chambre individuelle",
+      "L'assurance annulation et l'assurance multirisques",
+      "Les boissons alcoolisées",
+      "Les repas à Athènes et les dîners à Alonissos",
+      "Les dépenses personnelles et pourboires"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1725,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 10,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 350,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "ATH"
+    ]
+  },
+  "accompanistsDescription": "Lors de ce voyage, vous allez faire la rencontre de deux guides : un guide qui sera votre chauffeur et qui vous aidera à aller et à repartir d'Alonissos et Kimonas, le biologiste marin qui accompagne les expéditions en mer.",
+  "accompanistsList": [
+    {
+      "name": "Kimonas",
+      "description": "Kimonas sera votre accompagnateur lors des sorties en mer. Il est biologiste marin local d'Alonissos et il affirme connaître tous ses habitants ! Après des années à parcourir les mers et à observer la faune marine, Kimonas est une mine d'information et a mille histoires à raconter.",
+      "role": "Biologiste marin",
+      "image": "/images/voyages/voyage-etude-dauphins-grece/oLfeYZdRQ8SsNjWICRUM.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Maison",
+      "housingType": "",
+      "housingMood": "A Athènes, vous serez logés pendant deux nuits en hôtel, en chambre double, dans le centre ville. A Alonissos, vous serez logés dans une maison qui a deux chambres pour 6 résidents, en chambre partagée. La maison n'est pas climatisée, mais les chambres sont pourvues de ventilateurs. Si vous souhaitez plus de confort et d'intimité, nous pouvons également vous réserver une chambre dans un hôtel à côté de la maison (avec supplément).",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-etude-dauphins-grece/BJZAYgAR6u46cqaAhe9W.jpg",
+          "alt": "image de l'hébergement Observez les dauphins avec un biologiste marin en Grèce"
+        },
+        {
+          "src": "/images/voyages/voyage-etude-dauphins-grece/W6QQOzwvQo2QyPWpsqeo.jpg",
+          "alt": "image de l'hébergement Observez les dauphins avec un biologiste marin en Grèce"
+        },
+        {
+          "src": "/images/voyages/voyage-etude-dauphins-grece/KXBpdZOSFCZszQ0RUSJu.jpg",
+          "alt": "image de l'hébergement Observez les dauphins avec un biologiste marin en Grèce"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
+    "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-etude-dauphins-grece/uDNSq8qTAmHG9OEXz3zg.jpg",
+    "alt": "image secondaire du voyage Observez les dauphins avec un biologiste marin en Grèce"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/bzQw8mqJR4K9nloUKkSQ.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/6ZnaNC7SJuv8LqrRSp9d.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/j1FovjA3QG67Mc5Zv3x0.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/lRsy10VTmv68a2a3cOJA.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/iiPRMLpSvWTTfEOov7Sc.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/SFb414puTeaeePBSnDSN.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/55fWbN0TYWSNQbJC6nXN.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/F8fXe7IWRzuDV2cKI0F6.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/PBosHsfWQwukejiL0ARh.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/AAWTXwHdR8Ono4LjLjaB.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/gC85mnUSdCBMuidzPu0b.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/c2lzVo2TkyFd2HDFQFUQ.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/dUbWAkIZQ1mG7fpUKrVg.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/XdCJ3kGfSECuHNrtrfYG.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/wM5w9rxASWadgEej9Nve.jpg",
+      "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Les repas sont libres à Athènes.\n\nA Alonissos, les petits-déjeuners sont inclus et pris en groupe, avant de partir en mer. Les déjeuners sont également inclus. Vous déjeunerez lors d'une pause dans la navigation et vous arrêterez dans une crique, sur une plage et profiterez d'un pique-nique en pleine nature. Toute la nourriture préparée est typiquement grecque et conviendra aux végétariens."
+      },
+      {
+        "question": "Quel est le programme d'une journée typique ?",
+        "answer": "Voici le programme d'une journée typique d'expédition en mer. Ce programme peut varier en fonction des conditions climatiques et de navigation.\n\n*   8h : lever et petit déjeuner\n*   9h : départ à pied pour le port d'Alonissos\n*   9h15 : on lève l'ancre ! \n*   9h15 -12h30 : navigation et observation des dauphins\n*   12h30-13h30 : pause et déjeuner dans une crique\n*   13h30-15h : poursuite des observations de dauphins et retour au port\n*   15h - 18h : temps libre\n*   18h : revue des photos du jour avec Kimonas, étude du comportement des dauphins recensés\n*   20h : diner libre"
+      },
+      {
+        "question": "Suis-je sûr de voir des dauphins et pourrais-je nager avec eux ?",
+        "answer": "Les dauphins de la mer Egée sont des animaux sauvages, ce qui veut dire que leur observation ne peuvent pas être garantie. Kimonas estime que la probabilité d'observer les dauphins à chaque sortie en mer est d'environ 50 %. Même si les dauphins ne sont pas au rendez-vous un jour, ce sera toujours l'occasion d'une sortie en mer et d'une baignade dans un cadre paradisiaque !\n\nIl ne sera pas possible de nager avec les dauphins. Le principe des sorties est de les approcher sans les déranger et de les photographier afin d'étudier leur comportement."
+      },
+      {
+        "question": "Combien de personnes participent au voyage ? ",
+        "answer": "Lors des sorties en mer, le bateau a une capacité de 10 personnes en plus de Kimonas et du capitaine, ce qui veut dire qu'il y aura 12 personnes maximum par expédition au total."
+      },
+      {
+        "question": "Faut-il de l'expérience en biologie ou en navigation ?",
+        "answer": "Aucune expérience ni en biologie ni en navigation est requise pour participer à ce voyage. Les débutants et les passionnés sont les bienvenus lors des expéditions en mer."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Observez les dauphins avec un biologiste marin en Grèce",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-etude-dauphins-grece",
+    "ogTitle": "Observez les dauphins avec un biologiste marin en Grèce",
+    "ogDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
+    "ogImage": {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
+      "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    "twitterTitle": "Observez les dauphins avec un biologiste marin en Grèce",
+    "twitterDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
+      "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

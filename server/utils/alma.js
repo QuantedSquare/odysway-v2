@@ -5,11 +5,11 @@ const config = useRuntimeConfig()
 
 const isDev = config.public.environment !== 'production'
 
-const BASE_URL = isDev ? 'https://odysway-v2-git-feat-alma-quanted-square.vercel.app' : 'https://odysway.com'
+const BASE_URL = isDev ? 'https://odysway-v2-env-preprod-quanted-square.vercel.app' : 'https://odysway.com' // update this when we go live
 
 const ALMA_KEY = isDev ? process.env.ALMA_KEY_DEV : process.env.ALMA_KEY_LIVE
 const BASE_ALMA_URL = isDev ? 'https://api.sandbox.getalma.eu/v1/' : 'https://api.getalma.eu/v1/'
-const BASE_IPN_URL = isDev ? 'https://odysway-v2-git-feat-alma-quanted-square.vercel.app' : 'https://odysway.com'
+const BASE_IPN_URL = isDev ? 'https://odysway-v2-env-preprod-quanted-square.vercel.app' : 'https://odysway.com' // update this when we go live
 
 const headers = {
   'accept': 'application/json',

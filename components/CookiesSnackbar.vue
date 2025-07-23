@@ -37,46 +37,17 @@
 <script setup>
 const consentBar = ref(true)
 const { gtag, initialize } = useGtag()
+const config = useRuntimeConfig()
+
 onMounted (() => {
-  if (!localStorage.getItem('consent')) {
+  if (!localStorage.getItem('consent') && config.public.environment === 'production') {
     setTimeout(() => {
       consentBar.value = true
     }, 100)
   }
   else {
-    initialize()
-    useTrackEvent('page_view')
-
-    gtag('event',
-      'page_view',
-      {
-        event_category: 'Newsletter',
-        event_action: 'subscribe',
-        event_label: `Newsletter Subscription`,
-        event_value: 1,
-        debug_mode: true,
-      })
     consentBar.value = false
   }
-
-  // TODO : plugin to add ?
-  // if (this.$blogr) { this.$blogr() }
-
-  // const userUTMs = []
-
-  // Object.keys(route.query).forEach((queryParam) => {
-  //   if (queryParam.toLowerCase().includes('utm')) {
-  //     userUTMs.push(queryParam + '=' + route.query[queryParam])
-  //   }
-  // })
-
-  // if (userUTMs.length) {
-  //   localStorage.setItem('utmSource', userUTMs.join('&'))
-  // }
-
-  // if (!window.dataLayer) {
-  //   window.dataLayer = window.dataLayer || []
-  // }
 })
 
 function acceptCookies() {
@@ -90,6 +61,7 @@ function acceptCookies() {
     analytics_storage: 'granted',
   })
   trackPixel('track', 'PageView')
+  useTrackEvent('page_view')
   localStorage.setItem('consent', 'granted')
 }
 

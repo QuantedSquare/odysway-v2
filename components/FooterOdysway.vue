@@ -12,11 +12,11 @@
       width="100%"
       height="400"
     />
-    <div class="mx-md-5 max-container-width">
+    <div class="mx-md-5 ">
       <v-container
         v-if="footer"
         fluid
-        class="px-0 mx-0 mx-md-5"
+        class="px-0 mx-0 mx-md-5 max-container-width"
       >
         <v-row
           align="center"

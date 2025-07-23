@@ -1,31 +1,42 @@
 ---
-title: "Voyager au Pérou en séjournant chez l'habitant"
-description: "Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie."
+title: Voyager au Pérou en séjournant chez l'habitant
+description: Le Pérou recèle de nombreux trésors offerts à qui veut le visiter.
+  Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et
+  sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le
+  pays regorge de sites époustouflants. La meilleure façon de vivre ces instants
+  inoubliables est de rester au plus près des Péruviens et de partager leur lieu
+  de vie.
 seo:
-  title: "Voyager au Pérou en séjournant chez l'habitant"
-  description: "Comment voyager au Pérou en restant au plus proche des communautés locales, pour vivre un séjour inoubliable."
+  title: Voyager au Pérou en séjournant chez l'habitant
+  description: Comment voyager au Pérou en restant au plus proche des communautés
+    locales, pour vivre un séjour inoubliable.
 navigation:
-  title: "Voyager au Pérou en séjournant chez l'habitant"
-  description: "Le Pérou recèle de nombreux trésors offerts à qui veut le visiter. Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune et sa flore, les paysages contrastés des steppes arides aux sommets enneigés, le pays regorge de sites époustouflants. La meilleure façon de vivre ces instants inoubliables est de rester au plus près des Péruviens et de partager leur lieu de vie."
-author: "Linda Tran"
+  title: Voyager au Pérou en séjournant chez l'habitant
+  description: Le Pérou recèle de nombreux trésors offerts à qui veut le visiter.
+    Entre l’authenticité de ses villes, l’abondance et la diversité de sa faune
+    et sa flore, les paysages contrastés des steppes arides aux sommets
+    enneigés, le pays regorge de sites époustouflants. La meilleure façon de
+    vivre ces instants inoubliables est de rester au plus près des Péruviens et
+    de partager leur lieu de vie.
+author: Linda Tran
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
-publishedAt: "2021-01-04 10:03:00+00:00"
-tags: "Amerique du Sud, Communautés locales, Grands espaces, Perou"
-categories: "Blog"
-displayedImg: "/images/blogs/voyager-perou-chez-habitant/3wDPI1TNWjJbrUXMjBA0.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+published: true
+publishedAt: 2021-01-04 10:03:00+00:00
+tags: Amerique du Sud, Communautés locales, Grands espaces, Perou
+categories: Blog
+displayedImg: /images/blogs/voyager-perou-chez-habitant/3wDPI1TNWjJbrUXMjBA0.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyager au Pérou en séjournant chez l'habitant
@@ -48,18 +59,18 @@ L’esprit du voyage est de privilégier la rencontre au centre des activités j
 
 Le « Cercado » ou le centre historique de la capitale est une invitation à remonter le temps avec ses vestiges de l’époque coloniale mélangés aux constructions d’inspiration Art déco et Art nouveau. La Plaza de Armas est le symbole des pouvoirs religieux et politiques de l’empire espagnol. L’on y trouve une vieille fontaine du XVIIe siècle, souvenir de l’inquisition, le palais de l’Archevêque de Lima, la cathédrale Saint-Jean du XVIe siècle qui abrite le tombeau du conquistador Francisco Pizzaro bâtisseur de Lima, le palais du Gouvernement, le palais de l’Union et le palais Municipal. Le quartier de Miraflores propose une pittoresque promenade en bord de mer : le « Malecon », tandis que les passionnés d’art moderne seront ravis par les fresques de Street Art de Barranco.
 
-Une expérience unique vous attend au coeur de la culture péruvienne : [Voyagez avec un chamane au Pérou.](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article&utm_medium=blog&utm_campaign=p%C3%A9rou+chez+l%27habitant)
+Une expérience unique vous attend au coeur de la culture péruvienne : [Voyagez avec un chamane au Pérou.](https://odysway.com/voyages/voyage-chamanique-perou?utm_source=article\&utm_medium=blog\&utm_campaign=p%C3%A9rou+chez+l%27habitant)
 
 ## **Shopping ethnique à Cuzco**
 
 La ville coloniale de Cuzco est perchée à 3.400 m d’altitude à proximité du site inca du Machu Picchu. La capitale des Andes est un endroit convivial où toutes les nationalités du monde viennent faire leur shopping dans les nombreuses enseignes de luxe et les marchés exotiques qui proposent un artisanat vieux de 3.000 ans. Votre nouvelle famille se fera un plaisir de vous faire découvrir les tissus traditionnels incas aux bandes bigarrées et symboles de la Pachamama du marché couvert de San Pedro. Les étals proposent des spécialités locales bon marché et des produits exotiques à l’image du maracuya, des cuisses de grenouille ainsi que des plats cuisinés comme le bouillon de poulet ou la friture de truite. 
 
-::image-container
----
-image-src: "/images/blogs/voyager-perou-chez-habitant/YhC2oj47QKGy8ZZzud5N.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyager-perou-chez-habitant/YhC2oj47QKGy8ZZzud5N.jpg
+  ---
+  :::
 
 ## **Sur les hauteurs du lac Titicaca**
 
@@ -75,47 +86,46 @@ Le besoin de s'y immerger reflète notre évolution: voyager, communiquer avec l
 
 Poursuivez votre lecture avec [notre article sur les animaux typiques du Pérou.](https://odysway.com/animaux-typiques-perou)
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

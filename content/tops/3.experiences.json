@@ -1,0 +1,35 @@
+{
+  "title": "Expériences",
+  "description": "Expériences Odysway",
+  "contenuOnglet": [
+    {
+      "title": "Nos expériences de voyages",
+      "linksList": [
+        {
+          "title": "Partager le quotidien",
+          "slug": "experiences/partager-quotidien"
+        },
+        {
+          "title": "Explorer à pied",
+          "slug": "experiences/voyage-pied"
+        },
+        {
+          "title": "Apprendre en voyage",
+          "slug": "experiences/apprentissage-voyage"
+        },
+        {
+          "title": "Plongée dans la culture",
+          "slug": "experiences/immersion-culture"
+        },
+        {
+          "title": "À l'aventure",
+          "slug": "experiences/immersion-aventure"
+        },
+        {
+          "title": "S'éveiller ailleurs",
+          "slug": "experiences/eveil-voyage"
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2023-01-20 13:45:00+00:00"
 tags: ""
 categories: "tourisme durable"

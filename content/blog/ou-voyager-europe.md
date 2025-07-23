@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-05-12 15:31:00+00:00"
 tags: "Europe, Famille, Finlande, France, Grands espaces, Roumanie, Sport, Transports insolites"
 categories: ""

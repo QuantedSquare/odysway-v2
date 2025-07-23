@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-03-24 13:03:00+00:00"
 tags: "Animaux, Communautés locales, Developpement personnel"
 categories: "Apprentissage, Benefices locaux"

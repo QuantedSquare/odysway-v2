@@ -1,0 +1,389 @@
+{
+  "published": true,
+  "title": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+  "destinations": [
+    {
+      "name": "Kirghizistan"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "Plonger dans la culture",
+  "level": "1",
+  "categories": [
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    }
+  ],
+  "duration": 10,
+  "nights": 9,
+  "includeFlight": false,
+  "housingType": "  Maison d'hôtes, yourtes",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": false,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": false,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 9,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez à la rencontre des chasseurs à l’aigle, apprenez l'art de la construction des yourtes traditionnelles et découvrez la gastronomie locale... Pendant plusieurs jours, vous aurez l'opportunité de vivre chez l'habitant et de partager leur quotidien, tout en étant entouré de paysages à couper le souffle. Ce voyage est une véritable immersion au cœur de la culture kirghize, offrant une expérience riche en rencontres et découvertes.\n\nPréparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement total !",
+    "author": "Linda",
+    "affixeAuthor": "co-fondatrice d'Odysway"
+  },
+  "experiencesBlock": [
+    "Les steppes infinies et les lacs de montagne",
+    "La fabrication de yourtes avec les Kirghizes",
+    "La rencontre avec les chasseurs à l'aigle",
+    "Un voyage chez l'habitant, au sein de familles locales",
+    "Un chauffeur francophone expérimenté"
+  ],
+  "slug": "immersion-steppes-kirghizistan",
+  "description": "Partez à la rencontre des chasseurs à l’aigle, apprenez l'art de la construction des yourtes traditionnelles et découvrez la gastronomie locale... Pendant plusieurs jours, vous aurez l'opportunité de vivre chez l'habitant et de partager leur quotidien, tout en étant entouré de paysages à couper le souffle. Ce voyage est une véritable immersion au cœur de la culture kirghize, offrant une expérience riche en rencontres et découvertes.\n\nPréparez-vous à vivre une aventure inoubliable qui vous promet un dépaysement total !",
+  "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature, découvrir des paysages à couper le souffle et partager des moments d'exception avec les locaux, ce voyage est fait pour vous  ! ",
+  "metaDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**9 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Juin à Sep",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "ARRIVEE AU KIRGHIZISTAN",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à Bishkek, capitale vivante du Kirghizistan, accueil francophone par nos équipes et transfert privatif à votre hôtel. Premières explorations de la ville, d'Ala Too au bazar d'Och.",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/jLp7A7iCRmyKQXoriDGp.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU VILLAGE KYZYL OY",
+      "badgeText": "JOURS 2 ET 3",
+      "description": "Début de l'aventure ! Vous filez à travers routes sinueuses et cols vertigineux jusqu'aux vastes étendues de la vallée de Suussamyr, ponctuée de yourtes de nomades. A votre arrivée au village, vous participez à la préparation du pain beignet traditionnel. Profitez de votre journée libre le lendemain pour découvrir les alentours à pied, à cheval, ou à la nage dans la rivière Kokomeren. ",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/JqOOdFxPSJSD4PKa6BF5.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AU BORD DU LAC SON KOUL",
+      "badgeText": "JOURS 4 ET 5",
+      "description": "Après le passage d'un col, vous arrivez sur les rives du lac Son Koul où vous faites connaissance des bergers nomades kirghizes. Profitez de ce cadre idyllique pour une randonnée, ou une balade à cheval. Vous pourrez voir le processus de traite des juments et gouterez la cuisine nationale. Nuit sous une yourte kirghize traditionnelle.",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/wdTWqwQHSoGJPIieHQsV.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CHEZ L'HABITANT À KOTCHKOR",
+      "badgeText": "JOUR 6",
+      "description": "Après le passage du col Kalmak Achou à 3400 mètres, vous arrivez dans votre famille d'accueil. Au programme : atelier fabrication des objets traditionnels en feutre avec les femmes kirghizes du village. Moment d'échange et de convivialité assuré avant le repas en famille !",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/0mmyx0FTCiysKv5Ff8Sw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "AVEC LES FABRICANTS DE YOURTES",
+      "badgeText": "JOURS 7 ET 8",
+      "description": "Vous passerez 2 jours dans le village de Kyzyl Tou, au sein d’une famille kirghize, qui vous révélera les secrets de la production de yourtes entre fabrication de la charpente et décoration intérieure ! Cette famille est engagée dans cet art unique depuis des générations. Lors de votre immersion, vous irez également randonner au canyon d'Ak Say qui débouche sur le lac Issyk Koul et sa plage sauvage. ",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/7PpOSFC7TWiFTA6qpfOQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA CHASSE À L'AIGLE",
+      "badgeText": "JOURS 9 ET 10",
+      "description": "Vous ferez la connaissance du chasseur à l’aigle dans le village de Bokonbaevo. Vous en apprendrez plus sur cet art ancestral perpétué par les nomades kirghizes et les relations que les hommes ont établies avec cet oiseau. Le lendemain, randonnée au panorama du lac pour s'émerveiller des étendues kirghizes. ",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/1quIZFubQM2Xu8iwInYE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VALLÉE CHON KEMIN",
+      "badgeText": "JOUR 11",
+      "description": "Vous quittez le lac Issyk Koul pour aller au village Tar Sou situé dans la vallée Chon Kemin connue pour sa biodiversité très riche. Au programme : promenade dans le village, randonnée dans une gorge à flanc de montagne et partage avec les propriétaires de la maison d'hôtes. \r\n\r\n",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/0lG4QRAmTvaoWk1QcWVi.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "FIN DE VOTRE AVENTURE",
+      "badgeText": "JOURS 12 ET 13",
+      "description": "Après votre petit-déjeuner dans la maison d’hôtes, votre chauffeur viendra vous chercher pour vous ramener à Bishkek. Sur la route, vous visitez la Tour Bourana, vestige de l'ancienne ville Balasagyn. A votre arrivée à Bishkek, achat de souvenirs au marché local. Le lendemain, après les adieux avec votre guide, vous serez accompagnés à l'aéroport où vous prendrez votre vol.",
+      "photo": "/images/voyages/immersion-steppes-kirghizistan/3HP7BvreTZylNyRBAmT4.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport",
+      "Tous les transferts en véhicule privé confortable et climatisé",
+      "L'accompagnement par un chauffeur expérimenté anglophone à partir de 2 voyageurs",
+      "L'accompagnement par un guide francophone à partir de 4 voyageurs",
+      "L'accompagnement de guides locaux à Kysyl Oy et Bokonbaevo à partir de 2 voyageurs",
+      "Les hébergements indiqués dans le programme",
+      "La pension complète",
+      "Les visites indiquées dans le programme",
+      "Les activités suivantes : la préparation du pain beignet à Kyzyl Oy, la fabrication de produits en feutre à Kotchkor, la balade à cheval à Son Koul, la fabrication de yourtes à Kysyl Tou, l'expérience de chasse à l’aigle à Bokonbaevo, et la charrette tirée à Chon Kemin."
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à Bishkek et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Les activités lors des journées libres",
+      "Le guide francophone pour les groupes de moins de 4 voyageurs",
+      "L'assurance annulation ou multirisques",
+      "Les dépenses personnelles et les pourboires",
+      "Les boissons alcoolisées"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1770,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 165,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "FRU"
+    ]
+  },
+  "accompanistsDescription": "Votre voyage au Kirghizistan est encadré par un chauffeur francophone spécialiste de la région. Le transport est assuré en véhicule privé confortable et climatisé. Si le groupe est constitué de 4 personnes, vous serez accompagnés par un guide francophone en plus du chauffeur. Lors des différentes immersions, vous aurez des guides locaux sur place qui vous expliqueront leur savoir-faire. Lors de votre voyage, vous bénéficiez de l'assistance personnalisée avec un conseiller Odysway, disponible 7 jours sur 7.",
+  "accompanistsList": [
+    {
+      "name": "Danil",
+      "description": "Spécialiste du Kirghizistan, Daniel exerce depuis plus de 10 ans comme guide et a parcouru presque tous les recoins du pays. Son credo ? \"Mieux vaut voir une fois, que d'entendre cent fois\"",
+      "role": "Guide francophone",
+      "image": "/images/voyages/immersion-steppes-kirghizistan/7LNliSwITMOlyKnUZxQs.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "  Maison d'hôtes, yourtes",
+      "housingType": "",
+      "housingMood": "Les hébergements sur ce voyage varient entre des nuits en hôtel simples mais confortables, en maison d'hôtes chez différentes familles kirghizes et en yourte près du lac Son Koul.",
+      "image": [
+        {
+          "src": "/images/voyages/immersion-steppes-kirghizistan/NdR9eY6BSlOhXrHNg2Di.jpg",
+          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+        },
+        {
+          "src": "/images/voyages/immersion-steppes-kirghizistan/qgVamOpPRtSBT26FG3FY.jpg",
+          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+        },
+        {
+          "src": "/images/voyages/immersion-steppes-kirghizistan/RnCgfxq2RX6bAco4oPNj.jpg",
+          "alt": "image de l'hébergement  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg",
+    "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/immersion-steppes-kirghizistan/CNDs3dS8QAWQB5SEDBF5.jpg",
+    "alt": "image secondaire du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/33RXXTTSCeCjBh4P9MIg.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/4VNn0Xg0SzSa0Ixv44h2.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/qjruSciwSwiy1isKsMCw.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/2rdQFnBQs2gyCzVtNLMU.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/j8xBji5S6uFiRvGROFVp.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/paJSyzBTGaGEmaiV4oqH.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/ut0n3mZQROJNKPmpuLQ7.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/QBUl7sgsSBuXTmWJU8LP.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/DceF8Jw3SSOIojoA6F49.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/MTrWaOyCTFWuuIxIe8Hs.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/gZxaUAGRRpau5tu7jMAU.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/YGMxsAR1SbiuYZS7qwZZ.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/TcFXIOauTfKxfNdkqdhs.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/nTwpJo59RKKIWS0eeV82.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/9T4G7eonRTgfTEdHuDaW.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/L39NykzRbCnzWot9MpCw.jpg",
+      "alt": "image de la liste de photos du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    }
+  ],
+  "videoLinks": [
+    "https://www.youtube.com/embed/fEuw4Hl04hU"
+  ],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "Tous les hébergements sont compris dans le prix du voyage. Vous logerez au sein d’hôtels confortables, de maisons d’hôtes ou de yourtes.\n\n*   **Nuits des jours 1 et 12** : Hôtel standard à Bichkek au Garden Hotel  \n      \n    \n*   **Nuits des jours 2 et 3** : Maison d'hôtes à Kyzyl Oy à Elvira Guesthouse  \n      \n    \n*   **Nuits des jours 4 & 5** : Camp de yourtes à Son Koul au Baiysh Yurtcamp  \n      \n    \n*   **Nuit du jour 6** : Maison d'hôtes à Kochkor à Mira Guesthouse  \n      \n    \n*   **Nuits des jours 7 & 8** : Maison d'hôtes à Kyzyl Tou à Dinara guesthouse  \n      \n    \n*   **Nuits des jours 9 et 10** : Chez l'habitant à Bokonbaevo  \n      \n    \n*   **Nuit du jour 11** : Maison d'hôtes à Chon Kemin à Kemin Guesthouse"
+      },
+      {
+        "question": "Y a-t-il un accompagnement francophone sur place ?",
+        "answer": "Vous n’avez pas besoin de compétences linguistiques particulières, vous serez accompagnés par un chauffeur accompagnateur francophone tout le long du séjour qui vous aidera à échanger avec les différentes familles et les guides locaux. A partir de 4 voyageurs, vous serez accompagnés, en plus du chauffeur, par un guide francophone."
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "Ce voyage est disponible de juin à septembre. L’été est en effet la période idéale pour voyager au Kirghizistan, pour bénéficier de conditions météorologiques optimales ! La période touristique étant de fin juillet à septembre, nous privilégions les mois de juin et juillet pour nos dates de groupe."
+      },
+      {
+        "question": "Quelles sont les formalités d'entrée au Kirghizistan ?",
+        "answer": "Vous devez être en possession d’un **passeport d’une validité de six mois au minimum après la fin du séjour**.\n\nLes ressortissants français sont **dispensés de visa et de procédure d’enregistrement pour les séjours touristiques et d’affaires de moins de 60 jour**s. Ils devront toutefois s’assurer que le passeport a été dûment tamponné au moment de l’entrée sur le territoire.\n\nIl est recommandé de s’inscrire sur l’application [Ariane](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html).\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/kirghizstan/#entree)."
+      },
+      {
+        "question": "Quels sont les vaccins ou précautions en matière de santé ?",
+        "answer": "Aucun vaccin n’est obligatoire mais certains peuvent être recommandés. Assurez-vous d’être à jour dans vos vaccinations habituelles mais aussi dans celles liées à toutes les zones géographiques visitées.\n\nLa mise à jour du vaccin diphtérie-tétanos-poliomyélite (DTP) est recommandée, de même que celle du vaccin rubéole-oreillons-rougeole (ROR) chez l’enfant. La vaccination antituberculeuse est également souhaitable.\n\nPlus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/kirghizstan/#sante)."
+      },
+      {
+        "question": "Avec qui vais-je voyager ?",
+        "answer": "Odysway vous propose deux formules afin de vivre un voyage qui vous ressemble. Vous pouvez choisir de réserver ce voyage sur vos propres dates, seul, entre amis ou en famille. Pour cela, envoyez-nous une demande de devis !\n\nVous pouvez également décider d’allier rencontres et voyage et de rejoindre un départ groupé (8 voyageurs maximum, à dates fixes)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+    "canonicalUrl": "https://www.odysway.com/voyages/immersion-steppes-kirghizistan",
+    "ogTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+    "ogDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
+    "ogImage": {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg",
+      "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    "twitterTitle": " Immersion culturelle et aventures en terres sauvages au kirghizistan",
+    "twitterDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
+    "twitterImage": {
+      "src": "/images/voyages/immersion-steppes-kirghizistan/houbc9LTe6gRrnPRY3KA.jpg",
+      "alt": "image principale du voyage  Immersion culturelle et aventures en terres sauvages au kirghizistan"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

@@ -1,24 +1,41 @@
 <template>
-  <v-btn
-    :to="link"
-    :color="color"
-    height="62"
-    size="large"
-    class="text-decoration-none"
-    :target="external ? '_blank' : undefined"
-    :rel="external ? 'noopener noreferrer' : undefined"
-    @click="trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(link)"
-  >
-    <div
-      class="text-body-1 font-weight-bold mx-4"
-      :class="`text-${textColor}`"
+  <div class="d-flex justify-center">
+    <v-btn
+      v-if="!external"
+      :to="link"
+      :color="color"
+      height="62"
+      size="large"
+      class="text-decoration-none"
+      :target="external ? '_blank' : undefined"
+      :rel="external ? 'noopener noreferrer' : undefined"
+      @click="trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(link)"
     >
-      <slot
-        mdc-unwrap="p"
-        name="text"
-      />
-    </div>
-  </v-btn>
+      <div
+        class="text-body-1 font-weight-bold mx-4"
+        :class="`text-${textColor}`"
+      >
+        <slot
+          mdc-unwrap="p"
+          name="text"
+        />
+      </div>
+    </v-btn>
+    <v-btn
+      v-else
+      :href="link"
+      :color="color"
+      height="62"
+      size="large"
+    >
+      <div class="text-white text-decoration-none text-body-1 font-weight-bold mx-4">
+        <slot
+          mdc-unwrap="p"
+          name="text"
+        />
+      </div>
+    </v-btn>
+  </div>
 </template>
 
 <script setup>

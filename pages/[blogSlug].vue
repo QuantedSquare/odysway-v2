@@ -16,7 +16,7 @@ import { watchEffect } from 'vue'
 const route = useRoute()
 const { gtag } = useGtag()
 const { data } = await useAsyncData(route.path, () => {
-  return queryCollection('blog').path('/blog' + route.path).first()
+  return queryCollection('blog').path('/blog' + route.path).where('published', '=', true).first()
 })
 
 onMounted(() => {

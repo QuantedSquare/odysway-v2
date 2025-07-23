@@ -4,7 +4,7 @@
     :selected-experience="selectedExperience"
     :page-content="pageContent"
   >
-    <template #slugContent>
+    <template #content>
       <DisplayVoyagesRow
         :selected-experience="selectedExperience"
         :voyages="voyages"

@@ -1,0 +1,47 @@
+{
+  "title": "Séjours en France",
+  "description": "Nos séjours en France accessibles sans avion",
+  "contenuOnglet": [
+    {
+      "title": "Séjours en France",
+      "linksList": [
+        {
+          "title": "Vis ma vie de berger",
+          "slug": "voyages/sejour-berger-bearn"
+        },
+        {
+          "title": "Initiation au bivouac",
+          "slug": "voyages/bivouac-montagne-pyrenees"
+        },
+        {
+          "title": "Immersion hivernale en terre béarnaise",
+          "slug": "voyages/sejour-hiver-pyrenees"
+        },
+        {
+          "title": "Immersion au cœur d'un observatoire astronomique",
+          "slug": "voyages/immersion-observatoire-astronomique"
+        },
+        {
+          "title": "Initiation à l'observation astronomique en Corse",
+          "slug": "voyages/sejour-astronomie-corse"
+        },
+        {
+          "title": "Séjour au cœur d'un observatoire astronomique",
+          "slug": "voyages/sejour-observatoire-astronomique"
+        },
+        {
+          "title": "En immersion avec un photographe animalier dans les Vosges",
+          "slug": "voyages/photographie-animaliere-vosges"
+        },
+        {
+          "title": "Découvrez l'art de la photo animalière dans le Jura",
+          "slug": "voyages/decouvrez-photo-animaliere-jura"
+        },
+        {
+          "title": "Séjour multi-activités en famille dans les Ecrins",
+          "slug": "voyages/sejour-multiactivites-famille-ecrins"
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-12-06 11:01:00+00:00"
 tags: "Asie, Communautés locales, Developpement personnel, Famille, Nepal"
 categories: "Depassement de soi"

@@ -1,0 +1,440 @@
+{
+  "published": true,
+  "title": "Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus",
+  "destinations": [
+    {
+      "name": "Bolivie"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "Plonger dans la culture",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "voyage-culturel"
+    }
+  ],
+  "duration": 13,
+  "nights": 12,
+  "includeFlight": false,
+  "housingType": "A l'hôtel, en refuge",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Ce voyage vous emmène au cœur d’un pays encore méconnu, mais d’une beauté brute et saisissante.\n\nIci, chaque paysage semble irréel : lagunes aux teintes éclatantes, volcans enneigés, déserts infinis et colonies de flamants roses. Pendant trois jours, vous sillonnerez en 4x4 l’incroyable région du Sud-Lípez jusqu’au Salar d’Uyuni, immense étendue de sel blanche à perte de vue.\n\nMais la Bolivie, ce n’est pas que des paysages. C’est aussi une culture profondément ancrée, vivante, chaleureuse. À La Paz, ville perchée et vibrante, vous sentirez battre le cœur du pays entre traditions andines et effervescence urbaine. Puis direction le Lac Titicaca, berceau des légendes incas. Sur ses rives, vous serez accueillis dans une communauté locale pour une immersion simple et authentique : nuit chez l’habitant, balades jusqu’à l’île de la Tortue, repas partagés, découverte des savoir-faire traditionnels… Un moment fort, hors du temps.\n\nCe voyage a été pensé pour celles et ceux qui veulent découvrir la Bolivie autrement. Avec du rythme, mais sans courir. Avec des paysages inoubliables, mais aussi des liens avec les locaux à chaque étape.\n\nUn voyage rare, profond, à vivre une fois dans sa vie.",
+    "author": "Salomé",
+    "affixeAuthor": "passionnée des terres andines"
+  },
+  "experiencesBlock": [
+    "Plongez dans l’univers métissé et vibrant de La Paz, entre modernité et traditions andines",
+    "Partagez un moment suspendu sur les rives du mythique Lac Titicaca, au cœur d’une communauté locale",
+    "Admirez les jeux de couleurs saisissants des lagunes d’altitude du Sud-Lípez",
+    "Laissez-vous submerger par la beauté brute du Salar d’Uyuni, immensité blanche à perte de vue...et rejoignez votre auberge de sel pour la nuit !",
+    "Remontez le temps dans les ruelles des charmantes villes coloniales de Sucre et Potosí"
+  ],
+  "slug": "voyage-bolivie-uyuni-lipez-titicaca",
+  "description": "Ce voyage vous emmène au cœur d’un pays encore méconnu, mais d’une beauté brute et saisissante.\n\nIci, chaque paysage semble irréel : lagunes aux teintes éclatantes, volcans enneigés, déserts infinis et colonies de flamants roses. Pendant trois jours, vous sillonnerez en 4x4 l’incroyable région du Sud-Lípez jusqu’au Salar d’Uyuni, immense étendue de sel blanche à perte de vue.\n\nMais la Bolivie, ce n’est pas que des paysages. C’est aussi une culture profondément ancrée, vivante, chaleureuse. À La Paz, ville perchée et vibrante, vous sentirez battre le cœur du pays entre traditions andines et effervescence urbaine. Puis direction le Lac Titicaca, berceau des légendes incas. Sur ses rives, vous serez accueillis dans une communauté locale pour une immersion simple et authentique : nuit chez l’habitant, balades jusqu’à l’île de la Tortue, repas partagés, découverte des savoir-faire traditionnels… Un moment fort, hors du temps.\n\nCe voyage a été pensé pour celles et ceux qui veulent découvrir la Bolivie autrement. Avec du rythme, mais sans courir. Avec des paysages inoubliables, mais aussi des liens avec les locaux à chaque étape.\n\nUn voyage rare, profond, à vivre une fois dans sa vie.",
+  "emailDescription": "👉 Si vous souhaitez vivre une immersion complète au cœur de la Bolivie, ce voyage est fait pour vous !",
+  "metaDescription": "Odysway vous propose un voyage unique à la découverte de la Bolivie véritablement authentique. Explorez le Sud Lipez en 4x4, écoutez le silence dans le plus grand désert au monde au Salar de Uyuni et vivez des moments au plus proche des locaux.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**12 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Avril à novembre",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE EN BOLIVIE !",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à l’aéroport de La Paz, vous êtes accueillis par notre équipe puis transférés à votre hôtel, perché à 3 600 mètres d’altitude. L’après-midi, vous partez à pied pour une première découverte de la ville, le meilleur moyen de s’imprégner de son atmosphère vibrante. Entre les marchés traditionnels hauts en couleurs, les ruelles coloniales comme la Calle Jaén, ou encore la Plaza Murillo, cœur historique de la capitale, La Paz dévoile peu à peu son énergie brute et attachante.  Un premier contact tout en douceur avec la culture andine… et déjà un vrai dépaysement.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/6BlssFzhSSOoLosLEPSb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "EN IMMERSION SUR LAC TITICACA",
+      "badgeText": "JOUR 2",
+      "description": "Départ le matin pour les rives du Lac Titicaca. Après 4h de route, arrivée dans la communauté de Santiago de Okola, nichée au bord de l’eau. Accueil chaleureux par les familles, puis départ pour une belle randonnée jusqu’à l’île de la Tortue, aujourd’hui accessible à pied. Oiseaux andins, vue sur la baie et ambiance paisible rythment cette balade au cœur d’un lieu encore préservé. Retour au village et dîner chez vos hôtes pour une soirée en immersion. Nuit chez l'habitant. Temps de marche : 2/3h, dénivelé : +50m/-50m.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/WafiuQf2D9mMDISRZA6P.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RANDONNÉE ET REPAS TRADITIONNEL",
+      "badgeText": "JOUR 3",
+      "description": "Ce matin, belle randonnée jusqu’au sommet du “Dragon Endormi”, montagne emblématique qui domine la baie. En chemin : peintures rupestres, grotte sacrée et vue à couper le souffle sur le lac Titicaca. Retour au village pour une rencontre avec une tisserande locale, qui vous dévoile les secrets du tissage andin – un art minutieux transmis de génération en génération. Vous partagez ensuite un Apthapi, repas traditionnel préparé par les familles : poissons du lac, galettes, quinoa, pommes de terre… un moment de convivialité authentique. L’après-midi, retour à La Paz et bus de nuit vers Uyuni pour la suite de l’aventure. 3 heures de marche. Nuit dans le bus entre La Paz et Uyuni, départ du bus à 21h.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/141nGTouTEG9seNCg4ca.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DE UYUNI AUX PORTES DU SUD LÍPEZ",
+      "badgeText": "JOUR 4",
+      "description": "Vivez un moment fort en émotions : l'exploration en 4x4 du Sud Lípez sur 3 jours ! Arrivée tôt le matin à Uyuni, où votre guide vous accueille pour le début de votre aventure. Premier arrêt au cimetière des trains, vestige du passé industriel de la région, avant de traverser le village de San Cristóbal,. Vous poursuivez vers la vallée des Roches, un décor surréaliste où le vent et le sable ont sculpté d’immenses blocs aux formes étranges, posés comme par magie au milieu du désert. Avant d’atteindre votre étape du jour, une pause s’impose pour admirer un superbe panorama sur un canyon caché. Arrivée en fin d’après-midi au village de Quetena, aux portes des paysages spectaculaires du Sud Lípez. Nuit en hostal.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/BbBReffZShObcPfxQeAu.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LAGUNES COLORÉES ET FLAMANTS ROSES",
+      "badgeText": "JOUR 5",
+      "description": "Départ matinal pour une journée spectaculaire à travers les grands paysages du Sud Lípez. Premier arrêt aux thermes de Polques, où les plus téméraires pourront se baigner face à la Laguna Chalviri. Cap ensuite sur le Désert de Dalí, aux allures surréalistes : rochers isolés, étendues ocre, et ambiance d’un autre monde. Vous atteignez ensuite l’extrême sud de la Bolivie, entre Laguna Blanca et Laguna Verde, aux pieds du volcan Licancabur — un décor d’une beauté brute, balayé par les vents d’altitude.  Après le passage d’un col à près de 5 000 mètres, arrêt au Sol de Mañana, zone géothermique impressionnante, entre geysers, fumerolles et boues en ébullition. En fin de journée, vous arrivez à la Laguna Colorada, célèbre pour ses teintes rouges et ses centaines de flamants roses. Un moment suspendu face à l’un des joyaux du pays. Nuit au refuge, à proximité de la lagune.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/KJo9cpGkQiWJs3xE0PNo.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉSERT, LAGUNES & COUCHER DE SOLEIL SUR LE SALAR",
+      "badgeText": "JOUR 6",
+      "description": "Ce matin, vous reprenez la route vers le nord, longeant la frontière chilienne. Dernier regard sur la Laguna Colorada depuis un superbe belvédère, avant de traverser le désert de Siloli, célèbre pour ses paysages lunaires et son emblématique “arbre de pierre”, sculpté par le vent. La route des 1001 lagunes vous attend ensuite : une succession de lacs aux teintes irréelles (Honda, Ch’arkota, Hedionda, Cañapa), fréquentés par les flamants roses, entre volcans et sommets multicolores. Chaque tronçon de piste réserve son lot de surprises visuelles. Pause en chemin pour observer les volcans Ollagüe et Tomasamil, avant d’arriver au village de Santiago de Agencha. \r\nLà, vous rencontrez une habitante qui vous initie à la culture du quinoa, de sa préparation à sa cuisson traditionnelle. En fin de journée, petite randonnée sur les hauteurs du village pour assister au coucher du soleil sur le Salar d’Uyuni. Un moment de pure magie. Nuit en auberge communautaire",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/2v433EjPTwyvuIOt7pHx.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TRAVERSÉE DU SALAR D’UYUNI",
+      "badgeText": "JOUR 7",
+      "description": "Départ pour l’incontournable Salar d’Uyuni, moment phare du voyage. Même lorsqu’on l’a vu en photo, rien ne prépare à ce que l’on ressent face à cette étendue blanche infinie, à la fois irréelle et apaisante.  Au cœur de cette mer de sel, vous découvrez l’île d’Incahuasi, parsemée de cactus géants. Petite marche jusqu’à son sommet pour une vue à 360° spectaculaire, idéale pour contempler, pique-niquer, et laisser le silence faire son œuvre. Dans l’après-midi, vous reprenez la route en direction de Uyuni, les yeux encore remplis de lumière. Nuit en hôtel.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/kVXfMKknTAuCYAVWCej6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DÉCOUVERTE DE POTOSÍ",
+      "badgeText": "JOUR 8",
+      "description": "Ce matin, vous quittez Uyuni en véhicule privé pour rejoindre Potosí, ancienne ville impériale perchée à plus de 4 000 mètres d’altitude. À votre arrivée, vous retrouvez votre guide pour la visite de la célèbre Casa de la Moneda, impressionnant bâtiment colonial où les Espagnols frappaient autrefois la monnaie extraite des mines d’argent. Un lieu chargé d’histoire, emblématique du passé minier de la ville. Si le temps le permet, balade à pied dans les rues de Potosí, entre églises baroques, ruelles colorées et vestiges d’un âge d’or révolu. Nuit en hôtel.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/P3Re3qtpQX2nPn7ClyuE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MINE DU CERRO RICO PUIS ROUTE VERS SUCRE ",
+      "badgeText": "JOUR 9",
+      "description": "Le matin, vous partez avec votre guide à la découverte du Cerro Rico, la mythique montagne d’argent qui fit la richesse – et la tragédie – de Potosí. Avant d’entrer dans les galeries, arrêt au marché des mineurs, où les travailleurs achètent leurs outils, feuilles de coca ou offrandes pour la Pachamama. Une plongée brute dans le quotidien minier.  Retour en ville en fin de matinée. Puis, dans l’après-midi, départ en véhicule privé pour Sucre, capitale constitutionnelle du pays, nichée à 2 750 mètres d’altitude. Arrivée en fin de journée et temps libre pour commencer à explorer cette ville douce et élégante.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/P3Re3qtpQX2nPn7ClyuE.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MARCHÉ INDIGÈNE DE TARABUCO",
+      "badgeText": "JOUR 10",
+      "description": "Le matin, départ pour Tarabuco, village quechua réputé pour son marché traditionnel du dimanche, véritable plongée dans la culture andine. Ici, le temps semble suspendu : tissages colorés, fruits, céréales et scènes de vie authentiques composent un tableau haut en couleurs. Après le déjeuner, continuation vers le village de Candelaria, où vous êtes accueillis par une famille de tisserands. Visite du petit musée du textile, découverte des savoir-faire locaux, puis balade dans les alentours, entre champs cultivés et hacienda coloniale. Retour à Sucre en fin de journée. Nuit à l'hôtel.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/LOqceUzTfOKg9WxxXkuz.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA VILLE BLANCHE DE SUCRE",
+      "badgeText": "JOUR 11",
+      "description": "Ce matin, votre guide vous retrouve à l’hôtel pour une journée de découverte sur mesure de Sucre, la ville blanche classée au patrimoine mondial de l’UNESCO. L’itinéraire s’adapte à vos envies : marché central animé, couvent de la Recoleta, musée ASUR du textile, ruelles coloniales, ou encore la mythique Casa de la Libertad – témoin des premières heures de l’indépendance bolivienne. Au fil des visites, vous ferez aussi escale dans quelques bonnes adresses locales pour goûter à la gastronomie de Sucre : jus frais, spécialités andines ou douceurs locales, une belle manière de découvrir la ville autrement. Retour à votre hôtel dans l’après-midi.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/YHBhr2fRRNmiNM77gOZL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "JOURNÉE LIBRE À LA PAZ (3.600 m alt.)",
+      "badgeText": "JOUR 12",
+      "description": "Transfert à l’aéroport de Sucre pour votre vol retour vers La Paz. À votre arrivée, accueil et transfert à votre hôtel. Le reste de la journée est libre : l’occasion de savourer vos derniers instants andins. Flânez dans les ruelles animées, explorez le Mercado de las Brujas, goûtez aux salteñas locales ou prenez de la hauteur en téléphérique pour admirer La Paz vue d’en haut. Une dernière immersion tout en douceur avant le départ. Nuit à l’hôtel.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/HfossVwRuWFLpMcsEJXU.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "RETOUR EN FRANCE",
+      "badgeText": "JOUR 13",
+      "description": "Des belles images plein la tête, il est temps de rentrer ! Arrivée en bus le matin, puis transfert à votre hôtel au centre de La Paz. Vous disposerez de la journée libre avant d'être conduits à l'aéroport pour votre vol retour vers la France.",
+      "photo": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/yfd4TaA2QTyM9w4pxdJQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L’hébergement en hôtels, hostals et refuges (conditions sommaires) en base chambre double/twin ou triple",
+      "Pension complète les jours 2, 3, 4, 5, 6.",
+      "Petit-déjeuners + déjeuners les jours 7, 10, 11",
+      "Petits déjeuners les jours 8, 9, 12 et 13",
+      "Guide francophone privé pour l'excursion à La Paz, au lac Titicaca, Potosi et pendant le food-tour à Sucre",
+      "Chauffeur-guide hispanophone privatif pour votre expédition en 4x4 d’un chauffeur hispanophone du jour 4 au jour 7 (4 passagers maximum par véhicule)",
+      "Activités durant le voyage (telles que décrites)",
+      "Excursion de 3 jours dans un véhicule 4x4 privatif",
+      "Les entrées des parcs nationaux, sites historiques, musées, églises, etc...",
+      "Transferts privatifs à La Paz, puis pour aller au Lac Titicaca (Aller-retour), ainsi qu'à Uyuni et à Sucre",
+      "Véhicule 4x4 privatif pour l'aventure de 3 jours dans le Sud Lípez",
+      "Vol domestique Sucre - La Paz (2h)",
+      "Bus de nuit La Paz – Uyuni (env. 9h)"
+    ],
+    "exclude": [
+      "Le vol international A/R _(ville de départ - La Paz)_ (possibilité de devis avec vols inclus sur demande)",
+      "Le supplément chambre individuelle (180 euros)",
+      "Les déjeuners des jours 1, 8, 9, 12 et 13",
+      "Les dîners des jours 1, 7, 8, 9, 10, 11, 12 et 13",
+      "Les boissons lors des repas (hors eau)",
+      "Les pourboires pour les guides et les chauffeurs",
+      "L'assurance annulation ou multirisques avec notre partenaire Chapka (sur demande)"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2395,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "LAP",
+      "LAP"
+    ]
+  },
+  "accompanistsDescription": "Vous serez accompagnés lors des excursions à La Paz, Potosi et Sucre par un guide francophone privatif (excursion chez la famille Aymara, city-tour à Potosi, food-tour et sortie au marché de Tarabuco à Sucre). Un guide francophone y est particulièrement utile pour vous apporter des éclairages historiques et faciliter les échanges avec votre famille d'accueil.\n\nLors du city-tour d'El Alto, nous avons fais le choix d'un guide anglo-hispanophone privatif par souci d'authenticité, celui-ci étant un véritable spécialiste de ce quartier.\n\nLors de l'aventure en 4x4 de 3 jours dans le Sud Lípez, vous serez accompagnés par un chauffeur-guide hispanophone. Si vous ne parlez pas espagnol, cela ne vous empêchera pas de profiter de cette incroyable expérience avant tout \"nature\". Spécialiste de cette région et du Salar de Uyuni, il connaît parfaitement le terrain et vous fera vivre une immersion exceptionnelle.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "A l'hôtel, en refuge",
+      "housingType": "",
+      "housingMood": "Lors de ce voyage, vous séjournerez dans de jolis hôtels 2-3* dans un esprit \"petite structure\", simples mais confortables et bien situés.\r\nLors de votre aventure en 4x4 dans le Sud Lípez, vous dormirez dans des refuges (chambre et salle de bain privative), dont une auberge de sel sur le Salar de Uyuni. Seuls hébergements disponibles pour les voyageurs dans cette zone désertique, ils font partie intégrante du charme de l'aventure. Une bonne douche chaude vous attend en récompense à l'arrivée !",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/NJBvX5MxQky1MQlrbGOc.jpg",
+          "alt": "image de l'hébergement Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+        },
+        {
+          "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/yxSV0QCT2KjUbEHsRmMZ.jpg",
+          "alt": "image de l'hébergement Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+        },
+        {
+          "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/iVi83ilnQzypykTYf1z2.jpg",
+          "alt": "image de l'hébergement Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/EQgF2rwwQkWJBdFZ6gCy.jpg",
+    "alt": "image principale du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/vNOzbHMtRsaz6Q09CKaS.jpg",
+    "alt": "image secondaire du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/T8FTNKDbT0mp5nNmfHqm.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/USuPdQfCQEyu2iND1PYM.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/R9p88jZCQT6oevoFHjwX.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/XOmpyXQURxm9bOMWCiF6.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/4MQjW8eaTkW9cyhRwPWH.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/eyNbMMkrSGOxqAfrhvai.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/hoDUD5mQuXhyZZPyBEw3.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/SIthwDeTQZeJfhJilokQ.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/QpDmn1JGSdec7utLIGUL.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/d8tJOaz6RxW5gI921SF0.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/jMauTXT6SGsQi1hz5gKA.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/eoJxUuabTzqwlAI5dn4h.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/MWhQmtSSm2wI3CDp6GHg.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/9zP57SNBQVKY7nuDXNQi.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/xkc9M70SmO74Vd8cQgxy.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/TsylkHWpRJmPE9OLPxPM.jpg",
+      "alt": "image de la liste de photos du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "**A la Paz** : petit hôtel familial idéalement situé en centre-ville. Il dispose de chambres simples mais charmantes, dotées d'étoffes de couleurs vives, de mobilier en bois, de grandes fenêtres et de patios. Les petits-déjeuners sont copieux avec des jus de fruits frais, idéal pour prendre des forces avant de se lancer à l'assaut de La Paz. On s'y sent comme chez soi !\n\n**Dans le Sud Lípez** : vous dormirez dans des refuges rustiques, seules options disponibles dans cette zone complètement sauvage. L'accueil y est sommaire, mais vous disposerez néanmoins d'une chambre et d'une salle de bain privative (eau froide). Cela fait néanmoins partie de l'ambiance de la région et de l'atypisme de l'expérience !\n\n**A Uyuni** : joli hôtel de sel dans le centre-ville d'Uyuni. Les chambres y sont spacieuses et propres avec une literie confortable et une douche bien chaude. Idéal pour retrouver un peu de confort avant de poursuivre votre voyage.\n\n**A Potosí** : à 300 mètres de la cathédrale de Potosi, ce petit hôtel propre et bien entretenu dispose d'un agréable jardin et d'un personnel aux petits soins.\n\n**A Sucre** : situé dans le centre-ville de Sucre, cet hôtel occupe un manoir colonial avec une histoire documentée datant du XVIème siècle. Il offre des extérieurs restaurés en rouge et blanc, un patio central, des galeries, des terrasses et un jardin d'herbes aromatiques. Une salle de sport et un sauna sont également disponibles.\n\n**Entre Sucre et La Paz** : bus de nuit avec des sièges confortables inclinés 160°\n\n_\\*Les hébergements sont sujets à disponibilités. Dans le cas d’hôtels complets, nous vous proposons un hôtel de catégorie similaire. Les hôtels en Bolivie appliquent un supplément lors des fêtes et jours fériés._"
+      },
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "La cuisine bolivienne n'est pas réputée pour être la plus fine mais est extrêmement copieuse et décline sous de nombreuses formes les différents ingrédients typiques de la cuisine andine : pommes de terres, riz, céréales andines, oeufs, viande et poissons d'eau douce. La cuisine n'est pas particulièrement relevée, une sauce piquante est souvent placée sur la table."
+      },
+      {
+        "question": "Quelle est la meilleure période pour y aller ?",
+        "answer": "Ce voyage est disponible tout au long de l’année. L'idéal est de partir pendant la saison sèche (avril à novembre) pour profiter d'un temps sec et ensoleillé. A l'inverse, en saison humide (décembre à mars), la Bolivie est sujette à une forte chaleur et des pluies plus ou moins intenses selon les régions."
+      },
+      {
+        "question": "Et si je ne parle pas espagnol ?",
+        "answer": "Pas de souci ! Sur les excursions principales (La Paz, Potosi et Sucre), un guide francophone est présent pour vous assurer la méditation avec les locaux et vous apporter des éclairages historiques. Vous pourrez lui demander conseil pour optimiser vos temps libres sur place. Lors du city-tour à El Alto, votre guide parle également anglais. Lors de votre excursion dans le Sud Lipez, votre guide est hispanophone mais l'excursion est avant tout nature ! Cela ne posera pas souci pour le bon déroulement de votre excursion."
+      },
+      {
+        "question": "Ce voyage est-il fait pour moi ?",
+        "answer": "Ce voyage s’adresse aux personnes aimant voyager hors des sentiers battus, faire des rencontres et se confronter à des modes de vie différents. Il est adapté à tous physiquement (sans difficulté particulière, pas de randonnées). Il faut s'attendre à un peu moins de confort durant les 2 nuits dans le Sud Lipez (nuits dans des refuges) mais cela est temporaire et fait partie du charme de l'aventure."
+      },
+      {
+        "question": "Quelles sont les formalités d'entrée en Bolivie ?",
+        "answer": "Les ressortissants français n’ont pas besoin de visa pour un séjour touristique court en Bolivie. Il convient d’être en possession d’un passeport ayant une validité d’au moins 6 mois à compter de l’arrivée sur le territoire bolivien.\n\nPlus d'information sur le site de France Diplomatie - Onglet Entrée / Séjour."
+      },
+      {
+        "question": "Quels sont les vaccins et précautions en matière de santé ?",
+        "answer": "Aucune vaccination n’est obligatoire mais certaines vaccinations sont recommandées : assurez-vous d’être à jour dans vos vaccinations habituelles ainsi que celles liées à toutes les zones géographiques visitées.\n\nLa mise à jour de la vaccination diphtérie-tétanos-poliomyélite (DTP) est recommandée, ainsi que la vaccination rubéole-oreillons-rougeole (ROR) chez l’enfant ; la vaccination antituberculeuse est également souhaitable.\n\nMême si la vaccination contre la fièvre jaune n'est pas (encore) obligatoire pour les voyageurs arrivant directement d'Europe ou des Etats-Unis, la multiplication des foyers de la maladie dans de nombreuses régions du pays et des pays voisins, et pas seulement dans les régions amazoniennes, justifie, dès maintenant, de la recommander à tous, hors rares contre-indications décidées par le Centre de vaccinations internationales. Sa validité est maintenant prolongée « à vie » (mention qui doit être notée sur le carnet international, quelle qu'ait été la date de la vaccination). Elle peut, en outre, être exigée à la sortie du pays, pour les voyageurs prolongeant leur périple dans les autres pays d'Amérique du Sud, d'Amérique centrale et de toute la zone Caraïbe.\n\nPlus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/perou/#sante)."
+      },
+      {
+        "question": "Qu'est ce que l'esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ?",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n    \n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Comment se passe la réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-bolivie-uyuni-lipez-titicaca",
+    "ogTitle": "Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus",
+    "ogDescription": "Odysway vous propose un voyage unique à la découverte de la Bolivie véritablement authentique. Explorez le Sud Lipez en 4x4, écoutez le silence dans le plus grand désert au monde au Salar de Uyuni et vivez des moments au plus proche des locaux.",
+    "ogImage": {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/EQgF2rwwQkWJBdFZ6gCy.jpg",
+      "alt": "image principale du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    "twitterTitle": "Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus",
+    "twitterDescription": "Odysway vous propose un voyage unique à la découverte de la Bolivie véritablement authentique. Explorez le Sud Lipez en 4x4, écoutez le silence dans le plus grand désert au monde au Salar de Uyuni et vivez des moments au plus proche des locaux.",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-bolivie-uyuni-lipez-titicaca/EQgF2rwwQkWJBdFZ6gCy.jpg",
+      "alt": "image principale du voyage Bolivie : lac Titicaca, désert de sel et rencontres hors des sentiers battus"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

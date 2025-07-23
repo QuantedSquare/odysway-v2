@@ -1,0 +1,183 @@
+{
+  "title": "Destinations",
+  "description": "Les destinations Odysway",
+  "contenuOnglet": [
+    {
+      "title": "Europe",
+      "linksList": [
+        {
+          "title": "Albanie",
+          "slug": "destinations/albanie"
+        },
+        {
+          "title": "Finlande",
+          "slug": "destinations/finlande"
+        },
+        {
+          "title": "Islande",
+          "slug": "destinations/islande"
+        },
+        {
+          "title": "Norvège",
+          "slug": "destinations/norvege"
+        },
+        {
+          "title": "Portugal",
+          "slug": "destinations/portugal"
+        },
+        {
+          "title": "Roumanie",
+          "slug": "destinations/roumanie"
+        },
+        {
+          "title": "Espagne",
+          "slug": "destinations/espagne"
+        },
+        {
+          "title": "Suède",
+          "slug": "destinations/suede"
+        }
+      ]
+    },
+    {
+      "title": "Asie",
+      "linksList": [
+        {
+          "title": "Chine",
+          "slug": "destinations/chine"
+        },
+        {
+          "title": "Inde",
+          "slug": "destinations/inde"
+        },
+        {
+          "title": "Indonésie",
+          "slug": "destinations/indonesie"
+        },
+        {
+          "title": "Japon",
+          "slug": "destinations/japon"
+        },
+        {
+          "slug": "destinations/kirghizistan",
+          "title": "Kirghizistan"
+        },
+        {
+          "slug": "destinations/laos",
+          "title": "Laos"
+        },
+        {
+          "slug": "destinations/mongolie",
+          "title": "Mongolie"
+        },
+        {
+          "title": "Népal",
+          "slug": "destinations/nepal"
+        },
+        {
+          "slug": "destinations/ouzbekistan",
+          "title": "Ouzbekistan"
+        },
+        {
+          "title": "Sri Lanka",
+          "slug": "destinations/sri-lanka"
+        },
+        {
+          "slug": "destinations/vietnam",
+          "title": "Vietnam"
+        }
+      ]
+    },
+    {
+      "title": "Amérique du sud & centrale",
+      "linksList": [
+        {
+          "title": "Argentine",
+          "slug": "destinations/argentine"
+        },
+        {
+          "title": "Bolivie",
+          "slug": "destinations/bolivie"
+        },
+        {
+          "slug": "destinations/bresil",
+          "title": "Brésil"
+        },
+        {
+          "title": "Chili",
+          "slug": "destinations/chili"
+        },
+        {
+          "title": "Colombie",
+          "slug": "destinations/colombie"
+        },
+        {
+          "title": "Costa Rica",
+          "slug": "destinations/costa-rica"
+        },
+        {
+          "slug": "destinations/guatemala",
+          "title": "uatemala"
+        },
+        {
+          "title": "Pérou",
+          "slug": "destinations/perou"
+        },
+        {
+          "slug": "destinations/salvador",
+          "title": "Salvador"
+        }
+      ]
+    },
+    {
+      "title": "Amérique du nord",
+      "linksList": [
+        {
+          "title": "Canada",
+          "slug": "destination/canada"
+        }
+      ]
+    },
+    {
+      "title": "Afrique",
+      "linksList": [
+        {
+          "title": "Algérie",
+          "slug": "destination/algerie"
+        },
+        {
+          "title": "Bénin",
+          "slug": "destination/benin"
+        },
+        {
+          "title": "Cap-Vert",
+          "slug": "destinations/cap-vert"
+        },
+        {
+          "slug": "destinations/egypte",
+          "title": "Egypte"
+        },
+        {
+          "title": "Kenya",
+          "slug": "destinations/kenya"
+        },
+        {
+          "title": "Madagascar",
+          "slug": "destinations/madagascar"
+        },
+        {
+          "title": "Maroc",
+          "slug": "destinations/maroc"
+        },
+        {
+          "title": "Namibie",
+          "slug": "destinations/namibie"
+        },
+        {
+          "title": "Tanzanie",
+          "slug": "destinations/tanzanie"
+        }
+      ]
+    }
+  ]
+}

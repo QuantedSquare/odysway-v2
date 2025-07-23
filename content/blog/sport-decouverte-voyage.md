@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-01-16 12:06:00+00:00"
 tags: "Amerique du Sud, Asie, Chine, Developpement personnel, Europe, Famille, Finlande, Grands espaces, Nepal, Perou, Sport, Sri Lanka, Thailande"
 categories: "Depassement de soi, Culture et decouverte"

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-09-13 16:55:00+00:00"
 tags: "Amerique du Sud, Communautés locales, Developpement personnel, Famille, Perou"
 categories: "Culture et decouverte"

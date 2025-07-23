@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-03-24 16:05:00+00:00"
 tags: "Afrique, Amerique du Sud, Asie, Developpement personnel, Grands espaces, Inde, Maroc, Mongolie, Perou"
 categories: "Depassement de soi, Apprentissage, Culture et decouverte"

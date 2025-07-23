@@ -12,7 +12,7 @@ sitemap:
   loc: ""
 robots: index, nofollow
 seo:
-  title: Accueil Odysway
+  title: Voyages en immersion humaine et responsable
   description: La rencontre au cœur du voyage
 schemaOrg:
   - "@type": TravelAgency
@@ -154,7 +154,7 @@ au cœur du voyage
     icon: /icons/user-friends.svg
     ---
     #text
-    Une agence proche de vous, vraiment
+    Une agence à taille humaine, proche de vous
     ::::
   
   #cta-button

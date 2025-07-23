@@ -1,0 +1,353 @@
+{
+  "published": true,
+  "title": "Randonnées inoubliables à la découverte des joyaux naturels de Madère",
+  "destinations": [
+    {
+      "name": "Portugal"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": false,
+  "experienceType": "Explorer à pied",
+  "level": "1",
+  "categories": [
+    {
+      "name": "trek-et-randonnee"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    }
+  ],
+  "duration": 12,
+  "nights": 11,
+  "includeFlight": false,
+  "housingType": "Hôtels",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": false,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": false,
+    "fevrier": false,
+    "mars": false,
+    "avril": false,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": false,
+    "decembre": false
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 1,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Madère ou l’île des randonneurs en quête de paysages d’exception et de rencontres insolites et authentiques. Cette terre cernée par les eaux bleues de l’Atlantique saura vous séduire du premier au dernier jour de votre voyage.\n\nS’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points de vue incroyables, découvrir des lieux cachés et préservés, s’immerger dans la culture et l’histoire de Madère ! Mais surtout, rencontrer les locaux, voilà ce qui vous attend lors de ce périple aux quatre coins de l’île !",
+    "author": "Lucie",
+    "affixeAuthor": "spécialiste des voyages immersifs en Europe"
+  },
+  "experiencesBlock": [
+    "Détendez-vous dans les piscines naturelles de Porto Moniz",
+    "Savourez la quiétude et l’authenticité des villages madériens",
+    "Randonnez au cœur d’une forêt âgée de 20 millions d’années",
+    "Dominez l’île sur la deuxième plus haute falaise du monde"
+  ],
+  "slug": "trek-madere-portugal",
+  "description": "Madère ou l’île des randonneurs en quête de paysages d’exception et de rencontres insolites et authentiques. Cette terre cernée par les eaux bleues de l’Atlantique saura vous séduire du premier au dernier jour de votre voyage.\n\nS’enfoncer dans la nature profonde, grimper jusqu’à des sommets aux points de vue incroyables, découvrir des lieux cachés et préservés, s’immerger dans la culture et l’histoire de Madère ! Mais surtout, rencontrer les locaux, voilà ce qui vous attend lors de ce périple aux quatre coins de l’île !",
+  "emailDescription": "👉 Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
+  "metaDescription": "Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 15 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**11 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Mai à Oct",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "BIENVENUE À MADÈRE  !",
+      "badgeText": "JOUR 1",
+      "description": "Avant votre atterrissage, vous pourrez voir Madère se dévoiler peu à peu sous vos yeux. Vus du ciel, les paysages offrent un avant-goût (exquis !) de ce qui vous attend lors de ce voyage en immersion sur cette sublime île du Portugal. Vous serez accueilli par notre guide francophone, puis prendrez la route pour rejoindre Machico. Cette ville fut le point d’ancrage des premiers navigateurs portugais et fait incontestablement partie de l’âme de Madère. Selon l’heure d’arrivée de votre vol, découvrez ce joyau historique et imprégnez-vous de l’ambiance madérienne avant de partir explorer les beautés naturelles de l’île dès le lendemain.",
+      "photo": "/images/voyages/trek-madere-portugal/6vyL6tw1TA6vjbEzko4k.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "PREMIÈRE IMMERSION DANS LA NATURE",
+      "badgeText": "JOUR 2",
+      "description": "Aujourd’hui, place à ce qui vous amène ici même, à Madère : sa nature extraordinaire ! Direction la pointe de Sao Lourenço que vous rejoindrez lors d’une randonnée au milieu d’un paysage étonnant. Sentier de pierres, falaises plongeantes et colorées, plantes endémiques, oiseaux marins, vous serez à la fois surpris et émerveillé par tant de singularité. Et tout du long, place à de superbes points de vue sur la côte, le centre de l’île et l’océan. De quoi en prendre plein les yeux ! Marche : 3-4h / Dénivelé positif : 500m - Dénivelé négatif : 500m",
+      "photo": "/images/voyages/trek-madere-portugal/O7kI6p9RjihtOI4ZLFlQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UNE ASCENSION AU SOMMET",
+      "badgeText": "JOUR 3",
+      "description": "Nouvelles randos et nouveaux paysages au programme ! L’ascension du Pico do Facho vous mènera jusqu’à un belvédère offrant une vue imprenable sur la vallée de Machico. Puis direction la Levada de Canical qui devrait vous enchanter tout autant. Ce canal d’irrigation, nombreux sur l’île, est ce qu’il y a de plus typique. Vous êtes en plein cœur de l’histoire de Madère. Et pour clore cette journée, pourquoi ne pas se laisser tenter par une note authentique et exotique avec la visite d’une distillerie de rhum… la seule en Europe qui marche à la vapeur ! Marche : 5-6h / Dénivelé positif : 350m - Dénivelé négatif : 350m",
+      "photo": "/images/voyages/trek-madere-portugal/rtbxJ8QSWCN4clsKH80Q.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LE ROCHER DES RANDONNEURS",
+      "badgeText": "JOUR 4",
+      "description": "S’élevant vers le ciel, tel un poing verdoyant, le Penha de Aguia – ou rocher de l’Aigle – est peut-être le point d’orgue de tout randonneur qui vient à Madère. Le sentier qui mène au sommet est plutôt raide, mais ponctué d’arbres et de fleurs dont les couleurs et les senteurs vous accompagneront tout du long. Rassurez-vous, les efforts fournis seront largement récompensés par le spectacle qui s’offrira à vous. D’un côté, l’espace infini de l’Atlantique et de l’autre, les montagnes, sans oublier la vue sur la péninsule de Sao Lourenço. Marche : 4h / Dénivelé positif : 750m - Dénivelé négatif : 750m",
+      "photo": "/images/voyages/trek-madere-portugal/Br2WKvCQsaa4d8IEDjHF.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA TÊTE DANS LES NUAGES",
+      "badgeText": "JOUR 5",
+      "description": "Et si vous partiez à l’assaut du plus haut sommet de l’île ? Culminant à 1 862 m d’altitude, le Pico Ruivo vous offrira des points de vue incroyables sur tout Madère. Oui ! Madère apparaîtra dans son intégralité sous vos yeux, comme si vous observiez l’île depuis le ciel ! Et si la visibilité le permet, vous pourrez même apercevoir l’île de Porto Santo, au large, entourée d’une magnifique eau turquoise. Mais si le ciel est voilé, ce qui est souvent le cas, vous aurez alors la tête dans les nuages… Que vous réservera la nature lors de votre venue  ? Marche : 4-5h / Dénivelé positif : 600m - Dénivelé négatif : 600m",
+      "photo": "/images/voyages/trek-madere-portugal/OvNz66zZRCSIBLnR80ke.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UN TRÉSOR NATUREL CLASSÉ",
+      "badgeText": "JOUR 6",
+      "description": "Du haut de ses 20 millions d’années – rien que ça !, la forêt laurifère de Madère ne semble pas avoir pris une ride. Poumon historique et naturel de l’île, elle fait la fierté de ses habitants. C’est dans ce site préservé et classé au patrimoine mondial de l’Unesco que vous évoluerez. Une immersion au plus près et au plus profond de la nature madérienne. Une nature qui force le respect et qui vous fera peut-être sentir tout petit… mais votre ravissement, lui, sera certainement immense. Marche : 3h / Dénivelé positif : 50m - Dénivelé négatif : 50m",
+      "photo": "/images/voyages/trek-madere-portugal/wjBOEV29TMSNC9SShPuM.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "MADÈRE HORS DES SENTIERS BATTUS",
+      "badgeText": "JOUR 7",
+      "description": "Dans votre quête de découvrir Madère autrement, votre guide vous emmènera dans un lieu où le temps semble s’être arrêté. Bienvenue dans la vallée de Boaventura. Située entre terre et mer, elle est une alternance de paysages verdoyants, de cultures en terrasses et de points de vue sur l’océan Atlantique. Et au milieu, des villages pittoresques, comme oubliés. Pourtant, la vie là-bas est bien présente et fait perdurer l’authenticité de l’île. Terminez cette journée hors des sentiers battus par une baignade dans l’une des piscines naturelles de Porto Moniz. Marche : 4h / Dénivelé positif : 300m - Dénivelé négatif : 450m",
+      "photo": "/images/voyages/trek-madere-portugal/k6YYkOiGSZufr78Vr6Ej.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ENTRE NATURE ET HISTOIRE",
+      "badgeText": "JOUR 8",
+      "description": "Alliance entre nature et histoire, voilà ce qui vous attend en ce 8ᵉ jour de voyage. Au programme, la Levada do Moinho. Ce canal d’irrigation alimentait, autrefois, nombre de moulins de la région, expliquant ainsi son nom moinho qui signifie « moulin ». Bien qu’abandonnés aujourd’hui, vous pourrez quand même apercevoir les ruines de certains d’entre eux pendant votre randonnée. Un pan de l’histoire de Madère raconté avec passion par votre guide  ! Marche : 3-4h / Dénivelé positif : 170m - Dénivelé négatif : 300m",
+      "photo": "/images/voyages/trek-madere-portugal/tBp8KKCfT9SQf2Q3ZhEA.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UNE CASCADE SURPRENANTE",
+      "badgeText": "JOUR 9",
+      "description": "Madère n’a pas fini de vous dévoiler ses trésors et la randonnée du jour vous conduira dans un environnement qui en recèle quelques-uns : le plateau Paul da Serra. De ce côté-ci de l’île, la forêt laurifère abrite une végétation exubérante et verdoyante. Vous pourrez également observer des espèces endémiques de la faune et de la flore, comme le roitelet ou le myrtillier de Madère. Des paysages uniques, tout comme votre passage à la Levada das 25 Fontes où l’eau, venant du plateau, surgit de la paroi en 25 endroits différents. Enchanteur  ! Marche : 4h / Dénivelé positif : 200m - Dénivelé négatif : 200m",
+      "photo": "/images/voyages/trek-madere-portugal/rbSp1OybRk6RvaAMI787.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "UN VILLAGE DE PÊCHEURS ENTRE OCÉAN ET MONTAGNE",
+      "badgeText": "JOUR 10",
+      "description": "Pour rejoindre Paul do Mar, vous aurez la chance d’emprunter un sentier pas comme les autres : une ancienne voie de communication. Une plongée au cœur même de l’histoire de Madère que votre guide ne manquera pas de vous conter. Votre randonnée vous permettra d’admirer des cultures en terrasses, si typiques de l’île, et des chutes d’eau au milieu d’un environnement toujours aussi verdoyant. À l’arrivée, un village de pêcheurs au charme fou, entre océan et montagne, qui a conservé toute son authenticité et dont vous apprécierez l’ambiance si tranquille  ! Marche : 4h / Dénivelé positif : 75m - Dénivelé négatif : 600m",
+      "photo": "/images/voyages/trek-madere-portugal/q1eJhiblQcqPpS8elIBL.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "LA DEUXIEME PLUS HAUTE FALAISE DU MONDE !",
+      "badgeText": "JOUR 11",
+      "description": "Madère a beau être une petite île, elle possède moult sites naturels à couper le souffle qui font d’elle un joyau à part entière. Et il y en a un qui fait d’ailleurs sa fierté : la falaise de Cabo Girao. Il s’agit de la deuxième falaise la plus haute du monde ! Rien que ça ! Du haut de ses 580 m, elle domine largement le paysage et offre une vue spectaculaire sur l’océan, les terres intérieures et Funchal. ",
+      "photo": "/images/voyages/trek-madere-portugal/fiev2HMQ8O4HV4cCxjH9.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "CE N'EST QU'UN AU REVOIR…",
+      "badgeText": "JOUR 12",
+      "description": "Votre voyage sur l’île de Madère touche à sa fin ! Selon le temps dont vous disposez avant votre départ, parcourez une dernière fois les rues et ruelles de Funchal. Faites vos dernières rencontres, partagez et échangez avec les Madériens pour clore ce séjour de la plus belle des façons.",
+      "photo": "/images/voyages/trek-madere-portugal/KruIqiQsQTO1IFZRuPCN.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'hébergement en hôtels et résidences (base chambres doubles, lits doubles ou jumeaux)",
+      "Tous les repas sauf ceux mentionnés comme libres",
+      "Les transferts sur place du J2 au J 7 inclus.",
+      "L'encadrement par un guide local francophone du J2 au J7 après-midi."
+    ],
+    "exclude": [
+      "Les vols internationaux Paris / Funchal A/R et les taxes aériennes.",
+      "Les transferts aéroport / hôtel / aéroport",
+      "Les boissons et dépenses personnelles",
+      "Les repas mentionnés comme libres",
+      "Les visites de sites et musées",
+      "L'assurance annulation ou multirisques"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1840,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 15,
+    "minTravelersToConfirm": 2,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 100,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "Lors de ce voyage immersif, vous serez accompagné par un guide madérien francophone. Lieux insolites, anecdotes inédites ou encore récits passionnants, il partagera avec vous la richesse et la culture de cette île qu’il connaît sur le bout des doigts.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Hôtels",
+      "housingType": "",
+      "housingMood": "À Machico, Porto da Cruz et Sao Roque do Faial, vous dormirez dans des hébergements familiaux de type residencial, au confort simple. Parfait pour vivre au plus près des locaux. À Boaventura, votre hôtel se situe dans un véritable îlot de tranquillité où vous pourrez vous relaxer après avoir sillonné les sentiers de randonnée. À Funchal, votre hôtel en cœur de ville et son rooftop, avec une superbe vue sur Funchal et ses alentours, vous permettront de profiter encore un peu de la gentillesse des habitants et des magnifiques paysages. Logement en chambre double ou twin, avec salle de bain privative pour tous les hébergements.",
+      "image": [
+        {
+          "src": "/images/voyages/trek-madere-portugal/9v7SBOcJRmiOcT4fy8gf.jpg",
+          "alt": "image de l'hébergement Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+        },
+        {
+          "src": "/images/voyages/trek-madere-portugal/lNOtVBWPROmIXmoCr7uT.jpg",
+          "alt": "image de l'hébergement Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+        },
+        {
+          "src": "/images/voyages/trek-madere-portugal/VWNHzBQTaLuI85hfQzQ6.jpg",
+          "alt": "image de l'hébergement Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/trek-madere-portugal/OUICGwoqRuLRXrhtJTXF.jpg",
+    "alt": "image principale du voyage Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/trek-madere-portugal/yZU1hNDJSlWGlfi07Xag.jpg",
+    "alt": "image secondaire du voyage Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Les petits-déjeuners sont inclus, ainsi les pique-nique à midi, que vous transporterez dans votre sac à dos. Le soir, vous dînerez au restaurant ou à votre auberge.\n\nSeuls les repas suivants sont libres (non inclus) : Jour 1 : déjeuner, dîner // Jour 11 : dîner // Jour 12 :  déjeuner, dîner."
+      },
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "À Madère, les hébergements selectionnés varient entre des hôtels 3\\* (normes locales) offrant un excellent service et des residenciales, des établissements simples de petite capacité. Nous logeons en chambre double/twin avec salle de bain privative.\n\nVoici une liste indicative des hébergements que nous réservons fréquemment. En cas d'indisponibilité, nous sélectionnons des établissements similaires offrant le même niveau de service et de confort.\n\n**Machico**  \n\\- Residencial Amparo: Une residencial familiale au cœur de Machico, proposant 12 chambres avec TV câblée, salles de bains privées et WiFi gratuit.\n\n**Porto Da Cruz**  \n\\- Residencial Costa Linda: À 100 mètres de l'océan, entouré de montagnes, cette petite structure de 12 chambres offre une vue sur la majestueuse Penha de Águia. Les chambres sont équipées de TV câblée et de salles de bains privées. L'établissement dispose d'un café-restaurant avec terrasse.\n\n**Sao Roque do Faial**  \n\\- Residencial Sao Roque: Incontournable pour les randonneurs, cette residencial de 33 chambres offre des hébergements spacieux et confortables, avec un café-restaurant.\n\n**Boaventura**:  \n\\- Hotel Solar de Boaventura: Niché dans le village de Boaventura, cet hôtel propose un cadre verdoyant avec salon, musée d'artefacts traditionnels de Madère, billard, bar, restaurant, terrasses et jardins, pour un séjour relaxant.\n\n**Funchal**  \n\\- Hotel Do Carmo: Situé au centre de Funchal, cet hôtel 3\\* dispose d'un restaurant, d'un bar avec table de billard et du WiFi gratuit. Profitez également de la piscine et de la terrasse offrant une vue magnifique sur la ville, la baie et les montagnes."
+      },
+      {
+        "question": "Quel est le niveau des randonnées ?",
+        "answer": "Selon les étapes, la durée de marche quotidienne varie entre 4 à 6 heures. Chaque participant porte son sac à dos de 40 L maximum, contenant les effets nécessaires pour la journée tels que le pique-nique, l'eau, la cape de pluie, etc.\n\n⇾ En détail :\n\n*   Jour 1 : Pas de randonnées\n*   Jour 2 : Marche : 3/4h, Dénivelé positif = 500 m / Dénivelé négatif = 500 m\n*   Jour 3 : Marche : 5/6h, Dénivelé positif = 550 m / Dénivelé négatif = 550 m\n*   Jour 4 : Marche : 4h, Dénivelé positif = 750 m / Dénivelé négatif = 750 m\n*   Jour 5 : Marche : 5h, Dénivelé positif = 450 m / Dénivelé négatif = 300 m\n*   Jour 6 : Marche : 4/5h, Dénivelé positif = 450 m / Dénivelé négatif = 450 m\n*   Jour 7 : Marche : 4h, Dénivelé positif = 300 m / Dénivelé négatif = 450 m\n*   Jour 8 : Marche : 4/5h, Dénivelé positif = 200 m / Dénivelé négatif = 600 m\n*   Jour 9 : Marche : 4h, Dénivelé positif = 200 m / Dénivelé négatif = 200 m\n*   Jour 10 : Marche : 4h, Dénivelé positif = 500 m / Dénivelé négatif = 500 m\n*   Jour 11 : Marche : 4h\n*   Jour 12 : Pas de randonnées"
+      },
+      {
+        "question": "Quels vêtements prendre avec moi ?",
+        "answer": "Préparez-vous de la tête aux pieds :\n\n*   Chaussures de trekking : Solidité, tenue du pied et de la cheville, imperméabilité. Optez pour des semelles antidérapantes, à crampons, de préférence de type \"Vibram\".\n*   Chaussures légères ou sandales : Pour les étapes en ville ou villages.\n*   Chaussettes.\n*   Pantalon ample.\n*   Pull, sweat ou fourrure polaire : Résistant, chaud, léger, séchage rapide avec un toucher doux.\n*   Shorts ou bermudas.\n*   Coupe-vent respirant Gore-Tex.\n*   Cape de pluie.\n*   Chapeau.\n*   Maillot de bain.\n*   Serviette de bain.\n*   Bonnes lunettes de soleil (indice de protection 3)."
+      },
+      {
+        "question": "Quels sont les équipements à prévoir ?",
+        "answer": "*   Bâton(s) de marche.\n*   Sacs plastiques : Pour étanchéité des affaires, appareils photos et vêtements.\n*   Cape de pluie et pantalon de pluie.\n*   Protège-sac à dos.\n*   Bloc-notes : Tenir un journal, une grande activité des trekkeurs.\n*   Fiche technique : Emportez vos coups de cœur, récits de voyage et anecdotes.\n*   Trousse de toilette.\n*   Crème de protection solaire (visage et lèvres).\n*   Lampe frontale : Avec piles et ampoules de rechange.\n*   Gourde de 1 litre minimum : Légère et isotherme, avec assiettes et couverts pour le pique-nique.\n*   Couteau de poche : De préférence multi-usages.\n*   Gants et bonnet : Pour les randonnées en montagne."
+      },
+      {
+        "question": "Quelles sont les recommendations concernant les baggages ?",
+        "answer": "Pour une organisation optimale, vos bagages se répartissent comme suit :\n\n1.  1.  **Sac de voyage souple :**\n        \n        *   Poids maximal de 15 kg.\n        *   Fermeture Éclair latérale.\n        *   Utilisé pendant le trekking pour stocker les affaires non nécessaires dans la journée.\n    2.  **Petit sac à dos :**\n        \n        *   Contenance d'environ 40 litres.\n        *   Pour vos effets de la journée : pull, t-shirt de rechange, gourde, pique-nique du midi, lunettes, petit matériel, etc."
+      },
+      {
+        "question": "Les vols sont-ils inclus dans le prix du voyage ?",
+        "answer": "Non, les vols ne sont pas inclus dans le prix du voyage. Si vous souhaitez réserver le vol avec notre agence, n'hésitez pas à nous l'indiquer :)"
+      },
+      {
+        "question": "Quelle est la meilleure période pour ce voyage ?",
+        "answer": "La meilleure période pour randonner à Madère est généralement au printemps (avril à juin) et en automne (septembre à octobre). Ces saisons offrent des températures agréables, une végétation luxuriante et des conditions idéales pour explorer les sentiers de l'île. Les mois d'été (juillet et août) sont également propices, bien que les températures puissent être plus élevées."
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe la réservation Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ? ",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Randonnées inoubliables à la découverte des joyaux naturels de Madère",
+    "canonicalUrl": "https://www.odysway.com/voyages/trek-madere-portugal",
+    "ogTitle": "Randonnées inoubliables à la découverte des joyaux naturels de Madère",
+    "ogDescription": "Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
+    "ogImage": {
+      "src": "/images/voyages/trek-madere-portugal/OUICGwoqRuLRXrhtJTXF.jpg",
+      "alt": "image principale du voyage Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+    },
+    "twitterTitle": "Randonnées inoubliables à la découverte des joyaux naturels de Madère",
+    "twitterDescription": "Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
+    "twitterImage": {
+      "src": "/images/voyages/trek-madere-portugal/OUICGwoqRuLRXrhtJTXF.jpg",
+      "alt": "image principale du voyage Randonnées inoubliables à la découverte des joyaux naturels de Madère"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

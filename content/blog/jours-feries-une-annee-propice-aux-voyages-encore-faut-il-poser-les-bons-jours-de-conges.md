@@ -27,7 +27,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2023-01-10 15:13:00+00:00"
 tags: "2023, repos, rêve, vacances, voyage"
 categories: "vacances, voyager, 2023"

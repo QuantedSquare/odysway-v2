@@ -23,7 +23,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2022-12-20 14:01:00+00:00"
 tags: "cohésion, équipe, relation, Séminaire, vacances"
 categories: "séminaire, entreprise, cohésion"

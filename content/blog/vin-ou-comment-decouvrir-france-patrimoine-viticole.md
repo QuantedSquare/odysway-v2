@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-07-15 10:35:00+00:00"
 tags: "France, Made in France"
 categories: "Nature et grands espaces, Culture et decouverte, Blog"

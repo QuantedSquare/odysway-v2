@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2023-08-20 13:44:00+00:00"
 tags: "éléphants, immersion, Laos"
 categories: "voyager, Laos, découverte"

@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-11-23 14:16:00+00:00"
 tags: "Animaux, Communautés locales, France, Grands espaces, Made in France"
 categories: "Nature et grands espaces, Blog"

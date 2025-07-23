@@ -69,7 +69,6 @@
 <script setup>
 const { voyage, currentStep, ownStep, page } = defineProps(['voyage', 'currentStep', 'ownStep', 'page'])
 const { updateDeal } = useStepperDeal(ownStep)
-// const { addSingleParam } = useParams()
 
 const model = defineModel()
 

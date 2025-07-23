@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2020-03-06 10:55:00+00:00"
 tags: "Afrique, Afrique du Sud, Amerique du Nord, Amerique du Sud, Brésil, Etats Unis, Famille, Transports insolites"
 categories: "Apprentissage, Culture et decouverte, Blog"

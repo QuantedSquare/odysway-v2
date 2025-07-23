@@ -17,7 +17,7 @@ navigation:
 author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: 2023-04-04 12:43:00+00:00
 tags: Animaux, Communautés locales, Europe, Famille, France, Grands espaces,
   Made in France, Sport

@@ -1,0 +1,11 @@
+{
+  "title": "Photographie",
+  "slug": "sejours-stage-photographie",
+  "discoveryTitle": "Séjours Photo",
+  "seoTitle": "Séjours photo",
+  "image": {
+    "alt": "Séjours photo",
+    "src": "/images/categories/sejour-photo.jpg"
+  },
+  "showOnHome": true
+}

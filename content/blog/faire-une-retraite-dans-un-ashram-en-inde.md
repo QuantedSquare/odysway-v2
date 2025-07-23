@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2018-12-13 17:18:00+00:00"
 tags: "Asie, Developpement personnel, Inde"
 categories: "Depassement de soi, Developpement Personnel"

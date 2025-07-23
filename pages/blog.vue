@@ -158,7 +158,7 @@ const sortId = useId()
 
 const route = useRoute()
 const { data: pages, status } = useAsyncData(route.path, () => {
-  return queryCollection('blog').all()
+  return queryCollection('blog').where('published', '=', true).all()
 })
 
 const { data: blogContent } = await useAsyncData('blog-content', () =>

@@ -1,0 +1,415 @@
+{
+  "published": true,
+  "title": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",
+  "destinations": [
+    {
+      "name": "Inde"
+    }
+  ],
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "Plonger dans la culture",
+  "level": "1",
+  "categories": [
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    }
+  ],
+  "duration": 20,
+  "nights": 19,
+  "includeFlight": false,
+  "housingType": "Chez l'habitant",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 5,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Partez à la découverte d’une Inde différente et peu connue. Au nord-est du pays, au début des premiers sommets himalayens, bordé par le Bhoutan, le Tibet et le Myanmar, se trouve l’Arunachal Pradesh. Découvrez ces territoires lointains, habités par des communautés tribales fascinantes et où la biodiversité est d’une richesse surprenante.\n\nUn voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "La rencontre des communautés tribales fascinantes d’Arunachal Pradesh",
+    "La visite de Tawang, deuxième plus grand monastère d’Asie",
+    "L'opportunité de voguer sur le puissant Brahmapoutre",
+    "La biodiversité d’une richesse surprenante",
+    "La traversée du Sela Pass à 4170 m, ancienne porte du Tibet"
+  ],
+  "slug": "inde-arunachal-pradesh",
+  "description": "Partez à la découverte d’une Inde différente et peu connue. Au nord-est du pays, au début des premiers sommets himalayens, bordé par le Bhoutan, le Tibet et le Myanmar, se trouve l’Arunachal Pradesh. Découvrez ces territoires lointains, habités par des communautés tribales fascinantes et où la biodiversité est d’une richesse surprenante.\n\nUn voyage hors du temps, différent de ce que vous avez vécu jusqu'à présent.",
+  "emailDescription": "👉 Si vous souhaitez plonger au coeur de la culture indienne, partir à la découverte des terres lointaines de l'Arunachal Pradesh et rencontrer des tribus fascinantes, ce voyage est fait pour vous ! Un voyage unique à la rencontre des locaux qui gravera, pour toujours, votre mémoire ❤️",
+  "metaDescription": "Partez à la découverte des terres lointaines de l'Arunachal Pradesh lors de ce voyage en Inde du Nord. Rencontrez ses tribus fascinantes, ses villages isolés et admirez sa biodiversité, une des plus riches au monde.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": false
+    },
+    "durationBadge": {
+      "text": "**19 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Oct à Mai",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "DÉBUT DU VOYAGE EN INDE",
+      "badgeText": "JOUR 1 ",
+      "description": "Arrivée en Inde à l’aéroport international de New Delhi. Accueil par votre guide puis transfert vers votre hôtel où vous passerez la nuit, à proximité de l'aéroport.",
+      "photo": "/images/voyages/inde-arunachal-pradesh/RA0QrF8QiiKI0MaMsXIl.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "VOL NEW DELHI - GUWAHATI",
+      "badgeText": "JOUR 2",
+      "description": "Petit-déjeuner à l'hôtel puis transfert vers l'aéroport, où vous embarquez pour un vol d'une durée de 2h30 vers Guwahati, capitale de l’état d'Assam. Accueil à l’aéroport et route jusqu'à Dhekiajuli. Nuit au cœur d’une plantation de thé.",
+      "photo": "/images/voyages/inde-arunachal-pradesh/XVfXxy2HRCG3OOxyZ5zI.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DHEKIAJULI – SHERGAON",
+      "badgeText": "JOURS 3 ET 4",
+      "description": "Après le petit déjeuner, partez pour Shergaon, un petit village pittoresque, niché dans une vallée ponctuée de trois cours d'eau et la terre fertile sur leurs rives est bien adaptée à l'horticulture. Le lendemain, balade pour découvrir la vallée de la communauté Sherdukpen. Route : 5/6 H - 160 km\r\n",
+      "photo": "/images/voyages/inde-arunachal-pradesh/OcpMms6bSgKR6aFxaZ79.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TRAJET SHERGAON - DIRANG ",
+      "badgeText": "JOUR 5",
+      "description": "Après le petit déjeuner, route pour Dirang. Les villages que vous traversez sont habités par les ethnies Rupa de Shertukpen. Route : 3/4 H - 100 Km",
+      "photo": "/images/voyages/inde-arunachal-pradesh/tVskbnT8iNiexiPr9Qlw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "TAWANG",
+      "badgeText": "JOURS 6 ET 7",
+      "description": "Départ  pour Tawang. Après avoir franchi le col Sela à 4420 m d’altitude, visite du monastère d’Urgelling où naquit le 6e Dalaï-lama. Arrivée à  Tawang, où se trouve l’un des plus grands monastères bouddhistes de l’Inde, centre spirituel important. Route : 6 H - 150 Km\r\n\r\n",
+      "photo": "/images/voyages/inde-arunachal-pradesh/YUiqrBYPQ6619ghLyGQt.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE DE TAWANG A ZIRO",
+      "badgeText": "JOURS 8 A 10",
+      "description": "Longue route sur 3 jours,  en passant par Bomdilla le premier jour (7 H - 190 Km), avant de prendre la route d'Itanagar (6 H - 280 Km), la capitale de l’Arunachal Pradesh. Enfin, départ vers la ville de montagne de Ziro, où vous entrez rapidement dans les vastes contreforts de l’Himalaya, à la rencontre des fameux Apatanis. (4/5 H - 120 Km)\r\n\r\n",
+      "photo": "/images/voyages/inde-arunachal-pradesh/bHfheY9TqZuUcyiIAdzQ.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ZIRO, TERRE DES APATANIS",
+      "badgeText": "JOUR 11",
+      "description": "Journée complète dans la région de Ziro, chez les Apatani, avec rencontre d’un chamane de cette ethnie (si possible), mais aussi vers des villages Nyishi situés à une vingtaine de kilomètres de Ziro, avec un peu de randonnée.",
+      "photo": "/images/voyages/inde-arunachal-pradesh/ueC3DYeuQwagJU3qSFzb.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE ENTRE ZIRO ET ALONG",
+      "badgeText": "JOURS 12 ET 13",
+      "description": "Départ pour Daporijo (5/6 H - 165 Km) sur le jour 12. En route, arrêt dans un village Hill Miri. Vous traversez la rivière Kamla qui prend sa source à la frontière tibétaine. Dans la vallée de Kamla, vous découvrez des villages des tribus Hill Miri et Tagin. Nuit à l’hôtel. Le lendemain, route vers Along (5/6 H - 160 Km) à travers une magnifique route de montagnes. ",
+      "photo": "/images/voyages/inde-arunachal-pradesh/Qe8f09CGSyaK8QoEn70W.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ALONG",
+      "badgeText": "JOURS 14 ET 15",
+      "description": "Journée d’exploration à la découverte des tribus Adi Gallong et de leur riche patrimoine. Le lendemain, visite de villages dans la région d’Along, avant de rejoindre le cours du Brahmapoutre. Traversée d’une  passerelle de 70 mètres de long qui enjambe le fleuve, faite traditionnellement de bambou et de rotin. Arrivée à Damro en fin de journée (5 H – 120 Km)\r\n",
+      "photo": "/images/voyages/inde-arunachal-pradesh/L06v6JIFTHyatNtHl8Fm.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DAMRO ET PASIGHAT",
+      "badgeText": "JOURS 16 ET 17",
+      "description": "Journée complète pour découvrir cette belle région et des villages des ethnies Adi et Milang. Marche: 4 à 6 H / jour. Le lendemain, partez par la route pour rejoindre une région habitée par l'ethnie Idu Mishmi. (3/4 H - 80 Km) Route vers Pasighat, bourgade située près de l’endroit où le Brahmapoutre quitte les montagnes pour s’étaler dans les plaines de l’Assam.\r\n",
+      "photo": "/images/voyages/inde-arunachal-pradesh/wf3XyO6mQsqmoRiguCUO.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "ROUTE RETOUR",
+      "badgeText": "JOURS 18 ET 19",
+      "description": "Route Pasighat – Dibrugarh (4 H route + 2 H ferry - 110 Km), jusqu’aux berges du Brahmapoutre. Descente du Brahmapoutre en ferry pour atteindre Dibrugarh grande ville de l’Assam située tout près des montagnes du Nagaland et de l’Arunachal Pradesh, et qui s’étend au bord du Brahmapoutre. Le lendemain, transfert à l’aéroport, vol Dibrugarh - Delhi. \r\n",
+      "photo": "/images/voyages/inde-arunachal-pradesh/npF10MsRQeSG8dS0QvrB.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "DERNIER JOUR EN INDE",
+      "badgeText": "JOUR 20",
+      "description": "Votre voyage en Inde du Nord touche à sa fin, il est temps de repartir avec des souvenirs de vos rencontres plein la tête ! Vol retour en soirée ou poursuite de votre voyage en Inde.",
+      "photo": "/images/voyages/inde-arunachal-pradesh/MlprHYR8TraSk0EqoG2P.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "Les transferts vers et depuis l’aéroport de New Delhi",
+      "les vols intérieurs Delhi – Guwahati et Dibrugarh – Delhi",
+      "Le guide anglophone, le transport dans une voiture 4X4",
+      "Les transferts et transports terrestres en véhicule privé avec chauffeur",
+      "Les hébergements en base double (lits jumeaux ou doubles)",
+      "Les repas: uniquement le petit déjeuner",
+      "Les permis nécessaires pour l’Arunachal Pradesh : veuillez nous fournir les copies de votre passeport + visa indien minimum 2 semaines avant votre arrivée",
+      "**Participation au Myoko festival sur la date de mars et le Mopin festival sur la date d'avril.**"
+    ],
+    "exclude": [
+      "Le transport aérien international jusqu'à New Delhi, et les taxes d'aéroport (possibilité de devis avec vols inclus sur demande)",
+      "Les frais de visa [https://indianvisaonline.gov.in/visa/tvoa.html](https://indianvisaonline.gov.in/visa/tvoa.html)",
+      "Les service d’un accompagnateur francophone (le prix comprend son salaire, son logement, ses repas et ses entrées dans les sites visités) 80 € / jour",
+      "Les déjeuners et dîners, les boissons, les dépenses à caractère personnel et les pourboires",
+      "Les entrées dans les temples, monuments, les taxes appareil photo / camera dans les parcs",
+      "Le supplément si chambre individuelle (400 €/ personne)",
+      "L'assurance annulation ou multirisques",
+      "Tout autre service non mentionné dans «le prix comprend»"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 2060,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": "",
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 400,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "DEL"
+    ]
+  },
+  "accompanistsDescription": "Ce voyage en Inde du Nord sera accompagné par un chauffeur-guide anglophone, pendant toute la durée de votre séjour, de l'arrivée à Guwahati jusqu'à Dibrugarh. Votre chauffeur s'arrêtera lorsque vous le souhaitez, pour photographier la faune ou déguster un met local.\n\nSi vous souhaitez être accompagné par un guide francophone également, dites le nous lors de la demande de devis (voir conditions dans la FAQ)",
+  "accompanistsList": [
+    {
+      "name": "Raju",
+      "description": "Raju est notre principal chauffeur ou devrions-nous dire ... pilote, car les routes du Nord-Est nécessitent des nerfs d'acier. Lorsqu'il n'est pas au volant, Raju s'adonne à la photographie. Il a parcouru tous les coins et recoins de l'Arunachal Pradesh. Vous apprécierez son calme et son sourire contagieux.",
+      "role": "Chauffeur-guide anglophone",
+      "image": "/images/voyages/inde-arunachal-pradesh/yTeldV3sR4Ox5SMIEIPV.jpg"
+    }
+  ],
+  "housingBlock": [
+    {
+      "title": "Chez l'habitant",
+      "housingType": "",
+      "housingMood": "Vous séjournerez durant ce voyage en hôtels ou chez l'habitant.\r\n\r\nLe nord-est s’étant récemment ouvert au tourisme, la plupart des hébergements sont encore rustiques. Bien que simples, ils sont souvent très bien situés et vous recevrez un accueil chaleureux. Odysway favorise l’hébergement chez l’habitant pour une meilleure compréhension de la culture et du mode de vie local.",
+      "image": [
+        {
+          "src": "/images/voyages/inde-arunachal-pradesh/yYNpxudHQA2GntE3IqeH.jpg",
+          "alt": "image de l'hébergement Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+        },
+        {
+          "src": "/images/voyages/inde-arunachal-pradesh/dOpX4WOSlWIV1FFPS0YA.jpg",
+          "alt": "image de l'hébergement Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+        },
+        {
+          "src": "/images/voyages/inde-arunachal-pradesh/ba0McbbSZu0jl5T3fPbf.jpg",
+          "alt": "image de l'hébergement Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/inde-arunachal-pradesh/wm3EZXWTfq2Wpx8IqpMr.jpg",
+    "alt": "image principale du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/inde-arunachal-pradesh/MUNbct5oSPRuZhTtTzsS.jpg",
+    "alt": "image secondaire du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/LEBMup6yRDaSpdOIdq4p.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/4bRonumsSweGQSzKQe5C.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/qWd3XZfQM67FKQoCbcod.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/JAOM0972QvSJ5R1JOeIG.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/NmLAJaJXTiW0rWB1aWY8.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/oXWddwjORpW8SF5dA34l.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/QB0lPi1eSCz1enlI0dA3.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/sXo268UOQnWRmMFgl3Yl.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    {
+      "src": "/images/voyages/inde-arunachal-pradesh/xESzmjQBQGilAlEeOcIX.jpg",
+      "alt": "image de la liste de photos du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "Le nord-est s’étant récemment ouvert au tourisme, la plupart des hôtels sont encore rustiques. Bien que simples, ils sont souvent très bien situés et vous recevrez un accueil chaleureux. Odysway favorise l’hébergement chez l’habitant pour une meilleure compréhension de la culture et du mode de vie locale. \n\nTous les hébergements sont compris dans le prix du voyage. \n\n*   **Nuit du jour 1** : Hôtel standard à New Delhi\n*   **Nuit du jour 2** : Chambre d'hôtes confortable au sein d'une plantation de thé\n*   **Nuits des jours 3 à 5 et 11, 16-19** : En maison d'hôtes chez l'habitant\n*   **Nuit du jour 6, 12-15** : Hôtel\n*   **Nuit du jour 19** : Hôtel\n\nAttention, l'accès au wifi n'est pas garanti en dehors des étapes 1-2 et 18-19 ! Parfait pour une déconnection totale, ne vous en faites pas, en cas de besoin votre guide a un téléphone que vous pourrez utiliser."
+      },
+      {
+        "question": "Ce voyage est-il fait pour moi ?",
+        "answer": "L’Arunachal Pradesh, littéralement le \"pays des montagnes de l'aube\", est la région en Inde la plus à l'Est et qui reçoit ainsi les premiers rayons de soleil, d'où son nom. C'est la province la moins peuplée de toute l'Inde, tout au Nord-est du pays, aux confins du Tibet et de la Birmanie, dans une région qui n’est rattachée à l’Inde que depuis bien peu de temps, et qui a très longtemps été à l'écart des grandes civilisations, car constituée de montagnes couvertes de jungles et difficiles d'accès, habitées par des tribus particulièrement guerrières et farouches, telles que les Abor, les Nyishi ou les Mishmi.\n\nCe voyage est fait pour les passionnés d'aventure, de rencontre avec des tribus isolées, de découverte de modes de vie uniques, et loin de l'image que l'on se fait de l'Inde. Un voyage aux multiples expériences, avec du temps libre, pour favoriser les rencontres et savourer chaque immersion de ce voyage."
+      },
+      {
+        "question": "Y a-t-il un accompagnement francophone sur place ?",
+        "answer": "Vous serez accompagnés par votre chauffeur-guide, qui parle anglais. L'accompagnement de francophone est possible, pour 80 euros en supplément par jour. Ce prix comprend son salaire, son logement, ses repas et ses entrées dans les sites visités"
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "La meilleure période pour visiter le Nord-Est s’étend d’octobre à mai. Ceci étant dit, un voyage durant la mousson peut également être une expérience enrichissante.\n\nPlantation de thé: D’avril à mai quand plantation et fabriques sont en effervescence. L’activité est plus calme de décembre à mars mais les plantations restent un plaisir des yeux et les dégustations sont maintenues.\n\nLes Parcs Nationaux sont ouverts du 1er novembre au 30 avril. La date d’ouverture peut varier de quelques jours car il faut parfois plusieurs jours pour réparer les ponts et les pistes endommagés par la mousson. Les safaris commençant tôt le matin et pouvant se terminer après le coucher du soleil, pensez à emporter des couches supplémentaires.\n\nLes températures approximatives devraient être de 10 à 15 º C pendant les nuits et de 15 à 25 º C pendant la journée."
+      },
+      {
+        "question": "Avec qui vais-je voyager ? ",
+        "answer": "Odysway vous propose deux formules afin de vivre un voyage qui vous ressemble. Vous pouvez choisir de réserver ce voyage sur vos propres dates, seul, entre amis ou en famille. Pour cela, envoyez-nous une demande de devis !\n\nVous pouvez également décider d’allier rencontres et voyage et de rejoindre un départ groupé (8 voyageurs maximum, à dates fixes)."
+      },
+      {
+        "question": "Y a-t-il beaucoup de route pendant ce voyage ? ",
+        "answer": "La région de l’Arunachal Pradesh est recluse et inexplorée, l’état des routes est parfois mauvais. La vitesse moyenne est de 20-30 Km/h. Vous serez cependant récompensés par une nature luxuriante et des panoramas à couper le souffle. De nombreux arrêts sont aussi prévus pendant les trajets, qui durent parfois la journée."
+      },
+      {
+        "question": "Quelles sont les formalités d'entrée en Inde et dans l'état de l'Arunachal Pradesh ? ",
+        "answer": "Les Français sont **soumis à visa** pour séjourner en Inde. Les personnes arrivant sans visa en cours de validité sont refoulées par les autorités indiennes. La **date d’expiration du passeport doit être postérieure d’au moins 6 mois à la date de fin de validité du visa**.\n\nLe « e- visa » doit être sollicité en ligne après un enregistrement de la demande et le paiement des frais de dossier sur [le site officiel du gouvernement indien.](https://indianvisaonline.gov.in/visa/tvoa.html) L’accord se matérialise par la réception d’une autorisation de voyage sous forme électronique qu’il conviendra de présenter à l’aéroport d’arrivée pour obtenir l’apposition d’un visa dans son passeport.\n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/inde/#entree).\n\nPour entrer en Arunachal Pradesh, vous aurez besoin d’un PAP (Protected Area Permit) dont nous nous chargerons. Nous aurons besoin de la copie du passeport et de votre visa indien au plus tard 15 jours avant votre arrivée."
+      },
+      {
+        "question": "Quels sont les vaccins ou précautions en matière de santé ?",
+        "answer": "La mise à jour de la vaccination diphtérie-tétanos-poliomyélite (DTP), ainsi que de la vaccination rubéole-oreillons-rougeole (ROR) chez l’enfant sont recommandées. \n\nLa vaccination antituberculeuse est souhaitable. Plus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/inde/#sante).\n\nSpécificité de l'état d'Arunachal Pradesh :\n\nMalgré les normes élevées, il est important d’emporter des médicaments de base pour les maux d'estomac, maux de tête, les piqûres d'insectes...\n\nAu cours de ce voyage, vous n'avez pas besoin de vous soucier de votre santé si vous prenez des précautions simples:\n\n*   Portez un chapeau/casquette en cas d'exposition.\n*   Hydratez-vous. Ne buvez pas l'eau du robinet. Utilisez uniquement de l'eau bouillie / filtrée. Amenez votre propre bouteille afin de réduire l’achat de bouteilles en plastique.\n*   Gardez toujours une trousse médicale personnelle et de l'insectifuge.\n*   Pour éviter les infections fongiques et parasitaires, garder les pieds propres et secs, et ne vous baladez pas pieds nus.\n*   Ne mangez pas les aliments achetés à des vendeurs ambulants.\n*   Ne buvez pas de boissons avec de la glace.\n*   Évitez les produits laitiers, sauf si l'on sait qu'ils ont été pasteurisés.\n*   Évitez tout contact avec les animaux (surtout les singes, les chiens et les chats)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ?",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka qui couvrent de nombreux cas liés au covid :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager (par ex : positif au Covid, quarantaine médicale avec justificatif, refus à l'embarquement car température élevée, etc.)\n*   L'assurance Multirisque : comprend l'assurance Annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour quarantaine, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Ce voyage est-il fait pour moi  ?",
+        "answer": "Ce voyage est ouvert à tous ! Si vous souhaitez faire de belles rencontres avec des habitants d'une région peu touristique, qui ont un mode de vie et des coutumes très éloignées de ce que nous pouvons connaître ou imaginer. Attention, la province de l'Arunachal Pradesh se mérite ! Certaines étapes peuvent être assez longues, les routes n'étant pas toujours bonnes. Mais vous serez récompensés par les paysages magnifiques qui alternent entre jungles, plaines et montagnes."
+      },
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Lors de votre séjour, tous les repas sont inclus dans le tarif du voyage. Vous dégusterez une cuisine assez différente de ce que vous pouvez imaginer de la cuisine indienne, surtout de celle servie dans les restaurants indiens en Europe. La nourriture est moins épicée, souvent composée d'aliments locaux et de saison ! Pour les plus audacieux, vous pourrez même tenter certains alcools de riz qui vous seront parfois proposés."
+      },
+      {
+        "question": "Qu’est ce que l’esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un email de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les 7 jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact avec un conseiller dédié. Vous pourrez le joindre par email, téléphone ou WhatsApp, selon ce qui vous convient le mieux, du lundi au vendredi de 9h à 18h. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au [+33 1 84 80 79 75](tel:+33184807975) ou au [+33 7 80 91 95 40](tel:+33 7 80 91 95 40)"
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",
+    "canonicalUrl": "https://www.odysway.com/voyages/inde-arunachal-pradesh",
+    "ogTitle": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",
+    "ogDescription": "Partez à la découverte des terres lointaines de l'Arunachal Pradesh lors de ce voyage en Inde du Nord. Rencontrez ses tribus fascinantes, ses villages isolés et admirez sa biodiversité, une des plus riches au monde.",
+    "ogImage": {
+      "src": "/images/voyages/inde-arunachal-pradesh/wm3EZXWTfq2Wpx8IqpMr.jpg",
+      "alt": "image principale du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    "twitterTitle": "Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh",
+    "twitterDescription": "Partez à la découverte des terres lointaines de l'Arunachal Pradesh lors de ce voyage en Inde du Nord. Rencontrez ses tribus fascinantes, ses villages isolés et admirez sa biodiversité, une des plus riches au monde.",
+    "twitterImage": {
+      "src": "/images/voyages/inde-arunachal-pradesh/wm3EZXWTfq2Wpx8IqpMr.jpg",
+      "alt": "image principale du voyage Inde secrète : Trek à la rencontre des tribus d'Arunachal Pradesh"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

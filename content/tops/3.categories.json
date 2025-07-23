@@ -1,0 +1,114 @@
+{
+  "title": "Catégories",
+  "description": "Catégories Odysway",
+  "contenuOnglet": [
+    {
+      "title": "Activité",
+      "linksList": [
+        {
+          "title": "Séjours chez l'habitant",
+          "slug": "thematiques/sejours-chez-l-habitant"
+        },
+        {
+          "title": "Trek et randonnée",
+          "slug": "thematiques/trek-et-randonnee"
+        },
+        {
+          "title": "Séjour Nature",
+          "slug": "thematiques/voyage-nature"
+        },
+        {
+          "title": "Séjour culture",
+          "slug": "thematiques/voyage-culturel"
+        },
+        {
+          "title": "Sport",
+          "slug": "thematiques/voyage-sportif"
+        },
+        {
+          "title": "Animaux",
+          "slug": "thematiques/voyage-animalier"
+        },
+        {
+          "title": "Immersion à la ferme",
+          "slug": "thematiques/sejour-a-la-ferme"
+        },
+        {
+          "title": "Voyage survie",
+          "slug": "thematiques/survie"
+        },
+        {
+          "title": "Astronomie",
+          "slug": "thematiques/astronomie"
+        },
+        {
+          "slug": "thematiques/voyage-initiatique",
+          "title": "Voyages intérieurs"
+        },
+        {
+          "title": "Aventure",
+          "slug": "thematiques/voyage-aventure"
+        }
+      ]
+    },
+    {
+      "title": "Types",
+      "linksList": [
+        {
+          "title": "Ecotourisme",
+          "slug": "thematiques/ecotourisme"
+        },
+        {
+          "title": "Insolite",
+          "slug": "thematiques/voyage-insolite"
+        },
+        {
+          "title": "Road trip",
+          "slug": "thematiques/road-trip-organise"
+        },
+        {
+          "slug": "thematiques/voyage-solidaire",
+          "title": "Voyags solidaires"
+        }
+      ]
+    },
+    {
+      "title": "Avec qui partir ?",
+      "linksList": [
+        {
+          "title": "En famille",
+          "slug": "thematiques/voyage-en-famille"
+        },
+        {
+          "title": "En couple",
+          "slug": "thematiques/voyage-en-couple"
+        },
+        {
+          "title": "Voyages en groupe",
+          "slug": "thematiques/voyage-en-groupe"
+        }
+      ]
+    },
+    {
+      "linksList": [
+        {
+          "slug": "thematiques/ou-partir-au-printemps",
+          "title": "Printemps"
+        },
+        {
+          "title": "Eté",
+          "slug": "thematiques/ou-partir-en-été"
+        },
+        {
+          "slug": "thematiques/ou-partir-en-automne",
+          "title": "Automne"
+        },
+        {
+          "title": "Hiver",
+          "slug": "thematiques/ou-partir-en-hiver"
+        }
+      ],
+      "title": "Quand partir ?"
+    }
+  ]
+}

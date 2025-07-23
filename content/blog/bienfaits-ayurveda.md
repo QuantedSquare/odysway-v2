@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-07-12 10:28:00+00:00"
 tags: "Developpement personnel"
 categories: "Depassement de soi"

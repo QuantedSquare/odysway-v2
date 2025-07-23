@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-05-28 15:09:00+00:00"
 tags: "Communautés locales, Famille, France, Grands espaces, Inde, Made in France, Nepal, Perou"
 categories: ""

@@ -1,31 +1,51 @@
 ---
-title: "Voyage et pratique des Arts Martiaux à travers le monde"
-description: "Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ..."
+title: Voyage et pratique des Arts Martiaux à travers le monde
+description: Les arts martiaux sont bien plus que des disciplines physiques ; ce
+  sont des formes d'expression culturelle, des méthodes d'autodéfense, et des
+  voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers
+  le monde pour pratiquer les arts martiaux offre une expérience unique, où les
+  passionnés peuvent ...
 seo:
-  title: "Voyage et pratique des Arts Martiaux à Travers le Monde"
-  description: "Découvrez les arts martiaux à travers le monde en voyageant : boxe thaïlandaise en Thaïlande, kung-fu en Chine, jiu-jitsu au Brésil, lutte au Sénégal, capoeira au Brésil, taekkyeon en Corée du Sud, savate en France et eskrima aux Philippines. Explorez ces disciplines uniques et les cultures qui les entourent."
+  title: Voyage et pratique des Arts Martiaux à Travers le Monde
+  description: "Découvrez les arts martiaux à travers le monde en voyageant : boxe
+    thaïlandaise en Thaïlande, kung-fu en Chine, jiu-jitsu au Brésil, lutte au
+    Sénégal, capoeira au Brésil, taekkyeon en Corée du Sud, savate en France et
+    eskrima aux Philippines. Explorez ces disciplines uniques et les cultures
+    qui les entourent."
 navigation:
-  title: "Voyage et pratique des Arts Martiaux à travers le monde"
-  description: "Les arts martiaux sont bien plus que des disciplines physiques ; ce sont des formes d'expression culturelle, des méthodes d'autodéfense, et des voies vers la discipline personnelle et la maîtrise de soi. Voyager à travers le monde pour pratiquer les arts martiaux offre une expérience unique, où les passionnés peuvent ..."
-author: "Romain Masina"
+  title: Voyage et pratique des Arts Martiaux à travers le monde
+  description: Les arts martiaux sont bien plus que des disciplines physiques ; ce
+    sont des formes d'expression culturelle, des méthodes d'autodéfense, et des
+    voies vers la discipline personnelle et la maîtrise de soi. Voyager à
+    travers le monde pour pratiquer les arts martiaux offre une expérience
+    unique, où les passionnés peuvent ...
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
-publishedAt: "2024-05-31 14:34:00+00:00"
+published: true
+publishedAt: 2024-05-31 14:34:00+00:00
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/sejour-arts-martiaux/q726xyrFTOe76K2LVung.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+displayedImg: /images/blogs/sejour-arts-martiaux/q726xyrFTOe76K2LVung.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyage et pratique des Arts Martiaux à travers le monde
@@ -46,12 +66,12 @@ Dans les camps d'entraînement, les voyageurs peuvent s'attendre à une formatio
 
 Que ce soit dans le nord du pays ou sur les îles du sud (Koh Samui), Odysway peut vous organiser un séjour initiation Muay Thai. Découvrir par exemple le séjour à Pai : [Stage boxe thaï en immersion dans le nord de la Thaïlande](https://odysway.com/voyages/stage-boxe-thai-nord-thailande).
 
-::image-container
----
-image-src: "/images/blogs/sejour-arts-martiaux/tsSt3UrORrWDb26IZArf.jpg"
-alt: charnchai2resize-vice-670-e1573413873931-650x466.jpg
----
-::
+  :::image-container
+  ---
+  alt: charnchai2resize-vice-670-e1573413873931-650x466.jpg
+  image-src: /images/blogs/sejour-arts-martiaux/tsSt3UrORrWDb26IZArf.jpg
+  ---
+  :::
 
 #### Kung-Fu en Chine : La Voie du Guerrier
 
@@ -63,12 +83,12 @@ Outre Shaolin, la province de Wudang est une autre destination prisée pour les 
 
 Découvrir le voyage proposé par Odysway : [Initiez-vous au Kung Fu dans un temple Shaolin](https://odysway.com/voyages/kung-fu-temple-shaolin-chine).
 
-::image-container
----
-image-src: "/images/blogs/sejour-arts-martiaux/vSjqrIfSuml1U1714jqF.jpg"
-alt: chine-entrainement-kung-fu-shaolin.jpg
----
-::
+  :::image-container
+  ---
+  alt: chine-entrainement-kung-fu-shaolin.jpg
+  image-src: /images/blogs/sejour-arts-martiaux/vSjqrIfSuml1U1714jqF.jpg
+  ---
+  :::
 
 #### Jiu-Jitsu Brésilien au Brésil : La Grâce dans la Soumission
 
@@ -78,12 +98,12 @@ Rio de Janeiro, la ville emblématique du Brésil, est l'une des destinations le
 
 Outre Rio, d'autres régions du Brésil sont également réputées pour leur pratique du jiu-jitsu brésilien. São Paulo, la plus grande ville du pays, abrite de nombreuses académies de renom, tandis que des destinations plus reculées comme Florianópolis et Fortaleza offrent des environnements pittoresques pour étudier cet art martial fascinant.
 
-::image-container
----
-image-src: "/images/blogs/sejour-arts-martiaux/OImpgv6QIyvCnvzvzSdv.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/sejour-arts-martiaux/OImpgv6QIyvCnvzvzSdv.jpg
+  ---
+  :::
 
 #### Autres Destinations pour les Arts Martiaux
 
@@ -119,47 +139,46 @@ Les arts martiaux offrent une fenêtre fascinante sur la diversité culturelle e
 
 Odysway est l'agence spécialisée des voyages en immersion ! Combinez sport et voyage pour une découverte approfondie du pays !
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::

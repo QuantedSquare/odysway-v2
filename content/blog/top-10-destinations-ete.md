@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-06-25 08:03:00+00:00"
 tags: "Amerique du Nord, Amerique du Sud, Animaux, Asie, Brésil, Communautés locales, Developpement personnel, Etats Unis, Europe, Famille, France, Grands espaces, Made in France, Thailande, Transports insolites"
 categories: "Culture et decouverte"

@@ -4,24 +4,23 @@
     :selected-destination="selectedDestination"
     :display-divider="false"
   >
-    <template #slugContent>
+    <template #content>
       <div class="pt-md-16 mt-10">
         <DisplayVoyagesRow
           :is-search="true"
           :voyages="voyages"
         />
       </div>
-    </template>
-    <template
-      v-if="destinationContentStatus === 'success' && destinationContent"
-      #blogPost
-    >
-      <div class="pt-md-16">
-        <ContentRenderer
-          v-if="destinationContent"
-          :value="destinationContent"
-        />
-      </div>
+      <template
+        v-if="destinationContentStatus === 'success' && destinationContent"
+      >
+        <div class="pt-md-16">
+          <ContentRenderer
+            v-if="destinationContent"
+            :value="destinationContent"
+          />
+        </div>
+      </template>
     </template>
   </ContentLayout>
 </template>

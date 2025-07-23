@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2023-07-17 07:11:00+00:00"
 tags: "partir seul, Sri Lanka, voyage"
 categories: "voyage, conseil, préparer"

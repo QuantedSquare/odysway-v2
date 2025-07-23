@@ -1,0 +1,11 @@
+{
+  "title": "Sans Avion",
+  "slug": "voyage-sans-avion",
+  "discoveryTitle": "Découvrez nos voyages sans avion",
+  "seoTitle": "Nos voyages sans avion",
+  "image": {
+    "alt": "Voyages sans avion",
+    "src": "/images/categories/voyage-sans-avion.jpeg"
+  },
+  "showOnHome": true
+}

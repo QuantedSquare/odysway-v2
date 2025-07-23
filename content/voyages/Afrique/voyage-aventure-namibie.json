@@ -1,0 +1,208 @@
+{
+  "published": true,
+  "title": "Namibie Sauvage : entre aventure et protection des animaux",
+  "destinations": [
+    {
+      "name": "Namibie"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "Partir à l'aventure",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-animalier"
+    },
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "ou-partir-en-ete"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "voyage-aventure"
+    }
+  ],
+  "duration": 14,
+  "nights": 13,
+  "includeFlight": false,
+  "housingType": "Maison, tente",
+  "idealPeriods": {
+    "toutePeriodes": true,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": true,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": true,
+    "juillet": true,
+    "aout": true,
+    "septembre": true,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "En Namibie, tout comme dans de nombreux pays africains, la faune est confrontée à des menaces importantes, notamment des conflits armés et du braconnage qui sévissent dans les vastes réserves. Nous vous proposons une expérience exceptionnelle : plonger au cœur de la conservation de la faune africaine en rencontrant les femmes et les hommes dévoués à cette cause et engagés pour la protection des lions, guépards, rhinocéros et des autres animaux qui vivent sur ces vastes terres.\n\nÀ proximité de Windhoek, la capitale namibienne, votre première semaine se déroulera au sein d'un camp de conservation, dont l'objectif est de réintroduire les animaux dans leur habitat naturel. Vous y découvrirez les diverses tâches qui aident à la préservation des animaux blessés, orphelins et victimes de conflits. La deuxième semaine vous conduira au cœur d'une réserve, en immersion dans la vie d'un ranger. Vous participerez activement à la protection et aux soins des animaux qui y vivent : comptage d'animaux, relevés de clichés photographiques, pistage des rhinocéros pour les protéger, travaux d'entretiens… autant de missions essentielles qui auront un réel impact sur la préservation de la faune.\n\nUne expérience haute en couleurs, à la rencontre de personnes engagées, durant laquelle vous contribuerez à la création d'un environnement plus sûr pour ces animaux et à la préservation de la vie sauvage.",
+    "author": "Romain",
+    "affixeAuthor": "Fondateur d'Odysway"
+  },
+  "experiencesBlock": [
+    "Immergez-vous dans le quotidien d'un ranger d'une réserve namibienne",
+    "Participez à des tâches essentielles de protection de la faune namibienne, comme pister les rhinocéros la nuit et les protéger du braconnage",
+    "Observez les animaux dans leur habitat naturel, un _safari solidaire_ qui vous marquera à vie",
+    "Rencontrez et partagez des moments uniques avec des personnes passionnées et engagées",
+    "Financez les projets de la réserve avec ce voyage"
+  ],
+  "slug": "voyage-aventure-namibie",
+  "description": "En Namibie, tout comme dans de nombreux pays africains, la faune est confrontée à des menaces importantes, notamment des conflits armés et du braconnage qui sévissent dans les vastes réserves. Nous vous proposons une expérience exceptionnelle : plonger au cœur de la conservation de la faune africaine en rencontrant les femmes et les hommes dévoués à cette cause et engagés pour la protection des lions, guépards, rhinocéros et des autres animaux qui vivent sur ces vastes terres.\n\nÀ proximité de Windhoek, la capitale namibienne, votre première semaine se déroulera au sein d'un camp de conservation, dont l'objectif est de réintroduire les animaux dans leur habitat naturel. Vous y découvrirez les diverses tâches qui aident à la préservation des animaux blessés, orphelins et victimes de conflits. La deuxième semaine vous conduira au cœur d'une réserve, en immersion dans la vie d'un ranger. Vous participerez activement à la protection et aux soins des animaux qui y vivent : comptage d'animaux, relevés de clichés photographiques, pistage des rhinocéros pour les protéger, travaux d'entretiens… autant de missions essentielles qui auront un réel impact sur la préservation de la faune.\n\nUne expérience haute en couleurs, à la rencontre de personnes engagées, durant laquelle vous contribuerez à la création d'un environnement plus sûr pour ces animaux et à la préservation de la vie sauvage.",
+  "emailDescription": "👉 Découvrez la Namibie autrement : explorez des paysages époustouflants et participez à des projets de conservation de la faune pour une expérience immersive et enrichissante.",
+  "metaDescription": "Partez pour une expérience unique en Namibie, mêlant aventure, nature et engagement pour la protection des animaux sauvages !",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **1 à 6 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**13 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Toute l'année",
+      "visible": true
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [
+      "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "L'accueil à l'aéroport de Windhoek à votre arrivée",
+      "Le transfert vers les camps",
+      "Le suivi pendant les deux semaines du voyage, au camp de la première semaine et au sein de la réserve sur la seconde semaine",
+      "L'uniforme que vous porterez pendant les missions sur le terrain",
+      "Tous les repas, du dîner du premier jour au petit-déjeuner du jour 14",
+      "Les nuits en tente partagée (individuelle avec supplément) et la nuit à la belle étoile (selon la saison)",
+      "La participation financière pour le sanctuaire",
+      "Toutes les activités indiquées dans le programme"
+    ],
+    "exclude": [
+      "Les vols internationaux",
+      "Toutes les dépenses supplémentaires non mentionnées",
+      "Les repas et boissons non mentionnés",
+      "L'assurance voyage multirisque ou annulation"
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1600,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 1,
+    "indivRoom": false,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": "",
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "CDG",
+      "WDH"
+    ]
+  },
+  "accompanistsDescription": "Dès votre arrivée, vous serez accueillis par un responsable du sanctuaire, qui vous fera une présentation avec toutes les informations, le travail de la fondation, les missions, les différents projets, ainsi que des informations pratiques et liées à la sécurité. Sur votre seconde semaine, vous serez aussi avec les responsables de la réserve. À tout instant, vous serez encadrés, que ce soit un responsable du sanctuaire ou gardes de la réserve.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Maison, tente",
+      "housingType": "",
+      "housingMood": "Les hébergements jouent un rôle unique dans cette immersion, créant des moments forts au cœur de la nature namibienne. Au sein du sanctuaire, des tentes robustes, alimentées par l'énergie solaire, vous plongent dans une immersion totale au cœur de la nature. Durant la deuxième semaine, vous logerez dans une maison, offrant des chambres doubles dotées de salles de bains privées, une salle à manger spacieuse, un salon confortable et une terrasse paisible munie d'un barbecue. La piscine, offrant des vues magnifiques sur la réserve, vous permettra de vous rafraîchir en fin de journée. Que ce soit dans la douce intimité des tentes solides ou le confort de la maison, chaque moment passé dans ces logements contribue à enrichir votre séjour, en harmonie avec la nature namibienne.",
+      "image": [
+        {
+          "src": "/images/voyages/voyage-aventure-namibie/zINNQ6LJR9uU4hOEP9yL.jpg",
+          "alt": "image de l'hébergement Namibie Sauvage : entre aventure et protection des animaux"
+        },
+        {
+          "src": "/images/voyages/voyage-aventure-namibie/sdjB1BTCqdYB5k4j82Jw.jpg",
+          "alt": "image de l'hébergement Namibie Sauvage : entre aventure et protection des animaux"
+        },
+        {
+          "src": "/images/voyages/voyage-aventure-namibie/cakms0TNTeudMigSJpdR.jpg",
+          "alt": "image de l'hébergement Namibie Sauvage : entre aventure et protection des animaux"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
+    "alt": "image principale du voyage Namibie Sauvage : entre aventure et protection des animaux"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/voyage-aventure-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg",
+    "alt": "image secondaire du voyage Namibie Sauvage : entre aventure et protection des animaux"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "Namibie Sauvage : entre aventure et protection des animaux",
+    "canonicalUrl": "https://www.odysway.com/voyages/voyage-aventure-namibie",
+    "ogTitle": "Namibie Sauvage : entre aventure et protection des animaux",
+    "ogDescription": "Partez pour une expérience unique en Namibie, mêlant aventure, nature et engagement pour la protection des animaux sauvages !",
+    "ogImage": {
+      "src": "/images/voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
+      "alt": "image principale du voyage Namibie Sauvage : entre aventure et protection des animaux"
+    },
+    "twitterTitle": "Namibie Sauvage : entre aventure et protection des animaux",
+    "twitterDescription": "Partez pour une expérience unique en Namibie, mêlant aventure, nature et engagement pour la protection des animaux sauvages !",
+    "twitterImage": {
+      "src": "/images/voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
+      "alt": "image principale du voyage Namibie Sauvage : entre aventure et protection des animaux"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

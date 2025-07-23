@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2021-05-31 14:50:00+00:00"
 tags: "cheval, équitation, France, immersion, nature, paysage, ranch, randonnée, tourisme équestre, Vercors, western"
 categories: "Blog"

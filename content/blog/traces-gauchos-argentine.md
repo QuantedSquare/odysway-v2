@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-07-29 13:57:00+00:00"
 tags: "Amerique du Sud, Argentine, Communautés locales, Grands espaces"
 categories: "Depassement de soi"

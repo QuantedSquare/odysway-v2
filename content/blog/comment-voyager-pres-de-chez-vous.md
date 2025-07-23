@@ -10,7 +10,7 @@ navigation:
 author: "Romain Masina"
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
-published: false
+published: true
 publishedAt: "2020-05-22 15:30:00+00:00"
 tags: "Europe, Famille, France, Made in France"
 categories: ""

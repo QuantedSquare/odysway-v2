@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-10-30 17:46:00+00:00"
 tags: "Animaux, Asie, Famille, Indonesie"
 categories: "Nature et grands espaces, Culture et decouverte"

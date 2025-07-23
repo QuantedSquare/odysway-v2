@@ -10,7 +10,7 @@ navigation:
 author: "Linda Tran"
 authorPhoto: /images/team/linda.jpeg
 authorRole: Co-fondatrice Odysway
-published: false
+published: true
 publishedAt: "2019-11-07 16:31:00+00:00"
 tags: "Asie, Communautés locales, Famille, Grands espaces, Kirghizistan"
 categories: "Nature et grands espaces, Culture et decouverte"

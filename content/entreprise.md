@@ -1,3 +1,14 @@
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
+
 ::hero-section
 ---
 image-src: /images/entreprise/image bannière Tribus.webp
@@ -5,7 +16,6 @@ image-src: /images/entreprise/image bannière Tribus.webp
 #title
 Tribus par Odysway
 ::
-
 
 ::section-container
 #content
@@ -19,14 +29,14 @@ Notre promesse ? Construire un évènement qui vous ressemble, qui colle parfait
 
 Notre ingrédient secret ? Une touche d’audace et d’originalité qui rendra votre événement unique, afin que vos collaborateurs reviennent Tribu !
 
-:::cta-button
----
-link: "https://tribus-seminaires.com/"
-external: true
----
-#text
-Découvrir Tribus
-:::
+  :::cta-button
+  ---
+  external: true
+  link: https://tribus-seminaires.com/
+  ---
+  #text
+  Découvrir Tribus
+  :::
 
 **Séminaires d'entreprise sur mesure : Renforcez votre équipe et développez vos compétences !**
 
@@ -36,22 +46,21 @@ Les séminaires d'entreprise sur mesure permettent de développer les compétenc
 
 Avec Tribus, spécialiste des séminaires et voyages d'entreprise, vous pouvez booster votre croissance tout en renforçant la cohésion de votre équipe.
 
+  :::image-container
+  ---
+  alt: Image randonneurs
+  image-src: /images/entreprise/VoyageEntreprise3.webp
+  ---
+  :::
 
-:::image-container
----
-image-src: "/images/entreprise/VoyageEntreprise3.webp"
-alt: Image randonneurs
----
-:::
-
-:::cta-button
----
-link: "https://tribus-seminaires.com/"
-external: true
----
-#text
-Découvrir Tribus
-:::
+  :::cta-button
+  ---
+  external: true
+  link: https://tribus-seminaires.com/
+  ---
+  #text
+  Découvrir Tribus
+  :::
 
 **Voyages d'entreprise exclusifs : Explorez la France et l'Europe tout en renforçant vos liens professionnels !**
 
@@ -61,29 +70,29 @@ Chez Tribus, nous croyons que voyager en train offre une opportunité unique de 
 
 Profitez de l'occasion pour développer de nouvelles compétences, favoriser la collaboration et stimuler la créativité, le tout dans un cadre inspirant. Préparez-vous à vivre une expérience unique qui combine exploration, découverte et consolidation de vos liens professionnels.
 
- Avec Tribus, partez à l'aventure et explorez la France et l'Europe en train tout en renforçant vos liens professionnels de manière inédite.
+Avec Tribus, partez à l'aventure et explorez la France et l'Europe en train tout en renforçant vos liens professionnels de manière inédite.
 
-:::cta-button
----
-link: "https://tribus-seminaires.com/"
-external: true
----
-#text
-Découvrir Tribus
-:::
+  :::cta-button
+  ---
+  external: true
+  link: https://tribus-seminaires.com/
+  ---
+  #text
+  Découvrir Tribus
+  :::
 
 **Une offre d'évènements et de voyages responsables pour votre entreprise**
 
-Découvrez notre offre exceptionnelle d'événements et de voyages responsables pour votre entreprise ! 
+Découvrez notre offre exceptionnelle d'événements et de voyages responsables pour votre entreprise !
 
 Chez Tribus, nous sommes profondément engagés envers la préservation de l'environnement, c'est pourquoi nous avons conçu une approche innovante pour réduire notre empreinte carbone. Nous sommes fiers de vous proposer une alternative éco-responsable en n'incluant pas de déplacements en avion dans nos offres.
 
-:::image-container
----
-image-src: "/images/entreprise/Train retour delhi.webp"
-alt: Image train
----
-:::
+  :::image-container
+  ---
+  alt: Image train
+  image-src: /images/entreprise/Train retour delhi.webp
+  ---
+  :::
 
 Ainsi, vous pouvez organiser des événements et des voyages d'entreprise sans compromettre vos valeurs environnementales. Chaque détail est soigneusement planifié pour minimiser l'impact environnemental, que ce soit dans le choix des transports terrestres durables, l'utilisation de lieux respectueux de l'environnement ou encore l'adoption de pratiques éco-conscientes tout au long de l'événement.
 
@@ -93,13 +102,12 @@ Avec Tribus, vous pouvez offrir à votre entreprise des expériences uniques, to
 
 Cliquez sur le bouton ci-dessous pour découvrir quelques références de clients partis avec Tribus !
 
-:::cta-button
----
-link: "https://tribus-seminaires.com/"
-external: true
----
-#text
-Découvrir Tribus
-:::
-
+  :::cta-button
+  ---
+  external: true
+  link: https://tribus-seminaires.com/
+  ---
+  #text
+  Découvrir Tribus
+  :::
 ::

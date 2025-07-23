@@ -1,0 +1,376 @@
+{
+  "published": true,
+  "title": "Partez à la rencontre des berbères dans le Sud du Maroc",
+  "destinations": [
+    {
+      "name": "Maroc"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": true,
+  "customAvailable": false,
+  "experienceType": "Plonger dans la culture",
+  "level": "1",
+  "categories": [
+    {
+      "name": "voyage-nature"
+    },
+    {
+      "name": "sejours-chez-l-habitant"
+    },
+    {
+      "name": "ou-partir-au-printemps"
+    },
+    {
+      "name": "ou-partir-en-automne"
+    },
+    {
+      "name": "ou-partir-en-hiver"
+    }
+  ],
+  "duration": 8,
+  "nights": 7,
+  "includeFlight": false,
+  "housingType": "Riad, chez l'habitant, hôtel",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": true,
+    "mai": true,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 10,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Venez vivre une aventure unique à travers le Maroc, où chaque étape de votre voyage vous plonge dans l'âme authentique du pays. Explorez les montagnes de l'Anti-Atlas à pied, laissez-vous émerveiller par les couleurs et les saveurs des souks de Marrakech, et découvrez des villages pittoresques, où traditions et artisanat se perpétuent à travers les âges.\n\nDe la production de safran à l’atelier de couscous, chaque activité vous offre une immersion complète dans la culture locale. Hébergé chez l'habitant et dans des riads traditionnels, ce séjour vous invite à une expérience de partage et de convivialité, guidée par un expert francophone. Un voyage pour ceux qui souhaitent vivre le Maroc dans toute sa beauté, sa richesse et son authenticité.",
+    "author": "Coralie",
+    "affixeAuthor": "Passionnée des séjours insolites au Maroc"
+  },
+  "experiencesBlock": [
+    "**Immersion dans des modes de vie marocains variés** : Découvrez la richesse des cultures locales, des villages berbères aux villes emblématiques.",
+    "**Rencontres authentiques avec les femmes berbères** : Participez à des échanges enrichissants au sein de coopératives agricoles et découvrez le travail traditionnel.",
+    "**Exploration culinaire du Maroc** : Régalez-vous des délices de la cuisine locale, des tajines aux pâtisseries traditionnelles, dans des atmosphères authentiques.",
+    "**Traversée de paysages contrastés** : Profitez de vues imprenables allant des montagnes de l'Anti-Atlas aux villages pittoresques, en passant par les côtes Atlantique.",
+    "**Découverte des activités artisanales locales** : Apprenez les secrets de la production de safran, d'huile d'argan, d'amlou et d'autres produits locaux à travers des ateliers pratiques."
+  ],
+  "slug": "rencontre-berberes-sud-maroc",
+  "description": "Venez vivre une aventure unique à travers le Maroc, où chaque étape de votre voyage vous plonge dans l'âme authentique du pays. Explorez les montagnes de l'Anti-Atlas à pied, laissez-vous émerveiller par les couleurs et les saveurs des souks de Marrakech, et découvrez des villages pittoresques, où traditions et artisanat se perpétuent à travers les âges.\n\nDe la production de safran à l’atelier de couscous, chaque activité vous offre une immersion complète dans la culture locale. Hébergé chez l'habitant et dans des riads traditionnels, ce séjour vous invite à une expérience de partage et de convivialité, guidée par un expert francophone. Un voyage pour ceux qui souhaitent vivre le Maroc dans toute sa beauté, sa richesse et son authenticité.",
+  "emailDescription": "",
+  "metaDescription": "Découvrez le Maroc authentique avec ce séjour culturel unique. Explorez Marrakech, Taliouine, Aglou et Aït Benhaddou, vivez des expériences locales, participez à des ateliers traditionnels et randonnez dans les montagnes de l'Anti-Atlas. Hébergement en riads et familles locales, repas typiques, transport privé et guide francophone inclus",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "En immersion chez...",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 8 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**7 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Oct à Mai",
+      "visible": true
+    }
+  },
+  "programmeBlock": [
+    {
+      "title": "Arrivée à Marrakech",
+      "badgeText": "JOUR 1",
+      "description": "À votre arrivée à l’aéroport de Marrakech, vous êtes accueilli·e par votre guide accompagnateur. Transfert (env. 20 min) vers un riad familial situé au cœur de la médina, où vous passerez votre première nuit. Déjeuner libre en ville.\r\nVous profitez ensuite d’un temps libre pour explorer les souks animés de Marrakech, réputés pour leur diversité, leurs couleurs éclatantes et leur atmosphère unique. Entre échoppes d’artisanat, senteurs d’épices et scènes de vie quotidienne, plongez dans l’ambiance authentique de la ville rouge.\r\nDîner libre dans l’un des nombreux restaurants du centre-ville. Nuit au riad, en chambre partagée ou individuelle (avec supplément).",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/gnE4i7ISmOOIPLwAcvDy.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "De la ville rouge à l'Océan Atlantique",
+      "badgeText": "JOUR 2",
+      "description": "Après le petit déjeuner à Marrakech, cap vers le sud pour rejoindre le village d’Imzilen (environ 4h de route), où vous rencontrerez les femmes d’une coopérative locale et partagerez un déjeuner convivial. L’après-midi, vous prenez la route pour Aglou (1h40), un village côtier niché entre océan et campagne. Vous y découvrez les actions d’un réseau associatif engagé, avant de vous installer dans deux familles d’accueil, dans une ambiance simple et chaleureuse. En fin de journée, balade jusqu’à la plage pour profiter du calme des remises de pêcheurs et d’un coucher de soleil sur l’Atlantique. Dîner et nuit dans les familles.",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/pZln9IEqRlOpZELR6ty6.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Explorez l’histoire et les merveilles naturelles",
+      "badgeText": "JOUR 3",
+      "description": "Petit déjeuner avec la famille d’accueil, suivi de la visite de l’école coranique au sein de la mosquée historique de Sidi Ouagag. Vous partez ensuite à la rencontre d’une coopérative féminine spécialisée dans la production d’huiles naturelles et de couscous artisanal. En fin de matinée, départ pour Sidi Ifni (1h30 de route) avec un arrêt aux superbes plages de Legzira et Mirleft, connues pour leurs impressionnantes arches sculptées par l’océan. Déjeuner libre en bord de mer. Retour à Aglou dans l’après-midi pour une fin de journée en toute tranquillité.",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/EnGkajaYTnGR8hmuB6TH.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "De la médina aux montagnes du safran",
+      "badgeText": "JOUR 4",
+      "description": "Après un petit-déjeuner, direction Tiznit, célèbre pour ses bijoux en argent et ses remparts de médina, à seulement 15 minutes d’Aglou. Puis, cap sur Taliouine, capitale du safran, où vous arriverez au village d’Aguerda, perché à 1200 m dans l’Anti-Atlas. Profitez d’un déjeuner libre en route avant de poursuivre sur une piste locale, offrant une expérience unique. Installation en famille à Aguerda pour une nuit chaleureuse en toute convivialité.",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/6ETLfpoPTPOmG8OXiKrs.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Randonnez au cœur de l’Anti-Atlas ",
+      "badgeText": "JOUR 5",
+      "description": "Après un petit-déjeuner, partez pour une randonnée de 3h avec un berger et son troupeau, traversant les magnifiques montagnes de l’Anti-Atlas, entre sentiers de pierres et champs de safran. De retour au village, profitez d’un déjeuner en famille avant de participer à un atelier de couscous, de la farine au plat. Une soirée conviviale avec dîner partagé et nuitée en maison d’accueil.",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/tIJLPwmxQzm9OVwFMvFw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "À la découverte du safran et de Ait Benhaddou",
+      "badgeText": "JOUR 6",
+      "description": "Après un petit-déjeuner, visitez la coopérative agricole de Taliouine pour découvrir la production de safran en commerce équitable. Prenez la route vers Ouarzazate avec une halte à Ifri pour explorer son grenier collectif troglodyte. Déjeuner libre avant de partir à la découverte du ksar d’Ait Benhaddou, classé au patrimoine mondial de l’UNESCO et célèbre pour ses apparitions cinématographiques. Terminez la journée par un dîner traditionnel et une nuit confortable dans un riad avec chambres climatisées et salle de bain privée.\r\n\r\n\r\n\r\n\r\n\r\n",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/OGUkXXeZQOCYmVRY9qXR.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Immersion dans l'effervescence de la ville rouge",
+      "badgeText": "JOUR 7",
+      "description": "Après un petit-déjeuner, départ pour Marrakech en traversant le col de Tichka à 2200 m, avec un trajet de 4 heures. Arrivée et déjeuner libre, suivi d’une visite guidée de la ville, célèbre pour ses souks, ruelles animées et la fameuse place Jamaa El Fna. Profitez de l’atmosphère unique de Marrakech, entre musiciens, charmeurs de serpents et vendeurs de thé à la menthe. Dîner libre et nuit au riad traditionnel.",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/11736uATGSqaeamw5tVW.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    },
+    {
+      "title": "Derniers instants d'immersion",
+      "badgeText": "JOUR 8",
+      "description": "Après un petit-déjeuner, profitez de temps libre pour explorer à votre rythme, avec un déjeuner libre. Puis, transfert privé à l’aéroport pour votre vol de retour en France.",
+      "photo": "/images/voyages/rencontre-berberes-sud-maroc/b6Z8EmkQIPA8i7uMriGw.jpg",
+      "denivellation": "",
+      "road": "",
+      "night": ""
+    }
+  ],
+  "pricingDetailsBlock": {
+    "include": [
+      "**Assistance Odysway 24h/24 et 7j/7** : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, WhatsApp, email), afin de garantir votre tranquillité tout au long du voyage.",
+      "**Accueil à l’aéroport** et transfert collectif aller/retour de l’aéroport à l’hébergement (le premier et dernier jour).",
+      "**Transport privé** du 2ème au 7ème jour, avec chauffeur, incluant carburant et frais du chauffeur.",
+      "**Logements** : Hébergement dans les établissements prévus au programme, avec petit-déjeuner inclus.",
+      "**Repas** : tous les petits déjeuners ainsi que les repas suivants : déjeuner et dîner du jour 2, dîners des jours 3 et 4, déjeuner et dîner du jour 5, dîner du jour , accompagnés de boissons non alcoolisées (les boissons alcoolisées ne sont pas conseillées afin de respecter la culture locale).",
+      "**Accompagnement** : Guide francophone durant tout le voyage, de l'arrivée à l'aéroport au départ.",
+      "**Accompagnement local** dans les villages pour une immersion authentique.",
+      "**Ateliers et activités** selon le programme."
+    ],
+    "exclude": [
+      "**Transfert aéroport Marrakech - logement** à une heure différente du reste du groupe :\n\n*   300 DH (30 €) par transfert pour 1 à 6 personnes\n    \n*   600 DH (60 €) par transfert pour 7 à 10 personnes",
+      "300 DH (30 €) par transfert pour 1 à 6 personnes",
+      "600 DH (60 €) par transfert pour 7 à 10 personnes",
+      "**Supplément single** : 80 € par personne (disponible à Marrakech et Aït Benhaddou, sous réserve de disponibilité).",
+      "**Les repas du J1, les déjeuners des J3, J4 et J6, déjeuner et dîner J7, déjeuner J8** : Le prix moyen est de 90-100 DH (9-10 €) par repas et par personne dans des restaurants marocains.",
+      "**Vols internationaux aller-retour** (possibilité de devis avec vols inclus sur demande).",
+      "**Dépenses personnelles**.",
+      "**Pourboires**.",
+      "**Assurance annulation ou multirisques**."
+    ]
+  },
+  "pricing": {
+    "startingPrice": 1255,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": true,
+    "earlyBirdReduction": 80,
+    "maxTravelers": 8,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 60,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": [
+      "PAR",
+      "RAK"
+    ]
+  },
+  "accompanistsDescription": "Pendant tout le voyage, un guide local francophone passionné vous accompagne, partageant son expertise et sa connaissance approfondie de la culture marocaine. Toujours attentif à vos besoins, il facilite les échanges avec les habitants, assure la fluidité des déplacements et garantit une immersion authentique et enrichissante tout au long de l'aventure.",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Riad, chez l'habitant, hôtel",
+      "housingType": "",
+      "housingMood": "Votre séjour débutera dans des riads traditionnels au cœur de Marrakech, comme le Riad Taddert, une maison marocaine typique située dans la médina, offrant un confort moderne dans un cadre authentique. Vous serez immergés dans l'atmosphère vibrante de la ville, à proximité des souks et de la célèbre place Jamaa El Fna. À Taliouine et Aglou, l'hébergement se fait en famille, dans des maisons d'accueil simples mais chaleureuses, où vous partagerez des moments conviviaux avec les habitants. Vous logerez dans des chambres ou salons, avec des salles de bain partagées, offrant une expérience authentique et un accueil chaleureux. Ces logements vous permettront de découvrir la culture locale tout en profitant d'un confort simple mais agréable.",
+      "image": [
+        {
+          "src": "/images/voyages/rencontre-berberes-sud-maroc/ETi8H6VjTred15eopAzL.jpg",
+          "alt": "image de l'hébergement Partez à la rencontre des berbères dans le Sud du Maroc"
+        },
+        {
+          "src": "/images/voyages/rencontre-berberes-sud-maroc/jiDuHQ6NQi2SUfImXv52.jpg",
+          "alt": "image de l'hébergement Partez à la rencontre des berbères dans le Sud du Maroc"
+        },
+        {
+          "src": "/images/voyages/rencontre-berberes-sud-maroc/PGKgLPJdQ7uCHdi3g075.jpg",
+          "alt": "image de l'hébergement Partez à la rencontre des berbères dans le Sud du Maroc"
+        }
+      ]
+    }
+  ],
+  "image": {
+    "src": "/images/voyages/rencontre-berberes-sud-maroc/IZFLmkpR921ESlSnDfl9.jpg",
+    "alt": "image principale du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+  },
+  "imageSecondary": {
+    "src": "/images/voyages/rencontre-berberes-sud-maroc/9AeVEbtSWW305Y5ri4mg.jpg",
+    "alt": "image secondaire du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+  },
+  "photosList": [
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/vLDBSBUFT5GdribZYDoS.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/P6VfC0E2Tq6mKXGtuGla.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/d9lZDkhdRSm8WJfYO2ss.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/FTZ7ntR1yONReWIcqGqw.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/0v7GO6kS1qwEfczqJz4x.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/LQmZxagbTaufj76LSiTc.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/bvIzgRHQgu5OdKHgDPV3.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/tuM30UySWC7elxeXr52e.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/uHpk6sb5R6SjCEs6i7ld.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/eDC2ZtZTYivOjjg3R9BW.jpg",
+      "alt": "image de la liste de photos du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    }
+  ],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": [
+      {
+        "question": "Que vais-je manger ?",
+        "answer": "Vous dégusterez la cuisine marocaine traditionnelle : tajines, soupes, salades, brochettes, omelettes, fruits frais et secs, mais aussi des plats de pâtes, de riz, etc. Il y a un peu de viande dans les tajines et beaucoup de légumes frais, crus et cuits. La cuisine est savoureuse et faite au feu de bois. Lors de la marche, vous pourrez faire des pauses et manger des fruits secs/dattes. Sans oublier le thé à la menthe, inoubliable quand vous le prendrez en haut d'une dune de sable !"
+      },
+      {
+        "question": "Où vais-je loger ?",
+        "answer": "Tous les hébergements sont compris dans le prix du voyage.\n\nJour 1 : Vous logerez au coeur d'un Riad familial\n\nJour 2 à 5: Vous logerez chez l'habitant, en chambre double, triple ou quadruple avec salle de bain partagée.\n\nJour 6 et 7 : Vous séjournerez dans un Riad.\n\nLes familles marocaines sont réputées pour leur hospitalité et leur générosité envers les invités. Vous serez souvent accueilli avec un thé à la menthe et des pâtisseries traditionnelles.\n\nLes logements chez l'habitant sont généralement simples, mais confortables. Vous pourrez avoir votre propre chambre, avec un lit double et partager des espaces communs avec la famille. Vous aurez l'occasion de goûter à une variété de plats traditionnels marocains, souvent cuisinés avec des ingrédients locaux frais."
+      },
+      {
+        "question": "Quelles sont les formalités d'entrée au Maroc ?",
+        "answer": "Vous devez disposer d’un **passeport en cours de validité couvrant la totalité du séjour programmé**. L’admission sur le territoire marocain n’est plus possible sur la présentation de la seule carte nationale d’identité.\n\nIl est recommandé de vérifier dès l'arrivée que le passeport a été tamponné par les autorités frontalières (avec un numéro lors de la première visite et un cachet d'entrée), sous peine de risquer involontairement un séjour illégal.\n\nIl est recommandé de s’inscrire sur l’application [Ariane](https://pastel.diplomatie.gouv.fr/fildariane/dyn/public/login.html). \n\nPlus d'information sur le site de [France Diplomatie - Onglet Entrée / Séjour](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/maroc/#entree)."
+      },
+      {
+        "question": "Avec qui vais-je voyager ?",
+        "answer": "Odysway vous propose deux formules afin de vivre un voyage qui vous ressemble. Vous pouvez choisir de réserver ce voyage sur vos propres dates, seul, entre amis ou en famille. Pour cela, envoyez-nous une demande de devis !\n\nVous pouvez également décider d’allier rencontres et voyage et de rejoindre un départ groupé (8 voyageurs maximum, à dates fixes)."
+      },
+      {
+        "question": "Quels sont les vaccins ou précautions en matière de santé ?",
+        "answer": "Aucune vaccination n’est obligatoire mais certaines vaccinations sont recommandées ; assurez-vous d’être à jour dans vos vaccinations habituelles ainsi que celles liées à toutes les zones géographiques visitées.\n\nLa mise à jour de la vaccination diphtérie-tétanos-poliomyélite (DTP) est recommandée, ainsi que la vaccination rubéole-oreillons-rougeole (ROR) chez l’enfant ; la vaccination antituberculeuse est également souhaitable. Le Vaccin contre le COVID-19 n'est pas exigé.\n\nPlus d'information sur le site de [France Diplomatie - Onglet Santé](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/maroc/#sante)."
+      },
+      {
+        "question": "Suis-je assuré lors de mon voyage ?",
+        "answer": "Nous proposons deux formules d'assurance avec notre partenaire Chapka :\n\n*   L'assurance Annulation : vous pouvez annuler votre voyage avant le départ pour toute cause justifiée aléatoire, soudaine, imprévisible indépendamment de votre volonté qui vous empêche de voyager \n*   L'assurance Multirisque : comprend l'assurance annulation ainsi que l'assistance sur place (par ex : frais médicaux, prolongation séjour pour raison médicale, rapatriement médical, retour anticipé en cas de demande du gouvernement, etc.)"
+      },
+      {
+        "question": "Quelle est la meilleure période pour partir ?",
+        "answer": "La météo varie selon la région et la période de votre séjour. En général, il est recommandé de porter des vêtements chauds le soir et le matin, tandis que des vêtements légers comme un T-shirt sont plus appropriés pendant la journée ensoleillée. Pour respecter la culture locale, il est préférable pour les femmes de privilégier des vêtements amples. Il est conseillé à la fois aux hommes et aux femmes d'éviter les shorts et les jupes courts ; ceux-ci devraient au moins couvrir les genoux, de même qu'un t-shirt qui recouvre les épaules.\n\nCe voyage est disponible toute l'année, mais pour éviter les températures élevées, il est recommandé de planifier votre séjour entre octobre et mars."
+      },
+      {
+        "question": "Qu'est ce que l'esprit Odysway ?",
+        "answer": "Voyager avec **Odysway**, c'est plonger dans l'inattendu au travers d’immersions soigneusement conçues par notre équipe passionnée. Nous vous éloignons des sentiers touristiques pour vous permettre de voyager différemment, à la rencontre des locaux. Nous pensons en effet que le voyage est sublimé grâce aux rencontres ! Que ce soit en France ou plus loin, notre engagement est de créer les conditions idéales pour que vous puissiez rencontrer les locaux et voyager en pleine conscience !\n\nPendant votre voyage, il est possible que des changements mineurs, parfois en dernière minute, puissent survenir. Horaires modifiés pour des raisons logistiques, activités alternatives proposées selon les conditions météorologiques, cette souplesse inhérente à notre approche est essentielle pour comprendre que tout n'est pas toujours prévisible.\n\nNous encourageons nos voyageurs à faire preuve de souplesse et à embrasser les surprises et les opportunités inattendues qui se présentent sur le chemin. Nous croyons que c’est ainsi que vous vivrez des moments forts et inoubliables !\n\nPour autant, nous vous promettons que ces changements n'altéreront en rien la beauté et l'intensité de votre expérience. Et dans tous les cas, notre équipe sera là, disponible pour vous accompagner et échanger !"
+      },
+      {
+        "question": "Comment se passe votre réservation avec Odysway ?",
+        "answer": "Une fois votre voyage réservé et l'acompte réglé, vous recevrez un e-mail de confirmation. Si votre voyage comprend un vol ou si celui-ci est inclus dans votre devis, vos billets vous parviendront dans les sept jours suivant votre réservation.\n\nVous recevrez également votre carnet de voyage, une ressource complète contenant toutes les informations nécessaires pour préparer votre voyage, comprenant par exemple les vêtements à emporter et le programme du séjour en détail.\n\nDurant toute la phase de préparation, ainsi que pendant votre voyage, vous resterez en contact étroit avec un conseiller dédié. Vous pourrez le joindre par e-mail, téléphone, SMS ou WhatsApp, selon ce qui vous convient le mieux. En cas d'urgence le week-end ou en dehors des heures de travail, nous sommes disponibles au + 33 [01 84 80 79 75](https://www.google.com/search?q=odysway&oq=odysway&gs_lcrp=EgZjaHJvbWUqDAgAEAAYExjjAhiABDIMCAAQABgTGOMCGIAEMg8IARAuGBMYrwEYxwEYgAQyBggCEEUYQTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEGoAgCwAgA&sourceid=chrome&ie=UTF-8)"
+      },
+      {
+        "question": "Est-ce que j'aurai accès à la Wifi pendant le séjour ?",
+        "answer": "Oui, vous aurez accès au wifi tout au long de votre séjour.\n\nSi vous souhaitez davantage de connexion, vous pouvez acheter une carte SIM local et économique avec l'aide de l'accompagnateur/médiateur."
+      },
+      {
+        "question": "Quelle est la langue principale utilisée pour les interactions ?",
+        "answer": "La langue majoritairement utilisée sera le français. Votre guide et accompagnateurs seront exclusivement francophones et permettront de faire le lien lors de vos immersions chez les locaux utilisant la langue arabe."
+      },
+      {
+        "question": "Le Maroc, est-il un pays sûr ?",
+        "answer": "Absolument ! Le Maroc est tout à fait sûr pour voyager. Les autorités locales veillent à la sécurité des visiteurs, et les habitants sont accueillants. En suivant les conseils de base et en respectant les coutumes locales, vous pouvez profiter pleinement de votre voyage sans souci. \n\nPour plus d'informations, je vous invite à cliquer sur ce lien :\n\n[https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/maroc/#securite](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/maroc/#securite)"
+      },
+      {
+        "question": "Pourquoi choisir Odysway pour partir au Maroc ?",
+        "answer": "Partir avec nous au Maroc offre une perspective unique sur ce magnifique pays. Nos guides locaux vous feront découvrir les lieux de la culture marocaine authentique, des souks animés, des paysages verdoyants en passant par des rencontres authentiques avec les habitants. Grâce à nos partenariats locaux, vous aurez accès à des expériences exclusives telles que des visites de coopératives artisanales et des repas traditionnels chez l'habitant.  Imaginez-vous déguster des plats faits maison avec des familles locales ou explorer des marchés animés à travers leurs yeux. Voyagez en toute sécurité et profitez d'un soutien complet tout au long de votre aventure, pour une immersion inoubliable dans la richesse et la diversité du Maroc."
+      }
+    ]
+  },
+  "seoSection": {
+    "metaTitle": "Partez à la rencontre des berbères dans le Sud du Maroc",
+    "canonicalUrl": "https://www.odysway.com/voyages/rencontre-berberes-sud-maroc",
+    "ogTitle": "Partez à la rencontre des berbères dans le Sud du Maroc",
+    "ogDescription": "Découvrez le Maroc authentique avec ce séjour culturel unique. Explorez Marrakech, Taliouine, Aglou et Aït Benhaddou, vivez des expériences locales, participez à des ateliers traditionnels et randonnez dans les montagnes de l'Anti-Atlas. Hébergement en riads et familles locales, repas typiques, transport privé et guide francophone inclus",
+    "ogImage": {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/IZFLmkpR921ESlSnDfl9.jpg",
+      "alt": "image principale du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    "twitterTitle": "Partez à la rencontre des berbères dans le Sud du Maroc",
+    "twitterDescription": "Découvrez le Maroc authentique avec ce séjour culturel unique. Explorez Marrakech, Taliouine, Aglou et Aït Benhaddou, vivez des expériences locales, participez à des ateliers traditionnels et randonnez dans les montagnes de l'Anti-Atlas. Hébergement en riads et familles locales, repas typiques, transport privé et guide francophone inclus",
+    "twitterImage": {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/IZFLmkpR921ESlSnDfl9.jpg",
+      "alt": "image principale du voyage Partez à la rencontre des berbères dans le Sud du Maroc"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}
