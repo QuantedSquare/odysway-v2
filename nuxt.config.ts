@@ -56,7 +56,7 @@ export default defineNuxtConfig({
   site: {
     url: process.env.NUXT_SITE_URL || 'https://odysway.com', // TODO: change the first to the dev env
     name: process.env.NUXT_SITE_NAME || 'Odysway',
-    indexable: process.env.NUXT_SITE_ENV === 'production',
+    indexable: process.env.VERCEL_ENV === 'production',
   },
   content: {
     preview: {
@@ -125,10 +125,10 @@ export default defineNuxtConfig({
     initCommands: [
       // Setup up consent mode
       ['consent', 'default', {
-        ad_user_data: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
-        ad_personalization: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
-        ad_storage: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
-        analytics_storage: process.env.NUXT_SITE_ENV === 'production' ? 'denied' : 'granted',
+        ad_user_data: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
+        ad_personalization: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
+        ad_storage: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
+        analytics_storage: process.env.VERCEL_ENV === 'production' ? 'denied' : 'granted',
         wait_for_update: 500,
       }],
     ],
