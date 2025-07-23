@@ -54,7 +54,7 @@ export default defineNuxtConfig({
 
   },
   site: {
-    url: process.env.NUXT_SITE_URL || 'https://odysway.com', // TODO: change the first to the dev env
+    url: process.env.BASE_URL || 'https://odysway.com', // TODO: change the first to the dev env
     name: process.env.NUXT_SITE_NAME || 'Odysway',
     indexable: process.env.VERCEL_ENV === 'production',
   },
@@ -73,7 +73,7 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
       environment: process.env.VERCEL_ENV || 'development',
-      siteURL: process.env.VERCEL_URL || 'http://localhost:3000',
+      siteURL: process.env.BASE_URL || 'http://localhost:3000',
       metapixel: {
         default: { id: process.env.METAPIXEL_ID || '' },
       },
