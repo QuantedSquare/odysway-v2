@@ -374,6 +374,7 @@ const nextStep = () => {
   // Check if we're going on calendly step to fire pixel:
 
   if (nextStepValue === 1 && skipperMode.value === 'quick') {
+
     trackPixel('trackCustom', 'ClicRdv', {
       voyage: voyage.value.title,
     })
@@ -389,6 +390,7 @@ const previousStep = () => {
     previousStepValue = currentStep.value - 1
   }
   currentStep.value = previousStepValue
+
   addSingleParam('step', previousStepValue.toString())
 }
 

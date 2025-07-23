@@ -2,11 +2,14 @@ import { createHash } from 'crypto'
 import axios from 'axios'
 import dayjs from 'dayjs'
 
+const config = useRuntimeConfig()
+const isDev = config.public.environment !== 'production'
+
 const getSignature = (data) => {
   const keys = Object.keys(data).sort()
 
   const hashData = keys.reduce((acc, key) => acc + (data[key] ?? ''), '')
-  const secretKey = process.env.CHAPKA_HASH // process.env.NODE_ENV !== 'development' ? process.env.CHAPKA_HASH_TEST : process.env.CHAPKA_HASH
+  const secretKey = isDev ? process.env.CHAPKA_HASH_TEST : process.env.CHAPKA_HASH
 
   return createHash('sha1').update(hashData + secretKey).digest('hex')
 }
@@ -104,7 +107,6 @@ const quote = async (body) => {
 }
 
 const notify = (paymentSession, insuranceItem, dealCustomFields) => {
-  const isDev = process.env.NODE_ENV === 'development'
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
   const data = {
