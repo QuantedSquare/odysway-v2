@@ -249,7 +249,7 @@ const createDeal = async (data) => {
 
   const brevoData = {
     email: data.email,
-    firstName: data.firstName,
+    firstName: data.firstname,
     lastName: data.lastname,
     // #TODO CHECK IF THE 2 FIELDS BELLOW ARE NEEEDED
     listName: 'Optin Newsletter',
