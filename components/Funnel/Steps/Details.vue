@@ -315,6 +315,7 @@ const submitStepData = async () => {
       }
       trackPixel('track', 'AddToCart')
       emit('next')
+      console.log('===========flattenedDeal in Details.vue===========', flattenedDeal)
       await createDeal(flattenedDeal)
       buttonLoading.value = false
     }
