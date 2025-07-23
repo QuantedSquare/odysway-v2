@@ -36,8 +36,8 @@
     "janvier": false,
     "fevrier": false,
     "mars": false,
-    "avril": false,
-    "mai": false,
+    "avril": true,
+    "mai": true,
     "juin": false,
     "juillet": false,
     "aout": false,
@@ -83,8 +83,8 @@
       "visible": false
     },
     "periodBadge": {
-      "text": "",
-      "visible": false
+      "text": "Du 26 avril au 3 mai 2026",
+      "visible": true
     }
   },
   "programmeBlock": [],
