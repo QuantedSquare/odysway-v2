@@ -2,7 +2,7 @@
   <NuxtLayout>
     <NuxtPage />
     <CookiesSnackbar />
-    <!-- <Maintenance /> -->
+    <Maintenance />
   </NuxtLayout>
 </template>
 
