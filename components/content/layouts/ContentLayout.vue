@@ -171,7 +171,6 @@ const type = computed(() => {
   if (props.isDestination) return 'destinations'
   return null
 })
-console.log('type ===>', type.value)
 </script>
 
 <style scoped>

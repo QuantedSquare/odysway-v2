@@ -29,7 +29,6 @@ import _ from 'lodash'
 
 const route = useRoute()
 const slug = computed(() => route.params.destinationSlug)
-console.log('slug on destination page ===>', slug.value)
 
 const { data: destinations } = useAsyncData('destinations', () => {
   return queryCollection('destinations').where('published', '=', true).all()
@@ -41,7 +40,7 @@ const { data: regions } = useAsyncData('regions', () => {
 const selectedDestination = computed(() => {
   return destinations.value?.find(d => d.slug === slug.value)
 })
-console.log('selectedDestination on destination page ===>', selectedDestination.value)
+
 const selectedRegion = computed(() => {
   return regions.value?.find(r => r.slug === slug.value)
 })

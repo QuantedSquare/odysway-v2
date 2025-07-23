@@ -210,8 +210,6 @@ const expandButtonText = computed(() => {
   }
   return props.pageContent?.common?.expandButton?.showMore || 'Voir plus de voyages'
 })
-
-console.log('props.voyages ===>', props.voyages)
 </script>
 
 <style scoped>
