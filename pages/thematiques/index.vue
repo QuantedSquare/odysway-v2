@@ -3,7 +3,7 @@
     :is-category="true"
     :page-content="pageContent"
   >
-    <template #indexContent>
+    <template #content>
       <DisplayVoyagesRow
         :voyages="categoriesWithVoyages"
         :page-content="pageContent"

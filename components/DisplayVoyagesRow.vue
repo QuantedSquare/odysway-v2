@@ -3,7 +3,6 @@
   <div v-if="availableVoyages > 0">
     <HorizontalCarousel
       v-for="content in voyages"
-
       v-show="content.voyages?.length > 0"
       :key="content.id"
       :slug="content.slug"
@@ -126,7 +125,7 @@
     </v-col>
   </v-row>
   <v-row
-    v-if="voyages && voyages.length > 9"
+    v-if="voyages && voyages.length > 9 && (selectedCategory || selectedExperience || isSearch)"
     justify="center"
     align="center"
     class="flex-column my-4 mb-md-6 mt-md-16"

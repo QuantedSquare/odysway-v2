@@ -21,8 +21,8 @@
       class="py-0 my-0"
     >
       <v-text-field
+        id="firstname"
         v-model="i_firstname"
-        role="textbox"
         outlined
         label="Prénom *"
         placeholder="Ex: Indiana"
@@ -36,8 +36,9 @@
       class="py-0 my-0"
     >
       <v-text-field
+        id="lastname"
         v-model="i_lastname"
-        role="textbox"
+        type="textbox"
         label="Nom *"
         outlined
         placeholder="Ex: Jones"
@@ -52,8 +53,8 @@
       class="py-0 my-0"
     >
       <v-text-field
+        id="birthdate"
         v-model="date"
-        role="textbox"
         label="Date de naissance *"
         type="text"
         inputmode="numeric"

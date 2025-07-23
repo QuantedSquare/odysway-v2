@@ -4,9 +4,7 @@
 
     <v-card-text v-if="model && voyage.alreadyPaid < voyage.totalTravelPrice">
       <v-row>
-        <v-col
-          cols="12"
-        >
+        <v-col cols="12">
           <template v-if="isBooking">
             <div class="text-start">
               {{ page.payment.ask_for_option_text }}
@@ -166,7 +164,7 @@ const alreadyPlacedAnOption = ref(false)
 const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
-// const { addSingleParam } = useParams()
+const { addSingleParam } = useParams()
 
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
@@ -337,7 +335,8 @@ watch(checkedOption, (value) => {
 </script>
 
 <style scoped>
-.list-move, /* apply transition to moving elements */
+.list-move,
+/* apply transition to moving elements */
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s ease;
@@ -348,6 +347,7 @@ watch(checkedOption, (value) => {
   opacity: 0;
   transform: translateY(40px);
 }
+
 .list-leave-to {
   opacity: 0;
   transform: translateY(-40px);

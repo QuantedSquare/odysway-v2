@@ -7,84 +7,75 @@
       :is-category="isCategory"
       :is-experience="isExperience"
       :is-destination="isDestination"
-      :destination="selectedCategory || selectedExperience || selectedDestination"
+      :destination="displayedData?.selectedItem"
     >
       <SearchField />
     </SearchHeroSection>
 
-    <!-- Categories  -->
     <ColorContainer
-      v-if="categories"
+      v-if="displayedData?.items && !displayedData?.showOnBottom"
       color=""
     >
       <HorizontalCarousel
-        :show-buttons="categories.length > 4"
+        :show-buttons="displayedData?.items.length > 4"
       >
         <template #title>
           <h3 class="custom-title">
-            {{ pageContent?.index?.pageTitle || 'Toutes nos thématiques' }}
+            {{ displayedData?.pageTitle }}
           </h3>
         </template>
         <template #carousel-item>
           <ThematiqueColCard
-            v-for="category in categories"
-            :key="category.id"
-            :slug="category.slug"
-            :image="category.image.src"
-            :title="category.title"
-            type="thematiques"
-            :description="category.discoveryTitle"
+            v-for="item in displayedData?.items"
+            :key="item.id"
+            :slug="item.slug"
+            :image="item.image.src"
+            :title="item.title"
+            :description="item.discoveryTitle"
+            :type="isCategory ? 'thematiques' : 'experiences'"
           />
         </template>
       </HorizontalCarousel>
     </ColorContainer>
-    <!------------------>
-
-    <!-- Experiences  -->
-    <ColorContainer
-      v-if="experiences"
-      color=""
-    >
-      <HorizontalCarousel
-        :show-buttons="experiences.length > 4"
-      >
-        <template #title>
-          <h3 class="custom-title">
-            {{ pageContent?.index?.pageTitle || 'Toutes nos expériences' }}
-          </h3>
-        </template>
-        <template #carousel-item>
-          <ThematiqueColCard
-            v-for="experience in experiences"
-            :key="experience.id"
-            :slug="experience.slug"
-            :image="experience.image.src"
-            :title="experience.title"
-            type="experiences"
-            :description="experience.discoveryTitle"
-          />
-        </template>
-      </HorizontalCarousel>
-    </ColorContainer>
-
     <v-divider
-      v-if="displayDivider"
+      v-if="displayDivider && !displayedData?.showOnBottom"
       thickness="2"
       class="mt-2 mb-4 mb-md-6"
     />
-    <ColorContainer
-      color=""
-    >
-      <slot name="indexContent" />
-      <slot name="slugContent" />
-      <slot name="blogPost" />
-      <CommonReviewContainer class="mt-8" />
+    <ColorContainer color="">
+      <slot name="content" />
+      <template
+        v-if="displayedData?.items && displayedData.showOnBottom"
+      >
+        <div class="mt-8">
+          <HorizontalCarousel
+            :show-buttons="displayedData?.items.length > 4"
+          >
+            <template #title>
+              <h3 class="custom-title">
+                {{ displayedData?.pageTitle }}
+              </h3>
+            </template>
+            <template #carousel-item>
+              <ThematiqueColCard
+                v-for="item in displayedData?.items"
+                :key="item.id"
+                :slug="item.slug"
+                :image="item.image.src"
+                :title="item.title"
+                :description="item.discoveryTitle"
+                :type="isCategory ? 'thematiques' : 'experiences'"
+              />
+            </template>
+          </HorizontalCarousel>
+        </div>
+      </template>
     </ColorContainer>
   </v-container>
 </template>
 
 <script setup>
-const { isCategory, isExperience, isDestination, pageContent } = defineProps({
+const props = defineProps({
   isCategory: {
     type: Boolean,
     default: false,
@@ -118,23 +109,45 @@ const { isCategory, isExperience, isDestination, pageContent } = defineProps({
     default: true,
   },
 })
-
-const isComputedCategory = computed(() => !!isCategory)
-const isComputedExperience = computed(() => !!isExperience)
+const route = useRoute()
+const isComputedCategory = computed(() => !!props.isCategory)
+const isComputedExperience = computed(() => !!props.isExperience)
 
 const { data: categories } = useAsyncData('categories-on-content-layout', () => {
-  if (isCategory) {
+  if (props.isCategory) {
     return queryCollection('categories').where('showOnHome', '=', true).select('id', 'title', 'slug', 'discoveryTitle', 'image').all()
   }
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
 
 const { data: experiences } = useAsyncData('experiences-on-content-layout', () => {
-  if (isExperience) {
+  if (props.isExperience) {
     return queryCollection('experiences').where('published', '=', true).all()
   }
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
+
+const displayedData = computed(() => {
+  if (props.isCategory) {
+    const categoriesData = {
+      items: categories.value,
+      selectedItem: props.selectedCategory,
+      pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos thématiques',
+      showOnBottom: Object.keys(route.params).length > 0,
+    }
+    return categoriesData
+  }
+  if (props.isExperience) {
+    const experienceData = {
+      items: experiences.value,
+      selectedItem: props.selectedExperience,
+      pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos expériences',
+      showOnBottom: Object.keys(route.params).length > 0,
+    }
+    return experienceData
+  }
+  return null
+})
 
 // const { data: destinations } = useAsyncData('destinations', () => {
 //   if (isDestination && selectedDestination) {

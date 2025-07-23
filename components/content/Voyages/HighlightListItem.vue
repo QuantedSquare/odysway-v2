@@ -10,6 +10,7 @@
         :icon="mdiCheckboxMarkedCircle"
         color="primary"
         size="20"
+        class="mt-1"
       />
     </template>
     <p

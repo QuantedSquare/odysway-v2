@@ -16,7 +16,7 @@
       <v-col class="text-grey-darken-3 py-0 px-5 px-md-4">
         <div
           v-if="voyageRef.accompanistsDescription"
-          class="mb-4 font-weight-regular text-subtitle-2  text-md-body-2"
+          class="mb-4 font-weight-regular text-subtitle-2 text-md-body-2 line-height-2"
         >
           {{ voyageRef.accompanistsDescription }}
         </div>
@@ -52,5 +52,8 @@ if (voyageRef.value.accompanistsList.length > 0 && !voyageRef.value.accompanists
 <style scoped>
 .no-white-space {
   white-space: normal;
+}
+.line-height-2 {
+  line-height: 1.5 !important;
 }
 </style>

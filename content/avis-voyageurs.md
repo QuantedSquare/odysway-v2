@@ -1,4 +1,4 @@
-::generic-hero-section
+::simple-hero-section
 ---
 displayed-img: /images/lPCsmaT8al25X3drCaAE.webp
 title-color: white

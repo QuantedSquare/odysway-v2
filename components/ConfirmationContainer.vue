@@ -22,7 +22,7 @@
               class="d-flex align-end"
               :src="voyage.image.src"
               :alt="voyage.image.alt"
-              :height="mdAndUp ? '500px' : '250px'"
+              :height="mdAndUp ? '348px' : '250px'"
               cover
             >
               <div class="d-flex align-center justify-center ">
