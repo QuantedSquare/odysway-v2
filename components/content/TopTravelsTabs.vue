@@ -4,6 +4,7 @@
     class="rounded-lg px-md-12 py-md-8 mt-4 mt-md-8 bg-primary max-container-width "
   >
     <div class="text-h3 font-weight-bold my-4">
+      <!-- #TODO: add title from NUXT -->
       Des idées pour vos prochains voyages
     </div>
 
@@ -52,25 +53,24 @@
         role="tabpanel"
         :aria-labelledby="`tab-${currentTab}`"
       >
-        <v-row class=" mb-4 mb-md-10">
+        <v-row class=" mb-4 mb-md-10  flex-nowrap overflow-auto hidden-scroll">
           <v-col
             v-for="section, index in tops[currentTab].contenuOnglet"
             :key="`${section.title}-${index}`"
-            cols="6"
-            sm="4"
+
             md="2"
           >
             <h5 class="custom-title-size font-weight-bold mb-4 pb-md-16 ">
               {{ section.title }}
             </h5>
-            <div class="d-flex flex-column ga-2">
+            <div class="d-flex flex-column ga-md-2">
               <NuxtLink
                 v-for="link, i in section.linksList"
                 :key="`${link.slug}-${i}`"
                 :to="`/${link.slug}`"
                 :external="link.slug.includes('http')"
                 :target="link.slug.includes('http') ? '_blank' : undefined"
-                class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-4"
+                class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
               >
                 {{ link.title }}
               </NuxtLink>
@@ -97,11 +97,8 @@ const tops = await queryCollection('tops').all()
 }
 .line-clamp-2{
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
   font-weight: 500!important;
+  line-height: 1.2!important;
 }
 .custom-color:deep(a), .custom-color:deep(div){
   color: #FFFFFF80!important;
@@ -113,5 +110,12 @@ const tops = await queryCollection('tops').all()
     max-height: 50px!important;
     line-height: 1.2!important;
   }
+}
+
+.hidden-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+
 }
 </style>
