@@ -32,7 +32,7 @@
             :image="item.image.src"
             :title="item.title"
             :description="item.discoveryTitle"
-            :type="isCategory ? 'thematiques' : 'experiences'"
+            :type="type"
           />
         </template>
       </HorizontalCarousel>
@@ -64,7 +64,7 @@
                 :image="item.image.src"
                 :title="item.title"
                 :description="item.discoveryTitle"
-                :type="isCategory ? 'thematiques' : 'experiences'"
+                :type="type"
               />
             </template>
           </HorizontalCarousel>
@@ -127,6 +127,13 @@ const { data: experiences } = useAsyncData('experiences-on-content-layout', () =
   return null
 }, { watch: [isComputedCategory, isComputedExperience] })
 
+const { data: destinations } = useAsyncData('destinations-on-content-layout', () => {
+  if (props.isDestination) {
+    return queryCollection('destinations').where('published', '=', true).select('id', 'title', 'slug', 'metaDescription', 'image').all()
+  }
+  return null
+})
+
 const displayedData = computed(() => {
   if (props.isCategory) {
     const categoriesData = {
@@ -146,15 +153,24 @@ const displayedData = computed(() => {
     }
     return experienceData
   }
+  if (props.isDestination) {
+    const destinationData = {
+      items: destinations.value,
+      selectedItem: props.selectedDestination,
+      pageTitle: props.pageContent?.index?.pageTitle || 'Toutes nos destinations',
+      showOnBottom: Object.keys(route.params).length > 0,
+    }
+    return destinationData
+  }
   return null
 })
 
-// const { data: destinations } = useAsyncData('destinations', () => {
-//   if (isDestination && selectedDestination) {
-//     return queryCollection('destinations').where('published', '=', true).select('id', 'titre', 'slug', 'metaDescription', 'image').all()
-//   }
-//   return null
-// })
+const type = computed(() => {
+  if (props.isCategory) return 'thematiques'
+  if (props.isExperience) return 'experiences'
+  if (props.isDestination) return 'destinations'
+  return null
+})
 </script>
 
 <style scoped>

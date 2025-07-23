@@ -2,10 +2,10 @@
   <ContentLayout
     :is-destination="true"
     :selected-destination="selectedDestination"
-    :display-divider="false"
+    :display-divider="true"
   >
     <template #content>
-      <div class="pt-md-16 mt-10">
+      <div>
         <DisplayVoyagesRow
           :is-search="true"
           :voyages="voyages"
@@ -14,12 +14,11 @@
       <template
         v-if="destinationContentStatus === 'success' && destinationContent"
       >
-        <div class="pt-md-16">
-          <ContentRenderer
-            v-if="destinationContent"
-            :value="destinationContent"
-          />
-        </div>
+        <ContentRenderer
+          v-if="
+            destinationContent"
+          :value="destinationContent"
+        />
       </template>
     </template>
   </ContentLayout>
@@ -67,11 +66,12 @@ const { data: voyages } = useAsyncData('voyages', async () => {
   const travelList = await queryCollection('voyages').where('published', '=', true).all()
   let filtered = []
   if (isDestination.value) {
-    const destinationName = selectedDestination.value?.titre
+    const destinationName = selectedDestination.value?.title
     filtered = travelList.filter(v => v.destinations?.some(d => d.name.includes(destinationName)))
   }
   else if (isRegion.value) {
-    const destinationNames = destinationsInRegion.value?.map(d => d.titre) || []
+    const destinationNames = destinationsInRegion.value?.map(d => d.title) || []
+
     filtered = travelList.filter(v =>
       v.destinations?.some(d => destinationNames.includes(d.name)),
     )

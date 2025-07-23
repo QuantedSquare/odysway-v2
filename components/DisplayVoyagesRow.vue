@@ -12,7 +12,7 @@
     >
       <template #title>
         <h3 class="custom-title">
-          {{ content.discoveryTitle }}
+          {{ content.discoveryTitle || content.title }}
         </h3>
       </template>
       <template #carousel-item>

@@ -88,7 +88,7 @@
                     class="text-subtitle-2 d-flex align-center justify-start ga-2 px-3"
                   >
                     <v-icon :icon="item.raw.value === 'top-destination' ? mdiThumbUpOutline : mdiMapMarker" />
-                    {{ destination.titre }}
+                    {{ destination.title }}
                   </v-list-item-title>
                 </v-list-item>
               </v-list>
@@ -222,7 +222,7 @@ const months = computed(() => {
 })
 
 const { data: destinations, destinationsStatus } = useAsyncData('destinations-in-search', () => {
-  return queryCollection('destinations').select('titre', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
+  return queryCollection('destinations').select('title', 'slug', 'metaDescription', 'published', 'regions', 'image', 'stem', 'isTopDestination').where('published', '=', true).all()
 })
 const { data: regions, status: regionsStatus } = useAsyncData('regions', () => {
   return queryCollection('regions').select('nom', 'slug', 'meta_description').all()
@@ -240,7 +240,7 @@ const mappedDestinationsToRegions = computed(() => {
   }
 
   topRegion.destinations.push({
-    titre: 'France',
+    title: 'France',
     slug: 'france',
     metaDescription: 'France',
     published: true,
@@ -289,7 +289,7 @@ function customFilter(itemTitle, queryText, item) {
   // Check if any destination matches
   if (item.raw.destinations && Array.isArray(item.raw.destinations)) {
     return item.raw.destinations.some(dest =>
-      normalize(dest.titre).includes(searchText),
+      normalize(dest.title).includes(searchText),
     )
   }
   return false
@@ -301,10 +301,10 @@ function aggregateDestinations(mappedRegions, query) {
   const destinationMap = {}
   mappedRegions.forEach((region) => {
     region.destinations.forEach((dest) => {
-      const key = dest.slug || dest.titre
+      const key = dest.slug || dest.title
       if (!destinationMap[key]) {
         // Only add if matches search
-        if (!query || normalize(dest.titre).includes(searchText)) {
+        if (!query || normalize(dest.title).includes(searchText)) {
           destinationMap[key] = {
             ...dest,
             regions: [region.title],
@@ -333,7 +333,7 @@ function filteredDestinationsForRegion(region, query, _item) {
   // Aggregate all destinations across regions
   const allAggregated = aggregateDestinations([region], query)
   return allAggregated.filter(dest =>
-    normalize(dest.titre).includes(searchText),
+    normalize(dest.title).includes(searchText),
   )
 }
 
@@ -354,11 +354,11 @@ const filteredRegions = computed(() => {
   const nameAggregated = aggregateDestinations(mappedDestinationsToRegions.value, search.value)
   // Combine both sets, deduplicate by slug or titre
   const allDestinations = [...regionDestinations, ...nameAggregated]
-  const uniqDestinations = _.uniqBy(allDestinations, dest => dest.slug || dest.titre)
+  const uniqDestinations = _.uniqBy(allDestinations, dest => dest.slug || dest.title)
   // Aggregate region labels for each destination
   const destinationMap = {}
   uniqDestinations.forEach((dest) => {
-    const key = dest.slug || dest.titre
+    const key = dest.slug || dest.title
     if (!destinationMap[key]) {
       destinationMap[key] = {
         ...dest,
@@ -367,7 +367,7 @@ const filteredRegions = computed(() => {
     }
     // Add all regions this destination belongs to
     mappedDestinationsToRegions.value.forEach((region) => {
-      if (region.destinations.some(d => (d.slug || d.titre) === key)) {
+      if (region.destinations.some(d => (d.slug || d.title) === key)) {
         if (!destinationMap[key].regions.includes(region.title)) {
           destinationMap[key].regions.push(region.title)
         }
@@ -409,7 +409,7 @@ function searchFn() {
       query.destination = 'france'
     }
     else {
-      const found = destinations.value.find(d => d.titre === destinationChoice.value)
+      const found = destinations.value.find(d => d.title === destinationChoice.value)
       if (found) {
         query.destination = found.slug
       }
@@ -431,7 +431,7 @@ function searchFn() {
 
 function selectDestination(item) {
   isSelectionARegion.value = false
-  destinationChoice.value = item.titre
+  destinationChoice.value = item.title
   search.value = item.slug
   setTimeout(() => {
     const input = document.querySelector(`#${destinationId}`)

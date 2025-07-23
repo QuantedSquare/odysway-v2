@@ -17,19 +17,19 @@
           v-if="destination && !isCategory && !isExperience && !isNextDepartures"
           class="custom-hero-title"
         >
-          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
+          {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.title}` }}
         </h1>
         <h1
           v-else-if="destination && isCategory"
           class="custom-hero-title"
         >
-          {{ destination.discoveryTitle || destination.titre }}
+          {{ destination.discoveryTitle || destination.title }}
         </h1>
         <h1
           v-else-if="destination && isExperience"
           class="custom-hero-title"
         >
-          {{ destination.discoveryTitle || destination.titre }}
+          {{ destination.discoveryTitle || destination.title }}
         </h1>
         <h1
           v-else-if="destination && isNextDepartures"
@@ -110,19 +110,19 @@
                 v-if="destination && !isCategory && !isExperience && !isNextDepartures"
                 class="custom-hero-title"
               >
-                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.titre}` }}
+                {{ `${contentText?.searchHero?.voyagePrefix || 'Nos voyages'} ${destination.interjection} ${destination.title}` }}
               </h1>
               <h1
                 v-else-if="destination && isCategory"
                 class="custom-hero-title"
               >
-                {{ destination.discoveryTitle || destination.titre }}
+                {{ destination.discoveryTitle || destination.title }}
               </h1>
               <h1
                 v-else-if="destination && isExperience"
                 class="custom-hero-title"
               >
-                {{ destination.discoveryTitle || destination.titre }}
+                {{ destination.discoveryTitle || destination.title }}
               </h1>
               <h1
                 v-else-if="destination && isNextDepartures"
