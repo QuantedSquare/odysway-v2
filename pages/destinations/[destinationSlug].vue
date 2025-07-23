@@ -5,7 +5,7 @@
     :display-divider="true"
   >
     <template #content>
-      <div class="pt-md-16 mt-10">
+      <div>
         <DisplayVoyagesRow
           :is-search="true"
           :voyages="voyages"
@@ -71,6 +71,7 @@ const { data: voyages } = useAsyncData('voyages', async () => {
   }
   else if (isRegion.value) {
     const destinationNames = destinationsInRegion.value?.map(d => d.title) || []
+
     filtered = travelList.filter(v =>
       v.destinations?.some(d => destinationNames.includes(d.name)),
     )
