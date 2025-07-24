@@ -38,7 +38,7 @@
       >
         {{ header.textButton2 }}
       </v-btn>
-      <v-btn-secondary
+      <v-btn
         href="tel: +33184807975"
         color="primary"
         height="45"
@@ -47,8 +47,8 @@
         class="text-caption text-md-body-1 d-none d-md-inline"
         @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
       >
-        {{ header.textButton3 }}
-      </v-btn-secondary>
+        <span class="mt-2">{{ header.textButton3 }}</span>
+      </v-btn>
       <v-btn
         height="45"
         color="white"
@@ -116,17 +116,17 @@
       >
         {{ header.textButton2 }}
       </v-btn>
-      <v-btn-secondary
+      <v-btn
         href="tel: +33184807975"
         color="primary"
         height="45"
         variant="tonal"
         rounded="default"
-        class="text-caption text-md-body-1"
+        class="text-caption text-md-body-1 d-none d-md-inline"
         @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
       >
-        {{ header.textButton3 }}
-      </v-btn-secondary>
+        <span class="mt-2">{{ header.textButton3 }}</span>
+      </v-btn>
       <v-btn
         height="45"
         color="white"
