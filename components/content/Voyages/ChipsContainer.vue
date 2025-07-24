@@ -12,15 +12,17 @@
         class="d-flex  ga-2 ga-md-4 flex-wrap"
       >
         <v-chip
-          v-if="badgeSection.experienceBadge.visible && badgeSection.experienceBadge.text"
           variant="flat"
           size="large"
           class="chip-responsive"
-          :color="badgeSection.experienceBadge.color"
           density="comfortable"
+          color="yellow"
         >
-          <span class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold">
-            <div v-dompurify-html="parseBoldText(badgeSection.experienceBadge.text)" />
+          <span
+            v-if="experience"
+            class="d-flex align-center text-white text-caption text-sm-subtitle-2  px-3 mb-1 font-weight-bold"
+          >
+            {{ experience.badgeTitle }}
           </span>
         </v-chip>
 
@@ -149,7 +151,7 @@
 <script setup>
 import { mdiSignalCellular1, mdiSignalCellular2, mdiSignalCellular3 } from '@mdi/js'
 
-defineProps({
+const { experienceType } = defineProps({
   badgeSection: {
     type: Object,
     required: true,
@@ -158,7 +160,13 @@ defineProps({
     type: String,
     required: true,
   },
+  experienceType: {
+    type: String,
+    required: true,
+  },
 })
+
+const experience = await queryCollection('experiences').where('title', '=', experienceType).select(['badgeTitle']).first()
 </script>
 
 <style scoped>

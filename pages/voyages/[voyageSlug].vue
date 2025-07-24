@@ -14,6 +14,7 @@
 
       <ChipsContainer
         :badge-section="voyage.badgeSection"
+        :experience-type="voyage.experienceType"
         :level="voyage.level"
       />
 
