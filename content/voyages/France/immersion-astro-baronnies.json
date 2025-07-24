@@ -31,8 +31,8 @@
       "name": "voyage-sans-avion"
     }
   ],
-  "duration": 0,
-  "nights": 0,
+  "duration": 7,
+  "nights": 6,
   "includeFlight": false,
   "housingType": "Observatoire",
   "idealPeriods": {
