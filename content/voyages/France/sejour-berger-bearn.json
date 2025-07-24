@@ -7,7 +7,7 @@
     }
   ],
   "groupeAvailable": true,
-  "privatisationAvailable": false,
+  "privatisationAvailable": true,
   "customAvailable": false,
   "experienceType": "Partager le quotidien",
   "level": "1",
@@ -88,7 +88,7 @@
   "metaDescription": "Voyagez autrement au coeur des Pyrénées et découvrez le mode de vie unique et traditionnel des bergers dans les estives . Partez en randonnée avec un guide à travers la vallée d'Aspe, vallée de France où il y a le plus de bergers ! ",
   "badgeSection": {
     "experienceBadge": {
-      "text": "En immersion chez...",
+      "text": "Partager le quotidien",
       "color": "yellow",
       "visible": true
     },
