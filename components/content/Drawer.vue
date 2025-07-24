@@ -11,25 +11,34 @@
         block
         class="text-caption text-sm-subtitle-2"
         color="primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
+        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton4) }"
+      >
+        {{ header.textButton4 }}
+      </v-btn-secondary>
+      <v-btn-secondary
+        href="tel: +33184807975"
+        block
+        variant="tonal"
+        class="text-caption text-sm-subtitle-2"
+        color="primary"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
       >
         {{ header.textButton3 }}
       </v-btn-secondary>
       <v-btn-secondary
-        href="tel: +33184807975"
-        color="primary"
-        variant="tonal"
+
+        color="white"
         block
-        class="text-caption text-sm-subtitle-2"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
+        class="text-caption text-sm-subtitle-2 text-primary"
+        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton2) }"
       >
         {{ header.textButton2 }}
       </v-btn-secondary>
       <v-btn-secondary
         color="white"
         block
-        class="text-caption text-sm-subtitle-2"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
+        class="text-caption text-sm-subtitle-2 text-primary"
+        @click="() => { router.push('/search'); captureOutboundLink(header.textButton1) }"
       >
         {{ header.textButton1 }}
       </v-btn-secondary>

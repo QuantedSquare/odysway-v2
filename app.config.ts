@@ -2,18 +2,7 @@ export default defineAppConfig({
   seo: {
     siteName: 'Odysway | Agence spécialiste du voyage en immersion',
   },
-  header: {
-    to: '/',
-    logo: {
-      desktop: '/logos/Logo-Odysway-Bleu.png',
-      mobile: '/logos/Logo-Odysway-Bleu.png',
-      alt: 'Odysway Logo',
-    },
-    search: true,
-    textButton1: 'Notre vision du voyage',
-    textButton2: '+33 1 84 80 79 75',
-    textButton3: 'Faisons connaissance 👋',
-  },
+  header: 'Voyages',
   footer: {
     logo: {
       image: '/logos/Logo-Odysway-Bleu.png',

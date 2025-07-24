@@ -184,28 +184,16 @@
             cols="12"
             class="d-flex align-start flex-column "
           >
-            <div class="d-flex align-center ga-2">
+            <div
+              v-for="info, index in sectionTextes.ctaList.list"
+              :key="info+index"
+              class="d-flex align-center ga-2"
+            >
               <v-icon size="small">
                 {{ mdiCheckCircleOutline }}
               </v-icon>
               <span>
-                <strong>15 jours</strong> pour changer d'avis
-              </span>
-            </div>
-            <div class="d-flex align-center ga-2">
-              <v-icon size="small">
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                Paiement en <strong>trois fois</strong> (Alma)
-              </span>
-            </div>
-            <div class="d-flex align-center ga-2">
-              <v-icon size="small">
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                Paiement par <strong>chèque vacances</strong> (ANCV)
+                <div v-dompurify-html="parseBoldText(info)" />
               </span>
             </div>
           </v-col>
@@ -224,6 +212,10 @@ const today = dayjs()
 const { width } = useDisplay()
 const { date } = defineProps({
   date: {
+    type: Object,
+    required: true,
+  },
+  sectionTextes: {
     type: Object,
     required: true,
   },

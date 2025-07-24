@@ -19,7 +19,7 @@
     },
     "ctaBottom": {
       "list": [
-        "Annulation gratuite jusqu'à **30 jours** avant le départ",
+        "Annulation gratuite jusqu'à **60 jours** avant le départ",
         "Paiement par **CB**, **virement** ou **chèque vacances** ",
         "**Paiement en 3 fois** (Alma)"
       ]
@@ -55,7 +55,7 @@
     "disabledButtonColor": "grey",
     "ctaList": {
       "list": [
-        "Annulation gratuite jusqu'à **30 jours** avant le départ",
+        "Annulation gratuite jusqu'à **60 jours** avant le départ",
         "Paiement par **CB**, **virement** ou **chèque vacances** ",
         "**Paiement en 3 fois** (Alma)"
       ]
