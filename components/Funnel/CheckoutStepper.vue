@@ -54,7 +54,7 @@
                     :page="pageTexts"
                     :voyage="voyage"
                   />
-
+                  a
                   <FunnelStepsPaymentRedirect
                     v-model="dynamicDealValues"
                     :page="pageTexts"
@@ -321,6 +321,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
 
     dynamicDealValues.value = dynamicValues
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
+    console.log('checkoutType', checkoutType.value)
     console.log('deal', deal)
     const voyageStaticValues = {
       departureDate: deal.departureDate,
@@ -364,6 +365,7 @@ const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = 5
   skipperMode.value = 'summary'
+  console.log('skipperMode', skipperMode.value)
 }
 
 const nextStep = () => {
