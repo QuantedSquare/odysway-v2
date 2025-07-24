@@ -1,7 +1,11 @@
 {
   "published": true,
   "title": "Immersion au cœur d'un observatoire astronomique",
-  "destinations": [],
+  "destinations": [
+    {
+      "name": "Alpes"
+    }
+  ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
