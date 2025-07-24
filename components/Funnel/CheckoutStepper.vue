@@ -345,7 +345,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       gotEarlybird: deal.gotEarlybid === 'Oui',
       travelType: deal.travelType,
       extensionPrice: deal.extensionPrice || 0,
-      includeFlight: deal.includedFlight === 'Oui',
+      includeFlight: deal.includeFlight === 'Oui',
       flightPrice: deal.flightPrice || 0,
       promoValue: deal.promoValue || 0,
       alreadyPaid: deal.alreadyPaid,

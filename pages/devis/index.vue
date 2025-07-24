@@ -203,7 +203,7 @@ const submit = async () => {
     utm: utmSource || '',
     slug: voyage.value.slug,
     basePricePerTraveler: voyage.value.pricing.startingPrice * 100,
-    includedFlight: details.value.includeFlight ? 'Oui' : 'Non',
+    includeFlight: details.value.includeFlight ? 'Oui' : 'Non',
     depositPrice: voyage.value.pricing.startingPrice * 100 * 0.3,
     maxChildrenAge: voyage.value.pricing.childrenAge || 12,
     promoChildren: voyage.value.pricing.childrenPromo || 0,

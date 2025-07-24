@@ -103,7 +103,7 @@ async function createNewBooking(deal) {
       min_travelers: 1,
       early_bird: deal.gotEarlyBird === 'Oui',
       last_minute: deal.gotLastMinute === 'Oui',
-      include_flight: deal.includedFlight === 'Oui',
+      include_flight: deal.includeFlight === 'Oui',
       booked_seat: 0,
       flight_price: +deal.flightPrice / 100,
       badges: '',
