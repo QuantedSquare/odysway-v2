@@ -54,7 +54,7 @@
                     :page="pageTexts"
                     :voyage="voyage"
                   />
-                  a
+
                   <FunnelStepsPaymentRedirect
                     v-model="dynamicDealValues"
                     :page="pageTexts"
@@ -349,7 +349,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       includeFlight: deal.includeFlight === 'Oui',
       flightPrice: deal.flightPrice || 0,
       promoValue: deal.promoValue || 0,
-      alreadyPaid: deal.alreadyPaid,
+      alreadyPaid: deal.alreadyPaid || 0,
       totalTravelPrice: deal.value,
     }
     console.log('voyageStaticValues', voyageStaticValues)
