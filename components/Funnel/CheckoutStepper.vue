@@ -321,7 +321,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
 
     dynamicDealValues.value = dynamicValues
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-
+    console.log('deal', deal)
     const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
@@ -345,12 +345,13 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       gotEarlybird: deal.gotEarlybid === 'Oui',
       travelType: deal.travelType,
       extensionPrice: deal.extensionPrice || 0,
-      includeFlight: deal.includeFlight === 'Oui',
+      includeFlight: deal.includedFlight === 'Oui',
       flightPrice: deal.flightPrice || 0,
       promoValue: deal.promoValue || 0,
       alreadyPaid: deal.alreadyPaid,
       totalTravelPrice: deal.value,
     }
+    console.log('voyageStaticValues', voyageStaticValues)
     await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
     return voyageStaticValues
   }

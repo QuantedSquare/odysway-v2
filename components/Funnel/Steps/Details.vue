@@ -295,7 +295,7 @@ const submitStepData = async () => {
         promoChildren: voyage.promoChildren,
         maxChildrenAge: voyage.maxChildrenAge,
         promoTeen: voyage.promoChildren,
-        includeFlight: voyage.includeFlight ? 'Oui' : 'Non',
+        includedFlight: voyage.includeFlight ? 'Oui' : 'Non',
         flightPrice: voyage.flightPrice,
         source: 'Devis',
         indivRoom: voyage.indivRoom && voyage.indivRoomPrice > 0 ? ['Oui'] : ['Non'],
