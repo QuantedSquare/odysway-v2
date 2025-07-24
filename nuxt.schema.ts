@@ -441,7 +441,7 @@ export default defineNuxtSchema({
                 }),
               },
             }),
-            ccolonne4: group({
+            colonne4: group({
               title: 'Où nous trouver',
               description: 'Adresse et coordonnées',
               icon: 'i-mdi-link-variant',
