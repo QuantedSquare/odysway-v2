@@ -6,6 +6,7 @@ export function useDates() {
   const getDates = async () => {
     isLoading.value = true
     const res = await apiRequest(`/booking/${route.params.voyageSlug}/dates`)
+    console.log('GETDATES res: ', res)
     dates.value = res.filter(date => date.published)
     isLoading.value = false
   }

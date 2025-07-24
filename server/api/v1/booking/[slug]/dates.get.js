@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     .from('travel_dates')
     .select('*')
     .eq('travel_slug', slug)
-
+  console.log('SUPABASE RETURN: ', data, ' -- error: ', error)
   if (error) return { error: error.message }
   return data
 })
