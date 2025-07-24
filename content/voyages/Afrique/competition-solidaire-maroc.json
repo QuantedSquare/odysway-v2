@@ -257,7 +257,17 @@
     "src": "/images/voyages/competition-solidaire-maroc/4uZNfdZqTRij3dnpFVE1.jpg",
     "alt": "image secondaire du voyage La Grande aventure : Challenge solidaire en immersion au Maroc"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/voyages/competition-solidaire-maroc/6wozDcx4RBWtgayvKTPX.jpg"
+    },
+    {
+      "src": "/images/voyages/competition-solidaire-maroc/CFVRCAfDTEiClttJrPVw.jpg"
+    },
+    {
+      "src": "/images/voyages/rencontre-berberes-sud-maroc/egQ5QCAmRNiAPfWSANzu.jpg"
+    }
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [
