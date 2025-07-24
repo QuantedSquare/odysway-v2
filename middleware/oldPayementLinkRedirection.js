@@ -27,6 +27,7 @@ export default defineNuxtRouteMiddleware(async () => {
     console.error('Forbidden')
     return // Optionally, redirect to an error page
   }
+  console.log('deal in oldPayementLinkRedirection.js', deal)
 
   // Try to find an existing travel date
   const { data: existingTravelDate, error: travelDateError } = await supabase
