@@ -6,14 +6,19 @@ export function useDates() {
   const getDates = async () => {
     isLoading.value = true
     const res = await apiRequest(`/booking/${route.params.voyageSlug}/dates`)
-    console.log('GETDATES res: ', res)
     dates.value = res.filter(date => date.published)
     isLoading.value = false
   }
 
-  watch(route, () => {
-    getDates()
-  }, { immediate: true })
+  // watch(route, () => {
+  //   getDates()
+  // }, { immediate: true })
+  onMounted(() => {
+    if (route.params.voyageSlug) {
+      getDates()
+    }
+    return dates.value
+  })
 
   return { dates, getDates, isLoading }
 }

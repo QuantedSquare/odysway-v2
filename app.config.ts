@@ -10,9 +10,10 @@ export default defineAppConfig({
       alt: 'Odysway Logo',
     },
     search: true,
-    textButton1: 'Notre vision du voyage',
-    textButton2: '+33 1 84 80 79 75',
-    textButton3: 'Faisons connaissance 👋',
+    textButton1: 'Nos voyages',
+    textButton2: 'Notre vision du voyage',
+    textButton3: '+33 1 84 80 79 75',
+    textButton4: 'Faisons connaissance 👋',
   },
   footer: {
     logo: {

@@ -1,69 +1,4 @@
 <template>
-  <div
-    class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar bg-white"
-    :class="!model ? 'app-bar-shadow' : ''"
-  >
-    <NuxtLink
-      :to="header.to"
-      class="header-logo-link"
-    >
-      <NuxtImg
-        preload
-        as="image"
-        format="webp"
-        quality="100"
-        :src="LogoOdyswayBleu"
-        width="320"
-        alt="Logo principale d'Odysway"
-        class="header-logo"
-      />
-    </NuxtLink>
-
-    <v-spacer />
-    <div class="d-flex align-center ga-4">
-      <v-btn
-        color="primary"
-        height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
-      >
-        {{ header.textButton1 }}
-      </v-btn>
-      <v-btn
-        color="primary"
-        variant="tonal"
-        height="45"
-        class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
-      >
-        {{ header.textButton2 }}
-      </v-btn>
-      <v-btn
-        density="compact"
-        size="x-large"
-        height="45"
-        color="white"
-        rounded="default"
-        class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
-      >
-        {{ header.textButton3 }}
-      </v-btn>
-      <v-btn
-        class="d-inline d-md-none "
-        icon
-        height="35"
-        variant="text"
-        aria-label="Menu"
-        :aria-expanded="model"
-        @click.stop="model = !model"
-      >
-        <v-icon>
-          {{ mdiMenu }}
-        </v-icon>
-      </v-btn>
-    </div>
-  </div>
   <v-app-bar
     elevation="0"
     mobile
@@ -91,33 +26,41 @@
     <v-spacer />
     <div class="d-flex align-center ga-4">
       <v-btn
-        color="primary"
         height="45"
+        color="primary"
+        rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton1) }"
+        @click="() => { router.push('/search'); captureOutboundLink(header.textButton1) }"
       >
         {{ header.textButton1 }}
       </v-btn>
       <v-btn
         color="primary"
-        variant="tonal"
         height="45"
-        href="tel: +33184807975"
-        class="text-caption text-md-body-1 d-none d-md-flex align-center"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton2) }"
+        class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton2) }"
       >
         {{ header.textButton2 }}
       </v-btn>
+      <v-btn-secondary
+        href="tel: +33184807975"
+        color="primary"
+        height="45"
+        variant="tonal"
+        rounded="default"
+        class="text-caption text-md-body-1"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
+      >
+        {{ header.textButton3 }}
+      </v-btn-secondary>
       <v-btn
-        density="compact"
-        size="x-large"
         height="45"
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton3) }"
+        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton4) }"
       >
-        {{ header.textButton3 }}
+        {{ header.textButton4 }}
       </v-btn>
 
       <v-btn
@@ -222,6 +165,14 @@ function captureOutboundLink(btn) {
     margin-top: 18px;
     border-radius: 12px!important;
     box-shadow: 0px 10px 20px 0px #0000000A!important;
+  }
+}
+@media (min-width: 960px) and (max-width: 1200px) {
+  :deep(.v-btn.text-md-body-1) {
+    font-size: 0.9rem !important;
+    height: 36px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 }
 </style>
