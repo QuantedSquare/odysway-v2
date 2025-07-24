@@ -156,7 +156,6 @@
   "pricingDetailsBlock": {
     "include": [
       "L’assistance Odysway 24h/24 et 7j/7 : Une équipe disponible à tout moment pour répondre à vos questions ou vous aider en cas d’imprévu (téléphone, whatsapp, email), afin de garantir votre tranquillité tout au long du voyage.",
-      "Le transport aérien international jusqu'à Ouarzazate et les taxes d’aéroport",
       "L'accueil à l'aéroport par votre guide et le transfert à l'hôtel",
       "L'hébergement en hôtel à Ouarzazate",
       "L'hébergement en bivouac dans le désert (tente) et les couvertures",
@@ -166,10 +165,11 @@
       "L'accompagnement par les guides locaux, nomades sahraouis et leurs dromadaires qui porteront vos sacs, couettes, couvertures, eau et nourriture."
     ],
     "exclude": [
-      "Les activités ou soins non compris dans la section \"le prix comprend\"",
+      "Le transport aérien international jusqu'à Ouarzazate et les taxes d’aéroport",
       "L'assurance annulation ou multirisques",
       "Les dépenses personnelles et pourboires",
-      "Un duvet / Sac à viande"
+      "Un duvet / Sac à viande",
+      "Les activités ou soins non compris dans la section \"le prix comprend\""
     ]
   },
   "pricing": {

@@ -8,7 +8,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "customAvailable": false,
+  "customAvailable": true,
   "experienceType": "Apprendre en voyage",
   "level": "1",
   "categories": [],
@@ -36,8 +36,8 @@
     "janvier": false,
     "fevrier": false,
     "mars": false,
-    "avril": false,
-    "mai": false,
+    "avril": true,
+    "mai": true,
     "juin": false,
     "juillet": false,
     "aout": false,
@@ -83,8 +83,8 @@
       "visible": false
     },
     "periodBadge": {
-      "text": "",
-      "visible": false
+      "text": "Du 26 avril au 3 mai 2026",
+      "visible": true
     }
   },
   "programmeBlock": [],
@@ -120,7 +120,7 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+    "src": "/images/voyages/voyage-ecosse/M93HTkXRri7B9txEBMwG.jpg",
     "alt": "image principale du voyage Séjour photographique en Ecosse"
   },
   "imageSecondary": {
@@ -138,7 +138,7 @@
     "ogTitle": "Séjour photographique en Ecosse",
     "ogDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
     "ogImage": {
-      "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+      "src": "/images/voyages/voyage-ecosse/M93HTkXRri7B9txEBMwG.jpg",
       "alt": "image principale du voyage Séjour photographique en Ecosse"
     },
     "twitterTitle": "Séjour photographique en Ecosse",

@@ -41,7 +41,7 @@
             <span class="text-h6 ">{{ page.summary.dates_confirmed }}</span>
           </template>
           <template #right>
-            {{ dayjs(voyage.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(model.returnDate).format('DD/MM/YYYY') }}
+            {{ dayjs(voyage.departureDate).format('DD/MM/YYYY') }} au {{ dayjs(voyage.returnDate).format('DD/MM/YYYY') }}
           </template>
         </FunnelStepsSummaryLine>
 
