@@ -6,7 +6,6 @@
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
       v-model="currentStep"
-
       :page="pageTexts"
       :skipper-mode="skipperMode"
       :show-insurance="!!showInsuranceStep"
@@ -144,7 +143,7 @@
         </v-col>
 
         <v-col
-          v-if="currentStep > 0 && skipperMode === 'normal'"
+          v-if="currentStep > 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
           cols="12"
           :md="4"
           class="d-none d-md-block"
@@ -159,7 +158,7 @@
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
-        v-if="currentStep !== 0 && skipperMode === 'normal'"
+        v-if="currentStep !== 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
         ref="summaryRef"
         :voyage="voyage"
         :page-texts="pageTexts"
@@ -317,6 +316,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       insurance: deal.insurance,
       insuranceCommissionPrice: deal.insuranceCommissionPrice || 0,
       insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler || 0,
+      alreadyPaid: deal.alreadyPaid,
     }
 
     dynamicDealValues.value = dynamicValues

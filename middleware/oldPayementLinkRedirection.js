@@ -10,6 +10,7 @@ export default defineNuxtRouteMiddleware(async () => {
     .select('*')
     .eq('deal_id', route.query.orderId)
 
+  console.log('===========existingBookedDate in oldPayementLinkRedirection.js===========', existingBookedDate)
   if (bookedDateError) {
     console.error('Error fetching existing booked date:', bookedDateError)
     return // Optionally, redirect to an error page
@@ -34,6 +35,7 @@ export default defineNuxtRouteMiddleware(async () => {
     .eq('departure_date', deal.departureDate)
     .eq('travel_slug', deal.slug)
 
+  console.log('===========existingTravelDate in oldPayementLinkRedirection.js===========', existingTravelDate)
   if (travelDateError) {
     console.error('Error fetching travel date:', travelDateError)
     return // Optionally, redirect to an error page
