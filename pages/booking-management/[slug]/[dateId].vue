@@ -57,7 +57,7 @@
               />
               <v-text-field
                 v-model="form.id"
-                :model-value="`${config.public.siteURL}/checkout?date_id=${form.id}`"
+                :model-value="`${config.public.siteURL}/checkout?date_id=${form.id}&type=deposit`"
                 label="Lien funnel"
                 readonly
               >
