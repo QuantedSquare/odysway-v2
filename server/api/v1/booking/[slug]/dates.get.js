@@ -3,7 +3,9 @@ import supabase from '~/server/utils/supabase'
 
 export default defineEventHandler(async (event) => {
   const { slug } = event.context.params
+
   console.log('SUPABASE SLUG: ', slug)
+
   const { data, error } = await supabase
     .from('travel_dates')
     .select('*')
