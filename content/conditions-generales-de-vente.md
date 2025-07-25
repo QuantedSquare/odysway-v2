@@ -18,7 +18,7 @@ sitemap:
 #content
 *Mise à jour des CGV : 24 juillet 2025*
 
-## **PRÉAMBULE**
+## **Préambule**
 
 Les présentes Conditions Générales de Vente (ci-après les « Conditions ») ont pour objet de définir les droits et obligations d’ODYSWAY et du client (ci-après le « Voyageur ») dans le cadre de la vente de prestations touristiques proposées en France ou à l’étranger, dans le respect des dispositions du Code du tourisme (notamment les articles L.211-1 à L.211-18 et R.211-1 à R.211-43).
 
@@ -30,7 +30,7 @@ Les Conditions en vigueur à la date de confirmation de la réservation prévale
 
 Le fait pour un Voyageur de réserver un séjour implique l’adhésion entière et sans réserve aux présentes Conditions.
 
-## **DÉFINITIONS**
+## **Définitions**
 
 **ODYSWAY** : désigne la société ODYSWAY SAS, en sa qualité de vendeur de prestations de voyage au sens du Code du tourisme.
 
@@ -48,7 +48,7 @@ Contrat de voyage : le contrat est constitué des présentes Conditions Généra
 
 **Jour ouvré** : tout jour de la semaine à l’exception du samedi, du dimanche et des jours fériés légaux en France.
 
-## **1. INFORMATION PRÉALABLE**
+## **1. Information préalable**
 
 Le voyageur reconnaît avoir reçu, préalablement à toute commande, d’une manière lisible et compréhensible et sur support durable :
 
@@ -70,7 +70,7 @@ Ces éléments sont visibles sur la fiche du voyage accessible depuis [www.odysw
 
 Ils sont complétés par la fiche d’information réglementaire fixée par l’arrêté du 1er mars 2018, remise à chaque voyageur avant la conclusion du contrat.
 
-## **2. RÉSERVATION ET INSCRIPTION**
+## **2. Réservation et inscription**
 
 La commande d’un séjour Odysway s’effectue selon le processus suivant :
 
@@ -94,7 +94,7 @@ La commande d’un séjour Odysway s’effectue selon le processus suivant :
 
 10\. En cas de difficulté lors de la réservation, le Client peut contacter le service client d’Odysway à <voyageurs@odysway.com> ou au +33 (0)1 84 80 79 75 pour être assisté à distance.
 
-## **3. PRIX**
+## **3. Prix**
 
 Les prix affichés sur le site [www.odysway.com](http://www.odysway.com) sont exprimés en euros, toutes taxes comprises (TTC). Ils sont calculés à partir des données économiques disponibles au moment de leur publication (tarifs de transport, taxes, taux de change, etc.).
 
@@ -131,7 +131,7 @@ Le prix indiqué au moment de la commande (ou sur le devis) est le **prix contra
 
 Enfin, en cas d’erreur manifeste sur un prix affiché (par exemple un montant anormalement bas), Odysway se réserve le droit d’annuler la commande sans frais et de proposer un nouveau tarif conforme.
 
-## **4. RÉVISION DES PRIX**
+## **4. Révision des prix**
 
 Le prix du séjour peut être ajusté à la hausse ou à la baisse jusqu’à 20 jours avant le départ, dans les seuls cas suivants :
 
@@ -152,13 +152,13 @@ Aucune modification tarifaire ne peut intervenir moins de 20 jours avant le dép
 
 (Article L.211-12 du Code du tourisme)
 
-## **5. MODALITÉS DE PAIEMENT**
+## **5. Modalités de paiement**
 
 ### **Acompte et solde**
 
-- Pour toute réservation effectuée **plus de 30 jours avant le départ**, un **acompte de 30 %** du montant total est demandé à la commande.
-- Le **solde du séjour** doit être réglé **au plus tard 30 jours avant le départ**.
-- Pour toute réservation à **moins de 30 jours du départ**, le **paiement intégral** est exigé à l’inscription.
+- Pour toute réservation effectuée plus de 30 jours avant le départ, un acompte de 30 % du montant total est demandé à la commande.
+- Le solde du séjour doit être réglé au plus tard 30 jours avant le départ.
+- Pour toute réservation à moins de 30 jours du départ, le paiement intégral est exigé à l’inscription.
 
 Le non-paiement du solde à échéance est considéré comme une annulation de la part du client. Les frais d’annulation prévus s’appliqueront alors automatiquement (voir article 7).
 
@@ -187,7 +187,7 @@ En cas de paiement par carte bancaire, les frais bancaires associés à la trans
 
 Tout achat réglé par bon cadeau ou avoir est remboursé sous forme d’un nouvel avoir, dont la validité correspondra à celle de l’avoir initial.
 
-## **6. MODIFICATIONS DU CONTRAT**
+## **6. Modifications**
 
 ### **6.1 Modification à l’initiative du client**
 
@@ -199,15 +199,15 @@ Les modifications sont soumises à l’acceptation préalable et écrite d’Ody
 
 #### **Séjours sans transport aérien :**
 
-- **Jusqu’à 60 jours avant le départ** : **modification gratuite**, hors éventuels frais de traitement bancaire
-- **Entre 59 et 31 jours avant le départ** : **frais fixes de 100 €**
-- **Moins de 30 jours avant le départ** ou en cas de non-présentation : **modification impossible** – toute demande est considérée comme une **annulation** (voir article 7)
+- Jusqu’à 60 jours avant le départ : modification gratuite, hors éventuels frais de traitement bancaire
+- Entre 59 et 31 jours avant le départ : frais fixes de 100 €
+- Moins de 30 jours avant le départ ou en cas de non-présentation : modification impossible, toute demande est considérée comme une annulation (voir article 7)
 
 #### **Séjours avec transport aérien inclus :**
 
-- **Jusqu’à 60 jours avant le départ** : **modification gratuite**, hors frais de traitement bancaire + **100 % du prix du billet d’avion** si celui-ci est non remboursable ou soumis à conditions strictes
-- **Entre 59 et 31 jours avant le départ** : **frais fixes de 100 €** + **100 % du prix du billet d’avion** si non remboursable
-- **Moins de 30 jours avant le départ** ou en cas de non-présentation : **modification impossible**, considérée comme une **annulation** (voir article 7)
+- Jusqu’à 60 jours avant le départ : modification gratuite, hors frais de traitement bancaire + 100 % du prix du billet d’avion si celui-ci est non remboursable ou soumis à conditions strictes
+- Entre 59 et 31 jours avant le départ : frais fixes de 100 € + 100 % du prix du billet d’avion si non remboursable
+- Moins de 30 jours avant le départ ou en cas de non-présentation : modification impossible, considérée comme une annulation (voir article 7)
 
 Ces mêmes conditions s’appliquent en cas de changement de nom ou de correction d’erreur typographique sur les noms fournis à la réservation à l’initiative du client ou toute prestation non consommée, ne donne droit à aucun remboursement, sauf en cas de circonstances exceptionnelles et inévitables.
 
@@ -232,7 +232,7 @@ Après le départ, si une partie essentielle du séjour ne peut être assurée, 
 
 Des adaptations mineures peuvent être apportées au programme pour des raisons logistiques, climatiques ou de sécurité, sans que cela constitue une modification substantielle du contrat.
 
-## **7. ANNULATION**
+## **7. Annulation**
 
 ### **7.1 Annulation par le client**
 
@@ -242,16 +242,15 @@ En cas d’annulation, des frais sont appliqués selon la nature de la prestatio
 
 #### **Prestations sans transport aérien :** 
 
-- *Remboursement intégral,* hors frais bancaires éventuels liés au paiement initial \*\*.
+- Remboursement intégral, hors frais bancaires éventuels liés au paiement initial \*\*.
 - Entre 59 et 31 jours avant le départ : retenue de 30 % du montant total.
 - Moins de 30 jours avant le départ ou en cas de non-présentation : 100 % du montant total retenu.
--
 
 #### **Prestations avec transport aérien :**
 
 - Remboursement intégral de la partie terrestre, hors frais bancaires éventuels. Le transport aérien reste dû à 100 % s’il est non remboursable ou soumis à des conditions strictes. \*\*
-- **Entre 59 et 31 jours avant le départ** : retenue de 30 % de la partie terrestre + 100 % du transport aérien s’il est non remboursable.
-- **Moins de 30 jours avant le départ ou non-présentation** : 100 % du montant total (partie terrestre + transport aérien non remboursable).
+- Entre 59 et 31 jours avant le départ : retenue de 30 % de la partie terrestre + 100 % du transport aérien s’il est non remboursable.
+- Moins de 30 jours avant le départ ou non-présentation : 100 % du montant total (partie terrestre + transport aérien non remboursable).
 -
 
 #### **Cas particulier :**
@@ -283,7 +282,7 @@ Dans le cas d’un nombre de participants inférieur au minimum requis, Odysway 
 - Accepter : le supplément sera facturé. Il sera remboursé si, d’ici au départ, le seuil de participants est atteint.
 - Refuser : la réservation sera annulée sans frais, et les sommes versées seront intégralement remboursées.
 
-8\. CESSION DU CONTRAT
+## **8. Cession**
 
 Le client peut céder son contrat à un cessionnaire qui remplit les mêmes conditions que lui pour effectuer le voyage ou le séjour, tant que ce contrat n'a produit aucun effet.
 
@@ -299,7 +298,7 @@ Les assurances complémentaires ne sont en aucun cas remboursables ou transféra
 
 Le cédant et le cessionnaire sont solidairement responsables du paiement du solde du voyage et de l’ensemble des frais liés à la cession.
 
-## **9. FORMALITÉS ADMINISTRATIVES ET SANITAIRES**
+## **9. Formalités administratives et sanitaires**
 
 Avant la conclusion du contrat, Odysway informe le voyageur, conformément à l’article R. 211-4 du Code du tourisme, des conditions relatives aux passeports, visas et formalités sanitaires nécessaires pour le voyage, en fonction de sa nationalité.
 
@@ -329,7 +328,7 @@ Certains séjours proposés par Odysway, notamment les treks, randonnées ou act
 
 Odysway se réserve le droit de refuser toute inscription si le niveau physique annoncé du séjour ne semble pas compatible avec l’état de santé déclaré du client. En cas de doute, un avis médical peut être demandé.
 
-## **10. TRANSPORT AÉRIEN**
+## **10. Transport aérien**
 
 Sauf mention contraire, les séjours proposés par Odysway n’incluent pas les vols internationaux. Toutefois, sur demande, Odysway peut réserver pour ses clients des billets d’avion à destination et au retour du séjour.
 
@@ -353,7 +352,7 @@ Les changements d’horaires, d’escales, d’aéroports, les retards ou les co
 
 Si la compagnie annule le vol, Odysway proposera une solution de remplacement équivalente (même date, même ville de départ et d’arrivée). Si cette solution de remplacement respecte les conditions prévues au contrat, le voyageur ne peut la refuser. Toute autre modification (comme un changement d’aéroport ou de dates) n’est envisageable qu’en cas de circonstances exceptionnelles.
 
-### **12.2.10 Billets électroniques**
+### **10.2 Billets électroniques**
 
 Lorsqu’un billet électronique est émis dans le cadre d’un vol réservé par Odysway, le Voyageur doit se présenter à l’aéroport muni :
 
@@ -368,7 +367,7 @@ En cas d’oubli ou de non-présentation de ce document le jour du départ, **de
 
 Il appartient au Voyageur de **vérifier les conditions spécifiques d’enregistrement** de sa compagnie, indiquées dans les documents de voyage fournis.
 
-## **11. BAGAGES**
+## **11. Bagages**
 
 Il est fortement déconseillé de placer des objets de valeur, documents importants ou médicaments dans les bagages enregistrés. En cas de besoin, le client peut faire une déclaration spéciale d’intérêt à la compagnie au moment de l’enregistrement.
 
@@ -386,11 +385,11 @@ En cas d’excédent, des frais variables selon la compagnie et l’itinéraire 
 
 Les taxes aéroportuaires obligatoires sont remboursables, sur demande, en cas de non-utilisation du billet, sous 30 jours. En cas de demande hors ligne, des frais de traitement jusqu’à 20 % du montant remboursé pourront être appliqués.
 
-## **12. DOCUMENTS DE VOYAGE**
+## **12. Documents de voyage**
 
 Odysway adresse avant le départ un carnet de voyage contenant : convocation, consignes pratiques, liste du matériel à prévoir, coordonnées utiles, etc. Il appartient au client de vérifier la bonne réception et la lecture de ces documents.
 
-## **13. MINEURS, PERSONNES À MOBILITÉ RÉDUITE ET FEMMES ENCEINTES**
+## **13. Mineurs, personnes à mobilité réduite et femmes enceintes**
 
 Les enfants doivent disposer de papiers d’identité individuels, y compris passeport si exigé par la destination. En cas de voyage sans parent ou tuteur, une autorisation de sortie du territoire est obligatoire.
 
@@ -404,7 +403,7 @@ Odysway recommande aux personnes à mobilité réduite de signaler leurs besoins
 
 Chaque compagnie aérienne a sa propre politique en matière de transport de femmes enceintes. Il appartient donc au client de se renseigner en amont, soit auprès de son conseiller Odysway, soit directement auprès de la compagnie aérienne concernée. Il est également recommandé de prendre l’avis de son médecin avant toute réservation.
 
-### **14. Animaux**
+## **14. Animaux**
 
 Les animaux de compagnie ne sont généralement **pas admis** dans le cadre des séjours proposés par Odysway, pour des raisons d’organisation, d’hygiène ou de sécurité (hébergements collectifs, activités de groupe, logistique locale).
 
@@ -412,27 +411,33 @@ Toutefois, **certains séjours peuvent, à titre exceptionnel, l’autoriser**. 
 
 Sans validation écrite préalable de la part d’Odysway, **aucun animal ne sera accepté** sur place. En cas de non-respect, l’accès au séjour pourra être refusé sans possibilité de remboursement.
 
-### **14. ASSURANCES**
+## **15. Assurances**
 
 Aucune assurance (annulation, multirisques, assistance ou rapatriement) n’est incluse par défaut dans les forfaits voyage proposés par Odysway.
 
 Odysway propose, en partenariat avec **Chapka Assurances**, deux formules optionnelles que le client peut souscrire au moment de la réservation :
 
+- **L’assurance Multirisque,** qui couvre notamment :
+  - L’annulation pour toutes causes justifiées (événement extérieur, soudain, imprévisible, indépendant de votre volonté) ;
+  - Les frais médicaux et d’hospitalisation à l’étranger ;
+  - Le vol de bagages ;
+  - La téléconsultation gratuite ;
+  - Et l’assistance/rapatriement.
 - **L’assurance Annulation seule**, qui couvre l’annulation pour toutes causes justifiées, ainsi que certains frais médicaux et le vol de bagages, mais sans garantie d’assistance/rapatriement.
 
-Les conditions détaillées de ces assurances sont disponibles via le lien hypertexte **“Conditions d’assurances”** au moment de la commande.
+Les conditions détaillées de ces assurances sont disponibles via le lien hypertexte “Conditions d’assurances” au moment de la commande.
 
-La souscription se fait exclusivement lors de la réservation. La prime est **non remboursable**, même en cas d’annulation du voyage.
+La souscription se fait exclusivement lors de la réservation. La prime est non remboursable, même en cas d’annulation du voyage.
 
-En cas de sinistre, la déclaration doit être effectuée **directement auprès de Chapka**, par le client, selon les modalités précisées dans les conditions générales de la police souscrite.
+En cas de sinistre, la déclaration doit être effectuée directement auprès de Chapka, par le client, selon les modalités précisées dans les conditions générales de la police souscrite.
 
-Odysway n’intervient **ni dans la gestion, ni dans la décision** concernant les demandes d’indemnisation.
+Odysway n’intervient ni dans la gestion, ni dans la décision concernant les demandes d’indemnisation.
 
-## **15. Responsabilité**
+## **16. Responsabilité**
 
 Odysway est responsable de la bonne exécution des prestations prévues au contrat, conformément à l’article L.211-16 du Code du Tourisme. Cela inclut les services fournis par ses partenaires (hébergement, transports, activités, etc.), sauf exceptions prévues par la loi.
 
-### **15.1 Exclusions de responsabilité**
+### **16.1 Exclusions de responsabilité**
 
 Odysway ne pourra être tenue responsable si l’inexécution ou la mauvaise exécution du contrat est imputable :
 
@@ -442,31 +447,31 @@ Odysway ne pourra être tenue responsable si l’inexécution ou la mauvaise ex�
 
 Odysway n’assume pas la responsabilité des prestations achetées en dehors du contrat de voyage (ex. : excursions, hébergements ou activités réservées sur place par le voyageur).
 
-### **15.2 Limites de responsabilité**
+### **16.2 Limites de responsabilité**
 
 Lorsque des conventions internationales s’appliquent (notamment pour le transport aérien), les limitations prévues par ces textes s’imposent.
 
 En dehors de ces cas, toute indemnisation due par Odysway est limitée à **trois fois le prix total du voyage**, sauf en cas de dommage corporel, faute intentionnelle ou négligence grave.
 
-### **15.3 Objets oubliés ou perdus**
+### **16.3 Objets oubliés ou perdus**
 
 Odysway ne pourra être tenue responsable des objets oubliés, perdus ou volés durant le voyage. Elle n’assure ni la recherche ni le rapatriement de ces objets.
 
-### **15.4 Non-conformité d’une prestation**
+### **16.4 Non-conformité d’une prestation**
 
 En cas de problème sur place, le voyageur doit signaler immédiatement la non-conformité auprès du représentant local ou via l’assistance Odysway, pour permettre une résolution rapide. À défaut, cela peut réduire ou exclure toute indemnisation.
 
-### **15.5 Assistance au voyageur**
+### **16.5 Assistance au voyageur**
 
 Si un voyageur rencontre une difficulté en cours de séjour, Odysway apportera l’assistance nécessaire (aide administrative, solutions de remplacement, etc.), dans la mesure du raisonnable. Cela ne donne lieu à aucun remboursement, sauf si Odysway est directement responsable de la situation.
 
-**15.6 Exclusion en cas de comportement perturbateur**
+### **16.6 Exclusion en cas de comportement perturbateur**
 
 Pour garantir le bon déroulement du séjour et la sécurité de l’ensemble des participants, Odysway se réserve le droit d’exclure tout voyageur dont le comportement mettrait en danger autrui, nuirait gravement à la dynamique du groupe, ou constituerait une violation manifeste des consignes de sécurité ou des règles élémentaires de respect.
 
 Cette exclusion ne donne lieu à aucun remboursement, et les frais de retour ou de remplacement éventuels sont à la charge du voyageur.
 
-**16. Droit de rétractation**
+## **17. Droit de rétractation**
 
 En application des articles L.221‑2 et L.221‑28 du Code de la consommation, le droit de rétractation prévu en matière de vente à distance ne s’applique pas aux prestations touristiques vendues par Odysway, dès lors qu’elles doivent être fournies à une date ou une période déterminée.
 
@@ -474,7 +479,7 @@ En conséquence, toute commande de séjour ou de voyage sur le site est ferme et
 
 Seules les conditions d’annulation prévues dans les présentes CGV s’appliquent.
 
-**17. Réclamations**
+## **18. Réclamations**
 
 En cas de non-conformité ou d’incident pendant le séjour, le Voyageur est invité à en informer immédiatement Odysway ou le représentant local afin de permettre une résolution rapide sur place. L’absence de signalement immédiat pourrait réduire les droits à indemnisation, si une intervention rapide aurait pu limiter ou éviter le dommage.
 
@@ -489,7 +494,7 @@ En cas de désaccord persistant après saisie d’Odysway et en l’absence de s
 
 Médiation Tourisme et Voyage – BP 80303 – 75823 Paris Cedex 17 Site internet : <https://www.mtv.travel>
 
-**18. Données personnelles**
+## **18. Données personnelles**
 
 Odysway traite les données personnelles de ses clients conformément au Règlement Général sur la Protection des Données (RGPD - UE 2016/679) et à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée.
 
@@ -508,7 +513,7 @@ Odysway – Service Clients, 61 rue de Lyon, 75012 Paris - ou par e-mail à <con
 
 En cas de litige, une réclamation peut être adressée à la CNIL : [www.cnil.fr](http://www.cnil.fr). La politique de confidentialité complète est disponible sur : <https://odysway.com/politique-de-confidentialite>
 
-**19. Propriété intellectuelle**
+## **19. Propriété intellectuelle**
 
 Tous les contenus présents sur le site [www.odysway.com](http://www.odysway.com) (textes, visuels, sons, logos, vidéos, photos, structure) sont la propriété exclusive de la société Odysway ou de ses partenaires, et sont protégés par les lois françaises et internationales en matière de propriété intellectuelle.
 
@@ -516,11 +521,11 @@ Toute reproduction, représentation, adaptation ou utilisation partielle ou tota
 
 Les liens hypertextes vers le site sont soumis à autorisation préalable. Celle-ci peut être retirée à tout moment sur simple demande d’Odysway.
 
-**19. Loi applicable – Règlement des litiges**
+## **20. Loi applicable – Règlement des litiges**
 
 Les présentes Conditions Générales de Vente sont soumises au droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux français seront seuls compétents, sous réserve des règles impératives applicables dans le pays de résidence du Voyageur.
 
-**20. Validité et mise à jour des conditions de vente**
+## **21. Validité et mise à jour des conditions de vente**
 
 Si une disposition des présentes CGV devait être déclarée nulle ou inapplicable, les autres dispositions resteraient pleinement en vigueur.
 
@@ -530,7 +535,7 @@ Une copie des CGV en vigueur au moment de la réservation peut être remise au v
 
 Ces CGV sont également archivées de manière sécurisée par Odysway.
 
-### **FORMULAIRE STANDARD D’INFORMATION – CONTRATS DE VOYAGE À FORFAIT**
+### FORMULAIRE STANDARD D’INFORMATION – CONTRATS DE VOYAGE À FORFAIT
 
 La combinaison de services de voyage qui vous est proposée est un forfait au sens de la directive (UE) 2015/2302 et de l'article L.211-2 II du code du tourisme.
 
