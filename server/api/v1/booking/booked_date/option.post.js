@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     // put an option 10 days after now
     const { data, error } = await supabase
       .from('booked_dates')
-      .update({ is_option: true, expiracy_date: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000), booked_places: body.booked_places })
+      .update({ is_option: true, expiracy_date: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), booked_places: body.booked_places })
       .eq('id', body.id)
       .select('*')
       .single()

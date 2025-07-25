@@ -907,7 +907,6 @@ export default defineContentConfig({
         experiencesBlock: z.array(z.string()).describe('Liste des plus du voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
         // ==========================================
         // SEO
-
         description: z.string().describe('Description du voyage'),
         emailDescription: z.string().describe('Description du voyage pour l\'email'),
         metaDescription: z.string().describe('Meta Description du voyage'),
