@@ -58,7 +58,7 @@ const destinationChoices = destinationFolders
     const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.json'))
     if (files.length > 0) {
       // Return the filename without extension
-      return JSON.parse(fs.readFileSync(path.join(folderPath, files[0]), 'utf-8')).titre
+      return JSON.parse(fs.readFileSync(path.join(folderPath, files[0]), 'utf-8')).title
     }
     return null
   })
