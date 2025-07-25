@@ -16,8 +16,8 @@
       "name": "sejours-stage-photographie"
     }
   ],
-  "duration": 8,
-  "nights": 7,
+  "duration": 7,
+  "nights": 6,
   "includeFlight": false,
   "housingType": "Maison vue mer",
   "idealPeriods": {
@@ -75,7 +75,7 @@
       "visible": true
     },
     "durationBadge": {
-      "text": "**7 nuits sur place**",
+      "text": "**6 nuits sur place**",
       "visible": true
     },
     "includeFlightBadge": {
