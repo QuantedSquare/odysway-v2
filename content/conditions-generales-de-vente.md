@@ -1,17 +1,7 @@
----
-ogImage:
-  props: {}
-schemaOrg: {}
-head:
-  script: []
-sitemap:
-  videos: []
-  images: []
----
-
 ::policies-container
-#title
+#title 
 [Conditions générales de vente]{style="font-weight: bold"}
+
 ::
 
 ::section-container
