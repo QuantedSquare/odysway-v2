@@ -30,7 +30,6 @@
         >
           <DatesPricesItem
             :date="Object.assign(date, { index, lastMinutePrice, earlyBirdPrice })"
-            :section-textes="dateSections"
           />
         </v-col>
       </TransitionGroup>

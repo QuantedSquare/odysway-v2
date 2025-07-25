@@ -166,6 +166,7 @@
             sm="12"
           >
             <v-btn-secondary
+              v-if="enrichedDate?.id"
               :height="width < 500 ? 50 : 60"
               block
               :disabled="enrichedDate.status.status === 'full'"
@@ -177,15 +178,27 @@
                 Réserver
               </span>
             </v-btn-secondary>
+            <v-btn-secondary
+              v-else
+              :height="width < 500 ? 50 : 60"
+              block
+              :disabled="enrichedDate.status.status === 'full'"
+              rounded="md"
+            >
+              <span class="text-body-1 font-weight-bold text-decoration-none">
+                Réserver
+              </span>
+            </v-btn-secondary>
           </v-col>
         </v-row>
         <v-row class="text-size-14 text-grey d-none d-sm-block">
           <v-col
+            v-if="dateSections"
             cols="12"
             class="d-flex align-start flex-column "
           >
             <div
-              v-for="info, index in sectionTextes.ctaList.list"
+              v-for="info, index in dateSections?.ctaList?.list"
               :key="info+index"
               class="d-flex align-center ga-2"
             >
@@ -215,11 +228,11 @@ const { date } = defineProps({
     type: Object,
     required: true,
   },
-  sectionTextes: {
-    type: Object,
-    required: true,
-  },
 })
+
+const { data: dateSections } = useAsyncData('cta-list-dates-price-item', () =>
+  queryCollection('page_voyage_fr').select('dateSections').first(),
+)
 
 const enrichedDate = computed(() => {
   return {
