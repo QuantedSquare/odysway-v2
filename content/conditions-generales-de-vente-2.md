@@ -1,18 +1,10 @@
----
-ogImage:
-  props: {}
-schemaOrg: {}
-head:
-  script: []
-sitemap:
-  videos: []
-  images: []
----
-
 ::policies-container
 #title
 [Conditions générales de vente]{style="font-weight: bold"}
+::
 
+::section-container
+#content
 ***Mise à jour des CGV : 24 juillet 2025***
 
 ## **PRÉAMBULE**
@@ -23,7 +15,7 @@ ODYSWAY est une société par actions simplifiée au capital social de 8 250 €
 
 Ces Conditions s’appliquent à toute vente conclue entre ODYSWAY et un Voyageur, qu’elle soit réalisée par téléphone, internet, courrier électronique ou via toute autre modalité de réservation proposée par ODYSWAY. Elles sont systématiquement portées à la connaissance du Voyageur avant la conclusion du contrat, accompagnées de la fiche d’information préalable conforme à l’arrêté du 1er mars 2018, et prévalent sur tout autre document, sauf conditions particulières dûment acceptées par les deux parties.
 
-Les Conditions en vigueur à la date de confirmation de la réservation prévalent sur toute version antérieure. Elles peuvent être consultées à tout moment sur le site www\.odysway.com et sont également disponibles sur demande.
+Les Conditions en vigueur à la date de confirmation de la réservation prévalent sur toute version antérieure. Elles peuvent être consultées à tout moment sur le site [www.odysway.com](http://www.odysway.com) et sont également disponibles sur demande.
 
 Le fait pour un Voyageur de réserver un séjour implique l’adhésion entière et sans réserve aux présentes Conditions.
 
@@ -63,7 +55,7 @@ Ces informations sont disponibles sur la fiche du séjour en ligne, conformémen
 - Le nombre minimal de participants requis le cas échéant ;
 - Les coordonnées utiles d’ODYSWAY et les garanties légales applicables.
 
-Ces éléments sont visibles sur la fiche du voyage accessible depuis www\.odysway.com, rappelés dans votre devis et inclus dans votre contrat de voyage.
+Ces éléments sont visibles sur la fiche du voyage accessible depuis [www.odysway.com](http://www.odysway.com), rappelés dans votre devis et inclus dans votre contrat de voyage.
 
 Ils sont complétés par la fiche d’information réglementaire fixée par l’arrêté du 1er mars 2018, remise à chaque voyageur avant la conclusion du contrat.
 
@@ -71,7 +63,7 @@ Ils sont complétés par la fiche d’information réglementaire fixée par l’
 
 La commande d’un séjour Odysway s’effectue selon le processus suivant :
 
-1\. Le Client sélectionne le séjour de son choix sur le site www\.odysway.com pour accéder à son descriptif. Il peut également, avant toute inscription, contacter directement l’équipe Odysway par email voyageurs\@odysway.com  ou téléphone +33 (0)1 84 80 79 75 pour poser ses questions ou obtenir des précisions.
+1\. Le Client sélectionne le séjour de son choix sur le site [www.odysway.com](http://www.odysway.com) pour accéder à son descriptif. Il peut également, avant toute inscription, contacter directement l’équipe Odysway par email <voyageurs@odysway.com>  ou téléphone +33 (0)1 84 80 79 75 pour poser ses questions ou obtenir des précisions.
 
 2\. Le Client choisit une date de départ parmi celles proposées, ou fait une demande de devis personnalisé dans le cadre d’un séjour privatif ou sur mesure.
 
@@ -89,11 +81,11 @@ La commande d’un séjour Odysway s’effectue selon le processus suivant :
 
 9\. Les informations figurant dans le courrier électronique de confirmation ainsi que le devis constituent le contrat conclu entre le Client et Odysway. Les documents de voyage (carnet de route, contacts, informations logistiques) sont transmis environ 7 à 10 jours avant le départ, ou jusqu’à la veille en cas de départ imminent.
 
-10\. En cas de difficulté lors de la réservation, le Client peut contacter le service client d’Odysway à voyageurs\@odysway.com ou au +33 (0)1 84 80 79 75 pour être assisté à distance.
+10\. En cas de difficulté lors de la réservation, le Client peut contacter le service client d’Odysway à <voyageurs@odysway.com> ou au +33 (0)1 84 80 79 75 pour être assisté à distance.
 
 ## **3. PRIX**
 
-Les prix affichés sur le site www\.odysway.com sont exprimés en euros, toutes taxes comprises (TTC). Ils sont calculés à partir des données économiques disponibles au moment de leur publication (tarifs de transport, taxes, taux de change, etc.).
+Les prix affichés sur le site [www.odysway.com](http://www.odysway.com) sont exprimés en euros, toutes taxes comprises (TTC). Ils sont calculés à partir des données économiques disponibles au moment de leur publication (tarifs de transport, taxes, taux de change, etc.).
 
 Ces prix peuvent varier selon :
 
@@ -188,7 +180,7 @@ Tout achat réglé par bon cadeau ou avoir est remboursé sous forme d’un nouv
 
 ### **6.1 Modification à l’initiative du client**
 
-Toute demande de modification de réservation (date, nom, prestation, options, etc.) doit être adressée par email à voyageurs\@odysway.com. 
+Toute demande de modification de réservation (date, nom, prestation, options, etc.) doit être adressée par email à <voyageurs@odysway.com>. 
 
 Les modifications sont soumises à l’acceptation préalable et écrite d’Odysway, ainsi qu’à la disponibilité des prestations concernées.
 
@@ -233,19 +225,19 @@ Des adaptations mineures peuvent être apportées au programme pour des raisons 
 
 ### **7.1 Annulation par le client**
 
-Toute demande d’annulation doit être envoyée par e-mail à : **voyageurs\@odysway.com**. La date de réception du message fait foi.
+Toute demande d’annulation doit être envoyée par e-mail à : [**voyageurs@odysway.com**](mailto\:voyageurs@odysway.com). La date de réception du message fait foi.
 
 En cas d’annulation, des frais sont appliqués selon la nature de la prestation réservée. Ils sont prélevés sur les sommes déjà versées (acompte ou solde).
 
 #### **Prestations sans transport aérien :** 
 
-- *Remboursement intégral,* hors frais bancaires éventuels liés au paiement initial **
+- *Remboursement intégral,* hors frais bancaires éventuels liés au paiement initial \*\*
 - Entre 59 et 31 jours avant le départ : retenue de 30 % du montant total.
 - Moins de 30 jours avant le départ ou en cas de non-présentation : 100 % du montant total retenu.
 
 #### **Prestations avec transport aérien :**
 
-- Remboursement intégral de la partie terrestre, hors frais bancaires éventuels. Le transport aérien reste dû à 100 % s’il est non remboursable ou soumis à des conditions strictes. **
+- Remboursement intégral de la partie terrestre, hors frais bancaires éventuels. Le transport aérien reste dû à 100 % s’il est non remboursable ou soumis à des conditions strictes. \*\*
 - **Entre 59 et 31 jours avant le départ** : retenue de 30 % de la partie terrestre + 100 % du transport aérien s’il est non remboursable.
 - **Moins de 30 jours avant le départ ou non-présentation** : 100 % du montant total (partie terrestre + transport aérien non remboursable).
 
@@ -282,7 +274,7 @@ Dans le cas d’un nombre de participants inférieur au minimum requis, Odysway 
 
 Le client peut céder son contrat à un cessionnaire qui remplit les mêmes conditions que lui pour effectuer le voyage ou le séjour, tant que ce contrat n'a produit aucun effet.
 
-Conformément à l'article L.211-11 du Code du tourisme, cette cession n'est soumise à aucune autorisation préalable de la part d'Odysway. Le client (le cédant) doit simplement informer Odysway de sa décision **au plus tard sept jours avant le début du voyage**, par tout moyen permettant d’en obtenir un accusé de réception (par exemple par email à voyageurs\@odysway.com).
+Conformément à l'article L.211-11 du Code du tourisme, cette cession n'est soumise à aucune autorisation préalable de la part d'Odysway. Le client (le cédant) doit simplement informer Odysway de sa décision **au plus tard sept jours avant le début du voyage**, par tout moyen permettant d’en obtenir un accusé de réception (par exemple par email à <voyageurs@odysway.com>).
 
 Les frais de cession pourront être facturés au client sur justificatif. En particulier, les frais de cession supplémentaires facturés par la ou les compagnies aériennes seront à la charge du client, notamment si le contrat comprend un ou plusieurs vols (réguliers, low-cost, etc.) et/ou si les billets ont déjà été émis. Dans certains cas, ces frais peuvent excéder le prix du billet initial.
 
@@ -310,9 +302,9 @@ En cas de refus d’embarquement ou d’entrée sur un territoire en raison de d
 
 Odysway recommande de consulter régulièrement les sites suivants :
 
-- www\.diplomatie.gouv.fr (Ministère de l’Europe et des Affaires étrangères)
-- www\.pasteur.fr (Institut Pasteur pour les conseils sanitaires et vaccins)
-- www\.service-public.fr (renseignements administratifs)
+- [www.diplomatie.gouv.fr](http://www.diplomatie.gouv.fr) (Ministère de l’Europe et des Affaires étrangères)
+- [www.pasteur.fr](http://www.pasteur.fr) (Institut Pasteur pour les conseils sanitaires et vaccins)
+- [www.service-public.fr](http://www.service-public.fr) (renseignements administratifs)
 
 Pour les pays de l’Union européenne, il est également conseillé de se munir de la **carte européenne d’assurance maladie (CEAM)**, à demander auprès de sa caisse d’assurance maladie.
 
@@ -403,7 +395,7 @@ Chaque compagnie aérienne a sa propre politique en matière de transport de fem
 
 Les animaux de compagnie ne sont généralement **pas admis** dans le cadre des séjours proposés par Odysway, pour des raisons d’organisation, d’hygiène ou de sécurité (hébergements collectifs, activités de groupe, logistique locale).
 
-Toutefois, **certains séjours peuvent, à titre exceptionnel, l’autoriser**. Il appartient au voyageur d’en faire expressément la demande **avant toute réservation**, par email à voyageurs\@odysway.com.
+Toutefois, **certains séjours peuvent, à titre exceptionnel, l’autoriser**. Il appartient au voyageur d’en faire expressément la demande **avant toute réservation**, par email à <voyageurs@odysway.com>.
 
 Sans validation écrite préalable de la part d’Odysway, **aucun animal ne sera accepté** sur place. En cas de non-respect, l’accès au séjour pourra être refusé sans possibilité de remboursement.
 
@@ -477,14 +469,14 @@ En cas de non-conformité ou d’incident pendant le séjour, le Voyageur est in
 
 Toute réclamation formelle peut être adressée :
 
-- par e-mail à : contact\@odysway.com ;
+- par e-mail à : <contact@odysway.com> ;
 - ou par courrier recommandé avec accusé de réception à l’adresse suivante : Odysway, 61 rue de Lyon, Paris 75012.
 
 Elle doit être formulée dans un délai raisonnable, idéalement dans les 15 jours suivant le retour. Odysway accuse réception du dossier et procède à l’analyse des faits, en s’appuyant uniquement sur les éléments contractuels. Une réponse sera apportée sous un délai de quatre (4) semaines, délai qui peut être prolongé si des vérifications doivent être menées auprès de prestataires extérieurs.
 
 En cas de désaccord persistant après saisie d’Odysway et en l’absence de solution amiable dans un délai de 60 jours, le Voyageur peut saisir gratuitement le Médiateur du Tourisme et du Voyage (MTV) à l’adresse suivante :
 
-Médiation Tourisme et Voyage – BP 80303 – 75823 Paris Cedex 17 Site internet : https\://www\.mtv.travel
+Médiation Tourisme et Voyage – BP 80303 – 75823 Paris Cedex 17 Site internet : <https://www.mtv.travel>
 
 **18. Données personnelles**
 
@@ -501,13 +493,13 @@ Odysway s’engage à ne jamais vendre ni louer les données à des tiers non au
 
 Conformément à la réglementation, chaque client dispose d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition, et de portabilité de ses données. Pour exercer ces droits, il suffit de contacter :
 
-Odysway – Service Clients, 61 rue de Lyon, 75012 Paris - ou par e-mail à contact\@odysway.com
+Odysway – Service Clients, 61 rue de Lyon, 75012 Paris - ou par e-mail à <contact@odysway.com>
 
-En cas de litige, une réclamation peut être adressée à la CNIL : www\.cnil.fr. La politique de confidentialité complète est disponible sur : https\://odysway.com/politique-de-confidentialite
+En cas de litige, une réclamation peut être adressée à la CNIL : [www.cnil.fr](http://www.cnil.fr). La politique de confidentialité complète est disponible sur : <https://odysway.com/politique-de-confidentialite>
 
 **19. Propriété intellectuelle**
 
-Tous les contenus présents sur le site www\.odysway.com (textes, visuels, sons, logos, vidéos, photos, structure) sont la propriété exclusive de la société Odysway ou de ses partenaires, et sont protégés par les lois françaises et internationales en matière de propriété intellectuelle.
+Tous les contenus présents sur le site [www.odysway.com](http://www.odysway.com) (textes, visuels, sons, logos, vidéos, photos, structure) sont la propriété exclusive de la société Odysway ou de ses partenaires, et sont protégés par les lois françaises et internationales en matière de propriété intellectuelle.
 
 Toute reproduction, représentation, adaptation ou utilisation partielle ou totale de ces contenus sans autorisation écrite d’Odysway est strictement interdite et constituerait une contrefaçon sanctionnée par le Code de la Propriété Intellectuelle.
 
@@ -521,7 +513,7 @@ Les présentes Conditions Générales de Vente sont soumises au droit français.
 
 Si une disposition des présentes CGV devait être déclarée nulle ou inapplicable, les autres dispositions resteraient pleinement en vigueur.
 
-Odysway se réserve le droit de modifier ses Conditions Générales de Vente à tout moment. Les CGV applicables sont celles en vigueur à la date de la commande, disponibles sur le site www\.odysway.com.
+Odysway se réserve le droit de modifier ses Conditions Générales de Vente à tout moment. Les CGV applicables sont celles en vigueur à la date de la commande, disponibles sur le site [www.odysway.com](http://www.odysway.com).
 
 Une copie des CGV en vigueur au moment de la réservation peut être remise au voyageur sur simple demande.
 
@@ -557,7 +549,4 @@ Pour plus d'informations sur les droits essentiels au titre de la [directive (UE
 **Directive (UE) 2015/2302 transposée dans le Code du tourisme :**
 
 [https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036242695\&cidTexte=LEGITEXT000006074073]()
-::
-
-::section-container
 ::
