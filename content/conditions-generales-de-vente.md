@@ -1,3 +1,14 @@
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
+
 ::policies-container
 #title
 [Conditions générales de vente]{style="font-weight: bold"}
@@ -524,7 +535,7 @@ Vous bénéficierez donc de tous les droits octroyés par l'Union européenne ap
 
 En outre, comme l'exige la loi, Odysway dispose d'une protection afin de rembourser vos paiements et, si le transport est compris dans le forfait, d'assurer votre rapatriement au cas où elle  deviendrait insolvable.
 
-Pour plus d'informations sur les droits essentiels au titre de la directive (UE) 2015/2302.
+Pour plus d'informations sur les droits essentiels au titre de la [directive (UE) 2015/2302](https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015L2302\&from=FR).
 
 ### **Droits essentiels au titre de la directive (UE) 2015/2302 transposée dans le code du tourisme :**
 
@@ -545,7 +556,7 @@ Pour plus d'informations sur les droits essentiels au titre de la directive (UE)
 
 **Directive (UE) 2015/2302 transposée dans le Code du tourisme :**
 
-https\://www\.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036242695\&cidTexte=LEGITEXT000006074073
+[https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036242695\&cidTexte=LEGITEXT000006074073]()
 ::
 
 ::section-container
