@@ -211,7 +211,15 @@
     "src": "/images/voyages/bivouac-montagne-pyrenees/IuMvK6q7QfqjlvnT7C6L.jpg",
     "alt": "image secondaire du voyage Initiation au bivouac en montagne dans les Pyrénées"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg",
+      "alt": "tente montagne"
+    },
+    {
+      "src": "/images/voyages/bivouac-montagne-pyrenees/3Mm5BStbRXWiTTTUswGM.jpg"
+    }
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [
