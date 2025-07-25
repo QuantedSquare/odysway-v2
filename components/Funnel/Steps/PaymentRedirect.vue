@@ -2,7 +2,7 @@
   <v-container>
     <!-- Prévoir Promo form -->
 
-    <v-card-text v-if="model && voyage.alreadyPaid < voyage.totalTravelPrice">
+    <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row>
         <v-col cols="12">
           <template v-if="isBooking">
@@ -165,7 +165,7 @@ const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-
+console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
 const isBooking = ref(route.query.type === 'booking')

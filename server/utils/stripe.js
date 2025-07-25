@@ -11,6 +11,7 @@ const createCheckoutSession = async (order) => {
     activecampaign.getDealById(order.dealId),
     activecampaign.getDealCustomFields(order.dealId),
   ])
+  console.log('===========fetchedDeal in stripe.js===========', fetchedDeal)
   const deal = { ...fetchedDeal.deal, ...customFields }
 
   const isDev = config.public.environment !== 'production'

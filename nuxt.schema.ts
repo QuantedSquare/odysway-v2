@@ -61,16 +61,23 @@ export default defineNuxtSchema({
           title: 'Texte du bouton gauche',
           description: 'Texte du bouton gauche',
           icon: 'i-mdi-text-box-plus-outline',
-          default: 'Notre vision du voyage',
+          default: 'Nos voyages',
         }),
         textButton2: field({
           type: 'string',
-          title: 'Texte du bouton droit',
-          description: 'Texte du bouton droit',
+          title: 'Texte du bouton 2',
+          description: 'Texte du bouton 2',
+          icon: 'i-mdi-text-box-plus-outline',
+          default: 'Notre vision du voyage',
+        }),
+        textButton3: field({
+          type: 'string',
+          title: 'Texte du bouton 3',
+          description: 'Texte du bouton 3',
           icon: 'i-mdi-text-box-plus-outline',
           default: '01 00 00 00 00',
         }),
-        textButton3: field({
+        textButton4: field({
           type: 'string',
           title: 'Texte du bouton droit',
           description: 'Texte du bouton droit',
@@ -434,7 +441,7 @@ export default defineNuxtSchema({
                 }),
               },
             }),
-            ccolonne4: group({
+            colonne4: group({
               title: 'Où nous trouver',
               description: 'Adresse et coordonnées',
               icon: 'i-mdi-link-variant',

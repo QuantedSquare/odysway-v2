@@ -10,9 +10,15 @@ export function useDates() {
     isLoading.value = false
   }
 
-  watch(route, () => {
-    getDates()
-  }, { immediate: true })
+  // watch(route, () => {
+  //   getDates()
+  // }, { immediate: true })
+  onMounted(() => {
+    if (route.params.voyageSlug) {
+      getDates()
+    }
+    return dates.value
+  })
 
   return { dates, getDates, isLoading }
 }

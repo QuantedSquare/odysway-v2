@@ -55,7 +55,7 @@ const customFieldsMapDeal = {
   43: 'flightTicketBought',
   44: 'restToPay',
   45: 'utm',
-  46: 'includedFlight',
+  46: 'includeFlight',
   47: 'insuranceCommissionPerTraveler', // Commision assurnace par pax
   56: 'depositPrice',
   57: 'basePricePerTraveler',
@@ -414,9 +414,9 @@ const recalculatTotalValues = async (dealId) => {
   // const promoTeen = customFields.promoTeen || 0
   const promoEarlybird = customFields.gotEarlybird === 'Oui' ? customFields.promoEarlybird : 0
   const promoLastMinute = customFields.gotLastMinute === 'Oui' ? customFields.promoLastMinute : 0
-  console.log('===========customFields.includedFlight', customFields.includedFlight, '========')
+  console.log('===========customFields.includeFlight', customFields.includeFlight, '========')
   const indivRoomPrice = customFields.indivRoom === 'Oui' ? (customFields.indivRoomPrice || 0) : 0
-  const flightPrice = customFields.includedFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
+  const flightPrice = customFields.includeFlight === 'Oui' ? (customFields.flightPrice || 0) : 0
   const extensionPrice = customFields.extensionPrice || 0
   const insurancePrice = (customFields.insurance && customFields.insurance !== 'Aucune Assurance') ? customFields.insuranceCommissionPrice : 0
   const alreadyPaid = customFields.alreadyPaid || 0

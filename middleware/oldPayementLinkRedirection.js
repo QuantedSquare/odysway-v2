@@ -10,6 +10,7 @@ export default defineNuxtRouteMiddleware(async () => {
     .select('*')
     .eq('deal_id', route.query.orderId)
 
+  console.log('===========existingBookedDate in oldPayementLinkRedirection.js===========', existingBookedDate)
   if (bookedDateError) {
     console.error('Error fetching existing booked date:', bookedDateError)
     return // Optionally, redirect to an error page
@@ -26,6 +27,7 @@ export default defineNuxtRouteMiddleware(async () => {
     console.error('Forbidden')
     return // Optionally, redirect to an error page
   }
+  console.log('deal in oldPayementLinkRedirection.js', deal)
 
   // Try to find an existing travel date
   const { data: existingTravelDate, error: travelDateError } = await supabase
@@ -34,6 +36,7 @@ export default defineNuxtRouteMiddleware(async () => {
     .eq('departure_date', deal.departureDate)
     .eq('travel_slug', deal.slug)
 
+  console.log('===========existingTravelDate in oldPayementLinkRedirection.js===========', existingTravelDate)
   if (travelDateError) {
     console.error('Error fetching travel date:', travelDateError)
     return // Optionally, redirect to an error page
@@ -100,7 +103,7 @@ async function createNewBooking(deal) {
       min_travelers: 1,
       early_bird: deal.gotEarlyBird === 'Oui',
       last_minute: deal.gotLastMinute === 'Oui',
-      include_flight: deal.includedFlight === 'Oui',
+      include_flight: deal.includeFlight === 'Oui',
       booked_seat: 0,
       flight_price: +deal.flightPrice / 100,
       badges: '',

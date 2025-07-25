@@ -6,7 +6,6 @@
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
       v-model="currentStep"
-
       :page="pageTexts"
       :skipper-mode="skipperMode"
       :show-insurance="!!showInsuranceStep"
@@ -144,7 +143,7 @@
         </v-col>
 
         <v-col
-          v-if="currentStep > 0 && skipperMode === 'normal'"
+          v-if="currentStep > 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
           cols="12"
           :md="4"
           class="d-none d-md-block"
@@ -159,7 +158,7 @@
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
-        v-if="currentStep !== 0 && skipperMode === 'normal'"
+        v-if="currentStep !== 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
         ref="summaryRef"
         :voyage="voyage"
         :page-texts="pageTexts"
@@ -317,11 +316,13 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       insurance: deal.insurance,
       insuranceCommissionPrice: deal.insuranceCommissionPrice || 0,
       insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler || 0,
+      alreadyPaid: deal.alreadyPaid,
     }
 
     dynamicDealValues.value = dynamicValues
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-
+    console.log('checkoutType', checkoutType.value)
+    console.log('deal', deal)
     const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
@@ -348,9 +349,10 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       includeFlight: deal.includeFlight === 'Oui',
       flightPrice: deal.flightPrice || 0,
       promoValue: deal.promoValue || 0,
-      alreadyPaid: deal.alreadyPaid,
+      alreadyPaid: deal.alreadyPaid || 0,
       totalTravelPrice: deal.value,
     }
+    console.log('voyageStaticValues', voyageStaticValues)
     await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
     return voyageStaticValues
   }
@@ -363,6 +365,7 @@ const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = 5
   skipperMode.value = 'summary'
+  console.log('skipperMode', skipperMode.value)
 }
 
 const nextStep = () => {

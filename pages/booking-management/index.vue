@@ -129,18 +129,23 @@ const goToCustomTravels = () => {
 }
 
 const filteredTravels = computed(() => {
-  const enrichedTravelsDate = travels.value?.map((travel) => {
-    const correspondingTravel = travelesList.find(t => t.slug === travel.travel_slug)
+  // Merge travelesList (all possible travels) with booking data from travels.value
+  return travelesList.map((travel) => {
+    const bookingData = travels.value.find(t => t.travel_slug === travel.slug)
     return {
-      ...travel,
-      image: correspondingTravel?.image?.src,
-      title: correspondingTravel?.title,
+      ...bookingData,
+      travel_slug: travel.slug,
+      image: travel.image?.src,
+      title: travel.title,
+      nb_dates: bookingData?.nb_dates || 0,
+      booked_seats: bookingData?.booked_seats || 0,
     }
+  }).filter((travel) => {
+    if (search.value) {
+      return travel.travel_slug.includes(search.value)
+    }
+    return true
   })
-  if (search.value) {
-    return enrichedTravelsDate?.filter(travel => travel.travel_slug.includes(search.value))
-  }
-  return enrichedTravelsDate
 })
 
 onMounted(fetchTravels)

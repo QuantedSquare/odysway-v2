@@ -1,6 +1,6 @@
 <template>
   <v-lazy
-    :options="{ threshold: 0.5 }"
+    :options="{ threshold: 0.1 }"
     transition="fade-transition"
     class="bg-grey-light-3 rounded-xl custom-height-lazy"
   >

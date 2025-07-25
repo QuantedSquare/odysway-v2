@@ -1,7 +1,11 @@
 {
   "published": true,
   "title": "Immersion au cœur d'un observatoire astronomique",
-  "destinations": [],
+  "destinations": [
+    {
+      "name": "Alpes"
+    }
+  ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
   "customAvailable": false,
@@ -27,8 +31,8 @@
       "name": "voyage-sans-avion"
     }
   ],
-  "duration": 0,
-  "nights": 0,
+  "duration": 7,
+  "nights": 6,
   "includeFlight": false,
   "housingType": "Observatoire",
   "idealPeriods": {

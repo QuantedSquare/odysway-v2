@@ -55,25 +55,33 @@
                 label="Slug du voyage"
                 readonly
               />
-              <v-text-field
-                v-model="form.id"
-                :model-value="`${config.public.siteURL}/checkout?date_id=${form.id}`"
-                label="Lien funnel"
-                readonly
-              >
-                <template #append-inner>
-                  <v-btn
-                    icon
-                    color="primary"
-                    size="x-small"
-                    @click="copyId"
-                  >
-                    <v-icon>
-                      {{ mdiLinkEdit }}
-                    </v-icon>
-                  </v-btn>
-                </template>
-              </v-text-field>
+              <div class="d-flex align-center ga-2 justify-space-between">
+                <v-select
+                  v-model="funnelLinkType"
+                  :items="funnelLinkTypes"
+                  item-title="label"
+                  label="Type de lien funnel"
+                  style="max-width: 200px;"
+                />
+                <v-text-field
+                  :model-value="funnelLink"
+                  label="Lien funnel"
+                  readonly
+                >
+                  <template #append-inner>
+                    <v-btn
+                      icon
+                      color="primary"
+                      size="x-small"
+                      @click="copyFunnelLink"
+                    >
+                      <v-icon>
+                        {{ mdiLinkEdit }}
+                      </v-icon>
+                    </v-btn>
+                  </template>
+                </v-text-field>
+              </div>
               <v-select
                 v-model="form.status"
                 label="Statut affiché"
@@ -693,6 +701,18 @@ const paymentTypes = [
   { value: 'balance', label: 'Paiement du solde' },
 ]
 
+const funnelLinkType = ref('deposit')
+const funnelLinkTypes = [
+  { value: 'deposit', label: 'Acompte' },
+  { value: 'full', label: 'Total' },
+  // { value: 'balance', label: 'Solde' },
+  // { value: 'custom', label: 'Custom' },
+]
+const funnelLink = computed(() => {
+  if (!form.value.id) return ''
+  return `${config.public.siteURL}/checkout?date_id=${form.value.id}&type=${funnelLinkType.value}`
+})
+
 const fetchDetails = async () => {
   // Fetch travel_date details
   const res = await fetch(`/api/v1/booking/date/${dateId}`)
@@ -791,11 +811,6 @@ const deleteTraveler = async (id) => {
   await fetchDetails()
 }
 
-const copyId = () => {
-  navigator.clipboard.writeText(`${config.public.siteURL}/checkout?date_id=${form.value.id}`)
-  snackbar.value = true
-}
-
 function openPaymentDialog(traveler) {
   selectedTraveler.value = traveler
   console.log('selectedTraveler', selectedTraveler.value)
@@ -829,6 +844,13 @@ function generateLink() {
 function copyLink() {
   if (generatedLink.value) {
     navigator.clipboard.writeText(generatedLink.value)
+  }
+}
+
+function copyFunnelLink() {
+  if (funnelLink.value) {
+    navigator.clipboard.writeText(funnelLink.value)
+    snackbar.value = true
   }
 }
 
