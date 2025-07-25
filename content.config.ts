@@ -454,6 +454,11 @@ export default defineContentConfig({
           })).describe('Liste des points de la section'),
         }).describe('Section pourquoi, defini dans le dossier voyagesv2'),
         otherIdeas: z.string().describe('Titre de la section carousel propositions de voyages'),
+        pageNotFound: z.object({
+          description: z.string().describe('Description de la section'),
+          buttonText: z.string().describe('Texte du bouton'),
+          buttonTo: z.string().describe('Lien du bouton'),
+        }).describe('Section page non trouvée'),
       }),
     }),
     page_search: defineCollection({
