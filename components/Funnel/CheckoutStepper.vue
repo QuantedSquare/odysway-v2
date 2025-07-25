@@ -363,8 +363,8 @@ const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
-  currentStep.value = 5
-  skipperMode.value = 'summary'
+  currentStep.value = route.query.type === 'custom' ? 1 : 5
+  skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
   console.log('skipperMode', skipperMode.value)
 }
 
