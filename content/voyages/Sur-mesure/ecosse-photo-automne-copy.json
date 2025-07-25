@@ -11,11 +11,15 @@
   "customAvailable": true,
   "experienceType": "Apprendre en voyage",
   "level": "1",
-  "categories": [],
+  "categories": [
+    {
+      "name": "sejours-stage-photographie"
+    }
+  ],
   "duration": 8,
   "nights": 7,
   "includeFlight": false,
-  "housingType": "",
+  "housingType": "Maison vue mer",
   "idealPeriods": {
     "toutePeriodes": false,
     "janvier": true,
@@ -56,7 +60,7 @@
     "affixeAuthor": ""
   },
   "experiencesBlock": [],
-  "slug": "Portugal-photo-lenoir",
+  "slug": "portugal-photo-lenoir",
   "description": "Voyage photographique au Portugal",
   "emailDescription": "",
   "metaDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Portugal, en petit groupe.",
@@ -113,19 +117,19 @@
   "accompanistsList": [],
   "housingBlock": [
     {
-      "title": "",
-      "housingType": "",
+      "title": "Maison avec vue mer",
+      "housingType": "En chambre partagée ou en chambre individuelle avec supplément de 100eur",
       "housingMood": "",
       "image": []
     }
   ],
   "image": {
-    "src": "portugal",
+    "src": "/images/destinations/Portugal/city-4820579-1280.jpg",
     "alt": "image principale du voyage Séjour photographique Portugal"
   },
   "imageSecondary": {
-    "src": "",
-    "alt": "image secondaire du voyage Séjour photographique en Ecosse"
+    "src": "/images/destinations/Portugal/lisbon-8268841-1280.jpg",
+    "alt": "image secondaire du voyage Séjour photographique au Portugal"
   },
   "photosList": [],
   "videoLinks": [],
@@ -133,19 +137,19 @@
     "faqList": []
   },
   "seoSection": {
-    "metaTitle": "Séjour photographique en Ecosse",
-    "canonicalUrl": "https://www.odysway.com/voyages/ecosse-photo-automne",
-    "ogTitle": "Séjour photographique en Ecosse",
-    "ogDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+    "metaTitle": "Séjour photographique au Portugal",
+    "canonicalUrl": "https://www.odysway.com/voyages/portugal-photo-lenoir",
+    "ogTitle": "Séjour photographique au Portugal",
+    "ogDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Por, en petit groupe.",
     "ogImage": {
-      "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
-      "alt": "image principale du voyage Séjour photographique en Ecosse"
+      "src": "/images/destinations/Portugal/city-4820579-1280.jpg",
+      "alt": "image principale du voyage Séjour photographique au Portugal"
     },
-    "twitterTitle": "Séjour photographique en Ecosse",
-    "twitterDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+    "twitterTitle": "Séjour photographique au Portugal",
+    "twitterDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Portugal, en petit groupe.",
     "twitterImage": {
-      "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
-      "alt": "image principale du voyage Séjour photographique en Ecosse"
+      "src": "/images/destinations/Portugal/portugal-4442631-1280.jpg",
+      "alt": "image principale du voyage Séjour photographique Portugal"
     },
     "twitterCard": "summary_large_image"
   }

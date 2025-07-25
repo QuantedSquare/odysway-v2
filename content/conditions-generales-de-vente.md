@@ -1,12 +1,22 @@
-::policies-container
-#title 
-[Conditions générales de vente]{style="font-weight: bold"}
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
 
+::policies-container
+#title
+[Conditions générales de vente]{style="font-weight: bold"}
 ::
 
 ::section-container
 #content
-***Mise à jour des CGV : 24 juillet 2025***
+*Mise à jour des CGV : 24 juillet 2025*
 
 ## **PRÉAMBULE**
 
@@ -232,15 +242,17 @@ En cas d’annulation, des frais sont appliqués selon la nature de la prestatio
 
 #### **Prestations sans transport aérien :** 
 
-- *Remboursement intégral,* hors frais bancaires éventuels liés au paiement initial \*\*
+- *Remboursement intégral,* hors frais bancaires éventuels liés au paiement initial \*\*.
 - Entre 59 et 31 jours avant le départ : retenue de 30 % du montant total.
 - Moins de 30 jours avant le départ ou en cas de non-présentation : 100 % du montant total retenu.
+-
 
 #### **Prestations avec transport aérien :**
 
 - Remboursement intégral de la partie terrestre, hors frais bancaires éventuels. Le transport aérien reste dû à 100 % s’il est non remboursable ou soumis à des conditions strictes. \*\*
 - **Entre 59 et 31 jours avant le départ** : retenue de 30 % de la partie terrestre + 100 % du transport aérien s’il est non remboursable.
 - **Moins de 30 jours avant le départ ou non-présentation** : 100 % du montant total (partie terrestre + transport aérien non remboursable).
+-
 
 #### **Cas particulier :**
 
@@ -547,7 +559,5 @@ Pour plus d'informations sur les droits essentiels au titre de la [directive (UE
 
  Odysway a souscrit une protection contre l’insolvabilité auprès de **l’APST – 15 avenue Carnot, 75017 Paris**. Les voyageurs peuvent prendre contact avec cette entité si des services leur sont refusés en raison de l’insolvabilité d’Odysway.
 
-**Directive (UE) 2015/2302 transposée dans le Code du tourisme :**
-
-[https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036242695\&cidTexte=LEGITEXT000006074073]()
+**Directive (UE) 2015/2302 transposée dans le Code du tourisme :** [https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036242695\&cidTexte=LEGITEXT000006074073]()
 ::
