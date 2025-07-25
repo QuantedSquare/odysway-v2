@@ -404,7 +404,6 @@ function calculateDepositValue(data) {
 }
 
 const appliedPrice = computed(() => {
-  console.log('===========appliedPrice in Summary.vue===========', model.value)
   if (!model.value) return 0
 
   if (model.value.alreadyPaid >= totalValue.value) {

@@ -845,11 +845,11 @@ export default defineContentConfig({
       source: 'voyages/**/*.json',
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),
-        title: z.string().describe('Titre du voyage'),
-        slug: z.string().describe('Slug du voyage'),
+        title: z.string().describe('[Requis*]Titre du voyage'),
+        slug: z.string().describe('[Requis*]Slug du voyage'),
         destinations: z.array(z.object({
           name: z.enum(destinationChoices),
-        })).describe('Destinations du voyage'),
+        })).describe('[Requis*]Destinations du voyage'),
         groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
         privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
         customAvailable: z.boolean().describe('Indique si le voyage est disponible en sur-mesure'),
