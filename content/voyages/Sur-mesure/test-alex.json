@@ -1,0 +1,33 @@
+{
+  "title": "Test Alex",
+  "faqBlock": {
+    "faqList": []
+  },
+  "videoLinks": [],
+  "photosList": [],
+  "housingBlock": [],
+  "accompanistsList": [],
+  "pricing": {
+    "airportCode": []
+  },
+  "pricingDetailsBlock": {
+    "exclude": [],
+    "include": []
+  },
+  "programmeBlock": [],
+  "experiencesBlock": [],
+  "categories": [],
+  "destinations": [
+    {
+      "name": "Japon"
+    }
+  ],
+  "slug": "test-alex",
+  "groupeAvailable": false,
+  "privatisationAvailable": false,
+  "customAvailable": true,
+  "image": {
+    "src": "/images/voyages/voyage-immersion-culturelle-japon/5wj6lGPFTCGSIeF1TBVF.jpg",
+    "alt": "Test"
+  }
+}
