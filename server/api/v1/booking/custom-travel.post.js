@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
     // Use the first destination for iso/zoneChapka/country, but keep all for destination field
     iso = body.destination.map(d => d.iso).join(',')
     zoneChapka = body.destination[0].chapka
-    country = body.destination.map(d => d.titre).join(',')
+    country = body.destination.map(d => d.title).join(',')
     // destinationTitles = body.destination.map(d => d.titre).join(',')
   }
 

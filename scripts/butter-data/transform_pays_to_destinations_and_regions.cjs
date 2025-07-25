@@ -84,7 +84,7 @@ pays.forEach((p) => {
   const slug = slugify(nom, { lower: true })
   const imageFilename = generateImageFilename(p.image, slug)
   const obj = {
-    titre: nom,
+    title: nom,
     chapka: p.zone_chapka,
     iso: p.iso,
     interjection: p.interjection,
