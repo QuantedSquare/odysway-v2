@@ -62,7 +62,7 @@ const { data: destinationContent, status: destinationContentStatus } = useAsyncD
 })
 provide('page', destinationContent)
 
-const { data: voyages } = useAsyncData('voyages', async () => {
+const { data: voyages } = useAsyncData(`voyages-${slug.value}`, async () => {
   const travelList = await queryCollection('voyages').where('published', '=', true).all()
   let filtered = []
   if (isDestination.value) {
