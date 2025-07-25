@@ -193,12 +193,12 @@
         </v-row>
         <v-row class="text-size-14 text-grey d-none d-sm-block">
           <v-col
-            v-if="dateSections"
+            v-if="texte"
             cols="12"
             class="d-flex align-start flex-column "
           >
             <div
-              v-for="info, index in dateSections?.ctaList?.list"
+              v-for="info, index in texte?.dateSections?.ctaList?.list"
               :key="info+index"
               class="d-flex align-center ga-2"
             >
@@ -230,9 +230,10 @@ const { date } = defineProps({
   },
 })
 
-const { data: dateSections } = useAsyncData('cta-list-dates-price-item', () =>
+const { data: texte } = useAsyncData('cta-list-dates-price-item', () =>
   queryCollection('page_voyage_fr').select('dateSections').first(),
 )
+console.log('dateSections', texte.value)
 
 const enrichedDate = computed(() => {
   return {
