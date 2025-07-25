@@ -418,8 +418,6 @@ Aucune assurance (annulation, multirisques, assistance ou rapatriement) n’est 
 
 Odysway propose, en partenariat avec **Chapka Assurances**, deux formules optionnelles que le client peut souscrire au moment de la réservation :
 
-- **L’assurance Multirisque**, qui couvre notamment :
-  - L’annulation pour toutes causes justifiées (événement extérieur, soudain, imprévisible, indépendant de votre volonté) ; Les frais médicaux et d’hospitalisation à l’étranger ; Le vol de bagages ; La téléconsultation gratuite ; Et l’assistance/rapatriement.
 - **L’assurance Annulation seule**, qui couvre l’annulation pour toutes causes justifiées, ainsi que certains frais médicaux et le vol de bagages, mais sans garantie d’assistance/rapatriement.
 
 Les conditions détaillées de ces assurances sont disponibles via le lien hypertexte **“Conditions d’assurances”** au moment de la commande.
