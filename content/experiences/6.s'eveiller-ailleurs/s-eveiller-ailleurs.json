@@ -1,13 +1,11 @@
 {
   "published": true,
   "title": "S'éveiller ailleurs",
-  "badgeTitle": "S'éveiller",
-  "slug": "eveil-voyage",
-  "discoveryTitle": "S'éveiller ailleurs",
+  "badgeTitle": "S'éveiller ailleurs",
   "seoTitle": "S'éveiller ailleurs",
+  "showOnHome": true,
+  "discoveryTitle": "s-eveiller-ailleurs",
   "image": {
-    "src": "/images/voyages/retraite-yoga-sikkim-inde/yyTtPoY6SrGH79ncg807.jpg",
-    "alt": "Montagne au Sikkim"
-  },
-  "showOnHome": true
+    "src": "/images/experiences/s-eveiller-ailleurs.jpeg"
+  }
 }
