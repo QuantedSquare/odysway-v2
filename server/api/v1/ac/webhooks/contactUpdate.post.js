@@ -7,8 +7,8 @@ export default defineEventHandler(async (event) => {
   }
   try {
     // Extract contact data from request body
-    console.log('Contact update BODY webhook received', body)
     const body = await readBody(event)
+    console.log('Contact update BODY webhook received', body, 'event', event)
     const { contact } = await readBody(event)
     console.log('Contact update webhook received:', contact)
     // Validate input

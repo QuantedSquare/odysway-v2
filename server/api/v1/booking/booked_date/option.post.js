@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   else {
     // Convert badges from string to array if needed
 
-    // put an option 10 days after now
+    // put an option 7 days after now
     const { data, error } = await supabase
       .from('booked_dates')
       .update({ is_option: true, expiracy_date: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), booked_places: body.booked_places })
