@@ -158,7 +158,7 @@ import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } f
 
 const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
-const runtimeConfig = useRuntimeConfig()
+const config = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
 
 const emit = defineEmits(['previous'])
@@ -306,7 +306,7 @@ const book = async () => {
   updateDeal(dealData)
   // Check si on ajoute le payment link ici
 
-  if (runtimeConfig.public.env === 'production') {
+  if (config.public.environment === 'production') {
     await $fetch('/api/v1/slack/notification', {
       method: 'POST',
       headers: {
