@@ -132,7 +132,7 @@
   },
   "otherIdeas": "D'autres idées de voyage",
   "pageNotFound": {
-    "description": "Malheuresement, ce voyage n'existe pas mais vous pouvez en trouver d'autres sur notre site !",
+    "description": "Malheureusement, ce voyage n'existe pas mais vous pouvez en trouver d'autres sur notre site !",
     "buttonText": "Rechercher un voyage",
     "buttonTo": "/search"
   }

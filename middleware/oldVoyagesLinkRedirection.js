@@ -8,7 +8,6 @@ export default defineNuxtRouteMiddleware(async (to) => {
       .where('slug', '=', cleanVoyageSlug)
       .where('published', '=', true)
       .first()
-
     if (voyage) {
       const targetPath = `/voyages/${voyage.slug}`
       // Only redirect if not already on the correct path
