@@ -28,7 +28,7 @@ Les présentes Conditions s’appliquent à toutes les ventes conclues entre ODY
 
 Les Conditions sont systématiquement communiquées au Voyageur avant toute confirmation de réservation, accompagnées de la fiche d’information préalable conforme à l’arrêté du 1er mars 2018. Elles prévalent sur tout autre document, sauf accord exprès et écrit des deux parties.
 
-La version des Conditions en vigueur au moment de la confirmation de la réservation s’applique. Elles sont disponibles sur simple demande et consultables en permanence sur le site www\.odysway.com.
+La version des Conditions en vigueur au moment de la confirmation de la réservation s’applique. Elles sont disponibles sur simple demande et consultables en permanence sur le site [www.odysway.com](http://www.odysway.com).
 
 Toute réservation de séjour implique l’acceptation pleine et entière des présentes Conditions.
 
