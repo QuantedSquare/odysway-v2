@@ -23,54 +23,54 @@
   "linksList": {
     "colonne1": {
       "title": "Liens utiles",
-      "links": {
-        "link1": {
+      "links": [
+     {
           "text": "À propos",
-          "link": "/a-propos"
+          "to": "/a-propos"
         },
-        "link2": {
+        {
           "text": "Blog",
-          "link": "/blog"
+          "to": "/blog"
         },
-        "link3": {
+        {
           "text": "Contact",
-          "link": "/contact"
+          "to": "/contact"
         }
-      }
+      ]
     },
     "colonne2": {
       "title": "Destinations",
-      "links": {
-        "link1": {
+      "links": [
+        {
           "text": "Europe",
-          "link": "/destinations/europe"
+          "to": "/destinations/europe"
         },
-        "link2": {
+        {
           "text": "Asie",
-          "link": "/destinations/asie"
+          "to": "/destinations/asie"
         },
-        "link3": {
-          "text": "Amérique du Sud",
-          "link": "/destinations/amerique-du-sud"
+        {
+          "text": "Amérique du Suds",
+          "to": "/destinations/amerique-du-sud"
         }
-      }
+      ]
     },
     "colonne3": {
       "title": "Types de voyages",
-      "links": {
-        "link1": {
+      "links": [
+        {
           "text": "Europe",
-          "link": "/destinations/europe"
+          "to": "/destinations/europe"
         },
-        "link2": {
+        {
           "text": "Asie",
-          "link": "/destinations/asie"
+          "to": "/destinations/asie"
         },
-        "link3": {
+        {
           "text": "Amérique du Sud",
-          "link": "/destinations/amerique-du-sud"
+          "to": "/destinations/amerique-du-sud"
         }
-      }
+      ]
     },
     "colonne4": {
       "title": "Où nous rencontrer",
