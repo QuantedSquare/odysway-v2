@@ -291,13 +291,13 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         travelersData[travelerKey] = null
       }
     }
-
+    console.log('deal', deal)
     const dynamicValues = {
       // Details
       nbTravelers: +deal.nbTravelers,
-      nbAdults: +deal.nbAdults,
-      nbChildren: +deal.nbChildren,
-      nbUnderAge: +deal.nbUnderAge,
+      nbAdults: +deal.nbAdults || 1,
+      nbChildren: +deal.nbChildren || 0,
+      nbUnderAge: +deal.nbUnderAge || 0,
       email: deal.contact.email,
       phone: deal.contact.phone,
       firstName: deal.contact.firstName,
