@@ -1066,54 +1066,24 @@ export default defineContentConfig({
         linksList: z.object({
           colonne1: z.object({
             title: z.string().describe('Titre de la colonne'),
-            links: z.object({
-              link1: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 1'),
-              link2: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 2'),
-              link3: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 3'),
-            }).describe('Liens de la colonne 1'),
+            links: z.array(z.object({
+              text: z.string().describe('Texte du lien'),
+              to: z.string().describe('URL de redirection'),
+            })).describe('Liens de la colonne 1'),
           }).describe('Colonne 1'),
           colonne2: z.object({
             title: z.string().describe('Titre de la colonne'),
-            links: z.object({
-              link1: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 1'),
-              link2: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 2'),
-              link3: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 3'),
-            }).describe('Liens de la colonne 2'),
+            links: z.array(z.object({
+              text: z.string().describe('Texte du lien'),
+              to: z.string().describe('URL de redirection'),
+            })).describe('Liens de la colonne 2'),
           }).describe('Colonne 2'),
           colonne3: z.object({
             title: z.string().describe('Titre de la colonne'),
-            links: z.object({
-              link1: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 1'),
-              link2: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 2'),
-              link3: z.object({
-                text: z.string().describe('Texte du lien'),
-                link: z.string().describe('URL de redirection'),
-              }).describe('Lien 3'),
-            }).describe('Liens de la colonne 3'),
+            links: z.array(z.object({
+              text: z.string().describe('Texte du lien'),
+              to: z.string().describe('URL de redirection'),
+            })).describe('Liens de la colonne 3'),
           }).describe('Colonne 3'),
           colonne4: z.object({
             title: z.string().describe('Titre de la colonne'),
