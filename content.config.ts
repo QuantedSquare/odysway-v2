@@ -58,7 +58,7 @@ const destinationChoices = destinationFolders
     const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.json'))
     if (files.length > 0) {
       // Return the filename without extension
-      return JSON.parse(fs.readFileSync(path.join(folderPath, files[0]), 'utf-8')).titre
+      return JSON.parse(fs.readFileSync(path.join(folderPath, files[0]), 'utf-8')).title
     }
     return null
   })
@@ -305,7 +305,7 @@ export default defineContentConfig({
         include: 'destinations/*/*.json',
       },
       schema: z.object({
-        titre: z.string().describe('Titre de la destination'),
+        title: z.string().describe('Titre de la destination'),
         slug: z.string().describe('Slug de la destination'),
         chapka: z.string().describe('Chapka de la destination'),
         iso: z.string().describe('ISO de la destination'),

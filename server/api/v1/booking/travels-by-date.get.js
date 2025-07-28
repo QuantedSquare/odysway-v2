@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
       comments: travel.comments,
       groupeAvailable: travel.groupeAvailable,
       startingPrice: travel.pricing.startingPrice,
-      iso: travel.destinations.map(destination => destinations.find(d => d.titre === destination.name)?.iso),
+      iso: travel.destinations.map(destination => destinations.find(d => d.title === destination.name)?.iso),
       dates,
       duration: travel.duration,
     }

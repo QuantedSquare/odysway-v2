@@ -106,7 +106,7 @@ const { data: searchContent } = await useAsyncData('search-content', () =>
 
 const { data: fetchedDestination } = useAsyncData('fetchedDestination', () => {
   if (route.query.destination) {
-    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('titre', 'interjection', 'image').first()
+    return queryCollection('destinations').where('stem', '=', `destinations/${route.query.destination}/${route.query.destination}`).where('published', '=', true).select('title', 'interjection', 'image').first()
   }
   return null
 }, {
@@ -198,7 +198,7 @@ const { data: voyages } = await useAsyncData(
       else {
         // Otherwise, treat as destination slug
         const found = destinations.value.find(d => d.slug === route.query.destination)
-        if (found) destination = found.titre
+        if (found) destination = found.title
       }
     }
 
@@ -220,7 +220,7 @@ const { data: voyages } = await useAsyncData(
           )
         }
       }
-      const destinationNames = destinationList.map(d => d.titre)
+      const destinationNames = destinationList.map(d => d.title)
       voyages = voyages.filter(v =>
         v.destinations?.some(d => destinationNames.includes(d.name)),
       )

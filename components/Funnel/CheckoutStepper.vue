@@ -204,13 +204,10 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
   if (date_id) {
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
-
     // We fetch the travel details from Nuxt, we always need to have one
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
-
     // We fetch the destinations details from Nuxt, used for insurance
-    const destinations = await queryCollection('destinations').where('titre', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
-
+    const destinations = await queryCollection('destinations').where('title', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
     if (!travel) {
       throw new Error('Travel not found.')
     }

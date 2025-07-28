@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   if (Array.isArray(body.destination) && body.destination.length > 0) {
     iso = body.destination[0].iso
     zoneChapka = body.destination[0].chapka
-    country = body.destination[0].titre
+    country = body.destination[0].title
   }
   // Prepare update data
   const updateData = {
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
     user_email: body.email,
     departure_date: body.departure_date,
     return_date: body.return_date,
-    destination: body.destination.map(d => d.titre),
+    destination: body.destination.map(d => d.title),
     starting_price: Number(body.starting_price),
     include_flight: !!body.include_flight,
     flight_price: body.flight_price ? Number(body.flight_price) : 0,
