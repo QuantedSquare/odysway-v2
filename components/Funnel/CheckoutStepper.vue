@@ -256,8 +256,8 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       nbTeen: 0,
       email: '',
       phone: '',
-      firstname: '',
-      lastname: '',
+      firstName: '',
+      lastName: '',
       optinNewsletter: false,
 
       // Travelers Infos

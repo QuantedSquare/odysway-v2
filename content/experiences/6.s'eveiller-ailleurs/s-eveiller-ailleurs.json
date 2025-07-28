@@ -2,9 +2,10 @@
   "published": true,
   "title": "S'éveiller ailleurs",
   "badgeTitle": "S'éveiller ailleurs",
+  "slug": "s-eveiller-ailleurs",
   "seoTitle": "S'éveiller ailleurs",
   "showOnHome": true,
-  "discoveryTitle": "s-eveiller-ailleurs",
+  "discoveryTitle": "S'éveiller ailleurs",
   "image": {
     "src": "/images/experiences/s-eveiller-ailleurs.jpeg"
   },
