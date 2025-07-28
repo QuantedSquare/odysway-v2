@@ -1,10 +1,11 @@
 <template>
   <div
+    v-if="header"
     class="d-sm-none px-4 px-md-9 d-flex align-center height-app-bar custom-app-bar bg-white"
     :class="!model ? 'app-bar-shadow' : ''"
   >
     <NuxtLink
-      :to="header.to"
+      :to="header.logo.to || '/'"
       class="header-logo-link"
     >
       <NuxtImg
@@ -12,9 +13,9 @@
         as="image"
         format="webp"
         quality="100"
-        :src="LogoOdyswayBleu"
+        :src="logo"
         width="320"
-        alt="Logo principale d'Odysway"
+        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
       />
     </NuxtLink>
@@ -26,17 +27,17 @@
         color="primary"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/search'); captureOutboundLink(header.textButton1) }"
+        @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
       >
-        {{ header.textButton1 }}
+        {{ header.button1.text }}
       </v-btn>
       <v-btn
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton2) }"
+        @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
       >
-        {{ header.textButton2 }}
+        {{ header.button2.text }}
       </v-btn>
       <v-btn
         href="tel: +33184807975"
@@ -45,18 +46,18 @@
         variant="tonal"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
       >
-        <span class="mt-2">{{ header.textButton3 }}</span>
+        <span class="mt-2">{{ header.button3.text }}</span>
       </v-btn>
       <v-btn
         height="45"
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton4) }"
+        @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
       >
-        {{ header.textButton4 }}
+        {{ header.button4.text }}
       </v-btn>
       <v-btn
         class="d-inline d-md-none "
@@ -74,6 +75,7 @@
     </div>
   </div>
   <v-app-bar
+    v-if="header"
     elevation="0"
     mobile
     class="d-header-desktop px-4 px-md-9 d-flex align-center height-app-bar mx-0"
@@ -82,7 +84,7 @@
     :scroll-threshold="scrollThreshold"
   >
     <NuxtLink
-      :to="header.to"
+      :to="header.logo.to || '/'"
       class="header-logo-link"
     >
       <NuxtImg
@@ -90,9 +92,9 @@
         as="image"
         format="webp"
         quality="100"
-        :src="LogoOdyswayBleu"
+        :src="logo"
         width="320"
-        alt="Logo principale d'Odysway"
+        :alt="header.logo.alt || 'Logo principale d\'Odysway'"
         class="header-logo"
       />
     </NuxtLink>
@@ -104,17 +106,17 @@
         color="primary"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/search'); captureOutboundLink(header.textButton1) }"
+        @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
       >
-        {{ header.textButton1 }}
+        {{ header.button1.text }}
       </v-btn>
       <v-btn
         color="primary"
         height="45"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton2) }"
+        @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
       >
-        {{ header.textButton2 }}
+        {{ header.button2.text }}
       </v-btn>
       <v-btn
         href="tel: +33184807975"
@@ -123,18 +125,18 @@
         variant="tonal"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
       >
-        <span class="mt-2">{{ header.textButton3 }}</span>
+        <span class="mt-2">{{ header.button3.text }}</span>
       </v-btn>
       <v-btn
         height="45"
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton4) }"
+        @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
       >
-        {{ header.textButton4 }}
+        {{ header.button4.text }}
       </v-btn>
 
       <v-btn
@@ -156,12 +158,12 @@
 
 <script setup>
 import { mdiMenu } from '@mdi/js'
-import LogoOdyswayBleu from '~/assets/img/Logo-Odysway-Bleu.png'
-
-const { header } = useAppConfig()
+import { useDisplay } from 'vuetify'
 
 const router = useRouter()
 const model = defineModel()
+const { sm } = useDisplay()
+
 defineProps({
   scrollBehavior: {
     type: String,
@@ -172,6 +174,16 @@ defineProps({
     default: 5,
   },
 })
+
+const { data: header } = await useAsyncData('header', () => {
+  return queryCollection('header').first()
+})
+
+const logo = computed(() => {
+  if (!header.value?.logo) return '/logos/Logo-Odysway-Bleu.png'
+  return sm.value ? header.value.logo.mobile : header.value.logo.desktop
+})
+
 const { gtag } = useGtag()
 function captureOutboundLink(btn) {
   gtag('event', 'Header Button', { eventAction: 'Click', eventLabel: `Header button "${btn}"` })

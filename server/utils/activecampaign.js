@@ -372,9 +372,7 @@ const sendSlackNotification = (id, data) => {
 
 const optionNotification = (session) => {
   try {
-    // const deal = await getDealById(session.dealId)
-    // const { client } = await getClientById(deal.deal.contact)
-
+    console.log('===========session in optionNotification===========', session)
     axios({
       url: process.env.SLACK_URL_POSE_OPTION,
       method: 'post',

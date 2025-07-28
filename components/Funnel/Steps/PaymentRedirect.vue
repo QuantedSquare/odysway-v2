@@ -233,8 +233,8 @@ const almaPay = async () => {
   const dataForAlmaSession = {
     paymentType: route.query.type,
     contact: {
-      firstName: model.value.firstname,
-      lastName: model.value.lastname,
+      firstName: model.value.firstName,
+      lastName: model.value.lastName,
       email: model.value.email,
       phone: model.value.phone,
     },
@@ -299,8 +299,8 @@ const book = async () => {
     currentStep: 'A posé une option',
     title: voyage.title,
     nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
-    firstName: model.value.firstname,
-    lastName: model.value.lastname,
+    firstName: model.value.firstName,
+    lastName: model.value.lastName,
   }
 
   updateDeal(dealData)
@@ -314,21 +314,11 @@ const book = async () => {
       },
       body: JSON.stringify(dealData),
     })
+    trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
   }
-  trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 
-// watch([() => currentStep], () => {
-//   if (currentStep === ownStep) {
-//     addSingleParam('step', ownStep)
-//   }
-// }, { immediate: true })
-
-// #TODO Add option only on certain travel ?
-// const showOptionOrPayment = computed(() => {
-//   return checkedOption.value ? 0 : 1
-// })
 watch(checkedOption, (value) => {
   addSingleParam('isoption', value)
 })
