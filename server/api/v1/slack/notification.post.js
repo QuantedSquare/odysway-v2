@@ -1,7 +1,5 @@
 export default defineEventHandler(async (event) => {
-  console.log('========event=======', event)
   const session = await readBody(event)
-  console.log('========session pose option=======', session)
   try {
     activecampaign.optionNotification(session)
   }
