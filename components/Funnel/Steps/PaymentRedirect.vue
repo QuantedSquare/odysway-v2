@@ -239,7 +239,7 @@ const almaPay = async () => {
       phone: model.value.phone,
     },
     currentUrl: route.fullPath,
-    insuranceImg: page.assurance_img || 'https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW"', // replace buttercms by a default image
+    insuranceImg: page.assurance_img || '/images/default/chapka.png',
     countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
 

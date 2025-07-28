@@ -196,7 +196,7 @@ const submit = async () => {
     country: destinations.value.map(d => d.iso).join(','),
     iso: destinations.value.map(d => d.iso).join(','),
     zoneChapka: +destinations.value[0]?.chapka || 0,
-    image: voyage.value.image.src || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+    image: voyage.value.image.src || '/images/default/Odysway-couverture-mongolie.jpeg',
     currentStep: skipperChoice.value === 'devis' ? 'Souhaite réserver/planifier un voyage individuel' : 'Souhaite des infos',
     alreadyPaid: 0,
     restToPay: 0,

@@ -327,7 +327,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
       title: deal.title,
-      imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+      imgSrc: deal.image || '/images/default/Odysway-couverture-mongolie.jpeg',
       country: deal.country,
       slug: deal.slug,
       iso: deal.iso,

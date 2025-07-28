@@ -76,7 +76,7 @@ export default defineEventHandler(async (event) => {
         country,
         iso,
         zoneChapka,
-        image: 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+        image: '/images/default/Odysway-couverture-mongolie.jpeg',
         currentStep: 'Création du Deal sur mesure',
         alreadyPaid: 0,
         restToPay: 0,
