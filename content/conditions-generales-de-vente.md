@@ -20,15 +20,17 @@ sitemap:
 
 ## **Préambule**
 
-Les présentes Conditions Générales de Vente (ci-après les « Conditions ») ont pour objet de définir les droits et obligations d’ODYSWAY et du client (ci-après le « Voyageur ») dans le cadre de la vente de prestations touristiques proposées en France ou à l’étranger, dans le respect des dispositions du Code du tourisme (notamment les articles L.211-1 à L.211-18 et R.211-1 à R.211-43).
+Les présentes Conditions Générales de Vente (ci-après les « Conditions ») définissent les droits et obligations d’ODYSWAY et du client (ci-après le « Voyageur ») dans le cadre de la vente de prestations touristiques proposées en France ou à l’étranger, conformément aux articles L.211-1 à L.211-18 et R.211-1 à R.211-43 du Code du tourisme.
 
-ODYSWAY est une société par actions simplifiée au capital social de 8 250 €, immatriculée au Registre du Commerce et des Sociétés de Paris sous le numéro 839 815 842, dont le siège social est situé au 61 rue de Lyon, 75012 Paris. ODYSWAY est immatriculée auprès d’Atout France (IM094180007), bénéficie d’une garantie financière auprès de l’APST (15 avenue Carnot, 75017 Paris) et d’une assurance Responsabilité Civile Professionnelle souscrite auprès de HISCOX Underwriting Limited, 19 rue Louis Le Grand, 75002 Paris (police n° PRC0172947).
+ODYSWAY est une société par actions simplifiée au capital de 8 250 €, immatriculée au Registre du commerce et des sociétés de Paris sous le numéro 839 815 842. Son siège social est situé au 61 rue de Lyon, 75012 Paris. Elle est immatriculée auprès d’Atout France sous le numéro IM094180007, bénéficie d’une garantie financière auprès de l’APST (15 avenue Carnot, 75017 Paris) et d’une assurance Responsabilité Civile Professionnelle souscrite auprès de HISCOX Underwriting Limited (police n° PRC0172947, 19 rue Louis Le Grand, 75002 Paris).
 
-Ces Conditions s’appliquent à toute vente conclue entre ODYSWAY et un Voyageur, qu’elle soit réalisée par téléphone, internet, courrier électronique ou via toute autre modalité de réservation proposée par ODYSWAY. Elles sont systématiquement portées à la connaissance du Voyageur avant la conclusion du contrat, accompagnées de la fiche d’information préalable conforme à l’arrêté du 1er mars 2018, et prévalent sur tout autre document, sauf conditions particulières dûment acceptées par les deux parties.
+Les présentes Conditions s’appliquent à toutes les ventes conclues entre ODYSWAY et un Voyageur, quel que soit le canal de réservation utilisé : en ligne, par téléphone, par e-mail ou par tout autre moyen. Elles régissent également les séjours commercialisés sous la marque Tribus, dédiée aux voyages de groupe (scolaires, associatifs, privatisés, etc.), organisés par ODYSWAY.
 
-Les Conditions en vigueur à la date de confirmation de la réservation prévalent sur toute version antérieure. Elles peuvent être consultées à tout moment sur le site [www.odysway.com](http://www.odysway.com) et sont également disponibles sur demande.
+Les Conditions sont systématiquement communiquées au Voyageur avant toute confirmation de réservation, accompagnées de la fiche d’information préalable conforme à l’arrêté du 1er mars 2018. Elles prévalent sur tout autre document, sauf accord exprès et écrit des deux parties.
 
-Le fait pour un Voyageur de réserver un séjour implique l’adhésion entière et sans réserve aux présentes Conditions.
+La version des Conditions en vigueur au moment de la confirmation de la réservation s’applique. Elles sont disponibles sur simple demande et consultables en permanence sur le site www\.odysway.com.
+
+Toute réservation de séjour implique l’acceptation pleine et entière des présentes Conditions.
 
 ## **Définitions**
 
@@ -281,6 +283,16 @@ Dans le cas d’un nombre de participants inférieur au minimum requis, Odysway 
 
 - Accepter : le supplément sera facturé. Il sera remboursé si, d’ici au départ, le seuil de participants est atteint.
 - Refuser : la réservation sera annulée sans frais, et les sommes versées seront intégralement remboursées.
+
+### **7.3 Conditions spécifiques – Séjours Tribus (Scolaires, Entreprises et groupes privatisés)**
+
+Pour les séjours vendus à prix forfaitaire sous la marque Tribus, organisés pour des groupes scolaires, entreprises ou privatisés, et dont le tarif dépend d’un nombre minimum de participants, les conditions suivantes remplacent celles de l’article 7.1 :
+
+- Plus de 60 jours avant le départ : retenue de l’acompte versé (ou 10 % du montant total si aucun acompte n’a encore été versé) ;
+- Entre 59 et 31 jours avant le départ : retenue de 50 % du montant total du séjour ;
+- Moins de 30 jours avant le départ ou en cas de non-présentation : retenue de 100 % du montant total.
+
+Ces conditions tiennent compte des engagements pris par Odysway auprès de ses prestataires et du tarif fixé selon un effectif complet. Elles sont valables sauf disposition contraire expressément indiquée au contrat de vente.
 
 ## **8. Cession**
 
