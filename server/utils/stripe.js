@@ -28,10 +28,10 @@ const createCheckoutSession = async (order) => {
 
   function calculatDepositeValue(data) {
     // WE take the total value of the deal, we substract the flight price and the insurance price
-    const baseToCalculateDepositValue = +data.value - ((data.includeFlight ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
+    const baseToCalculateDepositValue = +data.value - ((data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
     // Insurance is added in another line item
-    return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * data.nbTravelers)
+    return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers)
   }
   const gotEarlyBird = deal.gotEarlybird === 'Oui'
   const gotLastMinute = deal.gotLastMinute === 'Oui'
