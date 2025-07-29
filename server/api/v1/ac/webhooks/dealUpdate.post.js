@@ -74,37 +74,37 @@ export default defineEventHandler(async (event) => {
       }
 
       // Delete from ActiveCampaign and Supabase
-      // await activecampaign.deleteDeal(dealId)
-      // const { error, data } = await supabase.from('activecampaign_deals').delete().match({ id: dealId }).select()
-      // console.log('Delete supabaseDeal OK', data)
+      await activecampaign.deleteDeal(dealId)
+      const { error, data } = await supabase.from('activecampaign_deals').delete().match({ id: dealId }).select()
+      console.log('Delete supabaseDeal OK', data)
 
-      // const { error: errorBookedDates, data: dataBookedDates } = await supabase.from('booked_dates').delete().match({ deal_id: dealId }).select()
-      // console.log('Delete bookedDates OK', dataBookedDates)
+      const { error: errorBookedDates, data: dataBookedDates } = await supabase.from('booked_dates').delete().match({ deal_id: dealId }).select()
+      console.log('Delete bookedDates OK', dataBookedDates)
 
       // Update travel_dates.booked_seat for each affected travel_date
       if (bookedDatesToDelete && bookedDatesToDelete.length > 0) {
         console.log('===========bookedDatesToDelete 2', bookedDatesToDelete, '========')
-        // for (const bookedDate of bookedDatesToDelete) {
-        //   // Get all remaining booked_dates for this travel_date
-        //   const { data: allBooked, error: sumError } = await supabase
-        //     .from('booked_dates')
-        //     .select('booked_places')
-        //     .eq('travel_date_id', bookedDate.travel_date_id)
+        for (const bookedDate of bookedDatesToDelete) {
+          // Get all remaining booked_dates for this travel_date
+          const { data: allBooked, error: sumError } = await supabase
+            .from('booked_dates')
+            .select('booked_places')
+            .eq('travel_date_id', bookedDate.travel_date_id)
 
-        //   if (sumError) {
-        //     console.error('Error getting remaining booked_dates:', sumError)
-        //     continue
-        //   }
+          if (sumError) {
+            console.error('Error getting remaining booked_dates:', sumError)
+            continue
+          }
 
-        //   // Calculate new total booked seats
-        //   const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+          // Calculate new total booked seats
+          const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
 
-        //   // Update travel_dates.booked_seat
-        //   await supabase
-        //     .from('travel_dates')
-        //     .update({ booked_seat: totalBooked })
-        //     .eq('id', bookedDate.travel_date_id)
-        // }
+          // Update travel_dates.booked_seat
+          await supabase
+            .from('travel_dates')
+            .update({ booked_seat: totalBooked })
+            .eq('id', bookedDate.travel_date_id)
+        }
       }
 
       return { success: true }
