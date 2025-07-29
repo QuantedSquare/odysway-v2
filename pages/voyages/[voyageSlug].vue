@@ -189,6 +189,11 @@ watchEffect(() => {
             '@type': 'AggregateRating',
             'ratingValue': voyage.value.rating,
             'reviewCount': voyage.value.comments,
+            'itemReviewed': {
+              '@type': 'TouristTrip',
+              'name': voyage.value.title,
+              'url': `https://odysway.com/voyages/${voyage.value.slug}`,
+            },
           },
         }
       : {}),
