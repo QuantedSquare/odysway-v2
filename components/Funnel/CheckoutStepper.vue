@@ -202,7 +202,6 @@ const dynamicDealValues = ref(null)
 // ================== Voyage ==================
 const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, async () => {
   if (date_id) {
-    console.log(' je suis dans le if')
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
 
@@ -277,7 +276,6 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     return travelStaticValues
   }
   else {
-    console.log(' je suis dans le else')
     // Voyage = Toutes les valeurs fixes
     const deal = await apiRequest(`/ac/deals/deal-from-bms?bookedId=${booked_id}`)
     // Initialize travelers data
