@@ -159,6 +159,12 @@ watchEffect(() => {
     'description': voyage.value.metaDescription || voyage.value.description,
     'image': voyage.value.image?.src ? [`https://odysway.com${voyage.value.image.src}`] : [],
     'touristType': 'Adventure',
+    'mainEntity': {
+      '@type': 'TouristTrip',
+      'name': voyage.value.title,
+      'description': voyage.value.metaDescription || voyage.value.description,
+      'url': `https://odysway.com/voyages/${voyage.value.slug}`,
+    },
     'offers': {
       '@type': 'Offer',
       'price': voyage.value.pricing?.startingPrice,
