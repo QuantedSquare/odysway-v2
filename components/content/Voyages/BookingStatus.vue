@@ -19,7 +19,7 @@
       >
         {{ mdiAccountOutline }}
       </v-icon>
-      {{ bookedPlaces }} inscrit {{ bookedPlaces > 1 ? 's' : '' }}
+      {{ bookedPlaces }} inscrit{{ bookedPlaces > 1 ? 's' : '' }}
       <span
         v-if="status.status === 'confirmed'"
         class="font-weight-regular text-body-2"
