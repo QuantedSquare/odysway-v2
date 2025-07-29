@@ -11,19 +11,21 @@ sitemap:
 
 ::hero-section
 ---
-image-src: /images/sur-mesure/AdobeStock_557006728.webp
+imageSrc: /images/blogs/5-bienfaits-velo-voyage/sbdKGfNHTFyRCsagb03G.jpg
 ---
 #title
-Vivez un voyage unique !
+Un voyage sur mesure, au rythme de vos envies
 ::
 
 ::section-container
 #content
-Le concept et les valeurs d'Odysway vous parlent ?
+Envie d’un voyage sur mesure, et en immersion ?
 
-Odysway est une agence de voyage passionnée qui croit en l'importance de voyager de manière immersive et responsable. Nous vous offrons la possibilité de sortir des sentiers battus et de vivre des expériences authentiques, en vous connectant avec les communautés locales et en vous engageant dans des activités respectueuses de l'environnement.
+Chez Odysway, nous croyons à une autre façon de voyager : plus respectueuse, plus proche des réalités locales, et surtout plus riche de rencontres. Nous vous proposons de sortir des sentiers battus pour vivre des expériences authentiques, en lien direct avec des communautés engagées et des environnements préservés.
 
-Chez Odysway, nous comprenons que chaque voyageur est unique, avec des attentes et des intérêts différents. C'est pourquoi nos conseillers passionnés, spécialisés dans la création de voyages sur-mesure sont là pour vous accompagner dans votre projet. Que vous rêviez d'une escapade romantique, d'une aventure en plein air ou d'une immersion culturelle, nous mettrons tout en œuvre pour créer votre voyage ! 
+Grâce à notre réseau de partenaires sur le terrain, nous pouvons vous envoyer rapidement des propositions sur mesure, pensées pour répondre à vos envies et à votre rythme.
+
+Chaque voyageur étant unique, nos conseillers sont là pour vous accompagner et construire, à vos côtés, un itinéraire qui vous ressemble : escapade en couple, immersion culturelle, aventure en pleine nature… Nous créons avec vous un voyage singulier, porteur de sens et de découvertes.
 
   :::cta-button
   ---
@@ -31,6 +33,6 @@ Chez Odysway, nous comprenons que chaque voyageur est unique, avec des attentes 
   link: https://tally.so/r/wQM8g1
   ---
   #text
-  Créez votre voyage sur-mesure
+  Créez mon voyage sur-mesure
   :::
 ::
