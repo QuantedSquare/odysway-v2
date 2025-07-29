@@ -104,11 +104,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre en immersion dans un monastère bouddhiste, participer à l'éducation de jeunes moines et partager leur quotidien, ce voyage est fait pour vous ! Vous vivrez des moments riches en émotions et repartirez avec des souvenirs inoubliables ❤️",
   "metaDescription": "Vivez une immersion unique et authentique au coeur d'un monastère bouddhiste au Népal. Partagez le quotidien de jeunes moines apprentis et découvrez leur mode de vie traditionnel lors de ce voyage solidaire !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

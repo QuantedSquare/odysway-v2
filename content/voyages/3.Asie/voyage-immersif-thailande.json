@@ -87,11 +87,6 @@
   "emailDescription": "👉 Plongez au cœur de la Thaïlande authentique avec notre voyage immersif. Découvrez des trésors cachés, vivez la culture locale et explorez des paysages impressionnants loin des sentiers battus. ",
   "metaDescription": "Plongez au cœur de la Thaïlande authentique avec notre voyage immersif. Découvrez des trésors cachés, vivez la culture locale et explorez des paysages époustouflants loin des sentiers battus. ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

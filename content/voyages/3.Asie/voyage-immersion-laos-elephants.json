@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir le Laos à travers une expérience unique, ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez un voyage unique au Laos, à la rencontre de ses habitants et en immersion chez des Cornacs et leurs éléphants.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

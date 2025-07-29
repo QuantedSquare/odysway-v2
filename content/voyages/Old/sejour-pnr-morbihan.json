@@ -76,11 +76,6 @@
   "emailDescription": "Si vous avez besoin de vous évader le temps d'un week-end, ce séjour entre terre et mer est parfait pour vous ! ",
   "metaDescription": "Envie d'évasion le temps d'un week-end ? RDV au cœur du parc naturel du Golfe du Morbihan pour un séjour entre terre et mer !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 4 personnes**",
       "visible": false

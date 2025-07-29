@@ -89,11 +89,6 @@
   "emailDescription": "",
   "metaDescription": "Voyagez à la découverte du Népal autrement : entre trek accessible, immersion dans un monastère et rencontre avec les locaux.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

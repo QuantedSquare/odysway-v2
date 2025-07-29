@@ -84,11 +84,6 @@
   "emailDescription": "👉 Vivez une expérience immersive inoubliable lors de notre voyage de conservation des baleines et des dauphins aux Canaries, accompagné d'un biologiste marin. Explorez les eaux cristallines des côtes de Lanzarote tout en apprenant sur les cétacés !",
   "metaDescription": "Vivez une expérience immersive inoubliable lors de notre voyage de conservation des baleines et des dauphins aux Canaries, accompagné d'un biologiste marin. Explorez les eaux cristallines des côtes de Lanzarote tout en apprenant sur les cétacés !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

@@ -82,11 +82,6 @@
   "emailDescription": "👉 Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
   "metaDescription": "Découvrez Madère, l'île des randonneurs, entre paysages exceptionnels et rencontres authentiques. Plongez dans une nature préservée, grimpez vers des sommets avec des vues incroyables et plongez dans la culture locale. Un voyage inoubliable au cœur de l'Atlantique.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 15 personnes**",
       "visible": true

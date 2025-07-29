@@ -91,11 +91,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine, ce voyage est fait pour vous.",
   "metaDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": false

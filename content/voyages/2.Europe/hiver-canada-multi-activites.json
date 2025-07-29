@@ -79,11 +79,6 @@
   "emailDescription": "",
   "metaDescription": "Explorez le magnifique Fjord du Saguenay au Canada lors d'une aventure hivernale en réalisant de multiples activités au cœur de paysages enneigés",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez plonger au cœur de la Mongolie,  parcourir ses paysages de rêves et partager des moments uniques avec les nomades pour vous imprégner de leur culture, ce voyage est fait pour vous ! ",
   "metaDescription": "Partez en Mongolie pour une immersion de plusieurs jours au sein d’une famille nomade, partagez leur quotidien et découvrez les steppes et la culture mongole",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 5 personnes**",
       "visible": true

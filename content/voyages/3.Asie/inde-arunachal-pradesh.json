@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous souhaitez plonger au coeur de la culture indienne, partir à la découverte des terres lointaines de l'Arunachal Pradesh et rencontrer des tribus fascinantes, ce voyage est fait pour vous ! Un voyage unique à la rencontre des locaux qui gravera, pour toujours, votre mémoire ❤️",
   "metaDescription": "Partez à la découverte des terres lointaines de l'Arunachal Pradesh lors de ce voyage en Inde du Nord. Rencontrez ses tribus fascinantes, ses villages isolés et admirez sa biodiversité, une des plus riches au monde.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

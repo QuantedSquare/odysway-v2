@@ -61,11 +61,6 @@
   "emailDescription": "",
   "metaDescription": "Partez pour un voyage photographique avec Lionel MONTICO et Benoist CLOUET, dans le Parc National de Yellowstone, en petit groupe.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": true

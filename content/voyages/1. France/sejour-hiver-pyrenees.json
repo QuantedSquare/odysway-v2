@@ -80,11 +80,6 @@
   "emailDescription": "👉  Si vous souhaitez découvrir l’hiver au cœur des Pyrénées, ce séjour est fait pour vous ! Randonnées en vallée d’Aspe, paysages enneigés et rencontres locales, guidé par un accompagnateur certifié pour une expérience authentique.",
   "metaDescription": "Découvrez l’hiver au cœur des Pyrénées : randonnées en vallée d’Aspe, paysages enneigés et rencontres locales, guidé par un accompagnateur certifié pour une expérience authentique.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

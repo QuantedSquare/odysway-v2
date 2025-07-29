@@ -95,11 +95,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la jungle, découvrir la culture de la population locale et expérimenter leur mode de vie, ce voyage est fait pour vous !",
   "metaDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

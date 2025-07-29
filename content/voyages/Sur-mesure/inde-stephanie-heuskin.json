@@ -66,11 +66,6 @@
   "emailDescription": "",
   "metaDescription": "Partez pour un voyage en Inde avec Stéphanie Heuskin, en immersion à Rishikesh en petit groupe.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": true

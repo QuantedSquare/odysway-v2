@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable au Sikkim, entre yoga, méditation et rencontres, ce voyage est fait pour vous !",
   "metaDescription": "Partez pour un voyage initiatique au Sikkim, joyau spirituel de l'Inde. Yoga, méditation, nature et rencontres vous attendent. Une expérience inoubliable.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

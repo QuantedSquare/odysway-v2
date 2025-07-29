@@ -83,11 +83,6 @@
   "emailDescription": "",
   "metaDescription": "Découvrez le Maroc authentique avec ce séjour culturel unique. Explorez Marrakech, Taliouine, Aglou et Aït Benhaddou, vivez des expériences locales, participez à des ateliers traditionnels et randonnez dans les montagnes de l'Anti-Atlas. Hébergement en riads et familles locales, repas typiques, transport privé et guide francophone inclus",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

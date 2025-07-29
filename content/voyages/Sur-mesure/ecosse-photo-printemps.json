@@ -61,11 +61,6 @@
   "emailDescription": "",
   "metaDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "Apprendre en voyage",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": true

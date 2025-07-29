@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature,  prendre le temps de vous ressourcer pleinement et revenir aux choses simples de la vie, ce voyage est fait pour vous !",
   "metaDescription": "Plongez dans l'immensité de la nature finlandaise lors de ce voyage éco-responsable avec au programme : immersion en pleine nature, navigation sur les lacs, observation des ours. Une expérience authentique pour renouer avec la nature !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous avez toujours rêvé de nager avec des dauphins dans leur habitat naturel, ce voyage est fait pour vous ! ",
   "metaDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

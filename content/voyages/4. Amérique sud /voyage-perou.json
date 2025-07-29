@@ -97,11 +97,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
   "metaDescription": "Odysway vous propose un voyage unique à la découverte d'un Pérou véritablement authentique. Explorez la Vallée Sacrée des Incas, le Lac Titicaca et vivez en immersion au sein de familles quechua.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

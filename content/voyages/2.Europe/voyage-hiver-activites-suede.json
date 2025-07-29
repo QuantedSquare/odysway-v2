@@ -82,11 +82,6 @@
   "emailDescription": "👉 Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
   "metaDescription": "Explorez la Laponie suédoise : traîneau à chiens, igloo, pêche blanche. Aventures en famille et détente au cœur de paysages arctiques enchanteurs.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

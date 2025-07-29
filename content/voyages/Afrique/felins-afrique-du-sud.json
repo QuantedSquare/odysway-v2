@@ -75,11 +75,6 @@
   "emailDescription": "👉 Si vous êtes sensible à la cause animale, si avez toujours rêvé de rencontrer des félins tout en participant activement à leur protection, ce voyage en Afrique du Sud est fait pour vous ! ",
   "metaDescription": "Sensible à la cause animale, vous souhaitez participer à leur protection lors d'un voyage solidaire ? Vivez une expérience inoubliable dans un véritable sanctuaire pour félins au cœur de la nature sud africaine !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

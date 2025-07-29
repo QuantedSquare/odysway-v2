@@ -89,11 +89,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable hors des frontières à la découverte du Laos et du Cambodge, ce voyage est fait pour vous ! ",
   "metaDescription": "Explorez le charme mystique Cambodge et la tranquillité Laos. Découvrez Luang Prabang, dégustez cuisine locale et admirez temples Angkor Wat. Une aventure inoubliable à vivre en solo, en famille, en couple ou entre amis ! ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 15 personnes**",
       "visible": true

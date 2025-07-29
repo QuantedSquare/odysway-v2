@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage unique en Ouzbékistan, partager le quotidien des locaux et découvrir ses magnifiques paysages et monuments, ce voyage est fait pour vous ! Un voyage rempli d'histoire et de partages qui restera gravé dans vos mémoires ❤️",
   "metaDescription": "Un voyage unique en Ouzbékistan entre histoire, immersion en pleine nature et partage du quotidien des locaux qui vivent entre montagne, désert et steppe. Découvrez notre itinéraire de 2 semaines sur la route de la soie !\r\n",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

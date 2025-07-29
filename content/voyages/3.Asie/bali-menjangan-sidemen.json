@@ -107,11 +107,6 @@
   "emailDescription": "Partez découvrir l'île des dieux pendant 13 jours à travers ses marchés, ses temples, ses habitants tout en vous émerveillant devant les paysages variés des différentes régions parcourues !",
   "metaDescription": "Partez découvrir l'île des dieux pendant 13 jours à travers ses marchés, ses temples, ses habitants tout en vous émerveillant devant les paysages variés des différentes régions parcourues !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

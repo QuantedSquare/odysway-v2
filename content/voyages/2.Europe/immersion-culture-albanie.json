@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous souhaitez partir en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie, découvrir ses paysages fabuleux entre mer et montage et partir à la rencontre de sa population, ce voyage est fait pour vous ! ",
   "metaDescription": "Partez en immersion au coeur du joyau le plus méconnu de l'Adriatique, l'Albanie. Découvrez ses paysages fabuleux entre mer et montage et partez à la rencontre de sa population.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

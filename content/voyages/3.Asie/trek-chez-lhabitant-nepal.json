@@ -91,11 +91,6 @@
   "emailDescription": "👉 Envie de découvrir le Népal en séjournant chez l'habitant, au cœur des paysages à couper le souffle ? Ce voyage est fait pour vous ! ",
   "metaDescription": "Découvrez le Népal authentique en séjournant chez l'habitant. Une expérience unique pour explorer la culture népalaise",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

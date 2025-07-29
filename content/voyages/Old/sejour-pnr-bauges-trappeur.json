@@ -74,11 +74,6 @@
   "emailDescription": "👉 Si vous avez envie de découvrir les merveilles géologiques du Parc naturel régional des Bauges, classé Géoparc depuis 2011, tout en séjournant en campement tipi, ce séjour est fait pour vous ! 🤗",
   "metaDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

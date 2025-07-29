@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir la Colombie d'une façon différente, ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez un voyage différent en Colombie, à la découverte de la province du Choco, riche de jungles, rivières, cascades, sources thermales et plages incroyables.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

@@ -77,11 +77,6 @@
   "emailDescription": "👉 Vivez une aventure unique au Maroc, entre compétition, rencontres locales et solidarité. Un tourisme engagé pour des souvenirs inoubliables.",
   "metaDescription": "Vivez une aventure unique au Maroc, entre compétition, rencontres locales et solidarité. Un tourisme engagé pour des souvenirs inoubliables.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 14 personnes**",
       "visible": true

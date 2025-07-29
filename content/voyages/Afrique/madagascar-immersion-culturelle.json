@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez faire de belles rencontres et découvrir la culture malagasy tout en sillonnant les magnifiques paysages du sud de Madagascar, ce voyage est fait pour vous !",
   "metaDescription": "Vivez un incroyable voyage authentique de 18 jours à Madagascar ! Au programme :  rencontres avec les peuples locaux, visites d’ateliers artisanaux , immersion dans un village Zafimaniry, préparation de plats typiques, randonnées à travers les villages traditionnels et les parcs nationaux, visites d’ONG et d’associations en aide aux personnes défavorisées, et séjour balnéaire à Ifaty.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": false

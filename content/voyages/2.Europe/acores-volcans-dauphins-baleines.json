@@ -81,11 +81,6 @@
   "emailDescription": "👉  Si vous souhaitez vivre une immersion unique dans l'un des plus grands sanctuaires de cétacés au monde, ce voyage est fait pour vous ! ",
   "metaDescription": "Découvrez un séjour unique aux Açores, mêlant exploration volcanique, rencontres inoubliables avec les dauphins, baleines et cachalots, et randonnées spectaculaires. De Faial, l'île bleue, jusqu'à Pico et ses paysages viticoles classés à l’UNESCO, vivez une immersion nature inégalée au cœur de l’Atlantique.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

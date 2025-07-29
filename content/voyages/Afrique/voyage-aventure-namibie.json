@@ -86,11 +86,6 @@
   "emailDescription": "👉 Découvrez la Namibie autrement : explorez des paysages époustouflants et participez à des projets de conservation de la faune pour une expérience immersive et enrichissante.",
   "metaDescription": "Partez pour une expérience unique en Namibie, mêlant aventure, nature et engagement pour la protection des animaux sauvages !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **1 à 6 personnes**",
       "visible": true

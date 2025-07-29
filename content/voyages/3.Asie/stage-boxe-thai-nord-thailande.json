@@ -90,11 +90,6 @@
   "emailDescription": "👉 Si vous souhaitez vous initier ou vous perfectionner à la boxe Thaï auprès des meilleurs tout en vous imprégnant de la culture thaïlandaise, ce voyage est fait pour vous ! 😉  ",
   "metaDescription": "Envie de découvrir la Thaïlande autrement ? Découvrez ou perfectionnez-vous à la Boxe thaï lors de ce séjour sportif et formez-vous parmi les meilleurs : des entraineurs professionnels dans un camp de boxe thaï !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

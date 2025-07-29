@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience hors du temps, vivre en immersion avec les Surmas et partager leur quotidien, ce voyage est fait pour vous !",
   "metaDescription": "Vivez une expérience hors du temps lors de ce voyage en Ethiopie avec Odsyway. Accompagnés d'un guide francophone, vivez en immersion dans les tribus et découvrez leurs coutumes ancestrales !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

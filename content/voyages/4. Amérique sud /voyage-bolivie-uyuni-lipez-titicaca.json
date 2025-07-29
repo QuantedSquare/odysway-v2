@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une immersion complète au cœur de la Bolivie, ce voyage est fait pour vous !",
   "metaDescription": "Odysway vous propose un voyage unique à la découverte de la Bolivie véritablement authentique. Explorez le Sud Lipez en 4x4, écoutez le silence dans le plus grand désert au monde au Salar de Uyuni et vivez des moments au plus proche des locaux.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

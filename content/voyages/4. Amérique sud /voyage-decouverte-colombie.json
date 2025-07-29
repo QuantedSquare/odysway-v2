@@ -84,11 +84,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir la Colombie d'une façon différente, ce voyage est fait pour vous ! ",
   "metaDescription": "Explorez la Colombie en 12 jours d’aventures immersives avec Odysway : des rencontres locales uniques, des paysages magnifiques, et des traditions authentiques à découvrir à chaque étape.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

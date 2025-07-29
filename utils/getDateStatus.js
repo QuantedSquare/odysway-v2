@@ -1,5 +1,4 @@
 export function getDateStatus(date) {
-  console.log('date', date)
   if (date.displayed_status === 'soon_confirmed') {
     return {
       status: 'soon_confirmed',

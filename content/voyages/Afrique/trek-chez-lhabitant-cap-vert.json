@@ -81,11 +81,6 @@
   "emailDescription": "👉 Découvrez la magie du Cap-Vert sur l'île de Santo Antao. Vivez des treks inoubliables et rencontrez des habitants chaleureux pour une immersion authentique dans la culture capverdienne !",
   "metaDescription": "Découvrez la magie du Cap-Vert sur l'île de Santo Antao. Vivez des treks inoubliables et rencontrez des habitants chaleureux pour une immersion authentique dans la culture capverdienne !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

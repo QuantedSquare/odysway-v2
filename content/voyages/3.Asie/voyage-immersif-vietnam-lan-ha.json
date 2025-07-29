@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir le Vietnam à travers une expérience unique, ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez un voyage unique du Nord au Sud du Vietnam, entre rencontres locales et découvertes culturelles !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 15 personnes**",
       "visible": true

@@ -83,11 +83,6 @@
   "emailDescription": "",
   "metaDescription": "Plongez au cœur du Salvador : Explorez l'histoire des Mayas, côtoyez des âmes chaleureuses et découvrez l'authenticité de leur mode de vie. Des souvenirs inoubliables vous attendent !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

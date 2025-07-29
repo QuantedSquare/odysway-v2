@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez partir à la rencontre d'une culture riche et méconnue, partager des moments uniques avec des locaux et découvrir leur quotidien, ce voyage au Cap-Vert est fait pour vous ! ❤️",
   "metaDescription": "Vivez une immersion authentique à Santiago, au Cap-Vert. Partagez le quotidien des cultivateurs et pêcheurs et découvrez un mode de vie préservé.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

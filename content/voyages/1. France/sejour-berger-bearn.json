@@ -87,11 +87,6 @@
   "emailDescription": "👉  Si vous souhaitez vivre une immersion authentique, découvrir le quotidien d'un berger et vous plonger dans les magnifiques paysages qu'offre la vallée d'Ossau, ce voyage est fait pour vous ! ",
   "metaDescription": "Voyagez autrement au coeur des Pyrénées et découvrez le mode de vie unique et traditionnel des bergers dans les estives . Partez en randonnée avec un guide à travers la vallée d'Aspe, vallée de France où il y a le plus de bergers ! ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "Partager le quotidien",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

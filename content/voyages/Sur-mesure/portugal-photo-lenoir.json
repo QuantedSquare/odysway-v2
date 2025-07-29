@@ -65,11 +65,6 @@
   "emailDescription": "",
   "metaDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Portugal, en petit groupe.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "Apprendre en voyage",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

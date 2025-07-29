@@ -912,11 +912,6 @@ export default defineContentConfig({
         metaDescription: z.string().describe('Meta Description du voyage'),
         // ==========================================
         badgeSection: z.object({
-          experienceBadge: z.object({
-            text: z.enum(experienceBadgeChoices).optional().describe('Texte du badge experience placé en premier'),
-            color: z.enum(colorChoices).describe('Couleur du premier badge'),
-            visible: z.boolean().describe('Indique si le badge est visible'),
-          }),
           groupeBadge: z.object({
             text: z.string().describe('Texte du badge groupe'),
             visible: z.boolean().describe('Indique si le badge est visible'),
