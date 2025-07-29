@@ -103,6 +103,9 @@
     "periodBadge": {
       "text": "Oct à Avr",
       "visible": true
+    },
+    "experienceBadge": {
+      "visible": false
     }
   },
   "programmeBlock": [

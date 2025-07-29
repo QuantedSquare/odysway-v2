@@ -11,10 +11,12 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": false,
-  "customAvailable": false,
+  "customAvailable": true,
   "experienceType": "Partir à l'aventure",
   "level": "1",
-  "categories": [],
+  "categories": [
+    {}
+  ],
   "duration": 14,
   "nights": 12,
   "includeFlight": true,
