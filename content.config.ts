@@ -1014,13 +1014,13 @@ export default defineContentConfig({
             src: z.string().editor({ input: 'media' }),
             alt: z.string(),
           }).describe('Image de l\'og, utilise la photo principale si vide'),
-          twitterTitle: z.string().describe('Twitter Card Title'),
-          twitterDescription: z.string().describe('Twitter Card Description'),
+          twitterTitle: z.string().describe('Twitter Card Title').editor({ hidden: true }),
+          twitterDescription: z.string().describe('Twitter Card Description').editor({ hidden: true }),
           twitterImage: z.object({
             src: z.string().editor({ input: 'media' }),
             alt: z.string(),
-          }).describe('Image de l\'og, utilise la photo principale si vide'),
-          twitterCard: z.enum(['summary', 'summary_large_image', 'app', 'player']).describe('Twitter Card Type'),
+          }).describe('Image de l\'og, utilise la photo principale si vide').editor({ hidden: true }),
+          twitterCard: z.enum(['summary', 'summary_large_image', 'app', 'player']).describe('Twitter Card Type').editor({ hidden: true }),
         }).describe('SEO'),
         seo: z.object({
           title: z.string().describe('Titre de la page'),
