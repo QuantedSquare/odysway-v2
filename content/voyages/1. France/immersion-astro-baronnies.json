@@ -189,7 +189,11 @@
     "src": "/images/voyages/immersion-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
     "alt": "image secondaire du voyage Immersion au cœur d'un observatoire astronomique"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg"
+    }
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [
