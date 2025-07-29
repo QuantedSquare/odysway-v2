@@ -1,3 +1,14 @@
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
+
 ::hero-section
 ---
 image-src: /images/sur-mesure/AdobeStock_557006728.webp
