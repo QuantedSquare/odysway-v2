@@ -12,8 +12,10 @@ sitemap:
   loc: ""
 robots: index, nofollow
 seo:
-  title: Voyages en immersion humaine et responsable
-  description: La rencontre au cœur du voyage
+  title: Voyages en immersion en petits groupes et privatifs
+  description: Odysway propose des voyages immersifs, responsables et authentiques
+    en France et à l’étranger. Rencontrez, explorez, et découvrez le monde
+    autrement.
 schemaOrg:
   - "@type": TravelAgency
     headline: Odysway, agence de voyage
@@ -42,12 +44,14 @@ head:
     lang: fr
   script: []
 title: "Odysway : Voyages en immersion humaine et responsable"
-description: Odysway est une agence qui propose des voyages en immersion,
-  éthiques et humains, en France et à l’étranger. Découvrez le monde autrement.
+description: Odysway propose des voyages immersifs, responsables et authentiques
+  en France et à l’étranger. Rencontrez, explorez, et découvrez le monde
+  autrement.
 navigation:
   title: Accueil
-  description: "Explorez tous nos voyages et plongez dans l’univers d’Odysway :
-    immersion, rencontres, découvertes."
+  description: Odysway propose des voyages immersifs, responsables et authentiques
+    en France et à l’étranger. Rencontrez, explorez, et découvrez le monde
+    autrement.
 ---
 
 ::home-hero-section

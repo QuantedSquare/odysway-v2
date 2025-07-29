@@ -223,7 +223,11 @@
     "src": "/images/voyages/sejour-astronomie-corse/V6SjIPGSTHmNN71o2e6U.jpg",
     "alt": "image secondaire du voyage Initiation à l'observation astronomique en Corse"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/voyages/sejour-astronomie-corse/ctoEhaNWRvOWO0xDNNdo.jpg"
+    }
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [
