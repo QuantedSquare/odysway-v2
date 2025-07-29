@@ -93,11 +93,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir les sites majeurs de l'Egypte, ce voyage est fait pour vous !",
   "metaDescription": "Odysway vous propose un voyage unique à la découverte des sites majeurs de l'Egypte : Louxor, la Vallée des Rois et une croisière intimiste sur le Nil en bateau dahabieh ou sandal.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

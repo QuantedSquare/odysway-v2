@@ -95,11 +95,6 @@
   "emailDescription": "👉 Explorez la Thaïlande en harmonie avec les éléphants. Vivez une aventure inoubliable mêlant nature, découverte et engagement pour la conservation des éléphants et de la nature thaïlandaise.",
   "metaDescription": "Explorez la Thaïlande en harmonie avec les éléphants. Vivez une aventure inoubliable mêlant nature, découverte et engagement pour la conservation des éléphants et de la nature thaïlandaise.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": false

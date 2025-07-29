@@ -77,11 +77,6 @@
   "emailDescription": "👉 Si vous rêvez d'aurores boréales et de vues à couper le souffle, ce voyage en Norvège du nord est fait pour vous !",
   "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature norvégienne. Au programme : randonnées au bord de magnifiques fjords et chasse aux aurores boréales !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

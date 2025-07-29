@@ -93,11 +93,6 @@
   "emailDescription": "👉 Si vous souhaitez faire un voyage initiatique auprès d'un véritable chaman et vivre une immersion complète au cœur du Pérou, ce voyage est fait pour vous !",
   "metaDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein d'une famille quechua.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

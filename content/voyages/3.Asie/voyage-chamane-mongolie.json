@@ -91,11 +91,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage initiative en immersion avec de véritables chamanes et découvrir les fabuleux paysages que vous offre la Mongolie, entre déserts, steppes et forêts, ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez une voyage initiatique unique au sein de familles chamanes en Mongolie : découvrez leur mode de vie authentique et participez à des cérémonies uniques au milieu d'une nature fabuleuse ! Un voyage chamanique riche en émotions !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": true

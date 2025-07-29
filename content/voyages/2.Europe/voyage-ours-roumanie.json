@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous êtes interessé/e par l'observation des ours et la découverte de la Roumanie hors des sentiers battus ce voyage est fait pour vous !",
   "metaDescription": "Vivez une aventure extraordinaire au cœur de la Transylvanie. Partez à la rencontre des ours sauvages dans leur habitat naturel. Randonnées en forêt, observation depuis un affût et rencontre avec les locaux.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

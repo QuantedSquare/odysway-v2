@@ -80,11 +80,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage au coeur de la nature, découvrir des paysages à couper le souffle et partager des moments d'exception avec les locaux, ce voyage est fait pour vous  ! ",
   "metaDescription": "Vivez un incroyable voyage au Kirghizistan, en immersion au cœur des traditions kirghizes. Lors de ce voyage en pleine nature, parcourez ses magnifiques steppes et partagez le quotidien des monteurs de yourtes et des chasseurs à l'aigle !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

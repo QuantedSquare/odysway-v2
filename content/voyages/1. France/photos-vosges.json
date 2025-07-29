@@ -87,11 +87,6 @@
   "emailDescription": "👉 Passionné/e de photographie animalière ? Partez avec Aurélien qui vous fera découvrir ses Vosges et vous aidera à observer et photographier plusieurs espèces d'animaux.",
   "metaDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

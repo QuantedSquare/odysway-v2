@@ -71,11 +71,6 @@
   "emailDescription": "👉 Si vous avez envie de découvrir l'artisanat du bois dans les montagnes du Qeyras, ce séjour est fait pour vous ! 🤗",
   "metaDescription": "C’est dans un hameau typique de montagne à 1820m d’altitude, en plein cœur du Parc naturel régional du Queyras, que nous vous donnons rendez-vous. Chantal et François vous y ouvriront les portes de leur jolie maison d’hôtes.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une véritable immersion dans la vie d'un photographe animalier, apprendre à manier votre appareil photo comme un pro et capturer des moments de vie exceptionnels, ce voyage est fait pour vous ! ",
   "metaDescription": "Plus qu'un simple stage photo, partez découvrir ou approfondir l'art de la photographie animalière. Accompagné d'un expert, vous apprendrez toutes les techniques à savoir lors de ce séjour insolite au coeur de la nature !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 4 personnes**",
       "visible": true

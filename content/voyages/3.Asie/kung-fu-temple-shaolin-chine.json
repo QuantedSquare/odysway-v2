@@ -87,11 +87,6 @@
   "emailDescription": "👉  Si vous souhaitez vivre une expérience authentique en Chine, vous initier au Kung-Fu avec les célèbres moines Shaolin et partager leur quotidien dans un décor à couper le souffle, ce voyage est fait pour vous ! 🤗",
   "metaDescription": "Envie de vivre une aventure unique ? Partez en Chine pour vivre un voyage sportif unique : apprendre le Kung-Fu traditionnel en immersion avec les moines Shaolin !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

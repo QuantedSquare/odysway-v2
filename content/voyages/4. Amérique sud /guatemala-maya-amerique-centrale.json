@@ -89,11 +89,6 @@
   "emailDescription": "",
   "metaDescription": "Percez les mystères de la culture Maya et des traditions guatémaltèques. Sillonnez les routes et prenez part au récit des locaux pour une immersion riche en émotions.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

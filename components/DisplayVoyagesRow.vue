@@ -6,7 +6,7 @@
       v-show="content.voyages?.length > 0"
       :key="content.id"
       :slug="content.slug"
-      :image="content.image.src"
+      :image="content.image?.src"
       :title="content.title"
       :description="content.discoveryTitle"
     >

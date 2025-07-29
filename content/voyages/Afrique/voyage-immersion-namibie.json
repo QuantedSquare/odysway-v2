@@ -92,11 +92,6 @@
   "emailDescription": "👉 Participez à des missions de rangers, observez les animaux sauvages, et contribuez à la préservation de la vie sauvage africaine.",
   "metaDescription": "Rejoignez les gardiens de la faune en Namibie. Participez à des missions de rangers, observez les animaux sauvages, et contribuez à la préservation de la vie sauvage africaine.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **1 à 6 personnes**",
       "visible": true

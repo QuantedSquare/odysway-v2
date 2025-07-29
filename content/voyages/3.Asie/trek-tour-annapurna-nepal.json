@@ -92,11 +92,6 @@
   "emailDescription": "👉 Envie de vivre le trek mythique au cœur des Annapurnas ? Ce voyage est fait pour vous ! ",
   "metaDescription": "Partez pour une aventure unique sur le tour des Annapurnas, l'un des plus beaux treks du monde ! ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

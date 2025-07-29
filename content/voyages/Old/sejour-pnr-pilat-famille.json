@@ -69,11 +69,6 @@
   "emailDescription": "Vous souhaitez passer un week-end en famille dans le Pilat et donner le gout de l'aventure à vos enfants ? Alors ce séjour est fait pour vous !",
   "metaDescription": "Venez passer un week-end en famille dans le Pilat, à la découverte de ses paysages variés, ses produits locaux, ses panoramas à couper le souffle, et surtout ses habitants amoureux de leur territoire.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

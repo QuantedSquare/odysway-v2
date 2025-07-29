@@ -80,11 +80,6 @@
   "emailDescription": "👉 Découvrez l'enchantement naturel de Sao Miguel, l'île verte des Açores. Volcans, forêts, villages pittoresques : une aventure authentique vous attend !",
   "metaDescription": "Découvrez l'enchantement naturel de Sao Miguel, l'île verte des Açores. Volcans, forêts, villages pittoresques : une aventure authentique vous attend !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 15 personnes**",
       "visible": true

@@ -233,7 +233,6 @@ const { date } = defineProps({
 const { data: texte } = useAsyncData('cta-list-dates-price-item', () =>
   queryCollection('page_voyage_fr').select('dateSections').first(),
 )
-console.log('dateSections', texte.value)
 
 const enrichedDate = computed(() => {
   return {

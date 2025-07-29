@@ -80,11 +80,6 @@
   "emailDescription": "Si vous souhaitez plonger dans l'histoire de la Jordanie, partir à la rencontre de ses habitants et explorer ses trésors cachés, ce voyage est fait pour vous !",
   "metaDescription": "Découvrez la Jordanie et ses merveilles : l'ancienne ville de Petra, le désert de Wadi Rum, la mer Morte et bien plus encore. Un voyage inoubliable !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

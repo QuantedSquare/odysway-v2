@@ -84,11 +84,6 @@
   "emailDescription": "👉 Découvrez le Radjastan d'une façon, partez à la découverte de ses habitants et des villes majestueuses. Dormez dans d'authentiques havelis et vivez l'Inde hors des sentiers battus.",
   "metaDescription": "Vivez un séjour immersif en Inde du Nord ! Explorez des villages traditionnels, le désert du Thar, découvrez la cuisine locale et contemplez le Taj Mahal au lever du soleil. Une expérience inoubliable vous attend !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

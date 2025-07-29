@@ -86,11 +86,6 @@
   "emailDescription": "",
   "metaDescription": "Quel meilleur moyen pour découvrir la Mongolie que d'utiliser le mode de transport de référence dans le pays : le cheval ! Un séjour unique à la rencontre des nomades.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

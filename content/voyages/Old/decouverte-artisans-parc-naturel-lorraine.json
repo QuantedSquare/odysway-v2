@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous êtes en quête de paix et de sérénité; si vous souhaitez vous recentrer sur vous et être au cœur de la nature, alors ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez un voyage en immersion au coeur de la nature. Partez en randonnées accompagné d'un âne et dormez en bivouac. Un séjour immersif  idéal pour vous reconnecte.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 4 personnes**",
       "visible": true

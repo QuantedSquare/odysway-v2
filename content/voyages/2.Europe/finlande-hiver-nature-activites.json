@@ -79,11 +79,6 @@
   "emailDescription": "",
   "metaDescription": "Découvrez le charme sauvage du parc national de Hossa, niché dans le Nord-Est de la Finlande, à travers une expérience authentique inspirée des traditions des explorateurs polaires. Notre programme unique combine aventures en plein air et respect de la nature pour une escapade inoubliable.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": true
