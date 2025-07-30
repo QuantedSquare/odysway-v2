@@ -35,8 +35,7 @@ Indiquez-le simplement lors de votre demande ou contactez notre équipe. Nous vo
 
   :::cta-button
   ---
-  external: true
-  link: https://tally.so/r/wQM8g1
+  link: /contact
   ---
   #text
   Utiliser mes chèques vacances
