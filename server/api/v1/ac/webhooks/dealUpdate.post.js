@@ -126,8 +126,8 @@ export default defineEventHandler(async (event) => {
           .update({ booked_seat: totalBooked })
           .eq('id', travel_date_id)
         console.log('travel_dates.booked_seat updated successfully', travel_date_id)
-        return { success: true }
       }
+      return { success: true }
     }
     else {
     // Retrieve deal owner
