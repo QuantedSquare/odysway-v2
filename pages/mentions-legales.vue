@@ -8,6 +8,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'simple-pages',
+})
+
 const route = useRoute()
 
 const { data: page } = await useAsyncData(route.path, () => {
