@@ -20,20 +20,12 @@ export default defineEventHandler(async (event) => {
     console.log('===========body', body, '========')
 
     const dealId = body['deal[id]']
-    const contactId = body['deal[contactid]'] || body['contact[id]']
 
     console.log('===========dealId', dealId, '========')
-    console.log('===========contactId', contactId, '========')
     if (!dealId) {
       throw createError({
         statusCode: 400,
         message: 'Invalid deal data: missing deal id',
-      })
-    }
-    if (!contactId) {
-      throw createError({
-        statusCode: 400,
-        message: 'Invalid deal data: missing contact id',
       })
     }
 
