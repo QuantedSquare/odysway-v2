@@ -36,6 +36,7 @@ const createDataQuote = (data, insuranceType) => {
   }
 
   dataQuote.sign = getSignature(dataQuote)
+  console.log('dataQuote', dataQuote)
   return dataQuote
 }
 

@@ -455,7 +455,7 @@ const handlePaymentSession = async (session, paymentType) => {
   console.log('totalPaid', totalPaid, restToPay)
   const dealData = {
     group: '2',
-    stage: +customFields.alreadyPaid > 0 ? '33' : '6',
+    stage: +restToPay > 0 ? '33' : '6',
     alreadyPaid: totalPaid,
     restToPay: restToPay,
     currentStep: totalPaid >= +deal.value
