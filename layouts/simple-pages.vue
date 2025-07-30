@@ -13,7 +13,7 @@
     <v-main class="main-content mx-0 mx-md-5 px-1">
       <slot />
     </v-main>
-    <div class="whatsapp-button d-lg-none mb-16">
+    <div class="whatsapp-button mb-16">
       <WhatsAppBtn />
     </div>
 
@@ -75,13 +75,6 @@ const { data: partenairesTextes } = await useAsyncData('partenairesTextes', () =
 </script>
 
 <style scoped>
-.whatsapp-button {
-  position: fixed;
-  bottom: -55px;
-  right: 15px;
-  z-index: 10000;
-}
-
 .main-content {
   --v-layout-top: 90px!important;
   --v-layout-bottom: 0px;
