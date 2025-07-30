@@ -96,15 +96,21 @@ export default defineEventHandler(async (event) => {
         }
 
         console.log('Attempting to delete deal from Supabase with dealId:', dealId)
-        await booking.deleteBookedDateByDealId(dealId)
-        console.log('Deal deleted from Supabase successfully')
+        try {
+          await booking.deleteBookedDateByDealId(dealId)
+          console.log('Deal deleted from Supabase successfully')
 
-        // Update travel_dates.booked_seat
-        console.log('Attempting to update travel_dates.booked_seat with travel_date_id:', travel_date_id)
-        const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
-        const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-        await booking.updateTravelDate(travel_date_id, totalBooked)
-        console.log('travel_dates.booked_seat updated successfully', travel_date_id)
+          // Update travel_dates.booked_seat
+          console.log('Attempting to update travel_dates.booked_seat with travel_date_id:', travel_date_id)
+          const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
+          const totalBooked = allBooked.reduce((acc, row) => acc + (row.booked_places || 0), 0)
+          await booking.updateTravelDate(travel_date_id, totalBooked)
+          console.log('travel_dates.booked_seat updated successfully', travel_date_id)
+        }
+        catch (bookingError) {
+          console.error('Error in booking operations:', bookingError)
+          // Continue with the process even if booking operations fail
+        }
       }
       return { success: true }
     }

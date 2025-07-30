@@ -32,6 +32,16 @@ const retrieveBookedDates = async (travel_date_id) => {
   return data
 }
 
+const retrieveBookedDateById = async (bookedId) => {
+  const { data: bookedRow, error: fetchError } = await supabase
+    .from('booked_dates')
+    .select('travel_date_id')
+    .eq('id', bookedId)
+    .single()
+  if (fetchError) console.error('Supabase retrieve error:', fetchError)
+  return bookedRow
+}
+
 const retrieveBookedDateByDealId = async (dealId) => {
   const { error, data } = await supabase
     .from('booked_dates')
@@ -54,7 +64,7 @@ const retrieveBookedPlacesByTravelDateId = async (travel_date_id) => {
     console.error('Supabase sum error:', sumError)
     return { error: sumError.message }
   }
-  return allBooked
+  return allBooked || []
 }
 
 const updateTravelDate = async (travel_date_id, totalBooked) => {
@@ -85,6 +95,7 @@ export default {
   retrieveBooking,
   retrieveBookedDates,
   retrieveBookedDateByDealId,
+  retrieveBookedDateById,
   retrieveBookedPlacesByTravelDateId,
   updateTravelDate,
   deleteBookedDateByDealId,
