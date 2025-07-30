@@ -95,7 +95,7 @@ Nous ne cherchons pas à impressionner, nous cherchons à être juste. Juste dan
 Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
 
 #capture
-[]{style="text-decoration: underline; font-style: italic;"}[Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️](/)
+[]{style="text-decoration: underline; font-style: italic;"} [Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️](/)
 ::
 
 ::title-container

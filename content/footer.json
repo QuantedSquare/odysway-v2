@@ -39,6 +39,10 @@
         {
           "text": "Chèques vacances",
           "to": "/cheques-vacances"
+        },
+        {
+          "text": "Avis voyageurs Odysway",
+          "to": "/avis-voyageurs"
         }
       ]
     },
