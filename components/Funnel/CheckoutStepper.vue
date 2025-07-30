@@ -195,6 +195,7 @@ const insurancesPrice = ref(null)
 const { data: pageTexts, status: pageStatus } = await useAsyncData('checkout-texts', () =>
   queryCollection('checkout').first(),
 )
+
 const checkoutType = ref(null)
 // We use those 2 ref to compare if we need a loading between steps by comparing the values
 const dynamicDealValues = ref(null)
@@ -208,6 +209,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
     // We fetch the destinations details from Nuxt, used for insurance
     const destinations = await queryCollection('destinations').where('title', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
+
     if (!travel) {
       throw new Error('Travel not found.')
     }
@@ -354,7 +356,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     return voyageStaticValues
   }
 })
-
+console.log('voyage status', voyageStatus.value)
 // ================== Stepper Management ==================
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
