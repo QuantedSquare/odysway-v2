@@ -54,13 +54,16 @@ displayed-img: /images/concept/Vélo.jpg
 title-color: white
 ---
 #title
-# Notre vision du voyage
+**Notre vision du voyage**
 ::
 
 ::title-container
 #title
-## La prise de conscience
+**La prise de conscience**
+::
 
+::text-container
+#text
 Chez Odysway, nous partons d’un constat simple : voyager n’est pas un acte neutre. Le tourisme classique repose encore trop souvent sur une logique de consommation rapide, qui prend plus qu’elle ne donne. Nous voulons rompre avec cette manière de faire. À travers des séjours plus lents, plus sobres et plus ancrés dans le réel, nous proposons une autre façon de voyager : plus lucide, plus respectueuse, et tournée vers la rencontre, sans artifice.
 
 En lire plus sur nos engagements pour un tourisme plus équilibré
@@ -76,7 +79,7 @@ Romain, fondateur d'Odysway
 
 ::title-container
 #title
-## Ce que l'on défend
+**Ce que l'on défend**
 ::
 
 ::company-overview-container
@@ -154,8 +157,11 @@ Transparence, respect et engagement sont au cœur de notre démarche, pour que c
 
 ::title-container
 #title
-## Une équipe à taille humaine
+**Une équipe à taille humaine**
+::
 
+::text-container
+#text
 Chez Odysway, nous ne sommes pas une plateforme automatisée. Nous sommes une petite équipe, et c’est ce qui fait notre force. Quand vous nous contactez, vous parlez à une vraie personne, qui prend le temps de vous écouter. Pas pour vous faire entrer dans une case, mais pour comprendre ce qui vous fait envie, ce qui vous inspire, ce que vous attendez ou ce que vous fuyez.
 
 Ce lien direct avec vous est au cœur de notre démarche. Il n’y a pas de filtre, pas d’intermédiaire. Nous échangeons avec vous comme nous aimons qu’on le fasse avec nous : simplement, franchement, avec attention. Ce que nous cherchons, ce n’est pas de vendre un séjour à tout prix, mais de vous accompagner dans un projet de voyage qui vous ressemble, dans le respect de ce que nous sommes et de ce que nous proposons.
@@ -163,7 +169,4 @@ Ce lien direct avec vous est au cœur de notre démarche. Il n’y a pas de filt
 Nous ne traitons pas des centaines de dossiers à la chaîne. Chaque voyage compte pour nous. Et c’est aussi pour cela que les personnes qui vous accueillent sur place s’impliquent autant : elles savent qu’il y a, derrière chaque départ, une relation de confiance construite avec soin.
 
 Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terrain, nous testons, nous ajustons. C’est notre façon de garantir que ce que vous vivrez soit fidèle à ce que nous défendons.
-::
-
-::text-container
 ::
