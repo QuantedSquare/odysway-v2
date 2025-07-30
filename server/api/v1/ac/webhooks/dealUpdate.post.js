@@ -74,7 +74,7 @@ export default defineEventHandler(async (event) => {
         // Still delete from ActiveCampaign even if no booked_dates found
         try {
           await activecampaign.deleteDeal(dealId)
-          console.log('Deal deleted from ActiveCampaign successfully')
+          console.log('Deal deleted from ActiveCampaign successfully even if no booked_dates found')
         }
         catch (acError) {
           console.error('Error deleting deal from ActiveCampaign:', acError)
@@ -99,6 +99,7 @@ export default defineEventHandler(async (event) => {
           })
         // Continue with Supabase cleanup even if ActiveCampaign deletion fails
         }
+        console.log('Attempting to delete deal from Supabase with dealId:', dealId)
         const { error } = await supabase
           .from('booked_dates')
           .delete()
@@ -107,8 +108,10 @@ export default defineEventHandler(async (event) => {
           console.error('Supabase delete error:', error)
           return { error: error.message }
         }
+        console.log('Deal deleted from Supabase successfully')
 
         // Update travel_dates.booked_seat
+        console.log('Attempting to update travel_dates.booked_seat with travel_date_id:', travel_date_id)
         const { data: allBooked, error: sumError } = await supabase
           .from('booked_dates')
           .select('booked_places')
@@ -122,7 +125,7 @@ export default defineEventHandler(async (event) => {
           .from('travel_dates')
           .update({ booked_seat: totalBooked })
           .eq('id', travel_date_id)
-        console.log('===========travel_date_id', travel_date_id, 'update success')
+        console.log('travel_dates.booked_seat updated successfully', travel_date_id)
         return { success: true }
       }
     }
