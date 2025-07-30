@@ -285,7 +285,7 @@ const submitStepData = async () => {
         country: voyage.country,
         iso: voyage.iso,
         zoneChapka: voyage.zoneChapka,
-        image: voyage.imgSrc || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+        image: voyage.imgSrc || '/images/default/Odysway-couverture-mongolie.jpeg',
         currentStep: 'Création du Deal',
         alreadyPaid: 0,
         restToPay: 0, // Don't care about this value, we Calculate it in back
