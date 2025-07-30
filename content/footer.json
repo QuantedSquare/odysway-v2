@@ -35,6 +35,10 @@
         {
           "text": "Nous rejoindre",
           "to": "/nous-recrutons"
+        },
+        {
+          "text": "Chèques vacances",
+          "to": "/cheques-vacances"
         }
       ]
     },
