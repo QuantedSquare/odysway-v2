@@ -145,7 +145,7 @@ const { data: voyage } = await useAsyncData(`voyages-${route.query.slug}`, () =>
 )
 const { data: destinations } = await useAsyncData(`destinations-${route.query.slug}`, () => {
   if (!voyage.value) return []
-  return queryCollection('destinations').where('titre', 'IN', voyage.value.destinations.map(d => d.name)).select('iso', 'chapka', 'titre').all()
+  return queryCollection('destinations').where('title', 'IN', voyage.value.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
 }, [voyage])
 
 const { data: pageTexts, status: pageStatus } = await useAsyncData('devis-texts', () =>

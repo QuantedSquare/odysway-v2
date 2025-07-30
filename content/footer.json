@@ -24,8 +24,8 @@
     "colonne1": {
       "title": "Liens utiles",
       "links": [
-     {
-          "text": "À propos",
+        {
+          "text": "Notre vision",
           "to": "/a-propos"
         },
         {
@@ -33,34 +33,42 @@
           "to": "/blog"
         },
         {
-          "text": "Contact",
-          "to": "/contact"
+          "text": "Nous rejoindre",
+          "to": "/nous-recrutons"
         }
       ]
     },
     "colonne2": {
-      "title": "Destinations",
+      "title": "Voyages",
       "links": [
         {
-          "text": "Europe",
-          "to": "/destinations/europe"
+          "text": "Tous nos voyages",
+          "to": "/search"
         },
         {
-          "text": "Asie",
-          "to": "/destinations/asie"
+          "text": "Nos départs en petit groupes",
+          "to": "/prochains-departs "
         },
         {
-          "text": "Amérique du Suds",
-          "to": "/destinations/amerique-du-sud"
+          "text": "Demande de voyage sur-mesure",
+          "to": "/sur-mesure"
+        },
+        {
+          "text": "Expériences",
+          "to": "/experiences/"
+        },
+        {
+          "text": "Catégories",
+          "to": "/thematiques"
         }
       ]
     },
     "colonne3": {
-      "title": "Types de voyages",
+      "title": "Destinations",
       "links": [
         {
-          "text": "Europe",
-          "to": "/destinations/europe"
+          "text": "France",
+          "to": "/destinations/france"
         },
         {
           "text": "Asie",
@@ -69,6 +77,10 @@
         {
           "text": "Amérique du Sud",
           "to": "/destinations/amerique-du-sud"
+        },
+        {
+          "text": "Afrique",
+          "to": "/destinations/afrique"
         }
       ]
     },

@@ -16,9 +16,11 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 
-useHead({
-  htmlAttrs: {
+if (page.value) {
+  console.log('page', page.value, page.value?.seo)
+  useHead(page.value.head || { htmlAttrs: {
     lang: 'fr',
-  },
-})
+  } }) // <-- Nuxt Schema.org
+  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+}
 </script>

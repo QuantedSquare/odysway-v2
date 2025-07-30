@@ -8,6 +8,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'simple-pages',
+})
+
 const { data: contactContent } = await useAsyncData('contact-content', () =>
   queryCollection('page_contact').first(),
 )

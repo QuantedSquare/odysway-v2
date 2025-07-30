@@ -1,3 +1,14 @@
+---
+ogImage:
+  props: {}
+schemaOrg: {}
+head:
+  script: []
+sitemap:
+  videos: []
+  images: []
+---
+
 ::hero-section
 ---
 image-src: /images/sur-mesure/AdobeStock_557006728.webp
@@ -5,7 +16,6 @@ image-src: /images/sur-mesure/AdobeStock_557006728.webp
 #title
 Nos offres d'emploi
 ::
-
 
 ::section-container
 #content
@@ -17,14 +27,14 @@ Depuis notre lancement en 2018, nous avons déjà accompagné plus de 3 500 voya
 
 Si tu es motivé(e) par le secteur du voyage, que tu veux évoluer dans une ambiance bienveillante et une culture startup, alors n’hésite plus : rejoins-nous et embarque dans l’aventure Odysway !
 
-:::recruitement-card
----
-link: "https://jobs.makesense.org/en/jobs/odysyway-stage-creation-de-contenu-video-hf-3-mois-minimum-CyCEKVesZXQqH1LSJHJh"
----
-#text
-Video Content Creation Internship (M/F) 📹 (3 months minimum) | Paris
-#cta
-Postuler !
-:::
-
+  :::recruitement-card
+  ---
+  link: https://jobs.makesense.org/en/jobs/odysyway-stage-creation-de-contenu-video-hf-3-mois-minimum-CyCEKVesZXQqH1LSJHJh
+  ---
+  #text
+  Video Content Creation Internship (M/F) 📹 (3 months minimum) | Paris
+  
+  #cta
+  Postuler !
+  :::
 ::
