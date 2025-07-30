@@ -69,11 +69,36 @@ export default defineEventHandler(async (event) => {
         .single()
 
       console.log('======bookedRow=======', bookedRow, fetchError)
-      if (fetchError || !bookedRow) return { error: 'Impossible de trouver la réservation à supprimer.' }
+      if (fetchError || !bookedRow) {
+        console.log('No booked_dates found for dealId:', dealId)
+        // Still delete from ActiveCampaign even if no booked_dates found
+        try {
+          await activecampaign.deleteDeal(dealId)
+          console.log('Deal deleted from ActiveCampaign successfully')
+        }
+        catch (acError) {
+          console.error('Error deleting deal from ActiveCampaign:', acError)
+        }
+        return { success: true, message: 'Deal deleted from ActiveCampaign, no booked_dates found' }
+      }
+
       const travel_date_id = bookedRow.travel_date_id
 
       // Delete from ActiveCampaign and Supabase
-      await activecampaign.deleteDeal(dealId)
+      try {
+        console.log('Attempting to delete deal from ActiveCampaign with dealId:', dealId)
+        const deleteResult = await activecampaign.deleteDeal(dealId)
+        console.log('Deal deleted from ActiveCampaign successfully, result:', deleteResult)
+      }
+      catch (acError) {
+        console.error('Error deleting deal from ActiveCampaign:', acError)
+        console.error('Error details:', {
+          message: acError.message,
+          stack: acError.stack,
+          dealId: dealId,
+        })
+        // Continue with Supabase cleanup even if ActiveCampaign deletion fails
+      }
       const { error } = await supabase
         .from('booked_dates')
         .delete()
