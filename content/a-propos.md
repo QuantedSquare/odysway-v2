@@ -11,8 +11,10 @@ sitemap:
   images: []
 robots: index, nofollow
 seo:
-  title: Le concept
-  description: Notre vision du voyage Odysway
+  title: Vision d'Odysway
+  description: "Découvrez la vision de l'agence de voyage Odysway : un tourisme
+    plus lent, plus juste, plus humain. Des voyages immersifs pensés avec
+    respect et sincérité."
 schemaOrg:
   - "@type": TravelAgency
     headline: Odysway, agence de voyage
@@ -40,6 +42,10 @@ head:
   htmlAttrs:
     lang: fr
   script: []
+title: Notre vision du voyage
+description: "Découvrez la vision de l'agence de voyage Odysway : un tourisme
+  plus lent, plus juste, plus humain. Des voyages immersifs pensés avec respect
+  et sincérité."
 ---
 
 ::simple-hero-section
@@ -48,38 +54,29 @@ displayed-img: /images/concept/Vélo.jpg
 title-color: white
 ---
 #title
-Voyager autrement, en plaçant l'humain au cœur de chaque aventure
+# Notre vision du voyage
 ::
 
 ::title-container
 #title
-Le concept d'Odysway
+## La prise de conscience
+
+Chez Odysway, nous partons d’un constat simple : voyager n’est pas un acte neutre. Le tourisme classique repose encore trop souvent sur une logique de consommation rapide, qui prend plus qu’elle ne donne. Nous voulons rompre avec cette manière de faire. À travers des séjours plus lents, plus sobres et plus ancrés dans le réel, nous proposons une autre façon de voyager : plus lucide, plus respectueuse, et tournée vers la rencontre, sans artifice.
+
+En lire plus sur nos engagements pour un tourisme plus équilibré
 ::
 
 ::concept-container
 ---
 image-src: /images/photo Romain.webp
 ---
-#text
-"Le vrai voyage ne consiste pas à chercher de nouveaux paysages, mais à avoir de nouveaux yeux." Comme l'a si bien exprimé Marcel Proust, voyager va au-delà du déplacement géographique. Chez Odysway, cette vision du voyage nous guide depuis nos débuts : voir le voyage comme un moyen de redéfinir notre perspective et nos croyances, en embrassant la diversité du monde et des autres.
-
-:br
-
-Odysway est une agence de voyage en ligne spécialisée dans le voyage en immersion. Fondée par des passionnés de voyage à sac à dos, Odysway se donne pour mission de vous faire vivre des expériences uniques. Plus que de simples itinéraires, nous croyons à l'impact des voyages en immersion pour créer des liens profonds, à la fois avec vous-même et avec les locaux que vous rencontrerez.
-
-:br
-
-Dans cette optique, nous nous engageons à créer le tourisme de demain : durable, conscient et accessible.
-
-:br
-
 #founder
 Romain, fondateur d'Odysway
 ::
 
 ::title-container
 #title
-Une agence de voyage à taille humaine
+## Ce que l'on défend
 ::
 
 ::company-overview-container
@@ -87,10 +84,18 @@ Une agence de voyage à taille humaine
 image-src: /images/team/team-photo.webp
 ---
 #text
-Chez Odysway, notre véritable différence, au-delà de notre concept d'immersion, réside dans notre attention personnalisée à chaque voyageur. Dès notre premier appel ou notre première visio, jusqu'à votre retour de voyage, vous êtes en contact direct avec un membre de notre équipe. Nous nous efforçons d'être réactifs et disponibles pour répondre à toutes vos questions ou pour vous conseiller sur votre voyage. Cette approche est au cœur de la création d'Odysway : offrir une belle expérience non seulement pendant votre aventure, mais aussi à travers nos échanges. Nous prenons le temps de vous écouter et de comprendre votre projet de voyage pour vous offrir les meilleurs conseils possibles.
+Nous croyons qu’un autre tourisme est possible. Un tourisme plus juste, plus ancré, plus respectueux.
+
+Depuis nos débuts, nous construisons des voyages qui ont du sens. Pour les voyageurs qui partent, comme pour les personnes qui accueillent. Chaque séjour est pensé en lien direct avec celles et ceux qui vivent sur place : guides, familles, artisans, éleveurs, femmes engagées dans leur territoire. Ce sont eux qui donnent vie aux expériences que nous proposons.
+
+Notre rôle est clair : créer les conditions d’une vraie rencontre. Une rencontre simple, équilibrée, sans mise en scène. Nous veillons à la qualité de chaque détail : itinéraires, hébergements, rythme, accueil… tout est ajusté pour que chacun trouve sa place, dans le respect des personnes et des lieux.
+
+Nous ne cherchons pas à impressionner, nous cherchons à être juste. Juste dans la façon de voyager, dans la relation avec nos partenaires et au sein de l'équipe Odysway.
+
+Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
 
 #capture
-[Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️]{style="text-decoration: underline; font-style: italic;"}
+[]{style="text-decoration: underline; font-style: italic;"}[Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️](/)
 ::
 
 ::title-container
@@ -149,20 +154,16 @@ Transparence, respect et engagement sont au cœur de notre démarche, pour que c
 
 ::title-container
 #title
-Des séjours créés avec passion
+## Une équipe à taille humaine
+
+Chez Odysway, nous ne sommes pas une plateforme automatisée. Nous sommes une petite équipe, et c’est ce qui fait notre force. Quand vous nous contactez, vous parlez à une vraie personne, qui prend le temps de vous écouter. Pas pour vous faire entrer dans une case, mais pour comprendre ce qui vous fait envie, ce qui vous inspire, ce que vous attendez ou ce que vous fuyez.
+
+Ce lien direct avec vous est au cœur de notre démarche. Il n’y a pas de filtre, pas d’intermédiaire. Nous échangeons avec vous comme nous aimons qu’on le fasse avec nous : simplement, franchement, avec attention. Ce que nous cherchons, ce n’est pas de vendre un séjour à tout prix, mais de vous accompagner dans un projet de voyage qui vous ressemble, dans le respect de ce que nous sommes et de ce que nous proposons.
+
+Nous ne traitons pas des centaines de dossiers à la chaîne. Chaque voyage compte pour nous. Et c’est aussi pour cela que les personnes qui vous accueillent sur place s’impliquent autant : elles savent qu’il y a, derrière chaque départ, une relation de confiance construite avec soin.
+
+Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terrain, nous testons, nous ajustons. C’est notre façon de garantir que ce que vous vivrez soit fidèle à ce que nous défendons.
 ::
 
 ::text-container
-#text
-Chez Odysway, nous créons nous-mêmes chacun de nos voyages, directement sur le terrain. Concrètement, cela signifie qu'un membre de notre équipe se rend sur place pour rencontrer les guides, choisir les bons partenaires et s'assurer que chaque expérience soit unique, authentique et bien organisée.
-
-:br
-
-Nous ne proposons que des voyages que nous avons imaginés avec soin, pour garantir des séjours fidèles à notre vision du voyage.
-
-:br
-
-Odysway est une agence de voyage certifiée, immatriculée au registre des opérateurs de voyages et de séjours, et bénéficie d'une garantie financière auprès d'Odysway.
-
-:br
 ::
