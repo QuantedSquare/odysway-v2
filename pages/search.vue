@@ -136,12 +136,23 @@ function filterByDestination(voyages, destination) {
   if (!destination) return voyages
   return voyages.filter(v => v.destinations?.some(d => d.name.includes(destination)))
 }
+
+const { data: travelTypes } = await useAsyncData('travelTypes', () => {
+  return queryCollection('search_field').select('travelTypes').first()
+})
+
+const TRAVEL_TYPES = {
+  GROUP: travelTypes.value?.travelTypes?.group,
+  INDIVIDUAL: travelTypes.value?.travelTypes?.individual,
+}
+
 function filterByType(voyages, travelType) {
+  // Early return for falsy values
   if (!travelType) return voyages
 
   const typeFilters = {
-    'Voyage en groupe': voyage => voyage.groupeAvailable === true,
-    'Voyage individuel': voyage => voyage.privatisationAvailable === true,
+    [TRAVEL_TYPES.GROUP]: voyage => voyage.groupeAvailable === true,
+    [TRAVEL_TYPES.INDIVIDUAL]: voyage => voyage.privatisationAvailable === true,
   }
 
   const filterFn = typeFilters[travelType]
