@@ -148,7 +148,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 #faq
   :::question-panel
   ---
-  hide: true
+  hide: false
   ---
   #question
   Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
@@ -163,7 +163,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide: true
+  hide: false
   ---
   #question
   Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
@@ -202,7 +202,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide: true
+  hide: false
   ---
   #question
   Comment réserver un voyage sur Odysway ?
@@ -219,7 +219,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide: false
+  hide: true
   ---
   #question
   Puis-je réserver pour plusieurs personnes ?
@@ -234,7 +234,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide: false
+  hide: true
   ---
   #question
   À quel moment le voyage est-il confirmé ?
@@ -253,7 +253,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide: false
+  hide: true
   ---
   #question
   Que se passe-t-il si le voyage n’atteint pas le nombre minimum de participants ?
@@ -289,7 +289,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 
   :::question-panel
   ---
-  hide: true
+  hide: false
   ---
   #question
   Quels sont les moyens de paiement acceptés ?
@@ -300,6 +300,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   - Carte bancaire (Visa, Mastercard, etc.),
   - Virement bancaire, sur demande,
   - Paiement en plusieurs fois sans frais (en 2 ou 3 échéances, selon la date de départ).
+  - Chèques vacances (ANCV) Classic ou Connect
   
   Pour les **voyages privatifs** ou **sur-mesure**, un lien de paiement privé et sécurisé est transmis après validation du devis.
   

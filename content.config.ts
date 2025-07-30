@@ -54,9 +54,11 @@ const destinationFolders = fs.readdirSync(destinationDir).filter(
 )
 const destinationChoices = destinationFolders
   .map((folder) => {
-    const jsonPath = path.join(destinationDir, folder, `${folder}.json`)
-    if (fs.existsSync(jsonPath)) {
-      return JSON.parse(fs.readFileSync(jsonPath, 'utf-8')).title
+    const folderPath = path.join(destinationDir, folder)
+    const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.json'))
+    if (files.length > 0) {
+      // Return the filename without extension
+      return JSON.parse(fs.readFileSync(path.join(folderPath, files[0]), 'utf-8')).title
     }
     return null
   })
@@ -848,11 +850,11 @@ export default defineContentConfig({
       source: 'voyages/**/*.json',
       schema: z.object({
         published: z.boolean().describe('Indique si le voyage est publié'),
-        title: z.string().describe('Titre du voyage'),
-        slug: z.string().describe('Slug du voyage'),
+        title: z.string().describe('[Requis*]Titre du voyage'),
+        slug: z.string().describe('[Requis*]Slug du voyage'),
         destinations: z.array(z.object({
           name: z.enum(destinationChoices),
-        })).describe('Destinations du voyage'),
+        })).describe('[Requis*]Destinations du voyage'),
         groupeAvailable: z.boolean().describe('Indique si le voyage est disponible en groupe'),
         privatisationAvailable: z.boolean().describe('Indique si le voyage est disponible en privatisation'),
         customAvailable: z.boolean().describe('Indique si le voyage est disponible en sur-mesure'),
@@ -910,7 +912,6 @@ export default defineContentConfig({
         experiencesBlock: z.array(z.string()).describe('Liste des plus du voyage, utiliser des "**" pour afficher du texte en gras (ex: "**7 nuits** sur place")'), // use "plus" key which is an html list you need to convert to an array of strings
         // ==========================================
         // SEO
-
         description: z.string().describe('Description du voyage'),
         emailDescription: z.string().describe('Description du voyage pour l\'email'),
         metaDescription: z.string().describe('Meta Description du voyage'),

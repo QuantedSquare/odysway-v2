@@ -1,0 +1,17 @@
+{
+  "title": "Écosse",
+  "regions": [
+    {
+      "nom": "Europe"
+    }
+  ],
+  "slug": "ecosse",
+  "chapka": "1",
+  "interjection": "en",
+  "metaDescription": "Découvrez nos séjours immersifs en Écosse !",
+  "image": {
+    "src": "/images/voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
+    "alt": "Image de la destination Ecosse"
+  },
+  "iso": "GBR"
+}

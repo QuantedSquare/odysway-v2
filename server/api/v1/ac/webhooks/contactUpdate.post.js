@@ -7,10 +7,13 @@ export default defineEventHandler(async (event) => {
   }
   try {
     // Extract contact data from request body
-    const { contact } = await readBody(event)
-    console.log('Contact update webhook received:', contact)
+    const body = await readBody(event)
+    console.log('Contact update BODY webhook received', body, 'event', event)
+
+    const contactId = body['contact[id]']
+
     // Validate input
-    if (!contact || !contact.id) {
+    if (!body || !contactId) {
       throw createError({
         statusCode: 400,
         message: 'Invalid contact data',
@@ -18,7 +21,7 @@ export default defineEventHandler(async (event) => {
     }
 
     // Upsert contact into Supabase
-    const result = await activecampaign.upsertContactIntoSupabase(contact.id)
+    const result = await activecampaign.upsertContactIntoSupabase(contactId)
 
     // Log successful upsert
     console.log('Contact upserted successfully:', result)

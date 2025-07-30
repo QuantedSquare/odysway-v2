@@ -6,7 +6,6 @@
     <FunnelStepsStepperHeader
       ref="stepperHeaderRef"
       v-model="currentStep"
-
       :page="pageTexts"
       :skipper-mode="skipperMode"
       :show-insurance="!!showInsuranceStep"
@@ -144,7 +143,7 @@
         </v-col>
 
         <v-col
-          v-if="currentStep > 0 && skipperMode === 'normal'"
+          v-if="currentStep > 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
           cols="12"
           :md="4"
           class="d-none d-md-block"
@@ -159,7 +158,7 @@
         </v-col>
       </v-row>
       <FunnelStepsBottomSummaryBar
-        v-if="currentStep !== 0 && skipperMode === 'normal'"
+        v-if="currentStep !== 0 && (skipperMode === 'normal' || skipperMode === 'summary')"
         ref="summaryRef"
         :voyage="voyage"
         :page-texts="pageTexts"
@@ -206,10 +205,8 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
   if (date_id) {
     // We fetch the date details from BMS, the price and dates
     const fetchedDate = await apiRequest(`/booking/date/${date_id}`)
-
     // We fetch the travel details from Nuxt, we always need to have one
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
-
     // We fetch the destinations details from Nuxt, used for insurance
     const destinations = await queryCollection('destinations').where('title', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
 
@@ -222,7 +219,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       departureDate: fetchedDate.departure_date,
       returnDate: fetchedDate.return_date,
       title: travel.title,
-      imgSrc: travel.image.src,
+      imgSrc: travel.image.src || '/images/sur-mesure/AdobeStock_557006728.webp',
       country: destinations.map(d => d.iso).join(','),
       slug: travel.slug,
       iso: destinations.map(d => d.iso).join(','),
@@ -232,12 +229,12 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       indivRoomPrice: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0 ? travel.pricing.indivRoomPrice * 100 : 0,
       gotIndivRoomAvailable: travel.pricing.indivRoom && travel.pricing.indivRoomPrice > 0,
       gotEarlybird: fetchedDate.early_bird && dayjs(fetchedDate.departure_date).isAfter(dayjs().add(7, 'month')),
-      promoEarlybird: travel.pricing.earlyBirdReduction * 100,
+      promoEarlybird: travel.pricing.earlyBirdReduction * 100 || 0,
       gotLastMinute: fetchedDate.last_minute && dayjs(fetchedDate.departure_date).isBefore(dayjs().add(1, 'month')),
-      promoLastMinute: travel.pricing.lastMinuteReduction * 100,
+      promoLastMinute: travel.pricing.lastMinuteReduction * 100 || 0,
       depositPrice: +fetchedDate.starting_price * 0.3,
-      promoChildren: travel.pricing.childrenPromo * 100,
-      maxChildrenAge: travel.pricing.childrenAge,
+      promoChildren: travel.pricing.childrenPromo * 100 || 0,
+      maxChildrenAge: travel.pricing.childrenAge || 12,
       source: 'Devis',
       forcedIndivRoom: travel.pricing.forcedIndivRoom,
       travelType: 'Groupe', // TODO: check comment le rendre dynamique
@@ -258,8 +255,8 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       nbTeen: 0,
       email: '',
       phone: '',
-      firstname: '',
-      lastname: '',
+      firstName: '',
+      lastName: '',
       optinNewsletter: false,
 
       // Travelers Infos
@@ -296,13 +293,13 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         travelersData[travelerKey] = null
       }
     }
-
+    console.log('deal', deal)
     const dynamicValues = {
       // Details
       nbTravelers: +deal.nbTravelers,
-      nbAdults: +deal.nbAdults,
-      nbChildren: +deal.nbChildren,
-      nbUnderAge: +deal.nbUnderAge,
+      nbAdults: +deal.nbAdults || 1,
+      nbChildren: +deal.nbChildren || 0,
+      nbUnderAge: +deal.nbUnderAge || 0,
       email: deal.contact.email,
       phone: deal.contact.phone,
       firstName: deal.contact.firstName,
@@ -318,11 +315,13 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       insurance: deal.insurance,
       insuranceCommissionPrice: deal.insuranceCommissionPrice || 0,
       insuranceCommissionPerTraveler: deal.insuranceCommissionPerTraveler || 0,
+      alreadyPaid: deal.alreadyPaid,
     }
 
     dynamicDealValues.value = dynamicValues
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-
+    console.log('checkoutType', checkoutType.value)
+    console.log('deal', deal)
     const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
@@ -349,9 +348,10 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       includeFlight: deal.includeFlight === 'Oui',
       flightPrice: deal.flightPrice || 0,
       promoValue: deal.promoValue || 0,
-      alreadyPaid: deal.alreadyPaid,
+      alreadyPaid: deal.alreadyPaid || 0,
       totalTravelPrice: deal.value,
     }
+    console.log('voyageStaticValues', voyageStaticValues)
     await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
     return voyageStaticValues
   }
@@ -362,8 +362,9 @@ const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
 const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
-  currentStep.value = 5
-  skipperMode.value = 'summary'
+  currentStep.value = route.query.type === 'custom' ? 1 : 5
+  skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
+  console.log('skipperMode', skipperMode.value)
 }
 
 const nextStep = () => {

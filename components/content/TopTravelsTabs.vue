@@ -64,16 +64,27 @@
               {{ section.title }}
             </h5>
             <div class="d-flex flex-column ga-md-2">
-              <NuxtLink
+              <template
                 v-for="link, i in section.linksList"
                 :key="`${link.slug}-${i}`"
-                :to="`/${link.slug}`"
-                :external="link.slug.includes('http')"
-                :target="link.slug.includes('http') ? '_blank' : undefined"
-                class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
               >
-                {{ link.title }}
-              </NuxtLink>
+                <NuxtLink
+                  v-if="link.slug.includes('http')"
+                  :href="`${link.slug}`"
+                  :external="link.slug.includes('http')"
+                  :target="link.slug.includes('http') ? '_blank' : undefined"
+                  class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
+                >
+                  {{ link.title }}
+                </NuxtLink>
+                <NuxtLink
+                  v-else
+                  :to="`/${link.slug}`"
+                  class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
+                >
+                  {{ link.title }}
+                </NuxtLink>
+              </template>
             </div>
           </v-col>
         </v-row>

@@ -166,6 +166,7 @@
             sm="12"
           >
             <v-btn-secondary
+              v-if="enrichedDate?.id"
               :height="width < 500 ? 50 : 60"
               block
               :disabled="enrichedDate.status.status === 'full'"
@@ -177,35 +178,35 @@
                 Réserver
               </span>
             </v-btn-secondary>
+            <v-btn-secondary
+              v-else
+              :height="width < 500 ? 50 : 60"
+              block
+              :disabled="enrichedDate.status.status === 'full'"
+              rounded="md"
+            >
+              <span class="text-body-1 font-weight-bold text-decoration-none">
+                Réserver
+              </span>
+            </v-btn-secondary>
           </v-col>
         </v-row>
         <v-row class="text-size-14 text-grey d-none d-sm-block">
           <v-col
+            v-if="texte"
             cols="12"
             class="d-flex align-start flex-column "
           >
-            <div class="d-flex align-center ga-2">
+            <div
+              v-for="info, index in texte?.dateSections?.ctaList?.list"
+              :key="info+index"
+              class="d-flex align-center ga-2"
+            >
               <v-icon size="small">
                 {{ mdiCheckCircleOutline }}
               </v-icon>
               <span>
-                <strong>15 jours</strong> pour changer d'avis
-              </span>
-            </div>
-            <div class="d-flex align-center ga-2">
-              <v-icon size="small">
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                Paiement en <strong>trois fois</strong> (Alma)
-              </span>
-            </div>
-            <div class="d-flex align-center ga-2">
-              <v-icon size="small">
-                {{ mdiCheckCircleOutline }}
-              </v-icon>
-              <span>
-                Paiement par <strong>chèque vacances</strong> (ANCV)
+                <div v-dompurify-html="parseBoldText(info)" />
               </span>
             </div>
           </v-col>
@@ -228,6 +229,11 @@ const { date } = defineProps({
     required: true,
   },
 })
+
+const { data: texte } = useAsyncData('cta-list-dates-price-item', () =>
+  queryCollection('page_voyage_fr').select('dateSections').first(),
+)
+console.log('dateSections', texte.value)
 
 const enrichedDate = computed(() => {
   return {

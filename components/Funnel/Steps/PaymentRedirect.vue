@@ -2,7 +2,7 @@
   <v-container>
     <!-- Prévoir Promo form -->
 
-    <v-card-text v-if="model && voyage.alreadyPaid < voyage.totalTravelPrice">
+    <v-card-text v-if="model && +voyage.alreadyPaid < +voyage.totalTravelPrice">
       <v-row>
         <v-col cols="12">
           <template v-if="isBooking">
@@ -158,14 +158,14 @@ import { mdiCreditCardOutline, mdiCreditCardClockOutline, mdiCalendarOutline } f
 
 const { page, currentStep, ownStep, voyage } = defineProps(['page', 'voyage', 'currentStep', 'ownStep'])
 const route = useRoute()
-const runtimeConfig = useRuntimeConfig()
+const config = useRuntimeConfig()
 const alreadyPlacedAnOption = ref(false)
 
 const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-
+console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
 const isBooking = ref(route.query.type === 'booking')
@@ -233,8 +233,8 @@ const almaPay = async () => {
   const dataForAlmaSession = {
     paymentType: route.query.type,
     contact: {
-      firstName: model.value.firstname,
-      lastName: model.value.lastname,
+      firstName: model.value.firstName,
+      lastName: model.value.lastName,
       email: model.value.email,
       phone: model.value.phone,
     },
@@ -299,14 +299,14 @@ const book = async () => {
     currentStep: 'A posé une option',
     title: voyage.title,
     nbTravelers: +model.value.nbAdults + +model.value.nbChildren,
-    firstName: model.value.firstname,
-    lastName: model.value.lastname,
+    firstName: model.value.firstName,
+    lastName: model.value.lastName,
   }
 
   updateDeal(dealData)
   // Check si on ajoute le payment link ici
 
-  if (runtimeConfig.public.env === 'production') {
+  if (config.public.environment === 'production') {
     await $fetch('/api/v1/slack/notification', {
       method: 'POST',
       headers: {
@@ -314,21 +314,11 @@ const book = async () => {
       },
       body: JSON.stringify(dealData),
     })
+    trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
   }
-  trackPixel('trackCustom', 'PoseOption', { voyage: voyage.title })
   await navigateTo(`/confirmation?voyage=${voyage.slug}&isoption=true`)
 }
 
-// watch([() => currentStep], () => {
-//   if (currentStep === ownStep) {
-//     addSingleParam('step', ownStep)
-//   }
-// }, { immediate: true })
-
-// #TODO Add option only on certain travel ?
-// const showOptionOrPayment = computed(() => {
-//   return checkedOption.value ? 0 : 1
-// })
 watch(checkedOption, (value) => {
   addSingleParam('isoption', value)
 })

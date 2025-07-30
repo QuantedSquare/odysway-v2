@@ -1,0 +1,156 @@
+{
+  "published": false,
+  "title": "Séjour photo sur la côte d'Argent portugaise",
+  "destinations": [
+    {
+      "name": "Portugal"
+    }
+  ],
+  "groupeAvailable": true,
+  "privatisationAvailable": false,
+  "customAvailable": true,
+  "experienceType": "Apprendre en voyage",
+  "level": "1",
+  "categories": [
+    {
+      "name": "sejours-stage-photographie"
+    }
+  ],
+  "duration": 7,
+  "nights": 6,
+  "includeFlight": false,
+  "housingType": "Maison vue mer",
+  "idealPeriods": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": false
+  },
+  "monthlyAvailability": {
+    "toutePeriodes": false,
+    "janvier": true,
+    "fevrier": true,
+    "mars": true,
+    "avril": false,
+    "mai": false,
+    "juin": false,
+    "juillet": false,
+    "aout": false,
+    "septembre": false,
+    "octobre": true,
+    "novembre": true,
+    "decembre": true
+  },
+  "minAge": 8,
+  "rating": 5,
+  "comments": 0,
+  "miniatureDisplay": "Note moyenne",
+  "authorNote": {
+    "text": "Voyage photographique au Portugal",
+    "author": "",
+    "affixeAuthor": ""
+  },
+  "experiencesBlock": [],
+  "slug": "portugal-photo-lenoir",
+  "description": "Voyage photographique au Portugal",
+  "emailDescription": "",
+  "metaDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Portugal, en petit groupe.",
+  "badgeSection": {
+    "experienceBadge": {
+      "text": "Apprendre en voyage",
+      "color": "yellow",
+      "visible": true
+    },
+    "groupeBadge": {
+      "text": "Groupe de **2 à 6 personnes**",
+      "visible": true
+    },
+    "durationBadge": {
+      "text": "**6 nuits sur place**",
+      "visible": true
+    },
+    "includeFlightBadge": {
+      "text": "**Vol** compris",
+      "visible": false
+    },
+    "housingBadge": {
+      "text": "",
+      "visible": false
+    },
+    "periodBadge": {
+      "text": "Du 5 au 21 février",
+      "visible": true
+    }
+  },
+  "programmeBlock": [],
+  "pricingDetailsBlock": {
+    "include": [],
+    "exclude": []
+  },
+  "pricing": {
+    "startingPrice": 1950,
+    "lastMinuteAvailable": false,
+    "lastMinuteReduction": 80,
+    "earlyBirdAvailable": false,
+    "earlyBirdReduction": "",
+    "maxTravelers": 6,
+    "minTravelersToConfirm": 2,
+    "indivRoom": true,
+    "forcedIndivRoom": false,
+    "indivRoomPrice": 100,
+    "cseReduction": 0,
+    "cseAvailable": false,
+    "childrenPromo": 0,
+    "childrenAge": 12,
+    "airportCode": []
+  },
+  "accompanistsDescription": "",
+  "accompanistsList": [],
+  "housingBlock": [
+    {
+      "title": "Maison avec vue mer",
+      "housingType": "En chambre partagée ou en chambre individuelle avec supplément de 100eur",
+      "housingMood": "",
+      "image": []
+    }
+  ],
+  "image": {
+    "src": "/images/destinations/Portugal/city-4820579-1280.jpg",
+    "alt": "image principale du voyage Séjour photographique Portugal"
+  },
+  "imageSecondary": {
+    "src": "/images/destinations/Portugal/lisbon-8268841-1280.jpg",
+    "alt": "image secondaire du voyage Séjour photographique au Portugal"
+  },
+  "photosList": [],
+  "videoLinks": [],
+  "faqBlock": {
+    "faqList": []
+  },
+  "seoSection": {
+    "metaTitle": "Séjour photographique au Portugal",
+    "canonicalUrl": "https://www.odysway.com/voyages/portugal-photo-lenoir",
+    "ogTitle": "Séjour photographique au Portugal",
+    "ogDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Por, en petit groupe.",
+    "ogImage": {
+      "src": "/images/destinations/Portugal/city-4820579-1280.jpg",
+      "alt": "image principale du voyage Séjour photographique au Portugal"
+    },
+    "twitterTitle": "Séjour photographique au Portugal",
+    "twitterDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, au Portugal, en petit groupe.",
+    "twitterImage": {
+      "src": "/images/destinations/Portugal/portugal-4442631-1280.jpg",
+      "alt": "image principale du voyage Séjour photographique Portugal"
+    },
+    "twitterCard": "summary_large_image"
+  }
+}

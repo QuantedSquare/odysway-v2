@@ -28,7 +28,9 @@
           :key="index"
           cols="12"
         >
-          <DatesPricesItem :date="Object.assign(date, { index, lastMinutePrice, earlyBirdPrice })" />
+          <DatesPricesItem
+            :date="Object.assign(date, { index, lastMinutePrice, earlyBirdPrice })"
+          />
         </v-col>
       </TransitionGroup>
     </v-row>
