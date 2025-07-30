@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="mt-8">
     <ClientOnly>
       <v-row v-if="!isMessageSent">
         <v-col cols="12">

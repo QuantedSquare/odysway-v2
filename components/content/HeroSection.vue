@@ -4,7 +4,7 @@
     :lazy-src="img(imageSrc, { format: 'webp', quality: 10, height: 900, width: 1536 })"
     size="(max-width: 600) 480px, 1500px"
     :srcset="`${img(imageSrc, { format: 'webp', quality: 70, width: 640 })} 480w, ${img(imageSrc, { format: 'webp', quality: 70, width: 1024 })} 1500w`"
-    height="100vh"
+    height="50vh"
     cover
   >
     <div class="h-100 d-flex align-center">
