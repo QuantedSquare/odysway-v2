@@ -62,14 +62,10 @@ export default defineEventHandler(async (event) => {
     // Check if deal is moved to pipeline group 3 or status is 'Perdu'
     if (fetchedDeal.group === '3' || mapDealStatus(fetchedDeal.status) === 'Perdu') {
       // Fetch the row to get travel_date_id
-      const { data: bookedRow, error: fetchError } = await supabase
-        .from('booked_dates')
-        .select('travel_date_id')
-        .eq('deal_id', dealId)
-        .single()
+      const bookedRow = await booking.retrieveBookedDateByDealId(dealId)
 
-      console.log('======bookedRow=======', bookedRow, fetchError)
-      if (fetchError || !bookedRow) {
+      console.log('======bookedRow=======', bookedRow)
+      if (!bookedRow) {
         console.log('No booked_dates found for dealId:', dealId)
         // Still delete from ActiveCampaign even if no booked_dates found
         try {
@@ -94,37 +90,20 @@ export default defineEventHandler(async (event) => {
           console.error('Error deleting deal from ActiveCampaign:', acError)
           console.error('Error details:', {
             message: acError.message,
-            stack: acError.stack,
             dealId: dealId,
           })
         // Continue with Supabase cleanup even if ActiveCampaign deletion fails
         }
+
         console.log('Attempting to delete deal from Supabase with dealId:', dealId)
-        const { error } = await supabase
-          .from('booked_dates')
-          .delete()
-          .eq('deal_id', dealId)
-        if (error) {
-          console.error('Supabase delete error:', error)
-          return { error: error.message }
-        }
+        await booking.deleteBookedDateByDealId(dealId)
         console.log('Deal deleted from Supabase successfully')
 
         // Update travel_dates.booked_seat
         console.log('Attempting to update travel_dates.booked_seat with travel_date_id:', travel_date_id)
-        const { data: allBooked, error: sumError } = await supabase
-          .from('booked_dates')
-          .select('booked_places')
-          .eq('travel_date_id', travel_date_id)
-        if (sumError) {
-          console.error('Supabase sum error:', sumError)
-          return { error: sumError.message }
-        }
+        const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
         const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-        await supabase
-          .from('travel_dates')
-          .update({ booked_seat: totalBooked })
-          .eq('id', travel_date_id)
+        await booking.updateTravelDate(travel_date_id, totalBooked)
         console.log('travel_dates.booked_seat updated successfully', travel_date_id)
       }
       return { success: true }
