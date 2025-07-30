@@ -106,55 +106,6 @@ Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas
 Les valeurs d'Odysway
 ::
 
-::text-container
-#text
-Chez Odysway, quatre valeurs guident notre vision du voyage. Elles sont au cœur de tout ce que nous faisons : elles influencent notre façon d'imaginer et de concevoir de nouveaux séjours, notre relation avec les voyageurs, nos échanges au sein de l'équipe, ainsi que nos partenariats avec les acteurs locaux.
-
-:br
-
-[🌍 Immersion – Vivre le voyage autrement]{style="font-weight:bolder"}
-
-:br
-
-Nous croyons au pouvoir du voyage en immersion : prendre le temps de s'imprégner des lieux, de se laisser porter par l'instant présent et de tisser des liens avec les populations locales. Chaque rencontre, chaque échange est une source d'émotion et d'apprentissage, rendant votre séjour unique et inoubliable.
-
-Voyager en immersion, c'est s'ouvrir à de nouvelles cultures, découvrir un pays ou une région autrement et vivre une aventure profondément humaine.
-
-:br
-
-[🔍 Fiabilité – Partir en toute sérénité]{style="font-weight:bolder"}
-
-:br
-
-Votre sérénité est notre priorité. Nous sommes à vos côtés à chaque étape de votre voyage, avant, pendant et après votre départ, pour vous garantir une expérience fluide et sécurisée, où que vous soyez.
-
-À votre écoute et attentifs à vos besoins, nous nous engageons à vous offrir un accompagnement personnalisé, car chaque voyageur est unique et mérite une attention toute particulière.
-
-:br
-
-[❤️ Passion – Des voyages pensés pour vous]{style="font-weight:bolder"}
-
-:br
-
-Odysway, c'est avant tout une équipe de passionnés de voyage et d'aventure, animés par l'envie de vous faire vivre des moments exceptionnels. Chaque itinéraire est imaginé, conçu et testé avec soin pour vous offrir des expériences singulières et inoubliables.
-
-:br
-
-Notre passion du voyage, nous la transmettons à travers chaque séjour… et c'est grâce à vous qu'elle prend tout son sens !
-
-:br
-
-[🌱 Responsabilité – Voyager autrement, avec du sens]{style="font-weight:bolder"}
-
-:br
-
-Parce que voyager doit aussi être un acte responsable, nous mettons un point d'honneur à minimiser notre impact. Nous favorisons des échanges respectueux avec les communautés locales et veillons à un tourisme plus équitable en collaborant directement avec guides et habitants lorsque cela est possible.
-
-:br
-
-Transparence, respect et engagement sont au cœur de notre démarche, pour que chaque voyage soit une expérience éthique et positive, tant pour vous que pour les populations locales.
-::
-
 ::title-container
 #title
 **Une équipe à taille humaine**

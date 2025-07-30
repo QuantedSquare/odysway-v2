@@ -1,31 +1,42 @@
 ---
 title: "Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes"
-description: "Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. ..."
+description: Le Pérou, terre de mystères et d'aventures, est un pays qui ne
+  cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des
+  Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages
+  désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et
+  d'expériences inégalée. ...
 seo:
   title: "Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes"
-  description: "Découvrez les trésors cachés du Pérou avec un voyage sur mesure : explorez Cusco, l'Amazonie, la côte Pacifique et le nord du pays. Vivez des expériences authentiques et immersives, hors des sentiers battus, pour des souvenirs inoubliables."
+  description: "Découvrez les trésors cachés du Pérou avec un voyage sur mesure :
+    explorez Cusco, l'Amazonie, la côte Pacifique et le nord du pays. Vivez des
+    expériences authentiques et immersives, hors des sentiers battus, pour des
+    souvenirs inoubliables."
 navigation:
   title: "Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes"
-  description: "Le Pérou, terre de mystères et d'aventures, est un pays qui ne cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages désertiques de la côte Pacifique, le Pérou offre une diversité de paysages et d'expériences inégalée. ..."
-author: "Romain Masina"
+  description: Le Pérou, terre de mystères et d'aventures, est un pays qui ne
+    cesse de fasciner les voyageurs du monde entier. Des sommets enneigés des
+    Andes aux jungles luxuriantes de l'Amazonie, en passant par les plages
+    désertiques de la côte Pacifique, le Pérou offre une diversité de paysages
+    et d'expériences inégalée. ...
+author: Romain Masina
 authorPhoto: /images/team/romain.webp
 authorRole: Fondateur Odysway
 published: true
-publishedAt: "2024-06-03 15:24:00+00:00"
+publishedAt: 2024-06-03 15:24:00+00:00
 tags: ""
 categories: ""
-displayedImg: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/G9nv26sZReGjGlToUbFZ.jpg"
-blogType: "Actu"
-badgeColor: "secondary"
+displayedImg: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/G9nv26sZReGjGlToUbFZ.jpg
+blogType: Actu
+badgeColor: secondary
 readingTime: "3"
 ---
 
 ::blog-hero-section
 ---
+avatar-size: "60"
 background-color: soft-blush
-title-color: primary
 introduction-color: grey
-avatar-size: '60'
+title-color: primary
 ---
 #title
 Voyage sur Mesure au Pérou : Découvrez les Trésors Cachés des Andes
@@ -48,24 +59,25 @@ Cusco, l'ancienne capitale de l'Empire Inca, est le point de départ idéal pour
 
 **Communautés Andines** : Séjourner chez l'habitant dans des villages andins permet de participer à des activités agricoles, d'apprendre les techniques de tissage traditionnel et de partager des repas avec des familles locales pour une immersion culturelle authentique.
 
-::image-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/5U4T1yoeR6JMxvRAlUZw.jpg"
-alt: 1e863c3bb9-108100-machu-picchu-histoire-01-e1566575088651-1024x698.jpg
----
-::
+  :::image-container
+  ---
+  alt: 1e863c3bb9-108100-machu-picchu-histoire-01-e1566575088651-1024x698.jpg
+  image-src: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/5U4T1yoeR6JMxvRAlUZw.jpg
+  ---
+  :::
 
-##   
+##
+
 Le Lac Titicaca : Une Région à Découvrir
 
 Le lac Titicaca, perché à plus de 3 800 mètres d'altitude, est le plus haut lac navigable au monde et une destination incontournable pour les voyageurs au Pérou. Cette étendue d'eau majestueuse, qui s'étend entre le Pérou et la Bolivie, est entourée de montagnes imposantes et de paysages époustouflants. Les îles flottantes des Uros, construites en roseaux totora, offrent un aperçu unique de la vie traditionnelle de leurs habitants. De plus, les îles de Taquile et d'Amantani sont des lieux où le temps semble s'être arrêté, permettant aux visiteurs de découvrir des communautés qui préservent encore leurs coutumes ancestrales. Le lac Titicaca est non seulement un lieu de beauté naturelle, mais aussi un centre culturel riche, où les mythes et les légendes des civilisations anciennes prennent vie.
 
-::image-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/141nGTouTEG9seNCg4ca.jpg"
-alt: Lac Titicaca.jpg
----
-::
+  :::image-container
+  ---
+  alt: Lac Titicaca.jpg
+  image-src: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/141nGTouTEG9seNCg4ca.jpg
+  ---
+  :::
 
 ## L'Amazonie Péruvienne
 
@@ -75,12 +87,12 @@ La jungle amazonienne est une autre facette fascinante du Pérou. Cette région,
 
 **Iquitos et la Réserve de Pacaya-Samiria** : Accessible uniquement par avion ou par bateau, Iquitos est le point de départ pour explorer l'une des plus grandes réserves protégées du Pérou. Les séjours sur mesure incluent des croisières sur l'Amazone, des visites de communautés indigènes et des explorations de la jungle avec des guides locaux.
 
-::image-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/PLfFp1uATy2c7uzTBdw7.jpg"
-alt: foret-amazonie-950x636.jpg
----
-::
+  :::image-container
+  ---
+  alt: foret-amazonie-950x636.jpg
+  image-src: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/PLfFp1uATy2c7uzTBdw7.jpg
+  ---
+  :::
 
 ## La Côte Pacifique
 
@@ -92,12 +104,12 @@ La côte désertique du Pérou est une région riche en histoire et en paysages 
 
 **Huacachina** : Cette oasis entourée de dunes de sable est le lieu idéal pour les amateurs de sensations fortes. Essayez le sandboard, faites un tour en buggy ou détendez-vous simplement au bord de l'eau dans ce cadre unique.
 
-::image-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/W7uhcjM9QbKPtngVRBHu.jpg"
-alt: undefined
----
-::
+  :::image-container
+  ---
+  alt: undefined
+  image-src: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/W7uhcjM9QbKPtngVRBHu.jpg
+  ---
+  :::
 
 ## Le Nord du Pérou
 
@@ -125,69 +137,68 @@ Odysway, spécialiste des séjours en immersion, propose des voyages sur mesure 
 
 ## Voyagez en terre chamane au Pérou : grands sites incas et immersion au sein des communautés andines
 
-Découvrir le voyage : [https://odysway.com/voyages/voyage-chamanique-perou](https://odysway.com/voyages/voyage-chamanique-perou)
+Découvrir le voyage : <https://odysway.com/voyages/voyage-chamanique-perou>
 
-::image-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/EtmCexLgQf6CX9WgdS48.jpg"
-alt: Pérou voyage spirituel.jpg
----
-::
+  :::image-container
+  ---
+  alt: Pérou voyage spirituel.jpg
+  image-src: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/EtmCexLgQf6CX9WgdS48.jpg
+  ---
+  :::
 
 ## Les essentiels du Pérou : expériences intimistes et immersion chez l'habitant
 
-Découvrir le voyage : [https://odysway.com/voyages/voyage-perou](https://odysway.com/voyages/voyage-perou)
+Découvrir le voyage : <https://odysway.com/voyages/voyage-perou>
 
-::image-container
----
-image-src: "/images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/1kmpH1efSIewr0Sysrab.jpg"
-alt: Jour par Jour Chaman Pérou.jpg
----
-::
+  :::image-container
+  ---
+  alt: Jour par Jour Chaman Pérou.jpg
+  image-src: /images/blogs/voyage-sur-mesure-au-perou-decouvrez-les-tresors-caches-des-andes/1kmpH1efSIewr0Sysrab.jpg
+  ---
+  :::
 
 Avec Odysway, chaque voyage est conçu pour offrir une expérience unique, authentique et respectueuse des cultures locales. Notre approche sur mesure vous permet de découvrir le Pérou à votre rythme, en profitant de l'expertise et de la passion de notre équipe pour vous offrir des souvenirs inoubliables.
 ::
-::color-container
----
-color: soft-blush
----
-  ::info-container
+
+::color-container{color="soft-blush"}
+  :::info-container
   #title
   Découvrir les voyages coups de coeur
+  
   #description
   Partez à la découverte de destinations qui nous ont conquis.
+  
   #bottom
-  ::cta-button
-  ---
-  link: /
-  color: secondary
-  ---
-  #text
-  Découvrir
-  ::
-  ::
+    ::::cta-button
+    ---
+    color: secondary
+    link: /
+    ---
+    #text
+    Découvrir
+    ::::
+  :::
 ::
 
-::color-container
----
-color: grey-light-2
----
-  ::blog-cards-container
+::color-container{color="grey-light-2"}
+  :::blog-cards-container
   ---
-  blogCardSlug1: '/blog/sejour-arts-martiaux' 
-  blogCardSlug2: '/blog/vin-ou-comment-decouvrir-france-patrimoine-viticole' 
-  blogCardSlug3: '/blog/voyage-insolite-nos-idees-devasion-pour-tous' 
+  blogCardSlug1: /blog/sejour-arts-martiaux
+  blogCardSlug2: /blog/vin-ou-comment-decouvrir-france-patrimoine-viticole
+  blogCardSlug3: /blog/voyage-insolite-nos-idees-devasion-pour-tous
   ---
   #title
   Ça devrait vous plaire
+  
   #cta-button
-    ::cta-button
+    ::::cta-button
     ---
     color: white
+    link: /blog
     textColor: primary
-    link: '/blog'
     ---
     #text
-    Tous les  articles
-    ::
-  ::
+    Tous les articles
+    ::::
+  :::
+::
