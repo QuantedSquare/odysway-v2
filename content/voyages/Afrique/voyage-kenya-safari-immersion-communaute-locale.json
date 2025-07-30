@@ -93,11 +93,6 @@
   "emailDescription": "👉 Si vous rêvez d’un voyage authentique au Kenya, entre safaris immersifs, partage du quotidien des communautés masaï et bantoues, et détente sur les plages paradisiaques de Mombasa, ce séjour unique de 12 jours est fait pour vous !",
   "metaDescription": "Voyage au Kenya : safaris immersifs, immersion masaï et bantoue, conservation des éléphants, plages de Mombasa et rencontres authentiques inoubliables.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

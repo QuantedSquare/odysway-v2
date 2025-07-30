@@ -3,11 +3,11 @@
   "title": "S'éveiller ailleurs",
   "badgeTitle": "S'éveiller ailleurs",
   "slug": "s-eveiller-ailleurs",
-  "seoTitle": "S'éveiller ailleurs",
-  "showOnHome": true,
   "discoveryTitle": "S'éveiller ailleurs",
+  "seoTitle": "S'éveiller ailleurs",
   "image": {
-    "src": "/images/experiences/s-eveiller-ailleurs.jpeg"
+    "src": "/images/voyages/retraite-yoga-sikkim-inde/QIXoVqShTQ342s0dnnsl.jpg",
+    "alt": "Photo de montagnes"
   },
-  "slug": ""
+  "showOnHome": true
 }

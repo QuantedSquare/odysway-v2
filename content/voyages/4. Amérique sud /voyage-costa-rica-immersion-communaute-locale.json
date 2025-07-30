@@ -93,11 +93,6 @@
   "emailDescription": "👉 Si vous rêvez d’un voyage authentique au Costa Rica, entre rencontres uniques avec la communauté indigène Bribri, exploration de jungles luxuriantes et détente sur des plages paradisiaques, ce séjour immersif de 12 jours est fait pour vous !",
   "metaDescription": "Voyage au Costa Rica : immersion avec la communauté Bribri, jungles luxuriantes, volcans, plages paradisiaques et rencontres authentiques inoubliables.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

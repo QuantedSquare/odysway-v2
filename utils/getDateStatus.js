@@ -7,7 +7,7 @@ export function getDateStatus(date) {
     }
   }
 
-  if (date.displayed_status === 'guaranteed') {
+  if (date.displayed_status === 'guaranteed' || date.max_travelers === date.booked_seat) {
     return {
       status: 'full',
       text: 'Complet',

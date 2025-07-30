@@ -11,9 +11,9 @@
         block
         class="text-caption text-sm-subtitle-2"
         color="primary"
-        @click="() => { router.push('/calendly'); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.textButton4) }"
+        @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
       >
-        {{ header.textButton4 }}
+        {{ header.button4.text }}
       </v-btn-secondary>
       <v-btn-secondary
         href="tel: +33184807975"
@@ -21,26 +21,26 @@
         variant="tonal"
         class="text-caption text-sm-subtitle-2"
         color="primary"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.textButton3) }"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
       >
-        {{ header.textButton3 }}
+        {{ header.button3.text }}
       </v-btn-secondary>
       <v-btn-secondary
 
         color="white"
         block
         class="text-caption text-sm-subtitle-2 text-primary"
-        @click="() => { router.push('/a-propos'); captureOutboundLink(header.textButton2) }"
+        @click="() => { router.push(header.button2.link); captureOutboundLink(header.button2.text) }"
       >
-        {{ header.textButton2 }}
+        {{ header.button2.text }}
       </v-btn-secondary>
       <v-btn-secondary
         color="white"
         block
         class="text-caption text-sm-subtitle-2 text-primary"
-        @click="() => { router.push('/search'); captureOutboundLink(header.textButton1) }"
+        @click="() => { router.push(header.button1.link); captureOutboundLink(header.button1.text) }"
       >
-        {{ header.textButton1 }}
+        {{ header.button1.text }}
       </v-btn-secondary>
     </div>
   </v-navigation-drawer>
@@ -48,7 +48,9 @@
 
 <script setup>
 const model = defineModel()
-const { header } = useAppConfig()
+const { data: header } = await useAsyncData('header', () => {
+  return queryCollection('header').first()
+})
 const router = useRouter()
 const { gtag } = useGtag()
 

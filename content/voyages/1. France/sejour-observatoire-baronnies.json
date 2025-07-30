@@ -88,11 +88,6 @@
   "emailDescription": "👉 Si vous souhaitez en savoir plus sur les constellations, suivre le quotidien d'astronomes et astrophysiciens et apprendre à manier les instruments comme un pro, ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

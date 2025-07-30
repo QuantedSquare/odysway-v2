@@ -84,11 +84,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir voyager en Algérie à la rencontre des Touaregs, ce voyage est fait pour vous !",
   "metaDescription": "Découvrez l'Algérie alternative en compagnie des Touaregs. Échappez à la foule, reconnectez-vous avec la nature et vivez des moments inoubliables.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true
@@ -108,6 +103,9 @@
     "periodBadge": {
       "text": "Oct à Avr",
       "visible": true
+    },
+    "experienceBadge": {
+      "visible": false
     }
   },
   "programmeBlock": [

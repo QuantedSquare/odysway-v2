@@ -83,11 +83,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir la culture authentique du Bénin au fil de l'eau, ce voyage est fait pour vous ! ",
   "metaDescription": "Avec un guide local passionné, parcourez le sud du Bénin au fil de l'eau : de la cité lacustre de Ganvié à la rivière d'Adjarra, et du Lac Ahémé au fleuve Mono, tout en longeant la côte Atlantique, entre culture vodoun, activités authentiques, visites de lieux historiques et rencontres locales ! ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

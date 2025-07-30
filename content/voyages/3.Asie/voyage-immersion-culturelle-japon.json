@@ -83,11 +83,6 @@
   "emailDescription": "👉 Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions séculaires, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
   "metaDescription": "Explorez le Japon authentique de Kyoto à Tokyo, entre cerisiers en fleurs, jardins zen et rencontres insolites. Un voyage immersif dans l'histoire et les traditions, à la découverte d'un territoire étonnant qui vous captivera à chaque étape.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 10 personnes**",
       "visible": true

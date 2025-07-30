@@ -87,11 +87,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir le Vietnam à travers une expérience unique, ce voyage est fait pour vous ! ",
   "metaDescription": "Découvrez le Vietnam entre les essentiels et expériences hors des sentiers battus ! ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

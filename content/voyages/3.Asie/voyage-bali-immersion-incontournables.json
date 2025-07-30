@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage à la découverte des incontournable tout en vivant une expérience authentique, ce voyage est fait pour vous ! ",
   "metaDescription": "Voyagez avec Odysway et découvrez les multiples facettes de Bali, entre richesse culturelle et paysages enchanteurs !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

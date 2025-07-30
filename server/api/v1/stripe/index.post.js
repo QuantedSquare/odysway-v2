@@ -20,7 +20,12 @@ export default defineEventHandler(async (event) => {
   console.log('dealId:', deal_id)
   Object.assign(body, { dealId: deal_id })
   try {
-    activecampaign.updateDeal(deal_id, { currentStep: 'CB - Sur Stripe Checkout', stage: '17' })
+    console.log('updateDeal', deal_id)
+    const obj = { currentStep: 'CB - Sur Stripe Checkout' }
+    if (body.paymentType === 'deposit' || body.paymentType === 'full') {
+      Object.assign(obj, { stage: '17' })
+    }
+    activecampaign.updateDeal(deal_id, obj)
 
     const redirectLink = await stripe.createCheckoutSession(body)
     return redirectLink

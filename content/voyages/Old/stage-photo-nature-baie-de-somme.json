@@ -93,11 +93,6 @@
   "emailDescription": "👉 Si vous rêvez de capturer la faune sauvage au lever du jour et de vivre une immersion nature guidée par un photographe pro, ce séjour en Baie de Somme est fait pour vous !",
   "metaDescription": "Ce séjour de 4 jours en Baie de Somme est une immersion en photographie animalière.\r\nAu programme : affûts, oiseaux, mouflons, sangliers, lumières dorées, conseils pros et exploration nature entre marais et prairies.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 6 personnes**",
       "visible": true

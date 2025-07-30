@@ -200,6 +200,7 @@ export default defineNuxtConfig({
         'name': 'Politique d\'annulation standard',
         'merchantReturnDays': '30',
         'returnPolicyCategory': 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        'applicableCountry': 'FR',
       },
 
       // Payment Methods

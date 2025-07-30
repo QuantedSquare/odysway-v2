@@ -23,54 +23,66 @@
   "linksList": {
     "colonne1": {
       "title": "Liens utiles",
-      "links": {
-        "link1": {
-          "text": "À propos",
-          "link": "/a-propos"
+      "links": [
+        {
+          "text": "Notre vision",
+          "to": "/a-propos"
         },
-        "link2": {
+        {
           "text": "Blog",
-          "link": "/blog"
+          "to": "/blog"
         },
-        "link3": {
-          "text": "Contact",
-          "link": "/contact"
+        {
+          "text": "Nous rejoindre",
+          "to": "/nous-recrutons"
         }
-      }
+      ]
     },
     "colonne2": {
-      "title": "Destinations",
-      "links": {
-        "link1": {
-          "text": "Europe",
-          "link": "/destinations/europe"
+      "title": "Voyages",
+      "links": [
+        {
+          "text": "Tous nos voyages",
+          "to": "/search"
         },
-        "link2": {
-          "text": "Asie",
-          "link": "/destinations/asie"
+        {
+          "text": "Nos départs en petit groupes",
+          "to": "/prochains-departs "
         },
-        "link3": {
-          "text": "Amérique du Sud",
-          "link": "/destinations/amerique-du-sud"
+        {
+          "text": "Demande de voyage sur-mesure",
+          "to": "/sur-mesure"
+        },
+        {
+          "text": "Expériences",
+          "to": "/experiences/"
+        },
+        {
+          "text": "Catégories",
+          "to": "/thematiques"
         }
-      }
+      ]
     },
     "colonne3": {
-      "title": "Types de voyages",
-      "links": {
-        "link1": {
-          "text": "Europe",
-          "link": "/destinations/europe"
+      "title": "Destinations",
+      "links": [
+        {
+          "text": "France",
+          "to": "/destinations/france"
         },
-        "link2": {
+        {
           "text": "Asie",
-          "link": "/destinations/asie"
+          "to": "/destinations/asie"
         },
-        "link3": {
+        {
           "text": "Amérique du Sud",
-          "link": "/destinations/amerique-du-sud"
+          "to": "/destinations/amerique-du-sud"
+        },
+        {
+          "text": "Afrique",
+          "to": "/destinations/afrique"
         }
-      }
+      ]
     },
     "colonne4": {
       "title": "Où nous rencontrer",

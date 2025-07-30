@@ -84,11 +84,6 @@
   "emailDescription": "👉  Si vous souhaitez découvrir le bivouac en montagne, ce séjour est fait pour vous ! Vivez une immersion en pleine nature dans le Parc National des Pyrénées !",
   "metaDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

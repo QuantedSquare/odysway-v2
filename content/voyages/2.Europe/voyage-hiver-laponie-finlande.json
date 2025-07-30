@@ -82,11 +82,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir voyager en Laponie finlandaise, ce voyage est fait pour vous !",
   "metaDescription": "Ce voyage est une réelle immersion de 8 jours au cœur de la nature finlandaise. Au programme : balades en chien de traineau, en motoneige et en raquettes, apprentissage du mode de vie de trappeur et chasse aux aurores boréales !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

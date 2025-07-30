@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et partir découvrir la Finlande comme un véritable trappeur, cette immersion est faite pour vous !",
   "metaDescription": "Explorez le parc Naturel de Hossa en raquettes, à l'image des premiers nordiques. Semaine autonome avec pulkas. Immergez-vous dans la nature pure.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

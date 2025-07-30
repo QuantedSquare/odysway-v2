@@ -89,11 +89,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une expérience inoubliable et randonner sur le lac Baïkal gelé au cœur de la taïga enneigée, ce voyage en Sibérie est fait pour vous !",
   "metaDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **4 à 12 personnes**",
       "visible": true

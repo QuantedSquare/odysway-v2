@@ -81,11 +81,6 @@
   "emailDescription": "👉 Si vous rêvez d’aventure en pleine montagne et de moments forts à vivre en famille, ce séjour dans les Écrins est fait pour vous !",
   "metaDescription": "Ce séjour est une immersion de 7 jours en famille au cœur du massif des Écrins.\r\nAu programme : cani-randonnée, via ferrata, rafting sur la Durance, ateliers de trappeur, grimpe d’arbres, géocaching et soirées sous tipi !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

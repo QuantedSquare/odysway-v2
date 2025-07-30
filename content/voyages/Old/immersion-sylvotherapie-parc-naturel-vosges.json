@@ -85,11 +85,6 @@
   "emailDescription": "👉  Si vous souhaitez vivre un séjour axé autour de découverte des forêts du Parc naturel des Vosges du Nord, ce séjour est fait pour vous ! ",
   "metaDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

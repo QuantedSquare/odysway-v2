@@ -61,11 +61,6 @@
   "emailDescription": "",
   "metaDescription": "Partez pour un voyage en Norvège accompagné de Grégory Gérault",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 4 personnes**",
       "visible": true

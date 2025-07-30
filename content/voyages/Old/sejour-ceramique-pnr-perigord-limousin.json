@@ -71,11 +71,6 @@
   "emailDescription": "👉  Si vous souhaitez découvrir la poterie artisanale dans un cadre idyllique, au cœur du Parc Naturel Régional du Périgord Limousin, ce séjour est fait pour vous ! Un séjour unique qui vous permettra également de découvrir les producteurs locaux et leurs savoir-faire 👩‍🌾",
   "metaDescription": "Vivez un séjour en pleine nature avec une initiation à la poterie artisanale au cœur du parc naturel régional du Périgord limousin !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

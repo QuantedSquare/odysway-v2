@@ -86,11 +86,6 @@
   "emailDescription": "👉 Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
   "metaDescription": "Vivez un voyage unique dans le Vietnam du Nord, partez à la rencontre des locaux au cœur des villages traditionnels et découvrez les paysages typiques de la région nord du Vietnam ! ",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

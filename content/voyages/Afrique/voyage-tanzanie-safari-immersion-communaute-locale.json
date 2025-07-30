@@ -93,11 +93,6 @@
   "emailDescription": "👉 Si vous rêvez d’un voyage authentique en Tanzanie, entre immersion dans la vie d’un village Iraqw, safaris au cœur des plus beaux parcs du pays, pêche traditionnelle sur un lac paisible et détente sur les plages idylliques de Zanzibar, ce séjour complet de 10 jours est fait pour vous !",
   "metaDescription": "Voyage en Tanzanie : immersion chez les Iraqw, safaris au Tarangire et Ngorongoro, pêche traditionnelle, cascades et détente sur les plages de Zanzibar.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 7 personnes**",
       "visible": true

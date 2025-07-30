@@ -92,11 +92,6 @@
   "emailDescription": "",
   "metaDescription": "👉 Envie de découvrir le Népal à travers des randonnées accessibles à tous et vivre une immersion au sein d'un ashram ? Ce voyage est fait pour vous !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true

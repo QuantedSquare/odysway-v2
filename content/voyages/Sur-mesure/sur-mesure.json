@@ -1,20 +1,25 @@
 {
   "published": false,
-  "title": "Voyage sur-mesure en Jordanie",
+  "title": "Voyage sur-mesure : Combiné Sri Lanka & Maldives",
   "destinations": [
     {
-      "name": "Jordanie"
+      "name": "Sri Lanka"
+    },
+    {
+      "name": "Maldives"
     }
   ],
   "groupeAvailable": false,
   "privatisationAvailable": false,
-  "customAvailable": false,
-  "experienceType": "En immersion chez...",
+  "customAvailable": true,
+  "experienceType": "Partir à l'aventure",
   "level": "1",
-  "categories": [],
-  "duration": 0,
-  "nights": 0,
-  "includeFlight": false,
+  "categories": [
+    {}
+  ],
+  "duration": 14,
+  "nights": 12,
+  "includeFlight": true,
   "housingType": "",
   "idealPeriods": {
     "toutePeriodes": false,
@@ -46,9 +51,9 @@
     "novembre": false,
     "decembre": false
   },
-  "minAge": 8,
-  "rating": 5,
-  "comments": 10,
+  "minAge": 0,
+  "rating": 0,
+  "comments": 1,
   "miniatureDisplay": "Note moyenne",
   "authorNote": {
     "text": "",
@@ -61,11 +66,6 @@
   "emailDescription": "",
   "metaDescription": "",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false
@@ -93,13 +93,13 @@
     "exclude": []
   },
   "pricing": {
-    "startingPrice": 1500,
+    "startingPrice": 0,
     "lastMinuteAvailable": false,
-    "lastMinuteReduction": 80,
+    "lastMinuteReduction": 0,
     "earlyBirdAvailable": false,
     "earlyBirdReduction": "",
     "maxTravelers": "",
-    "minTravelersToConfirm": 2,
+    "minTravelersToConfirm": 0,
     "indivRoom": false,
     "forcedIndivRoom": false,
     "indivRoomPrice": "",
@@ -120,8 +120,8 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/sur-mesure/I1AtzHTPyqLSTl9jKDZA.jpg",
-    "alt": "image principale du voyage Voyage sur-mesure en Jordanie"
+    "src": "images/voyages/voyage-ete-sri-lanka/uzFKilSnQoWdOdTfSJGt.jpg",
+    "alt": ""
   },
   "imageSecondary": {
     "src": "",

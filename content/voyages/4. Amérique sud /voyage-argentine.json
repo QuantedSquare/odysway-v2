@@ -81,11 +81,6 @@
   "emailDescription": "👉 Si vous souhaitez parcourir l'Argentine entre glaciers et grands espaces, ce voyage est fait pour vous !",
   "metaDescription": "Odysway vous propose un voyage mythique en Argentine à la découverte de ses grands espaces, de la Patagonie au nord-ouest argentin.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

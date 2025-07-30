@@ -72,11 +72,6 @@
   "emailDescription": "👉  Si vous souhaitez découvrir la richesse du Parc Naturel du Vexin en vélo électrique, ce voyage est fait pour vous ! Un séjour unique qui vous permettra de rencontrer les producteurs et artisans locaux et découvrir leurs savoir-faire 👩‍🌾",
   "metaDescription": "Envie d’un séjour immersif, sportif et qui s’inscrit dans la démarche du tourisme durable ? Alors partez à la découverte du Parc Naturel Régional du Vexin Français en vélo électrique !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": false

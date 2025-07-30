@@ -86,11 +86,6 @@
   "emailDescription": "👉 Si vous souhaitez en savoir plus sur les constellations, suivre le quotidien d'astronomes et astrophysiciens et apprendre à manier les instruments comme un pro, ce voyage est fait pour vous ! ",
   "metaDescription": "Vivez une immersion unique au coeur d'une observatoire astronomique dans les Alpes. Devenez astronome amateur aux côtés d'astronomes et d'astrophysicien lors de ce séjour insolite et hors du temps.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
       "visible": true
@@ -189,7 +184,11 @@
     "src": "/images/voyages/immersion-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
     "alt": "image secondaire du voyage Immersion au cœur d'un observatoire astronomique"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg"
+    }
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [

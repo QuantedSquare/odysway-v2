@@ -92,11 +92,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre une véritable immersion dans la vie d'un photographe animalier, apprendre à manier votre appareil photo comme un pro et capturer des moments de vie exceptionnels, ce voyage est fait pour vous ! ",
   "metaDescription": "Plus qu'un simple stage photo, partez découvrir ou approfondir l'art de la photographie animalière. Accompagné d'un expert, vous apprendrez toutes les techniques à savoir lors de ce séjour insolite au coeur de la nature !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 4 personnes**",
       "visible": true
@@ -215,7 +210,7 @@
       "name": "Fabien Bruggmann",
       "description": "",
       "role": "Photographe animalier",
-      "image": "/images/voyages/decouvrez-photo-animaliere-jura/IaDITcXLQlaHtAyFFjYH.jpg"
+      "image": "/images/voyages/decouvrez-photo-animaliere-jura/bruggmann.jpeg"
     },
     {
       "name": "Virginie",
@@ -250,12 +245,12 @@
     "alt": "image principale du voyage Découvrez l'art de la photo animalière dans le Jura"
   },
   "imageSecondary": {
-    "src": "/images/voyages/decouvrez-photo-animaliere-jura/eT6zaBM3R3mBT1FK9ZDf.jpg",
+    "src": "/images/voyages/decouvrez-photo-animaliere-jura/xB1DznRgTme22KVd8hkR.jpg",
     "alt": "image secondaire du voyage Découvrez l'art de la photo animalière dans le Jura"
   },
   "photosList": [
     {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/qdz0bUEuTeaJTikuWAYN.jpg",
+      "src": "/images/blogs/partir-en-groupe/E8YX3edGQdCgyiTxVUsQ.jpg",
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     {

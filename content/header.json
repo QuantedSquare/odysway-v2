@@ -1,0 +1,25 @@
+{
+  "logo": {
+    "desktop": "/logos/Logo-Odysway-Bleu.png",
+    "mobile": "/logos/Logo-Odysway-Bleu.png",
+    "alt": "Odysway Logo",
+    "to": "/"
+  },
+  "search": true,
+  "button1": {
+    "text": "Voyages",
+    "link": "/search"
+  },
+  "button2": {
+    "text": "L'esprit Odysway",
+    "link": "/a-propos"
+  },
+  "button3": {
+    "text": "+33 1 84 80 79 75",
+    "link": "tel:+33184807975"
+  },
+  "button4": {
+    "text": "Planifier un appel 👋",
+    "link": "/calendly"
+  }
+}

@@ -84,11 +84,6 @@
   "emailDescription": "👉 Si vous souhaitez parcourir la Patagonie entre glaciers et grands espaces, ce voyage est fait pour vous !",
   "metaDescription": "Odysway vous propose un voyage mythique en Argentine et au Chili à la découverte des plus beaux parcs nationaux de Patagonie.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": true

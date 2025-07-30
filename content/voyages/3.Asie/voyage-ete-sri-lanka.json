@@ -87,11 +87,6 @@
   "emailDescription": "👉 Si vous souhaitez découvrir le Sri Lanka d'une façon différente, ce voyage est fait pour vous !",
   "metaDescription": "Vivez un voyage insolite et proche des locaux au Sri Lanka, entre rencontres, plages et plantations de thé !",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 12 personnes**",
       "visible": false

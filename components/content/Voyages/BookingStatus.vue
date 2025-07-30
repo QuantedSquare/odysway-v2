@@ -24,7 +24,7 @@
         v-if="status.status === 'confirmed'"
         class="font-weight-regular text-body-2"
       >
-        - Reste {{ maxTravellers - bookedPlaces > 0 ? maxTravellers - bookedPlaces : 0 }} places
+        - Reste {{ remainingPlaces }}
       </span>
     </div>
     <div
@@ -39,7 +39,7 @@
 <script setup>
 import { mdiAccountOutline } from '@mdi/js'
 
-defineProps({
+const props = defineProps({
   status: {
     type: Object,
     required: true,
@@ -56,5 +56,10 @@ defineProps({
     type: Number,
     default: 2,
   },
+})
+
+const remainingPlaces = computed(() => {
+  const remaining = props.maxTravellers - props.bookedPlaces
+  return remaining > 1 || remaining === 0 ? `${remaining} places` : `${remaining} place`
 })
 </script>

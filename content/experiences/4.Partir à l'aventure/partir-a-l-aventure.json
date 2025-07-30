@@ -1,13 +1,13 @@
 {
-  "image": {
-    "src": "/images/blogs/sejour-hiver-laponie-2024/KldlNGGxTxep3G0bHNQT.jpg",
-    "alt": "chien de traineau laponie"
-  },
   "published": true,
   "showOnHome": true,
   "title": "Partir à l'aventure",
   "badgeTitle": "Partir à l'aventure",
-  "slug": "a-l-aventure",
   "discoveryTitle": "Partir à l'aventure",
-  "seoTitle": "Partir à l'aventure"
+  "seoTitle": "Partir à l'aventure",
+  "image": {
+    "src": "/images/blogs/sejour-hiver-laponie-2024/KldlNGGxTxep3G0bHNQT.jpg",
+    "alt": "chien de traineau laponie"
+  },
+  "slug": "a-l-aventure"
 }

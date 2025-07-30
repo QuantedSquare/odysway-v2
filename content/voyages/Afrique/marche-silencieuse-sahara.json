@@ -77,11 +77,6 @@
   "emailDescription": "👉 Si vous souhaitez vivre un voyage initiatique à travers le Sahara dans un cadre de paix et sérénité; et partager des moments uniques avec les nomades du désert, ce voyage est fait pour vous ! 🐪",
   "metaDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
   "badgeSection": {
-    "experienceBadge": {
-      "text": "En immersion chez...",
-      "color": "yellow",
-      "visible": true
-    },
     "groupeBadge": {
       "text": "Groupe de **2 à 4 personnes**",
       "visible": true
