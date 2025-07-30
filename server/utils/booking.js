@@ -35,10 +35,13 @@ const retrieveBookedDates = async (travel_date_id) => {
 const retrieveBookedDateById = async (bookedId) => {
   const { data: bookedRow, error: fetchError } = await supabase
     .from('booked_dates')
-    .select('travel_date_id')
+    .select('travel_date_id, deal_id')
     .eq('id', bookedId)
     .single()
-  if (fetchError) console.error('Supabase retrieve error:', fetchError)
+  if (fetchError) {
+    console.error('Supabase retrieve error:', fetchError)
+    return { error: fetchError.message }
+  }
   return bookedRow
 }
 
@@ -91,6 +94,18 @@ const deleteBookedDateByDealId = async (dealId) => {
   return dealId
 }
 
+const deleteBookedDateById = async (bookedId) => {
+  const { error } = await supabase
+    .from('booked_dates')
+    .delete()
+    .eq('id', bookedId)
+  if (error) {
+    console.error('Supabase delete error:', error)
+    return { error: error.message }
+  }
+  return bookedId
+}
+
 export default {
   retrieveBooking,
   retrieveBookedDates,
@@ -99,4 +114,5 @@ export default {
   retrieveBookedPlacesByTravelDateId,
   updateTravelDate,
   deleteBookedDateByDealId,
+  deleteBookedDateById,
 }

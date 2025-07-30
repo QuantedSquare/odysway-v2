@@ -105,7 +105,7 @@ export default defineEventHandler(async (event) => {
           const allBooked = await booking.retrieveBookedPlacesByTravelDateId(travel_date_id)
           const totalBooked = allBooked.reduce((acc, row) => acc + (row.booked_places || 0), 0)
           await booking.updateTravelDate(travel_date_id, totalBooked)
-          console.log('travel_dates.booked_seat updated successfully', travel_date_id)
+          console.log('Booked places updated successfully, travel_date_id:', travel_date_id)
         }
         catch (bookingError) {
           console.error('Error in booking operations:', bookingError)
