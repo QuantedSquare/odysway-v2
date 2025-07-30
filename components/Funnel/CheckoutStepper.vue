@@ -209,9 +209,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
     const travel = await queryCollection('voyages').where('slug', '=', fetchedDate.travel_slug).first()
     // We fetch the destinations details from Nuxt, used for insurance
     const destinations = await queryCollection('destinations').where('title', 'IN', travel.destinations.map(d => d.name)).select('iso', 'chapka', 'title').all()
-    console.log('travel', travel)
-    console.log('fetchedDate', fetchedDate)
-    console.log('destinations', destinations)
+
     if (!travel) {
       throw new Error('Travel not found.')
     }

@@ -443,8 +443,7 @@ const handlePaymentSession = async (session, paymentType) => {
     Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
     console.log('InssuranceItem', inssuranceItem)
     if (inssuranceItem) {
-      session.metadata.customer_details.email = client.email
-      chapka.notify(session.metadata, inssuranceItem, deal)
+      chapka.notify(session.metadata, inssuranceItem, deal, client)
       console.log('Chapka notify')
     }
   }

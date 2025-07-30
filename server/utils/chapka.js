@@ -106,7 +106,7 @@ const quote = async (body) => {
   }
 }
 
-const notify = (paymentSession, insuranceItem, dealCustomFields) => {
+const notify = (paymentSession, insuranceItem, dealCustomFields, client) => {
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
   const data = {
@@ -115,7 +115,7 @@ const notify = (paymentSession, insuranceItem, dealCustomFields) => {
     reference: paymentSession.dealId.toString(),
     formule: insuranceType,
     prime: (insuranceItem.amount_total / 100).toFixed(2),
-    email: paymentSession.customer_details.email,
+    email: client.email,
     provenance: 'FR',
     destination: paymentSession.countries,
     nombre: insuranceItem.quantity.toString(),
