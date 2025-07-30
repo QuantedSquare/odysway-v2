@@ -78,26 +78,32 @@ export default defineEventHandler(async (event) => {
         .from('booked_dates')
         .delete()
         .eq('deal_id', dealId)
-      if (error) return { error: error.message }
+      if (error) {
+        console.error('Supabase delete error:', error)
+        return { error: error.message }
+      }
 
       // Update travel_dates.booked_seat
       const { data: allBooked, error: sumError } = await supabase
         .from('booked_dates')
         .select('booked_places')
         .eq('travel_date_id', travel_date_id)
-      if (sumError) return { error: sumError.message }
+      if (sumError) {
+        console.error('Supabase sum error:', sumError)
+        return { error: sumError.message }
+      }
       const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
       await supabase
         .from('travel_dates')
         .update({ booked_seat: totalBooked })
         .eq('id', travel_date_id)
-
+      console.log('===========travel_date_id', travel_date_id, 'update success')
       return { success: true }
     }
     else {
     // Retrieve deal owner
       // const owner = await activecampaign.retrieveOwner(dealId)
-
+      console.log('=========for some reason going to else =========')
       // Prepare upsert data with type safety and default values
       const upsertData = {
         id: dealId,
