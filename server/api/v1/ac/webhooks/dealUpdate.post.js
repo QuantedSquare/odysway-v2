@@ -81,54 +81,54 @@ export default defineEventHandler(async (event) => {
         }
         return { success: true, message: 'Deal deleted from ActiveCampaign, no booked_dates found' }
       }
+      else {
+        const travel_date_id = bookedRow.travel_date_id
 
-      const travel_date_id = bookedRow.travel_date_id
-
-      // Delete from ActiveCampaign and Supabase
-      try {
-        console.log('Attempting to delete deal from ActiveCampaign with dealId:', dealId)
-        const deleteResult = await activecampaign.deleteDeal(dealId)
-        console.log('Deal deleted from ActiveCampaign successfully, result:', deleteResult)
-      }
-      catch (acError) {
-        console.error('Error deleting deal from ActiveCampaign:', acError)
-        console.error('Error details:', {
-          message: acError.message,
-          stack: acError.stack,
-          dealId: dealId,
-        })
+        // Delete from ActiveCampaign and Supabase
+        try {
+          console.log('Attempting to delete deal from ActiveCampaign with dealId:', dealId)
+          const deleteResult = await activecampaign.deleteDeal(dealId)
+          console.log('Deal deleted from ActiveCampaign successfully, result:', deleteResult)
+        }
+        catch (acError) {
+          console.error('Error deleting deal from ActiveCampaign:', acError)
+          console.error('Error details:', {
+            message: acError.message,
+            stack: acError.stack,
+            dealId: dealId,
+          })
         // Continue with Supabase cleanup even if ActiveCampaign deletion fails
-      }
-      const { error } = await supabase
-        .from('booked_dates')
-        .delete()
-        .eq('deal_id', dealId)
-      if (error) {
-        console.error('Supabase delete error:', error)
-        return { error: error.message }
-      }
+        }
+        const { error } = await supabase
+          .from('booked_dates')
+          .delete()
+          .eq('deal_id', dealId)
+        if (error) {
+          console.error('Supabase delete error:', error)
+          return { error: error.message }
+        }
 
-      // Update travel_dates.booked_seat
-      const { data: allBooked, error: sumError } = await supabase
-        .from('booked_dates')
-        .select('booked_places')
-        .eq('travel_date_id', travel_date_id)
-      if (sumError) {
-        console.error('Supabase sum error:', sumError)
-        return { error: sumError.message }
+        // Update travel_dates.booked_seat
+        const { data: allBooked, error: sumError } = await supabase
+          .from('booked_dates')
+          .select('booked_places')
+          .eq('travel_date_id', travel_date_id)
+        if (sumError) {
+          console.error('Supabase sum error:', sumError)
+          return { error: sumError.message }
+        }
+        const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
+        await supabase
+          .from('travel_dates')
+          .update({ booked_seat: totalBooked })
+          .eq('id', travel_date_id)
+        console.log('===========travel_date_id', travel_date_id, 'update success')
+        return { success: true }
       }
-      const totalBooked = (allBooked || []).reduce((acc, row) => acc + (row.booked_places || 0), 0)
-      await supabase
-        .from('travel_dates')
-        .update({ booked_seat: totalBooked })
-        .eq('id', travel_date_id)
-      console.log('===========travel_date_id', travel_date_id, 'update success')
-      return { success: true }
     }
     else {
     // Retrieve deal owner
       // const owner = await activecampaign.retrieveOwner(dealId)
-      console.log('=========for some reason going to else =========')
       // Prepare upsert data with type safety and default values
       const upsertData = {
         id: dealId,
