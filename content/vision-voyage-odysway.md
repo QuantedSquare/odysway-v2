@@ -54,12 +54,12 @@ displayed-img: /images/concept/Vélo.jpg
 title-color: white
 ---
 #title
-# Notre vision du voyage
+**Notre vision du voyage**
 ::
 
 ::title-container
 #title
-## La prise de conscience
+**La prise de conscience**
 ::
 
 ::text-container
@@ -89,7 +89,7 @@ Romain, fondateur d'Odysway
 
 ::title-container
 #title
-## Ce que l'on défend
+**Ce que l'on défend**
 ::
 
 ::company-overview-container
@@ -113,28 +113,52 @@ Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas
 
 ::title-container
 #title
-## Les valeurs d'Odysway
+**Les valeurs d'Odysway**
+::
 
-### **Immersion**
+::title-container
+#title
+**Immersion**
+::
 
+::text-container
+#text
 Nous croyons au pouvoir du voyage en immersion. Prendre le temps de s’imprégner d’un lieu, de vivre le quotidien d’un territoire, de créer du lien avec celles et ceux qui y habitent. Pour nous, c’est ça, voyager autrement : s’ouvrir à une culture, à un rythme, à une réalité qui n’est pas la sienne, et en ressortir un peu transformé.
+::
 
-### **Fiabilité**
+::title-container
+#title
+**Fiabilité**
+::
 
+::text-container
+#text
 Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant, pendant et après le voyage. Nous vous accompagnons de manière claire et attentive, avec des séjours bien organisés, des partenaires de confiance, et une équipe disponible qui vous connaît et vous répond vraiment.
+::
 
-### **Passion**
+::title-container
+#title
+**Passion**
+::
 
+::text-container
+#text
 Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque séjour est imaginé avec soin, testé sur le terrain, ajusté jusque dans les détails. Ce qui nous anime, c’est de vous faire vivre des moments uniques, forts et simples à la fois, à travers des expériences qui ont du sens.
+::
 
-### **Responsabilité**
+::title-container
+#title
+**Responsabilité**
+::
 
+::text-container
+#text
 Voyager, c’est aussi un engagement. Nous faisons le choix d’un tourisme plus respectueux : respectueux des lieux, des personnes, des équilibres. Nous travaillons en direct avec les acteurs locaux, nous veillons à limiter notre impact, et nous défendons un tourisme plus équitable et plus conscient.
 ::
 
 ::title-container
 #title
-## **Une équipe à taille humaine**
+**Une équipe à taille humaine**
 ::
 
 ::text-container
