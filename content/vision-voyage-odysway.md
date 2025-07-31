@@ -54,19 +54,29 @@ displayed-img: /images/concept/Vélo.jpg
 title-color: white
 ---
 #title
-**Notre vision du voyage**
+# Notre vision du voyage
 ::
 
 ::title-container
 #title
-**La prise de conscience**
+## La prise de conscience
 ::
 
 ::text-container
 #text
-Chez Odysway, nous partons d’un constat simple : voyager n’est pas un acte neutre. Le tourisme classique repose encore trop souvent sur une logique de consommation rapide, qui prend plus qu’elle ne donne. Nous voulons rompre avec cette manière de faire. À travers des séjours plus lents, plus sobres et plus ancrés dans le réel, nous proposons une autre façon de voyager : plus lucide, plus respectueuse, et tournée vers la rencontre, sans artifice.
+La vision d’Odysway n’est pas née dans un bureau. Elle a pris forme en marchant, quelque part dans la jungle bolivienne.
 
-En lire plus sur nos engagements pour un tourisme plus équilibré
+C’était en 2015. Romain, le fondateur d’Odysway, voyageait depuis plusieurs semaines en sac à dos à travers l’Amérique du Sud. Il était alors guidé par une envie de découverte, de nature brute, de liberté. Rien de très original. Jusqu’au jour où, lors d’un trek dans la forêt tropicale, il a croisé le regard d’un jaguar.
+
+Le moment a duré à peine quelques secondes, mais a déclenché quelque chose de plus profond. Une prise de conscience. Celle d’être là, dans ce lieu reculé, à vivre une expérience rare, intense, et de mesurer ce que cela suppose de privilèges : un passeport qui permet de circuler librement, du temps pour partir, une sécurité matérielle, une distance choisie. Et, en face, un guide local, passionné et engagé, qui n’avait jamais quitté sa région. Deux mondes se faisaient face, dans un respect silencieux, mais sans égalité réelle.
+
+Cette scène n’a rien de spectaculaire. Mais elle a agi comme un déclencheur. Elle a fait naître une question : comment voyager sans tout prendre ? Comment créer une relation plus équilibrée entre celui qui part et celui qui accueille ? Et surtout, comment sortir de cette logique du “voyage-performance”, où l’on enchaîne les étapes, les paysages et les rencontres sans vraiment être là ?
+
+Odysway est né de cette envie de faire autrement. D’inventer une autre manière de voyager, plus attentive, plus lente, plus respectueuse. Un tourisme qui ne cherche pas à consommer le monde, mais à le rencontrer. Qui accepte de ne pas tout comprendre. Qui laisse de la place à l’imprévu, à la nuance, à la relation.
+
+Ce n’est pas un modèle parfait. Mais c’est une direction. Et depuis ce jour en Bolivie, c’est celle que nous suivons.
+
+En lire plus sur nos engagements pour un tourisme plus équilibré.
 ::
 
 ::concept-container
@@ -79,7 +89,7 @@ Romain, fondateur d'Odysway
 
 ::title-container
 #title
-**Ce que l'on défend**
+## Ce que l'on défend
 ::
 
 ::company-overview-container
@@ -89,13 +99,13 @@ image-src: /images/team/team-photo.webp
 #text
 Nous croyons qu’un autre tourisme est possible. Un tourisme plus juste, plus ancré, plus respectueux.
 
-Depuis nos débuts, nous construisons des voyages qui ont du sens. Pour les voyageurs qui partent, comme pour les personnes qui accueillent. Chaque séjour est pensé en lien direct avec celles et ceux qui vivent sur place : guides, familles, artisans, éleveurs, femmes engagées dans leur territoire. Ce sont eux qui donnent vie aux expériences que nous proposons.
+Depuis nos débuts en 2018, nous construisons des voyages qui ont du sens. Pour les voyageurs qui partent, comme pour les personnes qui accueillent. Chaque séjour est pensé en lien direct avec celles et ceux qui vivent sur place : guides, familles, artisans, éleveurs, femmes engagées dans leur territoire. Ce sont elles et eux qui donnent vie aux expériences que nous proposons.
 
 Notre rôle est clair : créer les conditions d’une vraie rencontre. Une rencontre simple, équilibrée, sans mise en scène. Nous veillons à la qualité de chaque détail : itinéraires, hébergements, rythme, accueil… tout est ajusté pour que chacun trouve sa place, dans le respect des personnes et des lieux.
 
 Nous ne cherchons pas à impressionner, nous cherchons à être juste. Juste dans la façon de voyager, dans la relation avec nos partenaires et au sein de l'équipe Odysway.
 
-Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
+Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Qui cherche à faire mieux. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
 
 #capture
 []{style="text-decoration: underline; font-style: italic;"} [Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️](/)
@@ -103,12 +113,28 @@ Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas
 
 ::title-container
 #title
-Les valeurs d'Odysway
+## Les valeurs d'Odysway
+
+### **Immersion**
+
+Nous croyons au pouvoir du voyage en immersion. Prendre le temps de s’imprégner d’un lieu, de vivre le quotidien d’un territoire, de créer du lien avec celles et ceux qui y habitent. Pour nous, c’est ça, voyager autrement : s’ouvrir à une culture, à un rythme, à une réalité qui n’est pas la sienne, et en ressortir un peu transformé.
+
+### **Fiabilité**
+
+Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant, pendant et après le voyage. Nous vous accompagnons de manière claire et attentive, avec des séjours bien organisés, des partenaires de confiance, et une équipe disponible qui vous connaît et vous répond vraiment.
+
+### **Passion**
+
+Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque séjour est imaginé avec soin, testé sur le terrain, ajusté jusque dans les détails. Ce qui nous anime, c’est de vous faire vivre des moments uniques, forts et simples à la fois, à travers des expériences qui ont du sens.
+
+### **Responsabilité**
+
+Voyager, c’est aussi un engagement. Nous faisons le choix d’un tourisme plus respectueux : respectueux des lieux, des personnes, des équilibres. Nous travaillons en direct avec les acteurs locaux, nous veillons à limiter notre impact, et nous défendons un tourisme plus équitable et plus conscient.
 ::
 
 ::title-container
 #title
-**Une équipe à taille humaine**
+## **Une équipe à taille humaine**
 ::
 
 ::text-container
