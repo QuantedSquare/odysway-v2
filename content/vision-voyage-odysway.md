@@ -132,8 +132,6 @@ Nous ne traitons pas des centaines de dossiers à la chaîne. Chaque voyage comp
 Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terrain, nous testons, nous ajustons. C’est notre façon de garantir que ce que vous vivrez soit fidèle à ce que nous défendons.
 ::
 
-XXX
-
 ::title-container-h2
 #subtitle
 **La prise de conscience**
@@ -227,8 +225,6 @@ Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant
 #text
 Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque séjour est imaginé avec soin, testé sur le terrain, ajusté jusque dans les détails. Ce qui nous anime, c’est de vous faire vivre des moments uniques, forts et simples à la fois, à travers des expériences qui ont du sens.
 ::
-
-/ti
 
 ::title-container
 #title
