@@ -96,7 +96,7 @@ const quote = async (body) => {
   const timestampDepart = dayjs(body.departureDate).valueOf()
   const maxTimestamp = 10 * 24 * 60 * 60 * 1000 // 10 days
   if (timestampDepart - timestampNow < maxTimestamp) {
-    pricing(body.pricePerTraveler, body.zoneChapka, body.nbTravelers)
+    return pricing(body.pricePerTraveler, body.zoneChapka, body.nbTravelers)
   }
   else {
     const [rapatriementQuote, cancelQuote] = await Promise.all([
@@ -107,7 +107,16 @@ const quote = async (body) => {
   }
 }
 
-const notify = (paymentSession, insuranceItem, dealCustomFields, client) => {
+const notify = async (paymentSession, insuranceItem, dealCustomFields, client) => {
+  // Input validation
+  if (!paymentSession || !insuranceItem || !dealCustomFields || !client) {
+    console.log('Missing required parameters for Chapka notification')
+  }
+
+  if (!client.email) {
+    console.log('Client email is required for Chapka notification')
+  }
+
   const insuranceType = insuranceItem.description === 'Assurance Multirisque' ? 'MR' : 'AN'
 
   const data = {
@@ -139,24 +148,25 @@ const notify = (paymentSession, insuranceItem, dealCustomFields, client) => {
 
   data.sign = getSignature(data)
 
-  console.log('send data to chapka', data)
+  console.log('Sending data to Chapka:', data)
 
   try {
-    axios.post(
+    const response = await axios.post(
       'https://api.chapka.fr/notify/?request=create',
-      JSON.stringify({
-        message: JSON.stringify(data),
-        mode: 'json',
-      }),
+      data,
       {
         headers: {
           'Content-Type': 'application/json',
         },
       },
     )
+
+    console.log('Chapka notification successful:', response.data)
+    return response.data
   }
   catch (err) {
-    console.log('Err notify chapka', err)
+    console.error('Error notifying Chapka:', err.message)
+    // throw new Error(`Failed to notify Chapka: ${err.message}`)
   }
 }
 
