@@ -448,7 +448,8 @@ const handlePaymentSession = async (session, paymentType) => {
     })
   }
   //   // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+  // if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+  if (deal.insurance !== 'Aucune Assurance' && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
     const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
     session.lineItems = lineItems
     console.log('LineItems', lineItems)
