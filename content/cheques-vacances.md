@@ -30,24 +30,21 @@ Vous réglez l’acompte ou la totalité par carte bancaire ou virement.
 
 Peu importe si le montant est supérieur à vos Chèques-Vacances : vous serez remboursé du montant envoyé ensuite.
 
-📌 *Les Chèques-Vacances ne permettent pas un paiement direct : le remboursement intervient après réception.*
+*Les Chèques-Vacances ne permettent pas un paiement direct : le remboursement intervient après réception.*
 
 #### **2. Informez-nous et envoyez vos Chèques-Vacances**
 
-- **Chèque-Vacances Classic (papier)** : envoyez-les par courrier sécurisé (adresse communiquée à la réservation).
-- **Chèque-Vacances Connect (numériques)** : un lien de paiement sécurisé vous sera transmis.
+:br
+
+- **Chèque-Vacances Classic (papier)** : envoyez-les par courrier sécurisé (adresse communiquée par email).
+- **Chèque-Vacances Connect (numériques)** : un lien de paiement sécurisé vous sera transmis par email.
 
 Vous indiquez simplement le montant que vous souhaitez utiliser.
 
 #### **3. Recevez votre remboursement sous 5 jours ouvrés**
 
-#### Dès réception et validation de vos chèques, le montant est recrédité sur votre carte ou compte bancaire utilisé au moment de la réservation.
+Dès réception et validation de vos chèques, le montant est recrédité sur votre carte ou compte bancaire utilisé au moment de la réservation.
 
-  :::cta-button
-  ---
-  link: /contact
-  ---
-  #text
-  Utiliser mes chèques vacances
-  :::
+:br :cta-button[#text
+Utiliser mes chèques vacances]{link="/contact"}
 ::
