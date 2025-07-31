@@ -9,8 +9,9 @@
         <span>
           Odysway utilise des cookies pour vous offrir une expérience utilisateur de qualité, mesurer l’audience et vous proposer des publicités personnalisées. En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies dans les conditions prévues par notre
           <NuxtLink
-            class="text-primary"
+            class="text-white"
             to="/politique-de-confidentialite"
+            target="_blank"
           >politique de confidentialité</NuxtLink>.</span>
       </v-col>
     </v-row>
