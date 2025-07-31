@@ -6,9 +6,14 @@
       no-gutters
     >
       <v-col
-        class="font-weight-black text-h3 text-md-h2 mt-4"
+        class="font-weight-black mt-4"
       >
-        <slot name="title" />
+        <h3 class="text-h4 text-md-h3">
+          <slot
+            name="subtitle"
+            mdc-unwrap="p"
+          />
+        </h3>
       </v-col>
       <v-col
         v-if="id"

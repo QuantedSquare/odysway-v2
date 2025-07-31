@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="date.status.status !== 'full'">
     <v-btn
       v-if="!isLoading"
       :height="mdAndDown ? 80 : 52"

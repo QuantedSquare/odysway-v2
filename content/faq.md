@@ -140,7 +140,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 ---
 
 #section-title
-  :::title-container
+  :::title-container-h1
   #title
   Questions fréquentes
   :::

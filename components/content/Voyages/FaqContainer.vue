@@ -22,11 +22,11 @@
         :gradient="`to top, ${secondaryColor}, ${primaryColor}`"
       >
         <h2 class="text-center text-white">
-          <TitleContainer>
+          <TitleContainerH1>
             <template #title>
               <slot name="section-title" />
             </template>
-          </TitleContainer>
+          </TitleContainerH1>
         </h2>
         <v-container
           max-width="900px"

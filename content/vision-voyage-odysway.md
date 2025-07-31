@@ -57,7 +57,7 @@ title-color: white
 **Notre vision du voyage**
 ::
 
-::title-container
+::title-container-h1
 #title
 **La prise de conscience**
 ::
@@ -87,8 +87,8 @@ image-src: /images/photo Romain.webp
 Romain, fondateur d'Odysway
 ::
 
-::title-container
-#title
+::title-container-h2
+#subtitle
 **Ce que l'on défend**
 ::
 
@@ -111,13 +111,13 @@ Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas
 []{style="text-decoration: underline; font-style: italic;"} [Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️](/)
 ::
 
-::title-container
+::title-container-h1
 #title
 **Les valeurs d'Odysway**
 ::
 
-::title-container
-#title
+::title-container-h2
+#subtitle
 **Immersion**
 ::
 
@@ -126,8 +126,8 @@ Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas
 Nous croyons au pouvoir du voyage en immersion. Prendre le temps de s’imprégner d’un lieu, de vivre le quotidien d’un territoire, de créer du lien avec celles et ceux qui y habitent. Pour nous, c’est ça, voyager autrement : s’ouvrir à une culture, à un rythme, à une réalité qui n’est pas la sienne, et en ressortir un peu transformé.
 ::
 
-::title-container
-#title
+::title-container-h2
+#subtitle
 **Fiabilité**
 ::
 
@@ -136,8 +136,8 @@ Nous croyons au pouvoir du voyage en immersion. Prendre le temps de s’imprégn
 Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant, pendant et après le voyage. Nous vous accompagnons de manière claire et attentive, avec des séjours bien organisés, des partenaires de confiance, et une équipe disponible qui vous connaît et vous répond vraiment.
 ::
 
-::title-container
-#title
+::title-container-h2
+#subtitle
 **Passion**
 ::
 
@@ -146,8 +146,8 @@ Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant
 Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque séjour est imaginé avec soin, testé sur le terrain, ajusté jusque dans les détails. Ce qui nous anime, c’est de vous faire vivre des moments uniques, forts et simples à la fois, à travers des expériences qui ont du sens.
 ::
 
-::title-container
-#title
+::title-container-h2
+#subtitle
 **Responsabilité**
 ::
 
@@ -156,8 +156,8 @@ Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque sé
 Voyager, c’est aussi un engagement. Nous faisons le choix d’un tourisme plus respectueux : respectueux des lieux, des personnes, des équilibres. Nous travaillons en direct avec les acteurs locaux, nous veillons à limiter notre impact, et nous défendons un tourisme plus équitable et plus conscient.
 ::
 
-::title-container
-#title
+::title-container-h2
+#subtitle
 **Une équipe à taille humaine**
 ::
 
