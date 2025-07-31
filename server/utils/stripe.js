@@ -428,6 +428,25 @@ const handlePaymentSession = async (session, paymentType) => {
 
   const { contact: client } = await activecampaign.getClientById(deal.contact)
   console.log('Passed client retrieving', client)
+
+  if (!isDev) {
+    axios({
+      url: process.env.SLACK_URL_PAIEMENTS,
+      method: 'post',
+      data:
+        {
+          blocks: [
+            {
+              type: 'section',
+              text: {
+                type: 'mrkdwn',
+                text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.firstName} ${client.lastName} - ${order.dealId}>`,
+              },
+            },
+          ],
+        },
+    })
+  }
   //   // Chapka notify
   if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
     const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
@@ -476,40 +495,6 @@ const handlePaymentSession = async (session, paymentType) => {
     },
   })
   console.log('added note', note)
-
-  if (!isDev) {
-    axios({
-      url: process.env.SLACK_URL_PAIEMENTS,
-      method: 'post',
-      data:
-        {
-          blocks: [
-            {
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${order.dealId}|Confirmation paiement ${paymentType} - ${client.firstName} ${client.lastName} - ${order.dealId}>`,
-              },
-            },
-          ],
-        },
-    })
-
-    //     axios({
-    //       url: 'https://www.google-analytics.com/collect',
-    //       method: 'post',
-    //       params: {
-    //         v: 1,
-    //         tid: process.env.NODE_ENV === 'development' ? 'UA-160322718-1' : 'UA-120209294-1',
-    //         cid: '555',
-    //         t: 'event',
-    //         ec: 'Transaction_Server',
-    //         ea: 'Ping_Confirmation',
-    //         el: '' + +order.selectedTravelersToPay,
-    //         ev: +session.amount_total
-    //       }
-    //     })
-  }
 }
 export default {
   createCheckoutSession,
