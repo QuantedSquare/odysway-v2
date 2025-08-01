@@ -49,17 +49,21 @@
                 class="text-center text-h6 text-md-h5 text-white font-weight-bold"
               >
                 <span> {{ faqTextes?.faqSection?.faqHomeSubText?.question }} &nbsp; </span>
-                <NuxtLink
+                <SmartLink
                   to="/faq"
                   class="text-secondary font-weight-bold"
-                > {{ faqTextes?.faqSection?.faqHomeSubText?.text }} </NuxtLink>
+                >
+                  {{ faqTextes?.faqSection?.faqHomeSubText?.text }}
+                </SmartLink>
               </div>
               <div class="text-center text-h6 text-md-h5 text-white font-weight-regular d-flex flex-column mt-md-6 mt-3">
                 <span> {{ faqTextes?.faqSection?.faqHomeSubText?.subtitle }}
-                  <NuxtLink
+                  <SmartLink
                     :to="faqTextes?.faqSection?.faqHomeSubText?.linkOnText2"
                     class="text-secondary font-weight-medium"
-                  >{{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}</NuxtLink>
+                  >
+                    {{ faqTextes?.faqSection?.faqHomeSubText?.text2 }}
+                  </SmartLink>
                 </span>
               </div>
             </v-col>
@@ -71,7 +75,6 @@
 </template>
 
 <script setup>
-import { NuxtLink } from '#components'
 import { useImage } from '#imports'
 
 const img = useImage()

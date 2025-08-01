@@ -4,12 +4,12 @@
     :key="`${item.title + index}`"
     class="d-flex justify-center justify-md-start bg-transparent py-md-0"
   >
-    <NuxtLink
+    <SmartLink
       :to="item.link"
       class="text-primary text-center text-md-left text-decoration-none bg-transparent"
     >
       {{ item.title }}
-    </NuxtLink>
+    </SmartLink>
   </v-list>
 </template>
 
