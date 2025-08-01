@@ -107,6 +107,8 @@ Ces prix peuvent varier selon :
 - les options choisies (assurance, chambre individuelle, transport, etc.),
 - ou toute évolution des coûts extérieurs (taxes, carburant, devises).
 
+/line
+
 ### **Ce que le prix comprend**
 
 Sauf indication contraire, le prix inclut :
@@ -114,7 +116,7 @@ Sauf indication contraire, le prix inclut :
 - les prestations précisées dans le descriptif du séjour (hébergement, encadrement, repas, activités),
 - l’assistance locale et les frais d’organisation,
 
-### **Ce que le prix n’inclut pas (sauf mention spécifique)**
+### **Ce que le prix ne comprend pas (sauf mention spécifique)**
 
 - les vols internationaux (sauf si précisés dans la section le prit inclut),
 - les assurances optionnelles,
