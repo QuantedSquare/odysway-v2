@@ -15,29 +15,36 @@ title: Réservez votre voyage avec vos Chèques-Vacances
 imageSrc: /images/blogs/5-bienfaits-velo-voyage/sbdKGfNHTFyRCsagb03G.jpg
 ---
 #title
-Réservez votre voyage avec vos Chèques-Vacances
+Réservez votre voyage avec vos Chèque-Vacances
 ::
 
 ::section-container
 #content
-Chez Odysway, vous pouvez utiliser vos **chèques-vacances ANCV**, au format **papier (Classic)** ou **numérique (Connect)**, pour financer tout ou partie de votre voyage.
+Chez Odysway, vous pouvez utiliser vos **chèque-vacances ANCV**, au format **papier (Classic)** ou **numérique (Connect)**, pour financer tout ou partie de votre voyage.
 
 **Comment ça fonctionne ?**
 
-- **Chèques-vacances Classic** : vous pouvez nous les envoyer par courrier sécurisé (nous vous indiquerons l’adresse et les modalités précises lors de la réservation).
-- **Chèques-vacances Connect** : le règlement peut se faire directement en ligne via l’application ou par lien de paiement sécurisé.
+**1. Réservez votre voyage sur notre site en quelques clics**
 
-Les chèques-vacances peuvent être utilisés pour toute prestation de voyage proposée par Odysway.
+Vous réglez l’acompte ou la totalité par carte bancaire ou virement.
 
-**Vous avez des chèques-vacances à utiliser ?**
+Peu importe si le montant est supérieur à vos Chèques-Vacances : vous serez remboursé du montant envoyé ensuite.
 
-Indiquez-le simplement lors de votre demande ou contactez notre équipe. Nous vous guiderons pas à pas pour en profiter au mieux.
+*Les Chèques-Vacances ne permettent pas un paiement direct : le remboursement intervient après réception.*
 
-  :::cta-button
-  ---
-  link: /contact
-  ---
-  #text
-  Utiliser mes chèques vacances
-  :::
+#### **2. Informez-nous et envoyez vos Chèques-Vacances**
+
+:br
+
+- **Chèque-Vacances Classic (papier)** : envoyez-les par courrier sécurisé (adresse communiquée par email).
+- **Chèque-Vacances Connect (numériques)** : un lien de paiement sécurisé vous sera transmis par email.
+
+Vous indiquez simplement le montant que vous souhaitez utiliser.
+
+#### **3. Recevez votre remboursement sous 5 jours ouvrés**
+
+Dès réception et validation de vos chèques, le montant est recrédité sur votre carte ou compte bancaire utilisé au moment de la réservation.
+
+:br :cta-button[#text
+Utiliser mes chèques vacances]{link="/contact"}
 ::
