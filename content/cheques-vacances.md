@@ -45,6 +45,12 @@ Vous indiquez simplement le montant que vous souhaitez utiliser.
 
 Dès réception et validation de vos chèques, le montant est recrédité sur votre carte ou compte bancaire utilisé au moment de la réservation.
 
-:br :cta-button[#text
-Utiliser mes chèques vacances]{link="/contact"}
+:br 
+::cta-button
+---
+link: "/contact"
+---
+#text
+Utiliser mes chèques vacances
+::
 ::
