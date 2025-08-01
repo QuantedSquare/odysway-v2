@@ -107,16 +107,17 @@ image-src: /images/team/team-photo.webp
 #text
 Nous croyons qu’un autre tourisme est possible. Un tourisme plus juste, plus ancré, plus respectueux.
 
+:br
+
 Depuis nos débuts en 2018, nous construisons des voyages qui ont du sens. Pour les voyageurs qui partent, comme pour les personnes qui accueillent. Chaque séjour est pensé en lien direct avec celles et ceux qui vivent sur place : guides, familles, artisans, éleveurs, femmes engagées dans leur territoire. Ce sont elles et eux qui donnent vie aux expériences que nous proposons.
 
 Notre rôle est clair : créer les conditions d’une vraie rencontre. Une rencontre simple, équilibrée, sans mise en scène. Nous veillons à la qualité de chaque détail : itinéraires, hébergements, rythme, accueil… tout est ajusté pour que chacun trouve sa place, dans le respect des personnes et des lieux.
 
-Nous ne cherchons pas à impressionner, nous cherchons à être juste. Juste dans la façon de voyager, dans la relation avec nos partenaires et au sein de l'équipe Odysway.
+:br
+
+Nous ne cherchons pas à impressionner, mais à être juste. Juste dans la façon de voyager, dans la relation avec nos partenaires et avec nos voyageurs.
 
 Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Qui cherche à faire mieux. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
-
-#capture
-[]{style="text-decoration: underline; font-style: italic;"} [Une partie de l'équipe avec la mascotte d'Odysway, Tao ❤️](/)
 ::
 
 ::title-container-h2
@@ -130,7 +131,7 @@ Chez Odysway, nous ne sommes pas une plateforme automatisée. Odysway est une pe
 
 :br
 
-Ce lien direct avec vous est au cœur de notre démarche. Nous échangeons avec vous comme nous aimons qu’on le fasse avec nous : simplement, avec attention. et écoute. Ce que nous cherchons, ce n’est pas de vendre un séjour à tout prix, mais de vous accompagner dans un projet de voyage qui vous ressemble, dans le respect de ce que nous sommes et de ce que nous proposons.
+Ce lien direct avec vous est au cœur de notre démarche. Nous échangeons avec vous comme nous aimons qu’on le fasse avec nous : simplement, avec attention et écoute. Ce que nous cherchons, ce n’est pas de vendre un séjour à tout prix, mais de vous accompagner dans un projet de voyage qui vous ressemble dans le respect de ce que nous sommes et de ce que nous proposons.
 
 :br
 
