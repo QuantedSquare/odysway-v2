@@ -1121,6 +1121,10 @@ export default defineContentConfig({
           text: z.string().describe('Texte du bouton'),
           link: z.string().describe('URL de redirection'),
         }).describe('Bouton 4'),
+        button5: z.object({
+          text: z.string().describe('Texte du bouton'),
+          link: z.string().describe('URL de redirection'),
+        }).describe('Bouton 5'),
       }).describe('Configuration du Header'),
     }),
   },

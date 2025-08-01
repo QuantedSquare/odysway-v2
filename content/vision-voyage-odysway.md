@@ -200,7 +200,7 @@ Votre sérénité est essentielle. Nous sommes présents à chaque étape, avant
 Nous sommes des passionnés de voyage, de rencontres et d’aventure. Chaque séjour est imaginé avec soin, testé sur le terrain, ajusté jusque dans les détails. Ce qui nous anime, c’est de vous faire vivre des moments uniques, forts et simples à la fois, à travers des expériences qui ont du sens.
 ::
 
-::title-container
+::title-container-h2
 #title
 **Responsabilité**
 ::
