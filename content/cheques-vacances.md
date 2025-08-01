@@ -26,11 +26,8 @@ Chez Odysway, vous pouvez utiliser vos Chèques-Vacances ANCV, au format **papie
 
 **Comment ça fonctionne ?**
 
-:br
-
 **1. Réservez votre voyage sur notre site en quelques clics**
 
-:br
 
 Vous réglez l’acompte ou la totalité par carte bancaire ou virement.
 
@@ -66,6 +63,11 @@ Merci de nous indiquer dans votre message via le formulaire de contact :
 - Si vous avez **déjà réservé** : une fois les chèques reçus ou le paiement Connect validé, le montant est recrédité sur le moyen de paiement utilisé (CB ou virement), sous 5 jours ouvrés.
 - Si vous **n’avez pas encore réservé** : un crédit du montant reçu sera appliqué à votre compte, valable pour une prochaine réservation.
 
-:cta-button[#text
-Utiliser mes chèques vacances]{link="/contact"}
+:br
+::cta-button
+---
+link: /contact
+---
+#text
+Utiliser mes chèques vacances
 ::
