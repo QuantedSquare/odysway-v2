@@ -63,28 +63,6 @@ Notre vision du voyage
 ::
 
 ::text-container
-#text
-La vision d’Odysway n’est pas née dans un bureau. Elle a pris forme en marchant, quelque part dans la jungle bolivienne.
-
-:br
-
-C’était en 2015. Romain, le fondateur d’Odysway, voyageait depuis plusieurs semaines en sac à dos à travers l’Amérique du Sud. Il était alors guidé par une envie de découverte, de nature brute, de liberté. Jusqu’au jour où, lors d’un trek dans la forêt tropicale, il a croisé le regard d’un jaguar.
-
-Le moment a duré à peine quelques secondes, mais a déclenché quelque chose de plus profond. Une prise de conscience. Celle d’être là, dans ce lieu reculé, à vivre une expérience rare, intense, et de mesurer ce que cela suppose de privilèges : un passeport qui permet de circuler librement, du temps pour partir, une sécurité matérielle, une distance choisie. Et, en face, un guide local, passionné et engagé, qui n’avait jamais quitté sa région. Deux mondes se faisaient face, dans un respect silencieux, mais sans égalité réelle.
-
-:br
-
-Cette scène n’a rien de spectaculaire. Mais elle a agi comme un déclencheur. Elle a fait naître une question : comment voyager sans tout prendre ? Comment créer une relation plus équilibrée entre celui qui part et celui qui accueille ? Et surtout, comment sortir de cette logique du “voyage-performance”, où l’on enchaîne les étapes, les paysages et les rencontres, sans vraiment être là ?
-
-:br
-
-Odysway est né de cette envie de faire autrement. D’inventer une autre manière de voyager, plus attentive, plus lente, plus respectueuse. Un tourisme qui ne cherche pas à consommer le monde, mais à le rencontrer. Qui accepte de ne pas tout comprendre. Qui laisse de la place à l’imprévu, à la nuance, à la relation.
-
-:br
-
-Ce n’est pas un modèle parfait. Mais c’est une direction. Et depuis ce jour en Bolivie, c’est celle que nous suivons.
-
-En lire plus sur nos engagements pour un tourisme plus équilibré.
 ::
 
 ::concept-container
@@ -100,69 +78,20 @@ Romain, fondateur d'Odysway
 **Ce que l'on défend**
 ::
 
-::company-overview-container
----
-image-src: /images/team/team-photo.webp
----
-#text
-Nous croyons qu’un autre tourisme est possible. Un tourisme plus juste, plus ancré, plus respectueux.
-
-:br
-
-Depuis nos débuts en 2018, nous construisons des voyages qui ont du sens. Pour les voyageurs qui partent, comme pour les personnes qui accueillent. Chaque séjour est pensé en lien direct avec celles et ceux qui vivent sur place : guides, familles, artisans, éleveurs, femmes engagées dans leur territoire. Ce sont elles et eux qui donnent vie aux expériences que nous proposons.
-
-Notre rôle est clair : créer les conditions d’une vraie rencontre. Une rencontre simple, équilibrée, sans mise en scène. Nous veillons à la qualité de chaque détail : itinéraires, hébergements, rythme, accueil… tout est ajusté pour que chacun trouve sa place, dans le respect des personnes et des lieux.
-
-:br
-
-Nous ne cherchons pas à impressionner, mais à être juste. Juste dans la façon de voyager, dans la relation avec nos partenaires et avec nos voyageurs.
-
-Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Qui cherche à faire mieux. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
-::
-
 ::title-container-h2
 #subtitle
 **Une équipe à taille humaine**
 ::
 
 ::text-container
-#text
-Chez Odysway, nous ne sommes pas une plateforme automatisée. Odysway est une petite équipe, et c’est ce qui fait notre force. Quand vous nous contactez, vous parlez à une vraie personne, qui prend le temps de vous écouter. Pas pour vous faire entrer dans une case, mais pour comprendre ce qui vous fait envie, ce qui vous inspire, ce que vous attendez ou ce que vous fuyez.
+::
 
-:br
-
-Ce lien direct avec vous est au cœur de notre démarche. Nous échangeons avec vous comme nous aimons qu’on le fasse avec nous : simplement, avec attention et écoute. Ce que nous cherchons, ce n’est pas de vendre un séjour à tout prix, mais de vous accompagner dans un projet de voyage qui vous ressemble dans le respect de ce que nous sommes et de ce que nous proposons.
-
-:br
-
-Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terrain, nous testons, nous ajustons. C’est notre façon de garantir que ce que vous vivrez soit fidèle à ce que nous défendons.
+::company-overview-container{image-src="/images/team/team-photo.webp"}
 ::
 
 ::title-container-h2
 #subtitle
 **Ce que l'on défend**
-::
-
-::company-overview-container
----
-image-src: /images/team/team-photo.webp
----
-#text
-Nous croyons qu’un autre tourisme est possible. Un tourisme plus juste, plus ancré, plus respectueux.
-
-:br
-
-Depuis nos débuts en 2018, nous construisons des voyages qui ont du sens. Pour les voyageurs qui partent, comme pour les personnes qui accueillent. Chaque séjour est pensé en lien direct avec celles et ceux qui vivent sur place : guides, familles, artisans, éleveurs, femmes engagées dans leur territoire. Ce sont elles et eux qui donnent vie aux expériences que nous proposons.
-
-:br
-
-Notre rôle est clair : créer les conditions d’une vraie rencontre. Une rencontre simple, équilibrée, sans mise en scène. Nous veillons à la qualité de chaque détail : itinéraires, hébergements, rythme, accueil… tout est ajusté pour que chacun trouve sa place, dans le respect des personnes et des lieux.
-
-:br
-
-Nous ne cherchons pas à impressionner, nous cherchons à être juste. Juste dans la façon de voyager, dans la relation avec nos partenaires et au sein de l'équipe Odysway.
-
-Ce que nous défendons, c’est un tourisme sincère, attentif, responsable. Pas parfait, mais cohérent. Qui cherche à faire mieux. Qui cherche à prendre moins l'avion. Pas spectaculaire, mais profond. Et c’est dans cette direction que nous avançons, jour après jour.
 ::
 
 ::title-container-h1
