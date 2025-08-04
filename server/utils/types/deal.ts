@@ -158,6 +158,7 @@ export const DealSchema = z.object({
   gotEarlybird: z.string().optional(),
   promoLastMinute: z.number().optional(),
   gotLastMinute: z.string().optional(),
+  linkBms: z.string().optional(),
   // contact fields
   firstname: z.string().optional(),
   lastname: z.string().optional(),

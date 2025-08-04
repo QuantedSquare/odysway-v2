@@ -79,6 +79,7 @@
                   v-model="dynamicDealValues"
                   :checkout-type="checkoutType"
                   :voyage="voyage"
+                  :date-id="date_id"
                   :own-step="1"
                   :page="pageTexts"
                   @next="nextStep"
@@ -293,7 +294,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         travelersData[travelerKey] = null
       }
     }
-    console.log('deal', deal)
+
     const dynamicValues = {
       // Details
       nbTravelers: +deal.nbTravelers,
@@ -320,8 +321,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
 
     dynamicDealValues.value = dynamicValues
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-    console.log('checkoutType', checkoutType.value)
-    console.log('deal', deal)
+
     const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
@@ -351,12 +351,11 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       alreadyPaid: deal.alreadyPaid || 0,
       totalTravelPrice: deal.value,
     }
-    console.log('voyageStaticValues', voyageStaticValues)
+
     await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
     return voyageStaticValues
   }
 })
-console.log('voyage status', voyageStatus.value)
 // ================== Stepper Management ==================
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
@@ -364,7 +363,6 @@ const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = route.query.type === 'custom' ? 1 : 5
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
-  console.log('skipperMode', skipperMode.value)
 }
 
 const nextStep = () => {

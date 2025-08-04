@@ -83,6 +83,7 @@ const customFieldsMapDeal = {
   86: 'gotEarlybird',
   95: 'promoLastMinute',
   96: 'gotLastMinute',
+  93: 'linkBms',
 }
 const customFieldsMapContact = {
   1: 'birthdate',
@@ -227,7 +228,6 @@ const getDealById = async id => await apiRequest(`/deals/${id}`)
 
 const getDealCustomFields = async (dealId) => {
   const response = await apiRequest(`/deals/${dealId}/dealCustomFieldData`)
-  console.log('======= deal custom field data =======', response.dealCustomFieldData)
   return handleCustomFields(response.dealCustomFieldData, customFieldsMapDeal)
 }
 
