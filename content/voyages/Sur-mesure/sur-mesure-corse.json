@@ -14,11 +14,17 @@
     "minTravelersToConfirm": 2
   },
   "pricingDetailsBlock": {
-    "exclude": [],
-    "include": []
+    "exclude": [
+      "les activités, les dépenses personnelles, les pourboires, les taxes de séjours, et toutes les prestations non mentionnées dans le devis"
+    ],
+    "include": [
+      "Hôtel, vols internationaux, assistance Odysway, frais de gestions"
+    ]
   },
   "programmeBlock": [],
-  "experiencesBlock": [],
+  "experiencesBlock": [
+    ""
+  ],
   "categories": [
     {}
   ],
@@ -45,5 +51,7 @@
     "includeFlightBadge": {
       "visible": true
     }
-  }
+  },
+  "groupeAvailable": false,
+  "privatisationAvailable": true
 }
