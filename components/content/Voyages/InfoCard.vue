@@ -55,7 +55,10 @@
             :key="date.departureDate + i"
             cols="12"
           >
-            <DateButton :date="date" />
+            <DateButton
+              v-if="date.status.status !== 'full'"
+              :date="date"
+            />
           </v-col>
 
           <v-col
@@ -236,7 +239,8 @@ watch(dates, () => {
     const sortedByDates = dates.value
       .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
       .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
-    displayedDates.value = sortedByDates.slice(0, 3).map((date) => {
+
+    displayedDates.value = sortedByDates.slice(0, 4).map((date) => {
       const in30days = dayjs().add(30, 'day')
       const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
       return {

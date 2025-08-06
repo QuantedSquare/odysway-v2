@@ -1,5 +1,5 @@
 <template>
-  <div v-if="date.status.status !== 'full'">
+  <div>
     <v-btn
       v-if="!isLoading"
       :height="mdAndDown ? 80 : 52"
@@ -50,7 +50,6 @@ const { date } = defineProps({
   },
 })
 const isLoading = ref(false)
-
 // Reactive state to track existing booked dates
 const existingBookedDates = ref(new Map())
 const checkoutLink = ref('')
