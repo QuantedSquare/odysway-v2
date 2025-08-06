@@ -60,7 +60,7 @@ export default defineEventHandler(async (event) => {
         try {
           const customFields = await activecampaign.getDealCustomFields(row.deal_id)
           const { deal } = await activecampaign.getDealById(row.deal_id)
-          const contact = await activecampaign.getClientById(deal.contact)
+          const { contact } = await activecampaign.getClientById(deal.contact)
           axios({
             url: process.env.SLACK_URL_POSE_OPTION,
             method: 'post',
