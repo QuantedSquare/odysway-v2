@@ -35,7 +35,7 @@
       </TransitionGroup>
     </v-row>
     <v-row
-      v-if="sortedByDates.length > 4"
+      v-if="sortedByDates.length > 3"
       justify="center"
       align="center"
       class="flex-column"
