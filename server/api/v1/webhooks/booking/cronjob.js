@@ -58,6 +58,9 @@ export default defineEventHandler(async (event) => {
       // Update the deal in ActiveCampaign (set stage to 1)
       if (row.deal_id) {
         try {
+          const customFields = await activecampaign.getDealCustomFields(row.deal_id)
+          const { deal } = await activecampaign.getDealById(row.deal_id)
+          const contact = await activecampaign.getClientById(deal.contact)
           axios({
             url: process.env.SLACK_URL_POSE_OPTION,
             method: 'post',
@@ -68,7 +71,7 @@ export default defineEventHandler(async (event) => {
                     type: 'section',
                     text: {
                       type: 'mrkdwn',
-                      text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${row.deal_id}| OPTION EXPIRÉE>`,
+                      text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${row.deal_id}| 'OPTION EXPIRÉE-${deal?.title || customFields?.slug}-${contact?.firstname}${contact?.lastName}-pax ${customFields?.nbTravellers}'>`,
                     },
                   },
                 ],
