@@ -8,7 +8,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "customAvailable": false,
+  "customAvailable": true,
   "experienceType": "En immersion chez...",
   "level": "1",
   "categories": [],
