@@ -97,7 +97,7 @@
       "title": " ARRIVÉE CHEZ KRISTIANE",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre en fin d'après-midi au lieu-dit de Labraud. Kristiane vous accueille et vous fait visiter l’atelier et l’exposition de céramique. Après votre installation, le dîner préparé à base de produits locaux vous sera apporté au gîte.",
-      "photo": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/gANmfkYnQjeFYHQaftOi.jpg",
+      "photo": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/gANmfkYnQjeFYHQaftOi.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -106,7 +106,7 @@
       "title": "L'ART DE LA CÉRAMIQUE",
       "badgeText": "JOUR 2",
       "description": "Le matin, vous découvrirez les techniques de modelage de la terre. Vous aurez le loisir de créer votre propre objet en céramique. Déjeuner et après-midi libre : vous pourrez découvrir les environs en faisant une petite randonnée au départ du gîte et découvrir le bocage limousin. En fin d’après-midi, pendant que votre céramique cuira lentement au feu, vous prendrez un délicieux apéritif en compagnie de votre hôte.",
-      "photo": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/jJEqKVtTR4aQ2W70Zdds.jpg",
+      "photo": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/jJEqKVtTR4aQ2W70Zdds.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -115,7 +115,7 @@
       "title": "AU MARCHÉ LOCAL",
       "badgeText": "JOUR 3",
       "description": "Derniers moments avec Kristiane qui vous remettra vos créations en céramique. Matinée libre : nous vous conseillons de vous rendre au marché et rencontrer producteurs et artisans. Vous pourrez y goûter les produits locaux dans une ambiance chaleureuse et faire vos derniers achats avant le départ.",
-      "photo": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/ekcscm1T66Ul93txv2ip.jpg",
+      "photo": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/ekcscm1T66Ul93txv2ip.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -159,7 +159,7 @@
       "name": "Kristiane",
       "description": "Après avoir découvert la céramique lors de stages en Allemagne et Yougoslavie, Kristiane s’installe dans le Limousin, sa terre d’adoption. Inspirée par cette campagne paisible, elle créé l’atelier Traces en Terre et explore des domaines variés : arts de la table, objets décoratifs d’intérieur et d’extérieur, mobilier, enduits... Le temps d’un séjour, elle partage avec plaisir sa passion, son savoir-faire et sa connaissance du territoire.",
       "role": "Céramiste",
-      "image": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/PuE242ojS1SNwpJNYz72.jpg"
+      "image": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/PuE242ojS1SNwpJNYz72.jpg"
     }
   ],
   "housingBlock": [
@@ -171,11 +171,11 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg",
+    "src": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg",
     "alt": "image principale du voyage Initiez-vous à l'art de la poterie artisanale dans le Limousin"
   },
   "imageSecondary": {
-    "src": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/0fyOaDIQMqFhyuPsAm15.jpg",
+    "src": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/0fyOaDIQMqFhyuPsAm15.jpg",
     "alt": "image secondaire du voyage Initiez-vous à l'art de la poterie artisanale dans le Limousin"
   },
   "photosList": [],
@@ -216,13 +216,13 @@
     "ogTitle": "Initiez-vous à l'art de la poterie artisanale dans le Limousin",
     "ogDescription": "Vivez un séjour en pleine nature avec une initiation à la poterie artisanale au cœur du parc naturel régional du Périgord limousin !",
     "ogImage": {
-      "src": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg",
+      "src": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg",
       "alt": "image principale du voyage Initiez-vous à l'art de la poterie artisanale dans le Limousin"
     },
     "twitterTitle": "Initiez-vous à l'art de la poterie artisanale dans le Limousin",
     "twitterDescription": "Vivez un séjour en pleine nature avec une initiation à la poterie artisanale au cœur du parc naturel régional du Périgord limousin !",
     "twitterImage": {
-      "src": "/images/voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg",
+      "src": "/images/1.voyages/sejour-ceramique-pnr-perigord-limousin/cIRdfnWITBC7BXHIybwT.jpg",
       "alt": "image principale du voyage Initiez-vous à l'art de la poterie artisanale dans le Limousin"
     },
     "twitterCard": "summary_large_image"

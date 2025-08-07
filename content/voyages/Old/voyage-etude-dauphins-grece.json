@@ -117,7 +117,7 @@
       "title": "DÉCOUVERTE D'ATHÈNES",
       "badgeText": "JOURS 1 & 2",
       "description": "Vous arrivez à Athènes et êtes accueillis par notre guide. Profitez d'une première soirée à Athènes avant de partir explorer le lendemain ! La journée peut se faire en liberté, ou avec un guide qui vous fera visiter les monuments incontournables d'Athènes.",
-      "photo": "/images/voyages/voyage-etude-dauphins-grece/fLOsmjJiT4WMJUoJnqFa.jpg",
+      "photo": "/images/1.voyages/voyage-etude-dauphins-grece/fLOsmjJiT4WMJUoJnqFa.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -126,7 +126,7 @@
       "title": "DÉPART POUR ALONISSOS",
       "badgeText": "JOUR 3",
       "description": "Votre guide vient vous chercher à l'hôtel et vous partez pour le port de Mantoudi, d'où vous prendrez le ferry jusqu'à Alonissos. Rendez-vous avec Kimonas et les autres participants à la maison, explication du programme puis première soirée tous ensemble.",
-      "photo": "/images/voyages/voyage-etude-dauphins-grece/Lh4nMNFkShu1lrJHT1Tt.jpg",
+      "photo": "/images/1.voyages/voyage-etude-dauphins-grece/Lh4nMNFkShu1lrJHT1Tt.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -135,7 +135,7 @@
       "title": "PREMIÈRE EXPÉDITION EN MER",
       "badgeText": "JOUR 4 ",
       "description": "C'est parti pour votre première expédition ! Vous montez à bord d'Odysseia le matin avec comme mission de photographier les dauphins. Le midi, vous ferez une halte sur une île de la région et mangerez sur une plage déserte ! Le soir, dîner tous ensemble.",
-      "photo": "/images/voyages/voyage-etude-dauphins-grece/L7rarPY8RKa7QjghDoxL.jpg",
+      "photo": "/images/1.voyages/voyage-etude-dauphins-grece/L7rarPY8RKa7QjghDoxL.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -144,7 +144,7 @@
       "title": "LA VIE DE BIOLOGISTE MARIN",
       "badgeText": "JOURS 5 À 8",
       "description": "Pendant 4 jours, vous allez vivre la vie de biologiste marin. Vous partirez en mer, puis profiterez l'après-midi d'un temps libre pour vous reposer ou faire une activité (plongée, rando, ...). Le soir, vous étudierez le comportement des dauphins puis pourrez profiter des restaurants et bars d'Alonissos.",
-      "photo": "/images/voyages/voyage-etude-dauphins-grece/nGQVORg3RwqvN0U5qukN.jpg",
+      "photo": "/images/1.voyages/voyage-etude-dauphins-grece/nGQVORg3RwqvN0U5qukN.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -153,7 +153,7 @@
       "title": "LES ADIEUX ET LE RETOUR",
       "badgeText": "JOUR 9",
       "description": "C'est le jour du départ ! Faites vos adieux à Kimonas et aux autres participants. Vous prenez le ferry qui vous ramène au port, où notre guide vous attendra pour vous amener à l'aéroport d'Athènes pour le vol retour.",
-      "photo": "/images/voyages/voyage-etude-dauphins-grece/0tln2JxxTEqBegtUt3Z2.jpg",
+      "photo": "/images/1.voyages/voyage-etude-dauphins-grece/0tln2JxxTEqBegtUt3Z2.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -209,7 +209,7 @@
       "name": "Kimonas",
       "description": "Kimonas sera votre accompagnateur lors des sorties en mer. Il est biologiste marin local d'Alonissos et il affirme connaître tous ses habitants ! Après des années à parcourir les mers et à observer la faune marine, Kimonas est une mine d'information et a mille histoires à raconter.",
       "role": "Biologiste marin",
-      "image": "/images/voyages/voyage-etude-dauphins-grece/oLfeYZdRQ8SsNjWICRUM.jpg"
+      "image": "/images/1.voyages/voyage-etude-dauphins-grece/oLfeYZdRQ8SsNjWICRUM.jpg"
     }
   ],
   "housingBlock": [
@@ -219,87 +219,87 @@
       "housingMood": "A Athènes, vous serez logés pendant deux nuits en hôtel, en chambre double, dans le centre ville. A Alonissos, vous serez logés dans une maison qui a deux chambres pour 6 résidents, en chambre partagée. La maison n'est pas climatisée, mais les chambres sont pourvues de ventilateurs. Si vous souhaitez plus de confort et d'intimité, nous pouvons également vous réserver une chambre dans un hôtel à côté de la maison (avec supplément).",
       "image": [
         {
-          "src": "/images/voyages/voyage-etude-dauphins-grece/BJZAYgAR6u46cqaAhe9W.jpg",
+          "src": "/images/1.voyages/voyage-etude-dauphins-grece/BJZAYgAR6u46cqaAhe9W.jpg",
           "alt": "image de l'hébergement Observez les dauphins avec un biologiste marin en Grèce"
         },
         {
-          "src": "/images/voyages/voyage-etude-dauphins-grece/W6QQOzwvQo2QyPWpsqeo.jpg",
+          "src": "/images/1.voyages/voyage-etude-dauphins-grece/W6QQOzwvQo2QyPWpsqeo.jpg",
           "alt": "image de l'hébergement Observez les dauphins avec un biologiste marin en Grèce"
         },
         {
-          "src": "/images/voyages/voyage-etude-dauphins-grece/KXBpdZOSFCZszQ0RUSJu.jpg",
+          "src": "/images/1.voyages/voyage-etude-dauphins-grece/KXBpdZOSFCZszQ0RUSJu.jpg",
           "alt": "image de l'hébergement Observez les dauphins avec un biologiste marin en Grèce"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
+    "src": "/images/1.voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
     "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
   },
   "imageSecondary": {
-    "src": "/images/voyages/voyage-etude-dauphins-grece/uDNSq8qTAmHG9OEXz3zg.jpg",
+    "src": "/images/1.voyages/voyage-etude-dauphins-grece/uDNSq8qTAmHG9OEXz3zg.jpg",
     "alt": "image secondaire du voyage Observez les dauphins avec un biologiste marin en Grèce"
   },
   "photosList": [
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/bzQw8mqJR4K9nloUKkSQ.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/bzQw8mqJR4K9nloUKkSQ.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/6ZnaNC7SJuv8LqrRSp9d.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/6ZnaNC7SJuv8LqrRSp9d.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/j1FovjA3QG67Mc5Zv3x0.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/j1FovjA3QG67Mc5Zv3x0.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/lRsy10VTmv68a2a3cOJA.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/lRsy10VTmv68a2a3cOJA.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/iiPRMLpSvWTTfEOov7Sc.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/iiPRMLpSvWTTfEOov7Sc.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/SFb414puTeaeePBSnDSN.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/SFb414puTeaeePBSnDSN.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/55fWbN0TYWSNQbJC6nXN.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/55fWbN0TYWSNQbJC6nXN.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/F8fXe7IWRzuDV2cKI0F6.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/F8fXe7IWRzuDV2cKI0F6.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/PBosHsfWQwukejiL0ARh.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/PBosHsfWQwukejiL0ARh.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/AAWTXwHdR8Ono4LjLjaB.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/AAWTXwHdR8Ono4LjLjaB.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/gC85mnUSdCBMuidzPu0b.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/gC85mnUSdCBMuidzPu0b.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/c2lzVo2TkyFd2HDFQFUQ.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/c2lzVo2TkyFd2HDFQFUQ.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/dUbWAkIZQ1mG7fpUKrVg.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/dUbWAkIZQ1mG7fpUKrVg.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/XdCJ3kGfSECuHNrtrfYG.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/XdCJ3kGfSECuHNrtrfYG.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/wM5w9rxASWadgEej9Nve.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/wM5w9rxASWadgEej9Nve.jpg",
       "alt": "image de la liste de photos du voyage Observez les dauphins avec un biologiste marin en Grèce"
     }
   ],
@@ -342,13 +342,13 @@
     "ogTitle": "Observez les dauphins avec un biologiste marin en Grèce",
     "ogDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
     "ogImage": {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
       "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     "twitterTitle": "Observez les dauphins avec un biologiste marin en Grèce",
     "twitterDescription": "Partez en voyage sur l'île Grecque d'Alonissos pour partager le quotidien d'un biologiste marin spécialisé dans l'étude des dauphins pendant une semaine. ",
     "twitterImage": {
-      "src": "/images/voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
+      "src": "/images/1.voyages/voyage-etude-dauphins-grece/gGQOtr2TQg28vgyJDN1u.jpg",
       "alt": "image principale du voyage Observez les dauphins avec un biologiste marin en Grèce"
     },
     "twitterCard": "summary_large_image"

@@ -106,7 +106,7 @@
       "title": "ARRIVÉE EN TERRE BÉARNAISE",
       "badgeText": "JOUR 1",
       "description": "Cap vers l’intérieur des Pyrénées, rejoignez la sublime vallée d'Aspe, située au cœur du Béarn. Territoire empreint d'une forte culture liée au pastoralisme, c'est aussi une vallée où vit encore l'ours brun. Entre terroir et nature majestueuse, profitez de ces premiers instants découverte. Rencontre avec vos hôtes du séjour, Claire et Sandrine !",
-      "photo": "/images/voyages/sejour-hiver-pyrenees/UqLivEYnSbKKZNwzeJPy.jpg",
+      "photo": "/images/1.voyages/sejour-hiver-pyrenees/UqLivEYnSbKKZNwzeJPy.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -115,7 +115,7 @@
       "title": "PREMIERS PAS DANS LE PARC NATIONAL",
       "badgeText": "JOUR 2",
       "description": "Au cœur de l’hiver, partez pour une douce aventure dans la vallée d’Aspe. Depuis Peyrenère, empruntez le sentier du Somport, une randonnée facile qui vous mène à travers le cœur préservé du Parc National des Pyrénées. Au fil de votre marche, les paysages se dévoilent dans une harmonie délicate, alternant entre forêts mystérieuses et clairières lumineuses, où la neige se pose en silence. Chaque pas est une immersion dans la nature hivernale, loin du tumulte, où la beauté sauvage et sereine de la vallée se révèle sous une lumière douce.",
-      "photo": "/images/voyages/sejour-hiver-pyrenees/4bvBF9pCSvel4UDxkx6C.jpg",
+      "photo": "/images/1.voyages/sejour-hiver-pyrenees/4bvBF9pCSvel4UDxkx6C.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -124,7 +124,7 @@
       "title": "LACS ET PANORAMAS D’ALTITUDE",
       "badgeText": "JOUR 3",
       "description": "Laissez-vous guider jusqu’au lac d’Estaëns, après une belle ascension de 650 mètres de dénivelé. En chemin, passez par la cabane d’Escourets, un refuge simple au milieu des montagnes, où la pierre et le bois se fondent dans le paysage sauvage. Au fil de ces randonnées, la nature vous entoure de panoramas saisissants et d’une quiétude rare, où chaque cabane semble veiller sur la vallée, nichée entre les pics majestueux et les prairies enneigées.",
-      "photo": "/images/voyages/sejour-hiver-pyrenees/KSKepVmqSK6BlnNDW2oN.jpg",
+      "photo": "/images/1.voyages/sejour-hiver-pyrenees/KSKepVmqSK6BlnNDW2oN.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -133,7 +133,7 @@
       "title": "ENTRE CABANES ET PICS",
       "badgeText": "JOUR 4",
       "description": "Prenez la route de la cabane d’Ansabère, avec une montée de 550 mètres de dénivelé pour une randonnée de difficulté moyenne. Le sentier serpente d’abord à travers les forêts profondes, avant de s’ouvrir sur une crête offrant une vue saisissante. Ici, les majestueuses aiguilles d’Ansabère se dressent, élancées et imposantes, dominant les paysages environnants. Cette alternance de forêt ombragée et de crêtes panoramiques offre une immersion pleine de contrastes, où chaque pas dévoile un peu plus la grandeur de ce massif pyrénéen.",
-      "photo": "/images/voyages/sejour-hiver-pyrenees/Itk1VTqRa2h80m3nlffV.jpg",
+      "photo": "/images/1.voyages/sejour-hiver-pyrenees/Itk1VTqRa2h80m3nlffV.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -142,7 +142,7 @@
       "title": "DERNIER JOUR DANS LA VALLÉE",
       "badgeText": "JOUR 5",
       "description": "Pour ce dernier jour dans la vallée, l’heure est aux adieux, mais avec la promesse d’un retour. Alors que vous laissez derrière vous les paysages enneigés et les cabanes de montagne, une pensée vous invite à revenir ici en été, lorsque la vallée sera transformée. Les sentiers que vous avez parcourus sous la neige s’ouvriront sur des estives verdoyantes, où les bergers montent avec leurs troupeaux de brebis. Là, dans le calme des prairies d’altitude, vous pourrez rencontrer ces gardiens des montagnes, partager leurs histoires, et découvrir un autre visage de la vallée, vibrant de vie. En quittant les sommets enneigés aujourd’hui, une part de vous sait que cette aventure hivernale est une première invitation, laissant la porte ouverte à de nouvelles découvertes.",
-      "photo": "/images/voyages/sejour-hiver-pyrenees/hQMQsoiSUmO5b7woRYOg.jpg",
+      "photo": "/images/1.voyages/sejour-hiver-pyrenees/hQMQsoiSUmO5b7woRYOg.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -187,7 +187,7 @@
       "name": "Accompagnateur en moyenne montagne",
       "description": "",
       "role": "Paco",
-      "image": "/images/voyages/sejour-hiver-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg"
+      "image": "/images/1.voyages/sejour-hiver-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg"
     }
   ],
   "housingBlock": [
@@ -197,59 +197,59 @@
       "housingMood": "Durant ce séjour, vous logerez quatre nuits dans une chambre d'un gîte, situé dans la ville d'Accous. Le gîte est composé de huit chambres et est idéalement placé au cœur de la vallée et à proximité des départs de randonnée. Pour les repas, les hôtes Claire et Sandrine préparent le petit-déjeuner, le dîner et des paniers repas pour les randonnées.",
       "image": [
         {
-          "src": "/images/voyages/sejour-hiver-pyrenees/JacSdSAWTfW40FdENnQh.jpg",
+          "src": "/images/1.voyages/sejour-hiver-pyrenees/JacSdSAWTfW40FdENnQh.jpg",
           "alt": "image de l'hébergement Immersion hivernale en terre béarnaise"
         },
         {
-          "src": "/images/voyages/sejour-hiver-pyrenees/HJBg4gECT3qXda2TqenG.jpg",
+          "src": "/images/1.voyages/sejour-hiver-pyrenees/HJBg4gECT3qXda2TqenG.jpg",
           "alt": "image de l'hébergement Immersion hivernale en terre béarnaise"
         },
         {
-          "src": "/images/voyages/sejour-hiver-pyrenees/0S9ohMXZRqqXZqcCr9dZ.jpg",
+          "src": "/images/1.voyages/sejour-hiver-pyrenees/0S9ohMXZRqqXZqcCr9dZ.jpg",
           "alt": "image de l'hébergement Immersion hivernale en terre béarnaise"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
+    "src": "/images/1.voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
     "alt": "image principale du voyage Immersion hivernale en terre béarnaise"
   },
   "imageSecondary": {
-    "src": "/images/voyages/sejour-hiver-pyrenees/XlIHZEHwQmiF9u91dQG1.jpg",
+    "src": "/images/1.voyages/sejour-hiver-pyrenees/XlIHZEHwQmiF9u91dQG1.jpg",
     "alt": "image secondaire du voyage Immersion hivernale en terre béarnaise"
   },
   "photosList": [
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/G4x6f8kSuKhzHIwVfAO8.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/G4x6f8kSuKhzHIwVfAO8.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/sQWytymSOe1bJcc4i4rf.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/sQWytymSOe1bJcc4i4rf.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/IldQdsuiT7K7x3uZb6LI.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/IldQdsuiT7K7x3uZb6LI.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/EpN6Kb6KTVi7e0x9oWb1.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/EpN6Kb6KTVi7e0x9oWb1.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/NZWQcdWiRRqlDgNBKVXI.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/NZWQcdWiRRqlDgNBKVXI.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/TIEN63hbQ6OZ161rVHlL.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/TIEN63hbQ6OZ161rVHlL.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/tkvbHE7QdmU9Rt4A8oig.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/tkvbHE7QdmU9Rt4A8oig.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     },
     {
-      "src": "/images/voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/ycb748L0T9upWAcemHXe.jpg",
       "alt": "image de la liste de photos du voyage Immersion hivernale en terre béarnaise"
     }
   ],
@@ -292,13 +292,13 @@
     "ogTitle": "Immersion hivernale en terre béarnaise",
     "ogDescription": "Découvrez l’hiver au cœur des Pyrénées : randonnées en vallée d’Aspe, paysages enneigés et rencontres locales, guidé par un accompagnateur certifié pour une expérience authentique.",
     "ogImage": {
-      "src": "/images/voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
       "alt": "image principale du voyage Immersion hivernale en terre béarnaise"
     },
     "twitterTitle": "Immersion hivernale en terre béarnaise",
     "twitterDescription": "Découvrez l’hiver au cœur des Pyrénées : randonnées en vallée d’Aspe, paysages enneigés et rencontres locales, guidé par un accompagnateur certifié pour une expérience authentique.",
     "twitterImage": {
-      "src": "/images/voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
+      "src": "/images/1.voyages/sejour-hiver-pyrenees/YZpfhas4QcK1uOHlHAAn.jpg",
       "alt": "image principale du voyage Immersion hivernale en terre béarnaise"
     },
     "twitterCard": "summary_large_image"

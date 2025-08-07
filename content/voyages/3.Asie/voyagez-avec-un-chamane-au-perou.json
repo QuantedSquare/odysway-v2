@@ -169,7 +169,7 @@
       "name": "Des guides francophones dédiés",
       "description": "",
       "role": "",
-      "image": "/images/voyages/voyagez-avec-un-chamane-au-perou/wiLslCJRcKhbhDZTOMIs.jpg"
+      "image": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/wiLslCJRcKhbhDZTOMIs.jpg"
     }
   ],
   "housingBlock": [
@@ -179,26 +179,26 @@
       "housingMood": "Selon les étapes, vous alternerez entre des nuits en jolis hôtels 2-3* et des nuits chez l'habitant.\r\nNous veillons à sélectionner uniquement des hôtels esprit \"petite structure\" simples mais confortables.",
       "image": [
         {
-          "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/SbzNCziSLuUEKI6Us9Xu.jpg",
+          "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/SbzNCziSLuUEKI6Us9Xu.jpg",
           "alt": "image de l'hébergement Voyagez avec un chamane au Pérou"
         },
         {
-          "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/NwlZC9pnTOKFrtKv6SrQ.jpg",
+          "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/NwlZC9pnTOKFrtKv6SrQ.jpg",
           "alt": "image de l'hébergement Voyagez avec un chamane au Pérou"
         },
         {
-          "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/CPgtoFO1QCmhp1gyiw9Z.jpg",
+          "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/CPgtoFO1QCmhp1gyiw9Z.jpg",
           "alt": "image de l'hébergement Voyagez avec un chamane au Pérou"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
+    "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
     "alt": "image principale du voyage Voyagez avec un chamane au Pérou"
   },
   "imageSecondary": {
-    "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/gHOIbnesSrm4wF1zWMPt.jpg",
+    "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/gHOIbnesSrm4wF1zWMPt.jpg",
     "alt": "image secondaire du voyage Voyagez avec un chamane au Pérou"
   },
   "photosList": [],
@@ -217,13 +217,13 @@
     "ogTitle": "Voyagez avec un chamane au Pérou",
     "ogDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein de familles quechuas.",
     "ogImage": {
-      "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
+      "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
       "alt": "image principale du voyage Voyagez avec un chamane au Pérou"
     },
     "twitterTitle": "Voyagez avec un chamane au Pérou",
     "twitterDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein de familles quechuas.",
     "twitterImage": {
-      "src": "/images/voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
+      "src": "/images/1.voyages/voyagez-avec-un-chamane-au-perou/9AcE6ilROqV9RL7oAFHm.jpg",
       "alt": "image principale du voyage Voyagez avec un chamane au Pérou"
     },
     "twitterCard": "summary_large_image"

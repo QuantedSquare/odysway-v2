@@ -118,7 +118,7 @@
       "title": "ARRIVÉE ET CONNAISSANCE",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre près du village de Lamoura dans l'après-midi, à partir de 14h. Après installation dans le chalet, vous ferez connaissance avec vos hôtes Fabien et Virginie et les autres voyageurs. Vous aurez l'occasion de parler de vos objectifs et de votre niveau en photographie, ainsi que du programme des prochains jours.",
-      "photo": "/images/voyages/decouvrez-photo-animaliere-jura/xB1DznRgTme22KVd8hkR.jpg",
+      "photo": "/images/1.voyages/decouvrez-photo-animaliere-jura/xB1DznRgTme22KVd8hkR.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -127,7 +127,7 @@
       "title": "LES TECHNIQUES PHOTOS",
       "badgeText": "JOUR 2",
       "description": "Aujourd'hui, Fabien vous apprendra toutes les techniques nécessaires pour prendre vos premières photos d'animaux : technique de l’approche et de l'affût, et pistage des animaux. Fabien vous expliquera comment trouver la trace des animaux sans les effrayer pour capter de magnifiques clichés.",
-      "photo": "/images/voyages/decouvrez-photo-animaliere-jura/6P5jARhZTbacQ5PUIGAX.jpg",
+      "photo": "/images/1.voyages/decouvrez-photo-animaliere-jura/6P5jARhZTbacQ5PUIGAX.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -136,7 +136,7 @@
       "title": "VOTRE PREMIER AFFÛT",
       "badgeText": "JOUR 3",
       "description": "Très tôt ce matin, vous partez pour votre premier affût. Il s'agit de la technique utilisée par les photographes pour prendre leurs meilleurs clichés. Il faut trouver une zone adaptée, se camoufler et attendre l'arrivée des renards, chevreuils, sangliers, marmottes, et si vous avez (beaucoup) de chance, des loups et des lynx.",
-      "photo": "/images/voyages/decouvrez-photo-animaliere-jura/E8YX3edGQdCgyiTxVUsQ.jpg",
+      "photo": "/images/1.voyages/decouvrez-photo-animaliere-jura/E8YX3edGQdCgyiTxVUsQ.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -145,7 +145,7 @@
       "title": "L’AFFÛT EN MONTAGNE",
       "badgeText": "JOUR 4",
       "description": "En fonction du temps et de la forme de chacun, vous partez tôt le matin pour une randonnée en montagne. Arrivée au lever du jour pour prendre part à un autre affût inoubliable avec les magnifiques lumières de l'aube et la vue majestueuse sur le lac Léman.",
-      "photo": "/images/voyages/decouvrez-photo-animaliere-jura/HGUo5JdgTxmlkVOtlMOc.jpg",
+      "photo": "/images/1.voyages/decouvrez-photo-animaliere-jura/HGUo5JdgTxmlkVOtlMOc.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -154,7 +154,7 @@
       "title": "DERNIER AFFÛT ",
       "badgeText": "JOUR 5",
       "description": "Vous partez ce matin pour votre dernier affût avec Fabien, vous utiliserez les techniques apprises au cours des précédents jours pour prendre votre première grande photo animalière !",
-      "photo": "/images/voyages/decouvrez-photo-animaliere-jura/W3utfp7VQ2mD5EtB0X77.jpg",
+      "photo": "/images/1.voyages/decouvrez-photo-animaliere-jura/W3utfp7VQ2mD5EtB0X77.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -163,7 +163,7 @@
       "title": "DERNIER JOUR DU STAGE PHOTO",
       "badgeText": "JOUR 6",
       "description": "Après ces quelques jours apaisants en immersion dans la nature, il est temps de repartir ! Vous pourrez profiter de votre matinée pour acheter du fromage au village de Lamoura, et prendre un dernier déjeuner avec Virginie et Fabien. ",
-      "photo": "/images/voyages/decouvrez-photo-animaliere-jura/T5VfRB0BSO6dqnO41WN3.jpg",
+      "photo": "/images/1.voyages/decouvrez-photo-animaliere-jura/T5VfRB0BSO6dqnO41WN3.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -210,13 +210,13 @@
       "name": "Fabien Bruggmann",
       "description": "",
       "role": "Photographe animalier",
-      "image": "/images/voyages/decouvrez-photo-animaliere-jura/bruggmann.jpeg"
+      "image": "/images/1.voyages/decouvrez-photo-animaliere-jura/bruggmann.jpeg"
     },
     {
       "name": "Virginie",
       "description": "",
       "role": "Hôte de la maison",
-      "image": "/images/voyages/decouvrez-photo-animaliere-jura/GkFkhg3hRLqJiMxCl1Q2.jpg"
+      "image": "/images/1.voyages/decouvrez-photo-animaliere-jura/GkFkhg3hRLqJiMxCl1Q2.jpg"
     }
   ],
   "housingBlock": [
@@ -226,26 +226,26 @@
       "housingMood": "Vous serez hébergés chez Virginie et Fabien dans leur ferme jurassienne rénovée au naturel située à 1200 mètres d'altitude. Vous dormirez dans une des trois chambres mises à disposition pour nos voyageurs avec 2 salles d'eau et pourrez profiter des espaces communs tels que le salon, la cuisine et le sauna !",
       "image": [
         {
-          "src": "/images/voyages/decouvrez-photo-animaliere-jura/LeIJVWFyRESNwUqZbbUh.jpg",
+          "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/LeIJVWFyRESNwUqZbbUh.jpg",
           "alt": "image de l'hébergement Découvrez l'art de la photo animalière dans le Jura"
         },
         {
-          "src": "/images/voyages/decouvrez-photo-animaliere-jura/n9wUBgiQQXOpMlSkTEjA.jpg",
+          "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/n9wUBgiQQXOpMlSkTEjA.jpg",
           "alt": "image de l'hébergement Découvrez l'art de la photo animalière dans le Jura"
         },
         {
-          "src": "/images/voyages/decouvrez-photo-animaliere-jura/3rSkeH4dTs2z4ocEIDqe.jpg",
+          "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/3rSkeH4dTs2z4ocEIDqe.jpg",
           "alt": "image de l'hébergement Découvrez l'art de la photo animalière dans le Jura"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg",
+    "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg",
     "alt": "image principale du voyage Découvrez l'art de la photo animalière dans le Jura"
   },
   "imageSecondary": {
-    "src": "/images/voyages/decouvrez-photo-animaliere-jura/xB1DznRgTme22KVd8hkR.jpg",
+    "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/xB1DznRgTme22KVd8hkR.jpg",
     "alt": "image secondaire du voyage Découvrez l'art de la photo animalière dans le Jura"
   },
   "photosList": [
@@ -254,23 +254,23 @@
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/NQv95R13St69ovnoOd52.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/NQv95R13St69ovnoOd52.jpg",
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/5OdOk8Q4SZWMdtsKLZsJ.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/5OdOk8Q4SZWMdtsKLZsJ.jpg",
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/47YID5uiTCGNS9JyCJla.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/47YID5uiTCGNS9JyCJla.jpg",
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/QabwQsreQMqBlrBnirFn.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/QabwQsreQMqBlrBnirFn.jpg",
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/EXeJQYjCSW2gq1z5ZZtM.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/EXeJQYjCSW2gq1z5ZZtM.jpg",
       "alt": "image de la liste de photos du voyage Découvrez l'art de la photo animalière dans le Jura"
     }
   ],
@@ -325,13 +325,13 @@
     "ogTitle": "Découvrez l'art de la photo animalière dans le Jura",
     "ogDescription": "Plus qu'un simple stage photo, partez découvrir ou approfondir l'art de la photographie animalière. Accompagné d'un expert, vous apprendrez toutes les techniques à savoir lors de ce séjour insolite au coeur de la nature !",
     "ogImage": {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg",
       "alt": "image principale du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     "twitterTitle": "Découvrez l'art de la photo animalière dans le Jura",
     "twitterDescription": "Plus qu'un simple stage photo, partez découvrir ou approfondir l'art de la photographie animalière. Accompagné d'un expert, vous apprendrez toutes les techniques à savoir lors de ce séjour insolite au coeur de la nature !",
     "twitterImage": {
-      "src": "/images/voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg",
+      "src": "/images/1.voyages/decouvrez-photo-animaliere-jura/03GZYcbTRW9Fa6I7YvQO.jpg",
       "alt": "image principale du voyage Découvrez l'art de la photo animalière dans le Jura"
     },
     "twitterCard": "summary_large_image"

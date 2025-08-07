@@ -95,7 +95,7 @@ async function processAndDownloadImages(voyage) {
       const filename = generateImageFilename(image.url)
       const outputPath = path.join(voyageDir, filename)
       await downloadImage(image.url, outputPath)
-      const relativePath = `/images/voyages/${voyageSlug}/${filename}`
+      const relativePath = `/images/1.voyages/${voyageSlug}/${filename}`
       imageUrlMap.set(image.url, relativePath)
       await sleep(DOWNLOAD_DELAY_MS)
     }

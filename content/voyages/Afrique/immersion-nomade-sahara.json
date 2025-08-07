@@ -106,7 +106,7 @@
       "title": "ARRIVÉE À OUARZAZATE",
       "badgeText": "JOUR 1",
       "description": "Vous arriverez dans la matinée, où notre équipe locale vous accueillera chaleureusement avant de vous conduire à votre hôtel pour un moment de repos. Une fois reposé, vous partirez en direction du désert, à la découverte d’Aït Ben Haddou et de ses superbes environs, entre montagnes aux teintes ocres et petites oasis verdoyantes. En chemin, plusieurs haltes dans des villages traditionnels pourront être faites selon le temps disponible.\r\n",
-      "photo": "/images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg",
+      "photo": "/images/1.voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -115,7 +115,7 @@
       "title": "PREMIÈRE NUIT DANS LE DÉSERT",
       "badgeText": "JOUR 2",
       "description": "Vous continuez votre chemin vers le désert en suivant la magnifique route le long de la vallée du Draa. Le soir, vous arriverez aux portes du Sahara, où vous dégusterez un plat local typique avant une première nuitée en bivouac dans le désert.",
-      "photo": "/images/voyages/immersion-nomade-sahara/1WGKKDFASyyJiWzE8FJW.jpg",
+      "photo": "/images/1.voyages/immersion-nomade-sahara/1WGKKDFASyyJiWzE8FJW.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -124,7 +124,7 @@
       "title": "LA MARCHE DANS LE SAHARA",
       "badgeText": "JOURS 3 À 8",
       "description": "Votre voyage initiatique commence ! Vous serez en immersion dans l’infini du Sahara pendant 6 jours complets, en compagnie de vos guides et de leurs dromadaires. Marche en conscience silencieuse, méditation, bivouac sous les étoiles, rencontres… ",
-      "photo": "/images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg",
+      "photo": "/images/1.voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -133,7 +133,7 @@
       "title": "DERNIÈRES VISITES",
       "badgeText": "JOUR 9",
       "description": "Vient le moment de doucement quitter le désert. Vous prenez la route pour remonter jusqu'à Ouarzazate. Pour prendre soin de votre corps qui vous aura bien porté durant ces journées de marche, vous profiterez d'une séance de hammam traditionnel. ",
-      "photo": "/images/voyages/immersion-nomade-sahara/c8u6R0D8SxSssKicpiKy.jpg",
+      "photo": "/images/1.voyages/immersion-nomade-sahara/c8u6R0D8SxSssKicpiKy.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -142,7 +142,7 @@
       "title": "LES ADIEUX ",
       "badgeText": "JOUR 10",
       "description": "Votre voyage initiatique dans le Sahara touche à sa fin ! Et c'est avec un esprit serein et des souvenirs pleins la tête que vous repartez. ",
-      "photo": "/images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg",
+      "photo": "/images/1.voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -193,7 +193,7 @@
       "name": "Ali",
       "description": "",
       "role": "Nomade",
-      "image": "/images/voyages/immersion-nomade-sahara/vPcfCixxQJyCX61Xe82i.jpg"
+      "image": "/images/1.voyages/immersion-nomade-sahara/vPcfCixxQJyCX61Xe82i.jpg"
     }
   ],
   "housingBlock": [
@@ -203,91 +203,91 @@
       "housingMood": "Pendant ce séjour, vous dormirez à Ouarzazate dans un hôtel 2*/3* du centre ville, en base double. Vous dormirez en bivouac (sous tente et sur un matelas) pendant les nuits dans le désert, cette fois avec des millions d'étoiles (dans le ciel !). Ne vous en faîtes pas, vous dormirez bien , les nuits sont fraiches mais des couvertures vous seront données. Et rien de mieux que le calme du désert pour vous ressourcer !",
       "image": [
         {
-          "src": "/images/voyages/immersion-nomade-sahara/ZJBc8wSraRnGCcjTDeAm.jpg",
+          "src": "/images/1.voyages/immersion-nomade-sahara/ZJBc8wSraRnGCcjTDeAm.jpg",
           "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
         },
         {
-          "src": "/images/voyages/immersion-nomade-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg",
+          "src": "/images/1.voyages/immersion-nomade-sahara/2wj2ZrcUQ3OJN8QArLbp.jpg",
           "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
         },
         {
-          "src": "/images/voyages/immersion-nomade-sahara/LKNyFjoRQi3MZFvQ5383.jpg",
+          "src": "/images/1.voyages/immersion-nomade-sahara/LKNyFjoRQi3MZFvQ5383.jpg",
           "alt": "image de l'hébergement Vivez comme un nomade du Sahara au Maroc"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
+    "src": "/images/1.voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
     "alt": "image principale du voyage Vivez comme un nomade du Sahara au Maroc"
   },
   "imageSecondary": {
-    "src": "/images/voyages/immersion-nomade-sahara/QLMu7DEXSeOav93pOHVk.jpg",
+    "src": "/images/1.voyages/immersion-nomade-sahara/QLMu7DEXSeOav93pOHVk.jpg",
     "alt": "image secondaire du voyage Vivez comme un nomade du Sahara au Maroc"
   },
   "photosList": [
     {
-      "src": "/images/voyages/immersion-nomade-sahara/ZiTTrmaRMO136UbjnVmJ.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/ZiTTrmaRMO136UbjnVmJ.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/6wa7JTbRemJNghtfo1Iv.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/6wa7JTbRemJNghtfo1Iv.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/wDX3HhGlTA6ZFkkKx3ka.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/wDX3HhGlTA6ZFkkKx3ka.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/RHdWl2tJTQuhmbMksus2.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/RHdWl2tJTQuhmbMksus2.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/1N4oXzhxT4at3ViaNEKa.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/1N4oXzhxT4at3ViaNEKa.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/MDyb4PuCQ76KScBMBXO7.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/8RtRUj4wTHOINJi2TtWF.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/5UqN13B0SISuHttVXBf9.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/H5lqKMOQ2Gbfk6bE9FgM.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/H5lqKMOQ2Gbfk6bE9FgM.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/deuIjQtTD6LYVDtD7YIU.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/deuIjQtTD6LYVDtD7YIU.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/miqysTbfTuaAL0JZ6yMY.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/miqysTbfTuaAL0JZ6yMY.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/b3DnshhRpeckGGM4R0bs.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/b3DnshhRpeckGGM4R0bs.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/JOMqi6YBS86fjHqZwiZO.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/JOMqi6YBS86fjHqZwiZO.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/En0fdsDxT8OQMY7QBSgE.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/En0fdsDxT8OQMY7QBSgE.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/gvadBNaQJm3qwBNaQwSw.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/gvadBNaQJm3qwBNaQwSw.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     {
-      "src": "/images/voyages/immersion-nomade-sahara/SkpA40F4R7mK9yIBLdJZ.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/SkpA40F4R7mK9yIBLdJZ.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un nomade du Sahara au Maroc"
     }
   ],
@@ -346,13 +346,13 @@
     "ogTitle": "Vivez comme un nomade du Sahara au Maroc",
     "ogDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
     "ogImage": {
-      "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
       "alt": "image principale du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     "twitterTitle": "Vivez comme un nomade du Sahara au Maroc",
     "twitterDescription": "Au rythme de la marche en méharée (avec dromadaires), vous découvrirez le Sahara sous un angle différent des voyages classiques, souvent trop motorisés. Apprécier le désert, c’est aussi prendre le temps la sérénité qui s’en dégage.",
     "twitterImage": {
-      "src": "/images/voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
+      "src": "/images/1.voyages/immersion-nomade-sahara/FoAChDQkiV0VboB2jyRw.jpg",
       "alt": "image principale du voyage Vivez comme un nomade du Sahara au Maroc"
     },
     "twitterCard": "summary_large_image"

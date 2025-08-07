@@ -112,7 +112,7 @@
       "title": "BIENVENUE A BORD ",
       "badgeText": "JOUR 1",
       "description": "À votre arrivée en Égypte, un transfert en minibus vous conduira à la marina, où vous embarquerez à bord d’un bateau de 35 mètres, votre cocon flottant pour cette aventure. Une fois installé dans votre cabine et après une présentation du groupe, nous vous proposerons un atelier palmes, masque et tuba. Ce moment pratique et convivial vous permettra de vous familiariser avec votre équipement et de perfectionner une nage fluide et silencieuse, idéale pour approcher les dauphins en toute discrétion. Une première immersion qui donne le ton à cette expérience unique.",
-      "photo": "/images/voyages/voyage-dauphins-egypte/VbJMFmLYRs6fkaUBjeRJ.jpg",
+      "photo": "/images/1.voyages/voyage-dauphins-egypte/VbJMFmLYRs6fkaUBjeRJ.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -121,7 +121,7 @@
       "title": "NAGE AVEC LES DAUPHINS",
       "badgeText": "JOURS 2 A 7 : LE MATIN",
       "description": "Vivez une expérience inoubliable en nageant avec des dauphins sauvages dans leur habitat naturel, au cœur du lagon. Dans ces eaux cristallines, vous aurez l’opportunité de nager avec des groupes de dauphins (Stenella longirostris et parfois Tursiops aduncus), célèbres pour leurs sauts en vrille et leur curiosité envers l’humain. Ces rencontres magiques, qui ont lieu tôt le matin, se déroulent dans le respect total des dauphins, libres de choisir la durée de l’interaction. Vous participerez également à la collecte de vidéos et à des relevés scientifiques sur le tourisme et les dauphins, avec une contribution d’environ 45 minutes. Une immersion unique où émerveillement et sensibilisation se conjuguent.",
-      "photo": "/images/voyages/voyage-dauphins-egypte/0EPSuUOtQIe8GDwmFDyt.jpg",
+      "photo": "/images/1.voyages/voyage-dauphins-egypte/0EPSuUOtQIe8GDwmFDyt.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -130,7 +130,7 @@
       "title": "EXPLORATIONS PALMEES ",
       "badgeText": "JOURS 2 A 7 : LE DEBUT D'APRES-MIDI",
       "description": "L’après-midi, les dauphins seront à nouveau au cœur des priorités, si leur présence et leur disposition le permettent. \r\nEmbarquez en zodiac pour explorer les merveilles du lagon en palmes, masque et tuba, ou optez pour une plongée sous-marine (en option). Chaque site offre un spectacle unique : les récifs intérieurs dévoilent des coraux colorés abritant murènes, raies pastenagues, poissons-clowns et autres joyaux marins, tandis que les canyons de corail éclatants mènent à un site mystérieux parsemé d’anciennes amphores. Plus loin, les pitons et patates de corail, entourés de poissons multicolores, émerveillent par leur splendeur. Près de la barrière de corail, vous croiserez peut-être des tortues imbriquées, et, avec un peu de chance, des raies mantas ou pastenagues. Pour conclure cette exploration, plongez dans des eaux peu profondes aux nuances turquoise. Chaque instant est une invitation à l’émerveillement et à la découverte d’un écosystème fascinant.",
-      "photo": "/images/voyages/voyage-dauphins-egypte/kG5ZnLItSNKxJuzIMFIR.jpg",
+      "photo": "/images/1.voyages/voyage-dauphins-egypte/kG5ZnLItSNKxJuzIMFIR.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -139,7 +139,7 @@
       "title": "LES MYSTÈRES DES DAUPHINS DÉCRYPTÉS",
       "badgeText": "JOURS 2 A 7 : LA FIN D'APRES-MIDI",
       "description": "Chaque fin d’après-midi, assistez à des échanges et formations captivants d’environ 45 minutes dédiées à l’écologie et à l’éthologie des dauphins. Vous découvrirez leur mode de vie, leurs structures sociales, leurs comportements et les subtilités de leur communication. Ces présentations incluront également des techniques d’approche respectueuses et des méthodes d’interaction adaptées, vous offrant les clés pour observer ces animaux emblématiques tout en préservant leur bien-être. Une occasion unique d’enrichir vos connaissances et de donner une nouvelle profondeur à votre expérience en mer.\r\nSauf le jour 7 où l'après-midi sera consacré à la navigation retour près des côtes.",
-      "photo": "/images/voyages/voyage-dauphins-egypte/rvGIg6jwQzugA3vfCsaS.jpg",
+      "photo": "/images/1.voyages/voyage-dauphins-egypte/rvGIg6jwQzugA3vfCsaS.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -148,7 +148,7 @@
       "title": "RETOUR À BON PORT : UNE MER ROUGE DE SOUVENIRS ",
       "badgeText": "JOUR 8 ",
       "description": "Le dernier jour marque la fin de cette incroyable aventure au cœur de la Mer Rouge. Si le temps le permet, une ultime nage avec les dauphins sera proposée, un dernier moment magique pour graver ces instants dans votre mémoire. Ensuite, le bateau entamera sa navigation de retour vers le port, où un transfert vous conduira à l’aéroport. Vous repartirez le cœur rempli d’émerveillement, avec des souvenirs inoubliables de cette immersion unique aux côtés des dauphins.",
-      "photo": "/images/voyages/voyage-dauphins-egypte/mdeqeiT6yzo4XQgkReQM.jpg",
+      "photo": "/images/1.voyages/voyage-dauphins-egypte/mdeqeiT6yzo4XQgkReQM.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -201,7 +201,7 @@
       "name": "Valérie Valton",
       "description": "",
       "role": "Ethologue spécialiste des interactions avec les cétacés",
-      "image": "/images/voyages/voyage-dauphins-egypte/YcsFvmSBTcGZtu2SaK5S.jpg"
+      "image": "/images/1.voyages/voyage-dauphins-egypte/YcsFvmSBTcGZtu2SaK5S.jpg"
     }
   ],
   "housingBlock": [
@@ -211,30 +211,30 @@
       "housingMood": "Embarquez à bord d’un bateau privatisé de 35 mètres, alliant confort et respect de l’environnement. Ancré dans des lagons paisibles, il devient un cocon flottant, idéal pour se détendre et profiter d’une atmosphère sereine. Les espaces, à la fois conviviaux et intimistes, permettent de partager des moments chaleureux ou de se retirer pour savourer le calme et les panoramas exceptionnels.\r\n\r\nLes cabines, simples mais confortables, disposent chacune d’une salle de bain privée. Celles en cale sont climatisées avec hublots, tandis que les cabines sur le pont supérieur offrent une fenêtre et un ventilateur. Chaque détail est pensé pour vous offrir une expérience agréable, tout en restant connecté à la nature environnante.\r\n\r\nSans wifi et avec une connexion cellulaire limitée, ce séjour est une invitation à une véritable déconnexion. Laissez-vous porter par la quiétude des lagons, la sérénité du bateau et l’immensité de la mer pour vous recentrer sur l’essentiel.\r\n\r\n(Photo non contractuelle, le bateau pourra être celui-ci ou un autre assez similaire selon les dates.)",
       "image": [
         {
-          "src": "/images/voyages/voyage-dauphins-egypte/cHS8MdKwQdmQUT5c2XTA.jpg",
+          "src": "/images/1.voyages/voyage-dauphins-egypte/cHS8MdKwQdmQUT5c2XTA.jpg",
           "alt": "image de l'hébergement Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
         },
         {
-          "src": "/images/voyages/voyage-dauphins-egypte/RnWEMbB0RWaoVzOCXcvJ.jpg",
+          "src": "/images/1.voyages/voyage-dauphins-egypte/RnWEMbB0RWaoVzOCXcvJ.jpg",
           "alt": "image de l'hébergement Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
         },
         {
-          "src": "/images/voyages/voyage-dauphins-egypte/xZLR8rnWS7Www6kJtqGu.jpg",
+          "src": "/images/1.voyages/voyage-dauphins-egypte/xZLR8rnWS7Www6kJtqGu.jpg",
           "alt": "image de l'hébergement Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
         },
         {
-          "src": "/images/voyages/voyage-dauphins-egypte/poowsyOvT06WaCiUPxlr.jpg",
+          "src": "/images/1.voyages/voyage-dauphins-egypte/poowsyOvT06WaCiUPxlr.jpg",
           "alt": "image de l'hébergement Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
+    "src": "/images/1.voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
     "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
   },
   "imageSecondary": {
-    "src": "/images/voyages/voyage-dauphins-egypte/R3IigocTQvyVLNZgKknl.jpg",
+    "src": "/images/1.voyages/voyage-dauphins-egypte/R3IigocTQvyVLNZgKknl.jpg",
     "alt": "image secondaire du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
   },
   "photosList": [],
@@ -309,13 +309,13 @@
     "ogTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
     "ogDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
     "ogImage": {
-      "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
+      "src": "/images/1.voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
       "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
     },
     "twitterTitle": "Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue",
     "twitterDescription": "Plongez en Égypte dans les eaux cristallines de la mer Rouge : nagez avec des dauphins sauvages dans leur habitat naturel, dans une approche respectueuse.",
     "twitterImage": {
-      "src": "/images/voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
+      "src": "/images/1.voyages/voyage-dauphins-egypte/t0YGWQMHSeS5gHCo4Ncs.jpg",
       "alt": "image principale du voyage Nagez avec les dauphins de la mer Rouge en Egypte aux côtés d'une éthologue"
     },
     "twitterCard": "summary_large_image"

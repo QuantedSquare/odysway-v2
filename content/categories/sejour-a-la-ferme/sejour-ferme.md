@@ -50,7 +50,7 @@ published: true
 publishedAt: 2020-11-24 09:24:00+00:00
 tags: ferme
 categories: Culture et decouverte
-displayedImg: /images/voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg
+displayedImg: /images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"

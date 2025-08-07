@@ -118,7 +118,7 @@
       "title": "ARRIVEE EN ROUMANIE",
       "badgeText": "JOUR 1",
       "description": "Arrivée à Bucarest avant 14h. Vous récupérez votre voiture de location et prenez la route des carpates. Passage par Sinaia et Brasov, possibilité de visite du  château de Bran, dit de Dracula ! Vous êtes attendus à partir de 19h chez Daniela, qui tient un agrotourisme et qui sera votre hôte à Moeciu. Dîner à base de produits locaux.",
-      "photo": "/images/voyages/voyage-ours-roumanie/UwlHjWgrTGeo2OyWOTFY.jpg",
+      "photo": "/images/1.voyages/voyage-ours-roumanie/UwlHjWgrTGeo2OyWOTFY.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -127,7 +127,7 @@
       "title": "EN PLEINE FORÊT",
       "badgeText": "JOUR 2",
       "description": "Petit-déjeuner chez Daniela puis route pour aller rencontrer Bogdan, votre guide naturaliste. Bogdan vous emmènera randonner dans les forêts des Carpates à la découverte des traces des grands carnivores, dont celles de l'ours. Pique-nique en forêt. En fin de journée, observation depuis un affût, pour apercevoir des ours si vous avez de la chance !",
-      "photo": "/images/voyages/voyage-ours-roumanie/FJ29e8DfSMe8clV5v3ok.jpg",
+      "photo": "/images/1.voyages/voyage-ours-roumanie/FJ29e8DfSMe8clV5v3ok.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -136,7 +136,7 @@
       "title": "NUIT AU REFUGE",
       "badgeText": "JOURS 3 ET 4",
       "description": "Route ce matin vers Podu Dâmboviței où vous serez attendus par votre guide. Vous laissez votre voiture dans le village et partez pour une immersion de deux jours à l'observatoire en pleine nature. Vous passerez la nuit sur le refuge accompagné de votre guide, qui vous réveillera à l’aube pour tenter d'apercevoir l'ours. Fin de l'immersion vers 14h, possibilités de visites sur la route retour pour revenir chez Daniela.",
-      "photo": "/images/voyages/voyage-ours-roumanie/zmvFSwtuQWbTKSCk7LOb.jpg",
+      "photo": "/images/1.voyages/voyage-ours-roumanie/zmvFSwtuQWbTKSCk7LOb.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -145,7 +145,7 @@
       "title": "JOURNÉE LIBRE ET RETOUR",
       "badgeText": "JOUR 5",
       "description": "Petit-déjeuner chez Daniela puis route retour en liberté vers Bucarest. Profitez de nombreuses possibilités d'activités ou visites, comme celle de découvrir le château de Peleș dans la ville de Sinaia, vous balader à Bușteni ou randonner dans les gorges de Moeiciu. A Bucarest, hébergement dépendant de votre horaire de vol le lendemain, soit en centre-ville soit près de l’aéroport.",
-      "photo": "/images/voyages/voyage-ours-roumanie/25toXSe3THyOXhT4s0xr.jpg",
+      "photo": "/images/1.voyages/voyage-ours-roumanie/25toXSe3THyOXhT4s0xr.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -154,7 +154,7 @@
       "title": "BUCAREST",
       "badgeText": "JOUR 6",
       "description": "Petit-déjeuner à votre hôtel. Dernière journée de votre séjour en Roumanie, vous restituez la voiture à l'aéroport à Bucarest après avoir visité le centre-ville de la capitale. Déjeuner libre selon l’horaire de votre vol retour",
-      "photo": "/images/voyages/voyage-ours-roumanie/px4rhA8RHmAp6liKj7zn.jpg",
+      "photo": "/images/1.voyages/voyage-ours-roumanie/px4rhA8RHmAp6liKj7zn.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -217,63 +217,63 @@
       "housingMood": "Tous vos hébergements sont inclus dans le séjour. Vous passerez trois nuits en chambre d’hôtes à Moeciu, en immersion en agrotourisme, où votre hôte Daniela vous accueillera chaleureusement. Une nuit unique vous attend en refuge, en pleine forêt, aux côtés d’un guide qui vous fera découvrir la magie des Carpates au crépuscule. Pour clôturer votre voyage en douceur, vous séjournerez une nuit dans un hôtel confortable à Bucarest.\r\n\r\nSi vous souhaitez prolonger votre aventure, une extension du séjour est possible sur demande lors de votre devis !",
       "image": [
         {
-          "src": "/images/voyages/voyage-ours-roumanie/3srRd6QpR7K4YwttDiKN.jpg",
+          "src": "/images/1.voyages/voyage-ours-roumanie/3srRd6QpR7K4YwttDiKN.jpg",
           "alt": "image de l'hébergement Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
         },
         {
-          "src": "/images/voyages/voyage-ours-roumanie/2EDJK19rR0TpreQujjGp.jpg",
+          "src": "/images/1.voyages/voyage-ours-roumanie/2EDJK19rR0TpreQujjGp.jpg",
           "alt": "image de l'hébergement Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
         },
         {
-          "src": "/images/voyages/voyage-ours-roumanie/GfsyfQs1RmaNApNNGSHG.jpg",
+          "src": "/images/1.voyages/voyage-ours-roumanie/GfsyfQs1RmaNApNNGSHG.jpg",
           "alt": "image de l'hébergement Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg",
+    "src": "/images/1.voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg",
     "alt": "image principale du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
   },
   "imageSecondary": {
-    "src": "/images/voyages/voyage-ours-roumanie/E4QMCgH4QeG7AXF2GFxC.jpg",
+    "src": "/images/1.voyages/voyage-ours-roumanie/E4QMCgH4QeG7AXF2GFxC.jpg",
     "alt": "image secondaire du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
   },
   "photosList": [
     {
-      "src": "/images/voyages/voyage-ours-roumanie/tG3MO9WwQAeBLJKtRpsd.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/tG3MO9WwQAeBLJKtRpsd.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/oRN0fAQkSMmsswrzFqMQ.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/oRN0fAQkSMmsswrzFqMQ.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/i9I0OWfSQjKQou4GzMRG.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/i9I0OWfSQjKQou4GzMRG.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/1Q8alzmLQkK7H94YbcFS.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/1Q8alzmLQkK7H94YbcFS.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/KhmsYoMyT3eg6ZXCEnWI.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/KhmsYoMyT3eg6ZXCEnWI.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/DG7zZ47hSm6IwThQmNVk.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/DG7zZ47hSm6IwThQmNVk.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/uXOMbftpSvGS9rzETYSW.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/uXOMbftpSvGS9rzETYSW.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/5jPxegQbWJGPtw7Cc5eQ.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/5jPxegQbWJGPtw7Cc5eQ.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     {
-      "src": "/images/voyages/voyage-ours-roumanie/4KkMRzMqTkarK2rwhpef.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/4KkMRzMqTkarK2rwhpef.jpg",
       "alt": "image de la liste de photos du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     }
   ],
@@ -328,13 +328,13 @@
     "ogTitle": "Expédition sauvage en Roumanie : sur les traces des ours des Carpates",
     "ogDescription": "Vivez une aventure extraordinaire au cœur de la Transylvanie. Partez à la rencontre des ours sauvages dans leur habitat naturel. Randonnées en forêt, observation depuis un affût et rencontre avec les locaux.",
     "ogImage": {
-      "src": "/images/voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg",
       "alt": "image principale du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     "twitterTitle": "Expédition sauvage en Roumanie : sur les traces des ours des Carpates",
     "twitterDescription": "Vivez une aventure extraordinaire au cœur de la Transylvanie. Partez à la rencontre des ours sauvages dans leur habitat naturel. Randonnées en forêt, observation depuis un affût et rencontre avec les locaux.",
     "twitterImage": {
-      "src": "/images/voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg",
+      "src": "/images/1.voyages/voyage-ours-roumanie/06i8l0DTqCaNrxPY4RmQ.jpg",
       "alt": "image principale du voyage Expédition sauvage en Roumanie : sur les traces des ours des Carpates"
     },
     "twitterCard": "summary_large_image"

@@ -20,7 +20,7 @@ published: true
 publishedAt: 2020-11-26 10:44:00+00:00
 tags: aventure
 categories: Culture et decouverte
-displayedImg: /images/voyages/patagonie-chili-argentine/c3Fke2AeSBScy1u0Jr6s.jpg
+displayedImg: /images/1.voyages/patagonie-chili-argentine/c3Fke2AeSBScy1u0Jr6s.jpg
 blogType: Actu
 badgeColor: secondary
 readingTime: "3"

@@ -1,6 +1,6 @@
 ::simple-hero-section
 ---
-displayed-img: /images/voyages/trek-chez-lhabitant-nepal/HMuwdPZNS6YDlUwcKsZJ.jpg
+displayed-img: /images/1.voyages/trek-chez-lhabitant-nepal/HMuwdPZNS6YDlUwcKsZJ.jpg
 title-color: white
 ---
 #title

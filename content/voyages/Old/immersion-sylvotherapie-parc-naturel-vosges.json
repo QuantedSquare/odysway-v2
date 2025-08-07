@@ -111,7 +111,7 @@
       "title": "ARRIVEE CHEZ SANDRINE",
       "badgeText": "JOUR 1",
       "description": "Arrivée dans le Parc naturel régional des Vosges du Nord. Vous êtes accueillis à partir de 16h au gîte les Cigognes par Sandrine. N’hésitez pas à lui poser des questions sur le territoire, Sandrine se fera une joie de pouvoir y répondre. Le gîte est une maison à colombages entièrement rénovée située au calme à l’écart du village de Neuwiller-lès-Saverne. Dîner libre.",
-      "photo": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg",
+      "photo": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/opkYJFbJTMy6abyVmTFK.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -120,7 +120,7 @@
       "title": "IMMERSION EN FORET",
       "badgeText": "JOUR 2",
       "description": "Réveil puis petit-déjeuner au gîte les Cigognes. Vous êtes ensuite attendus par Manuela, qui sera votre guide en forêt. Vous vivrez votre premier \"bain de forêt\" au coeur de la forêt des Vosges du Nord. Une véritable immersion sensorielle. L'après-midi est libre, nous vous suggérerons des possibilités de visites et ballades. Dîner libre. ",
-      "photo": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/Vu5dL7KaT2KhbK89jhtK.jpg",
+      "photo": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/Vu5dL7KaT2KhbK89jhtK.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -129,7 +129,7 @@
       "title": "CHUUUT, LA FORET SE REVELE",
       "badgeText": "JOUR 3",
       "description": "Aujourd'hui, Manuela vous propose une immersion différente : une marche silencieuse en forêt ! Ecoutez les sons de la nature, des oiseaux, du bruissement des feuilles, de vos pas. Tous vos sens seront en éveil, même le goût puisque vous déjeunerez aussi en silence ! Une expérience unique à vivre dans un cadre enchanteur. Retour au point de départ vers 14h.\n",
-      "photo": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/7J0hRtadTaOsEVwEOmD7.jpg",
+      "photo": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/7J0hRtadTaOsEVwEOmD7.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -162,13 +162,13 @@
       "name": "Sandrine",
       "description": "Sandrine saura vous conseiller pour découvrir les pépites de son beau territoire : patrimoine bati (musées, châteaux, maisons troglodytes..), patrimoine naturel ou encore patrimoine humain.",
       "role": "Hôte du séjour",
-      "image": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/Tdiq7lKKQeteqlD8fARe.jpg"
+      "image": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/Tdiq7lKKQeteqlD8fARe.jpg"
     },
     {
       "name": "Manuela",
       "description": "Manuela Peschmann, écothérapeute, biologiste et guide en thérapie forestière depuis 10 ans, propose, au travers d'immersions dans la forêt des Vosges du Nord type \"bains de forêt\" et \"nuits en forêt\", de renouer un lien ancestral avec la nature fondement de la santé et de l'équilibre de l'homme sur la planète.",
       "role": "Ecothérapeute et sophrologue",
-      "image": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/MO2OmtjjQTqnBjytg9zn.jpg"
+      "image": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/MO2OmtjjQTqnBjytg9zn.jpg"
     }
   ],
   "housingBlock": [
@@ -180,11 +180,11 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+    "src": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
     "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
   },
   "imageSecondary": {
-    "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/EjxhDwGVTq6gRfWfvDCZ.jpg",
+    "src": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/EjxhDwGVTq6gRfWfvDCZ.jpg",
     "alt": "image secondaire du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
   },
   "photosList": [],
@@ -231,13 +231,13 @@
     "ogTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",
     "ogDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
     "ogImage": {
-      "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+      "src": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
       "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
     },
     "twitterTitle": "Eveillez vos sens dans les forêts des Vosges du Nord",
     "twitterDescription": "Odysway vous propose un séjour unique dans le Parc naturel des Vosges du nord. Vivez une immersion dans les forêts somptueuses du territoire, accompagné par Manuela, votre guide sophrologue qui vous fera expérimenter des bains de forêts qui éveilleront vos sens.",
     "twitterImage": {
-      "src": "/images/voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
+      "src": "/images/1.voyages/immersion-sylvotherapie-parc-naturel-vosges/x01hdUHCS7G5BKtubMLo.jpg",
       "alt": "image principale du voyage Eveillez vos sens dans les forêts des Vosges du Nord"
     },
     "twitterCard": "summary_large_image"
