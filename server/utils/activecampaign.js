@@ -181,8 +181,21 @@ const upsertContact = async (contactData) => {
 }
 
 const deleteDeal = async (dealId) => {
-  const response = await apiRequest(`/deals/${dealId}`, 'delete')
-  return response.deal.id
+  try {
+    await apiRequest(`/deals/${dealId}`, 'delete')
+    // When deleting a deal, the API might not return a deal object
+    // Just return the dealId to indicate success
+    return dealId
+  }
+  catch (error) {
+    console.error('Error deleting deal from ActiveCampaign:', error)
+    // If the deal doesn't exist or is already deleted, consider it a success
+    if (error.response && error.response.status === 404) {
+      console.log('Deal already deleted or not found, considering as success')
+      return dealId
+    }
+    throw error
+  }
 }
 
 const upsertContactIntoSupabase = async (contactId) => {
