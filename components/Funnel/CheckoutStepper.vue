@@ -409,10 +409,12 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
     }
 
     const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
+    console.log('indivRoomPrice', voyage?.indivRoomPrice, dynamicDealValues.indivRoom)
+    const indivRoomPrice = dynamicDealValues.indivRoom ? voyage?.indivRoomPrice : 0
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
-        pricePerTraveler: pricePerTravelerWithoutInsurance / 100,
+        pricePerTraveler: (pricePerTravelerWithoutInsurance + indivRoomPrice) / 100,
         countries: voyage.iso,
         zoneChapka: +voyage.zoneChapka || 0,
         departureDate: voyage.departureDate,

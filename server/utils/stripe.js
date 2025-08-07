@@ -27,6 +27,7 @@ const createCheckoutSession = async (order) => {
   let coupon = null
 
   function calculatDepositeValue(data) {
+    console.log('data for deposit', data)
     // WE take the total value of the deal, we substract the flight price and the insurance price
     const baseToCalculateDepositValue = +data.value - ((data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included

@@ -165,7 +165,7 @@ const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
+// console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
 const isBooking = ref(route.query.type === 'booking')

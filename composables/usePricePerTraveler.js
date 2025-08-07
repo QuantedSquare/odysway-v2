@@ -1,6 +1,5 @@
 export function usePricePerTraveler(dynamicDealValues, voyage) {
   const calculatePricePerPerson = (data, voyage) => {
-
     const nbTravelers = data.nbAdults + data.nbChildren
     const { startingPrice, flightPrice = 0, extensionPrice = 0, promoChildren = 0, nbChildren = 0, promoTeen = 0, nbTeen = 0, earlybirdAvailable = 'Non', promoEarlybird = 0, lastMinuteAvailable = 'Non', promoLastMinute = 0, promoValue = 0 } = voyage
     let price = (startingPrice) * nbTravelers
