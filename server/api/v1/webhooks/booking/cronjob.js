@@ -71,7 +71,7 @@ export default defineEventHandler(async (event) => {
                     type: 'section',
                     text: {
                       type: 'mrkdwn',
-                      text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${row.deal_id}| 'OPTION EXPIRÉE-${deal?.title || customFields?.slug}-${contact?.firstname}${contact?.lastName}-pax ${customFields?.nbTravellers}'>`,
+                      text: `:white_check_mark: <https://odysway90522.activehosted.com/app/deals/${row.deal_id}| 'OPTION EXPIRÉE-${deal?.title || customFields?.slug}-${contact?.firstName}${contact?.lastName}-pax ${customFields?.nbTravelers}'>`,
                     },
                   },
                 ],
