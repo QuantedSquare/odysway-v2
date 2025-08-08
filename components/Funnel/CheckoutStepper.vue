@@ -430,10 +430,10 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
   }
 }
 
-// Specific watcher for nbAdults and nbChildren changes
-watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren], async ([newNbAdults, newNbChildren], [oldNbAdults, oldNbChildren]) => {
+// Specific watcher for nbAdults, nbChildren, and indivRoom changes
+watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren, dynamicDealValues.value?.indivRoom], async ([newNbAdults, newNbChildren, newIndivRoom], [oldNbAdults, oldNbChildren, oldIndivRoom]) => {
   if (voyage.value && dynamicDealValues.value
-    && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren)) {
+    && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren || newIndivRoom !== oldIndivRoom)) {
     await fetchInsuranceQuote(voyage.value, dynamicDealValues.value)
   }
 }, { deep: true })
