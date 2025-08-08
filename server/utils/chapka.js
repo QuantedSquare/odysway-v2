@@ -124,7 +124,7 @@ const notify = async (paymentSession, insuranceItem, dealCustomFields, client) =
     produit: paymentSession.countries.includes('NP') || paymentSession.countries.includes('PE') ? 'CAP-EXPLORACTION' : 'CAP-EXPLORER',
     reference: paymentSession.dealId.toString(),
     formule: insuranceType,
-    prime: (insuranceItem.amount_total / 100).toFixed(2),
+    prime: Math.round(insuranceItem.amount_total / 100).toString(),
     email: client.email,
     provenance: 'FR',
     destination: paymentSession.countries,
