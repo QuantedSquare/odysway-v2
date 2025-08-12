@@ -74,7 +74,7 @@ Le moment a duré à peine quelques secondes, mais a déclenché quelque chose d
 
 :br
 
-Cette scène n’a rien de spectaculaire. Mais elle a agi comme un déclencheur. Elle a fait naître une question : comment voyager sans tout prendre ? Comment créer une relation plus équilibrée entre celui qui part et celui qui accueille ? Et surtout, comment sortir de cette logique du “voyage-performance”, où l’on enchaîne les étapes, les paysages et les rencontres, sans vraiment être là ?
+Ce moment a agi comme un déclencheur. Il a fait naître une question : comment voyager sans tout prendre ? Comment créer une relation plus équilibrée entre celui qui part et celui qui accueille ? Et surtout, comment sortir de cette logique du “voyage-performance”, où l’on enchaîne les étapes, les paysages et les rencontres, sans vraiment être là ?
 
 :br
 
@@ -137,12 +137,12 @@ Nous travaillons de manière artisanale, avec sérieux. Nous allons sur le terra
 
 ::section-container
 #content
-::image-container
----
-imageSrc: /images/team/team-photo.webp
-alt: "La photo d'équipe Odysway"
----
-::
+  :::image-container
+  ---
+  alt: La photo d'équipe Odysway
+  imageSrc: /images/team/team-photo.webp
+  ---
+  :::
 ::
 
 ::title-container-h2
