@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     { path: '~/components/content', pathPrefix: false },
   ],
   devtools: {
-    enabled: true,
+    enabled: false, // to avoid build problem "Pre-transform error: spawn EBADF"
 
     timeline: {
       enabled: true,

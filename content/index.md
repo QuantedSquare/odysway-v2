@@ -43,10 +43,7 @@ head:
   htmlAttrs:
     lang: fr
   script: []
-  link:
-     - rel: icon
-       type: image/x-icon
-       href: /favicon.ico
+
 title: "Odysway : Voyages en immersion humaine et responsable"
 description: Odysway propose des voyages immersifs, responsables et authentiques
   en France et à l’étranger. Rencontrez, explorez, et découvrez le monde
