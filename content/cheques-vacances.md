@@ -7,6 +7,7 @@ head:
 sitemap:
   videos: []
   images: []
+  lastmod: 2025-08-13
 title: Réservez votre voyage avec vos Chèques-Vacances
 ---
 

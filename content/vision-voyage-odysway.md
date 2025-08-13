@@ -6,7 +6,7 @@ ogImage:
     description: Notre vision du voyage Odysway
     image: /images/concept/Vélo.jpg
 sitemap:
-  lastmod: 2025-01-01
+  lastmod: 2025-08-13
   videos: []
   images: []
 robots: index, follow

@@ -38,6 +38,7 @@ head:
 sitemap:
   videos: []
   images: []
+  lastmod: 2025-08-13
 ---
 
 ::blog-hero-section
