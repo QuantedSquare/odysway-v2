@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: '%s • Odysway',
+      titleTemplate: '%s - Odysway',
       link: [
         // Google Analytics
         // { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
