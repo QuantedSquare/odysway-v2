@@ -10,7 +10,7 @@ sitemap:
   videos: []
   images: []
   loc: ""
-robots: index, nofollow
+robots: index, follow
 seo:
   title: Voyages en immersion en petits groupes et privatifs
   description: "Odysway : première agence de voyage en immersion en France et à

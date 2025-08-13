@@ -9,7 +9,7 @@ sitemap:
   lastmod: 2025-01-01
   videos: []
   images: []
-robots: index, nofollow
+robots: index, follow
 seo:
   title: Vision d'Odysway
   description: "Découvrez la vision de l'agence de voyage Odysway : un tourisme
