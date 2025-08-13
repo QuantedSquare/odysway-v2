@@ -6,10 +6,9 @@ ogImage:
     description: La rencontre au cœur du voyage
     image: /images/AdobeStock_124472096.jpeg
 sitemap:
-  lastmod: 2025-01-01
+  lastmod: 2025-08-12
   videos: []
   images: []
-  loc: ""
 robots: index, follow
 seo:
   title: Voyages en immersion en petits groupes et privatifs
