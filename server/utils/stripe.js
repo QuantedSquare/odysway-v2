@@ -482,10 +482,12 @@ const handlePaymentSession = async (session, paymentType) => {
     currentStep: totalPaid >= +deal.value
       ? 'Solde réglé'
       : 'Acompte réglé',
-
   }
   if (totalPaid >= +deal.value) {
     Object.assign(dealData, { paiementLink: 'Paiement OK' })
+  }
+  else {
+    Object.assign(dealData, { paiementLink: `https://odysway.com/checkout?type=balance&booked_id=${order.booked_id}` })
   }
 
   console.log('dealData', dealData)
