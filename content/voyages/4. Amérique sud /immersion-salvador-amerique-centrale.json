@@ -8,7 +8,7 @@
   ],
   "groupeAvailable": false,
   "privatisationAvailable": true,
-  "customAvailable": true,
+  "customAvailable": false,
   "experienceType": "Plonger dans la culture",
   "level": "1",
   "categories": [
