@@ -54,23 +54,23 @@
   "comments": 10,
   "miniatureDisplay": "Note moyenne",
   "authorNote": {
-    "text": "Voyage photographique en Écosse",
+    "text": "",
     "author": "",
     "affixeAuthor": ""
   },
   "experiencesBlock": [],
   "slug": "sur-mesure-thailande-laos",
-  "description": "Voyage photographique en Écosse",
+  "description": "",
   "emailDescription": "",
-  "metaDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+  "metaDescription": "",
   "badgeSection": {
     "groupeBadge": {
       "text": "Groupe de **2 à 8 personnes**",
-      "visible": true
+      "visible": false
     },
     "durationBadge": {
       "text": "**7 nuits sur place**",
-      "visible": true
+      "visible": false
     },
     "includeFlightBadge": {
       "text": "**Vol** compris",
@@ -82,7 +82,7 @@
     },
     "periodBadge": {
       "text": "Du 4 au 11 octobre 2025",
-      "visible": true
+      "visible": false
     }
   },
   "programmeBlock": [],
@@ -98,7 +98,7 @@
     "earlyBirdReduction": "",
     "maxTravelers": 8,
     "minTravelersToConfirm": 2,
-    "indivRoom": true,
+    "indivRoom": false,
     "forcedIndivRoom": false,
     "indivRoomPrice": 490,
     "cseReduction": 0,
@@ -118,8 +118,8 @@
     }
   ],
   "image": {
-    "src": "/images/1.voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
-    "alt": "image principale du voyage Séjour photographique en Ecosse"
+    "src": "/images/1.voyages/stage-boxe-thai-nord-thailande/8RUh05mhRDmfFWVpgwue.jpg",
+    "alt": ""
   },
   "imageSecondary": {
     "src": "",
@@ -131,13 +131,13 @@
     "faqList": []
   },
   "seoSection": {
-    "metaTitle": "Séjour photographique en Ecosse",
-    "canonicalUrl": "https://www.odysway.com/voyages/ecosse-photo-automne",
-    "ogTitle": "Séjour photographique en Ecosse",
-    "ogDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
+    "metaTitle": "",
+    "canonicalUrl": "",
+    "ogTitle": "",
+    "ogDescription": "",
     "ogImage": {
-      "src": "/images/1.voyages/ecosse-photo-automne/2yzDH0pzTpa4kyTaMJtR.jpg",
-      "alt": "image principale du voyage Séjour photographique en Ecosse"
+      "src": "",
+      "alt": ""
     },
     "twitterTitle": "Séjour photographique en Ecosse",
     "twitterDescription": "Partez pour un voyage photographique avec Jean-Michel LENOIR, en Ecosse, en petit groupe.",
