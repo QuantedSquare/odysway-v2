@@ -8,9 +8,6 @@ export default defineEventHandler(async (event) => {
   if (!bookedRow.deal_id || bookedRow.error) return { error: 'Impossible de trouver la réservation à supprimer.' }
   const travel_date_id = bookedRow.travel_date_id
 
-  // Delete the row from Supabase and AC
-  await activecampaign.deleteDeal(bookedRow.deal_id)
-
   const deletedBookedId = await booking.deleteBookedDateById(bookedId)
   if (deletedBookedId.error) return { error: deletedBookedId.error }
 
