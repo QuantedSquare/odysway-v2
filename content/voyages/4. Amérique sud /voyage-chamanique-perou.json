@@ -252,7 +252,7 @@
     "lastMinuteReduction": 80,
     "earlyBirdAvailable": false,
     "earlyBirdReduction": "",
-    "maxTravelers": "",
+    "maxTravelers": 6,
     "minTravelersToConfirm": 3,
     "indivRoom": true,
     "forcedIndivRoom": false,
