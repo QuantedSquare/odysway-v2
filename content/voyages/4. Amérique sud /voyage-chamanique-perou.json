@@ -94,7 +94,7 @@
   "metaDescription": "Odysway vous propose un voyage unique à la découverte du chamanisme au Pérou. Explorez la Vallée Sacrée des Incas et vivez en immersion au sein d'une famille quechua.",
   "badgeSection": {
     "groupeBadge": {
-      "text": "Groupe de **2 à 8 personnes**",
+      "text": "Groupe de **3 à 8 personnes**",
       "visible": true
     },
     "durationBadge": {
@@ -253,7 +253,7 @@
     "earlyBirdAvailable": false,
     "earlyBirdReduction": "",
     "maxTravelers": "",
-    "minTravelersToConfirm": 2,
+    "minTravelersToConfirm": 3,
     "indivRoom": true,
     "forcedIndivRoom": false,
     "indivRoomPrice": 160,
