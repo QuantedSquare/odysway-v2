@@ -247,7 +247,11 @@
     "src": "/images/1.voyages/voyage-hiver-activites-suede/52LkaPeBTCCMSZWQJ8US.jpg",
     "alt": "image secondaire du voyage Séjour multi-activités en Laponie suédoise"
   },
-  "photosList": [],
+  "photosList": [
+    {
+      "src": "/images/1.voyages/voyage-hiver-activites-suede/9z3Cm1sTT5eBVep69GBB.jpg"
+    }
+  ],
   "videoLinks": [],
   "faqBlock": {
     "faqList": [
