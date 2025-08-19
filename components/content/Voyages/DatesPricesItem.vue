@@ -47,6 +47,7 @@
           :status="enrichedDate.status"
           :booked-places="enrichedDate.status.status === 'full' ? enrichedDate.max_travelers : enrichedDate.booked_seat"
           :max-travellers="enrichedDate.max_travelers"
+          :min-travellers="enrichedDate.min_travelers"
         />
         <v-row class="d-flex align-start ga-2 mx-1 text-custom  custom-chip-height">
           <v-chip
