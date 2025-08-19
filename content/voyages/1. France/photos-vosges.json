@@ -113,7 +113,7 @@
       "title": "ARRIVEE DANS LES VOSGES",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre dans les Vosges, en train ou en voiture. À partir de 15h, Aurélien vous accueille au gîte, où vous prenez le temps de vous installer.  En fin d’après-midi, il vous présente le territoire que vous allez explorer : ses forêts, ses vallons, ses habitants discrets. Il vous parlera aussi de sa passion pour la photographie animalière, et de ce qui fait, pour lui, la magie d’un affût réussi. En fin de journée, vous partez déjà pour un premier affût, à proximité du gîte. Peut-être aurez-vous la chance d’observer un cerf ou un renard dans la lumière tombante. Retour au gîte pour une première nuit en pleine nature.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/uZj2OfoiSzWKEYZcy6dE.jpg",
+      "photo": "/images/1.voyages/photographie-animaliere-vosges/uZj2OfoiSzWKEYZcy6dE.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -122,7 +122,7 @@
       "title": "SUR LES TRACES DU CERF, ROI DES FORÊTS",
       "badgeText": "JOUR 2",
       "description": "Après un petit-déjeuner au gîte, départ pour un nouvel affût matinal, avec une approche discrète au cœur des forêts. Aurélien vous guidera sur les traces de son animal fétiche : le cerf. À l’automne, vous aurez peut-être la chance d’écouter son brame, un moment saisissant qui résonne dans toute la vallée. En fin de matinée, atelier pistage : apprentissage de la lecture des indices laissés par les animaux — empreintes, restes de nourriture. Retour au gîte pour un déjeuner, suivi d’un temps de repos. L’après-midi, visionnage et échanges autour des photos prises dans la matinée. En deuxième partie de journée, atelier pratique : construction d’un affût pour préparer la sortie du lendemain soir.  En fin de journée, départ pour un nouvel affût en soirée, dans la lumière tombante. Nuit au gîte.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/JuFmcHjSTl6ar1uY8pUc.jpg",
+      "photo": "/images/1.voyages/photographie-animaliere-vosges/JuFmcHjSTl6ar1uY8pUc.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -131,7 +131,7 @@
       "title": "L'AFFÛT EN BORD DE RIVIERE",
       "badgeText": "JOUR 3",
       "description": "Après le petit-déjeuner, départ pour un affût matinal en bord de Moselle. Ce coin sauvage, où la rivière serpente entre les arbres, est propice à l’observation discrète. Vous serez installés en poste fixe, bien camouflés, pour ne pas perturber la faune. Avec un peu de chance, vous pourrez observer le guêpier d’Europe, reconnaissable à son plumage coloré, ou même apercevoir le chat sauvage, maître de la discrétion. Retour au gîte dans l’après-midi, vers 16h, pour un moment de repos. Le soir, dîner partagé avec le groupe, puis départ pour un affût nocturne à proximité du gîte. Troisième nuit au gîte.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/lNaAR1WxRPOmlFSEvaAo.jpg",
+      "photo": "/images/1.voyages/photographie-animaliere-vosges/lNaAR1WxRPOmlFSEvaAo.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -140,7 +140,7 @@
       "title": "L'AFFÛT PRES D'UN ETANG",
       "badgeText": "JOUR 4",
       "description": "Après le petit-déjeuner, départ pour un dernier affût, cette fois au bord d’un étang, au terme d’une approche à travers la plaine. Ce milieu ouvert, riche en vie, est propice à l’observation des oiseaux, et parfois même du sanglier ou du renard venus s’abreuver. Vous prenez le temps de vous poser, d’observer encore une fois le calme et les mouvements de la nature, en silence. Puis vient le moment du dernier pique-nique partagé, un temps simple pour clore le séjour ensemble.  Départ en début d’après-midi, par la route ou en train, des images plein la tête.",
-      "photo": "/images/voyages/photographie-animaliere-vosges/LL7lFkWQS0SjhzJAmox6.jpg",
+      "photo": "/images/1.voyages/photographie-animaliere-vosges/LL7lFkWQS0SjhzJAmox6.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -182,7 +182,7 @@
       "name": "Aurélien",
       "description": "Aurélien est un photographe animalier amoureux des Vosges. Il est passionné de nature depuis son enfance. Ce qu'il aime avant tout c'est de parcourir les forêts et plaines à la recherche de traces et indices. Son animal favori est le cerf qu'il suit tout au long de l'année.\n\n    \nIl saura vous faire découvrir avec passion la faune ainsi que la culture vosgienne.",
       "role": "Photographe animalier",
-      "image": "/images/voyages/photographie-animaliere-vosges/bxYqJ8ZAT2q5CnpclK1B.jpg"
+      "image": "/images/1.voyages/photographie-animaliere-vosges/bxYqJ8ZAT2q5CnpclK1B.jpg"
     }
   ],
   "housingBlock": [
@@ -192,75 +192,75 @@
       "housingMood": "Le logement est une maison individuelle privatisée pour le groupe de participants située au milieu des champs et des forêts, et qui propose une vue dégagée sur le massif des Vosges ! La maison se situe à proximité de nombreux chemins de randonnées (GR7 à 50m). C'est le lieu idéal pour les amoureux de nature et de tranquillité.",
       "image": [
         {
-          "src": "/images/voyages/photographie-animaliere-vosges/rBGIpdb4QFGgwIoGRqI8.jpg",
+          "src": "/images/1.voyages/photographie-animaliere-vosges/rBGIpdb4QFGgwIoGRqI8.jpg",
           "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
         },
         {
-          "src": "/images/voyages/photographie-animaliere-vosges/IaTwSIA1QrWy99eRN5NB.jpg",
+          "src": "/images/1.voyages/photographie-animaliere-vosges/IaTwSIA1QrWy99eRN5NB.jpg",
           "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
         },
         {
-          "src": "/images/voyages/photographie-animaliere-vosges/Ua8CbhSbK3rLL8Q7hGgz.jpg",
+          "src": "/images/1.voyages/photographie-animaliere-vosges/Ua8CbhSbK3rLL8Q7hGgz.jpg",
           "alt": "image de l'hébergement En immersion avec un photographe animalier dans les Vosges"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
+    "src": "/images/1.voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
     "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
   },
   "imageSecondary": {
-    "src": "/images/voyages/photographie-animaliere-vosges/5pABGbe0RUu7q0E3zmMY.jpg",
+    "src": "/images/1.voyages/photographie-animaliere-vosges/5pABGbe0RUu7q0E3zmMY.jpg",
     "alt": "image secondaire du voyage En immersion avec un photographe animalier dans les Vosges"
   },
   "photosList": [
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/Zm4GyjQESBujZV6lcI6W.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/Zm4GyjQESBujZV6lcI6W.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/iwOwTrQYQ0iyLcp40yZb.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/iwOwTrQYQ0iyLcp40yZb.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/8ukmPftTQGAtZc3Ef1yh.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/8ukmPftTQGAtZc3Ef1yh.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/WncSFkBjSNeCpbW48uv1.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/WncSFkBjSNeCpbW48uv1.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/P1YLdxOIR9yCXuV5TR5W.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/P1YLdxOIR9yCXuV5TR5W.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/ezUL4D2DSjmpBJ8N73TD.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/ezUL4D2DSjmpBJ8N73TD.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/jD8zYMQBiXna5zdtqrnw.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/jD8zYMQBiXna5zdtqrnw.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/Gh18aadnROm8NkMg38AV.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/Gh18aadnROm8NkMg38AV.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/r4jO2IlQ5uIEevzn784p.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/r4jO2IlQ5uIEevzn784p.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/s9Y91IdT4KXme8W1XRol.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/s9Y91IdT4KXme8W1XRol.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/ldouQA3bRa6h8zIgXglR.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/ldouQA3bRa6h8zIgXglR.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     {
-      "src": "/images/voyages/photographie-animaliere-vosges/bxYqJ8ZAT2q5CnpclK1B.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/bxYqJ8ZAT2q5CnpclK1B.jpg",
       "alt": "image de la liste de photos du voyage En immersion avec un photographe animalier dans les Vosges"
     }
   ],
@@ -307,13 +307,13 @@
     "ogTitle": "En immersion avec un photographe animalier dans les Vosges",
     "ogDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
     "ogImage": {
-      "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
       "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     "twitterTitle": "En immersion avec un photographe animalier dans les Vosges",
     "twitterDescription": "Partez à la découverte des Vosges accompagnés par un photographe animalier passionné, avec qui vous aurez l'occasion d'observer et photographier cervidés, renards, sangliers, oiseaux et chats sauvages !",
     "twitterImage": {
-      "src": "/images/voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
+      "src": "/images/1.voyages/photographie-animaliere-vosges/81U4JJjqQtm51cIJrYfp.jpg",
       "alt": "image principale du voyage En immersion avec un photographe animalier dans les Vosges"
     },
     "twitterCard": "summary_large_image"

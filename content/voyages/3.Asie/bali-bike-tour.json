@@ -8,7 +8,7 @@
   ],
   "groupeAvailable": true,
   "privatisationAvailable": false,
-  "customAvailable": false,
+  "customAvailable": true,
   "experienceType": "En immersion chez...",
   "level": "1",
   "categories": [],
@@ -115,7 +115,7 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/bali-bike-tour/qiuYbTzZSyGhDE34uzMN.jpg",
+    "src": "/images/1.voyages/bali-bike-tour/qiuYbTzZSyGhDE34uzMN.jpg",
     "alt": "image principale du voyage Bali Bike Tour"
   },
   "imageSecondary": {
@@ -133,13 +133,13 @@
     "ogTitle": "Bali Bike Tour",
     "ogDescription": "",
     "ogImage": {
-      "src": "/images/voyages/bali-bike-tour/qiuYbTzZSyGhDE34uzMN.jpg",
+      "src": "/images/1.voyages/bali-bike-tour/qiuYbTzZSyGhDE34uzMN.jpg",
       "alt": "image principale du voyage Bali Bike Tour"
     },
     "twitterTitle": "Bali Bike Tour",
     "twitterDescription": "",
     "twitterImage": {
-      "src": "/images/voyages/bali-bike-tour/qiuYbTzZSyGhDE34uzMN.jpg",
+      "src": "/images/1.voyages/bali-bike-tour/qiuYbTzZSyGhDE34uzMN.jpg",
       "alt": "image principale du voyage Bali Bike Tour"
     },
     "twitterCard": "summary_large_image"

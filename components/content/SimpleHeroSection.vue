@@ -16,7 +16,7 @@
           class="d-flex flex-column justify-center ga-6 ga-md-8 pl-md-8"
         >
           <h1
-            class="text-center text-md-left text-h4 text-lg-h1 font-weight-bold py-4 py-md-0"
+            class="text-center text-md-left text-h3 text-md-h1 font-weight-bold py-4 py-md-0"
             :class="`text-${titleColor}`"
           >
             <slot name="title" />

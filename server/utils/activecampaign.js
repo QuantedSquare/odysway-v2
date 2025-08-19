@@ -83,6 +83,7 @@ const customFieldsMapDeal = {
   86: 'gotEarlybird',
   95: 'promoLastMinute',
   96: 'gotLastMinute',
+  93: 'linkBms',
 }
 const customFieldsMapContact = {
   1: 'birthdate',

@@ -214,7 +214,7 @@ const handlePaymentSession = async (session) => {
       pricePerTraveler: Math.ceil((totalPaidAlma / order.nbTravelers) - (deal.insuranceCommissionPrice * deal.nbTravelers)),
     }
     console.log('customFieldsForChapka', customFieldsForChapka)
-    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, customFieldsForChapka)
+    const chapkaNotify = chapka.notify(sessionForChapka, inssuranceItem, customFieldsForChapka, contact)
     console.log('===== Chapka notify sent =====', chapkaNotify)
   }
 

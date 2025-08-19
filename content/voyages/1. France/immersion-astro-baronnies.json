@@ -152,7 +152,7 @@
       "name": "Marc",
       "description": "",
       "role": "Fondateur de l'observatoire",
-      "image": "/images/voyages/immersion-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg"
+      "image": "/images/1.voyages/immersion-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg"
     }
   ],
   "housingBlock": [
@@ -162,31 +162,31 @@
       "housingMood": "Vous logerez au gîte Jupiter accolé à la tour Saturne de l'observatoire. Il est constitué d'une cuisine ouverte sur le salon et coin repas, de WC indépendants, et de trois chambres (Callisto : deux lits simples, Europe : deux lits simples, et Ganymède : quatre lits simples).",
       "image": [
         {
-          "src": "/images/voyages/immersion-observatoire-astronomique/uOrmpmM5S6OellRXSS6e.jpg",
+          "src": "/images/1.voyages/immersion-observatoire-astronomique/uOrmpmM5S6OellRXSS6e.jpg",
           "alt": "image de l'hébergement Immersion au cœur d'un observatoire astronomique"
         },
         {
-          "src": "/images/voyages/immersion-observatoire-astronomique/H5fONAJcS8Wid7WY3JbT.jpg",
+          "src": "/images/1.voyages/immersion-observatoire-astronomique/H5fONAJcS8Wid7WY3JbT.jpg",
           "alt": "image de l'hébergement Immersion au cœur d'un observatoire astronomique"
         },
         {
-          "src": "/images/voyages/immersion-observatoire-astronomique/EthVSk7Qm2uW66yqs8gD.jpg",
+          "src": "/images/1.voyages/immersion-observatoire-astronomique/EthVSk7Qm2uW66yqs8gD.jpg",
           "alt": "image de l'hébergement Immersion au cœur d'un observatoire astronomique"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+    "src": "/images/1.voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
     "alt": "image principale du voyage Immersion au cœur d'un observatoire astronomique"
   },
   "imageSecondary": {
-    "src": "/images/voyages/immersion-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
+    "src": "/images/1.voyages/immersion-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
     "alt": "image secondaire du voyage Immersion au cœur d'un observatoire astronomique"
   },
   "photosList": [
     {
-      "src": "/images/voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg"
+      "src": "/images/1.voyages/immersion-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg"
     }
   ],
   "videoLinks": [],
@@ -212,13 +212,13 @@
     "ogTitle": "Immersion au cœur d'un observatoire astronomique",
     "ogDescription": "Vivez une immersion unique au coeur d'une observatoire astronomique dans les Alpes. Devenez astronome amateur aux côtés d'astronomes et d'astrophysicien lors de ce séjour insolite et hors du temps.",
     "ogImage": {
-      "src": "/images/voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+      "src": "/images/1.voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
       "alt": "image principale du voyage Immersion au cœur d'un observatoire astronomique"
     },
     "twitterTitle": "Immersion au cœur d'un observatoire astronomique",
     "twitterDescription": "Vivez une immersion unique au coeur d'une observatoire astronomique dans les Alpes. Devenez astronome amateur aux côtés d'astronomes et d'astrophysicien lors de ce séjour insolite et hors du temps.",
     "twitterImage": {
-      "src": "/images/voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+      "src": "/images/1.voyages/immersion-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
       "alt": "image principale du voyage Immersion au cœur d'un observatoire astronomique"
     },
     "twitterCard": "summary_large_image"

@@ -11,9 +11,9 @@
         block
         class="text-caption text-sm-subtitle-2"
         color="primary"
-        @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
+        @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
       >
-        {{ header.button4.text }}
+        {{ header.button5.text }}
       </v-btn-secondary>
       <v-btn-secondary
         href="tel: +33184807975"
@@ -21,12 +21,19 @@
         variant="tonal"
         class="text-caption text-sm-subtitle-2"
         color="primary"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
+      >
+        {{ header.button4.text }}
+      </v-btn-secondary>
+      <v-btn-secondary
+        color="white"
+        block
+        class="text-caption text-sm-subtitle-2 text-primary"
+        @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
       >
         {{ header.button3.text }}
       </v-btn-secondary>
       <v-btn-secondary
-
         color="white"
         block
         class="text-caption text-sm-subtitle-2 text-primary"

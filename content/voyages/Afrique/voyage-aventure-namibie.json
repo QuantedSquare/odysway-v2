@@ -156,26 +156,26 @@
       "housingMood": "Les hébergements jouent un rôle unique dans cette immersion, créant des moments forts au cœur de la nature namibienne. Au sein du sanctuaire, des tentes robustes, alimentées par l'énergie solaire, vous plongent dans une immersion totale au cœur de la nature. Durant la deuxième semaine, vous logerez dans une maison, offrant des chambres doubles dotées de salles de bains privées, une salle à manger spacieuse, un salon confortable et une terrasse paisible munie d'un barbecue. La piscine, offrant des vues magnifiques sur la réserve, vous permettra de vous rafraîchir en fin de journée. Que ce soit dans la douce intimité des tentes solides ou le confort de la maison, chaque moment passé dans ces logements contribue à enrichir votre séjour, en harmonie avec la nature namibienne.",
       "image": [
         {
-          "src": "/images/voyages/voyage-aventure-namibie/zINNQ6LJR9uU4hOEP9yL.jpg",
+          "src": "/images/1.voyages/voyage-aventure-namibie/zINNQ6LJR9uU4hOEP9yL.jpg",
           "alt": "image de l'hébergement Namibie Sauvage : entre aventure et protection des animaux"
         },
         {
-          "src": "/images/voyages/voyage-aventure-namibie/sdjB1BTCqdYB5k4j82Jw.jpg",
+          "src": "/images/1.voyages/voyage-aventure-namibie/sdjB1BTCqdYB5k4j82Jw.jpg",
           "alt": "image de l'hébergement Namibie Sauvage : entre aventure et protection des animaux"
         },
         {
-          "src": "/images/voyages/voyage-aventure-namibie/cakms0TNTeudMigSJpdR.jpg",
+          "src": "/images/1.voyages/voyage-aventure-namibie/cakms0TNTeudMigSJpdR.jpg",
           "alt": "image de l'hébergement Namibie Sauvage : entre aventure et protection des animaux"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
+    "src": "/images/1.voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
     "alt": "image principale du voyage Namibie Sauvage : entre aventure et protection des animaux"
   },
   "imageSecondary": {
-    "src": "/images/voyages/voyage-aventure-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg",
+    "src": "/images/1.voyages/voyage-aventure-namibie/oHISURvSRm6Y6Jl4oTdQ.jpg",
     "alt": "image secondaire du voyage Namibie Sauvage : entre aventure et protection des animaux"
   },
   "photosList": [],
@@ -189,13 +189,13 @@
     "ogTitle": "Namibie Sauvage : entre aventure et protection des animaux",
     "ogDescription": "Partez pour une expérience unique en Namibie, mêlant aventure, nature et engagement pour la protection des animaux sauvages !",
     "ogImage": {
-      "src": "/images/voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
+      "src": "/images/1.voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
       "alt": "image principale du voyage Namibie Sauvage : entre aventure et protection des animaux"
     },
     "twitterTitle": "Namibie Sauvage : entre aventure et protection des animaux",
     "twitterDescription": "Partez pour une expérience unique en Namibie, mêlant aventure, nature et engagement pour la protection des animaux sauvages !",
     "twitterImage": {
-      "src": "/images/voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
+      "src": "/images/1.voyages/voyage-aventure-namibie/mOBzi9xlS42WnQd5sgmo.jpg",
       "alt": "image principale du voyage Namibie Sauvage : entre aventure et protection des animaux"
     },
     "twitterCard": "summary_large_image"

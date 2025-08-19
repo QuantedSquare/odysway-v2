@@ -32,13 +32,13 @@
               </span>
               <template v-if="review.voyageTitle">
                 <span class="mt-6"> Son voyage : </span>
-                <NuxtLink
+                <SmartLink
                   v-if="review.voyageSlug"
-                  :to="`voyages/${review.voyageSlug}`"
+                  :to="`/voyages/${review.voyageSlug}`"
                   class="text-center text-decoration-none text-primary hover-decoration"
                 >
                   <span class="hover-decoration">{{ review.voyageTitle }}</span>
-                </NuxtLink>
+                </SmartLink>
               </template>
             </v-card-subtitle>
           </v-card-item>

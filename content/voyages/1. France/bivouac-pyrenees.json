@@ -110,7 +110,7 @@
       "title": "MARCHE D'APPROCHE ET PREMIER BIVOUAC",
       "badgeText": "JOUR 1",
       "description": "Le rendez-vous est donné à 9h en vallée d'Aspe, vous êtes attendus par votre accompagnateur à Bedous, avant d'entamer la marche. Dénivelé positif ce matin, avant d'arriver sur les premiers plateaux pour l'heure du déjeuner, où vous pourrez bénéficier d'un panorama exceptionnel sur toute la vallée d'Aspe. Ouvrez les yeux, vous observerez peut-être des Isards et le fameux gypaète barbu ! Poursuite de la marche avant d'arriver à un lieu de bivouac situé à proximité d'un lac d'altitude. Vous montez le campement en installant vos tentes et préparez le repas avec le reste du groupe ! Première soirée dans la vallée d'Aspe et nuit en bivouac sous les étoiles.",
-      "photo": "/images/voyages/bivouac-montagne-pyrenees/mJ9DEMRN6cEI1T0maQm3.jpg",
+      "photo": "/images/1.voyages/bivouac-montagne-pyrenees/mJ9DEMRN6cEI1T0maQm3.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -119,7 +119,7 @@
       "title": "BIVOUAC SUR LES SOMMETS",
       "badgeText": "JOUR 2",
       "description": "Lever à la fraiche et éveil en admirant le lever du soleil sur les monts pyrénéens. Bain, également à la fraiche dans un lac ou gave d'altitude. Préparation du petit-déjeuner avec votre groupe puis départ pour la marche du jour. Vous passerez des cols, plateaux et parties de forêts. Votre guide vous initiera aussi à l'observation de la nature, de la flore aux traces d'animaux, soyez donc attentifs et… Discrets ! Ce soir, deuxième bivouac avec un nouveau panorama ! Préparation du camp et nouvelle nuit sous tente.",
-      "photo": "/images/voyages/bivouac-montagne-pyrenees/BFjLftKoTIW9HPAkpxZV.jpg",
+      "photo": "/images/1.voyages/bivouac-montagne-pyrenees/BFjLftKoTIW9HPAkpxZV.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -128,7 +128,7 @@
       "title": "REDESCENTE VERS LA VALLÉE",
       "badgeText": "JOUR 3",
       "description": "Dernier jour en montagne après avoir bivouaqué deux jours d'affilée ! Après cette parenthèse en pleine nature, vous vous sentez complètement déconnecté. Marche pour redescendre vers la vallée d'Aspe, environ 5h de randonnée. Vous arrivez dans la vallée autour de 15h, derniers moments avec votre guide, qui vous conseillera des endroits pour acheter du fromage de brebis du Béarn, à ramener en souvenir de cette expérience pyrénéenne. Retour en train ou voiture, ou possibilité de poursuivre votre séjour sur place (nuit en gîte).",
-      "photo": "/images/voyages/bivouac-montagne-pyrenees/WhN39AaSkWCTX9srA68M.jpg",
+      "photo": "/images/1.voyages/bivouac-montagne-pyrenees/WhN39AaSkWCTX9srA68M.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -174,7 +174,7 @@
       "name": "Accompagnateur en moyenne montagne",
       "description": "",
       "role": "Paco",
-      "image": "/images/voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg"
+      "image": "/images/1.voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg"
     }
   ],
   "housingBlock": [
@@ -184,35 +184,35 @@
       "housingMood": "Deux nuitées en pleine montagne sous tente deux places (une tente par personne / par couple) dans des zones différentes les deux soirs. Chaque participant portera sa tente, son matelas et duvet.  Option de dormir en refuge non gardé en cas de mauvaise météo.",
       "image": [
         {
-          "src": "/images/voyages/bivouac-montagne-pyrenees/fcK4JOxjTuej9uMFxqnJ.jpg",
+          "src": "/images/1.voyages/bivouac-montagne-pyrenees/fcK4JOxjTuej9uMFxqnJ.jpg",
           "alt": "image de l'hébergement Initiation au bivouac en montagne dans les Pyrénées"
         },
         {
-          "src": "/images/voyages/bivouac-montagne-pyrenees/3Mm5BStbRXWiTTTUswGM.jpg",
+          "src": "/images/1.voyages/bivouac-montagne-pyrenees/3Mm5BStbRXWiTTTUswGM.jpg",
           "alt": "image de l'hébergement Initiation au bivouac en montagne dans les Pyrénées"
         },
         {
-          "src": "/images/voyages/bivouac-montagne-pyrenees/CKtncQeQaEDzKsczowSA.jpg",
+          "src": "/images/1.voyages/bivouac-montagne-pyrenees/CKtncQeQaEDzKsczowSA.jpg",
           "alt": "image de l'hébergement Initiation au bivouac en montagne dans les Pyrénées"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
+    "src": "/images/1.voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
     "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
   },
   "imageSecondary": {
-    "src": "/images/voyages/bivouac-montagne-pyrenees/IuMvK6q7QfqjlvnT7C6L.jpg",
+    "src": "/images/1.voyages/bivouac-montagne-pyrenees/IuMvK6q7QfqjlvnT7C6L.jpg",
     "alt": "image secondaire du voyage Initiation au bivouac en montagne dans les Pyrénées"
   },
   "photosList": [
     {
-      "src": "/images/voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg",
+      "src": "/images/1.voyages/bivouac-montagne-pyrenees/5Wvd4ENSa6776ZcteQlw.jpg",
       "alt": "tente montagne"
     },
     {
-      "src": "/images/voyages/bivouac-montagne-pyrenees/3Mm5BStbRXWiTTTUswGM.jpg"
+      "src": "/images/1.voyages/bivouac-montagne-pyrenees/3Mm5BStbRXWiTTTUswGM.jpg"
     }
   ],
   "videoLinks": [],
@@ -258,13 +258,13 @@
     "ogTitle": "Initiation au bivouac en montagne dans les Pyrénées",
     "ogDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
     "ogImage": {
-      "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
+      "src": "/images/1.voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
       "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
     },
     "twitterTitle": "Initiation au bivouac en montagne dans les Pyrénées",
     "twitterDescription": "Voyagez autrement au cœur des Pyrénées, découvrant le bivouac en montagne, guidé par un accompagnateur en montagne certifié !",
     "twitterImage": {
-      "src": "/images/voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
+      "src": "/images/1.voyages/bivouac-montagne-pyrenees/TDOdwcvYQharNYFpuu2W.jpg",
       "alt": "image principale du voyage Initiation au bivouac en montagne dans les Pyrénées"
     },
     "twitterCard": "summary_large_image"

@@ -131,6 +131,7 @@ head:
 sitemap:
   videos: []
   images: []
+  lastmod: 2025-08-13
 ---
 
 ::faq-container
@@ -140,7 +141,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
 ---
 
 #section-title
-  :::title-container
+  :::title-container-h1
   #title
   Questions fréquentes
   :::
@@ -151,7 +152,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   hide: false
   ---
   #question
-  Qu’est-ce qu’Odysway et en quoi vos voyages sont-ils différents ?
+  Pourquoi choisir Odysway pour voyager autrement ?
   
   #answer
   Odysway est une agence de voyage française qui propose des séjours immersifs, conçus pour celles et ceux qui recherchent autre chose que des vacances classiques. Chaque voyage est élaboré par l’équipe Odysway, en partenariat avec des guides et des agences réceptives locales soigneusement sélectionnés.
@@ -166,7 +167,7 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   hide: false
   ---
   #question
-  Avec qui vais-je voyager ? S’agit-il de séjours en groupe ou en individuel ?
+  Vos séjours sont-ils en petits groupes ou privatifs ?
   
   #answer
   Odysway propose trois formats de voyage, selon les envies et les besoins :
@@ -299,11 +300,28 @@ backgroundImage: /images/FAQ/vallee-aspe-lescun.jpeg
   
   - Carte bancaire (Visa, Mastercard, etc.),
   - Virement bancaire, sur demande,
-  - Paiement en plusieurs fois sans frais (en 2 ou 3 échéances, selon la date de départ).
+  - Paiement en 3 fois sans frais (selon la date)
   - Chèques vacances (ANCV) Classic ou Connect
   
   Pour les **voyages privatifs** ou **sur-mesure**, un lien de paiement privé et sécurisé est transmis après validation du devis.
   
-  Toutes les transactions sont protégées, et un reçu est envoyé automatiquement après chaque règlement. Une **facture détaillée** peut être transmise **sur simple demande**.
+  Toutes les transactions sont protégées, et un reçu est envoyé automatiquement après chaque règlement. Une facture détaillée peut être transmise sur simple demande.
+  :::
+
+  :::question-panel
+  ---
+  hide: false
+  ---
+  #question
+  Puis-je payer mon voyage avec des chèques vacances ?
+  
+  #answer
+  Oui, nous acceptons les chèques-vacances ANCV, au format papier (Classic) et numérique (Connect).
+  
+  Ils peuvent être utilisés pour régler tout ou partie de votre voyage (hors vols internationaux).
+  
+  Pour les chèques papier, l’envoi se fait par courrier sécurisé. Pour les chèques Connect, le paiement s’effectue via l’application ou un lien sécurisé.
+  
+  Mentionnez simplement votre souhait lors de la réservation, et notre équipe vous expliquera la marche à suivre.
   :::
 ::

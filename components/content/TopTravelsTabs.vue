@@ -57,7 +57,6 @@
           <v-col
             v-for="section, index in tops[currentTab].contenuOnglet"
             :key="`${section.title}-${index}`"
-
             md="2"
           >
             <h5 class="custom-title-size font-weight-bold mb-4 pb-md-16 ">
@@ -68,22 +67,12 @@
                 v-for="link, i in section.linksList"
                 :key="`${link.slug}-${i}`"
               >
-                <NuxtLink
-                  v-if="link.slug.includes('http')"
-                  :href="`${link.slug}`"
-                  :external="link.slug.includes('http')"
-                  :target="link.slug.includes('http') ? '_blank' : undefined"
-                  class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
+                <SmartLink
+                  :to="link.slug.includes('http') ? link.slug : `/${link.slug}`"
+                  link-class="line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
                 >
                   {{ link.title }}
-                </NuxtLink>
-                <NuxtLink
-                  v-else
-                  :to="`/${link.slug}`"
-                  class=" line-clamp-2 text-caption text-md-body-2 font-weight-regular pb-2 pb-md-4"
-                >
-                  {{ link.title }}
-                </NuxtLink>
+                </SmartLink>
               </template>
             </div>
           </v-col>

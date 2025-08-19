@@ -55,7 +55,10 @@
             :key="date.departureDate + i"
             cols="12"
           >
-            <DateButton :date="date" />
+            <DateButton
+              v-if="date.status.status !== 'full'"
+              :date="date"
+            />
           </v-col>
 
           <v-col
@@ -110,11 +113,14 @@
             </v-btn>
           </v-col>
         </v-row>
-        <v-row justify-md="center">
+        <v-row
+          v-if="!voyage.groupeAvailable && !voyage.privatisationAvailable"
+          justify-md="center"
+        >
           <v-col
             cols="12"
           >
-            <v-divider v-if="!voyage.groupeAvailable && !voyage.privatisationAvailable" />
+            <v-divider />
           </v-col>
         </v-row>
         <template v-if="displayedDates.length > 0">
@@ -218,7 +224,7 @@ const { mdAndDown } = useDisplay()
 const goTo = useGoTo()
 const { dates, isLoading } = useDates()
 
-const displayedDates = ref([])
+// const displayedDates = ref([])
 
 const { stickyBlock, voyage } = defineProps({
   stickyBlock: {
@@ -231,12 +237,36 @@ const { stickyBlock, voyage } = defineProps({
   },
 })
 
-watch(dates, () => {
+// watch(dates, () => {
+//   if (dates.value.length > 0) {
+//     const sortedByDates = dates.value
+//       .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
+//       .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
+
+//     displayedDates.value = sortedByDates.slice(0, 4).map((date) => {
+//       const in30days = dayjs().add(30, 'day')
+//       const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
+//       return {
+//         departureDate: date.departure_date,
+//         returnDate: date.return_date,
+//         status: getDateStatus(date),
+//         link: `/checkout?date_id=${date.id}&type=${checkoutType}`,
+//         id: date.id,
+//         slug: voyage.slug,
+//       }
+//     })
+//   }
+// }, { immediate: true })
+
+const displayedDates = computed(() => {
   if (dates.value.length > 0) {
-    const sortedByDates = dates.value
+    const filteredDates = dates.value.filter(d => getDateStatus(d).status !== 'full')
+
+    const sortedByDates = filteredDates
       .filter(date => dayjs(date.departure_date).isAfter(dayjs()))
       .sort((a, b) => dayjs(a.departure_date).diff(dayjs(b.departure_date)))
-    displayedDates.value = sortedByDates.slice(0, 3).map((date) => {
+
+    return sortedByDates.slice(0, 4).map((date) => {
       const in30days = dayjs().add(30, 'day')
       const checkoutType = dayjs(date.departure_date).isBefore(in30days) ? 'full' : 'deposit'
       return {
@@ -249,7 +279,8 @@ watch(dates, () => {
       }
     })
   }
-}, { immediate: true })
+  return []
+})
 </script>
 
 <style scoped>

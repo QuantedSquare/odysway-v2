@@ -115,7 +115,7 @@
       "title": "PREMIERS PAS EN SIBÉRIE",
       "badgeText": "JOURS 1&2",
       "description": "Après un vol de 12h, avec une escale à Moscou, vous arrivez à Irkoutsk dans la matinée. Votre guide vient vous chercher directement à l'aéroport et vous emmène à votre hôtel. A 15h, rendez-vous avec le groupe pour le briefing général.",
-      "photo": "/images/voyages/randonnee-baikal-hiver/JsUvlpC5TUWr1yi3TjTT.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/JsUvlpC5TUWr1yi3TjTT.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -124,7 +124,7 @@
       "title": "EN ROUTE POUR LE BAÏKAL",
       "badgeText": "JOUR 3",
       "description": "Départ matinal pour le lac Baïkal et la mythique presqu'île d'Olkhon. Selon la tradition, nous ferons arrêt dans un lieu sacré en hommage aux esprits du lac. L'après midi, vous pourrez visiter la presqu'île et ses lieux chamaniques. ",
-      "photo": "/images/voyages/randonnee-baikal-hiver/k1TJoWhRHKGVMUkao5V1.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/k1TJoWhRHKGVMUkao5V1.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -133,7 +133,7 @@
       "title": "UN PIED SUR LE LAC",
       "badgeText": "JOUR 4",
       "description": "Ce matin, nous prenons le 4x4 pour nous rendre à la pointe nord de l'île, d'où nous aurons une vue imprenable sur le lac gelé. Nous commencerons alors la traversée du Baïkal et marcherons 25km jusqu'au milieu du lac, où nous installerons notre camp de base.",
-      "photo": "/images/voyages/randonnee-baikal-hiver/Zo6M8EBRkydrbsBsUxK8.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/Zo6M8EBRkydrbsBsUxK8.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -142,7 +142,7 @@
       "title": "EN LIBERTÉ SUR LE BAÏKAL",
       "badgeText": "JOUR 5",
       "description": "Aujourd'hui, journée libre au camp de base, sur une glace transparente de 1,5 mètres d'épaisseur. Vous pourrez vous promener sur la banquise, admirer le lever de soleil, vous initier aux patins à glace et même... jouer au hockey !",
-      "photo": "/images/voyages/randonnee-baikal-hiver/tFm1dV6PTUGXIlTR7nFp.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/tFm1dV6PTUGXIlTR7nFp.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -151,7 +151,7 @@
       "title": "IMMERSION SIBÉRIENNE",
       "badgeText": "JOUR 6",
       "description": "Nous reprenons la route vers la côte est du lac. Après 7 heures de marche, vous arriverez au sein de votre maison d'hôtes, chez l'habitant. Il sera grand temps de vous détendre avec un traditionnel baña russe et un repas en compagnie des locaux.",
-      "photo": "/images/voyages/randonnee-baikal-hiver/ItpNNMuQbCZy61OGpxvM.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/ItpNNMuQbCZy61OGpxvM.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -160,7 +160,7 @@
       "title": "A BORD DU TRANSSIBÉRIEN",
       "badgeText": "JOUR 7",
       "description": "Ce matin, nous partons pour une visite d'un impressionnant monastère bouddhiste : le Datsane d’Ivolguinsk. Après la visite, nous monterons à bord du légendaire train Transsibérien où nous aurons la chance de passer la nuit.",
-      "photo": "/images/voyages/randonnee-baikal-hiver/S3PBA4v9TKKryEsTudu5.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/S3PBA4v9TKKryEsTudu5.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -169,7 +169,7 @@
       "title": "RETOUR A IRKOUTSK ET DEPART",
       "badgeText": "JOUR 8",
       "description": "Vous arrivez à Irkoutsk en train au petit matin. Faites vos adieux à votre guide ainsi qu'à vos compagnons de voyage, après tant d'aventures passées ensemble. Après votre transfert à l'aéroport, il sera temps de prendre votre vol retour !",
-      "photo": "/images/voyages/randonnee-baikal-hiver/Zp966Q8aMzPvvNe66uwD.jpg",
+      "photo": "/images/1.voyages/randonnee-baikal-hiver/Zp966Q8aMzPvvNe66uwD.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -227,68 +227,68 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
+    "src": "/images/1.voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
     "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
   },
   "imageSecondary": {
-    "src": "/images/voyages/randonnee-baikal-hiver/jZO3m0X9SmMaZWhSoMBL.jpg",
+    "src": "/images/1.voyages/randonnee-baikal-hiver/jZO3m0X9SmMaZWhSoMBL.jpg",
     "alt": "image secondaire du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
   },
   "photosList": [
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/z24XhZdNQ2FJfKUOKskQ.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/z24XhZdNQ2FJfKUOKskQ.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/BWi6qZ5TuCza4AMETHzV.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/BWi6qZ5TuCza4AMETHzV.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/LfwiAncZSyCs0Daxi4dW.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/LfwiAncZSyCs0Daxi4dW.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/eOEpdh4Q062LZcUzO7sp.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/eOEpdh4Q062LZcUzO7sp.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/ERfYKcFHS1aNNiTXTX6W.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/ERfYKcFHS1aNNiTXTX6W.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/mE18MClIRWq8pfxh5qaG.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/mE18MClIRWq8pfxh5qaG.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/WrrxbIxbQWit0ngmmm9N.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/WrrxbIxbQWit0ngmmm9N.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/Z4xuSY9cRzC0KsN2oJuM.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/Z4xuSY9cRzC0KsN2oJuM.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/Tbc6xWBSYi30wdQdyzEA.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/Tbc6xWBSYi30wdQdyzEA.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/DyN3OAZWSWqDEZSXnaOF.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/DyN3OAZWSWqDEZSXnaOF.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/RWGBTuBQ463jwf7XLsGC.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/RWGBTuBQ463jwf7XLsGC.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/213nSeoBQ6eihawnMPib.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/213nSeoBQ6eihawnMPib.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/pm7zPX3uTU69DwHPF495.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/pm7zPX3uTU69DwHPF495.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     {
-      "src": "/images/voyages/randonnee-baikal-hiver/sb6QIaBWRk6XWq58gzyy.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/sb6QIaBWRk6XWq58gzyy.jpg",
       "alt": "image de la liste de photos du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     }
   ],
@@ -335,13 +335,13 @@
     "ogTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
     "ogDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
     "ogImage": {
-      "src": "/images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
       "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     "twitterTitle": "Randonnez sur le mythique lac Baïkal gelé en Sibérie",
     "twitterDescription": "Odysway vous propose une aventure unique : la traversée du lac Baïkal à pied. Rassurez-vous, on ne parle pas ici d'une expédition polaire mais d'une courte traversée accessible à tous, avec en prime deux nuits passées à camper sur le lac. ",
     "twitterImage": {
-      "src": "/images/voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
+      "src": "/images/1.voyages/randonnee-baikal-hiver/QOlOVfSARnSLFCpnO3iK.jpg",
       "alt": "image principale du voyage Randonnez sur le mythique lac Baïkal gelé en Sibérie"
     },
     "twitterCard": "summary_large_image"

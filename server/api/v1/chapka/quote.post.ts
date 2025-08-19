@@ -8,6 +8,7 @@ export default defineEventHandler(async (event: H3Event): Promise<TypeInsuranceQ
     })
   }
   const parsedBody = await readValidatedBody(event, body => InsuranceSchema.safeParse(body))
+  console.log('!!!!!!!!Chapka: quote parsed body!!!!!!', parsedBody)
   if (!parsedBody.success) {
     console.log('Chapka: quote parsed body', parsedBody)
     throw createError({

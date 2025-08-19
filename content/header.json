@@ -12,14 +12,18 @@
   },
   "button2": {
     "text": "L'esprit Odysway",
-    "link": "/a-propos"
+    "link": "/vision-voyage-odysway"
   },
   "button3": {
+    "text": "Chèques vacances",
+    "link": "/cheques-vacances"
+  },
+  "button4": {
     "text": "+33 1 84 80 79 75",
     "link": "tel:+33184807975"
   },
-  "button4": {
-    "text": "Planifier un appel 👋",
+  "button5": {
+    "text": "Prendre RDV 👋",
     "link": "/calendly"
   }
 }

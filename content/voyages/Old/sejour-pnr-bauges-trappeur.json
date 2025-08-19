@@ -100,7 +100,7 @@
       "title": "ARRIVEE AU CAMPEMENT TIPI",
       "badgeText": "JOUR 1",
       "description": "Arrivée dans le Parc naturel régional du Massif des Bauges. Courte marche d’approche jusqu’au campement, situé au cœur de la forêt. Installation dans votre tipi tout confort et apéritif de bienvenue, à déguster en pleine nature. Vous profiterez ensuite d’un bon dîner « fait maison » sous le tipi principal. L’occasion de déguster une « Matouille », plat typique à base de la traditionnelle Tome des Bauges !",
-      "photo": "/images/voyages/sejour-pnr-bauges-trappeur/iQAhe418Q6aG1EZ1i8VP.jpg",
+      "photo": "/images/1.voyages/sejour-pnr-bauges-trappeur/iQAhe418Q6aG1EZ1i8VP.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -109,7 +109,7 @@
       "title": "RANDONNEE AU COEUR DES PAYSAGES BAUJUS",
       "badgeText": "JOUR 2",
       "description": "Réveil dans un silence absolu. Après un bon petit-déjeuner, départ depuis le campement pour une randonnée accompagnée à la journée sur le site protégé de la Tourbière de Creusates, monument naturel remarquable du Massif des Bauges. L’occasion de mieux comprendre les particularités du territoire et la façon dont les hommes ont apprivoisé les lieux. A votre retour, possibilité de profiter d’un bain nordique avec vue sur le Mont Blanc (en option). Au menu du dîner : crozets à la crème et steak de bison !",
-      "photo": "/images/voyages/sejour-pnr-bauges-trappeur/YkAsUmjHQIu4mXqW1vXN.jpg",
+      "photo": "/images/1.voyages/sejour-pnr-bauges-trappeur/YkAsUmjHQIu4mXqW1vXN.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -118,7 +118,7 @@
       "title": "MERVEILLES SOUTERRAINES ",
       "badgeText": "JOUR 3",
       "description": "Dernier réveil au campement tipi. Matinée libre, puis rendez-vous avec Matthieu, guide-spéléologue, pour un déjeuner hors du commun dans la grotte de Bange, l’un des géosites du Massif ! Dégustation de produits locaux et découverte d’un milieu souterrain d’exception. Après-midi libre pour arpenter les villages alentours, rencontrer les artisans d’art et faire vos derniers achats de fromage avant le départ !",
-      "photo": "/images/voyages/sejour-pnr-bauges-trappeur/YQCbybGSwaRYTkYgYWWQ.jpg",
+      "photo": "/images/1.voyages/sejour-pnr-bauges-trappeur/YQCbybGSwaRYTkYgYWWQ.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -167,13 +167,13 @@
       "name": "Véronique",
       "description": "Véronique, installée au cœur des Bauges dans le petit village de Doucy, exerce comme accompagnatrice en montagne depuis 2006. Amoureuse de la nature, elle s’attache à offrir une approche respectueuse, ludique et sensorielle des espaces naturels traversés. Profondément inspirée par la nature qui l’entoure, le Massif des Bauges est pour elle un espace de découverte et d’émerveillement permanent. Par la randonnée, elle met un point d'honneur à sensibiliser les jeunes générations à leur impact sur la nature et à la fragilité de la biodiversité du Massif. Une véritable actrice du changement, au service de son territoire.",
       "role": "Accompagnatrice en montagne",
-      "image": "/images/voyages/sejour-pnr-bauges-trappeur/uSs9eKmyRNtKULuALHBm.jpg"
+      "image": "/images/1.voyages/sejour-pnr-bauges-trappeur/uSs9eKmyRNtKULuALHBm.jpg"
     },
     {
       "name": "Matthieu",
       "description": "Géo-partenaire expert en géologie sur le territoire, investi dans différents programmes de recherche scientifique, Matthieu a à cœur de mettre en lumière l’extraordinaire beauté du monde spéléologique. Amoureux du milieu karstique, de son histoire géologique et humaine, il vous guidera avec passion et générosité !",
       "role": "Guide spéléologue",
-      "image": "/images/voyages/sejour-pnr-bauges-trappeur/HRta86kOTKOehBztcjPw.jpg"
+      "image": "/images/1.voyages/sejour-pnr-bauges-trappeur/HRta86kOTKOehBztcjPw.jpg"
     }
   ],
   "housingBlock": [
@@ -185,44 +185,44 @@
     }
   ],
   "image": {
-    "src": "/images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
+    "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
     "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
   },
   "imageSecondary": {
-    "src": "/images/voyages/sejour-pnr-bauges-trappeur/LcbUaJztStiqmdAUdqlp.jpg",
+    "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/LcbUaJztStiqmdAUdqlp.jpg",
     "alt": "image secondaire du voyage Vivez comme un trappeur dans les Bauges"
   },
   "photosList": [
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/cJBCgTbaRSmMzbBargUY.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/cJBCgTbaRSmMzbBargUY.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/RtzFYv0TYC9zDSx1AW3m.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/RtzFYv0TYC9zDSx1AW3m.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/wRNYWVeQS8yXy50iqE9S.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/wRNYWVeQS8yXy50iqE9S.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/Fgc4z5fzTVYoyhUqF3Lm.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/Fgc4z5fzTVYoyhUqF3Lm.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/Y0IUCmsUSkBEvf89SpLA.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/Y0IUCmsUSkBEvf89SpLA.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/SzRQEVGaTAmmng1ARgd4.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/SzRQEVGaTAmmng1ARgd4.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/75sKvM5jRoiOqWkqGSFu.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/75sKvM5jRoiOqWkqGSFu.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     },
     {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/N81WPAtBR1KwM17xUoV1.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/N81WPAtBR1KwM17xUoV1.jpg",
       "alt": "image de la liste de photos du voyage Vivez comme un trappeur dans les Bauges"
     }
   ],
@@ -284,13 +284,13 @@
     "ogTitle": "Vivez comme un trappeur dans les Bauges",
     "ogDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
     "ogImage": {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
       "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
     },
     "twitterTitle": "Vivez comme un trappeur dans les Bauges",
     "twitterDescription": "C’est au cœur du Parc naturel régional du Massif des Bauges, sur le Plateau du Revard que nous vous donnons rendez-vous pour ce séjour insolite en montagne. Installés en pleine forêt, vous vivrez l’expérience unique de nuits sur un véritable campement tipis, installé à l'année.",
     "twitterImage": {
-      "src": "/images/voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
+      "src": "/images/1.voyages/sejour-pnr-bauges-trappeur/PdWgVJRxSdOcrLL149CO.jpg",
       "alt": "image principale du voyage Vivez comme un trappeur dans les Bauges"
     },
     "twitterCard": "summary_large_image"

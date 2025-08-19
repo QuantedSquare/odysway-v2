@@ -146,7 +146,8 @@
 import { z } from 'zod'
 import { computed } from 'vue'
 
-const { ownStep, voyage, page, checkoutType } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType'])
+const { ownStep, voyage, page, checkoutType, dateId } = defineProps(['ownStep', 'voyage', 'page', 'initialDealValues', 'checkoutType', 'dateId'])
+
 const emit = defineEmits(['next', 'previous', 'validity-changed'])
 const config = useRuntimeConfig()
 
@@ -218,11 +219,11 @@ const rules = {
 }
 
 const nbTravelers = computed(() => +model.value.nbAdults + +model.value.nbChildren)
+
 const submitStepData = async () => {
   // Validate form
   if (!isValid.value) return false
   //  #todo soustraire la réduction s'il y en a une
-
   try {
     // Submit form data
     if (route.query.booked_id) {
@@ -260,9 +261,9 @@ const submitStepData = async () => {
     }
     // else we update basics and create a deal with it
     else {
-      // const origin = config.public.siteURL
-      // const bmsLink = `${origin}/booking-management/${voyage.slug}/${route.query.date_id}`
-      // console.log('bmsLink', bmsLink) // #TODO To Add to schema
+      const origin = config.public.siteURL
+      const linkBms = `${origin}/booking-management/${voyage.slug}/${dateId}`
+
       const stage = (model.value.email === 'test@test.com' || model.value.email === 'ottmann.alex@gmail.com') || config.public.environment === 'development' ? '48' : '2'
       buttonLoading.value = true
       const utmSource = localStorage.getItem('utmSource')
@@ -285,7 +286,7 @@ const submitStepData = async () => {
         country: voyage.country,
         iso: voyage.iso,
         zoneChapka: voyage.zoneChapka,
-        image: voyage.imgSrc || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+        image: voyage.imgSrc || '/images/default/Odysway-couverture-mongolie.jpeg',
         currentStep: 'Création du Deal',
         alreadyPaid: 0,
         restToPay: 0, // Don't care about this value, we Calculate it in back
@@ -305,17 +306,16 @@ const submitStepData = async () => {
         gotEarlybird: voyage.gotEarlybird ? 'Oui' : 'Non',
         promoLastMinute: voyage.promoLastMinute,
         gotLastMinute: voyage.gotLastMinute ? 'Oui' : 'Non',
+        linkBms,
         // Contacts
         email: model.value.email,
         phone: model.value.phone,
         firstname: model.value.firstName,
         lastname: model.value.lastName,
         optinNewsletter: model.value.optinNewsletter,
-        // BMSLink:
       }
       trackPixel('track', 'AddToCart')
       emit('next')
-      console.log('===========flattenedDeal in Details.vue===========', flattenedDeal)
       await createDeal(flattenedDeal)
       buttonLoading.value = false
     }

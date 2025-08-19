@@ -119,7 +119,7 @@
       "title": "WELCOME TO BAIE DE SOMME",
       "badgeText": "JOUR 1",
       "description": "Vous arrivez librement le vendredi soir. Vous vous retrouvez autour d’un dîner convivial pour faire connaissance et échanger sur le programme du week-end. Ce sera l’occasion de vous expliquer les différentes activités à venir : des explorations matinales sur les sentiers de la réserve pour capter la lumière douce du lever du soleil, suivies de plusieurs affûts photographiques pour observer et photographier la faune locale, comme les oiseaux d’eau, les mouflons et d’autres animaux sauvages. Vous aurez aussi l’occasion de prendre part à un débriefing sur vos prises de vue et d’échanger sur vos expériences. Le tout dans une ambiance détendue et conviviale, où chaque moment sera propice à l’observation et à l’immersion dans la nature.",
-      "photo": "/images/voyages/stage-photo-nature-baie-de-somme/2zjqRUOBRbmUDyuLiBhm.jpg",
+      "photo": "/images/1.voyages/stage-photo-nature-baie-de-somme/2zjqRUOBRbmUDyuLiBhm.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -128,7 +128,7 @@
       "title": "EXPLORATION ET AFFUTS PHOTOGRAPHIQUES",
       "badgeText": "JOUR 2",
       "description": "Tôt le matin, vous partez à pied sur les sentiers de la réserve pour profiter de la lumière douce du lever du soleil. Parfois, un âne porte le matériel et le pique-nique. Vous rejoignez un premier affût pour photographier une grande variété d’oiseaux d’eau, tels que les tadornes, canards colverts, milouins, et cigognes. Après un petit-déjeuner pris en pleine nature, vous poursuivez avec un second affût au cœur d’une plaine où pâturent les mouflons, prenant le temps d’observer les petits avec leurs mères.\r\nL’après-midi, vous faites une pause pique-nique dans un site historique au sein de la réserve. Ensuite, vous marchez vers la mer pour explorer de nouveaux points de vue et photographier d’autres animaux sauvages. En fin de journée, vous vous installez dans un dernier affût pour capturer des images de la faune au crépuscule.",
-      "photo": "/images/voyages/stage-photo-nature-baie-de-somme/Tr26ClIjSKixPjvPiV6k.jpg",
+      "photo": "/images/1.voyages/stage-photo-nature-baie-de-somme/Tr26ClIjSKixPjvPiV6k.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -137,7 +137,7 @@
       "title": "DERNIERES PRISES DE VUE",
       "badgeText": "JOUR 3",
       "description": "Le matin, vous partez en direction de votre dernier affût près de mares fréquentées par de nombreux oiseaux sauvages. Vous profitez de la lumière dorée du matin pour capturer des images uniques. Après un déjeuner et un moment d’échange sur vos expériences, vous procédez à la remise des diplômes. Vous dites au revoir et reprenez la route.",
-      "photo": "/images/voyages/stage-photo-nature-baie-de-somme/qG0JDNBtQpiWyvOV5cEz.jpg",
+      "photo": "/images/1.voyages/stage-photo-nature-baie-de-somme/qG0JDNBtQpiWyvOV5cEz.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -181,7 +181,7 @@
       "name": "Romain",
       "description": "",
       "role": "",
-      "image": "/images/voyages/stage-photo-nature-baie-de-somme/NJbXApSuQKyk36ZhEszN.jpg"
+      "image": "/images/1.voyages/stage-photo-nature-baie-de-somme/NJbXApSuQKyk36ZhEszN.jpg"
     }
   ],
   "housingBlock": [
@@ -191,71 +191,71 @@
       "housingMood": "Vous serez logé dans un gîte en maison privative, qui offre un cadre paisible et convivial. Il dispose de trois chambres confortables et d’un espace mezzanine supplémentaire avec un canapé convertible pour un couchage supplémentaire. L’intérieur spacieux et lumineux, équipé de manière moderne, s'ouvre sur un jardin clos de 1500 m², idéal pour la détente. À proximité du Parc du Marquenterre et des plages, ainsi que des villes historiques comme Le Crotoy et Saint-Valery-sur-Somme, il permet de profiter pleinement des activités en plein air et de la richesse de la région.",
       "image": [
         {
-          "src": "/images/voyages/stage-photo-nature-baie-de-somme/ATqR6njbSDyzkNfRTsaJ.jpg",
+          "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/ATqR6njbSDyzkNfRTsaJ.jpg",
           "alt": "image de l'hébergement Stage photo en baie de Somme pour immortaliser la vie sauvage"
         },
         {
-          "src": "/images/voyages/stage-photo-nature-baie-de-somme/CBpB5dJcREZAwcyQMcjv.jpg",
+          "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/CBpB5dJcREZAwcyQMcjv.jpg",
           "alt": "image de l'hébergement Stage photo en baie de Somme pour immortaliser la vie sauvage"
         },
         {
-          "src": "/images/voyages/stage-photo-nature-baie-de-somme/UbGxOoW9TI2vL6c4yRNv.jpg",
+          "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/UbGxOoW9TI2vL6c4yRNv.jpg",
           "alt": "image de l'hébergement Stage photo en baie de Somme pour immortaliser la vie sauvage"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/stage-photo-nature-baie-de-somme/UpfNeUx9TzKQo0kJ4yQV.jpg",
+    "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/UpfNeUx9TzKQo0kJ4yQV.jpg",
     "alt": "image principale du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
   },
   "imageSecondary": {
-    "src": "/images/voyages/stage-photo-nature-baie-de-somme/ShC5f9JR3G2KDkLUU1Ji.jpg",
+    "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/ShC5f9JR3G2KDkLUU1Ji.jpg",
     "alt": "image secondaire du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
   },
   "photosList": [
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/XFAT8bYVSca0UzqPLebg.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/XFAT8bYVSca0UzqPLebg.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/c3FBhBQfSiKmQVlo2P2O.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/c3FBhBQfSiKmQVlo2P2O.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/H1yLZjqmQiwKr84mmdHt.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/H1yLZjqmQiwKr84mmdHt.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/ZHPIgR4xS567v2fPnXtY.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/ZHPIgR4xS567v2fPnXtY.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/jPmUTfVMT9qV2XPvRdMB.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/jPmUTfVMT9qV2XPvRdMB.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/Zw4ex4k8TgeLrU2Re3tu.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/Zw4ex4k8TgeLrU2Re3tu.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/sh9QtRxRdCdvj3SVJLCj.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/sh9QtRxRdCdvj3SVJLCj.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/dDTraGoHTBCqVJmOOsiw.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/dDTraGoHTBCqVJmOOsiw.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/NGpSeFBLS06JgwOXKaPQ.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/NGpSeFBLS06JgwOXKaPQ.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/BHnEWyaJQ9evirZVNktX.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/BHnEWyaJQ9evirZVNktX.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/N5eL2hjOS4qHioYN6q3q.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/N5eL2hjOS4qHioYN6q3q.jpg",
       "alt": "image de la liste de photos du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     }
   ],
@@ -302,13 +302,13 @@
     "ogTitle": "Stage photo en baie de Somme pour immortaliser la vie sauvage",
     "ogDescription": "Ce séjour de 4 jours en Baie de Somme est une immersion en photographie animalière.\r\nAu programme : affûts, oiseaux, mouflons, sangliers, lumières dorées, conseils pros et exploration nature entre marais et prairies.",
     "ogImage": {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/UpfNeUx9TzKQo0kJ4yQV.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/UpfNeUx9TzKQo0kJ4yQV.jpg",
       "alt": "image principale du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     "twitterTitle": "Stage photo en baie de Somme pour immortaliser la vie sauvage",
     "twitterDescription": "Ce séjour de 4 jours en Baie de Somme est une immersion en photographie animalière.\r\nAu programme : affûts, oiseaux, mouflons, sangliers, lumières dorées, conseils pros et exploration nature entre marais et prairies.",
     "twitterImage": {
-      "src": "/images/voyages/stage-photo-nature-baie-de-somme/UpfNeUx9TzKQo0kJ4yQV.jpg",
+      "src": "/images/1.voyages/stage-photo-nature-baie-de-somme/UpfNeUx9TzKQo0kJ4yQV.jpg",
       "alt": "image principale du voyage Stage photo en baie de Somme pour immortaliser la vie sauvage"
     },
     "twitterCard": "summary_large_image"

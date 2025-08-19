@@ -398,9 +398,10 @@ function travelerText(nbTraveler, type) {
 //   }
 
 function calculateDepositValue(data) {
+  console.log('data for deposit', data)
   const nbTravelers = data.nbAdults + data.nbChildren || 0
-  const baseToCalculateDepositValue = +totalValue.value - ((data.includeFlight ? data.flightPrice : 0) * nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
-  return Math.floor((baseToCalculateDepositValue) * 0.3 + (data.includeFlight ? data.flightPrice : 0) * nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
+  const baseToCalculateDepositValue = +totalValue.value - ((voyage.includeFlight ? +voyage.flightPrice : 0) * nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
+  return Math.floor((baseToCalculateDepositValue) * 0.3 + (voyage.includeFlight ? +voyage.flightPrice : 0) * nbTravelers) + ((data.insuranceCommissionPrice ?? 0) * nbTravelers)
 }
 
 const appliedPrice = computed(() => {

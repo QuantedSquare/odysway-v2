@@ -50,7 +50,6 @@ const { date } = defineProps({
   },
 })
 const isLoading = ref(false)
-
 // Reactive state to track existing booked dates
 const existingBookedDates = ref(new Map())
 const checkoutLink = ref('')

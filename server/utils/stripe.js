@@ -27,6 +27,7 @@ const createCheckoutSession = async (order) => {
   let coupon = null
 
   function calculatDepositeValue(data) {
+    console.log('data for deposit', data)
     // WE take the total value of the deal, we substract the flight price and the insurance price
     const baseToCalculateDepositValue = +data.value - ((data.includeFlight === 'Oui' ? data.flightPrice : 0) * data.nbTravelers) - ((data.insuranceCommissionPrice ?? 0) * data.nbTravelers)
     // We take 30% of the baseToCalculateDepositValue (which include options and reduction) and add the flight price if it's included
@@ -428,54 +429,6 @@ const handlePaymentSession = async (session, paymentType) => {
 
   const { contact: client } = await activecampaign.getClientById(deal.contact)
   console.log('Passed client retrieving', client)
-  //   // Chapka notify
-  if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
-    const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
-    session.lineItems = lineItems
-    console.log('LineItems', lineItems)
-    const inssuranceItem = lineItems.find((item) => {
-      return [
-        'Assurance Multirisque',
-        'Assurance Annulation',
-        'Assurance Assistance',
-      ].includes(item.description)
-    })
-    Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
-    console.log('InssuranceItem', inssuranceItem)
-    if (inssuranceItem) {
-      chapka.notify(session.metadata, inssuranceItem, deal)
-      console.log('Chapka notify')
-    }
-  }
-
-  // AC Update toutes les valeur monaitaire sont en centimes
-  const totalPaid = +(deal.alreadyPaid || 0) + +(session.amount_total)
-  const restToPay = +deal.value - totalPaid
-
-  console.log('totalPaid', totalPaid, restToPay)
-  const dealData = {
-    group: '2',
-    stage: +customFields.alreadyPaid > 0 ? '33' : '6',
-    alreadyPaid: totalPaid,
-    restToPay: restToPay,
-    currentStep: totalPaid >= +deal.value
-      ? 'Solde réglé'
-      : 'Acompte réglé',
-
-  }
-  if (totalPaid >= +deal.value) {
-    Object.assign(dealData, { paiementLink: 'Paiement OK' })
-  }
-
-  console.log('dealData', dealData)
-  await activecampaign.updateDeal(order.dealId, dealData)
-
-  const note = await activecampaign.addNote(order.dealId, {
-    note: {
-      note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
-    },
-  })
-  console.log('added note', note)
 
   if (!isDev) {
     axios({
@@ -494,22 +447,58 @@ const handlePaymentSession = async (session, paymentType) => {
           ],
         },
     })
-
-    //     axios({
-    //       url: 'https://www.google-analytics.com/collect',
-    //       method: 'post',
-    //       params: {
-    //         v: 1,
-    //         tid: process.env.NODE_ENV === 'development' ? 'UA-160322718-1' : 'UA-120209294-1',
-    //         cid: '555',
-    //         t: 'event',
-    //         ec: 'Transaction_Server',
-    //         ea: 'Ping_Confirmation',
-    //         el: '' + +order.selectedTravelersToPay,
-    //         ev: +session.amount_total
-    //       }
-    //     })
   }
+  //   // Chapka notify
+  // if (deal.insurance !== 'Aucune Assurance' && !isDev && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+  if (deal.insurance !== 'Aucune Assurance' && (order.paymentType === 'full' || order.paymentType === 'deposit')) {
+    const { data: lineItems } = await stripeCLI.checkout.sessions.listLineItems(checkoutId)
+    session.lineItems = lineItems
+    console.log('LineItems', lineItems)
+    const inssuranceItem = lineItems.find((item) => {
+      return [
+        'Assurance Multirisque',
+        'Assurance Annulation',
+        'Assurance Assistance',
+      ].includes(item.description)
+    })
+    Object.assign(deal, { pricePerTraveler: calculatePricePerPerson(deal) })
+    console.log('InssuranceItem', inssuranceItem)
+    if (inssuranceItem) {
+      chapka.notify(session.metadata, inssuranceItem, deal, client)
+      console.log('Chapka notify')
+    }
+  }
+
+  // AC Update toutes les valeur monaitaire sont en centimes
+  const totalPaid = +(deal.alreadyPaid || 0) + +(session.amount_total)
+  const restToPay = +deal.value - totalPaid
+
+  console.log('totalPaid', totalPaid, restToPay)
+  const dealData = {
+    group: '2',
+    stage: +restToPay > 0 ? '6' : '33',
+    alreadyPaid: totalPaid,
+    restToPay: restToPay,
+    currentStep: totalPaid >= +deal.value
+      ? 'Solde réglé'
+      : 'Acompte réglé',
+  }
+  if (totalPaid >= +deal.value) {
+    Object.assign(dealData, { paiementLink: 'Paiement OK' })
+  }
+  else {
+    Object.assign(dealData, { paiementLink: `https://odysway.com/checkout?type=balance&booked_id=${order.booked_id}` })
+  }
+
+  console.log('dealData', dealData)
+  await activecampaign.updateDeal(order.dealId, dealData)
+
+  const note = await activecampaign.addNote(order.dealId, {
+    note: {
+      note: `Paiement ${paymentType} -  ${session.customer_details.name} - ${session.customer_details.email} - ${session.amount_total / 100}€`,
+    },
+  })
+  console.log('added note', note)
 }
 export default {
   createCheckoutSession,

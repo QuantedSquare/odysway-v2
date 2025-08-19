@@ -121,7 +121,7 @@
       "title": "ARRIVÉE À MANAUS",
       "badgeText": "JOUR 1",
       "description": "Rendez-vous à l'aéroport de Manaus où nos équipes vous accueillent pour vous conduire à votre hôtel. Profitez de la soirée pour vous reposer et vous remettre du décalage horaire car le lendemain, l’aventure amazonienne commence !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/UO43DsM3SuuWwlv0pr3Q.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/UO43DsM3SuuWwlv0pr3Q.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -130,7 +130,7 @@
       "title": "IMMERSION DANS LA FAMILLE ",
       "badgeText": "JOUR 2",
       "description": "Départ en bateau sur l'Amazone, à la jonction avec et le Rio Negro. En fin de matinée, vous arriverez au camp de base familial, en immersion dans la jungle. Vous prendrez votre repas de bienvenue préparé par Christiane, la mère de famille, puis partirez découvrir les environs.",
-      "photo": "/images/voyages/survie-jungle-amazonienne/vf3CwGBTEa5Xg3Y0V295.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/vf3CwGBTEa5Xg3Y0V295.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -139,7 +139,7 @@
       "title": "EXPÉDITIONS À LA JOURNÉE",
       "badgeText": "JOURS 3 À 4",
       "description": "Aujourd’hui, débutent les excursions à la demi-journée. Vous aurez l'occasion de partir randonner dans la jungle, observer les animaux sauvages en pirogue, pêcher le piranha, observer les caïmans de nuit ou encore les dauphins roses de rivière… Le soir vous dînerez avec vos guides et la famille, au camp de base.",
-      "photo": "/images/voyages/survie-jungle-amazonienne/tUEh5LYbQlyuthjm5Xae.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/tUEh5LYbQlyuthjm5Xae.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -148,7 +148,7 @@
       "title": "RENCONTRE AVEC LES LOCAUX",
       "badgeText": "JOUR 5",
       "description": "Aujourd'hui, vous pourrez rencontrer les locaux et partager une conversation, un repas ou même une soirée avec eux. Visitez les écoles de la région et profitez de votre visite pour éventuellement faire des dons de fournitures scolaires, de vêtements ou de jeux. Une vraie expérience, c’est aussi voyager utile.",
-      "photo": "/images/voyages/survie-jungle-amazonienne/vvODBgreTOXB00W4vrt6.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/vvODBgreTOXB00W4vrt6.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -157,7 +157,7 @@
       "title": "SURVIE DANS LA JUNGLE",
       "badgeText": "JOURS 6 À 8",
       "description": "En compagnie de vos guides locaux, vous partez pour trois jours en immersion dans la jungle amazonienne ! Vous apprendrez les rudiments de la survie, construirez votre campement et mangerez le fruit de votre pêche. Émotions et souvenirs à vie garantis !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/8PG2yGc7S7WZie1reuZ9.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/8PG2yGc7S7WZie1reuZ9.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -166,7 +166,7 @@
       "title": "RETOUR VERS MANAUS",
       "badgeText": "JOUR 9",
       "description": "Après un dernier petit-déjeuner au camp de base, vous prenez un bateau et retournez à Manaus avec vos guides. Profitez du confort fraîchement retrouvé pour prendre une bonne douche et enfiler des vêtements propres !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/QMob5l5LSxyxDuvFZLa4.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/QMob5l5LSxyxDuvFZLa4.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -175,7 +175,7 @@
       "title": "DERNIER JOUR EN AMAZONIE",
       "badgeText": "JOUR 10",
       "description": "Profitez de la matinée pour faire un tour dans la vieille ville de Manaus, afin d’acheter de beaux souvenirs de la capitale de l’Amazonie. Vous revenez chez vous avec des souvenirs impérissables !",
-      "photo": "/images/voyages/survie-jungle-amazonienne/CgeWwa2GTEaaaxrOZEkb.jpg",
+      "photo": "/images/1.voyages/survie-jungle-amazonienne/CgeWwa2GTEaaaxrOZEkb.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -228,7 +228,7 @@
       "name": "Alciney",
       "description": "",
       "role": "Expert en survie",
-      "image": "/images/voyages/survie-jungle-amazonienne/ATfKD8gIS8qq0TWg0INd.jpg"
+      "image": "/images/1.voyages/survie-jungle-amazonienne/ATfKD8gIS8qq0TWg0INd.jpg"
     }
   ],
   "housingBlock": [
@@ -238,75 +238,75 @@
       "housingMood": "Vous serez hébergés en Amazonie au sein même de la famille de Max, dans des maisons annexes avec salle de bain afin de vous assurer une totale autonomie. Lors des immersions de plusieurs jours dans la jungle, vous dormirez dans des hamacs munis d'une moustiquaire et d'un toit. ",
       "image": [
         {
-          "src": "/images/voyages/survie-jungle-amazonienne/AfXwboBrTZKsKXd8bVVw.jpg",
+          "src": "/images/1.voyages/survie-jungle-amazonienne/AfXwboBrTZKsKXd8bVVw.jpg",
           "alt": "image de l'hébergement Immersion brésilienne et survie dans la jungle amazonienne"
         },
         {
-          "src": "/images/voyages/survie-jungle-amazonienne/GiSNtKibRAeHqHqvMr0o.jpg",
+          "src": "/images/1.voyages/survie-jungle-amazonienne/GiSNtKibRAeHqHqvMr0o.jpg",
           "alt": "image de l'hébergement Immersion brésilienne et survie dans la jungle amazonienne"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
+    "src": "/images/1.voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
     "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
   },
   "imageSecondary": {
-    "src": "/images/voyages/survie-jungle-amazonienne/up83LVUNQfO6SYOhzTsh.jpg",
+    "src": "/images/1.voyages/survie-jungle-amazonienne/up83LVUNQfO6SYOhzTsh.jpg",
     "alt": "image secondaire du voyage Immersion brésilienne et survie dans la jungle amazonienne"
   },
   "photosList": [
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/ZKzdVybRyW8cwKoWvQAw.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/ZKzdVybRyW8cwKoWvQAw.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/LD3bvcNTKOTNFGQeWRQQ.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/LD3bvcNTKOTNFGQeWRQQ.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/pq9vlVyiRiqlojGkYgbC.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/pq9vlVyiRiqlojGkYgbC.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/ks2buuoRTSqbHEbHqX32.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/ks2buuoRTSqbHEbHqX32.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/JWb1NwH1Sv2mx9AehJVD.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/JWb1NwH1Sv2mx9AehJVD.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/kzghnGTfuPgdfdYHuGYg.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/kzghnGTfuPgdfdYHuGYg.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/C7OuhN4VTBOzf3FDMAt9.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/C7OuhN4VTBOzf3FDMAt9.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/ESJ37MATcywZdCvuy5b6.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/ESJ37MATcywZdCvuy5b6.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/ICUpMnEJTTy4bTO1nq3Q.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/ICUpMnEJTTy4bTO1nq3Q.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/V1drATqOSreTlKxFHhio.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/V1drATqOSreTlKxFHhio.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/nxQwt83NScqVVPhtEAuu.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/nxQwt83NScqVVPhtEAuu.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/1THXQ9KUSyCnWQK1I5Y4.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/1THXQ9KUSyCnWQK1I5Y4.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     {
-      "src": "/images/voyages/survie-jungle-amazonienne/D2JNyoFLQD5ESrxQ2FF3.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/D2JNyoFLQD5ESrxQ2FF3.jpg",
       "alt": "image de la liste de photos du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     }
   ],
@@ -383,13 +383,13 @@
     "ogTitle": "Immersion brésilienne et survie dans la jungle amazonienne",
     "ogDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
     "ogImage": {
-      "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
       "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     "twitterTitle": "Immersion brésilienne et survie dans la jungle amazonienne",
     "twitterDescription": "Partez à la découverte de la jungle amazonienne lors d'un voyage au Brésil unique. Rencontrez les chaleureux cariocas, plongez dans la mystérieuse forêt amazonienne, et vivez une expérience de voyage différente au cœur du Brésil.",
     "twitterImage": {
-      "src": "/images/voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
+      "src": "/images/1.voyages/survie-jungle-amazonienne/z0INP3CRmWU5BLBzEh16.jpg",
       "alt": "image principale du voyage Immersion brésilienne et survie dans la jungle amazonienne"
     },
     "twitterCard": "summary_large_image"

@@ -66,7 +66,7 @@ import { useImage } from '#imports'
 defineProps({
   imageSrc: {
     type: String,
-    default: '/images/voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg',
+    default: '/images/1.voyages/bali-menjangan-sidemen/KSM0NI92R9OCsioOBCVO.jpg',
   },
   imageDesktopRight: {
     type: Boolean,

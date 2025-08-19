@@ -13,7 +13,7 @@
       <slot />
     </v-main>
 
-    <div class="whatsapp-button d-lg-none mb-16">
+    <div class="whatsapp-button mb-16">
       <WhatsAppBtn />
     </div>
 
@@ -37,13 +37,6 @@ const drawer = ref(false)
 </script>
 
 <style scoped>
-.whatsapp-button {
-  position: fixed;
-  bottom: -60px;
-  right: 5px;
-  z-index: 10000;
-}
-
 .main-content {
   --v-layout-top: 90px!important;
   --v-layout-bottom: 0px !important;
@@ -54,12 +47,6 @@ const drawer = ref(false)
   .main-content {
     --v-layout-top: 60px!important;
   }
-  .whatsapp-button {
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
-  z-index: 10000;
-}
 }
 
 :deep(.v-main) {

@@ -114,7 +114,7 @@
       "title": "ARRIVÉE À L'OBSERVATOIRE",
       "badgeText": "JOUR 1",
       "description": "Arrivée libre à l'observatoire astronomique dans l'après midi. Accueil, visite du site et installation dans les chambres d'hôtes. Vous prendrez votre premier dîner en compagnie des membres de l'équipe et ferez connaissance avec les autres participants du séjour.",
-      "photo": "/images/voyages/sejour-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg",
+      "photo": "/images/1.voyages/sejour-observatoire-astronomique/wAuHGGLhQmioeMOJmNUh.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -123,7 +123,7 @@
       "title": "COMPRENDRE LE CIEL",
       "badgeText": "JOUR 2",
       "description": "Cette première journée d'immersion est consacrée à la compréhension du ciel étoilé. Vous apprendrez à reconnaître les planètes, étoiles, nébuleuses et galaxies, ainsi qu'à manier les magnitudes et coordonnées du ciel. La nuit venue, vous repérerez les constellations, reconnaîtrez les étoiles et planètes au télescope. À la nuit tombée, vous participerez à une première observation astronomique avec un télescope T400. ",
-      "photo": "/images/voyages/sejour-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg",
+      "photo": "/images/1.voyages/sejour-observatoire-astronomique/0CkJEb5SIWny0DaMSuUP.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -132,7 +132,7 @@
       "title": "VOTRE MISSION D'ASTRONOME",
       "badgeText": "JOUR 3",
       "description": "C'est le grand jour ! Aujourd'hui le staff de l'observatoire vous confiera une mission (détection d'exoplanète, suivi d'astéroïde, ...). Avec l'aide de votre équipe, vous mènerez la mission de bout en bout, en immersion sous la coupole du grand télescope T820. Fin de votre séjour en tant qu'astronome dans l'après-midi. Vous ne partez cependant pas les mains vides : vous avez maintenant votre passeport en astronomie niveau 1, et vos magnifiques clichés du ciel qui vous seront transmis par e-mail !",
-      "photo": "/images/voyages/sejour-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg",
+      "photo": "/images/1.voyages/sejour-observatoire-astronomique/45kIi6WpSkmCRjNvRjj4.jpg",
       "denivellation": "",
       "road": "",
       "night": ""
@@ -179,7 +179,7 @@
       "name": "Marc",
       "description": "",
       "role": "Fondateur de l'observatoire",
-      "image": "/images/voyages/sejour-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg"
+      "image": "/images/1.voyages/sejour-observatoire-astronomique/LYkGdRhHQbaUItRGJ36k.jpg"
     }
   ],
   "housingBlock": [
@@ -189,26 +189,26 @@
       "housingMood": "Vous logerez au gîte Jupiter accolé à la tour Saturne de l'observatoire. Il est constitué d'une cuisine ouverte sur le salon et coin repas, de WC indépendants, et de trois chambres (Callisto : deux lits simples, Europe : deux lits simples, et Ganymède : quatre lits simples).",
       "image": [
         {
-          "src": "/images/voyages/sejour-observatoire-astronomique/uOrmpmM5S6OellRXSS6e.jpg",
+          "src": "/images/1.voyages/sejour-observatoire-astronomique/uOrmpmM5S6OellRXSS6e.jpg",
           "alt": "image de l'hébergement Séjour au cœur d'un observatoire astronomique"
         },
         {
-          "src": "/images/voyages/sejour-observatoire-astronomique/H5fONAJcS8Wid7WY3JbT.jpg",
+          "src": "/images/1.voyages/sejour-observatoire-astronomique/H5fONAJcS8Wid7WY3JbT.jpg",
           "alt": "image de l'hébergement Séjour au cœur d'un observatoire astronomique"
         },
         {
-          "src": "/images/voyages/sejour-observatoire-astronomique/EthVSk7Qm2uW66yqs8gD.jpg",
+          "src": "/images/1.voyages/sejour-observatoire-astronomique/EthVSk7Qm2uW66yqs8gD.jpg",
           "alt": "image de l'hébergement Séjour au cœur d'un observatoire astronomique"
         }
       ]
     }
   ],
   "image": {
-    "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+    "src": "/images/1.voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
     "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
   },
   "imageSecondary": {
-    "src": "/images/voyages/sejour-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
+    "src": "/images/1.voyages/sejour-observatoire-astronomique/AfnnG33bQ7iFEGeK6zQh.jpg",
     "alt": "image secondaire du voyage Séjour au cœur d'un observatoire astronomique"
   },
   "photosList": [],
@@ -259,13 +259,13 @@
     "ogTitle": "Séjour au cœur d'un observatoire astronomique",
     "ogDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
     "ogImage": {
-      "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+      "src": "/images/1.voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
       "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
     },
     "twitterTitle": "Séjour au cœur d'un observatoire astronomique",
     "twitterDescription": "Vivez un séjour au cœur d'un observatoire astronomique dans les Alpes. Devenez astronome amateur le temps d'un week-end aux côtés d'astronomes et d'astrophysiciens lors de ce séjour insolite accessible à tous.",
     "twitterImage": {
-      "src": "/images/voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
+      "src": "/images/1.voyages/sejour-observatoire-astronomique/AjNZlDsJQYy6sYuatDRC.jpg",
       "alt": "image principale du voyage Séjour au cœur d'un observatoire astronomique"
     },
     "twitterCard": "summary_large_image"

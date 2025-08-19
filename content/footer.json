@@ -26,7 +26,7 @@
       "links": [
         {
           "text": "Notre vision",
-          "to": "/a-propos"
+          "to": "/vision-voyage-odysway"
         },
         {
           "text": "Blog",
@@ -35,6 +35,18 @@
         {
           "text": "Nous rejoindre",
           "to": "/nous-recrutons"
+        },
+        {
+          "text": "Chèques vacances",
+          "to": "/cheques-vacances"
+        },
+        {
+          "text": "Avis voyageurs Odysway",
+          "to": "/avis-voyageurs"
+        },
+        {
+          "text": "Stages co-organisés avec accompagnants",
+          "to": "https://tribus-seminaires.com/"
         }
       ]
     },

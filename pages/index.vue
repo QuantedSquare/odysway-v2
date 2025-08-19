@@ -14,9 +14,28 @@
 const { data: page } = await useAsyncData('homepage', () => queryCollection('content').path('/').first())
 
 if (page.value) {
-  useHead(page.value.head || { htmlAttrs: {
-    lang: 'fr',
-  } }) // <-- Nuxt Schema.org
-  useSeoMeta(page.value.seo || {}) // <-- Nuxt Robots
+  // Set the page title explicitly
+  useHead({
+    title: page.value.seo?.title || page.value.title,
+    htmlAttrs: {
+      lang: 'fr',
+    },
+    ...page.value.head,
+  })
+
+  // Set SEO meta tags
+  useSeoMeta({
+    title: page.value.seo?.title || page.value.title,
+    description: page.value.seo?.description || page.value.description,
+    ogTitle: page.value.seo?.title || page.value.title,
+    ogDescription: page.value.seo?.description || page.value.description,
+    ogType: 'website',
+    ogUrl: 'https://odysway.com/',
+    twitterTitle: page.value.seo?.title || page.value.title,
+    twitterDescription: page.value.seo?.description || page.value.description,
+    twitterCard: 'summary_large_image',
+    canonical: 'https://odysway.com/',
+    robots: page.value.robots || 'index, follow',
+  })
 }
 </script>

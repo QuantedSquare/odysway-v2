@@ -165,7 +165,7 @@ const emit = defineEmits(['previous'])
 const model = defineModel()
 const { updateDeal } = useStepperDeal(ownStep)
 const { addSingleParam } = useParams()
-console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
+// console.log('....', +voyage.alreadyPaid, +voyage.totalTravelPrice)
 // Data
 // IsBooking à définir si une option dans le stepper uniquement pour poser une option
 const isBooking = ref(route.query.type === 'booking')
@@ -196,7 +196,7 @@ const stripePay = async () => {
     paymentType: route.query.type,
     contact: contact,
     currentUrl: route.fullPath,
-    insuranceImg: page.assurance_img,
+    insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
     countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
   if (route.query.type === 'custom') {
@@ -239,7 +239,7 @@ const almaPay = async () => {
       phone: model.value.phone,
     },
     currentUrl: route.fullPath,
-    insuranceImg: page.assurance_img || 'https://cdn.buttercms.com/x04Az8TXRmWWtUiUhpCW"', // replace buttercms by a default image
+    insuranceImg: page.assurance_img || 'https://odysway.com/images/default/chapka.png',
     countries: voyage.iso, // Used by chapka to know if it's a CAP-EXPLORACTION or CAP-EXPLORER
   }
 

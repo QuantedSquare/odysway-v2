@@ -108,14 +108,14 @@
             <div
               class="d-flex flex-column ga-2"
             >
-              <NuxtLink
+              <template
                 v-for="(link, index) in footer.linksList.colonne1.links"
                 :key="link.text + index"
-                :to="link.to"
-                class="text-grey"
               >
-                {{ link.text }}
-              </NuxtLink>
+                <SmartLink :to="link.to">
+                  {{ link.text }}
+                </SmartLink>
+              </template>
             </div>
           </v-col>
           <v-col
@@ -129,14 +129,14 @@
             <div
               class="d-flex flex-column ga-2"
             >
-              <NuxtLink
+              <template
                 v-for="(link, index) in footer.linksList.colonne2.links"
                 :key="link.text + index"
-                :to="link.to"
-                class="text-grey"
               >
-                {{ link.text }}
-              </NuxtLink>
+                <SmartLink :to="link.to">
+                  {{ link.text }}
+                </SmartLink>
+              </template>
             </div>
           </v-col>
           <v-col
@@ -151,14 +151,14 @@
 
               class="d-flex flex-column ga-2"
             >
-              <NuxtLink
+              <template
                 v-for="(link, index) in footer.linksList.colonne3.links"
                 :key="link.text + index"
-                :to="link.to"
-                class="text-grey"
               >
-                {{ link.text }}
-              </NuxtLink>
+                <SmartLink :to="link.to">
+                  {{ link.text }}
+                </SmartLink>
+              </template>
             </div>
           </v-col>
           <v-col
@@ -198,14 +198,14 @@
             md="5"
             class="text-center text-md-right d-flex justify-space-between"
           >
-            <NuxtLink
+            <template
               v-for="policy in policies"
               :key="policy.name"
-              :to="policy.link"
-              class="text-grey text-decoration-none"
             >
-              {{ policy.name }}
-            </NuxtLink>
+              <SmartLink :to="policy.link">
+                {{ policy.name }}
+              </SmartLink>
+            </template>
           </v-col>
           <v-spacer />
         </v-row>

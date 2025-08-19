@@ -40,6 +40,14 @@
         {{ header.button2.text }}
       </v-btn>
       <v-btn
+        color="primary"
+        height="45"
+        class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
+      >
+        {{ header.button3.text }}
+      </v-btn>
+      <v-btn
         href="tel: +33184807975"
         color="primary"
         height="45"
@@ -48,7 +56,7 @@
         class="text-caption text-md-body-1 d-none d-md-inline"
         @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
       >
-        <span class="mt-2">{{ header.button3.text }}</span>
+        <span class="mt-2">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
         height="45"
@@ -57,7 +65,7 @@
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
         @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
       >
-        {{ header.button4.text }}
+        {{ header.button5.text }}
       </v-btn>
       <v-btn
         class="d-inline d-md-none "
@@ -119,24 +127,32 @@
         {{ header.button2.text }}
       </v-btn>
       <v-btn
+        color="primary"
+        height="45"
+        class="text-caption text-md-body-1 d-none d-md-inline"
+        @click="() => { router.push(header.button3.link); captureOutboundLink(header.button3.text) }"
+      >
+        {{ header.button3.text }}
+      </v-btn>
+      <v-btn
         href="tel: +33184807975"
         color="primary"
         height="45"
         variant="tonal"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline"
-        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button3.text) }"
+        @click="() => { trackPixel('trackCustom', 'ClickAppel'); captureOutboundLink(header.button4.text) }"
       >
-        <span class="mt-2">{{ header.button3.text }}</span>
+        <span class="mt-2">{{ header.button4.text }}</span>
       </v-btn>
       <v-btn
         height="45"
         color="white"
         rounded="default"
         class="text-caption text-md-body-1 d-none d-md-inline bg-primary"
-        @click="() => { router.push(header.button4.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button4.text) }"
+        @click="() => { router.push(header.button5.link); trackPixel('trackCustom', 'ClickRDV'); captureOutboundLink(header.button5.text) }"
       >
-        {{ header.button4.text }}
+        {{ header.button5.text }}
       </v-btn>
 
       <v-btn

@@ -79,6 +79,7 @@
                   v-model="dynamicDealValues"
                   :checkout-type="checkoutType"
                   :voyage="voyage"
+                  :date-id="date_id"
                   :own-step="1"
                   :page="pageTexts"
                   @next="nextStep"
@@ -293,7 +294,7 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
         travelersData[travelerKey] = null
       }
     }
-    console.log('deal', deal)
+
     const dynamicValues = {
       // Details
       nbTravelers: +deal.nbTravelers,
@@ -320,13 +321,12 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
 
     dynamicDealValues.value = dynamicValues
     checkoutType.value = determinePaymentOptions(deal.departureDate, route.query)
-    console.log('checkoutType', checkoutType.value)
-    console.log('deal', deal)
+
     const voyageStaticValues = {
       departureDate: deal.departureDate,
       returnDate: deal.returnDate,
       title: deal.title,
-      imgSrc: deal.image || 'https://cdn.buttercms.com/gzdJu2fbQDi9Pl3h80Jn',
+      imgSrc: deal.image || '/images/default/Odysway-couverture-mongolie.jpeg',
       country: deal.country,
       slug: deal.slug,
       iso: deal.iso,
@@ -351,12 +351,11 @@ const { data: voyage, status: voyageStatus } = useAsyncData(`voyage-${step}`, as
       alreadyPaid: deal.alreadyPaid || 0,
       totalTravelPrice: deal.value,
     }
-    console.log('voyageStaticValues', voyageStaticValues)
+
     await fetchInsuranceQuote(voyageStaticValues, dynamicValues)
     return voyageStaticValues
   }
 })
-console.log('voyage status', voyageStatus.value)
 // ================== Stepper Management ==================
 const loading = ref(false)
 const currentStep = ref(step ? parseInt(step) : 0)
@@ -364,7 +363,6 @@ const skipperMode = ref('normal')
 if (route.query.type === 'custom' || route.query.type === 'balance') {
   currentStep.value = route.query.type === 'custom' ? 1 : 5
   skipperMode.value = route.query.type === 'custom' ? 'normal' : 'summary'
-  console.log('skipperMode', skipperMode.value)
 }
 
 const nextStep = () => {
@@ -411,10 +409,12 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
     }
 
     const pricePerTravelerWithoutInsurance = calculatePricePerPerson(dynamicDealValues, voyage)
+    console.log('indivRoomPrice', voyage?.indivRoomPrice, dynamicDealValues.indivRoom)
+    const indivRoomPrice = dynamicDealValues.indivRoom ? voyage?.indivRoomPrice : 0
     const insurance = await $fetch('/api/v1/chapka/quote', {
       method: 'POST',
       body: {
-        pricePerTraveler: pricePerTravelerWithoutInsurance / 100,
+        pricePerTraveler: (pricePerTravelerWithoutInsurance + indivRoomPrice) / 100,
         countries: voyage.iso,
         zoneChapka: +voyage.zoneChapka || 0,
         departureDate: voyage.departureDate,
@@ -430,10 +430,10 @@ const fetchInsuranceQuote = async (voyage, dynamicDealValues) => {
   }
 }
 
-// Specific watcher for nbAdults and nbChildren changes
-watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren], async ([newNbAdults, newNbChildren], [oldNbAdults, oldNbChildren]) => {
+// Specific watcher for nbAdults, nbChildren, and indivRoom changes
+watch(() => [dynamicDealValues.value?.nbAdults, dynamicDealValues.value?.nbChildren, dynamicDealValues.value?.indivRoom], async ([newNbAdults, newNbChildren, newIndivRoom], [oldNbAdults, oldNbChildren, oldIndivRoom]) => {
   if (voyage.value && dynamicDealValues.value
-    && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren)) {
+    && (newNbAdults !== oldNbAdults || newNbChildren !== oldNbChildren || newIndivRoom !== oldIndivRoom)) {
     await fetchInsuranceQuote(voyage.value, dynamicDealValues.value)
   }
 }, { deep: true })
