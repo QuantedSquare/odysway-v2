@@ -43,6 +43,10 @@
         {
           "text": "Avis voyageurs Odysway",
           "to": "/avis-voyageurs"
+        },
+        {
+          "text": "Stages co-organisés avec accompagnants",
+          "to": "https://tribus-seminaires.com/"
         }
       ]
     },
