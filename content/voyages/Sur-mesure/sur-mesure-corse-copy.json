@@ -1,0 +1,62 @@
+{
+  "title": "Séjour à Montréal",
+  "faqBlock": {
+    "faqList": []
+  },
+  "videoLinks": [],
+  "photosList": [],
+  "housingBlock": [],
+  "accompanistsList": [],
+  "pricing": {
+    "airportCode": [],
+    "startingPrice": 1830,
+    "maxTravelers": 2,
+    "minTravelersToConfirm": 2
+  },
+  "pricingDetailsBlock": {
+    "exclude": [
+      "Les dépenses personnelles, le visa (AVE), les taxes de séjours, les « early check-in » ou « late check-out » dans l'hôtel sélectionné, l'assurance annulation ou multirisques et toutes les prestations non mentionnées dans le devis"
+    ],
+    "include": [
+      "Vols internationaux avec 1 bagage cabine par personne, transferts aller/retour aéroport/hôtel, 4 nuits en hôtel 3*nl chambre double, assistance Odysway"
+    ]
+  },
+  "programmeBlock": [],
+  "experiencesBlock": [
+    ""
+  ],
+  "categories": [
+    {}
+  ],
+  "destinations": [
+    {
+      "name": "Corse"
+    }
+  ],
+  "slug": "montreal-automne-famille",
+  "customAvailable": true,
+  "experienceType": "Explorer à pied",
+  "level": "1",
+  "duration": 5,
+  "nights": 4,
+  "includeFlight": true,
+  "housingType": "Hôtel",
+  "idealPeriods": {
+    "aout": false,
+    "octobre": true
+  },
+  "monthlyAvailability": {
+    "aout": false,
+    "octobre": true
+  },
+  "badgeSection": {
+    "includeFlightBadge": {
+      "visible": true
+    }
+  },
+  "groupeAvailable": false,
+  "privatisationAvailable": true,
+  "image": {
+    "src": ""
+  }
+}
