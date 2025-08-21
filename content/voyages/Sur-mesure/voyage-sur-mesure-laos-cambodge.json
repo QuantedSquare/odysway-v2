@@ -59,7 +59,7 @@
     "affixeAuthor": ""
   },
   "experiencesBlock": [],
-  "slug": "voyage-sur-mesure-Laos-Cambodge",
+  "slug": "voyage-sur-mesure-laos-cambodge",
   "description": "",
   "emailDescription": "",
   "metaDescription": "",
@@ -91,9 +91,9 @@
     "exclude": []
   },
   "pricing": {
-    "startingPrice": 1980,
+    "startingPrice": 0,
     "lastMinuteAvailable": false,
-    "lastMinuteReduction": 80,
+    "lastMinuteReduction": 0,
     "earlyBirdAvailable": false,
     "earlyBirdReduction": "",
     "maxTravelers": "",
