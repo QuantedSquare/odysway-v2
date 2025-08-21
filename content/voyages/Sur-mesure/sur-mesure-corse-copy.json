@@ -57,6 +57,14 @@
   "groupeAvailable": false,
   "privatisationAvailable": true,
   "image": {
-    "src": ""
+    "src": "/images/1.voyages/sur-mesure Montréal/montreal-4113307-1280.jpg"
+  },
+  "imageSecondary": {
+    "src": "/images/1.voyages/sur-mesure Montréal/montreal-272629-1280.jpg"
+  },
+  "seoSection": {
+    "ogImage": {
+      "src": "/images/1.voyages/sur-mesure Montréal/montreal-4113307-1280.jpg"
+    }
   }
 }
