@@ -37,7 +37,18 @@ export default defineEventHandler(async (event) => {
     }])
     .select('*')
     .single()
-  if (error) return { error: error.message }
+  console.log('=======data inserted=======', data)
+  console.log('=======error=======', error)
+  const alreadyAssigned = error && error.message.includes('duplicate key value violates unique constraint')
+  if (alreadyAssigned) {
+    const { data: existingBookedDate, error: existingError } = await supabase
+      .from('booked_dates')
+      .select('deal_id, travel_dates(id, travel_slug)')
+      .eq('deal_id', dealId)
+      .single()
+    return { error: `/booking-management/${existingBookedDate.travel_dates.travel_slug}/${existingBookedDate.travel_dates.id}` }
+  }
+  else if (error) return { error: error.message }
 
   // Update travel_dates.booked_seat
   const { data: allBooked, error: sumError } = await supabase

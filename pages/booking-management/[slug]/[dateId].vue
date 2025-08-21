@@ -464,9 +464,22 @@
                     <v-alert
                       v-if="assignDealError"
                       type="error"
-                      class="mt-2"
+                      class="mt-2 text-white"
                     >
-                      {{ assignDealError }}
+                      <div v-if="assignDealError.includes('/booking-management/')">
+                        <NuxtLink
+                          :to="assignDealError"
+                          class="text-white"
+                        >
+                          Deal déjà assigné à la date suivante
+                          <v-icon>
+                            {{ mdiArrowRight }}
+                          </v-icon>
+                        </NuxtLink>
+                      </div>
+                      <div v-else>
+                        {{ assignDealError }}
+                      </div>
                     </v-alert>
                   </v-form>
                 </v-expansion-panel-text>
