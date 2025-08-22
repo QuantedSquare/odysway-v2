@@ -20,6 +20,13 @@ if (page.value) {
     htmlAttrs: {
       lang: 'fr',
     },
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+      },
+    ],
     ...page.value.head,
   })
 

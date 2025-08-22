@@ -42,6 +42,10 @@ schemaOrg:
 head:
   htmlAttrs:
     lang: fr
+  link:
+     - rel: 'icon'
+       type: 'image/x-icon'
+       href: '/favicon.ico'
   script: []
 title: Voyages en immersion en petits groupes et privatifs
 description: "Odysway : première agence de voyage en immersion en France et à
@@ -52,7 +56,7 @@ navigation:
   description: "Odysway : première agence de voyage en immersion en France et à
     l’étranger. Vivez des expériences uniques, en petits groupes, au plus près
     des habitants et de leurs traditions."
-  icon: /favicon.png
+  icon: /favicon.icon
 ---
 
 ::home-hero-section
